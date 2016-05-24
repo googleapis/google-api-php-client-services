@@ -85,7 +85,7 @@ class Google_Service_Blogger_PostsResource extends Google_Service_Resource
    * Add a post. (posts.insert)
    *
    * @param string $blogId ID of the blog to add the post to.
-   * @param Google_Post $postBody
+   * @param Google_Service_Blogger_Post $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool fetchBody Whether the body content of the post is included
@@ -137,7 +137,7 @@ class Google_Service_Blogger_PostsResource extends Google_Service_Resource
    *
    * @param string $blogId The ID of the Blog.
    * @param string $postId The ID of the Post.
-   * @param Google_Post $postBody
+   * @param Google_Service_Blogger_Post $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool fetchBody Whether the body content of the post is included
@@ -217,7 +217,7 @@ class Google_Service_Blogger_PostsResource extends Google_Service_Resource
    *
    * @param string $blogId The ID of the Blog.
    * @param string $postId The ID of the Post.
-   * @param Google_Post $postBody
+   * @param Google_Service_Blogger_Post $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool fetchBody Whether the body content of the post is included

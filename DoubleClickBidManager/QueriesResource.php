@@ -28,7 +28,7 @@ class Google_Service_DoubleClickBidManager_QueriesResource extends Google_Servic
   /**
    * Creates a query. (queries.createquery)
    *
-   * @param Google_Query $postBody
+   * @param Google_Service_DoubleClickBidManager_Query $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DoubleClickBidManager_Query
    */
@@ -80,7 +80,7 @@ class Google_Service_DoubleClickBidManager_QueriesResource extends Google_Servic
    * Runs a stored query to generate a report. (queries.runquery)
    *
    * @param string $queryId Query ID to run.
-   * @param Google_RunQueryRequest $postBody
+   * @param Google_Service_DoubleClickBidManager_RunQueryRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function runquery($queryId, Google_Service_DoubleClickBidManager_RunQueryRequest $postBody, $optParams = array())

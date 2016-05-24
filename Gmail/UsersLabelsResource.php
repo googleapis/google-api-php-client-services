@@ -30,7 +30,7 @@ class Google_Service_Gmail_UsersLabelsResource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Label $postBody
+   * @param Google_Service_Gmail_Label $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Label
    */
@@ -91,7 +91,7 @@ class Google_Service_Gmail_UsersLabelsResource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the label to update.
-   * @param Google_Label $postBody
+   * @param Google_Service_Gmail_Label $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Label
    */
@@ -107,7 +107,7 @@ class Google_Service_Gmail_UsersLabelsResource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the label to update.
-   * @param Google_Label $postBody
+   * @param Google_Service_Gmail_Label $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Label
    */

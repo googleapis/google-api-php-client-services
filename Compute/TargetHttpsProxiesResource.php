@@ -61,7 +61,7 @@ class Google_Service_Compute_TargetHttpsProxiesResource extends Google_Service_R
    * included in the request. (targetHttpsProxies.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_TargetHttpsProxy $postBody
+   * @param Google_Service_Compute_TargetHttpsProxy $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -126,7 +126,7 @@ class Google_Service_Compute_TargetHttpsProxiesResource extends Google_Service_R
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to set
    * an SslCertificates resource for.
-   * @param Google_TargetHttpsProxiesSetSslCertificatesRequest $postBody
+   * @param Google_Service_Compute_TargetHttpsProxiesSetSslCertificatesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -142,7 +142,7 @@ class Google_Service_Compute_TargetHttpsProxiesResource extends Google_Service_R
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource whose
    * URL map is to be set.
-   * @param Google_UrlMapReference $postBody
+   * @param Google_Service_Compute_UrlMapReference $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

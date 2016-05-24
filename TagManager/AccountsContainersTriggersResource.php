@@ -30,7 +30,7 @@ class Google_Service_TagManager_AccountsContainersTriggersResource extends Googl
    *
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
-   * @param Google_Trigger $postBody
+   * @param Google_Service_TagManager_Trigger $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_Trigger
    */
@@ -90,7 +90,7 @@ class Google_Service_TagManager_AccountsContainersTriggersResource extends Googl
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $triggerId The GTM Trigger ID.
-   * @param Google_Trigger $postBody
+   * @param Google_Service_TagManager_Trigger $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

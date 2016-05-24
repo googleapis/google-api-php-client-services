@@ -40,7 +40,7 @@ class Google_Service_Mirror_SubscriptionsResource extends Google_Service_Resourc
   /**
    * Creates a new subscription. (subscriptions.insert)
    *
-   * @param Google_Subscription $postBody
+   * @param Google_Service_Mirror_Subscription $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_Subscription
    */
@@ -67,7 +67,7 @@ class Google_Service_Mirror_SubscriptionsResource extends Google_Service_Resourc
    * Updates an existing subscription in place. (subscriptions.update)
    *
    * @param string $id The ID of the subscription.
-   * @param Google_Subscription $postBody
+   * @param Google_Service_Mirror_Subscription $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_Subscription
    */

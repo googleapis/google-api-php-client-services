@@ -55,7 +55,7 @@ class Google_Service_AdExchangeBuyer_AccountsResource extends Google_Service_Res
    * (accounts.patch)
    *
    * @param int $id The account id
-   * @param Google_Account $postBody
+   * @param Google_Service_AdExchangeBuyer_Account $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_Account
    */
@@ -69,7 +69,7 @@ class Google_Service_AdExchangeBuyer_AccountsResource extends Google_Service_Res
    * Updates an existing account. (accounts.update)
    *
    * @param int $id The account id
-   * @param Google_Account $postBody
+   * @param Google_Service_AdExchangeBuyer_Account $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_Account
    */

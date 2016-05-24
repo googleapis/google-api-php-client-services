@@ -106,7 +106,7 @@ class Google_Service_AndroidEnterprise_UsersResource extends Google_Service_Reso
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $userId The ID of the user.
-   * @param Google_ProductSet $postBody
+   * @param Google_Service_AndroidEnterprise_ProductSet $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_ProductSet
    */

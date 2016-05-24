@@ -62,7 +62,7 @@ class Google_Service_Analytics_ManagementExperimentsResource extends Google_Serv
    * @param string $accountId Account ID to create the experiment for.
    * @param string $webPropertyId Web property ID to create the experiment for.
    * @param string $profileId View (Profile) ID to create the experiment for.
-   * @param Google_Experiment $postBody
+   * @param Google_Service_Analytics_Experiment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Experiment
    */
@@ -102,7 +102,7 @@ class Google_Service_Analytics_ManagementExperimentsResource extends Google_Serv
    * @param string $webPropertyId Web property ID of the experiment to update.
    * @param string $profileId View (Profile) ID of the experiment to update.
    * @param string $experimentId Experiment ID of the experiment to update.
-   * @param Google_Experiment $postBody
+   * @param Google_Service_Analytics_Experiment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Experiment
    */
@@ -119,7 +119,7 @@ class Google_Service_Analytics_ManagementExperimentsResource extends Google_Serv
    * @param string $webPropertyId Web property ID of the experiment to update.
    * @param string $profileId View (Profile) ID of the experiment to update.
    * @param string $experimentId Experiment ID of the experiment to update.
-   * @param Google_Experiment $postBody
+   * @param Google_Service_Analytics_Experiment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Experiment
    */

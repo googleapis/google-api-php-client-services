@@ -33,7 +33,7 @@ class Google_Service_PlusDomains_MediaResource extends Google_Service_Resource
    *
    * @param string $userId The ID of the user to create the activity on behalf of.
    * @param string $collection
-   * @param Google_Media $postBody
+   * @param Google_Service_PlusDomains_Media $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_PlusDomains_Media
    */

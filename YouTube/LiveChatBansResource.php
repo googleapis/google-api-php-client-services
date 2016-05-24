@@ -44,7 +44,7 @@ class Google_Service_YouTube_LiveChatBansResource extends Google_Service_Resourc
    * @param string $part The part parameter serves two purposes in this operation.
    * It identifies the properties that the write operation will set as well as the
    * properties that the API response returns. Set the parameter value to snippet.
-   * @param Google_LiveChatBan $postBody
+   * @param Google_Service_YouTube_LiveChatBan $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_LiveChatBan
    */

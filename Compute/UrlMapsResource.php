@@ -59,7 +59,7 @@ class Google_Service_Compute_UrlMapsResource extends Google_Service_Resource
    * the request. (urlMaps.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_UrlMap $postBody
+   * @param Google_Service_Compute_UrlMap $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -123,7 +123,7 @@ class Google_Service_Compute_UrlMapsResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $urlMap Name of the UrlMap resource to update.
-   * @param Google_UrlMap $postBody
+   * @param Google_Service_Compute_UrlMap $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -138,7 +138,7 @@ class Google_Service_Compute_UrlMapsResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $urlMap Name of the UrlMap resource to update.
-   * @param Google_UrlMap $postBody
+   * @param Google_Service_Compute_UrlMap $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -155,7 +155,7 @@ class Google_Service_Compute_UrlMapsResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $urlMap Name of the UrlMap resource to be validated as.
-   * @param Google_UrlMapsValidateRequest $postBody
+   * @param Google_Service_Compute_UrlMapsValidateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_UrlMapsValidateResponse
    */

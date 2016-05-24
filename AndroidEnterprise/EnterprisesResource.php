@@ -45,7 +45,7 @@ class Google_Service_AndroidEnterprise_EnterprisesResource extends Google_Servic
    *
    * @param string $token The token provided by the enterprise to register the
    * EMM.
-   * @param Google_Enterprise $postBody
+   * @param Google_Service_AndroidEnterprise_Enterprise $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_Enterprise
    */
@@ -87,7 +87,7 @@ class Google_Service_AndroidEnterprise_EnterprisesResource extends Google_Servic
    *
    * @param string $token The token provided by the enterprise to register the
    * EMM.
-   * @param Google_Enterprise $postBody
+   * @param Google_Service_AndroidEnterprise_Enterprise $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_Enterprise
    */
@@ -131,7 +131,7 @@ class Google_Service_AndroidEnterprise_EnterprisesResource extends Google_Servic
    * enterprise. (enterprises.setAccount)
    *
    * @param string $enterpriseId The ID of the enterprise.
-   * @param Google_EnterpriseAccount $postBody
+   * @param Google_Service_AndroidEnterprise_EnterpriseAccount $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_EnterpriseAccount
    */
@@ -145,7 +145,7 @@ class Google_Service_AndroidEnterprise_EnterprisesResource extends Google_Servic
    * Sets the store layout resource. (enterprises.setStoreLayout)
    *
    * @param string $enterpriseId The ID of the enterprise.
-   * @param Google_StoreLayout $postBody
+   * @param Google_Service_AndroidEnterprise_StoreLayout $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_StoreLayout
    */

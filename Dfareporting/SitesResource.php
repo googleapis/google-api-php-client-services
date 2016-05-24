@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_SitesResource extends Google_Service_Resource
    * Inserts a new site. (sites.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Site $postBody
+   * @param Google_Service_Dfareporting_Site $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Site
    */
@@ -98,7 +98,7 @@ class Google_Service_Dfareporting_SitesResource extends Google_Service_Resource
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Site ID.
-   * @param Google_Site $postBody
+   * @param Google_Service_Dfareporting_Site $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Site
    */
@@ -112,7 +112,7 @@ class Google_Service_Dfareporting_SitesResource extends Google_Service_Resource
    * Updates an existing site. (sites.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Site $postBody
+   * @param Google_Service_Dfareporting_Site $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Site
    */

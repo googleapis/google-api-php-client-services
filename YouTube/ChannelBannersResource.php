@@ -36,7 +36,7 @@ class Google_Service_YouTube_ChannelBannersResource extends Google_Service_Resou
    * branding settings. Set the brandingSettings.image.bannerExternalUrl
    * property's value to the URL obtained in step 2. (channelBanners.insert)
    *
-   * @param Google_ChannelBannerResource $postBody
+   * @param Google_Service_YouTube_ChannelBannerResource $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

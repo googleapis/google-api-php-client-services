@@ -42,7 +42,7 @@ class Google_Service_Games_TurnBasedMatchesResource extends Google_Service_Resou
   /**
    * Create a turn-based match. (turnBasedMatches.create)
    *
-   * @param Google_TurnBasedMatchCreateRequest $postBody
+   * @param Google_Service_Games_TurnBasedMatchCreateRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.
@@ -95,7 +95,7 @@ class Google_Service_Games_TurnBasedMatchesResource extends Google_Service_Resou
    * Finish, and can pass in the final match state. (turnBasedMatches.finish)
    *
    * @param string $matchId The ID of the match.
-   * @param Google_TurnBasedMatchResults $postBody
+   * @param Google_Service_Games_TurnBasedMatchResults $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.
@@ -272,7 +272,7 @@ class Google_Service_Games_TurnBasedMatchesResource extends Google_Service_Resou
    * Commit the results of a player turn. (turnBasedMatches.takeTurn)
    *
    * @param string $matchId The ID of the match.
-   * @param Google_TurnBasedMatchTurn $postBody
+   * @param Google_Service_Games_TurnBasedMatchTurn $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.

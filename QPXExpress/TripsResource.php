@@ -28,7 +28,7 @@ class Google_Service_QPXExpress_TripsResource extends Google_Service_Resource
   /**
    * Returns a list of flights. (trips.search)
    *
-   * @param Google_TripsSearchRequest $postBody
+   * @param Google_Service_QPXExpress_TripsSearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_QPXExpress_TripsSearchResponse
    */

@@ -28,7 +28,7 @@ class Google_Service_ShoppingContent_AccountstatusesResource extends Google_Serv
   /**
    * (accountstatuses.custombatch)
    *
-   * @param Google_AccountstatusesCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_AccountstatusesCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse
    */

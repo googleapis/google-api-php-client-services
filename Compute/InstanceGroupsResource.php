@@ -34,7 +34,7 @@ class Google_Service_Compute_InstanceGroupsResource extends Google_Service_Resou
    * @param string $zone The name of the zone where the instance group is located.
    * @param string $instanceGroup The name of the instance group where you are
    * adding instances.
-   * @param Google_InstanceGroupsAddInstancesRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupsAddInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -132,7 +132,7 @@ class Google_Service_Compute_InstanceGroupsResource extends Google_Service_Resou
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone where you want to create the
    * instance group.
-   * @param Google_InstanceGroup $postBody
+   * @param Google_Service_Compute_InstanceGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -199,7 +199,7 @@ class Google_Service_Compute_InstanceGroupsResource extends Google_Service_Resou
    * @param string $zone The name of the zone where the instance group is located.
    * @param string $instanceGroup The name of the instance group from which you
    * want to generate a list of included instances.
-   * @param Google_InstanceGroupsListInstancesRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupsListInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter expression for filtering listed
@@ -251,7 +251,7 @@ class Google_Service_Compute_InstanceGroupsResource extends Google_Service_Resou
    * @param string $zone The name of the zone where the instance group is located.
    * @param string $instanceGroup The name of the instance group where the
    * specified instances will be removed.
-   * @param Google_InstanceGroupsRemoveInstancesRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupsRemoveInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -269,7 +269,7 @@ class Google_Service_Compute_InstanceGroupsResource extends Google_Service_Resou
    * @param string $zone The name of the zone where the instance group is located.
    * @param string $instanceGroup The name of the instance group where the named
    * ports are updated.
-   * @param Google_InstanceGroupsSetNamedPortsRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupsSetNamedPortsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

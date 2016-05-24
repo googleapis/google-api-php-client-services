@@ -81,7 +81,7 @@ class Google_Service_AdSenseHost_AccountsAdunitsResource extends Google_Service_
    *
    * @param string $accountId Account which will contain the ad unit.
    * @param string $adClientId Ad client into which to insert the ad unit.
-   * @param Google_AdUnit $postBody
+   * @param Google_Service_AdSenseHost_AdUnit $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_AdUnit
    */
@@ -121,7 +121,7 @@ class Google_Service_AdSenseHost_AccountsAdunitsResource extends Google_Service_
    * @param string $accountId Account which contains the ad client.
    * @param string $adClientId Ad client which contains the ad unit.
    * @param string $adUnitId Ad unit to get.
-   * @param Google_AdUnit $postBody
+   * @param Google_Service_AdSenseHost_AdUnit $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_AdUnit
    */
@@ -137,7 +137,7 @@ class Google_Service_AdSenseHost_AccountsAdunitsResource extends Google_Service_
    *
    * @param string $accountId Account which contains the ad client.
    * @param string $adClientId Ad client which contains the ad unit.
-   * @param Google_AdUnit $postBody
+   * @param Google_Service_AdSenseHost_AdUnit $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_AdUnit
    */

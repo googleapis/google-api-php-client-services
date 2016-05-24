@@ -67,7 +67,7 @@ class Google_Service_AndroidPublisher_EditsTracksResource extends Google_Service
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track The track type to read or modify.
-   * @param Google_Track $postBody
+   * @param Google_Service_AndroidPublisher_Track $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_Track
    */
@@ -86,7 +86,7 @@ class Google_Service_AndroidPublisher_EditsTracksResource extends Google_Service
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track The track type to read or modify.
-   * @param Google_Track $postBody
+   * @param Google_Service_AndroidPublisher_Track $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_Track
    */

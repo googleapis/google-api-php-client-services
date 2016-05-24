@@ -61,7 +61,7 @@ class Google_Service_Dfareporting_PlacementsResource extends Google_Service_Reso
    * Inserts a new placement. (placements.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Placement $postBody
+   * @param Google_Service_Dfareporting_Placement $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Placement
    */
@@ -145,7 +145,7 @@ class Google_Service_Dfareporting_PlacementsResource extends Google_Service_Reso
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Placement ID.
-   * @param Google_Placement $postBody
+   * @param Google_Service_Dfareporting_Placement $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Placement
    */
@@ -159,7 +159,7 @@ class Google_Service_Dfareporting_PlacementsResource extends Google_Service_Reso
    * Updates an existing placement. (placements.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Placement $postBody
+   * @param Google_Service_Dfareporting_Placement $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Placement
    */

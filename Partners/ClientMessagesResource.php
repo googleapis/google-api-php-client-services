@@ -30,7 +30,7 @@ class Google_Service_Partners_ClientMessagesResource extends Google_Service_Reso
    * `Profile page is running slow`, `More than 500 users have accessed this
    * result.`, etc. (clientMessages.log)
    *
-   * @param Google_LogMessageRequest $postBody
+   * @param Google_Service_Partners_LogMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Partners_LogMessageResponse
    */

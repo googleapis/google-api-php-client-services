@@ -51,7 +51,7 @@ class Google_Service_Genomics_ReferencesResource extends Google_Service_Resource
    * mas/blob/v0.5.1/src/main/resources/avro/referencemethods.avdl#L146).
    * (references.search)
    *
-   * @param Google_SearchReferencesRequest $postBody
+   * @param Google_Service_Genomics_SearchReferencesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchReferencesResponse
    */

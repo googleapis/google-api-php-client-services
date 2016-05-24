@@ -59,7 +59,7 @@ class Google_Service_Compute_RoutesResource extends Google_Service_Resource
    * the request. (routes.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_Route $postBody
+   * @param Google_Service_Compute_Route $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

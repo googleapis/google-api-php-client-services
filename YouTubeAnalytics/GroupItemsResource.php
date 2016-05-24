@@ -54,7 +54,7 @@ class Google_Service_YouTubeAnalytics_GroupItemsResource extends Google_Service_
   /**
    * Creates a group item. (groupItems.insert)
    *
-   * @param Google_GroupItem $postBody
+   * @param Google_Service_YouTubeAnalytics_GroupItem $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

@@ -54,7 +54,7 @@ class Google_Service_YouTubeAnalytics_GroupsResource extends Google_Service_Reso
   /**
    * Creates a group. (groups.insert)
    *
-   * @param Google_Group $postBody
+   * @param Google_Service_YouTubeAnalytics_Group $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -116,7 +116,7 @@ class Google_Service_YouTubeAnalytics_GroupsResource extends Google_Service_Reso
    * Modifies a group. For example, you could change a group's title.
    * (groups.update)
    *
-   * @param Google_Group $postBody
+   * @param Google_Service_YouTubeAnalytics_Group $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_CreativeGroupsResource extends Google_Service_
    * Inserts a new creative group. (creativeGroups.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_CreativeGroup $postBody
+   * @param Google_Service_Dfareporting_CreativeGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeGroup
    */
@@ -92,7 +92,7 @@ class Google_Service_Dfareporting_CreativeGroupsResource extends Google_Service_
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Creative group ID.
-   * @param Google_CreativeGroup $postBody
+   * @param Google_Service_Dfareporting_CreativeGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeGroup
    */
@@ -106,7 +106,7 @@ class Google_Service_Dfareporting_CreativeGroupsResource extends Google_Service_
    * Updates an existing creative group. (creativeGroups.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_CreativeGroup $postBody
+   * @param Google_Service_Dfareporting_CreativeGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeGroup
    */

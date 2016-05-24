@@ -43,7 +43,7 @@ class Google_Service_Groupssettings_GroupsResource extends Google_Service_Resour
    * (groups.patch)
    *
    * @param string $groupUniqueId The resource ID
-   * @param Google_Groups $postBody
+   * @param Google_Service_Groupssettings_Groups $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Groupssettings_Groups
    */
@@ -57,7 +57,7 @@ class Google_Service_Groupssettings_GroupsResource extends Google_Service_Resour
    * Updates an existing resource. (groups.update)
    *
    * @param string $groupUniqueId The resource ID
-   * @param Google_Groups $postBody
+   * @param Google_Service_Groupssettings_Groups $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Groupssettings_Groups
    */

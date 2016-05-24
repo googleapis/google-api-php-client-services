@@ -29,7 +29,7 @@ class Google_Service_DoubleClickBidManager_RubiconResource extends Google_Servic
    * Update proposal upon actions of Rubicon publisher.
    * (rubicon.notifyproposalchange)
    *
-   * @param Google_NotifyProposalChangeRequest $postBody
+   * @param Google_Service_DoubleClickBidManager_NotifyProposalChangeRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function notifyproposalchange(Google_Service_DoubleClickBidManager_NotifyProposalChangeRequest $postBody, $optParams = array())

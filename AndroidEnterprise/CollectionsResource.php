@@ -56,7 +56,7 @@ class Google_Service_AndroidEnterprise_CollectionsResource extends Google_Servic
    * Creates a new collection. (collections.insert)
    *
    * @param string $enterpriseId The ID of the enterprise.
-   * @param Google_Collection $postBody
+   * @param Google_Service_AndroidEnterprise_Collection $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_Collection
    */
@@ -86,7 +86,7 @@ class Google_Service_AndroidEnterprise_CollectionsResource extends Google_Servic
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $collectionId The ID of the collection.
-   * @param Google_Collection $postBody
+   * @param Google_Service_AndroidEnterprise_Collection $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_Collection
    */
@@ -101,7 +101,7 @@ class Google_Service_AndroidEnterprise_CollectionsResource extends Google_Servic
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $collectionId The ID of the collection.
-   * @param Google_Collection $postBody
+   * @param Google_Service_AndroidEnterprise_Collection $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_Collection
    */

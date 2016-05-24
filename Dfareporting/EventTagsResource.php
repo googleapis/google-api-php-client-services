@@ -56,7 +56,7 @@ class Google_Service_Dfareporting_EventTagsResource extends Google_Service_Resou
    * Inserts a new event tag. (eventTags.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_EventTag $postBody
+   * @param Google_Service_Dfareporting_EventTag $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_EventTag
    */
@@ -119,7 +119,7 @@ class Google_Service_Dfareporting_EventTagsResource extends Google_Service_Resou
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Event tag ID.
-   * @param Google_EventTag $postBody
+   * @param Google_Service_Dfareporting_EventTag $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_EventTag
    */
@@ -133,7 +133,7 @@ class Google_Service_Dfareporting_EventTagsResource extends Google_Service_Resou
    * Updates an existing event tag. (eventTags.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_EventTag $postBody
+   * @param Google_Service_Dfareporting_EventTag $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_EventTag
    */

@@ -78,7 +78,7 @@ class Google_Service_Compute_DisksResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
    * @param string $disk Name of the persistent disk to snapshot.
-   * @param Google_Snapshot $postBody
+   * @param Google_Service_Compute_Snapshot $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -131,7 +131,7 @@ class Google_Service_Compute_DisksResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
-   * @param Google_Disk $postBody
+   * @param Google_Service_Compute_Disk $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string sourceImage Optional. Source image to restore onto a disk.
@@ -198,7 +198,7 @@ class Google_Service_Compute_DisksResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
    * @param string $disk The name of the persistent disk.
-   * @param Google_DisksResizeRequest $postBody
+   * @param Google_Service_Compute_DisksResizeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

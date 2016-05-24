@@ -29,7 +29,7 @@ class Google_Service_Dfareporting_ConversionsResource extends Google_Service_Res
    * Inserts conversions. (conversions.batchinsert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_ConversionsBatchInsertRequest $postBody
+   * @param Google_Service_Dfareporting_ConversionsBatchInsertRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_ConversionsBatchInsertResponse
    */

@@ -66,7 +66,7 @@ class Google_Service_Reports_ActivitiesResource extends Google_Service_Resource
    * returns usageReports for all users.
    * @param string $applicationName Application name for which the events are to
    * be retrieved.
-   * @param Google_Channel $postBody
+   * @param Google_Service_Reports_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string actorIpAddress IP Address of host where the event was

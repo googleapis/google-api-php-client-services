@@ -47,7 +47,7 @@ class Google_Service_Analytics_ManagementGoalsResource extends Google_Service_Re
    * @param string $accountId Account ID to create the goal for.
    * @param string $webPropertyId Web property ID to create the goal for.
    * @param string $profileId View (Profile) ID to create the goal for.
-   * @param Google_Goal $postBody
+   * @param Google_Service_Analytics_Goal $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Goal
    */
@@ -90,7 +90,7 @@ class Google_Service_Analytics_ManagementGoalsResource extends Google_Service_Re
    * @param string $webPropertyId Web property ID to update the goal.
    * @param string $profileId View (Profile) ID to update the goal.
    * @param string $goalId Index of the goal to be updated.
-   * @param Google_Goal $postBody
+   * @param Google_Service_Analytics_Goal $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Goal
    */
@@ -107,7 +107,7 @@ class Google_Service_Analytics_ManagementGoalsResource extends Google_Service_Re
    * @param string $webPropertyId Web property ID to update the goal.
    * @param string $profileId View (Profile) ID to update the goal.
    * @param string $goalId Index of the goal to be updated.
-   * @param Google_Goal $postBody
+   * @param Google_Service_Analytics_Goal $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Goal
    */

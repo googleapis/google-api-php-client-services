@@ -30,7 +30,7 @@ class Google_Service_TagManager_AccountsContainersVersionsResource extends Googl
    *
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
-   * @param Google_CreateContainerVersionRequestVersionOptions $postBody
+   * @param Google_Service_TagManager_CreateContainerVersionRequestVersionOptions $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_CreateContainerVersionResponse
    */
@@ -146,7 +146,7 @@ class Google_Service_TagManager_AccountsContainersVersionsResource extends Googl
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $containerVersionId The GTM Container Version ID.
-   * @param Google_ContainerVersion $postBody
+   * @param Google_Service_TagManager_ContainerVersion $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

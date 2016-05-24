@@ -29,7 +29,7 @@ class Google_Service_Drive_CommentsResource extends Google_Service_Resource
    * Creates a new comment on a file. (comments.create)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_Comment $postBody
+   * @param Google_Service_Drive_Comment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Drive_Comment
    */
@@ -96,7 +96,7 @@ class Google_Service_Drive_CommentsResource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
-   * @param Google_Comment $postBody
+   * @param Google_Service_Drive_Comment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Drive_Comment
    */

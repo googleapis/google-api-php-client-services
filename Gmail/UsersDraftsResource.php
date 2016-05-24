@@ -30,7 +30,7 @@ class Google_Service_Gmail_UsersDraftsResource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Draft $postBody
+   * @param Google_Service_Gmail_Draft $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Draft
    */
@@ -98,7 +98,7 @@ class Google_Service_Gmail_UsersDraftsResource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Draft $postBody
+   * @param Google_Service_Gmail_Draft $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Message
    */
@@ -114,7 +114,7 @@ class Google_Service_Gmail_UsersDraftsResource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the draft to update.
-   * @param Google_Draft $postBody
+   * @param Google_Service_Gmail_Draft $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Draft
    */

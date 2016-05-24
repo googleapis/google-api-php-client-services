@@ -41,7 +41,7 @@ class Google_Service_Consumersurveys_SurveysResource extends Google_Service_Reso
   /**
    * Creates a survey. (surveys.insert)
    *
-   * @param Google_Survey $postBody
+   * @param Google_Service_Consumersurveys_Survey $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Consumersurveys_Survey
    */
@@ -71,7 +71,7 @@ class Google_Service_Consumersurveys_SurveysResource extends Google_Service_Reso
    * Begins running a survey. (surveys.start)
    *
    * @param string $resourceId
-   * @param Google_SurveysStartRequest $postBody
+   * @param Google_Service_Consumersurveys_SurveysStartRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Consumersurveys_SurveysStartResponse
    */
@@ -99,7 +99,7 @@ class Google_Service_Consumersurveys_SurveysResource extends Google_Service_Reso
    * owners property. (surveys.update)
    *
    * @param string $surveyUrlId External URL ID for the survey.
-   * @param Google_Survey $postBody
+   * @param Google_Service_Consumersurveys_Survey $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Consumersurveys_Survey
    */

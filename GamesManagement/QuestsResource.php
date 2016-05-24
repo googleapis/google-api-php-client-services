@@ -83,7 +83,7 @@ class Google_Service_GamesManagement_QuestsResource extends Google_Service_Resou
    * available to user accounts for your developer console. Only draft quests may
    * be reset. (quests.resetMultipleForAllPlayers)
    *
-   * @param Google_QuestsResetMultipleForAllRequest $postBody
+   * @param Google_Service_GamesManagement_QuestsResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function resetMultipleForAllPlayers(Google_Service_GamesManagement_QuestsResetMultipleForAllRequest $postBody, $optParams = array())

@@ -44,7 +44,7 @@ class Google_Service_YouTube_LiveChatMessagesResource extends Google_Service_Res
    * @param string $part The part parameter serves two purposes. It identifies the
    * properties that the write operation will set as well as the properties that
    * the API response will include. Set the parameter value to snippet.
-   * @param Google_LiveChatMessage $postBody
+   * @param Google_Service_YouTube_LiveChatMessage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_LiveChatMessage
    */

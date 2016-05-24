@@ -97,7 +97,7 @@ class Google_Service_Clouddebugger_DebuggerDebuggeesBreakpointsResource extends 
    *
    * @param string $debuggeeId ID of the debuggee where the breakpoint is to be
    * set.
-   * @param Google_Breakpoint $postBody
+   * @param Google_Service_Clouddebugger_Breakpoint $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string clientVersion The client version making the call.

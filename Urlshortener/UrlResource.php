@@ -43,7 +43,7 @@ class Google_Service_Urlshortener_UrlResource extends Google_Service_Resource
   /**
    * Creates a new short URL. (url.insert)
    *
-   * @param Google_Url $postBody
+   * @param Google_Service_Urlshortener_Url $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Urlshortener_Url
    */

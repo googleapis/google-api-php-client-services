@@ -35,7 +35,7 @@ class Google_Service_Pubsub_ProjectsSubscriptionsResource extends Google_Service
    *
    * @param string $subscription The subscription whose message is being
    * acknowledged.
-   * @param Google_AcknowledgeRequest $postBody
+   * @param Google_Service_Pubsub_AcknowledgeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_PubsubEmpty
    */
@@ -58,7 +58,7 @@ class Google_Service_Pubsub_ProjectsSubscriptionsResource extends Google_Service
    * (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus
    * (`+`) or percent signs (`%`). It must be between 3 and 255 characters in
    * length, and it must not start with `"goog"`.
-   * @param Google_Subscription $postBody
+   * @param Google_Service_Pubsub_Subscription $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_Subscription
    */
@@ -144,7 +144,7 @@ class Google_Service_Pubsub_ProjectsSubscriptionsResource extends Google_Service
    * interrupted. (subscriptions.modifyAckDeadline)
    *
    * @param string $subscription The name of the subscription.
-   * @param Google_ModifyAckDeadlineRequest $postBody
+   * @param Google_Service_Pubsub_ModifyAckDeadlineRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_PubsubEmpty
    */
@@ -163,7 +163,7 @@ class Google_Service_Pubsub_ProjectsSubscriptionsResource extends Google_Service
    * (subscriptions.modifyPushConfig)
    *
    * @param string $subscription The name of the subscription.
-   * @param Google_ModifyPushConfigRequest $postBody
+   * @param Google_Service_Pubsub_ModifyPushConfigRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_PubsubEmpty
    */
@@ -181,7 +181,7 @@ class Google_Service_Pubsub_ProjectsSubscriptionsResource extends Google_Service
    *
    * @param string $subscription The subscription from which messages should be
    * pulled.
-   * @param Google_PullRequest $postBody
+   * @param Google_Service_Pubsub_PullRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_PullResponse
    */
@@ -200,7 +200,7 @@ class Google_Service_Pubsub_ProjectsSubscriptionsResource extends Google_Service
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `setIamPolicy`
    * documentation.
-   * @param Google_SetIamPolicyRequest $postBody
+   * @param Google_Service_Pubsub_SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_Policy
    */
@@ -219,7 +219,7 @@ class Google_Service_Pubsub_ProjectsSubscriptionsResource extends Google_Service
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `testIamPermissions`
    * documentation.
-   * @param Google_TestIamPermissionsRequest $postBody
+   * @param Google_Service_Pubsub_TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_TestIamPermissionsResponse
    */

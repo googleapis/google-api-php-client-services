@@ -29,7 +29,7 @@ class Google_Service_ShoppingContent_ProductsResource extends Google_Service_Res
    * Retrieves, inserts, and deletes multiple products in a single request.
    * (products.custombatch)
    *
-   * @param Google_ProductsCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_ProductsCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -74,7 +74,7 @@ class Google_Service_ShoppingContent_ProductsResource extends Google_Service_Res
    * Uploads a product to your Merchant Center account. (products.insert)
    *
    * @param string $merchantId The ID of the managing account.
-   * @param Google_Product $postBody
+   * @param Google_Service_ShoppingContent_Product $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.

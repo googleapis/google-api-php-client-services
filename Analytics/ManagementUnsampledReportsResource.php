@@ -67,7 +67,7 @@ class Google_Service_Analytics_ManagementUnsampledReportsResource extends Google
    * for.
    * @param string $profileId View (Profile) ID to create the unsampled report
    * for.
-   * @param Google_UnsampledReport $postBody
+   * @param Google_Service_Analytics_UnsampledReport $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_UnsampledReport
    */

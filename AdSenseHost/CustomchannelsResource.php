@@ -60,7 +60,7 @@ class Google_Service_AdSenseHost_CustomchannelsResource extends Google_Service_R
    *
    * @param string $adClientId Ad client to which the new custom channel will be
    * added.
-   * @param Google_CustomChannel $postBody
+   * @param Google_Service_AdSenseHost_CustomChannel $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_CustomChannel
    */
@@ -97,7 +97,7 @@ class Google_Service_AdSenseHost_CustomchannelsResource extends Google_Service_R
    * @param string $adClientId Ad client in which the custom channel will be
    * updated.
    * @param string $customChannelId Custom channel to get.
-   * @param Google_CustomChannel $postBody
+   * @param Google_Service_AdSenseHost_CustomChannel $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_CustomChannel
    */
@@ -112,7 +112,7 @@ class Google_Service_AdSenseHost_CustomchannelsResource extends Google_Service_R
    *
    * @param string $adClientId Ad client in which the custom channel will be
    * updated.
-   * @param Google_CustomChannel $postBody
+   * @param Google_Service_AdSenseHost_CustomChannel $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_CustomChannel
    */

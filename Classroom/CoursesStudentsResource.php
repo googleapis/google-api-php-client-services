@@ -37,7 +37,7 @@ class Google_Service_Classroom_CoursesStudentsResource extends Google_Service_Re
    *
    * @param string $courseId Identifier of the course to create the student in.
    * This identifier can be either the Classroom-assigned identifier or an alias.
-   * @param Google_Student $postBody
+   * @param Google_Service_Classroom_Student $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string enrollmentCode Enrollment code of the course to create the

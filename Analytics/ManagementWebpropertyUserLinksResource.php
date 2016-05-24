@@ -44,7 +44,7 @@ class Google_Service_Analytics_ManagementWebpropertyUserLinksResource extends Go
    *
    * @param string $accountId Account ID to create the user link for.
    * @param string $webPropertyId Web Property ID to create the user link for.
-   * @param Google_EntityUserLink $postBody
+   * @param Google_Service_Analytics_EntityUserLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_EntityUserLink
    */
@@ -85,7 +85,7 @@ class Google_Service_Analytics_ManagementWebpropertyUserLinksResource extends Go
    * @param string $webPropertyId Web property ID to update the account-user link
    * for.
    * @param string $linkId Link ID to update the account-user link for.
-   * @param Google_EntityUserLink $postBody
+   * @param Google_Service_Analytics_EntityUserLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_EntityUserLink
    */

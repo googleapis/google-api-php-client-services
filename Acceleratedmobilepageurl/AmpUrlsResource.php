@@ -29,7 +29,7 @@ class Google_Service_Acceleratedmobilepageurl_AmpUrlsResource extends Google_Ser
    * Returns AMP URL(s) and equivalent [AMP Cache URL(s)](/amp/cache/overview#amp-
    * cache-url-format). (ampUrls.batchGet)
    *
-   * @param Google_BatchGetAmpUrlsRequest $postBody
+   * @param Google_Service_Acceleratedmobilepageurl_BatchGetAmpUrlsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Acceleratedmobilepageurl_BatchGetAmpUrlsResponse
    */

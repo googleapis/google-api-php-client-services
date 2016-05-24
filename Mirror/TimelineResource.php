@@ -53,7 +53,7 @@ class Google_Service_Mirror_TimelineResource extends Google_Service_Resource
   /**
    * Inserts a new item into the timeline. (timeline.insert)
    *
-   * @param Google_TimelineItem $postBody
+   * @param Google_Service_Mirror_TimelineItem $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_TimelineItem
    */
@@ -94,7 +94,7 @@ class Google_Service_Mirror_TimelineResource extends Google_Service_Resource
    * (timeline.patch)
    *
    * @param string $id The ID of the timeline item.
-   * @param Google_TimelineItem $postBody
+   * @param Google_Service_Mirror_TimelineItem $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_TimelineItem
    */
@@ -108,7 +108,7 @@ class Google_Service_Mirror_TimelineResource extends Google_Service_Resource
    * Updates a timeline item in place. (timeline.update)
    *
    * @param string $id The ID of the timeline item.
-   * @param Google_TimelineItem $postBody
+   * @param Google_Service_Mirror_TimelineItem $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_TimelineItem
    */

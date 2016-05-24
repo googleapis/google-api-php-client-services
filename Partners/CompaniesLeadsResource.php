@@ -29,7 +29,7 @@ class Google_Service_Partners_CompaniesLeadsResource extends Google_Service_Reso
    * Creates an advertiser lead for the given company ID. (leads.create)
    *
    * @param string $companyId The ID of the company to contact.
-   * @param Google_CreateLeadRequest $postBody
+   * @param Google_Service_Partners_CreateLeadRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Partners_CreateLeadResponse
    */

@@ -46,7 +46,7 @@ class Google_Service_Dfareporting_RemarketingListSharesResource extends Google_S
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $remarketingListId Remarketing list ID.
-   * @param Google_RemarketingListShare $postBody
+   * @param Google_Service_Dfareporting_RemarketingListShare $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_RemarketingListShare
    */
@@ -60,7 +60,7 @@ class Google_Service_Dfareporting_RemarketingListSharesResource extends Google_S
    * Updates an existing remarketing list share. (remarketingListShares.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_RemarketingListShare $postBody
+   * @param Google_Service_Dfareporting_RemarketingListShare $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_RemarketingListShare
    */

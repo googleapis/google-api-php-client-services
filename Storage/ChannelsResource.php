@@ -28,7 +28,7 @@ class Google_Service_Storage_ChannelsResource extends Google_Service_Resource
   /**
    * Stop watching resources through this channel (channels.stop)
    *
-   * @param Google_Channel $postBody
+   * @param Google_Service_Storage_Channel $postBody
    * @param array $optParams Optional parameters.
    */
   public function stop(Google_Service_Storage_Channel $postBody, $optParams = array())

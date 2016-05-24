@@ -32,7 +32,7 @@ class Google_Service_Bigquery_TabledataResource extends Google_Service_Resource
    * @param string $projectId Project ID of the destination table.
    * @param string $datasetId Dataset ID of the destination table.
    * @param string $tableId Table ID of the destination table.
-   * @param Google_TableDataInsertAllRequest $postBody
+   * @param Google_Service_Bigquery_TableDataInsertAllRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_TableDataInsertAllResponse
    */

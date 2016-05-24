@@ -109,7 +109,7 @@ class Google_Service_Compute_AutoscalersResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $zone Name of the zone for this request.
-   * @param Google_Autoscaler $postBody
+   * @param Google_Service_Compute_Autoscaler $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -175,7 +175,7 @@ class Google_Service_Compute_AutoscalersResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone Name of the zone for this request.
    * @param string $autoscaler Name of the autoscaler to update.
-   * @param Google_Autoscaler $postBody
+   * @param Google_Service_Compute_Autoscaler $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -191,7 +191,7 @@ class Google_Service_Compute_AutoscalersResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $zone Name of the zone for this request.
-   * @param Google_Autoscaler $postBody
+   * @param Google_Service_Compute_Autoscaler $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string autoscaler Name of the autoscaler to update.

@@ -51,7 +51,7 @@ class Google_Service_Genomics_ReferencesetsResource extends Google_Service_Resou
    * om/ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/referencemethods.avdl#L7
    * 1) (referencesets.search)
    *
-   * @param Google_SearchReferenceSetsRequest $postBody
+   * @param Google_Service_Genomics_SearchReferenceSetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchReferenceSetsResponse
    */

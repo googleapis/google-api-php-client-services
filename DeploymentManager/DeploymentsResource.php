@@ -31,7 +31,7 @@ class Google_Service_DeploymentManager_DeploymentsResource extends Google_Servic
    *
    * @param string $project The project ID for this request.
    * @param string $deployment The name of the deployment for this request.
-   * @param Google_DeploymentsCancelPreviewRequest $postBody
+   * @param Google_Service_DeploymentManager_DeploymentsCancelPreviewRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DeploymentManager_Operation
    */
@@ -75,7 +75,7 @@ class Google_Service_DeploymentManager_DeploymentsResource extends Google_Servic
    * manifest. (deployments.insert)
    *
    * @param string $project The project ID for this request.
-   * @param Google_Deployment $postBody
+   * @param Google_Service_DeploymentManager_Deployment $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool preview If set to true, creates a deployment and creates
@@ -147,7 +147,7 @@ class Google_Service_DeploymentManager_DeploymentsResource extends Google_Servic
    *
    * @param string $project The project ID for this request.
    * @param string $deployment The name of the deployment for this request.
-   * @param Google_Deployment $postBody
+   * @param Google_Service_DeploymentManager_Deployment $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string createPolicy Sets the policy to use for creating new
@@ -178,7 +178,7 @@ class Google_Service_DeploymentManager_DeploymentsResource extends Google_Servic
    *
    * @param string $project The project ID for this request.
    * @param string $deployment The name of the deployment for this request.
-   * @param Google_DeploymentsStopRequest $postBody
+   * @param Google_Service_DeploymentManager_DeploymentsStopRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DeploymentManager_Operation
    */
@@ -194,7 +194,7 @@ class Google_Service_DeploymentManager_DeploymentsResource extends Google_Servic
    *
    * @param string $project The project ID for this request.
    * @param string $deployment The name of the deployment for this request.
-   * @param Google_Deployment $postBody
+   * @param Google_Service_DeploymentManager_Deployment $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string createPolicy Sets the policy to use for creating new

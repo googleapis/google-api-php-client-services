@@ -86,7 +86,7 @@ class Google_Service_AndroidEnterprise_InstallsResource extends Google_Service_R
    * @param string $deviceId The Android ID of the device.
    * @param string $installId The ID of the product represented by the install,
    * e.g. "app:com.google.android.gm".
-   * @param Google_Install $postBody
+   * @param Google_Service_AndroidEnterprise_Install $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_Install
    */
@@ -106,7 +106,7 @@ class Google_Service_AndroidEnterprise_InstallsResource extends Google_Service_R
    * @param string $deviceId The Android ID of the device.
    * @param string $installId The ID of the product represented by the install,
    * e.g. "app:com.google.android.gm".
-   * @param Google_Install $postBody
+   * @param Google_Service_AndroidEnterprise_Install $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_Install
    */

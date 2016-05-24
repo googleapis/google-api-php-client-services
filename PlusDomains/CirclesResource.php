@@ -62,7 +62,7 @@ class Google_Service_PlusDomains_CirclesResource extends Google_Service_Resource
    *
    * @param string $userId The ID of the user to create the circle on behalf of.
    * The value "me" can be used to indicate the authenticated user.
-   * @param Google_Circle $postBody
+   * @param Google_Service_PlusDomains_Circle $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_PlusDomains_Circle
    */
@@ -98,7 +98,7 @@ class Google_Service_PlusDomains_CirclesResource extends Google_Service_Resource
    * (circles.patch)
    *
    * @param string $circleId The ID of the circle to update.
-   * @param Google_Circle $postBody
+   * @param Google_Service_PlusDomains_Circle $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_PlusDomains_Circle
    */
@@ -141,7 +141,7 @@ class Google_Service_PlusDomains_CirclesResource extends Google_Service_Resource
    * Update a circle's description. (circles.update)
    *
    * @param string $circleId The ID of the circle to update.
-   * @param Google_Circle $postBody
+   * @param Google_Service_PlusDomains_Circle $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_PlusDomains_Circle
    */

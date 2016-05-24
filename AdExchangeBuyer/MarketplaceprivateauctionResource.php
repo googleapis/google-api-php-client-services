@@ -30,7 +30,7 @@ class Google_Service_AdExchangeBuyer_MarketplaceprivateauctionResource extends G
    * (marketplaceprivateauction.updateproposal)
    *
    * @param string $privateAuctionId The private auction id to be updated.
-   * @param Google_UpdatePrivateAuctionProposalRequest $postBody
+   * @param Google_Service_AdExchangeBuyer_UpdatePrivateAuctionProposalRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function updateproposal($privateAuctionId, Google_Service_AdExchangeBuyer_UpdatePrivateAuctionProposalRequest $postBody, $optParams = array())

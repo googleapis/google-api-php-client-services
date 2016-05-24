@@ -30,7 +30,7 @@ class Google_Service_Spectrum_PawsResource extends Google_Service_Resource
    * Requests from a fixed-mode device must include owner information so the
    * device can be registered with the database. (paws.getSpectrum)
    *
-   * @param Google_PawsGetSpectrumRequest $postBody
+   * @param Google_Service_Spectrum_PawsGetSpectrumRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Spectrum_PawsGetSpectrumResponse
    */
@@ -44,7 +44,7 @@ class Google_Service_Spectrum_PawsResource extends Google_Service_Resource
    * The Google Spectrum Database does not support batch requests, so this method
    * always yields an UNIMPLEMENTED error. (paws.getSpectrumBatch)
    *
-   * @param Google_PawsGetSpectrumBatchRequest $postBody
+   * @param Google_Service_Spectrum_PawsGetSpectrumBatchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Spectrum_PawsGetSpectrumBatchResponse
    */
@@ -58,7 +58,7 @@ class Google_Service_Spectrum_PawsResource extends Google_Service_Resource
    * Initializes the connection between a white space device and the database.
    * (paws.init)
    *
-   * @param Google_PawsInitRequest $postBody
+   * @param Google_Service_Spectrum_PawsInitRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Spectrum_PawsInitResponse
    */
@@ -75,7 +75,7 @@ class Google_Service_Spectrum_PawsResource extends Google_Service_Resource
    * notification, so this always yields an UNIMPLEMENTED error.
    * (paws.notifySpectrumUse)
    *
-   * @param Google_PawsNotifySpectrumUseRequest $postBody
+   * @param Google_Service_Spectrum_PawsNotifySpectrumUseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Spectrum_PawsNotifySpectrumUseResponse
    */
@@ -89,7 +89,7 @@ class Google_Service_Spectrum_PawsResource extends Google_Service_Resource
    * The Google Spectrum Database implements registration in the getSpectrum
    * method. As such this always returns an UNIMPLEMENTED error. (paws.register)
    *
-   * @param Google_PawsRegisterRequest $postBody
+   * @param Google_Service_Spectrum_PawsRegisterRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Spectrum_PawsRegisterResponse
    */
@@ -104,7 +104,7 @@ class Google_Service_Spectrum_PawsResource extends Google_Service_Resource
    * The Google Spectrum Database does not support master/slave configurations, so
    * this always yields an UNIMPLEMENTED error. (paws.verifyDevice)
    *
-   * @param Google_PawsVerifyDeviceRequest $postBody
+   * @param Google_Service_Spectrum_PawsVerifyDeviceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Spectrum_PawsVerifyDeviceResponse
    */

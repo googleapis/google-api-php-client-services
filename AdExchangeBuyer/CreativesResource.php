@@ -57,7 +57,7 @@ class Google_Service_AdExchangeBuyer_CreativesResource extends Google_Service_Re
   /**
    * Submit a new creative. (creatives.insert)
    *
-   * @param Google_Creative $postBody
+   * @param Google_Service_AdExchangeBuyer_Creative $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_Creative
    */

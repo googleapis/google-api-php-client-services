@@ -56,7 +56,7 @@ class Google_Service_Dfareporting_AdvertiserGroupsResource extends Google_Servic
    * Inserts a new advertiser group. (advertiserGroups.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_AdvertiserGroup $postBody
+   * @param Google_Service_Dfareporting_AdvertiserGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_AdvertiserGroup
    */
@@ -100,7 +100,7 @@ class Google_Service_Dfareporting_AdvertiserGroupsResource extends Google_Servic
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Advertiser group ID.
-   * @param Google_AdvertiserGroup $postBody
+   * @param Google_Service_Dfareporting_AdvertiserGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_AdvertiserGroup
    */
@@ -114,7 +114,7 @@ class Google_Service_Dfareporting_AdvertiserGroupsResource extends Google_Servic
    * Updates an existing advertiser group. (advertiserGroups.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_AdvertiserGroup $postBody
+   * @param Google_Service_Dfareporting_AdvertiserGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_AdvertiserGroup
    */

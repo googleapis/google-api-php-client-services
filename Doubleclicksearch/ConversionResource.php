@@ -57,7 +57,7 @@ class Google_Service_Doubleclicksearch_ConversionResource extends Google_Service
    * Inserts a batch of new conversions into DoubleClick Search.
    * (conversion.insert)
    *
-   * @param Google_ConversionList $postBody
+   * @param Google_Service_Doubleclicksearch_ConversionList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_ConversionList
    */
@@ -81,7 +81,7 @@ class Google_Service_Doubleclicksearch_ConversionResource extends Google_Service
    * conversions. Format is yyyymmdd.
    * @param string $startRow The 0-based starting index for retrieving conversions
    * results.
-   * @param Google_ConversionList $postBody
+   * @param Google_Service_Doubleclicksearch_ConversionList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_ConversionList
    */
@@ -94,7 +94,7 @@ class Google_Service_Doubleclicksearch_ConversionResource extends Google_Service
   /**
    * Updates a batch of conversions in DoubleClick Search. (conversion.update)
    *
-   * @param Google_ConversionList $postBody
+   * @param Google_Service_Doubleclicksearch_ConversionList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_ConversionList
    */
@@ -108,7 +108,7 @@ class Google_Service_Doubleclicksearch_ConversionResource extends Google_Service
    * Updates the availabilities of a batch of floodlight activities in DoubleClick
    * Search. (conversion.updateAvailability)
    *
-   * @param Google_UpdateAvailabilityRequest $postBody
+   * @param Google_Service_Doubleclicksearch_UpdateAvailabilityRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_UpdateAvailabilityResponse
    */

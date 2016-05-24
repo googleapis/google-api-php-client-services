@@ -45,7 +45,7 @@ class Google_Service_YouTube_CommentsResource extends Google_Service_Resource
    * @param string $part The part parameter identifies the properties that the API
    * response will include. Set the parameter value to snippet. The snippet part
    * has a quota cost of 2 units.
-   * @param Google_Comment $postBody
+   * @param Google_Service_YouTube_Comment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_Comment
    */
@@ -138,7 +138,7 @@ class Google_Service_YouTube_CommentsResource extends Google_Service_Resource
    * response will include. You must at least include the snippet part in the
    * parameter value since that part contains all of the properties that the API
    * request can update.
-   * @param Google_Comment $postBody
+   * @param Google_Service_YouTube_Comment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_Comment
    */

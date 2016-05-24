@@ -91,7 +91,7 @@ class Google_Service_Gmail_UsersThreadsResource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the thread to modify.
-   * @param Google_ModifyThreadRequest $postBody
+   * @param Google_Service_Gmail_ModifyThreadRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Thread
    */

@@ -66,7 +66,7 @@ class Google_Service_Compute_InstanceTemplatesResource extends Google_Service_Re
    * (instanceTemplates.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_InstanceTemplate $postBody
+   * @param Google_Service_Compute_InstanceTemplate $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

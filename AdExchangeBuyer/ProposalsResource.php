@@ -41,7 +41,7 @@ class Google_Service_AdExchangeBuyer_ProposalsResource extends Google_Service_Re
   /**
    * Create the given list of proposals (proposals.insert)
    *
-   * @param Google_CreateOrdersRequest $postBody
+   * @param Google_Service_AdExchangeBuyer_CreateOrdersRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_CreateOrdersResponse
    */
@@ -61,7 +61,7 @@ class Google_Service_AdExchangeBuyer_ProposalsResource extends Google_Service_Re
    * will be thrown. The caller should then fetch the latest proposal at head
    * revision and retry the update at that revision.
    * @param string $updateAction The proposed action to take on the proposal.
-   * @param Google_Proposal $postBody
+   * @param Google_Service_AdExchangeBuyer_Proposal $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_Proposal
    */
@@ -107,7 +107,7 @@ class Google_Service_AdExchangeBuyer_ProposalsResource extends Google_Service_Re
    * will be thrown. The caller should then fetch the latest proposal at head
    * revision and retry the update at that revision.
    * @param string $updateAction The proposed action to take on the proposal.
-   * @param Google_Proposal $postBody
+   * @param Google_Service_AdExchangeBuyer_Proposal $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_Proposal
    */

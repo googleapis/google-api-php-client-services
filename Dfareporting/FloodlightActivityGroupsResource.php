@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_FloodlightActivityGroupsResource extends Googl
    * Inserts a new floodlight activity group. (floodlightActivityGroups.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_FloodlightActivityGroup $postBody
+   * @param Google_Service_Dfareporting_FloodlightActivityGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightActivityGroup
    */
@@ -99,7 +99,7 @@ class Google_Service_Dfareporting_FloodlightActivityGroupsResource extends Googl
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Floodlight activity Group ID.
-   * @param Google_FloodlightActivityGroup $postBody
+   * @param Google_Service_Dfareporting_FloodlightActivityGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightActivityGroup
    */
@@ -114,7 +114,7 @@ class Google_Service_Dfareporting_FloodlightActivityGroupsResource extends Googl
    * (floodlightActivityGroups.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_FloodlightActivityGroup $postBody
+   * @param Google_Service_Dfareporting_FloodlightActivityGroup $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightActivityGroup
    */

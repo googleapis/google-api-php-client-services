@@ -43,7 +43,7 @@ class Google_Service_Genomics_ReadsResource extends Google_Service_Resource
    * [GlobalAllianceApi.searchReads](https://github.com/ga4gh/schemas/blob/v0.5.1/
    * src/main/resources/avro/readmethods.avdl#L85). (reads.search)
    *
-   * @param Google_SearchReadsRequest $postBody
+   * @param Google_Service_Genomics_SearchReadsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchReadsResponse
    */
@@ -57,7 +57,7 @@ class Google_Service_Genomics_ReadsResource extends Google_Service_Resource
    * Returns a stream of all the reads matching the search request, ordered by
    * reference name, position, and ID. (reads.stream)
    *
-   * @param Google_StreamReadsRequest $postBody
+   * @param Google_Service_Genomics_StreamReadsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_StreamReadsResponse
    */

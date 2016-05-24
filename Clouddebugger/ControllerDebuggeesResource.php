@@ -34,7 +34,7 @@ class Google_Service_Clouddebugger_ControllerDebuggeesResource extends Google_Se
    * data loss. If the debuggee is disabled by the server, the response will have
    * `is_disabled` set to `true`. (debuggees.register)
    *
-   * @param Google_RegisterDebuggeeRequest $postBody
+   * @param Google_Service_Clouddebugger_RegisterDebuggeeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Clouddebugger_RegisterDebuggeeResponse
    */

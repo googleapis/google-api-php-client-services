@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_AdvertisersResource extends Google_Service_Res
    * Inserts a new advertiser. (advertisers.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Advertiser $postBody
+   * @param Google_Service_Dfareporting_Advertiser $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Advertiser
    */
@@ -98,7 +98,7 @@ class Google_Service_Dfareporting_AdvertisersResource extends Google_Service_Res
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Advertiser ID.
-   * @param Google_Advertiser $postBody
+   * @param Google_Service_Dfareporting_Advertiser $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Advertiser
    */
@@ -112,7 +112,7 @@ class Google_Service_Dfareporting_AdvertisersResource extends Google_Service_Res
    * Updates an existing advertiser. (advertisers.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Advertiser $postBody
+   * @param Google_Service_Dfareporting_Advertiser $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Advertiser
    */

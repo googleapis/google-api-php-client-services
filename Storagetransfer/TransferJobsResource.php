@@ -28,7 +28,7 @@ class Google_Service_Storagetransfer_TransferJobsResource extends Google_Service
   /**
    * Creates a transfer job that runs periodically. (transferJobs.create)
    *
-   * @param Google_TransferJob $postBody
+   * @param Google_Service_Storagetransfer_TransferJob $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Storagetransfer_TransferJob
    */
@@ -83,7 +83,7 @@ class Google_Service_Storagetransfer_TransferJobsResource extends Google_Service
    * job is not allowed. (transferJobs.patch)
    *
    * @param string $jobName The name of job to update. Required.
-   * @param Google_UpdateTransferJobRequest $postBody
+   * @param Google_Service_Storagetransfer_UpdateTransferJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Storagetransfer_TransferJob
    */

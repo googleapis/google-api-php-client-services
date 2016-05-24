@@ -35,7 +35,7 @@ class Google_Service_Classroom_CoursesResource extends Google_Service_Resource
    * `ALREADY_EXISTS` if an alias was specified in the `id` and already exists.
    * (courses.create)
    *
-   * @param Google_Course $postBody
+   * @param Google_Service_Classroom_Course $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_Course
    */
@@ -122,7 +122,7 @@ class Google_Service_Classroom_CoursesResource extends Google_Service_Resource
    *
    * @param string $id Identifier of the course to update. This identifier can be
    * either the Classroom-assigned identifier or an alias.
-   * @param Google_Course $postBody
+   * @param Google_Service_Classroom_Course $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Mask that identifies which fields on the course
@@ -148,7 +148,7 @@ class Google_Service_Classroom_CoursesResource extends Google_Service_Resource
    *
    * @param string $id Identifier of the course to update. This identifier can be
    * either the Classroom-assigned identifier or an alias.
-   * @param Google_Course $postBody
+   * @param Google_Service_Classroom_Course $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_Course
    */

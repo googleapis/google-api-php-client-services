@@ -57,7 +57,7 @@ class Google_Service_Calendar_CalendarListResource extends Google_Service_Resour
   /**
    * Adds an entry to the user's calendar list. (calendarList.insert)
    *
-   * @param Google_CalendarListEntry $postBody
+   * @param Google_Service_Calendar_CalendarListEntry $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
@@ -115,7 +115,7 @@ class Google_Service_Calendar_CalendarListResource extends Google_Service_Resour
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param Google_CalendarListEntry $postBody
+   * @param Google_Service_Calendar_CalendarListEntry $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
@@ -136,7 +136,7 @@ class Google_Service_Calendar_CalendarListResource extends Google_Service_Resour
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param Google_CalendarListEntry $postBody
+   * @param Google_Service_Calendar_CalendarListEntry $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
@@ -154,7 +154,7 @@ class Google_Service_Calendar_CalendarListResource extends Google_Service_Resour
   /**
    * Watch for changes to CalendarList resources. (calendarList.watch)
    *
-   * @param Google_Channel $postBody
+   * @param Google_Service_Calendar_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of entries returned on one result

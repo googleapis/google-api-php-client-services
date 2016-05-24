@@ -30,7 +30,7 @@ class Google_Service_Dfareporting_DimensionValuesResource extends Google_Service
    * (dimensionValues.query)
    *
    * @param string $profileId The DFA user profile ID.
-   * @param Google_DimensionValueRequest $postBody
+   * @param Google_Service_Dfareporting_DimensionValueRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of results to return.

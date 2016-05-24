@@ -86,7 +86,7 @@ class Google_Service_Bigquery_JobsResource extends Google_Service_Resource
    *
    * @param string $projectId Project ID of the project that will be billed for
    * the job
-   * @param Google_Job $postBody
+   * @param Google_Service_Bigquery_Job $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_Job
    */
@@ -127,7 +127,7 @@ class Google_Service_Bigquery_JobsResource extends Google_Service_Resource
    * query completes within a specified timeout. (jobs.query)
    *
    * @param string $projectId Project ID of the project billed for the query
-   * @param Google_QueryRequest $postBody
+   * @param Google_Service_Bigquery_QueryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_QueryResponse
    */

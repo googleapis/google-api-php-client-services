@@ -72,7 +72,7 @@ class Google_Service_Dfareporting_FloodlightActivitiesResource extends Google_Se
    * Inserts a new floodlight activity. (floodlightActivities.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_FloodlightActivity $postBody
+   * @param Google_Service_Dfareporting_FloodlightActivity $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightActivity
    */
@@ -135,7 +135,7 @@ class Google_Service_Dfareporting_FloodlightActivitiesResource extends Google_Se
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Floodlight activity ID.
-   * @param Google_FloodlightActivity $postBody
+   * @param Google_Service_Dfareporting_FloodlightActivity $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightActivity
    */
@@ -149,7 +149,7 @@ class Google_Service_Dfareporting_FloodlightActivitiesResource extends Google_Se
    * Updates an existing floodlight activity. (floodlightActivities.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_FloodlightActivity $postBody
+   * @param Google_Service_Dfareporting_FloodlightActivity $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightActivity
    */

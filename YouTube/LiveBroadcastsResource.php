@@ -205,7 +205,7 @@ class Google_Service_YouTube_LiveBroadcastsResource extends Google_Service_Resou
    *
    * The part properties that you can include in the parameter value are id,
    * snippet, contentDetails, and status.
-   * @param Google_LiveBroadcast $postBody
+   * @param Google_Service_YouTube_LiveBroadcast $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -393,7 +393,7 @@ class Google_Service_YouTube_LiveBroadcastsResource extends Google_Service_Resou
    * body specifies. If the request body does not specify a value, the existing
    * privacy setting will be removed and the broadcast will revert to the default
    * privacy setting.
-   * @param Google_LiveBroadcast $postBody
+   * @param Google_Service_YouTube_LiveBroadcast $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

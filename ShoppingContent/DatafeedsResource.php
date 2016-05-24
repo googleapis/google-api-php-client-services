@@ -28,7 +28,7 @@ class Google_Service_ShoppingContent_DatafeedsResource extends Google_Service_Re
   /**
    * (datafeeds.custombatch)
    *
-   * @param Google_DatafeedsCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_DatafeedsCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -73,7 +73,7 @@ class Google_Service_ShoppingContent_DatafeedsResource extends Google_Service_Re
    * Registers a datafeed with your Merchant Center account. (datafeeds.insert)
    *
    * @param string $merchantId
-   * @param Google_Datafeed $postBody
+   * @param Google_Service_ShoppingContent_Datafeed $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -109,7 +109,7 @@ class Google_Service_ShoppingContent_DatafeedsResource extends Google_Service_Re
    *
    * @param string $merchantId
    * @param string $datafeedId
-   * @param Google_Datafeed $postBody
+   * @param Google_Service_ShoppingContent_Datafeed $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -126,7 +126,7 @@ class Google_Service_ShoppingContent_DatafeedsResource extends Google_Service_Re
    *
    * @param string $merchantId
    * @param string $datafeedId
-   * @param Google_Datafeed $postBody
+   * @param Google_Service_ShoppingContent_Datafeed $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.

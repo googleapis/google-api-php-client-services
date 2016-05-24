@@ -110,7 +110,7 @@ class Google_Service_Compute_TargetVpnGatewaysResource extends Google_Service_Re
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region for this request.
-   * @param Google_TargetVpnGateway $postBody
+   * @param Google_Service_Compute_TargetVpnGateway $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

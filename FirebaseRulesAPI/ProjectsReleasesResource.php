@@ -54,7 +54,7 @@ class Google_Service_FirebaseRulesAPI_ProjectsReleasesResource extends Google_Se
    * @param string $name Resource name for the project which owns this `Release`.
    *
    * Format: `projects/{project_id}`
-   * @param Google_Release $postBody
+   * @param Google_Service_FirebaseRulesAPI_Release $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseRulesAPI_Release
    */
@@ -173,7 +173,7 @@ class Google_Service_FirebaseRulesAPI_ProjectsReleasesResource extends Google_Se
    * between `Release` instances.
    *
    * Format: `projects/{project_id}/releases/{release_id}`
-   * @param Google_Release $postBody
+   * @param Google_Service_FirebaseRulesAPI_Release $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseRulesAPI_Release
    */

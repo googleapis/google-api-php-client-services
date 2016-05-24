@@ -28,7 +28,7 @@ class Google_Service_ShoppingContent_DatafeedstatusesResource extends Google_Ser
   /**
    * (datafeedstatuses.custombatch)
    *
-   * @param Google_DatafeedstatusesCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_DatafeedstatusesCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponse
    */

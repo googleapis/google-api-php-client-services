@@ -56,7 +56,7 @@ class Google_Service_Dfareporting_ReportsResource extends Google_Service_Resourc
    * Creates a report. (reports.insert)
    *
    * @param string $profileId The DFA user profile ID.
-   * @param Google_Report $postBody
+   * @param Google_Service_Dfareporting_Report $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Report
    */
@@ -92,7 +92,7 @@ class Google_Service_Dfareporting_ReportsResource extends Google_Service_Resourc
    *
    * @param string $profileId The DFA user profile ID.
    * @param string $reportId The ID of the report.
-   * @param Google_Report $postBody
+   * @param Google_Service_Dfareporting_Report $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Report
    */
@@ -124,7 +124,7 @@ class Google_Service_Dfareporting_ReportsResource extends Google_Service_Resourc
    *
    * @param string $profileId The DFA user profile ID.
    * @param string $reportId The ID of the report.
-   * @param Google_Report $postBody
+   * @param Google_Service_Dfareporting_Report $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Report
    */

@@ -45,7 +45,7 @@ class Google_Service_Analytics_ManagementWebpropertiesResource extends Google_Se
    * least one profile. (webproperties.insert)
    *
    * @param string $accountId Account ID to create the web property for.
-   * @param Google_Webproperty $postBody
+   * @param Google_Service_Analytics_Webproperty $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Webproperty
    */
@@ -82,7 +82,7 @@ class Google_Service_Analytics_ManagementWebpropertiesResource extends Google_Se
    *
    * @param string $accountId Account ID to which the web property belongs
    * @param string $webPropertyId Web property ID
-   * @param Google_Webproperty $postBody
+   * @param Google_Service_Analytics_Webproperty $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Webproperty
    */
@@ -97,7 +97,7 @@ class Google_Service_Analytics_ManagementWebpropertiesResource extends Google_Se
    *
    * @param string $accountId Account ID to which the web property belongs
    * @param string $webPropertyId Web property ID
-   * @param Google_Webproperty $postBody
+   * @param Google_Service_Analytics_Webproperty $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Webproperty
    */

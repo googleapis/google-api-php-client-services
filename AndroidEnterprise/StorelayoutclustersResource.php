@@ -59,7 +59,7 @@ class Google_Service_AndroidEnterprise_StorelayoutclustersResource extends Googl
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $pageId The ID of the page.
-   * @param Google_StoreCluster $postBody
+   * @param Google_Service_AndroidEnterprise_StoreCluster $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_StoreCluster
    */
@@ -91,7 +91,7 @@ class Google_Service_AndroidEnterprise_StorelayoutclustersResource extends Googl
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $pageId The ID of the page.
    * @param string $clusterId The ID of the cluster.
-   * @param Google_StoreCluster $postBody
+   * @param Google_Service_AndroidEnterprise_StoreCluster $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_StoreCluster
    */
@@ -107,7 +107,7 @@ class Google_Service_AndroidEnterprise_StorelayoutclustersResource extends Googl
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $pageId The ID of the page.
    * @param string $clusterId The ID of the cluster.
-   * @param Google_StoreCluster $postBody
+   * @param Google_Service_AndroidEnterprise_StoreCluster $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_StoreCluster
    */

@@ -31,7 +31,7 @@ class Google_Service_YouTube_WatermarksResource extends Google_Service_Resource
    *
    * @param string $channelId The channelId parameter specifies the YouTube
    * channel ID for which the watermark is being provided.
-   * @param Google_InvideoBranding $postBody
+   * @param Google_Service_YouTube_InvideoBranding $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

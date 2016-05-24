@@ -88,7 +88,7 @@ class Google_Service_GamesManagement_EventsResource extends Google_Service_Resou
    * be reset. All quests that use any of the events will also be reset.
    * (events.resetMultipleForAllPlayers)
    *
-   * @param Google_EventsResetMultipleForAllRequest $postBody
+   * @param Google_Service_GamesManagement_EventsResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function resetMultipleForAllPlayers(Google_Service_GamesManagement_EventsResetMultipleForAllRequest $postBody, $optParams = array())

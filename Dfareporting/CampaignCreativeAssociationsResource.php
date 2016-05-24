@@ -32,7 +32,7 @@ class Google_Service_Dfareporting_CampaignCreativeAssociationsResource extends G
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $campaignId Campaign ID in this association.
-   * @param Google_CampaignCreativeAssociation $postBody
+   * @param Google_Service_Dfareporting_CampaignCreativeAssociation $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CampaignCreativeAssociation
    */

@@ -30,7 +30,7 @@ class Google_Service_TagManager_AccountsContainersVariablesResource extends Goog
    *
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
-   * @param Google_Variable $postBody
+   * @param Google_Service_TagManager_Variable $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_Variable
    */
@@ -90,7 +90,7 @@ class Google_Service_TagManager_AccountsContainersVariablesResource extends Goog
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $variableId The GTM Variable ID.
-   * @param Google_Variable $postBody
+   * @param Google_Service_TagManager_Variable $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

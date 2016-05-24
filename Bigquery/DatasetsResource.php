@@ -63,7 +63,7 @@ class Google_Service_Bigquery_DatasetsResource extends Google_Service_Resource
    * Creates a new empty dataset. (datasets.insert)
    *
    * @param string $projectId Project ID of the new dataset
-   * @param Google_Dataset $postBody
+   * @param Google_Service_Bigquery_Dataset $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_Dataset
    */
@@ -100,7 +100,7 @@ class Google_Service_Bigquery_DatasetsResource extends Google_Service_Resource
    *
    * @param string $projectId Project ID of the dataset being updated
    * @param string $datasetId Dataset ID of the dataset being updated
-   * @param Google_Dataset $postBody
+   * @param Google_Service_Bigquery_Dataset $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_Dataset
    */
@@ -117,7 +117,7 @@ class Google_Service_Bigquery_DatasetsResource extends Google_Service_Resource
    *
    * @param string $projectId Project ID of the dataset being updated
    * @param string $datasetId Dataset ID of the dataset being updated
-   * @param Google_Dataset $postBody
+   * @param Google_Service_Bigquery_Dataset $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_Dataset
    */

@@ -40,7 +40,7 @@ class Google_Service_Compute_InstanceGroupManagersResource extends Google_Servic
    * @param string $zone The name of the zone where the managed instance group is
    * located.
    * @param string $instanceGroupManager The name of the managed instance group.
-   * @param Google_InstanceGroupManagersAbandonInstancesRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupManagersAbandonInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -131,7 +131,7 @@ class Google_Service_Compute_InstanceGroupManagersResource extends Google_Servic
    * @param string $zone The name of the zone where the managed instance group is
    * located.
    * @param string $instanceGroupManager The name of the managed instance group.
-   * @param Google_InstanceGroupManagersDeleteInstancesRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupManagersDeleteInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -171,7 +171,7 @@ class Google_Service_Compute_InstanceGroupManagersResource extends Google_Servic
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone where you want to create the managed
    * instance group.
-   * @param Google_InstanceGroupManager $postBody
+   * @param Google_Service_Compute_InstanceGroupManager $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -265,7 +265,7 @@ class Google_Service_Compute_InstanceGroupManagersResource extends Google_Servic
    * @param string $zone The name of the zone where the managed instance group is
    * located.
    * @param string $instanceGroupManager The name of the managed instance group.
-   * @param Google_InstanceGroupManagersRecreateInstancesRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupManagersRecreateInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -310,7 +310,7 @@ class Google_Service_Compute_InstanceGroupManagersResource extends Google_Servic
    * @param string $zone The name of the zone where the managed instance group is
    * located.
    * @param string $instanceGroupManager The name of the managed instance group.
-   * @param Google_InstanceGroupManagersSetInstanceTemplateRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupManagersSetInstanceTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -333,7 +333,7 @@ class Google_Service_Compute_InstanceGroupManagersResource extends Google_Servic
    * @param string $zone The name of the zone where the managed instance group is
    * located.
    * @param string $instanceGroupManager The name of the managed instance group.
-   * @param Google_InstanceGroupManagersSetTargetPoolsRequest $postBody
+   * @param Google_Service_Compute_InstanceGroupManagersSetTargetPoolsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

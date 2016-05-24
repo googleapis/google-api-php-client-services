@@ -42,7 +42,7 @@ class Google_Service_Compute_ProjectsResource extends Google_Service_Resource
    * Moves a persistent disk from one zone to another. (projects.moveDisk)
    *
    * @param string $project Project ID for this request.
-   * @param Google_DiskMoveRequest $postBody
+   * @param Google_Service_Compute_DiskMoveRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -57,7 +57,7 @@ class Google_Service_Compute_ProjectsResource extends Google_Service_Resource
    * (projects.moveInstance)
    *
    * @param string $project Project ID for this request.
-   * @param Google_InstanceMoveRequest $postBody
+   * @param Google_Service_Compute_InstanceMoveRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -72,7 +72,7 @@ class Google_Service_Compute_ProjectsResource extends Google_Service_Resource
    * data included in the request. (projects.setCommonInstanceMetadata)
    *
    * @param string $project Project ID for this request.
-   * @param Google_Metadata $postBody
+   * @param Google_Service_Compute_Metadata $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -88,7 +88,7 @@ class Google_Service_Compute_ProjectsResource extends Google_Service_Resource
    * the usage export feature will be disabled. (projects.setUsageExportBucket)
    *
    * @param string $project Project ID for this request.
-   * @param Google_UsageExportLocation $postBody
+   * @param Google_Service_Compute_UsageExportLocation $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

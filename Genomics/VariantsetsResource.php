@@ -33,7 +33,7 @@ class Google_Service_Genomics_VariantsetsResource extends Google_Service_Resourc
    * are optional. Note that the `id` field will be ignored, as this is assigned
    * by the server. (variantsets.create)
    *
-   * @param Google_VariantSet $postBody
+   * @param Google_Service_Genomics_VariantSet $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_VariantSet
    */
@@ -69,7 +69,7 @@ class Google_Service_Genomics_VariantsetsResource extends Google_Service_Resourc
    * @param string $variantSetId Required. The ID of the variant set that contains
    * variant data which should be exported. The caller must have READ access to
    * this variant set.
-   * @param Google_ExportVariantSetRequest $postBody
+   * @param Google_Service_Genomics_ExportVariantSetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Operation
    */
@@ -103,7 +103,7 @@ class Google_Service_Genomics_VariantsetsResource extends Google_Service_Resourc
    *
    * @param string $variantSetId The ID of the variant to be updated (must already
    * exist).
-   * @param Google_VariantSet $postBody
+   * @param Google_Service_Genomics_VariantSet $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask An optional mask specifying which fields to
@@ -125,7 +125,7 @@ class Google_Service_Genomics_VariantsetsResource extends Google_Service_Resourc
    * /ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/variantmethods.avdl#L49).
    * (variantsets.search)
    *
-   * @param Google_SearchVariantSetsRequest $postBody
+   * @param Google_Service_Genomics_SearchVariantSetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchVariantSetsResponse
    */

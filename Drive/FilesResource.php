@@ -30,7 +30,7 @@ class Google_Service_Drive_FilesResource extends Google_Service_Resource
    * semantics. (files.copy)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_DriveFile $postBody
+   * @param Google_Service_Drive_DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool ignoreDefaultVisibility Whether to ignore the domain's
@@ -54,7 +54,7 @@ class Google_Service_Drive_FilesResource extends Google_Service_Resource
   /**
    * Creates a new file. (files.create)
    *
-   * @param Google_DriveFile $postBody
+   * @param Google_Service_Drive_DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool ignoreDefaultVisibility Whether to ignore the domain's
@@ -184,7 +184,7 @@ class Google_Service_Drive_FilesResource extends Google_Service_Resource
    * Updates a file's metadata and/or content with patch semantics. (files.update)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_DriveFile $postBody
+   * @param Google_Service_Drive_DriveFile $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string addParents A comma-separated list of parent IDs to add.
@@ -209,7 +209,7 @@ class Google_Service_Drive_FilesResource extends Google_Service_Resource
    * Subscribes to changes to a file (files.watch)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_Channel $postBody
+   * @param Google_Service_Drive_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool acknowledgeAbuse Whether the user is acknowledging the risk

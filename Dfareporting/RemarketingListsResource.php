@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_RemarketingListsResource extends Google_Servic
    * Inserts a new remarketing list. (remarketingLists.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_RemarketingList $postBody
+   * @param Google_Service_Dfareporting_RemarketingList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_RemarketingList
    */
@@ -91,7 +91,7 @@ class Google_Service_Dfareporting_RemarketingListsResource extends Google_Servic
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Remarketing list ID.
-   * @param Google_RemarketingList $postBody
+   * @param Google_Service_Dfareporting_RemarketingList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_RemarketingList
    */
@@ -105,7 +105,7 @@ class Google_Service_Dfareporting_RemarketingListsResource extends Google_Servic
    * Updates an existing remarketing list. (remarketingLists.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_RemarketingList $postBody
+   * @param Google_Service_Dfareporting_RemarketingList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_RemarketingList
    */

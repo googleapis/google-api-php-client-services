@@ -32,7 +32,7 @@ class Google_Service_TagManager_AccountsContainersReauthorizeEnvironmentsResourc
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $environmentId The GTM Environment ID.
-   * @param Google_Environment $postBody
+   * @param Google_Service_TagManager_Environment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_Environment
    */

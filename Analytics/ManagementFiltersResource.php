@@ -57,7 +57,7 @@ class Google_Service_Analytics_ManagementFiltersResource extends Google_Service_
    * Create a new filter. (filters.insert)
    *
    * @param string $accountId Account ID to create filter for.
-   * @param Google_Filter $postBody
+   * @param Google_Service_Analytics_Filter $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Filter
    */
@@ -91,7 +91,7 @@ class Google_Service_Analytics_ManagementFiltersResource extends Google_Service_
    *
    * @param string $accountId Account ID to which the filter belongs.
    * @param string $filterId ID of the filter to be updated.
-   * @param Google_Filter $postBody
+   * @param Google_Service_Analytics_Filter $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Filter
    */
@@ -106,7 +106,7 @@ class Google_Service_Analytics_ManagementFiltersResource extends Google_Service_
    *
    * @param string $accountId Account ID to which the filter belongs.
    * @param string $filterId ID of the filter to be updated.
-   * @param Google_Filter $postBody
+   * @param Google_Service_Analytics_Filter $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Filter
    */

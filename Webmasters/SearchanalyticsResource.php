@@ -37,7 +37,7 @@ class Google_Service_Webmasters_SearchanalyticsResource extends Google_Service_R
    *
    * @param string $siteUrl The site's URL, including protocol. For example:
    * http://www.example.com/
-   * @param Google_SearchAnalyticsQueryRequest $postBody
+   * @param Google_Service_Webmasters_SearchAnalyticsQueryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Webmasters_SearchAnalyticsQueryResponse
    */

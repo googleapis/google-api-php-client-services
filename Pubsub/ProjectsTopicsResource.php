@@ -34,7 +34,7 @@ class Google_Service_Pubsub_ProjectsTopicsResource extends Google_Service_Resour
    * underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs
    * (`%`). It must be between 3 and 255 characters in length, and it must not
    * start with `"goog"`.
-   * @param Google_Topic $postBody
+   * @param Google_Service_Pubsub_Topic $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_Topic
    */
@@ -117,7 +117,7 @@ class Google_Service_Pubsub_ProjectsTopicsResource extends Google_Service_Resour
    *
    * @param string $topic The messages in the request will be published on this
    * topic.
-   * @param Google_PublishRequest $postBody
+   * @param Google_Service_Pubsub_PublishRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_PublishResponse
    */
@@ -136,7 +136,7 @@ class Google_Service_Pubsub_ProjectsTopicsResource extends Google_Service_Resour
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `setIamPolicy`
    * documentation.
-   * @param Google_SetIamPolicyRequest $postBody
+   * @param Google_Service_Pubsub_SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_Policy
    */
@@ -155,7 +155,7 @@ class Google_Service_Pubsub_ProjectsTopicsResource extends Google_Service_Resour
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `testIamPermissions`
    * documentation.
-   * @param Google_TestIamPermissionsRequest $postBody
+   * @param Google_Service_Pubsub_TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Pubsub_TestIamPermissionsResponse
    */

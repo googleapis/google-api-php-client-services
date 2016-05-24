@@ -126,7 +126,7 @@ class Google_Service_Games_AchievementsResource extends Google_Service_Resource
    * Updates multiple achievements for the currently authenticated player.
    * (achievements.updateMultiple)
    *
-   * @param Google_AchievementUpdateMultipleRequest $postBody
+   * @param Google_Service_Games_AchievementUpdateMultipleRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.

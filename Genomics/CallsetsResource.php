@@ -31,7 +31,7 @@ class Google_Service_Genomics_CallsetsResource extends Google_Service_Resource
    * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
    * (callsets.create)
    *
-   * @param Google_CallSet $postBody
+   * @param Google_Service_Genomics_CallSet $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_CallSet
    */
@@ -80,7 +80,7 @@ class Google_Service_Genomics_CallsetsResource extends Google_Service_Resource
    * This method supports patch semantics. (callsets.patch)
    *
    * @param string $callSetId The ID of the call set to be updated.
-   * @param Google_CallSet $postBody
+   * @param Google_Service_Genomics_CallSet $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask An optional mask specifying which fields to
@@ -102,7 +102,7 @@ class Google_Service_Genomics_CallsetsResource extends Google_Service_Resource
    * s/blob/v0.5.1/src/main/resources/avro/variantmethods.avdl#L178).
    * (callsets.search)
    *
-   * @param Google_SearchCallSetsRequest $postBody
+   * @param Google_Service_Genomics_SearchCallSetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchCallSetsResponse
    */

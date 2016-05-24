@@ -62,7 +62,7 @@ class Google_Service_Dfareporting_FloodlightConfigurationsResource extends Googl
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Floodlight configuration ID.
-   * @param Google_FloodlightConfiguration $postBody
+   * @param Google_Service_Dfareporting_FloodlightConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightConfiguration
    */
@@ -77,7 +77,7 @@ class Google_Service_Dfareporting_FloodlightConfigurationsResource extends Googl
    * (floodlightConfigurations.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_FloodlightConfiguration $postBody
+   * @param Google_Service_Dfareporting_FloodlightConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_FloodlightConfiguration
    */

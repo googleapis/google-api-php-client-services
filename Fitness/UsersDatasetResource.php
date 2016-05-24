@@ -33,7 +33,7 @@ class Google_Service_Fitness_UsersDatasetResource extends Google_Service_Resourc
    *
    * @param string $userId Aggregate data for the person identified. Use me to
    * indicate the authenticated user. Only me is supported at this time.
-   * @param Google_AggregateRequest $postBody
+   * @param Google_Service_Fitness_AggregateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fitness_AggregateResponse
    */

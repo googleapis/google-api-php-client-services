@@ -71,7 +71,7 @@ class Google_Service_Prediction_TrainedmodelsResource extends Google_Service_Res
    * Train a Prediction API model. (trainedmodels.insert)
    *
    * @param string $project The project associated with the model.
-   * @param Google_Insert $postBody
+   * @param Google_Service_Prediction_Insert $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Prediction_Insert2
    */
@@ -102,7 +102,7 @@ class Google_Service_Prediction_TrainedmodelsResource extends Google_Service_Res
    *
    * @param string $project The project associated with the model.
    * @param string $id The unique name for the predictive model.
-   * @param Google_Input $postBody
+   * @param Google_Service_Prediction_Input $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Prediction_Output
    */
@@ -117,7 +117,7 @@ class Google_Service_Prediction_TrainedmodelsResource extends Google_Service_Res
    *
    * @param string $project The project associated with the model.
    * @param string $id The unique name for the predictive model.
-   * @param Google_Update $postBody
+   * @param Google_Service_Prediction_Update $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Prediction_Insert2
    */

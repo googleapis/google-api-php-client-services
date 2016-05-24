@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_AccountUserProfilesResource extends Google_Ser
    * Inserts a new account user profile. (accountUserProfiles.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_AccountUserProfile $postBody
+   * @param Google_Service_Dfareporting_AccountUserProfile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_AccountUserProfile
    */
@@ -92,7 +92,7 @@ class Google_Service_Dfareporting_AccountUserProfilesResource extends Google_Ser
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id User profile ID.
-   * @param Google_AccountUserProfile $postBody
+   * @param Google_Service_Dfareporting_AccountUserProfile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_AccountUserProfile
    */
@@ -106,7 +106,7 @@ class Google_Service_Dfareporting_AccountUserProfilesResource extends Google_Ser
    * Updates an existing account user profile. (accountUserProfiles.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_AccountUserProfile $postBody
+   * @param Google_Service_Dfareporting_AccountUserProfile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_AccountUserProfile
    */

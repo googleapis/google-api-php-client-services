@@ -28,7 +28,7 @@ class Google_Service_DoubleClickBidManager_LineitemsResource extends Google_Serv
   /**
    * Retrieves line items in CSV format. (lineitems.downloadlineitems)
    *
-   * @param Google_DownloadLineItemsRequest $postBody
+   * @param Google_Service_DoubleClickBidManager_DownloadLineItemsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DoubleClickBidManager_DownloadLineItemsResponse
    */
@@ -41,7 +41,7 @@ class Google_Service_DoubleClickBidManager_LineitemsResource extends Google_Serv
   /**
    * Uploads line items in CSV format. (lineitems.uploadlineitems)
    *
-   * @param Google_UploadLineItemsRequest $postBody
+   * @param Google_Service_DoubleClickBidManager_UploadLineItemsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_DoubleClickBidManager_UploadLineItemsResponse
    */

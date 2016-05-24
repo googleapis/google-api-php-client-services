@@ -30,7 +30,7 @@ class Google_Service_ShoppingContent_InventoryResource extends Google_Service_Re
    * request. This operation does not update the expiration date of the products.
    * (inventory.custombatch)
    *
-   * @param Google_InventoryCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_InventoryCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -53,7 +53,7 @@ class Google_Service_ShoppingContent_InventoryResource extends Google_Service_Re
    * product.
    * @param string $productId The ID of the product for which to update price and
    * availability.
-   * @param Google_InventorySetRequest $postBody
+   * @param Google_Service_ShoppingContent_InventorySetRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
