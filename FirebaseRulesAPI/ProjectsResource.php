@@ -49,7 +49,7 @@ class Google_Service_FirebaseRulesAPI_ProjectsResource extends Google_Service_Re
    * @param string $name Name of the project.
    *
    * Format: `projects/{project_id}`
-   * @param Google_TestRulesetRequest $postBody
+   * @param Google_Service_FirebaseRulesAPI_TestRulesetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseRulesAPI_TestRulesetResponse
    */

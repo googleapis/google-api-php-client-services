@@ -113,7 +113,7 @@ class Google_Service_AndroidPublisher_EditsApklistingsResource extends Google_Se
    * @param string $language The language code (a BCP-47 language tag) of the APK-
    * specific localized listing to read or modify. For example, to select Austrian
    * German, pass "de-AT".
-   * @param Google_ApkListing $postBody
+   * @param Google_Service_AndroidPublisher_ApkListing $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_ApkListing
    */
@@ -135,7 +135,7 @@ class Google_Service_AndroidPublisher_EditsApklistingsResource extends Google_Se
    * @param string $language The language code (a BCP-47 language tag) of the APK-
    * specific localized listing to read or modify. For example, to select Austrian
    * German, pass "de-AT".
-   * @param Google_ApkListing $postBody
+   * @param Google_Service_AndroidPublisher_ApkListing $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_ApkListing
    */

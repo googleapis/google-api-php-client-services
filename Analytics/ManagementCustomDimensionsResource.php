@@ -47,7 +47,7 @@ class Google_Service_Analytics_ManagementCustomDimensionsResource extends Google
    * @param string $accountId Account ID for the custom dimension to create.
    * @param string $webPropertyId Web property ID for the custom dimension to
    * create.
-   * @param Google_CustomDimension $postBody
+   * @param Google_Service_Analytics_CustomDimension $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_CustomDimension
    */
@@ -87,7 +87,7 @@ class Google_Service_Analytics_ManagementCustomDimensionsResource extends Google
    * update.
    * @param string $customDimensionId Custom dimension ID for the custom dimension
    * to update.
-   * @param Google_CustomDimension $postBody
+   * @param Google_Service_Analytics_CustomDimension $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool ignoreCustomDataSourceLinks Force the update and ignore any
@@ -109,7 +109,7 @@ class Google_Service_Analytics_ManagementCustomDimensionsResource extends Google
    * update.
    * @param string $customDimensionId Custom dimension ID for the custom dimension
    * to update.
-   * @param Google_CustomDimension $postBody
+   * @param Google_Service_Analytics_CustomDimension $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool ignoreCustomDataSourceLinks Force the update and ignore any

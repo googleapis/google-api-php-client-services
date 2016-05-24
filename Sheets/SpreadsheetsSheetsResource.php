@@ -32,7 +32,7 @@ class Google_Service_Sheets_SpreadsheetsSheetsResource extends Google_Service_Re
    * @param string $spreadsheetId The ID of the spreadsheet containing the sheet
    * to copy.
    * @param int $sheetId The ID of the sheet to copy.
-   * @param Google_CopySheetToAnotherSpreadsheetRequest $postBody
+   * @param Google_Service_Sheets_CopySheetToAnotherSpreadsheetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Sheets_SheetProperties
    */

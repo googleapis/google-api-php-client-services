@@ -62,7 +62,7 @@ class Google_Service_Dfareporting_CreativeFieldValuesResource extends Google_Ser
    * @param string $profileId User profile ID associated with this request.
    * @param string $creativeFieldId Creative field ID for this creative field
    * value.
-   * @param Google_CreativeFieldValue $postBody
+   * @param Google_Service_Dfareporting_CreativeFieldValue $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeFieldValue
    */
@@ -105,7 +105,7 @@ class Google_Service_Dfareporting_CreativeFieldValuesResource extends Google_Ser
    * @param string $creativeFieldId Creative field ID for this creative field
    * value.
    * @param string $id Creative Field Value ID
-   * @param Google_CreativeFieldValue $postBody
+   * @param Google_Service_Dfareporting_CreativeFieldValue $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeFieldValue
    */
@@ -121,7 +121,7 @@ class Google_Service_Dfareporting_CreativeFieldValuesResource extends Google_Ser
    * @param string $profileId User profile ID associated with this request.
    * @param string $creativeFieldId Creative field ID for this creative field
    * value.
-   * @param Google_CreativeFieldValue $postBody
+   * @param Google_Service_Dfareporting_CreativeFieldValue $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeFieldValue
    */

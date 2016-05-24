@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_SubaccountsResource extends Google_Service_Res
    * Inserts a new subaccount. (subaccounts.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Subaccount $postBody
+   * @param Google_Service_Dfareporting_Subaccount $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Subaccount
    */
@@ -86,7 +86,7 @@ class Google_Service_Dfareporting_SubaccountsResource extends Google_Service_Res
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Subaccount ID.
-   * @param Google_Subaccount $postBody
+   * @param Google_Service_Dfareporting_Subaccount $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Subaccount
    */
@@ -100,7 +100,7 @@ class Google_Service_Dfareporting_SubaccountsResource extends Google_Service_Res
    * Updates an existing subaccount. (subaccounts.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Subaccount $postBody
+   * @param Google_Service_Dfareporting_Subaccount $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Subaccount
    */

@@ -108,7 +108,7 @@ class Google_Service_Compute_AddressesResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region for this request.
-   * @param Google_Address $postBody
+   * @param Google_Service_Compute_Address $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

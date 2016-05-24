@@ -31,7 +31,7 @@ class Google_Service_Genomics_DatasetsResource extends Google_Service_Resource
    * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
    * (datasets.create)
    *
-   * @param Google_Dataset $postBody
+   * @param Google_Service_Genomics_Dataset $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Dataset
    */
@@ -84,7 +84,7 @@ class Google_Service_Genomics_DatasetsResource extends Google_Service_Resource
    *
    * @param string $resource REQUIRED: The resource for which policy is being
    * specified. Format is `datasets/`.
-   * @param Google_GetIamPolicyRequest $postBody
+   * @param Google_Service_Genomics_GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Policy
    */
@@ -123,7 +123,7 @@ class Google_Service_Genomics_DatasetsResource extends Google_Service_Resource
    * This method supports patch semantics. (datasets.patch)
    *
    * @param string $datasetId The ID of the dataset to be updated.
-   * @param Google_Dataset $postBody
+   * @param Google_Service_Genomics_Dataset $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask An optional mask specifying which fields to
@@ -146,7 +146,7 @@ class Google_Service_Genomics_DatasetsResource extends Google_Service_Resource
    *
    * @param string $resource REQUIRED: The resource for which policy is being
    * specified. Format is `datasets/`.
-   * @param Google_SetIamPolicyRequest $postBody
+   * @param Google_Service_Genomics_SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Policy
    */
@@ -165,7 +165,7 @@ class Google_Service_Genomics_DatasetsResource extends Google_Service_Resource
    *
    * @param string $resource REQUIRED: The resource for which policy is being
    * specified. Format is `datasets/`.
-   * @param Google_TestIamPermissionsRequest $postBody
+   * @param Google_Service_Genomics_TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_TestIamPermissionsResponse
    */
@@ -183,7 +183,7 @@ class Google_Service_Genomics_DatasetsResource extends Google_Service_Resource
    * after the deletion occurred. (datasets.undelete)
    *
    * @param string $datasetId The ID of the dataset to be undeleted.
-   * @param Google_UndeleteDatasetRequest $postBody
+   * @param Google_Service_Genomics_UndeleteDatasetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Dataset
    */

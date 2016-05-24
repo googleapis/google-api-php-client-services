@@ -36,7 +36,7 @@ class Google_Service_FirebaseRulesAPI_ProjectsRulesetsResource extends Google_Se
    * @param string $name Resource name for Project which owns this `Ruleset`.
    *
    * Format: `projects/{project_id}`
-   * @param Google_Ruleset $postBody
+   * @param Google_Service_FirebaseRulesAPI_Ruleset $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseRulesAPI_Ruleset
    */

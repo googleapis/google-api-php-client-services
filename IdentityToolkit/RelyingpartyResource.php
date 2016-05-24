@@ -29,7 +29,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
    * Creates the URI used by the IdP to authenticate the user.
    * (relyingparty.createAuthUri)
    *
-   * @param Google_IdentitytoolkitRelyingpartyCreateAuthUriRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyCreateAuthUriRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_CreateAuthUriResponse
    */
@@ -42,7 +42,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Delete user account. (relyingparty.deleteAccount)
    *
-   * @param Google_IdentitytoolkitRelyingpartyDeleteAccountRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDeleteAccountRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_DeleteAccountResponse
    */
@@ -55,7 +55,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Batch download user accounts. (relyingparty.downloadAccount)
    *
-   * @param Google_IdentitytoolkitRelyingpartyDownloadAccountRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyDownloadAccountRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_DownloadAccountResponse
    */
@@ -68,7 +68,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Returns the account info. (relyingparty.getAccountInfo)
    *
-   * @param Google_IdentitytoolkitRelyingpartyGetAccountInfoRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_GetAccountInfoResponse
    */
@@ -82,7 +82,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
    * Get a code for user action confirmation.
    * (relyingparty.getOobConfirmationCode)
    *
-   * @param Google_Relyingparty $postBody
+   * @param Google_Service_IdentityToolkit_Relyingparty $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_GetOobConfirmationCodeResponse
    */
@@ -135,7 +135,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Reset password for a user. (relyingparty.resetPassword)
    *
-   * @param Google_IdentitytoolkitRelyingpartyResetPasswordRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyResetPasswordRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_ResetPasswordResponse
    */
@@ -148,7 +148,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Set account info for a user. (relyingparty.setAccountInfo)
    *
-   * @param Google_IdentitytoolkitRelyingpartySetAccountInfoRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_SetAccountInfoResponse
    */
@@ -161,7 +161,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Set project configuration. (relyingparty.setProjectConfig)
    *
-   * @param Google_IdentitytoolkitRelyingpartySetProjectConfigRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetProjectConfigRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetProjectConfigResponse
    */
@@ -174,7 +174,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Sign out user. (relyingparty.signOutUser)
    *
-   * @param Google_IdentitytoolkitRelyingpartySignOutUserRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySignOutUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySignOutUserResponse
    */
@@ -187,7 +187,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Signup new user. (relyingparty.signupNewUser)
    *
-   * @param Google_IdentitytoolkitRelyingpartySignupNewUserRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySignupNewUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_SignupNewUserResponse
    */
@@ -200,7 +200,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Batch upload existing user accounts. (relyingparty.uploadAccount)
    *
-   * @param Google_IdentitytoolkitRelyingpartyUploadAccountRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyUploadAccountRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_UploadAccountResponse
    */
@@ -213,7 +213,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Verifies the assertion returned by the IdP. (relyingparty.verifyAssertion)
    *
-   * @param Google_IdentitytoolkitRelyingpartyVerifyAssertionRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyAssertionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_VerifyAssertionResponse
    */
@@ -226,7 +226,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Verifies the developer asserted ID token. (relyingparty.verifyCustomToken)
    *
-   * @param Google_IdentitytoolkitRelyingpartyVerifyCustomTokenRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyCustomTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_VerifyCustomTokenResponse
    */
@@ -239,7 +239,7 @@ class Google_Service_IdentityToolkit_RelyingpartyResource extends Google_Service
   /**
    * Verifies the user entered password. (relyingparty.verifyPassword)
    *
-   * @param Google_IdentitytoolkitRelyingpartyVerifyPasswordRequest $postBody
+   * @param Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyVerifyPasswordRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_IdentityToolkit_VerifyPasswordResponse
    */

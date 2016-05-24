@@ -86,7 +86,7 @@ class Google_Service_GamesManagement_AchievementsResource extends Google_Service
    * available to user accounts for your developer console. Only draft
    * achievements may be reset. (achievements.resetMultipleForAllPlayers)
    *
-   * @param Google_AchievementResetMultipleForAllRequest $postBody
+   * @param Google_Service_GamesManagement_AchievementResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function resetMultipleForAllPlayers(Google_Service_GamesManagement_AchievementResetMultipleForAllRequest $postBody, $optParams = array())

@@ -32,7 +32,7 @@ class Google_Service_Genomics_AnnotationsetsResource extends Google_Service_Reso
    * documented as being server-generated (for example, the `id` field).
    * (annotationsets.create)
    *
-   * @param Google_AnnotationSet $postBody
+   * @param Google_Service_Genomics_AnnotationSet $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_AnnotationSet
    */
@@ -78,7 +78,7 @@ class Google_Service_Genomics_AnnotationsetsResource extends Google_Service_Reso
    * Caller must have READ permission for the queried datasets.
    * (annotationsets.search)
    *
-   * @param Google_SearchAnnotationSetsRequest $postBody
+   * @param Google_Service_Genomics_SearchAnnotationSetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchAnnotationSetsResponse
    */
@@ -95,7 +95,7 @@ class Google_Service_Genomics_AnnotationsetsResource extends Google_Service_Reso
    * (annotationsets.update)
    *
    * @param string $annotationSetId The ID of the annotation set to be updated.
-   * @param Google_AnnotationSet $postBody
+   * @param Google_Service_Genomics_AnnotationSet $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask An optional mask specifying which fields to

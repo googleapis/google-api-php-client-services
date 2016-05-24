@@ -29,7 +29,7 @@ class Google_Service_AdExchangeBuyer_MarketplacenotesResource extends Google_Ser
    * Add notes to the proposal (marketplacenotes.insert)
    *
    * @param string $proposalId The proposalId to add notes for.
-   * @param Google_AddOrderNotesRequest $postBody
+   * @param Google_Service_AdExchangeBuyer_AddOrderNotesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_AddOrderNotesResponse
    */

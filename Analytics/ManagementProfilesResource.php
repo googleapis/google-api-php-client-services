@@ -63,7 +63,7 @@ class Google_Service_Analytics_ManagementProfilesResource extends Google_Service
    * @param string $accountId Account ID to create the view (profile) for.
    * @param string $webPropertyId Web property ID to create the view (profile)
    * for.
-   * @param Google_Profile $postBody
+   * @param Google_Service_Analytics_Profile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Profile
    */
@@ -105,7 +105,7 @@ class Google_Service_Analytics_ManagementProfilesResource extends Google_Service
    * @param string $webPropertyId Web property ID to which the view (profile)
    * belongs
    * @param string $profileId ID of the view (profile) to be updated.
-   * @param Google_Profile $postBody
+   * @param Google_Service_Analytics_Profile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Profile
    */
@@ -122,7 +122,7 @@ class Google_Service_Analytics_ManagementProfilesResource extends Google_Service
    * @param string $webPropertyId Web property ID to which the view (profile)
    * belongs
    * @param string $profileId ID of the view (profile) to be updated.
-   * @param Google_Profile $postBody
+   * @param Google_Service_Analytics_Profile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_Profile
    */

@@ -31,7 +31,7 @@ class Google_Service_Monitoring_ProjectsMetricDescriptorsResource extends Google
    *
    * @param string $name The project on which to execute the request. The format
    * is `"projects/{project_id_or_number}"`.
-   * @param Google_MetricDescriptor $postBody
+   * @param Google_Service_Monitoring_MetricDescriptor $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MetricDescriptor
    */

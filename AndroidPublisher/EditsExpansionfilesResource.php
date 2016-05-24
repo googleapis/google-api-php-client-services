@@ -55,7 +55,7 @@ class Google_Service_AndroidPublisher_EditsExpansionfilesResource extends Google
    * @param int $apkVersionCode The version code of the APK whose Expansion File
    * configuration is being read or modified.
    * @param string $expansionFileType
-   * @param Google_ExpansionFile $postBody
+   * @param Google_Service_AndroidPublisher_ExpansionFile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_ExpansionFile
    */
@@ -76,7 +76,7 @@ class Google_Service_AndroidPublisher_EditsExpansionfilesResource extends Google
    * @param int $apkVersionCode The version code of the APK whose Expansion File
    * configuration is being read or modified.
    * @param string $expansionFileType
-   * @param Google_ExpansionFile $postBody
+   * @param Google_Service_AndroidPublisher_ExpansionFile $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_ExpansionFile
    */

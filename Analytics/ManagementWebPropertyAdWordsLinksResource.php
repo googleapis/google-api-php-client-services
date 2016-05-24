@@ -64,7 +64,7 @@ class Google_Service_Analytics_ManagementWebPropertyAdWordsLinksResource extends
    * @param string $accountId ID of the Google Analytics account to create the
    * link for.
    * @param string $webPropertyId Web property ID to create the link for.
-   * @param Google_EntityAdWordsLink $postBody
+   * @param Google_Service_Analytics_EntityAdWordsLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_EntityAdWordsLink
    */
@@ -106,7 +106,7 @@ class Google_Service_Analytics_ManagementWebPropertyAdWordsLinksResource extends
    * @param string $webPropertyId Web property ID to retrieve the AdWords link
    * for.
    * @param string $webPropertyAdWordsLinkId Web property-AdWords link ID.
-   * @param Google_EntityAdWordsLink $postBody
+   * @param Google_Service_Analytics_EntityAdWordsLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_EntityAdWordsLink
    */
@@ -125,7 +125,7 @@ class Google_Service_Analytics_ManagementWebPropertyAdWordsLinksResource extends
    * @param string $webPropertyId Web property ID to retrieve the AdWords link
    * for.
    * @param string $webPropertyAdWordsLinkId Web property-AdWords link ID.
-   * @param Google_EntityAdWordsLink $postBody
+   * @param Google_Service_Analytics_EntityAdWordsLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_EntityAdWordsLink
    */

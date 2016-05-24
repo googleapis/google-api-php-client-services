@@ -28,7 +28,7 @@ class Google_Service_YouTubeReporting_JobsResource extends Google_Service_Resour
   /**
    * Creates a job and returns it. (jobs.create)
    *
-   * @param Google_Job $postBody
+   * @param Google_Service_YouTubeReporting_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner The content owner's external ID on

@@ -68,7 +68,7 @@ class Google_Service_Clouddebugger_ControllerDebuggeesBreakpointsResource extend
    *
    * @param string $debuggeeId Identifies the debuggee being debugged.
    * @param string $id Breakpoint identifier, unique in the scope of the debuggee.
-   * @param Google_UpdateActiveBreakpointRequest $postBody
+   * @param Google_Service_Clouddebugger_UpdateActiveBreakpointRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Clouddebugger_UpdateActiveBreakpointResponse
    */

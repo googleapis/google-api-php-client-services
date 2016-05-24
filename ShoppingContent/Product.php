@@ -19,6 +19,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
 {
   protected $collection_key = 'warnings';
   public $additionalImageLinks;
+  public $additionalProductTypes;
   public $adult;
   public $adwordsGrouping;
   public $adwordsLabels;
@@ -114,6 +115,14 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public function getAdditionalImageLinks()
   {
     return $this->additionalImageLinks;
+  }
+  public function setAdditionalProductTypes($additionalProductTypes)
+  {
+    $this->additionalProductTypes = $additionalProductTypes;
+  }
+  public function getAdditionalProductTypes()
+  {
+    return $this->additionalProductTypes;
   }
   public function setAdult($adult)
   {

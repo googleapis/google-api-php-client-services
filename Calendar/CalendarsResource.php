@@ -73,7 +73,7 @@ class Google_Service_Calendar_CalendarsResource extends Google_Service_Resource
   /**
    * Creates a secondary calendar. (calendars.insert)
    *
-   * @param Google_Calendar $postBody
+   * @param Google_Service_Calendar_Calendar $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Calendar_Calendar
    */
@@ -90,7 +90,7 @@ class Google_Service_Calendar_CalendarsResource extends Google_Service_Resource
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param Google_Calendar $postBody
+   * @param Google_Service_Calendar_Calendar $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Calendar_Calendar
    */
@@ -106,7 +106,7 @@ class Google_Service_Calendar_CalendarsResource extends Google_Service_Resource
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param Google_Calendar $postBody
+   * @param Google_Service_Calendar_Calendar $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Calendar_Calendar
    */

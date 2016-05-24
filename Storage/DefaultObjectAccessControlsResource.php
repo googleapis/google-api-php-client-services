@@ -63,7 +63,7 @@ class Google_Service_Storage_DefaultObjectAccessControlsResource extends Google_
    * (defaultObjectAccessControls.insert)
    *
    * @param string $bucket Name of a bucket.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Google_Service_Storage_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Storage_ObjectAccessControl
    */
@@ -101,7 +101,7 @@ class Google_Service_Storage_DefaultObjectAccessControlsResource extends Google_
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Google_Service_Storage_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Storage_ObjectAccessControl
    */
@@ -119,7 +119,7 @@ class Google_Service_Storage_DefaultObjectAccessControlsResource extends Google_
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Google_Service_Storage_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Storage_ObjectAccessControl
    */

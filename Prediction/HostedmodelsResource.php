@@ -31,7 +31,7 @@ class Google_Service_Prediction_HostedmodelsResource extends Google_Service_Reso
    *
    * @param string $project The project associated with the model.
    * @param string $hostedModelName The name of a hosted model.
-   * @param Google_Input $postBody
+   * @param Google_Service_Prediction_Input $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Prediction_Output
    */

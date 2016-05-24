@@ -59,7 +59,7 @@ class Google_Service_Compute_NetworksResource extends Google_Service_Resource
    * request. (networks.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_Network $postBody
+   * @param Google_Service_Compute_Network $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

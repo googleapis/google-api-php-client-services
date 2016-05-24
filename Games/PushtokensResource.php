@@ -29,7 +29,7 @@ class Google_Service_Games_PushtokensResource extends Google_Service_Resource
    * Removes a push token for the current user and application. Removing a non-
    * existent push token will report success. (pushtokens.remove)
    *
-   * @param Google_PushTokenId $postBody
+   * @param Google_Service_Games_PushTokenId $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.
@@ -44,7 +44,7 @@ class Google_Service_Games_PushtokensResource extends Google_Service_Resource
    * Registers a push token for the current user and application.
    * (pushtokens.update)
    *
-   * @param Google_PushToken $postBody
+   * @param Google_Service_Games_PushToken $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.

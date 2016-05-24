@@ -56,7 +56,7 @@ class Google_Service_Fusiontables_StyleResource extends Google_Service_Resource
    * Adds a new style for the table. (style.insert)
    *
    * @param string $tableId Table for which a new style is being added
-   * @param Google_StyleSetting $postBody
+   * @param Google_Service_Fusiontables_StyleSetting $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_StyleSetting
    */
@@ -90,7 +90,7 @@ class Google_Service_Fusiontables_StyleResource extends Google_Service_Resource
    *
    * @param string $tableId Table whose style is being updated.
    * @param int $styleId Identifier (within a table) for the style being updated.
-   * @param Google_StyleSetting $postBody
+   * @param Google_Service_Fusiontables_StyleSetting $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_StyleSetting
    */
@@ -105,7 +105,7 @@ class Google_Service_Fusiontables_StyleResource extends Google_Service_Resource
    *
    * @param string $tableId Table whose style is being updated.
    * @param int $styleId Identifier (within a table) for the style being updated.
-   * @param Google_StyleSetting $postBody
+   * @param Google_Service_Fusiontables_StyleSetting $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_StyleSetting
    */

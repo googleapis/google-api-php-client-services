@@ -29,7 +29,7 @@ class Google_Service_Drive_PermissionsResource extends Google_Service_Resource
    * Creates a permission for a file. (permissions.create)
    *
    * @param string $fileId The ID of the file.
-   * @param Google_Permission $postBody
+   * @param Google_Service_Drive_Permission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string emailMessage A custom message to include in the
@@ -94,7 +94,7 @@ class Google_Service_Drive_PermissionsResource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $permissionId The ID of the permission.
-   * @param Google_Permission $postBody
+   * @param Google_Service_Drive_Permission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool transferOwnership Whether to transfer ownership to the

@@ -39,7 +39,7 @@ class Google_Service_Classroom_CoursesCourseWorkResource extends Google_Service_
    *
    * @param string $courseId Identifier of the course. This identifier can be
    * either the Classroom-assigned identifier or an alias.
-   * @param Google_CourseWork $postBody
+   * @param Google_Service_Classroom_CourseWork $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_CourseWork
    */

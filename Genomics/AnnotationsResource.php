@@ -37,7 +37,7 @@ class Google_Service_Genomics_AnnotationsResource extends Google_Service_Resourc
    * each individual annotation resource, see CreateAnnotation.
    * (annotations.batchCreate)
    *
-   * @param Google_BatchCreateAnnotationsRequest $postBody
+   * @param Google_Service_Genomics_BatchCreateAnnotationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_BatchCreateAnnotationsResponse
    */
@@ -58,7 +58,7 @@ class Google_Service_Genomics_AnnotationsResource extends Google_Service_Resourc
    * See the Annotation resource for additional restrictions on each field.
    * (annotations.create)
    *
-   * @param Google_Annotation $postBody
+   * @param Google_Service_Genomics_Annotation $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Annotation
    */
@@ -105,7 +105,7 @@ class Google_Service_Genomics_AnnotationsResource extends Google_Service_Resourc
    * respective streams of paginated responses. Caller must have READ permission
    * for the queried annotation sets. (annotations.search)
    *
-   * @param Google_SearchAnnotationsRequest $postBody
+   * @param Google_Service_Genomics_SearchAnnotationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchAnnotationsResponse
    */
@@ -120,7 +120,7 @@ class Google_Service_Genomics_AnnotationsResource extends Google_Service_Resourc
    * dataset. (annotations.update)
    *
    * @param string $annotationId The ID of the annotation to be updated.
-   * @param Google_Annotation $postBody
+   * @param Google_Service_Genomics_Annotation $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask An optional mask specifying which fields to

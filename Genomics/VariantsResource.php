@@ -31,7 +31,7 @@ class Google_Service_Genomics_VariantsResource extends Google_Service_Resource
    * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
    * (variants.create)
    *
-   * @param Google_Variant $postBody
+   * @param Google_Service_Genomics_Variant $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Variant
    */
@@ -87,7 +87,7 @@ class Google_Service_Genomics_VariantsResource extends Google_Service_Resource
    * sometimes interpreted in a call-specific context. Imported VCF headers are
    * appended to the metadata already in a variant set. (variants.import)
    *
-   * @param Google_ImportVariantsRequest $postBody
+   * @param Google_Service_Genomics_ImportVariantsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Operation
    */
@@ -126,7 +126,7 @@ class Google_Service_Genomics_VariantsResource extends Google_Service_Resource
    * ] } This may be the desired outcome, but it is up to the user to determine if
    * if that is indeed the case. (variants.merge)
    *
-   * @param Google_MergeVariantsRequest $postBody
+   * @param Google_Service_Genomics_MergeVariantsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_GenomicsEmpty
    */
@@ -144,7 +144,7 @@ class Google_Service_Genomics_VariantsResource extends Google_Service_Resource
    * its calls. (variants.patch)
    *
    * @param string $variantId The ID of the variant to be updated.
-   * @param Google_Variant $postBody
+   * @param Google_Service_Genomics_Variant $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask An optional mask specifying which fields to
@@ -166,7 +166,7 @@ class Google_Service_Genomics_VariantsResource extends Google_Service_Resource
    * s/blob/v0.5.1/src/main/resources/avro/variantmethods.avdl#L126).
    * (variants.search)
    *
-   * @param Google_SearchVariantsRequest $postBody
+   * @param Google_Service_Genomics_SearchVariantsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchVariantsResponse
    */
@@ -180,7 +180,7 @@ class Google_Service_Genomics_VariantsResource extends Google_Service_Resource
    * Returns a stream of all the variants matching the search request, ordered by
    * reference name, position, and ID. (variants.stream)
    *
-   * @param Google_StreamVariantsRequest $postBody
+   * @param Google_Service_Genomics_StreamVariantsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_StreamVariantsResponse
    */

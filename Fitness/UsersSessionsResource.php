@@ -73,7 +73,7 @@ class Google_Service_Fitness_UsersSessionsResource extends Google_Service_Resour
    * @param string $userId Create sessions for the person identified. Use me to
    * indicate the authenticated user. Only me is supported at this time.
    * @param string $sessionId The ID of the session to be created.
-   * @param Google_Session $postBody
+   * @param Google_Service_Fitness_Session $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string currentTimeMillis The client's current time in milliseconds

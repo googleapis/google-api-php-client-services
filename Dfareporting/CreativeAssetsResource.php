@@ -31,7 +31,7 @@ class Google_Service_Dfareporting_CreativeAssetsResource extends Google_Service_
    * @param string $profileId User profile ID associated with this request.
    * @param string $advertiserId Advertiser ID of this creative. This is a
    * required field.
-   * @param Google_CreativeAssetMetadata $postBody
+   * @param Google_Service_Dfareporting_CreativeAssetMetadata $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CreativeAssetMetadata
    */

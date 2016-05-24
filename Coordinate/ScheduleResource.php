@@ -45,7 +45,7 @@ class Google_Service_Coordinate_ScheduleResource extends Google_Service_Resource
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Schedule $postBody
+   * @param Google_Service_Coordinate_Schedule $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allDay Whether the job is scheduled for the whole day. Time
@@ -66,7 +66,7 @@ class Google_Service_Coordinate_ScheduleResource extends Google_Service_Resource
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Schedule $postBody
+   * @param Google_Service_Coordinate_Schedule $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allDay Whether the job is scheduled for the whole day. Time

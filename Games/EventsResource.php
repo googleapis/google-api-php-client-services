@@ -71,7 +71,7 @@ class Google_Service_Games_EventsResource extends Google_Service_Resource
    * Records a batch of changes to the number of times events have occurred for
    * the currently authenticated user of this application. (events.record)
    *
-   * @param Google_EventRecordRequest $postBody
+   * @param Google_Service_Games_EventRecordRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.

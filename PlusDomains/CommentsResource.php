@@ -42,7 +42,7 @@ class Google_Service_PlusDomains_CommentsResource extends Google_Service_Resourc
    * Create a new comment in reply to an activity. (comments.insert)
    *
    * @param string $activityId The ID of the activity to reply to.
-   * @param Google_Comment $postBody
+   * @param Google_Service_PlusDomains_Comment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_PlusDomains_Comment
    */

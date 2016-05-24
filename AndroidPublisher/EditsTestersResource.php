@@ -48,7 +48,7 @@ class Google_Service_AndroidPublisher_EditsTestersResource extends Google_Servic
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track
-   * @param Google_Testers $postBody
+   * @param Google_Service_AndroidPublisher_Testers $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_Testers
    */
@@ -65,7 +65,7 @@ class Google_Service_AndroidPublisher_EditsTestersResource extends Google_Servic
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
    * @param string $track
-   * @param Google_Testers $postBody
+   * @param Google_Service_AndroidPublisher_Testers $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_Testers
    */

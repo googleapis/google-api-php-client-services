@@ -100,7 +100,7 @@ class Google_Service_AndroidPublisher_EditsListingsResource extends Google_Servi
    * @param string $language The language code (a BCP-47 language tag) of the
    * localized listing to read or modify. For example, to select Austrian German,
    * pass "de-AT".
-   * @param Google_Listing $postBody
+   * @param Google_Service_AndroidPublisher_Listing $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_Listing
    */
@@ -119,7 +119,7 @@ class Google_Service_AndroidPublisher_EditsListingsResource extends Google_Servi
    * @param string $language The language code (a BCP-47 language tag) of the
    * localized listing to read or modify. For example, to select Austrian German,
    * pass "de-AT".
-   * @param Google_Listing $postBody
+   * @param Google_Service_AndroidPublisher_Listing $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_Listing
    */

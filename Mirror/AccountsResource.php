@@ -33,7 +33,7 @@ class Google_Service_Mirror_AccountsResource extends Google_Service_Resource
    * Manager.
    * @param string $accountName The name of the account to be passed to the
    * Android Account Manager.
-   * @param Google_Account $postBody
+   * @param Google_Service_Mirror_Account $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_Account
    */

@@ -29,7 +29,7 @@ class Google_Service_TagManager_AccountsPermissionsResource extends Google_Servi
    * Creates a user's Account & Container Permissions. (permissions.create)
    *
    * @param string $accountId The GTM Account ID.
-   * @param Google_UserAccess $postBody
+   * @param Google_Service_TagManager_UserAccess $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_UserAccess
    */
@@ -88,7 +88,7 @@ class Google_Service_TagManager_AccountsPermissionsResource extends Google_Servi
    *
    * @param string $accountId The GTM Account ID.
    * @param string $permissionId The GTM User ID.
-   * @param Google_UserAccess $postBody
+   * @param Google_Service_TagManager_UserAccess $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_UserAccess
    */

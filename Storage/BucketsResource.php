@@ -67,7 +67,7 @@ class Google_Service_Storage_BucketsResource extends Google_Service_Resource
    * Creates a new bucket. (buckets.insert)
    *
    * @param string $project A valid API project identifier.
-   * @param Google_Bucket $postBody
+   * @param Google_Service_Storage_Bucket $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
@@ -109,7 +109,7 @@ class Google_Service_Storage_BucketsResource extends Google_Service_Resource
    * Updates a bucket. This method supports patch semantics. (buckets.patch)
    *
    * @param string $bucket Name of a bucket.
-   * @param Google_Bucket $postBody
+   * @param Google_Service_Storage_Bucket $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string ifMetagenerationMatch Makes the return of the bucket
@@ -135,7 +135,7 @@ class Google_Service_Storage_BucketsResource extends Google_Service_Resource
    * Updates a bucket. (buckets.update)
    *
    * @param string $bucket Name of a bucket.
-   * @param Google_Bucket $postBody
+   * @param Google_Service_Storage_Bucket $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string ifMetagenerationMatch Makes the return of the bucket

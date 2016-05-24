@@ -84,7 +84,7 @@ class Google_Service_AndroidEnterprise_CollectionviewersResource extends Google_
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $collectionId The ID of the collection.
    * @param string $userId The ID of the user.
-   * @param Google_User $postBody
+   * @param Google_Service_AndroidEnterprise_User $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_User
    */
@@ -102,7 +102,7 @@ class Google_Service_AndroidEnterprise_CollectionviewersResource extends Google_
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $collectionId The ID of the collection.
    * @param string $userId The ID of the user.
-   * @param Google_User $postBody
+   * @param Google_Service_AndroidEnterprise_User $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_User
    */

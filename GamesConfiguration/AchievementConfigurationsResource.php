@@ -58,7 +58,7 @@ class Google_Service_GamesConfiguration_AchievementConfigurationsResource extend
    *
    * @param string $applicationId The application ID from the Google Play
    * developer console.
-   * @param Google_AchievementConfiguration $postBody
+   * @param Google_Service_GamesConfiguration_AchievementConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_GamesConfiguration_AchievementConfiguration
    */
@@ -93,7 +93,7 @@ class Google_Service_GamesConfiguration_AchievementConfigurationsResource extend
    * method supports patch semantics. (achievementConfigurations.patch)
    *
    * @param string $achievementId The ID of the achievement used by this method.
-   * @param Google_AchievementConfiguration $postBody
+   * @param Google_Service_GamesConfiguration_AchievementConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_GamesConfiguration_AchievementConfiguration
    */
@@ -108,7 +108,7 @@ class Google_Service_GamesConfiguration_AchievementConfigurationsResource extend
    * (achievementConfigurations.update)
    *
    * @param string $achievementId The ID of the achievement used by this method.
-   * @param Google_AchievementConfiguration $postBody
+   * @param Google_Service_GamesConfiguration_AchievementConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_GamesConfiguration_AchievementConfiguration
    */

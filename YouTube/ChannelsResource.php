@@ -104,7 +104,7 @@ class Google_Service_YouTube_ChannelsResource extends Google_Service_Resource
    * Note that this method overrides the existing values for all of the mutable
    * properties that are contained in any parts that the parameter value
    * specifies.
-   * @param Google_Channel $postBody
+   * @param Google_Service_YouTube_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner The onBehalfOfContentOwner parameter

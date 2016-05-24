@@ -54,7 +54,7 @@ class Google_Service_Tasks_TasklistsResource extends Google_Service_Resource
    * Creates a new task list and adds it to the authenticated user's task lists.
    * (tasklists.insert)
    *
-   * @param Google_TaskList $postBody
+   * @param Google_Service_Tasks_TaskList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Tasks_TaskList
    */
@@ -86,7 +86,7 @@ class Google_Service_Tasks_TasklistsResource extends Google_Service_Resource
    * patch semantics. (tasklists.patch)
    *
    * @param string $tasklist Task list identifier.
-   * @param Google_TaskList $postBody
+   * @param Google_Service_Tasks_TaskList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Tasks_TaskList
    */
@@ -100,7 +100,7 @@ class Google_Service_Tasks_TasklistsResource extends Google_Service_Resource
    * Updates the authenticated user's specified task list. (tasklists.update)
    *
    * @param string $tasklist Task list identifier.
-   * @param Google_TaskList $postBody
+   * @param Google_Service_Tasks_TaskList $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Tasks_TaskList
    */

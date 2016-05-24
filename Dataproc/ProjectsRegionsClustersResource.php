@@ -32,7 +32,7 @@ class Google_Service_Dataproc_ProjectsRegionsClustersResource extends Google_Ser
    * project that the cluster belongs to.
    * @param string $region [Required] The Cloud Dataproc region in which to handle
    * the request.
-   * @param Google_Cluster $postBody
+   * @param Google_Service_Dataproc_Cluster $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataproc_Operation
    */
@@ -69,7 +69,7 @@ class Google_Service_Dataproc_ProjectsRegionsClustersResource extends Google_Ser
    * @param string $region [Required] The Cloud Dataproc region in which to handle
    * the request.
    * @param string $clusterName [Required] The cluster name.
-   * @param Google_DiagnoseClusterRequest $postBody
+   * @param Google_Service_Dataproc_DiagnoseClusterRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataproc_Operation
    */
@@ -124,7 +124,7 @@ class Google_Service_Dataproc_ProjectsRegionsClustersResource extends Google_Ser
    * @param string $region [Required] The Cloud Dataproc region in which to handle
    * the request.
    * @param string $clusterName [Required] The cluster name.
-   * @param Google_Cluster $postBody
+   * @param Google_Service_Dataproc_Cluster $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask [Required] Specifies the path, relative to

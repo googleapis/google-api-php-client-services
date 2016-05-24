@@ -43,7 +43,7 @@ class Google_Service_PlusDomains_ActivitiesResource extends Google_Service_Resou
    *
    * @param string $userId The ID of the user to create the activity on behalf of.
    * Its value should be "me", to indicate the authenticated user.
-   * @param Google_Activity $postBody
+   * @param Google_Service_PlusDomains_Activity $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool preview If "true", extract the potential media attachments

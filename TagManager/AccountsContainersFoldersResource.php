@@ -30,7 +30,7 @@ class Google_Service_TagManager_AccountsContainersFoldersResource extends Google
    *
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
-   * @param Google_Folder $postBody
+   * @param Google_Service_TagManager_Folder $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_Folder
    */
@@ -89,7 +89,7 @@ class Google_Service_TagManager_AccountsContainersFoldersResource extends Google
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $folderId The GTM Folder ID.
-   * @param Google_Folder $postBody
+   * @param Google_Service_TagManager_Folder $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

@@ -33,7 +33,7 @@ class Google_Service_Monitoring_ProjectsCollectdTimeSeriesResource extends Googl
    *
    * @param string $name The project in which to create the time series. The
    * format is `"projects/PROJECT_ID_OR_NUMBER"`.
-   * @param Google_CreateCollectdTimeSeriesRequest $postBody
+   * @param Google_Service_Monitoring_CreateCollectdTimeSeriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MonitoringEmpty
    */

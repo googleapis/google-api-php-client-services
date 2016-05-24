@@ -70,7 +70,7 @@ class Google_Service_Tasks_TasksResource extends Google_Service_Resource
    * Creates a new task on the specified task list. (tasks.insert)
    *
    * @param string $tasklist Task list identifier.
-   * @param Google_Task $postBody
+   * @param Google_Service_Tasks_Task $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string parent Parent task identifier. If the task is created at
@@ -151,7 +151,7 @@ class Google_Service_Tasks_TasksResource extends Google_Service_Resource
    *
    * @param string $tasklist Task list identifier.
    * @param string $task Task identifier.
-   * @param Google_Task $postBody
+   * @param Google_Service_Tasks_Task $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Tasks_Task
    */
@@ -166,7 +166,7 @@ class Google_Service_Tasks_TasksResource extends Google_Service_Resource
    *
    * @param string $tasklist Task list identifier.
    * @param string $task Task identifier.
-   * @param Google_Task $postBody
+   * @param Google_Service_Tasks_Task $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Tasks_Task
    */

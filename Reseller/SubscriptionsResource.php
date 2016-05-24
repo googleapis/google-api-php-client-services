@@ -47,7 +47,7 @@ class Google_Service_Reseller_SubscriptionsResource extends Google_Service_Resou
    * @param string $customerId Id of the Customer
    * @param string $subscriptionId Id of the subscription, which is unique for a
    * customer
-   * @param Google_ChangePlanRequest $postBody
+   * @param Google_Service_Reseller_ChangePlanRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Subscription
    */
@@ -64,7 +64,7 @@ class Google_Service_Reseller_SubscriptionsResource extends Google_Service_Resou
    * @param string $customerId Id of the Customer
    * @param string $subscriptionId Id of the subscription, which is unique for a
    * customer
-   * @param Google_RenewalSettings $postBody
+   * @param Google_Service_Reseller_RenewalSettings $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Subscription
    */
@@ -80,7 +80,7 @@ class Google_Service_Reseller_SubscriptionsResource extends Google_Service_Resou
    * @param string $customerId Id of the Customer
    * @param string $subscriptionId Id of the subscription, which is unique for a
    * customer
-   * @param Google_Seats $postBody
+   * @param Google_Service_Reseller_Seats $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Subscription
    */
@@ -125,7 +125,7 @@ class Google_Service_Reseller_SubscriptionsResource extends Google_Service_Resou
    * Creates/Transfers a subscription for the customer. (subscriptions.insert)
    *
    * @param string $customerId Id of the Customer
-   * @param Google_Subscription $postBody
+   * @param Google_Service_Reseller_Subscription $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customerAuthToken An auth token needed for transferring a

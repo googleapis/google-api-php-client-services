@@ -65,7 +65,7 @@ class Google_Service_Analytics_ManagementProfileFilterLinksResource extends Goog
    * @param string $webPropertyId Web property Id to create profile filter link
    * for.
    * @param string $profileId Profile ID to create filter link for.
-   * @param Google_ProfileFilterLink $postBody
+   * @param Google_Service_Analytics_ProfileFilterLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_ProfileFilterLink
    */
@@ -109,7 +109,7 @@ class Google_Service_Analytics_ManagementProfileFilterLinksResource extends Goog
    * belongs
    * @param string $profileId Profile ID to which filter link belongs
    * @param string $linkId ID of the profile filter link to be updated.
-   * @param Google_ProfileFilterLink $postBody
+   * @param Google_Service_Analytics_ProfileFilterLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_ProfileFilterLink
    */
@@ -127,7 +127,7 @@ class Google_Service_Analytics_ManagementProfileFilterLinksResource extends Goog
    * belongs
    * @param string $profileId Profile ID to which filter link belongs
    * @param string $linkId ID of the profile filter link to be updated.
-   * @param Google_ProfileFilterLink $postBody
+   * @param Google_Service_Analytics_ProfileFilterLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_ProfileFilterLink
    */

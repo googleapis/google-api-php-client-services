@@ -33,7 +33,7 @@ class Google_Service_Container_ProjectsZonesClustersNodePoolsResource extends Go
    * @param string $zone The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster resides.
    * @param string $clusterId The name of the cluster.
-   * @param Google_CreateNodePoolRequest $postBody
+   * @param Google_Service_Container_CreateNodePoolRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Container_Operation
    */

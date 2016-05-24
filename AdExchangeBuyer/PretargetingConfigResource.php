@@ -58,7 +58,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfigResource extends Google_S
    *
    * @param string $accountId The account id to insert the pretargeting config
    * for.
-   * @param Google_PretargetingConfig $postBody
+   * @param Google_Service_AdExchangeBuyer_PretargetingConfig $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_PretargetingConfig
    */
@@ -89,7 +89,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfigResource extends Google_S
    * @param string $accountId The account id to update the pretargeting config
    * for.
    * @param string $configId The specific id of the configuration to update.
-   * @param Google_PretargetingConfig $postBody
+   * @param Google_Service_AdExchangeBuyer_PretargetingConfig $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_PretargetingConfig
    */
@@ -105,7 +105,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfigResource extends Google_S
    * @param string $accountId The account id to update the pretargeting config
    * for.
    * @param string $configId The specific id of the configuration to update.
-   * @param Google_PretargetingConfig $postBody
+   * @param Google_Service_AdExchangeBuyer_PretargetingConfig $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_PretargetingConfig
    */

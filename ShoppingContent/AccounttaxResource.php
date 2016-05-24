@@ -29,7 +29,7 @@ class Google_Service_ShoppingContent_AccounttaxResource extends Google_Service_R
    * Retrieves and updates tax settings of multiple accounts in a single request.
    * (accounttax.custombatch)
    *
-   * @param Google_AccounttaxCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_AccounttaxCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -81,7 +81,7 @@ class Google_Service_ShoppingContent_AccounttaxResource extends Google_Service_R
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account for which to get/update
    * account tax settings.
-   * @param Google_AccountTax $postBody
+   * @param Google_Service_ShoppingContent_AccountTax $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -99,7 +99,7 @@ class Google_Service_ShoppingContent_AccounttaxResource extends Google_Service_R
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account for which to get/update
    * account tax settings.
-   * @param Google_AccountTax $postBody
+   * @param Google_Service_ShoppingContent_AccountTax $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.

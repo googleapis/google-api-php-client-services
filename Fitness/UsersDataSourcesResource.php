@@ -37,7 +37,7 @@ class Google_Service_Fitness_UsersDataSourcesResource extends Google_Service_Res
    *
    * @param string $userId Create the data source for the person identified. Use
    * me to indicate the authenticated user. Only me is supported at this time.
-   * @param Google_DataSource $postBody
+   * @param Google_Service_Fitness_DataSource $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fitness_DataSource
    */
@@ -111,7 +111,7 @@ class Google_Service_Fitness_UsersDataSourcesResource extends Google_Service_Res
    * @param string $userId Update the data source for the person identified. Use
    * me to indicate the authenticated user. Only me is supported at this time.
    * @param string $dataSourceId The data stream ID of the data source to update.
-   * @param Google_DataSource $postBody
+   * @param Google_Service_Fitness_DataSource $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fitness_DataSource
    */
@@ -132,7 +132,7 @@ class Google_Service_Fitness_UsersDataSourcesResource extends Google_Service_Res
    * @param string $userId Update the data source for the person identified. Use
    * me to indicate the authenticated user. Only me is supported at this time.
    * @param string $dataSourceId The data stream ID of the data source to update.
-   * @param Google_DataSource $postBody
+   * @param Google_Service_Fitness_DataSource $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fitness_DataSource
    */

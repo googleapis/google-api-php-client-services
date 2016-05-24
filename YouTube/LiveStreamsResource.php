@@ -80,7 +80,7 @@ class Google_Service_YouTube_LiveStreamsResource extends Google_Service_Resource
    *
    * The part properties that you can include in the parameter value are id,
    * snippet, cdn, and status.
-   * @param Google_LiveStream $postBody
+   * @param Google_Service_YouTube_LiveStream $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -199,7 +199,7 @@ class Google_Service_YouTube_LiveStreamsResource extends Google_Service_Resource
    * mutable properties that are contained in any parts that the parameter value
    * specifies. If the request body does not specify a value for a mutable
    * property, the existing value for that property will be removed.
-   * @param Google_LiveStream $postBody
+   * @param Google_Service_YouTube_LiveStream $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

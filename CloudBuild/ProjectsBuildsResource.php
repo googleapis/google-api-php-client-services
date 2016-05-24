@@ -30,7 +30,7 @@ class Google_Service_CloudBuild_ProjectsBuildsResource extends Google_Service_Re
    *
    * @param string $projectId ID of the project.
    * @param string $id ID of the build.
-   * @param Google_CancelBuildRequest $postBody
+   * @param Google_Service_CloudBuild_CancelBuildRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudBuild_Build
    */
@@ -48,7 +48,7 @@ class Google_Service_CloudBuild_ProjectsBuildsResource extends Google_Service_Re
    * or failure). (builds.create)
    *
    * @param string $projectId ID of the project.
-   * @param Google_Build $postBody
+   * @param Google_Service_CloudBuild_Build $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudBuild_Operation
    */

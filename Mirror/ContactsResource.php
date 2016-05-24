@@ -53,7 +53,7 @@ class Google_Service_Mirror_ContactsResource extends Google_Service_Resource
   /**
    * Inserts a new contact. (contacts.insert)
    *
-   * @param Google_Contact $postBody
+   * @param Google_Service_Mirror_Contact $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_Contact
    */
@@ -81,7 +81,7 @@ class Google_Service_Mirror_ContactsResource extends Google_Service_Resource
    * (contacts.patch)
    *
    * @param string $id The ID of the contact.
-   * @param Google_Contact $postBody
+   * @param Google_Service_Mirror_Contact $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_Contact
    */
@@ -95,7 +95,7 @@ class Google_Service_Mirror_ContactsResource extends Google_Service_Resource
    * Updates a contact in place. (contacts.update)
    *
    * @param string $id The ID of the contact.
-   * @param Google_Contact $postBody
+   * @param Google_Service_Mirror_Contact $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Mirror_Contact
    */

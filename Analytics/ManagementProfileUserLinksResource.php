@@ -46,7 +46,7 @@ class Google_Service_Analytics_ManagementProfileUserLinksResource extends Google
    * @param string $accountId Account ID to create the user link for.
    * @param string $webPropertyId Web Property ID to create the user link for.
    * @param string $profileId View (Profile) ID to create the user link for.
-   * @param Google_EntityUserLink $postBody
+   * @param Google_Service_Analytics_EntityUserLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_EntityUserLink
    */
@@ -91,7 +91,7 @@ class Google_Service_Analytics_ManagementProfileUserLinksResource extends Google
    * @param string $webPropertyId Web Property ID to update the user link for.
    * @param string $profileId View (Profile ID) to update the user link for.
    * @param string $linkId Link ID to update the user link for.
-   * @param Google_EntityUserLink $postBody
+   * @param Google_Service_Analytics_EntityUserLink $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_EntityUserLink
    */

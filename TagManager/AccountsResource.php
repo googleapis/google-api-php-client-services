@@ -54,7 +54,7 @@ class Google_Service_TagManager_AccountsResource extends Google_Service_Resource
    * Updates a GTM Account. (accounts.update)
    *
    * @param string $accountId The GTM Account ID.
-   * @param Google_Account $postBody
+   * @param Google_Service_TagManager_Account $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

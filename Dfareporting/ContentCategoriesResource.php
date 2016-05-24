@@ -56,7 +56,7 @@ class Google_Service_Dfareporting_ContentCategoriesResource extends Google_Servi
    * Inserts a new content category. (contentCategories.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_ContentCategory $postBody
+   * @param Google_Service_Dfareporting_ContentCategory $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_ContentCategory
    */
@@ -100,7 +100,7 @@ class Google_Service_Dfareporting_ContentCategoriesResource extends Google_Servi
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Content category ID.
-   * @param Google_ContentCategory $postBody
+   * @param Google_Service_Dfareporting_ContentCategory $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_ContentCategory
    */
@@ -114,7 +114,7 @@ class Google_Service_Dfareporting_ContentCategoriesResource extends Google_Servi
    * Updates an existing content category. (contentCategories.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_ContentCategory $postBody
+   * @param Google_Service_Dfareporting_ContentCategory $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_ContentCategory
    */

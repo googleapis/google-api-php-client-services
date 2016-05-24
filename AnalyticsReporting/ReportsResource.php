@@ -28,7 +28,7 @@ class Google_Service_AnalyticsReporting_ReportsResource extends Google_Service_R
   /**
    * Returns the Analytics data. (reports.batchGet)
    *
-   * @param Google_GetReportsRequest $postBody
+   * @param Google_Service_AnalyticsReporting_GetReportsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AnalyticsReporting_GetReportsResponse
    */

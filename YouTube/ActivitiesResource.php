@@ -39,7 +39,7 @@ class Google_Service_YouTube_ActivitiesResource extends Google_Service_Resource
    * @param string $part The part parameter serves two purposes in this operation.
    * It identifies the properties that the write operation will set as well as the
    * properties that the API response will include.
-   * @param Google_Activity $postBody
+   * @param Google_Service_YouTube_Activity $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_Activity
    */

@@ -62,7 +62,7 @@ class Google_Service_YouTube_ChannelSectionsResource extends Google_Service_Reso
    *
    * The part names that you can include in the parameter value are snippet and
    * contentDetails.
-   * @param Google_ChannelSection $postBody
+   * @param Google_Service_YouTube_ChannelSection $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -164,7 +164,7 @@ class Google_Service_YouTube_ChannelSectionsResource extends Google_Service_Reso
    *
    * The part names that you can include in the parameter value are snippet and
    * contentDetails.
-   * @param Google_ChannelSection $postBody
+   * @param Google_Service_YouTube_ChannelSection $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

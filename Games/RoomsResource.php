@@ -29,7 +29,7 @@ class Google_Service_Games_RoomsResource extends Google_Service_Resource
    * Create a room. For internal use by the Games SDK only. Calling this method
    * directly is unsupported. (rooms.create)
    *
-   * @param Google_RoomCreateRequest $postBody
+   * @param Google_Service_Games_RoomCreateRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.
@@ -98,7 +98,7 @@ class Google_Service_Games_RoomsResource extends Google_Service_Resource
    * directly is unsupported. (rooms.join)
    *
    * @param string $roomId The ID of the room.
-   * @param Google_RoomJoinRequest $postBody
+   * @param Google_Service_Games_RoomJoinRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.
@@ -117,7 +117,7 @@ class Google_Service_Games_RoomsResource extends Google_Service_Resource
    * directly is unsupported. (rooms.leave)
    *
    * @param string $roomId The ID of the room.
-   * @param Google_RoomLeaveRequest $postBody
+   * @param Google_Service_Games_RoomLeaveRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.
@@ -157,7 +157,7 @@ class Google_Service_Games_RoomsResource extends Google_Service_Resource
    * unsupported. (rooms.reportStatus)
    *
    * @param string $roomId The ID of the room.
-   * @param Google_RoomP2PStatuses $postBody
+   * @param Google_Service_Games_RoomP2PStatuses $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.

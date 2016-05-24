@@ -58,7 +58,7 @@ class Google_Service_YouTube_PlaylistsResource extends Google_Service_Resource
    * @param string $part The part parameter serves two purposes in this operation.
    * It identifies the properties that the write operation will set as well as the
    * properties that the API response will include.
-   * @param Google_Playlist $postBody
+   * @param Google_Service_YouTube_Playlist $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -185,7 +185,7 @@ class Google_Service_YouTube_PlaylistsResource extends Google_Service_Resource
    * must be included in the request body. If the request does not specify a value
    * for the snippet.description property, the playlist's existing description
    * will be deleted.
-   * @param Google_Playlist $postBody
+   * @param Google_Service_YouTube_Playlist $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

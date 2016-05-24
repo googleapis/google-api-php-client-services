@@ -64,7 +64,7 @@ class Google_Service_AndroidPublisher_ReviewsResource extends Google_Service_Res
    * @param string $packageName Unique identifier for the Android app for which we
    * want reviews; for example, "com.spiffygame".
    * @param string $reviewId
-   * @param Google_ReviewsReplyRequest $postBody
+   * @param Google_Service_AndroidPublisher_ReviewsReplyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_ReviewsReplyResponse
    */

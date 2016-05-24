@@ -62,7 +62,7 @@ class Google_Service_Bigquery_TablesResource extends Google_Service_Resource
    *
    * @param string $projectId Project ID of the new table
    * @param string $datasetId Dataset ID of the new table
-   * @param Google_Table $postBody
+   * @param Google_Service_Bigquery_Table $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_Table
    */
@@ -100,7 +100,7 @@ class Google_Service_Bigquery_TablesResource extends Google_Service_Resource
    * @param string $projectId Project ID of the table to update
    * @param string $datasetId Dataset ID of the table to update
    * @param string $tableId Table ID of the table to update
-   * @param Google_Table $postBody
+   * @param Google_Service_Bigquery_Table $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_Table
    */
@@ -118,7 +118,7 @@ class Google_Service_Bigquery_TablesResource extends Google_Service_Resource
    * @param string $projectId Project ID of the table to update
    * @param string $datasetId Dataset ID of the table to update
    * @param string $tableId Table ID of the table to update
-   * @param Google_Table $postBody
+   * @param Google_Service_Bigquery_Table $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Bigquery_Table
    */

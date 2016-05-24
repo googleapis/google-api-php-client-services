@@ -39,7 +39,7 @@ class Google_Service_Container_ProjectsZonesClustersResource extends Google_Serv
    * number](https://support.google.com/cloud/answer/6158840).
    * @param string $zone The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster resides.
-   * @param Google_CreateClusterRequest $postBody
+   * @param Google_Service_Container_CreateClusterRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Container_Operation
    */
@@ -113,7 +113,7 @@ class Google_Service_Container_ProjectsZonesClustersResource extends Google_Serv
    * @param string $zone The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster resides.
    * @param string $clusterId The name of the cluster to upgrade.
-   * @param Google_UpdateClusterRequest $postBody
+   * @param Google_Service_Container_UpdateClusterRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Container_Operation
    */

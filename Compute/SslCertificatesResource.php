@@ -59,7 +59,7 @@ class Google_Service_Compute_SslCertificatesResource extends Google_Service_Reso
    * included in the request. (sslCertificates.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_SslCertificate $postBody
+   * @param Google_Service_Compute_SslCertificate $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

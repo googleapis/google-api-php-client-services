@@ -59,7 +59,7 @@ class Google_Service_Compute_GlobalForwardingRulesResource extends Google_Servic
    * the data included in the request. (globalForwardingRules.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_ForwardingRule $postBody
+   * @param Google_Service_Compute_ForwardingRule $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -124,7 +124,7 @@ class Google_Service_Compute_GlobalForwardingRulesResource extends Google_Servic
    * @param string $project Project ID for this request.
    * @param string $forwardingRule Name of the ForwardingRule resource in which
    * target is to be set.
-   * @param Google_TargetReference $postBody
+   * @param Google_Service_Compute_TargetReference $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

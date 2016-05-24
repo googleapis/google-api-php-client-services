@@ -31,7 +31,7 @@ class Google_Service_Compute_TargetPoolsResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
    * @param string $targetPool Name of the target pool to add a health check to.
-   * @param Google_TargetPoolsAddHealthCheckRequest $postBody
+   * @param Google_Service_Compute_TargetPoolsAddHealthCheckRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -48,7 +48,7 @@ class Google_Service_Compute_TargetPoolsResource extends Google_Service_Resource
    * @param string $region Name of the region scoping this request.
    * @param string $targetPool Name of the TargetPool resource to add instances
    * to.
-   * @param Google_TargetPoolsAddInstanceRequest $postBody
+   * @param Google_Service_Compute_TargetPoolsAddInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -144,7 +144,7 @@ class Google_Service_Compute_TargetPoolsResource extends Google_Service_Resource
    * @param string $region Name of the region scoping this request.
    * @param string $targetPool Name of the TargetPool resource to which the
    * queried instance belongs.
-   * @param Google_InstanceReference $postBody
+   * @param Google_Service_Compute_InstanceReference $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_TargetPoolInstanceHealth
    */
@@ -160,7 +160,7 @@ class Google_Service_Compute_TargetPoolsResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
-   * @param Google_TargetPool $postBody
+   * @param Google_Service_Compute_TargetPool $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -226,7 +226,7 @@ class Google_Service_Compute_TargetPoolsResource extends Google_Service_Resource
    * @param string $region Name of the region for this request.
    * @param string $targetPool Name of the target pool to remove health checks
    * from.
-   * @param Google_TargetPoolsRemoveHealthCheckRequest $postBody
+   * @param Google_Service_Compute_TargetPoolsRemoveHealthCheckRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -243,7 +243,7 @@ class Google_Service_Compute_TargetPoolsResource extends Google_Service_Resource
    * @param string $region Name of the region scoping this request.
    * @param string $targetPool Name of the TargetPool resource to remove instances
    * from.
-   * @param Google_TargetPoolsRemoveInstanceRequest $postBody
+   * @param Google_Service_Compute_TargetPoolsRemoveInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -260,7 +260,7 @@ class Google_Service_Compute_TargetPoolsResource extends Google_Service_Resource
    * @param string $region Name of the region scoping this request.
    * @param string $targetPool Name of the TargetPool resource to set a backup
    * pool for.
-   * @param Google_TargetReference $postBody
+   * @param Google_Service_Compute_TargetReference $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param float failoverRatio New failoverRatio value for the target pool.

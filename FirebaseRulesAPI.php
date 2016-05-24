@@ -34,6 +34,12 @@ class Google_Service_FirebaseRulesAPI extends Google_Service
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
+  /** View and administer all your Firebase data and settings. */
+  const FIREBASE =
+      "https://www.googleapis.com/auth/firebase";
+  /** View all your Firebase data and settings. */
+  const FIREBASE_READONLY =
+      "https://www.googleapis.com/auth/firebase.readonly";
 
   public $projects;
   public $projects_releases;
