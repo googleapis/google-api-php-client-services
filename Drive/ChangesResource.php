@@ -70,7 +70,7 @@ class Google_Service_Drive_ChangesResource extends Google_Service_Resource
    * @param string $pageToken The token for continuing a previous list request on
    * the next page. This should be set to the value of 'nextPageToken' from the
    * previous response or to the response from the getStartPageToken method.
-   * @param Google_Channel $postBody
+   * @param Google_Service_Drive_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool includeRemoved Whether to include changes indicating that

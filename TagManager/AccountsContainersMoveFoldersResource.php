@@ -31,7 +31,7 @@ class Google_Service_TagManager_AccountsContainersMoveFoldersResource extends Go
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $folderId The GTM Folder ID.
-   * @param Google_Folder $postBody
+   * @param Google_Service_TagManager_Folder $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string tagId The tags to be moved to the folder.

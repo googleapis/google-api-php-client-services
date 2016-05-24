@@ -38,7 +38,7 @@ class Google_Service_Appengine_AppsServicesVersionsInstancesResource extends Goo
    * @opt_param int pageSize Maximum results to return per page.
    * @opt_param string pageToken Continuation token for fetching the next page of
    * results.
-   * @return Google_Service_ListInstancesResponse
+   * @return Google_Service_Appengine_ListInstancesResponse
    */
   public function listAppsServicesVersionsInstances($appsId, $servicesId, $versionsId, $optParams = array())
   {

@@ -29,7 +29,7 @@ class Google_Service_TagManager_AccountsContainersResource extends Google_Servic
    * Creates a Container. (containers.create)
    *
    * @param string $accountId The GTM Account ID.
-   * @param Google_Container $postBody
+   * @param Google_Service_TagManager_Container $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_Container
    */
@@ -85,7 +85,7 @@ class Google_Service_TagManager_AccountsContainersResource extends Google_Servic
    *
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
-   * @param Google_Container $postBody
+   * @param Google_Service_TagManager_Container $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

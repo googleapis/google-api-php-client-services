@@ -38,7 +38,7 @@ class Google_Service_Appengine_AppsResource extends Google_Service_Resource
    * could not be created, the request will fail with an error code. Additionally,
    * this parameter can cause the request to take longer to complete. Note: This
    * parameter will be deprecated in a future version of the API.
-   * @return Google_Service_Application
+   * @return Google_Service_Appengine_Application
    */
   public function get($appsId, $optParams = array())
   {

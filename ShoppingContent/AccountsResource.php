@@ -41,7 +41,7 @@ class Google_Service_ShoppingContent_AccountsResource extends Google_Service_Res
    * Retrieves, inserts, updates, and deletes multiple Merchant Center
    * (sub-)accounts in a single request. (accounts.custombatch)
    *
-   * @param Google_AccountsCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_AccountsCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -86,7 +86,7 @@ class Google_Service_ShoppingContent_AccountsResource extends Google_Service_Res
    * Creates a Merchant Center sub-account. (accounts.insert)
    *
    * @param string $merchantId The ID of the managing account.
-   * @param Google_Account $postBody
+   * @param Google_Service_ShoppingContent_Account $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -122,7 +122,7 @@ class Google_Service_ShoppingContent_AccountsResource extends Google_Service_Res
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account.
-   * @param Google_Account $postBody
+   * @param Google_Service_ShoppingContent_Account $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -139,7 +139,7 @@ class Google_Service_ShoppingContent_AccountsResource extends Google_Service_Res
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account.
-   * @param Google_Account $postBody
+   * @param Google_Service_ShoppingContent_Account $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.

@@ -44,7 +44,7 @@ class Google_Service_AdSenseHost_UrlchannelsResource extends Google_Service_Reso
    *
    * @param string $adClientId Ad client to which the new URL channel will be
    * added.
-   * @param Google_UrlChannel $postBody
+   * @param Google_Service_AdSenseHost_UrlChannel $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_UrlChannel
    */

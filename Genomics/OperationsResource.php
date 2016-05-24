@@ -33,7 +33,7 @@ class Google_Service_Genomics_OperationsResource extends Google_Service_Resource
    * cancellation. (operations.cancel)
    *
    * @param string $name The name of the operation resource to be cancelled.
-   * @param Google_CancelOperationRequest $postBody
+   * @param Google_Service_Genomics_CancelOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_GenomicsEmpty
    */

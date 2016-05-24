@@ -60,7 +60,7 @@ class Google_Service_Books_CloudloadingResource extends Google_Service_Resource
   /**
    * (cloudloading.updateBook)
    *
-   * @param Google_BooksCloudloadingResource $postBody
+   * @param Google_Service_Books_BooksCloudloadingResource $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Books_BooksCloudloadingResource
    */

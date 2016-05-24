@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_CreativesResource extends Google_Service_Resou
    * Inserts a new creative. (creatives.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Creative $postBody
+   * @param Google_Service_Dfareporting_Creative $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Creative
    */
@@ -102,7 +102,7 @@ class Google_Service_Dfareporting_CreativesResource extends Google_Service_Resou
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Creative ID.
-   * @param Google_Creative $postBody
+   * @param Google_Service_Dfareporting_Creative $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Creative
    */
@@ -116,7 +116,7 @@ class Google_Service_Dfareporting_CreativesResource extends Google_Service_Resou
    * Updates an existing creative. (creatives.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Creative $postBody
+   * @param Google_Service_Dfareporting_Creative $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Creative
    */

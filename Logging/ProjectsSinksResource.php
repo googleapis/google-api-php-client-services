@@ -31,9 +31,9 @@ class Google_Service_Logging_ProjectsSinksResource extends Google_Service_Resour
    * @param string $projectName The resource name of the project in which to
    * create the sink. Example: `"projects/my-project-id"`. The new sink must be
    * provided in the request.
-   * @param Google_LogSink $postBody
+   * @param Google_Service_Logging_LogSink $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LogSink
+   * @return Google_Service_Logging_LogSink
    */
   public function create($projectName, Google_Service_Logging_LogSink $postBody, $optParams = array())
   {
@@ -47,7 +47,7 @@ class Google_Service_Logging_ProjectsSinksResource extends Google_Service_Resour
    * @param string $sinkName The resource name of the sink to delete. Example:
    * `"projects/my-project-id/sinks/my-sink-id"`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LoggingEmpty
+   * @return Google_Service_Logging_LoggingEmpty
    */
   public function delete($sinkName, $optParams = array())
   {
@@ -61,7 +61,7 @@ class Google_Service_Logging_ProjectsSinksResource extends Google_Service_Resour
    * @param string $sinkName The resource name of the sink to return. Example:
    * `"projects/my-project-id/sinks/my-sink-id"`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LogSink
+   * @return Google_Service_Logging_LogSink
    */
   public function get($sinkName, $optParams = array())
   {
@@ -86,7 +86,7 @@ class Google_Service_Logging_ProjectsSinksResource extends Google_Service_Resour
    * determine if additional results are available, which you can retrieve by
    * passing the `nextPageToken` value as the `pageToken` parameter in the next
    * request.
-   * @return Google_Service_ListSinksResponse
+   * @return Google_Service_Logging_ListSinksResponse
    */
   public function listProjectsSinks($projectName, $optParams = array())
   {
@@ -101,9 +101,9 @@ class Google_Service_Logging_ProjectsSinksResource extends Google_Service_Resour
    * `"projects/my-project-id/sinks/my-sink-id"`. The updated sink must be
    * provided in the request and have the same name that is specified in
    * `sinkName`. If the sink does not exist, it is created.
-   * @param Google_LogSink $postBody
+   * @param Google_Service_Logging_LogSink $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LogSink
+   * @return Google_Service_Logging_LogSink
    */
   public function update($sinkName, Google_Service_Logging_LogSink $postBody, $optParams = array())
   {

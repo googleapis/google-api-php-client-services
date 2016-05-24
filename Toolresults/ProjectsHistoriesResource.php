@@ -39,14 +39,14 @@ class Google_Service_ToolResults_ProjectsHistoriesResource extends Google_Servic
    * @param string $projectId A Project id.
    *
    * Required.
-   * @param Google_History $postBody
+   * @param Google_Service_ToolResults_History $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId A unique request ID for server to detect
    * duplicated requests. For example, a UUID.
    *
    * Optional, but strongly recommended.
-   * @return Google_Service_History
+   * @return Google_Service_ToolResults_History
    */
   public function create($projectId, Google_Service_ToolResults_History $postBody, $optParams = array())
   {
@@ -70,7 +70,7 @@ class Google_Service_ToolResults_ProjectsHistoriesResource extends Google_Servic
    *
    * Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_History
+   * @return Google_Service_ToolResults_History
    */
   public function get($projectId, $historyId, $optParams = array())
   {
@@ -110,7 +110,7 @@ class Google_Service_ToolResults_ProjectsHistoriesResource extends Google_Servic
    * next item.
    *
    * Optional.
-   * @return Google_Service_ListHistoriesResponse
+   * @return Google_Service_ToolResults_ListHistoriesResponse
    */
   public function listProjectsHistories($projectId, $optParams = array())
   {

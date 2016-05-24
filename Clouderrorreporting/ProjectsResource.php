@@ -31,7 +31,7 @@ class Google_Service_Clouderrorreporting_ProjectsResource extends Google_Service
    * @param string $projectName The resource name of the Google Cloud Platform
    * project. Required. Example: `projects/my-project`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DeleteEventsResponse
+   * @return Google_Service_Clouderrorreporting_DeleteEventsResponse
    */
   public function deleteEvents($projectName, $optParams = array())
   {

@@ -29,7 +29,7 @@ class Google_Service_ShoppingContent_ProductstatusesResource extends Google_Serv
    * Gets the statuses of multiple products in a single request.
    * (productstatuses.custombatch)
    *
-   * @param Google_ProductstatusesCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_ProductstatusesCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_ProductstatusesCustomBatchResponse
    */

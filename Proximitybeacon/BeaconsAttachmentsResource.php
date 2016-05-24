@@ -30,16 +30,28 @@ class Google_Service_Proximitybeacon_BeaconsAttachmentsResource extends Google_S
    * and cannot be undone. You can optionally specify `namespacedType` to choose
    * which attachments should be deleted. If you do not specify `namespacedType`,
    * all your attachments on the given beacon will be deleted. You also may
-   * explicitly specify `*` to delete all. (attachments.batchDelete)
+   * explicitly specify `*` to delete all. Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **Is owner** or **Can edit** permissions in the Google
+   * Developers Console project. (attachments.batchDelete)
    *
-   * @param string $beaconName The beacon whose attachments are to be deleted.
-   * Required.
+   * @param string $beaconName The beacon whose attachments should be deleted. A
+   * beacon name has the format "beacons/N!beaconId" where the beaconId is the
+   * base16 ID broadcast by the beacon and N is a code for the beacon's type.
+   * Possible values are `3` for Eddystone-UID, `4` for Eddystone-EID, `1` for
+   * iBeacon, or `5` for AltBeacon. For Eddystone-EID beacons, you may use either
+   * the current EID or the beacon's "stable" UID. Required.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string namespacedType Specifies the namespace and type of
    * attachments to delete in `namespace/type` format. Accepts `*` to specify "all
    * types in all namespaces". Optional.
-   * @return Google_Service_DeleteAttachmentsResponse
+   * @opt_param string projectId The project id to delete beacon attachments
+   * under. This field can be used when "*" is specified to mean all attachment
+   * namespaces. Projects may have multiple attachments with multiple namespaces.
+   * If "*" is specified and the projectId string is empty, then the project
+   * making the request is used. Optional.
+   * @return Google_Service_Proximitybeacon_DeleteAttachmentsResponse
    */
   public function batchDelete($beaconName, $optParams = array())
   {
@@ -54,13 +66,24 @@ class Google_Service_Proximitybeacon_BeaconsAttachmentsResource extends Google_S
    * namespace must be one of the values returned by the `namespaces` endpoint,
    * while the type can be a string of any characters except for the forward slash
    * (`/`) up to 100 characters in length. Attachment data can be up to 1024 bytes
-   * long. (attachments.create)
+   * long. Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **Is owner** or **Can edit** permissions in the Google
+   * Developers Console project. (attachments.create)
    *
-   * @param string $beaconName The beacon on which the attachment should be
-   * created. Required.
-   * @param Google_BeaconAttachment $postBody
+   * @param string $beaconName Beacon on which the attachment should be created. A
+   * beacon name has the format "beacons/N!beaconId" where the beaconId is the
+   * base16 ID broadcast by the beacon and N is a code for the beacon's type.
+   * Possible values are `3` for Eddystone-UID, `4` for Eddystone-EID, `1` for
+   * iBeacon, or `5` for AltBeacon. For Eddystone-EID beacons, you may use either
+   * the current EID or the beacon's "stable" UID. Required.
+   * @param Google_Service_Proximitybeacon_BeaconAttachment $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_BeaconAttachment
+   *
+   * @opt_param string projectId The project id of the project the attachment will
+   * belong to. If the project id is not specified then the project making the
+   * request is used. Optional.
+   * @return Google_Service_Proximitybeacon_BeaconAttachment
    */
   public function create($beaconName, Google_Service_Proximitybeacon_BeaconAttachment $postBody, $optParams = array())
   {
@@ -73,13 +96,21 @@ class Google_Service_Proximitybeacon_BeaconsAttachmentsResource extends Google_S
    * unique attachment name (`attachmentName`) which is returned when you fetch
    * the attachment data via this API. You specify this with the delete request to
    * control which attachment is removed. This operation cannot be undone.
-   * (attachments.delete)
+   * Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **Is owner** or **Can edit** permissions in the Google
+   * Developers Console project. (attachments.delete)
    *
    * @param string $attachmentName The attachment name (`attachmentName`) of the
    * attachment to remove. For example:
-   * `beacons/3!893737abc9/attachments/c5e937-af0-494-959-ec49d12738` Required.
+   * `beacons/3!893737abc9/attachments/c5e937-af0-494-959-ec49d12738`. For
+   * Eddystone-EID beacons, the beacon ID portion (`3!893737abc9`) may be the
+   * beacon's current EID, or its "stable" Eddystone-UID. Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ProximitybeaconEmpty
+   *
+   * @opt_param string projectId The project id of the attachment to delete. If
+   * not provided, the project that is making the request is used. Optional.
+   * @return Google_Service_Proximitybeacon_ProximitybeaconEmpty
    */
   public function delete($attachmentName, $optParams = array())
   {
@@ -92,16 +123,28 @@ class Google_Service_Proximitybeacon_BeaconsAttachmentsResource extends Google_S
    * namespaced-type pattern. To control which namespaced types are returned, you
    * add the `namespacedType` query parameter to the request. You must either use
    * `*`, to return all attachments, or the namespace must be one of the ones
-   * returned from the `namespaces` endpoint. (attachments.listBeaconsAttachments)
+   * returned from the `namespaces` endpoint. Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **viewer**, **Is owner** or **Can edit** permissions in
+   * the Google Developers Console project. (attachments.listBeaconsAttachments)
    *
-   * @param string $beaconName The beacon whose attachments are to be fetched.
-   * Required.
+   * @param string $beaconName Beacon whose attachments should be fetched. A
+   * beacon name has the format "beacons/N!beaconId" where the beaconId is the
+   * base16 ID broadcast by the beacon and N is a code for the beacon's type.
+   * Possible values are `3` for Eddystone-UID, `4` for Eddystone-EID, `1` for
+   * iBeacon, or `5` for AltBeacon. For Eddystone-EID beacons, you may use either
+   * the current EID or the beacon's "stable" UID. Required.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string namespacedType Specifies the namespace and type of
    * attachment to include in response in namespace/type format. Accepts `*` to
    * specify "all types in all namespaces".
-   * @return Google_Service_ListBeaconAttachmentsResponse
+   * @opt_param string projectId The project id to list beacon attachments under.
+   * This field can be used when "*" is specified to mean all attachment
+   * namespaces. Projects may have multiple attachments with multiple namespaces.
+   * If "*" is specified and the projectId string is empty, then the project
+   * making the request is used. Optional.
+   * @return Google_Service_Proximitybeacon_ListBeaconAttachmentsResponse
    */
   public function listBeaconsAttachments($beaconName, $optParams = array())
   {

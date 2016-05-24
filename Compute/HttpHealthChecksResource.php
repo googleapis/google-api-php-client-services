@@ -61,7 +61,7 @@ class Google_Service_Compute_HttpHealthChecksResource extends Google_Service_Res
    * included in the request. (httpHealthChecks.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_HttpHealthCheck $postBody
+   * @param Google_Service_Compute_HttpHealthCheck $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -127,7 +127,7 @@ class Google_Service_Compute_HttpHealthChecksResource extends Google_Service_Res
    * @param string $project Project ID for this request.
    * @param string $httpHealthCheck Name of the HttpHealthCheck resource to
    * update.
-   * @param Google_HttpHealthCheck $postBody
+   * @param Google_Service_Compute_HttpHealthCheck $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -144,7 +144,7 @@ class Google_Service_Compute_HttpHealthChecksResource extends Google_Service_Res
    * @param string $project Project ID for this request.
    * @param string $httpHealthCheck Name of the HttpHealthCheck resource to
    * update.
-   * @param Google_HttpHealthCheck $postBody
+   * @param Google_Service_Compute_HttpHealthCheck $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

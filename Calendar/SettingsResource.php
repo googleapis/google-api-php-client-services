@@ -66,7 +66,7 @@ class Google_Service_Calendar_SettingsResource extends Google_Service_Resource
   /**
    * Watch for changes to Settings resources. (settings.watch)
    *
-   * @param Google_Channel $postBody
+   * @param Google_Service_Calendar_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of entries returned on one result

@@ -34,7 +34,7 @@ class Google_Service_SQLAdmin_BackupRunsResource extends Google_Service_Resource
    * @param string $id The ID of the Backup Run to delete. To find a Backup Run
    * ID, use the list method.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function delete($project, $instance, $id, $optParams = array())
   {
@@ -51,7 +51,7 @@ class Google_Service_SQLAdmin_BackupRunsResource extends Google_Service_Resource
    * project ID.
    * @param string $id The ID of this Backup Run.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_BackupRun
+   * @return Google_Service_SQLAdmin_BackupRun
    */
   public function get($project, $instance, $id, $optParams = array())
   {
@@ -72,7 +72,7 @@ class Google_Service_SQLAdmin_BackupRunsResource extends Google_Service_Resource
    * @opt_param int maxResults Maximum number of backup runs per response.
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
-   * @return Google_Service_BackupRunsListResponse
+   * @return Google_Service_SQLAdmin_BackupRunsListResponse
    */
   public function listBackupRuns($project, $instance, $optParams = array())
   {

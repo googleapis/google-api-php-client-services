@@ -46,7 +46,7 @@ class Google_Service_Taskqueue_TasksResource extends Google_Service_Resource
    * @param string $taskqueue The taskqueue in which the task belongs.
    * @param string $task The task to get properties of.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Task
+   * @return Google_Service_Taskqueue_Task
    */
   public function get($project, $taskqueue, $task, $optParams = array())
   {
@@ -59,9 +59,9 @@ class Google_Service_Taskqueue_TasksResource extends Google_Service_Resource
    *
    * @param string $project The project under which the queue lies
    * @param string $taskqueue The taskqueue to insert the task into
-   * @param Google_Task $postBody
+   * @param Google_Service_Taskqueue_Task $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Task
+   * @return Google_Service_Taskqueue_Task
    */
   public function insert($project, $taskqueue, Google_Service_Taskqueue_Task $postBody, $optParams = array())
   {
@@ -84,7 +84,7 @@ class Google_Service_Taskqueue_TasksResource extends Google_Service_Resource
    * specified if group_by_tag is true. If group_by_tag is true and tag is not
    * specified the tag will be that of the oldest task by eta, i.e. the first
    * available tag
-   * @return Google_Service_Tasks
+   * @return Google_Service_Taskqueue_Tasks
    */
   public function lease($project, $taskqueue, $numTasks, $leaseSecs, $optParams = array())
   {
@@ -98,7 +98,7 @@ class Google_Service_Taskqueue_TasksResource extends Google_Service_Resource
    * @param string $project The project under which the queue lies.
    * @param string $taskqueue The id of the taskqueue to list tasks from.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Tasks2
+   * @return Google_Service_Taskqueue_Tasks2
    */
   public function listTasks($project, $taskqueue, $optParams = array())
   {
@@ -114,9 +114,9 @@ class Google_Service_Taskqueue_TasksResource extends Google_Service_Resource
    * @param string $taskqueue
    * @param string $task
    * @param int $newLeaseSeconds The new lease in seconds.
-   * @param Google_Task $postBody
+   * @param Google_Service_Taskqueue_Task $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Task
+   * @return Google_Service_Taskqueue_Task
    */
   public function patch($project, $taskqueue, $task, $newLeaseSeconds, Google_Service_Taskqueue_Task $postBody, $optParams = array())
   {
@@ -131,9 +131,9 @@ class Google_Service_Taskqueue_TasksResource extends Google_Service_Resource
    * @param string $taskqueue
    * @param string $task
    * @param int $newLeaseSeconds The new lease in seconds.
-   * @param Google_Task $postBody
+   * @param Google_Service_Taskqueue_Task $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Task
+   * @return Google_Service_Taskqueue_Task
    */
   public function update($project, $taskqueue, $task, $newLeaseSeconds, Google_Service_Taskqueue_Task $postBody, $optParams = array())
   {

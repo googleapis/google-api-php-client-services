@@ -110,7 +110,7 @@ class Google_Service_Compute_TargetInstancesResource extends Google_Service_Reso
    *
    * @param string $project Project ID for this request.
    * @param string $zone Name of the zone scoping this request.
-   * @param Google_TargetInstance $postBody
+   * @param Google_Service_Compute_TargetInstance $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

@@ -30,9 +30,9 @@ class Google_Service_CloudMonitoring_MetricDescriptorsResource extends Google_Se
    *
    * @param string $project The project id. The value can be the numeric project
    * ID or string-based project name.
-   * @param Google_MetricDescriptor $postBody
+   * @param Google_Service_CloudMonitoring_MetricDescriptor $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_MetricDescriptor
+   * @return Google_Service_CloudMonitoring_MetricDescriptor
    */
   public function create($project, Google_Service_CloudMonitoring_MetricDescriptor $postBody, $optParams = array())
   {
@@ -46,7 +46,7 @@ class Google_Service_CloudMonitoring_MetricDescriptorsResource extends Google_Se
    * @param string $project The project ID to which the metric belongs.
    * @param string $metric Name of the metric.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DeleteMetricDescriptorResponse
+   * @return Google_Service_CloudMonitoring_DeleteMetricDescriptorResponse
    */
   public function delete($project, $metric, $optParams = array())
   {
@@ -75,7 +75,7 @@ class Google_Service_CloudMonitoring_MetricDescriptorsResource extends Google_Se
    * meaning that all keywords must match for a metric to be returned. If this
    * field is omitted, all metrics are returned. If an empty string is passed with
    * this field, no metrics are returned.
-   * @return Google_Service_ListMetricDescriptorsResponse
+   * @return Google_Service_CloudMonitoring_ListMetricDescriptorsResponse
    */
   public function listMetricDescriptors($project, $optParams = array())
   {

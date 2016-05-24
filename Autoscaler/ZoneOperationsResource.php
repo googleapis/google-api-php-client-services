@@ -48,7 +48,7 @@ class Google_Service_Autoscaler_ZoneOperationsResource extends Google_Service_Re
    * @param string $zone
    * @param string $operation
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Autoscaler_Operation
    */
   public function get($project, $zone, $operation, $optParams = array())
   {
@@ -67,7 +67,7 @@ class Google_Service_Autoscaler_ZoneOperationsResource extends Google_Service_Re
    * @opt_param string filter
    * @opt_param string maxResults
    * @opt_param string pageToken
-   * @return Google_Service_OperationList
+   * @return Google_Service_Autoscaler_OperationList
    */
   public function listZoneOperations($project, $zone, $optParams = array())
   {

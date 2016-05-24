@@ -58,7 +58,7 @@ class Google_Service_GamesConfiguration_LeaderboardConfigurationsResource extend
    *
    * @param string $applicationId The application ID from the Google Play
    * developer console.
-   * @param Google_LeaderboardConfiguration $postBody
+   * @param Google_Service_GamesConfiguration_LeaderboardConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_GamesConfiguration_LeaderboardConfiguration
    */
@@ -93,7 +93,7 @@ class Google_Service_GamesConfiguration_LeaderboardConfigurationsResource extend
    * method supports patch semantics. (leaderboardConfigurations.patch)
    *
    * @param string $leaderboardId The ID of the leaderboard.
-   * @param Google_LeaderboardConfiguration $postBody
+   * @param Google_Service_GamesConfiguration_LeaderboardConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_GamesConfiguration_LeaderboardConfiguration
    */
@@ -108,7 +108,7 @@ class Google_Service_GamesConfiguration_LeaderboardConfigurationsResource extend
    * (leaderboardConfigurations.update)
    *
    * @param string $leaderboardId The ID of the leaderboard.
-   * @param Google_LeaderboardConfiguration $postBody
+   * @param Google_Service_GamesConfiguration_LeaderboardConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_GamesConfiguration_LeaderboardConfiguration
    */

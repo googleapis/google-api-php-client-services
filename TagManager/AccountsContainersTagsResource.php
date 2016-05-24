@@ -30,7 +30,7 @@ class Google_Service_TagManager_AccountsContainersTagsResource extends Google_Se
    *
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
-   * @param Google_Tag $postBody
+   * @param Google_Service_TagManager_Tag $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_Tag
    */
@@ -89,7 +89,7 @@ class Google_Service_TagManager_AccountsContainersTagsResource extends Google_Se
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $tagId The GTM Tag ID.
-   * @param Google_Tag $postBody
+   * @param Google_Service_TagManager_Tag $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

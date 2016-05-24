@@ -28,7 +28,7 @@ class Google_Service_AndroidPublisher_InappproductsResource extends Google_Servi
   /**
    * (inappproducts.batch)
    *
-   * @param Google_InappproductsBatchRequest $postBody
+   * @param Google_Service_AndroidPublisher_InappproductsBatchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_InappproductsBatchResponse
    */
@@ -71,7 +71,7 @@ class Google_Service_AndroidPublisher_InappproductsResource extends Google_Servi
    *
    * @param string $packageName Unique identifier for the Android app; for
    * example, "com.spiffygame".
-   * @param Google_InAppProduct $postBody
+   * @param Google_Service_AndroidPublisher_InAppProduct $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool autoConvertMissingPrices If true the prices for all regions
@@ -112,7 +112,7 @@ class Google_Service_AndroidPublisher_InappproductsResource extends Google_Servi
    * @param string $packageName Unique identifier for the Android app with the in-
    * app product; for example, "com.spiffygame".
    * @param string $sku Unique identifier for the in-app product.
-   * @param Google_InAppProduct $postBody
+   * @param Google_Service_AndroidPublisher_InAppProduct $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool autoConvertMissingPrices If true the prices for all regions
@@ -133,7 +133,7 @@ class Google_Service_AndroidPublisher_InappproductsResource extends Google_Servi
    * @param string $packageName Unique identifier for the Android app with the in-
    * app product; for example, "com.spiffygame".
    * @param string $sku Unique identifier for the in-app product.
-   * @param Google_InAppProduct $postBody
+   * @param Google_Service_AndroidPublisher_InAppProduct $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool autoConvertMissingPrices If true the prices for all regions

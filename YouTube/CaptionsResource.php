@@ -99,7 +99,7 @@ class Google_Service_YouTube_CaptionsResource extends Google_Service_Resource
    *
    * @param string $part The part parameter specifies the caption resource parts
    * that the API response will include. Set the parameter value to snippet.
-   * @param Google_Caption $postBody
+   * @param Google_Service_YouTube_Caption $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
@@ -180,7 +180,7 @@ class Google_Service_YouTube_CaptionsResource extends Google_Service_Resource
    * properties that the API response will include. Set the property value to
    * snippet if you are updating the track's draft status. Otherwise, set the
    * property value to id.
-   * @param Google_Caption $postBody
+   * @param Google_Service_YouTube_Caption $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the

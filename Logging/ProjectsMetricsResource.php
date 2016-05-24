@@ -31,9 +31,9 @@ class Google_Service_Logging_ProjectsMetricsResource extends Google_Service_Reso
    * @param string $projectName The resource name of the project in which to
    * create the metric. Example: `"projects/my-project-id"`. The new metric must
    * be provided in the request.
-   * @param Google_LogMetric $postBody
+   * @param Google_Service_Logging_LogMetric $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LogMetric
+   * @return Google_Service_Logging_LogMetric
    */
   public function create($projectName, Google_Service_Logging_LogMetric $postBody, $optParams = array())
   {
@@ -47,7 +47,7 @@ class Google_Service_Logging_ProjectsMetricsResource extends Google_Service_Reso
    * @param string $metricName The resource name of the metric to delete. Example:
    * `"projects/my-project-id/metrics/my-metric-id"`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LoggingEmpty
+   * @return Google_Service_Logging_LoggingEmpty
    */
   public function delete($metricName, $optParams = array())
   {
@@ -61,7 +61,7 @@ class Google_Service_Logging_ProjectsMetricsResource extends Google_Service_Reso
    * @param string $metricName The resource name of the desired metric. Example:
    * `"projects/my-project-id/metrics/my-metric-id"`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LogMetric
+   * @return Google_Service_Logging_LogMetric
    */
   public function get($metricName, $optParams = array())
   {
@@ -86,7 +86,7 @@ class Google_Service_Logging_ProjectsMetricsResource extends Google_Service_Reso
    * determine if additional results are available, which you can retrieve by
    * passing the `nextPageToken` value as the `pageToken` parameter in the next
    * request.
-   * @return Google_Service_ListLogMetricsResponse
+   * @return Google_Service_Logging_ListLogMetricsResponse
    */
   public function listProjectsMetrics($projectName, $optParams = array())
   {
@@ -101,9 +101,9 @@ class Google_Service_Logging_ProjectsMetricsResource extends Google_Service_Reso
    * `"projects/my-project-id/metrics/my-metric-id"`. The updated metric must be
    * provided in the request and have the same identifier that is specified in
    * `metricName`. If the metric does not exist, it is created.
-   * @param Google_LogMetric $postBody
+   * @param Google_Service_Logging_LogMetric $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LogMetric
+   * @return Google_Service_Logging_LogMetric
    */
   public function update($metricName, Google_Service_Logging_LogMetric $postBody, $optParams = array())
   {

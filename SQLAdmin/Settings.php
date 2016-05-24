@@ -38,6 +38,7 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   public $pricingPlan;
   public $replicationType;
   public $settingsVersion;
+  public $storageAutoResize;
   public $tier;
 
   public function setActivationPolicy($activationPolicy)
@@ -159,6 +160,14 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   public function getSettingsVersion()
   {
     return $this->settingsVersion;
+  }
+  public function setStorageAutoResize($storageAutoResize)
+  {
+    $this->storageAutoResize = $storageAutoResize;
+  }
+  public function getStorageAutoResize()
+  {
+    return $this->storageAutoResize;
   }
   public function setTier($tier)
   {

@@ -44,7 +44,7 @@ class Google_Service_CloudUserAccounts_GlobalAccountsOperationsResource extends 
    * @param string $project Project ID for this request.
    * @param string $operation Name of the Operations resource to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function get($project, $operation, $optParams = array())
   {
@@ -102,7 +102,7 @@ class Google_Service_CloudUserAccounts_GlobalAccountsOperationsResource extends 
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_OperationList
+   * @return Google_Service_CloudUserAccounts_OperationList
    */
   public function listGlobalAccountsOperations($project, $optParams = array())
   {

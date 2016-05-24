@@ -76,7 +76,7 @@ class Google_Service_CloudResourceManager_ProjectsResource extends Google_Servic
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `getIamPolicy`
    * documentation.
-   * @param Google_GetIamPolicyRequest $postBody
+   * @param Google_Service_CloudResourceManager_GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Policy
    */
@@ -136,7 +136,7 @@ class Google_Service_CloudResourceManager_ProjectsResource extends Google_Servic
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `setIamPolicy`
    * documentation.
-   * @param Google_SetIamPolicyRequest $postBody
+   * @param Google_Service_CloudResourceManager_SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Policy
    */
@@ -155,7 +155,7 @@ class Google_Service_CloudResourceManager_ProjectsResource extends Google_Servic
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `testIamPermissions`
    * documentation.
-   * @param Google_TestIamPermissionsRequest $postBody
+   * @param Google_Service_CloudResourceManager_TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_TestIamPermissionsResponse
    */
@@ -174,7 +174,7 @@ class Google_Service_CloudResourceManager_ProjectsResource extends Google_Servic
    *
    * @param string $projectId The project ID (for example, `foo-bar-123`).
    * Required.
-   * @param Google_UndeleteProjectRequest $postBody
+   * @param Google_Service_CloudResourceManager_UndeleteProjectRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_CloudresourcemanagerEmpty
    */
@@ -191,7 +191,7 @@ class Google_Service_CloudResourceManager_ProjectsResource extends Google_Servic
    *
    * @param string $projectId The project ID (for example, `my-project-123`).
    * Required.
-   * @param Google_Project $postBody
+   * @param Google_Service_CloudResourceManager_Project $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Project
    */

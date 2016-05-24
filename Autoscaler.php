@@ -271,14 +271,9 @@ class Google_Service_Autoscaler extends Google_Service
         array(
           'methods' => array(
             'list' => array(
-              'path' => '{project}/zones',
+              'path' => 'zones',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'project' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -288,6 +283,10 @@ class Google_Service_Autoscaler extends Google_Service
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'project' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

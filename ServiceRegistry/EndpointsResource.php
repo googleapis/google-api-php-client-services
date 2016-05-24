@@ -31,7 +31,7 @@ class Google_Service_ServiceRegistry_EndpointsResource extends Google_Service_Re
    * @param string $project The project ID for this request.
    * @param string $endpoint The name of the endpoint for this request.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_ServiceRegistry_Operation
    */
   public function delete($project, $endpoint, $optParams = array())
   {
@@ -45,7 +45,7 @@ class Google_Service_ServiceRegistry_EndpointsResource extends Google_Service_Re
    * @param string $project The project ID for this request.
    * @param string $endpoint The name of the endpoint for this request.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Endpoint
+   * @return Google_Service_ServiceRegistry_Endpoint
    */
   public function get($project, $endpoint, $optParams = array())
   {
@@ -57,9 +57,9 @@ class Google_Service_ServiceRegistry_EndpointsResource extends Google_Service_Re
    * Creates an endpoint. (endpoints.insert)
    *
    * @param string $project The project ID for this request.
-   * @param Google_Endpoint $postBody
+   * @param Google_Service_ServiceRegistry_Endpoint $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_ServiceRegistry_Operation
    */
   public function insert($project, Google_Service_ServiceRegistry_Endpoint $postBody, $optParams = array())
   {
@@ -116,7 +116,7 @@ class Google_Service_ServiceRegistry_EndpointsResource extends Google_Service_Re
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_EndpointsListResponse
+   * @return Google_Service_ServiceRegistry_EndpointsListResponse
    */
   public function listEndpoints($project, $optParams = array())
   {
@@ -129,9 +129,9 @@ class Google_Service_ServiceRegistry_EndpointsResource extends Google_Service_Re
    *
    * @param string $project The project ID for this request.
    * @param string $endpoint The name of the endpoint for this request.
-   * @param Google_Endpoint $postBody
+   * @param Google_Service_ServiceRegistry_Endpoint $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_ServiceRegistry_Operation
    */
   public function patch($project, $endpoint, Google_Service_ServiceRegistry_Endpoint $postBody, $optParams = array())
   {
@@ -144,9 +144,9 @@ class Google_Service_ServiceRegistry_EndpointsResource extends Google_Service_Re
    *
    * @param string $project The project ID for this request.
    * @param string $endpoint The name of the endpoint for this request.
-   * @param Google_Endpoint $postBody
+   * @param Google_Service_ServiceRegistry_Endpoint $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_ServiceRegistry_Operation
    */
   public function update($project, $endpoint, Google_Service_ServiceRegistry_Endpoint $postBody, $optParams = array())
   {

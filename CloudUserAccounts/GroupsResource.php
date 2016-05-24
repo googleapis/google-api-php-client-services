@@ -30,9 +30,9 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    *
    * @param string $project Project ID for this request.
    * @param string $groupName Name of the group for this request.
-   * @param Google_GroupsAddMemberRequest $postBody
+   * @param Google_Service_CloudUserAccounts_GroupsAddMemberRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function addMember($project, $groupName, Google_Service_CloudUserAccounts_GroupsAddMemberRequest $postBody, $optParams = array())
   {
@@ -46,7 +46,7 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    * @param string $project Project ID for this request.
    * @param string $groupName Name of the Group resource to delete.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function delete($project, $groupName, $optParams = array())
   {
@@ -60,7 +60,7 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    * @param string $project Project ID for this request.
    * @param string $groupName Name of the Group resource to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Group
+   * @return Google_Service_CloudUserAccounts_Group
    */
   public function get($project, $groupName, $optParams = array())
   {
@@ -75,7 +75,7 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    * @param string $project Project ID for this request.
    * @param string $resource Name of the resource for this request.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Policy
+   * @return Google_Service_CloudUserAccounts_Policy
    */
   public function getIamPolicy($project, $resource, $optParams = array())
   {
@@ -88,9 +88,9 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    * the request. (groups.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_Group $postBody
+   * @param Google_Service_CloudUserAccounts_Group $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function insert($project, Google_Service_CloudUserAccounts_Group $postBody, $optParams = array())
   {
@@ -148,7 +148,7 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_GroupList
+   * @return Google_Service_CloudUserAccounts_GroupList
    */
   public function listGroups($project, $optParams = array())
   {
@@ -161,9 +161,9 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    *
    * @param string $project Project ID for this request.
    * @param string $groupName Name of the group for this request.
-   * @param Google_GroupsRemoveMemberRequest $postBody
+   * @param Google_Service_CloudUserAccounts_GroupsRemoveMemberRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function removeMember($project, $groupName, Google_Service_CloudUserAccounts_GroupsRemoveMemberRequest $postBody, $optParams = array())
   {
@@ -177,9 +177,9 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    *
    * @param string $project Project ID for this request.
    * @param string $resource Name of the resource for this request.
-   * @param Google_Policy $postBody
+   * @param Google_Service_CloudUserAccounts_Policy $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Policy
+   * @return Google_Service_CloudUserAccounts_Policy
    */
   public function setIamPolicy($project, $resource, Google_Service_CloudUserAccounts_Policy $postBody, $optParams = array())
   {
@@ -193,9 +193,9 @@ class Google_Service_CloudUserAccounts_GroupsResource extends Google_Service_Res
    *
    * @param string $project Project ID for this request.
    * @param string $resource Name of the resource for this request.
-   * @param Google_TestPermissionsRequest $postBody
+   * @param Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_TestPermissionsResponse
+   * @return Google_Service_CloudUserAccounts_TestPermissionsResponse
    */
   public function testIamPermissions($project, $resource, Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody, $optParams = array())
   {

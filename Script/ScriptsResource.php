@@ -38,7 +38,7 @@ class Google_Service_Script_ScriptsResource extends Google_Service_Resource
    * @param string $scriptId The project key of the script to be executed. To find
    * the project key, open the project in the script editor, then select **File >
    * Project properties**.
-   * @param Google_ExecutionRequest $postBody
+   * @param Google_Service_Script_ExecutionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Script_Operation
    */

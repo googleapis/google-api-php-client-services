@@ -34,7 +34,7 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * resides.
    * @param string $rollingUpdate The name of the update.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapoolupdater_Operation
    */
   public function cancel($project, $zone, $rollingUpdate, $optParams = array())
   {
@@ -50,7 +50,7 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * resides.
    * @param string $rollingUpdate The name of the update.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_RollingUpdate
+   * @return Google_Service_Replicapoolupdater_RollingUpdate
    */
   public function get($project, $zone, $rollingUpdate, $optParams = array())
   {
@@ -64,9 +64,9 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * @param string $project The Google Developers Console project name.
    * @param string $zone The name of the zone in which the update's target
    * resides.
-   * @param Google_RollingUpdate $postBody
+   * @param Google_Service_Replicapoolupdater_RollingUpdate $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapoolupdater_Operation
    */
   public function insert($project, $zone, Google_Service_Replicapoolupdater_RollingUpdate $postBody, $optParams = array())
   {
@@ -89,7 +89,7 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * returned. Maximum value is 500 and default value is 500.
    * @opt_param string pageToken Optional. Tag returned by a previous list request
    * truncated by maxResults. Used to continue a previous list request.
-   * @return Google_Service_RollingUpdateList
+   * @return Google_Service_Replicapoolupdater_RollingUpdateList
    */
   public function listRollingUpdates($project, $zone, $optParams = array())
   {
@@ -113,7 +113,7 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * returned. Maximum value is 500 and default value is 500.
    * @opt_param string pageToken Optional. Tag returned by a previous list request
    * truncated by maxResults. Used to continue a previous list request.
-   * @return Google_Service_InstanceUpdateList
+   * @return Google_Service_Replicapoolupdater_InstanceUpdateList
    */
   public function listInstanceUpdates($project, $zone, $rollingUpdate, $optParams = array())
   {
@@ -131,7 +131,7 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * resides.
    * @param string $rollingUpdate The name of the update.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapoolupdater_Operation
    */
   public function pause($project, $zone, $rollingUpdate, $optParams = array())
   {
@@ -148,7 +148,7 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * resides.
    * @param string $rollingUpdate The name of the update.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapoolupdater_Operation
    */
   public function resume($project, $zone, $rollingUpdate, $optParams = array())
   {
@@ -166,7 +166,7 @@ class Google_Service_Replicapoolupdater_RollingUpdatesResource extends Google_Se
    * resides.
    * @param string $rollingUpdate The name of the update.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapoolupdater_Operation
    */
   public function rollback($project, $zone, $rollingUpdate, $optParams = array())
   {

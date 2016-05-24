@@ -32,7 +32,7 @@ class Google_Service_Appengine_AppsServicesResource extends Google_Service_Resou
    * example: "apps/myapp/services/default".
    * @param string $servicesId Part of `name`. See documentation of `appsId`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Appengine_Operation
    */
   public function delete($appsId, $servicesId, $optParams = array())
   {
@@ -47,7 +47,7 @@ class Google_Service_Appengine_AppsServicesResource extends Google_Service_Resou
    * example: "apps/myapp/services/default".
    * @param string $servicesId Part of `name`. See documentation of `appsId`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Service
+   * @return Google_Service_Appengine_Service
    */
   public function get($appsId, $servicesId, $optParams = array())
   {
@@ -65,7 +65,7 @@ class Google_Service_Appengine_AppsServicesResource extends Google_Service_Resou
    * @opt_param int pageSize Maximum results to return per page.
    * @opt_param string pageToken Continuation token for fetching the next page of
    * results.
-   * @return Google_Service_ListServicesResponse
+   * @return Google_Service_Appengine_ListServicesResponse
    */
   public function listAppsServices($appsId, $optParams = array())
   {
@@ -79,7 +79,7 @@ class Google_Service_Appengine_AppsServicesResource extends Google_Service_Resou
    * @param string $appsId Part of `name`. Name of the resource to update. For
    * example: "apps/myapp/services/default".
    * @param string $servicesId Part of `name`. See documentation of `appsId`.
-   * @param Google_Service $postBody
+   * @param Google_Service_Appengine_Service $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string mask Standard field mask for the set of fields to be
@@ -87,7 +87,7 @@ class Google_Service_Appengine_AppsServicesResource extends Google_Service_Resou
    * @opt_param bool migrateTraffic Whether to use Traffic Migration to shift
    * traffic gradually. Traffic can only be migrated from a single version to
    * another single version.
-   * @return Google_Service_Operation
+   * @return Google_Service_Appengine_Operation
    */
   public function patch($appsId, $servicesId, Google_Service_Appengine_Service $postBody, $optParams = array())
   {

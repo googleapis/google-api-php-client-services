@@ -59,7 +59,7 @@ class Google_Service_Compute_GlobalAddressesResource extends Google_Service_Reso
    * in the request. (globalAddresses.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_Address $postBody
+   * @param Google_Service_Compute_Address $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

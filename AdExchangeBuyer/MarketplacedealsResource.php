@@ -29,7 +29,7 @@ class Google_Service_AdExchangeBuyer_MarketplacedealsResource extends Google_Ser
    * Delete the specified deals from the proposal (marketplacedeals.delete)
    *
    * @param string $proposalId The proposalId to delete deals from.
-   * @param Google_DeleteOrderDealsRequest $postBody
+   * @param Google_Service_AdExchangeBuyer_DeleteOrderDealsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_DeleteOrderDealsResponse
    */
@@ -43,7 +43,7 @@ class Google_Service_AdExchangeBuyer_MarketplacedealsResource extends Google_Ser
    * Add new deals for the specified proposal (marketplacedeals.insert)
    *
    * @param string $proposalId proposalId for which deals need to be added.
-   * @param Google_AddOrderDealsRequest $postBody
+   * @param Google_Service_AdExchangeBuyer_AddOrderDealsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_AddOrderDealsResponse
    */
@@ -75,7 +75,7 @@ class Google_Service_AdExchangeBuyer_MarketplacedealsResource extends Google_Ser
    * (marketplacedeals.update)
    *
    * @param string $proposalId The proposalId to edit deals on.
-   * @param Google_EditAllOrderDealsRequest $postBody
+   * @param Google_Service_AdExchangeBuyer_EditAllOrderDealsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_EditAllOrderDealsResponse
    */

@@ -29,9 +29,9 @@ class Google_Service_Dataflow_ProjectsResource extends Google_Service_Resource
    * Send a worker_message to the service. (projects.workerMessages)
    *
    * @param string $projectId The project to send the WorkerMessages to.
-   * @param Google_SendWorkerMessagesRequest $postBody
+   * @param Google_Service_Dataflow_SendWorkerMessagesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SendWorkerMessagesResponse
+   * @return Google_Service_Dataflow_SendWorkerMessagesResponse
    */
   public function workerMessages($projectId, Google_Service_Dataflow_SendWorkerMessagesRequest $postBody, $optParams = array())
   {

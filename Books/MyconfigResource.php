@@ -113,7 +113,7 @@ class Google_Service_Books_MyconfigResource extends Google_Service_Resource
    * overwrite the existing sub-object stored in the server. Unspecified sub-
    * objects will retain the existing value. (myconfig.updateUserSettings)
    *
-   * @param Google_Usersettings $postBody
+   * @param Google_Service_Books_Usersettings $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Books_Usersettings
    */

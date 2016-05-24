@@ -73,7 +73,7 @@ class Google_Service_Dfareporting_AccountsResource extends Google_Service_Resour
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Account ID.
-   * @param Google_Account $postBody
+   * @param Google_Service_Dfareporting_Account $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Account
    */
@@ -87,7 +87,7 @@ class Google_Service_Dfareporting_AccountsResource extends Google_Service_Resour
    * Updates an existing account. (accounts.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Account $postBody
+   * @param Google_Service_Dfareporting_Account $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Account
    */

@@ -31,7 +31,7 @@ class Google_Service_Dfareporting_ReportsCompatibleFieldsResource extends Google
    * report and user permissions. (compatibleFields.query)
    *
    * @param string $profileId The DFA user profile ID.
-   * @param Google_Report $postBody
+   * @param Google_Service_Dfareporting_Report $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_CompatibleFields
    */

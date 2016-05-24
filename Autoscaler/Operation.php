@@ -20,6 +20,7 @@ class Google_Service_Autoscaler_Operation extends Google_Collection
   protected $collection_key = 'warnings';
   public $clientOperationId;
   public $creationTimestamp;
+  public $description;
   public $endTime;
   protected $errorType = 'Google_Service_Autoscaler_OperationError';
   protected $errorDataType = '';
@@ -58,6 +59,14 @@ class Google_Service_Autoscaler_Operation extends Google_Collection
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  public function getDescription()
+  {
+    return $this->description;
   }
   public function setEndTime($endTime)
   {

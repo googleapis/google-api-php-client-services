@@ -39,13 +39,13 @@ class Google_Service_Clouderrorreporting_ProjectsEventsResource extends Google_S
    * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
    * @opt_param string groupId The group for which events shall be returned.
    * Required.
-   * @opt_param int pageSize The maximum number of results to return per response.
    * @opt_param string serviceFilter.version The exact value to match against
    * [`ServiceContext.version`](/error-
    * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+   * @opt_param int pageSize The maximum number of results to return per response.
    * @opt_param string pageToken A `next_page_token` provided by a previous
    * response.
-   * @return Google_Service_ListEventsResponse
+   * @return Google_Service_Clouderrorreporting_ListEventsResponse
    */
   public function listProjectsEvents($projectName, $optParams = array())
   {

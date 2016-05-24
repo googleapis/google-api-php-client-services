@@ -35,7 +35,7 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsUsersResource extends Goog
    * @param string $userId Numerical identifier of the user to retrieve.
    * (required)
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ClientUser
+   * @return Google_Service_AdExchangeBuyerII_ClientUser
    */
   public function get($accountId, $clientAccountId, $userId, $optParams = array())
   {
@@ -62,7 +62,7 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsUsersResource extends Goog
    * should return. Typically, this is the value of
    * ListClientUsersResponse.nextPageToken returned from the previous call to the
    * accounts.clients.users.list method.
-   * @return Google_Service_ListClientUsersResponse
+   * @return Google_Service_AdExchangeBuyerII_ListClientUsersResponse
    */
   public function listAccountsClientsUsers($accountId, $clientAccountId, $optParams = array())
   {
@@ -80,9 +80,9 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsUsersResource extends Goog
    * the user to be retrieved is associated with. (required)
    * @param string $userId Numerical identifier of the user to retrieve.
    * (required)
-   * @param Google_ClientUser $postBody
+   * @param Google_Service_AdExchangeBuyerII_ClientUser $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ClientUser
+   * @return Google_Service_AdExchangeBuyerII_ClientUser
    */
   public function update($accountId, $clientAccountId, $userId, Google_Service_AdExchangeBuyerII_ClientUser $postBody, $optParams = array())
   {

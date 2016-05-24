@@ -40,25 +40,25 @@ class Google_Service_Clouderrorreporting_ProjectsGroupStatsResource extends Goog
    * range.
    * @opt_param string order The sort order in which the results are returned.
    * Default is `COUNT_DESC`.
-   * @opt_param string serviceFilter.service The exact value to match against
-   * [`ServiceContext.service`](/error-
-   * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
    * @opt_param string groupId List all `ErrorGroupStats` with these IDs. If not
    * specified, all error group stats with a non-zero error count for the given
    * selection criteria are returned.
+   * @opt_param string serviceFilter.service The exact value to match against
+   * [`ServiceContext.service`](/error-
+   * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
    * @opt_param string alignmentTime Time where the timed counts shall be aligned
    * if rounded alignment is chosen. Default is 00:00 UTC.
-   * @opt_param int pageSize The maximum number of results to return per response.
-   * Default is 20.
    * @opt_param string serviceFilter.version The exact value to match against
    * [`ServiceContext.version`](/error-
    * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+   * @opt_param int pageSize The maximum number of results to return per response.
+   * Default is 20.
    * @opt_param string timedCountDuration The preferred duration for a single
    * returned `TimedCount`. If not set, no timed counts are returned.
    * @opt_param string pageToken A `next_page_token` provided by a previous
    * response. To view additional results, pass this token along with the
    * identical query parameters as the first request.
-   * @return Google_Service_ListGroupStatsResponse
+   * @return Google_Service_Clouderrorreporting_ListGroupStatsResponse
    */
   public function listProjectsGroupStats($projectName, $optParams = array())
   {

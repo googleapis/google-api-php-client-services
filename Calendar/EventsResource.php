@@ -78,7 +78,7 @@ class Google_Service_Calendar_EventsResource extends Google_Service_Resource
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param Google_Event $postBody
+   * @param Google_Service_Calendar_Event $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool supportsAttachments Whether API client performing operation
@@ -97,7 +97,7 @@ class Google_Service_Calendar_EventsResource extends Google_Service_Resource
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param Google_Event $postBody
+   * @param Google_Service_Calendar_Event $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxAttendees The maximum number of attendees to include in the
@@ -274,7 +274,7 @@ class Google_Service_Calendar_EventsResource extends Google_Service_Resource
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
    * @param string $eventId Event identifier.
-   * @param Google_Event $postBody
+   * @param Google_Service_Calendar_Event $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
@@ -325,7 +325,7 @@ class Google_Service_Calendar_EventsResource extends Google_Service_Resource
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
    * @param string $eventId Event identifier.
-   * @param Google_Event $postBody
+   * @param Google_Service_Calendar_Event $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
@@ -356,7 +356,7 @@ class Google_Service_Calendar_EventsResource extends Google_Service_Resource
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param Google_Channel $postBody
+   * @param Google_Service_Calendar_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the

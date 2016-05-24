@@ -28,17 +28,17 @@ class Google_Service_Autoscaler_ZonesResource extends Google_Service_Resource
   /**
    * (zones.listZones)
    *
-   * @param string $project
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter
    * @opt_param string maxResults
    * @opt_param string pageToken
-   * @return Google_Service_ZoneList
+   * @opt_param string project
+   * @return Google_Service_Autoscaler_ZoneList
    */
-  public function listZones($project, $optParams = array())
+  public function listZones($optParams = array())
   {
-    $params = array('project' => $project);
+    $params = array();
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Autoscaler_ZoneList");
   }

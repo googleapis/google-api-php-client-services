@@ -47,7 +47,7 @@ class Google_Service_Dfareporting_CampaignsResource extends Google_Service_Resou
    * campaign. Must be less than 256 characters long.
    * @param string $defaultLandingPageUrl Default landing page URL for this new
    * campaign.
-   * @param Google_Campaign $postBody
+   * @param Google_Service_Dfareporting_Campaign $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Campaign
    */
@@ -103,7 +103,7 @@ class Google_Service_Dfareporting_CampaignsResource extends Google_Service_Resou
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Campaign ID.
-   * @param Google_Campaign $postBody
+   * @param Google_Service_Dfareporting_Campaign $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Campaign
    */
@@ -117,7 +117,7 @@ class Google_Service_Dfareporting_CampaignsResource extends Google_Service_Resou
    * Updates an existing campaign. (campaigns.update)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_Campaign $postBody
+   * @param Google_Service_Dfareporting_Campaign $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_Campaign
    */

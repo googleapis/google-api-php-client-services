@@ -47,7 +47,7 @@ class Google_Service_Analytics_ManagementCustomMetricsResource extends Google_Se
    * @param string $accountId Account ID for the custom metric to create.
    * @param string $webPropertyId Web property ID for the custom dimension to
    * create.
-   * @param Google_CustomMetric $postBody
+   * @param Google_Service_Analytics_CustomMetric $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_CustomMetric
    */
@@ -86,7 +86,7 @@ class Google_Service_Analytics_ManagementCustomMetricsResource extends Google_Se
    * @param string $webPropertyId Web property ID for the custom metric to update.
    * @param string $customMetricId Custom metric ID for the custom metric to
    * update.
-   * @param Google_CustomMetric $postBody
+   * @param Google_Service_Analytics_CustomMetric $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool ignoreCustomDataSourceLinks Force the update and ignore any
@@ -107,7 +107,7 @@ class Google_Service_Analytics_ManagementCustomMetricsResource extends Google_Se
    * @param string $webPropertyId Web property ID for the custom metric to update.
    * @param string $customMetricId Custom metric ID for the custom metric to
    * update.
-   * @param Google_CustomMetric $postBody
+   * @param Google_Service_Analytics_CustomMetric $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool ignoreCustomDataSourceLinks Force the update and ignore any

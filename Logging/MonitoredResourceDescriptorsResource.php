@@ -40,7 +40,7 @@ class Google_Service_Logging_MonitoredResourceDescriptorsResource extends Google
    * supplied, then the next page of results is retrieved. The `pageToken`
    * parameter must be set to the value of the `nextPageToken` from the previous
    * response.
-   * @return Google_Service_ListMonitoredResourceDescriptorsResponse
+   * @return Google_Service_Logging_ListMonitoredResourceDescriptorsResponse
    */
   public function listMonitoredResourceDescriptors($optParams = array())
   {

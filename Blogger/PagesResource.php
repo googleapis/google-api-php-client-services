@@ -58,7 +58,7 @@ class Google_Service_Blogger_PagesResource extends Google_Service_Resource
    * Add a page. (pages.insert)
    *
    * @param string $blogId ID of the blog to add the page to.
-   * @param Google_Page $postBody
+   * @param Google_Service_Blogger_Page $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool isDraft Whether to create the page as a draft (default:
@@ -97,7 +97,7 @@ class Google_Service_Blogger_PagesResource extends Google_Service_Resource
    *
    * @param string $blogId The ID of the Blog.
    * @param string $pageId The ID of the Page.
-   * @param Google_Page $postBody
+   * @param Google_Service_Blogger_Page $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool publish Whether a publish action should be performed when the
@@ -145,7 +145,7 @@ class Google_Service_Blogger_PagesResource extends Google_Service_Resource
    *
    * @param string $blogId The ID of the Blog.
    * @param string $pageId The ID of the Page.
-   * @param Google_Page $postBody
+   * @param Google_Service_Blogger_Page $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool publish Whether a publish action should be performed when the

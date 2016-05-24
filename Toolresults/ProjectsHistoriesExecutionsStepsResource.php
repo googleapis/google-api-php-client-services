@@ -46,14 +46,14 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsResource extend
    * @param string $executionId A Execution id.
    *
    * Required.
-   * @param Google_Step $postBody
+   * @param Google_Service_ToolResults_Step $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId A unique request ID for server to detect
    * duplicated requests. For example, a UUID.
    *
    * Optional, but strongly recommended.
-   * @return Google_Service_Step
+   * @return Google_Service_ToolResults_Step
    */
   public function create($projectId, $historyId, $executionId, Google_Service_ToolResults_Step $postBody, $optParams = array())
   {
@@ -83,7 +83,7 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsResource extend
    *
    * Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Step
+   * @return Google_Service_ToolResults_Step
    */
   public function get($projectId, $historyId, $executionId, $stepId, $optParams = array())
   {
@@ -126,7 +126,7 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsResource extend
    * next item.
    *
    * Optional.
-   * @return Google_Service_ListStepsResponse
+   * @return Google_Service_ToolResults_ListStepsResponse
    */
   public function listProjectsHistoriesExecutionsSteps($projectId, $historyId, $executionId, $optParams = array())
   {
@@ -157,14 +157,14 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsResource extend
    * @param string $stepId A Step id.
    *
    * Required.
-   * @param Google_Step $postBody
+   * @param Google_Service_ToolResults_Step $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId A unique request ID for server to detect
    * duplicated requests. For example, a UUID.
    *
    * Optional, but strongly recommended.
-   * @return Google_Service_Step
+   * @return Google_Service_ToolResults_Step
    */
   public function patch($projectId, $historyId, $executionId, $stepId, Google_Service_ToolResults_Step $postBody, $optParams = array())
   {
@@ -196,9 +196,9 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsResource extend
    * TestExecutionStep.
    *
    * Required.
-   * @param Google_PublishXunitXmlFilesRequest $postBody
+   * @param Google_Service_ToolResults_PublishXunitXmlFilesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Step
+   * @return Google_Service_ToolResults_Step
    */
   public function publishXunitXmlFiles($projectId, $historyId, $executionId, $stepId, Google_Service_ToolResults_PublishXunitXmlFilesRequest $postBody, $optParams = array())
   {

@@ -80,7 +80,7 @@ class Google_Service_AndroidEnterprise_EntitlementsResource extends Google_Servi
    * @param string $userId The ID of the user.
    * @param string $entitlementId The ID of the entitlement (a product ID), e.g.
    * "app:com.google.android.gm".
-   * @param Google_Entitlement $postBody
+   * @param Google_Service_AndroidEnterprise_Entitlement $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool install Set to true to also install the product on all the
@@ -102,7 +102,7 @@ class Google_Service_AndroidEnterprise_EntitlementsResource extends Google_Servi
    * @param string $userId The ID of the user.
    * @param string $entitlementId The ID of the entitlement (a product ID), e.g.
    * "app:com.google.android.gm".
-   * @param Google_Entitlement $postBody
+   * @param Google_Service_AndroidEnterprise_Entitlement $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool install Set to true to also install the product on all the

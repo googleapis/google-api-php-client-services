@@ -32,7 +32,7 @@ class Google_Service_Analytics_ManagementUploadsResource extends Google_Service_
    * @param string $webPropertyId Web property Id for the uploads to be deleted.
    * @param string $customDataSourceId Custom data source Id for the uploads to be
    * deleted.
-   * @param Google_AnalyticsDataimportDeleteUploadDataRequest $postBody
+   * @param Google_Service_Analytics_AnalyticsDataimportDeleteUploadDataRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function deleteUploadData($accountId, $webPropertyId, $customDataSourceId, Google_Service_Analytics_AnalyticsDataimportDeleteUploadDataRequest $postBody, $optParams = array())

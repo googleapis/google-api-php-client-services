@@ -114,7 +114,7 @@ class Google_Service_Fusiontables_TableResource extends Google_Service_Resource
   /**
    * Creates a new table. (table.insert)
    *
-   * @param Google_Table $postBody
+   * @param Google_Service_Fusiontables_Table $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_Table
    */
@@ -147,7 +147,7 @@ class Google_Service_Fusiontables_TableResource extends Google_Service_Resource
    * semantics. (table.patch)
    *
    * @param string $tableId ID of the table that is being updated.
-   * @param Google_Table $postBody
+   * @param Google_Service_Fusiontables_Table $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool replaceViewDefinition Whether the view definition is also
@@ -195,7 +195,7 @@ class Google_Service_Fusiontables_TableResource extends Google_Service_Resource
    * description, and attribution will be updated. (table.update)
    *
    * @param string $tableId ID of the table that is being updated.
-   * @param Google_Table $postBody
+   * @param Google_Service_Fusiontables_Table $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool replaceViewDefinition Whether the view definition is also

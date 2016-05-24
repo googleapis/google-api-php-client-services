@@ -34,7 +34,7 @@ class Google_Service_Storage_ObjectsResource extends Google_Service_Resource
    * @param string $destinationObject Name of the new object. For information
    * about how to URL encode object names to be path safe, see Encoding URI Path
    * Parts.
-   * @param Google_ComposeRequest $postBody
+   * @param Google_Service_Storage_ComposeRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string destinationPredefinedAcl Apply a predefined set of access
@@ -66,7 +66,7 @@ class Google_Service_Storage_ObjectsResource extends Google_Service_Resource
    * @param string $destinationObject Name of the new object. Required when the
    * object metadata is not otherwise provided. Overrides the object metadata's
    * name value, if any.
-   * @param Google_StorageObject $postBody
+   * @param Google_Service_Storage_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string destinationPredefinedAcl Apply a predefined set of access
@@ -164,7 +164,7 @@ class Google_Service_Storage_ObjectsResource extends Google_Service_Resource
    *
    * @param string $bucket Name of the bucket in which to store the new object.
    * Overrides the provided object metadata's bucket value, if any.
-   * @param Google_StorageObject $postBody
+   * @param Google_Service_Storage_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string contentEncoding If set, sets the contentEncoding property
@@ -233,7 +233,7 @@ class Google_Service_Storage_ObjectsResource extends Google_Service_Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see Encoding URI Path Parts.
-   * @param Google_StorageObject $postBody
+   * @param Google_Service_Storage_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
@@ -271,7 +271,7 @@ class Google_Service_Storage_ObjectsResource extends Google_Service_Resource
    * object metadata is not otherwise provided. Overrides the object metadata's
    * name value, if any. For information about how to URL encode object names to
    * be path safe, see Encoding URI Path Parts.
-   * @param Google_StorageObject $postBody
+   * @param Google_Service_Storage_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string destinationPredefinedAcl Apply a predefined set of access
@@ -328,7 +328,7 @@ class Google_Service_Storage_ObjectsResource extends Google_Service_Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see Encoding URI Path Parts.
-   * @param Google_StorageObject $postBody
+   * @param Google_Service_Storage_StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
@@ -356,7 +356,7 @@ class Google_Service_Storage_ObjectsResource extends Google_Service_Resource
    * Watch for changes on all objects in a bucket. (objects.watchAll)
    *
    * @param string $bucket Name of the bucket in which to look for objects.
-   * @param Google_Channel $postBody
+   * @param Google_Service_Storage_Channel $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string delimiter Returns results in a directory-like mode. items

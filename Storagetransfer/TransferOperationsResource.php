@@ -94,7 +94,7 @@ class Google_Service_Storagetransfer_TransferOperationsResource extends Google_S
    * Pauses a transfer operation. (transferOperations.pause)
    *
    * @param string $name The name of the transfer operation. Required.
-   * @param Google_PauseTransferOperationRequest $postBody
+   * @param Google_Service_Storagetransfer_PauseTransferOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Storagetransfer_StoragetransferEmpty
    */
@@ -108,7 +108,7 @@ class Google_Service_Storagetransfer_TransferOperationsResource extends Google_S
    * Resumes a transfer operation that is paused. (transferOperations.resume)
    *
    * @param string $name The name of the transfer operation. Required.
-   * @param Google_ResumeTransferOperationRequest $postBody
+   * @param Google_Service_Storagetransfer_ResumeTransferOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Storagetransfer_StoragetransferEmpty
    */

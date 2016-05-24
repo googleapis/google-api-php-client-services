@@ -34,7 +34,7 @@ class Google_Service_AndroidPublisher_EditsApksResource extends Google_Service_R
    * @param string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
    * @param string $editId Unique identifier for this edit.
-   * @param Google_ApksAddExternallyHostedRequest $postBody
+   * @param Google_Service_AndroidPublisher_ApksAddExternallyHostedRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_ApksAddExternallyHostedResponse
    */

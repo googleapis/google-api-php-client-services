@@ -33,9 +33,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * SQL instance.
    * @param string $instance The ID of the Cloud SQL instance to be cloned
    * (source). This does not include the project ID.
-   * @param Google_InstancesCloneRequest $postBody
+   * @param Google_Service_SQLAdmin_InstancesCloneRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function cloneInstances($project, $instance, Google_Service_SQLAdmin_InstancesCloneRequest $postBody, $optParams = array())
   {
@@ -51,7 +51,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function delete($project, $instance, $optParams = array())
   {
@@ -67,9 +67,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * to be exported.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_InstancesExportRequest $postBody
+   * @param Google_Service_SQLAdmin_InstancesExportRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function export($project, $instance, Google_Service_SQLAdmin_InstancesExportRequest $postBody, $optParams = array())
   {
@@ -83,9 +83,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_InstancesFailoverRequest $postBody
+   * @param Google_Service_SQLAdmin_InstancesFailoverRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function failover($project, $instance, Google_Service_SQLAdmin_InstancesFailoverRequest $postBody, $optParams = array())
   {
@@ -101,7 +101,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DatabaseInstance
+   * @return Google_Service_SQLAdmin_DatabaseInstance
    */
   public function get($project, $instance, $optParams = array())
   {
@@ -116,9 +116,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_InstancesImportRequest $postBody
+   * @param Google_Service_SQLAdmin_InstancesImportRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function import($project, $instance, Google_Service_SQLAdmin_InstancesImportRequest $postBody, $optParams = array())
   {
@@ -131,9 +131,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    *
    * @param string $project Project ID of the project to which the newly created
    * Cloud SQL instances should belong.
-   * @param Google_DatabaseInstance $postBody
+   * @param Google_Service_SQLAdmin_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function insert($project, Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
   {
@@ -153,7 +153,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * response.
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
-   * @return Google_Service_InstancesListResponse
+   * @return Google_Service_SQLAdmin_InstancesListResponse
    */
   public function listInstances($project, $optParams = array())
   {
@@ -170,9 +170,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_DatabaseInstance $postBody
+   * @param Google_Service_SQLAdmin_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function patch($project, $instance, Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
   {
@@ -187,7 +187,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function promoteReplica($project, $instance, $optParams = array())
   {
@@ -205,7 +205,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function resetSslConfig($project, $instance, $optParams = array())
   {
@@ -221,7 +221,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function restart($project, $instance, $optParams = array())
   {
@@ -235,9 +235,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_InstancesRestoreBackupRequest $postBody
+   * @param Google_Service_SQLAdmin_InstancesRestoreBackupRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function restoreBackup($project, $instance, Google_Service_SQLAdmin_InstancesRestoreBackupRequest $postBody, $optParams = array())
   {
@@ -251,7 +251,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function startReplica($project, $instance, $optParams = array())
   {
@@ -265,7 +265,7 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function stopReplica($project, $instance, $optParams = array())
   {
@@ -281,9 +281,9 @@ class Google_Service_SQLAdmin_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_DatabaseInstance $postBody
+   * @param Google_Service_SQLAdmin_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function update($project, $instance, Google_Service_SQLAdmin_DatabaseInstance $postBody, $optParams = array())
   {

@@ -31,9 +31,9 @@ class Google_Service_Appengine_AppsServicesVersionsResource extends Google_Servi
    * @param string $appsId Part of `name`. Name of the resource to update. For
    * example: "apps/myapp/services/default".
    * @param string $servicesId Part of `name`. See documentation of `appsId`.
-   * @param Google_Version $postBody
+   * @param Google_Service_Appengine_Version $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Appengine_Operation
    */
   public function create($appsId, $servicesId, Google_Service_Appengine_Version $postBody, $optParams = array())
   {
@@ -49,7 +49,7 @@ class Google_Service_Appengine_AppsServicesVersionsResource extends Google_Servi
    * @param string $servicesId Part of `name`. See documentation of `appsId`.
    * @param string $versionsId Part of `name`. See documentation of `appsId`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Appengine_Operation
    */
   public function delete($appsId, $servicesId, $versionsId, $optParams = array())
   {
@@ -68,7 +68,7 @@ class Google_Service_Appengine_AppsServicesVersionsResource extends Google_Servi
    *
    * @opt_param string view Controls the set of fields returned in the `Get`
    * response.
-   * @return Google_Service_Version
+   * @return Google_Service_Appengine_Version
    */
   public function get($appsId, $servicesId, $versionsId, $optParams = array())
   {
@@ -89,7 +89,7 @@ class Google_Service_Appengine_AppsServicesVersionsResource extends Google_Servi
    * @opt_param int pageSize Maximum results to return per page.
    * @opt_param string pageToken Continuation token for fetching the next page of
    * results.
-   * @return Google_Service_ListVersionsResponse
+   * @return Google_Service_Appengine_ListVersionsResponse
    */
   public function listAppsServicesVersions($appsId, $servicesId, $optParams = array())
   {
@@ -104,12 +104,12 @@ class Google_Service_Appengine_AppsServicesVersionsResource extends Google_Servi
    * example: "apps/myapp/services/default/versions/1".
    * @param string $servicesId Part of `name`. See documentation of `appsId`.
    * @param string $versionsId Part of `name`. See documentation of `appsId`.
-   * @param Google_Version $postBody
+   * @param Google_Service_Appengine_Version $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string mask Standard field mask for the set of fields to be
    * updated.
-   * @return Google_Service_Operation
+   * @return Google_Service_Appengine_Operation
    */
   public function patch($appsId, $servicesId, $versionsId, Google_Service_Appengine_Version $postBody, $optParams = array())
   {

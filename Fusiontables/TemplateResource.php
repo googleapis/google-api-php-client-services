@@ -56,7 +56,7 @@ class Google_Service_Fusiontables_TemplateResource extends Google_Service_Resour
    * Creates a new template for the table. (template.insert)
    *
    * @param string $tableId Table for which a new template is being created
-   * @param Google_Template $postBody
+   * @param Google_Service_Fusiontables_Template $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_Template
    */
@@ -91,7 +91,7 @@ class Google_Service_Fusiontables_TemplateResource extends Google_Service_Resour
    *
    * @param string $tableId Table to which the updated template belongs
    * @param int $templateId Identifier for the template that is being updated
-   * @param Google_Template $postBody
+   * @param Google_Service_Fusiontables_Template $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_Template
    */
@@ -106,7 +106,7 @@ class Google_Service_Fusiontables_TemplateResource extends Google_Service_Resour
    *
    * @param string $tableId Table to which the updated template belongs
    * @param int $templateId Identifier for the template that is being updated
-   * @param Google_Template $postBody
+   * @param Google_Service_Fusiontables_Template $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_Template
    */

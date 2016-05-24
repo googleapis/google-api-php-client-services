@@ -49,7 +49,7 @@ class Google_Service_AdExchangeBuyer_BudgetResource extends Google_Service_Resou
    * updated.
    * @param string $billingId The billing id associated with the budget being
    * updated.
-   * @param Google_Budget $postBody
+   * @param Google_Service_AdExchangeBuyer_Budget $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_Budget
    */
@@ -68,7 +68,7 @@ class Google_Service_AdExchangeBuyer_BudgetResource extends Google_Service_Resou
    * updated.
    * @param string $billingId The billing id associated with the budget being
    * updated.
-   * @param Google_Budget $postBody
+   * @param Google_Service_AdExchangeBuyer_Budget $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdExchangeBuyer_Budget
    */

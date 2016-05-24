@@ -56,7 +56,7 @@ class Google_Service_AndroidEnterprise_StorelayoutpagesResource extends Google_S
    * Inserts a new store page. (storelayoutpages.insert)
    *
    * @param string $enterpriseId The ID of the enterprise.
-   * @param Google_StorePage $postBody
+   * @param Google_Service_AndroidEnterprise_StorePage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_StorePage
    */
@@ -86,7 +86,7 @@ class Google_Service_AndroidEnterprise_StorelayoutpagesResource extends Google_S
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $pageId The ID of the page.
-   * @param Google_StorePage $postBody
+   * @param Google_Service_AndroidEnterprise_StorePage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_StorePage
    */
@@ -101,7 +101,7 @@ class Google_Service_AndroidEnterprise_StorelayoutpagesResource extends Google_S
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $pageId The ID of the page.
-   * @param Google_StorePage $postBody
+   * @param Google_Service_AndroidEnterprise_StorePage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_StorePage
    */

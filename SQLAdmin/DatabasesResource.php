@@ -33,7 +33,7 @@ class Google_Service_SQLAdmin_DatabasesResource extends Google_Service_Resource
    * project ID.
    * @param string $database Name of the database to be deleted in the instance.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function delete($project, $instance, $database, $optParams = array())
   {
@@ -50,7 +50,7 @@ class Google_Service_SQLAdmin_DatabasesResource extends Google_Service_Resource
    * project ID.
    * @param string $database Name of the database in the instance.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Database
+   * @return Google_Service_SQLAdmin_Database
    */
   public function get($project, $instance, $database, $optParams = array())
   {
@@ -65,9 +65,9 @@ class Google_Service_SQLAdmin_DatabasesResource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Database instance ID. This does not include the
    * project ID.
-   * @param Google_Database $postBody
+   * @param Google_Service_SQLAdmin_Database $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function insert($project, $instance, Google_Service_SQLAdmin_Database $postBody, $optParams = array())
   {
@@ -84,7 +84,7 @@ class Google_Service_SQLAdmin_DatabasesResource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_DatabasesListResponse
+   * @return Google_Service_SQLAdmin_DatabasesListResponse
    */
   public function listDatabases($project, $instance, $optParams = array())
   {
@@ -100,9 +100,9 @@ class Google_Service_SQLAdmin_DatabasesResource extends Google_Service_Resource
    * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param string $database Name of the database to be updated in the instance.
-   * @param Google_Database $postBody
+   * @param Google_Service_SQLAdmin_Database $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function patch($project, $instance, $database, Google_Service_SQLAdmin_Database $postBody, $optParams = array())
   {
@@ -118,9 +118,9 @@ class Google_Service_SQLAdmin_DatabasesResource extends Google_Service_Resource
    * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param string $database Name of the database to be updated in the instance.
-   * @param Google_Database $postBody
+   * @param Google_Service_SQLAdmin_Database $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function update($project, $instance, $database, Google_Service_SQLAdmin_Database $postBody, $optParams = array())
   {

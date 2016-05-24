@@ -42,7 +42,7 @@ class Google_Service_Reseller_CustomersResource extends Google_Service_Resource
   /**
    * Creates a customer resource if one does not already exist. (customers.insert)
    *
-   * @param Google_Customer $postBody
+   * @param Google_Service_Reseller_Customer $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customerAuthToken An auth token needed for inserting a
@@ -61,7 +61,7 @@ class Google_Service_Reseller_CustomersResource extends Google_Service_Resource
    * This method supports patch semantics. (customers.patch)
    *
    * @param string $customerId Id of the Customer
-   * @param Google_Customer $postBody
+   * @param Google_Service_Reseller_Customer $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Customer
    */
@@ -76,7 +76,7 @@ class Google_Service_Reseller_CustomersResource extends Google_Service_Resource
    * (customers.update)
    *
    * @param string $customerId Id of the Customer
-   * @param Google_Customer $postBody
+   * @param Google_Service_Reseller_Customer $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Customer
    */

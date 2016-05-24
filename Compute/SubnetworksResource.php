@@ -109,7 +109,7 @@ class Google_Service_Compute_SubnetworksResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request.
-   * @param Google_Subnetwork $postBody
+   * @param Google_Service_Compute_Subnetwork $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

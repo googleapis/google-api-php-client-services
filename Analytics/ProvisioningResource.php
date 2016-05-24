@@ -28,7 +28,7 @@ class Google_Service_Analytics_ProvisioningResource extends Google_Service_Resou
   /**
    * Creates an account ticket. (provisioning.createAccountTicket)
    *
-   * @param Google_AccountTicket $postBody
+   * @param Google_Service_Analytics_AccountTicket $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Analytics_AccountTicket
    */

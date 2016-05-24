@@ -30,9 +30,9 @@ class Google_Service_Logging_EntriesResource extends Google_Service_Resource
    * Logging. For ways to export log entries, see [Exporting
    * Logs](/logging/docs/export). (entries.listEntries)
    *
-   * @param Google_ListLogEntriesRequest $postBody
+   * @param Google_Service_Logging_ListLogEntriesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ListLogEntriesResponse
+   * @return Google_Service_Logging_ListLogEntriesResponse
    */
   public function listEntries(Google_Service_Logging_ListLogEntriesRequest $postBody, $optParams = array())
   {
@@ -44,9 +44,9 @@ class Google_Service_Logging_EntriesResource extends Google_Service_Resource
    * Writes log entries to Cloud Logging. All log entries in Cloud Logging are
    * written by this method. (entries.write)
    *
-   * @param Google_WriteLogEntriesRequest $postBody
+   * @param Google_Service_Logging_WriteLogEntriesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_WriteLogEntriesResponse
+   * @return Google_Service_Logging_WriteLogEntriesResponse
    */
   public function write(Google_Service_Logging_WriteLogEntriesRequest $postBody, $optParams = array())
   {

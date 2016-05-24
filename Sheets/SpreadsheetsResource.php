@@ -44,7 +44,7 @@ class Google_Service_Sheets_SpreadsheetsResource extends Google_Service_Resource
    * changes. (spreadsheets.batchUpdate)
    *
    * @param string $spreadsheetId The spreadsheet to apply the updates to.
-   * @param Google_BatchUpdateSpreadsheetRequest $postBody
+   * @param Google_Service_Sheets_BatchUpdateSpreadsheetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Sheets_BatchUpdateSpreadsheetResponse
    */
@@ -58,7 +58,7 @@ class Google_Service_Sheets_SpreadsheetsResource extends Google_Service_Resource
    * Creates a spreadsheet, returning the newly created spreadsheet.
    * (spreadsheets.create)
    *
-   * @param Google_Spreadsheet $postBody
+   * @param Google_Service_Sheets_Spreadsheet $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Sheets_Spreadsheet
    */

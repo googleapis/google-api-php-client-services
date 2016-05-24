@@ -46,7 +46,7 @@ class Google_Service_YouTube_SubscriptionsResource extends Google_Service_Resour
    * @param string $part The part parameter serves two purposes in this operation.
    * It identifies the properties that the write operation will set as well as the
    * properties that the API response will include.
-   * @param Google_Subscription $postBody
+   * @param Google_Service_YouTube_Subscription $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_Subscription
    */

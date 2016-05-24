@@ -57,7 +57,7 @@ class Google_Service_Fusiontables_ColumnResource extends Google_Service_Resource
    * Adds a new column to the table. (column.insert)
    *
    * @param string $tableId Table for which a new column is being added.
-   * @param Google_Column $postBody
+   * @param Google_Service_Fusiontables_Column $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_Column
    */
@@ -92,7 +92,7 @@ class Google_Service_Fusiontables_ColumnResource extends Google_Service_Resource
    * @param string $tableId Table for which the column is being updated.
    * @param string $columnId Name or identifier for the column that is being
    * updated.
-   * @param Google_Column $postBody
+   * @param Google_Service_Fusiontables_Column $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_Column
    */
@@ -108,7 +108,7 @@ class Google_Service_Fusiontables_ColumnResource extends Google_Service_Resource
    * @param string $tableId Table for which the column is being updated.
    * @param string $columnId Name or identifier for the column that is being
    * updated.
-   * @param Google_Column $postBody
+   * @param Google_Service_Fusiontables_Column $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Fusiontables_Column
    */

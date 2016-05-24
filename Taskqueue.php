@@ -19,7 +19,7 @@
  * Service definition for Taskqueue (v1beta2).
  *
  * <p>
- * Lets you access a Google App Engine Pull Task Queue over REST.</p>
+ * Accesses a Google App Engine Pull Task Queue over REST.</p>
  *
  * <p>
  * For more information about this service, see the API

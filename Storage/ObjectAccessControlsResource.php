@@ -75,7 +75,7 @@ class Google_Service_Storage_ObjectAccessControlsResource extends Google_Service
    * @param string $bucket Name of a bucket.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see Encoding URI Path Parts.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Google_Service_Storage_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
@@ -117,7 +117,7 @@ class Google_Service_Storage_ObjectAccessControlsResource extends Google_Service
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Google_Service_Storage_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
@@ -139,7 +139,7 @@ class Google_Service_Storage_ObjectAccessControlsResource extends Google_Service
    * @param string $entity The entity holding the permission. Can be user-userId,
    * user-emailAddress, group-groupId, group-emailAddress, allUsers, or
    * allAuthenticatedUsers.
-   * @param Google_ObjectAccessControl $postBody
+   * @param Google_Service_Storage_ObjectAccessControl $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this

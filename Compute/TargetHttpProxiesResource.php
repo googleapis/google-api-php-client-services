@@ -61,7 +61,7 @@ class Google_Service_Compute_TargetHttpProxiesResource extends Google_Service_Re
    * included in the request. (targetHttpProxies.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_TargetHttpProxy $postBody
+   * @param Google_Service_Compute_TargetHttpProxy $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -125,7 +125,7 @@ class Google_Service_Compute_TargetHttpProxiesResource extends Google_Service_Re
    * @param string $project Project ID for this request.
    * @param string $targetHttpProxy Name of the TargetHttpProxy to set a URL map
    * for.
-   * @param Google_UrlMapReference $postBody
+   * @param Google_Service_Compute_UrlMapReference $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

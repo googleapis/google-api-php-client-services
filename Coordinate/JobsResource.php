@@ -48,7 +48,7 @@ class Google_Service_Coordinate_JobsResource extends Google_Service_Resource
    * @param double $lat The latitude coordinate of this job's location.
    * @param double $lng The longitude coordinate of this job's location.
    * @param string $title Job title
-   * @param Google_Job $postBody
+   * @param Google_Service_Coordinate_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string assignee Assignee email address, or empty string to
@@ -96,7 +96,7 @@ class Google_Service_Coordinate_JobsResource extends Google_Service_Resource
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Job $postBody
+   * @param Google_Service_Coordinate_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string address Job address as newline (Unix) separated string
@@ -129,7 +129,7 @@ class Google_Service_Coordinate_JobsResource extends Google_Service_Resource
    *
    * @param string $teamId Team ID
    * @param string $jobId Job number
-   * @param Google_Job $postBody
+   * @param Google_Service_Coordinate_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string address Job address as newline (Unix) separated string

@@ -21,6 +21,8 @@ class Google_Service_Proximitybeacon_Beacon extends Google_Model
   protected $advertisedIdDataType = '';
   public $beaconName;
   public $description;
+  protected $ephemeralIdRegistrationType = 'Google_Service_Proximitybeacon_EphemeralIdRegistration';
+  protected $ephemeralIdRegistrationDataType = '';
   public $expectedStability;
   protected $indoorLevelType = 'Google_Service_Proximitybeacon_IndoorLevel';
   protected $indoorLevelDataType = '';
@@ -28,6 +30,7 @@ class Google_Service_Proximitybeacon_Beacon extends Google_Model
   protected $latLngDataType = '';
   public $placeId;
   public $properties;
+  public $provisioningKey;
   public $status;
 
   public function setAdvertisedId(Google_Service_Proximitybeacon_AdvertisedId $advertisedId)
@@ -53,6 +56,14 @@ class Google_Service_Proximitybeacon_Beacon extends Google_Model
   public function getDescription()
   {
     return $this->description;
+  }
+  public function setEphemeralIdRegistration(Google_Service_Proximitybeacon_EphemeralIdRegistration $ephemeralIdRegistration)
+  {
+    $this->ephemeralIdRegistration = $ephemeralIdRegistration;
+  }
+  public function getEphemeralIdRegistration()
+  {
+    return $this->ephemeralIdRegistration;
   }
   public function setExpectedStability($expectedStability)
   {
@@ -93,6 +104,14 @@ class Google_Service_Proximitybeacon_Beacon extends Google_Model
   public function getProperties()
   {
     return $this->properties;
+  }
+  public function setProvisioningKey($provisioningKey)
+  {
+    $this->provisioningKey = $provisioningKey;
+  }
+  public function getProvisioningKey()
+  {
+    return $this->provisioningKey;
   }
   public function setStatus($status)
   {

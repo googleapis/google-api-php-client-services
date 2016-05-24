@@ -102,7 +102,7 @@ class Google_Service_Fitness_UsersDataSourcesDatasetsResource extends Google_Ser
    * minimum data point start time and maximum data point end time represented as
    * nanoseconds from the epoch. The ID is formatted like: "startTime-endTime"
    * where startTime and endTime are 64 bit integers.
-   * @param Google_Dataset $postBody
+   * @param Google_Service_Fitness_Dataset $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string currentTimeMillis The client's current time in milliseconds

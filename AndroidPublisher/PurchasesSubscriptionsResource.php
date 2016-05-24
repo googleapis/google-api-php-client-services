@@ -53,7 +53,7 @@ class Google_Service_AndroidPublisher_PurchasesSubscriptionsResource extends Goo
    * 'monthly001').
    * @param string $token The token provided to the user's device when the
    * subscription was purchased.
-   * @param Google_SubscriptionPurchasesDeferRequest $postBody
+   * @param Google_Service_AndroidPublisher_SubscriptionPurchasesDeferRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidPublisher_SubscriptionPurchasesDeferResponse
    */

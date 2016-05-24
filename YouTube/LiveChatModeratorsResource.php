@@ -44,7 +44,7 @@ class Google_Service_YouTube_LiveChatModeratorsResource extends Google_Service_R
    * @param string $part The part parameter serves two purposes in this operation.
    * It identifies the properties that the write operation will set as well as the
    * properties that the API response returns. Set the parameter value to snippet.
-   * @param Google_LiveChatModerator $postBody
+   * @param Google_Service_YouTube_LiveChatModerator $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_LiveChatModerator
    */

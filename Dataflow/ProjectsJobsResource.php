@@ -29,13 +29,13 @@ class Google_Service_Dataflow_ProjectsJobsResource extends Google_Service_Resour
    * Creates a dataflow job. (jobs.create)
    *
    * @param string $projectId The project which owns the job.
-   * @param Google_Job $postBody
+   * @param Google_Service_Dataflow_Job $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view Level of information requested in response.
    * @opt_param string replaceJobId DEPRECATED. This field is now on the Job
    * message.
-   * @return Google_Service_Job
+   * @return Google_Service_Dataflow_Job
    */
   public function create($projectId, Google_Service_Dataflow_Job $postBody, $optParams = array())
   {
@@ -51,7 +51,7 @@ class Google_Service_Dataflow_ProjectsJobsResource extends Google_Service_Resour
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view Level of information requested in response.
-   * @return Google_Service_Job
+   * @return Google_Service_Dataflow_Job
    */
   public function get($projectId, $jobId, $optParams = array())
   {
@@ -69,7 +69,7 @@ class Google_Service_Dataflow_ProjectsJobsResource extends Google_Service_Resour
    * @opt_param string startTime Return only metric data that has changed since
    * this time. Default is to return all information about all metrics for the
    * job.
-   * @return Google_Service_JobMetrics
+   * @return Google_Service_Dataflow_JobMetrics
    */
   public function getMetrics($projectId, $jobId, $optParams = array())
   {
@@ -91,7 +91,7 @@ class Google_Service_Dataflow_ProjectsJobsResource extends Google_Service_Resour
    * max_responses and an unspecified server-defined limit.
    * @opt_param string pageToken Set this to the 'next_page_token' field of a
    * previous response to request additional results in a long list.
-   * @return Google_Service_ListJobsResponse
+   * @return Google_Service_Dataflow_ListJobsResponse
    */
   public function listProjectsJobs($projectId, $optParams = array())
   {
@@ -104,9 +104,9 @@ class Google_Service_Dataflow_ProjectsJobsResource extends Google_Service_Resour
    *
    * @param string $projectId The project which owns the job.
    * @param string $jobId Identifies a single job.
-   * @param Google_Job $postBody
+   * @param Google_Service_Dataflow_Job $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Job
+   * @return Google_Service_Dataflow_Job
    */
   public function update($projectId, $jobId, Google_Service_Dataflow_Job $postBody, $optParams = array())
   {

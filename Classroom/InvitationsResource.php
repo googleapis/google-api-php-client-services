@@ -57,7 +57,7 @@ class Google_Service_Classroom_InvitationsResource extends Google_Service_Resour
    * `ALREADY_EXISTS` if an invitation for the specified user and course already
    * exists. (invitations.create)
    *
-   * @param Google_Invitation $postBody
+   * @param Google_Service_Classroom_Invitation $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_Invitation
    */

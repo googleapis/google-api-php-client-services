@@ -94,7 +94,7 @@ class Google_Service_YouTube_VideosResource extends Google_Service_Resource
    * that YouTube calculates for a video and does not contain values that you can
    * set or modify. If the parameter value specifies a part that does not contain
    * mutable values, that part will still be included in the API response.
-   * @param Google_Video $postBody
+   * @param Google_Service_YouTube_Video $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool autoLevels The autoLevels parameter indicates whether YouTube
@@ -239,7 +239,7 @@ class Google_Service_YouTube_VideosResource extends Google_Service_Resource
   /**
    * Report abuse for a video. (videos.reportAbuse)
    *
-   * @param Google_VideoAbuseReport $postBody
+   * @param Google_Service_YouTube_VideoAbuseReport $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -283,7 +283,7 @@ class Google_Service_YouTube_VideosResource extends Google_Service_Resource
    * that you can set or modify. If the parameter value specifies a part that does
    * not contain mutable values, that part will still be included in the API
    * response.
-   * @param Google_Video $postBody
+   * @param Google_Service_YouTube_Video $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended

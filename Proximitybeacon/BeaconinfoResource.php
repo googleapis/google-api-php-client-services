@@ -27,11 +27,13 @@ class Google_Service_Proximitybeacon_BeaconinfoResource extends Google_Service_R
 {
   /**
    * Given one or more beacon observations, returns any beacon information and
-   * attachments accessible to your application. (beaconinfo.getforobserved)
+   * attachments accessible to your application. Authorize by using the [API
+   * key](https://developers.google.com/beacons/proximity/how-
+   * tos/authorizing#APIKey) for the application. (beaconinfo.getforobserved)
    *
-   * @param Google_GetInfoForObservedBeaconsRequest $postBody
+   * @param Google_Service_Proximitybeacon_GetInfoForObservedBeaconsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_GetInfoForObservedBeaconsResponse
+   * @return Google_Service_Proximitybeacon_GetInfoForObservedBeaconsResponse
    */
   public function getforobserved(Google_Service_Proximitybeacon_GetInfoForObservedBeaconsRequest $postBody, $optParams = array())
   {

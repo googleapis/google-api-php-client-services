@@ -31,7 +31,7 @@ class Google_Service_SQLAdmin_TiersResource extends Google_Service_Resource
    *
    * @param string $project Project ID of the project for which to list tiers.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_TiersListResponse
+   * @return Google_Service_SQLAdmin_TiersListResponse
    */
   public function listTiers($project, $optParams = array())
   {

@@ -42,14 +42,14 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsResource extends Goo
    * @param string $historyId A History id.
    *
    * Required.
-   * @param Google_Execution $postBody
+   * @param Google_Service_ToolResults_Execution $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId A unique request ID for server to detect
    * duplicated requests. For example, a UUID.
    *
    * Optional, but strongly recommended.
-   * @return Google_Service_Execution
+   * @return Google_Service_ToolResults_Execution
    */
   public function create($projectId, $historyId, Google_Service_ToolResults_Execution $postBody, $optParams = array())
   {
@@ -76,7 +76,7 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsResource extends Goo
    *
    * Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Execution
+   * @return Google_Service_ToolResults_Execution
    */
   public function get($projectId, $historyId, $executionId, $optParams = array())
   {
@@ -116,7 +116,7 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsResource extends Goo
    * next item.
    *
    * Optional.
-   * @return Google_Service_ListExecutionsResponse
+   * @return Google_Service_ToolResults_ListExecutionsResponse
    */
   public function listProjectsHistoriesExecutions($projectId, $historyId, $optParams = array())
   {
@@ -137,14 +137,14 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsResource extends Goo
    * @param string $projectId A Project id. Required.
    * @param string $historyId Required.
    * @param string $executionId Required.
-   * @param Google_Execution $postBody
+   * @param Google_Service_ToolResults_Execution $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId A unique request ID for server to detect
    * duplicated requests. For example, a UUID.
    *
    * Optional, but strongly recommended.
-   * @return Google_Service_Execution
+   * @return Google_Service_ToolResults_Execution
    */
   public function patch($projectId, $historyId, $executionId, Google_Service_ToolResults_Execution $postBody, $optParams = array())
   {

@@ -26,14 +26,26 @@
 class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Resource
 {
   /**
-   * (Re)activates a beacon. A beacon that is active will return information and
+   * Activates a beacon. A beacon that is active will return information and
    * attachment data when queried via `beaconinfo.getforobserved`. Calling this
    * method on an already active beacon will do nothing (but will return a
-   * successful response code). (beacons.activate)
+   * successful response code). Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **Is owner** or **Can edit** permissions in the Google
+   * Developers Console project. (beacons.activate)
    *
-   * @param string $beaconName The beacon to activate. Required.
+   * @param string $beaconName Beacon that should be activated. A beacon name has
+   * the format "beacons/N!beaconId" where the beaconId is the base16 ID broadcast
+   * by the beacon and N is a code for the beacon's type. Possible values are `3`
+   * for Eddystone-UID, `4` for Eddystone-EID, `1` for iBeacon, or `5` for
+   * AltBeacon. For Eddystone-EID beacons, you may use either the current EID or
+   * the beacon's "stable" UID. Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ProximitybeaconEmpty
+   *
+   * @opt_param string projectId The project id of the beacon to activate. If the
+   * project id is not specified then the project making the request is used. The
+   * project id must match the project that owns the beacon. Optional.
+   * @return Google_Service_Proximitybeacon_ProximitybeaconEmpty
    */
   public function activate($beaconName, $optParams = array())
   {
@@ -46,11 +58,23 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
    * nor attachment data for the beacon when queried via
    * `beaconinfo.getforobserved`. Calling this method on an already inactive
    * beacon will do nothing (but will return a successful response code).
-   * (beacons.deactivate)
+   * Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **Is owner** or **Can edit** permissions in the Google
+   * Developers Console project. (beacons.deactivate)
    *
-   * @param string $beaconName The beacon name of this beacon.
+   * @param string $beaconName Beacon that should be deactivated. A beacon name
+   * has the format "beacons/N!beaconId" where the beaconId is the base16 ID
+   * broadcast by the beacon and N is a code for the beacon's type. Possible
+   * values are `3` for Eddystone-UID, `4` for Eddystone-EID, `1` for iBeacon, or
+   * `5` for AltBeacon. For Eddystone-EID beacons, you may use either the current
+   * EID or the beacon's "stable" UID. Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ProximitybeaconEmpty
+   *
+   * @opt_param string projectId The project id of the beacon to deactivate. If
+   * the project id is not specified then the project making the request is used.
+   * The project id must match the project that owns the beacon. Optional.
+   * @return Google_Service_Proximitybeacon_ProximitybeaconEmpty
    */
   public function deactivate($beaconName, $optParams = array())
   {
@@ -61,12 +85,24 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
   /**
    * Decommissions the specified beacon in the service. This beacon will no longer
    * be returned from `beaconinfo.getforobserved`. This operation is permanent --
-   * you will not be able to re-register a beacon with this ID again.
-   * (beacons.decommission)
+   * you will not be able to re-register a beacon with this ID again. Authenticate
+   * using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **Is owner** or **Can edit** permissions in the Google
+   * Developers Console project. (beacons.decommission)
    *
-   * @param string $beaconName Beacon that should be decommissioned. Required.
+   * @param string $beaconName Beacon that should be decommissioned. A beacon name
+   * has the format "beacons/N!beaconId" where the beaconId is the base16 ID
+   * broadcast by the beacon and N is a code for the beacon's type. Possible
+   * values are `3` for Eddystone-UID, `4` for Eddystone-EID, `1` for iBeacon, or
+   * `5` for AltBeacon. For Eddystone-EID beacons, you may use either the current
+   * EID of the beacon's "stable" UID. Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ProximitybeaconEmpty
+   *
+   * @opt_param string projectId The project id of the beacon to decommission. If
+   * the project id is not specified then the project making the request is used.
+   * The project id must match the project that owns the beacon. Optional.
+   * @return Google_Service_Proximitybeacon_ProximitybeaconEmpty
    */
   public function decommission($beaconName, $optParams = array())
   {
@@ -75,11 +111,29 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
     return $this->call('decommission', array($params), "Google_Service_Proximitybeacon_ProximitybeaconEmpty");
   }
   /**
-   * Returns detailed information about the specified beacon. (beacons.get)
+   * Returns detailed information about the specified beacon. Authenticate using
+   * an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **viewer**, **Is owner** or **Can edit** permissions in
+   * the Google Developers Console project. Requests may supply an Eddystone-EID
+   * beacon name in the form: `beacons/4!beaconId` where the `beaconId` is the
+   * base16 ephemeral ID broadcast by the beacon. The returned `Beacon` object
+   * will contain the beacon's stable Eddystone-UID. Clients not authorized to
+   * resolve the beacon's ephemeral Eddystone-EID broadcast will receive an error.
+   * (beacons.get)
    *
-   * @param string $beaconName Beacon that is requested.
+   * @param string $beaconName Resource name of this beacon. A beacon name has the
+   * format "beacons/N!beaconId" where the beaconId is the base16 ID broadcast by
+   * the beacon and N is a code for the beacon's type. Possible values are `3` for
+   * Eddystone-UID, `4` for Eddystone-EID, `1` for iBeacon, or `5` for AltBeacon.
+   * For Eddystone-EID beacons, you may use either the current EID or the beacon's
+   * "stable" UID. Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Beacon
+   *
+   * @opt_param string projectId The project id of the beacon to request. If the
+   * project id is not specified then the project making the request is used. The
+   * project id must match the project that owns the beacon. Optional.
+   * @return Google_Service_Proximitybeacon_Beacon
    */
   public function get($beaconName, $optParams = array())
   {
@@ -90,7 +144,10 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
   /**
    * Searches the beacon registry for beacons that match the given search
    * criteria. Only those beacons that the client has permission to list will be
-   * returned. (beacons.listBeacons)
+   * returned. Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **viewer**, **Is owner** or **Can edit** permissions in
+   * the Google Developers Console project. (beacons.listBeacons)
    *
    * @param array $optParams Optional parameters.
    *
@@ -120,8 +177,8 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
    * radius:1000` Returns beacons whose registered location is within the given
    * circle. When any of these fields are given, all are required. Latitude and
    * longitude must be decimal degrees between -90.0 and 90.0 and between -180.0
-   * and 180.0 respectively. Radius must be an integer number of meters less than
-   * 1,000,000 (1000 km). * `property:"="` For example: `property:"battery-
+   * and 180.0 respectively. Radius must be an integer number of meters between 10
+   * and 1,000,000 (1000 km). * `property:"="` For example: `property:"battery-
    * type=CR2032"` Returns beacons which have a property of the given name and
    * value. Supports multiple filters which will be combined with OR logic. The
    * entire name=value string must be double-quoted as one string. *
@@ -140,7 +197,10 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
    * request to list beacons.
    * @opt_param int pageSize The maximum number of records to return for this
    * request, up to a server-defined upper limit.
-   * @return Google_Service_ListBeaconsResponse
+   * @opt_param string projectId The project id to list beacons under. If not
+   * present then the project credential that made the request is used as the
+   * project. Optional.
+   * @return Google_Service_Proximitybeacon_ListBeaconsResponse
    */
   public function listBeacons($optParams = array())
   {
@@ -151,11 +211,18 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
   /**
    * Registers a previously unregistered beacon given its `advertisedId`. These
    * IDs are unique within the system. An ID can be registered only once.
-   * (beacons.register)
+   * Authenticate using an [OAuth access
+   * token](https://developers.google.com/identity/protocols/OAuth2) from a
+   * signed-in user with **Is owner** or **Can edit** permissions in the Google
+   * Developers Console project. (beacons.register)
    *
-   * @param Google_Beacon $postBody
+   * @param Google_Service_Proximitybeacon_Beacon $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Beacon
+   *
+   * @opt_param string projectId The project id of the project the beacon will be
+   * registered to. If the project id is not specified then the project making the
+   * request is used. Optional.
+   * @return Google_Service_Proximitybeacon_Beacon
    */
   public function register(Google_Service_Proximitybeacon_Beacon $postBody, $optParams = array())
   {
@@ -169,7 +236,10 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
    * should follow the "read, modify, write" pattern to avoid inadvertently
    * destroying data. Changes to the beacon status via this method will be
    * silently ignored. To update beacon status, use the separate methods on this
-   * API for (de)activation and decommissioning. (beacons.update)
+   * API for activation, deactivation, and decommissioning. Authenticate using an
+   * [OAuth access token](https://developers.google.com/identity/protocols/OAuth2)
+   * from a signed-in user with **Is owner** or **Can edit** permissions in the
+   * Google Developers Console project. (beacons.update)
    *
    * @param string $beaconName Resource name of this beacon. A beacon name has the
    * format "beacons/N!beaconId" where the beaconId is the base16 ID broadcast by
@@ -177,9 +247,13 @@ class Google_Service_Proximitybeacon_BeaconsResource extends Google_Service_Reso
    * Eddystone, `1` for iBeacon, or `5` for AltBeacon. This field must be left
    * empty when registering. After reading a beacon, clients can use the name for
    * future operations.
-   * @param Google_Beacon $postBody
+   * @param Google_Service_Proximitybeacon_Beacon $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Beacon
+   *
+   * @opt_param string projectId The project id of the beacon to update. If the
+   * project id is not specified then the project making the request is used. The
+   * project id must match the project that owns the beacon. Optional.
+   * @return Google_Service_Proximitybeacon_Beacon
    */
   public function update($beaconName, Google_Service_Proximitybeacon_Beacon $postBody, $optParams = array())
   {

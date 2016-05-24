@@ -15,17 +15,14 @@
  * the License.
  */
 
-class Google_Service_Autoscaler_Zone extends Google_Collection
+class Google_Service_Autoscaler_Zone extends Google_Model
 {
-  protected $collection_key = 'maintenanceWindows';
   public $creationTimestamp;
   protected $deprecatedType = 'Google_Service_Autoscaler_DeprecationStatus';
   protected $deprecatedDataType = '';
   public $description;
   public $id;
   public $kind;
-  protected $maintenanceWindowsType = 'Google_Service_Autoscaler_ZoneMaintenanceWindows';
-  protected $maintenanceWindowsDataType = 'array';
   public $name;
   public $region;
   public $selfLink;
@@ -70,14 +67,6 @@ class Google_Service_Autoscaler_Zone extends Google_Collection
   public function getKind()
   {
     return $this->kind;
-  }
-  public function setMaintenanceWindows($maintenanceWindows)
-  {
-    $this->maintenanceWindows = $maintenanceWindows;
-  }
-  public function getMaintenanceWindows()
-  {
-    return $this->maintenanceWindows;
   }
   public function setName($name)
   {

@@ -31,7 +31,7 @@ class Google_Service_Clouderrorreporting_ProjectsGroupsResource extends Google_S
    * @param string $groupName Group resource name. Required. Example: `projects
    * /my-project-123/groups/my-group`
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ErrorGroup
+   * @return Google_Service_Clouderrorreporting_ErrorGroup
    */
   public function get($groupName, $optParams = array())
   {
@@ -45,9 +45,9 @@ class Google_Service_Clouderrorreporting_ProjectsGroupsResource extends Google_S
    *
    * @param string $name Group resource name. Example: `projects/my-
    * project-123/groups/my-groupid`
-   * @param Google_ErrorGroup $postBody
+   * @param Google_Service_Clouderrorreporting_ErrorGroup $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ErrorGroup
+   * @return Google_Service_Clouderrorreporting_ErrorGroup
    */
   public function update($name, Google_Service_Clouderrorreporting_ErrorGroup $postBody, $optParams = array())
   {

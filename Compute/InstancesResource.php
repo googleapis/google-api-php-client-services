@@ -34,7 +34,7 @@ class Google_Service_Compute_InstancesResource extends Google_Service_Resource
    * @param string $instance The instance name for this request.
    * @param string $networkInterface The name of the network interface to add to
    * this instance.
-   * @param Google_AccessConfig $postBody
+   * @param Google_Service_Compute_AccessConfig $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -97,7 +97,7 @@ class Google_Service_Compute_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
    * @param string $instance The instance name for this request.
-   * @param Google_AttachedDisk $postBody
+   * @param Google_Service_Compute_AttachedDisk $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -197,7 +197,7 @@ class Google_Service_Compute_InstancesResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
-   * @param Google_Instance $postBody
+   * @param Google_Service_Compute_Instance $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -297,7 +297,7 @@ class Google_Service_Compute_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
    * @param string $instance Name of the instance scoping this request.
-   * @param Google_InstancesSetMachineTypeRequest $postBody
+   * @param Google_Service_Compute_InstancesSetMachineTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -314,7 +314,7 @@ class Google_Service_Compute_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
    * @param string $instance Name of the instance scoping this request.
-   * @param Google_Metadata $postBody
+   * @param Google_Service_Compute_Metadata $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -330,7 +330,7 @@ class Google_Service_Compute_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
    * @param string $instance Instance name.
-   * @param Google_Scheduling $postBody
+   * @param Google_Service_Compute_Scheduling $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -347,7 +347,7 @@ class Google_Service_Compute_InstancesResource extends Google_Service_Resource
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
    * @param string $instance Name of the instance scoping this request.
-   * @param Google_Tags $postBody
+   * @param Google_Service_Compute_Tags $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

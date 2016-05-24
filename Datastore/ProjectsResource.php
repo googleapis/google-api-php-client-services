@@ -31,9 +31,9 @@ class Google_Service_Datastore_ProjectsResource extends Google_Service_Resource
    *
    * @param string $projectId The ID of the project against which to make the
    * request.
-   * @param Google_AllocateIdsRequest $postBody
+   * @param Google_Service_Datastore_AllocateIdsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_AllocateIdsResponse
+   * @return Google_Service_Datastore_AllocateIdsResponse
    */
   public function allocateIds($projectId, Google_Service_Datastore_AllocateIdsRequest $postBody, $optParams = array())
   {
@@ -46,9 +46,9 @@ class Google_Service_Datastore_ProjectsResource extends Google_Service_Resource
    *
    * @param string $projectId The ID of the project against which to make the
    * request.
-   * @param Google_BeginTransactionRequest $postBody
+   * @param Google_Service_Datastore_BeginTransactionRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_BeginTransactionResponse
+   * @return Google_Service_Datastore_BeginTransactionResponse
    */
   public function beginTransaction($projectId, Google_Service_Datastore_BeginTransactionRequest $postBody, $optParams = array())
   {
@@ -62,9 +62,9 @@ class Google_Service_Datastore_ProjectsResource extends Google_Service_Resource
    *
    * @param string $projectId The ID of the project against which to make the
    * request.
-   * @param Google_CommitRequest $postBody
+   * @param Google_Service_Datastore_CommitRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_CommitResponse
+   * @return Google_Service_Datastore_CommitResponse
    */
   public function commit($projectId, Google_Service_Datastore_CommitRequest $postBody, $optParams = array())
   {
@@ -77,9 +77,9 @@ class Google_Service_Datastore_ProjectsResource extends Google_Service_Resource
    *
    * @param string $projectId The ID of the project against which to make the
    * request.
-   * @param Google_LookupRequest $postBody
+   * @param Google_Service_Datastore_LookupRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LookupResponse
+   * @return Google_Service_Datastore_LookupResponse
    */
   public function lookup($projectId, Google_Service_Datastore_LookupRequest $postBody, $optParams = array())
   {
@@ -92,9 +92,9 @@ class Google_Service_Datastore_ProjectsResource extends Google_Service_Resource
    *
    * @param string $projectId The ID of the project against which to make the
    * request.
-   * @param Google_RollbackRequest $postBody
+   * @param Google_Service_Datastore_RollbackRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_RollbackResponse
+   * @return Google_Service_Datastore_RollbackResponse
    */
   public function rollback($projectId, Google_Service_Datastore_RollbackRequest $postBody, $optParams = array())
   {
@@ -107,9 +107,9 @@ class Google_Service_Datastore_ProjectsResource extends Google_Service_Resource
    *
    * @param string $projectId The ID of the project against which to make the
    * request.
-   * @param Google_RunQueryRequest $postBody
+   * @param Google_Service_Datastore_RunQueryRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_RunQueryResponse
+   * @return Google_Service_Datastore_RunQueryResponse
    */
   public function runQuery($projectId, Google_Service_Datastore_RunQueryRequest $postBody, $optParams = array())
   {

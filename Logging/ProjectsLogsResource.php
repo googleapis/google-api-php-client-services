@@ -32,7 +32,7 @@ class Google_Service_Logging_ProjectsLogsResource extends Google_Service_Resourc
    * @param string $logName Required. The resource name of the log to delete.
    * Example: `"projects/my-project/logs/syslog"`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LoggingEmpty
+   * @return Google_Service_Logging_LoggingEmpty
    */
   public function delete($logName, $optParams = array())
   {

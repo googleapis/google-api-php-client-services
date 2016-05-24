@@ -30,7 +30,7 @@ class Google_Service_Monitoring_ProjectsGroupsResource extends Google_Service_Re
    *
    * @param string $name The project in which to create the group. The format is
    * `"projects/{project_id_or_number}"`.
-   * @param Google_Group $postBody
+   * @param Google_Service_Monitoring_Group $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool validateOnly If true, validate this request but do not create
@@ -115,7 +115,7 @@ class Google_Service_Monitoring_ProjectsGroupsResource extends Google_Service_Re
    * this field is ignored and a new name is created consisting of the project
    * specified in the call to `CreateGroup` and a unique `{group_id}` that is
    * generated automatically. @OutputOnly
-   * @param Google_Group $postBody
+   * @param Google_Service_Monitoring_Group $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool validateOnly If true, validate this request but do not update

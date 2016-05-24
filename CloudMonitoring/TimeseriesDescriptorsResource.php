@@ -72,7 +72,7 @@ class Google_Service_CloudMonitoring_TimeseriesDescriptorsResource extends Googl
    * only valid for non-cumulative metric types. Units: - m: minute  - h: hour  -
    * d: day  - w: week  Examples: 3m, 4w. Only one unit is allowed, for example:
    * 2w3d is not allowed; you should use 17d instead.
-   * @return Google_Service_ListTimeseriesDescriptorsResponse
+   * @return Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse
    */
   public function listTimeseriesDescriptors($project, $metric, $youngest, $optParams = array())
   {

@@ -30,9 +30,9 @@ class Google_Service_Dataflow_ProjectsJobsWorkItemsResource extends Google_Servi
    *
    * @param string $projectId Identifies the project this worker belongs to.
    * @param string $jobId Identifies the workflow job this worker belongs to.
-   * @param Google_LeaseWorkItemRequest $postBody
+   * @param Google_Service_Dataflow_LeaseWorkItemRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_LeaseWorkItemResponse
+   * @return Google_Service_Dataflow_LeaseWorkItemResponse
    */
   public function lease($projectId, $jobId, Google_Service_Dataflow_LeaseWorkItemRequest $postBody, $optParams = array())
   {
@@ -46,9 +46,9 @@ class Google_Service_Dataflow_ProjectsJobsWorkItemsResource extends Google_Servi
    *
    * @param string $projectId The project which owns the WorkItem's job.
    * @param string $jobId The job which the WorkItem is part of.
-   * @param Google_ReportWorkItemStatusRequest $postBody
+   * @param Google_Service_Dataflow_ReportWorkItemStatusRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ReportWorkItemStatusResponse
+   * @return Google_Service_Dataflow_ReportWorkItemStatusResponse
    */
   public function reportStatus($projectId, $jobId, Google_Service_Dataflow_ReportWorkItemStatusRequest $postBody, $optParams = array())
   {

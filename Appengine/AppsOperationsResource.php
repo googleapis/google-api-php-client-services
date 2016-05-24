@@ -33,7 +33,7 @@ class Google_Service_Appengine_AppsOperationsResource extends Google_Service_Res
    * @param string $appsId Part of `name`. The name of the operation resource.
    * @param string $operationsId Part of `name`. See documentation of `appsId`.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Appengine_Operation
    */
   public function get($appsId, $operationsId, $optParams = array())
   {
@@ -54,7 +54,7 @@ class Google_Service_Appengine_AppsOperationsResource extends Google_Service_Res
    * @opt_param string filter The standard list filter.
    * @opt_param int pageSize The standard list page size.
    * @opt_param string pageToken The standard list page token.
-   * @return Google_Service_ListOperationsResponse
+   * @return Google_Service_Appengine_ListOperationsResponse
    */
   public function listAppsOperations($appsId, $optParams = array())
   {

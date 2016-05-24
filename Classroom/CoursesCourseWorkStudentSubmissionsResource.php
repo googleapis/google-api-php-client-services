@@ -106,7 +106,7 @@ class Google_Service_Classroom_CoursesCourseWorkStudentSubmissionsResource exten
    * either the Classroom-assigned identifier or an alias.
    * @param string $courseWorkId Identifier of the course work.
    * @param string $id Identifier of the student submission.
-   * @param Google_ModifyAttachmentsRequest $postBody
+   * @param Google_Service_Classroom_ModifyAttachmentsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_StudentSubmission
    */
@@ -134,7 +134,7 @@ class Google_Service_Classroom_CoursesCourseWorkStudentSubmissionsResource exten
    * either the Classroom-assigned identifier or an alias.
    * @param string $courseWorkId Identifier of the course work.
    * @param string $id Identifier of the student submission.
-   * @param Google_StudentSubmission $postBody
+   * @param Google_Service_Classroom_StudentSubmission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Mask that identifies which fields on the student
@@ -169,7 +169,7 @@ class Google_Service_Classroom_CoursesCourseWorkStudentSubmissionsResource exten
    * either the Classroom-assigned identifier or an alias.
    * @param string $courseWorkId Identifier of the course work.
    * @param string $id Identifier of the student submission.
-   * @param Google_ReclaimStudentSubmissionRequest $postBody
+   * @param Google_Service_Classroom_ReclaimStudentSubmissionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
@@ -198,7 +198,7 @@ class Google_Service_Classroom_CoursesCourseWorkStudentSubmissionsResource exten
    * either the Classroom-assigned identifier or an alias.
    * @param string $courseWorkId Identifier of the course work.
    * @param string $id Identifier of the student submission.
-   * @param Google_ReturnStudentSubmissionRequest $postBody
+   * @param Google_Service_Classroom_ReturnStudentSubmissionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
@@ -226,7 +226,7 @@ class Google_Service_Classroom_CoursesCourseWorkStudentSubmissionsResource exten
    * either the Classroom-assigned identifier or an alias.
    * @param string $courseWorkId Identifier of the course work.
    * @param string $id Identifier of the student submission.
-   * @param Google_TurnInStudentSubmissionRequest $postBody
+   * @param Google_Service_Classroom_TurnInStudentSubmissionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */

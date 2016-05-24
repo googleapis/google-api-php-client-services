@@ -31,9 +31,9 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
-   * @param Google_ZoneViewsAddResourcesRequest $postBody
+   * @param Google_Service_Resourceviews_ZoneViewsAddResourcesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Resourceviews_Operation
    */
   public function addResources($project, $zone, $resourceView, Google_Service_Resourceviews_ZoneViewsAddResourcesRequest $postBody, $optParams = array())
   {
@@ -48,7 +48,7 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Resourceviews_Operation
    */
   public function delete($project, $zone, $resourceView, $optParams = array())
   {
@@ -63,7 +63,7 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ResourceView
+   * @return Google_Service_Resourceviews_ResourceView
    */
   public function get($project, $zone, $resourceView, $optParams = array())
   {
@@ -82,7 +82,7 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    *
    * @opt_param string resourceName The name of the resource if user wants to get
    * the service information of the resource.
-   * @return Google_Service_ZoneViewsGetServiceResponse
+   * @return Google_Service_Resourceviews_ZoneViewsGetServiceResponse
    */
   public function getService($project, $zone, $resourceView, $optParams = array())
   {
@@ -95,9 +95,9 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    *
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
-   * @param Google_ResourceView $postBody
+   * @param Google_Service_Resourceviews_ResourceView $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Resourceviews_Operation
    */
   public function insert($project, $zone, Google_Service_Resourceviews_ResourceView $postBody, $optParams = array())
   {
@@ -117,7 +117,7 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    * @opt_param string pageToken Specifies a nextPageToken returned by a previous
    * list request. This token can be used to request the next page of results from
    * a previous list request.
-   * @return Google_Service_ZoneViewsList
+   * @return Google_Service_Resourceviews_ZoneViewsList
    */
   public function listZoneViews($project, $zone, $optParams = array())
   {
@@ -146,7 +146,7 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    * @opt_param string serviceName The service name to return in the response. It
    * is optional and if it is not set, all the service end points will be
    * returned.
-   * @return Google_Service_ZoneViewsListResourcesResponse
+   * @return Google_Service_Resourceviews_ZoneViewsListResourcesResponse
    */
   public function listResources($project, $zone, $resourceView, $optParams = array())
   {
@@ -160,9 +160,9 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
-   * @param Google_ZoneViewsRemoveResourcesRequest $postBody
+   * @param Google_Service_Resourceviews_ZoneViewsRemoveResourcesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Resourceviews_Operation
    */
   public function removeResources($project, $zone, $resourceView, Google_Service_Resourceviews_ZoneViewsRemoveResourcesRequest $postBody, $optParams = array())
   {
@@ -177,9 +177,9 @@ class Google_Service_Resourceviews_ZoneViewsResource extends Google_Service_Reso
    * @param string $project The project name of the resource view.
    * @param string $zone The zone name of the resource view.
    * @param string $resourceView The name of the resource view.
-   * @param Google_ZoneViewsSetServiceRequest $postBody
+   * @param Google_Service_Resourceviews_ZoneViewsSetServiceRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Resourceviews_Operation
    */
   public function setService($project, $zone, $resourceView, Google_Service_Resourceviews_ZoneViewsSetServiceRequest $postBody, $optParams = array())
   {

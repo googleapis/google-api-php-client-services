@@ -19,7 +19,7 @@
  * Service definition for Datastore (v1beta3).
  *
  * <p>
- * Google Cloud Datastore is a schemaless NoSQL datastore providing robust,
+ * Accesses the schemaless NoSQL database to provide fully managed, robust,
  * scalable storage for your application.</p>
  *
  * <p>

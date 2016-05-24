@@ -34,9 +34,9 @@ class Google_Service_SQLAdmin_SslCertsResource extends Google_Service_Resource
    * @param string $project Project ID of the Cloud SQL project.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_SslCertsCreateEphemeralRequest $postBody
+   * @param Google_Service_SQLAdmin_SslCertsCreateEphemeralRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SslCert
+   * @return Google_Service_SQLAdmin_SslCert
    */
   public function createEphemeral($project, $instance, Google_Service_SQLAdmin_SslCertsCreateEphemeralRequest $postBody, $optParams = array())
   {
@@ -54,7 +54,7 @@ class Google_Service_SQLAdmin_SslCertsResource extends Google_Service_Resource
    * project ID.
    * @param string $sha1Fingerprint Sha1 FingerPrint.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function delete($project, $instance, $sha1Fingerprint, $optParams = array())
   {
@@ -72,7 +72,7 @@ class Google_Service_SQLAdmin_SslCertsResource extends Google_Service_Resource
    * project ID.
    * @param string $sha1Fingerprint Sha1 FingerPrint.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SslCert
+   * @return Google_Service_SQLAdmin_SslCert
    */
   public function get($project, $instance, $sha1Fingerprint, $optParams = array())
   {
@@ -89,9 +89,9 @@ class Google_Service_SQLAdmin_SslCertsResource extends Google_Service_Resource
    * Cloud SQL instances should belong.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param Google_SslCertsInsertRequest $postBody
+   * @param Google_Service_SQLAdmin_SslCertsInsertRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SslCertsInsertResponse
+   * @return Google_Service_SQLAdmin_SslCertsInsertResponse
    */
   public function insert($project, $instance, Google_Service_SQLAdmin_SslCertsInsertRequest $postBody, $optParams = array())
   {
@@ -108,7 +108,7 @@ class Google_Service_SQLAdmin_SslCertsResource extends Google_Service_Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_SslCertsListResponse
+   * @return Google_Service_SQLAdmin_SslCertsListResponse
    */
   public function listSslCerts($project, $instance, $optParams = array())
   {

@@ -29,7 +29,7 @@ class Google_Service_Dns_ManagedZonesResource extends Google_Service_Resource
    * Create a new ManagedZone. (managedZones.create)
    *
    * @param string $project Identifies the project addressed by this request.
-   * @param Google_ManagedZone $postBody
+   * @param Google_Service_Dns_ManagedZone $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dns_ManagedZone
    */

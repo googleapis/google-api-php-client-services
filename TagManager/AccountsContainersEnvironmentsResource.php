@@ -30,7 +30,7 @@ class Google_Service_TagManager_AccountsContainersEnvironmentsResource extends G
    *
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
-   * @param Google_Environment $postBody
+   * @param Google_Service_TagManager_Environment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_Environment
    */
@@ -91,7 +91,7 @@ class Google_Service_TagManager_AccountsContainersEnvironmentsResource extends G
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $environmentId The GTM Environment ID.
-   * @param Google_Environment $postBody
+   * @param Google_Service_TagManager_Environment $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the
@@ -110,7 +110,7 @@ class Google_Service_TagManager_AccountsContainersEnvironmentsResource extends G
    * @param string $accountId The GTM Account ID.
    * @param string $containerId The GTM Container ID.
    * @param string $environmentId The GTM Environment ID.
-   * @param Google_Environment $postBody
+   * @param Google_Service_TagManager_Environment $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fingerprint When provided, this fingerprint must match the

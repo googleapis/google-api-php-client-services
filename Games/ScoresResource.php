@@ -141,7 +141,7 @@ class Google_Service_Games_ScoresResource extends Google_Service_Resource
   /**
    * Submits multiple scores to leaderboards. (scores.submitMultiple)
    *
-   * @param Google_PlayerScoreSubmissionList $postBody
+   * @param Google_Service_Games_PlayerScoreSubmissionList $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string consistencyToken The last-seen mutation timestamp.

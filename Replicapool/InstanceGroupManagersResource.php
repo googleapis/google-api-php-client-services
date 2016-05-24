@@ -34,9 +34,9 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param string $zone The name of the zone in which the instance group manager
    * resides.
    * @param string $instanceGroupManager The name of the instance group manager.
-   * @param Google_InstanceGroupManagersAbandonInstancesRequest $postBody
+   * @param Google_Service_Replicapool_InstanceGroupManagersAbandonInstancesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function abandonInstances($project, $zone, $instanceGroupManager, Google_Service_Replicapool_InstanceGroupManagersAbandonInstancesRequest $postBody, $optParams = array())
   {
@@ -56,7 +56,7 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param string $instanceGroupManager Name of the Instance Group Manager
    * resource to delete.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function delete($project, $zone, $instanceGroupManager, $optParams = array())
   {
@@ -74,9 +74,9 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param string $zone The name of the zone in which the instance group manager
    * resides.
    * @param string $instanceGroupManager The name of the instance group manager.
-   * @param Google_InstanceGroupManagersDeleteInstancesRequest $postBody
+   * @param Google_Service_Replicapool_InstanceGroupManagersDeleteInstancesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function deleteInstances($project, $zone, $instanceGroupManager, Google_Service_Replicapool_InstanceGroupManagersDeleteInstancesRequest $postBody, $optParams = array())
   {
@@ -93,7 +93,7 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * resides.
    * @param string $instanceGroupManager Name of the instance resource to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_InstanceGroupManager
+   * @return Google_Service_Replicapool_InstanceGroupManager
    */
   public function get($project, $zone, $instanceGroupManager, $optParams = array())
   {
@@ -109,9 +109,9 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param string $zone The name of the zone in which the instance group manager
    * resides.
    * @param int $size Number of instances that should exist.
-   * @param Google_InstanceGroupManager $postBody
+   * @param Google_Service_Replicapool_InstanceGroupManager $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function insert($project, $zone, $size, Google_Service_Replicapool_InstanceGroupManager $postBody, $optParams = array())
   {
@@ -134,7 +134,7 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * returned. Maximum value is 500 and default value is 500.
    * @opt_param string pageToken Optional. Tag returned by a previous list request
    * truncated by maxResults. Used to continue a previous list request.
-   * @return Google_Service_InstanceGroupManagerList
+   * @return Google_Service_Replicapool_InstanceGroupManagerList
    */
   public function listInstanceGroupManagers($project, $zone, $optParams = array())
   {
@@ -151,9 +151,9 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param string $zone The name of the zone in which the instance group manager
    * resides.
    * @param string $instanceGroupManager The name of the instance group manager.
-   * @param Google_InstanceGroupManagersRecreateInstancesRequest $postBody
+   * @param Google_Service_Replicapool_InstanceGroupManagersRecreateInstancesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function recreateInstances($project, $zone, $instanceGroupManager, Google_Service_Replicapool_InstanceGroupManagersRecreateInstancesRequest $postBody, $optParams = array())
   {
@@ -174,7 +174,7 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param int $size Number of instances that should exist in this Instance Group
    * Manager.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function resize($project, $zone, $instanceGroupManager, $size, $optParams = array())
   {
@@ -191,9 +191,9 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param string $zone The name of the zone in which the instance group manager
    * resides.
    * @param string $instanceGroupManager The name of the instance group manager.
-   * @param Google_InstanceGroupManagersSetInstanceTemplateRequest $postBody
+   * @param Google_Service_Replicapool_InstanceGroupManagersSetInstanceTemplateRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function setInstanceTemplate($project, $zone, $instanceGroupManager, Google_Service_Replicapool_InstanceGroupManagersSetInstanceTemplateRequest $postBody, $optParams = array())
   {
@@ -210,9 +210,9 @@ class Google_Service_Replicapool_InstanceGroupManagersResource extends Google_Se
    * @param string $zone The name of the zone in which the instance group manager
    * resides.
    * @param string $instanceGroupManager The name of the instance group manager.
-   * @param Google_InstanceGroupManagersSetTargetPoolsRequest $postBody
+   * @param Google_Service_Replicapool_InstanceGroupManagersSetTargetPoolsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Replicapool_Operation
    */
   public function setTargetPools($project, $zone, $instanceGroupManager, Google_Service_Replicapool_InstanceGroupManagersSetTargetPoolsRequest $postBody, $optParams = array())
   {

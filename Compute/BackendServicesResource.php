@@ -61,7 +61,7 @@ class Google_Service_Compute_BackendServicesResource extends Google_Service_Reso
    * @param string $project
    * @param string $backendService Name of the BackendService resource to which
    * the queried instance belongs.
-   * @param Google_ResourceGroupReference $postBody
+   * @param Google_Service_Compute_ResourceGroupReference $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_BackendServiceGroupHealth
    */
@@ -78,7 +78,7 @@ class Google_Service_Compute_BackendServicesResource extends Google_Service_Reso
    * Guidelines for more information. (backendServices.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_BackendService $postBody
+   * @param Google_Service_Compute_BackendService $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -144,7 +144,7 @@ class Google_Service_Compute_BackendServicesResource extends Google_Service_Reso
    *
    * @param string $project Project ID for this request.
    * @param string $backendService Name of the BackendService resource to update.
-   * @param Google_BackendService $postBody
+   * @param Google_Service_Compute_BackendService $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -162,7 +162,7 @@ class Google_Service_Compute_BackendServicesResource extends Google_Service_Reso
    *
    * @param string $project Project ID for this request.
    * @param string $backendService Name of the BackendService resource to update.
-   * @param Google_BackendService $postBody
+   * @param Google_Service_Compute_BackendService $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

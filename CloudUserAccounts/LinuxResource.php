@@ -39,7 +39,7 @@ class Google_Service_CloudUserAccounts_LinuxResource extends Google_Service_Reso
    *
    * @opt_param bool login Whether the view was requested as part of a user-
    * initiated login.
-   * @return Google_Service_LinuxGetAuthorizedKeysViewResponse
+   * @return Google_Service_CloudUserAccounts_LinuxGetAuthorizedKeysViewResponse
    */
   public function getAuthorizedKeysView($project, $zone, $user, $instance, $optParams = array())
   {
@@ -100,7 +100,7 @@ class Google_Service_CloudUserAccounts_LinuxResource extends Google_Service_Reso
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_LinuxGetLinuxAccountViewsResponse
+   * @return Google_Service_CloudUserAccounts_LinuxGetLinuxAccountViewsResponse
    */
   public function getLinuxAccountViews($project, $zone, $instance, $optParams = array())
   {

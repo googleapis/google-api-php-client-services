@@ -58,7 +58,7 @@ class Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsThumbnailsResou
    * next item.
    *
    * Optional.
-   * @return Google_Service_ListStepThumbnailsResponse
+   * @return Google_Service_ToolResults_ListStepThumbnailsResponse
    */
   public function listProjectsHistoriesExecutionsStepsThumbnails($projectId, $historyId, $executionId, $stepId, $optParams = array())
   {

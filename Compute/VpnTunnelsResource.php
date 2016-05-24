@@ -109,7 +109,7 @@ class Google_Service_Compute_VpnTunnelsResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region for this request.
-   * @param Google_VpnTunnel $postBody
+   * @param Google_Service_Compute_VpnTunnel $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

@@ -30,7 +30,7 @@ class Google_Service_Drive_RepliesResource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
-   * @param Google_Reply $postBody
+   * @param Google_Service_Drive_Reply $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Drive_Reply
    */
@@ -99,7 +99,7 @@ class Google_Service_Drive_RepliesResource extends Google_Service_Resource
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
    * @param string $replyId The ID of the reply.
-   * @param Google_Reply $postBody
+   * @param Google_Service_Drive_Reply $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Drive_Reply
    */

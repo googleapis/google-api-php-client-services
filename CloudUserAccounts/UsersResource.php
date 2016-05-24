@@ -31,9 +31,9 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    *
    * @param string $project Project ID for this request.
    * @param string $user Name of the user for this request.
-   * @param Google_PublicKey $postBody
+   * @param Google_Service_CloudUserAccounts_PublicKey $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function addPublicKey($project, $user, Google_Service_CloudUserAccounts_PublicKey $postBody, $optParams = array())
   {
@@ -47,7 +47,7 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    * @param string $project Project ID for this request.
    * @param string $user Name of the user resource to delete.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function delete($project, $user, $optParams = array())
   {
@@ -61,7 +61,7 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    * @param string $project Project ID for this request.
    * @param string $user Name of the user resource to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_User
+   * @return Google_Service_CloudUserAccounts_User
    */
   public function get($project, $user, $optParams = array())
   {
@@ -76,7 +76,7 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    * @param string $project Project ID for this request.
    * @param string $resource Name of the resource for this request.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Policy
+   * @return Google_Service_CloudUserAccounts_Policy
    */
   public function getIamPolicy($project, $resource, $optParams = array())
   {
@@ -89,9 +89,9 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    * the request. (users.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_User $postBody
+   * @param Google_Service_CloudUserAccounts_User $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function insert($project, Google_Service_CloudUserAccounts_User $postBody, $optParams = array())
   {
@@ -149,7 +149,7 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_UserList
+   * @return Google_Service_CloudUserAccounts_UserList
    */
   public function listUsers($project, $optParams = array())
   {
@@ -166,7 +166,7 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    * Public keys are identified by their fingerprint, which is defined by RFC4716
    * to be the MD5 digest of the public key.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_CloudUserAccounts_Operation
    */
   public function removePublicKey($project, $user, $fingerprint, $optParams = array())
   {
@@ -180,9 +180,9 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    *
    * @param string $project Project ID for this request.
    * @param string $resource Name of the resource for this request.
-   * @param Google_Policy $postBody
+   * @param Google_Service_CloudUserAccounts_Policy $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Policy
+   * @return Google_Service_CloudUserAccounts_Policy
    */
   public function setIamPolicy($project, $resource, Google_Service_CloudUserAccounts_Policy $postBody, $optParams = array())
   {
@@ -196,9 +196,9 @@ class Google_Service_CloudUserAccounts_UsersResource extends Google_Service_Reso
    *
    * @param string $project Project ID for this request.
    * @param string $resource Name of the resource for this request.
-   * @param Google_TestPermissionsRequest $postBody
+   * @param Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_TestPermissionsResponse
+   * @return Google_Service_CloudUserAccounts_TestPermissionsResponse
    */
   public function testIamPermissions($project, $resource, Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody, $optParams = array())
   {

@@ -37,7 +37,7 @@ class Google_Service_ToolResults_ProjectsResource extends Google_Service_Resourc
    *
    * Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ProjectSettings
+   * @return Google_Service_ToolResults_ProjectSettings
    */
   public function getSettings($projectId, $optParams = array())
   {
@@ -75,7 +75,7 @@ class Google_Service_ToolResults_ProjectsResource extends Google_Service_Resourc
    *
    * Required.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ProjectSettings
+   * @return Google_Service_ToolResults_ProjectSettings
    */
   public function initializeSettings($projectId, $optParams = array())
   {

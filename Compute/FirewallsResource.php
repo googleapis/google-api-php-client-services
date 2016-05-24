@@ -58,7 +58,7 @@ class Google_Service_Compute_FirewallsResource extends Google_Service_Resource
    * the request. (firewalls.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_Firewall $postBody
+   * @param Google_Service_Compute_Firewall $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -122,7 +122,7 @@ class Google_Service_Compute_FirewallsResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $firewall Name of the firewall rule to update.
-   * @param Google_Firewall $postBody
+   * @param Google_Service_Compute_Firewall $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -138,7 +138,7 @@ class Google_Service_Compute_FirewallsResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $firewall Name of the firewall rule to update.
-   * @param Google_Firewall $postBody
+   * @param Google_Service_Compute_Firewall $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */

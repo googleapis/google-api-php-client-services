@@ -34,7 +34,7 @@ class Google_Service_SQLAdmin_UsersResource extends Google_Service_Resource
    * @param string $host Host of the user in the instance.
    * @param string $name Name of the user in the instance.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function delete($project, $instance, $host, $name, $optParams = array())
   {
@@ -48,9 +48,9 @@ class Google_Service_SQLAdmin_UsersResource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Database instance ID. This does not include the
    * project ID.
-   * @param Google_User $postBody
+   * @param Google_Service_SQLAdmin_User $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function insert($project, $instance, Google_Service_SQLAdmin_User $postBody, $optParams = array())
   {
@@ -65,7 +65,7 @@ class Google_Service_SQLAdmin_UsersResource extends Google_Service_Resource
    * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_UsersListResponse
+   * @return Google_Service_SQLAdmin_UsersListResponse
    */
   public function listUsers($project, $instance, $optParams = array())
   {
@@ -81,9 +81,9 @@ class Google_Service_SQLAdmin_UsersResource extends Google_Service_Resource
    * project ID.
    * @param string $host Host of the user in the instance.
    * @param string $name Name of the user in the instance.
-   * @param Google_User $postBody
+   * @param Google_Service_SQLAdmin_User $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function update($project, $instance, $host, $name, Google_Service_SQLAdmin_User $postBody, $optParams = array())
   {

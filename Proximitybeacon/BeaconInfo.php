@@ -23,7 +23,6 @@ class Google_Service_Proximitybeacon_BeaconInfo extends Google_Collection
   protected $attachmentsType = 'Google_Service_Proximitybeacon_AttachmentInfo';
   protected $attachmentsDataType = 'array';
   public $beaconName;
-  public $description;
 
   public function setAdvertisedId(Google_Service_Proximitybeacon_AdvertisedId $advertisedId)
   {
@@ -48,13 +47,5 @@ class Google_Service_Proximitybeacon_BeaconInfo extends Google_Collection
   public function getBeaconName()
   {
     return $this->beaconName;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
   }
 }

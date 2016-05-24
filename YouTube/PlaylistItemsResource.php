@@ -45,7 +45,7 @@ class Google_Service_YouTube_PlaylistItemsResource extends Google_Service_Resour
    * @param string $part The part parameter serves two purposes in this operation.
    * It identifies the properties that the write operation will set as well as the
    * properties that the API response will include.
-   * @param Google_PlaylistItem $postBody
+   * @param Google_Service_YouTube_PlaylistItem $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -139,7 +139,7 @@ class Google_Service_YouTube_PlaylistItemsResource extends Google_Service_Resour
    * updated to whatever value the request body specifies. If the request body
    * does not specify values, the existing start and end times will be removed and
    * replaced with the default settings.
-   * @param Google_PlaylistItem $postBody
+   * @param Google_Service_YouTube_PlaylistItem $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTube_PlaylistItem
    */

@@ -29,7 +29,7 @@ class Google_Service_ShoppingContent_AccountshippingResource extends Google_Serv
    * Retrieves and updates the shipping settings of multiple accounts in a single
    * request. (accountshipping.custombatch)
    *
-   * @param Google_AccountshippingCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_AccountshippingCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -81,7 +81,7 @@ class Google_Service_ShoppingContent_AccountshippingResource extends Google_Serv
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account for which to get/update
    * account shipping settings.
-   * @param Google_AccountShipping $postBody
+   * @param Google_Service_ShoppingContent_AccountShipping $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.
@@ -99,7 +99,7 @@ class Google_Service_ShoppingContent_AccountshippingResource extends Google_Serv
    * @param string $merchantId The ID of the managing account.
    * @param string $accountId The ID of the account for which to get/update
    * account shipping settings.
-   * @param Google_AccountShipping $postBody
+   * @param Google_Service_ShoppingContent_AccountShipping $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool dryRun Flag to run the request in dry-run mode.

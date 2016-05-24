@@ -30,7 +30,7 @@ class Google_Service_SQLAdmin_FlagsResource extends Google_Service_Resource
    * (flags.listFlags)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_FlagsListResponse
+   * @return Google_Service_SQLAdmin_FlagsListResponse
    */
   public function listFlags($optParams = array())
   {

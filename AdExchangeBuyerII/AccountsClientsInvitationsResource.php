@@ -33,9 +33,9 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsInvitationsResource extend
    * (required)
    * @param string $clientAccountId Numerical account ID of the client buyer that
    * the user should be associated with. (required)
-   * @param Google_ClientUserInvitation $postBody
+   * @param Google_Service_AdExchangeBuyerII_ClientUserInvitation $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ClientUserInvitation
+   * @return Google_Service_AdExchangeBuyerII_ClientUserInvitation
    */
   public function create($accountId, $clientAccountId, Google_Service_AdExchangeBuyerII_ClientUserInvitation $postBody, $optParams = array())
   {
@@ -53,7 +53,7 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsInvitationsResource extend
    * @param string $invitationId Numerical identifier of the user invitation to
    * retrieve. (required)
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ClientUserInvitation
+   * @return Google_Service_AdExchangeBuyerII_ClientUserInvitation
    */
   public function get($accountId, $clientAccountId, $invitationId, $optParams = array())
   {
@@ -79,7 +79,7 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsInvitationsResource extend
    * should return. Typically, this is the value of
    * ListClientUserInvitationsResponse.nextPageToken returned from the previous
    * call to the clients.invitations.list method.
-   * @return Google_Service_ListClientUserInvitationsResponse
+   * @return Google_Service_AdExchangeBuyerII_ListClientUserInvitationsResponse
    */
   public function listAccountsClientsInvitations($accountId, $clientAccountId, $optParams = array())
   {

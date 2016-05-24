@@ -36,7 +36,7 @@ class Google_Service_AndroidEnterprise_ProductsResource extends Google_Service_R
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $productId The ID of the product.
-   * @param Google_ProductsApproveRequest $postBody
+   * @param Google_Service_AndroidEnterprise_ProductsApproveRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function approve($enterpriseId, $productId, Google_Service_AndroidEnterprise_ProductsApproveRequest $postBody, $optParams = array())
@@ -165,7 +165,7 @@ class Google_Service_AndroidEnterprise_ProductsResource extends Google_Service_R
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $productId The ID of the product.
-   * @param Google_ProductPermissions $postBody
+   * @param Google_Service_AndroidEnterprise_ProductPermissions $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_AndroidEnterprise_ProductPermissions
    */

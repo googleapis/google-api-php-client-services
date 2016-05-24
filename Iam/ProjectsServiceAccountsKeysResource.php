@@ -32,7 +32,7 @@ class Google_Service_Iam_ProjectsServiceAccountsKeysResource extends Google_Serv
    * "projects/{project}/serviceAccounts/{account}". Using '-' as a wildcard for
    * the project, will infer the project from the account. The account value can
    * be the email address or the unique_id of the service account.
-   * @param Google_CreateServiceAccountKeyRequest $postBody
+   * @param Google_Service_Iam_CreateServiceAccountKeyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_ServiceAccountKey
    */

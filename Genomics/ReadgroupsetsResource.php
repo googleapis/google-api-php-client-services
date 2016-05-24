@@ -55,7 +55,7 @@ class Google_Service_Genomics_ReadgroupsetsResource extends Google_Service_Resou
    *
    * @param string $readGroupSetId Required. The ID of the read group set to
    * export. The caller must have READ access to this read group set.
-   * @param Google_ExportReadGroupSetRequest $postBody
+   * @param Google_Service_Genomics_ExportReadGroupSetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Operation
    */
@@ -95,7 +95,7 @@ class Google_Service_Genomics_ReadgroupsetsResource extends Google_Service_Resou
    * reads will be stripped of positional information (reference name and
    * position) (readgroupsets.import)
    *
-   * @param Google_ImportReadGroupSetsRequest $postBody
+   * @param Google_Service_Genomics_ImportReadGroupSetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_Operation
    */
@@ -114,7 +114,7 @@ class Google_Service_Genomics_ReadgroupsetsResource extends Google_Service_Resou
    * @param string $readGroupSetId The ID of the read group set to be updated. The
    * caller must have WRITE permissions to the dataset associated with this read
    * group set.
-   * @param Google_ReadGroupSet $postBody
+   * @param Google_Service_Genomics_ReadGroupSet $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask An optional mask specifying which fields to
@@ -136,7 +136,7 @@ class Google_Service_Genomics_ReadgroupsetsResource extends Google_Service_Resou
    * chemas/blob/v0.5.1/src/main/resources/avro/readmethods.avdl#L135).
    * (readgroupsets.search)
    *
-   * @param Google_SearchReadGroupSetsRequest $postBody
+   * @param Google_Service_Genomics_SearchReadGroupSetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Genomics_SearchReadGroupSetsResponse
    */

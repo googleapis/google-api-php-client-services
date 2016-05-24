@@ -30,7 +30,7 @@ class Google_Service_Iam_ProjectsServiceAccountsResource extends Google_Service_
    *
    * @param string $name Required. The resource name of the project associated
    * with the service accounts, such as "projects/123"
-   * @param Google_CreateServiceAccountRequest $postBody
+   * @param Google_Service_Iam_CreateServiceAccountRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_ServiceAccount
    */
@@ -121,7 +121,7 @@ class Google_Service_Iam_ProjectsServiceAccountsResource extends Google_Service_
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `setIamPolicy`
    * documentation.
-   * @param Google_SetIamPolicyRequest $postBody
+   * @param Google_Service_Iam_SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_Policy
    */
@@ -138,7 +138,7 @@ class Google_Service_Iam_ProjectsServiceAccountsResource extends Google_Service_
    * "projects/{project}/serviceAccounts/{account}". Using '-' as a wildcard for
    * the project, will infer the project from the account. The account value can
    * be the email address or the unique_id of the service account.
-   * @param Google_SignBlobRequest $postBody
+   * @param Google_Service_Iam_SignBlobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_SignBlobResponse
    */
@@ -157,7 +157,7 @@ class Google_Service_Iam_ProjectsServiceAccountsResource extends Google_Service_
    * `projectsprojectzoneszonedisksdisk*`. The format for the path specified in
    * this value is resource specific and is specified in the `testIamPermissions`
    * documentation.
-   * @param Google_TestIamPermissionsRequest $postBody
+   * @param Google_Service_Iam_TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_TestIamPermissionsResponse
    */
@@ -177,7 +177,7 @@ class Google_Service_Iam_ProjectsServiceAccountsResource extends Google_Service_
    * account value can be the email address or the unique_id of the service
    * account. In responses the resource name will always be in the format
    * "projects/{project}/serviceAccounts/{email}".
-   * @param Google_ServiceAccount $postBody
+   * @param Google_Service_Iam_ServiceAccount $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Iam_ServiceAccount
    */

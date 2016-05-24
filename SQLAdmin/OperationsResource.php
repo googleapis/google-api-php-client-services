@@ -32,7 +32,7 @@ class Google_Service_SQLAdmin_OperationsResource extends Google_Service_Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $operation Instance operation ID.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_SQLAdmin_Operation
    */
   public function get($project, $operation, $optParams = array())
   {
@@ -53,7 +53,7 @@ class Google_Service_SQLAdmin_OperationsResource extends Google_Service_Resource
    * @opt_param string maxResults Maximum number of operations per response.
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
-   * @return Google_Service_OperationsListResponse
+   * @return Google_Service_SQLAdmin_OperationsListResponse
    */
   public function listOperations($project, $instance, $optParams = array())
   {

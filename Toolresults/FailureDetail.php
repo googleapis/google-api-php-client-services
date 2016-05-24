@@ -21,6 +21,7 @@ class Google_Service_ToolResults_FailureDetail extends Google_Model
   public $notInstalled;
   public $otherNativeCrash;
   public $timedOut;
+  public $unableToCrawl;
 
   public function setCrashed($crashed)
   {
@@ -53,5 +54,13 @@ class Google_Service_ToolResults_FailureDetail extends Google_Model
   public function getTimedOut()
   {
     return $this->timedOut;
+  }
+  public function setUnableToCrawl($unableToCrawl)
+  {
+    $this->unableToCrawl = $unableToCrawl;
+  }
+  public function getUnableToCrawl()
+  {
+    return $this->unableToCrawl;
   }
 }

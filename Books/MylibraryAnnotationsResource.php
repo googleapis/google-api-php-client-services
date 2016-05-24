@@ -42,7 +42,7 @@ class Google_Service_Books_MylibraryAnnotationsResource extends Google_Service_R
   /**
    * Inserts a new annotation. (annotations.insert)
    *
-   * @param Google_Annotation $postBody
+   * @param Google_Service_Books_Annotation $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string country ISO-3166-1 code to override the IP-based location.
@@ -104,7 +104,7 @@ class Google_Service_Books_MylibraryAnnotationsResource extends Google_Service_R
    * Updates an existing annotation. (annotations.update)
    *
    * @param string $annotationId The ID for the annotation to update.
-   * @param Google_Annotation $postBody
+   * @param Google_Service_Books_Annotation $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string source String to identify the originator of this request.

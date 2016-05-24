@@ -34,7 +34,7 @@ class Google_Service_CloudTrace_ProjectsResource extends Google_Service_Resource
    *
    * @param string $projectId ID of the Cloud project where the trace data is
    * stored.
-   * @param Google_Traces $postBody
+   * @param Google_Service_CloudTrace_Traces $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudTrace_CloudtraceEmpty
    */

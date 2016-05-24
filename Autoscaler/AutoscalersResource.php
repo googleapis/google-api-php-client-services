@@ -32,7 +32,7 @@ class Google_Service_Autoscaler_AutoscalersResource extends Google_Service_Resou
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Autoscaler_Operation
    */
   public function delete($project, $zone, $autoscaler, $optParams = array())
   {
@@ -47,7 +47,7 @@ class Google_Service_Autoscaler_AutoscalersResource extends Google_Service_Resou
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Autoscaler
+   * @return Google_Service_Autoscaler_Autoscaler
    */
   public function get($project, $zone, $autoscaler, $optParams = array())
   {
@@ -60,9 +60,9 @@ class Google_Service_Autoscaler_AutoscalersResource extends Google_Service_Resou
    *
    * @param string $project Project ID of Autoscaler resource.
    * @param string $zone Zone name of Autoscaler resource.
-   * @param Google_Autoscaler $postBody
+   * @param Google_Service_Autoscaler_Autoscaler $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Autoscaler_Operation
    */
   public function insert($project, $zone, Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
   {
@@ -80,7 +80,7 @@ class Google_Service_Autoscaler_AutoscalersResource extends Google_Service_Resou
    * @opt_param string filter
    * @opt_param string maxResults
    * @opt_param string pageToken
-   * @return Google_Service_AutoscalerListResponse
+   * @return Google_Service_Autoscaler_AutoscalerListResponse
    */
   public function listAutoscalers($project, $zone, $optParams = array())
   {
@@ -95,9 +95,9 @@ class Google_Service_Autoscaler_AutoscalersResource extends Google_Service_Resou
    * @param string $project Project ID of Autoscaler resource.
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
-   * @param Google_Autoscaler $postBody
+   * @param Google_Service_Autoscaler_Autoscaler $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Autoscaler_Operation
    */
   public function patch($project, $zone, $autoscaler, Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
   {
@@ -111,9 +111,9 @@ class Google_Service_Autoscaler_AutoscalersResource extends Google_Service_Resou
    * @param string $project Project ID of Autoscaler resource.
    * @param string $zone Zone name of Autoscaler resource.
    * @param string $autoscaler Name of the Autoscaler resource.
-   * @param Google_Autoscaler $postBody
+   * @param Google_Service_Autoscaler_Autoscaler $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Autoscaler_Operation
    */
   public function update($project, $zone, $autoscaler, Google_Service_Autoscaler_Autoscaler $postBody, $optParams = array())
   {

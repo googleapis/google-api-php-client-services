@@ -59,7 +59,7 @@ class Google_Service_Dfareporting_LandingPagesResource extends Google_Service_Re
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $campaignId Landing page campaign ID.
-   * @param Google_LandingPage $postBody
+   * @param Google_Service_Dfareporting_LandingPage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_LandingPage
    */
@@ -91,7 +91,7 @@ class Google_Service_Dfareporting_LandingPagesResource extends Google_Service_Re
    * @param string $profileId User profile ID associated with this request.
    * @param string $campaignId Landing page campaign ID.
    * @param string $id Landing page ID.
-   * @param Google_LandingPage $postBody
+   * @param Google_Service_Dfareporting_LandingPage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_LandingPage
    */
@@ -106,7 +106,7 @@ class Google_Service_Dfareporting_LandingPagesResource extends Google_Service_Re
    *
    * @param string $profileId User profile ID associated with this request.
    * @param string $campaignId Landing page campaign ID.
-   * @param Google_LandingPage $postBody
+   * @param Google_Service_Dfareporting_LandingPage $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_LandingPage
    */

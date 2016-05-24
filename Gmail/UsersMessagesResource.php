@@ -31,7 +31,7 @@ class Google_Service_Gmail_UsersMessagesResource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_BatchDeleteMessagesRequest $postBody
+   * @param Google_Service_Gmail_BatchDeleteMessagesRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function batchDelete($userId, Google_Service_Gmail_BatchDeleteMessagesRequest $postBody, $optParams = array())
@@ -81,7 +81,7 @@ class Google_Service_Gmail_UsersMessagesResource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Message $postBody
+   * @param Google_Service_Gmail_Message $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool deleted Mark the email as permanently deleted (not TRASH) and
@@ -108,7 +108,7 @@ class Google_Service_Gmail_UsersMessagesResource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Message $postBody
+   * @param Google_Service_Gmail_Message $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool deleted Mark the email as permanently deleted (not TRASH) and
@@ -155,7 +155,7 @@ class Google_Service_Gmail_UsersMessagesResource extends Google_Service_Resource
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
    * @param string $id The ID of the message to modify.
-   * @param Google_ModifyMessageRequest $postBody
+   * @param Google_Service_Gmail_ModifyMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Message
    */
@@ -171,7 +171,7 @@ class Google_Service_Gmail_UsersMessagesResource extends Google_Service_Resource
    *
    * @param string $userId The user's email address. The special value me can be
    * used to indicate the authenticated user.
-   * @param Google_Message $postBody
+   * @param Google_Service_Gmail_Message $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Gmail_Message
    */

@@ -33,7 +33,7 @@ class Google_Service_Taskqueue_TaskqueuesResource extends Google_Service_Resourc
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool getStats Whether to get stats. Optional.
-   * @return Google_Service_TaskQueue
+   * @return Google_Service_Taskqueue_TaskQueue
    */
   public function get($project, $taskqueue, $optParams = array())
   {

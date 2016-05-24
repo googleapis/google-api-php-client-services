@@ -30,7 +30,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order.
-   * @param Google_OrdersAcknowledgeRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersAcknowledgeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersAcknowledgeResponse
    */
@@ -60,7 +60,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order to cancel.
-   * @param Google_OrdersCancelRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersCancelRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersCancelResponse
    */
@@ -75,7 +75,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order.
-   * @param Google_OrdersCancelLineItemRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersCancelLineItemRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersCancelLineItemResponse
    */
@@ -89,7 +89,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    * Sandbox only. Creates a test order. (orders.createtestorder)
    *
    * @param string $merchantId The ID of the managing account.
-   * @param Google_OrdersCreateTestOrderRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersCreateTestOrderRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersCreateTestOrderResponse
    */
@@ -103,7 +103,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    * Retrieves or modifies multiple orders in a single request.
    * (orders.custombatch)
    *
-   * @param Google_OrdersCustomBatchRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersCustomBatchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersCustomBatchResponse
    */
@@ -200,7 +200,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order to refund.
-   * @param Google_OrdersRefundRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersRefundRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersRefundResponse
    */
@@ -215,7 +215,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order.
-   * @param Google_OrdersReturnLineItemRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersReturnLineItemRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersReturnLineItemResponse
    */
@@ -230,7 +230,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order.
-   * @param Google_OrdersShipLineItemsRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersShipLineItemsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersShipLineItemsResponse
    */
@@ -246,7 +246,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order.
-   * @param Google_OrdersUpdateMerchantOrderIdRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersUpdateMerchantOrderIdRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersUpdateMerchantOrderIdResponse
    */
@@ -262,7 +262,7 @@ class Google_Service_ShoppingContent_OrdersResource extends Google_Service_Resou
    *
    * @param string $merchantId The ID of the managing account.
    * @param string $orderId The ID of the order.
-   * @param Google_OrdersUpdateShipmentRequest $postBody
+   * @param Google_Service_ShoppingContent_OrdersUpdateShipmentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_ShoppingContent_OrdersUpdateShipmentResponse
    */

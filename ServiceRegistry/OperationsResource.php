@@ -31,7 +31,7 @@ class Google_Service_ServiceRegistry_OperationsResource extends Google_Service_R
    * @param string $project The project ID for this request.
    * @param string $operation The name of the operation for this request.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_ServiceRegistry_Operation
    */
   public function get($project, $operation, $optParams = array())
   {
@@ -88,7 +88,7 @@ class Google_Service_ServiceRegistry_OperationsResource extends Google_Service_R
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_OperationsListResponse
+   * @return Google_Service_ServiceRegistry_OperationsListResponse
    */
   public function listOperations($project, $optParams = array())
   {

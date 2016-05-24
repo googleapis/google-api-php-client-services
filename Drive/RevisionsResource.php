@@ -75,7 +75,7 @@ class Google_Service_Drive_RevisionsResource extends Google_Service_Resource
    *
    * @param string $fileId The ID of the file.
    * @param string $revisionId The ID of the revision.
-   * @param Google_Revision $postBody
+   * @param Google_Service_Drive_Revision $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Drive_Revision
    */

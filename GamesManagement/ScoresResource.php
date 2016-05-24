@@ -86,7 +86,7 @@ class Google_Service_GamesManagement_ScoresResource extends Google_Service_Resou
    * method is only available to user accounts for your developer console. Only
    * draft leaderboards may be reset. (scores.resetMultipleForAllPlayers)
    *
-   * @param Google_ScoresResetMultipleForAllRequest $postBody
+   * @param Google_Service_GamesManagement_ScoresResetMultipleForAllRequest $postBody
    * @param array $optParams Optional parameters.
    */
   public function resetMultipleForAllPlayers(Google_Service_GamesManagement_ScoresResetMultipleForAllRequest $postBody, $optParams = array())

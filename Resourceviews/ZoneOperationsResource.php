@@ -33,7 +33,7 @@ class Google_Service_Resourceviews_ZoneOperationsResource extends Google_Service
    * @param string $zone Name of the zone scoping this request.
    * @param string $operation Name of the operation resource to return.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Operation
+   * @return Google_Service_Resourceviews_Operation
    */
   public function get($project, $zone, $operation, $optParams = array())
   {
@@ -55,7 +55,7 @@ class Google_Service_Resourceviews_ZoneOperationsResource extends Google_Service
    * returned. Maximum value is 500 and default value is 500.
    * @opt_param string pageToken Optional. Tag returned by a previous list request
    * truncated by maxResults. Used to continue a previous list request.
-   * @return Google_Service_OperationList
+   * @return Google_Service_Resourceviews_OperationList
    */
   public function listZoneOperations($project, $zone, $optParams = array())
   {

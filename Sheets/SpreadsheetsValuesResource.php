@@ -58,7 +58,7 @@ class Google_Service_Sheets_SpreadsheetsValuesResource extends Google_Service_Re
    * (values.batchUpdate)
    *
    * @param string $spreadsheetId The ID of the spreadsheet to update.
-   * @param Google_BatchUpdateValuesRequest $postBody
+   * @param Google_Service_Sheets_BatchUpdateValuesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Sheets_BatchUpdateValuesResponse
    */
@@ -101,7 +101,7 @@ class Google_Service_Sheets_SpreadsheetsValuesResource extends Google_Service_Re
    *
    * @param string $spreadsheetId The ID of the spreadsheet to update.
    * @param string $range The A1 notation of the values to update.
-   * @param Google_ValueRange $postBody
+   * @param Google_Service_Sheets_ValueRange $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string valueInputOption How the input data should be interpreted.

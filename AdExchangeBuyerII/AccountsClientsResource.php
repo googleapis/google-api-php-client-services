@@ -31,9 +31,9 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsResource extends Google_Se
    * @param string $accountId Unique numerical account ID for the buyer of which
    * the client buyer is a customer; the sponsor buyer to create a client for.
    * (required)
-   * @param Google_Client $postBody
+   * @param Google_Service_AdExchangeBuyerII_Client $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Client
+   * @return Google_Service_AdExchangeBuyerII_Client
    */
   public function create($accountId, Google_Service_AdExchangeBuyerII_Client $postBody, $optParams = array())
   {
@@ -49,7 +49,7 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsResource extends Google_Se
    * @param string $clientAccountId Numerical account ID of the client buyer to
    * retrieve. (required)
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Client
+   * @return Google_Service_AdExchangeBuyerII_Client
    */
   public function get($accountId, $clientAccountId, $optParams = array())
   {
@@ -72,7 +72,7 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsResource extends Google_Se
    * should return. Typically, this is the value of
    * ListClientsResponse.nextPageToken returned from the previous call to the
    * accounts.clients.list method.
-   * @return Google_Service_ListClientsResponse
+   * @return Google_Service_AdExchangeBuyerII_ListClientsResponse
    */
   public function listAccountsClients($accountId, $optParams = array())
   {
@@ -88,9 +88,9 @@ class Google_Service_AdExchangeBuyerII_AccountsClientsResource extends Google_Se
    * (required)
    * @param string $clientAccountId Unique numerical account ID of the client to
    * update. (required)
-   * @param Google_Client $postBody
+   * @param Google_Service_AdExchangeBuyerII_Client $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Client
+   * @return Google_Service_AdExchangeBuyerII_Client
    */
   public function update($accountId, $clientAccountId, Google_Service_AdExchangeBuyerII_Client $postBody, $optParams = array())
   {

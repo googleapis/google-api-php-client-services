@@ -72,7 +72,7 @@ class Google_Service_CloudMonitoring_TimeseriesResource extends Google_Service_R
    * only valid for non-cumulative metric types. Units: - m: minute  - h: hour  -
    * d: day  - w: week  Examples: 3m, 4w. Only one unit is allowed, for example:
    * 2w3d is not allowed; you should use 17d instead.
-   * @return Google_Service_ListTimeseriesResponse
+   * @return Google_Service_CloudMonitoring_ListTimeseriesResponse
    */
   public function listTimeseries($project, $metric, $youngest, $optParams = array())
   {
@@ -91,9 +91,9 @@ class Google_Service_CloudMonitoring_TimeseriesResource extends Google_Service_R
    *
    * @param string $project The project ID. The value can be the numeric project
    * ID or string-based project name.
-   * @param Google_WriteTimeseriesRequest $postBody
+   * @param Google_Service_CloudMonitoring_WriteTimeseriesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_WriteTimeseriesResponse
+   * @return Google_Service_CloudMonitoring_WriteTimeseriesResponse
    */
   public function write($project, Google_Service_CloudMonitoring_WriteTimeseriesRequest $postBody, $optParams = array())
   {

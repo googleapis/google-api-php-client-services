@@ -36,7 +36,7 @@ class Google_Service_Dataproc_ProjectsRegionsJobsResource extends Google_Service
    * @param string $region [Required] The Cloud Dataproc region in which to handle
    * the request.
    * @param string $jobId [Required] The job ID.
-   * @param Google_CancelJobRequest $postBody
+   * @param Google_Service_Dataproc_CancelJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataproc_Job
    */
@@ -113,7 +113,7 @@ class Google_Service_Dataproc_ProjectsRegionsJobsResource extends Google_Service
    * project that the job belongs to.
    * @param string $region [Required] The Cloud Dataproc region in which to handle
    * the request.
-   * @param Google_SubmitJobRequest $postBody
+   * @param Google_Service_Dataproc_SubmitJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataproc_Job
    */

@@ -43,7 +43,7 @@ class Google_Service_Dfareporting_DirectorySitesResource extends Google_Service_
    * Inserts a new directory site. (directorySites.insert)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param Google_DirectorySite $postBody
+   * @param Google_Service_Dfareporting_DirectorySite $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dfareporting_DirectorySite
    */

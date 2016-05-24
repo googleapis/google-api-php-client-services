@@ -94,7 +94,7 @@ class Google_Service_AppState_StatesResource extends Google_Service_Resource
    * of concurrent writes. Maximum per-key size is 128KB. (states.update)
    *
    * @param int $stateKey The key for the data to be retrieved.
-   * @param Google_UpdateRequest $postBody
+   * @param Google_Service_AppState_UpdateRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string currentStateVersion The version of the app state your

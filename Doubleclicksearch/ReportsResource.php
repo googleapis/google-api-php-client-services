@@ -28,7 +28,7 @@ class Google_Service_Doubleclicksearch_ReportsResource extends Google_Service_Re
   /**
    * Generates and returns a report immediately. (reports.generate)
    *
-   * @param Google_ReportRequest $postBody
+   * @param Google_Service_Doubleclicksearch_ReportRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_Report
    */
@@ -67,7 +67,7 @@ class Google_Service_Doubleclicksearch_ReportsResource extends Google_Service_Re
   /**
    * Inserts a report request into the reporting system. (reports.request)
    *
-   * @param Google_ReportRequest $postBody
+   * @param Google_Service_Doubleclicksearch_ReportRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_Report
    */

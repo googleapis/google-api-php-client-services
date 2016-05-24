@@ -33,7 +33,7 @@ class Google_Service_Monitoring_ProjectsTimeSeriesResource extends Google_Servic
    *
    * @param string $name The project on which to execute the request. The format
    * is `"projects/{project_id_or_number}"`.
-   * @param Google_CreateTimeSeriesRequest $postBody
+   * @param Google_Service_Monitoring_CreateTimeSeriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MonitoringEmpty
    */

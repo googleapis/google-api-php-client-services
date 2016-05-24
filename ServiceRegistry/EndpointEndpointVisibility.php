@@ -18,8 +18,17 @@
 class Google_Service_ServiceRegistry_EndpointEndpointVisibility extends Google_Collection
 {
   protected $collection_key = 'networks';
+  public $internalDnsName;
   public $networks;
 
+  public function setInternalDnsName($internalDnsName)
+  {
+    $this->internalDnsName = $internalDnsName;
+  }
+  public function getInternalDnsName()
+  {
+    return $this->internalDnsName;
+  }
   public function setNetworks($networks)
   {
     $this->networks = $networks;

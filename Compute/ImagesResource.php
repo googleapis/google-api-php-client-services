@@ -47,7 +47,7 @@ class Google_Service_Compute_ImagesResource extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $image Image name.
-   * @param Google_DeprecationStatus $postBody
+   * @param Google_Service_Compute_DeprecationStatus $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
@@ -92,7 +92,7 @@ class Google_Service_Compute_ImagesResource extends Google_Service_Resource
    * request. (images.insert)
    *
    * @param string $project Project ID for this request.
-   * @param Google_Image $postBody
+   * @param Google_Service_Compute_Image $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
