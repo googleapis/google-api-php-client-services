@@ -29,7 +29,7 @@ class Google_Service_AdSenseHost_AssociationsessionsResource extends Google_Serv
    * Create an association session for initiating an association with an AdSense
    * user. (associationsessions.start)
    *
-   * @param string $productCode Products to associate with the user.
+   * @param string|array $productCode Products to associate with the user.
    * @param string $websiteUrl The URL of the user's hosted website.
    * @param array $optParams Optional parameters.
    *

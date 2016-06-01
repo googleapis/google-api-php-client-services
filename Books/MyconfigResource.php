@@ -41,7 +41,7 @@ class Google_Service_Books_MyconfigResource extends Google_Service_Resource
    * Release downloaded content access restriction.
    * (myconfig.releaseDownloadAccess)
    *
-   * @param string $volumeIds The volume(s) to release restrictions for.
+   * @param string|array $volumeIds The volume(s) to release restrictions for.
    * @param string $cpksver The device/version ID from which to release the
    * restriction.
    * @param array $optParams Optional parameters.

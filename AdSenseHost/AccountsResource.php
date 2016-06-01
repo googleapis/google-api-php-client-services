@@ -42,7 +42,7 @@ class Google_Service_AdSenseHost_AccountsResource extends Google_Service_Resourc
    * List hosted accounts associated with this AdSense account by ad client id.
    * (accounts.listAccounts)
    *
-   * @param string $filterAdClientId Ad clients to list accounts for.
+   * @param string|array $filterAdClientId Ad clients to list accounts for.
    * @param array $optParams Optional parameters.
    * @return Google_Service_AdSenseHost_Accounts
    */

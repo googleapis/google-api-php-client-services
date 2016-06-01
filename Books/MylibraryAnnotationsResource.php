@@ -89,7 +89,7 @@ class Google_Service_Books_MylibraryAnnotationsResource extends Google_Service_R
   /**
    * Gets the summary of specified layers. (annotations.summary)
    *
-   * @param string $layerIds Array of layer IDs to get the summary for.
+   * @param string|array $layerIds Array of layer IDs to get the summary for.
    * @param string $volumeId Volume id to get the summary for.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Books_AnnotationsSummary

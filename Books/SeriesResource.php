@@ -28,7 +28,7 @@ class Google_Service_Books_SeriesResource extends Google_Service_Resource
   /**
    * Returns Series metadata for the given series ids. (series.get)
    *
-   * @param string $seriesId String that identifies the series
+   * @param string|array $seriesId String that identifies the series
    * @param array $optParams Optional parameters.
    * @return Google_Service_Books_Series
    */
