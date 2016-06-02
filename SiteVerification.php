@@ -52,7 +52,7 @@ class Google_Service_SiteVerification extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'siteVerification';
 
-    $this->webResource = new Google_Service_SiteVerification_WebResourceResource(
+    $this->webResource = new Google_Service_SiteVerification_Resource_WebResource(
         $this,
         $this->serviceName,
         'webResource',

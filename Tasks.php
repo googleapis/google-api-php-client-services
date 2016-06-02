@@ -53,7 +53,7 @@ class Google_Service_Tasks extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'tasks';
 
-    $this->tasklists = new Google_Service_Tasks_TasklistsResource(
+    $this->tasklists = new Google_Service_Tasks_Resource_Tasklists(
         $this,
         $this->serviceName,
         'tasklists',
@@ -120,7 +120,7 @@ class Google_Service_Tasks extends Google_Service
           )
         )
     );
-    $this->tasks = new Google_Service_Tasks_TasksResource(
+    $this->tasks = new Google_Service_Tasks_Resource_Tasks(
         $this,
         $this->serviceName,
         'tasks',

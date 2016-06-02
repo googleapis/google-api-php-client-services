@@ -59,7 +59,7 @@ class Google_Service_Oauth2 extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'oauth2';
 
-    $this->userinfo = new Google_Service_Oauth2_UserinfoResource(
+    $this->userinfo = new Google_Service_Oauth2_Resource_Userinfo(
         $this,
         $this->serviceName,
         'userinfo',
@@ -73,7 +73,7 @@ class Google_Service_Oauth2 extends Google_Service
           )
         )
     );
-    $this->userinfo_v2_me = new Google_Service_Oauth2_UserinfoV2MeResource(
+    $this->userinfo_v2_me = new Google_Service_Oauth2_Resource_UserinfoV2Me(
         $this,
         $this->serviceName,
         'me',

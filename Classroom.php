@@ -92,7 +92,7 @@ class Google_Service_Classroom extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'classroom';
 
-    $this->courses = new Google_Service_Classroom_CoursesResource(
+    $this->courses = new Google_Service_Classroom_Resource_Courses(
         $this,
         $this->serviceName,
         'courses',
@@ -171,7 +171,7 @@ class Google_Service_Classroom extends Google_Service
           )
         )
     );
-    $this->courses_aliases = new Google_Service_Classroom_CoursesAliasesResource(
+    $this->courses_aliases = new Google_Service_Classroom_Resource_CoursesAliases(
         $this,
         $this->serviceName,
         'aliases',
@@ -224,7 +224,7 @@ class Google_Service_Classroom extends Google_Service
           )
         )
     );
-    $this->courses_courseWork = new Google_Service_Classroom_CoursesCourseWorkResource(
+    $this->courses_courseWork = new Google_Service_Classroom_Resource_CoursesCourseWork(
         $this,
         $this->serviceName,
         'courseWork',
@@ -286,7 +286,7 @@ class Google_Service_Classroom extends Google_Service
           )
         )
     );
-    $this->courses_courseWork_studentSubmissions = new Google_Service_Classroom_CoursesCourseWorkStudentSubmissionsResource(
+    $this->courses_courseWork_studentSubmissions = new Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions(
         $this,
         $this->serviceName,
         'studentSubmissions',
@@ -456,7 +456,7 @@ class Google_Service_Classroom extends Google_Service
           )
         )
     );
-    $this->courses_students = new Google_Service_Classroom_CoursesStudentsResource(
+    $this->courses_students = new Google_Service_Classroom_Resource_CoursesStudents(
         $this,
         $this->serviceName,
         'students',
@@ -528,7 +528,7 @@ class Google_Service_Classroom extends Google_Service
           )
         )
     );
-    $this->courses_teachers = new Google_Service_Classroom_CoursesTeachersResource(
+    $this->courses_teachers = new Google_Service_Classroom_Resource_CoursesTeachers(
         $this,
         $this->serviceName,
         'teachers',
@@ -596,7 +596,7 @@ class Google_Service_Classroom extends Google_Service
           )
         )
     );
-    $this->invitations = new Google_Service_Classroom_InvitationsResource(
+    $this->invitations = new Google_Service_Classroom_Resource_Invitations(
         $this,
         $this->serviceName,
         'invitations',
@@ -661,7 +661,7 @@ class Google_Service_Classroom extends Google_Service
           )
         )
     );
-    $this->userProfiles = new Google_Service_Classroom_UserProfilesResource(
+    $this->userProfiles = new Google_Service_Classroom_Resource_UserProfiles(
         $this,
         $this->serviceName,
         'userProfiles',

@@ -58,7 +58,7 @@ class Google_Service_AdSenseHost extends Google_Service
     $this->version = 'v4.1';
     $this->serviceName = 'adsensehost';
 
-    $this->accounts = new Google_Service_AdSenseHost_AccountsResource(
+    $this->accounts = new Google_Service_AdSenseHost_Resource_Accounts(
         $this,
         $this->serviceName,
         'accounts',
@@ -89,7 +89,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->accounts_adclients = new Google_Service_AdSenseHost_AccountsAdclientsResource(
+    $this->accounts_adclients = new Google_Service_AdSenseHost_Resource_AccountsAdclients(
         $this,
         $this->serviceName,
         'adclients',
@@ -132,7 +132,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->accounts_adunits = new Google_Service_AdSenseHost_AccountsAdunitsResource(
+    $this->accounts_adunits = new Google_Service_AdSenseHost_Resource_AccountsAdunits(
         $this,
         $this->serviceName,
         'adunits',
@@ -284,7 +284,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->accounts_reports = new Google_Service_AdSenseHost_AccountsReportsResource(
+    $this->accounts_reports = new Google_Service_AdSenseHost_Resource_AccountsReports(
         $this,
         $this->serviceName,
         'reports',
@@ -346,7 +346,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->adclients = new Google_Service_AdSenseHost_AdclientsResource(
+    $this->adclients = new Google_Service_AdSenseHost_Resource_Adclients(
         $this,
         $this->serviceName,
         'adclients',
@@ -379,7 +379,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->associationsessions = new Google_Service_AdSenseHost_AssociationsessionsResource(
+    $this->associationsessions = new Google_Service_AdSenseHost_Resource_Associationsessions(
         $this,
         $this->serviceName,
         'associationsessions',
@@ -423,7 +423,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->customchannels = new Google_Service_AdSenseHost_CustomchannelsResource(
+    $this->customchannels = new Google_Service_AdSenseHost_Resource_Customchannels(
         $this,
         $this->serviceName,
         'customchannels',
@@ -516,7 +516,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->reports = new Google_Service_AdSenseHost_ReportsResource(
+    $this->reports = new Google_Service_AdSenseHost_Resource_Reports(
         $this,
         $this->serviceName,
         'reports',
@@ -573,7 +573,7 @@ class Google_Service_AdSenseHost extends Google_Service
           )
         )
     );
-    $this->urlchannels = new Google_Service_AdSenseHost_UrlchannelsResource(
+    $this->urlchannels = new Google_Service_AdSenseHost_Resource_Urlchannels(
         $this,
         $this->serviceName,
         'urlchannels',

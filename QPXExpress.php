@@ -47,7 +47,7 @@ class Google_Service_QPXExpress extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'qpxExpress';
 
-    $this->trips = new Google_Service_QPXExpress_TripsResource(
+    $this->trips = new Google_Service_QPXExpress_Resource_Trips(
         $this,
         $this->serviceName,
         'trips',

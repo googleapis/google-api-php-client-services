@@ -48,7 +48,7 @@ class Google_Service_Pagespeedonline extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'pagespeedonline';
 
-    $this->pagespeedapi = new Google_Service_Pagespeedonline_PagespeedapiResource(
+    $this->pagespeedapi = new Google_Service_Pagespeedonline_Resource_Pagespeedapi(
         $this,
         $this->serviceName,
         'pagespeedapi',

@@ -52,7 +52,7 @@ class Google_Service_AnalyticsReporting extends Google_Service
     $this->version = 'v4';
     $this->serviceName = 'analyticsreporting';
 
-    $this->reports = new Google_Service_AnalyticsReporting_ReportsResource(
+    $this->reports = new Google_Service_AnalyticsReporting_Resource_Reports(
         $this,
         $this->serviceName,
         'reports',

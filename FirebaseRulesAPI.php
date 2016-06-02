@@ -58,7 +58,7 @@ class Google_Service_FirebaseRulesAPI extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'firebaserules';
 
-    $this->projects = new Google_Service_FirebaseRulesAPI_ProjectsResource(
+    $this->projects = new Google_Service_FirebaseRulesAPI_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -78,7 +78,7 @@ class Google_Service_FirebaseRulesAPI extends Google_Service
           )
         )
     );
-    $this->projects_releases = new Google_Service_FirebaseRulesAPI_ProjectsReleasesResource(
+    $this->projects_releases = new Google_Service_FirebaseRulesAPI_Resource_ProjectsReleases(
         $this,
         $this->serviceName,
         'releases',
@@ -150,7 +150,7 @@ class Google_Service_FirebaseRulesAPI extends Google_Service
           )
         )
     );
-    $this->projects_rulesets = new Google_Service_FirebaseRulesAPI_ProjectsRulesetsResource(
+    $this->projects_rulesets = new Google_Service_FirebaseRulesAPI_Resource_ProjectsRulesets(
         $this,
         $this->serviceName,
         'rulesets',

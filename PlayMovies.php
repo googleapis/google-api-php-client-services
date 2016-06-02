@@ -55,7 +55,7 @@ class Google_Service_PlayMovies extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'playmoviespartner';
 
-    $this->accounts_avails = new Google_Service_PlayMovies_AccountsAvailsResource(
+    $this->accounts_avails = new Google_Service_PlayMovies_Resource_AccountsAvails(
         $this,
         $this->serviceName,
         'avails',
@@ -131,7 +131,7 @@ class Google_Service_PlayMovies extends Google_Service
           )
         )
     );
-    $this->accounts_components = new Google_Service_PlayMovies_AccountsComponentsResource(
+    $this->accounts_components = new Google_Service_PlayMovies_Resource_AccountsComponents(
         $this,
         $this->serviceName,
         'components',
@@ -210,7 +210,7 @@ class Google_Service_PlayMovies extends Google_Service
           )
         )
     );
-    $this->accounts_components_type = new Google_Service_PlayMovies_AccountsComponentsTypeResource(
+    $this->accounts_components_type = new Google_Service_PlayMovies_Resource_AccountsComponentsType(
         $this,
         $this->serviceName,
         'type',
@@ -240,7 +240,7 @@ class Google_Service_PlayMovies extends Google_Service
           )
         )
     );
-    $this->accounts_experienceLocales = new Google_Service_PlayMovies_AccountsExperienceLocalesResource(
+    $this->accounts_experienceLocales = new Google_Service_PlayMovies_Resource_AccountsExperienceLocales(
         $this,
         $this->serviceName,
         'experienceLocales',
@@ -314,7 +314,7 @@ class Google_Service_PlayMovies extends Google_Service
           )
         )
     );
-    $this->accounts_orders = new Google_Service_PlayMovies_AccountsOrdersResource(
+    $this->accounts_orders = new Google_Service_PlayMovies_Resource_AccountsOrders(
         $this,
         $this->serviceName,
         'orders',
@@ -385,7 +385,7 @@ class Google_Service_PlayMovies extends Google_Service
           )
         )
     );
-    $this->accounts_storeInfos = new Google_Service_PlayMovies_AccountsStoreInfosResource(
+    $this->accounts_storeInfos = new Google_Service_PlayMovies_Resource_AccountsStoreInfos(
         $this,
         $this->serviceName,
         'storeInfos',
@@ -451,7 +451,7 @@ class Google_Service_PlayMovies extends Google_Service
           )
         )
     );
-    $this->accounts_storeInfos_country = new Google_Service_PlayMovies_AccountsStoreInfosCountryResource(
+    $this->accounts_storeInfos_country = new Google_Service_PlayMovies_Resource_AccountsStoreInfosCountry(
         $this,
         $this->serviceName,
         'country',

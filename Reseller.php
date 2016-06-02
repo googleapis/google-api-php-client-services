@@ -53,7 +53,7 @@ class Google_Service_Reseller extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'reseller';
 
-    $this->customers = new Google_Service_Reseller_CustomersResource(
+    $this->customers = new Google_Service_Reseller_Resource_Customers(
         $this,
         $this->serviceName,
         'customers',
@@ -102,7 +102,7 @@ class Google_Service_Reseller extends Google_Service
           )
         )
     );
-    $this->subscriptions = new Google_Service_Reseller_SubscriptionsResource(
+    $this->subscriptions = new Google_Service_Reseller_Resource_Subscriptions(
         $this,
         $this->serviceName,
         'subscriptions',

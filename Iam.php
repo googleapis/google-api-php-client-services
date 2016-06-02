@@ -52,7 +52,7 @@ class Google_Service_Iam extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'iam';
 
-    $this->projects_serviceAccounts = new Google_Service_Iam_ProjectsServiceAccountsResource(
+    $this->projects_serviceAccounts = new Google_Service_Iam_Resource_ProjectsServiceAccounts(
         $this,
         $this->serviceName,
         'serviceAccounts',
@@ -160,7 +160,7 @@ class Google_Service_Iam extends Google_Service
           )
         )
     );
-    $this->projects_serviceAccounts_keys = new Google_Service_Iam_ProjectsServiceAccountsKeysResource(
+    $this->projects_serviceAccounts_keys = new Google_Service_Iam_Resource_ProjectsServiceAccountsKeys(
         $this,
         $this->serviceName,
         'keys',

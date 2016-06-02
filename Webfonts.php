@@ -49,7 +49,7 @@ class Google_Service_Webfonts extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'webfonts';
 
-    $this->webfonts = new Google_Service_Webfonts_WebfontsResource(
+    $this->webfonts = new Google_Service_Webfonts_Resource_Webfonts(
         $this,
         $this->serviceName,
         'webfonts',

@@ -60,7 +60,7 @@ class Google_Service_Replicapool extends Google_Service
     $this->version = 'v1beta2';
     $this->serviceName = 'replicapool';
 
-    $this->instanceGroupManagers = new Google_Service_Replicapool_InstanceGroupManagersResource(
+    $this->instanceGroupManagers = new Google_Service_Replicapool_Resource_InstanceGroupManagers(
         $this,
         $this->serviceName,
         'instanceGroupManagers',
@@ -282,7 +282,7 @@ class Google_Service_Replicapool extends Google_Service
           )
         )
     );
-    $this->zoneOperations = new Google_Service_Replicapool_ZoneOperationsResource(
+    $this->zoneOperations = new Google_Service_Replicapool_Resource_ZoneOperations(
         $this,
         $this->serviceName,
         'zoneOperations',

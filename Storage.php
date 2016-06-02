@@ -66,7 +66,7 @@ class Google_Service_Storage extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'storage';
 
-    $this->bucketAccessControls = new Google_Service_Storage_BucketAccessControlsResource(
+    $this->bucketAccessControls = new Google_Service_Storage_Resource_BucketAccessControls(
         $this,
         $this->serviceName,
         'bucketAccessControls',
@@ -156,7 +156,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->buckets = new Google_Service_Storage_BucketsResource(
+    $this->buckets = new Google_Service_Storage_Resource_Buckets(
         $this,
         $this->serviceName,
         'buckets',
@@ -314,7 +314,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Storage_ChannelsResource(
+    $this->channels = new Google_Service_Storage_Resource_Channels(
         $this,
         $this->serviceName,
         'channels',
@@ -328,7 +328,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->defaultObjectAccessControls = new Google_Service_Storage_DefaultObjectAccessControlsResource(
+    $this->defaultObjectAccessControls = new Google_Service_Storage_Resource_DefaultObjectAccessControls(
         $this,
         $this->serviceName,
         'defaultObjectAccessControls',
@@ -426,7 +426,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->objectAccessControls = new Google_Service_Storage_ObjectAccessControlsResource(
+    $this->objectAccessControls = new Google_Service_Storage_Resource_ObjectAccessControls(
         $this,
         $this->serviceName,
         'objectAccessControls',
@@ -570,7 +570,7 @@ class Google_Service_Storage extends Google_Service
           )
         )
     );
-    $this->objects = new Google_Service_Storage_ObjectsResource(
+    $this->objects = new Google_Service_Storage_Resource_Objects(
         $this,
         $this->serviceName,
         'objects',

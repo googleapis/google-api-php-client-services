@@ -20,6 +20,8 @@ class Google_Service_Compute_Disk extends Google_Collection
   protected $collection_key = 'users';
   public $creationTimestamp;
   public $description;
+  protected $diskEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
+  protected $diskEncryptionKeyDataType = '';
   public $id;
   public $kind;
   public $lastAttachTimestamp;
@@ -30,8 +32,12 @@ class Google_Service_Compute_Disk extends Google_Collection
   public $selfLink;
   public $sizeGb;
   public $sourceImage;
+  protected $sourceImageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
+  protected $sourceImageEncryptionKeyDataType = '';
   public $sourceImageId;
   public $sourceSnapshot;
+  protected $sourceSnapshotEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
+  protected $sourceSnapshotEncryptionKeyDataType = '';
   public $sourceSnapshotId;
   public $status;
   public $type;
@@ -53,6 +59,14 @@ class Google_Service_Compute_Disk extends Google_Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  public function setDiskEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $diskEncryptionKey)
+  {
+    $this->diskEncryptionKey = $diskEncryptionKey;
+  }
+  public function getDiskEncryptionKey()
+  {
+    return $this->diskEncryptionKey;
   }
   public function setId($id)
   {
@@ -134,6 +148,14 @@ class Google_Service_Compute_Disk extends Google_Collection
   {
     return $this->sourceImage;
   }
+  public function setSourceImageEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $sourceImageEncryptionKey)
+  {
+    $this->sourceImageEncryptionKey = $sourceImageEncryptionKey;
+  }
+  public function getSourceImageEncryptionKey()
+  {
+    return $this->sourceImageEncryptionKey;
+  }
   public function setSourceImageId($sourceImageId)
   {
     $this->sourceImageId = $sourceImageId;
@@ -149,6 +171,14 @@ class Google_Service_Compute_Disk extends Google_Collection
   public function getSourceSnapshot()
   {
     return $this->sourceSnapshot;
+  }
+  public function setSourceSnapshotEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $sourceSnapshotEncryptionKey)
+  {
+    $this->sourceSnapshotEncryptionKey = $sourceSnapshotEncryptionKey;
+  }
+  public function getSourceSnapshotEncryptionKey()
+  {
+    return $this->sourceSnapshotEncryptionKey;
   }
   public function setSourceSnapshotId($sourceSnapshotId)
   {

@@ -53,7 +53,7 @@ class Google_Service_Taskqueue extends Google_Service
     $this->version = 'v1beta2';
     $this->serviceName = 'taskqueue';
 
-    $this->taskqueues = new Google_Service_Taskqueue_TaskqueuesResource(
+    $this->taskqueues = new Google_Service_Taskqueue_Resource_Taskqueues(
         $this,
         $this->serviceName,
         'taskqueues',
@@ -82,7 +82,7 @@ class Google_Service_Taskqueue extends Google_Service
           )
         )
     );
-    $this->tasks = new Google_Service_Taskqueue_TasksResource(
+    $this->tasks = new Google_Service_Taskqueue_Resource_Tasks(
         $this,
         $this->serviceName,
         'tasks',

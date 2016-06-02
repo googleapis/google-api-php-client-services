@@ -49,7 +49,7 @@ class Google_Service_Groupssettings extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'groupssettings';
 
-    $this->groups = new Google_Service_Groupssettings_GroupsResource(
+    $this->groups = new Google_Service_Groupssettings_Resource_Groups(
         $this,
         $this->serviceName,
         'groups',

@@ -57,7 +57,7 @@ class Google_Service_Coordinate extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'coordinate';
 
-    $this->customFieldDef = new Google_Service_Coordinate_CustomFieldDefResource(
+    $this->customFieldDef = new Google_Service_Coordinate_Resource_CustomFieldDef(
         $this,
         $this->serviceName,
         'customFieldDef',
@@ -77,7 +77,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->jobs = new Google_Service_Coordinate_JobsResource(
+    $this->jobs = new Google_Service_Coordinate_Resource_Jobs(
         $this,
         $this->serviceName,
         'jobs',
@@ -291,7 +291,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->location = new Google_Service_Coordinate_LocationResource(
+    $this->location = new Google_Service_Coordinate_Resource_Location(
         $this,
         $this->serviceName,
         'location',
@@ -329,7 +329,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->schedule = new Google_Service_Coordinate_ScheduleResource(
+    $this->schedule = new Google_Service_Coordinate_Resource_Schedule(
         $this,
         $this->serviceName,
         'schedule',
@@ -416,7 +416,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->team = new Google_Service_Coordinate_TeamResource(
+    $this->team = new Google_Service_Coordinate_Resource_Team(
         $this,
         $this->serviceName,
         'team',
@@ -443,7 +443,7 @@ class Google_Service_Coordinate extends Google_Service
           )
         )
     );
-    $this->worker = new Google_Service_Coordinate_WorkerResource(
+    $this->worker = new Google_Service_Coordinate_Resource_Worker(
         $this,
         $this->serviceName,
         'worker',

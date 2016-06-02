@@ -25,6 +25,7 @@ class Google_Service_Compute_MachineType extends Google_Collection
   public $guestCpus;
   public $id;
   public $imageSpaceGb;
+  public $isSharedCpu;
   public $kind;
   public $maximumPersistentDisks;
   public $maximumPersistentDisksSizeGb;
@@ -82,6 +83,14 @@ class Google_Service_Compute_MachineType extends Google_Collection
   public function getImageSpaceGb()
   {
     return $this->imageSpaceGb;
+  }
+  public function setIsSharedCpu($isSharedCpu)
+  {
+    $this->isSharedCpu = $isSharedCpu;
+  }
+  public function getIsSharedCpu()
+  {
+    return $this->isSharedCpu;
   }
   public function setKind($kind)
   {

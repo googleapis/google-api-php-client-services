@@ -48,7 +48,7 @@ class Google_Service_Kgsearch extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'kgsearch';
 
-    $this->entities = new Google_Service_Kgsearch_EntitiesResource(
+    $this->entities = new Google_Service_Kgsearch_Resource_Entities(
         $this,
         $this->serviceName,
         'entities',

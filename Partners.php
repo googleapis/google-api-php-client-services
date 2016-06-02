@@ -52,7 +52,7 @@ class Google_Service_Partners extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'partners';
 
-    $this->clientMessages = new Google_Service_Partners_ClientMessagesResource(
+    $this->clientMessages = new Google_Service_Partners_Resource_ClientMessages(
         $this,
         $this->serviceName,
         'clientMessages',
@@ -66,7 +66,7 @@ class Google_Service_Partners extends Google_Service
           )
         )
     );
-    $this->companies = new Google_Service_Partners_CompaniesResource(
+    $this->companies = new Google_Service_Partners_Resource_Companies(
         $this,
         $this->serviceName,
         'companies',
@@ -237,7 +237,7 @@ class Google_Service_Partners extends Google_Service
           )
         )
     );
-    $this->companies_leads = new Google_Service_Partners_CompaniesLeadsResource(
+    $this->companies_leads = new Google_Service_Partners_Resource_CompaniesLeads(
         $this,
         $this->serviceName,
         'leads',
@@ -257,7 +257,7 @@ class Google_Service_Partners extends Google_Service
           )
         )
     );
-    $this->userEvents = new Google_Service_Partners_UserEventsResource(
+    $this->userEvents = new Google_Service_Partners_Resource_UserEvents(
         $this,
         $this->serviceName,
         'userEvents',
@@ -271,7 +271,7 @@ class Google_Service_Partners extends Google_Service
           )
         )
     );
-    $this->userStates = new Google_Service_Partners_UserStatesResource(
+    $this->userStates = new Google_Service_Partners_Resource_UserStates(
         $this,
         $this->serviceName,
         'userStates',

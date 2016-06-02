@@ -53,7 +53,7 @@ class Google_Service_Container extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'container';
 
-    $this->projects_zones = new Google_Service_Container_ProjectsZonesResource(
+    $this->projects_zones = new Google_Service_Container_Resource_ProjectsZones(
         $this,
         $this->serviceName,
         'zones',
@@ -78,7 +78,7 @@ class Google_Service_Container extends Google_Service
           )
         )
     );
-    $this->projects_zones_clusters = new Google_Service_Container_ProjectsZonesClustersResource(
+    $this->projects_zones_clusters = new Google_Service_Container_Resource_ProjectsZonesClusters(
         $this,
         $this->serviceName,
         'clusters',
@@ -178,7 +178,7 @@ class Google_Service_Container extends Google_Service
           )
         )
     );
-    $this->projects_zones_clusters_nodePools = new Google_Service_Container_ProjectsZonesClustersNodePoolsResource(
+    $this->projects_zones_clusters_nodePools = new Google_Service_Container_Resource_ProjectsZonesClustersNodePools(
         $this,
         $this->serviceName,
         'nodePools',
@@ -278,7 +278,7 @@ class Google_Service_Container extends Google_Service
           )
         )
     );
-    $this->projects_zones_operations = new Google_Service_Container_ProjectsZonesOperationsResource(
+    $this->projects_zones_operations = new Google_Service_Container_Resource_ProjectsZonesOperations(
         $this,
         $this->serviceName,
         'operations',

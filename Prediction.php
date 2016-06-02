@@ -63,7 +63,7 @@ class Google_Service_Prediction extends Google_Service
     $this->version = 'v1.6';
     $this->serviceName = 'prediction';
 
-    $this->hostedmodels = new Google_Service_Prediction_HostedmodelsResource(
+    $this->hostedmodels = new Google_Service_Prediction_Resource_Hostedmodels(
         $this,
         $this->serviceName,
         'hostedmodels',
@@ -88,7 +88,7 @@ class Google_Service_Prediction extends Google_Service
           )
         )
     );
-    $this->trainedmodels = new Google_Service_Prediction_TrainedmodelsResource(
+    $this->trainedmodels = new Google_Service_Prediction_Resource_Trainedmodels(
         $this,
         $this->serviceName,
         'trainedmodels',

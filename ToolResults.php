@@ -53,7 +53,7 @@ class Google_Service_ToolResults extends Google_Service
     $this->version = 'v1beta3';
     $this->serviceName = 'toolresults';
 
-    $this->projects = new Google_Service_ToolResults_ProjectsResource(
+    $this->projects = new Google_Service_ToolResults_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -83,7 +83,7 @@ class Google_Service_ToolResults extends Google_Service
           )
         )
     );
-    $this->projects_histories = new Google_Service_ToolResults_ProjectsHistoriesResource(
+    $this->projects_histories = new Google_Service_ToolResults_Resource_ProjectsHistories(
         $this,
         $this->serviceName,
         'histories',
@@ -144,7 +144,7 @@ class Google_Service_ToolResults extends Google_Service
           )
         )
     );
-    $this->projects_histories_executions = new Google_Service_ToolResults_ProjectsHistoriesExecutionsResource(
+    $this->projects_histories_executions = new Google_Service_ToolResults_Resource_ProjectsHistoriesExecutions(
         $this,
         $this->serviceName,
         'executions',
@@ -240,7 +240,7 @@ class Google_Service_ToolResults extends Google_Service
           )
         )
     );
-    $this->projects_histories_executions_steps = new Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsResource(
+    $this->projects_histories_executions_steps = new Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsSteps(
         $this,
         $this->serviceName,
         'steps',
@@ -381,7 +381,7 @@ class Google_Service_ToolResults extends Google_Service
           )
         )
     );
-    $this->projects_histories_executions_steps_thumbnails = new Google_Service_ToolResults_ProjectsHistoriesExecutionsStepsThumbnailsResource(
+    $this->projects_histories_executions_steps_thumbnails = new Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsStepsThumbnails(
         $this,
         $this->serviceName,
         'thumbnails',

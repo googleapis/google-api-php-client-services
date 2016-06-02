@@ -51,7 +51,7 @@ class Google_Service_Safebrowsing extends Google_Service
     $this->version = 'v4';
     $this->serviceName = 'safebrowsing';
 
-    $this->fullHashes = new Google_Service_Safebrowsing_FullHashesResource(
+    $this->fullHashes = new Google_Service_Safebrowsing_Resource_FullHashes(
         $this,
         $this->serviceName,
         'fullHashes',
@@ -65,7 +65,7 @@ class Google_Service_Safebrowsing extends Google_Service
           )
         )
     );
-    $this->threatListUpdates = new Google_Service_Safebrowsing_ThreatListUpdatesResource(
+    $this->threatListUpdates = new Google_Service_Safebrowsing_Resource_ThreatListUpdates(
         $this,
         $this->serviceName,
         'threatListUpdates',
@@ -79,7 +79,7 @@ class Google_Service_Safebrowsing extends Google_Service
           )
         )
     );
-    $this->threatLists = new Google_Service_Safebrowsing_ThreatListsResource(
+    $this->threatLists = new Google_Service_Safebrowsing_Resource_ThreatLists(
         $this,
         $this->serviceName,
         'threatLists',
@@ -93,7 +93,7 @@ class Google_Service_Safebrowsing extends Google_Service
           )
         )
     );
-    $this->threatMatches = new Google_Service_Safebrowsing_ThreatMatchesResource(
+    $this->threatMatches = new Google_Service_Safebrowsing_Resource_ThreatMatches(
         $this,
         $this->serviceName,
         'threatMatches',

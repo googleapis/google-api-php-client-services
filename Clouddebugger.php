@@ -59,7 +59,7 @@ class Google_Service_Clouddebugger extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'clouddebugger';
 
-    $this->controller_debuggees = new Google_Service_Clouddebugger_ControllerDebuggeesResource(
+    $this->controller_debuggees = new Google_Service_Clouddebugger_Resource_ControllerDebuggees(
         $this,
         $this->serviceName,
         'debuggees',
@@ -73,7 +73,7 @@ class Google_Service_Clouddebugger extends Google_Service
           )
         )
     );
-    $this->controller_debuggees_breakpoints = new Google_Service_Clouddebugger_ControllerDebuggeesBreakpointsResource(
+    $this->controller_debuggees_breakpoints = new Google_Service_Clouddebugger_Resource_ControllerDebuggeesBreakpoints(
         $this,
         $this->serviceName,
         'breakpoints',
@@ -116,7 +116,7 @@ class Google_Service_Clouddebugger extends Google_Service
           )
         )
     );
-    $this->debugger_debuggees = new Google_Service_Clouddebugger_DebuggerDebuggeesResource(
+    $this->debugger_debuggees = new Google_Service_Clouddebugger_Resource_DebuggerDebuggees(
         $this,
         $this->serviceName,
         'debuggees',
@@ -143,7 +143,7 @@ class Google_Service_Clouddebugger extends Google_Service
           )
         )
     );
-    $this->debugger_debuggees_breakpoints = new Google_Service_Clouddebugger_DebuggerDebuggeesBreakpointsResource(
+    $this->debugger_debuggees_breakpoints = new Google_Service_Clouddebugger_Resource_DebuggerDebuggeesBreakpoints(
         $this,
         $this->serviceName,
         'breakpoints',

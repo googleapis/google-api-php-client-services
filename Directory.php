@@ -150,7 +150,7 @@ class Google_Service_Directory extends Google_Service
     $this->version = 'directory_v1';
     $this->serviceName = 'admin';
 
-    $this->asps = new Google_Service_Directory_AspsResource(
+    $this->asps = new Google_Service_Directory_Resource_Asps(
         $this,
         $this->serviceName,
         'asps',
@@ -200,7 +200,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Directory_ChannelsResource(
+    $this->channels = new Google_Service_Directory_Resource_Channels(
         $this,
         $this->serviceName,
         'channels',
@@ -214,7 +214,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->chromeosdevices = new Google_Service_Directory_ChromeosdevicesResource(
+    $this->chromeosdevices = new Google_Service_Directory_Resource_Chromeosdevices(
         $this,
         $this->serviceName,
         'chromeosdevices',
@@ -315,7 +315,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->customers = new Google_Service_Directory_CustomersResource(
+    $this->customers = new Google_Service_Directory_Resource_Customers(
         $this,
         $this->serviceName,
         'customers',
@@ -355,7 +355,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->domainAliases = new Google_Service_Directory_DomainAliasesResource(
+    $this->domainAliases = new Google_Service_Directory_Resource_DomainAliases(
         $this,
         $this->serviceName,
         'domainAliases',
@@ -419,7 +419,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->domains = new Google_Service_Directory_DomainsResource(
+    $this->domains = new Google_Service_Directory_Resource_Domains(
         $this,
         $this->serviceName,
         'domains',
@@ -479,7 +479,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->groups = new Google_Service_Directory_GroupsResource(
+    $this->groups = new Google_Service_Directory_Resource_Groups(
         $this,
         $this->serviceName,
         'groups',
@@ -558,7 +558,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->groups_aliases = new Google_Service_Directory_GroupsAliasesResource(
+    $this->groups_aliases = new Google_Service_Directory_Resource_GroupsAliases(
         $this,
         $this->serviceName,
         'aliases',
@@ -603,7 +603,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->members = new Google_Service_Directory_MembersResource(
+    $this->members = new Google_Service_Directory_Resource_Members(
         $this,
         $this->serviceName,
         'members',
@@ -705,7 +705,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->mobiledevices = new Google_Service_Directory_MobiledevicesResource(
+    $this->mobiledevices = new Google_Service_Directory_Resource_Mobiledevices(
         $this,
         $this->serviceName,
         'mobiledevices',
@@ -798,7 +798,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->notifications = new Google_Service_Directory_NotificationsResource(
+    $this->notifications = new Google_Service_Directory_Resource_Notifications(
         $this,
         $this->serviceName,
         'notifications',
@@ -890,7 +890,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->orgunits = new Google_Service_Directory_OrgunitsResource(
+    $this->orgunits = new Google_Service_Directory_Resource_Orgunits(
         $this,
         $this->serviceName,
         'orgunits',
@@ -992,7 +992,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->privileges = new Google_Service_Directory_PrivilegesResource(
+    $this->privileges = new Google_Service_Directory_Resource_Privileges(
         $this,
         $this->serviceName,
         'privileges',
@@ -1012,7 +1012,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->resources_calendars = new Google_Service_Directory_ResourcesCalendarsResource(
+    $this->resources_calendars = new Google_Service_Directory_Resource_ResourcesCalendars(
         $this,
         $this->serviceName,
         'calendars',
@@ -1110,7 +1110,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->roleAssignments = new Google_Service_Directory_RoleAssignmentsResource(
+    $this->roleAssignments = new Google_Service_Directory_Resource_RoleAssignments(
         $this,
         $this->serviceName,
         'roleAssignments',
@@ -1186,7 +1186,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->roles = new Google_Service_Directory_RolesResource(
+    $this->roles = new Google_Service_Directory_Resource_Roles(
         $this,
         $this->serviceName,
         'roles',
@@ -1284,7 +1284,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->schemas = new Google_Service_Directory_SchemasResource(
+    $this->schemas = new Google_Service_Directory_Resource_Schemas(
         $this,
         $this->serviceName,
         'schemas',
@@ -1374,7 +1374,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->tokens = new Google_Service_Directory_TokensResource(
+    $this->tokens = new Google_Service_Directory_Resource_Tokens(
         $this,
         $this->serviceName,
         'tokens',
@@ -1424,7 +1424,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->users = new Google_Service_Directory_UsersResource(
+    $this->users = new Google_Service_Directory_Resource_Users(
         $this,
         $this->serviceName,
         'users',
@@ -1616,7 +1616,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->users_aliases = new Google_Service_Directory_UsersAliasesResource(
+    $this->users_aliases = new Google_Service_Directory_Resource_UsersAliases(
         $this,
         $this->serviceName,
         'aliases',
@@ -1679,7 +1679,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->users_photos = new Google_Service_Directory_UsersPhotosResource(
+    $this->users_photos = new Google_Service_Directory_Resource_UsersPhotos(
         $this,
         $this->serviceName,
         'photos',
@@ -1729,7 +1729,7 @@ class Google_Service_Directory extends Google_Service
           )
         )
     );
-    $this->verificationCodes = new Google_Service_Directory_VerificationCodesResource(
+    $this->verificationCodes = new Google_Service_Directory_Resource_VerificationCodes(
         $this,
         $this->serviceName,
         'verificationCodes',

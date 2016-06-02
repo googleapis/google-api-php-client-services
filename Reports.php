@@ -56,7 +56,7 @@ class Google_Service_Reports extends Google_Service
     $this->version = 'reports_v1';
     $this->serviceName = 'admin';
 
-    $this->activities = new Google_Service_Reports_ActivitiesResource(
+    $this->activities = new Google_Service_Reports_Resource_Activities(
         $this,
         $this->serviceName,
         'activities',
@@ -160,7 +160,7 @@ class Google_Service_Reports extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Reports_ChannelsResource(
+    $this->channels = new Google_Service_Reports_Resource_Channels(
         $this,
         $this->serviceName,
         'channels',
@@ -174,7 +174,7 @@ class Google_Service_Reports extends Google_Service
           )
         )
     );
-    $this->customerUsageReports = new Google_Service_Reports_CustomerUsageReportsResource(
+    $this->customerUsageReports = new Google_Service_Reports_Resource_CustomerUsageReports(
         $this,
         $this->serviceName,
         'customerUsageReports',
@@ -206,7 +206,7 @@ class Google_Service_Reports extends Google_Service
           )
         )
     );
-    $this->userUsageReport = new Google_Service_Reports_UserUsageReportResource(
+    $this->userUsageReport = new Google_Service_Reports_Resource_UserUsageReport(
         $this,
         $this->serviceName,
         'userUsageReport',

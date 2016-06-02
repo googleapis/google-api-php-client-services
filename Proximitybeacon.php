@@ -54,7 +54,7 @@ class Google_Service_Proximitybeacon extends Google_Service
     $this->version = 'v1beta1';
     $this->serviceName = 'proximitybeacon';
 
-    $this->beaconinfo = new Google_Service_Proximitybeacon_BeaconinfoResource(
+    $this->beaconinfo = new Google_Service_Proximitybeacon_Resource_Beaconinfo(
         $this,
         $this->serviceName,
         'beaconinfo',
@@ -68,7 +68,7 @@ class Google_Service_Proximitybeacon extends Google_Service
           )
         )
     );
-    $this->beacons = new Google_Service_Proximitybeacon_BeaconsResource(
+    $this->beacons = new Google_Service_Proximitybeacon_Resource_Beacons(
         $this,
         $this->serviceName,
         'beacons',
@@ -178,7 +178,7 @@ class Google_Service_Proximitybeacon extends Google_Service
           )
         )
     );
-    $this->beacons_attachments = new Google_Service_Proximitybeacon_BeaconsAttachmentsResource(
+    $this->beacons_attachments = new Google_Service_Proximitybeacon_Resource_BeaconsAttachments(
         $this,
         $this->serviceName,
         'attachments',
@@ -252,7 +252,7 @@ class Google_Service_Proximitybeacon extends Google_Service
           )
         )
     );
-    $this->beacons_diagnostics = new Google_Service_Proximitybeacon_BeaconsDiagnosticsResource(
+    $this->beacons_diagnostics = new Google_Service_Proximitybeacon_Resource_BeaconsDiagnostics(
         $this,
         $this->serviceName,
         'diagnostics',
@@ -288,7 +288,7 @@ class Google_Service_Proximitybeacon extends Google_Service
           )
         )
     );
-    $this->namespaces = new Google_Service_Proximitybeacon_NamespacesResource(
+    $this->namespaces = new Google_Service_Proximitybeacon_Resource_Namespaces(
         $this,
         $this->serviceName,
         'namespaces',
@@ -321,7 +321,7 @@ class Google_Service_Proximitybeacon extends Google_Service
           )
         )
     );
-    $this->v1beta1 = new Google_Service_Proximitybeacon_V1beta1Resource(
+    $this->v1beta1 = new Google_Service_Proximitybeacon_Resource_V1beta1(
         $this,
         $this->serviceName,
         'v1beta1',

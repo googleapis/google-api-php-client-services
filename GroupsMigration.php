@@ -49,7 +49,7 @@ class Google_Service_GroupsMigration extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'groupsmigration';
 
-    $this->archive = new Google_Service_GroupsMigration_ArchiveResource(
+    $this->archive = new Google_Service_GroupsMigration_Resource_Archive(
         $this,
         $this->serviceName,
         'archive',

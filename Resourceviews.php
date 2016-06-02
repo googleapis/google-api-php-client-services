@@ -66,7 +66,7 @@ class Google_Service_Resourceviews extends Google_Service
     $this->version = 'v1beta2';
     $this->serviceName = 'resourceviews';
 
-    $this->zoneOperations = new Google_Service_Resourceviews_ZoneOperationsResource(
+    $this->zoneOperations = new Google_Service_Resourceviews_Resource_ZoneOperations(
         $this,
         $this->serviceName,
         'zoneOperations',
@@ -123,7 +123,7 @@ class Google_Service_Resourceviews extends Google_Service
           )
         )
     );
-    $this->zoneViews = new Google_Service_Resourceviews_ZoneViewsResource(
+    $this->zoneViews = new Google_Service_Resourceviews_Resource_ZoneViews(
         $this,
         $this->serviceName,
         'zoneViews',

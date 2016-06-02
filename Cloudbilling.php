@@ -52,7 +52,7 @@ class Google_Service_Cloudbilling extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'cloudbilling';
 
-    $this->billingAccounts = new Google_Service_Cloudbilling_BillingAccountsResource(
+    $this->billingAccounts = new Google_Service_Cloudbilling_Resource_BillingAccounts(
         $this,
         $this->serviceName,
         'billingAccounts',
@@ -85,7 +85,7 @@ class Google_Service_Cloudbilling extends Google_Service
           )
         )
     );
-    $this->billingAccounts_projects = new Google_Service_Cloudbilling_BillingAccountsProjectsResource(
+    $this->billingAccounts_projects = new Google_Service_Cloudbilling_Resource_BillingAccountsProjects(
         $this,
         $this->serviceName,
         'projects',
@@ -113,7 +113,7 @@ class Google_Service_Cloudbilling extends Google_Service
           )
         )
     );
-    $this->projects = new Google_Service_Cloudbilling_ProjectsResource(
+    $this->projects = new Google_Service_Cloudbilling_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',

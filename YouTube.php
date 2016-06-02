@@ -90,7 +90,7 @@ class Google_Service_YouTube extends Google_Service
     $this->version = 'v3';
     $this->serviceName = 'youtube';
 
-    $this->activities = new Google_Service_YouTube_ActivitiesResource(
+    $this->activities = new Google_Service_YouTube_Resource_Activities(
         $this,
         $this->serviceName,
         'activities',
@@ -152,7 +152,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->captions = new Google_Service_YouTube_CaptionsResource(
+    $this->captions = new Google_Service_YouTube_Resource_Captions(
         $this,
         $this->serviceName,
         'captions',
@@ -277,7 +277,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->channelBanners = new Google_Service_YouTube_ChannelBannersResource(
+    $this->channelBanners = new Google_Service_YouTube_Resource_ChannelBanners(
         $this,
         $this->serviceName,
         'channelBanners',
@@ -296,7 +296,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->channelSections = new Google_Service_YouTube_ChannelSectionsResource(
+    $this->channelSections = new Google_Service_YouTube_Resource_ChannelSections(
         $this,
         $this->serviceName,
         'channelSections',
@@ -382,7 +382,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_YouTube_ChannelsResource(
+    $this->channels = new Google_Service_YouTube_Resource_Channels(
         $this,
         $this->serviceName,
         'channels',
@@ -456,7 +456,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->commentThreads = new Google_Service_YouTube_CommentThreadsResource(
+    $this->commentThreads = new Google_Service_YouTube_Resource_CommentThreads(
         $this,
         $this->serviceName,
         'commentThreads',
@@ -536,7 +536,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->comments = new Google_Service_YouTube_CommentsResource(
+    $this->comments = new Google_Service_YouTube_Resource_Comments(
         $this,
         $this->serviceName,
         'comments',
@@ -635,7 +635,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->fanFundingEvents = new Google_Service_YouTube_FanFundingEventsResource(
+    $this->fanFundingEvents = new Google_Service_YouTube_Resource_FanFundingEvents(
         $this,
         $this->serviceName,
         'fanFundingEvents',
@@ -667,7 +667,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->guideCategories = new Google_Service_YouTube_GuideCategoriesResource(
+    $this->guideCategories = new Google_Service_YouTube_Resource_GuideCategories(
         $this,
         $this->serviceName,
         'guideCategories',
@@ -699,7 +699,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->i18nLanguages = new Google_Service_YouTube_I18nLanguagesResource(
+    $this->i18nLanguages = new Google_Service_YouTube_Resource_I18nLanguages(
         $this,
         $this->serviceName,
         'i18nLanguages',
@@ -723,7 +723,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->i18nRegions = new Google_Service_YouTube_I18nRegionsResource(
+    $this->i18nRegions = new Google_Service_YouTube_Resource_I18nRegions(
         $this,
         $this->serviceName,
         'i18nRegions',
@@ -747,7 +747,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->liveBroadcasts = new Google_Service_YouTube_LiveBroadcastsResource(
+    $this->liveBroadcasts = new Google_Service_YouTube_Resource_LiveBroadcasts(
         $this,
         $this->serviceName,
         'liveBroadcasts',
@@ -943,7 +943,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->liveChatBans = new Google_Service_YouTube_LiveChatBansResource(
+    $this->liveChatBans = new Google_Service_YouTube_Resource_LiveChatBans(
         $this,
         $this->serviceName,
         'liveChatBans',
@@ -973,7 +973,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->liveChatMessages = new Google_Service_YouTube_LiveChatMessagesResource(
+    $this->liveChatMessages = new Google_Service_YouTube_Resource_LiveChatMessages(
         $this,
         $this->serviceName,
         'liveChatMessages',
@@ -1034,7 +1034,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->liveChatModerators = new Google_Service_YouTube_LiveChatModeratorsResource(
+    $this->liveChatModerators = new Google_Service_YouTube_Resource_LiveChatModerators(
         $this,
         $this->serviceName,
         'liveChatModerators',
@@ -1087,7 +1087,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->liveStreams = new Google_Service_YouTube_LiveStreamsResource(
+    $this->liveStreams = new Google_Service_YouTube_Resource_LiveStreams(
         $this,
         $this->serviceName,
         'liveStreams',
@@ -1185,7 +1185,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->playlistItems = new Google_Service_YouTube_PlaylistItemsResource(
+    $this->playlistItems = new Google_Service_YouTube_Resource_PlaylistItems(
         $this,
         $this->serviceName,
         'playlistItems',
@@ -1263,7 +1263,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->playlists = new Google_Service_YouTube_PlaylistsResource(
+    $this->playlists = new Google_Service_YouTube_Resource_Playlists(
         $this,
         $this->serviceName,
         'playlists',
@@ -1361,7 +1361,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->search = new Google_Service_YouTube_SearchResource(
+    $this->search = new Google_Service_YouTube_Resource_Search(
         $this,
         $this->serviceName,
         'search',
@@ -1501,7 +1501,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->sponsors = new Google_Service_YouTube_SponsorsResource(
+    $this->sponsors = new Google_Service_YouTube_Resource_Sponsors(
         $this,
         $this->serviceName,
         'sponsors',
@@ -1533,7 +1533,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->subscriptions = new Google_Service_YouTube_SubscriptionsResource(
+    $this->subscriptions = new Google_Service_YouTube_Resource_Subscriptions(
         $this,
         $this->serviceName,
         'subscriptions',
@@ -1617,7 +1617,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->thumbnails = new Google_Service_YouTube_ThumbnailsResource(
+    $this->thumbnails = new Google_Service_YouTube_Resource_Thumbnails(
         $this,
         $this->serviceName,
         'thumbnails',
@@ -1641,7 +1641,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->videoAbuseReportReasons = new Google_Service_YouTube_VideoAbuseReportReasonsResource(
+    $this->videoAbuseReportReasons = new Google_Service_YouTube_Resource_VideoAbuseReportReasons(
         $this,
         $this->serviceName,
         'videoAbuseReportReasons',
@@ -1665,7 +1665,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->videoCategories = new Google_Service_YouTube_VideoCategoriesResource(
+    $this->videoCategories = new Google_Service_YouTube_Resource_VideoCategories(
         $this,
         $this->serviceName,
         'videoCategories',
@@ -1697,7 +1697,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->videos = new Google_Service_YouTube_VideosResource(
+    $this->videos = new Google_Service_YouTube_Resource_Videos(
         $this,
         $this->serviceName,
         'videos',
@@ -1853,7 +1853,7 @@ class Google_Service_YouTube extends Google_Service
           )
         )
     );
-    $this->watermarks = new Google_Service_YouTube_WatermarksResource(
+    $this->watermarks = new Google_Service_YouTube_Resource_Watermarks(
         $this,
         $this->serviceName,
         'watermarks',

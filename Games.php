@@ -69,7 +69,7 @@ class Google_Service_Games extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'games';
 
-    $this->achievementDefinitions = new Google_Service_Games_AchievementDefinitionsResource(
+    $this->achievementDefinitions = new Google_Service_Games_Resource_AchievementDefinitions(
         $this,
         $this->serviceName,
         'achievementDefinitions',
@@ -100,7 +100,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->achievements = new Google_Service_Games_AchievementsResource(
+    $this->achievements = new Google_Service_Games_Resource_Achievements(
         $this,
         $this->serviceName,
         'achievements',
@@ -219,7 +219,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->applications = new Google_Service_Games_ApplicationsResource(
+    $this->applications = new Google_Service_Games_Resource_Applications(
         $this,
         $this->serviceName,
         'applications',
@@ -274,7 +274,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->events = new Google_Service_Games_EventsResource(
+    $this->events = new Google_Service_Games_Resource_Events(
         $this,
         $this->serviceName,
         'events',
@@ -339,7 +339,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->leaderboards = new Google_Service_Games_LeaderboardsResource(
+    $this->leaderboards = new Google_Service_Games_Resource_Leaderboards(
         $this,
         $this->serviceName,
         'leaderboards',
@@ -388,7 +388,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->metagame = new Google_Service_Games_MetagameResource(
+    $this->metagame = new Google_Service_Games_Resource_Metagame(
         $this,
         $this->serviceName,
         'metagame',
@@ -438,7 +438,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->players = new Google_Service_Games_PlayersResource(
+    $this->players = new Google_Service_Games_Resource_Players(
         $this,
         $this->serviceName,
         'players',
@@ -492,7 +492,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->pushtokens = new Google_Service_Games_PushtokensResource(
+    $this->pushtokens = new Google_Service_Games_Resource_Pushtokens(
         $this,
         $this->serviceName,
         'pushtokens',
@@ -520,7 +520,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->questMilestones = new Google_Service_Games_QuestMilestonesResource(
+    $this->questMilestones = new Google_Service_Games_Resource_QuestMilestones(
         $this,
         $this->serviceName,
         'questMilestones',
@@ -554,7 +554,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->quests = new Google_Service_Games_QuestsResource(
+    $this->quests = new Google_Service_Games_Resource_Quests(
         $this,
         $this->serviceName,
         'quests',
@@ -608,7 +608,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->revisions = new Google_Service_Games_RevisionsResource(
+    $this->revisions = new Google_Service_Games_Resource_Revisions(
         $this,
         $this->serviceName,
         'revisions',
@@ -632,7 +632,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->rooms = new Google_Service_Games_RoomsResource(
+    $this->rooms = new Google_Service_Games_Resource_Rooms(
         $this,
         $this->serviceName,
         'rooms',
@@ -780,7 +780,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->scores = new Google_Service_Games_ScoresResource(
+    $this->scores = new Google_Service_Games_Resource_Scores(
         $this,
         $this->serviceName,
         'scores',
@@ -950,7 +950,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->snapshots = new Google_Service_Games_SnapshotsResource(
+    $this->snapshots = new Google_Service_Games_Resource_Snapshots(
         $this,
         $this->serviceName,
         'snapshots',
@@ -1004,7 +1004,7 @@ class Google_Service_Games extends Google_Service
           )
         )
     );
-    $this->turnBasedMatches = new Google_Service_Games_TurnBasedMatchesResource(
+    $this->turnBasedMatches = new Google_Service_Games_Resource_TurnBasedMatches(
         $this,
         $this->serviceName,
         'turnBasedMatches',

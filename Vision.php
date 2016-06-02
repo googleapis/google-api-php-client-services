@@ -51,7 +51,7 @@ class Google_Service_Vision extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'vision';
 
-    $this->images = new Google_Service_Vision_ImagesResource(
+    $this->images = new Google_Service_Vision_Resource_Images(
         $this,
         $this->serviceName,
         'images',

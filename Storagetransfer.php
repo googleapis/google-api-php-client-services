@@ -53,7 +53,7 @@ class Google_Service_Storagetransfer extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'storagetransfer';
 
-    $this->googleServiceAccounts = new Google_Service_Storagetransfer_GoogleServiceAccountsResource(
+    $this->googleServiceAccounts = new Google_Service_Storagetransfer_Resource_GoogleServiceAccounts(
         $this,
         $this->serviceName,
         'googleServiceAccounts',
@@ -73,7 +73,7 @@ class Google_Service_Storagetransfer extends Google_Service
           )
         )
     );
-    $this->transferJobs = new Google_Service_Storagetransfer_TransferJobsResource(
+    $this->transferJobs = new Google_Service_Storagetransfer_Resource_TransferJobs(
         $this,
         $this->serviceName,
         'transferJobs',
@@ -128,7 +128,7 @@ class Google_Service_Storagetransfer extends Google_Service
           )
         )
     );
-    $this->transferOperations = new Google_Service_Storagetransfer_TransferOperationsResource(
+    $this->transferOperations = new Google_Service_Storagetransfer_Resource_TransferOperations(
         $this,
         $this->serviceName,
         'transferOperations',
@@ -210,7 +210,7 @@ class Google_Service_Storagetransfer extends Google_Service
           )
         )
     );
-    $this->v1 = new Google_Service_Storagetransfer_V1Resource(
+    $this->v1 = new Google_Service_Storagetransfer_Resource_V1(
         $this,
         $this->serviceName,
         'v1',

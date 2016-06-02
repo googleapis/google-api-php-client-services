@@ -49,7 +49,7 @@ class Google_Service_Licensing extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'licensing';
 
-    $this->licenseAssignments = new Google_Service_Licensing_LicenseAssignmentsResource(
+    $this->licenseAssignments = new Google_Service_Licensing_Resource_LicenseAssignments(
         $this,
         $this->serviceName,
         'licenseAssignments',

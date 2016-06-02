@@ -81,7 +81,7 @@ class Google_Service_PlusDomains extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'plusDomains';
 
-    $this->activities = new Google_Service_PlusDomains_ActivitiesResource(
+    $this->activities = new Google_Service_PlusDomains_Resource_Activities(
         $this,
         $this->serviceName,
         'activities',
@@ -138,7 +138,7 @@ class Google_Service_PlusDomains extends Google_Service
           )
         )
     );
-    $this->audiences = new Google_Service_PlusDomains_AudiencesResource(
+    $this->audiences = new Google_Service_PlusDomains_Resource_Audiences(
         $this,
         $this->serviceName,
         'audiences',
@@ -166,7 +166,7 @@ class Google_Service_PlusDomains extends Google_Service
           )
         )
     );
-    $this->circles = new Google_Service_PlusDomains_CirclesResource(
+    $this->circles = new Google_Service_PlusDomains_Resource_Circles(
         $this,
         $this->serviceName,
         'circles',
@@ -284,7 +284,7 @@ class Google_Service_PlusDomains extends Google_Service
           )
         )
     );
-    $this->comments = new Google_Service_PlusDomains_CommentsResource(
+    $this->comments = new Google_Service_PlusDomains_Resource_Comments(
         $this,
         $this->serviceName,
         'comments',
@@ -336,7 +336,7 @@ class Google_Service_PlusDomains extends Google_Service
           )
         )
     );
-    $this->media = new Google_Service_PlusDomains_MediaResource(
+    $this->media = new Google_Service_PlusDomains_Resource_Media(
         $this,
         $this->serviceName,
         'media',
@@ -361,7 +361,7 @@ class Google_Service_PlusDomains extends Google_Service
           )
         )
     );
-    $this->people = new Google_Service_PlusDomains_PeopleResource(
+    $this->people = new Google_Service_PlusDomains_Resource_People(
         $this,
         $this->serviceName,
         'people',

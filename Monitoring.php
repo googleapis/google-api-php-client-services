@@ -69,7 +69,7 @@ class Google_Service_Monitoring extends Google_Service
     $this->version = 'v3';
     $this->serviceName = 'monitoring';
 
-    $this->projects_collectdTimeSeries = new Google_Service_Monitoring_ProjectsCollectdTimeSeriesResource(
+    $this->projects_collectdTimeSeries = new Google_Service_Monitoring_Resource_ProjectsCollectdTimeSeries(
         $this,
         $this->serviceName,
         'collectdTimeSeries',
@@ -89,7 +89,7 @@ class Google_Service_Monitoring extends Google_Service
           )
         )
     );
-    $this->projects_groups = new Google_Service_Monitoring_ProjectsGroupsResource(
+    $this->projects_groups = new Google_Service_Monitoring_Resource_ProjectsGroups(
         $this,
         $this->serviceName,
         'groups',
@@ -177,7 +177,7 @@ class Google_Service_Monitoring extends Google_Service
           )
         )
     );
-    $this->projects_groups_members = new Google_Service_Monitoring_ProjectsGroupsMembersResource(
+    $this->projects_groups_members = new Google_Service_Monitoring_Resource_ProjectsGroupsMembers(
         $this,
         $this->serviceName,
         'members',
@@ -217,7 +217,7 @@ class Google_Service_Monitoring extends Google_Service
           )
         )
     );
-    $this->projects_metricDescriptors = new Google_Service_Monitoring_ProjectsMetricDescriptorsResource(
+    $this->projects_metricDescriptors = new Google_Service_Monitoring_Resource_ProjectsMetricDescriptors(
         $this,
         $this->serviceName,
         'metricDescriptors',
@@ -279,7 +279,7 @@ class Google_Service_Monitoring extends Google_Service
           )
         )
     );
-    $this->projects_monitoredResourceDescriptors = new Google_Service_Monitoring_ProjectsMonitoredResourceDescriptorsResource(
+    $this->projects_monitoredResourceDescriptors = new Google_Service_Monitoring_Resource_ProjectsMonitoredResourceDescriptors(
         $this,
         $this->serviceName,
         'monitoredResourceDescriptors',
@@ -321,7 +321,7 @@ class Google_Service_Monitoring extends Google_Service
           )
         )
     );
-    $this->projects_timeSeries = new Google_Service_Monitoring_ProjectsTimeSeriesResource(
+    $this->projects_timeSeries = new Google_Service_Monitoring_Resource_ProjectsTimeSeries(
         $this,
         $this->serviceName,
         'timeSeries',

@@ -56,7 +56,7 @@ class Google_Service_YouTubeReporting extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'youtubereporting';
 
-    $this->jobs = new Google_Service_YouTubeReporting_JobsResource(
+    $this->jobs = new Google_Service_YouTubeReporting_Resource_Jobs(
         $this,
         $this->serviceName,
         'jobs',
@@ -124,7 +124,7 @@ class Google_Service_YouTubeReporting extends Google_Service
           )
         )
     );
-    $this->jobs_reports = new Google_Service_YouTubeReporting_JobsReportsResource(
+    $this->jobs_reports = new Google_Service_YouTubeReporting_Resource_JobsReports(
         $this,
         $this->serviceName,
         'reports',
@@ -187,7 +187,7 @@ class Google_Service_YouTubeReporting extends Google_Service
           )
         )
     );
-    $this->media = new Google_Service_YouTubeReporting_MediaResource(
+    $this->media = new Google_Service_YouTubeReporting_Resource_Media(
         $this,
         $this->serviceName,
         'media',
@@ -207,7 +207,7 @@ class Google_Service_YouTubeReporting extends Google_Service
           )
         )
     );
-    $this->reportTypes = new Google_Service_YouTubeReporting_ReportTypesResource(
+    $this->reportTypes = new Google_Service_YouTubeReporting_Resource_ReportTypes(
         $this,
         $this->serviceName,
         'reportTypes',

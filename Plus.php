@@ -60,7 +60,7 @@ class Google_Service_Plus extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'plus';
 
-    $this->activities = new Google_Service_Plus_ActivitiesResource(
+    $this->activities = new Google_Service_Plus_Resource_Activities(
         $this,
         $this->serviceName,
         'activities',
@@ -129,7 +129,7 @@ class Google_Service_Plus extends Google_Service
           )
         )
     );
-    $this->comments = new Google_Service_Plus_CommentsResource(
+    $this->comments = new Google_Service_Plus_Resource_Comments(
         $this,
         $this->serviceName,
         'comments',
@@ -171,7 +171,7 @@ class Google_Service_Plus extends Google_Service
           )
         )
     );
-    $this->people = new Google_Service_Plus_PeopleResource(
+    $this->people = new Google_Service_Plus_Resource_People(
         $this,
         $this->serviceName,
         'people',

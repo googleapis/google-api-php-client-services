@@ -51,7 +51,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'doubleclickbidmanager';
 
-    $this->lineitems = new Google_Service_DoubleClickBidManager_LineitemsResource(
+    $this->lineitems = new Google_Service_DoubleClickBidManager_Resource_Lineitems(
         $this,
         $this->serviceName,
         'lineitems',
@@ -69,7 +69,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
           )
         )
     );
-    $this->queries = new Google_Service_DoubleClickBidManager_QueriesResource(
+    $this->queries = new Google_Service_DoubleClickBidManager_Resource_Queries(
         $this,
         $this->serviceName,
         'queries',
@@ -117,7 +117,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
           )
         )
     );
-    $this->reports = new Google_Service_DoubleClickBidManager_ReportsResource(
+    $this->reports = new Google_Service_DoubleClickBidManager_Resource_Reports(
         $this,
         $this->serviceName,
         'reports',
@@ -137,7 +137,7 @@ class Google_Service_DoubleClickBidManager extends Google_Service
           )
         )
     );
-    $this->rubicon = new Google_Service_DoubleClickBidManager_RubiconResource(
+    $this->rubicon = new Google_Service_DoubleClickBidManager_Resource_Rubicon(
         $this,
         $this->serviceName,
         'rubicon',

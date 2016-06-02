@@ -54,7 +54,7 @@ class Google_Service_Pubsub extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'pubsub';
 
-    $this->projects_subscriptions = new Google_Service_Pubsub_ProjectsSubscriptionsResource(
+    $this->projects_subscriptions = new Google_Service_Pubsub_Resource_ProjectsSubscriptions(
         $this,
         $this->serviceName,
         'subscriptions',
@@ -182,7 +182,7 @@ class Google_Service_Pubsub extends Google_Service
           )
         )
     );
-    $this->projects_topics = new Google_Service_Pubsub_ProjectsTopicsResource(
+    $this->projects_topics = new Google_Service_Pubsub_Resource_ProjectsTopics(
         $this,
         $this->serviceName,
         'topics',
@@ -280,7 +280,7 @@ class Google_Service_Pubsub extends Google_Service
           )
         )
     );
-    $this->projects_topics_subscriptions = new Google_Service_Pubsub_ProjectsTopicsSubscriptionsResource(
+    $this->projects_topics_subscriptions = new Google_Service_Pubsub_Resource_ProjectsTopicsSubscriptions(
         $this,
         $this->serviceName,
         'subscriptions',

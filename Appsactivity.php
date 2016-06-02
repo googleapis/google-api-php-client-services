@@ -61,7 +61,7 @@ class Google_Service_Appsactivity extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'appsactivity';
 
-    $this->activities = new Google_Service_Appsactivity_ActivitiesResource(
+    $this->activities = new Google_Service_Appsactivity_Resource_Activities(
         $this,
         $this->serviceName,
         'activities',

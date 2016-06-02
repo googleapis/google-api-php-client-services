@@ -56,7 +56,7 @@ class Google_Service_CloudRuntimeConfig extends Google_Service
     $this->version = 'v1beta1';
     $this->serviceName = 'runtimeconfig';
 
-    $this->projects_configs = new Google_Service_CloudRuntimeConfig_ProjectsConfigsResource(
+    $this->projects_configs = new Google_Service_CloudRuntimeConfig_Resource_ProjectsConfigs(
         $this,
         $this->serviceName,
         'configs',
@@ -124,7 +124,7 @@ class Google_Service_CloudRuntimeConfig extends Google_Service
           )
         )
     );
-    $this->projects_configs_operations = new Google_Service_CloudRuntimeConfig_ProjectsConfigsOperationsResource(
+    $this->projects_configs_operations = new Google_Service_CloudRuntimeConfig_Resource_ProjectsConfigsOperations(
         $this,
         $this->serviceName,
         'operations',
@@ -144,7 +144,7 @@ class Google_Service_CloudRuntimeConfig extends Google_Service
           )
         )
     );
-    $this->projects_configs_variables = new Google_Service_CloudRuntimeConfig_ProjectsConfigsVariablesResource(
+    $this->projects_configs_variables = new Google_Service_CloudRuntimeConfig_Resource_ProjectsConfigsVariables(
         $this,
         $this->serviceName,
         'variables',
@@ -230,7 +230,7 @@ class Google_Service_CloudRuntimeConfig extends Google_Service
           )
         )
     );
-    $this->projects_configs_waiters = new Google_Service_CloudRuntimeConfig_ProjectsConfigsWaitersResource(
+    $this->projects_configs_waiters = new Google_Service_CloudRuntimeConfig_Resource_ProjectsConfigsWaiters(
         $this,
         $this->serviceName,
         'waiters',

@@ -54,7 +54,7 @@ class Google_Service_Clouderrorreporting extends Google_Service
     $this->version = 'v1beta1';
     $this->serviceName = 'clouderrorreporting';
 
-    $this->projects = new Google_Service_Clouderrorreporting_ProjectsResource(
+    $this->projects = new Google_Service_Clouderrorreporting_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -74,7 +74,7 @@ class Google_Service_Clouderrorreporting extends Google_Service
           )
         )
     );
-    $this->projects_events = new Google_Service_Clouderrorreporting_ProjectsEventsResource(
+    $this->projects_events = new Google_Service_Clouderrorreporting_Resource_ProjectsEvents(
         $this,
         $this->serviceName,
         'events',
@@ -118,7 +118,7 @@ class Google_Service_Clouderrorreporting extends Google_Service
           )
         )
     );
-    $this->projects_groupStats = new Google_Service_Clouderrorreporting_ProjectsGroupStatsResource(
+    $this->projects_groupStats = new Google_Service_Clouderrorreporting_Resource_ProjectsGroupStats(
         $this,
         $this->serviceName,
         'groupStats',
@@ -179,7 +179,7 @@ class Google_Service_Clouderrorreporting extends Google_Service
           )
         )
     );
-    $this->projects_groups = new Google_Service_Clouderrorreporting_ProjectsGroupsResource(
+    $this->projects_groups = new Google_Service_Clouderrorreporting_Resource_ProjectsGroups(
         $this,
         $this->serviceName,
         'groups',

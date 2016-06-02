@@ -59,7 +59,7 @@ class Google_Service_ShoppingContent extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'content';
 
-    $this->accounts = new Google_Service_ShoppingContent_AccountsResource(
+    $this->accounts = new Google_Service_ShoppingContent_Resource_Accounts(
         $this,
         $this->serviceName,
         'accounts',
@@ -186,7 +186,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->accountshipping = new Google_Service_ShoppingContent_AccountshippingResource(
+    $this->accountshipping = new Google_Service_ShoppingContent_Resource_Accountshipping(
         $this,
         $this->serviceName,
         'accountshipping',
@@ -276,7 +276,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->accountstatuses = new Google_Service_ShoppingContent_AccountstatusesResource(
+    $this->accountstatuses = new Google_Service_ShoppingContent_Resource_Accountstatuses(
         $this,
         $this->serviceName,
         'accountstatuses',
@@ -323,7 +323,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->accounttax = new Google_Service_ShoppingContent_AccounttaxResource(
+    $this->accounttax = new Google_Service_ShoppingContent_Resource_Accounttax(
         $this,
         $this->serviceName,
         'accounttax',
@@ -413,7 +413,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->datafeeds = new Google_Service_ShoppingContent_DatafeedsResource(
+    $this->datafeeds = new Google_Service_ShoppingContent_Resource_Datafeeds(
         $this,
         $this->serviceName,
         'datafeeds',
@@ -536,7 +536,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->datafeedstatuses = new Google_Service_ShoppingContent_DatafeedstatusesResource(
+    $this->datafeedstatuses = new Google_Service_ShoppingContent_Resource_Datafeedstatuses(
         $this,
         $this->serviceName,
         'datafeedstatuses',
@@ -583,7 +583,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->inventory = new Google_Service_ShoppingContent_InventoryResource(
+    $this->inventory = new Google_Service_ShoppingContent_Resource_Inventory(
         $this,
         $this->serviceName,
         'inventory',
@@ -626,7 +626,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->orders = new Google_Service_ShoppingContent_OrdersResource(
+    $this->orders = new Google_Service_ShoppingContent_Resource_Orders(
         $this,
         $this->serviceName,
         'orders',
@@ -869,7 +869,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->products = new Google_Service_ShoppingContent_ProductsResource(
+    $this->products = new Google_Service_ShoppingContent_Resource_Products(
         $this,
         $this->serviceName,
         'products',
@@ -958,7 +958,7 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
-    $this->productstatuses = new Google_Service_ShoppingContent_ProductstatusesResource(
+    $this->productstatuses = new Google_Service_ShoppingContent_Resource_Productstatuses(
         $this,
         $this->serviceName,
         'productstatuses',

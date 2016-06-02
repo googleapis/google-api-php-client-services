@@ -71,7 +71,7 @@ class Google_Service_Books extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'books';
 
-    $this->bookshelves = new Google_Service_Books_BookshelvesResource(
+    $this->bookshelves = new Google_Service_Books_Resource_Bookshelves(
         $this,
         $this->serviceName,
         'bookshelves',
@@ -114,7 +114,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->bookshelves_volumes = new Google_Service_Books_BookshelvesVolumesResource(
+    $this->bookshelves_volumes = new Google_Service_Books_Resource_BookshelvesVolumes(
         $this,
         $this->serviceName,
         'volumes',
@@ -155,7 +155,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->cloudloading = new Google_Service_Books_CloudloadingResource(
+    $this->cloudloading = new Google_Service_Books_Resource_Cloudloading(
         $this,
         $this->serviceName,
         'cloudloading',
@@ -200,7 +200,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->dictionary = new Google_Service_Books_DictionaryResource(
+    $this->dictionary = new Google_Service_Books_Resource_Dictionary(
         $this,
         $this->serviceName,
         'dictionary',
@@ -220,7 +220,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->layers = new Google_Service_Books_LayersResource(
+    $this->layers = new Google_Service_Books_Resource_Layers(
         $this,
         $this->serviceName,
         'layers',
@@ -279,7 +279,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->layers_annotationData = new Google_Service_Books_LayersAnnotationDataResource(
+    $this->layers_annotationData = new Google_Service_Books_Resource_LayersAnnotationData(
         $this,
         $this->serviceName,
         'annotationData',
@@ -399,7 +399,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->layers_volumeAnnotations = new Google_Service_Books_LayersVolumeAnnotationsResource(
+    $this->layers_volumeAnnotations = new Google_Service_Books_Resource_LayersVolumeAnnotations(
         $this,
         $this->serviceName,
         'volumeAnnotations',
@@ -505,7 +505,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->myconfig = new Google_Service_Books_MyconfigResource(
+    $this->myconfig = new Google_Service_Books_Resource_Myconfig(
         $this,
         $this->serviceName,
         'myconfig',
@@ -622,7 +622,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->mylibrary_annotations = new Google_Service_Books_MylibraryAnnotationsResource(
+    $this->mylibrary_annotations = new Google_Service_Books_Resource_MylibraryAnnotations(
         $this,
         $this->serviceName,
         'annotations',
@@ -739,7 +739,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->mylibrary_bookshelves = new Google_Service_Books_MylibraryBookshelvesResource(
+    $this->mylibrary_bookshelves = new Google_Service_Books_Resource_MylibraryBookshelves(
         $this,
         $this->serviceName,
         'bookshelves',
@@ -856,7 +856,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->mylibrary_bookshelves_volumes = new Google_Service_Books_MylibraryBookshelvesVolumesResource(
+    $this->mylibrary_bookshelves_volumes = new Google_Service_Books_Resource_MylibraryBookshelvesVolumes(
         $this,
         $this->serviceName,
         'volumes',
@@ -904,7 +904,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->mylibrary_readingpositions = new Google_Service_Books_MylibraryReadingpositionsResource(
+    $this->mylibrary_readingpositions = new Google_Service_Books_Resource_MylibraryReadingpositions(
         $this,
         $this->serviceName,
         'readingpositions',
@@ -968,7 +968,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->notification = new Google_Service_Books_NotificationResource(
+    $this->notification = new Google_Service_Books_Resource_Notification(
         $this,
         $this->serviceName,
         'notification',
@@ -996,7 +996,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->onboarding = new Google_Service_Books_OnboardingResource(
+    $this->onboarding = new Google_Service_Books_Resource_Onboarding(
         $this,
         $this->serviceName,
         'onboarding',
@@ -1041,7 +1041,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->personalizedstream = new Google_Service_Books_PersonalizedstreamResource(
+    $this->personalizedstream = new Google_Service_Books_Resource_Personalizedstream(
         $this,
         $this->serviceName,
         'personalizedstream',
@@ -1068,7 +1068,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->promooffer = new Google_Service_Books_PromoofferResource(
+    $this->promooffer = new Google_Service_Books_Resource_Promooffer(
         $this,
         $this->serviceName,
         'promooffer',
@@ -1177,7 +1177,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->series = new Google_Service_Books_SeriesResource(
+    $this->series = new Google_Service_Books_Resource_Series(
         $this,
         $this->serviceName,
         'series',
@@ -1198,7 +1198,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->series_membership = new Google_Service_Books_SeriesMembershipResource(
+    $this->series_membership = new Google_Service_Books_Resource_SeriesMembership(
         $this,
         $this->serviceName,
         'membership',
@@ -1226,7 +1226,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->volumes = new Google_Service_Books_VolumesResource(
+    $this->volumes = new Google_Service_Books_Resource_Volumes(
         $this,
         $this->serviceName,
         'volumes',
@@ -1328,7 +1328,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->volumes_associated = new Google_Service_Books_VolumesAssociatedResource(
+    $this->volumes_associated = new Google_Service_Books_Resource_VolumesAssociated(
         $this,
         $this->serviceName,
         'associated',
@@ -1364,7 +1364,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->volumes_mybooks = new Google_Service_Books_VolumesMybooksResource(
+    $this->volumes_mybooks = new Google_Service_Books_Resource_VolumesMybooks(
         $this,
         $this->serviceName,
         'mybooks',
@@ -1409,7 +1409,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->volumes_recommended = new Google_Service_Books_VolumesRecommendedResource(
+    $this->volumes_recommended = new Google_Service_Books_Resource_VolumesRecommended(
         $this,
         $this->serviceName,
         'recommended',
@@ -1459,7 +1459,7 @@ class Google_Service_Books extends Google_Service
           )
         )
     );
-    $this->volumes_useruploaded = new Google_Service_Books_VolumesUseruploadedResource(
+    $this->volumes_useruploaded = new Google_Service_Books_Resource_VolumesUseruploaded(
         $this,
         $this->serviceName,
         'useruploaded',

@@ -75,7 +75,7 @@ class Google_Service_People extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'people';
 
-    $this->people = new Google_Service_People_PeopleResource(
+    $this->people = new Google_Service_People_Resource_People(
         $this,
         $this->serviceName,
         'people',
@@ -113,7 +113,7 @@ class Google_Service_People extends Google_Service
           )
         )
     );
-    $this->people_connections = new Google_Service_People_PeopleConnectionsResource(
+    $this->people_connections = new Google_Service_People_Resource_PeopleConnections(
         $this,
         $this->serviceName,
         'connections',

@@ -53,7 +53,7 @@ class Google_Service_Appengine extends Google_Service
     $this->version = 'v1beta5';
     $this->serviceName = 'appengine';
 
-    $this->apps = new Google_Service_Appengine_AppsResource(
+    $this->apps = new Google_Service_Appengine_Resource_Apps(
         $this,
         $this->serviceName,
         'apps',
@@ -77,7 +77,7 @@ class Google_Service_Appengine extends Google_Service
           )
         )
     );
-    $this->apps_operations = new Google_Service_Appengine_AppsOperationsResource(
+    $this->apps_operations = new Google_Service_Appengine_Resource_AppsOperations(
         $this,
         $this->serviceName,
         'operations',
@@ -124,7 +124,7 @@ class Google_Service_Appengine extends Google_Service
           )
         )
     );
-    $this->apps_services = new Google_Service_Appengine_AppsServicesResource(
+    $this->apps_services = new Google_Service_Appengine_Resource_AppsServices(
         $this,
         $this->serviceName,
         'services',
@@ -205,7 +205,7 @@ class Google_Service_Appengine extends Google_Service
           )
         )
     );
-    $this->apps_services_versions = new Google_Service_Appengine_AppsServicesVersionsResource(
+    $this->apps_services_versions = new Google_Service_Appengine_Resource_AppsServicesVersions(
         $this,
         $this->serviceName,
         'versions',
@@ -325,7 +325,7 @@ class Google_Service_Appengine extends Google_Service
           )
         )
     );
-    $this->apps_services_versions_instances = new Google_Service_Appengine_AppsServicesVersionsInstancesResource(
+    $this->apps_services_versions_instances = new Google_Service_Appengine_Resource_AppsServicesVersionsInstances(
         $this,
         $this->serviceName,
         'instances',

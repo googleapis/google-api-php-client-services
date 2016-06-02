@@ -72,6 +72,7 @@ class Google_Service_Compute extends Google_Service
   public $projects;
   public $regionOperations;
   public $regions;
+  public $routers;
   public $routes;
   public $snapshots;
   public $sslCertificates;
@@ -99,7 +100,7 @@ class Google_Service_Compute extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'compute';
 
-    $this->addresses = new Google_Service_Compute_AddressesResource(
+    $this->addresses = new Google_Service_Compute_Resource_Addresses(
         $this,
         $this->serviceName,
         'addresses',
@@ -213,7 +214,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->autoscalers = new Google_Service_Compute_AutoscalersResource(
+    $this->autoscalers = new Google_Service_Compute_Resource_Autoscalers(
         $this,
         $this->serviceName,
         'autoscalers',
@@ -366,7 +367,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->backendServices = new Google_Service_Compute_BackendServicesResource(
+    $this->backendServices = new Google_Service_Compute_Resource_BackendServices(
         $this,
         $this->serviceName,
         'backendServices',
@@ -483,7 +484,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->diskTypes = new Google_Service_Compute_DiskTypesResource(
+    $this->diskTypes = new Google_Service_Compute_Resource_DiskTypes(
         $this,
         $this->serviceName,
         'diskTypes',
@@ -562,7 +563,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->disks = new Google_Service_Compute_DisksResource(
+    $this->disks = new Google_Service_Compute_Resource_Disks(
         $this,
         $this->serviceName,
         'disks',
@@ -720,7 +721,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->firewalls = new Google_Service_Compute_FirewallsResource(
+    $this->firewalls = new Google_Service_Compute_Resource_Firewalls(
         $this,
         $this->serviceName,
         'firewalls',
@@ -822,7 +823,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->forwardingRules = new Google_Service_Compute_ForwardingRulesResource(
+    $this->forwardingRules = new Google_Service_Compute_Resource_ForwardingRules(
         $this,
         $this->serviceName,
         'forwardingRules',
@@ -956,7 +957,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->globalAddresses = new Google_Service_Compute_GlobalAddressesResource(
+    $this->globalAddresses = new Google_Service_Compute_Resource_GlobalAddresses(
         $this,
         $this->serviceName,
         'globalAddresses',
@@ -1028,7 +1029,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->globalForwardingRules = new Google_Service_Compute_GlobalForwardingRulesResource(
+    $this->globalForwardingRules = new Google_Service_Compute_Resource_GlobalForwardingRules(
         $this,
         $this->serviceName,
         'globalForwardingRules',
@@ -1115,7 +1116,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->globalOperations = new Google_Service_Compute_GlobalOperationsResource(
+    $this->globalOperations = new Google_Service_Compute_Resource_GlobalOperations(
         $this,
         $this->serviceName,
         'globalOperations',
@@ -1199,7 +1200,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->httpHealthChecks = new Google_Service_Compute_HttpHealthChecksResource(
+    $this->httpHealthChecks = new Google_Service_Compute_Resource_HttpHealthChecks(
         $this,
         $this->serviceName,
         'httpHealthChecks',
@@ -1301,7 +1302,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->httpsHealthChecks = new Google_Service_Compute_HttpsHealthChecksResource(
+    $this->httpsHealthChecks = new Google_Service_Compute_Resource_HttpsHealthChecks(
         $this,
         $this->serviceName,
         'httpsHealthChecks',
@@ -1403,7 +1404,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->images = new Google_Service_Compute_ImagesResource(
+    $this->images = new Google_Service_Compute_Resource_Images(
         $this,
         $this->serviceName,
         'images',
@@ -1505,7 +1506,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->instanceGroupManagers = new Google_Service_Compute_InstanceGroupManagersResource(
+    $this->instanceGroupManagers = new Google_Service_Compute_Resource_InstanceGroupManagers(
         $this,
         $this->serviceName,
         'instanceGroupManagers',
@@ -1764,7 +1765,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->instanceGroups = new Google_Service_Compute_InstanceGroupsResource(
+    $this->instanceGroups = new Google_Service_Compute_Resource_InstanceGroups(
         $this,
         $this->serviceName,
         'instanceGroups',
@@ -1970,7 +1971,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->instanceTemplates = new Google_Service_Compute_InstanceTemplatesResource(
+    $this->instanceTemplates = new Google_Service_Compute_Resource_InstanceTemplates(
         $this,
         $this->serviceName,
         'instanceTemplates',
@@ -2042,7 +2043,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->instances = new Google_Service_Compute_InstancesResource(
+    $this->instances = new Google_Service_Compute_Resource_Instances(
         $this,
         $this->serviceName,
         'instances',
@@ -2426,6 +2427,26 @@ class Google_Service_Compute extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'startWithEncryptionKey' => array(
+              'path' => '{project}/zones/{zone}/instances/{instance}/startWithEncryptionKey',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instance' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'stop' => array(
               'path' => '{project}/zones/{zone}/instances/{instance}/stop',
               'httpMethod' => 'POST',
@@ -2450,7 +2471,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->licenses = new Google_Service_Compute_LicensesResource(
+    $this->licenses = new Google_Service_Compute_Resource_Licenses(
         $this,
         $this->serviceName,
         'licenses',
@@ -2475,7 +2496,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->machineTypes = new Google_Service_Compute_MachineTypesResource(
+    $this->machineTypes = new Google_Service_Compute_Resource_MachineTypes(
         $this,
         $this->serviceName,
         'machineTypes',
@@ -2554,7 +2575,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->networks = new Google_Service_Compute_NetworksResource(
+    $this->networks = new Google_Service_Compute_Resource_Networks(
         $this,
         $this->serviceName,
         'networks',
@@ -2626,7 +2647,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->projects = new Google_Service_Compute_ProjectsResource(
+    $this->projects = new Google_Service_Compute_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -2686,7 +2707,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->regionOperations = new Google_Service_Compute_RegionOperationsResource(
+    $this->regionOperations = new Google_Service_Compute_Resource_RegionOperations(
         $this,
         $this->serviceName,
         'regionOperations',
@@ -2763,7 +2784,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->regions = new Google_Service_Compute_RegionsResource(
+    $this->regions = new Google_Service_Compute_Resource_Regions(
         $this,
         $this->serviceName,
         'regions',
@@ -2810,7 +2831,181 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->routes = new Google_Service_Compute_RoutesResource(
+    $this->routers = new Google_Service_Compute_Resource_Routers(
+        $this,
+        $this->serviceName,
+        'routers',
+        array(
+          'methods' => array(
+            'aggregatedList' => array(
+              'path' => '{project}/aggregated/routers',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'delete' => array(
+              'path' => '{project}/regions/{region}/routers/{router}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'router' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => '{project}/regions/{region}/routers/{router}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'router' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getRouterStatus' => array(
+              'path' => '{project}/regions/{region}/routers/{router}/getRouterStatus',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'router' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'insert' => array(
+              'path' => '{project}/regions/{region}/routers',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => '{project}/regions/{region}/routers',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => '{project}/regions/{region}/routers/{router}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'router' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'update' => array(
+              'path' => '{project}/regions/{region}/routers/{router}',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'router' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->routes = new Google_Service_Compute_Resource_Routes(
         $this,
         $this->serviceName,
         'routes',
@@ -2882,7 +3077,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->snapshots = new Google_Service_Compute_SnapshotsResource(
+    $this->snapshots = new Google_Service_Compute_Resource_Snapshots(
         $this,
         $this->serviceName,
         'snapshots',
@@ -2944,7 +3139,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->sslCertificates = new Google_Service_Compute_SslCertificatesResource(
+    $this->sslCertificates = new Google_Service_Compute_Resource_SslCertificates(
         $this,
         $this->serviceName,
         'sslCertificates',
@@ -3016,7 +3211,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->subnetworks = new Google_Service_Compute_SubnetworksResource(
+    $this->subnetworks = new Google_Service_Compute_Resource_Subnetworks(
         $this,
         $this->serviceName,
         'subnetworks',
@@ -3130,7 +3325,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->targetHttpProxies = new Google_Service_Compute_TargetHttpProxiesResource(
+    $this->targetHttpProxies = new Google_Service_Compute_Resource_TargetHttpProxies(
         $this,
         $this->serviceName,
         'targetHttpProxies',
@@ -3217,7 +3412,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->targetHttpsProxies = new Google_Service_Compute_TargetHttpsProxiesResource(
+    $this->targetHttpsProxies = new Google_Service_Compute_Resource_TargetHttpsProxies(
         $this,
         $this->serviceName,
         'targetHttpsProxies',
@@ -3319,7 +3514,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->targetInstances = new Google_Service_Compute_TargetInstancesResource(
+    $this->targetInstances = new Google_Service_Compute_Resource_TargetInstances(
         $this,
         $this->serviceName,
         'targetInstances',
@@ -3433,7 +3628,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->targetPools = new Google_Service_Compute_TargetPoolsResource(
+    $this->targetPools = new Google_Service_Compute_Resource_TargetPools(
         $this,
         $this->serviceName,
         'targetPools',
@@ -3671,7 +3866,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->targetVpnGateways = new Google_Service_Compute_TargetVpnGatewaysResource(
+    $this->targetVpnGateways = new Google_Service_Compute_Resource_TargetVpnGateways(
         $this,
         $this->serviceName,
         'targetVpnGateways',
@@ -3785,7 +3980,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->urlMaps = new Google_Service_Compute_UrlMapsResource(
+    $this->urlMaps = new Google_Service_Compute_Resource_UrlMaps(
         $this,
         $this->serviceName,
         'urlMaps',
@@ -3902,7 +4097,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->vpnTunnels = new Google_Service_Compute_VpnTunnelsResource(
+    $this->vpnTunnels = new Google_Service_Compute_Resource_VpnTunnels(
         $this,
         $this->serviceName,
         'vpnTunnels',
@@ -4016,7 +4211,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->zoneOperations = new Google_Service_Compute_ZoneOperationsResource(
+    $this->zoneOperations = new Google_Service_Compute_Resource_ZoneOperations(
         $this,
         $this->serviceName,
         'zoneOperations',
@@ -4093,7 +4288,7 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
-    $this->zones = new Google_Service_Compute_ZonesResource(
+    $this->zones = new Google_Service_Compute_Resource_Zones(
         $this,
         $this->serviceName,
         'zones',

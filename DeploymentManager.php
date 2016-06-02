@@ -62,7 +62,7 @@ class Google_Service_DeploymentManager extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'deploymentmanager';
 
-    $this->deployments = new Google_Service_DeploymentManager_DeploymentsResource(
+    $this->deployments = new Google_Service_DeploymentManager_Resource_Deployments(
         $this,
         $this->serviceName,
         'deployments',
@@ -222,7 +222,7 @@ class Google_Service_DeploymentManager extends Google_Service
           )
         )
     );
-    $this->manifests = new Google_Service_DeploymentManager_ManifestsResource(
+    $this->manifests = new Google_Service_DeploymentManager_Resource_Manifests(
         $this,
         $this->serviceName,
         'manifests',
@@ -279,7 +279,7 @@ class Google_Service_DeploymentManager extends Google_Service
           )
         )
     );
-    $this->operations = new Google_Service_DeploymentManager_OperationsResource(
+    $this->operations = new Google_Service_DeploymentManager_Resource_Operations(
         $this,
         $this->serviceName,
         'operations',
@@ -326,7 +326,7 @@ class Google_Service_DeploymentManager extends Google_Service
           )
         )
     );
-    $this->resources = new Google_Service_DeploymentManager_ResourcesResource(
+    $this->resources = new Google_Service_DeploymentManager_Resource_Resources(
         $this,
         $this->serviceName,
         'resources',
@@ -383,7 +383,7 @@ class Google_Service_DeploymentManager extends Google_Service
           )
         )
     );
-    $this->types = new Google_Service_DeploymentManager_TypesResource(
+    $this->types = new Google_Service_DeploymentManager_Resource_Types(
         $this,
         $this->serviceName,
         'types',

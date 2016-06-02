@@ -58,7 +58,7 @@ class Google_Service_Mirror extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'mirror';
 
-    $this->accounts = new Google_Service_Mirror_AccountsResource(
+    $this->accounts = new Google_Service_Mirror_Resource_Accounts(
         $this,
         $this->serviceName,
         'accounts',
@@ -88,7 +88,7 @@ class Google_Service_Mirror extends Google_Service
           )
         )
     );
-    $this->contacts = new Google_Service_Mirror_ContactsResource(
+    $this->contacts = new Google_Service_Mirror_Resource_Contacts(
         $this,
         $this->serviceName,
         'contacts',
@@ -146,7 +146,7 @@ class Google_Service_Mirror extends Google_Service
           )
         )
     );
-    $this->locations = new Google_Service_Mirror_LocationsResource(
+    $this->locations = new Google_Service_Mirror_Resource_Locations(
         $this,
         $this->serviceName,
         'locations',
@@ -170,7 +170,7 @@ class Google_Service_Mirror extends Google_Service
           )
         )
     );
-    $this->settings = new Google_Service_Mirror_SettingsResource(
+    $this->settings = new Google_Service_Mirror_Resource_Settings(
         $this,
         $this->serviceName,
         'settings',
@@ -190,7 +190,7 @@ class Google_Service_Mirror extends Google_Service
           )
         )
     );
-    $this->subscriptions = new Google_Service_Mirror_SubscriptionsResource(
+    $this->subscriptions = new Google_Service_Mirror_Resource_Subscriptions(
         $this,
         $this->serviceName,
         'subscriptions',
@@ -228,7 +228,7 @@ class Google_Service_Mirror extends Google_Service
           )
         )
     );
-    $this->timeline = new Google_Service_Mirror_TimelineResource(
+    $this->timeline = new Google_Service_Mirror_Resource_Timeline(
         $this,
         $this->serviceName,
         'timeline',
@@ -315,7 +315,7 @@ class Google_Service_Mirror extends Google_Service
           )
         )
     );
-    $this->timeline_attachments = new Google_Service_Mirror_TimelineAttachmentsResource(
+    $this->timeline_attachments = new Google_Service_Mirror_Resource_TimelineAttachments(
         $this,
         $this->serviceName,
         'attachments',

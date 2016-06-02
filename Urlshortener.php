@@ -49,7 +49,7 @@ class Google_Service_Urlshortener extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'urlshortener';
 
-    $this->url = new Google_Service_Urlshortener_UrlResource(
+    $this->url = new Google_Service_Urlshortener_Resource_Url(
         $this,
         $this->serviceName,
         'url',

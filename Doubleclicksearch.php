@@ -52,7 +52,7 @@ class Google_Service_Doubleclicksearch extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'doubleclicksearch';
 
-    $this->conversion = new Google_Service_Doubleclicksearch_ConversionResource(
+    $this->conversion = new Google_Service_Doubleclicksearch_Resource_Conversion(
         $this,
         $this->serviceName,
         'conversion',
@@ -170,7 +170,7 @@ class Google_Service_Doubleclicksearch extends Google_Service
           )
         )
     );
-    $this->reports = new Google_Service_Doubleclicksearch_ReportsResource(
+    $this->reports = new Google_Service_Doubleclicksearch_Resource_Reports(
         $this,
         $this->serviceName,
         'reports',
@@ -213,7 +213,7 @@ class Google_Service_Doubleclicksearch extends Google_Service
           )
         )
     );
-    $this->savedColumns = new Google_Service_Doubleclicksearch_SavedColumnsResource(
+    $this->savedColumns = new Google_Service_Doubleclicksearch_Resource_SavedColumns(
         $this,
         $this->serviceName,
         'savedColumns',

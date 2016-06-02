@@ -59,7 +59,7 @@ class Google_Service_Blogger extends Google_Service
     $this->version = 'v3';
     $this->serviceName = 'blogger';
 
-    $this->blogUserInfos = new Google_Service_Blogger_BlogUserInfosResource(
+    $this->blogUserInfos = new Google_Service_Blogger_Resource_BlogUserInfos(
         $this,
         $this->serviceName,
         'blogUserInfos',
@@ -88,7 +88,7 @@ class Google_Service_Blogger extends Google_Service
           )
         )
     );
-    $this->blogs = new Google_Service_Blogger_BlogsResource(
+    $this->blogs = new Google_Service_Blogger_Resource_Blogs(
         $this,
         $this->serviceName,
         'blogs',
@@ -158,7 +158,7 @@ class Google_Service_Blogger extends Google_Service
           )
         )
     );
-    $this->comments = new Google_Service_Blogger_CommentsResource(
+    $this->comments = new Google_Service_Blogger_Resource_Comments(
         $this,
         $this->serviceName,
         'comments',
@@ -351,7 +351,7 @@ class Google_Service_Blogger extends Google_Service
           )
         )
     );
-    $this->pageViews = new Google_Service_Blogger_PageViewsResource(
+    $this->pageViews = new Google_Service_Blogger_Resource_PageViews(
         $this,
         $this->serviceName,
         'pageViews',
@@ -376,7 +376,7 @@ class Google_Service_Blogger extends Google_Service
           )
         )
     );
-    $this->pages = new Google_Service_Blogger_PagesResource(
+    $this->pages = new Google_Service_Blogger_Resource_Pages(
         $this,
         $this->serviceName,
         'pages',
@@ -541,7 +541,7 @@ class Google_Service_Blogger extends Google_Service
           )
         )
     );
-    $this->postUserInfos = new Google_Service_Blogger_PostUserInfosResource(
+    $this->postUserInfos = new Google_Service_Blogger_Resource_PostUserInfos(
         $this,
         $this->serviceName,
         'postUserInfos',
@@ -627,7 +627,7 @@ class Google_Service_Blogger extends Google_Service
           )
         )
     );
-    $this->posts = new Google_Service_Blogger_PostsResource(
+    $this->posts = new Google_Service_Blogger_Resource_Posts(
         $this,
         $this->serviceName,
         'posts',
@@ -906,7 +906,7 @@ class Google_Service_Blogger extends Google_Service
           )
         )
     );
-    $this->users = new Google_Service_Blogger_UsersResource(
+    $this->users = new Google_Service_Blogger_Resource_Users(
         $this,
         $this->serviceName,
         'users',

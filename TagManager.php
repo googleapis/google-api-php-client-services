@@ -78,7 +78,7 @@ class Google_Service_TagManager extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'tagmanager';
 
-    $this->accounts = new Google_Service_TagManager_AccountsResource(
+    $this->accounts = new Google_Service_TagManager_Resource_Accounts(
         $this,
         $this->serviceName,
         'accounts',
@@ -116,7 +116,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers = new Google_Service_TagManager_AccountsContainersResource(
+    $this->accounts_containers = new Google_Service_TagManager_Resource_AccountsContainers(
         $this,
         $this->serviceName,
         'containers',
@@ -195,7 +195,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_environments = new Google_Service_TagManager_AccountsContainersEnvironmentsResource(
+    $this->accounts_containers_environments = new Google_Service_TagManager_Resource_AccountsContainersEnvironments(
         $this,
         $this->serviceName,
         'environments',
@@ -323,7 +323,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_folders = new Google_Service_TagManager_AccountsContainersFoldersResource(
+    $this->accounts_containers_folders = new Google_Service_TagManager_Resource_AccountsContainersFolders(
         $this,
         $this->serviceName,
         'folders',
@@ -427,7 +427,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_folders_entities = new Google_Service_TagManager_AccountsContainersFoldersEntitiesResource(
+    $this->accounts_containers_folders_entities = new Google_Service_TagManager_Resource_AccountsContainersFoldersEntities(
         $this,
         $this->serviceName,
         'entities',
@@ -457,7 +457,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_move_folders = new Google_Service_TagManager_AccountsContainersMoveFoldersResource(
+    $this->accounts_containers_move_folders = new Google_Service_TagManager_Resource_AccountsContainersMoveFolders(
         $this,
         $this->serviceName,
         'move_folders',
@@ -502,7 +502,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_reauthorize_environments = new Google_Service_TagManager_AccountsContainersReauthorizeEnvironmentsResource(
+    $this->accounts_containers_reauthorize_environments = new Google_Service_TagManager_Resource_AccountsContainersReauthorizeEnvironments(
         $this,
         $this->serviceName,
         'reauthorize_environments',
@@ -532,7 +532,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_tags = new Google_Service_TagManager_AccountsContainersTagsResource(
+    $this->accounts_containers_tags = new Google_Service_TagManager_Resource_AccountsContainersTags(
         $this,
         $this->serviceName,
         'tags',
@@ -636,7 +636,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_triggers = new Google_Service_TagManager_AccountsContainersTriggersResource(
+    $this->accounts_containers_triggers = new Google_Service_TagManager_Resource_AccountsContainersTriggers(
         $this,
         $this->serviceName,
         'triggers',
@@ -740,7 +740,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_variables = new Google_Service_TagManager_AccountsContainersVariablesResource(
+    $this->accounts_containers_variables = new Google_Service_TagManager_Resource_AccountsContainersVariables(
         $this,
         $this->serviceName,
         'variables',
@@ -844,7 +844,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_containers_versions = new Google_Service_TagManager_AccountsContainersVersionsResource(
+    $this->accounts_containers_versions = new Google_Service_TagManager_Resource_AccountsContainersVersions(
         $this,
         $this->serviceName,
         'versions',
@@ -1020,7 +1020,7 @@ class Google_Service_TagManager extends Google_Service
           )
         )
     );
-    $this->accounts_permissions = new Google_Service_TagManager_AccountsPermissionsResource(
+    $this->accounts_permissions = new Google_Service_TagManager_Resource_AccountsPermissions(
         $this,
         $this->serviceName,
         'permissions',

@@ -47,7 +47,7 @@ class Google_Service_Spectrum extends Google_Service
     $this->version = 'v1explorer';
     $this->serviceName = 'spectrum';
 
-    $this->paws = new Google_Service_Spectrum_PawsResource(
+    $this->paws = new Google_Service_Spectrum_Resource_Paws(
         $this,
         $this->serviceName,
         'paws',

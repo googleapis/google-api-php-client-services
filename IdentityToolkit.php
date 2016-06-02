@@ -47,7 +47,7 @@ class Google_Service_IdentityToolkit extends Google_Service
     $this->version = 'v3';
     $this->serviceName = 'identitytoolkit';
 
-    $this->relyingparty = new Google_Service_IdentityToolkit_RelyingpartyResource(
+    $this->relyingparty = new Google_Service_IdentityToolkit_Resource_Relyingparty(
         $this,
         $this->serviceName,
         'relyingparty',

@@ -51,7 +51,7 @@ class Google_Service_Dataproc extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'dataproc';
 
-    $this->projects_regions_clusters = new Google_Service_Dataproc_ProjectsRegionsClustersResource(
+    $this->projects_regions_clusters = new Google_Service_Dataproc_Resource_ProjectsRegionsClusters(
         $this,
         $this->serviceName,
         'clusters',
@@ -183,7 +183,7 @@ class Google_Service_Dataproc extends Google_Service
           )
         )
     );
-    $this->projects_regions_jobs = new Google_Service_Dataproc_ProjectsRegionsJobsResource(
+    $this->projects_regions_jobs = new Google_Service_Dataproc_Resource_ProjectsRegionsJobs(
         $this,
         $this->serviceName,
         'jobs',
@@ -299,7 +299,7 @@ class Google_Service_Dataproc extends Google_Service
           )
         )
     );
-    $this->projects_regions_operations = new Google_Service_Dataproc_ProjectsRegionsOperationsResource(
+    $this->projects_regions_operations = new Google_Service_Dataproc_Resource_ProjectsRegionsOperations(
         $this,
         $this->serviceName,
         'operations',

@@ -57,7 +57,7 @@ class Google_Service_Consumersurveys extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'consumersurveys';
 
-    $this->results = new Google_Service_Consumersurveys_ResultsResource(
+    $this->results = new Google_Service_Consumersurveys_Resource_Results(
         $this,
         $this->serviceName,
         'results',
@@ -77,7 +77,7 @@ class Google_Service_Consumersurveys extends Google_Service
           )
         )
     );
-    $this->surveys = new Google_Service_Consumersurveys_SurveysResource(
+    $this->surveys = new Google_Service_Consumersurveys_Resource_Surveys(
         $this,
         $this->serviceName,
         'surveys',

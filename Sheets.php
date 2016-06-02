@@ -60,7 +60,7 @@ class Google_Service_Sheets extends Google_Service
     $this->version = 'v4';
     $this->serviceName = 'sheets';
 
-    $this->spreadsheets = new Google_Service_Sheets_SpreadsheetsResource(
+    $this->spreadsheets = new Google_Service_Sheets_Resource_Spreadsheets(
         $this,
         $this->serviceName,
         'spreadsheets',
@@ -103,7 +103,7 @@ class Google_Service_Sheets extends Google_Service
           )
         )
     );
-    $this->spreadsheets_sheets = new Google_Service_Sheets_SpreadsheetsSheetsResource(
+    $this->spreadsheets_sheets = new Google_Service_Sheets_Resource_SpreadsheetsSheets(
         $this,
         $this->serviceName,
         'sheets',
@@ -128,7 +128,7 @@ class Google_Service_Sheets extends Google_Service
           )
         )
     );
-    $this->spreadsheets_values = new Google_Service_Sheets_SpreadsheetsValuesResource(
+    $this->spreadsheets_values = new Google_Service_Sheets_Resource_SpreadsheetsValues(
         $this,
         $this->serviceName,
         'values',

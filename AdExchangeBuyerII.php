@@ -52,7 +52,7 @@ class Google_Service_AdExchangeBuyerII extends Google_Service
     $this->version = 'v2beta1';
     $this->serviceName = 'adexchangebuyer2';
 
-    $this->accounts_clients = new Google_Service_AdExchangeBuyerII_AccountsClientsResource(
+    $this->accounts_clients = new Google_Service_AdExchangeBuyerII_Resource_AccountsClients(
         $this,
         $this->serviceName,
         'clients',
@@ -120,7 +120,7 @@ class Google_Service_AdExchangeBuyerII extends Google_Service
           )
         )
     );
-    $this->accounts_clients_invitations = new Google_Service_AdExchangeBuyerII_AccountsClientsInvitationsResource(
+    $this->accounts_clients_invitations = new Google_Service_AdExchangeBuyerII_Resource_AccountsClientsInvitations(
         $this,
         $this->serviceName,
         'invitations',
@@ -188,7 +188,7 @@ class Google_Service_AdExchangeBuyerII extends Google_Service
           )
         )
     );
-    $this->accounts_clients_users = new Google_Service_AdExchangeBuyerII_AccountsClientsUsersResource(
+    $this->accounts_clients_users = new Google_Service_AdExchangeBuyerII_Resource_AccountsClientsUsers(
         $this,
         $this->serviceName,
         'users',

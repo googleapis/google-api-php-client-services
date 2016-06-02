@@ -56,7 +56,7 @@ class Google_Service_Webmasters extends Google_Service
     $this->version = 'v3';
     $this->serviceName = 'webmasters';
 
-    $this->searchanalytics = new Google_Service_Webmasters_SearchanalyticsResource(
+    $this->searchanalytics = new Google_Service_Webmasters_Resource_Searchanalytics(
         $this,
         $this->serviceName,
         'searchanalytics',
@@ -76,7 +76,7 @@ class Google_Service_Webmasters extends Google_Service
           )
         )
     );
-    $this->sitemaps = new Google_Service_Webmasters_SitemapsResource(
+    $this->sitemaps = new Google_Service_Webmasters_Resource_Sitemaps(
         $this,
         $this->serviceName,
         'sitemaps',
@@ -145,7 +145,7 @@ class Google_Service_Webmasters extends Google_Service
           )
         )
     );
-    $this->sites = new Google_Service_Webmasters_SitesResource(
+    $this->sites = new Google_Service_Webmasters_Resource_Sites(
         $this,
         $this->serviceName,
         'sites',
@@ -189,7 +189,7 @@ class Google_Service_Webmasters extends Google_Service
           )
         )
     );
-    $this->urlcrawlerrorscounts = new Google_Service_Webmasters_UrlcrawlerrorscountsResource(
+    $this->urlcrawlerrorscounts = new Google_Service_Webmasters_Resource_Urlcrawlerrorscounts(
         $this,
         $this->serviceName,
         'urlcrawlerrorscounts',
@@ -221,7 +221,7 @@ class Google_Service_Webmasters extends Google_Service
           )
         )
     );
-    $this->urlcrawlerrorssamples = new Google_Service_Webmasters_UrlcrawlerrorssamplesResource(
+    $this->urlcrawlerrorssamples = new Google_Service_Webmasters_Resource_Urlcrawlerrorssamples(
         $this,
         $this->serviceName,
         'urlcrawlerrorssamples',

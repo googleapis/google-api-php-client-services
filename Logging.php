@@ -65,7 +65,7 @@ class Google_Service_Logging extends Google_Service
     $this->version = 'v2beta1';
     $this->serviceName = 'logging';
 
-    $this->entries = new Google_Service_Logging_EntriesResource(
+    $this->entries = new Google_Service_Logging_Resource_Entries(
         $this,
         $this->serviceName,
         'entries',
@@ -83,7 +83,7 @@ class Google_Service_Logging extends Google_Service
           )
         )
     );
-    $this->monitoredResourceDescriptors = new Google_Service_Logging_MonitoredResourceDescriptorsResource(
+    $this->monitoredResourceDescriptors = new Google_Service_Logging_Resource_MonitoredResourceDescriptors(
         $this,
         $this->serviceName,
         'monitoredResourceDescriptors',
@@ -106,7 +106,7 @@ class Google_Service_Logging extends Google_Service
           )
         )
     );
-    $this->projects_logs = new Google_Service_Logging_ProjectsLogsResource(
+    $this->projects_logs = new Google_Service_Logging_Resource_ProjectsLogs(
         $this,
         $this->serviceName,
         'logs',
@@ -126,7 +126,7 @@ class Google_Service_Logging extends Google_Service
           )
         )
     );
-    $this->projects_metrics = new Google_Service_Logging_ProjectsMetricsResource(
+    $this->projects_metrics = new Google_Service_Logging_Resource_ProjectsMetrics(
         $this,
         $this->serviceName,
         'metrics',
@@ -194,7 +194,7 @@ class Google_Service_Logging extends Google_Service
           )
         )
     );
-    $this->projects_sinks = new Google_Service_Logging_ProjectsSinksResource(
+    $this->projects_sinks = new Google_Service_Logging_Resource_ProjectsSinks(
         $this,
         $this->serviceName,
         'sinks',

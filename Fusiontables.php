@@ -57,7 +57,7 @@ class Google_Service_Fusiontables extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'fusiontables';
 
-    $this->column = new Google_Service_Fusiontables_ColumnResource(
+    $this->column = new Google_Service_Fusiontables_Resource_Column(
         $this,
         $this->serviceName,
         'column',
@@ -155,7 +155,7 @@ class Google_Service_Fusiontables extends Google_Service
           )
         )
     );
-    $this->query = new Google_Service_Fusiontables_QueryResource(
+    $this->query = new Google_Service_Fusiontables_Resource_Query(
         $this,
         $this->serviceName,
         'query',
@@ -201,7 +201,7 @@ class Google_Service_Fusiontables extends Google_Service
           )
         )
     );
-    $this->style = new Google_Service_Fusiontables_StyleResource(
+    $this->style = new Google_Service_Fusiontables_Resource_Style(
         $this,
         $this->serviceName,
         'style',
@@ -299,7 +299,7 @@ class Google_Service_Fusiontables extends Google_Service
           )
         )
     );
-    $this->table = new Google_Service_Fusiontables_TableResource(
+    $this->table = new Google_Service_Fusiontables_Resource_Table(
         $this,
         $this->serviceName,
         'table',
@@ -466,7 +466,7 @@ class Google_Service_Fusiontables extends Google_Service
           )
         )
     );
-    $this->task = new Google_Service_Fusiontables_TaskResource(
+    $this->task = new Google_Service_Fusiontables_Resource_Task(
         $this,
         $this->serviceName,
         'task',
@@ -528,7 +528,7 @@ class Google_Service_Fusiontables extends Google_Service
           )
         )
     );
-    $this->template = new Google_Service_Fusiontables_TemplateResource(
+    $this->template = new Google_Service_Fusiontables_Resource_Template(
         $this,
         $this->serviceName,
         'template',

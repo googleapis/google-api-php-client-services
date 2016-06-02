@@ -61,7 +61,7 @@ class Google_Service_Dns extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'dns';
 
-    $this->changes = new Google_Service_Dns_ChangesResource(
+    $this->changes = new Google_Service_Dns_Resource_Changes(
         $this,
         $this->serviceName,
         'changes',
@@ -137,7 +137,7 @@ class Google_Service_Dns extends Google_Service
           )
         )
     );
-    $this->managedZones = new Google_Service_Dns_ManagedZonesResource(
+    $this->managedZones = new Google_Service_Dns_Resource_ManagedZones(
         $this,
         $this->serviceName,
         'managedZones',
@@ -209,7 +209,7 @@ class Google_Service_Dns extends Google_Service
           )
         )
     );
-    $this->projects = new Google_Service_Dns_ProjectsResource(
+    $this->projects = new Google_Service_Dns_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -229,7 +229,7 @@ class Google_Service_Dns extends Google_Service
           )
         )
     );
-    $this->resourceRecordSets = new Google_Service_Dns_ResourceRecordSetsResource(
+    $this->resourceRecordSets = new Google_Service_Dns_Resource_ResourceRecordSets(
         $this,
         $this->serviceName,
         'resourceRecordSets',

@@ -21,6 +21,8 @@ class Google_Service_Compute_AttachedDisk extends Google_Collection
   public $autoDelete;
   public $boot;
   public $deviceName;
+  protected $diskEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
+  protected $diskEncryptionKeyDataType = '';
   public $index;
   protected $initializeParamsType = 'Google_Service_Compute_AttachedDiskInitializeParams';
   protected $initializeParamsDataType = '';
@@ -54,6 +56,14 @@ class Google_Service_Compute_AttachedDisk extends Google_Collection
   public function getDeviceName()
   {
     return $this->deviceName;
+  }
+  public function setDiskEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $diskEncryptionKey)
+  {
+    $this->diskEncryptionKey = $diskEncryptionKey;
+  }
+  public function getDiskEncryptionKey()
+  {
+    return $this->diskEncryptionKey;
   }
   public function setIndex($index)
   {

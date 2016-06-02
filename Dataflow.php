@@ -56,7 +56,7 @@ class Google_Service_Dataflow extends Google_Service
     $this->version = 'v1b3';
     $this->serviceName = 'dataflow';
 
-    $this->projects = new Google_Service_Dataflow_ProjectsResource(
+    $this->projects = new Google_Service_Dataflow_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -76,7 +76,7 @@ class Google_Service_Dataflow extends Google_Service
           )
         )
     );
-    $this->projects_jobs = new Google_Service_Dataflow_ProjectsJobsResource(
+    $this->projects_jobs = new Google_Service_Dataflow_Resource_ProjectsJobs(
         $this,
         $this->serviceName,
         'jobs',
@@ -183,7 +183,7 @@ class Google_Service_Dataflow extends Google_Service
           )
         )
     );
-    $this->projects_jobs_messages = new Google_Service_Dataflow_ProjectsJobsMessagesResource(
+    $this->projects_jobs_messages = new Google_Service_Dataflow_Resource_ProjectsJobsMessages(
         $this,
         $this->serviceName,
         'messages',
@@ -228,7 +228,7 @@ class Google_Service_Dataflow extends Google_Service
           )
         )
     );
-    $this->projects_jobs_workItems = new Google_Service_Dataflow_ProjectsJobsWorkItemsResource(
+    $this->projects_jobs_workItems = new Google_Service_Dataflow_Resource_ProjectsJobsWorkItems(
         $this,
         $this->serviceName,
         'workItems',

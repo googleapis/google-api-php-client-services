@@ -47,7 +47,7 @@ class Google_Service_Customsearch extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'customsearch';
 
-    $this->cse = new Google_Service_Customsearch_CseResource(
+    $this->cse = new Google_Service_Customsearch_Resource_Cse(
         $this,
         $this->serviceName,
         'cse',

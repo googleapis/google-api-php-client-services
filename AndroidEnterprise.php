@@ -61,7 +61,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'androidenterprise';
 
-    $this->collections = new Google_Service_AndroidEnterprise_CollectionsResource(
+    $this->collections = new Google_Service_AndroidEnterprise_Resource_Collections(
         $this,
         $this->serviceName,
         'collections',
@@ -151,7 +151,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->collectionviewers = new Google_Service_AndroidEnterprise_CollectionviewersResource(
+    $this->collectionviewers = new Google_Service_AndroidEnterprise_Resource_Collectionviewers(
         $this,
         $this->serviceName,
         'collectionviewers',
@@ -256,7 +256,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->devices = new Google_Service_AndroidEnterprise_DevicesResource(
+    $this->devices = new Google_Service_AndroidEnterprise_Resource_Devices(
         $this,
         $this->serviceName,
         'devices',
@@ -341,7 +341,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->enterprises = new Google_Service_AndroidEnterprise_EnterprisesResource(
+    $this->enterprises = new Google_Service_AndroidEnterprise_Resource_Enterprises(
         $this,
         $this->serviceName,
         'enterprises',
@@ -451,7 +451,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->entitlements = new Google_Service_AndroidEnterprise_EntitlementsResource(
+    $this->entitlements = new Google_Service_AndroidEnterprise_Resource_Entitlements(
         $this,
         $this->serviceName,
         'entitlements',
@@ -564,7 +564,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->grouplicenses = new Google_Service_AndroidEnterprise_GrouplicensesResource(
+    $this->grouplicenses = new Google_Service_AndroidEnterprise_Resource_Grouplicenses(
         $this,
         $this->serviceName,
         'grouplicenses',
@@ -599,7 +599,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->grouplicenseusers = new Google_Service_AndroidEnterprise_GrouplicenseusersResource(
+    $this->grouplicenseusers = new Google_Service_AndroidEnterprise_Resource_Grouplicenseusers(
         $this,
         $this->serviceName,
         'grouplicenseusers',
@@ -624,7 +624,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->installs = new Google_Service_AndroidEnterprise_InstallsResource(
+    $this->installs = new Google_Service_AndroidEnterprise_Resource_Installs(
         $this,
         $this->serviceName,
         'installs',
@@ -754,7 +754,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->permissions = new Google_Service_AndroidEnterprise_PermissionsResource(
+    $this->permissions = new Google_Service_AndroidEnterprise_Resource_Permissions(
         $this,
         $this->serviceName,
         'permissions',
@@ -778,7 +778,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->products = new Google_Service_AndroidEnterprise_ProductsResource(
+    $this->products = new Google_Service_AndroidEnterprise_Resource_Products(
         $this,
         $this->serviceName,
         'products',
@@ -920,7 +920,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->storelayoutclusters = new Google_Service_AndroidEnterprise_StorelayoutclustersResource(
+    $this->storelayoutclusters = new Google_Service_AndroidEnterprise_Resource_Storelayoutclusters(
         $this,
         $this->serviceName,
         'storelayoutclusters',
@@ -1040,7 +1040,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->storelayoutpages = new Google_Service_AndroidEnterprise_StorelayoutpagesResource(
+    $this->storelayoutpages = new Google_Service_AndroidEnterprise_Resource_Storelayoutpages(
         $this,
         $this->serviceName,
         'storelayoutpages',
@@ -1130,7 +1130,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
           )
         )
     );
-    $this->users = new Google_Service_AndroidEnterprise_UsersResource(
+    $this->users = new Google_Service_AndroidEnterprise_Resource_Users(
         $this,
         $this->serviceName,
         'users',

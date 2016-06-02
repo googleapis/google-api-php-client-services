@@ -21,6 +21,7 @@ class Google_Service_Compute_Project extends Google_Collection
   protected $commonInstanceMetadataType = 'Google_Service_Compute_Metadata';
   protected $commonInstanceMetadataDataType = '';
   public $creationTimestamp;
+  public $defaultServiceAccount;
   public $description;
   public $enabledFeatures;
   public $id;
@@ -47,6 +48,14 @@ class Google_Service_Compute_Project extends Google_Collection
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  public function setDefaultServiceAccount($defaultServiceAccount)
+  {
+    $this->defaultServiceAccount = $defaultServiceAccount;
+  }
+  public function getDefaultServiceAccount()
+  {
+    return $this->defaultServiceAccount;
   }
   public function setDescription($description)
   {

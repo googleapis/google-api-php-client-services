@@ -86,7 +86,7 @@ class Google_Service_Analytics extends Google_Service
     $this->version = 'v3';
     $this->serviceName = 'analytics';
 
-    $this->data_ga = new Google_Service_Analytics_DataGaResource(
+    $this->data_ga = new Google_Service_Analytics_Resource_DataGa(
         $this,
         $this->serviceName,
         'ga',
@@ -157,7 +157,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->data_mcf = new Google_Service_Analytics_DataMcfResource(
+    $this->data_mcf = new Google_Service_Analytics_Resource_DataMcf(
         $this,
         $this->serviceName,
         'mcf',
@@ -216,7 +216,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->data_realtime = new Google_Service_Analytics_DataRealtimeResource(
+    $this->data_realtime = new Google_Service_Analytics_Resource_DataRealtime(
         $this,
         $this->serviceName,
         'realtime',
@@ -257,7 +257,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_accountSummaries = new Google_Service_Analytics_ManagementAccountSummariesResource(
+    $this->management_accountSummaries = new Google_Service_Analytics_Resource_ManagementAccountSummaries(
         $this,
         $this->serviceName,
         'accountSummaries',
@@ -280,7 +280,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_accountUserLinks = new Google_Service_Analytics_ManagementAccountUserLinksResource(
+    $this->management_accountUserLinks = new Google_Service_Analytics_Resource_ManagementAccountUserLinks(
         $this,
         $this->serviceName,
         'accountUserLinks',
@@ -348,7 +348,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_accounts = new Google_Service_Analytics_ManagementAccountsResource(
+    $this->management_accounts = new Google_Service_Analytics_Resource_ManagementAccounts(
         $this,
         $this->serviceName,
         'accounts',
@@ -371,7 +371,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_customDataSources = new Google_Service_Analytics_ManagementCustomDataSourcesResource(
+    $this->management_customDataSources = new Google_Service_Analytics_Resource_ManagementCustomDataSources(
         $this,
         $this->serviceName,
         'customDataSources',
@@ -404,7 +404,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_customDimensions = new Google_Service_Analytics_ManagementCustomDimensionsResource(
+    $this->management_customDimensions = new Google_Service_Analytics_Resource_ManagementCustomDimensions(
         $this,
         $this->serviceName,
         'customDimensions',
@@ -520,7 +520,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_customMetrics = new Google_Service_Analytics_ManagementCustomMetricsResource(
+    $this->management_customMetrics = new Google_Service_Analytics_Resource_ManagementCustomMetrics(
         $this,
         $this->serviceName,
         'customMetrics',
@@ -636,7 +636,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_experiments = new Google_Service_Analytics_ManagementExperimentsResource(
+    $this->management_experiments = new Google_Service_Analytics_Resource_ManagementExperiments(
         $this,
         $this->serviceName,
         'experiments',
@@ -794,7 +794,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_filters = new Google_Service_Analytics_ManagementFiltersResource(
+    $this->management_filters = new Google_Service_Analytics_Resource_ManagementFilters(
         $this,
         $this->serviceName,
         'filters',
@@ -892,7 +892,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_goals = new Google_Service_Analytics_ManagementGoalsResource(
+    $this->management_goals = new Google_Service_Analytics_Resource_ManagementGoals(
         $this,
         $this->serviceName,
         'goals',
@@ -1025,7 +1025,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_profileFilterLinks = new Google_Service_Analytics_ManagementProfileFilterLinksResource(
+    $this->management_profileFilterLinks = new Google_Service_Analytics_Resource_ManagementProfileFilterLinks(
         $this,
         $this->serviceName,
         'profileFilterLinks',
@@ -1183,7 +1183,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_profileUserLinks = new Google_Service_Analytics_ManagementProfileUserLinksResource(
+    $this->management_profileUserLinks = new Google_Service_Analytics_Resource_ManagementProfileUserLinks(
         $this,
         $this->serviceName,
         'profileUserLinks',
@@ -1291,7 +1291,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_profiles = new Google_Service_Analytics_ManagementProfilesResource(
+    $this->management_profiles = new Google_Service_Analytics_Resource_ManagementProfiles(
         $this,
         $this->serviceName,
         'profiles',
@@ -1419,7 +1419,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_segments = new Google_Service_Analytics_ManagementSegmentsResource(
+    $this->management_segments = new Google_Service_Analytics_Resource_ManagementSegments(
         $this,
         $this->serviceName,
         'segments',
@@ -1442,7 +1442,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_unsampledReports = new Google_Service_Analytics_ManagementUnsampledReportsResource(
+    $this->management_unsampledReports = new Google_Service_Analytics_Resource_ManagementUnsampledReports(
         $this,
         $this->serviceName,
         'unsampledReports',
@@ -1550,7 +1550,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_uploads = new Google_Service_Analytics_ManagementUploadsResource(
+    $this->management_uploads = new Google_Service_Analytics_Resource_ManagementUploads(
         $this,
         $this->serviceName,
         'uploads',
@@ -1653,7 +1653,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_webPropertyAdWordsLinks = new Google_Service_Analytics_ManagementWebPropertyAdWordsLinksResource(
+    $this->management_webPropertyAdWordsLinks = new Google_Service_Analytics_Resource_ManagementWebPropertyAdWordsLinks(
         $this,
         $this->serviceName,
         'webPropertyAdWordsLinks',
@@ -1781,7 +1781,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_webproperties = new Google_Service_Analytics_ManagementWebpropertiesResource(
+    $this->management_webproperties = new Google_Service_Analytics_Resource_ManagementWebproperties(
         $this,
         $this->serviceName,
         'webproperties',
@@ -1864,7 +1864,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->management_webpropertyUserLinks = new Google_Service_Analytics_ManagementWebpropertyUserLinksResource(
+    $this->management_webpropertyUserLinks = new Google_Service_Analytics_Resource_ManagementWebpropertyUserLinks(
         $this,
         $this->serviceName,
         'webpropertyUserLinks',
@@ -1952,7 +1952,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->metadata_columns = new Google_Service_Analytics_MetadataColumnsResource(
+    $this->metadata_columns = new Google_Service_Analytics_Resource_MetadataColumns(
         $this,
         $this->serviceName,
         'columns',
@@ -1972,7 +1972,7 @@ class Google_Service_Analytics extends Google_Service
           )
         )
     );
-    $this->provisioning = new Google_Service_Analytics_ProvisioningResource(
+    $this->provisioning = new Google_Service_Analytics_Resource_Provisioning(
         $this,
         $this->serviceName,
         'provisioning',

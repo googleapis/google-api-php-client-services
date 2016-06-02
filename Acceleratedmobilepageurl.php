@@ -49,7 +49,7 @@ class Google_Service_Acceleratedmobilepageurl extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'acceleratedmobilepageurl';
 
-    $this->ampUrls = new Google_Service_Acceleratedmobilepageurl_AmpUrlsResource(
+    $this->ampUrls = new Google_Service_Acceleratedmobilepageurl_Resource_AmpUrls(
         $this,
         $this->serviceName,
         'ampUrls',

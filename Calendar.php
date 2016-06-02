@@ -59,7 +59,7 @@ class Google_Service_Calendar extends Google_Service
     $this->version = 'v3';
     $this->serviceName = 'calendar';
 
-    $this->acl = new Google_Service_Calendar_AclResource(
+    $this->acl = new Google_Service_Calendar_Resource_Acl(
         $this,
         $this->serviceName,
         'acl',
@@ -191,7 +191,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->calendarList = new Google_Service_Calendar_CalendarListResource(
+    $this->calendarList = new Google_Service_Calendar_Resource_CalendarList(
         $this,
         $this->serviceName,
         'calendarList',
@@ -316,7 +316,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->calendars = new Google_Service_Calendar_CalendarsResource(
+    $this->calendars = new Google_Service_Calendar_Resource_Calendars(
         $this,
         $this->serviceName,
         'calendars',
@@ -380,7 +380,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->channels = new Google_Service_Calendar_ChannelsResource(
+    $this->channels = new Google_Service_Calendar_Resource_Channels(
         $this,
         $this->serviceName,
         'channels',
@@ -394,7 +394,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->colors = new Google_Service_Calendar_ColorsResource(
+    $this->colors = new Google_Service_Calendar_Resource_Colors(
         $this,
         $this->serviceName,
         'colors',
@@ -408,7 +408,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->events = new Google_Service_Calendar_EventsResource(
+    $this->events = new Google_Service_Calendar_Resource_Events(
         $this,
         $this->serviceName,
         'events',
@@ -816,7 +816,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->freebusy = new Google_Service_Calendar_FreebusyResource(
+    $this->freebusy = new Google_Service_Calendar_Resource_Freebusy(
         $this,
         $this->serviceName,
         'freebusy',
@@ -830,7 +830,7 @@ class Google_Service_Calendar extends Google_Service
           )
         )
     );
-    $this->settings = new Google_Service_Calendar_SettingsResource(
+    $this->settings = new Google_Service_Calendar_Resource_Settings(
         $this,
         $this->serviceName,
         'settings',

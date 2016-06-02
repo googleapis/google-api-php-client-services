@@ -51,7 +51,7 @@ class Google_Service_GamesConfiguration extends Google_Service
     $this->version = 'v1configuration';
     $this->serviceName = 'gamesConfiguration';
 
-    $this->achievementConfigurations = new Google_Service_GamesConfiguration_AchievementConfigurationsResource(
+    $this->achievementConfigurations = new Google_Service_GamesConfiguration_Resource_AchievementConfigurations(
         $this,
         $this->serviceName,
         'achievementConfigurations',
@@ -129,7 +129,7 @@ class Google_Service_GamesConfiguration extends Google_Service
           )
         )
     );
-    $this->imageConfigurations = new Google_Service_GamesConfiguration_ImageConfigurationsResource(
+    $this->imageConfigurations = new Google_Service_GamesConfiguration_Resource_ImageConfigurations(
         $this,
         $this->serviceName,
         'imageConfigurations',
@@ -154,7 +154,7 @@ class Google_Service_GamesConfiguration extends Google_Service
           )
         )
     );
-    $this->leaderboardConfigurations = new Google_Service_GamesConfiguration_LeaderboardConfigurationsResource(
+    $this->leaderboardConfigurations = new Google_Service_GamesConfiguration_Resource_LeaderboardConfigurations(
         $this,
         $this->serviceName,
         'leaderboardConfigurations',

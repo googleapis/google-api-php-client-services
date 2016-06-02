@@ -49,7 +49,7 @@ class Google_Service_CivicInfo extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'civicinfo';
 
-    $this->divisions = new Google_Service_CivicInfo_DivisionsResource(
+    $this->divisions = new Google_Service_CivicInfo_Resource_Divisions(
         $this,
         $this->serviceName,
         'divisions',
@@ -68,7 +68,7 @@ class Google_Service_CivicInfo extends Google_Service
           )
         )
     );
-    $this->elections = new Google_Service_CivicInfo_ElectionsResource(
+    $this->elections = new Google_Service_CivicInfo_Resource_Elections(
         $this,
         $this->serviceName,
         'elections',
@@ -100,7 +100,7 @@ class Google_Service_CivicInfo extends Google_Service
           )
         )
     );
-    $this->representatives = new Google_Service_CivicInfo_RepresentativesResource(
+    $this->representatives = new Google_Service_CivicInfo_Resource_Representatives(
         $this,
         $this->serviceName,
         'representatives',

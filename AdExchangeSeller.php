@@ -62,7 +62,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
     $this->version = 'v2.0';
     $this->serviceName = 'adexchangeseller';
 
-    $this->accounts = new Google_Service_AdExchangeSeller_AccountsResource(
+    $this->accounts = new Google_Service_AdExchangeSeller_Resource_Accounts(
         $this,
         $this->serviceName,
         'accounts',
@@ -95,7 +95,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_adclients = new Google_Service_AdExchangeSeller_AccountsAdclientsResource(
+    $this->accounts_adclients = new Google_Service_AdExchangeSeller_Resource_AccountsAdclients(
         $this,
         $this->serviceName,
         'adclients',
@@ -123,7 +123,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_alerts = new Google_Service_AdExchangeSeller_AccountsAlertsResource(
+    $this->accounts_alerts = new Google_Service_AdExchangeSeller_Resource_AccountsAlerts(
         $this,
         $this->serviceName,
         'alerts',
@@ -147,7 +147,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_customchannels = new Google_Service_AdExchangeSeller_AccountsCustomchannelsResource(
+    $this->accounts_customchannels = new Google_Service_AdExchangeSeller_Resource_AccountsCustomchannels(
         $this,
         $this->serviceName,
         'customchannels',
@@ -200,7 +200,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_metadata_dimensions = new Google_Service_AdExchangeSeller_AccountsMetadataDimensionsResource(
+    $this->accounts_metadata_dimensions = new Google_Service_AdExchangeSeller_Resource_AccountsMetadataDimensions(
         $this,
         $this->serviceName,
         'dimensions',
@@ -220,7 +220,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_metadata_metrics = new Google_Service_AdExchangeSeller_AccountsMetadataMetricsResource(
+    $this->accounts_metadata_metrics = new Google_Service_AdExchangeSeller_Resource_AccountsMetadataMetrics(
         $this,
         $this->serviceName,
         'metrics',
@@ -240,7 +240,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_preferreddeals = new Google_Service_AdExchangeSeller_AccountsPreferreddealsResource(
+    $this->accounts_preferreddeals = new Google_Service_AdExchangeSeller_Resource_AccountsPreferreddeals(
         $this,
         $this->serviceName,
         'preferreddeals',
@@ -275,7 +275,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_reports = new Google_Service_AdExchangeSeller_AccountsReportsResource(
+    $this->accounts_reports = new Google_Service_AdExchangeSeller_Resource_AccountsReports(
         $this,
         $this->serviceName,
         'reports',
@@ -337,7 +337,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_reports_saved = new Google_Service_AdExchangeSeller_AccountsReportsSavedResource(
+    $this->accounts_reports_saved = new Google_Service_AdExchangeSeller_Resource_AccountsReportsSaved(
         $this,
         $this->serviceName,
         'saved',
@@ -392,7 +392,7 @@ class Google_Service_AdExchangeSeller extends Google_Service
           )
         )
     );
-    $this->accounts_urlchannels = new Google_Service_AdExchangeSeller_AccountsUrlchannelsResource(
+    $this->accounts_urlchannels = new Google_Service_AdExchangeSeller_Resource_AccountsUrlchannels(
         $this,
         $this->serviceName,
         'urlchannels',

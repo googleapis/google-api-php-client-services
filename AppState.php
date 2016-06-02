@@ -49,7 +49,7 @@ class Google_Service_AppState extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'appstate';
 
-    $this->states = new Google_Service_AppState_StatesResource(
+    $this->states = new Google_Service_AppState_Resource_States(
         $this,
         $this->serviceName,
         'states',

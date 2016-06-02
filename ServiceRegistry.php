@@ -60,7 +60,7 @@ class Google_Service_ServiceRegistry extends Google_Service
     $this->version = 'alpha';
     $this->serviceName = 'serviceregistry';
 
-    $this->endpoints = new Google_Service_ServiceRegistry_EndpointsResource(
+    $this->endpoints = new Google_Service_ServiceRegistry_Resource_Endpoints(
         $this,
         $this->serviceName,
         'endpoints',
@@ -166,7 +166,7 @@ class Google_Service_ServiceRegistry extends Google_Service
           )
         )
     );
-    $this->operations = new Google_Service_ServiceRegistry_OperationsResource(
+    $this->operations = new Google_Service_ServiceRegistry_Resource_Operations(
         $this,
         $this->serviceName,
         'operations',

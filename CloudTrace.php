@@ -59,7 +59,7 @@ class Google_Service_CloudTrace extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'cloudtrace';
 
-    $this->projects = new Google_Service_CloudTrace_ProjectsResource(
+    $this->projects = new Google_Service_CloudTrace_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -79,7 +79,7 @@ class Google_Service_CloudTrace extends Google_Service
           )
         )
     );
-    $this->projects_traces = new Google_Service_CloudTrace_ProjectsTracesResource(
+    $this->projects_traces = new Google_Service_CloudTrace_Resource_ProjectsTraces(
         $this,
         $this->serviceName,
         'traces',

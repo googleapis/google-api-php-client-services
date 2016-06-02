@@ -59,7 +59,7 @@ class Google_Service_Replicapoolupdater extends Google_Service
     $this->version = 'v1beta1';
     $this->serviceName = 'replicapoolupdater';
 
-    $this->rollingUpdates = new Google_Service_Replicapoolupdater_RollingUpdatesResource(
+    $this->rollingUpdates = new Google_Service_Replicapoolupdater_Resource_RollingUpdates(
         $this,
         $this->serviceName,
         'rollingUpdates',
@@ -243,7 +243,7 @@ class Google_Service_Replicapoolupdater extends Google_Service
           )
         )
     );
-    $this->zoneOperations = new Google_Service_Replicapoolupdater_ZoneOperationsResource(
+    $this->zoneOperations = new Google_Service_Replicapoolupdater_Resource_ZoneOperations(
         $this,
         $this->serviceName,
         'zoneOperations',

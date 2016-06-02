@@ -17,7 +17,7 @@
 
 class Google_Service_Compute_VpnTunnel extends Google_Collection
 {
-  protected $collection_key = 'localTrafficSelector';
+  protected $collection_key = 'remoteTrafficSelector';
   public $creationTimestamp;
   public $description;
   public $detailedStatus;
@@ -28,6 +28,8 @@ class Google_Service_Compute_VpnTunnel extends Google_Collection
   public $name;
   public $peerIp;
   public $region;
+  public $remoteTrafficSelector;
+  public $router;
   public $selfLink;
   public $sharedSecret;
   public $sharedSecretHash;
@@ -113,6 +115,22 @@ class Google_Service_Compute_VpnTunnel extends Google_Collection
   public function getRegion()
   {
     return $this->region;
+  }
+  public function setRemoteTrafficSelector($remoteTrafficSelector)
+  {
+    $this->remoteTrafficSelector = $remoteTrafficSelector;
+  }
+  public function getRemoteTrafficSelector()
+  {
+    return $this->remoteTrafficSelector;
+  }
+  public function setRouter($router)
+  {
+    $this->router = $router;
+  }
+  public function getRouter()
+  {
+    return $this->router;
   }
   public function setSelfLink($selfLink)
   {

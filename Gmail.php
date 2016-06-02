@@ -73,7 +73,7 @@ class Google_Service_Gmail extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'gmail';
 
-    $this->users = new Google_Service_Gmail_UsersResource(
+    $this->users = new Google_Service_Gmail_Resource_Users(
         $this,
         $this->serviceName,
         'users',
@@ -113,7 +113,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_drafts = new Google_Service_Gmail_UsersDraftsResource(
+    $this->users_drafts = new Google_Service_Gmail_Resource_UsersDrafts(
         $this,
         $this->serviceName,
         'drafts',
@@ -214,7 +214,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_history = new Google_Service_Gmail_UsersHistoryResource(
+    $this->users_history = new Google_Service_Gmail_Resource_UsersHistory(
         $this,
         $this->serviceName,
         'history',
@@ -250,7 +250,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_labels = new Google_Service_Gmail_UsersLabelsResource(
+    $this->users_labels = new Google_Service_Gmail_Resource_UsersLabels(
         $this,
         $this->serviceName,
         'labels',
@@ -340,7 +340,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_messages = new Google_Service_Gmail_UsersMessagesResource(
+    $this->users_messages = new Google_Service_Gmail_Resource_UsersMessages(
         $this,
         $this->serviceName,
         'messages',
@@ -529,7 +529,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_messages_attachments = new Google_Service_Gmail_UsersMessagesAttachmentsResource(
+    $this->users_messages_attachments = new Google_Service_Gmail_Resource_UsersMessagesAttachments(
         $this,
         $this->serviceName,
         'attachments',
@@ -559,7 +559,7 @@ class Google_Service_Gmail extends Google_Service
           )
         )
     );
-    $this->users_threads = new Google_Service_Gmail_UsersThreadsResource(
+    $this->users_threads = new Google_Service_Gmail_Resource_UsersThreads(
         $this,
         $this->serviceName,
         'threads',

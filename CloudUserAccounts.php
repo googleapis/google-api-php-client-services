@@ -62,7 +62,7 @@ class Google_Service_CloudUserAccounts extends Google_Service
     $this->version = 'vm_alpha';
     $this->serviceName = 'clouduseraccounts';
 
-    $this->globalAccountsOperations = new Google_Service_CloudUserAccounts_GlobalAccountsOperationsResource(
+    $this->globalAccountsOperations = new Google_Service_CloudUserAccounts_Resource_GlobalAccountsOperations(
         $this,
         $this->serviceName,
         'globalAccountsOperations',
@@ -128,7 +128,7 @@ class Google_Service_CloudUserAccounts extends Google_Service
           )
         )
     );
-    $this->groups = new Google_Service_CloudUserAccounts_GroupsResource(
+    $this->groups = new Google_Service_CloudUserAccounts_Resource_Groups(
         $this,
         $this->serviceName,
         'groups',
@@ -279,7 +279,7 @@ class Google_Service_CloudUserAccounts extends Google_Service
           )
         )
     );
-    $this->linux = new Google_Service_CloudUserAccounts_LinuxResource(
+    $this->linux = new Google_Service_CloudUserAccounts_Resource_Linux(
         $this,
         $this->serviceName,
         'linux',
@@ -354,7 +354,7 @@ class Google_Service_CloudUserAccounts extends Google_Service
           )
         )
     );
-    $this->users = new Google_Service_CloudUserAccounts_UsersResource(
+    $this->users = new Google_Service_CloudUserAccounts_Resource_Users(
         $this,
         $this->serviceName,
         'users',

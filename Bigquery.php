@@ -71,7 +71,7 @@ class Google_Service_Bigquery extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'bigquery';
 
-    $this->datasets = new Google_Service_Bigquery_DatasetsResource(
+    $this->datasets = new Google_Service_Bigquery_Resource_Datasets(
         $this,
         $this->serviceName,
         'datasets',
@@ -177,7 +177,7 @@ class Google_Service_Bigquery extends Google_Service
           )
         )
     );
-    $this->jobs = new Google_Service_Bigquery_JobsResource(
+    $this->jobs = new Google_Service_Bigquery_Resource_Jobs(
         $this,
         $this->serviceName,
         'jobs',
@@ -299,7 +299,7 @@ class Google_Service_Bigquery extends Google_Service
           )
         )
     );
-    $this->projects = new Google_Service_Bigquery_ProjectsResource(
+    $this->projects = new Google_Service_Bigquery_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
@@ -322,7 +322,7 @@ class Google_Service_Bigquery extends Google_Service
           )
         )
     );
-    $this->tabledata = new Google_Service_Bigquery_TabledataResource(
+    $this->tabledata = new Google_Service_Bigquery_Resource_Tabledata(
         $this,
         $this->serviceName,
         'tabledata',
@@ -384,7 +384,7 @@ class Google_Service_Bigquery extends Google_Service
           )
         )
     );
-    $this->tables = new Google_Service_Bigquery_TablesResource(
+    $this->tables = new Google_Service_Bigquery_Resource_Tables(
         $this,
         $this->serviceName,
         'tables',

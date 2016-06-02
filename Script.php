@@ -79,7 +79,7 @@ class Google_Service_Script extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'script';
 
-    $this->scripts = new Google_Service_Script_ScriptsResource(
+    $this->scripts = new Google_Service_Script_Resource_Scripts(
         $this,
         $this->serviceName,
         'scripts',

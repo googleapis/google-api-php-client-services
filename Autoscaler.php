@@ -55,7 +55,7 @@ class Google_Service_Autoscaler extends Google_Service
     $this->version = 'v1beta2';
     $this->serviceName = 'autoscaler';
 
-    $this->autoscalers = new Google_Service_Autoscaler_AutoscalersResource(
+    $this->autoscalers = new Google_Service_Autoscaler_Resource_Autoscalers(
         $this,
         $this->serviceName,
         'autoscalers',
@@ -187,7 +187,7 @@ class Google_Service_Autoscaler extends Google_Service
           )
         )
     );
-    $this->zoneOperations = new Google_Service_Autoscaler_ZoneOperationsResource(
+    $this->zoneOperations = new Google_Service_Autoscaler_Resource_ZoneOperations(
         $this,
         $this->serviceName,
         'zoneOperations',
@@ -264,7 +264,7 @@ class Google_Service_Autoscaler extends Google_Service
           )
         )
     );
-    $this->zones = new Google_Service_Autoscaler_ZonesResource(
+    $this->zones = new Google_Service_Autoscaler_Resource_Zones(
         $this,
         $this->serviceName,
         'zones',

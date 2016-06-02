@@ -65,7 +65,7 @@ class Google_Service_YouTubeAnalytics extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'youtubeAnalytics';
 
-    $this->batchReportDefinitions = new Google_Service_YouTubeAnalytics_BatchReportDefinitionsResource(
+    $this->batchReportDefinitions = new Google_Service_YouTubeAnalytics_Resource_BatchReportDefinitions(
         $this,
         $this->serviceName,
         'batchReportDefinitions',
@@ -85,7 +85,7 @@ class Google_Service_YouTubeAnalytics extends Google_Service
           )
         )
     );
-    $this->batchReports = new Google_Service_YouTubeAnalytics_BatchReportsResource(
+    $this->batchReports = new Google_Service_YouTubeAnalytics_Resource_BatchReports(
         $this,
         $this->serviceName,
         'batchReports',
@@ -110,7 +110,7 @@ class Google_Service_YouTubeAnalytics extends Google_Service
           )
         )
     );
-    $this->groupItems = new Google_Service_YouTubeAnalytics_GroupItemsResource(
+    $this->groupItems = new Google_Service_YouTubeAnalytics_Resource_GroupItems(
         $this,
         $this->serviceName,
         'groupItems',
@@ -157,7 +157,7 @@ class Google_Service_YouTubeAnalytics extends Google_Service
           )
         )
     );
-    $this->groups = new Google_Service_YouTubeAnalytics_GroupsResource(
+    $this->groups = new Google_Service_YouTubeAnalytics_Resource_Groups(
         $this,
         $this->serviceName,
         'groups',
@@ -220,7 +220,7 @@ class Google_Service_YouTubeAnalytics extends Google_Service
           )
         )
     );
-    $this->reports = new Google_Service_YouTubeAnalytics_ReportsResource(
+    $this->reports = new Google_Service_YouTubeAnalytics_Resource_Reports(
         $this,
         $this->serviceName,
         'reports',

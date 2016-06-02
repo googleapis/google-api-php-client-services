@@ -54,7 +54,7 @@ class Google_Service_CloudMonitoring extends Google_Service
     $this->version = 'v2beta2';
     $this->serviceName = 'cloudmonitoring';
 
-    $this->metricDescriptors = new Google_Service_CloudMonitoring_MetricDescriptorsResource(
+    $this->metricDescriptors = new Google_Service_CloudMonitoring_Resource_MetricDescriptors(
         $this,
         $this->serviceName,
         'metricDescriptors',
@@ -111,7 +111,7 @@ class Google_Service_CloudMonitoring extends Google_Service
           )
         )
     );
-    $this->timeseries = new Google_Service_CloudMonitoring_TimeseriesResource(
+    $this->timeseries = new Google_Service_CloudMonitoring_Resource_Timeseries(
         $this,
         $this->serviceName,
         'timeseries',
@@ -180,7 +180,7 @@ class Google_Service_CloudMonitoring extends Google_Service
           )
         )
     );
-    $this->timeseriesDescriptors = new Google_Service_CloudMonitoring_TimeseriesDescriptorsResource(
+    $this->timeseriesDescriptors = new Google_Service_CloudMonitoring_Resource_TimeseriesDescriptors(
         $this,
         $this->serviceName,
         'timeseriesDescriptors',

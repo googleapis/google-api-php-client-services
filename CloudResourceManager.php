@@ -53,7 +53,7 @@ class Google_Service_CloudResourceManager extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'cloudresourcemanager';
 
-    $this->projects = new Google_Service_CloudResourceManager_ProjectsResource(
+    $this->projects = new Google_Service_CloudResourceManager_Resource_Projects(
         $this,
         $this->serviceName,
         'projects',
