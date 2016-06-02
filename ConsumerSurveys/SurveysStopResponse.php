@@ -15,34 +15,26 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_SurveyQuestionImage extends Google_Model
+class Google_Service_ConsumerSurveys_SurveysStopResponse extends Google_Model
 {
-  public $altText;
-  public $data;
-  public $url;
+  public $requestId;
+  protected $resourceType = 'Google_Service_ConsumerSurveys_Survey';
+  protected $resourceDataType = '';
 
-  public function setAltText($altText)
+  public function setRequestId($requestId)
   {
-    $this->altText = $altText;
+    $this->requestId = $requestId;
   }
-  public function getAltText()
+  public function getRequestId()
   {
-    return $this->altText;
+    return $this->requestId;
   }
-  public function setData($data)
+  public function setResource(Google_Service_ConsumerSurveys_Survey $resource)
   {
-    $this->data = $data;
+    $this->resource = $resource;
   }
-  public function getData()
+  public function getResource()
   {
-    return $this->data;
-  }
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-  public function getUrl()
-  {
-    return $this->url;
+    return $this->resource;
   }
 }

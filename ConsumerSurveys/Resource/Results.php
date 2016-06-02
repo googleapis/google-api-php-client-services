@@ -19,11 +19,11 @@
  * The "results" collection of methods.
  * Typical usage is:
  *  <code>
- *   $consumersurveysService = new Google_Service_Consumersurveys(...);
+ *   $consumersurveysService = new Google_Service_ConsumerSurveys(...);
  *   $results = $consumersurveysService->results;
  *  </code>
  */
-class Google_Service_Consumersurveys_Resource_Results extends Google_Service_Resource
+class Google_Service_ConsumerSurveys_Resource_Results extends Google_Service_Resource
 {
   /**
    * Retrieves any survey results that have been produced so far. Results are
@@ -31,12 +31,12 @@ class Google_Service_Consumersurveys_Resource_Results extends Google_Service_Res
    *
    * @param string $surveyUrlId External URL ID for the survey.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Consumersurveys_SurveyResults
+   * @return Google_Service_ConsumerSurveys_SurveyResults
    */
   public function get($surveyUrlId, $optParams = array())
   {
     $params = array('surveyUrlId' => $surveyUrlId);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Consumersurveys_SurveyResults");
+    return $this->call('get', array($params), "Google_Service_ConsumerSurveys_SurveyResults");
   }
 }

@@ -15,12 +15,12 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_ResultsGetRequest extends Google_Model
+class Google_Service_ConsumerSurveys_ResultsGetRequest extends Google_Model
 {
-  protected $resultMaskType = 'Google_Service_Consumersurveys_ResultsMask';
+  protected $resultMaskType = 'Google_Service_ConsumerSurveys_ResultsMask';
   protected $resultMaskDataType = '';
 
-  public function setResultMask(Google_Service_Consumersurveys_ResultsMask $resultMask)
+  public function setResultMask(Google_Service_ConsumerSurveys_ResultsMask $resultMask)
   {
     $this->resultMask = $resultMask;
   }

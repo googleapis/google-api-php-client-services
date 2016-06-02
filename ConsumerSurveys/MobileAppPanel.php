@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_SurveyAudience extends Google_Collection
+class Google_Service_ConsumerSurveys_MobileAppPanel extends Google_Collection
 {
-  protected $collection_key = 'languages';
-  public $ages;
+  protected $collection_key = 'owners';
   public $country;
-  public $countrySubdivision;
-  public $gender;
-  public $languages;
+  public $isPublicPanel;
+  public $language;
   public $mobileAppPanelId;
-  public $populationSource;
+  public $name;
+  public $owners;
 
-  public function setAges($ages)
-  {
-    $this->ages = $ages;
-  }
-  public function getAges()
-  {
-    return $this->ages;
-  }
   public function setCountry($country)
   {
     $this->country = $country;
@@ -42,29 +33,21 @@ class Google_Service_Consumersurveys_SurveyAudience extends Google_Collection
   {
     return $this->country;
   }
-  public function setCountrySubdivision($countrySubdivision)
+  public function setIsPublicPanel($isPublicPanel)
   {
-    $this->countrySubdivision = $countrySubdivision;
+    $this->isPublicPanel = $isPublicPanel;
   }
-  public function getCountrySubdivision()
+  public function getIsPublicPanel()
   {
-    return $this->countrySubdivision;
+    return $this->isPublicPanel;
   }
-  public function setGender($gender)
+  public function setLanguage($language)
   {
-    $this->gender = $gender;
+    $this->language = $language;
   }
-  public function getGender()
+  public function getLanguage()
   {
-    return $this->gender;
-  }
-  public function setLanguages($languages)
-  {
-    $this->languages = $languages;
-  }
-  public function getLanguages()
-  {
-    return $this->languages;
+    return $this->language;
   }
   public function setMobileAppPanelId($mobileAppPanelId)
   {
@@ -74,12 +57,20 @@ class Google_Service_Consumersurveys_SurveyAudience extends Google_Collection
   {
     return $this->mobileAppPanelId;
   }
-  public function setPopulationSource($populationSource)
+  public function setName($name)
   {
-    $this->populationSource = $populationSource;
+    $this->name = $name;
   }
-  public function getPopulationSource()
+  public function getName()
   {
-    return $this->populationSource;
+    return $this->name;
+  }
+  public function setOwners($owners)
+  {
+    $this->owners = $owners;
+  }
+  public function getOwners()
+  {
+    return $this->owners;
   }
 }

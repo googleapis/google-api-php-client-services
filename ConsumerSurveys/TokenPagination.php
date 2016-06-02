@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_TokenPagination extends Google_Model
+class Google_Service_ConsumerSurveys_TokenPagination extends Google_Model
 {
   public $nextPageToken;
   public $previousPageToken;

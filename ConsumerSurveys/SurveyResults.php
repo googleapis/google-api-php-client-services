@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_PageInfo extends Google_Model
+class Google_Service_ConsumerSurveys_SurveyResults extends Google_Model
 {
-  public $resultPerPage;
-  public $startIndex;
-  public $totalResults;
+  public $status;
+  public $surveyUrlId;
 
-  public function setResultPerPage($resultPerPage)
+  public function setStatus($status)
   {
-    $this->resultPerPage = $resultPerPage;
+    $this->status = $status;
   }
-  public function getResultPerPage()
+  public function getStatus()
   {
-    return $this->resultPerPage;
+    return $this->status;
   }
-  public function setStartIndex($startIndex)
+  public function setSurveyUrlId($surveyUrlId)
   {
-    $this->startIndex = $startIndex;
+    $this->surveyUrlId = $surveyUrlId;
   }
-  public function getStartIndex()
+  public function getSurveyUrlId()
   {
-    return $this->startIndex;
-  }
-  public function setTotalResults($totalResults)
-  {
-    $this->totalResults = $totalResults;
-  }
-  public function getTotalResults()
-  {
-    return $this->totalResults;
+    return $this->surveyUrlId;
   }
 }

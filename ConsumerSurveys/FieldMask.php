@@ -15,10 +15,10 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_FieldMask extends Google_Collection
+class Google_Service_ConsumerSurveys_FieldMask extends Google_Collection
 {
   protected $collection_key = 'fields';
-  protected $fieldsType = 'Google_Service_Consumersurveys_FieldMask';
+  protected $fieldsType = 'Google_Service_ConsumerSurveys_FieldMask';
   protected $fieldsDataType = 'array';
   public $id;
 

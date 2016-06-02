@@ -15,27 +15,34 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_ResultsMask extends Google_Collection
+class Google_Service_ConsumerSurveys_SurveyQuestionImage extends Google_Model
 {
-  protected $collection_key = 'fields';
-  protected $fieldsType = 'Google_Service_Consumersurveys_FieldMask';
-  protected $fieldsDataType = 'array';
-  public $projection;
+  public $altText;
+  public $data;
+  public $url;
 
-  public function setFields($fields)
+  public function setAltText($altText)
   {
-    $this->fields = $fields;
+    $this->altText = $altText;
   }
-  public function getFields()
+  public function getAltText()
   {
-    return $this->fields;
+    return $this->altText;
   }
-  public function setProjection($projection)
+  public function setData($data)
   {
-    $this->projection = $projection;
+    $this->data = $data;
   }
-  public function getProjection()
+  public function getData()
   {
-    return $this->projection;
+    return $this->data;
+  }
+  public function setUrl($url)
+  {
+    $this->url = $url;
+  }
+  public function getUrl()
+  {
+    return $this->url;
   }
 }

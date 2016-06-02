@@ -15,14 +15,14 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_SurveyQuestion extends Google_Collection
+class Google_Service_ConsumerSurveys_SurveyQuestion extends Google_Collection
 {
   protected $collection_key = 'thresholdAnswers';
   public $answerOrder;
   public $answers;
   public $hasOther;
   public $highValueLabel;
-  protected $imagesType = 'Google_Service_Consumersurveys_SurveyQuestionImage';
+  protected $imagesType = 'Google_Service_ConsumerSurveys_SurveyQuestionImage';
   protected $imagesDataType = 'array';
   public $lastAnswerPositionPinned;
   public $lowValueLabel;

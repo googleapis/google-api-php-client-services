@@ -15,26 +15,34 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_SurveysStopResponse extends Google_Model
+class Google_Service_ConsumerSurveys_PageInfo extends Google_Model
 {
-  public $requestId;
-  protected $resourceType = 'Google_Service_Consumersurveys_Survey';
-  protected $resourceDataType = '';
+  public $resultPerPage;
+  public $startIndex;
+  public $totalResults;
 
-  public function setRequestId($requestId)
+  public function setResultPerPage($resultPerPage)
   {
-    $this->requestId = $requestId;
+    $this->resultPerPage = $resultPerPage;
   }
-  public function getRequestId()
+  public function getResultPerPage()
   {
-    return $this->requestId;
+    return $this->resultPerPage;
   }
-  public function setResource(Google_Service_Consumersurveys_Survey $resource)
+  public function setStartIndex($startIndex)
   {
-    $this->resource = $resource;
+    $this->startIndex = $startIndex;
   }
-  public function getResource()
+  public function getStartIndex()
   {
-    return $this->resource;
+    return $this->startIndex;
+  }
+  public function setTotalResults($totalResults)
+  {
+    $this->totalResults = $totalResults;
+  }
+  public function getTotalResults()
+  {
+    return $this->totalResults;
   }
 }

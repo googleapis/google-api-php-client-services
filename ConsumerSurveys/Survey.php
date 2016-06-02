@@ -15,24 +15,24 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_Survey extends Google_Collection
+class Google_Service_ConsumerSurveys_Survey extends Google_Collection
 {
   protected $collection_key = 'questions';
-  protected $audienceType = 'Google_Service_Consumersurveys_SurveyAudience';
+  protected $audienceType = 'Google_Service_ConsumerSurveys_SurveyAudience';
   protected $audienceDataType = '';
-  protected $costType = 'Google_Service_Consumersurveys_SurveyCost';
+  protected $costType = 'Google_Service_ConsumerSurveys_SurveyCost';
   protected $costDataType = '';
   public $customerData;
   public $description;
   public $owners;
-  protected $questionsType = 'Google_Service_Consumersurveys_SurveyQuestion';
+  protected $questionsType = 'Google_Service_ConsumerSurveys_SurveyQuestion';
   protected $questionsDataType = 'array';
   public $state;
   public $surveyUrlId;
   public $title;
   public $wantedResponseCount;
 
-  public function setAudience(Google_Service_Consumersurveys_SurveyAudience $audience)
+  public function setAudience(Google_Service_ConsumerSurveys_SurveyAudience $audience)
   {
     $this->audience = $audience;
   }
@@ -40,7 +40,7 @@ class Google_Service_Consumersurveys_Survey extends Google_Collection
   {
     return $this->audience;
   }
-  public function setCost(Google_Service_Consumersurveys_SurveyCost $cost)
+  public function setCost(Google_Service_ConsumerSurveys_SurveyCost $cost)
   {
     $this->cost = $cost;
   }

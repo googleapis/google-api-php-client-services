@@ -15,18 +15,18 @@
  * the License.
  */
 
-class Google_Service_Consumersurveys_SurveysListResponse extends Google_Collection
+class Google_Service_ConsumerSurveys_MobileAppPanelsListResponse extends Google_Collection
 {
   protected $collection_key = 'resources';
-  protected $pageInfoType = 'Google_Service_Consumersurveys_PageInfo';
+  protected $pageInfoType = 'Google_Service_ConsumerSurveys_PageInfo';
   protected $pageInfoDataType = '';
   public $requestId;
-  protected $resourcesType = 'Google_Service_Consumersurveys_Survey';
+  protected $resourcesType = 'Google_Service_ConsumerSurveys_MobileAppPanel';
   protected $resourcesDataType = 'array';
-  protected $tokenPaginationType = 'Google_Service_Consumersurveys_TokenPagination';
+  protected $tokenPaginationType = 'Google_Service_ConsumerSurveys_TokenPagination';
   protected $tokenPaginationDataType = '';
 
-  public function setPageInfo(Google_Service_Consumersurveys_PageInfo $pageInfo)
+  public function setPageInfo(Google_Service_ConsumerSurveys_PageInfo $pageInfo)
   {
     $this->pageInfo = $pageInfo;
   }
@@ -50,7 +50,7 @@ class Google_Service_Consumersurveys_SurveysListResponse extends Google_Collecti
   {
     return $this->resources;
   }
-  public function setTokenPagination(Google_Service_Consumersurveys_TokenPagination $tokenPagination)
+  public function setTokenPagination(Google_Service_ConsumerSurveys_TokenPagination $tokenPagination)
   {
     $this->tokenPagination = $tokenPagination;
   }
