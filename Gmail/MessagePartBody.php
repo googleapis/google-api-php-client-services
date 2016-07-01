@@ -37,6 +37,17 @@ class Google_Service_Gmail_MessagePartBody extends Google_Model
   {
     return $this->data;
   }
+  //Decode base64 data in accordance with RFC 4648 section 4
+  public function decodeData()
+  {
+    return base64_decode(
+      str_replace(
+        array('-', '_'),
+        array('+', '/'),
+        $this->data
+      )
+    );
+  }
   public function setSize($size)
   {
     $this->size = $size;
