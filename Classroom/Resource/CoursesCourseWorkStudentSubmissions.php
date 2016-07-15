@@ -192,7 +192,8 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * access the requested course or course work, return the requested student
    * submission, or for access errors. * `INVALID_ARGUMENT` if the request is
    * malformed. * `NOT_FOUND` if the requested course, course work, or student
-   * submission does not exist. (studentSubmissions.return)
+   * submission does not exist.
+   * (studentSubmissions.returnCoursesCourseWorkStudentSubmissions)
    *
    * @param string $courseId Identifier of the course. This identifier can be
    * either the Classroom-assigned identifier or an alias.
@@ -202,7 +203,7 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * @param array $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function return($courseId, $courseWorkId, $id, Google_Service_Classroom_ReturnStudentSubmissionRequest $postBody, $optParams = array())
+  public function returnCoursesCourseWorkStudentSubmissions($courseId, $courseWorkId, $id, Google_Service_Classroom_ReturnStudentSubmissionRequest $postBody, $optParams = array())
   {
     $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
