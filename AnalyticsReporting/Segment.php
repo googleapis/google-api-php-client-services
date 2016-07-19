@@ -17,8 +17,7 @@
 
 class Google_Service_AnalyticsReporting_Segment extends Google_Model
 {
-  protected $dynamicSegmentType = 'Google_Service_AnalyticsReporting_DynamicSegment';
-  protected $dynamicSegmentDataType = '';
+  public $dynamicSegment;
   public $segmentId;
 
   public function setDynamicSegment(Google_Service_AnalyticsReporting_DynamicSegment $dynamicSegment)

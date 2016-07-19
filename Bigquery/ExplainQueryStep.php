@@ -29,7 +29,7 @@ class Google_Service_Bigquery_ExplainQueryStep extends Google_Collection
   {
     return $this->kind;
   }
-  public function setSubsteps($substeps)
+  public function setSubsteps(array $substeps)
   {
     $this->substeps = $substeps;
   }

@@ -18,16 +18,20 @@
 class Google_Service_QPXExpress_FreeBaggageAllowance extends Google_Collection
 {
   protected $collection_key = 'bagDescriptor';
-  protected $bagDescriptorType = 'Google_Service_QPXExpress_BagDescriptor';
-  protected $bagDescriptorDataType = 'array';
+  public $bagDescriptor;
   public $kilos;
   public $kilosPerPiece;
   public $kind;
   public $pieces;
   public $pounds;
 
-  public function setBagDescriptor($bagDescriptor)
+  public function setBagDescriptor(array $bagDescriptor)
   {
+    foreach ($bagDescriptor as $b) {
+      if (!$b instanceof Google_Service_QPXExpress_BagDescriptor) {
+        throw new InvalidArgumentException('First argument to setBagDescriptor must be an array of Google_Service_QPXExpress_BagDescriptor');
+      }
+    }
     $this->bagDescriptor = $bagDescriptor;
   }
   public function getBagDescriptor()

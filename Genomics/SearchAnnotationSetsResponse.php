@@ -18,12 +18,16 @@
 class Google_Service_Genomics_SearchAnnotationSetsResponse extends Google_Collection
 {
   protected $collection_key = 'annotationSets';
-  protected $annotationSetsType = 'Google_Service_Genomics_AnnotationSet';
-  protected $annotationSetsDataType = 'array';
+  public $annotationSets;
   public $nextPageToken;
 
-  public function setAnnotationSets($annotationSets)
+  public function setAnnotationSets(array $annotationSets)
   {
+    foreach ($annotationSets as $a) {
+      if (!$a instanceof Google_Service_Genomics_AnnotationSet) {
+        throw new InvalidArgumentException('First argument to setAnnotationSets must be an array of Google_Service_Genomics_AnnotationSet');
+      }
+    }
     $this->annotationSets = $annotationSets;
   }
   public function getAnnotationSets()

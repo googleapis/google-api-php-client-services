@@ -19,8 +19,7 @@ class Google_Service_AdExchangeBuyer_PerformanceReportList extends Google_Collec
 {
   protected $collection_key = 'performanceReport';
   public $kind;
-  protected $performanceReportType = 'Google_Service_AdExchangeBuyer_PerformanceReport';
-  protected $performanceReportDataType = 'array';
+  public $performanceReport;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_AdExchangeBuyer_PerformanceReportList extends Google_Collec
   {
     return $this->kind;
   }
-  public function setPerformanceReport($performanceReport)
+  public function setPerformanceReport(array $performanceReport)
   {
+    foreach ($performanceReport as $p) {
+      if (!$p instanceof Google_Service_AdExchangeBuyer_PerformanceReport) {
+        throw new InvalidArgumentException('First argument to setPerformanceReport must be an array of Google_Service_AdExchangeBuyer_PerformanceReport');
+      }
+    }
     $this->performanceReport = $performanceReport;
   }
   public function getPerformanceReport()

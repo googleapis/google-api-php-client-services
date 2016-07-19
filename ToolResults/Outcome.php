@@ -17,14 +17,10 @@
 
 class Google_Service_ToolResults_Outcome extends Google_Model
 {
-  protected $failureDetailType = 'Google_Service_ToolResults_FailureDetail';
-  protected $failureDetailDataType = '';
-  protected $inconclusiveDetailType = 'Google_Service_ToolResults_InconclusiveDetail';
-  protected $inconclusiveDetailDataType = '';
-  protected $skippedDetailType = 'Google_Service_ToolResults_SkippedDetail';
-  protected $skippedDetailDataType = '';
-  protected $successDetailType = 'Google_Service_ToolResults_SuccessDetail';
-  protected $successDetailDataType = '';
+  public $failureDetail;
+  public $inconclusiveDetail;
+  public $skippedDetail;
+  public $successDetail;
   public $summary;
 
   public function setFailureDetail(Google_Service_ToolResults_FailureDetail $failureDetail)

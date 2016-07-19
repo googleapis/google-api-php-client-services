@@ -82,7 +82,7 @@ class Google_Service_PlayMovies_ExperienceLocale extends Google_Collection
   {
     return $this->createdTime;
   }
-  public function setCustomIds($customIds)
+  public function setCustomIds(array $customIds)
   {
     $this->customIds = $customIds;
   }
@@ -154,7 +154,7 @@ class Google_Service_PlayMovies_ExperienceLocale extends Google_Collection
   {
     return $this->playableSequenceId;
   }
-  public function setPphNames($pphNames)
+  public function setPphNames(array $pphNames)
   {
     $this->pphNames = $pphNames;
   }

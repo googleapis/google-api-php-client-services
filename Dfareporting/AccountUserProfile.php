@@ -19,23 +19,19 @@ class Google_Service_Dfareporting_AccountUserProfile extends Google_Model
 {
   public $accountId;
   public $active;
-  protected $advertiserFilterType = 'Google_Service_Dfareporting_ObjectFilter';
-  protected $advertiserFilterDataType = '';
-  protected $campaignFilterType = 'Google_Service_Dfareporting_ObjectFilter';
-  protected $campaignFilterDataType = '';
+  public $advertiserFilter;
+  public $campaignFilter;
   public $comments;
   public $email;
   public $id;
   public $kind;
   public $locale;
   public $name;
-  protected $siteFilterType = 'Google_Service_Dfareporting_ObjectFilter';
-  protected $siteFilterDataType = '';
+  public $siteFilter;
   public $subaccountId;
   public $traffickerType;
   public $userAccessType;
-  protected $userRoleFilterType = 'Google_Service_Dfareporting_ObjectFilter';
-  protected $userRoleFilterDataType = '';
+  public $userRoleFilter;
   public $userRoleId;
 
   public function setAccountId($accountId)

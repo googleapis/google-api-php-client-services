@@ -19,21 +19,18 @@ class Google_Service_Dfareporting_DirectorySite extends Google_Collection
 {
   protected $collection_key = 'interstitialTagFormats';
   public $active;
-  protected $contactAssignmentsType = 'Google_Service_Dfareporting_DirectorySiteContactAssignment';
-  protected $contactAssignmentsDataType = 'array';
+  public $contactAssignments;
   public $countryId;
   public $currencyId;
   public $description;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $inpageTagFormats;
   public $interstitialTagFormats;
   public $kind;
   public $name;
   public $parentId;
-  protected $settingsType = 'Google_Service_Dfareporting_DirectorySiteSettings';
-  protected $settingsDataType = '';
+  public $settings;
   public $url;
 
   public function setActive($active)
@@ -44,8 +41,13 @@ class Google_Service_Dfareporting_DirectorySite extends Google_Collection
   {
     return $this->active;
   }
-  public function setContactAssignments($contactAssignments)
+  public function setContactAssignments(array $contactAssignments)
   {
+    foreach ($contactAssignments as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_DirectorySiteContactAssignment) {
+        throw new InvalidArgumentException('First argument to setContactAssignments must be an array of Google_Service_Dfareporting_DirectorySiteContactAssignment');
+      }
+    }
     $this->contactAssignments = $contactAssignments;
   }
   public function getContactAssignments()
@@ -92,7 +94,7 @@ class Google_Service_Dfareporting_DirectorySite extends Google_Collection
   {
     return $this->idDimensionValue;
   }
-  public function setInpageTagFormats($inpageTagFormats)
+  public function setInpageTagFormats(array $inpageTagFormats)
   {
     $this->inpageTagFormats = $inpageTagFormats;
   }
@@ -100,7 +102,7 @@ class Google_Service_Dfareporting_DirectorySite extends Google_Collection
   {
     return $this->inpageTagFormats;
   }
-  public function setInterstitialTagFormats($interstitialTagFormats)
+  public function setInterstitialTagFormats(array $interstitialTagFormats)
   {
     $this->interstitialTagFormats = $interstitialTagFormats;
   }

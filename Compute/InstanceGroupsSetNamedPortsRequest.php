@@ -19,8 +19,7 @@ class Google_Service_Compute_InstanceGroupsSetNamedPortsRequest extends Google_C
 {
   protected $collection_key = 'namedPorts';
   public $fingerprint;
-  protected $namedPortsType = 'Google_Service_Compute_NamedPort';
-  protected $namedPortsDataType = 'array';
+  public $namedPorts;
 
   public function setFingerprint($fingerprint)
   {
@@ -30,8 +29,13 @@ class Google_Service_Compute_InstanceGroupsSetNamedPortsRequest extends Google_C
   {
     return $this->fingerprint;
   }
-  public function setNamedPorts($namedPorts)
+  public function setNamedPorts(array $namedPorts)
   {
+    foreach ($namedPorts as $n) {
+      if (!$n instanceof Google_Service_Compute_NamedPort) {
+        throw new InvalidArgumentException('First argument to setNamedPorts must be an array of Google_Service_Compute_NamedPort');
+      }
+    }
     $this->namedPorts = $namedPorts;
   }
   public function getNamedPorts()

@@ -18,14 +18,18 @@
 class Google_Service_Drive_ChangeList extends Google_Collection
 {
   protected $collection_key = 'changes';
-  protected $changesType = 'Google_Service_Drive_Change';
-  protected $changesDataType = 'array';
+  public $changes;
   public $kind;
   public $newStartPageToken;
   public $nextPageToken;
 
-  public function setChanges($changes)
+  public function setChanges(array $changes)
   {
+    foreach ($changes as $c) {
+      if (!$c instanceof Google_Service_Drive_Change) {
+        throw new InvalidArgumentException('First argument to setChanges must be an array of Google_Service_Drive_Change');
+      }
+    }
     $this->changes = $changes;
   }
   public function getChanges()

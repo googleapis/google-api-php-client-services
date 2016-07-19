@@ -39,7 +39,7 @@ class Google_Service_Dfareporting_RemarketingListShare extends Google_Collection
   {
     return $this->remarketingListId;
   }
-  public function setSharedAccountIds($sharedAccountIds)
+  public function setSharedAccountIds(array $sharedAccountIds)
   {
     $this->sharedAccountIds = $sharedAccountIds;
   }
@@ -47,7 +47,7 @@ class Google_Service_Dfareporting_RemarketingListShare extends Google_Collection
   {
     return $this->sharedAccountIds;
   }
-  public function setSharedAdvertiserIds($sharedAdvertiserIds)
+  public function setSharedAdvertiserIds(array $sharedAdvertiserIds)
   {
     $this->sharedAdvertiserIds = $sharedAdvertiserIds;
   }

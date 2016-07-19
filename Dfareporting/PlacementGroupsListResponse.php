@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_PlacementGroupsListResponse extends Google_Col
   protected $collection_key = 'placementGroups';
   public $kind;
   public $nextPageToken;
-  protected $placementGroupsType = 'Google_Service_Dfareporting_PlacementGroup';
-  protected $placementGroupsDataType = 'array';
+  public $placementGroups;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_PlacementGroupsListResponse extends Google_Col
   {
     return $this->nextPageToken;
   }
-  public function setPlacementGroups($placementGroups)
+  public function setPlacementGroups(array $placementGroups)
   {
+    foreach ($placementGroups as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_PlacementGroup) {
+        throw new InvalidArgumentException('First argument to setPlacementGroups must be an array of Google_Service_Dfareporting_PlacementGroup');
+      }
+    }
     $this->placementGroups = $placementGroups;
   }
   public function getPlacementGroups()

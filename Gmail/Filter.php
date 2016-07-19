@@ -17,10 +17,8 @@
 
 class Google_Service_Gmail_Filter extends Google_Model
 {
-  protected $actionType = 'Google_Service_Gmail_FilterAction';
-  protected $actionDataType = '';
-  protected $criteriaType = 'Google_Service_Gmail_FilterCriteria';
-  protected $criteriaDataType = '';
+  public $action;
+  public $criteria;
   public $id;
 
   public function setAction(Google_Service_Gmail_FilterAction $action)

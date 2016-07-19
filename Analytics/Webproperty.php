@@ -18,8 +18,7 @@
 class Google_Service_Analytics_Webproperty extends Google_Model
 {
   public $accountId;
-  protected $childLinkType = 'Google_Service_Analytics_WebpropertyChildLink';
-  protected $childLinkDataType = '';
+  public $childLink;
   public $created;
   public $defaultProfileId;
   public $id;
@@ -28,10 +27,8 @@ class Google_Service_Analytics_Webproperty extends Google_Model
   public $kind;
   public $level;
   public $name;
-  protected $parentLinkType = 'Google_Service_Analytics_WebpropertyParentLink';
-  protected $parentLinkDataType = '';
-  protected $permissionsType = 'Google_Service_Analytics_WebpropertyPermissions';
-  protected $permissionsDataType = '';
+  public $parentLink;
+  public $permissions;
   public $profileCount;
   public $selfLink;
   public $starred;

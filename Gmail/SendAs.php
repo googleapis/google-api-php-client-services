@@ -23,8 +23,7 @@ class Google_Service_Gmail_SendAs extends Google_Model
   public $replyToAddress;
   public $sendAsEmail;
   public $signature;
-  protected $smtpMsaType = 'Google_Service_Gmail_SmtpMsa';
-  protected $smtpMsaDataType = '';
+  public $smtpMsa;
   public $treatAsAlias;
   public $verificationStatus;
 

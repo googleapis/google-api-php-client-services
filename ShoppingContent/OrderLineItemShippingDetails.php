@@ -18,8 +18,7 @@
 class Google_Service_ShoppingContent_OrderLineItemShippingDetails extends Google_Model
 {
   public $deliverByDate;
-  protected $methodType = 'Google_Service_ShoppingContent_OrderLineItemShippingDetailsMethod';
-  protected $methodDataType = '';
+  public $method;
   public $shipByDate;
 
   public function setDeliverByDate($deliverByDate)

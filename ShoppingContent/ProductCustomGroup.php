@@ -18,12 +18,16 @@
 class Google_Service_ShoppingContent_ProductCustomGroup extends Google_Collection
 {
   protected $collection_key = 'attributes';
-  protected $attributesType = 'Google_Service_ShoppingContent_ProductCustomAttribute';
-  protected $attributesDataType = 'array';
+  public $attributes;
   public $name;
 
-  public function setAttributes($attributes)
+  public function setAttributes(array $attributes)
   {
+    foreach ($attributes as $a) {
+      if (!$a instanceof Google_Service_ShoppingContent_ProductCustomAttribute) {
+        throw new InvalidArgumentException('First argument to setAttributes must be an array of Google_Service_ShoppingContent_ProductCustomAttribute');
+      }
+    }
     $this->attributes = $attributes;
   }
   public function getAttributes()

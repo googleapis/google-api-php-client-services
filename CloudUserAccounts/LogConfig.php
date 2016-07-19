@@ -17,8 +17,7 @@
 
 class Google_Service_CloudUserAccounts_LogConfig extends Google_Model
 {
-  protected $counterType = 'Google_Service_CloudUserAccounts_LogConfigCounterOptions';
-  protected $counterDataType = '';
+  public $counter;
 
   public function setCounter(Google_Service_CloudUserAccounts_LogConfigCounterOptions $counter)
   {

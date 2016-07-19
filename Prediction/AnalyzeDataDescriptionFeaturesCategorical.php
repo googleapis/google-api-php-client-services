@@ -19,8 +19,7 @@ class Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategorical extend
 {
   protected $collection_key = 'values';
   public $count;
-  protected $valuesType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategoricalValues';
-  protected $valuesDataType = 'array';
+  public $values;
 
   public function setCount($count)
   {
@@ -30,8 +29,13 @@ class Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategorical extend
   {
     return $this->count;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
+    foreach ($values as $v) {
+      if (!$v instanceof Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategoricalValues) {
+        throw new InvalidArgumentException('First argument to setValues must be an array of Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategoricalValues');
+      }
+    }
     $this->values = $values;
   }
   public function getValues()

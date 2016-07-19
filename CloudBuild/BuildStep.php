@@ -23,7 +23,7 @@ class Google_Service_CloudBuild_BuildStep extends Google_Collection
   public $env;
   public $name;
 
-  public function setArgs($args)
+  public function setArgs(array $args)
   {
     $this->args = $args;
   }
@@ -39,7 +39,7 @@ class Google_Service_CloudBuild_BuildStep extends Google_Collection
   {
     return $this->dir;
   }
-  public function setEnv($env)
+  public function setEnv(array $env)
   {
     $this->env = $env;
   }

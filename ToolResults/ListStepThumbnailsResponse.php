@@ -19,8 +19,7 @@ class Google_Service_ToolResults_ListStepThumbnailsResponse extends Google_Colle
 {
   protected $collection_key = 'thumbnails';
   public $nextPageToken;
-  protected $thumbnailsType = 'Google_Service_ToolResults_Image';
-  protected $thumbnailsDataType = 'array';
+  public $thumbnails;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_ToolResults_ListStepThumbnailsResponse extends Google_Colle
   {
     return $this->nextPageToken;
   }
-  public function setThumbnails($thumbnails)
+  public function setThumbnails(array $thumbnails)
   {
+    foreach ($thumbnails as $t) {
+      if (!$t instanceof Google_Service_ToolResults_Image) {
+        throw new InvalidArgumentException('First argument to setThumbnails must be an array of Google_Service_ToolResults_Image');
+      }
+    }
     $this->thumbnails = $thumbnails;
   }
   public function getThumbnails()

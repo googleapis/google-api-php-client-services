@@ -18,13 +18,16 @@
 class Google_Service_Compute_DiskTypesScopedList extends Google_Collection
 {
   protected $collection_key = 'diskTypes';
-  protected $diskTypesType = 'Google_Service_Compute_DiskType';
-  protected $diskTypesDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_DiskTypesScopedListWarning';
-  protected $warningDataType = '';
+  public $diskTypes;
+  public $warning;
 
-  public function setDiskTypes($diskTypes)
+  public function setDiskTypes(array $diskTypes)
   {
+    foreach ($diskTypes as $d) {
+      if (!$d instanceof Google_Service_Compute_DiskType) {
+        throw new InvalidArgumentException('First argument to setDiskTypes must be an array of Google_Service_Compute_DiskType');
+      }
+    }
     $this->diskTypes = $diskTypes;
   }
   public function getDiskTypes()

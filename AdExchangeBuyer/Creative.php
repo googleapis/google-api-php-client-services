@@ -31,23 +31,19 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   public $attribute;
   public $buyerCreativeId;
   public $clickThroughUrl;
-  protected $correctionsType = 'Google_Service_AdExchangeBuyer_CreativeCorrections';
-  protected $correctionsDataType = 'array';
+  public $corrections;
   public $dealsStatus;
-  protected $filteringReasonsType = 'Google_Service_AdExchangeBuyer_CreativeFilteringReasons';
-  protected $filteringReasonsDataType = '';
+  public $filteringReasons;
   public $height;
   public $impressionTrackingUrl;
   public $kind;
   public $languages;
-  protected $nativeAdType = 'Google_Service_AdExchangeBuyer_CreativeNativeAd';
-  protected $nativeAdDataType = '';
+  public $nativeAd;
   public $openAuctionStatus;
   public $productCategories;
   public $restrictedCategories;
   public $sensitiveCategories;
-  protected $servingRestrictionsType = 'Google_Service_AdExchangeBuyer_CreativeServingRestrictions';
-  protected $servingRestrictionsDataType = 'array';
+  public $servingRestrictions;
   public $vendorType;
   public $version;
   public $videoURL;
@@ -77,7 +73,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->adChoicesDestinationUrl;
   }
-  public function setAdvertiserId($advertiserId)
+  public function setAdvertiserId(array $advertiserId)
   {
     $this->advertiserId = $advertiserId;
   }
@@ -109,7 +105,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->apiUploadTimestamp;
   }
-  public function setAttribute($attribute)
+  public function setAttribute(array $attribute)
   {
     $this->attribute = $attribute;
   }
@@ -125,7 +121,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->buyerCreativeId;
   }
-  public function setClickThroughUrl($clickThroughUrl)
+  public function setClickThroughUrl(array $clickThroughUrl)
   {
     $this->clickThroughUrl = $clickThroughUrl;
   }
@@ -133,8 +129,13 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->clickThroughUrl;
   }
-  public function setCorrections($corrections)
+  public function setCorrections(array $corrections)
   {
+    foreach ($corrections as $c) {
+      if (!$c instanceof Google_Service_AdExchangeBuyer_CreativeCorrections) {
+        throw new InvalidArgumentException('First argument to setCorrections must be an array of Google_Service_AdExchangeBuyer_CreativeCorrections');
+      }
+    }
     $this->corrections = $corrections;
   }
   public function getCorrections()
@@ -165,7 +166,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->height;
   }
-  public function setImpressionTrackingUrl($impressionTrackingUrl)
+  public function setImpressionTrackingUrl(array $impressionTrackingUrl)
   {
     $this->impressionTrackingUrl = $impressionTrackingUrl;
   }
@@ -181,7 +182,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLanguages($languages)
+  public function setLanguages(array $languages)
   {
     $this->languages = $languages;
   }
@@ -205,7 +206,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->openAuctionStatus;
   }
-  public function setProductCategories($productCategories)
+  public function setProductCategories(array $productCategories)
   {
     $this->productCategories = $productCategories;
   }
@@ -213,7 +214,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->productCategories;
   }
-  public function setRestrictedCategories($restrictedCategories)
+  public function setRestrictedCategories(array $restrictedCategories)
   {
     $this->restrictedCategories = $restrictedCategories;
   }
@@ -221,7 +222,7 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->restrictedCategories;
   }
-  public function setSensitiveCategories($sensitiveCategories)
+  public function setSensitiveCategories(array $sensitiveCategories)
   {
     $this->sensitiveCategories = $sensitiveCategories;
   }
@@ -229,15 +230,20 @@ class Google_Service_AdExchangeBuyer_Creative extends Google_Collection
   {
     return $this->sensitiveCategories;
   }
-  public function setServingRestrictions($servingRestrictions)
+  public function setServingRestrictions(array $servingRestrictions)
   {
+    foreach ($servingRestrictions as $s) {
+      if (!$s instanceof Google_Service_AdExchangeBuyer_CreativeServingRestrictions) {
+        throw new InvalidArgumentException('First argument to setServingRestrictions must be an array of Google_Service_AdExchangeBuyer_CreativeServingRestrictions');
+      }
+    }
     $this->servingRestrictions = $servingRestrictions;
   }
   public function getServingRestrictions()
   {
     return $this->servingRestrictions;
   }
-  public function setVendorType($vendorType)
+  public function setVendorType(array $vendorType)
   {
     $this->vendorType = $vendorType;
   }

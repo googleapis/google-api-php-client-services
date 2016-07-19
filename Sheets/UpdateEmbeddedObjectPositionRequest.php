@@ -18,8 +18,7 @@
 class Google_Service_Sheets_UpdateEmbeddedObjectPositionRequest extends Google_Model
 {
   public $fields;
-  protected $newPositionType = 'Google_Service_Sheets_EmbeddedObjectPosition';
-  protected $newPositionDataType = '';
+  public $newPosition;
   public $objectId;
 
   public function setFields($fields)

@@ -18,22 +18,30 @@
 class Google_Service_Dataflow_StreamingComputationTask extends Google_Collection
 {
   protected $collection_key = 'dataDisks';
-  protected $computationRangesType = 'Google_Service_Dataflow_StreamingComputationRanges';
-  protected $computationRangesDataType = 'array';
-  protected $dataDisksType = 'Google_Service_Dataflow_MountedDataDisk';
-  protected $dataDisksDataType = 'array';
+  public $computationRanges;
+  public $dataDisks;
   public $taskType;
 
-  public function setComputationRanges($computationRanges)
+  public function setComputationRanges(array $computationRanges)
   {
+    foreach ($computationRanges as $c) {
+      if (!$c instanceof Google_Service_Dataflow_StreamingComputationRanges) {
+        throw new InvalidArgumentException('First argument to setComputationRanges must be an array of Google_Service_Dataflow_StreamingComputationRanges');
+      }
+    }
     $this->computationRanges = $computationRanges;
   }
   public function getComputationRanges()
   {
     return $this->computationRanges;
   }
-  public function setDataDisks($dataDisks)
+  public function setDataDisks(array $dataDisks)
   {
+    foreach ($dataDisks as $d) {
+      if (!$d instanceof Google_Service_Dataflow_MountedDataDisk) {
+        throw new InvalidArgumentException('First argument to setDataDisks must be an array of Google_Service_Dataflow_MountedDataDisk');
+      }
+    }
     $this->dataDisks = $dataDisks;
   }
   public function getDataDisks()

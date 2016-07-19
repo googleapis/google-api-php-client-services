@@ -49,7 +49,7 @@ class Google_Service_Reports_UsageReportParameters extends Google_Collection
   {
     return $this->intValue;
   }
-  public function setMsgValue($msgValue)
+  public function setMsgValue(array $msgValue)
   {
     $this->msgValue = $msgValue;
   }

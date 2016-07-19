@@ -48,7 +48,7 @@ class Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestrictionRestricti
   {
     return $this->valueInteger;
   }
-  public function setValueMultiselect($valueMultiselect)
+  public function setValueMultiselect(array $valueMultiselect)
   {
     $this->valueMultiselect = $valueMultiselect;
   }

@@ -18,11 +18,9 @@
 class Google_Service_Safebrowsing_FindFullHashesRequest extends Google_Collection
 {
   protected $collection_key = 'clientStates';
-  protected $clientType = 'Google_Service_Safebrowsing_ClientInfo';
-  protected $clientDataType = '';
+  public $client;
   public $clientStates;
-  protected $threatInfoType = 'Google_Service_Safebrowsing_ThreatInfo';
-  protected $threatInfoDataType = '';
+  public $threatInfo;
 
   public function setClient(Google_Service_Safebrowsing_ClientInfo $client)
   {
@@ -32,7 +30,7 @@ class Google_Service_Safebrowsing_FindFullHashesRequest extends Google_Collectio
   {
     return $this->client;
   }
-  public function setClientStates($clientStates)
+  public function setClientStates(array $clientStates)
   {
     $this->clientStates = $clientStates;
   }

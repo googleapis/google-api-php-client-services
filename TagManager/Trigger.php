@@ -19,36 +19,24 @@ class Google_Service_TagManager_Trigger extends Google_Collection
 {
   protected $collection_key = 'filter';
   public $accountId;
-  protected $autoEventFilterType = 'Google_Service_TagManager_Condition';
-  protected $autoEventFilterDataType = 'array';
-  protected $checkValidationType = 'Google_Service_TagManager_Parameter';
-  protected $checkValidationDataType = '';
+  public $autoEventFilter;
+  public $checkValidation;
   public $containerId;
-  protected $customEventFilterType = 'Google_Service_TagManager_Condition';
-  protected $customEventFilterDataType = 'array';
-  protected $enableAllVideosType = 'Google_Service_TagManager_Parameter';
-  protected $enableAllVideosDataType = '';
-  protected $eventNameType = 'Google_Service_TagManager_Parameter';
-  protected $eventNameDataType = '';
-  protected $filterType = 'Google_Service_TagManager_Condition';
-  protected $filterDataType = 'array';
+  public $customEventFilter;
+  public $enableAllVideos;
+  public $eventName;
+  public $filter;
   public $fingerprint;
-  protected $intervalType = 'Google_Service_TagManager_Parameter';
-  protected $intervalDataType = '';
-  protected $limitType = 'Google_Service_TagManager_Parameter';
-  protected $limitDataType = '';
+  public $interval;
+  public $limit;
   public $name;
   public $parentFolderId;
   public $triggerId;
   public $type;
-  protected $uniqueTriggerIdType = 'Google_Service_TagManager_Parameter';
-  protected $uniqueTriggerIdDataType = '';
-  protected $videoPercentageListType = 'Google_Service_TagManager_Parameter';
-  protected $videoPercentageListDataType = '';
-  protected $waitForTagsType = 'Google_Service_TagManager_Parameter';
-  protected $waitForTagsDataType = '';
-  protected $waitForTagsTimeoutType = 'Google_Service_TagManager_Parameter';
-  protected $waitForTagsTimeoutDataType = '';
+  public $uniqueTriggerId;
+  public $videoPercentageList;
+  public $waitForTags;
+  public $waitForTagsTimeout;
 
   public function setAccountId($accountId)
   {
@@ -58,8 +46,13 @@ class Google_Service_TagManager_Trigger extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setAutoEventFilter($autoEventFilter)
+  public function setAutoEventFilter(array $autoEventFilter)
   {
+    foreach ($autoEventFilter as $a) {
+      if (!$a instanceof Google_Service_TagManager_Condition) {
+        throw new InvalidArgumentException('First argument to setAutoEventFilter must be an array of Google_Service_TagManager_Condition');
+      }
+    }
     $this->autoEventFilter = $autoEventFilter;
   }
   public function getAutoEventFilter()
@@ -82,8 +75,13 @@ class Google_Service_TagManager_Trigger extends Google_Collection
   {
     return $this->containerId;
   }
-  public function setCustomEventFilter($customEventFilter)
+  public function setCustomEventFilter(array $customEventFilter)
   {
+    foreach ($customEventFilter as $c) {
+      if (!$c instanceof Google_Service_TagManager_Condition) {
+        throw new InvalidArgumentException('First argument to setCustomEventFilter must be an array of Google_Service_TagManager_Condition');
+      }
+    }
     $this->customEventFilter = $customEventFilter;
   }
   public function getCustomEventFilter()
@@ -106,8 +104,13 @@ class Google_Service_TagManager_Trigger extends Google_Collection
   {
     return $this->eventName;
   }
-  public function setFilter($filter)
+  public function setFilter(array $filter)
   {
+    foreach ($filter as $f) {
+      if (!$f instanceof Google_Service_TagManager_Condition) {
+        throw new InvalidArgumentException('First argument to setFilter must be an array of Google_Service_TagManager_Condition');
+      }
+    }
     $this->filter = $filter;
   }
   public function getFilter()

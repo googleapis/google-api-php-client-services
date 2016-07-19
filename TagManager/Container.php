@@ -46,7 +46,7 @@ class Google_Service_TagManager_Container extends Google_Collection
   {
     return $this->containerId;
   }
-  public function setDomainName($domainName)
+  public function setDomainName(array $domainName)
   {
     $this->domainName = $domainName;
   }
@@ -54,7 +54,7 @@ class Google_Service_TagManager_Container extends Google_Collection
   {
     return $this->domainName;
   }
-  public function setEnabledBuiltInVariable($enabledBuiltInVariable)
+  public function setEnabledBuiltInVariable(array $enabledBuiltInVariable)
   {
     $this->enabledBuiltInVariable = $enabledBuiltInVariable;
   }
@@ -110,7 +110,7 @@ class Google_Service_TagManager_Container extends Google_Collection
   {
     return $this->timeZoneId;
   }
-  public function setUsageContext($usageContext)
+  public function setUsageContext(array $usageContext)
   {
     $this->usageContext = $usageContext;
   }

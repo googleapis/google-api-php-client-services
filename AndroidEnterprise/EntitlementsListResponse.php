@@ -18,12 +18,16 @@
 class Google_Service_AndroidEnterprise_EntitlementsListResponse extends Google_Collection
 {
   protected $collection_key = 'entitlement';
-  protected $entitlementType = 'Google_Service_AndroidEnterprise_Entitlement';
-  protected $entitlementDataType = 'array';
+  public $entitlement;
   public $kind;
 
-  public function setEntitlement($entitlement)
+  public function setEntitlement(array $entitlement)
   {
+    foreach ($entitlement as $e) {
+      if (!$e instanceof Google_Service_AndroidEnterprise_Entitlement) {
+        throw new InvalidArgumentException('First argument to setEntitlement must be an array of Google_Service_AndroidEnterprise_Entitlement');
+      }
+    }
     $this->entitlement = $entitlement;
   }
   public function getEntitlement()

@@ -19,8 +19,7 @@ class Google_Service_ToolResults_Status extends Google_Collection
 {
   protected $collection_key = 'details';
   public $code;
-  protected $detailsType = 'Google_Service_ToolResults_Any';
-  protected $detailsDataType = 'array';
+  public $details;
   public $message;
 
   public function setCode($code)
@@ -31,8 +30,13 @@ class Google_Service_ToolResults_Status extends Google_Collection
   {
     return $this->code;
   }
-  public function setDetails($details)
+  public function setDetails(array $details)
   {
+    foreach ($details as $d) {
+      if (!$d instanceof Google_Service_ToolResults_Any) {
+        throw new InvalidArgumentException('First argument to setDetails must be an array of Google_Service_ToolResults_Any');
+      }
+    }
     $this->details = $details;
   }
   public function getDetails()

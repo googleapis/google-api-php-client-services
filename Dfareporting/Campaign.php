@@ -19,39 +19,28 @@ class Google_Service_Dfareporting_Campaign extends Google_Collection
 {
   protected $collection_key = 'traffickerEmails';
   public $accountId;
-  protected $additionalCreativeOptimizationConfigurationsType = 'Google_Service_Dfareporting_CreativeOptimizationConfiguration';
-  protected $additionalCreativeOptimizationConfigurationsDataType = 'array';
+  public $additionalCreativeOptimizationConfigurations;
   public $advertiserGroupId;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $archived;
-  protected $audienceSegmentGroupsType = 'Google_Service_Dfareporting_AudienceSegmentGroup';
-  protected $audienceSegmentGroupsDataType = 'array';
+  public $audienceSegmentGroups;
   public $billingInvoiceCode;
-  protected $clickThroughUrlSuffixPropertiesType = 'Google_Service_Dfareporting_ClickThroughUrlSuffixProperties';
-  protected $clickThroughUrlSuffixPropertiesDataType = '';
+  public $clickThroughUrlSuffixProperties;
   public $comment;
   public $comscoreVceEnabled;
-  protected $createInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $createInfoDataType = '';
+  public $createInfo;
   public $creativeGroupIds;
-  protected $creativeOptimizationConfigurationType = 'Google_Service_Dfareporting_CreativeOptimizationConfiguration';
-  protected $creativeOptimizationConfigurationDataType = '';
-  protected $defaultClickThroughEventTagPropertiesType = 'Google_Service_Dfareporting_DefaultClickThroughEventTagProperties';
-  protected $defaultClickThroughEventTagPropertiesDataType = '';
+  public $creativeOptimizationConfiguration;
+  public $defaultClickThroughEventTagProperties;
   public $endDate;
-  protected $eventTagOverridesType = 'Google_Service_Dfareporting_EventTagOverride';
-  protected $eventTagOverridesDataType = 'array';
+  public $eventTagOverrides;
   public $externalId;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $kind;
-  protected $lastModifiedInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $lastModifiedInfoDataType = '';
-  protected $lookbackConfigurationType = 'Google_Service_Dfareporting_LookbackConfiguration';
-  protected $lookbackConfigurationDataType = '';
+  public $lastModifiedInfo;
+  public $lookbackConfiguration;
   public $name;
   public $nielsenOcrEnabled;
   public $startDate;
@@ -66,8 +55,13 @@ class Google_Service_Dfareporting_Campaign extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setAdditionalCreativeOptimizationConfigurations($additionalCreativeOptimizationConfigurations)
+  public function setAdditionalCreativeOptimizationConfigurations(array $additionalCreativeOptimizationConfigurations)
   {
+    foreach ($additionalCreativeOptimizationConfigurations as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_CreativeOptimizationConfiguration) {
+        throw new InvalidArgumentException('First argument to setAdditionalCreativeOptimizationConfigurations must be an array of Google_Service_Dfareporting_CreativeOptimizationConfiguration');
+      }
+    }
     $this->additionalCreativeOptimizationConfigurations = $additionalCreativeOptimizationConfigurations;
   }
   public function getAdditionalCreativeOptimizationConfigurations()
@@ -106,8 +100,13 @@ class Google_Service_Dfareporting_Campaign extends Google_Collection
   {
     return $this->archived;
   }
-  public function setAudienceSegmentGroups($audienceSegmentGroups)
+  public function setAudienceSegmentGroups(array $audienceSegmentGroups)
   {
+    foreach ($audienceSegmentGroups as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_AudienceSegmentGroup) {
+        throw new InvalidArgumentException('First argument to setAudienceSegmentGroups must be an array of Google_Service_Dfareporting_AudienceSegmentGroup');
+      }
+    }
     $this->audienceSegmentGroups = $audienceSegmentGroups;
   }
   public function getAudienceSegmentGroups()
@@ -154,7 +153,7 @@ class Google_Service_Dfareporting_Campaign extends Google_Collection
   {
     return $this->createInfo;
   }
-  public function setCreativeGroupIds($creativeGroupIds)
+  public function setCreativeGroupIds(array $creativeGroupIds)
   {
     $this->creativeGroupIds = $creativeGroupIds;
   }
@@ -186,8 +185,13 @@ class Google_Service_Dfareporting_Campaign extends Google_Collection
   {
     return $this->endDate;
   }
-  public function setEventTagOverrides($eventTagOverrides)
+  public function setEventTagOverrides(array $eventTagOverrides)
   {
+    foreach ($eventTagOverrides as $e) {
+      if (!$e instanceof Google_Service_Dfareporting_EventTagOverride) {
+        throw new InvalidArgumentException('First argument to setEventTagOverrides must be an array of Google_Service_Dfareporting_EventTagOverride');
+      }
+    }
     $this->eventTagOverrides = $eventTagOverrides;
   }
   public function getEventTagOverrides()
@@ -274,7 +278,7 @@ class Google_Service_Dfareporting_Campaign extends Google_Collection
   {
     return $this->subaccountId;
   }
-  public function setTraffickerEmails($traffickerEmails)
+  public function setTraffickerEmails(array $traffickerEmails)
   {
     $this->traffickerEmails = $traffickerEmails;
   }

@@ -49,7 +49,7 @@ class Google_Service_DoubleClickBidManager_RowStatus extends Google_Collection
   {
     return $this->entityName;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
     $this->errors = $errors;
   }

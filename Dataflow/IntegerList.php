@@ -18,11 +18,15 @@
 class Google_Service_Dataflow_IntegerList extends Google_Collection
 {
   protected $collection_key = 'elements';
-  protected $elementsType = 'Google_Service_Dataflow_SplitInt64';
-  protected $elementsDataType = 'array';
+  public $elements;
 
-  public function setElements($elements)
+  public function setElements(array $elements)
   {
+    foreach ($elements as $e) {
+      if (!$e instanceof Google_Service_Dataflow_SplitInt64) {
+        throw new InvalidArgumentException('First argument to setElements must be an array of Google_Service_Dataflow_SplitInt64');
+      }
+    }
     $this->elements = $elements;
   }
   public function getElements()

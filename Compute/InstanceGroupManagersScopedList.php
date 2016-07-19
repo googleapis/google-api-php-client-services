@@ -18,13 +18,16 @@
 class Google_Service_Compute_InstanceGroupManagersScopedList extends Google_Collection
 {
   protected $collection_key = 'instanceGroupManagers';
-  protected $instanceGroupManagersType = 'Google_Service_Compute_InstanceGroupManager';
-  protected $instanceGroupManagersDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_InstanceGroupManagersScopedListWarning';
-  protected $warningDataType = '';
+  public $instanceGroupManagers;
+  public $warning;
 
-  public function setInstanceGroupManagers($instanceGroupManagers)
+  public function setInstanceGroupManagers(array $instanceGroupManagers)
   {
+    foreach ($instanceGroupManagers as $i) {
+      if (!$i instanceof Google_Service_Compute_InstanceGroupManager) {
+        throw new InvalidArgumentException('First argument to setInstanceGroupManagers must be an array of Google_Service_Compute_InstanceGroupManager');
+      }
+    }
     $this->instanceGroupManagers = $instanceGroupManagers;
   }
   public function getInstanceGroupManagers()

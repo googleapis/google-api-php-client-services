@@ -18,8 +18,7 @@
 class Google_Service_Games_TurnBasedMatchCreateRequest extends Google_Collection
 {
   protected $collection_key = 'invitedPlayerIds';
-  protected $autoMatchingCriteriaType = 'Google_Service_Games_TurnBasedAutoMatchingCriteria';
-  protected $autoMatchingCriteriaDataType = '';
+  public $autoMatchingCriteria;
   public $invitedPlayerIds;
   public $kind;
   public $requestId;
@@ -33,7 +32,7 @@ class Google_Service_Games_TurnBasedMatchCreateRequest extends Google_Collection
   {
     return $this->autoMatchingCriteria;
   }
-  public function setInvitedPlayerIds($invitedPlayerIds)
+  public function setInvitedPlayerIds(array $invitedPlayerIds)
   {
     $this->invitedPlayerIds = $invitedPlayerIds;
   }

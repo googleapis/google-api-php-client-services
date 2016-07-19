@@ -18,22 +18,21 @@
 class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collection
 {
   protected $collection_key = 'metricNames';
-  protected $customRichMediaEventsType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $customRichMediaEventsDataType = 'array';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
-  protected $dateRangeDataType = '';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
-  protected $dimensionsDataType = 'array';
-  protected $floodlightConfigIdType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $floodlightConfigIdDataType = '';
+  public $customRichMediaEvents;
+  public $dateRange;
+  public $dimensionFilters;
+  public $dimensions;
+  public $floodlightConfigId;
   public $metricNames;
-  protected $reportPropertiesType = 'Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties';
-  protected $reportPropertiesDataType = '';
+  public $reportProperties;
 
-  public function setCustomRichMediaEvents($customRichMediaEvents)
+  public function setCustomRichMediaEvents(array $customRichMediaEvents)
   {
+    foreach ($customRichMediaEvents as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setCustomRichMediaEvents must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->customRichMediaEvents = $customRichMediaEvents;
   }
   public function getCustomRichMediaEvents()
@@ -48,16 +47,26 @@ class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collec
   {
     return $this->dateRange;
   }
-  public function setDimensionFilters($dimensionFilters)
+  public function setDimensionFilters(array $dimensionFilters)
   {
+    foreach ($dimensionFilters as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setDimensionFilters must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->dimensionFilters = $dimensionFilters;
   }
   public function getDimensionFilters()
   {
     return $this->dimensionFilters;
   }
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
+    foreach ($dimensions as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_SortedDimension) {
+        throw new InvalidArgumentException('First argument to setDimensions must be an array of Google_Service_Dfareporting_SortedDimension');
+      }
+    }
     $this->dimensions = $dimensions;
   }
   public function getDimensions()
@@ -72,7 +81,7 @@ class Google_Service_Dfareporting_ReportFloodlightCriteria extends Google_Collec
   {
     return $this->floodlightConfigId;
   }
-  public function setMetricNames($metricNames)
+  public function setMetricNames(array $metricNames)
   {
     $this->metricNames = $metricNames;
   }

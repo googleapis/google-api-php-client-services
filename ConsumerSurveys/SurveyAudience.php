@@ -26,7 +26,7 @@ class Google_Service_ConsumerSurveys_SurveyAudience extends Google_Collection
   public $mobileAppPanelId;
   public $populationSource;
 
-  public function setAges($ages)
+  public function setAges(array $ages)
   {
     $this->ages = $ages;
   }
@@ -58,7 +58,7 @@ class Google_Service_ConsumerSurveys_SurveyAudience extends Google_Collection
   {
     return $this->gender;
   }
-  public function setLanguages($languages)
+  public function setLanguages(array $languages)
   {
     $this->languages = $languages;
   }

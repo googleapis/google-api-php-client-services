@@ -18,12 +18,16 @@
 class Google_Service_DeploymentManager_DeploymentsListResponse extends Google_Collection
 {
   protected $collection_key = 'deployments';
-  protected $deploymentsType = 'Google_Service_DeploymentManager_Deployment';
-  protected $deploymentsDataType = 'array';
+  public $deployments;
   public $nextPageToken;
 
-  public function setDeployments($deployments)
+  public function setDeployments(array $deployments)
   {
+    foreach ($deployments as $d) {
+      if (!$d instanceof Google_Service_DeploymentManager_Deployment) {
+        throw new InvalidArgumentException('First argument to setDeployments must be an array of Google_Service_DeploymentManager_Deployment');
+      }
+    }
     $this->deployments = $deployments;
   }
   public function getDeployments()

@@ -20,13 +20,11 @@ class Google_Service_Resourceviews_ResourceView extends Google_Collection
   protected $collection_key = 'resources';
   public $creationTimestamp;
   public $description;
-  protected $endpointsType = 'Google_Service_Resourceviews_ServiceEndpoint';
-  protected $endpointsDataType = 'array';
+  public $endpoints;
   public $fingerprint;
   public $id;
   public $kind;
-  protected $labelsType = 'Google_Service_Resourceviews_Label';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $name;
   public $network;
   public $resources;
@@ -49,8 +47,13 @@ class Google_Service_Resourceviews_ResourceView extends Google_Collection
   {
     return $this->description;
   }
-  public function setEndpoints($endpoints)
+  public function setEndpoints(array $endpoints)
   {
+    foreach ($endpoints as $e) {
+      if (!$e instanceof Google_Service_Resourceviews_ServiceEndpoint) {
+        throw new InvalidArgumentException('First argument to setEndpoints must be an array of Google_Service_Resourceviews_ServiceEndpoint');
+      }
+    }
     $this->endpoints = $endpoints;
   }
   public function getEndpoints()
@@ -81,8 +84,13 @@ class Google_Service_Resourceviews_ResourceView extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_Resourceviews_Label) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_Resourceviews_Label');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()
@@ -105,7 +113,7 @@ class Google_Service_Resourceviews_ResourceView extends Google_Collection
   {
     return $this->network;
   }
-  public function setResources($resources)
+  public function setResources(array $resources)
   {
     $this->resources = $resources;
   }

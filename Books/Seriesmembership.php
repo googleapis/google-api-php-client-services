@@ -19,8 +19,7 @@ class Google_Service_Books_Seriesmembership extends Google_Collection
 {
   protected $collection_key = 'member';
   public $kind;
-  protected $memberType = 'Google_Service_Books_Volume';
-  protected $memberDataType = 'array';
+  public $member;
   public $nextPageToken;
 
   public function setKind($kind)
@@ -31,8 +30,13 @@ class Google_Service_Books_Seriesmembership extends Google_Collection
   {
     return $this->kind;
   }
-  public function setMember($member)
+  public function setMember(array $member)
   {
+    foreach ($member as $m) {
+      if (!$m instanceof Google_Service_Books_Volume) {
+        throw new InvalidArgumentException('First argument to setMember must be an array of Google_Service_Books_Volume');
+      }
+    }
     $this->member = $member;
   }
   public function getMember()

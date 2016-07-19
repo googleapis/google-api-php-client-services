@@ -17,8 +17,7 @@
 
 class Google_Service_ShoppingContent_OrderDeliveryDetails extends Google_Model
 {
-  protected $addressType = 'Google_Service_ShoppingContent_OrderAddress';
-  protected $addressDataType = '';
+  public $address;
   public $phoneNumber;
 
   public function setAddress(Google_Service_ShoppingContent_OrderAddress $address)

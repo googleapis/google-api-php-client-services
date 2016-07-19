@@ -22,8 +22,7 @@ class Google_Service_Dfareporting_DirectorySiteSettings extends Google_Model
         "instreamVideoPlacementAccepted" => "instream_video_placement_accepted",
   );
   public $activeViewOptOut;
-  protected $dfpSettingsType = 'Google_Service_Dfareporting_DfpSettings';
-  protected $dfpSettingsDataType = '';
+  public $dfpSettings;
   public $instreamVideoPlacementAccepted;
   public $interstitialPlacementAccepted;
   public $nielsenOcrOptOut;

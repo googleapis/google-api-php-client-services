@@ -18,8 +18,7 @@
 class Google_Service_Sheets_UpdateProtectedRangeRequest extends Google_Model
 {
   public $fields;
-  protected $protectedRangeType = 'Google_Service_Sheets_ProtectedRange';
-  protected $protectedRangeDataType = '';
+  public $protectedRange;
 
   public function setFields($fields)
   {

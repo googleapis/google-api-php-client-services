@@ -26,7 +26,7 @@ class Google_Service_Genomics_SearchAnnotationsRequest extends Google_Collection
   public $referenceName;
   public $start;
 
-  public function setAnnotationSetIds($annotationSetIds)
+  public function setAnnotationSetIds(array $annotationSetIds)
   {
     $this->annotationSetIds = $annotationSetIds;
   }

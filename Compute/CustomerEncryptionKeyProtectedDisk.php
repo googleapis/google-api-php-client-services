@@ -17,8 +17,7 @@
 
 class Google_Service_Compute_CustomerEncryptionKeyProtectedDisk extends Google_Model
 {
-  protected $diskEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $diskEncryptionKeyDataType = '';
+  public $diskEncryptionKey;
   public $source;
 
   public function setDiskEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $diskEncryptionKey)

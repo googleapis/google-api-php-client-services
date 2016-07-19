@@ -48,7 +48,7 @@ class Google_Service_AndroidEnterprise_Collection extends Google_Collection
   {
     return $this->name;
   }
-  public function setProductId($productId)
+  public function setProductId(array $productId)
   {
     $this->productId = $productId;
   }

@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_DimensionValueRequest extends Google_Collectio
   protected $collection_key = 'filters';
   public $dimensionName;
   public $endDate;
-  protected $filtersType = 'Google_Service_Dfareporting_DimensionFilter';
-  protected $filtersDataType = 'array';
+  public $filters;
   public $kind;
   public $startDate;
 
@@ -41,8 +40,13 @@ class Google_Service_Dfareporting_DimensionValueRequest extends Google_Collectio
   {
     return $this->endDate;
   }
-  public function setFilters($filters)
+  public function setFilters(array $filters)
   {
+    foreach ($filters as $f) {
+      if (!$f instanceof Google_Service_Dfareporting_DimensionFilter) {
+        throw new InvalidArgumentException('First argument to setFilters must be an array of Google_Service_Dfareporting_DimensionFilter');
+      }
+    }
     $this->filters = $filters;
   }
   public function getFilters()

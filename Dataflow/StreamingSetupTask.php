@@ -19,8 +19,7 @@ class Google_Service_Dataflow_StreamingSetupTask extends Google_Model
 {
   public $drain;
   public $receiveWorkPort;
-  protected $streamingComputationTopologyType = 'Google_Service_Dataflow_TopologyConfig';
-  protected $streamingComputationTopologyDataType = '';
+  public $streamingComputationTopology;
   public $workerHarnessPort;
 
   public function setDrain($drain)

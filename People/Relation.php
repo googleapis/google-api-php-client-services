@@ -18,8 +18,7 @@
 class Google_Service_People_Relation extends Google_Model
 {
   public $formattedType;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $person;
   public $type;
 

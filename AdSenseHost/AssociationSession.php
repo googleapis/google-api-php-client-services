@@ -52,7 +52,7 @@ class Google_Service_AdSenseHost_AssociationSession extends Google_Collection
   {
     return $this->kind;
   }
-  public function setProductCodes($productCodes)
+  public function setProductCodes(array $productCodes)
   {
     $this->productCodes = $productCodes;
   }

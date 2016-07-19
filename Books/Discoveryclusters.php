@@ -18,13 +18,17 @@
 class Google_Service_Books_Discoveryclusters extends Google_Collection
 {
   protected $collection_key = 'clusters';
-  protected $clustersType = 'Google_Service_Books_DiscoveryclustersClusters';
-  protected $clustersDataType = 'array';
+  public $clusters;
   public $kind;
   public $totalClusters;
 
-  public function setClusters($clusters)
+  public function setClusters(array $clusters)
   {
+    foreach ($clusters as $c) {
+      if (!$c instanceof Google_Service_Books_DiscoveryclustersClusters) {
+        throw new InvalidArgumentException('First argument to setClusters must be an array of Google_Service_Books_DiscoveryclustersClusters');
+      }
+    }
     $this->clusters = $clusters;
   }
   public function getClusters()

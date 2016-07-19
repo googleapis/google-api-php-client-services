@@ -17,8 +17,7 @@
 
 class Google_Service_YouTube_ActivityContentDetailsSubscription extends Google_Model
 {
-  protected $resourceIdType = 'Google_Service_YouTube_ResourceId';
-  protected $resourceIdDataType = '';
+  public $resourceId;
 
   public function setResourceId(Google_Service_YouTube_ResourceId $resourceId)
   {

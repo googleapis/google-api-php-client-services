@@ -18,8 +18,7 @@
 class Google_Service_ToolResults_TestIssue extends Google_Model
 {
   public $errorMessage;
-  protected $stackTraceType = 'Google_Service_ToolResults_StackTrace';
-  protected $stackTraceDataType = '';
+  public $stackTrace;
 
   public function setErrorMessage($errorMessage)
   {

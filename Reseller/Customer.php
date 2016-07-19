@@ -23,8 +23,7 @@ class Google_Service_Reseller_Customer extends Google_Model
   public $customerId;
   public $kind;
   public $phoneNumber;
-  protected $postalAddressType = 'Google_Service_Reseller_Address';
-  protected $postalAddressDataType = '';
+  public $postalAddress;
   public $resourceUiUrl;
 
   public function setAlternateEmail($alternateEmail)

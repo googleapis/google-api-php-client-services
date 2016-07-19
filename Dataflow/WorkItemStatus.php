@@ -19,26 +19,17 @@ class Google_Service_Dataflow_WorkItemStatus extends Google_Collection
 {
   protected $collection_key = 'metricUpdates';
   public $completed;
-  protected $counterUpdatesType = 'Google_Service_Dataflow_CounterUpdate';
-  protected $counterUpdatesDataType = 'array';
-  protected $dynamicSourceSplitType = 'Google_Service_Dataflow_DynamicSourceSplit';
-  protected $dynamicSourceSplitDataType = '';
-  protected $errorsType = 'Google_Service_Dataflow_Status';
-  protected $errorsDataType = 'array';
-  protected $metricUpdatesType = 'Google_Service_Dataflow_MetricUpdate';
-  protected $metricUpdatesDataType = 'array';
-  protected $progressType = 'Google_Service_Dataflow_ApproximateProgress';
-  protected $progressDataType = '';
+  public $counterUpdates;
+  public $dynamicSourceSplit;
+  public $errors;
+  public $metricUpdates;
+  public $progress;
   public $reportIndex;
-  protected $reportedProgressType = 'Google_Service_Dataflow_ApproximateReportedProgress';
-  protected $reportedProgressDataType = '';
+  public $reportedProgress;
   public $requestedLeaseDuration;
-  protected $sourceForkType = 'Google_Service_Dataflow_SourceFork';
-  protected $sourceForkDataType = '';
-  protected $sourceOperationResponseType = 'Google_Service_Dataflow_SourceOperationResponse';
-  protected $sourceOperationResponseDataType = '';
-  protected $stopPositionType = 'Google_Service_Dataflow_Position';
-  protected $stopPositionDataType = '';
+  public $sourceFork;
+  public $sourceOperationResponse;
+  public $stopPosition;
   public $workItemId;
 
   public function setCompleted($completed)
@@ -49,8 +40,13 @@ class Google_Service_Dataflow_WorkItemStatus extends Google_Collection
   {
     return $this->completed;
   }
-  public function setCounterUpdates($counterUpdates)
+  public function setCounterUpdates(array $counterUpdates)
   {
+    foreach ($counterUpdates as $c) {
+      if (!$c instanceof Google_Service_Dataflow_CounterUpdate) {
+        throw new InvalidArgumentException('First argument to setCounterUpdates must be an array of Google_Service_Dataflow_CounterUpdate');
+      }
+    }
     $this->counterUpdates = $counterUpdates;
   }
   public function getCounterUpdates()
@@ -65,16 +61,26 @@ class Google_Service_Dataflow_WorkItemStatus extends Google_Collection
   {
     return $this->dynamicSourceSplit;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_Dataflow_Status) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_Dataflow_Status');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()
   {
     return $this->errors;
   }
-  public function setMetricUpdates($metricUpdates)
+  public function setMetricUpdates(array $metricUpdates)
   {
+    foreach ($metricUpdates as $m) {
+      if (!$m instanceof Google_Service_Dataflow_MetricUpdate) {
+        throw new InvalidArgumentException('First argument to setMetricUpdates must be an array of Google_Service_Dataflow_MetricUpdate');
+      }
+    }
     $this->metricUpdates = $metricUpdates;
   }
   public function getMetricUpdates()

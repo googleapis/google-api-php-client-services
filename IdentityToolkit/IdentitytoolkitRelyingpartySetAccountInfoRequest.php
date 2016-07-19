@@ -72,7 +72,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRe
   {
     return $this->delegatedProjectNumber;
   }
-  public function setDeleteAttribute($deleteAttribute)
+  public function setDeleteAttribute(array $deleteAttribute)
   {
     $this->deleteAttribute = $deleteAttribute;
   }
@@ -80,7 +80,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRe
   {
     return $this->deleteAttribute;
   }
-  public function setDeleteProvider($deleteProvider)
+  public function setDeleteProvider(array $deleteProvider)
   {
     $this->deleteProvider = $deleteProvider;
   }
@@ -176,7 +176,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartySetAccountInfoRe
   {
     return $this->photoUrl;
   }
-  public function setProvider($provider)
+  public function setProvider(array $provider)
   {
     $this->provider = $provider;
   }

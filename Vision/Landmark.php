@@ -17,8 +17,7 @@
 
 class Google_Service_Vision_Landmark extends Google_Model
 {
-  protected $positionType = 'Google_Service_Vision_Position';
-  protected $positionDataType = '';
+  public $position;
   public $type;
 
   public function setPosition(Google_Service_Vision_Position $position)

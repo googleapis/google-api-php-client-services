@@ -19,8 +19,7 @@ class Google_Service_People_ImClient extends Google_Model
 {
   public $formattedProtocol;
   public $formattedType;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $protocol;
   public $type;
   public $username;

@@ -27,8 +27,7 @@ class Google_Service_Dfareporting_Project extends Google_Model
   public $endDate;
   public $id;
   public $kind;
-  protected $lastModifiedInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $lastModifiedInfoDataType = '';
+  public $lastModifiedInfo;
   public $name;
   public $overview;
   public $startDate;

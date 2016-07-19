@@ -19,8 +19,7 @@ class Google_Service_Appengine_Service extends Google_Model
 {
   public $id;
   public $name;
-  protected $splitType = 'Google_Service_Appengine_TrafficSplit';
-  protected $splitDataType = '';
+  public $split;
 
   public function setId($id)
   {

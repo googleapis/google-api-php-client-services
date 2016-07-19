@@ -18,11 +18,15 @@
 class Google_Service_Classroom_AssignmentSubmission extends Google_Collection
 {
   protected $collection_key = 'attachments';
-  protected $attachmentsType = 'Google_Service_Classroom_Attachment';
-  protected $attachmentsDataType = 'array';
+  public $attachments;
 
-  public function setAttachments($attachments)
+  public function setAttachments(array $attachments)
   {
+    foreach ($attachments as $a) {
+      if (!$a instanceof Google_Service_Classroom_Attachment) {
+        throw new InvalidArgumentException('First argument to setAttachments must be an array of Google_Service_Classroom_Attachment');
+      }
+    }
     $this->attachments = $attachments;
   }
   public function getAttachments()

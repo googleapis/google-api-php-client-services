@@ -17,8 +17,7 @@
 
 class Google_Service_DoubleClickBidManager_UploadLineItemsResponse extends Google_Model
 {
-  protected $uploadStatusType = 'Google_Service_DoubleClickBidManager_UploadStatus';
-  protected $uploadStatusDataType = '';
+  public $uploadStatus;
 
   public function setUploadStatus(Google_Service_DoubleClickBidManager_UploadStatus $uploadStatus)
   {

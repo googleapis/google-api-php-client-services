@@ -18,11 +18,15 @@
 class Google_Service_Monitoring_CreateTimeSeriesRequest extends Google_Collection
 {
   protected $collection_key = 'timeSeries';
-  protected $timeSeriesType = 'Google_Service_Monitoring_TimeSeries';
-  protected $timeSeriesDataType = 'array';
+  public $timeSeries;
 
-  public function setTimeSeries($timeSeries)
+  public function setTimeSeries(array $timeSeries)
   {
+    foreach ($timeSeries as $t) {
+      if (!$t instanceof Google_Service_Monitoring_TimeSeries) {
+        throw new InvalidArgumentException('First argument to setTimeSeries must be an array of Google_Service_Monitoring_TimeSeries');
+      }
+    }
     $this->timeSeries = $timeSeries;
   }
   public function getTimeSeries()

@@ -26,8 +26,7 @@ class Google_Service_AdSense_Account extends Google_Collection
   public $kind;
   public $name;
   public $premium;
-  protected $subAccountsType = 'Google_Service_AdSense_Account';
-  protected $subAccountsDataType = 'array';
+  public $subAccounts;
   public $timezone;
 
   public function setCreationTime($creationTime)
@@ -70,8 +69,13 @@ class Google_Service_AdSense_Account extends Google_Collection
   {
     return $this->premium;
   }
-  public function setSubAccounts($subAccounts)
+  public function setSubAccounts(array $subAccounts)
   {
+    foreach ($subAccounts as $s) {
+      if (!$s instanceof Google_Service_AdSense_Account) {
+        throw new InvalidArgumentException('First argument to setSubAccounts must be an array of Google_Service_AdSense_Account');
+      }
+    }
     $this->subAccounts = $subAccounts;
   }
   public function getSubAccounts()

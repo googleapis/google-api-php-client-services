@@ -19,10 +19,9 @@ class Google_Service_AnalyticsReporting_ColumnHeader extends Google_Collection
 {
   protected $collection_key = 'dimensions';
   public $dimensions;
-  protected $metricHeaderType = 'Google_Service_AnalyticsReporting_MetricHeader';
-  protected $metricHeaderDataType = '';
+  public $metricHeader;
 
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
     $this->dimensions = $dimensions;
   }

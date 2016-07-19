@@ -18,19 +18,23 @@
 class Google_Service_Dataflow_StreamingConfigTask extends Google_Collection
 {
   protected $collection_key = 'streamingComputationConfigs';
-  protected $streamingComputationConfigsType = 'Google_Service_Dataflow_StreamingComputationConfig';
-  protected $streamingComputationConfigsDataType = 'array';
+  public $streamingComputationConfigs;
   public $userStepToStateFamilyNameMap;
 
-  public function setStreamingComputationConfigs($streamingComputationConfigs)
+  public function setStreamingComputationConfigs(array $streamingComputationConfigs)
   {
+    foreach ($streamingComputationConfigs as $s) {
+      if (!$s instanceof Google_Service_Dataflow_StreamingComputationConfig) {
+        throw new InvalidArgumentException('First argument to setStreamingComputationConfigs must be an array of Google_Service_Dataflow_StreamingComputationConfig');
+      }
+    }
     $this->streamingComputationConfigs = $streamingComputationConfigs;
   }
   public function getStreamingComputationConfigs()
   {
     return $this->streamingComputationConfigs;
   }
-  public function setUserStepToStateFamilyNameMap($userStepToStateFamilyNameMap)
+  public function setUserStepToStateFamilyNameMap(array $userStepToStateFamilyNameMap)
   {
     $this->userStepToStateFamilyNameMap = $userStepToStateFamilyNameMap;
   }

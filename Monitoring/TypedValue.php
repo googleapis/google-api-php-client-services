@@ -18,8 +18,7 @@
 class Google_Service_Monitoring_TypedValue extends Google_Model
 {
   public $boolValue;
-  protected $distributionValueType = 'Google_Service_Monitoring_Distribution';
-  protected $distributionValueDataType = '';
+  public $distributionValue;
   public $doubleValue;
   public $int64Value;
   public $stringValue;

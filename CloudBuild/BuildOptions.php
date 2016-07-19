@@ -29,7 +29,7 @@ class Google_Service_CloudBuild_BuildOptions extends Google_Collection
   {
     return $this->requestedVerifyOption;
   }
-  public function setSourceProvenanceHash($sourceProvenanceHash)
+  public function setSourceProvenanceHash(array $sourceProvenanceHash)
   {
     $this->sourceProvenanceHash = $sourceProvenanceHash;
   }

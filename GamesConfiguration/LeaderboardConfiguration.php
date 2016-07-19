@@ -17,12 +17,10 @@
 
 class Google_Service_GamesConfiguration_LeaderboardConfiguration extends Google_Model
 {
-  protected $draftType = 'Google_Service_GamesConfiguration_LeaderboardConfigurationDetail';
-  protected $draftDataType = '';
+  public $draft;
   public $id;
   public $kind;
-  protected $publishedType = 'Google_Service_GamesConfiguration_LeaderboardConfigurationDetail';
-  protected $publishedDataType = '';
+  public $published;
   public $scoreMax;
   public $scoreMin;
   public $scoreOrder;

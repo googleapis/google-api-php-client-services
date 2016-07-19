@@ -21,8 +21,7 @@ class Google_Service_Bigquery_Table extends Google_Model
   public $description;
   public $etag;
   public $expirationTime;
-  protected $externalDataConfigurationType = 'Google_Service_Bigquery_ExternalDataConfiguration';
-  protected $externalDataConfigurationDataType = '';
+  public $externalDataConfiguration;
   public $friendlyName;
   public $id;
   public $kind;
@@ -31,18 +30,13 @@ class Google_Service_Bigquery_Table extends Google_Model
   public $numBytes;
   public $numLongTermBytes;
   public $numRows;
-  protected $schemaType = 'Google_Service_Bigquery_TableSchema';
-  protected $schemaDataType = '';
+  public $schema;
   public $selfLink;
-  protected $streamingBufferType = 'Google_Service_Bigquery_Streamingbuffer';
-  protected $streamingBufferDataType = '';
-  protected $tableReferenceType = 'Google_Service_Bigquery_TableReference';
-  protected $tableReferenceDataType = '';
-  protected $timePartitioningType = 'Google_Service_Bigquery_TimePartitioning';
-  protected $timePartitioningDataType = '';
+  public $streamingBuffer;
+  public $tableReference;
+  public $timePartitioning;
   public $type;
-  protected $viewType = 'Google_Service_Bigquery_ViewDefinition';
-  protected $viewDataType = '';
+  public $view;
 
   public function setCreationTime($creationTime)
   {

@@ -18,11 +18,15 @@
 class Google_Service_Vision_BatchAnnotateImagesResponse extends Google_Collection
 {
   protected $collection_key = 'responses';
-  protected $responsesType = 'Google_Service_Vision_AnnotateImageResponse';
-  protected $responsesDataType = 'array';
+  public $responses;
 
-  public function setResponses($responses)
+  public function setResponses(array $responses)
   {
+    foreach ($responses as $r) {
+      if (!$r instanceof Google_Service_Vision_AnnotateImageResponse) {
+        throw new InvalidArgumentException('First argument to setResponses must be an array of Google_Service_Vision_AnnotateImageResponse');
+      }
+    }
     $this->responses = $responses;
   }
   public function getResponses()

@@ -18,8 +18,7 @@
 class Google_Service_Storagetransfer_UpdateTransferJobRequest extends Google_Model
 {
   public $projectId;
-  protected $transferJobType = 'Google_Service_Storagetransfer_TransferJob';
-  protected $transferJobDataType = '';
+  public $transferJob;
   public $updateTransferJobFieldMask;
 
   public function setProjectId($projectId)

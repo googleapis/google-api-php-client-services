@@ -19,8 +19,7 @@ class Google_Service_CivicInfo_DivisionSearchResponse extends Google_Collection
 {
   protected $collection_key = 'results';
   public $kind;
-  protected $resultsType = 'Google_Service_CivicInfo_DivisionSearchResult';
-  protected $resultsDataType = 'array';
+  public $results;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_CivicInfo_DivisionSearchResponse extends Google_Collection
   {
     return $this->kind;
   }
-  public function setResults($results)
+  public function setResults(array $results)
   {
+    foreach ($results as $r) {
+      if (!$r instanceof Google_Service_CivicInfo_DivisionSearchResult) {
+        throw new InvalidArgumentException('First argument to setResults must be an array of Google_Service_CivicInfo_DivisionSearchResult');
+      }
+    }
     $this->results = $results;
   }
   public function getResults()

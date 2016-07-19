@@ -20,8 +20,7 @@ class Google_Service_Games_MetagameConfig extends Google_Collection
   protected $collection_key = 'playerLevels';
   public $currentVersion;
   public $kind;
-  protected $playerLevelsType = 'Google_Service_Games_PlayerLevel';
-  protected $playerLevelsDataType = 'array';
+  public $playerLevels;
 
   public function setCurrentVersion($currentVersion)
   {
@@ -39,8 +38,13 @@ class Google_Service_Games_MetagameConfig extends Google_Collection
   {
     return $this->kind;
   }
-  public function setPlayerLevels($playerLevels)
+  public function setPlayerLevels(array $playerLevels)
   {
+    foreach ($playerLevels as $p) {
+      if (!$p instanceof Google_Service_Games_PlayerLevel) {
+        throw new InvalidArgumentException('First argument to setPlayerLevels must be an array of Google_Service_Games_PlayerLevel');
+      }
+    }
     $this->playerLevels = $playerLevels;
   }
   public function getPlayerLevels()

@@ -60,7 +60,7 @@ class Google_Service_Analytics_RealtimeDataQuery extends Google_Collection
   {
     return $this->maxResults;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
     $this->metrics = $metrics;
   }
@@ -68,7 +68,7 @@ class Google_Service_Analytics_RealtimeDataQuery extends Google_Collection
   {
     return $this->metrics;
   }
-  public function setSort($sort)
+  public function setSort(array $sort)
   {
     $this->sort = $sort;
   }

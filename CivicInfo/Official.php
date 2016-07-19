@@ -18,10 +18,8 @@
 class Google_Service_CivicInfo_Official extends Google_Collection
 {
   protected $collection_key = 'urls';
-  protected $addressType = 'Google_Service_CivicInfo_SimpleAddressType';
-  protected $addressDataType = 'array';
-  protected $channelsType = 'Google_Service_CivicInfo_Channel';
-  protected $channelsDataType = 'array';
+  public $address;
+  public $channels;
   public $emails;
   public $name;
   public $party;
@@ -29,23 +27,33 @@ class Google_Service_CivicInfo_Official extends Google_Collection
   public $photoUrl;
   public $urls;
 
-  public function setAddress($address)
+  public function setAddress(array $address)
   {
+    foreach ($address as $a) {
+      if (!$a instanceof Google_Service_CivicInfo_SimpleAddressType) {
+        throw new InvalidArgumentException('First argument to setAddress must be an array of Google_Service_CivicInfo_SimpleAddressType');
+      }
+    }
     $this->address = $address;
   }
   public function getAddress()
   {
     return $this->address;
   }
-  public function setChannels($channels)
+  public function setChannels(array $channels)
   {
+    foreach ($channels as $c) {
+      if (!$c instanceof Google_Service_CivicInfo_Channel) {
+        throw new InvalidArgumentException('First argument to setChannels must be an array of Google_Service_CivicInfo_Channel');
+      }
+    }
     $this->channels = $channels;
   }
   public function getChannels()
   {
     return $this->channels;
   }
-  public function setEmails($emails)
+  public function setEmails(array $emails)
   {
     $this->emails = $emails;
   }
@@ -69,7 +77,7 @@ class Google_Service_CivicInfo_Official extends Google_Collection
   {
     return $this->party;
   }
-  public function setPhones($phones)
+  public function setPhones(array $phones)
   {
     $this->phones = $phones;
   }
@@ -85,7 +93,7 @@ class Google_Service_CivicInfo_Official extends Google_Collection
   {
     return $this->photoUrl;
   }
-  public function setUrls($urls)
+  public function setUrls(array $urls)
   {
     $this->urls = $urls;
   }

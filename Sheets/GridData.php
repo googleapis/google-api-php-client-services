@@ -18,33 +18,45 @@
 class Google_Service_Sheets_GridData extends Google_Collection
 {
   protected $collection_key = 'rowMetadata';
-  protected $columnMetadataType = 'Google_Service_Sheets_DimensionProperties';
-  protected $columnMetadataDataType = 'array';
-  protected $rowDataType = 'Google_Service_Sheets_RowData';
-  protected $rowDataDataType = 'array';
-  protected $rowMetadataType = 'Google_Service_Sheets_DimensionProperties';
-  protected $rowMetadataDataType = 'array';
+  public $columnMetadata;
+  public $rowData;
+  public $rowMetadata;
   public $startColumn;
   public $startRow;
 
-  public function setColumnMetadata($columnMetadata)
+  public function setColumnMetadata(array $columnMetadata)
   {
+    foreach ($columnMetadata as $c) {
+      if (!$c instanceof Google_Service_Sheets_DimensionProperties) {
+        throw new InvalidArgumentException('First argument to setColumnMetadata must be an array of Google_Service_Sheets_DimensionProperties');
+      }
+    }
     $this->columnMetadata = $columnMetadata;
   }
   public function getColumnMetadata()
   {
     return $this->columnMetadata;
   }
-  public function setRowData($rowData)
+  public function setRowData(array $rowData)
   {
+    foreach ($rowData as $r) {
+      if (!$r instanceof Google_Service_Sheets_RowData) {
+        throw new InvalidArgumentException('First argument to setRowData must be an array of Google_Service_Sheets_RowData');
+      }
+    }
     $this->rowData = $rowData;
   }
   public function getRowData()
   {
     return $this->rowData;
   }
-  public function setRowMetadata($rowMetadata)
+  public function setRowMetadata(array $rowMetadata)
   {
+    foreach ($rowMetadata as $r) {
+      if (!$r instanceof Google_Service_Sheets_DimensionProperties) {
+        throw new InvalidArgumentException('First argument to setRowMetadata must be an array of Google_Service_Sheets_DimensionProperties');
+      }
+    }
     $this->rowMetadata = $rowMetadata;
   }
   public function getRowMetadata()

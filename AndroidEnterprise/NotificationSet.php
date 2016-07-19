@@ -19,8 +19,7 @@ class Google_Service_AndroidEnterprise_NotificationSet extends Google_Collection
 {
   protected $collection_key = 'notification';
   public $kind;
-  protected $notificationType = 'Google_Service_AndroidEnterprise_Notification';
-  protected $notificationDataType = 'array';
+  public $notification;
   public $notificationSetId;
 
   public function setKind($kind)
@@ -31,8 +30,13 @@ class Google_Service_AndroidEnterprise_NotificationSet extends Google_Collection
   {
     return $this->kind;
   }
-  public function setNotification($notification)
+  public function setNotification(array $notification)
   {
+    foreach ($notification as $n) {
+      if (!$n instanceof Google_Service_AndroidEnterprise_Notification) {
+        throw new InvalidArgumentException('First argument to setNotification must be an array of Google_Service_AndroidEnterprise_Notification');
+      }
+    }
     $this->notification = $notification;
   }
   public function getNotification()

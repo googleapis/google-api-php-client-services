@@ -19,10 +19,9 @@ class Google_Service_AnalyticsReporting_ReportRow extends Google_Collection
 {
   protected $collection_key = 'metrics';
   public $dimensions;
-  protected $metricsType = 'Google_Service_AnalyticsReporting_DateRangeValues';
-  protected $metricsDataType = 'array';
+  public $metrics;
 
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
     $this->dimensions = $dimensions;
   }
@@ -30,8 +29,13 @@ class Google_Service_AnalyticsReporting_ReportRow extends Google_Collection
   {
     return $this->dimensions;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_AnalyticsReporting_DateRangeValues) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_AnalyticsReporting_DateRangeValues');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()

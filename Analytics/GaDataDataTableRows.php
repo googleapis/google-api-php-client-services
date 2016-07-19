@@ -18,11 +18,15 @@
 class Google_Service_Analytics_GaDataDataTableRows extends Google_Collection
 {
   protected $collection_key = 'c';
-  protected $cType = 'Google_Service_Analytics_GaDataDataTableRowsC';
-  protected $cDataType = 'array';
+  public $c;
 
-  public function setC($c)
+  public function setC(array $c)
   {
+    foreach ($c as $c) {
+      if (!$c instanceof Google_Service_Analytics_GaDataDataTableRowsC) {
+        throw new InvalidArgumentException('First argument to setC must be an array of Google_Service_Analytics_GaDataDataTableRowsC');
+      }
+    }
     $this->c = $c;
   }
   public function getC()

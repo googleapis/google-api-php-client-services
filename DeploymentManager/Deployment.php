@@ -22,17 +22,13 @@ class Google_Service_DeploymentManager_Deployment extends Google_Collection
   public $fingerprint;
   public $id;
   public $insertTime;
-  protected $labelsType = 'Google_Service_DeploymentManager_DeploymentLabelEntry';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $manifest;
   public $name;
-  protected $operationType = 'Google_Service_DeploymentManager_Operation';
-  protected $operationDataType = '';
+  public $operation;
   public $selfLink;
-  protected $targetType = 'Google_Service_DeploymentManager_TargetConfiguration';
-  protected $targetDataType = '';
-  protected $updateType = 'Google_Service_DeploymentManager_DeploymentUpdate';
-  protected $updateDataType = '';
+  public $target;
+  public $update;
 
   public function setDescription($description)
   {
@@ -66,8 +62,13 @@ class Google_Service_DeploymentManager_Deployment extends Google_Collection
   {
     return $this->insertTime;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_DeploymentManager_DeploymentLabelEntry) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_DeploymentManager_DeploymentLabelEntry');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()

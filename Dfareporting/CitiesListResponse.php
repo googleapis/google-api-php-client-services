@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_CitiesListResponse extends Google_Collection
 {
   protected $collection_key = 'cities';
-  protected $citiesType = 'Google_Service_Dfareporting_City';
-  protected $citiesDataType = 'array';
+  public $cities;
   public $kind;
 
-  public function setCities($cities)
+  public function setCities(array $cities)
   {
+    foreach ($cities as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_City) {
+        throw new InvalidArgumentException('First argument to setCities must be an array of Google_Service_Dfareporting_City');
+      }
+    }
     $this->cities = $cities;
   }
   public function getCities()

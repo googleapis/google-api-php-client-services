@@ -65,7 +65,7 @@ class Google_Service_IdentityToolkit_IdpConfig extends Google_Collection
   {
     return $this->secret;
   }
-  public function setWhitelistedAudiences($whitelistedAudiences)
+  public function setWhitelistedAudiences(array $whitelistedAudiences)
   {
     $this->whitelistedAudiences = $whitelistedAudiences;
   }

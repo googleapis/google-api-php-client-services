@@ -18,11 +18,15 @@
 class Google_Service_Dataflow_SendWorkerMessagesRequest extends Google_Collection
 {
   protected $collection_key = 'workerMessages';
-  protected $workerMessagesType = 'Google_Service_Dataflow_WorkerMessage';
-  protected $workerMessagesDataType = 'array';
+  public $workerMessages;
 
-  public function setWorkerMessages($workerMessages)
+  public function setWorkerMessages(array $workerMessages)
   {
+    foreach ($workerMessages as $w) {
+      if (!$w instanceof Google_Service_Dataflow_WorkerMessage) {
+        throw new InvalidArgumentException('First argument to setWorkerMessages must be an array of Google_Service_Dataflow_WorkerMessage');
+      }
+    }
     $this->workerMessages = $workerMessages;
   }
   public function getWorkerMessages()

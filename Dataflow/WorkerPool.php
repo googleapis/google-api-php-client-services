@@ -18,10 +18,8 @@
 class Google_Service_Dataflow_WorkerPool extends Google_Collection
 {
   protected $collection_key = 'packages';
-  protected $autoscalingSettingsType = 'Google_Service_Dataflow_AutoscalingSettings';
-  protected $autoscalingSettingsDataType = '';
-  protected $dataDisksType = 'Google_Service_Dataflow_Disk';
-  protected $dataDisksDataType = 'array';
+  public $autoscalingSettings;
+  public $dataDisks;
   public $defaultPackageSet;
   public $diskSizeGb;
   public $diskSourceImage;
@@ -33,12 +31,10 @@ class Google_Service_Dataflow_WorkerPool extends Google_Collection
   public $numThreadsPerWorker;
   public $numWorkers;
   public $onHostMaintenance;
-  protected $packagesType = 'Google_Service_Dataflow_Package';
-  protected $packagesDataType = 'array';
+  public $packages;
   public $poolArgs;
   public $subnetwork;
-  protected $taskrunnerSettingsType = 'Google_Service_Dataflow_TaskRunnerSettings';
-  protected $taskrunnerSettingsDataType = '';
+  public $taskrunnerSettings;
   public $teardownPolicy;
   public $workerHarnessContainerImage;
   public $zone;
@@ -51,8 +47,13 @@ class Google_Service_Dataflow_WorkerPool extends Google_Collection
   {
     return $this->autoscalingSettings;
   }
-  public function setDataDisks($dataDisks)
+  public function setDataDisks(array $dataDisks)
   {
+    foreach ($dataDisks as $d) {
+      if (!$d instanceof Google_Service_Dataflow_Disk) {
+        throw new InvalidArgumentException('First argument to setDataDisks must be an array of Google_Service_Dataflow_Disk');
+      }
+    }
     $this->dataDisks = $dataDisks;
   }
   public function getDataDisks()
@@ -107,7 +108,7 @@ class Google_Service_Dataflow_WorkerPool extends Google_Collection
   {
     return $this->machineType;
   }
-  public function setMetadata($metadata)
+  public function setMetadata(array $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -147,15 +148,20 @@ class Google_Service_Dataflow_WorkerPool extends Google_Collection
   {
     return $this->onHostMaintenance;
   }
-  public function setPackages($packages)
+  public function setPackages(array $packages)
   {
+    foreach ($packages as $p) {
+      if (!$p instanceof Google_Service_Dataflow_Package) {
+        throw new InvalidArgumentException('First argument to setPackages must be an array of Google_Service_Dataflow_Package');
+      }
+    }
     $this->packages = $packages;
   }
   public function getPackages()
   {
     return $this->packages;
   }
-  public function setPoolArgs($poolArgs)
+  public function setPoolArgs(array $poolArgs)
   {
     $this->poolArgs = $poolArgs;
   }

@@ -18,15 +18,19 @@
 class Google_Service_Compute_NetworkInterface extends Google_Collection
 {
   protected $collection_key = 'accessConfigs';
-  protected $accessConfigsType = 'Google_Service_Compute_AccessConfig';
-  protected $accessConfigsDataType = 'array';
+  public $accessConfigs;
   public $name;
   public $network;
   public $networkIP;
   public $subnetwork;
 
-  public function setAccessConfigs($accessConfigs)
+  public function setAccessConfigs(array $accessConfigs)
   {
+    foreach ($accessConfigs as $a) {
+      if (!$a instanceof Google_Service_Compute_AccessConfig) {
+        throw new InvalidArgumentException('First argument to setAccessConfigs must be an array of Google_Service_Compute_AccessConfig');
+      }
+    }
     $this->accessConfigs = $accessConfigs;
   }
   public function getAccessConfigs()

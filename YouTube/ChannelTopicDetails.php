@@ -20,7 +20,7 @@ class Google_Service_YouTube_ChannelTopicDetails extends Google_Collection
   protected $collection_key = 'topicIds';
   public $topicIds;
 
-  public function setTopicIds($topicIds)
+  public function setTopicIds(array $topicIds)
   {
     $this->topicIds = $topicIds;
   }

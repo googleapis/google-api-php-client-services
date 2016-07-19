@@ -17,10 +17,8 @@
 
 class Google_Service_AnalyticsReporting_Report extends Google_Model
 {
-  protected $columnHeaderType = 'Google_Service_AnalyticsReporting_ColumnHeader';
-  protected $columnHeaderDataType = '';
-  protected $dataType = 'Google_Service_AnalyticsReporting_ReportData';
-  protected $dataDataType = '';
+  public $columnHeader;
+  public $data;
   public $nextPageToken;
 
   public function setColumnHeader(Google_Service_AnalyticsReporting_ColumnHeader $columnHeader)

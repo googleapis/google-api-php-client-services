@@ -18,11 +18,15 @@
 class Google_Service_Classroom_ModifyAttachmentsRequest extends Google_Collection
 {
   protected $collection_key = 'addAttachments';
-  protected $addAttachmentsType = 'Google_Service_Classroom_Attachment';
-  protected $addAttachmentsDataType = 'array';
+  public $addAttachments;
 
-  public function setAddAttachments($addAttachments)
+  public function setAddAttachments(array $addAttachments)
   {
+    foreach ($addAttachments as $a) {
+      if (!$a instanceof Google_Service_Classroom_Attachment) {
+        throw new InvalidArgumentException('First argument to setAddAttachments must be an array of Google_Service_Classroom_Attachment');
+      }
+    }
     $this->addAttachments = $addAttachments;
   }
   public function getAddAttachments()

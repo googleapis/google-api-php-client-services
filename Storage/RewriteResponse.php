@@ -20,8 +20,7 @@ class Google_Service_Storage_RewriteResponse extends Google_Model
   public $done;
   public $kind;
   public $objectSize;
-  protected $resourceType = 'Google_Service_Storage_StorageObject';
-  protected $resourceDataType = '';
+  public $resource;
   public $rewriteToken;
   public $totalBytesRewritten;
 

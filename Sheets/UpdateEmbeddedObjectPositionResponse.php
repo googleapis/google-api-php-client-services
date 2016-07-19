@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_UpdateEmbeddedObjectPositionResponse extends Google_Model
 {
-  protected $positionType = 'Google_Service_Sheets_EmbeddedObjectPosition';
-  protected $positionDataType = '';
+  public $position;
 
   public function setPosition(Google_Service_Sheets_EmbeddedObjectPosition $position)
   {

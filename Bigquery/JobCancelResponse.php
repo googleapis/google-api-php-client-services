@@ -17,8 +17,7 @@
 
 class Google_Service_Bigquery_JobCancelResponse extends Google_Model
 {
-  protected $jobType = 'Google_Service_Bigquery_Job';
-  protected $jobDataType = '';
+  public $job;
   public $kind;
 
   public function setJob(Google_Service_Bigquery_Job $job)

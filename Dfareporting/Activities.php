@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_Activities extends Google_Collection
 {
   protected $collection_key = 'metricNames';
-  protected $filtersType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $filtersDataType = 'array';
+  public $filters;
   public $kind;
   public $metricNames;
 
-  public function setFilters($filters)
+  public function setFilters(array $filters)
   {
+    foreach ($filters as $f) {
+      if (!$f instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setFilters must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->filters = $filters;
   }
   public function getFilters()
@@ -39,7 +43,7 @@ class Google_Service_Dfareporting_Activities extends Google_Collection
   {
     return $this->kind;
   }
-  public function setMetricNames($metricNames)
+  public function setMetricNames(array $metricNames)
   {
     $this->metricNames = $metricNames;
   }

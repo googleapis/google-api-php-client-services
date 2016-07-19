@@ -18,15 +18,12 @@
 class Google_Service_Gmail_MessagePart extends Google_Collection
 {
   protected $collection_key = 'parts';
-  protected $bodyType = 'Google_Service_Gmail_MessagePartBody';
-  protected $bodyDataType = '';
+  public $body;
   public $filename;
-  protected $headersType = 'Google_Service_Gmail_MessagePartHeader';
-  protected $headersDataType = 'array';
+  public $headers;
   public $mimeType;
   public $partId;
-  protected $partsType = 'Google_Service_Gmail_MessagePart';
-  protected $partsDataType = 'array';
+  public $parts;
 
   public function setBody(Google_Service_Gmail_MessagePartBody $body)
   {
@@ -44,8 +41,13 @@ class Google_Service_Gmail_MessagePart extends Google_Collection
   {
     return $this->filename;
   }
-  public function setHeaders($headers)
+  public function setHeaders(array $headers)
   {
+    foreach ($headers as $h) {
+      if (!$h instanceof Google_Service_Gmail_MessagePartHeader) {
+        throw new InvalidArgumentException('First argument to setHeaders must be an array of Google_Service_Gmail_MessagePartHeader');
+      }
+    }
     $this->headers = $headers;
   }
   public function getHeaders()
@@ -68,8 +70,13 @@ class Google_Service_Gmail_MessagePart extends Google_Collection
   {
     return $this->partId;
   }
-  public function setParts($parts)
+  public function setParts(array $parts)
   {
+    foreach ($parts as $p) {
+      if (!$p instanceof Google_Service_Gmail_MessagePart) {
+        throw new InvalidArgumentException('First argument to setParts must be an array of Google_Service_Gmail_MessagePart');
+      }
+    }
     $this->parts = $parts;
   }
   public function getParts()

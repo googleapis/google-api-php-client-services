@@ -18,8 +18,7 @@
 class Google_Service_Webmasters_WmxSitemap extends Google_Collection
 {
   protected $collection_key = 'contents';
-  protected $contentsType = 'Google_Service_Webmasters_WmxSitemapContent';
-  protected $contentsDataType = 'array';
+  public $contents;
   public $errors;
   public $isPending;
   public $isSitemapsIndex;
@@ -29,8 +28,13 @@ class Google_Service_Webmasters_WmxSitemap extends Google_Collection
   public $type;
   public $warnings;
 
-  public function setContents($contents)
+  public function setContents(array $contents)
   {
+    foreach ($contents as $c) {
+      if (!$c instanceof Google_Service_Webmasters_WmxSitemapContent) {
+        throw new InvalidArgumentException('First argument to setContents must be an array of Google_Service_Webmasters_WmxSitemapContent');
+      }
+    }
     $this->contents = $contents;
   }
   public function getContents()

@@ -21,8 +21,7 @@ class Google_Service_Games_EventRecordRequest extends Google_Collection
   public $currentTimeMillis;
   public $kind;
   public $requestId;
-  protected $timePeriodsType = 'Google_Service_Games_EventPeriodUpdate';
-  protected $timePeriodsDataType = 'array';
+  public $timePeriods;
 
   public function setCurrentTimeMillis($currentTimeMillis)
   {
@@ -48,8 +47,13 @@ class Google_Service_Games_EventRecordRequest extends Google_Collection
   {
     return $this->requestId;
   }
-  public function setTimePeriods($timePeriods)
+  public function setTimePeriods(array $timePeriods)
   {
+    foreach ($timePeriods as $t) {
+      if (!$t instanceof Google_Service_Games_EventPeriodUpdate) {
+        throw new InvalidArgumentException('First argument to setTimePeriods must be an array of Google_Service_Games_EventPeriodUpdate');
+      }
+    }
     $this->timePeriods = $timePeriods;
   }
   public function getTimePeriods()

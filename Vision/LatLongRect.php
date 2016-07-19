@@ -17,10 +17,8 @@
 
 class Google_Service_Vision_LatLongRect extends Google_Model
 {
-  protected $maxLatLngType = 'Google_Service_Vision_LatLng';
-  protected $maxLatLngDataType = '';
-  protected $minLatLngType = 'Google_Service_Vision_LatLng';
-  protected $minLatLngDataType = '';
+  public $maxLatLng;
+  public $minLatLng;
 
   public function setMaxLatLng(Google_Service_Vision_LatLng $maxLatLng)
   {

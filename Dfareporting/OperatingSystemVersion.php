@@ -22,8 +22,7 @@ class Google_Service_Dfareporting_OperatingSystemVersion extends Google_Model
   public $majorVersion;
   public $minorVersion;
   public $name;
-  protected $operatingSystemType = 'Google_Service_Dfareporting_OperatingSystem';
-  protected $operatingSystemDataType = '';
+  public $operatingSystem;
 
   public function setId($id)
   {

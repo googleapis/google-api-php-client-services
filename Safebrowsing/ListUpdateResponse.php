@@ -18,20 +18,22 @@
 class Google_Service_Safebrowsing_ListUpdateResponse extends Google_Collection
 {
   protected $collection_key = 'removals';
-  protected $additionsType = 'Google_Service_Safebrowsing_ThreatEntrySet';
-  protected $additionsDataType = 'array';
-  protected $checksumType = 'Google_Service_Safebrowsing_Checksum';
-  protected $checksumDataType = '';
+  public $additions;
+  public $checksum;
   public $newClientState;
   public $platformType;
-  protected $removalsType = 'Google_Service_Safebrowsing_ThreatEntrySet';
-  protected $removalsDataType = 'array';
+  public $removals;
   public $responseType;
   public $threatEntryType;
   public $threatType;
 
-  public function setAdditions($additions)
+  public function setAdditions(array $additions)
   {
+    foreach ($additions as $a) {
+      if (!$a instanceof Google_Service_Safebrowsing_ThreatEntrySet) {
+        throw new InvalidArgumentException('First argument to setAdditions must be an array of Google_Service_Safebrowsing_ThreatEntrySet');
+      }
+    }
     $this->additions = $additions;
   }
   public function getAdditions()
@@ -62,8 +64,13 @@ class Google_Service_Safebrowsing_ListUpdateResponse extends Google_Collection
   {
     return $this->platformType;
   }
-  public function setRemovals($removals)
+  public function setRemovals(array $removals)
   {
+    foreach ($removals as $r) {
+      if (!$r instanceof Google_Service_Safebrowsing_ThreatEntrySet) {
+        throw new InvalidArgumentException('First argument to setRemovals must be an array of Google_Service_Safebrowsing_ThreatEntrySet');
+      }
+    }
     $this->removals = $removals;
   }
   public function getRemovals()

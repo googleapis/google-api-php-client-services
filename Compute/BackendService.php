@@ -18,8 +18,7 @@
 class Google_Service_Compute_BackendService extends Google_Collection
 {
   protected $collection_key = 'healthChecks';
-  protected $backendsType = 'Google_Service_Compute_Backend';
-  protected $backendsDataType = 'array';
+  public $backends;
   public $creationTimestamp;
   public $description;
   public $enableCDN;
@@ -35,8 +34,13 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public $selfLink;
   public $timeoutSec;
 
-  public function setBackends($backends)
+  public function setBackends(array $backends)
   {
+    foreach ($backends as $b) {
+      if (!$b instanceof Google_Service_Compute_Backend) {
+        throw new InvalidArgumentException('First argument to setBackends must be an array of Google_Service_Compute_Backend');
+      }
+    }
     $this->backends = $backends;
   }
   public function getBackends()
@@ -75,7 +79,7 @@ class Google_Service_Compute_BackendService extends Google_Collection
   {
     return $this->fingerprint;
   }
-  public function setHealthChecks($healthChecks)
+  public function setHealthChecks(array $healthChecks)
   {
     $this->healthChecks = $healthChecks;
   }

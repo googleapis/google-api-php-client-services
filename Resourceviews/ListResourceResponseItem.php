@@ -20,7 +20,7 @@ class Google_Service_Resourceviews_ListResourceResponseItem extends Google_Model
   public $endpoints;
   public $resource;
 
-  public function setEndpoints($endpoints)
+  public function setEndpoints(array $endpoints)
   {
     $this->endpoints = $endpoints;
   }

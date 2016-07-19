@@ -18,12 +18,16 @@
 class Google_Service_AndroidPublisher_ApksListResponse extends Google_Collection
 {
   protected $collection_key = 'apks';
-  protected $apksType = 'Google_Service_AndroidPublisher_Apk';
-  protected $apksDataType = 'array';
+  public $apks;
   public $kind;
 
-  public function setApks($apks)
+  public function setApks(array $apks)
   {
+    foreach ($apks as $a) {
+      if (!$a instanceof Google_Service_AndroidPublisher_Apk) {
+        throw new InvalidArgumentException('First argument to setApks must be an array of Google_Service_AndroidPublisher_Apk');
+      }
+    }
     $this->apks = $apks;
   }
   public function getApks()

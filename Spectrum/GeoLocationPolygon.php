@@ -18,11 +18,15 @@
 class Google_Service_Spectrum_GeoLocationPolygon extends Google_Collection
 {
   protected $collection_key = 'exterior';
-  protected $exteriorType = 'Google_Service_Spectrum_GeoLocationPoint';
-  protected $exteriorDataType = 'array';
+  public $exterior;
 
-  public function setExterior($exterior)
+  public function setExterior(array $exterior)
   {
+    foreach ($exterior as $e) {
+      if (!$e instanceof Google_Service_Spectrum_GeoLocationPoint) {
+        throw new InvalidArgumentException('First argument to setExterior must be an array of Google_Service_Spectrum_GeoLocationPoint');
+      }
+    }
     $this->exterior = $exterior;
   }
   public function getExterior()

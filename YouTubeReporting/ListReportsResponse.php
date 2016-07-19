@@ -19,8 +19,7 @@ class Google_Service_YouTubeReporting_ListReportsResponse extends Google_Collect
 {
   protected $collection_key = 'reports';
   public $nextPageToken;
-  protected $reportsType = 'Google_Service_YouTubeReporting_Report';
-  protected $reportsDataType = 'array';
+  public $reports;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_YouTubeReporting_ListReportsResponse extends Google_Collect
   {
     return $this->nextPageToken;
   }
-  public function setReports($reports)
+  public function setReports(array $reports)
   {
+    foreach ($reports as $r) {
+      if (!$r instanceof Google_Service_YouTubeReporting_Report) {
+        throw new InvalidArgumentException('First argument to setReports must be an array of Google_Service_YouTubeReporting_Report');
+      }
+    }
     $this->reports = $reports;
   }
   public function getReports()

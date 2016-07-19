@@ -18,22 +18,30 @@
 class Google_Service_AdExchangeBuyer_SharedTargeting extends Google_Collection
 {
   protected $collection_key = 'inclusions';
-  protected $exclusionsType = 'Google_Service_AdExchangeBuyer_TargetingValue';
-  protected $exclusionsDataType = 'array';
-  protected $inclusionsType = 'Google_Service_AdExchangeBuyer_TargetingValue';
-  protected $inclusionsDataType = 'array';
+  public $exclusions;
+  public $inclusions;
   public $key;
 
-  public function setExclusions($exclusions)
+  public function setExclusions(array $exclusions)
   {
+    foreach ($exclusions as $e) {
+      if (!$e instanceof Google_Service_AdExchangeBuyer_TargetingValue) {
+        throw new InvalidArgumentException('First argument to setExclusions must be an array of Google_Service_AdExchangeBuyer_TargetingValue');
+      }
+    }
     $this->exclusions = $exclusions;
   }
   public function getExclusions()
   {
     return $this->exclusions;
   }
-  public function setInclusions($inclusions)
+  public function setInclusions(array $inclusions)
   {
+    foreach ($inclusions as $i) {
+      if (!$i instanceof Google_Service_AdExchangeBuyer_TargetingValue) {
+        throw new InvalidArgumentException('First argument to setInclusions must be an array of Google_Service_AdExchangeBuyer_TargetingValue');
+      }
+    }
     $this->inclusions = $inclusions;
   }
   public function getInclusions()

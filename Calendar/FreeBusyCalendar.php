@@ -18,21 +18,29 @@
 class Google_Service_Calendar_FreeBusyCalendar extends Google_Collection
 {
   protected $collection_key = 'errors';
-  protected $busyType = 'Google_Service_Calendar_TimePeriod';
-  protected $busyDataType = 'array';
-  protected $errorsType = 'Google_Service_Calendar_Error';
-  protected $errorsDataType = 'array';
+  public $busy;
+  public $errors;
 
-  public function setBusy($busy)
+  public function setBusy(array $busy)
   {
+    foreach ($busy as $b) {
+      if (!$b instanceof Google_Service_Calendar_TimePeriod) {
+        throw new InvalidArgumentException('First argument to setBusy must be an array of Google_Service_Calendar_TimePeriod');
+      }
+    }
     $this->busy = $busy;
   }
   public function getBusy()
   {
     return $this->busy;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_Calendar_Error) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_Calendar_Error');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()

@@ -66,7 +66,7 @@ class Google_Service_PlayMovies_Order extends Google_Collection
   {
     return $this->channelName;
   }
-  public function setCountries($countries)
+  public function setCountries(array $countries)
   {
     $this->countries = $countries;
   }

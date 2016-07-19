@@ -19,10 +19,9 @@ class Google_Service_Container_ListOperationsResponse extends Google_Collection
 {
   protected $collection_key = 'operations';
   public $missingZones;
-  protected $operationsType = 'Google_Service_Container_Operation';
-  protected $operationsDataType = 'array';
+  public $operations;
 
-  public function setMissingZones($missingZones)
+  public function setMissingZones(array $missingZones)
   {
     $this->missingZones = $missingZones;
   }
@@ -30,8 +29,13 @@ class Google_Service_Container_ListOperationsResponse extends Google_Collection
   {
     return $this->missingZones;
   }
-  public function setOperations($operations)
+  public function setOperations(array $operations)
   {
+    foreach ($operations as $o) {
+      if (!$o instanceof Google_Service_Container_Operation) {
+        throw new InvalidArgumentException('First argument to setOperations must be an array of Google_Service_Container_Operation');
+      }
+    }
     $this->operations = $operations;
   }
   public function getOperations()

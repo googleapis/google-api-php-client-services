@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_AdvertisersListResponse extends Google_Collection
 {
   protected $collection_key = 'advertisers';
-  protected $advertisersType = 'Google_Service_Dfareporting_Advertiser';
-  protected $advertisersDataType = 'array';
+  public $advertisers;
   public $kind;
   public $nextPageToken;
 
-  public function setAdvertisers($advertisers)
+  public function setAdvertisers(array $advertisers)
   {
+    foreach ($advertisers as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_Advertiser) {
+        throw new InvalidArgumentException('First argument to setAdvertisers must be an array of Google_Service_Dfareporting_Advertiser');
+      }
+    }
     $this->advertisers = $advertisers;
   }
   public function getAdvertisers()

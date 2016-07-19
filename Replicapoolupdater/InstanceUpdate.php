@@ -17,8 +17,7 @@
 
 class Google_Service_Replicapoolupdater_InstanceUpdate extends Google_Model
 {
-  protected $errorType = 'Google_Service_Replicapoolupdater_InstanceUpdateError';
-  protected $errorDataType = '';
+  public $error;
   public $instance;
   public $status;
 

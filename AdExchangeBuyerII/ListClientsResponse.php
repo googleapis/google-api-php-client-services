@@ -18,12 +18,16 @@
 class Google_Service_AdExchangeBuyerII_ListClientsResponse extends Google_Collection
 {
   protected $collection_key = 'clients';
-  protected $clientsType = 'Google_Service_AdExchangeBuyerII_Client';
-  protected $clientsDataType = 'array';
+  public $clients;
   public $nextPageToken;
 
-  public function setClients($clients)
+  public function setClients(array $clients)
   {
+    foreach ($clients as $c) {
+      if (!$c instanceof Google_Service_AdExchangeBuyerII_Client) {
+        throw new InvalidArgumentException('First argument to setClients must be an array of Google_Service_AdExchangeBuyerII_Client');
+      }
+    }
     $this->clients = $clients;
   }
   public function getClients()

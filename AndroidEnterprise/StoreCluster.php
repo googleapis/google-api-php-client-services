@@ -20,8 +20,7 @@ class Google_Service_AndroidEnterprise_StoreCluster extends Google_Collection
   protected $collection_key = 'productId';
   public $id;
   public $kind;
-  protected $nameType = 'Google_Service_AndroidEnterprise_LocalizedText';
-  protected $nameDataType = 'array';
+  public $name;
   public $orderInPage;
   public $productId;
 
@@ -41,8 +40,13 @@ class Google_Service_AndroidEnterprise_StoreCluster extends Google_Collection
   {
     return $this->kind;
   }
-  public function setName($name)
+  public function setName(array $name)
   {
+    foreach ($name as $n) {
+      if (!$n instanceof Google_Service_AndroidEnterprise_LocalizedText) {
+        throw new InvalidArgumentException('First argument to setName must be an array of Google_Service_AndroidEnterprise_LocalizedText');
+      }
+    }
     $this->name = $name;
   }
   public function getName()
@@ -57,7 +61,7 @@ class Google_Service_AndroidEnterprise_StoreCluster extends Google_Collection
   {
     return $this->orderInPage;
   }
-  public function setProductId($productId)
+  public function setProductId(array $productId)
   {
     $this->productId = $productId;
   }

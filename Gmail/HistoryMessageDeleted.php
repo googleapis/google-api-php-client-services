@@ -17,8 +17,7 @@
 
 class Google_Service_Gmail_HistoryMessageDeleted extends Google_Model
 {
-  protected $messageType = 'Google_Service_Gmail_Message';
-  protected $messageDataType = '';
+  public $message;
 
   public function setMessage(Google_Service_Gmail_Message $message)
   {

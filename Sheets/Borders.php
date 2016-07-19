@@ -17,14 +17,10 @@
 
 class Google_Service_Sheets_Borders extends Google_Model
 {
-  protected $bottomType = 'Google_Service_Sheets_Border';
-  protected $bottomDataType = '';
-  protected $leftType = 'Google_Service_Sheets_Border';
-  protected $leftDataType = '';
-  protected $rightType = 'Google_Service_Sheets_Border';
-  protected $rightDataType = '';
-  protected $topType = 'Google_Service_Sheets_Border';
-  protected $topDataType = '';
+  public $bottom;
+  public $left;
+  public $right;
+  public $top;
 
   public function setBottom(Google_Service_Sheets_Border $bottom)
   {

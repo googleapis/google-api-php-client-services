@@ -18,13 +18,17 @@
 class Google_Service_PlayMovies_ListComponentsResponse extends Google_Collection
 {
   protected $collection_key = 'components';
-  protected $componentsType = 'Google_Service_PlayMovies_Component';
-  protected $componentsDataType = 'array';
+  public $components;
   public $nextPageToken;
   public $totalSize;
 
-  public function setComponents($components)
+  public function setComponents(array $components)
   {
+    foreach ($components as $c) {
+      if (!$c instanceof Google_Service_PlayMovies_Component) {
+        throw new InvalidArgumentException('First argument to setComponents must be an array of Google_Service_PlayMovies_Component');
+      }
+    }
     $this->components = $components;
   }
   public function getComponents()

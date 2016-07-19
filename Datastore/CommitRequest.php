@@ -19,8 +19,7 @@ class Google_Service_Datastore_CommitRequest extends Google_Collection
 {
   protected $collection_key = 'mutations';
   public $mode;
-  protected $mutationsType = 'Google_Service_Datastore_Mutation';
-  protected $mutationsDataType = 'array';
+  public $mutations;
   public $transaction;
 
   public function setMode($mode)
@@ -31,8 +30,13 @@ class Google_Service_Datastore_CommitRequest extends Google_Collection
   {
     return $this->mode;
   }
-  public function setMutations($mutations)
+  public function setMutations(array $mutations)
   {
+    foreach ($mutations as $m) {
+      if (!$m instanceof Google_Service_Datastore_Mutation) {
+        throw new InvalidArgumentException('First argument to setMutations must be an array of Google_Service_Datastore_Mutation');
+      }
+    }
     $this->mutations = $mutations;
   }
   public function getMutations()

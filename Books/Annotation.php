@@ -20,19 +20,16 @@ class Google_Service_Books_Annotation extends Google_Collection
   protected $collection_key = 'pageIds';
   public $afterSelectedText;
   public $beforeSelectedText;
-  protected $clientVersionRangesType = 'Google_Service_Books_AnnotationClientVersionRanges';
-  protected $clientVersionRangesDataType = '';
+  public $clientVersionRanges;
   public $created;
-  protected $currentVersionRangesType = 'Google_Service_Books_AnnotationCurrentVersionRanges';
-  protected $currentVersionRangesDataType = '';
+  public $currentVersionRanges;
   public $data;
   public $deleted;
   public $highlightStyle;
   public $id;
   public $kind;
   public $layerId;
-  protected $layerSummaryType = 'Google_Service_Books_AnnotationLayerSummary';
-  protected $layerSummaryDataType = '';
+  public $layerSummary;
   public $pageIds;
   public $selectedText;
   public $selfLink;
@@ -135,7 +132,7 @@ class Google_Service_Books_Annotation extends Google_Collection
   {
     return $this->layerSummary;
   }
-  public function setPageIds($pageIds)
+  public function setPageIds(array $pageIds)
   {
     $this->pageIds = $pageIds;
   }

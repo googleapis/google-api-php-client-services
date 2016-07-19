@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_CreativeOptimizationConfiguration extends Goog
   protected $collection_key = 'optimizationActivitys';
   public $id;
   public $name;
-  protected $optimizationActivitysType = 'Google_Service_Dfareporting_OptimizationActivity';
-  protected $optimizationActivitysDataType = 'array';
+  public $optimizationActivitys;
   public $optimizationModel;
 
   public function setId($id)
@@ -40,8 +39,13 @@ class Google_Service_Dfareporting_CreativeOptimizationConfiguration extends Goog
   {
     return $this->name;
   }
-  public function setOptimizationActivitys($optimizationActivitys)
+  public function setOptimizationActivitys(array $optimizationActivitys)
   {
+    foreach ($optimizationActivitys as $o) {
+      if (!$o instanceof Google_Service_Dfareporting_OptimizationActivity) {
+        throw new InvalidArgumentException('First argument to setOptimizationActivitys must be an array of Google_Service_Dfareporting_OptimizationActivity');
+      }
+    }
     $this->optimizationActivitys = $optimizationActivitys;
   }
   public function getOptimizationActivitys()

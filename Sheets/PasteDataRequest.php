@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_PasteDataRequest extends Google_Model
 {
-  protected $coordinateType = 'Google_Service_Sheets_GridCoordinate';
-  protected $coordinateDataType = '';
+  public $coordinate;
   public $data;
   public $delimiter;
   public $html;

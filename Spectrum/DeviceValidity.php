@@ -17,8 +17,7 @@
 
 class Google_Service_Spectrum_DeviceValidity extends Google_Model
 {
-  protected $deviceDescType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $deviceDescDataType = '';
+  public $deviceDesc;
   public $isValid;
   public $reason;
 

@@ -17,13 +17,10 @@
 
 class Google_Service_Prediction_AnalyzeDataDescriptionFeatures extends Google_Model
 {
-  protected $categoricalType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategorical';
-  protected $categoricalDataType = '';
+  public $categorical;
   public $index;
-  protected $numericType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesNumeric';
-  protected $numericDataType = '';
-  protected $textType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesText';
-  protected $textDataType = '';
+  public $numeric;
+  public $text;
 
   public function setCategorical(Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategorical $categorical)
   {

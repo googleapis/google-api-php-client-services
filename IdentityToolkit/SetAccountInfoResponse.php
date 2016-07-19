@@ -27,8 +27,7 @@ class Google_Service_IdentityToolkit_SetAccountInfoResponse extends Google_Colle
   public $newEmail;
   public $passwordHash;
   public $photoUrl;
-  protected $providerUserInfoType = 'Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo';
-  protected $providerUserInfoDataType = 'array';
+  public $providerUserInfo;
   public $refreshToken;
 
   public function setDisplayName($displayName)
@@ -103,8 +102,13 @@ class Google_Service_IdentityToolkit_SetAccountInfoResponse extends Google_Colle
   {
     return $this->photoUrl;
   }
-  public function setProviderUserInfo($providerUserInfo)
+  public function setProviderUserInfo(array $providerUserInfo)
   {
+    foreach ($providerUserInfo as $p) {
+      if (!$p instanceof Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo) {
+        throw new InvalidArgumentException('First argument to setProviderUserInfo must be an array of Google_Service_IdentityToolkit_SetAccountInfoResponseProviderUserInfo');
+      }
+    }
     $this->providerUserInfo = $providerUserInfo;
   }
   public function getProviderUserInfo()

@@ -19,8 +19,7 @@ class Google_Service_Sheets_BooleanCondition extends Google_Collection
 {
   protected $collection_key = 'values';
   public $type;
-  protected $valuesType = 'Google_Service_Sheets_ConditionValue';
-  protected $valuesDataType = 'array';
+  public $values;
 
   public function setType($type)
   {
@@ -30,8 +29,13 @@ class Google_Service_Sheets_BooleanCondition extends Google_Collection
   {
     return $this->type;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
+    foreach ($values as $v) {
+      if (!$v instanceof Google_Service_Sheets_ConditionValue) {
+        throw new InvalidArgumentException('First argument to setValues must be an array of Google_Service_Sheets_ConditionValue');
+      }
+    }
     $this->values = $values;
   }
   public function getValues()

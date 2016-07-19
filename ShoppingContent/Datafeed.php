@@ -21,11 +21,9 @@ class Google_Service_ShoppingContent_Datafeed extends Google_Collection
   public $attributeLanguage;
   public $contentLanguage;
   public $contentType;
-  protected $fetchScheduleType = 'Google_Service_ShoppingContent_DatafeedFetchSchedule';
-  protected $fetchScheduleDataType = '';
+  public $fetchSchedule;
   public $fileName;
-  protected $formatType = 'Google_Service_ShoppingContent_DatafeedFormat';
-  protected $formatDataType = '';
+  public $format;
   public $id;
   public $intendedDestinations;
   public $kind;
@@ -88,7 +86,7 @@ class Google_Service_ShoppingContent_Datafeed extends Google_Collection
   {
     return $this->id;
   }
-  public function setIntendedDestinations($intendedDestinations)
+  public function setIntendedDestinations(array $intendedDestinations)
   {
     $this->intendedDestinations = $intendedDestinations;
   }

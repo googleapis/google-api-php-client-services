@@ -18,14 +18,11 @@
 class Google_Service_Dfareporting_SiteSettings extends Google_Model
 {
   public $activeViewOptOut;
-  protected $creativeSettingsType = 'Google_Service_Dfareporting_CreativeSettings';
-  protected $creativeSettingsDataType = '';
+  public $creativeSettings;
   public $disableBrandSafeAds;
   public $disableNewCookie;
-  protected $lookbackConfigurationType = 'Google_Service_Dfareporting_LookbackConfiguration';
-  protected $lookbackConfigurationDataType = '';
-  protected $tagSettingType = 'Google_Service_Dfareporting_TagSetting';
-  protected $tagSettingDataType = '';
+  public $lookbackConfiguration;
+  public $tagSetting;
   public $videoActiveViewOptOut;
 
   public function setActiveViewOptOut($activeViewOptOut)

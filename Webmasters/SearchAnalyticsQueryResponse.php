@@ -19,8 +19,7 @@ class Google_Service_Webmasters_SearchAnalyticsQueryResponse extends Google_Coll
 {
   protected $collection_key = 'rows';
   public $responseAggregationType;
-  protected $rowsType = 'Google_Service_Webmasters_ApiDataRow';
-  protected $rowsDataType = 'array';
+  public $rows;
 
   public function setResponseAggregationType($responseAggregationType)
   {
@@ -30,8 +29,13 @@ class Google_Service_Webmasters_SearchAnalyticsQueryResponse extends Google_Coll
   {
     return $this->responseAggregationType;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Webmasters_ApiDataRow) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Webmasters_ApiDataRow');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()

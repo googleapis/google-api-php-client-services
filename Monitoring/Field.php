@@ -25,8 +25,7 @@ class Google_Service_Monitoring_Field extends Google_Collection
   public $name;
   public $number;
   public $oneofIndex;
-  protected $optionsType = 'Google_Service_Monitoring_Option';
-  protected $optionsDataType = 'array';
+  public $options;
   public $packed;
   public $typeUrl;
 
@@ -86,8 +85,13 @@ class Google_Service_Monitoring_Field extends Google_Collection
   {
     return $this->oneofIndex;
   }
-  public function setOptions($options)
+  public function setOptions(array $options)
   {
+    foreach ($options as $o) {
+      if (!$o instanceof Google_Service_Monitoring_Option) {
+        throw new InvalidArgumentException('First argument to setOptions must be an array of Google_Service_Monitoring_Option');
+      }
+    }
     $this->options = $options;
   }
   public function getOptions()

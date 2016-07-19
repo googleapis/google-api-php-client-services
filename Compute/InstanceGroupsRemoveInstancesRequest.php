@@ -18,11 +18,15 @@
 class Google_Service_Compute_InstanceGroupsRemoveInstancesRequest extends Google_Collection
 {
   protected $collection_key = 'instances';
-  protected $instancesType = 'Google_Service_Compute_InstanceReference';
-  protected $instancesDataType = 'array';
+  public $instances;
 
-  public function setInstances($instances)
+  public function setInstances(array $instances)
   {
+    foreach ($instances as $i) {
+      if (!$i instanceof Google_Service_Compute_InstanceReference) {
+        throw new InvalidArgumentException('First argument to setInstances must be an array of Google_Service_Compute_InstanceReference');
+      }
+    }
     $this->instances = $instances;
   }
   public function getInstances()

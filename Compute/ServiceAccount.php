@@ -29,7 +29,7 @@ class Google_Service_Compute_ServiceAccount extends Google_Collection
   {
     return $this->email;
   }
-  public function setScopes($scopes)
+  public function setScopes(array $scopes)
   {
     $this->scopes = $scopes;
   }

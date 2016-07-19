@@ -19,8 +19,7 @@ class Google_Service_Drive_RevisionList extends Google_Collection
 {
   protected $collection_key = 'revisions';
   public $kind;
-  protected $revisionsType = 'Google_Service_Drive_Revision';
-  protected $revisionsDataType = 'array';
+  public $revisions;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Drive_RevisionList extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRevisions($revisions)
+  public function setRevisions(array $revisions)
   {
+    foreach ($revisions as $r) {
+      if (!$r instanceof Google_Service_Drive_Revision) {
+        throw new InvalidArgumentException('First argument to setRevisions must be an array of Google_Service_Drive_Revision');
+      }
+    }
     $this->revisions = $revisions;
   }
   public function getRevisions()

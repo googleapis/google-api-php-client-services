@@ -20,10 +20,8 @@ class Google_Service_Blogger_BlogUserInfo extends Google_Model
   protected $internal_gapi_mappings = array(
         "blogUserInfo" => "blog_user_info",
   );
-  protected $blogType = 'Google_Service_Blogger_Blog';
-  protected $blogDataType = '';
-  protected $blogUserInfoType = 'Google_Service_Blogger_BlogPerUserInfo';
-  protected $blogUserInfoDataType = '';
+  public $blog;
+  public $blogUserInfo;
   public $kind;
 
   public function setBlog(Google_Service_Blogger_Blog $blog)

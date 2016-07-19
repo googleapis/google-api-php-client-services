@@ -23,7 +23,7 @@ class Google_Service_Genomics_SearchReadGroupSetsRequest extends Google_Collecti
   public $pageSize;
   public $pageToken;
 
-  public function setDatasetIds($datasetIds)
+  public function setDatasetIds(array $datasetIds)
   {
     $this->datasetIds = $datasetIds;
   }

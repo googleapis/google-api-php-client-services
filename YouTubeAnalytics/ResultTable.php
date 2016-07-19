@@ -18,13 +18,17 @@
 class Google_Service_YouTubeAnalytics_ResultTable extends Google_Collection
 {
   protected $collection_key = 'rows';
-  protected $columnHeadersType = 'Google_Service_YouTubeAnalytics_ResultTableColumnHeaders';
-  protected $columnHeadersDataType = 'array';
+  public $columnHeaders;
   public $kind;
   public $rows;
 
-  public function setColumnHeaders($columnHeaders)
+  public function setColumnHeaders(array $columnHeaders)
   {
+    foreach ($columnHeaders as $c) {
+      if (!$c instanceof Google_Service_YouTubeAnalytics_ResultTableColumnHeaders) {
+        throw new InvalidArgumentException('First argument to setColumnHeaders must be an array of Google_Service_YouTubeAnalytics_ResultTableColumnHeaders');
+      }
+    }
     $this->columnHeaders = $columnHeaders;
   }
   public function getColumnHeaders()
@@ -39,7 +43,7 @@ class Google_Service_YouTubeAnalytics_ResultTable extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
     $this->rows = $rows;
   }

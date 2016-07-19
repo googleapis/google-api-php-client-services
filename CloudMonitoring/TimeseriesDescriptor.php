@@ -21,7 +21,7 @@ class Google_Service_CloudMonitoring_TimeseriesDescriptor extends Google_Model
   public $metric;
   public $project;
 
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

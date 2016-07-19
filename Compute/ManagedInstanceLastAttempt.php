@@ -17,8 +17,7 @@
 
 class Google_Service_Compute_ManagedInstanceLastAttempt extends Google_Model
 {
-  protected $errorsType = 'Google_Service_Compute_ManagedInstanceLastAttemptErrors';
-  protected $errorsDataType = '';
+  public $errors;
 
   public function setErrors(Google_Service_Compute_ManagedInstanceLastAttemptErrors $errors)
   {

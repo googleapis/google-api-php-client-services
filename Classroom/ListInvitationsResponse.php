@@ -18,12 +18,16 @@
 class Google_Service_Classroom_ListInvitationsResponse extends Google_Collection
 {
   protected $collection_key = 'invitations';
-  protected $invitationsType = 'Google_Service_Classroom_Invitation';
-  protected $invitationsDataType = 'array';
+  public $invitations;
   public $nextPageToken;
 
-  public function setInvitations($invitations)
+  public function setInvitations(array $invitations)
   {
+    foreach ($invitations as $i) {
+      if (!$i instanceof Google_Service_Classroom_Invitation) {
+        throw new InvalidArgumentException('First argument to setInvitations must be an array of Google_Service_Classroom_Invitation');
+      }
+    }
     $this->invitations = $invitations;
   }
   public function getInvitations()

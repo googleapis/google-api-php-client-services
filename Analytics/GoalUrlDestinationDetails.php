@@ -21,8 +21,7 @@ class Google_Service_Analytics_GoalUrlDestinationDetails extends Google_Collecti
   public $caseSensitive;
   public $firstStepRequired;
   public $matchType;
-  protected $stepsType = 'Google_Service_Analytics_GoalUrlDestinationDetailsSteps';
-  protected $stepsDataType = 'array';
+  public $steps;
   public $url;
 
   public function setCaseSensitive($caseSensitive)
@@ -49,8 +48,13 @@ class Google_Service_Analytics_GoalUrlDestinationDetails extends Google_Collecti
   {
     return $this->matchType;
   }
-  public function setSteps($steps)
+  public function setSteps(array $steps)
   {
+    foreach ($steps as $s) {
+      if (!$s instanceof Google_Service_Analytics_GoalUrlDestinationDetailsSteps) {
+        throw new InvalidArgumentException('First argument to setSteps must be an array of Google_Service_Analytics_GoalUrlDestinationDetailsSteps');
+      }
+    }
     $this->steps = $steps;
   }
   public function getSteps()

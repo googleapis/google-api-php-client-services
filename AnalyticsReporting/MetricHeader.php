@@ -18,21 +18,29 @@
 class Google_Service_AnalyticsReporting_MetricHeader extends Google_Collection
 {
   protected $collection_key = 'pivotHeaders';
-  protected $metricHeaderEntriesType = 'Google_Service_AnalyticsReporting_MetricHeaderEntry';
-  protected $metricHeaderEntriesDataType = 'array';
-  protected $pivotHeadersType = 'Google_Service_AnalyticsReporting_PivotHeader';
-  protected $pivotHeadersDataType = 'array';
+  public $metricHeaderEntries;
+  public $pivotHeaders;
 
-  public function setMetricHeaderEntries($metricHeaderEntries)
+  public function setMetricHeaderEntries(array $metricHeaderEntries)
   {
+    foreach ($metricHeaderEntries as $m) {
+      if (!$m instanceof Google_Service_AnalyticsReporting_MetricHeaderEntry) {
+        throw new InvalidArgumentException('First argument to setMetricHeaderEntries must be an array of Google_Service_AnalyticsReporting_MetricHeaderEntry');
+      }
+    }
     $this->metricHeaderEntries = $metricHeaderEntries;
   }
   public function getMetricHeaderEntries()
   {
     return $this->metricHeaderEntries;
   }
-  public function setPivotHeaders($pivotHeaders)
+  public function setPivotHeaders(array $pivotHeaders)
   {
+    foreach ($pivotHeaders as $p) {
+      if (!$p instanceof Google_Service_AnalyticsReporting_PivotHeader) {
+        throw new InvalidArgumentException('First argument to setPivotHeaders must be an array of Google_Service_AnalyticsReporting_PivotHeader');
+      }
+    }
     $this->pivotHeaders = $pivotHeaders;
   }
   public function getPivotHeaders()

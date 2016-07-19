@@ -19,8 +19,7 @@ class Google_Service_CloudRuntimeConfig_ListWaitersResponse extends Google_Colle
 {
   protected $collection_key = 'waiters';
   public $nextPageToken;
-  protected $waitersType = 'Google_Service_CloudRuntimeConfig_Waiter';
-  protected $waitersDataType = 'array';
+  public $waiters;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_CloudRuntimeConfig_ListWaitersResponse extends Google_Colle
   {
     return $this->nextPageToken;
   }
-  public function setWaiters($waiters)
+  public function setWaiters(array $waiters)
   {
+    foreach ($waiters as $w) {
+      if (!$w instanceof Google_Service_CloudRuntimeConfig_Waiter) {
+        throw new InvalidArgumentException('First argument to setWaiters must be an array of Google_Service_CloudRuntimeConfig_Waiter');
+      }
+    }
     $this->waiters = $waiters;
   }
   public function getWaiters()

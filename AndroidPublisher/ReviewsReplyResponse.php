@@ -17,8 +17,7 @@
 
 class Google_Service_AndroidPublisher_ReviewsReplyResponse extends Google_Model
 {
-  protected $resultType = 'Google_Service_AndroidPublisher_ReviewReplyResult';
-  protected $resultDataType = '';
+  public $result;
 
   public function setResult(Google_Service_AndroidPublisher_ReviewReplyResult $result)
   {

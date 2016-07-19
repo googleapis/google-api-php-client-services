@@ -18,11 +18,15 @@
 class Google_Service_Books_VolumeLayerInfo extends Google_Collection
 {
   protected $collection_key = 'layers';
-  protected $layersType = 'Google_Service_Books_VolumeLayerInfoLayers';
-  protected $layersDataType = 'array';
+  public $layers;
 
-  public function setLayers($layers)
+  public function setLayers(array $layers)
   {
+    foreach ($layers as $l) {
+      if (!$l instanceof Google_Service_Books_VolumeLayerInfoLayers) {
+        throw new InvalidArgumentException('First argument to setLayers must be an array of Google_Service_Books_VolumeLayerInfoLayers');
+      }
+    }
     $this->layers = $layers;
   }
   public function getLayers()

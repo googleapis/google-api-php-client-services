@@ -18,8 +18,7 @@
 class Google_Service_Sheets_MergeCellsRequest extends Google_Model
 {
   public $mergeType;
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
+  public $range;
 
   public function setMergeType($mergeType)
   {

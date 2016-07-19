@@ -17,8 +17,7 @@
 
 class Google_Service_Dfareporting_CompanionClickThroughOverride extends Google_Model
 {
-  protected $clickThroughUrlType = 'Google_Service_Dfareporting_ClickThroughUrl';
-  protected $clickThroughUrlDataType = '';
+  public $clickThroughUrl;
   public $creativeId;
 
   public function setClickThroughUrl(Google_Service_Dfareporting_ClickThroughUrl $clickThroughUrl)

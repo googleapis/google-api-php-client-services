@@ -18,13 +18,16 @@
 class Google_Service_Compute_SubnetworksScopedList extends Google_Collection
 {
   protected $collection_key = 'subnetworks';
-  protected $subnetworksType = 'Google_Service_Compute_Subnetwork';
-  protected $subnetworksDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_SubnetworksScopedListWarning';
-  protected $warningDataType = '';
+  public $subnetworks;
+  public $warning;
 
-  public function setSubnetworks($subnetworks)
+  public function setSubnetworks(array $subnetworks)
   {
+    foreach ($subnetworks as $s) {
+      if (!$s instanceof Google_Service_Compute_Subnetwork) {
+        throw new InvalidArgumentException('First argument to setSubnetworks must be an array of Google_Service_Compute_Subnetwork');
+      }
+    }
     $this->subnetworks = $subnetworks;
   }
   public function getSubnetworks()

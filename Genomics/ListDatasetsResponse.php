@@ -18,12 +18,16 @@
 class Google_Service_Genomics_ListDatasetsResponse extends Google_Collection
 {
   protected $collection_key = 'datasets';
-  protected $datasetsType = 'Google_Service_Genomics_Dataset';
-  protected $datasetsDataType = 'array';
+  public $datasets;
   public $nextPageToken;
 
-  public function setDatasets($datasets)
+  public function setDatasets(array $datasets)
   {
+    foreach ($datasets as $d) {
+      if (!$d instanceof Google_Service_Genomics_Dataset) {
+        throw new InvalidArgumentException('First argument to setDatasets must be an array of Google_Service_Genomics_Dataset');
+      }
+    }
     $this->datasets = $datasets;
   }
   public function getDatasets()

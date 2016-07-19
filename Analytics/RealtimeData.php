@@ -18,21 +18,23 @@
 class Google_Service_Analytics_RealtimeData extends Google_Collection
 {
   protected $collection_key = 'rows';
-  protected $columnHeadersType = 'Google_Service_Analytics_RealtimeDataColumnHeaders';
-  protected $columnHeadersDataType = 'array';
+  public $columnHeaders;
   public $id;
   public $kind;
-  protected $profileInfoType = 'Google_Service_Analytics_RealtimeDataProfileInfo';
-  protected $profileInfoDataType = '';
-  protected $queryType = 'Google_Service_Analytics_RealtimeDataQuery';
-  protected $queryDataType = '';
+  public $profileInfo;
+  public $query;
   public $rows;
   public $selfLink;
   public $totalResults;
   public $totalsForAllResults;
 
-  public function setColumnHeaders($columnHeaders)
+  public function setColumnHeaders(array $columnHeaders)
   {
+    foreach ($columnHeaders as $c) {
+      if (!$c instanceof Google_Service_Analytics_RealtimeDataColumnHeaders) {
+        throw new InvalidArgumentException('First argument to setColumnHeaders must be an array of Google_Service_Analytics_RealtimeDataColumnHeaders');
+      }
+    }
     $this->columnHeaders = $columnHeaders;
   }
   public function getColumnHeaders()
@@ -71,7 +73,7 @@ class Google_Service_Analytics_RealtimeData extends Google_Collection
   {
     return $this->query;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
     $this->rows = $rows;
   }
@@ -95,7 +97,7 @@ class Google_Service_Analytics_RealtimeData extends Google_Collection
   {
     return $this->totalResults;
   }
-  public function setTotalsForAllResults($totalsForAllResults)
+  public function setTotalsForAllResults(array $totalsForAllResults)
   {
     $this->totalsForAllResults = $totalsForAllResults;
   }

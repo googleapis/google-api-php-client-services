@@ -17,14 +17,10 @@
 
 class Google_Service_Dataflow_SourceFork extends Google_Model
 {
-  protected $primaryType = 'Google_Service_Dataflow_SourceSplitShard';
-  protected $primaryDataType = '';
-  protected $primarySourceType = 'Google_Service_Dataflow_DerivedSource';
-  protected $primarySourceDataType = '';
-  protected $residualType = 'Google_Service_Dataflow_SourceSplitShard';
-  protected $residualDataType = '';
-  protected $residualSourceType = 'Google_Service_Dataflow_DerivedSource';
-  protected $residualSourceDataType = '';
+  public $primary;
+  public $primarySource;
+  public $residual;
+  public $residualSource;
 
   public function setPrimary(Google_Service_Dataflow_SourceSplitShard $primary)
   {

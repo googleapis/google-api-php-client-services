@@ -18,12 +18,16 @@
 class Google_Service_AndroidPublisher_InappproductsBatchResponse extends Google_Collection
 {
   protected $collection_key = 'entrys';
-  protected $entrysType = 'Google_Service_AndroidPublisher_InappproductsBatchResponseEntry';
-  protected $entrysDataType = 'array';
+  public $entrys;
   public $kind;
 
-  public function setEntrys($entrys)
+  public function setEntrys(array $entrys)
   {
+    foreach ($entrys as $e) {
+      if (!$e instanceof Google_Service_AndroidPublisher_InappproductsBatchResponseEntry) {
+        throw new InvalidArgumentException('First argument to setEntrys must be an array of Google_Service_AndroidPublisher_InappproductsBatchResponseEntry');
+      }
+    }
     $this->entrys = $entrys;
   }
   public function getEntrys()

@@ -18,8 +18,7 @@
 class Google_Service_Compute_RouterStatusResponse extends Google_Model
 {
   public $kind;
-  protected $resultType = 'Google_Service_Compute_RouterStatus';
-  protected $resultDataType = '';
+  public $result;
 
   public function setKind($kind)
   {

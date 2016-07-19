@@ -18,13 +18,11 @@
 class Google_Service_Prediction_Analyze extends Google_Collection
 {
   protected $collection_key = 'errors';
-  protected $dataDescriptionType = 'Google_Service_Prediction_AnalyzeDataDescription';
-  protected $dataDescriptionDataType = '';
+  public $dataDescription;
   public $errors;
   public $id;
   public $kind;
-  protected $modelDescriptionType = 'Google_Service_Prediction_AnalyzeModelDescription';
-  protected $modelDescriptionDataType = '';
+  public $modelDescription;
   public $selfLink;
 
   public function setDataDescription(Google_Service_Prediction_AnalyzeDataDescription $dataDescription)
@@ -35,7 +33,7 @@ class Google_Service_Prediction_Analyze extends Google_Collection
   {
     return $this->dataDescription;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
     $this->errors = $errors;
   }

@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_CustomRichMediaEvents extends Google_Collection
 {
   protected $collection_key = 'filteredEventIds';
-  protected $filteredEventIdsType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $filteredEventIdsDataType = 'array';
+  public $filteredEventIds;
   public $kind;
 
-  public function setFilteredEventIds($filteredEventIds)
+  public function setFilteredEventIds(array $filteredEventIds)
   {
+    foreach ($filteredEventIds as $f) {
+      if (!$f instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setFilteredEventIds must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->filteredEventIds = $filteredEventIds;
   }
   public function getFilteredEventIds()

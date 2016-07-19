@@ -17,8 +17,7 @@
 
 class Google_Service_CloudUserAccounts_LinuxGetLinuxAccountViewsResponse extends Google_Model
 {
-  protected $resourceType = 'Google_Service_CloudUserAccounts_LinuxAccountViews';
-  protected $resourceDataType = '';
+  public $resource;
 
   public function setResource(Google_Service_CloudUserAccounts_LinuxAccountViews $resource)
   {

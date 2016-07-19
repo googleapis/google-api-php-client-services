@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_CreativeGroupsListResponse extends Google_Collection
 {
   protected $collection_key = 'creativeGroups';
-  protected $creativeGroupsType = 'Google_Service_Dfareporting_CreativeGroup';
-  protected $creativeGroupsDataType = 'array';
+  public $creativeGroups;
   public $kind;
   public $nextPageToken;
 
-  public function setCreativeGroups($creativeGroups)
+  public function setCreativeGroups(array $creativeGroups)
   {
+    foreach ($creativeGroups as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeGroup) {
+        throw new InvalidArgumentException('First argument to setCreativeGroups must be an array of Google_Service_Dfareporting_CreativeGroup');
+      }
+    }
     $this->creativeGroups = $creativeGroups;
   }
   public function getCreativeGroups()

@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_DirectorySitesListResponse extends Google_Collection
 {
   protected $collection_key = 'directorySites';
-  protected $directorySitesType = 'Google_Service_Dfareporting_DirectorySite';
-  protected $directorySitesDataType = 'array';
+  public $directorySites;
   public $kind;
   public $nextPageToken;
 
-  public function setDirectorySites($directorySites)
+  public function setDirectorySites(array $directorySites)
   {
+    foreach ($directorySites as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_DirectorySite) {
+        throw new InvalidArgumentException('First argument to setDirectorySites must be an array of Google_Service_Dfareporting_DirectorySite');
+      }
+    }
     $this->directorySites = $directorySites;
   }
   public function getDirectorySites()

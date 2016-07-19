@@ -18,11 +18,15 @@
 class Google_Service_AdExchangeBuyer_AddOrderNotesResponse extends Google_Collection
 {
   protected $collection_key = 'notes';
-  protected $notesType = 'Google_Service_AdExchangeBuyer_MarketplaceNote';
-  protected $notesDataType = 'array';
+  public $notes;
 
-  public function setNotes($notes)
+  public function setNotes(array $notes)
   {
+    foreach ($notes as $n) {
+      if (!$n instanceof Google_Service_AdExchangeBuyer_MarketplaceNote) {
+        throw new InvalidArgumentException('First argument to setNotes must be an array of Google_Service_AdExchangeBuyer_MarketplaceNote');
+      }
+    }
     $this->notes = $notes;
   }
   public function getNotes()

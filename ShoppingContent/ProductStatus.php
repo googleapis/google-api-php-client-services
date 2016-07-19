@@ -19,10 +19,8 @@ class Google_Service_ShoppingContent_ProductStatus extends Google_Collection
 {
   protected $collection_key = 'destinationStatuses';
   public $creationDate;
-  protected $dataQualityIssuesType = 'Google_Service_ShoppingContent_ProductStatusDataQualityIssue';
-  protected $dataQualityIssuesDataType = 'array';
-  protected $destinationStatusesType = 'Google_Service_ShoppingContent_ProductStatusDestinationStatus';
-  protected $destinationStatusesDataType = 'array';
+  public $dataQualityIssues;
+  public $destinationStatuses;
   public $googleExpirationDate;
   public $kind;
   public $lastUpdateDate;
@@ -38,16 +36,26 @@ class Google_Service_ShoppingContent_ProductStatus extends Google_Collection
   {
     return $this->creationDate;
   }
-  public function setDataQualityIssues($dataQualityIssues)
+  public function setDataQualityIssues(array $dataQualityIssues)
   {
+    foreach ($dataQualityIssues as $d) {
+      if (!$d instanceof Google_Service_ShoppingContent_ProductStatusDataQualityIssue) {
+        throw new InvalidArgumentException('First argument to setDataQualityIssues must be an array of Google_Service_ShoppingContent_ProductStatusDataQualityIssue');
+      }
+    }
     $this->dataQualityIssues = $dataQualityIssues;
   }
   public function getDataQualityIssues()
   {
     return $this->dataQualityIssues;
   }
-  public function setDestinationStatuses($destinationStatuses)
+  public function setDestinationStatuses(array $destinationStatuses)
   {
+    foreach ($destinationStatuses as $d) {
+      if (!$d instanceof Google_Service_ShoppingContent_ProductStatusDestinationStatus) {
+        throw new InvalidArgumentException('First argument to setDestinationStatuses must be an array of Google_Service_ShoppingContent_ProductStatusDestinationStatus');
+      }
+    }
     $this->destinationStatuses = $destinationStatuses;
   }
   public function getDestinationStatuses()

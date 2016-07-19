@@ -18,8 +18,7 @@
 class Google_Service_ShoppingContent_OrderRefund extends Google_Model
 {
   public $actor;
-  protected $amountType = 'Google_Service_ShoppingContent_Price';
-  protected $amountDataType = '';
+  public $amount;
   public $creationDate;
   public $reason;
   public $reasonText;

@@ -18,11 +18,15 @@
 class Google_Service_ToolResults_PublishXunitXmlFilesRequest extends Google_Collection
 {
   protected $collection_key = 'xunitXmlFiles';
-  protected $xunitXmlFilesType = 'Google_Service_ToolResults_FileReference';
-  protected $xunitXmlFilesDataType = 'array';
+  public $xunitXmlFiles;
 
-  public function setXunitXmlFiles($xunitXmlFiles)
+  public function setXunitXmlFiles(array $xunitXmlFiles)
   {
+    foreach ($xunitXmlFiles as $x) {
+      if (!$x instanceof Google_Service_ToolResults_FileReference) {
+        throw new InvalidArgumentException('First argument to setXunitXmlFiles must be an array of Google_Service_ToolResults_FileReference');
+      }
+    }
     $this->xunitXmlFiles = $xunitXmlFiles;
   }
   public function getXunitXmlFiles()

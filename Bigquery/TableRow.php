@@ -18,11 +18,15 @@
 class Google_Service_Bigquery_TableRow extends Google_Collection
 {
   protected $collection_key = 'f';
-  protected $fType = 'Google_Service_Bigquery_TableCell';
-  protected $fDataType = 'array';
+  public $f;
 
-  public function setF($f)
+  public function setF(array $f)
   {
+    foreach ($f as $f) {
+      if (!$f instanceof Google_Service_Bigquery_TableCell) {
+        throw new InvalidArgumentException('First argument to setF must be an array of Google_Service_Bigquery_TableCell');
+      }
+    }
     $this->f = $f;
   }
   public function getF()

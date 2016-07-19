@@ -65,7 +65,7 @@ class Google_Service_ConsumerSurveys_MobileAppPanel extends Google_Collection
   {
     return $this->name;
   }
-  public function setOwners($owners)
+  public function setOwners(array $owners)
   {
     $this->owners = $owners;
   }

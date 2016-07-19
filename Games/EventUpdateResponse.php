@@ -18,24 +18,31 @@
 class Google_Service_Games_EventUpdateResponse extends Google_Collection
 {
   protected $collection_key = 'playerEvents';
-  protected $batchFailuresType = 'Google_Service_Games_EventBatchRecordFailure';
-  protected $batchFailuresDataType = 'array';
-  protected $eventFailuresType = 'Google_Service_Games_EventRecordFailure';
-  protected $eventFailuresDataType = 'array';
+  public $batchFailures;
+  public $eventFailures;
   public $kind;
-  protected $playerEventsType = 'Google_Service_Games_PlayerEvent';
-  protected $playerEventsDataType = 'array';
+  public $playerEvents;
 
-  public function setBatchFailures($batchFailures)
+  public function setBatchFailures(array $batchFailures)
   {
+    foreach ($batchFailures as $b) {
+      if (!$b instanceof Google_Service_Games_EventBatchRecordFailure) {
+        throw new InvalidArgumentException('First argument to setBatchFailures must be an array of Google_Service_Games_EventBatchRecordFailure');
+      }
+    }
     $this->batchFailures = $batchFailures;
   }
   public function getBatchFailures()
   {
     return $this->batchFailures;
   }
-  public function setEventFailures($eventFailures)
+  public function setEventFailures(array $eventFailures)
   {
+    foreach ($eventFailures as $e) {
+      if (!$e instanceof Google_Service_Games_EventRecordFailure) {
+        throw new InvalidArgumentException('First argument to setEventFailures must be an array of Google_Service_Games_EventRecordFailure');
+      }
+    }
     $this->eventFailures = $eventFailures;
   }
   public function getEventFailures()
@@ -50,8 +57,13 @@ class Google_Service_Games_EventUpdateResponse extends Google_Collection
   {
     return $this->kind;
   }
-  public function setPlayerEvents($playerEvents)
+  public function setPlayerEvents(array $playerEvents)
   {
+    foreach ($playerEvents as $p) {
+      if (!$p instanceof Google_Service_Games_PlayerEvent) {
+        throw new InvalidArgumentException('First argument to setPlayerEvents must be an array of Google_Service_Games_PlayerEvent');
+      }
+    }
     $this->playerEvents = $playerEvents;
   }
   public function getPlayerEvents()

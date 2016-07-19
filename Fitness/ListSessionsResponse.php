@@ -18,14 +18,17 @@
 class Google_Service_Fitness_ListSessionsResponse extends Google_Collection
 {
   protected $collection_key = 'session';
-  protected $deletedSessionType = 'Google_Service_Fitness_Session';
-  protected $deletedSessionDataType = 'array';
+  public $deletedSession;
   public $nextPageToken;
-  protected $sessionType = 'Google_Service_Fitness_Session';
-  protected $sessionDataType = 'array';
+  public $session;
 
-  public function setDeletedSession($deletedSession)
+  public function setDeletedSession(array $deletedSession)
   {
+    foreach ($deletedSession as $d) {
+      if (!$d instanceof Google_Service_Fitness_Session) {
+        throw new InvalidArgumentException('First argument to setDeletedSession must be an array of Google_Service_Fitness_Session');
+      }
+    }
     $this->deletedSession = $deletedSession;
   }
   public function getDeletedSession()
@@ -40,8 +43,13 @@ class Google_Service_Fitness_ListSessionsResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setSession($session)
+  public function setSession(array $session)
   {
+    foreach ($session as $s) {
+      if (!$s instanceof Google_Service_Fitness_Session) {
+        throw new InvalidArgumentException('First argument to setSession must be an array of Google_Service_Fitness_Session');
+      }
+    }
     $this->session = $session;
   }
   public function getSession()

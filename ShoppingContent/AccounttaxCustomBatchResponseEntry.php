@@ -17,11 +17,9 @@
 
 class Google_Service_ShoppingContent_AccounttaxCustomBatchResponseEntry extends Google_Model
 {
-  protected $accountTaxType = 'Google_Service_ShoppingContent_AccountTax';
-  protected $accountTaxDataType = '';
+  public $accountTax;
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
-  protected $errorsDataType = '';
+  public $errors;
   public $kind;
 
   public function setAccountTax(Google_Service_ShoppingContent_AccountTax $accountTax)

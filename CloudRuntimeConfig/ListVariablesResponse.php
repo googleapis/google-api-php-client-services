@@ -19,8 +19,7 @@ class Google_Service_CloudRuntimeConfig_ListVariablesResponse extends Google_Col
 {
   protected $collection_key = 'variables';
   public $nextPageToken;
-  protected $variablesType = 'Google_Service_CloudRuntimeConfig_Variable';
-  protected $variablesDataType = 'array';
+  public $variables;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_CloudRuntimeConfig_ListVariablesResponse extends Google_Col
   {
     return $this->nextPageToken;
   }
-  public function setVariables($variables)
+  public function setVariables(array $variables)
   {
+    foreach ($variables as $v) {
+      if (!$v instanceof Google_Service_CloudRuntimeConfig_Variable) {
+        throw new InvalidArgumentException('First argument to setVariables must be an array of Google_Service_CloudRuntimeConfig_Variable');
+      }
+    }
     $this->variables = $variables;
   }
   public function getVariables()

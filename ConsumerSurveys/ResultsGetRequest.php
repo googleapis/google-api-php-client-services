@@ -17,8 +17,7 @@
 
 class Google_Service_ConsumerSurveys_ResultsGetRequest extends Google_Model
 {
-  protected $resultMaskType = 'Google_Service_ConsumerSurveys_ResultsMask';
-  protected $resultMaskDataType = '';
+  public $resultMask;
 
   public function setResultMask(Google_Service_ConsumerSurveys_ResultsMask $resultMask)
   {

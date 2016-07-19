@@ -18,13 +18,17 @@
 class Google_Service_Partners_CertificationStatus extends Google_Collection
 {
   protected $collection_key = 'examStatuses';
-  protected $examStatusesType = 'Google_Service_Partners_CertificationExamStatus';
-  protected $examStatusesDataType = 'array';
+  public $examStatuses;
   public $isCertified;
   public $type;
 
-  public function setExamStatuses($examStatuses)
+  public function setExamStatuses(array $examStatuses)
   {
+    foreach ($examStatuses as $e) {
+      if (!$e instanceof Google_Service_Partners_CertificationExamStatus) {
+        throw new InvalidArgumentException('First argument to setExamStatuses must be an array of Google_Service_Partners_CertificationExamStatus');
+      }
+    }
     $this->examStatuses = $examStatuses;
   }
   public function getExamStatuses()

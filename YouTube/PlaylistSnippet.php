@@ -22,12 +22,10 @@ class Google_Service_YouTube_PlaylistSnippet extends Google_Collection
   public $channelTitle;
   public $defaultLanguage;
   public $description;
-  protected $localizedType = 'Google_Service_YouTube_PlaylistLocalization';
-  protected $localizedDataType = '';
+  public $localized;
   public $publishedAt;
   public $tags;
-  protected $thumbnailsType = 'Google_Service_YouTube_ThumbnailDetails';
-  protected $thumbnailsDataType = '';
+  public $thumbnails;
   public $title;
 
   public function setChannelId($channelId)
@@ -78,7 +76,7 @@ class Google_Service_YouTube_PlaylistSnippet extends Google_Collection
   {
     return $this->publishedAt;
   }
-  public function setTags($tags)
+  public function setTags(array $tags)
   {
     $this->tags = $tags;
   }

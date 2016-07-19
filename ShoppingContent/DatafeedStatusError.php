@@ -20,8 +20,7 @@ class Google_Service_ShoppingContent_DatafeedStatusError extends Google_Collecti
   protected $collection_key = 'examples';
   public $code;
   public $count;
-  protected $examplesType = 'Google_Service_ShoppingContent_DatafeedStatusExample';
-  protected $examplesDataType = 'array';
+  public $examples;
   public $message;
 
   public function setCode($code)
@@ -40,8 +39,13 @@ class Google_Service_ShoppingContent_DatafeedStatusError extends Google_Collecti
   {
     return $this->count;
   }
-  public function setExamples($examples)
+  public function setExamples(array $examples)
   {
+    foreach ($examples as $e) {
+      if (!$e instanceof Google_Service_ShoppingContent_DatafeedStatusExample) {
+        throw new InvalidArgumentException('First argument to setExamples must be an array of Google_Service_ShoppingContent_DatafeedStatusExample');
+      }
+    }
     $this->examples = $examples;
   }
   public function getExamples()

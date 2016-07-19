@@ -22,8 +22,7 @@ class Google_Service_Compute_Operation extends Google_Collection
   public $creationTimestamp;
   public $description;
   public $endTime;
-  protected $errorType = 'Google_Service_Compute_OperationError';
-  protected $errorDataType = '';
+  public $error;
   public $httpErrorMessage;
   public $httpErrorStatusCode;
   public $id;
@@ -40,8 +39,7 @@ class Google_Service_Compute_Operation extends Google_Collection
   public $targetId;
   public $targetLink;
   public $user;
-  protected $warningsType = 'Google_Service_Compute_OperationWarnings';
-  protected $warningsDataType = 'array';
+  public $warnings;
   public $zone;
 
   public function setClientOperationId($clientOperationId)
@@ -212,8 +210,13 @@ class Google_Service_Compute_Operation extends Google_Collection
   {
     return $this->user;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
+    foreach ($warnings as $w) {
+      if (!$w instanceof Google_Service_Compute_OperationWarnings) {
+        throw new InvalidArgumentException('First argument to setWarnings must be an array of Google_Service_Compute_OperationWarnings');
+      }
+    }
     $this->warnings = $warnings;
   }
   public function getWarnings()

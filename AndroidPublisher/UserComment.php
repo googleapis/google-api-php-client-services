@@ -21,8 +21,7 @@ class Google_Service_AndroidPublisher_UserComment extends Google_Model
   public $appVersionCode;
   public $appVersionName;
   public $device;
-  protected $lastModifiedType = 'Google_Service_AndroidPublisher_Timestamp';
-  protected $lastModifiedDataType = '';
+  public $lastModified;
   public $reviewerLanguage;
   public $starRating;
   public $text;

@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_EventTagsListResponse extends Google_Collection
 {
   protected $collection_key = 'eventTags';
-  protected $eventTagsType = 'Google_Service_Dfareporting_EventTag';
-  protected $eventTagsDataType = 'array';
+  public $eventTags;
   public $kind;
 
-  public function setEventTags($eventTags)
+  public function setEventTags(array $eventTags)
   {
+    foreach ($eventTags as $e) {
+      if (!$e instanceof Google_Service_Dfareporting_EventTag) {
+        throw new InvalidArgumentException('First argument to setEventTags must be an array of Google_Service_Dfareporting_EventTag');
+      }
+    }
     $this->eventTags = $eventTags;
   }
   public function getEventTags()

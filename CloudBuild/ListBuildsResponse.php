@@ -18,12 +18,16 @@
 class Google_Service_CloudBuild_ListBuildsResponse extends Google_Collection
 {
   protected $collection_key = 'builds';
-  protected $buildsType = 'Google_Service_CloudBuild_Build';
-  protected $buildsDataType = 'array';
+  public $builds;
   public $nextPageToken;
 
-  public function setBuilds($builds)
+  public function setBuilds(array $builds)
   {
+    foreach ($builds as $b) {
+      if (!$b instanceof Google_Service_CloudBuild_Build) {
+        throw new InvalidArgumentException('First argument to setBuilds must be an array of Google_Service_CloudBuild_Build');
+      }
+    }
     $this->builds = $builds;
   }
   public function getBuilds()

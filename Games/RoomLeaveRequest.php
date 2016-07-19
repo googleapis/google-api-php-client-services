@@ -18,8 +18,7 @@
 class Google_Service_Games_RoomLeaveRequest extends Google_Model
 {
   public $kind;
-  protected $leaveDiagnosticsType = 'Google_Service_Games_RoomLeaveDiagnostics';
-  protected $leaveDiagnosticsDataType = '';
+  public $leaveDiagnostics;
   public $reason;
 
   public function setKind($kind)

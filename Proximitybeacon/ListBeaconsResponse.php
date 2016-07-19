@@ -18,13 +18,17 @@
 class Google_Service_Proximitybeacon_ListBeaconsResponse extends Google_Collection
 {
   protected $collection_key = 'beacons';
-  protected $beaconsType = 'Google_Service_Proximitybeacon_Beacon';
-  protected $beaconsDataType = 'array';
+  public $beacons;
   public $nextPageToken;
   public $totalCount;
 
-  public function setBeacons($beacons)
+  public function setBeacons(array $beacons)
   {
+    foreach ($beacons as $b) {
+      if (!$b instanceof Google_Service_Proximitybeacon_Beacon) {
+        throw new InvalidArgumentException('First argument to setBeacons must be an array of Google_Service_Proximitybeacon_Beacon');
+      }
+    }
     $this->beacons = $beacons;
   }
   public function getBeacons()

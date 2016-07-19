@@ -18,10 +18,8 @@
 class Google_Service_Spectrum_SpectrumSchedule extends Google_Collection
 {
   protected $collection_key = 'spectra';
-  protected $eventTimeType = 'Google_Service_Spectrum_EventTime';
-  protected $eventTimeDataType = '';
-  protected $spectraType = 'Google_Service_Spectrum_SpectrumMessage';
-  protected $spectraDataType = 'array';
+  public $eventTime;
+  public $spectra;
 
   public function setEventTime(Google_Service_Spectrum_EventTime $eventTime)
   {
@@ -31,8 +29,13 @@ class Google_Service_Spectrum_SpectrumSchedule extends Google_Collection
   {
     return $this->eventTime;
   }
-  public function setSpectra($spectra)
+  public function setSpectra(array $spectra)
   {
+    foreach ($spectra as $s) {
+      if (!$s instanceof Google_Service_Spectrum_SpectrumMessage) {
+        throw new InvalidArgumentException('First argument to setSpectra must be an array of Google_Service_Spectrum_SpectrumMessage');
+      }
+    }
     $this->spectra = $spectra;
   }
   public function getSpectra()

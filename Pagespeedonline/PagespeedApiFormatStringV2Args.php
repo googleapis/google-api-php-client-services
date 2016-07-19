@@ -22,10 +22,8 @@ class Google_Service_Pagespeedonline_PagespeedApiFormatStringV2Args extends Goog
         "secondaryRects" => "secondary_rects",
   );
   public $key;
-  protected $rectsType = 'Google_Service_Pagespeedonline_PagespeedApiFormatStringV2ArgsRects';
-  protected $rectsDataType = 'array';
-  protected $secondaryRectsType = 'Google_Service_Pagespeedonline_PagespeedApiFormatStringV2ArgsSecondaryRects';
-  protected $secondaryRectsDataType = 'array';
+  public $rects;
+  public $secondaryRects;
   public $type;
   public $value;
 
@@ -37,16 +35,26 @@ class Google_Service_Pagespeedonline_PagespeedApiFormatStringV2Args extends Goog
   {
     return $this->key;
   }
-  public function setRects($rects)
+  public function setRects(array $rects)
   {
+    foreach ($rects as $r) {
+      if (!$r instanceof Google_Service_Pagespeedonline_PagespeedApiFormatStringV2ArgsRects) {
+        throw new InvalidArgumentException('First argument to setRects must be an array of Google_Service_Pagespeedonline_PagespeedApiFormatStringV2ArgsRects');
+      }
+    }
     $this->rects = $rects;
   }
   public function getRects()
   {
     return $this->rects;
   }
-  public function setSecondaryRects($secondaryRects)
+  public function setSecondaryRects(array $secondaryRects)
   {
+    foreach ($secondaryRects as $s) {
+      if (!$s instanceof Google_Service_Pagespeedonline_PagespeedApiFormatStringV2ArgsSecondaryRects) {
+        throw new InvalidArgumentException('First argument to setSecondaryRects must be an array of Google_Service_Pagespeedonline_PagespeedApiFormatStringV2ArgsSecondaryRects');
+      }
+    }
     $this->secondaryRects = $secondaryRects;
   }
   public function getSecondaryRects()

@@ -21,7 +21,7 @@ class Google_Service_Analytics_Column extends Google_Model
   public $id;
   public $kind;
 
-  public function setAttributes($attributes)
+  public function setAttributes(array $attributes)
   {
     $this->attributes = $attributes;
   }

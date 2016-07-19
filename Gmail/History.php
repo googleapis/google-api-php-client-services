@@ -19,16 +19,11 @@ class Google_Service_Gmail_History extends Google_Collection
 {
   protected $collection_key = 'messagesDeleted';
   public $id;
-  protected $labelsAddedType = 'Google_Service_Gmail_HistoryLabelAdded';
-  protected $labelsAddedDataType = 'array';
-  protected $labelsRemovedType = 'Google_Service_Gmail_HistoryLabelRemoved';
-  protected $labelsRemovedDataType = 'array';
-  protected $messagesType = 'Google_Service_Gmail_Message';
-  protected $messagesDataType = 'array';
-  protected $messagesAddedType = 'Google_Service_Gmail_HistoryMessageAdded';
-  protected $messagesAddedDataType = 'array';
-  protected $messagesDeletedType = 'Google_Service_Gmail_HistoryMessageDeleted';
-  protected $messagesDeletedDataType = 'array';
+  public $labelsAdded;
+  public $labelsRemoved;
+  public $messages;
+  public $messagesAdded;
+  public $messagesDeleted;
 
   public function setId($id)
   {
@@ -38,40 +33,65 @@ class Google_Service_Gmail_History extends Google_Collection
   {
     return $this->id;
   }
-  public function setLabelsAdded($labelsAdded)
+  public function setLabelsAdded(array $labelsAdded)
   {
+    foreach ($labelsAdded as $l) {
+      if (!$l instanceof Google_Service_Gmail_HistoryLabelAdded) {
+        throw new InvalidArgumentException('First argument to setLabelsAdded must be an array of Google_Service_Gmail_HistoryLabelAdded');
+      }
+    }
     $this->labelsAdded = $labelsAdded;
   }
   public function getLabelsAdded()
   {
     return $this->labelsAdded;
   }
-  public function setLabelsRemoved($labelsRemoved)
+  public function setLabelsRemoved(array $labelsRemoved)
   {
+    foreach ($labelsRemoved as $l) {
+      if (!$l instanceof Google_Service_Gmail_HistoryLabelRemoved) {
+        throw new InvalidArgumentException('First argument to setLabelsRemoved must be an array of Google_Service_Gmail_HistoryLabelRemoved');
+      }
+    }
     $this->labelsRemoved = $labelsRemoved;
   }
   public function getLabelsRemoved()
   {
     return $this->labelsRemoved;
   }
-  public function setMessages($messages)
+  public function setMessages(array $messages)
   {
+    foreach ($messages as $m) {
+      if (!$m instanceof Google_Service_Gmail_Message) {
+        throw new InvalidArgumentException('First argument to setMessages must be an array of Google_Service_Gmail_Message');
+      }
+    }
     $this->messages = $messages;
   }
   public function getMessages()
   {
     return $this->messages;
   }
-  public function setMessagesAdded($messagesAdded)
+  public function setMessagesAdded(array $messagesAdded)
   {
+    foreach ($messagesAdded as $m) {
+      if (!$m instanceof Google_Service_Gmail_HistoryMessageAdded) {
+        throw new InvalidArgumentException('First argument to setMessagesAdded must be an array of Google_Service_Gmail_HistoryMessageAdded');
+      }
+    }
     $this->messagesAdded = $messagesAdded;
   }
   public function getMessagesAdded()
   {
     return $this->messagesAdded;
   }
-  public function setMessagesDeleted($messagesDeleted)
+  public function setMessagesDeleted(array $messagesDeleted)
   {
+    foreach ($messagesDeleted as $m) {
+      if (!$m instanceof Google_Service_Gmail_HistoryMessageDeleted) {
+        throw new InvalidArgumentException('First argument to setMessagesDeleted must be an array of Google_Service_Gmail_HistoryMessageDeleted');
+      }
+    }
     $this->messagesDeleted = $messagesDeleted;
   }
   public function getMessagesDeleted()

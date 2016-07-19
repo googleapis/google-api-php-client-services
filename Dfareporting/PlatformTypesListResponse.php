@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_PlatformTypesListResponse extends Google_Colle
 {
   protected $collection_key = 'platformTypes';
   public $kind;
-  protected $platformTypesType = 'Google_Service_Dfareporting_PlatformType';
-  protected $platformTypesDataType = 'array';
+  public $platformTypes;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_PlatformTypesListResponse extends Google_Colle
   {
     return $this->kind;
   }
-  public function setPlatformTypes($platformTypes)
+  public function setPlatformTypes(array $platformTypes)
   {
+    foreach ($platformTypes as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_PlatformType) {
+        throw new InvalidArgumentException('First argument to setPlatformTypes must be an array of Google_Service_Dfareporting_PlatformType');
+      }
+    }
     $this->platformTypes = $platformTypes;
   }
   public function getPlatformTypes()

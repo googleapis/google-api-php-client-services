@@ -23,12 +23,10 @@ class Google_Service_QPXExpress_SegmentInfo extends Google_Collection
   public $cabin;
   public $connectionDuration;
   public $duration;
-  protected $flightType = 'Google_Service_QPXExpress_FlightInfo';
-  protected $flightDataType = '';
+  public $flight;
   public $id;
   public $kind;
-  protected $legType = 'Google_Service_QPXExpress_LegInfo';
-  protected $legDataType = 'array';
+  public $leg;
   public $marriedSegmentGroup;
   public $subjectToGovernmentApproval;
 
@@ -96,8 +94,13 @@ class Google_Service_QPXExpress_SegmentInfo extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLeg($leg)
+  public function setLeg(array $leg)
   {
+    foreach ($leg as $l) {
+      if (!$l instanceof Google_Service_QPXExpress_LegInfo) {
+        throw new InvalidArgumentException('First argument to setLeg must be an array of Google_Service_QPXExpress_LegInfo');
+      }
+    }
     $this->leg = $leg;
   }
   public function getLeg()

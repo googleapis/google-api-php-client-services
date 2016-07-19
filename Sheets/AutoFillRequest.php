@@ -17,10 +17,8 @@
 
 class Google_Service_Sheets_AutoFillRequest extends Google_Model
 {
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
-  protected $sourceAndDestinationType = 'Google_Service_Sheets_SourceAndDestination';
-  protected $sourceAndDestinationDataType = '';
+  public $range;
+  public $sourceAndDestination;
   public $useAlternateSeries;
 
   public function setRange(Google_Service_Sheets_GridRange $range)

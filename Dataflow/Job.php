@@ -22,18 +22,16 @@ class Google_Service_Dataflow_Job extends Google_Collection
   public $createTime;
   public $currentState;
   public $currentStateTime;
-  protected $environmentType = 'Google_Service_Dataflow_Environment';
-  protected $environmentDataType = '';
-  protected $executionInfoType = 'Google_Service_Dataflow_JobExecutionInfo';
-  protected $executionInfoDataType = '';
+  public $environment;
+  public $executionInfo;
   public $id;
+  public $labels;
   public $name;
   public $projectId;
   public $replaceJobId;
   public $replacedByJobId;
   public $requestedState;
-  protected $stepsType = 'Google_Service_Dataflow_Step';
-  protected $stepsDataType = 'array';
+  public $steps;
   public $tempFiles;
   public $transformNameMapping;
   public $type;
@@ -94,6 +92,14 @@ class Google_Service_Dataflow_Job extends Google_Collection
   {
     return $this->id;
   }
+  public function setLabels(array $labels)
+  {
+    $this->labels = $labels;
+  }
+  public function getLabels()
+  {
+    return $this->labels;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -134,15 +140,20 @@ class Google_Service_Dataflow_Job extends Google_Collection
   {
     return $this->requestedState;
   }
-  public function setSteps($steps)
+  public function setSteps(array $steps)
   {
+    foreach ($steps as $s) {
+      if (!$s instanceof Google_Service_Dataflow_Step) {
+        throw new InvalidArgumentException('First argument to setSteps must be an array of Google_Service_Dataflow_Step');
+      }
+    }
     $this->steps = $steps;
   }
   public function getSteps()
   {
     return $this->steps;
   }
-  public function setTempFiles($tempFiles)
+  public function setTempFiles(array $tempFiles)
   {
     $this->tempFiles = $tempFiles;
   }
@@ -150,7 +161,7 @@ class Google_Service_Dataflow_Job extends Google_Collection
   {
     return $this->tempFiles;
   }
-  public function setTransformNameMapping($transformNameMapping)
+  public function setTransformNameMapping(array $transformNameMapping)
   {
     $this->transformNameMapping = $transformNameMapping;
   }

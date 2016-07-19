@@ -21,8 +21,7 @@ class Google_Service_CloudResourceManager_Project extends Google_Model
   public $labels;
   public $lifecycleState;
   public $name;
-  protected $parentType = 'Google_Service_CloudResourceManager_ResourceId';
-  protected $parentDataType = '';
+  public $parent;
   public $projectId;
   public $projectNumber;
 
@@ -34,7 +33,7 @@ class Google_Service_CloudResourceManager_Project extends Google_Model
   {
     return $this->createTime;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

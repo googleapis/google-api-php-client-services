@@ -19,8 +19,7 @@ class Google_Service_DeploymentManager_OperationsListResponse extends Google_Col
 {
   protected $collection_key = 'operations';
   public $nextPageToken;
-  protected $operationsType = 'Google_Service_DeploymentManager_Operation';
-  protected $operationsDataType = 'array';
+  public $operations;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_DeploymentManager_OperationsListResponse extends Google_Col
   {
     return $this->nextPageToken;
   }
-  public function setOperations($operations)
+  public function setOperations(array $operations)
   {
+    foreach ($operations as $o) {
+      if (!$o instanceof Google_Service_DeploymentManager_Operation) {
+        throw new InvalidArgumentException('First argument to setOperations must be an array of Google_Service_DeploymentManager_Operation');
+      }
+    }
     $this->operations = $operations;
   }
   public function getOperations()

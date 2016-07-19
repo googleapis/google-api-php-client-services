@@ -18,12 +18,16 @@
 class Google_Service_Appsactivity_ListActivitiesResponse extends Google_Collection
 {
   protected $collection_key = 'activities';
-  protected $activitiesType = 'Google_Service_Appsactivity_Activity';
-  protected $activitiesDataType = 'array';
+  public $activities;
   public $nextPageToken;
 
-  public function setActivities($activities)
+  public function setActivities(array $activities)
   {
+    foreach ($activities as $a) {
+      if (!$a instanceof Google_Service_Appsactivity_Activity) {
+        throw new InvalidArgumentException('First argument to setActivities must be an array of Google_Service_Appsactivity_Activity');
+      }
+    }
     $this->activities = $activities;
   }
   public function getActivities()

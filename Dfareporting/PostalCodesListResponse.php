@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_PostalCodesListResponse extends Google_Collect
 {
   protected $collection_key = 'postalCodes';
   public $kind;
-  protected $postalCodesType = 'Google_Service_Dfareporting_PostalCode';
-  protected $postalCodesDataType = 'array';
+  public $postalCodes;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_PostalCodesListResponse extends Google_Collect
   {
     return $this->kind;
   }
-  public function setPostalCodes($postalCodes)
+  public function setPostalCodes(array $postalCodes)
   {
+    foreach ($postalCodes as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_PostalCode) {
+        throw new InvalidArgumentException('First argument to setPostalCodes must be an array of Google_Service_Dfareporting_PostalCode');
+      }
+    }
     $this->postalCodes = $postalCodes;
   }
   public function getPostalCodes()

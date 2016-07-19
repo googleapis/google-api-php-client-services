@@ -21,7 +21,7 @@ class Google_Service_Dataflow_MetricStructuredName extends Google_Model
   public $name;
   public $origin;
 
-  public function setContext($context)
+  public function setContext(array $context)
   {
     $this->context = $context;
   }

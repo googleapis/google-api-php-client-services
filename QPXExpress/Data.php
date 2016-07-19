@@ -18,44 +18,59 @@
 class Google_Service_QPXExpress_Data extends Google_Collection
 {
   protected $collection_key = 'tax';
-  protected $aircraftType = 'Google_Service_QPXExpress_AircraftData';
-  protected $aircraftDataType = 'array';
-  protected $airportType = 'Google_Service_QPXExpress_AirportData';
-  protected $airportDataType = 'array';
-  protected $carrierType = 'Google_Service_QPXExpress_CarrierData';
-  protected $carrierDataType = 'array';
-  protected $cityType = 'Google_Service_QPXExpress_CityData';
-  protected $cityDataType = 'array';
+  public $aircraft;
+  public $airport;
+  public $carrier;
+  public $city;
   public $kind;
-  protected $taxType = 'Google_Service_QPXExpress_TaxData';
-  protected $taxDataType = 'array';
+  public $tax;
 
-  public function setAircraft($aircraft)
+  public function setAircraft(array $aircraft)
   {
+    foreach ($aircraft as $a) {
+      if (!$a instanceof Google_Service_QPXExpress_AircraftData) {
+        throw new InvalidArgumentException('First argument to setAircraft must be an array of Google_Service_QPXExpress_AircraftData');
+      }
+    }
     $this->aircraft = $aircraft;
   }
   public function getAircraft()
   {
     return $this->aircraft;
   }
-  public function setAirport($airport)
+  public function setAirport(array $airport)
   {
+    foreach ($airport as $a) {
+      if (!$a instanceof Google_Service_QPXExpress_AirportData) {
+        throw new InvalidArgumentException('First argument to setAirport must be an array of Google_Service_QPXExpress_AirportData');
+      }
+    }
     $this->airport = $airport;
   }
   public function getAirport()
   {
     return $this->airport;
   }
-  public function setCarrier($carrier)
+  public function setCarrier(array $carrier)
   {
+    foreach ($carrier as $c) {
+      if (!$c instanceof Google_Service_QPXExpress_CarrierData) {
+        throw new InvalidArgumentException('First argument to setCarrier must be an array of Google_Service_QPXExpress_CarrierData');
+      }
+    }
     $this->carrier = $carrier;
   }
   public function getCarrier()
   {
     return $this->carrier;
   }
-  public function setCity($city)
+  public function setCity(array $city)
   {
+    foreach ($city as $c) {
+      if (!$c instanceof Google_Service_QPXExpress_CityData) {
+        throw new InvalidArgumentException('First argument to setCity must be an array of Google_Service_QPXExpress_CityData');
+      }
+    }
     $this->city = $city;
   }
   public function getCity()
@@ -70,8 +85,13 @@ class Google_Service_QPXExpress_Data extends Google_Collection
   {
     return $this->kind;
   }
-  public function setTax($tax)
+  public function setTax(array $tax)
   {
+    foreach ($tax as $t) {
+      if (!$t instanceof Google_Service_QPXExpress_TaxData) {
+        throw new InvalidArgumentException('First argument to setTax must be an array of Google_Service_QPXExpress_TaxData');
+      }
+    }
     $this->tax = $tax;
   }
   public function getTax()

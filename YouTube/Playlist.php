@@ -17,19 +17,14 @@
 
 class Google_Service_YouTube_Playlist extends Google_Model
 {
-  protected $contentDetailsType = 'Google_Service_YouTube_PlaylistContentDetails';
-  protected $contentDetailsDataType = '';
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $localizationsType = 'Google_Service_YouTube_PlaylistLocalization';
-  protected $localizationsDataType = 'map';
-  protected $playerType = 'Google_Service_YouTube_PlaylistPlayer';
-  protected $playerDataType = '';
-  protected $snippetType = 'Google_Service_YouTube_PlaylistSnippet';
-  protected $snippetDataType = '';
-  protected $statusType = 'Google_Service_YouTube_PlaylistStatus';
-  protected $statusDataType = '';
+  public $localizations;
+  public $player;
+  public $snippet;
+  public $status;
 
   public function setContentDetails(Google_Service_YouTube_PlaylistContentDetails $contentDetails)
   {
@@ -63,7 +58,7 @@ class Google_Service_YouTube_Playlist extends Google_Model
   {
     return $this->kind;
   }
-  public function setLocalizations($localizations)
+  public function setLocalizations(array $localizations)
   {
     $this->localizations = $localizations;
   }

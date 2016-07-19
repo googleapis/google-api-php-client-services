@@ -18,12 +18,16 @@
 class Google_Service_Classroom_CourseMaterialSet extends Google_Collection
 {
   protected $collection_key = 'materials';
-  protected $materialsType = 'Google_Service_Classroom_CourseMaterial';
-  protected $materialsDataType = 'array';
+  public $materials;
   public $title;
 
-  public function setMaterials($materials)
+  public function setMaterials(array $materials)
   {
+    foreach ($materials as $m) {
+      if (!$m instanceof Google_Service_Classroom_CourseMaterial) {
+        throw new InvalidArgumentException('First argument to setMaterials must be an array of Google_Service_Classroom_CourseMaterial');
+      }
+    }
     $this->materials = $materials;
   }
   public function getMaterials()

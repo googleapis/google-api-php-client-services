@@ -21,7 +21,7 @@ class Google_Service_CloudUserAccounts_AuthorizedKeysView extends Google_Collect
   public $keys;
   public $sudoer;
 
-  public function setKeys($keys)
+  public function setKeys(array $keys)
   {
     $this->keys = $keys;
   }

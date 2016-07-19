@@ -21,8 +21,7 @@ class Google_Service_Bigquery_ProjectList extends Google_Collection
   public $etag;
   public $kind;
   public $nextPageToken;
-  protected $projectsType = 'Google_Service_Bigquery_ProjectListProjects';
-  protected $projectsDataType = 'array';
+  public $projects;
   public $totalItems;
 
   public function setEtag($etag)
@@ -49,8 +48,13 @@ class Google_Service_Bigquery_ProjectList extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setProjects($projects)
+  public function setProjects(array $projects)
   {
+    foreach ($projects as $p) {
+      if (!$p instanceof Google_Service_Bigquery_ProjectListProjects) {
+        throw new InvalidArgumentException('First argument to setProjects must be an array of Google_Service_Bigquery_ProjectListProjects');
+      }
+    }
     $this->projects = $projects;
   }
   public function getProjects()

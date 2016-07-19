@@ -18,13 +18,17 @@
 class Google_Service_Resourceviews_ZoneViewsSetServiceRequest extends Google_Collection
 {
   protected $collection_key = 'endpoints';
-  protected $endpointsType = 'Google_Service_Resourceviews_ServiceEndpoint';
-  protected $endpointsDataType = 'array';
+  public $endpoints;
   public $fingerprint;
   public $resourceName;
 
-  public function setEndpoints($endpoints)
+  public function setEndpoints(array $endpoints)
   {
+    foreach ($endpoints as $e) {
+      if (!$e instanceof Google_Service_Resourceviews_ServiceEndpoint) {
+        throw new InvalidArgumentException('First argument to setEndpoints must be an array of Google_Service_Resourceviews_ServiceEndpoint');
+      }
+    }
     $this->endpoints = $endpoints;
   }
   public function getEndpoints()

@@ -21,7 +21,7 @@ class Google_Service_Iam_Binding extends Google_Collection
   public $members;
   public $role;
 
-  public function setMembers($members)
+  public function setMembers(array $members)
   {
     $this->members = $members;
   }

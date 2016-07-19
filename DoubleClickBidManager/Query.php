@@ -18,15 +18,12 @@
 class Google_Service_DoubleClickBidManager_Query extends Google_Model
 {
   public $kind;
-  protected $metadataType = 'Google_Service_DoubleClickBidManager_QueryMetadata';
-  protected $metadataDataType = '';
-  protected $paramsType = 'Google_Service_DoubleClickBidManager_Parameters';
-  protected $paramsDataType = '';
+  public $metadata;
+  public $params;
   public $queryId;
   public $reportDataEndTimeMs;
   public $reportDataStartTimeMs;
-  protected $scheduleType = 'Google_Service_DoubleClickBidManager_QuerySchedule';
-  protected $scheduleDataType = '';
+  public $schedule;
   public $timezoneCode;
 
   public function setKind($kind)

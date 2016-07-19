@@ -18,12 +18,9 @@
 class Google_Service_AndroidPublisher_EntitlementsListResponse extends Google_Collection
 {
   protected $collection_key = 'resources';
-  protected $pageInfoType = 'Google_Service_AndroidPublisher_PageInfo';
-  protected $pageInfoDataType = '';
-  protected $resourcesType = 'Google_Service_AndroidPublisher_Entitlement';
-  protected $resourcesDataType = 'array';
-  protected $tokenPaginationType = 'Google_Service_AndroidPublisher_TokenPagination';
-  protected $tokenPaginationDataType = '';
+  public $pageInfo;
+  public $resources;
+  public $tokenPagination;
 
   public function setPageInfo(Google_Service_AndroidPublisher_PageInfo $pageInfo)
   {
@@ -33,8 +30,13 @@ class Google_Service_AndroidPublisher_EntitlementsListResponse extends Google_Co
   {
     return $this->pageInfo;
   }
-  public function setResources($resources)
+  public function setResources(array $resources)
   {
+    foreach ($resources as $r) {
+      if (!$r instanceof Google_Service_AndroidPublisher_Entitlement) {
+        throw new InvalidArgumentException('First argument to setResources must be an array of Google_Service_AndroidPublisher_Entitlement');
+      }
+    }
     $this->resources = $resources;
   }
   public function getResources()

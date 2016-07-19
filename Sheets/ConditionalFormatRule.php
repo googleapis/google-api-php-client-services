@@ -18,12 +18,9 @@
 class Google_Service_Sheets_ConditionalFormatRule extends Google_Collection
 {
   protected $collection_key = 'ranges';
-  protected $booleanRuleType = 'Google_Service_Sheets_BooleanRule';
-  protected $booleanRuleDataType = '';
-  protected $gradientRuleType = 'Google_Service_Sheets_GradientRule';
-  protected $gradientRuleDataType = '';
-  protected $rangesType = 'Google_Service_Sheets_GridRange';
-  protected $rangesDataType = 'array';
+  public $booleanRule;
+  public $gradientRule;
+  public $ranges;
 
   public function setBooleanRule(Google_Service_Sheets_BooleanRule $booleanRule)
   {
@@ -41,8 +38,13 @@ class Google_Service_Sheets_ConditionalFormatRule extends Google_Collection
   {
     return $this->gradientRule;
   }
-  public function setRanges($ranges)
+  public function setRanges(array $ranges)
   {
+    foreach ($ranges as $r) {
+      if (!$r instanceof Google_Service_Sheets_GridRange) {
+        throw new InvalidArgumentException('First argument to setRanges must be an array of Google_Service_Sheets_GridRange');
+      }
+    }
     $this->ranges = $ranges;
   }
   public function getRanges()

@@ -32,10 +32,8 @@ class Google_Service_Doubleclicksearch_Conversion extends Google_Collection
   public $countMillis;
   public $criterionId;
   public $currencyCode;
-  protected $customDimensionType = 'Google_Service_Doubleclicksearch_CustomDimension';
-  protected $customDimensionDataType = 'array';
-  protected $customMetricType = 'Google_Service_Doubleclicksearch_CustomMetric';
-  protected $customMetricDataType = 'array';
+  public $customDimension;
+  public $customMetric;
   public $deviceType;
   public $dsConversionId;
   public $engineAccountId;
@@ -166,16 +164,26 @@ class Google_Service_Doubleclicksearch_Conversion extends Google_Collection
   {
     return $this->currencyCode;
   }
-  public function setCustomDimension($customDimension)
+  public function setCustomDimension(array $customDimension)
   {
+    foreach ($customDimension as $c) {
+      if (!$c instanceof Google_Service_Doubleclicksearch_CustomDimension) {
+        throw new InvalidArgumentException('First argument to setCustomDimension must be an array of Google_Service_Doubleclicksearch_CustomDimension');
+      }
+    }
     $this->customDimension = $customDimension;
   }
   public function getCustomDimension()
   {
     return $this->customDimension;
   }
-  public function setCustomMetric($customMetric)
+  public function setCustomMetric(array $customMetric)
   {
+    foreach ($customMetric as $c) {
+      if (!$c instanceof Google_Service_Doubleclicksearch_CustomMetric) {
+        throw new InvalidArgumentException('First argument to setCustomMetric must be an array of Google_Service_Doubleclicksearch_CustomMetric');
+      }
+    }
     $this->customMetric = $customMetric;
   }
   public function getCustomMetric()

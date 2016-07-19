@@ -18,10 +18,8 @@
 class Google_Service_Spectrum_GeoSpectrumSchedule extends Google_Collection
 {
   protected $collection_key = 'spectrumSchedules';
-  protected $locationType = 'Google_Service_Spectrum_GeoLocation';
-  protected $locationDataType = '';
-  protected $spectrumSchedulesType = 'Google_Service_Spectrum_SpectrumSchedule';
-  protected $spectrumSchedulesDataType = 'array';
+  public $location;
+  public $spectrumSchedules;
 
   public function setLocation(Google_Service_Spectrum_GeoLocation $location)
   {
@@ -31,8 +29,13 @@ class Google_Service_Spectrum_GeoSpectrumSchedule extends Google_Collection
   {
     return $this->location;
   }
-  public function setSpectrumSchedules($spectrumSchedules)
+  public function setSpectrumSchedules(array $spectrumSchedules)
   {
+    foreach ($spectrumSchedules as $s) {
+      if (!$s instanceof Google_Service_Spectrum_SpectrumSchedule) {
+        throw new InvalidArgumentException('First argument to setSpectrumSchedules must be an array of Google_Service_Spectrum_SpectrumSchedule');
+      }
+    }
     $this->spectrumSchedules = $spectrumSchedules;
   }
   public function getSpectrumSchedules()

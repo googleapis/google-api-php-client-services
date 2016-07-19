@@ -47,7 +47,7 @@ class Google_Service_Genomics_SearchCallSetsRequest extends Google_Collection
   {
     return $this->pageToken;
   }
-  public function setVariantSetIds($variantSetIds)
+  public function setVariantSetIds(array $variantSetIds)
   {
     $this->variantSetIds = $variantSetIds;
   }

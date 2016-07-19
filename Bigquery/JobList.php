@@ -19,8 +19,7 @@ class Google_Service_Bigquery_JobList extends Google_Collection
 {
   protected $collection_key = 'jobs';
   public $etag;
-  protected $jobsType = 'Google_Service_Bigquery_JobListJobs';
-  protected $jobsDataType = 'array';
+  public $jobs;
   public $kind;
   public $nextPageToken;
 
@@ -32,8 +31,13 @@ class Google_Service_Bigquery_JobList extends Google_Collection
   {
     return $this->etag;
   }
-  public function setJobs($jobs)
+  public function setJobs(array $jobs)
   {
+    foreach ($jobs as $j) {
+      if (!$j instanceof Google_Service_Bigquery_JobListJobs) {
+        throw new InvalidArgumentException('First argument to setJobs must be an array of Google_Service_Bigquery_JobListJobs');
+      }
+    }
     $this->jobs = $jobs;
   }
   public function getJobs()

@@ -38,7 +38,7 @@ class Google_Service_GamesManagement_PlayerScoreResetResponse extends Google_Col
   {
     return $this->kind;
   }
-  public function setResetScoreTimeSpans($resetScoreTimeSpans)
+  public function setResetScoreTimeSpans(array $resetScoreTimeSpans)
   {
     $this->resetScoreTimeSpans = $resetScoreTimeSpans;
   }

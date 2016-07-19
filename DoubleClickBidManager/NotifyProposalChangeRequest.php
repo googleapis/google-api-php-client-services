@@ -21,8 +21,7 @@ class Google_Service_DoubleClickBidManager_NotifyProposalChangeRequest extends G
   public $action;
   public $href;
   public $id;
-  protected $notesType = 'Google_Service_DoubleClickBidManager_Note';
-  protected $notesDataType = 'array';
+  public $notes;
   public $token;
 
   public function setAction($action)
@@ -49,8 +48,13 @@ class Google_Service_DoubleClickBidManager_NotifyProposalChangeRequest extends G
   {
     return $this->id;
   }
-  public function setNotes($notes)
+  public function setNotes(array $notes)
   {
+    foreach ($notes as $n) {
+      if (!$n instanceof Google_Service_DoubleClickBidManager_Note) {
+        throw new InvalidArgumentException('First argument to setNotes must be an array of Google_Service_DoubleClickBidManager_Note');
+      }
+    }
     $this->notes = $notes;
   }
   public function getNotes()

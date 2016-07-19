@@ -19,8 +19,7 @@ class Google_Service_Logging_LogLine extends Google_Model
 {
   public $logMessage;
   public $severity;
-  protected $sourceLocationType = 'Google_Service_Logging_SourceLocation';
-  protected $sourceLocationDataType = '';
+  public $sourceLocation;
   public $time;
 
   public function setLogMessage($logMessage)

@@ -21,7 +21,7 @@ class Google_Service_Analytics_EntityUserLinkPermissions extends Google_Collecti
   public $effective;
   public $local;
 
-  public function setEffective($effective)
+  public function setEffective(array $effective)
   {
     $this->effective = $effective;
   }
@@ -29,7 +29,7 @@ class Google_Service_Analytics_EntityUserLinkPermissions extends Google_Collecti
   {
     return $this->effective;
   }
-  public function setLocal($local)
+  public function setLocal(array $local)
   {
     $this->local = $local;
   }

@@ -18,29 +18,35 @@
 class Google_Service_Books_DictlayerdataDictWordsSenses extends Google_Collection
 {
   protected $collection_key = 'synonyms';
-  protected $conjugationsType = 'Google_Service_Books_DictlayerdataDictWordsSensesConjugations';
-  protected $conjugationsDataType = 'array';
-  protected $definitionsType = 'Google_Service_Books_DictlayerdataDictWordsSensesDefinitions';
-  protected $definitionsDataType = 'array';
+  public $conjugations;
+  public $definitions;
   public $partOfSpeech;
   public $pronunciation;
   public $pronunciationUrl;
-  protected $sourceType = 'Google_Service_Books_DictlayerdataDictWordsSensesSource';
-  protected $sourceDataType = '';
+  public $source;
   public $syllabification;
-  protected $synonymsType = 'Google_Service_Books_DictlayerdataDictWordsSensesSynonyms';
-  protected $synonymsDataType = 'array';
+  public $synonyms;
 
-  public function setConjugations($conjugations)
+  public function setConjugations(array $conjugations)
   {
+    foreach ($conjugations as $c) {
+      if (!$c instanceof Google_Service_Books_DictlayerdataDictWordsSensesConjugations) {
+        throw new InvalidArgumentException('First argument to setConjugations must be an array of Google_Service_Books_DictlayerdataDictWordsSensesConjugations');
+      }
+    }
     $this->conjugations = $conjugations;
   }
   public function getConjugations()
   {
     return $this->conjugations;
   }
-  public function setDefinitions($definitions)
+  public function setDefinitions(array $definitions)
   {
+    foreach ($definitions as $d) {
+      if (!$d instanceof Google_Service_Books_DictlayerdataDictWordsSensesDefinitions) {
+        throw new InvalidArgumentException('First argument to setDefinitions must be an array of Google_Service_Books_DictlayerdataDictWordsSensesDefinitions');
+      }
+    }
     $this->definitions = $definitions;
   }
   public function getDefinitions()
@@ -87,8 +93,13 @@ class Google_Service_Books_DictlayerdataDictWordsSenses extends Google_Collectio
   {
     return $this->syllabification;
   }
-  public function setSynonyms($synonyms)
+  public function setSynonyms(array $synonyms)
   {
+    foreach ($synonyms as $s) {
+      if (!$s instanceof Google_Service_Books_DictlayerdataDictWordsSensesSynonyms) {
+        throw new InvalidArgumentException('First argument to setSynonyms must be an array of Google_Service_Books_DictlayerdataDictWordsSensesSynonyms');
+      }
+    }
     $this->synonyms = $synonyms;
   }
   public function getSynonyms()

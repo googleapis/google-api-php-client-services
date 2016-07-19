@@ -24,18 +24,15 @@ class Google_Service_CivicInfo_AdministrativeBody extends Google_Collection
   public $absenteeVotingInfoUrl;
   public $addressLines;
   public $ballotInfoUrl;
-  protected $correspondenceAddressType = 'Google_Service_CivicInfo_SimpleAddressType';
-  protected $correspondenceAddressDataType = '';
+  public $correspondenceAddress;
   public $electionInfoUrl;
-  protected $electionOfficialsType = 'Google_Service_CivicInfo_ElectionOfficial';
-  protected $electionOfficialsDataType = 'array';
+  public $electionOfficials;
   public $electionRegistrationConfirmationUrl;
   public $electionRegistrationUrl;
   public $electionRulesUrl;
   public $hoursOfOperation;
   public $name;
-  protected $physicalAddressType = 'Google_Service_CivicInfo_SimpleAddressType';
-  protected $physicalAddressDataType = '';
+  public $physicalAddress;
   public $voterServices;
   public $votingLocationFinderUrl;
 
@@ -47,7 +44,7 @@ class Google_Service_CivicInfo_AdministrativeBody extends Google_Collection
   {
     return $this->absenteeVotingInfoUrl;
   }
-  public function setAddressLines($addressLines)
+  public function setAddressLines(array $addressLines)
   {
     $this->addressLines = $addressLines;
   }
@@ -79,8 +76,13 @@ class Google_Service_CivicInfo_AdministrativeBody extends Google_Collection
   {
     return $this->electionInfoUrl;
   }
-  public function setElectionOfficials($electionOfficials)
+  public function setElectionOfficials(array $electionOfficials)
   {
+    foreach ($electionOfficials as $e) {
+      if (!$e instanceof Google_Service_CivicInfo_ElectionOfficial) {
+        throw new InvalidArgumentException('First argument to setElectionOfficials must be an array of Google_Service_CivicInfo_ElectionOfficial');
+      }
+    }
     $this->electionOfficials = $electionOfficials;
   }
   public function getElectionOfficials()
@@ -135,7 +137,7 @@ class Google_Service_CivicInfo_AdministrativeBody extends Google_Collection
   {
     return $this->physicalAddress;
   }
-  public function setVoterServices($voterServices)
+  public function setVoterServices(array $voterServices)
   {
     $this->voterServices = $voterServices;
   }

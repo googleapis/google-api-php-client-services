@@ -18,12 +18,10 @@
 class Google_Service_PlusDomains_Media extends Google_Collection
 {
   protected $collection_key = 'streams';
-  protected $authorType = 'Google_Service_PlusDomains_MediaAuthor';
-  protected $authorDataType = '';
+  public $author;
   public $displayName;
   public $etag;
-  protected $exifType = 'Google_Service_PlusDomains_MediaExif';
-  protected $exifDataType = '';
+  public $exif;
   public $height;
   public $id;
   public $kind;
@@ -31,8 +29,7 @@ class Google_Service_PlusDomains_Media extends Google_Collection
   public $mediaUrl;
   public $published;
   public $sizeBytes;
-  protected $streamsType = 'Google_Service_PlusDomains_Videostream';
-  protected $streamsDataType = 'array';
+  public $streams;
   public $summary;
   public $updated;
   public $url;
@@ -128,8 +125,13 @@ class Google_Service_PlusDomains_Media extends Google_Collection
   {
     return $this->sizeBytes;
   }
-  public function setStreams($streams)
+  public function setStreams(array $streams)
   {
+    foreach ($streams as $s) {
+      if (!$s instanceof Google_Service_PlusDomains_Videostream) {
+        throw new InvalidArgumentException('First argument to setStreams must be an array of Google_Service_PlusDomains_Videostream');
+      }
+    }
     $this->streams = $streams;
   }
   public function getStreams()

@@ -20,8 +20,7 @@ class Google_Service_Directory_Schemas extends Google_Collection
   protected $collection_key = 'schemas';
   public $etag;
   public $kind;
-  protected $schemasType = 'Google_Service_Directory_Schema';
-  protected $schemasDataType = 'array';
+  public $schemas;
 
   public function setEtag($etag)
   {
@@ -39,8 +38,13 @@ class Google_Service_Directory_Schemas extends Google_Collection
   {
     return $this->kind;
   }
-  public function setSchemas($schemas)
+  public function setSchemas(array $schemas)
   {
+    foreach ($schemas as $s) {
+      if (!$s instanceof Google_Service_Directory_Schema) {
+        throw new InvalidArgumentException('First argument to setSchemas must be an array of Google_Service_Directory_Schema');
+      }
+    }
     $this->schemas = $schemas;
   }
   public function getSchemas()

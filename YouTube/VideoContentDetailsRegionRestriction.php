@@ -21,7 +21,7 @@ class Google_Service_YouTube_VideoContentDetailsRegionRestriction extends Google
   public $allowed;
   public $blocked;
 
-  public function setAllowed($allowed)
+  public function setAllowed(array $allowed)
   {
     $this->allowed = $allowed;
   }
@@ -29,7 +29,7 @@ class Google_Service_YouTube_VideoContentDetailsRegionRestriction extends Google
   {
     return $this->allowed;
   }
-  public function setBlocked($blocked)
+  public function setBlocked(array $blocked)
   {
     $this->blocked = $blocked;
   }

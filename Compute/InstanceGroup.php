@@ -24,8 +24,7 @@ class Google_Service_Compute_InstanceGroup extends Google_Collection
   public $id;
   public $kind;
   public $name;
-  protected $namedPortsType = 'Google_Service_Compute_NamedPort';
-  protected $namedPortsDataType = 'array';
+  public $namedPorts;
   public $network;
   public $selfLink;
   public $size;
@@ -80,8 +79,13 @@ class Google_Service_Compute_InstanceGroup extends Google_Collection
   {
     return $this->name;
   }
-  public function setNamedPorts($namedPorts)
+  public function setNamedPorts(array $namedPorts)
   {
+    foreach ($namedPorts as $n) {
+      if (!$n instanceof Google_Service_Compute_NamedPort) {
+        throw new InvalidArgumentException('First argument to setNamedPorts must be an array of Google_Service_Compute_NamedPort');
+      }
+    }
     $this->namedPorts = $namedPorts;
   }
   public function getNamedPorts()

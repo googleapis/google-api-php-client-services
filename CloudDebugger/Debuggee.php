@@ -20,17 +20,14 @@ class Google_Service_CloudDebugger_Debuggee extends Google_Collection
   protected $collection_key = 'sourceContexts';
   public $agentVersion;
   public $description;
-  protected $extSourceContextsType = 'Google_Service_CloudDebugger_ExtendedSourceContext';
-  protected $extSourceContextsDataType = 'array';
+  public $extSourceContexts;
   public $id;
   public $isDisabled;
   public $isInactive;
   public $labels;
   public $project;
-  protected $sourceContextsType = 'Google_Service_CloudDebugger_SourceContext';
-  protected $sourceContextsDataType = 'array';
-  protected $statusType = 'Google_Service_CloudDebugger_StatusMessage';
-  protected $statusDataType = '';
+  public $sourceContexts;
+  public $status;
   public $uniquifier;
 
   public function setAgentVersion($agentVersion)
@@ -49,8 +46,13 @@ class Google_Service_CloudDebugger_Debuggee extends Google_Collection
   {
     return $this->description;
   }
-  public function setExtSourceContexts($extSourceContexts)
+  public function setExtSourceContexts(array $extSourceContexts)
   {
+    foreach ($extSourceContexts as $e) {
+      if (!$e instanceof Google_Service_CloudDebugger_ExtendedSourceContext) {
+        throw new InvalidArgumentException('First argument to setExtSourceContexts must be an array of Google_Service_CloudDebugger_ExtendedSourceContext');
+      }
+    }
     $this->extSourceContexts = $extSourceContexts;
   }
   public function getExtSourceContexts()
@@ -81,7 +83,7 @@ class Google_Service_CloudDebugger_Debuggee extends Google_Collection
   {
     return $this->isInactive;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }
@@ -97,8 +99,13 @@ class Google_Service_CloudDebugger_Debuggee extends Google_Collection
   {
     return $this->project;
   }
-  public function setSourceContexts($sourceContexts)
+  public function setSourceContexts(array $sourceContexts)
   {
+    foreach ($sourceContexts as $s) {
+      if (!$s instanceof Google_Service_CloudDebugger_SourceContext) {
+        throw new InvalidArgumentException('First argument to setSourceContexts must be an array of Google_Service_CloudDebugger_SourceContext');
+      }
+    }
     $this->sourceContexts = $sourceContexts;
   }
   public function getSourceContexts()

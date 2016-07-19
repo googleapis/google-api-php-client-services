@@ -17,12 +17,9 @@
 
 class Google_Service_DoubleClickBidManager_Report extends Google_Model
 {
-  protected $keyType = 'Google_Service_DoubleClickBidManager_ReportKey';
-  protected $keyDataType = '';
-  protected $metadataType = 'Google_Service_DoubleClickBidManager_ReportMetadata';
-  protected $metadataDataType = '';
-  protected $paramsType = 'Google_Service_DoubleClickBidManager_Parameters';
-  protected $paramsDataType = '';
+  public $key;
+  public $metadata;
+  public $params;
 
   public function setKey(Google_Service_DoubleClickBidManager_ReportKey $key)
   {

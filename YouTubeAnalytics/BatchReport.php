@@ -20,11 +20,9 @@ class Google_Service_YouTubeAnalytics_BatchReport extends Google_Collection
   protected $collection_key = 'outputs';
   public $id;
   public $kind;
-  protected $outputsType = 'Google_Service_YouTubeAnalytics_BatchReportOutputs';
-  protected $outputsDataType = 'array';
+  public $outputs;
   public $reportId;
-  protected $timeSpanType = 'Google_Service_YouTubeAnalytics_BatchReportTimeSpan';
-  protected $timeSpanDataType = '';
+  public $timeSpan;
   public $timeUpdated;
 
   public function setId($id)
@@ -43,8 +41,13 @@ class Google_Service_YouTubeAnalytics_BatchReport extends Google_Collection
   {
     return $this->kind;
   }
-  public function setOutputs($outputs)
+  public function setOutputs(array $outputs)
   {
+    foreach ($outputs as $o) {
+      if (!$o instanceof Google_Service_YouTubeAnalytics_BatchReportOutputs) {
+        throw new InvalidArgumentException('First argument to setOutputs must be an array of Google_Service_YouTubeAnalytics_BatchReportOutputs');
+      }
+    }
     $this->outputs = $outputs;
   }
   public function getOutputs()

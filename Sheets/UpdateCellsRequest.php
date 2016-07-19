@@ -19,12 +19,9 @@ class Google_Service_Sheets_UpdateCellsRequest extends Google_Collection
 {
   protected $collection_key = 'rows';
   public $fields;
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
-  protected $rowsType = 'Google_Service_Sheets_RowData';
-  protected $rowsDataType = 'array';
-  protected $startType = 'Google_Service_Sheets_GridCoordinate';
-  protected $startDataType = '';
+  public $range;
+  public $rows;
+  public $start;
 
   public function setFields($fields)
   {
@@ -42,8 +39,13 @@ class Google_Service_Sheets_UpdateCellsRequest extends Google_Collection
   {
     return $this->range;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Sheets_RowData) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Sheets_RowData');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()

@@ -20,8 +20,7 @@ class Google_Service_YouTube_FanFundingEvent extends Google_Model
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_FanFundingEventSnippet';
-  protected $snippetDataType = '';
+  public $snippet;
 
   public function setEtag($etag)
   {

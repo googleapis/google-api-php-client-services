@@ -58,7 +58,7 @@ class Google_Service_Calendar_EventGadget extends Google_Model
   {
     return $this->link;
   }
-  public function setPreferences($preferences)
+  public function setPreferences(array $preferences)
   {
     $this->preferences = $preferences;
   }

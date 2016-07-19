@@ -20,8 +20,7 @@ class Google_Service_YouTube_VideoAbuseReportReasonListResponse extends Google_C
   protected $collection_key = 'items';
   public $etag;
   public $eventId;
-  protected $itemsType = 'Google_Service_YouTube_VideoAbuseReportReason';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $visitorId;
 
@@ -41,8 +40,13 @@ class Google_Service_YouTube_VideoAbuseReportReasonListResponse extends Google_C
   {
     return $this->eventId;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_YouTube_VideoAbuseReportReason) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_YouTube_VideoAbuseReportReason');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

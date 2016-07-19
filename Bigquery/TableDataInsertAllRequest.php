@@ -20,8 +20,7 @@ class Google_Service_Bigquery_TableDataInsertAllRequest extends Google_Collectio
   protected $collection_key = 'rows';
   public $ignoreUnknownValues;
   public $kind;
-  protected $rowsType = 'Google_Service_Bigquery_TableDataInsertAllRequestRows';
-  protected $rowsDataType = 'array';
+  public $rows;
   public $skipInvalidRows;
   public $templateSuffix;
 
@@ -41,8 +40,13 @@ class Google_Service_Bigquery_TableDataInsertAllRequest extends Google_Collectio
   {
     return $this->kind;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Bigquery_TableDataInsertAllRequestRows) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Bigquery_TableDataInsertAllRequestRows');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()

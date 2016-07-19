@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_ConversionsBatchInsertResponse extends Google_
   protected $collection_key = 'status';
   public $hasFailures;
   public $kind;
-  protected $statusType = 'Google_Service_Dfareporting_ConversionStatus';
-  protected $statusDataType = 'array';
+  public $status;
 
   public function setHasFailures($hasFailures)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_ConversionsBatchInsertResponse extends Google_
   {
     return $this->kind;
   }
-  public function setStatus($status)
+  public function setStatus(array $status)
   {
+    foreach ($status as $s) {
+      if (!$s instanceof Google_Service_Dfareporting_ConversionStatus) {
+        throw new InvalidArgumentException('First argument to setStatus must be an array of Google_Service_Dfareporting_ConversionStatus');
+      }
+    }
     $this->status = $status;
   }
   public function getStatus()

@@ -19,22 +19,17 @@ class Google_Service_Classroom_CourseWork extends Google_Collection
 {
   protected $collection_key = 'materials';
   public $alternateLink;
-  protected $assignmentType = 'Google_Service_Classroom_Assignment';
-  protected $assignmentDataType = '';
+  public $assignment;
   public $associatedWithDeveloper;
   public $courseId;
   public $creationTime;
   public $description;
-  protected $dueDateType = 'Google_Service_Classroom_Date';
-  protected $dueDateDataType = '';
-  protected $dueTimeType = 'Google_Service_Classroom_TimeOfDay';
-  protected $dueTimeDataType = '';
+  public $dueDate;
+  public $dueTime;
   public $id;
-  protected $materialsType = 'Google_Service_Classroom_Material';
-  protected $materialsDataType = 'array';
+  public $materials;
   public $maxPoints;
-  protected $multipleChoiceQuestionType = 'Google_Service_Classroom_MultipleChoiceQuestion';
-  protected $multipleChoiceQuestionDataType = '';
+  public $multipleChoiceQuestion;
   public $state;
   public $submissionModificationMode;
   public $title;
@@ -113,8 +108,13 @@ class Google_Service_Classroom_CourseWork extends Google_Collection
   {
     return $this->id;
   }
-  public function setMaterials($materials)
+  public function setMaterials(array $materials)
   {
+    foreach ($materials as $m) {
+      if (!$m instanceof Google_Service_Classroom_Material) {
+        throw new InvalidArgumentException('First argument to setMaterials must be an array of Google_Service_Classroom_Material');
+      }
+    }
     $this->materials = $materials;
   }
   public function getMaterials()

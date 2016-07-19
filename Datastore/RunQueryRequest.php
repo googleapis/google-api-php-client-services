@@ -17,14 +17,10 @@
 
 class Google_Service_Datastore_RunQueryRequest extends Google_Model
 {
-  protected $gqlQueryType = 'Google_Service_Datastore_GqlQuery';
-  protected $gqlQueryDataType = '';
-  protected $partitionIdType = 'Google_Service_Datastore_PartitionId';
-  protected $partitionIdDataType = '';
-  protected $queryType = 'Google_Service_Datastore_Query';
-  protected $queryDataType = '';
-  protected $readOptionsType = 'Google_Service_Datastore_ReadOptions';
-  protected $readOptionsDataType = '';
+  public $gqlQuery;
+  public $partitionId;
+  public $query;
+  public $readOptions;
 
   public function setGqlQuery(Google_Service_Datastore_GqlQuery $gqlQuery)
   {

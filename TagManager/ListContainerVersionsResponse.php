@@ -18,21 +18,29 @@
 class Google_Service_TagManager_ListContainerVersionsResponse extends Google_Collection
 {
   protected $collection_key = 'containerVersionHeader';
-  protected $containerVersionType = 'Google_Service_TagManager_ContainerVersion';
-  protected $containerVersionDataType = 'array';
-  protected $containerVersionHeaderType = 'Google_Service_TagManager_ContainerVersionHeader';
-  protected $containerVersionHeaderDataType = 'array';
+  public $containerVersion;
+  public $containerVersionHeader;
 
-  public function setContainerVersion($containerVersion)
+  public function setContainerVersion(array $containerVersion)
   {
+    foreach ($containerVersion as $c) {
+      if (!$c instanceof Google_Service_TagManager_ContainerVersion) {
+        throw new InvalidArgumentException('First argument to setContainerVersion must be an array of Google_Service_TagManager_ContainerVersion');
+      }
+    }
     $this->containerVersion = $containerVersion;
   }
   public function getContainerVersion()
   {
     return $this->containerVersion;
   }
-  public function setContainerVersionHeader($containerVersionHeader)
+  public function setContainerVersionHeader(array $containerVersionHeader)
   {
+    foreach ($containerVersionHeader as $c) {
+      if (!$c instanceof Google_Service_TagManager_ContainerVersionHeader) {
+        throw new InvalidArgumentException('First argument to setContainerVersionHeader must be an array of Google_Service_TagManager_ContainerVersionHeader');
+      }
+    }
     $this->containerVersionHeader = $containerVersionHeader;
   }
   public function getContainerVersionHeader()

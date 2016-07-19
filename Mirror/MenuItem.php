@@ -26,8 +26,7 @@ class Google_Service_Mirror_MenuItem extends Google_Collection
   public $id;
   public $payload;
   public $removeWhenSelected;
-  protected $valuesType = 'Google_Service_Mirror_MenuValue';
-  protected $valuesDataType = 'array';
+  public $values;
 
   public function setAction($action)
   {
@@ -69,8 +68,13 @@ class Google_Service_Mirror_MenuItem extends Google_Collection
   {
     return $this->removeWhenSelected;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
+    foreach ($values as $v) {
+      if (!$v instanceof Google_Service_Mirror_MenuValue) {
+        throw new InvalidArgumentException('First argument to setValues must be an array of Google_Service_Mirror_MenuValue');
+      }
+    }
     $this->values = $values;
   }
   public function getValues()

@@ -19,26 +19,19 @@ class Google_Service_TagManager_ContainerVersion extends Google_Collection
 {
   protected $collection_key = 'variable';
   public $accountId;
-  protected $containerType = 'Google_Service_TagManager_Container';
-  protected $containerDataType = '';
+  public $container;
   public $containerId;
   public $containerVersionId;
   public $deleted;
   public $fingerprint;
-  protected $folderType = 'Google_Service_TagManager_Folder';
-  protected $folderDataType = 'array';
-  protected $macroType = 'Google_Service_TagManager_Macro';
-  protected $macroDataType = 'array';
+  public $folder;
+  public $macro;
   public $name;
   public $notes;
-  protected $ruleType = 'Google_Service_TagManager_Rule';
-  protected $ruleDataType = 'array';
-  protected $tagType = 'Google_Service_TagManager_Tag';
-  protected $tagDataType = 'array';
-  protected $triggerType = 'Google_Service_TagManager_Trigger';
-  protected $triggerDataType = 'array';
-  protected $variableType = 'Google_Service_TagManager_Variable';
-  protected $variableDataType = 'array';
+  public $rule;
+  public $tag;
+  public $trigger;
+  public $variable;
 
   public function setAccountId($accountId)
   {
@@ -88,16 +81,26 @@ class Google_Service_TagManager_ContainerVersion extends Google_Collection
   {
     return $this->fingerprint;
   }
-  public function setFolder($folder)
+  public function setFolder(array $folder)
   {
+    foreach ($folder as $f) {
+      if (!$f instanceof Google_Service_TagManager_Folder) {
+        throw new InvalidArgumentException('First argument to setFolder must be an array of Google_Service_TagManager_Folder');
+      }
+    }
     $this->folder = $folder;
   }
   public function getFolder()
   {
     return $this->folder;
   }
-  public function setMacro($macro)
+  public function setMacro(array $macro)
   {
+    foreach ($macro as $m) {
+      if (!$m instanceof Google_Service_TagManager_Macro) {
+        throw new InvalidArgumentException('First argument to setMacro must be an array of Google_Service_TagManager_Macro');
+      }
+    }
     $this->macro = $macro;
   }
   public function getMacro()
@@ -120,32 +123,52 @@ class Google_Service_TagManager_ContainerVersion extends Google_Collection
   {
     return $this->notes;
   }
-  public function setRule($rule)
+  public function setRule(array $rule)
   {
+    foreach ($rule as $r) {
+      if (!$r instanceof Google_Service_TagManager_Rule) {
+        throw new InvalidArgumentException('First argument to setRule must be an array of Google_Service_TagManager_Rule');
+      }
+    }
     $this->rule = $rule;
   }
   public function getRule()
   {
     return $this->rule;
   }
-  public function setTag($tag)
+  public function setTag(array $tag)
   {
+    foreach ($tag as $t) {
+      if (!$t instanceof Google_Service_TagManager_Tag) {
+        throw new InvalidArgumentException('First argument to setTag must be an array of Google_Service_TagManager_Tag');
+      }
+    }
     $this->tag = $tag;
   }
   public function getTag()
   {
     return $this->tag;
   }
-  public function setTrigger($trigger)
+  public function setTrigger(array $trigger)
   {
+    foreach ($trigger as $t) {
+      if (!$t instanceof Google_Service_TagManager_Trigger) {
+        throw new InvalidArgumentException('First argument to setTrigger must be an array of Google_Service_TagManager_Trigger');
+      }
+    }
     $this->trigger = $trigger;
   }
   public function getTrigger()
   {
     return $this->trigger;
   }
-  public function setVariable($variable)
+  public function setVariable(array $variable)
   {
+    foreach ($variable as $v) {
+      if (!$v instanceof Google_Service_TagManager_Variable) {
+        throw new InvalidArgumentException('First argument to setVariable must be an array of Google_Service_TagManager_Variable');
+      }
+    }
     $this->variable = $variable;
   }
   public function getVariable()

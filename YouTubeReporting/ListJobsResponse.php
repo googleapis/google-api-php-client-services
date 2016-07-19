@@ -18,12 +18,16 @@
 class Google_Service_YouTubeReporting_ListJobsResponse extends Google_Collection
 {
   protected $collection_key = 'jobs';
-  protected $jobsType = 'Google_Service_YouTubeReporting_Job';
-  protected $jobsDataType = 'array';
+  public $jobs;
   public $nextPageToken;
 
-  public function setJobs($jobs)
+  public function setJobs(array $jobs)
   {
+    foreach ($jobs as $j) {
+      if (!$j instanceof Google_Service_YouTubeReporting_Job) {
+        throw new InvalidArgumentException('First argument to setJobs must be an array of Google_Service_YouTubeReporting_Job');
+      }
+    }
     $this->jobs = $jobs;
   }
   public function getJobs()

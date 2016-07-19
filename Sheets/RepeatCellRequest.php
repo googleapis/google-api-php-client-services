@@ -17,11 +17,9 @@
 
 class Google_Service_Sheets_RepeatCellRequest extends Google_Model
 {
-  protected $cellType = 'Google_Service_Sheets_CellData';
-  protected $cellDataType = '';
+  public $cell;
   public $fields;
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
+  public $range;
 
   public function setCell(Google_Service_Sheets_CellData $cell)
   {

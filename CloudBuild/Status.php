@@ -30,7 +30,7 @@ class Google_Service_CloudBuild_Status extends Google_Collection
   {
     return $this->code;
   }
-  public function setDetails($details)
+  public function setDetails(array $details)
   {
     $this->details = $details;
   }

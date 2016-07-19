@@ -18,10 +18,8 @@
 class Google_Service_Appsactivity_Activity extends Google_Collection
 {
   protected $collection_key = 'singleEvents';
-  protected $combinedEventType = 'Google_Service_Appsactivity_Event';
-  protected $combinedEventDataType = '';
-  protected $singleEventsType = 'Google_Service_Appsactivity_Event';
-  protected $singleEventsDataType = 'array';
+  public $combinedEvent;
+  public $singleEvents;
 
   public function setCombinedEvent(Google_Service_Appsactivity_Event $combinedEvent)
   {
@@ -31,8 +29,13 @@ class Google_Service_Appsactivity_Activity extends Google_Collection
   {
     return $this->combinedEvent;
   }
-  public function setSingleEvents($singleEvents)
+  public function setSingleEvents(array $singleEvents)
   {
+    foreach ($singleEvents as $s) {
+      if (!$s instanceof Google_Service_Appsactivity_Event) {
+        throw new InvalidArgumentException('First argument to setSingleEvents must be an array of Google_Service_Appsactivity_Event');
+      }
+    }
     $this->singleEvents = $singleEvents;
   }
   public function getSingleEvents()

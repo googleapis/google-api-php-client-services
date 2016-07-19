@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_SitesListResponse extends Google_Collection
   protected $collection_key = 'sites';
   public $kind;
   public $nextPageToken;
-  protected $sitesType = 'Google_Service_Dfareporting_Site';
-  protected $sitesDataType = 'array';
+  public $sites;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_SitesListResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setSites($sites)
+  public function setSites(array $sites)
   {
+    foreach ($sites as $s) {
+      if (!$s instanceof Google_Service_Dfareporting_Site) {
+        throw new InvalidArgumentException('First argument to setSites must be an array of Google_Service_Dfareporting_Site');
+      }
+    }
     $this->sites = $sites;
   }
   public function getSites()

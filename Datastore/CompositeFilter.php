@@ -18,12 +18,16 @@
 class Google_Service_Datastore_CompositeFilter extends Google_Collection
 {
   protected $collection_key = 'filters';
-  protected $filtersType = 'Google_Service_Datastore_Filter';
-  protected $filtersDataType = 'array';
+  public $filters;
   public $op;
 
-  public function setFilters($filters)
+  public function setFilters(array $filters)
   {
+    foreach ($filters as $f) {
+      if (!$f instanceof Google_Service_Datastore_Filter) {
+        throw new InvalidArgumentException('First argument to setFilters must be an array of Google_Service_Datastore_Filter');
+      }
+    }
     $this->filters = $filters;
   }
   public function getFilters()

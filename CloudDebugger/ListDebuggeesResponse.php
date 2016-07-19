@@ -18,11 +18,15 @@
 class Google_Service_CloudDebugger_ListDebuggeesResponse extends Google_Collection
 {
   protected $collection_key = 'debuggees';
-  protected $debuggeesType = 'Google_Service_CloudDebugger_Debuggee';
-  protected $debuggeesDataType = 'array';
+  public $debuggees;
 
-  public function setDebuggees($debuggees)
+  public function setDebuggees(array $debuggees)
   {
+    foreach ($debuggees as $d) {
+      if (!$d instanceof Google_Service_CloudDebugger_Debuggee) {
+        throw new InvalidArgumentException('First argument to setDebuggees must be an array of Google_Service_CloudDebugger_Debuggee');
+      }
+    }
     $this->debuggees = $debuggees;
   }
   public function getDebuggees()

@@ -29,7 +29,7 @@ class Google_Service_Compute_Tags extends Google_Collection
   {
     return $this->fingerprint;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
     $this->items = $items;
   }

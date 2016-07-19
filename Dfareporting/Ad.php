@@ -21,58 +21,39 @@ class Google_Service_Dfareporting_Ad extends Google_Collection
   public $accountId;
   public $active;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $archived;
   public $audienceSegmentId;
   public $campaignId;
-  protected $campaignIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $campaignIdDimensionValueDataType = '';
-  protected $clickThroughUrlType = 'Google_Service_Dfareporting_ClickThroughUrl';
-  protected $clickThroughUrlDataType = '';
-  protected $clickThroughUrlSuffixPropertiesType = 'Google_Service_Dfareporting_ClickThroughUrlSuffixProperties';
-  protected $clickThroughUrlSuffixPropertiesDataType = '';
+  public $campaignIdDimensionValue;
+  public $clickThroughUrl;
+  public $clickThroughUrlSuffixProperties;
   public $comments;
   public $compatibility;
-  protected $createInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $createInfoDataType = '';
-  protected $creativeGroupAssignmentsType = 'Google_Service_Dfareporting_CreativeGroupAssignment';
-  protected $creativeGroupAssignmentsDataType = 'array';
-  protected $creativeRotationType = 'Google_Service_Dfareporting_CreativeRotation';
-  protected $creativeRotationDataType = '';
-  protected $dayPartTargetingType = 'Google_Service_Dfareporting_DayPartTargeting';
-  protected $dayPartTargetingDataType = '';
-  protected $defaultClickThroughEventTagPropertiesType = 'Google_Service_Dfareporting_DefaultClickThroughEventTagProperties';
-  protected $defaultClickThroughEventTagPropertiesDataType = '';
-  protected $deliveryScheduleType = 'Google_Service_Dfareporting_DeliverySchedule';
-  protected $deliveryScheduleDataType = '';
+  public $createInfo;
+  public $creativeGroupAssignments;
+  public $creativeRotation;
+  public $dayPartTargeting;
+  public $defaultClickThroughEventTagProperties;
+  public $deliverySchedule;
   public $dynamicClickTracker;
   public $endTime;
-  protected $eventTagOverridesType = 'Google_Service_Dfareporting_EventTagOverride';
-  protected $eventTagOverridesDataType = 'array';
-  protected $geoTargetingType = 'Google_Service_Dfareporting_GeoTargeting';
-  protected $geoTargetingDataType = '';
+  public $eventTagOverrides;
+  public $geoTargeting;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
-  protected $keyValueTargetingExpressionType = 'Google_Service_Dfareporting_KeyValueTargetingExpression';
-  protected $keyValueTargetingExpressionDataType = '';
+  public $idDimensionValue;
+  public $keyValueTargetingExpression;
   public $kind;
-  protected $lastModifiedInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $lastModifiedInfoDataType = '';
+  public $lastModifiedInfo;
   public $name;
-  protected $placementAssignmentsType = 'Google_Service_Dfareporting_PlacementAssignment';
-  protected $placementAssignmentsDataType = 'array';
-  protected $remarketingListExpressionType = 'Google_Service_Dfareporting_ListTargetingExpression';
-  protected $remarketingListExpressionDataType = '';
-  protected $sizeType = 'Google_Service_Dfareporting_Size';
-  protected $sizeDataType = '';
+  public $placementAssignments;
+  public $remarketingListExpression;
+  public $size;
   public $sslCompliant;
   public $sslRequired;
   public $startTime;
   public $subaccountId;
-  protected $technologyTargetingType = 'Google_Service_Dfareporting_TechnologyTargeting';
-  protected $technologyTargetingDataType = '';
+  public $technologyTargeting;
   public $type;
 
   public function setAccountId($accountId)
@@ -179,8 +160,13 @@ class Google_Service_Dfareporting_Ad extends Google_Collection
   {
     return $this->createInfo;
   }
-  public function setCreativeGroupAssignments($creativeGroupAssignments)
+  public function setCreativeGroupAssignments(array $creativeGroupAssignments)
   {
+    foreach ($creativeGroupAssignments as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeGroupAssignment) {
+        throw new InvalidArgumentException('First argument to setCreativeGroupAssignments must be an array of Google_Service_Dfareporting_CreativeGroupAssignment');
+      }
+    }
     $this->creativeGroupAssignments = $creativeGroupAssignments;
   }
   public function getCreativeGroupAssignments()
@@ -235,8 +221,13 @@ class Google_Service_Dfareporting_Ad extends Google_Collection
   {
     return $this->endTime;
   }
-  public function setEventTagOverrides($eventTagOverrides)
+  public function setEventTagOverrides(array $eventTagOverrides)
   {
+    foreach ($eventTagOverrides as $e) {
+      if (!$e instanceof Google_Service_Dfareporting_EventTagOverride) {
+        throw new InvalidArgumentException('First argument to setEventTagOverrides must be an array of Google_Service_Dfareporting_EventTagOverride');
+      }
+    }
     $this->eventTagOverrides = $eventTagOverrides;
   }
   public function getEventTagOverrides()
@@ -299,8 +290,13 @@ class Google_Service_Dfareporting_Ad extends Google_Collection
   {
     return $this->name;
   }
-  public function setPlacementAssignments($placementAssignments)
+  public function setPlacementAssignments(array $placementAssignments)
   {
+    foreach ($placementAssignments as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_PlacementAssignment) {
+        throw new InvalidArgumentException('First argument to setPlacementAssignments must be an array of Google_Service_Dfareporting_PlacementAssignment');
+      }
+    }
     $this->placementAssignments = $placementAssignments;
   }
   public function getPlacementAssignments()

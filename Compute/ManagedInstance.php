@@ -21,8 +21,7 @@ class Google_Service_Compute_ManagedInstance extends Google_Model
   public $id;
   public $instance;
   public $instanceStatus;
-  protected $lastAttemptType = 'Google_Service_Compute_ManagedInstanceLastAttempt';
-  protected $lastAttemptDataType = '';
+  public $lastAttempt;
 
   public function setCurrentAction($currentAction)
   {

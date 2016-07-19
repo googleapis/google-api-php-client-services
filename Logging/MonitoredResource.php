@@ -20,7 +20,7 @@ class Google_Service_Logging_MonitoredResource extends Google_Model
   public $labels;
   public $type;
 
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

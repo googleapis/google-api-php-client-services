@@ -20,7 +20,7 @@ class Google_Service_AnalyticsReporting_PivotValueRegion extends Google_Collecti
   protected $collection_key = 'values';
   public $values;
 
-  public function setValues($values)
+  public function setValues(array $values)
   {
     $this->values = $values;
   }

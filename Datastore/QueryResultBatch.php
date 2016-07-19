@@ -20,8 +20,7 @@ class Google_Service_Datastore_QueryResultBatch extends Google_Collection
   protected $collection_key = 'entityResults';
   public $endCursor;
   public $entityResultType;
-  protected $entityResultsType = 'Google_Service_Datastore_EntityResult';
-  protected $entityResultsDataType = 'array';
+  public $entityResults;
   public $moreResults;
   public $skippedCursor;
   public $skippedResults;
@@ -42,8 +41,13 @@ class Google_Service_Datastore_QueryResultBatch extends Google_Collection
   {
     return $this->entityResultType;
   }
-  public function setEntityResults($entityResults)
+  public function setEntityResults(array $entityResults)
   {
+    foreach ($entityResults as $e) {
+      if (!$e instanceof Google_Service_Datastore_EntityResult) {
+        throw new InvalidArgumentException('First argument to setEntityResults must be an array of Google_Service_Datastore_EntityResult');
+      }
+    }
     $this->entityResults = $entityResults;
   }
   public function getEntityResults()

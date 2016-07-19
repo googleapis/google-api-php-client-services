@@ -18,12 +18,16 @@
 class Google_Service_AdSense_Metadata extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_AdSense_ReportingMetadataEntry';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_AdSense_ReportingMetadataEntry) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_AdSense_ReportingMetadataEntry');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

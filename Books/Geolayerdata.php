@@ -17,10 +17,8 @@
 
 class Google_Service_Books_Geolayerdata extends Google_Model
 {
-  protected $commonType = 'Google_Service_Books_GeolayerdataCommon';
-  protected $commonDataType = '';
-  protected $geoType = 'Google_Service_Books_GeolayerdataGeo';
-  protected $geoDataType = '';
+  public $common;
+  public $geo;
   public $kind;
 
   public function setCommon(Google_Service_Books_GeolayerdataCommon $common)

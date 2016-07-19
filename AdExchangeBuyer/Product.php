@@ -19,34 +19,27 @@ class Google_Service_AdExchangeBuyer_Product extends Google_Collection
 {
   protected $collection_key = 'sharedTargetings';
   public $creationTimeMs;
-  protected $creatorContactsType = 'Google_Service_AdExchangeBuyer_ContactInformation';
-  protected $creatorContactsDataType = 'array';
-  protected $deliveryControlType = 'Google_Service_AdExchangeBuyer_DeliveryControl';
-  protected $deliveryControlDataType = '';
+  public $creatorContacts;
+  public $deliveryControl;
   public $flightEndTimeMs;
   public $flightStartTimeMs;
   public $hasCreatorSignedOff;
   public $inventorySource;
   public $kind;
-  protected $labelsType = 'Google_Service_AdExchangeBuyer_MarketplaceLabel';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $lastUpdateTimeMs;
   public $legacyOfferId;
   public $name;
   public $privateAuctionId;
   public $productId;
   public $publisherProfileId;
-  protected $publisherProvidedForecastType = 'Google_Service_AdExchangeBuyer_PublisherProvidedForecast';
-  protected $publisherProvidedForecastDataType = '';
+  public $publisherProvidedForecast;
   public $revisionNumber;
-  protected $sellerType = 'Google_Service_AdExchangeBuyer_Seller';
-  protected $sellerDataType = '';
-  protected $sharedTargetingsType = 'Google_Service_AdExchangeBuyer_SharedTargeting';
-  protected $sharedTargetingsDataType = 'array';
+  public $seller;
+  public $sharedTargetings;
   public $state;
   public $syndicationProduct;
-  protected $termsType = 'Google_Service_AdExchangeBuyer_DealTerms';
-  protected $termsDataType = '';
+  public $terms;
   public $webPropertyCode;
 
   public function setCreationTimeMs($creationTimeMs)
@@ -57,8 +50,13 @@ class Google_Service_AdExchangeBuyer_Product extends Google_Collection
   {
     return $this->creationTimeMs;
   }
-  public function setCreatorContacts($creatorContacts)
+  public function setCreatorContacts(array $creatorContacts)
   {
+    foreach ($creatorContacts as $c) {
+      if (!$c instanceof Google_Service_AdExchangeBuyer_ContactInformation) {
+        throw new InvalidArgumentException('First argument to setCreatorContacts must be an array of Google_Service_AdExchangeBuyer_ContactInformation');
+      }
+    }
     $this->creatorContacts = $creatorContacts;
   }
   public function getCreatorContacts()
@@ -113,8 +111,13 @@ class Google_Service_AdExchangeBuyer_Product extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_AdExchangeBuyer_MarketplaceLabel) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_AdExchangeBuyer_MarketplaceLabel');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()
@@ -193,8 +196,13 @@ class Google_Service_AdExchangeBuyer_Product extends Google_Collection
   {
     return $this->seller;
   }
-  public function setSharedTargetings($sharedTargetings)
+  public function setSharedTargetings(array $sharedTargetings)
   {
+    foreach ($sharedTargetings as $s) {
+      if (!$s instanceof Google_Service_AdExchangeBuyer_SharedTargeting) {
+        throw new InvalidArgumentException('First argument to setSharedTargetings must be an array of Google_Service_AdExchangeBuyer_SharedTargeting');
+      }
+    }
     $this->sharedTargetings = $sharedTargetings;
   }
   public function getSharedTargetings()

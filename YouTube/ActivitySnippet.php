@@ -22,8 +22,7 @@ class Google_Service_YouTube_ActivitySnippet extends Google_Model
   public $description;
   public $groupId;
   public $publishedAt;
-  protected $thumbnailsType = 'Google_Service_YouTube_ThumbnailDetails';
-  protected $thumbnailsDataType = '';
+  public $thumbnails;
   public $title;
   public $type;
 

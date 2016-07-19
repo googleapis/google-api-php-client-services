@@ -21,19 +21,14 @@ class Google_Service_Appsactivity_Event extends Google_Collection
   public $additionalEventTypes;
   public $eventTimeMillis;
   public $fromUserDeletion;
-  protected $moveType = 'Google_Service_Appsactivity_Move';
-  protected $moveDataType = '';
-  protected $permissionChangesType = 'Google_Service_Appsactivity_PermissionChange';
-  protected $permissionChangesDataType = 'array';
+  public $move;
+  public $permissionChanges;
   public $primaryEventType;
-  protected $renameType = 'Google_Service_Appsactivity_Rename';
-  protected $renameDataType = '';
-  protected $targetType = 'Google_Service_Appsactivity_Target';
-  protected $targetDataType = '';
-  protected $userType = 'Google_Service_Appsactivity_User';
-  protected $userDataType = '';
+  public $rename;
+  public $target;
+  public $user;
 
-  public function setAdditionalEventTypes($additionalEventTypes)
+  public function setAdditionalEventTypes(array $additionalEventTypes)
   {
     $this->additionalEventTypes = $additionalEventTypes;
   }
@@ -65,8 +60,13 @@ class Google_Service_Appsactivity_Event extends Google_Collection
   {
     return $this->move;
   }
-  public function setPermissionChanges($permissionChanges)
+  public function setPermissionChanges(array $permissionChanges)
   {
+    foreach ($permissionChanges as $p) {
+      if (!$p instanceof Google_Service_Appsactivity_PermissionChange) {
+        throw new InvalidArgumentException('First argument to setPermissionChanges must be an array of Google_Service_Appsactivity_PermissionChange');
+      }
+    }
     $this->permissionChanges = $permissionChanges;
   }
   public function getPermissionChanges()

@@ -18,28 +18,21 @@
 class Google_Service_Dfareporting_Report extends Google_Model
 {
   public $accountId;
-  protected $criteriaType = 'Google_Service_Dfareporting_ReportCriteria';
-  protected $criteriaDataType = '';
-  protected $crossDimensionReachCriteriaType = 'Google_Service_Dfareporting_ReportCrossDimensionReachCriteria';
-  protected $crossDimensionReachCriteriaDataType = '';
-  protected $deliveryType = 'Google_Service_Dfareporting_ReportDelivery';
-  protected $deliveryDataType = '';
+  public $criteria;
+  public $crossDimensionReachCriteria;
+  public $delivery;
   public $etag;
   public $fileName;
-  protected $floodlightCriteriaType = 'Google_Service_Dfareporting_ReportFloodlightCriteria';
-  protected $floodlightCriteriaDataType = '';
+  public $floodlightCriteria;
   public $format;
   public $id;
   public $kind;
   public $lastModifiedTime;
   public $name;
   public $ownerProfileId;
-  protected $pathToConversionCriteriaType = 'Google_Service_Dfareporting_ReportPathToConversionCriteria';
-  protected $pathToConversionCriteriaDataType = '';
-  protected $reachCriteriaType = 'Google_Service_Dfareporting_ReportReachCriteria';
-  protected $reachCriteriaDataType = '';
-  protected $scheduleType = 'Google_Service_Dfareporting_ReportSchedule';
-  protected $scheduleDataType = '';
+  public $pathToConversionCriteria;
+  public $reachCriteria;
+  public $schedule;
   public $subAccountId;
   public $type;
 

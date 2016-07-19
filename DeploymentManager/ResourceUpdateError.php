@@ -18,11 +18,15 @@
 class Google_Service_DeploymentManager_ResourceUpdateError extends Google_Collection
 {
   protected $collection_key = 'errors';
-  protected $errorsType = 'Google_Service_DeploymentManager_ResourceUpdateErrorErrors';
-  protected $errorsDataType = 'array';
+  public $errors;
 
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_DeploymentManager_ResourceUpdateErrorErrors) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_DeploymentManager_ResourceUpdateErrorErrors');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()

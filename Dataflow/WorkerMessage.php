@@ -19,12 +19,10 @@ class Google_Service_Dataflow_WorkerMessage extends Google_Model
 {
   public $labels;
   public $time;
-  protected $workerHealthReportType = 'Google_Service_Dataflow_WorkerHealthReport';
-  protected $workerHealthReportDataType = '';
-  protected $workerMessageCodeType = 'Google_Service_Dataflow_WorkerMessageCode';
-  protected $workerMessageCodeDataType = '';
+  public $workerHealthReport;
+  public $workerMessageCode;
 
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

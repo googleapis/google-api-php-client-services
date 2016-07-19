@@ -39,7 +39,7 @@ class Google_Service_Container_ServerConfig extends Google_Collection
   {
     return $this->defaultImageFamily;
   }
-  public function setValidImageFamilies($validImageFamilies)
+  public function setValidImageFamilies(array $validImageFamilies)
   {
     $this->validImageFamilies = $validImageFamilies;
   }
@@ -47,7 +47,7 @@ class Google_Service_Container_ServerConfig extends Google_Collection
   {
     return $this->validImageFamilies;
   }
-  public function setValidNodeVersions($validNodeVersions)
+  public function setValidNodeVersions(array $validNodeVersions)
   {
     $this->validNodeVersions = $validNodeVersions;
   }

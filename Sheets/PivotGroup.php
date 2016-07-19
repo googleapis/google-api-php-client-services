@@ -21,10 +21,8 @@ class Google_Service_Sheets_PivotGroup extends Google_Collection
   public $showTotals;
   public $sortOrder;
   public $sourceColumnOffset;
-  protected $valueBucketType = 'Google_Service_Sheets_PivotGroupSortValueBucket';
-  protected $valueBucketDataType = '';
-  protected $valueMetadataType = 'Google_Service_Sheets_PivotGroupValueMetadata';
-  protected $valueMetadataDataType = 'array';
+  public $valueBucket;
+  public $valueMetadata;
 
   public function setShowTotals($showTotals)
   {
@@ -58,8 +56,13 @@ class Google_Service_Sheets_PivotGroup extends Google_Collection
   {
     return $this->valueBucket;
   }
-  public function setValueMetadata($valueMetadata)
+  public function setValueMetadata(array $valueMetadata)
   {
+    foreach ($valueMetadata as $v) {
+      if (!$v instanceof Google_Service_Sheets_PivotGroupValueMetadata) {
+        throw new InvalidArgumentException('First argument to setValueMetadata must be an array of Google_Service_Sheets_PivotGroupValueMetadata');
+      }
+    }
     $this->valueMetadata = $valueMetadata;
   }
   public function getValueMetadata()

@@ -23,8 +23,7 @@ class Google_Service_Analytics_WebPropertySummary extends Google_Collection
   public $kind;
   public $level;
   public $name;
-  protected $profilesType = 'Google_Service_Analytics_ProfileSummary';
-  protected $profilesDataType = 'array';
+  public $profiles;
   public $starred;
   public $websiteUrl;
 
@@ -68,8 +67,13 @@ class Google_Service_Analytics_WebPropertySummary extends Google_Collection
   {
     return $this->name;
   }
-  public function setProfiles($profiles)
+  public function setProfiles(array $profiles)
   {
+    foreach ($profiles as $p) {
+      if (!$p instanceof Google_Service_Analytics_ProfileSummary) {
+        throw new InvalidArgumentException('First argument to setProfiles must be an array of Google_Service_Analytics_ProfileSummary');
+      }
+    }
     $this->profiles = $profiles;
   }
   public function getProfiles()

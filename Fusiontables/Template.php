@@ -25,7 +25,7 @@ class Google_Service_Fusiontables_Template extends Google_Collection
   public $tableId;
   public $templateId;
 
-  public function setAutomaticColumnNames($automaticColumnNames)
+  public function setAutomaticColumnNames(array $automaticColumnNames)
   {
     $this->automaticColumnNames = $automaticColumnNames;
   }

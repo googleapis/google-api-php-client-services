@@ -20,8 +20,7 @@ class Google_Service_Plus_ActivityFeed extends Google_Collection
   protected $collection_key = 'items';
   public $etag;
   public $id;
-  protected $itemsType = 'Google_Service_Plus_Activity';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $nextLink;
   public $nextPageToken;
@@ -45,8 +44,13 @@ class Google_Service_Plus_ActivityFeed extends Google_Collection
   {
     return $this->id;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Plus_Activity) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Plus_Activity');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

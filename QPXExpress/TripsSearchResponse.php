@@ -18,8 +18,7 @@
 class Google_Service_QPXExpress_TripsSearchResponse extends Google_Model
 {
   public $kind;
-  protected $tripsType = 'Google_Service_QPXExpress_TripOptionsResponse';
-  protected $tripsDataType = '';
+  public $trips;
 
   public function setKind($kind)
   {

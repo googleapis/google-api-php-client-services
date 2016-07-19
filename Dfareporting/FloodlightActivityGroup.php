@@ -19,14 +19,11 @@ class Google_Service_Dfareporting_FloodlightActivityGroup extends Google_Model
 {
   public $accountId;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $floodlightConfigurationId;
-  protected $floodlightConfigurationIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $floodlightConfigurationIdDimensionValueDataType = '';
+  public $floodlightConfigurationIdDimensionValue;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $kind;
   public $name;
   public $subaccountId;

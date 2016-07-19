@@ -40,7 +40,7 @@ class Google_Service_Dataflow_LeaseWorkItemRequest extends Google_Collection
   {
     return $this->requestedLeaseDuration;
   }
-  public function setWorkItemTypes($workItemTypes)
+  public function setWorkItemTypes(array $workItemTypes)
   {
     $this->workItemTypes = $workItemTypes;
   }
@@ -48,7 +48,7 @@ class Google_Service_Dataflow_LeaseWorkItemRequest extends Google_Collection
   {
     return $this->workItemTypes;
   }
-  public function setWorkerCapabilities($workerCapabilities)
+  public function setWorkerCapabilities(array $workerCapabilities)
   {
     $this->workerCapabilities = $workerCapabilities;
   }

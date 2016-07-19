@@ -18,12 +18,16 @@
 class Google_Service_Dataflow_ListJobMessagesResponse extends Google_Collection
 {
   protected $collection_key = 'jobMessages';
-  protected $jobMessagesType = 'Google_Service_Dataflow_JobMessage';
-  protected $jobMessagesDataType = 'array';
+  public $jobMessages;
   public $nextPageToken;
 
-  public function setJobMessages($jobMessages)
+  public function setJobMessages(array $jobMessages)
   {
+    foreach ($jobMessages as $j) {
+      if (!$j instanceof Google_Service_Dataflow_JobMessage) {
+        throw new InvalidArgumentException('First argument to setJobMessages must be an array of Google_Service_Dataflow_JobMessage');
+      }
+    }
     $this->jobMessages = $jobMessages;
   }
   public function getJobMessages()

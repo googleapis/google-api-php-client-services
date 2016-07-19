@@ -22,7 +22,7 @@ class Google_Service_Fusiontables_Sqlresponse extends Google_Collection
   public $kind;
   public $rows;
 
-  public function setColumns($columns)
+  public function setColumns(array $columns)
   {
     $this->columns = $columns;
   }
@@ -38,7 +38,7 @@ class Google_Service_Fusiontables_Sqlresponse extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
     $this->rows = $rows;
   }

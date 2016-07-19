@@ -18,8 +18,7 @@
 class Google_Service_Plus_ActivityObjectAttachmentsThumbnails extends Google_Model
 {
   public $description;
-  protected $imageType = 'Google_Service_Plus_ActivityObjectAttachmentsThumbnailsImage';
-  protected $imageDataType = '';
+  public $image;
   public $url;
 
   public function setDescription($description)

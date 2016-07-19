@@ -17,31 +17,20 @@
 
 class Google_Service_YouTube_Channel extends Google_Model
 {
-  protected $auditDetailsType = 'Google_Service_YouTube_ChannelAuditDetails';
-  protected $auditDetailsDataType = '';
-  protected $brandingSettingsType = 'Google_Service_YouTube_ChannelBrandingSettings';
-  protected $brandingSettingsDataType = '';
-  protected $contentDetailsType = 'Google_Service_YouTube_ChannelContentDetails';
-  protected $contentDetailsDataType = '';
-  protected $contentOwnerDetailsType = 'Google_Service_YouTube_ChannelContentOwnerDetails';
-  protected $contentOwnerDetailsDataType = '';
-  protected $conversionPingsType = 'Google_Service_YouTube_ChannelConversionPings';
-  protected $conversionPingsDataType = '';
+  public $auditDetails;
+  public $brandingSettings;
+  public $contentDetails;
+  public $contentOwnerDetails;
+  public $conversionPings;
   public $etag;
   public $id;
-  protected $invideoPromotionType = 'Google_Service_YouTube_InvideoPromotion';
-  protected $invideoPromotionDataType = '';
+  public $invideoPromotion;
   public $kind;
-  protected $localizationsType = 'Google_Service_YouTube_ChannelLocalization';
-  protected $localizationsDataType = 'map';
-  protected $snippetType = 'Google_Service_YouTube_ChannelSnippet';
-  protected $snippetDataType = '';
-  protected $statisticsType = 'Google_Service_YouTube_ChannelStatistics';
-  protected $statisticsDataType = '';
-  protected $statusType = 'Google_Service_YouTube_ChannelStatus';
-  protected $statusDataType = '';
-  protected $topicDetailsType = 'Google_Service_YouTube_ChannelTopicDetails';
-  protected $topicDetailsDataType = '';
+  public $localizations;
+  public $snippet;
+  public $statistics;
+  public $status;
+  public $topicDetails;
 
   public function setAuditDetails(Google_Service_YouTube_ChannelAuditDetails $auditDetails)
   {
@@ -115,7 +104,7 @@ class Google_Service_YouTube_Channel extends Google_Model
   {
     return $this->kind;
   }
-  public function setLocalizations($localizations)
+  public function setLocalizations(array $localizations)
   {
     $this->localizations = $localizations;
   }

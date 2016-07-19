@@ -18,8 +18,7 @@
 class Google_Service_Dataflow_Position extends Google_Model
 {
   public $byteOffset;
-  protected $concatPositionType = 'Google_Service_Dataflow_ConcatPosition';
-  protected $concatPositionDataType = '';
+  public $concatPosition;
   public $end;
   public $key;
   public $recordIndex;

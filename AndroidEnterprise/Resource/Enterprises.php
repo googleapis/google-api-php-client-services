@@ -140,7 +140,7 @@ class Google_Service_AndroidEnterprise_Resource_Enterprises extends Google_Servi
    * Once the service account is bound to the enterprise, it can be managed using
    * the serviceAccountKeys resource. (enterprises.getServiceAccount)
    *
-   * @param string $enterpriseId
+   * @param string $enterpriseId The ID of the enterprise.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string keyType The type of credential to return with the service
@@ -154,7 +154,9 @@ class Google_Service_AndroidEnterprise_Resource_Enterprises extends Google_Servi
     return $this->call('getServiceAccount', array($params), "Google_Service_AndroidEnterprise_ServiceAccount");
   }
   /**
-   * Returns the store layout resource. (enterprises.getStoreLayout)
+   * Returns the store layout resource for the enterprise. If store layout has not
+   * been set, or if store layout has no homepage set, returns a NOT_FOUND error.
+   * (enterprises.getStoreLayout)
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param array $optParams Optional parameters.

@@ -19,15 +19,11 @@ class Google_Service_ShoppingContent_AccountShipping extends Google_Collection
 {
   protected $collection_key = 'services';
   public $accountId;
-  protected $carrierRatesType = 'Google_Service_ShoppingContent_AccountShippingCarrierRate';
-  protected $carrierRatesDataType = 'array';
+  public $carrierRates;
   public $kind;
-  protected $locationGroupsType = 'Google_Service_ShoppingContent_AccountShippingLocationGroup';
-  protected $locationGroupsDataType = 'array';
-  protected $rateTablesType = 'Google_Service_ShoppingContent_AccountShippingRateTable';
-  protected $rateTablesDataType = 'array';
-  protected $servicesType = 'Google_Service_ShoppingContent_AccountShippingShippingService';
-  protected $servicesDataType = 'array';
+  public $locationGroups;
+  public $rateTables;
+  public $services;
 
   public function setAccountId($accountId)
   {
@@ -37,8 +33,13 @@ class Google_Service_ShoppingContent_AccountShipping extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setCarrierRates($carrierRates)
+  public function setCarrierRates(array $carrierRates)
   {
+    foreach ($carrierRates as $c) {
+      if (!$c instanceof Google_Service_ShoppingContent_AccountShippingCarrierRate) {
+        throw new InvalidArgumentException('First argument to setCarrierRates must be an array of Google_Service_ShoppingContent_AccountShippingCarrierRate');
+      }
+    }
     $this->carrierRates = $carrierRates;
   }
   public function getCarrierRates()
@@ -53,24 +54,39 @@ class Google_Service_ShoppingContent_AccountShipping extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLocationGroups($locationGroups)
+  public function setLocationGroups(array $locationGroups)
   {
+    foreach ($locationGroups as $l) {
+      if (!$l instanceof Google_Service_ShoppingContent_AccountShippingLocationGroup) {
+        throw new InvalidArgumentException('First argument to setLocationGroups must be an array of Google_Service_ShoppingContent_AccountShippingLocationGroup');
+      }
+    }
     $this->locationGroups = $locationGroups;
   }
   public function getLocationGroups()
   {
     return $this->locationGroups;
   }
-  public function setRateTables($rateTables)
+  public function setRateTables(array $rateTables)
   {
+    foreach ($rateTables as $r) {
+      if (!$r instanceof Google_Service_ShoppingContent_AccountShippingRateTable) {
+        throw new InvalidArgumentException('First argument to setRateTables must be an array of Google_Service_ShoppingContent_AccountShippingRateTable');
+      }
+    }
     $this->rateTables = $rateTables;
   }
   public function getRateTables()
   {
     return $this->rateTables;
   }
-  public function setServices($services)
+  public function setServices(array $services)
   {
+    foreach ($services as $s) {
+      if (!$s instanceof Google_Service_ShoppingContent_AccountShippingShippingService) {
+        throw new InvalidArgumentException('First argument to setServices must be an array of Google_Service_ShoppingContent_AccountShippingShippingService');
+      }
+    }
     $this->services = $services;
   }
   public function getServices()

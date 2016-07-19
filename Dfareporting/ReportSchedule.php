@@ -58,7 +58,7 @@ class Google_Service_Dfareporting_ReportSchedule extends Google_Collection
   {
     return $this->repeats;
   }
-  public function setRepeatsOnWeekDays($repeatsOnWeekDays)
+  public function setRepeatsOnWeekDays(array $repeatsOnWeekDays)
   {
     $this->repeatsOnWeekDays = $repeatsOnWeekDays;
   }

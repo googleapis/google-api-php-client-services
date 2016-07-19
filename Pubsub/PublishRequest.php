@@ -18,11 +18,15 @@
 class Google_Service_Pubsub_PublishRequest extends Google_Collection
 {
   protected $collection_key = 'messages';
-  protected $messagesType = 'Google_Service_Pubsub_PubsubMessage';
-  protected $messagesDataType = 'array';
+  public $messages;
 
-  public function setMessages($messages)
+  public function setMessages(array $messages)
   {
+    foreach ($messages as $m) {
+      if (!$m instanceof Google_Service_Pubsub_PubsubMessage) {
+        throw new InvalidArgumentException('First argument to setMessages must be an array of Google_Service_Pubsub_PubsubMessage');
+      }
+    }
     $this->messages = $messages;
   }
   public function getMessages()

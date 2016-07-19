@@ -17,17 +17,13 @@
 
 class Google_Service_YouTube_ChannelSection extends Google_Model
 {
-  protected $contentDetailsType = 'Google_Service_YouTube_ChannelSectionContentDetails';
-  protected $contentDetailsDataType = '';
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $localizationsType = 'Google_Service_YouTube_ChannelSectionLocalization';
-  protected $localizationsDataType = 'map';
-  protected $snippetType = 'Google_Service_YouTube_ChannelSectionSnippet';
-  protected $snippetDataType = '';
-  protected $targetingType = 'Google_Service_YouTube_ChannelSectionTargeting';
-  protected $targetingDataType = '';
+  public $localizations;
+  public $snippet;
+  public $targeting;
 
   public function setContentDetails(Google_Service_YouTube_ChannelSectionContentDetails $contentDetails)
   {
@@ -61,7 +57,7 @@ class Google_Service_YouTube_ChannelSection extends Google_Model
   {
     return $this->kind;
   }
-  public function setLocalizations($localizations)
+  public function setLocalizations(array $localizations)
   {
     $this->localizations = $localizations;
   }

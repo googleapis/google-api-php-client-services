@@ -25,8 +25,7 @@ class Google_Service_TagManager_Variable extends Google_Collection
   public $fingerprint;
   public $name;
   public $notes;
-  protected $parameterType = 'Google_Service_TagManager_Parameter';
-  protected $parameterDataType = 'array';
+  public $parameter;
   public $parentFolderId;
   public $scheduleEndMs;
   public $scheduleStartMs;
@@ -49,7 +48,7 @@ class Google_Service_TagManager_Variable extends Google_Collection
   {
     return $this->containerId;
   }
-  public function setDisablingTriggerId($disablingTriggerId)
+  public function setDisablingTriggerId(array $disablingTriggerId)
   {
     $this->disablingTriggerId = $disablingTriggerId;
   }
@@ -57,7 +56,7 @@ class Google_Service_TagManager_Variable extends Google_Collection
   {
     return $this->disablingTriggerId;
   }
-  public function setEnablingTriggerId($enablingTriggerId)
+  public function setEnablingTriggerId(array $enablingTriggerId)
   {
     $this->enablingTriggerId = $enablingTriggerId;
   }
@@ -89,8 +88,13 @@ class Google_Service_TagManager_Variable extends Google_Collection
   {
     return $this->notes;
   }
-  public function setParameter($parameter)
+  public function setParameter(array $parameter)
   {
+    foreach ($parameter as $p) {
+      if (!$p instanceof Google_Service_TagManager_Parameter) {
+        throw new InvalidArgumentException('First argument to setParameter must be an array of Google_Service_TagManager_Parameter');
+      }
+    }
     $this->parameter = $parameter;
   }
   public function getParameter()

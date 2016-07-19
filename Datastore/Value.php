@@ -17,19 +17,15 @@
 
 class Google_Service_Datastore_Value extends Google_Model
 {
-  protected $arrayValueType = 'Google_Service_Datastore_ArrayValue';
-  protected $arrayValueDataType = '';
+  public $arrayValue;
   public $blobValue;
   public $booleanValue;
   public $doubleValue;
-  protected $entityValueType = 'Google_Service_Datastore_Entity';
-  protected $entityValueDataType = '';
+  public $entityValue;
   public $excludeFromIndexes;
-  protected $geoPointValueType = 'Google_Service_Datastore_LatLng';
-  protected $geoPointValueDataType = '';
+  public $geoPointValue;
   public $integerValue;
-  protected $keyValueType = 'Google_Service_Datastore_Key';
-  protected $keyValueDataType = '';
+  public $keyValue;
   public $meaning;
   public $nullValue;
   public $stringValue;

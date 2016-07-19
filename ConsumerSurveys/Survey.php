@@ -18,15 +18,12 @@
 class Google_Service_ConsumerSurveys_Survey extends Google_Collection
 {
   protected $collection_key = 'questions';
-  protected $audienceType = 'Google_Service_ConsumerSurveys_SurveyAudience';
-  protected $audienceDataType = '';
-  protected $costType = 'Google_Service_ConsumerSurveys_SurveyCost';
-  protected $costDataType = '';
+  public $audience;
+  public $cost;
   public $customerData;
   public $description;
   public $owners;
-  protected $questionsType = 'Google_Service_ConsumerSurveys_SurveyQuestion';
-  protected $questionsDataType = 'array';
+  public $questions;
   public $state;
   public $surveyUrlId;
   public $title;
@@ -64,7 +61,7 @@ class Google_Service_ConsumerSurveys_Survey extends Google_Collection
   {
     return $this->description;
   }
-  public function setOwners($owners)
+  public function setOwners(array $owners)
   {
     $this->owners = $owners;
   }
@@ -72,8 +69,13 @@ class Google_Service_ConsumerSurveys_Survey extends Google_Collection
   {
     return $this->owners;
   }
-  public function setQuestions($questions)
+  public function setQuestions(array $questions)
   {
+    foreach ($questions as $q) {
+      if (!$q instanceof Google_Service_ConsumerSurveys_SurveyQuestion) {
+        throw new InvalidArgumentException('First argument to setQuestions must be an array of Google_Service_ConsumerSurveys_SurveyQuestion');
+      }
+    }
     $this->questions = $questions;
   }
   public function getQuestions()

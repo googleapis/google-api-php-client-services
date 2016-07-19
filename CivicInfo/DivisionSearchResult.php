@@ -22,7 +22,7 @@ class Google_Service_CivicInfo_DivisionSearchResult extends Google_Collection
   public $name;
   public $ocdId;
 
-  public function setAliases($aliases)
+  public function setAliases(array $aliases)
   {
     $this->aliases = $aliases;
   }

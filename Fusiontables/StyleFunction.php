@@ -18,15 +18,18 @@
 class Google_Service_Fusiontables_StyleFunction extends Google_Collection
 {
   protected $collection_key = 'buckets';
-  protected $bucketsType = 'Google_Service_Fusiontables_Bucket';
-  protected $bucketsDataType = 'array';
+  public $buckets;
   public $columnName;
-  protected $gradientType = 'Google_Service_Fusiontables_StyleFunctionGradient';
-  protected $gradientDataType = '';
+  public $gradient;
   public $kind;
 
-  public function setBuckets($buckets)
+  public function setBuckets(array $buckets)
   {
+    foreach ($buckets as $b) {
+      if (!$b instanceof Google_Service_Fusiontables_Bucket) {
+        throw new InvalidArgumentException('First argument to setBuckets must be an array of Google_Service_Fusiontables_Bucket');
+      }
+    }
     $this->buckets = $buckets;
   }
   public function getBuckets()

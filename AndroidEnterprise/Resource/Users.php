@@ -105,11 +105,7 @@ class Google_Service_AndroidEnterprise_Resource_Users extends Google_Service_Res
     return $this->call('getAvailableProductSet', array($params), "Google_Service_AndroidEnterprise_ProductSet");
   }
   /**
-   * Creates a new EMM-managed user.
-   *
-   * The required details of the user are passed in the Users resource in the body
-   * of the request. Specifically, the accountIdentifier, accountType, and
-   * displayName fields must be provided. (users.insert)
+   * Inserts a new resource into this collection. (users.insert)
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param Google_Service_AndroidEnterprise_User $postBody
@@ -123,9 +119,9 @@ class Google_Service_AndroidEnterprise_Resource_Users extends Google_Service_Res
     return $this->call('insert', array($params), "Google_Service_AndroidEnterprise_User");
   }
   /**
-   * Looks up a user by their primary email address. This is only supported for
-   * Google-managed users. Lookup of the id is not needed for EMM-managed users
-   * because the id is already returned in the result of the Users.insert call.
+   * Looks up a user by primary email address. This is only supported for Google-
+   * managed users. Lookup of the id is not needed for EMM-managed users because
+   * the id is already returned in the result of the Users.insert call.
    * (users.listUsers)
    *
    * @param string $enterpriseId The ID of the enterprise.
@@ -142,10 +138,10 @@ class Google_Service_AndroidEnterprise_Resource_Users extends Google_Service_Res
   /**
    * Updates the details of an EMM-managed user.
    *
-   * This only works with EMM-managed users. Pass the new details in Users
-   * resource in the request body. Only the displayName field can be changed.
-   * Other fields must either be unset or have the currently active value. This
-   * method supports patch semantics. (users.patch)
+   * Can be used with EMM-managed users only (not Google managed users). Pass the
+   * new details in the Users resource in the request body. Only the displayName
+   * field can be changed. Other fields must either be unset or have the currently
+   * active value. This method supports patch semantics. (users.patch)
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $userId The ID of the user.
@@ -192,10 +188,10 @@ class Google_Service_AndroidEnterprise_Resource_Users extends Google_Service_Res
   /**
    * Updates the details of an EMM-managed user.
    *
-   * This only works with EMM-managed users. Pass the new details in Users
-   * resource in the request body. Only the displayName field can be changed.
-   * Other fields must either be unset or have the currently active value.
-   * (users.update)
+   * Can be used with EMM-managed users only (not Google managed users). Pass the
+   * new details in the Users resource in the request body. Only the displayName
+   * field can be changed. Other fields must either be unset or have the currently
+   * active value. (users.update)
    *
    * @param string $enterpriseId The ID of the enterprise.
    * @param string $userId The ID of the user.

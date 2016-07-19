@@ -18,23 +18,17 @@
 class Google_Service_ShoppingContent_OrdersCustomBatchRequestEntry extends Google_Model
 {
   public $batchId;
-  protected $cancelType = 'Google_Service_ShoppingContent_OrdersCustomBatchRequestEntryCancel';
-  protected $cancelDataType = '';
-  protected $cancelLineItemType = 'Google_Service_ShoppingContent_OrdersCustomBatchRequestEntryCancelLineItem';
-  protected $cancelLineItemDataType = '';
+  public $cancel;
+  public $cancelLineItem;
   public $merchantId;
   public $merchantOrderId;
   public $method;
   public $operationId;
   public $orderId;
-  protected $refundType = 'Google_Service_ShoppingContent_OrdersCustomBatchRequestEntryRefund';
-  protected $refundDataType = '';
-  protected $returnLineItemType = 'Google_Service_ShoppingContent_OrdersCustomBatchRequestEntryReturnLineItem';
-  protected $returnLineItemDataType = '';
-  protected $shipLineItemsType = 'Google_Service_ShoppingContent_OrdersCustomBatchRequestEntryShipLineItems';
-  protected $shipLineItemsDataType = '';
-  protected $updateShipmentType = 'Google_Service_ShoppingContent_OrdersCustomBatchRequestEntryUpdateShipment';
-  protected $updateShipmentDataType = '';
+  public $refund;
+  public $returnLineItem;
+  public $shipLineItems;
+  public $updateShipment;
 
   public function setBatchId($batchId)
   {

@@ -19,8 +19,7 @@ class Google_Service_Genomics_Variant extends Google_Collection
 {
   protected $collection_key = 'names';
   public $alternateBases;
-  protected $callsType = 'Google_Service_Genomics_VariantCall';
-  protected $callsDataType = 'array';
+  public $calls;
   public $created;
   public $end;
   public $filter;
@@ -33,7 +32,7 @@ class Google_Service_Genomics_Variant extends Google_Collection
   public $start;
   public $variantSetId;
 
-  public function setAlternateBases($alternateBases)
+  public function setAlternateBases(array $alternateBases)
   {
     $this->alternateBases = $alternateBases;
   }
@@ -41,8 +40,13 @@ class Google_Service_Genomics_Variant extends Google_Collection
   {
     return $this->alternateBases;
   }
-  public function setCalls($calls)
+  public function setCalls(array $calls)
   {
+    foreach ($calls as $c) {
+      if (!$c instanceof Google_Service_Genomics_VariantCall) {
+        throw new InvalidArgumentException('First argument to setCalls must be an array of Google_Service_Genomics_VariantCall');
+      }
+    }
     $this->calls = $calls;
   }
   public function getCalls()
@@ -65,7 +69,7 @@ class Google_Service_Genomics_Variant extends Google_Collection
   {
     return $this->end;
   }
-  public function setFilter($filter)
+  public function setFilter(array $filter)
   {
     $this->filter = $filter;
   }
@@ -81,7 +85,7 @@ class Google_Service_Genomics_Variant extends Google_Collection
   {
     return $this->id;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }
@@ -89,7 +93,7 @@ class Google_Service_Genomics_Variant extends Google_Collection
   {
     return $this->info;
   }
-  public function setNames($names)
+  public function setNames(array $names)
   {
     $this->names = $names;
   }

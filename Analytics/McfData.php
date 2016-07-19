@@ -18,28 +18,29 @@
 class Google_Service_Analytics_McfData extends Google_Collection
 {
   protected $collection_key = 'rows';
-  protected $columnHeadersType = 'Google_Service_Analytics_McfDataColumnHeaders';
-  protected $columnHeadersDataType = 'array';
+  public $columnHeaders;
   public $containsSampledData;
   public $id;
   public $itemsPerPage;
   public $kind;
   public $nextLink;
   public $previousLink;
-  protected $profileInfoType = 'Google_Service_Analytics_McfDataProfileInfo';
-  protected $profileInfoDataType = '';
-  protected $queryType = 'Google_Service_Analytics_McfDataQuery';
-  protected $queryDataType = '';
-  protected $rowsType = 'Google_Service_Analytics_McfDataRows';
-  protected $rowsDataType = 'array';
+  public $profileInfo;
+  public $query;
+  public $rows;
   public $sampleSize;
   public $sampleSpace;
   public $selfLink;
   public $totalResults;
   public $totalsForAllResults;
 
-  public function setColumnHeaders($columnHeaders)
+  public function setColumnHeaders(array $columnHeaders)
   {
+    foreach ($columnHeaders as $c) {
+      if (!$c instanceof Google_Service_Analytics_McfDataColumnHeaders) {
+        throw new InvalidArgumentException('First argument to setColumnHeaders must be an array of Google_Service_Analytics_McfDataColumnHeaders');
+      }
+    }
     $this->columnHeaders = $columnHeaders;
   }
   public function getColumnHeaders()
@@ -110,8 +111,13 @@ class Google_Service_Analytics_McfData extends Google_Collection
   {
     return $this->query;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Analytics_McfDataRows) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Analytics_McfDataRows');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()
@@ -150,7 +156,7 @@ class Google_Service_Analytics_McfData extends Google_Collection
   {
     return $this->totalResults;
   }
-  public function setTotalsForAllResults($totalsForAllResults)
+  public function setTotalsForAllResults(array $totalsForAllResults)
   {
     $this->totalsForAllResults = $totalsForAllResults;
   }

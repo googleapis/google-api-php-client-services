@@ -18,8 +18,7 @@
 class Google_Service_Games_EventDefinition extends Google_Collection
 {
   protected $collection_key = 'childEvents';
-  protected $childEventsType = 'Google_Service_Games_EventChild';
-  protected $childEventsDataType = 'array';
+  public $childEvents;
   public $description;
   public $displayName;
   public $id;
@@ -28,8 +27,13 @@ class Google_Service_Games_EventDefinition extends Google_Collection
   public $kind;
   public $visibility;
 
-  public function setChildEvents($childEvents)
+  public function setChildEvents(array $childEvents)
   {
+    foreach ($childEvents as $c) {
+      if (!$c instanceof Google_Service_Games_EventChild) {
+        throw new InvalidArgumentException('First argument to setChildEvents must be an array of Google_Service_Games_EventChild');
+      }
+    }
     $this->childEvents = $childEvents;
   }
   public function getChildEvents()

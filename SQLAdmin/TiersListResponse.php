@@ -18,12 +18,16 @@
 class Google_Service_SQLAdmin_TiersListResponse extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_SQLAdmin_Tier';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_SQLAdmin_Tier) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_SQLAdmin_Tier');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

@@ -18,12 +18,10 @@
 class Google_Service_ShoppingContent_OrdersCustomBatchResponseEntry extends Google_Model
 {
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
-  protected $errorsDataType = '';
+  public $errors;
   public $executionStatus;
   public $kind;
-  protected $orderType = 'Google_Service_ShoppingContent_Order';
-  protected $orderDataType = '';
+  public $order;
 
   public function setBatchId($batchId)
   {

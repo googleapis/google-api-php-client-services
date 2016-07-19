@@ -18,22 +18,30 @@
 class Google_Service_Compute_RouterStatus extends Google_Collection
 {
   protected $collection_key = 'bgpPeerStatus';
-  protected $bestRoutesType = 'Google_Service_Compute_Route';
-  protected $bestRoutesDataType = 'array';
-  protected $bgpPeerStatusType = 'Google_Service_Compute_RouterStatusBgpPeerStatus';
-  protected $bgpPeerStatusDataType = 'array';
+  public $bestRoutes;
+  public $bgpPeerStatus;
   public $network;
 
-  public function setBestRoutes($bestRoutes)
+  public function setBestRoutes(array $bestRoutes)
   {
+    foreach ($bestRoutes as $b) {
+      if (!$b instanceof Google_Service_Compute_Route) {
+        throw new InvalidArgumentException('First argument to setBestRoutes must be an array of Google_Service_Compute_Route');
+      }
+    }
     $this->bestRoutes = $bestRoutes;
   }
   public function getBestRoutes()
   {
     return $this->bestRoutes;
   }
-  public function setBgpPeerStatus($bgpPeerStatus)
+  public function setBgpPeerStatus(array $bgpPeerStatus)
   {
+    foreach ($bgpPeerStatus as $b) {
+      if (!$b instanceof Google_Service_Compute_RouterStatusBgpPeerStatus) {
+        throw new InvalidArgumentException('First argument to setBgpPeerStatus must be an array of Google_Service_Compute_RouterStatusBgpPeerStatus');
+      }
+    }
     $this->bgpPeerStatus = $bgpPeerStatus;
   }
   public function getBgpPeerStatus()

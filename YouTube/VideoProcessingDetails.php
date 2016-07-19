@@ -21,8 +21,7 @@ class Google_Service_YouTube_VideoProcessingDetails extends Google_Model
   public $fileDetailsAvailability;
   public $processingFailureReason;
   public $processingIssuesAvailability;
-  protected $processingProgressType = 'Google_Service_YouTube_VideoProcessingDetailsProcessingProgress';
-  protected $processingProgressDataType = '';
+  public $processingProgress;
   public $processingStatus;
   public $tagSuggestionsAvailability;
   public $thumbnailsAvailability;

@@ -19,14 +19,12 @@ class Google_Service_Compute_Region extends Google_Collection
 {
   protected $collection_key = 'zones';
   public $creationTimestamp;
-  protected $deprecatedType = 'Google_Service_Compute_DeprecationStatus';
-  protected $deprecatedDataType = '';
+  public $deprecated;
   public $description;
   public $id;
   public $kind;
   public $name;
-  protected $quotasType = 'Google_Service_Compute_Quota';
-  protected $quotasDataType = 'array';
+  public $quotas;
   public $selfLink;
   public $status;
   public $zones;
@@ -79,8 +77,13 @@ class Google_Service_Compute_Region extends Google_Collection
   {
     return $this->name;
   }
-  public function setQuotas($quotas)
+  public function setQuotas(array $quotas)
   {
+    foreach ($quotas as $q) {
+      if (!$q instanceof Google_Service_Compute_Quota) {
+        throw new InvalidArgumentException('First argument to setQuotas must be an array of Google_Service_Compute_Quota');
+      }
+    }
     $this->quotas = $quotas;
   }
   public function getQuotas()
@@ -103,7 +106,7 @@ class Google_Service_Compute_Region extends Google_Collection
   {
     return $this->status;
   }
-  public function setZones($zones)
+  public function setZones(array $zones)
   {
     $this->zones = $zones;
   }

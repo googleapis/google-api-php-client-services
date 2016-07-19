@@ -18,15 +18,12 @@
 class Google_Service_Fitness_DataSource extends Google_Collection
 {
   protected $collection_key = 'dataQualityStandard';
-  protected $applicationType = 'Google_Service_Fitness_Application';
-  protected $applicationDataType = '';
+  public $application;
   public $dataQualityStandard;
   public $dataStreamId;
   public $dataStreamName;
-  protected $dataTypeType = 'Google_Service_Fitness_DataType';
-  protected $dataTypeDataType = '';
-  protected $deviceType = 'Google_Service_Fitness_Device';
-  protected $deviceDataType = '';
+  public $dataType;
+  public $device;
   public $name;
   public $type;
 
@@ -38,7 +35,7 @@ class Google_Service_Fitness_DataSource extends Google_Collection
   {
     return $this->application;
   }
-  public function setDataQualityStandard($dataQualityStandard)
+  public function setDataQualityStandard(array $dataQualityStandard)
   {
     $this->dataQualityStandard = $dataQualityStandard;
   }

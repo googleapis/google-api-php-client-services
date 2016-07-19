@@ -19,10 +19,9 @@ class Google_Service_Gmail_HistoryLabelRemoved extends Google_Collection
 {
   protected $collection_key = 'labelIds';
   public $labelIds;
-  protected $messageType = 'Google_Service_Gmail_Message';
-  protected $messageDataType = '';
+  public $message;
 
-  public function setLabelIds($labelIds)
+  public function setLabelIds(array $labelIds)
   {
     $this->labelIds = $labelIds;
   }

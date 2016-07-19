@@ -18,12 +18,9 @@
 class Google_Service_ShoppingContent_AccountShippingShippingServiceCostRule extends Google_Collection
 {
   protected $collection_key = 'children';
-  protected $calculationMethodType = 'Google_Service_ShoppingContent_AccountShippingShippingServiceCalculationMethod';
-  protected $calculationMethodDataType = '';
-  protected $childrenType = 'Google_Service_ShoppingContent_AccountShippingShippingServiceCostRule';
-  protected $childrenDataType = 'array';
-  protected $conditionType = 'Google_Service_ShoppingContent_AccountShippingCondition';
-  protected $conditionDataType = '';
+  public $calculationMethod;
+  public $children;
+  public $condition;
 
   public function setCalculationMethod(Google_Service_ShoppingContent_AccountShippingShippingServiceCalculationMethod $calculationMethod)
   {
@@ -33,8 +30,13 @@ class Google_Service_ShoppingContent_AccountShippingShippingServiceCostRule exte
   {
     return $this->calculationMethod;
   }
-  public function setChildren($children)
+  public function setChildren(array $children)
   {
+    foreach ($children as $c) {
+      if (!$c instanceof Google_Service_ShoppingContent_AccountShippingShippingServiceCostRule) {
+        throw new InvalidArgumentException('First argument to setChildren must be an array of Google_Service_ShoppingContent_AccountShippingShippingServiceCostRule');
+      }
+    }
     $this->children = $children;
   }
   public function getChildren()

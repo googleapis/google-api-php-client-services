@@ -17,11 +17,9 @@
 
 class Google_Service_ShoppingContent_AccountsCustomBatchResponseEntry extends Google_Model
 {
-  protected $accountType = 'Google_Service_ShoppingContent_Account';
-  protected $accountDataType = '';
+  public $account;
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
-  protected $errorsDataType = '';
+  public $errors;
   public $kind;
 
   public function setAccount(Google_Service_ShoppingContent_Account $account)

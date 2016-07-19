@@ -21,8 +21,7 @@ class Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse extends G
   public $kind;
   public $nextPageToken;
   public $oldest;
-  protected $timeseriesType = 'Google_Service_CloudMonitoring_TimeseriesDescriptor';
-  protected $timeseriesDataType = 'array';
+  public $timeseries;
   public $youngest;
 
   public function setKind($kind)
@@ -49,8 +48,13 @@ class Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse extends G
   {
     return $this->oldest;
   }
-  public function setTimeseries($timeseries)
+  public function setTimeseries(array $timeseries)
   {
+    foreach ($timeseries as $t) {
+      if (!$t instanceof Google_Service_CloudMonitoring_TimeseriesDescriptor) {
+        throw new InvalidArgumentException('First argument to setTimeseries must be an array of Google_Service_CloudMonitoring_TimeseriesDescriptor');
+      }
+    }
     $this->timeseries = $timeseries;
   }
   public function getTimeseries()

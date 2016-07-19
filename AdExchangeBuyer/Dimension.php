@@ -19,8 +19,7 @@ class Google_Service_AdExchangeBuyer_Dimension extends Google_Collection
 {
   protected $collection_key = 'dimensionValues';
   public $dimensionType;
-  protected $dimensionValuesType = 'Google_Service_AdExchangeBuyer_DimensionDimensionValue';
-  protected $dimensionValuesDataType = 'array';
+  public $dimensionValues;
 
   public function setDimensionType($dimensionType)
   {
@@ -30,8 +29,13 @@ class Google_Service_AdExchangeBuyer_Dimension extends Google_Collection
   {
     return $this->dimensionType;
   }
-  public function setDimensionValues($dimensionValues)
+  public function setDimensionValues(array $dimensionValues)
   {
+    foreach ($dimensionValues as $d) {
+      if (!$d instanceof Google_Service_AdExchangeBuyer_DimensionDimensionValue) {
+        throw new InvalidArgumentException('First argument to setDimensionValues must be an array of Google_Service_AdExchangeBuyer_DimensionDimensionValue');
+      }
+    }
     $this->dimensionValues = $dimensionValues;
   }
   public function getDimensionValues()

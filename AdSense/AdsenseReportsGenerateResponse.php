@@ -20,8 +20,7 @@ class Google_Service_AdSense_AdsenseReportsGenerateResponse extends Google_Colle
   protected $collection_key = 'warnings';
   public $averages;
   public $endDate;
-  protected $headersType = 'Google_Service_AdSense_AdsenseReportsGenerateResponseHeaders';
-  protected $headersDataType = 'array';
+  public $headers;
   public $kind;
   public $rows;
   public $startDate;
@@ -29,7 +28,7 @@ class Google_Service_AdSense_AdsenseReportsGenerateResponse extends Google_Colle
   public $totals;
   public $warnings;
 
-  public function setAverages($averages)
+  public function setAverages(array $averages)
   {
     $this->averages = $averages;
   }
@@ -45,8 +44,13 @@ class Google_Service_AdSense_AdsenseReportsGenerateResponse extends Google_Colle
   {
     return $this->endDate;
   }
-  public function setHeaders($headers)
+  public function setHeaders(array $headers)
   {
+    foreach ($headers as $h) {
+      if (!$h instanceof Google_Service_AdSense_AdsenseReportsGenerateResponseHeaders) {
+        throw new InvalidArgumentException('First argument to setHeaders must be an array of Google_Service_AdSense_AdsenseReportsGenerateResponseHeaders');
+      }
+    }
     $this->headers = $headers;
   }
   public function getHeaders()
@@ -61,7 +65,7 @@ class Google_Service_AdSense_AdsenseReportsGenerateResponse extends Google_Colle
   {
     return $this->kind;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
     $this->rows = $rows;
   }
@@ -85,7 +89,7 @@ class Google_Service_AdSense_AdsenseReportsGenerateResponse extends Google_Colle
   {
     return $this->totalMatchedRows;
   }
-  public function setTotals($totals)
+  public function setTotals(array $totals)
   {
     $this->totals = $totals;
   }
@@ -93,7 +97,7 @@ class Google_Service_AdSense_AdsenseReportsGenerateResponse extends Google_Colle
   {
     return $this->totals;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
     $this->warnings = $warnings;
   }

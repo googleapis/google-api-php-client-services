@@ -66,7 +66,7 @@ class Google_Service_Genomics_Reference extends Google_Collection
   {
     return $this->ncbiTaxonId;
   }
-  public function setSourceAccessions($sourceAccessions)
+  public function setSourceAccessions(array $sourceAccessions)
   {
     $this->sourceAccessions = $sourceAccessions;
   }

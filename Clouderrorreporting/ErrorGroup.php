@@ -20,8 +20,7 @@ class Google_Service_Clouderrorreporting_ErrorGroup extends Google_Collection
   protected $collection_key = 'trackingIssues';
   public $groupId;
   public $name;
-  protected $trackingIssuesType = 'Google_Service_Clouderrorreporting_TrackingIssue';
-  protected $trackingIssuesDataType = 'array';
+  public $trackingIssues;
 
   public function setGroupId($groupId)
   {
@@ -39,8 +38,13 @@ class Google_Service_Clouderrorreporting_ErrorGroup extends Google_Collection
   {
     return $this->name;
   }
-  public function setTrackingIssues($trackingIssues)
+  public function setTrackingIssues(array $trackingIssues)
   {
+    foreach ($trackingIssues as $t) {
+      if (!$t instanceof Google_Service_Clouderrorreporting_TrackingIssue) {
+        throw new InvalidArgumentException('First argument to setTrackingIssues must be an array of Google_Service_Clouderrorreporting_TrackingIssue');
+      }
+    }
     $this->trackingIssues = $trackingIssues;
   }
   public function getTrackingIssues()

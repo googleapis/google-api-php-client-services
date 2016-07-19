@@ -17,18 +17,12 @@
 
 class Google_Service_GamesConfiguration_GamesNumberAffixConfiguration extends Google_Model
 {
-  protected $fewType = 'Google_Service_GamesConfiguration_LocalizedStringBundle';
-  protected $fewDataType = '';
-  protected $manyType = 'Google_Service_GamesConfiguration_LocalizedStringBundle';
-  protected $manyDataType = '';
-  protected $oneType = 'Google_Service_GamesConfiguration_LocalizedStringBundle';
-  protected $oneDataType = '';
-  protected $otherType = 'Google_Service_GamesConfiguration_LocalizedStringBundle';
-  protected $otherDataType = '';
-  protected $twoType = 'Google_Service_GamesConfiguration_LocalizedStringBundle';
-  protected $twoDataType = '';
-  protected $zeroType = 'Google_Service_GamesConfiguration_LocalizedStringBundle';
-  protected $zeroDataType = '';
+  public $few;
+  public $many;
+  public $one;
+  public $other;
+  public $two;
+  public $zero;
 
   public function setFew(Google_Service_GamesConfiguration_LocalizedStringBundle $few)
   {

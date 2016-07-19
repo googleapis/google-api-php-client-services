@@ -31,7 +31,7 @@ class Google_Service_DoubleClickBidManager_DownloadLineItemsRequest extends Goog
   {
     return $this->fileSpec;
   }
-  public function setFilterIds($filterIds)
+  public function setFilterIds(array $filterIds)
   {
     $this->filterIds = $filterIds;
   }

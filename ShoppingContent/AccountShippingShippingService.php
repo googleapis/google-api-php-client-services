@@ -18,10 +18,8 @@
 class Google_Service_ShoppingContent_AccountShippingShippingService extends Google_Model
 {
   public $active;
-  protected $calculationMethodType = 'Google_Service_ShoppingContent_AccountShippingShippingServiceCalculationMethod';
-  protected $calculationMethodDataType = '';
-  protected $costRuleTreeType = 'Google_Service_ShoppingContent_AccountShippingShippingServiceCostRule';
-  protected $costRuleTreeDataType = '';
+  public $calculationMethod;
+  public $costRuleTree;
   public $maxDaysInTransit;
   public $minDaysInTransit;
   public $name;

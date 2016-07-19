@@ -18,11 +18,15 @@
 class Google_Service_Oauth2_Jwk extends Google_Collection
 {
   protected $collection_key = 'keys';
-  protected $keysType = 'Google_Service_Oauth2_JwkKeys';
-  protected $keysDataType = 'array';
+  public $keys;
 
-  public function setKeys($keys)
+  public function setKeys(array $keys)
   {
+    foreach ($keys as $k) {
+      if (!$k instanceof Google_Service_Oauth2_JwkKeys) {
+        throw new InvalidArgumentException('First argument to setKeys must be an array of Google_Service_Oauth2_JwkKeys');
+      }
+    }
     $this->keys = $keys;
   }
   public function getKeys()

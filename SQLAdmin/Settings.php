@@ -20,21 +20,16 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   protected $collection_key = 'databaseFlags';
   public $activationPolicy;
   public $authorizedGaeApplications;
-  protected $backupConfigurationType = 'Google_Service_SQLAdmin_BackupConfiguration';
-  protected $backupConfigurationDataType = '';
+  public $backupConfiguration;
   public $crashSafeReplicationEnabled;
   public $dataDiskSizeGb;
   public $dataDiskType;
-  protected $databaseFlagsType = 'Google_Service_SQLAdmin_DatabaseFlags';
-  protected $databaseFlagsDataType = 'array';
+  public $databaseFlags;
   public $databaseReplicationEnabled;
-  protected $ipConfigurationType = 'Google_Service_SQLAdmin_IpConfiguration';
-  protected $ipConfigurationDataType = '';
+  public $ipConfiguration;
   public $kind;
-  protected $locationPreferenceType = 'Google_Service_SQLAdmin_LocationPreference';
-  protected $locationPreferenceDataType = '';
-  protected $maintenanceWindowType = 'Google_Service_SQLAdmin_MaintenanceWindow';
-  protected $maintenanceWindowDataType = '';
+  public $locationPreference;
+  public $maintenanceWindow;
   public $pricingPlan;
   public $replicationType;
   public $settingsVersion;
@@ -49,7 +44,7 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   {
     return $this->activationPolicy;
   }
-  public function setAuthorizedGaeApplications($authorizedGaeApplications)
+  public function setAuthorizedGaeApplications(array $authorizedGaeApplications)
   {
     $this->authorizedGaeApplications = $authorizedGaeApplications;
   }
@@ -89,8 +84,13 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   {
     return $this->dataDiskType;
   }
-  public function setDatabaseFlags($databaseFlags)
+  public function setDatabaseFlags(array $databaseFlags)
   {
+    foreach ($databaseFlags as $d) {
+      if (!$d instanceof Google_Service_SQLAdmin_DatabaseFlags) {
+        throw new InvalidArgumentException('First argument to setDatabaseFlags must be an array of Google_Service_SQLAdmin_DatabaseFlags');
+      }
+    }
     $this->databaseFlags = $databaseFlags;
   }
   public function getDatabaseFlags()

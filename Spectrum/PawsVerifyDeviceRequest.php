@@ -18,13 +18,17 @@
 class Google_Service_Spectrum_PawsVerifyDeviceRequest extends Google_Collection
 {
   protected $collection_key = 'deviceDescs';
-  protected $deviceDescsType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $deviceDescsDataType = 'array';
+  public $deviceDescs;
   public $type;
   public $version;
 
-  public function setDeviceDescs($deviceDescs)
+  public function setDeviceDescs(array $deviceDescs)
   {
+    foreach ($deviceDescs as $d) {
+      if (!$d instanceof Google_Service_Spectrum_DeviceDescriptor) {
+        throw new InvalidArgumentException('First argument to setDeviceDescs must be an array of Google_Service_Spectrum_DeviceDescriptor');
+      }
+    }
     $this->deviceDescs = $deviceDescs;
   }
   public function getDeviceDescs()

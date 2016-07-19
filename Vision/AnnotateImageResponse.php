@@ -18,22 +18,14 @@
 class Google_Service_Vision_AnnotateImageResponse extends Google_Collection
 {
   protected $collection_key = 'textAnnotations';
-  protected $errorType = 'Google_Service_Vision_Status';
-  protected $errorDataType = '';
-  protected $faceAnnotationsType = 'Google_Service_Vision_FaceAnnotation';
-  protected $faceAnnotationsDataType = 'array';
-  protected $imagePropertiesAnnotationType = 'Google_Service_Vision_ImageProperties';
-  protected $imagePropertiesAnnotationDataType = '';
-  protected $labelAnnotationsType = 'Google_Service_Vision_EntityAnnotation';
-  protected $labelAnnotationsDataType = 'array';
-  protected $landmarkAnnotationsType = 'Google_Service_Vision_EntityAnnotation';
-  protected $landmarkAnnotationsDataType = 'array';
-  protected $logoAnnotationsType = 'Google_Service_Vision_EntityAnnotation';
-  protected $logoAnnotationsDataType = 'array';
-  protected $safeSearchAnnotationType = 'Google_Service_Vision_SafeSearchAnnotation';
-  protected $safeSearchAnnotationDataType = '';
-  protected $textAnnotationsType = 'Google_Service_Vision_EntityAnnotation';
-  protected $textAnnotationsDataType = 'array';
+  public $error;
+  public $faceAnnotations;
+  public $imagePropertiesAnnotation;
+  public $labelAnnotations;
+  public $landmarkAnnotations;
+  public $logoAnnotations;
+  public $safeSearchAnnotation;
+  public $textAnnotations;
 
   public function setError(Google_Service_Vision_Status $error)
   {
@@ -43,8 +35,13 @@ class Google_Service_Vision_AnnotateImageResponse extends Google_Collection
   {
     return $this->error;
   }
-  public function setFaceAnnotations($faceAnnotations)
+  public function setFaceAnnotations(array $faceAnnotations)
   {
+    foreach ($faceAnnotations as $f) {
+      if (!$f instanceof Google_Service_Vision_FaceAnnotation) {
+        throw new InvalidArgumentException('First argument to setFaceAnnotations must be an array of Google_Service_Vision_FaceAnnotation');
+      }
+    }
     $this->faceAnnotations = $faceAnnotations;
   }
   public function getFaceAnnotations()
@@ -59,24 +56,39 @@ class Google_Service_Vision_AnnotateImageResponse extends Google_Collection
   {
     return $this->imagePropertiesAnnotation;
   }
-  public function setLabelAnnotations($labelAnnotations)
+  public function setLabelAnnotations(array $labelAnnotations)
   {
+    foreach ($labelAnnotations as $l) {
+      if (!$l instanceof Google_Service_Vision_EntityAnnotation) {
+        throw new InvalidArgumentException('First argument to setLabelAnnotations must be an array of Google_Service_Vision_EntityAnnotation');
+      }
+    }
     $this->labelAnnotations = $labelAnnotations;
   }
   public function getLabelAnnotations()
   {
     return $this->labelAnnotations;
   }
-  public function setLandmarkAnnotations($landmarkAnnotations)
+  public function setLandmarkAnnotations(array $landmarkAnnotations)
   {
+    foreach ($landmarkAnnotations as $l) {
+      if (!$l instanceof Google_Service_Vision_EntityAnnotation) {
+        throw new InvalidArgumentException('First argument to setLandmarkAnnotations must be an array of Google_Service_Vision_EntityAnnotation');
+      }
+    }
     $this->landmarkAnnotations = $landmarkAnnotations;
   }
   public function getLandmarkAnnotations()
   {
     return $this->landmarkAnnotations;
   }
-  public function setLogoAnnotations($logoAnnotations)
+  public function setLogoAnnotations(array $logoAnnotations)
   {
+    foreach ($logoAnnotations as $l) {
+      if (!$l instanceof Google_Service_Vision_EntityAnnotation) {
+        throw new InvalidArgumentException('First argument to setLogoAnnotations must be an array of Google_Service_Vision_EntityAnnotation');
+      }
+    }
     $this->logoAnnotations = $logoAnnotations;
   }
   public function getLogoAnnotations()
@@ -91,8 +103,13 @@ class Google_Service_Vision_AnnotateImageResponse extends Google_Collection
   {
     return $this->safeSearchAnnotation;
   }
-  public function setTextAnnotations($textAnnotations)
+  public function setTextAnnotations(array $textAnnotations)
   {
+    foreach ($textAnnotations as $t) {
+      if (!$t instanceof Google_Service_Vision_EntityAnnotation) {
+        throw new InvalidArgumentException('First argument to setTextAnnotations must be an array of Google_Service_Vision_EntityAnnotation');
+      }
+    }
     $this->textAnnotations = $textAnnotations;
   }
   public function getTextAnnotations()

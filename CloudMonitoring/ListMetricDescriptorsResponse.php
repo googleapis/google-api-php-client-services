@@ -19,8 +19,7 @@ class Google_Service_CloudMonitoring_ListMetricDescriptorsResponse extends Googl
 {
   protected $collection_key = 'metrics';
   public $kind;
-  protected $metricsType = 'Google_Service_CloudMonitoring_MetricDescriptor';
-  protected $metricsDataType = 'array';
+  public $metrics;
   public $nextPageToken;
 
   public function setKind($kind)
@@ -31,8 +30,13 @@ class Google_Service_CloudMonitoring_ListMetricDescriptorsResponse extends Googl
   {
     return $this->kind;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_CloudMonitoring_MetricDescriptor) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_CloudMonitoring_MetricDescriptor');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()

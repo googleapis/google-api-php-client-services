@@ -29,7 +29,7 @@ class Google_Service_Acceleratedmobilepageurl_BatchGetAmpUrlsRequest extends Goo
   {
     return $this->lookupStrategy;
   }
-  public function setUrls($urls)
+  public function setUrls(array $urls)
   {
     $this->urls = $urls;
   }

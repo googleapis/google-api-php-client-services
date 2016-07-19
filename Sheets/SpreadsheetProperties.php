@@ -18,8 +18,7 @@
 class Google_Service_Sheets_SpreadsheetProperties extends Google_Model
 {
   public $autoRecalc;
-  protected $defaultFormatType = 'Google_Service_Sheets_CellFormat';
-  protected $defaultFormatDataType = '';
+  public $defaultFormat;
   public $locale;
   public $timeZone;
   public $title;

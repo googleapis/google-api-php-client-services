@@ -19,8 +19,7 @@ class Google_Service_Storagetransfer_ListTransferJobsResponse extends Google_Col
 {
   protected $collection_key = 'transferJobs';
   public $nextPageToken;
-  protected $transferJobsType = 'Google_Service_Storagetransfer_TransferJob';
-  protected $transferJobsDataType = 'array';
+  public $transferJobs;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Storagetransfer_ListTransferJobsResponse extends Google_Col
   {
     return $this->nextPageToken;
   }
-  public function setTransferJobs($transferJobs)
+  public function setTransferJobs(array $transferJobs)
   {
+    foreach ($transferJobs as $t) {
+      if (!$t instanceof Google_Service_Storagetransfer_TransferJob) {
+        throw new InvalidArgumentException('First argument to setTransferJobs must be an array of Google_Service_Storagetransfer_TransferJob');
+      }
+    }
     $this->transferJobs = $transferJobs;
   }
   public function getTransferJobs()

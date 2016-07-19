@@ -24,8 +24,7 @@ class Google_Service_Dfareporting_UserRole extends Google_Collection
   public $kind;
   public $name;
   public $parentUserRoleId;
-  protected $permissionsType = 'Google_Service_Dfareporting_UserRolePermission';
-  protected $permissionsDataType = 'array';
+  public $permissions;
   public $subaccountId;
 
   public function setAccountId($accountId)
@@ -76,8 +75,13 @@ class Google_Service_Dfareporting_UserRole extends Google_Collection
   {
     return $this->parentUserRoleId;
   }
-  public function setPermissions($permissions)
+  public function setPermissions(array $permissions)
   {
+    foreach ($permissions as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_UserRolePermission) {
+        throw new InvalidArgumentException('First argument to setPermissions must be an array of Google_Service_Dfareporting_UserRolePermission');
+      }
+    }
     $this->permissions = $permissions;
   }
   public function getPermissions()

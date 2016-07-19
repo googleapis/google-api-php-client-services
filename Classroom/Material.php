@@ -17,14 +17,10 @@
 
 class Google_Service_Classroom_Material extends Google_Model
 {
-  protected $driveFileType = 'Google_Service_Classroom_SharedDriveFile';
-  protected $driveFileDataType = '';
-  protected $formType = 'Google_Service_Classroom_Form';
-  protected $formDataType = '';
-  protected $linkType = 'Google_Service_Classroom_Link';
-  protected $linkDataType = '';
-  protected $youtubeVideoType = 'Google_Service_Classroom_YouTubeVideo';
-  protected $youtubeVideoDataType = '';
+  public $driveFile;
+  public $form;
+  public $link;
+  public $youtubeVideo;
 
   public function setDriveFile(Google_Service_Classroom_SharedDriveFile $driveFile)
   {

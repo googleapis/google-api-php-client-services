@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_CampaignsListResponse extends Google_Collection
 {
   protected $collection_key = 'campaigns';
-  protected $campaignsType = 'Google_Service_Dfareporting_Campaign';
-  protected $campaignsDataType = 'array';
+  public $campaigns;
   public $kind;
   public $nextPageToken;
 
-  public function setCampaigns($campaigns)
+  public function setCampaigns(array $campaigns)
   {
+    foreach ($campaigns as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_Campaign) {
+        throw new InvalidArgumentException('First argument to setCampaigns must be an array of Google_Service_Dfareporting_Campaign');
+      }
+    }
     $this->campaigns = $campaigns;
   }
   public function getCampaigns()

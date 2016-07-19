@@ -17,13 +17,10 @@
 
 class Google_Service_ToolResults_Execution extends Google_Model
 {
-  protected $completionTimeType = 'Google_Service_ToolResults_Timestamp';
-  protected $completionTimeDataType = '';
-  protected $creationTimeType = 'Google_Service_ToolResults_Timestamp';
-  protected $creationTimeDataType = '';
+  public $completionTime;
+  public $creationTime;
   public $executionId;
-  protected $outcomeType = 'Google_Service_ToolResults_Outcome';
-  protected $outcomeDataType = '';
+  public $outcome;
   public $state;
   public $testExecutionMatrixId;
 

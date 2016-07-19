@@ -18,11 +18,15 @@
 class Google_Service_Spectrum_DeviceCapabilities extends Google_Collection
 {
   protected $collection_key = 'frequencyRanges';
-  protected $frequencyRangesType = 'Google_Service_Spectrum_FrequencyRange';
-  protected $frequencyRangesDataType = 'array';
+  public $frequencyRanges;
 
-  public function setFrequencyRanges($frequencyRanges)
+  public function setFrequencyRanges(array $frequencyRanges)
   {
+    foreach ($frequencyRanges as $f) {
+      if (!$f instanceof Google_Service_Spectrum_FrequencyRange) {
+        throw new InvalidArgumentException('First argument to setFrequencyRanges must be an array of Google_Service_Spectrum_FrequencyRange');
+      }
+    }
     $this->frequencyRanges = $frequencyRanges;
   }
   public function getFrequencyRanges()

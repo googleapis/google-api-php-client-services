@@ -18,11 +18,15 @@
 class Google_Service_Webmasters_SitesListResponse extends Google_Collection
 {
   protected $collection_key = 'siteEntry';
-  protected $siteEntryType = 'Google_Service_Webmasters_WmxSite';
-  protected $siteEntryDataType = 'array';
+  public $siteEntry;
 
-  public function setSiteEntry($siteEntry)
+  public function setSiteEntry(array $siteEntry)
   {
+    foreach ($siteEntry as $s) {
+      if (!$s instanceof Google_Service_Webmasters_WmxSite) {
+        throw new InvalidArgumentException('First argument to setSiteEntry must be an array of Google_Service_Webmasters_WmxSite');
+      }
+    }
     $this->siteEntry = $siteEntry;
   }
   public function getSiteEntry()

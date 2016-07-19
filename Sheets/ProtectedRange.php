@@ -19,15 +19,12 @@ class Google_Service_Sheets_ProtectedRange extends Google_Collection
 {
   protected $collection_key = 'unprotectedRanges';
   public $description;
-  protected $editorsType = 'Google_Service_Sheets_Editors';
-  protected $editorsDataType = '';
+  public $editors;
   public $namedRangeId;
   public $protectedRangeId;
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
+  public $range;
   public $requestingUserCanEdit;
-  protected $unprotectedRangesType = 'Google_Service_Sheets_GridRange';
-  protected $unprotectedRangesDataType = 'array';
+  public $unprotectedRanges;
   public $warningOnly;
 
   public function setDescription($description)
@@ -78,8 +75,13 @@ class Google_Service_Sheets_ProtectedRange extends Google_Collection
   {
     return $this->requestingUserCanEdit;
   }
-  public function setUnprotectedRanges($unprotectedRanges)
+  public function setUnprotectedRanges(array $unprotectedRanges)
   {
+    foreach ($unprotectedRanges as $u) {
+      if (!$u instanceof Google_Service_Sheets_GridRange) {
+        throw new InvalidArgumentException('First argument to setUnprotectedRanges must be an array of Google_Service_Sheets_GridRange');
+      }
+    }
     $this->unprotectedRanges = $unprotectedRanges;
   }
   public function getUnprotectedRanges()

@@ -18,13 +18,17 @@
 class Google_Service_Dataflow_MapTask extends Google_Collection
 {
   protected $collection_key = 'instructions';
-  protected $instructionsType = 'Google_Service_Dataflow_ParallelInstruction';
-  protected $instructionsDataType = 'array';
+  public $instructions;
   public $stageName;
   public $systemName;
 
-  public function setInstructions($instructions)
+  public function setInstructions(array $instructions)
   {
+    foreach ($instructions as $i) {
+      if (!$i instanceof Google_Service_Dataflow_ParallelInstruction) {
+        throw new InvalidArgumentException('First argument to setInstructions must be an array of Google_Service_Dataflow_ParallelInstruction');
+      }
+    }
     $this->instructions = $instructions;
   }
   public function getInstructions()

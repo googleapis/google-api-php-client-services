@@ -19,8 +19,7 @@ class Google_Service_Dns_ManagedZonesListResponse extends Google_Collection
 {
   protected $collection_key = 'managedZones';
   public $kind;
-  protected $managedZonesType = 'Google_Service_Dns_ManagedZone';
-  protected $managedZonesDataType = 'array';
+  public $managedZones;
   public $nextPageToken;
 
   public function setKind($kind)
@@ -31,8 +30,13 @@ class Google_Service_Dns_ManagedZonesListResponse extends Google_Collection
   {
     return $this->kind;
   }
-  public function setManagedZones($managedZones)
+  public function setManagedZones(array $managedZones)
   {
+    foreach ($managedZones as $m) {
+      if (!$m instanceof Google_Service_Dns_ManagedZone) {
+        throw new InvalidArgumentException('First argument to setManagedZones must be an array of Google_Service_Dns_ManagedZone');
+      }
+    }
     $this->managedZones = $managedZones;
   }
   public function getManagedZones()

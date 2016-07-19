@@ -18,12 +18,16 @@
 class Google_Service_Calendar_EventReminders extends Google_Collection
 {
   protected $collection_key = 'overrides';
-  protected $overridesType = 'Google_Service_Calendar_EventReminder';
-  protected $overridesDataType = 'array';
+  public $overrides;
   public $useDefault;
 
-  public function setOverrides($overrides)
+  public function setOverrides(array $overrides)
   {
+    foreach ($overrides as $o) {
+      if (!$o instanceof Google_Service_Calendar_EventReminder) {
+        throw new InvalidArgumentException('First argument to setOverrides must be an array of Google_Service_Calendar_EventReminder');
+      }
+    }
     $this->overrides = $overrides;
   }
   public function getOverrides()

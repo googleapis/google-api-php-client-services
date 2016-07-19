@@ -18,10 +18,8 @@
 class Google_Service_Dfareporting_CreativeAssetMetadata extends Google_Collection
 {
   protected $collection_key = 'warnedValidationRules';
-  protected $assetIdentifierType = 'Google_Service_Dfareporting_CreativeAssetId';
-  protected $assetIdentifierDataType = '';
-  protected $clickTagsType = 'Google_Service_Dfareporting_ClickTag';
-  protected $clickTagsDataType = 'array';
+  public $assetIdentifier;
+  public $clickTags;
   public $detectedFeatures;
   public $kind;
   public $warnedValidationRules;
@@ -34,15 +32,20 @@ class Google_Service_Dfareporting_CreativeAssetMetadata extends Google_Collectio
   {
     return $this->assetIdentifier;
   }
-  public function setClickTags($clickTags)
+  public function setClickTags(array $clickTags)
   {
+    foreach ($clickTags as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_ClickTag) {
+        throw new InvalidArgumentException('First argument to setClickTags must be an array of Google_Service_Dfareporting_ClickTag');
+      }
+    }
     $this->clickTags = $clickTags;
   }
   public function getClickTags()
   {
     return $this->clickTags;
   }
-  public function setDetectedFeatures($detectedFeatures)
+  public function setDetectedFeatures(array $detectedFeatures)
   {
     $this->detectedFeatures = $detectedFeatures;
   }
@@ -58,7 +61,7 @@ class Google_Service_Dfareporting_CreativeAssetMetadata extends Google_Collectio
   {
     return $this->kind;
   }
-  public function setWarnedValidationRules($warnedValidationRules)
+  public function setWarnedValidationRules(array $warnedValidationRules)
   {
     $this->warnedValidationRules = $warnedValidationRules;
   }

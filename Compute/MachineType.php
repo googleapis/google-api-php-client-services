@@ -19,8 +19,7 @@ class Google_Service_Compute_MachineType extends Google_Collection
 {
   protected $collection_key = 'scratchDisks';
   public $creationTimestamp;
-  protected $deprecatedType = 'Google_Service_Compute_DeprecationStatus';
-  protected $deprecatedDataType = '';
+  public $deprecated;
   public $description;
   public $guestCpus;
   public $id;
@@ -31,8 +30,7 @@ class Google_Service_Compute_MachineType extends Google_Collection
   public $maximumPersistentDisksSizeGb;
   public $memoryMb;
   public $name;
-  protected $scratchDisksType = 'Google_Service_Compute_MachineTypeScratchDisks';
-  protected $scratchDisksDataType = 'array';
+  public $scratchDisks;
   public $selfLink;
   public $zone;
 
@@ -132,8 +130,13 @@ class Google_Service_Compute_MachineType extends Google_Collection
   {
     return $this->name;
   }
-  public function setScratchDisks($scratchDisks)
+  public function setScratchDisks(array $scratchDisks)
   {
+    foreach ($scratchDisks as $s) {
+      if (!$s instanceof Google_Service_Compute_MachineTypeScratchDisks) {
+        throw new InvalidArgumentException('First argument to setScratchDisks must be an array of Google_Service_Compute_MachineTypeScratchDisks');
+      }
+    }
     $this->scratchDisks = $scratchDisks;
   }
   public function getScratchDisks()

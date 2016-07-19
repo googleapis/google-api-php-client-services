@@ -25,8 +25,7 @@ class Google_Service_Tasks_Task extends Google_Collection
   public $hidden;
   public $id;
   public $kind;
-  protected $linksType = 'Google_Service_Tasks_TaskLinks';
-  protected $linksDataType = 'array';
+  public $links;
   public $notes;
   public $parent;
   public $position;
@@ -91,8 +90,13 @@ class Google_Service_Tasks_Task extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLinks($links)
+  public function setLinks(array $links)
   {
+    foreach ($links as $l) {
+      if (!$l instanceof Google_Service_Tasks_TaskLinks) {
+        throw new InvalidArgumentException('First argument to setLinks must be an array of Google_Service_Tasks_TaskLinks');
+      }
+    }
     $this->links = $links;
   }
   public function getLinks()

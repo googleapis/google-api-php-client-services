@@ -22,10 +22,9 @@ class Google_Service_YouTube_VideoSuggestions extends Google_Collection
   public $processingErrors;
   public $processingHints;
   public $processingWarnings;
-  protected $tagSuggestionsType = 'Google_Service_YouTube_VideoSuggestionsTagSuggestion';
-  protected $tagSuggestionsDataType = 'array';
+  public $tagSuggestions;
 
-  public function setEditorSuggestions($editorSuggestions)
+  public function setEditorSuggestions(array $editorSuggestions)
   {
     $this->editorSuggestions = $editorSuggestions;
   }
@@ -33,7 +32,7 @@ class Google_Service_YouTube_VideoSuggestions extends Google_Collection
   {
     return $this->editorSuggestions;
   }
-  public function setProcessingErrors($processingErrors)
+  public function setProcessingErrors(array $processingErrors)
   {
     $this->processingErrors = $processingErrors;
   }
@@ -41,7 +40,7 @@ class Google_Service_YouTube_VideoSuggestions extends Google_Collection
   {
     return $this->processingErrors;
   }
-  public function setProcessingHints($processingHints)
+  public function setProcessingHints(array $processingHints)
   {
     $this->processingHints = $processingHints;
   }
@@ -49,7 +48,7 @@ class Google_Service_YouTube_VideoSuggestions extends Google_Collection
   {
     return $this->processingHints;
   }
-  public function setProcessingWarnings($processingWarnings)
+  public function setProcessingWarnings(array $processingWarnings)
   {
     $this->processingWarnings = $processingWarnings;
   }
@@ -57,8 +56,13 @@ class Google_Service_YouTube_VideoSuggestions extends Google_Collection
   {
     return $this->processingWarnings;
   }
-  public function setTagSuggestions($tagSuggestions)
+  public function setTagSuggestions(array $tagSuggestions)
   {
+    foreach ($tagSuggestions as $t) {
+      if (!$t instanceof Google_Service_YouTube_VideoSuggestionsTagSuggestion) {
+        throw new InvalidArgumentException('First argument to setTagSuggestions must be an array of Google_Service_YouTube_VideoSuggestionsTagSuggestion');
+      }
+    }
     $this->tagSuggestions = $tagSuggestions;
   }
   public function getTagSuggestions()

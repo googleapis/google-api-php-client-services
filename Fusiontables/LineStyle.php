@@ -18,12 +18,10 @@
 class Google_Service_Fusiontables_LineStyle extends Google_Model
 {
   public $strokeColor;
-  protected $strokeColorStylerType = 'Google_Service_Fusiontables_StyleFunction';
-  protected $strokeColorStylerDataType = '';
+  public $strokeColorStyler;
   public $strokeOpacity;
   public $strokeWeight;
-  protected $strokeWeightStylerType = 'Google_Service_Fusiontables_StyleFunction';
-  protected $strokeWeightStylerDataType = '';
+  public $strokeWeightStyler;
 
   public function setStrokeColor($strokeColor)
   {

@@ -19,8 +19,7 @@ class Google_Service_AdSenseHost_UrlChannels extends Google_Collection
 {
   protected $collection_key = 'items';
   public $etag;
-  protected $itemsType = 'Google_Service_AdSenseHost_UrlChannel';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $nextPageToken;
 
@@ -32,8 +31,13 @@ class Google_Service_AdSenseHost_UrlChannels extends Google_Collection
   {
     return $this->etag;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_AdSenseHost_UrlChannel) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_AdSenseHost_UrlChannel');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

@@ -17,8 +17,7 @@
 
 class Google_Service_CloudDebugger_ExtendedSourceContext extends Google_Model
 {
-  protected $contextType = 'Google_Service_CloudDebugger_SourceContext';
-  protected $contextDataType = '';
+  public $context;
   public $labels;
 
   public function setContext(Google_Service_CloudDebugger_SourceContext $context)
@@ -29,7 +28,7 @@ class Google_Service_CloudDebugger_ExtendedSourceContext extends Google_Model
   {
     return $this->context;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

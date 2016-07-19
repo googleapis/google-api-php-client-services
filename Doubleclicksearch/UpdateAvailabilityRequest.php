@@ -18,11 +18,15 @@
 class Google_Service_Doubleclicksearch_UpdateAvailabilityRequest extends Google_Collection
 {
   protected $collection_key = 'availabilities';
-  protected $availabilitiesType = 'Google_Service_Doubleclicksearch_Availability';
-  protected $availabilitiesDataType = 'array';
+  public $availabilities;
 
-  public function setAvailabilities($availabilities)
+  public function setAvailabilities(array $availabilities)
   {
+    foreach ($availabilities as $a) {
+      if (!$a instanceof Google_Service_Doubleclicksearch_Availability) {
+        throw new InvalidArgumentException('First argument to setAvailabilities must be an array of Google_Service_Doubleclicksearch_Availability');
+      }
+    }
     $this->availabilities = $availabilities;
   }
   public function getAvailabilities()

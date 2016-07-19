@@ -18,8 +18,7 @@
 class Google_Service_Sheets_UpdateFilterViewRequest extends Google_Model
 {
   public $fields;
-  protected $filterType = 'Google_Service_Sheets_FilterView';
-  protected $filterDataType = '';
+  public $filter;
 
   public function setFields($fields)
   {

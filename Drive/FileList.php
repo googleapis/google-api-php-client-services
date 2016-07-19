@@ -18,13 +18,17 @@
 class Google_Service_Drive_FileList extends Google_Collection
 {
   protected $collection_key = 'files';
-  protected $filesType = 'Google_Service_Drive_DriveFile';
-  protected $filesDataType = 'array';
+  public $files;
   public $kind;
   public $nextPageToken;
 
-  public function setFiles($files)
+  public function setFiles(array $files)
   {
+    foreach ($files as $f) {
+      if (!$f instanceof Google_Service_Drive_DriveFile) {
+        throw new InvalidArgumentException('First argument to setFiles must be an array of Google_Service_Drive_DriveFile');
+      }
+    }
     $this->files = $files;
   }
   public function getFiles()

@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_AddNamedRangeRequest extends Google_Model
 {
-  protected $namedRangeType = 'Google_Service_Sheets_NamedRange';
-  protected $namedRangeDataType = '';
+  public $namedRange;
 
   public function setNamedRange(Google_Service_Sheets_NamedRange $namedRange)
   {

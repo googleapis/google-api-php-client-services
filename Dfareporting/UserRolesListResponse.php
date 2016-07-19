@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_UserRolesListResponse extends Google_Collectio
   protected $collection_key = 'userRoles';
   public $kind;
   public $nextPageToken;
-  protected $userRolesType = 'Google_Service_Dfareporting_UserRole';
-  protected $userRolesDataType = 'array';
+  public $userRoles;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_UserRolesListResponse extends Google_Collectio
   {
     return $this->nextPageToken;
   }
-  public function setUserRoles($userRoles)
+  public function setUserRoles(array $userRoles)
   {
+    foreach ($userRoles as $u) {
+      if (!$u instanceof Google_Service_Dfareporting_UserRole) {
+        throw new InvalidArgumentException('First argument to setUserRoles must be an array of Google_Service_Dfareporting_UserRole');
+      }
+    }
     $this->userRoles = $userRoles;
   }
   public function getUserRoles()

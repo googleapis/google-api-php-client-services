@@ -18,11 +18,15 @@
 class Google_Service_YouTube_ChannelConversionPings extends Google_Collection
 {
   protected $collection_key = 'pings';
-  protected $pingsType = 'Google_Service_YouTube_ChannelConversionPing';
-  protected $pingsDataType = 'array';
+  public $pings;
 
-  public function setPings($pings)
+  public function setPings(array $pings)
   {
+    foreach ($pings as $p) {
+      if (!$p instanceof Google_Service_YouTube_ChannelConversionPing) {
+        throw new InvalidArgumentException('First argument to setPings must be an array of Google_Service_YouTube_ChannelConversionPing');
+      }
+    }
     $this->pings = $pings;
   }
   public function getPings()

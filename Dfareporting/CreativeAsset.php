@@ -22,21 +22,17 @@ class Google_Service_Dfareporting_CreativeAsset extends Google_Collection
   public $active;
   public $alignment;
   public $artworkType;
-  protected $assetIdentifierType = 'Google_Service_Dfareporting_CreativeAssetId';
-  protected $assetIdentifierDataType = '';
-  protected $backupImageExitType = 'Google_Service_Dfareporting_CreativeCustomEvent';
-  protected $backupImageExitDataType = '';
+  public $assetIdentifier;
+  public $backupImageExit;
   public $bitRate;
   public $childAssetType;
-  protected $collapsedSizeType = 'Google_Service_Dfareporting_Size';
-  protected $collapsedSizeDataType = '';
+  public $collapsedSize;
   public $customStartTimeValue;
   public $detectedFeatures;
   public $displayType;
   public $duration;
   public $durationType;
-  protected $expandedDimensionType = 'Google_Service_Dfareporting_Size';
-  protected $expandedDimensionDataType = '';
+  public $expandedDimension;
   public $fileSize;
   public $flashVersion;
   public $hideFlashObjects;
@@ -44,19 +40,16 @@ class Google_Service_Dfareporting_CreativeAsset extends Google_Collection
   public $horizontallyLocked;
   public $id;
   public $mimeType;
-  protected $offsetType = 'Google_Service_Dfareporting_OffsetPosition';
-  protected $offsetDataType = '';
+  public $offset;
   public $originalBackup;
-  protected $positionType = 'Google_Service_Dfareporting_OffsetPosition';
-  protected $positionDataType = '';
+  public $position;
   public $positionLeftUnit;
   public $positionTopUnit;
   public $progressiveServingUrl;
   public $pushdown;
   public $pushdownDuration;
   public $role;
-  protected $sizeType = 'Google_Service_Dfareporting_Size';
-  protected $sizeDataType = '';
+  public $size;
   public $sslCompliant;
   public $startTimeType;
   public $streamingServingUrl;
@@ -148,7 +141,7 @@ class Google_Service_Dfareporting_CreativeAsset extends Google_Collection
   {
     return $this->customStartTimeValue;
   }
-  public function setDetectedFeatures($detectedFeatures)
+  public function setDetectedFeatures(array $detectedFeatures)
   {
     $this->detectedFeatures = $detectedFeatures;
   }

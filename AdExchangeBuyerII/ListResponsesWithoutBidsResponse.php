@@ -19,8 +19,7 @@ class Google_Service_AdExchangeBuyerII_ListResponsesWithoutBidsResponse extends 
 {
   protected $collection_key = 'frequencies';
   public $endTime;
-  protected $frequenciesType = 'Google_Service_AdExchangeBuyerII_ResponsesWithoutBidsStatusFrequency';
-  protected $frequenciesDataType = 'array';
+  public $frequencies;
   public $startTime;
 
   public function setEndTime($endTime)
@@ -31,8 +30,13 @@ class Google_Service_AdExchangeBuyerII_ListResponsesWithoutBidsResponse extends 
   {
     return $this->endTime;
   }
-  public function setFrequencies($frequencies)
+  public function setFrequencies(array $frequencies)
   {
+    foreach ($frequencies as $f) {
+      if (!$f instanceof Google_Service_AdExchangeBuyerII_ResponsesWithoutBidsStatusFrequency) {
+        throw new InvalidArgumentException('First argument to setFrequencies must be an array of Google_Service_AdExchangeBuyerII_ResponsesWithoutBidsStatusFrequency');
+      }
+    }
     $this->frequencies = $frequencies;
   }
   public function getFrequencies()

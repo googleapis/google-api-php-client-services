@@ -18,12 +18,9 @@
 class Google_Service_Appengine_Deployment extends Google_Collection
 {
   protected $collection_key = 'sourceReferences';
-  protected $containerType = 'Google_Service_Appengine_ContainerInfo';
-  protected $containerDataType = '';
-  protected $filesType = 'Google_Service_Appengine_FileInfo';
-  protected $filesDataType = 'map';
-  protected $sourceReferencesType = 'Google_Service_Appengine_SourceReference';
-  protected $sourceReferencesDataType = 'array';
+  public $container;
+  public $files;
+  public $sourceReferences;
 
   public function setContainer(Google_Service_Appengine_ContainerInfo $container)
   {
@@ -33,7 +30,7 @@ class Google_Service_Appengine_Deployment extends Google_Collection
   {
     return $this->container;
   }
-  public function setFiles($files)
+  public function setFiles(array $files)
   {
     $this->files = $files;
   }
@@ -41,8 +38,13 @@ class Google_Service_Appengine_Deployment extends Google_Collection
   {
     return $this->files;
   }
-  public function setSourceReferences($sourceReferences)
+  public function setSourceReferences(array $sourceReferences)
   {
+    foreach ($sourceReferences as $s) {
+      if (!$s instanceof Google_Service_Appengine_SourceReference) {
+        throw new InvalidArgumentException('First argument to setSourceReferences must be an array of Google_Service_Appengine_SourceReference');
+      }
+    }
     $this->sourceReferences = $sourceReferences;
   }
   public function getSourceReferences()

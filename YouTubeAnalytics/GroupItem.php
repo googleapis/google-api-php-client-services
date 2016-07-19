@@ -21,8 +21,7 @@ class Google_Service_YouTubeAnalytics_GroupItem extends Google_Model
   public $groupId;
   public $id;
   public $kind;
-  protected $resourceType = 'Google_Service_YouTubeAnalytics_GroupItemResource';
-  protected $resourceDataType = '';
+  public $resource;
 
   public function setEtag($etag)
   {

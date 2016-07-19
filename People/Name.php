@@ -22,8 +22,7 @@ class Google_Service_People_Name extends Google_Model
   public $givenName;
   public $honorificPrefix;
   public $honorificSuffix;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $middleName;
   public $phoneticFamilyName;
   public $phoneticGivenName;

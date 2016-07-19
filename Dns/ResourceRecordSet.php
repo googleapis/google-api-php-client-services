@@ -40,7 +40,7 @@ class Google_Service_Dns_ResourceRecordSet extends Google_Collection
   {
     return $this->name;
   }
-  public function setRrdatas($rrdatas)
+  public function setRrdatas(array $rrdatas)
   {
     $this->rrdatas = $rrdatas;
   }

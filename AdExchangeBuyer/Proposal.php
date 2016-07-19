@@ -18,22 +18,17 @@
 class Google_Service_AdExchangeBuyer_Proposal extends Google_Collection
 {
   protected $collection_key = 'sellerContacts';
-  protected $billedBuyerType = 'Google_Service_AdExchangeBuyer_Buyer';
-  protected $billedBuyerDataType = '';
-  protected $buyerType = 'Google_Service_AdExchangeBuyer_Buyer';
-  protected $buyerDataType = '';
-  protected $buyerContactsType = 'Google_Service_AdExchangeBuyer_ContactInformation';
-  protected $buyerContactsDataType = 'array';
-  protected $buyerPrivateDataType = 'Google_Service_AdExchangeBuyer_PrivateData';
-  protected $buyerPrivateDataDataType = '';
+  public $billedBuyer;
+  public $buyer;
+  public $buyerContacts;
+  public $buyerPrivateData;
   public $hasBuyerSignedOff;
   public $hasSellerSignedOff;
   public $inventorySource;
   public $isRenegotiating;
   public $isSetupComplete;
   public $kind;
-  protected $labelsType = 'Google_Service_AdExchangeBuyer_MarketplaceLabel';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $lastUpdaterOrCommentorRole;
   public $name;
   public $negotiationId;
@@ -43,10 +38,8 @@ class Google_Service_AdExchangeBuyer_Proposal extends Google_Collection
   public $proposalState;
   public $revisionNumber;
   public $revisionTimeMs;
-  protected $sellerType = 'Google_Service_AdExchangeBuyer_Seller';
-  protected $sellerDataType = '';
-  protected $sellerContactsType = 'Google_Service_AdExchangeBuyer_ContactInformation';
-  protected $sellerContactsDataType = 'array';
+  public $seller;
+  public $sellerContacts;
 
   public function setBilledBuyer(Google_Service_AdExchangeBuyer_Buyer $billedBuyer)
   {
@@ -64,8 +57,13 @@ class Google_Service_AdExchangeBuyer_Proposal extends Google_Collection
   {
     return $this->buyer;
   }
-  public function setBuyerContacts($buyerContacts)
+  public function setBuyerContacts(array $buyerContacts)
   {
+    foreach ($buyerContacts as $b) {
+      if (!$b instanceof Google_Service_AdExchangeBuyer_ContactInformation) {
+        throw new InvalidArgumentException('First argument to setBuyerContacts must be an array of Google_Service_AdExchangeBuyer_ContactInformation');
+      }
+    }
     $this->buyerContacts = $buyerContacts;
   }
   public function getBuyerContacts()
@@ -128,8 +126,13 @@ class Google_Service_AdExchangeBuyer_Proposal extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_AdExchangeBuyer_MarketplaceLabel) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_AdExchangeBuyer_MarketplaceLabel');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()
@@ -216,8 +219,13 @@ class Google_Service_AdExchangeBuyer_Proposal extends Google_Collection
   {
     return $this->seller;
   }
-  public function setSellerContacts($sellerContacts)
+  public function setSellerContacts(array $sellerContacts)
   {
+    foreach ($sellerContacts as $s) {
+      if (!$s instanceof Google_Service_AdExchangeBuyer_ContactInformation) {
+        throw new InvalidArgumentException('First argument to setSellerContacts must be an array of Google_Service_AdExchangeBuyer_ContactInformation');
+      }
+    }
     $this->sellerContacts = $sellerContacts;
   }
   public function getSellerContacts()

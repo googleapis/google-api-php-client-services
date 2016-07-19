@@ -19,8 +19,7 @@ class Google_Service_YouTube_SubscriptionSubscriberSnippet extends Google_Model
 {
   public $channelId;
   public $description;
-  protected $thumbnailsType = 'Google_Service_YouTube_ThumbnailDetails';
-  protected $thumbnailsDataType = '';
+  public $thumbnails;
   public $title;
 
   public function setChannelId($channelId)

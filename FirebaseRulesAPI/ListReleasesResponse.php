@@ -19,8 +19,7 @@ class Google_Service_FirebaseRulesAPI_ListReleasesResponse extends Google_Collec
 {
   protected $collection_key = 'releases';
   public $nextPageToken;
-  protected $releasesType = 'Google_Service_FirebaseRulesAPI_Release';
-  protected $releasesDataType = 'array';
+  public $releases;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_FirebaseRulesAPI_ListReleasesResponse extends Google_Collec
   {
     return $this->nextPageToken;
   }
-  public function setReleases($releases)
+  public function setReleases(array $releases)
   {
+    foreach ($releases as $r) {
+      if (!$r instanceof Google_Service_FirebaseRulesAPI_Release) {
+        throw new InvalidArgumentException('First argument to setReleases must be an array of Google_Service_FirebaseRulesAPI_Release');
+      }
+    }
     $this->releases = $releases;
   }
   public function getReleases()

@@ -19,8 +19,7 @@ class Google_Service_Directory_MobileDevice extends Google_Collection
 {
   protected $collection_key = 'otherAccountsInfo';
   public $adbStatus;
-  protected $applicationsType = 'Google_Service_Directory_MobileDeviceApplications';
-  protected $applicationsDataType = 'array';
+  public $applications;
   public $basebandVersion;
   public $buildNumber;
   public $defaultLanguage;
@@ -59,8 +58,13 @@ class Google_Service_Directory_MobileDevice extends Google_Collection
   {
     return $this->adbStatus;
   }
-  public function setApplications($applications)
+  public function setApplications(array $applications)
   {
+    foreach ($applications as $a) {
+      if (!$a instanceof Google_Service_Directory_MobileDeviceApplications) {
+        throw new InvalidArgumentException('First argument to setApplications must be an array of Google_Service_Directory_MobileDeviceApplications');
+      }
+    }
     $this->applications = $applications;
   }
   public function getApplications()
@@ -115,7 +119,7 @@ class Google_Service_Directory_MobileDevice extends Google_Collection
   {
     return $this->deviceId;
   }
-  public function setEmail($email)
+  public function setEmail(array $email)
   {
     $this->email = $email;
   }
@@ -203,7 +207,7 @@ class Google_Service_Directory_MobileDevice extends Google_Collection
   {
     return $this->model;
   }
-  public function setName($name)
+  public function setName(array $name)
   {
     $this->name = $name;
   }
@@ -227,7 +231,7 @@ class Google_Service_Directory_MobileDevice extends Google_Collection
   {
     return $this->os;
   }
-  public function setOtherAccountsInfo($otherAccountsInfo)
+  public function setOtherAccountsInfo(array $otherAccountsInfo)
   {
     $this->otherAccountsInfo = $otherAccountsInfo;
   }

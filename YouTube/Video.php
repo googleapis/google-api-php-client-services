@@ -17,39 +17,24 @@
 
 class Google_Service_YouTube_Video extends Google_Model
 {
-  protected $ageGatingType = 'Google_Service_YouTube_VideoAgeGating';
-  protected $ageGatingDataType = '';
-  protected $contentDetailsType = 'Google_Service_YouTube_VideoContentDetails';
-  protected $contentDetailsDataType = '';
+  public $ageGating;
+  public $contentDetails;
   public $etag;
-  protected $fileDetailsType = 'Google_Service_YouTube_VideoFileDetails';
-  protected $fileDetailsDataType = '';
+  public $fileDetails;
   public $id;
   public $kind;
-  protected $liveStreamingDetailsType = 'Google_Service_YouTube_VideoLiveStreamingDetails';
-  protected $liveStreamingDetailsDataType = '';
-  protected $localizationsType = 'Google_Service_YouTube_VideoLocalization';
-  protected $localizationsDataType = 'map';
-  protected $monetizationDetailsType = 'Google_Service_YouTube_VideoMonetizationDetails';
-  protected $monetizationDetailsDataType = '';
-  protected $playerType = 'Google_Service_YouTube_VideoPlayer';
-  protected $playerDataType = '';
-  protected $processingDetailsType = 'Google_Service_YouTube_VideoProcessingDetails';
-  protected $processingDetailsDataType = '';
-  protected $projectDetailsType = 'Google_Service_YouTube_VideoProjectDetails';
-  protected $projectDetailsDataType = '';
-  protected $recordingDetailsType = 'Google_Service_YouTube_VideoRecordingDetails';
-  protected $recordingDetailsDataType = '';
-  protected $snippetType = 'Google_Service_YouTube_VideoSnippet';
-  protected $snippetDataType = '';
-  protected $statisticsType = 'Google_Service_YouTube_VideoStatistics';
-  protected $statisticsDataType = '';
-  protected $statusType = 'Google_Service_YouTube_VideoStatus';
-  protected $statusDataType = '';
-  protected $suggestionsType = 'Google_Service_YouTube_VideoSuggestions';
-  protected $suggestionsDataType = '';
-  protected $topicDetailsType = 'Google_Service_YouTube_VideoTopicDetails';
-  protected $topicDetailsDataType = '';
+  public $liveStreamingDetails;
+  public $localizations;
+  public $monetizationDetails;
+  public $player;
+  public $processingDetails;
+  public $projectDetails;
+  public $recordingDetails;
+  public $snippet;
+  public $statistics;
+  public $status;
+  public $suggestions;
+  public $topicDetails;
 
   public function setAgeGating(Google_Service_YouTube_VideoAgeGating $ageGating)
   {
@@ -107,7 +92,7 @@ class Google_Service_YouTube_Video extends Google_Model
   {
     return $this->liveStreamingDetails;
   }
-  public function setLocalizations($localizations)
+  public function setLocalizations(array $localizations)
   {
     $this->localizations = $localizations;
   }

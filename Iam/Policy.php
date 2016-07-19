@@ -18,15 +18,18 @@
 class Google_Service_Iam_Policy extends Google_Collection
 {
   protected $collection_key = 'rules';
-  protected $bindingsType = 'Google_Service_Iam_Binding';
-  protected $bindingsDataType = 'array';
+  public $bindings;
   public $etag;
-  protected $rulesType = 'Google_Service_Iam_Rule';
-  protected $rulesDataType = 'array';
+  public $rules;
   public $version;
 
-  public function setBindings($bindings)
+  public function setBindings(array $bindings)
   {
+    foreach ($bindings as $b) {
+      if (!$b instanceof Google_Service_Iam_Binding) {
+        throw new InvalidArgumentException('First argument to setBindings must be an array of Google_Service_Iam_Binding');
+      }
+    }
     $this->bindings = $bindings;
   }
   public function getBindings()
@@ -41,8 +44,13 @@ class Google_Service_Iam_Policy extends Google_Collection
   {
     return $this->etag;
   }
-  public function setRules($rules)
+  public function setRules(array $rules)
   {
+    foreach ($rules as $r) {
+      if (!$r instanceof Google_Service_Iam_Rule) {
+        throw new InvalidArgumentException('First argument to setRules must be an array of Google_Service_Iam_Rule');
+      }
+    }
     $this->rules = $rules;
   }
   public function getRules()

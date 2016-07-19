@@ -18,12 +18,16 @@
 class Google_Service_Safebrowsing_FetchThreatListUpdatesResponse extends Google_Collection
 {
   protected $collection_key = 'listUpdateResponses';
-  protected $listUpdateResponsesType = 'Google_Service_Safebrowsing_ListUpdateResponse';
-  protected $listUpdateResponsesDataType = 'array';
+  public $listUpdateResponses;
   public $minimumWaitDuration;
 
-  public function setListUpdateResponses($listUpdateResponses)
+  public function setListUpdateResponses(array $listUpdateResponses)
   {
+    foreach ($listUpdateResponses as $l) {
+      if (!$l instanceof Google_Service_Safebrowsing_ListUpdateResponse) {
+        throw new InvalidArgumentException('First argument to setListUpdateResponses must be an array of Google_Service_Safebrowsing_ListUpdateResponse');
+      }
+    }
     $this->listUpdateResponses = $listUpdateResponses;
   }
   public function getListUpdateResponses()

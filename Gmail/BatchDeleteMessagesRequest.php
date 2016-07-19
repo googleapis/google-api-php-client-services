@@ -20,7 +20,7 @@ class Google_Service_Gmail_BatchDeleteMessagesRequest extends Google_Collection
   protected $collection_key = 'ids';
   public $ids;
 
-  public function setIds($ids)
+  public function setIds(array $ids)
   {
     $this->ids = $ids;
   }

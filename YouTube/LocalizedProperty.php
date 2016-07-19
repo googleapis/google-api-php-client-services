@@ -19,10 +19,8 @@ class Google_Service_YouTube_LocalizedProperty extends Google_Collection
 {
   protected $collection_key = 'localized';
   public $default;
-  protected $defaultLanguageType = 'Google_Service_YouTube_LanguageTag';
-  protected $defaultLanguageDataType = '';
-  protected $localizedType = 'Google_Service_YouTube_LocalizedString';
-  protected $localizedDataType = 'array';
+  public $defaultLanguage;
+  public $localized;
 
   public function setDefault($default)
   {
@@ -40,8 +38,13 @@ class Google_Service_YouTube_LocalizedProperty extends Google_Collection
   {
     return $this->defaultLanguage;
   }
-  public function setLocalized($localized)
+  public function setLocalized(array $localized)
   {
+    foreach ($localized as $l) {
+      if (!$l instanceof Google_Service_YouTube_LocalizedString) {
+        throw new InvalidArgumentException('First argument to setLocalized must be an array of Google_Service_YouTube_LocalizedString');
+      }
+    }
     $this->localized = $localized;
   }
   public function getLocalized()

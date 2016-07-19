@@ -24,8 +24,7 @@ class Google_Service_Dfareporting_CreativeCustomEvent extends Google_Model
   public $artworkType;
   public $exitUrl;
   public $id;
-  protected $popupWindowPropertiesType = 'Google_Service_Dfareporting_PopupWindowProperties';
-  protected $popupWindowPropertiesDataType = '';
+  public $popupWindowProperties;
   public $targetType;
   public $videoReportingId;
 

@@ -18,13 +18,16 @@
 class Google_Service_Compute_MachineTypesScopedList extends Google_Collection
 {
   protected $collection_key = 'machineTypes';
-  protected $machineTypesType = 'Google_Service_Compute_MachineType';
-  protected $machineTypesDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_MachineTypesScopedListWarning';
-  protected $warningDataType = '';
+  public $machineTypes;
+  public $warning;
 
-  public function setMachineTypes($machineTypes)
+  public function setMachineTypes(array $machineTypes)
   {
+    foreach ($machineTypes as $m) {
+      if (!$m instanceof Google_Service_Compute_MachineType) {
+        throw new InvalidArgumentException('First argument to setMachineTypes must be an array of Google_Service_Compute_MachineType');
+      }
+    }
     $this->machineTypes = $machineTypes;
   }
   public function getMachineTypes()

@@ -52,7 +52,7 @@ class Google_Service_SQLAdmin_Tier extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRegion($region)
+  public function setRegion(array $region)
   {
     $this->region = $region;
   }

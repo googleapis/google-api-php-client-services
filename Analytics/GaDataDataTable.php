@@ -18,21 +18,29 @@
 class Google_Service_Analytics_GaDataDataTable extends Google_Collection
 {
   protected $collection_key = 'rows';
-  protected $colsType = 'Google_Service_Analytics_GaDataDataTableCols';
-  protected $colsDataType = 'array';
-  protected $rowsType = 'Google_Service_Analytics_GaDataDataTableRows';
-  protected $rowsDataType = 'array';
+  public $cols;
+  public $rows;
 
-  public function setCols($cols)
+  public function setCols(array $cols)
   {
+    foreach ($cols as $c) {
+      if (!$c instanceof Google_Service_Analytics_GaDataDataTableCols) {
+        throw new InvalidArgumentException('First argument to setCols must be an array of Google_Service_Analytics_GaDataDataTableCols');
+      }
+    }
     $this->cols = $cols;
   }
   public function getCols()
   {
     return $this->cols;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Analytics_GaDataDataTableRows) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Analytics_GaDataDataTableRows');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()

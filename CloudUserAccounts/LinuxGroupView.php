@@ -38,7 +38,7 @@ class Google_Service_CloudUserAccounts_LinuxGroupView extends Google_Collection
   {
     return $this->groupName;
   }
-  public function setMembers($members)
+  public function setMembers(array $members)
   {
     $this->members = $members;
   }

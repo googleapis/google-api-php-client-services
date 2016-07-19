@@ -20,16 +20,13 @@ class Google_Service_YouTube_LiveChatMessageListResponse extends Google_Collecti
   protected $collection_key = 'items';
   public $etag;
   public $eventId;
-  protected $itemsType = 'Google_Service_YouTube_LiveChatMessage';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $nextPageToken;
   public $offlineAt;
-  protected $pageInfoType = 'Google_Service_YouTube_PageInfo';
-  protected $pageInfoDataType = '';
+  public $pageInfo;
   public $pollingIntervalMillis;
-  protected $tokenPaginationType = 'Google_Service_YouTube_TokenPagination';
-  protected $tokenPaginationDataType = '';
+  public $tokenPagination;
   public $visitorId;
 
   public function setEtag($etag)
@@ -48,8 +45,13 @@ class Google_Service_YouTube_LiveChatMessageListResponse extends Google_Collecti
   {
     return $this->eventId;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_YouTube_LiveChatMessage) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_YouTube_LiveChatMessage');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

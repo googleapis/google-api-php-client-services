@@ -17,8 +17,7 @@
 
 class Google_Service_Pubsub_ModifyPushConfigRequest extends Google_Model
 {
-  protected $pushConfigType = 'Google_Service_Pubsub_PushConfig';
-  protected $pushConfigDataType = '';
+  public $pushConfig;
 
   public function setPushConfig(Google_Service_Pubsub_PushConfig $pushConfig)
   {

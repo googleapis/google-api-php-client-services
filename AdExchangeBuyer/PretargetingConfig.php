@@ -22,12 +22,10 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   public $configId;
   public $configName;
   public $creativeType;
-  protected $dimensionsType = 'Google_Service_AdExchangeBuyer_PretargetingConfigDimensions';
-  protected $dimensionsDataType = 'array';
+  public $dimensions;
   public $excludedContentLabels;
   public $excludedGeoCriteriaIds;
-  protected $excludedPlacementsType = 'Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements';
-  protected $excludedPlacementsDataType = 'array';
+  public $excludedPlacements;
   public $excludedUserLists;
   public $excludedVerticals;
   public $geoCriteriaIds;
@@ -37,15 +35,13 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   public $mobileCarriers;
   public $mobileDevices;
   public $mobileOperatingSystemVersions;
-  protected $placementsType = 'Google_Service_AdExchangeBuyer_PretargetingConfigPlacements';
-  protected $placementsDataType = 'array';
+  public $placements;
   public $platforms;
   public $supportedCreativeAttributes;
   public $userLists;
   public $vendorTypes;
   public $verticals;
-  protected $videoPlayerSizesType = 'Google_Service_AdExchangeBuyer_PretargetingConfigVideoPlayerSizes';
-  protected $videoPlayerSizesDataType = 'array';
+  public $videoPlayerSizes;
 
   public function setBillingId($billingId)
   {
@@ -71,7 +67,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->configName;
   }
-  public function setCreativeType($creativeType)
+  public function setCreativeType(array $creativeType)
   {
     $this->creativeType = $creativeType;
   }
@@ -79,15 +75,20 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->creativeType;
   }
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
+    foreach ($dimensions as $d) {
+      if (!$d instanceof Google_Service_AdExchangeBuyer_PretargetingConfigDimensions) {
+        throw new InvalidArgumentException('First argument to setDimensions must be an array of Google_Service_AdExchangeBuyer_PretargetingConfigDimensions');
+      }
+    }
     $this->dimensions = $dimensions;
   }
   public function getDimensions()
   {
     return $this->dimensions;
   }
-  public function setExcludedContentLabels($excludedContentLabels)
+  public function setExcludedContentLabels(array $excludedContentLabels)
   {
     $this->excludedContentLabels = $excludedContentLabels;
   }
@@ -95,7 +96,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->excludedContentLabels;
   }
-  public function setExcludedGeoCriteriaIds($excludedGeoCriteriaIds)
+  public function setExcludedGeoCriteriaIds(array $excludedGeoCriteriaIds)
   {
     $this->excludedGeoCriteriaIds = $excludedGeoCriteriaIds;
   }
@@ -103,15 +104,20 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->excludedGeoCriteriaIds;
   }
-  public function setExcludedPlacements($excludedPlacements)
+  public function setExcludedPlacements(array $excludedPlacements)
   {
+    foreach ($excludedPlacements as $e) {
+      if (!$e instanceof Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements) {
+        throw new InvalidArgumentException('First argument to setExcludedPlacements must be an array of Google_Service_AdExchangeBuyer_PretargetingConfigExcludedPlacements');
+      }
+    }
     $this->excludedPlacements = $excludedPlacements;
   }
   public function getExcludedPlacements()
   {
     return $this->excludedPlacements;
   }
-  public function setExcludedUserLists($excludedUserLists)
+  public function setExcludedUserLists(array $excludedUserLists)
   {
     $this->excludedUserLists = $excludedUserLists;
   }
@@ -119,7 +125,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->excludedUserLists;
   }
-  public function setExcludedVerticals($excludedVerticals)
+  public function setExcludedVerticals(array $excludedVerticals)
   {
     $this->excludedVerticals = $excludedVerticals;
   }
@@ -127,7 +133,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->excludedVerticals;
   }
-  public function setGeoCriteriaIds($geoCriteriaIds)
+  public function setGeoCriteriaIds(array $geoCriteriaIds)
   {
     $this->geoCriteriaIds = $geoCriteriaIds;
   }
@@ -151,7 +157,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->kind;
   }
-  public function setLanguages($languages)
+  public function setLanguages(array $languages)
   {
     $this->languages = $languages;
   }
@@ -159,7 +165,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->languages;
   }
-  public function setMobileCarriers($mobileCarriers)
+  public function setMobileCarriers(array $mobileCarriers)
   {
     $this->mobileCarriers = $mobileCarriers;
   }
@@ -167,7 +173,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->mobileCarriers;
   }
-  public function setMobileDevices($mobileDevices)
+  public function setMobileDevices(array $mobileDevices)
   {
     $this->mobileDevices = $mobileDevices;
   }
@@ -175,7 +181,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->mobileDevices;
   }
-  public function setMobileOperatingSystemVersions($mobileOperatingSystemVersions)
+  public function setMobileOperatingSystemVersions(array $mobileOperatingSystemVersions)
   {
     $this->mobileOperatingSystemVersions = $mobileOperatingSystemVersions;
   }
@@ -183,15 +189,20 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->mobileOperatingSystemVersions;
   }
-  public function setPlacements($placements)
+  public function setPlacements(array $placements)
   {
+    foreach ($placements as $p) {
+      if (!$p instanceof Google_Service_AdExchangeBuyer_PretargetingConfigPlacements) {
+        throw new InvalidArgumentException('First argument to setPlacements must be an array of Google_Service_AdExchangeBuyer_PretargetingConfigPlacements');
+      }
+    }
     $this->placements = $placements;
   }
   public function getPlacements()
   {
     return $this->placements;
   }
-  public function setPlatforms($platforms)
+  public function setPlatforms(array $platforms)
   {
     $this->platforms = $platforms;
   }
@@ -199,7 +210,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->platforms;
   }
-  public function setSupportedCreativeAttributes($supportedCreativeAttributes)
+  public function setSupportedCreativeAttributes(array $supportedCreativeAttributes)
   {
     $this->supportedCreativeAttributes = $supportedCreativeAttributes;
   }
@@ -207,7 +218,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->supportedCreativeAttributes;
   }
-  public function setUserLists($userLists)
+  public function setUserLists(array $userLists)
   {
     $this->userLists = $userLists;
   }
@@ -215,7 +226,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->userLists;
   }
-  public function setVendorTypes($vendorTypes)
+  public function setVendorTypes(array $vendorTypes)
   {
     $this->vendorTypes = $vendorTypes;
   }
@@ -223,7 +234,7 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->vendorTypes;
   }
-  public function setVerticals($verticals)
+  public function setVerticals(array $verticals)
   {
     $this->verticals = $verticals;
   }
@@ -231,8 +242,13 @@ class Google_Service_AdExchangeBuyer_PretargetingConfig extends Google_Collectio
   {
     return $this->verticals;
   }
-  public function setVideoPlayerSizes($videoPlayerSizes)
+  public function setVideoPlayerSizes(array $videoPlayerSizes)
   {
+    foreach ($videoPlayerSizes as $v) {
+      if (!$v instanceof Google_Service_AdExchangeBuyer_PretargetingConfigVideoPlayerSizes) {
+        throw new InvalidArgumentException('First argument to setVideoPlayerSizes must be an array of Google_Service_AdExchangeBuyer_PretargetingConfigVideoPlayerSizes');
+      }
+    }
     $this->videoPlayerSizes = $videoPlayerSizes;
   }
   public function getVideoPlayerSizes()

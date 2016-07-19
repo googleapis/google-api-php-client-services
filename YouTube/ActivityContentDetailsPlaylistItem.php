@@ -19,8 +19,7 @@ class Google_Service_YouTube_ActivityContentDetailsPlaylistItem extends Google_M
 {
   public $playlistId;
   public $playlistItemId;
-  protected $resourceIdType = 'Google_Service_YouTube_ResourceId';
-  protected $resourceIdDataType = '';
+  public $resourceId;
 
   public function setPlaylistId($playlistId)
   {

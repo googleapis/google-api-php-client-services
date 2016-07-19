@@ -17,12 +17,9 @@
 
 class Google_Service_People_Membership extends Google_Model
 {
-  protected $contactGroupMembershipType = 'Google_Service_People_ContactGroupMembership';
-  protected $contactGroupMembershipDataType = '';
-  protected $domainMembershipType = 'Google_Service_People_DomainMembership';
-  protected $domainMembershipDataType = '';
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $contactGroupMembership;
+  public $domainMembership;
+  public $metadata;
 
   public function setContactGroupMembership(Google_Service_People_ContactGroupMembership $contactGroupMembership)
   {

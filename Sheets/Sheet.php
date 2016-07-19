@@ -18,22 +18,14 @@
 class Google_Service_Sheets_Sheet extends Google_Collection
 {
   protected $collection_key = 'protectedRanges';
-  protected $basicFilterType = 'Google_Service_Sheets_BasicFilter';
-  protected $basicFilterDataType = '';
-  protected $chartsType = 'Google_Service_Sheets_EmbeddedChart';
-  protected $chartsDataType = 'array';
-  protected $conditionalFormatsType = 'Google_Service_Sheets_ConditionalFormatRule';
-  protected $conditionalFormatsDataType = 'array';
-  protected $dataType = 'Google_Service_Sheets_GridData';
-  protected $dataDataType = 'array';
-  protected $filterViewsType = 'Google_Service_Sheets_FilterView';
-  protected $filterViewsDataType = 'array';
-  protected $mergesType = 'Google_Service_Sheets_GridRange';
-  protected $mergesDataType = 'array';
-  protected $propertiesType = 'Google_Service_Sheets_SheetProperties';
-  protected $propertiesDataType = '';
-  protected $protectedRangesType = 'Google_Service_Sheets_ProtectedRange';
-  protected $protectedRangesDataType = 'array';
+  public $basicFilter;
+  public $charts;
+  public $conditionalFormats;
+  public $data;
+  public $filterViews;
+  public $merges;
+  public $properties;
+  public $protectedRanges;
 
   public function setBasicFilter(Google_Service_Sheets_BasicFilter $basicFilter)
   {
@@ -43,40 +35,65 @@ class Google_Service_Sheets_Sheet extends Google_Collection
   {
     return $this->basicFilter;
   }
-  public function setCharts($charts)
+  public function setCharts(array $charts)
   {
+    foreach ($charts as $c) {
+      if (!$c instanceof Google_Service_Sheets_EmbeddedChart) {
+        throw new InvalidArgumentException('First argument to setCharts must be an array of Google_Service_Sheets_EmbeddedChart');
+      }
+    }
     $this->charts = $charts;
   }
   public function getCharts()
   {
     return $this->charts;
   }
-  public function setConditionalFormats($conditionalFormats)
+  public function setConditionalFormats(array $conditionalFormats)
   {
+    foreach ($conditionalFormats as $c) {
+      if (!$c instanceof Google_Service_Sheets_ConditionalFormatRule) {
+        throw new InvalidArgumentException('First argument to setConditionalFormats must be an array of Google_Service_Sheets_ConditionalFormatRule');
+      }
+    }
     $this->conditionalFormats = $conditionalFormats;
   }
   public function getConditionalFormats()
   {
     return $this->conditionalFormats;
   }
-  public function setData($data)
+  public function setData(array $data)
   {
+    foreach ($data as $d) {
+      if (!$d instanceof Google_Service_Sheets_GridData) {
+        throw new InvalidArgumentException('First argument to setData must be an array of Google_Service_Sheets_GridData');
+      }
+    }
     $this->data = $data;
   }
   public function getData()
   {
     return $this->data;
   }
-  public function setFilterViews($filterViews)
+  public function setFilterViews(array $filterViews)
   {
+    foreach ($filterViews as $f) {
+      if (!$f instanceof Google_Service_Sheets_FilterView) {
+        throw new InvalidArgumentException('First argument to setFilterViews must be an array of Google_Service_Sheets_FilterView');
+      }
+    }
     $this->filterViews = $filterViews;
   }
   public function getFilterViews()
   {
     return $this->filterViews;
   }
-  public function setMerges($merges)
+  public function setMerges(array $merges)
   {
+    foreach ($merges as $m) {
+      if (!$m instanceof Google_Service_Sheets_GridRange) {
+        throw new InvalidArgumentException('First argument to setMerges must be an array of Google_Service_Sheets_GridRange');
+      }
+    }
     $this->merges = $merges;
   }
   public function getMerges()
@@ -91,8 +108,13 @@ class Google_Service_Sheets_Sheet extends Google_Collection
   {
     return $this->properties;
   }
-  public function setProtectedRanges($protectedRanges)
+  public function setProtectedRanges(array $protectedRanges)
   {
+    foreach ($protectedRanges as $p) {
+      if (!$p instanceof Google_Service_Sheets_ProtectedRange) {
+        throw new InvalidArgumentException('First argument to setProtectedRanges must be an array of Google_Service_Sheets_ProtectedRange');
+      }
+    }
     $this->protectedRanges = $protectedRanges;
   }
   public function getProtectedRanges()

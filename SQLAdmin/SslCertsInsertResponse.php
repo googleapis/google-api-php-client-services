@@ -17,13 +17,10 @@
 
 class Google_Service_SQLAdmin_SslCertsInsertResponse extends Google_Model
 {
-  protected $clientCertType = 'Google_Service_SQLAdmin_SslCertDetail';
-  protected $clientCertDataType = '';
+  public $clientCert;
   public $kind;
-  protected $operationType = 'Google_Service_SQLAdmin_Operation';
-  protected $operationDataType = '';
-  protected $serverCaCertType = 'Google_Service_SQLAdmin_SslCert';
-  protected $serverCaCertDataType = '';
+  public $operation;
+  public $serverCaCert;
 
   public function setClientCert(Google_Service_SQLAdmin_SslCertDetail $clientCert)
   {

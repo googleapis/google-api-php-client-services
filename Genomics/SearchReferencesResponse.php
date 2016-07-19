@@ -19,8 +19,7 @@ class Google_Service_Genomics_SearchReferencesResponse extends Google_Collection
 {
   protected $collection_key = 'references';
   public $nextPageToken;
-  protected $referencesType = 'Google_Service_Genomics_Reference';
-  protected $referencesDataType = 'array';
+  public $references;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Genomics_SearchReferencesResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setReferences($references)
+  public function setReferences(array $references)
   {
+    foreach ($references as $r) {
+      if (!$r instanceof Google_Service_Genomics_Reference) {
+        throw new InvalidArgumentException('First argument to setReferences must be an array of Google_Service_Genomics_Reference');
+      }
+    }
     $this->references = $references;
   }
   public function getReferences()

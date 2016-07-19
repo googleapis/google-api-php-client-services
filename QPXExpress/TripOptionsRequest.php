@@ -19,12 +19,10 @@ class Google_Service_QPXExpress_TripOptionsRequest extends Google_Collection
 {
   protected $collection_key = 'slice';
   public $maxPrice;
-  protected $passengersType = 'Google_Service_QPXExpress_PassengerCounts';
-  protected $passengersDataType = '';
+  public $passengers;
   public $refundable;
   public $saleCountry;
-  protected $sliceType = 'Google_Service_QPXExpress_SliceInput';
-  protected $sliceDataType = 'array';
+  public $slice;
   public $solutions;
   public $ticketingCountry;
 
@@ -60,8 +58,13 @@ class Google_Service_QPXExpress_TripOptionsRequest extends Google_Collection
   {
     return $this->saleCountry;
   }
-  public function setSlice($slice)
+  public function setSlice(array $slice)
   {
+    foreach ($slice as $s) {
+      if (!$s instanceof Google_Service_QPXExpress_SliceInput) {
+        throw new InvalidArgumentException('First argument to setSlice must be an array of Google_Service_QPXExpress_SliceInput');
+      }
+    }
     $this->slice = $slice;
   }
   public function getSlice()

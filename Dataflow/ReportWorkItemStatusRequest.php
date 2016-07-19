@@ -19,8 +19,7 @@ class Google_Service_Dataflow_ReportWorkItemStatusRequest extends Google_Collect
 {
   protected $collection_key = 'workItemStatuses';
   public $currentWorkerTime;
-  protected $workItemStatusesType = 'Google_Service_Dataflow_WorkItemStatus';
-  protected $workItemStatusesDataType = 'array';
+  public $workItemStatuses;
   public $workerId;
 
   public function setCurrentWorkerTime($currentWorkerTime)
@@ -31,8 +30,13 @@ class Google_Service_Dataflow_ReportWorkItemStatusRequest extends Google_Collect
   {
     return $this->currentWorkerTime;
   }
-  public function setWorkItemStatuses($workItemStatuses)
+  public function setWorkItemStatuses(array $workItemStatuses)
   {
+    foreach ($workItemStatuses as $w) {
+      if (!$w instanceof Google_Service_Dataflow_WorkItemStatus) {
+        throw new InvalidArgumentException('First argument to setWorkItemStatuses must be an array of Google_Service_Dataflow_WorkItemStatus');
+      }
+    }
     $this->workItemStatuses = $workItemStatuses;
   }
   public function getWorkItemStatuses()

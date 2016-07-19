@@ -19,10 +19,9 @@ class Google_Service_Vision_ImageContext extends Google_Collection
 {
   protected $collection_key = 'languageHints';
   public $languageHints;
-  protected $latLongRectType = 'Google_Service_Vision_LatLongRect';
-  protected $latLongRectDataType = '';
+  public $latLongRect;
 
-  public function setLanguageHints($languageHints)
+  public function setLanguageHints(array $languageHints)
   {
     $this->languageHints = $languageHints;
   }

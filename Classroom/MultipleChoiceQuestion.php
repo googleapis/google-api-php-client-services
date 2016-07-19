@@ -20,7 +20,7 @@ class Google_Service_Classroom_MultipleChoiceQuestion extends Google_Collection
   protected $collection_key = 'choices';
   public $choices;
 
-  public function setChoices($choices)
+  public function setChoices(array $choices)
   {
     $this->choices = $choices;
   }

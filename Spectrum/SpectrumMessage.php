@@ -19,8 +19,7 @@ class Google_Service_Spectrum_SpectrumMessage extends Google_Collection
 {
   protected $collection_key = 'frequencyRanges';
   public $bandwidth;
-  protected $frequencyRangesType = 'Google_Service_Spectrum_FrequencyRange';
-  protected $frequencyRangesDataType = 'array';
+  public $frequencyRanges;
 
   public function setBandwidth($bandwidth)
   {
@@ -30,8 +29,13 @@ class Google_Service_Spectrum_SpectrumMessage extends Google_Collection
   {
     return $this->bandwidth;
   }
-  public function setFrequencyRanges($frequencyRanges)
+  public function setFrequencyRanges(array $frequencyRanges)
   {
+    foreach ($frequencyRanges as $f) {
+      if (!$f instanceof Google_Service_Spectrum_FrequencyRange) {
+        throw new InvalidArgumentException('First argument to setFrequencyRanges must be an array of Google_Service_Spectrum_FrequencyRange');
+      }
+    }
     $this->frequencyRanges = $frequencyRanges;
   }
   public function getFrequencyRanges()

@@ -18,17 +18,18 @@
 class Google_Service_Freebase_ReconcileGet extends Google_Collection
 {
   protected $collection_key = 'warning';
-  protected $candidateType = 'Google_Service_Freebase_ReconcileCandidate';
-  protected $candidateDataType = 'array';
-  protected $costsType = 'Google_Service_Freebase_ReconcileGetCosts';
-  protected $costsDataType = '';
-  protected $matchType = 'Google_Service_Freebase_ReconcileCandidate';
-  protected $matchDataType = '';
-  protected $warningType = 'Google_Service_Freebase_ReconcileGetWarning';
-  protected $warningDataType = 'array';
+  public $candidate;
+  public $costs;
+  public $match;
+  public $warning;
 
-  public function setCandidate($candidate)
+  public function setCandidate(array $candidate)
   {
+    foreach ($candidate as $c) {
+      if (!$c instanceof Google_Service_Freebase_ReconcileCandidate) {
+        throw new InvalidArgumentException('First argument to setCandidate must be an array of Google_Service_Freebase_ReconcileCandidate');
+      }
+    }
     $this->candidate = $candidate;
   }
   public function getCandidate()
@@ -51,8 +52,13 @@ class Google_Service_Freebase_ReconcileGet extends Google_Collection
   {
     return $this->match;
   }
-  public function setWarning($warning)
+  public function setWarning(array $warning)
   {
+    foreach ($warning as $w) {
+      if (!$w instanceof Google_Service_Freebase_ReconcileGetWarning) {
+        throw new InvalidArgumentException('First argument to setWarning must be an array of Google_Service_Freebase_ReconcileGetWarning');
+      }
+    }
     $this->warning = $warning;
   }
   public function getWarning()

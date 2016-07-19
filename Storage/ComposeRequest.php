@@ -18,11 +18,9 @@
 class Google_Service_Storage_ComposeRequest extends Google_Collection
 {
   protected $collection_key = 'sourceObjects';
-  protected $destinationType = 'Google_Service_Storage_StorageObject';
-  protected $destinationDataType = '';
+  public $destination;
   public $kind;
-  protected $sourceObjectsType = 'Google_Service_Storage_ComposeRequestSourceObjects';
-  protected $sourceObjectsDataType = 'array';
+  public $sourceObjects;
 
   public function setDestination(Google_Service_Storage_StorageObject $destination)
   {
@@ -40,8 +38,13 @@ class Google_Service_Storage_ComposeRequest extends Google_Collection
   {
     return $this->kind;
   }
-  public function setSourceObjects($sourceObjects)
+  public function setSourceObjects(array $sourceObjects)
   {
+    foreach ($sourceObjects as $s) {
+      if (!$s instanceof Google_Service_Storage_ComposeRequestSourceObjects) {
+        throw new InvalidArgumentException('First argument to setSourceObjects must be an array of Google_Service_Storage_ComposeRequestSourceObjects');
+      }
+    }
     $this->sourceObjects = $sourceObjects;
   }
   public function getSourceObjects()

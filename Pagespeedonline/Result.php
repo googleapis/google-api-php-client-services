@@ -18,21 +18,16 @@
 class Google_Service_Pagespeedonline_Result extends Google_Collection
 {
   protected $collection_key = 'invalidRules';
-  protected $formattedResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResults';
-  protected $formattedResultsDataType = '';
+  public $formattedResults;
   public $id;
   public $invalidRules;
   public $kind;
-  protected $pageStatsType = 'Google_Service_Pagespeedonline_ResultPageStats';
-  protected $pageStatsDataType = '';
+  public $pageStats;
   public $responseCode;
-  protected $ruleGroupsType = 'Google_Service_Pagespeedonline_ResultRuleGroupsElement';
-  protected $ruleGroupsDataType = 'map';
-  protected $screenshotType = 'Google_Service_Pagespeedonline_PagespeedApiImageV2';
-  protected $screenshotDataType = '';
+  public $ruleGroups;
+  public $screenshot;
   public $title;
-  protected $versionType = 'Google_Service_Pagespeedonline_ResultVersion';
-  protected $versionDataType = '';
+  public $version;
 
   public function setFormattedResults(Google_Service_Pagespeedonline_ResultFormattedResults $formattedResults)
   {
@@ -50,7 +45,7 @@ class Google_Service_Pagespeedonline_Result extends Google_Collection
   {
     return $this->id;
   }
-  public function setInvalidRules($invalidRules)
+  public function setInvalidRules(array $invalidRules)
   {
     $this->invalidRules = $invalidRules;
   }
@@ -82,7 +77,7 @@ class Google_Service_Pagespeedonline_Result extends Google_Collection
   {
     return $this->responseCode;
   }
-  public function setRuleGroups($ruleGroups)
+  public function setRuleGroups(array $ruleGroups)
   {
     $this->ruleGroups = $ruleGroups;
   }

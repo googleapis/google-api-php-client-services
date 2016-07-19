@@ -18,11 +18,15 @@
 class Google_Service_Vision_BatchAnnotateImagesRequest extends Google_Collection
 {
   protected $collection_key = 'requests';
-  protected $requestsType = 'Google_Service_Vision_AnnotateImageRequest';
-  protected $requestsDataType = 'array';
+  public $requests;
 
-  public function setRequests($requests)
+  public function setRequests(array $requests)
   {
+    foreach ($requests as $r) {
+      if (!$r instanceof Google_Service_Vision_AnnotateImageRequest) {
+        throw new InvalidArgumentException('First argument to setRequests must be an array of Google_Service_Vision_AnnotateImageRequest');
+      }
+    }
     $this->requests = $requests;
   }
   public function getRequests()

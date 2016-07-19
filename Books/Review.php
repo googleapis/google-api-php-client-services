@@ -17,15 +17,13 @@
 
 class Google_Service_Books_Review extends Google_Model
 {
-  protected $authorType = 'Google_Service_Books_ReviewAuthor';
-  protected $authorDataType = '';
+  public $author;
   public $content;
   public $date;
   public $fullTextUrl;
   public $kind;
   public $rating;
-  protected $sourceType = 'Google_Service_Books_ReviewSource';
-  protected $sourceDataType = '';
+  public $source;
   public $title;
   public $type;
   public $volumeId;

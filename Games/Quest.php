@@ -29,8 +29,7 @@ class Google_Service_Games_Quest extends Google_Collection
   public $isDefaultIconUrl;
   public $kind;
   public $lastUpdatedTimestampMillis;
-  protected $milestonesType = 'Google_Service_Games_QuestMilestone';
-  protected $milestonesDataType = 'array';
+  public $milestones;
   public $name;
   public $notifyTimestampMillis;
   public $startTimestampMillis;
@@ -124,8 +123,13 @@ class Google_Service_Games_Quest extends Google_Collection
   {
     return $this->lastUpdatedTimestampMillis;
   }
-  public function setMilestones($milestones)
+  public function setMilestones(array $milestones)
   {
+    foreach ($milestones as $m) {
+      if (!$m instanceof Google_Service_Games_QuestMilestone) {
+        throw new InvalidArgumentException('First argument to setMilestones must be an array of Google_Service_Games_QuestMilestone');
+      }
+    }
     $this->milestones = $milestones;
   }
   public function getMilestones()

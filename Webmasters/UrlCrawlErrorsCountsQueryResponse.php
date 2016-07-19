@@ -18,11 +18,15 @@
 class Google_Service_Webmasters_UrlCrawlErrorsCountsQueryResponse extends Google_Collection
 {
   protected $collection_key = 'countPerTypes';
-  protected $countPerTypesType = 'Google_Service_Webmasters_UrlCrawlErrorCountsPerType';
-  protected $countPerTypesDataType = 'array';
+  public $countPerTypes;
 
-  public function setCountPerTypes($countPerTypes)
+  public function setCountPerTypes(array $countPerTypes)
   {
+    foreach ($countPerTypes as $c) {
+      if (!$c instanceof Google_Service_Webmasters_UrlCrawlErrorCountsPerType) {
+        throw new InvalidArgumentException('First argument to setCountPerTypes must be an array of Google_Service_Webmasters_UrlCrawlErrorCountsPerType');
+      }
+    }
     $this->countPerTypes = $countPerTypes;
   }
   public function getCountPerTypes()

@@ -22,7 +22,7 @@ class Google_Service_CivicInfo_GeographicDivision extends Google_Collection
   public $name;
   public $officeIndices;
 
-  public function setAlsoKnownAs($alsoKnownAs)
+  public function setAlsoKnownAs(array $alsoKnownAs)
   {
     $this->alsoKnownAs = $alsoKnownAs;
   }
@@ -38,7 +38,7 @@ class Google_Service_CivicInfo_GeographicDivision extends Google_Collection
   {
     return $this->name;
   }
-  public function setOfficeIndices($officeIndices)
+  public function setOfficeIndices(array $officeIndices)
   {
     $this->officeIndices = $officeIndices;
   }

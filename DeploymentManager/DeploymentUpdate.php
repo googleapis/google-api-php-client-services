@@ -18,12 +18,16 @@
 class Google_Service_DeploymentManager_DeploymentUpdate extends Google_Collection
 {
   protected $collection_key = 'labels';
-  protected $labelsType = 'Google_Service_DeploymentManager_DeploymentUpdateLabelEntry';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $manifest;
 
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_DeploymentManager_DeploymentUpdateLabelEntry) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_DeploymentManager_DeploymentUpdateLabelEntry');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()

@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListAccountUsersResponse extends Google_Collection
 {
   protected $collection_key = 'userAccess';
-  protected $userAccessType = 'Google_Service_TagManager_UserAccess';
-  protected $userAccessDataType = 'array';
+  public $userAccess;
 
-  public function setUserAccess($userAccess)
+  public function setUserAccess(array $userAccess)
   {
+    foreach ($userAccess as $u) {
+      if (!$u instanceof Google_Service_TagManager_UserAccess) {
+        throw new InvalidArgumentException('First argument to setUserAccess must be an array of Google_Service_TagManager_UserAccess');
+      }
+    }
     $this->userAccess = $userAccess;
   }
   public function getUserAccess()

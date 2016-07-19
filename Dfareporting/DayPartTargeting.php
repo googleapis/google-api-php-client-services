@@ -22,7 +22,7 @@ class Google_Service_Dfareporting_DayPartTargeting extends Google_Collection
   public $hoursOfDay;
   public $userLocalTime;
 
-  public function setDaysOfWeek($daysOfWeek)
+  public function setDaysOfWeek(array $daysOfWeek)
   {
     $this->daysOfWeek = $daysOfWeek;
   }
@@ -30,7 +30,7 @@ class Google_Service_Dfareporting_DayPartTargeting extends Google_Collection
   {
     return $this->daysOfWeek;
   }
-  public function setHoursOfDay($hoursOfDay)
+  public function setHoursOfDay(array $hoursOfDay)
   {
     $this->hoursOfDay = $hoursOfDay;
   }

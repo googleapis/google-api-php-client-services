@@ -18,28 +18,33 @@
 class Google_Service_Dfareporting_GeoTargeting extends Google_Collection
 {
   protected $collection_key = 'regions';
-  protected $citiesType = 'Google_Service_Dfareporting_City';
-  protected $citiesDataType = 'array';
-  protected $countriesType = 'Google_Service_Dfareporting_Country';
-  protected $countriesDataType = 'array';
+  public $cities;
+  public $countries;
   public $excludeCountries;
-  protected $metrosType = 'Google_Service_Dfareporting_Metro';
-  protected $metrosDataType = 'array';
-  protected $postalCodesType = 'Google_Service_Dfareporting_PostalCode';
-  protected $postalCodesDataType = 'array';
-  protected $regionsType = 'Google_Service_Dfareporting_Region';
-  protected $regionsDataType = 'array';
+  public $metros;
+  public $postalCodes;
+  public $regions;
 
-  public function setCities($cities)
+  public function setCities(array $cities)
   {
+    foreach ($cities as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_City) {
+        throw new InvalidArgumentException('First argument to setCities must be an array of Google_Service_Dfareporting_City');
+      }
+    }
     $this->cities = $cities;
   }
   public function getCities()
   {
     return $this->cities;
   }
-  public function setCountries($countries)
+  public function setCountries(array $countries)
   {
+    foreach ($countries as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_Country) {
+        throw new InvalidArgumentException('First argument to setCountries must be an array of Google_Service_Dfareporting_Country');
+      }
+    }
     $this->countries = $countries;
   }
   public function getCountries()
@@ -54,24 +59,39 @@ class Google_Service_Dfareporting_GeoTargeting extends Google_Collection
   {
     return $this->excludeCountries;
   }
-  public function setMetros($metros)
+  public function setMetros(array $metros)
   {
+    foreach ($metros as $m) {
+      if (!$m instanceof Google_Service_Dfareporting_Metro) {
+        throw new InvalidArgumentException('First argument to setMetros must be an array of Google_Service_Dfareporting_Metro');
+      }
+    }
     $this->metros = $metros;
   }
   public function getMetros()
   {
     return $this->metros;
   }
-  public function setPostalCodes($postalCodes)
+  public function setPostalCodes(array $postalCodes)
   {
+    foreach ($postalCodes as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_PostalCode) {
+        throw new InvalidArgumentException('First argument to setPostalCodes must be an array of Google_Service_Dfareporting_PostalCode');
+      }
+    }
     $this->postalCodes = $postalCodes;
   }
   public function getPostalCodes()
   {
     return $this->postalCodes;
   }
-  public function setRegions($regions)
+  public function setRegions(array $regions)
   {
+    foreach ($regions as $r) {
+      if (!$r instanceof Google_Service_Dfareporting_Region) {
+        throw new InvalidArgumentException('First argument to setRegions must be an array of Google_Service_Dfareporting_Region');
+      }
+    }
     $this->regions = $regions;
   }
   public function getRegions()

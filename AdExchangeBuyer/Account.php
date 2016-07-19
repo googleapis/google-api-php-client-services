@@ -18,8 +18,7 @@
 class Google_Service_AdExchangeBuyer_Account extends Google_Collection
 {
   protected $collection_key = 'bidderLocation';
-  protected $bidderLocationType = 'Google_Service_AdExchangeBuyer_AccountBidderLocation';
-  protected $bidderLocationDataType = 'array';
+  public $bidderLocation;
   public $cookieMatchingNid;
   public $cookieMatchingUrl;
   public $id;
@@ -28,8 +27,13 @@ class Google_Service_AdExchangeBuyer_Account extends Google_Collection
   public $maximumTotalQps;
   public $numberActiveCreatives;
 
-  public function setBidderLocation($bidderLocation)
+  public function setBidderLocation(array $bidderLocation)
   {
+    foreach ($bidderLocation as $b) {
+      if (!$b instanceof Google_Service_AdExchangeBuyer_AccountBidderLocation) {
+        throw new InvalidArgumentException('First argument to setBidderLocation must be an array of Google_Service_AdExchangeBuyer_AccountBidderLocation');
+      }
+    }
     $this->bidderLocation = $bidderLocation;
   }
   public function getBidderLocation()

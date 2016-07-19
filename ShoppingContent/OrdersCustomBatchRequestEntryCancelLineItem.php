@@ -17,8 +17,7 @@
 
 class Google_Service_ShoppingContent_OrdersCustomBatchRequestEntryCancelLineItem extends Google_Model
 {
-  protected $amountType = 'Google_Service_ShoppingContent_Price';
-  protected $amountDataType = '';
+  public $amount;
   public $lineItemId;
   public $quantity;
   public $reason;

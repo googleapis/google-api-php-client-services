@@ -19,8 +19,7 @@ class Google_Service_CivicInfo_Candidate extends Google_Collection
 {
   protected $collection_key = 'channels';
   public $candidateUrl;
-  protected $channelsType = 'Google_Service_CivicInfo_Channel';
-  protected $channelsDataType = 'array';
+  public $channels;
   public $email;
   public $name;
   public $orderOnBallot;
@@ -36,8 +35,13 @@ class Google_Service_CivicInfo_Candidate extends Google_Collection
   {
     return $this->candidateUrl;
   }
-  public function setChannels($channels)
+  public function setChannels(array $channels)
   {
+    foreach ($channels as $c) {
+      if (!$c instanceof Google_Service_CivicInfo_Channel) {
+        throw new InvalidArgumentException('First argument to setChannels must be an array of Google_Service_CivicInfo_Channel');
+      }
+    }
     $this->channels = $channels;
   }
   public function getChannels()

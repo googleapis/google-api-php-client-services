@@ -35,7 +35,7 @@ class Google_Service_ShoppingContent_OrderAddress extends Google_Collection
   {
     return $this->country;
   }
-  public function setFullAddress($fullAddress)
+  public function setFullAddress(array $fullAddress)
   {
     $this->fullAddress = $fullAddress;
   }
@@ -83,7 +83,7 @@ class Google_Service_ShoppingContent_OrderAddress extends Google_Collection
   {
     return $this->region;
   }
-  public function setStreetAddress($streetAddress)
+  public function setStreetAddress(array $streetAddress)
   {
     $this->streetAddress = $streetAddress;
   }

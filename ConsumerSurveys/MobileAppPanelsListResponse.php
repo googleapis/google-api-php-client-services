@@ -18,13 +18,10 @@
 class Google_Service_ConsumerSurveys_MobileAppPanelsListResponse extends Google_Collection
 {
   protected $collection_key = 'resources';
-  protected $pageInfoType = 'Google_Service_ConsumerSurveys_PageInfo';
-  protected $pageInfoDataType = '';
+  public $pageInfo;
   public $requestId;
-  protected $resourcesType = 'Google_Service_ConsumerSurveys_MobileAppPanel';
-  protected $resourcesDataType = 'array';
-  protected $tokenPaginationType = 'Google_Service_ConsumerSurveys_TokenPagination';
-  protected $tokenPaginationDataType = '';
+  public $resources;
+  public $tokenPagination;
 
   public function setPageInfo(Google_Service_ConsumerSurveys_PageInfo $pageInfo)
   {
@@ -42,8 +39,13 @@ class Google_Service_ConsumerSurveys_MobileAppPanelsListResponse extends Google_
   {
     return $this->requestId;
   }
-  public function setResources($resources)
+  public function setResources(array $resources)
   {
+    foreach ($resources as $r) {
+      if (!$r instanceof Google_Service_ConsumerSurveys_MobileAppPanel) {
+        throw new InvalidArgumentException('First argument to setResources must be an array of Google_Service_ConsumerSurveys_MobileAppPanel');
+      }
+    }
     $this->resources = $resources;
   }
   public function getResources()

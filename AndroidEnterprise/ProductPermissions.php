@@ -19,8 +19,7 @@ class Google_Service_AndroidEnterprise_ProductPermissions extends Google_Collect
 {
   protected $collection_key = 'permission';
   public $kind;
-  protected $permissionType = 'Google_Service_AndroidEnterprise_ProductPermission';
-  protected $permissionDataType = 'array';
+  public $permission;
   public $productId;
 
   public function setKind($kind)
@@ -31,8 +30,13 @@ class Google_Service_AndroidEnterprise_ProductPermissions extends Google_Collect
   {
     return $this->kind;
   }
-  public function setPermission($permission)
+  public function setPermission(array $permission)
   {
+    foreach ($permission as $p) {
+      if (!$p instanceof Google_Service_AndroidEnterprise_ProductPermission) {
+        throw new InvalidArgumentException('First argument to setPermission must be an array of Google_Service_AndroidEnterprise_ProductPermission');
+      }
+    }
     $this->permission = $permission;
   }
   public function getPermission()

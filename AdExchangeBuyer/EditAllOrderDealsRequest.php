@@ -18,15 +18,18 @@
 class Google_Service_AdExchangeBuyer_EditAllOrderDealsRequest extends Google_Collection
 {
   protected $collection_key = 'deals';
-  protected $dealsType = 'Google_Service_AdExchangeBuyer_MarketplaceDeal';
-  protected $dealsDataType = 'array';
-  protected $proposalType = 'Google_Service_AdExchangeBuyer_Proposal';
-  protected $proposalDataType = '';
+  public $deals;
+  public $proposal;
   public $proposalRevisionNumber;
   public $updateAction;
 
-  public function setDeals($deals)
+  public function setDeals(array $deals)
   {
+    foreach ($deals as $d) {
+      if (!$d instanceof Google_Service_AdExchangeBuyer_MarketplaceDeal) {
+        throw new InvalidArgumentException('First argument to setDeals must be an array of Google_Service_AdExchangeBuyer_MarketplaceDeal');
+      }
+    }
     $this->deals = $deals;
   }
   public function getDeals()

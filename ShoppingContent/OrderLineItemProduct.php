@@ -28,13 +28,11 @@ class Google_Service_ShoppingContent_OrderLineItemProduct extends Google_Collect
   public $itemGroupId;
   public $mpn;
   public $offerId;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
-  protected $priceDataType = '';
+  public $price;
   public $shownImage;
   public $targetCountry;
   public $title;
-  protected $variantAttributesType = 'Google_Service_ShoppingContent_OrderLineItemProductVariantAttribute';
-  protected $variantAttributesDataType = 'array';
+  public $variantAttributes;
 
   public function setBrand($brand)
   {
@@ -148,8 +146,13 @@ class Google_Service_ShoppingContent_OrderLineItemProduct extends Google_Collect
   {
     return $this->title;
   }
-  public function setVariantAttributes($variantAttributes)
+  public function setVariantAttributes(array $variantAttributes)
   {
+    foreach ($variantAttributes as $v) {
+      if (!$v instanceof Google_Service_ShoppingContent_OrderLineItemProductVariantAttribute) {
+        throw new InvalidArgumentException('First argument to setVariantAttributes must be an array of Google_Service_ShoppingContent_OrderLineItemProductVariantAttribute');
+      }
+    }
     $this->variantAttributes = $variantAttributes;
   }
   public function getVariantAttributes()

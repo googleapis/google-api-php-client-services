@@ -23,7 +23,7 @@ class Google_Service_Partners_LocalizedCompanyInfo extends Google_Collection
   public $languageCode;
   public $overview;
 
-  public function setCountryCodes($countryCodes)
+  public function setCountryCodes(array $countryCodes)
   {
     $this->countryCodes = $countryCodes;
   }

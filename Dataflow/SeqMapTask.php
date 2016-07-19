@@ -18,17 +18,20 @@
 class Google_Service_Dataflow_SeqMapTask extends Google_Collection
 {
   protected $collection_key = 'outputInfos';
-  protected $inputsType = 'Google_Service_Dataflow_SideInputInfo';
-  protected $inputsDataType = 'array';
+  public $inputs;
   public $name;
-  protected $outputInfosType = 'Google_Service_Dataflow_SeqMapTaskOutputInfo';
-  protected $outputInfosDataType = 'array';
+  public $outputInfos;
   public $stageName;
   public $systemName;
   public $userFn;
 
-  public function setInputs($inputs)
+  public function setInputs(array $inputs)
   {
+    foreach ($inputs as $i) {
+      if (!$i instanceof Google_Service_Dataflow_SideInputInfo) {
+        throw new InvalidArgumentException('First argument to setInputs must be an array of Google_Service_Dataflow_SideInputInfo');
+      }
+    }
     $this->inputs = $inputs;
   }
   public function getInputs()
@@ -43,8 +46,13 @@ class Google_Service_Dataflow_SeqMapTask extends Google_Collection
   {
     return $this->name;
   }
-  public function setOutputInfos($outputInfos)
+  public function setOutputInfos(array $outputInfos)
   {
+    foreach ($outputInfos as $o) {
+      if (!$o instanceof Google_Service_Dataflow_SeqMapTaskOutputInfo) {
+        throw new InvalidArgumentException('First argument to setOutputInfos must be an array of Google_Service_Dataflow_SeqMapTaskOutputInfo');
+      }
+    }
     $this->outputInfos = $outputInfos;
   }
   public function getOutputInfos()
@@ -67,7 +75,7 @@ class Google_Service_Dataflow_SeqMapTask extends Google_Collection
   {
     return $this->systemName;
   }
-  public function setUserFn($userFn)
+  public function setUserFn(array $userFn)
   {
     $this->userFn = $userFn;
   }

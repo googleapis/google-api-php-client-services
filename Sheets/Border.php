@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_Border extends Google_Model
 {
-  protected $colorType = 'Google_Service_Sheets_Color';
-  protected $colorDataType = '';
+  public $color;
   public $style;
   public $width;
 

@@ -18,20 +18,15 @@
 class Google_Service_Plus_ActivityObject extends Google_Collection
 {
   protected $collection_key = 'attachments';
-  protected $actorType = 'Google_Service_Plus_ActivityObjectActor';
-  protected $actorDataType = '';
-  protected $attachmentsType = 'Google_Service_Plus_ActivityObjectAttachments';
-  protected $attachmentsDataType = 'array';
+  public $actor;
+  public $attachments;
   public $content;
   public $id;
   public $objectType;
   public $originalContent;
-  protected $plusonersType = 'Google_Service_Plus_ActivityObjectPlusoners';
-  protected $plusonersDataType = '';
-  protected $repliesType = 'Google_Service_Plus_ActivityObjectReplies';
-  protected $repliesDataType = '';
-  protected $resharersType = 'Google_Service_Plus_ActivityObjectResharers';
-  protected $resharersDataType = '';
+  public $plusoners;
+  public $replies;
+  public $resharers;
   public $url;
 
   public function setActor(Google_Service_Plus_ActivityObjectActor $actor)
@@ -42,8 +37,13 @@ class Google_Service_Plus_ActivityObject extends Google_Collection
   {
     return $this->actor;
   }
-  public function setAttachments($attachments)
+  public function setAttachments(array $attachments)
   {
+    foreach ($attachments as $a) {
+      if (!$a instanceof Google_Service_Plus_ActivityObjectAttachments) {
+        throw new InvalidArgumentException('First argument to setAttachments must be an array of Google_Service_Plus_ActivityObjectAttachments');
+      }
+    }
     $this->attachments = $attachments;
   }
   public function getAttachments()

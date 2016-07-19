@@ -19,11 +19,9 @@ class Google_Service_Dfareporting_FloodlightActivityPublisherDynamicTag extends 
 {
   public $clickThrough;
   public $directorySiteId;
-  protected $dynamicTagType = 'Google_Service_Dfareporting_FloodlightActivityDynamicTag';
-  protected $dynamicTagDataType = '';
+  public $dynamicTag;
   public $siteId;
-  protected $siteIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $siteIdDimensionValueDataType = '';
+  public $siteIdDimensionValue;
   public $viewThrough;
 
   public function setClickThrough($clickThrough)

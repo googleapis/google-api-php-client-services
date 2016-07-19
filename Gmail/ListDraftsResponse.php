@@ -18,13 +18,17 @@
 class Google_Service_Gmail_ListDraftsResponse extends Google_Collection
 {
   protected $collection_key = 'drafts';
-  protected $draftsType = 'Google_Service_Gmail_Draft';
-  protected $draftsDataType = 'array';
+  public $drafts;
   public $nextPageToken;
   public $resultSizeEstimate;
 
-  public function setDrafts($drafts)
+  public function setDrafts(array $drafts)
   {
+    foreach ($drafts as $d) {
+      if (!$d instanceof Google_Service_Gmail_Draft) {
+        throw new InvalidArgumentException('First argument to setDrafts must be an array of Google_Service_Gmail_Draft');
+      }
+    }
     $this->drafts = $drafts;
   }
   public function getDrafts()

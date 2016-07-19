@@ -18,12 +18,16 @@
 class Google_Service_AndroidEnterprise_DevicesListResponse extends Google_Collection
 {
   protected $collection_key = 'device';
-  protected $deviceType = 'Google_Service_AndroidEnterprise_Device';
-  protected $deviceDataType = 'array';
+  public $device;
   public $kind;
 
-  public function setDevice($device)
+  public function setDevice(array $device)
   {
+    foreach ($device as $d) {
+      if (!$d instanceof Google_Service_AndroidEnterprise_Device) {
+        throw new InvalidArgumentException('First argument to setDevice must be an array of Google_Service_AndroidEnterprise_Device');
+      }
+    }
     $this->device = $device;
   }
   public function getDevice()

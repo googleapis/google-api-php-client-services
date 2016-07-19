@@ -31,7 +31,7 @@ class Google_Service_Storage_BucketCors extends Google_Collection
   {
     return $this->maxAgeSeconds;
   }
-  public function setMethod($method)
+  public function setMethod(array $method)
   {
     $this->method = $method;
   }
@@ -39,7 +39,7 @@ class Google_Service_Storage_BucketCors extends Google_Collection
   {
     return $this->method;
   }
-  public function setOrigin($origin)
+  public function setOrigin(array $origin)
   {
     $this->origin = $origin;
   }
@@ -47,7 +47,7 @@ class Google_Service_Storage_BucketCors extends Google_Collection
   {
     return $this->origin;
   }
-  public function setResponseHeader($responseHeader)
+  public function setResponseHeader(array $responseHeader)
   {
     $this->responseHeader = $responseHeader;
   }

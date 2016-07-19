@@ -17,10 +17,8 @@
 
 class Google_Service_Books_Dictlayerdata extends Google_Model
 {
-  protected $commonType = 'Google_Service_Books_DictlayerdataCommon';
-  protected $commonDataType = '';
-  protected $dictType = 'Google_Service_Books_DictlayerdataDict';
-  protected $dictDataType = '';
+  public $common;
+  public $dict;
   public $kind;
 
   public function setCommon(Google_Service_Books_DictlayerdataCommon $common)

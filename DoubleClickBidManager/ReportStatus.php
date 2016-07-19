@@ -17,8 +17,7 @@
 
 class Google_Service_DoubleClickBidManager_ReportStatus extends Google_Model
 {
-  protected $failureType = 'Google_Service_DoubleClickBidManager_ReportFailure';
-  protected $failureDataType = '';
+  public $failure;
   public $finishTimeMs;
   public $format;
   public $state;

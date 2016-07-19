@@ -22,10 +22,8 @@ class Google_Service_Dataproc_ClusterOperationMetadata extends Google_Collection
   public $clusterUuid;
   public $description;
   public $operationType;
-  protected $statusType = 'Google_Service_Dataproc_ClusterOperationStatus';
-  protected $statusDataType = '';
-  protected $statusHistoryType = 'Google_Service_Dataproc_ClusterOperationStatus';
-  protected $statusHistoryDataType = 'array';
+  public $status;
+  public $statusHistory;
 
   public function setClusterName($clusterName)
   {
@@ -67,8 +65,13 @@ class Google_Service_Dataproc_ClusterOperationMetadata extends Google_Collection
   {
     return $this->status;
   }
-  public function setStatusHistory($statusHistory)
+  public function setStatusHistory(array $statusHistory)
   {
+    foreach ($statusHistory as $s) {
+      if (!$s instanceof Google_Service_Dataproc_ClusterOperationStatus) {
+        throw new InvalidArgumentException('First argument to setStatusHistory must be an array of Google_Service_Dataproc_ClusterOperationStatus');
+      }
+    }
     $this->statusHistory = $statusHistory;
   }
   public function getStatusHistory()

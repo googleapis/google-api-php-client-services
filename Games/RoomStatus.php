@@ -18,11 +18,9 @@
 class Google_Service_Games_RoomStatus extends Google_Collection
 {
   protected $collection_key = 'participants';
-  protected $autoMatchingStatusType = 'Google_Service_Games_RoomAutoMatchStatus';
-  protected $autoMatchingStatusDataType = '';
+  public $autoMatchingStatus;
   public $kind;
-  protected $participantsType = 'Google_Service_Games_RoomParticipant';
-  protected $participantsDataType = 'array';
+  public $participants;
   public $roomId;
   public $status;
   public $statusVersion;
@@ -43,8 +41,13 @@ class Google_Service_Games_RoomStatus extends Google_Collection
   {
     return $this->kind;
   }
-  public function setParticipants($participants)
+  public function setParticipants(array $participants)
   {
+    foreach ($participants as $p) {
+      if (!$p instanceof Google_Service_Games_RoomParticipant) {
+        throw new InvalidArgumentException('First argument to setParticipants must be an array of Google_Service_Games_RoomParticipant');
+      }
+    }
     $this->participants = $participants;
   }
   public function getParticipants()

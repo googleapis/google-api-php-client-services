@@ -18,14 +18,17 @@
 class Google_Service_Partners_ListCompaniesResponse extends Google_Collection
 {
   protected $collection_key = 'companies';
-  protected $companiesType = 'Google_Service_Partners_Company';
-  protected $companiesDataType = 'array';
+  public $companies;
   public $nextPageToken;
-  protected $responseMetadataType = 'Google_Service_Partners_ResponseMetadata';
-  protected $responseMetadataDataType = '';
+  public $responseMetadata;
 
-  public function setCompanies($companies)
+  public function setCompanies(array $companies)
   {
+    foreach ($companies as $c) {
+      if (!$c instanceof Google_Service_Partners_Company) {
+        throw new InvalidArgumentException('First argument to setCompanies must be an array of Google_Service_Partners_Company');
+      }
+    }
     $this->companies = $companies;
   }
   public function getCompanies()

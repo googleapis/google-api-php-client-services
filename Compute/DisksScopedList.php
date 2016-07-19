@@ -18,13 +18,16 @@
 class Google_Service_Compute_DisksScopedList extends Google_Collection
 {
   protected $collection_key = 'disks';
-  protected $disksType = 'Google_Service_Compute_Disk';
-  protected $disksDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_DisksScopedListWarning';
-  protected $warningDataType = '';
+  public $disks;
+  public $warning;
 
-  public function setDisks($disks)
+  public function setDisks(array $disks)
   {
+    foreach ($disks as $d) {
+      if (!$d instanceof Google_Service_Compute_Disk) {
+        throw new InvalidArgumentException('First argument to setDisks must be an array of Google_Service_Compute_Disk');
+      }
+    }
     $this->disks = $disks;
   }
   public function getDisks()

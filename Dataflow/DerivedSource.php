@@ -18,8 +18,7 @@
 class Google_Service_Dataflow_DerivedSource extends Google_Model
 {
   public $derivationMode;
-  protected $sourceType = 'Google_Service_Dataflow_Source';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setDerivationMode($derivationMode)
   {

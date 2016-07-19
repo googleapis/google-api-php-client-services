@@ -19,8 +19,7 @@ class Google_Service_Datastore_CommitResponse extends Google_Collection
 {
   protected $collection_key = 'mutationResults';
   public $indexUpdates;
-  protected $mutationResultsType = 'Google_Service_Datastore_MutationResult';
-  protected $mutationResultsDataType = 'array';
+  public $mutationResults;
 
   public function setIndexUpdates($indexUpdates)
   {
@@ -30,8 +29,13 @@ class Google_Service_Datastore_CommitResponse extends Google_Collection
   {
     return $this->indexUpdates;
   }
-  public function setMutationResults($mutationResults)
+  public function setMutationResults(array $mutationResults)
   {
+    foreach ($mutationResults as $m) {
+      if (!$m instanceof Google_Service_Datastore_MutationResult) {
+        throw new InvalidArgumentException('First argument to setMutationResults must be an array of Google_Service_Datastore_MutationResult');
+      }
+    }
     $this->mutationResults = $mutationResults;
   }
   public function getMutationResults()

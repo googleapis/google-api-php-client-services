@@ -18,16 +18,12 @@
 class Google_Service_AndroidPublisher_InAppProduct extends Google_Model
 {
   public $defaultLanguage;
-  protected $defaultPriceType = 'Google_Service_AndroidPublisher_Price';
-  protected $defaultPriceDataType = '';
-  protected $listingsType = 'Google_Service_AndroidPublisher_InAppProductListing';
-  protected $listingsDataType = 'map';
+  public $defaultPrice;
+  public $listings;
   public $packageName;
-  protected $pricesType = 'Google_Service_AndroidPublisher_Price';
-  protected $pricesDataType = 'map';
+  public $prices;
   public $purchaseType;
-  protected $seasonType = 'Google_Service_AndroidPublisher_Season';
-  protected $seasonDataType = '';
+  public $season;
   public $sku;
   public $status;
   public $subscriptionPeriod;
@@ -49,7 +45,7 @@ class Google_Service_AndroidPublisher_InAppProduct extends Google_Model
   {
     return $this->defaultPrice;
   }
-  public function setListings($listings)
+  public function setListings(array $listings)
   {
     $this->listings = $listings;
   }
@@ -65,7 +61,7 @@ class Google_Service_AndroidPublisher_InAppProduct extends Google_Model
   {
     return $this->packageName;
   }
-  public function setPrices($prices)
+  public function setPrices(array $prices)
   {
     $this->prices = $prices;
   }

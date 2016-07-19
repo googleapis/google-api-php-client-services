@@ -26,11 +26,9 @@ class Google_Service_Compute_Snapshot extends Google_Collection
   public $licenses;
   public $name;
   public $selfLink;
-  protected $snapshotEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $snapshotEncryptionKeyDataType = '';
+  public $snapshotEncryptionKey;
   public $sourceDisk;
-  protected $sourceDiskEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $sourceDiskEncryptionKeyDataType = '';
+  public $sourceDiskEncryptionKey;
   public $sourceDiskId;
   public $status;
   public $storageBytes;
@@ -76,7 +74,7 @@ class Google_Service_Compute_Snapshot extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLicenses($licenses)
+  public function setLicenses(array $licenses)
   {
     $this->licenses = $licenses;
   }

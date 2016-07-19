@@ -18,13 +18,10 @@
 class Google_Service_Monitoring_TimeSeries extends Google_Collection
 {
   protected $collection_key = 'points';
-  protected $metricType = 'Google_Service_Monitoring_Metric';
-  protected $metricDataType = '';
+  public $metric;
   public $metricKind;
-  protected $pointsType = 'Google_Service_Monitoring_Point';
-  protected $pointsDataType = 'array';
-  protected $resourceType = 'Google_Service_Monitoring_MonitoredResource';
-  protected $resourceDataType = '';
+  public $points;
+  public $resource;
   public $valueType;
 
   public function setMetric(Google_Service_Monitoring_Metric $metric)
@@ -43,8 +40,13 @@ class Google_Service_Monitoring_TimeSeries extends Google_Collection
   {
     return $this->metricKind;
   }
-  public function setPoints($points)
+  public function setPoints(array $points)
   {
+    foreach ($points as $p) {
+      if (!$p instanceof Google_Service_Monitoring_Point) {
+        throw new InvalidArgumentException('First argument to setPoints must be an array of Google_Service_Monitoring_Point');
+      }
+    }
     $this->points = $points;
   }
   public function getPoints()

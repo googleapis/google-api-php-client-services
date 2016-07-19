@@ -18,15 +18,18 @@
 class Google_Service_AdExchangeBuyer_TargetingValueCreativeSize extends Google_Collection
 {
   protected $collection_key = 'companionSizes';
-  protected $companionSizesType = 'Google_Service_AdExchangeBuyer_TargetingValueSize';
-  protected $companionSizesDataType = 'array';
+  public $companionSizes;
   public $creativeSizeType;
-  protected $sizeType = 'Google_Service_AdExchangeBuyer_TargetingValueSize';
-  protected $sizeDataType = '';
+  public $size;
   public $skippableAdType;
 
-  public function setCompanionSizes($companionSizes)
+  public function setCompanionSizes(array $companionSizes)
   {
+    foreach ($companionSizes as $c) {
+      if (!$c instanceof Google_Service_AdExchangeBuyer_TargetingValueSize) {
+        throw new InvalidArgumentException('First argument to setCompanionSizes must be an array of Google_Service_AdExchangeBuyer_TargetingValueSize');
+      }
+    }
     $this->companionSizes = $companionSizes;
   }
   public function getCompanionSizes()

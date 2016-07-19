@@ -19,8 +19,7 @@ class Google_Service_Genomics_SearchVariantsResponse extends Google_Collection
 {
   protected $collection_key = 'variants';
   public $nextPageToken;
-  protected $variantsType = 'Google_Service_Genomics_Variant';
-  protected $variantsDataType = 'array';
+  public $variants;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Genomics_SearchVariantsResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setVariants($variants)
+  public function setVariants(array $variants)
   {
+    foreach ($variants as $v) {
+      if (!$v instanceof Google_Service_Genomics_Variant) {
+        throw new InvalidArgumentException('First argument to setVariants must be an array of Google_Service_Genomics_Variant');
+      }
+    }
     $this->variants = $variants;
   }
   public function getVariants()

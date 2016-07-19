@@ -17,8 +17,7 @@
 
 class Google_Service_AndroidEnterprise_ProductsApproveRequest extends Google_Model
 {
-  protected $approvalUrlInfoType = 'Google_Service_AndroidEnterprise_ApprovalUrlInfo';
-  protected $approvalUrlInfoDataType = '';
+  public $approvalUrlInfo;
 
   public function setApprovalUrlInfo(Google_Service_AndroidEnterprise_ApprovalUrlInfo $approvalUrlInfo)
   {

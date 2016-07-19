@@ -18,24 +18,32 @@
 class Google_Service_Dataflow_TopologyConfig extends Google_Collection
 {
   protected $collection_key = 'dataDiskAssignments';
-  protected $computationsType = 'Google_Service_Dataflow_ComputationTopology';
-  protected $computationsDataType = 'array';
-  protected $dataDiskAssignmentsType = 'Google_Service_Dataflow_DataDiskAssignment';
-  protected $dataDiskAssignmentsDataType = 'array';
+  public $computations;
+  public $dataDiskAssignments;
   public $forwardingKeyBits;
   public $persistentStateVersion;
   public $userStageToComputationNameMap;
 
-  public function setComputations($computations)
+  public function setComputations(array $computations)
   {
+    foreach ($computations as $c) {
+      if (!$c instanceof Google_Service_Dataflow_ComputationTopology) {
+        throw new InvalidArgumentException('First argument to setComputations must be an array of Google_Service_Dataflow_ComputationTopology');
+      }
+    }
     $this->computations = $computations;
   }
   public function getComputations()
   {
     return $this->computations;
   }
-  public function setDataDiskAssignments($dataDiskAssignments)
+  public function setDataDiskAssignments(array $dataDiskAssignments)
   {
+    foreach ($dataDiskAssignments as $d) {
+      if (!$d instanceof Google_Service_Dataflow_DataDiskAssignment) {
+        throw new InvalidArgumentException('First argument to setDataDiskAssignments must be an array of Google_Service_Dataflow_DataDiskAssignment');
+      }
+    }
     $this->dataDiskAssignments = $dataDiskAssignments;
   }
   public function getDataDiskAssignments()
@@ -58,7 +66,7 @@ class Google_Service_Dataflow_TopologyConfig extends Google_Collection
   {
     return $this->persistentStateVersion;
   }
-  public function setUserStageToComputationNameMap($userStageToComputationNameMap)
+  public function setUserStageToComputationNameMap(array $userStageToComputationNameMap)
   {
     $this->userStageToComputationNameMap = $userStageToComputationNameMap;
   }

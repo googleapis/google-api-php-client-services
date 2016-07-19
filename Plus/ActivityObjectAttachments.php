@@ -20,16 +20,12 @@ class Google_Service_Plus_ActivityObjectAttachments extends Google_Collection
   protected $collection_key = 'thumbnails';
   public $content;
   public $displayName;
-  protected $embedType = 'Google_Service_Plus_ActivityObjectAttachmentsEmbed';
-  protected $embedDataType = '';
-  protected $fullImageType = 'Google_Service_Plus_ActivityObjectAttachmentsFullImage';
-  protected $fullImageDataType = '';
+  public $embed;
+  public $fullImage;
   public $id;
-  protected $imageType = 'Google_Service_Plus_ActivityObjectAttachmentsImage';
-  protected $imageDataType = '';
+  public $image;
   public $objectType;
-  protected $thumbnailsType = 'Google_Service_Plus_ActivityObjectAttachmentsThumbnails';
-  protected $thumbnailsDataType = 'array';
+  public $thumbnails;
   public $url;
 
   public function setContent($content)
@@ -88,8 +84,13 @@ class Google_Service_Plus_ActivityObjectAttachments extends Google_Collection
   {
     return $this->objectType;
   }
-  public function setThumbnails($thumbnails)
+  public function setThumbnails(array $thumbnails)
   {
+    foreach ($thumbnails as $t) {
+      if (!$t instanceof Google_Service_Plus_ActivityObjectAttachmentsThumbnails) {
+        throw new InvalidArgumentException('First argument to setThumbnails must be an array of Google_Service_Plus_ActivityObjectAttachmentsThumbnails');
+      }
+    }
     $this->thumbnails = $thumbnails;
   }
   public function getThumbnails()

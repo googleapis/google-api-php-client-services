@@ -18,14 +18,17 @@
 class Google_Service_Logging_ListLogEntriesResponse extends Google_Collection
 {
   protected $collection_key = 'entries';
-  protected $entriesType = 'Google_Service_Logging_LogEntry';
-  protected $entriesDataType = 'array';
+  public $entries;
   public $nextPageToken;
-  protected $projectIdErrorsType = 'Google_Service_Logging_Status';
-  protected $projectIdErrorsDataType = 'map';
+  public $projectIdErrors;
 
-  public function setEntries($entries)
+  public function setEntries(array $entries)
   {
+    foreach ($entries as $e) {
+      if (!$e instanceof Google_Service_Logging_LogEntry) {
+        throw new InvalidArgumentException('First argument to setEntries must be an array of Google_Service_Logging_LogEntry');
+      }
+    }
     $this->entries = $entries;
   }
   public function getEntries()
@@ -40,7 +43,7 @@ class Google_Service_Logging_ListLogEntriesResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setProjectIdErrors($projectIdErrors)
+  public function setProjectIdErrors(array $projectIdErrors)
   {
     $this->projectIdErrors = $projectIdErrors;
   }

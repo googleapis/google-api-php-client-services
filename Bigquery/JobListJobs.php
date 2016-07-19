@@ -20,19 +20,14 @@ class Google_Service_Bigquery_JobListJobs extends Google_Model
   protected $internal_gapi_mappings = array(
         "userEmail" => "user_email",
   );
-  protected $configurationType = 'Google_Service_Bigquery_JobConfiguration';
-  protected $configurationDataType = '';
-  protected $errorResultType = 'Google_Service_Bigquery_ErrorProto';
-  protected $errorResultDataType = '';
+  public $configuration;
+  public $errorResult;
   public $id;
-  protected $jobReferenceType = 'Google_Service_Bigquery_JobReference';
-  protected $jobReferenceDataType = '';
+  public $jobReference;
   public $kind;
   public $state;
-  protected $statisticsType = 'Google_Service_Bigquery_JobStatistics';
-  protected $statisticsDataType = '';
-  protected $statusType = 'Google_Service_Bigquery_JobStatus';
-  protected $statusDataType = '';
+  public $statistics;
+  public $status;
   public $userEmail;
 
   public function setConfiguration(Google_Service_Bigquery_JobConfiguration $configuration)

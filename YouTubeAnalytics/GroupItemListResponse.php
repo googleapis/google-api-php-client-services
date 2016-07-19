@@ -19,8 +19,7 @@ class Google_Service_YouTubeAnalytics_GroupItemListResponse extends Google_Colle
 {
   protected $collection_key = 'items';
   public $etag;
-  protected $itemsType = 'Google_Service_YouTubeAnalytics_GroupItem';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
 
   public function setEtag($etag)
@@ -31,8 +30,13 @@ class Google_Service_YouTubeAnalytics_GroupItemListResponse extends Google_Colle
   {
     return $this->etag;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_YouTubeAnalytics_GroupItem) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_YouTubeAnalytics_GroupItem');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

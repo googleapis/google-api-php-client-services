@@ -18,12 +18,16 @@
 class Google_Service_Compute_BackendServiceGroupHealth extends Google_Collection
 {
   protected $collection_key = 'healthStatus';
-  protected $healthStatusType = 'Google_Service_Compute_HealthStatus';
-  protected $healthStatusDataType = 'array';
+  public $healthStatus;
   public $kind;
 
-  public function setHealthStatus($healthStatus)
+  public function setHealthStatus(array $healthStatus)
   {
+    foreach ($healthStatus as $h) {
+      if (!$h instanceof Google_Service_Compute_HealthStatus) {
+        throw new InvalidArgumentException('First argument to setHealthStatus must be an array of Google_Service_Compute_HealthStatus');
+      }
+    }
     $this->healthStatus = $healthStatus;
   }
   public function getHealthStatus()

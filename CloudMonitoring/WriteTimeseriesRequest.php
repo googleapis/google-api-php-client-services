@@ -19,10 +19,9 @@ class Google_Service_CloudMonitoring_WriteTimeseriesRequest extends Google_Colle
 {
   protected $collection_key = 'timeseries';
   public $commonLabels;
-  protected $timeseriesType = 'Google_Service_CloudMonitoring_TimeseriesPoint';
-  protected $timeseriesDataType = 'array';
+  public $timeseries;
 
-  public function setCommonLabels($commonLabels)
+  public function setCommonLabels(array $commonLabels)
   {
     $this->commonLabels = $commonLabels;
   }
@@ -30,8 +29,13 @@ class Google_Service_CloudMonitoring_WriteTimeseriesRequest extends Google_Colle
   {
     return $this->commonLabels;
   }
-  public function setTimeseries($timeseries)
+  public function setTimeseries(array $timeseries)
   {
+    foreach ($timeseries as $t) {
+      if (!$t instanceof Google_Service_CloudMonitoring_TimeseriesPoint) {
+        throw new InvalidArgumentException('First argument to setTimeseries must be an array of Google_Service_CloudMonitoring_TimeseriesPoint');
+      }
+    }
     $this->timeseries = $timeseries;
   }
   public function getTimeseries()

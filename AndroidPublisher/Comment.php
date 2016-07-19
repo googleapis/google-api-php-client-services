@@ -17,10 +17,8 @@
 
 class Google_Service_AndroidPublisher_Comment extends Google_Model
 {
-  protected $developerCommentType = 'Google_Service_AndroidPublisher_DeveloperComment';
-  protected $developerCommentDataType = '';
-  protected $userCommentType = 'Google_Service_AndroidPublisher_UserComment';
-  protected $userCommentDataType = '';
+  public $developerComment;
+  public $userComment;
 
   public function setDeveloperComment(Google_Service_AndroidPublisher_DeveloperComment $developerComment)
   {

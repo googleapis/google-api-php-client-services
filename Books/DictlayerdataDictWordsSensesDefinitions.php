@@ -19,8 +19,7 @@ class Google_Service_Books_DictlayerdataDictWordsSensesDefinitions extends Googl
 {
   protected $collection_key = 'examples';
   public $definition;
-  protected $examplesType = 'Google_Service_Books_DictlayerdataDictWordsSensesDefinitionsExamples';
-  protected $examplesDataType = 'array';
+  public $examples;
 
   public function setDefinition($definition)
   {
@@ -30,8 +29,13 @@ class Google_Service_Books_DictlayerdataDictWordsSensesDefinitions extends Googl
   {
     return $this->definition;
   }
-  public function setExamples($examples)
+  public function setExamples(array $examples)
   {
+    foreach ($examples as $e) {
+      if (!$e instanceof Google_Service_Books_DictlayerdataDictWordsSensesDefinitionsExamples) {
+        throw new InvalidArgumentException('First argument to setExamples must be an array of Google_Service_Books_DictlayerdataDictWordsSensesDefinitionsExamples');
+      }
+    }
     $this->examples = $examples;
   }
   public function getExamples()

@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListTagsResponse extends Google_Collection
 {
   protected $collection_key = 'tags';
-  protected $tagsType = 'Google_Service_TagManager_Tag';
-  protected $tagsDataType = 'array';
+  public $tags;
 
-  public function setTags($tags)
+  public function setTags(array $tags)
   {
+    foreach ($tags as $t) {
+      if (!$t instanceof Google_Service_TagManager_Tag) {
+        throw new InvalidArgumentException('First argument to setTags must be an array of Google_Service_TagManager_Tag');
+      }
+    }
     $this->tags = $tags;
   }
   public function getTags()

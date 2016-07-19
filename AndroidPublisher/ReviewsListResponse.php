@@ -18,12 +18,9 @@
 class Google_Service_AndroidPublisher_ReviewsListResponse extends Google_Collection
 {
   protected $collection_key = 'reviews';
-  protected $pageInfoType = 'Google_Service_AndroidPublisher_PageInfo';
-  protected $pageInfoDataType = '';
-  protected $reviewsType = 'Google_Service_AndroidPublisher_Review';
-  protected $reviewsDataType = 'array';
-  protected $tokenPaginationType = 'Google_Service_AndroidPublisher_TokenPagination';
-  protected $tokenPaginationDataType = '';
+  public $pageInfo;
+  public $reviews;
+  public $tokenPagination;
 
   public function setPageInfo(Google_Service_AndroidPublisher_PageInfo $pageInfo)
   {
@@ -33,8 +30,13 @@ class Google_Service_AndroidPublisher_ReviewsListResponse extends Google_Collect
   {
     return $this->pageInfo;
   }
-  public function setReviews($reviews)
+  public function setReviews(array $reviews)
   {
+    foreach ($reviews as $r) {
+      if (!$r instanceof Google_Service_AndroidPublisher_Review) {
+        throw new InvalidArgumentException('First argument to setReviews must be an array of Google_Service_AndroidPublisher_Review');
+      }
+    }
     $this->reviews = $reviews;
   }
   public function getReviews()

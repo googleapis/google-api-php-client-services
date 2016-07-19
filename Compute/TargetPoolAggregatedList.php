@@ -18,8 +18,7 @@
 class Google_Service_Compute_TargetPoolAggregatedList extends Google_Model
 {
   public $id;
-  protected $itemsType = 'Google_Service_Compute_TargetPoolsScopedList';
-  protected $itemsDataType = 'map';
+  public $items;
   public $kind;
   public $nextPageToken;
   public $selfLink;
@@ -32,7 +31,7 @@ class Google_Service_Compute_TargetPoolAggregatedList extends Google_Model
   {
     return $this->id;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
     $this->items = $items;
   }

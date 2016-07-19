@@ -18,12 +18,10 @@
 class Google_Service_ShoppingContent_OrderPromotionBenefit extends Google_Collection
 {
   protected $collection_key = 'offerIds';
-  protected $discountType = 'Google_Service_ShoppingContent_Price';
-  protected $discountDataType = '';
+  public $discount;
   public $offerIds;
   public $subType;
-  protected $taxImpactType = 'Google_Service_ShoppingContent_Price';
-  protected $taxImpactDataType = '';
+  public $taxImpact;
   public $type;
 
   public function setDiscount(Google_Service_ShoppingContent_Price $discount)
@@ -34,7 +32,7 @@ class Google_Service_ShoppingContent_OrderPromotionBenefit extends Google_Collec
   {
     return $this->discount;
   }
-  public function setOfferIds($offerIds)
+  public function setOfferIds(array $offerIds)
   {
     $this->offerIds = $offerIds;
   }

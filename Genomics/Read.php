@@ -20,16 +20,14 @@ class Google_Service_Genomics_Read extends Google_Collection
   protected $collection_key = 'alignedQuality';
   public $alignedQuality;
   public $alignedSequence;
-  protected $alignmentType = 'Google_Service_Genomics_LinearAlignment';
-  protected $alignmentDataType = '';
+  public $alignment;
   public $duplicateFragment;
   public $failedVendorQualityChecks;
   public $fragmentLength;
   public $fragmentName;
   public $id;
   public $info;
-  protected $nextMatePositionType = 'Google_Service_Genomics_Position';
-  protected $nextMatePositionDataType = '';
+  public $nextMatePosition;
   public $numberReads;
   public $properPlacement;
   public $readGroupId;
@@ -38,7 +36,7 @@ class Google_Service_Genomics_Read extends Google_Collection
   public $secondaryAlignment;
   public $supplementaryAlignment;
 
-  public function setAlignedQuality($alignedQuality)
+  public function setAlignedQuality(array $alignedQuality)
   {
     $this->alignedQuality = $alignedQuality;
   }
@@ -102,7 +100,7 @@ class Google_Service_Genomics_Read extends Google_Collection
   {
     return $this->id;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }

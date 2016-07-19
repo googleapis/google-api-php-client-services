@@ -19,8 +19,7 @@ class Google_Service_Books_Series extends Google_Collection
 {
   protected $collection_key = 'series';
   public $kind;
-  protected $seriesType = 'Google_Service_Books_SeriesSeries';
-  protected $seriesDataType = 'array';
+  public $series;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Books_Series extends Google_Collection
   {
     return $this->kind;
   }
-  public function setSeries($series)
+  public function setSeries(array $series)
   {
+    foreach ($series as $s) {
+      if (!$s instanceof Google_Service_Books_SeriesSeries) {
+        throw new InvalidArgumentException('First argument to setSeries must be an array of Google_Service_Books_SeriesSeries');
+      }
+    }
     $this->series = $series;
   }
   public function getSeries()

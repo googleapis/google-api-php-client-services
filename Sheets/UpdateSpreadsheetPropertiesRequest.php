@@ -18,8 +18,7 @@
 class Google_Service_Sheets_UpdateSpreadsheetPropertiesRequest extends Google_Model
 {
   public $fields;
-  protected $propertiesType = 'Google_Service_Sheets_SpreadsheetProperties';
-  protected $propertiesDataType = '';
+  public $properties;
 
   public function setFields($fields)
   {

@@ -18,10 +18,8 @@
 class Google_Service_AnalyticsReporting_SegmentFilter extends Google_Model
 {
   public $not;
-  protected $sequenceSegmentType = 'Google_Service_AnalyticsReporting_SequenceSegment';
-  protected $sequenceSegmentDataType = '';
-  protected $simpleSegmentType = 'Google_Service_AnalyticsReporting_SimpleSegment';
-  protected $simpleSegmentDataType = '';
+  public $sequenceSegment;
+  public $simpleSegment;
 
   public function setNot($not)
   {

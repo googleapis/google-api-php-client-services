@@ -19,12 +19,10 @@ class Google_Service_Iam_Rule extends Google_Collection
 {
   protected $collection_key = 'permissions';
   public $action;
-  protected $conditionsType = 'Google_Service_Iam_Condition';
-  protected $conditionsDataType = 'array';
+  public $conditions;
   public $description;
   public $in;
-  protected $logConfigType = 'Google_Service_Iam_LogConfig';
-  protected $logConfigDataType = 'array';
+  public $logConfig;
   public $notIn;
   public $permissions;
 
@@ -36,8 +34,13 @@ class Google_Service_Iam_Rule extends Google_Collection
   {
     return $this->action;
   }
-  public function setConditions($conditions)
+  public function setConditions(array $conditions)
   {
+    foreach ($conditions as $c) {
+      if (!$c instanceof Google_Service_Iam_Condition) {
+        throw new InvalidArgumentException('First argument to setConditions must be an array of Google_Service_Iam_Condition');
+      }
+    }
     $this->conditions = $conditions;
   }
   public function getConditions()
@@ -52,7 +55,7 @@ class Google_Service_Iam_Rule extends Google_Collection
   {
     return $this->description;
   }
-  public function setIn($in)
+  public function setIn(array $in)
   {
     $this->in = $in;
   }
@@ -60,15 +63,20 @@ class Google_Service_Iam_Rule extends Google_Collection
   {
     return $this->in;
   }
-  public function setLogConfig($logConfig)
+  public function setLogConfig(array $logConfig)
   {
+    foreach ($logConfig as $l) {
+      if (!$l instanceof Google_Service_Iam_LogConfig) {
+        throw new InvalidArgumentException('First argument to setLogConfig must be an array of Google_Service_Iam_LogConfig');
+      }
+    }
     $this->logConfig = $logConfig;
   }
   public function getLogConfig()
   {
     return $this->logConfig;
   }
-  public function setNotIn($notIn)
+  public function setNotIn(array $notIn)
   {
     $this->notIn = $notIn;
   }
@@ -76,7 +84,7 @@ class Google_Service_Iam_Rule extends Google_Collection
   {
     return $this->notIn;
   }
-  public function setPermissions($permissions)
+  public function setPermissions(array $permissions)
   {
     $this->permissions = $permissions;
   }

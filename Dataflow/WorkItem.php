@@ -23,24 +23,16 @@ class Google_Service_Dataflow_WorkItem extends Google_Collection
   public $initialReportIndex;
   public $jobId;
   public $leaseExpireTime;
-  protected $mapTaskType = 'Google_Service_Dataflow_MapTask';
-  protected $mapTaskDataType = '';
-  protected $packagesType = 'Google_Service_Dataflow_Package';
-  protected $packagesDataType = 'array';
+  public $mapTask;
+  public $packages;
   public $projectId;
   public $reportStatusInterval;
-  protected $seqMapTaskType = 'Google_Service_Dataflow_SeqMapTask';
-  protected $seqMapTaskDataType = '';
-  protected $shellTaskType = 'Google_Service_Dataflow_ShellTask';
-  protected $shellTaskDataType = '';
-  protected $sourceOperationTaskType = 'Google_Service_Dataflow_SourceOperationRequest';
-  protected $sourceOperationTaskDataType = '';
-  protected $streamingComputationTaskType = 'Google_Service_Dataflow_StreamingComputationTask';
-  protected $streamingComputationTaskDataType = '';
-  protected $streamingConfigTaskType = 'Google_Service_Dataflow_StreamingConfigTask';
-  protected $streamingConfigTaskDataType = '';
-  protected $streamingSetupTaskType = 'Google_Service_Dataflow_StreamingSetupTask';
-  protected $streamingSetupTaskDataType = '';
+  public $seqMapTask;
+  public $shellTask;
+  public $sourceOperationTask;
+  public $streamingComputationTask;
+  public $streamingConfigTask;
+  public $streamingSetupTask;
 
   public function setConfiguration($configuration)
   {
@@ -90,8 +82,13 @@ class Google_Service_Dataflow_WorkItem extends Google_Collection
   {
     return $this->mapTask;
   }
-  public function setPackages($packages)
+  public function setPackages(array $packages)
   {
+    foreach ($packages as $p) {
+      if (!$p instanceof Google_Service_Dataflow_Package) {
+        throw new InvalidArgumentException('First argument to setPackages must be an array of Google_Service_Dataflow_Package');
+      }
+    }
     $this->packages = $packages;
   }
   public function getPackages()

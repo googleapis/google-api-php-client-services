@@ -18,8 +18,7 @@
 class Google_Service_CloudDebugger_CloudWorkspaceSourceContext extends Google_Model
 {
   public $snapshotId;
-  protected $workspaceIdType = 'Google_Service_CloudDebugger_CloudWorkspaceId';
-  protected $workspaceIdDataType = '';
+  public $workspaceId;
 
   public function setSnapshotId($snapshotId)
   {

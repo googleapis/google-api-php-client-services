@@ -18,11 +18,15 @@
 class Google_Service_Datastore_ArrayValue extends Google_Collection
 {
   protected $collection_key = 'values';
-  protected $valuesType = 'Google_Service_Datastore_Value';
-  protected $valuesDataType = 'array';
+  public $values;
 
-  public function setValues($values)
+  public function setValues(array $values)
   {
+    foreach ($values as $v) {
+      if (!$v instanceof Google_Service_Datastore_Value) {
+        throw new InvalidArgumentException('First argument to setValues must be an array of Google_Service_Datastore_Value');
+      }
+    }
     $this->values = $values;
   }
   public function getValues()

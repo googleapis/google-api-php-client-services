@@ -18,11 +18,15 @@
 class Google_Service_YouTube_LiveBroadcastTopicDetails extends Google_Collection
 {
   protected $collection_key = 'topics';
-  protected $topicsType = 'Google_Service_YouTube_LiveBroadcastTopic';
-  protected $topicsDataType = 'array';
+  public $topics;
 
-  public function setTopics($topics)
+  public function setTopics(array $topics)
   {
+    foreach ($topics as $t) {
+      if (!$t instanceof Google_Service_YouTube_LiveBroadcastTopic) {
+        throw new InvalidArgumentException('First argument to setTopics must be an array of Google_Service_YouTube_LiveBroadcastTopic');
+      }
+    }
     $this->topics = $topics;
   }
   public function getTopics()

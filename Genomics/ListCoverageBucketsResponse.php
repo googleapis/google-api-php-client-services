@@ -19,8 +19,7 @@ class Google_Service_Genomics_ListCoverageBucketsResponse extends Google_Collect
 {
   protected $collection_key = 'coverageBuckets';
   public $bucketWidth;
-  protected $coverageBucketsType = 'Google_Service_Genomics_CoverageBucket';
-  protected $coverageBucketsDataType = 'array';
+  public $coverageBuckets;
   public $nextPageToken;
 
   public function setBucketWidth($bucketWidth)
@@ -31,8 +30,13 @@ class Google_Service_Genomics_ListCoverageBucketsResponse extends Google_Collect
   {
     return $this->bucketWidth;
   }
-  public function setCoverageBuckets($coverageBuckets)
+  public function setCoverageBuckets(array $coverageBuckets)
   {
+    foreach ($coverageBuckets as $c) {
+      if (!$c instanceof Google_Service_Genomics_CoverageBucket) {
+        throw new InvalidArgumentException('First argument to setCoverageBuckets must be an array of Google_Service_Genomics_CoverageBucket');
+      }
+    }
     $this->coverageBuckets = $coverageBuckets;
   }
   public function getCoverageBuckets()

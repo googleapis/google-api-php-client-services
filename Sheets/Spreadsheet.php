@@ -18,16 +18,18 @@
 class Google_Service_Sheets_Spreadsheet extends Google_Collection
 {
   protected $collection_key = 'sheets';
-  protected $namedRangesType = 'Google_Service_Sheets_NamedRange';
-  protected $namedRangesDataType = 'array';
-  protected $propertiesType = 'Google_Service_Sheets_SpreadsheetProperties';
-  protected $propertiesDataType = '';
-  protected $sheetsType = 'Google_Service_Sheets_Sheet';
-  protected $sheetsDataType = 'array';
+  public $namedRanges;
+  public $properties;
+  public $sheets;
   public $spreadsheetId;
 
-  public function setNamedRanges($namedRanges)
+  public function setNamedRanges(array $namedRanges)
   {
+    foreach ($namedRanges as $n) {
+      if (!$n instanceof Google_Service_Sheets_NamedRange) {
+        throw new InvalidArgumentException('First argument to setNamedRanges must be an array of Google_Service_Sheets_NamedRange');
+      }
+    }
     $this->namedRanges = $namedRanges;
   }
   public function getNamedRanges()
@@ -42,8 +44,13 @@ class Google_Service_Sheets_Spreadsheet extends Google_Collection
   {
     return $this->properties;
   }
-  public function setSheets($sheets)
+  public function setSheets(array $sheets)
   {
+    foreach ($sheets as $s) {
+      if (!$s instanceof Google_Service_Sheets_Sheet) {
+        throw new InvalidArgumentException('First argument to setSheets must be an array of Google_Service_Sheets_Sheet');
+      }
+    }
     $this->sheets = $sheets;
   }
   public function getSheets()

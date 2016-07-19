@@ -18,20 +18,14 @@
 class Google_Service_ShoppingContent_TestOrder extends Google_Collection
 {
   protected $collection_key = 'promotions';
-  protected $customerType = 'Google_Service_ShoppingContent_TestOrderCustomer';
-  protected $customerDataType = '';
+  public $customer;
   public $kind;
-  protected $lineItemsType = 'Google_Service_ShoppingContent_TestOrderLineItem';
-  protected $lineItemsDataType = 'array';
-  protected $paymentMethodType = 'Google_Service_ShoppingContent_TestOrderPaymentMethod';
-  protected $paymentMethodDataType = '';
+  public $lineItems;
+  public $paymentMethod;
   public $predefinedDeliveryAddress;
-  protected $promotionsType = 'Google_Service_ShoppingContent_OrderPromotion';
-  protected $promotionsDataType = 'array';
-  protected $shippingCostType = 'Google_Service_ShoppingContent_Price';
-  protected $shippingCostDataType = '';
-  protected $shippingCostTaxType = 'Google_Service_ShoppingContent_Price';
-  protected $shippingCostTaxDataType = '';
+  public $promotions;
+  public $shippingCost;
+  public $shippingCostTax;
   public $shippingOption;
 
   public function setCustomer(Google_Service_ShoppingContent_TestOrderCustomer $customer)
@@ -50,8 +44,13 @@ class Google_Service_ShoppingContent_TestOrder extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLineItems($lineItems)
+  public function setLineItems(array $lineItems)
   {
+    foreach ($lineItems as $l) {
+      if (!$l instanceof Google_Service_ShoppingContent_TestOrderLineItem) {
+        throw new InvalidArgumentException('First argument to setLineItems must be an array of Google_Service_ShoppingContent_TestOrderLineItem');
+      }
+    }
     $this->lineItems = $lineItems;
   }
   public function getLineItems()
@@ -74,8 +73,13 @@ class Google_Service_ShoppingContent_TestOrder extends Google_Collection
   {
     return $this->predefinedDeliveryAddress;
   }
-  public function setPromotions($promotions)
+  public function setPromotions(array $promotions)
   {
+    foreach ($promotions as $p) {
+      if (!$p instanceof Google_Service_ShoppingContent_OrderPromotion) {
+        throw new InvalidArgumentException('First argument to setPromotions must be an array of Google_Service_ShoppingContent_OrderPromotion');
+      }
+    }
     $this->promotions = $promotions;
   }
   public function getPromotions()

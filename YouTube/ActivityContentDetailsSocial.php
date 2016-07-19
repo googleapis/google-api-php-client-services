@@ -20,8 +20,7 @@ class Google_Service_YouTube_ActivityContentDetailsSocial extends Google_Model
   public $author;
   public $imageUrl;
   public $referenceUrl;
-  protected $resourceIdType = 'Google_Service_YouTube_ResourceId';
-  protected $resourceIdDataType = '';
+  public $resourceId;
   public $type;
 
   public function setAuthor($author)

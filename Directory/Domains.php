@@ -19,8 +19,7 @@ class Google_Service_Directory_Domains extends Google_Collection
 {
   protected $collection_key = 'domainAliases';
   public $creationTime;
-  protected $domainAliasesType = 'Google_Service_Directory_DomainAlias';
-  protected $domainAliasesDataType = 'array';
+  public $domainAliases;
   public $domainName;
   public $etag;
   public $isPrimary;
@@ -35,8 +34,13 @@ class Google_Service_Directory_Domains extends Google_Collection
   {
     return $this->creationTime;
   }
-  public function setDomainAliases($domainAliases)
+  public function setDomainAliases(array $domainAliases)
   {
+    foreach ($domainAliases as $d) {
+      if (!$d instanceof Google_Service_Directory_DomainAlias) {
+        throw new InvalidArgumentException('First argument to setDomainAliases must be an array of Google_Service_Directory_DomainAlias');
+      }
+    }
     $this->domainAliases = $domainAliases;
   }
   public function getDomainAliases()

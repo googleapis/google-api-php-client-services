@@ -19,8 +19,7 @@ class Google_Service_ToolResults_ListStepsResponse extends Google_Collection
 {
   protected $collection_key = 'steps';
   public $nextPageToken;
-  protected $stepsType = 'Google_Service_ToolResults_Step';
-  protected $stepsDataType = 'array';
+  public $steps;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_ToolResults_ListStepsResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setSteps($steps)
+  public function setSteps(array $steps)
   {
+    foreach ($steps as $s) {
+      if (!$s instanceof Google_Service_ToolResults_Step) {
+        throw new InvalidArgumentException('First argument to setSteps must be an array of Google_Service_ToolResults_Step');
+      }
+    }
     $this->steps = $steps;
   }
   public function getSteps()

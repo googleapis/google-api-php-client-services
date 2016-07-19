@@ -17,17 +17,12 @@
 
 class Google_Service_Dfareporting_CompatibleFields extends Google_Model
 {
-  protected $crossDimensionReachReportCompatibleFieldsType = 'Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields';
-  protected $crossDimensionReachReportCompatibleFieldsDataType = '';
-  protected $floodlightReportCompatibleFieldsType = 'Google_Service_Dfareporting_FloodlightReportCompatibleFields';
-  protected $floodlightReportCompatibleFieldsDataType = '';
+  public $crossDimensionReachReportCompatibleFields;
+  public $floodlightReportCompatibleFields;
   public $kind;
-  protected $pathToConversionReportCompatibleFieldsType = 'Google_Service_Dfareporting_PathToConversionReportCompatibleFields';
-  protected $pathToConversionReportCompatibleFieldsDataType = '';
-  protected $reachReportCompatibleFieldsType = 'Google_Service_Dfareporting_ReachReportCompatibleFields';
-  protected $reachReportCompatibleFieldsDataType = '';
-  protected $reportCompatibleFieldsType = 'Google_Service_Dfareporting_ReportCompatibleFields';
-  protected $reportCompatibleFieldsDataType = '';
+  public $pathToConversionReportCompatibleFields;
+  public $reachReportCompatibleFields;
+  public $reportCompatibleFields;
 
   public function setCrossDimensionReachReportCompatibleFields(Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields $crossDimensionReachReportCompatibleFields)
   {

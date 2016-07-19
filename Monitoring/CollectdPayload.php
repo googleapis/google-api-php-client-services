@@ -19,15 +19,13 @@ class Google_Service_Monitoring_CollectdPayload extends Google_Collection
 {
   protected $collection_key = 'values';
   public $endTime;
-  protected $metadataType = 'Google_Service_Monitoring_TypedValue';
-  protected $metadataDataType = 'map';
+  public $metadata;
   public $plugin;
   public $pluginInstance;
   public $startTime;
   public $type;
   public $typeInstance;
-  protected $valuesType = 'Google_Service_Monitoring_CollectdValue';
-  protected $valuesDataType = 'array';
+  public $values;
 
   public function setEndTime($endTime)
   {
@@ -37,7 +35,7 @@ class Google_Service_Monitoring_CollectdPayload extends Google_Collection
   {
     return $this->endTime;
   }
-  public function setMetadata($metadata)
+  public function setMetadata(array $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -85,8 +83,13 @@ class Google_Service_Monitoring_CollectdPayload extends Google_Collection
   {
     return $this->typeInstance;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
+    foreach ($values as $v) {
+      if (!$v instanceof Google_Service_Monitoring_CollectdValue) {
+        throw new InvalidArgumentException('First argument to setValues must be an array of Google_Service_Monitoring_CollectdValue');
+      }
+    }
     $this->values = $values;
   }
   public function getValues()

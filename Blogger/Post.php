@@ -18,24 +18,19 @@
 class Google_Service_Blogger_Post extends Google_Collection
 {
   protected $collection_key = 'labels';
-  protected $authorType = 'Google_Service_Blogger_PostAuthor';
-  protected $authorDataType = '';
-  protected $blogType = 'Google_Service_Blogger_PostBlog';
-  protected $blogDataType = '';
+  public $author;
+  public $blog;
   public $content;
   public $customMetaData;
   public $etag;
   public $id;
-  protected $imagesType = 'Google_Service_Blogger_PostImages';
-  protected $imagesDataType = 'array';
+  public $images;
   public $kind;
   public $labels;
-  protected $locationType = 'Google_Service_Blogger_PostLocation';
-  protected $locationDataType = '';
+  public $location;
   public $published;
   public $readerComments;
-  protected $repliesType = 'Google_Service_Blogger_PostReplies';
-  protected $repliesDataType = '';
+  public $replies;
   public $selfLink;
   public $status;
   public $title;
@@ -91,8 +86,13 @@ class Google_Service_Blogger_Post extends Google_Collection
   {
     return $this->id;
   }
-  public function setImages($images)
+  public function setImages(array $images)
   {
+    foreach ($images as $i) {
+      if (!$i instanceof Google_Service_Blogger_PostImages) {
+        throw new InvalidArgumentException('First argument to setImages must be an array of Google_Service_Blogger_PostImages');
+      }
+    }
     $this->images = $images;
   }
   public function getImages()
@@ -107,7 +107,7 @@ class Google_Service_Blogger_Post extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

@@ -18,11 +18,11 @@
 class Google_Service_Dataflow_PartialGroupByKeyInstruction extends Google_Collection
 {
   protected $collection_key = 'sideInputs';
-  protected $inputType = 'Google_Service_Dataflow_InstructionInput';
-  protected $inputDataType = '';
+  public $input;
   public $inputElementCodec;
-  protected $sideInputsType = 'Google_Service_Dataflow_SideInputInfo';
-  protected $sideInputsDataType = 'array';
+  public $originalCombineValuesInputStoreName;
+  public $originalCombineValuesStepName;
+  public $sideInputs;
   public $valueCombiningFn;
 
   public function setInput(Google_Service_Dataflow_InstructionInput $input)
@@ -33,7 +33,7 @@ class Google_Service_Dataflow_PartialGroupByKeyInstruction extends Google_Collec
   {
     return $this->input;
   }
-  public function setInputElementCodec($inputElementCodec)
+  public function setInputElementCodec(array $inputElementCodec)
   {
     $this->inputElementCodec = $inputElementCodec;
   }
@@ -41,15 +41,36 @@ class Google_Service_Dataflow_PartialGroupByKeyInstruction extends Google_Collec
   {
     return $this->inputElementCodec;
   }
-  public function setSideInputs($sideInputs)
+  public function setOriginalCombineValuesInputStoreName($originalCombineValuesInputStoreName)
   {
+    $this->originalCombineValuesInputStoreName = $originalCombineValuesInputStoreName;
+  }
+  public function getOriginalCombineValuesInputStoreName()
+  {
+    return $this->originalCombineValuesInputStoreName;
+  }
+  public function setOriginalCombineValuesStepName($originalCombineValuesStepName)
+  {
+    $this->originalCombineValuesStepName = $originalCombineValuesStepName;
+  }
+  public function getOriginalCombineValuesStepName()
+  {
+    return $this->originalCombineValuesStepName;
+  }
+  public function setSideInputs(array $sideInputs)
+  {
+    foreach ($sideInputs as $s) {
+      if (!$s instanceof Google_Service_Dataflow_SideInputInfo) {
+        throw new InvalidArgumentException('First argument to setSideInputs must be an array of Google_Service_Dataflow_SideInputInfo');
+      }
+    }
     $this->sideInputs = $sideInputs;
   }
   public function getSideInputs()
   {
     return $this->sideInputs;
   }
-  public function setValueCombiningFn($valueCombiningFn)
+  public function setValueCombiningFn(array $valueCombiningFn)
   {
     $this->valueCombiningFn = $valueCombiningFn;
   }

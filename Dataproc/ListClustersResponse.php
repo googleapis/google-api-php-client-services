@@ -18,12 +18,16 @@
 class Google_Service_Dataproc_ListClustersResponse extends Google_Collection
 {
   protected $collection_key = 'clusters';
-  protected $clustersType = 'Google_Service_Dataproc_Cluster';
-  protected $clustersDataType = 'array';
+  public $clusters;
   public $nextPageToken;
 
-  public function setClusters($clusters)
+  public function setClusters(array $clusters)
   {
+    foreach ($clusters as $c) {
+      if (!$c instanceof Google_Service_Dataproc_Cluster) {
+        throw new InvalidArgumentException('First argument to setClusters must be an array of Google_Service_Dataproc_Cluster');
+      }
+    }
     $this->clusters = $clusters;
   }
   public function getClusters()

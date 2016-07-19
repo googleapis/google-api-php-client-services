@@ -18,8 +18,7 @@
 class Google_Service_People_FieldMetadata extends Google_Model
 {
   public $primary;
-  protected $sourceType = 'Google_Service_People_Source';
-  protected $sourceDataType = '';
+  public $source;
   public $verified;
 
   public function setPrimary($primary)

@@ -18,11 +18,15 @@
 class Google_Service_Translate_TranslationsListResponse extends Google_Collection
 {
   protected $collection_key = 'translations';
-  protected $translationsType = 'Google_Service_Translate_TranslationsResource';
-  protected $translationsDataType = 'array';
+  public $translations;
 
-  public function setTranslations($translations)
+  public function setTranslations(array $translations)
   {
+    foreach ($translations as $t) {
+      if (!$t instanceof Google_Service_Translate_TranslationsResource) {
+        throw new InvalidArgumentException('First argument to setTranslations must be an array of Google_Service_Translate_TranslationsResource');
+      }
+    }
     $this->translations = $translations;
   }
   public function getTranslations()

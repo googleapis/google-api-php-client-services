@@ -17,8 +17,7 @@
 
 class Google_Service_Spectrum_PawsRegisterResponse extends Google_Model
 {
-  protected $databaseChangeType = 'Google_Service_Spectrum_DbUpdateSpec';
-  protected $databaseChangeDataType = '';
+  public $databaseChange;
   public $kind;
   public $type;
   public $version;

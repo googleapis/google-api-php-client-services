@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_OperatingSystemsListResponse extends Google_Co
 {
   protected $collection_key = 'operatingSystems';
   public $kind;
-  protected $operatingSystemsType = 'Google_Service_Dfareporting_OperatingSystem';
-  protected $operatingSystemsDataType = 'array';
+  public $operatingSystems;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_OperatingSystemsListResponse extends Google_Co
   {
     return $this->kind;
   }
-  public function setOperatingSystems($operatingSystems)
+  public function setOperatingSystems(array $operatingSystems)
   {
+    foreach ($operatingSystems as $o) {
+      if (!$o instanceof Google_Service_Dfareporting_OperatingSystem) {
+        throw new InvalidArgumentException('First argument to setOperatingSystems must be an array of Google_Service_Dfareporting_OperatingSystem');
+      }
+    }
     $this->operatingSystems = $operatingSystems;
   }
   public function getOperatingSystems()

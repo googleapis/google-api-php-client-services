@@ -18,13 +18,17 @@
 class Google_Service_Fusiontables_StyleFunctionGradient extends Google_Collection
 {
   protected $collection_key = 'colors';
-  protected $colorsType = 'Google_Service_Fusiontables_StyleFunctionGradientColors';
-  protected $colorsDataType = 'array';
+  public $colors;
   public $max;
   public $min;
 
-  public function setColors($colors)
+  public function setColors(array $colors)
   {
+    foreach ($colors as $c) {
+      if (!$c instanceof Google_Service_Fusiontables_StyleFunctionGradientColors) {
+        throw new InvalidArgumentException('First argument to setColors must be an array of Google_Service_Fusiontables_StyleFunctionGradientColors');
+      }
+    }
     $this->colors = $colors;
   }
   public function getColors()

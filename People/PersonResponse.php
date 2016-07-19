@@ -18,8 +18,7 @@
 class Google_Service_People_PersonResponse extends Google_Model
 {
   public $httpStatusCode;
-  protected $personType = 'Google_Service_People_Person';
-  protected $personDataType = '';
+  public $person;
   public $requestedResourceName;
 
   public function setHttpStatusCode($httpStatusCode)

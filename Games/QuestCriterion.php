@@ -17,13 +17,10 @@
 
 class Google_Service_Games_QuestCriterion extends Google_Model
 {
-  protected $completionContributionType = 'Google_Service_Games_QuestContribution';
-  protected $completionContributionDataType = '';
-  protected $currentContributionType = 'Google_Service_Games_QuestContribution';
-  protected $currentContributionDataType = '';
+  public $completionContribution;
+  public $currentContribution;
   public $eventId;
-  protected $initialPlayerProgressType = 'Google_Service_Games_QuestContribution';
-  protected $initialPlayerProgressDataType = '';
+  public $initialPlayerProgress;
   public $kind;
 
   public function setCompletionContribution(Google_Service_Games_QuestContribution $completionContribution)

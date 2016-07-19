@@ -20,7 +20,7 @@ class Google_Service_Genomics_ImportReadGroupSetsResponse extends Google_Collect
   protected $collection_key = 'readGroupSetIds';
   public $readGroupSetIds;
 
-  public function setReadGroupSetIds($readGroupSetIds)
+  public function setReadGroupSetIds(array $readGroupSetIds)
   {
     $this->readGroupSetIds = $readGroupSetIds;
   }

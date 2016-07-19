@@ -18,13 +18,16 @@
 class Google_Service_Prediction_AnalyzeDataDescription extends Google_Collection
 {
   protected $collection_key = 'features';
-  protected $featuresType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeatures';
-  protected $featuresDataType = 'array';
-  protected $outputFeatureType = 'Google_Service_Prediction_AnalyzeDataDescriptionOutputFeature';
-  protected $outputFeatureDataType = '';
+  public $features;
+  public $outputFeature;
 
-  public function setFeatures($features)
+  public function setFeatures(array $features)
   {
+    foreach ($features as $f) {
+      if (!$f instanceof Google_Service_Prediction_AnalyzeDataDescriptionFeatures) {
+        throw new InvalidArgumentException('First argument to setFeatures must be an array of Google_Service_Prediction_AnalyzeDataDescriptionFeatures');
+      }
+    }
     $this->features = $features;
   }
   public function getFeatures()

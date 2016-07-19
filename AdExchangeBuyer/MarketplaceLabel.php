@@ -19,8 +19,7 @@ class Google_Service_AdExchangeBuyer_MarketplaceLabel extends Google_Model
 {
   public $accountId;
   public $createTimeMs;
-  protected $deprecatedMarketplaceDealPartyType = 'Google_Service_AdExchangeBuyer_MarketplaceDealParty';
-  protected $deprecatedMarketplaceDealPartyDataType = '';
+  public $deprecatedMarketplaceDealParty;
   public $label;
 
   public function setAccountId($accountId)

@@ -18,8 +18,7 @@
 class Google_Service_Storage_StorageObject extends Google_Collection
 {
   protected $collection_key = 'acl';
-  protected $aclType = 'Google_Service_Storage_ObjectAccessControl';
-  protected $aclDataType = 'array';
+  public $acl;
   public $bucket;
   public $cacheControl;
   public $componentCount;
@@ -28,8 +27,7 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   public $contentLanguage;
   public $contentType;
   public $crc32c;
-  protected $customerEncryptionType = 'Google_Service_Storage_StorageObjectCustomerEncryption';
-  protected $customerEncryptionDataType = '';
+  public $customerEncryption;
   public $etag;
   public $generation;
   public $id;
@@ -39,8 +37,7 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   public $metadata;
   public $metageneration;
   public $name;
-  protected $ownerType = 'Google_Service_Storage_StorageObjectOwner';
-  protected $ownerDataType = '';
+  public $owner;
   public $selfLink;
   public $size;
   public $storageClass;
@@ -48,8 +45,13 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   public $timeDeleted;
   public $updated;
 
-  public function setAcl($acl)
+  public function setAcl(array $acl)
   {
+    foreach ($acl as $a) {
+      if (!$a instanceof Google_Service_Storage_ObjectAccessControl) {
+        throw new InvalidArgumentException('First argument to setAcl must be an array of Google_Service_Storage_ObjectAccessControl');
+      }
+    }
     $this->acl = $acl;
   }
   public function getAcl()
@@ -176,7 +178,7 @@ class Google_Service_Storage_StorageObject extends Google_Collection
   {
     return $this->mediaLink;
   }
-  public function setMetadata($metadata)
+  public function setMetadata(array $metadata)
   {
     $this->metadata = $metadata;
   }

@@ -40,7 +40,7 @@ class Google_Service_AnalyticsReporting_DimensionFilter extends Google_Collectio
   {
     return $this->dimensionName;
   }
-  public function setExpressions($expressions)
+  public function setExpressions(array $expressions)
   {
     $this->expressions = $expressions;
   }

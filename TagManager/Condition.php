@@ -18,12 +18,16 @@
 class Google_Service_TagManager_Condition extends Google_Collection
 {
   protected $collection_key = 'parameter';
-  protected $parameterType = 'Google_Service_TagManager_Parameter';
-  protected $parameterDataType = 'array';
+  public $parameter;
   public $type;
 
-  public function setParameter($parameter)
+  public function setParameter(array $parameter)
   {
+    foreach ($parameter as $p) {
+      if (!$p instanceof Google_Service_TagManager_Parameter) {
+        throw new InvalidArgumentException('First argument to setParameter must be an array of Google_Service_TagManager_Parameter');
+      }
+    }
     $this->parameter = $parameter;
   }
   public function getParameter()

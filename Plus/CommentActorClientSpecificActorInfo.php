@@ -17,8 +17,7 @@
 
 class Google_Service_Plus_CommentActorClientSpecificActorInfo extends Google_Model
 {
-  protected $youtubeActorInfoType = 'Google_Service_Plus_CommentActorClientSpecificActorInfoYoutubeActorInfo';
-  protected $youtubeActorInfoDataType = '';
+  public $youtubeActorInfo;
 
   public function setYoutubeActorInfo(Google_Service_Plus_CommentActorClientSpecificActorInfoYoutubeActorInfo $youtubeActorInfo)
   {

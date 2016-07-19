@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_CreativeField extends Google_Model
 {
   public $accountId;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $id;
   public $kind;
   public $name;

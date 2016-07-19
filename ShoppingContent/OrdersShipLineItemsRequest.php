@@ -19,8 +19,7 @@ class Google_Service_ShoppingContent_OrdersShipLineItemsRequest extends Google_C
 {
   protected $collection_key = 'lineItems';
   public $carrier;
-  protected $lineItemsType = 'Google_Service_ShoppingContent_OrderShipmentLineItemShipment';
-  protected $lineItemsDataType = 'array';
+  public $lineItems;
   public $operationId;
   public $shipmentId;
   public $trackingId;
@@ -33,8 +32,13 @@ class Google_Service_ShoppingContent_OrdersShipLineItemsRequest extends Google_C
   {
     return $this->carrier;
   }
-  public function setLineItems($lineItems)
+  public function setLineItems(array $lineItems)
   {
+    foreach ($lineItems as $l) {
+      if (!$l instanceof Google_Service_ShoppingContent_OrderShipmentLineItemShipment) {
+        throw new InvalidArgumentException('First argument to setLineItems must be an array of Google_Service_ShoppingContent_OrderShipmentLineItemShipment');
+      }
+    }
     $this->lineItems = $lineItems;
   }
   public function getLineItems()

@@ -19,8 +19,7 @@ class Google_Service_Replicapool_InstanceGroupManagerList extends Google_Collect
 {
   protected $collection_key = 'items';
   public $id;
-  protected $itemsType = 'Google_Service_Replicapool_InstanceGroupManager';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $nextPageToken;
   public $selfLink;
@@ -33,8 +32,13 @@ class Google_Service_Replicapool_InstanceGroupManagerList extends Google_Collect
   {
     return $this->id;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Replicapool_InstanceGroupManager) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Replicapool_InstanceGroupManager');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

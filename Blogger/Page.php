@@ -17,10 +17,8 @@
 
 class Google_Service_Blogger_Page extends Google_Model
 {
-  protected $authorType = 'Google_Service_Blogger_PageAuthor';
-  protected $authorDataType = '';
-  protected $blogType = 'Google_Service_Blogger_PageBlog';
-  protected $blogDataType = '';
+  public $author;
+  public $blog;
   public $content;
   public $etag;
   public $id;

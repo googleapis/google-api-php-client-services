@@ -18,13 +18,16 @@
 class Google_Service_Compute_AddressesScopedList extends Google_Collection
 {
   protected $collection_key = 'addresses';
-  protected $addressesType = 'Google_Service_Compute_Address';
-  protected $addressesDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_AddressesScopedListWarning';
-  protected $warningDataType = '';
+  public $addresses;
+  public $warning;
 
-  public function setAddresses($addresses)
+  public function setAddresses(array $addresses)
   {
+    foreach ($addresses as $a) {
+      if (!$a instanceof Google_Service_Compute_Address) {
+        throw new InvalidArgumentException('First argument to setAddresses must be an array of Google_Service_Compute_Address');
+      }
+    }
     $this->addresses = $addresses;
   }
   public function getAddresses()

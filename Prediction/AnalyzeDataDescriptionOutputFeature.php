@@ -18,10 +18,8 @@
 class Google_Service_Prediction_AnalyzeDataDescriptionOutputFeature extends Google_Collection
 {
   protected $collection_key = 'text';
-  protected $numericType = 'Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureNumeric';
-  protected $numericDataType = '';
-  protected $textType = 'Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureText';
-  protected $textDataType = 'array';
+  public $numeric;
+  public $text;
 
   public function setNumeric(Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureNumeric $numeric)
   {
@@ -31,8 +29,13 @@ class Google_Service_Prediction_AnalyzeDataDescriptionOutputFeature extends Goog
   {
     return $this->numeric;
   }
-  public function setText($text)
+  public function setText(array $text)
   {
+    foreach ($text as $t) {
+      if (!$t instanceof Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureText) {
+        throw new InvalidArgumentException('First argument to setText must be an array of Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureText');
+      }
+    }
     $this->text = $text;
   }
   public function getText()

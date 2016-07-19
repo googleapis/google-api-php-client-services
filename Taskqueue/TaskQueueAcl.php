@@ -22,7 +22,7 @@ class Google_Service_Taskqueue_TaskQueueAcl extends Google_Collection
   public $consumerEmails;
   public $producerEmails;
 
-  public function setAdminEmails($adminEmails)
+  public function setAdminEmails(array $adminEmails)
   {
     $this->adminEmails = $adminEmails;
   }
@@ -30,7 +30,7 @@ class Google_Service_Taskqueue_TaskQueueAcl extends Google_Collection
   {
     return $this->adminEmails;
   }
-  public function setConsumerEmails($consumerEmails)
+  public function setConsumerEmails(array $consumerEmails)
   {
     $this->consumerEmails = $consumerEmails;
   }
@@ -38,7 +38,7 @@ class Google_Service_Taskqueue_TaskQueueAcl extends Google_Collection
   {
     return $this->consumerEmails;
   }
-  public function setProducerEmails($producerEmails)
+  public function setProducerEmails(array $producerEmails)
   {
     $this->producerEmails = $producerEmails;
   }

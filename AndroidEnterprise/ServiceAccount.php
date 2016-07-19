@@ -17,8 +17,7 @@
 
 class Google_Service_AndroidEnterprise_ServiceAccount extends Google_Model
 {
-  protected $keyType = 'Google_Service_AndroidEnterprise_ServiceAccountKey';
-  protected $keyDataType = '';
+  public $key;
   public $kind;
   public $name;
 

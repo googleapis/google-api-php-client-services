@@ -19,8 +19,7 @@ class Google_Service_GamesConfiguration_LocalizedStringBundle extends Google_Col
 {
   protected $collection_key = 'translations';
   public $kind;
-  protected $translationsType = 'Google_Service_GamesConfiguration_LocalizedString';
-  protected $translationsDataType = 'array';
+  public $translations;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_GamesConfiguration_LocalizedStringBundle extends Google_Col
   {
     return $this->kind;
   }
-  public function setTranslations($translations)
+  public function setTranslations(array $translations)
   {
+    foreach ($translations as $t) {
+      if (!$t instanceof Google_Service_GamesConfiguration_LocalizedString) {
+        throw new InvalidArgumentException('First argument to setTranslations must be an array of Google_Service_GamesConfiguration_LocalizedString');
+      }
+    }
     $this->translations = $translations;
   }
   public function getTranslations()

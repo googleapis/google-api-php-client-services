@@ -38,7 +38,7 @@ class Google_Service_AndroidPublisher_Track extends Google_Collection
   {
     return $this->userFraction;
   }
-  public function setVersionCodes($versionCodes)
+  public function setVersionCodes(array $versionCodes)
   {
     $this->versionCodes = $versionCodes;
   }

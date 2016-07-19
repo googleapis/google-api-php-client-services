@@ -17,10 +17,8 @@
 
 class Google_Service_People_Birthday extends Google_Model
 {
-  protected $dateType = 'Google_Service_People_Date';
-  protected $dateDataType = '';
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $date;
+  public $metadata;
   public $text;
 
   public function setDate(Google_Service_People_Date $date)

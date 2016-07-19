@@ -18,31 +18,43 @@
 class Google_Service_TagManager_FolderEntities extends Google_Collection
 {
   protected $collection_key = 'variable';
-  protected $tagType = 'Google_Service_TagManager_Tag';
-  protected $tagDataType = 'array';
-  protected $triggerType = 'Google_Service_TagManager_Trigger';
-  protected $triggerDataType = 'array';
-  protected $variableType = 'Google_Service_TagManager_Variable';
-  protected $variableDataType = 'array';
+  public $tag;
+  public $trigger;
+  public $variable;
 
-  public function setTag($tag)
+  public function setTag(array $tag)
   {
+    foreach ($tag as $t) {
+      if (!$t instanceof Google_Service_TagManager_Tag) {
+        throw new InvalidArgumentException('First argument to setTag must be an array of Google_Service_TagManager_Tag');
+      }
+    }
     $this->tag = $tag;
   }
   public function getTag()
   {
     return $this->tag;
   }
-  public function setTrigger($trigger)
+  public function setTrigger(array $trigger)
   {
+    foreach ($trigger as $t) {
+      if (!$t instanceof Google_Service_TagManager_Trigger) {
+        throw new InvalidArgumentException('First argument to setTrigger must be an array of Google_Service_TagManager_Trigger');
+      }
+    }
     $this->trigger = $trigger;
   }
   public function getTrigger()
   {
     return $this->trigger;
   }
-  public function setVariable($variable)
+  public function setVariable(array $variable)
   {
+    foreach ($variable as $v) {
+      if (!$v instanceof Google_Service_TagManager_Variable) {
+        throw new InvalidArgumentException('First argument to setVariable must be an array of Google_Service_TagManager_Variable');
+      }
+    }
     $this->variable = $variable;
   }
   public function getVariable()

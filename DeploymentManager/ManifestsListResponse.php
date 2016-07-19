@@ -18,12 +18,16 @@
 class Google_Service_DeploymentManager_ManifestsListResponse extends Google_Collection
 {
   protected $collection_key = 'manifests';
-  protected $manifestsType = 'Google_Service_DeploymentManager_Manifest';
-  protected $manifestsDataType = 'array';
+  public $manifests;
   public $nextPageToken;
 
-  public function setManifests($manifests)
+  public function setManifests(array $manifests)
   {
+    foreach ($manifests as $m) {
+      if (!$m instanceof Google_Service_DeploymentManager_Manifest) {
+        throw new InvalidArgumentException('First argument to setManifests must be an array of Google_Service_DeploymentManager_Manifest');
+      }
+    }
     $this->manifests = $manifests;
   }
   public function getManifests()

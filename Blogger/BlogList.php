@@ -18,22 +18,30 @@
 class Google_Service_Blogger_BlogList extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $blogUserInfosType = 'Google_Service_Blogger_BlogUserInfo';
-  protected $blogUserInfosDataType = 'array';
-  protected $itemsType = 'Google_Service_Blogger_Blog';
-  protected $itemsDataType = 'array';
+  public $blogUserInfos;
+  public $items;
   public $kind;
 
-  public function setBlogUserInfos($blogUserInfos)
+  public function setBlogUserInfos(array $blogUserInfos)
   {
+    foreach ($blogUserInfos as $b) {
+      if (!$b instanceof Google_Service_Blogger_BlogUserInfo) {
+        throw new InvalidArgumentException('First argument to setBlogUserInfos must be an array of Google_Service_Blogger_BlogUserInfo');
+      }
+    }
     $this->blogUserInfos = $blogUserInfos;
   }
   public function getBlogUserInfos()
   {
     return $this->blogUserInfos;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Blogger_Blog) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Blogger_Blog');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

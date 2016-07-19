@@ -17,15 +17,13 @@
 
 class Google_Service_Calendar_FreeBusyResponse extends Google_Model
 {
-  protected $calendarsType = 'Google_Service_Calendar_FreeBusyCalendar';
-  protected $calendarsDataType = 'map';
-  protected $groupsType = 'Google_Service_Calendar_FreeBusyGroup';
-  protected $groupsDataType = 'map';
+  public $calendars;
+  public $groups;
   public $kind;
   public $timeMax;
   public $timeMin;
 
-  public function setCalendars($calendars)
+  public function setCalendars(array $calendars)
   {
     $this->calendars = $calendars;
   }
@@ -33,7 +31,7 @@ class Google_Service_Calendar_FreeBusyResponse extends Google_Model
   {
     return $this->calendars;
   }
-  public function setGroups($groups)
+  public function setGroups(array $groups)
   {
     $this->groups = $groups;
   }

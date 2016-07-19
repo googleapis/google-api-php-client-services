@@ -19,8 +19,7 @@ class Google_Service_ShoppingContent_AccountStatus extends Google_Collection
 {
   protected $collection_key = 'dataQualityIssues';
   public $accountId;
-  protected $dataQualityIssuesType = 'Google_Service_ShoppingContent_AccountStatusDataQualityIssue';
-  protected $dataQualityIssuesDataType = 'array';
+  public $dataQualityIssues;
   public $kind;
 
   public function setAccountId($accountId)
@@ -31,8 +30,13 @@ class Google_Service_ShoppingContent_AccountStatus extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setDataQualityIssues($dataQualityIssues)
+  public function setDataQualityIssues(array $dataQualityIssues)
   {
+    foreach ($dataQualityIssues as $d) {
+      if (!$d instanceof Google_Service_ShoppingContent_AccountStatusDataQualityIssue) {
+        throw new InvalidArgumentException('First argument to setDataQualityIssues must be an array of Google_Service_ShoppingContent_AccountStatusDataQualityIssue');
+      }
+    }
     $this->dataQualityIssues = $dataQualityIssues;
   }
   public function getDataQualityIssues()

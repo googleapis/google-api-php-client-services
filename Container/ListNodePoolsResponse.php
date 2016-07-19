@@ -18,11 +18,15 @@
 class Google_Service_Container_ListNodePoolsResponse extends Google_Collection
 {
   protected $collection_key = 'nodePools';
-  protected $nodePoolsType = 'Google_Service_Container_NodePool';
-  protected $nodePoolsDataType = 'array';
+  public $nodePools;
 
-  public function setNodePools($nodePools)
+  public function setNodePools(array $nodePools)
   {
+    foreach ($nodePools as $n) {
+      if (!$n instanceof Google_Service_Container_NodePool) {
+        throw new InvalidArgumentException('First argument to setNodePools must be an array of Google_Service_Container_NodePool');
+      }
+    }
     $this->nodePools = $nodePools;
   }
   public function getNodePools()

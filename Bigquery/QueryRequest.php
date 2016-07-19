@@ -17,8 +17,7 @@
 
 class Google_Service_Bigquery_QueryRequest extends Google_Model
 {
-  protected $defaultDatasetType = 'Google_Service_Bigquery_DatasetReference';
-  protected $defaultDatasetDataType = '';
+  public $defaultDataset;
   public $dryRun;
   public $kind;
   public $maxResults;

@@ -17,8 +17,7 @@
 
 class Google_Service_Vision_ImageProperties extends Google_Model
 {
-  protected $dominantColorsType = 'Google_Service_Vision_DominantColorsAnnotation';
-  protected $dominantColorsDataType = '';
+  public $dominantColors;
 
   public function setDominantColors(Google_Service_Vision_DominantColorsAnnotation $dominantColors)
   {

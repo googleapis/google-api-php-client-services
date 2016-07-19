@@ -21,7 +21,7 @@ class Google_Service_Storage_ObjectAccessControls extends Google_Collection
   public $items;
   public $kind;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
     $this->items = $items;
   }

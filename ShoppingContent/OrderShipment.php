@@ -22,8 +22,7 @@ class Google_Service_ShoppingContent_OrderShipment extends Google_Collection
   public $creationDate;
   public $deliveryDate;
   public $id;
-  protected $lineItemsType = 'Google_Service_ShoppingContent_OrderShipmentLineItemShipment';
-  protected $lineItemsDataType = 'array';
+  public $lineItems;
   public $status;
   public $trackingId;
 
@@ -59,8 +58,13 @@ class Google_Service_ShoppingContent_OrderShipment extends Google_Collection
   {
     return $this->id;
   }
-  public function setLineItems($lineItems)
+  public function setLineItems(array $lineItems)
   {
+    foreach ($lineItems as $l) {
+      if (!$l instanceof Google_Service_ShoppingContent_OrderShipmentLineItemShipment) {
+        throw new InvalidArgumentException('First argument to setLineItems must be an array of Google_Service_ShoppingContent_OrderShipmentLineItemShipment');
+      }
+    }
     $this->lineItems = $lineItems;
   }
   public function getLineItems()

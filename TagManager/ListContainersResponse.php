@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListContainersResponse extends Google_Collection
 {
   protected $collection_key = 'containers';
-  protected $containersType = 'Google_Service_TagManager_Container';
-  protected $containersDataType = 'array';
+  public $containers;
 
-  public function setContainers($containers)
+  public function setContainers(array $containers)
   {
+    foreach ($containers as $c) {
+      if (!$c instanceof Google_Service_TagManager_Container) {
+        throw new InvalidArgumentException('First argument to setContainers must be an array of Google_Service_TagManager_Container');
+      }
+    }
     $this->containers = $containers;
   }
   public function getContainers()

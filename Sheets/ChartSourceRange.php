@@ -18,11 +18,15 @@
 class Google_Service_Sheets_ChartSourceRange extends Google_Collection
 {
   protected $collection_key = 'sources';
-  protected $sourcesType = 'Google_Service_Sheets_GridRange';
-  protected $sourcesDataType = 'array';
+  public $sources;
 
-  public function setSources($sources)
+  public function setSources(array $sources)
   {
+    foreach ($sources as $s) {
+      if (!$s instanceof Google_Service_Sheets_GridRange) {
+        throw new InvalidArgumentException('First argument to setSources must be an array of Google_Service_Sheets_GridRange');
+      }
+    }
     $this->sources = $sources;
   }
   public function getSources()

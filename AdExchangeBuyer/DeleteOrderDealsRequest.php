@@ -22,7 +22,7 @@ class Google_Service_AdExchangeBuyer_DeleteOrderDealsRequest extends Google_Coll
   public $proposalRevisionNumber;
   public $updateAction;
 
-  public function setDealIds($dealIds)
+  public function setDealIds(array $dealIds)
   {
     $this->dealIds = $dealIds;
   }

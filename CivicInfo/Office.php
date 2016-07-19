@@ -23,8 +23,7 @@ class Google_Service_CivicInfo_Office extends Google_Collection
   public $name;
   public $officialIndices;
   public $roles;
-  protected $sourcesType = 'Google_Service_CivicInfo_Source';
-  protected $sourcesDataType = 'array';
+  public $sources;
 
   public function setDivisionId($divisionId)
   {
@@ -34,7 +33,7 @@ class Google_Service_CivicInfo_Office extends Google_Collection
   {
     return $this->divisionId;
   }
-  public function setLevels($levels)
+  public function setLevels(array $levels)
   {
     $this->levels = $levels;
   }
@@ -50,7 +49,7 @@ class Google_Service_CivicInfo_Office extends Google_Collection
   {
     return $this->name;
   }
-  public function setOfficialIndices($officialIndices)
+  public function setOfficialIndices(array $officialIndices)
   {
     $this->officialIndices = $officialIndices;
   }
@@ -58,7 +57,7 @@ class Google_Service_CivicInfo_Office extends Google_Collection
   {
     return $this->officialIndices;
   }
-  public function setRoles($roles)
+  public function setRoles(array $roles)
   {
     $this->roles = $roles;
   }
@@ -66,8 +65,13 @@ class Google_Service_CivicInfo_Office extends Google_Collection
   {
     return $this->roles;
   }
-  public function setSources($sources)
+  public function setSources(array $sources)
   {
+    foreach ($sources as $s) {
+      if (!$s instanceof Google_Service_CivicInfo_Source) {
+        throw new InvalidArgumentException('First argument to setSources must be an array of Google_Service_CivicInfo_Source');
+      }
+    }
     $this->sources = $sources;
   }
   public function getSources()

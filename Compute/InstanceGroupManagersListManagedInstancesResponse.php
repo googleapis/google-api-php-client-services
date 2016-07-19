@@ -18,11 +18,15 @@
 class Google_Service_Compute_InstanceGroupManagersListManagedInstancesResponse extends Google_Collection
 {
   protected $collection_key = 'managedInstances';
-  protected $managedInstancesType = 'Google_Service_Compute_ManagedInstance';
-  protected $managedInstancesDataType = 'array';
+  public $managedInstances;
 
-  public function setManagedInstances($managedInstances)
+  public function setManagedInstances(array $managedInstances)
   {
+    foreach ($managedInstances as $m) {
+      if (!$m instanceof Google_Service_Compute_ManagedInstance) {
+        throw new InvalidArgumentException('First argument to setManagedInstances must be an array of Google_Service_Compute_ManagedInstance');
+      }
+    }
     $this->managedInstances = $managedInstances;
   }
   public function getManagedInstances()

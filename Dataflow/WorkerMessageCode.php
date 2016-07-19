@@ -28,7 +28,7 @@ class Google_Service_Dataflow_WorkerMessageCode extends Google_Model
   {
     return $this->code;
   }
-  public function setParameters($parameters)
+  public function setParameters(array $parameters)
   {
     $this->parameters = $parameters;
   }

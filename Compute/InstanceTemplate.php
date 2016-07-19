@@ -22,8 +22,7 @@ class Google_Service_Compute_InstanceTemplate extends Google_Model
   public $id;
   public $kind;
   public $name;
-  protected $propertiesType = 'Google_Service_Compute_InstanceProperties';
-  protected $propertiesDataType = '';
+  public $properties;
   public $selfLink;
 
   public function setCreationTimestamp($creationTimestamp)

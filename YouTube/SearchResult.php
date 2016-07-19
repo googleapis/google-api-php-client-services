@@ -18,11 +18,9 @@
 class Google_Service_YouTube_SearchResult extends Google_Model
 {
   public $etag;
-  protected $idType = 'Google_Service_YouTube_ResourceId';
-  protected $idDataType = '';
+  public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_SearchResultSnippet';
-  protected $snippetDataType = '';
+  public $snippet;
 
   public function setEtag($etag)
   {

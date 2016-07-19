@@ -18,8 +18,7 @@
 class Google_Service_Partners_Location extends Google_Model
 {
   public $address;
-  protected $latLngType = 'Google_Service_Partners_LatLng';
-  protected $latLngDataType = '';
+  public $latLng;
 
   public function setAddress($address)
   {

@@ -25,12 +25,10 @@ class Google_Service_YouTube_VideoSnippet extends Google_Collection
   public $defaultLanguage;
   public $description;
   public $liveBroadcastContent;
-  protected $localizedType = 'Google_Service_YouTube_VideoLocalization';
-  protected $localizedDataType = '';
+  public $localized;
   public $publishedAt;
   public $tags;
-  protected $thumbnailsType = 'Google_Service_YouTube_ThumbnailDetails';
-  protected $thumbnailsDataType = '';
+  public $thumbnails;
   public $title;
 
   public function setCategoryId($categoryId)
@@ -105,7 +103,7 @@ class Google_Service_YouTube_VideoSnippet extends Google_Collection
   {
     return $this->publishedAt;
   }
-  public function setTags($tags)
+  public function setTags(array $tags)
   {
     $this->tags = $tags;
   }

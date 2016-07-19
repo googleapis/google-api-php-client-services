@@ -18,11 +18,15 @@
 class Google_Service_Gmail_ListForwardingAddressesResponse extends Google_Collection
 {
   protected $collection_key = 'forwardingAddresses';
-  protected $forwardingAddressesType = 'Google_Service_Gmail_ForwardingAddress';
-  protected $forwardingAddressesDataType = 'array';
+  public $forwardingAddresses;
 
-  public function setForwardingAddresses($forwardingAddresses)
+  public function setForwardingAddresses(array $forwardingAddresses)
   {
+    foreach ($forwardingAddresses as $f) {
+      if (!$f instanceof Google_Service_Gmail_ForwardingAddress) {
+        throw new InvalidArgumentException('First argument to setForwardingAddresses must be an array of Google_Service_Gmail_ForwardingAddress');
+      }
+    }
     $this->forwardingAddresses = $forwardingAddresses;
   }
   public function getForwardingAddresses()

@@ -17,8 +17,7 @@
 
 class Google_Service_YouTube_VideoRecordingDetails extends Google_Model
 {
-  protected $locationType = 'Google_Service_YouTube_GeoPoint';
-  protected $locationDataType = '';
+  public $location;
   public $locationDescription;
   public $recordingDate;
 

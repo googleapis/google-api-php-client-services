@@ -20,8 +20,7 @@ class Google_Service_SQLAdmin_BackupRun extends Google_Model
   public $description;
   public $endTime;
   public $enqueuedTime;
-  protected $errorType = 'Google_Service_SQLAdmin_OperationError';
-  protected $errorDataType = '';
+  public $error;
   public $id;
   public $instance;
   public $kind;

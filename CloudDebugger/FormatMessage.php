@@ -29,7 +29,7 @@ class Google_Service_CloudDebugger_FormatMessage extends Google_Collection
   {
     return $this->format;
   }
-  public function setParameters($parameters)
+  public function setParameters(array $parameters)
   {
     $this->parameters = $parameters;
   }

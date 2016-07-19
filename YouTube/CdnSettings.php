@@ -19,8 +19,7 @@ class Google_Service_YouTube_CdnSettings extends Google_Model
 {
   public $format;
   public $frameRate;
-  protected $ingestionInfoType = 'Google_Service_YouTube_IngestionInfo';
-  protected $ingestionInfoDataType = '';
+  public $ingestionInfo;
   public $ingestionType;
   public $resolution;
 

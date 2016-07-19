@@ -18,11 +18,15 @@
 class Google_Service_AndroidEnterprise_ServiceAccountKeysListResponse extends Google_Collection
 {
   protected $collection_key = 'serviceAccountKey';
-  protected $serviceAccountKeyType = 'Google_Service_AndroidEnterprise_ServiceAccountKey';
-  protected $serviceAccountKeyDataType = 'array';
+  public $serviceAccountKey;
 
-  public function setServiceAccountKey($serviceAccountKey)
+  public function setServiceAccountKey(array $serviceAccountKey)
   {
+    foreach ($serviceAccountKey as $s) {
+      if (!$s instanceof Google_Service_AndroidEnterprise_ServiceAccountKey) {
+        throw new InvalidArgumentException('First argument to setServiceAccountKey must be an array of Google_Service_AndroidEnterprise_ServiceAccountKey');
+      }
+    }
     $this->serviceAccountKey = $serviceAccountKey;
   }
   public function getServiceAccountKey()

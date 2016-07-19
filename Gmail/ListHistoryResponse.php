@@ -18,13 +18,17 @@
 class Google_Service_Gmail_ListHistoryResponse extends Google_Collection
 {
   protected $collection_key = 'history';
-  protected $historyType = 'Google_Service_Gmail_History';
-  protected $historyDataType = 'array';
+  public $history;
   public $historyId;
   public $nextPageToken;
 
-  public function setHistory($history)
+  public function setHistory(array $history)
   {
+    foreach ($history as $h) {
+      if (!$h instanceof Google_Service_Gmail_History) {
+        throw new InvalidArgumentException('First argument to setHistory must be an array of Google_Service_Gmail_History');
+      }
+    }
     $this->history = $history;
   }
   public function getHistory()

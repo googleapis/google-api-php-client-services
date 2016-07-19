@@ -18,11 +18,15 @@
 class Google_Service_FirebaseRulesAPI_Source extends Google_Collection
 {
   protected $collection_key = 'files';
-  protected $filesType = 'Google_Service_FirebaseRulesAPI_FirebaserulesFile';
-  protected $filesDataType = 'array';
+  public $files;
 
-  public function setFiles($files)
+  public function setFiles(array $files)
   {
+    foreach ($files as $f) {
+      if (!$f instanceof Google_Service_FirebaseRulesAPI_FirebaserulesFile) {
+        throw new InvalidArgumentException('First argument to setFiles must be an array of Google_Service_FirebaseRulesAPI_FirebaserulesFile');
+      }
+    }
     $this->files = $files;
   }
   public function getFiles()

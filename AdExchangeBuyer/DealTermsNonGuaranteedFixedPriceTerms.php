@@ -18,11 +18,15 @@
 class Google_Service_AdExchangeBuyer_DealTermsNonGuaranteedFixedPriceTerms extends Google_Collection
 {
   protected $collection_key = 'fixedPrices';
-  protected $fixedPricesType = 'Google_Service_AdExchangeBuyer_PricePerBuyer';
-  protected $fixedPricesDataType = 'array';
+  public $fixedPrices;
 
-  public function setFixedPrices($fixedPrices)
+  public function setFixedPrices(array $fixedPrices)
   {
+    foreach ($fixedPrices as $f) {
+      if (!$f instanceof Google_Service_AdExchangeBuyer_PricePerBuyer) {
+        throw new InvalidArgumentException('First argument to setFixedPrices must be an array of Google_Service_AdExchangeBuyer_PricePerBuyer');
+      }
+    }
     $this->fixedPrices = $fixedPrices;
   }
   public function getFixedPrices()

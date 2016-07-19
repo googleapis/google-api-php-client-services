@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_PlacementsListResponse extends Google_Collecti
   protected $collection_key = 'placements';
   public $kind;
   public $nextPageToken;
-  protected $placementsType = 'Google_Service_Dfareporting_Placement';
-  protected $placementsDataType = 'array';
+  public $placements;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_PlacementsListResponse extends Google_Collecti
   {
     return $this->nextPageToken;
   }
-  public function setPlacements($placements)
+  public function setPlacements(array $placements)
   {
+    foreach ($placements as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_Placement) {
+        throw new InvalidArgumentException('First argument to setPlacements must be an array of Google_Service_Dfareporting_Placement');
+      }
+    }
     $this->placements = $placements;
   }
   public function getPlacements()

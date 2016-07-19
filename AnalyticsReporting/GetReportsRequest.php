@@ -18,11 +18,15 @@
 class Google_Service_AnalyticsReporting_GetReportsRequest extends Google_Collection
 {
   protected $collection_key = 'reportRequests';
-  protected $reportRequestsType = 'Google_Service_AnalyticsReporting_ReportRequest';
-  protected $reportRequestsDataType = 'array';
+  public $reportRequests;
 
-  public function setReportRequests($reportRequests)
+  public function setReportRequests(array $reportRequests)
   {
+    foreach ($reportRequests as $r) {
+      if (!$r instanceof Google_Service_AnalyticsReporting_ReportRequest) {
+        throw new InvalidArgumentException('First argument to setReportRequests must be an array of Google_Service_AnalyticsReporting_ReportRequest');
+      }
+    }
     $this->reportRequests = $reportRequests;
   }
   public function getReportRequests()

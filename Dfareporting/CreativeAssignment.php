@@ -20,18 +20,13 @@ class Google_Service_Dfareporting_CreativeAssignment extends Google_Collection
   protected $collection_key = 'richMediaExitOverrides';
   public $active;
   public $applyEventTags;
-  protected $clickThroughUrlType = 'Google_Service_Dfareporting_ClickThroughUrl';
-  protected $clickThroughUrlDataType = '';
-  protected $companionCreativeOverridesType = 'Google_Service_Dfareporting_CompanionClickThroughOverride';
-  protected $companionCreativeOverridesDataType = 'array';
-  protected $creativeGroupAssignmentsType = 'Google_Service_Dfareporting_CreativeGroupAssignment';
-  protected $creativeGroupAssignmentsDataType = 'array';
+  public $clickThroughUrl;
+  public $companionCreativeOverrides;
+  public $creativeGroupAssignments;
   public $creativeId;
-  protected $creativeIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $creativeIdDimensionValueDataType = '';
+  public $creativeIdDimensionValue;
   public $endTime;
-  protected $richMediaExitOverridesType = 'Google_Service_Dfareporting_RichMediaExitOverride';
-  protected $richMediaExitOverridesDataType = 'array';
+  public $richMediaExitOverrides;
   public $sequence;
   public $sslCompliant;
   public $startTime;
@@ -61,16 +56,26 @@ class Google_Service_Dfareporting_CreativeAssignment extends Google_Collection
   {
     return $this->clickThroughUrl;
   }
-  public function setCompanionCreativeOverrides($companionCreativeOverrides)
+  public function setCompanionCreativeOverrides(array $companionCreativeOverrides)
   {
+    foreach ($companionCreativeOverrides as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CompanionClickThroughOverride) {
+        throw new InvalidArgumentException('First argument to setCompanionCreativeOverrides must be an array of Google_Service_Dfareporting_CompanionClickThroughOverride');
+      }
+    }
     $this->companionCreativeOverrides = $companionCreativeOverrides;
   }
   public function getCompanionCreativeOverrides()
   {
     return $this->companionCreativeOverrides;
   }
-  public function setCreativeGroupAssignments($creativeGroupAssignments)
+  public function setCreativeGroupAssignments(array $creativeGroupAssignments)
   {
+    foreach ($creativeGroupAssignments as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeGroupAssignment) {
+        throw new InvalidArgumentException('First argument to setCreativeGroupAssignments must be an array of Google_Service_Dfareporting_CreativeGroupAssignment');
+      }
+    }
     $this->creativeGroupAssignments = $creativeGroupAssignments;
   }
   public function getCreativeGroupAssignments()
@@ -101,8 +106,13 @@ class Google_Service_Dfareporting_CreativeAssignment extends Google_Collection
   {
     return $this->endTime;
   }
-  public function setRichMediaExitOverrides($richMediaExitOverrides)
+  public function setRichMediaExitOverrides(array $richMediaExitOverrides)
   {
+    foreach ($richMediaExitOverrides as $r) {
+      if (!$r instanceof Google_Service_Dfareporting_RichMediaExitOverride) {
+        throw new InvalidArgumentException('First argument to setRichMediaExitOverrides must be an array of Google_Service_Dfareporting_RichMediaExitOverride');
+      }
+    }
     $this->richMediaExitOverrides = $richMediaExitOverrides;
   }
   public function getRichMediaExitOverrides()

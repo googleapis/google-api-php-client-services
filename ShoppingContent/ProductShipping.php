@@ -21,8 +21,7 @@ class Google_Service_ShoppingContent_ProductShipping extends Google_Model
   public $locationGroupName;
   public $locationId;
   public $postalCode;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
-  protected $priceDataType = '';
+  public $price;
   public $region;
   public $service;
 

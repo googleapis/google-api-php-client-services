@@ -21,8 +21,7 @@ class Google_Service_Compute_PathMatcher extends Google_Collection
   public $defaultService;
   public $description;
   public $name;
-  protected $pathRulesType = 'Google_Service_Compute_PathRule';
-  protected $pathRulesDataType = 'array';
+  public $pathRules;
 
   public function setDefaultService($defaultService)
   {
@@ -48,8 +47,13 @@ class Google_Service_Compute_PathMatcher extends Google_Collection
   {
     return $this->name;
   }
-  public function setPathRules($pathRules)
+  public function setPathRules(array $pathRules)
   {
+    foreach ($pathRules as $p) {
+      if (!$p instanceof Google_Service_Compute_PathRule) {
+        throw new InvalidArgumentException('First argument to setPathRules must be an array of Google_Service_Compute_PathRule');
+      }
+    }
     $this->pathRules = $pathRules;
   }
   public function getPathRules()

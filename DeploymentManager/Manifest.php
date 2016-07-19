@@ -18,12 +18,10 @@
 class Google_Service_DeploymentManager_Manifest extends Google_Collection
 {
   protected $collection_key = 'imports';
-  protected $configType = 'Google_Service_DeploymentManager_ConfigFile';
-  protected $configDataType = '';
+  public $config;
   public $expandedConfig;
   public $id;
-  protected $importsType = 'Google_Service_DeploymentManager_ImportFile';
-  protected $importsDataType = 'array';
+  public $imports;
   public $insertTime;
   public $layout;
   public $name;
@@ -53,8 +51,13 @@ class Google_Service_DeploymentManager_Manifest extends Google_Collection
   {
     return $this->id;
   }
-  public function setImports($imports)
+  public function setImports(array $imports)
   {
+    foreach ($imports as $i) {
+      if (!$i instanceof Google_Service_DeploymentManager_ImportFile) {
+        throw new InvalidArgumentException('First argument to setImports must be an array of Google_Service_DeploymentManager_ImportFile');
+      }
+    }
     $this->imports = $imports;
   }
   public function getImports()

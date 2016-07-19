@@ -20,14 +20,12 @@ class Google_Service_Genomics_ReadGroup extends Google_Collection
   protected $collection_key = 'programs';
   public $datasetId;
   public $description;
-  protected $experimentType = 'Google_Service_Genomics_Experiment';
-  protected $experimentDataType = '';
+  public $experiment;
   public $id;
   public $info;
   public $name;
   public $predictedInsertSize;
-  protected $programsType = 'Google_Service_Genomics_Program';
-  protected $programsDataType = 'array';
+  public $programs;
   public $referenceSetId;
   public $sampleId;
 
@@ -63,7 +61,7 @@ class Google_Service_Genomics_ReadGroup extends Google_Collection
   {
     return $this->id;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }
@@ -87,8 +85,13 @@ class Google_Service_Genomics_ReadGroup extends Google_Collection
   {
     return $this->predictedInsertSize;
   }
-  public function setPrograms($programs)
+  public function setPrograms(array $programs)
   {
+    foreach ($programs as $p) {
+      if (!$p instanceof Google_Service_Genomics_Program) {
+        throw new InvalidArgumentException('First argument to setPrograms must be an array of Google_Service_Genomics_Program');
+      }
+    }
     $this->programs = $programs;
   }
   public function getPrograms()

@@ -21,7 +21,7 @@ class Google_Service_AndroidPublisher_Testers extends Google_Collection
   public $googleGroups;
   public $googlePlusCommunities;
 
-  public function setGoogleGroups($googleGroups)
+  public function setGoogleGroups(array $googleGroups)
   {
     $this->googleGroups = $googleGroups;
   }
@@ -29,7 +29,7 @@ class Google_Service_AndroidPublisher_Testers extends Google_Collection
   {
     return $this->googleGroups;
   }
-  public function setGooglePlusCommunities($googlePlusCommunities)
+  public function setGooglePlusCommunities(array $googlePlusCommunities)
   {
     $this->googlePlusCommunities = $googlePlusCommunities;
   }

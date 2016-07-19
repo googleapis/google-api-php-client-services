@@ -17,28 +17,17 @@
 
 class Google_Service_Sheets_Response extends Google_Model
 {
-  protected $addChartType = 'Google_Service_Sheets_AddChartResponse';
-  protected $addChartDataType = '';
-  protected $addFilterViewType = 'Google_Service_Sheets_AddFilterViewResponse';
-  protected $addFilterViewDataType = '';
-  protected $addNamedRangeType = 'Google_Service_Sheets_AddNamedRangeResponse';
-  protected $addNamedRangeDataType = '';
-  protected $addProtectedRangeType = 'Google_Service_Sheets_AddProtectedRangeResponse';
-  protected $addProtectedRangeDataType = '';
-  protected $addSheetType = 'Google_Service_Sheets_AddSheetResponse';
-  protected $addSheetDataType = '';
-  protected $deleteConditionalFormatRuleType = 'Google_Service_Sheets_DeleteConditionalFormatRuleResponse';
-  protected $deleteConditionalFormatRuleDataType = '';
-  protected $duplicateFilterViewType = 'Google_Service_Sheets_DuplicateFilterViewResponse';
-  protected $duplicateFilterViewDataType = '';
-  protected $duplicateSheetType = 'Google_Service_Sheets_DuplicateSheetResponse';
-  protected $duplicateSheetDataType = '';
-  protected $findReplaceType = 'Google_Service_Sheets_FindReplaceResponse';
-  protected $findReplaceDataType = '';
-  protected $updateConditionalFormatRuleType = 'Google_Service_Sheets_UpdateConditionalFormatRuleResponse';
-  protected $updateConditionalFormatRuleDataType = '';
-  protected $updateEmbeddedObjectPositionType = 'Google_Service_Sheets_UpdateEmbeddedObjectPositionResponse';
-  protected $updateEmbeddedObjectPositionDataType = '';
+  public $addChart;
+  public $addFilterView;
+  public $addNamedRange;
+  public $addProtectedRange;
+  public $addSheet;
+  public $deleteConditionalFormatRule;
+  public $duplicateFilterView;
+  public $duplicateSheet;
+  public $findReplace;
+  public $updateConditionalFormatRule;
+  public $updateEmbeddedObjectPosition;
 
   public function setAddChart(Google_Service_Sheets_AddChartResponse $addChart)
   {

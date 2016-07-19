@@ -18,18 +18,20 @@
 class Google_Service_Sheets_BasicChartSpec extends Google_Collection
 {
   protected $collection_key = 'series';
-  protected $axisType = 'Google_Service_Sheets_BasicChartAxis';
-  protected $axisDataType = 'array';
+  public $axis;
   public $chartType;
-  protected $domainsType = 'Google_Service_Sheets_BasicChartDomain';
-  protected $domainsDataType = 'array';
+  public $domains;
   public $headerCount;
   public $legendPosition;
-  protected $seriesType = 'Google_Service_Sheets_BasicChartSeries';
-  protected $seriesDataType = 'array';
+  public $series;
 
-  public function setAxis($axis)
+  public function setAxis(array $axis)
   {
+    foreach ($axis as $a) {
+      if (!$a instanceof Google_Service_Sheets_BasicChartAxis) {
+        throw new InvalidArgumentException('First argument to setAxis must be an array of Google_Service_Sheets_BasicChartAxis');
+      }
+    }
     $this->axis = $axis;
   }
   public function getAxis()
@@ -44,8 +46,13 @@ class Google_Service_Sheets_BasicChartSpec extends Google_Collection
   {
     return $this->chartType;
   }
-  public function setDomains($domains)
+  public function setDomains(array $domains)
   {
+    foreach ($domains as $d) {
+      if (!$d instanceof Google_Service_Sheets_BasicChartDomain) {
+        throw new InvalidArgumentException('First argument to setDomains must be an array of Google_Service_Sheets_BasicChartDomain');
+      }
+    }
     $this->domains = $domains;
   }
   public function getDomains()
@@ -68,8 +75,13 @@ class Google_Service_Sheets_BasicChartSpec extends Google_Collection
   {
     return $this->legendPosition;
   }
-  public function setSeries($series)
+  public function setSeries(array $series)
   {
+    foreach ($series as $s) {
+      if (!$s instanceof Google_Service_Sheets_BasicChartSeries) {
+        throw new InvalidArgumentException('First argument to setSeries must be an array of Google_Service_Sheets_BasicChartSeries');
+      }
+    }
     $this->series = $series;
   }
   public function getSeries()

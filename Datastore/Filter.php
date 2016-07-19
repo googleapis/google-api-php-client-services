@@ -17,10 +17,8 @@
 
 class Google_Service_Datastore_Filter extends Google_Model
 {
-  protected $compositeFilterType = 'Google_Service_Datastore_CompositeFilter';
-  protected $compositeFilterDataType = '';
-  protected $propertyFilterType = 'Google_Service_Datastore_PropertyFilter';
-  protected $propertyFilterDataType = '';
+  public $compositeFilter;
+  public $propertyFilter;
 
   public function setCompositeFilter(Google_Service_Datastore_CompositeFilter $compositeFilter)
   {

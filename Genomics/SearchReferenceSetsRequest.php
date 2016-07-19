@@ -24,7 +24,7 @@ class Google_Service_Genomics_SearchReferenceSetsRequest extends Google_Collecti
   public $pageSize;
   public $pageToken;
 
-  public function setAccessions($accessions)
+  public function setAccessions(array $accessions)
   {
     $this->accessions = $accessions;
   }
@@ -40,7 +40,7 @@ class Google_Service_Genomics_SearchReferenceSetsRequest extends Google_Collecti
   {
     return $this->assemblyId;
   }
-  public function setMd5checksums($md5checksums)
+  public function setMd5checksums(array $md5checksums)
   {
     $this->md5checksums = $md5checksums;
   }

@@ -17,13 +17,11 @@
 
 class Google_Service_Taskqueue_TaskQueue extends Google_Model
 {
-  protected $aclType = 'Google_Service_Taskqueue_TaskQueueAcl';
-  protected $aclDataType = '';
+  public $acl;
   public $id;
   public $kind;
   public $maxLeases;
-  protected $statsType = 'Google_Service_Taskqueue_TaskQueueStats';
-  protected $statsDataType = '';
+  public $stats;
 
   public function setAcl(Google_Service_Taskqueue_TaskQueueAcl $acl)
   {

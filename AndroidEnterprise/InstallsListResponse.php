@@ -18,12 +18,16 @@
 class Google_Service_AndroidEnterprise_InstallsListResponse extends Google_Collection
 {
   protected $collection_key = 'install';
-  protected $installType = 'Google_Service_AndroidEnterprise_Install';
-  protected $installDataType = 'array';
+  public $install;
   public $kind;
 
-  public function setInstall($install)
+  public function setInstall(array $install)
   {
+    foreach ($install as $i) {
+      if (!$i instanceof Google_Service_AndroidEnterprise_Install) {
+        throw new InvalidArgumentException('First argument to setInstall must be an array of Google_Service_AndroidEnterprise_Install');
+      }
+    }
     $this->install = $install;
   }
   public function getInstall()

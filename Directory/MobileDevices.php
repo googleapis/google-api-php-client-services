@@ -20,8 +20,7 @@ class Google_Service_Directory_MobileDevices extends Google_Collection
   protected $collection_key = 'mobiledevices';
   public $etag;
   public $kind;
-  protected $mobiledevicesType = 'Google_Service_Directory_MobileDevice';
-  protected $mobiledevicesDataType = 'array';
+  public $mobiledevices;
   public $nextPageToken;
 
   public function setEtag($etag)
@@ -40,8 +39,13 @@ class Google_Service_Directory_MobileDevices extends Google_Collection
   {
     return $this->kind;
   }
-  public function setMobiledevices($mobiledevices)
+  public function setMobiledevices(array $mobiledevices)
   {
+    foreach ($mobiledevices as $m) {
+      if (!$m instanceof Google_Service_Directory_MobileDevice) {
+        throw new InvalidArgumentException('First argument to setMobiledevices must be an array of Google_Service_Directory_MobileDevice');
+      }
+    }
     $this->mobiledevices = $mobiledevices;
   }
   public function getMobiledevices()

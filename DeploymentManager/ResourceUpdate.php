@@ -18,15 +18,13 @@
 class Google_Service_DeploymentManager_ResourceUpdate extends Google_Collection
 {
   protected $collection_key = 'warnings';
-  protected $errorType = 'Google_Service_DeploymentManager_ResourceUpdateError';
-  protected $errorDataType = '';
+  public $error;
   public $finalProperties;
   public $intent;
   public $manifest;
   public $properties;
   public $state;
-  protected $warningsType = 'Google_Service_DeploymentManager_ResourceUpdateWarnings';
-  protected $warningsDataType = 'array';
+  public $warnings;
 
   public function setError(Google_Service_DeploymentManager_ResourceUpdateError $error)
   {
@@ -76,8 +74,13 @@ class Google_Service_DeploymentManager_ResourceUpdate extends Google_Collection
   {
     return $this->state;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
+    foreach ($warnings as $w) {
+      if (!$w instanceof Google_Service_DeploymentManager_ResourceUpdateWarnings) {
+        throw new InvalidArgumentException('First argument to setWarnings must be an array of Google_Service_DeploymentManager_ResourceUpdateWarnings');
+      }
+    }
     $this->warnings = $warnings;
   }
   public function getWarnings()

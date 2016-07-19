@@ -17,8 +17,7 @@
 
 class Google_Service_Games_Snapshot extends Google_Model
 {
-  protected $coverImageType = 'Google_Service_Games_SnapshotImage';
-  protected $coverImageDataType = '';
+  public $coverImage;
   public $description;
   public $driveId;
   public $durationMillis;

@@ -20,11 +20,9 @@ class Google_Service_QPXExpress_TripOption extends Google_Collection
   protected $collection_key = 'slice';
   public $id;
   public $kind;
-  protected $pricingType = 'Google_Service_QPXExpress_PricingInfo';
-  protected $pricingDataType = 'array';
+  public $pricing;
   public $saleTotal;
-  protected $sliceType = 'Google_Service_QPXExpress_SliceInfo';
-  protected $sliceDataType = 'array';
+  public $slice;
 
   public function setId($id)
   {
@@ -42,8 +40,13 @@ class Google_Service_QPXExpress_TripOption extends Google_Collection
   {
     return $this->kind;
   }
-  public function setPricing($pricing)
+  public function setPricing(array $pricing)
   {
+    foreach ($pricing as $p) {
+      if (!$p instanceof Google_Service_QPXExpress_PricingInfo) {
+        throw new InvalidArgumentException('First argument to setPricing must be an array of Google_Service_QPXExpress_PricingInfo');
+      }
+    }
     $this->pricing = $pricing;
   }
   public function getPricing()
@@ -58,8 +61,13 @@ class Google_Service_QPXExpress_TripOption extends Google_Collection
   {
     return $this->saleTotal;
   }
-  public function setSlice($slice)
+  public function setSlice(array $slice)
   {
+    foreach ($slice as $s) {
+      if (!$s instanceof Google_Service_QPXExpress_SliceInfo) {
+        throw new InvalidArgumentException('First argument to setSlice must be an array of Google_Service_QPXExpress_SliceInfo');
+      }
+    }
     $this->slice = $slice;
   }
   public function getSlice()

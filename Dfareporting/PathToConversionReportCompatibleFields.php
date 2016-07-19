@@ -18,26 +18,32 @@
 class Google_Service_Dfareporting_PathToConversionReportCompatibleFields extends Google_Collection
 {
   protected $collection_key = 'perInteractionDimensions';
-  protected $conversionDimensionsType = 'Google_Service_Dfareporting_Dimension';
-  protected $conversionDimensionsDataType = 'array';
-  protected $customFloodlightVariablesType = 'Google_Service_Dfareporting_Dimension';
-  protected $customFloodlightVariablesDataType = 'array';
+  public $conversionDimensions;
+  public $customFloodlightVariables;
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
-  protected $metricsDataType = 'array';
-  protected $perInteractionDimensionsType = 'Google_Service_Dfareporting_Dimension';
-  protected $perInteractionDimensionsDataType = 'array';
+  public $metrics;
+  public $perInteractionDimensions;
 
-  public function setConversionDimensions($conversionDimensions)
+  public function setConversionDimensions(array $conversionDimensions)
   {
+    foreach ($conversionDimensions as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setConversionDimensions must be an array of Google_Service_Dfareporting_Dimension');
+      }
+    }
     $this->conversionDimensions = $conversionDimensions;
   }
   public function getConversionDimensions()
   {
     return $this->conversionDimensions;
   }
-  public function setCustomFloodlightVariables($customFloodlightVariables)
+  public function setCustomFloodlightVariables(array $customFloodlightVariables)
   {
+    foreach ($customFloodlightVariables as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setCustomFloodlightVariables must be an array of Google_Service_Dfareporting_Dimension');
+      }
+    }
     $this->customFloodlightVariables = $customFloodlightVariables;
   }
   public function getCustomFloodlightVariables()
@@ -52,16 +58,26 @@ class Google_Service_Dfareporting_PathToConversionReportCompatibleFields extends
   {
     return $this->kind;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_Dfareporting_Metric) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_Dfareporting_Metric');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()
   {
     return $this->metrics;
   }
-  public function setPerInteractionDimensions($perInteractionDimensions)
+  public function setPerInteractionDimensions(array $perInteractionDimensions)
   {
+    foreach ($perInteractionDimensions as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setPerInteractionDimensions must be an array of Google_Service_Dfareporting_Dimension');
+      }
+    }
     $this->perInteractionDimensions = $perInteractionDimensions;
   }
   public function getPerInteractionDimensions()

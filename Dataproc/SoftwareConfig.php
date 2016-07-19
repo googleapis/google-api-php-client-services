@@ -28,7 +28,7 @@ class Google_Service_Dataproc_SoftwareConfig extends Google_Model
   {
     return $this->imageVersion;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
     $this->properties = $properties;
   }

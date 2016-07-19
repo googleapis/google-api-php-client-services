@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_ContentCategoriesListResponse extends Google_Collection
 {
   protected $collection_key = 'contentCategories';
-  protected $contentCategoriesType = 'Google_Service_Dfareporting_ContentCategory';
-  protected $contentCategoriesDataType = 'array';
+  public $contentCategories;
   public $kind;
   public $nextPageToken;
 
-  public function setContentCategories($contentCategories)
+  public function setContentCategories(array $contentCategories)
   {
+    foreach ($contentCategories as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_ContentCategory) {
+        throw new InvalidArgumentException('First argument to setContentCategories must be an array of Google_Service_Dfareporting_ContentCategory');
+      }
+    }
     $this->contentCategories = $contentCategories;
   }
   public function getContentCategories()

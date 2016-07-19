@@ -18,12 +18,16 @@
 class Google_Service_AnalyticsReporting_MetricFilterClause extends Google_Collection
 {
   protected $collection_key = 'filters';
-  protected $filtersType = 'Google_Service_AnalyticsReporting_MetricFilter';
-  protected $filtersDataType = 'array';
+  public $filters;
   public $operator;
 
-  public function setFilters($filters)
+  public function setFilters(array $filters)
   {
+    foreach ($filters as $f) {
+      if (!$f instanceof Google_Service_AnalyticsReporting_MetricFilter) {
+        throw new InvalidArgumentException('First argument to setFilters must be an array of Google_Service_AnalyticsReporting_MetricFilter');
+      }
+    }
     $this->filters = $filters;
   }
   public function getFilters()

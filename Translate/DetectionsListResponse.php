@@ -18,11 +18,15 @@
 class Google_Service_Translate_DetectionsListResponse extends Google_Collection
 {
   protected $collection_key = 'detections';
-  protected $detectionsType = 'Google_Service_Translate_DetectionsResourceItems';
-  protected $detectionsDataType = 'array';
+  public $detections;
 
-  public function setDetections($detections)
+  public function setDetections(array $detections)
   {
+    foreach ($detections as $d) {
+      if (!$d instanceof Google_Service_Translate_DetectionsResourceItems) {
+        throw new InvalidArgumentException('First argument to setDetections must be an array of Google_Service_Translate_DetectionsResourceItems');
+      }
+    }
     $this->detections = $detections;
   }
   public function getDetections()

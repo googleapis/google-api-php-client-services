@@ -19,8 +19,7 @@ class Google_Service_AndroidEnterprise_AppRestrictionsSchema extends Google_Coll
 {
   protected $collection_key = 'restrictions';
   public $kind;
-  protected $restrictionsType = 'Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestriction';
-  protected $restrictionsDataType = 'array';
+  public $restrictions;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_AndroidEnterprise_AppRestrictionsSchema extends Google_Coll
   {
     return $this->kind;
   }
-  public function setRestrictions($restrictions)
+  public function setRestrictions(array $restrictions)
   {
+    foreach ($restrictions as $r) {
+      if (!$r instanceof Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestriction) {
+        throw new InvalidArgumentException('First argument to setRestrictions must be an array of Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestriction');
+      }
+    }
     $this->restrictions = $restrictions;
   }
   public function getRestrictions()

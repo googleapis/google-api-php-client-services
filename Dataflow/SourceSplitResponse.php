@@ -18,14 +18,17 @@
 class Google_Service_Dataflow_SourceSplitResponse extends Google_Collection
 {
   protected $collection_key = 'shards';
-  protected $bundlesType = 'Google_Service_Dataflow_DerivedSource';
-  protected $bundlesDataType = 'array';
+  public $bundles;
   public $outcome;
-  protected $shardsType = 'Google_Service_Dataflow_SourceSplitShard';
-  protected $shardsDataType = 'array';
+  public $shards;
 
-  public function setBundles($bundles)
+  public function setBundles(array $bundles)
   {
+    foreach ($bundles as $b) {
+      if (!$b instanceof Google_Service_Dataflow_DerivedSource) {
+        throw new InvalidArgumentException('First argument to setBundles must be an array of Google_Service_Dataflow_DerivedSource');
+      }
+    }
     $this->bundles = $bundles;
   }
   public function getBundles()
@@ -40,8 +43,13 @@ class Google_Service_Dataflow_SourceSplitResponse extends Google_Collection
   {
     return $this->outcome;
   }
-  public function setShards($shards)
+  public function setShards(array $shards)
   {
+    foreach ($shards as $s) {
+      if (!$s instanceof Google_Service_Dataflow_SourceSplitShard) {
+        throw new InvalidArgumentException('First argument to setShards must be an array of Google_Service_Dataflow_SourceSplitShard');
+      }
+    }
     $this->shards = $shards;
   }
   public function getShards()

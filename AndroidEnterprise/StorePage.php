@@ -21,8 +21,7 @@ class Google_Service_AndroidEnterprise_StorePage extends Google_Collection
   public $id;
   public $kind;
   public $link;
-  protected $nameType = 'Google_Service_AndroidEnterprise_LocalizedText';
-  protected $nameDataType = 'array';
+  public $name;
 
   public function setId($id)
   {
@@ -40,7 +39,7 @@ class Google_Service_AndroidEnterprise_StorePage extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLink($link)
+  public function setLink(array $link)
   {
     $this->link = $link;
   }
@@ -48,8 +47,13 @@ class Google_Service_AndroidEnterprise_StorePage extends Google_Collection
   {
     return $this->link;
   }
-  public function setName($name)
+  public function setName(array $name)
   {
+    foreach ($name as $n) {
+      if (!$n instanceof Google_Service_AndroidEnterprise_LocalizedText) {
+        throw new InvalidArgumentException('First argument to setName must be an array of Google_Service_AndroidEnterprise_LocalizedText');
+      }
+    }
     $this->name = $name;
   }
   public function getName()

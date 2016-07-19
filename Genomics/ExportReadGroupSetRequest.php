@@ -38,7 +38,7 @@ class Google_Service_Genomics_ExportReadGroupSetRequest extends Google_Collectio
   {
     return $this->projectId;
   }
-  public function setReferenceNames($referenceNames)
+  public function setReferenceNames(array $referenceNames)
   {
     $this->referenceNames = $referenceNames;
   }

@@ -19,10 +19,8 @@ class Google_Service_GamesConfiguration_LeaderboardConfigurationDetail extends G
 {
   public $iconUrl;
   public $kind;
-  protected $nameType = 'Google_Service_GamesConfiguration_LocalizedStringBundle';
-  protected $nameDataType = '';
-  protected $scoreFormatType = 'Google_Service_GamesConfiguration_GamesNumberFormatConfiguration';
-  protected $scoreFormatDataType = '';
+  public $name;
+  public $scoreFormat;
   public $sortRank;
 
   public function setIconUrl($iconUrl)

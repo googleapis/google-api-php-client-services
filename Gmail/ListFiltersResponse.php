@@ -18,11 +18,15 @@
 class Google_Service_Gmail_ListFiltersResponse extends Google_Collection
 {
   protected $collection_key = 'filter';
-  protected $filterType = 'Google_Service_Gmail_Filter';
-  protected $filterDataType = 'array';
+  public $filter;
 
-  public function setFilter($filter)
+  public function setFilter(array $filter)
   {
+    foreach ($filter as $f) {
+      if (!$f instanceof Google_Service_Gmail_Filter) {
+        throw new InvalidArgumentException('First argument to setFilter must be an array of Google_Service_Gmail_Filter');
+      }
+    }
     $this->filter = $filter;
   }
   public function getFilter()

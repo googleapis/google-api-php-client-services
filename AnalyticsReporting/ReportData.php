@@ -19,17 +19,13 @@ class Google_Service_AnalyticsReporting_ReportData extends Google_Collection
 {
   protected $collection_key = 'totals';
   public $isDataGolden;
-  protected $maximumsType = 'Google_Service_AnalyticsReporting_DateRangeValues';
-  protected $maximumsDataType = 'array';
-  protected $minimumsType = 'Google_Service_AnalyticsReporting_DateRangeValues';
-  protected $minimumsDataType = 'array';
+  public $maximums;
+  public $minimums;
   public $rowCount;
-  protected $rowsType = 'Google_Service_AnalyticsReporting_ReportRow';
-  protected $rowsDataType = 'array';
+  public $rows;
   public $samplesReadCounts;
   public $samplingSpaceSizes;
-  protected $totalsType = 'Google_Service_AnalyticsReporting_DateRangeValues';
-  protected $totalsDataType = 'array';
+  public $totals;
 
   public function setIsDataGolden($isDataGolden)
   {
@@ -39,16 +35,26 @@ class Google_Service_AnalyticsReporting_ReportData extends Google_Collection
   {
     return $this->isDataGolden;
   }
-  public function setMaximums($maximums)
+  public function setMaximums(array $maximums)
   {
+    foreach ($maximums as $m) {
+      if (!$m instanceof Google_Service_AnalyticsReporting_DateRangeValues) {
+        throw new InvalidArgumentException('First argument to setMaximums must be an array of Google_Service_AnalyticsReporting_DateRangeValues');
+      }
+    }
     $this->maximums = $maximums;
   }
   public function getMaximums()
   {
     return $this->maximums;
   }
-  public function setMinimums($minimums)
+  public function setMinimums(array $minimums)
   {
+    foreach ($minimums as $m) {
+      if (!$m instanceof Google_Service_AnalyticsReporting_DateRangeValues) {
+        throw new InvalidArgumentException('First argument to setMinimums must be an array of Google_Service_AnalyticsReporting_DateRangeValues');
+      }
+    }
     $this->minimums = $minimums;
   }
   public function getMinimums()
@@ -63,15 +69,20 @@ class Google_Service_AnalyticsReporting_ReportData extends Google_Collection
   {
     return $this->rowCount;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_AnalyticsReporting_ReportRow) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_AnalyticsReporting_ReportRow');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()
   {
     return $this->rows;
   }
-  public function setSamplesReadCounts($samplesReadCounts)
+  public function setSamplesReadCounts(array $samplesReadCounts)
   {
     $this->samplesReadCounts = $samplesReadCounts;
   }
@@ -79,7 +90,7 @@ class Google_Service_AnalyticsReporting_ReportData extends Google_Collection
   {
     return $this->samplesReadCounts;
   }
-  public function setSamplingSpaceSizes($samplingSpaceSizes)
+  public function setSamplingSpaceSizes(array $samplingSpaceSizes)
   {
     $this->samplingSpaceSizes = $samplingSpaceSizes;
   }
@@ -87,8 +98,13 @@ class Google_Service_AnalyticsReporting_ReportData extends Google_Collection
   {
     return $this->samplingSpaceSizes;
   }
-  public function setTotals($totals)
+  public function setTotals(array $totals)
   {
+    foreach ($totals as $t) {
+      if (!$t instanceof Google_Service_AnalyticsReporting_DateRangeValues) {
+        throw new InvalidArgumentException('First argument to setTotals must be an array of Google_Service_AnalyticsReporting_DateRangeValues');
+      }
+    }
     $this->totals = $totals;
   }
   public function getTotals()

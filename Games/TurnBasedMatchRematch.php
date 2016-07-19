@@ -18,10 +18,8 @@
 class Google_Service_Games_TurnBasedMatchRematch extends Google_Model
 {
   public $kind;
-  protected $previousMatchType = 'Google_Service_Games_TurnBasedMatch';
-  protected $previousMatchDataType = '';
-  protected $rematchType = 'Google_Service_Games_TurnBasedMatch';
-  protected $rematchDataType = '';
+  public $previousMatch;
+  public $rematch;
 
   public function setKind($kind)
   {

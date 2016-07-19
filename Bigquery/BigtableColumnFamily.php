@@ -18,15 +18,19 @@
 class Google_Service_Bigquery_BigtableColumnFamily extends Google_Collection
 {
   protected $collection_key = 'columns';
-  protected $columnsType = 'Google_Service_Bigquery_BigtableColumn';
-  protected $columnsDataType = 'array';
+  public $columns;
   public $encoding;
   public $familyId;
   public $onlyReadLatest;
   public $type;
 
-  public function setColumns($columns)
+  public function setColumns(array $columns)
   {
+    foreach ($columns as $c) {
+      if (!$c instanceof Google_Service_Bigquery_BigtableColumn) {
+        throw new InvalidArgumentException('First argument to setColumns must be an array of Google_Service_Bigquery_BigtableColumn');
+      }
+    }
     $this->columns = $columns;
   }
   public function getColumns()

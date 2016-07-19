@@ -22,8 +22,7 @@ class Google_Service_Dataflow_MetricUpdate extends Google_Model
   public $kind;
   public $meanCount;
   public $meanSum;
-  protected $nameType = 'Google_Service_Dataflow_MetricStructuredName';
-  protected $nameDataType = '';
+  public $name;
   public $scalar;
   public $set;
   public $updateTime;

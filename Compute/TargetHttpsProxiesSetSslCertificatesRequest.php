@@ -20,7 +20,7 @@ class Google_Service_Compute_TargetHttpsProxiesSetSslCertificatesRequest extends
   protected $collection_key = 'sslCertificates';
   public $sslCertificates;
 
-  public function setSslCertificates($sslCertificates)
+  public function setSslCertificates(array $sslCertificates)
   {
     $this->sslCertificates = $sslCertificates;
   }

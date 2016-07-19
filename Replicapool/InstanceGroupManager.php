@@ -18,8 +18,7 @@
 class Google_Service_Replicapool_InstanceGroupManager extends Google_Collection
 {
   protected $collection_key = 'targetPools';
-  protected $autoHealingPoliciesType = 'Google_Service_Replicapool_ReplicaPoolAutoHealingPolicy';
-  protected $autoHealingPoliciesDataType = 'array';
+  public $autoHealingPolicies;
   public $baseInstanceName;
   public $creationTimestamp;
   public $currentSize;
@@ -34,8 +33,13 @@ class Google_Service_Replicapool_InstanceGroupManager extends Google_Collection
   public $targetPools;
   public $targetSize;
 
-  public function setAutoHealingPolicies($autoHealingPolicies)
+  public function setAutoHealingPolicies(array $autoHealingPolicies)
   {
+    foreach ($autoHealingPolicies as $a) {
+      if (!$a instanceof Google_Service_Replicapool_ReplicaPoolAutoHealingPolicy) {
+        throw new InvalidArgumentException('First argument to setAutoHealingPolicies must be an array of Google_Service_Replicapool_ReplicaPoolAutoHealingPolicy');
+      }
+    }
     $this->autoHealingPolicies = $autoHealingPolicies;
   }
   public function getAutoHealingPolicies()
@@ -130,7 +134,7 @@ class Google_Service_Replicapool_InstanceGroupManager extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setTargetPools($targetPools)
+  public function setTargetPools(array $targetPools)
   {
     $this->targetPools = $targetPools;
   }

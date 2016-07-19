@@ -18,11 +18,15 @@
 class Google_Service_Dataflow_SendWorkerMessagesResponse extends Google_Collection
 {
   protected $collection_key = 'workerMessageResponses';
-  protected $workerMessageResponsesType = 'Google_Service_Dataflow_WorkerMessageResponse';
-  protected $workerMessageResponsesDataType = 'array';
+  public $workerMessageResponses;
 
-  public function setWorkerMessageResponses($workerMessageResponses)
+  public function setWorkerMessageResponses(array $workerMessageResponses)
   {
+    foreach ($workerMessageResponses as $w) {
+      if (!$w instanceof Google_Service_Dataflow_WorkerMessageResponse) {
+        throw new InvalidArgumentException('First argument to setWorkerMessageResponses must be an array of Google_Service_Dataflow_WorkerMessageResponse');
+      }
+    }
     $this->workerMessageResponses = $workerMessageResponses;
   }
   public function getWorkerMessageResponses()

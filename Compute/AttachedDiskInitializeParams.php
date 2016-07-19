@@ -21,8 +21,7 @@ class Google_Service_Compute_AttachedDiskInitializeParams extends Google_Model
   public $diskSizeGb;
   public $diskType;
   public $sourceImage;
-  protected $sourceImageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $sourceImageEncryptionKeyDataType = '';
+  public $sourceImageEncryptionKey;
 
   public function setDiskName($diskName)
   {

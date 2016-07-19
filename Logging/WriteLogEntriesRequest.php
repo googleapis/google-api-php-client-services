@@ -18,23 +18,26 @@
 class Google_Service_Logging_WriteLogEntriesRequest extends Google_Collection
 {
   protected $collection_key = 'entries';
-  protected $entriesType = 'Google_Service_Logging_LogEntry';
-  protected $entriesDataType = 'array';
+  public $entries;
   public $labels;
   public $logName;
   public $partialSuccess;
-  protected $resourceType = 'Google_Service_Logging_MonitoredResource';
-  protected $resourceDataType = '';
+  public $resource;
 
-  public function setEntries($entries)
+  public function setEntries(array $entries)
   {
+    foreach ($entries as $e) {
+      if (!$e instanceof Google_Service_Logging_LogEntry) {
+        throw new InvalidArgumentException('First argument to setEntries must be an array of Google_Service_Logging_LogEntry');
+      }
+    }
     $this->entries = $entries;
   }
   public function getEntries()
   {
     return $this->entries;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

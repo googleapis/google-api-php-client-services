@@ -18,14 +18,11 @@
 class Google_Service_CivicInfo_RepresentativeInfoData extends Google_Collection
 {
   protected $collection_key = 'officials';
-  protected $divisionsType = 'Google_Service_CivicInfo_GeographicDivision';
-  protected $divisionsDataType = 'map';
-  protected $officesType = 'Google_Service_CivicInfo_Office';
-  protected $officesDataType = 'array';
-  protected $officialsType = 'Google_Service_CivicInfo_Official';
-  protected $officialsDataType = 'array';
+  public $divisions;
+  public $offices;
+  public $officials;
 
-  public function setDivisions($divisions)
+  public function setDivisions(array $divisions)
   {
     $this->divisions = $divisions;
   }
@@ -33,16 +30,26 @@ class Google_Service_CivicInfo_RepresentativeInfoData extends Google_Collection
   {
     return $this->divisions;
   }
-  public function setOffices($offices)
+  public function setOffices(array $offices)
   {
+    foreach ($offices as $o) {
+      if (!$o instanceof Google_Service_CivicInfo_Office) {
+        throw new InvalidArgumentException('First argument to setOffices must be an array of Google_Service_CivicInfo_Office');
+      }
+    }
     $this->offices = $offices;
   }
   public function getOffices()
   {
     return $this->offices;
   }
-  public function setOfficials($officials)
+  public function setOfficials(array $officials)
   {
+    foreach ($officials as $o) {
+      if (!$o instanceof Google_Service_CivicInfo_Official) {
+        throw new InvalidArgumentException('First argument to setOfficials must be an array of Google_Service_CivicInfo_Official');
+      }
+    }
     $this->officials = $officials;
   }
   public function getOfficials()

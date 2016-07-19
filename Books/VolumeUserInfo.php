@@ -19,11 +19,9 @@ class Google_Service_Books_VolumeUserInfo extends Google_Model
 {
   public $acquiredTime;
   public $acquisitionType;
-  protected $copyType = 'Google_Service_Books_VolumeUserInfoCopy';
-  protected $copyDataType = '';
+  public $copy;
   public $entitlementType;
-  protected $familySharingType = 'Google_Service_Books_VolumeUserInfoFamilySharing';
-  protected $familySharingDataType = '';
+  public $familySharing;
   public $isFamilySharedFromUser;
   public $isFamilySharedToUser;
   public $isFamilySharingAllowed;
@@ -32,16 +30,12 @@ class Google_Service_Books_VolumeUserInfo extends Google_Model
   public $isPreordered;
   public $isPurchased;
   public $isUploaded;
-  protected $readingPositionType = 'Google_Service_Books_ReadingPosition';
-  protected $readingPositionDataType = '';
-  protected $rentalPeriodType = 'Google_Service_Books_VolumeUserInfoRentalPeriod';
-  protected $rentalPeriodDataType = '';
+  public $readingPosition;
+  public $rentalPeriod;
   public $rentalState;
-  protected $reviewType = 'Google_Service_Books_Review';
-  protected $reviewDataType = '';
+  public $review;
   public $updated;
-  protected $userUploadedVolumeInfoType = 'Google_Service_Books_VolumeUserInfoUserUploadedVolumeInfo';
-  protected $userUploadedVolumeInfoDataType = '';
+  public $userUploadedVolumeInfo;
 
   public function setAcquiredTime($acquiredTime)
   {

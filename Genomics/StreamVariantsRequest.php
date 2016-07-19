@@ -25,7 +25,7 @@ class Google_Service_Genomics_StreamVariantsRequest extends Google_Collection
   public $start;
   public $variantSetId;
 
-  public function setCallSetIds($callSetIds)
+  public function setCallSetIds(array $callSetIds)
   {
     $this->callSetIds = $callSetIds;
   }

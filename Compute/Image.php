@@ -20,23 +20,19 @@ class Google_Service_Compute_Image extends Google_Collection
   protected $collection_key = 'licenses';
   public $archiveSizeBytes;
   public $creationTimestamp;
-  protected $deprecatedType = 'Google_Service_Compute_DeprecationStatus';
-  protected $deprecatedDataType = '';
+  public $deprecated;
   public $description;
   public $diskSizeGb;
   public $family;
   public $id;
-  protected $imageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $imageEncryptionKeyDataType = '';
+  public $imageEncryptionKey;
   public $kind;
   public $licenses;
   public $name;
-  protected $rawDiskType = 'Google_Service_Compute_ImageRawDisk';
-  protected $rawDiskDataType = '';
+  public $rawDisk;
   public $selfLink;
   public $sourceDisk;
-  protected $sourceDiskEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $sourceDiskEncryptionKeyDataType = '';
+  public $sourceDiskEncryptionKey;
   public $sourceDiskId;
   public $sourceType;
   public $status;
@@ -113,7 +109,7 @@ class Google_Service_Compute_Image extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLicenses($licenses)
+  public function setLicenses(array $licenses)
   {
     $this->licenses = $licenses;
   }

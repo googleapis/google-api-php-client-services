@@ -18,8 +18,7 @@
 class Google_Service_Vision_Image extends Google_Model
 {
   public $content;
-  protected $sourceType = 'Google_Service_Vision_ImageSource';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setContent($content)
   {

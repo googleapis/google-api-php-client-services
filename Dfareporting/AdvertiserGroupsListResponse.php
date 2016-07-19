@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_AdvertiserGroupsListResponse extends Google_Collection
 {
   protected $collection_key = 'advertiserGroups';
-  protected $advertiserGroupsType = 'Google_Service_Dfareporting_AdvertiserGroup';
-  protected $advertiserGroupsDataType = 'array';
+  public $advertiserGroups;
   public $kind;
   public $nextPageToken;
 
-  public function setAdvertiserGroups($advertiserGroups)
+  public function setAdvertiserGroups(array $advertiserGroups)
   {
+    foreach ($advertiserGroups as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_AdvertiserGroup) {
+        throw new InvalidArgumentException('First argument to setAdvertiserGroups must be an array of Google_Service_Dfareporting_AdvertiserGroup');
+      }
+    }
     $this->advertiserGroups = $advertiserGroups;
   }
   public function getAdvertiserGroups()

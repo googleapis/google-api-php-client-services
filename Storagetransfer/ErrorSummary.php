@@ -20,8 +20,7 @@ class Google_Service_Storagetransfer_ErrorSummary extends Google_Collection
   protected $collection_key = 'errorLogEntries';
   public $errorCode;
   public $errorCount;
-  protected $errorLogEntriesType = 'Google_Service_Storagetransfer_ErrorLogEntry';
-  protected $errorLogEntriesDataType = 'array';
+  public $errorLogEntries;
 
   public function setErrorCode($errorCode)
   {
@@ -39,8 +38,13 @@ class Google_Service_Storagetransfer_ErrorSummary extends Google_Collection
   {
     return $this->errorCount;
   }
-  public function setErrorLogEntries($errorLogEntries)
+  public function setErrorLogEntries(array $errorLogEntries)
   {
+    foreach ($errorLogEntries as $e) {
+      if (!$e instanceof Google_Service_Storagetransfer_ErrorLogEntry) {
+        throw new InvalidArgumentException('First argument to setErrorLogEntries must be an array of Google_Service_Storagetransfer_ErrorLogEntry');
+      }
+    }
     $this->errorLogEntries = $errorLogEntries;
   }
   public function getErrorLogEntries()

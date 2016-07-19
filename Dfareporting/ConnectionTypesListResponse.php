@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_ConnectionTypesListResponse extends Google_Collection
 {
   protected $collection_key = 'connectionTypes';
-  protected $connectionTypesType = 'Google_Service_Dfareporting_ConnectionType';
-  protected $connectionTypesDataType = 'array';
+  public $connectionTypes;
   public $kind;
 
-  public function setConnectionTypes($connectionTypes)
+  public function setConnectionTypes(array $connectionTypes)
   {
+    foreach ($connectionTypes as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_ConnectionType) {
+        throw new InvalidArgumentException('First argument to setConnectionTypes must be an array of Google_Service_Dfareporting_ConnectionType');
+      }
+    }
     $this->connectionTypes = $connectionTypes;
   }
   public function getConnectionTypes()

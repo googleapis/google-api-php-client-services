@@ -17,14 +17,10 @@
 
 class Google_Service_Dataflow_StreamLocation extends Google_Model
 {
-  protected $customSourceLocationType = 'Google_Service_Dataflow_CustomSourceLocation';
-  protected $customSourceLocationDataType = '';
-  protected $pubsubLocationType = 'Google_Service_Dataflow_PubsubLocation';
-  protected $pubsubLocationDataType = '';
-  protected $sideInputLocationType = 'Google_Service_Dataflow_StreamingSideInputLocation';
-  protected $sideInputLocationDataType = '';
-  protected $streamingStageLocationType = 'Google_Service_Dataflow_StreamingStageLocation';
-  protected $streamingStageLocationDataType = '';
+  public $customSourceLocation;
+  public $pubsubLocation;
+  public $sideInputLocation;
+  public $streamingStageLocation;
 
   public function setCustomSourceLocation(Google_Service_Dataflow_CustomSourceLocation $customSourceLocation)
   {

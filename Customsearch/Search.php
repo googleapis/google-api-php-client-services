@@ -18,21 +18,14 @@
 class Google_Service_Customsearch_Search extends Google_Collection
 {
   protected $collection_key = 'promotions';
-  protected $contextType = 'Google_Service_Customsearch_Context';
-  protected $contextDataType = '';
-  protected $itemsType = 'Google_Service_Customsearch_Result';
-  protected $itemsDataType = 'array';
+  public $context;
+  public $items;
   public $kind;
-  protected $promotionsType = 'Google_Service_Customsearch_Promotion';
-  protected $promotionsDataType = 'array';
-  protected $queriesType = 'Google_Service_Customsearch_Query';
-  protected $queriesDataType = 'map';
-  protected $searchInformationType = 'Google_Service_Customsearch_SearchSearchInformation';
-  protected $searchInformationDataType = '';
-  protected $spellingType = 'Google_Service_Customsearch_SearchSpelling';
-  protected $spellingDataType = '';
-  protected $urlType = 'Google_Service_Customsearch_SearchUrl';
-  protected $urlDataType = '';
+  public $promotions;
+  public $queries;
+  public $searchInformation;
+  public $spelling;
+  public $url;
 
   public function setContext(Google_Service_Customsearch_Context $context)
   {
@@ -42,8 +35,13 @@ class Google_Service_Customsearch_Search extends Google_Collection
   {
     return $this->context;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Customsearch_Result) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Customsearch_Result');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()
@@ -58,15 +56,20 @@ class Google_Service_Customsearch_Search extends Google_Collection
   {
     return $this->kind;
   }
-  public function setPromotions($promotions)
+  public function setPromotions(array $promotions)
   {
+    foreach ($promotions as $p) {
+      if (!$p instanceof Google_Service_Customsearch_Promotion) {
+        throw new InvalidArgumentException('First argument to setPromotions must be an array of Google_Service_Customsearch_Promotion');
+      }
+    }
     $this->promotions = $promotions;
   }
   public function getPromotions()
   {
     return $this->promotions;
   }
-  public function setQueries($queries)
+  public function setQueries(array $queries)
   {
     $this->queries = $queries;
   }

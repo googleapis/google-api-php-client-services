@@ -18,23 +18,16 @@
 class Google_Service_Sheets_CellData extends Google_Collection
 {
   protected $collection_key = 'textFormatRuns';
-  protected $dataValidationType = 'Google_Service_Sheets_DataValidationRule';
-  protected $dataValidationDataType = '';
-  protected $effectiveFormatType = 'Google_Service_Sheets_CellFormat';
-  protected $effectiveFormatDataType = '';
-  protected $effectiveValueType = 'Google_Service_Sheets_ExtendedValue';
-  protected $effectiveValueDataType = '';
+  public $dataValidation;
+  public $effectiveFormat;
+  public $effectiveValue;
   public $formattedValue;
   public $hyperlink;
   public $note;
-  protected $pivotTableType = 'Google_Service_Sheets_PivotTable';
-  protected $pivotTableDataType = '';
-  protected $textFormatRunsType = 'Google_Service_Sheets_TextFormatRun';
-  protected $textFormatRunsDataType = 'array';
-  protected $userEnteredFormatType = 'Google_Service_Sheets_CellFormat';
-  protected $userEnteredFormatDataType = '';
-  protected $userEnteredValueType = 'Google_Service_Sheets_ExtendedValue';
-  protected $userEnteredValueDataType = '';
+  public $pivotTable;
+  public $textFormatRuns;
+  public $userEnteredFormat;
+  public $userEnteredValue;
 
   public function setDataValidation(Google_Service_Sheets_DataValidationRule $dataValidation)
   {
@@ -92,8 +85,13 @@ class Google_Service_Sheets_CellData extends Google_Collection
   {
     return $this->pivotTable;
   }
-  public function setTextFormatRuns($textFormatRuns)
+  public function setTextFormatRuns(array $textFormatRuns)
   {
+    foreach ($textFormatRuns as $t) {
+      if (!$t instanceof Google_Service_Sheets_TextFormatRun) {
+        throw new InvalidArgumentException('First argument to setTextFormatRuns must be an array of Google_Service_Sheets_TextFormatRun');
+      }
+    }
     $this->textFormatRuns = $textFormatRuns;
   }
   public function getTextFormatRuns()

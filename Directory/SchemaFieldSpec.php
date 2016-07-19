@@ -24,8 +24,7 @@ class Google_Service_Directory_SchemaFieldSpec extends Google_Model
   public $indexed;
   public $kind;
   public $multiValued;
-  protected $numericIndexingSpecType = 'Google_Service_Directory_SchemaFieldSpecNumericIndexingSpec';
-  protected $numericIndexingSpecDataType = '';
+  public $numericIndexingSpec;
   public $readAccessType;
 
   public function setEtag($etag)

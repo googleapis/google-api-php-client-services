@@ -25,8 +25,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $adwordsLabels;
   public $adwordsRedirect;
   public $ageGroup;
-  protected $aspectsType = 'Google_Service_ShoppingContent_ProductAspect';
-  protected $aspectsDataType = 'array';
+  public $aspects;
   public $availability;
   public $availabilityDate;
   public $brand;
@@ -34,18 +33,15 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $color;
   public $condition;
   public $contentLanguage;
-  protected $customAttributesType = 'Google_Service_ShoppingContent_ProductCustomAttribute';
-  protected $customAttributesDataType = 'array';
-  protected $customGroupsType = 'Google_Service_ShoppingContent_ProductCustomGroup';
-  protected $customGroupsDataType = 'array';
+  public $customAttributes;
+  public $customGroups;
   public $customLabel0;
   public $customLabel1;
   public $customLabel2;
   public $customLabel3;
   public $customLabel4;
   public $description;
-  protected $destinationsType = 'Google_Service_ShoppingContent_ProductDestination';
-  protected $destinationsDataType = 'array';
+  public $destinations;
   public $displayAdsId;
   public $displayAdsLink;
   public $displayAdsSimilarIds;
@@ -59,14 +55,12 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $id;
   public $identifierExists;
   public $imageLink;
-  protected $installmentType = 'Google_Service_ShoppingContent_Installment';
-  protected $installmentDataType = '';
+  public $installment;
   public $isBundle;
   public $itemGroupId;
   public $kind;
   public $link;
-  protected $loyaltyPointsType = 'Google_Service_ShoppingContent_LoyaltyPoints';
-  protected $loyaltyPointsDataType = '';
+  public $loyaltyPoints;
   public $material;
   public $mobileLink;
   public $mpn;
@@ -74,41 +68,30 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   public $offerId;
   public $onlineOnly;
   public $pattern;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
-  protected $priceDataType = '';
+  public $price;
   public $productType;
   public $promotionIds;
-  protected $salePriceType = 'Google_Service_ShoppingContent_Price';
-  protected $salePriceDataType = '';
+  public $salePrice;
   public $salePriceEffectiveDate;
   public $sellOnGoogleQuantity;
-  protected $shippingType = 'Google_Service_ShoppingContent_ProductShipping';
-  protected $shippingDataType = 'array';
-  protected $shippingHeightType = 'Google_Service_ShoppingContent_ProductShippingDimension';
-  protected $shippingHeightDataType = '';
+  public $shipping;
+  public $shippingHeight;
   public $shippingLabel;
-  protected $shippingLengthType = 'Google_Service_ShoppingContent_ProductShippingDimension';
-  protected $shippingLengthDataType = '';
-  protected $shippingWeightType = 'Google_Service_ShoppingContent_ProductShippingWeight';
-  protected $shippingWeightDataType = '';
-  protected $shippingWidthType = 'Google_Service_ShoppingContent_ProductShippingDimension';
-  protected $shippingWidthDataType = '';
+  public $shippingLength;
+  public $shippingWeight;
+  public $shippingWidth;
   public $sizeSystem;
   public $sizeType;
   public $sizes;
   public $targetCountry;
-  protected $taxesType = 'Google_Service_ShoppingContent_ProductTax';
-  protected $taxesDataType = 'array';
+  public $taxes;
   public $title;
-  protected $unitPricingBaseMeasureType = 'Google_Service_ShoppingContent_ProductUnitPricingBaseMeasure';
-  protected $unitPricingBaseMeasureDataType = '';
-  protected $unitPricingMeasureType = 'Google_Service_ShoppingContent_ProductUnitPricingMeasure';
-  protected $unitPricingMeasureDataType = '';
+  public $unitPricingBaseMeasure;
+  public $unitPricingMeasure;
   public $validatedDestinations;
-  protected $warningsType = 'Google_Service_ShoppingContent_Error';
-  protected $warningsDataType = 'array';
+  public $warnings;
 
-  public function setAdditionalImageLinks($additionalImageLinks)
+  public function setAdditionalImageLinks(array $additionalImageLinks)
   {
     $this->additionalImageLinks = $additionalImageLinks;
   }
@@ -116,7 +99,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->additionalImageLinks;
   }
-  public function setAdditionalProductTypes($additionalProductTypes)
+  public function setAdditionalProductTypes(array $additionalProductTypes)
   {
     $this->additionalProductTypes = $additionalProductTypes;
   }
@@ -140,7 +123,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->adwordsGrouping;
   }
-  public function setAdwordsLabels($adwordsLabels)
+  public function setAdwordsLabels(array $adwordsLabels)
   {
     $this->adwordsLabels = $adwordsLabels;
   }
@@ -164,8 +147,13 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->ageGroup;
   }
-  public function setAspects($aspects)
+  public function setAspects(array $aspects)
   {
+    foreach ($aspects as $a) {
+      if (!$a instanceof Google_Service_ShoppingContent_ProductAspect) {
+        throw new InvalidArgumentException('First argument to setAspects must be an array of Google_Service_ShoppingContent_ProductAspect');
+      }
+    }
     $this->aspects = $aspects;
   }
   public function getAspects()
@@ -228,16 +216,26 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->contentLanguage;
   }
-  public function setCustomAttributes($customAttributes)
+  public function setCustomAttributes(array $customAttributes)
   {
+    foreach ($customAttributes as $c) {
+      if (!$c instanceof Google_Service_ShoppingContent_ProductCustomAttribute) {
+        throw new InvalidArgumentException('First argument to setCustomAttributes must be an array of Google_Service_ShoppingContent_ProductCustomAttribute');
+      }
+    }
     $this->customAttributes = $customAttributes;
   }
   public function getCustomAttributes()
   {
     return $this->customAttributes;
   }
-  public function setCustomGroups($customGroups)
+  public function setCustomGroups(array $customGroups)
   {
+    foreach ($customGroups as $c) {
+      if (!$c instanceof Google_Service_ShoppingContent_ProductCustomGroup) {
+        throw new InvalidArgumentException('First argument to setCustomGroups must be an array of Google_Service_ShoppingContent_ProductCustomGroup');
+      }
+    }
     $this->customGroups = $customGroups;
   }
   public function getCustomGroups()
@@ -292,8 +290,13 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->description;
   }
-  public function setDestinations($destinations)
+  public function setDestinations(array $destinations)
   {
+    foreach ($destinations as $d) {
+      if (!$d instanceof Google_Service_ShoppingContent_ProductDestination) {
+        throw new InvalidArgumentException('First argument to setDestinations must be an array of Google_Service_ShoppingContent_ProductDestination');
+      }
+    }
     $this->destinations = $destinations;
   }
   public function getDestinations()
@@ -316,7 +319,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->displayAdsLink;
   }
-  public function setDisplayAdsSimilarIds($displayAdsSimilarIds)
+  public function setDisplayAdsSimilarIds(array $displayAdsSimilarIds)
   {
     $this->displayAdsSimilarIds = $displayAdsSimilarIds;
   }
@@ -524,7 +527,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->productType;
   }
-  public function setPromotionIds($promotionIds)
+  public function setPromotionIds(array $promotionIds)
   {
     $this->promotionIds = $promotionIds;
   }
@@ -556,8 +559,13 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->sellOnGoogleQuantity;
   }
-  public function setShipping($shipping)
+  public function setShipping(array $shipping)
   {
+    foreach ($shipping as $s) {
+      if (!$s instanceof Google_Service_ShoppingContent_ProductShipping) {
+        throw new InvalidArgumentException('First argument to setShipping must be an array of Google_Service_ShoppingContent_ProductShipping');
+      }
+    }
     $this->shipping = $shipping;
   }
   public function getShipping()
@@ -620,7 +628,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->sizeType;
   }
-  public function setSizes($sizes)
+  public function setSizes(array $sizes)
   {
     $this->sizes = $sizes;
   }
@@ -636,8 +644,13 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->targetCountry;
   }
-  public function setTaxes($taxes)
+  public function setTaxes(array $taxes)
   {
+    foreach ($taxes as $t) {
+      if (!$t instanceof Google_Service_ShoppingContent_ProductTax) {
+        throw new InvalidArgumentException('First argument to setTaxes must be an array of Google_Service_ShoppingContent_ProductTax');
+      }
+    }
     $this->taxes = $taxes;
   }
   public function getTaxes()
@@ -668,7 +681,7 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->unitPricingMeasure;
   }
-  public function setValidatedDestinations($validatedDestinations)
+  public function setValidatedDestinations(array $validatedDestinations)
   {
     $this->validatedDestinations = $validatedDestinations;
   }
@@ -676,8 +689,13 @@ class Google_Service_ShoppingContent_Product extends Google_Collection
   {
     return $this->validatedDestinations;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
+    foreach ($warnings as $w) {
+      if (!$w instanceof Google_Service_ShoppingContent_Error) {
+        throw new InvalidArgumentException('First argument to setWarnings must be an array of Google_Service_ShoppingContent_Error');
+      }
+    }
     $this->warnings = $warnings;
   }
   public function getWarnings()

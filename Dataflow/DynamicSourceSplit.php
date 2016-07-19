@@ -17,10 +17,8 @@
 
 class Google_Service_Dataflow_DynamicSourceSplit extends Google_Model
 {
-  protected $primaryType = 'Google_Service_Dataflow_DerivedSource';
-  protected $primaryDataType = '';
-  protected $residualType = 'Google_Service_Dataflow_DerivedSource';
-  protected $residualDataType = '';
+  public $primary;
+  public $residual;
 
   public function setPrimary(Google_Service_Dataflow_DerivedSource $primary)
   {

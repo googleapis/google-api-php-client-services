@@ -18,15 +18,17 @@
 class Google_Service_Vision_AnnotateImageRequest extends Google_Collection
 {
   protected $collection_key = 'features';
-  protected $featuresType = 'Google_Service_Vision_Feature';
-  protected $featuresDataType = 'array';
-  protected $imageType = 'Google_Service_Vision_Image';
-  protected $imageDataType = '';
-  protected $imageContextType = 'Google_Service_Vision_ImageContext';
-  protected $imageContextDataType = '';
+  public $features;
+  public $image;
+  public $imageContext;
 
-  public function setFeatures($features)
+  public function setFeatures(array $features)
   {
+    foreach ($features as $f) {
+      if (!$f instanceof Google_Service_Vision_Feature) {
+        throw new InvalidArgumentException('First argument to setFeatures must be an array of Google_Service_Vision_Feature');
+      }
+    }
     $this->features = $features;
   }
   public function getFeatures()

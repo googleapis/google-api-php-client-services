@@ -18,16 +18,20 @@
 class Google_Service_Sheets_BatchUpdateValuesResponse extends Google_Collection
 {
   protected $collection_key = 'responses';
-  protected $responsesType = 'Google_Service_Sheets_UpdateValuesResponse';
-  protected $responsesDataType = 'array';
+  public $responses;
   public $spreadsheetId;
   public $totalUpdatedCells;
   public $totalUpdatedColumns;
   public $totalUpdatedRows;
   public $totalUpdatedSheets;
 
-  public function setResponses($responses)
+  public function setResponses(array $responses)
   {
+    foreach ($responses as $r) {
+      if (!$r instanceof Google_Service_Sheets_UpdateValuesResponse) {
+        throw new InvalidArgumentException('First argument to setResponses must be an array of Google_Service_Sheets_UpdateValuesResponse');
+      }
+    }
     $this->responses = $responses;
   }
   public function getResponses()

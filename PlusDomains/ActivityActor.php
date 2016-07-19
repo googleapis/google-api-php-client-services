@@ -17,17 +17,13 @@
 
 class Google_Service_PlusDomains_ActivityActor extends Google_Model
 {
-  protected $clientSpecificActorInfoType = 'Google_Service_PlusDomains_ActivityActorClientSpecificActorInfo';
-  protected $clientSpecificActorInfoDataType = '';
+  public $clientSpecificActorInfo;
   public $displayName;
   public $id;
-  protected $imageType = 'Google_Service_PlusDomains_ActivityActorImage';
-  protected $imageDataType = '';
-  protected $nameType = 'Google_Service_PlusDomains_ActivityActorName';
-  protected $nameDataType = '';
+  public $image;
+  public $name;
   public $url;
-  protected $verificationType = 'Google_Service_PlusDomains_ActivityActorVerification';
-  protected $verificationDataType = '';
+  public $verification;
 
   public function setClientSpecificActorInfo(Google_Service_PlusDomains_ActivityActorClientSpecificActorInfo $clientSpecificActorInfo)
   {

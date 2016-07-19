@@ -18,8 +18,7 @@
 class Google_Service_ConsumerSurveys_SurveysStartResponse extends Google_Model
 {
   public $requestId;
-  protected $resourceType = 'Google_Service_ConsumerSurveys_Survey';
-  protected $resourceDataType = '';
+  public $resource;
 
   public function setRequestId($requestId)
   {

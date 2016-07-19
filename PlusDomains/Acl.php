@@ -20,8 +20,7 @@ class Google_Service_PlusDomains_Acl extends Google_Collection
   protected $collection_key = 'items';
   public $description;
   public $domainRestricted;
-  protected $itemsType = 'Google_Service_PlusDomains_PlusDomainsAclentryResource';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
 
   public function setDescription($description)
@@ -40,8 +39,13 @@ class Google_Service_PlusDomains_Acl extends Google_Collection
   {
     return $this->domainRestricted;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_PlusDomains_PlusDomainsAclentryResource) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_PlusDomains_PlusDomainsAclentryResource');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

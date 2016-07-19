@@ -18,8 +18,7 @@
 class Google_Service_CloudDebugger_CloudWorkspaceId extends Google_Model
 {
   public $name;
-  protected $repoIdType = 'Google_Service_CloudDebugger_RepoId';
-  protected $repoIdDataType = '';
+  public $repoId;
 
   public function setName($name)
   {

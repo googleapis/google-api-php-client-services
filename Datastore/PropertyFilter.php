@@ -18,10 +18,8 @@
 class Google_Service_Datastore_PropertyFilter extends Google_Model
 {
   public $op;
-  protected $propertyType = 'Google_Service_Datastore_PropertyReference';
-  protected $propertyDataType = '';
-  protected $valueType = 'Google_Service_Datastore_Value';
-  protected $valueDataType = '';
+  public $property;
+  public $value;
 
   public function setOp($op)
   {

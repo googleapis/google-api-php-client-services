@@ -17,10 +17,8 @@
 
 class Google_Service_Dfareporting_PopupWindowProperties extends Google_Model
 {
-  protected $dimensionType = 'Google_Service_Dfareporting_Size';
-  protected $dimensionDataType = '';
-  protected $offsetType = 'Google_Service_Dfareporting_OffsetPosition';
-  protected $offsetDataType = '';
+  public $dimension;
+  public $offset;
   public $positionType;
   public $showAddressBar;
   public $showMenuBar;

@@ -19,10 +19,9 @@ class Google_Service_Proximitybeacon_GetInfoForObservedBeaconsRequest extends Go
 {
   protected $collection_key = 'observations';
   public $namespacedTypes;
-  protected $observationsType = 'Google_Service_Proximitybeacon_Observation';
-  protected $observationsDataType = 'array';
+  public $observations;
 
-  public function setNamespacedTypes($namespacedTypes)
+  public function setNamespacedTypes(array $namespacedTypes)
   {
     $this->namespacedTypes = $namespacedTypes;
   }
@@ -30,8 +29,13 @@ class Google_Service_Proximitybeacon_GetInfoForObservedBeaconsRequest extends Go
   {
     return $this->namespacedTypes;
   }
-  public function setObservations($observations)
+  public function setObservations(array $observations)
   {
+    foreach ($observations as $o) {
+      if (!$o instanceof Google_Service_Proximitybeacon_Observation) {
+        throw new InvalidArgumentException('First argument to setObservations must be an array of Google_Service_Proximitybeacon_Observation');
+      }
+    }
     $this->observations = $observations;
   }
   public function getObservations()

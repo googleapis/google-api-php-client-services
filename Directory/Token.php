@@ -75,7 +75,7 @@ class Google_Service_Directory_Token extends Google_Collection
   {
     return $this->nativeApp;
   }
-  public function setScopes($scopes)
+  public function setScopes(array $scopes)
   {
     $this->scopes = $scopes;
   }

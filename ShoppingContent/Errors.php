@@ -19,8 +19,7 @@ class Google_Service_ShoppingContent_Errors extends Google_Collection
 {
   protected $collection_key = 'errors';
   public $code;
-  protected $errorsType = 'Google_Service_ShoppingContent_Error';
-  protected $errorsDataType = 'array';
+  public $errors;
   public $message;
 
   public function setCode($code)
@@ -31,8 +30,13 @@ class Google_Service_ShoppingContent_Errors extends Google_Collection
   {
     return $this->code;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_ShoppingContent_Error) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_ShoppingContent_Error');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()

@@ -18,26 +18,32 @@
 class Google_Service_Dfareporting_ReportCompatibleFields extends Google_Collection
 {
   protected $collection_key = 'pivotedActivityMetrics';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
-  protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_Dimension';
-  protected $dimensionsDataType = 'array';
+  public $dimensionFilters;
+  public $dimensions;
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
-  protected $metricsDataType = 'array';
-  protected $pivotedActivityMetricsType = 'Google_Service_Dfareporting_Metric';
-  protected $pivotedActivityMetricsDataType = 'array';
+  public $metrics;
+  public $pivotedActivityMetrics;
 
-  public function setDimensionFilters($dimensionFilters)
+  public function setDimensionFilters(array $dimensionFilters)
   {
+    foreach ($dimensionFilters as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setDimensionFilters must be an array of Google_Service_Dfareporting_Dimension');
+      }
+    }
     $this->dimensionFilters = $dimensionFilters;
   }
   public function getDimensionFilters()
   {
     return $this->dimensionFilters;
   }
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
+    foreach ($dimensions as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setDimensions must be an array of Google_Service_Dfareporting_Dimension');
+      }
+    }
     $this->dimensions = $dimensions;
   }
   public function getDimensions()
@@ -52,16 +58,26 @@ class Google_Service_Dfareporting_ReportCompatibleFields extends Google_Collecti
   {
     return $this->kind;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_Dfareporting_Metric) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_Dfareporting_Metric');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()
   {
     return $this->metrics;
   }
-  public function setPivotedActivityMetrics($pivotedActivityMetrics)
+  public function setPivotedActivityMetrics(array $pivotedActivityMetrics)
   {
+    foreach ($pivotedActivityMetrics as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_Metric) {
+        throw new InvalidArgumentException('First argument to setPivotedActivityMetrics must be an array of Google_Service_Dfareporting_Metric');
+      }
+    }
     $this->pivotedActivityMetrics = $pivotedActivityMetrics;
   }
   public function getPivotedActivityMetrics()

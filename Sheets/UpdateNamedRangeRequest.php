@@ -18,8 +18,7 @@
 class Google_Service_Sheets_UpdateNamedRangeRequest extends Google_Model
 {
   public $fields;
-  protected $namedRangeType = 'Google_Service_Sheets_NamedRange';
-  protected $namedRangeDataType = '';
+  public $namedRange;
 
   public function setFields($fields)
   {

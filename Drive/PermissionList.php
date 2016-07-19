@@ -19,8 +19,7 @@ class Google_Service_Drive_PermissionList extends Google_Collection
 {
   protected $collection_key = 'permissions';
   public $kind;
-  protected $permissionsType = 'Google_Service_Drive_Permission';
-  protected $permissionsDataType = 'array';
+  public $permissions;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Drive_PermissionList extends Google_Collection
   {
     return $this->kind;
   }
-  public function setPermissions($permissions)
+  public function setPermissions(array $permissions)
   {
+    foreach ($permissions as $p) {
+      if (!$p instanceof Google_Service_Drive_Permission) {
+        throw new InvalidArgumentException('First argument to setPermissions must be an array of Google_Service_Drive_Permission');
+      }
+    }
     $this->permissions = $permissions;
   }
   public function getPermissions()

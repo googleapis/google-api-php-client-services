@@ -44,7 +44,7 @@ class Google_Service_PlayMovies_StoreInfo extends Google_Collection
   public $type;
   public $videoId;
 
-  public function setAudioTracks($audioTracks)
+  public function setAudioTracks(array $audioTracks)
   {
     $this->audioTracks = $audioTracks;
   }
@@ -148,7 +148,7 @@ class Google_Service_PlayMovies_StoreInfo extends Google_Collection
   {
     return $this->name;
   }
-  public function setPphNames($pphNames)
+  public function setPphNames(array $pphNames)
   {
     $this->pphNames = $pphNames;
   }
@@ -204,7 +204,7 @@ class Google_Service_PlayMovies_StoreInfo extends Google_Collection
   {
     return $this->studioName;
   }
-  public function setSubtitles($subtitles)
+  public function setSubtitles(array $subtitles)
   {
     $this->subtitles = $subtitles;
   }

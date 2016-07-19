@@ -19,8 +19,7 @@ class Google_Service_FirebaseRulesAPI_ListRulesetsResponse extends Google_Collec
 {
   protected $collection_key = 'rulesets';
   public $nextPageToken;
-  protected $rulesetsType = 'Google_Service_FirebaseRulesAPI_Ruleset';
-  protected $rulesetsDataType = 'array';
+  public $rulesets;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_FirebaseRulesAPI_ListRulesetsResponse extends Google_Collec
   {
     return $this->nextPageToken;
   }
-  public function setRulesets($rulesets)
+  public function setRulesets(array $rulesets)
   {
+    foreach ($rulesets as $r) {
+      if (!$r instanceof Google_Service_FirebaseRulesAPI_Ruleset) {
+        throw new InvalidArgumentException('First argument to setRulesets must be an array of Google_Service_FirebaseRulesAPI_Ruleset');
+      }
+    }
     $this->rulesets = $rulesets;
   }
   public function getRulesets()

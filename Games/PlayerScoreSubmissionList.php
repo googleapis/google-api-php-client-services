@@ -19,8 +19,7 @@ class Google_Service_Games_PlayerScoreSubmissionList extends Google_Collection
 {
   protected $collection_key = 'scores';
   public $kind;
-  protected $scoresType = 'Google_Service_Games_ScoreSubmission';
-  protected $scoresDataType = 'array';
+  public $scores;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Games_PlayerScoreSubmissionList extends Google_Collection
   {
     return $this->kind;
   }
-  public function setScores($scores)
+  public function setScores(array $scores)
   {
+    foreach ($scores as $s) {
+      if (!$s instanceof Google_Service_Games_ScoreSubmission) {
+        throw new InvalidArgumentException('First argument to setScores must be an array of Google_Service_Games_ScoreSubmission');
+      }
+    }
     $this->scores = $scores;
   }
   public function getScores()

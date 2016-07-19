@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_BrowsersListResponse extends Google_Collection
 {
   protected $collection_key = 'browsers';
-  protected $browsersType = 'Google_Service_Dfareporting_Browser';
-  protected $browsersDataType = 'array';
+  public $browsers;
   public $kind;
 
-  public function setBrowsers($browsers)
+  public function setBrowsers(array $browsers)
   {
+    foreach ($browsers as $b) {
+      if (!$b instanceof Google_Service_Dfareporting_Browser) {
+        throw new InvalidArgumentException('First argument to setBrowsers must be an array of Google_Service_Dfareporting_Browser');
+      }
+    }
     $this->browsers = $browsers;
   }
   public function getBrowsers()

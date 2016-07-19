@@ -20,8 +20,7 @@ class Google_Service_ShoppingContent_AccountTax extends Google_Collection
   protected $collection_key = 'rules';
   public $accountId;
   public $kind;
-  protected $rulesType = 'Google_Service_ShoppingContent_AccountTaxTaxRule';
-  protected $rulesDataType = 'array';
+  public $rules;
 
   public function setAccountId($accountId)
   {
@@ -39,8 +38,13 @@ class Google_Service_ShoppingContent_AccountTax extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRules($rules)
+  public function setRules(array $rules)
   {
+    foreach ($rules as $r) {
+      if (!$r instanceof Google_Service_ShoppingContent_AccountTaxTaxRule) {
+        throw new InvalidArgumentException('First argument to setRules must be an array of Google_Service_ShoppingContent_AccountTaxTaxRule');
+      }
+    }
     $this->rules = $rules;
   }
   public function getRules()

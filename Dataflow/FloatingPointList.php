@@ -20,7 +20,7 @@ class Google_Service_Dataflow_FloatingPointList extends Google_Collection
   protected $collection_key = 'elements';
   public $elements;
 
-  public function setElements($elements)
+  public function setElements(array $elements)
   {
     $this->elements = $elements;
   }

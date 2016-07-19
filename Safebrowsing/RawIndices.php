@@ -20,7 +20,7 @@ class Google_Service_Safebrowsing_RawIndices extends Google_Collection
   protected $collection_key = 'indices';
   public $indices;
 
-  public function setIndices($indices)
+  public function setIndices(array $indices)
   {
     $this->indices = $indices;
   }

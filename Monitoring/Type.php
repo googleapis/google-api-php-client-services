@@ -18,18 +18,20 @@
 class Google_Service_Monitoring_Type extends Google_Collection
 {
   protected $collection_key = 'options';
-  protected $fieldsType = 'Google_Service_Monitoring_Field';
-  protected $fieldsDataType = 'array';
+  public $fields;
   public $name;
   public $oneofs;
-  protected $optionsType = 'Google_Service_Monitoring_Option';
-  protected $optionsDataType = 'array';
-  protected $sourceContextType = 'Google_Service_Monitoring_SourceContext';
-  protected $sourceContextDataType = '';
+  public $options;
+  public $sourceContext;
   public $syntax;
 
-  public function setFields($fields)
+  public function setFields(array $fields)
   {
+    foreach ($fields as $f) {
+      if (!$f instanceof Google_Service_Monitoring_Field) {
+        throw new InvalidArgumentException('First argument to setFields must be an array of Google_Service_Monitoring_Field');
+      }
+    }
     $this->fields = $fields;
   }
   public function getFields()
@@ -44,7 +46,7 @@ class Google_Service_Monitoring_Type extends Google_Collection
   {
     return $this->name;
   }
-  public function setOneofs($oneofs)
+  public function setOneofs(array $oneofs)
   {
     $this->oneofs = $oneofs;
   }
@@ -52,8 +54,13 @@ class Google_Service_Monitoring_Type extends Google_Collection
   {
     return $this->oneofs;
   }
-  public function setOptions($options)
+  public function setOptions(array $options)
   {
+    foreach ($options as $o) {
+      if (!$o instanceof Google_Service_Monitoring_Option) {
+        throw new InvalidArgumentException('First argument to setOptions must be an array of Google_Service_Monitoring_Option');
+      }
+    }
     $this->options = $options;
   }
   public function getOptions()

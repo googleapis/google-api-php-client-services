@@ -19,8 +19,7 @@ class Google_Service_YouTube_ChannelSectionSnippet extends Google_Model
 {
   public $channelId;
   public $defaultLanguage;
-  protected $localizedType = 'Google_Service_YouTube_ChannelSectionLocalization';
-  protected $localizedDataType = '';
+  public $localized;
   public $position;
   public $style;
   public $title;

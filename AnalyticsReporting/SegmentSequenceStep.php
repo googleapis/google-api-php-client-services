@@ -19,8 +19,7 @@ class Google_Service_AnalyticsReporting_SegmentSequenceStep extends Google_Colle
 {
   protected $collection_key = 'orFiltersForSegment';
   public $matchType;
-  protected $orFiltersForSegmentType = 'Google_Service_AnalyticsReporting_OrFiltersForSegment';
-  protected $orFiltersForSegmentDataType = 'array';
+  public $orFiltersForSegment;
 
   public function setMatchType($matchType)
   {
@@ -30,8 +29,13 @@ class Google_Service_AnalyticsReporting_SegmentSequenceStep extends Google_Colle
   {
     return $this->matchType;
   }
-  public function setOrFiltersForSegment($orFiltersForSegment)
+  public function setOrFiltersForSegment(array $orFiltersForSegment)
   {
+    foreach ($orFiltersForSegment as $o) {
+      if (!$o instanceof Google_Service_AnalyticsReporting_OrFiltersForSegment) {
+        throw new InvalidArgumentException('First argument to setOrFiltersForSegment must be an array of Google_Service_AnalyticsReporting_OrFiltersForSegment');
+      }
+    }
     $this->orFiltersForSegment = $orFiltersForSegment;
   }
   public function getOrFiltersForSegment()

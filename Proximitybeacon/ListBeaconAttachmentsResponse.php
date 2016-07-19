@@ -18,11 +18,15 @@
 class Google_Service_Proximitybeacon_ListBeaconAttachmentsResponse extends Google_Collection
 {
   protected $collection_key = 'attachments';
-  protected $attachmentsType = 'Google_Service_Proximitybeacon_BeaconAttachment';
-  protected $attachmentsDataType = 'array';
+  public $attachments;
 
-  public function setAttachments($attachments)
+  public function setAttachments(array $attachments)
   {
+    foreach ($attachments as $a) {
+      if (!$a instanceof Google_Service_Proximitybeacon_BeaconAttachment) {
+        throw new InvalidArgumentException('First argument to setAttachments must be an array of Google_Service_Proximitybeacon_BeaconAttachment');
+      }
+    }
     $this->attachments = $attachments;
   }
   public function getAttachments()

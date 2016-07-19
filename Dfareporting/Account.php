@@ -35,11 +35,10 @@ class Google_Service_Dfareporting_Account extends Google_Collection
   public $maximumImageSize;
   public $name;
   public $nielsenOcrEnabled;
-  protected $reportsConfigurationType = 'Google_Service_Dfareporting_ReportsConfiguration';
-  protected $reportsConfigurationDataType = '';
+  public $reportsConfiguration;
   public $teaserSizeLimit;
 
-  public function setAccountPermissionIds($accountPermissionIds)
+  public function setAccountPermissionIds(array $accountPermissionIds)
   {
     $this->accountPermissionIds = $accountPermissionIds;
   }
@@ -79,7 +78,7 @@ class Google_Service_Dfareporting_Account extends Google_Collection
   {
     return $this->activeViewOptOut;
   }
-  public function setAvailablePermissionIds($availablePermissionIds)
+  public function setAvailablePermissionIds(array $availablePermissionIds)
   {
     $this->availablePermissionIds = $availablePermissionIds;
   }

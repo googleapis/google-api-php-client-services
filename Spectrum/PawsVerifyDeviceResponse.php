@@ -18,10 +18,8 @@
 class Google_Service_Spectrum_PawsVerifyDeviceResponse extends Google_Collection
 {
   protected $collection_key = 'deviceValidities';
-  protected $databaseChangeType = 'Google_Service_Spectrum_DbUpdateSpec';
-  protected $databaseChangeDataType = '';
-  protected $deviceValiditiesType = 'Google_Service_Spectrum_DeviceValidity';
-  protected $deviceValiditiesDataType = 'array';
+  public $databaseChange;
+  public $deviceValidities;
   public $kind;
   public $type;
   public $version;
@@ -34,8 +32,13 @@ class Google_Service_Spectrum_PawsVerifyDeviceResponse extends Google_Collection
   {
     return $this->databaseChange;
   }
-  public function setDeviceValidities($deviceValidities)
+  public function setDeviceValidities(array $deviceValidities)
   {
+    foreach ($deviceValidities as $d) {
+      if (!$d instanceof Google_Service_Spectrum_DeviceValidity) {
+        throw new InvalidArgumentException('First argument to setDeviceValidities must be an array of Google_Service_Spectrum_DeviceValidity');
+      }
+    }
     $this->deviceValidities = $deviceValidities;
   }
   public function getDeviceValidities()

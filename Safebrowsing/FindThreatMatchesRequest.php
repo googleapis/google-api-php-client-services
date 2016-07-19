@@ -17,10 +17,8 @@
 
 class Google_Service_Safebrowsing_FindThreatMatchesRequest extends Google_Model
 {
-  protected $clientType = 'Google_Service_Safebrowsing_ClientInfo';
-  protected $clientDataType = '';
-  protected $threatInfoType = 'Google_Service_Safebrowsing_ThreatInfo';
-  protected $threatInfoDataType = '';
+  public $client;
+  public $threatInfo;
 
   public function setClient(Google_Service_Safebrowsing_ClientInfo $client)
   {

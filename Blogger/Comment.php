@@ -17,17 +17,13 @@
 
 class Google_Service_Blogger_Comment extends Google_Model
 {
-  protected $authorType = 'Google_Service_Blogger_CommentAuthor';
-  protected $authorDataType = '';
-  protected $blogType = 'Google_Service_Blogger_CommentBlog';
-  protected $blogDataType = '';
+  public $author;
+  public $blog;
   public $content;
   public $id;
-  protected $inReplyToType = 'Google_Service_Blogger_CommentInReplyTo';
-  protected $inReplyToDataType = '';
+  public $inReplyTo;
   public $kind;
-  protected $postType = 'Google_Service_Blogger_CommentPost';
-  protected $postDataType = '';
+  public $post;
   public $published;
   public $selfLink;
   public $status;

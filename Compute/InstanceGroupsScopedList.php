@@ -18,13 +18,16 @@
 class Google_Service_Compute_InstanceGroupsScopedList extends Google_Collection
 {
   protected $collection_key = 'instanceGroups';
-  protected $instanceGroupsType = 'Google_Service_Compute_InstanceGroup';
-  protected $instanceGroupsDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_InstanceGroupsScopedListWarning';
-  protected $warningDataType = '';
+  public $instanceGroups;
+  public $warning;
 
-  public function setInstanceGroups($instanceGroups)
+  public function setInstanceGroups(array $instanceGroups)
   {
+    foreach ($instanceGroups as $i) {
+      if (!$i instanceof Google_Service_Compute_InstanceGroup) {
+        throw new InvalidArgumentException('First argument to setInstanceGroups must be an array of Google_Service_Compute_InstanceGroup');
+      }
+    }
     $this->instanceGroups = $instanceGroups;
   }
   public function getInstanceGroups()

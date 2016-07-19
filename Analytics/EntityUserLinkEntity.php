@@ -17,12 +17,9 @@
 
 class Google_Service_Analytics_EntityUserLinkEntity extends Google_Model
 {
-  protected $accountRefType = 'Google_Service_Analytics_AccountRef';
-  protected $accountRefDataType = '';
-  protected $profileRefType = 'Google_Service_Analytics_ProfileRef';
-  protected $profileRefDataType = '';
-  protected $webPropertyRefType = 'Google_Service_Analytics_WebPropertyRef';
-  protected $webPropertyRefDataType = '';
+  public $accountRef;
+  public $profileRef;
+  public $webPropertyRef;
 
   public function setAccountRef(Google_Service_Analytics_AccountRef $accountRef)
   {

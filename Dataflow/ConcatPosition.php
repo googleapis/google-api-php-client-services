@@ -18,8 +18,7 @@
 class Google_Service_Dataflow_ConcatPosition extends Google_Model
 {
   public $index;
-  protected $positionType = 'Google_Service_Dataflow_Position';
-  protected $positionDataType = '';
+  public $position;
 
   public function setIndex($index)
   {

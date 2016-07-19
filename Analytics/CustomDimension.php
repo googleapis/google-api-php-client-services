@@ -24,8 +24,7 @@ class Google_Service_Analytics_CustomDimension extends Google_Model
   public $index;
   public $kind;
   public $name;
-  protected $parentLinkType = 'Google_Service_Analytics_CustomDimensionParentLink';
-  protected $parentLinkDataType = '';
+  public $parentLink;
   public $scope;
   public $selfLink;
   public $updated;

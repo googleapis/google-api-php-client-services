@@ -18,8 +18,7 @@
 class Google_Service_Partners_ListUserStatesResponse extends Google_Collection
 {
   protected $collection_key = 'userStates';
-  protected $responseMetadataType = 'Google_Service_Partners_ResponseMetadata';
-  protected $responseMetadataDataType = '';
+  public $responseMetadata;
   public $userStates;
 
   public function setResponseMetadata(Google_Service_Partners_ResponseMetadata $responseMetadata)
@@ -30,7 +29,7 @@ class Google_Service_Partners_ListUserStatesResponse extends Google_Collection
   {
     return $this->responseMetadata;
   }
-  public function setUserStates($userStates)
+  public function setUserStates(array $userStates)
   {
     $this->userStates = $userStates;
   }

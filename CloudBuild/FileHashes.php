@@ -18,11 +18,15 @@
 class Google_Service_CloudBuild_FileHashes extends Google_Collection
 {
   protected $collection_key = 'fileHash';
-  protected $fileHashType = 'Google_Service_CloudBuild_Hash';
-  protected $fileHashDataType = 'array';
+  public $fileHash;
 
-  public function setFileHash($fileHash)
+  public function setFileHash(array $fileHash)
   {
+    foreach ($fileHash as $f) {
+      if (!$f instanceof Google_Service_CloudBuild_Hash) {
+        throw new InvalidArgumentException('First argument to setFileHash must be an array of Google_Service_CloudBuild_Hash');
+      }
+    }
     $this->fileHash = $fileHash;
   }
   public function getFileHash()

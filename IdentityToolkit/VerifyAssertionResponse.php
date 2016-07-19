@@ -326,7 +326,7 @@ class Google_Service_IdentityToolkit_VerifyAssertionResponse extends Google_Coll
   {
     return $this->timeZone;
   }
-  public function setVerifiedProvider($verifiedProvider)
+  public function setVerifiedProvider(array $verifiedProvider)
   {
     $this->verifiedProvider = $verifiedProvider;
   }

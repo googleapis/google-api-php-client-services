@@ -18,13 +18,17 @@
 class Google_Service_PlayMovies_ListExperienceLocalesResponse extends Google_Collection
 {
   protected $collection_key = 'experienceLocales';
-  protected $experienceLocalesType = 'Google_Service_PlayMovies_ExperienceLocale';
-  protected $experienceLocalesDataType = 'array';
+  public $experienceLocales;
   public $nextPageToken;
   public $totalSize;
 
-  public function setExperienceLocales($experienceLocales)
+  public function setExperienceLocales(array $experienceLocales)
   {
+    foreach ($experienceLocales as $e) {
+      if (!$e instanceof Google_Service_PlayMovies_ExperienceLocale) {
+        throw new InvalidArgumentException('First argument to setExperienceLocales must be an array of Google_Service_PlayMovies_ExperienceLocale');
+      }
+    }
     $this->experienceLocales = $experienceLocales;
   }
   public function getExperienceLocales()

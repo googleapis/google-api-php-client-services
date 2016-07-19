@@ -18,12 +18,16 @@
 class Google_Service_Clouderrorreporting_ListEventsResponse extends Google_Collection
 {
   protected $collection_key = 'errorEvents';
-  protected $errorEventsType = 'Google_Service_Clouderrorreporting_ErrorEvent';
-  protected $errorEventsDataType = 'array';
+  public $errorEvents;
   public $nextPageToken;
 
-  public function setErrorEvents($errorEvents)
+  public function setErrorEvents(array $errorEvents)
   {
+    foreach ($errorEvents as $e) {
+      if (!$e instanceof Google_Service_Clouderrorreporting_ErrorEvent) {
+        throw new InvalidArgumentException('First argument to setErrorEvents must be an array of Google_Service_Clouderrorreporting_ErrorEvent');
+      }
+    }
     $this->errorEvents = $errorEvents;
   }
   public function getErrorEvents()

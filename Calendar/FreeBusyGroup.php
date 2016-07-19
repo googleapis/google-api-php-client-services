@@ -19,10 +19,9 @@ class Google_Service_Calendar_FreeBusyGroup extends Google_Collection
 {
   protected $collection_key = 'errors';
   public $calendars;
-  protected $errorsType = 'Google_Service_Calendar_Error';
-  protected $errorsDataType = 'array';
+  public $errors;
 
-  public function setCalendars($calendars)
+  public function setCalendars(array $calendars)
   {
     $this->calendars = $calendars;
   }
@@ -30,8 +29,13 @@ class Google_Service_Calendar_FreeBusyGroup extends Google_Collection
   {
     return $this->calendars;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_Calendar_Error) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_Calendar_Error');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()

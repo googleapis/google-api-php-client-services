@@ -18,10 +18,8 @@
 class Google_Service_Sheets_UpdateDimensionPropertiesRequest extends Google_Model
 {
   public $fields;
-  protected $propertiesType = 'Google_Service_Sheets_DimensionProperties';
-  protected $propertiesDataType = '';
-  protected $rangeType = 'Google_Service_Sheets_DimensionRange';
-  protected $rangeDataType = '';
+  public $properties;
+  public $range;
 
   public function setFields($fields)
   {

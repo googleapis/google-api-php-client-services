@@ -23,8 +23,7 @@ class Google_Service_Dfareporting_OrderDocument extends Google_Collection
   public $amendedOrderDocumentId;
   public $approvedByUserProfileIds;
   public $cancelled;
-  protected $createdInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $createdInfoDataType = '';
+  public $createdInfo;
   public $effectiveDate;
   public $id;
   public $kind;
@@ -61,7 +60,7 @@ class Google_Service_Dfareporting_OrderDocument extends Google_Collection
   {
     return $this->amendedOrderDocumentId;
   }
-  public function setApprovedByUserProfileIds($approvedByUserProfileIds)
+  public function setApprovedByUserProfileIds(array $approvedByUserProfileIds)
   {
     $this->approvedByUserProfileIds = $approvedByUserProfileIds;
   }
@@ -109,7 +108,7 @@ class Google_Service_Dfareporting_OrderDocument extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLastSentRecipients($lastSentRecipients)
+  public function setLastSentRecipients(array $lastSentRecipients)
   {
     $this->lastSentRecipients = $lastSentRecipients;
   }

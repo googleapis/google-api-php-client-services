@@ -18,8 +18,7 @@
 class Google_Service_Dataflow_ApproximateProgress extends Google_Model
 {
   public $percentComplete;
-  protected $positionType = 'Google_Service_Dataflow_Position';
-  protected $positionDataType = '';
+  public $position;
   public $remainingTime;
 
   public function setPercentComplete($percentComplete)

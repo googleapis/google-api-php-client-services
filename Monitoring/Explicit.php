@@ -20,7 +20,7 @@ class Google_Service_Monitoring_Explicit extends Google_Collection
   protected $collection_key = 'bounds';
   public $bounds;
 
-  public function setBounds($bounds)
+  public function setBounds(array $bounds)
   {
     $this->bounds = $bounds;
   }

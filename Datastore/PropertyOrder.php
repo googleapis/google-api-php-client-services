@@ -18,8 +18,7 @@
 class Google_Service_Datastore_PropertyOrder extends Google_Model
 {
   public $direction;
-  protected $propertyType = 'Google_Service_Datastore_PropertyReference';
-  protected $propertyDataType = '';
+  public $property;
 
   public function setDirection($direction)
   {

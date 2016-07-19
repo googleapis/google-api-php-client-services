@@ -18,11 +18,15 @@
 class Google_Service_Translate_LanguagesListResponse extends Google_Collection
 {
   protected $collection_key = 'languages';
-  protected $languagesType = 'Google_Service_Translate_LanguagesResource';
-  protected $languagesDataType = 'array';
+  public $languages;
 
-  public function setLanguages($languages)
+  public function setLanguages(array $languages)
   {
+    foreach ($languages as $l) {
+      if (!$l instanceof Google_Service_Translate_LanguagesResource) {
+        throw new InvalidArgumentException('First argument to setLanguages must be an array of Google_Service_Translate_LanguagesResource');
+      }
+    }
     $this->languages = $languages;
   }
   public function getLanguages()

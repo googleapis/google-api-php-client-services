@@ -18,16 +18,13 @@
 class Google_Service_Fusiontables_PolygonStyle extends Google_Model
 {
   public $fillColor;
-  protected $fillColorStylerType = 'Google_Service_Fusiontables_StyleFunction';
-  protected $fillColorStylerDataType = '';
+  public $fillColorStyler;
   public $fillOpacity;
   public $strokeColor;
-  protected $strokeColorStylerType = 'Google_Service_Fusiontables_StyleFunction';
-  protected $strokeColorStylerDataType = '';
+  public $strokeColorStyler;
   public $strokeOpacity;
   public $strokeWeight;
-  protected $strokeWeightStylerType = 'Google_Service_Fusiontables_StyleFunction';
-  protected $strokeWeightStylerDataType = '';
+  public $strokeWeightStyler;
 
   public function setFillColor($fillColor)
   {

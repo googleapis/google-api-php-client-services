@@ -30,7 +30,7 @@ class Google_Service_Compute_HostRule extends Google_Collection
   {
     return $this->description;
   }
-  public function setHosts($hosts)
+  public function setHosts(array $hosts)
   {
     $this->hosts = $hosts;
   }

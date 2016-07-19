@@ -19,8 +19,7 @@ class Google_Service_Pubsub_ListTopicsResponse extends Google_Collection
 {
   protected $collection_key = 'topics';
   public $nextPageToken;
-  protected $topicsType = 'Google_Service_Pubsub_Topic';
-  protected $topicsDataType = 'array';
+  public $topics;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Pubsub_ListTopicsResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setTopics($topics)
+  public function setTopics(array $topics)
   {
+    foreach ($topics as $t) {
+      if (!$t instanceof Google_Service_Pubsub_Topic) {
+        throw new InvalidArgumentException('First argument to setTopics must be an array of Google_Service_Pubsub_Topic');
+      }
+    }
     $this->topics = $topics;
   }
   public function getTopics()

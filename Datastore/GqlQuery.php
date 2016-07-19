@@ -19,10 +19,8 @@ class Google_Service_Datastore_GqlQuery extends Google_Collection
 {
   protected $collection_key = 'positionalBindings';
   public $allowLiterals;
-  protected $namedBindingsType = 'Google_Service_Datastore_GqlQueryParameter';
-  protected $namedBindingsDataType = 'map';
-  protected $positionalBindingsType = 'Google_Service_Datastore_GqlQueryParameter';
-  protected $positionalBindingsDataType = 'array';
+  public $namedBindings;
+  public $positionalBindings;
   public $queryString;
 
   public function setAllowLiterals($allowLiterals)
@@ -33,7 +31,7 @@ class Google_Service_Datastore_GqlQuery extends Google_Collection
   {
     return $this->allowLiterals;
   }
-  public function setNamedBindings($namedBindings)
+  public function setNamedBindings(array $namedBindings)
   {
     $this->namedBindings = $namedBindings;
   }
@@ -41,8 +39,13 @@ class Google_Service_Datastore_GqlQuery extends Google_Collection
   {
     return $this->namedBindings;
   }
-  public function setPositionalBindings($positionalBindings)
+  public function setPositionalBindings(array $positionalBindings)
   {
+    foreach ($positionalBindings as $p) {
+      if (!$p instanceof Google_Service_Datastore_GqlQueryParameter) {
+        throw new InvalidArgumentException('First argument to setPositionalBindings must be an array of Google_Service_Datastore_GqlQueryParameter');
+      }
+    }
     $this->positionalBindings = $positionalBindings;
   }
   public function getPositionalBindings()

@@ -21,8 +21,7 @@ class Google_Service_Books_Volumeannotation extends Google_Collection
   public $annotationDataId;
   public $annotationDataLink;
   public $annotationType;
-  protected $contentRangesType = 'Google_Service_Books_VolumeannotationContentRanges';
-  protected $contentRangesDataType = '';
+  public $contentRanges;
   public $data;
   public $deleted;
   public $id;
@@ -106,7 +105,7 @@ class Google_Service_Books_Volumeannotation extends Google_Collection
   {
     return $this->layerId;
   }
-  public function setPageIds($pageIds)
+  public function setPageIds(array $pageIds)
   {
     $this->pageIds = $pageIds;
   }

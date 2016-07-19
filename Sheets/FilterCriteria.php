@@ -18,8 +18,7 @@
 class Google_Service_Sheets_FilterCriteria extends Google_Collection
 {
   protected $collection_key = 'hiddenValues';
-  protected $conditionType = 'Google_Service_Sheets_BooleanCondition';
-  protected $conditionDataType = '';
+  public $condition;
   public $hiddenValues;
 
   public function setCondition(Google_Service_Sheets_BooleanCondition $condition)
@@ -30,7 +29,7 @@ class Google_Service_Sheets_FilterCriteria extends Google_Collection
   {
     return $this->condition;
   }
-  public function setHiddenValues($hiddenValues)
+  public function setHiddenValues(array $hiddenValues)
   {
     $this->hiddenValues = $hiddenValues;
   }

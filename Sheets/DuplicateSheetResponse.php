@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_DuplicateSheetResponse extends Google_Model
 {
-  protected $propertiesType = 'Google_Service_Sheets_SheetProperties';
-  protected $propertiesDataType = '';
+  public $properties;
 
   public function setProperties(Google_Service_Sheets_SheetProperties $properties)
   {

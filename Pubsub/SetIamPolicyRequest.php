@@ -17,8 +17,7 @@
 
 class Google_Service_Pubsub_SetIamPolicyRequest extends Google_Model
 {
-  protected $policyType = 'Google_Service_Pubsub_Policy';
-  protected $policyDataType = '';
+  public $policy;
 
   public function setPolicy(Google_Service_Pubsub_Policy $policy)
   {

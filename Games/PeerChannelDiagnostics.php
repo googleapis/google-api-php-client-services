@@ -17,17 +17,14 @@
 
 class Google_Service_Games_PeerChannelDiagnostics extends Google_Model
 {
-  protected $bytesReceivedType = 'Google_Service_Games_AggregateStats';
-  protected $bytesReceivedDataType = '';
-  protected $bytesSentType = 'Google_Service_Games_AggregateStats';
-  protected $bytesSentDataType = '';
+  public $bytesReceived;
+  public $bytesSent;
   public $kind;
   public $numMessagesLost;
   public $numMessagesReceived;
   public $numMessagesSent;
   public $numSendFailures;
-  protected $roundtripLatencyMillisType = 'Google_Service_Games_AggregateStats';
-  protected $roundtripLatencyMillisDataType = '';
+  public $roundtripLatencyMillis;
 
   public function setBytesReceived(Google_Service_Games_AggregateStats $bytesReceived)
   {

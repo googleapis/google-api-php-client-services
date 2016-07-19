@@ -20,8 +20,7 @@ class Google_Service_Script_ExecutionError extends Google_Collection
   protected $collection_key = 'scriptStackTraceElements';
   public $errorMessage;
   public $errorType;
-  protected $scriptStackTraceElementsType = 'Google_Service_Script_ScriptStackTraceElement';
-  protected $scriptStackTraceElementsDataType = 'array';
+  public $scriptStackTraceElements;
 
   public function setErrorMessage($errorMessage)
   {
@@ -39,8 +38,13 @@ class Google_Service_Script_ExecutionError extends Google_Collection
   {
     return $this->errorType;
   }
-  public function setScriptStackTraceElements($scriptStackTraceElements)
+  public function setScriptStackTraceElements(array $scriptStackTraceElements)
   {
+    foreach ($scriptStackTraceElements as $s) {
+      if (!$s instanceof Google_Service_Script_ScriptStackTraceElement) {
+        throw new InvalidArgumentException('First argument to setScriptStackTraceElements must be an array of Google_Service_Script_ScriptStackTraceElement');
+      }
+    }
     $this->scriptStackTraceElements = $scriptStackTraceElements;
   }
   public function getScriptStackTraceElements()

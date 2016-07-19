@@ -17,8 +17,7 @@
 
 class Google_Service_CloudDebugger_SetBreakpointResponse extends Google_Model
 {
-  protected $breakpointType = 'Google_Service_CloudDebugger_Breakpoint';
-  protected $breakpointDataType = '';
+  public $breakpoint;
 
   public function setBreakpoint(Google_Service_CloudDebugger_Breakpoint $breakpoint)
   {

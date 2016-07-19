@@ -23,7 +23,7 @@ class Google_Service_AdExchangeBuyer_CreativeServingRestrictionsContexts extends
   public $geoCriteriaId;
   public $platform;
 
-  public function setAuctionType($auctionType)
+  public function setAuctionType(array $auctionType)
   {
     $this->auctionType = $auctionType;
   }
@@ -39,7 +39,7 @@ class Google_Service_AdExchangeBuyer_CreativeServingRestrictionsContexts extends
   {
     return $this->contextType;
   }
-  public function setGeoCriteriaId($geoCriteriaId)
+  public function setGeoCriteriaId(array $geoCriteriaId)
   {
     $this->geoCriteriaId = $geoCriteriaId;
   }
@@ -47,7 +47,7 @@ class Google_Service_AdExchangeBuyer_CreativeServingRestrictionsContexts extends
   {
     return $this->geoCriteriaId;
   }
-  public function setPlatform($platform)
+  public function setPlatform(array $platform)
   {
     $this->platform = $platform;
   }

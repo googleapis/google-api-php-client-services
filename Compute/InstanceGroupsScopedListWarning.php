@@ -19,8 +19,7 @@ class Google_Service_Compute_InstanceGroupsScopedListWarning extends Google_Coll
 {
   protected $collection_key = 'data';
   public $code;
-  protected $dataType = 'Google_Service_Compute_InstanceGroupsScopedListWarningData';
-  protected $dataDataType = 'array';
+  public $data;
   public $message;
 
   public function setCode($code)
@@ -31,8 +30,13 @@ class Google_Service_Compute_InstanceGroupsScopedListWarning extends Google_Coll
   {
     return $this->code;
   }
-  public function setData($data)
+  public function setData(array $data)
   {
+    foreach ($data as $d) {
+      if (!$d instanceof Google_Service_Compute_InstanceGroupsScopedListWarningData) {
+        throw new InvalidArgumentException('First argument to setData must be an array of Google_Service_Compute_InstanceGroupsScopedListWarningData');
+      }
+    }
     $this->data = $data;
   }
   public function getData()

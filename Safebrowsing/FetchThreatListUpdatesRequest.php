@@ -18,10 +18,8 @@
 class Google_Service_Safebrowsing_FetchThreatListUpdatesRequest extends Google_Collection
 {
   protected $collection_key = 'listUpdateRequests';
-  protected $clientType = 'Google_Service_Safebrowsing_ClientInfo';
-  protected $clientDataType = '';
-  protected $listUpdateRequestsType = 'Google_Service_Safebrowsing_ListUpdateRequest';
-  protected $listUpdateRequestsDataType = 'array';
+  public $client;
+  public $listUpdateRequests;
 
   public function setClient(Google_Service_Safebrowsing_ClientInfo $client)
   {
@@ -31,8 +29,13 @@ class Google_Service_Safebrowsing_FetchThreatListUpdatesRequest extends Google_C
   {
     return $this->client;
   }
-  public function setListUpdateRequests($listUpdateRequests)
+  public function setListUpdateRequests(array $listUpdateRequests)
   {
+    foreach ($listUpdateRequests as $l) {
+      if (!$l instanceof Google_Service_Safebrowsing_ListUpdateRequest) {
+        throw new InvalidArgumentException('First argument to setListUpdateRequests must be an array of Google_Service_Safebrowsing_ListUpdateRequest');
+      }
+    }
     $this->listUpdateRequests = $listUpdateRequests;
   }
   public function getListUpdateRequests()

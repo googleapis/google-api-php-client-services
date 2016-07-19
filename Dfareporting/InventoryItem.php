@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_InventoryItem extends Google_Collection
 {
   protected $collection_key = 'adSlots';
   public $accountId;
-  protected $adSlotsType = 'Google_Service_Dfareporting_AdSlot';
-  protected $adSlotsDataType = 'array';
+  public $adSlots;
   public $advertiserId;
   public $contentCategoryId;
   public $estimatedClickThroughRate;
@@ -28,14 +27,12 @@ class Google_Service_Dfareporting_InventoryItem extends Google_Collection
   public $id;
   public $inPlan;
   public $kind;
-  protected $lastModifiedInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $lastModifiedInfoDataType = '';
+  public $lastModifiedInfo;
   public $name;
   public $negotiationChannelId;
   public $orderId;
   public $placementStrategyId;
-  protected $pricingType = 'Google_Service_Dfareporting_Pricing';
-  protected $pricingDataType = '';
+  public $pricing;
   public $projectId;
   public $rfpId;
   public $siteId;
@@ -50,8 +47,13 @@ class Google_Service_Dfareporting_InventoryItem extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setAdSlots($adSlots)
+  public function setAdSlots(array $adSlots)
   {
+    foreach ($adSlots as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_AdSlot) {
+        throw new InvalidArgumentException('First argument to setAdSlots must be an array of Google_Service_Dfareporting_AdSlot');
+      }
+    }
     $this->adSlots = $adSlots;
   }
   public function getAdSlots()

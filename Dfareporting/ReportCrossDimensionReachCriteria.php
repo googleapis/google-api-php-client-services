@@ -18,19 +18,21 @@
 class Google_Service_Dfareporting_ReportCrossDimensionReachCriteria extends Google_Collection
 {
   protected $collection_key = 'overlapMetricNames';
-  protected $breakdownType = 'Google_Service_Dfareporting_SortedDimension';
-  protected $breakdownDataType = 'array';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
-  protected $dateRangeDataType = '';
+  public $breakdown;
+  public $dateRange;
   public $dimension;
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $dimensionFiltersDataType = 'array';
+  public $dimensionFilters;
   public $metricNames;
   public $overlapMetricNames;
   public $pivoted;
 
-  public function setBreakdown($breakdown)
+  public function setBreakdown(array $breakdown)
   {
+    foreach ($breakdown as $b) {
+      if (!$b instanceof Google_Service_Dfareporting_SortedDimension) {
+        throw new InvalidArgumentException('First argument to setBreakdown must be an array of Google_Service_Dfareporting_SortedDimension');
+      }
+    }
     $this->breakdown = $breakdown;
   }
   public function getBreakdown()
@@ -53,15 +55,20 @@ class Google_Service_Dfareporting_ReportCrossDimensionReachCriteria extends Goog
   {
     return $this->dimension;
   }
-  public function setDimensionFilters($dimensionFilters)
+  public function setDimensionFilters(array $dimensionFilters)
   {
+    foreach ($dimensionFilters as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setDimensionFilters must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->dimensionFilters = $dimensionFilters;
   }
   public function getDimensionFilters()
   {
     return $this->dimensionFilters;
   }
-  public function setMetricNames($metricNames)
+  public function setMetricNames(array $metricNames)
   {
     $this->metricNames = $metricNames;
   }
@@ -69,7 +76,7 @@ class Google_Service_Dfareporting_ReportCrossDimensionReachCriteria extends Goog
   {
     return $this->metricNames;
   }
-  public function setOverlapMetricNames($overlapMetricNames)
+  public function setOverlapMetricNames(array $overlapMetricNames)
   {
     $this->overlapMetricNames = $overlapMetricNames;
   }

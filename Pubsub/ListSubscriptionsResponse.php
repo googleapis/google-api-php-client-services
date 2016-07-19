@@ -19,8 +19,7 @@ class Google_Service_Pubsub_ListSubscriptionsResponse extends Google_Collection
 {
   protected $collection_key = 'subscriptions';
   public $nextPageToken;
-  protected $subscriptionsType = 'Google_Service_Pubsub_Subscription';
-  protected $subscriptionsDataType = 'array';
+  public $subscriptions;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Pubsub_ListSubscriptionsResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setSubscriptions($subscriptions)
+  public function setSubscriptions(array $subscriptions)
   {
+    foreach ($subscriptions as $s) {
+      if (!$s instanceof Google_Service_Pubsub_Subscription) {
+        throw new InvalidArgumentException('First argument to setSubscriptions must be an array of Google_Service_Pubsub_Subscription');
+      }
+    }
     $this->subscriptions = $subscriptions;
   }
   public function getSubscriptions()

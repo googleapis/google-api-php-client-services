@@ -20,38 +20,29 @@ class Google_Service_Dfareporting_PlacementGroup extends Google_Collection
   protected $collection_key = 'childPlacementIds';
   public $accountId;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $archived;
   public $campaignId;
-  protected $campaignIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $campaignIdDimensionValueDataType = '';
+  public $campaignIdDimensionValue;
   public $childPlacementIds;
   public $comment;
   public $contentCategoryId;
-  protected $createInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $createInfoDataType = '';
+  public $createInfo;
   public $directorySiteId;
-  protected $directorySiteIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $directorySiteIdDimensionValueDataType = '';
+  public $directorySiteIdDimensionValue;
   public $externalId;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $kind;
-  protected $lastModifiedInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $lastModifiedInfoDataType = '';
+  public $lastModifiedInfo;
   public $name;
   public $placementGroupType;
   public $placementStrategyId;
-  protected $pricingScheduleType = 'Google_Service_Dfareporting_PricingSchedule';
-  protected $pricingScheduleDataType = '';
+  public $pricingSchedule;
   public $primaryPlacementId;
-  protected $primaryPlacementIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $primaryPlacementIdDimensionValueDataType = '';
+  public $primaryPlacementIdDimensionValue;
   public $siteId;
-  protected $siteIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $siteIdDimensionValueDataType = '';
+  public $siteIdDimensionValue;
   public $subaccountId;
 
   public function setAccountId($accountId)
@@ -102,7 +93,7 @@ class Google_Service_Dfareporting_PlacementGroup extends Google_Collection
   {
     return $this->campaignIdDimensionValue;
   }
-  public function setChildPlacementIds($childPlacementIds)
+  public function setChildPlacementIds(array $childPlacementIds)
   {
     $this->childPlacementIds = $childPlacementIds;
   }

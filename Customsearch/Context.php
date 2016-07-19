@@ -18,12 +18,16 @@
 class Google_Service_Customsearch_Context extends Google_Collection
 {
   protected $collection_key = 'facets';
-  protected $facetsType = 'Google_Service_Customsearch_ContextFacets';
-  protected $facetsDataType = 'array';
+  public $facets;
   public $title;
 
-  public function setFacets($facets)
+  public function setFacets(array $facets)
   {
+    foreach ($facets as $f) {
+      if (!$f instanceof Google_Service_Customsearch_ContextFacets) {
+        throw new InvalidArgumentException('First argument to setFacets must be an array of Google_Service_Customsearch_ContextFacets');
+      }
+    }
     $this->facets = $facets;
   }
   public function getFacets()

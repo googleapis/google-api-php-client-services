@@ -41,7 +41,7 @@ class Google_Service_Analytics_Upload extends Google_Collection
   {
     return $this->customDataSourceId;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
     $this->errors = $errors;
   }

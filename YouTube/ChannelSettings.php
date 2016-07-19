@@ -73,7 +73,7 @@ class Google_Service_YouTube_ChannelSettings extends Google_Collection
   {
     return $this->featuredChannelsTitle;
   }
-  public function setFeaturedChannelsUrls($featuredChannelsUrls)
+  public function setFeaturedChannelsUrls(array $featuredChannelsUrls)
   {
     $this->featuredChannelsUrls = $featuredChannelsUrls;
   }

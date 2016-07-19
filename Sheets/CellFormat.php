@@ -17,19 +17,14 @@
 
 class Google_Service_Sheets_CellFormat extends Google_Model
 {
-  protected $backgroundColorType = 'Google_Service_Sheets_Color';
-  protected $backgroundColorDataType = '';
-  protected $bordersType = 'Google_Service_Sheets_Borders';
-  protected $bordersDataType = '';
+  public $backgroundColor;
+  public $borders;
   public $horizontalAlignment;
   public $hyperlinkDisplayType;
-  protected $numberFormatType = 'Google_Service_Sheets_NumberFormat';
-  protected $numberFormatDataType = '';
-  protected $paddingType = 'Google_Service_Sheets_Padding';
-  protected $paddingDataType = '';
+  public $numberFormat;
+  public $padding;
   public $textDirection;
-  protected $textFormatType = 'Google_Service_Sheets_TextFormat';
-  protected $textFormatDataType = '';
+  public $textFormat;
   public $verticalAlignment;
   public $wrapStrategy;
 

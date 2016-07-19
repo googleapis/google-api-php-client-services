@@ -23,8 +23,7 @@ class Google_Service_Genomics_ReadGroupSet extends Google_Collection
   public $id;
   public $info;
   public $name;
-  protected $readGroupsType = 'Google_Service_Genomics_ReadGroup';
-  protected $readGroupsDataType = 'array';
+  public $readGroups;
   public $referenceSetId;
 
   public function setDatasetId($datasetId)
@@ -51,7 +50,7 @@ class Google_Service_Genomics_ReadGroupSet extends Google_Collection
   {
     return $this->id;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }
@@ -67,8 +66,13 @@ class Google_Service_Genomics_ReadGroupSet extends Google_Collection
   {
     return $this->name;
   }
-  public function setReadGroups($readGroups)
+  public function setReadGroups(array $readGroups)
   {
+    foreach ($readGroups as $r) {
+      if (!$r instanceof Google_Service_Genomics_ReadGroup) {
+        throw new InvalidArgumentException('First argument to setReadGroups must be an array of Google_Service_Genomics_ReadGroup');
+      }
+    }
     $this->readGroups = $readGroups;
   }
   public function getReadGroups()

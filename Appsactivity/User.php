@@ -20,8 +20,7 @@ class Google_Service_Appsactivity_User extends Google_Model
   public $isDeleted;
   public $name;
   public $permissionId;
-  protected $photoType = 'Google_Service_Appsactivity_Photo';
-  protected $photoDataType = '';
+  public $photo;
 
   public function setIsDeleted($isDeleted)
   {

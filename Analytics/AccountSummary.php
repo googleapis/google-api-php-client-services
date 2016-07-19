@@ -22,8 +22,7 @@ class Google_Service_Analytics_AccountSummary extends Google_Collection
   public $kind;
   public $name;
   public $starred;
-  protected $webPropertiesType = 'Google_Service_Analytics_WebPropertySummary';
-  protected $webPropertiesDataType = 'array';
+  public $webProperties;
 
   public function setId($id)
   {
@@ -57,8 +56,13 @@ class Google_Service_Analytics_AccountSummary extends Google_Collection
   {
     return $this->starred;
   }
-  public function setWebProperties($webProperties)
+  public function setWebProperties(array $webProperties)
   {
+    foreach ($webProperties as $w) {
+      if (!$w instanceof Google_Service_Analytics_WebPropertySummary) {
+        throw new InvalidArgumentException('First argument to setWebProperties must be an array of Google_Service_Analytics_WebPropertySummary');
+      }
+    }
     $this->webProperties = $webProperties;
   }
   public function getWebProperties()

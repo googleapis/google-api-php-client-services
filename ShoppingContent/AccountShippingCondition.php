@@ -20,13 +20,10 @@ class Google_Service_ShoppingContent_AccountShippingCondition extends Google_Mod
   public $deliveryLocationGroup;
   public $deliveryLocationId;
   public $deliveryPostalCode;
-  protected $deliveryPostalCodeRangeType = 'Google_Service_ShoppingContent_AccountShippingPostalCodeRange';
-  protected $deliveryPostalCodeRangeDataType = '';
-  protected $priceMaxType = 'Google_Service_ShoppingContent_Price';
-  protected $priceMaxDataType = '';
+  public $deliveryPostalCodeRange;
+  public $priceMax;
   public $shippingLabel;
-  protected $weightMaxType = 'Google_Service_ShoppingContent_Weight';
-  protected $weightMaxDataType = '';
+  public $weightMax;
 
   public function setDeliveryLocationGroup($deliveryLocationGroup)
   {

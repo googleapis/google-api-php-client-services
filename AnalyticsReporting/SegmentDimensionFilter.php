@@ -41,7 +41,7 @@ class Google_Service_AnalyticsReporting_SegmentDimensionFilter extends Google_Co
   {
     return $this->dimensionName;
   }
-  public function setExpressions($expressions)
+  public function setExpressions(array $expressions)
   {
     $this->expressions = $expressions;
   }

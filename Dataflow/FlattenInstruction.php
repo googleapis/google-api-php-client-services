@@ -18,11 +18,15 @@
 class Google_Service_Dataflow_FlattenInstruction extends Google_Collection
 {
   protected $collection_key = 'inputs';
-  protected $inputsType = 'Google_Service_Dataflow_InstructionInput';
-  protected $inputsDataType = 'array';
+  public $inputs;
 
-  public function setInputs($inputs)
+  public function setInputs(array $inputs)
   {
+    foreach ($inputs as $i) {
+      if (!$i instanceof Google_Service_Dataflow_InstructionInput) {
+        throw new InvalidArgumentException('First argument to setInputs must be an array of Google_Service_Dataflow_InstructionInput');
+      }
+    }
     $this->inputs = $inputs;
   }
   public function getInputs()

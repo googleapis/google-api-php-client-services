@@ -18,12 +18,16 @@
 class Google_Service_Appengine_ListInstancesResponse extends Google_Collection
 {
   protected $collection_key = 'instances';
-  protected $instancesType = 'Google_Service_Appengine_Instance';
-  protected $instancesDataType = 'array';
+  public $instances;
   public $nextPageToken;
 
-  public function setInstances($instances)
+  public function setInstances(array $instances)
   {
+    foreach ($instances as $i) {
+      if (!$i instanceof Google_Service_Appengine_Instance) {
+        throw new InvalidArgumentException('First argument to setInstances must be an array of Google_Service_Appengine_Instance');
+      }
+    }
     $this->instances = $instances;
   }
   public function getInstances()

@@ -18,13 +18,17 @@
 class Google_Service_YouTube_LiveStreamHealthStatus extends Google_Collection
 {
   protected $collection_key = 'configurationIssues';
-  protected $configurationIssuesType = 'Google_Service_YouTube_LiveStreamConfigurationIssue';
-  protected $configurationIssuesDataType = 'array';
+  public $configurationIssues;
   public $lastUpdateTimeSeconds;
   public $status;
 
-  public function setConfigurationIssues($configurationIssues)
+  public function setConfigurationIssues(array $configurationIssues)
   {
+    foreach ($configurationIssues as $c) {
+      if (!$c instanceof Google_Service_YouTube_LiveStreamConfigurationIssue) {
+        throw new InvalidArgumentException('First argument to setConfigurationIssues must be an array of Google_Service_YouTube_LiveStreamConfigurationIssue');
+      }
+    }
     $this->configurationIssues = $configurationIssues;
   }
   public function getConfigurationIssues()

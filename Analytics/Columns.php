@@ -20,12 +20,11 @@ class Google_Service_Analytics_Columns extends Google_Collection
   protected $collection_key = 'items';
   public $attributeNames;
   public $etag;
-  protected $itemsType = 'Google_Service_Analytics_Column';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $totalResults;
 
-  public function setAttributeNames($attributeNames)
+  public function setAttributeNames(array $attributeNames)
   {
     $this->attributeNames = $attributeNames;
   }
@@ -41,8 +40,13 @@ class Google_Service_Analytics_Columns extends Google_Collection
   {
     return $this->etag;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Analytics_Column) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Analytics_Column');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

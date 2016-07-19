@@ -19,8 +19,7 @@ class Google_Service_Dataflow_JobMetrics extends Google_Collection
 {
   protected $collection_key = 'metrics';
   public $metricTime;
-  protected $metricsType = 'Google_Service_Dataflow_MetricUpdate';
-  protected $metricsDataType = 'array';
+  public $metrics;
 
   public function setMetricTime($metricTime)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dataflow_JobMetrics extends Google_Collection
   {
     return $this->metricTime;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_Dataflow_MetricUpdate) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_Dataflow_MetricUpdate');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()

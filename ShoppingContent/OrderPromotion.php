@@ -18,8 +18,7 @@
 class Google_Service_ShoppingContent_OrderPromotion extends Google_Collection
 {
   protected $collection_key = 'benefits';
-  protected $benefitsType = 'Google_Service_ShoppingContent_OrderPromotionBenefit';
-  protected $benefitsDataType = 'array';
+  public $benefits;
   public $effectiveDates;
   public $genericRedemptionCode;
   public $id;
@@ -27,8 +26,13 @@ class Google_Service_ShoppingContent_OrderPromotion extends Google_Collection
   public $productApplicability;
   public $redemptionChannel;
 
-  public function setBenefits($benefits)
+  public function setBenefits(array $benefits)
   {
+    foreach ($benefits as $b) {
+      if (!$b instanceof Google_Service_ShoppingContent_OrderPromotionBenefit) {
+        throw new InvalidArgumentException('First argument to setBenefits must be an array of Google_Service_ShoppingContent_OrderPromotionBenefit');
+      }
+    }
     $this->benefits = $benefits;
   }
   public function getBenefits()

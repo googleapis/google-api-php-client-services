@@ -21,14 +21,12 @@ class Google_Service_Books_DiscoveryclustersClusters extends Google_Collection
   protected $internal_gapi_mappings = array(
         "bannerWithContentContainer" => "banner_with_content_container",
   );
-  protected $bannerWithContentContainerType = 'Google_Service_Books_DiscoveryclustersClustersBannerWithContentContainer';
-  protected $bannerWithContentContainerDataType = '';
+  public $bannerWithContentContainer;
   public $subTitle;
   public $title;
   public $totalVolumes;
   public $uid;
-  protected $volumesType = 'Google_Service_Books_Volume';
-  protected $volumesDataType = 'array';
+  public $volumes;
 
   public function setBannerWithContentContainer(Google_Service_Books_DiscoveryclustersClustersBannerWithContentContainer $bannerWithContentContainer)
   {
@@ -70,8 +68,13 @@ class Google_Service_Books_DiscoveryclustersClusters extends Google_Collection
   {
     return $this->uid;
   }
-  public function setVolumes($volumes)
+  public function setVolumes(array $volumes)
   {
+    foreach ($volumes as $v) {
+      if (!$v instanceof Google_Service_Books_Volume) {
+        throw new InvalidArgumentException('First argument to setVolumes must be an array of Google_Service_Books_Volume');
+      }
+    }
     $this->volumes = $volumes;
   }
   public function getVolumes()

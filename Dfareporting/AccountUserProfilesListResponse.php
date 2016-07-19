@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_AccountUserProfilesListResponse extends Google_Collection
 {
   protected $collection_key = 'accountUserProfiles';
-  protected $accountUserProfilesType = 'Google_Service_Dfareporting_AccountUserProfile';
-  protected $accountUserProfilesDataType = 'array';
+  public $accountUserProfiles;
   public $kind;
   public $nextPageToken;
 
-  public function setAccountUserProfiles($accountUserProfiles)
+  public function setAccountUserProfiles(array $accountUserProfiles)
   {
+    foreach ($accountUserProfiles as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_AccountUserProfile) {
+        throw new InvalidArgumentException('First argument to setAccountUserProfiles must be an array of Google_Service_Dfareporting_AccountUserProfile');
+      }
+    }
     $this->accountUserProfiles = $accountUserProfiles;
   }
   public function getAccountUserProfiles()

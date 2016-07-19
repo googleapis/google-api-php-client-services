@@ -17,15 +17,13 @@
 
 class Google_Service_Sheets_SheetProperties extends Google_Model
 {
-  protected $gridPropertiesType = 'Google_Service_Sheets_GridProperties';
-  protected $gridPropertiesDataType = '';
+  public $gridProperties;
   public $hidden;
   public $index;
   public $rightToLeft;
   public $sheetId;
   public $sheetType;
-  protected $tabColorType = 'Google_Service_Sheets_Color';
-  protected $tabColorDataType = '';
+  public $tabColor;
   public $title;
 
   public function setGridProperties(Google_Service_Sheets_GridProperties $gridProperties)

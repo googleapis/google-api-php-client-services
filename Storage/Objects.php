@@ -18,14 +18,18 @@
 class Google_Service_Storage_Objects extends Google_Collection
 {
   protected $collection_key = 'prefixes';
-  protected $itemsType = 'Google_Service_Storage_StorageObject';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $nextPageToken;
   public $prefixes;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Storage_StorageObject) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Storage_StorageObject');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()
@@ -48,7 +52,7 @@ class Google_Service_Storage_Objects extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setPrefixes($prefixes)
+  public function setPrefixes(array $prefixes)
   {
     $this->prefixes = $prefixes;
   }

@@ -18,10 +18,8 @@
 class Google_Service_Dfareporting_ConversionStatus extends Google_Collection
 {
   protected $collection_key = 'errors';
-  protected $conversionType = 'Google_Service_Dfareporting_Conversion';
-  protected $conversionDataType = '';
-  protected $errorsType = 'Google_Service_Dfareporting_ConversionError';
-  protected $errorsDataType = 'array';
+  public $conversion;
+  public $errors;
   public $kind;
 
   public function setConversion(Google_Service_Dfareporting_Conversion $conversion)
@@ -32,8 +30,13 @@ class Google_Service_Dfareporting_ConversionStatus extends Google_Collection
   {
     return $this->conversion;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_Dfareporting_ConversionError) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_Dfareporting_ConversionError');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()

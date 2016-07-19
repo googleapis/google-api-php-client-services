@@ -31,8 +31,7 @@ class Google_Service_Analytics_Experiment extends Google_Collection
   public $name;
   public $objectiveMetric;
   public $optimizationType;
-  protected $parentLinkType = 'Google_Service_Analytics_ExperimentParentLink';
-  protected $parentLinkDataType = '';
+  public $parentLink;
   public $profileId;
   public $reasonExperimentEnded;
   public $rewriteVariationUrlsAsOriginal;
@@ -43,8 +42,7 @@ class Google_Service_Analytics_Experiment extends Google_Collection
   public $status;
   public $trafficCoverage;
   public $updated;
-  protected $variationsType = 'Google_Service_Analytics_ExperimentVariations';
-  protected $variationsDataType = 'array';
+  public $variations;
   public $webPropertyId;
   public $winnerConfidenceLevel;
   public $winnerFound;
@@ -241,8 +239,13 @@ class Google_Service_Analytics_Experiment extends Google_Collection
   {
     return $this->updated;
   }
-  public function setVariations($variations)
+  public function setVariations(array $variations)
   {
+    foreach ($variations as $v) {
+      if (!$v instanceof Google_Service_Analytics_ExperimentVariations) {
+        throw new InvalidArgumentException('First argument to setVariations must be an array of Google_Service_Analytics_ExperimentVariations');
+      }
+    }
     $this->variations = $variations;
   }
   public function getVariations()

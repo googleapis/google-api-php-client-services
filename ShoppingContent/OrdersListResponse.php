@@ -20,8 +20,7 @@ class Google_Service_ShoppingContent_OrdersListResponse extends Google_Collectio
   protected $collection_key = 'resources';
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_Order';
-  protected $resourcesDataType = 'array';
+  public $resources;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_ShoppingContent_OrdersListResponse extends Google_Collectio
   {
     return $this->nextPageToken;
   }
-  public function setResources($resources)
+  public function setResources(array $resources)
   {
+    foreach ($resources as $r) {
+      if (!$r instanceof Google_Service_ShoppingContent_Order) {
+        throw new InvalidArgumentException('First argument to setResources must be an array of Google_Service_ShoppingContent_Order');
+      }
+    }
     $this->resources = $resources;
   }
   public function getResources()

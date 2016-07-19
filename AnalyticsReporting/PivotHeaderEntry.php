@@ -20,10 +20,9 @@ class Google_Service_AnalyticsReporting_PivotHeaderEntry extends Google_Collecti
   protected $collection_key = 'dimensionValues';
   public $dimensionNames;
   public $dimensionValues;
-  protected $metricType = 'Google_Service_AnalyticsReporting_MetricHeaderEntry';
-  protected $metricDataType = '';
+  public $metric;
 
-  public function setDimensionNames($dimensionNames)
+  public function setDimensionNames(array $dimensionNames)
   {
     $this->dimensionNames = $dimensionNames;
   }
@@ -31,7 +30,7 @@ class Google_Service_AnalyticsReporting_PivotHeaderEntry extends Google_Collecti
   {
     return $this->dimensionNames;
   }
-  public function setDimensionValues($dimensionValues)
+  public function setDimensionValues(array $dimensionValues)
   {
     $this->dimensionValues = $dimensionValues;
   }

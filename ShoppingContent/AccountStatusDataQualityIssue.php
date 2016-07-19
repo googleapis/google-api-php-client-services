@@ -20,8 +20,7 @@ class Google_Service_ShoppingContent_AccountStatusDataQualityIssue extends Googl
   protected $collection_key = 'exampleItems';
   public $country;
   public $displayedValue;
-  protected $exampleItemsType = 'Google_Service_ShoppingContent_AccountStatusExampleItem';
-  protected $exampleItemsDataType = 'array';
+  public $exampleItems;
   public $id;
   public $lastChecked;
   public $numItems;
@@ -44,8 +43,13 @@ class Google_Service_ShoppingContent_AccountStatusDataQualityIssue extends Googl
   {
     return $this->displayedValue;
   }
-  public function setExampleItems($exampleItems)
+  public function setExampleItems(array $exampleItems)
   {
+    foreach ($exampleItems as $e) {
+      if (!$e instanceof Google_Service_ShoppingContent_AccountStatusExampleItem) {
+        throw new InvalidArgumentException('First argument to setExampleItems must be an array of Google_Service_ShoppingContent_AccountStatusExampleItem');
+      }
+    }
     $this->exampleItems = $exampleItems;
   }
   public function getExampleItems()

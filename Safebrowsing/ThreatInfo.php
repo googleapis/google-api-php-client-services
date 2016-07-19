@@ -19,12 +19,11 @@ class Google_Service_Safebrowsing_ThreatInfo extends Google_Collection
 {
   protected $collection_key = 'threatTypes';
   public $platformTypes;
-  protected $threatEntriesType = 'Google_Service_Safebrowsing_ThreatEntry';
-  protected $threatEntriesDataType = 'array';
+  public $threatEntries;
   public $threatEntryTypes;
   public $threatTypes;
 
-  public function setPlatformTypes($platformTypes)
+  public function setPlatformTypes(array $platformTypes)
   {
     $this->platformTypes = $platformTypes;
   }
@@ -32,15 +31,20 @@ class Google_Service_Safebrowsing_ThreatInfo extends Google_Collection
   {
     return $this->platformTypes;
   }
-  public function setThreatEntries($threatEntries)
+  public function setThreatEntries(array $threatEntries)
   {
+    foreach ($threatEntries as $t) {
+      if (!$t instanceof Google_Service_Safebrowsing_ThreatEntry) {
+        throw new InvalidArgumentException('First argument to setThreatEntries must be an array of Google_Service_Safebrowsing_ThreatEntry');
+      }
+    }
     $this->threatEntries = $threatEntries;
   }
   public function getThreatEntries()
   {
     return $this->threatEntries;
   }
-  public function setThreatEntryTypes($threatEntryTypes)
+  public function setThreatEntryTypes(array $threatEntryTypes)
   {
     $this->threatEntryTypes = $threatEntryTypes;
   }
@@ -48,7 +52,7 @@ class Google_Service_Safebrowsing_ThreatInfo extends Google_Collection
   {
     return $this->threatEntryTypes;
   }
-  public function setThreatTypes($threatTypes)
+  public function setThreatTypes(array $threatTypes)
   {
     $this->threatTypes = $threatTypes;
   }

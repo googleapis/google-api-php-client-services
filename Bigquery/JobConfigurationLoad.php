@@ -22,16 +22,14 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   public $allowQuotedNewlines;
   public $autodetect;
   public $createDisposition;
-  protected $destinationTableType = 'Google_Service_Bigquery_TableReference';
-  protected $destinationTableDataType = '';
+  public $destinationTable;
   public $encoding;
   public $fieldDelimiter;
   public $ignoreUnknownValues;
   public $maxBadRecords;
   public $projectionFields;
   public $quote;
-  protected $schemaType = 'Google_Service_Bigquery_TableSchema';
-  protected $schemaDataType = '';
+  public $schema;
   public $schemaInline;
   public $schemaInlineFormat;
   public $skipLeadingRows;
@@ -111,7 +109,7 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   {
     return $this->maxBadRecords;
   }
-  public function setProjectionFields($projectionFields)
+  public function setProjectionFields(array $projectionFields)
   {
     $this->projectionFields = $projectionFields;
   }
@@ -167,7 +165,7 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   {
     return $this->sourceFormat;
   }
-  public function setSourceUris($sourceUris)
+  public function setSourceUris(array $sourceUris)
   {
     $this->sourceUris = $sourceUris;
   }

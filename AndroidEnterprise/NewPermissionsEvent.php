@@ -22,7 +22,7 @@ class Google_Service_AndroidEnterprise_NewPermissionsEvent extends Google_Collec
   public $productId;
   public $requestedPermissions;
 
-  public function setApprovedPermissions($approvedPermissions)
+  public function setApprovedPermissions(array $approvedPermissions)
   {
     $this->approvedPermissions = $approvedPermissions;
   }
@@ -38,7 +38,7 @@ class Google_Service_AndroidEnterprise_NewPermissionsEvent extends Google_Collec
   {
     return $this->productId;
   }
-  public function setRequestedPermissions($requestedPermissions)
+  public function setRequestedPermissions(array $requestedPermissions)
   {
     $this->requestedPermissions = $requestedPermissions;
   }

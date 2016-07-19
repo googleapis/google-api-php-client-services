@@ -25,8 +25,7 @@ class Google_Service_CloudUserAccounts_User extends Google_Collection
   public $kind;
   public $name;
   public $owner;
-  protected $publicKeysType = 'Google_Service_CloudUserAccounts_PublicKey';
-  protected $publicKeysDataType = 'array';
+  public $publicKeys;
   public $selfLink;
 
   public function setCreationTimestamp($creationTimestamp)
@@ -45,7 +44,7 @@ class Google_Service_CloudUserAccounts_User extends Google_Collection
   {
     return $this->description;
   }
-  public function setGroups($groups)
+  public function setGroups(array $groups)
   {
     $this->groups = $groups;
   }
@@ -85,8 +84,13 @@ class Google_Service_CloudUserAccounts_User extends Google_Collection
   {
     return $this->owner;
   }
-  public function setPublicKeys($publicKeys)
+  public function setPublicKeys(array $publicKeys)
   {
+    foreach ($publicKeys as $p) {
+      if (!$p instanceof Google_Service_CloudUserAccounts_PublicKey) {
+        throw new InvalidArgumentException('First argument to setPublicKeys must be an array of Google_Service_CloudUserAccounts_PublicKey');
+      }
+    }
     $this->publicKeys = $publicKeys;
   }
   public function getPublicKeys()

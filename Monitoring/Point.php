@@ -17,10 +17,8 @@
 
 class Google_Service_Monitoring_Point extends Google_Model
 {
-  protected $intervalType = 'Google_Service_Monitoring_TimeInterval';
-  protected $intervalDataType = '';
-  protected $valueType = 'Google_Service_Monitoring_TypedValue';
-  protected $valueDataType = '';
+  public $interval;
+  public $value;
 
   public function setInterval(Google_Service_Monitoring_TimeInterval $interval)
   {

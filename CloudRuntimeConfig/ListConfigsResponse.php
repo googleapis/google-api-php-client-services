@@ -18,12 +18,16 @@
 class Google_Service_CloudRuntimeConfig_ListConfigsResponse extends Google_Collection
 {
   protected $collection_key = 'configs';
-  protected $configsType = 'Google_Service_CloudRuntimeConfig_RuntimeConfig';
-  protected $configsDataType = 'array';
+  public $configs;
   public $nextPageToken;
 
-  public function setConfigs($configs)
+  public function setConfigs(array $configs)
   {
+    foreach ($configs as $c) {
+      if (!$c instanceof Google_Service_CloudRuntimeConfig_RuntimeConfig) {
+        throw new InvalidArgumentException('First argument to setConfigs must be an array of Google_Service_CloudRuntimeConfig_RuntimeConfig');
+      }
+    }
     $this->configs = $configs;
   }
   public function getConfigs()

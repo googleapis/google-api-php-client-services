@@ -18,8 +18,7 @@
 class Google_Service_ShoppingContent_OrdersCreateTestOrderRequest extends Google_Model
 {
   public $templateName;
-  protected $testOrderType = 'Google_Service_ShoppingContent_TestOrder';
-  protected $testOrderDataType = '';
+  public $testOrder;
 
   public function setTemplateName($templateName)
   {

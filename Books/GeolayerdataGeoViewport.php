@@ -17,10 +17,8 @@
 
 class Google_Service_Books_GeolayerdataGeoViewport extends Google_Model
 {
-  protected $hiType = 'Google_Service_Books_GeolayerdataGeoViewportHi';
-  protected $hiDataType = '';
-  protected $loType = 'Google_Service_Books_GeolayerdataGeoViewportLo';
-  protected $loDataType = '';
+  public $hi;
+  public $lo;
 
   public function setHi(Google_Service_Books_GeolayerdataGeoViewportHi $hi)
   {

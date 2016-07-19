@@ -17,10 +17,8 @@
 
 class Google_Service_PlusDomains_PersonCover extends Google_Model
 {
-  protected $coverInfoType = 'Google_Service_PlusDomains_PersonCoverCoverInfo';
-  protected $coverInfoDataType = '';
-  protected $coverPhotoType = 'Google_Service_PlusDomains_PersonCoverCoverPhoto';
-  protected $coverPhotoDataType = '';
+  public $coverInfo;
+  public $coverPhoto;
   public $layout;
 
   public function setCoverInfo(Google_Service_PlusDomains_PersonCoverCoverInfo $coverInfo)

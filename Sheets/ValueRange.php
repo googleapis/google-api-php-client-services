@@ -38,7 +38,7 @@ class Google_Service_Sheets_ValueRange extends Google_Collection
   {
     return $this->range;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
     $this->values = $values;
   }

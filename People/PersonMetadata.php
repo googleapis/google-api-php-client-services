@@ -21,8 +21,7 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   public $deleted;
   public $objectType;
   public $previousResourceNames;
-  protected $sourcesType = 'Google_Service_People_Source';
-  protected $sourcesDataType = 'array';
+  public $sources;
 
   public function setDeleted($deleted)
   {
@@ -40,7 +39,7 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   {
     return $this->objectType;
   }
-  public function setPreviousResourceNames($previousResourceNames)
+  public function setPreviousResourceNames(array $previousResourceNames)
   {
     $this->previousResourceNames = $previousResourceNames;
   }
@@ -48,8 +47,13 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   {
     return $this->previousResourceNames;
   }
-  public function setSources($sources)
+  public function setSources(array $sources)
   {
+    foreach ($sources as $s) {
+      if (!$s instanceof Google_Service_People_Source) {
+        throw new InvalidArgumentException('First argument to setSources must be an array of Google_Service_People_Source');
+      }
+    }
     $this->sources = $sources;
   }
   public function getSources()

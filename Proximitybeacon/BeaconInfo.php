@@ -18,10 +18,8 @@
 class Google_Service_Proximitybeacon_BeaconInfo extends Google_Collection
 {
   protected $collection_key = 'attachments';
-  protected $advertisedIdType = 'Google_Service_Proximitybeacon_AdvertisedId';
-  protected $advertisedIdDataType = '';
-  protected $attachmentsType = 'Google_Service_Proximitybeacon_AttachmentInfo';
-  protected $attachmentsDataType = 'array';
+  public $advertisedId;
+  public $attachments;
   public $beaconName;
 
   public function setAdvertisedId(Google_Service_Proximitybeacon_AdvertisedId $advertisedId)
@@ -32,8 +30,13 @@ class Google_Service_Proximitybeacon_BeaconInfo extends Google_Collection
   {
     return $this->advertisedId;
   }
-  public function setAttachments($attachments)
+  public function setAttachments(array $attachments)
   {
+    foreach ($attachments as $a) {
+      if (!$a instanceof Google_Service_Proximitybeacon_AttachmentInfo) {
+        throw new InvalidArgumentException('First argument to setAttachments must be an array of Google_Service_Proximitybeacon_AttachmentInfo');
+      }
+    }
     $this->attachments = $attachments;
   }
   public function getAttachments()

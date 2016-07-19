@@ -17,15 +17,12 @@
 
 class Google_Service_YouTube_Subscription extends Google_Model
 {
-  protected $contentDetailsType = 'Google_Service_YouTube_SubscriptionContentDetails';
-  protected $contentDetailsDataType = '';
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_SubscriptionSnippet';
-  protected $snippetDataType = '';
-  protected $subscriberSnippetType = 'Google_Service_YouTube_SubscriptionSubscriberSnippet';
-  protected $subscriberSnippetDataType = '';
+  public $snippet;
+  public $subscriberSnippet;
 
   public function setContentDetails(Google_Service_YouTube_SubscriptionContentDetails $contentDetails)
   {

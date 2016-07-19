@@ -60,7 +60,7 @@ class Google_Service_Directory_Channel extends Google_Model
   {
     return $this->kind;
   }
-  public function setParams($params)
+  public function setParams(array $params)
   {
     $this->params = $params;
   }

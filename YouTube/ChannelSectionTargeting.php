@@ -22,7 +22,7 @@ class Google_Service_YouTube_ChannelSectionTargeting extends Google_Collection
   public $languages;
   public $regions;
 
-  public function setCountries($countries)
+  public function setCountries(array $countries)
   {
     $this->countries = $countries;
   }
@@ -30,7 +30,7 @@ class Google_Service_YouTube_ChannelSectionTargeting extends Google_Collection
   {
     return $this->countries;
   }
-  public function setLanguages($languages)
+  public function setLanguages(array $languages)
   {
     $this->languages = $languages;
   }
@@ -38,7 +38,7 @@ class Google_Service_YouTube_ChannelSectionTargeting extends Google_Collection
   {
     return $this->languages;
   }
-  public function setRegions($regions)
+  public function setRegions(array $regions)
   {
     $this->regions = $regions;
   }

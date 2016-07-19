@@ -22,8 +22,7 @@ class Google_Service_ConsumerSurveys_SurveyQuestion extends Google_Collection
   public $answers;
   public $hasOther;
   public $highValueLabel;
-  protected $imagesType = 'Google_Service_ConsumerSurveys_SurveyQuestionImage';
-  protected $imagesDataType = 'array';
+  public $images;
   public $lastAnswerPositionPinned;
   public $lowValueLabel;
   public $mustPickSuggestion;
@@ -46,7 +45,7 @@ class Google_Service_ConsumerSurveys_SurveyQuestion extends Google_Collection
   {
     return $this->answerOrder;
   }
-  public function setAnswers($answers)
+  public function setAnswers(array $answers)
   {
     $this->answers = $answers;
   }
@@ -70,8 +69,13 @@ class Google_Service_ConsumerSurveys_SurveyQuestion extends Google_Collection
   {
     return $this->highValueLabel;
   }
-  public function setImages($images)
+  public function setImages(array $images)
   {
+    foreach ($images as $i) {
+      if (!$i instanceof Google_Service_ConsumerSurveys_SurveyQuestionImage) {
+        throw new InvalidArgumentException('First argument to setImages must be an array of Google_Service_ConsumerSurveys_SurveyQuestionImage');
+      }
+    }
     $this->images = $images;
   }
   public function getImages()
@@ -118,7 +122,7 @@ class Google_Service_ConsumerSurveys_SurveyQuestion extends Google_Collection
   {
     return $this->openTextPlaceholder;
   }
-  public function setOpenTextSuggestions($openTextSuggestions)
+  public function setOpenTextSuggestions(array $openTextSuggestions)
   {
     $this->openTextSuggestions = $openTextSuggestions;
   }
@@ -150,7 +154,7 @@ class Google_Service_ConsumerSurveys_SurveyQuestion extends Google_Collection
   {
     return $this->singleLineResponse;
   }
-  public function setThresholdAnswers($thresholdAnswers)
+  public function setThresholdAnswers(array $thresholdAnswers)
   {
     $this->thresholdAnswers = $thresholdAnswers;
   }

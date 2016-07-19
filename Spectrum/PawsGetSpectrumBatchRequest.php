@@ -18,18 +18,12 @@
 class Google_Service_Spectrum_PawsGetSpectrumBatchRequest extends Google_Collection
 {
   protected $collection_key = 'locations';
-  protected $antennaType = 'Google_Service_Spectrum_AntennaCharacteristics';
-  protected $antennaDataType = '';
-  protected $capabilitiesType = 'Google_Service_Spectrum_DeviceCapabilities';
-  protected $capabilitiesDataType = '';
-  protected $deviceDescType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $deviceDescDataType = '';
-  protected $locationsType = 'Google_Service_Spectrum_GeoLocation';
-  protected $locationsDataType = 'array';
-  protected $masterDeviceDescType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $masterDeviceDescDataType = '';
-  protected $ownerType = 'Google_Service_Spectrum_DeviceOwner';
-  protected $ownerDataType = '';
+  public $antenna;
+  public $capabilities;
+  public $deviceDesc;
+  public $locations;
+  public $masterDeviceDesc;
+  public $owner;
   public $requestType;
   public $type;
   public $version;
@@ -58,8 +52,13 @@ class Google_Service_Spectrum_PawsGetSpectrumBatchRequest extends Google_Collect
   {
     return $this->deviceDesc;
   }
-  public function setLocations($locations)
+  public function setLocations(array $locations)
   {
+    foreach ($locations as $l) {
+      if (!$l instanceof Google_Service_Spectrum_GeoLocation) {
+        throw new InvalidArgumentException('First argument to setLocations must be an array of Google_Service_Spectrum_GeoLocation');
+      }
+    }
     $this->locations = $locations;
   }
   public function getLocations()

@@ -18,25 +18,31 @@
 class Google_Service_ToolResults_TestExecutionStep extends Google_Collection
 {
   protected $collection_key = 'testSuiteOverviews';
-  protected $testIssuesType = 'Google_Service_ToolResults_TestIssue';
-  protected $testIssuesDataType = 'array';
-  protected $testSuiteOverviewsType = 'Google_Service_ToolResults_TestSuiteOverview';
-  protected $testSuiteOverviewsDataType = 'array';
-  protected $testTimingType = 'Google_Service_ToolResults_TestTiming';
-  protected $testTimingDataType = '';
-  protected $toolExecutionType = 'Google_Service_ToolResults_ToolExecution';
-  protected $toolExecutionDataType = '';
+  public $testIssues;
+  public $testSuiteOverviews;
+  public $testTiming;
+  public $toolExecution;
 
-  public function setTestIssues($testIssues)
+  public function setTestIssues(array $testIssues)
   {
+    foreach ($testIssues as $t) {
+      if (!$t instanceof Google_Service_ToolResults_TestIssue) {
+        throw new InvalidArgumentException('First argument to setTestIssues must be an array of Google_Service_ToolResults_TestIssue');
+      }
+    }
     $this->testIssues = $testIssues;
   }
   public function getTestIssues()
   {
     return $this->testIssues;
   }
-  public function setTestSuiteOverviews($testSuiteOverviews)
+  public function setTestSuiteOverviews(array $testSuiteOverviews)
   {
+    foreach ($testSuiteOverviews as $t) {
+      if (!$t instanceof Google_Service_ToolResults_TestSuiteOverview) {
+        throw new InvalidArgumentException('First argument to setTestSuiteOverviews must be an array of Google_Service_ToolResults_TestSuiteOverview');
+      }
+    }
     $this->testSuiteOverviews = $testSuiteOverviews;
   }
   public function getTestSuiteOverviews()

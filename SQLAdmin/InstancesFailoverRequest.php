@@ -17,8 +17,7 @@
 
 class Google_Service_SQLAdmin_InstancesFailoverRequest extends Google_Model
 {
-  protected $failoverContextType = 'Google_Service_SQLAdmin_FailoverContext';
-  protected $failoverContextDataType = '';
+  public $failoverContext;
 
   public function setFailoverContext(Google_Service_SQLAdmin_FailoverContext $failoverContext)
   {

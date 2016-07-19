@@ -18,16 +18,11 @@
 class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
 {
   protected $collection_key = 'reachByFrequencyMetricNames';
-  protected $activitiesType = 'Google_Service_Dfareporting_Activities';
-  protected $activitiesDataType = '';
-  protected $customRichMediaEventsType = 'Google_Service_Dfareporting_CustomRichMediaEvents';
-  protected $customRichMediaEventsDataType = '';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
-  protected $dateRangeDataType = '';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $dimensionFiltersDataType = 'array';
-  protected $dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
-  protected $dimensionsDataType = 'array';
+  public $activities;
+  public $customRichMediaEvents;
+  public $dateRange;
+  public $dimensionFilters;
+  public $dimensions;
   public $enableAllDimensionCombinations;
   public $metricNames;
   public $reachByFrequencyMetricNames;
@@ -56,16 +51,26 @@ class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
   {
     return $this->dateRange;
   }
-  public function setDimensionFilters($dimensionFilters)
+  public function setDimensionFilters(array $dimensionFilters)
   {
+    foreach ($dimensionFilters as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setDimensionFilters must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->dimensionFilters = $dimensionFilters;
   }
   public function getDimensionFilters()
   {
     return $this->dimensionFilters;
   }
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
+    foreach ($dimensions as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_SortedDimension) {
+        throw new InvalidArgumentException('First argument to setDimensions must be an array of Google_Service_Dfareporting_SortedDimension');
+      }
+    }
     $this->dimensions = $dimensions;
   }
   public function getDimensions()
@@ -80,7 +85,7 @@ class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
   {
     return $this->enableAllDimensionCombinations;
   }
-  public function setMetricNames($metricNames)
+  public function setMetricNames(array $metricNames)
   {
     $this->metricNames = $metricNames;
   }
@@ -88,7 +93,7 @@ class Google_Service_Dfareporting_ReportReachCriteria extends Google_Collection
   {
     return $this->metricNames;
   }
-  public function setReachByFrequencyMetricNames($reachByFrequencyMetricNames)
+  public function setReachByFrequencyMetricNames(array $reachByFrequencyMetricNames)
   {
     $this->reachByFrequencyMetricNames = $reachByFrequencyMetricNames;
   }

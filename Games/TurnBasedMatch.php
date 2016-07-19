@@ -19,28 +19,21 @@ class Google_Service_Games_TurnBasedMatch extends Google_Collection
 {
   protected $collection_key = 'results';
   public $applicationId;
-  protected $autoMatchingCriteriaType = 'Google_Service_Games_TurnBasedAutoMatchingCriteria';
-  protected $autoMatchingCriteriaDataType = '';
-  protected $creationDetailsType = 'Google_Service_Games_TurnBasedMatchModification';
-  protected $creationDetailsDataType = '';
-  protected $dataType = 'Google_Service_Games_TurnBasedMatchData';
-  protected $dataDataType = '';
+  public $autoMatchingCriteria;
+  public $creationDetails;
+  public $data;
   public $description;
   public $inviterId;
   public $kind;
-  protected $lastUpdateDetailsType = 'Google_Service_Games_TurnBasedMatchModification';
-  protected $lastUpdateDetailsDataType = '';
+  public $lastUpdateDetails;
   public $matchId;
   public $matchNumber;
   public $matchVersion;
-  protected $participantsType = 'Google_Service_Games_TurnBasedMatchParticipant';
-  protected $participantsDataType = 'array';
+  public $participants;
   public $pendingParticipantId;
-  protected $previousMatchDataType = 'Google_Service_Games_TurnBasedMatchData';
-  protected $previousMatchDataDataType = '';
+  public $previousMatchData;
   public $rematchId;
-  protected $resultsType = 'Google_Service_Games_ParticipantResult';
-  protected $resultsDataType = 'array';
+  public $results;
   public $status;
   public $userMatchStatus;
   public $variant;
@@ -134,8 +127,13 @@ class Google_Service_Games_TurnBasedMatch extends Google_Collection
   {
     return $this->matchVersion;
   }
-  public function setParticipants($participants)
+  public function setParticipants(array $participants)
   {
+    foreach ($participants as $p) {
+      if (!$p instanceof Google_Service_Games_TurnBasedMatchParticipant) {
+        throw new InvalidArgumentException('First argument to setParticipants must be an array of Google_Service_Games_TurnBasedMatchParticipant');
+      }
+    }
     $this->participants = $participants;
   }
   public function getParticipants()
@@ -166,8 +164,13 @@ class Google_Service_Games_TurnBasedMatch extends Google_Collection
   {
     return $this->rematchId;
   }
-  public function setResults($results)
+  public function setResults(array $results)
   {
+    foreach ($results as $r) {
+      if (!$r instanceof Google_Service_Games_ParticipantResult) {
+        throw new InvalidArgumentException('First argument to setResults must be an array of Google_Service_Games_ParticipantResult');
+      }
+    }
     $this->results = $results;
   }
   public function getResults()

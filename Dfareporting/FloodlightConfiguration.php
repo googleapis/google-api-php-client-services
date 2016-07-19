@@ -20,29 +20,22 @@ class Google_Service_Dfareporting_FloodlightConfiguration extends Google_Collect
   protected $collection_key = 'userDefinedVariableConfigurations';
   public $accountId;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $analyticsDataSharingEnabled;
   public $exposureToConversionEnabled;
   public $firstDayOfWeek;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $inAppAttributionTrackingEnabled;
   public $kind;
-  protected $lookbackConfigurationType = 'Google_Service_Dfareporting_LookbackConfiguration';
-  protected $lookbackConfigurationDataType = '';
+  public $lookbackConfiguration;
   public $naturalSearchConversionAttributionOption;
-  protected $omnitureSettingsType = 'Google_Service_Dfareporting_OmnitureSettings';
-  protected $omnitureSettingsDataType = '';
+  public $omnitureSettings;
   public $standardVariableTypes;
   public $subaccountId;
-  protected $tagSettingsType = 'Google_Service_Dfareporting_TagSettings';
-  protected $tagSettingsDataType = '';
-  protected $thirdPartyAuthenticationTokensType = 'Google_Service_Dfareporting_ThirdPartyAuthenticationToken';
-  protected $thirdPartyAuthenticationTokensDataType = 'array';
-  protected $userDefinedVariableConfigurationsType = 'Google_Service_Dfareporting_UserDefinedVariableConfiguration';
-  protected $userDefinedVariableConfigurationsDataType = 'array';
+  public $tagSettings;
+  public $thirdPartyAuthenticationTokens;
+  public $userDefinedVariableConfigurations;
 
   public function setAccountId($accountId)
   {
@@ -148,7 +141,7 @@ class Google_Service_Dfareporting_FloodlightConfiguration extends Google_Collect
   {
     return $this->omnitureSettings;
   }
-  public function setStandardVariableTypes($standardVariableTypes)
+  public function setStandardVariableTypes(array $standardVariableTypes)
   {
     $this->standardVariableTypes = $standardVariableTypes;
   }
@@ -172,16 +165,26 @@ class Google_Service_Dfareporting_FloodlightConfiguration extends Google_Collect
   {
     return $this->tagSettings;
   }
-  public function setThirdPartyAuthenticationTokens($thirdPartyAuthenticationTokens)
+  public function setThirdPartyAuthenticationTokens(array $thirdPartyAuthenticationTokens)
   {
+    foreach ($thirdPartyAuthenticationTokens as $t) {
+      if (!$t instanceof Google_Service_Dfareporting_ThirdPartyAuthenticationToken) {
+        throw new InvalidArgumentException('First argument to setThirdPartyAuthenticationTokens must be an array of Google_Service_Dfareporting_ThirdPartyAuthenticationToken');
+      }
+    }
     $this->thirdPartyAuthenticationTokens = $thirdPartyAuthenticationTokens;
   }
   public function getThirdPartyAuthenticationTokens()
   {
     return $this->thirdPartyAuthenticationTokens;
   }
-  public function setUserDefinedVariableConfigurations($userDefinedVariableConfigurations)
+  public function setUserDefinedVariableConfigurations(array $userDefinedVariableConfigurations)
   {
+    foreach ($userDefinedVariableConfigurations as $u) {
+      if (!$u instanceof Google_Service_Dfareporting_UserDefinedVariableConfiguration) {
+        throw new InvalidArgumentException('First argument to setUserDefinedVariableConfigurations must be an array of Google_Service_Dfareporting_UserDefinedVariableConfiguration');
+      }
+    }
     $this->userDefinedVariableConfigurations = $userDefinedVariableConfigurations;
   }
   public function getUserDefinedVariableConfigurations()

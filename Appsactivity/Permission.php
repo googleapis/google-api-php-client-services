@@ -21,8 +21,7 @@ class Google_Service_Appsactivity_Permission extends Google_Model
   public $permissionId;
   public $role;
   public $type;
-  protected $userType = 'Google_Service_Appsactivity_User';
-  protected $userDataType = '';
+  public $user;
   public $withLink;
 
   public function setName($name)

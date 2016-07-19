@@ -19,8 +19,7 @@ class Google_Service_Dataflow_StreamingComputationRanges extends Google_Collecti
 {
   protected $collection_key = 'rangeAssignments';
   public $computationId;
-  protected $rangeAssignmentsType = 'Google_Service_Dataflow_KeyRangeDataDiskAssignment';
-  protected $rangeAssignmentsDataType = 'array';
+  public $rangeAssignments;
 
   public function setComputationId($computationId)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dataflow_StreamingComputationRanges extends Google_Collecti
   {
     return $this->computationId;
   }
-  public function setRangeAssignments($rangeAssignments)
+  public function setRangeAssignments(array $rangeAssignments)
   {
+    foreach ($rangeAssignments as $r) {
+      if (!$r instanceof Google_Service_Dataflow_KeyRangeDataDiskAssignment) {
+        throw new InvalidArgumentException('First argument to setRangeAssignments must be an array of Google_Service_Dataflow_KeyRangeDataDiskAssignment');
+      }
+    }
     $this->rangeAssignments = $rangeAssignments;
   }
   public function getRangeAssignments()

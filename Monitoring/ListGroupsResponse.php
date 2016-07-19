@@ -18,12 +18,16 @@
 class Google_Service_Monitoring_ListGroupsResponse extends Google_Collection
 {
   protected $collection_key = 'group';
-  protected $groupType = 'Google_Service_Monitoring_Group';
-  protected $groupDataType = 'array';
+  public $group;
   public $nextPageToken;
 
-  public function setGroup($group)
+  public function setGroup(array $group)
   {
+    foreach ($group as $g) {
+      if (!$g instanceof Google_Service_Monitoring_Group) {
+        throw new InvalidArgumentException('First argument to setGroup must be an array of Google_Service_Monitoring_Group');
+      }
+    }
     $this->group = $group;
   }
   public function getGroup()

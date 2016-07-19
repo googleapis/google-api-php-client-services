@@ -18,11 +18,15 @@
 class Google_Service_AnalyticsReporting_OrFiltersForSegment extends Google_Collection
 {
   protected $collection_key = 'segmentFilterClauses';
-  protected $segmentFilterClausesType = 'Google_Service_AnalyticsReporting_SegmentFilterClause';
-  protected $segmentFilterClausesDataType = 'array';
+  public $segmentFilterClauses;
 
-  public function setSegmentFilterClauses($segmentFilterClauses)
+  public function setSegmentFilterClauses(array $segmentFilterClauses)
   {
+    foreach ($segmentFilterClauses as $s) {
+      if (!$s instanceof Google_Service_AnalyticsReporting_SegmentFilterClause) {
+        throw new InvalidArgumentException('First argument to setSegmentFilterClauses must be an array of Google_Service_AnalyticsReporting_SegmentFilterClause');
+      }
+    }
     $this->segmentFilterClauses = $segmentFilterClauses;
   }
   public function getSegmentFilterClauses()

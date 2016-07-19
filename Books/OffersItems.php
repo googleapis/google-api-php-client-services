@@ -21,8 +21,7 @@ class Google_Service_Books_OffersItems extends Google_Collection
   public $artUrl;
   public $gservicesKey;
   public $id;
-  protected $itemsType = 'Google_Service_Books_OffersItemsItems';
-  protected $itemsDataType = 'array';
+  public $items;
 
   public function setArtUrl($artUrl)
   {
@@ -48,8 +47,13 @@ class Google_Service_Books_OffersItems extends Google_Collection
   {
     return $this->id;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Books_OffersItemsItems) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Books_OffersItemsItems');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

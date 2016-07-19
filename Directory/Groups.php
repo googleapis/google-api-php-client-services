@@ -19,8 +19,7 @@ class Google_Service_Directory_Groups extends Google_Collection
 {
   protected $collection_key = 'groups';
   public $etag;
-  protected $groupsType = 'Google_Service_Directory_Group';
-  protected $groupsDataType = 'array';
+  public $groups;
   public $kind;
   public $nextPageToken;
 
@@ -32,8 +31,13 @@ class Google_Service_Directory_Groups extends Google_Collection
   {
     return $this->etag;
   }
-  public function setGroups($groups)
+  public function setGroups(array $groups)
   {
+    foreach ($groups as $g) {
+      if (!$g instanceof Google_Service_Directory_Group) {
+        throw new InvalidArgumentException('First argument to setGroups must be an array of Google_Service_Directory_Group');
+      }
+    }
     $this->groups = $groups;
   }
   public function getGroups()

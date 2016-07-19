@@ -19,8 +19,7 @@ class Google_Service_Books_AnnotationsSummary extends Google_Collection
 {
   protected $collection_key = 'layers';
   public $kind;
-  protected $layersType = 'Google_Service_Books_AnnotationsSummaryLayers';
-  protected $layersDataType = 'array';
+  public $layers;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Books_AnnotationsSummary extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLayers($layers)
+  public function setLayers(array $layers)
   {
+    foreach ($layers as $l) {
+      if (!$l instanceof Google_Service_Books_AnnotationsSummaryLayers) {
+        throw new InvalidArgumentException('First argument to setLayers must be an array of Google_Service_Books_AnnotationsSummaryLayers');
+      }
+    }
     $this->layers = $layers;
   }
   public function getLayers()

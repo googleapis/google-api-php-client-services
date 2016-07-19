@@ -18,8 +18,7 @@
 class Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestriction extends Google_Collection
 {
   protected $collection_key = 'entryValue';
-  protected $defaultValueType = 'Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestrictionRestrictionValue';
-  protected $defaultValueDataType = '';
+  public $defaultValue;
   public $description;
   public $entry;
   public $entryValue;
@@ -43,7 +42,7 @@ class Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestriction extends 
   {
     return $this->description;
   }
-  public function setEntry($entry)
+  public function setEntry(array $entry)
   {
     $this->entry = $entry;
   }
@@ -51,7 +50,7 @@ class Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestriction extends 
   {
     return $this->entry;
   }
-  public function setEntryValue($entryValue)
+  public function setEntryValue(array $entryValue)
   {
     $this->entryValue = $entryValue;
   }

@@ -19,12 +19,9 @@ class Google_Service_Bigquery_JobConfigurationTableCopy extends Google_Collectio
 {
   protected $collection_key = 'sourceTables';
   public $createDisposition;
-  protected $destinationTableType = 'Google_Service_Bigquery_TableReference';
-  protected $destinationTableDataType = '';
-  protected $sourceTableType = 'Google_Service_Bigquery_TableReference';
-  protected $sourceTableDataType = '';
-  protected $sourceTablesType = 'Google_Service_Bigquery_TableReference';
-  protected $sourceTablesDataType = 'array';
+  public $destinationTable;
+  public $sourceTable;
+  public $sourceTables;
   public $writeDisposition;
 
   public function setCreateDisposition($createDisposition)
@@ -51,8 +48,13 @@ class Google_Service_Bigquery_JobConfigurationTableCopy extends Google_Collectio
   {
     return $this->sourceTable;
   }
-  public function setSourceTables($sourceTables)
+  public function setSourceTables(array $sourceTables)
   {
+    foreach ($sourceTables as $s) {
+      if (!$s instanceof Google_Service_Bigquery_TableReference) {
+        throw new InvalidArgumentException('First argument to setSourceTables must be an array of Google_Service_Bigquery_TableReference');
+      }
+    }
     $this->sourceTables = $sourceTables;
   }
   public function getSourceTables()

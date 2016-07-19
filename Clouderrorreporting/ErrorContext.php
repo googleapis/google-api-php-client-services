@@ -17,10 +17,8 @@
 
 class Google_Service_Clouderrorreporting_ErrorContext extends Google_Model
 {
-  protected $httpRequestType = 'Google_Service_Clouderrorreporting_HttpRequestContext';
-  protected $httpRequestDataType = '';
-  protected $reportLocationType = 'Google_Service_Clouderrorreporting_SourceLocation';
-  protected $reportLocationDataType = '';
+  public $httpRequest;
+  public $reportLocation;
   public $user;
 
   public function setHttpRequest(Google_Service_Clouderrorreporting_HttpRequestContext $httpRequest)
