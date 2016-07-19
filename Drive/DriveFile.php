@@ -19,10 +19,8 @@ class Google_Service_Drive_DriveFile extends Google_Collection
 {
   protected $collection_key = 'spaces';
   public $appProperties;
-  protected $capabilitiesType = 'Google_Service_Drive_DriveFileCapabilities';
-  protected $capabilitiesDataType = '';
-  protected $contentHintsType = 'Google_Service_Drive_DriveFileContentHints';
-  protected $contentHintsDataType = '';
+  public $capabilities;
+  public $contentHints;
   public $createdTime;
   public $description;
   public $explicitlyTrashed;
@@ -32,12 +30,10 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   public $headRevisionId;
   public $iconLink;
   public $id;
-  protected $imageMediaMetadataType = 'Google_Service_Drive_DriveFileImageMediaMetadata';
-  protected $imageMediaMetadataDataType = '';
+  public $imageMediaMetadata;
   public $isAppAuthorized;
   public $kind;
-  protected $lastModifyingUserType = 'Google_Service_Drive_User';
-  protected $lastModifyingUserDataType = '';
+  public $lastModifyingUser;
   public $md5Checksum;
   public $mimeType;
   public $modifiedByMeTime;
@@ -45,25 +41,21 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   public $name;
   public $originalFilename;
   public $ownedByMe;
-  protected $ownersType = 'Google_Service_Drive_User';
-  protected $ownersDataType = 'array';
+  public $owners;
   public $parents;
-  protected $permissionsType = 'Google_Service_Drive_Permission';
-  protected $permissionsDataType = 'array';
+  public $permissions;
   public $properties;
   public $quotaBytesUsed;
   public $shared;
   public $sharedWithMeTime;
-  protected $sharingUserType = 'Google_Service_Drive_User';
-  protected $sharingUserDataType = '';
+  public $sharingUser;
   public $size;
   public $spaces;
   public $starred;
   public $thumbnailLink;
   public $trashed;
   public $version;
-  protected $videoMediaMetadataType = 'Google_Service_Drive_DriveFileVideoMediaMetadata';
-  protected $videoMediaMetadataDataType = '';
+  public $videoMediaMetadata;
   public $viewedByMe;
   public $viewedByMeTime;
   public $viewersCanCopyContent;
@@ -71,7 +63,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   public $webViewLink;
   public $writersCanShare;
 
-  public function setAppProperties($appProperties)
+  public function setAppProperties(array $appProperties)
   {
     $this->appProperties = $appProperties;
   }
@@ -255,15 +247,20 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->ownedByMe;
   }
-  public function setOwners($owners)
+  public function setOwners(array $owners)
   {
+    foreach ($owners as $o) {
+      if (!$o instanceof Google_Service_Drive_User) {
+        throw new InvalidArgumentException('First argument to setOwners must be an array of Google_Service_Drive_User');
+      }
+    }
     $this->owners = $owners;
   }
   public function getOwners()
   {
     return $this->owners;
   }
-  public function setParents($parents)
+  public function setParents(array $parents)
   {
     $this->parents = $parents;
   }
@@ -271,15 +268,20 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->parents;
   }
-  public function setPermissions($permissions)
+  public function setPermissions(array $permissions)
   {
+    foreach ($permissions as $p) {
+      if (!$p instanceof Google_Service_Drive_Permission) {
+        throw new InvalidArgumentException('First argument to setPermissions must be an array of Google_Service_Drive_Permission');
+      }
+    }
     $this->permissions = $permissions;
   }
   public function getPermissions()
   {
     return $this->permissions;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
     $this->properties = $properties;
   }
@@ -327,7 +329,7 @@ class Google_Service_Drive_DriveFile extends Google_Collection
   {
     return $this->size;
   }
-  public function setSpaces($spaces)
+  public function setSpaces(array $spaces)
   {
     $this->spaces = $spaces;
   }

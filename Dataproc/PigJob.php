@@ -20,12 +20,10 @@ class Google_Service_Dataproc_PigJob extends Google_Collection
   protected $collection_key = 'jarFileUris';
   public $continueOnFailure;
   public $jarFileUris;
-  protected $loggingConfigType = 'Google_Service_Dataproc_LoggingConfig';
-  protected $loggingConfigDataType = '';
+  public $loggingConfig;
   public $properties;
   public $queryFileUri;
-  protected $queryListType = 'Google_Service_Dataproc_QueryList';
-  protected $queryListDataType = '';
+  public $queryList;
   public $scriptVariables;
 
   public function setContinueOnFailure($continueOnFailure)
@@ -36,7 +34,7 @@ class Google_Service_Dataproc_PigJob extends Google_Collection
   {
     return $this->continueOnFailure;
   }
-  public function setJarFileUris($jarFileUris)
+  public function setJarFileUris(array $jarFileUris)
   {
     $this->jarFileUris = $jarFileUris;
   }
@@ -52,7 +50,7 @@ class Google_Service_Dataproc_PigJob extends Google_Collection
   {
     return $this->loggingConfig;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
     $this->properties = $properties;
   }
@@ -76,7 +74,7 @@ class Google_Service_Dataproc_PigJob extends Google_Collection
   {
     return $this->queryList;
   }
-  public function setScriptVariables($scriptVariables)
+  public function setScriptVariables(array $scriptVariables)
   {
     $this->scriptVariables = $scriptVariables;
   }

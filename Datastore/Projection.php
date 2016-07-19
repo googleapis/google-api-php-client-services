@@ -17,8 +17,7 @@
 
 class Google_Service_Datastore_Projection extends Google_Model
 {
-  protected $propertyType = 'Google_Service_Datastore_PropertyReference';
-  protected $propertyDataType = '';
+  public $property;
 
   public function setProperty(Google_Service_Datastore_PropertyReference $property)
   {

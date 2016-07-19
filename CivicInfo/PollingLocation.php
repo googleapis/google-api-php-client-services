@@ -18,15 +18,13 @@
 class Google_Service_CivicInfo_PollingLocation extends Google_Collection
 {
   protected $collection_key = 'sources';
-  protected $addressType = 'Google_Service_CivicInfo_SimpleAddressType';
-  protected $addressDataType = '';
+  public $address;
   public $endDate;
   public $id;
   public $name;
   public $notes;
   public $pollingHours;
-  protected $sourcesType = 'Google_Service_CivicInfo_Source';
-  protected $sourcesDataType = 'array';
+  public $sources;
   public $startDate;
   public $voterServices;
 
@@ -78,8 +76,13 @@ class Google_Service_CivicInfo_PollingLocation extends Google_Collection
   {
     return $this->pollingHours;
   }
-  public function setSources($sources)
+  public function setSources(array $sources)
   {
+    foreach ($sources as $s) {
+      if (!$s instanceof Google_Service_CivicInfo_Source) {
+        throw new InvalidArgumentException('First argument to setSources must be an array of Google_Service_CivicInfo_Source');
+      }
+    }
     $this->sources = $sources;
   }
   public function getSources()

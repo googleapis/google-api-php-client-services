@@ -20,10 +20,8 @@ class Google_Service_Classroom_UserProfile extends Google_Collection
   protected $collection_key = 'permissions';
   public $emailAddress;
   public $id;
-  protected $nameType = 'Google_Service_Classroom_Name';
-  protected $nameDataType = '';
-  protected $permissionsType = 'Google_Service_Classroom_GlobalPermission';
-  protected $permissionsDataType = 'array';
+  public $name;
+  public $permissions;
   public $photoUrl;
 
   public function setEmailAddress($emailAddress)
@@ -50,8 +48,13 @@ class Google_Service_Classroom_UserProfile extends Google_Collection
   {
     return $this->name;
   }
-  public function setPermissions($permissions)
+  public function setPermissions(array $permissions)
   {
+    foreach ($permissions as $p) {
+      if (!$p instanceof Google_Service_Classroom_GlobalPermission) {
+        throw new InvalidArgumentException('First argument to setPermissions must be an array of Google_Service_Classroom_GlobalPermission');
+      }
+    }
     $this->permissions = $permissions;
   }
   public function getPermissions()

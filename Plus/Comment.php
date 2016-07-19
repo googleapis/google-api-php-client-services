@@ -18,17 +18,13 @@
 class Google_Service_Plus_Comment extends Google_Collection
 {
   protected $collection_key = 'inReplyTo';
-  protected $actorType = 'Google_Service_Plus_CommentActor';
-  protected $actorDataType = '';
+  public $actor;
   public $etag;
   public $id;
-  protected $inReplyToType = 'Google_Service_Plus_CommentInReplyTo';
-  protected $inReplyToDataType = 'array';
+  public $inReplyTo;
   public $kind;
-  protected $objectType = 'Google_Service_Plus_CommentObject';
-  protected $objectDataType = '';
-  protected $plusonersType = 'Google_Service_Plus_CommentPlusoners';
-  protected $plusonersDataType = '';
+  public $object;
+  public $plusoners;
   public $published;
   public $selfLink;
   public $updated;
@@ -58,8 +54,13 @@ class Google_Service_Plus_Comment extends Google_Collection
   {
     return $this->id;
   }
-  public function setInReplyTo($inReplyTo)
+  public function setInReplyTo(array $inReplyTo)
   {
+    foreach ($inReplyTo as $i) {
+      if (!$i instanceof Google_Service_Plus_CommentInReplyTo) {
+        throw new InvalidArgumentException('First argument to setInReplyTo must be an array of Google_Service_Plus_CommentInReplyTo');
+      }
+    }
     $this->inReplyTo = $inReplyTo;
   }
   public function getInReplyTo()

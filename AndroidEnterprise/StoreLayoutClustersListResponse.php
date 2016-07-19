@@ -18,12 +18,16 @@
 class Google_Service_AndroidEnterprise_StoreLayoutClustersListResponse extends Google_Collection
 {
   protected $collection_key = 'cluster';
-  protected $clusterType = 'Google_Service_AndroidEnterprise_StoreCluster';
-  protected $clusterDataType = 'array';
+  public $cluster;
   public $kind;
 
-  public function setCluster($cluster)
+  public function setCluster(array $cluster)
   {
+    foreach ($cluster as $c) {
+      if (!$c instanceof Google_Service_AndroidEnterprise_StoreCluster) {
+        throw new InvalidArgumentException('First argument to setCluster must be an array of Google_Service_AndroidEnterprise_StoreCluster');
+      }
+    }
     $this->cluster = $cluster;
   }
   public function getCluster()

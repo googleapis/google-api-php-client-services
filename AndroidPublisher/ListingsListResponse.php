@@ -19,8 +19,7 @@ class Google_Service_AndroidPublisher_ListingsListResponse extends Google_Collec
 {
   protected $collection_key = 'listings';
   public $kind;
-  protected $listingsType = 'Google_Service_AndroidPublisher_Listing';
-  protected $listingsDataType = 'array';
+  public $listings;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_AndroidPublisher_ListingsListResponse extends Google_Collec
   {
     return $this->kind;
   }
-  public function setListings($listings)
+  public function setListings(array $listings)
   {
+    foreach ($listings as $l) {
+      if (!$l instanceof Google_Service_AndroidPublisher_Listing) {
+        throw new InvalidArgumentException('First argument to setListings must be an array of Google_Service_AndroidPublisher_Listing');
+      }
+    }
     $this->listings = $listings;
   }
   public function getListings()

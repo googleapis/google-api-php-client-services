@@ -18,11 +18,15 @@
 class Google_Service_ShoppingContent_InventoryCustomBatchRequest extends Google_Collection
 {
   protected $collection_key = 'entries';
-  protected $entriesType = 'Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry';
-  protected $entriesDataType = 'array';
+  public $entries;
 
-  public function setEntries($entries)
+  public function setEntries(array $entries)
   {
+    foreach ($entries as $e) {
+      if (!$e instanceof Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry) {
+        throw new InvalidArgumentException('First argument to setEntries must be an array of Google_Service_ShoppingContent_InventoryCustomBatchRequestEntry');
+      }
+    }
     $this->entries = $entries;
   }
   public function getEntries()

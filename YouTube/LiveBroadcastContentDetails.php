@@ -25,8 +25,7 @@ class Google_Service_YouTube_LiveBroadcastContentDetails extends Google_Model
   public $enableDvr;
   public $enableEmbed;
   public $enableLowLatency;
-  protected $monitorStreamType = 'Google_Service_YouTube_MonitorStreamInfo';
-  protected $monitorStreamDataType = '';
+  public $monitorStream;
   public $projection;
   public $recordFromStart;
   public $startWithSlate;

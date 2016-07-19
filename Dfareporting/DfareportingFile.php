@@ -17,8 +17,7 @@
 
 class Google_Service_Dfareporting_DfareportingFile extends Google_Model
 {
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
-  protected $dateRangeDataType = '';
+  public $dateRange;
   public $etag;
   public $fileName;
   public $format;
@@ -27,8 +26,7 @@ class Google_Service_Dfareporting_DfareportingFile extends Google_Model
   public $lastModifiedTime;
   public $reportId;
   public $status;
-  protected $urlsType = 'Google_Service_Dfareporting_DfareportingFileUrls';
-  protected $urlsDataType = '';
+  public $urls;
 
   public function setDateRange(Google_Service_Dfareporting_DateRange $dateRange)
   {

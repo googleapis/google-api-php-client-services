@@ -17,14 +17,12 @@
 
 class Google_Service_Analytics_Account extends Google_Model
 {
-  protected $childLinkType = 'Google_Service_Analytics_AccountChildLink';
-  protected $childLinkDataType = '';
+  public $childLink;
   public $created;
   public $id;
   public $kind;
   public $name;
-  protected $permissionsType = 'Google_Service_Analytics_AccountPermissions';
-  protected $permissionsDataType = '';
+  public $permissions;
   public $selfLink;
   public $starred;
   public $updated;

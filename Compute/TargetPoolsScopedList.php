@@ -18,13 +18,16 @@
 class Google_Service_Compute_TargetPoolsScopedList extends Google_Collection
 {
   protected $collection_key = 'targetPools';
-  protected $targetPoolsType = 'Google_Service_Compute_TargetPool';
-  protected $targetPoolsDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_TargetPoolsScopedListWarning';
-  protected $warningDataType = '';
+  public $targetPools;
+  public $warning;
 
-  public function setTargetPools($targetPools)
+  public function setTargetPools(array $targetPools)
   {
+    foreach ($targetPools as $t) {
+      if (!$t instanceof Google_Service_Compute_TargetPool) {
+        throw new InvalidArgumentException('First argument to setTargetPools must be an array of Google_Service_Compute_TargetPool');
+      }
+    }
     $this->targetPools = $targetPools;
   }
   public function getTargetPools()

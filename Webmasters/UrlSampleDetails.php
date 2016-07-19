@@ -21,7 +21,7 @@ class Google_Service_Webmasters_UrlSampleDetails extends Google_Collection
   public $containingSitemaps;
   public $linkedFromUrls;
 
-  public function setContainingSitemaps($containingSitemaps)
+  public function setContainingSitemaps(array $containingSitemaps)
   {
     $this->containingSitemaps = $containingSitemaps;
   }
@@ -29,7 +29,7 @@ class Google_Service_Webmasters_UrlSampleDetails extends Google_Collection
   {
     return $this->containingSitemaps;
   }
-  public function setLinkedFromUrls($linkedFromUrls)
+  public function setLinkedFromUrls(array $linkedFromUrls)
   {
     $this->linkedFromUrls = $linkedFromUrls;
   }

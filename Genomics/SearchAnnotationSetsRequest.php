@@ -25,7 +25,7 @@ class Google_Service_Genomics_SearchAnnotationSetsRequest extends Google_Collect
   public $referenceSetId;
   public $types;
 
-  public function setDatasetIds($datasetIds)
+  public function setDatasetIds(array $datasetIds)
   {
     $this->datasetIds = $datasetIds;
   }
@@ -65,7 +65,7 @@ class Google_Service_Genomics_SearchAnnotationSetsRequest extends Google_Collect
   {
     return $this->referenceSetId;
   }
-  public function setTypes($types)
+  public function setTypes(array $types)
   {
     $this->types = $types;
   }

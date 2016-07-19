@@ -19,15 +19,13 @@ class Google_Service_ShoppingContent_Account extends Google_Collection
 {
   protected $collection_key = 'users';
   public $adultContent;
-  protected $adwordsLinksType = 'Google_Service_ShoppingContent_AccountAdwordsLink';
-  protected $adwordsLinksDataType = 'array';
+  public $adwordsLinks;
   public $id;
   public $kind;
   public $name;
   public $reviewsUrl;
   public $sellerId;
-  protected $usersType = 'Google_Service_ShoppingContent_AccountUser';
-  protected $usersDataType = 'array';
+  public $users;
   public $websiteUrl;
 
   public function setAdultContent($adultContent)
@@ -38,8 +36,13 @@ class Google_Service_ShoppingContent_Account extends Google_Collection
   {
     return $this->adultContent;
   }
-  public function setAdwordsLinks($adwordsLinks)
+  public function setAdwordsLinks(array $adwordsLinks)
   {
+    foreach ($adwordsLinks as $a) {
+      if (!$a instanceof Google_Service_ShoppingContent_AccountAdwordsLink) {
+        throw new InvalidArgumentException('First argument to setAdwordsLinks must be an array of Google_Service_ShoppingContent_AccountAdwordsLink');
+      }
+    }
     $this->adwordsLinks = $adwordsLinks;
   }
   public function getAdwordsLinks()
@@ -86,8 +89,13 @@ class Google_Service_ShoppingContent_Account extends Google_Collection
   {
     return $this->sellerId;
   }
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
+    foreach ($users as $u) {
+      if (!$u instanceof Google_Service_ShoppingContent_AccountUser) {
+        throw new InvalidArgumentException('First argument to setUsers must be an array of Google_Service_ShoppingContent_AccountUser');
+      }
+    }
     $this->users = $users;
   }
   public function getUsers()

@@ -18,14 +18,18 @@
 class Google_Service_Books_VolumeseriesinfoVolumeSeries extends Google_Collection
 {
   protected $collection_key = 'issue';
-  protected $issueType = 'Google_Service_Books_VolumeseriesinfoVolumeSeriesIssue';
-  protected $issueDataType = 'array';
+  public $issue;
   public $orderNumber;
   public $seriesBookType;
   public $seriesId;
 
-  public function setIssue($issue)
+  public function setIssue(array $issue)
   {
+    foreach ($issue as $i) {
+      if (!$i instanceof Google_Service_Books_VolumeseriesinfoVolumeSeriesIssue) {
+        throw new InvalidArgumentException('First argument to setIssue must be an array of Google_Service_Books_VolumeseriesinfoVolumeSeriesIssue');
+      }
+    }
     $this->issue = $issue;
   }
   public function getIssue()

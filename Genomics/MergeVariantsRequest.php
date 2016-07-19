@@ -20,10 +20,9 @@ class Google_Service_Genomics_MergeVariantsRequest extends Google_Collection
   protected $collection_key = 'variants';
   public $infoMergeConfig;
   public $variantSetId;
-  protected $variantsType = 'Google_Service_Genomics_Variant';
-  protected $variantsDataType = 'array';
+  public $variants;
 
-  public function setInfoMergeConfig($infoMergeConfig)
+  public function setInfoMergeConfig(array $infoMergeConfig)
   {
     $this->infoMergeConfig = $infoMergeConfig;
   }
@@ -39,8 +38,13 @@ class Google_Service_Genomics_MergeVariantsRequest extends Google_Collection
   {
     return $this->variantSetId;
   }
-  public function setVariants($variants)
+  public function setVariants(array $variants)
   {
+    foreach ($variants as $v) {
+      if (!$v instanceof Google_Service_Genomics_Variant) {
+        throw new InvalidArgumentException('First argument to setVariants must be an array of Google_Service_Genomics_Variant');
+      }
+    }
     $this->variants = $variants;
   }
   public function getVariants()

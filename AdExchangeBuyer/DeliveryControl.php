@@ -20,8 +20,7 @@ class Google_Service_AdExchangeBuyer_DeliveryControl extends Google_Collection
   protected $collection_key = 'frequencyCaps';
   public $creativeBlockingLevel;
   public $deliveryRateType;
-  protected $frequencyCapsType = 'Google_Service_AdExchangeBuyer_DeliveryControlFrequencyCap';
-  protected $frequencyCapsDataType = 'array';
+  public $frequencyCaps;
 
   public function setCreativeBlockingLevel($creativeBlockingLevel)
   {
@@ -39,8 +38,13 @@ class Google_Service_AdExchangeBuyer_DeliveryControl extends Google_Collection
   {
     return $this->deliveryRateType;
   }
-  public function setFrequencyCaps($frequencyCaps)
+  public function setFrequencyCaps(array $frequencyCaps)
   {
+    foreach ($frequencyCaps as $f) {
+      if (!$f instanceof Google_Service_AdExchangeBuyer_DeliveryControlFrequencyCap) {
+        throw new InvalidArgumentException('First argument to setFrequencyCaps must be an array of Google_Service_AdExchangeBuyer_DeliveryControlFrequencyCap');
+      }
+    }
     $this->frequencyCaps = $frequencyCaps;
   }
   public function getFrequencyCaps()

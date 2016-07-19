@@ -18,29 +18,20 @@
 class Google_Service_ToolResults_Step extends Google_Collection
 {
   protected $collection_key = 'labels';
-  protected $completionTimeType = 'Google_Service_ToolResults_Timestamp';
-  protected $completionTimeDataType = '';
-  protected $creationTimeType = 'Google_Service_ToolResults_Timestamp';
-  protected $creationTimeDataType = '';
+  public $completionTime;
+  public $creationTime;
   public $description;
-  protected $deviceUsageDurationType = 'Google_Service_ToolResults_Duration';
-  protected $deviceUsageDurationDataType = '';
-  protected $dimensionValueType = 'Google_Service_ToolResults_StepDimensionValueEntry';
-  protected $dimensionValueDataType = 'array';
+  public $deviceUsageDuration;
+  public $dimensionValue;
   public $hasImages;
-  protected $labelsType = 'Google_Service_ToolResults_StepLabelsEntry';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $name;
-  protected $outcomeType = 'Google_Service_ToolResults_Outcome';
-  protected $outcomeDataType = '';
-  protected $runDurationType = 'Google_Service_ToolResults_Duration';
-  protected $runDurationDataType = '';
+  public $outcome;
+  public $runDuration;
   public $state;
   public $stepId;
-  protected $testExecutionStepType = 'Google_Service_ToolResults_TestExecutionStep';
-  protected $testExecutionStepDataType = '';
-  protected $toolExecutionStepType = 'Google_Service_ToolResults_ToolExecutionStep';
-  protected $toolExecutionStepDataType = '';
+  public $testExecutionStep;
+  public $toolExecutionStep;
 
   public function setCompletionTime(Google_Service_ToolResults_Timestamp $completionTime)
   {
@@ -74,8 +65,13 @@ class Google_Service_ToolResults_Step extends Google_Collection
   {
     return $this->deviceUsageDuration;
   }
-  public function setDimensionValue($dimensionValue)
+  public function setDimensionValue(array $dimensionValue)
   {
+    foreach ($dimensionValue as $d) {
+      if (!$d instanceof Google_Service_ToolResults_StepDimensionValueEntry) {
+        throw new InvalidArgumentException('First argument to setDimensionValue must be an array of Google_Service_ToolResults_StepDimensionValueEntry');
+      }
+    }
     $this->dimensionValue = $dimensionValue;
   }
   public function getDimensionValue()
@@ -90,8 +86,13 @@ class Google_Service_ToolResults_Step extends Google_Collection
   {
     return $this->hasImages;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_ToolResults_StepLabelsEntry) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_ToolResults_StepLabelsEntry');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()

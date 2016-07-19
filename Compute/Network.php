@@ -104,7 +104,7 @@ class Google_Service_Compute_Network extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setSubnetworks($subnetworks)
+  public function setSubnetworks(array $subnetworks)
   {
     $this->subnetworks = $subnetworks;
   }

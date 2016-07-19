@@ -18,25 +18,33 @@
 class Google_Service_Dns_Change extends Google_Collection
 {
   protected $collection_key = 'deletions';
-  protected $additionsType = 'Google_Service_Dns_ResourceRecordSet';
-  protected $additionsDataType = 'array';
-  protected $deletionsType = 'Google_Service_Dns_ResourceRecordSet';
-  protected $deletionsDataType = 'array';
+  public $additions;
+  public $deletions;
   public $id;
   public $kind;
   public $startTime;
   public $status;
 
-  public function setAdditions($additions)
+  public function setAdditions(array $additions)
   {
+    foreach ($additions as $a) {
+      if (!$a instanceof Google_Service_Dns_ResourceRecordSet) {
+        throw new InvalidArgumentException('First argument to setAdditions must be an array of Google_Service_Dns_ResourceRecordSet');
+      }
+    }
     $this->additions = $additions;
   }
   public function getAdditions()
   {
     return $this->additions;
   }
-  public function setDeletions($deletions)
+  public function setDeletions(array $deletions)
   {
+    foreach ($deletions as $d) {
+      if (!$d instanceof Google_Service_Dns_ResourceRecordSet) {
+        throw new InvalidArgumentException('First argument to setDeletions must be an array of Google_Service_Dns_ResourceRecordSet');
+      }
+    }
     $this->deletions = $deletions;
   }
   public function getDeletions()

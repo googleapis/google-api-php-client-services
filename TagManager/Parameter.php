@@ -19,10 +19,8 @@ class Google_Service_TagManager_Parameter extends Google_Collection
 {
   protected $collection_key = 'map';
   public $key;
-  protected $listType = 'Google_Service_TagManager_Parameter';
-  protected $listDataType = 'array';
-  protected $mapType = 'Google_Service_TagManager_Parameter';
-  protected $mapDataType = 'array';
+  public $list;
+  public $map;
   public $type;
   public $value;
 
@@ -34,16 +32,26 @@ class Google_Service_TagManager_Parameter extends Google_Collection
   {
     return $this->key;
   }
-  public function setList($list)
+  public function setList(array $list)
   {
+    foreach ($list as $l) {
+      if (!$l instanceof Google_Service_TagManager_Parameter) {
+        throw new InvalidArgumentException('First argument to setList must be an array of Google_Service_TagManager_Parameter');
+      }
+    }
     $this->list = $list;
   }
   public function getList()
   {
     return $this->list;
   }
-  public function setMap($map)
+  public function setMap(array $map)
   {
+    foreach ($map as $m) {
+      if (!$m instanceof Google_Service_TagManager_Parameter) {
+        throw new InvalidArgumentException('First argument to setMap must be an array of Google_Service_TagManager_Parameter');
+      }
+    }
     $this->map = $map;
   }
   public function getMap()

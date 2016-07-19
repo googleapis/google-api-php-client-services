@@ -19,13 +19,11 @@ class Google_Service_Games_RoomJoinRequest extends Google_Collection
 {
   protected $collection_key = 'capabilities';
   public $capabilities;
-  protected $clientAddressType = 'Google_Service_Games_RoomClientAddress';
-  protected $clientAddressDataType = '';
+  public $clientAddress;
   public $kind;
-  protected $networkDiagnosticsType = 'Google_Service_Games_NetworkDiagnostics';
-  protected $networkDiagnosticsDataType = '';
+  public $networkDiagnostics;
 
-  public function setCapabilities($capabilities)
+  public function setCapabilities(array $capabilities)
   {
     $this->capabilities = $capabilities;
   }

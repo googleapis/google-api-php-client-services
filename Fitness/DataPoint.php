@@ -25,8 +25,7 @@ class Google_Service_Fitness_DataPoint extends Google_Collection
   public $originDataSourceId;
   public $rawTimestampNanos;
   public $startTimeNanos;
-  protected $valueType = 'Google_Service_Fitness_Value';
-  protected $valueDataType = 'array';
+  public $value;
 
   public function setComputationTimeMillis($computationTimeMillis)
   {
@@ -84,8 +83,13 @@ class Google_Service_Fitness_DataPoint extends Google_Collection
   {
     return $this->startTimeNanos;
   }
-  public function setValue($value)
+  public function setValue(array $value)
   {
+    foreach ($value as $v) {
+      if (!$v instanceof Google_Service_Fitness_Value) {
+        throw new InvalidArgumentException('First argument to setValue must be an array of Google_Service_Fitness_Value');
+      }
+    }
     $this->value = $value;
   }
   public function getValue()

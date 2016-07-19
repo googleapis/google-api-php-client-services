@@ -29,7 +29,7 @@ class Google_Service_Pubsub_ModifyAckDeadlineRequest extends Google_Collection
   {
     return $this->ackDeadlineSeconds;
   }
-  public function setAckIds($ackIds)
+  public function setAckIds(array $ackIds)
   {
     $this->ackIds = $ackIds;
   }

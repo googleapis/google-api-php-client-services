@@ -18,12 +18,16 @@
 class Google_Service_AnalyticsReporting_CohortGroup extends Google_Collection
 {
   protected $collection_key = 'cohorts';
-  protected $cohortsType = 'Google_Service_AnalyticsReporting_Cohort';
-  protected $cohortsDataType = 'array';
+  public $cohorts;
   public $lifetimeValue;
 
-  public function setCohorts($cohorts)
+  public function setCohorts(array $cohorts)
   {
+    foreach ($cohorts as $c) {
+      if (!$c instanceof Google_Service_AnalyticsReporting_Cohort) {
+        throw new InvalidArgumentException('First argument to setCohorts must be an array of Google_Service_AnalyticsReporting_Cohort');
+      }
+    }
     $this->cohorts = $cohorts;
   }
   public function getCohorts()

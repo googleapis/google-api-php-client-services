@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_SizesListResponse extends Google_Collection
 {
   protected $collection_key = 'sizes';
   public $kind;
-  protected $sizesType = 'Google_Service_Dfareporting_Size';
-  protected $sizesDataType = 'array';
+  public $sizes;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_SizesListResponse extends Google_Collection
   {
     return $this->kind;
   }
-  public function setSizes($sizes)
+  public function setSizes(array $sizes)
   {
+    foreach ($sizes as $s) {
+      if (!$s instanceof Google_Service_Dfareporting_Size) {
+        throw new InvalidArgumentException('First argument to setSizes must be an array of Google_Service_Dfareporting_Size');
+      }
+    }
     $this->sizes = $sizes;
   }
   public function getSizes()

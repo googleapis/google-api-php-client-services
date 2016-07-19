@@ -18,12 +18,16 @@
 class Google_Service_ToolResults_ListHistoriesResponse extends Google_Collection
 {
   protected $collection_key = 'histories';
-  protected $historiesType = 'Google_Service_ToolResults_History';
-  protected $historiesDataType = 'array';
+  public $histories;
   public $nextPageToken;
 
-  public function setHistories($histories)
+  public function setHistories(array $histories)
   {
+    foreach ($histories as $h) {
+      if (!$h instanceof Google_Service_ToolResults_History) {
+        throw new InvalidArgumentException('First argument to setHistories must be an array of Google_Service_ToolResults_History');
+      }
+    }
     $this->histories = $histories;
   }
   public function getHistories()

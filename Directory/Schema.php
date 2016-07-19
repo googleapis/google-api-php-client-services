@@ -19,8 +19,7 @@ class Google_Service_Directory_Schema extends Google_Collection
 {
   protected $collection_key = 'fields';
   public $etag;
-  protected $fieldsType = 'Google_Service_Directory_SchemaFieldSpec';
-  protected $fieldsDataType = 'array';
+  public $fields;
   public $kind;
   public $schemaId;
   public $schemaName;
@@ -33,8 +32,13 @@ class Google_Service_Directory_Schema extends Google_Collection
   {
     return $this->etag;
   }
-  public function setFields($fields)
+  public function setFields(array $fields)
   {
+    foreach ($fields as $f) {
+      if (!$f instanceof Google_Service_Directory_SchemaFieldSpec) {
+        throw new InvalidArgumentException('First argument to setFields must be an array of Google_Service_Directory_SchemaFieldSpec');
+      }
+    }
     $this->fields = $fields;
   }
   public function getFields()

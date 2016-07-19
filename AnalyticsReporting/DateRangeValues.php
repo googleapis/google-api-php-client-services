@@ -18,19 +18,23 @@
 class Google_Service_AnalyticsReporting_DateRangeValues extends Google_Collection
 {
   protected $collection_key = 'values';
-  protected $pivotValueRegionsType = 'Google_Service_AnalyticsReporting_PivotValueRegion';
-  protected $pivotValueRegionsDataType = 'array';
+  public $pivotValueRegions;
   public $values;
 
-  public function setPivotValueRegions($pivotValueRegions)
+  public function setPivotValueRegions(array $pivotValueRegions)
   {
+    foreach ($pivotValueRegions as $p) {
+      if (!$p instanceof Google_Service_AnalyticsReporting_PivotValueRegion) {
+        throw new InvalidArgumentException('First argument to setPivotValueRegions must be an array of Google_Service_AnalyticsReporting_PivotValueRegion');
+      }
+    }
     $this->pivotValueRegions = $pivotValueRegions;
   }
   public function getPivotValueRegions()
   {
     return $this->pivotValueRegions;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
     $this->values = $values;
   }

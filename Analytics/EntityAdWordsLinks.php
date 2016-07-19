@@ -18,8 +18,7 @@
 class Google_Service_Analytics_EntityAdWordsLinks extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_Analytics_EntityAdWordsLink';
-  protected $itemsDataType = 'array';
+  public $items;
   public $itemsPerPage;
   public $kind;
   public $nextLink;
@@ -27,8 +26,13 @@ class Google_Service_Analytics_EntityAdWordsLinks extends Google_Collection
   public $startIndex;
   public $totalResults;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Analytics_EntityAdWordsLink) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Analytics_EntityAdWordsLink');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

@@ -21,24 +21,19 @@ class Google_Service_CloudDebugger_Breakpoint extends Google_Collection
   public $action;
   public $condition;
   public $createTime;
-  protected $evaluatedExpressionsType = 'Google_Service_CloudDebugger_Variable';
-  protected $evaluatedExpressionsDataType = 'array';
+  public $evaluatedExpressions;
   public $expressions;
   public $finalTime;
   public $id;
   public $isFinalState;
   public $labels;
-  protected $locationType = 'Google_Service_CloudDebugger_SourceLocation';
-  protected $locationDataType = '';
+  public $location;
   public $logLevel;
   public $logMessageFormat;
-  protected $stackFramesType = 'Google_Service_CloudDebugger_StackFrame';
-  protected $stackFramesDataType = 'array';
-  protected $statusType = 'Google_Service_CloudDebugger_StatusMessage';
-  protected $statusDataType = '';
+  public $stackFrames;
+  public $status;
   public $userEmail;
-  protected $variableTableType = 'Google_Service_CloudDebugger_Variable';
-  protected $variableTableDataType = 'array';
+  public $variableTable;
 
   public function setAction($action)
   {
@@ -64,15 +59,20 @@ class Google_Service_CloudDebugger_Breakpoint extends Google_Collection
   {
     return $this->createTime;
   }
-  public function setEvaluatedExpressions($evaluatedExpressions)
+  public function setEvaluatedExpressions(array $evaluatedExpressions)
   {
+    foreach ($evaluatedExpressions as $e) {
+      if (!$e instanceof Google_Service_CloudDebugger_Variable) {
+        throw new InvalidArgumentException('First argument to setEvaluatedExpressions must be an array of Google_Service_CloudDebugger_Variable');
+      }
+    }
     $this->evaluatedExpressions = $evaluatedExpressions;
   }
   public function getEvaluatedExpressions()
   {
     return $this->evaluatedExpressions;
   }
-  public function setExpressions($expressions)
+  public function setExpressions(array $expressions)
   {
     $this->expressions = $expressions;
   }
@@ -104,7 +104,7 @@ class Google_Service_CloudDebugger_Breakpoint extends Google_Collection
   {
     return $this->isFinalState;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }
@@ -136,8 +136,13 @@ class Google_Service_CloudDebugger_Breakpoint extends Google_Collection
   {
     return $this->logMessageFormat;
   }
-  public function setStackFrames($stackFrames)
+  public function setStackFrames(array $stackFrames)
   {
+    foreach ($stackFrames as $s) {
+      if (!$s instanceof Google_Service_CloudDebugger_StackFrame) {
+        throw new InvalidArgumentException('First argument to setStackFrames must be an array of Google_Service_CloudDebugger_StackFrame');
+      }
+    }
     $this->stackFrames = $stackFrames;
   }
   public function getStackFrames()
@@ -160,8 +165,13 @@ class Google_Service_CloudDebugger_Breakpoint extends Google_Collection
   {
     return $this->userEmail;
   }
-  public function setVariableTable($variableTable)
+  public function setVariableTable(array $variableTable)
   {
+    foreach ($variableTable as $v) {
+      if (!$v instanceof Google_Service_CloudDebugger_Variable) {
+        throw new InvalidArgumentException('First argument to setVariableTable must be an array of Google_Service_CloudDebugger_Variable');
+      }
+    }
     $this->variableTable = $variableTable;
   }
   public function getVariableTable()

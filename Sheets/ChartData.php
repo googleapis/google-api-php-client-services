@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_ChartData extends Google_Model
 {
-  protected $sourceRangeType = 'Google_Service_Sheets_ChartSourceRange';
-  protected $sourceRangeDataType = '';
+  public $sourceRange;
 
   public function setSourceRange(Google_Service_Sheets_ChartSourceRange $sourceRange)
   {

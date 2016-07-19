@@ -19,8 +19,7 @@ class Google_Service_Storage_ComposeRequestSourceObjects extends Google_Model
 {
   public $generation;
   public $name;
-  protected $objectPreconditionsType = 'Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions';
-  protected $objectPreconditionsDataType = '';
+  public $objectPreconditions;
 
   public function setGeneration($generation)
   {

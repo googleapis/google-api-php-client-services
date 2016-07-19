@@ -18,11 +18,15 @@
 class Google_Service_Sheets_RowData extends Google_Collection
 {
   protected $collection_key = 'values';
-  protected $valuesType = 'Google_Service_Sheets_CellData';
-  protected $valuesDataType = 'array';
+  public $values;
 
-  public function setValues($values)
+  public function setValues(array $values)
   {
+    foreach ($values as $v) {
+      if (!$v instanceof Google_Service_Sheets_CellData) {
+        throw new InvalidArgumentException('First argument to setValues must be an array of Google_Service_Sheets_CellData');
+      }
+    }
     $this->values = $values;
   }
   public function getValues()

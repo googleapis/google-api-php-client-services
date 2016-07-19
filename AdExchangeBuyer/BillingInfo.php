@@ -39,7 +39,7 @@ class Google_Service_AdExchangeBuyer_BillingInfo extends Google_Collection
   {
     return $this->accountName;
   }
-  public function setBillingId($billingId)
+  public function setBillingId(array $billingId)
   {
     $this->billingId = $billingId;
   }

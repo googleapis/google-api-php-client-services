@@ -17,11 +17,9 @@
 
 class Google_Service_AdSense_AdStyle extends Google_Model
 {
-  protected $colorsType = 'Google_Service_AdSense_AdStyleColors';
-  protected $colorsDataType = '';
+  public $colors;
   public $corners;
-  protected $fontType = 'Google_Service_AdSense_AdStyleFont';
-  protected $fontDataType = '';
+  public $font;
   public $kind;
 
   public function setColors(Google_Service_AdSense_AdStyleColors $colors)

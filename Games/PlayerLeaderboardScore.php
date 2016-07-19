@@ -22,13 +22,11 @@ class Google_Service_Games_PlayerLeaderboardScore extends Google_Model
   );
   public $kind;
   public $leaderboardId;
-  protected $publicRankType = 'Google_Service_Games_LeaderboardScoreRank';
-  protected $publicRankDataType = '';
+  public $publicRank;
   public $scoreString;
   public $scoreTag;
   public $scoreValue;
-  protected $socialRankType = 'Google_Service_Games_LeaderboardScoreRank';
-  protected $socialRankDataType = '';
+  public $socialRank;
   public $timeSpan;
   public $writeTimestamp;
 

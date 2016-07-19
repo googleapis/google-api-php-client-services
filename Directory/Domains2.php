@@ -18,13 +18,17 @@
 class Google_Service_Directory_Domains2 extends Google_Collection
 {
   protected $collection_key = 'domains';
-  protected $domainsType = 'Google_Service_Directory_Domains';
-  protected $domainsDataType = 'array';
+  public $domains;
   public $etag;
   public $kind;
 
-  public function setDomains($domains)
+  public function setDomains(array $domains)
   {
+    foreach ($domains as $d) {
+      if (!$d instanceof Google_Service_Directory_Domains) {
+        throw new InvalidArgumentException('First argument to setDomains must be an array of Google_Service_Directory_Domains');
+      }
+    }
     $this->domains = $domains;
   }
   public function getDomains()

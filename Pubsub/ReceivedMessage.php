@@ -18,8 +18,7 @@
 class Google_Service_Pubsub_ReceivedMessage extends Google_Model
 {
   public $ackId;
-  protected $messageType = 'Google_Service_Pubsub_PubsubMessage';
-  protected $messageDataType = '';
+  public $message;
 
   public function setAckId($ackId)
   {

@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_LandingPagesListResponse extends Google_Collec
 {
   protected $collection_key = 'landingPages';
   public $kind;
-  protected $landingPagesType = 'Google_Service_Dfareporting_LandingPage';
-  protected $landingPagesDataType = 'array';
+  public $landingPages;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_LandingPagesListResponse extends Google_Collec
   {
     return $this->kind;
   }
-  public function setLandingPages($landingPages)
+  public function setLandingPages(array $landingPages)
   {
+    foreach ($landingPages as $l) {
+      if (!$l instanceof Google_Service_Dfareporting_LandingPage) {
+        throw new InvalidArgumentException('First argument to setLandingPages must be an array of Google_Service_Dfareporting_LandingPage');
+      }
+    }
     $this->landingPages = $landingPages;
   }
   public function getLandingPages()

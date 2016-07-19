@@ -18,11 +18,15 @@
 class Google_Service_Webmasters_UrlCrawlErrorsSamplesListResponse extends Google_Collection
 {
   protected $collection_key = 'urlCrawlErrorSample';
-  protected $urlCrawlErrorSampleType = 'Google_Service_Webmasters_UrlCrawlErrorsSample';
-  protected $urlCrawlErrorSampleDataType = 'array';
+  public $urlCrawlErrorSample;
 
-  public function setUrlCrawlErrorSample($urlCrawlErrorSample)
+  public function setUrlCrawlErrorSample(array $urlCrawlErrorSample)
   {
+    foreach ($urlCrawlErrorSample as $u) {
+      if (!$u instanceof Google_Service_Webmasters_UrlCrawlErrorsSample) {
+        throw new InvalidArgumentException('First argument to setUrlCrawlErrorSample must be an array of Google_Service_Webmasters_UrlCrawlErrorsSample');
+      }
+    }
     $this->urlCrawlErrorSample = $urlCrawlErrorSample;
   }
   public function getUrlCrawlErrorSample()

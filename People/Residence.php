@@ -18,8 +18,7 @@
 class Google_Service_People_Residence extends Google_Model
 {
   public $current;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $value;
 
   public function setCurrent($current)

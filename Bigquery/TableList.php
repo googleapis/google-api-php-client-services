@@ -21,8 +21,7 @@ class Google_Service_Bigquery_TableList extends Google_Collection
   public $etag;
   public $kind;
   public $nextPageToken;
-  protected $tablesType = 'Google_Service_Bigquery_TableListTables';
-  protected $tablesDataType = 'array';
+  public $tables;
   public $totalItems;
 
   public function setEtag($etag)
@@ -49,8 +48,13 @@ class Google_Service_Bigquery_TableList extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setTables($tables)
+  public function setTables(array $tables)
   {
+    foreach ($tables as $t) {
+      if (!$t instanceof Google_Service_Bigquery_TableListTables) {
+        throw new InvalidArgumentException('First argument to setTables must be an array of Google_Service_Bigquery_TableListTables');
+      }
+    }
     $this->tables = $tables;
   }
   public function getTables()

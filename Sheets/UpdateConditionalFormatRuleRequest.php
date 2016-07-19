@@ -19,8 +19,7 @@ class Google_Service_Sheets_UpdateConditionalFormatRuleRequest extends Google_Mo
 {
   public $index;
   public $newIndex;
-  protected $ruleType = 'Google_Service_Sheets_ConditionalFormatRule';
-  protected $ruleDataType = '';
+  public $rule;
   public $sheetId;
 
   public function setIndex($index)

@@ -18,12 +18,16 @@
 class Google_Service_Appengine_ListLocationsResponse extends Google_Collection
 {
   protected $collection_key = 'locations';
-  protected $locationsType = 'Google_Service_Appengine_Location';
-  protected $locationsDataType = 'array';
+  public $locations;
   public $nextPageToken;
 
-  public function setLocations($locations)
+  public function setLocations(array $locations)
   {
+    foreach ($locations as $l) {
+      if (!$l instanceof Google_Service_Appengine_Location) {
+        throw new InvalidArgumentException('First argument to setLocations must be an array of Google_Service_Appengine_Location');
+      }
+    }
     $this->locations = $locations;
   }
   public function getLocations()

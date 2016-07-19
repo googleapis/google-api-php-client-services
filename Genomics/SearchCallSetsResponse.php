@@ -18,12 +18,16 @@
 class Google_Service_Genomics_SearchCallSetsResponse extends Google_Collection
 {
   protected $collection_key = 'callSets';
-  protected $callSetsType = 'Google_Service_Genomics_CallSet';
-  protected $callSetsDataType = 'array';
+  public $callSets;
   public $nextPageToken;
 
-  public function setCallSets($callSets)
+  public function setCallSets(array $callSets)
   {
+    foreach ($callSets as $c) {
+      if (!$c instanceof Google_Service_Genomics_CallSet) {
+        throw new InvalidArgumentException('First argument to setCallSets must be an array of Google_Service_Genomics_CallSet');
+      }
+    }
     $this->callSets = $callSets;
   }
   public function getCallSets()

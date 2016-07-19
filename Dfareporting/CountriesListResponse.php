@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_CountriesListResponse extends Google_Collection
 {
   protected $collection_key = 'countries';
-  protected $countriesType = 'Google_Service_Dfareporting_Country';
-  protected $countriesDataType = 'array';
+  public $countries;
   public $kind;
 
-  public function setCountries($countries)
+  public function setCountries(array $countries)
   {
+    foreach ($countries as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_Country) {
+        throw new InvalidArgumentException('First argument to setCountries must be an array of Google_Service_Dfareporting_Country');
+      }
+    }
     $this->countries = $countries;
   }
   public function getCountries()

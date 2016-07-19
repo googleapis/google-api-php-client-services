@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListAccountsResponse extends Google_Collection
 {
   protected $collection_key = 'accounts';
-  protected $accountsType = 'Google_Service_TagManager_Account';
-  protected $accountsDataType = 'array';
+  public $accounts;
 
-  public function setAccounts($accounts)
+  public function setAccounts(array $accounts)
   {
+    foreach ($accounts as $a) {
+      if (!$a instanceof Google_Service_TagManager_Account) {
+        throw new InvalidArgumentException('First argument to setAccounts must be an array of Google_Service_TagManager_Account');
+      }
+    }
     $this->accounts = $accounts;
   }
   public function getAccounts()

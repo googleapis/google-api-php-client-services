@@ -19,8 +19,7 @@ class Google_Service_Genomics_SearchReadGroupSetsResponse extends Google_Collect
 {
   protected $collection_key = 'readGroupSets';
   public $nextPageToken;
-  protected $readGroupSetsType = 'Google_Service_Genomics_ReadGroupSet';
-  protected $readGroupSetsDataType = 'array';
+  public $readGroupSets;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Genomics_SearchReadGroupSetsResponse extends Google_Collect
   {
     return $this->nextPageToken;
   }
-  public function setReadGroupSets($readGroupSets)
+  public function setReadGroupSets(array $readGroupSets)
   {
+    foreach ($readGroupSets as $r) {
+      if (!$r instanceof Google_Service_Genomics_ReadGroupSet) {
+        throw new InvalidArgumentException('First argument to setReadGroupSets must be an array of Google_Service_Genomics_ReadGroupSet');
+      }
+    }
     $this->readGroupSets = $readGroupSets;
   }
   public function getReadGroupSets()

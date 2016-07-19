@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_TextFormatRun extends Google_Model
 {
-  protected $formatType = 'Google_Service_Sheets_TextFormat';
-  protected $formatDataType = '';
+  public $format;
   public $startIndex;
 
   public function setFormat(Google_Service_Sheets_TextFormat $format)

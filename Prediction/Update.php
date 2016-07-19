@@ -21,7 +21,7 @@ class Google_Service_Prediction_Update extends Google_Collection
   public $csvInstance;
   public $output;
 
-  public function setCsvInstance($csvInstance)
+  public function setCsvInstance(array $csvInstance)
   {
     $this->csvInstance = $csvInstance;
   }

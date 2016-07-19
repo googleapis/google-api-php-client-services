@@ -19,15 +19,14 @@ class Google_Service_AdExchangeSeller_Report extends Google_Collection
 {
   protected $collection_key = 'warnings';
   public $averages;
-  protected $headersType = 'Google_Service_AdExchangeSeller_ReportHeaders';
-  protected $headersDataType = 'array';
+  public $headers;
   public $kind;
   public $rows;
   public $totalMatchedRows;
   public $totals;
   public $warnings;
 
-  public function setAverages($averages)
+  public function setAverages(array $averages)
   {
     $this->averages = $averages;
   }
@@ -35,8 +34,13 @@ class Google_Service_AdExchangeSeller_Report extends Google_Collection
   {
     return $this->averages;
   }
-  public function setHeaders($headers)
+  public function setHeaders(array $headers)
   {
+    foreach ($headers as $h) {
+      if (!$h instanceof Google_Service_AdExchangeSeller_ReportHeaders) {
+        throw new InvalidArgumentException('First argument to setHeaders must be an array of Google_Service_AdExchangeSeller_ReportHeaders');
+      }
+    }
     $this->headers = $headers;
   }
   public function getHeaders()
@@ -51,7 +55,7 @@ class Google_Service_AdExchangeSeller_Report extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
     $this->rows = $rows;
   }
@@ -67,7 +71,7 @@ class Google_Service_AdExchangeSeller_Report extends Google_Collection
   {
     return $this->totalMatchedRows;
   }
-  public function setTotals($totals)
+  public function setTotals(array $totals)
   {
     $this->totals = $totals;
   }
@@ -75,7 +79,7 @@ class Google_Service_AdExchangeSeller_Report extends Google_Collection
   {
     return $this->totals;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
     $this->warnings = $warnings;
   }

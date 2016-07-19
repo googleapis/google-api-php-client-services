@@ -18,12 +18,16 @@
 class Google_Service_Bigquery_TableDataInsertAllResponse extends Google_Collection
 {
   protected $collection_key = 'insertErrors';
-  protected $insertErrorsType = 'Google_Service_Bigquery_TableDataInsertAllResponseInsertErrors';
-  protected $insertErrorsDataType = 'array';
+  public $insertErrors;
   public $kind;
 
-  public function setInsertErrors($insertErrors)
+  public function setInsertErrors(array $insertErrors)
   {
+    foreach ($insertErrors as $i) {
+      if (!$i instanceof Google_Service_Bigquery_TableDataInsertAllResponseInsertErrors) {
+        throw new InvalidArgumentException('First argument to setInsertErrors must be an array of Google_Service_Bigquery_TableDataInsertAllResponseInsertErrors');
+      }
+    }
     $this->insertErrors = $insertErrors;
   }
   public function getInsertErrors()

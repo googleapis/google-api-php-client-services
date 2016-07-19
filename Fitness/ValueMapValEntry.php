@@ -18,8 +18,7 @@
 class Google_Service_Fitness_ValueMapValEntry extends Google_Model
 {
   public $key;
-  protected $valueType = 'Google_Service_Fitness_MapValue';
-  protected $valueDataType = '';
+  public $value;
 
   public function setKey($key)
   {

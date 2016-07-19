@@ -17,15 +17,12 @@
 
 class Google_Service_Analytics_AccountTicket extends Google_Model
 {
-  protected $accountType = 'Google_Service_Analytics_Account';
-  protected $accountDataType = '';
+  public $account;
   public $id;
   public $kind;
-  protected $profileType = 'Google_Service_Analytics_Profile';
-  protected $profileDataType = '';
+  public $profile;
   public $redirectUri;
-  protected $webpropertyType = 'Google_Service_Analytics_Webproperty';
-  protected $webpropertyDataType = '';
+  public $webproperty;
 
   public function setAccount(Google_Service_Analytics_Account $account)
   {

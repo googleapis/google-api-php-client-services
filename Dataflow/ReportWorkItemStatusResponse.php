@@ -18,11 +18,15 @@
 class Google_Service_Dataflow_ReportWorkItemStatusResponse extends Google_Collection
 {
   protected $collection_key = 'workItemServiceStates';
-  protected $workItemServiceStatesType = 'Google_Service_Dataflow_WorkItemServiceState';
-  protected $workItemServiceStatesDataType = 'array';
+  public $workItemServiceStates;
 
-  public function setWorkItemServiceStates($workItemServiceStates)
+  public function setWorkItemServiceStates(array $workItemServiceStates)
   {
+    foreach ($workItemServiceStates as $w) {
+      if (!$w instanceof Google_Service_Dataflow_WorkItemServiceState) {
+        throw new InvalidArgumentException('First argument to setWorkItemServiceStates must be an array of Google_Service_Dataflow_WorkItemServiceState');
+      }
+    }
     $this->workItemServiceStates = $workItemServiceStates;
   }
   public function getWorkItemServiceStates()

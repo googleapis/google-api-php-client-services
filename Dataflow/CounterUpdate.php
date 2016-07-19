@@ -20,24 +20,16 @@ class Google_Service_Dataflow_CounterUpdate extends Google_Model
   public $boolean;
   public $cumulative;
   public $floatingPoint;
-  protected $floatingPointListType = 'Google_Service_Dataflow_FloatingPointList';
-  protected $floatingPointListDataType = '';
-  protected $floatingPointMeanType = 'Google_Service_Dataflow_FloatingPointMean';
-  protected $floatingPointMeanDataType = '';
-  protected $integerType = 'Google_Service_Dataflow_SplitInt64';
-  protected $integerDataType = '';
-  protected $integerListType = 'Google_Service_Dataflow_IntegerList';
-  protected $integerListDataType = '';
-  protected $integerMeanType = 'Google_Service_Dataflow_IntegerMean';
-  protected $integerMeanDataType = '';
+  public $floatingPointList;
+  public $floatingPointMean;
+  public $integer;
+  public $integerList;
+  public $integerMean;
   public $internal;
-  protected $nameAndKindType = 'Google_Service_Dataflow_NameAndKind';
-  protected $nameAndKindDataType = '';
+  public $nameAndKind;
   public $shortId;
-  protected $stringListType = 'Google_Service_Dataflow_StringList';
-  protected $stringListDataType = '';
-  protected $structuredNameAndMetadataType = 'Google_Service_Dataflow_CounterStructuredNameAndMetadata';
-  protected $structuredNameAndMetadataDataType = '';
+  public $stringList;
+  public $structuredNameAndMetadata;
 
   public function setBoolean($boolean)
   {

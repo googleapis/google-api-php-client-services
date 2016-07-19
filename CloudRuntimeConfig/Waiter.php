@@ -19,13 +19,10 @@ class Google_Service_CloudRuntimeConfig_Waiter extends Google_Model
 {
   public $createTime;
   public $done;
-  protected $errorType = 'Google_Service_CloudRuntimeConfig_Status';
-  protected $errorDataType = '';
-  protected $failureType = 'Google_Service_CloudRuntimeConfig_EndCondition';
-  protected $failureDataType = '';
+  public $error;
+  public $failure;
   public $name;
-  protected $successType = 'Google_Service_CloudRuntimeConfig_EndCondition';
-  protected $successDataType = '';
+  public $success;
   public $timeout;
 
   public function setCreateTime($createTime)

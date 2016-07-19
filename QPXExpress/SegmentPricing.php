@@ -19,8 +19,7 @@ class Google_Service_QPXExpress_SegmentPricing extends Google_Collection
 {
   protected $collection_key = 'freeBaggageOption';
   public $fareId;
-  protected $freeBaggageOptionType = 'Google_Service_QPXExpress_FreeBaggageAllowance';
-  protected $freeBaggageOptionDataType = 'array';
+  public $freeBaggageOption;
   public $kind;
   public $segmentId;
 
@@ -32,8 +31,13 @@ class Google_Service_QPXExpress_SegmentPricing extends Google_Collection
   {
     return $this->fareId;
   }
-  public function setFreeBaggageOption($freeBaggageOption)
+  public function setFreeBaggageOption(array $freeBaggageOption)
   {
+    foreach ($freeBaggageOption as $f) {
+      if (!$f instanceof Google_Service_QPXExpress_FreeBaggageAllowance) {
+        throw new InvalidArgumentException('First argument to setFreeBaggageOption must be an array of Google_Service_QPXExpress_FreeBaggageAllowance');
+      }
+    }
     $this->freeBaggageOption = $freeBaggageOption;
   }
   public function getFreeBaggageOption()

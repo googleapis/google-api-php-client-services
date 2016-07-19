@@ -18,11 +18,15 @@
 class Google_Service_Webmasters_SitemapsListResponse extends Google_Collection
 {
   protected $collection_key = 'sitemap';
-  protected $sitemapType = 'Google_Service_Webmasters_WmxSitemap';
-  protected $sitemapDataType = 'array';
+  public $sitemap;
 
-  public function setSitemap($sitemap)
+  public function setSitemap(array $sitemap)
   {
+    foreach ($sitemap as $s) {
+      if (!$s instanceof Google_Service_Webmasters_WmxSitemap) {
+        throw new InvalidArgumentException('First argument to setSitemap must be an array of Google_Service_Webmasters_WmxSitemap');
+      }
+    }
     $this->sitemap = $sitemap;
   }
   public function getSitemap()

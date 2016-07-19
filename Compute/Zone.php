@@ -18,8 +18,7 @@
 class Google_Service_Compute_Zone extends Google_Model
 {
   public $creationTimestamp;
-  protected $deprecatedType = 'Google_Service_Compute_DeprecationStatus';
-  protected $deprecatedDataType = '';
+  public $deprecated;
   public $description;
   public $id;
   public $kind;

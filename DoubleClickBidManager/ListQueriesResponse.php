@@ -19,8 +19,7 @@ class Google_Service_DoubleClickBidManager_ListQueriesResponse extends Google_Co
 {
   protected $collection_key = 'queries';
   public $kind;
-  protected $queriesType = 'Google_Service_DoubleClickBidManager_Query';
-  protected $queriesDataType = 'array';
+  public $queries;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_DoubleClickBidManager_ListQueriesResponse extends Google_Co
   {
     return $this->kind;
   }
-  public function setQueries($queries)
+  public function setQueries(array $queries)
   {
+    foreach ($queries as $q) {
+      if (!$q instanceof Google_Service_DoubleClickBidManager_Query) {
+        throw new InvalidArgumentException('First argument to setQueries must be an array of Google_Service_DoubleClickBidManager_Query');
+      }
+    }
     $this->queries = $queries;
   }
   public function getQueries()

@@ -21,10 +21,8 @@ class Google_Service_Reports_UsageReports extends Google_Collection
   public $etag;
   public $kind;
   public $nextPageToken;
-  protected $usageReportsType = 'Google_Service_Reports_UsageReport';
-  protected $usageReportsDataType = 'array';
-  protected $warningsType = 'Google_Service_Reports_UsageReportsWarnings';
-  protected $warningsDataType = 'array';
+  public $usageReports;
+  public $warnings;
 
   public function setEtag($etag)
   {
@@ -50,16 +48,26 @@ class Google_Service_Reports_UsageReports extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setUsageReports($usageReports)
+  public function setUsageReports(array $usageReports)
   {
+    foreach ($usageReports as $u) {
+      if (!$u instanceof Google_Service_Reports_UsageReport) {
+        throw new InvalidArgumentException('First argument to setUsageReports must be an array of Google_Service_Reports_UsageReport');
+      }
+    }
     $this->usageReports = $usageReports;
   }
   public function getUsageReports()
   {
     return $this->usageReports;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
+    foreach ($warnings as $w) {
+      if (!$w instanceof Google_Service_Reports_UsageReportsWarnings) {
+        throw new InvalidArgumentException('First argument to setWarnings must be an array of Google_Service_Reports_UsageReportsWarnings');
+      }
+    }
     $this->warnings = $warnings;
   }
   public function getWarnings()

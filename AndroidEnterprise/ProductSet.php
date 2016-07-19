@@ -29,7 +29,7 @@ class Google_Service_AndroidEnterprise_ProductSet extends Google_Collection
   {
     return $this->kind;
   }
-  public function setProductId($productId)
+  public function setProductId(array $productId)
   {
     $this->productId = $productId;
   }

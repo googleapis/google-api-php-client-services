@@ -26,6 +26,19 @@
 class Google_Service_ConsumerSurveys_Resource_Surveys extends Google_Service_Resource
 {
   /**
+   * Removes a survey from view in all user GET requests. (surveys.delete)
+   *
+   * @param string $surveyUrlId External URL ID for the survey.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ConsumerSurveys_SurveysDeleteResponse
+   */
+  public function delete($surveyUrlId, $optParams = array())
+  {
+    $params = array('surveyUrlId' => $surveyUrlId);
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', array($params), "Google_Service_ConsumerSurveys_SurveysDeleteResponse");
+  }
+  /**
    * Retrieves information about the specified survey. (surveys.get)
    *
    * @param string $surveyUrlId External URL ID for the survey.

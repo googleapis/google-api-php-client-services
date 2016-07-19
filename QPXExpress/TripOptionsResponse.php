@@ -18,12 +18,10 @@
 class Google_Service_QPXExpress_TripOptionsResponse extends Google_Collection
 {
   protected $collection_key = 'tripOption';
-  protected $dataType = 'Google_Service_QPXExpress_Data';
-  protected $dataDataType = '';
+  public $data;
   public $kind;
   public $requestId;
-  protected $tripOptionType = 'Google_Service_QPXExpress_TripOption';
-  protected $tripOptionDataType = 'array';
+  public $tripOption;
 
   public function setData(Google_Service_QPXExpress_Data $data)
   {
@@ -49,8 +47,13 @@ class Google_Service_QPXExpress_TripOptionsResponse extends Google_Collection
   {
     return $this->requestId;
   }
-  public function setTripOption($tripOption)
+  public function setTripOption(array $tripOption)
   {
+    foreach ($tripOption as $t) {
+      if (!$t instanceof Google_Service_QPXExpress_TripOption) {
+        throw new InvalidArgumentException('First argument to setTripOption must be an array of Google_Service_QPXExpress_TripOption');
+      }
+    }
     $this->tripOption = $tripOption;
   }
   public function getTripOption()

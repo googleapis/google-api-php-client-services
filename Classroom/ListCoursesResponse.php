@@ -18,12 +18,16 @@
 class Google_Service_Classroom_ListCoursesResponse extends Google_Collection
 {
   protected $collection_key = 'courses';
-  protected $coursesType = 'Google_Service_Classroom_Course';
-  protected $coursesDataType = 'array';
+  public $courses;
   public $nextPageToken;
 
-  public function setCourses($courses)
+  public function setCourses(array $courses)
   {
+    foreach ($courses as $c) {
+      if (!$c instanceof Google_Service_Classroom_Course) {
+        throw new InvalidArgumentException('First argument to setCourses must be an array of Google_Service_Classroom_Course');
+      }
+    }
     $this->courses = $courses;
   }
   public function getCourses()

@@ -17,10 +17,8 @@
 
 class Google_Service_Dataflow_SourceOperationRequest extends Google_Model
 {
-  protected $getMetadataType = 'Google_Service_Dataflow_SourceGetMetadataRequest';
-  protected $getMetadataDataType = '';
-  protected $splitType = 'Google_Service_Dataflow_SourceSplitRequest';
-  protected $splitDataType = '';
+  public $getMetadata;
+  public $split;
 
   public function setGetMetadata(Google_Service_Dataflow_SourceGetMetadataRequest $getMetadata)
   {

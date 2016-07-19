@@ -17,20 +17,13 @@
 
 class Google_Service_Sheets_UpdateBordersRequest extends Google_Model
 {
-  protected $bottomType = 'Google_Service_Sheets_Border';
-  protected $bottomDataType = '';
-  protected $innerHorizontalType = 'Google_Service_Sheets_Border';
-  protected $innerHorizontalDataType = '';
-  protected $innerVerticalType = 'Google_Service_Sheets_Border';
-  protected $innerVerticalDataType = '';
-  protected $leftType = 'Google_Service_Sheets_Border';
-  protected $leftDataType = '';
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
-  protected $rightType = 'Google_Service_Sheets_Border';
-  protected $rightDataType = '';
-  protected $topType = 'Google_Service_Sheets_Border';
-  protected $topDataType = '';
+  public $bottom;
+  public $innerHorizontal;
+  public $innerVertical;
+  public $left;
+  public $range;
+  public $right;
+  public $top;
 
   public function setBottom(Google_Service_Sheets_Border $bottom)
   {

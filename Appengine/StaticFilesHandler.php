@@ -41,7 +41,7 @@ class Google_Service_Appengine_StaticFilesHandler extends Google_Model
   {
     return $this->expiration;
   }
-  public function setHttpHeaders($httpHeaders)
+  public function setHttpHeaders(array $httpHeaders)
   {
     $this->httpHeaders = $httpHeaders;
   }

@@ -21,8 +21,7 @@ class Google_Service_Calendar_CalendarListEntry extends Google_Collection
   public $accessRole;
   public $backgroundColor;
   public $colorId;
-  protected $defaultRemindersType = 'Google_Service_Calendar_EventReminder';
-  protected $defaultRemindersDataType = 'array';
+  public $defaultReminders;
   public $deleted;
   public $description;
   public $etag;
@@ -31,8 +30,7 @@ class Google_Service_Calendar_CalendarListEntry extends Google_Collection
   public $id;
   public $kind;
   public $location;
-  protected $notificationSettingsType = 'Google_Service_Calendar_CalendarListEntryNotificationSettings';
-  protected $notificationSettingsDataType = '';
+  public $notificationSettings;
   public $primary;
   public $selected;
   public $summary;
@@ -63,8 +61,13 @@ class Google_Service_Calendar_CalendarListEntry extends Google_Collection
   {
     return $this->colorId;
   }
-  public function setDefaultReminders($defaultReminders)
+  public function setDefaultReminders(array $defaultReminders)
   {
+    foreach ($defaultReminders as $d) {
+      if (!$d instanceof Google_Service_Calendar_EventReminder) {
+        throw new InvalidArgumentException('First argument to setDefaultReminders must be an array of Google_Service_Calendar_EventReminder');
+      }
+    }
     $this->defaultReminders = $defaultReminders;
   }
   public function getDefaultReminders()

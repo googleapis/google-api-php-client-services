@@ -18,12 +18,16 @@
 class Google_Service_Sheets_BatchUpdateValuesRequest extends Google_Collection
 {
   protected $collection_key = 'data';
-  protected $dataType = 'Google_Service_Sheets_ValueRange';
-  protected $dataDataType = 'array';
+  public $data;
   public $valueInputOption;
 
-  public function setData($data)
+  public function setData(array $data)
   {
+    foreach ($data as $d) {
+      if (!$d instanceof Google_Service_Sheets_ValueRange) {
+        throw new InvalidArgumentException('First argument to setData must be an array of Google_Service_Sheets_ValueRange');
+      }
+    }
     $this->data = $data;
   }
   public function getData()

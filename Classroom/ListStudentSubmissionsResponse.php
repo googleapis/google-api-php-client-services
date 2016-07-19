@@ -19,8 +19,7 @@ class Google_Service_Classroom_ListStudentSubmissionsResponse extends Google_Col
 {
   protected $collection_key = 'studentSubmissions';
   public $nextPageToken;
-  protected $studentSubmissionsType = 'Google_Service_Classroom_StudentSubmission';
-  protected $studentSubmissionsDataType = 'array';
+  public $studentSubmissions;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Classroom_ListStudentSubmissionsResponse extends Google_Col
   {
     return $this->nextPageToken;
   }
-  public function setStudentSubmissions($studentSubmissions)
+  public function setStudentSubmissions(array $studentSubmissions)
   {
+    foreach ($studentSubmissions as $s) {
+      if (!$s instanceof Google_Service_Classroom_StudentSubmission) {
+        throw new InvalidArgumentException('First argument to setStudentSubmissions must be an array of Google_Service_Classroom_StudentSubmission');
+      }
+    }
     $this->studentSubmissions = $studentSubmissions;
   }
   public function getStudentSubmissions()

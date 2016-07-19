@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_ListPopulationRule extends Google_Collection
   protected $collection_key = 'listPopulationClauses';
   public $floodlightActivityId;
   public $floodlightActivityName;
-  protected $listPopulationClausesType = 'Google_Service_Dfareporting_ListPopulationClause';
-  protected $listPopulationClausesDataType = 'array';
+  public $listPopulationClauses;
 
   public function setFloodlightActivityId($floodlightActivityId)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_ListPopulationRule extends Google_Collection
   {
     return $this->floodlightActivityName;
   }
-  public function setListPopulationClauses($listPopulationClauses)
+  public function setListPopulationClauses(array $listPopulationClauses)
   {
+    foreach ($listPopulationClauses as $l) {
+      if (!$l instanceof Google_Service_Dfareporting_ListPopulationClause) {
+        throw new InvalidArgumentException('First argument to setListPopulationClauses must be an array of Google_Service_Dfareporting_ListPopulationClause');
+      }
+    }
     $this->listPopulationClauses = $listPopulationClauses;
   }
   public function getListPopulationClauses()

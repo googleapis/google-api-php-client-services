@@ -18,27 +18,20 @@
 class Google_Service_Analytics_Filter extends Google_Model
 {
   public $accountId;
-  protected $advancedDetailsType = 'Google_Service_Analytics_FilterAdvancedDetails';
-  protected $advancedDetailsDataType = '';
+  public $advancedDetails;
   public $created;
-  protected $excludeDetailsType = 'Google_Service_Analytics_FilterExpression';
-  protected $excludeDetailsDataType = '';
+  public $excludeDetails;
   public $id;
-  protected $includeDetailsType = 'Google_Service_Analytics_FilterExpression';
-  protected $includeDetailsDataType = '';
+  public $includeDetails;
   public $kind;
-  protected $lowercaseDetailsType = 'Google_Service_Analytics_FilterLowercaseDetails';
-  protected $lowercaseDetailsDataType = '';
+  public $lowercaseDetails;
   public $name;
-  protected $parentLinkType = 'Google_Service_Analytics_FilterParentLink';
-  protected $parentLinkDataType = '';
-  protected $searchAndReplaceDetailsType = 'Google_Service_Analytics_FilterSearchAndReplaceDetails';
-  protected $searchAndReplaceDetailsDataType = '';
+  public $parentLink;
+  public $searchAndReplaceDetails;
   public $selfLink;
   public $type;
   public $updated;
-  protected $uppercaseDetailsType = 'Google_Service_Analytics_FilterUppercaseDetails';
-  protected $uppercaseDetailsDataType = '';
+  public $uppercaseDetails;
 
   public function setAccountId($accountId)
   {

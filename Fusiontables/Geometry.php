@@ -22,7 +22,7 @@ class Google_Service_Fusiontables_Geometry extends Google_Collection
   public $geometry;
   public $type;
 
-  public function setGeometries($geometries)
+  public function setGeometries(array $geometries)
   {
     $this->geometries = $geometries;
   }

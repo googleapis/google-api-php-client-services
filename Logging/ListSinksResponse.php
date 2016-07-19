@@ -19,8 +19,7 @@ class Google_Service_Logging_ListSinksResponse extends Google_Collection
 {
   protected $collection_key = 'sinks';
   public $nextPageToken;
-  protected $sinksType = 'Google_Service_Logging_LogSink';
-  protected $sinksDataType = 'array';
+  public $sinks;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Logging_ListSinksResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setSinks($sinks)
+  public function setSinks(array $sinks)
   {
+    foreach ($sinks as $s) {
+      if (!$s instanceof Google_Service_Logging_LogSink) {
+        throw new InvalidArgumentException('First argument to setSinks must be an array of Google_Service_Logging_LogSink');
+      }
+    }
     $this->sinks = $sinks;
   }
   public function getSinks()

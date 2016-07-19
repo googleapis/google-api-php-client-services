@@ -30,8 +30,7 @@ class Google_Service_Logging_RequestLog extends Google_Collection
   public $instanceIndex;
   public $ip;
   public $latency;
-  protected $lineType = 'Google_Service_Logging_LogLine';
-  protected $lineDataType = 'array';
+  public $line;
   public $megaCycles;
   public $method;
   public $moduleId;
@@ -41,8 +40,7 @@ class Google_Service_Logging_RequestLog extends Google_Collection
   public $requestId;
   public $resource;
   public $responseSize;
-  protected $sourceReferenceType = 'Google_Service_Logging_SourceReference';
-  protected $sourceReferenceDataType = 'array';
+  public $sourceReference;
   public $startTime;
   public $status;
   public $taskName;
@@ -149,8 +147,13 @@ class Google_Service_Logging_RequestLog extends Google_Collection
   {
     return $this->latency;
   }
-  public function setLine($line)
+  public function setLine(array $line)
   {
+    foreach ($line as $l) {
+      if (!$l instanceof Google_Service_Logging_LogLine) {
+        throw new InvalidArgumentException('First argument to setLine must be an array of Google_Service_Logging_LogLine');
+      }
+    }
     $this->line = $line;
   }
   public function getLine()
@@ -229,8 +232,13 @@ class Google_Service_Logging_RequestLog extends Google_Collection
   {
     return $this->responseSize;
   }
-  public function setSourceReference($sourceReference)
+  public function setSourceReference(array $sourceReference)
   {
+    foreach ($sourceReference as $s) {
+      if (!$s instanceof Google_Service_Logging_SourceReference) {
+        throw new InvalidArgumentException('First argument to setSourceReference must be an array of Google_Service_Logging_SourceReference');
+      }
+    }
     $this->sourceReference = $sourceReference;
   }
   public function getSourceReference()

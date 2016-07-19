@@ -19,11 +19,10 @@ class Google_Service_Dataflow_SideInputInfo extends Google_Collection
 {
   protected $collection_key = 'sources';
   public $kind;
-  protected $sourcesType = 'Google_Service_Dataflow_Source';
-  protected $sourcesDataType = 'array';
+  public $sources;
   public $tag;
 
-  public function setKind($kind)
+  public function setKind(array $kind)
   {
     $this->kind = $kind;
   }
@@ -31,8 +30,13 @@ class Google_Service_Dataflow_SideInputInfo extends Google_Collection
   {
     return $this->kind;
   }
-  public function setSources($sources)
+  public function setSources(array $sources)
   {
+    foreach ($sources as $s) {
+      if (!$s instanceof Google_Service_Dataflow_Source) {
+        throw new InvalidArgumentException('First argument to setSources must be an array of Google_Service_Dataflow_Source');
+      }
+    }
     $this->sources = $sources;
   }
   public function getSources()

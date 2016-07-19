@@ -17,11 +17,9 @@
 
 class Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry extends Google_Model
 {
-  protected $accountStatusType = 'Google_Service_ShoppingContent_AccountStatus';
-  protected $accountStatusDataType = '';
+  public $accountStatus;
   public $batchId;
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
-  protected $errorsDataType = '';
+  public $errors;
 
   public function setAccountStatus(Google_Service_ShoppingContent_AccountStatus $accountStatus)
   {

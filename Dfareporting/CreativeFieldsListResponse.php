@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_CreativeFieldsListResponse extends Google_Collection
 {
   protected $collection_key = 'creativeFields';
-  protected $creativeFieldsType = 'Google_Service_Dfareporting_CreativeField';
-  protected $creativeFieldsDataType = 'array';
+  public $creativeFields;
   public $kind;
   public $nextPageToken;
 
-  public function setCreativeFields($creativeFields)
+  public function setCreativeFields(array $creativeFields)
   {
+    foreach ($creativeFields as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeField) {
+        throw new InvalidArgumentException('First argument to setCreativeFields must be an array of Google_Service_Dfareporting_CreativeField');
+      }
+    }
     $this->creativeFields = $creativeFields;
   }
   public function getCreativeFields()

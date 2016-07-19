@@ -21,8 +21,7 @@ class Google_Service_Dfareporting_ReportDelivery extends Google_Collection
   public $emailOwner;
   public $emailOwnerDeliveryType;
   public $message;
-  protected $recipientsType = 'Google_Service_Dfareporting_Recipient';
-  protected $recipientsDataType = 'array';
+  public $recipients;
 
   public function setEmailOwner($emailOwner)
   {
@@ -48,8 +47,13 @@ class Google_Service_Dfareporting_ReportDelivery extends Google_Collection
   {
     return $this->message;
   }
-  public function setRecipients($recipients)
+  public function setRecipients(array $recipients)
   {
+    foreach ($recipients as $r) {
+      if (!$r instanceof Google_Service_Dfareporting_Recipient) {
+        throw new InvalidArgumentException('First argument to setRecipients must be an array of Google_Service_Dfareporting_Recipient');
+      }
+    }
     $this->recipients = $recipients;
   }
   public function getRecipients()

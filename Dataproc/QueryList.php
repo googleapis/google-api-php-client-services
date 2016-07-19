@@ -20,7 +20,7 @@ class Google_Service_Dataproc_QueryList extends Google_Collection
   protected $collection_key = 'queries';
   public $queries;
 
-  public function setQueries($queries)
+  public function setQueries(array $queries)
   {
     $this->queries = $queries;
   }

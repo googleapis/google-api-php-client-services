@@ -18,13 +18,11 @@
 class Google_Service_GamesConfiguration_AchievementConfiguration extends Google_Model
 {
   public $achievementType;
-  protected $draftType = 'Google_Service_GamesConfiguration_AchievementConfigurationDetail';
-  protected $draftDataType = '';
+  public $draft;
   public $id;
   public $initialState;
   public $kind;
-  protected $publishedType = 'Google_Service_GamesConfiguration_AchievementConfigurationDetail';
-  protected $publishedDataType = '';
+  public $published;
   public $stepsToUnlock;
   public $token;
 

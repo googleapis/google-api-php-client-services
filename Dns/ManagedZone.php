@@ -83,7 +83,7 @@ class Google_Service_Dns_ManagedZone extends Google_Collection
   {
     return $this->nameServerSet;
   }
-  public function setNameServers($nameServers)
+  public function setNameServers(array $nameServers)
   {
     $this->nameServers = $nameServers;
   }

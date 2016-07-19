@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListVariablesResponse extends Google_Collection
 {
   protected $collection_key = 'variables';
-  protected $variablesType = 'Google_Service_TagManager_Variable';
-  protected $variablesDataType = 'array';
+  public $variables;
 
-  public function setVariables($variables)
+  public function setVariables(array $variables)
   {
+    foreach ($variables as $v) {
+      if (!$v instanceof Google_Service_TagManager_Variable) {
+        throw new InvalidArgumentException('First argument to setVariables must be an array of Google_Service_TagManager_Variable');
+      }
+    }
     $this->variables = $variables;
   }
   public function getVariables()

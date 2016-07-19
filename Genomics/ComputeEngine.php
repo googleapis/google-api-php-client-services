@@ -23,7 +23,7 @@ class Google_Service_Genomics_ComputeEngine extends Google_Collection
   public $machineType;
   public $zone;
 
-  public function setDiskNames($diskNames)
+  public function setDiskNames(array $diskNames)
   {
     $this->diskNames = $diskNames;
   }

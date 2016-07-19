@@ -32,7 +32,7 @@ class Google_Service_Compute_FirewallAllowed extends Google_Collection
   {
     return $this->iPProtocol;
   }
-  public function setPorts($ports)
+  public function setPorts(array $ports)
   {
     $this->ports = $ports;
   }

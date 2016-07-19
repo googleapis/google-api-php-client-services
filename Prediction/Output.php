@@ -21,8 +21,7 @@ class Google_Service_Prediction_Output extends Google_Collection
   public $id;
   public $kind;
   public $outputLabel;
-  protected $outputMultiType = 'Google_Service_Prediction_OutputOutputMulti';
-  protected $outputMultiDataType = 'array';
+  public $outputMulti;
   public $outputValue;
   public $selfLink;
 
@@ -50,8 +49,13 @@ class Google_Service_Prediction_Output extends Google_Collection
   {
     return $this->outputLabel;
   }
-  public function setOutputMulti($outputMulti)
+  public function setOutputMulti(array $outputMulti)
   {
+    foreach ($outputMulti as $o) {
+      if (!$o instanceof Google_Service_Prediction_OutputOutputMulti) {
+        throw new InvalidArgumentException('First argument to setOutputMulti must be an array of Google_Service_Prediction_OutputOutputMulti');
+      }
+    }
     $this->outputMulti = $outputMulti;
   }
   public function getOutputMulti()

@@ -23,8 +23,7 @@ class Google_Service_People_Address extends Google_Model
   public $extendedAddress;
   public $formattedType;
   public $formattedValue;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $poBox;
   public $postalCode;
   public $region;

@@ -32,7 +32,7 @@ class Google_Service_GamesManagement_ScoresResetMultipleForAllRequest extends Go
   {
     return $this->kind;
   }
-  public function setLeaderboardIds($leaderboardIds)
+  public function setLeaderboardIds(array $leaderboardIds)
   {
     $this->leaderboardIds = $leaderboardIds;
   }

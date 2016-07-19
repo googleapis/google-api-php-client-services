@@ -18,12 +18,16 @@
 class Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting extends Google_Collection
 {
   protected $collection_key = 'dayParts';
-  protected $dayPartsType = 'Google_Service_AdExchangeBuyer_TargetingValueDayPartTargetingDayPart';
-  protected $dayPartsDataType = 'array';
+  public $dayParts;
   public $timeZoneType;
 
-  public function setDayParts($dayParts)
+  public function setDayParts(array $dayParts)
   {
+    foreach ($dayParts as $d) {
+      if (!$d instanceof Google_Service_AdExchangeBuyer_TargetingValueDayPartTargetingDayPart) {
+        throw new InvalidArgumentException('First argument to setDayParts must be an array of Google_Service_AdExchangeBuyer_TargetingValueDayPartTargetingDayPart');
+      }
+    }
     $this->dayParts = $dayParts;
   }
   public function getDayParts()

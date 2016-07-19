@@ -20,7 +20,7 @@ class Google_Service_Bigquery_JobStatistics4 extends Google_Collection
   protected $collection_key = 'destinationUriFileCounts';
   public $destinationUriFileCounts;
 
-  public function setDestinationUriFileCounts($destinationUriFileCounts)
+  public function setDestinationUriFileCounts(array $destinationUriFileCounts)
   {
     $this->destinationUriFileCounts = $destinationUriFileCounts;
   }

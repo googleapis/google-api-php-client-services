@@ -19,8 +19,7 @@ class Google_Service_Games_EventBatchRecordFailure extends Google_Model
 {
   public $failureCause;
   public $kind;
-  protected $rangeType = 'Google_Service_Games_EventPeriodRange';
-  protected $rangeDataType = '';
+  public $range;
 
   public function setFailureCause($failureCause)
   {

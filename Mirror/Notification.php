@@ -21,8 +21,7 @@ class Google_Service_Mirror_Notification extends Google_Collection
   public $collection;
   public $itemId;
   public $operation;
-  protected $userActionsType = 'Google_Service_Mirror_UserAction';
-  protected $userActionsDataType = 'array';
+  public $userActions;
   public $userToken;
   public $verifyToken;
 
@@ -50,8 +49,13 @@ class Google_Service_Mirror_Notification extends Google_Collection
   {
     return $this->operation;
   }
-  public function setUserActions($userActions)
+  public function setUserActions(array $userActions)
   {
+    foreach ($userActions as $u) {
+      if (!$u instanceof Google_Service_Mirror_UserAction) {
+        throw new InvalidArgumentException('First argument to setUserActions must be an array of Google_Service_Mirror_UserAction');
+      }
+    }
     $this->userActions = $userActions;
   }
   public function getUserActions()

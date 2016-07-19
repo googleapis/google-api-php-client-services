@@ -20,8 +20,7 @@ class Google_Service_Compute_Disk extends Google_Collection
   protected $collection_key = 'users';
   public $creationTimestamp;
   public $description;
-  protected $diskEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $diskEncryptionKeyDataType = '';
+  public $diskEncryptionKey;
   public $id;
   public $kind;
   public $lastAttachTimestamp;
@@ -32,12 +31,10 @@ class Google_Service_Compute_Disk extends Google_Collection
   public $selfLink;
   public $sizeGb;
   public $sourceImage;
-  protected $sourceImageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $sourceImageEncryptionKeyDataType = '';
+  public $sourceImageEncryptionKey;
   public $sourceImageId;
   public $sourceSnapshot;
-  protected $sourceSnapshotEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $sourceSnapshotEncryptionKeyDataType = '';
+  public $sourceSnapshotEncryptionKey;
   public $sourceSnapshotId;
   public $status;
   public $type;
@@ -100,7 +97,7 @@ class Google_Service_Compute_Disk extends Google_Collection
   {
     return $this->lastDetachTimestamp;
   }
-  public function setLicenses($licenses)
+  public function setLicenses(array $licenses)
   {
     $this->licenses = $licenses;
   }
@@ -204,7 +201,7 @@ class Google_Service_Compute_Disk extends Google_Collection
   {
     return $this->type;
   }
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
     $this->users = $users;
   }

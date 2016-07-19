@@ -18,13 +18,16 @@
 class Google_Service_Compute_TargetInstancesScopedList extends Google_Collection
 {
   protected $collection_key = 'targetInstances';
-  protected $targetInstancesType = 'Google_Service_Compute_TargetInstance';
-  protected $targetInstancesDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_TargetInstancesScopedListWarning';
-  protected $warningDataType = '';
+  public $targetInstances;
+  public $warning;
 
-  public function setTargetInstances($targetInstances)
+  public function setTargetInstances(array $targetInstances)
   {
+    foreach ($targetInstances as $t) {
+      if (!$t instanceof Google_Service_Compute_TargetInstance) {
+        throw new InvalidArgumentException('First argument to setTargetInstances must be an array of Google_Service_Compute_TargetInstance');
+      }
+    }
     $this->targetInstances = $targetInstances;
   }
   public function getTargetInstances()

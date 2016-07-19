@@ -19,8 +19,7 @@ class Google_Service_Games_QuestMilestone extends Google_Collection
 {
   protected $collection_key = 'criteria';
   public $completionRewardData;
-  protected $criteriaType = 'Google_Service_Games_QuestCriterion';
-  protected $criteriaDataType = 'array';
+  public $criteria;
   public $id;
   public $kind;
   public $state;
@@ -33,8 +32,13 @@ class Google_Service_Games_QuestMilestone extends Google_Collection
   {
     return $this->completionRewardData;
   }
-  public function setCriteria($criteria)
+  public function setCriteria(array $criteria)
   {
+    foreach ($criteria as $c) {
+      if (!$c instanceof Google_Service_Games_QuestCriterion) {
+        throw new InvalidArgumentException('First argument to setCriteria must be an array of Google_Service_Games_QuestCriterion');
+      }
+    }
     $this->criteria = $criteria;
   }
   public function getCriteria()

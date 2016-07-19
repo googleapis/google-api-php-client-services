@@ -20,8 +20,7 @@ class Google_Service_Drive_Revision extends Google_Model
   public $id;
   public $keepForever;
   public $kind;
-  protected $lastModifyingUserType = 'Google_Service_Drive_User';
-  protected $lastModifyingUserDataType = '';
+  public $lastModifyingUser;
   public $md5Checksum;
   public $mimeType;
   public $modifiedTime;

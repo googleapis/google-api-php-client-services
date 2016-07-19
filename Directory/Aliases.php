@@ -22,7 +22,7 @@ class Google_Service_Directory_Aliases extends Google_Collection
   public $etag;
   public $kind;
 
-  public function setAliases($aliases)
+  public function setAliases(array $aliases)
   {
     $this->aliases = $aliases;
   }

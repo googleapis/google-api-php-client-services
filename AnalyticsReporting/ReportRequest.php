@@ -18,31 +18,22 @@
 class Google_Service_AnalyticsReporting_ReportRequest extends Google_Collection
 {
   protected $collection_key = 'segments';
-  protected $cohortGroupType = 'Google_Service_AnalyticsReporting_CohortGroup';
-  protected $cohortGroupDataType = '';
-  protected $dateRangesType = 'Google_Service_AnalyticsReporting_DateRange';
-  protected $dateRangesDataType = 'array';
-  protected $dimensionFilterClausesType = 'Google_Service_AnalyticsReporting_DimensionFilterClause';
-  protected $dimensionFilterClausesDataType = 'array';
-  protected $dimensionsType = 'Google_Service_AnalyticsReporting_Dimension';
-  protected $dimensionsDataType = 'array';
+  public $cohortGroup;
+  public $dateRanges;
+  public $dimensionFilterClauses;
+  public $dimensions;
   public $filtersExpression;
   public $hideTotals;
   public $hideValueRanges;
   public $includeEmptyRows;
-  protected $metricFilterClausesType = 'Google_Service_AnalyticsReporting_MetricFilterClause';
-  protected $metricFilterClausesDataType = 'array';
-  protected $metricsType = 'Google_Service_AnalyticsReporting_Metric';
-  protected $metricsDataType = 'array';
-  protected $orderBysType = 'Google_Service_AnalyticsReporting_OrderBy';
-  protected $orderBysDataType = 'array';
+  public $metricFilterClauses;
+  public $metrics;
+  public $orderBys;
   public $pageSize;
   public $pageToken;
-  protected $pivotsType = 'Google_Service_AnalyticsReporting_Pivot';
-  protected $pivotsDataType = 'array';
+  public $pivots;
   public $samplingLevel;
-  protected $segmentsType = 'Google_Service_AnalyticsReporting_Segment';
-  protected $segmentsDataType = 'array';
+  public $segments;
   public $viewId;
 
   public function setCohortGroup(Google_Service_AnalyticsReporting_CohortGroup $cohortGroup)
@@ -53,24 +44,39 @@ class Google_Service_AnalyticsReporting_ReportRequest extends Google_Collection
   {
     return $this->cohortGroup;
   }
-  public function setDateRanges($dateRanges)
+  public function setDateRanges(array $dateRanges)
   {
+    foreach ($dateRanges as $d) {
+      if (!$d instanceof Google_Service_AnalyticsReporting_DateRange) {
+        throw new InvalidArgumentException('First argument to setDateRanges must be an array of Google_Service_AnalyticsReporting_DateRange');
+      }
+    }
     $this->dateRanges = $dateRanges;
   }
   public function getDateRanges()
   {
     return $this->dateRanges;
   }
-  public function setDimensionFilterClauses($dimensionFilterClauses)
+  public function setDimensionFilterClauses(array $dimensionFilterClauses)
   {
+    foreach ($dimensionFilterClauses as $d) {
+      if (!$d instanceof Google_Service_AnalyticsReporting_DimensionFilterClause) {
+        throw new InvalidArgumentException('First argument to setDimensionFilterClauses must be an array of Google_Service_AnalyticsReporting_DimensionFilterClause');
+      }
+    }
     $this->dimensionFilterClauses = $dimensionFilterClauses;
   }
   public function getDimensionFilterClauses()
   {
     return $this->dimensionFilterClauses;
   }
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
+    foreach ($dimensions as $d) {
+      if (!$d instanceof Google_Service_AnalyticsReporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setDimensions must be an array of Google_Service_AnalyticsReporting_Dimension');
+      }
+    }
     $this->dimensions = $dimensions;
   }
   public function getDimensions()
@@ -109,24 +115,39 @@ class Google_Service_AnalyticsReporting_ReportRequest extends Google_Collection
   {
     return $this->includeEmptyRows;
   }
-  public function setMetricFilterClauses($metricFilterClauses)
+  public function setMetricFilterClauses(array $metricFilterClauses)
   {
+    foreach ($metricFilterClauses as $m) {
+      if (!$m instanceof Google_Service_AnalyticsReporting_MetricFilterClause) {
+        throw new InvalidArgumentException('First argument to setMetricFilterClauses must be an array of Google_Service_AnalyticsReporting_MetricFilterClause');
+      }
+    }
     $this->metricFilterClauses = $metricFilterClauses;
   }
   public function getMetricFilterClauses()
   {
     return $this->metricFilterClauses;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_AnalyticsReporting_Metric) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_AnalyticsReporting_Metric');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()
   {
     return $this->metrics;
   }
-  public function setOrderBys($orderBys)
+  public function setOrderBys(array $orderBys)
   {
+    foreach ($orderBys as $o) {
+      if (!$o instanceof Google_Service_AnalyticsReporting_OrderBy) {
+        throw new InvalidArgumentException('First argument to setOrderBys must be an array of Google_Service_AnalyticsReporting_OrderBy');
+      }
+    }
     $this->orderBys = $orderBys;
   }
   public function getOrderBys()
@@ -149,8 +170,13 @@ class Google_Service_AnalyticsReporting_ReportRequest extends Google_Collection
   {
     return $this->pageToken;
   }
-  public function setPivots($pivots)
+  public function setPivots(array $pivots)
   {
+    foreach ($pivots as $p) {
+      if (!$p instanceof Google_Service_AnalyticsReporting_Pivot) {
+        throw new InvalidArgumentException('First argument to setPivots must be an array of Google_Service_AnalyticsReporting_Pivot');
+      }
+    }
     $this->pivots = $pivots;
   }
   public function getPivots()
@@ -165,8 +191,13 @@ class Google_Service_AnalyticsReporting_ReportRequest extends Google_Collection
   {
     return $this->samplingLevel;
   }
-  public function setSegments($segments)
+  public function setSegments(array $segments)
   {
+    foreach ($segments as $s) {
+      if (!$s instanceof Google_Service_AnalyticsReporting_Segment) {
+        throw new InvalidArgumentException('First argument to setSegments must be an array of Google_Service_AnalyticsReporting_Segment');
+      }
+    }
     $this->segments = $segments;
   }
   public function getSegments()

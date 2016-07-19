@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_Conversion extends Google_Collection
 {
   protected $collection_key = 'customVariables';
   public $childDirectedTreatment;
-  protected $customVariablesType = 'Google_Service_Dfareporting_CustomFloodlightVariable';
-  protected $customVariablesDataType = 'array';
+  public $customVariables;
   public $encryptedUserId;
   public $floodlightActivityId;
   public $floodlightConfigurationId;
@@ -40,8 +39,13 @@ class Google_Service_Dfareporting_Conversion extends Google_Collection
   {
     return $this->childDirectedTreatment;
   }
-  public function setCustomVariables($customVariables)
+  public function setCustomVariables(array $customVariables)
   {
+    foreach ($customVariables as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CustomFloodlightVariable) {
+        throw new InvalidArgumentException('First argument to setCustomVariables must be an array of Google_Service_Dfareporting_CustomFloodlightVariable');
+      }
+    }
     $this->customVariables = $customVariables;
   }
   public function getCustomVariables()

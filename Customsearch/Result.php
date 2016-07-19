@@ -25,11 +25,9 @@ class Google_Service_Customsearch_Result extends Google_Collection
   public $htmlFormattedUrl;
   public $htmlSnippet;
   public $htmlTitle;
-  protected $imageType = 'Google_Service_Customsearch_ResultImage';
-  protected $imageDataType = '';
+  public $image;
   public $kind;
-  protected $labelsType = 'Google_Service_Customsearch_ResultLabels';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $link;
   public $mime;
   public $pagemap;
@@ -108,8 +106,13 @@ class Google_Service_Customsearch_Result extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_Customsearch_ResultLabels) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_Customsearch_ResultLabels');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()
@@ -132,7 +135,7 @@ class Google_Service_Customsearch_Result extends Google_Collection
   {
     return $this->mime;
   }
-  public function setPagemap($pagemap)
+  public function setPagemap(array $pagemap)
   {
     $this->pagemap = $pagemap;
   }

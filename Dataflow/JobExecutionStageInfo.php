@@ -20,7 +20,7 @@ class Google_Service_Dataflow_JobExecutionStageInfo extends Google_Collection
   protected $collection_key = 'stepName';
   public $stepName;
 
-  public function setStepName($stepName)
+  public function setStepName(array $stepName)
   {
     $this->stepName = $stepName;
   }

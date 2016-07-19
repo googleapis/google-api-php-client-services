@@ -21,7 +21,7 @@ class Google_Service_Gmail_ModifyThreadRequest extends Google_Collection
   public $addLabelIds;
   public $removeLabelIds;
 
-  public function setAddLabelIds($addLabelIds)
+  public function setAddLabelIds(array $addLabelIds)
   {
     $this->addLabelIds = $addLabelIds;
   }
@@ -29,7 +29,7 @@ class Google_Service_Gmail_ModifyThreadRequest extends Google_Collection
   {
     return $this->addLabelIds;
   }
-  public function setRemoveLabelIds($removeLabelIds)
+  public function setRemoveLabelIds(array $removeLabelIds)
   {
     $this->removeLabelIds = $removeLabelIds;
   }

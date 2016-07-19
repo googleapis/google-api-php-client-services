@@ -18,16 +18,12 @@
 class Google_Service_ShoppingContent_Inventory extends Google_Model
 {
   public $availability;
-  protected $installmentType = 'Google_Service_ShoppingContent_Installment';
-  protected $installmentDataType = '';
+  public $installment;
   public $kind;
-  protected $loyaltyPointsType = 'Google_Service_ShoppingContent_LoyaltyPoints';
-  protected $loyaltyPointsDataType = '';
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
-  protected $priceDataType = '';
+  public $loyaltyPoints;
+  public $price;
   public $quantity;
-  protected $salePriceType = 'Google_Service_ShoppingContent_Price';
-  protected $salePriceDataType = '';
+  public $salePrice;
   public $salePriceEffectiveDate;
   public $sellOnGoogleQuantity;
 

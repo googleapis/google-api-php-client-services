@@ -20,11 +20,10 @@ class Google_Service_Compute_UrlMapValidationResult extends Google_Collection
   protected $collection_key = 'testFailures';
   public $loadErrors;
   public $loadSucceeded;
-  protected $testFailuresType = 'Google_Service_Compute_TestFailure';
-  protected $testFailuresDataType = 'array';
+  public $testFailures;
   public $testPassed;
 
-  public function setLoadErrors($loadErrors)
+  public function setLoadErrors(array $loadErrors)
   {
     $this->loadErrors = $loadErrors;
   }
@@ -40,8 +39,13 @@ class Google_Service_Compute_UrlMapValidationResult extends Google_Collection
   {
     return $this->loadSucceeded;
   }
-  public function setTestFailures($testFailures)
+  public function setTestFailures(array $testFailures)
   {
+    foreach ($testFailures as $t) {
+      if (!$t instanceof Google_Service_Compute_TestFailure) {
+        throw new InvalidArgumentException('First argument to setTestFailures must be an array of Google_Service_Compute_TestFailure');
+      }
+    }
     $this->testFailures = $testFailures;
   }
   public function getTestFailures()

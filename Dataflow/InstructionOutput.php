@@ -19,9 +19,12 @@ class Google_Service_Dataflow_InstructionOutput extends Google_Model
 {
   public $codec;
   public $name;
+  public $onlyCountKeyBytes;
+  public $onlyCountValueBytes;
+  public $originalName;
   public $systemName;
 
-  public function setCodec($codec)
+  public function setCodec(array $codec)
   {
     $this->codec = $codec;
   }
@@ -36,6 +39,30 @@ class Google_Service_Dataflow_InstructionOutput extends Google_Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setOnlyCountKeyBytes($onlyCountKeyBytes)
+  {
+    $this->onlyCountKeyBytes = $onlyCountKeyBytes;
+  }
+  public function getOnlyCountKeyBytes()
+  {
+    return $this->onlyCountKeyBytes;
+  }
+  public function setOnlyCountValueBytes($onlyCountValueBytes)
+  {
+    $this->onlyCountValueBytes = $onlyCountValueBytes;
+  }
+  public function getOnlyCountValueBytes()
+  {
+    return $this->onlyCountValueBytes;
+  }
+  public function setOriginalName($originalName)
+  {
+    $this->originalName = $originalName;
+  }
+  public function getOriginalName()
+  {
+    return $this->originalName;
   }
   public function setSystemName($systemName)
   {

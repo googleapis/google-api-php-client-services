@@ -22,8 +22,7 @@ class Google_Service_Fusiontables_Table extends Google_Collection
   public $attributionLink;
   public $baseTableIds;
   public $columnPropertiesJsonSchema;
-  protected $columnsType = 'Google_Service_Fusiontables_Column';
-  protected $columnsDataType = 'array';
+  public $columns;
   public $description;
   public $isExportable;
   public $kind;
@@ -49,7 +48,7 @@ class Google_Service_Fusiontables_Table extends Google_Collection
   {
     return $this->attributionLink;
   }
-  public function setBaseTableIds($baseTableIds)
+  public function setBaseTableIds(array $baseTableIds)
   {
     $this->baseTableIds = $baseTableIds;
   }
@@ -65,8 +64,13 @@ class Google_Service_Fusiontables_Table extends Google_Collection
   {
     return $this->columnPropertiesJsonSchema;
   }
-  public function setColumns($columns)
+  public function setColumns(array $columns)
   {
+    foreach ($columns as $c) {
+      if (!$c instanceof Google_Service_Fusiontables_Column) {
+        throw new InvalidArgumentException('First argument to setColumns must be an array of Google_Service_Fusiontables_Column');
+      }
+    }
     $this->columns = $columns;
   }
   public function getColumns()

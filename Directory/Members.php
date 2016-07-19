@@ -20,8 +20,7 @@ class Google_Service_Directory_Members extends Google_Collection
   protected $collection_key = 'members';
   public $etag;
   public $kind;
-  protected $membersType = 'Google_Service_Directory_Member';
-  protected $membersDataType = 'array';
+  public $members;
   public $nextPageToken;
 
   public function setEtag($etag)
@@ -40,8 +39,13 @@ class Google_Service_Directory_Members extends Google_Collection
   {
     return $this->kind;
   }
-  public function setMembers($members)
+  public function setMembers(array $members)
   {
+    foreach ($members as $m) {
+      if (!$m instanceof Google_Service_Directory_Member) {
+        throw new InvalidArgumentException('First argument to setMembers must be an array of Google_Service_Directory_Member');
+      }
+    }
     $this->members = $members;
   }
   public function getMembers()

@@ -21,7 +21,7 @@ class Google_Service_Storagetransfer_ErrorLogEntry extends Google_Collection
   public $errorDetails;
   public $url;
 
-  public function setErrorDetails($errorDetails)
+  public function setErrorDetails(array $errorDetails)
   {
     $this->errorDetails = $errorDetails;
   }

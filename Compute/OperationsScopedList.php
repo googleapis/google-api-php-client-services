@@ -18,13 +18,16 @@
 class Google_Service_Compute_OperationsScopedList extends Google_Collection
 {
   protected $collection_key = 'operations';
-  protected $operationsType = 'Google_Service_Compute_Operation';
-  protected $operationsDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_OperationsScopedListWarning';
-  protected $warningDataType = '';
+  public $operations;
+  public $warning;
 
-  public function setOperations($operations)
+  public function setOperations(array $operations)
   {
+    foreach ($operations as $o) {
+      if (!$o instanceof Google_Service_Compute_Operation) {
+        throw new InvalidArgumentException('First argument to setOperations must be an array of Google_Service_Compute_Operation');
+      }
+    }
     $this->operations = $operations;
   }
   public function getOperations()

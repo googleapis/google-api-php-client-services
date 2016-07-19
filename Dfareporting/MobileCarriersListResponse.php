@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_MobileCarriersListResponse extends Google_Coll
 {
   protected $collection_key = 'mobileCarriers';
   public $kind;
-  protected $mobileCarriersType = 'Google_Service_Dfareporting_MobileCarrier';
-  protected $mobileCarriersDataType = 'array';
+  public $mobileCarriers;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_MobileCarriersListResponse extends Google_Coll
   {
     return $this->kind;
   }
-  public function setMobileCarriers($mobileCarriers)
+  public function setMobileCarriers(array $mobileCarriers)
   {
+    foreach ($mobileCarriers as $m) {
+      if (!$m instanceof Google_Service_Dfareporting_MobileCarrier) {
+        throw new InvalidArgumentException('First argument to setMobileCarriers must be an array of Google_Service_Dfareporting_MobileCarrier');
+      }
+    }
     $this->mobileCarriers = $mobileCarriers;
   }
   public function getMobileCarriers()

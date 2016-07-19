@@ -20,8 +20,7 @@ class Google_Service_Directory_OrgUnits extends Google_Collection
   protected $collection_key = 'organizationUnits';
   public $etag;
   public $kind;
-  protected $organizationUnitsType = 'Google_Service_Directory_OrgUnit';
-  protected $organizationUnitsDataType = 'array';
+  public $organizationUnits;
 
   public function setEtag($etag)
   {
@@ -39,8 +38,13 @@ class Google_Service_Directory_OrgUnits extends Google_Collection
   {
     return $this->kind;
   }
-  public function setOrganizationUnits($organizationUnits)
+  public function setOrganizationUnits(array $organizationUnits)
   {
+    foreach ($organizationUnits as $o) {
+      if (!$o instanceof Google_Service_Directory_OrgUnit) {
+        throw new InvalidArgumentException('First argument to setOrganizationUnits must be an array of Google_Service_Directory_OrgUnit');
+      }
+    }
     $this->organizationUnits = $organizationUnits;
   }
   public function getOrganizationUnits()

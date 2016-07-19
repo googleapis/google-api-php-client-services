@@ -19,8 +19,7 @@ class Google_Service_Games_AchievementUpdateMultipleRequest extends Google_Colle
 {
   protected $collection_key = 'updates';
   public $kind;
-  protected $updatesType = 'Google_Service_Games_AchievementUpdateRequest';
-  protected $updatesDataType = 'array';
+  public $updates;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Games_AchievementUpdateMultipleRequest extends Google_Colle
   {
     return $this->kind;
   }
-  public function setUpdates($updates)
+  public function setUpdates(array $updates)
   {
+    foreach ($updates as $u) {
+      if (!$u instanceof Google_Service_Games_AchievementUpdateRequest) {
+        throw new InvalidArgumentException('First argument to setUpdates must be an array of Google_Service_Games_AchievementUpdateRequest');
+      }
+    }
     $this->updates = $updates;
   }
   public function getUpdates()

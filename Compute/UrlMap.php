@@ -22,16 +22,13 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   public $defaultService;
   public $description;
   public $fingerprint;
-  protected $hostRulesType = 'Google_Service_Compute_HostRule';
-  protected $hostRulesDataType = 'array';
+  public $hostRules;
   public $id;
   public $kind;
   public $name;
-  protected $pathMatchersType = 'Google_Service_Compute_PathMatcher';
-  protected $pathMatchersDataType = 'array';
+  public $pathMatchers;
   public $selfLink;
-  protected $testsType = 'Google_Service_Compute_UrlMapTest';
-  protected $testsDataType = 'array';
+  public $tests;
 
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -65,8 +62,13 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   {
     return $this->fingerprint;
   }
-  public function setHostRules($hostRules)
+  public function setHostRules(array $hostRules)
   {
+    foreach ($hostRules as $h) {
+      if (!$h instanceof Google_Service_Compute_HostRule) {
+        throw new InvalidArgumentException('First argument to setHostRules must be an array of Google_Service_Compute_HostRule');
+      }
+    }
     $this->hostRules = $hostRules;
   }
   public function getHostRules()
@@ -97,8 +99,13 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   {
     return $this->name;
   }
-  public function setPathMatchers($pathMatchers)
+  public function setPathMatchers(array $pathMatchers)
   {
+    foreach ($pathMatchers as $p) {
+      if (!$p instanceof Google_Service_Compute_PathMatcher) {
+        throw new InvalidArgumentException('First argument to setPathMatchers must be an array of Google_Service_Compute_PathMatcher');
+      }
+    }
     $this->pathMatchers = $pathMatchers;
   }
   public function getPathMatchers()
@@ -113,8 +120,13 @@ class Google_Service_Compute_UrlMap extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setTests($tests)
+  public function setTests(array $tests)
   {
+    foreach ($tests as $t) {
+      if (!$t instanceof Google_Service_Compute_UrlMapTest) {
+        throw new InvalidArgumentException('First argument to setTests must be an array of Google_Service_Compute_UrlMapTest');
+      }
+    }
     $this->tests = $tests;
   }
   public function getTests()

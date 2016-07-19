@@ -20,12 +20,9 @@ class Google_Service_Bigquery_JobStatistics2 extends Google_Collection
   protected $collection_key = 'referencedTables';
   public $billingTier;
   public $cacheHit;
-  protected $queryPlanType = 'Google_Service_Bigquery_ExplainQueryStage';
-  protected $queryPlanDataType = 'array';
-  protected $referencedTablesType = 'Google_Service_Bigquery_TableReference';
-  protected $referencedTablesDataType = 'array';
-  protected $schemaType = 'Google_Service_Bigquery_TableSchema';
-  protected $schemaDataType = '';
+  public $queryPlan;
+  public $referencedTables;
+  public $schema;
   public $totalBytesBilled;
   public $totalBytesProcessed;
 
@@ -45,16 +42,26 @@ class Google_Service_Bigquery_JobStatistics2 extends Google_Collection
   {
     return $this->cacheHit;
   }
-  public function setQueryPlan($queryPlan)
+  public function setQueryPlan(array $queryPlan)
   {
+    foreach ($queryPlan as $q) {
+      if (!$q instanceof Google_Service_Bigquery_ExplainQueryStage) {
+        throw new InvalidArgumentException('First argument to setQueryPlan must be an array of Google_Service_Bigquery_ExplainQueryStage');
+      }
+    }
     $this->queryPlan = $queryPlan;
   }
   public function getQueryPlan()
   {
     return $this->queryPlan;
   }
-  public function setReferencedTables($referencedTables)
+  public function setReferencedTables(array $referencedTables)
   {
+    foreach ($referencedTables as $r) {
+      if (!$r instanceof Google_Service_Bigquery_TableReference) {
+        throw new InvalidArgumentException('First argument to setReferencedTables must be an array of Google_Service_Bigquery_TableReference');
+      }
+    }
     $this->referencedTables = $referencedTables;
   }
   public function getReferencedTables()

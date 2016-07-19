@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_DirectorySiteContactsListResponse extends Google_Collection
 {
   protected $collection_key = 'directorySiteContacts';
-  protected $directorySiteContactsType = 'Google_Service_Dfareporting_DirectorySiteContact';
-  protected $directorySiteContactsDataType = 'array';
+  public $directorySiteContacts;
   public $kind;
   public $nextPageToken;
 
-  public function setDirectorySiteContacts($directorySiteContacts)
+  public function setDirectorySiteContacts(array $directorySiteContacts)
   {
+    foreach ($directorySiteContacts as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_DirectorySiteContact) {
+        throw new InvalidArgumentException('First argument to setDirectorySiteContacts must be an array of Google_Service_Dfareporting_DirectorySiteContact');
+      }
+    }
     $this->directorySiteContacts = $directorySiteContacts;
   }
   public function getDirectorySiteContacts()

@@ -24,8 +24,7 @@ class Google_Service_Games_RoomLeaveDiagnostics extends Google_Collection
   public $kind;
   public $networkOperatorCode;
   public $networkOperatorName;
-  protected $peerSessionType = 'Google_Service_Games_PeerSessionDiagnostics';
-  protected $peerSessionDataType = 'array';
+  public $peerSession;
   public $socketsUsed;
 
   public function setAndroidNetworkSubtype($androidNetworkSubtype)
@@ -76,8 +75,13 @@ class Google_Service_Games_RoomLeaveDiagnostics extends Google_Collection
   {
     return $this->networkOperatorName;
   }
-  public function setPeerSession($peerSession)
+  public function setPeerSession(array $peerSession)
   {
+    foreach ($peerSession as $p) {
+      if (!$p instanceof Google_Service_Games_PeerSessionDiagnostics) {
+        throw new InvalidArgumentException('First argument to setPeerSession must be an array of Google_Service_Games_PeerSessionDiagnostics');
+      }
+    }
     $this->peerSession = $peerSession;
   }
   public function getPeerSession()

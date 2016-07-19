@@ -19,17 +19,13 @@ class Google_Service_Bigquery_ExternalDataConfiguration extends Google_Collectio
 {
   protected $collection_key = 'sourceUris';
   public $autodetect;
-  protected $bigtableOptionsType = 'Google_Service_Bigquery_BigtableOptions';
-  protected $bigtableOptionsDataType = '';
+  public $bigtableOptions;
   public $compression;
-  protected $csvOptionsType = 'Google_Service_Bigquery_CsvOptions';
-  protected $csvOptionsDataType = '';
-  protected $googleSheetsOptionsType = 'Google_Service_Bigquery_GoogleSheetsOptions';
-  protected $googleSheetsOptionsDataType = '';
+  public $csvOptions;
+  public $googleSheetsOptions;
   public $ignoreUnknownValues;
   public $maxBadRecords;
-  protected $schemaType = 'Google_Service_Bigquery_TableSchema';
-  protected $schemaDataType = '';
+  public $schema;
   public $sourceFormat;
   public $sourceUris;
 
@@ -105,7 +101,7 @@ class Google_Service_Bigquery_ExternalDataConfiguration extends Google_Collectio
   {
     return $this->sourceFormat;
   }
-  public function setSourceUris($sourceUris)
+  public function setSourceUris(array $sourceUris)
   {
     $this->sourceUris = $sourceUris;
   }

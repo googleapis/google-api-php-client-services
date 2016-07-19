@@ -26,8 +26,7 @@ class Google_Service_TagManager_Macro extends Google_Collection
   public $macroId;
   public $name;
   public $notes;
-  protected $parameterType = 'Google_Service_TagManager_Parameter';
-  protected $parameterDataType = 'array';
+  public $parameter;
   public $parentFolderId;
   public $scheduleEndMs;
   public $scheduleStartMs;
@@ -49,7 +48,7 @@ class Google_Service_TagManager_Macro extends Google_Collection
   {
     return $this->containerId;
   }
-  public function setDisablingRuleId($disablingRuleId)
+  public function setDisablingRuleId(array $disablingRuleId)
   {
     $this->disablingRuleId = $disablingRuleId;
   }
@@ -57,7 +56,7 @@ class Google_Service_TagManager_Macro extends Google_Collection
   {
     return $this->disablingRuleId;
   }
-  public function setEnablingRuleId($enablingRuleId)
+  public function setEnablingRuleId(array $enablingRuleId)
   {
     $this->enablingRuleId = $enablingRuleId;
   }
@@ -97,8 +96,13 @@ class Google_Service_TagManager_Macro extends Google_Collection
   {
     return $this->notes;
   }
-  public function setParameter($parameter)
+  public function setParameter(array $parameter)
   {
+    foreach ($parameter as $p) {
+      if (!$p instanceof Google_Service_TagManager_Parameter) {
+        throw new InvalidArgumentException('First argument to setParameter must be an array of Google_Service_TagManager_Parameter');
+      }
+    }
     $this->parameter = $parameter;
   }
   public function getParameter()

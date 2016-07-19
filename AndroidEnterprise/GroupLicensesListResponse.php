@@ -18,12 +18,16 @@
 class Google_Service_AndroidEnterprise_GroupLicensesListResponse extends Google_Collection
 {
   protected $collection_key = 'groupLicense';
-  protected $groupLicenseType = 'Google_Service_AndroidEnterprise_GroupLicense';
-  protected $groupLicenseDataType = 'array';
+  public $groupLicense;
   public $kind;
 
-  public function setGroupLicense($groupLicense)
+  public function setGroupLicense(array $groupLicense)
   {
+    foreach ($groupLicense as $g) {
+      if (!$g instanceof Google_Service_AndroidEnterprise_GroupLicense) {
+        throw new InvalidArgumentException('First argument to setGroupLicense must be an array of Google_Service_AndroidEnterprise_GroupLicense');
+      }
+    }
     $this->groupLicense = $groupLicense;
   }
   public function getGroupLicense()

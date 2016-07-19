@@ -41,7 +41,7 @@ class Google_Service_Genomics_AnnotationSet extends Google_Model
   {
     return $this->id;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }

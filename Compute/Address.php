@@ -101,7 +101,7 @@ class Google_Service_Compute_Address extends Google_Collection
   {
     return $this->status;
   }
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
     $this->users = $users;
   }

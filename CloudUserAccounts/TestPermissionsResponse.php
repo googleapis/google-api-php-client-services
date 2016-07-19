@@ -20,7 +20,7 @@ class Google_Service_CloudUserAccounts_TestPermissionsResponse extends Google_Co
   protected $collection_key = 'permissions';
   public $permissions;
 
-  public function setPermissions($permissions)
+  public function setPermissions(array $permissions)
   {
     $this->permissions = $permissions;
   }

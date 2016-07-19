@@ -18,14 +18,18 @@
 class Google_Service_Directory_ChromeOsDevices extends Google_Collection
 {
   protected $collection_key = 'chromeosdevices';
-  protected $chromeosdevicesType = 'Google_Service_Directory_ChromeOsDevice';
-  protected $chromeosdevicesDataType = 'array';
+  public $chromeosdevices;
   public $etag;
   public $kind;
   public $nextPageToken;
 
-  public function setChromeosdevices($chromeosdevices)
+  public function setChromeosdevices(array $chromeosdevices)
   {
+    foreach ($chromeosdevices as $c) {
+      if (!$c instanceof Google_Service_Directory_ChromeOsDevice) {
+        throw new InvalidArgumentException('First argument to setChromeosdevices must be an array of Google_Service_Directory_ChromeOsDevice');
+      }
+    }
     $this->chromeosdevices = $chromeosdevices;
   }
   public function getChromeosdevices()

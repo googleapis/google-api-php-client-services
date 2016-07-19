@@ -20,8 +20,7 @@ class Google_Service_Drive_ReplyList extends Google_Collection
   protected $collection_key = 'replies';
   public $kind;
   public $nextPageToken;
-  protected $repliesType = 'Google_Service_Drive_Reply';
-  protected $repliesDataType = 'array';
+  public $replies;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Drive_ReplyList extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setReplies($replies)
+  public function setReplies(array $replies)
   {
+    foreach ($replies as $r) {
+      if (!$r instanceof Google_Service_Drive_Reply) {
+        throw new InvalidArgumentException('First argument to setReplies must be an array of Google_Service_Drive_Reply');
+      }
+    }
     $this->replies = $replies;
   }
   public function getReplies()

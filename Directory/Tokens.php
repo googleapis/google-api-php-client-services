@@ -19,8 +19,7 @@ class Google_Service_Directory_Tokens extends Google_Collection
 {
   protected $collection_key = 'items';
   public $etag;
-  protected $itemsType = 'Google_Service_Directory_Token';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
 
   public function setEtag($etag)
@@ -31,8 +30,13 @@ class Google_Service_Directory_Tokens extends Google_Collection
   {
     return $this->etag;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Directory_Token) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Directory_Token');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

@@ -18,14 +18,12 @@
 class Google_Service_Blogger_User extends Google_Model
 {
   public $about;
-  protected $blogsType = 'Google_Service_Blogger_UserBlogs';
-  protected $blogsDataType = '';
+  public $blogs;
   public $created;
   public $displayName;
   public $id;
   public $kind;
-  protected $localeType = 'Google_Service_Blogger_UserLocale';
-  protected $localeDataType = '';
+  public $locale;
   public $selfLink;
   public $url;
 

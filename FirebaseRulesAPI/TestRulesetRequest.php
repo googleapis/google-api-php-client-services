@@ -17,8 +17,7 @@
 
 class Google_Service_FirebaseRulesAPI_TestRulesetRequest extends Google_Model
 {
-  protected $sourceType = 'Google_Service_FirebaseRulesAPI_Source';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setSource(Google_Service_FirebaseRulesAPI_Source $source)
   {

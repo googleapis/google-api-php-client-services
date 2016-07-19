@@ -32,7 +32,7 @@ class Google_Service_GamesManagement_QuestsResetMultipleForAllRequest extends Go
   {
     return $this->kind;
   }
-  public function setQuestIds($questIds)
+  public function setQuestIds(array $questIds)
   {
     $this->questIds = $questIds;
   }

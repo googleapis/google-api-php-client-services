@@ -18,10 +18,8 @@
 class Google_Service_Genomics_Transcript extends Google_Collection
 {
   protected $collection_key = 'exons';
-  protected $codingSequenceType = 'Google_Service_Genomics_CodingSequence';
-  protected $codingSequenceDataType = '';
-  protected $exonsType = 'Google_Service_Genomics_Exon';
-  protected $exonsDataType = 'array';
+  public $codingSequence;
+  public $exons;
   public $geneId;
 
   public function setCodingSequence(Google_Service_Genomics_CodingSequence $codingSequence)
@@ -32,8 +30,13 @@ class Google_Service_Genomics_Transcript extends Google_Collection
   {
     return $this->codingSequence;
   }
-  public function setExons($exons)
+  public function setExons(array $exons)
   {
+    foreach ($exons as $e) {
+      if (!$e instanceof Google_Service_Genomics_Exon) {
+        throw new InvalidArgumentException('First argument to setExons must be an array of Google_Service_Genomics_Exon');
+      }
+    }
     $this->exons = $exons;
   }
   public function getExons()

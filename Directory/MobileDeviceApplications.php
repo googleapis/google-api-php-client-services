@@ -40,7 +40,7 @@ class Google_Service_Directory_MobileDeviceApplications extends Google_Collectio
   {
     return $this->packageName;
   }
-  public function setPermission($permission)
+  public function setPermission(array $permission)
   {
     $this->permission = $permission;
   }

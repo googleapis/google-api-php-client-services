@@ -18,11 +18,15 @@
 class Google_Service_Gmail_ListLabelsResponse extends Google_Collection
 {
   protected $collection_key = 'labels';
-  protected $labelsType = 'Google_Service_Gmail_Label';
-  protected $labelsDataType = 'array';
+  public $labels;
 
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_Gmail_Label) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_Gmail_Label');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()

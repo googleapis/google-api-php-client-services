@@ -18,8 +18,7 @@
 class Google_Service_Container_NodePool extends Google_Collection
 {
   protected $collection_key = 'instanceGroupUrls';
-  protected $configType = 'Google_Service_Container_NodeConfig';
-  protected $configDataType = '';
+  public $config;
   public $initialNodeCount;
   public $instanceGroupUrls;
   public $name;
@@ -44,7 +43,7 @@ class Google_Service_Container_NodePool extends Google_Collection
   {
     return $this->initialNodeCount;
   }
-  public function setInstanceGroupUrls($instanceGroupUrls)
+  public function setInstanceGroupUrls(array $instanceGroupUrls)
   {
     $this->instanceGroupUrls = $instanceGroupUrls;
   }

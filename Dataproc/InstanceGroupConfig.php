@@ -18,14 +18,12 @@
 class Google_Service_Dataproc_InstanceGroupConfig extends Google_Collection
 {
   protected $collection_key = 'instanceNames';
-  protected $diskConfigType = 'Google_Service_Dataproc_DiskConfig';
-  protected $diskConfigDataType = '';
+  public $diskConfig;
   public $imageUri;
   public $instanceNames;
   public $isPreemptible;
   public $machineTypeUri;
-  protected $managedGroupConfigType = 'Google_Service_Dataproc_ManagedGroupConfig';
-  protected $managedGroupConfigDataType = '';
+  public $managedGroupConfig;
   public $numInstances;
 
   public function setDiskConfig(Google_Service_Dataproc_DiskConfig $diskConfig)
@@ -44,7 +42,7 @@ class Google_Service_Dataproc_InstanceGroupConfig extends Google_Collection
   {
     return $this->imageUri;
   }
-  public function setInstanceNames($instanceNames)
+  public function setInstanceNames(array $instanceNames)
   {
     $this->instanceNames = $instanceNames;
   }

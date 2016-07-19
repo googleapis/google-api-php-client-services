@@ -18,12 +18,16 @@
 class Google_Service_Proximitybeacon_ListDiagnosticsResponse extends Google_Collection
 {
   protected $collection_key = 'diagnostics';
-  protected $diagnosticsType = 'Google_Service_Proximitybeacon_Diagnostics';
-  protected $diagnosticsDataType = 'array';
+  public $diagnostics;
   public $nextPageToken;
 
-  public function setDiagnostics($diagnostics)
+  public function setDiagnostics(array $diagnostics)
   {
+    foreach ($diagnostics as $d) {
+      if (!$d instanceof Google_Service_Proximitybeacon_Diagnostics) {
+        throw new InvalidArgumentException('First argument to setDiagnostics must be an array of Google_Service_Proximitybeacon_Diagnostics');
+      }
+    }
     $this->diagnostics = $diagnostics;
   }
   public function getDiagnostics()

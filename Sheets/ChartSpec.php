@@ -17,11 +17,9 @@
 
 class Google_Service_Sheets_ChartSpec extends Google_Model
 {
-  protected $basicChartType = 'Google_Service_Sheets_BasicChartSpec';
-  protected $basicChartDataType = '';
+  public $basicChart;
   public $hiddenDimensionStrategy;
-  protected $pieChartType = 'Google_Service_Sheets_PieChartSpec';
-  protected $pieChartDataType = '';
+  public $pieChart;
   public $title;
 
   public function setBasicChart(Google_Service_Sheets_BasicChartSpec $basicChart)

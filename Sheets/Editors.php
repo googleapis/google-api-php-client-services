@@ -30,7 +30,7 @@ class Google_Service_Sheets_Editors extends Google_Collection
   {
     return $this->domainUsersCanEdit;
   }
-  public function setGroups($groups)
+  public function setGroups(array $groups)
   {
     $this->groups = $groups;
   }
@@ -38,7 +38,7 @@ class Google_Service_Sheets_Editors extends Google_Collection
   {
     return $this->groups;
   }
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
     $this->users = $users;
   }

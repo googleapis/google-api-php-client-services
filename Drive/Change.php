@@ -17,8 +17,7 @@
 
 class Google_Service_Drive_Change extends Google_Model
 {
-  protected $fileType = 'Google_Service_Drive_DriveFile';
-  protected $fileDataType = '';
+  public $file;
   public $fileId;
   public $kind;
   public $removed;

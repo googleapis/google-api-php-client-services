@@ -20,7 +20,7 @@ class Google_Service_Sheets_PivotFilterCriteria extends Google_Collection
   protected $collection_key = 'visibleValues';
   public $visibleValues;
 
-  public function setVisibleValues($visibleValues)
+  public function setVisibleValues(array $visibleValues)
   {
     $this->visibleValues = $visibleValues;
   }

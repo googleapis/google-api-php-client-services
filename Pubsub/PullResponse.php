@@ -18,11 +18,15 @@
 class Google_Service_Pubsub_PullResponse extends Google_Collection
 {
   protected $collection_key = 'receivedMessages';
-  protected $receivedMessagesType = 'Google_Service_Pubsub_ReceivedMessage';
-  protected $receivedMessagesDataType = 'array';
+  public $receivedMessages;
 
-  public function setReceivedMessages($receivedMessages)
+  public function setReceivedMessages(array $receivedMessages)
   {
+    foreach ($receivedMessages as $r) {
+      if (!$r instanceof Google_Service_Pubsub_ReceivedMessage) {
+        throw new InvalidArgumentException('First argument to setReceivedMessages must be an array of Google_Service_Pubsub_ReceivedMessage');
+      }
+    }
     $this->receivedMessages = $receivedMessages;
   }
   public function getReceivedMessages()

@@ -20,7 +20,7 @@ class Google_Service_CloudUserAccounts_GroupsAddMemberRequest extends Google_Col
   protected $collection_key = 'users';
   public $users;
 
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
     $this->users = $users;
   }

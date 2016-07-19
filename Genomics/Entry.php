@@ -17,10 +17,8 @@
 
 class Google_Service_Genomics_Entry extends Google_Model
 {
-  protected $annotationType = 'Google_Service_Genomics_Annotation';
-  protected $annotationDataType = '';
-  protected $statusType = 'Google_Service_Genomics_Status';
-  protected $statusDataType = '';
+  public $annotation;
+  public $status;
 
   public function setAnnotation(Google_Service_Genomics_Annotation $annotation)
   {

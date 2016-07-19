@@ -18,19 +18,22 @@
 class Google_Service_Books_GeolayerdataGeo extends Google_Collection
 {
   protected $collection_key = 'boundary';
-  protected $boundaryType = 'Google_Service_Books_GeolayerdataGeoBoundary';
-  protected $boundaryDataType = 'array';
+  public $boundary;
   public $cachePolicy;
   public $countryCode;
   public $latitude;
   public $longitude;
   public $mapType;
-  protected $viewportType = 'Google_Service_Books_GeolayerdataGeoViewport';
-  protected $viewportDataType = '';
+  public $viewport;
   public $zoom;
 
-  public function setBoundary($boundary)
+  public function setBoundary(array $boundary)
   {
+    foreach ($boundary as $b) {
+      if (!$b instanceof Google_Service_Books_GeolayerdataGeoBoundary) {
+        throw new InvalidArgumentException('First argument to setBoundary must be an array of Google_Service_Books_GeolayerdataGeoBoundary');
+      }
+    }
     $this->boundary = $boundary;
   }
   public function getBoundary()

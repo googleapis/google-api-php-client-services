@@ -29,8 +29,7 @@ class Google_Service_Drive_DriveFileImageMediaMetadata extends Google_Model
   public $height;
   public $isoSpeed;
   public $lens;
-  protected $locationType = 'Google_Service_Drive_DriveFileImageMediaMetadataLocation';
-  protected $locationDataType = '';
+  public $location;
   public $maxApertureValue;
   public $meteringMode;
   public $rotation;

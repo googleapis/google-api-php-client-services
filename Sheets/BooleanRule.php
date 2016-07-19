@@ -17,10 +17,8 @@
 
 class Google_Service_Sheets_BooleanRule extends Google_Model
 {
-  protected $conditionType = 'Google_Service_Sheets_BooleanCondition';
-  protected $conditionDataType = '';
-  protected $formatType = 'Google_Service_Sheets_CellFormat';
-  protected $formatDataType = '';
+  public $condition;
+  public $format;
 
   public function setCondition(Google_Service_Sheets_BooleanCondition $condition)
   {

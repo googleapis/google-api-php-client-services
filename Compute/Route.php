@@ -33,8 +33,7 @@ class Google_Service_Compute_Route extends Google_Collection
   public $priority;
   public $selfLink;
   public $tags;
-  protected $warningsType = 'Google_Service_Compute_RouteWarnings';
-  protected $warningsDataType = 'array';
+  public $warnings;
 
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -148,7 +147,7 @@ class Google_Service_Compute_Route extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setTags($tags)
+  public function setTags(array $tags)
   {
     $this->tags = $tags;
   }
@@ -156,8 +155,13 @@ class Google_Service_Compute_Route extends Google_Collection
   {
     return $this->tags;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
+    foreach ($warnings as $w) {
+      if (!$w instanceof Google_Service_Compute_RouteWarnings) {
+        throw new InvalidArgumentException('First argument to setWarnings must be an array of Google_Service_Compute_RouteWarnings');
+      }
+    }
     $this->warnings = $warnings;
   }
   public function getWarnings()

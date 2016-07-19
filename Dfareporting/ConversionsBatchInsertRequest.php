@@ -18,14 +18,17 @@
 class Google_Service_Dfareporting_ConversionsBatchInsertRequest extends Google_Collection
 {
   protected $collection_key = 'conversions';
-  protected $conversionsType = 'Google_Service_Dfareporting_Conversion';
-  protected $conversionsDataType = 'array';
-  protected $encryptionInfoType = 'Google_Service_Dfareporting_EncryptionInfo';
-  protected $encryptionInfoDataType = '';
+  public $conversions;
+  public $encryptionInfo;
   public $kind;
 
-  public function setConversions($conversions)
+  public function setConversions(array $conversions)
   {
+    foreach ($conversions as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_Conversion) {
+        throw new InvalidArgumentException('First argument to setConversions must be an array of Google_Service_Dfareporting_Conversion');
+      }
+    }
     $this->conversions = $conversions;
   }
   public function getConversions()

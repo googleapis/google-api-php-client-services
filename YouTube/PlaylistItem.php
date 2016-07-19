@@ -17,15 +17,12 @@
 
 class Google_Service_YouTube_PlaylistItem extends Google_Model
 {
-  protected $contentDetailsType = 'Google_Service_YouTube_PlaylistItemContentDetails';
-  protected $contentDetailsDataType = '';
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_PlaylistItemSnippet';
-  protected $snippetDataType = '';
-  protected $statusType = 'Google_Service_YouTube_PlaylistItemStatus';
-  protected $statusDataType = '';
+  public $snippet;
+  public $status;
 
   public function setContentDetails(Google_Service_YouTube_PlaylistItemContentDetails $contentDetails)
   {

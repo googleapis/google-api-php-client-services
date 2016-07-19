@@ -18,8 +18,7 @@
 class Google_Service_YouTube_SponsorSnippet extends Google_Model
 {
   public $channelId;
-  protected $sponsorDetailsType = 'Google_Service_YouTube_ChannelProfileDetails';
-  protected $sponsorDetailsDataType = '';
+  public $sponsorDetails;
   public $sponsorSince;
 
   public function setChannelId($channelId)

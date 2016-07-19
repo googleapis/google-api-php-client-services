@@ -19,8 +19,7 @@ class Google_Service_Sheets_NamedRange extends Google_Model
 {
   public $name;
   public $namedRangeId;
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
+  public $range;
 
   public function setName($name)
   {

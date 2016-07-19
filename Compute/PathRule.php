@@ -21,7 +21,7 @@ class Google_Service_Compute_PathRule extends Google_Collection
   public $paths;
   public $service;
 
-  public function setPaths($paths)
+  public function setPaths(array $paths)
   {
     $this->paths = $paths;
   }

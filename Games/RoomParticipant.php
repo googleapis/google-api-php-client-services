@@ -19,17 +19,14 @@ class Google_Service_Games_RoomParticipant extends Google_Collection
 {
   protected $collection_key = 'capabilities';
   public $autoMatched;
-  protected $autoMatchedPlayerType = 'Google_Service_Games_AnonymousPlayer';
-  protected $autoMatchedPlayerDataType = '';
+  public $autoMatchedPlayer;
   public $capabilities;
-  protected $clientAddressType = 'Google_Service_Games_RoomClientAddress';
-  protected $clientAddressDataType = '';
+  public $clientAddress;
   public $connected;
   public $id;
   public $kind;
   public $leaveReason;
-  protected $playerType = 'Google_Service_Games_Player';
-  protected $playerDataType = '';
+  public $player;
   public $status;
 
   public function setAutoMatched($autoMatched)
@@ -48,7 +45,7 @@ class Google_Service_Games_RoomParticipant extends Google_Collection
   {
     return $this->autoMatchedPlayer;
   }
-  public function setCapabilities($capabilities)
+  public function setCapabilities(array $capabilities)
   {
     $this->capabilities = $capabilities;
   }

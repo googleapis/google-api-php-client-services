@@ -18,11 +18,15 @@
 class Google_Service_Gmail_ListSendAsResponse extends Google_Collection
 {
   protected $collection_key = 'sendAs';
-  protected $sendAsType = 'Google_Service_Gmail_SendAs';
-  protected $sendAsDataType = 'array';
+  public $sendAs;
 
-  public function setSendAs($sendAs)
+  public function setSendAs(array $sendAs)
   {
+    foreach ($sendAs as $s) {
+      if (!$s instanceof Google_Service_Gmail_SendAs) {
+        throw new InvalidArgumentException('First argument to setSendAs must be an array of Google_Service_Gmail_SendAs');
+      }
+    }
     $this->sendAs = $sendAs;
   }
   public function getSendAs()

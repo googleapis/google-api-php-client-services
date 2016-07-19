@@ -35,12 +35,10 @@ class Google_Service_AdExchangeBuyer_PublisherProfileApiProto extends Google_Col
   public $programmaticContact;
   public $publisherDomains;
   public $publisherProfileId;
-  protected $publisherProvidedForecastType = 'Google_Service_AdExchangeBuyer_PublisherProvidedForecast';
-  protected $publisherProvidedForecastDataType = '';
+  public $publisherProvidedForecast;
   public $rateCardInfoLink;
   public $samplePageLink;
-  protected $sellerType = 'Google_Service_AdExchangeBuyer_Seller';
-  protected $sellerDataType = '';
+  public $seller;
   public $state;
   public $topHeadlines;
 
@@ -164,7 +162,7 @@ class Google_Service_AdExchangeBuyer_PublisherProfileApiProto extends Google_Col
   {
     return $this->programmaticContact;
   }
-  public function setPublisherDomains($publisherDomains)
+  public function setPublisherDomains(array $publisherDomains)
   {
     $this->publisherDomains = $publisherDomains;
   }
@@ -220,7 +218,7 @@ class Google_Service_AdExchangeBuyer_PublisherProfileApiProto extends Google_Col
   {
     return $this->state;
   }
-  public function setTopHeadlines($topHeadlines)
+  public function setTopHeadlines(array $topHeadlines)
   {
     $this->topHeadlines = $topHeadlines;
   }

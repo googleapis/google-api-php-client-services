@@ -19,8 +19,7 @@ class Google_Service_Sheets_AppendCellsRequest extends Google_Collection
 {
   protected $collection_key = 'rows';
   public $fields;
-  protected $rowsType = 'Google_Service_Sheets_RowData';
-  protected $rowsDataType = 'array';
+  public $rows;
   public $sheetId;
 
   public function setFields($fields)
@@ -31,8 +30,13 @@ class Google_Service_Sheets_AppendCellsRequest extends Google_Collection
   {
     return $this->fields;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Sheets_RowData) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Sheets_RowData');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()

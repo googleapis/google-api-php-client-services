@@ -18,12 +18,16 @@
 class Google_Service_Sheets_BatchUpdateSpreadsheetResponse extends Google_Collection
 {
   protected $collection_key = 'replies';
-  protected $repliesType = 'Google_Service_Sheets_Response';
-  protected $repliesDataType = 'array';
+  public $replies;
   public $spreadsheetId;
 
-  public function setReplies($replies)
+  public function setReplies(array $replies)
   {
+    foreach ($replies as $r) {
+      if (!$r instanceof Google_Service_Sheets_Response) {
+        throw new InvalidArgumentException('First argument to setReplies must be an array of Google_Service_Sheets_Response');
+      }
+    }
     $this->replies = $replies;
   }
   public function getReplies()

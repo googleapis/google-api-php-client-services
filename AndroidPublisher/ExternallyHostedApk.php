@@ -30,8 +30,7 @@ class Google_Service_AndroidPublisher_ExternallyHostedApk extends Google_Collect
   public $nativeCodes;
   public $packageName;
   public $usesFeatures;
-  protected $usesPermissionsType = 'Google_Service_AndroidPublisher_ExternallyHostedApkUsesPermission';
-  protected $usesPermissionsDataType = 'array';
+  public $usesPermissions;
   public $versionCode;
   public $versionName;
 
@@ -43,7 +42,7 @@ class Google_Service_AndroidPublisher_ExternallyHostedApk extends Google_Collect
   {
     return $this->applicationLabel;
   }
-  public function setCertificateBase64s($certificateBase64s)
+  public function setCertificateBase64s(array $certificateBase64s)
   {
     $this->certificateBase64s = $certificateBase64s;
   }
@@ -107,7 +106,7 @@ class Google_Service_AndroidPublisher_ExternallyHostedApk extends Google_Collect
   {
     return $this->minimumSdk;
   }
-  public function setNativeCodes($nativeCodes)
+  public function setNativeCodes(array $nativeCodes)
   {
     $this->nativeCodes = $nativeCodes;
   }
@@ -123,7 +122,7 @@ class Google_Service_AndroidPublisher_ExternallyHostedApk extends Google_Collect
   {
     return $this->packageName;
   }
-  public function setUsesFeatures($usesFeatures)
+  public function setUsesFeatures(array $usesFeatures)
   {
     $this->usesFeatures = $usesFeatures;
   }
@@ -131,8 +130,13 @@ class Google_Service_AndroidPublisher_ExternallyHostedApk extends Google_Collect
   {
     return $this->usesFeatures;
   }
-  public function setUsesPermissions($usesPermissions)
+  public function setUsesPermissions(array $usesPermissions)
   {
+    foreach ($usesPermissions as $u) {
+      if (!$u instanceof Google_Service_AndroidPublisher_ExternallyHostedApkUsesPermission) {
+        throw new InvalidArgumentException('First argument to setUsesPermissions must be an array of Google_Service_AndroidPublisher_ExternallyHostedApkUsesPermission');
+      }
+    }
     $this->usesPermissions = $usesPermissions;
   }
   public function getUsesPermissions()

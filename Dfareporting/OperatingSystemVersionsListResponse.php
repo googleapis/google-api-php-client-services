@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_OperatingSystemVersionsListResponse extends Go
 {
   protected $collection_key = 'operatingSystemVersions';
   public $kind;
-  protected $operatingSystemVersionsType = 'Google_Service_Dfareporting_OperatingSystemVersion';
-  protected $operatingSystemVersionsDataType = 'array';
+  public $operatingSystemVersions;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_OperatingSystemVersionsListResponse extends Go
   {
     return $this->kind;
   }
-  public function setOperatingSystemVersions($operatingSystemVersions)
+  public function setOperatingSystemVersions(array $operatingSystemVersions)
   {
+    foreach ($operatingSystemVersions as $o) {
+      if (!$o instanceof Google_Service_Dfareporting_OperatingSystemVersion) {
+        throw new InvalidArgumentException('First argument to setOperatingSystemVersions must be an array of Google_Service_Dfareporting_OperatingSystemVersion');
+      }
+    }
     $this->operatingSystemVersions = $operatingSystemVersions;
   }
   public function getOperatingSystemVersions()

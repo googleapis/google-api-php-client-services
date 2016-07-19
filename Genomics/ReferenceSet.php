@@ -67,7 +67,7 @@ class Google_Service_Genomics_ReferenceSet extends Google_Collection
   {
     return $this->ncbiTaxonId;
   }
-  public function setReferenceIds($referenceIds)
+  public function setReferenceIds(array $referenceIds)
   {
     $this->referenceIds = $referenceIds;
   }
@@ -75,7 +75,7 @@ class Google_Service_Genomics_ReferenceSet extends Google_Collection
   {
     return $this->referenceIds;
   }
-  public function setSourceAccessions($sourceAccessions)
+  public function setSourceAccessions(array $sourceAccessions)
   {
     $this->sourceAccessions = $sourceAccessions;
   }

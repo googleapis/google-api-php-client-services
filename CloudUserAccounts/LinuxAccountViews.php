@@ -18,14 +18,17 @@
 class Google_Service_CloudUserAccounts_LinuxAccountViews extends Google_Collection
 {
   protected $collection_key = 'userViews';
-  protected $groupViewsType = 'Google_Service_CloudUserAccounts_LinuxGroupView';
-  protected $groupViewsDataType = 'array';
+  public $groupViews;
   public $kind;
-  protected $userViewsType = 'Google_Service_CloudUserAccounts_LinuxUserView';
-  protected $userViewsDataType = 'array';
+  public $userViews;
 
-  public function setGroupViews($groupViews)
+  public function setGroupViews(array $groupViews)
   {
+    foreach ($groupViews as $g) {
+      if (!$g instanceof Google_Service_CloudUserAccounts_LinuxGroupView) {
+        throw new InvalidArgumentException('First argument to setGroupViews must be an array of Google_Service_CloudUserAccounts_LinuxGroupView');
+      }
+    }
     $this->groupViews = $groupViews;
   }
   public function getGroupViews()
@@ -40,8 +43,13 @@ class Google_Service_CloudUserAccounts_LinuxAccountViews extends Google_Collecti
   {
     return $this->kind;
   }
-  public function setUserViews($userViews)
+  public function setUserViews(array $userViews)
   {
+    foreach ($userViews as $u) {
+      if (!$u instanceof Google_Service_CloudUserAccounts_LinuxUserView) {
+        throw new InvalidArgumentException('First argument to setUserViews must be an array of Google_Service_CloudUserAccounts_LinuxUserView');
+      }
+    }
     $this->userViews = $userViews;
   }
   public function getUserViews()

@@ -43,7 +43,7 @@ class Google_Service_Webfonts_Webfont extends Google_Collection
   {
     return $this->family;
   }
-  public function setFiles($files)
+  public function setFiles(array $files)
   {
     $this->files = $files;
   }
@@ -67,7 +67,7 @@ class Google_Service_Webfonts_Webfont extends Google_Collection
   {
     return $this->lastModified;
   }
-  public function setSubsets($subsets)
+  public function setSubsets(array $subsets)
   {
     $this->subsets = $subsets;
   }
@@ -75,7 +75,7 @@ class Google_Service_Webfonts_Webfont extends Google_Collection
   {
     return $this->subsets;
   }
-  public function setVariants($variants)
+  public function setVariants(array $variants)
   {
     $this->variants = $variants;
   }

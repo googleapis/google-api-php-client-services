@@ -18,12 +18,16 @@
 class Google_Service_AdExchangeBuyerII_ListFilterSetsResponse extends Google_Collection
 {
   protected $collection_key = 'filterSets';
-  protected $filterSetsType = 'Google_Service_AdExchangeBuyerII_FilterSet';
-  protected $filterSetsDataType = 'array';
+  public $filterSets;
   public $nextPageToken;
 
-  public function setFilterSets($filterSets)
+  public function setFilterSets(array $filterSets)
   {
+    foreach ($filterSets as $f) {
+      if (!$f instanceof Google_Service_AdExchangeBuyerII_FilterSet) {
+        throw new InvalidArgumentException('First argument to setFilterSets must be an array of Google_Service_AdExchangeBuyerII_FilterSet');
+      }
+    }
     $this->filterSets = $filterSets;
   }
   public function getFilterSets()

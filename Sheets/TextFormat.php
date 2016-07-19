@@ -20,8 +20,7 @@ class Google_Service_Sheets_TextFormat extends Google_Model
   public $bold;
   public $fontFamily;
   public $fontSize;
-  protected $foregroundColorType = 'Google_Service_Sheets_Color';
-  protected $foregroundColorDataType = '';
+  public $foregroundColor;
   public $italic;
   public $strikethrough;
   public $underline;

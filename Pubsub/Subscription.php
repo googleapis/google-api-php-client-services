@@ -19,8 +19,7 @@ class Google_Service_Pubsub_Subscription extends Google_Model
 {
   public $ackDeadlineSeconds;
   public $name;
-  protected $pushConfigType = 'Google_Service_Pubsub_PushConfig';
-  protected $pushConfigDataType = '';
+  public $pushConfig;
   public $topic;
 
   public function setAckDeadlineSeconds($ackDeadlineSeconds)

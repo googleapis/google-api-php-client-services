@@ -18,12 +18,16 @@
 class Google_Service_Logging_ListLogMetricsResponse extends Google_Collection
 {
   protected $collection_key = 'metrics';
-  protected $metricsType = 'Google_Service_Logging_LogMetric';
-  protected $metricsDataType = 'array';
+  public $metrics;
   public $nextPageToken;
 
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_Logging_LogMetric) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_Logging_LogMetric');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()

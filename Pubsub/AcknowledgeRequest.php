@@ -20,7 +20,7 @@ class Google_Service_Pubsub_AcknowledgeRequest extends Google_Collection
   protected $collection_key = 'ackIds';
   public $ackIds;
 
-  public function setAckIds($ackIds)
+  public function setAckIds(array $ackIds)
   {
     $this->ackIds = $ackIds;
   }

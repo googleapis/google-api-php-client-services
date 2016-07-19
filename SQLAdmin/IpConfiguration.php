@@ -18,13 +18,17 @@
 class Google_Service_SQLAdmin_IpConfiguration extends Google_Collection
 {
   protected $collection_key = 'authorizedNetworks';
-  protected $authorizedNetworksType = 'Google_Service_SQLAdmin_AclEntry';
-  protected $authorizedNetworksDataType = 'array';
+  public $authorizedNetworks;
   public $ipv4Enabled;
   public $requireSsl;
 
-  public function setAuthorizedNetworks($authorizedNetworks)
+  public function setAuthorizedNetworks(array $authorizedNetworks)
   {
+    foreach ($authorizedNetworks as $a) {
+      if (!$a instanceof Google_Service_SQLAdmin_AclEntry) {
+        throw new InvalidArgumentException('First argument to setAuthorizedNetworks must be an array of Google_Service_SQLAdmin_AclEntry');
+      }
+    }
     $this->authorizedNetworks = $authorizedNetworks;
   }
   public function getAuthorizedNetworks()

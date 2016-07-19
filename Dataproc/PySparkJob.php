@@ -22,13 +22,12 @@ class Google_Service_Dataproc_PySparkJob extends Google_Collection
   public $args;
   public $fileUris;
   public $jarFileUris;
-  protected $loggingConfigType = 'Google_Service_Dataproc_LoggingConfig';
-  protected $loggingConfigDataType = '';
+  public $loggingConfig;
   public $mainPythonFileUri;
   public $properties;
   public $pythonFileUris;
 
-  public function setArchiveUris($archiveUris)
+  public function setArchiveUris(array $archiveUris)
   {
     $this->archiveUris = $archiveUris;
   }
@@ -36,7 +35,7 @@ class Google_Service_Dataproc_PySparkJob extends Google_Collection
   {
     return $this->archiveUris;
   }
-  public function setArgs($args)
+  public function setArgs(array $args)
   {
     $this->args = $args;
   }
@@ -44,7 +43,7 @@ class Google_Service_Dataproc_PySparkJob extends Google_Collection
   {
     return $this->args;
   }
-  public function setFileUris($fileUris)
+  public function setFileUris(array $fileUris)
   {
     $this->fileUris = $fileUris;
   }
@@ -52,7 +51,7 @@ class Google_Service_Dataproc_PySparkJob extends Google_Collection
   {
     return $this->fileUris;
   }
-  public function setJarFileUris($jarFileUris)
+  public function setJarFileUris(array $jarFileUris)
   {
     $this->jarFileUris = $jarFileUris;
   }
@@ -76,7 +75,7 @@ class Google_Service_Dataproc_PySparkJob extends Google_Collection
   {
     return $this->mainPythonFileUri;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
     $this->properties = $properties;
   }
@@ -84,7 +83,7 @@ class Google_Service_Dataproc_PySparkJob extends Google_Collection
   {
     return $this->properties;
   }
-  public function setPythonFileUris($pythonFileUris)
+  public function setPythonFileUris(array $pythonFileUris)
   {
     $this->pythonFileUris = $pythonFileUris;
   }

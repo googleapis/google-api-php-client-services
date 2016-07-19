@@ -18,8 +18,7 @@
 class Google_Service_Compute_RouterStatusBgpPeerStatus extends Google_Collection
 {
   protected $collection_key = 'advertisedRoutes';
-  protected $advertisedRoutesType = 'Google_Service_Compute_Route';
-  protected $advertisedRoutesDataType = 'array';
+  public $advertisedRoutes;
   public $ipAddress;
   public $linkedVpnTunnel;
   public $name;
@@ -30,8 +29,13 @@ class Google_Service_Compute_RouterStatusBgpPeerStatus extends Google_Collection
   public $uptime;
   public $uptimeSeconds;
 
-  public function setAdvertisedRoutes($advertisedRoutes)
+  public function setAdvertisedRoutes(array $advertisedRoutes)
   {
+    foreach ($advertisedRoutes as $a) {
+      if (!$a instanceof Google_Service_Compute_Route) {
+        throw new InvalidArgumentException('First argument to setAdvertisedRoutes must be an array of Google_Service_Compute_Route');
+      }
+    }
     $this->advertisedRoutes = $advertisedRoutes;
   }
   public function getAdvertisedRoutes()

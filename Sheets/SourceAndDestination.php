@@ -19,8 +19,7 @@ class Google_Service_Sheets_SourceAndDestination extends Google_Model
 {
   public $dimension;
   public $fillLength;
-  protected $sourceType = 'Google_Service_Sheets_GridRange';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setDimension($dimension)
   {

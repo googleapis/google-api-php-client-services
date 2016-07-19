@@ -18,13 +18,17 @@
 class Google_Service_Pubsub_Policy extends Google_Collection
 {
   protected $collection_key = 'bindings';
-  protected $bindingsType = 'Google_Service_Pubsub_Binding';
-  protected $bindingsDataType = 'array';
+  public $bindings;
   public $etag;
   public $version;
 
-  public function setBindings($bindings)
+  public function setBindings(array $bindings)
   {
+    foreach ($bindings as $b) {
+      if (!$b instanceof Google_Service_Pubsub_Binding) {
+        throw new InvalidArgumentException('First argument to setBindings must be an array of Google_Service_Pubsub_Binding');
+      }
+    }
     $this->bindings = $bindings;
   }
   public function getBindings()

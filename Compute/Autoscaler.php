@@ -17,8 +17,7 @@
 
 class Google_Service_Compute_Autoscaler extends Google_Model
 {
-  protected $autoscalingPolicyType = 'Google_Service_Compute_AutoscalingPolicy';
-  protected $autoscalingPolicyDataType = '';
+  public $autoscalingPolicy;
   public $creationTimestamp;
   public $description;
   public $id;

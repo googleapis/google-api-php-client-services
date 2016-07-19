@@ -18,12 +18,16 @@
 class Google_Service_Analytics_GoalEventDetails extends Google_Collection
 {
   protected $collection_key = 'eventConditions';
-  protected $eventConditionsType = 'Google_Service_Analytics_GoalEventDetailsEventConditions';
-  protected $eventConditionsDataType = 'array';
+  public $eventConditions;
   public $useEventValue;
 
-  public function setEventConditions($eventConditions)
+  public function setEventConditions(array $eventConditions)
   {
+    foreach ($eventConditions as $e) {
+      if (!$e instanceof Google_Service_Analytics_GoalEventDetailsEventConditions) {
+        throw new InvalidArgumentException('First argument to setEventConditions must be an array of Google_Service_Analytics_GoalEventDetailsEventConditions');
+      }
+    }
     $this->eventConditions = $eventConditions;
   }
   public function getEventConditions()

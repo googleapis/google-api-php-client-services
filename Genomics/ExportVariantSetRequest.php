@@ -40,7 +40,7 @@ class Google_Service_Genomics_ExportVariantSetRequest extends Google_Collection
   {
     return $this->bigqueryTable;
   }
-  public function setCallSetIds($callSetIds)
+  public function setCallSetIds(array $callSetIds)
   {
     $this->callSetIds = $callSetIds;
   }

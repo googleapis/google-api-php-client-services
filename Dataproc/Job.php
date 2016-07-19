@@ -20,26 +20,16 @@ class Google_Service_Dataproc_Job extends Google_Collection
   protected $collection_key = 'statusHistory';
   public $driverControlFilesUri;
   public $driverOutputResourceUri;
-  protected $hadoopJobType = 'Google_Service_Dataproc_HadoopJob';
-  protected $hadoopJobDataType = '';
-  protected $hiveJobType = 'Google_Service_Dataproc_HiveJob';
-  protected $hiveJobDataType = '';
-  protected $pigJobType = 'Google_Service_Dataproc_PigJob';
-  protected $pigJobDataType = '';
-  protected $placementType = 'Google_Service_Dataproc_JobPlacement';
-  protected $placementDataType = '';
-  protected $pysparkJobType = 'Google_Service_Dataproc_PySparkJob';
-  protected $pysparkJobDataType = '';
-  protected $referenceType = 'Google_Service_Dataproc_JobReference';
-  protected $referenceDataType = '';
-  protected $sparkJobType = 'Google_Service_Dataproc_SparkJob';
-  protected $sparkJobDataType = '';
-  protected $sparkSqlJobType = 'Google_Service_Dataproc_SparkSqlJob';
-  protected $sparkSqlJobDataType = '';
-  protected $statusType = 'Google_Service_Dataproc_JobStatus';
-  protected $statusDataType = '';
-  protected $statusHistoryType = 'Google_Service_Dataproc_JobStatus';
-  protected $statusHistoryDataType = 'array';
+  public $hadoopJob;
+  public $hiveJob;
+  public $pigJob;
+  public $placement;
+  public $pysparkJob;
+  public $reference;
+  public $sparkJob;
+  public $sparkSqlJob;
+  public $status;
+  public $statusHistory;
 
   public function setDriverControlFilesUri($driverControlFilesUri)
   {
@@ -129,8 +119,13 @@ class Google_Service_Dataproc_Job extends Google_Collection
   {
     return $this->status;
   }
-  public function setStatusHistory($statusHistory)
+  public function setStatusHistory(array $statusHistory)
   {
+    foreach ($statusHistory as $s) {
+      if (!$s instanceof Google_Service_Dataproc_JobStatus) {
+        throw new InvalidArgumentException('First argument to setStatusHistory must be an array of Google_Service_Dataproc_JobStatus');
+      }
+    }
     $this->statusHistory = $statusHistory;
   }
   public function getStatusHistory()

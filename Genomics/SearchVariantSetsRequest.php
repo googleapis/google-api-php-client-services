@@ -22,7 +22,7 @@ class Google_Service_Genomics_SearchVariantSetsRequest extends Google_Collection
   public $pageSize;
   public $pageToken;
 
-  public function setDatasetIds($datasetIds)
+  public function setDatasetIds(array $datasetIds)
   {
     $this->datasetIds = $datasetIds;
   }

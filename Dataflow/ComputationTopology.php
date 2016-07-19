@@ -19,14 +19,10 @@ class Google_Service_Dataflow_ComputationTopology extends Google_Collection
 {
   protected $collection_key = 'stateFamilies';
   public $computationId;
-  protected $inputsType = 'Google_Service_Dataflow_StreamLocation';
-  protected $inputsDataType = 'array';
-  protected $keyRangesType = 'Google_Service_Dataflow_KeyRangeLocation';
-  protected $keyRangesDataType = 'array';
-  protected $outputsType = 'Google_Service_Dataflow_StreamLocation';
-  protected $outputsDataType = 'array';
-  protected $stateFamiliesType = 'Google_Service_Dataflow_StateFamilyConfig';
-  protected $stateFamiliesDataType = 'array';
+  public $inputs;
+  public $keyRanges;
+  public $outputs;
+  public $stateFamilies;
   public $systemStageName;
   public $userStageName;
 
@@ -38,32 +34,52 @@ class Google_Service_Dataflow_ComputationTopology extends Google_Collection
   {
     return $this->computationId;
   }
-  public function setInputs($inputs)
+  public function setInputs(array $inputs)
   {
+    foreach ($inputs as $i) {
+      if (!$i instanceof Google_Service_Dataflow_StreamLocation) {
+        throw new InvalidArgumentException('First argument to setInputs must be an array of Google_Service_Dataflow_StreamLocation');
+      }
+    }
     $this->inputs = $inputs;
   }
   public function getInputs()
   {
     return $this->inputs;
   }
-  public function setKeyRanges($keyRanges)
+  public function setKeyRanges(array $keyRanges)
   {
+    foreach ($keyRanges as $k) {
+      if (!$k instanceof Google_Service_Dataflow_KeyRangeLocation) {
+        throw new InvalidArgumentException('First argument to setKeyRanges must be an array of Google_Service_Dataflow_KeyRangeLocation');
+      }
+    }
     $this->keyRanges = $keyRanges;
   }
   public function getKeyRanges()
   {
     return $this->keyRanges;
   }
-  public function setOutputs($outputs)
+  public function setOutputs(array $outputs)
   {
+    foreach ($outputs as $o) {
+      if (!$o instanceof Google_Service_Dataflow_StreamLocation) {
+        throw new InvalidArgumentException('First argument to setOutputs must be an array of Google_Service_Dataflow_StreamLocation');
+      }
+    }
     $this->outputs = $outputs;
   }
   public function getOutputs()
   {
     return $this->outputs;
   }
-  public function setStateFamilies($stateFamilies)
+  public function setStateFamilies(array $stateFamilies)
   {
+    foreach ($stateFamilies as $s) {
+      if (!$s instanceof Google_Service_Dataflow_StateFamilyConfig) {
+        throw new InvalidArgumentException('First argument to setStateFamilies must be an array of Google_Service_Dataflow_StateFamilyConfig');
+      }
+    }
     $this->stateFamilies = $stateFamilies;
   }
   public function getStateFamilies()

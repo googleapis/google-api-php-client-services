@@ -18,11 +18,15 @@
 class Google_Service_AndroidPublisher_ImagesListResponse extends Google_Collection
 {
   protected $collection_key = 'images';
-  protected $imagesType = 'Google_Service_AndroidPublisher_Image';
-  protected $imagesDataType = 'array';
+  public $images;
 
-  public function setImages($images)
+  public function setImages(array $images)
   {
+    foreach ($images as $i) {
+      if (!$i instanceof Google_Service_AndroidPublisher_Image) {
+        throw new InvalidArgumentException('First argument to setImages must be an array of Google_Service_AndroidPublisher_Image');
+      }
+    }
     $this->images = $images;
   }
   public function getImages()

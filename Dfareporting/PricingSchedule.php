@@ -23,8 +23,7 @@ class Google_Service_Dfareporting_PricingSchedule extends Google_Collection
   public $endDate;
   public $flighted;
   public $floodlightActivityId;
-  protected $pricingPeriodsType = 'Google_Service_Dfareporting_PricingSchedulePricingPeriod';
-  protected $pricingPeriodsDataType = 'array';
+  public $pricingPeriods;
   public $pricingType;
   public $startDate;
   public $testingStartDate;
@@ -69,8 +68,13 @@ class Google_Service_Dfareporting_PricingSchedule extends Google_Collection
   {
     return $this->floodlightActivityId;
   }
-  public function setPricingPeriods($pricingPeriods)
+  public function setPricingPeriods(array $pricingPeriods)
   {
+    foreach ($pricingPeriods as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_PricingSchedulePricingPeriod) {
+        throw new InvalidArgumentException('First argument to setPricingPeriods must be an array of Google_Service_Dfareporting_PricingSchedulePricingPeriod');
+      }
+    }
     $this->pricingPeriods = $pricingPeriods;
   }
   public function getPricingPeriods()

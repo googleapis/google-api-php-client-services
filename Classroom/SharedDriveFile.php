@@ -17,8 +17,7 @@
 
 class Google_Service_Classroom_SharedDriveFile extends Google_Model
 {
-  protected $driveFileType = 'Google_Service_Classroom_DriveFile';
-  protected $driveFileDataType = '';
+  public $driveFile;
   public $shareMode;
 
   public function setDriveFile(Google_Service_Classroom_DriveFile $driveFile)

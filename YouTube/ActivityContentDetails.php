@@ -17,28 +17,17 @@
 
 class Google_Service_YouTube_ActivityContentDetails extends Google_Model
 {
-  protected $bulletinType = 'Google_Service_YouTube_ActivityContentDetailsBulletin';
-  protected $bulletinDataType = '';
-  protected $channelItemType = 'Google_Service_YouTube_ActivityContentDetailsChannelItem';
-  protected $channelItemDataType = '';
-  protected $commentType = 'Google_Service_YouTube_ActivityContentDetailsComment';
-  protected $commentDataType = '';
-  protected $favoriteType = 'Google_Service_YouTube_ActivityContentDetailsFavorite';
-  protected $favoriteDataType = '';
-  protected $likeType = 'Google_Service_YouTube_ActivityContentDetailsLike';
-  protected $likeDataType = '';
-  protected $playlistItemType = 'Google_Service_YouTube_ActivityContentDetailsPlaylistItem';
-  protected $playlistItemDataType = '';
-  protected $promotedItemType = 'Google_Service_YouTube_ActivityContentDetailsPromotedItem';
-  protected $promotedItemDataType = '';
-  protected $recommendationType = 'Google_Service_YouTube_ActivityContentDetailsRecommendation';
-  protected $recommendationDataType = '';
-  protected $socialType = 'Google_Service_YouTube_ActivityContentDetailsSocial';
-  protected $socialDataType = '';
-  protected $subscriptionType = 'Google_Service_YouTube_ActivityContentDetailsSubscription';
-  protected $subscriptionDataType = '';
-  protected $uploadType = 'Google_Service_YouTube_ActivityContentDetailsUpload';
-  protected $uploadDataType = '';
+  public $bulletin;
+  public $channelItem;
+  public $comment;
+  public $favorite;
+  public $like;
+  public $playlistItem;
+  public $promotedItem;
+  public $recommendation;
+  public $social;
+  public $subscription;
+  public $upload;
 
   public function setBulletin(Google_Service_YouTube_ActivityContentDetailsBulletin $bulletin)
   {

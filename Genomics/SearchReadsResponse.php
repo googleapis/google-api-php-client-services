@@ -18,12 +18,16 @@
 class Google_Service_Genomics_SearchReadsResponse extends Google_Collection
 {
   protected $collection_key = 'alignments';
-  protected $alignmentsType = 'Google_Service_Genomics_Read';
-  protected $alignmentsDataType = 'array';
+  public $alignments;
   public $nextPageToken;
 
-  public function setAlignments($alignments)
+  public function setAlignments(array $alignments)
   {
+    foreach ($alignments as $a) {
+      if (!$a instanceof Google_Service_Genomics_Read) {
+        throw new InvalidArgumentException('First argument to setAlignments must be an array of Google_Service_Genomics_Read');
+      }
+    }
     $this->alignments = $alignments;
   }
   public function getAlignments()

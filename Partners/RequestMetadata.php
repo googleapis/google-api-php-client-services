@@ -21,12 +21,10 @@ class Google_Service_Partners_RequestMetadata extends Google_Collection
   public $experimentIds;
   public $locale;
   public $partnersSessionId;
-  protected $trafficSourceType = 'Google_Service_Partners_TrafficSource';
-  protected $trafficSourceDataType = '';
-  protected $userOverridesType = 'Google_Service_Partners_UserOverrides';
-  protected $userOverridesDataType = '';
+  public $trafficSource;
+  public $userOverrides;
 
-  public function setExperimentIds($experimentIds)
+  public function setExperimentIds(array $experimentIds)
   {
     $this->experimentIds = $experimentIds;
   }

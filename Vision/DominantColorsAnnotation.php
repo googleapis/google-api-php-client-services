@@ -18,11 +18,15 @@
 class Google_Service_Vision_DominantColorsAnnotation extends Google_Collection
 {
   protected $collection_key = 'colors';
-  protected $colorsType = 'Google_Service_Vision_ColorInfo';
-  protected $colorsDataType = 'array';
+  public $colors;
 
-  public function setColors($colors)
+  public function setColors(array $colors)
   {
+    foreach ($colors as $c) {
+      if (!$c instanceof Google_Service_Vision_ColorInfo) {
+        throw new InvalidArgumentException('First argument to setColors must be an array of Google_Service_Vision_ColorInfo');
+      }
+    }
     $this->colors = $colors;
   }
   public function getColors()

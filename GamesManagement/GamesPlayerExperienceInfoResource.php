@@ -18,11 +18,9 @@
 class Google_Service_GamesManagement_GamesPlayerExperienceInfoResource extends Google_Model
 {
   public $currentExperiencePoints;
-  protected $currentLevelType = 'Google_Service_GamesManagement_GamesPlayerLevelResource';
-  protected $currentLevelDataType = '';
+  public $currentLevel;
   public $lastLevelUpTimestampMillis;
-  protected $nextLevelType = 'Google_Service_GamesManagement_GamesPlayerLevelResource';
-  protected $nextLevelDataType = '';
+  public $nextLevel;
 
   public function setCurrentExperiencePoints($currentExperiencePoints)
   {

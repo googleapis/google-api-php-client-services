@@ -18,11 +18,15 @@
 class Google_Service_Fitness_ListDataSourcesResponse extends Google_Collection
 {
   protected $collection_key = 'dataSource';
-  protected $dataSourceType = 'Google_Service_Fitness_DataSource';
-  protected $dataSourceDataType = 'array';
+  public $dataSource;
 
-  public function setDataSource($dataSource)
+  public function setDataSource(array $dataSource)
   {
+    foreach ($dataSource as $d) {
+      if (!$d instanceof Google_Service_Fitness_DataSource) {
+        throw new InvalidArgumentException('First argument to setDataSource must be an array of Google_Service_Fitness_DataSource');
+      }
+    }
     $this->dataSource = $dataSource;
   }
   public function getDataSource()

@@ -32,7 +32,7 @@ class Google_Service_Dfareporting_Subaccount extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setAvailablePermissionIds($availablePermissionIds)
+  public function setAvailablePermissionIds(array $availablePermissionIds)
   {
     $this->availablePermissionIds = $availablePermissionIds;
   }

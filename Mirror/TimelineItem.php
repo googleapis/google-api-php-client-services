@@ -18,13 +18,11 @@
 class Google_Service_Mirror_TimelineItem extends Google_Collection
 {
   protected $collection_key = 'recipients';
-  protected $attachmentsType = 'Google_Service_Mirror_Attachment';
-  protected $attachmentsDataType = 'array';
+  public $attachments;
   public $bundleId;
   public $canonicalUrl;
   public $created;
-  protected $creatorType = 'Google_Service_Mirror_Contact';
-  protected $creatorDataType = '';
+  public $creator;
   public $displayTime;
   public $etag;
   public $html;
@@ -34,15 +32,11 @@ class Google_Service_Mirror_TimelineItem extends Google_Collection
   public $isDeleted;
   public $isPinned;
   public $kind;
-  protected $locationType = 'Google_Service_Mirror_Location';
-  protected $locationDataType = '';
-  protected $menuItemsType = 'Google_Service_Mirror_MenuItem';
-  protected $menuItemsDataType = 'array';
-  protected $notificationType = 'Google_Service_Mirror_NotificationConfig';
-  protected $notificationDataType = '';
+  public $location;
+  public $menuItems;
+  public $notification;
   public $pinScore;
-  protected $recipientsType = 'Google_Service_Mirror_Contact';
-  protected $recipientsDataType = 'array';
+  public $recipients;
   public $selfLink;
   public $sourceItemId;
   public $speakableText;
@@ -51,8 +45,13 @@ class Google_Service_Mirror_TimelineItem extends Google_Collection
   public $title;
   public $updated;
 
-  public function setAttachments($attachments)
+  public function setAttachments(array $attachments)
   {
+    foreach ($attachments as $a) {
+      if (!$a instanceof Google_Service_Mirror_Attachment) {
+        throw new InvalidArgumentException('First argument to setAttachments must be an array of Google_Service_Mirror_Attachment');
+      }
+    }
     $this->attachments = $attachments;
   }
   public function getAttachments()
@@ -171,8 +170,13 @@ class Google_Service_Mirror_TimelineItem extends Google_Collection
   {
     return $this->location;
   }
-  public function setMenuItems($menuItems)
+  public function setMenuItems(array $menuItems)
   {
+    foreach ($menuItems as $m) {
+      if (!$m instanceof Google_Service_Mirror_MenuItem) {
+        throw new InvalidArgumentException('First argument to setMenuItems must be an array of Google_Service_Mirror_MenuItem');
+      }
+    }
     $this->menuItems = $menuItems;
   }
   public function getMenuItems()
@@ -195,8 +199,13 @@ class Google_Service_Mirror_TimelineItem extends Google_Collection
   {
     return $this->pinScore;
   }
-  public function setRecipients($recipients)
+  public function setRecipients(array $recipients)
   {
+    foreach ($recipients as $r) {
+      if (!$r instanceof Google_Service_Mirror_Contact) {
+        throw new InvalidArgumentException('First argument to setRecipients must be an array of Google_Service_Mirror_Contact');
+      }
+    }
     $this->recipients = $recipients;
   }
   public function getRecipients()

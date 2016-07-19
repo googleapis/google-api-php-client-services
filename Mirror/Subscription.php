@@ -22,8 +22,7 @@ class Google_Service_Mirror_Subscription extends Google_Collection
   public $collection;
   public $id;
   public $kind;
-  protected $notificationType = 'Google_Service_Mirror_Notification';
-  protected $notificationDataType = '';
+  public $notification;
   public $operation;
   public $updated;
   public $userToken;
@@ -69,7 +68,7 @@ class Google_Service_Mirror_Subscription extends Google_Collection
   {
     return $this->notification;
   }
-  public function setOperation($operation)
+  public function setOperation(array $operation)
   {
     $this->operation = $operation;
   }

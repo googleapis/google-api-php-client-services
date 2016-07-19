@@ -19,12 +19,10 @@ class Google_Service_CloudMonitoring_MetricDescriptor extends Google_Collection
 {
   protected $collection_key = 'labels';
   public $description;
-  protected $labelsType = 'Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $name;
   public $project;
-  protected $typeDescriptorType = 'Google_Service_CloudMonitoring_MetricDescriptorTypeDescriptor';
-  protected $typeDescriptorDataType = '';
+  public $typeDescriptor;
 
   public function setDescription($description)
   {
@@ -34,8 +32,13 @@ class Google_Service_CloudMonitoring_MetricDescriptor extends Google_Collection
   {
     return $this->description;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_CloudMonitoring_MetricDescriptorLabelDescriptor');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()

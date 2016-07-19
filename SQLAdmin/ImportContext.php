@@ -17,8 +17,7 @@
 
 class Google_Service_SQLAdmin_ImportContext extends Google_Model
 {
-  protected $csvImportOptionsType = 'Google_Service_SQLAdmin_ImportContextCsvImportOptions';
-  protected $csvImportOptionsDataType = '';
+  public $csvImportOptions;
   public $database;
   public $fileType;
   public $kind;

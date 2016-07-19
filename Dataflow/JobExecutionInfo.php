@@ -17,10 +17,9 @@
 
 class Google_Service_Dataflow_JobExecutionInfo extends Google_Model
 {
-  protected $stagesType = 'Google_Service_Dataflow_JobExecutionStageInfo';
-  protected $stagesDataType = 'map';
+  public $stages;
 
-  public function setStages($stages)
+  public function setStages(array $stages)
   {
     $this->stages = $stages;
   }

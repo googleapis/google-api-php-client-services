@@ -28,19 +28,15 @@ class Google_Service_TagManager_Tag extends Google_Collection
   public $liveOnly;
   public $name;
   public $notes;
-  protected $parameterType = 'Google_Service_TagManager_Parameter';
-  protected $parameterDataType = 'array';
+  public $parameter;
   public $parentFolderId;
-  protected $priorityType = 'Google_Service_TagManager_Parameter';
-  protected $priorityDataType = '';
+  public $priority;
   public $scheduleEndMs;
   public $scheduleStartMs;
-  protected $setupTagType = 'Google_Service_TagManager_SetupTag';
-  protected $setupTagDataType = 'array';
+  public $setupTag;
   public $tagFiringOption;
   public $tagId;
-  protected $teardownTagType = 'Google_Service_TagManager_TeardownTag';
-  protected $teardownTagDataType = 'array';
+  public $teardownTag;
   public $type;
 
   public function setAccountId($accountId)
@@ -51,7 +47,7 @@ class Google_Service_TagManager_Tag extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setBlockingRuleId($blockingRuleId)
+  public function setBlockingRuleId(array $blockingRuleId)
   {
     $this->blockingRuleId = $blockingRuleId;
   }
@@ -59,7 +55,7 @@ class Google_Service_TagManager_Tag extends Google_Collection
   {
     return $this->blockingRuleId;
   }
-  public function setBlockingTriggerId($blockingTriggerId)
+  public function setBlockingTriggerId(array $blockingTriggerId)
   {
     $this->blockingTriggerId = $blockingTriggerId;
   }
@@ -83,7 +79,7 @@ class Google_Service_TagManager_Tag extends Google_Collection
   {
     return $this->fingerprint;
   }
-  public function setFiringRuleId($firingRuleId)
+  public function setFiringRuleId(array $firingRuleId)
   {
     $this->firingRuleId = $firingRuleId;
   }
@@ -91,7 +87,7 @@ class Google_Service_TagManager_Tag extends Google_Collection
   {
     return $this->firingRuleId;
   }
-  public function setFiringTriggerId($firingTriggerId)
+  public function setFiringTriggerId(array $firingTriggerId)
   {
     $this->firingTriggerId = $firingTriggerId;
   }
@@ -123,8 +119,13 @@ class Google_Service_TagManager_Tag extends Google_Collection
   {
     return $this->notes;
   }
-  public function setParameter($parameter)
+  public function setParameter(array $parameter)
   {
+    foreach ($parameter as $p) {
+      if (!$p instanceof Google_Service_TagManager_Parameter) {
+        throw new InvalidArgumentException('First argument to setParameter must be an array of Google_Service_TagManager_Parameter');
+      }
+    }
     $this->parameter = $parameter;
   }
   public function getParameter()
@@ -163,8 +164,13 @@ class Google_Service_TagManager_Tag extends Google_Collection
   {
     return $this->scheduleStartMs;
   }
-  public function setSetupTag($setupTag)
+  public function setSetupTag(array $setupTag)
   {
+    foreach ($setupTag as $s) {
+      if (!$s instanceof Google_Service_TagManager_SetupTag) {
+        throw new InvalidArgumentException('First argument to setSetupTag must be an array of Google_Service_TagManager_SetupTag');
+      }
+    }
     $this->setupTag = $setupTag;
   }
   public function getSetupTag()
@@ -187,8 +193,13 @@ class Google_Service_TagManager_Tag extends Google_Collection
   {
     return $this->tagId;
   }
-  public function setTeardownTag($teardownTag)
+  public function setTeardownTag(array $teardownTag)
   {
+    foreach ($teardownTag as $t) {
+      if (!$t instanceof Google_Service_TagManager_TeardownTag) {
+        throw new InvalidArgumentException('First argument to setTeardownTag must be an array of Google_Service_TagManager_TeardownTag');
+      }
+    }
     $this->teardownTag = $teardownTag;
   }
   public function getTeardownTag()

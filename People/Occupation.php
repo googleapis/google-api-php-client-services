@@ -17,8 +17,7 @@
 
 class Google_Service_People_Occupation extends Google_Model
 {
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $value;
 
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)

@@ -18,11 +18,15 @@
 class Google_Service_AndroidPublisher_ImagesDeleteAllResponse extends Google_Collection
 {
   protected $collection_key = 'deleted';
-  protected $deletedType = 'Google_Service_AndroidPublisher_Image';
-  protected $deletedDataType = 'array';
+  public $deleted;
 
-  public function setDeleted($deleted)
+  public function setDeleted(array $deleted)
   {
+    foreach ($deleted as $d) {
+      if (!$d instanceof Google_Service_AndroidPublisher_Image) {
+        throw new InvalidArgumentException('First argument to setDeleted must be an array of Google_Service_AndroidPublisher_Image');
+      }
+    }
     $this->deleted = $deleted;
   }
   public function getDeleted()

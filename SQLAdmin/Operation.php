@@ -18,12 +18,9 @@
 class Google_Service_SQLAdmin_Operation extends Google_Model
 {
   public $endTime;
-  protected $errorType = 'Google_Service_SQLAdmin_OperationErrors';
-  protected $errorDataType = '';
-  protected $exportContextType = 'Google_Service_SQLAdmin_ExportContext';
-  protected $exportContextDataType = '';
-  protected $importContextType = 'Google_Service_SQLAdmin_ImportContext';
-  protected $importContextDataType = '';
+  public $error;
+  public $exportContext;
+  public $importContext;
   public $insertTime;
   public $kind;
   public $name;

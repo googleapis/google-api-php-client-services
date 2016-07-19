@@ -39,8 +39,7 @@ class Google_Service_Directory_User extends Google_Collection
   public $isMailboxSetup;
   public $kind;
   public $lastLoginTime;
-  protected $nameType = 'Google_Service_Directory_UserName';
-  protected $nameDataType = '';
+  public $name;
   public $nonEditableAliases;
   public $notes;
   public $orgUnitPath;
@@ -71,7 +70,7 @@ class Google_Service_Directory_User extends Google_Collection
   {
     return $this->agreedToTerms;
   }
-  public function setAliases($aliases)
+  public function setAliases(array $aliases)
   {
     $this->aliases = $aliases;
   }
@@ -95,7 +94,7 @@ class Google_Service_Directory_User extends Google_Collection
   {
     return $this->creationTime;
   }
-  public function setCustomSchemas($customSchemas)
+  public function setCustomSchemas(array $customSchemas)
   {
     $this->customSchemas = $customSchemas;
   }
@@ -231,7 +230,7 @@ class Google_Service_Directory_User extends Google_Collection
   {
     return $this->name;
   }
-  public function setNonEditableAliases($nonEditableAliases)
+  public function setNonEditableAliases(array $nonEditableAliases)
   {
     $this->nonEditableAliases = $nonEditableAliases;
   }

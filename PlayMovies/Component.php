@@ -41,7 +41,7 @@ class Google_Service_PlayMovies_Component extends Google_Collection
   public $titleLevelEidrs;
   public $type;
 
-  public function setAltCutIds($altCutIds)
+  public function setAltCutIds(array $altCutIds)
   {
     $this->altCutIds = $altCutIds;
   }
@@ -73,7 +73,7 @@ class Google_Service_PlayMovies_Component extends Google_Collection
   {
     return $this->componentId;
   }
-  public function setCustomIds($customIds)
+  public function setCustomIds(array $customIds)
   {
     $this->customIds = $customIds;
   }
@@ -81,7 +81,7 @@ class Google_Service_PlayMovies_Component extends Google_Collection
   {
     return $this->customIds;
   }
-  public function setEditLevelEidrs($editLevelEidrs)
+  public function setEditLevelEidrs(array $editLevelEidrs)
   {
     $this->editLevelEidrs = $editLevelEidrs;
   }
@@ -89,7 +89,7 @@ class Google_Service_PlayMovies_Component extends Google_Collection
   {
     return $this->editLevelEidrs;
   }
-  public function setElIds($elIds)
+  public function setElIds(array $elIds)
   {
     $this->elIds = $elIds;
   }
@@ -153,7 +153,7 @@ class Google_Service_PlayMovies_Component extends Google_Collection
   {
     return $this->priority;
   }
-  public function setProcessingErrors($processingErrors)
+  public function setProcessingErrors(array $processingErrors)
   {
     $this->processingErrors = $processingErrors;
   }
@@ -201,7 +201,7 @@ class Google_Service_PlayMovies_Component extends Google_Collection
   {
     return $this->studioName;
   }
-  public function setTitleLevelEidrs($titleLevelEidrs)
+  public function setTitleLevelEidrs(array $titleLevelEidrs)
   {
     $this->titleLevelEidrs = $titleLevelEidrs;
   }

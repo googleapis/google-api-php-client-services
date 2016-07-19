@@ -18,40 +18,29 @@
 class Google_Service_Appengine_Version extends Google_Collection
 {
   protected $collection_key = 'libraries';
-  protected $apiConfigType = 'Google_Service_Appengine_ApiConfigHandler';
-  protected $apiConfigDataType = '';
-  protected $automaticScalingType = 'Google_Service_Appengine_AutomaticScaling';
-  protected $automaticScalingDataType = '';
-  protected $basicScalingType = 'Google_Service_Appengine_BasicScaling';
-  protected $basicScalingDataType = '';
+  public $apiConfig;
+  public $automaticScaling;
+  public $basicScaling;
   public $betaSettings;
   public $creationTime;
   public $defaultExpiration;
   public $deployer;
-  protected $deploymentType = 'Google_Service_Appengine_Deployment';
-  protected $deploymentDataType = '';
+  public $deployment;
   public $diskUsageBytes;
   public $env;
   public $envVariables;
-  protected $errorHandlersType = 'Google_Service_Appengine_ErrorHandler';
-  protected $errorHandlersDataType = 'array';
-  protected $handlersType = 'Google_Service_Appengine_UrlMap';
-  protected $handlersDataType = 'array';
-  protected $healthCheckType = 'Google_Service_Appengine_HealthCheck';
-  protected $healthCheckDataType = '';
+  public $errorHandlers;
+  public $handlers;
+  public $healthCheck;
   public $id;
   public $inboundServices;
   public $instanceClass;
-  protected $librariesType = 'Google_Service_Appengine_Library';
-  protected $librariesDataType = 'array';
-  protected $manualScalingType = 'Google_Service_Appengine_ManualScaling';
-  protected $manualScalingDataType = '';
+  public $libraries;
+  public $manualScaling;
   public $name;
-  protected $networkType = 'Google_Service_Appengine_Network';
-  protected $networkDataType = '';
+  public $network;
   public $nobuildFilesRegex;
-  protected $resourcesType = 'Google_Service_Appengine_Resources';
-  protected $resourcesDataType = '';
+  public $resources;
   public $runtime;
   public $servingStatus;
   public $threadsafe;
@@ -81,7 +70,7 @@ class Google_Service_Appengine_Version extends Google_Collection
   {
     return $this->basicScaling;
   }
-  public function setBetaSettings($betaSettings)
+  public function setBetaSettings(array $betaSettings)
   {
     $this->betaSettings = $betaSettings;
   }
@@ -137,7 +126,7 @@ class Google_Service_Appengine_Version extends Google_Collection
   {
     return $this->env;
   }
-  public function setEnvVariables($envVariables)
+  public function setEnvVariables(array $envVariables)
   {
     $this->envVariables = $envVariables;
   }
@@ -145,16 +134,26 @@ class Google_Service_Appengine_Version extends Google_Collection
   {
     return $this->envVariables;
   }
-  public function setErrorHandlers($errorHandlers)
+  public function setErrorHandlers(array $errorHandlers)
   {
+    foreach ($errorHandlers as $e) {
+      if (!$e instanceof Google_Service_Appengine_ErrorHandler) {
+        throw new InvalidArgumentException('First argument to setErrorHandlers must be an array of Google_Service_Appengine_ErrorHandler');
+      }
+    }
     $this->errorHandlers = $errorHandlers;
   }
   public function getErrorHandlers()
   {
     return $this->errorHandlers;
   }
-  public function setHandlers($handlers)
+  public function setHandlers(array $handlers)
   {
+    foreach ($handlers as $h) {
+      if (!$h instanceof Google_Service_Appengine_UrlMap) {
+        throw new InvalidArgumentException('First argument to setHandlers must be an array of Google_Service_Appengine_UrlMap');
+      }
+    }
     $this->handlers = $handlers;
   }
   public function getHandlers()
@@ -177,7 +176,7 @@ class Google_Service_Appengine_Version extends Google_Collection
   {
     return $this->id;
   }
-  public function setInboundServices($inboundServices)
+  public function setInboundServices(array $inboundServices)
   {
     $this->inboundServices = $inboundServices;
   }
@@ -193,8 +192,13 @@ class Google_Service_Appengine_Version extends Google_Collection
   {
     return $this->instanceClass;
   }
-  public function setLibraries($libraries)
+  public function setLibraries(array $libraries)
   {
+    foreach ($libraries as $l) {
+      if (!$l instanceof Google_Service_Appengine_Library) {
+        throw new InvalidArgumentException('First argument to setLibraries must be an array of Google_Service_Appengine_Library');
+      }
+    }
     $this->libraries = $libraries;
   }
   public function getLibraries()

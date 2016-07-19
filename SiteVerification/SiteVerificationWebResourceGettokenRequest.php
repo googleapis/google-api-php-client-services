@@ -17,8 +17,7 @@
 
 class Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequest extends Google_Model
 {
-  protected $siteType = 'Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite';
-  protected $siteDataType = '';
+  public $site;
   public $verificationMethod;
 
   public function setSite(Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite $site)

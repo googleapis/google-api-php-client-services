@@ -18,12 +18,16 @@
 class Google_Service_Cloudbilling_ListBillingAccountsResponse extends Google_Collection
 {
   protected $collection_key = 'billingAccounts';
-  protected $billingAccountsType = 'Google_Service_Cloudbilling_BillingAccount';
-  protected $billingAccountsDataType = 'array';
+  public $billingAccounts;
   public $nextPageToken;
 
-  public function setBillingAccounts($billingAccounts)
+  public function setBillingAccounts(array $billingAccounts)
   {
+    foreach ($billingAccounts as $b) {
+      if (!$b instanceof Google_Service_Cloudbilling_BillingAccount) {
+        throw new InvalidArgumentException('First argument to setBillingAccounts must be an array of Google_Service_Cloudbilling_BillingAccount');
+      }
+    }
     $this->billingAccounts = $billingAccounts;
   }
   public function getBillingAccounts()

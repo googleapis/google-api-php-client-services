@@ -17,10 +17,8 @@
 
 class Google_Service_Dataflow_CounterStructuredNameAndMetadata extends Google_Model
 {
-  protected $metadataType = 'Google_Service_Dataflow_CounterMetadata';
-  protected $metadataDataType = '';
-  protected $nameType = 'Google_Service_Dataflow_CounterStructuredName';
-  protected $nameDataType = '';
+  public $metadata;
+  public $name;
 
   public function setMetadata(Google_Service_Dataflow_CounterMetadata $metadata)
   {

@@ -21,14 +21,11 @@ class Google_Service_CivicInfo_AdministrationRegion extends Google_Collection
   protected $internal_gapi_mappings = array(
         "localJurisdiction" => "local_jurisdiction",
   );
-  protected $electionAdministrationBodyType = 'Google_Service_CivicInfo_AdministrativeBody';
-  protected $electionAdministrationBodyDataType = '';
+  public $electionAdministrationBody;
   public $id;
-  protected $localJurisdictionType = 'Google_Service_CivicInfo_AdministrationRegion';
-  protected $localJurisdictionDataType = '';
+  public $localJurisdiction;
   public $name;
-  protected $sourcesType = 'Google_Service_CivicInfo_Source';
-  protected $sourcesDataType = 'array';
+  public $sources;
 
   public function setElectionAdministrationBody(Google_Service_CivicInfo_AdministrativeBody $electionAdministrationBody)
   {
@@ -62,8 +59,13 @@ class Google_Service_CivicInfo_AdministrationRegion extends Google_Collection
   {
     return $this->name;
   }
-  public function setSources($sources)
+  public function setSources(array $sources)
   {
+    foreach ($sources as $s) {
+      if (!$s instanceof Google_Service_CivicInfo_Source) {
+        throw new InvalidArgumentException('First argument to setSources must be an array of Google_Service_CivicInfo_Source');
+      }
+    }
     $this->sources = $sources;
   }
   public function getSources()

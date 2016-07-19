@@ -19,8 +19,7 @@ class Google_Service_PlayMovies_ListStoreInfosResponse extends Google_Collection
 {
   protected $collection_key = 'storeInfos';
   public $nextPageToken;
-  protected $storeInfosType = 'Google_Service_PlayMovies_StoreInfo';
-  protected $storeInfosDataType = 'array';
+  public $storeInfos;
   public $totalSize;
 
   public function setNextPageToken($nextPageToken)
@@ -31,8 +30,13 @@ class Google_Service_PlayMovies_ListStoreInfosResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setStoreInfos($storeInfos)
+  public function setStoreInfos(array $storeInfos)
   {
+    foreach ($storeInfos as $s) {
+      if (!$s instanceof Google_Service_PlayMovies_StoreInfo) {
+        throw new InvalidArgumentException('First argument to setStoreInfos must be an array of Google_Service_PlayMovies_StoreInfo');
+      }
+    }
     $this->storeInfos = $storeInfos;
   }
   public function getStoreInfos()

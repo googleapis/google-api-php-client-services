@@ -37,7 +37,7 @@ class Google_Service_Directory_Group extends Google_Collection
   {
     return $this->adminCreated;
   }
-  public function setAliases($aliases)
+  public function setAliases(array $aliases)
   {
     $this->aliases = $aliases;
   }
@@ -101,7 +101,7 @@ class Google_Service_Directory_Group extends Google_Collection
   {
     return $this->name;
   }
-  public function setNonEditableAliases($nonEditableAliases)
+  public function setNonEditableAliases(array $nonEditableAliases)
   {
     $this->nonEditableAliases = $nonEditableAliases;
   }

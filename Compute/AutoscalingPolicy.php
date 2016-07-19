@@ -19,12 +19,9 @@ class Google_Service_Compute_AutoscalingPolicy extends Google_Collection
 {
   protected $collection_key = 'customMetricUtilizations';
   public $coolDownPeriodSec;
-  protected $cpuUtilizationType = 'Google_Service_Compute_AutoscalingPolicyCpuUtilization';
-  protected $cpuUtilizationDataType = '';
-  protected $customMetricUtilizationsType = 'Google_Service_Compute_AutoscalingPolicyCustomMetricUtilization';
-  protected $customMetricUtilizationsDataType = 'array';
-  protected $loadBalancingUtilizationType = 'Google_Service_Compute_AutoscalingPolicyLoadBalancingUtilization';
-  protected $loadBalancingUtilizationDataType = '';
+  public $cpuUtilization;
+  public $customMetricUtilizations;
+  public $loadBalancingUtilization;
   public $maxNumReplicas;
   public $minNumReplicas;
 
@@ -44,8 +41,13 @@ class Google_Service_Compute_AutoscalingPolicy extends Google_Collection
   {
     return $this->cpuUtilization;
   }
-  public function setCustomMetricUtilizations($customMetricUtilizations)
+  public function setCustomMetricUtilizations(array $customMetricUtilizations)
   {
+    foreach ($customMetricUtilizations as $c) {
+      if (!$c instanceof Google_Service_Compute_AutoscalingPolicyCustomMetricUtilization) {
+        throw new InvalidArgumentException('First argument to setCustomMetricUtilizations must be an array of Google_Service_Compute_AutoscalingPolicyCustomMetricUtilization');
+      }
+    }
     $this->customMetricUtilizations = $customMetricUtilizations;
   }
   public function getCustomMetricUtilizations()

@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_RegionsListResponse extends Google_Collection
 {
   protected $collection_key = 'regions';
   public $kind;
-  protected $regionsType = 'Google_Service_Dfareporting_Region';
-  protected $regionsDataType = 'array';
+  public $regions;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_RegionsListResponse extends Google_Collection
   {
     return $this->kind;
   }
-  public function setRegions($regions)
+  public function setRegions(array $regions)
   {
+    foreach ($regions as $r) {
+      if (!$r instanceof Google_Service_Dfareporting_Region) {
+        throw new InvalidArgumentException('First argument to setRegions must be an array of Google_Service_Dfareporting_Region');
+      }
+    }
     $this->regions = $regions;
   }
   public function getRegions()

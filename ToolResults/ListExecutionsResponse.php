@@ -18,12 +18,16 @@
 class Google_Service_ToolResults_ListExecutionsResponse extends Google_Collection
 {
   protected $collection_key = 'executions';
-  protected $executionsType = 'Google_Service_ToolResults_Execution';
-  protected $executionsDataType = 'array';
+  public $executions;
   public $nextPageToken;
 
-  public function setExecutions($executions)
+  public function setExecutions(array $executions)
   {
+    foreach ($executions as $e) {
+      if (!$e instanceof Google_Service_ToolResults_Execution) {
+        throw new InvalidArgumentException('First argument to setExecutions must be an array of Google_Service_ToolResults_Execution');
+      }
+    }
     $this->executions = $executions;
   }
   public function getExecutions()

@@ -28,8 +28,7 @@ class Google_Service_IdentityToolkit_UserInfo extends Google_Collection
   public $passwordHash;
   public $passwordUpdatedAt;
   public $photoUrl;
-  protected $providerUserInfoType = 'Google_Service_IdentityToolkit_UserInfoProviderUserInfo';
-  protected $providerUserInfoDataType = 'array';
+  public $providerUserInfo;
   public $salt;
   public $validSince;
   public $version;
@@ -114,8 +113,13 @@ class Google_Service_IdentityToolkit_UserInfo extends Google_Collection
   {
     return $this->photoUrl;
   }
-  public function setProviderUserInfo($providerUserInfo)
+  public function setProviderUserInfo(array $providerUserInfo)
   {
+    foreach ($providerUserInfo as $p) {
+      if (!$p instanceof Google_Service_IdentityToolkit_UserInfoProviderUserInfo) {
+        throw new InvalidArgumentException('First argument to setProviderUserInfo must be an array of Google_Service_IdentityToolkit_UserInfoProviderUserInfo');
+      }
+    }
     $this->providerUserInfo = $providerUserInfo;
   }
   public function getProviderUserInfo()

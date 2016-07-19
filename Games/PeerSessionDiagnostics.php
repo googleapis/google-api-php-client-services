@@ -20,10 +20,8 @@ class Google_Service_Games_PeerSessionDiagnostics extends Google_Model
   public $connectedTimestampMillis;
   public $kind;
   public $participantId;
-  protected $reliableChannelType = 'Google_Service_Games_PeerChannelDiagnostics';
-  protected $reliableChannelDataType = '';
-  protected $unreliableChannelType = 'Google_Service_Games_PeerChannelDiagnostics';
-  protected $unreliableChannelDataType = '';
+  public $reliableChannel;
+  public $unreliableChannel;
 
   public function setConnectedTimestampMillis($connectedTimestampMillis)
   {

@@ -18,14 +18,17 @@
 class Google_Service_Monitoring_CreateCollectdTimeSeriesRequest extends Google_Collection
 {
   protected $collection_key = 'collectdPayloads';
-  protected $collectdPayloadsType = 'Google_Service_Monitoring_CollectdPayload';
-  protected $collectdPayloadsDataType = 'array';
+  public $collectdPayloads;
   public $collectdVersion;
-  protected $resourceType = 'Google_Service_Monitoring_MonitoredResource';
-  protected $resourceDataType = '';
+  public $resource;
 
-  public function setCollectdPayloads($collectdPayloads)
+  public function setCollectdPayloads(array $collectdPayloads)
   {
+    foreach ($collectdPayloads as $c) {
+      if (!$c instanceof Google_Service_Monitoring_CollectdPayload) {
+        throw new InvalidArgumentException('First argument to setCollectdPayloads must be an array of Google_Service_Monitoring_CollectdPayload');
+      }
+    }
     $this->collectdPayloads = $collectdPayloads;
   }
   public function getCollectdPayloads()

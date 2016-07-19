@@ -24,7 +24,7 @@ class Google_Service_GamesManagement_AchievementResetMultipleForAllRequest exten
   public $achievementIds;
   public $kind;
 
-  public function setAchievementIds($achievementIds)
+  public function setAchievementIds(array $achievementIds)
   {
     $this->achievementIds = $achievementIds;
   }

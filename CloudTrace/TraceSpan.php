@@ -41,7 +41,7 @@ class Google_Service_CloudTrace_TraceSpan extends Google_Model
   {
     return $this->kind;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

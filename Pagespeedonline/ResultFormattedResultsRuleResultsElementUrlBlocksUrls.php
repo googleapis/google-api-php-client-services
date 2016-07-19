@@ -18,13 +18,16 @@
 class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls extends Google_Collection
 {
   protected $collection_key = 'details';
-  protected $detailsType = 'Google_Service_Pagespeedonline_PagespeedApiFormatStringV2';
-  protected $detailsDataType = 'array';
-  protected $resultType = 'Google_Service_Pagespeedonline_PagespeedApiFormatStringV2';
-  protected $resultDataType = '';
+  public $details;
+  public $result;
 
-  public function setDetails($details)
+  public function setDetails(array $details)
   {
+    foreach ($details as $d) {
+      if (!$d instanceof Google_Service_Pagespeedonline_PagespeedApiFormatStringV2) {
+        throw new InvalidArgumentException('First argument to setDetails must be an array of Google_Service_Pagespeedonline_PagespeedApiFormatStringV2');
+      }
+    }
     $this->details = $details;
   }
   public function getDetails()

@@ -17,8 +17,7 @@
 
 class Google_Service_SQLAdmin_InstancesImportRequest extends Google_Model
 {
-  protected $importContextType = 'Google_Service_SQLAdmin_ImportContext';
-  protected $importContextDataType = '';
+  public $importContext;
 
   public function setImportContext(Google_Service_SQLAdmin_ImportContext $importContext)
   {

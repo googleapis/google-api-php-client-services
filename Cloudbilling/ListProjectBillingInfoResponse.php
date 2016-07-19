@@ -19,8 +19,7 @@ class Google_Service_Cloudbilling_ListProjectBillingInfoResponse extends Google_
 {
   protected $collection_key = 'projectBillingInfo';
   public $nextPageToken;
-  protected $projectBillingInfoType = 'Google_Service_Cloudbilling_ProjectBillingInfo';
-  protected $projectBillingInfoDataType = 'array';
+  public $projectBillingInfo;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Cloudbilling_ListProjectBillingInfoResponse extends Google_
   {
     return $this->nextPageToken;
   }
-  public function setProjectBillingInfo($projectBillingInfo)
+  public function setProjectBillingInfo(array $projectBillingInfo)
   {
+    foreach ($projectBillingInfo as $p) {
+      if (!$p instanceof Google_Service_Cloudbilling_ProjectBillingInfo) {
+        throw new InvalidArgumentException('First argument to setProjectBillingInfo must be an array of Google_Service_Cloudbilling_ProjectBillingInfo');
+      }
+    }
     $this->projectBillingInfo = $projectBillingInfo;
   }
   public function getProjectBillingInfo()

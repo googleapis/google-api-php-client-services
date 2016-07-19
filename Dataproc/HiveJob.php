@@ -22,8 +22,7 @@ class Google_Service_Dataproc_HiveJob extends Google_Collection
   public $jarFileUris;
   public $properties;
   public $queryFileUri;
-  protected $queryListType = 'Google_Service_Dataproc_QueryList';
-  protected $queryListDataType = '';
+  public $queryList;
   public $scriptVariables;
 
   public function setContinueOnFailure($continueOnFailure)
@@ -34,7 +33,7 @@ class Google_Service_Dataproc_HiveJob extends Google_Collection
   {
     return $this->continueOnFailure;
   }
-  public function setJarFileUris($jarFileUris)
+  public function setJarFileUris(array $jarFileUris)
   {
     $this->jarFileUris = $jarFileUris;
   }
@@ -42,7 +41,7 @@ class Google_Service_Dataproc_HiveJob extends Google_Collection
   {
     return $this->jarFileUris;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
     $this->properties = $properties;
   }
@@ -66,7 +65,7 @@ class Google_Service_Dataproc_HiveJob extends Google_Collection
   {
     return $this->queryList;
   }
-  public function setScriptVariables($scriptVariables)
+  public function setScriptVariables(array $scriptVariables)
   {
     $this->scriptVariables = $scriptVariables;
   }

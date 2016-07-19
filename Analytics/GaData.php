@@ -18,20 +18,16 @@
 class Google_Service_Analytics_GaData extends Google_Collection
 {
   protected $collection_key = 'rows';
-  protected $columnHeadersType = 'Google_Service_Analytics_GaDataColumnHeaders';
-  protected $columnHeadersDataType = 'array';
+  public $columnHeaders;
   public $containsSampledData;
-  protected $dataTableType = 'Google_Service_Analytics_GaDataDataTable';
-  protected $dataTableDataType = '';
+  public $dataTable;
   public $id;
   public $itemsPerPage;
   public $kind;
   public $nextLink;
   public $previousLink;
-  protected $profileInfoType = 'Google_Service_Analytics_GaDataProfileInfo';
-  protected $profileInfoDataType = '';
-  protected $queryType = 'Google_Service_Analytics_GaDataQuery';
-  protected $queryDataType = '';
+  public $profileInfo;
+  public $query;
   public $rows;
   public $sampleSize;
   public $sampleSpace;
@@ -39,8 +35,13 @@ class Google_Service_Analytics_GaData extends Google_Collection
   public $totalResults;
   public $totalsForAllResults;
 
-  public function setColumnHeaders($columnHeaders)
+  public function setColumnHeaders(array $columnHeaders)
   {
+    foreach ($columnHeaders as $c) {
+      if (!$c instanceof Google_Service_Analytics_GaDataColumnHeaders) {
+        throw new InvalidArgumentException('First argument to setColumnHeaders must be an array of Google_Service_Analytics_GaDataColumnHeaders');
+      }
+    }
     $this->columnHeaders = $columnHeaders;
   }
   public function getColumnHeaders()
@@ -119,7 +120,7 @@ class Google_Service_Analytics_GaData extends Google_Collection
   {
     return $this->query;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
     $this->rows = $rows;
   }
@@ -159,7 +160,7 @@ class Google_Service_Analytics_GaData extends Google_Collection
   {
     return $this->totalResults;
   }
-  public function setTotalsForAllResults($totalsForAllResults)
+  public function setTotalsForAllResults(array $totalsForAllResults)
   {
     $this->totalsForAllResults = $totalsForAllResults;
   }

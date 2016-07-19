@@ -17,8 +17,7 @@
 
 class Google_Service_AndroidPublisher_ReviewReplyResult extends Google_Model
 {
-  protected $lastEditedType = 'Google_Service_AndroidPublisher_Timestamp';
-  protected $lastEditedDataType = '';
+  public $lastEdited;
   public $replyText;
 
   public function setLastEdited(Google_Service_AndroidPublisher_Timestamp $lastEdited)

@@ -18,8 +18,7 @@
 class Google_Service_AndroidEnterprise_Product extends Google_Collection
 {
   protected $collection_key = 'appVersion';
-  protected $appVersionType = 'Google_Service_AndroidEnterprise_AppVersion';
-  protected $appVersionDataType = 'array';
+  public $appVersion;
   public $authorName;
   public $detailsUrl;
   public $distributionChannel;
@@ -32,8 +31,13 @@ class Google_Service_AndroidEnterprise_Product extends Google_Collection
   public $title;
   public $workDetailsUrl;
 
-  public function setAppVersion($appVersion)
+  public function setAppVersion(array $appVersion)
   {
+    foreach ($appVersion as $a) {
+      if (!$a instanceof Google_Service_AndroidEnterprise_AppVersion) {
+        throw new InvalidArgumentException('First argument to setAppVersion must be an array of Google_Service_AndroidEnterprise_AppVersion');
+      }
+    }
     $this->appVersion = $appVersion;
   }
   public function getAppVersion()

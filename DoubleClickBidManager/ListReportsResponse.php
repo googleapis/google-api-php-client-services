@@ -19,8 +19,7 @@ class Google_Service_DoubleClickBidManager_ListReportsResponse extends Google_Co
 {
   protected $collection_key = 'reports';
   public $kind;
-  protected $reportsType = 'Google_Service_DoubleClickBidManager_Report';
-  protected $reportsDataType = 'array';
+  public $reports;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_DoubleClickBidManager_ListReportsResponse extends Google_Co
   {
     return $this->kind;
   }
-  public function setReports($reports)
+  public function setReports(array $reports)
   {
+    foreach ($reports as $r) {
+      if (!$r instanceof Google_Service_DoubleClickBidManager_Report) {
+        throw new InvalidArgumentException('First argument to setReports must be an array of Google_Service_DoubleClickBidManager_Report');
+      }
+    }
     $this->reports = $reports;
   }
   public function getReports()

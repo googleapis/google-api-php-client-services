@@ -17,10 +17,8 @@
 
 class Google_Service_Dataflow_WriteInstruction extends Google_Model
 {
-  protected $inputType = 'Google_Service_Dataflow_InstructionInput';
-  protected $inputDataType = '';
-  protected $sinkType = 'Google_Service_Dataflow_Sink';
-  protected $sinkDataType = '';
+  public $input;
+  public $sink;
 
   public function setInput(Google_Service_Dataflow_InstructionInput $input)
   {

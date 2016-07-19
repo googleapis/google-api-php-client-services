@@ -21,8 +21,7 @@ class Google_Service_Bigquery_TableDataList extends Google_Collection
   public $etag;
   public $kind;
   public $pageToken;
-  protected $rowsType = 'Google_Service_Bigquery_TableRow';
-  protected $rowsDataType = 'array';
+  public $rows;
   public $totalRows;
 
   public function setEtag($etag)
@@ -49,8 +48,13 @@ class Google_Service_Bigquery_TableDataList extends Google_Collection
   {
     return $this->pageToken;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Bigquery_TableRow) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Bigquery_TableRow');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()

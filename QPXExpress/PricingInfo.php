@@ -19,22 +19,18 @@ class Google_Service_QPXExpress_PricingInfo extends Google_Collection
 {
   protected $collection_key = 'tax';
   public $baseFareTotal;
-  protected $fareType = 'Google_Service_QPXExpress_FareInfo';
-  protected $fareDataType = 'array';
+  public $fare;
   public $fareCalculation;
   public $kind;
   public $latestTicketingTime;
-  protected $passengersType = 'Google_Service_QPXExpress_PassengerCounts';
-  protected $passengersDataType = '';
+  public $passengers;
   public $ptc;
   public $refundable;
   public $saleFareTotal;
   public $saleTaxTotal;
   public $saleTotal;
-  protected $segmentPricingType = 'Google_Service_QPXExpress_SegmentPricing';
-  protected $segmentPricingDataType = 'array';
-  protected $taxType = 'Google_Service_QPXExpress_TaxInfo';
-  protected $taxDataType = 'array';
+  public $segmentPricing;
+  public $tax;
 
   public function setBaseFareTotal($baseFareTotal)
   {
@@ -44,8 +40,13 @@ class Google_Service_QPXExpress_PricingInfo extends Google_Collection
   {
     return $this->baseFareTotal;
   }
-  public function setFare($fare)
+  public function setFare(array $fare)
   {
+    foreach ($fare as $f) {
+      if (!$f instanceof Google_Service_QPXExpress_FareInfo) {
+        throw new InvalidArgumentException('First argument to setFare must be an array of Google_Service_QPXExpress_FareInfo');
+      }
+    }
     $this->fare = $fare;
   }
   public function getFare()
@@ -124,16 +125,26 @@ class Google_Service_QPXExpress_PricingInfo extends Google_Collection
   {
     return $this->saleTotal;
   }
-  public function setSegmentPricing($segmentPricing)
+  public function setSegmentPricing(array $segmentPricing)
   {
+    foreach ($segmentPricing as $s) {
+      if (!$s instanceof Google_Service_QPXExpress_SegmentPricing) {
+        throw new InvalidArgumentException('First argument to setSegmentPricing must be an array of Google_Service_QPXExpress_SegmentPricing');
+      }
+    }
     $this->segmentPricing = $segmentPricing;
   }
   public function getSegmentPricing()
   {
     return $this->segmentPricing;
   }
-  public function setTax($tax)
+  public function setTax(array $tax)
   {
+    foreach ($tax as $t) {
+      if (!$t instanceof Google_Service_QPXExpress_TaxInfo) {
+        throw new InvalidArgumentException('First argument to setTax must be an array of Google_Service_QPXExpress_TaxInfo');
+      }
+    }
     $this->tax = $tax;
   }
   public function getTax()

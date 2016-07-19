@@ -18,11 +18,9 @@
 class Google_Service_TagManager_UserAccess extends Google_Collection
 {
   protected $collection_key = 'containerAccess';
-  protected $accountAccessType = 'Google_Service_TagManager_AccountAccess';
-  protected $accountAccessDataType = '';
+  public $accountAccess;
   public $accountId;
-  protected $containerAccessType = 'Google_Service_TagManager_ContainerAccess';
-  protected $containerAccessDataType = 'array';
+  public $containerAccess;
   public $emailAddress;
   public $permissionId;
 
@@ -42,8 +40,13 @@ class Google_Service_TagManager_UserAccess extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setContainerAccess($containerAccess)
+  public function setContainerAccess(array $containerAccess)
   {
+    foreach ($containerAccess as $c) {
+      if (!$c instanceof Google_Service_TagManager_ContainerAccess) {
+        throw new InvalidArgumentException('First argument to setContainerAccess must be an array of Google_Service_TagManager_ContainerAccess');
+      }
+    }
     $this->containerAccess = $containerAccess;
   }
   public function getContainerAccess()

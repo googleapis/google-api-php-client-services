@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListTriggersResponse extends Google_Collection
 {
   protected $collection_key = 'triggers';
-  protected $triggersType = 'Google_Service_TagManager_Trigger';
-  protected $triggersDataType = 'array';
+  public $triggers;
 
-  public function setTriggers($triggers)
+  public function setTriggers(array $triggers)
   {
+    foreach ($triggers as $t) {
+      if (!$t instanceof Google_Service_TagManager_Trigger) {
+        throw new InvalidArgumentException('First argument to setTriggers must be an array of Google_Service_TagManager_Trigger');
+      }
+    }
     $this->triggers = $triggers;
   }
   public function getTriggers()

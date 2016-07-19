@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_TargetableRemarketingList extends Google_Model
   public $accountId;
   public $active;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $description;
   public $id;
   public $kind;

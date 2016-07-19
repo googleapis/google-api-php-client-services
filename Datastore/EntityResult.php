@@ -18,8 +18,7 @@
 class Google_Service_Datastore_EntityResult extends Google_Model
 {
   public $cursor;
-  protected $entityType = 'Google_Service_Datastore_Entity';
-  protected $entityDataType = '';
+  public $entity;
 
   public function setCursor($cursor)
   {

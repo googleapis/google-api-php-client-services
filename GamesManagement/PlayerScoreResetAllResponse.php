@@ -19,8 +19,7 @@ class Google_Service_GamesManagement_PlayerScoreResetAllResponse extends Google_
 {
   protected $collection_key = 'results';
   public $kind;
-  protected $resultsType = 'Google_Service_GamesManagement_PlayerScoreResetResponse';
-  protected $resultsDataType = 'array';
+  public $results;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_GamesManagement_PlayerScoreResetAllResponse extends Google_
   {
     return $this->kind;
   }
-  public function setResults($results)
+  public function setResults(array $results)
   {
+    foreach ($results as $r) {
+      if (!$r instanceof Google_Service_GamesManagement_PlayerScoreResetResponse) {
+        throw new InvalidArgumentException('First argument to setResults must be an array of Google_Service_GamesManagement_PlayerScoreResetResponse');
+      }
+    }
     $this->results = $results;
   }
   public function getResults()

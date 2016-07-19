@@ -17,13 +17,11 @@
 
 class Google_Service_YouTube_LiveChatMessage extends Google_Model
 {
-  protected $authorDetailsType = 'Google_Service_YouTube_LiveChatMessageAuthorDetails';
-  protected $authorDetailsDataType = '';
+  public $authorDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_LiveChatMessageSnippet';
-  protected $snippetDataType = '';
+  public $snippet;
 
   public function setAuthorDetails(Google_Service_YouTube_LiveChatMessageAuthorDetails $authorDetails)
   {

@@ -17,8 +17,7 @@
 
 class Google_Service_QPXExpress_TripsSearchRequest extends Google_Model
 {
-  protected $requestType = 'Google_Service_QPXExpress_TripOptionsRequest';
-  protected $requestDataType = '';
+  public $request;
 
   public function setRequest(Google_Service_QPXExpress_TripOptionsRequest $request)
   {

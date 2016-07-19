@@ -20,8 +20,7 @@ class Google_Service_Bigquery_TableListTables extends Google_Model
   public $friendlyName;
   public $id;
   public $kind;
-  protected $tableReferenceType = 'Google_Service_Bigquery_TableReference';
-  protected $tableReferenceDataType = '';
+  public $tableReference;
   public $type;
 
   public function setFriendlyName($friendlyName)

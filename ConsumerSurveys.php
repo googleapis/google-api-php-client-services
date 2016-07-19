@@ -131,7 +131,17 @@ class Google_Service_ConsumerSurveys extends Google_Service
         'surveys',
         array(
           'methods' => array(
-            'get' => array(
+            'delete' => array(
+              'path' => 'surveys/{surveyUrlId}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'surveyUrlId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
               'path' => 'surveys/{surveyUrlId}',
               'httpMethod' => 'GET',
               'parameters' => array(

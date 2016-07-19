@@ -19,8 +19,7 @@ class Google_Service_AdExchangeBuyer_CreativeFilteringReasons extends Google_Col
 {
   protected $collection_key = 'reasons';
   public $date;
-  protected $reasonsType = 'Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons';
-  protected $reasonsDataType = 'array';
+  public $reasons;
 
   public function setDate($date)
   {
@@ -30,8 +29,13 @@ class Google_Service_AdExchangeBuyer_CreativeFilteringReasons extends Google_Col
   {
     return $this->date;
   }
-  public function setReasons($reasons)
+  public function setReasons(array $reasons)
   {
+    foreach ($reasons as $r) {
+      if (!$r instanceof Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons) {
+        throw new InvalidArgumentException('First argument to setReasons must be an array of Google_Service_AdExchangeBuyer_CreativeFilteringReasonsReasons');
+      }
+    }
     $this->reasons = $reasons;
   }
   public function getReasons()

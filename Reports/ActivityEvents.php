@@ -19,8 +19,7 @@ class Google_Service_Reports_ActivityEvents extends Google_Collection
 {
   protected $collection_key = 'parameters';
   public $name;
-  protected $parametersType = 'Google_Service_Reports_ActivityEventsParameters';
-  protected $parametersDataType = 'array';
+  public $parameters;
   public $type;
 
   public function setName($name)
@@ -31,8 +30,13 @@ class Google_Service_Reports_ActivityEvents extends Google_Collection
   {
     return $this->name;
   }
-  public function setParameters($parameters)
+  public function setParameters(array $parameters)
   {
+    foreach ($parameters as $p) {
+      if (!$p instanceof Google_Service_Reports_ActivityEventsParameters) {
+        throw new InvalidArgumentException('First argument to setParameters must be an array of Google_Service_Reports_ActivityEventsParameters');
+      }
+    }
     $this->parameters = $parameters;
   }
   public function getParameters()

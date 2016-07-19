@@ -18,12 +18,9 @@
 class Google_Service_AndroidPublisher_Season extends Google_Collection
 {
   protected $collection_key = 'prorations';
-  protected $endType = 'Google_Service_AndroidPublisher_MonthDay';
-  protected $endDataType = '';
-  protected $prorationsType = 'Google_Service_AndroidPublisher_Prorate';
-  protected $prorationsDataType = 'array';
-  protected $startType = 'Google_Service_AndroidPublisher_MonthDay';
-  protected $startDataType = '';
+  public $end;
+  public $prorations;
+  public $start;
 
   public function setEnd(Google_Service_AndroidPublisher_MonthDay $end)
   {
@@ -33,8 +30,13 @@ class Google_Service_AndroidPublisher_Season extends Google_Collection
   {
     return $this->end;
   }
-  public function setProrations($prorations)
+  public function setProrations(array $prorations)
   {
+    foreach ($prorations as $p) {
+      if (!$p instanceof Google_Service_AndroidPublisher_Prorate) {
+        throw new InvalidArgumentException('First argument to setProrations must be an array of Google_Service_AndroidPublisher_Prorate');
+      }
+    }
     $this->prorations = $prorations;
   }
   public function getProrations()

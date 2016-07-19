@@ -18,11 +18,15 @@
 class Google_Service_Compute_TargetPoolsRemoveHealthCheckRequest extends Google_Collection
 {
   protected $collection_key = 'healthChecks';
-  protected $healthChecksType = 'Google_Service_Compute_HealthCheckReference';
-  protected $healthChecksDataType = 'array';
+  public $healthChecks;
 
-  public function setHealthChecks($healthChecks)
+  public function setHealthChecks(array $healthChecks)
   {
+    foreach ($healthChecks as $h) {
+      if (!$h instanceof Google_Service_Compute_HealthCheckReference) {
+        throw new InvalidArgumentException('First argument to setHealthChecks must be an array of Google_Service_Compute_HealthCheckReference');
+      }
+    }
     $this->healthChecks = $healthChecks;
   }
   public function getHealthChecks()

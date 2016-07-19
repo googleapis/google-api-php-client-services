@@ -18,12 +18,16 @@
 class Google_Service_Doubleclicksearch_ConversionList extends Google_Collection
 {
   protected $collection_key = 'conversion';
-  protected $conversionType = 'Google_Service_Doubleclicksearch_Conversion';
-  protected $conversionDataType = 'array';
+  public $conversion;
   public $kind;
 
-  public function setConversion($conversion)
+  public function setConversion(array $conversion)
   {
+    foreach ($conversion as $c) {
+      if (!$c instanceof Google_Service_Doubleclicksearch_Conversion) {
+        throw new InvalidArgumentException('First argument to setConversion must be an array of Google_Service_Doubleclicksearch_Conversion');
+      }
+    }
     $this->conversion = $conversion;
   }
   public function getConversion()

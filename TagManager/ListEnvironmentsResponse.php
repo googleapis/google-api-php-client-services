@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListEnvironmentsResponse extends Google_Collection
 {
   protected $collection_key = 'environments';
-  protected $environmentsType = 'Google_Service_TagManager_Environment';
-  protected $environmentsDataType = 'array';
+  public $environments;
 
-  public function setEnvironments($environments)
+  public function setEnvironments(array $environments)
   {
+    foreach ($environments as $e) {
+      if (!$e instanceof Google_Service_TagManager_Environment) {
+        throw new InvalidArgumentException('First argument to setEnvironments must be an array of Google_Service_TagManager_Environment');
+      }
+    }
     $this->environments = $environments;
   }
   public function getEnvironments()

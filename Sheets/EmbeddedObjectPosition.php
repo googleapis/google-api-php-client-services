@@ -18,8 +18,7 @@
 class Google_Service_Sheets_EmbeddedObjectPosition extends Google_Model
 {
   public $newSheet;
-  protected $overlayPositionType = 'Google_Service_Sheets_OverlayPosition';
-  protected $overlayPositionDataType = '';
+  public $overlayPosition;
   public $sheetId;
 
   public function setNewSheet($newSheet)

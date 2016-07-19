@@ -17,13 +17,11 @@
 
 class Google_Service_YouTubeAnalytics_Group extends Google_Model
 {
-  protected $contentDetailsType = 'Google_Service_YouTubeAnalytics_GroupContentDetails';
-  protected $contentDetailsDataType = '';
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTubeAnalytics_GroupSnippet';
-  protected $snippetDataType = '';
+  public $snippet;
 
   public function setContentDetails(Google_Service_YouTubeAnalytics_GroupContentDetails $contentDetails)
   {

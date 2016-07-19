@@ -19,8 +19,7 @@ class Google_Service_AdExchangeBuyerII_ListLosingBidsResponse extends Google_Col
 {
   protected $collection_key = 'frequencies';
   public $endTime;
-  protected $frequenciesType = 'Google_Service_AdExchangeBuyerII_CreativeStatusFrequency';
-  protected $frequenciesDataType = 'array';
+  public $frequencies;
   public $startTime;
 
   public function setEndTime($endTime)
@@ -31,8 +30,13 @@ class Google_Service_AdExchangeBuyerII_ListLosingBidsResponse extends Google_Col
   {
     return $this->endTime;
   }
-  public function setFrequencies($frequencies)
+  public function setFrequencies(array $frequencies)
   {
+    foreach ($frequencies as $f) {
+      if (!$f instanceof Google_Service_AdExchangeBuyerII_CreativeStatusFrequency) {
+        throw new InvalidArgumentException('First argument to setFrequencies must be an array of Google_Service_AdExchangeBuyerII_CreativeStatusFrequency');
+      }
+    }
     $this->frequencies = $frequencies;
   }
   public function getFrequencies()

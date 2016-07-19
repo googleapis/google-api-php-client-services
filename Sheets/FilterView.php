@@ -18,17 +18,14 @@
 class Google_Service_Sheets_FilterView extends Google_Collection
 {
   protected $collection_key = 'sortSpecs';
-  protected $criteriaType = 'Google_Service_Sheets_FilterCriteria';
-  protected $criteriaDataType = 'map';
+  public $criteria;
   public $filterViewId;
   public $namedRangeId;
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
-  protected $sortSpecsType = 'Google_Service_Sheets_SortSpec';
-  protected $sortSpecsDataType = 'array';
+  public $range;
+  public $sortSpecs;
   public $title;
 
-  public function setCriteria($criteria)
+  public function setCriteria(array $criteria)
   {
     $this->criteria = $criteria;
   }
@@ -60,8 +57,13 @@ class Google_Service_Sheets_FilterView extends Google_Collection
   {
     return $this->range;
   }
-  public function setSortSpecs($sortSpecs)
+  public function setSortSpecs(array $sortSpecs)
   {
+    foreach ($sortSpecs as $s) {
+      if (!$s instanceof Google_Service_Sheets_SortSpec) {
+        throw new InvalidArgumentException('First argument to setSortSpecs must be an array of Google_Service_Sheets_SortSpec');
+      }
+    }
     $this->sortSpecs = $sortSpecs;
   }
   public function getSortSpecs()

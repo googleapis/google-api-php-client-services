@@ -18,13 +18,17 @@
 class Google_Service_Blogger_BlogPosts extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_Blogger_Post';
-  protected $itemsDataType = 'array';
+  public $items;
   public $selfLink;
   public $totalItems;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Blogger_Post) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Blogger_Post');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

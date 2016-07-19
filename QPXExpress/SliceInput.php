@@ -26,8 +26,7 @@ class Google_Service_QPXExpress_SliceInput extends Google_Collection
   public $maxStops;
   public $origin;
   public $permittedCarrier;
-  protected $permittedDepartureTimeType = 'Google_Service_QPXExpress_TimeOfDayRange';
-  protected $permittedDepartureTimeDataType = '';
+  public $permittedDepartureTime;
   public $preferredCabin;
   public $prohibitedCarrier;
 
@@ -87,7 +86,7 @@ class Google_Service_QPXExpress_SliceInput extends Google_Collection
   {
     return $this->origin;
   }
-  public function setPermittedCarrier($permittedCarrier)
+  public function setPermittedCarrier(array $permittedCarrier)
   {
     $this->permittedCarrier = $permittedCarrier;
   }
@@ -111,7 +110,7 @@ class Google_Service_QPXExpress_SliceInput extends Google_Collection
   {
     return $this->preferredCabin;
   }
-  public function setProhibitedCarrier($prohibitedCarrier)
+  public function setProhibitedCarrier(array $prohibitedCarrier)
   {
     $this->prohibitedCarrier = $prohibitedCarrier;
   }

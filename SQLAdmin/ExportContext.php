@@ -18,13 +18,11 @@
 class Google_Service_SQLAdmin_ExportContext extends Google_Collection
 {
   protected $collection_key = 'databases';
-  protected $csvExportOptionsType = 'Google_Service_SQLAdmin_ExportContextCsvExportOptions';
-  protected $csvExportOptionsDataType = '';
+  public $csvExportOptions;
   public $databases;
   public $fileType;
   public $kind;
-  protected $sqlExportOptionsType = 'Google_Service_SQLAdmin_ExportContextSqlExportOptions';
-  protected $sqlExportOptionsDataType = '';
+  public $sqlExportOptions;
   public $uri;
 
   public function setCsvExportOptions(Google_Service_SQLAdmin_ExportContextCsvExportOptions $csvExportOptions)
@@ -35,7 +33,7 @@ class Google_Service_SQLAdmin_ExportContext extends Google_Collection
   {
     return $this->csvExportOptions;
   }
-  public function setDatabases($databases)
+  public function setDatabases(array $databases)
   {
     $this->databases = $databases;
   }

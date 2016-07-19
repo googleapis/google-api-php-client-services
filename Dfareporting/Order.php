@@ -24,12 +24,10 @@ class Google_Service_Dfareporting_Order extends Google_Collection
   public $buyerInvoiceId;
   public $buyerOrganizationName;
   public $comments;
-  protected $contactsType = 'Google_Service_Dfareporting_OrderContact';
-  protected $contactsDataType = 'array';
+  public $contacts;
   public $id;
   public $kind;
-  protected $lastModifiedInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $lastModifiedInfoDataType = '';
+  public $lastModifiedInfo;
   public $name;
   public $notes;
   public $planningTermId;
@@ -57,7 +55,7 @@ class Google_Service_Dfareporting_Order extends Google_Collection
   {
     return $this->advertiserId;
   }
-  public function setApproverUserProfileIds($approverUserProfileIds)
+  public function setApproverUserProfileIds(array $approverUserProfileIds)
   {
     $this->approverUserProfileIds = $approverUserProfileIds;
   }
@@ -89,8 +87,13 @@ class Google_Service_Dfareporting_Order extends Google_Collection
   {
     return $this->comments;
   }
-  public function setContacts($contacts)
+  public function setContacts(array $contacts)
   {
+    foreach ($contacts as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_OrderContact) {
+        throw new InvalidArgumentException('First argument to setContacts must be an array of Google_Service_Dfareporting_OrderContact');
+      }
+    }
     $this->contacts = $contacts;
   }
   public function getContacts()
@@ -169,7 +172,7 @@ class Google_Service_Dfareporting_Order extends Google_Collection
   {
     return $this->sellerOrganizationName;
   }
-  public function setSiteId($siteId)
+  public function setSiteId(array $siteId)
   {
     $this->siteId = $siteId;
   }
@@ -177,7 +180,7 @@ class Google_Service_Dfareporting_Order extends Google_Collection
   {
     return $this->siteId;
   }
-  public function setSiteNames($siteNames)
+  public function setSiteNames(array $siteNames)
   {
     $this->siteNames = $siteNames;
   }

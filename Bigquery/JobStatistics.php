@@ -19,12 +19,9 @@ class Google_Service_Bigquery_JobStatistics extends Google_Model
 {
   public $creationTime;
   public $endTime;
-  protected $extractType = 'Google_Service_Bigquery_JobStatistics4';
-  protected $extractDataType = '';
-  protected $loadType = 'Google_Service_Bigquery_JobStatistics3';
-  protected $loadDataType = '';
-  protected $queryType = 'Google_Service_Bigquery_JobStatistics2';
-  protected $queryDataType = '';
+  public $extract;
+  public $load;
+  public $query;
   public $startTime;
   public $totalBytesProcessed;
 

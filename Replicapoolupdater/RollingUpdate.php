@@ -20,16 +20,14 @@ class Google_Service_Replicapoolupdater_RollingUpdate extends Google_Model
   public $actionType;
   public $creationTimestamp;
   public $description;
-  protected $errorType = 'Google_Service_Replicapoolupdater_RollingUpdateError';
-  protected $errorDataType = '';
+  public $error;
   public $id;
   public $instanceGroup;
   public $instanceGroupManager;
   public $instanceTemplate;
   public $kind;
   public $oldInstanceTemplate;
-  protected $policyType = 'Google_Service_Replicapoolupdater_RollingUpdatePolicy';
-  protected $policyDataType = '';
+  public $policy;
   public $progress;
   public $selfLink;
   public $status;

@@ -18,8 +18,7 @@
 class Google_Service_Doubleclicksearch_ReportRequestFilters extends Google_Collection
 {
   protected $collection_key = 'values';
-  protected $columnType = 'Google_Service_Doubleclicksearch_ReportApiColumnSpec';
-  protected $columnDataType = '';
+  public $column;
   public $operator;
   public $values;
 
@@ -39,7 +38,7 @@ class Google_Service_Doubleclicksearch_ReportRequestFilters extends Google_Colle
   {
     return $this->operator;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
     $this->values = $values;
   }

@@ -17,10 +17,8 @@
 
 class Google_Service_AndroidPublisher_Prorate extends Google_Model
 {
-  protected $defaultPriceType = 'Google_Service_AndroidPublisher_Price';
-  protected $defaultPriceDataType = '';
-  protected $startType = 'Google_Service_AndroidPublisher_MonthDay';
-  protected $startDataType = '';
+  public $defaultPrice;
+  public $start;
 
   public function setDefaultPrice(Google_Service_AndroidPublisher_Price $defaultPrice)
   {

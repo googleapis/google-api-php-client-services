@@ -18,11 +18,15 @@
 class Google_Service_Proximitybeacon_ListNamespacesResponse extends Google_Collection
 {
   protected $collection_key = 'namespaces';
-  protected $namespacesType = 'Google_Service_Proximitybeacon_ProximitybeaconNamespace';
-  protected $namespacesDataType = 'array';
+  public $namespaces;
 
-  public function setNamespaces($namespaces)
+  public function setNamespaces(array $namespaces)
   {
+    foreach ($namespaces as $n) {
+      if (!$n instanceof Google_Service_Proximitybeacon_ProximitybeaconNamespace) {
+        throw new InvalidArgumentException('First argument to setNamespaces must be an array of Google_Service_Proximitybeacon_ProximitybeaconNamespace');
+      }
+    }
     $this->namespaces = $namespaces;
   }
   public function getNamespaces()

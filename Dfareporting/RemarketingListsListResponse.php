@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_RemarketingListsListResponse extends Google_Co
   protected $collection_key = 'remarketingLists';
   public $kind;
   public $nextPageToken;
-  protected $remarketingListsType = 'Google_Service_Dfareporting_RemarketingList';
-  protected $remarketingListsDataType = 'array';
+  public $remarketingLists;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_RemarketingListsListResponse extends Google_Co
   {
     return $this->nextPageToken;
   }
-  public function setRemarketingLists($remarketingLists)
+  public function setRemarketingLists(array $remarketingLists)
   {
+    foreach ($remarketingLists as $r) {
+      if (!$r instanceof Google_Service_Dfareporting_RemarketingList) {
+        throw new InvalidArgumentException('First argument to setRemarketingLists must be an array of Google_Service_Dfareporting_RemarketingList');
+      }
+    }
     $this->remarketingLists = $remarketingLists;
   }
   public function getRemarketingLists()

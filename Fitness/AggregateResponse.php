@@ -18,11 +18,15 @@
 class Google_Service_Fitness_AggregateResponse extends Google_Collection
 {
   protected $collection_key = 'bucket';
-  protected $bucketType = 'Google_Service_Fitness_AggregateBucket';
-  protected $bucketDataType = 'array';
+  public $bucket;
 
-  public function setBucket($bucket)
+  public function setBucket(array $bucket)
   {
+    foreach ($bucket as $b) {
+      if (!$b instanceof Google_Service_Fitness_AggregateBucket) {
+        throw new InvalidArgumentException('First argument to setBucket must be an array of Google_Service_Fitness_AggregateBucket');
+      }
+    }
     $this->bucket = $bucket;
   }
   public function getBucket()

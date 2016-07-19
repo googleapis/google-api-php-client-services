@@ -30,7 +30,7 @@ class Google_Service_Dfareporting_ObjectFilter extends Google_Collection
   {
     return $this->kind;
   }
-  public function setObjectIds($objectIds)
+  public function setObjectIds(array $objectIds)
   {
     $this->objectIds = $objectIds;
   }

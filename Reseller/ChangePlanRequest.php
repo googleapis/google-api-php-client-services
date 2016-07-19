@@ -21,8 +21,7 @@ class Google_Service_Reseller_ChangePlanRequest extends Google_Model
   public $kind;
   public $planName;
   public $purchaseOrderId;
-  protected $seatsType = 'Google_Service_Reseller_Seats';
-  protected $seatsDataType = '';
+  public $seats;
 
   public function setDealCode($dealCode)
   {

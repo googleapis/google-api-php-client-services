@@ -21,7 +21,7 @@ class Google_Service_YouTube_VideoTopicDetails extends Google_Collection
   public $relevantTopicIds;
   public $topicIds;
 
-  public function setRelevantTopicIds($relevantTopicIds)
+  public function setRelevantTopicIds(array $relevantTopicIds)
   {
     $this->relevantTopicIds = $relevantTopicIds;
   }
@@ -29,7 +29,7 @@ class Google_Service_YouTube_VideoTopicDetails extends Google_Collection
   {
     return $this->relevantTopicIds;
   }
-  public function setTopicIds($topicIds)
+  public function setTopicIds(array $topicIds)
   {
     $this->topicIds = $topicIds;
   }

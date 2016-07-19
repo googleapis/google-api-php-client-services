@@ -19,12 +19,10 @@ class Google_Service_Reports_UsageReport extends Google_Collection
 {
   protected $collection_key = 'parameters';
   public $date;
-  protected $entityType = 'Google_Service_Reports_UsageReportEntity';
-  protected $entityDataType = '';
+  public $entity;
   public $etag;
   public $kind;
-  protected $parametersType = 'Google_Service_Reports_UsageReportParameters';
-  protected $parametersDataType = 'array';
+  public $parameters;
 
   public function setDate($date)
   {
@@ -58,8 +56,13 @@ class Google_Service_Reports_UsageReport extends Google_Collection
   {
     return $this->kind;
   }
-  public function setParameters($parameters)
+  public function setParameters(array $parameters)
   {
+    foreach ($parameters as $p) {
+      if (!$p instanceof Google_Service_Reports_UsageReportParameters) {
+        throw new InvalidArgumentException('First argument to setParameters must be an array of Google_Service_Reports_UsageReportParameters');
+      }
+    }
     $this->parameters = $parameters;
   }
   public function getParameters()

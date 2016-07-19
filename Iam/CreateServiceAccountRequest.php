@@ -18,8 +18,7 @@
 class Google_Service_Iam_CreateServiceAccountRequest extends Google_Model
 {
   public $accountId;
-  protected $serviceAccountType = 'Google_Service_Iam_ServiceAccount';
-  protected $serviceAccountDataType = '';
+  public $serviceAccount;
 
   public function setAccountId($accountId)
   {

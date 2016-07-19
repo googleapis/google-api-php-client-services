@@ -24,8 +24,7 @@ class Google_Service_Prediction_Insert extends Google_Collection
   public $storageDataLocation;
   public $storagePMMLLocation;
   public $storagePMMLModelLocation;
-  protected $trainingInstancesType = 'Google_Service_Prediction_InsertTrainingInstances';
-  protected $trainingInstancesDataType = 'array';
+  public $trainingInstances;
   public $utility;
 
   public function setId($id)
@@ -76,15 +75,20 @@ class Google_Service_Prediction_Insert extends Google_Collection
   {
     return $this->storagePMMLModelLocation;
   }
-  public function setTrainingInstances($trainingInstances)
+  public function setTrainingInstances(array $trainingInstances)
   {
+    foreach ($trainingInstances as $t) {
+      if (!$t instanceof Google_Service_Prediction_InsertTrainingInstances) {
+        throw new InvalidArgumentException('First argument to setTrainingInstances must be an array of Google_Service_Prediction_InsertTrainingInstances');
+      }
+    }
     $this->trainingInstances = $trainingInstances;
   }
   public function getTrainingInstances()
   {
     return $this->trainingInstances;
   }
-  public function setUtility($utility)
+  public function setUtility(array $utility)
   {
     $this->utility = $utility;
   }

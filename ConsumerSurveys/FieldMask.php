@@ -18,12 +18,16 @@
 class Google_Service_ConsumerSurveys_FieldMask extends Google_Collection
 {
   protected $collection_key = 'fields';
-  protected $fieldsType = 'Google_Service_ConsumerSurveys_FieldMask';
-  protected $fieldsDataType = 'array';
+  public $fields;
   public $id;
 
-  public function setFields($fields)
+  public function setFields(array $fields)
   {
+    foreach ($fields as $f) {
+      if (!$f instanceof Google_Service_ConsumerSurveys_FieldMask) {
+        throw new InvalidArgumentException('First argument to setFields must be an array of Google_Service_ConsumerSurveys_FieldMask');
+      }
+    }
     $this->fields = $fields;
   }
   public function getFields()

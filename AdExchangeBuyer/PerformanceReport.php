@@ -57,7 +57,7 @@ class Google_Service_AdExchangeBuyer_PerformanceReport extends Google_Collection
   {
     return $this->bidRequestRate;
   }
-  public function setCalloutStatusRate($calloutStatusRate)
+  public function setCalloutStatusRate(array $calloutStatusRate)
   {
     $this->calloutStatusRate = $calloutStatusRate;
   }
@@ -65,7 +65,7 @@ class Google_Service_AdExchangeBuyer_PerformanceReport extends Google_Collection
   {
     return $this->calloutStatusRate;
   }
-  public function setCookieMatcherStatusRate($cookieMatcherStatusRate)
+  public function setCookieMatcherStatusRate(array $cookieMatcherStatusRate)
   {
     $this->cookieMatcherStatusRate = $cookieMatcherStatusRate;
   }
@@ -73,7 +73,7 @@ class Google_Service_AdExchangeBuyer_PerformanceReport extends Google_Collection
   {
     return $this->cookieMatcherStatusRate;
   }
-  public function setCreativeStatusRate($creativeStatusRate)
+  public function setCreativeStatusRate(array $creativeStatusRate)
   {
     $this->creativeStatusRate = $creativeStatusRate;
   }
@@ -89,7 +89,7 @@ class Google_Service_AdExchangeBuyer_PerformanceReport extends Google_Collection
   {
     return $this->filteredBidRate;
   }
-  public function setHostedMatchStatusRate($hostedMatchStatusRate)
+  public function setHostedMatchStatusRate(array $hostedMatchStatusRate)
   {
     $this->hostedMatchStatusRate = $hostedMatchStatusRate;
   }

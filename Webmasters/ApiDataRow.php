@@ -48,7 +48,7 @@ class Google_Service_Webmasters_ApiDataRow extends Google_Collection
   {
     return $this->impressions;
   }
-  public function setKeys($keys)
+  public function setKeys(array $keys)
   {
     $this->keys = $keys;
   }

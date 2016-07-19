@@ -19,8 +19,7 @@ class Google_Service_Genomics_ClinicalCondition extends Google_Collection
 {
   protected $collection_key = 'names';
   public $conceptId;
-  protected $externalIdsType = 'Google_Service_Genomics_ExternalId';
-  protected $externalIdsDataType = 'array';
+  public $externalIds;
   public $names;
   public $omimId;
 
@@ -32,15 +31,20 @@ class Google_Service_Genomics_ClinicalCondition extends Google_Collection
   {
     return $this->conceptId;
   }
-  public function setExternalIds($externalIds)
+  public function setExternalIds(array $externalIds)
   {
+    foreach ($externalIds as $e) {
+      if (!$e instanceof Google_Service_Genomics_ExternalId) {
+        throw new InvalidArgumentException('First argument to setExternalIds must be an array of Google_Service_Genomics_ExternalId');
+      }
+    }
     $this->externalIds = $externalIds;
   }
   public function getExternalIds()
   {
     return $this->externalIds;
   }
-  public function setNames($names)
+  public function setNames(array $names)
   {
     $this->names = $names;
   }

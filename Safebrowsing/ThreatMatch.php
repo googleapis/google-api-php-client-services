@@ -19,10 +19,8 @@ class Google_Service_Safebrowsing_ThreatMatch extends Google_Model
 {
   public $cacheDuration;
   public $platformType;
-  protected $threatType = 'Google_Service_Safebrowsing_ThreatEntry';
-  protected $threatDataType = '';
-  protected $threatEntryMetadataType = 'Google_Service_Safebrowsing_ThreatEntryMetadata';
-  protected $threatEntryMetadataDataType = '';
+  public $threat;
+  public $threatEntryMetadata;
   public $threatEntryType;
   public $threatType;
 

@@ -21,7 +21,7 @@ class Google_Service_CloudUserAccounts_AuditConfig extends Google_Collection
   public $exemptedMembers;
   public $service;
 
-  public function setExemptedMembers($exemptedMembers)
+  public function setExemptedMembers(array $exemptedMembers)
   {
     $this->exemptedMembers = $exemptedMembers;
   }

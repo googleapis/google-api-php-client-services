@@ -18,11 +18,15 @@
 class Google_Service_Storage_BucketLifecycle extends Google_Collection
 {
   protected $collection_key = 'rule';
-  protected $ruleType = 'Google_Service_Storage_BucketLifecycleRule';
-  protected $ruleDataType = 'array';
+  public $rule;
 
-  public function setRule($rule)
+  public function setRule(array $rule)
   {
+    foreach ($rule as $r) {
+      if (!$r instanceof Google_Service_Storage_BucketLifecycleRule) {
+        throw new InvalidArgumentException('First argument to setRule must be an array of Google_Service_Storage_BucketLifecycleRule');
+      }
+    }
     $this->rule = $rule;
   }
   public function getRule()

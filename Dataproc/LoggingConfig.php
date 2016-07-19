@@ -19,7 +19,7 @@ class Google_Service_Dataproc_LoggingConfig extends Google_Model
 {
   public $driverLogLevels;
 
-  public function setDriverLogLevels($driverLogLevels)
+  public function setDriverLogLevels(array $driverLogLevels)
   {
     $this->driverLogLevels = $driverLogLevels;
   }

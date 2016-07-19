@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_ChangeLogsListResponse extends Google_Collection
 {
   protected $collection_key = 'changeLogs';
-  protected $changeLogsType = 'Google_Service_Dfareporting_ChangeLog';
-  protected $changeLogsDataType = 'array';
+  public $changeLogs;
   public $kind;
   public $nextPageToken;
 
-  public function setChangeLogs($changeLogs)
+  public function setChangeLogs(array $changeLogs)
   {
+    foreach ($changeLogs as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_ChangeLog) {
+        throw new InvalidArgumentException('First argument to setChangeLogs must be an array of Google_Service_Dfareporting_ChangeLog');
+      }
+    }
     $this->changeLogs = $changeLogs;
   }
   public function getChangeLogs()

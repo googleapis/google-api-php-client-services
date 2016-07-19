@@ -31,7 +31,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRe
   {
     return $this->delegatedProjectNumber;
   }
-  public function setEmail($email)
+  public function setEmail(array $email)
   {
     $this->email = $email;
   }
@@ -47,7 +47,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetAccountInfoRe
   {
     return $this->idToken;
   }
-  public function setLocalId($localId)
+  public function setLocalId(array $localId)
   {
     $this->localId = $localId;
   }

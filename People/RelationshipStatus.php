@@ -18,8 +18,7 @@
 class Google_Service_People_RelationshipStatus extends Google_Model
 {
   public $formattedValue;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $value;
 
   public function setFormattedValue($formattedValue)

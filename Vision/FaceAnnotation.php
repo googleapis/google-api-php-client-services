@@ -20,16 +20,13 @@ class Google_Service_Vision_FaceAnnotation extends Google_Collection
   protected $collection_key = 'landmarks';
   public $angerLikelihood;
   public $blurredLikelihood;
-  protected $boundingPolyType = 'Google_Service_Vision_BoundingPoly';
-  protected $boundingPolyDataType = '';
+  public $boundingPoly;
   public $detectionConfidence;
-  protected $fdBoundingPolyType = 'Google_Service_Vision_BoundingPoly';
-  protected $fdBoundingPolyDataType = '';
+  public $fdBoundingPoly;
   public $headwearLikelihood;
   public $joyLikelihood;
   public $landmarkingConfidence;
-  protected $landmarksType = 'Google_Service_Vision_Landmark';
-  protected $landmarksDataType = 'array';
+  public $landmarks;
   public $panAngle;
   public $rollAngle;
   public $sorrowLikelihood;
@@ -101,8 +98,13 @@ class Google_Service_Vision_FaceAnnotation extends Google_Collection
   {
     return $this->landmarkingConfidence;
   }
-  public function setLandmarks($landmarks)
+  public function setLandmarks(array $landmarks)
   {
+    foreach ($landmarks as $l) {
+      if (!$l instanceof Google_Service_Vision_Landmark) {
+        throw new InvalidArgumentException('First argument to setLandmarks must be an array of Google_Service_Vision_Landmark');
+      }
+    }
     $this->landmarks = $landmarks;
   }
   public function getLandmarks()

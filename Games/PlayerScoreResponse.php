@@ -23,10 +23,9 @@ class Google_Service_Games_PlayerScoreResponse extends Google_Collection
   public $kind;
   public $leaderboardId;
   public $scoreTag;
-  protected $unbeatenScoresType = 'Google_Service_Games_PlayerScore';
-  protected $unbeatenScoresDataType = 'array';
+  public $unbeatenScores;
 
-  public function setBeatenScoreTimeSpans($beatenScoreTimeSpans)
+  public function setBeatenScoreTimeSpans(array $beatenScoreTimeSpans)
   {
     $this->beatenScoreTimeSpans = $beatenScoreTimeSpans;
   }
@@ -66,8 +65,13 @@ class Google_Service_Games_PlayerScoreResponse extends Google_Collection
   {
     return $this->scoreTag;
   }
-  public function setUnbeatenScores($unbeatenScores)
+  public function setUnbeatenScores(array $unbeatenScores)
   {
+    foreach ($unbeatenScores as $u) {
+      if (!$u instanceof Google_Service_Games_PlayerScore) {
+        throw new InvalidArgumentException('First argument to setUnbeatenScores must be an array of Google_Service_Games_PlayerScore');
+      }
+    }
     $this->unbeatenScores = $unbeatenScores;
   }
   public function getUnbeatenScores()

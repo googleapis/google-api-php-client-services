@@ -20,8 +20,7 @@ class Google_Service_ShoppingContent_ProductsCustomBatchRequestEntry extends Goo
   public $batchId;
   public $merchantId;
   public $method;
-  protected $productType = 'Google_Service_ShoppingContent_Product';
-  protected $productDataType = '';
+  public $product;
   public $productId;
 
   public function setBatchId($batchId)

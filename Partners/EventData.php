@@ -29,7 +29,7 @@ class Google_Service_Partners_EventData extends Google_Collection
   {
     return $this->key;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
     $this->values = $values;
   }

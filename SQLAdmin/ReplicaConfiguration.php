@@ -19,8 +19,7 @@ class Google_Service_SQLAdmin_ReplicaConfiguration extends Google_Model
 {
   public $failoverTarget;
   public $kind;
-  protected $mysqlReplicaConfigurationType = 'Google_Service_SQLAdmin_MySqlReplicaConfiguration';
-  protected $mysqlReplicaConfigurationDataType = '';
+  public $mysqlReplicaConfiguration;
 
   public function setFailoverTarget($failoverTarget)
   {

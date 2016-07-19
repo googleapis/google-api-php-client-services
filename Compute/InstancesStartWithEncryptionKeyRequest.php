@@ -18,11 +18,15 @@
 class Google_Service_Compute_InstancesStartWithEncryptionKeyRequest extends Google_Collection
 {
   protected $collection_key = 'disks';
-  protected $disksType = 'Google_Service_Compute_CustomerEncryptionKeyProtectedDisk';
-  protected $disksDataType = 'array';
+  public $disks;
 
-  public function setDisks($disks)
+  public function setDisks(array $disks)
   {
+    foreach ($disks as $d) {
+      if (!$d instanceof Google_Service_Compute_CustomerEncryptionKeyProtectedDisk) {
+        throw new InvalidArgumentException('First argument to setDisks must be an array of Google_Service_Compute_CustomerEncryptionKeyProtectedDisk');
+      }
+    }
     $this->disks = $disks;
   }
   public function getDisks()

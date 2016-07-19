@@ -25,8 +25,7 @@ class Google_Service_Directory_Users extends Google_Collection
   public $kind;
   public $nextPageToken;
   public $triggerEvent;
-  protected $usersType = 'Google_Service_Directory_User';
-  protected $usersDataType = 'array';
+  public $users;
 
   public function setEtag($etag)
   {
@@ -60,8 +59,13 @@ class Google_Service_Directory_Users extends Google_Collection
   {
     return $this->triggerEvent;
   }
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
+    foreach ($users as $u) {
+      if (!$u instanceof Google_Service_Directory_User) {
+        throw new InvalidArgumentException('First argument to setUsers must be an array of Google_Service_Directory_User');
+      }
+    }
     $this->users = $users;
   }
   public function getUsers()

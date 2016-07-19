@@ -17,15 +17,12 @@
 
 class Google_Service_Plus_CommentActor extends Google_Model
 {
-  protected $clientSpecificActorInfoType = 'Google_Service_Plus_CommentActorClientSpecificActorInfo';
-  protected $clientSpecificActorInfoDataType = '';
+  public $clientSpecificActorInfo;
   public $displayName;
   public $id;
-  protected $imageType = 'Google_Service_Plus_CommentActorImage';
-  protected $imageDataType = '';
+  public $image;
   public $url;
-  protected $verificationType = 'Google_Service_Plus_CommentActorVerification';
-  protected $verificationDataType = '';
+  public $verification;
 
   public function setClientSpecificActorInfo(Google_Service_Plus_CommentActorClientSpecificActorInfo $clientSpecificActorInfo)
   {

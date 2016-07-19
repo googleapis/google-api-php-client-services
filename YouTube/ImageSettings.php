@@ -17,8 +17,7 @@
 
 class Google_Service_YouTube_ImageSettings extends Google_Model
 {
-  protected $backgroundImageUrlType = 'Google_Service_YouTube_LocalizedProperty';
-  protected $backgroundImageUrlDataType = '';
+  public $backgroundImageUrl;
   public $bannerExternalUrl;
   public $bannerImageUrl;
   public $bannerMobileExtraHdImageUrl;
@@ -34,14 +33,10 @@ class Google_Service_YouTube_ImageSettings extends Google_Model
   public $bannerTvImageUrl;
   public $bannerTvLowImageUrl;
   public $bannerTvMediumImageUrl;
-  protected $largeBrandedBannerImageImapScriptType = 'Google_Service_YouTube_LocalizedProperty';
-  protected $largeBrandedBannerImageImapScriptDataType = '';
-  protected $largeBrandedBannerImageUrlType = 'Google_Service_YouTube_LocalizedProperty';
-  protected $largeBrandedBannerImageUrlDataType = '';
-  protected $smallBrandedBannerImageImapScriptType = 'Google_Service_YouTube_LocalizedProperty';
-  protected $smallBrandedBannerImageImapScriptDataType = '';
-  protected $smallBrandedBannerImageUrlType = 'Google_Service_YouTube_LocalizedProperty';
-  protected $smallBrandedBannerImageUrlDataType = '';
+  public $largeBrandedBannerImageImapScript;
+  public $largeBrandedBannerImageUrl;
+  public $smallBrandedBannerImageImapScript;
+  public $smallBrandedBannerImageUrl;
   public $trackingImageUrl;
   public $watchIconImageUrl;
 

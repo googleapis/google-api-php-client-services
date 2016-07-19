@@ -18,11 +18,15 @@
 class Google_Service_TagManager_ListFoldersResponse extends Google_Collection
 {
   protected $collection_key = 'folders';
-  protected $foldersType = 'Google_Service_TagManager_Folder';
-  protected $foldersDataType = 'array';
+  public $folders;
 
-  public function setFolders($folders)
+  public function setFolders(array $folders)
   {
+    foreach ($folders as $f) {
+      if (!$f instanceof Google_Service_TagManager_Folder) {
+        throw new InvalidArgumentException('First argument to setFolders must be an array of Google_Service_TagManager_Folder');
+      }
+    }
     $this->folders = $folders;
   }
   public function getFolders()

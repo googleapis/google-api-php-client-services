@@ -18,26 +18,33 @@
 class Google_Service_CloudUserAccounts_Policy extends Google_Collection
 {
   protected $collection_key = 'rules';
-  protected $auditConfigsType = 'Google_Service_CloudUserAccounts_AuditConfig';
-  protected $auditConfigsDataType = 'array';
-  protected $bindingsType = 'Google_Service_CloudUserAccounts_Binding';
-  protected $bindingsDataType = 'array';
+  public $auditConfigs;
+  public $bindings;
   public $etag;
   public $iamOwned;
-  protected $rulesType = 'Google_Service_CloudUserAccounts_Rule';
-  protected $rulesDataType = 'array';
+  public $rules;
   public $version;
 
-  public function setAuditConfigs($auditConfigs)
+  public function setAuditConfigs(array $auditConfigs)
   {
+    foreach ($auditConfigs as $a) {
+      if (!$a instanceof Google_Service_CloudUserAccounts_AuditConfig) {
+        throw new InvalidArgumentException('First argument to setAuditConfigs must be an array of Google_Service_CloudUserAccounts_AuditConfig');
+      }
+    }
     $this->auditConfigs = $auditConfigs;
   }
   public function getAuditConfigs()
   {
     return $this->auditConfigs;
   }
-  public function setBindings($bindings)
+  public function setBindings(array $bindings)
   {
+    foreach ($bindings as $b) {
+      if (!$b instanceof Google_Service_CloudUserAccounts_Binding) {
+        throw new InvalidArgumentException('First argument to setBindings must be an array of Google_Service_CloudUserAccounts_Binding');
+      }
+    }
     $this->bindings = $bindings;
   }
   public function getBindings()
@@ -60,8 +67,13 @@ class Google_Service_CloudUserAccounts_Policy extends Google_Collection
   {
     return $this->iamOwned;
   }
-  public function setRules($rules)
+  public function setRules(array $rules)
   {
+    foreach ($rules as $r) {
+      if (!$r instanceof Google_Service_CloudUserAccounts_Rule) {
+        throw new InvalidArgumentException('First argument to setRules must be an array of Google_Service_CloudUserAccounts_Rule');
+      }
+    }
     $this->rules = $rules;
   }
   public function getRules()

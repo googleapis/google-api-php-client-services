@@ -85,7 +85,7 @@ class Google_Service_YouTube_ActivityContentDetailsPromotedItem extends Google_C
   {
     return $this->destinationUrl;
   }
-  public function setForecastingUrl($forecastingUrl)
+  public function setForecastingUrl(array $forecastingUrl)
   {
     $this->forecastingUrl = $forecastingUrl;
   }
@@ -93,7 +93,7 @@ class Google_Service_YouTube_ActivityContentDetailsPromotedItem extends Google_C
   {
     return $this->forecastingUrl;
   }
-  public function setImpressionUrl($impressionUrl)
+  public function setImpressionUrl(array $impressionUrl)
   {
     $this->impressionUrl = $impressionUrl;
   }

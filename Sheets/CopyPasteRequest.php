@@ -17,12 +17,10 @@
 
 class Google_Service_Sheets_CopyPasteRequest extends Google_Model
 {
-  protected $destinationType = 'Google_Service_Sheets_GridRange';
-  protected $destinationDataType = '';
+  public $destination;
   public $pasteOrientation;
   public $pasteType;
-  protected $sourceType = 'Google_Service_Sheets_GridRange';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setDestination(Google_Service_Sheets_GridRange $destination)
   {

@@ -18,10 +18,8 @@
 class Google_Service_Books_Usersettings extends Google_Model
 {
   public $kind;
-  protected $notesExportType = 'Google_Service_Books_UsersettingsNotesExport';
-  protected $notesExportDataType = '';
-  protected $notificationType = 'Google_Service_Books_UsersettingsNotification';
-  protected $notificationDataType = '';
+  public $notesExport;
+  public $notification;
 
   public function setKind($kind)
   {

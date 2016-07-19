@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_DeleteDimensionRequest extends Google_Model
 {
-  protected $rangeType = 'Google_Service_Sheets_DimensionRange';
-  protected $rangeDataType = '';
+  public $range;
 
   public function setRange(Google_Service_Sheets_DimensionRange $range)
   {

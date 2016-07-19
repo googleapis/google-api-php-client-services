@@ -19,8 +19,7 @@ class Google_Service_DeploymentManager_TypesListResponse extends Google_Collecti
 {
   protected $collection_key = 'types';
   public $nextPageToken;
-  protected $typesType = 'Google_Service_DeploymentManager_Type';
-  protected $typesDataType = 'array';
+  public $types;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_DeploymentManager_TypesListResponse extends Google_Collecti
   {
     return $this->nextPageToken;
   }
-  public function setTypes($types)
+  public function setTypes(array $types)
   {
+    foreach ($types as $t) {
+      if (!$t instanceof Google_Service_DeploymentManager_Type) {
+        throw new InvalidArgumentException('First argument to setTypes must be an array of Google_Service_DeploymentManager_Type');
+      }
+    }
     $this->types = $types;
   }
   public function getTypes()

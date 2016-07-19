@@ -18,12 +18,16 @@
 class Google_Service_CloudDebugger_ListBreakpointsResponse extends Google_Collection
 {
   protected $collection_key = 'breakpoints';
-  protected $breakpointsType = 'Google_Service_CloudDebugger_Breakpoint';
-  protected $breakpointsDataType = 'array';
+  public $breakpoints;
   public $nextWaitToken;
 
-  public function setBreakpoints($breakpoints)
+  public function setBreakpoints(array $breakpoints)
   {
+    foreach ($breakpoints as $b) {
+      if (!$b instanceof Google_Service_CloudDebugger_Breakpoint) {
+        throw new InvalidArgumentException('First argument to setBreakpoints must be an array of Google_Service_CloudDebugger_Breakpoint');
+      }
+    }
     $this->breakpoints = $breakpoints;
   }
   public function getBreakpoints()

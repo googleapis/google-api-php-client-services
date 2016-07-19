@@ -17,14 +17,12 @@
 
 class Google_Service_Calendar_Colors extends Google_Model
 {
-  protected $calendarType = 'Google_Service_Calendar_ColorDefinition';
-  protected $calendarDataType = 'map';
-  protected $eventType = 'Google_Service_Calendar_ColorDefinition';
-  protected $eventDataType = 'map';
+  public $calendar;
+  public $event;
   public $kind;
   public $updated;
 
-  public function setCalendar($calendar)
+  public function setCalendar(array $calendar)
   {
     $this->calendar = $calendar;
   }
@@ -32,7 +30,7 @@ class Google_Service_Calendar_Colors extends Google_Model
   {
     return $this->calendar;
   }
-  public function setEvent($event)
+  public function setEvent(array $event)
   {
     $this->event = $event;
   }

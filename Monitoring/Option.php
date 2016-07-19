@@ -28,7 +28,7 @@ class Google_Service_Monitoring_Option extends Google_Model
   {
     return $this->name;
   }
-  public function setValue($value)
+  public function setValue(array $value)
   {
     $this->value = $value;
   }

@@ -27,7 +27,7 @@ class Google_Service_IdentityToolkit_CreateAuthUriResponse extends Google_Collec
   public $registered;
   public $sessionId;
 
-  public function setAllProviders($allProviders)
+  public function setAllProviders(array $allProviders)
   {
     $this->allProviders = $allProviders;
   }

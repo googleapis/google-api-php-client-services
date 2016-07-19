@@ -30,7 +30,7 @@ class Google_Service_Kgsearch_SearchResponse extends Google_Collection
   {
     return $this->context;
   }
-  public function setItemListElement($itemListElement)
+  public function setItemListElement(array $itemListElement)
   {
     $this->itemListElement = $itemListElement;
   }

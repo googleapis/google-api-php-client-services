@@ -17,8 +17,7 @@
 
 class Google_Service_YouTube_LiveBroadcastTopic extends Google_Model
 {
-  protected $snippetType = 'Google_Service_YouTube_LiveBroadcastTopicSnippet';
-  protected $snippetDataType = '';
+  public $snippet;
   public $type;
   public $unmatched;
 

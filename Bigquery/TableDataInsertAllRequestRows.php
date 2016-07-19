@@ -28,7 +28,7 @@ class Google_Service_Bigquery_TableDataInsertAllRequestRows extends Google_Model
   {
     return $this->insertId;
   }
-  public function setJson($json)
+  public function setJson(array $json)
   {
     $this->json = $json;
   }

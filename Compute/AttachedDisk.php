@@ -21,11 +21,9 @@ class Google_Service_Compute_AttachedDisk extends Google_Collection
   public $autoDelete;
   public $boot;
   public $deviceName;
-  protected $diskEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $diskEncryptionKeyDataType = '';
+  public $diskEncryptionKey;
   public $index;
-  protected $initializeParamsType = 'Google_Service_Compute_AttachedDiskInitializeParams';
-  protected $initializeParamsDataType = '';
+  public $initializeParams;
   public $interface;
   public $kind;
   public $licenses;
@@ -97,7 +95,7 @@ class Google_Service_Compute_AttachedDisk extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLicenses($licenses)
+  public function setLicenses(array $licenses)
   {
     $this->licenses = $licenses;
   }

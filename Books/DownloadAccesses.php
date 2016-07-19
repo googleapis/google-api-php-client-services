@@ -18,12 +18,16 @@
 class Google_Service_Books_DownloadAccesses extends Google_Collection
 {
   protected $collection_key = 'downloadAccessList';
-  protected $downloadAccessListType = 'Google_Service_Books_DownloadAccessRestriction';
-  protected $downloadAccessListDataType = 'array';
+  public $downloadAccessList;
   public $kind;
 
-  public function setDownloadAccessList($downloadAccessList)
+  public function setDownloadAccessList(array $downloadAccessList)
   {
+    foreach ($downloadAccessList as $d) {
+      if (!$d instanceof Google_Service_Books_DownloadAccessRestriction) {
+        throw new InvalidArgumentException('First argument to setDownloadAccessList must be an array of Google_Service_Books_DownloadAccessRestriction');
+      }
+    }
     $this->downloadAccessList = $downloadAccessList;
   }
   public function getDownloadAccessList()

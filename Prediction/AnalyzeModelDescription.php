@@ -19,10 +19,9 @@ class Google_Service_Prediction_AnalyzeModelDescription extends Google_Model
 {
   public $confusionMatrix;
   public $confusionMatrixRowTotals;
-  protected $modelinfoType = 'Google_Service_Prediction_Insert2';
-  protected $modelinfoDataType = '';
+  public $modelinfo;
 
-  public function setConfusionMatrix($confusionMatrix)
+  public function setConfusionMatrix(array $confusionMatrix)
   {
     $this->confusionMatrix = $confusionMatrix;
   }
@@ -30,7 +29,7 @@ class Google_Service_Prediction_AnalyzeModelDescription extends Google_Model
   {
     return $this->confusionMatrix;
   }
-  public function setConfusionMatrixRowTotals($confusionMatrixRowTotals)
+  public function setConfusionMatrixRowTotals(array $confusionMatrixRowTotals)
   {
     $this->confusionMatrixRowTotals = $confusionMatrixRowTotals;
   }

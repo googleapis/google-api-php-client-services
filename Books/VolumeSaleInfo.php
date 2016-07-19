@@ -21,13 +21,10 @@ class Google_Service_Books_VolumeSaleInfo extends Google_Collection
   public $buyLink;
   public $country;
   public $isEbook;
-  protected $listPriceType = 'Google_Service_Books_VolumeSaleInfoListPrice';
-  protected $listPriceDataType = '';
-  protected $offersType = 'Google_Service_Books_VolumeSaleInfoOffers';
-  protected $offersDataType = 'array';
+  public $listPrice;
+  public $offers;
   public $onSaleDate;
-  protected $retailPriceType = 'Google_Service_Books_VolumeSaleInfoRetailPrice';
-  protected $retailPriceDataType = '';
+  public $retailPrice;
   public $saleability;
 
   public function setBuyLink($buyLink)
@@ -62,8 +59,13 @@ class Google_Service_Books_VolumeSaleInfo extends Google_Collection
   {
     return $this->listPrice;
   }
-  public function setOffers($offers)
+  public function setOffers(array $offers)
   {
+    foreach ($offers as $o) {
+      if (!$o instanceof Google_Service_Books_VolumeSaleInfoOffers) {
+        throw new InvalidArgumentException('First argument to setOffers must be an array of Google_Service_Books_VolumeSaleInfoOffers');
+      }
+    }
     $this->offers = $offers;
   }
   public function getOffers()

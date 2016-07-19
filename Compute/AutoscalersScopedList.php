@@ -18,13 +18,16 @@
 class Google_Service_Compute_AutoscalersScopedList extends Google_Collection
 {
   protected $collection_key = 'autoscalers';
-  protected $autoscalersType = 'Google_Service_Compute_Autoscaler';
-  protected $autoscalersDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_AutoscalersScopedListWarning';
-  protected $warningDataType = '';
+  public $autoscalers;
+  public $warning;
 
-  public function setAutoscalers($autoscalers)
+  public function setAutoscalers(array $autoscalers)
   {
+    foreach ($autoscalers as $a) {
+      if (!$a instanceof Google_Service_Compute_Autoscaler) {
+        throw new InvalidArgumentException('First argument to setAutoscalers must be an array of Google_Service_Compute_Autoscaler');
+      }
+    }
     $this->autoscalers = $autoscalers;
   }
   public function getAutoscalers()

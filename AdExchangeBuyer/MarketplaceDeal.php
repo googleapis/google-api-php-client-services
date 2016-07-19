@@ -18,16 +18,13 @@
 class Google_Service_AdExchangeBuyer_MarketplaceDeal extends Google_Collection
 {
   protected $collection_key = 'sharedTargetings';
-  protected $buyerPrivateDataType = 'Google_Service_AdExchangeBuyer_PrivateData';
-  protected $buyerPrivateDataDataType = '';
+  public $buyerPrivateData;
   public $creationTimeMs;
   public $creativePreApprovalPolicy;
   public $creativeSafeFrameCompatibility;
   public $dealId;
-  protected $dealServingMetadataType = 'Google_Service_AdExchangeBuyer_DealServingMetadata';
-  protected $dealServingMetadataDataType = '';
-  protected $deliveryControlType = 'Google_Service_AdExchangeBuyer_DeliveryControl';
-  protected $deliveryControlDataType = '';
+  public $dealServingMetadata;
+  public $deliveryControl;
   public $externalDealId;
   public $flightEndTimeMs;
   public $flightStartTimeMs;
@@ -39,13 +36,10 @@ class Google_Service_AdExchangeBuyer_MarketplaceDeal extends Google_Collection
   public $productRevisionNumber;
   public $programmaticCreativeSource;
   public $proposalId;
-  protected $sellerContactsType = 'Google_Service_AdExchangeBuyer_ContactInformation';
-  protected $sellerContactsDataType = 'array';
-  protected $sharedTargetingsType = 'Google_Service_AdExchangeBuyer_SharedTargeting';
-  protected $sharedTargetingsDataType = 'array';
+  public $sellerContacts;
+  public $sharedTargetings;
   public $syndicationProduct;
-  protected $termsType = 'Google_Service_AdExchangeBuyer_DealTerms';
-  protected $termsDataType = '';
+  public $terms;
   public $webPropertyCode;
 
   public function setBuyerPrivateData(Google_Service_AdExchangeBuyer_PrivateData $buyerPrivateData)
@@ -192,16 +186,26 @@ class Google_Service_AdExchangeBuyer_MarketplaceDeal extends Google_Collection
   {
     return $this->proposalId;
   }
-  public function setSellerContacts($sellerContacts)
+  public function setSellerContacts(array $sellerContacts)
   {
+    foreach ($sellerContacts as $s) {
+      if (!$s instanceof Google_Service_AdExchangeBuyer_ContactInformation) {
+        throw new InvalidArgumentException('First argument to setSellerContacts must be an array of Google_Service_AdExchangeBuyer_ContactInformation');
+      }
+    }
     $this->sellerContacts = $sellerContacts;
   }
   public function getSellerContacts()
   {
     return $this->sellerContacts;
   }
-  public function setSharedTargetings($sharedTargetings)
+  public function setSharedTargetings(array $sharedTargetings)
   {
+    foreach ($sharedTargetings as $s) {
+      if (!$s instanceof Google_Service_AdExchangeBuyer_SharedTargeting) {
+        throw new InvalidArgumentException('First argument to setSharedTargetings must be an array of Google_Service_AdExchangeBuyer_SharedTargeting');
+      }
+    }
     $this->sharedTargetings = $sharedTargetings;
   }
   public function getSharedTargetings()

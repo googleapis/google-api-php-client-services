@@ -17,13 +17,11 @@
 
 class Google_Service_Plus_Place extends Google_Model
 {
-  protected $addressType = 'Google_Service_Plus_PlaceAddress';
-  protected $addressDataType = '';
+  public $address;
   public $displayName;
   public $id;
   public $kind;
-  protected $positionType = 'Google_Service_Plus_PlacePosition';
-  protected $positionDataType = '';
+  public $position;
 
   public function setAddress(Google_Service_Plus_PlaceAddress $address)
   {

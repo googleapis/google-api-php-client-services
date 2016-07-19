@@ -18,8 +18,7 @@
 class Google_Service_Sheets_UpdateChartSpecRequest extends Google_Model
 {
   public $chartId;
-  protected $specType = 'Google_Service_Sheets_ChartSpec';
-  protected $specDataType = '';
+  public $spec;
 
   public function setChartId($chartId)
   {

@@ -19,8 +19,7 @@ class Google_Service_DeploymentManager_ResourceUpdateWarnings extends Google_Col
 {
   protected $collection_key = 'data';
   public $code;
-  protected $dataType = 'Google_Service_DeploymentManager_ResourceUpdateWarningsData';
-  protected $dataDataType = 'array';
+  public $data;
   public $message;
 
   public function setCode($code)
@@ -31,8 +30,13 @@ class Google_Service_DeploymentManager_ResourceUpdateWarnings extends Google_Col
   {
     return $this->code;
   }
-  public function setData($data)
+  public function setData(array $data)
   {
+    foreach ($data as $d) {
+      if (!$d instanceof Google_Service_DeploymentManager_ResourceUpdateWarningsData) {
+        throw new InvalidArgumentException('First argument to setData must be an array of Google_Service_DeploymentManager_ResourceUpdateWarningsData');
+      }
+    }
     $this->data = $data;
   }
   public function getData()

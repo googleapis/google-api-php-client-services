@@ -18,8 +18,7 @@
 class Google_Service_Mirror_Contact extends Google_Collection
 {
   protected $collection_key = 'sharingFeatures';
-  protected $acceptCommandsType = 'Google_Service_Mirror_Command';
-  protected $acceptCommandsDataType = 'array';
+  public $acceptCommands;
   public $acceptTypes;
   public $displayName;
   public $id;
@@ -32,15 +31,20 @@ class Google_Service_Mirror_Contact extends Google_Collection
   public $speakableName;
   public $type;
 
-  public function setAcceptCommands($acceptCommands)
+  public function setAcceptCommands(array $acceptCommands)
   {
+    foreach ($acceptCommands as $a) {
+      if (!$a instanceof Google_Service_Mirror_Command) {
+        throw new InvalidArgumentException('First argument to setAcceptCommands must be an array of Google_Service_Mirror_Command');
+      }
+    }
     $this->acceptCommands = $acceptCommands;
   }
   public function getAcceptCommands()
   {
     return $this->acceptCommands;
   }
-  public function setAcceptTypes($acceptTypes)
+  public function setAcceptTypes(array $acceptTypes)
   {
     $this->acceptTypes = $acceptTypes;
   }
@@ -64,7 +68,7 @@ class Google_Service_Mirror_Contact extends Google_Collection
   {
     return $this->id;
   }
-  public function setImageUrls($imageUrls)
+  public function setImageUrls(array $imageUrls)
   {
     $this->imageUrls = $imageUrls;
   }
@@ -96,7 +100,7 @@ class Google_Service_Mirror_Contact extends Google_Collection
   {
     return $this->priority;
   }
-  public function setSharingFeatures($sharingFeatures)
+  public function setSharingFeatures(array $sharingFeatures)
   {
     $this->sharingFeatures = $sharingFeatures;
   }

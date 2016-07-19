@@ -17,8 +17,7 @@
 
 class Google_Service_CloudUserAccounts_LinuxGetAuthorizedKeysViewResponse extends Google_Model
 {
-  protected $resourceType = 'Google_Service_CloudUserAccounts_AuthorizedKeysView';
-  protected $resourceDataType = '';
+  public $resource;
 
   public function setResource(Google_Service_CloudUserAccounts_AuthorizedKeysView $resource)
   {

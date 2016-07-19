@@ -18,12 +18,16 @@
 class Google_Service_AndroidEnterprise_CollectionsListResponse extends Google_Collection
 {
   protected $collection_key = 'collection';
-  protected $collectionType = 'Google_Service_AndroidEnterprise_Collection';
-  protected $collectionDataType = 'array';
+  public $collection;
   public $kind;
 
-  public function setCollection($collection)
+  public function setCollection(array $collection)
   {
+    foreach ($collection as $c) {
+      if (!$c instanceof Google_Service_AndroidEnterprise_Collection) {
+        throw new InvalidArgumentException('First argument to setCollection must be an array of Google_Service_AndroidEnterprise_Collection');
+      }
+    }
     $this->collection = $collection;
   }
   public function getCollection()

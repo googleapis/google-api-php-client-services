@@ -20,8 +20,7 @@ class Google_Service_Compute_InstanceGroupManager extends Google_Collection
   protected $collection_key = 'targetPools';
   public $baseInstanceName;
   public $creationTimestamp;
-  protected $currentActionsType = 'Google_Service_Compute_InstanceGroupManagerActionsSummary';
-  protected $currentActionsDataType = '';
+  public $currentActions;
   public $description;
   public $fingerprint;
   public $id;
@@ -29,8 +28,7 @@ class Google_Service_Compute_InstanceGroupManager extends Google_Collection
   public $instanceTemplate;
   public $kind;
   public $name;
-  protected $namedPortsType = 'Google_Service_Compute_NamedPort';
-  protected $namedPortsDataType = 'array';
+  public $namedPorts;
   public $selfLink;
   public $targetPools;
   public $targetSize;
@@ -116,8 +114,13 @@ class Google_Service_Compute_InstanceGroupManager extends Google_Collection
   {
     return $this->name;
   }
-  public function setNamedPorts($namedPorts)
+  public function setNamedPorts(array $namedPorts)
   {
+    foreach ($namedPorts as $n) {
+      if (!$n instanceof Google_Service_Compute_NamedPort) {
+        throw new InvalidArgumentException('First argument to setNamedPorts must be an array of Google_Service_Compute_NamedPort');
+      }
+    }
     $this->namedPorts = $namedPorts;
   }
   public function getNamedPorts()
@@ -132,7 +135,7 @@ class Google_Service_Compute_InstanceGroupManager extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setTargetPools($targetPools)
+  public function setTargetPools(array $targetPools)
   {
     $this->targetPools = $targetPools;
   }

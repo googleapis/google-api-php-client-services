@@ -18,8 +18,7 @@
 class Google_Service_Dfareporting_OptimizationActivity extends Google_Model
 {
   public $floodlightActivityId;
-  protected $floodlightActivityIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $floodlightActivityIdDimensionValueDataType = '';
+  public $floodlightActivityIdDimensionValue;
   public $weight;
 
   public function setFloodlightActivityId($floodlightActivityId)

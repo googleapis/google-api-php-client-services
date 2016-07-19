@@ -22,6 +22,7 @@ class Google_Service_Directory_Member extends Google_Model
   public $id;
   public $kind;
   public $role;
+  public $status;
   public $type;
 
   public function setEmail($email)
@@ -63,6 +64,14 @@ class Google_Service_Directory_Member extends Google_Model
   public function getRole()
   {
     return $this->role;
+  }
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  public function getStatus()
+  {
+    return $this->status;
   }
   public function setType($type)
   {

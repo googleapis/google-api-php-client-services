@@ -18,27 +18,33 @@
 class Google_Service_Urlshortener_AnalyticsSnapshot extends Google_Collection
 {
   protected $collection_key = 'referrers';
-  protected $browsersType = 'Google_Service_Urlshortener_StringCount';
-  protected $browsersDataType = 'array';
-  protected $countriesType = 'Google_Service_Urlshortener_StringCount';
-  protected $countriesDataType = 'array';
+  public $browsers;
+  public $countries;
   public $longUrlClicks;
-  protected $platformsType = 'Google_Service_Urlshortener_StringCount';
-  protected $platformsDataType = 'array';
-  protected $referrersType = 'Google_Service_Urlshortener_StringCount';
-  protected $referrersDataType = 'array';
+  public $platforms;
+  public $referrers;
   public $shortUrlClicks;
 
-  public function setBrowsers($browsers)
+  public function setBrowsers(array $browsers)
   {
+    foreach ($browsers as $b) {
+      if (!$b instanceof Google_Service_Urlshortener_StringCount) {
+        throw new InvalidArgumentException('First argument to setBrowsers must be an array of Google_Service_Urlshortener_StringCount');
+      }
+    }
     $this->browsers = $browsers;
   }
   public function getBrowsers()
   {
     return $this->browsers;
   }
-  public function setCountries($countries)
+  public function setCountries(array $countries)
   {
+    foreach ($countries as $c) {
+      if (!$c instanceof Google_Service_Urlshortener_StringCount) {
+        throw new InvalidArgumentException('First argument to setCountries must be an array of Google_Service_Urlshortener_StringCount');
+      }
+    }
     $this->countries = $countries;
   }
   public function getCountries()
@@ -53,16 +59,26 @@ class Google_Service_Urlshortener_AnalyticsSnapshot extends Google_Collection
   {
     return $this->longUrlClicks;
   }
-  public function setPlatforms($platforms)
+  public function setPlatforms(array $platforms)
   {
+    foreach ($platforms as $p) {
+      if (!$p instanceof Google_Service_Urlshortener_StringCount) {
+        throw new InvalidArgumentException('First argument to setPlatforms must be an array of Google_Service_Urlshortener_StringCount');
+      }
+    }
     $this->platforms = $platforms;
   }
   public function getPlatforms()
   {
     return $this->platforms;
   }
-  public function setReferrers($referrers)
+  public function setReferrers(array $referrers)
   {
+    foreach ($referrers as $r) {
+      if (!$r instanceof Google_Service_Urlshortener_StringCount) {
+        throw new InvalidArgumentException('First argument to setReferrers must be an array of Google_Service_Urlshortener_StringCount');
+      }
+    }
     $this->referrers = $referrers;
   }
   public function getReferrers()

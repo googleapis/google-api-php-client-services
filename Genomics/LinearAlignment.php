@@ -18,14 +18,17 @@
 class Google_Service_Genomics_LinearAlignment extends Google_Collection
 {
   protected $collection_key = 'cigar';
-  protected $cigarType = 'Google_Service_Genomics_CigarUnit';
-  protected $cigarDataType = 'array';
+  public $cigar;
   public $mappingQuality;
-  protected $positionType = 'Google_Service_Genomics_Position';
-  protected $positionDataType = '';
+  public $position;
 
-  public function setCigar($cigar)
+  public function setCigar(array $cigar)
   {
+    foreach ($cigar as $c) {
+      if (!$c instanceof Google_Service_Genomics_CigarUnit) {
+        throw new InvalidArgumentException('First argument to setCigar must be an array of Google_Service_Genomics_CigarUnit');
+      }
+    }
     $this->cigar = $cigar;
   }
   public function getCigar()

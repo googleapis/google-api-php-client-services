@@ -19,8 +19,7 @@ class Google_Service_Appengine_ListServicesResponse extends Google_Collection
 {
   protected $collection_key = 'services';
   public $nextPageToken;
-  protected $servicesType = 'Google_Service_Appengine_Service';
-  protected $servicesDataType = 'array';
+  public $services;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Appengine_ListServicesResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setServices($services)
+  public function setServices(array $services)
   {
+    foreach ($services as $s) {
+      if (!$s instanceof Google_Service_Appengine_Service) {
+        throw new InvalidArgumentException('First argument to setServices must be an array of Google_Service_Appengine_Service');
+      }
+    }
     $this->services = $services;
   }
   public function getServices()

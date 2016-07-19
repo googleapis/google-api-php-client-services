@@ -25,7 +25,7 @@ class Google_Service_Dataproc_GceClusterConfig extends Google_Collection
   public $tags;
   public $zoneUri;
 
-  public function setMetadata($metadata)
+  public function setMetadata(array $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -41,7 +41,7 @@ class Google_Service_Dataproc_GceClusterConfig extends Google_Collection
   {
     return $this->networkUri;
   }
-  public function setServiceAccountScopes($serviceAccountScopes)
+  public function setServiceAccountScopes(array $serviceAccountScopes)
   {
     $this->serviceAccountScopes = $serviceAccountScopes;
   }
@@ -57,7 +57,7 @@ class Google_Service_Dataproc_GceClusterConfig extends Google_Collection
   {
     return $this->subnetworkUri;
   }
-  public function setTags($tags)
+  public function setTags(array $tags)
   {
     $this->tags = $tags;
   }

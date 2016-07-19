@@ -18,10 +18,8 @@
 class Google_Service_Classroom_Student extends Google_Model
 {
   public $courseId;
-  protected $profileType = 'Google_Service_Classroom_UserProfile';
-  protected $profileDataType = '';
-  protected $studentWorkFolderType = 'Google_Service_Classroom_DriveFolder';
-  protected $studentWorkFolderDataType = '';
+  public $profile;
+  public $studentWorkFolder;
   public $userId;
 
   public function setCourseId($courseId)

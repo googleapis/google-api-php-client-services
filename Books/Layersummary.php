@@ -40,7 +40,7 @@ class Google_Service_Books_Layersummary extends Google_Collection
   {
     return $this->annotationCount;
   }
-  public function setAnnotationTypes($annotationTypes)
+  public function setAnnotationTypes(array $annotationTypes)
   {
     $this->annotationTypes = $annotationTypes;
   }

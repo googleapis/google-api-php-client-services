@@ -25,8 +25,7 @@ class Google_Service_Directory_Customer extends Google_Model
   public $kind;
   public $language;
   public $phoneNumber;
-  protected $postalAddressType = 'Google_Service_Directory_CustomerPostalAddress';
-  protected $postalAddressDataType = '';
+  public $postalAddress;
 
   public function setAlternateEmail($alternateEmail)
   {

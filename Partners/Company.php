@@ -18,28 +18,26 @@
 class Google_Service_Partners_Company extends Google_Collection
 {
   protected $collection_key = 'services';
-  protected $certificationStatusesType = 'Google_Service_Partners_CertificationStatus';
-  protected $certificationStatusesDataType = 'array';
-  protected $convertedMinMonthlyBudgetType = 'Google_Service_Partners_Money';
-  protected $convertedMinMonthlyBudgetDataType = '';
+  public $certificationStatuses;
+  public $convertedMinMonthlyBudget;
   public $id;
   public $industries;
-  protected $localizedInfosType = 'Google_Service_Partners_LocalizedCompanyInfo';
-  protected $localizedInfosDataType = 'array';
-  protected $locationsType = 'Google_Service_Partners_Location';
-  protected $locationsDataType = 'array';
+  public $localizedInfos;
+  public $locations;
   public $name;
-  protected $originalMinMonthlyBudgetType = 'Google_Service_Partners_Money';
-  protected $originalMinMonthlyBudgetDataType = '';
-  protected $publicProfileType = 'Google_Service_Partners_PublicProfile';
-  protected $publicProfileDataType = '';
-  protected $ranksType = 'Google_Service_Partners_Rank';
-  protected $ranksDataType = 'array';
+  public $originalMinMonthlyBudget;
+  public $publicProfile;
+  public $ranks;
   public $services;
   public $websiteUrl;
 
-  public function setCertificationStatuses($certificationStatuses)
+  public function setCertificationStatuses(array $certificationStatuses)
   {
+    foreach ($certificationStatuses as $c) {
+      if (!$c instanceof Google_Service_Partners_CertificationStatus) {
+        throw new InvalidArgumentException('First argument to setCertificationStatuses must be an array of Google_Service_Partners_CertificationStatus');
+      }
+    }
     $this->certificationStatuses = $certificationStatuses;
   }
   public function getCertificationStatuses()
@@ -62,7 +60,7 @@ class Google_Service_Partners_Company extends Google_Collection
   {
     return $this->id;
   }
-  public function setIndustries($industries)
+  public function setIndustries(array $industries)
   {
     $this->industries = $industries;
   }
@@ -70,16 +68,26 @@ class Google_Service_Partners_Company extends Google_Collection
   {
     return $this->industries;
   }
-  public function setLocalizedInfos($localizedInfos)
+  public function setLocalizedInfos(array $localizedInfos)
   {
+    foreach ($localizedInfos as $l) {
+      if (!$l instanceof Google_Service_Partners_LocalizedCompanyInfo) {
+        throw new InvalidArgumentException('First argument to setLocalizedInfos must be an array of Google_Service_Partners_LocalizedCompanyInfo');
+      }
+    }
     $this->localizedInfos = $localizedInfos;
   }
   public function getLocalizedInfos()
   {
     return $this->localizedInfos;
   }
-  public function setLocations($locations)
+  public function setLocations(array $locations)
   {
+    foreach ($locations as $l) {
+      if (!$l instanceof Google_Service_Partners_Location) {
+        throw new InvalidArgumentException('First argument to setLocations must be an array of Google_Service_Partners_Location');
+      }
+    }
     $this->locations = $locations;
   }
   public function getLocations()
@@ -110,15 +118,20 @@ class Google_Service_Partners_Company extends Google_Collection
   {
     return $this->publicProfile;
   }
-  public function setRanks($ranks)
+  public function setRanks(array $ranks)
   {
+    foreach ($ranks as $r) {
+      if (!$r instanceof Google_Service_Partners_Rank) {
+        throw new InvalidArgumentException('First argument to setRanks must be an array of Google_Service_Partners_Rank');
+      }
+    }
     $this->ranks = $ranks;
   }
   public function getRanks()
   {
     return $this->ranks;
   }
-  public function setServices($services)
+  public function setServices(array $services)
   {
     $this->services = $services;
   }

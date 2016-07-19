@@ -19,8 +19,7 @@ class Google_Service_ShoppingContent_AccountShippingShippingServiceCalculationMe
 {
   public $carrierRate;
   public $excluded;
-  protected $flatRateType = 'Google_Service_ShoppingContent_Price';
-  protected $flatRateDataType = '';
+  public $flatRate;
   public $percentageRate;
   public $rateTable;
 

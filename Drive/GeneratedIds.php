@@ -22,7 +22,7 @@ class Google_Service_Drive_GeneratedIds extends Google_Collection
   public $kind;
   public $space;
 
-  public function setIds($ids)
+  public function setIds(array $ids)
   {
     $this->ids = $ids;
   }

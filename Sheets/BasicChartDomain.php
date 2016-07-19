@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_BasicChartDomain extends Google_Model
 {
-  protected $domainType = 'Google_Service_Sheets_ChartData';
-  protected $domainDataType = '';
+  public $domain;
 
   public function setDomain(Google_Service_Sheets_ChartData $domain)
   {

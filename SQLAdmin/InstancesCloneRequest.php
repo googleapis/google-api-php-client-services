@@ -17,8 +17,7 @@
 
 class Google_Service_SQLAdmin_InstancesCloneRequest extends Google_Model
 {
-  protected $cloneContextType = 'Google_Service_SQLAdmin_CloneContext';
-  protected $cloneContextDataType = '';
+  public $cloneContext;
 
   public function setCloneContext(Google_Service_SQLAdmin_CloneContext $cloneContext)
   {

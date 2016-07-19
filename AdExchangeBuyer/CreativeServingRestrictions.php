@@ -18,22 +18,30 @@
 class Google_Service_AdExchangeBuyer_CreativeServingRestrictions extends Google_Collection
 {
   protected $collection_key = 'disapprovalReasons';
-  protected $contextsType = 'Google_Service_AdExchangeBuyer_CreativeServingRestrictionsContexts';
-  protected $contextsDataType = 'array';
-  protected $disapprovalReasonsType = 'Google_Service_AdExchangeBuyer_CreativeServingRestrictionsDisapprovalReasons';
-  protected $disapprovalReasonsDataType = 'array';
+  public $contexts;
+  public $disapprovalReasons;
   public $reason;
 
-  public function setContexts($contexts)
+  public function setContexts(array $contexts)
   {
+    foreach ($contexts as $c) {
+      if (!$c instanceof Google_Service_AdExchangeBuyer_CreativeServingRestrictionsContexts) {
+        throw new InvalidArgumentException('First argument to setContexts must be an array of Google_Service_AdExchangeBuyer_CreativeServingRestrictionsContexts');
+      }
+    }
     $this->contexts = $contexts;
   }
   public function getContexts()
   {
     return $this->contexts;
   }
-  public function setDisapprovalReasons($disapprovalReasons)
+  public function setDisapprovalReasons(array $disapprovalReasons)
   {
+    foreach ($disapprovalReasons as $d) {
+      if (!$d instanceof Google_Service_AdExchangeBuyer_CreativeServingRestrictionsDisapprovalReasons) {
+        throw new InvalidArgumentException('First argument to setDisapprovalReasons must be an array of Google_Service_AdExchangeBuyer_CreativeServingRestrictionsDisapprovalReasons');
+      }
+    }
     $this->disapprovalReasons = $disapprovalReasons;
   }
   public function getDisapprovalReasons()

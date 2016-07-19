@@ -75,7 +75,7 @@ class Google_Service_Compute_TargetHttpsProxy extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setSslCertificates($sslCertificates)
+  public function setSslCertificates(array $sslCertificates)
   {
     $this->sslCertificates = $sslCertificates;
   }

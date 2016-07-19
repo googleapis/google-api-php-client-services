@@ -19,8 +19,7 @@ class Google_Service_GamesManagement_HiddenPlayer extends Google_Model
 {
   public $hiddenTimeMillis;
   public $kind;
-  protected $playerType = 'Google_Service_GamesManagement_Player';
-  protected $playerDataType = '';
+  public $player;
 
   public function setHiddenTimeMillis($hiddenTimeMillis)
   {

@@ -18,14 +18,18 @@
 class Google_Service_Dfareporting_CreativeRotation extends Google_Collection
 {
   protected $collection_key = 'creativeAssignments';
-  protected $creativeAssignmentsType = 'Google_Service_Dfareporting_CreativeAssignment';
-  protected $creativeAssignmentsDataType = 'array';
+  public $creativeAssignments;
   public $creativeOptimizationConfigurationId;
   public $type;
   public $weightCalculationStrategy;
 
-  public function setCreativeAssignments($creativeAssignments)
+  public function setCreativeAssignments(array $creativeAssignments)
   {
+    foreach ($creativeAssignments as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeAssignment) {
+        throw new InvalidArgumentException('First argument to setCreativeAssignments must be an array of Google_Service_Dfareporting_CreativeAssignment');
+      }
+    }
     $this->creativeAssignments = $creativeAssignments;
   }
   public function getCreativeAssignments()

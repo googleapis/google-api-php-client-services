@@ -19,12 +19,10 @@ class Google_Service_CloudUserAccounts_Rule extends Google_Collection
 {
   protected $collection_key = 'permissions';
   public $action;
-  protected $conditionsType = 'Google_Service_CloudUserAccounts_Condition';
-  protected $conditionsDataType = 'array';
+  public $conditions;
   public $description;
   public $ins;
-  protected $logConfigsType = 'Google_Service_CloudUserAccounts_LogConfig';
-  protected $logConfigsDataType = 'array';
+  public $logConfigs;
   public $notIns;
   public $permissions;
 
@@ -36,8 +34,13 @@ class Google_Service_CloudUserAccounts_Rule extends Google_Collection
   {
     return $this->action;
   }
-  public function setConditions($conditions)
+  public function setConditions(array $conditions)
   {
+    foreach ($conditions as $c) {
+      if (!$c instanceof Google_Service_CloudUserAccounts_Condition) {
+        throw new InvalidArgumentException('First argument to setConditions must be an array of Google_Service_CloudUserAccounts_Condition');
+      }
+    }
     $this->conditions = $conditions;
   }
   public function getConditions()
@@ -52,7 +55,7 @@ class Google_Service_CloudUserAccounts_Rule extends Google_Collection
   {
     return $this->description;
   }
-  public function setIns($ins)
+  public function setIns(array $ins)
   {
     $this->ins = $ins;
   }
@@ -60,15 +63,20 @@ class Google_Service_CloudUserAccounts_Rule extends Google_Collection
   {
     return $this->ins;
   }
-  public function setLogConfigs($logConfigs)
+  public function setLogConfigs(array $logConfigs)
   {
+    foreach ($logConfigs as $l) {
+      if (!$l instanceof Google_Service_CloudUserAccounts_LogConfig) {
+        throw new InvalidArgumentException('First argument to setLogConfigs must be an array of Google_Service_CloudUserAccounts_LogConfig');
+      }
+    }
     $this->logConfigs = $logConfigs;
   }
   public function getLogConfigs()
   {
     return $this->logConfigs;
   }
-  public function setNotIns($notIns)
+  public function setNotIns(array $notIns)
   {
     $this->notIns = $notIns;
   }
@@ -76,7 +84,7 @@ class Google_Service_CloudUserAccounts_Rule extends Google_Collection
   {
     return $this->notIns;
   }
-  public function setPermissions($permissions)
+  public function setPermissions(array $permissions)
   {
     $this->permissions = $permissions;
   }

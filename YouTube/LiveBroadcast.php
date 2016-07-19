@@ -17,19 +17,14 @@
 
 class Google_Service_YouTube_LiveBroadcast extends Google_Model
 {
-  protected $contentDetailsType = 'Google_Service_YouTube_LiveBroadcastContentDetails';
-  protected $contentDetailsDataType = '';
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_LiveBroadcastSnippet';
-  protected $snippetDataType = '';
-  protected $statisticsType = 'Google_Service_YouTube_LiveBroadcastStatistics';
-  protected $statisticsDataType = '';
-  protected $statusType = 'Google_Service_YouTube_LiveBroadcastStatus';
-  protected $statusDataType = '';
-  protected $topicDetailsType = 'Google_Service_YouTube_LiveBroadcastTopicDetails';
-  protected $topicDetailsDataType = '';
+  public $snippet;
+  public $statistics;
+  public $status;
+  public $topicDetails;
 
   public function setContentDetails(Google_Service_YouTube_LiveBroadcastContentDetails $contentDetails)
   {

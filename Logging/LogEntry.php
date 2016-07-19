@@ -17,17 +17,14 @@
 
 class Google_Service_Logging_LogEntry extends Google_Model
 {
-  protected $httpRequestType = 'Google_Service_Logging_HttpRequest';
-  protected $httpRequestDataType = '';
+  public $httpRequest;
   public $insertId;
   public $jsonPayload;
   public $labels;
   public $logName;
-  protected $operationType = 'Google_Service_Logging_LogEntryOperation';
-  protected $operationDataType = '';
+  public $operation;
   public $protoPayload;
-  protected $resourceType = 'Google_Service_Logging_MonitoredResource';
-  protected $resourceDataType = '';
+  public $resource;
   public $severity;
   public $textPayload;
   public $timestamp;
@@ -48,7 +45,7 @@ class Google_Service_Logging_LogEntry extends Google_Model
   {
     return $this->insertId;
   }
-  public function setJsonPayload($jsonPayload)
+  public function setJsonPayload(array $jsonPayload)
   {
     $this->jsonPayload = $jsonPayload;
   }
@@ -56,7 +53,7 @@ class Google_Service_Logging_LogEntry extends Google_Model
   {
     return $this->jsonPayload;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }
@@ -80,7 +77,7 @@ class Google_Service_Logging_LogEntry extends Google_Model
   {
     return $this->operation;
   }
-  public function setProtoPayload($protoPayload)
+  public function setProtoPayload(array $protoPayload)
   {
     $this->protoPayload = $protoPayload;
   }

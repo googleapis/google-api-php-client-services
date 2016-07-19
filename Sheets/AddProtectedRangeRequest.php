@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_AddProtectedRangeRequest extends Google_Model
 {
-  protected $protectedRangeType = 'Google_Service_Sheets_ProtectedRange';
-  protected $protectedRangeDataType = '';
+  public $protectedRange;
 
   public function setProtectedRange(Google_Service_Sheets_ProtectedRange $protectedRange)
   {

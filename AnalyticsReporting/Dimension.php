@@ -21,7 +21,7 @@ class Google_Service_AnalyticsReporting_Dimension extends Google_Collection
   public $histogramBuckets;
   public $name;
 
-  public function setHistogramBuckets($histogramBuckets)
+  public function setHistogramBuckets(array $histogramBuckets)
   {
     $this->histogramBuckets = $histogramBuckets;
   }

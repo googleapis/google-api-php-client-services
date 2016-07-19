@@ -17,12 +17,9 @@
 
 class Google_Service_Storagetransfer_Schedule extends Google_Model
 {
-  protected $scheduleEndDateType = 'Google_Service_Storagetransfer_Date';
-  protected $scheduleEndDateDataType = '';
-  protected $scheduleStartDateType = 'Google_Service_Storagetransfer_Date';
-  protected $scheduleStartDateDataType = '';
-  protected $startTimeOfDayType = 'Google_Service_Storagetransfer_TimeOfDay';
-  protected $startTimeOfDayDataType = '';
+  public $scheduleEndDate;
+  public $scheduleStartDate;
+  public $startTimeOfDay;
 
   public function setScheduleEndDate(Google_Service_Storagetransfer_Date $scheduleEndDate)
   {

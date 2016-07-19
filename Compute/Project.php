@@ -18,8 +18,7 @@
 class Google_Service_Compute_Project extends Google_Collection
 {
   protected $collection_key = 'quotas';
-  protected $commonInstanceMetadataType = 'Google_Service_Compute_Metadata';
-  protected $commonInstanceMetadataDataType = '';
+  public $commonInstanceMetadata;
   public $creationTimestamp;
   public $defaultServiceAccount;
   public $description;
@@ -27,11 +26,9 @@ class Google_Service_Compute_Project extends Google_Collection
   public $id;
   public $kind;
   public $name;
-  protected $quotasType = 'Google_Service_Compute_Quota';
-  protected $quotasDataType = 'array';
+  public $quotas;
   public $selfLink;
-  protected $usageExportLocationType = 'Google_Service_Compute_UsageExportLocation';
-  protected $usageExportLocationDataType = '';
+  public $usageExportLocation;
 
   public function setCommonInstanceMetadata(Google_Service_Compute_Metadata $commonInstanceMetadata)
   {
@@ -65,7 +62,7 @@ class Google_Service_Compute_Project extends Google_Collection
   {
     return $this->description;
   }
-  public function setEnabledFeatures($enabledFeatures)
+  public function setEnabledFeatures(array $enabledFeatures)
   {
     $this->enabledFeatures = $enabledFeatures;
   }
@@ -97,8 +94,13 @@ class Google_Service_Compute_Project extends Google_Collection
   {
     return $this->name;
   }
-  public function setQuotas($quotas)
+  public function setQuotas(array $quotas)
   {
+    foreach ($quotas as $q) {
+      if (!$q instanceof Google_Service_Compute_Quota) {
+        throw new InvalidArgumentException('First argument to setQuotas must be an array of Google_Service_Compute_Quota');
+      }
+    }
     $this->quotas = $quotas;
   }
   public function getQuotas()

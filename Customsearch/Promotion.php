@@ -18,17 +18,20 @@
 class Google_Service_Customsearch_Promotion extends Google_Collection
 {
   protected $collection_key = 'bodyLines';
-  protected $bodyLinesType = 'Google_Service_Customsearch_PromotionBodyLines';
-  protected $bodyLinesDataType = 'array';
+  public $bodyLines;
   public $displayLink;
   public $htmlTitle;
-  protected $imageType = 'Google_Service_Customsearch_PromotionImage';
-  protected $imageDataType = '';
+  public $image;
   public $link;
   public $title;
 
-  public function setBodyLines($bodyLines)
+  public function setBodyLines(array $bodyLines)
   {
+    foreach ($bodyLines as $b) {
+      if (!$b instanceof Google_Service_Customsearch_PromotionBodyLines) {
+        throw new InvalidArgumentException('First argument to setBodyLines must be an array of Google_Service_Customsearch_PromotionBodyLines');
+      }
+    }
     $this->bodyLines = $bodyLines;
   }
   public function getBodyLines()

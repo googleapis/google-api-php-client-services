@@ -26,8 +26,7 @@ class Google_Service_YouTube_LiveBroadcastSnippet extends Google_Model
   public $publishedAt;
   public $scheduledEndTime;
   public $scheduledStartTime;
-  protected $thumbnailsType = 'Google_Service_YouTube_ThumbnailDetails';
-  protected $thumbnailsDataType = '';
+  public $thumbnails;
   public $title;
 
   public function setActualEndTime($actualEndTime)

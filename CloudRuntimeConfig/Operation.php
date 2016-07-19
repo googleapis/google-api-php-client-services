@@ -18,8 +18,7 @@
 class Google_Service_CloudRuntimeConfig_Operation extends Google_Model
 {
   public $done;
-  protected $errorType = 'Google_Service_CloudRuntimeConfig_Status';
-  protected $errorDataType = '';
+  public $error;
   public $metadata;
   public $name;
   public $response;
@@ -40,7 +39,7 @@ class Google_Service_CloudRuntimeConfig_Operation extends Google_Model
   {
     return $this->error;
   }
-  public function setMetadata($metadata)
+  public function setMetadata(array $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -56,7 +55,7 @@ class Google_Service_CloudRuntimeConfig_Operation extends Google_Model
   {
     return $this->name;
   }
-  public function setResponse($response)
+  public function setResponse(array $response)
   {
     $this->response = $response;
   }

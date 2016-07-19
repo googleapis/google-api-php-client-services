@@ -19,18 +19,12 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
 {
   protected $collection_key = 'initializationActions';
   public $configBucket;
-  protected $gceClusterConfigType = 'Google_Service_Dataproc_GceClusterConfig';
-  protected $gceClusterConfigDataType = '';
-  protected $initializationActionsType = 'Google_Service_Dataproc_NodeInitializationAction';
-  protected $initializationActionsDataType = 'array';
-  protected $masterConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
-  protected $masterConfigDataType = '';
-  protected $secondaryWorkerConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
-  protected $secondaryWorkerConfigDataType = '';
-  protected $softwareConfigType = 'Google_Service_Dataproc_SoftwareConfig';
-  protected $softwareConfigDataType = '';
-  protected $workerConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
-  protected $workerConfigDataType = '';
+  public $gceClusterConfig;
+  public $initializationActions;
+  public $masterConfig;
+  public $secondaryWorkerConfig;
+  public $softwareConfig;
+  public $workerConfig;
 
   public function setConfigBucket($configBucket)
   {
@@ -48,8 +42,13 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
   {
     return $this->gceClusterConfig;
   }
-  public function setInitializationActions($initializationActions)
+  public function setInitializationActions(array $initializationActions)
   {
+    foreach ($initializationActions as $i) {
+      if (!$i instanceof Google_Service_Dataproc_NodeInitializationAction) {
+        throw new InvalidArgumentException('First argument to setInitializationActions must be an array of Google_Service_Dataproc_NodeInitializationAction');
+      }
+    }
     $this->initializationActions = $initializationActions;
   }
   public function getInitializationActions()

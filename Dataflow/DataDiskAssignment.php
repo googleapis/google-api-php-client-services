@@ -21,7 +21,7 @@ class Google_Service_Dataflow_DataDiskAssignment extends Google_Collection
   public $dataDisks;
   public $vmInstance;
 
-  public function setDataDisks($dataDisks)
+  public function setDataDisks(array $dataDisks)
   {
     $this->dataDisks = $dataDisks;
   }

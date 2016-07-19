@@ -19,32 +19,22 @@ class Google_Service_ShoppingContent_Order extends Google_Collection
 {
   protected $collection_key = 'shipments';
   public $acknowledged;
-  protected $customerType = 'Google_Service_ShoppingContent_OrderCustomer';
-  protected $customerDataType = '';
-  protected $deliveryDetailsType = 'Google_Service_ShoppingContent_OrderDeliveryDetails';
-  protected $deliveryDetailsDataType = '';
+  public $customer;
+  public $deliveryDetails;
   public $id;
   public $kind;
-  protected $lineItemsType = 'Google_Service_ShoppingContent_OrderLineItem';
-  protected $lineItemsDataType = 'array';
+  public $lineItems;
   public $merchantId;
   public $merchantOrderId;
-  protected $netAmountType = 'Google_Service_ShoppingContent_Price';
-  protected $netAmountDataType = '';
-  protected $paymentMethodType = 'Google_Service_ShoppingContent_OrderPaymentMethod';
-  protected $paymentMethodDataType = '';
+  public $netAmount;
+  public $paymentMethod;
   public $paymentStatus;
   public $placedDate;
-  protected $promotionsType = 'Google_Service_ShoppingContent_OrderPromotion';
-  protected $promotionsDataType = 'array';
-  protected $refundsType = 'Google_Service_ShoppingContent_OrderRefund';
-  protected $refundsDataType = 'array';
-  protected $shipmentsType = 'Google_Service_ShoppingContent_OrderShipment';
-  protected $shipmentsDataType = 'array';
-  protected $shippingCostType = 'Google_Service_ShoppingContent_Price';
-  protected $shippingCostDataType = '';
-  protected $shippingCostTaxType = 'Google_Service_ShoppingContent_Price';
-  protected $shippingCostTaxDataType = '';
+  public $promotions;
+  public $refunds;
+  public $shipments;
+  public $shippingCost;
+  public $shippingCostTax;
   public $shippingOption;
   public $status;
 
@@ -88,8 +78,13 @@ class Google_Service_ShoppingContent_Order extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLineItems($lineItems)
+  public function setLineItems(array $lineItems)
   {
+    foreach ($lineItems as $l) {
+      if (!$l instanceof Google_Service_ShoppingContent_OrderLineItem) {
+        throw new InvalidArgumentException('First argument to setLineItems must be an array of Google_Service_ShoppingContent_OrderLineItem');
+      }
+    }
     $this->lineItems = $lineItems;
   }
   public function getLineItems()
@@ -144,24 +139,39 @@ class Google_Service_ShoppingContent_Order extends Google_Collection
   {
     return $this->placedDate;
   }
-  public function setPromotions($promotions)
+  public function setPromotions(array $promotions)
   {
+    foreach ($promotions as $p) {
+      if (!$p instanceof Google_Service_ShoppingContent_OrderPromotion) {
+        throw new InvalidArgumentException('First argument to setPromotions must be an array of Google_Service_ShoppingContent_OrderPromotion');
+      }
+    }
     $this->promotions = $promotions;
   }
   public function getPromotions()
   {
     return $this->promotions;
   }
-  public function setRefunds($refunds)
+  public function setRefunds(array $refunds)
   {
+    foreach ($refunds as $r) {
+      if (!$r instanceof Google_Service_ShoppingContent_OrderRefund) {
+        throw new InvalidArgumentException('First argument to setRefunds must be an array of Google_Service_ShoppingContent_OrderRefund');
+      }
+    }
     $this->refunds = $refunds;
   }
   public function getRefunds()
   {
     return $this->refunds;
   }
-  public function setShipments($shipments)
+  public function setShipments(array $shipments)
   {
+    foreach ($shipments as $s) {
+      if (!$s instanceof Google_Service_ShoppingContent_OrderShipment) {
+        throw new InvalidArgumentException('First argument to setShipments must be an array of Google_Service_ShoppingContent_OrderShipment');
+      }
+    }
     $this->shipments = $shipments;
   }
   public function getShipments()

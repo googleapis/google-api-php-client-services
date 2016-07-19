@@ -20,8 +20,7 @@ class Google_Service_IdentityToolkit_DownloadAccountResponse extends Google_Coll
   protected $collection_key = 'users';
   public $kind;
   public $nextPageToken;
-  protected $usersType = 'Google_Service_IdentityToolkit_UserInfo';
-  protected $usersDataType = 'array';
+  public $users;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_IdentityToolkit_DownloadAccountResponse extends Google_Coll
   {
     return $this->nextPageToken;
   }
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
+    foreach ($users as $u) {
+      if (!$u instanceof Google_Service_IdentityToolkit_UserInfo) {
+        throw new InvalidArgumentException('First argument to setUsers must be an array of Google_Service_IdentityToolkit_UserInfo');
+      }
+    }
     $this->users = $users;
   }
   public function getUsers()

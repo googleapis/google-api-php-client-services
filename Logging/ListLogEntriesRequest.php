@@ -65,7 +65,7 @@ class Google_Service_Logging_ListLogEntriesRequest extends Google_Collection
   {
     return $this->partialSuccess;
   }
-  public function setProjectIds($projectIds)
+  public function setProjectIds(array $projectIds)
   {
     $this->projectIds = $projectIds;
   }

@@ -19,11 +19,9 @@ class Google_Service_Fitness_AggregateBucket extends Google_Collection
 {
   protected $collection_key = 'dataset';
   public $activity;
-  protected $datasetType = 'Google_Service_Fitness_Dataset';
-  protected $datasetDataType = 'array';
+  public $dataset;
   public $endTimeMillis;
-  protected $sessionType = 'Google_Service_Fitness_Session';
-  protected $sessionDataType = '';
+  public $session;
   public $startTimeMillis;
   public $type;
 
@@ -35,8 +33,13 @@ class Google_Service_Fitness_AggregateBucket extends Google_Collection
   {
     return $this->activity;
   }
-  public function setDataset($dataset)
+  public function setDataset(array $dataset)
   {
+    foreach ($dataset as $d) {
+      if (!$d instanceof Google_Service_Fitness_Dataset) {
+        throw new InvalidArgumentException('First argument to setDataset must be an array of Google_Service_Fitness_Dataset');
+      }
+    }
     $this->dataset = $dataset;
   }
   public function getDataset()

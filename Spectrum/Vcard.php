@@ -17,15 +17,11 @@
 
 class Google_Service_Spectrum_Vcard extends Google_Model
 {
-  protected $adrType = 'Google_Service_Spectrum_VcardAddress';
-  protected $adrDataType = '';
-  protected $emailType = 'Google_Service_Spectrum_VcardTypedText';
-  protected $emailDataType = '';
+  public $adr;
+  public $email;
   public $fn;
-  protected $orgType = 'Google_Service_Spectrum_VcardTypedText';
-  protected $orgDataType = '';
-  protected $telType = 'Google_Service_Spectrum_VcardTelephone';
-  protected $telDataType = '';
+  public $org;
+  public $tel;
 
   public function setAdr(Google_Service_Spectrum_VcardAddress $adr)
   {

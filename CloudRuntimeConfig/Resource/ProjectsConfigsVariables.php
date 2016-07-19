@@ -31,7 +31,7 @@ class Google_Service_CloudRuntimeConfig_Resource_ProjectsConfigsVariables extend
    * that has an existing variable name as a prefix.
    *
    * To learn more about creating a variable, read the [Setting and Getting Data
-   * ](/deployment-manager/runtime-configurator/seta-and-get-variables)
+   * ](/deployment-manager/runtime-configurator/set-and-get-variables)
    * documentation. (variables.create)
    *
    * @param string $parent The path to the RutimeConfig resource that this

@@ -25,12 +25,10 @@ class Google_Service_DeploymentManager_DeploymentmanagerResource extends Google_
   public $name;
   public $properties;
   public $type;
-  protected $updateType = 'Google_Service_DeploymentManager_ResourceUpdate';
-  protected $updateDataType = '';
+  public $update;
   public $updateTime;
   public $url;
-  protected $warningsType = 'Google_Service_DeploymentManager_DeploymentmanagerResourceWarnings';
-  protected $warningsDataType = 'array';
+  public $warnings;
 
   public function setFinalProperties($finalProperties)
   {
@@ -112,8 +110,13 @@ class Google_Service_DeploymentManager_DeploymentmanagerResource extends Google_
   {
     return $this->url;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
+    foreach ($warnings as $w) {
+      if (!$w instanceof Google_Service_DeploymentManager_DeploymentmanagerResourceWarnings) {
+        throw new InvalidArgumentException('First argument to setWarnings must be an array of Google_Service_DeploymentManager_DeploymentmanagerResourceWarnings');
+      }
+    }
     $this->warnings = $warnings;
   }
   public function getWarnings()

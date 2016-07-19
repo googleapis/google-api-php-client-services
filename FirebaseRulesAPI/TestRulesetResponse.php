@@ -18,11 +18,15 @@
 class Google_Service_FirebaseRulesAPI_TestRulesetResponse extends Google_Collection
 {
   protected $collection_key = 'issues';
-  protected $issuesType = 'Google_Service_FirebaseRulesAPI_Issue';
-  protected $issuesDataType = 'array';
+  public $issues;
 
-  public function setIssues($issues)
+  public function setIssues(array $issues)
   {
+    foreach ($issues as $i) {
+      if (!$i instanceof Google_Service_FirebaseRulesAPI_Issue) {
+        throw new InvalidArgumentException('First argument to setIssues must be an array of Google_Service_FirebaseRulesAPI_Issue');
+      }
+    }
     $this->issues = $issues;
   }
   public function getIssues()

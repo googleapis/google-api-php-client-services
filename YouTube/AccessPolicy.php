@@ -29,7 +29,7 @@ class Google_Service_YouTube_AccessPolicy extends Google_Collection
   {
     return $this->allowed;
   }
-  public function setException($exception)
+  public function setException(array $exception)
   {
     $this->exception = $exception;
   }

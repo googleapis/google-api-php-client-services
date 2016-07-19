@@ -22,36 +22,29 @@ class Google_Service_PlusDomains_Person extends Google_Collection
   public $birthday;
   public $braggingRights;
   public $circledByCount;
-  protected $coverType = 'Google_Service_PlusDomains_PersonCover';
-  protected $coverDataType = '';
+  public $cover;
   public $currentLocation;
   public $displayName;
   public $domain;
-  protected $emailsType = 'Google_Service_PlusDomains_PersonEmails';
-  protected $emailsDataType = 'array';
+  public $emails;
   public $etag;
   public $gender;
   public $id;
-  protected $imageType = 'Google_Service_PlusDomains_PersonImage';
-  protected $imageDataType = '';
+  public $image;
   public $isPlusUser;
   public $kind;
-  protected $nameType = 'Google_Service_PlusDomains_PersonName';
-  protected $nameDataType = '';
+  public $name;
   public $nickname;
   public $objectType;
   public $occupation;
-  protected $organizationsType = 'Google_Service_PlusDomains_PersonOrganizations';
-  protected $organizationsDataType = 'array';
-  protected $placesLivedType = 'Google_Service_PlusDomains_PersonPlacesLived';
-  protected $placesLivedDataType = 'array';
+  public $organizations;
+  public $placesLived;
   public $plusOneCount;
   public $relationshipStatus;
   public $skills;
   public $tagline;
   public $url;
-  protected $urlsType = 'Google_Service_PlusDomains_PersonUrls';
-  protected $urlsDataType = 'array';
+  public $urls;
   public $verified;
 
   public function setAboutMe($aboutMe)
@@ -118,8 +111,13 @@ class Google_Service_PlusDomains_Person extends Google_Collection
   {
     return $this->domain;
   }
-  public function setEmails($emails)
+  public function setEmails(array $emails)
   {
+    foreach ($emails as $e) {
+      if (!$e instanceof Google_Service_PlusDomains_PersonEmails) {
+        throw new InvalidArgumentException('First argument to setEmails must be an array of Google_Service_PlusDomains_PersonEmails');
+      }
+    }
     $this->emails = $emails;
   }
   public function getEmails()
@@ -206,16 +204,26 @@ class Google_Service_PlusDomains_Person extends Google_Collection
   {
     return $this->occupation;
   }
-  public function setOrganizations($organizations)
+  public function setOrganizations(array $organizations)
   {
+    foreach ($organizations as $o) {
+      if (!$o instanceof Google_Service_PlusDomains_PersonOrganizations) {
+        throw new InvalidArgumentException('First argument to setOrganizations must be an array of Google_Service_PlusDomains_PersonOrganizations');
+      }
+    }
     $this->organizations = $organizations;
   }
   public function getOrganizations()
   {
     return $this->organizations;
   }
-  public function setPlacesLived($placesLived)
+  public function setPlacesLived(array $placesLived)
   {
+    foreach ($placesLived as $p) {
+      if (!$p instanceof Google_Service_PlusDomains_PersonPlacesLived) {
+        throw new InvalidArgumentException('First argument to setPlacesLived must be an array of Google_Service_PlusDomains_PersonPlacesLived');
+      }
+    }
     $this->placesLived = $placesLived;
   }
   public function getPlacesLived()
@@ -262,8 +270,13 @@ class Google_Service_PlusDomains_Person extends Google_Collection
   {
     return $this->url;
   }
-  public function setUrls($urls)
+  public function setUrls(array $urls)
   {
+    foreach ($urls as $u) {
+      if (!$u instanceof Google_Service_PlusDomains_PersonUrls) {
+        throw new InvalidArgumentException('First argument to setUrls must be an array of Google_Service_PlusDomains_PersonUrls');
+      }
+    }
     $this->urls = $urls;
   }
   public function getUrls()

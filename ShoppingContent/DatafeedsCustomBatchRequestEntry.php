@@ -18,8 +18,7 @@
 class Google_Service_ShoppingContent_DatafeedsCustomBatchRequestEntry extends Google_Model
 {
   public $batchId;
-  protected $datafeedType = 'Google_Service_ShoppingContent_Datafeed';
-  protected $datafeedDataType = '';
+  public $datafeed;
   public $datafeedId;
   public $merchantId;
   public $method;

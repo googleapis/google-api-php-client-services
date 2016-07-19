@@ -19,8 +19,7 @@ class Google_Service_AndroidEnterprise_StoreLayoutPagesListResponse extends Goog
 {
   protected $collection_key = 'page';
   public $kind;
-  protected $pageType = 'Google_Service_AndroidEnterprise_StorePage';
-  protected $pageDataType = 'array';
+  public $page;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_AndroidEnterprise_StoreLayoutPagesListResponse extends Goog
   {
     return $this->kind;
   }
-  public function setPage($page)
+  public function setPage(array $page)
   {
+    foreach ($page as $p) {
+      if (!$p instanceof Google_Service_AndroidEnterprise_StorePage) {
+        throw new InvalidArgumentException('First argument to setPage must be an array of Google_Service_AndroidEnterprise_StorePage');
+      }
+    }
     $this->page = $page;
   }
   public function getPage()

@@ -19,8 +19,7 @@ class Google_Service_CloudTrace_ListTracesResponse extends Google_Collection
 {
   protected $collection_key = 'traces';
   public $nextPageToken;
-  protected $tracesType = 'Google_Service_CloudTrace_Trace';
-  protected $tracesDataType = 'array';
+  public $traces;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_CloudTrace_ListTracesResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setTraces($traces)
+  public function setTraces(array $traces)
   {
+    foreach ($traces as $t) {
+      if (!$t instanceof Google_Service_CloudTrace_Trace) {
+        throw new InvalidArgumentException('First argument to setTraces must be an array of Google_Service_CloudTrace_Trace');
+      }
+    }
     $this->traces = $traces;
   }
   public function getTraces()

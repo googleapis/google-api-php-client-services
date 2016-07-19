@@ -19,15 +19,11 @@ class Google_Service_AdExchangeBuyer_DealTerms extends Google_Model
 {
   public $brandingType;
   public $description;
-  protected $estimatedGrossSpendType = 'Google_Service_AdExchangeBuyer_Price';
-  protected $estimatedGrossSpendDataType = '';
+  public $estimatedGrossSpend;
   public $estimatedImpressionsPerDay;
-  protected $guaranteedFixedPriceTermsType = 'Google_Service_AdExchangeBuyer_DealTermsGuaranteedFixedPriceTerms';
-  protected $guaranteedFixedPriceTermsDataType = '';
-  protected $nonGuaranteedAuctionTermsType = 'Google_Service_AdExchangeBuyer_DealTermsNonGuaranteedAuctionTerms';
-  protected $nonGuaranteedAuctionTermsDataType = '';
-  protected $nonGuaranteedFixedPriceTermsType = 'Google_Service_AdExchangeBuyer_DealTermsNonGuaranteedFixedPriceTerms';
-  protected $nonGuaranteedFixedPriceTermsDataType = '';
+  public $guaranteedFixedPriceTerms;
+  public $nonGuaranteedAuctionTerms;
+  public $nonGuaranteedFixedPriceTerms;
   public $sellerTimeZone;
 
   public function setBrandingType($brandingType)

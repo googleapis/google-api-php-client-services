@@ -18,8 +18,7 @@
 class Google_Service_Sheets_ExtendedValue extends Google_Model
 {
   public $boolValue;
-  protected $errorValueType = 'Google_Service_Sheets_ErrorValue';
-  protected $errorValueDataType = '';
+  public $errorValue;
   public $formulaValue;
   public $numberValue;
   public $stringValue;

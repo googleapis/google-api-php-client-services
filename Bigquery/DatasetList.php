@@ -18,14 +18,18 @@
 class Google_Service_Bigquery_DatasetList extends Google_Collection
 {
   protected $collection_key = 'datasets';
-  protected $datasetsType = 'Google_Service_Bigquery_DatasetListDatasets';
-  protected $datasetsDataType = 'array';
+  public $datasets;
   public $etag;
   public $kind;
   public $nextPageToken;
 
-  public function setDatasets($datasets)
+  public function setDatasets(array $datasets)
   {
+    foreach ($datasets as $d) {
+      if (!$d instanceof Google_Service_Bigquery_DatasetListDatasets) {
+        throw new InvalidArgumentException('First argument to setDatasets must be an array of Google_Service_Bigquery_DatasetListDatasets');
+      }
+    }
     $this->datasets = $datasets;
   }
   public function getDatasets()

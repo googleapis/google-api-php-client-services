@@ -19,12 +19,9 @@ class Google_Service_AndroidEnterprise_ProductsListResponse extends Google_Colle
 {
   protected $collection_key = 'product';
   public $kind;
-  protected $pageInfoType = 'Google_Service_AndroidEnterprise_PageInfo';
-  protected $pageInfoDataType = '';
-  protected $productType = 'Google_Service_AndroidEnterprise_Product';
-  protected $productDataType = 'array';
-  protected $tokenPaginationType = 'Google_Service_AndroidEnterprise_TokenPagination';
-  protected $tokenPaginationDataType = '';
+  public $pageInfo;
+  public $product;
+  public $tokenPagination;
 
   public function setKind($kind)
   {
@@ -42,8 +39,13 @@ class Google_Service_AndroidEnterprise_ProductsListResponse extends Google_Colle
   {
     return $this->pageInfo;
   }
-  public function setProduct($product)
+  public function setProduct(array $product)
   {
+    foreach ($product as $p) {
+      if (!$p instanceof Google_Service_AndroidEnterprise_Product) {
+        throw new InvalidArgumentException('First argument to setProduct must be an array of Google_Service_AndroidEnterprise_Product');
+      }
+    }
     $this->product = $product;
   }
   public function getProduct()

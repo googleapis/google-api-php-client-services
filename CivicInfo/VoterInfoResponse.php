@@ -18,44 +18,51 @@
 class Google_Service_CivicInfo_VoterInfoResponse extends Google_Collection
 {
   protected $collection_key = 'state';
-  protected $contestsType = 'Google_Service_CivicInfo_Contest';
-  protected $contestsDataType = 'array';
-  protected $dropOffLocationsType = 'Google_Service_CivicInfo_PollingLocation';
-  protected $dropOffLocationsDataType = 'array';
-  protected $earlyVoteSitesType = 'Google_Service_CivicInfo_PollingLocation';
-  protected $earlyVoteSitesDataType = 'array';
-  protected $electionType = 'Google_Service_CivicInfo_Election';
-  protected $electionDataType = '';
+  public $contests;
+  public $dropOffLocations;
+  public $earlyVoteSites;
+  public $election;
   public $kind;
   public $mailOnly;
-  protected $normalizedInputType = 'Google_Service_CivicInfo_SimpleAddressType';
-  protected $normalizedInputDataType = '';
-  protected $otherElectionsType = 'Google_Service_CivicInfo_Election';
-  protected $otherElectionsDataType = 'array';
-  protected $pollingLocationsType = 'Google_Service_CivicInfo_PollingLocation';
-  protected $pollingLocationsDataType = 'array';
+  public $normalizedInput;
+  public $otherElections;
+  public $pollingLocations;
   public $precinctId;
-  protected $stateType = 'Google_Service_CivicInfo_AdministrationRegion';
-  protected $stateDataType = 'array';
+  public $state;
 
-  public function setContests($contests)
+  public function setContests(array $contests)
   {
+    foreach ($contests as $c) {
+      if (!$c instanceof Google_Service_CivicInfo_Contest) {
+        throw new InvalidArgumentException('First argument to setContests must be an array of Google_Service_CivicInfo_Contest');
+      }
+    }
     $this->contests = $contests;
   }
   public function getContests()
   {
     return $this->contests;
   }
-  public function setDropOffLocations($dropOffLocations)
+  public function setDropOffLocations(array $dropOffLocations)
   {
+    foreach ($dropOffLocations as $d) {
+      if (!$d instanceof Google_Service_CivicInfo_PollingLocation) {
+        throw new InvalidArgumentException('First argument to setDropOffLocations must be an array of Google_Service_CivicInfo_PollingLocation');
+      }
+    }
     $this->dropOffLocations = $dropOffLocations;
   }
   public function getDropOffLocations()
   {
     return $this->dropOffLocations;
   }
-  public function setEarlyVoteSites($earlyVoteSites)
+  public function setEarlyVoteSites(array $earlyVoteSites)
   {
+    foreach ($earlyVoteSites as $e) {
+      if (!$e instanceof Google_Service_CivicInfo_PollingLocation) {
+        throw new InvalidArgumentException('First argument to setEarlyVoteSites must be an array of Google_Service_CivicInfo_PollingLocation');
+      }
+    }
     $this->earlyVoteSites = $earlyVoteSites;
   }
   public function getEarlyVoteSites()
@@ -94,16 +101,26 @@ class Google_Service_CivicInfo_VoterInfoResponse extends Google_Collection
   {
     return $this->normalizedInput;
   }
-  public function setOtherElections($otherElections)
+  public function setOtherElections(array $otherElections)
   {
+    foreach ($otherElections as $o) {
+      if (!$o instanceof Google_Service_CivicInfo_Election) {
+        throw new InvalidArgumentException('First argument to setOtherElections must be an array of Google_Service_CivicInfo_Election');
+      }
+    }
     $this->otherElections = $otherElections;
   }
   public function getOtherElections()
   {
     return $this->otherElections;
   }
-  public function setPollingLocations($pollingLocations)
+  public function setPollingLocations(array $pollingLocations)
   {
+    foreach ($pollingLocations as $p) {
+      if (!$p instanceof Google_Service_CivicInfo_PollingLocation) {
+        throw new InvalidArgumentException('First argument to setPollingLocations must be an array of Google_Service_CivicInfo_PollingLocation');
+      }
+    }
     $this->pollingLocations = $pollingLocations;
   }
   public function getPollingLocations()
@@ -118,8 +135,13 @@ class Google_Service_CivicInfo_VoterInfoResponse extends Google_Collection
   {
     return $this->precinctId;
   }
-  public function setState($state)
+  public function setState(array $state)
   {
+    foreach ($state as $s) {
+      if (!$s instanceof Google_Service_CivicInfo_AdministrationRegion) {
+        throw new InvalidArgumentException('First argument to setState must be an array of Google_Service_CivicInfo_AdministrationRegion');
+      }
+    }
     $this->state = $state;
   }
   public function getState()

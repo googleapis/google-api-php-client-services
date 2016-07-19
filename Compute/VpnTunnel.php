@@ -84,7 +84,7 @@ class Google_Service_Compute_VpnTunnel extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLocalTrafficSelector($localTrafficSelector)
+  public function setLocalTrafficSelector(array $localTrafficSelector)
   {
     $this->localTrafficSelector = $localTrafficSelector;
   }
@@ -116,7 +116,7 @@ class Google_Service_Compute_VpnTunnel extends Google_Collection
   {
     return $this->region;
   }
-  public function setRemoteTrafficSelector($remoteTrafficSelector)
+  public function setRemoteTrafficSelector(array $remoteTrafficSelector)
   {
     $this->remoteTrafficSelector = $remoteTrafficSelector;
   }

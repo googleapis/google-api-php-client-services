@@ -18,16 +18,13 @@
 class Google_Service_Vision_EntityAnnotation extends Google_Collection
 {
   protected $collection_key = 'properties';
-  protected $boundingPolyType = 'Google_Service_Vision_BoundingPoly';
-  protected $boundingPolyDataType = '';
+  public $boundingPoly;
   public $confidence;
   public $description;
   public $locale;
-  protected $locationsType = 'Google_Service_Vision_LocationInfo';
-  protected $locationsDataType = 'array';
+  public $locations;
   public $mid;
-  protected $propertiesType = 'Google_Service_Vision_Property';
-  protected $propertiesDataType = 'array';
+  public $properties;
   public $score;
   public $topicality;
 
@@ -63,8 +60,13 @@ class Google_Service_Vision_EntityAnnotation extends Google_Collection
   {
     return $this->locale;
   }
-  public function setLocations($locations)
+  public function setLocations(array $locations)
   {
+    foreach ($locations as $l) {
+      if (!$l instanceof Google_Service_Vision_LocationInfo) {
+        throw new InvalidArgumentException('First argument to setLocations must be an array of Google_Service_Vision_LocationInfo');
+      }
+    }
     $this->locations = $locations;
   }
   public function getLocations()
@@ -79,8 +81,13 @@ class Google_Service_Vision_EntityAnnotation extends Google_Collection
   {
     return $this->mid;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
+    foreach ($properties as $p) {
+      if (!$p instanceof Google_Service_Vision_Property) {
+        throw new InvalidArgumentException('First argument to setProperties must be an array of Google_Service_Vision_Property');
+      }
+    }
     $this->properties = $properties;
   }
   public function getProperties()

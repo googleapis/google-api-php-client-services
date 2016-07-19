@@ -17,14 +17,10 @@
 
 class Google_Service_Classroom_Attachment extends Google_Model
 {
-  protected $driveFileType = 'Google_Service_Classroom_DriveFile';
-  protected $driveFileDataType = '';
-  protected $formType = 'Google_Service_Classroom_Form';
-  protected $formDataType = '';
-  protected $linkType = 'Google_Service_Classroom_Link';
-  protected $linkDataType = '';
-  protected $youTubeVideoType = 'Google_Service_Classroom_YouTubeVideo';
-  protected $youTubeVideoDataType = '';
+  public $driveFile;
+  public $form;
+  public $link;
+  public $youTubeVideo;
 
   public function setDriveFile(Google_Service_Classroom_DriveFile $driveFile)
   {

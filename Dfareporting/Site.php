@@ -21,18 +21,14 @@ class Google_Service_Dfareporting_Site extends Google_Collection
   public $accountId;
   public $approved;
   public $directorySiteId;
-  protected $directorySiteIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $directorySiteIdDimensionValueDataType = '';
+  public $directorySiteIdDimensionValue;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $keyName;
   public $kind;
   public $name;
-  protected $siteContactsType = 'Google_Service_Dfareporting_SiteContact';
-  protected $siteContactsDataType = 'array';
-  protected $siteSettingsType = 'Google_Service_Dfareporting_SiteSettings';
-  protected $siteSettingsDataType = '';
+  public $siteContacts;
+  public $siteSettings;
   public $subaccountId;
 
   public function setAccountId($accountId)
@@ -107,8 +103,13 @@ class Google_Service_Dfareporting_Site extends Google_Collection
   {
     return $this->name;
   }
-  public function setSiteContacts($siteContacts)
+  public function setSiteContacts(array $siteContacts)
   {
+    foreach ($siteContacts as $s) {
+      if (!$s instanceof Google_Service_Dfareporting_SiteContact) {
+        throw new InvalidArgumentException('First argument to setSiteContacts must be an array of Google_Service_Dfareporting_SiteContact');
+      }
+    }
     $this->siteContacts = $siteContacts;
   }
   public function getSiteContacts()

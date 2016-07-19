@@ -20,7 +20,7 @@ class Google_Service_Replicapool_InstanceGroupManagersRecreateInstancesRequest e
   protected $collection_key = 'instances';
   public $instances;
 
-  public function setInstances($instances)
+  public function setInstances(array $instances)
   {
     $this->instances = $instances;
   }

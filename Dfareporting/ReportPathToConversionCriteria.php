@@ -18,50 +18,62 @@
 class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_Collection
 {
   protected $collection_key = 'perInteractionDimensions';
-  protected $activityFiltersType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $activityFiltersDataType = 'array';
-  protected $conversionDimensionsType = 'Google_Service_Dfareporting_SortedDimension';
-  protected $conversionDimensionsDataType = 'array';
-  protected $customFloodlightVariablesType = 'Google_Service_Dfareporting_SortedDimension';
-  protected $customFloodlightVariablesDataType = 'array';
-  protected $customRichMediaEventsType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $customRichMediaEventsDataType = 'array';
-  protected $dateRangeType = 'Google_Service_Dfareporting_DateRange';
-  protected $dateRangeDataType = '';
-  protected $floodlightConfigIdType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $floodlightConfigIdDataType = '';
+  public $activityFilters;
+  public $conversionDimensions;
+  public $customFloodlightVariables;
+  public $customRichMediaEvents;
+  public $dateRange;
+  public $floodlightConfigId;
   public $metricNames;
-  protected $perInteractionDimensionsType = 'Google_Service_Dfareporting_SortedDimension';
-  protected $perInteractionDimensionsDataType = 'array';
-  protected $reportPropertiesType = 'Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties';
-  protected $reportPropertiesDataType = '';
+  public $perInteractionDimensions;
+  public $reportProperties;
 
-  public function setActivityFilters($activityFilters)
+  public function setActivityFilters(array $activityFilters)
   {
+    foreach ($activityFilters as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setActivityFilters must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->activityFilters = $activityFilters;
   }
   public function getActivityFilters()
   {
     return $this->activityFilters;
   }
-  public function setConversionDimensions($conversionDimensions)
+  public function setConversionDimensions(array $conversionDimensions)
   {
+    foreach ($conversionDimensions as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_SortedDimension) {
+        throw new InvalidArgumentException('First argument to setConversionDimensions must be an array of Google_Service_Dfareporting_SortedDimension');
+      }
+    }
     $this->conversionDimensions = $conversionDimensions;
   }
   public function getConversionDimensions()
   {
     return $this->conversionDimensions;
   }
-  public function setCustomFloodlightVariables($customFloodlightVariables)
+  public function setCustomFloodlightVariables(array $customFloodlightVariables)
   {
+    foreach ($customFloodlightVariables as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_SortedDimension) {
+        throw new InvalidArgumentException('First argument to setCustomFloodlightVariables must be an array of Google_Service_Dfareporting_SortedDimension');
+      }
+    }
     $this->customFloodlightVariables = $customFloodlightVariables;
   }
   public function getCustomFloodlightVariables()
   {
     return $this->customFloodlightVariables;
   }
-  public function setCustomRichMediaEvents($customRichMediaEvents)
+  public function setCustomRichMediaEvents(array $customRichMediaEvents)
   {
+    foreach ($customRichMediaEvents as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_DimensionValue) {
+        throw new InvalidArgumentException('First argument to setCustomRichMediaEvents must be an array of Google_Service_Dfareporting_DimensionValue');
+      }
+    }
     $this->customRichMediaEvents = $customRichMediaEvents;
   }
   public function getCustomRichMediaEvents()
@@ -84,7 +96,7 @@ class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_
   {
     return $this->floodlightConfigId;
   }
-  public function setMetricNames($metricNames)
+  public function setMetricNames(array $metricNames)
   {
     $this->metricNames = $metricNames;
   }
@@ -92,8 +104,13 @@ class Google_Service_Dfareporting_ReportPathToConversionCriteria extends Google_
   {
     return $this->metricNames;
   }
-  public function setPerInteractionDimensions($perInteractionDimensions)
+  public function setPerInteractionDimensions(array $perInteractionDimensions)
   {
+    foreach ($perInteractionDimensions as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_SortedDimension) {
+        throw new InvalidArgumentException('First argument to setPerInteractionDimensions must be an array of Google_Service_Dfareporting_SortedDimension');
+      }
+    }
     $this->perInteractionDimensions = $perInteractionDimensions;
   }
   public function getPerInteractionDimensions()

@@ -20,8 +20,7 @@ class Google_Service_QPXExpress_SliceInfo extends Google_Collection
   protected $collection_key = 'segment';
   public $duration;
   public $kind;
-  protected $segmentType = 'Google_Service_QPXExpress_SegmentInfo';
-  protected $segmentDataType = 'array';
+  public $segment;
 
   public function setDuration($duration)
   {
@@ -39,8 +38,13 @@ class Google_Service_QPXExpress_SliceInfo extends Google_Collection
   {
     return $this->kind;
   }
-  public function setSegment($segment)
+  public function setSegment(array $segment)
   {
+    foreach ($segment as $s) {
+      if (!$s instanceof Google_Service_QPXExpress_SegmentInfo) {
+        throw new InvalidArgumentException('First argument to setSegment must be an array of Google_Service_QPXExpress_SegmentInfo');
+      }
+    }
     $this->segment = $segment;
   }
   public function getSegment()

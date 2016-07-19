@@ -29,7 +29,7 @@ class Google_Service_TagManager_ContainerAccess extends Google_Collection
   {
     return $this->containerId;
   }
-  public function setPermission($permission)
+  public function setPermission(array $permission)
   {
     $this->permission = $permission;
   }

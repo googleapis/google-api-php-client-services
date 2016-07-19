@@ -20,7 +20,7 @@ class Google_Service_Analytics_AnalyticsDataimportDeleteUploadDataRequest extend
   protected $collection_key = 'customDataImportUids';
   public $customDataImportUids;
 
-  public function setCustomDataImportUids($customDataImportUids)
+  public function setCustomDataImportUids(array $customDataImportUids)
   {
     $this->customDataImportUids = $customDataImportUids;
   }

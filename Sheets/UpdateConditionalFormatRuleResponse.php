@@ -18,11 +18,9 @@
 class Google_Service_Sheets_UpdateConditionalFormatRuleResponse extends Google_Model
 {
   public $newIndex;
-  protected $newRuleType = 'Google_Service_Sheets_ConditionalFormatRule';
-  protected $newRuleDataType = '';
+  public $newRule;
   public $oldIndex;
-  protected $oldRuleType = 'Google_Service_Sheets_ConditionalFormatRule';
-  protected $oldRuleDataType = '';
+  public $oldRule;
 
   public function setNewIndex($newIndex)
   {

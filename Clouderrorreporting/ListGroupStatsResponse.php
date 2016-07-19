@@ -18,12 +18,16 @@
 class Google_Service_Clouderrorreporting_ListGroupStatsResponse extends Google_Collection
 {
   protected $collection_key = 'errorGroupStats';
-  protected $errorGroupStatsType = 'Google_Service_Clouderrorreporting_ErrorGroupStats';
-  protected $errorGroupStatsDataType = 'array';
+  public $errorGroupStats;
   public $nextPageToken;
 
-  public function setErrorGroupStats($errorGroupStats)
+  public function setErrorGroupStats(array $errorGroupStats)
   {
+    foreach ($errorGroupStats as $e) {
+      if (!$e instanceof Google_Service_Clouderrorreporting_ErrorGroupStats) {
+        throw new InvalidArgumentException('First argument to setErrorGroupStats must be an array of Google_Service_Clouderrorreporting_ErrorGroupStats');
+      }
+    }
     $this->errorGroupStats = $errorGroupStats;
   }
   public function getErrorGroupStats()

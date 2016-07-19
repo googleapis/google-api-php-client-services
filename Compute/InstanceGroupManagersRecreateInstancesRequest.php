@@ -20,7 +20,7 @@ class Google_Service_Compute_InstanceGroupManagersRecreateInstancesRequest exten
   protected $collection_key = 'instances';
   public $instances;
 
-  public function setInstances($instances)
+  public function setInstances(array $instances)
   {
     $this->instances = $instances;
   }

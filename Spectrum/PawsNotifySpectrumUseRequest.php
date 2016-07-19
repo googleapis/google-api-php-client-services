@@ -18,12 +18,9 @@
 class Google_Service_Spectrum_PawsNotifySpectrumUseRequest extends Google_Collection
 {
   protected $collection_key = 'spectra';
-  protected $deviceDescType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $deviceDescDataType = '';
-  protected $locationType = 'Google_Service_Spectrum_GeoLocation';
-  protected $locationDataType = '';
-  protected $spectraType = 'Google_Service_Spectrum_SpectrumMessage';
-  protected $spectraDataType = 'array';
+  public $deviceDesc;
+  public $location;
+  public $spectra;
   public $type;
   public $version;
 
@@ -43,8 +40,13 @@ class Google_Service_Spectrum_PawsNotifySpectrumUseRequest extends Google_Collec
   {
     return $this->location;
   }
-  public function setSpectra($spectra)
+  public function setSpectra(array $spectra)
   {
+    foreach ($spectra as $s) {
+      if (!$s instanceof Google_Service_Spectrum_SpectrumMessage) {
+        throw new InvalidArgumentException('First argument to setSpectra must be an array of Google_Service_Spectrum_SpectrumMessage');
+      }
+    }
     $this->spectra = $spectra;
   }
   public function getSpectra()

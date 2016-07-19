@@ -21,19 +21,14 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetProjectConfig
   public $allowPasswordUser;
   public $apiKey;
   public $authorizedDomains;
-  protected $changeEmailTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
-  protected $changeEmailTemplateDataType = '';
+  public $changeEmailTemplate;
   public $enableAnonymousUser;
-  protected $idpConfigType = 'Google_Service_IdentityToolkit_IdpConfig';
-  protected $idpConfigDataType = 'array';
-  protected $legacyResetPasswordTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
-  protected $legacyResetPasswordTemplateDataType = '';
+  public $idpConfig;
+  public $legacyResetPasswordTemplate;
   public $projectId;
-  protected $resetPasswordTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
-  protected $resetPasswordTemplateDataType = '';
+  public $resetPasswordTemplate;
   public $useEmailSending;
-  protected $verifyEmailTemplateType = 'Google_Service_IdentityToolkit_EmailTemplate';
-  protected $verifyEmailTemplateDataType = '';
+  public $verifyEmailTemplate;
 
   public function setAllowPasswordUser($allowPasswordUser)
   {
@@ -51,7 +46,7 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetProjectConfig
   {
     return $this->apiKey;
   }
-  public function setAuthorizedDomains($authorizedDomains)
+  public function setAuthorizedDomains(array $authorizedDomains)
   {
     $this->authorizedDomains = $authorizedDomains;
   }
@@ -75,8 +70,13 @@ class Google_Service_IdentityToolkit_IdentitytoolkitRelyingpartyGetProjectConfig
   {
     return $this->enableAnonymousUser;
   }
-  public function setIdpConfig($idpConfig)
+  public function setIdpConfig(array $idpConfig)
   {
+    foreach ($idpConfig as $i) {
+      if (!$i instanceof Google_Service_IdentityToolkit_IdpConfig) {
+        throw new InvalidArgumentException('First argument to setIdpConfig must be an array of Google_Service_IdentityToolkit_IdpConfig');
+      }
+    }
     $this->idpConfig = $idpConfig;
   }
   public function getIdpConfig()

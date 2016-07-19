@@ -18,13 +18,17 @@
 class Google_Service_Monitoring_ListGroupMembersResponse extends Google_Collection
 {
   protected $collection_key = 'members';
-  protected $membersType = 'Google_Service_Monitoring_MonitoredResource';
-  protected $membersDataType = 'array';
+  public $members;
   public $nextPageToken;
   public $totalSize;
 
-  public function setMembers($members)
+  public function setMembers(array $members)
   {
+    foreach ($members as $m) {
+      if (!$m instanceof Google_Service_Monitoring_MonitoredResource) {
+        throw new InvalidArgumentException('First argument to setMembers must be an array of Google_Service_Monitoring_MonitoredResource');
+      }
+    }
     $this->members = $members;
   }
   public function getMembers()

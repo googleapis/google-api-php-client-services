@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_AddChartResponse extends Google_Model
 {
-  protected $chartType = 'Google_Service_Sheets_EmbeddedChart';
-  protected $chartDataType = '';
+  public $chart;
 
   public function setChart(Google_Service_Sheets_EmbeddedChart $chart)
   {

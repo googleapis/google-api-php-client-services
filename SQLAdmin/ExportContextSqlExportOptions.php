@@ -29,7 +29,7 @@ class Google_Service_SQLAdmin_ExportContextSqlExportOptions extends Google_Colle
   {
     return $this->schemaOnly;
   }
-  public function setTables($tables)
+  public function setTables(array $tables)
   {
     $this->tables = $tables;
   }

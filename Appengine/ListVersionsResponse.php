@@ -19,8 +19,7 @@ class Google_Service_Appengine_ListVersionsResponse extends Google_Collection
 {
   protected $collection_key = 'versions';
   public $nextPageToken;
-  protected $versionsType = 'Google_Service_Appengine_Version';
-  protected $versionsDataType = 'array';
+  public $versions;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Appengine_ListVersionsResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setVersions($versions)
+  public function setVersions(array $versions)
   {
+    foreach ($versions as $v) {
+      if (!$v instanceof Google_Service_Appengine_Version) {
+        throw new InvalidArgumentException('First argument to setVersions must be an array of Google_Service_Appengine_Version');
+      }
+    }
     $this->versions = $versions;
   }
   public function getVersions()

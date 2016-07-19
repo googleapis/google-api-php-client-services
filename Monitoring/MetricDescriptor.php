@@ -20,8 +20,7 @@ class Google_Service_Monitoring_MetricDescriptor extends Google_Collection
   protected $collection_key = 'labels';
   public $description;
   public $displayName;
-  protected $labelsType = 'Google_Service_Monitoring_LabelDescriptor';
-  protected $labelsDataType = 'array';
+  public $labels;
   public $metricKind;
   public $name;
   public $type;
@@ -44,8 +43,13 @@ class Google_Service_Monitoring_MetricDescriptor extends Google_Collection
   {
     return $this->displayName;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
+    foreach ($labels as $l) {
+      if (!$l instanceof Google_Service_Monitoring_LabelDescriptor) {
+        throw new InvalidArgumentException('First argument to setLabels must be an array of Google_Service_Monitoring_LabelDescriptor');
+      }
+    }
     $this->labels = $labels;
   }
   public function getLabels()

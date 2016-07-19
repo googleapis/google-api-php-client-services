@@ -18,17 +18,20 @@
 class Google_Service_CloudDebugger_Variable extends Google_Collection
 {
   protected $collection_key = 'members';
-  protected $membersType = 'Google_Service_CloudDebugger_Variable';
-  protected $membersDataType = 'array';
+  public $members;
   public $name;
-  protected $statusType = 'Google_Service_CloudDebugger_StatusMessage';
-  protected $statusDataType = '';
+  public $status;
   public $type;
   public $value;
   public $varTableIndex;
 
-  public function setMembers($members)
+  public function setMembers(array $members)
   {
+    foreach ($members as $m) {
+      if (!$m instanceof Google_Service_CloudDebugger_Variable) {
+        throw new InvalidArgumentException('First argument to setMembers must be an array of Google_Service_CloudDebugger_Variable');
+      }
+    }
     $this->members = $members;
   }
   public function getMembers()

@@ -19,8 +19,7 @@ class Google_Service_AndroidEnterprise_UsersListResponse extends Google_Collecti
 {
   protected $collection_key = 'user';
   public $kind;
-  protected $userType = 'Google_Service_AndroidEnterprise_User';
-  protected $userDataType = 'array';
+  public $user;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_AndroidEnterprise_UsersListResponse extends Google_Collecti
   {
     return $this->kind;
   }
-  public function setUser($user)
+  public function setUser(array $user)
   {
+    foreach ($user as $u) {
+      if (!$u instanceof Google_Service_AndroidEnterprise_User) {
+        throw new InvalidArgumentException('First argument to setUser must be an array of Google_Service_AndroidEnterprise_User');
+      }
+    }
     $this->user = $user;
   }
   public function getUser()

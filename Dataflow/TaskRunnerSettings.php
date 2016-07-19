@@ -30,8 +30,7 @@ class Google_Service_Dataflow_TaskRunnerSettings extends Google_Collection
   public $logToSerialconsole;
   public $logUploadLocation;
   public $oauthScopes;
-  protected $parallelWorkerSettingsType = 'Google_Service_Dataflow_WorkerSettings';
-  protected $parallelWorkerSettingsDataType = '';
+  public $parallelWorkerSettings;
   public $streamingWorkerMainClass;
   public $taskGroup;
   public $taskUser;
@@ -127,7 +126,7 @@ class Google_Service_Dataflow_TaskRunnerSettings extends Google_Collection
   {
     return $this->logUploadLocation;
   }
-  public function setOauthScopes($oauthScopes)
+  public function setOauthScopes(array $oauthScopes)
   {
     $this->oauthScopes = $oauthScopes;
   }

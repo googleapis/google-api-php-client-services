@@ -39,7 +39,7 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   {
     return $this->machineType;
   }
-  public function setMetadata($metadata)
+  public function setMetadata(array $metadata)
   {
     $this->metadata = $metadata;
   }
@@ -47,7 +47,7 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   {
     return $this->metadata;
   }
-  public function setOauthScopes($oauthScopes)
+  public function setOauthScopes(array $oauthScopes)
   {
     $this->oauthScopes = $oauthScopes;
   }

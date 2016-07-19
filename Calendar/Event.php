@@ -19,24 +19,18 @@ class Google_Service_Calendar_Event extends Google_Collection
 {
   protected $collection_key = 'recurrence';
   public $anyoneCanAddSelf;
-  protected $attachmentsType = 'Google_Service_Calendar_EventAttachment';
-  protected $attachmentsDataType = 'array';
-  protected $attendeesType = 'Google_Service_Calendar_EventAttendee';
-  protected $attendeesDataType = 'array';
+  public $attachments;
+  public $attendees;
   public $attendeesOmitted;
   public $colorId;
   public $created;
-  protected $creatorType = 'Google_Service_Calendar_EventCreator';
-  protected $creatorDataType = '';
+  public $creator;
   public $description;
-  protected $endType = 'Google_Service_Calendar_EventDateTime';
-  protected $endDataType = '';
+  public $end;
   public $endTimeUnspecified;
   public $etag;
-  protected $extendedPropertiesType = 'Google_Service_Calendar_EventExtendedProperties';
-  protected $extendedPropertiesDataType = '';
-  protected $gadgetType = 'Google_Service_Calendar_EventGadget';
-  protected $gadgetDataType = '';
+  public $extendedProperties;
+  public $gadget;
   public $guestsCanInviteOthers;
   public $guestsCanModify;
   public $guestsCanSeeOtherGuests;
@@ -47,20 +41,15 @@ class Google_Service_Calendar_Event extends Google_Collection
   public $kind;
   public $location;
   public $locked;
-  protected $organizerType = 'Google_Service_Calendar_EventOrganizer';
-  protected $organizerDataType = '';
-  protected $originalStartTimeType = 'Google_Service_Calendar_EventDateTime';
-  protected $originalStartTimeDataType = '';
+  public $organizer;
+  public $originalStartTime;
   public $privateCopy;
   public $recurrence;
   public $recurringEventId;
-  protected $remindersType = 'Google_Service_Calendar_EventReminders';
-  protected $remindersDataType = '';
+  public $reminders;
   public $sequence;
-  protected $sourceType = 'Google_Service_Calendar_EventSource';
-  protected $sourceDataType = '';
-  protected $startType = 'Google_Service_Calendar_EventDateTime';
-  protected $startDataType = '';
+  public $source;
+  public $start;
   public $status;
   public $summary;
   public $transparency;
@@ -75,16 +64,26 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->anyoneCanAddSelf;
   }
-  public function setAttachments($attachments)
+  public function setAttachments(array $attachments)
   {
+    foreach ($attachments as $a) {
+      if (!$a instanceof Google_Service_Calendar_EventAttachment) {
+        throw new InvalidArgumentException('First argument to setAttachments must be an array of Google_Service_Calendar_EventAttachment');
+      }
+    }
     $this->attachments = $attachments;
   }
   public function getAttachments()
   {
     return $this->attachments;
   }
-  public function setAttendees($attendees)
+  public function setAttendees(array $attendees)
   {
+    foreach ($attendees as $a) {
+      if (!$a instanceof Google_Service_Calendar_EventAttendee) {
+        throw new InvalidArgumentException('First argument to setAttendees must be an array of Google_Service_Calendar_EventAttendee');
+      }
+    }
     $this->attendees = $attendees;
   }
   public function getAttendees()
@@ -275,7 +274,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   {
     return $this->privateCopy;
   }
-  public function setRecurrence($recurrence)
+  public function setRecurrence(array $recurrence)
   {
     $this->recurrence = $recurrence;
   }

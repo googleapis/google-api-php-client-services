@@ -18,10 +18,8 @@
 class Google_Service_AnalyticsReporting_DynamicSegment extends Google_Model
 {
   public $name;
-  protected $sessionSegmentType = 'Google_Service_AnalyticsReporting_SegmentDefinition';
-  protected $sessionSegmentDataType = '';
-  protected $userSegmentType = 'Google_Service_AnalyticsReporting_SegmentDefinition';
-  protected $userSegmentDataType = '';
+  public $sessionSegment;
+  public $userSegment;
 
   public function setName($name)
   {

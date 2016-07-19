@@ -18,25 +18,32 @@
 class Google_Service_AnalyticsReporting_Pivot extends Google_Collection
 {
   protected $collection_key = 'metrics';
-  protected $dimensionFilterClausesType = 'Google_Service_AnalyticsReporting_DimensionFilterClause';
-  protected $dimensionFilterClausesDataType = 'array';
-  protected $dimensionsType = 'Google_Service_AnalyticsReporting_Dimension';
-  protected $dimensionsDataType = 'array';
+  public $dimensionFilterClauses;
+  public $dimensions;
   public $maxGroupCount;
-  protected $metricsType = 'Google_Service_AnalyticsReporting_Metric';
-  protected $metricsDataType = 'array';
+  public $metrics;
   public $startGroup;
 
-  public function setDimensionFilterClauses($dimensionFilterClauses)
+  public function setDimensionFilterClauses(array $dimensionFilterClauses)
   {
+    foreach ($dimensionFilterClauses as $d) {
+      if (!$d instanceof Google_Service_AnalyticsReporting_DimensionFilterClause) {
+        throw new InvalidArgumentException('First argument to setDimensionFilterClauses must be an array of Google_Service_AnalyticsReporting_DimensionFilterClause');
+      }
+    }
     $this->dimensionFilterClauses = $dimensionFilterClauses;
   }
   public function getDimensionFilterClauses()
   {
     return $this->dimensionFilterClauses;
   }
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
+    foreach ($dimensions as $d) {
+      if (!$d instanceof Google_Service_AnalyticsReporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setDimensions must be an array of Google_Service_AnalyticsReporting_Dimension');
+      }
+    }
     $this->dimensions = $dimensions;
   }
   public function getDimensions()
@@ -51,8 +58,13 @@ class Google_Service_AnalyticsReporting_Pivot extends Google_Collection
   {
     return $this->maxGroupCount;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_AnalyticsReporting_Metric) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_AnalyticsReporting_Metric');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()

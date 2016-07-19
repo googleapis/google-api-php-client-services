@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_OrdersListResponse extends Google_Collection
   protected $collection_key = 'orders';
   public $kind;
   public $nextPageToken;
-  protected $ordersType = 'Google_Service_Dfareporting_Order';
-  protected $ordersDataType = 'array';
+  public $orders;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_OrdersListResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setOrders($orders)
+  public function setOrders(array $orders)
   {
+    foreach ($orders as $o) {
+      if (!$o instanceof Google_Service_Dfareporting_Order) {
+        throw new InvalidArgumentException('First argument to setOrders must be an array of Google_Service_Dfareporting_Order');
+      }
+    }
     $this->orders = $orders;
   }
   public function getOrders()

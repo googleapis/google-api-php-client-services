@@ -18,22 +18,25 @@
 class Google_Service_Mirror_Account extends Google_Collection
 {
   protected $collection_key = 'userData';
-  protected $authTokensType = 'Google_Service_Mirror_AuthToken';
-  protected $authTokensDataType = 'array';
+  public $authTokens;
   public $features;
   public $password;
-  protected $userDataType = 'Google_Service_Mirror_UserData';
-  protected $userDataDataType = 'array';
+  public $userData;
 
-  public function setAuthTokens($authTokens)
+  public function setAuthTokens(array $authTokens)
   {
+    foreach ($authTokens as $a) {
+      if (!$a instanceof Google_Service_Mirror_AuthToken) {
+        throw new InvalidArgumentException('First argument to setAuthTokens must be an array of Google_Service_Mirror_AuthToken');
+      }
+    }
     $this->authTokens = $authTokens;
   }
   public function getAuthTokens()
   {
     return $this->authTokens;
   }
-  public function setFeatures($features)
+  public function setFeatures(array $features)
   {
     $this->features = $features;
   }
@@ -49,8 +52,13 @@ class Google_Service_Mirror_Account extends Google_Collection
   {
     return $this->password;
   }
-  public function setUserData($userData)
+  public function setUserData(array $userData)
   {
+    foreach ($userData as $u) {
+      if (!$u instanceof Google_Service_Mirror_UserData) {
+        throw new InvalidArgumentException('First argument to setUserData must be an array of Google_Service_Mirror_UserData');
+      }
+    }
     $this->userData = $userData;
   }
   public function getUserData()

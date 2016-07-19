@@ -18,12 +18,16 @@
 class Google_Service_Monitoring_ListMetricDescriptorsResponse extends Google_Collection
 {
   protected $collection_key = 'metricDescriptors';
-  protected $metricDescriptorsType = 'Google_Service_Monitoring_MetricDescriptor';
-  protected $metricDescriptorsDataType = 'array';
+  public $metricDescriptors;
   public $nextPageToken;
 
-  public function setMetricDescriptors($metricDescriptors)
+  public function setMetricDescriptors(array $metricDescriptors)
   {
+    foreach ($metricDescriptors as $m) {
+      if (!$m instanceof Google_Service_Monitoring_MetricDescriptor) {
+        throw new InvalidArgumentException('First argument to setMetricDescriptors must be an array of Google_Service_Monitoring_MetricDescriptor');
+      }
+    }
     $this->metricDescriptors = $metricDescriptors;
   }
   public function getMetricDescriptors()

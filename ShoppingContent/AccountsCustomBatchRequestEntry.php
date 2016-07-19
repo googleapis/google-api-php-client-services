@@ -17,8 +17,7 @@
 
 class Google_Service_ShoppingContent_AccountsCustomBatchRequestEntry extends Google_Model
 {
-  protected $accountType = 'Google_Service_ShoppingContent_Account';
-  protected $accountDataType = '';
+  public $account;
   public $accountId;
   public $batchId;
   public $merchantId;

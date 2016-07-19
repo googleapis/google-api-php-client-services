@@ -17,14 +17,10 @@
 
 class Google_Service_CloudDebugger_SourceContext extends Google_Model
 {
-  protected $cloudRepoType = 'Google_Service_CloudDebugger_CloudRepoSourceContext';
-  protected $cloudRepoDataType = '';
-  protected $cloudWorkspaceType = 'Google_Service_CloudDebugger_CloudWorkspaceSourceContext';
-  protected $cloudWorkspaceDataType = '';
-  protected $gerritType = 'Google_Service_CloudDebugger_GerritSourceContext';
-  protected $gerritDataType = '';
-  protected $gitType = 'Google_Service_CloudDebugger_GitSourceContext';
-  protected $gitDataType = '';
+  public $cloudRepo;
+  public $cloudWorkspace;
+  public $gerrit;
+  public $git;
 
   public function setCloudRepo(Google_Service_CloudDebugger_CloudRepoSourceContext $cloudRepo)
   {

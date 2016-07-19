@@ -20,13 +20,10 @@ class Google_Service_Partners_LogUserEventRequest extends Google_Collection
   protected $collection_key = 'eventDatas';
   public $eventAction;
   public $eventCategory;
-  protected $eventDatasType = 'Google_Service_Partners_EventData';
-  protected $eventDatasDataType = 'array';
+  public $eventDatas;
   public $eventScope;
-  protected $leadType = 'Google_Service_Partners_Lead';
-  protected $leadDataType = '';
-  protected $requestMetadataType = 'Google_Service_Partners_RequestMetadata';
-  protected $requestMetadataDataType = '';
+  public $lead;
+  public $requestMetadata;
   public $url;
 
   public function setEventAction($eventAction)
@@ -45,8 +42,13 @@ class Google_Service_Partners_LogUserEventRequest extends Google_Collection
   {
     return $this->eventCategory;
   }
-  public function setEventDatas($eventDatas)
+  public function setEventDatas(array $eventDatas)
   {
+    foreach ($eventDatas as $e) {
+      if (!$e instanceof Google_Service_Partners_EventData) {
+        throw new InvalidArgumentException('First argument to setEventDatas must be an array of Google_Service_Partners_EventData');
+      }
+    }
     $this->eventDatas = $eventDatas;
   }
   public function getEventDatas()

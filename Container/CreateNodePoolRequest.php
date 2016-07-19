@@ -17,8 +17,7 @@
 
 class Google_Service_Container_CreateNodePoolRequest extends Google_Model
 {
-  protected $nodePoolType = 'Google_Service_Container_NodePool';
-  protected $nodePoolDataType = '';
+  public $nodePool;
 
   public function setNodePool(Google_Service_Container_NodePool $nodePool)
   {

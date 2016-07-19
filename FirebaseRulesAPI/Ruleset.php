@@ -19,8 +19,7 @@ class Google_Service_FirebaseRulesAPI_Ruleset extends Google_Model
 {
   public $createTime;
   public $name;
-  protected $sourceType = 'Google_Service_FirebaseRulesAPI_Source';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setCreateTime($createTime)
   {

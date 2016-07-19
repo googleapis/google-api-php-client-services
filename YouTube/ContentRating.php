@@ -246,7 +246,7 @@ class Google_Service_YouTube_ContentRating extends Google_Collection
   {
     return $this->djctqRating;
   }
-  public function setDjctqRatingReasons($djctqRatingReasons)
+  public function setDjctqRatingReasons(array $djctqRatingReasons)
   {
     $this->djctqRatingReasons = $djctqRatingReasons;
   }
@@ -318,7 +318,7 @@ class Google_Service_YouTube_ContentRating extends Google_Collection
   {
     return $this->fpbRating;
   }
-  public function setFpbRatingReasons($fpbRatingReasons)
+  public function setFpbRatingReasons(array $fpbRatingReasons)
   {
     $this->fpbRatingReasons = $fpbRatingReasons;
   }

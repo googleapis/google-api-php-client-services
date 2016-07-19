@@ -20,7 +20,7 @@ class Google_Service_YouTube_VideoProjectDetails extends Google_Collection
   protected $collection_key = 'tags';
   public $tags;
 
-  public function setTags($tags)
+  public function setTags(array $tags)
   {
     $this->tags = $tags;
   }

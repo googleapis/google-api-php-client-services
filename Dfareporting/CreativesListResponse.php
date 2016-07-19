@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_CreativesListResponse extends Google_Collection
 {
   protected $collection_key = 'creatives';
-  protected $creativesType = 'Google_Service_Dfareporting_Creative';
-  protected $creativesDataType = 'array';
+  public $creatives;
   public $kind;
   public $nextPageToken;
 
-  public function setCreatives($creatives)
+  public function setCreatives(array $creatives)
   {
+    foreach ($creatives as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_Creative) {
+        throw new InvalidArgumentException('First argument to setCreatives must be an array of Google_Service_Dfareporting_Creative');
+      }
+    }
     $this->creatives = $creatives;
   }
   public function getCreatives()

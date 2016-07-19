@@ -17,10 +17,8 @@
 
 class Google_Service_Dataflow_IntegerMean extends Google_Model
 {
-  protected $countType = 'Google_Service_Dataflow_SplitInt64';
-  protected $countDataType = '';
-  protected $sumType = 'Google_Service_Dataflow_SplitInt64';
-  protected $sumDataType = '';
+  public $count;
+  public $sum;
 
   public function setCount(Google_Service_Dataflow_SplitInt64 $count)
   {

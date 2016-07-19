@@ -18,12 +18,16 @@
 class Google_Service_IdentityToolkit_UploadAccountResponse extends Google_Collection
 {
   protected $collection_key = 'error';
-  protected $errorType = 'Google_Service_IdentityToolkit_UploadAccountResponseError';
-  protected $errorDataType = 'array';
+  public $error;
   public $kind;
 
-  public function setError($error)
+  public function setError(array $error)
   {
+    foreach ($error as $e) {
+      if (!$e instanceof Google_Service_IdentityToolkit_UploadAccountResponseError) {
+        throw new InvalidArgumentException('First argument to setError must be an array of Google_Service_IdentityToolkit_UploadAccountResponseError');
+      }
+    }
     $this->error = $error;
   }
   public function getError()

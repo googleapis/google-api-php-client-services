@@ -17,10 +17,8 @@
 
 class Google_Service_AnalyticsReporting_SegmentFilterClause extends Google_Model
 {
-  protected $dimensionFilterType = 'Google_Service_AnalyticsReporting_SegmentDimensionFilter';
-  protected $dimensionFilterDataType = '';
-  protected $metricFilterType = 'Google_Service_AnalyticsReporting_SegmentMetricFilter';
-  protected $metricFilterDataType = '';
+  public $dimensionFilter;
+  public $metricFilter;
   public $not;
 
   public function setDimensionFilter(Google_Service_AnalyticsReporting_SegmentDimensionFilter $dimensionFilter)

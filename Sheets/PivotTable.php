@@ -18,27 +18,27 @@
 class Google_Service_Sheets_PivotTable extends Google_Collection
 {
   protected $collection_key = 'values';
-  protected $columnsType = 'Google_Service_Sheets_PivotGroup';
-  protected $columnsDataType = 'array';
-  protected $criteriaType = 'Google_Service_Sheets_PivotFilterCriteria';
-  protected $criteriaDataType = 'map';
-  protected $rowsType = 'Google_Service_Sheets_PivotGroup';
-  protected $rowsDataType = 'array';
-  protected $sourceType = 'Google_Service_Sheets_GridRange';
-  protected $sourceDataType = '';
+  public $columns;
+  public $criteria;
+  public $rows;
+  public $source;
   public $valueLayout;
-  protected $valuesType = 'Google_Service_Sheets_PivotValue';
-  protected $valuesDataType = 'array';
+  public $values;
 
-  public function setColumns($columns)
+  public function setColumns(array $columns)
   {
+    foreach ($columns as $c) {
+      if (!$c instanceof Google_Service_Sheets_PivotGroup) {
+        throw new InvalidArgumentException('First argument to setColumns must be an array of Google_Service_Sheets_PivotGroup');
+      }
+    }
     $this->columns = $columns;
   }
   public function getColumns()
   {
     return $this->columns;
   }
-  public function setCriteria($criteria)
+  public function setCriteria(array $criteria)
   {
     $this->criteria = $criteria;
   }
@@ -46,8 +46,13 @@ class Google_Service_Sheets_PivotTable extends Google_Collection
   {
     return $this->criteria;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Sheets_PivotGroup) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Sheets_PivotGroup');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()
@@ -70,8 +75,13 @@ class Google_Service_Sheets_PivotTable extends Google_Collection
   {
     return $this->valueLayout;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
+    foreach ($values as $v) {
+      if (!$v instanceof Google_Service_Sheets_PivotValue) {
+        throw new InvalidArgumentException('First argument to setValues must be an array of Google_Service_Sheets_PivotValue');
+      }
+    }
     $this->values = $values;
   }
   public function getValues()

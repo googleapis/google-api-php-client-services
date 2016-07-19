@@ -17,8 +17,7 @@
 
 class Google_Service_ToolResults_TestTiming extends Google_Model
 {
-  protected $testProcessDurationType = 'Google_Service_ToolResults_Duration';
-  protected $testProcessDurationDataType = '';
+  public $testProcessDuration;
 
   public function setTestProcessDuration(Google_Service_ToolResults_Duration $testProcessDuration)
   {

@@ -18,11 +18,15 @@
 class Google_Service_People_GetPeopleResponse extends Google_Collection
 {
   protected $collection_key = 'responses';
-  protected $responsesType = 'Google_Service_People_PersonResponse';
-  protected $responsesDataType = 'array';
+  public $responses;
 
-  public function setResponses($responses)
+  public function setResponses(array $responses)
   {
+    foreach ($responses as $r) {
+      if (!$r instanceof Google_Service_People_PersonResponse) {
+        throw new InvalidArgumentException('First argument to setResponses must be an array of Google_Service_People_PersonResponse');
+      }
+    }
     $this->responses = $responses;
   }
   public function getResponses()

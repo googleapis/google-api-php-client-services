@@ -17,10 +17,8 @@
 
 class Google_Service_Datastore_Entity extends Google_Model
 {
-  protected $keyType = 'Google_Service_Datastore_Key';
-  protected $keyDataType = '';
-  protected $propertiesType = 'Google_Service_Datastore_Value';
-  protected $propertiesDataType = 'map';
+  public $key;
+  public $properties;
 
   public function setKey(Google_Service_Datastore_Key $key)
   {
@@ -30,7 +28,7 @@ class Google_Service_Datastore_Entity extends Google_Model
   {
     return $this->key;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
     $this->properties = $properties;
   }

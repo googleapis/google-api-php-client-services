@@ -20,8 +20,7 @@ class Google_Service_Fitness_Value extends Google_Collection
   protected $collection_key = 'mapVal';
   public $fpVal;
   public $intVal;
-  protected $mapValType = 'Google_Service_Fitness_ValueMapValEntry';
-  protected $mapValDataType = 'array';
+  public $mapVal;
   public $stringVal;
 
   public function setFpVal($fpVal)
@@ -40,8 +39,13 @@ class Google_Service_Fitness_Value extends Google_Collection
   {
     return $this->intVal;
   }
-  public function setMapVal($mapVal)
+  public function setMapVal(array $mapVal)
   {
+    foreach ($mapVal as $m) {
+      if (!$m instanceof Google_Service_Fitness_ValueMapValEntry) {
+        throw new InvalidArgumentException('First argument to setMapVal must be an array of Google_Service_Fitness_ValueMapValEntry');
+      }
+    }
     $this->mapVal = $mapVal;
   }
   public function getMapVal()

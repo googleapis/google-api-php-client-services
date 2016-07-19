@@ -19,8 +19,7 @@ class Google_Service_YouTube_VideoAbuseReportReasonSnippet extends Google_Collec
 {
   protected $collection_key = 'secondaryReasons';
   public $label;
-  protected $secondaryReasonsType = 'Google_Service_YouTube_VideoAbuseReportSecondaryReason';
-  protected $secondaryReasonsDataType = 'array';
+  public $secondaryReasons;
 
   public function setLabel($label)
   {
@@ -30,8 +29,13 @@ class Google_Service_YouTube_VideoAbuseReportReasonSnippet extends Google_Collec
   {
     return $this->label;
   }
-  public function setSecondaryReasons($secondaryReasons)
+  public function setSecondaryReasons(array $secondaryReasons)
   {
+    foreach ($secondaryReasons as $s) {
+      if (!$s instanceof Google_Service_YouTube_VideoAbuseReportSecondaryReason) {
+        throw new InvalidArgumentException('First argument to setSecondaryReasons must be an array of Google_Service_YouTube_VideoAbuseReportSecondaryReason');
+      }
+    }
     $this->secondaryReasons = $secondaryReasons;
   }
   public function getSecondaryReasons()

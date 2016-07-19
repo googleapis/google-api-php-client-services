@@ -20,8 +20,7 @@ class Google_Service_Gmail_Thread extends Google_Collection
   protected $collection_key = 'messages';
   public $historyId;
   public $id;
-  protected $messagesType = 'Google_Service_Gmail_Message';
-  protected $messagesDataType = 'array';
+  public $messages;
   public $snippet;
 
   public function setHistoryId($historyId)
@@ -40,8 +39,13 @@ class Google_Service_Gmail_Thread extends Google_Collection
   {
     return $this->id;
   }
-  public function setMessages($messages)
+  public function setMessages(array $messages)
   {
+    foreach ($messages as $m) {
+      if (!$m instanceof Google_Service_Gmail_Message) {
+        throw new InvalidArgumentException('First argument to setMessages must be an array of Google_Service_Gmail_Message');
+      }
+    }
     $this->messages = $messages;
   }
   public function getMessages()

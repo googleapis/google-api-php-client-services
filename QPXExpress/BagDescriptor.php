@@ -40,7 +40,7 @@ class Google_Service_QPXExpress_BagDescriptor extends Google_Collection
   {
     return $this->count;
   }
-  public function setDescription($description)
+  public function setDescription(array $description)
   {
     $this->description = $description;
   }

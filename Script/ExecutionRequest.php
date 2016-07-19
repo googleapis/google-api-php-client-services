@@ -39,7 +39,7 @@ class Google_Service_Script_ExecutionRequest extends Google_Collection
   {
     return $this->function;
   }
-  public function setParameters($parameters)
+  public function setParameters(array $parameters)
   {
     $this->parameters = $parameters;
   }

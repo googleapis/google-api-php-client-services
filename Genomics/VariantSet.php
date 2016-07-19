@@ -21,11 +21,9 @@ class Google_Service_Genomics_VariantSet extends Google_Collection
   public $datasetId;
   public $description;
   public $id;
-  protected $metadataType = 'Google_Service_Genomics_VariantSetMetadata';
-  protected $metadataDataType = 'array';
+  public $metadata;
   public $name;
-  protected $referenceBoundsType = 'Google_Service_Genomics_ReferenceBound';
-  protected $referenceBoundsDataType = 'array';
+  public $referenceBounds;
   public $referenceSetId;
 
   public function setDatasetId($datasetId)
@@ -52,8 +50,13 @@ class Google_Service_Genomics_VariantSet extends Google_Collection
   {
     return $this->id;
   }
-  public function setMetadata($metadata)
+  public function setMetadata(array $metadata)
   {
+    foreach ($metadata as $m) {
+      if (!$m instanceof Google_Service_Genomics_VariantSetMetadata) {
+        throw new InvalidArgumentException('First argument to setMetadata must be an array of Google_Service_Genomics_VariantSetMetadata');
+      }
+    }
     $this->metadata = $metadata;
   }
   public function getMetadata()
@@ -68,8 +71,13 @@ class Google_Service_Genomics_VariantSet extends Google_Collection
   {
     return $this->name;
   }
-  public function setReferenceBounds($referenceBounds)
+  public function setReferenceBounds(array $referenceBounds)
   {
+    foreach ($referenceBounds as $r) {
+      if (!$r instanceof Google_Service_Genomics_ReferenceBound) {
+        throw new InvalidArgumentException('First argument to setReferenceBounds must be an array of Google_Service_Genomics_ReferenceBound');
+      }
+    }
     $this->referenceBounds = $referenceBounds;
   }
   public function getReferenceBounds()

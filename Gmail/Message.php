@@ -22,8 +22,7 @@ class Google_Service_Gmail_Message extends Google_Collection
   public $id;
   public $internalDate;
   public $labelIds;
-  protected $payloadType = 'Google_Service_Gmail_MessagePart';
-  protected $payloadDataType = '';
+  public $payload;
   public $raw;
   public $sizeEstimate;
   public $snippet;
@@ -53,7 +52,7 @@ class Google_Service_Gmail_Message extends Google_Collection
   {
     return $this->internalDate;
   }
-  public function setLabelIds($labelIds)
+  public function setLabelIds(array $labelIds)
   {
     $this->labelIds = $labelIds;
   }

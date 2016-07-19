@@ -17,11 +17,9 @@
 
 class Google_Service_Sheets_CutPasteRequest extends Google_Model
 {
-  protected $destinationType = 'Google_Service_Sheets_GridCoordinate';
-  protected $destinationDataType = '';
+  public $destination;
   public $pasteType;
-  protected $sourceType = 'Google_Service_Sheets_GridRange';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setDestination(Google_Service_Sheets_GridCoordinate $destination)
   {

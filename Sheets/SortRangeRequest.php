@@ -18,10 +18,8 @@
 class Google_Service_Sheets_SortRangeRequest extends Google_Collection
 {
   protected $collection_key = 'sortSpecs';
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
-  protected $sortSpecsType = 'Google_Service_Sheets_SortSpec';
-  protected $sortSpecsDataType = 'array';
+  public $range;
+  public $sortSpecs;
 
   public function setRange(Google_Service_Sheets_GridRange $range)
   {
@@ -31,8 +29,13 @@ class Google_Service_Sheets_SortRangeRequest extends Google_Collection
   {
     return $this->range;
   }
-  public function setSortSpecs($sortSpecs)
+  public function setSortSpecs(array $sortSpecs)
   {
+    foreach ($sortSpecs as $s) {
+      if (!$s instanceof Google_Service_Sheets_SortSpec) {
+        throw new InvalidArgumentException('First argument to setSortSpecs must be an array of Google_Service_Sheets_SortSpec');
+      }
+    }
     $this->sortSpecs = $sortSpecs;
   }
   public function getSortSpecs()

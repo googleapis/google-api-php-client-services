@@ -19,8 +19,7 @@ class Google_Service_Webmasters_UrlCrawlErrorCountsPerType extends Google_Collec
 {
   protected $collection_key = 'entries';
   public $category;
-  protected $entriesType = 'Google_Service_Webmasters_UrlCrawlErrorCount';
-  protected $entriesDataType = 'array';
+  public $entries;
   public $platform;
 
   public function setCategory($category)
@@ -31,8 +30,13 @@ class Google_Service_Webmasters_UrlCrawlErrorCountsPerType extends Google_Collec
   {
     return $this->category;
   }
-  public function setEntries($entries)
+  public function setEntries(array $entries)
   {
+    foreach ($entries as $e) {
+      if (!$e instanceof Google_Service_Webmasters_UrlCrawlErrorCount) {
+        throw new InvalidArgumentException('First argument to setEntries must be an array of Google_Service_Webmasters_UrlCrawlErrorCount');
+      }
+    }
     $this->entries = $entries;
   }
   public function getEntries()

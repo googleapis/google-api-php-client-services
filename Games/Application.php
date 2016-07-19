@@ -23,16 +23,13 @@ class Google_Service_Games_Application extends Google_Collection
         "leaderboardCount" => "leaderboard_count",
   );
   public $achievementCount;
-  protected $assetsType = 'Google_Service_Games_ImageAsset';
-  protected $assetsDataType = 'array';
+  public $assets;
   public $author;
-  protected $categoryType = 'Google_Service_Games_ApplicationCategory';
-  protected $categoryDataType = '';
+  public $category;
   public $description;
   public $enabledFeatures;
   public $id;
-  protected $instancesType = 'Google_Service_Games_Instance';
-  protected $instancesDataType = 'array';
+  public $instances;
   public $kind;
   public $lastUpdatedTimestamp;
   public $leaderboardCount;
@@ -47,8 +44,13 @@ class Google_Service_Games_Application extends Google_Collection
   {
     return $this->achievementCount;
   }
-  public function setAssets($assets)
+  public function setAssets(array $assets)
   {
+    foreach ($assets as $a) {
+      if (!$a instanceof Google_Service_Games_ImageAsset) {
+        throw new InvalidArgumentException('First argument to setAssets must be an array of Google_Service_Games_ImageAsset');
+      }
+    }
     $this->assets = $assets;
   }
   public function getAssets()
@@ -79,7 +81,7 @@ class Google_Service_Games_Application extends Google_Collection
   {
     return $this->description;
   }
-  public function setEnabledFeatures($enabledFeatures)
+  public function setEnabledFeatures(array $enabledFeatures)
   {
     $this->enabledFeatures = $enabledFeatures;
   }
@@ -95,8 +97,13 @@ class Google_Service_Games_Application extends Google_Collection
   {
     return $this->id;
   }
-  public function setInstances($instances)
+  public function setInstances(array $instances)
   {
+    foreach ($instances as $i) {
+      if (!$i instanceof Google_Service_Games_Instance) {
+        throw new InvalidArgumentException('First argument to setInstances must be an array of Google_Service_Games_Instance');
+      }
+    }
     $this->instances = $instances;
   }
   public function getInstances()

@@ -21,12 +21,10 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement ex
   public $groups;
   public $localizedRuleName;
   public $ruleImpact;
-  protected $summaryType = 'Google_Service_Pagespeedonline_PagespeedApiFormatStringV2';
-  protected $summaryDataType = '';
-  protected $urlBlocksType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks';
-  protected $urlBlocksDataType = 'array';
+  public $summary;
+  public $urlBlocks;
 
-  public function setGroups($groups)
+  public function setGroups(array $groups)
   {
     $this->groups = $groups;
   }
@@ -58,8 +56,13 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement ex
   {
     return $this->summary;
   }
-  public function setUrlBlocks($urlBlocks)
+  public function setUrlBlocks(array $urlBlocks)
   {
+    foreach ($urlBlocks as $u) {
+      if (!$u instanceof Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks) {
+        throw new InvalidArgumentException('First argument to setUrlBlocks must be an array of Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks');
+      }
+    }
     $this->urlBlocks = $urlBlocks;
   }
   public function getUrlBlocks()

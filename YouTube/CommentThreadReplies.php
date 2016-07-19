@@ -18,11 +18,15 @@
 class Google_Service_YouTube_CommentThreadReplies extends Google_Collection
 {
   protected $collection_key = 'comments';
-  protected $commentsType = 'Google_Service_YouTube_Comment';
-  protected $commentsDataType = 'array';
+  public $comments;
 
-  public function setComments($comments)
+  public function setComments(array $comments)
   {
+    foreach ($comments as $c) {
+      if (!$c instanceof Google_Service_YouTube_Comment) {
+        throw new InvalidArgumentException('First argument to setComments must be an array of Google_Service_YouTube_Comment');
+      }
+    }
     $this->comments = $comments;
   }
   public function getComments()

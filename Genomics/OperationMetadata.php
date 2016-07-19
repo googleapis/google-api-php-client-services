@@ -21,8 +21,7 @@ class Google_Service_Genomics_OperationMetadata extends Google_Collection
   public $clientId;
   public $createTime;
   public $endTime;
-  protected $eventsType = 'Google_Service_Genomics_OperationEvent';
-  protected $eventsDataType = 'array';
+  public $events;
   public $projectId;
   public $request;
   public $runtimeMetadata;
@@ -52,8 +51,13 @@ class Google_Service_Genomics_OperationMetadata extends Google_Collection
   {
     return $this->endTime;
   }
-  public function setEvents($events)
+  public function setEvents(array $events)
   {
+    foreach ($events as $e) {
+      if (!$e instanceof Google_Service_Genomics_OperationEvent) {
+        throw new InvalidArgumentException('First argument to setEvents must be an array of Google_Service_Genomics_OperationEvent');
+      }
+    }
     $this->events = $events;
   }
   public function getEvents()
@@ -68,7 +72,7 @@ class Google_Service_Genomics_OperationMetadata extends Google_Collection
   {
     return $this->projectId;
   }
-  public function setRequest($request)
+  public function setRequest(array $request)
   {
     $this->request = $request;
   }
@@ -76,7 +80,7 @@ class Google_Service_Genomics_OperationMetadata extends Google_Collection
   {
     return $this->request;
   }
-  public function setRuntimeMetadata($runtimeMetadata)
+  public function setRuntimeMetadata(array $runtimeMetadata)
   {
     $this->runtimeMetadata = $runtimeMetadata;
   }

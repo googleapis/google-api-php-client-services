@@ -17,8 +17,7 @@
 
 class Google_Service_Container_ClusterUpdate extends Google_Model
 {
-  protected $desiredAddonsConfigType = 'Google_Service_Container_AddonsConfig';
-  protected $desiredAddonsConfigDataType = '';
+  public $desiredAddonsConfig;
   public $desiredMasterVersion;
   public $desiredMonitoringService;
   public $desiredNodePoolId;

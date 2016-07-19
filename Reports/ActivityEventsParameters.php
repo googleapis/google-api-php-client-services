@@ -41,7 +41,7 @@ class Google_Service_Reports_ActivityEventsParameters extends Google_Collection
   {
     return $this->intValue;
   }
-  public function setMultiIntValue($multiIntValue)
+  public function setMultiIntValue(array $multiIntValue)
   {
     $this->multiIntValue = $multiIntValue;
   }
@@ -49,7 +49,7 @@ class Google_Service_Reports_ActivityEventsParameters extends Google_Collection
   {
     return $this->multiIntValue;
   }
-  public function setMultiValue($multiValue)
+  public function setMultiValue(array $multiValue)
   {
     $this->multiValue = $multiValue;
   }

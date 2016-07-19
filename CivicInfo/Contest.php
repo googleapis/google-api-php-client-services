@@ -19,10 +19,8 @@ class Google_Service_CivicInfo_Contest extends Google_Collection
 {
   protected $collection_key = 'sources';
   public $ballotPlacement;
-  protected $candidatesType = 'Google_Service_CivicInfo_Candidate';
-  protected $candidatesDataType = 'array';
-  protected $districtType = 'Google_Service_CivicInfo_ElectoralDistrict';
-  protected $districtDataType = '';
+  public $candidates;
+  public $district;
   public $electorateSpecifications;
   public $id;
   public $level;
@@ -41,8 +39,7 @@ class Google_Service_CivicInfo_Contest extends Google_Collection
   public $referendumTitle;
   public $referendumUrl;
   public $roles;
-  protected $sourcesType = 'Google_Service_CivicInfo_Source';
-  protected $sourcesDataType = 'array';
+  public $sources;
   public $special;
   public $type;
 
@@ -54,8 +51,13 @@ class Google_Service_CivicInfo_Contest extends Google_Collection
   {
     return $this->ballotPlacement;
   }
-  public function setCandidates($candidates)
+  public function setCandidates(array $candidates)
   {
+    foreach ($candidates as $c) {
+      if (!$c instanceof Google_Service_CivicInfo_Candidate) {
+        throw new InvalidArgumentException('First argument to setCandidates must be an array of Google_Service_CivicInfo_Candidate');
+      }
+    }
     $this->candidates = $candidates;
   }
   public function getCandidates()
@@ -86,7 +88,7 @@ class Google_Service_CivicInfo_Contest extends Google_Collection
   {
     return $this->id;
   }
-  public function setLevel($level)
+  public function setLevel(array $level)
   {
     $this->level = $level;
   }
@@ -126,7 +128,7 @@ class Google_Service_CivicInfo_Contest extends Google_Collection
   {
     return $this->primaryParty;
   }
-  public function setReferendumBallotResponses($referendumBallotResponses)
+  public function setReferendumBallotResponses(array $referendumBallotResponses)
   {
     $this->referendumBallotResponses = $referendumBallotResponses;
   }
@@ -206,7 +208,7 @@ class Google_Service_CivicInfo_Contest extends Google_Collection
   {
     return $this->referendumUrl;
   }
-  public function setRoles($roles)
+  public function setRoles(array $roles)
   {
     $this->roles = $roles;
   }
@@ -214,8 +216,13 @@ class Google_Service_CivicInfo_Contest extends Google_Collection
   {
     return $this->roles;
   }
-  public function setSources($sources)
+  public function setSources(array $sources)
   {
+    foreach ($sources as $s) {
+      if (!$s instanceof Google_Service_CivicInfo_Source) {
+        throw new InvalidArgumentException('First argument to setSources must be an array of Google_Service_CivicInfo_Source');
+      }
+    }
     $this->sources = $sources;
   }
   public function getSources()

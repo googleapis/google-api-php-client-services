@@ -18,13 +18,17 @@
 class Google_Service_AdExchangeBuyer_PublisherProvidedForecast extends Google_Collection
 {
   protected $collection_key = 'dimensions';
-  protected $dimensionsType = 'Google_Service_AdExchangeBuyer_Dimension';
-  protected $dimensionsDataType = 'array';
+  public $dimensions;
   public $weeklyImpressions;
   public $weeklyUniques;
 
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
+    foreach ($dimensions as $d) {
+      if (!$d instanceof Google_Service_AdExchangeBuyer_Dimension) {
+        throw new InvalidArgumentException('First argument to setDimensions must be an array of Google_Service_AdExchangeBuyer_Dimension');
+      }
+    }
     $this->dimensions = $dimensions;
   }
   public function getDimensions()

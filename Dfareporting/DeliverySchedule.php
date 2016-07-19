@@ -17,8 +17,7 @@
 
 class Google_Service_Dfareporting_DeliverySchedule extends Google_Model
 {
-  protected $frequencyCapType = 'Google_Service_Dfareporting_FrequencyCap';
-  protected $frequencyCapDataType = '';
+  public $frequencyCap;
   public $hardCutoff;
   public $impressionRatio;
   public $priority;

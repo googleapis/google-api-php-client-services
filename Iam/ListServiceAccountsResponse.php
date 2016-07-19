@@ -18,12 +18,16 @@
 class Google_Service_Iam_ListServiceAccountsResponse extends Google_Collection
 {
   protected $collection_key = 'accounts';
-  protected $accountsType = 'Google_Service_Iam_ServiceAccount';
-  protected $accountsDataType = 'array';
+  public $accounts;
   public $nextPageToken;
 
-  public function setAccounts($accounts)
+  public function setAccounts(array $accounts)
   {
+    foreach ($accounts as $a) {
+      if (!$a instanceof Google_Service_Iam_ServiceAccount) {
+        throw new InvalidArgumentException('First argument to setAccounts must be an array of Google_Service_Iam_ServiceAccount');
+      }
+    }
     $this->accounts = $accounts;
   }
   public function getAccounts()

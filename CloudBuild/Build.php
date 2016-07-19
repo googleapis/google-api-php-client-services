@@ -23,20 +23,15 @@ class Google_Service_CloudBuild_Build extends Google_Collection
   public $id;
   public $images;
   public $logsBucket;
-  protected $optionsType = 'Google_Service_CloudBuild_BuildOptions';
-  protected $optionsDataType = '';
+  public $options;
   public $projectId;
-  protected $resultsType = 'Google_Service_CloudBuild_Results';
-  protected $resultsDataType = '';
-  protected $sourceType = 'Google_Service_CloudBuild_Source';
-  protected $sourceDataType = '';
-  protected $sourceProvenanceType = 'Google_Service_CloudBuild_SourceProvenance';
-  protected $sourceProvenanceDataType = '';
+  public $results;
+  public $source;
+  public $sourceProvenance;
   public $startTime;
   public $status;
   public $statusDetail;
-  protected $stepsType = 'Google_Service_CloudBuild_BuildStep';
-  protected $stepsDataType = 'array';
+  public $steps;
   public $timeout;
 
   public function setCreateTime($createTime)
@@ -63,7 +58,7 @@ class Google_Service_CloudBuild_Build extends Google_Collection
   {
     return $this->id;
   }
-  public function setImages($images)
+  public function setImages(array $images)
   {
     $this->images = $images;
   }
@@ -143,8 +138,13 @@ class Google_Service_CloudBuild_Build extends Google_Collection
   {
     return $this->statusDetail;
   }
-  public function setSteps($steps)
+  public function setSteps(array $steps)
   {
+    foreach ($steps as $s) {
+      if (!$s instanceof Google_Service_CloudBuild_BuildStep) {
+        throw new InvalidArgumentException('First argument to setSteps must be an array of Google_Service_CloudBuild_BuildStep');
+      }
+    }
     $this->steps = $steps;
   }
   public function getSteps()

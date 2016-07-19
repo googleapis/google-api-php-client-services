@@ -18,16 +18,18 @@
 class Google_Service_AndroidPublisher_InappproductsListResponse extends Google_Collection
 {
   protected $collection_key = 'inappproduct';
-  protected $inappproductType = 'Google_Service_AndroidPublisher_InAppProduct';
-  protected $inappproductDataType = 'array';
+  public $inappproduct;
   public $kind;
-  protected $pageInfoType = 'Google_Service_AndroidPublisher_PageInfo';
-  protected $pageInfoDataType = '';
-  protected $tokenPaginationType = 'Google_Service_AndroidPublisher_TokenPagination';
-  protected $tokenPaginationDataType = '';
+  public $pageInfo;
+  public $tokenPagination;
 
-  public function setInappproduct($inappproduct)
+  public function setInappproduct(array $inappproduct)
   {
+    foreach ($inappproduct as $i) {
+      if (!$i instanceof Google_Service_AndroidPublisher_InAppProduct) {
+        throw new InvalidArgumentException('First argument to setInappproduct must be an array of Google_Service_AndroidPublisher_InAppProduct');
+      }
+    }
     $this->inappproduct = $inappproduct;
   }
   public function getInappproduct()

@@ -23,7 +23,7 @@ class Google_Service_Storagetransfer_ObjectConditions extends Google_Collection
   public $maxTimeElapsedSinceLastModification;
   public $minTimeElapsedSinceLastModification;
 
-  public function setExcludePrefixes($excludePrefixes)
+  public function setExcludePrefixes(array $excludePrefixes)
   {
     $this->excludePrefixes = $excludePrefixes;
   }
@@ -31,7 +31,7 @@ class Google_Service_Storagetransfer_ObjectConditions extends Google_Collection
   {
     return $this->excludePrefixes;
   }
-  public function setIncludePrefixes($includePrefixes)
+  public function setIncludePrefixes(array $includePrefixes)
   {
     $this->includePrefixes = $includePrefixes;
   }

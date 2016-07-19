@@ -18,8 +18,7 @@
 class Google_Service_Compute_Firewall extends Google_Collection
 {
   protected $collection_key = 'targetTags';
-  protected $allowedType = 'Google_Service_Compute_FirewallAllowed';
-  protected $allowedDataType = 'array';
+  public $allowed;
   public $creationTimestamp;
   public $description;
   public $id;
@@ -31,8 +30,13 @@ class Google_Service_Compute_Firewall extends Google_Collection
   public $sourceTags;
   public $targetTags;
 
-  public function setAllowed($allowed)
+  public function setAllowed(array $allowed)
   {
+    foreach ($allowed as $a) {
+      if (!$a instanceof Google_Service_Compute_FirewallAllowed) {
+        throw new InvalidArgumentException('First argument to setAllowed must be an array of Google_Service_Compute_FirewallAllowed');
+      }
+    }
     $this->allowed = $allowed;
   }
   public function getAllowed()
@@ -95,7 +99,7 @@ class Google_Service_Compute_Firewall extends Google_Collection
   {
     return $this->selfLink;
   }
-  public function setSourceRanges($sourceRanges)
+  public function setSourceRanges(array $sourceRanges)
   {
     $this->sourceRanges = $sourceRanges;
   }
@@ -103,7 +107,7 @@ class Google_Service_Compute_Firewall extends Google_Collection
   {
     return $this->sourceRanges;
   }
-  public function setSourceTags($sourceTags)
+  public function setSourceTags(array $sourceTags)
   {
     $this->sourceTags = $sourceTags;
   }
@@ -111,7 +115,7 @@ class Google_Service_Compute_Firewall extends Google_Collection
   {
     return $this->sourceTags;
   }
-  public function setTargetTags($targetTags)
+  public function setTargetTags(array $targetTags)
   {
     $this->targetTags = $targetTags;
   }

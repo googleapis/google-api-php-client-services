@@ -20,22 +20,18 @@ class Google_Service_Bigquery_JobConfigurationQuery extends Google_Collection
   protected $collection_key = 'userDefinedFunctionResources';
   public $allowLargeResults;
   public $createDisposition;
-  protected $defaultDatasetType = 'Google_Service_Bigquery_DatasetReference';
-  protected $defaultDatasetDataType = '';
-  protected $destinationTableType = 'Google_Service_Bigquery_TableReference';
-  protected $destinationTableDataType = '';
+  public $defaultDataset;
+  public $destinationTable;
   public $flattenResults;
   public $maximumBillingTier;
   public $maximumBytesBilled;
   public $preserveNulls;
   public $priority;
   public $query;
-  protected $tableDefinitionsType = 'Google_Service_Bigquery_ExternalDataConfiguration';
-  protected $tableDefinitionsDataType = 'map';
+  public $tableDefinitions;
   public $useLegacySql;
   public $useQueryCache;
-  protected $userDefinedFunctionResourcesType = 'Google_Service_Bigquery_UserDefinedFunctionResource';
-  protected $userDefinedFunctionResourcesDataType = 'array';
+  public $userDefinedFunctionResources;
   public $writeDisposition;
 
   public function setAllowLargeResults($allowLargeResults)
@@ -118,7 +114,7 @@ class Google_Service_Bigquery_JobConfigurationQuery extends Google_Collection
   {
     return $this->query;
   }
-  public function setTableDefinitions($tableDefinitions)
+  public function setTableDefinitions(array $tableDefinitions)
   {
     $this->tableDefinitions = $tableDefinitions;
   }
@@ -142,8 +138,13 @@ class Google_Service_Bigquery_JobConfigurationQuery extends Google_Collection
   {
     return $this->useQueryCache;
   }
-  public function setUserDefinedFunctionResources($userDefinedFunctionResources)
+  public function setUserDefinedFunctionResources(array $userDefinedFunctionResources)
   {
+    foreach ($userDefinedFunctionResources as $u) {
+      if (!$u instanceof Google_Service_Bigquery_UserDefinedFunctionResource) {
+        throw new InvalidArgumentException('First argument to setUserDefinedFunctionResources must be an array of Google_Service_Bigquery_UserDefinedFunctionResource');
+      }
+    }
     $this->userDefinedFunctionResources = $userDefinedFunctionResources;
   }
   public function getUserDefinedFunctionResources()

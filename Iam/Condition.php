@@ -65,7 +65,7 @@ class Google_Service_Iam_Condition extends Google_Collection
   {
     return $this->value;
   }
-  public function setValues($values)
+  public function setValues(array $values)
   {
     $this->values = $values;
   }

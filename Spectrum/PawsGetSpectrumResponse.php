@@ -18,18 +18,14 @@
 class Google_Service_Spectrum_PawsGetSpectrumResponse extends Google_Collection
 {
   protected $collection_key = 'spectrumSchedules';
-  protected $databaseChangeType = 'Google_Service_Spectrum_DbUpdateSpec';
-  protected $databaseChangeDataType = '';
-  protected $deviceDescType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $deviceDescDataType = '';
+  public $databaseChange;
+  public $deviceDesc;
   public $kind;
   public $maxContiguousBwHz;
   public $maxTotalBwHz;
   public $needsSpectrumReport;
-  protected $rulesetInfoType = 'Google_Service_Spectrum_RulesetInfo';
-  protected $rulesetInfoDataType = '';
-  protected $spectrumSchedulesType = 'Google_Service_Spectrum_SpectrumSchedule';
-  protected $spectrumSchedulesDataType = 'array';
+  public $rulesetInfo;
+  public $spectrumSchedules;
   public $timestamp;
   public $type;
   public $version;
@@ -90,8 +86,13 @@ class Google_Service_Spectrum_PawsGetSpectrumResponse extends Google_Collection
   {
     return $this->rulesetInfo;
   }
-  public function setSpectrumSchedules($spectrumSchedules)
+  public function setSpectrumSchedules(array $spectrumSchedules)
   {
+    foreach ($spectrumSchedules as $s) {
+      if (!$s instanceof Google_Service_Spectrum_SpectrumSchedule) {
+        throw new InvalidArgumentException('First argument to setSpectrumSchedules must be an array of Google_Service_Spectrum_SpectrumSchedule');
+      }
+    }
     $this->spectrumSchedules = $spectrumSchedules;
   }
   public function getSpectrumSchedules()

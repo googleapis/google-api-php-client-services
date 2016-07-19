@@ -18,12 +18,16 @@
 class Google_Service_Analytics_McfDataRows extends Google_Collection
 {
   protected $collection_key = 'conversionPathValue';
-  protected $conversionPathValueType = 'Google_Service_Analytics_McfDataRowsConversionPathValue';
-  protected $conversionPathValueDataType = 'array';
+  public $conversionPathValue;
   public $primitiveValue;
 
-  public function setConversionPathValue($conversionPathValue)
+  public function setConversionPathValue(array $conversionPathValue)
   {
+    foreach ($conversionPathValue as $c) {
+      if (!$c instanceof Google_Service_Analytics_McfDataRowsConversionPathValue) {
+        throw new InvalidArgumentException('First argument to setConversionPathValue must be an array of Google_Service_Analytics_McfDataRowsConversionPathValue');
+      }
+    }
     $this->conversionPathValue = $conversionPathValue;
   }
   public function getConversionPathValue()

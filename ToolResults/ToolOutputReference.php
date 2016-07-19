@@ -17,12 +17,9 @@
 
 class Google_Service_ToolResults_ToolOutputReference extends Google_Model
 {
-  protected $creationTimeType = 'Google_Service_ToolResults_Timestamp';
-  protected $creationTimeDataType = '';
-  protected $outputType = 'Google_Service_ToolResults_FileReference';
-  protected $outputDataType = '';
-  protected $testCaseType = 'Google_Service_ToolResults_TestCaseReference';
-  protected $testCaseDataType = '';
+  public $creationTime;
+  public $output;
+  public $testCase;
 
   public function setCreationTime(Google_Service_ToolResults_Timestamp $creationTime)
   {

@@ -18,30 +18,28 @@
 class Google_Service_ShoppingContent_OrderLineItem extends Google_Collection
 {
   protected $collection_key = 'returns';
-  protected $cancellationsType = 'Google_Service_ShoppingContent_OrderCancellation';
-  protected $cancellationsDataType = 'array';
+  public $cancellations;
   public $id;
-  protected $priceType = 'Google_Service_ShoppingContent_Price';
-  protected $priceDataType = '';
-  protected $productType = 'Google_Service_ShoppingContent_OrderLineItemProduct';
-  protected $productDataType = '';
+  public $price;
+  public $product;
   public $quantityCanceled;
   public $quantityDelivered;
   public $quantityOrdered;
   public $quantityPending;
   public $quantityReturned;
   public $quantityShipped;
-  protected $returnInfoType = 'Google_Service_ShoppingContent_OrderLineItemReturnInfo';
-  protected $returnInfoDataType = '';
-  protected $returnsType = 'Google_Service_ShoppingContent_OrderReturn';
-  protected $returnsDataType = 'array';
-  protected $shippingDetailsType = 'Google_Service_ShoppingContent_OrderLineItemShippingDetails';
-  protected $shippingDetailsDataType = '';
-  protected $taxType = 'Google_Service_ShoppingContent_Price';
-  protected $taxDataType = '';
+  public $returnInfo;
+  public $returns;
+  public $shippingDetails;
+  public $tax;
 
-  public function setCancellations($cancellations)
+  public function setCancellations(array $cancellations)
   {
+    foreach ($cancellations as $c) {
+      if (!$c instanceof Google_Service_ShoppingContent_OrderCancellation) {
+        throw new InvalidArgumentException('First argument to setCancellations must be an array of Google_Service_ShoppingContent_OrderCancellation');
+      }
+    }
     $this->cancellations = $cancellations;
   }
   public function getCancellations()
@@ -128,8 +126,13 @@ class Google_Service_ShoppingContent_OrderLineItem extends Google_Collection
   {
     return $this->returnInfo;
   }
-  public function setReturns($returns)
+  public function setReturns(array $returns)
   {
+    foreach ($returns as $r) {
+      if (!$r instanceof Google_Service_ShoppingContent_OrderReturn) {
+        throw new InvalidArgumentException('First argument to setReturns must be an array of Google_Service_ShoppingContent_OrderReturn');
+      }
+    }
     $this->returns = $returns;
   }
   public function getReturns()

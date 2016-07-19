@@ -18,12 +18,16 @@
 class Google_Service_AndroidEnterprise_EnterprisesListResponse extends Google_Collection
 {
   protected $collection_key = 'enterprise';
-  protected $enterpriseType = 'Google_Service_AndroidEnterprise_Enterprise';
-  protected $enterpriseDataType = 'array';
+  public $enterprise;
   public $kind;
 
-  public function setEnterprise($enterprise)
+  public function setEnterprise(array $enterprise)
   {
+    foreach ($enterprise as $e) {
+      if (!$e instanceof Google_Service_AndroidEnterprise_Enterprise) {
+        throw new InvalidArgumentException('First argument to setEnterprise must be an array of Google_Service_AndroidEnterprise_Enterprise');
+      }
+    }
     $this->enterprise = $enterprise;
   }
   public function getEnterprise()

@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_MetrosListResponse extends Google_Collection
 {
   protected $collection_key = 'metros';
   public $kind;
-  protected $metrosType = 'Google_Service_Dfareporting_Metro';
-  protected $metrosDataType = 'array';
+  public $metros;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_MetrosListResponse extends Google_Collection
   {
     return $this->kind;
   }
-  public function setMetros($metros)
+  public function setMetros(array $metros)
   {
+    foreach ($metros as $m) {
+      if (!$m instanceof Google_Service_Dfareporting_Metro) {
+        throw new InvalidArgumentException('First argument to setMetros must be an array of Google_Service_Dfareporting_Metro');
+      }
+    }
     $this->metros = $metros;
   }
   public function getMetros()

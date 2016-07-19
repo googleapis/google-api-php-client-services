@@ -20,30 +20,25 @@ class Google_Service_Dfareporting_FloodlightActivity extends Google_Collection
   protected $collection_key = 'userDefinedVariableTypes';
   public $accountId;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $cacheBustingType;
   public $countingMethod;
-  protected $defaultTagsType = 'Google_Service_Dfareporting_FloodlightActivityDynamicTag';
-  protected $defaultTagsDataType = 'array';
+  public $defaultTags;
   public $expectedUrl;
   public $floodlightActivityGroupId;
   public $floodlightActivityGroupName;
   public $floodlightActivityGroupTagString;
   public $floodlightActivityGroupType;
   public $floodlightConfigurationId;
-  protected $floodlightConfigurationIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $floodlightConfigurationIdDimensionValueDataType = '';
+  public $floodlightConfigurationIdDimensionValue;
   public $hidden;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $imageTagEnabled;
   public $kind;
   public $name;
   public $notes;
-  protected $publisherTagsType = 'Google_Service_Dfareporting_FloodlightActivityPublisherDynamicTag';
-  protected $publisherTagsDataType = 'array';
+  public $publisherTags;
   public $secure;
   public $sslCompliant;
   public $sslRequired;
@@ -92,8 +87,13 @@ class Google_Service_Dfareporting_FloodlightActivity extends Google_Collection
   {
     return $this->countingMethod;
   }
-  public function setDefaultTags($defaultTags)
+  public function setDefaultTags(array $defaultTags)
   {
+    foreach ($defaultTags as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_FloodlightActivityDynamicTag) {
+        throw new InvalidArgumentException('First argument to setDefaultTags must be an array of Google_Service_Dfareporting_FloodlightActivityDynamicTag');
+      }
+    }
     $this->defaultTags = $defaultTags;
   }
   public function getDefaultTags()
@@ -212,8 +212,13 @@ class Google_Service_Dfareporting_FloodlightActivity extends Google_Collection
   {
     return $this->notes;
   }
-  public function setPublisherTags($publisherTags)
+  public function setPublisherTags(array $publisherTags)
   {
+    foreach ($publisherTags as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_FloodlightActivityPublisherDynamicTag) {
+        throw new InvalidArgumentException('First argument to setPublisherTags must be an array of Google_Service_Dfareporting_FloodlightActivityPublisherDynamicTag');
+      }
+    }
     $this->publisherTags = $publisherTags;
   }
   public function getPublisherTags()
@@ -268,7 +273,7 @@ class Google_Service_Dfareporting_FloodlightActivity extends Google_Collection
   {
     return $this->tagString;
   }
-  public function setUserDefinedVariableTypes($userDefinedVariableTypes)
+  public function setUserDefinedVariableTypes(array $userDefinedVariableTypes)
   {
     $this->userDefinedVariableTypes = $userDefinedVariableTypes;
   }

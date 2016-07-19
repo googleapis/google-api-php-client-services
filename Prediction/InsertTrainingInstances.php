@@ -21,7 +21,7 @@ class Google_Service_Prediction_InsertTrainingInstances extends Google_Collectio
   public $csvInstance;
   public $output;
 
-  public function setCsvInstance($csvInstance)
+  public function setCsvInstance(array $csvInstance)
   {
     $this->csvInstance = $csvInstance;
   }

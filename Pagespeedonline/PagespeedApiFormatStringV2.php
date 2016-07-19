@@ -18,12 +18,16 @@
 class Google_Service_Pagespeedonline_PagespeedApiFormatStringV2 extends Google_Collection
 {
   protected $collection_key = 'args';
-  protected $argsType = 'Google_Service_Pagespeedonline_PagespeedApiFormatStringV2Args';
-  protected $argsDataType = 'array';
+  public $args;
   public $format;
 
-  public function setArgs($args)
+  public function setArgs(array $args)
   {
+    foreach ($args as $a) {
+      if (!$a instanceof Google_Service_Pagespeedonline_PagespeedApiFormatStringV2Args) {
+        throw new InvalidArgumentException('First argument to setArgs must be an array of Google_Service_Pagespeedonline_PagespeedApiFormatStringV2Args');
+      }
+    }
     $this->args = $args;
   }
   public function getArgs()

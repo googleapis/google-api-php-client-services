@@ -19,8 +19,7 @@ class Google_Service_CloudResourceManager_ListProjectsResponse extends Google_Co
 {
   protected $collection_key = 'projects';
   public $nextPageToken;
-  protected $projectsType = 'Google_Service_CloudResourceManager_Project';
-  protected $projectsDataType = 'array';
+  public $projects;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_CloudResourceManager_ListProjectsResponse extends Google_Co
   {
     return $this->nextPageToken;
   }
-  public function setProjects($projects)
+  public function setProjects(array $projects)
   {
+    foreach ($projects as $p) {
+      if (!$p instanceof Google_Service_CloudResourceManager_Project) {
+        throw new InvalidArgumentException('First argument to setProjects must be an array of Google_Service_CloudResourceManager_Project');
+      }
+    }
     $this->projects = $projects;
   }
   public function getProjects()

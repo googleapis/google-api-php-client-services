@@ -21,7 +21,7 @@ class Google_Service_YouTube_ChannelSectionContentDetails extends Google_Collect
   public $channels;
   public $playlists;
 
-  public function setChannels($channels)
+  public function setChannels(array $channels)
   {
     $this->channels = $channels;
   }
@@ -29,7 +29,7 @@ class Google_Service_YouTube_ChannelSectionContentDetails extends Google_Collect
   {
     return $this->channels;
   }
-  public function setPlaylists($playlists)
+  public function setPlaylists(array $playlists)
   {
     $this->playlists = $playlists;
   }

@@ -18,18 +18,14 @@
 class Google_Service_Spectrum_PawsGetSpectrumBatchResponse extends Google_Collection
 {
   protected $collection_key = 'geoSpectrumSchedules';
-  protected $databaseChangeType = 'Google_Service_Spectrum_DbUpdateSpec';
-  protected $databaseChangeDataType = '';
-  protected $deviceDescType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $deviceDescDataType = '';
-  protected $geoSpectrumSchedulesType = 'Google_Service_Spectrum_GeoSpectrumSchedule';
-  protected $geoSpectrumSchedulesDataType = 'array';
+  public $databaseChange;
+  public $deviceDesc;
+  public $geoSpectrumSchedules;
   public $kind;
   public $maxContiguousBwHz;
   public $maxTotalBwHz;
   public $needsSpectrumReport;
-  protected $rulesetInfoType = 'Google_Service_Spectrum_RulesetInfo';
-  protected $rulesetInfoDataType = '';
+  public $rulesetInfo;
   public $timestamp;
   public $type;
   public $version;
@@ -50,8 +46,13 @@ class Google_Service_Spectrum_PawsGetSpectrumBatchResponse extends Google_Collec
   {
     return $this->deviceDesc;
   }
-  public function setGeoSpectrumSchedules($geoSpectrumSchedules)
+  public function setGeoSpectrumSchedules(array $geoSpectrumSchedules)
   {
+    foreach ($geoSpectrumSchedules as $g) {
+      if (!$g instanceof Google_Service_Spectrum_GeoSpectrumSchedule) {
+        throw new InvalidArgumentException('First argument to setGeoSpectrumSchedules must be an array of Google_Service_Spectrum_GeoSpectrumSchedule');
+      }
+    }
     $this->geoSpectrumSchedules = $geoSpectrumSchedules;
   }
   public function getGeoSpectrumSchedules()

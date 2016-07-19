@@ -22,7 +22,7 @@ class Google_Service_Gmail_FilterAction extends Google_Collection
   public $forward;
   public $removeLabelIds;
 
-  public function setAddLabelIds($addLabelIds)
+  public function setAddLabelIds(array $addLabelIds)
   {
     $this->addLabelIds = $addLabelIds;
   }
@@ -38,7 +38,7 @@ class Google_Service_Gmail_FilterAction extends Google_Collection
   {
     return $this->forward;
   }
-  public function setRemoveLabelIds($removeLabelIds)
+  public function setRemoveLabelIds(array $removeLabelIds)
   {
     $this->removeLabelIds = $removeLabelIds;
   }

@@ -18,10 +18,8 @@
 class Google_Service_Sheets_EmbeddedChart extends Google_Model
 {
   public $chartId;
-  protected $positionType = 'Google_Service_Sheets_EmbeddedObjectPosition';
-  protected $positionDataType = '';
-  protected $specType = 'Google_Service_Sheets_ChartSpec';
-  protected $specDataType = '';
+  public $position;
+  public $spec;
 
   public function setChartId($chartId)
   {

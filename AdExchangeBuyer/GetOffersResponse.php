@@ -18,11 +18,15 @@
 class Google_Service_AdExchangeBuyer_GetOffersResponse extends Google_Collection
 {
   protected $collection_key = 'products';
-  protected $productsType = 'Google_Service_AdExchangeBuyer_Product';
-  protected $productsDataType = 'array';
+  public $products;
 
-  public function setProducts($products)
+  public function setProducts(array $products)
   {
+    foreach ($products as $p) {
+      if (!$p instanceof Google_Service_AdExchangeBuyer_Product) {
+        throw new InvalidArgumentException('First argument to setProducts must be an array of Google_Service_AdExchangeBuyer_Product');
+      }
+    }
     $this->products = $products;
   }
   public function getProducts()

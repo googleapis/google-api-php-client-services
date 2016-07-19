@@ -18,10 +18,8 @@
 class Google_Service_Datastore_Key extends Google_Collection
 {
   protected $collection_key = 'path';
-  protected $partitionIdType = 'Google_Service_Datastore_PartitionId';
-  protected $partitionIdDataType = '';
-  protected $pathType = 'Google_Service_Datastore_PathElement';
-  protected $pathDataType = 'array';
+  public $partitionId;
+  public $path;
 
   public function setPartitionId(Google_Service_Datastore_PartitionId $partitionId)
   {
@@ -31,8 +29,13 @@ class Google_Service_Datastore_Key extends Google_Collection
   {
     return $this->partitionId;
   }
-  public function setPath($path)
+  public function setPath(array $path)
   {
+    foreach ($path as $p) {
+      if (!$p instanceof Google_Service_Datastore_PathElement) {
+        throw new InvalidArgumentException('First argument to setPath must be an array of Google_Service_Datastore_PathElement');
+      }
+    }
     $this->path = $path;
   }
   public function getPath()

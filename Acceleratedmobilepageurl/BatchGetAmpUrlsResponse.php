@@ -18,21 +18,29 @@
 class Google_Service_Acceleratedmobilepageurl_BatchGetAmpUrlsResponse extends Google_Collection
 {
   protected $collection_key = 'urlErrors';
-  protected $ampUrlsType = 'Google_Service_Acceleratedmobilepageurl_AmpUrl';
-  protected $ampUrlsDataType = 'array';
-  protected $urlErrorsType = 'Google_Service_Acceleratedmobilepageurl_AmpUrlError';
-  protected $urlErrorsDataType = 'array';
+  public $ampUrls;
+  public $urlErrors;
 
-  public function setAmpUrls($ampUrls)
+  public function setAmpUrls(array $ampUrls)
   {
+    foreach ($ampUrls as $a) {
+      if (!$a instanceof Google_Service_Acceleratedmobilepageurl_AmpUrl) {
+        throw new InvalidArgumentException('First argument to setAmpUrls must be an array of Google_Service_Acceleratedmobilepageurl_AmpUrl');
+      }
+    }
     $this->ampUrls = $ampUrls;
   }
   public function getAmpUrls()
   {
     return $this->ampUrls;
   }
-  public function setUrlErrors($urlErrors)
+  public function setUrlErrors(array $urlErrors)
   {
+    foreach ($urlErrors as $u) {
+      if (!$u instanceof Google_Service_Acceleratedmobilepageurl_AmpUrlError) {
+        throw new InvalidArgumentException('First argument to setUrlErrors must be an array of Google_Service_Acceleratedmobilepageurl_AmpUrlError');
+      }
+    }
     $this->urlErrors = $urlErrors;
   }
   public function getUrlErrors()

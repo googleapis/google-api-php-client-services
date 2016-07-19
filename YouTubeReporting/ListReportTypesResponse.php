@@ -19,8 +19,7 @@ class Google_Service_YouTubeReporting_ListReportTypesResponse extends Google_Col
 {
   protected $collection_key = 'reportTypes';
   public $nextPageToken;
-  protected $reportTypesType = 'Google_Service_YouTubeReporting_ReportType';
-  protected $reportTypesDataType = 'array';
+  public $reportTypes;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_YouTubeReporting_ListReportTypesResponse extends Google_Col
   {
     return $this->nextPageToken;
   }
-  public function setReportTypes($reportTypes)
+  public function setReportTypes(array $reportTypes)
   {
+    foreach ($reportTypes as $r) {
+      if (!$r instanceof Google_Service_YouTubeReporting_ReportType) {
+        throw new InvalidArgumentException('First argument to setReportTypes must be an array of Google_Service_YouTubeReporting_ReportType');
+      }
+    }
     $this->reportTypes = $reportTypes;
   }
   public function getReportTypes()

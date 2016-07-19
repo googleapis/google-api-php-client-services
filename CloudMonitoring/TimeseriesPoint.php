@@ -17,10 +17,8 @@
 
 class Google_Service_CloudMonitoring_TimeseriesPoint extends Google_Model
 {
-  protected $pointType = 'Google_Service_CloudMonitoring_Point';
-  protected $pointDataType = '';
-  protected $timeseriesDescType = 'Google_Service_CloudMonitoring_TimeseriesDescriptor';
-  protected $timeseriesDescDataType = '';
+  public $point;
+  public $timeseriesDesc;
 
   public function setPoint(Google_Service_CloudMonitoring_Point $point)
   {

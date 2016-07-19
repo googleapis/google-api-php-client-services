@@ -41,7 +41,7 @@ class Google_Service_Genomics_VariantCall extends Google_Collection
   {
     return $this->callSetName;
   }
-  public function setGenotype($genotype)
+  public function setGenotype(array $genotype)
   {
     $this->genotype = $genotype;
   }
@@ -49,7 +49,7 @@ class Google_Service_Genomics_VariantCall extends Google_Collection
   {
     return $this->genotype;
   }
-  public function setGenotypeLikelihood($genotypeLikelihood)
+  public function setGenotypeLikelihood(array $genotypeLikelihood)
   {
     $this->genotypeLikelihood = $genotypeLikelihood;
   }
@@ -57,7 +57,7 @@ class Google_Service_Genomics_VariantCall extends Google_Collection
   {
     return $this->genotypeLikelihood;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }

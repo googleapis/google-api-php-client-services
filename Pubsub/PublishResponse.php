@@ -20,7 +20,7 @@ class Google_Service_Pubsub_PublishResponse extends Google_Collection
   protected $collection_key = 'messageIds';
   public $messageIds;
 
-  public function setMessageIds($messageIds)
+  public function setMessageIds(array $messageIds)
   {
     $this->messageIds = $messageIds;
   }

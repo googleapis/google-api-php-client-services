@@ -29,7 +29,7 @@ class Google_Service_Pubsub_ListTopicSubscriptionsResponse extends Google_Collec
   {
     return $this->nextPageToken;
   }
-  public function setSubscriptions($subscriptions)
+  public function setSubscriptions(array $subscriptions)
   {
     $this->subscriptions = $subscriptions;
   }

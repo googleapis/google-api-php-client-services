@@ -20,18 +20,14 @@ class Google_Service_Dataflow_WorkItemServiceState extends Google_Collection
   protected $collection_key = 'metricShortId';
   public $harnessData;
   public $leaseExpireTime;
-  protected $metricShortIdType = 'Google_Service_Dataflow_MetricShortId';
-  protected $metricShortIdDataType = 'array';
+  public $metricShortId;
   public $nextReportIndex;
   public $reportStatusInterval;
-  protected $splitRequestType = 'Google_Service_Dataflow_ApproximateSplitRequest';
-  protected $splitRequestDataType = '';
-  protected $suggestedStopPointType = 'Google_Service_Dataflow_ApproximateProgress';
-  protected $suggestedStopPointDataType = '';
-  protected $suggestedStopPositionType = 'Google_Service_Dataflow_Position';
-  protected $suggestedStopPositionDataType = '';
+  public $splitRequest;
+  public $suggestedStopPoint;
+  public $suggestedStopPosition;
 
-  public function setHarnessData($harnessData)
+  public function setHarnessData(array $harnessData)
   {
     $this->harnessData = $harnessData;
   }
@@ -47,8 +43,13 @@ class Google_Service_Dataflow_WorkItemServiceState extends Google_Collection
   {
     return $this->leaseExpireTime;
   }
-  public function setMetricShortId($metricShortId)
+  public function setMetricShortId(array $metricShortId)
   {
+    foreach ($metricShortId as $m) {
+      if (!$m instanceof Google_Service_Dataflow_MetricShortId) {
+        throw new InvalidArgumentException('First argument to setMetricShortId must be an array of Google_Service_Dataflow_MetricShortId');
+      }
+    }
     $this->metricShortId = $metricShortId;
   }
   public function getMetricShortId()

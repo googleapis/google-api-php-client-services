@@ -18,8 +18,7 @@
 class Google_Service_Sheets_MoveDimensionRequest extends Google_Model
 {
   public $destinationIndex;
-  protected $sourceType = 'Google_Service_Sheets_DimensionRange';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setDestinationIndex($destinationIndex)
   {

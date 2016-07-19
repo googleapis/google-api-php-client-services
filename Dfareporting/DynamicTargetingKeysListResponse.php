@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_DynamicTargetingKeysListResponse extends Google_Collection
 {
   protected $collection_key = 'dynamicTargetingKeys';
-  protected $dynamicTargetingKeysType = 'Google_Service_Dfareporting_DynamicTargetingKey';
-  protected $dynamicTargetingKeysDataType = 'array';
+  public $dynamicTargetingKeys;
   public $kind;
 
-  public function setDynamicTargetingKeys($dynamicTargetingKeys)
+  public function setDynamicTargetingKeys(array $dynamicTargetingKeys)
   {
+    foreach ($dynamicTargetingKeys as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_DynamicTargetingKey) {
+        throw new InvalidArgumentException('First argument to setDynamicTargetingKeys must be an array of Google_Service_Dfareporting_DynamicTargetingKey');
+      }
+    }
     $this->dynamicTargetingKeys = $dynamicTargetingKeys;
   }
   public function getDynamicTargetingKeys()

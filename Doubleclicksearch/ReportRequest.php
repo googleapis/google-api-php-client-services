@@ -18,28 +18,28 @@
 class Google_Service_Doubleclicksearch_ReportRequest extends Google_Collection
 {
   protected $collection_key = 'orderBy';
-  protected $columnsType = 'Google_Service_Doubleclicksearch_ReportApiColumnSpec';
-  protected $columnsDataType = 'array';
+  public $columns;
   public $downloadFormat;
-  protected $filtersType = 'Google_Service_Doubleclicksearch_ReportRequestFilters';
-  protected $filtersDataType = 'array';
+  public $filters;
   public $includeDeletedEntities;
   public $includeRemovedEntities;
   public $maxRowsPerFile;
-  protected $orderByType = 'Google_Service_Doubleclicksearch_ReportRequestOrderBy';
-  protected $orderByDataType = 'array';
-  protected $reportScopeType = 'Google_Service_Doubleclicksearch_ReportRequestReportScope';
-  protected $reportScopeDataType = '';
+  public $orderBy;
+  public $reportScope;
   public $reportType;
   public $rowCount;
   public $startRow;
   public $statisticsCurrency;
-  protected $timeRangeType = 'Google_Service_Doubleclicksearch_ReportRequestTimeRange';
-  protected $timeRangeDataType = '';
+  public $timeRange;
   public $verifySingleTimeZone;
 
-  public function setColumns($columns)
+  public function setColumns(array $columns)
   {
+    foreach ($columns as $c) {
+      if (!$c instanceof Google_Service_Doubleclicksearch_ReportApiColumnSpec) {
+        throw new InvalidArgumentException('First argument to setColumns must be an array of Google_Service_Doubleclicksearch_ReportApiColumnSpec');
+      }
+    }
     $this->columns = $columns;
   }
   public function getColumns()
@@ -54,8 +54,13 @@ class Google_Service_Doubleclicksearch_ReportRequest extends Google_Collection
   {
     return $this->downloadFormat;
   }
-  public function setFilters($filters)
+  public function setFilters(array $filters)
   {
+    foreach ($filters as $f) {
+      if (!$f instanceof Google_Service_Doubleclicksearch_ReportRequestFilters) {
+        throw new InvalidArgumentException('First argument to setFilters must be an array of Google_Service_Doubleclicksearch_ReportRequestFilters');
+      }
+    }
     $this->filters = $filters;
   }
   public function getFilters()
@@ -86,8 +91,13 @@ class Google_Service_Doubleclicksearch_ReportRequest extends Google_Collection
   {
     return $this->maxRowsPerFile;
   }
-  public function setOrderBy($orderBy)
+  public function setOrderBy(array $orderBy)
   {
+    foreach ($orderBy as $o) {
+      if (!$o instanceof Google_Service_Doubleclicksearch_ReportRequestOrderBy) {
+        throw new InvalidArgumentException('First argument to setOrderBy must be an array of Google_Service_Doubleclicksearch_ReportRequestOrderBy');
+      }
+    }
     $this->orderBy = $orderBy;
   }
   public function getOrderBy()

@@ -18,8 +18,7 @@
 class Google_Service_Sheets_PivotGroupValueMetadata extends Google_Model
 {
   public $collapsed;
-  protected $valueType = 'Google_Service_Sheets_ExtendedValue';
-  protected $valueDataType = '';
+  public $value;
 
   public function setCollapsed($collapsed)
   {

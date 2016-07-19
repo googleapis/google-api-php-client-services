@@ -30,7 +30,7 @@ class Google_Service_Gmail_WatchRequest extends Google_Collection
   {
     return $this->labelFilterAction;
   }
-  public function setLabelIds($labelIds)
+  public function setLabelIds(array $labelIds)
   {
     $this->labelIds = $labelIds;
   }

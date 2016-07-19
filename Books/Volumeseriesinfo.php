@@ -21,8 +21,7 @@ class Google_Service_Books_Volumeseriesinfo extends Google_Collection
   public $bookDisplayNumber;
   public $kind;
   public $shortSeriesBookTitle;
-  protected $volumeSeriesType = 'Google_Service_Books_VolumeseriesinfoVolumeSeries';
-  protected $volumeSeriesDataType = 'array';
+  public $volumeSeries;
 
   public function setBookDisplayNumber($bookDisplayNumber)
   {
@@ -48,8 +47,13 @@ class Google_Service_Books_Volumeseriesinfo extends Google_Collection
   {
     return $this->shortSeriesBookTitle;
   }
-  public function setVolumeSeries($volumeSeries)
+  public function setVolumeSeries(array $volumeSeries)
   {
+    foreach ($volumeSeries as $v) {
+      if (!$v instanceof Google_Service_Books_VolumeseriesinfoVolumeSeries) {
+        throw new InvalidArgumentException('First argument to setVolumeSeries must be an array of Google_Service_Books_VolumeseriesinfoVolumeSeries');
+      }
+    }
     $this->volumeSeries = $volumeSeries;
   }
   public function getVolumeSeries()

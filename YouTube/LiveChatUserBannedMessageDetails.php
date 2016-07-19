@@ -19,8 +19,7 @@ class Google_Service_YouTube_LiveChatUserBannedMessageDetails extends Google_Mod
 {
   public $banDurationSeconds;
   public $banType;
-  protected $bannedUserDetailsType = 'Google_Service_YouTube_ChannelProfileDetails';
-  protected $bannedUserDetailsDataType = '';
+  public $bannedUserDetails;
 
   public function setBanDurationSeconds($banDurationSeconds)
   {

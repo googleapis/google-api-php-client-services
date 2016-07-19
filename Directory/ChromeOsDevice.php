@@ -18,8 +18,7 @@
 class Google_Service_Directory_ChromeOsDevice extends Google_Collection
 {
   protected $collection_key = 'recentUsers';
-  protected $activeTimeRangesType = 'Google_Service_Directory_ChromeOsDeviceActiveTimeRanges';
-  protected $activeTimeRangesDataType = 'array';
+  public $activeTimeRanges;
   public $annotatedAssetId;
   public $annotatedLocation;
   public $annotatedUser;
@@ -39,15 +38,19 @@ class Google_Service_Directory_ChromeOsDevice extends Google_Collection
   public $orgUnitPath;
   public $osVersion;
   public $platformVersion;
-  protected $recentUsersType = 'Google_Service_Directory_ChromeOsDeviceRecentUsers';
-  protected $recentUsersDataType = 'array';
+  public $recentUsers;
   public $serialNumber;
   public $status;
   public $supportEndDate;
   public $willAutoRenew;
 
-  public function setActiveTimeRanges($activeTimeRanges)
+  public function setActiveTimeRanges(array $activeTimeRanges)
   {
+    foreach ($activeTimeRanges as $a) {
+      if (!$a instanceof Google_Service_Directory_ChromeOsDeviceActiveTimeRanges) {
+        throw new InvalidArgumentException('First argument to setActiveTimeRanges must be an array of Google_Service_Directory_ChromeOsDeviceActiveTimeRanges');
+      }
+    }
     $this->activeTimeRanges = $activeTimeRanges;
   }
   public function getActiveTimeRanges()
@@ -206,8 +209,13 @@ class Google_Service_Directory_ChromeOsDevice extends Google_Collection
   {
     return $this->platformVersion;
   }
-  public function setRecentUsers($recentUsers)
+  public function setRecentUsers(array $recentUsers)
   {
+    foreach ($recentUsers as $r) {
+      if (!$r instanceof Google_Service_Directory_ChromeOsDeviceRecentUsers) {
+        throw new InvalidArgumentException('First argument to setRecentUsers must be an array of Google_Service_Directory_ChromeOsDeviceRecentUsers');
+      }
+    }
     $this->recentUsers = $recentUsers;
   }
   public function getRecentUsers()

@@ -21,13 +21,10 @@ class Google_Service_Blogger_Blog extends Google_Model
   public $description;
   public $id;
   public $kind;
-  protected $localeType = 'Google_Service_Blogger_BlogLocale';
-  protected $localeDataType = '';
+  public $locale;
   public $name;
-  protected $pagesType = 'Google_Service_Blogger_BlogPages';
-  protected $pagesDataType = '';
-  protected $postsType = 'Google_Service_Blogger_BlogPosts';
-  protected $postsDataType = '';
+  public $pages;
+  public $posts;
   public $published;
   public $selfLink;
   public $status;

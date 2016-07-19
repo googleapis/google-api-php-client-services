@@ -18,12 +18,16 @@
 class Google_Service_Classroom_ListCourseWorkResponse extends Google_Collection
 {
   protected $collection_key = 'courseWork';
-  protected $courseWorkType = 'Google_Service_Classroom_CourseWork';
-  protected $courseWorkDataType = 'array';
+  public $courseWork;
   public $nextPageToken;
 
-  public function setCourseWork($courseWork)
+  public function setCourseWork(array $courseWork)
   {
+    foreach ($courseWork as $c) {
+      if (!$c instanceof Google_Service_Classroom_CourseWork) {
+        throw new InvalidArgumentException('First argument to setCourseWork must be an array of Google_Service_Classroom_CourseWork');
+      }
+    }
     $this->courseWork = $courseWork;
   }
   public function getCourseWork()

@@ -18,12 +18,16 @@
 class Google_Service_CivicInfo_ElectionsQueryResponse extends Google_Collection
 {
   protected $collection_key = 'elections';
-  protected $electionsType = 'Google_Service_CivicInfo_Election';
-  protected $electionsDataType = 'array';
+  public $elections;
   public $kind;
 
-  public function setElections($elections)
+  public function setElections(array $elections)
   {
+    foreach ($elections as $e) {
+      if (!$e instanceof Google_Service_CivicInfo_Election) {
+        throw new InvalidArgumentException('First argument to setElections must be an array of Google_Service_CivicInfo_Election');
+      }
+    }
     $this->elections = $elections;
   }
   public function getElections()

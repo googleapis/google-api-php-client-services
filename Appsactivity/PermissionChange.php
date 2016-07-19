@@ -18,21 +18,29 @@
 class Google_Service_Appsactivity_PermissionChange extends Google_Collection
 {
   protected $collection_key = 'removedPermissions';
-  protected $addedPermissionsType = 'Google_Service_Appsactivity_Permission';
-  protected $addedPermissionsDataType = 'array';
-  protected $removedPermissionsType = 'Google_Service_Appsactivity_Permission';
-  protected $removedPermissionsDataType = 'array';
+  public $addedPermissions;
+  public $removedPermissions;
 
-  public function setAddedPermissions($addedPermissions)
+  public function setAddedPermissions(array $addedPermissions)
   {
+    foreach ($addedPermissions as $a) {
+      if (!$a instanceof Google_Service_Appsactivity_Permission) {
+        throw new InvalidArgumentException('First argument to setAddedPermissions must be an array of Google_Service_Appsactivity_Permission');
+      }
+    }
     $this->addedPermissions = $addedPermissions;
   }
   public function getAddedPermissions()
   {
     return $this->addedPermissions;
   }
-  public function setRemovedPermissions($removedPermissions)
+  public function setRemovedPermissions(array $removedPermissions)
   {
+    foreach ($removedPermissions as $r) {
+      if (!$r instanceof Google_Service_Appsactivity_Permission) {
+        throw new InvalidArgumentException('First argument to setRemovedPermissions must be an array of Google_Service_Appsactivity_Permission');
+      }
+    }
     $this->removedPermissions = $removedPermissions;
   }
   public function getRemovedPermissions()

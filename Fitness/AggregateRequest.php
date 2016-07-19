@@ -18,21 +18,21 @@
 class Google_Service_Fitness_AggregateRequest extends Google_Collection
 {
   protected $collection_key = 'aggregateBy';
-  protected $aggregateByType = 'Google_Service_Fitness_AggregateBy';
-  protected $aggregateByDataType = 'array';
-  protected $bucketByActivitySegmentType = 'Google_Service_Fitness_BucketByActivity';
-  protected $bucketByActivitySegmentDataType = '';
-  protected $bucketByActivityTypeType = 'Google_Service_Fitness_BucketByActivity';
-  protected $bucketByActivityTypeDataType = '';
-  protected $bucketBySessionType = 'Google_Service_Fitness_BucketBySession';
-  protected $bucketBySessionDataType = '';
-  protected $bucketByTimeType = 'Google_Service_Fitness_BucketByTime';
-  protected $bucketByTimeDataType = '';
+  public $aggregateBy;
+  public $bucketByActivitySegment;
+  public $bucketByActivityType;
+  public $bucketBySession;
+  public $bucketByTime;
   public $endTimeMillis;
   public $startTimeMillis;
 
-  public function setAggregateBy($aggregateBy)
+  public function setAggregateBy(array $aggregateBy)
   {
+    foreach ($aggregateBy as $a) {
+      if (!$a instanceof Google_Service_Fitness_AggregateBy) {
+        throw new InvalidArgumentException('First argument to setAggregateBy must be an array of Google_Service_Fitness_AggregateBy');
+      }
+    }
     $this->aggregateBy = $aggregateBy;
   }
   public function getAggregateBy()

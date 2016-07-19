@@ -25,10 +25,8 @@ class Google_Service_Drive_About extends Google_Collection
   public $kind;
   public $maxImportSizes;
   public $maxUploadSize;
-  protected $storageQuotaType = 'Google_Service_Drive_AboutStorageQuota';
-  protected $storageQuotaDataType = '';
-  protected $userType = 'Google_Service_Drive_User';
-  protected $userDataType = '';
+  public $storageQuota;
+  public $user;
 
   public function setAppInstalled($appInstalled)
   {
@@ -38,7 +36,7 @@ class Google_Service_Drive_About extends Google_Collection
   {
     return $this->appInstalled;
   }
-  public function setExportFormats($exportFormats)
+  public function setExportFormats(array $exportFormats)
   {
     $this->exportFormats = $exportFormats;
   }
@@ -46,7 +44,7 @@ class Google_Service_Drive_About extends Google_Collection
   {
     return $this->exportFormats;
   }
-  public function setFolderColorPalette($folderColorPalette)
+  public function setFolderColorPalette(array $folderColorPalette)
   {
     $this->folderColorPalette = $folderColorPalette;
   }
@@ -54,7 +52,7 @@ class Google_Service_Drive_About extends Google_Collection
   {
     return $this->folderColorPalette;
   }
-  public function setImportFormats($importFormats)
+  public function setImportFormats(array $importFormats)
   {
     $this->importFormats = $importFormats;
   }
@@ -70,7 +68,7 @@ class Google_Service_Drive_About extends Google_Collection
   {
     return $this->kind;
   }
-  public function setMaxImportSizes($maxImportSizes)
+  public function setMaxImportSizes(array $maxImportSizes)
   {
     $this->maxImportSizes = $maxImportSizes;
   }

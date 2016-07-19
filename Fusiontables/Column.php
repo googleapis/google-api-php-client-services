@@ -18,8 +18,7 @@
 class Google_Service_Fusiontables_Column extends Google_Collection
 {
   protected $collection_key = 'validValues';
-  protected $baseColumnType = 'Google_Service_Fusiontables_ColumnBaseColumn';
-  protected $baseColumnDataType = '';
+  public $baseColumn;
   public $columnId;
   public $columnJsonSchema;
   public $columnPropertiesJson;
@@ -112,7 +111,7 @@ class Google_Service_Fusiontables_Column extends Google_Collection
   {
     return $this->type;
   }
-  public function setValidValues($validValues)
+  public function setValidValues(array $validValues)
   {
     $this->validValues = $validValues;
   }

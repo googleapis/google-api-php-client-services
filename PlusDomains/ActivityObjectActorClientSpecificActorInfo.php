@@ -17,8 +17,7 @@
 
 class Google_Service_PlusDomains_ActivityObjectActorClientSpecificActorInfo extends Google_Model
 {
-  protected $youtubeActorInfoType = 'Google_Service_PlusDomains_ActivityObjectActorClientSpecificActorInfoYoutubeActorInfo';
-  protected $youtubeActorInfoDataType = '';
+  public $youtubeActorInfo;
 
   public function setYoutubeActorInfo(Google_Service_PlusDomains_ActivityObjectActorClientSpecificActorInfoYoutubeActorInfo $youtubeActorInfo)
   {

@@ -18,10 +18,8 @@
 class Google_Service_AdExchangeBuyer_DealTermsGuaranteedFixedPriceTerms extends Google_Collection
 {
   protected $collection_key = 'fixedPrices';
-  protected $billingInfoType = 'Google_Service_AdExchangeBuyer_DealTermsGuaranteedFixedPriceTermsBillingInfo';
-  protected $billingInfoDataType = '';
-  protected $fixedPricesType = 'Google_Service_AdExchangeBuyer_PricePerBuyer';
-  protected $fixedPricesDataType = 'array';
+  public $billingInfo;
+  public $fixedPrices;
   public $guaranteedImpressions;
   public $guaranteedLooks;
 
@@ -33,8 +31,13 @@ class Google_Service_AdExchangeBuyer_DealTermsGuaranteedFixedPriceTerms extends 
   {
     return $this->billingInfo;
   }
-  public function setFixedPrices($fixedPrices)
+  public function setFixedPrices(array $fixedPrices)
   {
+    foreach ($fixedPrices as $f) {
+      if (!$f instanceof Google_Service_AdExchangeBuyer_PricePerBuyer) {
+        throw new InvalidArgumentException('First argument to setFixedPrices must be an array of Google_Service_AdExchangeBuyer_PricePerBuyer');
+      }
+    }
     $this->fixedPrices = $fixedPrices;
   }
   public function getFixedPrices()

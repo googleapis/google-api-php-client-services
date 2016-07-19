@@ -17,8 +17,7 @@
 
 class Google_Service_Safebrowsing_ListUpdateRequest extends Google_Model
 {
-  protected $constraintsType = 'Google_Service_Safebrowsing_Constraints';
-  protected $constraintsDataType = '';
+  public $constraints;
   public $platformType;
   public $state;
   public $threatEntryType;

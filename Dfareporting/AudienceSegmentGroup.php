@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_AudienceSegmentGroup extends Google_Collection
 {
   protected $collection_key = 'audienceSegments';
-  protected $audienceSegmentsType = 'Google_Service_Dfareporting_AudienceSegment';
-  protected $audienceSegmentsDataType = 'array';
+  public $audienceSegments;
   public $id;
   public $name;
 
-  public function setAudienceSegments($audienceSegments)
+  public function setAudienceSegments(array $audienceSegments)
   {
+    foreach ($audienceSegments as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_AudienceSegment) {
+        throw new InvalidArgumentException('First argument to setAudienceSegments must be an array of Google_Service_Dfareporting_AudienceSegment');
+      }
+    }
     $this->audienceSegments = $audienceSegments;
   }
   public function getAudienceSegments()

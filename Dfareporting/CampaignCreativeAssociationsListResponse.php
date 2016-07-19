@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_CampaignCreativeAssociationsListResponse extends Google_Collection
 {
   protected $collection_key = 'campaignCreativeAssociations';
-  protected $campaignCreativeAssociationsType = 'Google_Service_Dfareporting_CampaignCreativeAssociation';
-  protected $campaignCreativeAssociationsDataType = 'array';
+  public $campaignCreativeAssociations;
   public $kind;
   public $nextPageToken;
 
-  public function setCampaignCreativeAssociations($campaignCreativeAssociations)
+  public function setCampaignCreativeAssociations(array $campaignCreativeAssociations)
   {
+    foreach ($campaignCreativeAssociations as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CampaignCreativeAssociation) {
+        throw new InvalidArgumentException('First argument to setCampaignCreativeAssociations must be an array of Google_Service_Dfareporting_CampaignCreativeAssociation');
+      }
+    }
     $this->campaignCreativeAssociations = $campaignCreativeAssociations;
   }
   public function getCampaignCreativeAssociations()

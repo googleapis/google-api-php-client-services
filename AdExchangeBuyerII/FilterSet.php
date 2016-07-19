@@ -18,8 +18,7 @@
 class Google_Service_AdExchangeBuyerII_FilterSet extends Google_Collection
 {
   protected $collection_key = 'webPropertyIds';
-  protected $absoluteDateRangeType = 'Google_Service_AdExchangeBuyerII_AbsoluteDateRange';
-  protected $absoluteDateRangeDataType = '';
+  public $absoluteDateRange;
   public $buyerAccountId;
   public $creativeId;
   public $dealId;
@@ -27,8 +26,7 @@ class Google_Service_AdExchangeBuyerII_FilterSet extends Google_Collection
   public $filterSetOwnerAccountId;
   public $format;
   public $platform;
-  protected $relativeDateRangeType = 'Google_Service_AdExchangeBuyerII_RelativeDateRange';
-  protected $relativeDateRangeDataType = '';
+  public $relativeDateRange;
   public $webPropertyIds;
 
   public function setAbsoluteDateRange(Google_Service_AdExchangeBuyerII_AbsoluteDateRange $absoluteDateRange)
@@ -103,7 +101,7 @@ class Google_Service_AdExchangeBuyerII_FilterSet extends Google_Collection
   {
     return $this->relativeDateRange;
   }
-  public function setWebPropertyIds($webPropertyIds)
+  public function setWebPropertyIds(array $webPropertyIds)
   {
     $this->webPropertyIds = $webPropertyIds;
   }

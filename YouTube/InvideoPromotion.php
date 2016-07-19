@@ -18,12 +18,9 @@
 class Google_Service_YouTube_InvideoPromotion extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $defaultTimingType = 'Google_Service_YouTube_InvideoTiming';
-  protected $defaultTimingDataType = '';
-  protected $itemsType = 'Google_Service_YouTube_PromotedItem';
-  protected $itemsDataType = 'array';
-  protected $positionType = 'Google_Service_YouTube_InvideoPosition';
-  protected $positionDataType = '';
+  public $defaultTiming;
+  public $items;
+  public $position;
   public $useSmartTiming;
 
   public function setDefaultTiming(Google_Service_YouTube_InvideoTiming $defaultTiming)
@@ -34,8 +31,13 @@ class Google_Service_YouTube_InvideoPromotion extends Google_Collection
   {
     return $this->defaultTiming;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_YouTube_PromotedItem) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_YouTube_PromotedItem');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

@@ -18,8 +18,7 @@
 class Google_Service_People_CoverPhoto extends Google_Model
 {
   public $default;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $url;
 
   public function setDefault($default)

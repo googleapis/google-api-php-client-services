@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_UserRolePermissionGroupsListResponse extends G
 {
   protected $collection_key = 'userRolePermissionGroups';
   public $kind;
-  protected $userRolePermissionGroupsType = 'Google_Service_Dfareporting_UserRolePermissionGroup';
-  protected $userRolePermissionGroupsDataType = 'array';
+  public $userRolePermissionGroups;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_UserRolePermissionGroupsListResponse extends G
   {
     return $this->kind;
   }
-  public function setUserRolePermissionGroups($userRolePermissionGroups)
+  public function setUserRolePermissionGroups(array $userRolePermissionGroups)
   {
+    foreach ($userRolePermissionGroups as $u) {
+      if (!$u instanceof Google_Service_Dfareporting_UserRolePermissionGroup) {
+        throw new InvalidArgumentException('First argument to setUserRolePermissionGroups must be an array of Google_Service_Dfareporting_UserRolePermissionGroup');
+      }
+    }
     $this->userRolePermissionGroups = $userRolePermissionGroups;
   }
   public function getUserRolePermissionGroups()

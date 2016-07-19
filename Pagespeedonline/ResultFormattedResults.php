@@ -18,8 +18,7 @@
 class Google_Service_Pagespeedonline_ResultFormattedResults extends Google_Model
 {
   public $locale;
-  protected $ruleResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement';
-  protected $ruleResultsDataType = 'map';
+  public $ruleResults;
 
   public function setLocale($locale)
   {
@@ -29,7 +28,7 @@ class Google_Service_Pagespeedonline_ResultFormattedResults extends Google_Model
   {
     return $this->locale;
   }
-  public function setRuleResults($ruleResults)
+  public function setRuleResults(array $ruleResults)
   {
     $this->ruleResults = $ruleResults;
   }

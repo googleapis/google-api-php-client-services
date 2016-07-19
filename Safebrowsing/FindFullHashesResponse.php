@@ -18,13 +18,17 @@
 class Google_Service_Safebrowsing_FindFullHashesResponse extends Google_Collection
 {
   protected $collection_key = 'matches';
-  protected $matchesType = 'Google_Service_Safebrowsing_ThreatMatch';
-  protected $matchesDataType = 'array';
+  public $matches;
   public $minimumWaitDuration;
   public $negativeCacheDuration;
 
-  public function setMatches($matches)
+  public function setMatches(array $matches)
   {
+    foreach ($matches as $m) {
+      if (!$m instanceof Google_Service_Safebrowsing_ThreatMatch) {
+        throw new InvalidArgumentException('First argument to setMatches must be an array of Google_Service_Safebrowsing_ThreatMatch');
+      }
+    }
     $this->matches = $matches;
   }
   public function getMatches()

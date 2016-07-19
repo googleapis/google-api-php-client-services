@@ -18,10 +18,8 @@
 class Google_Service_Books_DictlayerdataDict extends Google_Collection
 {
   protected $collection_key = 'words';
-  protected $sourceType = 'Google_Service_Books_DictlayerdataDictSource';
-  protected $sourceDataType = '';
-  protected $wordsType = 'Google_Service_Books_DictlayerdataDictWords';
-  protected $wordsDataType = 'array';
+  public $source;
+  public $words;
 
   public function setSource(Google_Service_Books_DictlayerdataDictSource $source)
   {
@@ -31,8 +29,13 @@ class Google_Service_Books_DictlayerdataDict extends Google_Collection
   {
     return $this->source;
   }
-  public function setWords($words)
+  public function setWords(array $words)
   {
+    foreach ($words as $w) {
+      if (!$w instanceof Google_Service_Books_DictlayerdataDictWords) {
+        throw new InvalidArgumentException('First argument to setWords must be an array of Google_Service_Books_DictlayerdataDictWords');
+      }
+    }
     $this->words = $words;
   }
   public function getWords()

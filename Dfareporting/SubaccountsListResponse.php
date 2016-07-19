@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_SubaccountsListResponse extends Google_Collect
   protected $collection_key = 'subaccounts';
   public $kind;
   public $nextPageToken;
-  protected $subaccountsType = 'Google_Service_Dfareporting_Subaccount';
-  protected $subaccountsDataType = 'array';
+  public $subaccounts;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_SubaccountsListResponse extends Google_Collect
   {
     return $this->nextPageToken;
   }
-  public function setSubaccounts($subaccounts)
+  public function setSubaccounts(array $subaccounts)
   {
+    foreach ($subaccounts as $s) {
+      if (!$s instanceof Google_Service_Dfareporting_Subaccount) {
+        throw new InvalidArgumentException('First argument to setSubaccounts must be an array of Google_Service_Dfareporting_Subaccount');
+      }
+    }
     $this->subaccounts = $subaccounts;
   }
   public function getSubaccounts()

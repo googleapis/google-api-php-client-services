@@ -17,10 +17,8 @@
 
 class Google_Service_PlusDomains_Activity extends Google_Model
 {
-  protected $accessType = 'Google_Service_PlusDomains_Acl';
-  protected $accessDataType = '';
-  protected $actorType = 'Google_Service_PlusDomains_ActivityActor';
-  protected $actorDataType = '';
+  public $access;
+  public $actor;
   public $address;
   public $annotation;
   public $crosspostSource;
@@ -28,14 +26,11 @@ class Google_Service_PlusDomains_Activity extends Google_Model
   public $geocode;
   public $id;
   public $kind;
-  protected $locationType = 'Google_Service_PlusDomains_Place';
-  protected $locationDataType = '';
-  protected $objectType = 'Google_Service_PlusDomains_ActivityObject';
-  protected $objectDataType = '';
+  public $location;
+  public $object;
   public $placeId;
   public $placeName;
-  protected $providerType = 'Google_Service_PlusDomains_ActivityProvider';
-  protected $providerDataType = '';
+  public $provider;
   public $published;
   public $radius;
   public $title;

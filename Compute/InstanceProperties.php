@@ -20,19 +20,13 @@ class Google_Service_Compute_InstanceProperties extends Google_Collection
   protected $collection_key = 'serviceAccounts';
   public $canIpForward;
   public $description;
-  protected $disksType = 'Google_Service_Compute_AttachedDisk';
-  protected $disksDataType = 'array';
+  public $disks;
   public $machineType;
-  protected $metadataType = 'Google_Service_Compute_Metadata';
-  protected $metadataDataType = '';
-  protected $networkInterfacesType = 'Google_Service_Compute_NetworkInterface';
-  protected $networkInterfacesDataType = 'array';
-  protected $schedulingType = 'Google_Service_Compute_Scheduling';
-  protected $schedulingDataType = '';
-  protected $serviceAccountsType = 'Google_Service_Compute_ServiceAccount';
-  protected $serviceAccountsDataType = 'array';
-  protected $tagsType = 'Google_Service_Compute_Tags';
-  protected $tagsDataType = '';
+  public $metadata;
+  public $networkInterfaces;
+  public $scheduling;
+  public $serviceAccounts;
+  public $tags;
 
   public function setCanIpForward($canIpForward)
   {
@@ -50,8 +44,13 @@ class Google_Service_Compute_InstanceProperties extends Google_Collection
   {
     return $this->description;
   }
-  public function setDisks($disks)
+  public function setDisks(array $disks)
   {
+    foreach ($disks as $d) {
+      if (!$d instanceof Google_Service_Compute_AttachedDisk) {
+        throw new InvalidArgumentException('First argument to setDisks must be an array of Google_Service_Compute_AttachedDisk');
+      }
+    }
     $this->disks = $disks;
   }
   public function getDisks()
@@ -74,8 +73,13 @@ class Google_Service_Compute_InstanceProperties extends Google_Collection
   {
     return $this->metadata;
   }
-  public function setNetworkInterfaces($networkInterfaces)
+  public function setNetworkInterfaces(array $networkInterfaces)
   {
+    foreach ($networkInterfaces as $n) {
+      if (!$n instanceof Google_Service_Compute_NetworkInterface) {
+        throw new InvalidArgumentException('First argument to setNetworkInterfaces must be an array of Google_Service_Compute_NetworkInterface');
+      }
+    }
     $this->networkInterfaces = $networkInterfaces;
   }
   public function getNetworkInterfaces()
@@ -90,8 +94,13 @@ class Google_Service_Compute_InstanceProperties extends Google_Collection
   {
     return $this->scheduling;
   }
-  public function setServiceAccounts($serviceAccounts)
+  public function setServiceAccounts(array $serviceAccounts)
   {
+    foreach ($serviceAccounts as $s) {
+      if (!$s instanceof Google_Service_Compute_ServiceAccount) {
+        throw new InvalidArgumentException('First argument to setServiceAccounts must be an array of Google_Service_Compute_ServiceAccount');
+      }
+    }
     $this->serviceAccounts = $serviceAccounts;
   }
   public function getServiceAccounts()

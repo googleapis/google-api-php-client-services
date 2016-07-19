@@ -26,8 +26,7 @@ class Google_Service_Bigquery_ExplainQueryStage extends Google_Collection
   public $readRatioMax;
   public $recordsRead;
   public $recordsWritten;
-  protected $stepsType = 'Google_Service_Bigquery_ExplainQueryStep';
-  protected $stepsDataType = 'array';
+  public $steps;
   public $waitRatioAvg;
   public $waitRatioMax;
   public $writeRatioAvg;
@@ -97,8 +96,13 @@ class Google_Service_Bigquery_ExplainQueryStage extends Google_Collection
   {
     return $this->recordsWritten;
   }
-  public function setSteps($steps)
+  public function setSteps(array $steps)
   {
+    foreach ($steps as $s) {
+      if (!$s instanceof Google_Service_Bigquery_ExplainQueryStep) {
+        throw new InvalidArgumentException('First argument to setSteps must be an array of Google_Service_Bigquery_ExplainQueryStep');
+      }
+    }
     $this->steps = $steps;
   }
   public function getSteps()

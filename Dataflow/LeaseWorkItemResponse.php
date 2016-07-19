@@ -18,11 +18,15 @@
 class Google_Service_Dataflow_LeaseWorkItemResponse extends Google_Collection
 {
   protected $collection_key = 'workItems';
-  protected $workItemsType = 'Google_Service_Dataflow_WorkItem';
-  protected $workItemsDataType = 'array';
+  public $workItems;
 
-  public function setWorkItems($workItems)
+  public function setWorkItems(array $workItems)
   {
+    foreach ($workItems as $w) {
+      if (!$w instanceof Google_Service_Dataflow_WorkItem) {
+        throw new InvalidArgumentException('First argument to setWorkItems must be an array of Google_Service_Dataflow_WorkItem');
+      }
+    }
     $this->workItems = $workItems;
   }
   public function getWorkItems()

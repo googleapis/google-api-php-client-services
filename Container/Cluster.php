@@ -18,8 +18,7 @@
 class Google_Service_Container_Cluster extends Google_Collection
 {
   protected $collection_key = 'nodePools';
-  protected $addonsConfigType = 'Google_Service_Container_AddonsConfig';
-  protected $addonsConfigDataType = '';
+  public $addonsConfig;
   public $clusterIpv4Cidr;
   public $createTime;
   public $currentMasterVersion;
@@ -32,16 +31,13 @@ class Google_Service_Container_Cluster extends Google_Collection
   public $instanceGroupUrls;
   public $locations;
   public $loggingService;
-  protected $masterAuthType = 'Google_Service_Container_MasterAuth';
-  protected $masterAuthDataType = '';
+  public $masterAuth;
   public $monitoringService;
   public $name;
   public $network;
-  protected $nodeConfigType = 'Google_Service_Container_NodeConfig';
-  protected $nodeConfigDataType = '';
+  public $nodeConfig;
   public $nodeIpv4CidrSize;
-  protected $nodePoolsType = 'Google_Service_Container_NodePool';
-  protected $nodePoolsDataType = 'array';
+  public $nodePools;
   public $selfLink;
   public $servicesIpv4Cidr;
   public $status;
@@ -129,7 +125,7 @@ class Google_Service_Container_Cluster extends Google_Collection
   {
     return $this->initialNodeCount;
   }
-  public function setInstanceGroupUrls($instanceGroupUrls)
+  public function setInstanceGroupUrls(array $instanceGroupUrls)
   {
     $this->instanceGroupUrls = $instanceGroupUrls;
   }
@@ -137,7 +133,7 @@ class Google_Service_Container_Cluster extends Google_Collection
   {
     return $this->instanceGroupUrls;
   }
-  public function setLocations($locations)
+  public function setLocations(array $locations)
   {
     $this->locations = $locations;
   }
@@ -201,8 +197,13 @@ class Google_Service_Container_Cluster extends Google_Collection
   {
     return $this->nodeIpv4CidrSize;
   }
-  public function setNodePools($nodePools)
+  public function setNodePools(array $nodePools)
   {
+    foreach ($nodePools as $n) {
+      if (!$n instanceof Google_Service_Container_NodePool) {
+        throw new InvalidArgumentException('First argument to setNodePools must be an array of Google_Service_Container_NodePool');
+      }
+    }
     $this->nodePools = $nodePools;
   }
   public function getNodePools()

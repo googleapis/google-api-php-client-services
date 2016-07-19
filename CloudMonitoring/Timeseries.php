@@ -18,13 +18,16 @@
 class Google_Service_CloudMonitoring_Timeseries extends Google_Collection
 {
   protected $collection_key = 'points';
-  protected $pointsType = 'Google_Service_CloudMonitoring_Point';
-  protected $pointsDataType = 'array';
-  protected $timeseriesDescType = 'Google_Service_CloudMonitoring_TimeseriesDescriptor';
-  protected $timeseriesDescDataType = '';
+  public $points;
+  public $timeseriesDesc;
 
-  public function setPoints($points)
+  public function setPoints(array $points)
   {
+    foreach ($points as $p) {
+      if (!$p instanceof Google_Service_CloudMonitoring_Point) {
+        throw new InvalidArgumentException('First argument to setPoints must be an array of Google_Service_CloudMonitoring_Point');
+      }
+    }
     $this->points = $points;
   }
   public function getPoints()

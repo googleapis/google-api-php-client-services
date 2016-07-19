@@ -18,8 +18,7 @@
 class Google_Service_YouTube_VideoFileDetails extends Google_Collection
 {
   protected $collection_key = 'videoStreams';
-  protected $audioStreamsType = 'Google_Service_YouTube_VideoFileDetailsAudioStream';
-  protected $audioStreamsDataType = 'array';
+  public $audioStreams;
   public $bitrateBps;
   public $container;
   public $creationTime;
@@ -27,13 +26,16 @@ class Google_Service_YouTube_VideoFileDetails extends Google_Collection
   public $fileName;
   public $fileSize;
   public $fileType;
-  protected $recordingLocationType = 'Google_Service_YouTube_GeoPoint';
-  protected $recordingLocationDataType = '';
-  protected $videoStreamsType = 'Google_Service_YouTube_VideoFileDetailsVideoStream';
-  protected $videoStreamsDataType = 'array';
+  public $recordingLocation;
+  public $videoStreams;
 
-  public function setAudioStreams($audioStreams)
+  public function setAudioStreams(array $audioStreams)
   {
+    foreach ($audioStreams as $a) {
+      if (!$a instanceof Google_Service_YouTube_VideoFileDetailsAudioStream) {
+        throw new InvalidArgumentException('First argument to setAudioStreams must be an array of Google_Service_YouTube_VideoFileDetailsAudioStream');
+      }
+    }
     $this->audioStreams = $audioStreams;
   }
   public function getAudioStreams()
@@ -104,8 +106,13 @@ class Google_Service_YouTube_VideoFileDetails extends Google_Collection
   {
     return $this->recordingLocation;
   }
-  public function setVideoStreams($videoStreams)
+  public function setVideoStreams(array $videoStreams)
   {
+    foreach ($videoStreams as $v) {
+      if (!$v instanceof Google_Service_YouTube_VideoFileDetailsVideoStream) {
+        throw new InvalidArgumentException('First argument to setVideoStreams must be an array of Google_Service_YouTube_VideoFileDetailsVideoStream');
+      }
+    }
     $this->videoStreams = $videoStreams;
   }
   public function getVideoStreams()

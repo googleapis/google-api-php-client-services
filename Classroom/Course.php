@@ -20,8 +20,7 @@ class Google_Service_Classroom_Course extends Google_Collection
   protected $collection_key = 'courseMaterialSets';
   public $alternateLink;
   public $courseGroupEmail;
-  protected $courseMaterialSetsType = 'Google_Service_Classroom_CourseMaterialSet';
-  protected $courseMaterialSetsDataType = 'array';
+  public $courseMaterialSets;
   public $courseState;
   public $creationTime;
   public $description;
@@ -32,8 +31,7 @@ class Google_Service_Classroom_Course extends Google_Collection
   public $ownerId;
   public $room;
   public $section;
-  protected $teacherFolderType = 'Google_Service_Classroom_DriveFolder';
-  protected $teacherFolderDataType = '';
+  public $teacherFolder;
   public $teacherGroupEmail;
   public $updateTime;
 
@@ -53,8 +51,13 @@ class Google_Service_Classroom_Course extends Google_Collection
   {
     return $this->courseGroupEmail;
   }
-  public function setCourseMaterialSets($courseMaterialSets)
+  public function setCourseMaterialSets(array $courseMaterialSets)
   {
+    foreach ($courseMaterialSets as $c) {
+      if (!$c instanceof Google_Service_Classroom_CourseMaterialSet) {
+        throw new InvalidArgumentException('First argument to setCourseMaterialSets must be an array of Google_Service_Classroom_CourseMaterialSet');
+      }
+    }
     $this->courseMaterialSets = $courseMaterialSets;
   }
   public function getCourseMaterialSets()

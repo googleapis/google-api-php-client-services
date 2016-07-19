@@ -17,8 +17,7 @@
 
 class Google_Service_ToolResults_ToolExecutionStep extends Google_Model
 {
-  protected $toolExecutionType = 'Google_Service_ToolResults_ToolExecution';
-  protected $toolExecutionDataType = '';
+  public $toolExecution;
 
   public function setToolExecution(Google_Service_ToolResults_ToolExecution $toolExecution)
   {

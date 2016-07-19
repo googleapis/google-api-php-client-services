@@ -18,15 +18,12 @@
 class Google_Service_Compute_Router extends Google_Collection
 {
   protected $collection_key = 'interfaces';
-  protected $bgpType = 'Google_Service_Compute_RouterBgp';
-  protected $bgpDataType = '';
-  protected $bgpPeersType = 'Google_Service_Compute_RouterBgpPeer';
-  protected $bgpPeersDataType = 'array';
+  public $bgp;
+  public $bgpPeers;
   public $creationTimestamp;
   public $description;
   public $id;
-  protected $interfacesType = 'Google_Service_Compute_RouterInterface';
-  protected $interfacesDataType = 'array';
+  public $interfaces;
   public $kind;
   public $name;
   public $network;
@@ -41,8 +38,13 @@ class Google_Service_Compute_Router extends Google_Collection
   {
     return $this->bgp;
   }
-  public function setBgpPeers($bgpPeers)
+  public function setBgpPeers(array $bgpPeers)
   {
+    foreach ($bgpPeers as $b) {
+      if (!$b instanceof Google_Service_Compute_RouterBgpPeer) {
+        throw new InvalidArgumentException('First argument to setBgpPeers must be an array of Google_Service_Compute_RouterBgpPeer');
+      }
+    }
     $this->bgpPeers = $bgpPeers;
   }
   public function getBgpPeers()
@@ -73,8 +75,13 @@ class Google_Service_Compute_Router extends Google_Collection
   {
     return $this->id;
   }
-  public function setInterfaces($interfaces)
+  public function setInterfaces(array $interfaces)
   {
+    foreach ($interfaces as $i) {
+      if (!$i instanceof Google_Service_Compute_RouterInterface) {
+        throw new InvalidArgumentException('First argument to setInterfaces must be an array of Google_Service_Compute_RouterInterface');
+      }
+    }
     $this->interfaces = $interfaces;
   }
   public function getInterfaces()

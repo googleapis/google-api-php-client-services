@@ -18,15 +18,12 @@
 class Google_Service_Games_RoomCreateRequest extends Google_Collection
 {
   protected $collection_key = 'invitedPlayerIds';
-  protected $autoMatchingCriteriaType = 'Google_Service_Games_RoomAutoMatchingCriteria';
-  protected $autoMatchingCriteriaDataType = '';
+  public $autoMatchingCriteria;
   public $capabilities;
-  protected $clientAddressType = 'Google_Service_Games_RoomClientAddress';
-  protected $clientAddressDataType = '';
+  public $clientAddress;
   public $invitedPlayerIds;
   public $kind;
-  protected $networkDiagnosticsType = 'Google_Service_Games_NetworkDiagnostics';
-  protected $networkDiagnosticsDataType = '';
+  public $networkDiagnostics;
   public $requestId;
   public $variant;
 
@@ -38,7 +35,7 @@ class Google_Service_Games_RoomCreateRequest extends Google_Collection
   {
     return $this->autoMatchingCriteria;
   }
-  public function setCapabilities($capabilities)
+  public function setCapabilities(array $capabilities)
   {
     $this->capabilities = $capabilities;
   }
@@ -54,7 +51,7 @@ class Google_Service_Games_RoomCreateRequest extends Google_Collection
   {
     return $this->clientAddress;
   }
-  public function setInvitedPlayerIds($invitedPlayerIds)
+  public function setInvitedPlayerIds(array $invitedPlayerIds)
   {
     $this->invitedPlayerIds = $invitedPlayerIds;
   }

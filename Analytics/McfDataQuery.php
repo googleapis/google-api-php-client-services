@@ -76,7 +76,7 @@ class Google_Service_Analytics_McfDataQuery extends Google_Collection
   {
     return $this->maxResults;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
     $this->metrics = $metrics;
   }
@@ -100,7 +100,7 @@ class Google_Service_Analytics_McfDataQuery extends Google_Collection
   {
     return $this->segment;
   }
-  public function setSort($sort)
+  public function setSort(array $sort)
   {
     $this->sort = $sort;
   }

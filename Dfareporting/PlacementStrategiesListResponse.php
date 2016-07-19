@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_PlacementStrategiesListResponse extends Google
   protected $collection_key = 'placementStrategies';
   public $kind;
   public $nextPageToken;
-  protected $placementStrategiesType = 'Google_Service_Dfareporting_PlacementStrategy';
-  protected $placementStrategiesDataType = 'array';
+  public $placementStrategies;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dfareporting_PlacementStrategiesListResponse extends Google
   {
     return $this->nextPageToken;
   }
-  public function setPlacementStrategies($placementStrategies)
+  public function setPlacementStrategies(array $placementStrategies)
   {
+    foreach ($placementStrategies as $p) {
+      if (!$p instanceof Google_Service_Dfareporting_PlacementStrategy) {
+        throw new InvalidArgumentException('First argument to setPlacementStrategies must be an array of Google_Service_Dfareporting_PlacementStrategy');
+      }
+    }
     $this->placementStrategies = $placementStrategies;
   }
   public function getPlacementStrategies()

@@ -21,8 +21,7 @@ class Google_Service_AdExchangeSeller_CustomChannel extends Google_Model
   public $id;
   public $kind;
   public $name;
-  protected $targetingInfoType = 'Google_Service_AdExchangeSeller_CustomChannelTargetingInfo';
-  protected $targetingInfoDataType = '';
+  public $targetingInfo;
 
   public function setCode($code)
   {

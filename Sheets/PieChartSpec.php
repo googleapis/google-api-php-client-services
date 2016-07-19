@@ -17,12 +17,10 @@
 
 class Google_Service_Sheets_PieChartSpec extends Google_Model
 {
-  protected $domainType = 'Google_Service_Sheets_ChartData';
-  protected $domainDataType = '';
+  public $domain;
   public $legendPosition;
   public $pieHole;
-  protected $seriesType = 'Google_Service_Sheets_ChartData';
-  protected $seriesDataType = '';
+  public $series;
   public $threeDimensional;
 
   public function setDomain(Google_Service_Sheets_ChartData $domain)

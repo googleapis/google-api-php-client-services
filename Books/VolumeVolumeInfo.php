@@ -25,19 +25,15 @@ class Google_Service_Books_VolumeVolumeInfo extends Google_Collection
   public $categories;
   public $contentVersion;
   public $description;
-  protected $dimensionsType = 'Google_Service_Books_VolumeVolumeInfoDimensions';
-  protected $dimensionsDataType = '';
-  protected $imageLinksType = 'Google_Service_Books_VolumeVolumeInfoImageLinks';
-  protected $imageLinksDataType = '';
-  protected $industryIdentifiersType = 'Google_Service_Books_VolumeVolumeInfoIndustryIdentifiers';
-  protected $industryIdentifiersDataType = 'array';
+  public $dimensions;
+  public $imageLinks;
+  public $industryIdentifiers;
   public $infoLink;
   public $language;
   public $mainCategory;
   public $maturityRating;
   public $pageCount;
-  protected $panelizationSummaryType = 'Google_Service_Books_VolumeVolumeInfoPanelizationSummary';
-  protected $panelizationSummaryDataType = '';
+  public $panelizationSummary;
   public $previewLink;
   public $printType;
   public $printedPageCount;
@@ -46,8 +42,7 @@ class Google_Service_Books_VolumeVolumeInfo extends Google_Collection
   public $ratingsCount;
   public $readingModes;
   public $samplePageCount;
-  protected $seriesInfoType = 'Google_Service_Books_Volumeseriesinfo';
-  protected $seriesInfoDataType = '';
+  public $seriesInfo;
   public $subtitle;
   public $title;
 
@@ -59,7 +54,7 @@ class Google_Service_Books_VolumeVolumeInfo extends Google_Collection
   {
     return $this->allowAnonLogging;
   }
-  public function setAuthors($authors)
+  public function setAuthors(array $authors)
   {
     $this->authors = $authors;
   }
@@ -83,7 +78,7 @@ class Google_Service_Books_VolumeVolumeInfo extends Google_Collection
   {
     return $this->canonicalVolumeLink;
   }
-  public function setCategories($categories)
+  public function setCategories(array $categories)
   {
     $this->categories = $categories;
   }
@@ -123,8 +118,13 @@ class Google_Service_Books_VolumeVolumeInfo extends Google_Collection
   {
     return $this->imageLinks;
   }
-  public function setIndustryIdentifiers($industryIdentifiers)
+  public function setIndustryIdentifiers(array $industryIdentifiers)
   {
+    foreach ($industryIdentifiers as $i) {
+      if (!$i instanceof Google_Service_Books_VolumeVolumeInfoIndustryIdentifiers) {
+        throw new InvalidArgumentException('First argument to setIndustryIdentifiers must be an array of Google_Service_Books_VolumeVolumeInfoIndustryIdentifiers');
+      }
+    }
     $this->industryIdentifiers = $industryIdentifiers;
   }
   public function getIndustryIdentifiers()

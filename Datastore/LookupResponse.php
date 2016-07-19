@@ -18,31 +18,43 @@
 class Google_Service_Datastore_LookupResponse extends Google_Collection
 {
   protected $collection_key = 'missing';
-  protected $deferredType = 'Google_Service_Datastore_Key';
-  protected $deferredDataType = 'array';
-  protected $foundType = 'Google_Service_Datastore_EntityResult';
-  protected $foundDataType = 'array';
-  protected $missingType = 'Google_Service_Datastore_EntityResult';
-  protected $missingDataType = 'array';
+  public $deferred;
+  public $found;
+  public $missing;
 
-  public function setDeferred($deferred)
+  public function setDeferred(array $deferred)
   {
+    foreach ($deferred as $d) {
+      if (!$d instanceof Google_Service_Datastore_Key) {
+        throw new InvalidArgumentException('First argument to setDeferred must be an array of Google_Service_Datastore_Key');
+      }
+    }
     $this->deferred = $deferred;
   }
   public function getDeferred()
   {
     return $this->deferred;
   }
-  public function setFound($found)
+  public function setFound(array $found)
   {
+    foreach ($found as $f) {
+      if (!$f instanceof Google_Service_Datastore_EntityResult) {
+        throw new InvalidArgumentException('First argument to setFound must be an array of Google_Service_Datastore_EntityResult');
+      }
+    }
     $this->found = $found;
   }
   public function getFound()
   {
     return $this->found;
   }
-  public function setMissing($missing)
+  public function setMissing(array $missing)
   {
+    foreach ($missing as $m) {
+      if (!$m instanceof Google_Service_Datastore_EntityResult) {
+        throw new InvalidArgumentException('First argument to setMissing must be an array of Google_Service_Datastore_EntityResult');
+      }
+    }
     $this->missing = $missing;
   }
   public function getMissing()

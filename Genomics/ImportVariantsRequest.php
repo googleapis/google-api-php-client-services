@@ -32,7 +32,7 @@ class Google_Service_Genomics_ImportVariantsRequest extends Google_Collection
   {
     return $this->format;
   }
-  public function setInfoMergeConfig($infoMergeConfig)
+  public function setInfoMergeConfig(array $infoMergeConfig)
   {
     $this->infoMergeConfig = $infoMergeConfig;
   }
@@ -48,7 +48,7 @@ class Google_Service_Genomics_ImportVariantsRequest extends Google_Collection
   {
     return $this->normalizeReferenceNames;
   }
-  public function setSourceUris($sourceUris)
+  public function setSourceUris(array $sourceUris)
   {
     $this->sourceUris = $sourceUris;
   }

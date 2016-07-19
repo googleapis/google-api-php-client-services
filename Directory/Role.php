@@ -25,8 +25,7 @@ class Google_Service_Directory_Role extends Google_Collection
   public $roleDescription;
   public $roleId;
   public $roleName;
-  protected $rolePrivilegesType = 'Google_Service_Directory_RoleRolePrivileges';
-  protected $rolePrivilegesDataType = 'array';
+  public $rolePrivileges;
 
   public function setEtag($etag)
   {
@@ -84,8 +83,13 @@ class Google_Service_Directory_Role extends Google_Collection
   {
     return $this->roleName;
   }
-  public function setRolePrivileges($rolePrivileges)
+  public function setRolePrivileges(array $rolePrivileges)
   {
+    foreach ($rolePrivileges as $r) {
+      if (!$r instanceof Google_Service_Directory_RoleRolePrivileges) {
+        throw new InvalidArgumentException('First argument to setRolePrivileges must be an array of Google_Service_Directory_RoleRolePrivileges');
+      }
+    }
     $this->rolePrivileges = $rolePrivileges;
   }
   public function getRolePrivileges()

@@ -17,8 +17,7 @@
 
 class Google_Service_Container_CreateClusterRequest extends Google_Model
 {
-  protected $clusterType = 'Google_Service_Container_Cluster';
-  protected $clusterDataType = '';
+  public $cluster;
 
   public function setCluster(Google_Service_Container_Cluster $cluster)
   {

@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_PlacementAssignment extends Google_Model
 {
   public $active;
   public $placementId;
-  protected $placementIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $placementIdDimensionValueDataType = '';
+  public $placementIdDimensionValue;
   public $sslRequired;
 
   public function setActive($active)

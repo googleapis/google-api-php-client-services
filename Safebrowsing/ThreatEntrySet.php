@@ -18,14 +18,10 @@
 class Google_Service_Safebrowsing_ThreatEntrySet extends Google_Model
 {
   public $compressionType;
-  protected $rawHashesType = 'Google_Service_Safebrowsing_RawHashes';
-  protected $rawHashesDataType = '';
-  protected $rawIndicesType = 'Google_Service_Safebrowsing_RawIndices';
-  protected $rawIndicesDataType = '';
-  protected $riceHashesType = 'Google_Service_Safebrowsing_RiceDeltaEncoding';
-  protected $riceHashesDataType = '';
-  protected $riceIndicesType = 'Google_Service_Safebrowsing_RiceDeltaEncoding';
-  protected $riceIndicesDataType = '';
+  public $rawHashes;
+  public $rawIndices;
+  public $riceHashes;
+  public $riceIndices;
 
   public function setCompressionType($compressionType)
   {

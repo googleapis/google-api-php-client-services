@@ -63,7 +63,7 @@ class Google_Service_Compute_TargetPool extends Google_Collection
   {
     return $this->failoverRatio;
   }
-  public function setHealthChecks($healthChecks)
+  public function setHealthChecks(array $healthChecks)
   {
     $this->healthChecks = $healthChecks;
   }
@@ -79,7 +79,7 @@ class Google_Service_Compute_TargetPool extends Google_Collection
   {
     return $this->id;
   }
-  public function setInstances($instances)
+  public function setInstances(array $instances)
   {
     $this->instances = $instances;
   }

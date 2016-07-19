@@ -47,7 +47,7 @@ class Google_Service_Safebrowsing_Constraints extends Google_Collection
   {
     return $this->region;
   }
-  public function setSupportedCompressions($supportedCompressions)
+  public function setSupportedCompressions(array $supportedCompressions)
   {
     $this->supportedCompressions = $supportedCompressions;
   }

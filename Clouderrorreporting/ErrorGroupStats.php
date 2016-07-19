@@ -18,22 +18,23 @@
 class Google_Service_Clouderrorreporting_ErrorGroupStats extends Google_Collection
 {
   protected $collection_key = 'timedCounts';
-  protected $affectedServicesType = 'Google_Service_Clouderrorreporting_ServiceContext';
-  protected $affectedServicesDataType = 'array';
+  public $affectedServices;
   public $affectedUsersCount;
   public $count;
   public $firstSeenTime;
-  protected $groupType = 'Google_Service_Clouderrorreporting_ErrorGroup';
-  protected $groupDataType = '';
+  public $group;
   public $lastSeenTime;
   public $numAffectedServices;
-  protected $representativeType = 'Google_Service_Clouderrorreporting_ErrorEvent';
-  protected $representativeDataType = '';
-  protected $timedCountsType = 'Google_Service_Clouderrorreporting_TimedCount';
-  protected $timedCountsDataType = 'array';
+  public $representative;
+  public $timedCounts;
 
-  public function setAffectedServices($affectedServices)
+  public function setAffectedServices(array $affectedServices)
   {
+    foreach ($affectedServices as $a) {
+      if (!$a instanceof Google_Service_Clouderrorreporting_ServiceContext) {
+        throw new InvalidArgumentException('First argument to setAffectedServices must be an array of Google_Service_Clouderrorreporting_ServiceContext');
+      }
+    }
     $this->affectedServices = $affectedServices;
   }
   public function getAffectedServices()
@@ -96,8 +97,13 @@ class Google_Service_Clouderrorreporting_ErrorGroupStats extends Google_Collecti
   {
     return $this->representative;
   }
-  public function setTimedCounts($timedCounts)
+  public function setTimedCounts(array $timedCounts)
   {
+    foreach ($timedCounts as $t) {
+      if (!$t instanceof Google_Service_Clouderrorreporting_TimedCount) {
+        throw new InvalidArgumentException('First argument to setTimedCounts must be an array of Google_Service_Clouderrorreporting_TimedCount');
+      }
+    }
     $this->timedCounts = $timedCounts;
   }
   public function getTimedCounts()

@@ -19,8 +19,7 @@ class Google_Service_Sheets_BatchGetValuesResponse extends Google_Collection
 {
   protected $collection_key = 'valueRanges';
   public $spreadsheetId;
-  protected $valueRangesType = 'Google_Service_Sheets_ValueRange';
-  protected $valueRangesDataType = 'array';
+  public $valueRanges;
 
   public function setSpreadsheetId($spreadsheetId)
   {
@@ -30,8 +29,13 @@ class Google_Service_Sheets_BatchGetValuesResponse extends Google_Collection
   {
     return $this->spreadsheetId;
   }
-  public function setValueRanges($valueRanges)
+  public function setValueRanges(array $valueRanges)
   {
+    foreach ($valueRanges as $v) {
+      if (!$v instanceof Google_Service_Sheets_ValueRange) {
+        throw new InvalidArgumentException('First argument to setValueRanges must be an array of Google_Service_Sheets_ValueRange');
+      }
+    }
     $this->valueRanges = $valueRanges;
   }
   public function getValueRanges()

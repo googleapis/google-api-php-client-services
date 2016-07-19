@@ -102,7 +102,7 @@ class Google_Service_DoubleClickBidManager_QueryMetadata extends Google_Collecti
   {
     return $this->sendNotification;
   }
-  public function setShareEmailAddress($shareEmailAddress)
+  public function setShareEmailAddress(array $shareEmailAddress)
   {
     $this->shareEmailAddress = $shareEmailAddress;
   }

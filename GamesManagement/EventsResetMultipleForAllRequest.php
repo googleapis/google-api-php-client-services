@@ -24,7 +24,7 @@ class Google_Service_GamesManagement_EventsResetMultipleForAllRequest extends Go
   public $eventIds;
   public $kind;
 
-  public function setEventIds($eventIds)
+  public function setEventIds(array $eventIds)
   {
     $this->eventIds = $eventIds;
   }

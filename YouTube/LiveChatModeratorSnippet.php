@@ -18,8 +18,7 @@
 class Google_Service_YouTube_LiveChatModeratorSnippet extends Google_Model
 {
   public $liveChatId;
-  protected $moderatorDetailsType = 'Google_Service_YouTube_ChannelProfileDetails';
-  protected $moderatorDetailsDataType = '';
+  public $moderatorDetails;
 
   public function setLiveChatId($liveChatId)
   {

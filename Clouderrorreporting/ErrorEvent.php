@@ -17,12 +17,10 @@
 
 class Google_Service_Clouderrorreporting_ErrorEvent extends Google_Model
 {
-  protected $contextType = 'Google_Service_Clouderrorreporting_ErrorContext';
-  protected $contextDataType = '';
+  public $context;
   public $eventTime;
   public $message;
-  protected $serviceContextType = 'Google_Service_Clouderrorreporting_ServiceContext';
-  protected $serviceContextDataType = '';
+  public $serviceContext;
 
   public function setContext(Google_Service_Clouderrorreporting_ErrorContext $context)
   {

@@ -17,8 +17,7 @@
 
 class Google_Service_AndroidPublisher_ExpansionFilesUploadResponse extends Google_Model
 {
-  protected $expansionFileType = 'Google_Service_AndroidPublisher_ExpansionFile';
-  protected $expansionFileDataType = '';
+  public $expansionFile;
 
   public function setExpansionFile(Google_Service_AndroidPublisher_ExpansionFile $expansionFile)
   {

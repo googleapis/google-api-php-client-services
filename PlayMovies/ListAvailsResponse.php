@@ -18,13 +18,17 @@
 class Google_Service_PlayMovies_ListAvailsResponse extends Google_Collection
 {
   protected $collection_key = 'avails';
-  protected $availsType = 'Google_Service_PlayMovies_Avail';
-  protected $availsDataType = 'array';
+  public $avails;
   public $nextPageToken;
   public $totalSize;
 
-  public function setAvails($avails)
+  public function setAvails(array $avails)
   {
+    foreach ($avails as $a) {
+      if (!$a instanceof Google_Service_PlayMovies_Avail) {
+        throw new InvalidArgumentException('First argument to setAvails must be an array of Google_Service_PlayMovies_Avail');
+      }
+    }
     $this->avails = $avails;
   }
   public function getAvails()

@@ -18,13 +18,17 @@
 class Google_Service_People_ListConnectionsResponse extends Google_Collection
 {
   protected $collection_key = 'connections';
-  protected $connectionsType = 'Google_Service_People_Person';
-  protected $connectionsDataType = 'array';
+  public $connections;
   public $nextPageToken;
   public $nextSyncToken;
 
-  public function setConnections($connections)
+  public function setConnections(array $connections)
   {
+    foreach ($connections as $c) {
+      if (!$c instanceof Google_Service_People_Person) {
+        throw new InvalidArgumentException('First argument to setConnections must be an array of Google_Service_People_Person');
+      }
+    }
     $this->connections = $connections;
   }
   public function getConnections()

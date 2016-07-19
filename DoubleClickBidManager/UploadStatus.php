@@ -19,10 +19,9 @@ class Google_Service_DoubleClickBidManager_UploadStatus extends Google_Collectio
 {
   protected $collection_key = 'rowStatus';
   public $errors;
-  protected $rowStatusType = 'Google_Service_DoubleClickBidManager_RowStatus';
-  protected $rowStatusDataType = 'array';
+  public $rowStatus;
 
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
     $this->errors = $errors;
   }
@@ -30,8 +29,13 @@ class Google_Service_DoubleClickBidManager_UploadStatus extends Google_Collectio
   {
     return $this->errors;
   }
-  public function setRowStatus($rowStatus)
+  public function setRowStatus(array $rowStatus)
   {
+    foreach ($rowStatus as $r) {
+      if (!$r instanceof Google_Service_DoubleClickBidManager_RowStatus) {
+        throw new InvalidArgumentException('First argument to setRowStatus must be an array of Google_Service_DoubleClickBidManager_RowStatus');
+      }
+    }
     $this->rowStatus = $rowStatus;
   }
   public function getRowStatus()

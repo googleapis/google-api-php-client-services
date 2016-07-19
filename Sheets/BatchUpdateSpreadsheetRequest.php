@@ -18,11 +18,15 @@
 class Google_Service_Sheets_BatchUpdateSpreadsheetRequest extends Google_Collection
 {
   protected $collection_key = 'requests';
-  protected $requestsType = 'Google_Service_Sheets_Request';
-  protected $requestsDataType = 'array';
+  public $requests;
 
-  public function setRequests($requests)
+  public function setRequests(array $requests)
   {
+    foreach ($requests as $r) {
+      if (!$r instanceof Google_Service_Sheets_Request) {
+        throw new InvalidArgumentException('First argument to setRequests must be an array of Google_Service_Sheets_Request');
+      }
+    }
     $this->requests = $requests;
   }
   public function getRequests()

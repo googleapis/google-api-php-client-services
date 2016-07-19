@@ -17,16 +17,11 @@
 
 class Google_Service_Urlshortener_AnalyticsSummary extends Google_Model
 {
-  protected $allTimeType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
-  protected $allTimeDataType = '';
-  protected $dayType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
-  protected $dayDataType = '';
-  protected $monthType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
-  protected $monthDataType = '';
-  protected $twoHoursType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
-  protected $twoHoursDataType = '';
-  protected $weekType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
-  protected $weekDataType = '';
+  public $allTime;
+  public $day;
+  public $month;
+  public $twoHours;
+  public $week;
 
   public function setAllTime(Google_Service_Urlshortener_AnalyticsSnapshot $allTime)
   {

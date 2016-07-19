@@ -17,8 +17,7 @@
 
 class Google_Service_CloudDebugger_GerritSourceContext extends Google_Model
 {
-  protected $aliasContextType = 'Google_Service_CloudDebugger_AliasContext';
-  protected $aliasContextDataType = '';
+  public $aliasContext;
   public $aliasName;
   public $gerritProject;
   public $hostUri;

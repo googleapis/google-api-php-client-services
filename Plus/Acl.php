@@ -19,8 +19,7 @@ class Google_Service_Plus_Acl extends Google_Collection
 {
   protected $collection_key = 'items';
   public $description;
-  protected $itemsType = 'Google_Service_Plus_PlusAclentryResource';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
 
   public function setDescription($description)
@@ -31,8 +30,13 @@ class Google_Service_Plus_Acl extends Google_Collection
   {
     return $this->description;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Plus_PlusAclentryResource) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Plus_PlusAclentryResource');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

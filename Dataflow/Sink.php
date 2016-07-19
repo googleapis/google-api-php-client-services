@@ -20,7 +20,7 @@ class Google_Service_Dataflow_Sink extends Google_Model
   public $codec;
   public $spec;
 
-  public function setCodec($codec)
+  public function setCodec(array $codec)
   {
     $this->codec = $codec;
   }
@@ -28,7 +28,7 @@ class Google_Service_Dataflow_Sink extends Google_Model
   {
     return $this->codec;
   }
-  public function setSpec($spec)
+  public function setSpec(array $spec)
   {
     $this->spec = $spec;
   }

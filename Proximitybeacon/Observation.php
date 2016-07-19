@@ -17,8 +17,7 @@
 
 class Google_Service_Proximitybeacon_Observation extends Google_Model
 {
-  protected $advertisedIdType = 'Google_Service_Proximitybeacon_AdvertisedId';
-  protected $advertisedIdDataType = '';
+  public $advertisedId;
   public $telemetry;
   public $timestampMs;
 

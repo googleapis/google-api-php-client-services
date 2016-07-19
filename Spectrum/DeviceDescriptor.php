@@ -93,7 +93,7 @@ class Google_Service_Spectrum_DeviceDescriptor extends Google_Collection
   {
     return $this->modelId;
   }
-  public function setRulesetIds($rulesetIds)
+  public function setRulesetIds(array $rulesetIds)
   {
     $this->rulesetIds = $rulesetIds;
   }

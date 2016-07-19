@@ -18,11 +18,15 @@
 class Google_Service_Vision_BoundingPoly extends Google_Collection
 {
   protected $collection_key = 'vertices';
-  protected $verticesType = 'Google_Service_Vision_Vertex';
-  protected $verticesDataType = 'array';
+  public $vertices;
 
-  public function setVertices($vertices)
+  public function setVertices(array $vertices)
   {
+    foreach ($vertices as $v) {
+      if (!$v instanceof Google_Service_Vision_Vertex) {
+        throw new InvalidArgumentException('First argument to setVertices must be an array of Google_Service_Vision_Vertex');
+      }
+    }
     $this->vertices = $vertices;
   }
   public function getVertices()

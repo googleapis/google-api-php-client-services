@@ -18,11 +18,15 @@
 class Google_Service_Bigquery_TableSchema extends Google_Collection
 {
   protected $collection_key = 'fields';
-  protected $fieldsType = 'Google_Service_Bigquery_TableFieldSchema';
-  protected $fieldsDataType = 'array';
+  public $fields;
 
-  public function setFields($fields)
+  public function setFields(array $fields)
   {
+    foreach ($fields as $f) {
+      if (!$f instanceof Google_Service_Bigquery_TableFieldSchema) {
+        throw new InvalidArgumentException('First argument to setFields must be an array of Google_Service_Bigquery_TableFieldSchema');
+      }
+    }
     $this->fields = $fields;
   }
   public function getFields()

@@ -20,8 +20,7 @@ class Google_Service_Gmail_ListThreadsResponse extends Google_Collection
   protected $collection_key = 'threads';
   public $nextPageToken;
   public $resultSizeEstimate;
-  protected $threadsType = 'Google_Service_Gmail_Thread';
-  protected $threadsDataType = 'array';
+  public $threads;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -39,8 +38,13 @@ class Google_Service_Gmail_ListThreadsResponse extends Google_Collection
   {
     return $this->resultSizeEstimate;
   }
-  public function setThreads($threads)
+  public function setThreads(array $threads)
   {
+    foreach ($threads as $t) {
+      if (!$t instanceof Google_Service_Gmail_Thread) {
+        throw new InvalidArgumentException('First argument to setThreads must be an array of Google_Service_Gmail_Thread');
+      }
+    }
     $this->threads = $threads;
   }
   public function getThreads()

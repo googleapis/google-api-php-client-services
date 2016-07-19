@@ -17,8 +17,7 @@
 
 class Google_Service_Spectrum_GeoLocationEllipse extends Google_Model
 {
-  protected $centerType = 'Google_Service_Spectrum_GeoLocationPoint';
-  protected $centerDataType = '';
+  public $center;
   public $orientation;
   public $semiMajorAxis;
   public $semiMinorAxis;

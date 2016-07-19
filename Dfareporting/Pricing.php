@@ -20,8 +20,7 @@ class Google_Service_Dfareporting_Pricing extends Google_Collection
   protected $collection_key = 'flights';
   public $capCostType;
   public $endDate;
-  protected $flightsType = 'Google_Service_Dfareporting_Flight';
-  protected $flightsDataType = 'array';
+  public $flights;
   public $groupType;
   public $pricingType;
   public $startDate;
@@ -42,8 +41,13 @@ class Google_Service_Dfareporting_Pricing extends Google_Collection
   {
     return $this->endDate;
   }
-  public function setFlights($flights)
+  public function setFlights(array $flights)
   {
+    foreach ($flights as $f) {
+      if (!$f instanceof Google_Service_Dfareporting_Flight) {
+        throw new InvalidArgumentException('First argument to setFlights must be an array of Google_Service_Dfareporting_Flight');
+      }
+    }
     $this->flights = $flights;
   }
   public function getFlights()

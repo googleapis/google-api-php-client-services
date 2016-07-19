@@ -18,21 +18,29 @@
 class Google_Service_Appsactivity_Move extends Google_Collection
 {
   protected $collection_key = 'removedParents';
-  protected $addedParentsType = 'Google_Service_Appsactivity_AppsactivityParent';
-  protected $addedParentsDataType = 'array';
-  protected $removedParentsType = 'Google_Service_Appsactivity_AppsactivityParent';
-  protected $removedParentsDataType = 'array';
+  public $addedParents;
+  public $removedParents;
 
-  public function setAddedParents($addedParents)
+  public function setAddedParents(array $addedParents)
   {
+    foreach ($addedParents as $a) {
+      if (!$a instanceof Google_Service_Appsactivity_AppsactivityParent) {
+        throw new InvalidArgumentException('First argument to setAddedParents must be an array of Google_Service_Appsactivity_AppsactivityParent');
+      }
+    }
     $this->addedParents = $addedParents;
   }
   public function getAddedParents()
   {
     return $this->addedParents;
   }
-  public function setRemovedParents($removedParents)
+  public function setRemovedParents(array $removedParents)
   {
+    foreach ($removedParents as $r) {
+      if (!$r instanceof Google_Service_Appsactivity_AppsactivityParent) {
+        throw new InvalidArgumentException('First argument to setRemovedParents must be an array of Google_Service_Appsactivity_AppsactivityParent');
+      }
+    }
     $this->removedParents = $removedParents;
   }
   public function getRemovedParents()

@@ -50,7 +50,7 @@ class Google_Service_Genomics_SearchReadsRequest extends Google_Collection
   {
     return $this->pageToken;
   }
-  public function setReadGroupIds($readGroupIds)
+  public function setReadGroupIds(array $readGroupIds)
   {
     $this->readGroupIds = $readGroupIds;
   }
@@ -58,7 +58,7 @@ class Google_Service_Genomics_SearchReadsRequest extends Google_Collection
   {
     return $this->readGroupIds;
   }
-  public function setReadGroupSetIds($readGroupSetIds)
+  public function setReadGroupSetIds(array $readGroupSetIds)
   {
     $this->readGroupSetIds = $readGroupSetIds;
   }

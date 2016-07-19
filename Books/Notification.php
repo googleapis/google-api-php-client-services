@@ -48,7 +48,7 @@ class Google_Service_Books_Notification extends Google_Collection
   {
     return $this->body;
   }
-  public function setCrmExperimentIds($crmExperimentIds)
+  public function setCrmExperimentIds(array $crmExperimentIds)
   {
     $this->crmExperimentIds = $crmExperimentIds;
   }

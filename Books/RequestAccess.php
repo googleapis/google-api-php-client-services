@@ -17,10 +17,8 @@
 
 class Google_Service_Books_RequestAccess extends Google_Model
 {
-  protected $concurrentAccessType = 'Google_Service_Books_ConcurrentAccessRestriction';
-  protected $concurrentAccessDataType = '';
-  protected $downloadAccessType = 'Google_Service_Books_DownloadAccessRestriction';
-  protected $downloadAccessDataType = '';
+  public $concurrentAccess;
+  public $downloadAccess;
   public $kind;
 
   public function setConcurrentAccess(Google_Service_Books_ConcurrentAccessRestriction $concurrentAccess)

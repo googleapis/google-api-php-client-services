@@ -21,7 +21,7 @@ class Google_Service_YouTube_VideoSuggestionsTagSuggestion extends Google_Collec
   public $categoryRestricts;
   public $tag;
 
-  public function setCategoryRestricts($categoryRestricts)
+  public function setCategoryRestricts(array $categoryRestricts)
   {
     $this->categoryRestricts = $categoryRestricts;
   }

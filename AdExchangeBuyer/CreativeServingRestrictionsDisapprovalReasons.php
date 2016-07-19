@@ -21,7 +21,7 @@ class Google_Service_AdExchangeBuyer_CreativeServingRestrictionsDisapprovalReaso
   public $details;
   public $reason;
 
-  public function setDetails($details)
+  public function setDetails(array $details)
   {
     $this->details = $details;
   }

@@ -20,18 +20,13 @@ class Google_Service_PlusDomains_ActivityObjectAttachments extends Google_Collec
   protected $collection_key = 'thumbnails';
   public $content;
   public $displayName;
-  protected $embedType = 'Google_Service_PlusDomains_ActivityObjectAttachmentsEmbed';
-  protected $embedDataType = '';
-  protected $fullImageType = 'Google_Service_PlusDomains_ActivityObjectAttachmentsFullImage';
-  protected $fullImageDataType = '';
+  public $embed;
+  public $fullImage;
   public $id;
-  protected $imageType = 'Google_Service_PlusDomains_ActivityObjectAttachmentsImage';
-  protected $imageDataType = '';
+  public $image;
   public $objectType;
-  protected $previewThumbnailsType = 'Google_Service_PlusDomains_ActivityObjectAttachmentsPreviewThumbnails';
-  protected $previewThumbnailsDataType = 'array';
-  protected $thumbnailsType = 'Google_Service_PlusDomains_ActivityObjectAttachmentsThumbnails';
-  protected $thumbnailsDataType = 'array';
+  public $previewThumbnails;
+  public $thumbnails;
   public $url;
 
   public function setContent($content)
@@ -90,16 +85,26 @@ class Google_Service_PlusDomains_ActivityObjectAttachments extends Google_Collec
   {
     return $this->objectType;
   }
-  public function setPreviewThumbnails($previewThumbnails)
+  public function setPreviewThumbnails(array $previewThumbnails)
   {
+    foreach ($previewThumbnails as $p) {
+      if (!$p instanceof Google_Service_PlusDomains_ActivityObjectAttachmentsPreviewThumbnails) {
+        throw new InvalidArgumentException('First argument to setPreviewThumbnails must be an array of Google_Service_PlusDomains_ActivityObjectAttachmentsPreviewThumbnails');
+      }
+    }
     $this->previewThumbnails = $previewThumbnails;
   }
   public function getPreviewThumbnails()
   {
     return $this->previewThumbnails;
   }
-  public function setThumbnails($thumbnails)
+  public function setThumbnails(array $thumbnails)
   {
+    foreach ($thumbnails as $t) {
+      if (!$t instanceof Google_Service_PlusDomains_ActivityObjectAttachmentsThumbnails) {
+        throw new InvalidArgumentException('First argument to setThumbnails must be an array of Google_Service_PlusDomains_ActivityObjectAttachmentsThumbnails');
+      }
+    }
     $this->thumbnails = $thumbnails;
   }
   public function getThumbnails()

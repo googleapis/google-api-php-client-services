@@ -23,7 +23,7 @@ class Google_Service_Dataflow_WorkerHealthReport extends Google_Collection
   public $vmIsHealthy;
   public $vmStartupTime;
 
-  public function setPods($pods)
+  public function setPods(array $pods)
   {
     $this->pods = $pods;
   }

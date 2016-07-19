@@ -19,19 +19,14 @@ class Google_Service_Games_Room extends Google_Collection
 {
   protected $collection_key = 'participants';
   public $applicationId;
-  protected $autoMatchingCriteriaType = 'Google_Service_Games_RoomAutoMatchingCriteria';
-  protected $autoMatchingCriteriaDataType = '';
-  protected $autoMatchingStatusType = 'Google_Service_Games_RoomAutoMatchStatus';
-  protected $autoMatchingStatusDataType = '';
-  protected $creationDetailsType = 'Google_Service_Games_RoomModification';
-  protected $creationDetailsDataType = '';
+  public $autoMatchingCriteria;
+  public $autoMatchingStatus;
+  public $creationDetails;
   public $description;
   public $inviterId;
   public $kind;
-  protected $lastUpdateDetailsType = 'Google_Service_Games_RoomModification';
-  protected $lastUpdateDetailsDataType = '';
-  protected $participantsType = 'Google_Service_Games_RoomParticipant';
-  protected $participantsDataType = 'array';
+  public $lastUpdateDetails;
+  public $participants;
   public $roomId;
   public $roomStatusVersion;
   public $status;
@@ -101,8 +96,13 @@ class Google_Service_Games_Room extends Google_Collection
   {
     return $this->lastUpdateDetails;
   }
-  public function setParticipants($participants)
+  public function setParticipants(array $participants)
   {
+    foreach ($participants as $p) {
+      if (!$p instanceof Google_Service_Games_RoomParticipant) {
+        throw new InvalidArgumentException('First argument to setParticipants must be an array of Google_Service_Games_RoomParticipant');
+      }
+    }
     $this->participants = $participants;
   }
   public function getParticipants()

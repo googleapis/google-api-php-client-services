@@ -18,13 +18,16 @@
 class Google_Service_Compute_RoutersScopedList extends Google_Collection
 {
   protected $collection_key = 'routers';
-  protected $routersType = 'Google_Service_Compute_Router';
-  protected $routersDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_RoutersScopedListWarning';
-  protected $warningDataType = '';
+  public $routers;
+  public $warning;
 
-  public function setRouters($routers)
+  public function setRouters(array $routers)
   {
+    foreach ($routers as $r) {
+      if (!$r instanceof Google_Service_Compute_Router) {
+        throw new InvalidArgumentException('First argument to setRouters must be an array of Google_Service_Compute_Router');
+      }
+    }
     $this->routers = $routers;
   }
   public function getRouters()

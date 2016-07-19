@@ -18,11 +18,15 @@
 class Google_Service_Safebrowsing_ListThreatListsResponse extends Google_Collection
 {
   protected $collection_key = 'threatLists';
-  protected $threatListsType = 'Google_Service_Safebrowsing_ThreatListDescriptor';
-  protected $threatListsDataType = 'array';
+  public $threatLists;
 
-  public function setThreatLists($threatLists)
+  public function setThreatLists(array $threatLists)
   {
+    foreach ($threatLists as $t) {
+      if (!$t instanceof Google_Service_Safebrowsing_ThreatListDescriptor) {
+        throw new InvalidArgumentException('First argument to setThreatLists must be an array of Google_Service_Safebrowsing_ThreatListDescriptor');
+      }
+    }
     $this->threatLists = $threatLists;
   }
   public function getThreatLists()

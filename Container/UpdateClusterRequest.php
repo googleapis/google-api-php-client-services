@@ -17,8 +17,7 @@
 
 class Google_Service_Container_UpdateClusterRequest extends Google_Model
 {
-  protected $updateType = 'Google_Service_Container_ClusterUpdate';
-  protected $updateDataType = '';
+  public $update;
 
   public function setUpdate(Google_Service_Container_ClusterUpdate $update)
   {

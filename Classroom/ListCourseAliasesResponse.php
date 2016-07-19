@@ -18,12 +18,16 @@
 class Google_Service_Classroom_ListCourseAliasesResponse extends Google_Collection
 {
   protected $collection_key = 'aliases';
-  protected $aliasesType = 'Google_Service_Classroom_CourseAlias';
-  protected $aliasesDataType = 'array';
+  public $aliases;
   public $nextPageToken;
 
-  public function setAliases($aliases)
+  public function setAliases(array $aliases)
   {
+    foreach ($aliases as $a) {
+      if (!$a instanceof Google_Service_Classroom_CourseAlias) {
+        throw new InvalidArgumentException('First argument to setAliases must be an array of Google_Service_Classroom_CourseAlias');
+      }
+    }
     $this->aliases = $aliases;
   }
   public function getAliases()

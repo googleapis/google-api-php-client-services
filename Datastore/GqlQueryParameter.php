@@ -18,8 +18,7 @@
 class Google_Service_Datastore_GqlQueryParameter extends Google_Model
 {
   public $cursor;
-  protected $valueType = 'Google_Service_Datastore_Value';
-  protected $valueDataType = '';
+  public $value;
 
   public function setCursor($cursor)
   {

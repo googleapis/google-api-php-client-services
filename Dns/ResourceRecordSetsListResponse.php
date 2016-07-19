@@ -20,8 +20,7 @@ class Google_Service_Dns_ResourceRecordSetsListResponse extends Google_Collectio
   protected $collection_key = 'rrsets';
   public $kind;
   public $nextPageToken;
-  protected $rrsetsType = 'Google_Service_Dns_ResourceRecordSet';
-  protected $rrsetsDataType = 'array';
+  public $rrsets;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_Dns_ResourceRecordSetsListResponse extends Google_Collectio
   {
     return $this->nextPageToken;
   }
-  public function setRrsets($rrsets)
+  public function setRrsets(array $rrsets)
   {
+    foreach ($rrsets as $r) {
+      if (!$r instanceof Google_Service_Dns_ResourceRecordSet) {
+        throw new InvalidArgumentException('First argument to setRrsets must be an array of Google_Service_Dns_ResourceRecordSet');
+      }
+    }
     $this->rrsets = $rrsets;
   }
   public function getRrsets()

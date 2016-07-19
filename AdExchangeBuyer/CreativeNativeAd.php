@@ -19,17 +19,14 @@ class Google_Service_AdExchangeBuyer_CreativeNativeAd extends Google_Collection
 {
   protected $collection_key = 'impressionTrackingUrl';
   public $advertiser;
-  protected $appIconType = 'Google_Service_AdExchangeBuyer_CreativeNativeAdAppIcon';
-  protected $appIconDataType = '';
+  public $appIcon;
   public $body;
   public $callToAction;
   public $clickTrackingUrl;
   public $headline;
-  protected $imageType = 'Google_Service_AdExchangeBuyer_CreativeNativeAdImage';
-  protected $imageDataType = '';
+  public $image;
   public $impressionTrackingUrl;
-  protected $logoType = 'Google_Service_AdExchangeBuyer_CreativeNativeAdLogo';
-  protected $logoDataType = '';
+  public $logo;
   public $price;
   public $starRating;
   public $store;
@@ -90,7 +87,7 @@ class Google_Service_AdExchangeBuyer_CreativeNativeAd extends Google_Collection
   {
     return $this->image;
   }
-  public function setImpressionTrackingUrl($impressionTrackingUrl)
+  public function setImpressionTrackingUrl(array $impressionTrackingUrl)
   {
     $this->impressionTrackingUrl = $impressionTrackingUrl;
   }

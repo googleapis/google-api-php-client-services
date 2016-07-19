@@ -18,33 +18,44 @@
 class Google_Service_Books_DictlayerdataDictWords extends Google_Collection
 {
   protected $collection_key = 'senses';
-  protected $derivativesType = 'Google_Service_Books_DictlayerdataDictWordsDerivatives';
-  protected $derivativesDataType = 'array';
-  protected $examplesType = 'Google_Service_Books_DictlayerdataDictWordsExamples';
-  protected $examplesDataType = 'array';
-  protected $sensesType = 'Google_Service_Books_DictlayerdataDictWordsSenses';
-  protected $sensesDataType = 'array';
-  protected $sourceType = 'Google_Service_Books_DictlayerdataDictWordsSource';
-  protected $sourceDataType = '';
+  public $derivatives;
+  public $examples;
+  public $senses;
+  public $source;
 
-  public function setDerivatives($derivatives)
+  public function setDerivatives(array $derivatives)
   {
+    foreach ($derivatives as $d) {
+      if (!$d instanceof Google_Service_Books_DictlayerdataDictWordsDerivatives) {
+        throw new InvalidArgumentException('First argument to setDerivatives must be an array of Google_Service_Books_DictlayerdataDictWordsDerivatives');
+      }
+    }
     $this->derivatives = $derivatives;
   }
   public function getDerivatives()
   {
     return $this->derivatives;
   }
-  public function setExamples($examples)
+  public function setExamples(array $examples)
   {
+    foreach ($examples as $e) {
+      if (!$e instanceof Google_Service_Books_DictlayerdataDictWordsExamples) {
+        throw new InvalidArgumentException('First argument to setExamples must be an array of Google_Service_Books_DictlayerdataDictWordsExamples');
+      }
+    }
     $this->examples = $examples;
   }
   public function getExamples()
   {
     return $this->examples;
   }
-  public function setSenses($senses)
+  public function setSenses(array $senses)
   {
+    foreach ($senses as $s) {
+      if (!$s instanceof Google_Service_Books_DictlayerdataDictWordsSenses) {
+        throw new InvalidArgumentException('First argument to setSenses must be an array of Google_Service_Books_DictlayerdataDictWordsSenses');
+      }
+    }
     $this->senses = $senses;
   }
   public function getSenses()

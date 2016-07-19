@@ -21,11 +21,9 @@ class Google_Service_YouTube_ChannelSnippet extends Google_Model
   public $customUrl;
   public $defaultLanguage;
   public $description;
-  protected $localizedType = 'Google_Service_YouTube_ChannelLocalization';
-  protected $localizedDataType = '';
+  public $localized;
   public $publishedAt;
-  protected $thumbnailsType = 'Google_Service_YouTube_ThumbnailDetails';
-  protected $thumbnailsDataType = '';
+  public $thumbnails;
   public $title;
 
   public function setCountry($country)

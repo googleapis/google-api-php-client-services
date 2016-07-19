@@ -18,10 +18,8 @@
 class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks extends Google_Collection
 {
   protected $collection_key = 'urls';
-  protected $headerType = 'Google_Service_Pagespeedonline_PagespeedApiFormatStringV2';
-  protected $headerDataType = '';
-  protected $urlsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls';
-  protected $urlsDataType = 'array';
+  public $header;
+  public $urls;
 
   public function setHeader(Google_Service_Pagespeedonline_PagespeedApiFormatStringV2 $header)
   {
@@ -31,8 +29,13 @@ class Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrl
   {
     return $this->header;
   }
-  public function setUrls($urls)
+  public function setUrls(array $urls)
   {
+    foreach ($urls as $u) {
+      if (!$u instanceof Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls) {
+        throw new InvalidArgumentException('First argument to setUrls must be an array of Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls');
+      }
+    }
     $this->urls = $urls;
   }
   public function getUrls()

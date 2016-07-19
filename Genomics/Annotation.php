@@ -26,11 +26,9 @@ class Google_Service_Genomics_Annotation extends Google_Model
   public $referenceName;
   public $reverseStrand;
   public $start;
-  protected $transcriptType = 'Google_Service_Genomics_Transcript';
-  protected $transcriptDataType = '';
+  public $transcript;
   public $type;
-  protected $variantType = 'Google_Service_Genomics_VariantAnnotation';
-  protected $variantDataType = '';
+  public $variant;
 
   public function setAnnotationSetId($annotationSetId)
   {
@@ -56,7 +54,7 @@ class Google_Service_Genomics_Annotation extends Google_Model
   {
     return $this->id;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }

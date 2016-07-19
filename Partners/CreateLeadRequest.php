@@ -17,12 +17,9 @@
 
 class Google_Service_Partners_CreateLeadRequest extends Google_Model
 {
-  protected $leadType = 'Google_Service_Partners_Lead';
-  protected $leadDataType = '';
-  protected $recaptchaChallengeType = 'Google_Service_Partners_RecaptchaChallenge';
-  protected $recaptchaChallengeDataType = '';
-  protected $requestMetadataType = 'Google_Service_Partners_RequestMetadata';
-  protected $requestMetadataDataType = '';
+  public $lead;
+  public $recaptchaChallenge;
+  public $requestMetadata;
 
   public function setLead(Google_Service_Partners_Lead $lead)
   {

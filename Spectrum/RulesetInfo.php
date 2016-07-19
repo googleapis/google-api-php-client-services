@@ -47,7 +47,7 @@ class Google_Service_Spectrum_RulesetInfo extends Google_Collection
   {
     return $this->maxPollingSecs;
   }
-  public function setRulesetIds($rulesetIds)
+  public function setRulesetIds(array $rulesetIds)
   {
     $this->rulesetIds = $rulesetIds;
   }

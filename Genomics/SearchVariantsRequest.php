@@ -28,7 +28,7 @@ class Google_Service_Genomics_SearchVariantsRequest extends Google_Collection
   public $variantName;
   public $variantSetIds;
 
-  public function setCallSetIds($callSetIds)
+  public function setCallSetIds(array $callSetIds)
   {
     $this->callSetIds = $callSetIds;
   }
@@ -92,7 +92,7 @@ class Google_Service_Genomics_SearchVariantsRequest extends Google_Collection
   {
     return $this->variantName;
   }
-  public function setVariantSetIds($variantSetIds)
+  public function setVariantSetIds(array $variantSetIds)
   {
     $this->variantSetIds = $variantSetIds;
   }

@@ -47,7 +47,7 @@ class Google_Service_Genomics_ImportReadGroupSetsRequest extends Google_Collecti
   {
     return $this->referenceSetId;
   }
-  public function setSourceUris($sourceUris)
+  public function setSourceUris(array $sourceUris)
   {
     $this->sourceUris = $sourceUris;
   }

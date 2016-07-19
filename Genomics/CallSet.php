@@ -41,7 +41,7 @@ class Google_Service_Genomics_CallSet extends Google_Collection
   {
     return $this->id;
   }
-  public function setInfo($info)
+  public function setInfo(array $info)
   {
     $this->info = $info;
   }
@@ -65,7 +65,7 @@ class Google_Service_Genomics_CallSet extends Google_Collection
   {
     return $this->sampleId;
   }
-  public function setVariantSetIds($variantSetIds)
+  public function setVariantSetIds(array $variantSetIds)
   {
     $this->variantSetIds = $variantSetIds;
   }

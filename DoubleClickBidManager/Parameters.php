@@ -18,22 +18,26 @@
 class Google_Service_DoubleClickBidManager_Parameters extends Google_Collection
 {
   protected $collection_key = 'metrics';
-  protected $filtersType = 'Google_Service_DoubleClickBidManager_FilterPair';
-  protected $filtersDataType = 'array';
+  public $filters;
   public $groupBys;
   public $includeInviteData;
   public $metrics;
   public $type;
 
-  public function setFilters($filters)
+  public function setFilters(array $filters)
   {
+    foreach ($filters as $f) {
+      if (!$f instanceof Google_Service_DoubleClickBidManager_FilterPair) {
+        throw new InvalidArgumentException('First argument to setFilters must be an array of Google_Service_DoubleClickBidManager_FilterPair');
+      }
+    }
     $this->filters = $filters;
   }
   public function getFilters()
   {
     return $this->filters;
   }
-  public function setGroupBys($groupBys)
+  public function setGroupBys(array $groupBys)
   {
     $this->groupBys = $groupBys;
   }
@@ -49,7 +53,7 @@ class Google_Service_DoubleClickBidManager_Parameters extends Google_Collection
   {
     return $this->includeInviteData;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
     $this->metrics = $metrics;
   }

@@ -18,20 +18,15 @@
 class Google_Service_Dataflow_ParallelInstruction extends Google_Collection
 {
   protected $collection_key = 'outputs';
-  protected $flattenType = 'Google_Service_Dataflow_FlattenInstruction';
-  protected $flattenDataType = '';
+  public $flatten;
   public $name;
-  protected $outputsType = 'Google_Service_Dataflow_InstructionOutput';
-  protected $outputsDataType = 'array';
-  protected $parDoType = 'Google_Service_Dataflow_ParDoInstruction';
-  protected $parDoDataType = '';
-  protected $partialGroupByKeyType = 'Google_Service_Dataflow_PartialGroupByKeyInstruction';
-  protected $partialGroupByKeyDataType = '';
-  protected $readType = 'Google_Service_Dataflow_ReadInstruction';
-  protected $readDataType = '';
+  public $originalName;
+  public $outputs;
+  public $parDo;
+  public $partialGroupByKey;
+  public $read;
   public $systemName;
-  protected $writeType = 'Google_Service_Dataflow_WriteInstruction';
-  protected $writeDataType = '';
+  public $write;
 
   public function setFlatten(Google_Service_Dataflow_FlattenInstruction $flatten)
   {
@@ -49,8 +44,21 @@ class Google_Service_Dataflow_ParallelInstruction extends Google_Collection
   {
     return $this->name;
   }
-  public function setOutputs($outputs)
+  public function setOriginalName($originalName)
   {
+    $this->originalName = $originalName;
+  }
+  public function getOriginalName()
+  {
+    return $this->originalName;
+  }
+  public function setOutputs(array $outputs)
+  {
+    foreach ($outputs as $o) {
+      if (!$o instanceof Google_Service_Dataflow_InstructionOutput) {
+        throw new InvalidArgumentException('First argument to setOutputs must be an array of Google_Service_Dataflow_InstructionOutput');
+      }
+    }
     $this->outputs = $outputs;
   }
   public function getOutputs()

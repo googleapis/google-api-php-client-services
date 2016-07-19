@@ -18,12 +18,16 @@
 class Google_Service_Fitness_DataType extends Google_Collection
 {
   protected $collection_key = 'field';
-  protected $fieldType = 'Google_Service_Fitness_DataTypeField';
-  protected $fieldDataType = 'array';
+  public $field;
   public $name;
 
-  public function setField($field)
+  public function setField(array $field)
   {
+    foreach ($field as $f) {
+      if (!$f instanceof Google_Service_Fitness_DataTypeField) {
+        throw new InvalidArgumentException('First argument to setField must be an array of Google_Service_Fitness_DataTypeField');
+      }
+    }
     $this->field = $field;
   }
   public function getField()

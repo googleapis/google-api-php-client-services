@@ -22,7 +22,7 @@ class Google_Service_Appengine_Network extends Google_Collection
   public $instanceTag;
   public $name;
 
-  public function setForwardedPorts($forwardedPorts)
+  public function setForwardedPorts(array $forwardedPorts)
   {
     $this->forwardedPorts = $forwardedPorts;
   }

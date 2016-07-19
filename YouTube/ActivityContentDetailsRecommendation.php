@@ -18,10 +18,8 @@
 class Google_Service_YouTube_ActivityContentDetailsRecommendation extends Google_Model
 {
   public $reason;
-  protected $resourceIdType = 'Google_Service_YouTube_ResourceId';
-  protected $resourceIdDataType = '';
-  protected $seedResourceIdType = 'Google_Service_YouTube_ResourceId';
-  protected $seedResourceIdDataType = '';
+  public $resourceId;
+  public $seedResourceId;
 
   public function setReason($reason)
   {

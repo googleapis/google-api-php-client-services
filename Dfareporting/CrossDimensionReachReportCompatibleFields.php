@@ -18,26 +18,32 @@
 class Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields extends Google_Collection
 {
   protected $collection_key = 'overlapMetrics';
-  protected $breakdownType = 'Google_Service_Dfareporting_Dimension';
-  protected $breakdownDataType = 'array';
-  protected $dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
-  protected $dimensionFiltersDataType = 'array';
+  public $breakdown;
+  public $dimensionFilters;
   public $kind;
-  protected $metricsType = 'Google_Service_Dfareporting_Metric';
-  protected $metricsDataType = 'array';
-  protected $overlapMetricsType = 'Google_Service_Dfareporting_Metric';
-  protected $overlapMetricsDataType = 'array';
+  public $metrics;
+  public $overlapMetrics;
 
-  public function setBreakdown($breakdown)
+  public function setBreakdown(array $breakdown)
   {
+    foreach ($breakdown as $b) {
+      if (!$b instanceof Google_Service_Dfareporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setBreakdown must be an array of Google_Service_Dfareporting_Dimension');
+      }
+    }
     $this->breakdown = $breakdown;
   }
   public function getBreakdown()
   {
     return $this->breakdown;
   }
-  public function setDimensionFilters($dimensionFilters)
+  public function setDimensionFilters(array $dimensionFilters)
   {
+    foreach ($dimensionFilters as $d) {
+      if (!$d instanceof Google_Service_Dfareporting_Dimension) {
+        throw new InvalidArgumentException('First argument to setDimensionFilters must be an array of Google_Service_Dfareporting_Dimension');
+      }
+    }
     $this->dimensionFilters = $dimensionFilters;
   }
   public function getDimensionFilters()
@@ -52,16 +58,26 @@ class Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields exte
   {
     return $this->kind;
   }
-  public function setMetrics($metrics)
+  public function setMetrics(array $metrics)
   {
+    foreach ($metrics as $m) {
+      if (!$m instanceof Google_Service_Dfareporting_Metric) {
+        throw new InvalidArgumentException('First argument to setMetrics must be an array of Google_Service_Dfareporting_Metric');
+      }
+    }
     $this->metrics = $metrics;
   }
   public function getMetrics()
   {
     return $this->metrics;
   }
-  public function setOverlapMetrics($overlapMetrics)
+  public function setOverlapMetrics(array $overlapMetrics)
   {
+    foreach ($overlapMetrics as $o) {
+      if (!$o instanceof Google_Service_Dfareporting_Metric) {
+        throw new InvalidArgumentException('First argument to setOverlapMetrics must be an array of Google_Service_Dfareporting_Metric');
+      }
+    }
     $this->overlapMetrics = $overlapMetrics;
   }
   public function getOverlapMetrics()

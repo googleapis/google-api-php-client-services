@@ -18,11 +18,15 @@
 class Google_Service_Calendar_CalendarListEntryNotificationSettings extends Google_Collection
 {
   protected $collection_key = 'notifications';
-  protected $notificationsType = 'Google_Service_Calendar_CalendarNotification';
-  protected $notificationsDataType = 'array';
+  public $notifications;
 
-  public function setNotifications($notifications)
+  public function setNotifications(array $notifications)
   {
+    foreach ($notifications as $n) {
+      if (!$n instanceof Google_Service_Calendar_CalendarNotification) {
+        throw new InvalidArgumentException('First argument to setNotifications must be an array of Google_Service_Calendar_CalendarNotification');
+      }
+    }
     $this->notifications = $notifications;
   }
   public function getNotifications()

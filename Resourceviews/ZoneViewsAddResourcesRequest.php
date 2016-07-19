@@ -20,7 +20,7 @@ class Google_Service_Resourceviews_ZoneViewsAddResourcesRequest extends Google_C
   protected $collection_key = 'resources';
   public $resources;
 
-  public function setResources($resources)
+  public function setResources(array $resources)
   {
     $this->resources = $resources;
   }

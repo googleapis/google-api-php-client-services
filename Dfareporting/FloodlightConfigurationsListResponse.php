@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_FloodlightConfigurationsListResponse extends Google_Collection
 {
   protected $collection_key = 'floodlightConfigurations';
-  protected $floodlightConfigurationsType = 'Google_Service_Dfareporting_FloodlightConfiguration';
-  protected $floodlightConfigurationsDataType = 'array';
+  public $floodlightConfigurations;
   public $kind;
 
-  public function setFloodlightConfigurations($floodlightConfigurations)
+  public function setFloodlightConfigurations(array $floodlightConfigurations)
   {
+    foreach ($floodlightConfigurations as $f) {
+      if (!$f instanceof Google_Service_Dfareporting_FloodlightConfiguration) {
+        throw new InvalidArgumentException('First argument to setFloodlightConfigurations must be an array of Google_Service_Dfareporting_FloodlightConfiguration');
+      }
+    }
     $this->floodlightConfigurations = $floodlightConfigurations;
   }
   public function getFloodlightConfigurations()

@@ -156,7 +156,7 @@ class Google_Service_PlayMovies_Avail extends Google_Collection
   {
     return $this->licenseType;
   }
-  public function setPphNames($pphNames)
+  public function setPphNames(array $pphNames)
   {
     $this->pphNames = $pphNames;
   }

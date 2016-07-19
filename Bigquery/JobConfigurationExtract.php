@@ -24,8 +24,7 @@ class Google_Service_Bigquery_JobConfigurationExtract extends Google_Collection
   public $destinationUris;
   public $fieldDelimiter;
   public $printHeader;
-  protected $sourceTableType = 'Google_Service_Bigquery_TableReference';
-  protected $sourceTableDataType = '';
+  public $sourceTable;
 
   public function setCompression($compression)
   {
@@ -51,7 +50,7 @@ class Google_Service_Bigquery_JobConfigurationExtract extends Google_Collection
   {
     return $this->destinationUri;
   }
-  public function setDestinationUris($destinationUris)
+  public function setDestinationUris(array $destinationUris)
   {
     $this->destinationUris = $destinationUris;
   }

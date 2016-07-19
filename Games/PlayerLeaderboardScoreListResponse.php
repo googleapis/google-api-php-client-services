@@ -18,15 +18,18 @@
 class Google_Service_Games_PlayerLeaderboardScoreListResponse extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_Games_PlayerLeaderboardScore';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $nextPageToken;
-  protected $playerType = 'Google_Service_Games_Player';
-  protected $playerDataType = '';
+  public $player;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_Games_PlayerLeaderboardScore) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_Games_PlayerLeaderboardScore');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

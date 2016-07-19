@@ -19,8 +19,7 @@ class Google_Service_PlusDomains_MediaAuthor extends Google_Model
 {
   public $displayName;
   public $id;
-  protected $imageType = 'Google_Service_PlusDomains_MediaAuthorImage';
-  protected $imageDataType = '';
+  public $image;
   public $url;
 
   public function setDisplayName($displayName)

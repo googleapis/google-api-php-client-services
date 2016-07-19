@@ -17,8 +17,7 @@
 
 class Google_Service_Dataflow_SourceGetMetadataResponse extends Google_Model
 {
-  protected $metadataType = 'Google_Service_Dataflow_SourceMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
 
   public function setMetadata(Google_Service_Dataflow_SourceMetadata $metadata)
   {

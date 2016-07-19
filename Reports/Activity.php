@@ -18,13 +18,10 @@
 class Google_Service_Reports_Activity extends Google_Collection
 {
   protected $collection_key = 'events';
-  protected $actorType = 'Google_Service_Reports_ActivityActor';
-  protected $actorDataType = '';
+  public $actor;
   public $etag;
-  protected $eventsType = 'Google_Service_Reports_ActivityEvents';
-  protected $eventsDataType = 'array';
-  protected $idType = 'Google_Service_Reports_ActivityId';
-  protected $idDataType = '';
+  public $events;
+  public $id;
   public $ipAddress;
   public $kind;
   public $ownerDomain;
@@ -45,8 +42,13 @@ class Google_Service_Reports_Activity extends Google_Collection
   {
     return $this->etag;
   }
-  public function setEvents($events)
+  public function setEvents(array $events)
   {
+    foreach ($events as $e) {
+      if (!$e instanceof Google_Service_Reports_ActivityEvents) {
+        throw new InvalidArgumentException('First argument to setEvents must be an array of Google_Service_Reports_ActivityEvents');
+      }
+    }
     $this->events = $events;
   }
   public function getEvents()

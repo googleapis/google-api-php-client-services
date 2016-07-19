@@ -18,11 +18,15 @@
 class Google_Service_Spectrum_DbUpdateSpec extends Google_Collection
 {
   protected $collection_key = 'databases';
-  protected $databasesType = 'Google_Service_Spectrum_DatabaseSpec';
-  protected $databasesDataType = 'array';
+  public $databases;
 
-  public function setDatabases($databases)
+  public function setDatabases(array $databases)
   {
+    foreach ($databases as $d) {
+      if (!$d instanceof Google_Service_Spectrum_DatabaseSpec) {
+        throw new InvalidArgumentException('First argument to setDatabases must be an array of Google_Service_Spectrum_DatabaseSpec');
+      }
+    }
     $this->databases = $databases;
   }
   public function getDatabases()

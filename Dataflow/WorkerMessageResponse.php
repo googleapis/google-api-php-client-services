@@ -17,8 +17,7 @@
 
 class Google_Service_Dataflow_WorkerMessageResponse extends Google_Model
 {
-  protected $workerHealthReportResponseType = 'Google_Service_Dataflow_WorkerHealthReportResponse';
-  protected $workerHealthReportResponseDataType = '';
+  public $workerHealthReportResponse;
 
   public function setWorkerHealthReportResponse(Google_Service_Dataflow_WorkerHealthReportResponse $workerHealthReportResponse)
   {

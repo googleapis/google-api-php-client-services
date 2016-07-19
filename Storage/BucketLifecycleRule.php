@@ -17,10 +17,8 @@
 
 class Google_Service_Storage_BucketLifecycleRule extends Google_Model
 {
-  protected $actionType = 'Google_Service_Storage_BucketLifecycleRuleAction';
-  protected $actionDataType = '';
-  protected $conditionType = 'Google_Service_Storage_BucketLifecycleRuleCondition';
-  protected $conditionDataType = '';
+  public $action;
+  public $condition;
 
   public function setAction(Google_Service_Storage_BucketLifecycleRuleAction $action)
   {

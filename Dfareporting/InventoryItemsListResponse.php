@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_InventoryItemsListResponse extends Google_Collection
 {
   protected $collection_key = 'inventoryItems';
-  protected $inventoryItemsType = 'Google_Service_Dfareporting_InventoryItem';
-  protected $inventoryItemsDataType = 'array';
+  public $inventoryItems;
   public $kind;
   public $nextPageToken;
 
-  public function setInventoryItems($inventoryItems)
+  public function setInventoryItems(array $inventoryItems)
   {
+    foreach ($inventoryItems as $i) {
+      if (!$i instanceof Google_Service_Dfareporting_InventoryItem) {
+        throw new InvalidArgumentException('First argument to setInventoryItems must be an array of Google_Service_Dfareporting_InventoryItem');
+      }
+    }
     $this->inventoryItems = $inventoryItems;
   }
   public function getInventoryItems()

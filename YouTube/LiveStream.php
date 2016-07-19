@@ -17,17 +17,13 @@
 
 class Google_Service_YouTube_LiveStream extends Google_Model
 {
-  protected $cdnType = 'Google_Service_YouTube_CdnSettings';
-  protected $cdnDataType = '';
-  protected $contentDetailsType = 'Google_Service_YouTube_LiveStreamContentDetails';
-  protected $contentDetailsDataType = '';
+  public $cdn;
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_LiveStreamSnippet';
-  protected $snippetDataType = '';
-  protected $statusType = 'Google_Service_YouTube_LiveStreamStatus';
-  protected $statusDataType = '';
+  public $snippet;
+  public $status;
 
   public function setCdn(Google_Service_YouTube_CdnSettings $cdn)
   {

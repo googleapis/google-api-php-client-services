@@ -19,8 +19,7 @@ class Google_Service_Compute_VpnTunnelsScopedListWarning extends Google_Collecti
 {
   protected $collection_key = 'data';
   public $code;
-  protected $dataType = 'Google_Service_Compute_VpnTunnelsScopedListWarningData';
-  protected $dataDataType = 'array';
+  public $data;
   public $message;
 
   public function setCode($code)
@@ -31,8 +30,13 @@ class Google_Service_Compute_VpnTunnelsScopedListWarning extends Google_Collecti
   {
     return $this->code;
   }
-  public function setData($data)
+  public function setData(array $data)
   {
+    foreach ($data as $d) {
+      if (!$d instanceof Google_Service_Compute_VpnTunnelsScopedListWarningData) {
+        throw new InvalidArgumentException('First argument to setData must be an array of Google_Service_Compute_VpnTunnelsScopedListWarningData');
+      }
+    }
     $this->data = $data;
   }
   public function getData()

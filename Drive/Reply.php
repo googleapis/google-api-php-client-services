@@ -18,8 +18,7 @@
 class Google_Service_Drive_Reply extends Google_Model
 {
   public $action;
-  protected $authorType = 'Google_Service_Drive_User';
-  protected $authorDataType = '';
+  public $author;
   public $content;
   public $createdTime;
   public $deleted;

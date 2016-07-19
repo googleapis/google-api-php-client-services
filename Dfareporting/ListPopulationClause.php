@@ -18,11 +18,15 @@
 class Google_Service_Dfareporting_ListPopulationClause extends Google_Collection
 {
   protected $collection_key = 'terms';
-  protected $termsType = 'Google_Service_Dfareporting_ListPopulationTerm';
-  protected $termsDataType = 'array';
+  public $terms;
 
-  public function setTerms($terms)
+  public function setTerms(array $terms)
   {
+    foreach ($terms as $t) {
+      if (!$t instanceof Google_Service_Dfareporting_ListPopulationTerm) {
+        throw new InvalidArgumentException('First argument to setTerms must be an array of Google_Service_Dfareporting_ListPopulationTerm');
+      }
+    }
     $this->terms = $terms;
   }
   public function getTerms()

@@ -20,8 +20,7 @@ class Google_Service_Genomics_VariantAnnotation extends Google_Collection
   protected $collection_key = 'transcriptIds';
   public $alternateBases;
   public $clinicalSignificance;
-  protected $conditionsType = 'Google_Service_Genomics_ClinicalCondition';
-  protected $conditionsDataType = 'array';
+  public $conditions;
   public $effect;
   public $geneId;
   public $transcriptIds;
@@ -43,8 +42,13 @@ class Google_Service_Genomics_VariantAnnotation extends Google_Collection
   {
     return $this->clinicalSignificance;
   }
-  public function setConditions($conditions)
+  public function setConditions(array $conditions)
   {
+    foreach ($conditions as $c) {
+      if (!$c instanceof Google_Service_Genomics_ClinicalCondition) {
+        throw new InvalidArgumentException('First argument to setConditions must be an array of Google_Service_Genomics_ClinicalCondition');
+      }
+    }
     $this->conditions = $conditions;
   }
   public function getConditions()
@@ -67,7 +71,7 @@ class Google_Service_Genomics_VariantAnnotation extends Google_Collection
   {
     return $this->geneId;
   }
-  public function setTranscriptIds($transcriptIds)
+  public function setTranscriptIds(array $transcriptIds)
   {
     $this->transcriptIds = $transcriptIds;
   }

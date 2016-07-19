@@ -20,8 +20,7 @@ class Google_Service_Bigquery_ViewDefinition extends Google_Collection
   protected $collection_key = 'userDefinedFunctionResources';
   public $query;
   public $useLegacySql;
-  protected $userDefinedFunctionResourcesType = 'Google_Service_Bigquery_UserDefinedFunctionResource';
-  protected $userDefinedFunctionResourcesDataType = 'array';
+  public $userDefinedFunctionResources;
 
   public function setQuery($query)
   {
@@ -39,8 +38,13 @@ class Google_Service_Bigquery_ViewDefinition extends Google_Collection
   {
     return $this->useLegacySql;
   }
-  public function setUserDefinedFunctionResources($userDefinedFunctionResources)
+  public function setUserDefinedFunctionResources(array $userDefinedFunctionResources)
   {
+    foreach ($userDefinedFunctionResources as $u) {
+      if (!$u instanceof Google_Service_Bigquery_UserDefinedFunctionResource) {
+        throw new InvalidArgumentException('First argument to setUserDefinedFunctionResources must be an array of Google_Service_Bigquery_UserDefinedFunctionResource');
+      }
+    }
     $this->userDefinedFunctionResources = $userDefinedFunctionResources;
   }
   public function getUserDefinedFunctionResources()

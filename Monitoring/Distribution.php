@@ -19,15 +19,13 @@ class Google_Service_Monitoring_Distribution extends Google_Collection
 {
   protected $collection_key = 'bucketCounts';
   public $bucketCounts;
-  protected $bucketOptionsType = 'Google_Service_Monitoring_BucketOptions';
-  protected $bucketOptionsDataType = '';
+  public $bucketOptions;
   public $count;
   public $mean;
-  protected $rangeType = 'Google_Service_Monitoring_Range';
-  protected $rangeDataType = '';
+  public $range;
   public $sumOfSquaredDeviation;
 
-  public function setBucketCounts($bucketCounts)
+  public function setBucketCounts(array $bucketCounts)
   {
     $this->bucketCounts = $bucketCounts;
   }

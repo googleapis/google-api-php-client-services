@@ -22,8 +22,7 @@ class Google_Service_Sheets_FindReplaceRequest extends Google_Model
   public $includeFormulas;
   public $matchCase;
   public $matchEntireCell;
-  protected $rangeType = 'Google_Service_Sheets_GridRange';
-  protected $rangeDataType = '';
+  public $range;
   public $replacement;
   public $searchByRegex;
   public $sheetId;

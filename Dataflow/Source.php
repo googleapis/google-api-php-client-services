@@ -21,11 +21,10 @@ class Google_Service_Dataflow_Source extends Google_Collection
   public $baseSpecs;
   public $codec;
   public $doesNotNeedSplitting;
-  protected $metadataType = 'Google_Service_Dataflow_SourceMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $spec;
 
-  public function setBaseSpecs($baseSpecs)
+  public function setBaseSpecs(array $baseSpecs)
   {
     $this->baseSpecs = $baseSpecs;
   }
@@ -33,7 +32,7 @@ class Google_Service_Dataflow_Source extends Google_Collection
   {
     return $this->baseSpecs;
   }
-  public function setCodec($codec)
+  public function setCodec(array $codec)
   {
     $this->codec = $codec;
   }
@@ -57,7 +56,7 @@ class Google_Service_Dataflow_Source extends Google_Collection
   {
     return $this->metadata;
   }
-  public function setSpec($spec)
+  public function setSpec(array $spec)
   {
     $this->spec = $spec;
   }

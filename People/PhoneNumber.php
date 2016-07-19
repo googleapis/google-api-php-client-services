@@ -19,8 +19,7 @@ class Google_Service_People_PhoneNumber extends Google_Model
 {
   public $canonicalForm;
   public $formattedType;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $type;
   public $value;
 

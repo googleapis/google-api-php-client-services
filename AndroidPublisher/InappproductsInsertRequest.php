@@ -17,8 +17,7 @@
 
 class Google_Service_AndroidPublisher_InappproductsInsertRequest extends Google_Model
 {
-  protected $inappproductType = 'Google_Service_AndroidPublisher_InAppProduct';
-  protected $inappproductDataType = '';
+  public $inappproduct;
 
   public function setInappproduct(Google_Service_AndroidPublisher_InAppProduct $inappproduct)
   {

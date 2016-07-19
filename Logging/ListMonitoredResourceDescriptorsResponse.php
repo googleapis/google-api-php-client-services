@@ -19,8 +19,7 @@ class Google_Service_Logging_ListMonitoredResourceDescriptorsResponse extends Go
 {
   protected $collection_key = 'resourceDescriptors';
   public $nextPageToken;
-  protected $resourceDescriptorsType = 'Google_Service_Logging_MonitoredResourceDescriptor';
-  protected $resourceDescriptorsDataType = 'array';
+  public $resourceDescriptors;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Logging_ListMonitoredResourceDescriptorsResponse extends Go
   {
     return $this->nextPageToken;
   }
-  public function setResourceDescriptors($resourceDescriptors)
+  public function setResourceDescriptors(array $resourceDescriptors)
   {
+    foreach ($resourceDescriptors as $r) {
+      if (!$r instanceof Google_Service_Logging_MonitoredResourceDescriptor) {
+        throw new InvalidArgumentException('First argument to setResourceDescriptors must be an array of Google_Service_Logging_MonitoredResourceDescriptor');
+      }
+    }
     $this->resourceDescriptors = $resourceDescriptors;
   }
   public function getResourceDescriptors()

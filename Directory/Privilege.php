@@ -18,8 +18,7 @@
 class Google_Service_Directory_Privilege extends Google_Collection
 {
   protected $collection_key = 'childPrivileges';
-  protected $childPrivilegesType = 'Google_Service_Directory_Privilege';
-  protected $childPrivilegesDataType = 'array';
+  public $childPrivileges;
   public $etag;
   public $isOuScopable;
   public $kind;
@@ -27,8 +26,13 @@ class Google_Service_Directory_Privilege extends Google_Collection
   public $serviceId;
   public $serviceName;
 
-  public function setChildPrivileges($childPrivileges)
+  public function setChildPrivileges(array $childPrivileges)
   {
+    foreach ($childPrivileges as $c) {
+      if (!$c instanceof Google_Service_Directory_Privilege) {
+        throw new InvalidArgumentException('First argument to setChildPrivileges must be an array of Google_Service_Directory_Privilege');
+      }
+    }
     $this->childPrivileges = $childPrivileges;
   }
   public function getChildPrivileges()

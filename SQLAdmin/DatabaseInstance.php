@@ -22,29 +22,23 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   public $currentDiskSize;
   public $databaseVersion;
   public $etag;
-  protected $failoverReplicaType = 'Google_Service_SQLAdmin_DatabaseInstanceFailoverReplica';
-  protected $failoverReplicaDataType = '';
+  public $failoverReplica;
   public $instanceType;
-  protected $ipAddressesType = 'Google_Service_SQLAdmin_IpMapping';
-  protected $ipAddressesDataType = 'array';
+  public $ipAddresses;
   public $ipv6Address;
   public $kind;
   public $masterInstanceName;
   public $maxDiskSize;
   public $name;
-  protected $onPremisesConfigurationType = 'Google_Service_SQLAdmin_OnPremisesConfiguration';
-  protected $onPremisesConfigurationDataType = '';
+  public $onPremisesConfiguration;
   public $project;
   public $region;
-  protected $replicaConfigurationType = 'Google_Service_SQLAdmin_ReplicaConfiguration';
-  protected $replicaConfigurationDataType = '';
+  public $replicaConfiguration;
   public $replicaNames;
   public $selfLink;
-  protected $serverCaCertType = 'Google_Service_SQLAdmin_SslCert';
-  protected $serverCaCertDataType = '';
+  public $serverCaCert;
   public $serviceAccountEmailAddress;
-  protected $settingsType = 'Google_Service_SQLAdmin_Settings';
-  protected $settingsDataType = '';
+  public $settings;
   public $state;
   public $suspensionReason;
 
@@ -96,8 +90,13 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   {
     return $this->instanceType;
   }
-  public function setIpAddresses($ipAddresses)
+  public function setIpAddresses(array $ipAddresses)
   {
+    foreach ($ipAddresses as $i) {
+      if (!$i instanceof Google_Service_SQLAdmin_IpMapping) {
+        throw new InvalidArgumentException('First argument to setIpAddresses must be an array of Google_Service_SQLAdmin_IpMapping');
+      }
+    }
     $this->ipAddresses = $ipAddresses;
   }
   public function getIpAddresses()
@@ -176,7 +175,7 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   {
     return $this->replicaConfiguration;
   }
-  public function setReplicaNames($replicaNames)
+  public function setReplicaNames(array $replicaNames)
   {
     $this->replicaNames = $replicaNames;
   }
@@ -224,7 +223,7 @@ class Google_Service_SQLAdmin_DatabaseInstance extends Google_Collection
   {
     return $this->state;
   }
-  public function setSuspensionReason($suspensionReason)
+  public function setSuspensionReason(array $suspensionReason)
   {
     $this->suspensionReason = $suspensionReason;
   }

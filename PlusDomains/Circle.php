@@ -22,8 +22,7 @@ class Google_Service_PlusDomains_Circle extends Google_Model
   public $etag;
   public $id;
   public $kind;
-  protected $peopleType = 'Google_Service_PlusDomains_CirclePeople';
-  protected $peopleDataType = '';
+  public $people;
   public $selfLink;
 
   public function setDescription($description)

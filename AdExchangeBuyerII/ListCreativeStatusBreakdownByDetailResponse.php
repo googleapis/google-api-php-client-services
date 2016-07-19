@@ -21,8 +21,7 @@ class Google_Service_AdExchangeBuyerII_ListCreativeStatusBreakdownByDetailRespon
   public $creativeStatusId;
   public $detailType;
   public $endTime;
-  protected $frequenciesType = 'Google_Service_AdExchangeBuyerII_DetailFrequency';
-  protected $frequenciesDataType = 'array';
+  public $frequencies;
   public $startTime;
 
   public function setCreativeStatusId($creativeStatusId)
@@ -49,8 +48,13 @@ class Google_Service_AdExchangeBuyerII_ListCreativeStatusBreakdownByDetailRespon
   {
     return $this->endTime;
   }
-  public function setFrequencies($frequencies)
+  public function setFrequencies(array $frequencies)
   {
+    foreach ($frequencies as $f) {
+      if (!$f instanceof Google_Service_AdExchangeBuyerII_DetailFrequency) {
+        throw new InvalidArgumentException('First argument to setFrequencies must be an array of Google_Service_AdExchangeBuyerII_DetailFrequency');
+      }
+    }
     $this->frequencies = $frequencies;
   }
   public function getFrequencies()

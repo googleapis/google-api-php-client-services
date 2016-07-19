@@ -19,8 +19,7 @@ class Google_Service_AndroidPublisher_TracksListResponse extends Google_Collecti
 {
   protected $collection_key = 'tracks';
   public $kind;
-  protected $tracksType = 'Google_Service_AndroidPublisher_Track';
-  protected $tracksDataType = 'array';
+  public $tracks;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_AndroidPublisher_TracksListResponse extends Google_Collecti
   {
     return $this->kind;
   }
-  public function setTracks($tracks)
+  public function setTracks(array $tracks)
   {
+    foreach ($tracks as $t) {
+      if (!$t instanceof Google_Service_AndroidPublisher_Track) {
+        throw new InvalidArgumentException('First argument to setTracks must be an array of Google_Service_AndroidPublisher_Track');
+      }
+    }
     $this->tracks = $tracks;
   }
   public function getTracks()

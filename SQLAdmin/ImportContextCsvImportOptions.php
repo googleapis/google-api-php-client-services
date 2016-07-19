@@ -21,7 +21,7 @@ class Google_Service_SQLAdmin_ImportContextCsvImportOptions extends Google_Colle
   public $columns;
   public $table;
 
-  public function setColumns($columns)
+  public function setColumns(array $columns)
   {
     $this->columns = $columns;
   }

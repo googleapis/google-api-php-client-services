@@ -17,10 +17,8 @@
 
 class Google_Service_ShoppingContent_AccountShippingRateTableCell extends Google_Model
 {
-  protected $conditionType = 'Google_Service_ShoppingContent_AccountShippingCondition';
-  protected $conditionDataType = '';
-  protected $rateType = 'Google_Service_ShoppingContent_Price';
-  protected $rateDataType = '';
+  public $condition;
+  public $rate;
 
   public function setCondition(Google_Service_ShoppingContent_AccountShippingCondition $condition)
   {

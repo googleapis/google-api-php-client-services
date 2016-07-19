@@ -29,7 +29,7 @@ class Google_Service_Compute_InstanceGroupManagersSetTargetPoolsRequest extends 
   {
     return $this->fingerprint;
   }
-  public function setTargetPools($targetPools)
+  public function setTargetPools(array $targetPools)
   {
     $this->targetPools = $targetPools;
   }

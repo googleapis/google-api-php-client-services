@@ -18,18 +18,21 @@
 class Google_Service_Analytics_EntityAdWordsLink extends Google_Collection
 {
   protected $collection_key = 'profileIds';
-  protected $adWordsAccountsType = 'Google_Service_Analytics_AdWordsAccount';
-  protected $adWordsAccountsDataType = 'array';
-  protected $entityType = 'Google_Service_Analytics_EntityAdWordsLinkEntity';
-  protected $entityDataType = '';
+  public $adWordsAccounts;
+  public $entity;
   public $id;
   public $kind;
   public $name;
   public $profileIds;
   public $selfLink;
 
-  public function setAdWordsAccounts($adWordsAccounts)
+  public function setAdWordsAccounts(array $adWordsAccounts)
   {
+    foreach ($adWordsAccounts as $a) {
+      if (!$a instanceof Google_Service_Analytics_AdWordsAccount) {
+        throw new InvalidArgumentException('First argument to setAdWordsAccounts must be an array of Google_Service_Analytics_AdWordsAccount');
+      }
+    }
     $this->adWordsAccounts = $adWordsAccounts;
   }
   public function getAdWordsAccounts()
@@ -68,7 +71,7 @@ class Google_Service_Analytics_EntityAdWordsLink extends Google_Collection
   {
     return $this->name;
   }
-  public function setProfileIds($profileIds)
+  public function setProfileIds(array $profileIds)
   {
     $this->profileIds = $profileIds;
   }

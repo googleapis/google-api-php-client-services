@@ -18,8 +18,7 @@
 class Google_Service_TagManager_CreateContainerVersionResponse extends Google_Model
 {
   public $compilerError;
-  protected $containerVersionType = 'Google_Service_TagManager_ContainerVersion';
-  protected $containerVersionDataType = '';
+  public $containerVersion;
 
   public function setCompilerError($compilerError)
   {

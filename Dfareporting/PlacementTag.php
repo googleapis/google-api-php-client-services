@@ -19,8 +19,7 @@ class Google_Service_Dfareporting_PlacementTag extends Google_Collection
 {
   protected $collection_key = 'tagDatas';
   public $placementId;
-  protected $tagDatasType = 'Google_Service_Dfareporting_TagData';
-  protected $tagDatasDataType = 'array';
+  public $tagDatas;
 
   public function setPlacementId($placementId)
   {
@@ -30,8 +29,13 @@ class Google_Service_Dfareporting_PlacementTag extends Google_Collection
   {
     return $this->placementId;
   }
-  public function setTagDatas($tagDatas)
+  public function setTagDatas(array $tagDatas)
   {
+    foreach ($tagDatas as $t) {
+      if (!$t instanceof Google_Service_Dfareporting_TagData) {
+        throw new InvalidArgumentException('First argument to setTagDatas must be an array of Google_Service_Dfareporting_TagData');
+      }
+    }
     $this->tagDatas = $tagDatas;
   }
   public function getTagDatas()

@@ -23,8 +23,7 @@ class Google_Service_Appengine_Application extends Google_Collection
   public $defaultBucket;
   public $defaultCookieExpiration;
   public $defaultHostname;
-  protected $dispatchRulesType = 'Google_Service_Appengine_UrlDispatchRule';
-  protected $dispatchRulesDataType = 'array';
+  public $dispatchRules;
   public $id;
   public $location;
   public $name;
@@ -69,8 +68,13 @@ class Google_Service_Appengine_Application extends Google_Collection
   {
     return $this->defaultHostname;
   }
-  public function setDispatchRules($dispatchRules)
+  public function setDispatchRules(array $dispatchRules)
   {
+    foreach ($dispatchRules as $d) {
+      if (!$d instanceof Google_Service_Appengine_UrlDispatchRule) {
+        throw new InvalidArgumentException('First argument to setDispatchRules must be an array of Google_Service_Appengine_UrlDispatchRule');
+      }
+    }
     $this->dispatchRules = $dispatchRules;
   }
   public function getDispatchRules()

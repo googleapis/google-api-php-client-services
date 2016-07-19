@@ -19,18 +19,14 @@ class Google_Service_Bigquery_GetQueryResultsResponse extends Google_Collection
 {
   protected $collection_key = 'rows';
   public $cacheHit;
-  protected $errorsType = 'Google_Service_Bigquery_ErrorProto';
-  protected $errorsDataType = 'array';
+  public $errors;
   public $etag;
   public $jobComplete;
-  protected $jobReferenceType = 'Google_Service_Bigquery_JobReference';
-  protected $jobReferenceDataType = '';
+  public $jobReference;
   public $kind;
   public $pageToken;
-  protected $rowsType = 'Google_Service_Bigquery_TableRow';
-  protected $rowsDataType = 'array';
-  protected $schemaType = 'Google_Service_Bigquery_TableSchema';
-  protected $schemaDataType = '';
+  public $rows;
+  public $schema;
   public $totalBytesProcessed;
   public $totalRows;
 
@@ -42,8 +38,13 @@ class Google_Service_Bigquery_GetQueryResultsResponse extends Google_Collection
   {
     return $this->cacheHit;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_Bigquery_ErrorProto) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_Bigquery_ErrorProto');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()
@@ -90,8 +91,13 @@ class Google_Service_Bigquery_GetQueryResultsResponse extends Google_Collection
   {
     return $this->pageToken;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
+    foreach ($rows as $r) {
+      if (!$r instanceof Google_Service_Bigquery_TableRow) {
+        throw new InvalidArgumentException('First argument to setRows must be an array of Google_Service_Bigquery_TableRow');
+      }
+    }
     $this->rows = $rows;
   }
   public function getRows()

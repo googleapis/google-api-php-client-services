@@ -19,8 +19,7 @@ class Google_Service_TagManager_Rule extends Google_Collection
 {
   protected $collection_key = 'condition';
   public $accountId;
-  protected $conditionType = 'Google_Service_TagManager_Condition';
-  protected $conditionDataType = 'array';
+  public $condition;
   public $containerId;
   public $fingerprint;
   public $name;
@@ -35,8 +34,13 @@ class Google_Service_TagManager_Rule extends Google_Collection
   {
     return $this->accountId;
   }
-  public function setCondition($condition)
+  public function setCondition(array $condition)
   {
+    foreach ($condition as $c) {
+      if (!$c instanceof Google_Service_TagManager_Condition) {
+        throw new InvalidArgumentException('First argument to setCondition must be an array of Google_Service_TagManager_Condition');
+      }
+    }
     $this->condition = $condition;
   }
   public function getCondition()

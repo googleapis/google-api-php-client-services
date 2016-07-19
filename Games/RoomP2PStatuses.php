@@ -19,8 +19,7 @@ class Google_Service_Games_RoomP2PStatuses extends Google_Collection
 {
   protected $collection_key = 'updates';
   public $kind;
-  protected $updatesType = 'Google_Service_Games_RoomP2PStatus';
-  protected $updatesDataType = 'array';
+  public $updates;
 
   public function setKind($kind)
   {
@@ -30,8 +29,13 @@ class Google_Service_Games_RoomP2PStatuses extends Google_Collection
   {
     return $this->kind;
   }
-  public function setUpdates($updates)
+  public function setUpdates(array $updates)
   {
+    foreach ($updates as $u) {
+      if (!$u instanceof Google_Service_Games_RoomP2PStatus) {
+        throw new InvalidArgumentException('First argument to setUpdates must be an array of Google_Service_Games_RoomP2PStatus');
+      }
+    }
     $this->updates = $updates;
   }
   public function getUpdates()

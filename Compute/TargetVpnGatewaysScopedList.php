@@ -18,13 +18,16 @@
 class Google_Service_Compute_TargetVpnGatewaysScopedList extends Google_Collection
 {
   protected $collection_key = 'targetVpnGateways';
-  protected $targetVpnGatewaysType = 'Google_Service_Compute_TargetVpnGateway';
-  protected $targetVpnGatewaysDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_TargetVpnGatewaysScopedListWarning';
-  protected $warningDataType = '';
+  public $targetVpnGateways;
+  public $warning;
 
-  public function setTargetVpnGateways($targetVpnGateways)
+  public function setTargetVpnGateways(array $targetVpnGateways)
   {
+    foreach ($targetVpnGateways as $t) {
+      if (!$t instanceof Google_Service_Compute_TargetVpnGateway) {
+        throw new InvalidArgumentException('First argument to setTargetVpnGateways must be an array of Google_Service_Compute_TargetVpnGateway');
+      }
+    }
     $this->targetVpnGateways = $targetVpnGateways;
   }
   public function getTargetVpnGateways()

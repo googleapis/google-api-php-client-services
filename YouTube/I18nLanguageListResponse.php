@@ -20,8 +20,7 @@ class Google_Service_YouTube_I18nLanguageListResponse extends Google_Collection
   protected $collection_key = 'items';
   public $etag;
   public $eventId;
-  protected $itemsType = 'Google_Service_YouTube_I18nLanguage';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $visitorId;
 
@@ -41,8 +40,13 @@ class Google_Service_YouTube_I18nLanguageListResponse extends Google_Collection
   {
     return $this->eventId;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_YouTube_I18nLanguage) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_YouTube_I18nLanguage');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

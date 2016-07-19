@@ -19,8 +19,7 @@ class Google_Service_AdExchangeBuyerII_ListClientUsersResponse extends Google_Co
 {
   protected $collection_key = 'users';
   public $nextPageToken;
-  protected $usersType = 'Google_Service_AdExchangeBuyerII_ClientUser';
-  protected $usersDataType = 'array';
+  public $users;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_AdExchangeBuyerII_ListClientUsersResponse extends Google_Co
   {
     return $this->nextPageToken;
   }
-  public function setUsers($users)
+  public function setUsers(array $users)
   {
+    foreach ($users as $u) {
+      if (!$u instanceof Google_Service_AdExchangeBuyerII_ClientUser) {
+        throw new InvalidArgumentException('First argument to setUsers must be an array of Google_Service_AdExchangeBuyerII_ClientUser');
+      }
+    }
     $this->users = $users;
   }
   public function getUsers()

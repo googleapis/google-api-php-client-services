@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_AccountPermissionGroupsListResponse extends Google_Collection
 {
   protected $collection_key = 'accountPermissionGroups';
-  protected $accountPermissionGroupsType = 'Google_Service_Dfareporting_AccountPermissionGroup';
-  protected $accountPermissionGroupsDataType = 'array';
+  public $accountPermissionGroups;
   public $kind;
 
-  public function setAccountPermissionGroups($accountPermissionGroups)
+  public function setAccountPermissionGroups(array $accountPermissionGroups)
   {
+    foreach ($accountPermissionGroups as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_AccountPermissionGroup) {
+        throw new InvalidArgumentException('First argument to setAccountPermissionGroups must be an array of Google_Service_Dfareporting_AccountPermissionGroup');
+      }
+    }
     $this->accountPermissionGroups = $accountPermissionGroups;
   }
   public function getAccountPermissionGroups()

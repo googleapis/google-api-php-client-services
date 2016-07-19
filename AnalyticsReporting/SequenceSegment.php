@@ -19,8 +19,7 @@ class Google_Service_AnalyticsReporting_SequenceSegment extends Google_Collectio
 {
   protected $collection_key = 'segmentSequenceSteps';
   public $firstStepShouldMatchFirstHit;
-  protected $segmentSequenceStepsType = 'Google_Service_AnalyticsReporting_SegmentSequenceStep';
-  protected $segmentSequenceStepsDataType = 'array';
+  public $segmentSequenceSteps;
 
   public function setFirstStepShouldMatchFirstHit($firstStepShouldMatchFirstHit)
   {
@@ -30,8 +29,13 @@ class Google_Service_AnalyticsReporting_SequenceSegment extends Google_Collectio
   {
     return $this->firstStepShouldMatchFirstHit;
   }
-  public function setSegmentSequenceSteps($segmentSequenceSteps)
+  public function setSegmentSequenceSteps(array $segmentSequenceSteps)
   {
+    foreach ($segmentSequenceSteps as $s) {
+      if (!$s instanceof Google_Service_AnalyticsReporting_SegmentSequenceStep) {
+        throw new InvalidArgumentException('First argument to setSegmentSequenceSteps must be an array of Google_Service_AnalyticsReporting_SegmentSequenceStep');
+      }
+    }
     $this->segmentSequenceSteps = $segmentSequenceSteps;
   }
   public function getSegmentSequenceSteps()

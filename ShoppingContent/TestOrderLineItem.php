@@ -17,15 +17,11 @@
 
 class Google_Service_ShoppingContent_TestOrderLineItem extends Google_Model
 {
-  protected $productType = 'Google_Service_ShoppingContent_TestOrderLineItemProduct';
-  protected $productDataType = '';
+  public $product;
   public $quantityOrdered;
-  protected $returnInfoType = 'Google_Service_ShoppingContent_OrderLineItemReturnInfo';
-  protected $returnInfoDataType = '';
-  protected $shippingDetailsType = 'Google_Service_ShoppingContent_OrderLineItemShippingDetails';
-  protected $shippingDetailsDataType = '';
-  protected $unitTaxType = 'Google_Service_ShoppingContent_Price';
-  protected $unitTaxDataType = '';
+  public $returnInfo;
+  public $shippingDetails;
+  public $unitTax;
 
   public function setProduct(Google_Service_ShoppingContent_TestOrderLineItemProduct $product)
   {

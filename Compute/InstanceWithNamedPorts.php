@@ -19,8 +19,7 @@ class Google_Service_Compute_InstanceWithNamedPorts extends Google_Collection
 {
   protected $collection_key = 'namedPorts';
   public $instance;
-  protected $namedPortsType = 'Google_Service_Compute_NamedPort';
-  protected $namedPortsDataType = 'array';
+  public $namedPorts;
   public $status;
 
   public function setInstance($instance)
@@ -31,8 +30,13 @@ class Google_Service_Compute_InstanceWithNamedPorts extends Google_Collection
   {
     return $this->instance;
   }
-  public function setNamedPorts($namedPorts)
+  public function setNamedPorts(array $namedPorts)
   {
+    foreach ($namedPorts as $n) {
+      if (!$n instanceof Google_Service_Compute_NamedPort) {
+        throw new InvalidArgumentException('First argument to setNamedPorts must be an array of Google_Service_Compute_NamedPort');
+      }
+    }
     $this->namedPorts = $namedPorts;
   }
   public function getNamedPorts()

@@ -24,8 +24,7 @@ class Google_Service_Partners_Lead extends Google_Collection
   public $givenName;
   public $gpsMotivations;
   public $id;
-  protected $minMonthlyBudgetType = 'Google_Service_Partners_Money';
-  protected $minMonthlyBudgetDataType = '';
+  public $minMonthlyBudget;
   public $phoneNumber;
   public $type;
   public $websiteUrl;
@@ -62,7 +61,7 @@ class Google_Service_Partners_Lead extends Google_Collection
   {
     return $this->givenName;
   }
-  public function setGpsMotivations($gpsMotivations)
+  public function setGpsMotivations(array $gpsMotivations)
   {
     $this->gpsMotivations = $gpsMotivations;
   }

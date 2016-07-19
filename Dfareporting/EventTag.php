@@ -20,11 +20,9 @@ class Google_Service_Dfareporting_EventTag extends Google_Collection
   protected $collection_key = 'siteIds';
   public $accountId;
   public $advertiserId;
-  protected $advertiserIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $advertiserIdDimensionValueDataType = '';
+  public $advertiserIdDimensionValue;
   public $campaignId;
-  protected $campaignIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $campaignIdDimensionValueDataType = '';
+  public $campaignIdDimensionValue;
   public $enabledByDefault;
   public $excludeFromAdxRequests;
   public $id;
@@ -127,7 +125,7 @@ class Google_Service_Dfareporting_EventTag extends Google_Collection
   {
     return $this->siteFilterType;
   }
-  public function setSiteIds($siteIds)
+  public function setSiteIds(array $siteIds)
   {
     $this->siteIds = $siteIds;
   }

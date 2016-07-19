@@ -46,7 +46,7 @@ class Google_Service_Compute_TargetVpnGateway extends Google_Collection
   {
     return $this->description;
   }
-  public function setForwardingRules($forwardingRules)
+  public function setForwardingRules(array $forwardingRules)
   {
     $this->forwardingRules = $forwardingRules;
   }
@@ -110,7 +110,7 @@ class Google_Service_Compute_TargetVpnGateway extends Google_Collection
   {
     return $this->status;
   }
-  public function setTunnels($tunnels)
+  public function setTunnels(array $tunnels)
   {
     $this->tunnels = $tunnels;
   }

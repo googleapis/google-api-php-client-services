@@ -20,7 +20,7 @@ class Google_Service_Calendar_EventExtendedProperties extends Google_Model
   public $private;
   public $shared;
 
-  public function setPrivate($private)
+  public function setPrivate(array $private)
   {
     $this->private = $private;
   }
@@ -28,7 +28,7 @@ class Google_Service_Calendar_EventExtendedProperties extends Google_Model
   {
     return $this->private;
   }
-  public function setShared($shared)
+  public function setShared(array $shared)
   {
     $this->shared = $shared;
   }

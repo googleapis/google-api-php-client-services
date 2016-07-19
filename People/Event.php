@@ -17,11 +17,9 @@
 
 class Google_Service_People_Event extends Google_Model
 {
-  protected $dateType = 'Google_Service_People_Date';
-  protected $dateDataType = '';
+  public $date;
   public $formattedType;
-  protected $metadataType = 'Google_Service_People_FieldMetadata';
-  protected $metadataDataType = '';
+  public $metadata;
   public $type;
 
   public function setDate(Google_Service_People_Date $date)

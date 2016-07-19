@@ -18,10 +18,8 @@
 class Google_Service_ShoppingContent_DatafeedstatusesCustomBatchResponseEntry extends Google_Model
 {
   public $batchId;
-  protected $datafeedStatusType = 'Google_Service_ShoppingContent_DatafeedStatus';
-  protected $datafeedStatusDataType = '';
-  protected $errorsType = 'Google_Service_ShoppingContent_Errors';
-  protected $errorsDataType = '';
+  public $datafeedStatus;
+  public $errors;
 
   public function setBatchId($batchId)
   {

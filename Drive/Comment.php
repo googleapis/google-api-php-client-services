@@ -19,8 +19,7 @@ class Google_Service_Drive_Comment extends Google_Collection
 {
   protected $collection_key = 'replies';
   public $anchor;
-  protected $authorType = 'Google_Service_Drive_User';
-  protected $authorDataType = '';
+  public $author;
   public $content;
   public $createdTime;
   public $deleted;
@@ -28,10 +27,8 @@ class Google_Service_Drive_Comment extends Google_Collection
   public $id;
   public $kind;
   public $modifiedTime;
-  protected $quotedFileContentType = 'Google_Service_Drive_CommentQuotedFileContent';
-  protected $quotedFileContentDataType = '';
-  protected $repliesType = 'Google_Service_Drive_Reply';
-  protected $repliesDataType = 'array';
+  public $quotedFileContent;
+  public $replies;
   public $resolved;
 
   public function setAnchor($anchor)
@@ -114,8 +111,13 @@ class Google_Service_Drive_Comment extends Google_Collection
   {
     return $this->quotedFileContent;
   }
-  public function setReplies($replies)
+  public function setReplies(array $replies)
   {
+    foreach ($replies as $r) {
+      if (!$r instanceof Google_Service_Drive_Reply) {
+        throw new InvalidArgumentException('First argument to setReplies must be an array of Google_Service_Drive_Reply');
+      }
+    }
     $this->replies = $replies;
   }
   public function getReplies()

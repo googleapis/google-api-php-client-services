@@ -17,10 +17,8 @@
 
 class Google_Service_Container_AddonsConfig extends Google_Model
 {
-  protected $horizontalPodAutoscalingType = 'Google_Service_Container_HorizontalPodAutoscaling';
-  protected $horizontalPodAutoscalingDataType = '';
-  protected $httpLoadBalancingType = 'Google_Service_Container_HttpLoadBalancing';
-  protected $httpLoadBalancingDataType = '';
+  public $horizontalPodAutoscaling;
+  public $httpLoadBalancing;
 
   public function setHorizontalPodAutoscaling(Google_Service_Container_HorizontalPodAutoscaling $horizontalPodAutoscaling)
   {

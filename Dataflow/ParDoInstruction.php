@@ -18,13 +18,10 @@
 class Google_Service_Dataflow_ParDoInstruction extends Google_Collection
 {
   protected $collection_key = 'sideInputs';
-  protected $inputType = 'Google_Service_Dataflow_InstructionInput';
-  protected $inputDataType = '';
-  protected $multiOutputInfosType = 'Google_Service_Dataflow_MultiOutputInfo';
-  protected $multiOutputInfosDataType = 'array';
+  public $input;
+  public $multiOutputInfos;
   public $numOutputs;
-  protected $sideInputsType = 'Google_Service_Dataflow_SideInputInfo';
-  protected $sideInputsDataType = 'array';
+  public $sideInputs;
   public $userFn;
 
   public function setInput(Google_Service_Dataflow_InstructionInput $input)
@@ -35,8 +32,13 @@ class Google_Service_Dataflow_ParDoInstruction extends Google_Collection
   {
     return $this->input;
   }
-  public function setMultiOutputInfos($multiOutputInfos)
+  public function setMultiOutputInfos(array $multiOutputInfos)
   {
+    foreach ($multiOutputInfos as $m) {
+      if (!$m instanceof Google_Service_Dataflow_MultiOutputInfo) {
+        throw new InvalidArgumentException('First argument to setMultiOutputInfos must be an array of Google_Service_Dataflow_MultiOutputInfo');
+      }
+    }
     $this->multiOutputInfos = $multiOutputInfos;
   }
   public function getMultiOutputInfos()
@@ -51,15 +53,20 @@ class Google_Service_Dataflow_ParDoInstruction extends Google_Collection
   {
     return $this->numOutputs;
   }
-  public function setSideInputs($sideInputs)
+  public function setSideInputs(array $sideInputs)
   {
+    foreach ($sideInputs as $s) {
+      if (!$s instanceof Google_Service_Dataflow_SideInputInfo) {
+        throw new InvalidArgumentException('First argument to setSideInputs must be an array of Google_Service_Dataflow_SideInputInfo');
+      }
+    }
     $this->sideInputs = $sideInputs;
   }
   public function getSideInputs()
   {
     return $this->sideInputs;
   }
-  public function setUserFn($userFn)
+  public function setUserFn(array $userFn)
   {
     $this->userFn = $userFn;
   }

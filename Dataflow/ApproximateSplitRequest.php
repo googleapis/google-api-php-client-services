@@ -18,8 +18,7 @@
 class Google_Service_Dataflow_ApproximateSplitRequest extends Google_Model
 {
   public $fractionConsumed;
-  protected $positionType = 'Google_Service_Dataflow_Position';
-  protected $positionDataType = '';
+  public $position;
 
   public function setFractionConsumed($fractionConsumed)
   {

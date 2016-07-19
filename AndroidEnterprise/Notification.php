@@ -17,19 +17,13 @@
 
 class Google_Service_AndroidEnterprise_Notification extends Google_Model
 {
-  protected $appRestrictionsSchemaChangeEventType = 'Google_Service_AndroidEnterprise_AppRestrictionsSchemaChangeEvent';
-  protected $appRestrictionsSchemaChangeEventDataType = '';
-  protected $appUpdateEventType = 'Google_Service_AndroidEnterprise_AppUpdateEvent';
-  protected $appUpdateEventDataType = '';
+  public $appRestrictionsSchemaChangeEvent;
+  public $appUpdateEvent;
   public $enterpriseId;
-  protected $installFailureEventType = 'Google_Service_AndroidEnterprise_InstallFailureEvent';
-  protected $installFailureEventDataType = '';
-  protected $newPermissionsEventType = 'Google_Service_AndroidEnterprise_NewPermissionsEvent';
-  protected $newPermissionsEventDataType = '';
-  protected $productApprovalEventType = 'Google_Service_AndroidEnterprise_ProductApprovalEvent';
-  protected $productApprovalEventDataType = '';
-  protected $productAvailabilityChangeEventType = 'Google_Service_AndroidEnterprise_ProductAvailabilityChangeEvent';
-  protected $productAvailabilityChangeEventDataType = '';
+  public $installFailureEvent;
+  public $newPermissionsEvent;
+  public $productApprovalEvent;
+  public $productAvailabilityChangeEvent;
   public $timestampMillis;
 
   public function setAppRestrictionsSchemaChangeEvent(Google_Service_AndroidEnterprise_AppRestrictionsSchemaChangeEvent $appRestrictionsSchemaChangeEvent)

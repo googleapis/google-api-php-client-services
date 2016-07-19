@@ -20,15 +20,12 @@ class Google_Service_YouTube_LiveBroadcastListResponse extends Google_Collection
   protected $collection_key = 'items';
   public $etag;
   public $eventId;
-  protected $itemsType = 'Google_Service_YouTube_LiveBroadcast';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $nextPageToken;
-  protected $pageInfoType = 'Google_Service_YouTube_PageInfo';
-  protected $pageInfoDataType = '';
+  public $pageInfo;
   public $prevPageToken;
-  protected $tokenPaginationType = 'Google_Service_YouTube_TokenPagination';
-  protected $tokenPaginationDataType = '';
+  public $tokenPagination;
   public $visitorId;
 
   public function setEtag($etag)
@@ -47,8 +44,13 @@ class Google_Service_YouTube_LiveBroadcastListResponse extends Google_Collection
   {
     return $this->eventId;
   }
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_YouTube_LiveBroadcast) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_YouTube_LiveBroadcast');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()

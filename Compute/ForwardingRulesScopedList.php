@@ -18,13 +18,16 @@
 class Google_Service_Compute_ForwardingRulesScopedList extends Google_Collection
 {
   protected $collection_key = 'forwardingRules';
-  protected $forwardingRulesType = 'Google_Service_Compute_ForwardingRule';
-  protected $forwardingRulesDataType = 'array';
-  protected $warningType = 'Google_Service_Compute_ForwardingRulesScopedListWarning';
-  protected $warningDataType = '';
+  public $forwardingRules;
+  public $warning;
 
-  public function setForwardingRules($forwardingRules)
+  public function setForwardingRules(array $forwardingRules)
   {
+    foreach ($forwardingRules as $f) {
+      if (!$f instanceof Google_Service_Compute_ForwardingRule) {
+        throw new InvalidArgumentException('First argument to setForwardingRules must be an array of Google_Service_Compute_ForwardingRule');
+      }
+    }
     $this->forwardingRules = $forwardingRules;
   }
   public function getForwardingRules()

@@ -23,10 +23,8 @@ class Google_Service_YouTube_PlaylistItemSnippet extends Google_Model
   public $playlistId;
   public $position;
   public $publishedAt;
-  protected $resourceIdType = 'Google_Service_YouTube_ResourceId';
-  protected $resourceIdDataType = '';
-  protected $thumbnailsType = 'Google_Service_YouTube_ThumbnailDetails';
-  protected $thumbnailsDataType = '';
+  public $resourceId;
+  public $thumbnails;
   public $title;
 
   public function setChannelId($channelId)

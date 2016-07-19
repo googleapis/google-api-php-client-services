@@ -18,12 +18,16 @@
 class Google_Service_ShoppingContent_AccountsAuthInfoResponse extends Google_Collection
 {
   protected $collection_key = 'accountIdentifiers';
-  protected $accountIdentifiersType = 'Google_Service_ShoppingContent_AccountIdentifier';
-  protected $accountIdentifiersDataType = 'array';
+  public $accountIdentifiers;
   public $kind;
 
-  public function setAccountIdentifiers($accountIdentifiers)
+  public function setAccountIdentifiers(array $accountIdentifiers)
   {
+    foreach ($accountIdentifiers as $a) {
+      if (!$a instanceof Google_Service_ShoppingContent_AccountIdentifier) {
+        throw new InvalidArgumentException('First argument to setAccountIdentifiers must be an array of Google_Service_ShoppingContent_AccountIdentifier');
+      }
+    }
     $this->accountIdentifiers = $accountIdentifiers;
   }
   public function getAccountIdentifiers()

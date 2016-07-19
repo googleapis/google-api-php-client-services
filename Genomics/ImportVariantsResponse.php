@@ -20,7 +20,7 @@ class Google_Service_Genomics_ImportVariantsResponse extends Google_Collection
   protected $collection_key = 'callSetIds';
   public $callSetIds;
 
-  public function setCallSetIds($callSetIds)
+  public function setCallSetIds(array $callSetIds)
   {
     $this->callSetIds = $callSetIds;
   }

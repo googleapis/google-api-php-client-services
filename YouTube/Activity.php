@@ -17,13 +17,11 @@
 
 class Google_Service_YouTube_Activity extends Google_Model
 {
-  protected $contentDetailsType = 'Google_Service_YouTube_ActivityContentDetails';
-  protected $contentDetailsDataType = '';
+  public $contentDetails;
   public $etag;
   public $id;
   public $kind;
-  protected $snippetType = 'Google_Service_YouTube_ActivitySnippet';
-  protected $snippetDataType = '';
+  public $snippet;
 
   public function setContentDetails(Google_Service_YouTube_ActivityContentDetails $contentDetails)
   {

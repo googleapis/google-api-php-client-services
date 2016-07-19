@@ -18,11 +18,9 @@
 class Google_Service_Bigquery_Dataset extends Google_Collection
 {
   protected $collection_key = 'access';
-  protected $accessType = 'Google_Service_Bigquery_DatasetAccess';
-  protected $accessDataType = 'array';
+  public $access;
   public $creationTime;
-  protected $datasetReferenceType = 'Google_Service_Bigquery_DatasetReference';
-  protected $datasetReferenceDataType = '';
+  public $datasetReference;
   public $defaultTableExpirationMs;
   public $description;
   public $etag;
@@ -34,8 +32,13 @@ class Google_Service_Bigquery_Dataset extends Google_Collection
   public $location;
   public $selfLink;
 
-  public function setAccess($access)
+  public function setAccess(array $access)
   {
+    foreach ($access as $a) {
+      if (!$a instanceof Google_Service_Bigquery_DatasetAccess) {
+        throw new InvalidArgumentException('First argument to setAccess must be an array of Google_Service_Bigquery_DatasetAccess');
+      }
+    }
     $this->access = $access;
   }
   public function getAccess()
@@ -106,7 +109,7 @@ class Google_Service_Bigquery_Dataset extends Google_Collection
   {
     return $this->kind;
   }
-  public function setLabels($labels)
+  public function setLabels(array $labels)
   {
     $this->labels = $labels;
   }

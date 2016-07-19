@@ -18,17 +18,14 @@
 class Google_Service_Games_Instance extends Google_Model
 {
   public $acquisitionUri;
-  protected $androidInstanceType = 'Google_Service_Games_InstanceAndroidDetails';
-  protected $androidInstanceDataType = '';
-  protected $iosInstanceType = 'Google_Service_Games_InstanceIosDetails';
-  protected $iosInstanceDataType = '';
+  public $androidInstance;
+  public $iosInstance;
   public $kind;
   public $name;
   public $platformType;
   public $realtimePlay;
   public $turnBasedPlay;
-  protected $webInstanceType = 'Google_Service_Games_InstanceWebDetails';
-  protected $webInstanceDataType = '';
+  public $webInstance;
 
   public function setAcquisitionUri($acquisitionUri)
   {

@@ -21,7 +21,7 @@ class Google_Service_Fusiontables_Polygon extends Google_Collection
   public $coordinates;
   public $type;
 
-  public function setCoordinates($coordinates)
+  public function setCoordinates(array $coordinates)
   {
     $this->coordinates = $coordinates;
   }

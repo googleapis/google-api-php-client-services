@@ -17,8 +17,7 @@
 
 class Google_Service_Dataflow_ReadInstruction extends Google_Model
 {
-  protected $sourceType = 'Google_Service_Dataflow_Source';
-  protected $sourceDataType = '';
+  public $source;
 
   public function setSource(Google_Service_Dataflow_Source $source)
   {

@@ -17,16 +17,13 @@
 
 class Google_Service_Appengine_UrlMap extends Google_Model
 {
-  protected $apiEndpointType = 'Google_Service_Appengine_ApiEndpointHandler';
-  protected $apiEndpointDataType = '';
+  public $apiEndpoint;
   public $authFailAction;
   public $login;
   public $redirectHttpResponseCode;
-  protected $scriptType = 'Google_Service_Appengine_ScriptHandler';
-  protected $scriptDataType = '';
+  public $script;
   public $securityLevel;
-  protected $staticFilesType = 'Google_Service_Appengine_StaticFilesHandler';
-  protected $staticFilesDataType = '';
+  public $staticFiles;
   public $urlRegex;
 
   public function setApiEndpoint(Google_Service_Appengine_ApiEndpointHandler $apiEndpoint)

@@ -17,10 +17,8 @@
 
 class Google_Service_AdExchangeBuyer_TargetingValue extends Google_Model
 {
-  protected $creativeSizeValueType = 'Google_Service_AdExchangeBuyer_TargetingValueCreativeSize';
-  protected $creativeSizeValueDataType = '';
-  protected $dayPartTargetingValueType = 'Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting';
-  protected $dayPartTargetingValueDataType = '';
+  public $creativeSizeValue;
+  public $dayPartTargetingValue;
   public $longValue;
   public $stringValue;
 

@@ -19,10 +19,8 @@ class Google_Service_Games_EventPeriodUpdate extends Google_Collection
 {
   protected $collection_key = 'updates';
   public $kind;
-  protected $timePeriodType = 'Google_Service_Games_EventPeriodRange';
-  protected $timePeriodDataType = '';
-  protected $updatesType = 'Google_Service_Games_EventUpdateRequest';
-  protected $updatesDataType = 'array';
+  public $timePeriod;
+  public $updates;
 
   public function setKind($kind)
   {
@@ -40,8 +38,13 @@ class Google_Service_Games_EventPeriodUpdate extends Google_Collection
   {
     return $this->timePeriod;
   }
-  public function setUpdates($updates)
+  public function setUpdates(array $updates)
   {
+    foreach ($updates as $u) {
+      if (!$u instanceof Google_Service_Games_EventUpdateRequest) {
+        throw new InvalidArgumentException('First argument to setUpdates must be an array of Google_Service_Games_EventUpdateRequest');
+      }
+    }
     $this->updates = $updates;
   }
   public function getUpdates()

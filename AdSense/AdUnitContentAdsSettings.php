@@ -17,8 +17,7 @@
 
 class Google_Service_AdSense_AdUnitContentAdsSettings extends Google_Model
 {
-  protected $backupOptionType = 'Google_Service_AdSense_AdUnitContentAdsSettingsBackupOption';
-  protected $backupOptionDataType = '';
+  public $backupOption;
   public $size;
   public $type;
 

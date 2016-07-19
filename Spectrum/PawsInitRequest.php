@@ -17,10 +17,8 @@
 
 class Google_Service_Spectrum_PawsInitRequest extends Google_Model
 {
-  protected $deviceDescType = 'Google_Service_Spectrum_DeviceDescriptor';
-  protected $deviceDescDataType = '';
-  protected $locationType = 'Google_Service_Spectrum_GeoLocation';
-  protected $locationDataType = '';
+  public $deviceDesc;
+  public $location;
   public $type;
   public $version;
 

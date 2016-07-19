@@ -18,14 +18,10 @@
 class Google_Service_YouTube_ChannelBrandingSettings extends Google_Collection
 {
   protected $collection_key = 'hints';
-  protected $channelType = 'Google_Service_YouTube_ChannelSettings';
-  protected $channelDataType = '';
-  protected $hintsType = 'Google_Service_YouTube_PropertyValue';
-  protected $hintsDataType = 'array';
-  protected $imageType = 'Google_Service_YouTube_ImageSettings';
-  protected $imageDataType = '';
-  protected $watchType = 'Google_Service_YouTube_WatchSettings';
-  protected $watchDataType = '';
+  public $channel;
+  public $hints;
+  public $image;
+  public $watch;
 
   public function setChannel(Google_Service_YouTube_ChannelSettings $channel)
   {
@@ -35,8 +31,13 @@ class Google_Service_YouTube_ChannelBrandingSettings extends Google_Collection
   {
     return $this->channel;
   }
-  public function setHints($hints)
+  public function setHints(array $hints)
   {
+    foreach ($hints as $h) {
+      if (!$h instanceof Google_Service_YouTube_PropertyValue) {
+        throw new InvalidArgumentException('First argument to setHints must be an array of Google_Service_YouTube_PropertyValue');
+      }
+    }
     $this->hints = $hints;
   }
   public function getHints()

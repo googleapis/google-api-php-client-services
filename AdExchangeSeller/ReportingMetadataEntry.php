@@ -26,7 +26,7 @@ class Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Google_Coll
   public $requiredMetrics;
   public $supportedProducts;
 
-  public function setCompatibleDimensions($compatibleDimensions)
+  public function setCompatibleDimensions(array $compatibleDimensions)
   {
     $this->compatibleDimensions = $compatibleDimensions;
   }
@@ -34,7 +34,7 @@ class Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Google_Coll
   {
     return $this->compatibleDimensions;
   }
-  public function setCompatibleMetrics($compatibleMetrics)
+  public function setCompatibleMetrics(array $compatibleMetrics)
   {
     $this->compatibleMetrics = $compatibleMetrics;
   }
@@ -58,7 +58,7 @@ class Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Google_Coll
   {
     return $this->kind;
   }
-  public function setRequiredDimensions($requiredDimensions)
+  public function setRequiredDimensions(array $requiredDimensions)
   {
     $this->requiredDimensions = $requiredDimensions;
   }
@@ -66,7 +66,7 @@ class Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Google_Coll
   {
     return $this->requiredDimensions;
   }
-  public function setRequiredMetrics($requiredMetrics)
+  public function setRequiredMetrics(array $requiredMetrics)
   {
     $this->requiredMetrics = $requiredMetrics;
   }
@@ -74,7 +74,7 @@ class Google_Service_AdExchangeSeller_ReportingMetadataEntry extends Google_Coll
   {
     return $this->requiredMetrics;
   }
-  public function setSupportedProducts($supportedProducts)
+  public function setSupportedProducts(array $supportedProducts)
   {
     $this->supportedProducts = $supportedProducts;
   }

@@ -19,8 +19,7 @@ class Google_Service_DeploymentManager_ResourcesListResponse extends Google_Coll
 {
   protected $collection_key = 'resources';
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_DeploymentManager_DeploymentmanagerResource';
-  protected $resourcesDataType = 'array';
+  public $resources;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_DeploymentManager_ResourcesListResponse extends Google_Coll
   {
     return $this->nextPageToken;
   }
-  public function setResources($resources)
+  public function setResources(array $resources)
   {
+    foreach ($resources as $r) {
+      if (!$r instanceof Google_Service_DeploymentManager_DeploymentmanagerResource) {
+        throw new InvalidArgumentException('First argument to setResources must be an array of Google_Service_DeploymentManager_DeploymentmanagerResource');
+      }
+    }
     $this->resources = $resources;
   }
   public function getResources()

@@ -18,13 +18,16 @@
 class Google_Service_Datastore_LookupRequest extends Google_Collection
 {
   protected $collection_key = 'keys';
-  protected $keysType = 'Google_Service_Datastore_Key';
-  protected $keysDataType = 'array';
-  protected $readOptionsType = 'Google_Service_Datastore_ReadOptions';
-  protected $readOptionsDataType = '';
+  public $keys;
+  public $readOptions;
 
-  public function setKeys($keys)
+  public function setKeys(array $keys)
   {
+    foreach ($keys as $k) {
+      if (!$k instanceof Google_Service_Datastore_Key) {
+        throw new InvalidArgumentException('First argument to setKeys must be an array of Google_Service_Datastore_Key');
+      }
+    }
     $this->keys = $keys;
   }
   public function getKeys()

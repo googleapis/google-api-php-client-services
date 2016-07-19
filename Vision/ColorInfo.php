@@ -17,8 +17,7 @@
 
 class Google_Service_Vision_ColorInfo extends Google_Model
 {
-  protected $colorType = 'Google_Service_Vision_Color';
-  protected $colorDataType = '';
+  public $color;
   public $pixelFraction;
   public $score;
 

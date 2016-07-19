@@ -18,10 +18,8 @@
 class Google_Service_Appengine_AutomaticScaling extends Google_Model
 {
   public $coolDownPeriod;
-  protected $cpuUtilizationType = 'Google_Service_Appengine_CpuUtilization';
-  protected $cpuUtilizationDataType = '';
-  protected $diskUtilizationType = 'Google_Service_Appengine_DiskUtilization';
-  protected $diskUtilizationDataType = '';
+  public $cpuUtilization;
+  public $diskUtilization;
   public $maxConcurrentRequests;
   public $maxIdleInstances;
   public $maxPendingLatency;
@@ -29,10 +27,8 @@ class Google_Service_Appengine_AutomaticScaling extends Google_Model
   public $minIdleInstances;
   public $minPendingLatency;
   public $minTotalInstances;
-  protected $networkUtilizationType = 'Google_Service_Appengine_NetworkUtilization';
-  protected $networkUtilizationDataType = '';
-  protected $requestUtilizationType = 'Google_Service_Appengine_RequestUtilization';
-  protected $requestUtilizationDataType = '';
+  public $networkUtilization;
+  public $requestUtilization;
 
   public function setCoolDownPeriod($coolDownPeriod)
   {

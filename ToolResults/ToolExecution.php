@@ -19,14 +19,11 @@ class Google_Service_ToolResults_ToolExecution extends Google_Collection
 {
   protected $collection_key = 'toolOutputs';
   public $commandLineArguments;
-  protected $exitCodeType = 'Google_Service_ToolResults_ToolExitCode';
-  protected $exitCodeDataType = '';
-  protected $toolLogsType = 'Google_Service_ToolResults_FileReference';
-  protected $toolLogsDataType = 'array';
-  protected $toolOutputsType = 'Google_Service_ToolResults_ToolOutputReference';
-  protected $toolOutputsDataType = 'array';
+  public $exitCode;
+  public $toolLogs;
+  public $toolOutputs;
 
-  public function setCommandLineArguments($commandLineArguments)
+  public function setCommandLineArguments(array $commandLineArguments)
   {
     $this->commandLineArguments = $commandLineArguments;
   }
@@ -42,16 +39,26 @@ class Google_Service_ToolResults_ToolExecution extends Google_Collection
   {
     return $this->exitCode;
   }
-  public function setToolLogs($toolLogs)
+  public function setToolLogs(array $toolLogs)
   {
+    foreach ($toolLogs as $t) {
+      if (!$t instanceof Google_Service_ToolResults_FileReference) {
+        throw new InvalidArgumentException('First argument to setToolLogs must be an array of Google_Service_ToolResults_FileReference');
+      }
+    }
     $this->toolLogs = $toolLogs;
   }
   public function getToolLogs()
   {
     return $this->toolLogs;
   }
-  public function setToolOutputs($toolOutputs)
+  public function setToolOutputs(array $toolOutputs)
   {
+    foreach ($toolOutputs as $t) {
+      if (!$t instanceof Google_Service_ToolResults_ToolOutputReference) {
+        throw new InvalidArgumentException('First argument to setToolOutputs must be an array of Google_Service_ToolResults_ToolOutputReference');
+      }
+    }
     $this->toolOutputs = $toolOutputs;
   }
   public function getToolOutputs()

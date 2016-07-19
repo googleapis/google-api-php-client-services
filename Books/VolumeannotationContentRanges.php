@@ -17,13 +17,10 @@
 
 class Google_Service_Books_VolumeannotationContentRanges extends Google_Model
 {
-  protected $cfiRangeType = 'Google_Service_Books_BooksAnnotationsRange';
-  protected $cfiRangeDataType = '';
+  public $cfiRange;
   public $contentVersion;
-  protected $gbImageRangeType = 'Google_Service_Books_BooksAnnotationsRange';
-  protected $gbImageRangeDataType = '';
-  protected $gbTextRangeType = 'Google_Service_Books_BooksAnnotationsRange';
-  protected $gbTextRangeDataType = '';
+  public $gbImageRange;
+  public $gbTextRange;
 
   public function setCfiRange(Google_Service_Books_BooksAnnotationsRange $cfiRange)
   {

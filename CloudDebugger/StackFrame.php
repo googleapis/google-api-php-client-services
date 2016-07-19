@@ -18,16 +18,18 @@
 class Google_Service_CloudDebugger_StackFrame extends Google_Collection
 {
   protected $collection_key = 'locals';
-  protected $argumentsType = 'Google_Service_CloudDebugger_Variable';
-  protected $argumentsDataType = 'array';
+  public $arguments;
   public $function;
-  protected $localsType = 'Google_Service_CloudDebugger_Variable';
-  protected $localsDataType = 'array';
-  protected $locationType = 'Google_Service_CloudDebugger_SourceLocation';
-  protected $locationDataType = '';
+  public $locals;
+  public $location;
 
-  public function setArguments($arguments)
+  public function setArguments(array $arguments)
   {
+    foreach ($arguments as $a) {
+      if (!$a instanceof Google_Service_CloudDebugger_Variable) {
+        throw new InvalidArgumentException('First argument to setArguments must be an array of Google_Service_CloudDebugger_Variable');
+      }
+    }
     $this->arguments = $arguments;
   }
   public function getArguments()
@@ -42,8 +44,13 @@ class Google_Service_CloudDebugger_StackFrame extends Google_Collection
   {
     return $this->function;
   }
-  public function setLocals($locals)
+  public function setLocals(array $locals)
   {
+    foreach ($locals as $l) {
+      if (!$l instanceof Google_Service_CloudDebugger_Variable) {
+        throw new InvalidArgumentException('First argument to setLocals must be an array of Google_Service_CloudDebugger_Variable');
+      }
+    }
     $this->locals = $locals;
   }
   public function getLocals()

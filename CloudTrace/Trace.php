@@ -19,8 +19,7 @@ class Google_Service_CloudTrace_Trace extends Google_Collection
 {
   protected $collection_key = 'spans';
   public $projectId;
-  protected $spansType = 'Google_Service_CloudTrace_TraceSpan';
-  protected $spansDataType = 'array';
+  public $spans;
   public $traceId;
 
   public function setProjectId($projectId)
@@ -31,8 +30,13 @@ class Google_Service_CloudTrace_Trace extends Google_Collection
   {
     return $this->projectId;
   }
-  public function setSpans($spans)
+  public function setSpans(array $spans)
   {
+    foreach ($spans as $s) {
+      if (!$s instanceof Google_Service_CloudTrace_TraceSpan) {
+        throw new InvalidArgumentException('First argument to setSpans must be an array of Google_Service_CloudTrace_TraceSpan');
+      }
+    }
     $this->spans = $spans;
   }
   public function getSpans()

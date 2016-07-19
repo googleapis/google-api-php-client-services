@@ -20,8 +20,7 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceResource extend
   protected $collection_key = 'owners';
   public $id;
   public $owners;
-  protected $siteType = 'Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite';
-  protected $siteDataType = '';
+  public $site;
 
   public function setId($id)
   {
@@ -31,7 +30,7 @@ class Google_Service_SiteVerification_SiteVerificationWebResourceResource extend
   {
     return $this->id;
   }
-  public function setOwners($owners)
+  public function setOwners(array $owners)
   {
     $this->owners = $owners;
   }

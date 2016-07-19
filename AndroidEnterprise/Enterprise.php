@@ -18,15 +18,19 @@
 class Google_Service_AndroidEnterprise_Enterprise extends Google_Collection
 {
   protected $collection_key = 'administrator';
-  protected $administratorType = 'Google_Service_AndroidEnterprise_Administrator';
-  protected $administratorDataType = 'array';
+  public $administrator;
   public $id;
   public $kind;
   public $name;
   public $primaryDomain;
 
-  public function setAdministrator($administrator)
+  public function setAdministrator(array $administrator)
   {
+    foreach ($administrator as $a) {
+      if (!$a instanceof Google_Service_AndroidEnterprise_Administrator) {
+        throw new InvalidArgumentException('First argument to setAdministrator must be an array of Google_Service_AndroidEnterprise_Administrator');
+      }
+    }
     $this->administrator = $administrator;
   }
   public function getAdministrator()

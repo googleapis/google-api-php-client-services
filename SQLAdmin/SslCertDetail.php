@@ -17,8 +17,7 @@
 
 class Google_Service_SQLAdmin_SslCertDetail extends Google_Model
 {
-  protected $certInfoType = 'Google_Service_SQLAdmin_SslCert';
-  protected $certInfoDataType = '';
+  public $certInfo;
   public $certPrivateKey;
 
   public function setCertInfo(Google_Service_SQLAdmin_SslCert $certInfo)

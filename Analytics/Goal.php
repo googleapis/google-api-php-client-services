@@ -20,25 +20,20 @@ class Google_Service_Analytics_Goal extends Google_Model
   public $accountId;
   public $active;
   public $created;
-  protected $eventDetailsType = 'Google_Service_Analytics_GoalEventDetails';
-  protected $eventDetailsDataType = '';
+  public $eventDetails;
   public $id;
   public $internalWebPropertyId;
   public $kind;
   public $name;
-  protected $parentLinkType = 'Google_Service_Analytics_GoalParentLink';
-  protected $parentLinkDataType = '';
+  public $parentLink;
   public $profileId;
   public $selfLink;
   public $type;
   public $updated;
-  protected $urlDestinationDetailsType = 'Google_Service_Analytics_GoalUrlDestinationDetails';
-  protected $urlDestinationDetailsDataType = '';
+  public $urlDestinationDetails;
   public $value;
-  protected $visitNumPagesDetailsType = 'Google_Service_Analytics_GoalVisitNumPagesDetails';
-  protected $visitNumPagesDetailsDataType = '';
-  protected $visitTimeOnSiteDetailsType = 'Google_Service_Analytics_GoalVisitTimeOnSiteDetails';
-  protected $visitTimeOnSiteDetailsDataType = '';
+  public $visitNumPagesDetails;
+  public $visitTimeOnSiteDetails;
   public $webPropertyId;
 
   public function setAccountId($accountId)

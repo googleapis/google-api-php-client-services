@@ -19,8 +19,7 @@ class Google_Service_Webmasters_SearchAnalyticsQueryRequest extends Google_Colle
 {
   protected $collection_key = 'dimensions';
   public $aggregationType;
-  protected $dimensionFilterGroupsType = 'Google_Service_Webmasters_ApiDimensionFilterGroup';
-  protected $dimensionFilterGroupsDataType = 'array';
+  public $dimensionFilterGroups;
   public $dimensions;
   public $endDate;
   public $rowLimit;
@@ -36,15 +35,20 @@ class Google_Service_Webmasters_SearchAnalyticsQueryRequest extends Google_Colle
   {
     return $this->aggregationType;
   }
-  public function setDimensionFilterGroups($dimensionFilterGroups)
+  public function setDimensionFilterGroups(array $dimensionFilterGroups)
   {
+    foreach ($dimensionFilterGroups as $d) {
+      if (!$d instanceof Google_Service_Webmasters_ApiDimensionFilterGroup) {
+        throw new InvalidArgumentException('First argument to setDimensionFilterGroups must be an array of Google_Service_Webmasters_ApiDimensionFilterGroup');
+      }
+    }
     $this->dimensionFilterGroups = $dimensionFilterGroups;
   }
   public function getDimensionFilterGroups()
   {
     return $this->dimensionFilterGroups;
   }
-  public function setDimensions($dimensions)
+  public function setDimensions(array $dimensions)
   {
     $this->dimensions = $dimensions;
   }

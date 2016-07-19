@@ -58,7 +58,7 @@ class Google_Service_CloudUserAccounts_Group extends Google_Collection
   {
     return $this->kind;
   }
-  public function setMembers($members)
+  public function setMembers(array $members)
   {
     $this->members = $members;
   }

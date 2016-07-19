@@ -17,10 +17,8 @@
 
 class Google_Service_Datastore_RunQueryResponse extends Google_Model
 {
-  protected $batchType = 'Google_Service_Datastore_QueryResultBatch';
-  protected $batchDataType = '';
-  protected $queryType = 'Google_Service_Datastore_Query';
-  protected $queryDataType = '';
+  public $batch;
+  public $query;
 
   public function setBatch(Google_Service_Datastore_QueryResultBatch $batch)
   {

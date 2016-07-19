@@ -18,12 +18,16 @@
 class Google_Service_ShoppingContent_AccountstatusesCustomBatchResponse extends Google_Collection
 {
   protected $collection_key = 'entries';
-  protected $entriesType = 'Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry';
-  protected $entriesDataType = 'array';
+  public $entries;
   public $kind;
 
-  public function setEntries($entries)
+  public function setEntries(array $entries)
   {
+    foreach ($entries as $e) {
+      if (!$e instanceof Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry) {
+        throw new InvalidArgumentException('First argument to setEntries must be an array of Google_Service_ShoppingContent_AccountstatusesCustomBatchResponseEntry');
+      }
+    }
     $this->entries = $entries;
   }
   public function getEntries()

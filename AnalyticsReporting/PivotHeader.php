@@ -18,12 +18,16 @@
 class Google_Service_AnalyticsReporting_PivotHeader extends Google_Collection
 {
   protected $collection_key = 'pivotHeaderEntries';
-  protected $pivotHeaderEntriesType = 'Google_Service_AnalyticsReporting_PivotHeaderEntry';
-  protected $pivotHeaderEntriesDataType = 'array';
+  public $pivotHeaderEntries;
   public $totalPivotGroupsCount;
 
-  public function setPivotHeaderEntries($pivotHeaderEntries)
+  public function setPivotHeaderEntries(array $pivotHeaderEntries)
   {
+    foreach ($pivotHeaderEntries as $p) {
+      if (!$p instanceof Google_Service_AnalyticsReporting_PivotHeaderEntry) {
+        throw new InvalidArgumentException('First argument to setPivotHeaderEntries must be an array of Google_Service_AnalyticsReporting_PivotHeaderEntry');
+      }
+    }
     $this->pivotHeaderEntries = $pivotHeaderEntries;
   }
   public function getPivotHeaderEntries()

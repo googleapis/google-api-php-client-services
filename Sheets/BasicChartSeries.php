@@ -17,8 +17,7 @@
 
 class Google_Service_Sheets_BasicChartSeries extends Google_Model
 {
-  protected $seriesType = 'Google_Service_Sheets_ChartData';
-  protected $seriesDataType = '';
+  public $series;
   public $targetAxis;
   public $type;
 

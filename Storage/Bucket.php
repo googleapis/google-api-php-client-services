@@ -18,52 +18,59 @@
 class Google_Service_Storage_Bucket extends Google_Collection
 {
   protected $collection_key = 'defaultObjectAcl';
-  protected $aclType = 'Google_Service_Storage_BucketAccessControl';
-  protected $aclDataType = 'array';
-  protected $corsType = 'Google_Service_Storage_BucketCors';
-  protected $corsDataType = 'array';
-  protected $defaultObjectAclType = 'Google_Service_Storage_ObjectAccessControl';
-  protected $defaultObjectAclDataType = 'array';
+  public $acl;
+  public $cors;
+  public $defaultObjectAcl;
   public $etag;
   public $id;
   public $kind;
-  protected $lifecycleType = 'Google_Service_Storage_BucketLifecycle';
-  protected $lifecycleDataType = '';
+  public $lifecycle;
   public $location;
-  protected $loggingType = 'Google_Service_Storage_BucketLogging';
-  protected $loggingDataType = '';
+  public $logging;
   public $metageneration;
   public $name;
-  protected $ownerType = 'Google_Service_Storage_BucketOwner';
-  protected $ownerDataType = '';
+  public $owner;
   public $projectNumber;
   public $selfLink;
   public $storageClass;
   public $timeCreated;
   public $updated;
-  protected $versioningType = 'Google_Service_Storage_BucketVersioning';
-  protected $versioningDataType = '';
-  protected $websiteType = 'Google_Service_Storage_BucketWebsite';
-  protected $websiteDataType = '';
+  public $versioning;
+  public $website;
 
-  public function setAcl($acl)
+  public function setAcl(array $acl)
   {
+    foreach ($acl as $a) {
+      if (!$a instanceof Google_Service_Storage_BucketAccessControl) {
+        throw new InvalidArgumentException('First argument to setAcl must be an array of Google_Service_Storage_BucketAccessControl');
+      }
+    }
     $this->acl = $acl;
   }
   public function getAcl()
   {
     return $this->acl;
   }
-  public function setCors($cors)
+  public function setCors(array $cors)
   {
+    foreach ($cors as $c) {
+      if (!$c instanceof Google_Service_Storage_BucketCors) {
+        throw new InvalidArgumentException('First argument to setCors must be an array of Google_Service_Storage_BucketCors');
+      }
+    }
     $this->cors = $cors;
   }
   public function getCors()
   {
     return $this->cors;
   }
-  public function setDefaultObjectAcl($defaultObjectAcl)
+  public function setDefaultObjectAcl(array $defaultObjectAcl)
   {
+    foreach ($defaultObjectAcl as $d) {
+      if (!$d instanceof Google_Service_Storage_ObjectAccessControl) {
+        throw new InvalidArgumentException('First argument to setDefaultObjectAcl must be an array of Google_Service_Storage_ObjectAccessControl');
+      }
+    }
     $this->defaultObjectAcl = $defaultObjectAcl;
   }
   public function getDefaultObjectAcl()

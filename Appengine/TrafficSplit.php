@@ -20,7 +20,7 @@ class Google_Service_Appengine_TrafficSplit extends Google_Model
   public $allocations;
   public $shardBy;
 
-  public function setAllocations($allocations)
+  public function setAllocations(array $allocations)
   {
     $this->allocations = $allocations;
   }

@@ -22,8 +22,7 @@ class Google_Service_Fitness_Dataset extends Google_Collection
   public $maxEndTimeNs;
   public $minStartTimeNs;
   public $nextPageToken;
-  protected $pointType = 'Google_Service_Fitness_DataPoint';
-  protected $pointDataType = 'array';
+  public $point;
 
   public function setDataSourceId($dataSourceId)
   {
@@ -57,8 +56,13 @@ class Google_Service_Fitness_Dataset extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setPoint($point)
+  public function setPoint(array $point)
   {
+    foreach ($point as $p) {
+      if (!$p instanceof Google_Service_Fitness_DataPoint) {
+        throw new InvalidArgumentException('First argument to setPoint must be an array of Google_Service_Fitness_DataPoint');
+      }
+    }
     $this->point = $point;
   }
   public function getPoint()

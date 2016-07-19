@@ -17,8 +17,7 @@
 
 class Google_Service_Reseller_SubscriptionPlan extends Google_Model
 {
-  protected $commitmentIntervalType = 'Google_Service_Reseller_SubscriptionPlanCommitmentInterval';
-  protected $commitmentIntervalDataType = '';
+  public $commitmentInterval;
   public $isCommitmentPlan;
   public $planName;
 

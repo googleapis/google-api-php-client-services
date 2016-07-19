@@ -17,8 +17,7 @@
 
 class Google_Service_Storagetransfer_AwsS3Data extends Google_Model
 {
-  protected $awsAccessKeyType = 'Google_Service_Storagetransfer_AwsAccessKey';
-  protected $awsAccessKeyDataType = '';
+  public $awsAccessKey;
   public $bucketName;
 
   public function setAwsAccessKey(Google_Service_Storagetransfer_AwsAccessKey $awsAccessKey)

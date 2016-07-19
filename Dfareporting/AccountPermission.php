@@ -25,7 +25,7 @@ class Google_Service_Dfareporting_AccountPermission extends Google_Collection
   public $name;
   public $permissionGroupId;
 
-  public function setAccountProfiles($accountProfiles)
+  public function setAccountProfiles(array $accountProfiles)
   {
     $this->accountProfiles = $accountProfiles;
   }

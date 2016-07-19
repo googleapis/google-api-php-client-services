@@ -19,8 +19,7 @@ class Google_Service_Classroom_ListStudentsResponse extends Google_Collection
 {
   protected $collection_key = 'students';
   public $nextPageToken;
-  protected $studentsType = 'Google_Service_Classroom_Student';
-  protected $studentsDataType = 'array';
+  public $students;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -30,8 +29,13 @@ class Google_Service_Classroom_ListStudentsResponse extends Google_Collection
   {
     return $this->nextPageToken;
   }
-  public function setStudents($students)
+  public function setStudents(array $students)
   {
+    foreach ($students as $s) {
+      if (!$s instanceof Google_Service_Classroom_Student) {
+        throw new InvalidArgumentException('First argument to setStudents must be an array of Google_Service_Classroom_Student');
+      }
+    }
     $this->students = $students;
   }
   public function getStudents()

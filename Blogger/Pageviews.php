@@ -19,8 +19,7 @@ class Google_Service_Blogger_Pageviews extends Google_Collection
 {
   protected $collection_key = 'counts';
   public $blogId;
-  protected $countsType = 'Google_Service_Blogger_PageviewsCounts';
-  protected $countsDataType = 'array';
+  public $counts;
   public $kind;
 
   public function setBlogId($blogId)
@@ -31,8 +30,13 @@ class Google_Service_Blogger_Pageviews extends Google_Collection
   {
     return $this->blogId;
   }
-  public function setCounts($counts)
+  public function setCounts(array $counts)
   {
+    foreach ($counts as $c) {
+      if (!$c instanceof Google_Service_Blogger_PageviewsCounts) {
+        throw new InvalidArgumentException('First argument to setCounts must be an array of Google_Service_Blogger_PageviewsCounts');
+      }
+    }
     $this->counts = $counts;
   }
   public function getCounts()

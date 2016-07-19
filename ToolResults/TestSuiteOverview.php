@@ -22,8 +22,7 @@ class Google_Service_ToolResults_TestSuiteOverview extends Google_Model
   public $name;
   public $skippedCount;
   public $totalCount;
-  protected $xmlSourceType = 'Google_Service_ToolResults_FileReference';
-  protected $xmlSourceDataType = '';
+  public $xmlSource;
 
   public function setErrorCount($errorCount)
   {

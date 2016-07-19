@@ -20,8 +20,7 @@ class Google_Service_ShoppingContent_AccountsListResponse extends Google_Collect
   protected $collection_key = 'resources';
   public $kind;
   public $nextPageToken;
-  protected $resourcesType = 'Google_Service_ShoppingContent_Account';
-  protected $resourcesDataType = 'array';
+  public $resources;
 
   public function setKind($kind)
   {
@@ -39,8 +38,13 @@ class Google_Service_ShoppingContent_AccountsListResponse extends Google_Collect
   {
     return $this->nextPageToken;
   }
-  public function setResources($resources)
+  public function setResources(array $resources)
   {
+    foreach ($resources as $r) {
+      if (!$r instanceof Google_Service_ShoppingContent_Account) {
+        throw new InvalidArgumentException('First argument to setResources must be an array of Google_Service_ShoppingContent_Account');
+      }
+    }
     $this->resources = $resources;
   }
   public function getResources()

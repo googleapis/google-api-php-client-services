@@ -18,11 +18,15 @@
 class Google_Service_AdExchangeBuyer_CreateOrdersResponse extends Google_Collection
 {
   protected $collection_key = 'proposals';
-  protected $proposalsType = 'Google_Service_AdExchangeBuyer_Proposal';
-  protected $proposalsDataType = 'array';
+  public $proposals;
 
-  public function setProposals($proposals)
+  public function setProposals(array $proposals)
   {
+    foreach ($proposals as $p) {
+      if (!$p instanceof Google_Service_AdExchangeBuyer_Proposal) {
+        throw new InvalidArgumentException('First argument to setProposals must be an array of Google_Service_AdExchangeBuyer_Proposal');
+      }
+    }
     $this->proposals = $proposals;
   }
   public function getProposals()

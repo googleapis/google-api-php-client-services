@@ -18,13 +18,17 @@
 class Google_Service_Dfareporting_FloodlightActivityGroupsListResponse extends Google_Collection
 {
   protected $collection_key = 'floodlightActivityGroups';
-  protected $floodlightActivityGroupsType = 'Google_Service_Dfareporting_FloodlightActivityGroup';
-  protected $floodlightActivityGroupsDataType = 'array';
+  public $floodlightActivityGroups;
   public $kind;
   public $nextPageToken;
 
-  public function setFloodlightActivityGroups($floodlightActivityGroups)
+  public function setFloodlightActivityGroups(array $floodlightActivityGroups)
   {
+    foreach ($floodlightActivityGroups as $f) {
+      if (!$f instanceof Google_Service_Dfareporting_FloodlightActivityGroup) {
+        throw new InvalidArgumentException('First argument to setFloodlightActivityGroups must be an array of Google_Service_Dfareporting_FloodlightActivityGroup');
+      }
+    }
     $this->floodlightActivityGroups = $floodlightActivityGroups;
   }
   public function getFloodlightActivityGroups()

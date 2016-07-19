@@ -18,23 +18,23 @@
 class Google_Service_Datastore_Query extends Google_Collection
 {
   protected $collection_key = 'projection';
-  protected $distinctOnType = 'Google_Service_Datastore_PropertyReference';
-  protected $distinctOnDataType = 'array';
+  public $distinctOn;
   public $endCursor;
-  protected $filterType = 'Google_Service_Datastore_Filter';
-  protected $filterDataType = '';
-  protected $kindType = 'Google_Service_Datastore_KindExpression';
-  protected $kindDataType = 'array';
+  public $filter;
+  public $kind;
   public $limit;
   public $offset;
-  protected $orderType = 'Google_Service_Datastore_PropertyOrder';
-  protected $orderDataType = 'array';
-  protected $projectionType = 'Google_Service_Datastore_Projection';
-  protected $projectionDataType = 'array';
+  public $order;
+  public $projection;
   public $startCursor;
 
-  public function setDistinctOn($distinctOn)
+  public function setDistinctOn(array $distinctOn)
   {
+    foreach ($distinctOn as $d) {
+      if (!$d instanceof Google_Service_Datastore_PropertyReference) {
+        throw new InvalidArgumentException('First argument to setDistinctOn must be an array of Google_Service_Datastore_PropertyReference');
+      }
+    }
     $this->distinctOn = $distinctOn;
   }
   public function getDistinctOn()
@@ -57,8 +57,13 @@ class Google_Service_Datastore_Query extends Google_Collection
   {
     return $this->filter;
   }
-  public function setKind($kind)
+  public function setKind(array $kind)
   {
+    foreach ($kind as $k) {
+      if (!$k instanceof Google_Service_Datastore_KindExpression) {
+        throw new InvalidArgumentException('First argument to setKind must be an array of Google_Service_Datastore_KindExpression');
+      }
+    }
     $this->kind = $kind;
   }
   public function getKind()
@@ -81,16 +86,26 @@ class Google_Service_Datastore_Query extends Google_Collection
   {
     return $this->offset;
   }
-  public function setOrder($order)
+  public function setOrder(array $order)
   {
+    foreach ($order as $o) {
+      if (!$o instanceof Google_Service_Datastore_PropertyOrder) {
+        throw new InvalidArgumentException('First argument to setOrder must be an array of Google_Service_Datastore_PropertyOrder');
+      }
+    }
     $this->order = $order;
   }
   public function getOrder()
   {
     return $this->order;
   }
-  public function setProjection($projection)
+  public function setProjection(array $projection)
   {
+    foreach ($projection as $p) {
+      if (!$p instanceof Google_Service_Datastore_Projection) {
+        throw new InvalidArgumentException('First argument to setProjection must be an array of Google_Service_Datastore_Projection');
+      }
+    }
     $this->projection = $projection;
   }
   public function getProjection()

@@ -18,20 +18,23 @@
 class Google_Service_Doubleclicksearch_Report extends Google_Collection
 {
   protected $collection_key = 'rows';
-  protected $filesType = 'Google_Service_Doubleclicksearch_ReportFiles';
-  protected $filesDataType = 'array';
+  public $files;
   public $id;
   public $isReportReady;
   public $kind;
-  protected $requestType = 'Google_Service_Doubleclicksearch_ReportRequest';
-  protected $requestDataType = '';
+  public $request;
   public $rowCount;
   public $rows;
   public $statisticsCurrencyCode;
   public $statisticsTimeZone;
 
-  public function setFiles($files)
+  public function setFiles(array $files)
   {
+    foreach ($files as $f) {
+      if (!$f instanceof Google_Service_Doubleclicksearch_ReportFiles) {
+        throw new InvalidArgumentException('First argument to setFiles must be an array of Google_Service_Doubleclicksearch_ReportFiles');
+      }
+    }
     $this->files = $files;
   }
   public function getFiles()
@@ -78,7 +81,7 @@ class Google_Service_Doubleclicksearch_Report extends Google_Collection
   {
     return $this->rowCount;
   }
-  public function setRows($rows)
+  public function setRows(array $rows)
   {
     $this->rows = $rows;
   }

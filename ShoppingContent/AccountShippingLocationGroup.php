@@ -21,8 +21,7 @@ class Google_Service_ShoppingContent_AccountShippingLocationGroup extends Google
   public $country;
   public $locationIds;
   public $name;
-  protected $postalCodeRangesType = 'Google_Service_ShoppingContent_AccountShippingPostalCodeRange';
-  protected $postalCodeRangesDataType = 'array';
+  public $postalCodeRanges;
   public $postalCodes;
 
   public function setCountry($country)
@@ -33,7 +32,7 @@ class Google_Service_ShoppingContent_AccountShippingLocationGroup extends Google
   {
     return $this->country;
   }
-  public function setLocationIds($locationIds)
+  public function setLocationIds(array $locationIds)
   {
     $this->locationIds = $locationIds;
   }
@@ -49,15 +48,20 @@ class Google_Service_ShoppingContent_AccountShippingLocationGroup extends Google
   {
     return $this->name;
   }
-  public function setPostalCodeRanges($postalCodeRanges)
+  public function setPostalCodeRanges(array $postalCodeRanges)
   {
+    foreach ($postalCodeRanges as $p) {
+      if (!$p instanceof Google_Service_ShoppingContent_AccountShippingPostalCodeRange) {
+        throw new InvalidArgumentException('First argument to setPostalCodeRanges must be an array of Google_Service_ShoppingContent_AccountShippingPostalCodeRange');
+      }
+    }
     $this->postalCodeRanges = $postalCodeRanges;
   }
   public function getPostalCodeRanges()
   {
     return $this->postalCodeRanges;
   }
-  public function setPostalCodes($postalCodes)
+  public function setPostalCodes(array $postalCodes)
   {
     $this->postalCodes = $postalCodes;
   }

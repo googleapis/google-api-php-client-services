@@ -26,8 +26,7 @@ class Google_Service_Dataflow_Environment extends Google_Collection
   public $tempStoragePrefix;
   public $userAgent;
   public $version;
-  protected $workerPoolsType = 'Google_Service_Dataflow_WorkerPool';
-  protected $workerPoolsDataType = 'array';
+  public $workerPools;
 
   public function setClusterManagerApiService($clusterManagerApiService)
   {
@@ -45,7 +44,7 @@ class Google_Service_Dataflow_Environment extends Google_Collection
   {
     return $this->dataset;
   }
-  public function setExperiments($experiments)
+  public function setExperiments(array $experiments)
   {
     $this->experiments = $experiments;
   }
@@ -53,7 +52,7 @@ class Google_Service_Dataflow_Environment extends Google_Collection
   {
     return $this->experiments;
   }
-  public function setInternalExperiments($internalExperiments)
+  public function setInternalExperiments(array $internalExperiments)
   {
     $this->internalExperiments = $internalExperiments;
   }
@@ -61,7 +60,7 @@ class Google_Service_Dataflow_Environment extends Google_Collection
   {
     return $this->internalExperiments;
   }
-  public function setSdkPipelineOptions($sdkPipelineOptions)
+  public function setSdkPipelineOptions(array $sdkPipelineOptions)
   {
     $this->sdkPipelineOptions = $sdkPipelineOptions;
   }
@@ -77,7 +76,7 @@ class Google_Service_Dataflow_Environment extends Google_Collection
   {
     return $this->tempStoragePrefix;
   }
-  public function setUserAgent($userAgent)
+  public function setUserAgent(array $userAgent)
   {
     $this->userAgent = $userAgent;
   }
@@ -85,7 +84,7 @@ class Google_Service_Dataflow_Environment extends Google_Collection
   {
     return $this->userAgent;
   }
-  public function setVersion($version)
+  public function setVersion(array $version)
   {
     $this->version = $version;
   }
@@ -93,8 +92,13 @@ class Google_Service_Dataflow_Environment extends Google_Collection
   {
     return $this->version;
   }
-  public function setWorkerPools($workerPools)
+  public function setWorkerPools(array $workerPools)
   {
+    foreach ($workerPools as $w) {
+      if (!$w instanceof Google_Service_Dataflow_WorkerPool) {
+        throw new InvalidArgumentException('First argument to setWorkerPools must be an array of Google_Service_Dataflow_WorkerPool');
+      }
+    }
     $this->workerPools = $workerPools;
   }
   public function getWorkerPools()

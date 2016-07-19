@@ -25,8 +25,7 @@ class Google_Service_Pagespeedonline_PagespeedApiImageV2 extends Google_Model
   public $height;
   public $key;
   public $mimeType;
-  protected $pageRectType = 'Google_Service_Pagespeedonline_PagespeedApiImageV2PageRect';
-  protected $pageRectDataType = '';
+  public $pageRect;
   public $width;
 
   public function setData($data)

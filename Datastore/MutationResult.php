@@ -17,8 +17,7 @@
 
 class Google_Service_Datastore_MutationResult extends Google_Model
 {
-  protected $keyType = 'Google_Service_Datastore_Key';
-  protected $keyDataType = '';
+  public $key;
 
   public function setKey(Google_Service_Datastore_Key $key)
   {

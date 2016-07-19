@@ -18,18 +18,15 @@
 class Google_Service_Storagetransfer_TransferOperation extends Google_Collection
 {
   protected $collection_key = 'errorBreakdowns';
-  protected $countersType = 'Google_Service_Storagetransfer_TransferCounters';
-  protected $countersDataType = '';
+  public $counters;
   public $endTime;
-  protected $errorBreakdownsType = 'Google_Service_Storagetransfer_ErrorSummary';
-  protected $errorBreakdownsDataType = 'array';
+  public $errorBreakdowns;
   public $name;
   public $projectId;
   public $startTime;
   public $status;
   public $transferJobName;
-  protected $transferSpecType = 'Google_Service_Storagetransfer_TransferSpec';
-  protected $transferSpecDataType = '';
+  public $transferSpec;
 
   public function setCounters(Google_Service_Storagetransfer_TransferCounters $counters)
   {
@@ -47,8 +44,13 @@ class Google_Service_Storagetransfer_TransferOperation extends Google_Collection
   {
     return $this->endTime;
   }
-  public function setErrorBreakdowns($errorBreakdowns)
+  public function setErrorBreakdowns(array $errorBreakdowns)
   {
+    foreach ($errorBreakdowns as $e) {
+      if (!$e instanceof Google_Service_Storagetransfer_ErrorSummary) {
+        throw new InvalidArgumentException('First argument to setErrorBreakdowns must be an array of Google_Service_Storagetransfer_ErrorSummary');
+      }
+    }
     $this->errorBreakdowns = $errorBreakdowns;
   }
   public function getErrorBreakdowns()

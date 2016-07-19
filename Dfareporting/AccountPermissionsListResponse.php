@@ -18,12 +18,16 @@
 class Google_Service_Dfareporting_AccountPermissionsListResponse extends Google_Collection
 {
   protected $collection_key = 'accountPermissions';
-  protected $accountPermissionsType = 'Google_Service_Dfareporting_AccountPermission';
-  protected $accountPermissionsDataType = 'array';
+  public $accountPermissions;
   public $kind;
 
-  public function setAccountPermissions($accountPermissions)
+  public function setAccountPermissions(array $accountPermissions)
   {
+    foreach ($accountPermissions as $a) {
+      if (!$a instanceof Google_Service_Dfareporting_AccountPermission) {
+        throw new InvalidArgumentException('First argument to setAccountPermissions must be an array of Google_Service_Dfareporting_AccountPermission');
+      }
+    }
     $this->accountPermissions = $accountPermissions;
   }
   public function getAccountPermissions()

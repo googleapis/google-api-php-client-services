@@ -19,15 +19,13 @@ class Google_Service_ShoppingContent_DatafeedStatus extends Google_Collection
 {
   protected $collection_key = 'warnings';
   public $datafeedId;
-  protected $errorsType = 'Google_Service_ShoppingContent_DatafeedStatusError';
-  protected $errorsDataType = 'array';
+  public $errors;
   public $itemsTotal;
   public $itemsValid;
   public $kind;
   public $lastUploadDate;
   public $processingStatus;
-  protected $warningsType = 'Google_Service_ShoppingContent_DatafeedStatusError';
-  protected $warningsDataType = 'array';
+  public $warnings;
 
   public function setDatafeedId($datafeedId)
   {
@@ -37,8 +35,13 @@ class Google_Service_ShoppingContent_DatafeedStatus extends Google_Collection
   {
     return $this->datafeedId;
   }
-  public function setErrors($errors)
+  public function setErrors(array $errors)
   {
+    foreach ($errors as $e) {
+      if (!$e instanceof Google_Service_ShoppingContent_DatafeedStatusError) {
+        throw new InvalidArgumentException('First argument to setErrors must be an array of Google_Service_ShoppingContent_DatafeedStatusError');
+      }
+    }
     $this->errors = $errors;
   }
   public function getErrors()
@@ -85,8 +88,13 @@ class Google_Service_ShoppingContent_DatafeedStatus extends Google_Collection
   {
     return $this->processingStatus;
   }
-  public function setWarnings($warnings)
+  public function setWarnings(array $warnings)
   {
+    foreach ($warnings as $w) {
+      if (!$w instanceof Google_Service_ShoppingContent_DatafeedStatusError) {
+        throw new InvalidArgumentException('First argument to setWarnings must be an array of Google_Service_ShoppingContent_DatafeedStatusError');
+      }
+    }
     $this->warnings = $warnings;
   }
   public function getWarnings()

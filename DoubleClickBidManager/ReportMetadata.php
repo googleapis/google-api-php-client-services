@@ -20,8 +20,7 @@ class Google_Service_DoubleClickBidManager_ReportMetadata extends Google_Model
   public $googleCloudStoragePath;
   public $reportDataEndTimeMs;
   public $reportDataStartTimeMs;
-  protected $statusType = 'Google_Service_DoubleClickBidManager_ReportStatus';
-  protected $statusDataType = '';
+  public $status;
 
   public function setGoogleCloudStoragePath($googleCloudStoragePath)
   {

@@ -37,7 +37,7 @@ class Google_Service_Dataflow_Step extends Google_Model
   {
     return $this->name;
   }
-  public function setProperties($properties)
+  public function setProperties(array $properties)
   {
     $this->properties = $properties;
   }

@@ -36,44 +36,33 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   public $backupImageClickThroughUrl;
   public $backupImageFeatures;
   public $backupImageReportingLabel;
-  protected $backupImageTargetWindowType = 'Google_Service_Dfareporting_TargetWindow';
-  protected $backupImageTargetWindowDataType = '';
-  protected $clickTagsType = 'Google_Service_Dfareporting_ClickTag';
-  protected $clickTagsDataType = 'array';
+  public $backupImageTargetWindow;
+  public $clickTags;
   public $commercialId;
   public $companionCreatives;
   public $compatibility;
   public $convertFlashToHtml5;
-  protected $counterCustomEventsType = 'Google_Service_Dfareporting_CreativeCustomEvent';
-  protected $counterCustomEventsDataType = 'array';
-  protected $creativeAssetsType = 'Google_Service_Dfareporting_CreativeAsset';
-  protected $creativeAssetsDataType = 'array';
-  protected $creativeFieldAssignmentsType = 'Google_Service_Dfareporting_CreativeFieldAssignment';
-  protected $creativeFieldAssignmentsDataType = 'array';
+  public $counterCustomEvents;
+  public $creativeAssets;
+  public $creativeFieldAssignments;
   public $customKeyValues;
-  protected $exitCustomEventsType = 'Google_Service_Dfareporting_CreativeCustomEvent';
-  protected $exitCustomEventsDataType = 'array';
-  protected $fsCommandType = 'Google_Service_Dfareporting_FsCommand';
-  protected $fsCommandDataType = '';
+  public $exitCustomEvents;
+  public $fsCommand;
   public $htmlCode;
   public $htmlCodeLocked;
   public $id;
-  protected $idDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $idDimensionValueDataType = '';
+  public $idDimensionValue;
   public $kind;
-  protected $lastModifiedInfoType = 'Google_Service_Dfareporting_LastModifiedInfo';
-  protected $lastModifiedInfoDataType = '';
+  public $lastModifiedInfo;
   public $latestTraffickedCreativeId;
   public $name;
   public $overrideCss;
   public $redirectUrl;
   public $renderingId;
-  protected $renderingIdDimensionValueType = 'Google_Service_Dfareporting_DimensionValue';
-  protected $renderingIdDimensionValueDataType = '';
+  public $renderingIdDimensionValue;
   public $requiredFlashPluginVersion;
   public $requiredFlashVersion;
-  protected $sizeType = 'Google_Service_Dfareporting_Size';
-  protected $sizeDataType = '';
+  public $size;
   public $skippable;
   public $sslCompliant;
   public $sslOverride;
@@ -83,10 +72,8 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   public $subaccountId;
   public $thirdPartyBackupImageImpressionsUrl;
   public $thirdPartyRichMediaImpressionsUrl;
-  protected $thirdPartyUrlsType = 'Google_Service_Dfareporting_ThirdPartyTrackingUrl';
-  protected $thirdPartyUrlsDataType = 'array';
-  protected $timerCustomEventsType = 'Google_Service_Dfareporting_CreativeCustomEvent';
-  protected $timerCustomEventsDataType = 'array';
+  public $thirdPartyUrls;
+  public $timerCustomEvents;
   public $totalFileSize;
   public $type;
   public $version;
@@ -117,7 +104,7 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->adParameters;
   }
-  public function setAdTagKeys($adTagKeys)
+  public function setAdTagKeys(array $adTagKeys)
   {
     $this->adTagKeys = $adTagKeys;
   }
@@ -197,7 +184,7 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->backupImageClickThroughUrl;
   }
-  public function setBackupImageFeatures($backupImageFeatures)
+  public function setBackupImageFeatures(array $backupImageFeatures)
   {
     $this->backupImageFeatures = $backupImageFeatures;
   }
@@ -221,8 +208,13 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->backupImageTargetWindow;
   }
-  public function setClickTags($clickTags)
+  public function setClickTags(array $clickTags)
   {
+    foreach ($clickTags as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_ClickTag) {
+        throw new InvalidArgumentException('First argument to setClickTags must be an array of Google_Service_Dfareporting_ClickTag');
+      }
+    }
     $this->clickTags = $clickTags;
   }
   public function getClickTags()
@@ -237,7 +229,7 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->commercialId;
   }
-  public function setCompanionCreatives($companionCreatives)
+  public function setCompanionCreatives(array $companionCreatives)
   {
     $this->companionCreatives = $companionCreatives;
   }
@@ -245,7 +237,7 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->companionCreatives;
   }
-  public function setCompatibility($compatibility)
+  public function setCompatibility(array $compatibility)
   {
     $this->compatibility = $compatibility;
   }
@@ -261,31 +253,46 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->convertFlashToHtml5;
   }
-  public function setCounterCustomEvents($counterCustomEvents)
+  public function setCounterCustomEvents(array $counterCustomEvents)
   {
+    foreach ($counterCustomEvents as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeCustomEvent) {
+        throw new InvalidArgumentException('First argument to setCounterCustomEvents must be an array of Google_Service_Dfareporting_CreativeCustomEvent');
+      }
+    }
     $this->counterCustomEvents = $counterCustomEvents;
   }
   public function getCounterCustomEvents()
   {
     return $this->counterCustomEvents;
   }
-  public function setCreativeAssets($creativeAssets)
+  public function setCreativeAssets(array $creativeAssets)
   {
+    foreach ($creativeAssets as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeAsset) {
+        throw new InvalidArgumentException('First argument to setCreativeAssets must be an array of Google_Service_Dfareporting_CreativeAsset');
+      }
+    }
     $this->creativeAssets = $creativeAssets;
   }
   public function getCreativeAssets()
   {
     return $this->creativeAssets;
   }
-  public function setCreativeFieldAssignments($creativeFieldAssignments)
+  public function setCreativeFieldAssignments(array $creativeFieldAssignments)
   {
+    foreach ($creativeFieldAssignments as $c) {
+      if (!$c instanceof Google_Service_Dfareporting_CreativeFieldAssignment) {
+        throw new InvalidArgumentException('First argument to setCreativeFieldAssignments must be an array of Google_Service_Dfareporting_CreativeFieldAssignment');
+      }
+    }
     $this->creativeFieldAssignments = $creativeFieldAssignments;
   }
   public function getCreativeFieldAssignments()
   {
     return $this->creativeFieldAssignments;
   }
-  public function setCustomKeyValues($customKeyValues)
+  public function setCustomKeyValues(array $customKeyValues)
   {
     $this->customKeyValues = $customKeyValues;
   }
@@ -293,8 +300,13 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->customKeyValues;
   }
-  public function setExitCustomEvents($exitCustomEvents)
+  public function setExitCustomEvents(array $exitCustomEvents)
   {
+    foreach ($exitCustomEvents as $e) {
+      if (!$e instanceof Google_Service_Dfareporting_CreativeCustomEvent) {
+        throw new InvalidArgumentException('First argument to setExitCustomEvents must be an array of Google_Service_Dfareporting_CreativeCustomEvent');
+      }
+    }
     $this->exitCustomEvents = $exitCustomEvents;
   }
   public function getExitCustomEvents()
@@ -501,16 +513,26 @@ class Google_Service_Dfareporting_Creative extends Google_Collection
   {
     return $this->thirdPartyRichMediaImpressionsUrl;
   }
-  public function setThirdPartyUrls($thirdPartyUrls)
+  public function setThirdPartyUrls(array $thirdPartyUrls)
   {
+    foreach ($thirdPartyUrls as $t) {
+      if (!$t instanceof Google_Service_Dfareporting_ThirdPartyTrackingUrl) {
+        throw new InvalidArgumentException('First argument to setThirdPartyUrls must be an array of Google_Service_Dfareporting_ThirdPartyTrackingUrl');
+      }
+    }
     $this->thirdPartyUrls = $thirdPartyUrls;
   }
   public function getThirdPartyUrls()
   {
     return $this->thirdPartyUrls;
   }
-  public function setTimerCustomEvents($timerCustomEvents)
+  public function setTimerCustomEvents(array $timerCustomEvents)
   {
+    foreach ($timerCustomEvents as $t) {
+      if (!$t instanceof Google_Service_Dfareporting_CreativeCustomEvent) {
+        throw new InvalidArgumentException('First argument to setTimerCustomEvents must be an array of Google_Service_Dfareporting_CreativeCustomEvent');
+      }
+    }
     $this->timerCustomEvents = $timerCustomEvents;
   }
   public function getTimerCustomEvents()

@@ -18,13 +18,17 @@
 class Google_Service_ShoppingContent_AccountShippingRateTable extends Google_Collection
 {
   protected $collection_key = 'content';
-  protected $contentType = 'Google_Service_ShoppingContent_AccountShippingRateTableCell';
-  protected $contentDataType = 'array';
+  public $content;
   public $name;
   public $saleCountry;
 
-  public function setContent($content)
+  public function setContent(array $content)
   {
+    foreach ($content as $c) {
+      if (!$c instanceof Google_Service_ShoppingContent_AccountShippingRateTableCell) {
+        throw new InvalidArgumentException('First argument to setContent must be an array of Google_Service_ShoppingContent_AccountShippingRateTableCell');
+      }
+    }
     $this->content = $content;
   }
   public function getContent()

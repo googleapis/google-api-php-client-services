@@ -18,13 +18,17 @@
 class Google_Service_AppState_ListResponse extends Google_Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_AppState_GetResponse';
-  protected $itemsDataType = 'array';
+  public $items;
   public $kind;
   public $maximumKeyCount;
 
-  public function setItems($items)
+  public function setItems(array $items)
   {
+    foreach ($items as $i) {
+      if (!$i instanceof Google_Service_AppState_GetResponse) {
+        throw new InvalidArgumentException('First argument to setItems must be an array of Google_Service_AppState_GetResponse');
+      }
+    }
     $this->items = $items;
   }
   public function getItems()
