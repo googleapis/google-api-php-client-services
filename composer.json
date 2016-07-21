@@ -10,8 +10,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Google_Service_": ""
+            "Google_Service_": "src"
         }
-    },
-    "target-dir": "Google/Service"
+    }
 }
