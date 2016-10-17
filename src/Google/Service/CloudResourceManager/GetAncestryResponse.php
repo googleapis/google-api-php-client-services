@@ -13,26 +13,18 @@
  * the License.
  */
 
-class Google_Service_CloudDebugger_RepoId extends Google_Model
+class Google_Service_CloudResourceManager_GetAncestryResponse extends Google_Collection
 {
-  protected $projectRepoIdType = 'Google_Service_CloudDebugger_ProjectRepoId';
-  protected $projectRepoIdDataType = '';
-  public $uid;
+  protected $collection_key = 'ancestor';
+  protected $ancestorType = 'Google_Service_CloudResourceManager_Ancestor';
+  protected $ancestorDataType = 'array';
 
-  public function setProjectRepoId(Google_Service_CloudDebugger_ProjectRepoId $projectRepoId)
+  public function setAncestor($ancestor)
   {
-    $this->projectRepoId = $projectRepoId;
+    $this->ancestor = $ancestor;
   }
-  public function getProjectRepoId()
+  public function getAncestor()
   {
-    return $this->projectRepoId;
-  }
-  public function setUid($uid)
-  {
-    $this->uid = $uid;
-  }
-  public function getUid()
-  {
-    return $this->uid;
+    return $this->ancestor;
   }
 }
