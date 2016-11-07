@@ -96,6 +96,23 @@ class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resourc
     return $this->call('delete', array($params), "Google_Service_Compute_Operation");
   }
   /**
+   * Expands the IP CIDR range of the subnetwork to a specified value.
+   * (subnetworks.expandIpCidrRange)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $subnetwork Name of the Subnetwork resource to update.
+   * @param Google_Service_Compute_SubnetworksExpandIpCidrRangeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Operation
+   */
+  public function expandIpCidrRange($project, $region, $subnetwork, Google_Service_Compute_SubnetworksExpandIpCidrRangeRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('expandIpCidrRange', array($params), "Google_Service_Compute_Operation");
+  }
+  /**
    * Returns the specified subnetwork. Get a list of available subnetworks list()
    * request. (subnetworks.get)
    *

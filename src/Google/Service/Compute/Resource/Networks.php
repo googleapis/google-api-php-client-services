@@ -125,4 +125,19 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Compute_NetworkList");
   }
+  /**
+   * Switches the network mode from auto subnet mode to custom subnet mode.
+   * (networks.switchToCustomMode)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $network Name of the network to be updated.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Operation
+   */
+  public function switchToCustomMode($project, $network, $optParams = array())
+  {
+    $params = array('project' => $project, 'network' => $network);
+    $params = array_merge($params, $optParams);
+    return $this->call('switchToCustomMode', array($params), "Google_Service_Compute_Operation");
+  }
 }
