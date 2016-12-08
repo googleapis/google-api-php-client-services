@@ -13,12 +13,12 @@
  * the License.
  */
 
-class Google_Service_DeploymentManager_OperationsListResponse extends Google_Collection
+class Google_Service_CloudResourceManager_ListOrganizationsResponse extends Google_Collection
 {
-  protected $collection_key = 'operations';
+  protected $collection_key = 'organizations';
   public $nextPageToken;
-  protected $operationsType = 'Google_Service_DeploymentManager_Operation';
-  protected $operationsDataType = 'array';
+  protected $organizationsType = 'Google_Service_CloudResourceManager_Organization';
+  protected $organizationsDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
   {
@@ -28,12 +28,12 @@ class Google_Service_DeploymentManager_OperationsListResponse extends Google_Col
   {
     return $this->nextPageToken;
   }
-  public function setOperations($operations)
+  public function setOrganizations($organizations)
   {
-    $this->operations = $operations;
+    $this->organizations = $organizations;
   }
-  public function getOperations()
+  public function getOrganizations()
   {
-    return $this->operations;
+    return $this->organizations;
   }
 }
