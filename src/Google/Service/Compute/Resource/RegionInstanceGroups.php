@@ -16,20 +16,36 @@
  */
 
 /**
- * The "backendServices" collection of methods.
+ * The "regionInstanceGroups" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google_Service_Compute(...);
- *   $backendServices = $computeService->backendServices;
+ *   $regionInstanceGroups = $computeService->regionInstanceGroups;
  *  </code>
  */
-class Google_Service_Compute_Resource_BackendServices extends Google_Service_Resource
+class Google_Service_Compute_Resource_RegionInstanceGroups extends Google_Service_Resource
 {
   /**
-   * Retrieves the list of all BackendService resources, regional and global,
-   * available to the specified project. (backendServices.aggregatedList)
+   * Returns the specified instance group resource. (regionInstanceGroups.get)
    *
-   * @param string $project Name of the project scoping this request.
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $instanceGroup Name of the instance group resource to return.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_InstanceGroup
+   */
+  public function get($project, $region, $instanceGroup, $optParams = array())
+  {
+    $params = array('project' => $project, 'region' => $region, 'instanceGroup' => $instanceGroup);
+    $params = array_merge($params, $optParams);
+    return $this->call('get', array($params), "Google_Service_Compute_InstanceGroup");
+  }
+  /**
+   * Retrieves the list of instance group resources contained within the specified
+   * region. (regionInstanceGroups.listRegionInstanceGroups)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter expression for filtering listed
@@ -73,82 +89,25 @@ class Google_Service_Compute_Resource_BackendServices extends Google_Service_Res
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_BackendServiceAggregatedList
+   * @return Google_Service_Compute_RegionInstanceGroupList
    */
-  public function aggregatedList($project, $optParams = array())
+  public function listRegionInstanceGroups($project, $region, $optParams = array())
   {
-    $params = array('project' => $project);
+    $params = array('project' => $project, 'region' => $region);
     $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_BackendServiceAggregatedList");
+    return $this->call('list', array($params), "Google_Service_Compute_RegionInstanceGroupList");
   }
   /**
-   * Deletes the specified BackendService resource. (backendServices.delete)
+   * Lists the instances in the specified instance group and displays information
+   * about the named ports. Depending on the specified options, this method can
+   * list all instances or only the instances that are running.
+   * (regionInstanceGroups.listInstances)
    *
    * @param string $project Project ID for this request.
-   * @param string $backendService Name of the BackendService resource to delete.
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_Operation
-   */
-  public function delete($project, $backendService, $optParams = array())
-  {
-    $params = array('project' => $project, 'backendService' => $backendService);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
-   * Returns the specified BackendService resource. Get a list of available
-   * backend services by making a list() request. (backendServices.get)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $backendService Name of the BackendService resource to return.
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_BackendService
-   */
-  public function get($project, $backendService, $optParams = array())
-  {
-    $params = array('project' => $project, 'backendService' => $backendService);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_BackendService");
-  }
-  /**
-   * Gets the most recent health check results for this BackendService.
-   * (backendServices.getHealth)
-   *
-   * @param string $project
-   * @param string $backendService Name of the BackendService resource to which
-   * the queried instance belongs.
-   * @param Google_Service_Compute_ResourceGroupReference $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_BackendServiceGroupHealth
-   */
-  public function getHealth($project, $backendService, Google_Service_Compute_ResourceGroupReference $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'backendService' => $backendService, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('getHealth', array($params), "Google_Service_Compute_BackendServiceGroupHealth");
-  }
-  /**
-   * Creates a BackendService resource in the specified project using the data
-   * included in the request. There are several restrictions and guidelines to
-   * keep in mind when creating a backend service. Read  Restrictions and
-   * Guidelines for more information. (backendServices.insert)
-   *
-   * @param string $project Project ID for this request.
-   * @param Google_Service_Compute_BackendService $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_Operation
-   */
-  public function insert($project, Google_Service_Compute_BackendService $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
-   * Retrieves the list of BackendService resources available to the specified
-   * project. (backendServices.listBackendServices)
-   *
-   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $instanceGroup Name of the regional instance group for which we
+   * want to list the instances.
+   * @param Google_Service_Compute_RegionInstanceGroupsListInstancesRequest $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter expression for filtering listed
@@ -192,48 +151,30 @@ class Google_Service_Compute_Resource_BackendServices extends Google_Service_Res
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_BackendServiceList
+   * @return Google_Service_Compute_RegionInstanceGroupsListInstances
    */
-  public function listBackendServices($project, $optParams = array())
+  public function listInstances($project, $region, $instanceGroup, Google_Service_Compute_RegionInstanceGroupsListInstancesRequest $postBody, $optParams = array())
   {
-    $params = array('project' => $project);
+    $params = array('project' => $project, 'region' => $region, 'instanceGroup' => $instanceGroup, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_BackendServiceList");
+    return $this->call('listInstances', array($params), "Google_Service_Compute_RegionInstanceGroupsListInstances");
   }
   /**
-   * Updates the specified BackendService resource with the data included in the
-   * request. There are several restrictions and guidelines to keep in mind when
-   * updating a backend service. Read  Restrictions and Guidelines for more
-   * information. This method supports patch semantics. (backendServices.patch)
+   * Sets the named ports for the specified regional instance group.
+   * (regionInstanceGroups.setNamedPorts)
    *
    * @param string $project Project ID for this request.
-   * @param string $backendService Name of the BackendService resource to update.
-   * @param Google_Service_Compute_BackendService $postBody
+   * @param string $region Name of the region scoping this request.
+   * @param string $instanceGroup The name of the regional instance group where
+   * the named ports are updated.
+   * @param Google_Service_Compute_RegionInstanceGroupsSetNamedPortsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
-  public function patch($project, $backendService, Google_Service_Compute_BackendService $postBody, $optParams = array())
+  public function setNamedPorts($project, $region, $instanceGroup, Google_Service_Compute_RegionInstanceGroupsSetNamedPortsRequest $postBody, $optParams = array())
   {
-    $params = array('project' => $project, 'backendService' => $backendService, 'postBody' => $postBody);
+    $params = array('project' => $project, 'region' => $region, 'instanceGroup' => $instanceGroup, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
-   * Updates the specified BackendService resource with the data included in the
-   * request. There are several restrictions and guidelines to keep in mind when
-   * updating a backend service. Read  Restrictions and Guidelines for more
-   * information. (backendServices.update)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $backendService Name of the BackendService resource to update.
-   * @param Google_Service_Compute_BackendService $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Compute_Operation
-   */
-  public function update($project, $backendService, Google_Service_Compute_BackendService $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'backendService' => $backendService, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Compute_Operation");
+    return $this->call('setNamedPorts', array($params), "Google_Service_Compute_Operation");
   }
 }

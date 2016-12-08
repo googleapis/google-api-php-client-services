@@ -25,6 +25,8 @@ class Google_Service_Compute_Image extends Google_Collection
   public $description;
   public $diskSizeGb;
   public $family;
+  protected $guestOsFeaturesType = 'Google_Service_Compute_GuestOsFeature';
+  protected $guestOsFeaturesDataType = 'array';
   public $id;
   protected $imageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
   protected $imageEncryptionKeyDataType = '';
@@ -88,6 +90,14 @@ class Google_Service_Compute_Image extends Google_Collection
   public function getFamily()
   {
     return $this->family;
+  }
+  public function setGuestOsFeatures($guestOsFeatures)
+  {
+    $this->guestOsFeatures = $guestOsFeatures;
+  }
+  public function getGuestOsFeatures()
+  {
+    return $this->guestOsFeatures;
   }
   public function setId($id)
   {

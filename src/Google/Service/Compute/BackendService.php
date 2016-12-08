@@ -30,6 +30,7 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public $healthChecks;
   public $id;
   public $kind;
+  public $loadBalancingScheme;
   public $name;
   public $port;
   public $portName;
@@ -118,6 +119,14 @@ class Google_Service_Compute_BackendService extends Google_Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setLoadBalancingScheme($loadBalancingScheme)
+  {
+    $this->loadBalancingScheme = $loadBalancingScheme;
+  }
+  public function getLoadBalancingScheme()
+  {
+    return $this->loadBalancingScheme;
   }
   public function setName($name)
   {

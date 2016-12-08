@@ -260,10 +260,6 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * located.
    * @param string $instanceGroupManager The name of the managed instance group.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter
-   * @opt_param string maxResults
-   * @opt_param string pageToken
    * @return Google_Service_Compute_InstanceGroupManagersListManagedInstancesResponse
    */
   public function listManagedInstances($project, $zone, $instanceGroupManager, $optParams = array())

@@ -21,8 +21,6 @@ class Google_Service_Compute_HealthCheck extends Google_Model
   public $creationTimestamp;
   public $description;
   public $healthyThreshold;
-  protected $http2HealthCheckType = 'Google_Service_Compute_HTTP2HealthCheck';
-  protected $http2HealthCheckDataType = '';
   protected $httpHealthCheckType = 'Google_Service_Compute_HTTPHealthCheck';
   protected $httpHealthCheckDataType = '';
   protected $httpsHealthCheckType = 'Google_Service_Compute_HTTPSHealthCheck';
@@ -70,14 +68,6 @@ class Google_Service_Compute_HealthCheck extends Google_Model
   public function getHealthyThreshold()
   {
     return $this->healthyThreshold;
-  }
-  public function setHttp2HealthCheck(Google_Service_Compute_HTTP2HealthCheck $http2HealthCheck)
-  {
-    $this->http2HealthCheck = $http2HealthCheck;
-  }
-  public function getHttp2HealthCheck()
-  {
-    return $this->http2HealthCheck;
   }
   public function setHttpHealthCheck(Google_Service_Compute_HTTPHealthCheck $httpHealthCheck)
   {

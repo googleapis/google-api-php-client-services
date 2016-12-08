@@ -15,21 +15,30 @@
  * the License.
  */
 
-class Google_Service_Compute_SerialPortOutput extends Google_Model
+class Google_Service_Compute_BackendServiceAggregatedList extends Google_Model
 {
-  public $contents;
+  public $id;
+  protected $itemsType = 'Google_Service_Compute_BackendServicesScopedList';
+  protected $itemsDataType = 'map';
   public $kind;
-  public $next;
+  public $nextPageToken;
   public $selfLink;
-  public $start;
 
-  public function setContents($contents)
+  public function setId($id)
   {
-    $this->contents = $contents;
+    $this->id = $id;
   }
-  public function getContents()
+  public function getId()
   {
-    return $this->contents;
+    return $this->id;
+  }
+  public function setItems($items)
+  {
+    $this->items = $items;
+  }
+  public function getItems()
+  {
+    return $this->items;
   }
   public function setKind($kind)
   {
@@ -39,13 +48,13 @@ class Google_Service_Compute_SerialPortOutput extends Google_Model
   {
     return $this->kind;
   }
-  public function setNext($next)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->next = $next;
+    $this->nextPageToken = $nextPageToken;
   }
-  public function getNext()
+  public function getNextPageToken()
   {
-    return $this->next;
+    return $this->nextPageToken;
   }
   public function setSelfLink($selfLink)
   {
@@ -54,13 +63,5 @@ class Google_Service_Compute_SerialPortOutput extends Google_Model
   public function getSelfLink()
   {
     return $this->selfLink;
-  }
-  public function setStart($start)
-  {
-    $this->start = $start;
-  }
-  public function getStart()
-  {
-    return $this->start;
   }
 }

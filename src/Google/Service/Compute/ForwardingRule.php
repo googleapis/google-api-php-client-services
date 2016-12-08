@@ -15,22 +15,28 @@
  * the License.
  */
 
-class Google_Service_Compute_ForwardingRule extends Google_Model
+class Google_Service_Compute_ForwardingRule extends Google_Collection
 {
+  protected $collection_key = 'ports';
   protected $internal_gapi_mappings = array(
         "iPAddress" => "IPAddress",
         "iPProtocol" => "IPProtocol",
   );
   public $iPAddress;
   public $iPProtocol;
+  public $backendService;
   public $creationTimestamp;
   public $description;
   public $id;
   public $kind;
+  public $loadBalancingScheme;
   public $name;
+  public $network;
   public $portRange;
+  public $ports;
   public $region;
   public $selfLink;
+  public $subnetwork;
   public $target;
 
   public function setIPAddress($iPAddress)
@@ -48,6 +54,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Model
   public function getIPProtocol()
   {
     return $this->iPProtocol;
+  }
+  public function setBackendService($backendService)
+  {
+    $this->backendService = $backendService;
+  }
+  public function getBackendService()
+  {
+    return $this->backendService;
   }
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -81,6 +95,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Model
   {
     return $this->kind;
   }
+  public function setLoadBalancingScheme($loadBalancingScheme)
+  {
+    $this->loadBalancingScheme = $loadBalancingScheme;
+  }
+  public function getLoadBalancingScheme()
+  {
+    return $this->loadBalancingScheme;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -89,6 +111,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Model
   {
     return $this->name;
   }
+  public function setNetwork($network)
+  {
+    $this->network = $network;
+  }
+  public function getNetwork()
+  {
+    return $this->network;
+  }
   public function setPortRange($portRange)
   {
     $this->portRange = $portRange;
@@ -96,6 +126,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Model
   public function getPortRange()
   {
     return $this->portRange;
+  }
+  public function setPorts($ports)
+  {
+    $this->ports = $ports;
+  }
+  public function getPorts()
+  {
+    return $this->ports;
   }
   public function setRegion($region)
   {
@@ -112,6 +150,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Model
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  public function setSubnetwork($subnetwork)
+  {
+    $this->subnetwork = $subnetwork;
+  }
+  public function getSubnetwork()
+  {
+    return $this->subnetwork;
   }
   public function setTarget($target)
   {

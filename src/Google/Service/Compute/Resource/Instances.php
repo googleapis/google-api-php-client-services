@@ -191,6 +191,9 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int port Specifies which COM or serial port to retrieve data from.
+   * @opt_param string start For the initial request, leave this field
+   * unspecified. For subsequent calls, this field should be set to the next value
+   * that was returned in the previous call.
    * @return Google_Service_Compute_SerialPortOutput
    */
   public function getSerialPortOutput($project, $zone, $instance, $optParams = array())
