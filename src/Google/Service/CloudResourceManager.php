@@ -159,6 +159,16 @@ class Google_Service_CloudResourceManager extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'getAncestry' => array(
+              'path' => 'v1/projects/{projectId}:getAncestry',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'getIamPolicy' => array(
               'path' => 'v1/projects/{resource}:getIamPolicy',
               'httpMethod' => 'POST',
@@ -173,15 +183,15 @@ class Google_Service_CloudResourceManager extends Google_Service
               'path' => 'v1/projects',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
