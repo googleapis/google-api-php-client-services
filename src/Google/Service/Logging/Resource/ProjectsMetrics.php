@@ -29,9 +29,8 @@ class Google_Service_Logging_Resource_ProjectsMetrics extends Google_Service_Res
    * Creates a logs-based metric. (metrics.create)
    *
    * @param string $parent The resource name of the project in which to create the
-   * metric. Example: `"projects/my-project-id"`.
-   *
-   * The new metric must be provided in the request.
+   * metric: "projects/[PROJECT_ID]" The new metric must be provided in the
+   * request.
    * @param Google_Service_Logging_LogMetric $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LogMetric
@@ -45,8 +44,8 @@ class Google_Service_Logging_Resource_ProjectsMetrics extends Google_Service_Res
   /**
    * Deletes a logs-based metric. (metrics.delete)
    *
-   * @param string $metricName The resource name of the metric to delete. Example:
-   * `"projects/my-project-id/metrics/my-metric-id"`.
+   * @param string $metricName The resource name of the metric to delete:
+   * "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LoggingEmpty
    */
@@ -59,8 +58,8 @@ class Google_Service_Logging_Resource_ProjectsMetrics extends Google_Service_Res
   /**
    * Gets a logs-based metric. (metrics.get)
    *
-   * @param string $metricName The resource name of the desired metric. Example:
-   * `"projects/my-project-id/metrics/my-metric-id"`.
+   * @param string $metricName The resource name of the desired metric:
+   * "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LogMetric
    */
@@ -73,17 +72,16 @@ class Google_Service_Logging_Resource_ProjectsMetrics extends Google_Service_Res
   /**
    * Lists logs-based metrics. (metrics.listProjectsMetrics)
    *
-   * @param string $parent Required. The resource name containing the metrics.
-   * Example: `"projects/my-project-id"`.
+   * @param string $parent Required. The name of the project containing the
+   * metrics: "projects/[PROJECT_ID]"
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of results to return
-   * from this request. Non-positive values are ignored.  The presence of
-   * `nextPageToken` in the response indicates that more results might be
-   * available.
+   * from this request. Non-positive values are ignored. The presence of
+   * nextPageToken in the response indicates that more results might be available.
    * @opt_param string pageToken Optional. If present, then retrieve the next
-   * batch of results from the preceding call to this method.  `pageToken` must be
-   * the value of `nextPageToken` from the previous response.  The values of other
+   * batch of results from the preceding call to this method. pageToken must be
+   * the value of nextPageToken from the previous response. The values of other
    * method parameters should be identical to those in the previous call.
    * @return Google_Service_Logging_ListLogMetricsResponse
    */
@@ -96,12 +94,10 @@ class Google_Service_Logging_Resource_ProjectsMetrics extends Google_Service_Res
   /**
    * Creates or updates a logs-based metric. (metrics.update)
    *
-   * @param string $metricName The resource name of the metric to update. Example:
-   * `"projects/my-project-id/metrics/my-metric-id"`.
-   *
-   * The updated metric must be provided in the request and have the same
-   * identifier that is specified in `metricName`. If the metric does not exist,
-   * it is created.
+   * @param string $metricName The resource name of the metric to update:
+   * "projects/[PROJECT_ID]/metrics/[METRIC_ID]" The updated metric must be
+   * provided in the request and it's name field must be the same as [METRIC_ID]
+   * If the metric does not exist in [PROJECT_ID], then a new metric is created.
    * @param Google_Service_Logging_LogMetric $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LogMetric

@@ -26,19 +26,28 @@
 class Google_Service_Logging_Resource_ProjectsSinks extends Google_Service_Resource
 {
   /**
-   * Creates a sink. (sinks.create)
+   * Creates a sink that exports specified log entries to a destination. The
+   * export of newly-ingested log entries begins immediately, unless the current
+   * time is outside the sink's start and end times or the sink's writer_identity
+   * is not permitted to write to the destination. A sink can export log entries
+   * only from the resource owning the sink. (sinks.create)
    *
-   * @param string $parent Required. The resource in which to create the sink.
-   * Example: `"projects/my-project-id"`. The new sink must be provided in the
-   * request.
+   * @param string $parent Required. The resource in which to create the sink:
+   * "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]" Examples: "projects
+   * /my-logging-project", "organizations/123456789".
    * @param Google_Service_Logging_LogSink $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool uniqueWriterIdentity Optional. Whether the sink will have a
-   * dedicated service account returned in the sink's writer_identity. Set this
-   * field to be true to export logs from one project to a different project. This
-   * field is ignored for non-project sinks (e.g. organization sinks) because
-   * those sinks are required to have dedicated service accounts.
+   * @opt_param bool uniqueWriterIdentity Optional. Determines the kind of IAM
+   * identity returned as writer_identity in the new sink. If this value is
+   * omitted or set to false, and if the sink's parent is a project, then the
+   * value returned as writer_identity is cloud-logs@google.com, the same identity
+   * used before the addition of writer identities to this API. The sink's
+   * destination must be in the same project as the sink itself.If this field is
+   * set to true, or if the sink is owned by a non-project resource such as an
+   * organization, then the value of writer_identity will be a unique service
+   * account used only for exports from the new sink. For more information, see
+   * writer_identity in LogSink.
    * @return Google_Service_Logging_LogSink
    */
   public function create($parent, Google_Service_Logging_LogSink $postBody, $optParams = array())
@@ -48,12 +57,15 @@ class Google_Service_Logging_Resource_ProjectsSinks extends Google_Service_Resou
     return $this->call('create', array($params), "Google_Service_Logging_LogSink");
   }
   /**
-   * Deletes a sink. (sinks.delete)
+   * Deletes a sink. If the sink has a unique writer_identity, then that service
+   * account is also deleted. (sinks.delete)
    *
-   * @param string $sinkName Required. The resource name of the sink to delete,
-   * including the parent resource and the sink identifier.  Example: `"projects
-   * /my-project-id/sinks/my-sink-id"`.  It is an error if the sink does not
-   * exist.
+   * @param string $sinkName Required. The full resource name of the sink to
+   * delete, including the parent resource and the sink identifier:
+   * "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+   * "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]" It is an error if the sink
+   * does not exist. Example: "projects/my-project-id/sinks/my-sink-id". It is an
+   * error if the sink does not exist.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LoggingEmpty
    */
@@ -66,8 +78,10 @@ class Google_Service_Logging_Resource_ProjectsSinks extends Google_Service_Resou
   /**
    * Gets a sink. (sinks.get)
    *
-   * @param string $sinkName Required. The resource name of the sink to return.
-   * Example: `"projects/my-project-id/sinks/my-sink-id"`.
+   * @param string $sinkName Required. The parent resource name of the sink:
+   * "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+   * "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]" Example: "projects/my-
+   * project-id/sinks/my-sink-id".
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LogSink
    */
@@ -80,17 +94,16 @@ class Google_Service_Logging_Resource_ProjectsSinks extends Google_Service_Resou
   /**
    * Lists sinks. (sinks.listProjectsSinks)
    *
-   * @param string $parent Required. The resource name where this sink was
-   * created. Example: `"projects/my-logging-project"`.
+   * @param string $parent Required. The parent resource whose sinks are to be
+   * listed. Examples: "projects/my-logging-project", "organizations/123456789".
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of results to return
-   * from this request. Non-positive values are ignored.  The presence of
-   * `nextPageToken` in the response indicates that more results might be
-   * available.
+   * from this request. Non-positive values are ignored. The presence of
+   * nextPageToken in the response indicates that more results might be available.
    * @opt_param string pageToken Optional. If present, then retrieve the next
-   * batch of results from the preceding call to this method.  `pageToken` must be
-   * the value of `nextPageToken` from the previous response.  The values of other
+   * batch of results from the preceding call to this method. pageToken must be
+   * the value of nextPageToken from the previous response. The values of other
    * method parameters should be identical to those in the previous call.
    * @return Google_Service_Logging_ListSinksResponse
    */
@@ -101,20 +114,29 @@ class Google_Service_Logging_Resource_ProjectsSinks extends Google_Service_Resou
     return $this->call('list', array($params), "Google_Service_Logging_ListSinksResponse");
   }
   /**
-   * Updates or creates a sink. (sinks.update)
+   * Updates a sink. If the named sink doesn't exist, then this method is
+   * identical to sinks.create. If the named sink does exist, then this method
+   * replaces the following fields in the existing sink with values from the new
+   * sink: destination, filter, output_version_format, start_time, and end_time.
+   * The updated filter might also have a new writer_identity; see the
+   * unique_writer_identity field. (sinks.update)
    *
-   * @param string $sinkName Required. The resource name of the sink to update,
-   * including the parent resource and the sink identifier.  If the sink does not
-   * exist, this method creates the sink.  Example: `"projects/my-project-id/sinks
-   * /my-sink-id"`.
+   * @param string $sinkName Required. The full resource name of the sink to
+   * update, including the parent resource and the sink identifier:
+   * "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+   * "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]" Example: "projects/my-
+   * project-id/sinks/my-sink-id".
    * @param Google_Service_Logging_LogSink $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool uniqueWriterIdentity Optional. Whether the sink will have a
-   * dedicated service account returned in the sink's writer_identity. Set this
-   * field to be true to export logs from one project to a different project. This
-   * field is ignored for non-project sinks (e.g. organization sinks) because
-   * those sinks are required to have dedicated service accounts.
+   * @opt_param bool uniqueWriterIdentity Optional. See sinks.create for a
+   * description of this field. When updating a sink, the effect of this field on
+   * the value of writer_identity in the updated sink depends on both the old and
+   * new values of this field: If the old and new values of this field are both
+   * false or both true, then there is no change to the sink's writer_identity. If
+   * the old value was false and the new value is true, then writer_identity is
+   * changed to a unique service account. It is an error if the old value was true
+   * and the new value is false.
    * @return Google_Service_Logging_LogSink
    */
   public function update($sinkName, Google_Service_Logging_LogSink $postBody, $optParams = array())
