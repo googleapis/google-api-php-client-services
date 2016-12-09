@@ -26,11 +26,15 @@
 class Google_Service_Logging_Resource_BillingAccountsLogs extends Google_Service_Resource
 {
   /**
-   * Deletes a log and all its log entries. The log will reappear if it receives
-   * new entries. (logs.delete)
+   * Deletes all the log entries in a log. The log reappears if it receives new
+   * entries. (logs.delete)
    *
-   * @param string $logName Required. The resource name of the log to delete.
-   * Example: `"projects/my-project/logs/syslog"`.
+   * @param string $logName Required. The resource name of the log to delete:
+   * "projects/[PROJECT_ID]/logs/[LOG_ID]"
+   * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]" [LOG_ID] must be URL-encoded.
+   * For example, "projects/my-project-id/logs/syslog", "organizations/1234567890/
+   * logs/cloudresourcemanager.googleapis.com%2Factivity". For more information
+   * about log names, see LogEntry.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LoggingEmpty
    */
@@ -39,5 +43,28 @@ class Google_Service_Logging_Resource_BillingAccountsLogs extends Google_Service
     $params = array('logName' => $logName);
     $params = array_merge($params, $optParams);
     return $this->call('delete', array($params), "Google_Service_Logging_LoggingEmpty");
+  }
+  /**
+   * Lists the logs in projects or organizations. Only logs that have entries are
+   * listed. (logs.listBillingAccountsLogs)
+   *
+   * @param string $parent Required. The resource name that owns the logs:
+   * "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]"
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. The maximum number of results to return
+   * from this request. Non-positive values are ignored. The presence of
+   * nextPageToken in the response indicates that more results might be available.
+   * @opt_param string pageToken Optional. If present, then retrieve the next
+   * batch of results from the preceding call to this method. pageToken must be
+   * the value of nextPageToken from the previous response. The values of other
+   * method parameters should be identical to those in the previous call.
+   * @return Google_Service_Logging_ListLogsResponse
+   */
+  public function listBillingAccountsLogs($parent, $optParams = array())
+  {
+    $params = array('parent' => $parent);
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_Logging_ListLogsResponse");
   }
 }

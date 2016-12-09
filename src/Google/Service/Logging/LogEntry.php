@@ -29,8 +29,11 @@ class Google_Service_Logging_LogEntry extends Google_Model
   protected $resourceType = 'Google_Service_Logging_MonitoredResource';
   protected $resourceDataType = '';
   public $severity;
+  protected $sourceLocationType = 'Google_Service_Logging_LogEntrySourceLocation';
+  protected $sourceLocationDataType = '';
   public $textPayload;
   public $timestamp;
+  public $trace;
 
   public function setHttpRequest(Google_Service_Logging_HttpRequest $httpRequest)
   {
@@ -104,6 +107,14 @@ class Google_Service_Logging_LogEntry extends Google_Model
   {
     return $this->severity;
   }
+  public function setSourceLocation(Google_Service_Logging_LogEntrySourceLocation $sourceLocation)
+  {
+    $this->sourceLocation = $sourceLocation;
+  }
+  public function getSourceLocation()
+  {
+    return $this->sourceLocation;
+  }
   public function setTextPayload($textPayload)
   {
     $this->textPayload = $textPayload;
@@ -119,5 +130,13 @@ class Google_Service_Logging_LogEntry extends Google_Model
   public function getTimestamp()
   {
     return $this->timestamp;
+  }
+  public function setTrace($trace)
+  {
+    $this->trace = $trace;
+  }
+  public function getTrace()
+  {
+    return $this->trace;
   }
 }

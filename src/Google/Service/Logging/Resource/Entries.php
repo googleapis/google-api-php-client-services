@@ -26,9 +26,9 @@
 class Google_Service_Logging_Resource_Entries extends Google_Service_Resource
 {
   /**
-   * Lists log entries.  Use this method to retrieve log entries from Cloud
-   * Logging.  For ways to export log entries, see [Exporting
-   * Logs](/logging/docs/export). (entries.listEntries)
+   * Lists log entries. Use this method to retrieve log entries from Stackdriver
+   * Logging. For ways to export log entries, see Exporting Logs.
+   * (entries.listEntries)
    *
    * @param Google_Service_Logging_ListLogEntriesRequest $postBody
    * @param array $optParams Optional parameters.
@@ -41,7 +41,7 @@ class Google_Service_Logging_Resource_Entries extends Google_Service_Resource
     return $this->call('list', array($params), "Google_Service_Logging_ListLogEntriesResponse");
   }
   /**
-   * Writes log entries to Stackdriver Logging.  All log entries are written by
+   * Writes log entries to Stackdriver Logging. All log entries are written by
    * this method. (entries.write)
    *
    * @param Google_Service_Logging_WriteLogEntriesRequest $postBody
