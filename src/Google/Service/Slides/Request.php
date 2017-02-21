@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -35,6 +33,8 @@ class Google_Service_Slides_Request extends Google_Model
   protected $createVideoDataType = '';
   protected $deleteObjectType = 'Google_Service_Slides_DeleteObjectRequest';
   protected $deleteObjectDataType = '';
+  protected $deleteParagraphBulletsType = 'Google_Service_Slides_DeleteParagraphBulletsRequest';
+  protected $deleteParagraphBulletsDataType = '';
   protected $deleteTableColumnType = 'Google_Service_Slides_DeleteTableColumnRequest';
   protected $deleteTableColumnDataType = '';
   protected $deleteTableRowType = 'Google_Service_Slides_DeleteTableRowRequest';
@@ -53,6 +53,8 @@ class Google_Service_Slides_Request extends Google_Model
   protected $refreshSheetsChartDataType = '';
   protected $replaceAllShapesWithImageType = 'Google_Service_Slides_ReplaceAllShapesWithImageRequest';
   protected $replaceAllShapesWithImageDataType = '';
+  protected $replaceAllShapesWithSheetsChartType = 'Google_Service_Slides_ReplaceAllShapesWithSheetsChartRequest';
+  protected $replaceAllShapesWithSheetsChartDataType = '';
   protected $replaceAllTextType = 'Google_Service_Slides_ReplaceAllTextRequest';
   protected $replaceAllTextDataType = '';
   protected $updateImagePropertiesType = 'Google_Service_Slides_UpdateImagePropertiesRequest';
@@ -63,6 +65,8 @@ class Google_Service_Slides_Request extends Google_Model
   protected $updatePageElementTransformDataType = '';
   protected $updatePagePropertiesType = 'Google_Service_Slides_UpdatePagePropertiesRequest';
   protected $updatePagePropertiesDataType = '';
+  protected $updateParagraphStyleType = 'Google_Service_Slides_UpdateParagraphStyleRequest';
+  protected $updateParagraphStyleDataType = '';
   protected $updateShapePropertiesType = 'Google_Service_Slides_UpdateShapePropertiesRequest';
   protected $updateShapePropertiesDataType = '';
   protected $updateSlidesPositionType = 'Google_Service_Slides_UpdateSlidesPositionRequest';
@@ -146,6 +150,14 @@ class Google_Service_Slides_Request extends Google_Model
   {
     return $this->deleteObject;
   }
+  public function setDeleteParagraphBullets(Google_Service_Slides_DeleteParagraphBulletsRequest $deleteParagraphBullets)
+  {
+    $this->deleteParagraphBullets = $deleteParagraphBullets;
+  }
+  public function getDeleteParagraphBullets()
+  {
+    return $this->deleteParagraphBullets;
+  }
   public function setDeleteTableColumn(Google_Service_Slides_DeleteTableColumnRequest $deleteTableColumn)
   {
     $this->deleteTableColumn = $deleteTableColumn;
@@ -218,6 +230,14 @@ class Google_Service_Slides_Request extends Google_Model
   {
     return $this->replaceAllShapesWithImage;
   }
+  public function setReplaceAllShapesWithSheetsChart(Google_Service_Slides_ReplaceAllShapesWithSheetsChartRequest $replaceAllShapesWithSheetsChart)
+  {
+    $this->replaceAllShapesWithSheetsChart = $replaceAllShapesWithSheetsChart;
+  }
+  public function getReplaceAllShapesWithSheetsChart()
+  {
+    return $this->replaceAllShapesWithSheetsChart;
+  }
   public function setReplaceAllText(Google_Service_Slides_ReplaceAllTextRequest $replaceAllText)
   {
     $this->replaceAllText = $replaceAllText;
@@ -257,6 +277,14 @@ class Google_Service_Slides_Request extends Google_Model
   public function getUpdatePageProperties()
   {
     return $this->updatePageProperties;
+  }
+  public function setUpdateParagraphStyle(Google_Service_Slides_UpdateParagraphStyleRequest $updateParagraphStyle)
+  {
+    $this->updateParagraphStyle = $updateParagraphStyle;
+  }
+  public function getUpdateParagraphStyle()
+  {
+    return $this->updateParagraphStyle;
   }
   public function setUpdateShapeProperties(Google_Service_Slides_UpdateShapePropertiesRequest $updateShapeProperties)
   {

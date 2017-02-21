@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -28,9 +26,9 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
   /**
    * Creates a cluster in a project. (clusters.create)
    *
-   * @param string $projectId [Required] The ID of the Google Cloud Platform
-   * project that the cluster belongs to.
-   * @param string $region [Required] The Cloud Dataproc region in which to handle
+   * @param string $projectId Required The ID of the Google Cloud Platform project
+   * that the cluster belongs to.
+   * @param string $region Required The Cloud Dataproc region in which to handle
    * the request.
    * @param Google_Service_Dataproc_Cluster $postBody
    * @param array $optParams Optional parameters.
@@ -45,11 +43,11 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
   /**
    * Deletes a cluster in a project. (clusters.delete)
    *
-   * @param string $projectId [Required] The ID of the Google Cloud Platform
-   * project that the cluster belongs to.
-   * @param string $region [Required] The Cloud Dataproc region in which to handle
+   * @param string $projectId Required The ID of the Google Cloud Platform project
+   * that the cluster belongs to.
+   * @param string $region Required The Cloud Dataproc region in which to handle
    * the request.
-   * @param string $clusterName [Required] The cluster name.
+   * @param string $clusterName Required The cluster name.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataproc_Operation
    */
@@ -61,14 +59,14 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
   }
   /**
    * Gets cluster diagnostic information. After the operation completes, the
-   * Operation.response field contains `DiagnoseClusterOutputLocation`.
+   * Operation.response field contains DiagnoseClusterOutputLocation.
    * (clusters.diagnose)
    *
-   * @param string $projectId [Required] The ID of the Google Cloud Platform
-   * project that the cluster belongs to.
-   * @param string $region [Required] The Cloud Dataproc region in which to handle
+   * @param string $projectId Required The ID of the Google Cloud Platform project
+   * that the cluster belongs to.
+   * @param string $region Required The Cloud Dataproc region in which to handle
    * the request.
-   * @param string $clusterName [Required] The cluster name.
+   * @param string $clusterName Required The cluster name.
    * @param Google_Service_Dataproc_DiagnoseClusterRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataproc_Operation
@@ -82,11 +80,11 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
   /**
    * Gets the resource representation for a cluster in a project. (clusters.get)
    *
-   * @param string $projectId [Required] The ID of the Google Cloud Platform
-   * project that the cluster belongs to.
-   * @param string $region [Required] The Cloud Dataproc region in which to handle
+   * @param string $projectId Required The ID of the Google Cloud Platform project
+   * that the cluster belongs to.
+   * @param string $region Required The Cloud Dataproc region in which to handle
    * the request.
-   * @param string $clusterName [Required] The cluster name.
+   * @param string $clusterName Required The cluster name.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataproc_Cluster
    */
@@ -100,28 +98,25 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * Lists all regions/{region}/clusters in a project.
    * (clusters.listProjectsRegionsClusters)
    *
-   * @param string $projectId [Required] The ID of the Google Cloud Platform
-   * project that the cluster belongs to.
-   * @param string $region [Required] The Cloud Dataproc region in which to handle
+   * @param string $projectId Required The ID of the Google Cloud Platform project
+   * that the cluster belongs to.
+   * @param string $region Required The Cloud Dataproc region in which to handle
    * the request.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter [Optional] A filter constraining the clusters to
-   * list. Filters are case-sensitive and have the following syntax: field:value
-   * [field:value] ... or field = value [AND [field = value]] ... where **field**
-   * is one of `status.state`, `clusterName`, or `labels.[KEY]`, and `[KEY]` is a
-   * label key. **value** can be `*` to match all values. `status.state` can be
-   * one of the following: `ACTIVE`, `INACTIVE`, `CREATING`, `RUNNING`, `ERROR`,
-   * `DELETING`, or `UPDATING`. `ACTIVE` contains the `CREATING`, `UPDATING`, and
-   * `RUNNING` states. `INACTIVE` contains the `DELETING` and `ERROR` states.
-   * `clusterName` is the name of the cluster provided at creation time. Only the
-   * logical `AND` operator is supported; space-separated items are treated as
-   * having an implicit `AND` operator. Example valid filters are:
-   * status.state:ACTIVE clusterName:mycluster labels.env:staging \
-   * labels.starred:* and status.state = ACTIVE AND clusterName = mycluster \ AND
-   * labels.env = staging AND labels.starred = *
-   * @opt_param int pageSize [Optional] The standard List page size.
-   * @opt_param string pageToken [Optional] The standard List page token.
+   * @opt_param int pageSize Optional The standard List page size.
+   * @opt_param string filter Optional A filter constraining the clusters to list.
+   * Filters are case-sensitive and have the following syntax:field = value AND
+   * field = value ...where field is one of status.state, clusterName, or
+   * labels.[KEY], and [KEY] is a label key. value can be * to match all values.
+   * status.state can be one of the following: ACTIVE, INACTIVE, CREATING,
+   * RUNNING, ERROR, DELETING, or UPDATING. ACTIVE contains the CREATING,
+   * UPDATING, and RUNNING states. INACTIVE contains the DELETING and ERROR
+   * states. clusterName is the name of the cluster provided at creation time.
+   * Only the logical AND operator is supported; space-separated items are treated
+   * as having an implicit AND operator.Example filter:status.state = ACTIVE AND
+   * clusterName = mycluster AND labels.env = staging AND labels.starred = *
+   * @opt_param string pageToken Optional The standard List page token.
    * @return Google_Service_Dataproc_ListClustersResponse
    */
   public function listProjectsRegionsClusters($projectId, $region, $optParams = array())
@@ -133,26 +128,27 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
   /**
    * Updates a cluster in a project. (clusters.patch)
    *
-   * @param string $projectId [Required] The ID of the Google Cloud Platform
-   * project the cluster belongs to.
-   * @param string $region [Required] The Cloud Dataproc region in which to handle
+   * @param string $projectId Required The ID of the Google Cloud Platform project
+   * the cluster belongs to.
+   * @param string $region Required The Cloud Dataproc region in which to handle
    * the request.
-   * @param string $clusterName [Required] The cluster name.
+   * @param string $clusterName Required The cluster name.
    * @param Google_Service_Dataproc_Cluster $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask [Required] Specifies the path, relative to
+   * @opt_param string updateMask Required Specifies the path, relative to
    * Cluster, of the field to update. For example, to change the number of workers
    * in a cluster to 5, the update_mask parameter would be specified as
-   * config.worker_config.num_instances, and the `PATCH` request body would
-   * specify the new value, as follows: { "config":{ "workerConfig":{
-   * "numInstances":"5" } } } Similarly, to change the number of preemptible
+   * config.worker_config.num_instances, and the PATCH request body would specify
+   * the new value, as follows: {   "config":{     "workerConfig":{
+   * "numInstances":"5"     }   } } Similarly, to change the number of preemptible
    * workers in a cluster to 5, the update_mask parameter would be
-   * config.secondary_worker_config.num_instances, and the `PATCH` request body
-   * would be set as follows: { "config":{ "secondaryWorkerConfig":{
-   * "numInstances":"5" } } } Note: Currently, config.worker_config.num_instances
-   * and config.secondary_worker_config.num_instances are the only fields that can
-   * be updated.
+   * config.secondary_worker_config.num_instances, and the PATCH request body
+   * would be set as follows: {   "config":{     "secondaryWorkerConfig":{
+   * "numInstances":"5"     }   } } Note: Currently,
+   * config.worker_config.num_instances and
+   * config.secondary_worker_config.num_instances are the only fields that can be
+   * updated.
    * @return Google_Service_Dataproc_Operation
    */
   public function patch($projectId, $region, $clusterName, Google_Service_Dataproc_Cluster $postBody, $optParams = array())

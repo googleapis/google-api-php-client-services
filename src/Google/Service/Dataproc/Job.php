@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -33,6 +31,8 @@ class Google_Service_Dataproc_Job extends Google_Collection
   protected $pysparkJobDataType = '';
   protected $referenceType = 'Google_Service_Dataproc_JobReference';
   protected $referenceDataType = '';
+  protected $schedulingType = 'Google_Service_Dataproc_JobScheduling';
+  protected $schedulingDataType = '';
   protected $sparkJobType = 'Google_Service_Dataproc_SparkJob';
   protected $sparkJobDataType = '';
   protected $sparkSqlJobType = 'Google_Service_Dataproc_SparkSqlJob';
@@ -115,6 +115,14 @@ class Google_Service_Dataproc_Job extends Google_Collection
   public function getReference()
   {
     return $this->reference;
+  }
+  public function setScheduling(Google_Service_Dataproc_JobScheduling $scheduling)
+  {
+    $this->scheduling = $scheduling;
+  }
+  public function getScheduling()
+  {
+    return $this->scheduling;
   }
   public function setSparkJob(Google_Service_Dataproc_SparkJob $sparkJob)
   {

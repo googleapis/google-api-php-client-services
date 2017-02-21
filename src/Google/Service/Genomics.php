@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -19,11 +17,11 @@
  * Service definition for Genomics (v1).
  *
  * <p>
- * Stores, processes, explores and shares genomic data.</p>
+ * Upload, process, query, and search Genomics data in the cloud.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/genomics/" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/genomics" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -277,7 +275,7 @@ class Google_Service_Genomics extends Google_Service
               'path' => 'v1/datasets',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'projectId' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -285,7 +283,7 @@ class Google_Service_Genomics extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'pageToken' => array(
+                'projectId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -373,13 +371,13 @@ class Google_Service_Genomics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -467,19 +465,7 @@ class Google_Service_Genomics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'referenceName' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'start' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'end' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'targetBucketWidth' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -490,6 +476,18 @@ class Google_Service_Genomics extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'start' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'targetBucketWidth' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'referenceName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -504,10 +502,6 @@ class Google_Service_Genomics extends Google_Service
           'methods' => array(
             'search' => array(
               'path' => 'v1/reads/search',
-              'httpMethod' => 'POST',
-              'parameters' => array(),
-            ),'stream' => array(
-              'path' => 'v1/reads:stream',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
@@ -553,10 +547,6 @@ class Google_Service_Genomics extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'start' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'end' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -568,6 +558,10 @@ class Google_Service_Genomics extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'start' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -652,10 +646,6 @@ class Google_Service_Genomics extends Google_Service
               ),
             ),'search' => array(
               'path' => 'v1/variants/search',
-              'httpMethod' => 'POST',
-              'parameters' => array(),
-            ),'stream' => array(
-              'path' => 'v1/variants:stream',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),

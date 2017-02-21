@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -46,46 +44,7 @@ class Google_Service_CloudMachineLearning_Resource_Projects extends Google_Servi
   /**
    * Performs prediction on the data in the request.
    *
-   * Responses are very similar to requests. There are two top-level fields, each
-   * of which are JSON lists:
-   *
-   *   predictions   The list of predictions, one per instance in the request.
-   * error   An error message returned instead of a prediction list if any
-   * instance produced an error.
-   *
-   * If the call is successful, the response body will contain one prediction
-   * entry per instance in the request body. If prediction fails for any instance,
-   * the response body will contain no predictions and will contian a single error
-   * entry instead.
-   *
-   * Even though there is one prediction per instance, the format of a prediction
-   * is not directly related to the format of an instance. Predictions take
-   * whatever format is specified in the outputs collection defined in the model.
-   * The collection of predictions is returned in a JSON list. Each member of the
-   * list can be a simple value, a list, or a JSON object of any complexity. If
-   * your model has more than one output tensor, each prediction will be a JSON
-   * object containing a name/value pair for each output. The names identify the
-   * output aliases in the graph.
-   *
-   * The following examples show some possible responses:
-   *
-   * A simple set of predictions for three input instances, where each prediction
-   * is an integer value:
-   *
-   * {"predictions": [5, 4, 3]}
-   *
-   * A more complex set of predictions, each containing two named values that
-   * correspond to output tensors, named **label** and **scores** respectively.
-   * The value of **label** is the predicted category ("car" or "beach") and
-   * **scores** contains a list of probabilities for that instance across the
-   * possible categories.
-   *
-   * {"predictions": [{"label": "beach", "scores": [0.1, 0.9]},
-   * {"label": "car", "scores": [0.75, 0.25]}]}
-   *
-   * A response when there is an error processing an input instance:
-   *
-   * {"error": "Divide by zero"}  (projects.predict)
+   * **** REMOVE FROM GENERATED DOCUMENTATION (projects.predict)
    *
    * @param string $name Required. The resource name of a model or a version.
    *

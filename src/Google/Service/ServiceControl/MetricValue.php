@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -24,6 +22,8 @@ class Google_Service_ServiceControl_MetricValue extends Google_Model
   public $endTime;
   public $int64Value;
   public $labels;
+  protected $moneyValueType = 'Google_Service_ServiceControl_Money';
+  protected $moneyValueDataType = '';
   public $startTime;
   public $stringValue;
 
@@ -74,6 +74,14 @@ class Google_Service_ServiceControl_MetricValue extends Google_Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  public function setMoneyValue(Google_Service_ServiceControl_Money $moneyValue)
+  {
+    $this->moneyValue = $moneyValue;
+  }
+  public function getMoneyValue()
+  {
+    return $this->moneyValue;
   }
   public function setStartTime($startTime)
   {

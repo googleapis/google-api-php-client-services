@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -96,5 +94,44 @@ class Google_Service_Container_Resource_ProjectsZonesClustersNodePools extends G
     $params = array('projectId' => $projectId, 'zone' => $zone, 'clusterId' => $clusterId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Container_ListNodePoolsResponse");
+  }
+  /**
+   * Roll back the previously Aborted or Failed NodePool upgrade. This will be an
+   * no-op if the last upgrade successfully completed. (nodePools.rollback)
+   *
+   * @param string $projectId The Google Developers Console [project ID or project
+   * number](https://support.google.com/cloud/answer/6158840).
+   * @param string $zone The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides.
+   * @param string $clusterId The name of the cluster to rollback.
+   * @param string $nodePoolId The name of the node pool to rollback.
+   * @param Google_Service_Container_RollbackNodePoolUpgradeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Container_Operation
+   */
+  public function rollback($projectId, $zone, $clusterId, $nodePoolId, Google_Service_Container_RollbackNodePoolUpgradeRequest $postBody, $optParams = array())
+  {
+    $params = array('projectId' => $projectId, 'zone' => $zone, 'clusterId' => $clusterId, 'nodePoolId' => $nodePoolId, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('rollback', array($params), "Google_Service_Container_Operation");
+  }
+  /**
+   * Sets the NodeManagement options for a node pool. (nodePools.setManagement)
+   *
+   * @param string $projectId The Google Developers Console [project ID or project
+   * number](https://support.google.com/cloud/answer/6158840).
+   * @param string $zone The name of the Google Compute Engine
+   * [zone](/compute/docs/zones#available) in which the cluster resides.
+   * @param string $clusterId The name of the cluster to update.
+   * @param string $nodePoolId The name of the node pool to update.
+   * @param Google_Service_Container_SetNodePoolManagementRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Container_Operation
+   */
+  public function setManagement($projectId, $zone, $clusterId, $nodePoolId, Google_Service_Container_SetNodePoolManagementRequest $postBody, $optParams = array())
+  {
+    $params = array('projectId' => $projectId, 'zone' => $zone, 'clusterId' => $clusterId, 'nodePoolId' => $nodePoolId, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('setManagement', array($params), "Google_Service_Container_Operation");
   }
 }

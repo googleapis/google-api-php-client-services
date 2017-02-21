@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -26,9 +24,10 @@
 class Google_Service_Dataflow_Resource_ProjectsTemplates extends Google_Service_Resource
 {
   /**
-   * Creates a dataflow job from a template. (templates.create)
+   * Creates a Cloud Dataflow job from a template. (templates.create)
    *
-   * @param string $projectId The project which owns the job.
+   * @param string $projectId Required. The ID of the Cloud Platform project that
+   * the job belongs to.
    * @param Google_Service_Dataflow_CreateJobFromTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Dataflow_Job

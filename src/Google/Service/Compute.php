@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -2635,6 +2633,26 @@ class Google_Service_Compute extends Google_Service
               ),
             ),'setScheduling' => array(
               'path' => '{project}/zones/{zone}/instances/{instance}/setScheduling',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instance' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'setServiceAccount' => array(
+              'path' => '{project}/zones/{zone}/instances/{instance}/setServiceAccount',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'project' => array(

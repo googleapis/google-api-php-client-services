@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -24,6 +22,8 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictionInput ex
   public $modelName;
   public $outputPath;
   public $region;
+  public $runtimeVersion;
+  public $uri;
   public $versionName;
 
   public function setDataFormat($dataFormat)
@@ -73,6 +73,22 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictionInput ex
   public function getRegion()
   {
     return $this->region;
+  }
+  public function setRuntimeVersion($runtimeVersion)
+  {
+    $this->runtimeVersion = $runtimeVersion;
+  }
+  public function getRuntimeVersion()
+  {
+    return $this->runtimeVersion;
+  }
+  public function setUri($uri)
+  {
+    $this->uri = $uri;
+  }
+  public function getUri()
+  {
+    return $this->uri;
   }
   public function setVersionName($versionName)
   {

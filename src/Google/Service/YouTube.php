@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -71,6 +69,7 @@ class Google_Service_YouTube extends Google_Service
   public $search;
   public $sponsors;
   public $subscriptions;
+  public $superChatEvents;
   public $thumbnails;
   public $videoAbuseReportReasons;
   public $videoCategories;
@@ -1615,6 +1614,38 @@ class Google_Service_YouTube extends Google_Service
                 'order' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->superChatEvents = new Google_Service_YouTube_Resource_SuperChatEvents(
+        $this,
+        $this->serviceName,
+        'superChatEvents',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'superChatEvents',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'part' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'hl' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',

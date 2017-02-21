@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -18,9 +16,18 @@
 class Google_Service_Slides_Recolor extends Google_Collection
 {
   protected $collection_key = 'recolorStops';
+  public $name;
   protected $recolorStopsType = 'Google_Service_Slides_ColorStop';
   protected $recolorStopsDataType = 'array';
 
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
+  }
   public function setRecolorStops($recolorStops)
   {
     $this->recolorStops = $recolorStops;

@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -23,6 +21,8 @@ class Google_Service_Dataflow_WorkerMessage extends Google_Model
   protected $workerHealthReportDataType = '';
   protected $workerMessageCodeType = 'Google_Service_Dataflow_WorkerMessageCode';
   protected $workerMessageCodeDataType = '';
+  protected $workerMetricsType = 'Google_Service_Dataflow_ResourceUtilizationReport';
+  protected $workerMetricsDataType = '';
 
   public function setLabels($labels)
   {
@@ -55,5 +55,13 @@ class Google_Service_Dataflow_WorkerMessage extends Google_Model
   public function getWorkerMessageCode()
   {
     return $this->workerMessageCode;
+  }
+  public function setWorkerMetrics(Google_Service_Dataflow_ResourceUtilizationReport $workerMetrics)
+  {
+    $this->workerMetrics = $workerMetrics;
+  }
+  public function getWorkerMetrics()
+  {
+    return $this->workerMetrics;
   }
 }

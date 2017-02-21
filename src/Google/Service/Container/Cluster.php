@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -26,7 +24,9 @@ class Google_Service_Container_Cluster extends Google_Collection
   public $currentNodeCount;
   public $currentNodeVersion;
   public $description;
+  public $enableKubernetesAlpha;
   public $endpoint;
+  public $expireTime;
   public $initialClusterVersion;
   public $initialNodeCount;
   public $instanceGroupUrls;
@@ -105,6 +105,14 @@ class Google_Service_Container_Cluster extends Google_Collection
   {
     return $this->description;
   }
+  public function setEnableKubernetesAlpha($enableKubernetesAlpha)
+  {
+    $this->enableKubernetesAlpha = $enableKubernetesAlpha;
+  }
+  public function getEnableKubernetesAlpha()
+  {
+    return $this->enableKubernetesAlpha;
+  }
   public function setEndpoint($endpoint)
   {
     $this->endpoint = $endpoint;
@@ -112,6 +120,14 @@ class Google_Service_Container_Cluster extends Google_Collection
   public function getEndpoint()
   {
     return $this->endpoint;
+  }
+  public function setExpireTime($expireTime)
+  {
+    $this->expireTime = $expireTime;
+  }
+  public function getExpireTime()
+  {
+    return $this->expireTime;
   }
   public function setInitialClusterVersion($initialClusterVersion)
   {

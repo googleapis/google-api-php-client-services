@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -61,6 +59,9 @@ class Google_Service_YouTubeAnalytics_Resource_Reports extends Google_Service_Re
    * satisfy both filters. For example, a filters parameter value of
    * video==dMH0bHeiRNg;country==IT restricts the result set to include data for
    * the given video in Italy.
+   * @opt_param bool include-historical-channel-data If set to true historical
+   * data (i.e. channel data from before the linking of the channel to the content
+   * owner) will be retrieved.
    * @opt_param int max-results The maximum number of rows to include in the
    * response.
    * @opt_param string sort A comma-separated list of dimensions or metrics that

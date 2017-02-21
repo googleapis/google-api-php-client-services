@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -30,16 +28,19 @@ class Google_Service_People_Resource_People extends Google_Service_Resource
    * `people/me` to indicate the authenticated user. (people.get)
    *
    * @param string $resourceName The resource name of the person to provide
-   * information about. - To get information about the authenticated user, specify
-   * `people/me`. - To get information about any user, specify the resource name
-   * that identifies the user, such as the resource names returned by
+   * information about.
+   *
+   * - To get information about the authenticated user, specify `people/me`. - To
+   * get information about any user, specify the resource name that   identifies
+   * the user, such as the resource names returned by
    * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestMask.includeField Comma-separated list of fields to
-   * be included in the response. Omitting this field will include all fields.
-   * Each path should start with `person.`: for example, `person.names` or
-   * `person.photos`.
+   * be included in the response. Omitting this field will include all fields
+   * except for connections.list requests, which have a default mask that includes
+   * common fields like metadata, name, photo, and profile url. Each path should
+   * start with `person.`: for example, `person.names` or `person.photos`.
    * @return Google_Service_People_Person
    */
   public function get($resourceName, $optParams = array())
@@ -55,14 +56,15 @@ class Google_Service_People_Resource_People extends Google_Service_Resource
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestMask.includeField Comma-separated list of fields to
+   * be included in the response. Omitting this field will include all fields
+   * except for connections.list requests, which have a default mask that includes
+   * common fields like metadata, name, photo, and profile url. Each path should
+   * start with `person.`: for example, `person.names` or `person.photos`.
    * @opt_param string resourceNames The resource name, such as one returned by
    * [`people.connections.list`](/people/api/rest/v1/people.connections/list), of
    * one of the people to provide information about. You can include this
    * parameter up to 50 times in one request.
-   * @opt_param string requestMask.includeField Comma-separated list of fields to
-   * be included in the response. Omitting this field will include all fields.
-   * Each path should start with `person.`: for example, `person.names` or
-   * `person.photos`.
    * @return Google_Service_People_GetPeopleResponse
    */
   public function getBatchGet($optParams = array())

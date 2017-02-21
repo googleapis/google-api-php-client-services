@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -18,6 +16,7 @@
 class Google_Service_Vision_Property extends Google_Model
 {
   public $name;
+  public $uint64Value;
   public $value;
 
   public function setName($name)
@@ -27,6 +26,14 @@ class Google_Service_Vision_Property extends Google_Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setUint64Value($uint64Value)
+  {
+    $this->uint64Value = $uint64Value;
+  }
+  public function getUint64Value()
+  {
+    return $this->uint64Value;
   }
   public function setValue($value)
   {

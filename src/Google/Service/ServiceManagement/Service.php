@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -37,6 +35,8 @@ class Google_Service_ServiceManagement_Service extends Google_Collection
   protected $endpointsDataType = 'array';
   protected $enumsType = 'Google_Service_ServiceManagement_Enum';
   protected $enumsDataType = 'array';
+  protected $experimentalType = 'Google_Service_ServiceManagement_Experimental';
+  protected $experimentalDataType = '';
   protected $httpType = 'Google_Service_ServiceManagement_Http';
   protected $httpDataType = '';
   public $id;
@@ -143,6 +143,14 @@ class Google_Service_ServiceManagement_Service extends Google_Collection
   public function getEnums()
   {
     return $this->enums;
+  }
+  public function setExperimental(Google_Service_ServiceManagement_Experimental $experimental)
+  {
+    $this->experimental = $experimental;
+  }
+  public function getExperimental()
+  {
+    return $this->experimental;
   }
   public function setHttp(Google_Service_ServiceManagement_Http $http)
   {

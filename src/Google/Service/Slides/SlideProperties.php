@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -19,6 +17,8 @@ class Google_Service_Slides_SlideProperties extends Google_Model
 {
   public $layoutObjectId;
   public $masterObjectId;
+  protected $notesPageType = 'Google_Service_Slides_Page';
+  protected $notesPageDataType = '';
 
   public function setLayoutObjectId($layoutObjectId)
   {
@@ -35,5 +35,13 @@ class Google_Service_Slides_SlideProperties extends Google_Model
   public function getMasterObjectId()
   {
     return $this->masterObjectId;
+  }
+  public function setNotesPage(Google_Service_Slides_Page $notesPage)
+  {
+    $this->notesPage = $notesPage;
+  }
+  public function getNotesPage()
+  {
+    return $this->notesPage;
   }
 }

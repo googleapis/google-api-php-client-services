@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -38,6 +36,7 @@ class Google_Service_Reseller extends Google_Service
       "https://www.googleapis.com/auth/apps.order.readonly";
 
   public $customers;
+  public $resellernotify;
   public $subscriptions;
   
   /**
@@ -96,6 +95,38 @@ class Google_Service_Reseller extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->resellernotify = new Google_Service_Reseller_Resource_Resellernotify(
+        $this,
+        $this->serviceName,
+        'resellernotify',
+        array(
+          'methods' => array(
+            'getwatchdetails' => array(
+              'path' => 'resellernotify/getwatchdetails',
+              'httpMethod' => 'GET',
+              'parameters' => array(),
+            ),'register' => array(
+              'path' => 'resellernotify/register',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'serviceAccountEmailAddress' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'unregister' => array(
+              'path' => 'resellernotify/unregister',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'serviceAccountEmailAddress' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

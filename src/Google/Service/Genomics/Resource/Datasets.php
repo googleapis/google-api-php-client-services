@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -26,10 +24,11 @@
 class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
 {
   /**
-   * Creates a new dataset. For the definitions of datasets and other genomics
-   * resources, see [Fundamentals of Google
-   * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
-   * (datasets.create)
+   * Creates a new dataset.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics) (datasets.create)
    *
    * @param Google_Service_Genomics_Dataset $postBody
    * @param array $optParams Optional parameters.
@@ -44,10 +43,11 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
   /**
    * Deletes a dataset and all of its contents (all read group sets, reference
    * sets, variant sets, call sets, annotation sets, etc.) This is reversible (up
-   * to one week after the deletion) via the datasets.undelete operation. For the
-   * definitions of datasets and other genomics resources, see [Fundamentals of
-   * Google Genomics](https://cloud.google.com/genomics/fundamentals-of-google-
-   * genomics) (datasets.delete)
+   * to one week after the deletion) via the datasets.undelete operation.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics) (datasets.delete)
    *
    * @param string $datasetId The ID of the dataset to be deleted.
    * @param array $optParams Optional parameters.
@@ -60,10 +60,11 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
     return $this->call('delete', array($params), "Google_Service_Genomics_GenomicsEmpty");
   }
   /**
-   * Gets a dataset by ID. For the definitions of datasets and other genomics
-   * resources, see [Fundamentals of Google
-   * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
-   * (datasets.get)
+   * Gets a dataset by ID.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics) (datasets.get)
    *
    * @param string $datasetId The ID of the dataset.
    * @param array $optParams Optional parameters.
@@ -77,10 +78,13 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
   }
   /**
    * Gets the access control policy for the dataset. This is empty if the policy
-   * or resource does not exist. See Getting a Policy for more information. For
-   * the definitions of datasets and other genomics resources, see [Fundamentals
-   * of Google Genomics](https://cloud.google.com/genomics/fundamentals-of-google-
-   * genomics) (datasets.getIamPolicy)
+   * or resource does not exist.
+   *
+   * See Getting a Policy for more information.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics) (datasets.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which policy is being
    * specified. Format is `datasets/`.
@@ -95,20 +99,21 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
     return $this->call('getIamPolicy', array($params), "Google_Service_Genomics_Policy");
   }
   /**
-   * Lists datasets within a project. For the definitions of datasets and other
-   * genomics resources, see [Fundamentals of Google
-   * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
-   * (datasets.listDatasets)
+   * Lists datasets within a project.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics) (datasets.listDatasets)
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string projectId Required. The Google Cloud project ID to list
-   * datasets for.
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * page. If unspecified, defaults to 50. The maximum value is 1024.
    * @opt_param string pageToken The continuation token, which is used to page
    * through large result sets. To get the next page of results, set this
    * parameter to the value of `nextPageToken` from the previous response.
+   * @opt_param int pageSize The maximum number of results to return in a single
+   * page. If unspecified, defaults to 50. The maximum value is 1024.
+   * @opt_param string projectId Required. The Google Cloud project ID to list
+   * datasets for.
    * @return Google_Service_Genomics_ListDatasetsResponse
    */
   public function listDatasets($optParams = array())
@@ -118,9 +123,12 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
     return $this->call('list', array($params), "Google_Service_Genomics_ListDatasetsResponse");
   }
   /**
-   * Updates a dataset. For the definitions of datasets and other genomics
-   * resources, see [Fundamentals of Google
-   * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
+   * Updates a dataset.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics)
+   *
    * This method supports patch semantics. (datasets.patch)
    *
    * @param string $datasetId The ID of the dataset to be updated.
@@ -140,9 +148,12 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
   }
   /**
    * Sets the access control policy on the specified dataset. Replaces any
-   * existing policy. For the definitions of datasets and other genomics
-   * resources, see [Fundamentals of Google
-   * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
+   * existing policy.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics)
+   *
    * See Setting a Policy for more information. (datasets.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which policy is being
@@ -159,10 +170,11 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
   }
   /**
    * Returns permissions that a caller has on the specified resource. See Testing
-   * Permissions for more information. For the definitions of datasets and other
-   * genomics resources, see [Fundamentals of Google
-   * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
-   * (datasets.testIamPermissions)
+   * Permissions for more information.
+   *
+   * For the definitions of datasets and other genomics resources, see
+   * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
+   * /fundamentals-of-google-genomics) (datasets.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which policy is being
    * specified. Format is `datasets/`.
@@ -178,10 +190,13 @@ class Google_Service_Genomics_Resource_Datasets extends Google_Service_Resource
   }
   /**
    * Undeletes a dataset by restoring a dataset which was deleted via this API.
+   *
    * For the definitions of datasets and other genomics resources, see
    * [Fundamentals of Google Genomics](https://cloud.google.com/genomics
-   * /fundamentals-of-google-genomics) This operation is only possible for a week
-   * after the deletion occurred. (datasets.undelete)
+   * /fundamentals-of-google-genomics)
+   *
+   * This operation is only possible for a week after the deletion occurred.
+   * (datasets.undelete)
    *
    * @param string $datasetId The ID of the dataset to be undeleted.
    * @param Google_Service_Genomics_UndeleteDatasetRequest $postBody

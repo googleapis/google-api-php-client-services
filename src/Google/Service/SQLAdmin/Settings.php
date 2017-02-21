@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -20,6 +18,7 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   protected $collection_key = 'databaseFlags';
   public $activationPolicy;
   public $authorizedGaeApplications;
+  public $availabilityType;
   protected $backupConfigurationType = 'Google_Service_SQLAdmin_BackupConfiguration';
   protected $backupConfigurationDataType = '';
   public $crashSafeReplicationEnabled;
@@ -39,6 +38,7 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   public $replicationType;
   public $settingsVersion;
   public $storageAutoResize;
+  public $storageAutoResizeLimit;
   public $tier;
 
   public function setActivationPolicy($activationPolicy)
@@ -56,6 +56,14 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   public function getAuthorizedGaeApplications()
   {
     return $this->authorizedGaeApplications;
+  }
+  public function setAvailabilityType($availabilityType)
+  {
+    $this->availabilityType = $availabilityType;
+  }
+  public function getAvailabilityType()
+  {
+    return $this->availabilityType;
   }
   public function setBackupConfiguration(Google_Service_SQLAdmin_BackupConfiguration $backupConfiguration)
   {
@@ -168,6 +176,14 @@ class Google_Service_SQLAdmin_Settings extends Google_Collection
   public function getStorageAutoResize()
   {
     return $this->storageAutoResize;
+  }
+  public function setStorageAutoResizeLimit($storageAutoResizeLimit)
+  {
+    $this->storageAutoResizeLimit = $storageAutoResizeLimit;
+  }
+  public function getStorageAutoResizeLimit()
+  {
+    return $this->storageAutoResizeLimit;
   }
   public function setTier($tier)
   {

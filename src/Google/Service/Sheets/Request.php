@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -59,6 +57,8 @@ class Google_Service_Sheets_Request extends Google_Model
   protected $deleteNamedRangeDataType = '';
   protected $deleteProtectedRangeType = 'Google_Service_Sheets_DeleteProtectedRangeRequest';
   protected $deleteProtectedRangeDataType = '';
+  protected $deleteRangeType = 'Google_Service_Sheets_DeleteRangeRequest';
+  protected $deleteRangeDataType = '';
   protected $deleteSheetType = 'Google_Service_Sheets_DeleteSheetRequest';
   protected $deleteSheetDataType = '';
   protected $duplicateFilterViewType = 'Google_Service_Sheets_DuplicateFilterViewRequest';
@@ -69,6 +69,8 @@ class Google_Service_Sheets_Request extends Google_Model
   protected $findReplaceDataType = '';
   protected $insertDimensionType = 'Google_Service_Sheets_InsertDimensionRequest';
   protected $insertDimensionDataType = '';
+  protected $insertRangeType = 'Google_Service_Sheets_InsertRangeRequest';
+  protected $insertRangeDataType = '';
   protected $mergeCellsType = 'Google_Service_Sheets_MergeCellsRequest';
   protected $mergeCellsDataType = '';
   protected $moveDimensionType = 'Google_Service_Sheets_MoveDimensionRequest';
@@ -280,6 +282,14 @@ class Google_Service_Sheets_Request extends Google_Model
   {
     return $this->deleteProtectedRange;
   }
+  public function setDeleteRange(Google_Service_Sheets_DeleteRangeRequest $deleteRange)
+  {
+    $this->deleteRange = $deleteRange;
+  }
+  public function getDeleteRange()
+  {
+    return $this->deleteRange;
+  }
   public function setDeleteSheet(Google_Service_Sheets_DeleteSheetRequest $deleteSheet)
   {
     $this->deleteSheet = $deleteSheet;
@@ -319,6 +329,14 @@ class Google_Service_Sheets_Request extends Google_Model
   public function getInsertDimension()
   {
     return $this->insertDimension;
+  }
+  public function setInsertRange(Google_Service_Sheets_InsertRangeRequest $insertRange)
+  {
+    $this->insertRange = $insertRange;
+  }
+  public function getInsertRange()
+  {
+    return $this->insertRange;
   }
   public function setMergeCells(Google_Service_Sheets_MergeCellsRequest $mergeCells)
   {

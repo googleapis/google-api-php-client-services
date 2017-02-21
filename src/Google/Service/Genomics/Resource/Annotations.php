@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -29,13 +27,16 @@ class Google_Service_Genomics_Resource_Annotations extends Google_Service_Resour
    * Creates one or more new annotations atomically. All annotations must belong
    * to the same annotation set. Caller must have WRITE permission for this
    * annotation set. For optimal performance, batch positionally adjacent
-   * annotations together. If the request has a systemic issue, such as an attempt
-   * to write to an inaccessible annotation set, the entire RPC will fail
-   * accordingly. For lesser data issues, when possible an error will be isolated
-   * to the corresponding batch entry in the response; the remaining well formed
-   * annotations will be created normally. For details on the requirements for
-   * each individual annotation resource, see CreateAnnotation.
-   * (annotations.batchCreate)
+   * annotations together.
+   *
+   * If the request has a systemic issue, such as an attempt to write to an
+   * inaccessible annotation set, the entire RPC will fail accordingly. For lesser
+   * data issues, when possible an error will be isolated to the corresponding
+   * batch entry in the response; the remaining well formed annotations will be
+   * created normally.
+   *
+   * For details on the requirements for each individual annotation resource, see
+   * CreateAnnotation. (annotations.batchCreate)
    *
    * @param Google_Service_Genomics_BatchCreateAnnotationsRequest $postBody
    * @param array $optParams Optional parameters.
@@ -49,14 +50,23 @@ class Google_Service_Genomics_Resource_Annotations extends Google_Service_Resour
   }
   /**
    * Creates a new annotation. Caller must have WRITE permission for the
-   * associated annotation set. The following fields are required: *
-   * annotationSetId * referenceName or referenceId ### Transcripts For
-   * annotations of type TRANSCRIPT, the following fields of transcript must be
-   * provided: * exons.start * exons.end All other fields may be optionally
-   * specified, unless documented as being server-generated (for example, the `id`
-   * field). The annotated range must be no longer than 100Mbp (mega base pairs).
-   * See the Annotation resource for additional restrictions on each field.
-   * (annotations.create)
+   * associated annotation set.
+   *
+   * The following fields are required:
+   *
+   * * annotationSetId * referenceName or   referenceId
+   *
+   * ### Transcripts
+   *
+   * For annotations of type TRANSCRIPT, the following fields of transcript must
+   * be provided:
+   *
+   * * exons.start * exons.end
+   *
+   * All other fields may be optionally specified, unless documented as being
+   * server-generated (for example, the `id` field). The annotated range must be
+   * no longer than 100Mbp (mega base pairs). See the Annotation resource for
+   * additional restrictions on each field. (annotations.create)
    *
    * @param Google_Service_Genomics_Annotation $postBody
    * @param array $optParams Optional parameters.

@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -85,13 +83,13 @@ class Google_Service_CloudDebugger extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'waitToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'successOnTimeout' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'waitToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -123,7 +121,7 @@ class Google_Service_CloudDebugger extends Google_Service
               'path' => 'v2/debugger/debuggees',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'project' => array(
+                'clientVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -131,7 +129,7 @@ class Google_Service_CloudDebugger extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'clientVersion' => array(
+                'project' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -193,27 +191,27 @@ class Google_Service_CloudDebugger extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'includeAllUsers' => array(
+                'clientVersion' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'string',
+                ),
+                'action.value' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'includeInactive' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'action.value' => array(
+                'includeAllUsers' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'boolean',
                 ),
                 'stripResults' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
                 'waitToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'clientVersion' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

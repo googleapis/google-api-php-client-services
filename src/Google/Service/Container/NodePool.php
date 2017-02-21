@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -18,16 +16,28 @@
 class Google_Service_Container_NodePool extends Google_Collection
 {
   protected $collection_key = 'instanceGroupUrls';
+  protected $autoscalingType = 'Google_Service_Container_NodePoolAutoscaling';
+  protected $autoscalingDataType = '';
   protected $configType = 'Google_Service_Container_NodeConfig';
   protected $configDataType = '';
   public $initialNodeCount;
   public $instanceGroupUrls;
+  protected $managementType = 'Google_Service_Container_NodeManagement';
+  protected $managementDataType = '';
   public $name;
   public $selfLink;
   public $status;
   public $statusMessage;
   public $version;
 
+  public function setAutoscaling(Google_Service_Container_NodePoolAutoscaling $autoscaling)
+  {
+    $this->autoscaling = $autoscaling;
+  }
+  public function getAutoscaling()
+  {
+    return $this->autoscaling;
+  }
   public function setConfig(Google_Service_Container_NodeConfig $config)
   {
     $this->config = $config;
@@ -51,6 +61,14 @@ class Google_Service_Container_NodePool extends Google_Collection
   public function getInstanceGroupUrls()
   {
     return $this->instanceGroupUrls;
+  }
+  public function setManagement(Google_Service_Container_NodeManagement $management)
+  {
+    $this->management = $management;
+  }
+  public function getManagement()
+  {
+    return $this->management;
   }
   public function setName($name)
   {

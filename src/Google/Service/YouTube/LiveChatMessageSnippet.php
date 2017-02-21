@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -36,6 +34,8 @@ class Google_Service_YouTube_LiveChatMessageSnippet extends Google_Model
   protected $pollVotedDetailsType = 'Google_Service_YouTube_LiveChatPollVotedDetails';
   protected $pollVotedDetailsDataType = '';
   public $publishedAt;
+  protected $superChatDetailsType = 'Google_Service_YouTube_LiveChatSuperChatDetails';
+  protected $superChatDetailsDataType = '';
   protected $textMessageDetailsType = 'Google_Service_YouTube_LiveChatTextMessageDetails';
   protected $textMessageDetailsDataType = '';
   public $type;
@@ -137,6 +137,14 @@ class Google_Service_YouTube_LiveChatMessageSnippet extends Google_Model
   public function getPublishedAt()
   {
     return $this->publishedAt;
+  }
+  public function setSuperChatDetails(Google_Service_YouTube_LiveChatSuperChatDetails $superChatDetails)
+  {
+    $this->superChatDetails = $superChatDetails;
+  }
+  public function getSuperChatDetails()
+  {
+    return $this->superChatDetails;
   }
   public function setTextMessageDetails(Google_Service_YouTube_LiveChatTextMessageDetails $textMessageDetails)
   {

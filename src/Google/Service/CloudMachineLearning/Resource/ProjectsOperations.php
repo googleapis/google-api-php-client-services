@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -88,9 +86,9 @@ class Google_Service_CloudMachineLearning_Resource_ProjectsOperations extends Go
    * @param string $name The name of the operation collection.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
    * @opt_param string filter The standard list filter.
-   * @opt_param string pageToken The standard list page token.
    * @return Google_Service_CloudMachineLearning_GoogleLongrunningListOperationsResponse
    */
   public function listProjectsOperations($name, $optParams = array())

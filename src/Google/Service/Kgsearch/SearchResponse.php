@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -18,9 +16,13 @@
 class Google_Service_Kgsearch_SearchResponse extends Google_Collection
 {
   protected $collection_key = 'itemListElement';
+  protected $internal_gapi_mappings = array(
+        "context" => "@context",
+        "type" => "@type",
+  );
   public $context;
-  public $itemListElement;
   public $type;
+  public $itemListElement;
 
   public function setContext($context)
   {
@@ -30,14 +32,6 @@ class Google_Service_Kgsearch_SearchResponse extends Google_Collection
   {
     return $this->context;
   }
-  public function setItemListElement($itemListElement)
-  {
-    $this->itemListElement = $itemListElement;
-  }
-  public function getItemListElement()
-  {
-    return $this->itemListElement;
-  }
   public function setType($type)
   {
     $this->type = $type;
@@ -45,5 +39,13 @@ class Google_Service_Kgsearch_SearchResponse extends Google_Collection
   public function getType()
   {
     return $this->type;
+  }
+  public function setItemListElement($itemListElement)
+  {
+    $this->itemListElement = $itemListElement;
+  }
+  public function getItemListElement()
+  {
+    return $this->itemListElement;
   }
 }

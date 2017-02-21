@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -93,16 +91,16 @@ class Google_Service_CloudMachineLearning_Resource_ProjectsModels extends Google
    * Authorization: requires `Viewer` role on the specified project.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. The number of models to retrieve per "page"
-   * of results. If there are more remaining results than this number, the
-   * response message will contain a valid value in the `next_page_token` field.
-   *
-   * The default value is 20, and the maximum page size is 100.
    * @opt_param string pageToken Optional. A page token to request the next page
    * of results.
    *
    * You get the token from the `next_page_token` field of the response from the
    * previous call.
+   * @opt_param int pageSize Optional. The number of models to retrieve per "page"
+   * of results. If there are more remaining results than this number, the
+   * response message will contain a valid value in the `next_page_token` field.
+   *
+   * The default value is 20, and the maximum page size is 100.
    * @return Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1ListModelsResponse
    */
   public function listProjectsModels($parent, $optParams = array())

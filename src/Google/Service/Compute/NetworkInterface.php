@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -20,6 +18,7 @@ class Google_Service_Compute_NetworkInterface extends Google_Collection
   protected $collection_key = 'accessConfigs';
   protected $accessConfigsType = 'Google_Service_Compute_AccessConfig';
   protected $accessConfigsDataType = 'array';
+  public $kind;
   public $name;
   public $network;
   public $networkIP;
@@ -32,6 +31,14 @@ class Google_Service_Compute_NetworkInterface extends Google_Collection
   public function getAccessConfigs()
   {
     return $this->accessConfigs;
+  }
+  public function setKind($kind)
+  {
+    $this->kind = $kind;
+  }
+  public function getKind()
+  {
+    return $this->kind;
   }
   public function setName($name)
   {

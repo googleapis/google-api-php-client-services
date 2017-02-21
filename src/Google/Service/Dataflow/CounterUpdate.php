@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -19,6 +17,8 @@ class Google_Service_Dataflow_CounterUpdate extends Google_Model
 {
   public $boolean;
   public $cumulative;
+  protected $distributionType = 'Google_Service_Dataflow_DistributionUpdate';
+  protected $distributionDataType = '';
   public $floatingPoint;
   protected $floatingPointListType = 'Google_Service_Dataflow_FloatingPointList';
   protected $floatingPointListDataType = '';
@@ -54,6 +54,14 @@ class Google_Service_Dataflow_CounterUpdate extends Google_Model
   public function getCumulative()
   {
     return $this->cumulative;
+  }
+  public function setDistribution(Google_Service_Dataflow_DistributionUpdate $distribution)
+  {
+    $this->distribution = $distribution;
+  }
+  public function getDistribution()
+  {
+    return $this->distribution;
   }
   public function setFloatingPoint($floatingPoint)
   {

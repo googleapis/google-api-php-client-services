@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -88,17 +86,15 @@ class Google_Service_ServiceRegistry_Resource_Endpoints extends Google_Service_R
    * For example, to filter for instances that do not have a name of example-
    * instance, you would use filter=name ne example-instance.
    *
-   * Compute Engine Beta API Only: When filtering in the Beta API, you can also
-   * filter on nested fields. For example, you could filter on instances that have
-   * set the scheduling.automaticRestart field to true. Use filtering on nested
-   * fields to take advantage of labels to organize and search for results based
-   * on label values.
+   * You can filter on nested fields. For example, you could filter on instances
+   * that have set the scheduling.automaticRestart field to true. Use filtering on
+   * nested fields to take advantage of labels to organize and search for results
+   * based on label values.
    *
-   * The Beta API also supports filtering on multiple expressions by providing
-   * each separate expression within parentheses. For example,
-   * (scheduling.automaticRestart eq true) (zone eq us-central1-f). Multiple
-   * expressions are treated as AND expressions, meaning that resources must match
-   * all expressions to pass the filters.
+   * To filter on multiple expressions, provide each separate expression within
+   * parentheses. For example, (scheduling.automaticRestart eq true) (zone eq us-
+   * central1-f). Multiple expressions are treated as AND expressions, meaning
+   * that resources must match all expressions to pass the filters.
    * @opt_param string maxResults The maximum number of results per page that
    * should be returned. If the number of available results is larger than
    * maxResults, Compute Engine returns a nextPageToken that can be used to get

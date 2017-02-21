@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -29,7 +27,7 @@ class Google_Service_YouTubeReporting_Resource_Media extends Google_Service_Reso
    * Method for media download. Download is supported on the URI
    * `/v1/media/{+name}?alt=media`. (media.download)
    *
-   * @param string $resourceName Name of the media that is being downloaded. See
+   * @param string $resourceName Name of the media that is being downloaded.  See
    * ReadRequest.resource_name.
    * @param array $optParams Optional parameters.
    * @return Google_Service_YouTubeReporting_Media

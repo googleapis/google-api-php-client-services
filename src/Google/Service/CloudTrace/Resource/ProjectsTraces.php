@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -48,25 +46,30 @@ class Google_Service_CloudTrace_Resource_ProjectsTraces extends Google_Service_R
    * stored.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Type of data returned for traces in the list.
-   * Optional. Default is `MINIMAL`.
-   * @opt_param int pageSize Maximum number of traces to return. If not specified
-   * or <= 0, the implementation selects a reasonable value. The implementation
-   * may return fewer traces than the requested page size. Optional.
+   * @opt_param string filter An optional filter for the request.
+   * @opt_param string endTime Start of the time interval (inclusive) during which
+   * the trace data was collected from the application.
+   * @opt_param string startTime End of the time interval (inclusive) during which
+   * the trace data was collected from the application.
    * @opt_param string pageToken Token identifying the page of results to return.
    * If provided, use the value of the `next_page_token` field from a previous
    * request. Optional.
-   * @opt_param string startTime End of the time interval (inclusive) during which
-   * the trace data was collected from the application.
-   * @opt_param string endTime Start of the time interval (inclusive) during which
-   * the trace data was collected from the application.
-   * @opt_param string filter An optional filter for the request.
+   * @opt_param int pageSize Maximum number of traces to return. If not specified
+   * or <= 0, the implementation selects a reasonable value.  The implementation
+   * may return fewer traces than the requested page size. Optional.
+   * @opt_param string view Type of data returned for traces in the list.
+   * Optional. Default is `MINIMAL`.
    * @opt_param string orderBy Field used to sort the returned traces. Optional.
-   * Can be one of the following: * `trace_id` * `name` (`name` field of root span
-   * in the trace) * `duration` (difference between `end_time` and `start_time`
-   * fields of the root span) * `start` (`start_time` field of the root span)
+   * Can be one of the following:
+   *
+   * *   `trace_id` *   `name` (`name` field of root span in the trace) *
+   * `duration` (difference between `end_time` and `start_time` fields of      the
+   * root span) *   `start` (`start_time` field of the root span)
+   *
    * Descending order can be specified by appending `desc` to the sort field (for
-   * example, `name desc`). Only one sort field is permitted.
+   * example, `name desc`).
+   *
+   * Only one sort field is permitted.
    * @return Google_Service_CloudTrace_ListTracesResponse
    */
   public function listProjectsTraces($projectId, $optParams = array())

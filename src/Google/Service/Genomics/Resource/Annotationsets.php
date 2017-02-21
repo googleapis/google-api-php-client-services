@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -27,10 +25,14 @@ class Google_Service_Genomics_Resource_Annotationsets extends Google_Service_Res
 {
   /**
    * Creates a new annotation set. Caller must have WRITE permission for the
-   * associated dataset. The following fields are required: * datasetId *
-   * referenceSetId All other fields may be optionally specified, unless
-   * documented as being server-generated (for example, the `id` field).
-   * (annotationsets.create)
+   * associated dataset.
+   *
+   * The following fields are required:
+   *
+   *   * datasetId   * referenceSetId
+   *
+   * All other fields may be optionally specified, unless documented as being
+   * server-generated (for example, the `id` field). (annotationsets.create)
    *
    * @param Google_Service_Genomics_AnnotationSet $postBody
    * @param array $optParams Optional parameters.

@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -21,6 +19,7 @@ class Google_Service_Dataproc_GceClusterConfig extends Google_Collection
   public $internalIpOnly;
   public $metadata;
   public $networkUri;
+  public $serviceAccount;
   public $serviceAccountScopes;
   public $subnetworkUri;
   public $tags;
@@ -49,6 +48,14 @@ class Google_Service_Dataproc_GceClusterConfig extends Google_Collection
   public function getNetworkUri()
   {
     return $this->networkUri;
+  }
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   public function setServiceAccountScopes($serviceAccountScopes)
   {

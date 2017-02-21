@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -37,13 +35,12 @@ class Google_Service_Speech_Resource_Operations extends Google_Service_Resource
    * `Code.CANCELLED`. (operations.cancel)
    *
    * @param string $name The name of the operation resource to be cancelled.
-   * @param Google_Service_Speech_CancelOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Speech_SpeechEmpty
    */
-  public function cancel($name, Google_Service_Speech_CancelOperationRequest $postBody, $optParams = array())
+  public function cancel($name, $optParams = array())
   {
-    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array('name' => $name);
     $params = array_merge($params, $optParams);
     return $this->call('cancel', array($params), "Google_Service_Speech_SpeechEmpty");
   }
@@ -88,10 +85,10 @@ class Google_Service_Speech_Resource_Operations extends Google_Service_Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The standard list page size.
-   * @opt_param string filter The standard list filter.
    * @opt_param string name The name of the operation collection.
    * @opt_param string pageToken The standard list page token.
+   * @opt_param int pageSize The standard list page size.
+   * @opt_param string filter The standard list filter.
    * @return Google_Service_Speech_ListOperationsResponse
    */
   public function listOperations($optParams = array())

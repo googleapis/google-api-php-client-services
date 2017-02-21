@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -19,8 +17,7 @@
  * Service definition for Kgsearch (v1).
  *
  * <p>
- * Knowledge Graph Search API allows developers to search the Google Knowledge
- * Graph for entities.</p>
+ * Searches the Google Knowledge Graph for entities.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -58,19 +55,13 @@ class Google_Service_Kgsearch extends Google_Service
               'path' => 'v1/entities:search',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'prefix' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'query' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'ids' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'languages' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
                 ),
                 'types' => array(
                   'location' => 'query',
@@ -81,9 +72,15 @@ class Google_Service_Kgsearch extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'prefix' => array(
+                'languages' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'ids' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
                 'limit' => array(
                   'location' => 'query',

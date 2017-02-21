@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -18,6 +16,7 @@
 class Google_Service_People_Name extends Google_Model
 {
   public $displayName;
+  public $displayNameLastFirst;
   public $familyName;
   public $givenName;
   public $honorificPrefix;
@@ -26,6 +25,7 @@ class Google_Service_People_Name extends Google_Model
   protected $metadataDataType = '';
   public $middleName;
   public $phoneticFamilyName;
+  public $phoneticFullName;
   public $phoneticGivenName;
   public $phoneticHonorificPrefix;
   public $phoneticHonorificSuffix;
@@ -38,6 +38,14 @@ class Google_Service_People_Name extends Google_Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  public function setDisplayNameLastFirst($displayNameLastFirst)
+  {
+    $this->displayNameLastFirst = $displayNameLastFirst;
+  }
+  public function getDisplayNameLastFirst()
+  {
+    return $this->displayNameLastFirst;
   }
   public function setFamilyName($familyName)
   {
@@ -94,6 +102,14 @@ class Google_Service_People_Name extends Google_Model
   public function getPhoneticFamilyName()
   {
     return $this->phoneticFamilyName;
+  }
+  public function setPhoneticFullName($phoneticFullName)
+  {
+    $this->phoneticFullName = $phoneticFullName;
+  }
+  public function getPhoneticFullName()
+  {
+    return $this->phoneticFullName;
   }
   public function setPhoneticGivenName($phoneticGivenName)
   {

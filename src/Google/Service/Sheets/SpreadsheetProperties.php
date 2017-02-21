@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -20,6 +18,8 @@ class Google_Service_Sheets_SpreadsheetProperties extends Google_Model
   public $autoRecalc;
   protected $defaultFormatType = 'Google_Service_Sheets_CellFormat';
   protected $defaultFormatDataType = '';
+  protected $iterativeCalculationSettingsType = 'Google_Service_Sheets_IterativeCalculationSettings';
+  protected $iterativeCalculationSettingsDataType = '';
   public $locale;
   public $timeZone;
   public $title;
@@ -39,6 +39,14 @@ class Google_Service_Sheets_SpreadsheetProperties extends Google_Model
   public function getDefaultFormat()
   {
     return $this->defaultFormat;
+  }
+  public function setIterativeCalculationSettings(Google_Service_Sheets_IterativeCalculationSettings $iterativeCalculationSettings)
+  {
+    $this->iterativeCalculationSettings = $iterativeCalculationSettings;
+  }
+  public function getIterativeCalculationSettings()
+  {
+    return $this->iterativeCalculationSettings;
   }
   public function setLocale($locale)
   {

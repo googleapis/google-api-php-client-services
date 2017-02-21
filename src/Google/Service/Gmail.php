@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -71,6 +69,7 @@ class Google_Service_Gmail extends Google_Service
   public $users_settings_filters;
   public $users_settings_forwardingAddresses;
   public $users_settings_sendAs;
+  public $users_settings_sendAs_smimeInfo;
   public $users_threads;
   
   /**
@@ -245,6 +244,11 @@ class Google_Service_Gmail extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'historyTypes' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ),
                 'labelId' => array(
                   'location' => 'query',
@@ -892,6 +896,106 @@ class Google_Service_Gmail extends Google_Service
                   'required' => true,
                 ),
                 'sendAsEmail' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->users_settings_sendAs_smimeInfo = new Google_Service_Gmail_Resource_UsersSettingsSendAsSmimeInfo(
+        $this,
+        $this->serviceName,
+        'smimeInfo',
+        array(
+          'methods' => array(
+            'delete' => array(
+              'path' => '{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'userId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'sendAsEmail' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'id' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => '{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'userId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'sendAsEmail' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'id' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'insert' => array(
+              'path' => '{userId}/settings/sendAs/{sendAsEmail}/smimeInfo',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'userId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'sendAsEmail' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => '{userId}/settings/sendAs/{sendAsEmail}/smimeInfo',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'userId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'sendAsEmail' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'setDefault' => array(
+              'path' => '{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}/setDefault',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'userId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'sendAsEmail' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'id' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

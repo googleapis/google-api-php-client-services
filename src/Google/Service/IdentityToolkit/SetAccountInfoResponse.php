@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -20,6 +18,7 @@ class Google_Service_IdentityToolkit_SetAccountInfoResponse extends Google_Colle
   protected $collection_key = 'providerUserInfo';
   public $displayName;
   public $email;
+  public $emailVerified;
   public $expiresIn;
   public $idToken;
   public $kind;
@@ -46,6 +45,14 @@ class Google_Service_IdentityToolkit_SetAccountInfoResponse extends Google_Colle
   public function getEmail()
   {
     return $this->email;
+  }
+  public function setEmailVerified($emailVerified)
+  {
+    $this->emailVerified = $emailVerified;
+  }
+  public function getEmailVerified()
+  {
+    return $this->emailVerified;
   }
   public function setExpiresIn($expiresIn)
   {

@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -141,6 +139,10 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken A pagination token returned from a previous call
+   * to ListProjects that indicates from where listing should continue.
+   *
+   * Optional.
    * @opt_param int pageSize The maximum number of Projects to return in the
    * response. The server can return fewer Projects than requested. If
    * unspecified, server picks an appropriate default.
@@ -160,10 +162,6 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    * label `color`.| |labels.color:red|The project's label `color` has the value
    * `red`.| |labels.color:redlabel.size:big|The project's label `color` has the
    * value `red` and its label `size` has the value `big`.
-   *
-   * Optional.
-   * @opt_param string pageToken A pagination token returned from a previous call
-   * to ListProjects that indicates from where listing should continue.
    *
    * Optional.
    * @return Google_Service_CloudResourceManager_ListProjectsResponse

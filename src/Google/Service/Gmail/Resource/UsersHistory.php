@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -34,6 +32,7 @@ class Google_Service_Gmail_Resource_UsersHistory extends Google_Service_Resource
    * used to indicate the authenticated user.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string historyTypes History types to be returned by the function
    * @opt_param string labelId Only return messages with a label matching the ID.
    * @opt_param string maxResults The maximum number of history records to return.
    * @opt_param string pageToken Page token to retrieve a specific page of results

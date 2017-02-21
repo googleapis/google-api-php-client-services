@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -107,10 +105,6 @@ class Google_Service_YouTubeReporting extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -118,6 +112,10 @@ class Google_Service_YouTubeReporting extends Google_Service
                 'includeSystemManaged' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -158,7 +156,15 @@ class Google_Service_YouTubeReporting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'onBehalfOfContentOwner' => array(
+                'createdAfter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startTimeAtOrAfter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -166,15 +172,7 @@ class Google_Service_YouTubeReporting extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'createdAfter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'startTimeAtOrAfter' => array(
+                'onBehalfOfContentOwner' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -221,10 +219,6 @@ class Google_Service_YouTubeReporting extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -232,6 +226,10 @@ class Google_Service_YouTubeReporting extends Google_Service
                 'includeSystemManaged' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),

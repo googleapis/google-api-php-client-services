@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -18,10 +16,19 @@
 class Google_Service_DeploymentManager_DeploymentUpdate extends Google_Collection
 {
   protected $collection_key = 'labels';
+  public $description;
   protected $labelsType = 'Google_Service_DeploymentManager_DeploymentUpdateLabelEntry';
   protected $labelsDataType = 'array';
   public $manifest;
 
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  public function getDescription()
+  {
+    return $this->description;
+  }
   public function setLabels($labels)
   {
     $this->labels = $labels;

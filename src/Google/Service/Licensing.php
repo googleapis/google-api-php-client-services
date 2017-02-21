@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -30,7 +28,7 @@
  */
 class Google_Service_Licensing extends Google_Service
 {
-  /** View and manage Google Apps licenses for your domain. */
+  /** View and manage G Suite licenses for your domain. */
   const APPS_LICENSING =
       "https://www.googleapis.com/auth/apps.licensing";
 

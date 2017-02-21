@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -91,16 +89,16 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
   }
   /**
    * Modifies attachments of student submission. Attachments may only be added to
-   * student submissions whose type is `ASSIGNMENT`. This request must be made by
-   * the Developer Console project of the [OAuth client
-   * ID](https://support.google.com/cloud/answer/6158849) used to create the
-   * corresponding course work item. This method returns the following error
-   * codes: * `PERMISSION_DENIED` if the requesting user is not permitted to
-   * access the requested course or course work, if the user is not permitted to
-   * modify attachments on the requested student submission, or for access errors.
-   * * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-   * requested course, course work, or student submission does not exist.
-   * (studentSubmissions.modifyAttachments)
+   * student submissions belonging to course work objects with a `workType` of
+   * `ASSIGNMENT`. This request must be made by the Developer Console project of
+   * the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used
+   * to create the corresponding course work item. This method returns the
+   * following error codes: * `PERMISSION_DENIED` if the requesting user is not
+   * permitted to access the requested course or course work, if the user is not
+   * permitted to modify attachments on the requested student submission, or for
+   * access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+   * `NOT_FOUND` if the requested course, course work, or student submission does
+   * not exist. (studentSubmissions.modifyAttachments)
    *
    * @param string $courseId Identifier of the course. This identifier can be
    * either the Classroom-assigned identifier or an alias.
@@ -152,7 +150,7 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
   /**
    * Reclaims a student submission on behalf of the student that owns it.
    * Reclaiming a student submission transfers ownership of attached Drive files
-   * to the student and update the submission state. Only the student that ownes
+   * to the student and update the submission state. Only the student that owns
    * the requested student submission may call this method, and only for a student
    * submission that has been turned in. This request must be made by the
    * Developer Console project of the [OAuth client

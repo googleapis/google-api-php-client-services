@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -21,12 +19,14 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1TrainingInput exte
   public $args;
   protected $hyperparametersType = 'Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1HyperparameterSpec';
   protected $hyperparametersDataType = '';
+  public $jobDir;
   public $masterType;
   public $packageUris;
   public $parameterServerCount;
   public $parameterServerType;
   public $pythonModule;
   public $region;
+  public $runtimeVersion;
   public $scaleTier;
   public $workerCount;
   public $workerType;
@@ -46,6 +46,14 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1TrainingInput exte
   public function getHyperparameters()
   {
     return $this->hyperparameters;
+  }
+  public function setJobDir($jobDir)
+  {
+    $this->jobDir = $jobDir;
+  }
+  public function getJobDir()
+  {
+    return $this->jobDir;
   }
   public function setMasterType($masterType)
   {
@@ -94,6 +102,14 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1TrainingInput exte
   public function getRegion()
   {
     return $this->region;
+  }
+  public function setRuntimeVersion($runtimeVersion)
+  {
+    $this->runtimeVersion = $runtimeVersion;
+  }
+  public function getRuntimeVersion()
+  {
+    return $this->runtimeVersion;
   }
   public function setScaleTier($scaleTier)
   {

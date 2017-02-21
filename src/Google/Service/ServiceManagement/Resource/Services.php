@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -183,16 +181,16 @@ class Google_Service_ServiceManagement_Resource_Services extends Google_Service_
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Requested size of the next page of data.
    * @opt_param string producerProjectId Include services produced by the
    * specified project.
-   * @opt_param string pageToken Token identifying which result to start with;
-   * returned by a previous list call.
    * @opt_param string consumerId Include services consumed by the specified
    * consumer.
    *
    * The Google Service Management implementation accepts the following forms: -
    * project:
+   * @opt_param string pageToken Token identifying which result to start with;
+   * returned by a previous list call.
+   * @opt_param int pageSize Requested size of the next page of data.
    * @return Google_Service_ServiceManagement_ListServicesResponse
    */
   public function listServices($optParams = array())
@@ -221,7 +219,11 @@ class Google_Service_ServiceManagement_Resource_Services extends Google_Service_
   /**
    * Returns permissions that a caller has on the specified resource. If the
    * resource does not exist, this will return an empty set of permissions, not a
-   * NOT_FOUND error. (services.testIamPermissions)
+   * NOT_FOUND error.
+   *
+   * Note: This operation is designed to be used for building permission-aware UIs
+   * and command-line tools, not for authorization checking. This operation may
+   * "fail open" without warning. (services.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. `resource` is usually specified as a path. For example, a

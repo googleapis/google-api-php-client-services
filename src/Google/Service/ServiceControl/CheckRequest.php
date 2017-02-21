@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -19,7 +17,9 @@ class Google_Service_ServiceControl_CheckRequest extends Google_Model
 {
   protected $operationType = 'Google_Service_ServiceControl_Operation';
   protected $operationDataType = '';
+  public $requestProjectSettings;
   public $serviceConfigId;
+  public $skipActivationCheck;
 
   public function setOperation(Google_Service_ServiceControl_Operation $operation)
   {
@@ -29,6 +29,14 @@ class Google_Service_ServiceControl_CheckRequest extends Google_Model
   {
     return $this->operation;
   }
+  public function setRequestProjectSettings($requestProjectSettings)
+  {
+    $this->requestProjectSettings = $requestProjectSettings;
+  }
+  public function getRequestProjectSettings()
+  {
+    return $this->requestProjectSettings;
+  }
   public function setServiceConfigId($serviceConfigId)
   {
     $this->serviceConfigId = $serviceConfigId;
@@ -36,5 +44,13 @@ class Google_Service_ServiceControl_CheckRequest extends Google_Model
   public function getServiceConfigId()
   {
     return $this->serviceConfigId;
+  }
+  public function setSkipActivationCheck($skipActivationCheck)
+  {
+    $this->skipActivationCheck = $skipActivationCheck;
+  }
+  public function getSkipActivationCheck()
+  {
+    return $this->skipActivationCheck;
   }
 }

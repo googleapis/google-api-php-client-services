@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -214,6 +212,10 @@ class Google_Service_YouTubeAnalytics extends Google_Service
                 'filters' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'include-historical-channel-data' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
                 'max-results' => array(
                   'location' => 'query',

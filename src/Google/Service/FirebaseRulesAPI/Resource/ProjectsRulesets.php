@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -91,12 +89,12 @@ class Google_Service_FirebaseRulesAPI_Resource_ProjectsRulesets extends Google_S
    * Format: `projects/{project_id}`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken Next page token for loading the next batch of
+   * `Ruleset` instances.
    * @opt_param int pageSize Page size to load. Maximum of 100. Defaults to 10.
    * Note: `page_size` is just a hint and the service may choose to load less than
    * `page_size` due to the size of the output. To traverse all of the releases,
    * caller should iterate until the `page_token` is empty.
-   * @opt_param string pageToken Next page token for loading the next batch of
-   * `Ruleset` instances.
    * @return Google_Service_FirebaseRulesAPI_ListRulesetsResponse
    */
   public function listProjectsRulesets($name, $optParams = array())

@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -75,9 +73,9 @@ class Google_Service_ServiceManagement_Resource_ServicesRollouts extends Google_
    * `example.googleapis.com`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken The token of the page to retrieve.
    * @opt_param int pageSize The max number of items to include in the response
    * list.
-   * @opt_param string pageToken The token of the page to retrieve.
    * @return Google_Service_ServiceManagement_ListServiceRolloutsResponse
    */
   public function listServicesRollouts($serviceName, $optParams = array())

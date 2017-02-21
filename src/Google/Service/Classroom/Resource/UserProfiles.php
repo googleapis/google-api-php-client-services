@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -28,7 +26,7 @@ class Google_Service_Classroom_Resource_UserProfiles extends Google_Service_Reso
   /**
    * Returns a user profile. This method returns the following error codes: *
    * `PERMISSION_DENIED` if the requesting user is not permitted to access this
-   * user profile or if no profile exists with the requested ID or for access
+   * user profile, if no profile exists with the requested ID, or for access
    * errors. (userProfiles.get)
    *
    * @param string $userId Identifier of the profile to return. The identifier can

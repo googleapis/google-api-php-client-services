@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -20,6 +18,7 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1TrainingOutput ext
   protected $collection_key = 'trials';
   public $completedTrialCount;
   public $consumedMLUnits;
+  public $isHyperparameterTuningJob;
   protected $trialsType = 'Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1HyperparameterOutput';
   protected $trialsDataType = 'array';
 
@@ -38,6 +37,14 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1TrainingOutput ext
   public function getConsumedMLUnits()
   {
     return $this->consumedMLUnits;
+  }
+  public function setIsHyperparameterTuningJob($isHyperparameterTuningJob)
+  {
+    $this->isHyperparameterTuningJob = $isHyperparameterTuningJob;
+  }
+  public function getIsHyperparameterTuningJob()
+  {
+    return $this->isHyperparameterTuningJob;
   }
   public function setTrials($trials)
   {

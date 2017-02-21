@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -15,12 +13,15 @@
  * the License.
  */
 
-class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Model extends Google_Model
+class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Model extends Google_Collection
 {
+  protected $collection_key = 'regions';
   protected $defaultVersionType = 'Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Version';
   protected $defaultVersionDataType = '';
   public $description;
   public $name;
+  public $onlinePredictionLogging;
+  public $regions;
 
   public function setDefaultVersion(Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Version $defaultVersion)
   {
@@ -45,5 +46,21 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Model extends Goog
   public function getName()
   {
     return $this->name;
+  }
+  public function setOnlinePredictionLogging($onlinePredictionLogging)
+  {
+    $this->onlinePredictionLogging = $onlinePredictionLogging;
+  }
+  public function getOnlinePredictionLogging()
+  {
+    return $this->onlinePredictionLogging;
+  }
+  public function setRegions($regions)
+  {
+    $this->regions = $regions;
+  }
+  public function getRegions()
+  {
+    return $this->regions;
   }
 }

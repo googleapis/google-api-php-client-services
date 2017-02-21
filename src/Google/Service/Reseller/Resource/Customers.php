@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -26,10 +24,12 @@
 class Google_Service_Reseller_Resource_Customers extends Google_Service_Resource
 {
   /**
-   * Gets a customer resource if one exists and is owned by the reseller.
-   * (customers.get)
+   * Get a customer account. (customers.get)
    *
-   * @param string $customerId Id of the Customer
+   * @param string $customerId Either the customer's primary domain name or the
+   * customer's unique identifier. If using the domain name, we do not recommend
+   * using a customerId as a key for persistent data. If the domain name for a
+   * customerId is changed, the Google system automatically updates.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Customer
    */
@@ -40,14 +40,17 @@ class Google_Service_Reseller_Resource_Customers extends Google_Service_Resource
     return $this->call('get', array($params), "Google_Service_Reseller_Customer");
   }
   /**
-   * Creates a customer resource if one does not already exist. (customers.insert)
+   * Order a new customer's account. (customers.insert)
    *
    * @param Google_Service_Reseller_Customer $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string customerAuthToken An auth token needed for inserting a
-   * customer for which domain already exists. Can be generated at
-   * https://admin.google.com/TransferToken. Optional.
+   * @opt_param string customerAuthToken The customerAuthToken query string is
+   * required when creating a resold account that transfers a direct customer's
+   * subscription or transfers another reseller customer's subscription to your
+   * reseller management. This is a hexadecimal authentication token needed to
+   * complete the subscription transfer. For more information, see the
+   * administrator help center.
    * @return Google_Service_Reseller_Customer
    */
   public function insert(Google_Service_Reseller_Customer $postBody, $optParams = array())
@@ -57,10 +60,13 @@ class Google_Service_Reseller_Resource_Customers extends Google_Service_Resource
     return $this->call('insert', array($params), "Google_Service_Reseller_Customer");
   }
   /**
-   * Update a customer resource if one it exists and is owned by the reseller.
-   * This method supports patch semantics. (customers.patch)
+   * Update a customer account's settings. This method supports patch semantics.
+   * (customers.patch)
    *
-   * @param string $customerId Id of the Customer
+   * @param string $customerId Either the customer's primary domain name or the
+   * customer's unique identifier. If using the domain name, we do not recommend
+   * using a customerId as a key for persistent data. If the domain name for a
+   * customerId is changed, the Google system automatically updates.
    * @param Google_Service_Reseller_Customer $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Customer
@@ -72,10 +78,12 @@ class Google_Service_Reseller_Resource_Customers extends Google_Service_Resource
     return $this->call('patch', array($params), "Google_Service_Reseller_Customer");
   }
   /**
-   * Update a customer resource if one it exists and is owned by the reseller.
-   * (customers.update)
+   * Update a customer account's settings. (customers.update)
    *
-   * @param string $customerId Id of the Customer
+   * @param string $customerId Either the customer's primary domain name or the
+   * customer's unique identifier. If using the domain name, we do not recommend
+   * using a customerId as a key for persistent data. If the domain name for a
+   * customerId is changed, the Google system automatically updates.
    * @param Google_Service_Reseller_Customer $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Reseller_Customer

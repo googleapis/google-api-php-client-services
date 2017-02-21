@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -79,12 +77,12 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRings extends Google_
    * with the KeyRings, in the format `projects/locations`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken Optional pagination token, returned earlier via
+   * ListKeyRingsResponse.next_page_token.
    * @opt_param int pageSize Optional limit on the number of KeyRings to include
    * in the response.  Further KeyRings can subsequently be obtained by including
    * the ListKeyRingsResponse.next_page_token in a subsequent request.  If
    * unspecified, the server will pick an appropriate default.
-   * @opt_param string pageToken Optional pagination token, returned earlier via
-   * ListKeyRingsResponse.next_page_token.
    * @return Google_Service_CloudKMS_ListKeyRingsResponse
    */
   public function listProjectsLocationsKeyRings($parent, $optParams = array())
@@ -113,7 +111,11 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRings extends Google_
   /**
    * Returns permissions that a caller has on the specified resource. If the
    * resource does not exist, this will return an empty set of permissions, not a
-   * NOT_FOUND error. (keyRings.testIamPermissions)
+   * NOT_FOUND error.
+   *
+   * Note: This operation is designed to be used for building permission-aware UIs
+   * and command-line tools, not for authorization checking. This operation may
+   * "fail open" without warning. (keyRings.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. `resource` is usually specified as a path. For example, a

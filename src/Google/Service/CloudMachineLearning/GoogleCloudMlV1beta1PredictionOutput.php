@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -18,6 +16,7 @@
 class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictionOutput extends Google_Model
 {
   public $errorCount;
+  public $nodeHours;
   public $outputPath;
   public $predictionCount;
 
@@ -28,6 +27,14 @@ class Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictionOutput e
   public function getErrorCount()
   {
     return $this->errorCount;
+  }
+  public function setNodeHours($nodeHours)
+  {
+    $this->nodeHours = $nodeHours;
+  }
+  public function getNodeHours()
+  {
+    return $this->nodeHours;
   }
   public function setOutputPath($outputPath)
   {

@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -90,6 +88,25 @@ class Google_Service_ToolResults_Resource_ProjectsHistoriesExecutionsSteps exten
     $params = array('projectId' => $projectId, 'historyId' => $historyId, 'executionId' => $executionId, 'stepId' => $stepId);
     $params = array_merge($params, $optParams);
     return $this->call('get', array($params), "Google_Service_ToolResults_Step");
+  }
+  /**
+   * Retrieves a PerfMetricsSummary.
+   *
+   * May return any of the following error code(s): - NOT_FOUND - The specified
+   * PerfMetricsSummary does not exist (steps.getPerfMetricsSummary)
+   *
+   * @param string $projectId The cloud project
+   * @param string $historyId A tool results history ID.
+   * @param string $executionId A tool results execution ID.
+   * @param string $stepId A tool results step ID.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ToolResults_PerfMetricsSummary
+   */
+  public function getPerfMetricsSummary($projectId, $historyId, $executionId, $stepId, $optParams = array())
+  {
+    $params = array('projectId' => $projectId, 'historyId' => $historyId, 'executionId' => $executionId, 'stepId' => $stepId);
+    $params = array_merge($params, $optParams);
+    return $this->call('getPerfMetricsSummary', array($params), "Google_Service_ToolResults_PerfMetricsSummary");
   }
   /**
    * Lists Steps for a given Execution.

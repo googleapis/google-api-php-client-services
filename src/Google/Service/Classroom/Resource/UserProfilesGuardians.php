@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -28,14 +26,16 @@ class Google_Service_Classroom_Resource_UserProfilesGuardians extends Google_Ser
   /**
    * Deletes a guardian. The guardian will no longer receive guardian
    * notifications and the guardian will no longer be accessible via the API. This
-   * method returns the following error codes: * `PERMISSION_DENIED` if the
-   * requesting user is not permitted to manage guardians for the student
+   * method returns the following error codes: * `PERMISSION_DENIED` if no user
+   * that matches the provided `student_id` is visible to the requesting user, if
+   * the requesting user is not permitted to manage guardians for the student
    * identified by the `student_id`, if guardians are not enabled for the domain
    * in question, or for other access errors. * `INVALID_ARGUMENT` if a
    * `student_id` is specified, but its format cannot be recognized (it is not an
-   * email address, nor a `student_id` from the API). * `NOT_FOUND` if Classroom
-   * cannot find any record of the given `student_id` or `guardian_id`, or if the
-   * guardian has already been disabled. (guardians.delete)
+   * email address, nor a `student_id` from the API). * `NOT_FOUND` if the
+   * requesting user is permitted to modify guardians for the requested
+   * `student_id`, but no `Guardian` record exists for that student with the
+   * provided `guardian_id`. (guardians.delete)
    *
    * @param string $studentId The student whose guardian is to be deleted. One of
    * the following: * the numeric identifier for the user * the email address of
@@ -52,13 +52,15 @@ class Google_Service_Classroom_Resource_UserProfilesGuardians extends Google_Ser
   }
   /**
    * Returns a specific guardian. This method returns the following error codes: *
-   * `PERMISSION_DENIED` if the requesting user is not permitted to view guardian
-   * information for the student identified by the `student_id`, if guardians are
-   * not enabled for the domain in question, or for other access errors. *
-   * `INVALID_ARGUMENT` if a `student_id` is specified, but its format cannot be
-   * recognized (it is not an email address, nor a `student_id` from the API, nor
-   * the literal string `me`). * `NOT_FOUND` if Classroom cannot find any record
-   * of the given student or `guardian_id`, or if the guardian has been disabled.
+   * `PERMISSION_DENIED` if no user that matches the provided `student_id` is
+   * visible to the requesting user, if the requesting user is not permitted to
+   * view guardian information for the student identified by the `student_id`, if
+   * guardians are not enabled for the domain in question, or for other access
+   * errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format
+   * cannot be recognized (it is not an email address, nor a `student_id` from the
+   * API, nor the literal string `me`). * `NOT_FOUND` if the requesting user is
+   * permitted to view guardians for the requested `student_id`, but no `Guardian`
+   * record exists for that student that matches the provided `guardian_id`.
    * (guardians.get)
    *
    * @param string $studentId The student whose guardian is being requested. One

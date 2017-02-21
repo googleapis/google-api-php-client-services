@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -86,13 +84,13 @@ class Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeysCrypto
    * in the format `projects/locations/keyRings/cryptoKeys`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken Optional pagination token, returned earlier via
+   * ListCryptoKeyVersionsResponse.next_page_token.
    * @opt_param int pageSize Optional limit on the number of CryptoKeyVersions to
    * include in the response. Further CryptoKeyVersions can subsequently be
    * obtained by including the ListCryptoKeyVersionsResponse.next_page_token in a
    * subsequent request. If unspecified, the server will pick an appropriate
    * default.
-   * @opt_param string pageToken Optional pagination token, returned earlier via
-   * ListCryptoKeyVersionsResponse.next_page_token.
    * @return Google_Service_CloudKMS_ListCryptoKeyVersionsResponse
    */
   public function listProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions($parent, $optParams = array())

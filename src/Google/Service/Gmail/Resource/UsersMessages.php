@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -99,8 +97,8 @@ class Google_Service_Gmail_Resource_UsersMessages extends Google_Service_Resourc
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool deleted Mark the email as permanently deleted (not TRASH) and
-   * only visible in Google Apps Vault to a Vault administrator. Only used for
-   * Google Apps for Work accounts.
+   * only visible in Google Vault to a Vault administrator. Only used for G Suite
+   * accounts.
    * @opt_param string internalDateSource Source for Gmail's internal date of the
    * message.
    * @opt_param bool neverMarkSpam Ignore the Gmail spam classifier decision and
@@ -126,8 +124,8 @@ class Google_Service_Gmail_Resource_UsersMessages extends Google_Service_Resourc
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool deleted Mark the email as permanently deleted (not TRASH) and
-   * only visible in Google Apps Vault to a Vault administrator. Only used for
-   * Google Apps for Work accounts.
+   * only visible in Google Vault to a Vault administrator. Only used for G Suite
+   * accounts.
    * @opt_param string internalDateSource Source for Gmail's internal date of the
    * message.
    * @return Google_Service_Gmail_Message

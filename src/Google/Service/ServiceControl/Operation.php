@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2016 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -28,7 +26,11 @@ class Google_Service_ServiceControl_Operation extends Google_Collection
   protected $metricValueSetsDataType = 'array';
   public $operationId;
   public $operationName;
+  protected $quotaPropertiesType = 'Google_Service_ServiceControl_QuotaProperties';
+  protected $quotaPropertiesDataType = '';
+  public $resourceContainer;
   public $startTime;
+  public $userLabels;
 
   public function setConsumerId($consumerId)
   {
@@ -94,6 +96,22 @@ class Google_Service_ServiceControl_Operation extends Google_Collection
   {
     return $this->operationName;
   }
+  public function setQuotaProperties(Google_Service_ServiceControl_QuotaProperties $quotaProperties)
+  {
+    $this->quotaProperties = $quotaProperties;
+  }
+  public function getQuotaProperties()
+  {
+    return $this->quotaProperties;
+  }
+  public function setResourceContainer($resourceContainer)
+  {
+    $this->resourceContainer = $resourceContainer;
+  }
+  public function getResourceContainer()
+  {
+    return $this->resourceContainer;
+  }
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
@@ -101,5 +119,13 @@ class Google_Service_ServiceControl_Operation extends Google_Collection
   public function getStartTime()
   {
     return $this->startTime;
+  }
+  public function setUserLabels($userLabels)
+  {
+    $this->userLabels = $userLabels;
+  }
+  public function getUserLabels()
+  {
+    return $this->userLabels;
   }
 }
