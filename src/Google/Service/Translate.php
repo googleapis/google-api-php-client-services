@@ -44,7 +44,7 @@ class Google_Service_Translate extends Google_Service
   public function __construct(Google_Client $client)
   {
     parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
+    $this->rootUrl = 'https://translation.googleapis.com/';
     $this->servicePath = 'language/translate/';
     $this->version = 'v2';
     $this->serviceName = 'translate';
@@ -123,6 +123,10 @@ class Google_Service_Translate extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+				'model' => array(
+					'location' => 'query',
+					'type' => 'string',
+				),
               ),
             ),
           )
