@@ -34,7 +34,7 @@ class Google_Service_Groupssettings_Resource_Groups extends Google_Service_Resou
    */
   public function get($groupUniqueId, $optParams = array())
   {
-    $params = array('groupUniqueId' => $groupUniqueId);
+    $params = array('groupUniqueId' => $groupUniqueId, 'alt' => 'json');
     $params = array_merge($params, $optParams);
     return $this->call('get', array($params), "Google_Service_Groupssettings_Groups");
   }
