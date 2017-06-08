@@ -23,10 +23,10 @@ class Google_Service_Translate_TranslationsListResponse extends Google_Collectio
 
   public function setTranslations($translations)
   {
-    $this->translations = $translations;
+    $this->data['translations'] = $translations;
   }
   public function getTranslations()
   {
-    return $this->translations;
+    return $this->data['translations'];
   }
 }
