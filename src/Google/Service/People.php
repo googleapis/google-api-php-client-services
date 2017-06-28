@@ -89,7 +89,7 @@ class Google_Service_People extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'requestMask.includeField' => array(
+                'personFields' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -98,7 +98,7 @@ class Google_Service_People extends Google_Service
               'path' => 'v1/people:batchGet',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'requestMask.includeField' => array(
+                'personFields' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -143,7 +143,7 @@ class Google_Service_People extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'requestMask.includeField' => array(
+                'personFields' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
