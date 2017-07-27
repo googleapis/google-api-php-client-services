@@ -18,17 +18,10 @@
  * under the License.
  */
 
-class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
-{
-  public function setUp()
-  {
-    // ensure dependent classes exist
-    $this->getMock('Google_Service');
-    $this->getMock('Google_Model');
-    $this->getMock('Google_Collection');
-    $this->getMock('Google_Service_Resource');
-  }
+require_once dirname(__FILE__) . '/TestCase.php';
 
+class Google_Service_ServiceTest extends TestCase
+{
   /**
    * @dataProvider serviceProvider
    */

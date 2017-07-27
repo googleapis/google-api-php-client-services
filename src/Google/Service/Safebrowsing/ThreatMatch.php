@@ -23,6 +23,7 @@ class Google_Service_Safebrowsing_ThreatMatch extends Google_Model
   protected $threatEntryMetadataType = 'Google_Service_Safebrowsing_ThreatEntryMetadata';
   protected $threatEntryMetadataDataType = '';
   public $threatEntryType;
+  public $threat;
   public $threatType;
 
   public function setCacheDuration($cacheDuration)
@@ -84,5 +85,26 @@ class Google_Service_Safebrowsing_ThreatMatch extends Google_Model
   public function getThreatType()
   {
     return $this->threatType;
+  }
+
+  /**
+  * Initialize this object's properties from an array.
+  *
+  * @param array $array Used to seed this object's properties.
+  * @return void
+  */
+  public function mapTypes($array)
+  {
+    /*
+     * The existence of "threat" and "threatType" in the response is causing
+     * some issues. Process "threat" manually and remove it from the array to
+     * fix the issue.
+     */
+    $this->threat = $array['threat'];
+    unset($array['threat']);
+
+    if (is_callable('parent::mapTypes')) { // a hack for testing
+      return parent::mapTypes($array);
+    } 
   }
 }
