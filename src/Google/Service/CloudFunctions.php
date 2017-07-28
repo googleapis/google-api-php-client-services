@@ -47,6 +47,5 @@ class Google_Service_CloudFunctions extends Google_Service
     $this->servicePath = '';
     $this->version = 'v1';
     $this->serviceName = 'cloudfunctions';
-
   }
 }

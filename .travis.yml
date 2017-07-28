@@ -12,3 +12,4 @@ install:
 
 script:
   - phpunit
+  - phpcs

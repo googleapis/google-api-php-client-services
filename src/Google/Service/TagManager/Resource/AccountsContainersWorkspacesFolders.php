@@ -114,8 +114,10 @@ class Google_Service_TagManager_Resource_AccountsContainersWorkspacesFolders ext
    * @opt_param string triggerId The triggers to be moved to the folder.
    * @opt_param string variableId The variables to be moved to the folder.
    */
+  // @codingStandardsIgnoreStart
   public function move_entities_to_folder($path, Google_Service_TagManager_Folder $postBody, $optParams = array())
   {
+    // @codingStandardsIgnoreEnd
     $params = array('path' => $path, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('move_entities_to_folder', array($params));

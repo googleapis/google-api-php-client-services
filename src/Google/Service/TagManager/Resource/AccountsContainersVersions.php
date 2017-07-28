@@ -95,8 +95,10 @@ class Google_Service_TagManager_Resource_AccountsContainersVersions extends Goog
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_ContainerVersion
    */
+  // @codingStandardsIgnoreStart
   public function set_latest($path, $optParams = array())
   {
+    // @codingStandardsIgnoreEnd
     $params = array('path' => $path);
     $params = array_merge($params, $optParams);
     return $this->call('set_latest', array($params), "Google_Service_TagManager_ContainerVersion");

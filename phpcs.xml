@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="PHP_CodeSniffer">
+ <description>The coding standard for PHP_CodeSniffer itself.</description>
+
+ <file>src</file>
+ <file>tests</file>
+
+ <exclude-pattern>*/Standards/*/Tests/*.(inc|css|js)</exclude-pattern>
+
+ <arg name="basepath" value="."/>
+ <arg name="colors" />
+ <arg name="parallel" value="75" />
+ <arg value="np"/>
+
+ <!-- Don't hide tokenizer exceptions -->
+ <rule ref="Internal.Tokenizer.Exception">
+  <type>error</type>
+ </rule>
+
+ <!-- Include the whole PSR1 standard -->
+ <rule ref="PSR1">
+    <exclude name="Squiz.Classes.ValidClassName" />
+    <exclude name="PSR1.Classes.ClassDeclaration" />
+ </rule>
+
+ <!-- Include the whole PSR2 standard -->
+ <rule ref="PSR2">
+ </rule>
+
+ <rule ref="Generic.WhiteSpace.ScopeIndent">
+  <properties>
+   <property name="indent" type="number" value="2"/>
+  </properties>
+ </rule>
+</ruleset>
