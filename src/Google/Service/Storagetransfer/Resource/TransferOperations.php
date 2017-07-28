@@ -85,7 +85,6 @@ class Google_Service_Storagetransfer_Resource_TransferOperations extends Google_
    * @param string $name The value `transferOperations`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The list page token.
    * @opt_param int pageSize The list page size. The max allowed value is 256.
    * @opt_param string filter A list of query parameters specified as JSON text in
    * the form of {\"project_id\" : \"my_project_id\", \"job_names\" : [\"jobid1\",
@@ -94,6 +93,7 @@ class Google_Service_Storagetransfer_Resource_TransferOperations extends Google_
    * `operation_names`, and `transfer_statuses` support multiple values, they must
    * be specified with array notation. `job_names`, `operation_names`, and
    * `transfer_statuses` are optional.
+   * @opt_param string pageToken The list page token.
    * @return Google_Service_Storagetransfer_ListOperationsResponse
    */
   public function listTransferOperations($name, $optParams = array())
