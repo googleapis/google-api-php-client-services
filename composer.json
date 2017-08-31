@@ -1,5 +1,5 @@
 {
-    "name": "google/apiclient-services",
+    "name": "gnosis7bit/gnosis-google-apiclient-services",
     "type": "library",
     "description": "Client library for Google APIs",
     "keywords": ["google"],
