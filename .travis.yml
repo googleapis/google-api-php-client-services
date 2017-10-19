@@ -12,3 +12,4 @@ install:
 
 script:
   - phpunit
+  - vendor/squizlabs/php_codesniffer/bin/phpcs

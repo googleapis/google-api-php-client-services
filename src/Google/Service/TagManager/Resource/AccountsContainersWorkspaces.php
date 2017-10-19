@@ -51,8 +51,10 @@ class Google_Service_TagManager_Resource_AccountsContainersWorkspaces extends Go
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_CreateContainerVersionResponse
    */
+  // @codingStandardsIgnoreStart
   public function create_version($path, Google_Service_TagManager_CreateContainerVersionRequestVersionOptions $postBody, $optParams = array())
   {
+    // @codingStandardsIgnoreEnd
     $params = array('path' => $path, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('create_version', array($params), "Google_Service_TagManager_CreateContainerVersionResponse");
@@ -140,8 +142,10 @@ class Google_Service_TagManager_Resource_AccountsContainersWorkspaces extends Go
    * @param array $optParams Optional parameters.
    * @return Google_Service_TagManager_QuickPreviewResponse
    */
+  // @codingStandardsIgnoreStart
   public function quick_preview($path, $optParams = array())
   {
+    // @codingStandardsIgnoreEnd
     $params = array('path' => $path);
     $params = array_merge($params, $optParams);
     return $this->call('quick_preview', array($params), "Google_Service_TagManager_QuickPreviewResponse");
@@ -158,8 +162,10 @@ class Google_Service_TagManager_Resource_AccountsContainersWorkspaces extends Go
    * @opt_param string fingerprint When provided, this fingerprint must match the
    * fingerprint of the entity_in_workspace in the merge conflict.
    */
+  // @codingStandardsIgnoreStart
   public function resolve_conflict($path, Google_Service_TagManager_Entity $postBody, $optParams = array())
   {
+    // @codingStandardsIgnoreEnd
     $params = array('path' => $path, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('resolve_conflict', array($params));
