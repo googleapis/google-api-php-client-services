@@ -58,7 +58,7 @@ class Google_Service_FirebaseDynamicLinksAPI extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1/shortDynamicLinks',
+              'path' => 'v1/shortLinks',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
