@@ -35,4 +35,14 @@ class Google_Service_Translate_TranslationsListResponse extends Google_Collectio
   {
     return $this->translations;
   }
+  /**
+   * @param array $array
+  */
+  protected function mapTypes($array)
+  {
+    if (isset($array['data'])) {
+      $array = $array['data'];
+    }
+    parent::mapTypes($array);
+  }
 }
