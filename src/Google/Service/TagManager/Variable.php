@@ -93,9 +93,9 @@ class Google_Service_TagManager_Variable extends Google_Collection
     return $this->notes;
   }
   /**
-   * @param Google_Service_TagManager_Parameter
+   * @param Google_Service_TagManager_Parameter[]
    */
-  public function setParameter($parameter)
+  public function setParameter(array $parameter)
   {
     $this->parameter = $parameter;
   }
