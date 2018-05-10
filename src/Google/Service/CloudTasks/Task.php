@@ -72,10 +72,28 @@ class Google_Service_CloudTasks_Task extends Google_Model
   {
     return $this->pullMessage;
   }
+
+  /**
+   * The time when the task is scheduled to be attempted.
+   * For App Engine queues, this is when the task will be attempted or retried.
+   * For pull queues, this is the time when the task is available to be leased.
+   * If a task is currently leased, this is the time when the current lease expires,
+   * that is, the time that the task was leased plus the leaseDuration.
+   *
+   * scheduleTime will be truncated to the nearest microsecond.
+   * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+   *
+   * (new DateTime("now", new DateTimeZone("UTC")))->format(DATE_RFC3339)
+   *
+   * @see https://cloud.google.com/cloud-tasks/docs/reference/rest/v2beta2/projects.locations.queues.tasks#Task.FIELDS.schedule_time
+   *
+   * @param string $scheduleTime
+   */
   public function setScheduleTime($scheduleTime)
   {
     $this->scheduleTime = $scheduleTime;
   }
+
   public function getScheduleTime()
   {
     return $this->scheduleTime;
