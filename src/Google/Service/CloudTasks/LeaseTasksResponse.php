@@ -22,14 +22,14 @@ class Google_Service_CloudTasks_LeaseTasksResponse extends Google_Collection
   protected $tasksDataType = 'array';
 
   /**
-   * @param Google_Service_CloudTasks_Task
+   * @param Google_Service_CloudTasks_Task[]
    */
   public function setTasks($tasks)
   {
     $this->tasks = $tasks;
   }
   /**
-   * @return Google_Service_CloudTasks_Task
+   * @return Google_Service_CloudTasks_Task[]
    */
   public function getTasks()
   {
