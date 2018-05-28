@@ -83,6 +83,7 @@ class Google_Service_Customsearch_Resource_Cse extends Google_Service_Resource
    * @opt_param string sort The sort expression to apply to the results
    * @opt_param string start The index of the first result to return
    * @return Google_Service_Customsearch_Search
+   * @throws Google_Exception
    */
   public function listCse($q, $optParams = array())
   {
