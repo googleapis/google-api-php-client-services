@@ -181,7 +181,7 @@ class Google_Service_Webmasters extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'list' => array(
+            ),'listSites' => array(
               'path' => 'sites',
               'httpMethod' => 'GET',
               'parameters' => array(),
