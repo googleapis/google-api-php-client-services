@@ -22,6 +22,7 @@ class Google_Service_People_DomainMembership extends Google_Model
   public function setInViewerDomain($inViewerDomain)
   {
     $this->inViewerDomain = $inViewerDomain;
+    return $this;
   }
   public function getInViewerDomain()
   {

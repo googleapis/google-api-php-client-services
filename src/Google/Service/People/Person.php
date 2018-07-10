@@ -79,6 +79,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setAddresses($addresses)
   {
     $this->addresses = $addresses;
+    return $this;
   }
   public function getAddresses()
   {
@@ -87,6 +88,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setAgeRange($ageRange)
   {
     $this->ageRange = $ageRange;
+    return $this;
   }
   public function getAgeRange()
   {
@@ -95,6 +97,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setAgeRanges($ageRanges)
   {
     $this->ageRanges = $ageRanges;
+    return $this;
   }
   public function getAgeRanges()
   {
@@ -103,6 +106,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setBiographies($biographies)
   {
     $this->biographies = $biographies;
+    return $this;
   }
   public function getBiographies()
   {
@@ -111,6 +115,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setBirthdays($birthdays)
   {
     $this->birthdays = $birthdays;
+    return $this;
   }
   public function getBirthdays()
   {
@@ -119,6 +124,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setBraggingRights($braggingRights)
   {
     $this->braggingRights = $braggingRights;
+    return $this;
   }
   public function getBraggingRights()
   {
@@ -127,6 +133,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setCoverPhotos($coverPhotos)
   {
     $this->coverPhotos = $coverPhotos;
+    return $this;
   }
   public function getCoverPhotos()
   {
@@ -135,6 +142,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setEmailAddresses($emailAddresses)
   {
     $this->emailAddresses = $emailAddresses;
+    return $this;
   }
   public function getEmailAddresses()
   {
@@ -143,6 +151,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setEtag($etag)
   {
     $this->etag = $etag;
+    return $this;
   }
   public function getEtag()
   {
@@ -151,6 +160,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setEvents($events)
   {
     $this->events = $events;
+    return $this;
   }
   public function getEvents()
   {
@@ -159,6 +169,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setGenders($genders)
   {
     $this->genders = $genders;
+    return $this;
   }
   public function getGenders()
   {
@@ -167,6 +178,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setImClients($imClients)
   {
     $this->imClients = $imClients;
+    return $this;
   }
   public function getImClients()
   {
@@ -175,6 +187,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setInterests($interests)
   {
     $this->interests = $interests;
+    return $this;
   }
   public function getInterests()
   {
@@ -183,6 +196,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setLocales($locales)
   {
     $this->locales = $locales;
+    return $this;
   }
   public function getLocales()
   {
@@ -191,6 +205,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setMemberships($memberships)
   {
     $this->memberships = $memberships;
+    return $this;
   }
   public function getMemberships()
   {
@@ -199,6 +214,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setMetadata(Google_Service_People_PersonMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -207,6 +223,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setNames($names)
   {
     $this->names = $names;
+    return $this;
   }
   public function getNames()
   {
@@ -215,6 +232,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setNicknames($nicknames)
   {
     $this->nicknames = $nicknames;
+    return $this;
   }
   public function getNicknames()
   {
@@ -223,6 +241,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setOccupations($occupations)
   {
     $this->occupations = $occupations;
+    return $this;
   }
   public function getOccupations()
   {
@@ -231,6 +250,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setOrganizations($organizations)
   {
     $this->organizations = $organizations;
+    return $this;
   }
   public function getOrganizations()
   {
@@ -239,6 +259,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setPhoneNumbers($phoneNumbers)
   {
     $this->phoneNumbers = $phoneNumbers;
+    return $this;
   }
   public function getPhoneNumbers()
   {
@@ -247,6 +268,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setPhotos($photos)
   {
     $this->photos = $photos;
+    return $this;
   }
   public function getPhotos()
   {
@@ -255,6 +277,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setRelations($relations)
   {
     $this->relations = $relations;
+    return $this;
   }
   public function getRelations()
   {
@@ -263,6 +286,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setRelationshipInterests($relationshipInterests)
   {
     $this->relationshipInterests = $relationshipInterests;
+    return $this;
   }
   public function getRelationshipInterests()
   {
@@ -271,6 +295,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setRelationshipStatuses($relationshipStatuses)
   {
     $this->relationshipStatuses = $relationshipStatuses;
+    return $this;
   }
   public function getRelationshipStatuses()
   {
@@ -279,6 +304,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setResidences($residences)
   {
     $this->residences = $residences;
+    return $this;
   }
   public function getResidences()
   {
@@ -287,6 +313,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setResourceName($resourceName)
   {
     $this->resourceName = $resourceName;
+    return $this;
   }
   public function getResourceName()
   {
@@ -295,6 +322,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setSkills($skills)
   {
     $this->skills = $skills;
+    return $this;
   }
   public function getSkills()
   {
@@ -303,6 +331,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setTaglines($taglines)
   {
     $this->taglines = $taglines;
+    return $this;
   }
   public function getTaglines()
   {
@@ -311,6 +340,7 @@ class Google_Service_People_Person extends Google_Collection
   public function setUrls($urls)
   {
     $this->urls = $urls;
+    return $this;
   }
   public function getUrls()
   {

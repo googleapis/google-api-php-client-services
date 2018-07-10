@@ -27,6 +27,7 @@ class Google_Service_People_PhoneNumber extends Google_Model
   public function setCanonicalForm($canonicalForm)
   {
     $this->canonicalForm = $canonicalForm;
+    return $this;
   }
   public function getCanonicalForm()
   {
@@ -35,6 +36,7 @@ class Google_Service_People_PhoneNumber extends Google_Model
   public function setFormattedType($formattedType)
   {
     $this->formattedType = $formattedType;
+    return $this;
   }
   public function getFormattedType()
   {
@@ -43,6 +45,7 @@ class Google_Service_People_PhoneNumber extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -51,6 +54,7 @@ class Google_Service_People_PhoneNumber extends Google_Model
   public function setType($type)
   {
     $this->type = $type;
+    return $this;
   }
   public function getType()
   {
@@ -59,6 +63,7 @@ class Google_Service_People_PhoneNumber extends Google_Model
   public function setValue($value)
   {
     $this->value = $value;
+    return $this;
   }
   public function getValue()
   {

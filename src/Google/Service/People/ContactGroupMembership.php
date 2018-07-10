@@ -22,6 +22,7 @@ class Google_Service_People_ContactGroupMembership extends Google_Model
   public function setContactGroupId($contactGroupId)
   {
     $this->contactGroupId = $contactGroupId;
+    return $this;
   }
   public function getContactGroupId()
   {

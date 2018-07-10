@@ -38,6 +38,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setCurrent($current)
   {
     $this->current = $current;
+    return $this;
   }
   public function getCurrent()
   {
@@ -46,6 +47,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setDepartment($department)
   {
     $this->department = $department;
+    return $this;
   }
   public function getDepartment()
   {
@@ -54,6 +56,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setDomain($domain)
   {
     $this->domain = $domain;
+    return $this;
   }
   public function getDomain()
   {
@@ -62,6 +65,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setEndDate(Google_Service_People_Date $endDate)
   {
     $this->endDate = $endDate;
+    return $this;
   }
   public function getEndDate()
   {
@@ -70,6 +74,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setFormattedType($formattedType)
   {
     $this->formattedType = $formattedType;
+    return $this;
   }
   public function getFormattedType()
   {
@@ -78,6 +83,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setJobDescription($jobDescription)
   {
     $this->jobDescription = $jobDescription;
+    return $this;
   }
   public function getJobDescription()
   {
@@ -86,6 +92,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setLocation($location)
   {
     $this->location = $location;
+    return $this;
   }
   public function getLocation()
   {
@@ -94,6 +101,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -102,6 +110,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setName($name)
   {
     $this->name = $name;
+    return $this;
   }
   public function getName()
   {
@@ -110,6 +119,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setPhoneticName($phoneticName)
   {
     $this->phoneticName = $phoneticName;
+    return $this;
   }
   public function getPhoneticName()
   {
@@ -118,6 +128,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setStartDate(Google_Service_People_Date $startDate)
   {
     $this->startDate = $startDate;
+    return $this;
   }
   public function getStartDate()
   {
@@ -126,6 +137,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setSymbol($symbol)
   {
     $this->symbol = $symbol;
+    return $this;
   }
   public function getSymbol()
   {
@@ -134,6 +146,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setTitle($title)
   {
     $this->title = $title;
+    return $this;
   }
   public function getTitle()
   {
@@ -142,6 +155,7 @@ class Google_Service_People_Organization extends Google_Model
   public function setType($type)
   {
     $this->type = $type;
+    return $this;
   }
   public function getType()
   {

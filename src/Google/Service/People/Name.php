@@ -36,6 +36,7 @@ class Google_Service_People_Name extends Google_Model
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
+    return $this;
   }
   public function getDisplayName()
   {
@@ -44,6 +45,7 @@ class Google_Service_People_Name extends Google_Model
   public function setDisplayNameLastFirst($displayNameLastFirst)
   {
     $this->displayNameLastFirst = $displayNameLastFirst;
+    return $this;
   }
   public function getDisplayNameLastFirst()
   {
@@ -52,6 +54,7 @@ class Google_Service_People_Name extends Google_Model
   public function setFamilyName($familyName)
   {
     $this->familyName = $familyName;
+    return $this;
   }
   public function getFamilyName()
   {
@@ -60,6 +63,7 @@ class Google_Service_People_Name extends Google_Model
   public function setGivenName($givenName)
   {
     $this->givenName = $givenName;
+    return $this;
   }
   public function getGivenName()
   {
@@ -68,6 +72,7 @@ class Google_Service_People_Name extends Google_Model
   public function setHonorificPrefix($honorificPrefix)
   {
     $this->honorificPrefix = $honorificPrefix;
+    return $this;
   }
   public function getHonorificPrefix()
   {
@@ -76,6 +81,7 @@ class Google_Service_People_Name extends Google_Model
   public function setHonorificSuffix($honorificSuffix)
   {
     $this->honorificSuffix = $honorificSuffix;
+    return $this;
   }
   public function getHonorificSuffix()
   {
@@ -84,6 +90,7 @@ class Google_Service_People_Name extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -92,6 +99,7 @@ class Google_Service_People_Name extends Google_Model
   public function setMiddleName($middleName)
   {
     $this->middleName = $middleName;
+    return $this;
   }
   public function getMiddleName()
   {
@@ -100,6 +108,7 @@ class Google_Service_People_Name extends Google_Model
   public function setPhoneticFamilyName($phoneticFamilyName)
   {
     $this->phoneticFamilyName = $phoneticFamilyName;
+    return $this;
   }
   public function getPhoneticFamilyName()
   {
@@ -108,6 +117,7 @@ class Google_Service_People_Name extends Google_Model
   public function setPhoneticFullName($phoneticFullName)
   {
     $this->phoneticFullName = $phoneticFullName;
+    return $this;
   }
   public function getPhoneticFullName()
   {
@@ -116,6 +126,7 @@ class Google_Service_People_Name extends Google_Model
   public function setPhoneticGivenName($phoneticGivenName)
   {
     $this->phoneticGivenName = $phoneticGivenName;
+    return $this;
   }
   public function getPhoneticGivenName()
   {
@@ -124,6 +135,7 @@ class Google_Service_People_Name extends Google_Model
   public function setPhoneticHonorificPrefix($phoneticHonorificPrefix)
   {
     $this->phoneticHonorificPrefix = $phoneticHonorificPrefix;
+    return $this;
   }
   public function getPhoneticHonorificPrefix()
   {
@@ -132,6 +144,7 @@ class Google_Service_People_Name extends Google_Model
   public function setPhoneticHonorificSuffix($phoneticHonorificSuffix)
   {
     $this->phoneticHonorificSuffix = $phoneticHonorificSuffix;
+    return $this;
   }
   public function getPhoneticHonorificSuffix()
   {
@@ -140,6 +153,7 @@ class Google_Service_People_Name extends Google_Model
   public function setPhoneticMiddleName($phoneticMiddleName)
   {
     $this->phoneticMiddleName = $phoneticMiddleName;
+    return $this;
   }
   public function getPhoneticMiddleName()
   {

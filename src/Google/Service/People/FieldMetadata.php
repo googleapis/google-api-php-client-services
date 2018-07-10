@@ -25,6 +25,7 @@ class Google_Service_People_FieldMetadata extends Google_Model
   public function setPrimary($primary)
   {
     $this->primary = $primary;
+    return $this;
   }
   public function getPrimary()
   {
@@ -33,6 +34,7 @@ class Google_Service_People_FieldMetadata extends Google_Model
   public function setSource(Google_Service_People_Source $source)
   {
     $this->source = $source;
+    return $this;
   }
   public function getSource()
   {
@@ -41,6 +43,7 @@ class Google_Service_People_FieldMetadata extends Google_Model
   public function setVerified($verified)
   {
     $this->verified = $verified;
+    return $this;
   }
   public function getVerified()
   {

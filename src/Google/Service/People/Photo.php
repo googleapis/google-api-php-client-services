@@ -24,6 +24,7 @@ class Google_Service_People_Photo extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -32,6 +33,7 @@ class Google_Service_People_Photo extends Google_Model
   public function setUrl($url)
   {
     $this->url = $url;
+    return $this;
   }
   public function getUrl()
   {

@@ -26,6 +26,7 @@ class Google_Service_People_ListConnectionsResponse extends Google_Collection
   public function setConnections($connections)
   {
     $this->connections = $connections;
+    return $this;
   }
   public function getConnections()
   {
@@ -34,6 +35,7 @@ class Google_Service_People_ListConnectionsResponse extends Google_Collection
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
+    return $this;
   }
   public function getNextPageToken()
   {
@@ -42,6 +44,7 @@ class Google_Service_People_ListConnectionsResponse extends Google_Collection
   public function setNextSyncToken($nextSyncToken)
   {
     $this->nextSyncToken = $nextSyncToken;
+    return $this;
   }
   public function getNextSyncToken()
   {

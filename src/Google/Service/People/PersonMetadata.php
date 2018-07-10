@@ -28,6 +28,7 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   public function setDeleted($deleted)
   {
     $this->deleted = $deleted;
+    return $this;
   }
   public function getDeleted()
   {
@@ -36,6 +37,7 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   public function setLinkedPeopleResourceNames($linkedPeopleResourceNames)
   {
     $this->linkedPeopleResourceNames = $linkedPeopleResourceNames;
+    return $this;
   }
   public function getLinkedPeopleResourceNames()
   {
@@ -44,6 +46,7 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   public function setObjectType($objectType)
   {
     $this->objectType = $objectType;
+    return $this;
   }
   public function getObjectType()
   {
@@ -52,6 +55,7 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   public function setPreviousResourceNames($previousResourceNames)
   {
     $this->previousResourceNames = $previousResourceNames;
+    return $this;
   }
   public function getPreviousResourceNames()
   {
@@ -60,6 +64,7 @@ class Google_Service_People_PersonMetadata extends Google_Collection
   public function setSources($sources)
   {
     $this->sources = $sources;
+    return $this;
   }
   public function getSources()
   {

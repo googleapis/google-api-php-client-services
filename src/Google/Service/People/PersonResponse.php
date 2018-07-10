@@ -25,6 +25,7 @@ class Google_Service_People_PersonResponse extends Google_Model
   public function setHttpStatusCode($httpStatusCode)
   {
     $this->httpStatusCode = $httpStatusCode;
+    return $this;
   }
   public function getHttpStatusCode()
   {
@@ -33,6 +34,7 @@ class Google_Service_People_PersonResponse extends Google_Model
   public function setPerson(Google_Service_People_Person $person)
   {
     $this->person = $person;
+    return $this;
   }
   public function getPerson()
   {
@@ -41,6 +43,7 @@ class Google_Service_People_PersonResponse extends Google_Model
   public function setRequestedResourceName($requestedResourceName)
   {
     $this->requestedResourceName = $requestedResourceName;
+    return $this;
   }
   public function getRequestedResourceName()
   {
