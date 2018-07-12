@@ -34,6 +34,7 @@ class Google_Service_People_Address extends Google_Model
   public function setCity($city)
   {
     $this->city = $city;
+    return $this;
   }
   public function getCity()
   {
@@ -42,6 +43,7 @@ class Google_Service_People_Address extends Google_Model
   public function setCountry($country)
   {
     $this->country = $country;
+    return $this;
   }
   public function getCountry()
   {
@@ -50,6 +52,7 @@ class Google_Service_People_Address extends Google_Model
   public function setCountryCode($countryCode)
   {
     $this->countryCode = $countryCode;
+    return $this;
   }
   public function getCountryCode()
   {
@@ -58,6 +61,7 @@ class Google_Service_People_Address extends Google_Model
   public function setExtendedAddress($extendedAddress)
   {
     $this->extendedAddress = $extendedAddress;
+    return $this;
   }
   public function getExtendedAddress()
   {
@@ -66,6 +70,7 @@ class Google_Service_People_Address extends Google_Model
   public function setFormattedType($formattedType)
   {
     $this->formattedType = $formattedType;
+    return $this;
   }
   public function getFormattedType()
   {
@@ -74,6 +79,7 @@ class Google_Service_People_Address extends Google_Model
   public function setFormattedValue($formattedValue)
   {
     $this->formattedValue = $formattedValue;
+    return $this;
   }
   public function getFormattedValue()
   {
@@ -82,6 +88,7 @@ class Google_Service_People_Address extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -90,6 +97,7 @@ class Google_Service_People_Address extends Google_Model
   public function setPoBox($poBox)
   {
     $this->poBox = $poBox;
+    return $this;
   }
   public function getPoBox()
   {
@@ -98,6 +106,7 @@ class Google_Service_People_Address extends Google_Model
   public function setPostalCode($postalCode)
   {
     $this->postalCode = $postalCode;
+    return $this;
   }
   public function getPostalCode()
   {
@@ -106,6 +115,7 @@ class Google_Service_People_Address extends Google_Model
   public function setRegion($region)
   {
     $this->region = $region;
+    return $this;
   }
   public function getRegion()
   {
@@ -114,6 +124,7 @@ class Google_Service_People_Address extends Google_Model
   public function setStreetAddress($streetAddress)
   {
     $this->streetAddress = $streetAddress;
+    return $this;
   }
   public function getStreetAddress()
   {
@@ -122,6 +133,7 @@ class Google_Service_People_Address extends Google_Model
   public function setType($type)
   {
     $this->type = $type;
+    return $this;
   }
   public function getType()
   {

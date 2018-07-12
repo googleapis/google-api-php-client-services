@@ -24,6 +24,7 @@ class Google_Service_People_Date extends Google_Model
   public function setDay($day)
   {
     $this->day = $day;
+    return $this;
   }
   public function getDay()
   {
@@ -32,6 +33,7 @@ class Google_Service_People_Date extends Google_Model
   public function setMonth($month)
   {
     $this->month = $month;
+    return $this;
   }
   public function getMonth()
   {
@@ -40,6 +42,7 @@ class Google_Service_People_Date extends Google_Model
   public function setYear($year)
   {
     $this->year = $year;
+    return $this;
   }
   public function getYear()
   {

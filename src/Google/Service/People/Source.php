@@ -26,6 +26,7 @@ class Google_Service_People_Source extends Google_Model
   public function setEtag($etag)
   {
     $this->etag = $etag;
+    return $this;
   }
   public function getEtag()
   {
@@ -34,6 +35,7 @@ class Google_Service_People_Source extends Google_Model
   public function setId($id)
   {
     $this->id = $id;
+    return $this;
   }
   public function getId()
   {
@@ -42,6 +44,7 @@ class Google_Service_People_Source extends Google_Model
   public function setProfileMetadata(Google_Service_People_ProfileMetadata $profileMetadata)
   {
     $this->profileMetadata = $profileMetadata;
+    return $this;
   }
   public function getProfileMetadata()
   {
@@ -50,6 +53,7 @@ class Google_Service_People_Source extends Google_Model
   public function setType($type)
   {
     $this->type = $type;
+    return $this;
   }
   public function getType()
   {

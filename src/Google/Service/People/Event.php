@@ -27,6 +27,7 @@ class Google_Service_People_Event extends Google_Model
   public function setDate(Google_Service_People_Date $date)
   {
     $this->date = $date;
+    return $this;
   }
   public function getDate()
   {
@@ -35,6 +36,7 @@ class Google_Service_People_Event extends Google_Model
   public function setFormattedType($formattedType)
   {
     $this->formattedType = $formattedType;
+    return $this;
   }
   public function getFormattedType()
   {
@@ -43,6 +45,7 @@ class Google_Service_People_Event extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -51,6 +54,7 @@ class Google_Service_People_Event extends Google_Model
   public function setType($type)
   {
     $this->type = $type;
+    return $this;
   }
   public function getType()
   {

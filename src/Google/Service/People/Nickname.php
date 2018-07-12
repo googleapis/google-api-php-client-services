@@ -25,6 +25,7 @@ class Google_Service_People_Nickname extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -33,6 +34,7 @@ class Google_Service_People_Nickname extends Google_Model
   public function setType($type)
   {
     $this->type = $type;
+    return $this;
   }
   public function getType()
   {
@@ -41,6 +43,7 @@ class Google_Service_People_Nickname extends Google_Model
   public function setValue($value)
   {
     $this->value = $value;
+    return $this;
   }
   public function getValue()
   {

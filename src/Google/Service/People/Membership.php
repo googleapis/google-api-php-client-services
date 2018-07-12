@@ -27,6 +27,7 @@ class Google_Service_People_Membership extends Google_Model
   public function setContactGroupMembership(Google_Service_People_ContactGroupMembership $contactGroupMembership)
   {
     $this->contactGroupMembership = $contactGroupMembership;
+    return $this;
   }
   public function getContactGroupMembership()
   {
@@ -35,6 +36,7 @@ class Google_Service_People_Membership extends Google_Model
   public function setDomainMembership(Google_Service_People_DomainMembership $domainMembership)
   {
     $this->domainMembership = $domainMembership;
+    return $this;
   }
   public function getDomainMembership()
   {
@@ -43,6 +45,7 @@ class Google_Service_People_Membership extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {

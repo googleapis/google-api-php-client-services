@@ -24,6 +24,7 @@ class Google_Service_People_AgeRangeType extends Google_Model
   public function setAgeRange($ageRange)
   {
     $this->ageRange = $ageRange;
+    return $this;
   }
   public function getAgeRange()
   {
@@ -32,6 +33,7 @@ class Google_Service_People_AgeRangeType extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {

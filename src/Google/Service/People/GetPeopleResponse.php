@@ -24,6 +24,7 @@ class Google_Service_People_GetPeopleResponse extends Google_Collection
   public function setResponses($responses)
   {
     $this->responses = $responses;
+    return $this;
   }
   public function getResponses()
   {

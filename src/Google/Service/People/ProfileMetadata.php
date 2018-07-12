@@ -22,6 +22,7 @@ class Google_Service_People_ProfileMetadata extends Google_Model
   public function setObjectType($objectType)
   {
     $this->objectType = $objectType;
+    return $this;
   }
   public function getObjectType()
   {

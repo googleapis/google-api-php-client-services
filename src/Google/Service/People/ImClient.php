@@ -28,6 +28,7 @@ class Google_Service_People_ImClient extends Google_Model
   public function setFormattedProtocol($formattedProtocol)
   {
     $this->formattedProtocol = $formattedProtocol;
+    return $this;
   }
   public function getFormattedProtocol()
   {
@@ -36,6 +37,7 @@ class Google_Service_People_ImClient extends Google_Model
   public function setFormattedType($formattedType)
   {
     $this->formattedType = $formattedType;
+    return $this;
   }
   public function getFormattedType()
   {
@@ -44,6 +46,7 @@ class Google_Service_People_ImClient extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -52,6 +55,7 @@ class Google_Service_People_ImClient extends Google_Model
   public function setProtocol($protocol)
   {
     $this->protocol = $protocol;
+    return $this;
   }
   public function getProtocol()
   {
@@ -60,6 +64,7 @@ class Google_Service_People_ImClient extends Google_Model
   public function setType($type)
   {
     $this->type = $type;
+    return $this;
   }
   public function getType()
   {
@@ -68,6 +73,7 @@ class Google_Service_People_ImClient extends Google_Model
   public function setUsername($username)
   {
     $this->username = $username;
+    return $this;
   }
   public function getUsername()
   {

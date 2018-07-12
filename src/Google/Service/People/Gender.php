@@ -25,6 +25,7 @@ class Google_Service_People_Gender extends Google_Model
   public function setFormattedValue($formattedValue)
   {
     $this->formattedValue = $formattedValue;
+    return $this;
   }
   public function getFormattedValue()
   {
@@ -33,6 +34,7 @@ class Google_Service_People_Gender extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -41,6 +43,7 @@ class Google_Service_People_Gender extends Google_Model
   public function setValue($value)
   {
     $this->value = $value;
+    return $this;
   }
   public function getValue()
   {

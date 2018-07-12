@@ -25,6 +25,7 @@ class Google_Service_People_CoverPhoto extends Google_Model
   public function setDefault($default)
   {
     $this->default = $default;
+    return $this;
   }
   public function getDefault()
   {
@@ -33,6 +34,7 @@ class Google_Service_People_CoverPhoto extends Google_Model
   public function setMetadata(Google_Service_People_FieldMetadata $metadata)
   {
     $this->metadata = $metadata;
+    return $this;
   }
   public function getMetadata()
   {
@@ -41,6 +43,7 @@ class Google_Service_People_CoverPhoto extends Google_Model
   public function setUrl($url)
   {
     $this->url = $url;
+    return $this;
   }
   public function getUrl()
   {
