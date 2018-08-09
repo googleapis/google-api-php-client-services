@@ -20,7 +20,7 @@
  * Typical usage is:
  *  <code>
  *   $peopleService = new Google_Service_PeopleService(...);
- *   $connections = $peopleService->connections;
+ *   $connections = $peopleService->people_connections;
  *  </code>
  */
 class Google_Service_PeopleService_Resource_PeopleConnections extends Google_Service_Resource
