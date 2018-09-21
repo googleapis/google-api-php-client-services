@@ -1,4 +1,2 @@
 vendor
 composer.lock
-src/Google/Service/Compute/HTTPHealthCheck.php
-src/Google/Service/Compute/HTTPSHealthCheck.php
