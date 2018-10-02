@@ -67,7 +67,6 @@ class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
 
   public function apiProvider()
   {
-    $classes = array();
     $path = __DIR__ . '/../src/Google/Service/*';
     return array_filter(glob($path), 'is_dir');
   }
