@@ -101,10 +101,10 @@ class Google_Service_Pubsub_Resource_ProjectsTopics extends Google_Service_Resou
    * Format is `projects/{project-id}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of topics to return.
    * @opt_param string pageToken The value returned by the last
    * `ListTopicsResponse`; indicates that this is a continuation of a prior
    * `ListTopics` call, and that the system should return the next page of data.
+   * @opt_param int pageSize Maximum number of topics to return.
    * @return Google_Service_Pubsub_ListTopicsResponse
    */
   public function listProjectsTopics($project, $optParams = array())

@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_ShoppingContent_OrderpaymentsNotifyChargeResponse extends Google_Model
+class Google_Service_ServiceNetworking_Range extends Google_Model
 {
-  public $executionStatus;
-  public $kind;
+  public $ipCidrRange;
+  public $network;
 
-  public function setExecutionStatus($executionStatus)
+  public function setIpCidrRange($ipCidrRange)
   {
-    $this->executionStatus = $executionStatus;
+    $this->ipCidrRange = $ipCidrRange;
   }
-  public function getExecutionStatus()
+  public function getIpCidrRange()
   {
-    return $this->executionStatus;
+    return $this->ipCidrRange;
   }
-  public function setKind($kind)
+  public function setNetwork($network)
   {
-    $this->kind = $kind;
+    $this->network = $network;
   }
-  public function getKind()
+  public function getNetwork()
   {
-    return $this->kind;
+    return $this->network;
   }
 }

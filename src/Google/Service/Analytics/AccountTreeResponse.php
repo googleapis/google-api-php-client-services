@@ -19,8 +19,6 @@ class Google_Service_Analytics_AccountTreeResponse extends Google_Model
 {
   protected $accountType = 'Google_Service_Analytics_Account';
   protected $accountDataType = '';
-  protected $accountSettingsType = 'Google_Service_Analytics_AccountTreeResponseAccountSettings';
-  protected $accountSettingsDataType = '';
   public $kind;
   protected $profileType = 'Google_Service_Analytics_Profile';
   protected $profileDataType = '';
@@ -40,20 +38,6 @@ class Google_Service_Analytics_AccountTreeResponse extends Google_Model
   public function getAccount()
   {
     return $this->account;
-  }
-  /**
-   * @param Google_Service_Analytics_AccountTreeResponseAccountSettings
-   */
-  public function setAccountSettings(Google_Service_Analytics_AccountTreeResponseAccountSettings $accountSettings)
-  {
-    $this->accountSettings = $accountSettings;
-  }
-  /**
-   * @return Google_Service_Analytics_AccountTreeResponseAccountSettings
-   */
-  public function getAccountSettings()
-  {
-    return $this->accountSettings;
   }
   public function setKind($kind)
   {

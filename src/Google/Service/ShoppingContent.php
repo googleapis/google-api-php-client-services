@@ -42,7 +42,6 @@ class Google_Service_ShoppingContent extends Google_Service
   public $datafeedstatuses;
   public $liasettings;
   public $orderinvoices;
-  public $orderpayments;
   public $orderreports;
   public $orderreturns;
   public $orders;
@@ -676,76 +675,6 @@ class Google_Service_ShoppingContent extends Google_Service
               ),
             ),'createrefundinvoice' => array(
               'path' => '{merchantId}/orderinvoices/{orderId}/createRefundInvoice',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'merchantId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'orderId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->orderpayments = new Google_Service_ShoppingContent_Resource_Orderpayments(
-        $this,
-        $this->serviceName,
-        'orderpayments',
-        array(
-          'methods' => array(
-            'notifyauthapproved' => array(
-              'path' => '{merchantId}/orderpayments/{orderId}/notifyAuthApproved',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'merchantId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'orderId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'notifyauthdeclined' => array(
-              'path' => '{merchantId}/orderpayments/{orderId}/notifyAuthDeclined',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'merchantId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'orderId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'notifycharge' => array(
-              'path' => '{merchantId}/orderpayments/{orderId}/notifyCharge',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'merchantId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'orderId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'notifyrefund' => array(
-              'path' => '{merchantId}/orderpayments/{orderId}/notifyRefund',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'merchantId' => array(

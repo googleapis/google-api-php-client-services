@@ -59,6 +59,7 @@ class Google_Service_RemoteBuildExecution_Resource_Actions extends Google_Servic
    * Status errors, while errors that occurred while running the action will be
    * reported in the `status` field of the `ExecuteResponse`. The server MUST NOT
    * set the `error` field of the `Operation` proto. The possible errors include:
+   *
    * * `INVALID_ARGUMENT`: One or more arguments are invalid. *
    * `FAILED_PRECONDITION`: One or more errors occurred in setting up the   action
    * requested, such as a missing input or command or no worker being   available.
@@ -68,7 +69,9 @@ class Google_Service_RemoteBuildExecution_Resource_Actions extends Google_Servic
    * occupied (and the server does not support a queue), the action could not   be
    * started. The client should retry. * `INTERNAL`: An internal error occurred in
    * the execution engine or the   worker. * `DEADLINE_EXCEEDED`: The execution
-   * timed out.
+   * timed out. * `CANCELLED`: The operation was cancelled by the client. This
+   * status is   only possible if the server implements the Operations API
+   * CancelOperation   method, and it was called for the current execution.
    *
    * In the case of a missing input or command, the server SHOULD additionally
    * send a PreconditionFailure error detail where, for each requested blob not

@@ -18,8 +18,6 @@
 class Google_Service_Analytics_AccountTreeRequest extends Google_Model
 {
   public $accountName;
-  protected $accountSettingsType = 'Google_Service_Analytics_AccountTreeRequestAccountSettings';
-  protected $accountSettingsDataType = '';
   public $kind;
   public $profileName;
   public $timezone;
@@ -33,20 +31,6 @@ class Google_Service_Analytics_AccountTreeRequest extends Google_Model
   public function getAccountName()
   {
     return $this->accountName;
-  }
-  /**
-   * @param Google_Service_Analytics_AccountTreeRequestAccountSettings
-   */
-  public function setAccountSettings(Google_Service_Analytics_AccountTreeRequestAccountSettings $accountSettings)
-  {
-    $this->accountSettings = $accountSettings;
-  }
-  /**
-   * @return Google_Service_Analytics_AccountTreeRequestAccountSettings
-   */
-  public function getAccountSettings()
-  {
-    return $this->accountSettings;
   }
   public function setKind($kind)
   {

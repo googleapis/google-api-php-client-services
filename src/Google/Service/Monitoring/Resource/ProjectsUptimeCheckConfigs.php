@@ -80,14 +80,14 @@ class Google_Service_Monitoring_Resource_ProjectsUptimeCheckConfigs extends Goog
    * listed. The format  is projects/[PROJECT_ID].
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken If this field is not empty then it must contain
-   * the nextPageToken value returned by a previous call to this method. Using
-   * this field causes the method to return more results from the previous method
-   * call.
    * @opt_param int pageSize The maximum number of results to return in a single
    * response. The server may further constrain the maximum number of results
    * returned in a single page. If the page_size is <=0, the server will decide
    * the number of results to be returned.
+   * @opt_param string pageToken If this field is not empty then it must contain
+   * the nextPageToken value returned by a previous call to this method. Using
+   * this field causes the method to return more results from the previous method
+   * call.
    * @return Google_Service_Monitoring_ListUptimeCheckConfigsResponse
    */
   public function listProjectsUptimeCheckConfigs($parent, $optParams = array())

@@ -95,8 +95,8 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
    * previous list request, if any.
    * @opt_param int pageSize Maximum number of Memberships to return.
    *
-   * View | Default | Maximum -----|---------|-------- BASIC | 200 | 1000 FULL |
-   * 50 | 500
+   * View | Default | Maximum -----|---------|-------- BASIC| 200     | 1000 FULL
+   * | 50      | 500
    * @opt_param string view Membership resource view to be returned. Defaults to
    * View.BASIC.
    * @return Google_Service_CloudIdentity_ListMembershipsResponse

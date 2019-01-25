@@ -38,6 +38,8 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public $ports;
   public $region;
   public $selfLink;
+  public $serviceLabel;
+  public $serviceName;
   public $subnetwork;
   public $target;
 
@@ -168,6 +170,22 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  public function setServiceLabel($serviceLabel)
+  {
+    $this->serviceLabel = $serviceLabel;
+  }
+  public function getServiceLabel()
+  {
+    return $this->serviceLabel;
+  }
+  public function setServiceName($serviceName)
+  {
+    $this->serviceName = $serviceName;
+  }
+  public function getServiceName()
+  {
+    return $this->serviceName;
   }
   public function setSubnetwork($subnetwork)
   {

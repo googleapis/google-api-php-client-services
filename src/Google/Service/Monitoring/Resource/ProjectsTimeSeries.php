@@ -51,6 +51,8 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * is "projects/{project_id_or_number}".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string orderBy Unsupported: must be left blank. The points in each
+   * time series are returned in reverse time order.
    * @opt_param string aggregation.crossSeriesReducer The approach to be used to
    * combine time series. Not all reducer functions may be applied to all time
    * series, depending on the metric type and the value type of the original time
@@ -106,8 +108,6 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * effective page_size is 100,000 results. If view is set to FULL, this is the
    * maximum number of Points returned. If view is set to HEADERS, this is the
    * maximum number of TimeSeries returned.
-   * @opt_param string orderBy Unsupported: must be left blank. The points in each
-   * time series are returned in reverse time order.
    * @return Google_Service_Monitoring_ListTimeSeriesResponse
    */
   public function listProjectsTimeSeries($name, $optParams = array())

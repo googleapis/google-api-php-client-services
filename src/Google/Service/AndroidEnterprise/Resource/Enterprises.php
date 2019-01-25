@@ -127,19 +127,6 @@ class Google_Service_AndroidEnterprise_Resource_Enterprises extends Google_Servi
     return $this->call('get', array($params), "Google_Service_AndroidEnterprise_Enterprise");
   }
   /**
-   * Deprecated and unused. (enterprises.getAndroidDevicePolicyConfig)
-   *
-   * @param string $enterpriseId The ID of the enterprise.
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_AndroidEnterprise_AndroidDevicePolicyConfig
-   */
-  public function getAndroidDevicePolicyConfig($enterpriseId, $optParams = array())
-  {
-    $params = array('enterpriseId' => $enterpriseId);
-    $params = array_merge($params, $optParams);
-    return $this->call('getAndroidDevicePolicyConfig', array($params), "Google_Service_AndroidEnterprise_AndroidDevicePolicyConfig");
-  }
-  /**
    * Returns a service account and credentials. The service account can be bound
    * to the enterprise by calling setAccount. The service account is unique to
    * this enterprise and EMM, and will be deleted if the enterprise is unbound.

@@ -17,7 +17,9 @@
 
 class Google_Service_Compute_InstanceGroupManager extends Google_Collection
 {
-  protected $collection_key = 'targetPools';
+  protected $collection_key = 'versions';
+  protected $autoHealingPoliciesType = 'Google_Service_Compute_InstanceGroupManagerAutoHealingPolicy';
+  protected $autoHealingPoliciesDataType = 'array';
   public $baseInstanceName;
   public $creationTimestamp;
   protected $currentActionsType = 'Google_Service_Compute_InstanceGroupManagerActionsSummary';
@@ -35,10 +37,30 @@ class Google_Service_Compute_InstanceGroupManager extends Google_Collection
   protected $namedPortsDataType = 'array';
   public $region;
   public $selfLink;
+  protected $statusType = 'Google_Service_Compute_InstanceGroupManagerStatus';
+  protected $statusDataType = '';
   public $targetPools;
   public $targetSize;
+  protected $updatePolicyType = 'Google_Service_Compute_InstanceGroupManagerUpdatePolicy';
+  protected $updatePolicyDataType = '';
+  protected $versionsType = 'Google_Service_Compute_InstanceGroupManagerVersion';
+  protected $versionsDataType = 'array';
   public $zone;
 
+  /**
+   * @param Google_Service_Compute_InstanceGroupManagerAutoHealingPolicy
+   */
+  public function setAutoHealingPolicies($autoHealingPolicies)
+  {
+    $this->autoHealingPolicies = $autoHealingPolicies;
+  }
+  /**
+   * @return Google_Service_Compute_InstanceGroupManagerAutoHealingPolicy
+   */
+  public function getAutoHealingPolicies()
+  {
+    return $this->autoHealingPolicies;
+  }
   public function setBaseInstanceName($baseInstanceName)
   {
     $this->baseInstanceName = $baseInstanceName;
@@ -169,6 +191,20 @@ class Google_Service_Compute_InstanceGroupManager extends Google_Collection
   {
     return $this->selfLink;
   }
+  /**
+   * @param Google_Service_Compute_InstanceGroupManagerStatus
+   */
+  public function setStatus(Google_Service_Compute_InstanceGroupManagerStatus $status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return Google_Service_Compute_InstanceGroupManagerStatus
+   */
+  public function getStatus()
+  {
+    return $this->status;
+  }
   public function setTargetPools($targetPools)
   {
     $this->targetPools = $targetPools;
@@ -184,6 +220,34 @@ class Google_Service_Compute_InstanceGroupManager extends Google_Collection
   public function getTargetSize()
   {
     return $this->targetSize;
+  }
+  /**
+   * @param Google_Service_Compute_InstanceGroupManagerUpdatePolicy
+   */
+  public function setUpdatePolicy(Google_Service_Compute_InstanceGroupManagerUpdatePolicy $updatePolicy)
+  {
+    $this->updatePolicy = $updatePolicy;
+  }
+  /**
+   * @return Google_Service_Compute_InstanceGroupManagerUpdatePolicy
+   */
+  public function getUpdatePolicy()
+  {
+    return $this->updatePolicy;
+  }
+  /**
+   * @param Google_Service_Compute_InstanceGroupManagerVersion
+   */
+  public function setVersions($versions)
+  {
+    $this->versions = $versions;
+  }
+  /**
+   * @return Google_Service_Compute_InstanceGroupManagerVersion
+   */
+  public function getVersions()
+  {
+    return $this->versions;
   }
   public function setZone($zone)
   {

@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_ShoppingContent_OrderpaymentsNotifyAuthDeclinedResponse extends Google_Model
+class Google_Service_Compute_FixedOrPercent extends Google_Model
 {
-  public $executionStatus;
-  public $kind;
+  public $calculated;
+  public $fixed;
+  public $percent;
 
-  public function setExecutionStatus($executionStatus)
+  public function setCalculated($calculated)
   {
-    $this->executionStatus = $executionStatus;
+    $this->calculated = $calculated;
   }
-  public function getExecutionStatus()
+  public function getCalculated()
   {
-    return $this->executionStatus;
+    return $this->calculated;
   }
-  public function setKind($kind)
+  public function setFixed($fixed)
   {
-    $this->kind = $kind;
+    $this->fixed = $fixed;
   }
-  public function getKind()
+  public function getFixed()
   {
-    return $this->kind;
+    return $this->fixed;
+  }
+  public function setPercent($percent)
+  {
+    $this->percent = $percent;
+  }
+  public function getPercent()
+  {
+    return $this->percent;
   }
 }

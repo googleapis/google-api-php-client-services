@@ -17,13 +17,13 @@
 
 class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteworkersV1test2CommandResult extends Google_Collection
 {
-  protected $collection_key = 'statistics';
+  protected $collection_key = 'metadata';
   public $duration;
   public $exitCode;
+  public $metadata;
   protected $outputsType = 'Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteworkersV1test2Digest';
   protected $outputsDataType = '';
   public $overhead;
-  public $statistics;
   protected $statusType = 'Google_Service_RemoteBuildExecution_GoogleRpcStatus';
   protected $statusDataType = '';
 
@@ -42,6 +42,14 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteworkersV1test2Comm
   public function getExitCode()
   {
     return $this->exitCode;
+  }
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteworkersV1test2Digest
@@ -64,14 +72,6 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemoteworkersV1test2Comm
   public function getOverhead()
   {
     return $this->overhead;
-  }
-  public function setStatistics($statistics)
-  {
-    $this->statistics = $statistics;
-  }
-  public function getStatistics()
-  {
-    return $this->statistics;
   }
   /**
    * @param Google_Service_RemoteBuildExecution_GoogleRpcStatus

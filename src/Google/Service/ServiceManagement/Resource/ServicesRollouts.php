@@ -79,7 +79,6 @@ class Google_Service_ServiceManagement_Resource_ServicesRollouts extends Google_
    * `example.googleapis.com`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The token of the page to retrieve.
    * @opt_param int pageSize The max number of items to include in the response
    * list.
    * @opt_param string filter Use `filter` to return subset of rollouts. The
@@ -88,6 +87,7 @@ class Google_Service_ServiceManagement_Resource_ServicesRollouts extends Google_
    * filter='status=SUCCESS'   -- To limit the results to those in
    * [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'      or
    * 'FAILED', use filter='status=CANCELLED OR status=FAILED'
+   * @opt_param string pageToken The token of the page to retrieve.
    * @return Google_Service_ServiceManagement_ListServiceRolloutsResponse
    */
   public function listServicesRollouts($serviceName, $optParams = array())

@@ -18,6 +18,7 @@
 class Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2ExecuteResponse extends Google_Model
 {
   public $cachedResult;
+  public $message;
   protected $resultType = 'Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2ActionResult';
   protected $resultDataType = '';
   protected $serverLogsType = 'Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2LogFile';
@@ -32,6 +33,14 @@ class Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2ExecuteResp
   public function getCachedResult()
   {
     return $this->cachedResult;
+  }
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  public function getMessage()
+  {
+    return $this->message;
   }
   /**
    * @param Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2ActionResult

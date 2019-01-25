@@ -17,10 +17,19 @@
 
 class Google_Service_Cloudbilling_Service extends Google_Model
 {
+  public $businessEntityName;
   public $displayName;
   public $name;
   public $serviceId;
 
+  public function setBusinessEntityName($businessEntityName)
+  {
+    $this->businessEntityName = $businessEntityName;
+  }
+  public function getBusinessEntityName()
+  {
+    return $this->businessEntityName;
+  }
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;

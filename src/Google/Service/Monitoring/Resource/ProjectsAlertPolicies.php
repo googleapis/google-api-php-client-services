@@ -84,8 +84,6 @@ class Google_Service_Monitoring_Resource_ProjectsAlertPolicies extends Google_Se
    * a single alerting policy by name, use the GetAlertPolicy operation, instead.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of results to return in a single
-   * response.
    * @opt_param string filter If provided, this field specifies the criteria that
    * must be met by alert policies to be included in the response.For more
    * details, see sorting and filtering.
@@ -97,6 +95,8 @@ class Google_Service_Monitoring_Resource_ProjectsAlertPolicies extends Google_Se
    * the nextPageToken value returned by a previous call to this method. Using
    * this field causes the method to return more results from the previous method
    * call.
+   * @opt_param int pageSize The maximum number of results to return in a single
+   * response.
    * @return Google_Service_Monitoring_ListAlertPoliciesResponse
    */
   public function listProjectsAlertPolicies($name, $optParams = array())

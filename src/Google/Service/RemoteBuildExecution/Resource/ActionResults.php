@@ -28,7 +28,9 @@ class Google_Service_RemoteBuildExecution_Resource_ActionResults extends Google_
   /**
    * Retrieve a cached execution result.
    *
-   * Errors: * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
+   * Errors:
+   *
+   * * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
    * (actionResults.get)
    *
    * @param string $instanceName The instance of the execution system to operate
@@ -51,18 +53,18 @@ class Google_Service_RemoteBuildExecution_Resource_ActionResults extends Google_
   /**
    * Upload a new execution result.
    *
-   * This method is intended for servers which implement the distributed cache
-   * independently of the Execution API. As a result, it is OPTIONAL for servers
-   * to implement.
-   *
    * In order to allow the server to perform access control based on the type of
    * action, and to assist with client debugging, the client MUST first upload the
    * Action that produced the result, along with its Command, into the
    * `ContentAddressableStorage`.
    *
-   * Errors: * `UNIMPLEMENTED`: This method is not supported by the server. *
-   * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the   entry
-   * to the cache. (actionResults.update)
+   * Errors:
+   *
+   * * `INVALID_ARGUMENT`: One or more arguments are invalid. *
+   * `FAILED_PRECONDITION`: One or more errors occurred in updating the   action
+   * result, such as a missing command or action. * `RESOURCE_EXHAUSTED`: There is
+   * insufficient storage space to add the   entry to the cache.
+   * (actionResults.update)
    *
    * @param string $instanceName The instance of the execution system to operate
    * against. A server may support multiple instances of the execution system

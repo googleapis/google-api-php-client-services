@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_ShoppingContent_OrderpaymentsNotifyAuthDeclinedRequest extends Google_Model
+class Google_Service_Compute_InstanceGroupManagerStatus extends Google_Model
 {
-  public $declineReason;
+  public $isStable;
 
-  public function setDeclineReason($declineReason)
+  public function setIsStable($isStable)
   {
-    $this->declineReason = $declineReason;
+    $this->isStable = $isStable;
   }
-  public function getDeclineReason()
+  public function getIsStable()
   {
-    return $this->declineReason;
+    return $this->isStable;
   }
 }

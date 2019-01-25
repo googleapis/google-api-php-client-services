@@ -19,12 +19,14 @@ class Google_Service_Logging_LogMetric extends Google_Model
 {
   protected $bucketOptionsType = 'Google_Service_Logging_BucketOptions';
   protected $bucketOptionsDataType = '';
+  public $createTime;
   public $description;
   public $filter;
   public $labelExtractors;
   protected $metricDescriptorType = 'Google_Service_Logging_MetricDescriptor';
   protected $metricDescriptorDataType = '';
   public $name;
+  public $updateTime;
   public $valueExtractor;
   public $version;
 
@@ -41,6 +43,14 @@ class Google_Service_Logging_LogMetric extends Google_Model
   public function getBucketOptions()
   {
     return $this->bucketOptions;
+  }
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  public function getCreateTime()
+  {
+    return $this->createTime;
   }
   public function setDescription($description)
   {
@@ -87,6 +97,14 @@ class Google_Service_Logging_LogMetric extends Google_Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
   public function setValueExtractor($valueExtractor)
   {

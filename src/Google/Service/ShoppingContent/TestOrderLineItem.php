@@ -24,8 +24,6 @@ class Google_Service_ShoppingContent_TestOrderLineItem extends Google_Model
   protected $returnInfoDataType = '';
   protected $shippingDetailsType = 'Google_Service_ShoppingContent_OrderLineItemShippingDetails';
   protected $shippingDetailsDataType = '';
-  protected $unitTaxType = 'Google_Service_ShoppingContent_Price';
-  protected $unitTaxDataType = '';
 
   /**
    * @param Google_Service_ShoppingContent_TestOrderLineItemProduct
@@ -76,19 +74,5 @@ class Google_Service_ShoppingContent_TestOrderLineItem extends Google_Model
   public function getShippingDetails()
   {
     return $this->shippingDetails;
-  }
-  /**
-   * @param Google_Service_ShoppingContent_Price
-   */
-  public function setUnitTax(Google_Service_ShoppingContent_Price $unitTax)
-  {
-    $this->unitTax = $unitTax;
-  }
-  /**
-   * @return Google_Service_ShoppingContent_Price
-   */
-  public function getUnitTax()
-  {
-    return $this->unitTax;
   }
 }

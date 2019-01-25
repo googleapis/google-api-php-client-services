@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_ShoppingContent_OrderpaymentsNotifyRefundResponse extends Google_Model
+class Google_Service_Compute_InstanceGroupManagerAutoHealingPolicy extends Google_Model
 {
-  public $executionStatus;
-  public $kind;
+  public $healthCheck;
+  public $initialDelaySec;
 
-  public function setExecutionStatus($executionStatus)
+  public function setHealthCheck($healthCheck)
   {
-    $this->executionStatus = $executionStatus;
+    $this->healthCheck = $healthCheck;
   }
-  public function getExecutionStatus()
+  public function getHealthCheck()
   {
-    return $this->executionStatus;
+    return $this->healthCheck;
   }
-  public function setKind($kind)
+  public function setInitialDelaySec($initialDelaySec)
   {
-    $this->kind = $kind;
+    $this->initialDelaySec = $initialDelaySec;
   }
-  public function getKind()
+  public function getInitialDelaySec()
   {
-    return $this->kind;
+    return $this->initialDelaySec;
   }
 }

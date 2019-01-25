@@ -16,20 +16,20 @@
  */
 
 /**
- * The "iap_tunnel" collection of methods.
+ * The "v1" collection of methods.
  * Typical usage is:
  *  <code>
  *   $iapService = new Google_Service_CloudIAP(...);
- *   $iap_tunnel = $iapService->iap_tunnel;
+ *   $v1 = $iapService->v1;
  *  </code>
  */
-class Google_Service_CloudIAP_Resource_ProjectsIapTunnel extends Google_Service_Resource
+class Google_Service_CloudIAP_Resource_V1 extends Google_Service_Resource
 {
   /**
    * Gets the access control policy for an Identity-Aware Proxy protected
    * resource. More information about managing access via IAP can be found at:
    * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
-   * (iap_tunnel.getIamPolicy)
+   * (v1.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See the operation documentation for the appropriate value for this
@@ -48,7 +48,7 @@ class Google_Service_CloudIAP_Resource_ProjectsIapTunnel extends Google_Service_
    * Sets the access control policy for an Identity-Aware Proxy protected
    * resource. Replaces any existing policy. More information about managing
    * access via IAP can be found at: https://cloud.google.com/iap/docs/managing-
-   * access#managing_access_via_the_api (iap_tunnel.setIamPolicy)
+   * access#managing_access_via_the_api (v1.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this
@@ -67,7 +67,7 @@ class Google_Service_CloudIAP_Resource_ProjectsIapTunnel extends Google_Service_
    * Returns permissions that a caller has on the Identity-Aware Proxy protected
    * resource. More information about managing access via IAP can be found at:
    * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
-   * (iap_tunnel.testIamPermissions)
+   * (v1.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. See the operation documentation for the appropriate value

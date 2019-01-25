@@ -46,15 +46,15 @@ class Google_Service_Iam_Resource_Roles extends Google_Service_Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional limit on the number of roles to include in
-   * the response.
-   * @opt_param string view Optional view for the returned Role objects.
    * @opt_param string parent The resource name of the parent resource in one of
    * the following formats: `` (empty string) -- this refers to curated roles.
    * `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
    * @opt_param bool showDeleted Include Roles that have been deleted.
    * @opt_param string pageToken Optional pagination token returned in an earlier
    * ListRolesResponse.
+   * @opt_param int pageSize Optional limit on the number of roles to include in
+   * the response.
+   * @opt_param string view Optional view for the returned Role objects.
    * @return Google_Service_Iam_ListRolesResponse
    */
   public function listRoles($optParams = array())

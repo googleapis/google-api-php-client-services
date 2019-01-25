@@ -119,7 +119,7 @@ class Google_Service_Logging_Resource_Sinks extends Google_Service_Resource
   }
   /**
    * Updates a sink. This method replaces the following fields in the existing
-   * sink with values from the new sink: destination, and filter. The updated sink
+   * sink with values from the new sink: destination, and filter.The updated sink
    * might also have a new writer_identity; see the unique_writer_identity field.
    * (sinks.update)
    *

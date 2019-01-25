@@ -32,6 +32,7 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   protected $destinationTablePropertiesDataType = '';
   public $encoding;
   public $fieldDelimiter;
+  public $hivePartitioningMode;
   public $ignoreUnknownValues;
   public $maxBadRecords;
   public $nullMarker;
@@ -155,6 +156,14 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   public function getFieldDelimiter()
   {
     return $this->fieldDelimiter;
+  }
+  public function setHivePartitioningMode($hivePartitioningMode)
+  {
+    $this->hivePartitioningMode = $hivePartitioningMode;
+  }
+  public function getHivePartitioningMode()
+  {
+    return $this->hivePartitioningMode;
   }
   public function setIgnoreUnknownValues($ignoreUnknownValues)
   {

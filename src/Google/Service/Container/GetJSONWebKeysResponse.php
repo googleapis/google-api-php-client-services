@@ -15,14 +15,24 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $iapService = new Google_Service_CloudIAP(...);
- *   $projects = $iapService->projects;
- *  </code>
- */
-class Google_Service_CloudIAP_Resource_Projects extends Google_Service_Resource
+class Google_Service_Container_GetJSONWebKeysResponse extends Google_Collection
 {
+  protected $collection_key = 'keys';
+  protected $keysType = 'Google_Service_Container_Jwk';
+  protected $keysDataType = 'array';
+
+  /**
+   * @param Google_Service_Container_Jwk
+   */
+  public function setKeys($keys)
+  {
+    $this->keys = $keys;
+  }
+  /**
+   * @return Google_Service_Container_Jwk
+   */
+  public function getKeys()
+  {
+    return $this->keys;
+  }
 }

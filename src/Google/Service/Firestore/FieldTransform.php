@@ -20,6 +20,12 @@ class Google_Service_Firestore_FieldTransform extends Google_Model
   protected $appendMissingElementsType = 'Google_Service_Firestore_ArrayValue';
   protected $appendMissingElementsDataType = '';
   public $fieldPath;
+  protected $incrementType = 'Google_Service_Firestore_Value';
+  protected $incrementDataType = '';
+  protected $maximumType = 'Google_Service_Firestore_Value';
+  protected $maximumDataType = '';
+  protected $minimumType = 'Google_Service_Firestore_Value';
+  protected $minimumDataType = '';
   protected $removeAllFromArrayType = 'Google_Service_Firestore_ArrayValue';
   protected $removeAllFromArrayDataType = '';
   public $setToServerValue;
@@ -45,6 +51,48 @@ class Google_Service_Firestore_FieldTransform extends Google_Model
   public function getFieldPath()
   {
     return $this->fieldPath;
+  }
+  /**
+   * @param Google_Service_Firestore_Value
+   */
+  public function setIncrement(Google_Service_Firestore_Value $increment)
+  {
+    $this->increment = $increment;
+  }
+  /**
+   * @return Google_Service_Firestore_Value
+   */
+  public function getIncrement()
+  {
+    return $this->increment;
+  }
+  /**
+   * @param Google_Service_Firestore_Value
+   */
+  public function setMaximum(Google_Service_Firestore_Value $maximum)
+  {
+    $this->maximum = $maximum;
+  }
+  /**
+   * @return Google_Service_Firestore_Value
+   */
+  public function getMaximum()
+  {
+    return $this->maximum;
+  }
+  /**
+   * @param Google_Service_Firestore_Value
+   */
+  public function setMinimum(Google_Service_Firestore_Value $minimum)
+  {
+    $this->minimum = $minimum;
+  }
+  /**
+   * @return Google_Service_Firestore_Value
+   */
+  public function getMinimum()
+  {
+    return $this->minimum;
   }
   /**
    * @param Google_Service_Firestore_ArrayValue

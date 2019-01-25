@@ -28,8 +28,7 @@ class Google_Service_ServiceUsage_Resource_Services extends Google_Service_Resou
   /**
    * Enable multiple services on a project. The operation is atomic: if enabling
    * any service fails, then the entire batch fails, and no state changes occur.
-   *
-   * Operation (services.batchEnable)
+   * (services.batchEnable)
    *
    * @param string $parent Parent to enable services on.
    *
@@ -54,9 +53,7 @@ class Google_Service_ServiceUsage_Resource_Services extends Google_Service_Resou
    *
    * It is not valid to call the disable method on a service that is not currently
    * enabled. Callers will receive a `FAILED_PRECONDITION` status if the target
-   * service is not currently enabled.
-   *
-   * Operation (services.disable)
+   * service is not currently enabled. (services.disable)
    *
    * @param string $name Name of the consumer and service to disable the service
    * on.
@@ -76,9 +73,7 @@ class Google_Service_ServiceUsage_Resource_Services extends Google_Service_Resou
     return $this->call('disable', array($params), "Google_Service_ServiceUsage_Operation");
   }
   /**
-   * Enable a service so that it can be used with a project.
-   *
-   * Operation (services.enable)
+   * Enable a service so that it can be used with a project. (services.enable)
    *
    * @param string $name Name of the consumer and service to enable the service
    * on.

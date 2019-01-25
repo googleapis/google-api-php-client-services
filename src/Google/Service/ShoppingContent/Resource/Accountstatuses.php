@@ -26,6 +26,7 @@
 class Google_Service_ShoppingContent_Resource_Accountstatuses extends Google_Service_Resource
 {
   /**
+   * Retrieves multiple Merchant Center account statuses in a single request.
    * (accountstatuses.custombatch)
    *
    * @param Google_Service_ShoppingContent_AccountstatusesCustomBatchRequest $postBody

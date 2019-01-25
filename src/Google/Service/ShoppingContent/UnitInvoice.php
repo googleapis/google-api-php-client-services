@@ -22,8 +22,8 @@ class Google_Service_ShoppingContent_UnitInvoice extends Google_Collection
   protected $additionalChargesDataType = 'array';
   protected $promotionsType = 'Google_Service_ShoppingContent_Promotion';
   protected $promotionsDataType = 'array';
-  protected $unitPricePretaxType = 'Google_Service_ShoppingContent_Price';
-  protected $unitPricePretaxDataType = '';
+  protected $unitPriceType = 'Google_Service_ShoppingContent_Price';
+  protected $unitPriceDataType = '';
   protected $unitPriceTaxesType = 'Google_Service_ShoppingContent_UnitInvoiceTaxLine';
   protected $unitPriceTaxesDataType = 'array';
 
@@ -58,16 +58,16 @@ class Google_Service_ShoppingContent_UnitInvoice extends Google_Collection
   /**
    * @param Google_Service_ShoppingContent_Price
    */
-  public function setUnitPricePretax(Google_Service_ShoppingContent_Price $unitPricePretax)
+  public function setUnitPrice(Google_Service_ShoppingContent_Price $unitPrice)
   {
-    $this->unitPricePretax = $unitPricePretax;
+    $this->unitPrice = $unitPrice;
   }
   /**
    * @return Google_Service_ShoppingContent_Price
    */
-  public function getUnitPricePretax()
+  public function getUnitPrice()
   {
-    return $this->unitPricePretax;
+    return $this->unitPrice;
   }
   /**
    * @param Google_Service_ShoppingContent_UnitInvoiceTaxLine

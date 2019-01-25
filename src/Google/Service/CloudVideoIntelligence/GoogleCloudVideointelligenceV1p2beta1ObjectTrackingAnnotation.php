@@ -25,6 +25,7 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p2beta
   protected $framesDataType = 'array';
   protected $segmentType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p2beta1VideoSegment';
   protected $segmentDataType = '';
+  public $trackId;
 
   public function setConfidence($confidence)
   {
@@ -75,5 +76,13 @@ class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p2beta
   public function getSegment()
   {
     return $this->segment;
+  }
+  public function setTrackId($trackId)
+  {
+    $this->trackId = $trackId;
+  }
+  public function getTrackId()
+  {
+    return $this->trackId;
   }
 }

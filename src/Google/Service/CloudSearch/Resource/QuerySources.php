@@ -31,6 +31,10 @@ class Google_Service_CloudSearch_Resource_QuerySources extends Google_Service_Re
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestOptions.languageCode The BCP-47 language code, such
+   * as "en-US" or "sr-Latn". For more information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For
+   * translations.
    * @opt_param string requestOptions.searchApplicationId Id of the application
    * created using SearchApplicationsService.
    * @opt_param string requestOptions.timeZone Current user's time zone id, such
@@ -42,10 +46,6 @@ class Google_Service_CloudSearch_Resource_QuerySources extends Google_Service_Re
    * @opt_param bool requestOptions.debugOptions.enableDebugging If set, the
    * request will enable debugging features of Cloud Search. Only turn on this
    * field, if asked by Google to help with debugging.
-   * @opt_param string requestOptions.languageCode The BCP-47 language code, such
-   * as "en-US" or "sr-Latn". For more information, see
-   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For
-   * translations.
    * @return Google_Service_CloudSearch_ListQuerySourcesResponse
    */
   public function listQuerySources($optParams = array())

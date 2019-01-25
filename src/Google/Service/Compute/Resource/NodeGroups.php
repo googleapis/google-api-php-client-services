@@ -359,7 +359,7 @@ class Google_Service_Compute_Resource_NodeGroups extends Google_Service_Resource
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.
-   * @param string $nodeGroup Name of the NodeGroup resource to delete.
+   * @param string $nodeGroup Name of the NodeGroup resource to update.
    * @param Google_Service_Compute_NodeGroupsSetNodeTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    *

@@ -24,8 +24,8 @@ class Google_Service_ShoppingContent_OrderPromotion extends Google_Collection
   protected $appliedItemsDataType = 'array';
   public $funder;
   public $merchantPromotionId;
-  protected $pretaxValueType = 'Google_Service_ShoppingContent_Price';
-  protected $pretaxValueDataType = '';
+  protected $priceValueType = 'Google_Service_ShoppingContent_Price';
+  protected $priceValueDataType = '';
   public $shortTitle;
   public $subtype;
   protected $taxValueType = 'Google_Service_ShoppingContent_Price';
@@ -80,16 +80,16 @@ class Google_Service_ShoppingContent_OrderPromotion extends Google_Collection
   /**
    * @param Google_Service_ShoppingContent_Price
    */
-  public function setPretaxValue(Google_Service_ShoppingContent_Price $pretaxValue)
+  public function setPriceValue(Google_Service_ShoppingContent_Price $priceValue)
   {
-    $this->pretaxValue = $pretaxValue;
+    $this->priceValue = $priceValue;
   }
   /**
    * @return Google_Service_ShoppingContent_Price
    */
-  public function getPretaxValue()
+  public function getPriceValue()
   {
-    return $this->pretaxValue;
+    return $this->priceValue;
   }
   public function setShortTitle($shortTitle)
   {

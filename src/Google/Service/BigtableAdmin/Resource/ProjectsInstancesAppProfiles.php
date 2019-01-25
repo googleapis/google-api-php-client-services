@@ -33,11 +33,11 @@ class Google_Service_BigtableAdmin_Resource_ProjectsInstancesAppProfiles extends
    * @param Google_Service_BigtableAdmin_AppProfile $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool ignoreWarnings If true, ignore safety checks when creating
-   * the app profile.
    * @opt_param string appProfileId The ID to be used when referring to the new
    * app profile within its instance, e.g., just `myprofile` rather than
    * `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+   * @opt_param bool ignoreWarnings If true, ignore safety checks when creating
+   * the app profile.
    * @return Google_Service_BigtableAdmin_AppProfile
    */
   public function create($parent, Google_Service_BigtableAdmin_AppProfile $postBody, $optParams = array())

@@ -33,13 +33,13 @@ class Google_Service_CloudSearch_Resource_DebugDatasourcesItemsUnmappedids exten
    * datasources/{source_id}/items/{ID}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool debugOptions.enableDebugging If set, the request will enable
+   * debugging features of Cloud Search. Only turn on this field, if asked by
+   * Google to help with debugging.
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
    * @opt_param int pageSize Maximum number of items to fetch in a request.
    * Defaults to 100.
-   * @opt_param bool debugOptions.enableDebugging If set, the request will enable
-   * debugging features of Cloud Search. Only turn on this field, if asked by
-   * Google to help with debugging.
    * @return Google_Service_CloudSearch_ListUnmappedIdentitiesResponse
    */
   public function listDebugDatasourcesItemsUnmappedids($parent, $optParams = array())

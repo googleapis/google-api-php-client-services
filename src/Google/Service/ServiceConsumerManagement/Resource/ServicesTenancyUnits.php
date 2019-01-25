@@ -52,9 +52,11 @@ class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits ext
    * modified. Specified services will be activated.   No service will be
    * deactivated. New billing configuration will be applied if specified. Omit
    * billing configuration to keep the existing one. Service account in the
-   * project will be created if previously non existing. Operation fails if any of
-   * the steps fail, but no rollback of already applied configuration changes is
-   * attempted. Operation. (tenancyUnits.applyProjectConfig)
+   * project will be created if previously non existing. Specified folder will be
+   * ignored, moving tenant project to a different folder is not supported.
+   * Operation fails if any of the steps fail, but no rollback of already applied
+   * configuration changes is attempted. Operation.
+   * (tenancyUnits.applyProjectConfig)
    *
    * @param string $name Name of the tenancy unit.
    * @param Google_Service_ServiceConsumerManagement_ApplyTenantProjectConfigRequest $postBody
