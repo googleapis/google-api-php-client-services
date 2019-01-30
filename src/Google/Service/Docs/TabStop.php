@@ -15,25 +15,32 @@
  * the License.
  */
 
-class Google_Service_CloudFilestore_FileShareConfig extends Google_Model
+class Google_Service_Docs_TabStop extends Google_Model
 {
-  public $capacityGb;
-  public $name;
+  public $alignment;
+  protected $offsetType = 'Google_Service_Docs_Dimension';
+  protected $offsetDataType = '';
 
-  public function setCapacityGb($capacityGb)
+  public function setAlignment($alignment)
   {
-    $this->capacityGb = $capacityGb;
+    $this->alignment = $alignment;
   }
-  public function getCapacityGb()
+  public function getAlignment()
   {
-    return $this->capacityGb;
+    return $this->alignment;
   }
-  public function setName($name)
+  /**
+   * @param Google_Service_Docs_Dimension
+   */
+  public function setOffset(Google_Service_Docs_Dimension $offset)
   {
-    $this->name = $name;
+    $this->offset = $offset;
   }
-  public function getName()
+  /**
+   * @return Google_Service_Docs_Dimension
+   */
+  public function getOffset()
   {
-    return $this->name;
+    return $this->offset;
   }
 }

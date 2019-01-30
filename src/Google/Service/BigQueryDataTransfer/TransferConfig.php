@@ -27,6 +27,8 @@ class Google_Service_BigQueryDataTransfer_TransferConfig extends Google_Model
   public $nextRunTime;
   public $params;
   public $schedule;
+  protected $scheduleOptionsType = 'Google_Service_BigQueryDataTransfer_ScheduleOptions';
+  protected $scheduleOptionsDataType = '';
   public $state;
   public $updateTime;
   public $userId;
@@ -110,6 +112,20 @@ class Google_Service_BigQueryDataTransfer_TransferConfig extends Google_Model
   public function getSchedule()
   {
     return $this->schedule;
+  }
+  /**
+   * @param Google_Service_BigQueryDataTransfer_ScheduleOptions
+   */
+  public function setScheduleOptions(Google_Service_BigQueryDataTransfer_ScheduleOptions $scheduleOptions)
+  {
+    $this->scheduleOptions = $scheduleOptions;
+  }
+  /**
+   * @return Google_Service_BigQueryDataTransfer_ScheduleOptions
+   */
+  public function getScheduleOptions()
+  {
+    return $this->scheduleOptions;
   }
   public function setState($state)
   {

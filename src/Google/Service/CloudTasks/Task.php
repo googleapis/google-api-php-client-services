@@ -21,6 +21,7 @@ class Google_Service_CloudTasks_Task extends Google_Model
   protected $appEngineHttpRequestDataType = '';
   public $createTime;
   public $dispatchCount;
+  public $dispatchDeadline;
   protected $firstAttemptType = 'Google_Service_CloudTasks_Attempt';
   protected $firstAttemptDataType = '';
   protected $lastAttemptType = 'Google_Service_CloudTasks_Attempt';
@@ -59,6 +60,14 @@ class Google_Service_CloudTasks_Task extends Google_Model
   public function getDispatchCount()
   {
     return $this->dispatchCount;
+  }
+  public function setDispatchDeadline($dispatchDeadline)
+  {
+    $this->dispatchDeadline = $dispatchDeadline;
+  }
+  public function getDispatchDeadline()
+  {
+    return $this->dispatchDeadline;
   }
   /**
    * @param Google_Service_CloudTasks_Attempt

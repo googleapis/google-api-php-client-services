@@ -41,6 +41,7 @@ class Google_Service_Books_Notification extends Google_Collection
   public $reason;
   public $showNotificationSettingsAction;
   public $targetUrl;
+  public $timeToExpireMs;
   public $title;
 
   public function setBody($body)
@@ -154,6 +155,14 @@ class Google_Service_Books_Notification extends Google_Collection
   public function getTargetUrl()
   {
     return $this->targetUrl;
+  }
+  public function setTimeToExpireMs($timeToExpireMs)
+  {
+    $this->timeToExpireMs = $timeToExpireMs;
+  }
+  public function getTimeToExpireMs()
+  {
+    return $this->timeToExpireMs;
   }
   public function setTitle($title)
   {

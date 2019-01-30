@@ -54,30 +54,6 @@ class Google_Service_ServiceNetworking_Resource_Services extends Google_Service_
     return $this->call('addSubnetwork', array($params), "Google_Service_ServiceNetworking_Operation");
   }
   /**
-   * Updates the allocated ranges that are assigned to a connection. The response
-   * from the `get` operation will be of type `Connection` if the operation
-   * successfully completes. (services.patch)
-   *
-   * @param string $name The service producer peering service that is managing
-   * peering connectivity for a service producer organization. For Google services
-   * that support this functionality, this is
-   * `services/servicenetworking.googleapis.com`.
-   * @param Google_Service_ServiceNetworking_Connection $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string updateMask The update mask. If this is omitted, it defaults
-   * to "*". You can only update the listed peering ranges.
-   * @opt_param bool force If a previously defined allocated range is removed,
-   * force flag must be set to true.
-   * @return Google_Service_ServiceNetworking_Operation
-   */
-  public function patch($name, Google_Service_ServiceNetworking_Connection $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_ServiceNetworking_Operation");
-  }
-  /**
    * Service producers can use this method to find a currently unused range within
    * consumer allocated ranges.   This returned range is not reserved, and not
    * guaranteed to remain unused. It will validate previously provided allocated
@@ -97,5 +73,29 @@ class Google_Service_ServiceNetworking_Resource_Services extends Google_Service_
     $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('searchRange', array($params), "Google_Service_ServiceNetworking_Operation");
+  }
+  /**
+   * Updates the allocated ranges that are assigned to a connection. The response
+   * from the `get` operation will be of type `Connection` if the operation
+   * successfully completes. (services.updateConnections)
+   *
+   * @param string $name The service producer peering service that is managing
+   * peering connectivity for a service producer organization. For Google services
+   * that support this functionality, this is
+   * `services/servicenetworking.googleapis.com`.
+   * @param Google_Service_ServiceNetworking_Connection $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask The update mask. If this is omitted, it defaults
+   * to "*". You can only update the listed peering ranges.
+   * @opt_param bool force If a previously defined allocated range is removed,
+   * force flag must be set to true.
+   * @return Google_Service_ServiceNetworking_Operation
+   */
+  public function updateConnections($name, Google_Service_ServiceNetworking_Connection $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('updateConnections', array($params), "Google_Service_ServiceNetworking_Operation");
   }
 }

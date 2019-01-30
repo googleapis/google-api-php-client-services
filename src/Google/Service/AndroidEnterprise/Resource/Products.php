@@ -146,7 +146,7 @@ class Google_Service_AndroidEnterprise_Resource_Products extends Google_Service_
    * search box. If omitted, all approved apps will be returned (using the
    * pagination parameters), including apps that are not available in the store
    * (e.g. unpublished apps).
-   * @opt_param string token A pagination token is contained in a request''s
+   * @opt_param string token A pagination token is contained in a request's
    * response when there are more products. The token can be used in a subsequent
    * request to obtain more products, and so forth. This parameter cannot be used
    * in the initial request.

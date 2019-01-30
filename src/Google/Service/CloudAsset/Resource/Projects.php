@@ -30,7 +30,8 @@ class Google_Service_CloudAsset_Resource_Projects extends Google_Service_Resourc
    * RESOURCE content, this API outputs history with asset in both non-delete or
    * deleted status. For IAM_POLICY content, this API outputs history when the
    * asset and its attached IAM POLICY both exist. This can create gaps in the
-   * output history. (projects.batchGetAssetsHistory)
+   * output history. If a specified asset does not exist, this API returns an
+   * INVALID_ARGUMENT error. (projects.batchGetAssetsHistory)
    *
    * @param string $parent Required. The relative name of the root asset. It can
    * only be an organization number (such as "organizations/123"), a project ID
@@ -38,11 +39,6 @@ class Google_Service_CloudAsset_Resource_Projects extends Google_Service_Resourc
    * "projects/12345").
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string contentType Required. The content type.
-   * @opt_param string readTimeWindow.endTime End time of the time window
-   * (inclusive). Current timestamp if not specified.
-   * @opt_param string readTimeWindow.startTime Start time of the time window
-   * (exclusive).
    * @opt_param string assetNames A list of the full names of the assets. For
    * example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instan
    * ces/instance1`. See [Resource Names](https://cloud.google.com/apis/design/res
@@ -50,6 +46,11 @@ class Google_Service_CloudAsset_Resource_Projects extends Google_Service_Resourc
    *
    * The request becomes a no-op if the asset name list is empty, and the max size
    * of the asset name list is 100 in one request.
+   * @opt_param string contentType Required. The content type.
+   * @opt_param string readTimeWindow.endTime End time of the time window
+   * (inclusive). Current timestamp if not specified.
+   * @opt_param string readTimeWindow.startTime Start time of the time window
+   * (exclusive).
    * @return Google_Service_CloudAsset_BatchGetAssetsHistoryResponse
    */
   public function batchGetAssetsHistory($parent, $optParams = array())
@@ -66,8 +67,8 @@ class Google_Service_CloudAsset_Resource_Projects extends Google_Service_Resourc
    *
    * @param string $parent Required. The relative name of the root asset. This can
    * only be an organization number (such as "organizations/123"), a project ID
-   * (such as "projects/my-project-id"), or a project number (such as
-   * "projects/12345").
+   * (such as "projects/my-project-id"), a project number (such as
+   * "projects/12345"), or a folder number (such as "folders/123").
    * @param Google_Service_CloudAsset_ExportAssetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudAsset_Operation

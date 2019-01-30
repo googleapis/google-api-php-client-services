@@ -30,7 +30,8 @@ class Google_Service_CloudAsset_Resource_Organizations extends Google_Service_Re
    * RESOURCE content, this API outputs history with asset in both non-delete or
    * deleted status. For IAM_POLICY content, this API outputs history when the
    * asset and its attached IAM POLICY both exist. This can create gaps in the
-   * output history. (organizations.batchGetAssetsHistory)
+   * output history. If a specified asset does not exist, this API returns an
+   * INVALID_ARGUMENT error. (organizations.batchGetAssetsHistory)
    *
    * @param string $parent Required. The relative name of the root asset. It can
    * only be an organization number (such as "organizations/123"), a project ID
@@ -66,8 +67,8 @@ class Google_Service_CloudAsset_Resource_Organizations extends Google_Service_Re
    *
    * @param string $parent Required. The relative name of the root asset. This can
    * only be an organization number (such as "organizations/123"), a project ID
-   * (such as "projects/my-project-id"), or a project number (such as
-   * "projects/12345").
+   * (such as "projects/my-project-id"), a project number (such as
+   * "projects/12345"), or a folder number (such as "folders/123").
    * @param Google_Service_CloudAsset_ExportAssetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudAsset_Operation

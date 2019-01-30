@@ -91,8 +91,18 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'patch' => array(
-              'path' => 'v1beta/{+name}',
+            ),'searchRange' => array(
+              'path' => 'v1beta/{+parent}:searchRange',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'updateConnections' => array(
+              'path' => 'v1beta/{+name}/connections',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -107,16 +117,6 @@ class Google_Service_ServiceNetworking extends Google_Service
                 'force' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-              ),
-            ),'searchRange' => array(
-              'path' => 'v1beta/{+parent}:searchRange',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ),
               ),
             ),
