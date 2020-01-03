@@ -58,12 +58,13 @@ class Google_Service_ShoppingContent extends Google_Service
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
+   * @param bool $useSandbox use the sandbox service (for dev only)
    */
-  public function __construct(Google_Client $client, $rootUrl = null)
+  public function __construct(Google_Client $client, $rootUrl = null, $useSandbox = false)
   {
     parent::__construct($client);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
-    $this->servicePath = 'content/v2.1/';
+    $this->servicePath = 'content/v2.1' . ($useSandbox ? 'sandbox/' : '/');
     $this->batchPath = 'batch/content/v2.1';
     $this->version = 'v2.1';
     $this->serviceName = 'content';
