@@ -16,11 +16,11 @@
  */
 
 /**
- * The "siterestrict" collection of methods.
+ * The "cse_siterestrict" collection of methods.
  * Typical usage is:
  *  <code>
  *   $customsearchService = new Google_Service_Customsearch(...);
- *   $siterestrict = $customsearchService->siterestrict;
+ *   $siterestrict = $customsearchService->cse_siterestrict;
  *  </code>
  */
 class Google_Service_Customsearch_Resource_CseSiterestrict extends Google_Service_Resource
@@ -28,7 +28,7 @@ class Google_Service_Customsearch_Resource_CseSiterestrict extends Google_Servic
   /**
    * Returns metadata about the search performed, metadata about the custom search
    * engine used for the search, and the search results. Uses a small set of url
-   * patterns. (siterestrict.listCseSiterestrict)
+   * patterns. (cse_siterestrict.listCseSiterestrict)
    *
    * @param string $q Query
    * @param array $optParams Optional parameters.
