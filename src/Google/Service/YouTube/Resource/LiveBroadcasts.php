@@ -83,6 +83,23 @@ class Google_Service_YouTube_Resource_LiveBroadcasts extends Google_Service_Reso
     return $this->call('bind', array($params), "Google_Service_YouTube_LiveBroadcast");
   }
   /**
+   * Removes broadcast's existing bindings.
+   * (liveBroadcasts.bind)
+   *
+   * @param string $id The id parameter specifies the unique ID of the broadcast
+   * that is being bound to a video stream.
+   * @param string $part The part parameter specifies a comma-separated list of
+   * one or more liveBroadcast resource properties that the API response will
+   * include. The part names that you can include in the parameter value are id,
+   * snippet, contentDetails, and status.
+   *
+   * @return Google_Service_YouTube_LiveBroadcast
+   */
+  public function unbind($id, $part)
+  {
+      return $this->bind($id, $part);
+  }
+  /**
    * Controls the settings for a slate that can be displayed in the broadcast
    * stream. (liveBroadcasts.control)
    *
