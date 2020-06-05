@@ -60,7 +60,7 @@ class Google_Service_FirebaseCloudMessaging extends Google_Service
         array(
           'methods' => array(
             'send' => array(
-              'path' => 'v1/{+parent}/messages:send',
+              'path' => 'v1/projects/{+parent}/messages:send',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
