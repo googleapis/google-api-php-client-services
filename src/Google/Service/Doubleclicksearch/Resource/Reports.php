@@ -62,7 +62,7 @@ class Google_Service_Doubleclicksearch_Resource_Reports extends Google_Service_R
   {
     $params = array('reportId' => $reportId, 'reportFragment' => $reportFragment);
     $params = array_merge($params, $optParams);
-    return $this->call('getFile', array($params));
+    return $this->call('getFile', array($params), null, 'text/plain');
   }
   /**
    * Inserts a report request into the reporting system. (reports.request)
