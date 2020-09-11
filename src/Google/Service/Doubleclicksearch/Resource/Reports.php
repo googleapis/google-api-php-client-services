@@ -31,6 +31,7 @@ class Google_Service_Doubleclicksearch_Resource_Reports extends Google_Service_R
    * @param Google_Service_Doubleclicksearch_ReportRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_Report
+   * @throws Google_Exception
    */
   public function generate(Google_Service_Doubleclicksearch_ReportRequest $postBody, $optParams = array())
   {
@@ -44,6 +45,7 @@ class Google_Service_Doubleclicksearch_Resource_Reports extends Google_Service_R
    * @param string $reportId ID of the report request being polled.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_Report
+   * @throws Google_Exception
    */
   public function get($reportId, $optParams = array())
   {
@@ -57,6 +59,7 @@ class Google_Service_Doubleclicksearch_Resource_Reports extends Google_Service_R
    * @param string $reportId ID of the report.
    * @param int $reportFragment The index of the report fragment to download.
    * @param array $optParams Optional parameters.
+   * @throws Google_Exception
    */
   public function getFile($reportId, $reportFragment, $optParams = array())
   {
@@ -70,6 +73,7 @@ class Google_Service_Doubleclicksearch_Resource_Reports extends Google_Service_R
    * @param Google_Service_Doubleclicksearch_ReportRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Doubleclicksearch_Report
+   * @throws Google_Exception
    */
   public function request(Google_Service_Doubleclicksearch_ReportRequest $postBody, $optParams = array())
   {
