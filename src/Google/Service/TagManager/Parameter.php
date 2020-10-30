@@ -35,14 +35,14 @@ class Google_Service_TagManager_Parameter extends Google_Collection
     return $this->key;
   }
   /**
-   * @param Google_Service_TagManager_Parameter
+   * @param array
    */
   public function setList($list)
   {
     $this->list = $list;
   }
   /**
-   * @return Google_Service_TagManager_Parameter
+   * @return array
    */
   public function getList()
   {
