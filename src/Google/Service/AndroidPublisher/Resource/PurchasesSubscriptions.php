@@ -20,7 +20,7 @@
  * Typical usage is:
  *  <code>
  *   $androidpublisherService = new Google_Service_AndroidPublisher(...);
- *   $subscriptions = $androidpublisherService->subscriptions;
+ *   $subscriptions = $androidpublisherService->purchases_subscriptions;
  *  </code>
  */
 class Google_Service_AndroidPublisher_Resource_PurchasesSubscriptions extends Google_Service_Resource
