@@ -30,7 +30,7 @@ setup(
     author_email='aiuto@google.com',
     maintainer='Brent Shaffer',
     maintainer_email='betterbrent@google.com',
-    url='https://github.com/googleapis/google-api-client-php-services/',
+    url='https://github.com/googleapis/google-api-php-client-services/',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     entry_points={
