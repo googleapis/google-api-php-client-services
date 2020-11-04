@@ -23,10 +23,10 @@ class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
   public function setUp()
   {
     // ensure dependent classes exist
-    $this->getMock('Google_Service');
-    $this->getMock('Google_Model');
-    $this->getMock('Google_Collection');
-    $this->getMock('Google_Service_Resource');
+    $this->createMock('Google_Service');
+    $this->createMock('Google_Model');
+    $this->createMock('Google_Collection');
+    $this->createMock('Google_Service_Resource');
   }
 
   /**
