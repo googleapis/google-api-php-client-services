@@ -1,0 +1,62 @@
+<?php
+{% language php %}{% copyright_block %}
+
+class {{ api.ownerName }}_Service_{{ api.className }}_{{ model.className }} {% if model.superClass %}extends {{ api.ownerName }}_Service_{{ api.className }}_{{ model.superClass }}{% else %}{% if model.dataType == "array" %}extends Google_Collection{% else %}extends Google_Model{% endif %}{% endif %}
+{{% if model.properties %}
+{% filter noblanklines %}
+{% if not model.is_variant_base and model.collectionKey %}
+  protected $collection_key = '{{ model.collectionKey }}';
+{% endif %}{% if model.has_gapi %}
+  protected $internal_gapi_mappings = array(
+    {% for property in model.properties %}
+      {% if not property.member_name_is_json_name %}
+        "{{ property.memberName }}" => "{{ property.wireName }}",
+      {% endif %}
+    {% endfor %}
+  );
+{% endif %}{% for property in model.properties %}
+ {% if property.typeHint %}
+  {% if property.memberName|add:"Type" not in model.propNames %}
+  protected ${{ property.memberName }}Type = '{{ property.typeHint|cut:" " }}';
+  {% endif %}{% if property.memberName|add:"DataType" not in model.propNames %}
+  protected ${{ property.memberName }}DataType = '{{ property.dataType }}';
+  {% endif %}
+ {% else %}
+  public ${{ property.memberName }};
+ {% endif %}
+{% endfor %}
+{% endfilter %}
+{% filter noblanklines %}
+ {% if model.discriminantValue %}
+  protected function gapiInit()
+  {
+    $this->type = {% literal model.discriminantValue %};
+  }
+ {% endif %}
+{% endfilter %}{% for property in model.properties %}
+{% filter noblanklines %}
+{% if property.typeHint %}
+  /**
+   * @param {{ property.typeHint }}
+   */
+{% endif %}
+  {% if property.type == "array" or property.dataType == "map" or not property.typeHint %}
+  public function {{ property.setterName }}(${{ property.memberName }})
+  {% else %}
+  public function {{ property.setterName }}({{ property.typeHint }} ${{ property.memberName }})
+  {% endif %}
+  {
+    $this->{{ property.memberName }} = ${{ property.memberName }};
+  }
+
+{% if property.typeHint %}
+  /**
+   * @return {{ property.typeHint }}
+   */
+{% endif %}
+  public function {{ property.getterName }}()
+  {
+    return $this->{{ property.memberName }};
+  }
+{% endfilter %}{% endfor %}{% endif %}
+}

@@ -7,10 +7,9 @@ on:
 
 jobs:
     test:
-        runs-on: ${{matrix.operating-system}}
+        runs-on: ubuntu-latest
         strategy:
             matrix:
-                operating-system: [ ubuntu-latest ]
                 php: [ 5.4, 5.5, 5.6, "7.0", 7.1, 7.2, 7.3, 7.4 ]
         name: PHP ${{matrix.php }} Unit Test
         steps:
@@ -27,3 +26,19 @@ jobs:
                 command: composer install
             - name: Run Script
               run: vendor/bin/phpunit
+    generator:
+        runs-on: ubuntu-latest
+        name: Services Generator Tests
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Python 2.7
+              uses: actions/setup-python@v2
+              with:
+                python-version: 2.7
+            - name: Install dependencies
+              run: |
+                python -m pip install -e generator/ --user
+            - name: Run Tests
+              run: |
+                bash generator/run_tests.sh
+
