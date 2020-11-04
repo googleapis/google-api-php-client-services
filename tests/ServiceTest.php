@@ -20,15 +20,6 @@
 
 class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
 {
-  public function setUp()
-  {
-    // ensure dependent classes exist
-    $this->createMock('Google_Service');
-    $this->createMock('Google_Model');
-    $this->createMock('Google_Collection');
-    $this->createMock('Google_Service_Resource');
-  }
-
   /**
    * @dataProvider serviceProvider
    */
@@ -71,3 +62,9 @@ class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
     return array_filter(glob($path), 'is_dir');
   }
 }
+
+// Add stubs for dependent classes in "google/apiclient"
+class Google_Service {}
+class Google_Model {}
+class Google_Collection {}
+class Google_Service_Resource {}
