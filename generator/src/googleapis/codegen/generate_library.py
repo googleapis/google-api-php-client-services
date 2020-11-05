@@ -173,7 +173,7 @@ def Generate(discovery_doc, package_writer,
              version_package=False,
              package_path=None,
              output_type='plain',
-             language='java',
+             language='php',
              language_variant='default',
              callback=None):
   """Generate a library package from discovery and options."""

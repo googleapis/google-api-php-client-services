@@ -25,7 +25,6 @@ import os
 import re
 
 from google.apputils import basetest
-from googleapis.codegen import platforms
 from googleapis.codegen.utilities import json_expander
 from googleapis.codegen.utilities import json_with_comments
 
@@ -94,10 +93,6 @@ class ConfigurationTest(basetest.TestCase):
       HasElement('description')
       HasElement('releaseVersion')
       language = json_data.get('language')
-      possible_environments = set(platforms.PLATFORMS[platforms.ALL])
-      if language:
-        for p in platforms.PLATFORMS.get(language, []):
-          possible_environments.add(p)
 
       for r in json_data.get('requires', []):
 
@@ -108,14 +103,6 @@ class ConfigurationTest(basetest.TestCase):
         HasRequiresElement(r, 'version')
         HasRequiresElement(r, 'environments')
         environments = r['environments']
-        for e in environments:
-          if e not in possible_environments:
-            self.fail('%s: bad environment list: %s in %s'
-                      % (path, environments, r))
-        for f in r.get('files', []):
-          file_type = f['type']
-          if file_type not in platforms.FILE_TYPES[platforms.ALL]:
-            self.fail('%s: unknown file type %s in %s' % (path, file_type, r))
 
     for path in self.WalkFileTree(r'features\.json$'):
       json_data = self.LoadJsonFile(path, True)
