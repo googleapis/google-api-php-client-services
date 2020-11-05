@@ -14,8 +14,8 @@
 #  limitations under the License.
 """Setup script for Google APIs Client Generator."""
 
-from ez_setup import use_setuptools
-use_setuptools()
+# from ez_setup import use_setuptools
+# use_setuptools()
 
 from setuptools import find_packages  # pylint:disable=g-import-not-at-top
 from setuptools import setup
