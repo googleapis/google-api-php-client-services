@@ -6,3 +6,6 @@ src/Google/Service/Compute/HTTPSHealthCheck.php
 # Python for generator
 *.pyc
 *.egg-info
+
+# When running synth.py
+.cache/
