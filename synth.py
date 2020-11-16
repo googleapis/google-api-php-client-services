@@ -22,12 +22,8 @@ import logging
 from os import path, remove
 from pathlib import Path
 import glob
-import json
-from lxml import etree
 import re
 import sys
-import shutil
-from typing import List
 from packaging import version
 
 logging.basicConfig(level=logging.DEBUG)
@@ -54,20 +50,14 @@ shell.run(
 )
 
 def generate_service(disco: str):
-
     m = re.search(VERSION_REGEX, disco)
-    if m is None:
-        log.info(f"Skipping {disco}.")
-        return
     name = m.group(1)
     version = m.group(2)
-    # Generate for latest version
-    template = TEMPLATE_VERSIONS[-1]
+    template = TEMPLATE_VERSIONS[-1] # Generate for latest version
 
     log.info(f"Generating {name} {version} ({template}).")
 
-    library_name = name
-    output_dir = repository / ".cache" / library_name / version
+    output_dir = repository / ".cache" / name / version
     input_file = discovery / "discoveries" / disco
 
     command = (
