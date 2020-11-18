@@ -22,6 +22,7 @@ import logging
 from os import path, remove
 from pathlib import Path
 import glob
+import json
 import re
 import sys
 from packaging import version
@@ -71,27 +72,48 @@ def generate_service(disco: str):
 
     s.copy(output_dir, f"src/Google/Service")
 
-def all_discoveries():
-    discos = {}
-    for file in sorted(glob.glob(str(discovery / 'discoveries/*.*.json'))):
-        disco = path.basename(file);
-        m = re.search(VERSION_REGEX, disco)
-        if m is None:
-            log.info(f"Skipping {disco}.")
-            continue
-        name = m.group(1)
-        if name in discos:
-            m2 = re.search(VERSION_REGEX, discos[name])
-            if version.parse(m2.group(2)) > version.parse(m.group(2)):
-                log.info(name + ": Using " + m2.group(2) + " over " + m.group(2))
-                continue
-        discos[name] = disco
+def all_discoveries(skip=None, prefer=None):
+    """Returns a map of API IDs to Discovery document filenames.
 
-    return discos.values()
+    Args:
+        skip (list, optional): a list of API IDs to skip.
+        prefer (list, optional): a list of API IDs to include.
+
+    Returns:
+        list(string): A list of Discovery document filenames.
+    """
+    discoveries = {}
+    for filename in sorted(glob.glob(str(discovery / 'discoveries/*.*.json'))):
+        api_id = None
+        with open(filename) as file:
+            api_id = json.load(file)['id']
+        # If an API has already been visited, skip it.
+        if api_id in discoveries:
+            continue
+        # Skip APIs explicitly listed in "skip" arg
+        if skip and api_id in skip:
+            continue
+        discoveries[api_id] = path.basename(filename)
+
+    # Skip APIs not preferred in index.json and not listed in "prefer" arg
+    index = {}
+    with open(str(discovery / 'discoveries/index.json')) as file:
+        index = json.load(file)
+    for api in index['items']:
+        api_id = api['id']
+        if prefer and api_id in prefer:
+            continue
+        if api['preferred']:
+            continue
+        discoveries.pop(api_id, None)
+
+    return discoveries.values()
 
 def generate_services(services):
     for service in services:
         generate_service(service)
 
-discoveries = all_discoveries()
+skip = ['discovery:v1', 'websecurityscanner:v1']
+prefer = ['admin:directory_v1', 'admin:datatransfer_v1']
+discoveries = all_discoveries(skip, prefer)
 generate_services(discoveries)
