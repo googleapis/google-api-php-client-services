@@ -2300,9 +2300,9 @@ class Google_Service_KitchSink_Series extends Google_Model
 class Google_Service_KitchSink_SeriesCounters extends Google_Model
 {
   protected $internal_gapi_mappings = array(
-        "minusVotes" => "minus_votes",
-        "noneVotes" => "none_votes",
-        "plusVotes" => "plus_votes",
+        'minusVotes' => 'minus_votes',
+        'noneVotes' => 'none_votes',
+        'plusVotes' => 'plus_votes',
   );
   public $anonymousSubmissions;
   protected $countersType = 'Google_Service_KitchSink_SeriesCountersCounters';
@@ -2407,7 +2407,7 @@ class Google_Service_KitchSink_SeriesCounters extends Google_Model
 class Google_Service_KitchSink_SeriesCountersCounters extends Google_Model
 {
   protected $internal_gapi_mappings = array(
-        "allVotes" => "all-votes",
+        'allVotes' => 'all-votes',
   );
   public $allVotes;
 
@@ -2524,7 +2524,7 @@ class Google_Service_KitchSink_Submission extends Google_Collection
 {
   protected $collection_key = 'topics';
   protected $internal_gapi_mappings = array(
-        "attachmentUrl" => "@attachmentUrl",
+        'attachmentUrl' => '@attachmentUrl',
   );
   public $attachmentUrl;
   protected $attributionType = 'Google_Service_KitchSink_SubmissionAttribution';
@@ -2707,8 +2707,8 @@ class Google_Service_KitchSink_Submission extends Google_Collection
 class Google_Service_KitchSink_SubmissionAttribution extends Google_Model
 {
   protected $internal_gapi_mappings = array(
-        "avatarUrl" => "$avatarUrl",
-        "object" => "$object",
+        'avatarUrl' => '$avatarUrl',
+        'object' => '$object',
   );
   public $avatarUrl;
   public $object;
@@ -2761,9 +2761,9 @@ class Google_Service_KitchSink_SubmissionAttribution extends Google_Model
 class Google_Service_KitchSink_SubmissionCounters extends Google_Model
 {
   protected $internal_gapi_mappings = array(
-        "minusVotes" => "minus_votes",
-        "noneVotes" => "none_votes",
-        "plusVotes" => "plus_votes",
+        'minusVotes' => 'minus_votes',
+        'noneVotes' => 'none_votes',
+        'plusVotes' => 'plus_votes',
   );
   public $minusVotes;
   public $noneVotes;
@@ -3301,9 +3301,9 @@ class Google_Service_KitchSink_Topic2 extends Google_Collection
 class Google_Service_KitchSink_Topic2Counters extends Google_Model
 {
   protected $internal_gapi_mappings = array(
-        "minusVotes" => "minus_votes",
-        "noneVotes" => "none_votes",
-        "plusVotes" => "plus_votes",
+        'minusVotes' => 'minus_votes',
+        'noneVotes' => 'none_votes',
+        'plusVotes' => 'plus_votes',
   );
   public $minusVotes;
   public $noneVotes;
@@ -3424,9 +3424,9 @@ class Google_Service_KitchSink_Topic2Id extends Google_Model
 class Google_Service_KitchSink_TopicCounters extends Google_Model
 {
   protected $internal_gapi_mappings = array(
-        "minusVotes" => "minus_votes",
-        "noneVotes" => "none_votes",
-        "plusVotes" => "plus_votes",
+        'minusVotes' => 'minus_votes',
+        'noneVotes' => 'none_votes',
+        'plusVotes' => 'plus_votes',
   );
   public $minusVotes;
   public $noneVotes;

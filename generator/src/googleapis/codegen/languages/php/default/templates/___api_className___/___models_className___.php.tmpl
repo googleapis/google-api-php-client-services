@@ -10,7 +10,7 @@ class {{ api.ownerName }}_Service_{{ api.className }}_{{ model.className }} {% i
   protected $internal_gapi_mappings = array(
     {% for property in model.properties %}
       {% if not property.member_name_is_json_name %}
-        "{{ property.memberName }}" => "{{ property.wireName }}",
+        '{{ property.memberName }}' => '{{ property.wireName }}',
       {% endif %}
     {% endfor %}
   );
