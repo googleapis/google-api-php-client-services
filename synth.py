@@ -83,17 +83,17 @@ def all_discoveries(skip=None, prefer=None):
         list(string): A list of Discovery document filenames.
     """
     discos = {}
-    for filename in sorted(glob.glob(str(discovery / 'discoveries/*.*.json'))):
+    for file in sorted(glob.glob(str(discovery / 'discoveries/*.*.json'))):
         api_id = None
-        with open(filename) as file:
-            api_id = json.load(file)['id']
+        with open(file) as api_file:
+            api_id = json.load(api_file)['id']
         # If an API has already been visited, skip it.
         if api_id in discos:
             continue
         # Skip APIs explicitly listed in "skip" arg
         if skip and api_id in skip:
             continue
-        discos[api_id] = path.basename(filename)
+        discos[api_id] = path.basename(file)
 
     # Skip APIs not preferred in index.json and not listed in "prefer" arg
     index = {}
