@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/google-api-php-client-services.git",
+        "sha": "879bb20d054c4ede04965e8c1c99cbcb02a8413e"
+      }
+    },
+    {
+      "git": {
+        "name": "discovery-artifact-manager",
+        "remote": "https://github.com/googleapis/discovery-artifact-manager.git",
+        "sha": "cdc9014e0822b294a0ce08e441a3668bdbd8b70e"
+      }
+    }
+  ]
+}

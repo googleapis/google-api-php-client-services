@@ -131,19 +131,19 @@ class Google_Service_Apigee_Resource_OrganizationsApiproducts extends Google_Ser
    * structure in your request: `organizations/{org}`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string attributename Name of the attribute used to filter the
+   * search.
+   * @opt_param string attributevalue Value of the attribute used to filter the
+   * search.
+   * @opt_param string count Enter the number of API products you want returned in
+   * the API call. The limit is 1000.
+   * @opt_param bool expand Flag that specifies whether to expand the results. Set
+   * to `true` to get expanded details about each API.
    * @opt_param string startKey Gets a list of API products starting with a
    * specific API product in the list. For example, if you're returning 50 API
    * products at a time (using the `count` query parameter), you can view products
    * 50-99 by entering the name of the 50th API product in the first API (without
    * using `startKey`). Product name is case sensitive.
-   * @opt_param bool expand Flag that specifies whether to expand the results. Set
-   * to `true` to get expanded details about each API.
-   * @opt_param string count Enter the number of API products you want returned in
-   * the API call. The limit is 1000.
-   * @opt_param string attributename Name of the attribute used to filter the
-   * search.
-   * @opt_param string attributevalue Value of the attribute used to filter the
-   * search.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ListApiProductsResponse
    */
   public function listOrganizationsApiproducts($parent, $optParams = array())

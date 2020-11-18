@@ -38,10 +38,10 @@ class Google_Service_FirebaseRealtimeDatabase_Resource_ProjectsLocationsInstance
    * @param Google_Service_FirebaseRealtimeDatabase_DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool validateOnly When set to true, the request will be validated
-   * but not submitted.
    * @opt_param string databaseId The globally unique identifier of the database
    * instance.
+   * @opt_param bool validateOnly When set to true, the request will be validated
+   * but not submitted.
    * @return Google_Service_FirebaseRealtimeDatabase_DatabaseInstance
    */
   public function create($parent, Google_Service_FirebaseRealtimeDatabase_DatabaseInstance $postBody, $optParams = array())

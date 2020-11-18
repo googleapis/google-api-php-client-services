@@ -101,8 +101,6 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCerti
    * @param Google_Service_CertificateAuthorityService_CertificateRevocationList $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required. A list of fields to be updated in this
-   * request.
    * @opt_param string requestId Optional. An ID to identify requests. Specify a
    * unique request ID so that if you must retry your request, the server will
    * know to ignore the request if it has already been completed. The server will
@@ -114,6 +112,8 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCerti
    * creating duplicate commitments. The request ID must be a valid UUID with the
    * exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Required. A list of fields to be updated in this
+   * request.
    * @return Google_Service_CertificateAuthorityService_Operation
    */
   public function patch($name, Google_Service_CertificateAuthorityService_CertificateRevocationList $postBody, $optParams = array())

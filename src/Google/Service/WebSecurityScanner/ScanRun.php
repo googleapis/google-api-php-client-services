@@ -15,9 +15,12 @@
  * the License.
  */
 
-class Google_Service_WebSecurityScanner_ScanRun extends Google_Model
+class Google_Service_WebSecurityScanner_ScanRun extends Google_Collection
 {
+  protected $collection_key = 'warningTraces';
   public $endTime;
+  protected $errorTraceType = 'Google_Service_WebSecurityScanner_ScanRunErrorTrace';
+  protected $errorTraceDataType = '';
   public $executionState;
   public $hasVulnerabilities;
   public $name;
@@ -26,6 +29,8 @@ class Google_Service_WebSecurityScanner_ScanRun extends Google_Model
   public $startTime;
   public $urlsCrawledCount;
   public $urlsTestedCount;
+  protected $warningTracesType = 'Google_Service_WebSecurityScanner_ScanRunWarningTrace';
+  protected $warningTracesDataType = 'array';
 
   public function setEndTime($endTime)
   {
@@ -34,6 +39,20 @@ class Google_Service_WebSecurityScanner_ScanRun extends Google_Model
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * @param Google_Service_WebSecurityScanner_ScanRunErrorTrace
+   */
+  public function setErrorTrace(Google_Service_WebSecurityScanner_ScanRunErrorTrace $errorTrace)
+  {
+    $this->errorTrace = $errorTrace;
+  }
+  /**
+   * @return Google_Service_WebSecurityScanner_ScanRunErrorTrace
+   */
+  public function getErrorTrace()
+  {
+    return $this->errorTrace;
   }
   public function setExecutionState($executionState)
   {
@@ -98,5 +117,19 @@ class Google_Service_WebSecurityScanner_ScanRun extends Google_Model
   public function getUrlsTestedCount()
   {
     return $this->urlsTestedCount;
+  }
+  /**
+   * @param Google_Service_WebSecurityScanner_ScanRunWarningTrace
+   */
+  public function setWarningTraces($warningTraces)
+  {
+    $this->warningTraces = $warningTraces;
+  }
+  /**
+   * @return Google_Service_WebSecurityScanner_ScanRunWarningTrace
+   */
+  public function getWarningTraces()
+  {
+    return $this->warningTraces;
   }
 }

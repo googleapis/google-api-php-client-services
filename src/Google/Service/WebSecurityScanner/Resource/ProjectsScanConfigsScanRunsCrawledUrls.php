@@ -34,12 +34,12 @@ class Google_Service_WebSecurityScanner_Resource_ProjectsScanConfigsScanRunsCraw
    * 'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A token identifying a page of results to be
-   * returned. This should be a `next_page_token` value returned from a previous
-   * List request. If unspecified, the first page of results is returned.
    * @opt_param int pageSize The maximum number of CrawledUrls to return, can be
    * limited by server. If not specified or not positive, the implementation will
    * select a reasonable value.
+   * @opt_param string pageToken A token identifying a page of results to be
+   * returned. This should be a `next_page_token` value returned from a previous
+   * List request. If unspecified, the first page of results is returned.
    * @return Google_Service_WebSecurityScanner_ListCrawledUrlsResponse
    */
   public function listProjectsScanConfigsScanRunsCrawledUrls($parent, $optParams = array())

@@ -149,13 +149,13 @@ class Google_Service_ShoppingContent_Resource_Accounts extends Google_Service_Re
    * multi-client account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string label If view is set to "css", only return accounts that
    * are assigned label with given ID.
-   * @opt_param string view Controls which fields will be populated. Acceptable
-   * values are: "merchant" and "css". The default value is "merchant".
    * @opt_param string maxResults The maximum number of accounts to return in the
    * response, used for paging.
+   * @opt_param string pageToken The token returned by the previous request.
+   * @opt_param string view Controls which fields will be populated. Acceptable
+   * values are: "merchant" and "css". The default value is "merchant".
    * @return Google_Service_ShoppingContent_AccountsListResponse
    */
   public function listAccounts($merchantId, $optParams = array())

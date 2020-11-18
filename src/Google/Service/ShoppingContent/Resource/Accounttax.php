@@ -64,9 +64,9 @@ class Google_Service_ShoppingContent_Resource_Accounttax extends Google_Service_
    * multi-client account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string maxResults The maximum number of tax settings to return in
    * the response, used for paging.
+   * @opt_param string pageToken The token returned by the previous request.
    * @return Google_Service_ShoppingContent_AccounttaxListResponse
    */
   public function listAccounttax($merchantId, $optParams = array())

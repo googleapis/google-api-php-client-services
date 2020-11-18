@@ -67,12 +67,12 @@ class Google_Service_ShoppingContent_Resource_Productstatuses extends Google_Ser
    * This account cannot be a multi-client account.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string destinations If set, only issues for the specified
    * destinations are returned, otherwise only issues for the Shopping
    * destination.
    * @opt_param string maxResults The maximum number of product statuses to return
    * in the response, used for paging.
+   * @opt_param string pageToken The token returned by the previous request.
    * @return Google_Service_ShoppingContent_ProductstatusesListResponse
    */
   public function listProductstatuses($merchantId, $optParams = array())

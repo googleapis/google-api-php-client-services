@@ -16,7 +16,7 @@
  */
 
 /**
- * Service definition for Speech (v1).
+ * Service definition for Speech (v2beta1).
  *
  * <p>
  * Converts audio to text by applying powerful neural network models.</p>
@@ -34,10 +34,8 @@ class Google_Service_Speech extends Google_Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $operations;
   public $projects_locations_operations;
-  public $speech;
-  
+
   /**
    * Constructs the internal representation of the Speech service.
    *
@@ -50,50 +48,9 @@ class Google_Service_Speech extends Google_Service
     $this->rootUrl = $rootUrl ?: 'https://speech.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1';
+    $this->version = 'v2beta1';
     $this->serviceName = 'speech';
 
-    $this->operations = new Google_Service_Speech_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
-            'get' => array(
-              'path' => 'v1/operations/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'v1/operations',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'name' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
     $this->projects_locations_operations = new Google_Service_Speech_Resource_ProjectsLocationsOperations(
         $this,
         $this->serviceName,
@@ -101,7 +58,7 @@ class Google_Service_Speech extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v2beta1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -111,7 +68,7 @@ class Google_Service_Speech extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+name}/operations',
+              'path' => 'v2beta1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -119,37 +76,19 @@ class Google_Service_Speech extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
               ),
-            ),
-          )
-        )
-    );
-    $this->speech = new Google_Service_Speech_Resource_Speech(
-        $this,
-        $this->serviceName,
-        'speech',
-        array(
-          'methods' => array(
-            'longrunningrecognize' => array(
-              'path' => 'v1/speech:longrunningrecognize',
-              'httpMethod' => 'POST',
-              'parameters' => array(),
-            ),'recognize' => array(
-              'path' => 'v1/speech:recognize',
-              'httpMethod' => 'POST',
-              'parameters' => array(),
             ),
           )
         )

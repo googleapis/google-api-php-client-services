@@ -106,9 +106,9 @@ class Google_Service_RealTimeBidding_Resource_BuyersUserLists extends Google_Ser
    * `{buyerAccountId}` should represent the account ID of the child seat buyer.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize The number of results to return per page.
    * @opt_param string pageToken Continuation page token (as received from a
    * previous response).
-   * @opt_param int pageSize The number of results to return per page.
    * @return Google_Service_RealTimeBidding_ListUserListsResponse
    */
   public function listBuyersUserLists($parent, $optParams = array())

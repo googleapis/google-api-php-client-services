@@ -83,14 +83,14 @@ class Google_Service_RealTimeBidding_Resource_BuyersCreatives extends Google_Ser
    * specified, all active creatives will be returned. Example: 'accountId=12345
    * AND (dealsStatus:DISAPPROVED AND disapprovalReason:UNACCEPTABLE_CONTENT) OR
    * declaredAttributes:IS_COOKIE_TARGETED'
-   * @opt_param string pageToken A token identifying a page of results the server
-   * should return. Typically, this is the value of
-   * ListCreativesResponse.nextPageToken returned from the previous call to the
-   * 'ListCreatives' method.
    * @opt_param int pageSize Requested page size. The server may return fewer
    * creatives than requested (due to timeout constraint) even if more are
    * available via another call. If unspecified, server will pick an appropriate
    * default. Acceptable values are 1 to 1000, inclusive.
+   * @opt_param string pageToken A token identifying a page of results the server
+   * should return. Typically, this is the value of
+   * ListCreativesResponse.nextPageToken returned from the previous call to the
+   * 'ListCreatives' method.
    * @opt_param string view Controls the amount of information included in the
    * response. By default only creativeServingDecision is included. To retrieve
    * the entire creative resource (including the declared fields and the creative

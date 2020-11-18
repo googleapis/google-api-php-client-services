@@ -50,13 +50,13 @@ class Google_Service_WebSecurityScanner_Resource_ProjectsScanConfigsScanRunsFind
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter The filter expression. The expression must be in the
-   * format:  . Supported field: 'finding_type'. Supported operator: '='.
-   * @opt_param string pageToken A token identifying a page of results to be
-   * returned. This should be a `next_page_token` value returned from a previous
-   * List request. If unspecified, the first page of results is returned.
+   * format: . Supported field: 'finding_type'. Supported operator: '='.
    * @opt_param int pageSize The maximum number of Findings to return, can be
    * limited by server. If not specified or not positive, the implementation will
    * select a reasonable value.
+   * @opt_param string pageToken A token identifying a page of results to be
+   * returned. This should be a `next_page_token` value returned from a previous
+   * List request. If unspecified, the first page of results is returned.
    * @return Google_Service_WebSecurityScanner_ListFindingsResponse
    */
   public function listProjectsScanConfigsScanRunsFindings($parent, $optParams = array())

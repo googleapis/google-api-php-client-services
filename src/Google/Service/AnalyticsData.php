@@ -39,7 +39,7 @@ class Google_Service_AnalyticsData extends Google_Service
 
   public $properties;
   public $v1alpha;
-  
+
   /**
    * Constructs the internal representation of the AnalyticsData service.
    *

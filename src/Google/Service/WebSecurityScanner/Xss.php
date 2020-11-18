@@ -18,9 +18,19 @@
 class Google_Service_WebSecurityScanner_Xss extends Google_Collection
 {
   protected $collection_key = 'stackTraces';
+  public $attackVector;
   public $errorMessage;
   public $stackTraces;
+  public $storedXssSeedingUrl;
 
+  public function setAttackVector($attackVector)
+  {
+    $this->attackVector = $attackVector;
+  }
+  public function getAttackVector()
+  {
+    return $this->attackVector;
+  }
   public function setErrorMessage($errorMessage)
   {
     $this->errorMessage = $errorMessage;
@@ -36,5 +46,13 @@ class Google_Service_WebSecurityScanner_Xss extends Google_Collection
   public function getStackTraces()
   {
     return $this->stackTraces;
+  }
+  public function setStoredXssSeedingUrl($storedXssSeedingUrl)
+  {
+    $this->storedXssSeedingUrl = $storedXssSeedingUrl;
+  }
+  public function getStoredXssSeedingUrl()
+  {
+    return $this->storedXssSeedingUrl;
   }
 }

@@ -16,14 +16,14 @@
  */
 
 /**
- * Service definition for WebSecurityScanner (v1alpha).
+ * Service definition for WebSecurityScanner (v1).
  *
  * <p>
  * Scans your Compute and App Engine apps for common web vulnerabilities.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/security-scanner/" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -39,19 +39,20 @@ class Google_Service_WebSecurityScanner extends Google_Service
   public $projects_scanConfigs_scanRuns_crawledUrls;
   public $projects_scanConfigs_scanRuns_findingTypeStats;
   public $projects_scanConfigs_scanRuns_findings;
-  
+
   /**
    * Constructs the internal representation of the WebSecurityScanner service.
    *
-   * @param Google_Client $client
+   * @param Google_Client $client The client used to deliver requests.
+   * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = 'https://websecurityscanner.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://websecurityscanner.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1alpha';
+    $this->version = 'v1';
     $this->serviceName = 'websecurityscanner';
 
     $this->projects_scanConfigs = new Google_Service_WebSecurityScanner_Resource_ProjectsScanConfigs(
@@ -61,7 +62,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1alpha/{+parent}/scanConfigs',
+              'path' => 'v1/{+parent}/scanConfigs',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -71,7 +72,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -81,7 +82,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -91,7 +92,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1alpha/{+parent}/scanConfigs',
+              'path' => 'v1/{+parent}/scanConfigs',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -99,17 +100,17 @@ class Google_Service_WebSecurityScanner extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'patch' => array(
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -123,7 +124,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
                 ),
               ),
             ),'start' => array(
-              'path' => 'v1alpha/{+name}:start',
+              'path' => 'v1/{+name}:start',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -143,7 +144,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -153,7 +154,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1alpha/{+parent}/scanRuns',
+              'path' => 'v1/{+parent}/scanRuns',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -161,17 +162,17 @@ class Google_Service_WebSecurityScanner extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'stop' => array(
-              'path' => 'v1alpha/{+name}:stop',
+              'path' => 'v1/{+name}:stop',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -191,7 +192,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
         array(
           'methods' => array(
             'list' => array(
-              'path' => 'v1alpha/{+parent}/crawledUrls',
+              'path' => 'v1/{+parent}/crawledUrls',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -199,13 +200,13 @@ class Google_Service_WebSecurityScanner extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -219,7 +220,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
         array(
           'methods' => array(
             'list' => array(
-              'path' => 'v1alpha/{+parent}/findingTypeStats',
+              'path' => 'v1/{+parent}/findingTypeStats',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -239,7 +240,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -249,7 +250,7 @@ class Google_Service_WebSecurityScanner extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1alpha/{+parent}/findings',
+              'path' => 'v1/{+parent}/findings',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -261,13 +262,13 @@ class Google_Service_WebSecurityScanner extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

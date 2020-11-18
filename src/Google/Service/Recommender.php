@@ -36,7 +36,7 @@ class Google_Service_Recommender extends Google_Service
 
   public $projects_locations_insightTypes_insights;
   public $projects_locations_recommenders_recommendations;
-  
+
   /**
    * Constructs the internal representation of the Recommender service.
    *
@@ -133,13 +133,13 @@ class Google_Service_Recommender extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'markClaimed' => array(

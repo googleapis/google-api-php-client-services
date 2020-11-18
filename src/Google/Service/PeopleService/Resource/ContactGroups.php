@@ -31,11 +31,11 @@ class Google_Service_PeopleService_Resource_ContactGroups extends Google_Service
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string resourceNames Required. The resource names of the contact
-   * groups to get.
    * @opt_param int maxMembers Optional. Specifies the maximum number of members
    * to return for each group. Defaults to 0 if not set, which will return zero
    * members.
+   * @opt_param string resourceNames Required. The resource names of the contact
+   * groups to get.
    * @return Google_Service_PeopleService_BatchGetContactGroupsResponse
    */
   public function batchGet($optParams = array())

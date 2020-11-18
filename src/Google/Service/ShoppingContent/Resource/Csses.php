@@ -49,14 +49,14 @@ class Google_Service_ShoppingContent_Resource_Csses extends Google_Service_Resou
    * listed.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListCsses` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListCsses` must match the call
-   * that provided the page token.
    * @opt_param int pageSize The maximum number of CSS domains to return. The
    * service may return fewer than this value. If unspecified, at most 50 CSS
    * domains will be returned. The maximum value is 1000; values above 1000 will
    * be coerced to 1000.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListCsses` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListCsses` must match the call
+   * that provided the page token.
    * @return Google_Service_ShoppingContent_ListCssesResponse
    */
   public function listCsses($cssGroupId, $optParams = array())

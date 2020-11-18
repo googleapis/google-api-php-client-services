@@ -48,16 +48,16 @@ class Google_Service_PeopleService_Resource_OtherContacts extends Google_Service
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string readMask Required. A field mask to restrict which fields on
-   * each person are returned. Multiple fields can be specified by separating them
-   * with commas. Valid values are: * emailAddresses * names * phoneNumbers
+   * @opt_param int pageSize Optional. The number of "Other contacts" to include
+   * in the response. Valid values are between 1 and 1000, inclusive. Defaults to
+   * 100 if not set or set to 0.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListOtherContacts` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListOtherContacts` must match
    * the call that provided the page token.
-   * @opt_param int pageSize Optional. The number of "Other contacts" to include
-   * in the response. Valid values are between 1 and 1000, inclusive. Defaults to
-   * 100 if not set or set to 0.
+   * @opt_param string readMask Required. A field mask to restrict which fields on
+   * each person are returned. Multiple fields can be specified by separating them
+   * with commas. Valid values are: * emailAddresses * names * phoneNumbers
    * @opt_param bool requestSyncToken Optional. Whether the response should
    * include `next_sync_token`, which can be used to get all changes since the
    * last request. For subsequent sync requests use the `sync_token` param

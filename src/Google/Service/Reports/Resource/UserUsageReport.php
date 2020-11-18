@@ -39,6 +39,8 @@ class Google_Service_Reports_Resource_UserUsageReport extends Google_Service_Res
    * zone for this.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string customerId The unique ID of the customer to retrieve data
+   * for.
    * @opt_param string filters The filters query string is a comma-separated list
    * of an application's event parameters where the parameter's value is
    * manipulated by a relational operator. The filters query string includes the
@@ -58,8 +60,15 @@ class Google_Service_Reports_Resource_UserUsageReport extends Google_Service_Res
    * which user activities are filtered, i.e, the response will contain activities
    * for only those users that are a part of at least one of the group ids
    * mentioned here. Format: "id:abc123,id:xyz456"
-   * @opt_param string customerId The unique ID of the customer to retrieve data
-   * for.
+   * @opt_param string maxResults Determines how many activity records are shown
+   * on each response page. For example, if the request sets maxResults=1 and the
+   * report has two activities, the report has two pages. The response's
+   * nextPageToken property has the token to the second page. The maxResults query
+   * string is optional.
+   * @opt_param string orgUnitID ID of the organizational unit to report on. User
+   * activity will be shown only for users who belong to the specified
+   * organizational unit. Data before Dec 17, 2018 doesn't appear in the filtered
+   * results.
    * @opt_param string pageToken Token to specify next page. A report with
    * multiple pages has a nextPageToken property in the response. In your follow-
    * on request getting the next page of the report, enter the nextPageToken value
@@ -78,15 +87,6 @@ class Google_Service_Reports_Resource_UserUsageReport extends Google_Service_Res
    * the remaining valid request parameters. An example of an invalid request
    * parameter is one that does not belong to the application. If no parameters
    * are requested, all parameters are returned.
-   * @opt_param string maxResults Determines how many activity records are shown
-   * on each response page. For example, if the request sets maxResults=1 and the
-   * report has two activities, the report has two pages. The response's
-   * nextPageToken property has the token to the second page. The maxResults query
-   * string is optional.
-   * @opt_param string orgUnitID ID of the organizational unit to report on. User
-   * activity will be shown only for users who belong to the specified
-   * organizational unit. Data before Dec 17, 2018 doesn't appear in the filtered
-   * results.
    * @return Google_Service_Reports_UsageReports
    */
   public function get($userKey, $date, $optParams = array())

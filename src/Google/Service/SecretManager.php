@@ -38,7 +38,7 @@ class Google_Service_SecretManager extends Google_Service
   public $projects_locations;
   public $projects_secrets;
   public $projects_secrets_versions;
-  
+
   /**
    * Constructs the internal representation of the SecretManager service.
    *
@@ -83,13 +83,13 @@ class Google_Service_SecretManager extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

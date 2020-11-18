@@ -50,7 +50,7 @@ class Google_Service_AndroidEnterprise extends Google_Service
   public $storelayoutpages;
   public $users;
   public $webapps;
-  
+
   /**
    * Constructs the internal representation of the AndroidEnterprise service.
    *
@@ -948,19 +948,19 @@ class Google_Service_AndroidEnterprise extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
+                'language' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'token' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'query' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'language' => array(
+                'token' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

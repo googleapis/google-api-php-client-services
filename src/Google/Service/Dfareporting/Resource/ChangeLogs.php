@@ -47,12 +47,21 @@ class Google_Service_Dfareporting_Resource_ChangeLogs extends Google_Service_Res
    * @param array $optParams Optional parameters.
    *
    * @opt_param string action Select only change logs with the specified action.
+   * @opt_param string ids Select only change logs with these IDs.
    * @opt_param string maxChangeTime Select only change logs whose change time is
    * before the specified maxChangeTime.The time should be formatted as an RFC3339
    * date/time string. For example, for 10:54 PM on July 18th, 2015, in the
    * America/New York time zone, the format is "2015-07-18T22:54:00-04:00". In
    * other words, the year, month, day, the letter T, the hour (24-hour clock
    * system), minute, second, and then the time zone offset.
+   * @opt_param int maxResults Maximum number of results to return.
+   * @opt_param string minChangeTime Select only change logs whose change time is
+   * after the specified minChangeTime.The time should be formatted as an RFC3339
+   * date/time string. For example, for 10:54 PM on July 18th, 2015, in the
+   * America/New York time zone, the format is "2015-07-18T22:54:00-04:00". In
+   * other words, the year, month, day, the letter T, the hour (24-hour clock
+   * system), minute, second, and then the time zone offset.
+   * @opt_param string objectIds Select only change logs with these object IDs.
    * @opt_param string objectType Select only change logs with the specified
    * object type.
    * @opt_param string pageToken Value of the nextPageToken from the previous
@@ -61,15 +70,6 @@ class Google_Service_Dfareporting_Resource_ChangeLogs extends Google_Service_Res
    * name, old or new values match the search string.
    * @opt_param string userProfileIds Select only change logs with these user
    * profile IDs.
-   * @opt_param string minChangeTime Select only change logs whose change time is
-   * after the specified minChangeTime.The time should be formatted as an RFC3339
-   * date/time string. For example, for 10:54 PM on July 18th, 2015, in the
-   * America/New York time zone, the format is "2015-07-18T22:54:00-04:00". In
-   * other words, the year, month, day, the letter T, the hour (24-hour clock
-   * system), minute, second, and then the time zone offset.
-   * @opt_param string ids Select only change logs with these IDs.
-   * @opt_param int maxResults Maximum number of results to return.
-   * @opt_param string objectIds Select only change logs with these object IDs.
    * @return Google_Service_Dfareporting_ChangeLogsListResponse
    */
   public function listChangeLogs($profileId, $optParams = array())

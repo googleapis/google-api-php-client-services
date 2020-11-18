@@ -16,7 +16,7 @@
  */
 
 /**
- * Service definition for Genomics (v1).
+ * Service definition for Genomics (v2alpha1).
  *
  * <p>
  * Uploads, processes, queries, and searches Genomics data in the cloud.</p>
@@ -37,8 +37,11 @@ class Google_Service_Genomics extends Google_Service
   const GENOMICS =
       "https://www.googleapis.com/auth/genomics";
 
-  public $operations;
-  
+  public $pipelines;
+  public $projects_operations;
+  public $projects_workers;
+  public $workers;
+
   /**
    * Constructs the internal representation of the Genomics service.
    *
@@ -51,17 +54,31 @@ class Google_Service_Genomics extends Google_Service
     $this->rootUrl = $rootUrl ?: 'https://genomics.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1';
+    $this->version = 'v2alpha1';
     $this->serviceName = 'genomics';
 
-    $this->operations = new Google_Service_Genomics_Resource_Operations(
+    $this->pipelines = new Google_Service_Genomics_Resource_Pipelines(
+        $this,
+        $this->serviceName,
+        'pipelines',
+        array(
+          'methods' => array(
+            'run' => array(
+              'path' => 'v2alpha1/pipelines:run',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),
+          )
+        )
+    );
+    $this->projects_operations = new Google_Service_Genomics_Resource_ProjectsOperations(
         $this,
         $this->serviceName,
         'operations',
         array(
           'methods' => array(
             'cancel' => array(
-              'path' => 'v1/{+name}:cancel',
+              'path' => 'v2alpha1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -71,7 +88,7 @@ class Google_Service_Genomics extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v2alpha1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -81,13 +98,17 @@ class Google_Service_Genomics extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v2alpha1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
@@ -97,9 +118,45 @@ class Google_Service_Genomics extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
-                  'location' => 'query',
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_workers = new Google_Service_Genomics_Resource_ProjectsWorkers(
+        $this,
+        $this->serviceName,
+        'workers',
+        array(
+          'methods' => array(
+            'checkIn' => array(
+              'path' => 'v2alpha1/{+id}:checkIn',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'id' => array(
+                  'location' => 'path',
                   'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->workers = new Google_Service_Genomics_Resource_Workers(
+        $this,
+        $this->serviceName,
+        'workers',
+        array(
+          'methods' => array(
+            'checkIn' => array(
+              'path' => 'v2alpha1/workers/{id}:checkIn',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'id' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),

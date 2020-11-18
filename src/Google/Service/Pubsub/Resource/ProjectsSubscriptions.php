@@ -153,11 +153,11 @@ class Google_Service_Pubsub_Resource_ProjectsSubscriptions extends Google_Servic
    * subscriptions. Format is `projects/{project-id}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Maximum number of subscriptions to return.
    * @opt_param string pageToken The value returned by the last
    * `ListSubscriptionsResponse`; indicates that this is a continuation of a prior
    * `ListSubscriptions` call, and that the system should return the next page of
    * data.
-   * @opt_param int pageSize Maximum number of subscriptions to return.
    * @return Google_Service_Pubsub_ListSubscriptionsResponse
    */
   public function listProjectsSubscriptions($project, $optParams = array())

@@ -118,9 +118,9 @@ class Google_Service_AIPlatformNotebooks_Resource_ProjectsLocationsInstances ext
    * `parent=projects/{project_id}/locations/{location}`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Maximum return size of the list call.
    * @opt_param string pageToken A previous returned page token that can be used
    * to continue listing from the last result.
-   * @opt_param int pageSize Maximum return size of the list call.
    * @return Google_Service_AIPlatformNotebooks_ListInstancesResponse
    */
   public function listProjectsLocationsInstances($parent, $optParams = array())

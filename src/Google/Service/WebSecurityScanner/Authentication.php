@@ -21,6 +21,8 @@ class Google_Service_WebSecurityScanner_Authentication extends Google_Model
   protected $customAccountDataType = '';
   protected $googleAccountType = 'Google_Service_WebSecurityScanner_GoogleAccount';
   protected $googleAccountDataType = '';
+  protected $iapCredentialType = 'Google_Service_WebSecurityScanner_IapCredential';
+  protected $iapCredentialDataType = '';
 
   /**
    * @param Google_Service_WebSecurityScanner_CustomAccount
@@ -49,5 +51,19 @@ class Google_Service_WebSecurityScanner_Authentication extends Google_Model
   public function getGoogleAccount()
   {
     return $this->googleAccount;
+  }
+  /**
+   * @param Google_Service_WebSecurityScanner_IapCredential
+   */
+  public function setIapCredential(Google_Service_WebSecurityScanner_IapCredential $iapCredential)
+  {
+    $this->iapCredential = $iapCredential;
+  }
+  /**
+   * @return Google_Service_WebSecurityScanner_IapCredential
+   */
+  public function getIapCredential()
+  {
+    return $this->iapCredential;
   }
 }

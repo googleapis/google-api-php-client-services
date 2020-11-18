@@ -21,6 +21,7 @@ class Google_Service_Speech_SpeechRecognitionResult extends Google_Collection
   protected $alternativesType = 'Google_Service_Speech_SpeechRecognitionAlternative';
   protected $alternativesDataType = 'array';
   public $channelTag;
+  public $languageCode;
 
   /**
    * @param Google_Service_Speech_SpeechRecognitionAlternative
@@ -43,5 +44,13 @@ class Google_Service_Speech_SpeechRecognitionResult extends Google_Collection
   public function getChannelTag()
   {
     return $this->channelTag;
+  }
+  public function setLanguageCode($languageCode)
+  {
+    $this->languageCode = $languageCode;
+  }
+  public function getLanguageCode()
+  {
+    return $this->languageCode;
   }
 }

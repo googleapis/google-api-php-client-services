@@ -84,9 +84,6 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Accounts extends Google_Servi
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool showDeleted Whether to include soft-deleted (ie: "trashed")
-   * Accounts in the results. Accounts can be inspected to determine whether they
-   * are deleted or not.
    * @opt_param int pageSize The maximum number of resources to return. The
    * service may return fewer than this value, even if there are additional pages.
    * If unspecified, at most 50 resources will be returned. The maximum value is
@@ -95,6 +92,9 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Accounts extends Google_Servi
    * `ListAccounts` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListAccounts` must match the
    * call that provided the page token.
+   * @opt_param bool showDeleted Whether to include soft-deleted (ie: "trashed")
+   * Accounts in the results. Accounts can be inspected to determine whether they
+   * are deleted or not.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListAccountsResponse
    */
   public function listAccounts($optParams = array())

@@ -21,6 +21,8 @@ class Google_Service_WebSecurityScanner_Finding extends Google_Model
   public $description;
   public $finalUrl;
   public $findingType;
+  protected $formType = 'Google_Service_WebSecurityScanner_Form';
+  protected $formDataType = '';
   public $frameUrl;
   public $fuzzedUrl;
   public $httpMethod;
@@ -28,6 +30,7 @@ class Google_Service_WebSecurityScanner_Finding extends Google_Model
   protected $outdatedLibraryType = 'Google_Service_WebSecurityScanner_OutdatedLibrary';
   protected $outdatedLibraryDataType = '';
   public $reproductionUrl;
+  public $severity;
   public $trackingId;
   protected $violatingResourceType = 'Google_Service_WebSecurityScanner_ViolatingResource';
   protected $violatingResourceDataType = '';
@@ -69,6 +72,20 @@ class Google_Service_WebSecurityScanner_Finding extends Google_Model
   public function getFindingType()
   {
     return $this->findingType;
+  }
+  /**
+   * @param Google_Service_WebSecurityScanner_Form
+   */
+  public function setForm(Google_Service_WebSecurityScanner_Form $form)
+  {
+    $this->form = $form;
+  }
+  /**
+   * @return Google_Service_WebSecurityScanner_Form
+   */
+  public function getForm()
+  {
+    return $this->form;
   }
   public function setFrameUrl($frameUrl)
   {
@@ -123,6 +140,14 @@ class Google_Service_WebSecurityScanner_Finding extends Google_Model
   public function getReproductionUrl()
   {
     return $this->reproductionUrl;
+  }
+  public function setSeverity($severity)
+  {
+    $this->severity = $severity;
+  }
+  public function getSeverity()
+  {
+    return $this->severity;
   }
   public function setTrackingId($trackingId)
   {

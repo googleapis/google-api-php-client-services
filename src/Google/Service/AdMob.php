@@ -41,7 +41,7 @@ class Google_Service_AdMob extends Google_Service
   public $accounts;
   public $accounts_mediationReport;
   public $accounts_networkReport;
-  
+
   /**
    * Constructs the internal representation of the AdMob service.
    *
@@ -77,13 +77,13 @@ class Google_Service_AdMob extends Google_Service
               'path' => 'v1/accounts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

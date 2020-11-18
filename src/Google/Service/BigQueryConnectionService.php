@@ -38,7 +38,7 @@ class Google_Service_BigQueryConnectionService extends Google_Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations_connections;
-  
+
   /**
    * Constructs the internal representation of the BigQueryConnectionService
    * service.

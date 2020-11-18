@@ -117,15 +117,15 @@ class Google_Service_CloudTasks_Resource_ProjectsLocationsQueues extends Google_
    * Filters](https://cloud.google.com/logging/docs/view/advanced_filters). Sample
    * filter "state: PAUSED". Note that using filters might cause fewer queues than
    * the requested page_size to be returned.
+   * @opt_param int pageSize Requested page size. The maximum page size is 9800.
+   * If unspecified, the page size will be the maximum. Fewer queues than
+   * requested might be returned, even if more queues exist; use the
+   * next_page_token in the response to determine if more queues exist.
    * @opt_param string pageToken A token identifying the page of results to
    * return. To request the first page results, page_token must be empty. To
    * request the next page of results, page_token must be the value of
    * next_page_token returned from the previous call to ListQueues method. It is
    * an error to switch the value of the filter while iterating through pages.
-   * @opt_param int pageSize Requested page size. The maximum page size is 9800.
-   * If unspecified, the page size will be the maximum. Fewer queues than
-   * requested might be returned, even if more queues exist; use the
-   * next_page_token in the response to determine if more queues exist.
    * @return Google_Service_CloudTasks_ListQueuesResponse
    */
   public function listProjectsLocationsQueues($parent, $optParams = array())

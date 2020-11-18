@@ -34,12 +34,12 @@ class Google_Service_CloudDatabaseMigrationService_Resource_ProjectsLocationsMig
    * @param Google_Service_CloudDatabaseMigrationService_MigrationJob $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string migrationJobId Required. The ID of the instance to create.
    * @opt_param string requestId A unique id used to identify the request. If the
    * server receives two requests with the same id, then the second request will
    * be ignored. It is recommended to always set this value to a UUID. The id must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
-   * @opt_param string migrationJobId Required. The ID of the instance to create.
    * @return Google_Service_CloudDatabaseMigrationService_Operation
    */
   public function create($parent, Google_Service_CloudDatabaseMigrationService_MigrationJob $postBody, $optParams = array())
@@ -132,8 +132,6 @@ class Google_Service_CloudDatabaseMigrationService_Resource_ProjectsLocationsMig
    * migrationJobs.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string orderBy Sort the results based on the migration job name.
-   * Valid values are: "name", "name asc", and "name desc".
    * @opt_param string filter A filter expression that filters migration jobs
    * listed in the response. The expression must specify the field name, a
    * comparison operator, and the value that you want to use for filtering. The
@@ -143,15 +141,17 @@ class Google_Service_CloudDatabaseMigrationService_Resource_ProjectsLocationsMig
    * also filter nested fields. For example, you could specify
    * **reverseSshConnectivity.vmIp = "1.2.3.4"** to select all migration jobs
    * connecting through the specific SSH tunnel bastion.
+   * @opt_param string orderBy Sort the results based on the migration job name.
+   * Valid values are: "name", "name asc", and "name desc".
+   * @opt_param int pageSize The maximum number of migration jobs to return. The
+   * service may return fewer than this value. If unspecified, at most 50
+   * migration jobs will be returned. The maximum value is 1000; values above 1000
+   * will be coerced to 1000.
    * @opt_param string pageToken The nextPageToken value received in the previous
    * call to migrationJobs.list, used in the subsequent request to retrieve the
    * next page of results. On first call this should be left blank. When
    * paginating, all other parameters provided to migrationJobs.list must match
    * the call that provided the page token.
-   * @opt_param int pageSize The maximum number of migration jobs to return. The
-   * service may return fewer than this value. If unspecified, at most 50
-   * migration jobs will be returned. The maximum value is 1000; values above 1000
-   * will be coerced to 1000.
    * @return Google_Service_CloudDatabaseMigrationService_ListMigrationJobsResponse
    */
   public function listProjectsLocationsMigrationJobs($parent, $optParams = array())

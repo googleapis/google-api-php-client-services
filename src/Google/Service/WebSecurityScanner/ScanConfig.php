@@ -17,19 +17,20 @@
 
 class Google_Service_WebSecurityScanner_ScanConfig extends Google_Collection
 {
-  protected $collection_key = 'targetPlatforms';
+  protected $collection_key = 'startingUrls';
   protected $authenticationType = 'Google_Service_WebSecurityScanner_Authentication';
   protected $authenticationDataType = '';
   public $blacklistPatterns;
   public $displayName;
-  protected $latestRunType = 'Google_Service_WebSecurityScanner_ScanRun';
-  protected $latestRunDataType = '';
+  public $exportToSecurityCommandCenter;
+  public $managedScan;
   public $maxQps;
   public $name;
+  public $riskLevel;
   protected $scheduleType = 'Google_Service_WebSecurityScanner_Schedule';
   protected $scheduleDataType = '';
   public $startingUrls;
-  public $targetPlatforms;
+  public $staticIpScan;
   public $userAgent;
 
   /**
@@ -62,19 +63,21 @@ class Google_Service_WebSecurityScanner_ScanConfig extends Google_Collection
   {
     return $this->displayName;
   }
-  /**
-   * @param Google_Service_WebSecurityScanner_ScanRun
-   */
-  public function setLatestRun(Google_Service_WebSecurityScanner_ScanRun $latestRun)
+  public function setExportToSecurityCommandCenter($exportToSecurityCommandCenter)
   {
-    $this->latestRun = $latestRun;
+    $this->exportToSecurityCommandCenter = $exportToSecurityCommandCenter;
   }
-  /**
-   * @return Google_Service_WebSecurityScanner_ScanRun
-   */
-  public function getLatestRun()
+  public function getExportToSecurityCommandCenter()
   {
-    return $this->latestRun;
+    return $this->exportToSecurityCommandCenter;
+  }
+  public function setManagedScan($managedScan)
+  {
+    $this->managedScan = $managedScan;
+  }
+  public function getManagedScan()
+  {
+    return $this->managedScan;
   }
   public function setMaxQps($maxQps)
   {
@@ -91,6 +94,14 @@ class Google_Service_WebSecurityScanner_ScanConfig extends Google_Collection
   public function getName()
   {
     return $this->name;
+  }
+  public function setRiskLevel($riskLevel)
+  {
+    $this->riskLevel = $riskLevel;
+  }
+  public function getRiskLevel()
+  {
+    return $this->riskLevel;
   }
   /**
    * @param Google_Service_WebSecurityScanner_Schedule
@@ -114,13 +125,13 @@ class Google_Service_WebSecurityScanner_ScanConfig extends Google_Collection
   {
     return $this->startingUrls;
   }
-  public function setTargetPlatforms($targetPlatforms)
+  public function setStaticIpScan($staticIpScan)
   {
-    $this->targetPlatforms = $targetPlatforms;
+    $this->staticIpScan = $staticIpScan;
   }
-  public function getTargetPlatforms()
+  public function getStaticIpScan()
   {
-    return $this->targetPlatforms;
+    return $this->staticIpScan;
   }
   public function setUserAgent($userAgent)
   {

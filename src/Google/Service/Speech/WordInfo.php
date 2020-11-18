@@ -17,18 +17,27 @@
 
 class Google_Service_Speech_WordInfo extends Google_Model
 {
-  public $endTime;
+  public $confidence;
+  public $endOffset;
   public $speakerTag;
-  public $startTime;
+  public $startOffset;
   public $word;
 
-  public function setEndTime($endTime)
+  public function setConfidence($confidence)
   {
-    $this->endTime = $endTime;
+    $this->confidence = $confidence;
   }
-  public function getEndTime()
+  public function getConfidence()
   {
-    return $this->endTime;
+    return $this->confidence;
+  }
+  public function setEndOffset($endOffset)
+  {
+    $this->endOffset = $endOffset;
+  }
+  public function getEndOffset()
+  {
+    return $this->endOffset;
   }
   public function setSpeakerTag($speakerTag)
   {
@@ -38,13 +47,13 @@ class Google_Service_Speech_WordInfo extends Google_Model
   {
     return $this->speakerTag;
   }
-  public function setStartTime($startTime)
+  public function setStartOffset($startOffset)
   {
-    $this->startTime = $startTime;
+    $this->startOffset = $startOffset;
   }
-  public function getStartTime()
+  public function getStartOffset()
   {
-    return $this->startTime;
+    return $this->startOffset;
   }
   public function setWord($word)
   {
