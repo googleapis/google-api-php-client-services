@@ -24,6 +24,8 @@ class Google_Service_AndroidManagement_Device extends Google_Collection
   public $appliedPolicyName;
   public $appliedPolicyVersion;
   public $appliedState;
+  protected $commonCriteriaModeInfoType = 'Google_Service_AndroidManagement_CommonCriteriaModeInfo';
+  protected $commonCriteriaModeInfoDataType = '';
   protected $deviceSettingsType = 'Google_Service_AndroidManagement_DeviceSettings';
   protected $deviceSettingsDataType = '';
   protected $disabledReasonType = 'Google_Service_AndroidManagement_UserFacingMessage';
@@ -111,6 +113,20 @@ class Google_Service_AndroidManagement_Device extends Google_Collection
   public function getAppliedState()
   {
     return $this->appliedState;
+  }
+  /**
+   * @param Google_Service_AndroidManagement_CommonCriteriaModeInfo
+   */
+  public function setCommonCriteriaModeInfo(Google_Service_AndroidManagement_CommonCriteriaModeInfo $commonCriteriaModeInfo)
+  {
+    $this->commonCriteriaModeInfo = $commonCriteriaModeInfo;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_CommonCriteriaModeInfo
+   */
+  public function getCommonCriteriaModeInfo()
+  {
+    return $this->commonCriteriaModeInfo;
   }
   /**
    * @param Google_Service_AndroidManagement_DeviceSettings

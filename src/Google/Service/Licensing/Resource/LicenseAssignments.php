@@ -95,13 +95,13 @@ class Google_Service_Licensing_Resource_LicenseAssignments extends Google_Servic
    * customer is suspended, the server returns an error.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string maxResults The `maxResults` query string determines how
+   * many entries are returned on each page of a large response. This is an
+   * optional parameter. The value must be a positive number.
    * @opt_param string pageToken Token to fetch the next page of data. The
    * `maxResults` query string is related to the `pageToken` since `maxResults`
    * determines how many entries are returned on each page. This is an optional
    * query string. If not specified, the server returns the first page.
-   * @opt_param string maxResults The `maxResults` query string determines how
-   * many entries are returned on each page of a large response. This is an
-   * optional parameter. The value must be a positive number.
    * @return Google_Service_Licensing_LicenseAssignmentList
    */
   public function listForProduct($productId, $customerId, $optParams = array())
@@ -123,13 +123,13 @@ class Google_Service_Licensing_Resource_LicenseAssignments extends Google_Servic
    * customer is suspended, the server returns an error.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string maxResults The `maxResults` query string determines how
+   * many entries are returned on each page of a large response. This is an
+   * optional parameter. The value must be a positive number.
    * @opt_param string pageToken Token to fetch the next page of data. The
    * `maxResults` query string is related to the `pageToken` since `maxResults`
    * determines how many entries are returned on each page. This is an optional
    * query string. If not specified, the server returns the first page.
-   * @opt_param string maxResults The `maxResults` query string determines how
-   * many entries are returned on each page of a large response. This is an
-   * optional parameter. The value must be a positive number.
    * @return Google_Service_Licensing_LicenseAssignmentList
    */
   public function listForProductAndSku($productId, $skuId, $customerId, $optParams = array())

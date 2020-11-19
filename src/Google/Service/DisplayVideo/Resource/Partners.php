@@ -63,16 +63,6 @@ class Google_Service_DisplayVideo_Resource_Partners extends Google_Service_Resou
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string orderBy Field by which to sort the list. Acceptable values
-   * are: * `displayName` The default sorting order is ascending. To specify
-   * descending order for a field, a suffix "desc" should be added to the field
-   * name. For example, `displayName desc`.
-   * @opt_param string pageToken A token identifying a page of results the server
-   * should return. Typically, this is the value of next_page_token returned from
-   * the previous call to `ListPartners` method. If not specified, the first page
-   * of results will be returned.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`.
    * @opt_param string filter Allows filtering by partner properties. Supported
    * syntax: * Filter expressions are made up of one or more restrictions. *
    * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
@@ -81,6 +71,16 @@ class Google_Service_DisplayVideo_Resource_Partners extends Google_Service_Resou
    * Supported fields: - `entityStatus` Examples: * All active partners:
    * `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no
    * more than 500 characters.
+   * @opt_param string orderBy Field by which to sort the list. Acceptable values
+   * are: * `displayName` The default sorting order is ascending. To specify
+   * descending order for a field, a suffix "desc" should be added to the field
+   * name. For example, `displayName desc`.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`.
+   * @opt_param string pageToken A token identifying a page of results the server
+   * should return. Typically, this is the value of next_page_token returned from
+   * the previous call to `ListPartners` method. If not specified, the first page
+   * of results will be returned.
    * @return Google_Service_DisplayVideo_ListPartnersResponse
    */
   public function listPartners($optParams = array())

@@ -58,13 +58,13 @@ class Google_Service_CloudDatabaseMigrationService_Resource_ProjectsLocationsCon
    * delete.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool force In case of force delete, the CloudSQL replica database
+   * is also deleted (only for CloudSQL connection profile).
    * @opt_param string requestId A unique id used to identify the request. If the
    * server receives two requests with the same id, then the second request will
    * be ignored. It is recommended to always set this value to a UUID. The id must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
-   * @opt_param bool force In case of force delete, the CloudSQL replica database
-   * is also deleted (only for CloudSQL connection profile).
    * @return Google_Service_CloudDatabaseMigrationService_Operation
    */
   public function delete($name, $optParams = array())
@@ -120,15 +120,6 @@ class Google_Service_CloudDatabaseMigrationService_Resource_ProjectsLocationsCon
    * connection profiles.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListConnectionProfiles` call. Provide this to retrieve the subsequent page.
-   * When paginating, all other parameters provided to `ListConnectionProfiles`
-   * must match the call that provided the page token.
-   * @opt_param int pageSize The maximum number of connection profiles to return.
-   * The service may return fewer than this value. If unspecified, at most 50
-   * connection profiles will be returned. The maximum value is 1000; values above
-   * 1000 will be coerced to 1000.
-   * @opt_param string orderBy the order by fields for the result.
    * @opt_param string filter A filter expression that filters connection profiles
    * listed in the response. The expression must specify the field name, a
    * comparison operator, and the value that you want to use for filtering. The
@@ -138,6 +129,15 @@ class Google_Service_CloudDatabaseMigrationService_Resource_ProjectsLocationsCon
    * can also filter nested fields. For example, you could specify
    * **mySql.username = %lt;my_username%gt;** to list all connection profiles
    * configured to connect with a specific username.
+   * @opt_param string orderBy the order by fields for the result.
+   * @opt_param int pageSize The maximum number of connection profiles to return.
+   * The service may return fewer than this value. If unspecified, at most 50
+   * connection profiles will be returned. The maximum value is 1000; values above
+   * 1000 will be coerced to 1000.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListConnectionProfiles` call. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to `ListConnectionProfiles`
+   * must match the call that provided the page token.
    * @return Google_Service_CloudDatabaseMigrationService_ListConnectionProfilesResponse
    */
   public function listProjectsLocationsConnectionProfiles($parent, $optParams = array())
@@ -155,13 +155,13 @@ class Google_Service_CloudDatabaseMigrationService_Resource_ProjectsLocationsCon
    * @param Google_Service_CloudDatabaseMigrationService_ConnectionProfile $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required. Field mask is used to specify the
-   * fields to be overwritten in the connection profile resource by the update.
    * @opt_param string requestId A unique id used to identify the request. If the
    * server receives two requests with the same id, then the second request will
    * be ignored. It is recommended to always set this value to a UUID. The id must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
+   * @opt_param string updateMask Required. Field mask is used to specify the
+   * fields to be overwritten in the connection profile resource by the update.
    * @return Google_Service_CloudDatabaseMigrationService_Operation
    */
   public function patch($name, Google_Service_CloudDatabaseMigrationService_ConnectionProfile $postBody, $optParams = array())

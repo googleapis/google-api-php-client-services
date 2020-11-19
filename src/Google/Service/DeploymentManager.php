@@ -50,7 +50,7 @@ class Google_Service_DeploymentManager extends Google_Service
   public $operations;
   public $resources;
   public $types;
-  
+
   /**
    * Constructs the internal representation of the DeploymentManager service.
    *
@@ -149,13 +149,13 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'preview' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'createPolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'preview' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'list' => array(
@@ -171,21 +171,21 @@ class Google_Service_DeploymentManager extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'returnPartialSuccess' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'patch' => array(
@@ -202,10 +202,6 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'preview' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'createPolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -213,6 +209,10 @@ class Google_Service_DeploymentManager extends Google_Service
                 'deletePolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'preview' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setIamPolicy' => array(
@@ -274,10 +274,6 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'preview' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'createPolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -285,6 +281,10 @@ class Google_Service_DeploymentManager extends Google_Service
                 'deletePolicy' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'preview' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -331,14 +331,6 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -346,6 +338,14 @@ class Google_Service_DeploymentManager extends Google_Service
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'returnPartialSuccess' => array(
                   'location' => 'query',
@@ -386,9 +386,17 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -397,14 +405,6 @@ class Google_Service_DeploymentManager extends Google_Service
                 'returnPartialSuccess' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -451,7 +451,7 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'orderBy' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -459,17 +459,17 @@ class Google_Service_DeploymentManager extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'returnPartialSuccess' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'filter' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -491,25 +491,25 @@ class Google_Service_DeploymentManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'returnPartialSuccess' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),

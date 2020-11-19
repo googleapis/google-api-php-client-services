@@ -146,13 +146,13 @@ class Google_Service_RealTimeBidding_Resource_BiddersPretargetingConfigs extends
    * configurations will be listed. Format: bidders/{bidderAccountId}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize The maximum number of pretargeting configurations to
+   * return. If unspecified, at most 10 pretargeting configurations will be
+   * returned. The maximum value is 100; values above 100 will be coerced to 100.
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. This value is received from a previous
    * `ListPretargetingConfigs` call in
    * ListPretargetingConfigsResponse.nextPageToken.
-   * @opt_param int pageSize The maximum number of pretargeting configurations to
-   * return. If unspecified, at most 10 pretargeting configurations will be
-   * returned. The maximum value is 100; values above 100 will be coerced to 100.
    * @return Google_Service_RealTimeBidding_ListPretargetingConfigsResponse
    */
   public function listBiddersPretargetingConfigs($parent, $optParams = array())

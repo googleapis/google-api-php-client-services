@@ -79,10 +79,6 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
    * lookup the `Membership` name. Must be of the form `groups/{group_id}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The `next_page_token` value returned from a
-   * previous search request, if any.
-   * @opt_param string view The level of detail to be returned. If unspecified,
-   * defaults to `View.BASIC`.
    * @opt_param int pageSize The maximum number of results to return. Note that
    * the number of results returned may be less than this value even if there are
    * more available results. To fetch all results, clients must continue calling
@@ -90,6 +86,10 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
    * `next_page_token`. If unspecified, defaults to 200 for `GroupView.BASIC` and
    * to 50 for `GroupView.FULL`. Must not be greater than 1000 for
    * `GroupView.BASIC` or 500 for `GroupView.FULL`.
+   * @opt_param string pageToken The `next_page_token` value returned from a
+   * previous search request, if any.
+   * @opt_param string view The level of detail to be returned. If unspecified,
+   * defaults to `View.BASIC`.
    * @return Google_Service_CloudIdentity_ListMembershipsResponse
    */
   public function listGroupsMemberships($parent, $optParams = array())
@@ -107,16 +107,16 @@ class Google_Service_CloudIdentity_Resource_GroupsMemberships extends Google_Ser
    * lookup the `Membership` name. Must be of the form `groups/{group_id}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string memberKey.id The ID of the entity. For Google-managed
+   * entities, the `id` should be the email address of an existing group or user.
+   * For external-identity-mapped entities, the `id` must be a string conforming
+   * to the Identity Source's requirements. Must be unique within a `namespace`.
    * @opt_param string memberKey.namespace The namespace in which the entity
    * exists. If not specified, the `EntityKey` represents a Google-managed entity
    * such as a Google user or a Google Group. If specified, the `EntityKey`
    * represents an external-identity-mapped group. The namespace must correspond
    * to an identity source created in Admin Console and must be in the form of
    * `identitysources/{identity_source_id}.
-   * @opt_param string memberKey.id The ID of the entity. For Google-managed
-   * entities, the `id` should be the email address of an existing group or user.
-   * For external-identity-mapped entities, the `id` must be a string conforming
-   * to the Identity Source's requirements. Must be unique within a `namespace`.
    * @return Google_Service_CloudIdentity_LookupMembershipNameResponse
    */
   public function lookup($parent, $optParams = array())

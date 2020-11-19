@@ -47,8 +47,8 @@ class Google_Service_ContainerAnalysis_Resource_ProjectsScanConfigs extends Goog
    * configurations for in the form of `projects/[PROJECT_ID]`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The number of scan configs to return in the list.
    * @opt_param string filter Required. The filter expression.
+   * @opt_param int pageSize The number of scan configs to return in the list.
    * @opt_param string pageToken Token to provide to skip to a particular spot in
    * the list.
    * @return Google_Service_ContainerAnalysis_ListScanConfigsResponse

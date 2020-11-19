@@ -41,7 +41,7 @@ class Google_Service_DataTransfer extends Google_Service
 
   public $applications;
   public $transfers;
-  
+
   /**
    * Constructs the internal representation of the DataTransfer service.
    *
@@ -81,13 +81,13 @@ class Google_Service_DataTransfer extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'maxResults' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -118,11 +118,7 @@ class Google_Service_DataTransfer extends Google_Service
               'path' => 'admin/datatransfer/v1/transfers',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'newOwnerUserId' => array(
+                'customerId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -130,15 +126,19 @@ class Google_Service_DataTransfer extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'status' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'customerId' => array(
+                'newOwnerUserId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'oldOwnerUserId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'status' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

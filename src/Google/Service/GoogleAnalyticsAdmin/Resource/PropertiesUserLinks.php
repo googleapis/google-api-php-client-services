@@ -173,14 +173,14 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesUserLinks extends G
    * @param string $parent Required. Example format: accounts/1234
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListUserLinks` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListUserLinks` must match the
-   * call that provided the page token.
    * @opt_param int pageSize The maximum number of user links to return. The
    * service may return fewer than this value. If unspecified, at most 200 user
    * links will be returned. The maximum value is 500; values above 500 will be
    * coerced to 500.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListUserLinks` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListUserLinks` must match the
+   * call that provided the page token.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListUserLinksResponse
    */
   public function listPropertiesUserLinks($parent, $optParams = array())

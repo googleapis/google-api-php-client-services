@@ -79,14 +79,14 @@ class Google_Service_ShoppingContent_Resource_Regions extends Google_Service_Res
    * region definitions.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListRegions` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListRegions` must match the
-   * call that provided the page token.
    * @opt_param int pageSize The maximum number of regions to return. The service
    * may return fewer than this value. If unspecified, at most 50 rules will be
    * returned. The maximum value is 1000; values above 1000 will be coerced to
    * 1000.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListRegions` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListRegions` must match the
+   * call that provided the page token.
    * @return Google_Service_ShoppingContent_ListRegionsResponse
    */
   public function listRegions($merchantId, $optParams = array())

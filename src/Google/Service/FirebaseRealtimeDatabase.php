@@ -45,7 +45,7 @@ class Google_Service_FirebaseRealtimeDatabase extends Google_Service
       "https://www.googleapis.com/auth/firebase.readonly";
 
   public $projects_locations_instances;
-  
+
   /**
    * Constructs the internal representation of the FirebaseRealtimeDatabase
    * service.
@@ -77,13 +77,13 @@ class Google_Service_FirebaseRealtimeDatabase extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'validateOnly' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'databaseId' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'validateOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(

@@ -81,10 +81,10 @@ class Google_Service_Apigee_Resource_OrganizationsInstances extends Google_Servi
    * structure in your request: `organizations/{org}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Page token, returned from a previous
-   * ListInstances call, that you can use to retrieve the next page of content.
    * @opt_param int pageSize Maximum number of instances to return. Defaults to
    * 25.
+   * @opt_param string pageToken Page token, returned from a previous
+   * ListInstances call, that you can use to retrieve the next page of content.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ListInstancesResponse
    */
   public function listOrganizationsInstances($parent, $optParams = array())

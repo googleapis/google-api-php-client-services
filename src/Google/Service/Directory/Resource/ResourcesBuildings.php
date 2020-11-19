@@ -84,8 +84,8 @@ class Google_Service_Directory_Resource_ResourcesBuildings extends Google_Servic
    * your account's customer ID.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Token to specify the next page in the list.
    * @opt_param int maxResults Maximum number of results to return.
+   * @opt_param string pageToken Token to specify the next page in the list.
    * @return Google_Service_Directory_Buildings
    */
   public function listResourcesBuildings($customer, $optParams = array())

@@ -31,14 +31,14 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_AccountSummaries extends Goog
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListAccountSummaries` call. Provide this to retrieve the subsequent page.
-   * When paginating, all other parameters provided to `ListAccountSummaries` must
-   * match the call that provided the page token.
    * @opt_param int pageSize The maximum number of AccountSummary resources to
    * return. The service may return fewer than this value, even if there are
    * additional pages. If unspecified, at most 50 resources will be returned. The
    * maximum value is 200; (higher values will be coerced to the maximum)
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListAccountSummaries` call. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to `ListAccountSummaries` must
+   * match the call that provided the page token.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListAccountSummariesResponse
    */
   public function listAccountSummaries($optParams = array())

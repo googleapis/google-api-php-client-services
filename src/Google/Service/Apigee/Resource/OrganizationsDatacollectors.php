@@ -78,10 +78,10 @@ class Google_Service_Apigee_Resource_OrganizationsDatacollectors extends Google_
    * data collectors in the following format: `organizations/{org}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Page token, returned from a previous
-   * ListDataCollectors call, that you can use to retrieve the next page.
    * @opt_param int pageSize Maximum number of data collectors to return. The page
    * size defaults to 25.
+   * @opt_param string pageToken Page token, returned from a previous
+   * ListDataCollectors call, that you can use to retrieve the next page.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ListDataCollectorsResponse
    */
   public function listOrganizationsDatacollectors($parent, $optParams = array())

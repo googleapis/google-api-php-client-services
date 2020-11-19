@@ -37,7 +37,7 @@ class Google_Service_Transcoder extends Google_Service
 
   public $projects_locations_jobTemplates;
   public $projects_locations_jobs;
-  
+
   /**
    * Constructs the internal representation of the Transcoder service.
    *
@@ -102,13 +102,13 @@ class Google_Service_Transcoder extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -160,13 +160,13 @@ class Google_Service_Transcoder extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

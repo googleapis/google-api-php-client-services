@@ -89,11 +89,11 @@ class Google_Service_Directory_Resource_Members extends Google_Service_Resource
    * @param string $groupKey Email or immutable ID of the group
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Token to specify next page in the list
-   * @opt_param int maxResults Maximum number of results to return. Max allowed
-   * value is 200.
    * @opt_param bool includeDerivedMembership Whether to list indirect
    * memberships. Default: false.
+   * @opt_param int maxResults Maximum number of results to return. Max allowed
+   * value is 200.
+   * @opt_param string pageToken Token to specify next page in the list
    * @opt_param string roles Comma separated role values to filter list results
    * on.
    * @return Google_Service_Directory_Members

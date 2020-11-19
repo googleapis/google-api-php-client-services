@@ -89,12 +89,12 @@ class Google_Service_Assuredworkloads_Resource_OrganizationsLocationsWorkloads e
    * be of the form `organizations/{org_id}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter A custom filter for filtering by properties of a
+   * workload. At this time, only filtering by labels is supported.
    * @opt_param int pageSize Page size.
    * @opt_param string pageToken Page token returned from previous request. Page
    * token contains context from previous request. Page token needs to be passed
    * in the second and following requests.
-   * @opt_param string filter A custom filter for filtering by properties of a
-   * workload. At this time, only filtering by labels is supported.
    * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1ListWorkloadsResponse
    */
   public function listOrganizationsLocationsWorkloads($parent, $optParams = array())

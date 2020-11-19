@@ -45,14 +45,14 @@ class Google_Service_Area120Tables_Resource_Workspaces extends Google_Service_Re
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListWorkspaces` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListWorkspaces` must match the
-   * call that provided the page token.
    * @opt_param int pageSize The maximum number of workspaces to return. The
    * service may return fewer than this value. If unspecified, at most 10
    * workspaces are returned. The maximum value is 25; values above 25 are coerced
    * to 25.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListWorkspaces` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListWorkspaces` must match the
+   * call that provided the page token.
    * @return Google_Service_Area120Tables_ListWorkspacesResponse
    */
   public function listWorkspaces($optParams = array())

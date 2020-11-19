@@ -120,13 +120,13 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. The maximum number of Devices to return. If
-   * unspecified, at most 20 Devices will be returned. The maximum value is 100;
-   * values above 100 will be coerced to 100.
-   * @opt_param string pageToken Optional. A page token, received from a previous
-   * `ListDevices` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListDevices` must match the
-   * call that provided the page token.
+   * @opt_param string customer Required. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer in
+   * the format: `customers/{customer_id}`, where customer_id is the customer to
+   * whom the device belongs. If you're using this API for your own organization,
+   * use `customers/my_customer`. If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @opt_param string filter Optional. Additional restrictions when fetching list
    * of devices. [Help Center article
    * link](https://support.google.com/a/answer/7549103)
@@ -135,13 +135,13 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
    * order: `create_time`, `last_sync_time`, `model`, `os_version`, `device_type`
    * and `serial_number`. `desc` may be specified optionally at the end to specify
    * results to be sorted in descending order. Default order is ascending.
-   * @opt_param string customer Required. [Resource
-   * name](https://cloud.google.com/apis/design/resource_names) of the customer in
-   * the format: `customers/{customer_id}`, where customer_id is the customer to
-   * whom the device belongs. If you're using this API for your own organization,
-   * use `customers/my_customer`. If you're using this API to manage another
-   * organization, use `customers/{customer_id}`, where customer_id is the
-   * customer to whom the device belongs.
+   * @opt_param int pageSize Optional. The maximum number of Devices to return. If
+   * unspecified, at most 20 Devices will be returned. The maximum value is 100;
+   * values above 100 will be coerced to 100.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `ListDevices` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListDevices` must match the
+   * call that provided the page token.
    * @opt_param string view Optional. The view to use for the List request.
    * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ListDevicesResponse
    */

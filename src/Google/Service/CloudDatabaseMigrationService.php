@@ -38,7 +38,7 @@ class Google_Service_CloudDatabaseMigrationService extends Google_Service
   public $projects_locations_connectionProfiles;
   public $projects_locations_migrationJobs;
   public $projects_locations_operations;
-  
+
   /**
    * Constructs the internal representation of the CloudDatabaseMigrationService
    * service.
@@ -130,13 +130,13 @@ class Google_Service_CloudDatabaseMigrationService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'requestId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'force' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'get' => array(
@@ -172,7 +172,11 @@ class Google_Service_CloudDatabaseMigrationService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -180,11 +184,7 @@ class Google_Service_CloudDatabaseMigrationService extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -198,11 +198,11 @@ class Google_Service_CloudDatabaseMigrationService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'updateMask' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'requestId' => array(
+                'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -246,11 +246,11 @@ class Google_Service_CloudDatabaseMigrationService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'requestId' => array(
+                'migrationJobId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'migrationJobId' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -316,21 +316,21 @@ class Google_Service_CloudDatabaseMigrationService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(

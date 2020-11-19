@@ -46,7 +46,7 @@ class Google_Service_ServiceNetworking extends Google_Service
   public $services_projects_global_networks;
   public $services_projects_global_networks_peeredDnsDomains;
   public $services_roles;
-  
+
   /**
    * Constructs the internal representation of the ServiceNetworking service.
    *
@@ -107,10 +107,6 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -118,6 +114,10 @@ class Google_Service_ServiceNetworking extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

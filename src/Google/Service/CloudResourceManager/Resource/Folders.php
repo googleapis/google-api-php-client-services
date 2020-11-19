@@ -124,16 +124,16 @@ class Google_Service_CloudResourceManager_Resource_Folders extends Google_Servic
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Optional. The maximum number of Folders to return in
+   * the response.
+   * @opt_param string pageToken Optional. A pagination token returned from a
+   * previous call to `ListFolders` that indicates where this listing should
+   * continue from.
    * @opt_param string parent Required. The resource name of the Organization or
    * Folder whose Folders are being listed. Must be of the form
    * `folders/{folder_id}` or `organizations/{org_id}`. Access to this method is
    * controlled by checking the `resourcemanager.folders.list` permission on the
    * `parent`.
-   * @opt_param string pageToken Optional. A pagination token returned from a
-   * previous call to `ListFolders` that indicates where this listing should
-   * continue from.
-   * @opt_param int pageSize Optional. The maximum number of Folders to return in
-   * the response.
    * @opt_param bool showDeleted Optional. Controls whether Folders in the
    * DELETE_REQUESTED state should be returned. Defaults to false.
    * @return Google_Service_CloudResourceManager_ListFoldersResponse

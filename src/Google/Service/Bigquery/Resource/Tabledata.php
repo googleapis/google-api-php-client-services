@@ -51,9 +51,9 @@ class Google_Service_Bigquery_Resource_Tabledata extends Google_Service_Resource
    * @param string $tableId Table ID of the table to read
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string maxResults Maximum number of results to return
    * @opt_param string pageToken Page token, returned by a previous call,
    * identifying the result set
-   * @opt_param string maxResults Maximum number of results to return
    * @opt_param string selectedFields List of fields to return (comma-separated).
    * If unspecified, all fields are returned
    * @opt_param string startIndex Zero-based index of the starting row to read

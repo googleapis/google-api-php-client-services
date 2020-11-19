@@ -97,7 +97,7 @@ class Google_Service_Apigee extends Google_Service
   public $organizations_sharedflows_revisions_deployments;
   public $organizations_sites_apicategories;
   public $projects;
-  
+
   /**
    * Constructs the internal representation of the Apigee service.
    *
@@ -345,7 +345,15 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'startKey' => array(
+                'attributename' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'attributevalue' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'count' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -353,15 +361,7 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'count' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'attributename' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'attributevalue' => array(
+                'startKey' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -449,13 +449,13 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'validate' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'name' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'validate' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'delete' => array(
@@ -487,11 +487,11 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'includeRevisions' => array(
+                'includeMetaData' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'includeMetaData' => array(
+                'includeRevisions' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -643,15 +643,7 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'includeCred' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'status' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'rows' => array(
+                'apiProduct' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -659,11 +651,15 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'expand' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'ids' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'expand' => array(
+                'includeCred' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -671,11 +667,15 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'rows' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'startKey' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'apiProduct' => array(
+                'status' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -733,13 +733,13 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -843,27 +843,27 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'includeCompany' => array(
+                'app' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'string',
+                ),
+                'count' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'expand' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'app' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'startKey' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'ids' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'count' => array(
+                'includeCompany' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'startKey' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -955,11 +955,11 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'query' => array(
+                'entity' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'entity' => array(
+                'query' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -973,14 +973,6 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'startKey' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'shallowExpand' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'count' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -988,6 +980,14 @@ class Google_Service_Apigee extends Google_Service
                 'expand' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'shallowExpand' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'startKey' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'update' => array(
@@ -1489,13 +1489,13 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'updateMask' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'replaceRepeatedFields' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'updateEnvironment' => array(
@@ -1697,13 +1697,13 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -1907,21 +1907,21 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                '_password' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'alias' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                '_password' => array(
+                'format' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'ignoreExpiryValidation' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'format' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'ignoreNewlineValidation' => array(
                   'location' => 'query',
@@ -1977,11 +1977,11 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'ignoreNewlineValidation' => array(
+                'ignoreExpiryValidation' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'ignoreExpiryValidation' => array(
+                'ignoreNewlineValidation' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -2035,27 +2035,7 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'tzo' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'timeUnit' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'limit' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'select' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'topk' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'offset' => array(
+                'accuracy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2067,15 +2047,23 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'limit' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'offset' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'realtime' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'timeRange' => array(
+                'select' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'tsAscending' => array(
+                'sonar' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
@@ -2087,11 +2075,23 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'sonar' => array(
+                'timeRange' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeUnit' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'topk' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'tsAscending' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'accuracy' => array(
+                'tzo' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2145,19 +2145,7 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'submittedBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'to' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'status' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'inclQueriesWithoutReport' => array(
+                'dataset' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2165,7 +2153,19 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'dataset' => array(
+                'inclQueriesWithoutReport' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'status' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'submittedBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'to' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2239,11 +2239,11 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'type' => array(
+                'name' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'name' => array(
+                'type' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2420,43 +2420,7 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'sortby' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'sonar' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'offset' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'sort' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'tsAscending' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
                 'accuracy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'realtime' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'limit' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'select' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2464,7 +2428,35 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'topk' => array(
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'limit' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'offset' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'realtime' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'select' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'sonar' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'sort' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'sortby' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2472,11 +2464,19 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'tzo' => array(
+                'timeUnit' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'timeUnit' => array(
+                'topk' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'tsAscending' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'tzo' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2594,19 +2594,7 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'submittedBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'from' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'status' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'inclQueriesWithoutReport' => array(
+                'dataset' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2614,11 +2602,23 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'to' => array(
+                'from' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'dataset' => array(
+                'inclQueriesWithoutReport' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'status' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'submittedBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'to' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2642,27 +2642,11 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'tsAscending' => array(
+                'accuracy' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'string',
                 ),
                 'envgroupHostname' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'topk' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'limit' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'sort' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'select' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2670,23 +2654,7 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'timeUnit' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'accuracy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'realtime' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'tzo' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'sortby' => array(
+                'limit' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2694,7 +2662,39 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'realtime' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'select' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'sort' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'sortby' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'timeRange' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeUnit' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'topk' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'tsAscending' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'tzo' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2748,13 +2748,13 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'reportStatus' => array(
@@ -2914,7 +2914,7 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2922,7 +2922,7 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'filter' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2946,35 +2946,7 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'timeUnit' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'accuracy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'timeRange' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'realtime' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'tsAscending' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'topk' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'select' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2982,15 +2954,11 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'limit' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'sortby' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'tzo' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -2998,7 +2966,39 @@ class Google_Service_Apigee extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'realtime' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'select' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'sort' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'sortby' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeRange' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'timeUnit' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'topk' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'tsAscending' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'tzo' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

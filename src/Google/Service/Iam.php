@@ -45,7 +45,7 @@ class Google_Service_Iam extends Google_Service
   public $projects_serviceAccounts;
   public $projects_serviceAccounts_keys;
   public $roles;
-  
+
   /**
    * Constructs the internal representation of the Iam service.
    *
@@ -128,6 +128,14 @@ class Google_Service_Iam extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'showDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -135,14 +143,6 @@ class Google_Service_Iam extends Google_Service
                 'view' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -276,19 +276,19 @@ class Google_Service_Iam extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'view' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'showDeleted' => array(
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'pageToken' => array(
+                'view' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -580,7 +580,7 @@ class Google_Service_Iam extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'view' => array(
+                'parent' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -588,7 +588,7 @@ class Google_Service_Iam extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
-                'parent' => array(
+                'view' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
