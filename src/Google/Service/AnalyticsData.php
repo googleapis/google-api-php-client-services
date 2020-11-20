@@ -23,7 +23,7 @@
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://developers.google.com/analytics/trusted-testing/analytics-data/" target="_blank">Documentation</a>
+ * <a href="https://developers.google.com/analytics/devguides/reporting/data/v1/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
