@@ -128,8 +128,9 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
    * organization, use `customers/{customer_id}`, where customer_id is the
    * customer to whom the device belongs.
    * @opt_param string filter Optional. Additional restrictions when fetching list
-   * of devices. [Help Center article
-   * link](https://support.google.com/a/answer/7549103)
+   * of devices. For a list of search fields, refer to [Mobile device search
+   * fields](https://developers.google.com/admin-sdk/directory/v1/search-
+   * operators). Multiple search fields are separated by the space character.
    * @opt_param string orderBy Optional. Order specification for devices in the
    * response. Only one of the following field names may be used to specify the
    * order: `create_time`, `last_sync_time`, `model`, `os_version`, `device_type`

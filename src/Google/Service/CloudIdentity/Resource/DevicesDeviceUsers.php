@@ -145,7 +145,9 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * organization, use `customers/{customer_id}`, where customer_id is the
    * customer to whom the device belongs.
    * @opt_param string filter Optional. Additional restrictions when fetching list
-   * of devices. [HC article](https://support.google.com/a/answer/7549103)
+   * of devices. For a list of search fields, refer to [Mobile device search
+   * fields](https://developers.google.com/admin-sdk/directory/v1/search-
+   * operators). Multiple search fields are separated by the space character.
    * @opt_param string orderBy Optional. Order specification for devices in the
    * response.
    * @opt_param int pageSize Optional. The maximum number of DeviceUsers to
