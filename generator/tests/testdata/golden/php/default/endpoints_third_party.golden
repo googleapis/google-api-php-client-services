@@ -150,14 +150,14 @@ class NASA_Service_EccoDomaniIeri_HelloGreetingCollection extends Google_Collect
   protected $itemsDataType = 'array';
 
   /**
-   * @param Nasa_Service_EccoDomaniIeri_HelloGreeting
+   * @param Nasa_Service_EccoDomaniIeri_HelloGreeting[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Nasa_Service_EccoDomaniIeri_HelloGreeting
+   * @return Nasa_Service_EccoDomaniIeri_HelloGreeting[]
    */
   public function getItems()
   {

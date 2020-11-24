@@ -150,14 +150,14 @@ class Google_Service_EccoDomaniIeri_HelloGreetingCollection extends Google_Colle
   protected $itemsDataType = 'array';
 
   /**
-   * @param Google_Service_EccoDomaniIeri_HelloGreeting
+   * @param Google_Service_EccoDomaniIeri_HelloGreeting[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_EccoDomaniIeri_HelloGreeting
+   * @return Google_Service_EccoDomaniIeri_HelloGreeting[]
    */
   public function getItems()
   {
