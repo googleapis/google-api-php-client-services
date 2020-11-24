@@ -37,7 +37,7 @@ class {{ api.ownerName }}_Service_{{ api.className }}_{{ model.className }} {% i
 {% filter noblanklines %}
 {% if property.typeHint %}
   /**
-   * @param {{ property.typeHint }}
+   * @param {{ property.typeHint }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
    */
 {% endif %}
   {% if property.type == "array" or property.dataType == "map" or not property.typeHint %}
@@ -51,7 +51,7 @@ class {{ api.ownerName }}_Service_{{ api.className }}_{{ model.className }} {% i
 
 {% if property.typeHint %}
   /**
-   * @return {{ property.typeHint }}
+   * @return {{ property.typeHint }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
    */
 {% endif %}
   public function {{ property.getterName }}()

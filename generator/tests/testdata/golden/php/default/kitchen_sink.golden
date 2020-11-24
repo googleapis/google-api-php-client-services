@@ -771,14 +771,14 @@ class Google_Service_KitchSink_GeometryCollection extends Google_Service_KitchSi
     $this->type = 'Collection';
   }
   /**
-   * @param Google_Service_KitchSink_Geometry
+   * @param Google_Service_KitchSink_Geometry[]
    */
   public function setGeometries($geometries)
   {
     $this->geometries = $geometries;
   }
   /**
-   * @return Google_Service_KitchSink_Geometry
+   * @return Google_Service_KitchSink_Geometry[]
    */
   public function getGeometries()
   {
@@ -2479,14 +2479,14 @@ class Google_Service_KitchSink_SeriesList extends Google_Collection
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Series
+   * @param Google_Service_KitchSink_Series[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Series
+   * @return Google_Service_KitchSink_Series[]
    */
   public function getItems()
   {
@@ -2599,14 +2599,14 @@ class Google_Service_KitchSink_Submission extends Google_Collection
     return $this->created;
   }
   /**
-   * @param Google_Service_KitchSink_LatLong
+   * @param Google_Service_KitchSink_LatLong[]
    */
   public function setGeo($geo)
   {
     $this->geo = $geo;
   }
   /**
-   * @return Google_Service_KitchSink_LatLong
+   * @return Google_Service_KitchSink_LatLong[]
    */
   public function getGeo()
   {
@@ -2657,28 +2657,28 @@ class Google_Service_KitchSink_Submission extends Google_Collection
     return $this->text;
   }
   /**
-   * @param Google_Service_KitchSink_ModeratorTopicsResourcePartial
+   * @param Google_Service_KitchSink_ModeratorTopicsResourcePartial[]
    */
   public function setTopics($topics)
   {
     $this->topics = $topics;
   }
   /**
-   * @return Google_Service_KitchSink_ModeratorTopicsResourcePartial
+   * @return Google_Service_KitchSink_ModeratorTopicsResourcePartial[]
    */
   public function getTopics()
   {
     return $this->topics;
   }
   /**
-   * @param Google_Service_KitchSink_Translation
+   * @param Google_Service_KitchSink_Translation[]
    */
   public function setTranslations($translations)
   {
     $this->translations = $translations;
   }
   /**
-   * @return Google_Service_KitchSink_Translation
+   * @return Google_Service_KitchSink_Translation[]
    */
   public function getTranslations()
   {
@@ -2862,14 +2862,14 @@ class Google_Service_KitchSink_SubmissionList extends Google_Collection
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Submission
+   * @param Google_Service_KitchSink_Submission[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Submission
+   * @return Google_Service_KitchSink_Submission[]
    */
   public function getItems()
   {
@@ -3265,14 +3265,14 @@ class Google_Service_KitchSink_Topic2 extends Google_Collection
     return $this->presenter;
   }
   /**
-   * @param Google_Service_KitchSink_Rule
+   * @param Google_Service_KitchSink_Rule[]
    */
   public function setRules($rules)
   {
     $this->rules = $rules;
   }
   /**
-   * @return Google_Service_KitchSink_Rule
+   * @return Google_Service_KitchSink_Rule[]
    */
   public function getRules()
   {
@@ -3552,14 +3552,14 @@ class Google_Service_KitchSink_TopicList extends Google_Collection
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Topic
+   * @param Google_Service_KitchSink_Topic[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Topic
+   * @return Google_Service_KitchSink_Topic[]
    */
   public function getItems()
   {
@@ -3867,14 +3867,14 @@ class Google_Service_KitchSink_VoteList extends Google_Collection
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Vote
+   * @param Google_Service_KitchSink_Vote[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Vote
+   * @return Google_Service_KitchSink_Vote[]
    */
   public function getItems()
   {
