@@ -51,7 +51,7 @@ class Google_Service_Directory_ChromeOsDevice extends Google_Collection
   public $orgUnitPath;
   public $osVersion;
   public $platformVersion;
-  protected $recentUsersType = 'Google_Service_Directory_ChromeOsDeviceRecentUsers';
+  protected $recentUsersType = 'Google_Service_Directory_RecentUsers';
   protected $recentUsersDataType = 'array';
   public $serialNumber;
   public $status;
@@ -318,14 +318,14 @@ class Google_Service_Directory_ChromeOsDevice extends Google_Collection
     return $this->platformVersion;
   }
   /**
-   * @param Google_Service_Directory_ChromeOsDeviceRecentUsers
+   * @param Google_Service_Directory_RecentUsers
    */
   public function setRecentUsers($recentUsers)
   {
     $this->recentUsers = $recentUsers;
   }
   /**
-   * @return Google_Service_Directory_ChromeOsDeviceRecentUsers
+   * @return Google_Service_Directory_RecentUsers
    */
   public function getRecentUsers()
   {
