@@ -40,14 +40,14 @@ class Google_Service_Transcoder_TextStream extends Google_Collection
     return $this->languageCode;
   }
   /**
-   * @param Google_Service_Transcoder_TextAtom
+   * @param Google_Service_Transcoder_TextAtom[]
    */
   public function setMapping($mapping)
   {
     $this->mapping = $mapping;
   }
   /**
-   * @return Google_Service_Transcoder_TextAtom
+   * @return Google_Service_Transcoder_TextAtom[]
    */
   public function getMapping()
   {

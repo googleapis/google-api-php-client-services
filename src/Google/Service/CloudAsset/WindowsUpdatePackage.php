@@ -30,14 +30,14 @@ class Google_Service_CloudAsset_WindowsUpdatePackage extends Google_Collection
   public $updateId;
 
   /**
-   * @param Google_Service_CloudAsset_WindowsUpdateCategory
+   * @param Google_Service_CloudAsset_WindowsUpdateCategory[]
    */
   public function setCategories($categories)
   {
     $this->categories = $categories;
   }
   /**
-   * @return Google_Service_CloudAsset_WindowsUpdateCategory
+   * @return Google_Service_CloudAsset_WindowsUpdateCategory[]
    */
   public function getCategories()
   {

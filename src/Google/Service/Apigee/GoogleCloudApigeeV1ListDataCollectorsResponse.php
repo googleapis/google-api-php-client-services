@@ -23,14 +23,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1ListDataCollectorsResponse extend
   public $nextPageToken;
 
   /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1DataCollector
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1DataCollector[]
    */
   public function setDataCollectors($dataCollectors)
   {
     $this->dataCollectors = $dataCollectors;
   }
   /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1DataCollector
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1DataCollector[]
    */
   public function getDataCollectors()
   {

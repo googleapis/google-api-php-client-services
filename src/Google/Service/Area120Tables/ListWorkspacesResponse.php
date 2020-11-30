@@ -31,14 +31,14 @@ class Google_Service_Area120Tables_ListWorkspacesResponse extends Google_Collect
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_Area120Tables_Workspace
+   * @param Google_Service_Area120Tables_Workspace[]
    */
   public function setWorkspaces($workspaces)
   {
     $this->workspaces = $workspaces;
   }
   /**
-   * @return Google_Service_Area120Tables_Workspace
+   * @return Google_Service_Area120Tables_Workspace[]
    */
   public function getWorkspaces()
   {

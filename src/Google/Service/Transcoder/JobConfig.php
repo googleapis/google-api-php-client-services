@@ -40,84 +40,84 @@ class Google_Service_Transcoder_JobConfig extends Google_Collection
   protected $spriteSheetsDataType = 'array';
 
   /**
-   * @param Google_Service_Transcoder_AdBreak
+   * @param Google_Service_Transcoder_AdBreak[]
    */
   public function setAdBreaks($adBreaks)
   {
     $this->adBreaks = $adBreaks;
   }
   /**
-   * @return Google_Service_Transcoder_AdBreak
+   * @return Google_Service_Transcoder_AdBreak[]
    */
   public function getAdBreaks()
   {
     return $this->adBreaks;
   }
   /**
-   * @param Google_Service_Transcoder_EditAtom
+   * @param Google_Service_Transcoder_EditAtom[]
    */
   public function setEditList($editList)
   {
     $this->editList = $editList;
   }
   /**
-   * @return Google_Service_Transcoder_EditAtom
+   * @return Google_Service_Transcoder_EditAtom[]
    */
   public function getEditList()
   {
     return $this->editList;
   }
   /**
-   * @param Google_Service_Transcoder_ElementaryStream
+   * @param Google_Service_Transcoder_ElementaryStream[]
    */
   public function setElementaryStreams($elementaryStreams)
   {
     $this->elementaryStreams = $elementaryStreams;
   }
   /**
-   * @return Google_Service_Transcoder_ElementaryStream
+   * @return Google_Service_Transcoder_ElementaryStream[]
    */
   public function getElementaryStreams()
   {
     return $this->elementaryStreams;
   }
   /**
-   * @param Google_Service_Transcoder_Input
+   * @param Google_Service_Transcoder_Input[]
    */
   public function setInputs($inputs)
   {
     $this->inputs = $inputs;
   }
   /**
-   * @return Google_Service_Transcoder_Input
+   * @return Google_Service_Transcoder_Input[]
    */
   public function getInputs()
   {
     return $this->inputs;
   }
   /**
-   * @param Google_Service_Transcoder_Manifest
+   * @param Google_Service_Transcoder_Manifest[]
    */
   public function setManifests($manifests)
   {
     $this->manifests = $manifests;
   }
   /**
-   * @return Google_Service_Transcoder_Manifest
+   * @return Google_Service_Transcoder_Manifest[]
    */
   public function getManifests()
   {
     return $this->manifests;
   }
   /**
-   * @param Google_Service_Transcoder_MuxStream
+   * @param Google_Service_Transcoder_MuxStream[]
    */
   public function setMuxStreams($muxStreams)
   {
     $this->muxStreams = $muxStreams;
   }
   /**
-   * @return Google_Service_Transcoder_MuxStream
+   * @return Google_Service_Transcoder_MuxStream[]
    */
   public function getMuxStreams()
   {
@@ -138,14 +138,14 @@ class Google_Service_Transcoder_JobConfig extends Google_Collection
     return $this->output;
   }
   /**
-   * @param Google_Service_Transcoder_Overlay
+   * @param Google_Service_Transcoder_Overlay[]
    */
   public function setOverlays($overlays)
   {
     $this->overlays = $overlays;
   }
   /**
-   * @return Google_Service_Transcoder_Overlay
+   * @return Google_Service_Transcoder_Overlay[]
    */
   public function getOverlays()
   {
@@ -166,14 +166,14 @@ class Google_Service_Transcoder_JobConfig extends Google_Collection
     return $this->pubsubDestination;
   }
   /**
-   * @param Google_Service_Transcoder_SpriteSheet
+   * @param Google_Service_Transcoder_SpriteSheet[]
    */
   public function setSpriteSheets($spriteSheets)
   {
     $this->spriteSheets = $spriteSheets;
   }
   /**
-   * @return Google_Service_Transcoder_SpriteSheet
+   * @return Google_Service_Transcoder_SpriteSheet[]
    */
   public function getSpriteSheets()
   {

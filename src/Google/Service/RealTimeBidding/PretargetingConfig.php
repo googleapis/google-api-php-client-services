@@ -110,14 +110,14 @@ class Google_Service_RealTimeBidding_PretargetingConfig extends Google_Collectio
     return $this->geoTargeting;
   }
   /**
-   * @param Google_Service_RealTimeBidding_CreativeDimensions
+   * @param Google_Service_RealTimeBidding_CreativeDimensions[]
    */
   public function setIncludedCreativeDimensions($includedCreativeDimensions)
   {
     $this->includedCreativeDimensions = $includedCreativeDimensions;
   }
   /**
-   * @return Google_Service_RealTimeBidding_CreativeDimensions
+   * @return Google_Service_RealTimeBidding_CreativeDimensions[]
    */
   public function getIncludedCreativeDimensions()
   {

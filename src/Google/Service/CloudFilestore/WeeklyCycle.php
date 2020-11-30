@@ -22,14 +22,14 @@ class Google_Service_CloudFilestore_WeeklyCycle extends Google_Collection
   protected $scheduleDataType = 'array';
 
   /**
-   * @param Google_Service_CloudFilestore_Schedule
+   * @param Google_Service_CloudFilestore_Schedule[]
    */
   public function setSchedule($schedule)
   {
     $this->schedule = $schedule;
   }
   /**
-   * @return Google_Service_CloudFilestore_Schedule
+   * @return Google_Service_CloudFilestore_Schedule[]
    */
   public function getSchedule()
   {

@@ -103,14 +103,14 @@ class Google_Service_ServiceNetworking_ConsumerConfig extends Google_Collection
     return $this->producerNetwork;
   }
   /**
-   * @param Google_Service_ServiceNetworking_GoogleCloudServicenetworkingV1ConsumerConfigReservedRange
+   * @param Google_Service_ServiceNetworking_GoogleCloudServicenetworkingV1ConsumerConfigReservedRange[]
    */
   public function setReservedRanges($reservedRanges)
   {
     $this->reservedRanges = $reservedRanges;
   }
   /**
-   * @return Google_Service_ServiceNetworking_GoogleCloudServicenetworkingV1ConsumerConfigReservedRange
+   * @return Google_Service_ServiceNetworking_GoogleCloudServicenetworkingV1ConsumerConfigReservedRange[]
    */
   public function getReservedRanges()
   {

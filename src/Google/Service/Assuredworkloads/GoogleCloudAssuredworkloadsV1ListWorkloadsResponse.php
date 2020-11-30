@@ -31,14 +31,14 @@ class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1ListWorkloads
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload
+   * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload[]
    */
   public function setWorkloads($workloads)
   {
     $this->workloads = $workloads;
   }
   /**
-   * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload
+   * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload[]
    */
   public function getWorkloads()
   {

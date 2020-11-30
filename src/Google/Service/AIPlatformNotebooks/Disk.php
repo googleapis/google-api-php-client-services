@@ -65,14 +65,14 @@ class Google_Service_AIPlatformNotebooks_Disk extends Google_Collection
     return $this->diskSizeGb;
   }
   /**
-   * @param Google_Service_AIPlatformNotebooks_GuestOsFeature
+   * @param Google_Service_AIPlatformNotebooks_GuestOsFeature[]
    */
   public function setGuestOsFeatures($guestOsFeatures)
   {
     $this->guestOsFeatures = $guestOsFeatures;
   }
   /**
-   * @return Google_Service_AIPlatformNotebooks_GuestOsFeature
+   * @return Google_Service_AIPlatformNotebooks_GuestOsFeature[]
    */
   public function getGuestOsFeatures()
   {

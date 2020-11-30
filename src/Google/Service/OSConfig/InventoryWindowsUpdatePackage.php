@@ -30,14 +30,14 @@ class Google_Service_OSConfig_InventoryWindowsUpdatePackage extends Google_Colle
   public $updateId;
 
   /**
-   * @param Google_Service_OSConfig_InventoryWindowsUpdatePackageWindowsUpdateCategory
+   * @param Google_Service_OSConfig_InventoryWindowsUpdatePackageWindowsUpdateCategory[]
    */
   public function setCategories($categories)
   {
     $this->categories = $categories;
   }
   /**
-   * @return Google_Service_OSConfig_InventoryWindowsUpdatePackageWindowsUpdateCategory
+   * @return Google_Service_OSConfig_InventoryWindowsUpdatePackageWindowsUpdateCategory[]
    */
   public function getCategories()
   {

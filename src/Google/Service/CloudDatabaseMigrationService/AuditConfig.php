@@ -23,14 +23,14 @@ class Google_Service_CloudDatabaseMigrationService_AuditConfig extends Google_Co
   public $service;
 
   /**
-   * @param Google_Service_CloudDatabaseMigrationService_AuditLogConfig
+   * @param Google_Service_CloudDatabaseMigrationService_AuditLogConfig[]
    */
   public function setAuditLogConfigs($auditLogConfigs)
   {
     $this->auditLogConfigs = $auditLogConfigs;
   }
   /**
-   * @return Google_Service_CloudDatabaseMigrationService_AuditLogConfig
+   * @return Google_Service_CloudDatabaseMigrationService_AuditLogConfig[]
    */
   public function getAuditLogConfigs()
   {

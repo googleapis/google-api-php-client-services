@@ -111,14 +111,14 @@ class Google_Service_AdExchangeBuyerII_PublisherProfile extends Google_Collectio
     return $this->mediaKitUrl;
   }
   /**
-   * @param Google_Service_AdExchangeBuyerII_PublisherProfileMobileApplication
+   * @param Google_Service_AdExchangeBuyerII_PublisherProfileMobileApplication[]
    */
   public function setMobileApps($mobileApps)
   {
     $this->mobileApps = $mobileApps;
   }
   /**
-   * @return Google_Service_AdExchangeBuyerII_PublisherProfileMobileApplication
+   * @return Google_Service_AdExchangeBuyerII_PublisherProfileMobileApplication[]
    */
   public function getMobileApps()
   {

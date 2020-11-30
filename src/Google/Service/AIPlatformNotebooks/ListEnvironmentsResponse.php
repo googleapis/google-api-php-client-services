@@ -24,14 +24,14 @@ class Google_Service_AIPlatformNotebooks_ListEnvironmentsResponse extends Google
   public $unreachable;
 
   /**
-   * @param Google_Service_AIPlatformNotebooks_Environment
+   * @param Google_Service_AIPlatformNotebooks_Environment[]
    */
   public function setEnvironments($environments)
   {
     $this->environments = $environments;
   }
   /**
-   * @return Google_Service_AIPlatformNotebooks_Environment
+   * @return Google_Service_AIPlatformNotebooks_Environment[]
    */
   public function getEnvironments()
   {

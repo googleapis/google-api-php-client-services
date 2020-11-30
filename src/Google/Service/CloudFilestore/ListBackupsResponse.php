@@ -24,14 +24,14 @@ class Google_Service_CloudFilestore_ListBackupsResponse extends Google_Collectio
   public $unreachable;
 
   /**
-   * @param Google_Service_CloudFilestore_Backup
+   * @param Google_Service_CloudFilestore_Backup[]
    */
   public function setBackups($backups)
   {
     $this->backups = $backups;
   }
   /**
-   * @return Google_Service_CloudFilestore_Backup
+   * @return Google_Service_CloudFilestore_Backup[]
    */
   public function getBackups()
   {

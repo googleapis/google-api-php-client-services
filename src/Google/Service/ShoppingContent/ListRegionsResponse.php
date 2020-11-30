@@ -31,14 +31,14 @@ class Google_Service_ShoppingContent_ListRegionsResponse extends Google_Collecti
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_ShoppingContent_Region
+   * @param Google_Service_ShoppingContent_Region[]
    */
   public function setRegions($regions)
   {
     $this->regions = $regions;
   }
   /**
-   * @return Google_Service_ShoppingContent_Region
+   * @return Google_Service_ShoppingContent_Region[]
    */
   public function getRegions()
   {

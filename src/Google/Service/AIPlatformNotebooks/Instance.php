@@ -138,14 +138,14 @@ class Google_Service_AIPlatformNotebooks_Instance extends Google_Collection
     return $this->diskEncryption;
   }
   /**
-   * @param Google_Service_AIPlatformNotebooks_Disk
+   * @param Google_Service_AIPlatformNotebooks_Disk[]
    */
   public function setDisks($disks)
   {
     $this->disks = $disks;
   }
   /**
-   * @return Google_Service_AIPlatformNotebooks_Disk
+   * @return Google_Service_AIPlatformNotebooks_Disk[]
    */
   public function getDisks()
   {
@@ -288,14 +288,14 @@ class Google_Service_AIPlatformNotebooks_Instance extends Google_Collection
     return $this->updateTime;
   }
   /**
-   * @param Google_Service_AIPlatformNotebooks_UpgradeHistoryEntry
+   * @param Google_Service_AIPlatformNotebooks_UpgradeHistoryEntry[]
    */
   public function setUpgradeHistory($upgradeHistory)
   {
     $this->upgradeHistory = $upgradeHistory;
   }
   /**
-   * @return Google_Service_AIPlatformNotebooks_UpgradeHistoryEntry
+   * @return Google_Service_AIPlatformNotebooks_UpgradeHistoryEntry[]
    */
   public function getUpgradeHistory()
   {

@@ -23,14 +23,14 @@ class Google_Service_Transcoder_AudioAtom extends Google_Collection
   public $key;
 
   /**
-   * @param Google_Service_Transcoder_AudioChannel
+   * @param Google_Service_Transcoder_AudioChannel[]
    */
   public function setChannels($channels)
   {
     $this->channels = $channels;
   }
   /**
-   * @return Google_Service_Transcoder_AudioChannel
+   * @return Google_Service_Transcoder_AudioChannel[]
    */
   public function getChannels()
   {

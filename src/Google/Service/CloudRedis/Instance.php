@@ -179,14 +179,14 @@ class Google_Service_CloudRedis_Instance extends Google_Collection
     return $this->reservedIpRange;
   }
   /**
-   * @param Google_Service_CloudRedis_TlsCertificate
+   * @param Google_Service_CloudRedis_TlsCertificate[]
    */
   public function setServerCaCerts($serverCaCerts)
   {
     $this->serverCaCerts = $serverCaCerts;
   }
   /**
-   * @return Google_Service_CloudRedis_TlsCertificate
+   * @return Google_Service_CloudRedis_TlsCertificate[]
    */
   public function getServerCaCerts()
   {

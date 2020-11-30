@@ -33,14 +33,14 @@ class Google_Service_CloudFilestore_UpdatePolicy extends Google_Collection
     return $this->channel;
   }
   /**
-   * @param Google_Service_CloudFilestore_DenyMaintenancePeriod
+   * @param Google_Service_CloudFilestore_DenyMaintenancePeriod[]
    */
   public function setDenyMaintenancePeriods($denyMaintenancePeriods)
   {
     $this->denyMaintenancePeriods = $denyMaintenancePeriods;
   }
   /**
-   * @return Google_Service_CloudFilestore_DenyMaintenancePeriod
+   * @return Google_Service_CloudFilestore_DenyMaintenancePeriod[]
    */
   public function getDenyMaintenancePeriods()
   {

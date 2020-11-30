@@ -110,14 +110,14 @@ class Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1Workload exte
     return $this->provisionedResourcesParent;
   }
   /**
-   * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1WorkloadResourceInfo
+   * @param Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1WorkloadResourceInfo[]
    */
   public function setResources($resources)
   {
     $this->resources = $resources;
   }
   /**
-   * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1WorkloadResourceInfo
+   * @return Google_Service_Assuredworkloads_GoogleCloudAssuredworkloadsV1WorkloadResourceInfo[]
    */
   public function getResources()
   {

@@ -113,14 +113,14 @@ class Google_Service_Compute_RouterNat extends Google_Collection
     return $this->sourceSubnetworkIpRangesToNat;
   }
   /**
-   * @param Google_Service_Compute_RouterNatSubnetworkToNat
+   * @param Google_Service_Compute_RouterNatSubnetworkToNat[]
    */
   public function setSubnetworks($subnetworks)
   {
     $this->subnetworks = $subnetworks;
   }
   /**
-   * @return Google_Service_Compute_RouterNatSubnetworkToNat
+   * @return Google_Service_Compute_RouterNatSubnetworkToNat[]
    */
   public function getSubnetworks()
   {

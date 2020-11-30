@@ -27,14 +27,14 @@ class Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1p1beta1Res
   public $projectDisplayName;
 
   /**
-   * @param Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1p1beta1Folder
+   * @param Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1p1beta1Folder[]
    */
   public function setFolders($folders)
   {
     $this->folders = $folders;
   }
   /**
-   * @return Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1p1beta1Folder
+   * @return Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1p1beta1Folder[]
    */
   public function getFolders()
   {

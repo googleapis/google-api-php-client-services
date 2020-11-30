@@ -65,14 +65,14 @@ class Google_Service_ShoppingContent_OrderTrackingSignal extends Google_Collecti
     return $this->deliveryRegionCode;
   }
   /**
-   * @param Google_Service_ShoppingContent_OrderTrackingSignalLineItemDetails
+   * @param Google_Service_ShoppingContent_OrderTrackingSignalLineItemDetails[]
    */
   public function setLineItems($lineItems)
   {
     $this->lineItems = $lineItems;
   }
   /**
-   * @return Google_Service_ShoppingContent_OrderTrackingSignalLineItemDetails
+   * @return Google_Service_ShoppingContent_OrderTrackingSignalLineItemDetails[]
    */
   public function getLineItems()
   {
@@ -117,28 +117,28 @@ class Google_Service_ShoppingContent_OrderTrackingSignal extends Google_Collecti
     return $this->orderTrackingSignalId;
   }
   /**
-   * @param Google_Service_ShoppingContent_OrderTrackingSignalShipmentLineItemMapping
+   * @param Google_Service_ShoppingContent_OrderTrackingSignalShipmentLineItemMapping[]
    */
   public function setShipmentLineItemMapping($shipmentLineItemMapping)
   {
     $this->shipmentLineItemMapping = $shipmentLineItemMapping;
   }
   /**
-   * @return Google_Service_ShoppingContent_OrderTrackingSignalShipmentLineItemMapping
+   * @return Google_Service_ShoppingContent_OrderTrackingSignalShipmentLineItemMapping[]
    */
   public function getShipmentLineItemMapping()
   {
     return $this->shipmentLineItemMapping;
   }
   /**
-   * @param Google_Service_ShoppingContent_OrderTrackingSignalShippingInfo
+   * @param Google_Service_ShoppingContent_OrderTrackingSignalShippingInfo[]
    */
   public function setShippingInfo($shippingInfo)
   {
     $this->shippingInfo = $shippingInfo;
   }
   /**
-   * @return Google_Service_ShoppingContent_OrderTrackingSignalShippingInfo
+   * @return Google_Service_ShoppingContent_OrderTrackingSignalShippingInfo[]
    */
   public function getShippingInfo()
   {

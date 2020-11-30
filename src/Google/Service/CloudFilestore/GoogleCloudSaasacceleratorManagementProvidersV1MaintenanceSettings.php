@@ -30,14 +30,14 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
     return $this->exclude;
   }
   /**
-   * @param Google_Service_CloudFilestore_MaintenancePolicy
+   * @param Google_Service_CloudFilestore_MaintenancePolicy[]
    */
   public function setMaintenancePolicies($maintenancePolicies)
   {
     $this->maintenancePolicies = $maintenancePolicies;
   }
   /**
-   * @return Google_Service_CloudFilestore_MaintenancePolicy
+   * @return Google_Service_CloudFilestore_MaintenancePolicy[]
    */
   public function getMaintenancePolicies()
   {

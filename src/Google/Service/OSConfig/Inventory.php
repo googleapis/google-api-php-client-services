@@ -23,14 +23,14 @@ class Google_Service_OSConfig_Inventory extends Google_Model
   protected $osInfoDataType = '';
 
   /**
-   * @param Google_Service_OSConfig_InventoryItem
+   * @param Google_Service_OSConfig_InventoryItem[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_OSConfig_InventoryItem
+   * @return Google_Service_OSConfig_InventoryItem[]
    */
   public function getItems()
   {

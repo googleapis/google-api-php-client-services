@@ -68,14 +68,14 @@ class Google_Service_Transcoder_Job extends Google_Collection
     return $this->endTime;
   }
   /**
-   * @param Google_Service_Transcoder_FailureDetail
+   * @param Google_Service_Transcoder_FailureDetail[]
    */
   public function setFailureDetails($failureDetails)
   {
     $this->failureDetails = $failureDetails;
   }
   /**
-   * @return Google_Service_Transcoder_FailureDetail
+   * @return Google_Service_Transcoder_FailureDetail[]
    */
   public function getFailureDetails()
   {

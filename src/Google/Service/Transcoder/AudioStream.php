@@ -59,14 +59,14 @@ class Google_Service_Transcoder_AudioStream extends Google_Collection
     return $this->codec;
   }
   /**
-   * @param Google_Service_Transcoder_AudioAtom
+   * @param Google_Service_Transcoder_AudioAtom[]
    */
   public function setMapping($mapping)
   {
     $this->mapping = $mapping;
   }
   /**
-   * @return Google_Service_Transcoder_AudioAtom
+   * @return Google_Service_Transcoder_AudioAtom[]
    */
   public function getMapping()
   {

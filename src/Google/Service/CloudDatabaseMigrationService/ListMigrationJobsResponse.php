@@ -24,14 +24,14 @@ class Google_Service_CloudDatabaseMigrationService_ListMigrationJobsResponse ext
   public $unreachable;
 
   /**
-   * @param Google_Service_CloudDatabaseMigrationService_MigrationJob
+   * @param Google_Service_CloudDatabaseMigrationService_MigrationJob[]
    */
   public function setMigrationJobs($migrationJobs)
   {
     $this->migrationJobs = $migrationJobs;
   }
   /**
-   * @return Google_Service_CloudDatabaseMigrationService_MigrationJob
+   * @return Google_Service_CloudDatabaseMigrationService_MigrationJob[]
    */
   public function getMigrationJobs()
   {

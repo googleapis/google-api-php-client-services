@@ -23,14 +23,14 @@ class Google_Service_ShoppingContent_RegionPostalCodeArea extends Google_Collect
   public $regionCode;
 
   /**
-   * @param Google_Service_ShoppingContent_RegionPostalCodeAreaPostalCodeRange
+   * @param Google_Service_ShoppingContent_RegionPostalCodeAreaPostalCodeRange[]
    */
   public function setPostalCodes($postalCodes)
   {
     $this->postalCodes = $postalCodes;
   }
   /**
-   * @return Google_Service_ShoppingContent_RegionPostalCodeAreaPostalCodeRange
+   * @return Google_Service_ShoppingContent_RegionPostalCodeAreaPostalCodeRange[]
    */
   public function getPostalCodes()
   {

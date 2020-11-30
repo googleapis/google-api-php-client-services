@@ -32,14 +32,14 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowV2QueryParameters extends G
   public $webhookHeaders;
 
   /**
-   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2Context
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2Context[]
    */
   public function setContexts($contexts)
   {
     $this->contexts = $contexts;
   }
   /**
-   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2Context
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2Context[]
    */
   public function getContexts()
   {
@@ -90,14 +90,14 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowV2QueryParameters extends G
     return $this->sentimentAnalysisRequestConfig;
   }
   /**
-   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2SessionEntityType
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2SessionEntityType[]
    */
   public function setSessionEntityTypes($sessionEntityTypes)
   {
     $this->sessionEntityTypes = $sessionEntityTypes;
   }
   /**
-   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2SessionEntityType
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2SessionEntityType[]
    */
   public function getSessionEntityTypes()
   {

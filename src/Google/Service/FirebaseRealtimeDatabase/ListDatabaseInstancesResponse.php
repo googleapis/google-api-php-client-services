@@ -23,14 +23,14 @@ class Google_Service_FirebaseRealtimeDatabase_ListDatabaseInstancesResponse exte
   public $nextPageToken;
 
   /**
-   * @param Google_Service_FirebaseRealtimeDatabase_DatabaseInstance
+   * @param Google_Service_FirebaseRealtimeDatabase_DatabaseInstance[]
    */
   public function setInstances($instances)
   {
     $this->instances = $instances;
   }
   /**
-   * @return Google_Service_FirebaseRealtimeDatabase_DatabaseInstance
+   * @return Google_Service_FirebaseRealtimeDatabase_DatabaseInstance[]
    */
   public function getInstances()
   {

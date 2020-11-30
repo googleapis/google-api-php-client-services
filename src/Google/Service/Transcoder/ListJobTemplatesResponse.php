@@ -23,14 +23,14 @@ class Google_Service_Transcoder_ListJobTemplatesResponse extends Google_Collecti
   public $nextPageToken;
 
   /**
-   * @param Google_Service_Transcoder_JobTemplate
+   * @param Google_Service_Transcoder_JobTemplate[]
    */
   public function setJobTemplates($jobTemplates)
   {
     $this->jobTemplates = $jobTemplates;
   }
   /**
-   * @return Google_Service_Transcoder_JobTemplate
+   * @return Google_Service_Transcoder_JobTemplate[]
    */
   public function getJobTemplates()
   {

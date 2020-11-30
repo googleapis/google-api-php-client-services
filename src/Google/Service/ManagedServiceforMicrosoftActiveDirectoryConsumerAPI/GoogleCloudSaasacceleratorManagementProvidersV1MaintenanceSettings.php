@@ -30,14 +30,14 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Google
     return $this->exclude;
   }
   /**
-   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_MaintenancePolicy
+   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_MaintenancePolicy[]
    */
   public function setMaintenancePolicies($maintenancePolicies)
   {
     $this->maintenancePolicies = $maintenancePolicies;
   }
   /**
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_MaintenancePolicy
+   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_MaintenancePolicy[]
    */
   public function getMaintenancePolicies()
   {

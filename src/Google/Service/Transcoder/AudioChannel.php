@@ -22,14 +22,14 @@ class Google_Service_Transcoder_AudioChannel extends Google_Collection
   protected $inputsDataType = 'array';
 
   /**
-   * @param Google_Service_Transcoder_AudioChannelInput
+   * @param Google_Service_Transcoder_AudioChannelInput[]
    */
   public function setInputs($inputs)
   {
     $this->inputs = $inputs;
   }
   /**
-   * @return Google_Service_Transcoder_AudioChannelInput
+   * @return Google_Service_Transcoder_AudioChannelInput[]
    */
   public function getInputs()
   {

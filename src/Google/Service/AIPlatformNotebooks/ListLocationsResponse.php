@@ -23,14 +23,14 @@ class Google_Service_AIPlatformNotebooks_ListLocationsResponse extends Google_Co
   public $nextPageToken;
 
   /**
-   * @param Google_Service_AIPlatformNotebooks_Location
+   * @param Google_Service_AIPlatformNotebooks_Location[]
    */
   public function setLocations($locations)
   {
     $this->locations = $locations;
   }
   /**
-   * @return Google_Service_AIPlatformNotebooks_Location
+   * @return Google_Service_AIPlatformNotebooks_Location[]
    */
   public function getLocations()
   {

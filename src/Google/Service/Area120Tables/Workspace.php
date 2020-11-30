@@ -40,14 +40,14 @@ class Google_Service_Area120Tables_Workspace extends Google_Collection
     return $this->name;
   }
   /**
-   * @param Google_Service_Area120Tables_Table
+   * @param Google_Service_Area120Tables_Table[]
    */
   public function setTables($tables)
   {
     $this->tables = $tables;
   }
   /**
-   * @return Google_Service_Area120Tables_Table
+   * @return Google_Service_Area120Tables_Table[]
    */
   public function getTables()
   {

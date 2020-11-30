@@ -31,14 +31,14 @@ class Google_Service_RealTimeBidding_ListPretargetingConfigsResponse extends Goo
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_RealTimeBidding_PretargetingConfig
+   * @param Google_Service_RealTimeBidding_PretargetingConfig[]
    */
   public function setPretargetingConfigs($pretargetingConfigs)
   {
     $this->pretargetingConfigs = $pretargetingConfigs;
   }
   /**
-   * @return Google_Service_RealTimeBidding_PretargetingConfig
+   * @return Google_Service_RealTimeBidding_PretargetingConfig[]
    */
   public function getPretargetingConfigs()
   {

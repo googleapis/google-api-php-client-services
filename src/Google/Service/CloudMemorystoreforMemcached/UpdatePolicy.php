@@ -33,14 +33,14 @@ class Google_Service_CloudMemorystoreforMemcached_UpdatePolicy extends Google_Co
     return $this->channel;
   }
   /**
-   * @param Google_Service_CloudMemorystoreforMemcached_DenyMaintenancePeriod
+   * @param Google_Service_CloudMemorystoreforMemcached_DenyMaintenancePeriod[]
    */
   public function setDenyMaintenancePeriods($denyMaintenancePeriods)
   {
     $this->denyMaintenancePeriods = $denyMaintenancePeriods;
   }
   /**
-   * @return Google_Service_CloudMemorystoreforMemcached_DenyMaintenancePeriod
+   * @return Google_Service_CloudMemorystoreforMemcached_DenyMaintenancePeriod[]
    */
   public function getDenyMaintenancePeriods()
   {

@@ -24,14 +24,14 @@ class Google_Service_CloudDatabaseMigrationService_ListConnectionProfilesRespons
   public $unreachable;
 
   /**
-   * @param Google_Service_CloudDatabaseMigrationService_ConnectionProfile
+   * @param Google_Service_CloudDatabaseMigrationService_ConnectionProfile[]
    */
   public function setConnectionProfiles($connectionProfiles)
   {
     $this->connectionProfiles = $connectionProfiles;
   }
   /**
-   * @return Google_Service_CloudDatabaseMigrationService_ConnectionProfile
+   * @return Google_Service_CloudDatabaseMigrationService_ConnectionProfile[]
    */
   public function getConnectionProfiles()
   {

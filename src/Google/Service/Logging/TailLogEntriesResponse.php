@@ -24,28 +24,28 @@ class Google_Service_Logging_TailLogEntriesResponse extends Google_Collection
   protected $suppressionInfoDataType = 'array';
 
   /**
-   * @param Google_Service_Logging_LogEntry
+   * @param Google_Service_Logging_LogEntry[]
    */
   public function setEntries($entries)
   {
     $this->entries = $entries;
   }
   /**
-   * @return Google_Service_Logging_LogEntry
+   * @return Google_Service_Logging_LogEntry[]
    */
   public function getEntries()
   {
     return $this->entries;
   }
   /**
-   * @param Google_Service_Logging_SuppressionInfo
+   * @param Google_Service_Logging_SuppressionInfo[]
    */
   public function setSuppressionInfo($suppressionInfo)
   {
     $this->suppressionInfo = $suppressionInfo;
   }
   /**
-   * @return Google_Service_Logging_SuppressionInfo
+   * @return Google_Service_Logging_SuppressionInfo[]
    */
   public function getSuppressionInfo()
   {

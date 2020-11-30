@@ -26,28 +26,28 @@ class Google_Service_CloudDatabaseMigrationService_Policy extends Google_Collect
   public $version;
 
   /**
-   * @param Google_Service_CloudDatabaseMigrationService_AuditConfig
+   * @param Google_Service_CloudDatabaseMigrationService_AuditConfig[]
    */
   public function setAuditConfigs($auditConfigs)
   {
     $this->auditConfigs = $auditConfigs;
   }
   /**
-   * @return Google_Service_CloudDatabaseMigrationService_AuditConfig
+   * @return Google_Service_CloudDatabaseMigrationService_AuditConfig[]
    */
   public function getAuditConfigs()
   {
     return $this->auditConfigs;
   }
   /**
-   * @param Google_Service_CloudDatabaseMigrationService_Binding
+   * @param Google_Service_CloudDatabaseMigrationService_Binding[]
    */
   public function setBindings($bindings)
   {
     $this->bindings = $bindings;
   }
   /**
-   * @return Google_Service_CloudDatabaseMigrationService_Binding
+   * @return Google_Service_CloudDatabaseMigrationService_Binding[]
    */
   public function getBindings()
   {

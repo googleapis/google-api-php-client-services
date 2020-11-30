@@ -104,14 +104,14 @@ class Google_Service_CloudAsset_Asset extends Google_Collection
     return $this->name;
   }
   /**
-   * @param Google_Service_CloudAsset_GoogleCloudOrgpolicyV1Policy
+   * @param Google_Service_CloudAsset_GoogleCloudOrgpolicyV1Policy[]
    */
   public function setOrgPolicy($orgPolicy)
   {
     $this->orgPolicy = $orgPolicy;
   }
   /**
-   * @return Google_Service_CloudAsset_GoogleCloudOrgpolicyV1Policy
+   * @return Google_Service_CloudAsset_GoogleCloudOrgpolicyV1Policy[]
    */
   public function getOrgPolicy()
   {

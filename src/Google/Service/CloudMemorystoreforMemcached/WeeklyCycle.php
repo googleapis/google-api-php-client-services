@@ -22,14 +22,14 @@ class Google_Service_CloudMemorystoreforMemcached_WeeklyCycle extends Google_Col
   protected $scheduleDataType = 'array';
 
   /**
-   * @param Google_Service_CloudMemorystoreforMemcached_Schedule
+   * @param Google_Service_CloudMemorystoreforMemcached_Schedule[]
    */
   public function setSchedule($schedule)
   {
     $this->schedule = $schedule;
   }
   /**
-   * @return Google_Service_CloudMemorystoreforMemcached_Schedule
+   * @return Google_Service_CloudMemorystoreforMemcached_Schedule[]
    */
   public function getSchedule()
   {

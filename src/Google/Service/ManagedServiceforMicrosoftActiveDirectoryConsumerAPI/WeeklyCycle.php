@@ -22,14 +22,14 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Weekly
   protected $scheduleDataType = 'array';
 
   /**
-   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Schedule
+   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Schedule[]
    */
   public function setSchedule($schedule)
   {
     $this->schedule = $schedule;
   }
   /**
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Schedule
+   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Schedule[]
    */
   public function getSchedule()
   {

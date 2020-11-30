@@ -25,14 +25,14 @@ class Google_Service_CloudDatabaseMigrationService_SqlIpConfig extends Google_Co
   public $requireSsl;
 
   /**
-   * @param Google_Service_CloudDatabaseMigrationService_SqlAclEntry
+   * @param Google_Service_CloudDatabaseMigrationService_SqlAclEntry[]
    */
   public function setAuthorizedNetworks($authorizedNetworks)
   {
     $this->authorizedNetworks = $authorizedNetworks;
   }
   /**
-   * @return Google_Service_CloudDatabaseMigrationService_SqlAclEntry
+   * @return Google_Service_CloudDatabaseMigrationService_SqlAclEntry[]
    */
   public function getAuthorizedNetworks()
   {

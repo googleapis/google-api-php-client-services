@@ -26,28 +26,28 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Stats extends Google_Collection
   protected $metaDataDataType = '';
 
   /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1StatsEnvironmentStats
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1StatsEnvironmentStats[]
    */
   public function setEnvironments($environments)
   {
     $this->environments = $environments;
   }
   /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1StatsEnvironmentStats
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1StatsEnvironmentStats[]
    */
   public function getEnvironments()
   {
     return $this->environments;
   }
   /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1StatsHostStats
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1StatsHostStats[]
    */
   public function setHosts($hosts)
   {
     $this->hosts = $hosts;
   }
   /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1StatsHostStats
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1StatsHostStats[]
    */
   public function getHosts()
   {

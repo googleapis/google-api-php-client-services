@@ -27,14 +27,14 @@ class Google_Service_SecurityCommandCenter_SecuritycenterResource extends Google
   public $projectName;
 
   /**
-   * @param Google_Service_SecurityCommandCenter_Folder
+   * @param Google_Service_SecurityCommandCenter_Folder[]
    */
   public function setFolders($folders)
   {
     $this->folders = $folders;
   }
   /**
-   * @return Google_Service_SecurityCommandCenter_Folder
+   * @return Google_Service_SecurityCommandCenter_Folder[]
    */
   public function getFolders()
   {

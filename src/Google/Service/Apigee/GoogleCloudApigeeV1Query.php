@@ -80,14 +80,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Query extends Google_Collection
     return $this->limit;
   }
   /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1QueryMetric
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1QueryMetric[]
    */
   public function setMetrics($metrics)
   {
     $this->metrics = $metrics;
   }
   /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1QueryMetric
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1QueryMetric[]
    */
   public function getMetrics()
   {

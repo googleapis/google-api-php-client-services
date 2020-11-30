@@ -23,14 +23,14 @@ class Google_Service_CloudAsset_Inventory extends Google_Model
   protected $osInfoDataType = '';
 
   /**
-   * @param Google_Service_CloudAsset_Item
+   * @param Google_Service_CloudAsset_Item[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_CloudAsset_Item
+   * @return Google_Service_CloudAsset_Item[]
    */
   public function getItems()
   {

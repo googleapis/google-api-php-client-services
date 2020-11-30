@@ -23,14 +23,14 @@ class Google_Service_Transcoder_TextAtom extends Google_Collection
   public $key;
 
   /**
-   * @param Google_Service_Transcoder_TextInput
+   * @param Google_Service_Transcoder_TextInput[]
    */
   public function setInputs($inputs)
   {
     $this->inputs = $inputs;
   }
   /**
-   * @return Google_Service_Transcoder_TextInput
+   * @return Google_Service_Transcoder_TextInput[]
    */
   public function getInputs()
   {

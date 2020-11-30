@@ -24,14 +24,14 @@ class Google_Service_Transcoder_Overlay extends Google_Collection
   protected $imageDataType = '';
 
   /**
-   * @param Google_Service_Transcoder_Animation
+   * @param Google_Service_Transcoder_Animation[]
    */
   public function setAnimations($animations)
   {
     $this->animations = $animations;
   }
   /**
-   * @return Google_Service_Transcoder_Animation
+   * @return Google_Service_Transcoder_Animation[]
    */
   public function getAnimations()
   {

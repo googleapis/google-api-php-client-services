@@ -24,14 +24,14 @@ class Google_Service_AIPlatformNotebooks_ListInstancesResponse extends Google_Co
   public $unreachable;
 
   /**
-   * @param Google_Service_AIPlatformNotebooks_Instance
+   * @param Google_Service_AIPlatformNotebooks_Instance[]
    */
   public function setInstances($instances)
   {
     $this->instances = $instances;
   }
   /**
-   * @return Google_Service_AIPlatformNotebooks_Instance
+   * @return Google_Service_AIPlatformNotebooks_Instance[]
    */
   public function getInstances()
   {

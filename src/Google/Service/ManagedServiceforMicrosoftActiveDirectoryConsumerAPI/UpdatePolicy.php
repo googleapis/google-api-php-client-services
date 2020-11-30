@@ -33,14 +33,14 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Update
     return $this->channel;
   }
   /**
-   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_DenyMaintenancePeriod
+   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_DenyMaintenancePeriod[]
    */
   public function setDenyMaintenancePeriods($denyMaintenancePeriods)
   {
     $this->denyMaintenancePeriods = $denyMaintenancePeriods;
   }
   /**
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_DenyMaintenancePeriod
+   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_DenyMaintenancePeriod[]
    */
   public function getDenyMaintenancePeriods()
   {

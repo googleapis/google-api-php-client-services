@@ -30,14 +30,14 @@ class Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorMana
     return $this->exclude;
   }
   /**
-   * @param Google_Service_CloudMemorystoreforMemcached_MaintenancePolicy
+   * @param Google_Service_CloudMemorystoreforMemcached_MaintenancePolicy[]
    */
   public function setMaintenancePolicies($maintenancePolicies)
   {
     $this->maintenancePolicies = $maintenancePolicies;
   }
   /**
-   * @return Google_Service_CloudMemorystoreforMemcached_MaintenancePolicy
+   * @return Google_Service_CloudMemorystoreforMemcached_MaintenancePolicy[]
    */
   public function getMaintenancePolicies()
   {
