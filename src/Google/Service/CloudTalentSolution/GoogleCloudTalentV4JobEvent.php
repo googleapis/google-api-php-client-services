@@ -15,14 +15,26 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $jobsService = new Google_Service_CloudTalentSolution(...);
- *   $projects = $jobsService->projects;
- *  </code>
- */
-class Google_Service_CloudTalentSolution_Resource_Projects extends Google_Service_Resource
+class Google_Service_CloudTalentSolution_GoogleCloudTalentV4JobEvent extends Google_Collection
 {
+  protected $collection_key = 'jobs';
+  public $jobs;
+  public $type;
+
+  public function setJobs($jobs)
+  {
+    $this->jobs = $jobs;
+  }
+  public function getJobs()
+  {
+    return $this->jobs;
+  }
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  public function getType()
+  {
+    return $this->type;
+  }
 }

@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $jobsService = new Google_Service_CloudTalentSolution(...);
- *   $projects = $jobsService->projects;
- *  </code>
- */
-class Google_Service_CloudTalentSolution_Resource_Projects extends Google_Service_Resource
+class Google_Service_CloudTalentSolution_GoogleCloudTalentV4DeviceInfo extends Google_Model
 {
+  public $deviceType;
+  public $id;
+
+  public function setDeviceType($deviceType)
+  {
+    $this->deviceType = $deviceType;
+  }
+  public function getDeviceType()
+  {
+    return $this->deviceType;
+  }
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  public function getId()
+  {
+    return $this->id;
+  }
 }

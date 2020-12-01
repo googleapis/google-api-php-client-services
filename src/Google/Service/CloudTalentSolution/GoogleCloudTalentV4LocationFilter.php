@@ -15,15 +15,31 @@
  * the License.
  */
 
-class Google_Service_CloudTalentSolution_Location extends Google_Model
+class Google_Service_CloudTalentSolution_GoogleCloudTalentV4LocationFilter extends Google_Model
 {
+  public $address;
+  public $distanceInMiles;
   protected $latLngType = 'Google_Service_CloudTalentSolution_LatLng';
   protected $latLngDataType = '';
-  public $locationType;
-  protected $postalAddressType = 'Google_Service_CloudTalentSolution_PostalAddress';
-  protected $postalAddressDataType = '';
-  public $radiusMiles;
+  public $regionCode;
+  public $telecommutePreference;
 
+  public function setAddress($address)
+  {
+    $this->address = $address;
+  }
+  public function getAddress()
+  {
+    return $this->address;
+  }
+  public function setDistanceInMiles($distanceInMiles)
+  {
+    $this->distanceInMiles = $distanceInMiles;
+  }
+  public function getDistanceInMiles()
+  {
+    return $this->distanceInMiles;
+  }
   /**
    * @param Google_Service_CloudTalentSolution_LatLng
    */
@@ -38,34 +54,20 @@ class Google_Service_CloudTalentSolution_Location extends Google_Model
   {
     return $this->latLng;
   }
-  public function setLocationType($locationType)
+  public function setRegionCode($regionCode)
   {
-    $this->locationType = $locationType;
+    $this->regionCode = $regionCode;
   }
-  public function getLocationType()
+  public function getRegionCode()
   {
-    return $this->locationType;
+    return $this->regionCode;
   }
-  /**
-   * @param Google_Service_CloudTalentSolution_PostalAddress
-   */
-  public function setPostalAddress(Google_Service_CloudTalentSolution_PostalAddress $postalAddress)
+  public function setTelecommutePreference($telecommutePreference)
   {
-    $this->postalAddress = $postalAddress;
+    $this->telecommutePreference = $telecommutePreference;
   }
-  /**
-   * @return Google_Service_CloudTalentSolution_PostalAddress
-   */
-  public function getPostalAddress()
+  public function getTelecommutePreference()
   {
-    return $this->postalAddress;
-  }
-  public function setRadiusMiles($radiusMiles)
-  {
-    $this->radiusMiles = $radiusMiles;
-  }
-  public function getRadiusMiles()
-  {
-    return $this->radiusMiles;
+    return $this->telecommutePreference;
   }
 }

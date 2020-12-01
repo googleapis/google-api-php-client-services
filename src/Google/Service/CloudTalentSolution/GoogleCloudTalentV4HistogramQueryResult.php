@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $jobsService = new Google_Service_CloudTalentSolution(...);
- *   $projects = $jobsService->projects;
- *  </code>
- */
-class Google_Service_CloudTalentSolution_Resource_Projects extends Google_Service_Resource
+class Google_Service_CloudTalentSolution_GoogleCloudTalentV4HistogramQueryResult extends Google_Model
 {
+  public $histogram;
+  public $histogramQuery;
+
+  public function setHistogram($histogram)
+  {
+    $this->histogram = $histogram;
+  }
+  public function getHistogram()
+  {
+    return $this->histogram;
+  }
+  public function setHistogramQuery($histogramQuery)
+  {
+    $this->histogramQuery = $histogramQuery;
+  }
+  public function getHistogramQuery()
+  {
+    return $this->histogramQuery;
+  }
 }

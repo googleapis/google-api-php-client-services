@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $jobsService = new Google_Service_CloudTalentSolution(...);
- *   $projects = $jobsService->projects;
- *  </code>
- */
-class Google_Service_CloudTalentSolution_Resource_Projects extends Google_Service_Resource
+class Google_Service_CloudTalentSolution_GoogleCloudTalentV4SearchJobsRequestCustomRankingInfo extends Google_Model
 {
+  public $importanceLevel;
+  public $rankingExpression;
+
+  public function setImportanceLevel($importanceLevel)
+  {
+    $this->importanceLevel = $importanceLevel;
+  }
+  public function getImportanceLevel()
+  {
+    return $this->importanceLevel;
+  }
+  public function setRankingExpression($rankingExpression)
+  {
+    $this->rankingExpression = $rankingExpression;
+  }
+  public function getRankingExpression()
+  {
+    return $this->rankingExpression;
+  }
 }
