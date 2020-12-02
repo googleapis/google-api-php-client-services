@@ -28,6 +28,11 @@ jobs:
           script: |
             // only approve PRs from yoshi-automation user
             console.log("submitted by " + context.payload.sender.login)
+            if (context.payload.sender.login != "bshaffer") {
+              console.log("equality doesn't work")
+            } else {
+              console.log("equality works")
+            }
             if (context.payload.sender.login != "yoshi-automation") {
               console.log("skipping: not from yoshi-automation")
               return;
