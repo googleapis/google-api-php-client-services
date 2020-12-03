@@ -28,7 +28,7 @@ class Google_Service_CloudBuild_Resource_ProjectsLocationsBuilds extends Google_
   /**
    * Cancels a build in progress. (builds.cancel)
    *
-   * @param string $name The name of the `Build` to retrieve. Format:
+   * @param string $name The name of the `Build` to cancel. Format:
    * `projects/{project}/locations/{location}/builds/{build}`
    * @param Google_Service_CloudBuild_CancelBuildRequest $postBody
    * @param array $optParams Optional parameters.

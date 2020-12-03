@@ -2564,6 +2564,16 @@ class Google_Service_DisplayVideo extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'search' => array(
+              'path' => 'v1/targetingTypes/{+targetingType}/targetingOptions:search',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'targetingType' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )

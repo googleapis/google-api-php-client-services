@@ -45,6 +45,9 @@ class Google_Service_Area120Tables extends Google_Service
   /** View your Google Spreadsheets. */
   const SPREADSHEETS_READONLY =
       "https://www.googleapis.com/auth/spreadsheets.readonly";
+  /** See, edit, create, and delete your tables in Tables by Area 120. */
+  const TABLES =
+      "https://www.googleapis.com/auth/tables";
 
   public $tables;
   public $tables_rows;

@@ -22,6 +22,8 @@ class Google_Service_Sheets_WaterfallChartSeries extends Google_Collection
   protected $customSubtotalsDataType = 'array';
   protected $dataType = 'Google_Service_Sheets_ChartData';
   protected $dataDataType = '';
+  protected $dataLabelType = 'Google_Service_Sheets_DataLabel';
+  protected $dataLabelDataType = '';
   public $hideTrailingSubtotal;
   protected $negativeColumnsStyleType = 'Google_Service_Sheets_WaterfallChartColumnStyle';
   protected $negativeColumnsStyleDataType = '';
@@ -57,6 +59,20 @@ class Google_Service_Sheets_WaterfallChartSeries extends Google_Collection
   public function getData()
   {
     return $this->data;
+  }
+  /**
+   * @param Google_Service_Sheets_DataLabel
+   */
+  public function setDataLabel(Google_Service_Sheets_DataLabel $dataLabel)
+  {
+    $this->dataLabel = $dataLabel;
+  }
+  /**
+   * @return Google_Service_Sheets_DataLabel
+   */
+  public function getDataLabel()
+  {
+    return $this->dataLabel;
   }
   public function setHideTrailingSubtotal($hideTrailingSubtotal)
   {

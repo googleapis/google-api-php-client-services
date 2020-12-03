@@ -32,7 +32,11 @@ class Google_Service_HangoutsChat extends Google_Service
 {
 
 
+  public $dms;
+  public $dms_conversations;
   public $media;
+  public $rooms;
+  public $rooms_conversations;
   public $spaces;
   public $spaces_members;
   public $spaces_messages;
@@ -53,6 +57,54 @@ class Google_Service_HangoutsChat extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'chat';
 
+    $this->dms = new Google_Service_HangoutsChat_Resource_Dms(
+        $this,
+        $this->serviceName,
+        'dms',
+        array(
+          'methods' => array(
+            'messages' => array(
+              'path' => 'v1/{+parent}/messages',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'threadKey' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->dms_conversations = new Google_Service_HangoutsChat_Resource_DmsConversations(
+        $this,
+        $this->serviceName,
+        'conversations',
+        array(
+          'methods' => array(
+            'messages' => array(
+              'path' => 'v1/{+parent}/messages',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'threadKey' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->media = new Google_Service_HangoutsChat_Resource_Media(
         $this,
         $this->serviceName,
@@ -67,6 +119,54 @@ class Google_Service_HangoutsChat extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->rooms = new Google_Service_HangoutsChat_Resource_Rooms(
+        $this,
+        $this->serviceName,
+        'rooms',
+        array(
+          'methods' => array(
+            'messages' => array(
+              'path' => 'v1/{+parent}/messages',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'threadKey' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->rooms_conversations = new Google_Service_HangoutsChat_Resource_RoomsConversations(
+        $this,
+        $this->serviceName,
+        'conversations',
+        array(
+          'methods' => array(
+            'messages' => array(
+              'path' => 'v1/{+parent}/messages',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'threadKey' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

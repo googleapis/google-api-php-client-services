@@ -43,6 +43,7 @@ class Google_Service_AdExchangeBuyerII_Proposal extends Google_Collection
   protected $sellerDataType = '';
   protected $sellerContactsType = 'Google_Service_AdExchangeBuyerII_ContactInformation';
   protected $sellerContactsDataType = 'array';
+  public $termsAndConditions;
   public $updateTime;
 
   /**
@@ -228,6 +229,14 @@ class Google_Service_AdExchangeBuyerII_Proposal extends Google_Collection
   public function getSellerContacts()
   {
     return $this->sellerContacts;
+  }
+  public function setTermsAndConditions($termsAndConditions)
+  {
+    $this->termsAndConditions = $termsAndConditions;
+  }
+  public function getTermsAndConditions()
+  {
+    return $this->termsAndConditions;
   }
   public function setUpdateTime($updateTime)
   {

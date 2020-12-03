@@ -19,9 +19,8 @@ class Google_Service_CloudTalentSolution_SearchJobsResponse extends Google_Colle
 {
   protected $collection_key = 'matchingJobs';
   public $broadenedQueryJobsCount;
-  public $estimatedTotalSize;
-  protected $histogramResultsType = 'Google_Service_CloudTalentSolution_HistogramResults';
-  protected $histogramResultsDataType = '';
+  protected $histogramQueryResultsType = 'Google_Service_CloudTalentSolution_HistogramQueryResult';
+  protected $histogramQueryResultsDataType = 'array';
   protected $locationFiltersType = 'Google_Service_CloudTalentSolution_Location';
   protected $locationFiltersDataType = 'array';
   protected $matchingJobsType = 'Google_Service_CloudTalentSolution_MatchingJob';
@@ -41,27 +40,19 @@ class Google_Service_CloudTalentSolution_SearchJobsResponse extends Google_Colle
   {
     return $this->broadenedQueryJobsCount;
   }
-  public function setEstimatedTotalSize($estimatedTotalSize)
+  /**
+   * @param Google_Service_CloudTalentSolution_HistogramQueryResult[]
+   */
+  public function setHistogramQueryResults($histogramQueryResults)
   {
-    $this->estimatedTotalSize = $estimatedTotalSize;
-  }
-  public function getEstimatedTotalSize()
-  {
-    return $this->estimatedTotalSize;
+    $this->histogramQueryResults = $histogramQueryResults;
   }
   /**
-   * @param Google_Service_CloudTalentSolution_HistogramResults
+   * @return Google_Service_CloudTalentSolution_HistogramQueryResult[]
    */
-  public function setHistogramResults(Google_Service_CloudTalentSolution_HistogramResults $histogramResults)
+  public function getHistogramQueryResults()
   {
-    $this->histogramResults = $histogramResults;
-  }
-  /**
-   * @return Google_Service_CloudTalentSolution_HistogramResults
-   */
-  public function getHistogramResults()
-  {
-    return $this->histogramResults;
+    return $this->histogramQueryResults;
   }
   /**
    * @param Google_Service_CloudTalentSolution_Location[]

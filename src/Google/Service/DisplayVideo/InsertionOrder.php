@@ -29,6 +29,7 @@ class Google_Service_DisplayVideo_InsertionOrder extends Google_Collection
   protected $frequencyCapType = 'Google_Service_DisplayVideo_FrequencyCap';
   protected $frequencyCapDataType = '';
   public $insertionOrderId;
+  public $insertionOrderType;
   protected $integrationDetailsType = 'Google_Service_DisplayVideo_IntegrationDetails';
   protected $integrationDetailsDataType = '';
   public $name;
@@ -121,6 +122,14 @@ class Google_Service_DisplayVideo_InsertionOrder extends Google_Collection
   public function getInsertionOrderId()
   {
     return $this->insertionOrderId;
+  }
+  public function setInsertionOrderType($insertionOrderType)
+  {
+    $this->insertionOrderType = $insertionOrderType;
+  }
+  public function getInsertionOrderType()
+  {
+    return $this->insertionOrderType;
   }
   /**
    * @param Google_Service_DisplayVideo_IntegrationDetails

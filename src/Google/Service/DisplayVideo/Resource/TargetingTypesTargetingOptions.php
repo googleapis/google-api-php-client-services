@@ -87,4 +87,20 @@ class Google_Service_DisplayVideo_Resource_TargetingTypesTargetingOptions extend
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_DisplayVideo_ListTargetingOptionsResponse");
   }
+  /**
+   * Searches for targeting options of a given type based on the given search
+   * terms. (targetingOptions.search)
+   *
+   * @param string $targetingType Required. The type of targeting options to
+   * retrieve. Accepted values are: * `TARGETING_TYPE_GEO_REGION`
+   * @param Google_Service_DisplayVideo_SearchTargetingOptionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_DisplayVideo_SearchTargetingOptionsResponse
+   */
+  public function search($targetingType, Google_Service_DisplayVideo_SearchTargetingOptionsRequest $postBody, $optParams = array())
+  {
+    $params = array('targetingType' => $targetingType, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('search', array($params), "Google_Service_DisplayVideo_SearchTargetingOptionsResponse");
+  }
 }

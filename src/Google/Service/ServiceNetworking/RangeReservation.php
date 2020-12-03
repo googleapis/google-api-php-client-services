@@ -19,6 +19,7 @@ class Google_Service_ServiceNetworking_RangeReservation extends Google_Collectio
 {
   protected $collection_key = 'secondaryRangeIpPrefixLengths';
   public $ipPrefixLength;
+  public $requestedRanges;
   public $secondaryRangeIpPrefixLengths;
 
   public function setIpPrefixLength($ipPrefixLength)
@@ -28,6 +29,14 @@ class Google_Service_ServiceNetworking_RangeReservation extends Google_Collectio
   public function getIpPrefixLength()
   {
     return $this->ipPrefixLength;
+  }
+  public function setRequestedRanges($requestedRanges)
+  {
+    $this->requestedRanges = $requestedRanges;
+  }
+  public function getRequestedRanges()
+  {
+    return $this->requestedRanges;
   }
   public function setSecondaryRangeIpPrefixLengths($secondaryRangeIpPrefixLengths)
   {

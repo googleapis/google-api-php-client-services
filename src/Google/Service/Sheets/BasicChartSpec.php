@@ -32,6 +32,8 @@ class Google_Service_Sheets_BasicChartSpec extends Google_Collection
   protected $seriesDataType = 'array';
   public $stackedType;
   public $threeDimensional;
+  protected $totalDataLabelType = 'Google_Service_Sheets_DataLabel';
+  protected $totalDataLabelDataType = '';
 
   /**
    * @param Google_Service_Sheets_BasicChartAxis[]
@@ -138,5 +140,19 @@ class Google_Service_Sheets_BasicChartSpec extends Google_Collection
   public function getThreeDimensional()
   {
     return $this->threeDimensional;
+  }
+  /**
+   * @param Google_Service_Sheets_DataLabel
+   */
+  public function setTotalDataLabel(Google_Service_Sheets_DataLabel $totalDataLabel)
+  {
+    $this->totalDataLabel = $totalDataLabel;
+  }
+  /**
+   * @return Google_Service_Sheets_DataLabel
+   */
+  public function getTotalDataLabel()
+  {
+    return $this->totalDataLabel;
   }
 }
