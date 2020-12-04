@@ -211,6 +211,19 @@ class Google_Service_Games extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'getEndPoint' => array(
+              'path' => 'games/v1/applications/getEndPoint',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'applicationId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'endPointType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'played' => array(
               'path' => 'games/v1/applications/played',
               'httpMethod' => 'POST',

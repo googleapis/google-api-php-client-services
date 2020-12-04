@@ -15,19 +15,27 @@
  * the License.
  */
 
-class Google_Service_Games_SnapshotCoverImageResource extends Google_Model
+class Google_Service_Games_SnapshotCoverImageResource extends Google_Collection
 {
-  public $contentHash;
+  protected $collection_key = 'contentHash';
+  protected $contentHashType = 'Google_Service_Games_ContentHash';
+  protected $contentHashDataType = 'array';
   public $downloadUrl;
   public $height;
   public $mimeType;
   public $resourceId;
   public $width;
 
+  /**
+   * @param Google_Service_Games_ContentHash[]
+   */
   public function setContentHash($contentHash)
   {
     $this->contentHash = $contentHash;
   }
+  /**
+   * @return Google_Service_Games_ContentHash[]
+   */
   public function getContentHash()
   {
     return $this->contentHash;

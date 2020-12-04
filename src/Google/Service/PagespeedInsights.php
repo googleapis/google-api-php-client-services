@@ -64,6 +64,11 @@ class Google_Service_PagespeedInsights extends Google_Service
               'path' => 'pagespeedonline/v5/runPagespeed',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'url' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'required' => true,
+                ),
                 'captchaToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -78,10 +83,6 @@ class Google_Service_PagespeedInsights extends Google_Service
                   'type' => 'string',
                 ),
                 'strategy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'url' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

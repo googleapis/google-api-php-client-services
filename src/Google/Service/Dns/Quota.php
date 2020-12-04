@@ -19,6 +19,7 @@ class Google_Service_Dns_Quota extends Google_Collection
 {
   protected $collection_key = 'whitelistedKeySpecs';
   public $dnsKeysPerManagedZone;
+  public $gkeClustersPerPolicy;
   public $kind;
   public $managedZones;
   public $managedZonesPerNetwork;
@@ -42,6 +43,14 @@ class Google_Service_Dns_Quota extends Google_Collection
   public function getDnsKeysPerManagedZone()
   {
     return $this->dnsKeysPerManagedZone;
+  }
+  public function setGkeClustersPerPolicy($gkeClustersPerPolicy)
+  {
+    $this->gkeClustersPerPolicy = $gkeClustersPerPolicy;
+  }
+  public function getGkeClustersPerPolicy()
+  {
+    return $this->gkeClustersPerPolicy;
   }
   public function setKind($kind)
   {
