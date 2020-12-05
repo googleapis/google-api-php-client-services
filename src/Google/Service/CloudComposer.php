@@ -140,6 +140,10 @@ class Google_Service_CloudComposer extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'includePastReleases' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',

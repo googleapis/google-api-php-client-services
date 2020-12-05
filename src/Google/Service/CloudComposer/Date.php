@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_Dataproc_InstanceReference extends Google_Model
+class Google_Service_CloudComposer_Date extends Google_Model
 {
-  public $instanceId;
-  public $instanceName;
-  public $publicKey;
+  public $day;
+  public $month;
+  public $year;
 
-  public function setInstanceId($instanceId)
+  public function setDay($day)
   {
-    $this->instanceId = $instanceId;
+    $this->day = $day;
   }
-  public function getInstanceId()
+  public function getDay()
   {
-    return $this->instanceId;
+    return $this->day;
   }
-  public function setInstanceName($instanceName)
+  public function setMonth($month)
   {
-    $this->instanceName = $instanceName;
+    $this->month = $month;
   }
-  public function getInstanceName()
+  public function getMonth()
   {
-    return $this->instanceName;
+    return $this->month;
   }
-  public function setPublicKey($publicKey)
+  public function setYear($year)
   {
-    $this->publicKey = $publicKey;
+    $this->year = $year;
   }
-  public function getPublicKey()
+  public function getYear()
   {
-    return $this->publicKey;
+    return $this->year;
   }
 }

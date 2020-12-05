@@ -19,6 +19,7 @@ class Google_Service_Dataproc_WorkflowTemplate extends Google_Collection
 {
   protected $collection_key = 'parameters';
   public $createTime;
+  public $dagTimeout;
   public $id;
   protected $jobsType = 'Google_Service_Dataproc_OrderedJob';
   protected $jobsDataType = 'array';
@@ -38,6 +39,14 @@ class Google_Service_Dataproc_WorkflowTemplate extends Google_Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setDagTimeout($dagTimeout)
+  {
+    $this->dagTimeout = $dagTimeout;
+  }
+  public function getDagTimeout()
+  {
+    return $this->dagTimeout;
   }
   public function setId($id)
   {

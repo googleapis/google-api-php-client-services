@@ -27,6 +27,8 @@ class Google_Service_CloudComposer_EnvironmentConfig extends Google_Model
   protected $privateEnvironmentConfigDataType = '';
   protected $softwareConfigType = 'Google_Service_CloudComposer_SoftwareConfig';
   protected $softwareConfigDataType = '';
+  protected $webServerNetworkAccessControlType = 'Google_Service_CloudComposer_WebServerNetworkAccessControl';
+  protected $webServerNetworkAccessControlDataType = '';
 
   public function setAirflowUri($airflowUri)
   {
@@ -101,5 +103,19 @@ class Google_Service_CloudComposer_EnvironmentConfig extends Google_Model
   public function getSoftwareConfig()
   {
     return $this->softwareConfig;
+  }
+  /**
+   * @param Google_Service_CloudComposer_WebServerNetworkAccessControl
+   */
+  public function setWebServerNetworkAccessControl(Google_Service_CloudComposer_WebServerNetworkAccessControl $webServerNetworkAccessControl)
+  {
+    $this->webServerNetworkAccessControl = $webServerNetworkAccessControl;
+  }
+  /**
+   * @return Google_Service_CloudComposer_WebServerNetworkAccessControl
+   */
+  public function getWebServerNetworkAccessControl()
+  {
+    return $this->webServerNetworkAccessControl;
   }
 }

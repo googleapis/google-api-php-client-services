@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Dataproc_InstanceReference extends Google_Model
+class Google_Service_CloudComposer_AllowedIpRange extends Google_Model
 {
-  public $instanceId;
-  public $instanceName;
-  public $publicKey;
+  public $description;
+  public $value;
 
-  public function setInstanceId($instanceId)
+  public function setDescription($description)
   {
-    $this->instanceId = $instanceId;
+    $this->description = $description;
   }
-  public function getInstanceId()
+  public function getDescription()
   {
-    return $this->instanceId;
+    return $this->description;
   }
-  public function setInstanceName($instanceName)
+  public function setValue($value)
   {
-    $this->instanceName = $instanceName;
+    $this->value = $value;
   }
-  public function getInstanceName()
+  public function getValue()
   {
-    return $this->instanceName;
-  }
-  public function setPublicKey($publicKey)
-  {
-    $this->publicKey = $publicKey;
-  }
-  public function getPublicKey()
-  {
-    return $this->publicKey;
+    return $this->value;
   }
 }
