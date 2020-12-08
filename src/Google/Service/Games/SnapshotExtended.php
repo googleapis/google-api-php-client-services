@@ -23,7 +23,7 @@ class Google_Service_Games_SnapshotExtended extends Google_Collection
   public $hasConflictingRevisions;
   protected $headRevisionType = 'Google_Service_Games_SnapshotRevision';
   protected $headRevisionDataType = '';
-  public $name;
+  public $snapshotName;
 
   /**
    * @param Google_Service_Games_SnapshotRevision[]
@@ -61,12 +61,12 @@ class Google_Service_Games_SnapshotExtended extends Google_Collection
   {
     return $this->headRevision;
   }
-  public function setName($name)
+  public function setSnapshotName($snapshotName)
   {
-    $this->name = $name;
+    $this->snapshotName = $snapshotName;
   }
-  public function getName()
+  public function getSnapshotName()
   {
-    return $this->name;
+    return $this->snapshotName;
   }
 }

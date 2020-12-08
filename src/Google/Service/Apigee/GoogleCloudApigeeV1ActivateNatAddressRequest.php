@@ -15,14 +15,6 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $dialogflowService = new Google_Service_Dialogflow(...);
- *   $projects = $dialogflowService->projects;
- *  </code>
- */
-class Google_Service_Dialogflow_Resource_Projects extends Google_Service_Resource
+class Google_Service_Apigee_GoogleCloudApigeeV1ActivateNatAddressRequest extends Google_Model
 {
 }

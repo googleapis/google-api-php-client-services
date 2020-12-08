@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $dialogflowService = new Google_Service_Dialogflow(...);
- *   $projects = $dialogflowService->projects;
- *  </code>
- */
-class Google_Service_Dialogflow_Resource_Projects extends Google_Service_Resource
+class Google_Service_Safebrowsing_GoogleSecuritySafebrowsingV4ThreatHitUserInfo extends Google_Model
 {
+  public $regionCode;
+  public $userId;
+
+  public function setRegionCode($regionCode)
+  {
+    $this->regionCode = $regionCode;
+  }
+  public function getRegionCode()
+  {
+    return $this->regionCode;
+  }
+  public function setUserId($userId)
+  {
+    $this->userId = $userId;
+  }
+  public function getUserId()
+  {
+    return $this->userId;
+  }
 }

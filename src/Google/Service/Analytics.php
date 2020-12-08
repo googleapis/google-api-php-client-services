@@ -88,7 +88,7 @@ class Google_Service_Analytics extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://analytics.googleapis.com/';
     $this->servicePath = 'analytics/v3/';
     $this->batchPath = 'batch/analytics/v3';
     $this->version = 'v3';

@@ -23,7 +23,7 @@
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/v2_overview#management-server" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/traffic-director" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.

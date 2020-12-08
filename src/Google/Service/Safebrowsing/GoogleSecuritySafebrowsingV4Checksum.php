@@ -15,14 +15,16 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $dialogflowService = new Google_Service_Dialogflow(...);
- *   $projects = $dialogflowService->projects;
- *  </code>
- */
-class Google_Service_Dialogflow_Resource_Projects extends Google_Service_Resource
+class Google_Service_Safebrowsing_GoogleSecuritySafebrowsingV4Checksum extends Google_Model
 {
+  public $sha256;
+
+  public function setSha256($sha256)
+  {
+    $this->sha256 = $sha256;
+  }
+  public function getSha256()
+  {
+    return $this->sha256;
+  }
 }

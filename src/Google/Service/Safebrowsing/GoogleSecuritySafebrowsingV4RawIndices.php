@@ -15,14 +15,17 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $dialogflowService = new Google_Service_Dialogflow(...);
- *   $projects = $dialogflowService->projects;
- *  </code>
- */
-class Google_Service_Dialogflow_Resource_Projects extends Google_Service_Resource
+class Google_Service_Safebrowsing_GoogleSecuritySafebrowsingV4RawIndices extends Google_Collection
 {
+  protected $collection_key = 'indices';
+  public $indices;
+
+  public function setIndices($indices)
+  {
+    $this->indices = $indices;
+  }
+  public function getIndices()
+  {
+    return $this->indices;
+  }
 }
