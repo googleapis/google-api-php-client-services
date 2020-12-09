@@ -124,7 +124,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
     return $this->call('get', array($params), "Google_Service_DLP_GooglePrivacyDlpV2DlpJob");
   }
   /**
-   * Inspect hybrid content and store findings to a job. To review the findings
+   * Inspect hybrid content and store findings to a job. To review the findings,
    * inspect the job. Inspection will occur asynchronously. Early access feature
    * is in a pre-release state and might change or have limited support. For more
    * information, see https://cloud.google.com/products#product-launch-stages.
