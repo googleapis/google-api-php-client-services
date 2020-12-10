@@ -19,8 +19,8 @@
  * Service definition for ServiceControl (v2).
  *
  * <p>
- * Provides control plane functionality to managed services, such as logging,
- * monitoring, and status checks.</p>
+ * Provides admission control and telemetry reporting for services integrated
+ * with Service Infrastructure.</p>
  *
  * <p>
  * For more information about this service, see the API

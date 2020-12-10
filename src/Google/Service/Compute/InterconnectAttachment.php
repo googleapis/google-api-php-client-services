@@ -31,6 +31,7 @@ class Google_Service_Compute_InterconnectAttachment extends Google_Collection
   public $id;
   public $interconnect;
   public $kind;
+  public $mtu;
   public $name;
   public $operationalStatus;
   public $pairingKey;
@@ -149,6 +150,14 @@ class Google_Service_Compute_InterconnectAttachment extends Google_Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setMtu($mtu)
+  {
+    $this->mtu = $mtu;
+  }
+  public function getMtu()
+  {
+    return $this->mtu;
   }
   public function setName($name)
   {

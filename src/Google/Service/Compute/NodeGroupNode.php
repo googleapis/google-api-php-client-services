@@ -18,7 +18,11 @@
 class Google_Service_Compute_NodeGroupNode extends Google_Collection
 {
   protected $collection_key = 'instances';
+  protected $acceleratorsType = 'Google_Service_Compute_AcceleratorConfig';
+  protected $acceleratorsDataType = 'array';
   public $cpuOvercommitType;
+  protected $disksType = 'Google_Service_Compute_LocalDisk';
+  protected $disksDataType = 'array';
   public $instances;
   public $name;
   public $nodeType;
@@ -27,6 +31,20 @@ class Google_Service_Compute_NodeGroupNode extends Google_Collection
   public $serverId;
   public $status;
 
+  /**
+   * @param Google_Service_Compute_AcceleratorConfig[]
+   */
+  public function setAccelerators($accelerators)
+  {
+    $this->accelerators = $accelerators;
+  }
+  /**
+   * @return Google_Service_Compute_AcceleratorConfig[]
+   */
+  public function getAccelerators()
+  {
+    return $this->accelerators;
+  }
   public function setCpuOvercommitType($cpuOvercommitType)
   {
     $this->cpuOvercommitType = $cpuOvercommitType;
@@ -34,6 +52,20 @@ class Google_Service_Compute_NodeGroupNode extends Google_Collection
   public function getCpuOvercommitType()
   {
     return $this->cpuOvercommitType;
+  }
+  /**
+   * @param Google_Service_Compute_LocalDisk[]
+   */
+  public function setDisks($disks)
+  {
+    $this->disks = $disks;
+  }
+  /**
+   * @return Google_Service_Compute_LocalDisk[]
+   */
+  public function getDisks()
+  {
+    return $this->disks;
   }
   public function setInstances($instances)
   {

@@ -126,7 +126,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * https://cloud.google.com/apis/design/design_patterns#sorting_order Fields
    * available for ordering are: * `send_time`
    * @opt_param int pageSize Limit on the number of messages to return in a single
-   * response. If zero the default page size of 100 is used.
+   * response. If not specified, 100 is used. May not be larger than 1000.
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
    * @opt_param string view Specifies the parts of the Message to return in the

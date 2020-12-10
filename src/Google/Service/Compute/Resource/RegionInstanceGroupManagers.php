@@ -544,10 +544,9 @@ class Google_Service_Compute_Resource_RegionInstanceGroupManagers extends Google
     return $this->call('patch', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * Insert or patch (for the ones that already exist) per-instance configs for
-   * the managed instance group. perInstanceConfig.instance serves as a key used
-   * to distinguish whether to perform insert or patch.
-   * (regionInstanceGroupManagers.patchPerInstanceConfigs)
+   * Inserts or patches per-instance configs for the managed instance group.
+   * perInstanceConfig.name serves as a key used to distinguish whether to perform
+   * insert or patch. (regionInstanceGroupManagers.patchPerInstanceConfigs)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request, should conform
@@ -723,10 +722,9 @@ class Google_Service_Compute_Resource_RegionInstanceGroupManagers extends Google
     return $this->call('setTargetPools', array($params), "Google_Service_Compute_Operation");
   }
   /**
-   * Insert or update (for the ones that already exist) per-instance configs for
-   * the managed instance group. perInstanceConfig.instance serves as a key used
-   * to distinguish whether to perform insert or patch.
-   * (regionInstanceGroupManagers.updatePerInstanceConfigs)
+   * Inserts or updates per-instance configs for the managed instance group.
+   * perInstanceConfig.name serves as a key used to distinguish whether to perform
+   * insert or patch. (regionInstanceGroupManagers.updatePerInstanceConfigs)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region scoping this request, should conform

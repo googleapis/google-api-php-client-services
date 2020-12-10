@@ -176,6 +176,10 @@ class Google_Service_Eventarc extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'validateOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'delete' => array(
               'path' => 'v1beta1/{+name}',
@@ -186,9 +190,17 @@ class Google_Service_Eventarc extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'allowMissing' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'etag' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'validateOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'get' => array(
@@ -246,9 +258,17 @@ class Google_Service_Eventarc extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'allowMissing' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'validateOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'setIamPolicy' => array(

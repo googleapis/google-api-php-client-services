@@ -107,7 +107,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    * Only filtering on labels is supported. For example, `labels.key=value`.
    * @opt_param int pageSize Limit on the number of HL7v2 stores to return in a
-   * single response. If zero the default page size of 100 is used.
+   * single response. If not specified, 100 is used. May not be larger than 1000.
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
    * @return Google_Service_CloudHealthcare_ListHl7V2StoresResponse

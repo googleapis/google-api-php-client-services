@@ -28,6 +28,7 @@ class Google_Service_Compute_NetworkInterface extends Google_Collection
   public $name;
   public $network;
   public $networkIP;
+  public $nicType;
   public $subnetwork;
 
   /**
@@ -105,6 +106,14 @@ class Google_Service_Compute_NetworkInterface extends Google_Collection
   public function getNetworkIP()
   {
     return $this->networkIP;
+  }
+  public function setNicType($nicType)
+  {
+    $this->nicType = $nicType;
+  }
+  public function getNicType()
+  {
+    return $this->nicType;
   }
   public function setSubnetwork($subnetwork)
   {

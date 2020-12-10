@@ -25,6 +25,8 @@ class Google_Service_Compute_NodeGroup extends Google_Model
   public $id;
   public $kind;
   public $maintenancePolicy;
+  protected $maintenanceWindowType = 'Google_Service_Compute_NodeGroupMaintenanceWindow';
+  protected $maintenanceWindowDataType = '';
   public $name;
   public $nodeTemplate;
   public $selfLink;
@@ -93,6 +95,20 @@ class Google_Service_Compute_NodeGroup extends Google_Model
   public function getMaintenancePolicy()
   {
     return $this->maintenancePolicy;
+  }
+  /**
+   * @param Google_Service_Compute_NodeGroupMaintenanceWindow
+   */
+  public function setMaintenanceWindow(Google_Service_Compute_NodeGroupMaintenanceWindow $maintenanceWindow)
+  {
+    $this->maintenanceWindow = $maintenanceWindow;
+  }
+  /**
+   * @return Google_Service_Compute_NodeGroupMaintenanceWindow
+   */
+  public function getMaintenanceWindow()
+  {
+    return $this->maintenanceWindow;
   }
   public function setName($name)
   {

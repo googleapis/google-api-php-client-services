@@ -131,8 +131,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasets extends 
    * listed. For example, `projects/{project_id}/locations/{location_id}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of items to return. Capped to 100
-   * if not specified. May not be larger than 1000.
+   * @opt_param int pageSize The maximum number of items to return. If not
+   * specified, 100 is used. May not be larger than 1000.
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
    * @return Google_Service_CloudHealthcare_ListDatasetsResponse

@@ -35,6 +35,8 @@ class Google_Service_Eventarc_Resource_ProjectsLocationsTriggers extends Google_
    *
    * @opt_param string triggerId Required. The user-provided ID to be assigned to
    * the trigger.
+   * @opt_param bool validateOnly Required. If set, validate the request and
+   * preview the review, but do not actually post it.
    * @return Google_Service_Eventarc_Operation
    */
   public function create($parent, Google_Service_Eventarc_Trigger $postBody, $optParams = array())
@@ -49,8 +51,12 @@ class Google_Service_Eventarc_Resource_ProjectsLocationsTriggers extends Google_
    * @param string $name Required. The name of the trigger to be deleted.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool allowMissing If set to true, and the trigger is not found,
+   * the request will succeed but no action will be taken on the server.
    * @opt_param string etag If provided, the trigger will only be deleted if the
    * etag matches the current etag on the resource.
+   * @opt_param bool validateOnly Required. If set, validate the request and
+   * preview the review, but do not actually post it.
    * @return Google_Service_Eventarc_Operation
    */
   public function delete($name, $optParams = array())
@@ -125,15 +131,19 @@ class Google_Service_Eventarc_Resource_ProjectsLocationsTriggers extends Google_
    * Update a single trigger. (triggers.patch)
    *
    * @param string $name Required. The resource name of the trigger. Must be
-   * unique within the location on the project. Format:
-   * projects/{project}/locations/{location}/triggers/{trigger}
+   * unique within the location on the project and must in
+   * `projects/{project}/locations/{location}/triggers/{trigger}` format.
    * @param Google_Service_Eventarc_Trigger $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool allowMissing If set to true, and the trigger is not found, a
+   * new trigger will be created. In this situation, `update_mask` is ignored.
    * @opt_param string updateMask The fields to be updated; only fields explicitly
    * provided will be updated. If no field mask is provided, all provided fields
    * in the request will be updated. To update all fields, provide a field mask of
    * "*".
+   * @opt_param bool validateOnly Required. If set, validate the request and
+   * preview the review, but do not actually post it.
    * @return Google_Service_Eventarc_Operation
    */
   public function patch($name, Google_Service_Eventarc_Trigger $postBody, $optParams = array())
