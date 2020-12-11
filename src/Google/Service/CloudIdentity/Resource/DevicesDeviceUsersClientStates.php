@@ -89,7 +89,10 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsersClientStates exten
     return $this->call('list', array($params), "Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ListClientStatesResponse");
   }
   /**
-   * Updates the client state for the device user (clientStates.patch)
+   * Updates the client state for the device user **Note**: This method is
+   * available only to customers who have one of the following SKUs: Enterprise
+   * Standard, Enterprise Plus, Enterprise for Education, and Cloud Identity
+   * Premium (clientStates.patch)
    *
    * @param string $name Output only. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the ClientState

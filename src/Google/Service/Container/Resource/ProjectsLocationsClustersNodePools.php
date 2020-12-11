@@ -175,7 +175,9 @@ class Google_Service_Container_Resource_ProjectsLocationsClustersNodePools exten
     return $this->call('setManagement', array($params), "Google_Service_Container_Operation");
   }
   /**
-   * Sets the size for a specific node pool. (nodePools.setSize)
+   * Sets the size for a specific node pool. The new size will be used for all
+   * replicas, including future replicas created by modifying NodePool.locations.
+   * (nodePools.setSize)
    *
    * @param string $name The name (project, location, cluster, node pool id) of
    * the node pool to set size. Specified in the format

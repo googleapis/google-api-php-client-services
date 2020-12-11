@@ -36,6 +36,7 @@ class Google_Service_Transcoder_Job extends Google_Collection
   public $startTime;
   public $state;
   public $templateId;
+  public $ttlAfterCompletionDays;
 
   /**
    * @param Google_Service_Transcoder_JobConfig
@@ -172,5 +173,13 @@ class Google_Service_Transcoder_Job extends Google_Collection
   public function getTemplateId()
   {
     return $this->templateId;
+  }
+  public function setTtlAfterCompletionDays($ttlAfterCompletionDays)
+  {
+    $this->ttlAfterCompletionDays = $ttlAfterCompletionDays;
+  }
+  public function getTtlAfterCompletionDays()
+  {
+    return $this->ttlAfterCompletionDays;
   }
 }

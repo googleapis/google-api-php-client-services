@@ -43,6 +43,7 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   public $desiredNodeVersion;
   protected $desiredPrivateClusterConfigType = 'Google_Service_Container_PrivateClusterConfig';
   protected $desiredPrivateClusterConfigDataType = '';
+  public $desiredPrivateIpv6GoogleAccess;
   protected $desiredReleaseChannelType = 'Google_Service_Container_ReleaseChannel';
   protected $desiredReleaseChannelDataType = '';
   protected $desiredResourceUsageExportConfigType = 'Google_Service_Container_ResourceUsageExportConfig';
@@ -235,6 +236,14 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   public function getDesiredPrivateClusterConfig()
   {
     return $this->desiredPrivateClusterConfig;
+  }
+  public function setDesiredPrivateIpv6GoogleAccess($desiredPrivateIpv6GoogleAccess)
+  {
+    $this->desiredPrivateIpv6GoogleAccess = $desiredPrivateIpv6GoogleAccess;
+  }
+  public function getDesiredPrivateIpv6GoogleAccess()
+  {
+    return $this->desiredPrivateIpv6GoogleAccess;
   }
   /**
    * @param Google_Service_Container_ReleaseChannel

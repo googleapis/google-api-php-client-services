@@ -57,9 +57,7 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesAndroidAppDataStrea
     return $this->call('delete', array($params), "Google_Service_GoogleAnalyticsAdmin_GoogleProtobufEmpty");
   }
   /**
-   * Lookup for a single AndroidAppDataStream Throws "Target not found" if no such
-   * android app data stream found, or if the caller does not have permissions to
-   * access it. (androidAppDataStreams.get)
+   * Lookup for a single AndroidAppDataStream (androidAppDataStreams.get)
    *
    * @param string $name Required. The name of the android app data stream to
    * lookup. Format: properties/{property_id}/androidAppDataStreams/{stream_id}

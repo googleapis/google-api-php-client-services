@@ -60,9 +60,7 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Properties extends Google_Ser
     return $this->call('delete', array($params), "Google_Service_GoogleAnalyticsAdmin_GoogleProtobufEmpty");
   }
   /**
-   * Lookup for a single "GA4" Property. Throws "Target not found" if no such
-   * property found, if property is not of the type "GA4", or if caller does not
-   * have permissions to access it. (properties.get)
+   * Lookup for a single "GA4" Property. (properties.get)
    *
    * @param string $name Required. The name of the property to lookup. Format:
    * properties/{property_id} Example: "properties/1000"

@@ -183,10 +183,6 @@ class Google_Service_DeploymentManager extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'returnPartialSuccess' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
               ),
             ),'patch' => array(
               'path' => 'deploymentmanager/v2/projects/{project}/global/deployments/{deployment}',
@@ -347,10 +343,6 @@ class Google_Service_DeploymentManager extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'returnPartialSuccess' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
               ),
             ),
           )
@@ -401,10 +393,6 @@ class Google_Service_DeploymentManager extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'returnPartialSuccess' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),
@@ -467,10 +455,6 @@ class Google_Service_DeploymentManager extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'returnPartialSuccess' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
               ),
             ),
           )
@@ -506,10 +490,6 @@ class Google_Service_DeploymentManager extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'returnPartialSuccess' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),

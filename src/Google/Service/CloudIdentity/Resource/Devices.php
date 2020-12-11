@@ -49,7 +49,10 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
     return $this->call('cancelWipe', array($params), "Google_Service_CloudIdentity_Operation");
   }
   /**
-   * Creates a device. Only company-owned device may be created. (devices.create)
+   * Creates a device. Only company-owned device may be created. **Note**: This
+   * method is available only to customers who have one of the following SKUs:
+   * Enterprise Standard, Enterprise Plus, Enterprise for Education, and Cloud
+   * Identity Premium (devices.create)
    *
    * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device $postBody
    * @param array $optParams Optional parameters.

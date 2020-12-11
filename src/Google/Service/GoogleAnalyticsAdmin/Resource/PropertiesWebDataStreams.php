@@ -57,9 +57,7 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesWebDataStreams exte
     return $this->call('delete', array($params), "Google_Service_GoogleAnalyticsAdmin_GoogleProtobufEmpty");
   }
   /**
-   * Lookup for a single WebDataStream Throws "Target not found" if no such web
-   * data stream found, or if the caller does not have permissions to access it.
-   * (webDataStreams.get)
+   * Lookup for a single WebDataStream (webDataStreams.get)
    *
    * @param string $name Required. The name of the web data stream to lookup.
    * Format: properties/{property_id}/webDataStreams/{stream_id} Example:

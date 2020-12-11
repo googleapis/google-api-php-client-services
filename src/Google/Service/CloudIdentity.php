@@ -480,7 +480,21 @@ class Google_Service_CloudIdentity extends Google_Service
         'memberships',
         array(
           'methods' => array(
-            'create' => array(
+            'checkTransitiveMembership' => array(
+              'path' => 'v1/{+parent}/memberships:checkTransitiveMembership',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'query' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'create' => array(
               'path' => 'v1/{+parent}/memberships',
               'httpMethod' => 'POST',
               'parameters' => array(
@@ -508,6 +522,20 @@ class Google_Service_CloudIdentity extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),'getMembershipGraph' => array(
+              'path' => 'v1/{+parent}/memberships:getMembershipGraph',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'query' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'list' => array(
@@ -558,6 +586,46 @@ class Google_Service_CloudIdentity extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),'searchTransitiveGroups' => array(
+              'path' => 'v1/{+parent}/memberships:searchTransitiveGroups',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'query' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'searchTransitiveMemberships' => array(
+              'path' => 'v1/{+parent}/memberships:searchTransitiveMemberships',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

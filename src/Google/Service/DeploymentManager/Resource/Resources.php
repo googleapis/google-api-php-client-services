@@ -79,9 +79,6 @@ class Google_Service_DeploymentManager_Resource_Resources extends Google_Service
    * @opt_param string pageToken Specifies a page token to use. Set `pageToken` to
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
-   * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
    * @return Google_Service_DeploymentManager_ResourcesListResponse
    */
   public function listResources($project, $deployment, $optParams = array())

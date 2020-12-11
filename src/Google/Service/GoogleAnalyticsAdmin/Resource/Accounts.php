@@ -46,8 +46,7 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_Accounts extends Google_Servi
     return $this->call('delete', array($params), "Google_Service_GoogleAnalyticsAdmin_GoogleProtobufEmpty");
   }
   /**
-   * Lookup for a single Account. Throws "Target not found" if no such account
-   * found, or if caller does not have permissions to access it. (accounts.get)
+   * Lookup for a single Account. (accounts.get)
    *
    * @param string $name Required. The name of the account to lookup. Format:
    * accounts/{account} Example: "accounts/100"
