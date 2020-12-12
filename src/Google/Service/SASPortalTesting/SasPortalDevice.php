@@ -17,7 +17,7 @@
 
 class Google_Service_SASPortalTesting_SasPortalDevice extends Google_Collection
 {
-  protected $collection_key = 'grants';
+  protected $collection_key = 'recommendedChannels';
   protected $activeConfigType = 'Google_Service_SASPortalTesting_SasPortalDeviceConfig';
   protected $activeConfigDataType = '';
   protected $deviceMetadataType = 'Google_Service_SASPortalTesting_SasPortalDeviceMetadata';
@@ -29,6 +29,9 @@ class Google_Service_SASPortalTesting_SasPortalDevice extends Google_Collection
   public $name;
   protected $preloadedConfigType = 'Google_Service_SASPortalTesting_SasPortalDeviceConfig';
   protected $preloadedConfigDataType = '';
+  protected $recommendedChannelsType = 'Google_Service_SASPortalTesting_SasPortalChannelWithScore';
+  protected $recommendedChannelsDataType = 'array';
+  public $recommendedPowerDbmPerMhz;
   public $serialNumber;
   public $state;
 
@@ -111,6 +114,28 @@ class Google_Service_SASPortalTesting_SasPortalDevice extends Google_Collection
   public function getPreloadedConfig()
   {
     return $this->preloadedConfig;
+  }
+  /**
+   * @param Google_Service_SASPortalTesting_SasPortalChannelWithScore[]
+   */
+  public function setRecommendedChannels($recommendedChannels)
+  {
+    $this->recommendedChannels = $recommendedChannels;
+  }
+  /**
+   * @return Google_Service_SASPortalTesting_SasPortalChannelWithScore[]
+   */
+  public function getRecommendedChannels()
+  {
+    return $this->recommendedChannels;
+  }
+  public function setRecommendedPowerDbmPerMhz($recommendedPowerDbmPerMhz)
+  {
+    $this->recommendedPowerDbmPerMhz = $recommendedPowerDbmPerMhz;
+  }
+  public function getRecommendedPowerDbmPerMhz()
+  {
+    return $this->recommendedPowerDbmPerMhz;
   }
   public function setSerialNumber($serialNumber)
   {
