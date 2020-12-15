@@ -142,6 +142,26 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
     return $this->call('getIamPolicy', array($params), "Google_Service_Dataproc_Policy");
   }
   /**
+   * Inject encrypted credentials into all of the VMs in a cluster.The target
+   * cluster must be a personal auth cluster assigned to the user who is issuing
+   * the RPC. (clusters.injectCredentials)
+   *
+   * @param string $project Required. The ID of the Google Cloud Platform project
+   * the cluster belongs to, of the form projects/.
+   * @param string $region Required. The region containing the cluster, of the
+   * form regions/.
+   * @param string $cluster Required. The cluster, in the form clusters/.
+   * @param Google_Service_Dataproc_InjectCredentialsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Dataproc_Operation
+   */
+  public function injectCredentials($project, $region, $cluster, Google_Service_Dataproc_InjectCredentialsRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'region' => $region, 'cluster' => $cluster, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('injectCredentials', array($params), "Google_Service_Dataproc_Operation");
+  }
+  /**
    * Lists all regions/{region}/clusters in a project alphabetically.
    * (clusters.listProjectsRegionsClusters)
    *

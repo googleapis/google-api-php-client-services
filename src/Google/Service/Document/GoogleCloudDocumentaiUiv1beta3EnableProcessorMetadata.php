@@ -19,10 +19,6 @@ class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EnableProcessorMetad
 {
   protected $commonMetadataType = 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata';
   protected $commonMetadataDataType = '';
-  public $createTime;
-  public $state;
-  public $stateMessage;
-  public $updateTime;
 
   /**
    * @param Google_Service_Document_GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
@@ -37,37 +33,5 @@ class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EnableProcessorMetad
   public function getCommonMetadata()
   {
     return $this->commonMetadata;
-  }
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
-  }
-  public function setStateMessage($stateMessage)
-  {
-    $this->stateMessage = $stateMessage;
-  }
-  public function getStateMessage()
-  {
-    return $this->stateMessage;
-  }
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
   }
 }

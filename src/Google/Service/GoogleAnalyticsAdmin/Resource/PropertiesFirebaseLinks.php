@@ -63,6 +63,15 @@ class Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesFirebaseLinks exten
    * @param string $parent Required. Format: properties/{property_id} Example:
    * properties/1234
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize The maximum number of resources to return. The
+   * service may return fewer than this value, even if there are additional pages.
+   * If unspecified, at most 50 resources will be returned. The maximum value is
+   * 200; (higher values will be coerced to the maximum)
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListFirebaseLinks` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListProperties` must match the
+   * call that provided the page token.
    * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse
    */
   public function listPropertiesFirebaseLinks($parent, $optParams = array())

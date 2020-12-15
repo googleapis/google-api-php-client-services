@@ -19,6 +19,7 @@ class Google_Service_Webmasters_SearchAnalyticsQueryRequest extends Google_Colle
 {
   protected $collection_key = 'dimensions';
   public $aggregationType;
+  public $dataState;
   protected $dimensionFilterGroupsType = 'Google_Service_Webmasters_ApiDimensionFilterGroup';
   protected $dimensionFilterGroupsDataType = 'array';
   public $dimensions;
@@ -35,6 +36,14 @@ class Google_Service_Webmasters_SearchAnalyticsQueryRequest extends Google_Colle
   public function getAggregationType()
   {
     return $this->aggregationType;
+  }
+  public function setDataState($dataState)
+  {
+    $this->dataState = $dataState;
+  }
+  public function getDataState()
+  {
+    return $this->dataState;
   }
   /**
    * @param Google_Service_Webmasters_ApiDimensionFilterGroup[]

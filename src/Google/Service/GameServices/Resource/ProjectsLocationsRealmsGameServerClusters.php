@@ -115,8 +115,8 @@ class Google_Service_GameServices_Resource_ProjectsLocationsRealmsGameServerClus
    *
    * @opt_param string updateMask Required. Mask of fields to update. At least one
    * path must be supplied in this field. For the `FieldMask` definition, see
-   * https: //developers.google.com/protocol-buffers //
-   * /docs/reference/google.protobuf#fieldmask
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask
    * @return Google_Service_GameServices_Operation
    */
   public function patch($name, Google_Service_GameServices_GameServerCluster $postBody, $optParams = array())
@@ -180,8 +180,8 @@ class Google_Service_GameServices_Resource_ProjectsLocationsRealmsGameServerClus
    * preview.
    * @opt_param string updateMask Required. Mask of fields to update. At least one
    * path must be supplied in this field. For the `FieldMask` definition, see
-   * https: //developers.google.com/protocol-buffers //
-   * /docs/reference/google.protobuf#fieldmask
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask
    * @return Google_Service_GameServices_PreviewUpdateGameServerClusterResponse
    */
   public function previewUpdate($name, Google_Service_GameServices_GameServerCluster $postBody, $optParams = array())

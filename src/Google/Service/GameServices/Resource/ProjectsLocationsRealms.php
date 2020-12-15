@@ -107,8 +107,8 @@ class Google_Service_GameServices_Resource_ProjectsLocationsRealms extends Googl
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The update mask applies to the
-   * resource. For the `FieldMask` definition, see https: //developers.google.com
-   * /protocol-buffers // /docs/reference/google.protobuf#fieldmask
+   * resource. For the `FieldMask` definition, see https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#fieldmask
    * @return Google_Service_GameServices_Operation
    */
   public function patch($name, Google_Service_GameServices_Realm $postBody, $optParams = array())
@@ -129,8 +129,8 @@ class Google_Service_GameServices_Resource_ProjectsLocationsRealms extends Googl
    * @opt_param string previewTime Optional. The target timestamp to compute the
    * preview.
    * @opt_param string updateMask Required. The update mask applies to the
-   * resource. For the `FieldMask` definition, see https: //developers.google.com
-   * /protocol-buffers // /docs/reference/google.protobuf#fieldmask
+   * resource. For the `FieldMask` definition, see https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#fieldmask
    * @return Google_Service_GameServices_PreviewRealmUpdateResponse
    */
   public function previewUpdate($name, Google_Service_GameServices_Realm $postBody, $optParams = array())

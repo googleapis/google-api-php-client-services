@@ -16,7 +16,7 @@
  */
 
 /**
- * Service definition for Apigateway (v1beta).
+ * Service definition for Apigateway (v1).
  *
  * <p>
 </p>
@@ -52,7 +52,7 @@ class Google_Service_Apigateway extends Google_Service
     $this->rootUrl = $rootUrl ?: 'https://apigateway.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta';
+    $this->version = 'v1';
     $this->serviceName = 'apigateway';
 
     $this->projects_locations = new Google_Service_Apigateway_Resource_ProjectsLocations(
@@ -62,7 +62,7 @@ class Google_Service_Apigateway extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -72,7 +72,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta/{+name}/locations',
+              'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -104,7 +104,7 @@ class Google_Service_Apigateway extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta/{+parent}/apis',
+              'path' => 'v1/{+parent}/apis',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -118,7 +118,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -128,7 +128,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -138,7 +138,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -152,7 +152,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta/{+parent}/apis',
+              'path' => 'v1/{+parent}/apis',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -178,7 +178,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -192,7 +192,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -202,7 +202,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -222,7 +222,7 @@ class Google_Service_Apigateway extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta/{+parent}/configs',
+              'path' => 'v1/{+parent}/configs',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -236,7 +236,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -246,7 +246,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -260,7 +260,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -274,7 +274,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta/{+parent}/configs',
+              'path' => 'v1/{+parent}/configs',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -300,7 +300,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -314,7 +314,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -324,7 +324,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -344,7 +344,7 @@ class Google_Service_Apigateway extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta/{+parent}/gateways',
+              'path' => 'v1/{+parent}/gateways',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -358,7 +358,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -368,7 +368,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -378,7 +378,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -392,7 +392,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta/{+parent}/gateways',
+              'path' => 'v1/{+parent}/gateways',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -418,7 +418,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -432,7 +432,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -442,7 +442,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -462,7 +462,7 @@ class Google_Service_Apigateway extends Google_Service
         array(
           'methods' => array(
             'cancel' => array(
-              'path' => 'v1beta/{+name}:cancel',
+              'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -472,7 +472,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -482,7 +482,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -492,7 +492,7 @@ class Google_Service_Apigateway extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(

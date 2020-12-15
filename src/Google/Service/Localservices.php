@@ -30,7 +30,9 @@
  */
 class Google_Service_Localservices extends Google_Service
 {
-
+  /** Manage your AdWords campaigns. */
+  const ADWORDS =
+      "https://www.googleapis.com/auth/adwords";
 
   public $accountReports;
   public $detailedLeadReports;

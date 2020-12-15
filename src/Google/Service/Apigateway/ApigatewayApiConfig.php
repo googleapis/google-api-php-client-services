@@ -20,8 +20,7 @@ class Google_Service_Apigateway_ApigatewayApiConfig extends Google_Collection
   protected $collection_key = 'openapiDocuments';
   public $createTime;
   public $displayName;
-  protected $gatewayConfigType = 'Google_Service_Apigateway_ApigatewayGatewayConfig';
-  protected $gatewayConfigDataType = '';
+  public $gatewayServiceAccount;
   protected $grpcServicesType = 'Google_Service_Apigateway_ApigatewayApiConfigGrpcServiceDefinition';
   protected $grpcServicesDataType = 'array';
   public $labels;
@@ -50,19 +49,13 @@ class Google_Service_Apigateway_ApigatewayApiConfig extends Google_Collection
   {
     return $this->displayName;
   }
-  /**
-   * @param Google_Service_Apigateway_ApigatewayGatewayConfig
-   */
-  public function setGatewayConfig(Google_Service_Apigateway_ApigatewayGatewayConfig $gatewayConfig)
+  public function setGatewayServiceAccount($gatewayServiceAccount)
   {
-    $this->gatewayConfig = $gatewayConfig;
+    $this->gatewayServiceAccount = $gatewayServiceAccount;
   }
-  /**
-   * @return Google_Service_Apigateway_ApigatewayGatewayConfig
-   */
-  public function getGatewayConfig()
+  public function getGatewayServiceAccount()
   {
-    return $this->gatewayConfig;
+    return $this->gatewayServiceAccount;
   }
   /**
    * @param Google_Service_Apigateway_ApigatewayApiConfigGrpcServiceDefinition[]

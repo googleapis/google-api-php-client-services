@@ -51,10 +51,12 @@ class Google_Service_ShoppingContent extends Google_Service
   public $pos;
   public $products;
   public $productstatuses;
+  public $productstatuses_repricingreports;
   public $pubsubnotificationsettings;
   public $regionalinventory;
   public $regions;
   public $repricingrules;
+  public $repricingrules_repricingreports;
   public $returnaddress;
   public $returnpolicy;
   public $settlementreports;
@@ -1720,6 +1722,51 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
+    $this->productstatuses_repricingreports = new Google_Service_ShoppingContent_Resource_ProductstatusesRepricingreports(
+        $this,
+        $this->serviceName,
+        'repricingreports',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'content/v2.1/{merchantId}/productstatuses/{productId}/repricingreports',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'productId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'endDate' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'ruleId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startDate' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->pubsubnotificationsettings = new Google_Service_ShoppingContent_Resource_Pubsubnotificationsettings(
         $this,
         $this->serviceName,
@@ -1959,6 +2006,47 @@ class Google_Service_ShoppingContent extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->repricingrules_repricingreports = new Google_Service_ShoppingContent_Resource_RepricingrulesRepricingreports(
+        $this,
+        $this->serviceName,
+        'repricingreports',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'content/v2.1/{merchantId}/repricingrules/{ruleId}/repricingreports',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'ruleId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'endDate' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startDate' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

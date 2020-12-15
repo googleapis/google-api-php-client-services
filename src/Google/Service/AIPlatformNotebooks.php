@@ -39,6 +39,7 @@ class Google_Service_AIPlatformNotebooks extends Google_Service
   public $projects_locations_environments;
   public $projects_locations_instances;
   public $projects_locations_operations;
+  public $projects_locations_schedules;
 
   /**
    * Constructs the internal representation of the AIPlatformNotebooks service.
@@ -421,6 +422,26 @@ class Google_Service_AIPlatformNotebooks extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_schedules = new Google_Service_AIPlatformNotebooks_Resource_ProjectsLocationsSchedules(
+        $this,
+        $this->serviceName,
+        'schedules',
+        array(
+          'methods' => array(
+            'trigger' => array(
+              'path' => 'v1/{+name}:trigger',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),

@@ -99,10 +99,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsJobTriggers extends Google_Se
   /**
    * Inspect hybrid content and store findings to a trigger. The inspection will
    * be processed asynchronously. To review the findings monitor the jobs within
-   * the trigger. Early access feature is in a pre-release state and might change
-   * or have limited support. For more information, see
-   * https://cloud.google.com/products#product-launch-stages.
-   * (jobTriggers.hybridInspect)
+   * the trigger. (jobTriggers.hybridInspect)
    *
    * @param string $name Required. Resource name of the trigger to execute a
    * hybrid inspect on, for example `projects/dlp-test-

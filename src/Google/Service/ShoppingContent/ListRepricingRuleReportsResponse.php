@@ -15,27 +15,13 @@
  * the License.
  */
 
-class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse extends Google_Collection
+class Google_Service_ShoppingContent_ListRepricingRuleReportsResponse extends Google_Collection
 {
-  protected $collection_key = 'firebaseLinks';
-  protected $firebaseLinksType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink';
-  protected $firebaseLinksDataType = 'array';
+  protected $collection_key = 'repricingRuleReports';
   public $nextPageToken;
+  protected $repricingRuleReportsType = 'Google_Service_ShoppingContent_RepricingRuleReport';
+  protected $repricingRuleReportsDataType = 'array';
 
-  /**
-   * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink[]
-   */
-  public function setFirebaseLinks($firebaseLinks)
-  {
-    $this->firebaseLinks = $firebaseLinks;
-  }
-  /**
-   * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink[]
-   */
-  public function getFirebaseLinks()
-  {
-    return $this->firebaseLinks;
-  }
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
@@ -43,5 +29,19 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaListFirebas
   public function getNextPageToken()
   {
     return $this->nextPageToken;
+  }
+  /**
+   * @param Google_Service_ShoppingContent_RepricingRuleReport[]
+   */
+  public function setRepricingRuleReports($repricingRuleReports)
+  {
+    $this->repricingRuleReports = $repricingRuleReports;
+  }
+  /**
+   * @return Google_Service_ShoppingContent_RepricingRuleReport[]
+   */
+  public function getRepricingRuleReports()
+  {
+    return $this->repricingRuleReports;
   }
 }

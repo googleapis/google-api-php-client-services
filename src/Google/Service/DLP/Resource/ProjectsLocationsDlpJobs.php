@@ -90,10 +90,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
   }
   /**
    * Finish a running hybrid DlpJob. Triggers the finalization steps and running
-   * of any enabled actions that have not yet run. Early access feature is in a
-   * pre-release state and might change or have limited support. For more
-   * information, see https://cloud.google.com/products#product-launch-stages.
-   * (dlpJobs.finish)
+   * of any enabled actions that have not yet run. (dlpJobs.finish)
    *
    * @param string $name Required. The name of the DlpJob resource to be
    * cancelled.
@@ -125,9 +122,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsDlpJobs extends Google_Servic
   }
   /**
    * Inspect hybrid content and store findings to a job. To review the findings,
-   * inspect the job. Inspection will occur asynchronously. Early access feature
-   * is in a pre-release state and might change or have limited support. For more
-   * information, see https://cloud.google.com/products#product-launch-stages.
+   * inspect the job. Inspection will occur asynchronously.
    * (dlpJobs.hybridInspect)
    *
    * @param string $name Required. Resource name of the job to execute a hybrid
