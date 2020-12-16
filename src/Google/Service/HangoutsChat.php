@@ -77,6 +77,20 @@ class Google_Service_HangoutsChat extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'webhooks' => array(
+              'path' => 'v1/{+parent}/webhooks',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'threadKey' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),
           )
         )
@@ -145,6 +159,20 @@ class Google_Service_HangoutsChat extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'webhooks' => array(
+              'path' => 'v1/{+parent}/webhooks',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'threadKey' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),
           )
         )
@@ -198,6 +226,20 @@ class Google_Service_HangoutsChat extends Google_Service
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'webhooks' => array(
+              'path' => 'v1/{+parent}/webhooks',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'threadKey' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

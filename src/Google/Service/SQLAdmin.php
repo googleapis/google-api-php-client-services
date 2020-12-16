@@ -698,6 +698,10 @@ class Google_Service_SQLAdmin extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'skipVerification' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'syncMode' => array(
                   'location' => 'query',
                   'type' => 'string',

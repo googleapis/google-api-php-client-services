@@ -50,6 +50,8 @@ class Google_Service_SQLAdmin_Resource_ProjectsInstances extends Google_Service_
    * project ID.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool skipVerification Whether to skip the verification step
+   * (VESS).
    * @opt_param string syncMode External sync mode.
    * @return Google_Service_SQLAdmin_Operation
    */

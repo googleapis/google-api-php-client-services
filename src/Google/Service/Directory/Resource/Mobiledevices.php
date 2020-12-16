@@ -99,7 +99,7 @@ class Google_Service_Directory_Resource_Mobiledevices extends Google_Service_Res
    * @opt_param string projection Restrict information returned to a set of
    * selected fields.
    * @opt_param string query Search string in the format given at
-   * http://support.google.com/a/bin/answer.py?answer=1408863#search
+   * https://developers.google.com/admin-sdk/directory/v1/search-operators
    * @opt_param string sortOrder Whether to return results in ascending or
    * descending order. Must be used with the `orderBy` parameter.
    * @return Google_Service_Directory_MobileDevices
