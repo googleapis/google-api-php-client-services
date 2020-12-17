@@ -50,6 +50,8 @@ class Google_Service_Dialogflow extends Google_Service
   public $projects_locations_agents_intents;
   public $projects_locations_agents_sessions;
   public $projects_locations_agents_sessions_entityTypes;
+  public $projects_locations_agents_testCases;
+  public $projects_locations_agents_testCases_results;
   public $projects_locations_agents_webhooks;
   public $projects_locations_operations;
   public $projects_locations_securitySettings;
@@ -1020,6 +1022,178 @@ class Google_Service_Dialogflow extends Google_Service
                   'required' => true,
                 ),
                 'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_agents_testCases = new Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsTestCases(
+        $this,
+        $this->serviceName,
+        'testCases',
+        array(
+          'methods' => array(
+            'batchDelete' => array(
+              'path' => 'v3/{+parent}/testCases:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'batchRun' => array(
+              'path' => 'v3/{+parent}/testCases:batchRun',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'calculateCoverage' => array(
+              'path' => 'v3/{+agent}/testCases:calculateCoverage',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'agent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'type' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'create' => array(
+              'path' => 'v3/{+parent}/testCases',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'export' => array(
+              'path' => 'v3/{+parent}/testCases:export',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'import' => array(
+              'path' => 'v3/{+parent}/testCases:import',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v3/{+parent}/testCases',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'run' => array(
+              'path' => 'v3/projects/{projectsId}/locations/{locationsId}/agents/{agentsId}/testCases:run',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectsId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'locationsId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'agentsId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_agents_testCases_results = new Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsTestCasesResults(
+        $this,
+        $this->serviceName,
+        'results',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'v3/{+parent}/results',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

@@ -73,7 +73,6 @@ class Google_Service_YouTube extends Google_Service
   public $playlistItems;
   public $playlists;
   public $search;
-  public $sponsors;
   public $subscriptions;
   public $superChatEvents;
   public $tests;
@@ -1577,39 +1576,6 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                 ),
                 'videoType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->sponsors = new Google_Service_YouTube_Resource_Sponsors(
-        $this,
-        $this->serviceName,
-        'sponsors',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'youtube/v3/sponsors',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'part' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                  'required' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
