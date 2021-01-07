@@ -28,7 +28,7 @@ class Google_Service_Directory_Resource_RoleAssignments extends Google_Service_R
   /**
    * Deletes a role assignment. (roleAssignments.delete)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleAssignmentId Immutable ID of the role assignment.
    * @param array $optParams Optional parameters.
    */
@@ -41,7 +41,7 @@ class Google_Service_Directory_Resource_RoleAssignments extends Google_Service_R
   /**
    * Retrieve a role assignment. (roleAssignments.get)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleAssignmentId Immutable ID of the role assignment.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Directory_RoleAssignment
@@ -55,7 +55,7 @@ class Google_Service_Directory_Resource_RoleAssignments extends Google_Service_R
   /**
    * Creates a role assignment. (roleAssignments.insert)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param Google_Service_Directory_RoleAssignment $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Directory_RoleAssignment
@@ -70,7 +70,7 @@ class Google_Service_Directory_Resource_RoleAssignments extends Google_Service_R
    * Retrieves a paginated list of all roleAssignments.
    * (roleAssignments.listRoleAssignments)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of results to return.

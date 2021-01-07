@@ -28,9 +28,9 @@ class Google_Service_Directory_Resource_ResourcesCalendars extends Google_Servic
   /**
    * Deletes a calendar resource. (calendars.delete)
    *
-   * @param string $customer The unique ID for the customer's G Suite account. As
-   * an account administrator, you can also use the `my_customer` alias to
-   * represent your account's customer ID.
+   * @param string $customer The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's customer ID.
    * @param string $calendarResourceId The unique ID of the calendar resource to
    * delete.
    * @param array $optParams Optional parameters.
@@ -44,9 +44,9 @@ class Google_Service_Directory_Resource_ResourcesCalendars extends Google_Servic
   /**
    * Retrieves a calendar resource. (calendars.get)
    *
-   * @param string $customer The unique ID for the customer's G Suite account. As
-   * an account administrator, you can also use the `my_customer` alias to
-   * represent your account's customer ID.
+   * @param string $customer The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's customer ID.
    * @param string $calendarResourceId The unique ID of the calendar resource to
    * retrieve.
    * @param array $optParams Optional parameters.
@@ -61,9 +61,9 @@ class Google_Service_Directory_Resource_ResourcesCalendars extends Google_Servic
   /**
    * Inserts a calendar resource. (calendars.insert)
    *
-   * @param string $customer The unique ID for the customer's G Suite account. As
-   * an account administrator, you can also use the `my_customer` alias to
-   * represent your account's customer ID.
+   * @param string $customer The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's customer ID.
    * @param Google_Service_Directory_CalendarResource $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Directory_CalendarResource
@@ -78,9 +78,9 @@ class Google_Service_Directory_Resource_ResourcesCalendars extends Google_Servic
    * Retrieves a list of calendar resources for an account.
    * (calendars.listResourcesCalendars)
    *
-   * @param string $customer The unique ID for the customer's G Suite account. As
-   * an account administrator, you can also use the `my_customer` alias to
-   * represent your account's customer ID.
+   * @param string $customer The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's customer ID.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of results to return.
@@ -113,9 +113,9 @@ class Google_Service_Directory_Resource_ResourcesCalendars extends Google_Servic
   /**
    * Patches a calendar resource via Apiary Patch Orchestration. (calendars.patch)
    *
-   * @param string $customer The unique ID for the customer's G Suite account. As
-   * an account administrator, you can also use the `my_customer` alias to
-   * represent your account's customer ID.
+   * @param string $customer The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's customer ID.
    * @param string $calendarResourceId The unique ID of the calendar resource to
    * update.
    * @param Google_Service_Directory_CalendarResource $postBody
@@ -133,9 +133,9 @@ class Google_Service_Directory_Resource_ResourcesCalendars extends Google_Servic
    * you only need to include the fields you wish to update. Fields that are not
    * present in the request will be preserved. (calendars.update)
    *
-   * @param string $customer The unique ID for the customer's G Suite account. As
-   * an account administrator, you can also use the `my_customer` alias to
-   * represent your account's customer ID.
+   * @param string $customer The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's customer ID.
    * @param string $calendarResourceId The unique ID of the calendar resource to
    * update.
    * @param Google_Service_Directory_CalendarResource $postBody

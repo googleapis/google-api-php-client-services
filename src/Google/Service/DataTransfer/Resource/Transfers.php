@@ -58,7 +58,7 @@ class Google_Service_DataTransfer_Resource_Transfers extends Google_Service_Reso
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string customerId Immutable ID of the Google Apps account.
+   * @opt_param string customerId Immutable ID of the Google Workspace account.
    * @opt_param int maxResults Maximum number of results to return. Default is
    * 100.
    * @opt_param string newOwnerUserId Destination user's profile ID.

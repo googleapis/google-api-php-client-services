@@ -133,7 +133,7 @@ class Google_Service_DLP_Resource_ProjectsLocationsJobTriggers extends Google_Se
    * expressions are made up of one or more restrictions. * Restrictions can be
    * combined by `AND` or `OR` logical operators. A sequence of restrictions
    * implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-   * {value}`. * Supported fields/values for inspect jobs: - `status` -
+   * {value}`. * Supported fields/values for inspect triggers: - `status` -
    * HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
    * DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted
    * timestamp, surrounded by quotation marks. Nanoseconds are ignored. -

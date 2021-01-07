@@ -33,7 +33,7 @@ class Google_Service_AnalyticsReporting extends Google_Service
   /** View and manage your Google Analytics data. */
   const ANALYTICS =
       "https://www.googleapis.com/auth/analytics";
-  /** View your Google Analytics data. */
+  /** See and download your Google Analytics data. */
   const ANALYTICS_READONLY =
       "https://www.googleapis.com/auth/analytics.readonly";
 

@@ -93,6 +93,24 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlows extends Go
     return $this->call('get', array($params), "Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Flow");
   }
   /**
+   * Gets the latest flow validation result. Flow validation is performed when
+   * ValidateFlow is called. (flows.getValidationResult)
+   *
+   * @param string $name Required. The flow name. Format:
+   * `projects//locations//agents//flows//validationResult`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string languageCode If not specified, the agent's default language
+   * is used.
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3FlowValidationResult
+   */
+  public function getValidationResult($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('getValidationResult', array($params), "Google_Service_Dialogflow_GoogleCloudDialogflowCxV3FlowValidationResult");
+  }
+  /**
    * Returns the list of all flows in the specified agent.
    * (flows.listProjectsLocationsAgentsFlows)
    *
@@ -160,5 +178,22 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlows extends Go
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('train', array($params), "Google_Service_Dialogflow_GoogleLongrunningOperation");
+  }
+  /**
+   * Validates the specified flow and creates or updates validation results.
+   * Please call this API after the training is completed to get the complete
+   * validation results. (flows.validate)
+   *
+   * @param string $name Required. The flow to validate. Format:
+   * `projects//locations//agents//flows/`.
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ValidateFlowRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3FlowValidationResult
+   */
+  public function validate($name, Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ValidateFlowRequest $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('validate', array($params), "Google_Service_Dialogflow_GoogleCloudDialogflowCxV3FlowValidationResult");
   }
 }

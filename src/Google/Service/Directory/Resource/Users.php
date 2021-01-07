@@ -83,12 +83,13 @@ class Google_Service_Directory_Resource_Users extends Google_Service_Resource
    * @opt_param string customFieldMask A comma-separated list of schema names. All
    * fields from these schemas are fetched. This should only be set when
    * `projection=custom`.
-   * @opt_param string customer The unique ID for the customer's G Suite account.
-   * In case of a multi-domain account, to fetch all groups for a customer, fill
-   * this field instead of domain. You can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users). Either
-   * the `customer` or the `domain` parameter must be provided.
+   * @opt_param string customer The unique ID for the customer's Google Workspace
+   * account. In case of a multi-domain account, to fetch all groups for a
+   * customer, fill this field instead of domain. You can also use the
+   * `my_customer` alias to represent your account's `customerId`. The
+   * `customerId` is also returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users). Either the `customer` or the `domain`
+   * parameter must be provided.
    * @opt_param string domain The domain name. Use this field to get fields from
    * only one domain. To return all domains for a customer account, use the
    * `customer` query parameter instead. Either the `customer` or the `domain`
@@ -203,9 +204,9 @@ class Google_Service_Directory_Resource_Users extends Google_Service_Resource
    * @opt_param string customFieldMask Comma-separated list of schema names. All
    * fields from these schemas are fetched. This should only be set when
    * projection=custom.
-   * @opt_param string customer Immutable ID of the G Suite account. In case of
-   * multi-domain, to fetch all users for a customer, fill this field instead of
-   * domain.
+   * @opt_param string customer Immutable ID of the Google Workspace account. In
+   * case of multi-domain, to fetch all users for a customer, fill this field
+   * instead of domain.
    * @opt_param string domain Name of the domain. Fill this field to get users
    * from only this domain. To return all users in a multi-domain fill customer
    * field instead."

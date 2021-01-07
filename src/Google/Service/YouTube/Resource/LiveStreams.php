@@ -71,7 +71,7 @@ class Google_Service_YouTube_Resource_LiveStreams extends Google_Service_Resourc
    * operation. It identifies the properties that the write operation will set as
    * well as the properties that the API response will include. The part
    * properties that you can include in the parameter value are id, snippet, cdn,
-   * and status.
+   * content_details, and status.
    * @param Google_Service_YouTube_LiveStream $postBody
    * @param array $optParams Optional parameters.
    *

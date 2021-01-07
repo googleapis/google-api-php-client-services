@@ -29,10 +29,11 @@ class Google_Service_Directory_Resource_Mobiledevices extends Google_Service_Res
    * Takes an action that affects a mobile device. For example, remotely wiping a
    * device. (mobiledevices.action)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param string $resourceId The unique ID the API service uses to identify the
    * mobile device.
    * @param Google_Service_Directory_MobileDeviceAction $postBody
@@ -47,10 +48,11 @@ class Google_Service_Directory_Resource_Mobiledevices extends Google_Service_Res
   /**
    * Removes a mobile device. (mobiledevices.delete)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param string $resourceId The unique ID the API service uses to identify the
    * mobile device.
    * @param array $optParams Optional parameters.
@@ -64,10 +66,11 @@ class Google_Service_Directory_Resource_Mobiledevices extends Google_Service_Res
   /**
    * Retrieves a mobile device's properties. (mobiledevices.get)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param string $resourceId The unique ID the API service uses to identify the
    * mobile device.
    * @param array $optParams Optional parameters.
@@ -86,10 +89,11 @@ class Google_Service_Directory_Resource_Mobiledevices extends Google_Service_Res
    * Retrieves a paginated list of all mobile devices for an account.
    * (mobiledevices.listMobiledevices)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of results to return. Max allowed

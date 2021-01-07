@@ -38,10 +38,11 @@ class Google_Service_Directory_Resource_Chromeosdevices extends Google_Service_R
    * center](https://support.google.com/chrome/a/answer/3523633).
    * (chromeosdevices.action)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param string $resourceId The unique ID of the device. The `resourceId`s are
    * returned in the response from the [chromeosdevices.list](/admin-
    * sdk/directory/v1/reference/chromeosdevices/list) method.
@@ -57,10 +58,11 @@ class Google_Service_Directory_Resource_Chromeosdevices extends Google_Service_R
   /**
    * Retrieves a Chrome OS device's properties. (chromeosdevices.get)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param string $deviceId The unique ID of the device. The `deviceId`s are
    * returned in the response from the [chromeosdevices.list](/admin-
    * sdk/directory/v1/reference/chromeosdevices/list) method.
@@ -80,10 +82,11 @@ class Google_Service_Directory_Resource_Chromeosdevices extends Google_Service_R
    * Retrieves a paginated list of Chrome OS devices within an account.
    * (chromeosdevices.listChromeosdevices)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of results to return.
@@ -111,7 +114,7 @@ class Google_Service_Directory_Resource_Chromeosdevices extends Google_Service_R
    * Move or insert multiple Chrome OS devices to an organizational unit. You can
    * move up to 50 devices at once. (chromeosdevices.moveDevicesToOu)
    *
-   * @param string $customerId Immutable ID of the G Suite account
+   * @param string $customerId Immutable ID of the Google Workspace account
    * @param string $orgUnitPath Full path of the target organizational unit or its
    * ID
    * @param Google_Service_Directory_ChromeOsMoveDevicesToOu $postBody
@@ -129,10 +132,11 @@ class Google_Service_Directory_Resource_Chromeosdevices extends Google_Service_R
    * method supports [patch semantics](/admin-
    * sdk/directory/v1/guides/performance#patch). (chromeosdevices.patch)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param string $deviceId The unique ID of the device. The `deviceId`s are
    * returned in the response from the [chromeosdevices.list](/admin-
    * sdk/v1/reference/chromeosdevices/list) method.
@@ -154,10 +158,11 @@ class Google_Service_Directory_Resource_Chromeosdevices extends Google_Service_R
    * `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`.
    * (chromeosdevices.update)
    *
-   * @param string $customerId The unique ID for the customer's G Suite account.
-   * As an account administrator, you can also use the `my_customer` alias to
-   * represent your account's `customerId`. The `customerId` is also returned as
-   * part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+   * @param string $customerId The unique ID for the customer's Google Workspace
+   * account. As an account administrator, you can also use the `my_customer`
+   * alias to represent your account's `customerId`. The `customerId` is also
+   * returned as part of the [Users resource](/admin-
+   * sdk/directory/v1/reference/users).
    * @param string $deviceId The unique ID of the device. The `deviceId`s are
    * returned in the response from the [chromeosdevices.list](/admin-
    * sdk/v1/reference/chromeosdevices/list) method.

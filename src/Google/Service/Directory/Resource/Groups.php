@@ -71,12 +71,12 @@ class Google_Service_Directory_Resource_Groups extends Google_Service_Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string customer The unique ID for the customer's G Suite account.
-   * In case of a multi-domain account, to fetch all groups for a customer, fill
-   * this field instead of domain. As an account administrator, you can also use
-   * the `my_customer` alias to represent your account's `customerId`. The
-   * `customerId` is also returned as part of the [Users](/admin-
-   * sdk/directory/v1/reference/users)
+   * @opt_param string customer The unique ID for the customer's Google Workspace
+   * account. In case of a multi-domain account, to fetch all groups for a
+   * customer, fill this field instead of domain. As an account administrator, you
+   * can also use the `my_customer` alias to represent your account's
+   * `customerId`. The `customerId` is also returned as part of the [Users
+   * ](/admin-sdk/directory/v1/reference/users)
    * @opt_param string domain The domain name. Use this field to get fields from
    * only one domain. To return all domains for a customer account, use the
    * `customer` query parameter instead.

@@ -28,7 +28,7 @@ class Google_Service_Directory_Resource_Roles extends Google_Service_Resource
   /**
    * Deletes a role. (roles.delete)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleId Immutable ID of the role.
    * @param array $optParams Optional parameters.
    */
@@ -41,7 +41,7 @@ class Google_Service_Directory_Resource_Roles extends Google_Service_Resource
   /**
    * Retrieves a role. (roles.get)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleId Immutable ID of the role.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Directory_Role
@@ -55,7 +55,7 @@ class Google_Service_Directory_Resource_Roles extends Google_Service_Resource
   /**
    * Creates a role. (roles.insert)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param Google_Service_Directory_Role $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_Directory_Role
@@ -69,7 +69,7 @@ class Google_Service_Directory_Resource_Roles extends Google_Service_Resource
   /**
    * Retrieves a paginated list of all the roles in a domain. (roles.listRoles)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of results to return.
@@ -85,7 +85,7 @@ class Google_Service_Directory_Resource_Roles extends Google_Service_Resource
   /**
    * Patch role via Apiary Patch Orchestration (roles.patch)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleId Immutable ID of the role.
    * @param Google_Service_Directory_Role $postBody
    * @param array $optParams Optional parameters.
@@ -100,7 +100,7 @@ class Google_Service_Directory_Resource_Roles extends Google_Service_Resource
   /**
    * Updates a role. (roles.update)
    *
-   * @param string $customer Immutable ID of the G Suite account.
+   * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleId Immutable ID of the role.
    * @param Google_Service_Directory_Role $postBody
    * @param array $optParams Optional parameters.

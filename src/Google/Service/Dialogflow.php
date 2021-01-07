@@ -41,6 +41,7 @@ class Google_Service_Dialogflow extends Google_Service
   public $projects_locations_agents;
   public $projects_locations_agents_entityTypes;
   public $projects_locations_agents_environments;
+  public $projects_locations_agents_environments_experiments;
   public $projects_locations_agents_environments_sessions;
   public $projects_locations_agents_environments_sessions_entityTypes;
   public $projects_locations_agents_flows;
@@ -118,6 +119,20 @@ class Google_Service_Dialogflow extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'getValidationResult' => array(
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'list' => array(
               'path' => 'v3/{+parent}/agents',
               'httpMethod' => 'GET',
@@ -152,6 +167,16 @@ class Google_Service_Dialogflow extends Google_Service
               ),
             ),'restore' => array(
               'path' => 'v3/{+name}:restore',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'validate' => array(
+              'path' => 'v3/{+name}:validate',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -346,6 +371,98 @@ class Google_Service_Dialogflow extends Google_Service
           )
         )
     );
+    $this->projects_locations_agents_environments_experiments = new Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsEnvironmentsExperiments(
+        $this,
+        $this->serviceName,
+        'experiments',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v3/{+parent}/experiments',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v3/{+parent}/experiments',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'start' => array(
+              'path' => 'v3/{+name}:start',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'stop' => array(
+              'path' => 'v3/{+name}:stop',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->projects_locations_agents_environments_sessions = new Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsEnvironmentsSessions(
         $this,
         $this->serviceName,
@@ -506,6 +623,20 @@ class Google_Service_Dialogflow extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'getValidationResult' => array(
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'list' => array(
               'path' => 'v3/{+parent}/flows',
               'httpMethod' => 'GET',
@@ -548,6 +679,16 @@ class Google_Service_Dialogflow extends Google_Service
               ),
             ),'train' => array(
               'path' => 'v3/{+name}:train',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'validate' => array(
+              'path' => 'v3/{+name}:validate',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
