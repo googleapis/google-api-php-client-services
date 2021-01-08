@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Accelerator extends Google_Model
+class Google_Service_DatabaseMigrationService_DatamigrationEmpty extends Google_Model
 {
-  public $acceleratorType;
-  public $state;
-
-  public function setAcceleratorType($acceleratorType)
-  {
-    $this->acceleratorType = $acceleratorType;
-  }
-  public function getAcceleratorType()
-  {
-    return $this->acceleratorType;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
-  }
 }

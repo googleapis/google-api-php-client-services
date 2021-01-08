@@ -15,25 +15,43 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Accelerator extends Google_Model
+class Google_Service_DatabaseMigrationService_ReverseSshConnectivity extends Google_Model
 {
-  public $acceleratorType;
-  public $state;
+  public $vm;
+  public $vmIp;
+  public $vmPort;
+  public $vpc;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setVm($vm)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->vm = $vm;
   }
-  public function getAcceleratorType()
+  public function getVm()
   {
-    return $this->acceleratorType;
+    return $this->vm;
   }
-  public function setState($state)
+  public function setVmIp($vmIp)
   {
-    $this->state = $state;
+    $this->vmIp = $vmIp;
   }
-  public function getState()
+  public function getVmIp()
   {
-    return $this->state;
+    return $this->vmIp;
+  }
+  public function setVmPort($vmPort)
+  {
+    $this->vmPort = $vmPort;
+  }
+  public function getVmPort()
+  {
+    return $this->vmPort;
+  }
+  public function setVpc($vpc)
+  {
+    $this->vpc = $vpc;
+  }
+  public function getVpc()
+  {
+    return $this->vpc;
   }
 }

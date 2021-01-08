@@ -15,25 +15,26 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Accelerator extends Google_Model
+class Google_Service_DatabaseMigrationService_AuditLogConfig extends Google_Collection
 {
-  public $acceleratorType;
-  public $state;
+  protected $collection_key = 'exemptedMembers';
+  public $exemptedMembers;
+  public $logType;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setExemptedMembers($exemptedMembers)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->exemptedMembers = $exemptedMembers;
   }
-  public function getAcceleratorType()
+  public function getExemptedMembers()
   {
-    return $this->acceleratorType;
+    return $this->exemptedMembers;
   }
-  public function setState($state)
+  public function setLogType($logType)
   {
-    $this->state = $state;
+    $this->logType = $logType;
   }
-  public function getState()
+  public function getLogType()
   {
-    return $this->state;
+    return $this->logType;
   }
 }

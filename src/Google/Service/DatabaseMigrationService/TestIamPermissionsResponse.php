@@ -15,25 +15,17 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Accelerator extends Google_Model
+class Google_Service_DatabaseMigrationService_TestIamPermissionsResponse extends Google_Collection
 {
-  public $acceleratorType;
-  public $state;
+  protected $collection_key = 'permissions';
+  public $permissions;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setPermissions($permissions)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->permissions = $permissions;
   }
-  public function getAcceleratorType()
+  public function getPermissions()
   {
-    return $this->acceleratorType;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
+    return $this->permissions;
   }
 }

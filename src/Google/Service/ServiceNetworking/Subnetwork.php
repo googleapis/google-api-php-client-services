@@ -22,6 +22,7 @@ class Google_Service_ServiceNetworking_Subnetwork extends Google_Collection
   public $name;
   public $network;
   public $outsideAllocation;
+  public $region;
   protected $secondaryIpRangesType = 'Google_Service_ServiceNetworking_SecondaryIpRange';
   protected $secondaryIpRangesDataType = 'array';
 
@@ -56,6 +57,14 @@ class Google_Service_ServiceNetworking_Subnetwork extends Google_Collection
   public function getOutsideAllocation()
   {
     return $this->outsideAllocation;
+  }
+  public function setRegion($region)
+  {
+    $this->region = $region;
+  }
+  public function getRegion()
+  {
+    return $this->region;
   }
   /**
    * @param Google_Service_ServiceNetworking_SecondaryIpRange[]

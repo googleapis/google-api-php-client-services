@@ -15,25 +15,14 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Accelerator extends Google_Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $datamigrationService = new Google_Service_DatabaseMigrationService(...);
+ *   $projects = $datamigrationService->projects;
+ *  </code>
+ */
+class Google_Service_DatabaseMigrationService_Resource_Projects extends Google_Service_Resource
 {
-  public $acceleratorType;
-  public $state;
-
-  public function setAcceleratorType($acceleratorType)
-  {
-    $this->acceleratorType = $acceleratorType;
-  }
-  public function getAcceleratorType()
-  {
-    return $this->acceleratorType;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
-  }
 }

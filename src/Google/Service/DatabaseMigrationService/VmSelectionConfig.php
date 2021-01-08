@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Accelerator extends Google_Model
+class Google_Service_DatabaseMigrationService_VmSelectionConfig extends Google_Model
 {
-  public $acceleratorType;
-  public $state;
+  public $vmZone;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setVmZone($vmZone)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->vmZone = $vmZone;
   }
-  public function getAcceleratorType()
+  public function getVmZone()
   {
-    return $this->acceleratorType;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
+    return $this->vmZone;
   }
 }

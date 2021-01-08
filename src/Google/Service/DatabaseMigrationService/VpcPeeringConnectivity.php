@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Accelerator extends Google_Model
+class Google_Service_DatabaseMigrationService_VpcPeeringConnectivity extends Google_Model
 {
-  public $acceleratorType;
-  public $state;
+  public $vpc;
 
-  public function setAcceleratorType($acceleratorType)
+  public function setVpc($vpc)
   {
-    $this->acceleratorType = $acceleratorType;
+    $this->vpc = $vpc;
   }
-  public function getAcceleratorType()
+  public function getVpc()
   {
-    return $this->acceleratorType;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
+    return $this->vpc;
   }
 }

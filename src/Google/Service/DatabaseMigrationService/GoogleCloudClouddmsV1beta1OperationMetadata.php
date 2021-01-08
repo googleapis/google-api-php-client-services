@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_DataFusion_OperationMetadata extends Google_Model
+class Google_Service_DatabaseMigrationService_GoogleCloudClouddmsV1beta1OperationMetadata extends Google_Model
 {
-  public $additionalStatus;
   public $apiVersion;
   public $createTime;
   public $endTime;
   public $requestedCancellation;
-  public $statusDetail;
+  public $statusMessage;
   public $target;
   public $verb;
 
-  public function setAdditionalStatus($additionalStatus)
-  {
-    $this->additionalStatus = $additionalStatus;
-  }
-  public function getAdditionalStatus()
-  {
-    return $this->additionalStatus;
-  }
   public function setApiVersion($apiVersion)
   {
     $this->apiVersion = $apiVersion;
@@ -66,13 +57,13 @@ class Google_Service_DataFusion_OperationMetadata extends Google_Model
   {
     return $this->requestedCancellation;
   }
-  public function setStatusDetail($statusDetail)
+  public function setStatusMessage($statusMessage)
   {
-    $this->statusDetail = $statusDetail;
+    $this->statusMessage = $statusMessage;
   }
-  public function getStatusDetail()
+  public function getStatusMessage()
   {
-    return $this->statusDetail;
+    return $this->statusMessage;
   }
   public function setTarget($target)
   {

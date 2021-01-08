@@ -15,23 +15,23 @@
  * the License.
  */
 
-class Google_Service_DataFusion_Binding extends Google_Collection
+class Google_Service_DatabaseMigrationService_Binding extends Google_Collection
 {
   protected $collection_key = 'members';
-  protected $conditionType = 'Google_Service_DataFusion_Expr';
+  protected $conditionType = 'Google_Service_DatabaseMigrationService_Expr';
   protected $conditionDataType = '';
   public $members;
   public $role;
 
   /**
-   * @param Google_Service_DataFusion_Expr
+   * @param Google_Service_DatabaseMigrationService_Expr
    */
-  public function setCondition(Google_Service_DataFusion_Expr $condition)
+  public function setCondition(Google_Service_DatabaseMigrationService_Expr $condition)
   {
     $this->condition = $condition;
   }
   /**
-   * @return Google_Service_DataFusion_Expr
+   * @return Google_Service_DatabaseMigrationService_Expr
    */
   public function getCondition()
   {
