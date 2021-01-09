@@ -36,6 +36,7 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   protected $hivePartitioningOptionsType = 'Google_Service_Bigquery_HivePartitioningOptions';
   protected $hivePartitioningOptionsDataType = '';
   public $ignoreUnknownValues;
+  public $jsonExtension;
   public $maxBadRecords;
   public $nullMarker;
   public $projectionFields;
@@ -188,6 +189,14 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   public function getIgnoreUnknownValues()
   {
     return $this->ignoreUnknownValues;
+  }
+  public function setJsonExtension($jsonExtension)
+  {
+    $this->jsonExtension = $jsonExtension;
+  }
+  public function getJsonExtension()
+  {
+    return $this->jsonExtension;
   }
   public function setMaxBadRecords($maxBadRecords)
   {

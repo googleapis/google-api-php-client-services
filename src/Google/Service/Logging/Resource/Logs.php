@@ -26,10 +26,11 @@
 class Google_Service_Logging_Resource_Logs extends Google_Service_Resource
 {
   /**
-   * Deletes all the log entries in a log. The log reappears if it receives new
-   * entries. Log entries written shortly before the delete operation might not be
-   * deleted. Entries received after the delete operation with a timestamp before
-   * the operation will be deleted. (logs.delete)
+   * Deletes all the log entries in a log for the _Default Log Bucket. The log
+   * reappears if it receives new entries. Log entries written shortly before the
+   * delete operation might not be deleted. Entries received after the delete
+   * operation with a timestamp before the operation will be deleted.
+   * (logs.delete)
    *
    * @param string $logName Required. The resource name of the log to delete:
    * "projects/[PROJECT_ID]/logs/[LOG_ID]"
