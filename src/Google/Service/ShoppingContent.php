@@ -36,8 +36,11 @@ class Google_Service_ShoppingContent extends Google_Service
 
   public $accounts;
   public $accounts_labels;
+  public $accounts_returncarrier;
   public $accountstatuses;
   public $accounttax;
+  public $collections;
+  public $collectionstatuses;
   public $csses;
   public $datafeeds;
   public $datafeedstatuses;
@@ -325,6 +328,66 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
+    $this->accounts_returncarrier = new Google_Service_ShoppingContent_Resource_AccountsReturncarrier(
+        $this,
+        $this->serviceName,
+        'returncarrier',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'content/v2.1/accounts/{accountId}/returncarrier',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'accountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'content/v2.1/accounts/{accountId}/returncarrier/{carrierAccountId}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'accountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'carrierAccountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'content/v2.1/accounts/{accountId}/returncarrier',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'accountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'content/v2.1/accounts/{accountId}/returncarrier/{carrierAccountId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'accountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'carrierAccountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->accountstatuses = new Google_Service_ShoppingContent_Resource_Accountstatuses(
         $this,
         $this->serviceName,
@@ -438,6 +501,117 @@ class Google_Service_ShoppingContent extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->collections = new Google_Service_ShoppingContent_Resource_Collections(
+        $this,
+        $this->serviceName,
+        'collections',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'content/v2.1/{merchantId}/collections',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'content/v2.1/{merchantId}/collections/{collectionId}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'collectionId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'content/v2.1/{merchantId}/collections/{collectionId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'collectionId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'content/v2.1/{merchantId}/collections',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->collectionstatuses = new Google_Service_ShoppingContent_Resource_Collectionstatuses(
+        $this,
+        $this->serviceName,
+        'collectionstatuses',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'content/v2.1/{merchantId}/collectionstatuses/{collectionId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'collectionId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'content/v2.1/{merchantId}/collectionstatuses',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

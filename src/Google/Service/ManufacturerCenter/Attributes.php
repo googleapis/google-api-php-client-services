@@ -45,6 +45,7 @@ class Google_Service_ManufacturerCenter_Attributes extends Google_Collection
   public $pattern;
   protected $productDetailType = 'Google_Service_ManufacturerCenter_ProductDetail';
   protected $productDetailDataType = 'array';
+  public $productHighlight;
   public $productLine;
   public $productName;
   public $productPageUrl;
@@ -265,6 +266,14 @@ class Google_Service_ManufacturerCenter_Attributes extends Google_Collection
   public function getProductDetail()
   {
     return $this->productDetail;
+  }
+  public function setProductHighlight($productHighlight)
+  {
+    $this->productHighlight = $productHighlight;
+  }
+  public function getProductHighlight()
+  {
+    return $this->productHighlight;
   }
   public function setProductLine($productLine)
   {

@@ -97,6 +97,20 @@ class Google_Service_AIPlatformNotebooks_Resource_ProjectsLocationsInstances ext
     return $this->call('getIamPolicy', array($params), "Google_Service_AIPlatformNotebooks_Policy");
   }
   /**
+   * Check if a notebook instance is healthy. (instances.getInstanceHealth)
+   *
+   * @param string $name Required. Format:
+   * `projects/{project_id}/locations/{location}/instances/{instance_id}`
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_AIPlatformNotebooks_GetInstanceHealthResponse
+   */
+  public function getInstanceHealth($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('getInstanceHealth', array($params), "Google_Service_AIPlatformNotebooks_GetInstanceHealthResponse");
+  }
+  /**
    * Check if a notebook instance is upgradable. (instances.isUpgradeable)
    *
    * @param string $notebookInstance Required. Format:

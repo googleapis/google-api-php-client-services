@@ -21,6 +21,7 @@ class Google_Service_ShoppingContent_Account extends Google_Collection
   protected $adsLinksType = 'Google_Service_ShoppingContent_AccountAdsLink';
   protected $adsLinksDataType = 'array';
   public $adultContent;
+  public $automaticLabelIds;
   protected $businessInformationType = 'Google_Service_ShoppingContent_AccountBusinessInformation';
   protected $businessInformationDataType = '';
   public $cssId;
@@ -58,6 +59,14 @@ class Google_Service_ShoppingContent_Account extends Google_Collection
   public function getAdultContent()
   {
     return $this->adultContent;
+  }
+  public function setAutomaticLabelIds($automaticLabelIds)
+  {
+    $this->automaticLabelIds = $automaticLabelIds;
+  }
+  public function getAutomaticLabelIds()
+  {
+    return $this->automaticLabelIds;
   }
   /**
    * @param Google_Service_ShoppingContent_AccountBusinessInformation
