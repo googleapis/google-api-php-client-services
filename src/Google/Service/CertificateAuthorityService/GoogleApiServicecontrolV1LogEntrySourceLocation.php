@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+class Google_Service_CertificateAuthorityService_GoogleApiServicecontrolV1LogEntrySourceLocation extends Google_Model
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
+  public $file;
+  public $function;
+  public $line;
 
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
+  public function setFile($file)
   {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
+    $this->file = $file;
   }
-  public function getIgnoreActiveCertificates()
+  public function getFile()
   {
-    return $this->ignoreActiveCertificates;
+    return $this->file;
   }
-  public function setRequestId($requestId)
+  public function setFunction($function)
   {
-    $this->requestId = $requestId;
+    $this->function = $function;
   }
-  public function getRequestId()
+  public function getFunction()
   {
-    return $this->requestId;
+    return $this->function;
+  }
+  public function setLine($line)
+  {
+    $this->line = $line;
+  }
+  public function getLine()
+  {
+    return $this->line;
   }
 }

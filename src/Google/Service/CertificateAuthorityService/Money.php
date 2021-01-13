@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+class Google_Service_CertificateAuthorityService_Money extends Google_Model
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
+  public $currencyCode;
+  public $nanos;
+  public $units;
 
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
+  public function setCurrencyCode($currencyCode)
   {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
+    $this->currencyCode = $currencyCode;
   }
-  public function getIgnoreActiveCertificates()
+  public function getCurrencyCode()
   {
-    return $this->ignoreActiveCertificates;
+    return $this->currencyCode;
   }
-  public function setRequestId($requestId)
+  public function setNanos($nanos)
   {
-    $this->requestId = $requestId;
+    $this->nanos = $nanos;
   }
-  public function getRequestId()
+  public function getNanos()
   {
-    return $this->requestId;
+    return $this->nanos;
+  }
+  public function setUnits($units)
+  {
+    $this->units = $units;
+  }
+  public function getUnits()
+  {
+    return $this->units;
   }
 }

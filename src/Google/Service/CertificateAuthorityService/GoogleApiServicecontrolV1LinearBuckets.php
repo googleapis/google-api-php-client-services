@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+class Google_Service_CertificateAuthorityService_GoogleApiServicecontrolV1LinearBuckets extends Google_Model
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
+  public $numFiniteBuckets;
+  public $offset;
+  public $width;
 
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
+  public function setNumFiniteBuckets($numFiniteBuckets)
   {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
+    $this->numFiniteBuckets = $numFiniteBuckets;
   }
-  public function getIgnoreActiveCertificates()
+  public function getNumFiniteBuckets()
   {
-    return $this->ignoreActiveCertificates;
+    return $this->numFiniteBuckets;
   }
-  public function setRequestId($requestId)
+  public function setOffset($offset)
   {
-    $this->requestId = $requestId;
+    $this->offset = $offset;
   }
-  public function getRequestId()
+  public function getOffset()
   {
-    return $this->requestId;
+    return $this->offset;
+  }
+  public function setWidth($width)
+  {
+    $this->width = $width;
+  }
+  public function getWidth()
+  {
+    return $this->width;
   }
 }

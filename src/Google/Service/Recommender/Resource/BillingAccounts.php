@@ -15,25 +15,14 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+/**
+ * The "billingAccounts" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $recommenderService = new Google_Service_Recommender(...);
+ *   $billingAccounts = $recommenderService->billingAccounts;
+ *  </code>
+ */
+class Google_Service_Recommender_Resource_BillingAccounts extends Google_Service_Resource
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
-
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
-  {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
-  }
-  public function getIgnoreActiveCertificates()
-  {
-    return $this->ignoreActiveCertificates;
-  }
-  public function setRequestId($requestId)
-  {
-    $this->requestId = $requestId;
-  }
-  public function getRequestId()
-  {
-    return $this->requestId;
-  }
 }

@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+class Google_Service_CertificateAuthorityService_GoogleApiServicecontrolV1TruncatableString extends Google_Model
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
+  public $truncatedByteCount;
+  public $value;
 
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
+  public function setTruncatedByteCount($truncatedByteCount)
   {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
+    $this->truncatedByteCount = $truncatedByteCount;
   }
-  public function getIgnoreActiveCertificates()
+  public function getTruncatedByteCount()
   {
-    return $this->ignoreActiveCertificates;
+    return $this->truncatedByteCount;
   }
-  public function setRequestId($requestId)
+  public function setValue($value)
   {
-    $this->requestId = $requestId;
+    $this->value = $value;
   }
-  public function getRequestId()
+  public function getValue()
   {
-    return $this->requestId;
+    return $this->value;
   }
 }

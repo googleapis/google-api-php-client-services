@@ -15,25 +15,17 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+class Google_Service_CertificateAuthorityService_GoogleApiServicecontrolV1ExplicitBuckets extends Google_Collection
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
+  protected $collection_key = 'bounds';
+  public $bounds;
 
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
+  public function setBounds($bounds)
   {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
+    $this->bounds = $bounds;
   }
-  public function getIgnoreActiveCertificates()
+  public function getBounds()
   {
-    return $this->ignoreActiveCertificates;
-  }
-  public function setRequestId($requestId)
-  {
-    $this->requestId = $requestId;
-  }
-  public function getRequestId()
-  {
-    return $this->requestId;
+    return $this->bounds;
   }
 }

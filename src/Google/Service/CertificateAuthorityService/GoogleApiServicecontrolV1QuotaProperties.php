@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+class Google_Service_CertificateAuthorityService_GoogleApiServicecontrolV1QuotaProperties extends Google_Model
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
+  public $quotaMode;
 
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
+  public function setQuotaMode($quotaMode)
   {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
+    $this->quotaMode = $quotaMode;
   }
-  public function getIgnoreActiveCertificates()
+  public function getQuotaMode()
   {
-    return $this->ignoreActiveCertificates;
-  }
-  public function setRequestId($requestId)
-  {
-    $this->requestId = $requestId;
-  }
-  public function getRequestId()
-  {
-    return $this->requestId;
+    return $this->quotaMode;
   }
 }

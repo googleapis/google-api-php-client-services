@@ -15,25 +15,35 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_ScheduleDeleteCertificateAuthorityRequest extends Google_Model
+class Google_Service_CertificateAuthorityService_Exemplar extends Google_Collection
 {
-  public $ignoreActiveCertificates;
-  public $requestId;
+  protected $collection_key = 'attachments';
+  public $attachments;
+  public $timestamp;
+  public $value;
 
-  public function setIgnoreActiveCertificates($ignoreActiveCertificates)
+  public function setAttachments($attachments)
   {
-    $this->ignoreActiveCertificates = $ignoreActiveCertificates;
+    $this->attachments = $attachments;
   }
-  public function getIgnoreActiveCertificates()
+  public function getAttachments()
   {
-    return $this->ignoreActiveCertificates;
+    return $this->attachments;
   }
-  public function setRequestId($requestId)
+  public function setTimestamp($timestamp)
   {
-    $this->requestId = $requestId;
+    $this->timestamp = $timestamp;
   }
-  public function getRequestId()
+  public function getTimestamp()
   {
-    return $this->requestId;
+    return $this->timestamp;
+  }
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  public function getValue()
+  {
+    return $this->value;
   }
 }
