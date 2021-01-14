@@ -19,6 +19,10 @@
  * Service definition for RecommendationsAI (v1beta1).
  *
  * <p>
+ * Note that we now highly recommend new customers to use Retail API that
+ * incorporates the GA version of the Recommendations AI funtionalities. To
+ * enable Retail API, please visit
+ * https://console.cloud.google.com/apis/library/retail.googleapis.com. This is
  * Recommendations AI service enables customers to build end-to-end personalized
  * recommendation systems without requiring a high level of expertise in machine
  * learning, recommendation system, or Google Cloud.</p>

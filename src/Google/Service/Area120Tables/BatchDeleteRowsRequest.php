@@ -15,25 +15,17 @@
  * the License.
  */
 
-class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGlobalSiteTag extends Google_Model
+class Google_Service_Area120Tables_BatchDeleteRowsRequest extends Google_Collection
 {
-  public $name;
-  public $snippet;
+  protected $collection_key = 'names';
+  public $names;
 
-  public function setName($name)
+  public function setNames($names)
   {
-    $this->name = $name;
+    $this->names = $names;
   }
-  public function getName()
+  public function getNames()
   {
-    return $this->name;
-  }
-  public function setSnippet($snippet)
-  {
-    $this->snippet = $snippet;
-  }
-  public function getSnippet()
-  {
-    return $this->snippet;
+    return $this->names;
   }
 }

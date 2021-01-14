@@ -41,6 +41,21 @@ class Google_Service_Area120Tables_Resource_TablesRows extends Google_Service_Re
     return $this->call('batchCreate', array($params), "Google_Service_Area120Tables_BatchCreateRowsResponse");
   }
   /**
+   * Deletes multiple rows. (rows.batchDelete)
+   *
+   * @param string $parent Required. The parent table shared by all rows being
+   * deleted. Format: tables/{table}
+   * @param Google_Service_Area120Tables_BatchDeleteRowsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Area120Tables_Area120tablesEmpty
+   */
+  public function batchDelete($parent, Google_Service_Area120Tables_BatchDeleteRowsRequest $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('batchDelete', array($params), "Google_Service_Area120Tables_Area120tablesEmpty");
+  }
+  /**
    * Updates multiple rows. (rows.batchUpdate)
    *
    * @param string $parent Required. The parent table shared by all rows being

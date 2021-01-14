@@ -20,6 +20,7 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public $availableMemoryMb;
   public $buildEnvironmentVariables;
   public $buildId;
+  public $buildWorkerPool;
   public $description;
   public $entryPoint;
   public $environmentVariables;
@@ -68,6 +69,14 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public function getBuildId()
   {
     return $this->buildId;
+  }
+  public function setBuildWorkerPool($buildWorkerPool)
+  {
+    $this->buildWorkerPool = $buildWorkerPool;
+  }
+  public function getBuildWorkerPool()
+  {
+    return $this->buildWorkerPool;
   }
   public function setDescription($description)
   {

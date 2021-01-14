@@ -117,6 +117,16 @@ class Google_Service_Area120Tables extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'batchDelete' => array(
+              'path' => 'v1alpha1/{+parent}/rows:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'batchUpdate' => array(
               'path' => 'v1alpha1/{+parent}/rows:batchUpdate',
               'httpMethod' => 'POST',
