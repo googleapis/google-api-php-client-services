@@ -15,34 +15,16 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+class Google_Service_CloudComposer_DatabaseConfig extends Google_Model
 {
-  public $code;
-  public $message;
-  public $region;
+  public $machineType;
 
-  public function setCode($code)
+  public function setMachineType($machineType)
   {
-    $this->code = $code;
+    $this->machineType = $machineType;
   }
-  public function getCode()
+  public function getMachineType()
   {
-    return $this->code;
-  }
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  public function getMessage()
-  {
-    return $this->message;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
+    return $this->machineType;
   }
 }

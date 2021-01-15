@@ -15,34 +15,24 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+class Google_Service_WorkflowExecutions_StackTrace extends Google_Collection
 {
-  public $code;
-  public $message;
-  public $region;
+  protected $collection_key = 'elements';
+  protected $elementsType = 'Google_Service_WorkflowExecutions_StackTraceElement';
+  protected $elementsDataType = 'array';
 
-  public function setCode($code)
+  /**
+   * @param Google_Service_WorkflowExecutions_StackTraceElement[]
+   */
+  public function setElements($elements)
   {
-    $this->code = $code;
+    $this->elements = $elements;
   }
-  public function getCode()
+  /**
+   * @return Google_Service_WorkflowExecutions_StackTraceElement[]
+   */
+  public function getElements()
   {
-    return $this->code;
-  }
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  public function getMessage()
-  {
-    return $this->message;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
+    return $this->elements;
   }
 }

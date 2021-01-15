@@ -15,27 +15,19 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+class Google_Service_Eventarc_CloudRun extends Google_Model
 {
-  public $code;
-  public $message;
+  public $path;
   public $region;
+  public $service;
 
-  public function setCode($code)
+  public function setPath($path)
   {
-    $this->code = $code;
+    $this->path = $path;
   }
-  public function getCode()
+  public function getPath()
   {
-    return $this->code;
-  }
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  public function getMessage()
-  {
-    return $this->message;
+    return $this->path;
   }
   public function setRegion($region)
   {
@@ -44,5 +36,13 @@ class Google_Service_SQLAdmin_ApiWarning extends Google_Model
   public function getRegion()
   {
     return $this->region;
+  }
+  public function setService($service)
+  {
+    $this->service = $service;
+  }
+  public function getService()
+  {
+    return $this->service;
   }
 }

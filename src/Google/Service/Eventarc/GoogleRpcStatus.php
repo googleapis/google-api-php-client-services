@@ -15,11 +15,12 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+class Google_Service_Eventarc_GoogleRpcStatus extends Google_Collection
 {
+  protected $collection_key = 'details';
   public $code;
+  public $details;
   public $message;
-  public $region;
 
   public function setCode($code)
   {
@@ -29,6 +30,14 @@ class Google_Service_SQLAdmin_ApiWarning extends Google_Model
   {
     return $this->code;
   }
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  public function getDetails()
+  {
+    return $this->details;
+  }
   public function setMessage($message)
   {
     $this->message = $message;
@@ -36,13 +45,5 @@ class Google_Service_SQLAdmin_ApiWarning extends Google_Model
   public function getMessage()
   {
     return $this->message;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
   }
 }

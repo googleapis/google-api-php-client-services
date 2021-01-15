@@ -23,29 +23,11 @@
  *   $timeSeries = $monitoringService->timeSeries;
  *  </code>
  */
-class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Service_Resource
+class Google_Service_Monitoring_Resource_OrganizationsTimeSeries extends Google_Service_Resource
 {
   /**
-   * Creates or adds data to one or more time series. The response is empty if all
-   * time series in the request were written. If any time series could not be
-   * written, a corresponding failure message is included in the error response.
-   * (timeSeries.create)
-   *
-   * @param string $name Required. The project on which to execute the request.
-   * The format is: projects/[PROJECT_ID_OR_NUMBER]
-   * @param Google_Service_Monitoring_CreateTimeSeriesRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Monitoring_MonitoringEmpty
-   */
-  public function create($name, Google_Service_Monitoring_CreateTimeSeriesRequest $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Monitoring_MonitoringEmpty");
-  }
-  /**
    * Lists time series that match a filter. This method does not require a
-   * Workspace. (timeSeries.listProjectsTimeSeries)
+   * Workspace. (timeSeries.listOrganizationsTimeSeries)
    *
    * @param string $name Required. The project, organization or folder on which to
    * execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
@@ -167,26 +149,10 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * about the time series.
    * @return Google_Service_Monitoring_ListTimeSeriesResponse
    */
-  public function listProjectsTimeSeries($name, $optParams = array())
+  public function listOrganizationsTimeSeries($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Monitoring_ListTimeSeriesResponse");
-  }
-  /**
-   * Queries time series using Monitoring Query Language. This method does not
-   * require a Workspace. (timeSeries.query)
-   *
-   * @param string $name Required. The project on which to execute the request.
-   * The format is: projects/[PROJECT_ID_OR_NUMBER]
-   * @param Google_Service_Monitoring_QueryTimeSeriesRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Monitoring_QueryTimeSeriesResponse
-   */
-  public function query($name, Google_Service_Monitoring_QueryTimeSeriesRequest $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('query', array($params), "Google_Service_Monitoring_QueryTimeSeriesResponse");
   }
 }

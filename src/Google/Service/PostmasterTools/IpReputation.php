@@ -19,7 +19,6 @@ class Google_Service_PostmasterTools_IpReputation extends Google_Collection
 {
   protected $collection_key = 'sampleIps';
   public $ipCount;
-  public $numIps;
   public $reputation;
   public $sampleIps;
 
@@ -30,14 +29,6 @@ class Google_Service_PostmasterTools_IpReputation extends Google_Collection
   public function getIpCount()
   {
     return $this->ipCount;
-  }
-  public function setNumIps($numIps)
-  {
-    $this->numIps = $numIps;
-  }
-  public function getNumIps()
-  {
-    return $this->numIps;
   }
   public function setReputation($reputation)
   {

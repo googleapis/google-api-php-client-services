@@ -18,10 +18,12 @@
 class Google_Service_SecretManager_Secret extends Google_Model
 {
   public $createTime;
+  public $expireTime;
   public $labels;
   public $name;
   protected $replicationType = 'Google_Service_SecretManager_Replication';
   protected $replicationDataType = '';
+  public $ttl;
 
   public function setCreateTime($createTime)
   {
@@ -30,6 +32,14 @@ class Google_Service_SecretManager_Secret extends Google_Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setExpireTime($expireTime)
+  {
+    $this->expireTime = $expireTime;
+  }
+  public function getExpireTime()
+  {
+    return $this->expireTime;
   }
   public function setLabels($labels)
   {
@@ -60,5 +70,13 @@ class Google_Service_SecretManager_Secret extends Google_Model
   public function getReplication()
   {
     return $this->replication;
+  }
+  public function setTtl($ttl)
+  {
+    $this->ttl = $ttl;
+  }
+  public function getTtl()
+  {
+    return $this->ttl;
   }
 }

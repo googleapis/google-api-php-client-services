@@ -15,34 +15,6 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+class Google_Service_Eventarc_GoogleLongrunningCancelOperationRequest extends Google_Model
 {
-  public $code;
-  public $message;
-  public $region;
-
-  public function setCode($code)
-  {
-    $this->code = $code;
-  }
-  public function getCode()
-  {
-    return $this->code;
-  }
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  public function getMessage()
-  {
-    return $this->message;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
-  }
 }

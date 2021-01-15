@@ -23,7 +23,7 @@
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://tables.area120.google.com" target="_blank">Documentation</a>
+ * <a href="https://support.google.com/area120-tables/answer/10011390" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.

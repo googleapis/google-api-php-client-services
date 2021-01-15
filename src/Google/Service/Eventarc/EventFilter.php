@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+class Google_Service_Eventarc_EventFilter extends Google_Model
 {
-  public $code;
-  public $message;
-  public $region;
+  public $attribute;
+  public $value;
 
-  public function setCode($code)
+  public function setAttribute($attribute)
   {
-    $this->code = $code;
+    $this->attribute = $attribute;
   }
-  public function getCode()
+  public function getAttribute()
   {
-    return $this->code;
+    return $this->attribute;
   }
-  public function setMessage($message)
+  public function setValue($value)
   {
-    $this->message = $message;
+    $this->value = $value;
   }
-  public function getMessage()
+  public function getValue()
   {
-    return $this->message;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
+    return $this->value;
   }
 }

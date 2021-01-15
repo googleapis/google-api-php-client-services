@@ -15,34 +15,14 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+/**
+ * The "organizations" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $monitoringService = new Google_Service_Monitoring(...);
+ *   $organizations = $monitoringService->organizations;
+ *  </code>
+ */
+class Google_Service_Monitoring_Resource_Organizations extends Google_Service_Resource
 {
-  public $code;
-  public $message;
-  public $region;
-
-  public function setCode($code)
-  {
-    $this->code = $code;
-  }
-  public function getCode()
-  {
-    return $this->code;
-  }
-  public function setMessage($message)
-  {
-    $this->message = $message;
-  }
-  public function getMessage()
-  {
-    return $this->message;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
-  }
 }

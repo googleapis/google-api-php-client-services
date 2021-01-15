@@ -140,11 +140,13 @@ class Google_Service_CloudComposer_Resource_ProjectsLocationsEnvironments extend
    * nodes in the environment. An integer greater than or equal to 3 must be
    * provided in the `config.nodeCount` field.
    * config.webServerNetworkAccessControl Replace the environment's current
-   * WebServerNetworkAccessControl. config.softwareConfig.airflowConfigOverrides
-   * Replace all Apache Airflow config overrides. If a replacement config
-   * overrides map is not included in `environment`, all config overrides are
-   * cleared. It is an error to provide both this mask and a mask specifying one
-   * or more individual config overrides.
+   * WebServerNetworkAccessControl. config.databaseConfig Replace the
+   * environment's current DatabaseConfig. config.webServerConfig Replace the
+   * environment's current WebServerConfig.
+   * config.softwareConfig.airflowConfigOverrides Replace all Apache Airflow
+   * config overrides. If a replacement config overrides map is not included in
+   * `environment`, all config overrides are cleared. It is an error to provide
+   * both this mask and a mask specifying one or more individual config overrides.
    * config.softwareConfig.airflowConfigOverrides.section-name Override the Apache
    * Airflow config property name in the section named section, preserving other
    * properties. To delete the property override, include it in `updateMask` and

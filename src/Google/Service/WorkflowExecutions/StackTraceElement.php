@@ -15,34 +15,43 @@
  * the License.
  */
 
-class Google_Service_SQLAdmin_ApiWarning extends Google_Model
+class Google_Service_WorkflowExecutions_StackTraceElement extends Google_Model
 {
-  public $code;
-  public $message;
-  public $region;
+  public $column;
+  public $line;
+  public $routine;
+  public $step;
 
-  public function setCode($code)
+  public function setColumn($column)
   {
-    $this->code = $code;
+    $this->column = $column;
   }
-  public function getCode()
+  public function getColumn()
   {
-    return $this->code;
+    return $this->column;
   }
-  public function setMessage($message)
+  public function setLine($line)
   {
-    $this->message = $message;
+    $this->line = $line;
   }
-  public function getMessage()
+  public function getLine()
   {
-    return $this->message;
+    return $this->line;
   }
-  public function setRegion($region)
+  public function setRoutine($routine)
   {
-    $this->region = $region;
+    $this->routine = $routine;
   }
-  public function getRegion()
+  public function getRoutine()
   {
-    return $this->region;
+    return $this->routine;
+  }
+  public function setStep($step)
+  {
+    $this->step = $step;
+  }
+  public function getStep()
+  {
+    return $this->step;
   }
 }
