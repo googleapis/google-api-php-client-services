@@ -39,6 +39,7 @@ class Google_Service_Dataflow_Job extends Google_Collection
   public $replaceJobId;
   public $replacedByJobId;
   public $requestedState;
+  public $satisfiesPzs;
   protected $stageStatesType = 'Google_Service_Dataflow_ExecutionStageState';
   protected $stageStatesDataType = 'array';
   public $startTime;
@@ -208,6 +209,14 @@ class Google_Service_Dataflow_Job extends Google_Collection
   public function getRequestedState()
   {
     return $this->requestedState;
+  }
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param Google_Service_Dataflow_ExecutionStageState[]

@@ -146,8 +146,8 @@ class Google_Service_Dataflow_Resource_ProjectsLocationsJobs extends Google_Serv
    * max_responses and an unspecified server-defined limit.
    * @opt_param string pageToken Set this to the 'next_page_token' field of a
    * previous response to request additional results in a long list.
-   * @opt_param string view Level of information requested in response. Default is
-   * `JOB_VIEW_SUMMARY`.
+   * @opt_param string view Deprecated. ListJobs always returns summaries now. Use
+   * GetJob for other JobViews.
    * @return Google_Service_Dataflow_ListJobsResponse
    */
   public function listProjectsLocationsJobs($projectId, $location, $optParams = array())
