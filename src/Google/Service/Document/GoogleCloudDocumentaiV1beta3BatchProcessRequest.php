@@ -22,6 +22,7 @@ class Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequest ex
   protected $inputConfigsDataType = 'array';
   protected $outputConfigType = 'Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig';
   protected $outputConfigDataType = '';
+  public $skipHumanReview;
 
   /**
    * @param Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig[]
@@ -50,5 +51,13 @@ class Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequest ex
   public function getOutputConfig()
   {
     return $this->outputConfig;
+  }
+  public function setSkipHumanReview($skipHumanReview)
+  {
+    $this->skipHumanReview = $skipHumanReview;
+  }
+  public function getSkipHumanReview()
+  {
+    return $this->skipHumanReview;
   }
 }
