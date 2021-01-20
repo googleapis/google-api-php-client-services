@@ -24,6 +24,7 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Agent extends Google_Mo
   public $enableSpellCorrection;
   public $enableStackdriverLogging;
   public $name;
+  public $securitySettings;
   protected $speechToTextSettingsType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3SpeechToTextSettings';
   protected $speechToTextSettingsDataType = '';
   public $startFlow;
@@ -84,6 +85,14 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Agent extends Google_Mo
   public function getName()
   {
     return $this->name;
+  }
+  public function setSecuritySettings($securitySettings)
+  {
+    $this->securitySettings = $securitySettings;
+  }
+  public function getSecuritySettings()
+  {
+    return $this->securitySettings;
   }
   /**
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowCxV3SpeechToTextSettings

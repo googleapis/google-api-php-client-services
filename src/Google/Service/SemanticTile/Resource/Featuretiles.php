@@ -34,6 +34,10 @@ class Google_Service_SemanticTile_Resource_Featuretiles extends Google_Service_R
    * For example, `tiles/@1,2,3z`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool alwaysIncludeBuildingFootprints Flag indicating whether the
+   * returned tile will always contain 2.5D footprints for structures. If
+   * enabled_modeled_volumes is set, this will mean that structures will have both
+   * their 3D models and 2.5D footprints returned.
    * @opt_param string clientInfo.apiClient API client name and version. For
    * example, the SDK calling the API. The exact format is up to the client.
    * @opt_param string clientInfo.applicationId Application ID, such as the
