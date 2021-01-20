@@ -65,6 +65,10 @@ class Google_Service_SemanticTile extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'alwaysIncludeBuildingFootprints' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'clientInfo.apiClient' => array(
                   'location' => 'query',
                   'type' => 'string',

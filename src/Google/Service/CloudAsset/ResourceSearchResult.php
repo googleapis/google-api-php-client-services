@@ -22,10 +22,12 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   public $assetType;
   public $description;
   public $displayName;
+  public $folders;
   public $labels;
   public $location;
   public $name;
   public $networkTags;
+  public $organization;
   public $project;
 
   public function setAdditionalAttributes($additionalAttributes)
@@ -60,6 +62,14 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   {
     return $this->displayName;
   }
+  public function setFolders($folders)
+  {
+    $this->folders = $folders;
+  }
+  public function getFolders()
+  {
+    return $this->folders;
+  }
   public function setLabels($labels)
   {
     $this->labels = $labels;
@@ -91,6 +101,14 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   public function getNetworkTags()
   {
     return $this->networkTags;
+  }
+  public function setOrganization($organization)
+  {
+    $this->organization = $organization;
+  }
+  public function getOrganization()
+  {
+    return $this->organization;
   }
   public function setProject($project)
   {
