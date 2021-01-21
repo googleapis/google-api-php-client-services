@@ -168,6 +168,10 @@ class Google_Service_Spanner extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'instanceDeadline' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',

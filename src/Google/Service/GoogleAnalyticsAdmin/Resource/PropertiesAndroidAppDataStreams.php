@@ -26,8 +26,12 @@
 class Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesAndroidAppDataStreams extends Google_Service_Resource
 {
   /**
-   * Creates an android app stream with the specified location and attributes.
-   * (androidAppDataStreams.create)
+   * Creates an Android app stream with the specified location and attributes.
+   * Note that an Android app stream must be linked to a Firebase app to receive
+   * traffic. To create a working app stream, make sure your property is linked to
+   * a Firebase project. Then, use the Firebase API to create a Firebase app,
+   * which will also create an appropriate data stream in Analytics (may take up
+   * to 24 hours). (androidAppDataStreams.create)
    *
    * @param string $parent Required. The parent resource where this android app
    * data stream will be created. Format: properties/123

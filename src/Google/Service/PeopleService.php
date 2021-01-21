@@ -98,6 +98,10 @@ class Google_Service_PeopleService extends Google_Service
               'path' => 'v1/contactGroups:batchGet',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'groupFields' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxMembers' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -135,6 +139,10 @@ class Google_Service_PeopleService extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'groupFields' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'maxMembers' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -144,6 +152,10 @@ class Google_Service_PeopleService extends Google_Service
               'path' => 'v1/contactGroups',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'groupFields' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
