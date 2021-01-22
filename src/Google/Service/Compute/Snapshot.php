@@ -31,6 +31,7 @@ class Google_Service_Compute_Snapshot extends Google_Collection
   public $licenseCodes;
   public $licenses;
   public $name;
+  public $satisfiesPzs;
   public $selfLink;
   protected $snapshotEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
   protected $snapshotEncryptionKeyDataType = '';
@@ -146,6 +147,14 @@ class Google_Service_Compute_Snapshot extends Google_Collection
   public function getName()
   {
     return $this->name;
+  }
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   public function setSelfLink($selfLink)
   {

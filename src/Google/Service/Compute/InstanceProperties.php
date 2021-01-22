@@ -18,6 +18,8 @@
 class Google_Service_Compute_InstanceProperties extends Google_Collection
 {
   protected $collection_key = 'serviceAccounts';
+  protected $advancedMachineFeaturesType = 'Google_Service_Compute_AdvancedMachineFeatures';
+  protected $advancedMachineFeaturesDataType = '';
   public $canIpForward;
   protected $confidentialInstanceConfigType = 'Google_Service_Compute_ConfidentialInstanceConfig';
   protected $confidentialInstanceConfigDataType = '';
@@ -46,6 +48,20 @@ class Google_Service_Compute_InstanceProperties extends Google_Collection
   protected $tagsType = 'Google_Service_Compute_Tags';
   protected $tagsDataType = '';
 
+  /**
+   * @param Google_Service_Compute_AdvancedMachineFeatures
+   */
+  public function setAdvancedMachineFeatures(Google_Service_Compute_AdvancedMachineFeatures $advancedMachineFeatures)
+  {
+    $this->advancedMachineFeatures = $advancedMachineFeatures;
+  }
+  /**
+   * @return Google_Service_Compute_AdvancedMachineFeatures
+   */
+  public function getAdvancedMachineFeatures()
+  {
+    return $this->advancedMachineFeatures;
+  }
   public function setCanIpForward($canIpForward)
   {
     $this->canIpForward = $canIpForward;

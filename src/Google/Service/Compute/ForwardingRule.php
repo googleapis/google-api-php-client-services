@@ -34,6 +34,7 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public $ipVersion;
   public $isMirroringCollector;
   public $kind;
+  public $labels;
   public $loadBalancingScheme;
   protected $metadataFiltersType = 'Google_Service_Compute_MetadataFilter';
   protected $metadataFiltersDataType = 'array';
@@ -144,6 +145,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  public function getLabels()
+  {
+    return $this->labels;
   }
   public function setLoadBalancingScheme($loadBalancingScheme)
   {
