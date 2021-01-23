@@ -39,6 +39,8 @@ class Google_Service_DisplayVideo_LineItem extends Google_Collection
   public $inventorySourceIds;
   public $lineItemId;
   public $lineItemType;
+  protected $mobileAppType = 'Google_Service_DisplayVideo_MobileApp';
+  protected $mobileAppDataType = '';
   public $name;
   protected $pacingType = 'Google_Service_DisplayVideo_Pacing';
   protected $pacingDataType = '';
@@ -206,6 +208,20 @@ class Google_Service_DisplayVideo_LineItem extends Google_Collection
   public function getLineItemType()
   {
     return $this->lineItemType;
+  }
+  /**
+   * @param Google_Service_DisplayVideo_MobileApp
+   */
+  public function setMobileApp(Google_Service_DisplayVideo_MobileApp $mobileApp)
+  {
+    $this->mobileApp = $mobileApp;
+  }
+  /**
+   * @return Google_Service_DisplayVideo_MobileApp
+   */
+  public function getMobileApp()
+  {
+    return $this->mobileApp;
   }
   public function setName($name)
   {

@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudFunctions_HttpsTrigger extends Google_Model
+class Google_Service_Bigquery_DimensionalityReductionMetrics extends Google_Model
 {
-  public $securityLevel;
-  public $url;
+  public $totalExplainedVarianceRatio;
 
-  public function setSecurityLevel($securityLevel)
+  public function setTotalExplainedVarianceRatio($totalExplainedVarianceRatio)
   {
-    $this->securityLevel = $securityLevel;
+    $this->totalExplainedVarianceRatio = $totalExplainedVarianceRatio;
   }
-  public function getSecurityLevel()
+  public function getTotalExplainedVarianceRatio()
   {
-    return $this->securityLevel;
-  }
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-  public function getUrl()
-  {
-    return $this->url;
+    return $this->totalExplainedVarianceRatio;
   }
 }

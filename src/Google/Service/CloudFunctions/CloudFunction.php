@@ -38,6 +38,7 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public $sourceArchiveUrl;
   protected $sourceRepositoryType = 'Google_Service_CloudFunctions_SourceRepository';
   protected $sourceRepositoryDataType = '';
+  public $sourceToken;
   public $sourceUploadUrl;
   public $status;
   public $timeout;
@@ -207,6 +208,14 @@ class Google_Service_CloudFunctions_CloudFunction extends Google_Model
   public function getSourceRepository()
   {
     return $this->sourceRepository;
+  }
+  public function setSourceToken($sourceToken)
+  {
+    $this->sourceToken = $sourceToken;
+  }
+  public function getSourceToken()
+  {
+    return $this->sourceToken;
   }
   public function setSourceUploadUrl($sourceUploadUrl)
   {
