@@ -15,25 +15,34 @@
  * the License.
  */
 
-class Google_Service_Games_ResolveSnapshotHeadRequest extends Google_Model
+class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EvaluationMetrics extends Google_Model
 {
-  public $maxConflictsPerSnapshot;
-  public $resolutionPolicy;
+  public $f1Score;
+  public $precision;
+  public $recall;
 
-  public function setMaxConflictsPerSnapshot($maxConflictsPerSnapshot)
+  public function setF1Score($f1Score)
   {
-    $this->maxConflictsPerSnapshot = $maxConflictsPerSnapshot;
+    $this->f1Score = $f1Score;
   }
-  public function getMaxConflictsPerSnapshot()
+  public function getF1Score()
   {
-    return $this->maxConflictsPerSnapshot;
+    return $this->f1Score;
   }
-  public function setResolutionPolicy($resolutionPolicy)
+  public function setPrecision($precision)
   {
-    $this->resolutionPolicy = $resolutionPolicy;
+    $this->precision = $precision;
   }
-  public function getResolutionPolicy()
+  public function getPrecision()
   {
-    return $this->resolutionPolicy;
+    return $this->precision;
+  }
+  public function setRecall($recall)
+  {
+    $this->recall = $recall;
+  }
+  public function getRecall()
+  {
+    return $this->recall;
   }
 }

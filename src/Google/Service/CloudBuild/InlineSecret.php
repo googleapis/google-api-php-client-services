@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Games_ResolveSnapshotHeadRequest extends Google_Model
+class Google_Service_CloudBuild_InlineSecret extends Google_Model
 {
-  public $maxConflictsPerSnapshot;
-  public $resolutionPolicy;
+  public $envMap;
+  public $kmsKeyName;
 
-  public function setMaxConflictsPerSnapshot($maxConflictsPerSnapshot)
+  public function setEnvMap($envMap)
   {
-    $this->maxConflictsPerSnapshot = $maxConflictsPerSnapshot;
+    $this->envMap = $envMap;
   }
-  public function getMaxConflictsPerSnapshot()
+  public function getEnvMap()
   {
-    return $this->maxConflictsPerSnapshot;
+    return $this->envMap;
   }
-  public function setResolutionPolicy($resolutionPolicy)
+  public function setKmsKeyName($kmsKeyName)
   {
-    $this->resolutionPolicy = $resolutionPolicy;
+    $this->kmsKeyName = $kmsKeyName;
   }
-  public function getResolutionPolicy()
+  public function getKmsKeyName()
   {
-    return $this->resolutionPolicy;
+    return $this->kmsKeyName;
   }
 }

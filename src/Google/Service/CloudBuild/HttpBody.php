@@ -15,25 +15,35 @@
  * the License.
  */
 
-class Google_Service_Games_ResolveSnapshotHeadRequest extends Google_Model
+class Google_Service_CloudBuild_HttpBody extends Google_Collection
 {
-  public $maxConflictsPerSnapshot;
-  public $resolutionPolicy;
+  protected $collection_key = 'extensions';
+  public $contentType;
+  public $data;
+  public $extensions;
 
-  public function setMaxConflictsPerSnapshot($maxConflictsPerSnapshot)
+  public function setContentType($contentType)
   {
-    $this->maxConflictsPerSnapshot = $maxConflictsPerSnapshot;
+    $this->contentType = $contentType;
   }
-  public function getMaxConflictsPerSnapshot()
+  public function getContentType()
   {
-    return $this->maxConflictsPerSnapshot;
+    return $this->contentType;
   }
-  public function setResolutionPolicy($resolutionPolicy)
+  public function setData($data)
   {
-    $this->resolutionPolicy = $resolutionPolicy;
+    $this->data = $data;
   }
-  public function getResolutionPolicy()
+  public function getData()
   {
-    return $this->resolutionPolicy;
+    return $this->data;
+  }
+  public function setExtensions($extensions)
+  {
+    $this->extensions = $extensions;
+  }
+  public function getExtensions()
+  {
+    return $this->extensions;
   }
 }

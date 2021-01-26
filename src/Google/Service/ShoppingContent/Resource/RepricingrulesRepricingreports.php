@@ -26,8 +26,7 @@
 class Google_Service_ShoppingContent_Resource_RepricingrulesRepricingreports extends Google_Service_Resource
 {
   /**
-   * Lists the metrics report for a given Repricing rule. Reports of the last 3
-   * days may not be complete.
+   * Lists the metrics report for a given Repricing rule.
    * (repricingreports.listRepricingrulesRepricingreports)
    *
    * @param string $merchantId Required. Id of the merchant who owns the Repricing
@@ -36,7 +35,7 @@ class Google_Service_ShoppingContent_Resource_RepricingrulesRepricingreports ext
    * @param array $optParams Optional parameters.
    *
    * @opt_param string endDate Gets Repricing reports on and before this date in
-   * the merchant's timezone. You can only retrieve data up to 3 days ago
+   * the merchant's timezone. You can only retrieve data up to 7 days ago
    * (default) or earlier. Format: YYYY-MM-DD.
    * @opt_param int pageSize Maximum number of daily reports to return. Each
    * report includes data from a single 24-hour period. The page size defaults to
@@ -48,7 +47,7 @@ class Google_Service_ShoppingContent_Resource_RepricingrulesRepricingreports ext
    * page token.
    * @opt_param string startDate Gets Repricing reports on and after this date in
    * the merchant's timezone, up to one year ago. Do not use a start date later
-   * than 3 days ago (default). Format: YYYY-MM-DD.
+   * than 7 days ago (default). Format: YYYY-MM-DD.
    * @return Google_Service_ShoppingContent_ListRepricingRuleReportsResponse
    */
   public function listRepricingrulesRepricingreports($merchantId, $ruleId, $optParams = array())

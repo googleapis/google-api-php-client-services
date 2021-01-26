@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_Games_ResolveSnapshotHeadRequest extends Google_Model
+class Google_Service_AIPlatformNotebooks_SchedulerAcceleratorConfig extends Google_Model
 {
-  public $maxConflictsPerSnapshot;
-  public $resolutionPolicy;
+  public $coreCount;
+  public $type;
 
-  public function setMaxConflictsPerSnapshot($maxConflictsPerSnapshot)
+  public function setCoreCount($coreCount)
   {
-    $this->maxConflictsPerSnapshot = $maxConflictsPerSnapshot;
+    $this->coreCount = $coreCount;
   }
-  public function getMaxConflictsPerSnapshot()
+  public function getCoreCount()
   {
-    return $this->maxConflictsPerSnapshot;
+    return $this->coreCount;
   }
-  public function setResolutionPolicy($resolutionPolicy)
+  public function setType($type)
   {
-    $this->resolutionPolicy = $resolutionPolicy;
+    $this->type = $type;
   }
-  public function getResolutionPolicy()
+  public function getType()
   {
-    return $this->resolutionPolicy;
+    return $this->type;
   }
 }

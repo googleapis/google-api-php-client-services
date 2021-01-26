@@ -20,6 +20,8 @@ class Google_Service_CloudBuild_Build extends Google_Collection
   protected $collection_key = 'tags';
   protected $artifactsType = 'Google_Service_CloudBuild_Artifacts';
   protected $artifactsDataType = '';
+  protected $availableSecretsType = 'Google_Service_CloudBuild_Secrets';
+  protected $availableSecretsDataType = '';
   public $buildTriggerId;
   public $createTime;
   public $finishTime;
@@ -65,6 +67,20 @@ class Google_Service_CloudBuild_Build extends Google_Collection
   public function getArtifacts()
   {
     return $this->artifacts;
+  }
+  /**
+   * @param Google_Service_CloudBuild_Secrets
+   */
+  public function setAvailableSecrets(Google_Service_CloudBuild_Secrets $availableSecrets)
+  {
+    $this->availableSecrets = $availableSecrets;
+  }
+  /**
+   * @return Google_Service_CloudBuild_Secrets
+   */
+  public function getAvailableSecrets()
+  {
+    return $this->availableSecrets;
   }
   public function setBuildTriggerId($buildTriggerId)
   {

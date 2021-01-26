@@ -121,4 +121,23 @@ class Google_Service_CloudBuild_Resource_ProjectsTriggers extends Google_Service
     $params = array_merge($params, $optParams);
     return $this->call('run', array($params), "Google_Service_CloudBuild_Operation");
   }
+  /**
+   * ReceiveTriggerWebhook [Experimental] is called when the API receives a
+   * webhook request targeted at a specific trigger. (triggers.webhook)
+   *
+   * @param string $projectId Project in which the specified trigger lives
+   * @param string $trigger Name of the trigger to run the payload against
+   * @param Google_Service_CloudBuild_HttpBody $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string secret Secret token used for authorization if an OAuth
+   * token isn't provided.
+   * @return Google_Service_CloudBuild_ReceiveTriggerWebhookResponse
+   */
+  public function webhook($projectId, $trigger, Google_Service_CloudBuild_HttpBody $postBody, $optParams = array())
+  {
+    $params = array('projectId' => $projectId, 'trigger' => $trigger, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('webhook', array($params), "Google_Service_CloudBuild_ReceiveTriggerWebhookResponse");
+  }
 }

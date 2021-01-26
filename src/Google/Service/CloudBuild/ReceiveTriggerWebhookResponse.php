@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_Games_ResolveSnapshotHeadRequest extends Google_Model
+class Google_Service_CloudBuild_ReceiveTriggerWebhookResponse extends Google_Model
 {
-  public $maxConflictsPerSnapshot;
-  public $resolutionPolicy;
-
-  public function setMaxConflictsPerSnapshot($maxConflictsPerSnapshot)
-  {
-    $this->maxConflictsPerSnapshot = $maxConflictsPerSnapshot;
-  }
-  public function getMaxConflictsPerSnapshot()
-  {
-    return $this->maxConflictsPerSnapshot;
-  }
-  public function setResolutionPolicy($resolutionPolicy)
-  {
-    $this->resolutionPolicy = $resolutionPolicy;
-  }
-  public function getResolutionPolicy()
-  {
-    return $this->resolutionPolicy;
-  }
 }
