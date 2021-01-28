@@ -229,17 +229,6 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string assetTypes Optional. A list of asset types that this
-   * request searches for. If empty, it will search all the [searchable asset
-   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#searchable_asset_types). Regular expressions are also supported. For
-   * example: * "compute.googleapis.com.*" snapshots resources whose asset type
-   * starts with "compute.googleapis.com". * ".*Instance" snapshots resources
-   * whose asset type ends with "Instance". * ".*Instance.*" snapshots resources
-   * whose asset type contains "Instance". See
-   * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
-   * expression syntax. If the regular expression does not match any supported
-   * asset type, an INVALID_ARGUMENT error will be returned.
    * @opt_param int pageSize Optional. The page size for search result pagination.
    * Page size is capped at 500 even if a larger value is given. If set to zero,
    * server will pick an appropriate default. Returned results may be fewer than

@@ -18,10 +18,12 @@
 class Google_Service_Spanner_Database extends Google_Model
 {
   public $createTime;
+  public $earliestVersionTime;
   public $name;
   protected $restoreInfoType = 'Google_Service_Spanner_RestoreInfo';
   protected $restoreInfoDataType = '';
   public $state;
+  public $versionRetentionPeriod;
 
   public function setCreateTime($createTime)
   {
@@ -30,6 +32,14 @@ class Google_Service_Spanner_Database extends Google_Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setEarliestVersionTime($earliestVersionTime)
+  {
+    $this->earliestVersionTime = $earliestVersionTime;
+  }
+  public function getEarliestVersionTime()
+  {
+    return $this->earliestVersionTime;
   }
   public function setName($name)
   {
@@ -60,5 +70,13 @@ class Google_Service_Spanner_Database extends Google_Model
   public function getState()
   {
     return $this->state;
+  }
+  public function setVersionRetentionPeriod($versionRetentionPeriod)
+  {
+    $this->versionRetentionPeriod = $versionRetentionPeriod;
+  }
+  public function getVersionRetentionPeriod()
+  {
+    return $this->versionRetentionPeriod;
   }
 }

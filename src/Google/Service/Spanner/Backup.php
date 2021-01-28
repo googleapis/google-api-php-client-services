@@ -25,6 +25,7 @@ class Google_Service_Spanner_Backup extends Google_Collection
   public $referencingDatabases;
   public $sizeBytes;
   public $state;
+  public $versionTime;
 
   public function setCreateTime($createTime)
   {
@@ -81,5 +82,13 @@ class Google_Service_Spanner_Backup extends Google_Collection
   public function getState()
   {
     return $this->state;
+  }
+  public function setVersionTime($versionTime)
+  {
+    $this->versionTime = $versionTime;
+  }
+  public function getVersionTime()
+  {
+    return $this->versionTime;
   }
 }
