@@ -20,6 +20,7 @@ class Google_Service_Spanner_CommitRequest extends Google_Collection
   protected $collection_key = 'mutations';
   protected $mutationsType = 'Google_Service_Spanner_Mutation';
   protected $mutationsDataType = 'array';
+  public $returnCommitStats;
   protected $singleUseTransactionType = 'Google_Service_Spanner_TransactionOptions';
   protected $singleUseTransactionDataType = '';
   public $transactionId;
@@ -37,6 +38,14 @@ class Google_Service_Spanner_CommitRequest extends Google_Collection
   public function getMutations()
   {
     return $this->mutations;
+  }
+  public function setReturnCommitStats($returnCommitStats)
+  {
+    $this->returnCommitStats = $returnCommitStats;
+  }
+  public function getReturnCommitStats()
+  {
+    return $this->returnCommitStats;
   }
   /**
    * @param Google_Service_Spanner_TransactionOptions

@@ -168,9 +168,7 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsTestCases extend
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The mask to specify which fields
-   * should be updated. Only a test case's metadata and
-   * replayed_conversation_turns may be updated. The original
-   * test_case_conversation_turns may not be updated.
+   * should be updated. The `creationTime` and `lastTestResult` cannot be updated.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TestCase
    */
   public function patch($name, Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TestCase $postBody, $optParams = array())

@@ -396,6 +396,25 @@ class Google_Service_CloudBuild extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'webhook' => array(
+              'path' => 'v1/projects/{projectId}/triggers/{trigger}:webhook',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'trigger' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'secret' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),
           )
         )

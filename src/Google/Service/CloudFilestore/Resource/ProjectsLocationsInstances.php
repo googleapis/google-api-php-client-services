@@ -120,9 +120,10 @@ class Google_Service_CloudFilestore_Resource_ProjectsLocationsInstances extends 
     return $this->call('patch', array($params), "Google_Service_CloudFilestore_Operation");
   }
   /**
-   * Restores an existing instance's file share from a backup. The instance's file
-   * share capacity will be set to the backup's capacity or the minimum capacity
-   * of the tier, whichever is larger. (instances.restore)
+   * Restores an existing instance's file share from a backup. The capacity of the
+   * instance needs to be equal to or larger than the capacity of the backup (and
+   * also equal to or larger than the minimum capacity of the tier).
+   * (instances.restore)
    *
    * @param string $name Required. The resource name of the instance, in the
    * format

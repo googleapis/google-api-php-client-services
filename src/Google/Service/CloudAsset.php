@@ -251,11 +251,6 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'assetTypes' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',

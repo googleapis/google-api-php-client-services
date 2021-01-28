@@ -73,6 +73,9 @@ class Google_Service_SASPortalTesting_Resource_NodesNodes extends Google_Service
    * "nodes/1".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter The filter expression. The filter should have the
+   * following format: "DIRECT_CHILDREN" or format: "direct_children". The filter
+   * is case insensitive. If empty, then no nodes are filtered.
    * @opt_param int pageSize The maximum number of nodes to return in the
    * response.
    * @opt_param string pageToken A pagination token returned from a previous call

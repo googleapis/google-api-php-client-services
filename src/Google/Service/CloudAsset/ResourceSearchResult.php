@@ -20,15 +20,19 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   protected $collection_key = 'networkTags';
   public $additionalAttributes;
   public $assetType;
+  public $createTime;
   public $description;
   public $displayName;
   public $folders;
+  public $kmsKey;
   public $labels;
   public $location;
   public $name;
   public $networkTags;
   public $organization;
   public $project;
+  public $state;
+  public $updateTime;
 
   public function setAdditionalAttributes($additionalAttributes)
   {
@@ -45,6 +49,14 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   public function getAssetType()
   {
     return $this->assetType;
+  }
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  public function getCreateTime()
+  {
+    return $this->createTime;
   }
   public function setDescription($description)
   {
@@ -69,6 +81,14 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   public function getFolders()
   {
     return $this->folders;
+  }
+  public function setKmsKey($kmsKey)
+  {
+    $this->kmsKey = $kmsKey;
+  }
+  public function getKmsKey()
+  {
+    return $this->kmsKey;
   }
   public function setLabels($labels)
   {
@@ -117,5 +137,21 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   public function getProject()
   {
     return $this->project;
+  }
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  public function getState()
+  {
+    return $this->state;
+  }
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }

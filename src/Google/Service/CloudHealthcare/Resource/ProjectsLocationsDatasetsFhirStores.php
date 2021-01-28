@@ -146,27 +146,31 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * method is not appropriate, consider using ExecuteBundle to load data. Every
    * resource in the input must contain a client-supplied ID. Each resource is
    * stored using the supplied ID regardless of the enable_update_create setting
-   * on the FHIR store. The import process does not enforce referential integrity,
-   * regardless of the disable_referential_integrity setting on the FHIR store.
-   * This allows the import of resources with arbitrary interdependencies without
-   * considering grouping or ordering, but if the input data contains invalid
-   * references or if some resources fail to be imported, the FHIR store might be
-   * left in a state that violates referential integrity. The import process does
-   * not trigger Pub/Sub notification or BigQuery streaming update, regardless of
-   * how those are configured on the FHIR store. If a resource with the specified
-   * ID already exists, the most recent version of the resource is overwritten
-   * without creating a new historical version, regardless of the
-   * disable_resource_versioning setting on the FHIR store. If transient failures
-   * occur during the import, it's possible that successfully imported resources
-   * will be overwritten more than once. The import operation is idempotent unless
-   * the input data contains multiple valid resources with the same ID but
-   * different contents. In that case, after the import completes, the store
-   * contains exactly one resource with that ID but there is no ordering guarantee
-   * on which version of the contents it will have. The operation result counters
-   * do not count duplicate IDs as an error and count one success for each
-   * resource in the input, which might result in a success count larger than the
-   * number of resources in the FHIR store. This often occurs when importing data
-   * organized in bundles produced by Patient-everything where each bundle
+   * on the FHIR store. It is strongly advised not to include or encode any
+   * sensitive data such as patient identifiers in client-specified resource IDs.
+   * Those IDs are part of the FHIR resource path recorded in Cloud audit logs and
+   * Cloud Pub/Sub notifications. Those IDs can also be contained in reference
+   * fields within other resources. The import process does not enforce
+   * referential integrity, regardless of the disable_referential_integrity
+   * setting on the FHIR store. This allows the import of resources with arbitrary
+   * interdependencies without considering grouping or ordering, but if the input
+   * data contains invalid references or if some resources fail to be imported,
+   * the FHIR store might be left in a state that violates referential integrity.
+   * The import process does not trigger Pub/Sub notification or BigQuery
+   * streaming update, regardless of how those are configured on the FHIR store.
+   * If a resource with the specified ID already exists, the most recent version
+   * of the resource is overwritten without creating a new historical version,
+   * regardless of the disable_resource_versioning setting on the FHIR store. If
+   * transient failures occur during the import, it's possible that successfully
+   * imported resources will be overwritten more than once. The import operation
+   * is idempotent unless the input data contains multiple valid resources with
+   * the same ID but different contents. In that case, after the import completes,
+   * the store contains exactly one resource with that ID but there is no ordering
+   * guarantee on which version of the contents it will have. The operation result
+   * counters do not count duplicate IDs as an error and count one success for
+   * each resource in the input, which might result in a success count larger than
+   * the number of resources in the FHIR store. This often occurs when importing
+   * data organized in bundles produced by Patient-everything where each bundle
    * contains its own copy of a resource such as Practitioner that might be
    * referred to by many patients. If some resources fail to import, for example
    * due to parsing errors, successfully imported resources are not rolled back.
