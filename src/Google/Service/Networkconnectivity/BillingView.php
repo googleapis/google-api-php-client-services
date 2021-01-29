@@ -15,32 +15,24 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_MembershipRole extends Google_Model
+class Google_Service_Networkconnectivity_BillingView extends Google_Collection
 {
-  protected $expiryDetailType = 'Google_Service_CloudIdentity_ExpiryDetail';
-  protected $expiryDetailDataType = '';
-  public $name;
+  protected $collection_key = 'reportRequests';
+  protected $reportRequestsType = 'Google_Service_Networkconnectivity_ReportRequest';
+  protected $reportRequestsDataType = 'array';
 
   /**
-   * @param Google_Service_CloudIdentity_ExpiryDetail
+   * @param Google_Service_Networkconnectivity_ReportRequest[]
    */
-  public function setExpiryDetail(Google_Service_CloudIdentity_ExpiryDetail $expiryDetail)
+  public function setReportRequests($reportRequests)
   {
-    $this->expiryDetail = $expiryDetail;
+    $this->reportRequests = $reportRequests;
   }
   /**
-   * @return Google_Service_CloudIdentity_ExpiryDetail
+   * @return Google_Service_Networkconnectivity_ReportRequest[]
    */
-  public function getExpiryDetail()
+  public function getReportRequests()
   {
-    return $this->expiryDetail;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->reportRequests;
   }
 }

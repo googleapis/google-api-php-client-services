@@ -15,32 +15,32 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_MembershipRole extends Google_Model
+class Google_Service_Networkconnectivity_SetIamPolicyRequest extends Google_Model
 {
-  protected $expiryDetailType = 'Google_Service_CloudIdentity_ExpiryDetail';
-  protected $expiryDetailDataType = '';
-  public $name;
+  protected $policyType = 'Google_Service_Networkconnectivity_Policy';
+  protected $policyDataType = '';
+  public $updateMask;
 
   /**
-   * @param Google_Service_CloudIdentity_ExpiryDetail
+   * @param Google_Service_Networkconnectivity_Policy
    */
-  public function setExpiryDetail(Google_Service_CloudIdentity_ExpiryDetail $expiryDetail)
+  public function setPolicy(Google_Service_Networkconnectivity_Policy $policy)
   {
-    $this->expiryDetail = $expiryDetail;
+    $this->policy = $policy;
   }
   /**
-   * @return Google_Service_CloudIdentity_ExpiryDetail
+   * @return Google_Service_Networkconnectivity_Policy
    */
-  public function getExpiryDetail()
+  public function getPolicy()
   {
-    return $this->expiryDetail;
+    return $this->policy;
   }
-  public function setName($name)
+  public function setUpdateMask($updateMask)
   {
-    $this->name = $name;
+    $this->updateMask = $updateMask;
   }
-  public function getName()
+  public function getUpdateMask()
   {
-    return $this->name;
+    return $this->updateMask;
   }
 }

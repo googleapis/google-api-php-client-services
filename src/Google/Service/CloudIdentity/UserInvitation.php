@@ -15,25 +15,20 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_MembershipRole extends Google_Model
+class Google_Service_CloudIdentity_UserInvitation extends Google_Model
 {
-  protected $expiryDetailType = 'Google_Service_CloudIdentity_ExpiryDetail';
-  protected $expiryDetailDataType = '';
+  public $mailsSentCount;
   public $name;
+  public $state;
+  public $updateTime;
 
-  /**
-   * @param Google_Service_CloudIdentity_ExpiryDetail
-   */
-  public function setExpiryDetail(Google_Service_CloudIdentity_ExpiryDetail $expiryDetail)
+  public function setMailsSentCount($mailsSentCount)
   {
-    $this->expiryDetail = $expiryDetail;
+    $this->mailsSentCount = $mailsSentCount;
   }
-  /**
-   * @return Google_Service_CloudIdentity_ExpiryDetail
-   */
-  public function getExpiryDetail()
+  public function getMailsSentCount()
   {
-    return $this->expiryDetail;
+    return $this->mailsSentCount;
   }
   public function setName($name)
   {
@@ -42,5 +37,21 @@ class Google_Service_CloudIdentity_MembershipRole extends Google_Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  public function getState()
+  {
+    return $this->state;
+  }
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }

@@ -170,7 +170,8 @@ class Google_Service_Compute_Resource_RegionDisks extends Google_Service_Resourc
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @opt_param string sourceImage Optional. Source image to restore onto a disk.
+   * @opt_param string sourceImage Source image to restore onto a disk. This field
+   * is optional.
    * @return Google_Service_Compute_Operation
    */
   public function insert($project, $region, Google_Service_Compute_Disk $postBody, $optParams = array())

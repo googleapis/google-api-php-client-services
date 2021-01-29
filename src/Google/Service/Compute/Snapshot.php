@@ -30,6 +30,7 @@ class Google_Service_Compute_Snapshot extends Google_Collection
   public $labels;
   public $licenseCodes;
   public $licenses;
+  public $locationHint;
   public $name;
   public $satisfiesPzs;
   public $selfLink;
@@ -139,6 +140,14 @@ class Google_Service_Compute_Snapshot extends Google_Collection
   public function getLicenses()
   {
     return $this->licenses;
+  }
+  public function setLocationHint($locationHint)
+  {
+    $this->locationHint = $locationHint;
+  }
+  public function getLocationHint()
+  {
+    return $this->locationHint;
   }
   public function setName($name)
   {

@@ -15,25 +15,36 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_MembershipRole extends Google_Model
+class Google_Service_Compute_FirewallPolicyAssociation extends Google_Model
 {
-  protected $expiryDetailType = 'Google_Service_CloudIdentity_ExpiryDetail';
-  protected $expiryDetailDataType = '';
+  public $attachmentTarget;
+  public $displayName;
+  public $firewallPolicyId;
   public $name;
 
-  /**
-   * @param Google_Service_CloudIdentity_ExpiryDetail
-   */
-  public function setExpiryDetail(Google_Service_CloudIdentity_ExpiryDetail $expiryDetail)
+  public function setAttachmentTarget($attachmentTarget)
   {
-    $this->expiryDetail = $expiryDetail;
+    $this->attachmentTarget = $attachmentTarget;
   }
-  /**
-   * @return Google_Service_CloudIdentity_ExpiryDetail
-   */
-  public function getExpiryDetail()
+  public function getAttachmentTarget()
   {
-    return $this->expiryDetail;
+    return $this->attachmentTarget;
+  }
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  public function getDisplayName()
+  {
+    return $this->displayName;
+  }
+  public function setFirewallPolicyId($firewallPolicyId)
+  {
+    $this->firewallPolicyId = $firewallPolicyId;
+  }
+  public function getFirewallPolicyId()
+  {
+    return $this->firewallPolicyId;
   }
   public function setName($name)
   {

@@ -34,6 +34,7 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public $ipVersion;
   public $isMirroringCollector;
   public $kind;
+  public $labelFingerprint;
   public $labels;
   public $loadBalancingScheme;
   protected $metadataFiltersType = 'Google_Service_Compute_MetadataFilter';
@@ -145,6 +146,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setLabelFingerprint($labelFingerprint)
+  {
+    $this->labelFingerprint = $labelFingerprint;
+  }
+  public function getLabelFingerprint()
+  {
+    return $this->labelFingerprint;
   }
   public function setLabels($labels)
   {

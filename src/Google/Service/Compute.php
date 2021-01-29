@@ -57,6 +57,7 @@ class Google_Service_Compute extends Google_Service
   public $diskTypes;
   public $disks;
   public $externalVpnGateways;
+  public $firewallPolicies;
   public $firewalls;
   public $forwardingRules;
   public $globalAddresses;
@@ -1526,6 +1527,289 @@ class Google_Service_Compute extends Google_Service
           )
         )
     );
+    $this->firewallPolicies = new Google_Service_Compute_Resource_FirewallPolicies(
+        $this,
+        $this->serviceName,
+        'firewallPolicies',
+        array(
+          'methods' => array(
+            'addAssociation' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/addAssociation',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'replaceExistingAssociation' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'addRule' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/addRule',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'cloneRules' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/cloneRules',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'sourceFirewallPolicy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getAssociation' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/getAssociation',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'name' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'getIamPolicy' => array(
+              'path' => 'locations/global/firewallPolicies/{resource}/getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'optionsRequestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'getRule' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/getRule',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'priority' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'insert' => array(
+              'path' => 'locations/global/firewallPolicies',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parentId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'locations/global/firewallPolicies',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'parentId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'returnPartialSuccess' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
+              ),
+            ),'listAssociations' => array(
+              'path' => 'locations/global/firewallPolicies/listAssociations',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'targetResource' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'move' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/move',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'parentId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patchRule' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/patchRule',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'priority' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'removeAssociation' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/removeAssociation',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'name' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'removeRule' => array(
+              'path' => 'locations/global/firewallPolicies/{firewallPolicy}/removeRule',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'firewallPolicy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'priority' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'setIamPolicy' => array(
+              'path' => 'locations/global/firewallPolicies/{resource}/setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'testIamPermissions' => array(
+              'path' => 'locations/global/firewallPolicies/{resource}/testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->firewalls = new Google_Service_Compute_Resource_Firewalls(
         $this,
         $this->serviceName,
@@ -1814,6 +2098,30 @@ class Google_Service_Compute extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'setLabels' => array(
+              'path' => 'projects/{project}/regions/{region}/forwardingRules/{resource}/setLabels',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'setTarget' => array(
               'path' => 'projects/{project}/regions/{region}/forwardingRules/{forwardingRule}/setTarget',
               'httpMethod' => 'POST',
@@ -2031,6 +2339,21 @@ class Google_Service_Compute extends Google_Service
                 'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),'setLabels' => array(
+              'path' => 'projects/{project}/global/forwardingRules/{resource}/setLabels',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'setTarget' => array(
@@ -11947,6 +12270,25 @@ class Google_Service_Compute extends Google_Service
                 'returnPartialSuccess' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'targetHttpsProxy' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'setQuicOverride' => array(

@@ -184,6 +184,22 @@ class Google_Service_Compute_Resource_GlobalForwardingRules extends Google_Servi
     return $this->call('patch', array($params), "Google_Service_Compute_Operation");
   }
   /**
+   * Sets the labels on the specified resource. To learn more about labels, read
+   * the Labeling Resources documentation. (globalForwardingRules.setLabels)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param Google_Service_Compute_GlobalSetLabelsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Operation
+   */
+  public function setLabels($project, $resource, Google_Service_Compute_GlobalSetLabelsRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'resource' => $resource, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('setLabels', array($params), "Google_Service_Compute_Operation");
+  }
+  /**
    * Changes target URL for the GlobalForwardingRule resource. The new target
    * should be of the same type as the old target.
    * (globalForwardingRules.setTarget)

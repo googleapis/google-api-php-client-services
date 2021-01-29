@@ -15,18 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_Group extends Google_Model
+class Google_Service_Networkconnectivity_Hub extends Google_Collection
 {
+  protected $collection_key = 'spokes';
   public $createTime;
   public $description;
-  public $displayName;
-  protected $dynamicGroupMetadataType = 'Google_Service_CloudIdentity_DynamicGroupMetadata';
-  protected $dynamicGroupMetadataDataType = '';
-  protected $groupKeyType = 'Google_Service_CloudIdentity_EntityKey';
-  protected $groupKeyDataType = '';
   public $labels;
   public $name;
-  public $parent;
+  public $spokes;
+  public $state;
+  public $uniqueId;
   public $updateTime;
 
   public function setCreateTime($createTime)
@@ -45,42 +43,6 @@ class Google_Service_CloudIdentity_Group extends Google_Model
   {
     return $this->description;
   }
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  /**
-   * @param Google_Service_CloudIdentity_DynamicGroupMetadata
-   */
-  public function setDynamicGroupMetadata(Google_Service_CloudIdentity_DynamicGroupMetadata $dynamicGroupMetadata)
-  {
-    $this->dynamicGroupMetadata = $dynamicGroupMetadata;
-  }
-  /**
-   * @return Google_Service_CloudIdentity_DynamicGroupMetadata
-   */
-  public function getDynamicGroupMetadata()
-  {
-    return $this->dynamicGroupMetadata;
-  }
-  /**
-   * @param Google_Service_CloudIdentity_EntityKey
-   */
-  public function setGroupKey(Google_Service_CloudIdentity_EntityKey $groupKey)
-  {
-    $this->groupKey = $groupKey;
-  }
-  /**
-   * @return Google_Service_CloudIdentity_EntityKey
-   */
-  public function getGroupKey()
-  {
-    return $this->groupKey;
-  }
   public function setLabels($labels)
   {
     $this->labels = $labels;
@@ -97,13 +59,29 @@ class Google_Service_CloudIdentity_Group extends Google_Model
   {
     return $this->name;
   }
-  public function setParent($parent)
+  public function setSpokes($spokes)
   {
-    $this->parent = $parent;
+    $this->spokes = $spokes;
   }
-  public function getParent()
+  public function getSpokes()
   {
-    return $this->parent;
+    return $this->spokes;
+  }
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  public function getState()
+  {
+    return $this->state;
+  }
+  public function setUniqueId($uniqueId)
+  {
+    $this->uniqueId = $uniqueId;
+  }
+  public function getUniqueId()
+  {
+    return $this->uniqueId;
   }
   public function setUpdateTime($updateTime)
   {
