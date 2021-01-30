@@ -26,6 +26,12 @@ class Google_Service_BinaryAuthorization_Policy extends Google_Collection
   protected $defaultAdmissionRuleDataType = '';
   public $description;
   public $globalPolicyEvaluationMode;
+  protected $istioServiceIdentityAdmissionRulesType = 'Google_Service_BinaryAuthorization_AdmissionRule';
+  protected $istioServiceIdentityAdmissionRulesDataType = 'map';
+  protected $kubernetesNamespaceAdmissionRulesType = 'Google_Service_BinaryAuthorization_AdmissionRule';
+  protected $kubernetesNamespaceAdmissionRulesDataType = 'map';
+  protected $kubernetesServiceAccountAdmissionRulesType = 'Google_Service_BinaryAuthorization_AdmissionRule';
+  protected $kubernetesServiceAccountAdmissionRulesDataType = 'map';
   public $name;
   public $updateTime;
 
@@ -86,6 +92,48 @@ class Google_Service_BinaryAuthorization_Policy extends Google_Collection
   public function getGlobalPolicyEvaluationMode()
   {
     return $this->globalPolicyEvaluationMode;
+  }
+  /**
+   * @param Google_Service_BinaryAuthorization_AdmissionRule[]
+   */
+  public function setIstioServiceIdentityAdmissionRules($istioServiceIdentityAdmissionRules)
+  {
+    $this->istioServiceIdentityAdmissionRules = $istioServiceIdentityAdmissionRules;
+  }
+  /**
+   * @return Google_Service_BinaryAuthorization_AdmissionRule[]
+   */
+  public function getIstioServiceIdentityAdmissionRules()
+  {
+    return $this->istioServiceIdentityAdmissionRules;
+  }
+  /**
+   * @param Google_Service_BinaryAuthorization_AdmissionRule[]
+   */
+  public function setKubernetesNamespaceAdmissionRules($kubernetesNamespaceAdmissionRules)
+  {
+    $this->kubernetesNamespaceAdmissionRules = $kubernetesNamespaceAdmissionRules;
+  }
+  /**
+   * @return Google_Service_BinaryAuthorization_AdmissionRule[]
+   */
+  public function getKubernetesNamespaceAdmissionRules()
+  {
+    return $this->kubernetesNamespaceAdmissionRules;
+  }
+  /**
+   * @param Google_Service_BinaryAuthorization_AdmissionRule[]
+   */
+  public function setKubernetesServiceAccountAdmissionRules($kubernetesServiceAccountAdmissionRules)
+  {
+    $this->kubernetesServiceAccountAdmissionRules = $kubernetesServiceAccountAdmissionRules;
+  }
+  /**
+   * @return Google_Service_BinaryAuthorization_AdmissionRule[]
+   */
+  public function getKubernetesServiceAccountAdmissionRules()
+  {
+    return $this->kubernetesServiceAccountAdmissionRules;
   }
   public function setName($name)
   {

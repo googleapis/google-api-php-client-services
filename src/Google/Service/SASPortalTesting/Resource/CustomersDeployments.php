@@ -79,8 +79,7 @@ class Google_Service_SASPortalTesting_Resource_CustomersDeployments extends Goog
    * @opt_param int pageSize The maximum number of deployments to return in the
    * response.
    * @opt_param string pageToken A pagination token returned from a previous call
-   * to ListDeployments method that indicates where this listing should continue
-   * from.
+   * to ListDeployments that indicates where this listing should continue from.
    * @return Google_Service_SASPortalTesting_SasPortalListDeploymentsResponse
    */
   public function listCustomersDeployments($parent, $optParams = array())

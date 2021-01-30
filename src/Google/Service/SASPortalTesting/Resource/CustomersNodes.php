@@ -79,7 +79,7 @@ class Google_Service_SASPortalTesting_Resource_CustomersNodes extends Google_Ser
    * @opt_param int pageSize The maximum number of nodes to return in the
    * response.
    * @opt_param string pageToken A pagination token returned from a previous call
-   * to ListNodes method that indicates where this listing should continue from.
+   * to ListNodes that indicates where this listing should continue from.
    * @return Google_Service_SASPortalTesting_SasPortalListNodesResponse
    */
   public function listCustomersNodes($parent, $optParams = array())
