@@ -48,6 +48,7 @@ class Google_Service_Storage_Bucket extends Google_Collection
   public $projectNumber;
   protected $retentionPolicyType = 'Google_Service_Storage_BucketRetentionPolicy';
   protected $retentionPolicyDataType = '';
+  public $satisfiesPZS;
   public $selfLink;
   public $storageClass;
   public $timeCreated;
@@ -277,6 +278,14 @@ class Google_Service_Storage_Bucket extends Google_Collection
   public function getRetentionPolicy()
   {
     return $this->retentionPolicy;
+  }
+  public function setSatisfiesPZS($satisfiesPZS)
+  {
+    $this->satisfiesPZS = $satisfiesPZS;
+  }
+  public function getSatisfiesPZS()
+  {
+    return $this->satisfiesPZS;
   }
   public function setSelfLink($selfLink)
   {
