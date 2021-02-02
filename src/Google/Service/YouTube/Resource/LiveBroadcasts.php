@@ -71,59 +71,6 @@ class Google_Service_YouTube_Resource_LiveBroadcasts extends Google_Service_Reso
     return $this->call('bind', array($params), "Google_Service_YouTube_LiveBroadcast");
   }
   /**
-   * Slate and recording control of the live broadcast. Support actions: slate
-   * on/off, recording start/stop/pause/resume. Design doc: goto/yt-api-
-   * liveBroadcast-control (liveBroadcasts.control)
-   *
-   * @param string $id Broadcast to operate.
-   * @param string|array $part The *part* parameter specifies a comma-separated
-   * list of one or more liveBroadcast resource properties that the API response
-   * will include. The part names that you can include in the parameter value are
-   * id, snippet, contentDetails, and status.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool displaySlate Whether display or hide slate.
-   * @opt_param string offsetTimeMs The exact time when the actions (e.g. slate
-   * on) are executed. It is an offset from the first frame of the monitor stream.
-   * If not set, it means "now" or ASAP. This field should not be set if the
-   * monitor stream is disabled, otherwise an error will be returned.
-   * @opt_param string onBehalfOfContentOwner *Note:* This parameter is intended
-   * exclusively for YouTube content partners. The *onBehalfOfContentOwner*
-   * parameter indicates that the request's authorization credentials identify a
-   * YouTube CMS user who is acting on behalf of the content owner specified in
-   * the parameter value. This parameter is intended for YouTube content partners
-   * that own and manage many different YouTube channels. It allows content owners
-   * to authenticate once and get access to all their video and channel data,
-   * without having to provide authentication credentials for each individual
-   * channel. The CMS account that the user authenticates with must be linked to
-   * the specified YouTube content owner.
-   * @opt_param string onBehalfOfContentOwnerChannel This parameter can only be
-   * used in a properly authorized request. *Note:* This parameter is intended
-   * exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel*
-   * parameter specifies the YouTube channel ID of the channel to which a video is
-   * being added. This parameter is required when a request specifies a value for
-   * the onBehalfOfContentOwner parameter, and it can only be used in conjunction
-   * with that parameter. In addition, the request must be authorized using a CMS
-   * account that is linked to the content owner that the onBehalfOfContentOwner
-   * parameter specifies. Finally, the channel that the
-   * onBehalfOfContentOwnerChannel parameter value specifies must be linked to the
-   * content owner that the onBehalfOfContentOwner parameter specifies. This
-   * parameter is intended for YouTube content partners that own and manage many
-   * different YouTube channels. It allows content owners to authenticate once and
-   * perform actions on behalf of the channel specified in the parameter value,
-   * without having to provide authentication credentials for each separate
-   * channel.
-   * @opt_param string walltime The wall clock time at which the action should be
-   * executed. Only one of offset_time_ms and walltime may be set at a time.
-   * @return Google_Service_YouTube_LiveBroadcast
-   */
-  public function control($id, $part, $optParams = array())
-  {
-    $params = array('id' => $id, 'part' => $part);
-    $params = array_merge($params, $optParams);
-    return $this->call('control', array($params), "Google_Service_YouTube_LiveBroadcast");
-  }
-  /**
    * Delete a given broadcast. (liveBroadcasts.delete)
    *
    * @param string $id Broadcast to delete.

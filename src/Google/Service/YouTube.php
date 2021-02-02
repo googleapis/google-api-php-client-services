@@ -768,42 +768,6 @@ class Google_Service_YouTube extends Google_Service
                   'type' => 'string',
                 ),
               ),
-            ),'control' => array(
-              'path' => 'youtube/v3/liveBroadcasts/control',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'id' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'part' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                  'required' => true,
-                ),
-                'displaySlate' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'offsetTimeMs' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'onBehalfOfContentOwner' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'onBehalfOfContentOwnerChannel' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'walltime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
             ),'delete' => array(
               'path' => 'youtube/v3/liveBroadcasts',
               'httpMethod' => 'DELETE',

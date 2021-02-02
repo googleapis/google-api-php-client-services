@@ -32,6 +32,8 @@ class Google_Service_AndroidManagement_Resource_Enterprises extends Google_Servi
    * @param Google_Service_AndroidManagement_Enterprise $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool agreementAccepted This feature is not generally available
+   * yet. Whether the managed Google Play Agreement is presented and agreed.
    * @opt_param string enterpriseToken The enterprise token appended to the
    * callback URL.
    * @opt_param string projectId The ID of the Google Cloud Platform project which
@@ -47,6 +49,21 @@ class Google_Service_AndroidManagement_Resource_Enterprises extends Google_Servi
     return $this->call('create', array($params), "Google_Service_AndroidManagement_Enterprise");
   }
   /**
+   * This feature is not generally available yet. Deletes an enterprise.
+   * (enterprises.delete)
+   *
+   * @param string $name This feature is not generally available yet. The name of
+   * the enterprise in the form enterprises/{enterpriseId}.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_AndroidManagement_AndroidmanagementEmpty
+   */
+  public function delete($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', array($params), "Google_Service_AndroidManagement_AndroidmanagementEmpty");
+  }
+  /**
    * Gets an enterprise. (enterprises.get)
    *
    * @param string $name The name of the enterprise in the form
@@ -59,6 +76,29 @@ class Google_Service_AndroidManagement_Resource_Enterprises extends Google_Servi
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
     return $this->call('get', array($params), "Google_Service_AndroidManagement_Enterprise");
+  }
+  /**
+   * This feature is not generally available yet. Lists enterprises that are
+   * managed by an EMM. Only partial views are returned.
+   * (enterprises.listEnterprises)
+   *
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize This feature is not generally available yet. The
+   * requested page size. The actual page size may be fixed to a min or max value.
+   * @opt_param string pageToken This feature is not generally available yet. A
+   * token identifying a page of results returned by the server.
+   * @opt_param string projectId Required. This feature is not generally available
+   * yet. The ID of the Cloud project of the EMM the enterprises belongs to.
+   * @opt_param string view This feature is not generally available yet. View that
+   * specify that partial response should be returned.
+   * @return Google_Service_AndroidManagement_ListEnterprisesResponse
+   */
+  public function listEnterprises($optParams = array())
+  {
+    $params = array();
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_AndroidManagement_ListEnterprisesResponse");
   }
   /**
    * Updates an enterprise. (enterprises.patch)

@@ -19,6 +19,8 @@ class Google_Service_AndroidManagement_Enterprise extends Google_Collection
 {
   protected $collection_key = 'termsAndConditions';
   public $appAutoApprovalEnabled;
+  protected $contactInfoType = 'Google_Service_AndroidManagement_ContactInfo';
+  protected $contactInfoDataType = '';
   public $enabledNotificationTypes;
   public $enterpriseDisplayName;
   protected $logoType = 'Google_Service_AndroidManagement_ExternalData';
@@ -38,6 +40,20 @@ class Google_Service_AndroidManagement_Enterprise extends Google_Collection
   public function getAppAutoApprovalEnabled()
   {
     return $this->appAutoApprovalEnabled;
+  }
+  /**
+   * @param Google_Service_AndroidManagement_ContactInfo
+   */
+  public function setContactInfo(Google_Service_AndroidManagement_ContactInfo $contactInfo)
+  {
+    $this->contactInfo = $contactInfo;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_ContactInfo
+   */
+  public function getContactInfo()
+  {
+    return $this->contactInfo;
   }
   public function setEnabledNotificationTypes($enabledNotificationTypes)
   {

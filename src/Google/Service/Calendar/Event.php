@@ -35,6 +35,7 @@ class Google_Service_Calendar_Event extends Google_Collection
   protected $endDataType = '';
   public $endTimeUnspecified;
   public $etag;
+  public $eventType;
   protected $extendedPropertiesType = 'Google_Service_Calendar_EventExtendedProperties';
   protected $extendedPropertiesDataType = '';
   protected $gadgetType = 'Google_Service_Calendar_EventGadget';
@@ -194,6 +195,14 @@ class Google_Service_Calendar_Event extends Google_Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  public function setEventType($eventType)
+  {
+    $this->eventType = $eventType;
+  }
+  public function getEventType()
+  {
+    return $this->eventType;
   }
   /**
    * @param Google_Service_Calendar_EventExtendedProperties
