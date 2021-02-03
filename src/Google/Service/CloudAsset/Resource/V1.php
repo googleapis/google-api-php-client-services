@@ -221,7 +221,7 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * @param string $scope Required. A scope can be a project, a folder, or an
    * organization. The search is limited to the IAM policies within the `scope`.
    * The caller must be granted the
-   * [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-
+   * [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-
    * inventory/docs/access-control#required_permissions) permission on the desired
    * scope. The allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-
    * bar") * projects/{PROJECT_NUMBER} (e.g., "projects/12345678") *
@@ -285,7 +285,7 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * @param string $scope Required. A scope can be a project, a folder, or an
    * organization. The search is limited to the resources within the `scope`. The
    * caller must be granted the
-   * [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-
+   * [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-
    * inventory/docs/access-control#required_permissions) permission on the desired
    * scope. The allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-
    * bar") * projects/{PROJECT_NUMBER} (e.g., "projects/12345678") *
@@ -322,7 +322,7 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * the value of `next_page_token` from the previous response. The values of all
    * other method parameters, must be identical to those in the previous call.
    * @opt_param string query Optional. The query statement. See [how to construct
-   * a query](http://cloud.google.com/asset-inventory/docs/searching-
+   * a query](https://cloud.google.com/asset-inventory/docs/searching-
    * resources#how_to_construct_a_query) for more information. If not specified or
    * empty, it will search all the resources within the specified `scope`.
    * Examples: * `name:Important` to find Cloud resources whose name contains
@@ -333,13 +333,20 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * and "west" as prefixes. * `labels:prod` to find Cloud resources whose labels
    * contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
    * that have a label "env" and its value is "prod". * `labels.env:*` to find
-   * Cloud resources that have a label "env". * `Important` to find Cloud
-   * resources that contain "Important" as a word in any of the searchable fields.
-   * * `Impor*` to find Cloud resources that contain "Impor" as a prefix of any
-   * word in any of the searchable fields. * `Important location:(us-west1 OR
-   * global)` to find Cloud resources that contain "Important" as a word in any of
-   * the searchable fields and are also located in the "us-west1" region or the
-   * "global" location.
+   * Cloud resources that have a label "env". * `kmsKey:key` to find Cloud
+   * resources encrypted with a customer-managed encryption key whose name
+   * contains the word "key". * `state:ACTIVE` to find Cloud resources whose state
+   * contains "ACTIVE" as a word. * `createTime<1609459200` to find Cloud
+   * resources that were created before "2021-01-01 00:00:00 UTC". 1609459200 is
+   * the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
+   * `updateTime>1609459200` to find Cloud resources that were updated after
+   * "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of "2021-01-01
+   * 00:00:00 UTC" in seconds. * `Important` to find Cloud resources that contain
+   * "Important" as a word in any of the searchable fields. * `Impor*` to find
+   * Cloud resources that contain "Impor" as a prefix of any word in any of the
+   * searchable fields. * `Important location:(us-west1 OR global)` to find Cloud
+   * resources that contain "Important" as a word in any of the searchable fields
+   * and are also located in the "us-west1" region or the "global" location.
    * @return Google_Service_CloudAsset_SearchAllResourcesResponse
    */
   public function searchAllResources($scope, $optParams = array())

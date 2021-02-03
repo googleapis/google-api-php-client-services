@@ -19,6 +19,8 @@ class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3ProcessorVersion ext
 {
   public $createTime;
   public $displayName;
+  protected $latestEvaluationType = 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EvaluationReference';
+  protected $latestEvaluationDataType = '';
   public $name;
   protected $schemaType = 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3Schema';
   protected $schemaDataType = '';
@@ -39,6 +41,20 @@ class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3ProcessorVersion ext
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EvaluationReference
+   */
+  public function setLatestEvaluation(Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EvaluationReference $latestEvaluation)
+  {
+    $this->latestEvaluation = $latestEvaluation;
+  }
+  /**
+   * @return Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EvaluationReference
+   */
+  public function getLatestEvaluation()
+  {
+    return $this->latestEvaluation;
   }
   public function setName($name)
   {

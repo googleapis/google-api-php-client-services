@@ -19,7 +19,7 @@
  * Service definition for HangoutsChat (v1).
  *
  * <p>
- * Enables bots to fetch information and perform actions in Hangouts Chat.</p>
+ * Enables bots to fetch information and perform actions in Google Chat.</p>
  *
  * <p>
  * For more information about this service, see the API

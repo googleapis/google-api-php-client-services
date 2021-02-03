@@ -19,6 +19,8 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ExperimentResultMetric 
 {
   protected $confidenceIntervalType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval';
   protected $confidenceIntervalDataType = '';
+  public $count;
+  public $countType;
   public $ratio;
   public $type;
 
@@ -35,6 +37,22 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ExperimentResultMetric 
   public function getConfidenceInterval()
   {
     return $this->confidenceInterval;
+  }
+  public function setCount($count)
+  {
+    $this->count = $count;
+  }
+  public function getCount()
+  {
+    return $this->count;
+  }
+  public function setCountType($countType)
+  {
+    $this->countType = $countType;
+  }
+  public function getCountType()
+  {
+    return $this->countType;
   }
   public function setRatio($ratio)
   {

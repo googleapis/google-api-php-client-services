@@ -27,6 +27,7 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3EntityType extends Goog
   protected $excludedPhrasesDataType = 'array';
   public $kind;
   public $name;
+  public $redact;
 
   public function setAutoExpansionMode($autoExpansionMode)
   {
@@ -95,5 +96,13 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3EntityType extends Goog
   public function getName()
   {
     return $this->name;
+  }
+  public function setRedact($redact)
+  {
+    $this->redact = $redact;
+  }
+  public function getRedact()
+  {
+    return $this->redact;
   }
 }

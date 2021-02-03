@@ -17,10 +17,28 @@
 
 class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extends Google_Model
 {
+  public $confidence;
+  public $displayName;
   public $lastMatchedIntent;
   protected $parametersType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue';
   protected $parametersDataType = 'map';
 
+  public function setConfidence($confidence)
+  {
+    $this->confidence = $confidence;
+  }
+  public function getConfidence()
+  {
+    return $this->confidence;
+  }
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  public function getDisplayName()
+  {
+    return $this->displayName;
+  }
   public function setLastMatchedIntent($lastMatchedIntent)
   {
     $this->lastMatchedIntent = $lastMatchedIntent;
