@@ -47,11 +47,13 @@ class Google_Service_Sasportal_Resource_CustomersNodesDeployments extends Google
    * "nodes/1", customer/1/nodes/2.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter The filter expression. The filter should have the
+   * following format: "DIRECT_CHILDREN" or format: "direct_children". The filter
+   * is case insensitive. If empty, then no deployments are filtered.
    * @opt_param int pageSize The maximum number of deployments to return in the
    * response.
    * @opt_param string pageToken A pagination token returned from a previous call
-   * to ListDeployments method that indicates where this listing should continue
-   * from.
+   * to ListDeployments that indicates where this listing should continue from.
    * @return Google_Service_Sasportal_SasPortalListDeploymentsResponse
    */
   public function listCustomersNodesDeployments($parent, $optParams = array())

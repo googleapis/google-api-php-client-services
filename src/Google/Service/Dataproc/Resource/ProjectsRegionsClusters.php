@@ -38,10 +38,11 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. A unique id used to identify the
-   * request. If the server receives two CreateClusterRequest requests with the
-   * same id, then the second request will be ignored and the first
-   * google.longrunning.Operation created and stored in the backend is returned.It
-   * is recommended to always set this value to a UUID
+   * request. If the server receives two CreateClusterRequest (https://cloud.googl
+   * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap
+   * roc.v1.CreateClusterRequest)s with the same id, then the second request will
+   * be ignored and the first google.longrunning.Operation created and stored in
+   * the backend is returned.It is recommended to always set this value to a UUID
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
@@ -69,10 +70,11 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * RPC should fail (with error NOT_FOUND) if cluster with specified UUID does
    * not exist.
    * @opt_param string requestId Optional. A unique id used to identify the
-   * request. If the server receives two DeleteClusterRequest requests with the
-   * same id, then the second request will be ignored and the first
-   * google.longrunning.Operation created and stored in the backend is returned.It
-   * is recommended to always set this value to a UUID
+   * request. If the server receives two DeleteClusterRequest (https://cloud.googl
+   * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap
+   * roc.v1.DeleteClusterRequest)s with the same id, then the second request will
+   * be ignored and the first google.longrunning.Operation created and stored in
+   * the backend is returned.It is recommended to always set this value to a UUID
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
@@ -215,10 +217,11 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * buffers/docs/proto3#json)).Only supported on Dataproc image versions 1.2 and
    * higher.
    * @opt_param string requestId Optional. A unique id used to identify the
-   * request. If the server receives two UpdateClusterRequest requests with the
-   * same id, then the second request will be ignored and the first
-   * google.longrunning.Operation created and stored in the backend is returned.It
-   * is recommended to always set this value to a UUID
+   * request. If the server receives two UpdateClusterRequest (https://cloud.googl
+   * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap
+   * roc.v1.UpdateClusterRequest)s with the same id, then the second request will
+   * be ignored and the first google.longrunning.Operation created and stored in
+   * the backend is returned.It is recommended to always set this value to a UUID
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
@@ -262,6 +265,42 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
     $params = array('resource' => $resource, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('setIamPolicy', array($params), "Google_Service_Dataproc_Policy");
+  }
+  /**
+   * Starts a cluster in a project. (clusters.start)
+   *
+   * @param string $projectId Required. The ID of the Google Cloud Platform
+   * project the cluster belongs to.
+   * @param string $region Required. The Dataproc region in which to handle the
+   * request.
+   * @param string $clusterName Required. The cluster name.
+   * @param Google_Service_Dataproc_StartClusterRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Dataproc_Operation
+   */
+  public function start($projectId, $region, $clusterName, Google_Service_Dataproc_StartClusterRequest $postBody, $optParams = array())
+  {
+    $params = array('projectId' => $projectId, 'region' => $region, 'clusterName' => $clusterName, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('start', array($params), "Google_Service_Dataproc_Operation");
+  }
+  /**
+   * Stops a cluster in a project. (clusters.stop)
+   *
+   * @param string $projectId Required. The ID of the Google Cloud Platform
+   * project the cluster belongs to.
+   * @param string $region Required. The Dataproc region in which to handle the
+   * request.
+   * @param string $clusterName Required. The cluster name.
+   * @param Google_Service_Dataproc_StopClusterRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Dataproc_Operation
+   */
+  public function stop($projectId, $region, $clusterName, Google_Service_Dataproc_StopClusterRequest $postBody, $optParams = array())
+  {
+    $params = array('projectId' => $projectId, 'region' => $region, 'clusterName' => $clusterName, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('stop', array($params), "Google_Service_Dataproc_Operation");
   }
   /**
    * Returns permissions that a caller has on the specified resource. If the

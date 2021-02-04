@@ -22,6 +22,7 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildbotCommandEve
   public $inputCacheMiss;
   public $numErrors;
   public $numWarnings;
+  public $usedAsyncContainer;
 
   public function setDockerCacheHit($dockerCacheHit)
   {
@@ -62,5 +63,13 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildbotCommandEve
   public function getNumWarnings()
   {
     return $this->numWarnings;
+  }
+  public function setUsedAsyncContainer($usedAsyncContainer)
+  {
+    $this->usedAsyncContainer = $usedAsyncContainer;
+  }
+  public function getUsedAsyncContainer()
+  {
+    return $this->usedAsyncContainer;
   }
 }

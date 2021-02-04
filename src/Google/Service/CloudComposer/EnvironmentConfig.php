@@ -21,6 +21,8 @@ class Google_Service_CloudComposer_EnvironmentConfig extends Google_Model
   public $dagGcsPrefix;
   protected $databaseConfigType = 'Google_Service_CloudComposer_DatabaseConfig';
   protected $databaseConfigDataType = '';
+  protected $encryptionConfigType = 'Google_Service_CloudComposer_EncryptionConfig';
+  protected $encryptionConfigDataType = '';
   public $gkeCluster;
   protected $nodeConfigType = 'Google_Service_CloudComposer_NodeConfig';
   protected $nodeConfigDataType = '';
@@ -63,6 +65,20 @@ class Google_Service_CloudComposer_EnvironmentConfig extends Google_Model
   public function getDatabaseConfig()
   {
     return $this->databaseConfig;
+  }
+  /**
+   * @param Google_Service_CloudComposer_EncryptionConfig
+   */
+  public function setEncryptionConfig(Google_Service_CloudComposer_EncryptionConfig $encryptionConfig)
+  {
+    $this->encryptionConfig = $encryptionConfig;
+  }
+  /**
+   * @return Google_Service_CloudComposer_EncryptionConfig
+   */
+  public function getEncryptionConfig()
+  {
+    return $this->encryptionConfig;
   }
   public function setGkeCluster($gkeCluster)
   {

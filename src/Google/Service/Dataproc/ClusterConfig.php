@@ -33,6 +33,8 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
   protected $lifecycleConfigDataType = '';
   protected $masterConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
   protected $masterConfigDataType = '';
+  protected $metastoreConfigType = 'Google_Service_Dataproc_MetastoreConfig';
+  protected $metastoreConfigDataType = '';
   protected $secondaryWorkerConfigType = 'Google_Service_Dataproc_InstanceGroupConfig';
   protected $secondaryWorkerConfigDataType = '';
   protected $securityConfigType = 'Google_Service_Dataproc_SecurityConfig';
@@ -148,6 +150,20 @@ class Google_Service_Dataproc_ClusterConfig extends Google_Collection
   public function getMasterConfig()
   {
     return $this->masterConfig;
+  }
+  /**
+   * @param Google_Service_Dataproc_MetastoreConfig
+   */
+  public function setMetastoreConfig(Google_Service_Dataproc_MetastoreConfig $metastoreConfig)
+  {
+    $this->metastoreConfig = $metastoreConfig;
+  }
+  /**
+   * @return Google_Service_Dataproc_MetastoreConfig
+   */
+  public function getMetastoreConfig()
+  {
+    return $this->metastoreConfig;
   }
   /**
    * @param Google_Service_Dataproc_InstanceGroupConfig

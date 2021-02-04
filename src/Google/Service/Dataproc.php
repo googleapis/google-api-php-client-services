@@ -575,6 +575,46 @@ class Google_Service_Dataproc extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'start' => array(
+              'path' => 'v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:start',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'clusterName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'stop' => array(
+              'path' => 'v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:stop',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'clusterName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'testIamPermissions' => array(
               'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
