@@ -20,6 +20,7 @@ class Google_Service_ServiceControl_CheckRequest extends Google_Collection
   protected $collection_key = 'resources';
   protected $attributesType = 'Google_Service_ServiceControl_AttributeContext';
   protected $attributesDataType = '';
+  public $flags;
   protected $resourcesType = 'Google_Service_ServiceControl_ResourceInfo';
   protected $resourcesDataType = 'array';
   public $serviceConfigId;
@@ -37,6 +38,14 @@ class Google_Service_ServiceControl_CheckRequest extends Google_Collection
   public function getAttributes()
   {
     return $this->attributes;
+  }
+  public function setFlags($flags)
+  {
+    $this->flags = $flags;
+  }
+  public function getFlags()
+  {
+    return $this->flags;
   }
   /**
    * @param Google_Service_ServiceControl_ResourceInfo[]

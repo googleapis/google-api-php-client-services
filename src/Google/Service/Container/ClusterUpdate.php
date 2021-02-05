@@ -41,6 +41,8 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   protected $desiredNodePoolAutoscalingDataType = '';
   public $desiredNodePoolId;
   public $desiredNodeVersion;
+  protected $desiredNotificationConfigType = 'Google_Service_Container_NotificationConfig';
+  protected $desiredNotificationConfigDataType = '';
   protected $desiredPrivateClusterConfigType = 'Google_Service_Container_PrivateClusterConfig';
   protected $desiredPrivateClusterConfigDataType = '';
   public $desiredPrivateIpv6GoogleAccess;
@@ -222,6 +224,20 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   public function getDesiredNodeVersion()
   {
     return $this->desiredNodeVersion;
+  }
+  /**
+   * @param Google_Service_Container_NotificationConfig
+   */
+  public function setDesiredNotificationConfig(Google_Service_Container_NotificationConfig $desiredNotificationConfig)
+  {
+    $this->desiredNotificationConfig = $desiredNotificationConfig;
+  }
+  /**
+   * @return Google_Service_Container_NotificationConfig
+   */
+  public function getDesiredNotificationConfig()
+  {
+    return $this->desiredNotificationConfig;
   }
   /**
    * @param Google_Service_Container_PrivateClusterConfig

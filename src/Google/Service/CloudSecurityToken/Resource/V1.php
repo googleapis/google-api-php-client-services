@@ -26,7 +26,9 @@
 class Google_Service_CloudSecurityToken_Resource_V1 extends Google_Service_Resource
 {
   /**
-   * Exchanges a credential for a Google OAuth 2.0 access token. (v1.token)
+   * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts
+   * an external identity within a workload identity pool, or it applies a
+   * Credential Access Boundary to a Google access token. (v1.token)
    *
    * @param Google_Service_CloudSecurityToken_GoogleIdentityStsV1ExchangeTokenRequest $postBody
    * @param array $optParams Optional parameters.
