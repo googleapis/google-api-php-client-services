@@ -24,6 +24,7 @@ class Google_Service_Apigee_GoogleCloudApigeeV1DeveloperAppKey extends Google_Co
   public $consumerKey;
   public $consumerSecret;
   public $expiresAt;
+  public $expiresInSeconds;
   public $issuedAt;
   public $scopes;
   public $status;
@@ -73,6 +74,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1DeveloperAppKey extends Google_Co
   public function getExpiresAt()
   {
     return $this->expiresAt;
+  }
+  public function setExpiresInSeconds($expiresInSeconds)
+  {
+    $this->expiresInSeconds = $expiresInSeconds;
+  }
+  public function getExpiresInSeconds()
+  {
+    return $this->expiresInSeconds;
   }
   public function setIssuedAt($issuedAt)
   {

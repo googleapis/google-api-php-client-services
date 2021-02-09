@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/google-api-php-client-services.git",
-        "sha": "d5334e9853afe16e7d8215006a475061d8023216"
+        "sha": "1f9584912ea5b80889b5eff8b604b25248e7b0ba"
       }
     },
     {
       "git": {
         "name": "discovery-artifact-manager",
         "remote": "https://github.com/googleapis/discovery-artifact-manager.git",
-        "sha": "73d6a5f46fdafc84a745705d01d3c8e550c67de2"
+        "sha": "d85a1ec89b00565e3158569cbdbda16c00e47637"
       }
     }
   ]

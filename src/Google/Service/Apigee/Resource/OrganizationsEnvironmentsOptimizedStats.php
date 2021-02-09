@@ -34,10 +34,10 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsOptimizedStats ext
    *
    * @param string $name Required. The resource name for which the interactive
    * query will be executed. Must be of the form `organizations/{organization_id}/
-   * environments/{environment_id/stats/{dimensions}` Dimensions let you view
-   * metrics in meaningful groupings. E.g. apiproxy, target_host. The value of
-   * dimensions should be comma separated list as shown below
-   * `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
+   * environments/{environment_id/optimizedStats/{dimensions}` Dimensions let you
+   * view metrics in meaningful groupings. E.g. apiproxy, target_host. The value
+   * of dimensions should be comma separated list as shown below
+   * `organizations/{org}/environments/{env}/optimizedStats/apiproxy,request_verb`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string accuracy Legacy field: not used anymore.
