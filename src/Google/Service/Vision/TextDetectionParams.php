@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_Testing_ProvidedSoftwareCatalog extends Google_Model
+class Google_Service_Vision_TextDetectionParams extends Google_Model
 {
-  public $androidxOrchestratorVersion;
-  public $orchestratorVersion;
+  public $enableTextDetectionConfidenceScore;
 
-  public function setAndroidxOrchestratorVersion($androidxOrchestratorVersion)
+  public function setEnableTextDetectionConfidenceScore($enableTextDetectionConfidenceScore)
   {
-    $this->androidxOrchestratorVersion = $androidxOrchestratorVersion;
+    $this->enableTextDetectionConfidenceScore = $enableTextDetectionConfidenceScore;
   }
-  public function getAndroidxOrchestratorVersion()
+  public function getEnableTextDetectionConfidenceScore()
   {
-    return $this->androidxOrchestratorVersion;
-  }
-  public function setOrchestratorVersion($orchestratorVersion)
-  {
-    $this->orchestratorVersion = $orchestratorVersion;
-  }
-  public function getOrchestratorVersion()
-  {
-    return $this->orchestratorVersion;
+    return $this->enableTextDetectionConfidenceScore;
   }
 }
