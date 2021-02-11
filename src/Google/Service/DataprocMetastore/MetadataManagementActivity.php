@@ -17,9 +17,11 @@
 
 class Google_Service_DataprocMetastore_MetadataManagementActivity extends Google_Collection
 {
-  protected $collection_key = 'metadataExports';
+  protected $collection_key = 'restores';
   protected $metadataExportsType = 'Google_Service_DataprocMetastore_MetadataExport';
   protected $metadataExportsDataType = 'array';
+  protected $restoresType = 'Google_Service_DataprocMetastore_Restore';
+  protected $restoresDataType = 'array';
 
   /**
    * @param Google_Service_DataprocMetastore_MetadataExport[]
@@ -34,5 +36,19 @@ class Google_Service_DataprocMetastore_MetadataManagementActivity extends Google
   public function getMetadataExports()
   {
     return $this->metadataExports;
+  }
+  /**
+   * @param Google_Service_DataprocMetastore_Restore[]
+   */
+  public function setRestores($restores)
+  {
+    $this->restores = $restores;
+  }
+  /**
+   * @return Google_Service_DataprocMetastore_Restore[]
+   */
+  public function getRestores()
+  {
+    return $this->restores;
   }
 }

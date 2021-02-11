@@ -17,6 +17,7 @@
 
 class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildbotCommandEvents extends Google_Model
 {
+  public $cmUsage;
   public $dockerCacheHit;
   public $dockerImageName;
   public $inputCacheMiss;
@@ -24,6 +25,14 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildbotCommandEve
   public $numWarnings;
   public $usedAsyncContainer;
 
+  public function setCmUsage($cmUsage)
+  {
+    $this->cmUsage = $cmUsage;
+  }
+  public function getCmUsage()
+  {
+    return $this->cmUsage;
+  }
   public function setDockerCacheHit($dockerCacheHit)
   {
     $this->dockerCacheHit = $dockerCacheHit;

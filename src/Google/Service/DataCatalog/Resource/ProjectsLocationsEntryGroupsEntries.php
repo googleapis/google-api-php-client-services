@@ -137,10 +137,10 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
    * Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-
    * project) for more information). (entries.patch)
    *
-   * @param string $name The Data Catalog resource name of the entry in URL
-   * format. Example: * projects/{project_id}/locations/{location}/entryGroups/{en
-   * try_group_id}/entries/{entry_id} Note that this Entry and its child resources
-   * may not actually be stored in the location in this name.
+   * @param string $name Output only. The Data Catalog resource name of the entry
+   * in URL format. Example: * projects/{project_id}/locations/{location}/entryGro
+   * ups/{entry_group_id}/entries/{entry_id} Note that this Entry and its child
+   * resources may not actually be stored in the location in this name.
    * @param Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry $postBody
    * @param array $optParams Optional parameters.
    *

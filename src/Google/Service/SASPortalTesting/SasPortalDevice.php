@@ -24,6 +24,8 @@ class Google_Service_SASPortalTesting_SasPortalDevice extends Google_Collection
   protected $deviceMetadataDataType = '';
   public $displayName;
   public $fccId;
+  protected $grantRangeAllowlistsType = 'Google_Service_SASPortalTesting_SasPortalFrequencyRange';
+  protected $grantRangeAllowlistsDataType = 'array';
   protected $grantsType = 'Google_Service_SASPortalTesting_SasPortalDeviceGrant';
   protected $grantsDataType = 'array';
   public $name;
@@ -75,6 +77,20 @@ class Google_Service_SASPortalTesting_SasPortalDevice extends Google_Collection
   public function getFccId()
   {
     return $this->fccId;
+  }
+  /**
+   * @param Google_Service_SASPortalTesting_SasPortalFrequencyRange[]
+   */
+  public function setGrantRangeAllowlists($grantRangeAllowlists)
+  {
+    $this->grantRangeAllowlists = $grantRangeAllowlists;
+  }
+  /**
+   * @return Google_Service_SASPortalTesting_SasPortalFrequencyRange[]
+   */
+  public function getGrantRangeAllowlists()
+  {
+    return $this->grantRangeAllowlists;
   }
   /**
    * @param Google_Service_SASPortalTesting_SasPortalDeviceGrant[]
