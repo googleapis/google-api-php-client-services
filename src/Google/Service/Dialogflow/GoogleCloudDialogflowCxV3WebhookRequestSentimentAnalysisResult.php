@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult extends Google_Model
 {
-  public $processorVersion;
+  public $magnitude;
+  public $score;
 
-  public function setProcessorVersion($processorVersion)
+  public function setMagnitude($magnitude)
   {
-    $this->processorVersion = $processorVersion;
+    $this->magnitude = $magnitude;
   }
-  public function getProcessorVersion()
+  public function getMagnitude()
   {
-    return $this->processorVersion;
+    return $this->magnitude;
+  }
+  public function setScore($score)
+  {
+    $this->score = $score;
+  }
+  public function getScore()
+  {
+    return $this->score;
   }
 }

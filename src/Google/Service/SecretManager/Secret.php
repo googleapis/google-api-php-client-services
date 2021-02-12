@@ -15,14 +15,17 @@
  * the License.
  */
 
-class Google_Service_SecretManager_Secret extends Google_Model
+class Google_Service_SecretManager_Secret extends Google_Collection
 {
+  protected $collection_key = 'topics';
   public $createTime;
   public $expireTime;
   public $labels;
   public $name;
   protected $replicationType = 'Google_Service_SecretManager_Replication';
   protected $replicationDataType = '';
+  protected $topicsType = 'Google_Service_SecretManager_Topic';
+  protected $topicsDataType = 'array';
   public $ttl;
 
   public function setCreateTime($createTime)
@@ -70,6 +73,20 @@ class Google_Service_SecretManager_Secret extends Google_Model
   public function getReplication()
   {
     return $this->replication;
+  }
+  /**
+   * @param Google_Service_SecretManager_Topic[]
+   */
+  public function setTopics($topics)
+  {
+    $this->topics = $topics;
+  }
+  /**
+   * @return Google_Service_SecretManager_Topic[]
+   */
+  public function getTopics()
+  {
+    return $this->topics;
   }
   public function setTtl($ttl)
   {

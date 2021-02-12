@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse extends Google_Model
+class Google_Service_Container_LinuxNodeConfig extends Google_Model
 {
-  public $processorVersion;
+  public $sysctls;
 
-  public function setProcessorVersion($processorVersion)
+  public function setSysctls($sysctls)
   {
-    $this->processorVersion = $processorVersion;
+    $this->sysctls = $sysctls;
   }
-  public function getProcessorVersion()
+  public function getSysctls()
   {
-    return $this->processorVersion;
+    return $this->sysctls;
   }
 }

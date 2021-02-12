@@ -19,6 +19,10 @@ class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersio
 {
   protected $commonMetadataType = 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata';
   protected $commonMetadataDataType = '';
+  protected $testDatasetValidationType = 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation';
+  protected $testDatasetValidationDataType = '';
+  protected $trainingDatasetValidationType = 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation';
+  protected $trainingDatasetValidationDataType = '';
 
   /**
    * @param Google_Service_Document_GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
@@ -33,5 +37,33 @@ class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersio
   public function getCommonMetadata()
   {
     return $this->commonMetadata;
+  }
+  /**
+   * @param Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation
+   */
+  public function setTestDatasetValidation(Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation $testDatasetValidation)
+  {
+    $this->testDatasetValidation = $testDatasetValidation;
+  }
+  /**
+   * @return Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation
+   */
+  public function getTestDatasetValidation()
+  {
+    return $this->testDatasetValidation;
+  }
+  /**
+   * @param Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation
+   */
+  public function setTrainingDatasetValidation(Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation $trainingDatasetValidation)
+  {
+    $this->trainingDatasetValidation = $trainingDatasetValidation;
+  }
+  /**
+   * @return Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation
+   */
+  public function getTrainingDatasetValidation()
+  {
+    return $this->trainingDatasetValidation;
   }
 }

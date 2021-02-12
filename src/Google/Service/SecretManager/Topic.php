@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse extends Google_Model
+class Google_Service_SecretManager_Topic extends Google_Model
 {
-  public $processorVersion;
+  public $name;
 
-  public function setProcessorVersion($processorVersion)
+  public function setName($name)
   {
-    $this->processorVersion = $processorVersion;
+    $this->name = $name;
   }
-  public function getProcessorVersion()
+  public function getName()
   {
-    return $this->processorVersion;
+    return $this->name;
   }
 }

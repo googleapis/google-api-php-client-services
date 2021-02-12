@@ -19,7 +19,8 @@
  * Service definition for Dfareporting (v3.4).
  *
  * <p>
- * Manage your DoubleClick Campaign Manager ad campaigns and reports.</p>
+ * Build applications to efficiently manage large or complex trafficking,
+ * reporting, and attribution workflows for Campaign Manager 360.</p>
  *
  * <p>
  * For more information about this service, see the API

@@ -17,19 +17,12 @@
 
 class Google_Service_Document_GoogleCloudDocumentaiUiv1beta3EvaluateProcessorVersionResponse extends Google_Model
 {
-  protected $evaluationType = 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3Evaluation';
-  protected $evaluationDataType = '';
+  public $evaluation;
 
-  /**
-   * @param Google_Service_Document_GoogleCloudDocumentaiUiv1beta3Evaluation
-   */
-  public function setEvaluation(Google_Service_Document_GoogleCloudDocumentaiUiv1beta3Evaluation $evaluation)
+  public function setEvaluation($evaluation)
   {
     $this->evaluation = $evaluation;
   }
-  /**
-   * @return Google_Service_Document_GoogleCloudDocumentaiUiv1beta3Evaluation
-   */
   public function getEvaluation()
   {
     return $this->evaluation;
