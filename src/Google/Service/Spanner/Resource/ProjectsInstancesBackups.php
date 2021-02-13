@@ -119,6 +119,7 @@ class Google_Service_Spanner_Resource_ProjectsInstancesBackups extends Google_Se
    * sensitive. The following fields in the Backup are eligible for filtering: *
    * `name` * `database` * `state` * `create_time` (and values are of the format
    * YYYY-MM-DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-
+   * DDTHH:MM:SSZ) * `version_time` (and values are of the format YYYY-MM-
    * DDTHH:MM:SSZ) * `size_bytes` You can combine multiple expressions by
    * enclosing each expression in parentheses. By default, expressions are
    * combined with AND logic, but you can specify AND, OR, and NOT logic

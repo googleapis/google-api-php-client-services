@@ -58,7 +58,8 @@ class Google_Service_CloudRetail_Resource_ProjectsLocationsCatalogsBranchesProdu
    * returned. If the Product to delete does not exist, a NOT_FOUND error is
    * returned. The Product to delete can neither be a Product.Type.COLLECTION
    * Product member nor a Product.Type.PRIMARY Product with more than one
-   * variants. Otherwise, an INVALID_ARGUMENT error is returned.
+   * variants. Otherwise, an INVALID_ARGUMENT error is returned. All inventory
+   * information for the named Product will be deleted.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudRetail_GoogleProtobufEmpty
    */
