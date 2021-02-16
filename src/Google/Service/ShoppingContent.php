@@ -58,6 +58,7 @@ class Google_Service_ShoppingContent extends Google_Service
   public $pubsubnotificationsettings;
   public $regionalinventory;
   public $regions;
+  public $reports;
   public $repricingrules;
   public $repricingrules_repricingreports;
   public $returnaddress;
@@ -2085,6 +2086,26 @@ class Google_Service_ShoppingContent extends Google_Service
                 'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->reports = new Google_Service_ShoppingContent_Resource_Reports(
+        $this,
+        $this->serviceName,
+        'reports',
+        array(
+          'methods' => array(
+            'search' => array(
+              'path' => 'content/v2.1/{merchantId}/reports/search',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),

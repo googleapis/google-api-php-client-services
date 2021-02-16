@@ -4513,6 +4513,31 @@ class Google_Service_Compute extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'getEffectiveFirewalls' => array(
+              'path' => 'projects/{project}/zones/{zone}/instances/{instance}/getEffectiveFirewalls',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'instance' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'networkInterface' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'getGuestAttributes' => array(
               'path' => 'projects/{project}/zones/{zone}/instances/{instance}/getGuestAttributes',
               'httpMethod' => 'GET',
@@ -6250,6 +6275,21 @@ class Google_Service_Compute extends Google_Service
               ),
             ),'get' => array(
               'path' => 'projects/{project}/global/networks/{network}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'network' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getEffectiveFirewalls' => array(
+              'path' => 'projects/{project}/global/networks/{network}/getEffectiveFirewalls',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'project' => array(

@@ -38,6 +38,7 @@ class Google_Service_Compute_Image extends Google_Collection
   public $name;
   protected $rawDiskType = 'Google_Service_Compute_ImageRawDisk';
   protected $rawDiskDataType = '';
+  public $satisfiesPzs;
   public $selfLink;
   protected $shieldedInstanceInitialStateType = 'Google_Service_Compute_InitialStateConfig';
   protected $shieldedInstanceInitialStateDataType = '';
@@ -208,6 +209,14 @@ class Google_Service_Compute_Image extends Google_Collection
   public function getRawDisk()
   {
     return $this->rawDisk;
+  }
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   public function setSelfLink($selfLink)
   {

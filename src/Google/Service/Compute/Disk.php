@@ -36,6 +36,7 @@ class Google_Service_Compute_Disk extends Google_Collection
   public $name;
   public $options;
   public $physicalBlockSizeBytes;
+  public $provisionedIops;
   public $region;
   public $replicaZones;
   public $resourcePolicies;
@@ -197,6 +198,14 @@ class Google_Service_Compute_Disk extends Google_Collection
   public function getPhysicalBlockSizeBytes()
   {
     return $this->physicalBlockSizeBytes;
+  }
+  public function setProvisionedIops($provisionedIops)
+  {
+    $this->provisionedIops = $provisionedIops;
+  }
+  public function getProvisionedIops()
+  {
+    return $this->provisionedIops;
   }
   public function setRegion($region)
   {

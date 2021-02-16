@@ -26,6 +26,7 @@ class Google_Service_Compute_NodeGroupNode extends Google_Collection
   public $instances;
   public $name;
   public $nodeType;
+  public $satisfiesPzs;
   protected $serverBindingType = 'Google_Service_Compute_ServerBinding';
   protected $serverBindingDataType = '';
   public $serverId;
@@ -90,6 +91,14 @@ class Google_Service_Compute_NodeGroupNode extends Google_Collection
   public function getNodeType()
   {
     return $this->nodeType;
+  }
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param Google_Service_Compute_ServerBinding

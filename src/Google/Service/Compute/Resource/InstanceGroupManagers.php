@@ -122,8 +122,8 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceGroupManagerAggregatedList
    */
   public function aggregatedList($project, $optParams = array())
@@ -386,8 +386,8 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceGroupManagerList
    */
   public function listInstanceGroupManagers($project, $zone, $optParams = array())
@@ -449,8 +449,8 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceGroupManagersListErrorsResponse
    */
   public function listErrors($project, $zone, $instanceGroupManager, $optParams = array())
@@ -513,8 +513,8 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceGroupManagersListManagedInstancesResponse
    */
   public function listManagedInstances($project, $zone, $instanceGroupManager, $optParams = array())
@@ -574,8 +574,8 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceGroupManagersListPerInstanceConfigsResp
    */
   public function listPerInstanceConfigs($project, $zone, $instanceGroupManager, $optParams = array())

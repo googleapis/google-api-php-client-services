@@ -24,6 +24,7 @@ class Google_Service_Compute_NodeGroup extends Google_Model
   public $fingerprint;
   public $id;
   public $kind;
+  public $locationHint;
   public $maintenancePolicy;
   protected $maintenanceWindowType = 'Google_Service_Compute_NodeGroupMaintenanceWindow';
   protected $maintenanceWindowDataType = '';
@@ -87,6 +88,14 @@ class Google_Service_Compute_NodeGroup extends Google_Model
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setLocationHint($locationHint)
+  {
+    $this->locationHint = $locationHint;
+  }
+  public function getLocationHint()
+  {
+    return $this->locationHint;
   }
   public function setMaintenancePolicy($maintenancePolicy)
   {

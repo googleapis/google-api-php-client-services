@@ -17,7 +17,7 @@
 
 class Google_Service_Compute_ForwardingRule extends Google_Collection
 {
-  protected $collection_key = 'ports';
+  protected $collection_key = 'serviceDirectoryRegistrations';
   protected $internal_gapi_mappings = array(
         "iPAddress" => "IPAddress",
         "iPProtocol" => "IPProtocol",
@@ -44,8 +44,11 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public $networkTier;
   public $portRange;
   public $ports;
+  public $pscConnectionId;
   public $region;
   public $selfLink;
+  protected $serviceDirectoryRegistrationsType = 'Google_Service_Compute_ForwardingRuleServiceDirectoryRegistration';
+  protected $serviceDirectoryRegistrationsDataType = 'array';
   public $serviceLabel;
   public $serviceName;
   public $subnetwork;
@@ -225,6 +228,14 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   {
     return $this->ports;
   }
+  public function setPscConnectionId($pscConnectionId)
+  {
+    $this->pscConnectionId = $pscConnectionId;
+  }
+  public function getPscConnectionId()
+  {
+    return $this->pscConnectionId;
+  }
   public function setRegion($region)
   {
     $this->region = $region;
@@ -240,6 +251,20 @@ class Google_Service_Compute_ForwardingRule extends Google_Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  /**
+   * @param Google_Service_Compute_ForwardingRuleServiceDirectoryRegistration[]
+   */
+  public function setServiceDirectoryRegistrations($serviceDirectoryRegistrations)
+  {
+    $this->serviceDirectoryRegistrations = $serviceDirectoryRegistrations;
+  }
+  /**
+   * @return Google_Service_Compute_ForwardingRuleServiceDirectoryRegistration[]
+   */
+  public function getServiceDirectoryRegistrations()
+  {
+    return $this->serviceDirectoryRegistrations;
   }
   public function setServiceLabel($serviceLabel)
   {

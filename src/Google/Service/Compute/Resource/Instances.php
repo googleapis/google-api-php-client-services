@@ -141,8 +141,8 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceAggregatedList
    */
   public function aggregatedList($project, $optParams = array())
@@ -291,6 +291,24 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
     $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance);
     $params = array_merge($params, $optParams);
     return $this->call('get', array($params), "Google_Service_Compute_Instance");
+  }
+  /**
+   * Returns effective firewalls applied to an interface of the instance.
+   * (instances.getEffectiveFirewalls)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $instance Name of the instance scoping this request.
+   * @param string $networkInterface The name of the network interface to get the
+   * effective firewalls.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_InstancesGetEffectiveFirewallsResponse
+   */
+  public function getEffectiveFirewalls($project, $zone, $instance, $networkInterface, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance, 'networkInterface' => $networkInterface);
+    $params = array_merge($params, $optParams);
+    return $this->call('getEffectiveFirewalls', array($params), "Google_Service_Compute_InstancesGetEffectiveFirewallsResponse");
   }
   /**
    * Returns the specified guest attributes entry. (instances.getGuestAttributes)
@@ -478,8 +496,8 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceList
    */
   public function listInstances($project, $zone, $optParams = array())
@@ -540,8 +558,8 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_InstanceListReferrers
    */
   public function listReferrers($project, $zone, $instance, $optParams = array())

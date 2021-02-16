@@ -29,10 +29,11 @@ class Google_Service_Clouderrorreporting_Resource_ProjectsGroupStats extends Goo
    * Lists the specified groups. (groupStats.listProjectsGroupStats)
    *
    * @param string $projectName Required. The resource name of the Google Cloud
-   * Platform project. Written as `projects/{projectID}`, where `{projectID}` is
-   * the [Google Cloud Platform project
-   * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-
-   * project-123`.
+   * Platform project. Written as `projects/{projectID}` or
+   * `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be
+   * found in the [Google Cloud
+   * Console](https://support.google.com/cloud/answer/6158840). Examples:
+   * `projects/my-project-123`, `projects/5551234`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string alignment Optional. The alignment of the timed counts to be

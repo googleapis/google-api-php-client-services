@@ -127,6 +127,9 @@ class Google_Service_Area120Tables_Resource_TablesRows extends Google_Service_Re
    * @param string $parent Required. The parent table. Format: tables/{table}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Raw text query to search for in rows of
+   * the table. Special characters must be escaped. Logical operators and field
+   * specific filtering not supported.
    * @opt_param int pageSize The maximum number of rows to return. The service may
    * return fewer than this value. If unspecified, at most 50 rows are returned.
    * The maximum value is 1,000; values above 1,000 are coerced to 1,000.

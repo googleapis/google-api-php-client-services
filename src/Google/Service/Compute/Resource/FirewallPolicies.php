@@ -278,8 +278,8 @@ class Google_Service_Compute_Resource_FirewallPolicies extends Google_Service_Re
    * of results.
    * @opt_param string parentId Parent ID for this request.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
-   * which provides partial results in case of failure. The default value is false
-   * and the logic is the same as today.
+   * which provides partial results in case of failure. The default value is
+   * false.
    * @return Google_Service_Compute_FirewallPolicyList
    */
   public function listFirewallPolicies($optParams = array())
