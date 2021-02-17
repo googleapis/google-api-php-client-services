@@ -40,7 +40,8 @@ class Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesGroupsDevices 
    * field is ignored. Maximum IDs: 10,000.
    * @opt_param string fieldMask The fields of the `Device` resource to be
    * returned in the response. The fields `id` and `num_id` are always returned,
-   * along with any other fields specified.
+   * along with any other fields specified in snake_case format, for example:
+   * `last_heartbeat_time`.
    * @opt_param string gatewayListOptions.associationsDeviceId If set, returns
    * only the gateways with which the specified device is associated. The device
    * ID can be numeric (`num_id`) or the user-defined string (`id`). For example,

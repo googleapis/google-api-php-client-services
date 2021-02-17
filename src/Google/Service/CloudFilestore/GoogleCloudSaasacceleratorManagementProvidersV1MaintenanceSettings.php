@@ -18,6 +18,7 @@
 class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings extends Google_Model
 {
   public $exclude;
+  public $isRollback;
   protected $maintenancePoliciesType = 'Google_Service_CloudFilestore_MaintenancePolicy';
   protected $maintenancePoliciesDataType = 'map';
 
@@ -28,6 +29,14 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   public function getExclude()
   {
     return $this->exclude;
+  }
+  public function setIsRollback($isRollback)
+  {
+    $this->isRollback = $isRollback;
+  }
+  public function getIsRollback()
+  {
+    return $this->isRollback;
   }
   /**
    * @param Google_Service_CloudFilestore_MaintenancePolicy[]

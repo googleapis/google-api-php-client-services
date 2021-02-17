@@ -127,6 +127,16 @@ class Google_Service_Storagetransfer extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'run' => array(
+              'path' => 'v1/{+jobName}:run',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'jobName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )

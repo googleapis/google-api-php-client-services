@@ -31,7 +31,7 @@
  */
 class Google_Service_Games extends Google_Service
 {
-  /** View and manage its own configuration data in your Google Drive. */
+  /** See, create, and delete its own configuration data in your Google Drive. */
   const DRIVE_APPDATA =
       "https://www.googleapis.com/auth/drive.appdata";
   /** Create, edit, and delete your Google Play Games activity. */

@@ -944,6 +944,10 @@ class Google_Service_Directory extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'allowPlus' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'get' => array(
               'path' => 'admin/directory/v1/customer/{customerId}/orgunits/{+orgUnitPath}',
@@ -958,6 +962,10 @@ class Google_Service_Directory extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'allowPlus' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),'insert' => array(
@@ -1002,6 +1010,10 @@ class Google_Service_Directory extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'allowPlus' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),'update' => array(
               'path' => 'admin/directory/v1/customer/{customerId}/orgunits/{+orgUnitPath}',
@@ -1016,6 +1028,10 @@ class Google_Service_Directory extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'allowPlus' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ),
               ),
             ),

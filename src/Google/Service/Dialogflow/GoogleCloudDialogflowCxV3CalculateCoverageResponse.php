@@ -20,6 +20,8 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3CalculateCoverageRespon
   public $agent;
   protected $intentCoverageType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3IntentCoverage';
   protected $intentCoverageDataType = '';
+  protected $routeGroupCoverageType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage';
+  protected $routeGroupCoverageDataType = '';
   protected $transitionCoverageType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionCoverage';
   protected $transitionCoverageDataType = '';
 
@@ -44,6 +46,20 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3CalculateCoverageRespon
   public function getIntentCoverage()
   {
     return $this->intentCoverage;
+  }
+  /**
+   * @param Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage
+   */
+  public function setRouteGroupCoverage(Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage $routeGroupCoverage)
+  {
+    $this->routeGroupCoverage = $routeGroupCoverage;
+  }
+  /**
+   * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage
+   */
+  public function getRouteGroupCoverage()
+  {
+    return $this->routeGroupCoverage;
   }
   /**
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionCoverage

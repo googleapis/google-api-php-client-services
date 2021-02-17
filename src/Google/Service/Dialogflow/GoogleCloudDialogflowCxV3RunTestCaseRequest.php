@@ -18,7 +18,6 @@
 class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3RunTestCaseRequest extends Google_Model
 {
   public $environment;
-  public $name;
 
   public function setEnvironment($environment)
   {
@@ -27,13 +26,5 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3RunTestCaseRequest exte
   public function getEnvironment()
   {
     return $this->environment;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
   }
 }

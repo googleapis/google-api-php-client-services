@@ -1288,20 +1288,10 @@ class Google_Service_Dialogflow extends Google_Service
                 ),
               ),
             ),'run' => array(
-              'path' => 'v3/projects/{projectsId}/locations/{locationsId}/agents/{agentsId}/testCases:run',
+              'path' => 'v3/{+name}:run',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'projectsId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'locationsId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'agentsId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

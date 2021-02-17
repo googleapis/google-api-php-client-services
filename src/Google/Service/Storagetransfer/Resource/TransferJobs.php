@@ -92,4 +92,21 @@ class Google_Service_Storagetransfer_Resource_TransferJobs extends Google_Servic
     $params = array_merge($params, $optParams);
     return $this->call('patch', array($params), "Google_Service_Storagetransfer_TransferJob");
   }
+  /**
+   * Attempts to start a new TransferOperation for the current TransferJob. A
+   * TransferJob has a maximum of one active TransferOperation. If this method is
+   * called while a TransferOperation is active, an error wil be returned.
+   * (transferJobs.run)
+   *
+   * @param string $jobName Required. The name of the transfer job.
+   * @param Google_Service_Storagetransfer_RunTransferJobRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Storagetransfer_Operation
+   */
+  public function run($jobName, Google_Service_Storagetransfer_RunTransferJobRequest $postBody, $optParams = array())
+  {
+    $params = array('jobName' => $jobName, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('run', array($params), "Google_Service_Storagetransfer_Operation");
+  }
 }

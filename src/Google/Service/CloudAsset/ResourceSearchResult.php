@@ -30,6 +30,8 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   public $name;
   public $networkTags;
   public $organization;
+  public $parentAssetType;
+  public $parentFullResourceName;
   public $project;
   public $state;
   public $updateTime;
@@ -129,6 +131,22 @@ class Google_Service_CloudAsset_ResourceSearchResult extends Google_Collection
   public function getOrganization()
   {
     return $this->organization;
+  }
+  public function setParentAssetType($parentAssetType)
+  {
+    $this->parentAssetType = $parentAssetType;
+  }
+  public function getParentAssetType()
+  {
+    return $this->parentAssetType;
+  }
+  public function setParentFullResourceName($parentFullResourceName)
+  {
+    $this->parentFullResourceName = $parentFullResourceName;
+  }
+  public function getParentFullResourceName()
+  {
+    return $this->parentFullResourceName;
   }
   public function setProject($project)
   {
