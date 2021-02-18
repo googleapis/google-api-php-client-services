@@ -16,31 +16,31 @@
  */
 
 /**
- * Service definition for Workflows (v1).
+ * Service definition for MyBusinessAccountManagement (v1).
  *
  * <p>
- * Orchestrate Workflows consisting of Google Cloud APIs, SaaS APIs or private
- * API endpoints.</p>
+ * The My Business Account Management API provides an interface for managing
+ * access to a location on Google.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/workflows" target="_blank">Documentation</a>
+ * <a href="https://developers.google.com/my-business/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_Workflows extends Google_Service
+class Google_Service_MyBusinessAccountManagement extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
-      "https://www.googleapis.com/auth/cloud-platform";
 
-  public $projects_locations;
-  public $projects_locations_operations;
-  public $projects_locations_workflows;
+
+  public $accounts;
+  public $accounts_admins;
+  public $accounts_invitations;
+  public $locations_admins;
 
   /**
-   * Constructs the internal representation of the Workflows service.
+   * Constructs the internal representation of the MyBusinessAccountManagement
+   * service.
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
@@ -48,70 +48,22 @@ class Google_Service_Workflows extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://workflows.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://mybusinessaccountmanagement.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
-    $this->serviceName = 'workflows';
+    $this->serviceName = 'mybusinessaccountmanagement';
 
-    $this->projects_locations = new Google_Service_Workflows_Resource_ProjectsLocations(
+    $this->accounts = new Google_Service_MyBusinessAccountManagement_Resource_Accounts(
         $this,
         $this->serviceName,
-        'locations',
+        'accounts',
         array(
           'methods' => array(
-            'get' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'v1/{+name}/locations',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->projects_locations_operations = new Google_Service_Workflows_Resource_ProjectsLocationsOperations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
-            'delete' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
+            'create' => array(
+              'path' => 'v1/accounts',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
             ),'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -123,14 +75,9 @@ class Google_Service_Workflows extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+name}/operations',
+              'path' => 'v1/accounts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -143,29 +90,47 @@ class Google_Service_Workflows extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'parentAccount' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'validateOnly' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
               ),
             ),
           )
         )
     );
-    $this->projects_locations_workflows = new Google_Service_Workflows_Resource_ProjectsLocationsWorkflows(
+    $this->accounts_admins = new Google_Service_MyBusinessAccountManagement_Resource_AccountsAdmins(
         $this,
         $this->serviceName,
-        'workflows',
+        'admins',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1/{+parent}/workflows',
+              'path' => 'v1/{+parent}/admins',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'workflowId' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'delete' => array(
@@ -178,9 +143,53 @@ class Google_Service_Workflows extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'get' => array(
-              'path' => 'v1/{+name}',
+            ),'list' => array(
+              'path' => 'v1/{+parent}/admins',
               'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->accounts_invitations = new Google_Service_MyBusinessAccountManagement_Resource_AccountsInvitations(
+        $this,
+        $this->serviceName,
+        'invitations',
+        array(
+          'methods' => array(
+            'accept' => array(
+              'path' => 'v1/{+name}:accept',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'decline' => array(
+              'path' => 'v1/{+name}:decline',
+              'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
@@ -189,7 +198,7 @@ class Google_Service_Workflows extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+parent}/workflows',
+              'path' => 'v1/{+parent}/invitations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -201,17 +210,45 @@ class Google_Service_Workflows extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orderBy' => array(
-                  'location' => 'query',
+              ),
+            ),
+          )
+        )
+    );
+    $this->locations_admins = new Google_Service_MyBusinessAccountManagement_Resource_LocationsAdmins(
+        $this,
+        $this->serviceName,
+        'admins',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1/{+parent}/admins',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
                   'type' => 'string',
+                  'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
+              ),
+            ),'delete' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
                   'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1/{+parent}/admins',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),'patch' => array(
