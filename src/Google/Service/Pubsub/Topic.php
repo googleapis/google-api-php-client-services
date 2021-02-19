@@ -23,6 +23,8 @@ class Google_Service_Pubsub_Topic extends Google_Model
   protected $messageStoragePolicyDataType = '';
   public $name;
   public $satisfiesPzs;
+  protected $schemaSettingsType = 'Google_Service_Pubsub_SchemaSettings';
+  protected $schemaSettingsDataType = '';
 
   public function setKmsKeyName($kmsKeyName)
   {
@@ -69,5 +71,19 @@ class Google_Service_Pubsub_Topic extends Google_Model
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * @param Google_Service_Pubsub_SchemaSettings
+   */
+  public function setSchemaSettings(Google_Service_Pubsub_SchemaSettings $schemaSettings)
+  {
+    $this->schemaSettings = $schemaSettings;
+  }
+  /**
+   * @return Google_Service_Pubsub_SchemaSettings
+   */
+  public function getSchemaSettings()
+  {
+    return $this->schemaSettings;
   }
 }

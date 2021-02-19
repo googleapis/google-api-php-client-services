@@ -15,14 +15,15 @@
  * the License.
  */
 
-class Google_Service_Area120Tables_Workspace extends Google_Collection
+class Google_Service_CloudResourceManager_TagValue extends Google_Model
 {
-  protected $collection_key = 'tables';
   public $createTime;
-  public $displayName;
+  public $description;
+  public $etag;
   public $name;
-  protected $tablesType = 'Google_Service_Area120Tables_Table';
-  protected $tablesDataType = 'array';
+  public $namespacedName;
+  public $parent;
+  public $shortName;
   public $updateTime;
 
   public function setCreateTime($createTime)
@@ -33,13 +34,21 @@ class Google_Service_Area120Tables_Workspace extends Google_Collection
   {
     return $this->createTime;
   }
-  public function setDisplayName($displayName)
+  public function setDescription($description)
   {
-    $this->displayName = $displayName;
+    $this->description = $description;
   }
-  public function getDisplayName()
+  public function getDescription()
   {
-    return $this->displayName;
+    return $this->description;
+  }
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  public function getEtag()
+  {
+    return $this->etag;
   }
   public function setName($name)
   {
@@ -49,19 +58,29 @@ class Google_Service_Area120Tables_Workspace extends Google_Collection
   {
     return $this->name;
   }
-  /**
-   * @param Google_Service_Area120Tables_Table[]
-   */
-  public function setTables($tables)
+  public function setNamespacedName($namespacedName)
   {
-    $this->tables = $tables;
+    $this->namespacedName = $namespacedName;
   }
-  /**
-   * @return Google_Service_Area120Tables_Table[]
-   */
-  public function getTables()
+  public function getNamespacedName()
   {
-    return $this->tables;
+    return $this->namespacedName;
+  }
+  public function setParent($parent)
+  {
+    $this->parent = $parent;
+  }
+  public function getParent()
+  {
+    return $this->parent;
+  }
+  public function setShortName($shortName)
+  {
+    $this->shortName = $shortName;
+  }
+  public function getShortName()
+  {
+    return $this->shortName;
   }
   public function setUpdateTime($updateTime)
   {

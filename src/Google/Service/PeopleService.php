@@ -48,7 +48,7 @@ class Google_Service_PeopleService extends Google_Service
   /** See and download your exact date of birth. */
   const USER_BIRTHDAY_READ =
       "https://www.googleapis.com/auth/user.birthday.read";
-  /** View your email addresses. */
+  /** See and download all of your Google Account email addresses. */
   const USER_EMAILS_READ =
       "https://www.googleapis.com/auth/user.emails.read";
   /** See your gender. */

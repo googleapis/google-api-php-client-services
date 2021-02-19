@@ -23,6 +23,7 @@ class Google_Service_TagManager_Client extends Google_Collection
   public $containerId;
   public $fingerprint;
   public $name;
+  public $notes;
   protected $parameterType = 'Google_Service_TagManager_Parameter';
   protected $parameterDataType = 'array';
   public $parentFolderId;
@@ -71,6 +72,14 @@ class Google_Service_TagManager_Client extends Google_Collection
   public function getName()
   {
     return $this->name;
+  }
+  public function setNotes($notes)
+  {
+    $this->notes = $notes;
+  }
+  public function getNotes()
+  {
+    return $this->notes;
   }
   /**
    * @param Google_Service_TagManager_Parameter[]

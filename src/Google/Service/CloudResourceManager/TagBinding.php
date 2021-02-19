@@ -15,21 +15,12 @@
  * the License.
  */
 
-class Google_Service_Area120Tables_Row extends Google_Model
+class Google_Service_CloudResourceManager_TagBinding extends Google_Model
 {
-  public $createTime;
   public $name;
-  public $updateTime;
-  public $values;
+  public $parent;
+  public $tagValue;
 
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
   public function setName($name)
   {
     $this->name = $name;
@@ -38,20 +29,20 @@ class Google_Service_Area120Tables_Row extends Google_Model
   {
     return $this->name;
   }
-  public function setUpdateTime($updateTime)
+  public function setParent($parent)
   {
-    $this->updateTime = $updateTime;
+    $this->parent = $parent;
   }
-  public function getUpdateTime()
+  public function getParent()
   {
-    return $this->updateTime;
+    return $this->parent;
   }
-  public function setValues($values)
+  public function setTagValue($tagValue)
   {
-    $this->values = $values;
+    $this->tagValue = $tagValue;
   }
-  public function getValues()
+  public function getTagValue()
   {
-    return $this->values;
+    return $this->tagValue;
   }
 }

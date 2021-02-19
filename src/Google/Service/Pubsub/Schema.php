@@ -15,20 +15,19 @@
  * the License.
  */
 
-class Google_Service_Area120Tables_Row extends Google_Model
+class Google_Service_Pubsub_Schema extends Google_Model
 {
-  public $createTime;
+  public $definition;
   public $name;
-  public $updateTime;
-  public $values;
+  public $type;
 
-  public function setCreateTime($createTime)
+  public function setDefinition($definition)
   {
-    $this->createTime = $createTime;
+    $this->definition = $definition;
   }
-  public function getCreateTime()
+  public function getDefinition()
   {
-    return $this->createTime;
+    return $this->definition;
   }
   public function setName($name)
   {
@@ -38,20 +37,12 @@ class Google_Service_Area120Tables_Row extends Google_Model
   {
     return $this->name;
   }
-  public function setUpdateTime($updateTime)
+  public function setType($type)
   {
-    $this->updateTime = $updateTime;
+    $this->type = $type;
   }
-  public function getUpdateTime()
+  public function getType()
   {
-    return $this->updateTime;
-  }
-  public function setValues($values)
-  {
-    $this->values = $values;
-  }
-  public function getValues()
-  {
-    return $this->values;
+    return $this->type;
   }
 }

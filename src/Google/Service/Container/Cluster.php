@@ -22,6 +22,8 @@ class Google_Service_Container_Cluster extends Google_Collection
   protected $addonsConfigDataType = '';
   protected $authenticatorGroupsConfigType = 'Google_Service_Container_AuthenticatorGroupsConfig';
   protected $authenticatorGroupsConfigDataType = '';
+  protected $autopilotType = 'Google_Service_Container_Autopilot';
+  protected $autopilotDataType = '';
   protected $autoscalingType = 'Google_Service_Container_ClusterAutoscaling';
   protected $autoscalingDataType = '';
   protected $binaryAuthorizationType = 'Google_Service_Container_BinaryAuthorization';
@@ -121,6 +123,20 @@ class Google_Service_Container_Cluster extends Google_Collection
   public function getAuthenticatorGroupsConfig()
   {
     return $this->authenticatorGroupsConfig;
+  }
+  /**
+   * @param Google_Service_Container_Autopilot
+   */
+  public function setAutopilot(Google_Service_Container_Autopilot $autopilot)
+  {
+    $this->autopilot = $autopilot;
+  }
+  /**
+   * @return Google_Service_Container_Autopilot
+   */
+  public function getAutopilot()
+  {
+    return $this->autopilot;
   }
   /**
    * @param Google_Service_Container_ClusterAutoscaling

@@ -50,10 +50,12 @@ class Google_Service_DisplayVideo_Creative extends Google_Collection
   public $jsTrackerUrl;
   public $lineItemIds;
   public $mediaDuration;
+  public $mp3Audio;
   public $name;
   public $notes;
   protected $obaIconType = 'Google_Service_DisplayVideo_ObaIcon';
   protected $obaIconDataType = '';
+  public $oggAudio;
   protected $progressOffsetType = 'Google_Service_DisplayVideo_AudioVideoOffset';
   protected $progressOffsetDataType = '';
   public $requireHtml5;
@@ -322,6 +324,14 @@ class Google_Service_DisplayVideo_Creative extends Google_Collection
   {
     return $this->mediaDuration;
   }
+  public function setMp3Audio($mp3Audio)
+  {
+    $this->mp3Audio = $mp3Audio;
+  }
+  public function getMp3Audio()
+  {
+    return $this->mp3Audio;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -351,6 +361,14 @@ class Google_Service_DisplayVideo_Creative extends Google_Collection
   public function getObaIcon()
   {
     return $this->obaIcon;
+  }
+  public function setOggAudio($oggAudio)
+  {
+    $this->oggAudio = $oggAudio;
+  }
+  public function getOggAudio()
+  {
+    return $this->oggAudio;
   }
   /**
    * @param Google_Service_DisplayVideo_AudioVideoOffset
