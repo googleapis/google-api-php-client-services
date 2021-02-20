@@ -19,7 +19,9 @@
  * Service definition for ChromeManagement (v1).
  *
  * <p>
- * The Chrome Management API is a suite of services that allows GSuite domain
+ * The Chrome Management API is a suite of services that allows Chrome
+ * administrators to view, manage and gain insights on their Chrome OS The
+ * Chrome Management API is a suite of services that allows GSuite domain
  * administrators to view, manage and gain insights on their Chrome OS and
  * Chrome Browser devices and users.</p>
  *

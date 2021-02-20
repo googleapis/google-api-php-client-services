@@ -22,6 +22,8 @@ class Google_Service_Bigquery_JobStatistics2 extends Google_Collection
   public $cacheHit;
   public $ddlAffectedRowAccessPolicyCount;
   public $ddlOperationPerformed;
+  protected $ddlTargetDatasetType = 'Google_Service_Bigquery_DatasetReference';
+  protected $ddlTargetDatasetDataType = '';
   protected $ddlTargetRoutineType = 'Google_Service_Bigquery_RoutineReference';
   protected $ddlTargetRoutineDataType = '';
   protected $ddlTargetRowAccessPolicyType = 'Google_Service_Bigquery_RowAccessPolicyReference';
@@ -86,6 +88,20 @@ class Google_Service_Bigquery_JobStatistics2 extends Google_Collection
   public function getDdlOperationPerformed()
   {
     return $this->ddlOperationPerformed;
+  }
+  /**
+   * @param Google_Service_Bigquery_DatasetReference
+   */
+  public function setDdlTargetDataset(Google_Service_Bigquery_DatasetReference $ddlTargetDataset)
+  {
+    $this->ddlTargetDataset = $ddlTargetDataset;
+  }
+  /**
+   * @return Google_Service_Bigquery_DatasetReference
+   */
+  public function getDdlTargetDataset()
+  {
+    return $this->ddlTargetDataset;
   }
   /**
    * @param Google_Service_Bigquery_RoutineReference
