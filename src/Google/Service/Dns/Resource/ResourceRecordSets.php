@@ -26,7 +26,7 @@
 class Google_Service_Dns_Resource_ResourceRecordSets extends Google_Service_Resource
 {
   /**
-   * Enumerate ResourceRecordSets that have been created but not yet deleted.
+   * Enumerate ResourceRecordSets that you have created but not yet deleted.
    * (resourceRecordSets.listResourceRecordSets)
    *
    * @param string $project Identifies the project addressed by this request.
@@ -35,7 +35,7 @@ class Google_Service_Dns_Resource_ResourceRecordSets extends Google_Service_Reso
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Optional. Maximum number of results to be returned.
-   * If unspecified, the server will decide how many results to return.
+   * If unspecified, the server decides how many results to return.
    * @opt_param string name Restricts the list to return only records with this
    * fully qualified domain name.
    * @opt_param string pageToken Optional. A tag returned by a previous list

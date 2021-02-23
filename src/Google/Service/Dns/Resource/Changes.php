@@ -26,7 +26,7 @@
 class Google_Service_Dns_Resource_Changes extends Google_Service_Resource
 {
   /**
-   * Atomically update the ResourceRecordSet collection. (changes.create)
+   * Atomically updates the ResourceRecordSet collection. (changes.create)
    *
    * @param string $project Identifies the project addressed by this request.
    * @param string $managedZone Identifies the managed zone addressed by this
@@ -46,7 +46,7 @@ class Google_Service_Dns_Resource_Changes extends Google_Service_Resource
     return $this->call('create', array($params), "Google_Service_Dns_Change");
   }
   /**
-   * Fetch the representation of an existing Change. (changes.get)
+   * Fetches the representation of an existing Change. (changes.get)
    *
    * @param string $project Identifies the project addressed by this request.
    * @param string $managedZone Identifies the managed zone addressed by this
@@ -67,7 +67,7 @@ class Google_Service_Dns_Resource_Changes extends Google_Service_Resource
     return $this->call('get', array($params), "Google_Service_Dns_Change");
   }
   /**
-   * Enumerate Changes to a ResourceRecordSet collection. (changes.listChanges)
+   * Enumerates Changes to a ResourceRecordSet collection. (changes.listChanges)
    *
    * @param string $project Identifies the project addressed by this request.
    * @param string $managedZone Identifies the managed zone addressed by this
@@ -75,7 +75,7 @@ class Google_Service_Dns_Resource_Changes extends Google_Service_Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Optional. Maximum number of results to be returned.
-   * If unspecified, the server will decide how many results to return.
+   * If unspecified, the server decides how many results to return.
    * @opt_param string pageToken Optional. A tag returned by a previous list
    * request that was truncated. Use this parameter to continue a previous list
    * request.

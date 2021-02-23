@@ -82,8 +82,9 @@ class Google_Service_ShoppingContent_Resource_Repricingrules extends Google_Serv
    * repricing rule.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string countryCode CLDR country code (e.g. "US"), used as a filter
-   * on repricing rules.
+   * @opt_param string countryCode [CLDR country
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g.
+   * "US"), used as a filter on repricing rules.
    * @opt_param string languageCode The two-letter ISO 639-1 language code
    * associated with the repricing rule, used as a filter.
    * @opt_param int pageSize The maximum number of repricing rules to return. The

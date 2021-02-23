@@ -27,6 +27,8 @@ class Google_Service_Transcoder_PreprocessingConfig extends Google_Model
   protected $deblockDataType = '';
   protected $denoiseType = 'Google_Service_Transcoder_Denoise';
   protected $denoiseDataType = '';
+  protected $padType = 'Google_Service_Transcoder_Pad';
+  protected $padDataType = '';
 
   /**
    * @param Google_Service_Transcoder_Audio
@@ -97,5 +99,19 @@ class Google_Service_Transcoder_PreprocessingConfig extends Google_Model
   public function getDenoise()
   {
     return $this->denoise;
+  }
+  /**
+   * @param Google_Service_Transcoder_Pad
+   */
+  public function setPad(Google_Service_Transcoder_Pad $pad)
+  {
+    $this->pad = $pad;
+  }
+  /**
+   * @return Google_Service_Transcoder_Pad
+   */
+  public function getPad()
+  {
+    return $this->pad;
   }
 }

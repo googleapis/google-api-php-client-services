@@ -206,6 +206,33 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
     return $this->call('listDirectoryPeople', array($params), "Google_Service_PeopleService_ListDirectoryPeopleResponse");
   }
   /**
+   * Provides a list of contacts in the authenticated user's grouped contacts that
+   * matches the search query. (people.searchContacts)
+   *
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. The number of results to return.
+   * @opt_param string query Required. The plain-text query for the request. The
+   * query is used to match prefix phrases of the fields on a person. For example,
+   * a person with name "foo name" matches queries such as "f", "fo", "foo", "foo
+   * n", "nam", etc., but not "oo n".
+   * @opt_param string readMask Required. A field mask to restrict which fields on
+   * each person are returned. Multiple fields can be specified by separating them
+   * with commas. Valid values are: * addresses * ageRanges * biographies *
+   * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events
+   * * externalIds * genders * imClients * interests * locales * locations *
+   * memberships * metadata * miscKeywords * names * nicknames * occupations *
+   * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
+   * urls * userDefined
+   * @return Google_Service_PeopleService_SearchResponse
+   */
+  public function searchContacts($optParams = array())
+  {
+    $params = array();
+    $params = array_merge($params, $optParams);
+    return $this->call('searchContacts', array($params), "Google_Service_PeopleService_SearchResponse");
+  }
+  /**
    * Provides a list of domain profiles and domain contacts in the authenticated
    * user's domain directory that match the search query.
    * (people.searchDirectoryPeople)

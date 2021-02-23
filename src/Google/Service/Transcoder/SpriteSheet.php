@@ -22,6 +22,7 @@ class Google_Service_Transcoder_SpriteSheet extends Google_Model
   public $filePrefix;
   public $format;
   public $interval;
+  public $quality;
   public $rowCount;
   public $spriteHeightPixels;
   public $spriteWidthPixels;
@@ -67,6 +68,14 @@ class Google_Service_Transcoder_SpriteSheet extends Google_Model
   public function getInterval()
   {
     return $this->interval;
+  }
+  public function setQuality($quality)
+  {
+    $this->quality = $quality;
+  }
+  public function getQuality()
+  {
+    return $this->quality;
   }
   public function setRowCount($rowCount)
   {

@@ -17,6 +17,7 @@
 
 class Google_Service_Cloudchannel_GoogleCloudChannelV1Plan extends Google_Model
 {
+  public $billingAccount;
   protected $paymentCycleType = 'Google_Service_Cloudchannel_GoogleCloudChannelV1Period';
   protected $paymentCycleDataType = '';
   public $paymentPlan;
@@ -24,6 +25,14 @@ class Google_Service_Cloudchannel_GoogleCloudChannelV1Plan extends Google_Model
   protected $trialPeriodType = 'Google_Service_Cloudchannel_GoogleCloudChannelV1Period';
   protected $trialPeriodDataType = '';
 
+  public function setBillingAccount($billingAccount)
+  {
+    $this->billingAccount = $billingAccount;
+  }
+  public function getBillingAccount()
+  {
+    return $this->billingAccount;
+  }
   /**
    * @param Google_Service_Cloudchannel_GoogleCloudChannelV1Period
    */
