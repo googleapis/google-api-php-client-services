@@ -26,16 +26,10 @@
 class Google_Service_PolicySimulator_Resource_FoldersLocationsReplays extends Google_Service_Resource
 {
   /**
-   * Create a replay using the given ReplayConfig. The parent of the replay must
-   * contain all resources in the overlay. For example, if the overlay contains:
-   * ``` ReplayConfig { policy_overlay = map = {
-   * "//cloudresourcemanager.googleapis.com/projects/project-1": ...,
-   * "//cloudresourcemanager.googleapis.com/projects/project-2": ..., } ``` Then,
-   * the parent used for CreateReplay must be the organization or a folder that
-   * contains both projects as children. (replays.create)
+   * Creates and starts a Replay using the given ReplayConfig. (replays.create)
    *
    * @param string $parent Required. The parent resource where this Replay will be
-   * created. This must be a project, folder, or organization with included
+   * created. This resource must be a project, folder, or organization with a
    * location. Example: `projects/my-example-project/locations/global`
    * @param Google_Service_PolicySimulator_GoogleCloudPolicysimulatorV1beta1Replay $postBody
    * @param array $optParams Optional parameters.
@@ -48,12 +42,15 @@ class Google_Service_PolicySimulator_Resource_FoldersLocationsReplays extends Go
     return $this->call('create', array($params), "Google_Service_PolicySimulator_GoogleLongrunningOperation");
   }
   /**
-   * Get the specified Replay. (replays.get)
+   * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+   * (replays.get)
    *
-   * @param string $name Required. The name of the replay to retrieve. Format is
-   * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project,
-   * folder, or organization. Example: `projects/my-example-
-   * project/locations/{location}/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+   * @param string $name Required. The name of the Replay to retrieve, in the
+   * following format: `{projects|folders|organizations}/{resource-
+   * id}/locations/global/replays/{replay-id}`, where `{resource-id}` is the ID of
+   * the project, folder, or organization that owns the `Replay`. Example:
+   * `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-
+   * 8e03-479ce1833c36`
    * @param array $optParams Optional parameters.
    * @return Google_Service_PolicySimulator_GoogleCloudPolicysimulatorV1beta1Replay
    */

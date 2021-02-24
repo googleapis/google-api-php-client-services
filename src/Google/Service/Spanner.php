@@ -266,6 +266,14 @@ class Google_Service_Spanner extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'encryptionConfig.encryptionType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'encryptionConfig.kmsKeyName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'delete' => array(
               'path' => 'v1/{+name}',

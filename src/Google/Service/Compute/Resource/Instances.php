@@ -187,6 +187,35 @@ class Google_Service_Compute_Resource_Instances extends Google_Service_Resource
     return $this->call('attachDisk', array($params), "Google_Service_Compute_Operation");
   }
   /**
+   * Creates multiple instances. Count specifies the number of instances to
+   * create. (instances.bulkInsert)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param Google_Service_Compute_BulkInsertInstanceResource $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_Compute_Operation
+   */
+  public function bulkInsert($project, $zone, Google_Service_Compute_BulkInsertInstanceResource $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('bulkInsert', array($params), "Google_Service_Compute_Operation");
+  }
+  /**
    * Deletes the specified Instance resource. For more information, see Stopping
    * or Deleting an Instance. (instances.delete)
    *

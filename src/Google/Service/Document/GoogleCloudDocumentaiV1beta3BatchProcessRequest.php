@@ -22,7 +22,7 @@ class Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequest ex
   protected $documentOutputConfigDataType = '';
   protected $inputConfigsType = 'Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig';
   protected $inputConfigsDataType = 'array';
-  protected $inputDocumentsType = 'Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig';
+  protected $inputDocumentsType = 'Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig';
   protected $inputDocumentsDataType = '';
   protected $outputConfigType = 'Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig';
   protected $outputConfigDataType = '';
@@ -57,14 +57,14 @@ class Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequest ex
     return $this->inputConfigs;
   }
   /**
-   * @param Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig
+   * @param Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig
    */
-  public function setInputDocuments(Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig $inputDocuments)
+  public function setInputDocuments(Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig $inputDocuments)
   {
     $this->inputDocuments = $inputDocuments;
   }
   /**
-   * @return Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig
+   * @return Google_Service_Document_GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig
    */
   public function getInputDocuments()
   {

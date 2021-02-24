@@ -95,6 +95,7 @@ class Google_Service_Compute extends Google_Service
   public $regionHealthChecks;
   public $regionInstanceGroupManagers;
   public $regionInstanceGroups;
+  public $regionInstances;
   public $regionNetworkEndpointGroups;
   public $regionNotificationEndpoints;
   public $regionOperations;
@@ -4400,6 +4401,25 @@ class Google_Service_Compute extends Google_Service
                 'forceAttach' => array(
                   'location' => 'query',
                   'type' => 'boolean',
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'bulkInsert' => array(
+              'path' => 'projects/{project}/zones/{zone}/instances/bulkInsert',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'zone' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
                 'requestId' => array(
                   'location' => 'query',
@@ -9254,6 +9274,35 @@ class Google_Service_Compute extends Google_Service
                   'required' => true,
                 ),
                 'instanceGroup' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'requestId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->regionInstances = new Google_Service_Compute_Resource_RegionInstances(
+        $this,
+        $this->serviceName,
+        'regionInstances',
+        array(
+          'methods' => array(
+            'bulkInsert' => array(
+              'path' => 'projects/{project}/regions/{region}/instances/bulkInsert',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'project' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

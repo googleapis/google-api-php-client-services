@@ -37,9 +37,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlowsTransitionR
    * @opt_param string languageCode The language to list transition route groups
    * for. The field `messages` in TransitionRoute is language dependent. If not
    * specified, the agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroup
    */
   public function create($parent, Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroup $postBody, $optParams = array())
@@ -79,9 +79,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlowsTransitionR
    * @opt_param string languageCode The language to list transition route groups
    * for. The field `messages` in TransitionRoute is language dependent. If not
    * specified, the agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroup
    */
   public function get($name, $optParams = array())
@@ -101,9 +101,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlowsTransitionR
    * @opt_param string languageCode The language to list transition route groups
    * for. The field `messages` in TransitionRoute is language dependent. If not
    * specified, the agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @opt_param int pageSize The maximum number of items to return in a single
    * page. By default 100 and at most 1000.
    * @opt_param string pageToken The next_page_token value returned from a
@@ -129,9 +129,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlowsTransitionR
    * @opt_param string languageCode The language to list transition route groups
    * for. The field `messages` in TransitionRoute is language dependent. If not
    * specified, the agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @opt_param string updateMask The mask to control which fields get updated.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRouteGroup
    */

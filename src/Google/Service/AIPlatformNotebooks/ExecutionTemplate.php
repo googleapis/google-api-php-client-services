@@ -24,6 +24,7 @@ class Google_Service_AIPlatformNotebooks_ExecutionTemplate extends Google_Model
   public $labels;
   public $masterType;
   public $outputNotebookFolder;
+  public $parameters;
   public $paramsYamlFile;
   public $scaleTier;
 
@@ -80,6 +81,14 @@ class Google_Service_AIPlatformNotebooks_ExecutionTemplate extends Google_Model
   public function getOutputNotebookFolder()
   {
     return $this->outputNotebookFolder;
+  }
+  public function setParameters($parameters)
+  {
+    $this->parameters = $parameters;
+  }
+  public function getParameters()
+  {
+    return $this->parameters;
   }
   public function setParamsYamlFile($paramsYamlFile)
   {

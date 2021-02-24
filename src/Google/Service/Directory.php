@@ -98,7 +98,7 @@ class Google_Service_Directory extends Google_Service
   /** View user aliases on your domain. */
   const ADMIN_DIRECTORY_USER_ALIAS_READONLY =
       "https://www.googleapis.com/auth/admin.directory.user.alias.readonly";
-  /** View users on your domain. */
+  /** See info about users on your domain. */
   const ADMIN_DIRECTORY_USER_READONLY =
       "https://www.googleapis.com/auth/admin.directory.user.readonly";
   /** Manage data access permissions for users on your domain. */

@@ -19,6 +19,7 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3QueryParameters extends
 {
   protected $collection_key = 'sessionEntityTypes';
   public $analyzeQueryTextSentiment;
+  public $disableWebhook;
   protected $geoLocationType = 'Google_Service_Dialogflow_GoogleTypeLatLng';
   protected $geoLocationDataType = '';
   public $parameters;
@@ -35,6 +36,14 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3QueryParameters extends
   public function getAnalyzeQueryTextSentiment()
   {
     return $this->analyzeQueryTextSentiment;
+  }
+  public function setDisableWebhook($disableWebhook)
+  {
+    $this->disableWebhook = $disableWebhook;
+  }
+  public function getDisableWebhook()
+  {
+    return $this->disableWebhook;
   }
   /**
    * @param Google_Service_Dialogflow_GoogleTypeLatLng

@@ -15,10 +15,15 @@
  * the License.
  */
 
-class Google_Service_Spanner_Database extends Google_Model
+class Google_Service_Spanner_Database extends Google_Collection
 {
+  protected $collection_key = 'encryptionInfo';
   public $createTime;
   public $earliestVersionTime;
+  protected $encryptionConfigType = 'Google_Service_Spanner_EncryptionConfig';
+  protected $encryptionConfigDataType = '';
+  protected $encryptionInfoType = 'Google_Service_Spanner_EncryptionInfo';
+  protected $encryptionInfoDataType = 'array';
   public $name;
   protected $restoreInfoType = 'Google_Service_Spanner_RestoreInfo';
   protected $restoreInfoDataType = '';
@@ -40,6 +45,34 @@ class Google_Service_Spanner_Database extends Google_Model
   public function getEarliestVersionTime()
   {
     return $this->earliestVersionTime;
+  }
+  /**
+   * @param Google_Service_Spanner_EncryptionConfig
+   */
+  public function setEncryptionConfig(Google_Service_Spanner_EncryptionConfig $encryptionConfig)
+  {
+    $this->encryptionConfig = $encryptionConfig;
+  }
+  /**
+   * @return Google_Service_Spanner_EncryptionConfig
+   */
+  public function getEncryptionConfig()
+  {
+    return $this->encryptionConfig;
+  }
+  /**
+   * @param Google_Service_Spanner_EncryptionInfo[]
+   */
+  public function setEncryptionInfo($encryptionInfo)
+  {
+    $this->encryptionInfo = $encryptionInfo;
+  }
+  /**
+   * @return Google_Service_Spanner_EncryptionInfo[]
+   */
+  public function getEncryptionInfo()
+  {
+    return $this->encryptionInfo;
   }
   public function setName($name)
   {

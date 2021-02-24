@@ -46,6 +46,12 @@ class Google_Service_Spanner_Resource_ProjectsInstancesBackups extends Google_Se
    * @opt_param string backupId Required. The id of the backup to be created. The
    * `backup_id` appended to `parent` forms the full backup name of the form
    * `projects//instances//backups/`.
+   * @opt_param string encryptionConfig.encryptionType Required. The encryption
+   * type of the backup.
+   * @opt_param string encryptionConfig.kmsKeyName Optional. The Cloud KMS key
+   * that will be used to protect the backup. This field should be set only when
+   * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
+   * `projects//locations//keyRings//cryptoKeys/`.
    * @return Google_Service_Spanner_Operation
    */
   public function create($parent, Google_Service_Spanner_Backup $postBody, $optParams = array())

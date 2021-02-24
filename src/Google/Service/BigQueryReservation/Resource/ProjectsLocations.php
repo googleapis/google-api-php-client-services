@@ -29,7 +29,7 @@ class Google_Service_BigQueryReservation_Resource_ProjectsLocations extends Goog
    * Retrieves a BI reservation. (locations.getBiReservation)
    *
    * @param string $name Required. Name of the requested reservation, for example:
-   * `projects/{project_id}/locations/{location_id}/bireservation`
+   * `projects/{project_id}/locations/{location_id}/biReservation`
    * @param array $optParams Optional parameters.
    * @return Google_Service_BigQueryReservation_BiReservation
    */
@@ -113,7 +113,7 @@ class Google_Service_BigQueryReservation_Resource_ProjectsLocations extends Goog
    *
    * @param string $name The resource name of the singleton BI reservation.
    * Reservation names have the form
-   * `projects/{project_id}/locations/{location_id}/bireservation`.
+   * `projects/{project_id}/locations/{location_id}/biReservation`.
    * @param Google_Service_BigQueryReservation_BiReservation $postBody
    * @param array $optParams Optional parameters.
    *

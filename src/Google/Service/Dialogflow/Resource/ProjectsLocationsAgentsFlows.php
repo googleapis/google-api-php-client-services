@@ -37,9 +37,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlows extends Go
    * `flow`: * `Flow.event_handlers.trigger_fulfillment.messages` *
    * `Flow.transition_routes.trigger_fulfillment.messages` If not specified, the
    * agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Flow
    */
   public function create($parent, Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Flow $postBody, $optParams = array())
@@ -81,9 +81,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlows extends Go
    * `Flow.event_handlers.trigger_fulfillment.messages` *
    * `Flow.transition_routes.trigger_fulfillment.messages` If not specified, the
    * agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Flow
    */
   public function get($name, $optParams = array())
@@ -123,9 +123,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlows extends Go
    * `Flow.event_handlers.trigger_fulfillment.messages` *
    * `Flow.transition_routes.trigger_fulfillment.messages` If not specified, the
    * agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @opt_param int pageSize The maximum number of items to return in a single
    * page. By default 100 and at most 1000.
    * @opt_param string pageToken The next_page_token value returned from a
@@ -150,9 +150,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlows extends Go
    * `flow`: * `Flow.event_handlers.trigger_fulfillment.messages` *
    * `Flow.transition_routes.trigger_fulfillment.messages` If not specified, the
    * agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @opt_param string updateMask Required. The mask to control which fields get
    * updated. If `update_mask` is not specified, an error will be returned.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Flow

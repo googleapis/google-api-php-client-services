@@ -24,6 +24,7 @@ class Google_Service_AIPlatformNotebooks_UpgradeHistoryEntry extends Google_Mode
   public $snapshot;
   public $state;
   public $targetImage;
+  public $targetVersion;
   public $version;
   public $vmImage;
 
@@ -82,6 +83,14 @@ class Google_Service_AIPlatformNotebooks_UpgradeHistoryEntry extends Google_Mode
   public function getTargetImage()
   {
     return $this->targetImage;
+  }
+  public function setTargetVersion($targetVersion)
+  {
+    $this->targetVersion = $targetVersion;
+  }
+  public function getTargetVersion()
+  {
+    return $this->targetVersion;
   }
   public function setVersion($version)
   {

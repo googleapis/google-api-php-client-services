@@ -26,19 +26,23 @@
 class Google_Service_PolicySimulator_Resource_ProjectsLocationsReplaysResults extends Google_Service_Resource
 {
   /**
-   * List the results of running a replay
+   * Lists the results of running a Replay.
    * (results.listProjectsLocationsReplaysResults)
    *
-   * @param string $parent Required. The replay we are listing results for.
+   * @param string $parent Required. The Replay whose results are listed, in the
+   * following format: `{projects|folders|organizations}/{resource-
+   * id}/locations/global/replays/{replay-id}` Example: `projects/my-
+   * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The maximum number of `ReplayResults` to return. If
-   * unspecified, at most 5000 `Replays` will be returned. The maximum value is
-   * 5000; values above 5000 will be coerced to 5000.
+   * @opt_param int pageSize The maximum number of ReplayResult objects to return.
+   * Defaults to 5000. The maximum value is 5000; values above 5000 are rounded
+   * down to 5000.
    * @opt_param string pageToken A page token, received from a previous
-   * `ListReplayResults` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListReplayResults` must match
-   * the call that provided the page token.
+   * Simulator.ListReplayResults call. Provide this token to retrieve the next
+   * page of results. When paginating, all other parameters provided to
+   * [Simulator.ListReplayResults[] must match the call that provided the page
+   * token.
    * @return Google_Service_PolicySimulator_GoogleCloudPolicysimulatorV1beta1ListReplayResultsResponse
    */
   public function listProjectsLocationsReplaysResults($parent, $optParams = array())

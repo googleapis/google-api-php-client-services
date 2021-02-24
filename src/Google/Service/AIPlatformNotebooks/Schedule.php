@@ -15,8 +15,9 @@
  * the License.
  */
 
-class Google_Service_AIPlatformNotebooks_Schedule extends Google_Model
+class Google_Service_AIPlatformNotebooks_Schedule extends Google_Collection
 {
+  protected $collection_key = 'recentExecutions';
   public $createTime;
   public $cronSchedule;
   public $description;
@@ -24,6 +25,8 @@ class Google_Service_AIPlatformNotebooks_Schedule extends Google_Model
   protected $executionTemplateType = 'Google_Service_AIPlatformNotebooks_ExecutionTemplate';
   protected $executionTemplateDataType = '';
   public $name;
+  protected $recentExecutionsType = 'Google_Service_AIPlatformNotebooks_Execution';
+  protected $recentExecutionsDataType = 'array';
   public $state;
   public $timeZone;
   public $updateTime;
@@ -81,6 +84,20 @@ class Google_Service_AIPlatformNotebooks_Schedule extends Google_Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Google_Service_AIPlatformNotebooks_Execution[]
+   */
+  public function setRecentExecutions($recentExecutions)
+  {
+    $this->recentExecutions = $recentExecutions;
+  }
+  /**
+   * @return Google_Service_AIPlatformNotebooks_Execution[]
+   */
+  public function getRecentExecutions()
+  {
+    return $this->recentExecutions;
   }
   public function setState($state)
   {

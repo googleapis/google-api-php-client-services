@@ -36,9 +36,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsIntents extends 
    * @opt_param string languageCode The language of the following fields in
    * `intent`: * `Intent.training_phrases.parts.text` If not specified, the
    * agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Intent
    */
   public function create($parent, Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Intent $postBody, $optParams = array())
@@ -72,9 +72,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsIntents extends 
    * following fields are language dependent: *
    * `Intent.training_phrases.parts.text` If not specified, the agent's default
    * language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Intent
    */
   public function get($name, $optParams = array())
@@ -97,9 +97,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsIntents extends 
    * following fields are language dependent: *
    * `Intent.training_phrases.parts.text` If not specified, the agent's default
    * language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @opt_param int pageSize The maximum number of items to return in a single
    * page. By default 100 and at most 1000.
    * @opt_param string pageToken The next_page_token value returned from a
@@ -124,9 +124,9 @@ class Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsIntents extends 
    * @opt_param string languageCode The language of the following fields in
    * `intent`: * `Intent.training_phrases.parts.text` If not specified, the
    * agent's default language is used. [Many
-   * languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be
-   * used.
+   * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+   * are supported. Note: languages must be enabled in the agent before they can
+   * be used.
    * @opt_param string updateMask The mask to control which fields get updated. If
    * the mask is not present, all fields will be updated.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Intent

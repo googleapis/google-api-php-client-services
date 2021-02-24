@@ -28,6 +28,7 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public $description;
   public $displayName;
   public $environments;
+  public $expiresAt;
   public $lastModifiedAt;
   public $name;
   public $projectId;
@@ -118,6 +119,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Organization extends Google_Colle
   public function getEnvironments()
   {
     return $this->environments;
+  }
+  public function setExpiresAt($expiresAt)
+  {
+    $this->expiresAt = $expiresAt;
+  }
+  public function getExpiresAt()
+  {
+    return $this->expiresAt;
   }
   public function setLastModifiedAt($lastModifiedAt)
   {

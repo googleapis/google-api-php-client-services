@@ -19,7 +19,13 @@
  * Service definition for PolicySimulator (v1beta1).
  *
  * <p>
-</p>
+ * Policy Simulator is a collection of endpoints for creating, running, and
+ * viewing a Replay. A `Replay` is a type of simulation that lets you see how
+ * your members' access to resources might change if you changed your IAM
+ * policy. During a `Replay`, Policy Simulator re-evaluates, or replays, past
+ * access attempts under both the current policy and your proposed policy, and
+ * compares those results to determine how your members' access might change
+ * under the proposed policy.</p>
  *
  * <p>
  * For more information about this service, see the API

@@ -18,6 +18,7 @@
 class Google_Service_DataprocMetastore_Restore extends Google_Model
 {
   public $backup;
+  public $details;
   public $endTime;
   public $startTime;
   public $state;
@@ -30,6 +31,14 @@ class Google_Service_DataprocMetastore_Restore extends Google_Model
   public function getBackup()
   {
     return $this->backup;
+  }
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  public function getDetails()
+  {
+    return $this->details;
   }
   public function setEndTime($endTime)
   {

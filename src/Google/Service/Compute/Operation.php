@@ -30,6 +30,7 @@ class Google_Service_Compute_Operation extends Google_Collection
   public $insertTime;
   public $kind;
   public $name;
+  public $operationGroupId;
   public $operationType;
   public $progress;
   public $region;
@@ -137,6 +138,14 @@ class Google_Service_Compute_Operation extends Google_Collection
   public function getName()
   {
     return $this->name;
+  }
+  public function setOperationGroupId($operationGroupId)
+  {
+    $this->operationGroupId = $operationGroupId;
+  }
+  public function getOperationGroupId()
+  {
+    return $this->operationGroupId;
   }
   public function setOperationType($operationType)
   {
