@@ -39,6 +39,7 @@ class Google_Service_ShoppingContent extends Google_Service
   public $accounts_returncarrier;
   public $accountstatuses;
   public $accounttax;
+  public $buyongoogleprograms;
   public $collections;
   public $collectionstatuses;
   public $csses;
@@ -500,6 +501,46 @@ class Google_Service_ShoppingContent extends Google_Service
                   'required' => true,
                 ),
                 'accountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->buyongoogleprograms = new Google_Service_ShoppingContent_Resource_Buyongoogleprograms(
+        $this,
+        $this->serviceName,
+        'buyongoogleprograms',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'content/v2.1/{merchantId}/buyongoogleprograms/{regionCode}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'regionCode' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'onboard' => array(
+              'path' => 'content/v2.1/{merchantId}/buyongoogleprograms/{regionCode}/onboard',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'regionCode' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

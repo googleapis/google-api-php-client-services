@@ -130,12 +130,10 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * are not updated. (transferConfigs.patch)
    *
    * @param string $name The resource name of the transfer config. Transfer config
-   * names have the form of
-   * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The
-   * name is automatically generated based on the config_id specified in
-   * CreateTransferConfigRequest along with project_id and region. If config_id is
-   * not provided, usually a uuid, even though it is not guaranteed or required,
-   * will be generated for config_id.
+   * names have the form
+   * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where
+   * `config_id` is usually a uuid, even though it is not guaranteed or required.
+   * The name is ignored when creating a transfer config.
    * @param Google_Service_BigQueryDataTransfer_TransferConfig $postBody
    * @param array $optParams Optional parameters.
    *

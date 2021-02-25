@@ -96,9 +96,12 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsTags exten
    * @param Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Tag $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The fields to update on the Tag. If absent or
-   * empty, all modifiable fields are updated. Currently the only modifiable field
-   * is the field `fields`.
+   * @opt_param string updateMask Note: Currently, this parameter can only take
+   * `"fields"` as value. Names of fields whose values to overwrite on a tag.
+   * Currently, a tag has the only modifiable field with the name `fields`. In
+   * general, if this parameter is absent or empty, all modifiable fields are
+   * overwritten. If such fields are non-required and omitted in the request body,
+   * their values are emptied.
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Tag
    */
   public function patch($name, Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Tag $postBody, $optParams = array())
