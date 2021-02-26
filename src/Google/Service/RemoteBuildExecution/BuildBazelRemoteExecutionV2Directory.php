@@ -22,8 +22,8 @@ class Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2Directory e
   protected $directoriesDataType = 'array';
   protected $filesType = 'Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2FileNode';
   protected $filesDataType = 'array';
-  protected $nodePropertiesType = 'Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2NodeProperty';
-  protected $nodePropertiesDataType = 'array';
+  protected $nodePropertiesType = 'Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2NodeProperties';
+  protected $nodePropertiesDataType = '';
   protected $symlinksType = 'Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2SymlinkNode';
   protected $symlinksDataType = 'array';
 
@@ -56,14 +56,14 @@ class Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2Directory e
     return $this->files;
   }
   /**
-   * @param Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2NodeProperty[]
+   * @param Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2NodeProperties
    */
-  public function setNodeProperties($nodeProperties)
+  public function setNodeProperties(Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2NodeProperties $nodeProperties)
   {
     $this->nodeProperties = $nodeProperties;
   }
   /**
-   * @return Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2NodeProperty[]
+   * @return Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2NodeProperties
    */
   public function getNodeProperties()
   {

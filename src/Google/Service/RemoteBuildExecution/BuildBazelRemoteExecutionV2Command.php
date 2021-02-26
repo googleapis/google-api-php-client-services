@@ -23,6 +23,7 @@ class Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2Command ext
   protected $environmentVariablesDataType = 'array';
   public $outputDirectories;
   public $outputFiles;
+  public $outputNodeProperties;
   public $outputPaths;
   protected $platformType = 'Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2Platform';
   protected $platformDataType = '';
@@ -65,6 +66,14 @@ class Google_Service_RemoteBuildExecution_BuildBazelRemoteExecutionV2Command ext
   public function getOutputFiles()
   {
     return $this->outputFiles;
+  }
+  public function setOutputNodeProperties($outputNodeProperties)
+  {
+    $this->outputNodeProperties = $outputNodeProperties;
+  }
+  public function getOutputNodeProperties()
+  {
+    return $this->outputNodeProperties;
   }
   public function setOutputPaths($outputPaths)
   {

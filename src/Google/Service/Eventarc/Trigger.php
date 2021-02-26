@@ -24,6 +24,7 @@ class Google_Service_Eventarc_Trigger extends Google_Collection
   public $etag;
   protected $eventFiltersType = 'Google_Service_Eventarc_EventFilter';
   protected $eventFiltersDataType = 'array';
+  public $labels;
   public $name;
   public $serviceAccount;
   protected $transportType = 'Google_Service_Eventarc_Transport';
@@ -74,6 +75,14 @@ class Google_Service_Eventarc_Trigger extends Google_Collection
   public function getEventFilters()
   {
     return $this->eventFilters;
+  }
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  public function getLabels()
+  {
+    return $this->labels;
   }
   public function setName($name)
   {

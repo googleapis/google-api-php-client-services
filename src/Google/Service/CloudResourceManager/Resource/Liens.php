@@ -60,8 +60,7 @@ class Google_Service_CloudResourceManager_Resource_Liens extends Google_Service_
   /**
    * Retrieve a Lien by `name`. Callers of this method will require permission on
    * the `parent` resource. For example, a Lien with a `parent` of `projects/1234`
-   * requires permission requires permission `resourcemanager.projects.get` or
-   * `resourcemanager.projects.updateLiens`. (liens.get)
+   * requires permission `resourcemanager.projects.get` (liens.get)
    *
    * @param string $name Required. The name/identifier of the Lien.
    * @param array $optParams Optional parameters.
