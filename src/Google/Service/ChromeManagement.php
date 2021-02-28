@@ -34,7 +34,9 @@
  */
 class Google_Service_ChromeManagement extends Google_Service
 {
-
+  /** See reports about devices and Chrome browsers managed within your organization. */
+  const CHROME_MANAGEMENT_REPORTS_READONLY =
+      "https://www.googleapis.com/auth/chrome.management.reports.readonly";
 
   public $customers_reports;
 
