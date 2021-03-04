@@ -15,21 +15,11 @@
  * the License.
  */
 
-class Google_Service_DataprocMetastore_DatabaseDump extends Google_Model
+class Google_Service_CloudHealthcare_Image extends Google_Model
 {
-  public $databaseType;
   public $gcsUri;
-  public $sourceDatabase;
-  public $type;
+  public $rawBytes;
 
-  public function setDatabaseType($databaseType)
-  {
-    $this->databaseType = $databaseType;
-  }
-  public function getDatabaseType()
-  {
-    return $this->databaseType;
-  }
   public function setGcsUri($gcsUri)
   {
     $this->gcsUri = $gcsUri;
@@ -38,20 +28,12 @@ class Google_Service_DataprocMetastore_DatabaseDump extends Google_Model
   {
     return $this->gcsUri;
   }
-  public function setSourceDatabase($sourceDatabase)
+  public function setRawBytes($rawBytes)
   {
-    $this->sourceDatabase = $sourceDatabase;
+    $this->rawBytes = $rawBytes;
   }
-  public function getSourceDatabase()
+  public function getRawBytes()
   {
-    return $this->sourceDatabase;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
+    return $this->rawBytes;
   }
 }

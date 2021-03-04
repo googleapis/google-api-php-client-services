@@ -15,36 +15,27 @@
  * the License.
  */
 
-class Google_Service_DataprocMetastore_DatabaseDump extends Google_Model
+class Google_Service_CloudHealthcare_SchemaSegment extends Google_Model
 {
-  public $databaseType;
-  public $gcsUri;
-  public $sourceDatabase;
+  public $maxOccurs;
+  public $minOccurs;
   public $type;
 
-  public function setDatabaseType($databaseType)
+  public function setMaxOccurs($maxOccurs)
   {
-    $this->databaseType = $databaseType;
+    $this->maxOccurs = $maxOccurs;
   }
-  public function getDatabaseType()
+  public function getMaxOccurs()
   {
-    return $this->databaseType;
+    return $this->maxOccurs;
   }
-  public function setGcsUri($gcsUri)
+  public function setMinOccurs($minOccurs)
   {
-    $this->gcsUri = $gcsUri;
+    $this->minOccurs = $minOccurs;
   }
-  public function getGcsUri()
+  public function getMinOccurs()
   {
-    return $this->gcsUri;
-  }
-  public function setSourceDatabase($sourceDatabase)
-  {
-    $this->sourceDatabase = $sourceDatabase;
-  }
-  public function getSourceDatabase()
-  {
-    return $this->sourceDatabase;
+    return $this->minOccurs;
   }
   public function setType($type)
   {
