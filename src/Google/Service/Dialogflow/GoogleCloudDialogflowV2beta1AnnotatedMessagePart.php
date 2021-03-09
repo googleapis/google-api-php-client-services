@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3RestoreAgentRequest extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1AnnotatedMessagePart extends Google_Model
 {
-  public $agentContent;
-  public $agentUri;
-  public $restoreOption;
+  public $entityType;
+  public $formattedValue;
+  public $text;
 
-  public function setAgentContent($agentContent)
+  public function setEntityType($entityType)
   {
-    $this->agentContent = $agentContent;
+    $this->entityType = $entityType;
   }
-  public function getAgentContent()
+  public function getEntityType()
   {
-    return $this->agentContent;
+    return $this->entityType;
   }
-  public function setAgentUri($agentUri)
+  public function setFormattedValue($formattedValue)
   {
-    $this->agentUri = $agentUri;
+    $this->formattedValue = $formattedValue;
   }
-  public function getAgentUri()
+  public function getFormattedValue()
   {
-    return $this->agentUri;
+    return $this->formattedValue;
   }
-  public function setRestoreOption($restoreOption)
+  public function setText($text)
   {
-    $this->restoreOption = $restoreOption;
+    $this->text = $text;
   }
-  public function getRestoreOption()
+  public function getText()
   {
-    return $this->restoreOption;
+    return $this->text;
   }
 }

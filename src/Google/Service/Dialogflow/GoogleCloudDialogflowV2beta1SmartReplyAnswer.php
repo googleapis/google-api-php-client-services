@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3RestoreAgentRequest extends Google_Model
+class Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1SmartReplyAnswer extends Google_Model
 {
-  public $agentContent;
-  public $agentUri;
-  public $restoreOption;
+  public $answerRecord;
+  public $confidence;
+  public $reply;
 
-  public function setAgentContent($agentContent)
+  public function setAnswerRecord($answerRecord)
   {
-    $this->agentContent = $agentContent;
+    $this->answerRecord = $answerRecord;
   }
-  public function getAgentContent()
+  public function getAnswerRecord()
   {
-    return $this->agentContent;
+    return $this->answerRecord;
   }
-  public function setAgentUri($agentUri)
+  public function setConfidence($confidence)
   {
-    $this->agentUri = $agentUri;
+    $this->confidence = $confidence;
   }
-  public function getAgentUri()
+  public function getConfidence()
   {
-    return $this->agentUri;
+    return $this->confidence;
   }
-  public function setRestoreOption($restoreOption)
+  public function setReply($reply)
   {
-    $this->restoreOption = $restoreOption;
+    $this->reply = $reply;
   }
-  public function getRestoreOption()
+  public function getReply()
   {
-    return $this->restoreOption;
+    return $this->reply;
   }
 }
