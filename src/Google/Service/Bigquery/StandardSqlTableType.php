@@ -15,6 +15,24 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest extends Google_Model
+class Google_Service_Bigquery_StandardSqlTableType extends Google_Collection
 {
+  protected $collection_key = 'columns';
+  protected $columnsType = 'Google_Service_Bigquery_StandardSqlField';
+  protected $columnsDataType = 'array';
+
+  /**
+   * @param Google_Service_Bigquery_StandardSqlField[]
+   */
+  public function setColumns($columns)
+  {
+    $this->columns = $columns;
+  }
+  /**
+   * @return Google_Service_Bigquery_StandardSqlField[]
+   */
+  public function getColumns()
+  {
+    return $this->columns;
+  }
 }

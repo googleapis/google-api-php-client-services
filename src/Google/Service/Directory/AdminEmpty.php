@@ -15,6 +15,6 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest extends Google_Model
+class Google_Service_Directory_AdminEmpty extends Google_Model
 {
 }

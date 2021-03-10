@@ -15,6 +15,14 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest extends Google_Model
+/**
+ * The "chrome" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $adminService = new Google_Service_Directory(...);
+ *   $chrome = $adminService->chrome;
+ *  </code>
+ */
+class Google_Service_Directory_Resource_CustomersChrome extends Google_Service_Resource
 {
 }

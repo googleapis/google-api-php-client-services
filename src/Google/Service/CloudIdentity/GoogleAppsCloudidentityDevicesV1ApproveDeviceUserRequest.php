@@ -17,14 +17,4 @@
 
 class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest extends Google_Model
 {
-  public $customer;
-
-  public function setCustomer($customer)
-  {
-    $this->customer = $customer;
-  }
-  public function getCustomer()
-  {
-    return $this->customer;
-  }
 }

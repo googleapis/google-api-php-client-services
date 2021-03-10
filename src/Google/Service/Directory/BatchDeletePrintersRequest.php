@@ -15,6 +15,17 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest extends Google_Model
+class Google_Service_Directory_BatchDeletePrintersRequest extends Google_Collection
 {
+  protected $collection_key = 'printerIds';
+  public $printerIds;
+
+  public function setPrinterIds($printerIds)
+  {
+    $this->printerIds = $printerIds;
+  }
+  public function getPrinterIds()
+  {
+    return $this->printerIds;
+  }
 }

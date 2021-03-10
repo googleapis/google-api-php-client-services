@@ -15,23 +15,32 @@
  * the License.
  */
 
-class Google_Service_DataprocMetastore_MetadataIntegration extends Google_Model
+class Google_Service_Directory_CreatePrinterRequest extends Google_Model
 {
-  protected $dataCatalogConfigType = 'Google_Service_DataprocMetastore_DataCatalogConfig';
-  protected $dataCatalogConfigDataType = '';
+  public $parent;
+  protected $printerType = 'Google_Service_Directory_Printer';
+  protected $printerDataType = '';
 
-  /**
-   * @param Google_Service_DataprocMetastore_DataCatalogConfig
-   */
-  public function setDataCatalogConfig(Google_Service_DataprocMetastore_DataCatalogConfig $dataCatalogConfig)
+  public function setParent($parent)
   {
-    $this->dataCatalogConfig = $dataCatalogConfig;
+    $this->parent = $parent;
+  }
+  public function getParent()
+  {
+    return $this->parent;
   }
   /**
-   * @return Google_Service_DataprocMetastore_DataCatalogConfig
+   * @param Google_Service_Directory_Printer
    */
-  public function getDataCatalogConfig()
+  public function setPrinter(Google_Service_Directory_Printer $printer)
   {
-    return $this->dataCatalogConfig;
+    $this->printer = $printer;
+  }
+  /**
+   * @return Google_Service_Directory_Printer
+   */
+  public function getPrinter()
+  {
+    return $this->printer;
   }
 }

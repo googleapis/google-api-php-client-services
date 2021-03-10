@@ -15,6 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest extends Google_Model
+class Google_Service_PolicySimulator_GoogleCloudPolicysimulatorV1ReplayOperationMetadata extends Google_Model
 {
+  public $startTime;
+
+  public function setStartTime($startTime)
+  {
+    $this->startTime = $startTime;
+  }
+  public function getStartTime()
+  {
+    return $this->startTime;
+  }
 }

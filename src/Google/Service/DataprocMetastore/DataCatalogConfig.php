@@ -15,6 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest extends Google_Model
+class Google_Service_DataprocMetastore_DataCatalogConfig extends Google_Model
 {
+  public $enabled;
+
+  public function setEnabled($enabled)
+  {
+    $this->enabled = $enabled;
+  }
+  public function getEnabled()
+  {
+    return $this->enabled;
+  }
 }

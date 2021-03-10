@@ -15,6 +15,24 @@
  * the License.
  */
 
-class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest extends Google_Model
+class Google_Service_Directory_BatchCreatePrintersRequest extends Google_Collection
 {
+  protected $collection_key = 'requests';
+  protected $requestsType = 'Google_Service_Directory_CreatePrinterRequest';
+  protected $requestsDataType = 'array';
+
+  /**
+   * @param Google_Service_Directory_CreatePrinterRequest[]
+   */
+  public function setRequests($requests)
+  {
+    $this->requests = $requests;
+  }
+  /**
+   * @return Google_Service_Directory_CreatePrinterRequest[]
+   */
+  public function getRequests()
+  {
+    return $this->requests;
+  }
 }
