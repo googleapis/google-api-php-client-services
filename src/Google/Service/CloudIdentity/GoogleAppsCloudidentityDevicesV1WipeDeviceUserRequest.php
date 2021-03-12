@@ -17,4 +17,14 @@
 
 class Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest extends Google_Model
 {
+  public $customer;
+
+  public function setCustomer($customer)
+  {
+    $this->customer = $customer;
+  }
+  public function getCustomer()
+  {
+    return $this->customer;
+  }
 }

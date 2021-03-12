@@ -83,7 +83,12 @@ class Google_Service_CloudIdentity extends Google_Service
             ),'create' => array(
               'path' => 'v1/devices',
               'httpMethod' => 'POST',
-              'parameters' => array(),
+              'parameters' => array(
+                'customer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'delete' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
@@ -92,6 +97,10 @@ class Google_Service_CloudIdentity extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'customer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'get' => array(
@@ -103,11 +112,19 @@ class Google_Service_CloudIdentity extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'customer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'list' => array(
               'path' => 'v1/devices',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'customer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -188,6 +205,10 @@ class Google_Service_CloudIdentity extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'customer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'get' => array(
               'path' => 'v1/{+name}',
@@ -198,6 +219,10 @@ class Google_Service_CloudIdentity extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'customer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'list' => array(
               'path' => 'v1/{+parent}/deviceUsers',
@@ -207,6 +232,10 @@ class Google_Service_CloudIdentity extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'customer' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'filter' => array(
                   'location' => 'query',

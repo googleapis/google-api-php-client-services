@@ -91,6 +91,13 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * is the unique ID assigned to the Device, and device_user_id is the unique ID
    * assigned to the User.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string customer Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use
+   * `customers/my_customer` If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @return Google_Service_CloudIdentity_Operation
    */
   public function delete($name, $optParams = array())
@@ -108,6 +115,13 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * is the unique ID assigned to the Device, and device_user_id is the unique ID
    * assigned to the User.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string customer Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use
+   * `customers/my_customer` If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1DeviceUser
    */
   public function get($name, $optParams = array())
@@ -124,6 +138,12 @@ class Google_Service_CloudIdentity_Resource_DevicesDeviceUsers extends Google_Se
    * resource name of the device. Format: devices/{device}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string customer Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use
+   * `customers/my_customer` If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @opt_param string filter Optional. Additional restrictions when fetching list
    * of devices. For a list of search fields, refer to [Mobile device search
    * fields](https://developers.google.com/admin-sdk/directory/v1/search-

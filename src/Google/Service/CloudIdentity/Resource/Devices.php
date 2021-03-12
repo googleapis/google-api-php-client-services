@@ -56,6 +56,13 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
    *
    * @param Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string customer Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use
+   * `customers/my_customer` If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @return Google_Service_CloudIdentity_Operation
    */
   public function create(Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device $postBody, $optParams = array())
@@ -72,6 +79,13 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
    * format: `devices/{device_id}`, where device_id is the unique ID assigned to
    * the Device.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string customer Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer.
+   * If you're using this API for your own organization, use
+   * `customers/my_customer` If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @return Google_Service_CloudIdentity_Operation
    */
   public function delete($name, $optParams = array())
@@ -88,6 +102,14 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
    * the format: `devices/{device_id}`, where device_id is the unique ID assigned
    * to the Device.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string customer Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the Customer in
+   * the format: `customers/{customer_id}`, where customer_id is the customer to
+   * whom the device belongs. If you're using this API for your own organization,
+   * use `customers/my_customer`. If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @return Google_Service_CloudIdentity_GoogleAppsCloudidentityDevicesV1Device
    */
   public function get($name, $optParams = array())
@@ -101,6 +123,13 @@ class Google_Service_CloudIdentity_Resource_Devices extends Google_Service_Resou
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string customer Optional. [Resource
+   * name](https://cloud.google.com/apis/design/resource_names) of the customer in
+   * the format: `customers/{customer_id}`, where customer_id is the customer to
+   * whom the device belongs. If you're using this API for your own organization,
+   * use `customers/my_customer`. If you're using this API to manage another
+   * organization, use `customers/{customer_id}`, where customer_id is the
+   * customer to whom the device belongs.
    * @opt_param string filter Optional. Additional restrictions when fetching list
    * of devices. For a list of search fields, refer to [Mobile device search
    * fields](https://developers.google.com/admin-sdk/directory/v1/search-
