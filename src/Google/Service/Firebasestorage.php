@@ -16,29 +16,32 @@
  */
 
 /**
- * Service definition for FirebaseHosting (v1).
+ * Service definition for Firebasestorage (v1beta).
  *
  * <p>
- * The Firebase Hosting REST API enables programmatic and customizable
- * management and deployments to your Firebase-hosted sites. Use this REST API
- * to create and manage channels and sites as well as to deploy new or updated
- * hosting configurations and content files.</p>
+ * The Cloud Storage for Firebase API enables programmatic management of Cloud
+ * Storage buckets for use in Firebase projects</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://firebase.google.com/docs/hosting/" target="_blank">Documentation</a>
+ * <a href="https://firebase.google.com/docs/storage" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_FirebaseHosting extends Google_Service
+class Google_Service_Firebasestorage extends Google_Service
 {
+  /** View and manage your data across Google Cloud Platform services. */
+  const CLOUD_PLATFORM =
+      "https://www.googleapis.com/auth/cloud-platform";
+  /** View and administer all your Firebase data and settings. */
+  const FIREBASE =
+      "https://www.googleapis.com/auth/firebase";
 
-
-  public $operations;
+  public $projects_buckets;
 
   /**
-   * Constructs the internal representation of the FirebaseHosting service.
+   * Constructs the internal representation of the Firebasestorage service.
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
@@ -46,31 +49,31 @@ class Google_Service_FirebaseHosting extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://firebasehosting.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://firebasestorage.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1';
-    $this->serviceName = 'firebasehosting';
+    $this->version = 'v1beta';
+    $this->serviceName = 'firebasestorage';
 
-    $this->operations = new Google_Service_FirebaseHosting_Resource_Operations(
+    $this->projects_buckets = new Google_Service_Firebasestorage_Resource_ProjectsBuckets(
         $this,
         $this->serviceName,
-        'operations',
+        'buckets',
         array(
           'methods' => array(
-            'cancel' => array(
-              'path' => 'v1/{+name}:cancel',
+            'addFirebase' => array(
+              'path' => 'v1beta/{+bucket}:addFirebase',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'name' => array(
+                'bucket' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
               ),
-            ),'delete' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
+            ),'get' => array(
+              'path' => 'v1beta/{+name}',
+              'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
@@ -79,17 +82,13 @@ class Google_Service_FirebaseHosting extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v1beta/{+parent}/buckets',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'name' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',
@@ -98,6 +97,16 @@ class Google_Service_FirebaseHosting extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),'removeFirebase' => array(
+              'path' => 'v1beta/{+bucket}:removeFirebase',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'bucket' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
