@@ -15,26 +15,34 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1GraphQLOperation extends Google_Collection
+class Google_Service_CloudBuild_StorageSourceManifest extends Google_Model
 {
-  protected $collection_key = 'operationTypes';
-  public $operation;
-  public $operationTypes;
+  public $bucket;
+  public $generation;
+  public $object;
 
-  public function setOperation($operation)
+  public function setBucket($bucket)
   {
-    $this->operation = $operation;
+    $this->bucket = $bucket;
   }
-  public function getOperation()
+  public function getBucket()
   {
-    return $this->operation;
+    return $this->bucket;
   }
-  public function setOperationTypes($operationTypes)
+  public function setGeneration($generation)
   {
-    $this->operationTypes = $operationTypes;
+    $this->generation = $generation;
   }
-  public function getOperationTypes()
+  public function getGeneration()
   {
-    return $this->operationTypes;
+    return $this->generation;
+  }
+  public function setObject($object)
+  {
+    $this->object = $object;
+  }
+  public function getObject()
+  {
+    return $this->object;
   }
 }

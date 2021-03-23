@@ -15,26 +15,14 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1GraphQLOperation extends Google_Collection
+/**
+ * The "targetingTypes" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $displayvideoService = new Google_Service_DisplayVideo(...);
+ *   $targetingTypes = $displayvideoService->targetingTypes;
+ *  </code>
+ */
+class Google_Service_DisplayVideo_Resource_AdvertisersCampaignsTargetingTypes extends Google_Service_Resource
 {
-  protected $collection_key = 'operationTypes';
-  public $operation;
-  public $operationTypes;
-
-  public function setOperation($operation)
-  {
-    $this->operation = $operation;
-  }
-  public function getOperation()
-  {
-    return $this->operation;
-  }
-  public function setOperationTypes($operationTypes)
-  {
-    $this->operationTypes = $operationTypes;
-  }
-  public function getOperationTypes()
-  {
-    return $this->operationTypes;
-  }
 }

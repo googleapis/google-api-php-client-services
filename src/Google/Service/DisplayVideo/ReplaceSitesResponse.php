@@ -15,26 +15,24 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1GraphQLOperation extends Google_Collection
+class Google_Service_DisplayVideo_ReplaceSitesResponse extends Google_Collection
 {
-  protected $collection_key = 'operationTypes';
-  public $operation;
-  public $operationTypes;
+  protected $collection_key = 'sites';
+  protected $sitesType = 'Google_Service_DisplayVideo_Site';
+  protected $sitesDataType = 'array';
 
-  public function setOperation($operation)
+  /**
+   * @param Google_Service_DisplayVideo_Site[]
+   */
+  public function setSites($sites)
   {
-    $this->operation = $operation;
+    $this->sites = $sites;
   }
-  public function getOperation()
+  /**
+   * @return Google_Service_DisplayVideo_Site[]
+   */
+  public function getSites()
   {
-    return $this->operation;
-  }
-  public function setOperationTypes($operationTypes)
-  {
-    $this->operationTypes = $operationTypes;
-  }
-  public function getOperationTypes()
-  {
-    return $this->operationTypes;
+    return $this->sites;
   }
 }

@@ -127,16 +127,6 @@ class Google_Service_ServiceManagement extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'enable' => array(
-              'path' => 'v1/services/{serviceName}:enable',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'serviceName' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
             ),'generateConfigReport' => array(
               'path' => 'v1/services:generateConfigReport',
               'httpMethod' => 'POST',

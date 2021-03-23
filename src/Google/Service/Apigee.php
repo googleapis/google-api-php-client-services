@@ -1563,6 +1563,10 @@ class Google_Service_Apigee extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'disableCache' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'type' => array(
                   'location' => 'query',
                   'type' => 'string',

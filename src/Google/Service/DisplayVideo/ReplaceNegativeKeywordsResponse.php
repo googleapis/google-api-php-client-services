@@ -15,26 +15,24 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1GraphQLOperation extends Google_Collection
+class Google_Service_DisplayVideo_ReplaceNegativeKeywordsResponse extends Google_Collection
 {
-  protected $collection_key = 'operationTypes';
-  public $operation;
-  public $operationTypes;
+  protected $collection_key = 'negativeKeywords';
+  protected $negativeKeywordsType = 'Google_Service_DisplayVideo_NegativeKeyword';
+  protected $negativeKeywordsDataType = 'array';
 
-  public function setOperation($operation)
+  /**
+   * @param Google_Service_DisplayVideo_NegativeKeyword[]
+   */
+  public function setNegativeKeywords($negativeKeywords)
   {
-    $this->operation = $operation;
+    $this->negativeKeywords = $negativeKeywords;
   }
-  public function getOperation()
+  /**
+   * @return Google_Service_DisplayVideo_NegativeKeyword[]
+   */
+  public function getNegativeKeywords()
   {
-    return $this->operation;
-  }
-  public function setOperationTypes($operationTypes)
-  {
-    $this->operationTypes = $operationTypes;
-  }
-  public function getOperationTypes()
-  {
-    return $this->operationTypes;
+    return $this->negativeKeywords;
   }
 }
