@@ -42,14 +42,14 @@ class Google_Service_Customsearch_Search extends Google_Collection
     return $this->context;
   }
   /**
-   * @param Google_Service_Customsearch_Result
+   * @param Google_Service_Customsearch_Result[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_Customsearch_Result
+   * @return Google_Service_Customsearch_Result[]
    */
   public function getItems()
   {
