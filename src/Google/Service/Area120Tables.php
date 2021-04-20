@@ -88,6 +88,10 @@ class Google_Service_Area120Tables extends Google_Service
               'path' => 'v1alpha1/tables',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -185,6 +189,10 @@ class Google_Service_Area120Tables extends Google_Service
                   'required' => true,
                 ),
                 'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

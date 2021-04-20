@@ -122,7 +122,7 @@ class Google_Service_DisplayVideo_Resource_AdvertisersNegativeKeywordListsNegati
   }
   /**
    * Replaces all negative keywords in a single negative keyword list. The
-   * operation will replace the keywords in a negative keywords with keywords
+   * operation will replace the keywords in a negative keyword list with keywords
    * provided in ReplaceNegativeKeywordsRequest.new_negative_keywords.
    * (negativeKeywords.replace)
    *

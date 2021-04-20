@@ -123,10 +123,11 @@ class Google_Service_DisplayVideo_Resource_AdvertisersLineItems extends Google_S
   }
   /**
    * Creates a new line item with settings (including targeting) inherited from
-   * the insertion order. Returns the newly created line item if successful. There
-   * are default values based on the three fields: * The insertion order's
-   * InsertionOrderType * The insertion order's InsertionOrderAutomationType * The
-   * given line_item_type (lineItems.generateDefault)
+   * the insertion order and an `ENTITY_STATUS_DRAFT` entity_status. Returns the
+   * newly created line item if successful. There are default values based on the
+   * three fields: * The insertion order's insertion_order_type * The insertion
+   * order's automation_type * The given line_item_type
+   * (lineItems.generateDefault)
    *
    * @param string $advertiserId Required. The ID of the advertiser this line item
    * belongs to.

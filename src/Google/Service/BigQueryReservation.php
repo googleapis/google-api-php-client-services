@@ -33,11 +33,10 @@ class Google_Service_BigQueryReservation extends Google_Service
   /** View and manage your data in Google BigQuery. */
   const BIGQUERY =
       "https://www.googleapis.com/auth/bigquery";
-  /** View and manage your data across Google Cloud Platform services. */
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $operations;
   public $projects_locations;
   public $projects_locations_capacityCommitments;
   public $projects_locations_reservations;
@@ -58,48 +57,6 @@ class Google_Service_BigQueryReservation extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'bigqueryreservation';
 
-    $this->operations = new Google_Service_BigQueryReservation_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
-            'delete' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
     $this->projects_locations = new Google_Service_BigQueryReservation_Resource_ProjectsLocations(
         $this,
         $this->serviceName,

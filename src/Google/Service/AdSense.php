@@ -16,19 +16,20 @@
  */
 
 /**
- * Service definition for AdSense (v1.4).
+ * Service definition for Adsense (v2).
  *
  * <p>
- * Accesses AdSense publishers' inventory and generates performance reports.</p>
+ * The AdSense Management API allows publishers to access their inventory and
+ * run earnings and performance reports.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://developers.google.com/adsense/management/" target="_blank">Documentation</a>
+ * <a href="http://code.google.com/apis/adsense/management/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_AdSense extends Google_Service
+class Google_Service_Adsense extends Google_Service
 {
   /** View and manage your AdSense data. */
   const ADSENSE =
@@ -39,32 +40,17 @@ class Google_Service_AdSense extends Google_Service
 
   public $accounts;
   public $accounts_adclients;
-  public $accounts_adunits;
-  public $accounts_adunits_customchannels;
+  public $accounts_adclients_adunits;
+  public $accounts_adclients_customchannels;
+  public $accounts_adclients_urlchannels;
   public $accounts_alerts;
-  public $accounts_customchannels;
-  public $accounts_customchannels_adunits;
   public $accounts_payments;
   public $accounts_reports;
   public $accounts_reports_saved;
-  public $accounts_savedadstyles;
-  public $accounts_urlchannels;
-  public $adclients;
-  public $adunits;
-  public $adunits_customchannels;
-  public $alerts;
-  public $customchannels;
-  public $customchannels_adunits;
-  public $metadata_dimensions;
-  public $metadata_metrics;
-  public $payments;
-  public $reports;
-  public $reports_saved;
-  public $savedadstyles;
-  public $urlchannels;
+  public $accounts_sites;
 
   /**
-   * Constructs the internal representation of the AdSense service.
+   * Constructs the internal representation of the Adsense service.
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
@@ -72,37 +58,51 @@ class Google_Service_AdSense extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
-    $this->servicePath = 'adsense/v1.4/';
-    $this->batchPath = 'batch/adsense/v1.4';
-    $this->version = 'v1.4';
+    $this->rootUrl = $rootUrl ?: 'https://adsense.googleapis.com/';
+    $this->servicePath = '';
+    $this->batchPath = 'batch';
+    $this->version = 'v2';
     $this->serviceName = 'adsense';
 
-    $this->accounts = new Google_Service_AdSense_Resource_Accounts(
+    $this->accounts = new Google_Service_Adsense_Resource_Accounts(
         $this,
         $this->serviceName,
         'accounts',
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'accounts/{accountId}',
+              'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'tree' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
               ),
             ),'list' => array(
-              'path' => 'accounts',
+              'path' => 'v2/accounts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'maxResults' => array(
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'listChildAccounts' => array(
+              'path' => 'v2/{+parent}:listChildAccounts',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -115,41 +115,32 @@ class Google_Service_AdSense extends Google_Service
           )
         )
     );
-    $this->accounts_adclients = new Google_Service_AdSense_Resource_AccountsAdclients(
+    $this->accounts_adclients = new Google_Service_Adsense_Resource_AccountsAdclients(
         $this,
         $this->serviceName,
         'adclients',
         array(
           'methods' => array(
-            'getAdCode' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/adcode',
+            'getAdcode' => array(
+              'path' => 'v2/{+name}/adcode',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'tagPartner' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'list' => array(
-              'path' => 'accounts/{accountId}/adclients',
+              'path' => 'v2/{+parent}/adclients',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
+                'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -162,71 +153,60 @@ class Google_Service_AdSense extends Google_Service
           )
         )
     );
-    $this->accounts_adunits = new Google_Service_AdSense_Resource_AccountsAdunits(
+    $this->accounts_adclients_adunits = new Google_Service_Adsense_Resource_AccountsAdclientsAdunits(
         $this,
         $this->serviceName,
         'adunits',
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}',
+              'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adUnitId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
               ),
-            ),'getAdCode' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode',
+            ),'getAdcode' => array(
+              'path' => 'v2/{+name}/adcode',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adUnitId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
               ),
             ),'list' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/adunits',
+              'path' => 'v2/{+parent}/adunits',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'includeInactive' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'integer',
                 ),
-                'maxResults' => array(
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'listLinkedCustomChannels' => array(
+              'path' => 'v2/{+parent}:listLinkedCustomChannels',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -239,124 +219,50 @@ class Google_Service_AdSense extends Google_Service
           )
         )
     );
-    $this->accounts_adunits_customchannels = new Google_Service_AdSense_Resource_AccountsAdunitsCustomchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adUnitId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->accounts_alerts = new Google_Service_AdSense_Resource_AccountsAlerts(
-        $this,
-        $this->serviceName,
-        'alerts',
-        array(
-          'methods' => array(
-            'delete' => array(
-              'path' => 'accounts/{accountId}/alerts/{alertId}',
-              'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'alertId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'accounts/{accountId}/alerts',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->accounts_customchannels = new Google_Service_AdSense_Resource_AccountsCustomchannels(
+    $this->accounts_adclients_customchannels = new Google_Service_Adsense_Resource_AccountsAdclientsCustomchannels(
         $this,
         $this->serviceName,
         'customchannels',
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}',
+              'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'customChannelId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
               ),
             ),'list' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/customchannels',
+              'path' => 'v2/{+parent}/customchannels',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'adClientId' => array(
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'listLinkedAdUnits' => array(
+              'path' => 'v2/{+parent}:listLinkedAdUnits',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
+                'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -369,257 +275,22 @@ class Google_Service_AdSense extends Google_Service
           )
         )
     );
-    $this->accounts_customchannels_adunits = new Google_Service_AdSense_Resource_AccountsCustomchannelsAdunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'customChannelId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'includeInactive' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->accounts_payments = new Google_Service_AdSense_Resource_AccountsPayments(
-        $this,
-        $this->serviceName,
-        'payments',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'accounts/{accountId}/payments',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->accounts_reports = new Google_Service_AdSense_Resource_AccountsReports(
-        $this,
-        $this->serviceName,
-        'reports',
-        array(
-          'methods' => array(
-            'generate' => array(
-              'path' => 'accounts/{accountId}/reports',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'startDate' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'endDate' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'currency' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'dimension' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'metric' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'sort' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'startIndex' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'useTimezoneReporting' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->accounts_reports_saved = new Google_Service_AdSense_Resource_AccountsReportsSaved(
-        $this,
-        $this->serviceName,
-        'saved',
-        array(
-          'methods' => array(
-            'generate' => array(
-              'path' => 'accounts/{accountId}/reports/{savedReportId}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'savedReportId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'startIndex' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'accounts/{accountId}/reports/saved',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->accounts_savedadstyles = new Google_Service_AdSense_Resource_AccountsSavedadstyles(
-        $this,
-        $this->serviceName,
-        'savedadstyles',
-        array(
-          'methods' => array(
-            'get' => array(
-              'path' => 'accounts/{accountId}/savedadstyles/{savedAdStyleId}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'savedAdStyleId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'accounts/{accountId}/savedadstyles',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'accountId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->accounts_urlchannels = new Google_Service_AdSense_Resource_AccountsUrlchannels(
+    $this->accounts_adclients_urlchannels = new Google_Service_Adsense_Resource_AccountsAdclientsUrlchannels(
         $this,
         $this->serviceName,
         'urlchannels',
         array(
           'methods' => array(
             'list' => array(
-              'path' => 'accounts/{accountId}/adclients/{adClientId}/urlchannels',
+              'path' => 'v2/{+parent}/urlchannels',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'accountId' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'maxResults' => array(
+                'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -632,225 +303,22 @@ class Google_Service_AdSense extends Google_Service
           )
         )
     );
-    $this->adclients = new Google_Service_AdSense_Resource_Adclients(
-        $this,
-        $this->serviceName,
-        'adclients',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'adclients',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->adunits = new Google_Service_AdSense_Resource_Adunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
-            'get' => array(
-              'path' => 'adclients/{adClientId}/adunits/{adUnitId}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adUnitId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'getAdCode' => array(
-              'path' => 'adclients/{adClientId}/adunits/{adUnitId}/adcode',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adUnitId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'adclients/{adClientId}/adunits',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'includeInactive' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->adunits_customchannels = new Google_Service_AdSense_Resource_AdunitsCustomchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'adclients/{adClientId}/adunits/{adUnitId}/customchannels',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'adUnitId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->alerts = new Google_Service_AdSense_Resource_Alerts(
+    $this->accounts_alerts = new Google_Service_Adsense_Resource_AccountsAlerts(
         $this,
         $this->serviceName,
         'alerts',
         array(
           'methods' => array(
-            'delete' => array(
-              'path' => 'alerts/{alertId}',
-              'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'alertId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'alerts',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->customchannels = new Google_Service_AdSense_Resource_Customchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
-            'get' => array(
-              'path' => 'adclients/{adClientId}/customchannels/{customChannelId}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'customChannelId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'adclients/{adClientId}/customchannels',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'adClientId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->customchannels_adunits = new Google_Service_AdSense_Resource_CustomchannelsAdunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
             'list' => array(
-              'path' => 'adclients/{adClientId}/customchannels/{customChannelId}/adunits',
+              'path' => 'v2/{+parent}/alerts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'adClientId' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'customChannelId' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'includeInactive' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ),
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
+                'languageCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -859,151 +327,300 @@ class Google_Service_AdSense extends Google_Service
           )
         )
     );
-    $this->metadata_dimensions = new Google_Service_AdSense_Resource_MetadataDimensions(
-        $this,
-        $this->serviceName,
-        'dimensions',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'metadata/dimensions',
-              'httpMethod' => 'GET',
-              'parameters' => array(),
-            ),
-          )
-        )
-    );
-    $this->metadata_metrics = new Google_Service_AdSense_Resource_MetadataMetrics(
-        $this,
-        $this->serviceName,
-        'metrics',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'metadata/metrics',
-              'httpMethod' => 'GET',
-              'parameters' => array(),
-            ),
-          )
-        )
-    );
-    $this->payments = new Google_Service_AdSense_Resource_Payments(
+    $this->accounts_payments = new Google_Service_Adsense_Resource_AccountsPayments(
         $this,
         $this->serviceName,
         'payments',
         array(
           'methods' => array(
             'list' => array(
-              'path' => 'payments',
+              'path' => 'v2/{+parent}/payments',
               'httpMethod' => 'GET',
-              'parameters' => array(),
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )
     );
-    $this->reports = new Google_Service_AdSense_Resource_Reports(
+    $this->accounts_reports = new Google_Service_Adsense_Resource_AccountsReports(
         $this,
         $this->serviceName,
         'reports',
         array(
           'methods' => array(
             'generate' => array(
-              'path' => 'reports',
+              'path' => 'v2/{+account}/reports:generate',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'startDate' => array(
-                  'location' => 'query',
+                'account' => array(
+                  'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'endDate' => array(
+                'currencyCode' => array(
                   'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dateRange' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dimensions' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'endDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'endDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'endDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'filters' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'limit' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'metrics' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'reportingTimeZone' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'generateCsv' => array(
+              'path' => 'v2/{+account}/reports:generateCsv',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'account' => array(
+                  'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'accountId' => array(
+                'currencyCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dateRange' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dimensions' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
                 ),
-                'currency' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'dimension' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'locale' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'maxResults' => array(
+                'endDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'metric' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'sort' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ),
-                'startIndex' => array(
+                'endDate.month' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'useTimezoneReporting' => array(
+                'endDate.year' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'integer',
+                ),
+                'filters' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'limit' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'metrics' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ),
+                'reportingTimeZone' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
           )
         )
     );
-    $this->reports_saved = new Google_Service_AdSense_Resource_ReportsSaved(
+    $this->accounts_reports_saved = new Google_Service_Adsense_Resource_AccountsReportsSaved(
         $this,
         $this->serviceName,
         'saved',
         array(
           'methods' => array(
             'generate' => array(
-              'path' => 'reports/{savedReportId}',
+              'path' => 'v2/{+name}/saved:generate',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'savedReportId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'locale' => array(
+                'currencyCode' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'maxResults' => array(
+                'dateRange' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'endDate.day' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'startIndex' => array(
+                'endDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'endDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'reportingTimeZone' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),'generateCsv' => array(
+              'path' => 'v2/{+name}/saved:generateCsv',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'currencyCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dateRange' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'endDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'endDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'endDate.year' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'reportingTimeZone' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startDate.day' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.month' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'startDate.year' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
               ),
             ),'list' => array(
-              'path' => 'reports/saved',
+              'path' => 'v2/{+parent}/reports/saved',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'maxResults' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
@@ -1016,55 +633,32 @@ class Google_Service_AdSense extends Google_Service
           )
         )
     );
-    $this->savedadstyles = new Google_Service_AdSense_Resource_Savedadstyles(
+    $this->accounts_sites = new Google_Service_Adsense_Resource_AccountsSites(
         $this,
         $this->serviceName,
-        'savedadstyles',
+        'sites',
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'savedadstyles/{savedAdStyleId}',
+              'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'savedAdStyleId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
               ),
             ),'list' => array(
-              'path' => 'savedadstyles',
+              'path' => 'v2/{+parent}/sites',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'maxResults' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->urlchannels = new Google_Service_AdSense_Resource_Urlchannels(
-        $this,
-        $this->serviceName,
-        'urlchannels',
-        array(
-          'methods' => array(
-            'list' => array(
-              'path' => 'adclients/{adClientId}/urlchannels',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'adClientId' => array(
+                'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'maxResults' => array(
+                'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),

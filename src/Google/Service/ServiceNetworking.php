@@ -200,6 +200,16 @@ class Google_Service_ServiceNetworking extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'deleteConnection' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'list' => array(
               'path' => 'v1/{+parent}/connections',
               'httpMethod' => 'GET',

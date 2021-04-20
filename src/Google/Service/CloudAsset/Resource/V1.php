@@ -45,6 +45,10 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * permissions to appear in result.
    * @opt_param string analysisQuery.accessSelector.roles Optional. The roles to
    * appear in result.
+   * @opt_param string analysisQuery.conditionContext.accessTime The hypothetical
+   * access timestamp to evaluate IAM conditions. Note that this value must not be
+   * earlier than the current time; otherwise, an INVALID_ARGUMENT error will be
+   * returned.
    * @opt_param string analysisQuery.identitySelector.identity Required. The
    * identity appear in the form of members in [IAM policy
    * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The

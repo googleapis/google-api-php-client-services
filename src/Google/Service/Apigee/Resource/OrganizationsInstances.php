@@ -34,6 +34,9 @@ class Google_Service_Apigee_Resource_OrganizationsInstances extends Google_Servi
    * structure in your request: `organizations/{org}`.
    * @param Google_Service_Apigee_GoogleCloudApigeeV1Instance $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string environments Optional. List of environments that will be
+   * attached to the instance during creation.
    * @return Google_Service_Apigee_GoogleLongrunningOperation
    */
   public function create($parent, Google_Service_Apigee_GoogleCloudApigeeV1Instance $postBody, $optParams = array())
