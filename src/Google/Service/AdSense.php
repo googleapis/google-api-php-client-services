@@ -29,7 +29,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_Adsense extends Google_Service
+class Google_Service_AdSense extends Google_Service
 {
   /** View and manage your AdSense data. */
   const ADSENSE =
@@ -64,7 +64,7 @@ class Google_Service_Adsense extends Google_Service
     $this->version = 'v2';
     $this->serviceName = 'adsense';
 
-    $this->accounts = new Google_Service_Adsense_Resource_Accounts(
+    $this->accounts = new Google_Service_AdSense_Resource_Accounts(
         $this,
         $this->serviceName,
         'accounts',
@@ -115,7 +115,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_adclients = new Google_Service_Adsense_Resource_AccountsAdclients(
+    $this->accounts_adclients = new Google_Service_AdSense_Resource_AccountsAdclients(
         $this,
         $this->serviceName,
         'adclients',
@@ -153,7 +153,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_adclients_adunits = new Google_Service_Adsense_Resource_AccountsAdclientsAdunits(
+    $this->accounts_adclients_adunits = new Google_Service_AdSense_Resource_AccountsAdclientsAdunits(
         $this,
         $this->serviceName,
         'adunits',
@@ -219,7 +219,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_adclients_customchannels = new Google_Service_Adsense_Resource_AccountsAdclientsCustomchannels(
+    $this->accounts_adclients_customchannels = new Google_Service_AdSense_Resource_AccountsAdclientsCustomchannels(
         $this,
         $this->serviceName,
         'customchannels',
@@ -275,7 +275,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_adclients_urlchannels = new Google_Service_Adsense_Resource_AccountsAdclientsUrlchannels(
+    $this->accounts_adclients_urlchannels = new Google_Service_AdSense_Resource_AccountsAdclientsUrlchannels(
         $this,
         $this->serviceName,
         'urlchannels',
@@ -303,7 +303,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_alerts = new Google_Service_Adsense_Resource_AccountsAlerts(
+    $this->accounts_alerts = new Google_Service_AdSense_Resource_AccountsAlerts(
         $this,
         $this->serviceName,
         'alerts',
@@ -327,7 +327,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_payments = new Google_Service_Adsense_Resource_AccountsPayments(
+    $this->accounts_payments = new Google_Service_AdSense_Resource_AccountsPayments(
         $this,
         $this->serviceName,
         'payments',
@@ -347,7 +347,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_reports = new Google_Service_Adsense_Resource_AccountsReports(
+    $this->accounts_reports = new Google_Service_AdSense_Resource_AccountsReports(
         $this,
         $this->serviceName,
         'reports',
@@ -505,7 +505,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_reports_saved = new Google_Service_Adsense_Resource_AccountsReportsSaved(
+    $this->accounts_reports_saved = new Google_Service_AdSense_Resource_AccountsReportsSaved(
         $this,
         $this->serviceName,
         'saved',
@@ -633,7 +633,7 @@ class Google_Service_Adsense extends Google_Service
           )
         )
     );
-    $this->accounts_sites = new Google_Service_Adsense_Resource_AccountsSites(
+    $this->accounts_sites = new Google_Service_AdSense_Resource_AccountsSites(
         $this,
         $this->serviceName,
         'sites',
