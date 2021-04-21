@@ -16,31 +16,33 @@
  */
 
 /**
- * Service definition for ServiceUsage (v1).
+ * Service definition for ApiKeysService (v2).
  *
  * <p>
- * Enables services that service consumers want to use on Google Cloud Platform,
- * lists the available or enabled services, or disables services that service
- * consumers no longer use.</p>
+ * Manages the API keys associated with developer projects.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/service-usage/" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/api-keys/docs" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_ServiceUsage extends Google_Service
+class Google_Service_ApiKeysService extends Google_Service
 {
   /** See, edit, configure, and delete your Google Cloud Platform data. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
+  /** View your data across Google Cloud Platform services. */
+  const CLOUD_PLATFORM_READ_ONLY =
+      "https://www.googleapis.com/auth/cloud-platform.read-only";
 
+  public $keys;
   public $operations;
-  public $services;
+  public $projects_locations_keys;
 
   /**
-   * Constructs the internal representation of the ServiceUsage service.
+   * Constructs the internal representation of the ApiKeysService service.
    *
    * @param Google_Client $client The client used to deliver requests.
    * @param string $rootUrl The root URL used for requests to the service.
@@ -48,65 +50,23 @@ class Google_Service_ServiceUsage extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://serviceusage.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://apikeys.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1';
-    $this->serviceName = 'serviceusage';
+    $this->version = 'v2';
+    $this->serviceName = 'apikeys';
 
-    $this->operations = new Google_Service_ServiceUsage_Resource_Operations(
+    $this->keys = new Google_Service_ApiKeysService_Resource_Keys(
         $this,
         $this->serviceName,
-        'operations',
+        'keys',
         array(
           'methods' => array(
-            'cancel' => array(
-              'path' => 'v1/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'delete' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'get' => array(
-              'path' => 'v1/{+name}',
+            'lookupKey' => array(
+              'path' => 'v2/keys:lookupKey',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'v1/operations',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'name' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
+                'keyString' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -115,59 +75,82 @@ class Google_Service_ServiceUsage extends Google_Service
           )
         )
     );
-    $this->services = new Google_Service_ServiceUsage_Resource_Services(
+    $this->operations = new Google_Service_ApiKeysService_Resource_Operations(
         $this,
         $this->serviceName,
-        'services',
+        'operations',
         array(
           'methods' => array(
-            'batchEnable' => array(
-              'path' => 'v1/{+parent}/services:batchEnable',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'batchGet' => array(
-              'path' => 'v1/{+parent}/services:batchGet',
+            'get' => array(
+              'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_keys = new Google_Service_ApiKeysService_Resource_ProjectsLocationsKeys(
+        $this,
+        $this->serviceName,
+        'keys',
+        array(
+          'methods' => array(
+            'clone' => array(
+              'path' => 'v2/{+name}:clone',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'create' => array(
+              'path' => 'v2/{+parent}/keys',
+              'httpMethod' => 'POST',
+              'parameters' => array(
                 'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'names' => array(
+                'keyId' => array(
                   'location' => 'query',
                   'type' => 'string',
-                  'repeated' => true,
                 ),
               ),
-            ),'disable' => array(
-              'path' => 'v1/{+name}:disable',
-              'httpMethod' => 'POST',
+            ),'delete' => array(
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-              ),
-            ),'enable' => array(
-              'path' => 'v1/{+name}:enable',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
+                'etag' => array(
+                  'location' => 'query',
                   'type' => 'string',
-                  'required' => true,
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1/{+name}',
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'getKeyString' => array(
+              'path' => 'v2/{+name}/keyString',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -177,7 +160,7 @@ class Google_Service_ServiceUsage extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/{+parent}/services',
+              'path' => 'v2/{+parent}/keys',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -196,6 +179,30 @@ class Google_Service_ServiceUsage extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'undelete' => array(
+              'path' => 'v2/{+name}:undelete',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
