@@ -15,22 +15,22 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListAdUnitsResponse extends Google_Collection
+class Google_Service_AdSense_ListAdUnitsResponse extends Google_Collection
 {
   protected $collection_key = 'adUnits';
-  protected $adUnitsType = 'Google_Service_Adsense_AdUnit';
+  protected $adUnitsType = 'Google_Service_AdSense_AdUnit';
   protected $adUnitsDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_Adsense_AdUnit[]
+   * @param Google_Service_AdSense_AdUnit[]
    */
   public function setAdUnits($adUnits)
   {
     $this->adUnits = $adUnits;
   }
   /**
-   * @return Google_Service_Adsense_AdUnit[]
+   * @return Google_Service_AdSense_AdUnit[]
    */
   public function getAdUnits()
   {

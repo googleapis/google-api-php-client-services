@@ -19,11 +19,11 @@
  * The "customchannels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adsenseService = new Google_Service_Adsense(...);
+ *   $adsenseService = new Google_Service_AdSense(...);
  *   $customchannels = $adsenseService->customchannels;
  *  </code>
  */
-class Google_Service_Adsense_Resource_AccountsAdclientsCustomchannels extends Google_Service_Resource
+class Google_Service_AdSense_Resource_AccountsAdclientsCustomchannels extends Google_Service_Resource
 {
   /**
    * Gets information about the selected custom channel. (customchannels.get)
@@ -31,13 +31,13 @@ class Google_Service_Adsense_Resource_AccountsAdclientsCustomchannels extends Go
    * @param string $name Required. Name of the custom channel. Format:
    * accounts/{account}/adclients/{adclient}/customchannels/{customchannel}
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Adsense_CustomChannel
+   * @return Google_Service_AdSense_CustomChannel
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Adsense_CustomChannel");
+    return $this->call('get', array($params), "Google_Service_AdSense_CustomChannel");
   }
   /**
    * Lists all the custom channels available in an ad client.
@@ -55,13 +55,13 @@ class Google_Service_Adsense_Resource_AccountsAdclientsCustomchannels extends Go
    * `ListCustomChannels` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListCustomChannels` must match
    * the call that provided the page token.
-   * @return Google_Service_Adsense_ListCustomChannelsResponse
+   * @return Google_Service_AdSense_ListCustomChannelsResponse
    */
   public function listAccountsAdclientsCustomchannels($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Adsense_ListCustomChannelsResponse");
+    return $this->call('list', array($params), "Google_Service_AdSense_ListCustomChannelsResponse");
   }
   /**
    * Lists all the ad units available for a custom channel.
@@ -80,12 +80,12 @@ class Google_Service_Adsense_Resource_AccountsAdclientsCustomchannels extends Go
    * `ListLinkedAdUnits` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListLinkedAdUnits` must match
    * the call that provided the page token.
-   * @return Google_Service_Adsense_ListLinkedAdUnitsResponse
+   * @return Google_Service_AdSense_ListLinkedAdUnitsResponse
    */
   public function listLinkedAdUnits($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('listLinkedAdUnits', array($params), "Google_Service_Adsense_ListLinkedAdUnitsResponse");
+    return $this->call('listLinkedAdUnits', array($params), "Google_Service_AdSense_ListLinkedAdUnitsResponse");
   }
 }

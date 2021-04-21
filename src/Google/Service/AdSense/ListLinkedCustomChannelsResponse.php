@@ -15,22 +15,22 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListLinkedCustomChannelsResponse extends Google_Collection
+class Google_Service_AdSense_ListLinkedCustomChannelsResponse extends Google_Collection
 {
   protected $collection_key = 'customChannels';
-  protected $customChannelsType = 'Google_Service_Adsense_CustomChannel';
+  protected $customChannelsType = 'Google_Service_AdSense_CustomChannel';
   protected $customChannelsDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_Adsense_CustomChannel[]
+   * @param Google_Service_AdSense_CustomChannel[]
    */
   public function setCustomChannels($customChannels)
   {
     $this->customChannels = $customChannels;
   }
   /**
-   * @return Google_Service_Adsense_CustomChannel[]
+   * @return Google_Service_AdSense_CustomChannel[]
    */
   public function getCustomChannels()
   {

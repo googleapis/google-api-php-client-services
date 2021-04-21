@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Adsense_Date extends Google_Model
+class Google_Service_AdSense_Date extends Google_Model
 {
   public $day;
   public $month;

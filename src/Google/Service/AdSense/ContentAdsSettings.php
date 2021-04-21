@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Adsense_ContentAdsSettings extends Google_Model
+class Google_Service_AdSense_ContentAdsSettings extends Google_Model
 {
   public $size;
   public $type;

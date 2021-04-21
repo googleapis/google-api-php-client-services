@@ -19,11 +19,11 @@
  * The "sites" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adsenseService = new Google_Service_Adsense(...);
+ *   $adsenseService = new Google_Service_AdSense(...);
  *   $sites = $adsenseService->sites;
  *  </code>
  */
-class Google_Service_Adsense_Resource_AccountsSites extends Google_Service_Resource
+class Google_Service_AdSense_Resource_AccountsSites extends Google_Service_Resource
 {
   /**
    * Gets information about the selected site. (sites.get)
@@ -31,13 +31,13 @@ class Google_Service_Adsense_Resource_AccountsSites extends Google_Service_Resou
    * @param string $name Required. Name of the site. Format:
    * accounts/{account}/sites/{site}
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Adsense_Site
+   * @return Google_Service_AdSense_Site
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Adsense_Site");
+    return $this->call('get', array($params), "Google_Service_AdSense_Site");
   }
   /**
    * Lists all the sites available in an account. (sites.listAccountsSites)
@@ -54,12 +54,12 @@ class Google_Service_Adsense_Resource_AccountsSites extends Google_Service_Resou
    * `ListSites` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListSites` must match the call
    * that provided the page token.
-   * @return Google_Service_Adsense_ListSitesResponse
+   * @return Google_Service_AdSense_ListSitesResponse
    */
   public function listAccountsSites($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Adsense_ListSitesResponse");
+    return $this->call('list', array($params), "Google_Service_AdSense_ListSitesResponse");
   }
 }

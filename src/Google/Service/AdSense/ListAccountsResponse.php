@@ -15,22 +15,22 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListAccountsResponse extends Google_Collection
+class Google_Service_AdSense_ListAccountsResponse extends Google_Collection
 {
   protected $collection_key = 'accounts';
-  protected $accountsType = 'Google_Service_Adsense_Account';
+  protected $accountsType = 'Google_Service_AdSense_Account';
   protected $accountsDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_Adsense_Account[]
+   * @param Google_Service_AdSense_Account[]
    */
   public function setAccounts($accounts)
   {
     $this->accounts = $accounts;
   }
   /**
-   * @return Google_Service_Adsense_Account[]
+   * @return Google_Service_AdSense_Account[]
    */
   public function getAccounts()
   {

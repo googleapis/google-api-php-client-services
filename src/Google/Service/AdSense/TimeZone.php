@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Adsense_TimeZone extends Google_Model
+class Google_Service_AdSense_TimeZone extends Google_Model
 {
   public $id;
   public $version;

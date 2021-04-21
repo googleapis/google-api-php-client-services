@@ -15,21 +15,21 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListAlertsResponse extends Google_Collection
+class Google_Service_AdSense_ListAlertsResponse extends Google_Collection
 {
   protected $collection_key = 'alerts';
-  protected $alertsType = 'Google_Service_Adsense_Alert';
+  protected $alertsType = 'Google_Service_AdSense_Alert';
   protected $alertsDataType = 'array';
 
   /**
-   * @param Google_Service_Adsense_Alert[]
+   * @param Google_Service_AdSense_Alert[]
    */
   public function setAlerts($alerts)
   {
     $this->alerts = $alerts;
   }
   /**
-   * @return Google_Service_Adsense_Alert[]
+   * @return Google_Service_AdSense_Alert[]
    */
   public function getAlerts()
   {

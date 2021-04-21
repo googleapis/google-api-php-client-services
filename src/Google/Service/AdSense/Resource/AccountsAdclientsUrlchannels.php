@@ -19,11 +19,11 @@
  * The "urlchannels" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adsenseService = new Google_Service_Adsense(...);
+ *   $adsenseService = new Google_Service_AdSense(...);
  *   $urlchannels = $adsenseService->urlchannels;
  *  </code>
  */
-class Google_Service_Adsense_Resource_AccountsAdclientsUrlchannels extends Google_Service_Resource
+class Google_Service_AdSense_Resource_AccountsAdclientsUrlchannels extends Google_Service_Resource
 {
   /**
    * Lists active url channels. (urlchannels.listAccountsAdclientsUrlchannels)
@@ -40,12 +40,12 @@ class Google_Service_Adsense_Resource_AccountsAdclientsUrlchannels extends Googl
    * `ListUrlChannels` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListUrlChannels` must match the
    * call that provided the page token.
-   * @return Google_Service_Adsense_ListUrlChannelsResponse
+   * @return Google_Service_AdSense_ListUrlChannelsResponse
    */
   public function listAccountsAdclientsUrlchannels($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Adsense_ListUrlChannelsResponse");
+    return $this->call('list', array($params), "Google_Service_AdSense_ListUrlChannelsResponse");
   }
 }

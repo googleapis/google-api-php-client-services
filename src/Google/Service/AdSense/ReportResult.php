@@ -15,89 +15,89 @@
  * the License.
  */
 
-class Google_Service_Adsense_ReportResult extends Google_Collection
+class Google_Service_AdSense_ReportResult extends Google_Collection
 {
   protected $collection_key = 'warnings';
-  protected $averagesType = 'Google_Service_Adsense_Row';
+  protected $averagesType = 'Google_Service_AdSense_Row';
   protected $averagesDataType = '';
-  protected $endDateType = 'Google_Service_Adsense_Date';
+  protected $endDateType = 'Google_Service_AdSense_Date';
   protected $endDateDataType = '';
-  protected $headersType = 'Google_Service_Adsense_Header';
+  protected $headersType = 'Google_Service_AdSense_Header';
   protected $headersDataType = 'array';
-  protected $rowsType = 'Google_Service_Adsense_Row';
+  protected $rowsType = 'Google_Service_AdSense_Row';
   protected $rowsDataType = 'array';
-  protected $startDateType = 'Google_Service_Adsense_Date';
+  protected $startDateType = 'Google_Service_AdSense_Date';
   protected $startDateDataType = '';
   public $totalMatchedRows;
-  protected $totalsType = 'Google_Service_Adsense_Row';
+  protected $totalsType = 'Google_Service_AdSense_Row';
   protected $totalsDataType = '';
   public $warnings;
 
   /**
-   * @param Google_Service_Adsense_Row
+   * @param Google_Service_AdSense_Row
    */
-  public function setAverages(Google_Service_Adsense_Row $averages)
+  public function setAverages(Google_Service_AdSense_Row $averages)
   {
     $this->averages = $averages;
   }
   /**
-   * @return Google_Service_Adsense_Row
+   * @return Google_Service_AdSense_Row
    */
   public function getAverages()
   {
     return $this->averages;
   }
   /**
-   * @param Google_Service_Adsense_Date
+   * @param Google_Service_AdSense_Date
    */
-  public function setEndDate(Google_Service_Adsense_Date $endDate)
+  public function setEndDate(Google_Service_AdSense_Date $endDate)
   {
     $this->endDate = $endDate;
   }
   /**
-   * @return Google_Service_Adsense_Date
+   * @return Google_Service_AdSense_Date
    */
   public function getEndDate()
   {
     return $this->endDate;
   }
   /**
-   * @param Google_Service_Adsense_Header[]
+   * @param Google_Service_AdSense_Header[]
    */
   public function setHeaders($headers)
   {
     $this->headers = $headers;
   }
   /**
-   * @return Google_Service_Adsense_Header[]
+   * @return Google_Service_AdSense_Header[]
    */
   public function getHeaders()
   {
     return $this->headers;
   }
   /**
-   * @param Google_Service_Adsense_Row[]
+   * @param Google_Service_AdSense_Row[]
    */
   public function setRows($rows)
   {
     $this->rows = $rows;
   }
   /**
-   * @return Google_Service_Adsense_Row[]
+   * @return Google_Service_AdSense_Row[]
    */
   public function getRows()
   {
     return $this->rows;
   }
   /**
-   * @param Google_Service_Adsense_Date
+   * @param Google_Service_AdSense_Date
    */
-  public function setStartDate(Google_Service_Adsense_Date $startDate)
+  public function setStartDate(Google_Service_AdSense_Date $startDate)
   {
     $this->startDate = $startDate;
   }
   /**
-   * @return Google_Service_Adsense_Date
+   * @return Google_Service_AdSense_Date
    */
   public function getStartDate()
   {
@@ -112,14 +112,14 @@ class Google_Service_Adsense_ReportResult extends Google_Collection
     return $this->totalMatchedRows;
   }
   /**
-   * @param Google_Service_Adsense_Row
+   * @param Google_Service_AdSense_Row
    */
-  public function setTotals(Google_Service_Adsense_Row $totals)
+  public function setTotals(Google_Service_AdSense_Row $totals)
   {
     $this->totals = $totals;
   }
   /**
-   * @return Google_Service_Adsense_Row
+   * @return Google_Service_AdSense_Row
    */
   public function getTotals()
   {

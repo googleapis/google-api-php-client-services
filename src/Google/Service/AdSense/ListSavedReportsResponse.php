@@ -15,11 +15,11 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListSavedReportsResponse extends Google_Collection
+class Google_Service_AdSense_ListSavedReportsResponse extends Google_Collection
 {
   protected $collection_key = 'savedReports';
   public $nextPageToken;
-  protected $savedReportsType = 'Google_Service_Adsense_SavedReport';
+  protected $savedReportsType = 'Google_Service_AdSense_SavedReport';
   protected $savedReportsDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
@@ -31,14 +31,14 @@ class Google_Service_Adsense_ListSavedReportsResponse extends Google_Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_Adsense_SavedReport[]
+   * @param Google_Service_AdSense_SavedReport[]
    */
   public function setSavedReports($savedReports)
   {
     $this->savedReports = $savedReports;
   }
   /**
-   * @return Google_Service_Adsense_SavedReport[]
+   * @return Google_Service_AdSense_SavedReport[]
    */
   public function getSavedReports()
   {

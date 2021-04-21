@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Adsense_Site extends Google_Model
+class Google_Service_AdSense_Site extends Google_Model
 {
   public $autoAdsEnabled;
   public $domain;

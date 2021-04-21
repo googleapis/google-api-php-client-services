@@ -15,22 +15,22 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListAdClientsResponse extends Google_Collection
+class Google_Service_AdSense_ListAdClientsResponse extends Google_Collection
 {
   protected $collection_key = 'adClients';
-  protected $adClientsType = 'Google_Service_Adsense_AdClient';
+  protected $adClientsType = 'Google_Service_AdSense_AdClient';
   protected $adClientsDataType = 'array';
   public $nextPageToken;
 
   /**
-   * @param Google_Service_Adsense_AdClient[]
+   * @param Google_Service_AdSense_AdClient[]
    */
   public function setAdClients($adClients)
   {
     $this->adClients = $adClients;
   }
   /**
-   * @return Google_Service_Adsense_AdClient[]
+   * @return Google_Service_AdSense_AdClient[]
    */
   public function getAdClients()
   {

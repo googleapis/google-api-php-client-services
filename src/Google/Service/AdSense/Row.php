@@ -15,21 +15,21 @@
  * the License.
  */
 
-class Google_Service_Adsense_Row extends Google_Collection
+class Google_Service_AdSense_Row extends Google_Collection
 {
   protected $collection_key = 'cells';
-  protected $cellsType = 'Google_Service_Adsense_Cell';
+  protected $cellsType = 'Google_Service_AdSense_Cell';
   protected $cellsDataType = 'array';
 
   /**
-   * @param Google_Service_Adsense_Cell[]
+   * @param Google_Service_AdSense_Cell[]
    */
   public function setCells($cells)
   {
     $this->cells = $cells;
   }
   /**
-   * @return Google_Service_Adsense_Cell[]
+   * @return Google_Service_AdSense_Cell[]
    */
   public function getCells()
   {

@@ -15,11 +15,11 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListUrlChannelsResponse extends Google_Collection
+class Google_Service_AdSense_ListUrlChannelsResponse extends Google_Collection
 {
   protected $collection_key = 'urlChannels';
   public $nextPageToken;
-  protected $urlChannelsType = 'Google_Service_Adsense_UrlChannel';
+  protected $urlChannelsType = 'Google_Service_AdSense_UrlChannel';
   protected $urlChannelsDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
@@ -31,14 +31,14 @@ class Google_Service_Adsense_ListUrlChannelsResponse extends Google_Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_Adsense_UrlChannel[]
+   * @param Google_Service_AdSense_UrlChannel[]
    */
   public function setUrlChannels($urlChannels)
   {
     $this->urlChannels = $urlChannels;
   }
   /**
-   * @return Google_Service_Adsense_UrlChannel[]
+   * @return Google_Service_AdSense_UrlChannel[]
    */
   public function getUrlChannels()
   {

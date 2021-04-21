@@ -15,21 +15,21 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListPaymentsResponse extends Google_Collection
+class Google_Service_AdSense_ListPaymentsResponse extends Google_Collection
 {
   protected $collection_key = 'payments';
-  protected $paymentsType = 'Google_Service_Adsense_Payment';
+  protected $paymentsType = 'Google_Service_AdSense_Payment';
   protected $paymentsDataType = 'array';
 
   /**
-   * @param Google_Service_Adsense_Payment[]
+   * @param Google_Service_AdSense_Payment[]
    */
   public function setPayments($payments)
   {
     $this->payments = $payments;
   }
   /**
-   * @return Google_Service_Adsense_Payment[]
+   * @return Google_Service_AdSense_Payment[]
    */
   public function getPayments()
   {

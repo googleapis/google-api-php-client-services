@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Adsense_AdUnitAdCode extends Google_Model
+class Google_Service_AdSense_AdUnitAdCode extends Google_Model
 {
   public $adCode;
 

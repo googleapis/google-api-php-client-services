@@ -19,11 +19,11 @@
  * The "adunits" collection of methods.
  * Typical usage is:
  *  <code>
- *   $adsenseService = new Google_Service_Adsense(...);
+ *   $adsenseService = new Google_Service_AdSense(...);
  *   $adunits = $adsenseService->adunits;
  *  </code>
  */
-class Google_Service_Adsense_Resource_AccountsAdclientsAdunits extends Google_Service_Resource
+class Google_Service_AdSense_Resource_AccountsAdclientsAdunits extends Google_Service_Resource
 {
   /**
    * Gets an ad unit from a specified account and ad client. (adunits.get)
@@ -31,13 +31,13 @@ class Google_Service_Adsense_Resource_AccountsAdclientsAdunits extends Google_Se
    * @param string $name Required. AdUnit to get information about. Format:
    * accounts/{account_id}/adclient/{adclient_id}/adunit/{adunit_id}
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Adsense_AdUnit
+   * @return Google_Service_AdSense_AdUnit
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Adsense_AdUnit");
+    return $this->call('get', array($params), "Google_Service_AdSense_AdUnit");
   }
   /**
    * Gets the AdSense code for a given ad unit. (adunits.getAdcode)
@@ -45,13 +45,13 @@ class Google_Service_Adsense_Resource_AccountsAdclientsAdunits extends Google_Se
    * @param string $name Required. Name of the adunit for which to get the adcode.
    * Format: accounts/{account}/adclients/{adclient}/adunits/{adunit}
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Adsense_AdUnitAdCode
+   * @return Google_Service_AdSense_AdUnitAdCode
    */
   public function getAdcode($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('getAdcode', array($params), "Google_Service_Adsense_AdUnitAdCode");
+    return $this->call('getAdcode', array($params), "Google_Service_AdSense_AdUnitAdCode");
   }
   /**
    * Lists all ad units under a specified account and ad client.
@@ -69,13 +69,13 @@ class Google_Service_Adsense_Resource_AccountsAdclientsAdunits extends Google_Se
    * `ListAdUnits` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListAdUnits` must match the
    * call that provided the page token.
-   * @return Google_Service_Adsense_ListAdUnitsResponse
+   * @return Google_Service_AdSense_ListAdUnitsResponse
    */
   public function listAccountsAdclientsAdunits($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Adsense_ListAdUnitsResponse");
+    return $this->call('list', array($params), "Google_Service_AdSense_ListAdUnitsResponse");
   }
   /**
    * Lists all the custom channels available for an ad unit.
@@ -94,12 +94,12 @@ class Google_Service_Adsense_Resource_AccountsAdclientsAdunits extends Google_Se
    * `ListLinkedCustomChannels` call. Provide this to retrieve the subsequent
    * page. When paginating, all other parameters provided to
    * `ListLinkedCustomChannels` must match the call that provided the page token.
-   * @return Google_Service_Adsense_ListLinkedCustomChannelsResponse
+   * @return Google_Service_AdSense_ListLinkedCustomChannelsResponse
    */
   public function listLinkedCustomChannels($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('listLinkedCustomChannels', array($params), "Google_Service_Adsense_ListLinkedCustomChannelsResponse");
+    return $this->call('listLinkedCustomChannels', array($params), "Google_Service_AdSense_ListLinkedCustomChannelsResponse");
   }
 }

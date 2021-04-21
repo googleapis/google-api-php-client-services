@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Adsense_HttpBody extends Google_Collection
+class Google_Service_AdSense_HttpBody extends Google_Collection
 {
   protected $collection_key = 'extensions';
   public $contentType;

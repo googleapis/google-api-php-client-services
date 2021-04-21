@@ -15,11 +15,11 @@
  * the License.
  */
 
-class Google_Service_Adsense_ListSitesResponse extends Google_Collection
+class Google_Service_AdSense_ListSitesResponse extends Google_Collection
 {
   protected $collection_key = 'sites';
   public $nextPageToken;
-  protected $sitesType = 'Google_Service_Adsense_Site';
+  protected $sitesType = 'Google_Service_AdSense_Site';
   protected $sitesDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
@@ -31,14 +31,14 @@ class Google_Service_Adsense_ListSitesResponse extends Google_Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_Adsense_Site[]
+   * @param Google_Service_AdSense_Site[]
    */
   public function setSites($sites)
   {
     $this->sites = $sites;
   }
   /**
-   * @return Google_Service_Adsense_Site[]
+   * @return Google_Service_AdSense_Site[]
    */
   public function getSites()
   {

@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Adsense_Header extends Google_Model
+class Google_Service_AdSense_Header extends Google_Model
 {
   public $currencyCode;
   public $name;
