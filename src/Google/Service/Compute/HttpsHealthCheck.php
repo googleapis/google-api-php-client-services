@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_Compute_HTTPSHealthCheck extends Google_Model
+class Google_Service_Compute_HttpsHealthCheck extends Google_Model
 {
   public $host;
   public $port;

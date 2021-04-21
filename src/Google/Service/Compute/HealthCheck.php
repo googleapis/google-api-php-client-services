@@ -27,7 +27,7 @@ class Google_Service_Compute_HealthCheck extends Google_Model
   protected $http2HealthCheckDataType = '';
   protected $httpHealthCheckType = 'Google_Service_Compute_HTTPHealthCheck';
   protected $httpHealthCheckDataType = '';
-  protected $httpsHealthCheckType = 'Google_Service_Compute_HTTPSHealthCheck';
+  protected $httpsHealthCheckType = 'Google_Service_Compute_HttpsHealthCheck';
   protected $httpsHealthCheckDataType = '';
   public $id;
   public $kind;
@@ -119,14 +119,14 @@ class Google_Service_Compute_HealthCheck extends Google_Model
     return $this->httpHealthCheck;
   }
   /**
-   * @param Google_Service_Compute_HTTPSHealthCheck
+   * @param Google_Service_Compute_HttpsHealthCheck
    */
-  public function setHttpsHealthCheck(Google_Service_Compute_HTTPSHealthCheck $httpsHealthCheck)
+  public function setHttpsHealthCheck(Google_Service_Compute_HttpsHealthCheck $httpsHealthCheck)
   {
     $this->httpsHealthCheck = $httpsHealthCheck;
   }
   /**
-   * @return Google_Service_Compute_HTTPSHealthCheck
+   * @return Google_Service_Compute_HttpsHealthCheck
    */
   public function getHttpsHealthCheck()
   {
