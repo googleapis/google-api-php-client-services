@@ -139,10 +139,7 @@ class Google_Service_ServiceManagement_Resource_Services extends Google_Service_
   /**
    * Lists managed services. Returns all public services. For authenticated users,
    * also returns all services the calling user has
-   * "servicemanagement.services.get" permission for. **BETA:** If the caller
-   * specifies the `consumer_id`, it returns only the services enabled on the
-   * consumer. The `consumer_id` must have the format of "project:{PROJECT-ID}".
-   * (services.listServices)
+   * "servicemanagement.services.get" permission for. (services.listServices)
    *
    * @param array $optParams Optional parameters.
    *

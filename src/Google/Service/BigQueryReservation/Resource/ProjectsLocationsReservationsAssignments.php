@@ -52,6 +52,11 @@ class Google_Service_BigQueryReservation_Resource_ProjectsLocationsReservationsA
    * E.g. `projects/myproject/locations/US/reservations/team1-prod`
    * @param Google_Service_BigQueryReservation_Assignment $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string assignmentId The optional assignment ID. Assignment name
+   * will be generated automatically if this field is empty. This field must only
+   * contain lower case alphanumeric characters or dash. Max length is 64
+   * characters.
    * @return Google_Service_BigQueryReservation_Assignment
    */
   public function create($parent, Google_Service_BigQueryReservation_Assignment $postBody, $optParams = array())
@@ -126,5 +131,24 @@ class Google_Service_BigQueryReservation_Resource_ProjectsLocationsReservationsA
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('move', array($params), "Google_Service_BigQueryReservation_Assignment");
+  }
+  /**
+   * Updates an existing assignment. Only the `priority` field can be updated.
+   * (assignments.patch)
+   *
+   * @param string $name Output only. Name of the resource. E.g.:
+   * `projects/myproject/locations/US/reservations/team1-prod/assignments/123`.
+   * @param Google_Service_BigQueryReservation_Assignment $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Standard field mask for the set of fields to be
+   * updated.
+   * @return Google_Service_BigQueryReservation_Assignment
+   */
+  public function patch($name, Google_Service_BigQueryReservation_Assignment $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', array($params), "Google_Service_BigQueryReservation_Assignment");
   }
 }

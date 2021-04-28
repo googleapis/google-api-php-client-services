@@ -404,6 +404,20 @@ class Google_Service_BigtableAdmin extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'partialUpdateCluster' => array(
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'update' => array(
               'path' => 'v2/{+name}',
               'httpMethod' => 'PUT',
