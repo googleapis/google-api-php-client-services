@@ -15,34 +15,6 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
-
-  public function setAllowCors($allowCors)
-  {
-    $this->allowCors = $allowCors;
-  }
-  public function getAllowCors()
-  {
-    return $this->allowCors;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
-  }
 }

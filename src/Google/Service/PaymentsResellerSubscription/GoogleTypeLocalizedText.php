@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+class Google_Service_PaymentsResellerSubscription_GoogleTypeLocalizedText extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
+  public $languageCode;
+  public $text;
 
-  public function setAllowCors($allowCors)
+  public function setLanguageCode($languageCode)
   {
-    $this->allowCors = $allowCors;
+    $this->languageCode = $languageCode;
   }
-  public function getAllowCors()
+  public function getLanguageCode()
   {
-    return $this->allowCors;
+    return $this->languageCode;
   }
-  public function setName($name)
+  public function setText($text)
   {
-    $this->name = $name;
+    $this->text = $text;
   }
-  public function getName()
+  public function getText()
   {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->text;
   }
 }

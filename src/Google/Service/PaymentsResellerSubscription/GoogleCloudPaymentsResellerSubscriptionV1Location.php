@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1Location extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
+  public $postalCode;
+  public $regionCode;
 
-  public function setAllowCors($allowCors)
+  public function setPostalCode($postalCode)
   {
-    $this->allowCors = $allowCors;
+    $this->postalCode = $postalCode;
   }
-  public function getAllowCors()
+  public function getPostalCode()
   {
-    return $this->allowCors;
+    return $this->postalCode;
   }
-  public function setName($name)
+  public function setRegionCode($regionCode)
   {
-    $this->name = $name;
+    $this->regionCode = $regionCode;
   }
-  public function getName()
+  public function getRegionCode()
   {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->regionCode;
   }
 }

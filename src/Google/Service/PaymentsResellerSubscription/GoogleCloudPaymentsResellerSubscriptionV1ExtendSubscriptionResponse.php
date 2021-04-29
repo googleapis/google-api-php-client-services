@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
+  public $cycleEndTime;
+  public $freeTrialEndTime;
 
-  public function setAllowCors($allowCors)
+  public function setCycleEndTime($cycleEndTime)
   {
-    $this->allowCors = $allowCors;
+    $this->cycleEndTime = $cycleEndTime;
   }
-  public function getAllowCors()
+  public function getCycleEndTime()
   {
-    return $this->allowCors;
+    return $this->cycleEndTime;
   }
-  public function setName($name)
+  public function setFreeTrialEndTime($freeTrialEndTime)
   {
-    $this->name = $name;
+    $this->freeTrialEndTime = $freeTrialEndTime;
   }
-  public function getName()
+  public function getFreeTrialEndTime()
   {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->freeTrialEndTime;
   }
 }

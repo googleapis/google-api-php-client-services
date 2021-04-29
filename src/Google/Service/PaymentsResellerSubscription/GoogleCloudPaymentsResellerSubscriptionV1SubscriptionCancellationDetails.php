@@ -15,34 +15,16 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
+  public $reason;
 
-  public function setAllowCors($allowCors)
+  public function setReason($reason)
   {
-    $this->allowCors = $allowCors;
+    $this->reason = $reason;
   }
-  public function getAllowCors()
+  public function getReason()
   {
-    return $this->allowCors;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->reason;
   }
 }

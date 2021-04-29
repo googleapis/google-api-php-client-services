@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+class Google_Service_SQLAdmin_SqlOutOfDiskReport extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
+  public $sqlMinRecommendedIncreaseSizeGb;
+  public $sqlOutOfDiskState;
 
-  public function setAllowCors($allowCors)
+  public function setSqlMinRecommendedIncreaseSizeGb($sqlMinRecommendedIncreaseSizeGb)
   {
-    $this->allowCors = $allowCors;
+    $this->sqlMinRecommendedIncreaseSizeGb = $sqlMinRecommendedIncreaseSizeGb;
   }
-  public function getAllowCors()
+  public function getSqlMinRecommendedIncreaseSizeGb()
   {
-    return $this->allowCors;
+    return $this->sqlMinRecommendedIncreaseSizeGb;
   }
-  public function setName($name)
+  public function setSqlOutOfDiskState($sqlOutOfDiskState)
   {
-    $this->name = $name;
+    $this->sqlOutOfDiskState = $sqlOutOfDiskState;
   }
-  public function getName()
+  public function getSqlOutOfDiskState()
   {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->sqlOutOfDiskState;
   }
 }

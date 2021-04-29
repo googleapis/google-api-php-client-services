@@ -15,34 +15,14 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+/**
+ * The "partners" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $paymentsresellersubscriptionService = new Google_Service_PaymentsResellerSubscription(...);
+ *   $partners = $paymentsresellersubscriptionService->partners;
+ *  </code>
+ */
+class Google_Service_PaymentsResellerSubscription_Resource_Partners extends Google_Service_Resource
 {
-  public $allowCors;
-  public $name;
-  public $target;
-
-  public function setAllowCors($allowCors)
-  {
-    $this->allowCors = $allowCors;
-  }
-  public function getAllowCors()
-  {
-    return $this->allowCors;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
-  }
 }

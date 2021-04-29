@@ -16,30 +16,28 @@
  */
 
 /**
- * Service definition for DoubleClickBidManager (v1.1).
+ * Service definition for MyBusinessPlaceActions (v1).
  *
  * <p>
- * DoubleClick Bid Manager API allows users to manage and create campaigns and
- * reports.</p>
+ * The My Business Place Actions API provides an interface for managing place
+ * action links of a location on Google.</p>
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://developers.google.com/bid-manager/" target="_blank">Documentation</a>
+ * <a href="https://developers.google.com/my-business/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
-class Google_Service_DoubleClickBidManager extends Google_Service
+class Google_Service_MyBusinessPlaceActions extends Google_Service
 {
-  /** View and manage your reports in DoubleClick Bid Manager. */
-  const DOUBLECLICKBIDMANAGER =
-      "https://www.googleapis.com/auth/doubleclickbidmanager";
 
-  public $queries;
-  public $reports;
+
+  public $locations_placeActionLinks;
+  public $placeActionTypeMetadata;
 
   /**
-   * Constructs the internal representation of the DoubleClickBidManager
+   * Constructs the internal representation of the MyBusinessPlaceActions
    * service.
    *
    * @param Google_Client $client The client used to deliver requests.
@@ -48,51 +46,61 @@ class Google_Service_DoubleClickBidManager extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://doubleclickbidmanager.googleapis.com/';
-    $this->servicePath = 'doubleclickbidmanager/v1.1/';
+    $this->rootUrl = $rootUrl ?: 'https://mybusinessplaceactions.googleapis.com/';
+    $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1.1';
-    $this->serviceName = 'doubleclickbidmanager';
+    $this->version = 'v1';
+    $this->serviceName = 'mybusinessplaceactions';
 
-    $this->queries = new Google_Service_DoubleClickBidManager_Resource_Queries(
+    $this->locations_placeActionLinks = new Google_Service_MyBusinessPlaceActions_Resource_LocationsPlaceActionLinks(
         $this,
         $this->serviceName,
-        'queries',
+        'placeActionLinks',
         array(
           'methods' => array(
-            'createquery' => array(
-              'path' => 'query',
+            'create' => array(
+              'path' => 'v1/{+parent}/placeActionLinks',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'asynchronous' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
-            ),'deletequery' => array(
-              'path' => 'query/{queryId}',
+            ),'delete' => array(
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
-                'queryId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
               ),
-            ),'getquery' => array(
-              'path' => 'query/{queryId}',
+            ),'get' => array(
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'queryId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
               ),
-            ),'listqueries' => array(
-              'path' => 'queries',
+            ),'list' => array(
+              'path' => 'v1/{+parent}/placeActionLinks',
               'httpMethod' => 'GET',
               'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
@@ -102,38 +110,41 @@ class Google_Service_DoubleClickBidManager extends Google_Service
                   'type' => 'string',
                 ),
               ),
-            ),'runquery' => array(
-              'path' => 'query/{queryId}',
-              'httpMethod' => 'POST',
+            ),'patch' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
               'parameters' => array(
-                'queryId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ),
-                'asynchronous' => array(
+                'updateMask' => array(
                   'location' => 'query',
-                  'type' => 'boolean',
+                  'type' => 'string',
                 ),
               ),
             ),
           )
         )
     );
-    $this->reports = new Google_Service_DoubleClickBidManager_Resource_Reports(
+    $this->placeActionTypeMetadata = new Google_Service_MyBusinessPlaceActions_Resource_PlaceActionTypeMetadata(
         $this,
         $this->serviceName,
-        'reports',
+        'placeActionTypeMetadata',
         array(
           'methods' => array(
-            'listreports' => array(
-              'path' => 'queries/{queryId}/reports',
+            'list' => array(
+              'path' => 'v1/placeActionTypeMetadata',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'queryId' => array(
-                  'location' => 'path',
+                'filter' => array(
+                  'location' => 'query',
                   'type' => 'string',
-                  'required' => true,
+                ),
+                'languageCode' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'pageSize' => array(
                   'location' => 'query',

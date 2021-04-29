@@ -15,34 +15,14 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+/**
+ * The "locations" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $mybusinessplaceactionsService = new Google_Service_MyBusinessPlaceActions(...);
+ *   $locations = $mybusinessplaceactionsService->locations;
+ *  </code>
+ */
+class Google_Service_MyBusinessPlaceActions_Resource_Locations extends Google_Service_Resource
 {
-  public $allowCors;
-  public $name;
-  public $target;
-
-  public function setAllowCors($allowCors)
-  {
-    $this->allowCors = $allowCors;
-  }
-  public function getAllowCors()
-  {
-    return $this->allowCors;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
-  }
 }

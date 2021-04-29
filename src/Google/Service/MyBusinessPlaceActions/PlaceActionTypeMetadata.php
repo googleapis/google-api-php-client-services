@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_ServiceUsage_Endpoint extends Google_Model
+class Google_Service_MyBusinessPlaceActions_PlaceActionTypeMetadata extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
+  public $displayName;
+  public $placeActionType;
 
-  public function setAllowCors($allowCors)
+  public function setDisplayName($displayName)
   {
-    $this->allowCors = $allowCors;
+    $this->displayName = $displayName;
   }
-  public function getAllowCors()
+  public function getDisplayName()
   {
-    return $this->allowCors;
+    return $this->displayName;
   }
-  public function setName($name)
+  public function setPlaceActionType($placeActionType)
   {
-    $this->name = $name;
+    $this->placeActionType = $placeActionType;
   }
-  public function getName()
+  public function getPlaceActionType()
   {
-    return $this->name;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->placeActionType;
   }
 }
