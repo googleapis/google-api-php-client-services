@@ -539,6 +539,16 @@ class Google_Service_Cloudchannel extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'lookupOffer' => array(
+              'path' => 'v1/{+entitlement}:lookupOffer',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'entitlement' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'startPaidService' => array(
               'path' => 'v1/{+name}:startPaidService',
               'httpMethod' => 'POST',
