@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_ServiceManagement_Endpoint extends Google_Model
+class Google_Service_ShoppingContent_ReturnShippingLabel extends Google_Model
 {
-  public $allowCors;
-  public $name;
-  public $target;
+  public $carrier;
+  public $labelUri;
+  public $trackingId;
 
-  public function setAllowCors($allowCors)
+  public function setCarrier($carrier)
   {
-    $this->allowCors = $allowCors;
+    $this->carrier = $carrier;
   }
-  public function getAllowCors()
+  public function getCarrier()
   {
-    return $this->allowCors;
+    return $this->carrier;
   }
-  public function setName($name)
+  public function setLabelUri($labelUri)
   {
-    $this->name = $name;
+    $this->labelUri = $labelUri;
   }
-  public function getName()
+  public function getLabelUri()
   {
-    return $this->name;
+    return $this->labelUri;
   }
-  public function setTarget($target)
+  public function setTrackingId($trackingId)
   {
-    $this->target = $target;
+    $this->trackingId = $trackingId;
   }
-  public function getTarget()
+  public function getTrackingId()
   {
-    return $this->target;
+    return $this->trackingId;
   }
 }

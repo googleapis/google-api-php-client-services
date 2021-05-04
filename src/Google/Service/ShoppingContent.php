@@ -51,6 +51,7 @@ class Google_Service_ShoppingContent extends Google_Service
   public $orderinvoices;
   public $orderreports;
   public $orderreturns;
+  public $orderreturns_labels;
   public $orders;
   public $ordertrackingsignals;
   public $pos;
@@ -1369,6 +1370,31 @@ class Google_Service_ShoppingContent extends Google_Service
               ),
             ),'process' => array(
               'path' => '{merchantId}/orderreturns/{returnId}/process',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'returnId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->orderreturns_labels = new Google_Service_ShoppingContent_Resource_OrderreturnsLabels(
+        $this,
+        $this->serviceName,
+        'labels',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => '{merchantId}/orderreturns/{returnId}/labels',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'merchantId' => array(
