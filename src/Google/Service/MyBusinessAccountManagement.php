@@ -222,11 +222,11 @@ class Google_Service_MyBusinessAccountManagement extends Google_Service
         'locations',
         array(
           'methods' => array(
-            'transferLocation' => array(
-              'path' => 'v1/locations/{locationsId}:transferLocation',
+            'transfer' => array(
+              'path' => 'v1/{+name}:transfer',
               'httpMethod' => 'POST',
               'parameters' => array(
-                'locationsId' => array(
+                'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

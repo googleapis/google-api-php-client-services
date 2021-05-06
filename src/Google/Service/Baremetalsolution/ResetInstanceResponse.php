@@ -15,16 +15,6 @@
  * the License.
  */
 
-class Google_Service_MyBusinessAccountManagement_TransferLocationRequest extends Google_Model
+class Google_Service_Baremetalsolution_ResetInstanceResponse extends Google_Model
 {
-  public $destinationAccount;
-
-  public function setDestinationAccount($destinationAccount)
-  {
-    $this->destinationAccount = $destinationAccount;
-  }
-  public function getDestinationAccount()
-  {
-    return $this->destinationAccount;
-  }
 }

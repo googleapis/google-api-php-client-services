@@ -15,16 +15,14 @@
  * the License.
  */
 
-class Google_Service_MyBusinessAccountManagement_TransferLocationRequest extends Google_Model
+/**
+ * The "locations" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $baremetalsolutionService = new Google_Service_Baremetalsolution(...);
+ *   $locations = $baremetalsolutionService->locations;
+ *  </code>
+ */
+class Google_Service_Baremetalsolution_Resource_ProjectsLocations extends Google_Service_Resource
 {
-  public $destinationAccount;
-
-  public function setDestinationAccount($destinationAccount)
-  {
-    $this->destinationAccount = $destinationAccount;
-  }
-  public function getDestinationAccount()
-  {
-    return $this->destinationAccount;
-  }
 }

@@ -29,17 +29,18 @@ class Google_Service_MyBusinessAccountManagement_Resource_Locations extends Goog
    * Moves a location from an account that the user owns to another account that
    * the same user administers. The user must be an owner of the account the
    * location is currently associated with and must also be at least a manager of
-   * the destination account. (locations.transferLocation)
+   * the destination account. (locations.transfer)
    *
-   * @param string $locationsId
+   * @param string $name Required. The name of the location to transfer.
+   * `locations/{location_id}`.
    * @param Google_Service_MyBusinessAccountManagement_TransferLocationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Google_Service_MyBusinessAccountManagement_MybusinessaccountmanagementEmpty
    */
-  public function transferLocation($locationsId, Google_Service_MyBusinessAccountManagement_TransferLocationRequest $postBody, $optParams = array())
+  public function transfer($name, Google_Service_MyBusinessAccountManagement_TransferLocationRequest $postBody, $optParams = array())
   {
-    $params = array('locationsId' => $locationsId, 'postBody' => $postBody);
+    $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('transferLocation', array($params), "Google_Service_MyBusinessAccountManagement_MybusinessaccountmanagementEmpty");
+    return $this->call('transfer', array($params), "Google_Service_MyBusinessAccountManagement_MybusinessaccountmanagementEmpty");
   }
 }
