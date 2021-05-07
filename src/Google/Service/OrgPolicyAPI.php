@@ -24,7 +24,7 @@
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/orgpolicy/docs/reference/rest/index.html" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.

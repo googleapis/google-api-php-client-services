@@ -56,8 +56,9 @@ class Google_Service_PaymentsResellerSubscription_Resource_PartnersSubscriptions
    * @param array $optParams Optional parameters.
    *
    * @opt_param string subscriptionId Required. Identifies the subscription
-   * resource on the Partner side. If a subscription was previously created with
-   * the same subscription_id, we will directly return that one.
+   * resource on the Partner side. The value is restricted to 63 ASCII characters
+   * at the maximum. If a subscription was previously created with the same
+   * subscription_id, we will directly return that one.
    * @return Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1Subscription
    */
   public function create($parent, Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1Subscription $postBody, $optParams = array())
@@ -133,8 +134,9 @@ class Google_Service_PaymentsResellerSubscription_Resource_PartnersSubscriptions
    * @param array $optParams Optional parameters.
    *
    * @opt_param string subscriptionId Required. Identifies the subscription
-   * resource on the Partner side. If a subscription was previously created with
-   * the same subscription_id, we will directly return that one.
+   * resource on the Partner side. The value is restricted to 63 ASCII characters
+   * at the maximum. If a subscription was previously created with the same
+   * subscription_id, we will directly return that one.
    * @return Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1Subscription
    */
   public function provision($parent, Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1Subscription $postBody, $optParams = array())

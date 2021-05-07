@@ -209,7 +209,7 @@ class Google_Service_Cloudchannel_Resource_AccountsCustomersEntitlements extends
     return $this->call('create', array($params), "Google_Service_Cloudchannel_GoogleLongrunningOperation");
   }
   /**
-   * Returns a requested Entitlement resource. Possible error codes: *
+   * Returns the requested Entitlement resource. Possible error codes: *
    * PERMISSION_DENIED: The customer doesn't belong to the reseller. *
    * INVALID_ARGUMENT: Required request parameters are missing or invalid. *
    * NOT_FOUND: The customer entitlement was not found. Return value: The
