@@ -37,6 +37,7 @@ class Google_Service_PubsubLite extends Google_Service
   public $admin_projects_locations_subscriptions;
   public $admin_projects_locations_topics;
   public $admin_projects_locations_topics_subscriptions;
+  public $cursor_projects_locations_subscriptions;
   public $cursor_projects_locations_subscriptions_cursors;
   public $topicStats_projects_locations_topics;
 
@@ -243,6 +244,26 @@ class Google_Service_PubsubLite extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->cursor_projects_locations_subscriptions = new Google_Service_PubsubLite_Resource_CursorProjectsLocationsSubscriptions(
+        $this,
+        $this->serviceName,
+        'subscriptions',
+        array(
+          'methods' => array(
+            'commitCursor' => array(
+              'path' => 'v1/cursor/{+subscription}:commitCursor',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'subscription' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),
