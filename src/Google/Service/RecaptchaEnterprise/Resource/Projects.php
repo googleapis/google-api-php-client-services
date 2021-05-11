@@ -15,16 +15,14 @@
  * the License.
  */
 
-class Google_Service_SecretManager_DisableSecretVersionRequest extends Google_Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $recaptchaenterpriseService = new Google_Service_RecaptchaEnterprise(...);
+ *   $projects = $recaptchaenterpriseService->projects;
+ *  </code>
+ */
+class Google_Service_RecaptchaEnterprise_Resource_Projects extends Google_Service_Resource
 {
-  public $etag;
-
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  public function getEtag()
-  {
-    return $this->etag;
-  }
 }

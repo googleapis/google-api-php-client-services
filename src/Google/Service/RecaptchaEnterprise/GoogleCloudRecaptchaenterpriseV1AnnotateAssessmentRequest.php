@@ -15,16 +15,26 @@
  * the License.
  */
 
-class Google_Service_SecretManager_DisableSecretVersionRequest extends Google_Model
+class Google_Service_RecaptchaEnterprise_GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends Google_Collection
 {
-  public $etag;
+  protected $collection_key = 'reasons';
+  public $annotation;
+  public $reasons;
 
-  public function setEtag($etag)
+  public function setAnnotation($annotation)
   {
-    $this->etag = $etag;
+    $this->annotation = $annotation;
   }
-  public function getEtag()
+  public function getAnnotation()
   {
-    return $this->etag;
+    return $this->annotation;
+  }
+  public function setReasons($reasons)
+  {
+    $this->reasons = $reasons;
+  }
+  public function getReasons()
+  {
+    return $this->reasons;
   }
 }

@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_SecretManager_DisableSecretVersionRequest extends Google_Model
+class Google_Service_RecaptchaEnterprise_GoogleCloudRecaptchaenterpriseV1ScoreDistribution extends Google_Model
 {
-  public $etag;
+  public $scoreBuckets;
 
-  public function setEtag($etag)
+  public function setScoreBuckets($scoreBuckets)
   {
-    $this->etag = $etag;
+    $this->scoreBuckets = $scoreBuckets;
   }
-  public function getEtag()
+  public function getScoreBuckets()
   {
-    return $this->etag;
+    return $this->scoreBuckets;
   }
 }

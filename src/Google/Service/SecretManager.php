@@ -135,6 +135,10 @@ class Google_Service_SecretManager extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'etag' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'get' => array(
               'path' => 'v1/{+name}',

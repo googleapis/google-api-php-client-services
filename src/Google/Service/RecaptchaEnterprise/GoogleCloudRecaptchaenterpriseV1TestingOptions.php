@@ -15,16 +15,25 @@
  * the License.
  */
 
-class Google_Service_SecretManager_DisableSecretVersionRequest extends Google_Model
+class Google_Service_RecaptchaEnterprise_GoogleCloudRecaptchaenterpriseV1TestingOptions extends Google_Model
 {
-  public $etag;
+  public $testingChallenge;
+  public $testingScore;
 
-  public function setEtag($etag)
+  public function setTestingChallenge($testingChallenge)
   {
-    $this->etag = $etag;
+    $this->testingChallenge = $testingChallenge;
   }
-  public function getEtag()
+  public function getTestingChallenge()
   {
-    return $this->etag;
+    return $this->testingChallenge;
+  }
+  public function setTestingScore($testingScore)
+  {
+    $this->testingScore = $testingScore;
+  }
+  public function getTestingScore()
+  {
+    return $this->testingScore;
   }
 }

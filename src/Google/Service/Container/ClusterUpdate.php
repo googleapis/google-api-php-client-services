@@ -28,6 +28,7 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   protected $desiredClusterAutoscalingDataType = '';
   protected $desiredDatabaseEncryptionType = 'Google_Service_Container_DatabaseEncryption';
   protected $desiredDatabaseEncryptionDataType = '';
+  public $desiredDatapathProvider;
   protected $desiredDefaultSnatStatusType = 'Google_Service_Container_DefaultSnatStatus';
   protected $desiredDefaultSnatStatusDataType = '';
   public $desiredImageType;
@@ -128,6 +129,14 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   public function getDesiredDatabaseEncryption()
   {
     return $this->desiredDatabaseEncryption;
+  }
+  public function setDesiredDatapathProvider($desiredDatapathProvider)
+  {
+    $this->desiredDatapathProvider = $desiredDatapathProvider;
+  }
+  public function getDesiredDatapathProvider()
+  {
+    return $this->desiredDatapathProvider;
   }
   /**
    * @param Google_Service_Container_DefaultSnatStatus

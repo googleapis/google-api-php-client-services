@@ -15,16 +15,17 @@
  * the License.
  */
 
-class Google_Service_SecretManager_DisableSecretVersionRequest extends Google_Model
+class Google_Service_RecaptchaEnterprise_GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends Google_Collection
 {
-  public $etag;
+  protected $collection_key = 'allowedBundleIds';
+  public $allowedBundleIds;
 
-  public function setEtag($etag)
+  public function setAllowedBundleIds($allowedBundleIds)
   {
-    $this->etag = $etag;
+    $this->allowedBundleIds = $allowedBundleIds;
   }
-  public function getEtag()
+  public function getAllowedBundleIds()
   {
-    return $this->etag;
+    return $this->allowedBundleIds;
   }
 }
