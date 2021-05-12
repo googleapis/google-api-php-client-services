@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_Document_GoogleCloudDocumentaiV1beta2DocumentProvenanceParent extends Google_Model
+class Google_Service_CloudBuild_Warning extends Google_Model
 {
-  public $id;
-  public $index;
-  public $revision;
+  public $priority;
+  public $text;
 
-  public function setId($id)
+  public function setPriority($priority)
   {
-    $this->id = $id;
+    $this->priority = $priority;
   }
-  public function getId()
+  public function getPriority()
   {
-    return $this->id;
+    return $this->priority;
   }
-  public function setIndex($index)
+  public function setText($text)
   {
-    $this->index = $index;
+    $this->text = $text;
   }
-  public function getIndex()
+  public function getText()
   {
-    return $this->index;
-  }
-  public function setRevision($revision)
-  {
-    $this->revision = $revision;
-  }
-  public function getRevision()
-  {
-    return $this->revision;
+    return $this->text;
   }
 }
