@@ -26,7 +26,10 @@
 class Google_Service_GKEHub_Resource_ProjectsLocationsMemberships extends Google_Service_Resource
 {
   /**
-   * Adds a new Membership. (memberships.create)
+   * Creates a new Membership. **This is currently only supported for GKE clusters
+   * on Google Cloud**. To register other clusters, follow the instructions at
+   * https://cloud.google.com/anthos/multicluster-
+   * management/connect/registering-a-cluster. (memberships.create)
    *
    * @param string $parent Required. The parent (project and location) where the
    * Memberships will be created. Specified in the format `projects/locations`.
@@ -59,7 +62,10 @@ class Google_Service_GKEHub_Resource_ProjectsLocationsMemberships extends Google
     return $this->call('create', array($params), "Google_Service_GKEHub_Operation");
   }
   /**
-   * Removes a Membership. (memberships.delete)
+   * Removes a Membership. **This is currently only supported for GKE clusters on
+   * Google Cloud**. To unregister other clusters, follow the instructions at
+   * https://cloud.google.com/anthos/multicluster-
+   * management/connect/unregistering-a-cluster. (memberships.delete)
    *
    * @param string $name Required. The Membership resource name in the format
    * `projects/locations/memberships`.
@@ -85,8 +91,9 @@ class Google_Service_GKEHub_Resource_ProjectsLocationsMemberships extends Google
     return $this->call('delete', array($params), "Google_Service_GKEHub_Operation");
   }
   /**
-   * Generates the manifest for deployment of the GKE connect agent.
-   * (memberships.generateConnectManifest)
+   * Generates the manifest for deployment of the GKE connect agent. **This method
+   * is used internally by Google-provided libraries.** Most clients should not
+   * need to call this method directly. (memberships.generateConnectManifest)
    *
    * @param string $name Required. The Membership resource name the Agent will
    * associate with, in the format `projects/locations/memberships`.

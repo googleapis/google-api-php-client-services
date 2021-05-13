@@ -30,14 +30,9 @@
  */
 class Google_Service_Genomics extends Google_Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
-  const CLOUD_PLATFORM =
-      "https://www.googleapis.com/auth/cloud-platform";
-  /** View and manage Genomics data. */
-  const GENOMICS =
-      "https://www.googleapis.com/auth/genomics";
 
-  public $operations;
+
+
 
   /**
    * Constructs the internal representation of the Genomics service.
@@ -54,57 +49,5 @@ class Google_Service_Genomics extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'genomics';
 
-    $this->operations = new Google_Service_Genomics_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
-            'cancel' => array(
-              'path' => 'v1/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'get' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'list' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
-    );
   }
 }
