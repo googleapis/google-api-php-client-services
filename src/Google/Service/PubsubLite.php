@@ -324,6 +324,16 @@ class Google_Service_PubsubLite extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'computeTimeCursor' => array(
+              'path' => 'v1/topicStats/{+topic}:computeTimeCursor',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'topic' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )
