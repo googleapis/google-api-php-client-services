@@ -31,6 +31,8 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaChangeHisto
   protected $firebaseLinkDataType = '';
   protected $googleAdsLinkType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleAdsLink';
   protected $googleAdsLinkDataType = '';
+  protected $googleSignalsSettingsType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings';
+  protected $googleSignalsSettingsDataType = '';
   protected $iosAppDataStreamType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaIosAppDataStream';
   protected $iosAppDataStreamDataType = '';
   protected $propertyType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaProperty';
@@ -135,6 +137,20 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaChangeHisto
   public function getGoogleAdsLink()
   {
     return $this->googleAdsLink;
+  }
+  /**
+   * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings
+   */
+  public function setGoogleSignalsSettings(Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings $googleSignalsSettings)
+  {
+    $this->googleSignalsSettings = $googleSignalsSettings;
+  }
+  /**
+   * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings
+   */
+  public function getGoogleSignalsSettings()
+  {
+    return $this->googleSignalsSettings;
   }
   /**
    * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaIosAppDataStream

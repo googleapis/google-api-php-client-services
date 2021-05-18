@@ -337,6 +337,16 @@ class Google_Service_GoogleAnalyticsAdmin extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'getGoogleSignalsSettings' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'list' => array(
               'path' => 'v1alpha/properties',
               'httpMethod' => 'GET',
@@ -359,6 +369,20 @@ class Google_Service_GoogleAnalyticsAdmin extends Google_Service
                 ),
               ),
             ),'patch' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'updateGoogleSignalsSettings' => array(
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(

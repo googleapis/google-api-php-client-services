@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_ShoppingContent_OrderreturnsLineItem extends Google_Model
+class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings extends Google_Model
 {
-  public $lineItemId;
-  public $productId;
-  public $quantity;
+  public $consent;
+  public $name;
+  public $state;
 
-  public function setLineItemId($lineItemId)
+  public function setConsent($consent)
   {
-    $this->lineItemId = $lineItemId;
+    $this->consent = $consent;
   }
-  public function getLineItemId()
+  public function getConsent()
   {
-    return $this->lineItemId;
+    return $this->consent;
   }
-  public function setProductId($productId)
+  public function setName($name)
   {
-    $this->productId = $productId;
+    $this->name = $name;
   }
-  public function getProductId()
+  public function getName()
   {
-    return $this->productId;
+    return $this->name;
   }
-  public function setQuantity($quantity)
+  public function setState($state)
   {
-    $this->quantity = $quantity;
+    $this->state = $state;
   }
-  public function getQuantity()
+  public function getState()
   {
-    return $this->quantity;
+    return $this->state;
   }
 }
