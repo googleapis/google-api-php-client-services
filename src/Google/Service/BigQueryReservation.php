@@ -150,6 +150,10 @@ class Google_Service_BigQueryReservation extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'capacityCommitmentId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'enforceSingleAdminProjectPerOrg' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -321,6 +325,10 @@ class Google_Service_BigQueryReservation extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'assignmentId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'delete' => array(

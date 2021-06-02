@@ -37,8 +37,9 @@ class Google_Service_Logging_Resource_Logs extends Google_Service_Resource
    * organizations/[ORGANIZATION_ID]/logs/[LOG_ID]
    * billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]
    * folders/[FOLDER_ID]/logs/[LOG_ID][LOG_ID] must be URL-encoded. For example,
-   * "projects/my-project-id/logs/syslog".For more information about log names,
-   * see LogEntry.
+   * "projects/my-project-id/logs/syslog",
+   * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity".For more
+   * information about log names, see LogEntry.
    * @param array $optParams Optional parameters.
    * @return Google_Service_Logging_LoggingEmpty
    */

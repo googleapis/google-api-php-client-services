@@ -18,7 +18,6 @@
 class Google_Service_MyBusinessAccountManagement_TransferLocationRequest extends Google_Model
 {
   public $destinationAccount;
-  public $name;
 
   public function setDestinationAccount($destinationAccount)
   {
@@ -27,13 +26,5 @@ class Google_Service_MyBusinessAccountManagement_TransferLocationRequest extends
   public function getDestinationAccount()
   {
     return $this->destinationAccount;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
   }
 }

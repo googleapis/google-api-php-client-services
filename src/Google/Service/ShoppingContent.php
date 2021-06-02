@@ -51,6 +51,7 @@ class Google_Service_ShoppingContent extends Google_Service
   public $orderinvoices;
   public $orderreports;
   public $orderreturns;
+  public $orderreturns_labels;
   public $orders;
   public $ordertrackingsignals;
   public $pos;
@@ -1386,6 +1387,31 @@ class Google_Service_ShoppingContent extends Google_Service
           )
         )
     );
+    $this->orderreturns_labels = new Google_Service_ShoppingContent_Resource_OrderreturnsLabels(
+        $this,
+        $this->serviceName,
+        'labels',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => '{merchantId}/orderreturns/{returnId}/labels',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'returnId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->orders = new Google_Service_ShoppingContent_Resource_Orders(
         $this,
         $this->serviceName,
@@ -1940,6 +1966,25 @@ class Google_Service_ShoppingContent extends Google_Service
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'update' => array(
+              'path' => '{merchantId}/products/{productId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'productId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

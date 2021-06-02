@@ -21,10 +21,18 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaChangeHisto
   protected $accountDataType = '';
   protected $androidAppDataStreamType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaAndroidAppDataStream';
   protected $androidAppDataStreamDataType = '';
+  protected $conversionEventType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaConversionEvent';
+  protected $conversionEventDataType = '';
+  protected $customDimensionType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomDimension';
+  protected $customDimensionDataType = '';
+  protected $customMetricType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomMetric';
+  protected $customMetricDataType = '';
   protected $firebaseLinkType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink';
   protected $firebaseLinkDataType = '';
   protected $googleAdsLinkType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleAdsLink';
   protected $googleAdsLinkDataType = '';
+  protected $googleSignalsSettingsType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings';
+  protected $googleSignalsSettingsDataType = '';
   protected $iosAppDataStreamType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaIosAppDataStream';
   protected $iosAppDataStreamDataType = '';
   protected $propertyType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaProperty';
@@ -61,6 +69,48 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaChangeHisto
     return $this->androidAppDataStream;
   }
   /**
+   * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaConversionEvent
+   */
+  public function setConversionEvent(Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaConversionEvent $conversionEvent)
+  {
+    $this->conversionEvent = $conversionEvent;
+  }
+  /**
+   * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaConversionEvent
+   */
+  public function getConversionEvent()
+  {
+    return $this->conversionEvent;
+  }
+  /**
+   * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomDimension
+   */
+  public function setCustomDimension(Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomDimension $customDimension)
+  {
+    $this->customDimension = $customDimension;
+  }
+  /**
+   * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomDimension
+   */
+  public function getCustomDimension()
+  {
+    return $this->customDimension;
+  }
+  /**
+   * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomMetric
+   */
+  public function setCustomMetric(Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomMetric $customMetric)
+  {
+    $this->customMetric = $customMetric;
+  }
+  /**
+   * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaCustomMetric
+   */
+  public function getCustomMetric()
+  {
+    return $this->customMetric;
+  }
+  /**
    * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink
    */
   public function setFirebaseLink(Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink $firebaseLink)
@@ -87,6 +137,20 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaChangeHisto
   public function getGoogleAdsLink()
   {
     return $this->googleAdsLink;
+  }
+  /**
+   * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings
+   */
+  public function setGoogleSignalsSettings(Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings $googleSignalsSettings)
+  {
+    $this->googleSignalsSettings = $googleSignalsSettings;
+  }
+  /**
+   * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaGoogleSignalsSettings
+   */
+  public function getGoogleSignalsSettings()
+  {
+    return $this->googleSignalsSettings;
   }
   /**
    * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaIosAppDataStream

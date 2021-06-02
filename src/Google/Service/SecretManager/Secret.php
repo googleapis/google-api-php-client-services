@@ -19,6 +19,7 @@ class Google_Service_SecretManager_Secret extends Google_Collection
 {
   protected $collection_key = 'topics';
   public $createTime;
+  public $etag;
   public $expireTime;
   public $labels;
   public $name;
@@ -37,6 +38,14 @@ class Google_Service_SecretManager_Secret extends Google_Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  public function getEtag()
+  {
+    return $this->etag;
   }
   public function setExpireTime($expireTime)
   {
