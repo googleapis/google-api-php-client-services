@@ -4,8 +4,8 @@
   {% endfor %}
   {% if method.requestType %}
     {% parameter %}
-      {{ api.ownerName }}_Service_{{ api.className }}_{{ method.requestType.className }} $postBody
+      {{ method.requestType.className }}{% if method.requestType.className|lower == resource.className|lower or method.requestType.className in api.resourceNames %}Model{% endif %} $postBody
     {% end_parameter %}
   {% endif %}
-  {% parameter %}$optParams = array(){% end_parameter %}
+  {% parameter %}$optParams = []{% end_parameter %}
 {% end_parameter_list %}

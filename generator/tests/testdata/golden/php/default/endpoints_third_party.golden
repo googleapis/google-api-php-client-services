@@ -16,6 +16,10 @@
  * the License.
  */
 
+namespace NASA\Service;
+
+use Google\Client;
+
 /**
  * Service definition for EccoDomaniIeri (v1).
  *
@@ -29,7 +33,7 @@
  *
  * @author Google, Inc.
  */
-class NASA_Service_EccoDomaniIeri extends Google_Service
+class EccoDomaniIeri extends \Google\Service
 {
   /** View your email address. */
   const USERINFO_EMAIL =
@@ -40,58 +44,62 @@ class NASA_Service_EccoDomaniIeri extends Google_Service
   /**
    * Constructs the internal representation of the EccoDomaniIeri service.
    *
-   * @param Google_Client $client The client used to deliver requests.
+   * @param Client|array $clientOrConfig The client used to deliver requests, or a
+   *                                     config array to pass to a new Client instance.
    * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client, $rootUrl = null)
+  public function __construct($clientOrConfig = [], $rootUrl = null)
   {
-    parent::__construct($client);
+    parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://peer-pontus.appspot.com/_ah/api/';
     $this->servicePath = 'helloworld/v1/';
     $this->batchPath = 'batch';
     $this->version = 'v1';
     $this->serviceName = 'helloworld';
 
-    $this->greetings = new NASA_Service_EccoDomaniIeri_Resource_Greetings(
+    $this->greetings = new EccoDomaniIeri\Resource\Greetings(
         $this,
         $this->serviceName,
         'greetings',
-        array(
-          'methods' => array(
-            'authed' => array(
+        [
+          'methods' => [
+            'authed' => [
               'path' => 'hellogreeting/authed',
               'httpMethod' => 'POST',
-              'parameters' => array(),
-            ),'getGreeting' => array(
+              'parameters' => [],
+            ],'getGreeting' => [
               'path' => 'hellogreeting/{id}',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'id' => array(
+              'parameters' => [
+                'id' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),'listGreeting' => array(
+                ],
+              ],
+            ],'listGreeting' => [
               'path' => 'hellogreeting',
               'httpMethod' => 'GET',
-              'parameters' => array(),
-            ),'multiply' => array(
+              'parameters' => [],
+            ],'multiply' => [
               'path' => 'hellogreeting/{times}',
               'httpMethod' => 'POST',
-              'parameters' => array(
-                'times' => array(
+              'parameters' => [
+                'times' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(EccoDomaniIeri::class, 'NASA_Service_EccoDomaniIeri');
 === end: EccoDomaniIeri.php
 === begin: EccoDomaniIeri/HelloGreeting.php
 <?php
@@ -111,7 +119,9 @@ class NASA_Service_EccoDomaniIeri extends Google_Service
  * the License.
  */
 
-class NASA_Service_EccoDomaniIeri_HelloGreeting extends Google_Model
+namespace NASA\Service\EccoDomaniIeri;
+
+class HelloGreeting extends \Google\Model
 {
   public $message;
 
@@ -124,6 +134,9 @@ class NASA_Service_EccoDomaniIeri_HelloGreeting extends Google_Model
     return $this->message;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(HelloGreeting::class, 'NASA_Service_EccoDomaniIeri_HelloGreeting');
 === end: EccoDomaniIeri/HelloGreeting.php
 === begin: EccoDomaniIeri/HelloGreetingCollection.php
 <?php
@@ -143,27 +156,32 @@ class NASA_Service_EccoDomaniIeri_HelloGreeting extends Google_Model
  * the License.
  */
 
-class NASA_Service_EccoDomaniIeri_HelloGreetingCollection extends Google_Collection
+namespace NASA\Service\EccoDomaniIeri;
+
+class HelloGreetingCollection extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Nasa_Service_EccoDomaniIeri_HelloGreeting';
+  protected $itemsType = HelloGreeting::class;
   protected $itemsDataType = 'array';
 
   /**
-   * @param Nasa_Service_EccoDomaniIeri_HelloGreeting[]
+   * @param HelloGreeting[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Nasa_Service_EccoDomaniIeri_HelloGreeting[]
+   * @return HelloGreeting[]
    */
   public function getItems()
   {
     return $this->items;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(HelloGreetingCollection::class, 'NASA_Service_EccoDomaniIeri_HelloGreetingCollection');
 === end: EccoDomaniIeri/HelloGreetingCollection.php
 === begin: EccoDomaniIeri/Resource/Greetings.php
 <?php
@@ -183,66 +201,74 @@ class NASA_Service_EccoDomaniIeri_HelloGreetingCollection extends Google_Collect
  * the License.
  */
 
+namespace NASA\Service\EccoDomaniIeri\Resource;
+
+use NASA\Service\EccoDomaniIeri\HelloGreeting;
+use NASA\Service\EccoDomaniIeri\HelloGreetingCollection;
+
 /**
  * The "greetings" collection of methods.
  * Typical usage is:
  *  <code>
- *   $helloworldService = new NASA_Service_EccoDomaniIeri(...);
+ *   $helloworldService = new NASA\Service\EccoDomaniIeri(...);
  *   $greetings = $helloworldService->greetings;
  *  </code>
  */
-class NASA_Service_EccoDomaniIeri_Resource_Greetings extends Google_Service_Resource
+class Greetings extends \Google\Service\Resource
 {
   /**
    * (greetings.authed)
    *
    * @param array $optParams Optional parameters.
-   * @return NASA_Service_EccoDomaniIeri_HelloGreeting
+   * @return HelloGreeting
    */
-  public function authed($optParams = array())
+  public function authed($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('authed', array($params), "NASA_Service_EccoDomaniIeri_HelloGreeting");
+    return $this->call('authed', [$params], HelloGreeting::class);
   }
   /**
    * (greetings.getGreeting)
    *
    * @param int $id
    * @param array $optParams Optional parameters.
-   * @return NASA_Service_EccoDomaniIeri_HelloGreeting
+   * @return HelloGreeting
    */
-  public function getGreeting($id, $optParams = array())
+  public function getGreeting($id, $optParams = [])
   {
-    $params = array('id' => $id);
+    $params = ['id' => $id];
     $params = array_merge($params, $optParams);
-    return $this->call('getGreeting', array($params), "NASA_Service_EccoDomaniIeri_HelloGreeting");
+    return $this->call('getGreeting', [$params], HelloGreeting::class);
   }
   /**
    * (greetings.listGreeting)
    *
    * @param array $optParams Optional parameters.
-   * @return NASA_Service_EccoDomaniIeri_HelloGreetingCollection
+   * @return HelloGreetingCollection
    */
-  public function listGreeting($optParams = array())
+  public function listGreeting($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('listGreeting', array($params), "NASA_Service_EccoDomaniIeri_HelloGreetingCollection");
+    return $this->call('listGreeting', [$params], HelloGreetingCollection::class);
   }
   /**
    * (greetings.multiply)
    *
    * @param int $times
-   * @param NASA_Service_EccoDomaniIeri_HelloGreeting $postBody
+   * @param HelloGreeting $postBody
    * @param array $optParams Optional parameters.
-   * @return NASA_Service_EccoDomaniIeri_HelloGreeting
+   * @return HelloGreeting
    */
-  public function multiply($times, NASA_Service_EccoDomaniIeri_HelloGreeting $postBody, $optParams = array())
+  public function multiply($times, HelloGreeting $postBody, $optParams = [])
   {
-    $params = array('times' => $times, 'postBody' => $postBody);
+    $params = ['times' => $times, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('multiply', array($params), "NASA_Service_EccoDomaniIeri_HelloGreeting");
+    return $this->call('multiply', [$params], HelloGreeting::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Greetings::class, 'NASA_Service_EccoDomaniIeri_Resource_Greetings');
 === end: EccoDomaniIeri/Resource/Greetings.php

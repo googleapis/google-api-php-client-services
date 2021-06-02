@@ -140,6 +140,10 @@ class Api(template_objects.CodeObject):
     self._BuildSchemaDefinitions()
     self._BuildResourceDefinitions()
     self.SetTemplateValue('resources', self._resources)
+    resource_names = []
+    for resource in self._resources:
+      resource_names.append(resource.GetTemplateValue('className'))
+    self.SetTemplateValue('resourceNames', resource_names)
 
     # Make data models part of the api dictionary
     self.SetTemplateValue('models', self.ModelClasses())
@@ -556,9 +560,20 @@ class Resource(template_objects.CodeObject):
     self.SetTemplateValue('className', class_name)
     # Replace methods dict with Methods
     self._methods = []
+    self._method_classes = []
     method_dict = self.values.get('methods') or {}
     for name in sorted(method_dict):
-      self._methods.append(Method(api, name, method_dict[name], parent=self))
+      method = Method(api, name, method_dict[name], parent=self)
+      requestType = method.values.get('requestType')
+      if requestType and requestType.GetTemplateValue('className') and \
+         requestType.GetTemplateValue('className') not in self._method_classes:
+        self._method_classes.append(requestType.GetTemplateValue('className'))
+      response = method.values.get('response')
+      responseType = method.values.get('responseType')
+      if response and responseType.GetTemplateValue('className') not in self._method_classes:
+        self._method_classes.append(responseType.GetTemplateValue('className'))
+      self._methods.append(method)
+    self._method_classes.sort()
     self.SetTemplateValue('methods', self._methods)
     # Get sub resources
     self._resources = []
@@ -576,6 +591,9 @@ class Resource(template_objects.CodeObject):
   def methods_dict(self):
     return {method['wireName']: method for method in self._methods}
 
+  @property
+  def methodClasses(self):
+    return self._method_classes
 
 class AuthScope(template_objects.CodeObject):
   """The definition of an auth scope.

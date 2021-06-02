@@ -70,7 +70,7 @@ def generate_service(disco: str):
     shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
     shell.run(command.split(), cwd=repository, hide_output=False)
 
-    s.copy(output_dir, f"src/Google/Service")
+    s.copy(output_dir, f"src")
 
 def all_discoveries(skip=None, prefer=None):
     """Returns a map of API IDs to Discovery document filenames.
@@ -101,11 +101,16 @@ def all_discoveries(skip=None, prefer=None):
         index = json.load(file)
     for api in index['items']:
         api_id = api['id']
-        if prefer and api_id in prefer:
-            continue
-        if api['preferred']:
-            continue
-        discos.pop(api_id, None)
+        if len(sys.argv) > 1:
+            if api_id in sys.argv:
+                continue
+            discos.pop(api_id, None)
+        else:
+            if prefer and api_id in prefer:
+                continue
+            if api['preferred']:
+                continue
+            discos.pop(api_id, None)
 
     return discos.values()
 

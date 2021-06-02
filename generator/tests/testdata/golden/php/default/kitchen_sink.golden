@@ -16,6 +16,10 @@
  * the License.
  */
 
+namespace Google\Service;
+
+use Google\Client;
+
 /**
  * Service definition for KitchSink (v1).
  *
@@ -29,7 +33,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_KitchSink extends Google_Service
+class KitchSink extends \Google\Service
 {
   /** A non googleapis.com scope. */
   const MAIL_GOOGLE_COM =
@@ -59,625 +63,629 @@ class Google_Service_KitchSink extends Google_Service
   /**
    * Constructs the internal representation of the KitchSink service.
    *
-   * @param Google_Client $client The client used to deliver requests.
+   * @param Client|array $clientOrConfig The client used to deliver requests, or a
+   *                                     config array to pass to a new Client instance.
    * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client, $rootUrl = null)
+  public function __construct($clientOrConfig = [], $rootUrl = null)
   {
-    parent::__construct($client);
+    parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
     $this->servicePath = 'sink/v1/';
     $this->version = 'v1';
     $this->serviceName = 'kitch_sink';
 
-    $this->featured_series = new Google_Service_KitchSink_Resource_FeaturedSeries(
+    $this->featured_series = new KitchSink\Resource\FeaturedSeries(
         $this,
         $this->serviceName,
         'series',
-        array(
-          'methods' => array(
-            'list' => array(
+        [
+          'methods' => [
+            'list' => [
               'path' => 'series/featured',
               'httpMethod' => 'GET',
-              'parameters' => array(),
-            ),
-          )
-        )
+              'parameters' => [],
+            ],
+          ]
+        ]
     );
-    $this->global_series = new Google_Service_KitchSink_Resource_KitchSinkGlobalSeries(
+    $this->global_series = new KitchSink\Resource\KitchSinkGlobalSeries(
         $this,
         $this->serviceName,
         'series',
-        array(
-          'methods' => array(
-            'list' => array(
+        [
+          'methods' => [
+            'list' => [
               'path' => 'search',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'enum' => array(
+              'parameters' => [
+                'enum' => [
                   'location' => 'query',
                   'type' => 'object',
-                ),
-                'max-results' => array(
+                ],
+                'max-results' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'q' => array(
+                ],
+                'q' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->my_series = new Google_Service_KitchSink_Resource_MySeries(
+    $this->my_series = new KitchSink\Resource\MySeries(
         $this,
         $this->serviceName,
         'series',
-        array(
-          'methods' => array(
-            'list' => array(
+        [
+          'methods' => [
+            'list' => [
               'path' => 'series/@me/mine',
               'httpMethod' => 'GET',
-              'parameters' => array(),
-            ),
-          )
-        )
+              'parameters' => [],
+            ],
+          ]
+        ]
     );
-    $this->myrecent_private = new Google_Service_KitchSink_Resource_MyrecentKitchSinkPrivate(
+    $this->myrecent_private = new KitchSink\Resource\MyrecentKitchSinkPrivate(
         $this,
         $this->serviceName,
         'private',
-        array(
-          'methods' => array(
-            'list' => array(
+        [
+          'methods' => [
+            'list' => [
               'path' => 'series/@me/recent',
               'httpMethod' => 'GET',
-              'parameters' => array(),
-            ),
-          )
-        )
+              'parameters' => [],
+            ],
+          ]
+        ]
     );
-    $this->profiles = new Google_Service_KitchSink_Resource_Profiles(
+    $this->profiles = new KitchSink\Resource\Profiles(
         $this,
         $this->serviceName,
         'profiles',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'profiles/@me',
               'httpMethod' => 'GET',
-              'parameters' => array(),
-            ),'update' => array(
+              'parameters' => [],
+            ],'update' => [
               'path' => 'profiles/@me',
               'httpMethod' => 'PUT',
-              'parameters' => array(),
-            ),
-          )
-        )
+              'parameters' => [],
+            ],
+          ]
+        ]
     );
-    $this->responses = new Google_Service_KitchSink_Resource_Responses(
+    $this->responses = new KitchSink\Resource\Responses(
         $this,
         $this->serviceName,
         'responses',
-        array(
-          'methods' => array(
-            'insert' => array(
+        [
+          'methods' => [
+            'insert' => [
               'path' => 'series/{seriesId}/topics/{topicId}/submissions/{parentSubmissionId}/responses',
               'httpMethod' => 'POST',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'topicId' => array(
+                ],
+                'topicId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'parentSubmissionId' => array(
+                ],
+                'parentSubmissionId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'anonymous' => array(
+                ],
+                'anonymous' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-              ),
-            ),'list' => array(
+                ],
+              ],
+            ],'list' => [
               'path' => 'series/{seriesId}/submissions/{submissionId}/responses',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'submissionId' => array(
+                ],
+                'submissionId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'author' => array(
+                ],
+                'author' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'hasAttachedVideo' => array(
+                ],
+                'hasAttachedVideo' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'q' => array(
+                ],
+                'q' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'sort' => array(
+                ],
+                'sort' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->series = new Google_Service_KitchSink_Resource_Series(
+    $this->series = new KitchSink\Resource\Series(
         $this,
         $this->serviceName,
         'series',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'series/{seriesId}',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),'insert' => array(
+                ],
+              ],
+            ],'insert' => [
               'path' => 'series',
               'httpMethod' => 'POST',
-              'parameters' => array(),
-            ),'list' => array(
+              'parameters' => [],
+            ],'list' => [
               'path' => 'series',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'max-results' => array(
+              'parameters' => [
+                'max-results' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'q' => array(
+                ],
+                'q' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),'update' => array(
+                ],
+              ],
+            ],'update' => [
               'path' => 'series/{seriesId}',
               'httpMethod' => 'PUT',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->series_responses = new Google_Service_KitchSink_Resource_SeriesResponses(
+    $this->series_responses = new KitchSink\Resource\SeriesResponses(
         $this,
         $this->serviceName,
         'responses',
-        array(
-          'methods' => array(
-            'list' => array(
+        [
+          'methods' => [
+            'list' => [
               'path' => 'series/{seriesId}/responses',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'author' => array(
+                ],
+                'author' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'hasAttachedVideo' => array(
+                ],
+                'hasAttachedVideo' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'max-results' => array(
+                ],
+                'max-results' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'q' => array(
+                ],
+                'q' => [
                   'location' => 'query',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'sort' => array(
+                ],
+                'sort' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->series_submissions = new Google_Service_KitchSink_Resource_SeriesSubmissions(
+    $this->series_submissions = new KitchSink\Resource\SeriesSubmissions(
         $this,
         $this->serviceName,
         'submissions',
-        array(
-          'methods' => array(
-            'list' => array(
+        [
+          'methods' => [
+            'list' => [
               'path' => 'series/{seriesId}/submissions',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'author' => array(
+                ],
+                'author' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'hasAttachedVideo' => array(
+                ],
+                'hasAttachedVideo' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'lang' => array(
+                ],
+                'lang' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'q' => array(
+                ],
+                'q' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'sort' => array(
+                ],
+                'sort' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->submissions = new Google_Service_KitchSink_Resource_Submissions(
+    $this->submissions = new KitchSink\Resource\Submissions(
         $this,
         $this->serviceName,
         'submissions',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'series/{seriesId}/submissions/{submissionId}',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'submissionId' => array(
+                ],
+                'submissionId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'lang' => array(
+                ],
+                'lang' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'insert' => array(
+                ],
+              ],
+            ],'insert' => [
               'path' => 'series/{seriesId}/topics/{topicId}/submissions',
               'httpMethod' => 'POST',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'topicId' => array(
+                ],
+                'topicId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'anonymous' => array(
+                ],
+                'anonymous' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->tags = new Google_Service_KitchSink_Resource_Tags(
+    $this->tags = new KitchSink\Resource\Tags(
         $this,
         $this->serviceName,
         'tags',
-        array(
-          'methods' => array(
-            'delete' => array(
+        [
+          'methods' => [
+            'delete' => [
               'path' => 'series/{seriesId}/submissions/{submissionId}/tags/{tagId}',
               'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'submissionId' => array(
+                ],
+                'submissionId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'tagId' => array(
+                ],
+                'tagId' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),'insert' => array(
+                ],
+              ],
+            ],'insert' => [
               'path' => 'series/{seriesId}/submissions/{submissionId}/tags',
               'httpMethod' => 'POST',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'submissionId' => array(
+                ],
+                'submissionId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),'list' => array(
+                ],
+              ],
+            ],'list' => [
               'path' => 'series/{id}/submissions/{else}/tags',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'else' => array(
+              'parameters' => [
+                'else' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'id' => array(
+                ],
+                'id' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->topics = new Google_Service_KitchSink_Resource_Topics(
+    $this->topics = new KitchSink\Resource\Topics(
         $this,
         $this->serviceName,
         'topics',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'series/{seriesId}/topics/{topicId}',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'topicId' => array(
+                ],
+                'topicId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),'insert' => array(
+                ],
+              ],
+            ],'insert' => [
               'path' => 'series/{seriesId}/topics',
               'httpMethod' => 'POST',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),'list' => array(
+                ],
+              ],
+            ],'list' => [
               'path' => 'series/{seriesId}/topics',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'max-results' => array(
+                ],
+                'max-results' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'mode' => array(
+                ],
+                'mode' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'q' => array(
+                ],
+                'q' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),'update' => array(
+                ],
+              ],
+            ],'update' => [
               'path' => 'series/{seriesId}/topics/{topicId}',
               'httpMethod' => 'PUT',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'topicId' => array(
+                ],
+                'topicId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->topics_submissions = new Google_Service_KitchSink_Resource_TopicsSubmissions(
+    $this->topics_submissions = new KitchSink\Resource\TopicsSubmissions(
         $this,
         $this->serviceName,
         'submissions',
-        array(
-          'methods' => array(
-            'list' => array(
+        [
+          'methods' => [
+            'list' => [
               'path' => 'series/{seriesId}/topics/{topicId}/submissions',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'topicId' => array(
+                ],
+                'topicId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'author' => array(
+                ],
+                'author' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'hasAttachedVideo' => array(
+                ],
+                'hasAttachedVideo' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'q' => array(
+                ],
+                'q' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'sort' => array(
+                ],
+                'sort' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->votes = new Google_Service_KitchSink_Resource_Votes(
+    $this->votes = new KitchSink\Resource\Votes(
         $this,
         $this->serviceName,
         'votes',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'series/{seriesId}/submissions/{submissionId}/votes/@me',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'submissionId' => array(
+                ],
+                'submissionId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'userId' => array(
+                ],
+                'userId' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'insert' => array(
+                ],
+              ],
+            ],'insert' => [
               'path' => 'series/{seriesId}/submissions/{submissionId}/votes/@me',
               'httpMethod' => 'POST',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'submissionId' => array(
+                ],
+                'submissionId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-              ),
-            ),'list' => array(
+                ],
+              ],
+            ],'list' => [
               'path' => 'series/{seriesId}/votes/@me',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'start-index' => array(
+                ],
+                'start-index' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-              ),
-            ),'update' => array(
+                ],
+              ],
+            ],'update' => [
               'path' => 'series/{seriesId}/submissions/{submission_id}/votes/@me',
               'httpMethod' => 'PUT',
-              'parameters' => array(
-                'seriesId' => array(
+              'parameters' => [
+                'seriesId' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'submission_id' => array(
+                ],
+                'submission_id' => [
                   'location' => 'path',
                   'type' => 'integer',
                   'required' => true,
-                ),
-                'userId' => array(
+                ],
+                'userId' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(KitchSink::class, 'Google_Service_KitchSink');
 === end: KitchSink.php
 === begin: KitchSink/Enum.php
 <?php
@@ -697,7 +705,9 @@ class Google_Service_KitchSink extends Google_Service
  * the License.
  */
 
-class Google_Service_KitchSink_Enum extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Enum extends \Google\Model
 {
   public $name;
 
@@ -710,6 +720,9 @@ class Google_Service_KitchSink_Enum extends Google_Model
     return $this->name;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Enum::class, 'Google_Service_KitchSink_Enum');
 === end: KitchSink/Enum.php
 === begin: KitchSink/Geometry.php
 <?php
@@ -729,7 +742,9 @@ class Google_Service_KitchSink_Enum extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Geometry extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Geometry extends \Google\Model
 {
   public $type;
 
@@ -742,6 +757,9 @@ class Google_Service_KitchSink_Geometry extends Google_Model
     return $this->type;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Geometry::class, 'Google_Service_KitchSink_Geometry');
 === end: KitchSink/Geometry.php
 === begin: KitchSink/GeometryCollection.php
 <?php
@@ -761,30 +779,37 @@ class Google_Service_KitchSink_Geometry extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_GeometryCollection extends Google_Service_KitchSink_Geometry
+namespace Google\Service\KitchSink;
+
+use Google\Service\KitchSink\Geometry
+
+class GeometryCollection extends Geometry
 {
   protected $collection_key = 'geometries';
-  protected $geometriesType = 'Google_Service_KitchSink_Geometry';
+  protected $geometriesType = Geometry::class;
   protected $geometriesDataType = 'array';
   protected function gapiInit()
   {
     $this->type = 'Collection';
   }
   /**
-   * @param Google_Service_KitchSink_Geometry[]
+   * @param Geometry[]
    */
   public function setGeometries($geometries)
   {
     $this->geometries = $geometries;
   }
   /**
-   * @return Google_Service_KitchSink_Geometry[]
+   * @return Geometry[]
    */
   public function getGeometries()
   {
     return $this->geometries;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GeometryCollection::class, 'Google_Service_KitchSink_GeometryCollection');
 === end: KitchSink/GeometryCollection.php
 === begin: KitchSink/GeometryPolygon.php
 <?php
@@ -804,7 +829,11 @@ class Google_Service_KitchSink_GeometryCollection extends Google_Service_KitchSi
  * the License.
  */
 
-class Google_Service_KitchSink_GeometryPolygon extends Google_Service_KitchSink_Geometry
+namespace Google\Service\KitchSink;
+
+use Google\Service\KitchSink\Geometry
+
+class GeometryPolygon extends Geometry
 {
   public $coordinates;
   protected function gapiInit()
@@ -820,6 +849,9 @@ class Google_Service_KitchSink_GeometryPolygon extends Google_Service_KitchSink_
     return $this->coordinates;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GeometryPolygon::class, 'Google_Service_KitchSink_GeometryPolygon');
 === end: KitchSink/GeometryPolygon.php
 === begin: KitchSink/GeometryReference.php
 <?php
@@ -839,7 +871,11 @@ class Google_Service_KitchSink_GeometryPolygon extends Google_Service_KitchSink_
  * the License.
  */
 
-class Google_Service_KitchSink_GeometryReference extends Google_Service_KitchSink_Geometry
+namespace Google\Service\KitchSink;
+
+use Google\Service\KitchSink\Geometry
+
+class GeometryReference extends Geometry
 {
   public $coordinates;
   protected function gapiInit()
@@ -855,6 +891,9 @@ class Google_Service_KitchSink_GeometryReference extends Google_Service_KitchSin
     return $this->coordinates;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GeometryReference::class, 'Google_Service_KitchSink_GeometryReference');
 === end: KitchSink/GeometryReference.php
 === begin: KitchSink/LatLong.php
 <?php
@@ -874,7 +913,9 @@ class Google_Service_KitchSink_GeometryReference extends Google_Service_KitchSin
  * the License.
  */
 
-class Google_Service_KitchSink_LatLong extends Google_Model
+namespace Google\Service\KitchSink;
+
+class LatLong extends \Google\Model
 {
   public $latitude;
   public $location;
@@ -905,6 +946,9 @@ class Google_Service_KitchSink_LatLong extends Google_Model
     return $this->longitude;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(LatLong::class, 'Google_Service_KitchSink_LatLong');
 === end: KitchSink/LatLong.php
 === begin: KitchSink/ModeratorTopicsResourcePartial.php
 <?php
@@ -924,9 +968,14 @@ class Google_Service_KitchSink_LatLong extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_ModeratorTopicsResourcePartial extends Google_Model
+namespace Google\Service\KitchSink;
+
+class ModeratorTopicsResourcePartial extends \Google\Model
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ModeratorTopicsResourcePartial::class, 'Google_Service_KitchSink_ModeratorTopicsResourcePartial');
 === end: KitchSink/ModeratorTopicsResourcePartial.php
 === begin: KitchSink/Profile.php
 <?php
@@ -946,37 +995,39 @@ class Google_Service_KitchSink_ModeratorTopicsResourcePartial extends Google_Mod
  * the License.
  */
 
-class Google_Service_KitchSink_Profile extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Profile extends \Google\Model
 {
-  protected $attributionType = 'Google_Service_KitchSink_ProfileAttribution';
+  protected $attributionType = ProfileAttribution::class;
   protected $attributionDataType = '';
-  protected $idType = 'Google_Service_KitchSink_ProfileId';
+  protected $idType = ProfileId::class;
   protected $idDataType = '';
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_ProfileAttribution
+   * @param ProfileAttribution
    */
-  public function setAttribution(Google_Service_KitchSink_ProfileAttribution $attribution)
+  public function setAttribution(ProfileAttribution $attribution)
   {
     $this->attribution = $attribution;
   }
   /**
-   * @return Google_Service_KitchSink_ProfileAttribution
+   * @return ProfileAttribution
    */
   public function getAttribution()
   {
     return $this->attribution;
   }
   /**
-   * @param Google_Service_KitchSink_ProfileId
+   * @param ProfileId
    */
-  public function setId(Google_Service_KitchSink_ProfileId $id)
+  public function setId(ProfileId $id)
   {
     $this->id = $id;
   }
   /**
-   * @return Google_Service_KitchSink_ProfileId
+   * @return ProfileId
    */
   public function getId()
   {
@@ -991,6 +1042,9 @@ class Google_Service_KitchSink_Profile extends Google_Model
     return $this->kind;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Profile::class, 'Google_Service_KitchSink_Profile');
 === end: KitchSink/Profile.php
 === begin: KitchSink/ProfileAttribution.php
 <?php
@@ -1010,11 +1064,13 @@ class Google_Service_KitchSink_Profile extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_ProfileAttribution extends Google_Model
+namespace Google\Service\KitchSink;
+
+class ProfileAttribution extends \Google\Model
 {
   public $avatarUrl;
   public $displayName;
-  protected $geoType = 'Google_Service_KitchSink_LatLong';
+  protected $geoType = LatLong::class;
   protected $geoDataType = '';
   public $location;
 
@@ -1035,14 +1091,14 @@ class Google_Service_KitchSink_ProfileAttribution extends Google_Model
     return $this->displayName;
   }
   /**
-   * @param Google_Service_KitchSink_LatLong
+   * @param LatLong
    */
-  public function setGeo(Google_Service_KitchSink_LatLong $geo)
+  public function setGeo(LatLong $geo)
   {
     $this->geo = $geo;
   }
   /**
-   * @return Google_Service_KitchSink_LatLong
+   * @return LatLong
    */
   public function getGeo()
   {
@@ -1057,6 +1113,9 @@ class Google_Service_KitchSink_ProfileAttribution extends Google_Model
     return $this->location;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ProfileAttribution::class, 'Google_Service_KitchSink_ProfileAttribution');
 === end: KitchSink/ProfileAttribution.php
 === begin: KitchSink/ProfileId.php
 <?php
@@ -1076,7 +1135,9 @@ class Google_Service_KitchSink_ProfileAttribution extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_ProfileId extends Google_Model
+namespace Google\Service\KitchSink;
+
+class ProfileId extends \Google\Model
 {
   public $user;
 
@@ -1089,6 +1150,9 @@ class Google_Service_KitchSink_ProfileId extends Google_Model
     return $this->user;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ProfileId::class, 'Google_Service_KitchSink_ProfileId');
 === end: KitchSink/ProfileId.php
 === begin: KitchSink/Resource/Featured.php
 <?php
@@ -1108,17 +1172,22 @@ class Google_Service_KitchSink_ProfileId extends Google_Model
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
 /**
  * The "featured" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $featured = $kitch_sinkService->featured;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Featured extends Google_Service_Resource
+class Featured extends \Google\Service\Resource
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Featured::class, 'Google_Service_KitchSink_Resource_Featured');
 === end: KitchSink/Resource/Featured.php
 === begin: KitchSink/Resource/FeaturedSeries.php
 <?php
@@ -1138,29 +1207,36 @@ class Google_Service_KitchSink_Resource_Featured extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\SeriesList;
+
 /**
  * The "series" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $series = $kitch_sinkService->series;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_FeaturedSeries extends Google_Service_Resource
+class FeaturedSeries extends \Google\Service\Resource
 {
   /**
    * Lists the featured series. (series.listFeaturedSeries)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_SeriesList
+   * @return SeriesList
    */
-  public function listFeaturedSeries($optParams = array())
+  public function listFeaturedSeries($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SeriesList");
+    return $this->call('list', [$params], SeriesList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(FeaturedSeries::class, 'Google_Service_KitchSink_Resource_FeaturedSeries');
 === end: KitchSink/Resource/FeaturedSeries.php
 === begin: KitchSink/Resource/KitchSinkGlobal.php
 <?php
@@ -1180,17 +1256,22 @@ class Google_Service_KitchSink_Resource_FeaturedSeries extends Google_Service_Re
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
 /**
  * The "global" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $global = $kitch_sinkService->global;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_KitchSinkGlobal extends Google_Service_Resource
+class KitchSinkGlobal extends \Google\Service\Resource
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(KitchSinkGlobal::class, 'Google_Service_KitchSink_Resource_KitchSinkGlobal');
 === end: KitchSink/Resource/KitchSinkGlobal.php
 === begin: KitchSink/Resource/KitchSinkGlobalSeries.php
 <?php
@@ -1210,15 +1291,19 @@ class Google_Service_KitchSink_Resource_KitchSinkGlobal extends Google_Service_R
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\SeriesList;
+
 /**
  * The "series" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $series = $kitch_sinkService->series;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_KitchSinkGlobalSeries extends Google_Service_Resource
+class KitchSinkGlobalSeries extends \Google\Service\Resource
 {
   /**
    * Searches the public series and returns the search results.
@@ -1230,15 +1315,18 @@ class Google_Service_KitchSink_Resource_KitchSinkGlobalSeries extends Google_Ser
    * @opt_param int max-results Maximum number of results to return.
    * @opt_param string q Search query.
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_SeriesList
+   * @return SeriesList
    */
-  public function listKitchSinkGlobalSeries($optParams = array())
+  public function listKitchSinkGlobalSeries($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SeriesList");
+    return $this->call('list', [$params], SeriesList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(KitchSinkGlobalSeries::class, 'Google_Service_KitchSink_Resource_KitchSinkGlobalSeries');
 === end: KitchSink/Resource/KitchSinkGlobalSeries.php
 === begin: KitchSink/Resource/My.php
 <?php
@@ -1258,17 +1346,22 @@ class Google_Service_KitchSink_Resource_KitchSinkGlobalSeries extends Google_Ser
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
 /**
  * The "my" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $my = $kitch_sinkService->my;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_My extends Google_Service_Resource
+class My extends \Google\Service\Resource
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(My::class, 'Google_Service_KitchSink_Resource_My');
 === end: KitchSink/Resource/My.php
 === begin: KitchSink/Resource/MySeries.php
 <?php
@@ -1288,29 +1381,36 @@ class Google_Service_KitchSink_Resource_My extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\SeriesList;
+
 /**
  * The "series" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $series = $kitch_sinkService->series;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_MySeries extends Google_Service_Resource
+class MySeries extends \Google\Service\Resource
 {
   /**
    * Lists all series created by the authenticated user. (series.listMySeries)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_SeriesList
+   * @return SeriesList
    */
-  public function listMySeries($optParams = array())
+  public function listMySeries($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SeriesList");
+    return $this->call('list', [$params], SeriesList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(MySeries::class, 'Google_Service_KitchSink_Resource_MySeries');
 === end: KitchSink/Resource/MySeries.php
 === begin: KitchSink/Resource/Myrecent.php
 <?php
@@ -1330,17 +1430,22 @@ class Google_Service_KitchSink_Resource_MySeries extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
 /**
  * The "myrecent" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $myrecent = $kitch_sinkService->myrecent;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Myrecent extends Google_Service_Resource
+class Myrecent extends \Google\Service\Resource
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Myrecent::class, 'Google_Service_KitchSink_Resource_Myrecent');
 === end: KitchSink/Resource/Myrecent.php
 === begin: KitchSink/Resource/MyrecentKitchSinkPrivate.php
 <?php
@@ -1360,30 +1465,37 @@ class Google_Service_KitchSink_Resource_Myrecent extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\SeriesList;
+
 /**
  * The "private" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $private = $kitch_sinkService->private;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_MyrecentKitchSinkPrivate extends Google_Service_Resource
+class MyrecentKitchSinkPrivate extends \Google\Service\Resource
 {
   /**
    * Resource using a name which is a keyword in many languages, to check their
    * handling. (private.listMyrecentKitchSinkPrivate)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_SeriesList
+   * @return SeriesList
    */
-  public function listMyrecentKitchSinkPrivate($optParams = array())
+  public function listMyrecentKitchSinkPrivate($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SeriesList");
+    return $this->call('list', [$params], SeriesList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(MyrecentKitchSinkPrivate::class, 'Google_Service_KitchSink_Resource_MyrecentKitchSinkPrivate');
 === end: KitchSink/Resource/MyrecentKitchSinkPrivate.php
 === begin: KitchSink/Resource/Profiles.php
 <?php
@@ -1403,42 +1515,49 @@ class Google_Service_KitchSink_Resource_MyrecentKitchSinkPrivate extends Google_
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\Profile;
+
 /**
  * The "profiles" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $profiles = $kitch_sinkService->profiles;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Profiles extends Google_Service_Resource
+class Profiles extends \Google\Service\Resource
 {
   /**
    * Returns the profile information for the authenticated user. (profiles.get)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Profile
+   * @return Profile
    */
-  public function get($optParams = array())
+  public function get($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_KitchSink_Profile");
+    return $this->call('get', [$params], Profile::class);
   }
   /**
    * Updates the profile information for the authenticated user. (profiles.update)
    *
-   * @param Google_Service_KitchSink_Profile $postBody
+   * @param Profile $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Profile
+   * @return Profile
    */
-  public function update(Google_Service_KitchSink_Profile $postBody, $optParams = array())
+  public function update(Profile $postBody, $optParams = [])
   {
-    $params = array('postBody' => $postBody);
+    $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_KitchSink_Profile");
+    return $this->call('update', [$params], Profile::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Profiles::class, 'Google_Service_KitchSink_Resource_Profiles');
 === end: KitchSink/Resource/Profiles.php
 === begin: KitchSink/Resource/Responses.php
 <?php
@@ -1458,15 +1577,20 @@ class Google_Service_KitchSink_Resource_Profiles extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\Submission;
+use Google\Service\KitchSink\SubmissionList;
+
 /**
  * The "responses" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $responses = $kitch_sinkService->responses;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Responses extends Google_Service_Resource
+class Responses extends \Google\Service\Resource
 {
   /**
    * Inserts a response for the specified submission in the specified topic within
@@ -1476,18 +1600,18 @@ class Google_Service_KitchSink_Resource_Responses extends Google_Service_Resourc
    * @param int $topicId The decimal ID of the Topic within the Series.
    * @param int $parentSubmissionId The decimal ID of the parent Submission within
    * the Series.
-   * @param Google_Service_KitchSink_Submission $postBody
+   * @param Submission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool anonymous Set to true to mark the new submission as
    * anonymous.
-   * @return Google_Service_KitchSink_Submission
+   * @return Submission
    */
-  public function insert($seriesId, $topicId, $parentSubmissionId, Google_Service_KitchSink_Submission $postBody, $optParams = array())
+  public function insert($seriesId, $topicId, $parentSubmissionId, Submission $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'topicId' => $topicId, 'parentSubmissionId' => $parentSubmissionId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'topicId' => $topicId, 'parentSubmissionId' => $parentSubmissionId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_KitchSink_Submission");
+    return $this->call('insert', [$params], Submission::class);
   }
   /**
    * Lists or searches the responses for the specified submission within the
@@ -1504,15 +1628,18 @@ class Google_Service_KitchSink_Resource_Responses extends Google_Service_Resourc
    * @opt_param string q Search query.
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_SubmissionList
+   * @return SubmissionList
    */
-  public function listResponses($seriesId, $submissionId, $optParams = array())
+  public function listResponses($seriesId, $submissionId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'submissionId' => $submissionId);
+    $params = ['seriesId' => $seriesId, 'submissionId' => $submissionId];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SubmissionList");
+    return $this->call('list', [$params], SubmissionList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Responses::class, 'Google_Service_KitchSink_Resource_Responses');
 === end: KitchSink/Resource/Responses.php
 === begin: KitchSink/Resource/Series.php
 <?php
@@ -1532,40 +1659,45 @@ class Google_Service_KitchSink_Resource_Responses extends Google_Service_Resourc
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\Series as SeriesModel;
+use Google\Service\KitchSink\SeriesList;
+
 /**
  * The "series" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $series = $kitch_sinkService->series;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Series extends Google_Service_Resource
+class Series extends \Google\Service\Resource
 {
   /**
    * Returns the specified series. (series.get)
    *
    * @param int $seriesId The decimal ID of the Series.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Series
+   * @return SeriesModel
    */
-  public function get($seriesId, $optParams = array())
+  public function get($seriesId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId);
+    $params = ['seriesId' => $seriesId];
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_KitchSink_Series");
+    return $this->call('get', [$params], SeriesModel::class);
   }
   /**
    * Media method without request data. (series.insert)
    *
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Series
+   * @return SeriesModel
    */
-  public function insert($optParams = array())
+  public function insert($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_KitchSink_Series");
+    return $this->call('insert', [$params], SeriesModel::class);
   }
   /**
    * Searches the series and returns the search results. (series.listSeries)
@@ -1575,29 +1707,32 @@ class Google_Service_KitchSink_Resource_Series extends Google_Service_Resource
    * @opt_param int max-results Maximum number of results to return.
    * @opt_param string q Search query.
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_SeriesList
+   * @return SeriesList
    */
-  public function listSeries($optParams = array())
+  public function listSeries($optParams = [])
   {
-    $params = array();
+    $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SeriesList");
+    return $this->call('list', [$params], SeriesList::class);
   }
   /**
    * Updates the specified series. (series.update)
    *
    * @param int $seriesId The decimal ID of the Series.
-   * @param Google_Service_KitchSink_Series $postBody
+   * @param SeriesModel $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Series
+   * @return SeriesModel
    */
-  public function update($seriesId, Google_Service_KitchSink_Series $postBody, $optParams = array())
+  public function update($seriesId, SeriesModel $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_KitchSink_Series");
+    return $this->call('update', [$params], SeriesModel::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Series::class, 'Google_Service_KitchSink_Resource_Series');
 === end: KitchSink/Resource/Series.php
 === begin: KitchSink/Resource/SeriesResponses.php
 <?php
@@ -1617,15 +1752,19 @@ class Google_Service_KitchSink_Resource_Series extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\SeriesList;
+
 /**
  * The "responses" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $responses = $kitch_sinkService->responses;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_SeriesResponses extends Google_Service_Resource
+class SeriesResponses extends \Google\Service\Resource
 {
   /**
    * Searches the responses for the specified series and returns the search
@@ -1642,15 +1781,18 @@ class Google_Service_KitchSink_Resource_SeriesResponses extends Google_Service_R
    * @opt_param int max-results Maximum number of results to return.
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_SeriesList
+   * @return SeriesList
    */
-  public function listSeriesResponses($seriesId, $q, $optParams = array())
+  public function listSeriesResponses($seriesId, $q, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'q' => $q);
+    $params = ['seriesId' => $seriesId, 'q' => $q];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SeriesList");
+    return $this->call('list', [$params], SeriesList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SeriesResponses::class, 'Google_Service_KitchSink_Resource_SeriesResponses');
 === end: KitchSink/Resource/SeriesResponses.php
 === begin: KitchSink/Resource/SeriesSubmissions.php
 <?php
@@ -1670,15 +1812,19 @@ class Google_Service_KitchSink_Resource_SeriesResponses extends Google_Service_R
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\SubmissionList;
+
 /**
  * The "submissions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $submissions = $kitch_sinkService->submissions;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_SeriesSubmissions extends Google_Service_Resource
+class SeriesSubmissions extends \Google\Service\Resource
 {
   /**
    * Searches the submissions for the specified series and returns the search
@@ -1696,15 +1842,18 @@ class Google_Service_KitchSink_Resource_SeriesSubmissions extends Google_Service
    * @opt_param string q Search query.
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_SubmissionList
+   * @return SubmissionList
    */
-  public function listSeriesSubmissions($seriesId, $optParams = array())
+  public function listSeriesSubmissions($seriesId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId);
+    $params = ['seriesId' => $seriesId];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SubmissionList");
+    return $this->call('list', [$params], SubmissionList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SeriesSubmissions::class, 'Google_Service_KitchSink_Resource_SeriesSubmissions');
 === end: KitchSink/Resource/SeriesSubmissions.php
 === begin: KitchSink/Resource/Submissions.php
 <?php
@@ -1724,15 +1873,19 @@ class Google_Service_KitchSink_Resource_SeriesSubmissions extends Google_Service
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\Submission;
+
 /**
  * The "submissions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $submissions = $kitch_sinkService->submissions;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Submissions extends Google_Service_Resource
+class Submissions extends \Google\Service\Resource
 {
   /**
    * Returns the specified submission within the specified series.
@@ -1744,13 +1897,13 @@ class Google_Service_KitchSink_Resource_Submissions extends Google_Service_Resou
    *
    * @opt_param string lang The language code for the language the client prefers
    * resuls in.
-   * @return Google_Service_KitchSink_Submission
+   * @return Submission
    */
-  public function get($seriesId, $submissionId, $optParams = array())
+  public function get($seriesId, $submissionId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'submissionId' => $submissionId);
+    $params = ['seriesId' => $seriesId, 'submissionId' => $submissionId];
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_KitchSink_Submission");
+    return $this->call('get', [$params], Submission::class);
   }
   /**
    * Inserts a new submission in the specified topic within the specified series.
@@ -1758,20 +1911,23 @@ class Google_Service_KitchSink_Resource_Submissions extends Google_Service_Resou
    *
    * @param int $seriesId The decimal ID of the Series.
    * @param int $topicId The decimal ID of the Topic within the Series.
-   * @param Google_Service_KitchSink_Submission $postBody
+   * @param Submission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool anonymous Set to true to mark the new submission as
    * anonymous.
-   * @return Google_Service_KitchSink_Submission
+   * @return Submission
    */
-  public function insert($seriesId, $topicId, Google_Service_KitchSink_Submission $postBody, $optParams = array())
+  public function insert($seriesId, $topicId, Submission $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'topicId' => $topicId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'topicId' => $topicId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_KitchSink_Submission");
+    return $this->call('insert', [$params], Submission::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Submissions::class, 'Google_Service_KitchSink_Resource_Submissions');
 === end: KitchSink/Resource/Submissions.php
 === begin: KitchSink/Resource/Tags.php
 <?php
@@ -1791,15 +1947,20 @@ class Google_Service_KitchSink_Resource_Submissions extends Google_Service_Resou
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\Tag;
+use Google\Service\KitchSink\TagList;
+
 /**
  * The "tags" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $tags = $kitch_sinkService->tags;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Tags extends Google_Service_Resource
+class Tags extends \Google\Service\Resource
 {
   /**
    * Deletes the specified tag from the specified submission within the specified
@@ -1810,11 +1971,11 @@ class Google_Service_KitchSink_Resource_Tags extends Google_Service_Resource
    * @param string $tagId
    * @param array $optParams Optional parameters.
    */
-  public function delete($seriesId, $submissionId, $tagId, $optParams = array())
+  public function delete($seriesId, $submissionId, $tagId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'submissionId' => $submissionId, 'tagId' => $tagId);
+    $params = ['seriesId' => $seriesId, 'submissionId' => $submissionId, 'tagId' => $tagId];
     $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params));
+    return $this->call('delete', [$params]);
   }
   /**
    * Inserts a new tag for the specified submission within the specified series.
@@ -1822,15 +1983,15 @@ class Google_Service_KitchSink_Resource_Tags extends Google_Service_Resource
    *
    * @param int $seriesId The decimal ID of the Series.
    * @param int $submissionId The decimal ID of the Submission within the Series.
-   * @param Google_Service_KitchSink_Tag $postBody
+   * @param Tag $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Tag
+   * @return Tag
    */
-  public function insert($seriesId, $submissionId, Google_Service_KitchSink_Tag $postBody, $optParams = array())
+  public function insert($seriesId, $submissionId, Tag $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'submissionId' => $submissionId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'submissionId' => $submissionId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_KitchSink_Tag");
+    return $this->call('insert', [$params], Tag::class);
   }
   /**
    * A method with a parameters named |id| and |else| (tags.listTags)
@@ -1838,15 +1999,18 @@ class Google_Service_KitchSink_Resource_Tags extends Google_Service_Resource
    * @param string $else A parameter name 'else'.
    * @param string $id id is a reserved word in Objective-C
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_TagList
+   * @return TagList
    */
-  public function listTags($else, $id, $optParams = array())
+  public function listTags($else, $id, $optParams = [])
   {
-    $params = array('else' => $else, 'id' => $id);
+    $params = ['else' => $else, 'id' => $id];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_TagList");
+    return $this->call('list', [$params], TagList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Tags::class, 'Google_Service_KitchSink_Resource_Tags');
 === end: KitchSink/Resource/Tags.php
 === begin: KitchSink/Resource/Topics.php
 <?php
@@ -1866,15 +2030,21 @@ class Google_Service_KitchSink_Resource_Tags extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\Topic;
+use Google\Service\KitchSink\Topic2;
+use Google\Service\KitchSink\TopicList;
+
 /**
  * The "topics" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $topics = $kitch_sinkService->topics;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Topics extends Google_Service_Resource
+class Topics extends \Google\Service\Resource
 {
   /**
    * Returns the specified topic from the specified series. (topics.get)
@@ -1882,27 +2052,27 @@ class Google_Service_KitchSink_Resource_Topics extends Google_Service_Resource
    * @param int $seriesId The decimal ID of the Series.
    * @param int $topicId The decimal ID of the Topic within the Series.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Topic2
+   * @return Topic2
    */
-  public function get($seriesId, $topicId, $optParams = array())
+  public function get($seriesId, $topicId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'topicId' => $topicId);
+    $params = ['seriesId' => $seriesId, 'topicId' => $topicId];
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_KitchSink_Topic2");
+    return $this->call('get', [$params], Topic2::class);
   }
   /**
    * Inserts a new topic into the specified series. (topics.insert)
    *
    * @param int $seriesId The decimal ID of the Series.
-   * @param Google_Service_KitchSink_Topic $postBody
+   * @param Topic $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Topic
+   * @return Topic
    */
-  public function insert($seriesId, Google_Service_KitchSink_Topic $postBody, $optParams = array())
+  public function insert($seriesId, Topic $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_KitchSink_Topic");
+    return $this->call('insert', [$params], Topic::class);
   }
   /**
    * Searches the topics within the specified series and returns the search
@@ -1915,30 +2085,33 @@ class Google_Service_KitchSink_Resource_Topics extends Google_Service_Resource
    * @opt_param string mode
    * @opt_param string q Search query.
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_TopicList
+   * @return TopicList
    */
-  public function listTopics($seriesId, $optParams = array())
+  public function listTopics($seriesId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId);
+    $params = ['seriesId' => $seriesId];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_TopicList");
+    return $this->call('list', [$params], TopicList::class);
   }
   /**
    * Updates the specified topic within the specified series. (topics.update)
    *
    * @param int $seriesId The decimal ID of the Series.
    * @param int $topicId The decimal ID of the Topic within the Series.
-   * @param Google_Service_KitchSink_Topic $postBody
+   * @param Topic $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Topic
+   * @return Topic
    */
-  public function update($seriesId, $topicId, Google_Service_KitchSink_Topic $postBody, $optParams = array())
+  public function update($seriesId, $topicId, Topic $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'topicId' => $topicId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'topicId' => $topicId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_KitchSink_Topic");
+    return $this->call('update', [$params], Topic::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Topics::class, 'Google_Service_KitchSink_Resource_Topics');
 === end: KitchSink/Resource/Topics.php
 === begin: KitchSink/Resource/TopicsSubmissions.php
 <?php
@@ -1958,15 +2131,19 @@ class Google_Service_KitchSink_Resource_Topics extends Google_Service_Resource
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\SubmissionList;
+
 /**
  * The "submissions" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $submissions = $kitch_sinkService->submissions;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_TopicsSubmissions extends Google_Service_Resource
+class TopicsSubmissions extends \Google\Service\Resource
 {
   /**
    * Searches the submissions for the specified topic within the specified series
@@ -1983,15 +2160,18 @@ class Google_Service_KitchSink_Resource_TopicsSubmissions extends Google_Service
    * @opt_param string q Search query.
    * @opt_param string sort Sort order.
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_SubmissionList
+   * @return SubmissionList
    */
-  public function listTopicsSubmissions($seriesId, $topicId, $optParams = array())
+  public function listTopicsSubmissions($seriesId, $topicId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'topicId' => $topicId);
+    $params = ['seriesId' => $seriesId, 'topicId' => $topicId];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_SubmissionList");
+    return $this->call('list', [$params], SubmissionList::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TopicsSubmissions::class, 'Google_Service_KitchSink_Resource_TopicsSubmissions');
 === end: KitchSink/Resource/TopicsSubmissions.php
 === begin: KitchSink/Resource/Votes.php
 <?php
@@ -2011,15 +2191,20 @@ class Google_Service_KitchSink_Resource_TopicsSubmissions extends Google_Service
  * the License.
  */
 
+namespace Google\Service\KitchSink\Resource;
+
+use Google\Service\KitchSink\Vote;
+use Google\Service\KitchSink\VoteList;
+
 /**
  * The "votes" collection of methods.
  * Typical usage is:
  *  <code>
- *   $kitch_sinkService = new Google_Service_KitchSink(...);
+ *   $kitch_sinkService = new Google\Service\KitchSink(...);
  *   $votes = $kitch_sinkService->votes;
  *  </code>
  */
-class Google_Service_KitchSink_Resource_Votes extends Google_Service_Resource
+class Votes extends \Google\Service\Resource
 {
   /**
    * Returns the votes by the authenticated user for the specified submission
@@ -2030,13 +2215,13 @@ class Google_Service_KitchSink_Resource_Votes extends Google_Service_Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string userId
-   * @return Google_Service_KitchSink_Vote
+   * @return Vote
    */
-  public function get($seriesId, $submissionId, $optParams = array())
+  public function get($seriesId, $submissionId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'submissionId' => $submissionId);
+    $params = ['seriesId' => $seriesId, 'submissionId' => $submissionId];
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_KitchSink_Vote");
+    return $this->call('get', [$params], Vote::class);
   }
   /**
    * Inserts a new vote by the authenticated user for the specified submission
@@ -2044,15 +2229,15 @@ class Google_Service_KitchSink_Resource_Votes extends Google_Service_Resource
    *
    * @param int $seriesId The decimal ID of the Series.
    * @param int $submissionId The decimal ID of the Submission within the Series.
-   * @param Google_Service_KitchSink_Vote $postBody
+   * @param Vote $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_KitchSink_Vote
+   * @return Vote
    */
-  public function insert($seriesId, $submissionId, Google_Service_KitchSink_Vote $postBody, $optParams = array())
+  public function insert($seriesId, $submissionId, Vote $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'submissionId' => $submissionId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'submissionId' => $submissionId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_KitchSink_Vote");
+    return $this->call('insert', [$params], Vote::class);
   }
   /**
    * Lists the votes by the authenticated user for the given series.
@@ -2062,13 +2247,13 @@ class Google_Service_KitchSink_Resource_Votes extends Google_Service_Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int start-index Index of the first result to be retrieved.
-   * @return Google_Service_KitchSink_VoteList
+   * @return VoteList
    */
-  public function listVotes($seriesId, $optParams = array())
+  public function listVotes($seriesId, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId);
+    $params = ['seriesId' => $seriesId];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_KitchSink_VoteList");
+    return $this->call('list', [$params], VoteList::class);
   }
   /**
    * Updates the votes by the authenticated user for the specified submission
@@ -2076,19 +2261,22 @@ class Google_Service_KitchSink_Resource_Votes extends Google_Service_Resource
    *
    * @param int $seriesId The decimal ID of the Series.
    * @param int $submissionId The decimal ID of the Submission within the Series.
-   * @param Google_Service_KitchSink_Vote $postBody
+   * @param Vote $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string userId
-   * @return Google_Service_KitchSink_Vote
+   * @return Vote
    */
-  public function update($seriesId, $submissionId, Google_Service_KitchSink_Vote $postBody, $optParams = array())
+  public function update($seriesId, $submissionId, Vote $postBody, $optParams = [])
   {
-    $params = array('seriesId' => $seriesId, 'submission_id' => $submissionId, 'postBody' => $postBody);
+    $params = ['seriesId' => $seriesId, 'submission_id' => $submissionId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_KitchSink_Vote");
+    return $this->call('update', [$params], Vote::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Votes::class, 'Google_Service_KitchSink_Resource_Votes');
 === end: KitchSink/Resource/Votes.php
 === begin: KitchSink/Rule.php
 <?php
@@ -2108,26 +2296,31 @@ class Google_Service_KitchSink_Resource_Votes extends Google_Service_Resource
  * the License.
  */
 
-class Google_Service_KitchSink_Rule extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Rule extends \Google\Model
 {
-  protected $submissionsType = 'Google_Service_KitchSink_RuleSubmissions';
+  protected $submissionsType = RuleSubmissions::class;
   protected $submissionsDataType = '';
 
   /**
-   * @param Google_Service_KitchSink_RuleSubmissions
+   * @param RuleSubmissions
    */
-  public function setSubmissions(Google_Service_KitchSink_RuleSubmissions $submissions)
+  public function setSubmissions(RuleSubmissions $submissions)
   {
     $this->submissions = $submissions;
   }
   /**
-   * @return Google_Service_KitchSink_RuleSubmissions
+   * @return RuleSubmissions
    */
   public function getSubmissions()
   {
     return $this->submissions;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Rule::class, 'Google_Service_KitchSink_Rule');
 === end: KitchSink/Rule.php
 === begin: KitchSink/RuleSubmissions.php
 <?php
@@ -2147,7 +2340,9 @@ class Google_Service_KitchSink_Rule extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_RuleSubmissions extends Google_Model
+namespace Google\Service\KitchSink;
+
+class RuleSubmissions extends \Google\Model
 {
   public $close;
   public $open;
@@ -2169,6 +2364,9 @@ class Google_Service_KitchSink_RuleSubmissions extends Google_Model
     return $this->open;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(RuleSubmissions::class, 'Google_Service_KitchSink_RuleSubmissions');
 === end: KitchSink/RuleSubmissions.php
 === begin: KitchSink/Series.php
 <?php
@@ -2188,13 +2386,15 @@ class Google_Service_KitchSink_RuleSubmissions extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Series extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Series extends \Google\Model
 {
   public $anonymousSubmissionAllowed;
-  protected $countersType = 'Google_Service_KitchSink_SeriesCounters';
+  protected $countersType = SeriesCounters::class;
   protected $countersDataType = '';
   public $description;
-  protected $idType = 'Google_Service_KitchSink_SeriesId';
+  protected $idType = SeriesId::class;
   protected $idDataType = '';
   public $kind;
   public $name;
@@ -2210,14 +2410,14 @@ class Google_Service_KitchSink_Series extends Google_Model
     return $this->anonymousSubmissionAllowed;
   }
   /**
-   * @param Google_Service_KitchSink_SeriesCounters
+   * @param SeriesCounters
    */
-  public function setCounters(Google_Service_KitchSink_SeriesCounters $counters)
+  public function setCounters(SeriesCounters $counters)
   {
     $this->counters = $counters;
   }
   /**
-   * @return Google_Service_KitchSink_SeriesCounters
+   * @return SeriesCounters
    */
   public function getCounters()
   {
@@ -2232,14 +2432,14 @@ class Google_Service_KitchSink_Series extends Google_Model
     return $this->description;
   }
   /**
-   * @param Google_Service_KitchSink_SeriesId
+   * @param SeriesId
    */
-  public function setId(Google_Service_KitchSink_SeriesId $id)
+  public function setId(SeriesId $id)
   {
     $this->id = $id;
   }
   /**
-   * @return Google_Service_KitchSink_SeriesId
+   * @return SeriesId
    */
   public function getId()
   {
@@ -2278,6 +2478,9 @@ class Google_Service_KitchSink_Series extends Google_Model
     return $this->videoSubmissionAllowed;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Series::class, 'Google_Service_KitchSink_Series');
 === end: KitchSink/Series.php
 === begin: KitchSink/SeriesCounters.php
 <?php
@@ -2297,15 +2500,17 @@ class Google_Service_KitchSink_Series extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_SeriesCounters extends Google_Model
+namespace Google\Service\KitchSink;
+
+class SeriesCounters extends \Google\Model
 {
-  protected $internal_gapi_mappings = array(
+  protected $internal_gapi_mappings = [
         "minusVotes" => "minus_votes",
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
-  );
+  ];
   public $anonymousSubmissions;
-  protected $countersType = 'Google_Service_KitchSink_SeriesCountersCounters';
+  protected $countersType = SeriesCountersCounters::class;
   protected $countersDataType = '';
   public $else;
   public $minusVotes;
@@ -2323,14 +2528,14 @@ class Google_Service_KitchSink_SeriesCounters extends Google_Model
     return $this->anonymousSubmissions;
   }
   /**
-   * @param Google_Service_KitchSink_SeriesCountersCounters
+   * @param SeriesCountersCounters
    */
-  public function setCounters(Google_Service_KitchSink_SeriesCountersCounters $counters)
+  public function setCounters(SeriesCountersCounters $counters)
   {
     $this->counters = $counters;
   }
   /**
-   * @return Google_Service_KitchSink_SeriesCountersCounters
+   * @return SeriesCountersCounters
    */
   public function getCounters()
   {
@@ -2385,6 +2590,9 @@ class Google_Service_KitchSink_SeriesCounters extends Google_Model
     return $this->users;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SeriesCounters::class, 'Google_Service_KitchSink_SeriesCounters');
 === end: KitchSink/SeriesCounters.php
 === begin: KitchSink/SeriesCountersCounters.php
 <?php
@@ -2404,11 +2612,13 @@ class Google_Service_KitchSink_SeriesCounters extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_SeriesCountersCounters extends Google_Model
+namespace Google\Service\KitchSink;
+
+class SeriesCountersCounters extends \Google\Model
 {
-  protected $internal_gapi_mappings = array(
+  protected $internal_gapi_mappings = [
         "allVotes" => "all-votes",
-  );
+  ];
   public $allVotes;
 
   public function setAllVotes($allVotes)
@@ -2420,6 +2630,9 @@ class Google_Service_KitchSink_SeriesCountersCounters extends Google_Model
     return $this->allVotes;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SeriesCountersCounters::class, 'Google_Service_KitchSink_SeriesCountersCounters');
 === end: KitchSink/SeriesCountersCounters.php
 === begin: KitchSink/SeriesId.php
 <?php
@@ -2439,7 +2652,9 @@ class Google_Service_KitchSink_SeriesCountersCounters extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_SeriesId extends Google_Model
+namespace Google\Service\KitchSink;
+
+class SeriesId extends \Google\Model
 {
   public $seriesId;
 
@@ -2452,6 +2667,9 @@ class Google_Service_KitchSink_SeriesId extends Google_Model
     return $this->seriesId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SeriesId::class, 'Google_Service_KitchSink_SeriesId');
 === end: KitchSink/SeriesId.php
 === begin: KitchSink/SeriesList.php
 <?php
@@ -2471,22 +2689,24 @@ class Google_Service_KitchSink_SeriesId extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_SeriesList extends Google_Collection
+namespace Google\Service\KitchSink;
+
+class SeriesList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_KitchSink_Series';
+  protected $itemsType = Series::class;
   protected $itemsDataType = 'array';
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Series[]
+   * @param Series[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Series[]
+   * @return Series[]
    */
   public function getItems()
   {
@@ -2501,6 +2721,9 @@ class Google_Service_KitchSink_SeriesList extends Google_Collection
     return $this->kind;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SeriesList::class, 'Google_Service_KitchSink_SeriesList');
 === end: KitchSink/SeriesList.php
 === begin: KitchSink/Submission.php
 <?php
@@ -2520,30 +2743,32 @@ class Google_Service_KitchSink_SeriesList extends Google_Collection
  * the License.
  */
 
-class Google_Service_KitchSink_Submission extends Google_Collection
+namespace Google\Service\KitchSink;
+
+class Submission extends \Google\Collection
 {
   protected $collection_key = 'topics';
-  protected $internal_gapi_mappings = array(
+  protected $internal_gapi_mappings = [
         "attachmentUrl" => "@attachmentUrl",
-  );
+  ];
   public $attachmentUrl;
-  protected $attributionType = 'Google_Service_KitchSink_SubmissionAttribution';
+  protected $attributionType = SubmissionAttribution::class;
   protected $attributionDataType = '';
   public $author;
-  protected $countersType = 'Google_Service_KitchSink_SubmissionCounters';
+  protected $countersType = SubmissionCounters::class;
   protected $countersDataType = '';
   public $created;
-  protected $geoType = 'Google_Service_KitchSink_LatLong';
+  protected $geoType = LatLong::class;
   protected $geoDataType = 'array';
-  protected $idType = 'Google_Service_KitchSink_SubmissionId';
+  protected $idType = SubmissionId::class;
   protected $idDataType = '';
   public $kind;
-  protected $parentSubmissionIdType = 'Google_Service_KitchSink_SubmissionParentSubmissionId';
+  protected $parentSubmissionIdType = SubmissionParentSubmissionId::class;
   protected $parentSubmissionIdDataType = '';
   public $text;
-  protected $topicsType = 'Google_Service_KitchSink_ModeratorTopicsResourcePartial';
+  protected $topicsType = ModeratorTopicsResourcePartial::class;
   protected $topicsDataType = 'array';
-  protected $translationsType = 'Google_Service_KitchSink_Translation';
+  protected $translationsType = Translation::class;
   protected $translationsDataType = 'map';
 
   public function setAttachmentUrl($attachmentUrl)
@@ -2555,14 +2780,14 @@ class Google_Service_KitchSink_Submission extends Google_Collection
     return $this->attachmentUrl;
   }
   /**
-   * @param Google_Service_KitchSink_SubmissionAttribution
+   * @param SubmissionAttribution
    */
-  public function setAttribution(Google_Service_KitchSink_SubmissionAttribution $attribution)
+  public function setAttribution(SubmissionAttribution $attribution)
   {
     $this->attribution = $attribution;
   }
   /**
-   * @return Google_Service_KitchSink_SubmissionAttribution
+   * @return SubmissionAttribution
    */
   public function getAttribution()
   {
@@ -2577,14 +2802,14 @@ class Google_Service_KitchSink_Submission extends Google_Collection
     return $this->author;
   }
   /**
-   * @param Google_Service_KitchSink_SubmissionCounters
+   * @param SubmissionCounters
    */
-  public function setCounters(Google_Service_KitchSink_SubmissionCounters $counters)
+  public function setCounters(SubmissionCounters $counters)
   {
     $this->counters = $counters;
   }
   /**
-   * @return Google_Service_KitchSink_SubmissionCounters
+   * @return SubmissionCounters
    */
   public function getCounters()
   {
@@ -2599,28 +2824,28 @@ class Google_Service_KitchSink_Submission extends Google_Collection
     return $this->created;
   }
   /**
-   * @param Google_Service_KitchSink_LatLong[]
+   * @param LatLong[]
    */
   public function setGeo($geo)
   {
     $this->geo = $geo;
   }
   /**
-   * @return Google_Service_KitchSink_LatLong[]
+   * @return LatLong[]
    */
   public function getGeo()
   {
     return $this->geo;
   }
   /**
-   * @param Google_Service_KitchSink_SubmissionId
+   * @param SubmissionId
    */
-  public function setId(Google_Service_KitchSink_SubmissionId $id)
+  public function setId(SubmissionId $id)
   {
     $this->id = $id;
   }
   /**
-   * @return Google_Service_KitchSink_SubmissionId
+   * @return SubmissionId
    */
   public function getId()
   {
@@ -2635,14 +2860,14 @@ class Google_Service_KitchSink_Submission extends Google_Collection
     return $this->kind;
   }
   /**
-   * @param Google_Service_KitchSink_SubmissionParentSubmissionId
+   * @param SubmissionParentSubmissionId
    */
-  public function setParentSubmissionId(Google_Service_KitchSink_SubmissionParentSubmissionId $parentSubmissionId)
+  public function setParentSubmissionId(SubmissionParentSubmissionId $parentSubmissionId)
   {
     $this->parentSubmissionId = $parentSubmissionId;
   }
   /**
-   * @return Google_Service_KitchSink_SubmissionParentSubmissionId
+   * @return SubmissionParentSubmissionId
    */
   public function getParentSubmissionId()
   {
@@ -2657,34 +2882,37 @@ class Google_Service_KitchSink_Submission extends Google_Collection
     return $this->text;
   }
   /**
-   * @param Google_Service_KitchSink_ModeratorTopicsResourcePartial[]
+   * @param ModeratorTopicsResourcePartial[]
    */
   public function setTopics($topics)
   {
     $this->topics = $topics;
   }
   /**
-   * @return Google_Service_KitchSink_ModeratorTopicsResourcePartial[]
+   * @return ModeratorTopicsResourcePartial[]
    */
   public function getTopics()
   {
     return $this->topics;
   }
   /**
-   * @param Google_Service_KitchSink_Translation[]
+   * @param Translation[]
    */
   public function setTranslations($translations)
   {
     $this->translations = $translations;
   }
   /**
-   * @return Google_Service_KitchSink_Translation[]
+   * @return Translation[]
    */
   public function getTranslations()
   {
     return $this->translations;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Submission::class, 'Google_Service_KitchSink_Submission');
 === end: KitchSink/Submission.php
 === begin: KitchSink/SubmissionAttribution.php
 <?php
@@ -2704,12 +2932,14 @@ class Google_Service_KitchSink_Submission extends Google_Collection
  * the License.
  */
 
-class Google_Service_KitchSink_SubmissionAttribution extends Google_Model
+namespace Google\Service\KitchSink;
+
+class SubmissionAttribution extends \Google\Model
 {
-  protected $internal_gapi_mappings = array(
+  protected $internal_gapi_mappings = [
         "avatarUrl" => "$avatarUrl",
         "object" => "$object",
-  );
+  ];
   public $avatarUrl;
   public $object;
   public $location;
@@ -2739,6 +2969,9 @@ class Google_Service_KitchSink_SubmissionAttribution extends Google_Model
     return $this->location;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SubmissionAttribution::class, 'Google_Service_KitchSink_SubmissionAttribution');
 === end: KitchSink/SubmissionAttribution.php
 === begin: KitchSink/SubmissionCounters.php
 <?php
@@ -2758,13 +2991,15 @@ class Google_Service_KitchSink_SubmissionAttribution extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_SubmissionCounters extends Google_Model
+namespace Google\Service\KitchSink;
+
+class SubmissionCounters extends \Google\Model
 {
-  protected $internal_gapi_mappings = array(
+  protected $internal_gapi_mappings = [
         "minusVotes" => "minus_votes",
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
-  );
+  ];
   public $minusVotes;
   public $noneVotes;
   public $plusVotes;
@@ -2794,6 +3029,9 @@ class Google_Service_KitchSink_SubmissionCounters extends Google_Model
     return $this->plusVotes;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SubmissionCounters::class, 'Google_Service_KitchSink_SubmissionCounters');
 === end: KitchSink/SubmissionCounters.php
 === begin: KitchSink/SubmissionId.php
 <?php
@@ -2813,7 +3051,9 @@ class Google_Service_KitchSink_SubmissionCounters extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_SubmissionId extends Google_Model
+namespace Google\Service\KitchSink;
+
+class SubmissionId extends \Google\Model
 {
   public $seriesId;
   public $submissionId;
@@ -2835,6 +3075,9 @@ class Google_Service_KitchSink_SubmissionId extends Google_Model
     return $this->submissionId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SubmissionId::class, 'Google_Service_KitchSink_SubmissionId');
 === end: KitchSink/SubmissionId.php
 === begin: KitchSink/SubmissionList.php
 <?php
@@ -2854,22 +3097,24 @@ class Google_Service_KitchSink_SubmissionId extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_SubmissionList extends Google_Collection
+namespace Google\Service\KitchSink;
+
+class SubmissionList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_KitchSink_Submission';
+  protected $itemsType = Submission::class;
   protected $itemsDataType = 'array';
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Submission[]
+   * @param Submission[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Submission[]
+   * @return Submission[]
    */
   public function getItems()
   {
@@ -2884,6 +3129,9 @@ class Google_Service_KitchSink_SubmissionList extends Google_Collection
     return $this->kind;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SubmissionList::class, 'Google_Service_KitchSink_SubmissionList');
 === end: KitchSink/SubmissionList.php
 === begin: KitchSink/SubmissionParentSubmissionId.php
 <?php
@@ -2903,7 +3151,9 @@ class Google_Service_KitchSink_SubmissionList extends Google_Collection
  * the License.
  */
 
-class Google_Service_KitchSink_SubmissionParentSubmissionId extends Google_Model
+namespace Google\Service\KitchSink;
+
+class SubmissionParentSubmissionId extends \Google\Model
 {
   public $seriesId;
   public $submissionId;
@@ -2925,6 +3175,9 @@ class Google_Service_KitchSink_SubmissionParentSubmissionId extends Google_Model
     return $this->submissionId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(SubmissionParentSubmissionId::class, 'Google_Service_KitchSink_SubmissionParentSubmissionId');
 === end: KitchSink/SubmissionParentSubmissionId.php
 === begin: KitchSink/Tag.php
 <?php
@@ -2944,38 +3197,40 @@ class Google_Service_KitchSink_SubmissionParentSubmissionId extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Tag extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Tag extends \Google\Model
 {
-  protected $geometryType = 'Google_Service_KitchSink_Geometry';
+  protected $geometryType = Geometry::class;
   protected $geometryDataType = '';
-  protected $idType = 'Google_Service_KitchSink_TagId';
+  protected $idType = TagId::class;
   protected $idDataType = '';
   public $kind;
   public $text;
 
   /**
-   * @param Google_Service_KitchSink_Geometry
+   * @param Geometry
    */
-  public function setGeometry(Google_Service_KitchSink_Geometry $geometry)
+  public function setGeometry(Geometry $geometry)
   {
     $this->geometry = $geometry;
   }
   /**
-   * @return Google_Service_KitchSink_Geometry
+   * @return Geometry
    */
   public function getGeometry()
   {
     return $this->geometry;
   }
   /**
-   * @param Google_Service_KitchSink_TagId
+   * @param TagId
    */
-  public function setId(Google_Service_KitchSink_TagId $id)
+  public function setId(TagId $id)
   {
     $this->id = $id;
   }
   /**
-   * @return Google_Service_KitchSink_TagId
+   * @return TagId
    */
   public function getId()
   {
@@ -2998,6 +3253,9 @@ class Google_Service_KitchSink_Tag extends Google_Model
     return $this->text;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Tag::class, 'Google_Service_KitchSink_Tag');
 === end: KitchSink/Tag.php
 === begin: KitchSink/TagId.php
 <?php
@@ -3017,7 +3275,9 @@ class Google_Service_KitchSink_Tag extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_TagId extends Google_Model
+namespace Google\Service\KitchSink;
+
+class TagId extends \Google\Model
 {
   public $seriesId;
   public $submissionId;
@@ -3048,6 +3308,9 @@ class Google_Service_KitchSink_TagId extends Google_Model
     return $this->tag;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TagId::class, 'Google_Service_KitchSink_TagId');
 === end: KitchSink/TagId.php
 === begin: KitchSink/Topic.php
 <?php
@@ -3067,28 +3330,30 @@ class Google_Service_KitchSink_TagId extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Topic extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Topic extends \Google\Model
 {
-  protected $countersType = 'Google_Service_KitchSink_TopicCounters';
+  protected $countersType = TopicCounters::class;
   protected $countersDataType = '';
   public $description;
-  protected $idType = 'Google_Service_KitchSink_TopicId';
+  protected $idType = TopicId::class;
   protected $idDataType = '';
   public $kind;
   public $name;
   public $presenter;
-  protected $rulesType = 'Google_Service_KitchSink_TopicRules';
+  protected $rulesType = TopicRules::class;
   protected $rulesDataType = '';
 
   /**
-   * @param Google_Service_KitchSink_TopicCounters
+   * @param TopicCounters
    */
-  public function setCounters(Google_Service_KitchSink_TopicCounters $counters)
+  public function setCounters(TopicCounters $counters)
   {
     $this->counters = $counters;
   }
   /**
-   * @return Google_Service_KitchSink_TopicCounters
+   * @return TopicCounters
    */
   public function getCounters()
   {
@@ -3103,14 +3368,14 @@ class Google_Service_KitchSink_Topic extends Google_Model
     return $this->description;
   }
   /**
-   * @param Google_Service_KitchSink_TopicId
+   * @param TopicId
    */
-  public function setId(Google_Service_KitchSink_TopicId $id)
+  public function setId(TopicId $id)
   {
     $this->id = $id;
   }
   /**
-   * @return Google_Service_KitchSink_TopicId
+   * @return TopicId
    */
   public function getId()
   {
@@ -3141,20 +3406,23 @@ class Google_Service_KitchSink_Topic extends Google_Model
     return $this->presenter;
   }
   /**
-   * @param Google_Service_KitchSink_TopicRules
+   * @param TopicRules
    */
-  public function setRules(Google_Service_KitchSink_TopicRules $rules)
+  public function setRules(TopicRules $rules)
   {
     $this->rules = $rules;
   }
   /**
-   * @return Google_Service_KitchSink_TopicRules
+   * @return TopicRules
    */
   public function getRules()
   {
     return $this->rules;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Topic::class, 'Google_Service_KitchSink_Topic');
 === end: KitchSink/Topic.php
 === begin: KitchSink/Topic2.php
 <?php
@@ -3174,31 +3442,33 @@ class Google_Service_KitchSink_Topic extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Topic2 extends Google_Collection
+namespace Google\Service\KitchSink;
+
+class Topic2 extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  protected $countersType = 'Google_Service_KitchSink_Topic2Counters';
+  protected $countersType = Topic2Counters::class;
   protected $countersDataType = '';
   public $description;
-  protected $featuredSubmissionType = 'Google_Service_KitchSink_Submission';
+  protected $featuredSubmissionType = Submission::class;
   protected $featuredSubmissionDataType = '';
-  protected $idType = 'Google_Service_KitchSink_Topic2Id';
+  protected $idType = Topic2Id::class;
   protected $idDataType = '';
   public $kind;
   public $name;
   public $presenter;
-  protected $rulesType = 'Google_Service_KitchSink_Rule';
+  protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
 
   /**
-   * @param Google_Service_KitchSink_Topic2Counters
+   * @param Topic2Counters
    */
-  public function setCounters(Google_Service_KitchSink_Topic2Counters $counters)
+  public function setCounters(Topic2Counters $counters)
   {
     $this->counters = $counters;
   }
   /**
-   * @return Google_Service_KitchSink_Topic2Counters
+   * @return Topic2Counters
    */
   public function getCounters()
   {
@@ -3213,28 +3483,28 @@ class Google_Service_KitchSink_Topic2 extends Google_Collection
     return $this->description;
   }
   /**
-   * @param Google_Service_KitchSink_Submission
+   * @param Submission
    */
-  public function setFeaturedSubmission(Google_Service_KitchSink_Submission $featuredSubmission)
+  public function setFeaturedSubmission(Submission $featuredSubmission)
   {
     $this->featuredSubmission = $featuredSubmission;
   }
   /**
-   * @return Google_Service_KitchSink_Submission
+   * @return Submission
    */
   public function getFeaturedSubmission()
   {
     return $this->featuredSubmission;
   }
   /**
-   * @param Google_Service_KitchSink_Topic2Id
+   * @param Topic2Id
    */
-  public function setId(Google_Service_KitchSink_Topic2Id $id)
+  public function setId(Topic2Id $id)
   {
     $this->id = $id;
   }
   /**
-   * @return Google_Service_KitchSink_Topic2Id
+   * @return Topic2Id
    */
   public function getId()
   {
@@ -3265,20 +3535,23 @@ class Google_Service_KitchSink_Topic2 extends Google_Collection
     return $this->presenter;
   }
   /**
-   * @param Google_Service_KitchSink_Rule[]
+   * @param Rule[]
    */
   public function setRules($rules)
   {
     $this->rules = $rules;
   }
   /**
-   * @return Google_Service_KitchSink_Rule[]
+   * @return Rule[]
    */
   public function getRules()
   {
     return $this->rules;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Topic2::class, 'Google_Service_KitchSink_Topic2');
 === end: KitchSink/Topic2.php
 === begin: KitchSink/Topic2Counters.php
 <?php
@@ -3298,13 +3571,15 @@ class Google_Service_KitchSink_Topic2 extends Google_Collection
  * the License.
  */
 
-class Google_Service_KitchSink_Topic2Counters extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Topic2Counters extends \Google\Model
 {
-  protected $internal_gapi_mappings = array(
+  protected $internal_gapi_mappings = [
         "minusVotes" => "minus_votes",
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
-  );
+  ];
   public $minusVotes;
   public $noneVotes;
   public $plusVotes;
@@ -3361,6 +3636,9 @@ class Google_Service_KitchSink_Topic2Counters extends Google_Model
     return $this->videoSubmissions;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Topic2Counters::class, 'Google_Service_KitchSink_Topic2Counters');
 === end: KitchSink/Topic2Counters.php
 === begin: KitchSink/Topic2Id.php
 <?php
@@ -3380,7 +3658,9 @@ class Google_Service_KitchSink_Topic2Counters extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Topic2Id extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Topic2Id extends \Google\Model
 {
   public $seriesId;
   public $topicId;
@@ -3402,6 +3682,9 @@ class Google_Service_KitchSink_Topic2Id extends Google_Model
     return $this->topicId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Topic2Id::class, 'Google_Service_KitchSink_Topic2Id');
 === end: KitchSink/Topic2Id.php
 === begin: KitchSink/TopicCounters.php
 <?php
@@ -3421,13 +3704,15 @@ class Google_Service_KitchSink_Topic2Id extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_TopicCounters extends Google_Model
+namespace Google\Service\KitchSink;
+
+class TopicCounters extends \Google\Model
 {
-  protected $internal_gapi_mappings = array(
+  protected $internal_gapi_mappings = [
         "minusVotes" => "minus_votes",
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
-  );
+  ];
   public $minusVotes;
   public $noneVotes;
   public $plusVotes;
@@ -3484,6 +3769,9 @@ class Google_Service_KitchSink_TopicCounters extends Google_Model
     return $this->videoSubmissions;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TopicCounters::class, 'Google_Service_KitchSink_TopicCounters');
 === end: KitchSink/TopicCounters.php
 === begin: KitchSink/TopicId.php
 <?php
@@ -3503,7 +3791,9 @@ class Google_Service_KitchSink_TopicCounters extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_TopicId extends Google_Model
+namespace Google\Service\KitchSink;
+
+class TopicId extends \Google\Model
 {
   public $seriesId;
   public $topicId;
@@ -3525,6 +3815,9 @@ class Google_Service_KitchSink_TopicId extends Google_Model
     return $this->topicId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TopicId::class, 'Google_Service_KitchSink_TopicId');
 === end: KitchSink/TopicId.php
 === begin: KitchSink/TopicList.php
 <?php
@@ -3544,22 +3837,24 @@ class Google_Service_KitchSink_TopicId extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_TopicList extends Google_Collection
+namespace Google\Service\KitchSink;
+
+class TopicList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_KitchSink_Topic';
+  protected $itemsType = Topic::class;
   protected $itemsDataType = 'array';
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Topic[]
+   * @param Topic[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Topic[]
+   * @return Topic[]
    */
   public function getItems()
   {
@@ -3574,6 +3869,9 @@ class Google_Service_KitchSink_TopicList extends Google_Collection
     return $this->kind;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TopicList::class, 'Google_Service_KitchSink_TopicList');
 === end: KitchSink/TopicList.php
 === begin: KitchSink/TopicRules.php
 <?php
@@ -3593,42 +3891,47 @@ class Google_Service_KitchSink_TopicList extends Google_Collection
  * the License.
  */
 
-class Google_Service_KitchSink_TopicRules extends Google_Model
+namespace Google\Service\KitchSink;
+
+class TopicRules extends \Google\Model
 {
-  protected $submissionsType = 'Google_Service_KitchSink_TopicRulesSubmissions';
+  protected $submissionsType = TopicRulesSubmissions::class;
   protected $submissionsDataType = '';
-  protected $votesType = 'Google_Service_KitchSink_TopicRulesVotes';
+  protected $votesType = TopicRulesVotes::class;
   protected $votesDataType = '';
 
   /**
-   * @param Google_Service_KitchSink_TopicRulesSubmissions
+   * @param TopicRulesSubmissions
    */
-  public function setSubmissions(Google_Service_KitchSink_TopicRulesSubmissions $submissions)
+  public function setSubmissions(TopicRulesSubmissions $submissions)
   {
     $this->submissions = $submissions;
   }
   /**
-   * @return Google_Service_KitchSink_TopicRulesSubmissions
+   * @return TopicRulesSubmissions
    */
   public function getSubmissions()
   {
     return $this->submissions;
   }
   /**
-   * @param Google_Service_KitchSink_TopicRulesVotes
+   * @param TopicRulesVotes
    */
-  public function setVotes(Google_Service_KitchSink_TopicRulesVotes $votes)
+  public function setVotes(TopicRulesVotes $votes)
   {
     $this->votes = $votes;
   }
   /**
-   * @return Google_Service_KitchSink_TopicRulesVotes
+   * @return TopicRulesVotes
    */
   public function getVotes()
   {
     return $this->votes;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TopicRules::class, 'Google_Service_KitchSink_TopicRules');
 === end: KitchSink/TopicRules.php
 === begin: KitchSink/TopicRulesSubmissions.php
 <?php
@@ -3648,7 +3951,9 @@ class Google_Service_KitchSink_TopicRules extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_TopicRulesSubmissions extends Google_Model
+namespace Google\Service\KitchSink;
+
+class TopicRulesSubmissions extends \Google\Model
 {
   public $close;
   public $open;
@@ -3670,6 +3975,9 @@ class Google_Service_KitchSink_TopicRulesSubmissions extends Google_Model
     return $this->open;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TopicRulesSubmissions::class, 'Google_Service_KitchSink_TopicRulesSubmissions');
 === end: KitchSink/TopicRulesSubmissions.php
 === begin: KitchSink/TopicRulesVotes.php
 <?php
@@ -3689,7 +3997,9 @@ class Google_Service_KitchSink_TopicRulesSubmissions extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_TopicRulesVotes extends Google_Model
+namespace Google\Service\KitchSink;
+
+class TopicRulesVotes extends \Google\Model
 {
   public $close;
   public $open;
@@ -3711,6 +4021,9 @@ class Google_Service_KitchSink_TopicRulesVotes extends Google_Model
     return $this->open;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(TopicRulesVotes::class, 'Google_Service_KitchSink_TopicRulesVotes');
 === end: KitchSink/TopicRulesVotes.php
 === begin: KitchSink/Translation.php
 <?php
@@ -3730,7 +4043,9 @@ class Google_Service_KitchSink_TopicRulesVotes extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Translation extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Translation extends \Google\Model
 {
   public $lang;
   public $text;
@@ -3752,6 +4067,9 @@ class Google_Service_KitchSink_Translation extends Google_Model
     return $this->text;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Translation::class, 'Google_Service_KitchSink_Translation');
 === end: KitchSink/Translation.php
 === begin: KitchSink/Vote.php
 <?php
@@ -3771,10 +4089,12 @@ class Google_Service_KitchSink_Translation extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_Vote extends Google_Model
+namespace Google\Service\KitchSink;
+
+class Vote extends \Google\Model
 {
   public $flag;
-  protected $idType = 'Google_Service_KitchSink_VoteId';
+  protected $idType = VoteId::class;
   protected $idDataType = '';
   public $kind;
   public $vote;
@@ -3788,14 +4108,14 @@ class Google_Service_KitchSink_Vote extends Google_Model
     return $this->flag;
   }
   /**
-   * @param Google_Service_KitchSink_VoteId
+   * @param VoteId
    */
-  public function setId(Google_Service_KitchSink_VoteId $id)
+  public function setId(VoteId $id)
   {
     $this->id = $id;
   }
   /**
-   * @return Google_Service_KitchSink_VoteId
+   * @return VoteId
    */
   public function getId()
   {
@@ -3818,6 +4138,9 @@ class Google_Service_KitchSink_Vote extends Google_Model
     return $this->vote;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Vote::class, 'Google_Service_KitchSink_Vote');
 === end: KitchSink/Vote.php
 === begin: KitchSink/VoteId.php
 <?php
@@ -3837,9 +4160,14 @@ class Google_Service_KitchSink_Vote extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_VoteId extends Google_Model
+namespace Google\Service\KitchSink;
+
+class VoteId extends \Google\Model
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(VoteId::class, 'Google_Service_KitchSink_VoteId');
 === end: KitchSink/VoteId.php
 === begin: KitchSink/VoteList.php
 <?php
@@ -3859,22 +4187,24 @@ class Google_Service_KitchSink_VoteId extends Google_Model
  * the License.
  */
 
-class Google_Service_KitchSink_VoteList extends Google_Collection
+namespace Google\Service\KitchSink;
+
+class VoteList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_KitchSink_Vote';
+  protected $itemsType = Vote::class;
   protected $itemsDataType = 'array';
   public $kind;
 
   /**
-   * @param Google_Service_KitchSink_Vote[]
+   * @param Vote[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_KitchSink_Vote[]
+   * @return Vote[]
    */
   public function getItems()
   {
@@ -3889,4 +4219,7 @@ class Google_Service_KitchSink_VoteList extends Google_Collection
     return $this->kind;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(VoteList::class, 'Google_Service_KitchSink_VoteList');
 === end: KitchSink/VoteList.php

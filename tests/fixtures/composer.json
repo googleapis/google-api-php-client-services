@@ -1,0 +1,16 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "%s",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+    "require": {
+        "google/apiclient": "%s",
+        "google/apiclient-services": "dev-%s as 0.13"
+    },
+    "minimum-stability": "dev"
+}

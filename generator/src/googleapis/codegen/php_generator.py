@@ -178,13 +178,15 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
     if code_type and code_type.lower() in PhpLanguageModel.PHP_TYPES:
       prop.values['typeHint'] = ''
       prop.values['typeHintOld'] = ''
+      prop.values['typeHintFull'] = ''
     else:
       prop.values['typeHintOld'] = ('%s_%s' %
                                     (self._api.values['owner'].title(),
                                      code_type))
-      prop.values['typeHint'] = ('%s_Service_%s_%s' %
-                                 (self._api.values['owner'].title(),
-                                  self._api.values['className'], code_type))
+      prop.values['typeHintFull'] = ('%s\\Service\\%s\\%s' %
+                                    (self._api.values['owner'].title(),
+                                    self._api.values['className'], code_type))
+      prop.values['typeHint'] = (code_type)
 
 
 class PhpLanguageModel(language_model.LanguageModel):

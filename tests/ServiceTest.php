@@ -18,19 +18,24 @@
  * under the License.
  */
 
+namespace Google\Service\Test;
+
 use PHPUnit\Framework\TestCase;
 
-class Google_Service_ServiceTest extends TestCase
+class ServiceTest extends TestCase
 {
   /**
-   * @dataProvider serviceProvider
+   * @dataProvider allServices
+   * @runInSeparateProcess
    */
-  public function testIncludes($class)
+  public function testIncludes($service)
   {
-    $this->assertTrue(
-        class_exists($class),
-        sprintf('Failed asserting class %s exists.', $class)
-    );
+    foreach ($this->getServiceClasses($service) as $class) {
+      $this->assertTrue(
+          class_exists($class),
+          sprintf('Failed asserting class %s exists.', $class)
+      );
+    }
   }
 
   public function testCaseConflicts()
@@ -40,19 +45,33 @@ class Google_Service_ServiceTest extends TestCase
     $this->assertCount(count($apis), $classes);
   }
 
-  public function serviceProvider()
+  public function allServices()
+  {
+     $services = array();
+     $path = __DIR__ . '/../src/';
+     foreach (glob($path . "*.php") as $file) {
+       $service = basename($file, '.php');
+       $services[$service] = array($service);
+     }
+     return $services;
+  }
+
+  public function getServiceClasses($service)
   {
     $classes = array();
-    $path = __DIR__ . '/../src/Google/Service/';
-    foreach (glob($path . "*.php") as $file) {
-      $service = basename($file, '.php');
-      $classes[] = array('Google_Service_' . $service);
-      foreach (glob($path . "{$service}/*.php") as $file) {
-        $classes[] = array("Google_Service_{$service}_" . basename($file, '.php'));
-      }
-      foreach (glob($path . "{$service}/Resource/*.php") as $file) {
-        $classes[] = array("Google_Service_{$service}_Resource_" . basename($file, '.php'));
-      }
+    $path = __DIR__ . '/../src/';
+    $serviceClass = 'Google\Service\\' . $service;
+    $classes[] = $serviceClass;
+    $classes[] = str_replace('\\', '_', $serviceClass); // legacy name
+    foreach (glob($path . "$service/*.php") as $file) {
+      $model = "Google\Service\\$service\\" . basename($file, '.php');
+      $classes[] = $model;
+      $classes[] = str_replace('\\', '_', $model); // legacy name
+    }
+    foreach (glob($path . "$service/Resource/*.php") as $file) {
+      $resource = "Google\Service\\$service\Resource\\" . basename($file, '.php');
+      $classes[] = $resource;
+      $classes[] = str_replace('\\', '_', $resource); // legacy name
     }
 
     return $classes;
@@ -60,13 +79,7 @@ class Google_Service_ServiceTest extends TestCase
 
   public function apiProvider()
   {
-    $path = __DIR__ . '/../src/Google/Service/*';
+    $path = __DIR__ . '/../src/*';
     return array_filter(glob($path), 'is_dir');
   }
 }
-
-// Add stubs for dependent classes in "google/apiclient"
-class Google_Service {}
-class Google_Model {}
-class Google_Collection {}
-class Google_Service_Resource {}
