@@ -40,8 +40,8 @@ class Google_Service_Recommender_Resource_BillingAccountsLocationsInsightTypesIn
     return $this->call('get', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1Insight");
   }
   /**
-   * Lists insights for a Cloud project. Requires the recommender.*.list IAM
-   * permission for the specified insight type.
+   * Lists insights for the specified Cloud Resource. Requires the
+   * recommender.*.list IAM permission for the specified insight type.
    * (insights.listBillingAccountsLocationsInsightTypesInsights)
    *
    * @param string $parent Required. The container resource on which to execute

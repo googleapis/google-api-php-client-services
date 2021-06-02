@@ -40,8 +40,8 @@ class Google_Service_Recommender_Resource_BillingAccountsLocationsRecommendersRe
     return $this->call('get', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1Recommendation");
   }
   /**
-   * Lists recommendations for a Cloud project. Requires the recommender.*.list
-   * IAM permission for the specified recommender.
+   * Lists recommendations for the specified Cloud Resource. Requires the
+   * recommender.*.list IAM permission for the specified recommender.
    * (recommendations.listBillingAccountsLocationsRecommendersRecommendations)
    *
    * @param string $parent Required. The container resource on which to execute

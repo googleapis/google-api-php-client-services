@@ -35,6 +35,8 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaChangeHisto
   protected $googleSignalsSettingsDataType = '';
   protected $iosAppDataStreamType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaIosAppDataStream';
   protected $iosAppDataStreamDataType = '';
+  protected $measurementProtocolSecretType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret';
+  protected $measurementProtocolSecretDataType = '';
   protected $propertyType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaProperty';
   protected $propertyDataType = '';
   protected $webDataStreamType = 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaWebDataStream';
@@ -165,6 +167,20 @@ class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaChangeHisto
   public function getIosAppDataStream()
   {
     return $this->iosAppDataStream;
+  }
+  /**
+   * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret
+   */
+  public function setMeasurementProtocolSecret(Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret $measurementProtocolSecret)
+  {
+    $this->measurementProtocolSecret = $measurementProtocolSecret;
+  }
+  /**
+   * @return Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret
+   */
+  public function getMeasurementProtocolSecret()
+  {
+    return $this->measurementProtocolSecret;
   }
   /**
    * @param Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaProperty

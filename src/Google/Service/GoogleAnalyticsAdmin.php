@@ -48,14 +48,17 @@ class Google_Service_GoogleAnalyticsAdmin extends Google_Service
   public $accounts_userLinks;
   public $properties;
   public $properties_androidAppDataStreams;
+  public $properties_androidAppDataStreams_measurementProtocolSecrets;
   public $properties_conversionEvents;
   public $properties_customDimensions;
   public $properties_customMetrics;
   public $properties_firebaseLinks;
   public $properties_googleAdsLinks;
   public $properties_iosAppDataStreams;
+  public $properties_iosAppDataStreams_measurementProtocolSecrets;
   public $properties_userLinks;
   public $properties_webDataStreams;
+  public $properties_webDataStreams_measurementProtocolSecrets;
 
   /**
    * Constructs the internal representation of the GoogleAnalyticsAdmin service.
@@ -428,6 +431,78 @@ class Google_Service_GoogleAnalyticsAdmin extends Google_Service
               ),
             ),'list' => array(
               'path' => 'v1alpha/{+parent}/androidAppDataStreams',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->properties_androidAppDataStreams_measurementProtocolSecrets = new Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesAndroidAppDataStreamsMeasurementProtocolSecrets(
+        $this,
+        $this->serviceName,
+        'measurementProtocolSecrets',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1alpha/{+parent}/measurementProtocolSecrets',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1alpha/{+parent}/measurementProtocolSecrets',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -850,6 +925,78 @@ class Google_Service_GoogleAnalyticsAdmin extends Google_Service
           )
         )
     );
+    $this->properties_iosAppDataStreams_measurementProtocolSecrets = new Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesIosAppDataStreamsMeasurementProtocolSecrets(
+        $this,
+        $this->serviceName,
+        'measurementProtocolSecrets',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1alpha/{+parent}/measurementProtocolSecrets',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1alpha/{+parent}/measurementProtocolSecrets',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->properties_userLinks = new Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesUserLinks(
         $this,
         $this->serviceName,
@@ -1066,6 +1213,78 @@ class Google_Service_GoogleAnalyticsAdmin extends Google_Service
                 ),
               ),
             ),'updateEnhancedMeasurementSettings' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->properties_webDataStreams_measurementProtocolSecrets = new Google_Service_GoogleAnalyticsAdmin_Resource_PropertiesWebDataStreamsMeasurementProtocolSecrets(
+        $this,
+        $this->serviceName,
+        'measurementProtocolSecrets',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1alpha/{+parent}/measurementProtocolSecrets',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1alpha/{+parent}/measurementProtocolSecrets',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(

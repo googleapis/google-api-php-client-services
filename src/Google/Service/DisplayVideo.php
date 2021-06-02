@@ -53,6 +53,7 @@ class Google_Service_DisplayVideo extends Google_Service
   public $advertisers_creatives;
   public $advertisers_insertionOrders;
   public $advertisers_insertionOrders_targetingTypes_assignedTargetingOptions;
+  public $advertisers_invoices;
   public $advertisers_lineItems;
   public $advertisers_lineItems_targetingTypes_assignedTargetingOptions;
   public $advertisers_locationLists;
@@ -933,6 +934,56 @@ class Google_Service_DisplayVideo extends Google_Service
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->advertisers_invoices = new Google_Service_DisplayVideo_Resource_AdvertisersInvoices(
+        $this,
+        $this->serviceName,
+        'invoices',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'v1/advertisers/{+advertiserId}/invoices',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'advertiserId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'issueMonth' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'loiSapinInvoiceType' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'lookupInvoiceCurrency' => array(
+              'path' => 'v1/advertisers/{+advertiserId}/invoices:lookupInvoiceCurrency',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'advertiserId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'invoiceMonth' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

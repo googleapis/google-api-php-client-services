@@ -159,6 +159,34 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
     return $this->call('analyzeIamPolicyLongrunning', array($params), "Google_Service_CloudAsset_Operation");
   }
   /**
+   * Analyze moving a resource to a specified destination without kicking off the
+   * actual move. The analysis is best effort depending on the user's permissions
+   * of viewing different hierarchical policies and configurations. The policies
+   * and configuration are subject to change before the actual resource migration
+   * takes place. (v1.analyzeMove)
+   *
+   * @param string $resource Required. Name of the resource to perform the
+   * analysis against. Only GCP Project are supported as of today. Hence, this can
+   * only be Project ID (such as "projects/my-project-id") or a Project Number
+   * (such as "projects/12345").
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string destinationParent Required. Name of the GCP Folder or
+   * Organization to reparent the target resource. The analysis will be performed
+   * against hypothetically moving the resource to this specified desitination
+   * parent. This can only be a Folder number (such as "folders/123") or an
+   * Organization number (such as "organizations/123").
+   * @opt_param string view Analysis view indicating what information should be
+   * included in the analysis response. If unspecified, the default view is FULL.
+   * @return Google_Service_CloudAsset_AnalyzeMoveResponse
+   */
+  public function analyzeMove($resource, $optParams = array())
+  {
+    $params = array('resource' => $resource);
+    $params = array_merge($params, $optParams);
+    return $this->call('analyzeMove', array($params), "Google_Service_CloudAsset_AnalyzeMoveResponse");
+  }
+  /**
    * Batch gets the update history of assets that overlap a time window. For
    * IAM_POLICY content, this API outputs history when the asset and its attached
    * IAM POLICY both exist. This can create gaps in the output history. Otherwise,
@@ -308,14 +336,15 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
    * expression syntax. If the regular expression does not match any supported
    * asset type, an INVALID_ARGUMENT error will be returned.
-   * @opt_param string orderBy Optional. A comma separated list of fields
+   * @opt_param string orderBy Optional. A comma-separated list of fields
    * specifying the sorting order of the results. The default order is ascending.
    * Add " DESC" after the field name to indicate descending order. Redundant
-   * space characters are ignored. Example: "location DESC, name". Only string
-   * fields in the response are sortable, including `name`, `displayName`,
-   * `description`, `location`. All the other fields such as repeated fields
-   * (e.g., `networkTags`), map fields (e.g., `labels`) and struct fields (e.g.,
-   * `additionalAttributes`) are not supported.
+   * space characters are ignored. Example: "location DESC, name". Only singular
+   * primitive fields in the response are sortable: * name * assetType * project *
+   * displayName * description * location * kmsKey * createTime * updateTime *
+   * state * parentFullResourceName * parentAssetType All the other fields such as
+   * repeated fields (e.g., `networkTags`), map fields (e.g., `labels`) and struct
+   * fields (e.g., `additionalAttributes`) are not supported.
    * @opt_param int pageSize Optional. The page size for search result pagination.
    * Page size is capped at 500 even if a larger value is given. If set to zero,
    * server will pick an appropriate default. Returned results may be fewer than

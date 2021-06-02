@@ -62,10 +62,10 @@ class Google_Service_Logging_Resource_V2 extends Google_Service_Resource
    * information. (v2.updateCmekSettings)
    *
    * @param string $name Required. The resource name for the CMEK settings to
-   * update. "projects/[PROJECT_ID]/cmekSettings"
-   * "organizations/[ORGANIZATION_ID]/cmekSettings"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
-   * "folders/[FOLDER_ID]/cmekSettings" Example:
+   * update. < "projects/PROJECT_ID/cmekSettings"
+   * "organizations/ORGANIZATION_ID/cmekSettings"
+   * "billingAccounts/BILLING_ACCOUNT_ID/cmekSettings"
+   * "folders/FOLDER_ID/cmekSettings"Example:
    * "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can
    * currently only be configured for GCP organizations. Once configured, it
    * applies to all projects and folders in the GCP organization.

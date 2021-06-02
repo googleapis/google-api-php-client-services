@@ -31,8 +31,8 @@ class Google_Service_CloudAsset_Resource_Assets extends Google_Service_Resource
    *
    * @param string $parent Required. Name of the organization or project the
    * assets belong to. Format: "organizations/[organization-number]" (such as
-   * "organizations/123"), "projects/[project-number]" (such as "projects/my-
-   * project-id"), or "projects/[project-id]" (such as "projects/12345").
+   * "organizations/123"), "projects/[project-id]" (such as "projects/my-project-
+   * id"), or "projects/[project-number]" (such as "projects/12345").
    * @param array $optParams Optional parameters.
    *
    * @opt_param string assetTypes A list of asset types to take a snapshot for.

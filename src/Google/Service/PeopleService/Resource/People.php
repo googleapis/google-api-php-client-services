@@ -196,8 +196,8 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * specify `people/me`. - To get information about a google account, specify
    * `people/{account_id}`. - To get information about a contact, specify the
    * resource name that identifies the contact as returned by
-   * [`people.connections.list`](/people/api/rest/v1/people.connections/list). You
-   * can include up to 50 resource names in one request.
+   * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
+   * There is a maximum of 200 resource names.
    * @opt_param string sources Optional. A mask of what source types to return.
    * Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
    * @return Google_Service_PeopleService_GetPeopleResponse

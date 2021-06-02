@@ -119,11 +119,12 @@ class Google_Service_ShoppingContent_Resource_Products extends Google_Service_Re
    * @param Google_Service_ShoppingContent_Product $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The list of product attributes to be updated.
-   * Attributes specified in the update mask without a value specified in the body
-   * will be deleted from the product. Only top-level product attributes can be
-   * updated. If not defined, product attributes with set values will be updated
-   * and other attributes will stay unchanged.
+   * @opt_param string updateMask The comma-separated list of product attributes
+   * to be updated. Example: `"title,salePrice"`. Attributes specified in the
+   * update mask without a value specified in the body will be deleted from the
+   * product. Only top-level product attributes can be updated. If not defined,
+   * product attributes with set values will be updated and other attributes will
+   * stay unchanged.
    * @return Google_Service_ShoppingContent_Product
    */
   public function update($merchantId, $productId, Google_Service_ShoppingContent_Product $postBody, $optParams = array())

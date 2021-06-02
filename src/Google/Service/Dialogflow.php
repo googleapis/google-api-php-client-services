@@ -41,6 +41,7 @@ class Google_Service_Dialogflow extends Google_Service
   public $projects_locations_agents;
   public $projects_locations_agents_entityTypes;
   public $projects_locations_agents_environments;
+  public $projects_locations_agents_environments_continuousTestResults;
   public $projects_locations_agents_environments_experiments;
   public $projects_locations_agents_environments_sessions;
   public $projects_locations_agents_environments_sessions_entityTypes;
@@ -363,6 +364,44 @@ class Google_Service_Dialogflow extends Google_Service
                   'required' => true,
                 ),
                 'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'runContinuousTest' => array(
+              'path' => 'v3/{+environment}:runContinuousTest',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'environment' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_agents_environments_continuousTestResults = new Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsEnvironmentsContinuousTestResults(
+        $this,
+        $this->serviceName,
+        'continuousTestResults',
+        array(
+          'methods' => array(
+            'list' => array(
+              'path' => 'v3/{+parent}/continuousTestResults',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

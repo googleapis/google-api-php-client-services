@@ -28,6 +28,7 @@ class Google_Service_Dataflow_FlexTemplateRuntimeEnvironment extends Google_Coll
   public $maxWorkers;
   public $network;
   public $numWorkers;
+  public $sdkContainerImage;
   public $serviceAccountEmail;
   public $stagingLocation;
   public $subnetwork;
@@ -115,6 +116,14 @@ class Google_Service_Dataflow_FlexTemplateRuntimeEnvironment extends Google_Coll
   public function getNumWorkers()
   {
     return $this->numWorkers;
+  }
+  public function setSdkContainerImage($sdkContainerImage)
+  {
+    $this->sdkContainerImage = $sdkContainerImage;
+  }
+  public function getSdkContainerImage()
+  {
+    return $this->sdkContainerImage;
   }
   public function setServiceAccountEmail($serviceAccountEmail)
   {

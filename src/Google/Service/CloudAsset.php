@@ -251,6 +251,24 @@ class Google_Service_CloudAsset extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'analyzeMove' => array(
+              'path' => 'v1/{+resource}:analyzeMove',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'resource' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'destinationParent' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'batchGetAssetsHistory' => array(
               'path' => 'v1/{+parent}:batchGetAssetsHistory',
               'httpMethod' => 'GET',
