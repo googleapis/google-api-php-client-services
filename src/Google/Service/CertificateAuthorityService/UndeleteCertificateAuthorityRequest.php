@@ -15,26 +15,16 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_AccessUrls extends Google_Collection
+class Google_Service_CertificateAuthorityService_UndeleteCertificateAuthorityRequest extends Google_Model
 {
-  protected $collection_key = 'crlAccessUrls';
-  public $caCertificateAccessUrl;
-  public $crlAccessUrls;
+  public $requestId;
 
-  public function setCaCertificateAccessUrl($caCertificateAccessUrl)
+  public function setRequestId($requestId)
   {
-    $this->caCertificateAccessUrl = $caCertificateAccessUrl;
+    $this->requestId = $requestId;
   }
-  public function getCaCertificateAccessUrl()
+  public function getRequestId()
   {
-    return $this->caCertificateAccessUrl;
-  }
-  public function setCrlAccessUrls($crlAccessUrls)
-  {
-    $this->crlAccessUrls = $crlAccessUrls;
-  }
-  public function getCrlAccessUrls()
-  {
-    return $this->crlAccessUrls;
+    return $this->requestId;
   }
 }

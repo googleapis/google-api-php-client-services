@@ -15,26 +15,17 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_AccessUrls extends Google_Collection
+class Google_Service_CertificateAuthorityService_CertChain extends Google_Collection
 {
-  protected $collection_key = 'crlAccessUrls';
-  public $caCertificateAccessUrl;
-  public $crlAccessUrls;
+  protected $collection_key = 'certificates';
+  public $certificates;
 
-  public function setCaCertificateAccessUrl($caCertificateAccessUrl)
+  public function setCertificates($certificates)
   {
-    $this->caCertificateAccessUrl = $caCertificateAccessUrl;
+    $this->certificates = $certificates;
   }
-  public function getCaCertificateAccessUrl()
+  public function getCertificates()
   {
-    return $this->caCertificateAccessUrl;
-  }
-  public function setCrlAccessUrls($crlAccessUrls)
-  {
-    $this->crlAccessUrls = $crlAccessUrls;
-  }
-  public function getCrlAccessUrls()
-  {
-    return $this->crlAccessUrls;
+    return $this->certificates;
   }
 }

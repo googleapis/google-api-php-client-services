@@ -15,26 +15,25 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_AccessUrls extends Google_Collection
+class Google_Service_CertificateAuthorityService_RsaKeyType extends Google_Model
 {
-  protected $collection_key = 'crlAccessUrls';
-  public $caCertificateAccessUrl;
-  public $crlAccessUrls;
+  public $maxModulusSize;
+  public $minModulusSize;
 
-  public function setCaCertificateAccessUrl($caCertificateAccessUrl)
+  public function setMaxModulusSize($maxModulusSize)
   {
-    $this->caCertificateAccessUrl = $caCertificateAccessUrl;
+    $this->maxModulusSize = $maxModulusSize;
   }
-  public function getCaCertificateAccessUrl()
+  public function getMaxModulusSize()
   {
-    return $this->caCertificateAccessUrl;
+    return $this->maxModulusSize;
   }
-  public function setCrlAccessUrls($crlAccessUrls)
+  public function setMinModulusSize($minModulusSize)
   {
-    $this->crlAccessUrls = $crlAccessUrls;
+    $this->minModulusSize = $minModulusSize;
   }
-  public function getCrlAccessUrls()
+  public function getMinModulusSize()
   {
-    return $this->crlAccessUrls;
+    return $this->minModulusSize;
   }
 }

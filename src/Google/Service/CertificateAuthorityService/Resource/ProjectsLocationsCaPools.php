@@ -26,6 +26,91 @@
 class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCaPools extends Google_Service_Resource
 {
   /**
+   * Create a CaPool. (caPools.create)
+   *
+   * @param string $parent Required. The resource name of the location associated
+   * with the CaPool, in the format `projects/locations`.
+   * @param Google_Service_CertificateAuthorityService_CaPool $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string caPoolId Required. It must be unique within a location and
+   * match the regular expression `[a-zA-Z0-9_-]{1,63}`
+   * @opt_param string requestId Optional. An ID to identify requests. Specify a
+   * unique request ID so that if you must retry your request, the server will
+   * know to ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes since the first request. For example,
+   * consider a situation where you make an initial request and t he request times
+   * out. If you make the request again with the same request ID, the server can
+   * check if original operation with the same request ID was received, and if so,
+   * will ignore the second request. This prevents clients from accidentally
+   * creating duplicate commitments. The request ID must be a valid UUID with the
+   * exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_CertificateAuthorityService_Operation
+   */
+  public function create($parent, Google_Service_CertificateAuthorityService_CaPool $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('create', array($params), "Google_Service_CertificateAuthorityService_Operation");
+  }
+  /**
+   * Delete a CaPool. (caPools.delete)
+   *
+   * @param string $name Required. The resource name for this CaPool in the format
+   * `projects/locations/caPools`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Optional. An ID to identify requests. Specify a
+   * unique request ID so that if you must retry your request, the server will
+   * know to ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes since the first request. For example,
+   * consider a situation where you make an initial request and t he request times
+   * out. If you make the request again with the same request ID, the server can
+   * check if original operation with the same request ID was received, and if so,
+   * will ignore the second request. This prevents clients from accidentally
+   * creating duplicate commitments. The request ID must be a valid UUID with the
+   * exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_CertificateAuthorityService_Operation
+   */
+  public function delete($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', array($params), "Google_Service_CertificateAuthorityService_Operation");
+  }
+  /**
+   * FetchCaCerts returns the current trust anchor for the CaPool. This will
+   * include CA certificate chains for all ACTIVE CertificateAuthority resources
+   * in the CaPool. (caPools.fetchCaCerts)
+   *
+   * @param string $caPool Required. The resource name for the CaPool in the
+   * format `projects/locations/caPools`.
+   * @param Google_Service_CertificateAuthorityService_FetchCaCertsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_CertificateAuthorityService_FetchCaCertsResponse
+   */
+  public function fetchCaCerts($caPool, Google_Service_CertificateAuthorityService_FetchCaCertsRequest $postBody, $optParams = array())
+  {
+    $params = array('caPool' => $caPool, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchCaCerts', array($params), "Google_Service_CertificateAuthorityService_FetchCaCertsResponse");
+  }
+  /**
+   * Returns a CaPool. (caPools.get)
+   *
+   * @param string $name Required. The name of the CaPool to get.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_CertificateAuthorityService_CaPool
+   */
+  public function get($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('get', array($params), "Google_Service_CertificateAuthorityService_CaPool");
+  }
+  /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (caPools.getIamPolicy)
    *
@@ -49,6 +134,59 @@ class Google_Service_CertificateAuthorityService_Resource_ProjectsLocationsCaPoo
     $params = array('resource' => $resource);
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', array($params), "Google_Service_CertificateAuthorityService_Policy");
+  }
+  /**
+   * Lists CaPools. (caPools.listProjectsLocationsCaPools)
+   *
+   * @param string $parent Required. The resource name of the location associated
+   * with the CaPools, in the format `projects/locations`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Only include resources that match the
+   * filter in the response.
+   * @opt_param string orderBy Optional. Specify how the results should be sorted.
+   * @opt_param int pageSize Optional. Limit on the number of CaPools to include
+   * in the response. Further CaPools can subsequently be obtained by including
+   * the ListCaPoolsResponse.next_page_token in a subsequent request. If
+   * unspecified, the server will pick an appropriate default.
+   * @opt_param string pageToken Optional. Pagination token, returned earlier via
+   * ListCaPoolsResponse.next_page_token.
+   * @return Google_Service_CertificateAuthorityService_ListCaPoolsResponse
+   */
+  public function listProjectsLocationsCaPools($parent, $optParams = array())
+  {
+    $params = array('parent' => $parent);
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_CertificateAuthorityService_ListCaPoolsResponse");
+  }
+  /**
+   * Update a CaPool. (caPools.patch)
+   *
+   * @param string $name Output only. The resource name for this CaPool in the
+   * format `projects/locations/caPools`.
+   * @param Google_Service_CertificateAuthorityService_CaPool $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Optional. An ID to identify requests. Specify a
+   * unique request ID so that if you must retry your request, the server will
+   * know to ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes since the first request. For example,
+   * consider a situation where you make an initial request and t he request times
+   * out. If you make the request again with the same request ID, the server can
+   * check if original operation with the same request ID was received, and if so,
+   * will ignore the second request. This prevents clients from accidentally
+   * creating duplicate commitments. The request ID must be a valid UUID with the
+   * exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Required. A list of fields to be updated in this
+   * request.
+   * @return Google_Service_CertificateAuthorityService_Operation
+   */
+  public function patch($name, Google_Service_CertificateAuthorityService_CaPool $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', array($params), "Google_Service_CertificateAuthorityService_Operation");
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

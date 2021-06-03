@@ -17,9 +17,18 @@
 
 class Google_Service_Document_GoogleCloudDocumentaiV1ReviewDocumentRequest extends Google_Model
 {
+  public $enableSchemaValidation;
   protected $inlineDocumentType = 'Google_Service_Document_GoogleCloudDocumentaiV1Document';
   protected $inlineDocumentDataType = '';
 
+  public function setEnableSchemaValidation($enableSchemaValidation)
+  {
+    $this->enableSchemaValidation = $enableSchemaValidation;
+  }
+  public function getEnableSchemaValidation()
+  {
+    return $this->enableSchemaValidation;
+  }
   /**
    * @param Google_Service_Document_GoogleCloudDocumentaiV1Document
    */

@@ -15,25 +15,6 @@
  * the License.
  */
 
-class Google_Service_CertificateAuthorityService_PublicKey extends Google_Model
+class Google_Service_Document_GoogleCloudDocumentaiV1beta3EnableProcessorResponse extends Google_Model
 {
-  public $format;
-  public $key;
-
-  public function setFormat($format)
-  {
-    $this->format = $format;
-  }
-  public function getFormat()
-  {
-    return $this->format;
-  }
-  public function setKey($key)
-  {
-    $this->key = $key;
-  }
-  public function getKey()
-  {
-    return $this->key;
-  }
 }
