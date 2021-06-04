@@ -26,24 +26,27 @@
 class Google_Service_DisplayVideo_Resource_AdvertisersInvoices extends Google_Service_Resource
 {
   /**
-   * List invoices for an advertiser. (invoices.listAdvertisersInvoices)
+   * Lists invoices posted for an advertiser in a given month. Invoices generated
+   * by billing profiles with a "Partner" invoice level are not retrievable
+   * through this method. (invoices.listAdvertisersInvoices)
    *
    * @param string $advertiserId Required. The ID of the advertiser to list
    * invoices for.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string issueMonth Required. Month for which invoices are needed in
-   * the format YYYYMM.
-   * @opt_param string loiSapinInvoiceType Select type of invoice to query for Loi
-   * Sapin advertisers. Otherwise its ignored.
+   * @opt_param string issueMonth The month to list the invoices for. If not set,
+   * the request will retrieve invoices for the previous month. Must be in the
+   * format YYYYMM.
+   * @opt_param string loiSapinInvoiceType Select type of invoice to retrieve for
+   * Loi Sapin advertisers. Only applicable to Loi Sapin advertisers. Will be
+   * ignored otherwise.
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
    * @opt_param string pageToken A token identifying a page of results the server
-   * should return. Typically, this is the value of
-   * [ListInvoicesResponse.next_page_token] returned from the previous call to
-   * `ListInvoice` method. If not specified, the first page of results will be
-   * returned.
+   * should return. Typically, this is the value of next_page_token returned from
+   * the previous call to `ListInvoices` method. If not specified, the first page
+   * of results will be returned.
    * @return Google_Service_DisplayVideo_ListInvoicesResponse
    */
   public function listAdvertisersInvoices($advertiserId, $optParams = array())
@@ -53,15 +56,16 @@ class Google_Service_DisplayVideo_Resource_AdvertisersInvoices extends Google_Se
     return $this->call('list', array($params), "Google_Service_DisplayVideo_ListInvoicesResponse");
   }
   /**
-   * Lookup invoice currency for an advertiser. (invoices.lookupInvoiceCurrency)
+   * Retrieves the invoice currency used by an advertiser in a given month.
+   * (invoices.lookupInvoiceCurrency)
    *
    * @param string $advertiserId Required. The ID of the advertiser to lookup
    * currency for.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string invoiceMonth Month for which currency is needed in the
-   * format YYYYMM. If not set Api would return currency based on current
-   * settings.
+   * @opt_param string invoiceMonth Month for which the currency is needed. If not
+   * set, the request will return existing currency settings for the advertiser.
+   * Must be in the format YYYYMM.
    * @return Google_Service_DisplayVideo_LookupInvoiceCurrencyResponse
    */
   public function lookupInvoiceCurrency($advertiserId, $optParams = array())
