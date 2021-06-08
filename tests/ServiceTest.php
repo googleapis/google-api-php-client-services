@@ -18,7 +18,9 @@
  * under the License.
  */
 
-class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class Google_Service_ServiceTest extends TestCase
 {
   /**
    * @dataProvider serviceProvider
