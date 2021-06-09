@@ -15,34 +15,34 @@
  * the License.
  */
 
-class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink extends Google_Model
+class Google_Service_Genomics_CheckInResponse extends Google_Model
 {
-  public $createTime;
-  public $name;
-  public $project;
+  public $deadline;
+  public $features;
+  public $metadata;
 
-  public function setCreateTime($createTime)
+  public function setDeadline($deadline)
   {
-    $this->createTime = $createTime;
+    $this->deadline = $deadline;
   }
-  public function getCreateTime()
+  public function getDeadline()
   {
-    return $this->createTime;
+    return $this->deadline;
   }
-  public function setName($name)
+  public function setFeatures($features)
   {
-    $this->name = $name;
+    $this->features = $features;
   }
-  public function getName()
+  public function getFeatures()
   {
-    return $this->name;
+    return $this->features;
   }
-  public function setProject($project)
+  public function setMetadata($metadata)
   {
-    $this->project = $project;
+    $this->metadata = $metadata;
   }
-  public function getProject()
+  public function getMetadata()
   {
-    return $this->project;
+    return $this->metadata;
   }
 }

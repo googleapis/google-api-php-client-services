@@ -15,34 +15,14 @@
  * the License.
  */
 
-class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink extends Google_Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $genomicsService = new Google_Service_Genomics(...);
+ *   $projects = $genomicsService->projects;
+ *  </code>
+ */
+class Google_Service_Genomics_Resource_Projects extends Google_Service_Resource
 {
-  public $createTime;
-  public $name;
-  public $project;
-
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setProject($project)
-  {
-    $this->project = $project;
-  }
-  public function getProject()
-  {
-    return $this->project;
-  }
 }

@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink extends Google_Model
+class Google_Service_Genomics_TimestampedEvent extends Google_Model
 {
-  public $createTime;
-  public $name;
-  public $project;
+  public $data;
+  public $timestamp;
 
-  public function setCreateTime($createTime)
+  public function setData($data)
   {
-    $this->createTime = $createTime;
+    $this->data = $data;
   }
-  public function getCreateTime()
+  public function getData()
   {
-    return $this->createTime;
+    return $this->data;
   }
-  public function setName($name)
+  public function setTimestamp($timestamp)
   {
-    $this->name = $name;
+    $this->timestamp = $timestamp;
   }
-  public function getName()
+  public function getTimestamp()
   {
-    return $this->name;
-  }
-  public function setProject($project)
-  {
-    $this->project = $project;
-  }
-  public function getProject()
-  {
-    return $this->project;
+    return $this->timestamp;
   }
 }

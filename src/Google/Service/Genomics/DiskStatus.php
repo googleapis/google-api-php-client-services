@@ -15,34 +15,25 @@
  * the License.
  */
 
-class Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaFirebaseLink extends Google_Model
+class Google_Service_Genomics_DiskStatus extends Google_Model
 {
-  public $createTime;
-  public $name;
-  public $project;
+  public $freeSpaceBytes;
+  public $totalSpaceBytes;
 
-  public function setCreateTime($createTime)
+  public function setFreeSpaceBytes($freeSpaceBytes)
   {
-    $this->createTime = $createTime;
+    $this->freeSpaceBytes = $freeSpaceBytes;
   }
-  public function getCreateTime()
+  public function getFreeSpaceBytes()
   {
-    return $this->createTime;
+    return $this->freeSpaceBytes;
   }
-  public function setName($name)
+  public function setTotalSpaceBytes($totalSpaceBytes)
   {
-    $this->name = $name;
+    $this->totalSpaceBytes = $totalSpaceBytes;
   }
-  public function getName()
+  public function getTotalSpaceBytes()
   {
-    return $this->name;
-  }
-  public function setProject($project)
-  {
-    $this->project = $project;
-  }
-  public function getProject()
-  {
-    return $this->project;
+    return $this->totalSpaceBytes;
   }
 }

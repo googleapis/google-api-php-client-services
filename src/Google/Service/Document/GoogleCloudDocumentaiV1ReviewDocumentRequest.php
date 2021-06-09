@@ -20,6 +20,7 @@ class Google_Service_Document_GoogleCloudDocumentaiV1ReviewDocumentRequest exten
   public $enableSchemaValidation;
   protected $inlineDocumentType = 'Google_Service_Document_GoogleCloudDocumentaiV1Document';
   protected $inlineDocumentDataType = '';
+  public $priority;
 
   public function setEnableSchemaValidation($enableSchemaValidation)
   {
@@ -42,5 +43,13 @@ class Google_Service_Document_GoogleCloudDocumentaiV1ReviewDocumentRequest exten
   public function getInlineDocument()
   {
     return $this->inlineDocument;
+  }
+  public function setPriority($priority)
+  {
+    $this->priority = $priority;
+  }
+  public function getPriority()
+  {
+    return $this->priority;
   }
 }
