@@ -15,14 +15,15 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 
-class ListFeaturesResponse extends \Google\Collection
+class ListSqlIntegrationsResponse extends \Google\Collection
 {
-  protected $collection_key = 'resources';
+  protected $collection_key = 'unreachable';
   public $nextPageToken;
-  protected $resourcesType = Feature::class;
-  protected $resourcesDataType = 'array';
+  protected $sqlIntegrationsType = SqlIntegration::class;
+  protected $sqlIntegrationsDataType = 'array';
+  public $unreachable;
 
   public function setNextPageToken($nextPageToken)
   {
@@ -33,20 +34,28 @@ class ListFeaturesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Feature[]
+   * @param SqlIntegration[]
    */
-  public function setResources($resources)
+  public function setSqlIntegrations($sqlIntegrations)
   {
-    $this->resources = $resources;
+    $this->sqlIntegrations = $sqlIntegrations;
   }
   /**
-   * @return Feature[]
+   * @return SqlIntegration[]
    */
-  public function getResources()
+  public function getSqlIntegrations()
   {
-    return $this->resources;
+    return $this->sqlIntegrations;
+  }
+  public function setUnreachable($unreachable)
+  {
+    $this->unreachable = $unreachable;
+  }
+  public function getUnreachable()
+  {
+    return $this->unreachable;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListFeaturesResponse::class, 'Google_Service_GKEHub_ListFeaturesResponse');
+class_alias(ListSqlIntegrationsResponse::class, 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_ListSqlIntegrationsResponse');

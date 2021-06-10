@@ -15,12 +15,14 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementSyncError extends Google_Collection
+namespace Google\Service\GKEHub;
+
+class ConfigManagementSyncError extends \Google\Collection
 {
   protected $collection_key = 'errorResources';
   public $code;
   public $errorMessage;
-  protected $errorResourcesType = 'Google_Service_GKEHub_ConfigManagementErrorResource';
+  protected $errorResourcesType = ConfigManagementErrorResource::class;
   protected $errorResourcesDataType = 'array';
 
   public function setCode($code)
@@ -40,17 +42,20 @@ class Google_Service_GKEHub_ConfigManagementSyncError extends Google_Collection
     return $this->errorMessage;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementErrorResource[]
+   * @param ConfigManagementErrorResource[]
    */
   public function setErrorResources($errorResources)
   {
     $this->errorResources = $errorResources;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementErrorResource[]
+   * @return ConfigManagementErrorResource[]
    */
   public function getErrorResources()
   {
     return $this->errorResources;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementSyncError::class, 'Google_Service_GKEHub_ConfigManagementSyncError');

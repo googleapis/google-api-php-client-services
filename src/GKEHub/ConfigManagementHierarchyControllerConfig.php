@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementHierarchyControllerConfig extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementHierarchyControllerConfig extends \Google\Model
 {
   public $enableHierarchicalResourceQuota;
   public $enablePodTreeLabels;
@@ -46,3 +48,6 @@ class Google_Service_GKEHub_ConfigManagementHierarchyControllerConfig extends Go
     return $this->enabled;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementHierarchyControllerConfig::class, 'Google_Service_GKEHub_ConfigManagementHierarchyControllerConfig');

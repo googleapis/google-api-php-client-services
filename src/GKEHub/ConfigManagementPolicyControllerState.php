@@ -15,39 +15,44 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementPolicyControllerState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementPolicyControllerState extends \Google\Model
 {
-  protected $deploymentStateType = 'Google_Service_GKEHub_ConfigManagementGatekeeperDeploymentState';
+  protected $deploymentStateType = ConfigManagementGatekeeperDeploymentState::class;
   protected $deploymentStateDataType = '';
-  protected $versionType = 'Google_Service_GKEHub_ConfigManagementPolicyControllerVersion';
+  protected $versionType = ConfigManagementPolicyControllerVersion::class;
   protected $versionDataType = '';
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementGatekeeperDeploymentState
+   * @param ConfigManagementGatekeeperDeploymentState
    */
-  public function setDeploymentState(Google_Service_GKEHub_ConfigManagementGatekeeperDeploymentState $deploymentState)
+  public function setDeploymentState(ConfigManagementGatekeeperDeploymentState $deploymentState)
   {
     $this->deploymentState = $deploymentState;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementGatekeeperDeploymentState
+   * @return ConfigManagementGatekeeperDeploymentState
    */
   public function getDeploymentState()
   {
     return $this->deploymentState;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementPolicyControllerVersion
+   * @param ConfigManagementPolicyControllerVersion
    */
-  public function setVersion(Google_Service_GKEHub_ConfigManagementPolicyControllerVersion $version)
+  public function setVersion(ConfigManagementPolicyControllerVersion $version)
   {
     $this->version = $version;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementPolicyControllerVersion
+   * @return ConfigManagementPolicyControllerVersion
    */
   public function getVersion()
   {
     return $this->version;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementPolicyControllerState::class, 'Google_Service_GKEHub_ConfigManagementPolicyControllerState');

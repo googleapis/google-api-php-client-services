@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_FeatureResourceState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class FeatureResourceState extends \Google\Model
 {
   public $state;
 
@@ -28,3 +30,6 @@ class Google_Service_GKEHub_FeatureResourceState extends Google_Model
     return $this->state;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(FeatureResourceState::class, 'Google_Service_GKEHub_FeatureResourceState');

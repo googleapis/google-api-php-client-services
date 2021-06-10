@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementPolicyControllerVersion extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementPolicyControllerVersion extends \Google\Model
 {
   public $version;
 
@@ -28,3 +30,6 @@ class Google_Service_GKEHub_ConfigManagementPolicyControllerVersion extends Goog
     return $this->version;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementPolicyControllerVersion::class, 'Google_Service_GKEHub_ConfigManagementPolicyControllerVersion');

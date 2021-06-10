@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementGroupVersionKind extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementGroupVersionKind extends \Google\Model
 {
   public $group;
   public $kind;
@@ -46,3 +48,6 @@ class Google_Service_GKEHub_ConfigManagementGroupVersionKind extends Google_Mode
     return $this->version;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementGroupVersionKind::class, 'Google_Service_GKEHub_ConfigManagementGroupVersionKind');

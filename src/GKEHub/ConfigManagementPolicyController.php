@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementPolicyController extends Google_Collection
+namespace Google\Service\GKEHub;
+
+class ConfigManagementPolicyController extends \Google\Collection
 {
   protected $collection_key = 'exemptableNamespaces';
   public $auditIntervalSeconds;
@@ -74,3 +76,6 @@ class Google_Service_GKEHub_ConfigManagementPolicyController extends Google_Coll
     return $this->templateLibraryInstalled;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementPolicyController::class, 'Google_Service_GKEHub_ConfigManagementPolicyController');

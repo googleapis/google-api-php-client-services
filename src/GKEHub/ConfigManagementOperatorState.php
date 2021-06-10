@@ -15,11 +15,13 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementOperatorState extends Google_Collection
+namespace Google\Service\GKEHub;
+
+class ConfigManagementOperatorState extends \Google\Collection
 {
   protected $collection_key = 'errors';
   public $deploymentState;
-  protected $errorsType = 'Google_Service_GKEHub_ConfigManagementInstallError';
+  protected $errorsType = ConfigManagementInstallError::class;
   protected $errorsDataType = 'array';
   public $version;
 
@@ -32,14 +34,14 @@ class Google_Service_GKEHub_ConfigManagementOperatorState extends Google_Collect
     return $this->deploymentState;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementInstallError[]
+   * @param ConfigManagementInstallError[]
    */
   public function setErrors($errors)
   {
     $this->errors = $errors;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementInstallError[]
+   * @return ConfigManagementInstallError[]
    */
   public function getErrors()
   {
@@ -54,3 +56,6 @@ class Google_Service_GKEHub_ConfigManagementOperatorState extends Google_Collect
     return $this->version;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementOperatorState::class, 'Google_Service_GKEHub_ConfigManagementOperatorState');

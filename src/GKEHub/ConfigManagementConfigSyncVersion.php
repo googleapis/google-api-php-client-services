@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementConfigSyncVersion extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementConfigSyncVersion extends \Google\Model
 {
   public $gitSync;
   public $importer;
@@ -73,3 +75,6 @@ class Google_Service_GKEHub_ConfigManagementConfigSyncVersion extends Google_Mod
     return $this->syncer;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementConfigSyncVersion::class, 'Google_Service_GKEHub_ConfigManagementConfigSyncVersion');

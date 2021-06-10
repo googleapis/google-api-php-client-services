@@ -15,39 +15,44 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementHierarchyControllerState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementHierarchyControllerState extends \Google\Model
 {
-  protected $stateType = 'Google_Service_GKEHub_ConfigManagementHierarchyControllerDeploymentState';
+  protected $stateType = ConfigManagementHierarchyControllerDeploymentState::class;
   protected $stateDataType = '';
-  protected $versionType = 'Google_Service_GKEHub_ConfigManagementHierarchyControllerVersion';
+  protected $versionType = ConfigManagementHierarchyControllerVersion::class;
   protected $versionDataType = '';
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementHierarchyControllerDeploymentState
+   * @param ConfigManagementHierarchyControllerDeploymentState
    */
-  public function setState(Google_Service_GKEHub_ConfigManagementHierarchyControllerDeploymentState $state)
+  public function setState(ConfigManagementHierarchyControllerDeploymentState $state)
   {
     $this->state = $state;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementHierarchyControllerDeploymentState
+   * @return ConfigManagementHierarchyControllerDeploymentState
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementHierarchyControllerVersion
+   * @param ConfigManagementHierarchyControllerVersion
    */
-  public function setVersion(Google_Service_GKEHub_ConfigManagementHierarchyControllerVersion $version)
+  public function setVersion(ConfigManagementHierarchyControllerVersion $version)
   {
     $this->version = $version;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementHierarchyControllerVersion
+   * @return ConfigManagementHierarchyControllerVersion
    */
   public function getVersion()
   {
     return $this->version;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementHierarchyControllerState::class, 'Google_Service_GKEHub_ConfigManagementHierarchyControllerState');

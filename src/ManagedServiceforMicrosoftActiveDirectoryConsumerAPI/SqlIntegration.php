@@ -15,29 +15,47 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 
-class FeatureState extends \Google\Model
+class SqlIntegration extends \Google\Model
 {
-  public $code;
-  public $description;
+  public $createTime;
+  public $name;
+  public $sqlInstance;
+  public $state;
   public $updateTime;
 
-  public function setCode($code)
+  public function setCreateTime($createTime)
   {
-    $this->code = $code;
+    $this->createTime = $createTime;
   }
-  public function getCode()
+  public function getCreateTime()
   {
-    return $this->code;
+    return $this->createTime;
   }
-  public function setDescription($description)
+  public function setName($name)
   {
-    $this->description = $description;
+    $this->name = $name;
   }
-  public function getDescription()
+  public function getName()
   {
-    return $this->description;
+    return $this->name;
+  }
+  public function setSqlInstance($sqlInstance)
+  {
+    $this->sqlInstance = $sqlInstance;
+  }
+  public function getSqlInstance()
+  {
+    return $this->sqlInstance;
+  }
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  public function getState()
+  {
+    return $this->state;
   }
   public function setUpdateTime($updateTime)
   {
@@ -50,4 +68,4 @@ class FeatureState extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FeatureState::class, 'Google_Service_GKEHub_FeatureState');
+class_alias(SqlIntegration::class, 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration');

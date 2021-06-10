@@ -15,11 +15,13 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementSyncState extends Google_Collection
+namespace Google\Service\GKEHub;
+
+class ConfigManagementSyncState extends \Google\Collection
 {
   protected $collection_key = 'errors';
   public $code;
-  protected $errorsType = 'Google_Service_GKEHub_ConfigManagementSyncError';
+  protected $errorsType = ConfigManagementSyncError::class;
   protected $errorsDataType = 'array';
   public $importToken;
   public $lastSync;
@@ -36,14 +38,14 @@ class Google_Service_GKEHub_ConfigManagementSyncState extends Google_Collection
     return $this->code;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementSyncError[]
+   * @param ConfigManagementSyncError[]
    */
   public function setErrors($errors)
   {
     $this->errors = $errors;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementSyncError[]
+   * @return ConfigManagementSyncError[]
    */
   public function getErrors()
   {
@@ -90,3 +92,6 @@ class Google_Service_GKEHub_ConfigManagementSyncState extends Google_Collection
     return $this->syncToken;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementSyncState::class, 'Google_Service_GKEHub_ConfigManagementSyncState');

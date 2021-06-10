@@ -15,23 +15,28 @@
  * the License.
  */
 
-class Google_Service_GKEHub_MembershipFeatureSpec extends Google_Model
+namespace Google\Service\GKEHub;
+
+class MembershipFeatureSpec extends \Google\Model
 {
-  protected $configmanagementType = 'Google_Service_GKEHub_ConfigManagementMembershipSpec';
+  protected $configmanagementType = ConfigManagementMembershipSpec::class;
   protected $configmanagementDataType = '';
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementMembershipSpec
+   * @param ConfigManagementMembershipSpec
    */
-  public function setConfigmanagement(Google_Service_GKEHub_ConfigManagementMembershipSpec $configmanagement)
+  public function setConfigmanagement(ConfigManagementMembershipSpec $configmanagement)
   {
     $this->configmanagement = $configmanagement;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementMembershipSpec
+   * @return ConfigManagementMembershipSpec
    */
   public function getConfigmanagement()
   {
     return $this->configmanagement;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(MembershipFeatureSpec::class, 'Google_Service_GKEHub_MembershipFeatureSpec');

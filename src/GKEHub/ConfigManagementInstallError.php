@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementInstallError extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementInstallError extends \Google\Model
 {
   public $errorMessage;
 
@@ -28,3 +30,6 @@ class Google_Service_GKEHub_ConfigManagementInstallError extends Google_Model
     return $this->errorMessage;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementInstallError::class, 'Google_Service_GKEHub_ConfigManagementInstallError');

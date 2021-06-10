@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementHierarchyControllerVersion extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementHierarchyControllerVersion extends \Google\Model
 {
   public $extension;
   public $hnc;
@@ -37,3 +39,6 @@ class Google_Service_GKEHub_ConfigManagementHierarchyControllerVersion extends G
     return $this->hnc;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementHierarchyControllerVersion::class, 'Google_Service_GKEHub_ConfigManagementHierarchyControllerVersion');

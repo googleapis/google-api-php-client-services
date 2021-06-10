@@ -15,23 +15,28 @@
  * the License.
  */
 
-class Google_Service_GKEHub_CommonFeatureSpec extends Google_Model
+namespace Google\Service\GKEHub;
+
+class CommonFeatureSpec extends \Google\Model
 {
-  protected $multiclusteringressType = 'Google_Service_GKEHub_MultiClusterIngressFeatureSpec';
+  protected $multiclusteringressType = MultiClusterIngressFeatureSpec::class;
   protected $multiclusteringressDataType = '';
 
   /**
-   * @param Google_Service_GKEHub_MultiClusterIngressFeatureSpec
+   * @param MultiClusterIngressFeatureSpec
    */
-  public function setMulticlusteringress(Google_Service_GKEHub_MultiClusterIngressFeatureSpec $multiclusteringress)
+  public function setMulticlusteringress(MultiClusterIngressFeatureSpec $multiclusteringress)
   {
     $this->multiclusteringress = $multiclusteringress;
   }
   /**
-   * @return Google_Service_GKEHub_MultiClusterIngressFeatureSpec
+   * @return MultiClusterIngressFeatureSpec
    */
   public function getMulticlusteringress()
   {
     return $this->multiclusteringress;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(CommonFeatureSpec::class, 'Google_Service_GKEHub_CommonFeatureSpec');

@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_MultiClusterIngressFeatureSpec extends Google_Model
+namespace Google\Service\GKEHub;
+
+class MultiClusterIngressFeatureSpec extends \Google\Model
 {
   public $configMembership;
 
@@ -28,3 +30,6 @@ class Google_Service_GKEHub_MultiClusterIngressFeatureSpec extends Google_Model
     return $this->configMembership;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(MultiClusterIngressFeatureSpec::class, 'Google_Service_GKEHub_MultiClusterIngressFeatureSpec');

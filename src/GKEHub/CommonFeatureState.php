@@ -15,23 +15,28 @@
  * the License.
  */
 
-class Google_Service_GKEHub_CommonFeatureState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class CommonFeatureState extends \Google\Model
 {
-  protected $stateType = 'Google_Service_GKEHub_FeatureState';
+  protected $stateType = FeatureState::class;
   protected $stateDataType = '';
 
   /**
-   * @param Google_Service_GKEHub_FeatureState
+   * @param FeatureState
    */
-  public function setState(Google_Service_GKEHub_FeatureState $state)
+  public function setState(FeatureState $state)
   {
     $this->state = $state;
   }
   /**
-   * @return Google_Service_GKEHub_FeatureState
+   * @return FeatureState
    */
   public function getState()
   {
     return $this->state;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(CommonFeatureState::class, 'Google_Service_GKEHub_CommonFeatureState');

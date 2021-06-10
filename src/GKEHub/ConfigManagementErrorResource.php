@@ -15,23 +15,25 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementErrorResource extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementErrorResource extends \Google\Model
 {
-  protected $resourceGvkType = 'Google_Service_GKEHub_ConfigManagementGroupVersionKind';
+  protected $resourceGvkType = ConfigManagementGroupVersionKind::class;
   protected $resourceGvkDataType = '';
   public $resourceName;
   public $resourceNamespace;
   public $sourcePath;
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementGroupVersionKind
+   * @param ConfigManagementGroupVersionKind
    */
-  public function setResourceGvk(Google_Service_GKEHub_ConfigManagementGroupVersionKind $resourceGvk)
+  public function setResourceGvk(ConfigManagementGroupVersionKind $resourceGvk)
   {
     $this->resourceGvk = $resourceGvk;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementGroupVersionKind
+   * @return ConfigManagementGroupVersionKind
    */
   public function getResourceGvk()
   {
@@ -62,3 +64,6 @@ class Google_Service_GKEHub_ConfigManagementErrorResource extends Google_Model
     return $this->sourcePath;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementErrorResource::class, 'Google_Service_GKEHub_ConfigManagementErrorResource');

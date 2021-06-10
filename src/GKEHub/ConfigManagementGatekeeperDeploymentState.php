@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementGatekeeperDeploymentState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementGatekeeperDeploymentState extends \Google\Model
 {
   public $gatekeeperAudit;
   public $gatekeeperControllerManagerState;
@@ -37,3 +39,6 @@ class Google_Service_GKEHub_ConfigManagementGatekeeperDeploymentState extends Go
     return $this->gatekeeperControllerManagerState;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementGatekeeperDeploymentState::class, 'Google_Service_GKEHub_ConfigManagementGatekeeperDeploymentState');

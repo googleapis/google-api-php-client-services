@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementConfigSyncDeploymentState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementConfigSyncDeploymentState extends \Google\Model
 {
   public $gitSync;
   public $importer;
@@ -73,3 +75,6 @@ class Google_Service_GKEHub_ConfigManagementConfigSyncDeploymentState extends Go
     return $this->syncer;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementConfigSyncDeploymentState::class, 'Google_Service_GKEHub_ConfigManagementConfigSyncDeploymentState');

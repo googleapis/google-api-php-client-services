@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementGitConfig extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementGitConfig extends \Google\Model
 {
   public $gcpServiceAccountEmail;
   public $httpsProxy;
@@ -91,3 +93,6 @@ class Google_Service_GKEHub_ConfigManagementGitConfig extends Google_Model
     return $this->syncWaitSecs;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementGitConfig::class, 'Google_Service_GKEHub_ConfigManagementGitConfig');

@@ -15,39 +15,44 @@
  * the License.
  */
 
-class Google_Service_GKEHub_MembershipFeatureState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class MembershipFeatureState extends \Google\Model
 {
-  protected $configmanagementType = 'Google_Service_GKEHub_ConfigManagementMembershipState';
+  protected $configmanagementType = ConfigManagementMembershipState::class;
   protected $configmanagementDataType = '';
-  protected $stateType = 'Google_Service_GKEHub_FeatureState';
+  protected $stateType = FeatureState::class;
   protected $stateDataType = '';
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementMembershipState
+   * @param ConfigManagementMembershipState
    */
-  public function setConfigmanagement(Google_Service_GKEHub_ConfigManagementMembershipState $configmanagement)
+  public function setConfigmanagement(ConfigManagementMembershipState $configmanagement)
   {
     $this->configmanagement = $configmanagement;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementMembershipState
+   * @return ConfigManagementMembershipState
    */
   public function getConfigmanagement()
   {
     return $this->configmanagement;
   }
   /**
-   * @param Google_Service_GKEHub_FeatureState
+   * @param FeatureState
    */
-  public function setState(Google_Service_GKEHub_FeatureState $state)
+  public function setState(FeatureState $state)
   {
     $this->state = $state;
   }
   /**
-   * @return Google_Service_GKEHub_FeatureState
+   * @return FeatureState
    */
   public function getState()
   {
     return $this->state;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(MembershipFeatureState::class, 'Google_Service_GKEHub_MembershipFeatureState');

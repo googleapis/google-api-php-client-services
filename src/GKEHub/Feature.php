@@ -15,21 +15,23 @@
  * the License.
  */
 
-class Google_Service_GKEHub_Feature extends Google_Model
+namespace Google\Service\GKEHub;
+
+class Feature extends \Google\Model
 {
   public $createTime;
   public $deleteTime;
   public $labels;
-  protected $membershipSpecsType = 'Google_Service_GKEHub_MembershipFeatureSpec';
+  protected $membershipSpecsType = MembershipFeatureSpec::class;
   protected $membershipSpecsDataType = 'map';
-  protected $membershipStatesType = 'Google_Service_GKEHub_MembershipFeatureState';
+  protected $membershipStatesType = MembershipFeatureState::class;
   protected $membershipStatesDataType = 'map';
   public $name;
-  protected $resourceStateType = 'Google_Service_GKEHub_FeatureResourceState';
+  protected $resourceStateType = FeatureResourceState::class;
   protected $resourceStateDataType = '';
-  protected $specType = 'Google_Service_GKEHub_CommonFeatureSpec';
+  protected $specType = CommonFeatureSpec::class;
   protected $specDataType = '';
-  protected $stateType = 'Google_Service_GKEHub_CommonFeatureState';
+  protected $stateType = CommonFeatureState::class;
   protected $stateDataType = '';
   public $updateTime;
 
@@ -58,28 +60,28 @@ class Google_Service_GKEHub_Feature extends Google_Model
     return $this->labels;
   }
   /**
-   * @param Google_Service_GKEHub_MembershipFeatureSpec[]
+   * @param MembershipFeatureSpec[]
    */
   public function setMembershipSpecs($membershipSpecs)
   {
     $this->membershipSpecs = $membershipSpecs;
   }
   /**
-   * @return Google_Service_GKEHub_MembershipFeatureSpec[]
+   * @return MembershipFeatureSpec[]
    */
   public function getMembershipSpecs()
   {
     return $this->membershipSpecs;
   }
   /**
-   * @param Google_Service_GKEHub_MembershipFeatureState[]
+   * @param MembershipFeatureState[]
    */
   public function setMembershipStates($membershipStates)
   {
     $this->membershipStates = $membershipStates;
   }
   /**
-   * @return Google_Service_GKEHub_MembershipFeatureState[]
+   * @return MembershipFeatureState[]
    */
   public function getMembershipStates()
   {
@@ -94,42 +96,42 @@ class Google_Service_GKEHub_Feature extends Google_Model
     return $this->name;
   }
   /**
-   * @param Google_Service_GKEHub_FeatureResourceState
+   * @param FeatureResourceState
    */
-  public function setResourceState(Google_Service_GKEHub_FeatureResourceState $resourceState)
+  public function setResourceState(FeatureResourceState $resourceState)
   {
     $this->resourceState = $resourceState;
   }
   /**
-   * @return Google_Service_GKEHub_FeatureResourceState
+   * @return FeatureResourceState
    */
   public function getResourceState()
   {
     return $this->resourceState;
   }
   /**
-   * @param Google_Service_GKEHub_CommonFeatureSpec
+   * @param CommonFeatureSpec
    */
-  public function setSpec(Google_Service_GKEHub_CommonFeatureSpec $spec)
+  public function setSpec(CommonFeatureSpec $spec)
   {
     $this->spec = $spec;
   }
   /**
-   * @return Google_Service_GKEHub_CommonFeatureSpec
+   * @return CommonFeatureSpec
    */
   public function getSpec()
   {
     return $this->spec;
   }
   /**
-   * @param Google_Service_GKEHub_CommonFeatureState
+   * @param CommonFeatureState
    */
-  public function setState(Google_Service_GKEHub_CommonFeatureState $state)
+  public function setState(CommonFeatureState $state)
   {
     $this->state = $state;
   }
   /**
-   * @return Google_Service_GKEHub_CommonFeatureState
+   * @return CommonFeatureState
    */
   public function getState()
   {
@@ -144,3 +146,6 @@ class Google_Service_GKEHub_Feature extends Google_Model
     return $this->updateTime;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Feature::class, 'Google_Service_GKEHub_Feature');

@@ -15,21 +15,23 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementConfigSync extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementConfigSync extends \Google\Model
 {
-  protected $gitType = 'Google_Service_GKEHub_ConfigManagementGitConfig';
+  protected $gitType = ConfigManagementGitConfig::class;
   protected $gitDataType = '';
   public $sourceFormat;
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementGitConfig
+   * @param ConfigManagementGitConfig
    */
-  public function setGit(Google_Service_GKEHub_ConfigManagementGitConfig $git)
+  public function setGit(ConfigManagementGitConfig $git)
   {
     $this->git = $git;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementGitConfig
+   * @return ConfigManagementGitConfig
    */
   public function getGit()
   {
@@ -44,3 +46,6 @@ class Google_Service_GKEHub_ConfigManagementConfigSync extends Google_Model
     return $this->sourceFormat;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');

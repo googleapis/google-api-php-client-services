@@ -15,18 +15,20 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementMembershipState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementMembershipState extends \Google\Model
 {
   public $clusterName;
-  protected $configSyncStateType = 'Google_Service_GKEHub_ConfigManagementConfigSyncState';
+  protected $configSyncStateType = ConfigManagementConfigSyncState::class;
   protected $configSyncStateDataType = '';
-  protected $hierarchyControllerStateType = 'Google_Service_GKEHub_ConfigManagementHierarchyControllerState';
+  protected $hierarchyControllerStateType = ConfigManagementHierarchyControllerState::class;
   protected $hierarchyControllerStateDataType = '';
-  protected $membershipSpecType = 'Google_Service_GKEHub_ConfigManagementMembershipSpec';
+  protected $membershipSpecType = ConfigManagementMembershipSpec::class;
   protected $membershipSpecDataType = '';
-  protected $operatorStateType = 'Google_Service_GKEHub_ConfigManagementOperatorState';
+  protected $operatorStateType = ConfigManagementOperatorState::class;
   protected $operatorStateDataType = '';
-  protected $policyControllerStateType = 'Google_Service_GKEHub_ConfigManagementPolicyControllerState';
+  protected $policyControllerStateType = ConfigManagementPolicyControllerState::class;
   protected $policyControllerStateDataType = '';
 
   public function setClusterName($clusterName)
@@ -38,73 +40,76 @@ class Google_Service_GKEHub_ConfigManagementMembershipState extends Google_Model
     return $this->clusterName;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementConfigSyncState
+   * @param ConfigManagementConfigSyncState
    */
-  public function setConfigSyncState(Google_Service_GKEHub_ConfigManagementConfigSyncState $configSyncState)
+  public function setConfigSyncState(ConfigManagementConfigSyncState $configSyncState)
   {
     $this->configSyncState = $configSyncState;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementConfigSyncState
+   * @return ConfigManagementConfigSyncState
    */
   public function getConfigSyncState()
   {
     return $this->configSyncState;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementHierarchyControllerState
+   * @param ConfigManagementHierarchyControllerState
    */
-  public function setHierarchyControllerState(Google_Service_GKEHub_ConfigManagementHierarchyControllerState $hierarchyControllerState)
+  public function setHierarchyControllerState(ConfigManagementHierarchyControllerState $hierarchyControllerState)
   {
     $this->hierarchyControllerState = $hierarchyControllerState;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementHierarchyControllerState
+   * @return ConfigManagementHierarchyControllerState
    */
   public function getHierarchyControllerState()
   {
     return $this->hierarchyControllerState;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementMembershipSpec
+   * @param ConfigManagementMembershipSpec
    */
-  public function setMembershipSpec(Google_Service_GKEHub_ConfigManagementMembershipSpec $membershipSpec)
+  public function setMembershipSpec(ConfigManagementMembershipSpec $membershipSpec)
   {
     $this->membershipSpec = $membershipSpec;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementMembershipSpec
+   * @return ConfigManagementMembershipSpec
    */
   public function getMembershipSpec()
   {
     return $this->membershipSpec;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementOperatorState
+   * @param ConfigManagementOperatorState
    */
-  public function setOperatorState(Google_Service_GKEHub_ConfigManagementOperatorState $operatorState)
+  public function setOperatorState(ConfigManagementOperatorState $operatorState)
   {
     $this->operatorState = $operatorState;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementOperatorState
+   * @return ConfigManagementOperatorState
    */
   public function getOperatorState()
   {
     return $this->operatorState;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementPolicyControllerState
+   * @param ConfigManagementPolicyControllerState
    */
-  public function setPolicyControllerState(Google_Service_GKEHub_ConfigManagementPolicyControllerState $policyControllerState)
+  public function setPolicyControllerState(ConfigManagementPolicyControllerState $policyControllerState)
   {
     $this->policyControllerState = $policyControllerState;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementPolicyControllerState
+   * @return ConfigManagementPolicyControllerState
    */
   public function getPolicyControllerState()
   {
     return $this->policyControllerState;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementMembershipState::class, 'Google_Service_GKEHub_ConfigManagementMembershipState');

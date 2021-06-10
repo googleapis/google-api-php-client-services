@@ -15,53 +15,55 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementMembershipSpec extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementMembershipSpec extends \Google\Model
 {
-  protected $configSyncType = 'Google_Service_GKEHub_ConfigManagementConfigSync';
+  protected $configSyncType = ConfigManagementConfigSync::class;
   protected $configSyncDataType = '';
-  protected $hierarchyControllerType = 'Google_Service_GKEHub_ConfigManagementHierarchyControllerConfig';
+  protected $hierarchyControllerType = ConfigManagementHierarchyControllerConfig::class;
   protected $hierarchyControllerDataType = '';
-  protected $policyControllerType = 'Google_Service_GKEHub_ConfigManagementPolicyController';
+  protected $policyControllerType = ConfigManagementPolicyController::class;
   protected $policyControllerDataType = '';
   public $version;
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementConfigSync
+   * @param ConfigManagementConfigSync
    */
-  public function setConfigSync(Google_Service_GKEHub_ConfigManagementConfigSync $configSync)
+  public function setConfigSync(ConfigManagementConfigSync $configSync)
   {
     $this->configSync = $configSync;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementConfigSync
+   * @return ConfigManagementConfigSync
    */
   public function getConfigSync()
   {
     return $this->configSync;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementHierarchyControllerConfig
+   * @param ConfigManagementHierarchyControllerConfig
    */
-  public function setHierarchyController(Google_Service_GKEHub_ConfigManagementHierarchyControllerConfig $hierarchyController)
+  public function setHierarchyController(ConfigManagementHierarchyControllerConfig $hierarchyController)
   {
     $this->hierarchyController = $hierarchyController;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementHierarchyControllerConfig
+   * @return ConfigManagementHierarchyControllerConfig
    */
   public function getHierarchyController()
   {
     return $this->hierarchyController;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementPolicyController
+   * @param ConfigManagementPolicyController
    */
-  public function setPolicyController(Google_Service_GKEHub_ConfigManagementPolicyController $policyController)
+  public function setPolicyController(ConfigManagementPolicyController $policyController)
   {
     $this->policyController = $policyController;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementPolicyController
+   * @return ConfigManagementPolicyController
    */
   public function getPolicyController()
   {
@@ -76,3 +78,6 @@ class Google_Service_GKEHub_ConfigManagementMembershipSpec extends Google_Model
     return $this->version;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementMembershipSpec::class, 'Google_Service_GKEHub_ConfigManagementMembershipSpec');

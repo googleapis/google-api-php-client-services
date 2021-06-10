@@ -15,55 +15,60 @@
  * the License.
  */
 
-class Google_Service_GKEHub_ConfigManagementConfigSyncState extends Google_Model
+namespace Google\Service\GKEHub;
+
+class ConfigManagementConfigSyncState extends \Google\Model
 {
-  protected $deploymentStateType = 'Google_Service_GKEHub_ConfigManagementConfigSyncDeploymentState';
+  protected $deploymentStateType = ConfigManagementConfigSyncDeploymentState::class;
   protected $deploymentStateDataType = '';
-  protected $syncStateType = 'Google_Service_GKEHub_ConfigManagementSyncState';
+  protected $syncStateType = ConfigManagementSyncState::class;
   protected $syncStateDataType = '';
-  protected $versionType = 'Google_Service_GKEHub_ConfigManagementConfigSyncVersion';
+  protected $versionType = ConfigManagementConfigSyncVersion::class;
   protected $versionDataType = '';
 
   /**
-   * @param Google_Service_GKEHub_ConfigManagementConfigSyncDeploymentState
+   * @param ConfigManagementConfigSyncDeploymentState
    */
-  public function setDeploymentState(Google_Service_GKEHub_ConfigManagementConfigSyncDeploymentState $deploymentState)
+  public function setDeploymentState(ConfigManagementConfigSyncDeploymentState $deploymentState)
   {
     $this->deploymentState = $deploymentState;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementConfigSyncDeploymentState
+   * @return ConfigManagementConfigSyncDeploymentState
    */
   public function getDeploymentState()
   {
     return $this->deploymentState;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementSyncState
+   * @param ConfigManagementSyncState
    */
-  public function setSyncState(Google_Service_GKEHub_ConfigManagementSyncState $syncState)
+  public function setSyncState(ConfigManagementSyncState $syncState)
   {
     $this->syncState = $syncState;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementSyncState
+   * @return ConfigManagementSyncState
    */
   public function getSyncState()
   {
     return $this->syncState;
   }
   /**
-   * @param Google_Service_GKEHub_ConfigManagementConfigSyncVersion
+   * @param ConfigManagementConfigSyncVersion
    */
-  public function setVersion(Google_Service_GKEHub_ConfigManagementConfigSyncVersion $version)
+  public function setVersion(ConfigManagementConfigSyncVersion $version)
   {
     $this->version = $version;
   }
   /**
-   * @return Google_Service_GKEHub_ConfigManagementConfigSyncVersion
+   * @return ConfigManagementConfigSyncVersion
    */
   public function getVersion()
   {
     return $this->version;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ConfigManagementConfigSyncState::class, 'Google_Service_GKEHub_ConfigManagementConfigSyncState');
