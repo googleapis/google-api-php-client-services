@@ -246,8 +246,8 @@ class FirewallPolicies extends \Google\Service\Resource
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Lists all the policies that have been configured for the specified project.
-   * (firewallPolicies.listFirewallPolicies)
+   * Lists all the policies that have been configured for the specified folder or
+   * organization. (firewallPolicies.listFirewallPolicies)
    *
    * @param array $optParams Optional parameters.
    *
