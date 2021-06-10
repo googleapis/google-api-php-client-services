@@ -26,6 +26,77 @@
 class Google_Service_GKEHub_Resource_ProjectsLocationsFeatures extends Google_Service_Resource
 {
   /**
+   * Adds a new Feature. (features.create)
+   *
+   * @param string $parent The parent (project and location) where the Feature
+   * will be created. Specified in the format `projects/locations`.
+   * @param Google_Service_GKEHub_Feature $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string featureId The ID of the feature to create.
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server will guarantee that for at least 60 minutes after the first request.
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_GKEHub_Operation
+   */
+  public function create($parent, Google_Service_GKEHub_Feature $postBody, $optParams = array())
+  {
+    $params = array('parent' => $parent, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('create', array($params), "Google_Service_GKEHub_Operation");
+  }
+  /**
+   * Removes a Feature. (features.delete)
+   *
+   * @param string $name The Feature resource name in the format
+   * `projects/locations/features`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force If set to true, the delete will ignore any outstanding
+   * resources for this Feature (that is, `FeatureState.has_resources` is set to
+   * true). These resources will NOT be cleaned up or modified in any way.
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server will guarantee that for at least 60 minutes after the first request.
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_GKEHub_Operation
+   */
+  public function delete($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', array($params), "Google_Service_GKEHub_Operation");
+  }
+  /**
+   * Gets details of a single Feature. (features.get)
+   *
+   * @param string $name The Feature resource name in the format
+   * `projects/locations/features`
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_GKEHub_Feature
+   */
+  public function get($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('get', array($params), "Google_Service_GKEHub_Feature");
+  }
+  /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (features.getIamPolicy)
    *
@@ -49,6 +120,64 @@ class Google_Service_GKEHub_Resource_ProjectsLocationsFeatures extends Google_Se
     $params = array('resource' => $resource);
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', array($params), "Google_Service_GKEHub_Policy");
+  }
+  /**
+   * Lists Features in a given project and location.
+   * (features.listProjectsLocationsFeatures)
+   *
+   * @param string $parent The parent (project and location) where the Features
+   * will be listed. Specified in the format `projects/locations`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Lists Features that match the filter expression,
+   * following the syntax outlined in https://google.aip.dev/160. Examples: -
+   * Feature with the name "servicemesh" in project "foo-proj": name = "projects
+   * /foo-proj/locations/global/features/servicemesh" - Features that have a label
+   * called `foo`: labels.foo:* - Features that have a label called `foo` whose
+   * value is `bar`: labels.foo = bar
+   * @opt_param string orderBy One or more fields to compare and use to sort the
+   * output. See https://google.aip.dev/132#ordering.
+   * @opt_param int pageSize When requesting a 'page' of resources, `page_size`
+   * specifies number of resources to return. If unspecified or set to 0, all
+   * resources will be returned.
+   * @opt_param string pageToken Token returned by previous call to `ListFeatures`
+   * which specifies the position in the list from where to continue listing the
+   * resources.
+   * @return Google_Service_GKEHub_ListFeaturesResponse
+   */
+  public function listProjectsLocationsFeatures($parent, $optParams = array())
+  {
+    $params = array('parent' => $parent);
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_GKEHub_ListFeaturesResponse");
+  }
+  /**
+   * Updates an existing Feature. (features.patch)
+   *
+   * @param string $name The Feature resource name in the format
+   * `projects/locations/features`.
+   * @param Google_Service_GKEHub_Feature $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server will guarantee that for at least 60 minutes after the first request.
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Mask of fields to update.
+   * @return Google_Service_GKEHub_Operation
+   */
+  public function patch($name, Google_Service_GKEHub_Feature $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', array($params), "Google_Service_GKEHub_Operation");
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
