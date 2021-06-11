@@ -15,11 +15,13 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1DateTimePicker extends \Google\Model
 {
   public $label;
   public $name;
-  protected $onChangeActionType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Action';
+  protected $onChangeActionType = GoogleAppsCardV1Action::class;
   protected $onChangeActionDataType = '';
   public $timezoneOffsetDate;
   public $type;
@@ -42,14 +44,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker extends Google_
     return $this->name;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @param GoogleAppsCardV1Action
    */
-  public function setOnChangeAction(Google_Service_HangoutsChat_GoogleAppsCardV1Action $onChangeAction)
+  public function setOnChangeAction(GoogleAppsCardV1Action $onChangeAction)
   {
     $this->onChangeAction = $onChangeAction;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @return GoogleAppsCardV1Action
    */
   public function getOnChangeAction()
   {
@@ -80,3 +82,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker extends Google_
     return $this->valueMsEpoch;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1DateTimePicker::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker');

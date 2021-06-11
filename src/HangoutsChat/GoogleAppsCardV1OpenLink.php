@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1OpenLink extends \Google\Model
 {
   public $onClose;
   public $openAs;
@@ -46,3 +48,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink extends Google_Model
     return $this->url;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1OpenLink::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink');

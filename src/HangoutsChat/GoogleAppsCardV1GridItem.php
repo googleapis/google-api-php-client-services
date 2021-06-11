@@ -15,10 +15,12 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1GridItem extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1GridItem extends \Google\Model
 {
   public $id;
-  protected $imageType = 'Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent';
+  protected $imageType = GoogleAppsCardV1ImageComponent::class;
   protected $imageDataType = '';
   public $layout;
   public $subtitle;
@@ -34,14 +36,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1GridItem extends Google_Model
     return $this->id;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent
+   * @param GoogleAppsCardV1ImageComponent
    */
-  public function setImage(Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent $image)
+  public function setImage(GoogleAppsCardV1ImageComponent $image)
   {
     $this->image = $image;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent
+   * @return GoogleAppsCardV1ImageComponent
    */
   public function getImage()
   {
@@ -80,3 +82,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1GridItem extends Google_Model
     return $this->title;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1GridItem::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1GridItem');

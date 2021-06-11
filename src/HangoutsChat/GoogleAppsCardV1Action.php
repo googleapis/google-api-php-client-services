@@ -15,12 +15,14 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Action extends Google_Collection
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Action extends \Google\Collection
 {
   protected $collection_key = 'parameters';
   public $function;
   public $loadIndicator;
-  protected $parametersType = 'Google_Service_HangoutsChat_GoogleAppsCardV1ActionParameter';
+  protected $parametersType = GoogleAppsCardV1ActionParameter::class;
   protected $parametersDataType = 'array';
   public $persistValues;
 
@@ -41,14 +43,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Action extends Google_Collecti
     return $this->loadIndicator;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1ActionParameter[]
+   * @param GoogleAppsCardV1ActionParameter[]
    */
   public function setParameters($parameters)
   {
     $this->parameters = $parameters;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1ActionParameter[]
+   * @return GoogleAppsCardV1ActionParameter[]
    */
   public function getParameters()
   {
@@ -63,3 +65,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Action extends Google_Collecti
     return $this->persistValues;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Action::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Action');

@@ -15,15 +15,17 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Button extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Button extends \Google\Model
 {
   public $altText;
-  protected $colorType = 'Google_Service_HangoutsChat_Color';
+  protected $colorType = Color::class;
   protected $colorDataType = '';
   public $disabled;
-  protected $iconType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Icon';
+  protected $iconType = GoogleAppsCardV1Icon::class;
   protected $iconDataType = '';
-  protected $onClickType = 'Google_Service_HangoutsChat_GoogleAppsCardV1OnClick';
+  protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
   public $text;
 
@@ -36,14 +38,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Button extends Google_Model
     return $this->altText;
   }
   /**
-   * @param Google_Service_HangoutsChat_Color
+   * @param Color
    */
-  public function setColor(Google_Service_HangoutsChat_Color $color)
+  public function setColor(Color $color)
   {
     $this->color = $color;
   }
   /**
-   * @return Google_Service_HangoutsChat_Color
+   * @return Color
    */
   public function getColor()
   {
@@ -58,28 +60,28 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Button extends Google_Model
     return $this->disabled;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @param GoogleAppsCardV1Icon
    */
-  public function setIcon(Google_Service_HangoutsChat_GoogleAppsCardV1Icon $icon)
+  public function setIcon(GoogleAppsCardV1Icon $icon)
   {
     $this->icon = $icon;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @return GoogleAppsCardV1Icon
    */
   public function getIcon()
   {
     return $this->icon;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @param GoogleAppsCardV1OnClick
    */
-  public function setOnClick(Google_Service_HangoutsChat_GoogleAppsCardV1OnClick $onClick)
+  public function setOnClick(GoogleAppsCardV1OnClick $onClick)
   {
     $this->onClick = $onClick;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @return GoogleAppsCardV1OnClick
    */
   public function getOnClick()
   {
@@ -94,3 +96,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Button extends Google_Model
     return $this->text;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Button::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Button');

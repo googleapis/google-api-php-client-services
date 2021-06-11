@@ -15,13 +15,15 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Section extends Google_Collection
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Section extends \Google\Collection
 {
   protected $collection_key = 'widgets';
   public $collapsible;
   public $header;
   public $uncollapsibleWidgetsCount;
-  protected $widgetsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Widget';
+  protected $widgetsType = GoogleAppsCardV1Widget::class;
   protected $widgetsDataType = 'array';
 
   public function setCollapsible($collapsible)
@@ -49,17 +51,20 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Section extends Google_Collect
     return $this->uncollapsibleWidgetsCount;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Widget[]
+   * @param GoogleAppsCardV1Widget[]
    */
   public function setWidgets($widgets)
   {
     $this->widgets = $widgets;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Widget[]
+   * @return GoogleAppsCardV1Widget[]
    */
   public function getWidgets()
   {
     return $this->widgets;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Section::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Section');

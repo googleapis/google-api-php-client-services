@@ -15,12 +15,14 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1ImageComponent extends \Google\Model
 {
   public $altText;
-  protected $borderStyleType = 'Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle';
+  protected $borderStyleType = GoogleAppsCardV1BorderStyle::class;
   protected $borderStyleDataType = '';
-  protected $cropStyleType = 'Google_Service_HangoutsChat_GoogleAppsCardV1ImageCropStyle';
+  protected $cropStyleType = GoogleAppsCardV1ImageCropStyle::class;
   protected $cropStyleDataType = '';
   public $imageUri;
 
@@ -33,28 +35,28 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent extends Google_
     return $this->altText;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle
+   * @param GoogleAppsCardV1BorderStyle
    */
-  public function setBorderStyle(Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle $borderStyle)
+  public function setBorderStyle(GoogleAppsCardV1BorderStyle $borderStyle)
   {
     $this->borderStyle = $borderStyle;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle
+   * @return GoogleAppsCardV1BorderStyle
    */
   public function getBorderStyle()
   {
     return $this->borderStyle;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1ImageCropStyle
+   * @param GoogleAppsCardV1ImageCropStyle
    */
-  public function setCropStyle(Google_Service_HangoutsChat_GoogleAppsCardV1ImageCropStyle $cropStyle)
+  public function setCropStyle(GoogleAppsCardV1ImageCropStyle $cropStyle)
   {
     $this->cropStyle = $cropStyle;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1ImageCropStyle
+   * @return GoogleAppsCardV1ImageCropStyle
    */
   public function getCropStyle()
   {
@@ -69,3 +71,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent extends Google_
     return $this->imageUri;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1ImageComponent::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1ImageComponent');

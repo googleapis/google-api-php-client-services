@@ -15,27 +15,29 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Grid extends Google_Collection
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Grid extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $borderStyleType = 'Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle';
+  protected $borderStyleType = GoogleAppsCardV1BorderStyle::class;
   protected $borderStyleDataType = '';
   public $columnCount;
-  protected $itemsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1GridItem';
+  protected $itemsType = GoogleAppsCardV1GridItem::class;
   protected $itemsDataType = 'array';
-  protected $onClickType = 'Google_Service_HangoutsChat_GoogleAppsCardV1OnClick';
+  protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
   public $title;
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle
+   * @param GoogleAppsCardV1BorderStyle
    */
-  public function setBorderStyle(Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle $borderStyle)
+  public function setBorderStyle(GoogleAppsCardV1BorderStyle $borderStyle)
   {
     $this->borderStyle = $borderStyle;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle
+   * @return GoogleAppsCardV1BorderStyle
    */
   public function getBorderStyle()
   {
@@ -50,28 +52,28 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Grid extends Google_Collection
     return $this->columnCount;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1GridItem[]
+   * @param GoogleAppsCardV1GridItem[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1GridItem[]
+   * @return GoogleAppsCardV1GridItem[]
    */
   public function getItems()
   {
     return $this->items;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @param GoogleAppsCardV1OnClick
    */
-  public function setOnClick(Google_Service_HangoutsChat_GoogleAppsCardV1OnClick $onClick)
+  public function setOnClick(GoogleAppsCardV1OnClick $onClick)
   {
     $this->onClick = $onClick;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @return GoogleAppsCardV1OnClick
    */
   public function getOnClick()
   {
@@ -86,3 +88,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Grid extends Google_Collection
     return $this->title;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Grid::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Grid');

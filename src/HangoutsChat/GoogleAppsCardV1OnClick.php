@@ -15,71 +15,76 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1OnClick extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1OnClick extends \Google\Model
 {
-  protected $actionType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Action';
+  protected $actionType = GoogleAppsCardV1Action::class;
   protected $actionDataType = '';
-  protected $cardType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Card';
+  protected $cardType = GoogleAppsCardV1Card::class;
   protected $cardDataType = '';
-  protected $openDynamicLinkActionType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Action';
+  protected $openDynamicLinkActionType = GoogleAppsCardV1Action::class;
   protected $openDynamicLinkActionDataType = '';
-  protected $openLinkType = 'Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink';
+  protected $openLinkType = GoogleAppsCardV1OpenLink::class;
   protected $openLinkDataType = '';
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @param GoogleAppsCardV1Action
    */
-  public function setAction(Google_Service_HangoutsChat_GoogleAppsCardV1Action $action)
+  public function setAction(GoogleAppsCardV1Action $action)
   {
     $this->action = $action;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @return GoogleAppsCardV1Action
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Card
+   * @param GoogleAppsCardV1Card
    */
-  public function setCard(Google_Service_HangoutsChat_GoogleAppsCardV1Card $card)
+  public function setCard(GoogleAppsCardV1Card $card)
   {
     $this->card = $card;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Card
+   * @return GoogleAppsCardV1Card
    */
   public function getCard()
   {
     return $this->card;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @param GoogleAppsCardV1Action
    */
-  public function setOpenDynamicLinkAction(Google_Service_HangoutsChat_GoogleAppsCardV1Action $openDynamicLinkAction)
+  public function setOpenDynamicLinkAction(GoogleAppsCardV1Action $openDynamicLinkAction)
   {
     $this->openDynamicLinkAction = $openDynamicLinkAction;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @return GoogleAppsCardV1Action
    */
   public function getOpenDynamicLinkAction()
   {
     return $this->openDynamicLinkAction;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink
+   * @param GoogleAppsCardV1OpenLink
    */
-  public function setOpenLink(Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink $openLink)
+  public function setOpenLink(GoogleAppsCardV1OpenLink $openLink)
   {
     $this->openLink = $openLink;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink
+   * @return GoogleAppsCardV1OpenLink
    */
   public function getOpenLink()
   {
     return $this->openLink;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1OnClick::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1OnClick');

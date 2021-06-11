@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_Color extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class Color extends \Google\Model
 {
   public $alpha;
   public $blue;
@@ -55,3 +57,6 @@ class Google_Service_HangoutsChat_Color extends Google_Model
     return $this->red;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Color::class, 'Google_Service_HangoutsChat_Color');

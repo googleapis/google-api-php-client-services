@@ -15,93 +15,95 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Widget extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Widget extends \Google\Model
 {
-  protected $buttonListType = 'Google_Service_HangoutsChat_GoogleAppsCardV1ButtonList';
+  protected $buttonListType = GoogleAppsCardV1ButtonList::class;
   protected $buttonListDataType = '';
-  protected $dateTimePickerType = 'Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker';
+  protected $dateTimePickerType = GoogleAppsCardV1DateTimePicker::class;
   protected $dateTimePickerDataType = '';
-  protected $decoratedTextType = 'Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText';
+  protected $decoratedTextType = GoogleAppsCardV1DecoratedText::class;
   protected $decoratedTextDataType = '';
-  protected $dividerType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Divider';
+  protected $dividerType = GoogleAppsCardV1Divider::class;
   protected $dividerDataType = '';
-  protected $gridType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Grid';
+  protected $gridType = GoogleAppsCardV1Grid::class;
   protected $gridDataType = '';
   public $horizontalAlignment;
-  protected $imageType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Image';
+  protected $imageType = GoogleAppsCardV1Image::class;
   protected $imageDataType = '';
-  protected $selectionInputType = 'Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput';
+  protected $selectionInputType = GoogleAppsCardV1SelectionInput::class;
   protected $selectionInputDataType = '';
-  protected $textInputType = 'Google_Service_HangoutsChat_GoogleAppsCardV1TextInput';
+  protected $textInputType = GoogleAppsCardV1TextInput::class;
   protected $textInputDataType = '';
-  protected $textParagraphType = 'Google_Service_HangoutsChat_GoogleAppsCardV1TextParagraph';
+  protected $textParagraphType = GoogleAppsCardV1TextParagraph::class;
   protected $textParagraphDataType = '';
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1ButtonList
+   * @param GoogleAppsCardV1ButtonList
    */
-  public function setButtonList(Google_Service_HangoutsChat_GoogleAppsCardV1ButtonList $buttonList)
+  public function setButtonList(GoogleAppsCardV1ButtonList $buttonList)
   {
     $this->buttonList = $buttonList;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1ButtonList
+   * @return GoogleAppsCardV1ButtonList
    */
   public function getButtonList()
   {
     return $this->buttonList;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker
+   * @param GoogleAppsCardV1DateTimePicker
    */
-  public function setDateTimePicker(Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker $dateTimePicker)
+  public function setDateTimePicker(GoogleAppsCardV1DateTimePicker $dateTimePicker)
   {
     $this->dateTimePicker = $dateTimePicker;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1DateTimePicker
+   * @return GoogleAppsCardV1DateTimePicker
    */
   public function getDateTimePicker()
   {
     return $this->dateTimePicker;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText
+   * @param GoogleAppsCardV1DecoratedText
    */
-  public function setDecoratedText(Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText $decoratedText)
+  public function setDecoratedText(GoogleAppsCardV1DecoratedText $decoratedText)
   {
     $this->decoratedText = $decoratedText;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText
+   * @return GoogleAppsCardV1DecoratedText
    */
   public function getDecoratedText()
   {
     return $this->decoratedText;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Divider
+   * @param GoogleAppsCardV1Divider
    */
-  public function setDivider(Google_Service_HangoutsChat_GoogleAppsCardV1Divider $divider)
+  public function setDivider(GoogleAppsCardV1Divider $divider)
   {
     $this->divider = $divider;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Divider
+   * @return GoogleAppsCardV1Divider
    */
   public function getDivider()
   {
     return $this->divider;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Grid
+   * @param GoogleAppsCardV1Grid
    */
-  public function setGrid(Google_Service_HangoutsChat_GoogleAppsCardV1Grid $grid)
+  public function setGrid(GoogleAppsCardV1Grid $grid)
   {
     $this->grid = $grid;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Grid
+   * @return GoogleAppsCardV1Grid
    */
   public function getGrid()
   {
@@ -116,59 +118,62 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Widget extends Google_Model
     return $this->horizontalAlignment;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Image
+   * @param GoogleAppsCardV1Image
    */
-  public function setImage(Google_Service_HangoutsChat_GoogleAppsCardV1Image $image)
+  public function setImage(GoogleAppsCardV1Image $image)
   {
     $this->image = $image;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Image
+   * @return GoogleAppsCardV1Image
    */
   public function getImage()
   {
     return $this->image;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput
+   * @param GoogleAppsCardV1SelectionInput
    */
-  public function setSelectionInput(Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput $selectionInput)
+  public function setSelectionInput(GoogleAppsCardV1SelectionInput $selectionInput)
   {
     $this->selectionInput = $selectionInput;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput
+   * @return GoogleAppsCardV1SelectionInput
    */
   public function getSelectionInput()
   {
     return $this->selectionInput;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1TextInput
+   * @param GoogleAppsCardV1TextInput
    */
-  public function setTextInput(Google_Service_HangoutsChat_GoogleAppsCardV1TextInput $textInput)
+  public function setTextInput(GoogleAppsCardV1TextInput $textInput)
   {
     $this->textInput = $textInput;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1TextInput
+   * @return GoogleAppsCardV1TextInput
    */
   public function getTextInput()
   {
     return $this->textInput;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1TextParagraph
+   * @param GoogleAppsCardV1TextParagraph
    */
-  public function setTextParagraph(Google_Service_HangoutsChat_GoogleAppsCardV1TextParagraph $textParagraph)
+  public function setTextParagraph(GoogleAppsCardV1TextParagraph $textParagraph)
   {
     $this->textParagraph = $textParagraph;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1TextParagraph
+   * @return GoogleAppsCardV1TextParagraph
    */
   public function getTextParagraph()
   {
     return $this->textParagraph;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Widget::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Widget');

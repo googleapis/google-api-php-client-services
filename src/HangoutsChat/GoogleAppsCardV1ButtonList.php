@@ -15,24 +15,29 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1ButtonList extends Google_Collection
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1ButtonList extends \Google\Collection
 {
   protected $collection_key = 'buttons';
-  protected $buttonsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Button';
+  protected $buttonsType = GoogleAppsCardV1Button::class;
   protected $buttonsDataType = 'array';
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Button[]
+   * @param GoogleAppsCardV1Button[]
    */
   public function setButtons($buttons)
   {
     $this->buttons = $buttons;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Button[]
+   * @return GoogleAppsCardV1Button[]
    */
   public function getButtons()
   {
     return $this->buttons;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1ButtonList::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1ButtonList');

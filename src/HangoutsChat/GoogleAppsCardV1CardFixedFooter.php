@@ -15,39 +15,44 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1CardFixedFooter extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1CardFixedFooter extends \Google\Model
 {
-  protected $primaryButtonType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Button';
+  protected $primaryButtonType = GoogleAppsCardV1Button::class;
   protected $primaryButtonDataType = '';
-  protected $secondaryButtonType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Button';
+  protected $secondaryButtonType = GoogleAppsCardV1Button::class;
   protected $secondaryButtonDataType = '';
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Button
+   * @param GoogleAppsCardV1Button
    */
-  public function setPrimaryButton(Google_Service_HangoutsChat_GoogleAppsCardV1Button $primaryButton)
+  public function setPrimaryButton(GoogleAppsCardV1Button $primaryButton)
   {
     $this->primaryButton = $primaryButton;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Button
+   * @return GoogleAppsCardV1Button
    */
   public function getPrimaryButton()
   {
     return $this->primaryButton;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Button
+   * @param GoogleAppsCardV1Button
    */
-  public function setSecondaryButton(Google_Service_HangoutsChat_GoogleAppsCardV1Button $secondaryButton)
+  public function setSecondaryButton(GoogleAppsCardV1Button $secondaryButton)
   {
     $this->secondaryButton = $secondaryButton;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Button
+   * @return GoogleAppsCardV1Button
    */
   public function getSecondaryButton()
   {
     return $this->secondaryButton;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1CardFixedFooter::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1CardFixedFooter');

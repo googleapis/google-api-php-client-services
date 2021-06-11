@@ -15,24 +15,29 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Suggestions extends Google_Collection
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Suggestions extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1SuggestionItem';
+  protected $itemsType = GoogleAppsCardV1SuggestionItem::class;
   protected $itemsDataType = 'array';
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1SuggestionItem[]
+   * @param GoogleAppsCardV1SuggestionItem[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1SuggestionItem[]
+   * @return GoogleAppsCardV1SuggestionItem[]
    */
   public function getItems()
   {
     return $this->items;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Suggestions::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Suggestions');

@@ -15,11 +15,13 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Image extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Image extends \Google\Model
 {
   public $altText;
   public $imageUrl;
-  protected $onClickType = 'Google_Service_HangoutsChat_GoogleAppsCardV1OnClick';
+  protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
 
   public function setAltText($altText)
@@ -39,17 +41,20 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Image extends Google_Model
     return $this->imageUrl;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @param GoogleAppsCardV1OnClick
    */
-  public function setOnClick(Google_Service_HangoutsChat_GoogleAppsCardV1OnClick $onClick)
+  public function setOnClick(GoogleAppsCardV1OnClick $onClick)
   {
     $this->onClick = $onClick;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @return GoogleAppsCardV1OnClick
    */
   public function getOnClick()
   {
     return $this->onClick;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Image::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Image');

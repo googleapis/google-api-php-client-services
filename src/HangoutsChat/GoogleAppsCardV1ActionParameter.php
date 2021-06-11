@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1ActionParameter extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1ActionParameter extends \Google\Model
 {
   public $key;
   public $value;
@@ -37,3 +39,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1ActionParameter extends Google
     return $this->value;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1ActionParameter::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1ActionParameter');

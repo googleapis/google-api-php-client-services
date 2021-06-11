@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1ImageCropStyle extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1ImageCropStyle extends \Google\Model
 {
   public $aspectRatio;
   public $type;
@@ -37,3 +39,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1ImageCropStyle extends Google_
     return $this->type;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1ImageCropStyle::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1ImageCropStyle');

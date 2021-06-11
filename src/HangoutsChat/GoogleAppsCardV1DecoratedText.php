@@ -15,20 +15,22 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1DecoratedText extends \Google\Model
 {
   public $bottomLabel;
-  protected $buttonType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Button';
+  protected $buttonType = GoogleAppsCardV1Button::class;
   protected $buttonDataType = '';
-  protected $endIconType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Icon';
+  protected $endIconType = GoogleAppsCardV1Icon::class;
   protected $endIconDataType = '';
-  protected $iconType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Icon';
+  protected $iconType = GoogleAppsCardV1Icon::class;
   protected $iconDataType = '';
-  protected $onClickType = 'Google_Service_HangoutsChat_GoogleAppsCardV1OnClick';
+  protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
-  protected $startIconType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Icon';
+  protected $startIconType = GoogleAppsCardV1Icon::class;
   protected $startIconDataType = '';
-  protected $switchControlType = 'Google_Service_HangoutsChat_GoogleAppsCardV1SwitchControl';
+  protected $switchControlType = GoogleAppsCardV1SwitchControl::class;
   protected $switchControlDataType = '';
   public $text;
   public $topLabel;
@@ -43,84 +45,84 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText extends Google_M
     return $this->bottomLabel;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Button
+   * @param GoogleAppsCardV1Button
    */
-  public function setButton(Google_Service_HangoutsChat_GoogleAppsCardV1Button $button)
+  public function setButton(GoogleAppsCardV1Button $button)
   {
     $this->button = $button;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Button
+   * @return GoogleAppsCardV1Button
    */
   public function getButton()
   {
     return $this->button;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @param GoogleAppsCardV1Icon
    */
-  public function setEndIcon(Google_Service_HangoutsChat_GoogleAppsCardV1Icon $endIcon)
+  public function setEndIcon(GoogleAppsCardV1Icon $endIcon)
   {
     $this->endIcon = $endIcon;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @return GoogleAppsCardV1Icon
    */
   public function getEndIcon()
   {
     return $this->endIcon;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @param GoogleAppsCardV1Icon
    */
-  public function setIcon(Google_Service_HangoutsChat_GoogleAppsCardV1Icon $icon)
+  public function setIcon(GoogleAppsCardV1Icon $icon)
   {
     $this->icon = $icon;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @return GoogleAppsCardV1Icon
    */
   public function getIcon()
   {
     return $this->icon;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @param GoogleAppsCardV1OnClick
    */
-  public function setOnClick(Google_Service_HangoutsChat_GoogleAppsCardV1OnClick $onClick)
+  public function setOnClick(GoogleAppsCardV1OnClick $onClick)
   {
     $this->onClick = $onClick;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1OnClick
+   * @return GoogleAppsCardV1OnClick
    */
   public function getOnClick()
   {
     return $this->onClick;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @param GoogleAppsCardV1Icon
    */
-  public function setStartIcon(Google_Service_HangoutsChat_GoogleAppsCardV1Icon $startIcon)
+  public function setStartIcon(GoogleAppsCardV1Icon $startIcon)
   {
     $this->startIcon = $startIcon;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Icon
+   * @return GoogleAppsCardV1Icon
    */
   public function getStartIcon()
   {
     return $this->startIcon;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1SwitchControl
+   * @param GoogleAppsCardV1SwitchControl
    */
-  public function setSwitchControl(Google_Service_HangoutsChat_GoogleAppsCardV1SwitchControl $switchControl)
+  public function setSwitchControl(GoogleAppsCardV1SwitchControl $switchControl)
   {
     $this->switchControl = $switchControl;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1SwitchControl
+   * @return GoogleAppsCardV1SwitchControl
    */
   public function getSwitchControl()
   {
@@ -151,3 +153,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText extends Google_M
     return $this->wrapText;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1DecoratedText::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1DecoratedText');

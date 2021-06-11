@@ -15,11 +15,13 @@
  * the License.
  */
 
-class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_ListSqlIntegrationsResponse extends Google_Collection
+namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
+
+class ListSqlIntegrationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   public $nextPageToken;
-  protected $sqlIntegrationsType = 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration';
+  protected $sqlIntegrationsType = SqlIntegration::class;
   protected $sqlIntegrationsDataType = 'array';
   public $unreachable;
 
@@ -32,14 +34,14 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_ListSq
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration[]
+   * @param SqlIntegration[]
    */
   public function setSqlIntegrations($sqlIntegrations)
   {
     $this->sqlIntegrations = $sqlIntegrations;
   }
   /**
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration[]
+   * @return SqlIntegration[]
    */
   public function getSqlIntegrations()
   {
@@ -54,3 +56,6 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_ListSq
     return $this->unreachable;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ListSqlIntegrationsResponse::class, 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_ListSqlIntegrationsResponse');

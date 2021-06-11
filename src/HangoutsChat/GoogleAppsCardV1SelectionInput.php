@@ -15,26 +15,28 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput extends Google_Collection
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1SelectionInput extends \Google\Collection
 {
   protected $collection_key = 'items';
-  protected $itemsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1SelectionItem';
+  protected $itemsType = GoogleAppsCardV1SelectionItem::class;
   protected $itemsDataType = 'array';
   public $label;
   public $name;
-  protected $onChangeActionType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Action';
+  protected $onChangeActionType = GoogleAppsCardV1Action::class;
   protected $onChangeActionDataType = '';
   public $type;
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1SelectionItem[]
+   * @param GoogleAppsCardV1SelectionItem[]
    */
   public function setItems($items)
   {
     $this->items = $items;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1SelectionItem[]
+   * @return GoogleAppsCardV1SelectionItem[]
    */
   public function getItems()
   {
@@ -57,14 +59,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput extends Google_
     return $this->name;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @param GoogleAppsCardV1Action
    */
-  public function setOnChangeAction(Google_Service_HangoutsChat_GoogleAppsCardV1Action $onChangeAction)
+  public function setOnChangeAction(GoogleAppsCardV1Action $onChangeAction)
   {
     $this->onChangeAction = $onChangeAction;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @return GoogleAppsCardV1Action
    */
   public function getOnChangeAction()
   {
@@ -79,3 +81,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput extends Google_
     return $this->type;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1SelectionInput::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1SelectionInput');

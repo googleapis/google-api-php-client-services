@@ -15,29 +15,31 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1TextInput extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1TextInput extends \Google\Model
 {
-  protected $autoCompleteActionType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Action';
+  protected $autoCompleteActionType = GoogleAppsCardV1Action::class;
   protected $autoCompleteActionDataType = '';
   public $hintText;
-  protected $initialSuggestionsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Suggestions';
+  protected $initialSuggestionsType = GoogleAppsCardV1Suggestions::class;
   protected $initialSuggestionsDataType = '';
   public $label;
   public $name;
-  protected $onChangeActionType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Action';
+  protected $onChangeActionType = GoogleAppsCardV1Action::class;
   protected $onChangeActionDataType = '';
   public $type;
   public $value;
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @param GoogleAppsCardV1Action
    */
-  public function setAutoCompleteAction(Google_Service_HangoutsChat_GoogleAppsCardV1Action $autoCompleteAction)
+  public function setAutoCompleteAction(GoogleAppsCardV1Action $autoCompleteAction)
   {
     $this->autoCompleteAction = $autoCompleteAction;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @return GoogleAppsCardV1Action
    */
   public function getAutoCompleteAction()
   {
@@ -52,14 +54,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1TextInput extends Google_Model
     return $this->hintText;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Suggestions
+   * @param GoogleAppsCardV1Suggestions
    */
-  public function setInitialSuggestions(Google_Service_HangoutsChat_GoogleAppsCardV1Suggestions $initialSuggestions)
+  public function setInitialSuggestions(GoogleAppsCardV1Suggestions $initialSuggestions)
   {
     $this->initialSuggestions = $initialSuggestions;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Suggestions
+   * @return GoogleAppsCardV1Suggestions
    */
   public function getInitialSuggestions()
   {
@@ -82,14 +84,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1TextInput extends Google_Model
     return $this->name;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @param GoogleAppsCardV1Action
    */
-  public function setOnChangeAction(Google_Service_HangoutsChat_GoogleAppsCardV1Action $onChangeAction)
+  public function setOnChangeAction(GoogleAppsCardV1Action $onChangeAction)
   {
     $this->onChangeAction = $onChangeAction;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Action
+   * @return GoogleAppsCardV1Action
    */
   public function getOnChangeAction()
   {
@@ -112,3 +114,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1TextInput extends Google_Model
     return $this->value;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1TextInput::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1TextInput');

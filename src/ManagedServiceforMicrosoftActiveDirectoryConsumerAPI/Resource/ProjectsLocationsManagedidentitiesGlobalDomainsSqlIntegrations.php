@@ -15,15 +15,20 @@
  * the License.
  */
 
+namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Resource;
+
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\ListSqlIntegrationsResponse;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\SqlIntegration;
+
 /**
  * The "sqlIntegrations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $managedidentitiesService = new Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI(...);
+ *   $managedidentitiesService = new Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI(...);
  *   $sqlIntegrations = $managedidentitiesService->sqlIntegrations;
  *  </code>
  */
-class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resource_ProjectsLocationsManagedidentitiesGlobalDomainsSqlIntegrations extends Google_Service_Resource
+class ProjectsLocationsManagedidentitiesGlobalDomainsSqlIntegrations extends \Google\Service\Resource
 {
   /**
    * Gets details of a single sqlIntegration. (sqlIntegrations.get)
@@ -32,13 +37,13 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resour
    * rojects/{project_id}/locations/global/domains/{domain}/sqlIntegrations/{name}
    * `
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration
+   * @return SqlIntegration
    */
-  public function get($name, $optParams = array())
+  public function get($name, $optParams = [])
   {
-    $params = array('name' => $name);
+    $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration");
+    return $this->call('get', [$params], SqlIntegration::class);
   }
   /**
    * Lists SqlIntegrations in a given domain. (sqlIntegrations.listProjectsLocatio
@@ -60,12 +65,15 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resour
    * determine if there are more instances left to be queried.
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous List request, if any.
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_ListSqlIntegrationsResponse
+   * @return ListSqlIntegrationsResponse
    */
-  public function listProjectsLocationsManagedidentitiesGlobalDomainsSqlIntegrations($parent, $optParams = array())
+  public function listProjectsLocationsManagedidentitiesGlobalDomainsSqlIntegrations($parent, $optParams = [])
   {
-    $params = array('parent' => $parent);
+    $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_ListSqlIntegrationsResponse");
+    return $this->call('list', [$params], ListSqlIntegrationsResponse::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ProjectsLocationsManagedidentitiesGlobalDomainsSqlIntegrations::class, 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resource_ProjectsLocationsManagedidentitiesGlobalDomainsSqlIntegrations');

@@ -15,10 +15,12 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1BorderStyle extends \Google\Model
 {
   public $cornerRadius;
-  protected $strokeColorType = 'Google_Service_HangoutsChat_Color';
+  protected $strokeColorType = Color::class;
   protected $strokeColorDataType = '';
   public $type;
 
@@ -31,14 +33,14 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle extends Google_Mod
     return $this->cornerRadius;
   }
   /**
-   * @param Google_Service_HangoutsChat_Color
+   * @param Color
    */
-  public function setStrokeColor(Google_Service_HangoutsChat_Color $strokeColor)
+  public function setStrokeColor(Color $strokeColor)
   {
     $this->strokeColor = $strokeColor;
   }
   /**
-   * @return Google_Service_HangoutsChat_Color
+   * @return Color
    */
   public function getStrokeColor()
   {
@@ -53,3 +55,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle extends Google_Mod
     return $this->type;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1BorderStyle::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1BorderStyle');

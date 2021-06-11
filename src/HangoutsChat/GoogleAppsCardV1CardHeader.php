@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1CardHeader extends \Google\Model
 {
   public $imageAltText;
   public $imageType;
@@ -64,3 +66,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader extends Google_Mode
     return $this->title;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1CardHeader::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader');

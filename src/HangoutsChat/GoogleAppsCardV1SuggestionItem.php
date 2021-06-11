@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1SuggestionItem extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1SuggestionItem extends \Google\Model
 {
   public $text;
 
@@ -28,3 +30,6 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1SuggestionItem extends Google_
     return $this->text;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1SuggestionItem::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1SuggestionItem');

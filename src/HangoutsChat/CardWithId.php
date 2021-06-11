@@ -15,21 +15,23 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_CardWithId extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class CardWithId extends \Google\Model
 {
-  protected $cardType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Card';
+  protected $cardType = GoogleAppsCardV1Card::class;
   protected $cardDataType = '';
   public $cardId;
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Card
+   * @param GoogleAppsCardV1Card
    */
-  public function setCard(Google_Service_HangoutsChat_GoogleAppsCardV1Card $card)
+  public function setCard(GoogleAppsCardV1Card $card)
   {
     $this->card = $card;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Card
+   * @return GoogleAppsCardV1Card
    */
   public function getCard()
   {
@@ -44,3 +46,6 @@ class Google_Service_HangoutsChat_CardWithId extends Google_Model
     return $this->cardId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(CardWithId::class, 'Google_Service_HangoutsChat_CardWithId');

@@ -15,6 +15,11 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Divider extends Google_Model
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Divider extends \Google\Model
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Divider::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Divider');

@@ -15,31 +15,33 @@
  * the License.
  */
 
-class Google_Service_HangoutsChat_GoogleAppsCardV1Card extends Google_Collection
+namespace Google\Service\HangoutsChat;
+
+class GoogleAppsCardV1Card extends \Google\Collection
 {
   protected $collection_key = 'sections';
-  protected $cardActionsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1CardAction';
+  protected $cardActionsType = GoogleAppsCardV1CardAction::class;
   protected $cardActionsDataType = 'array';
   public $displayStyle;
-  protected $fixedFooterType = 'Google_Service_HangoutsChat_GoogleAppsCardV1CardFixedFooter';
+  protected $fixedFooterType = GoogleAppsCardV1CardFixedFooter::class;
   protected $fixedFooterDataType = '';
-  protected $headerType = 'Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader';
+  protected $headerType = GoogleAppsCardV1CardHeader::class;
   protected $headerDataType = '';
   public $name;
-  protected $peekCardHeaderType = 'Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader';
+  protected $peekCardHeaderType = GoogleAppsCardV1CardHeader::class;
   protected $peekCardHeaderDataType = '';
-  protected $sectionsType = 'Google_Service_HangoutsChat_GoogleAppsCardV1Section';
+  protected $sectionsType = GoogleAppsCardV1Section::class;
   protected $sectionsDataType = 'array';
 
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1CardAction[]
+   * @param GoogleAppsCardV1CardAction[]
    */
   public function setCardActions($cardActions)
   {
     $this->cardActions = $cardActions;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1CardAction[]
+   * @return GoogleAppsCardV1CardAction[]
    */
   public function getCardActions()
   {
@@ -54,28 +56,28 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Card extends Google_Collection
     return $this->displayStyle;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1CardFixedFooter
+   * @param GoogleAppsCardV1CardFixedFooter
    */
-  public function setFixedFooter(Google_Service_HangoutsChat_GoogleAppsCardV1CardFixedFooter $fixedFooter)
+  public function setFixedFooter(GoogleAppsCardV1CardFixedFooter $fixedFooter)
   {
     $this->fixedFooter = $fixedFooter;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1CardFixedFooter
+   * @return GoogleAppsCardV1CardFixedFooter
    */
   public function getFixedFooter()
   {
     return $this->fixedFooter;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader
+   * @param GoogleAppsCardV1CardHeader
    */
-  public function setHeader(Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader $header)
+  public function setHeader(GoogleAppsCardV1CardHeader $header)
   {
     $this->header = $header;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader
+   * @return GoogleAppsCardV1CardHeader
    */
   public function getHeader()
   {
@@ -90,31 +92,34 @@ class Google_Service_HangoutsChat_GoogleAppsCardV1Card extends Google_Collection
     return $this->name;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader
+   * @param GoogleAppsCardV1CardHeader
    */
-  public function setPeekCardHeader(Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader $peekCardHeader)
+  public function setPeekCardHeader(GoogleAppsCardV1CardHeader $peekCardHeader)
   {
     $this->peekCardHeader = $peekCardHeader;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1CardHeader
+   * @return GoogleAppsCardV1CardHeader
    */
   public function getPeekCardHeader()
   {
     return $this->peekCardHeader;
   }
   /**
-   * @param Google_Service_HangoutsChat_GoogleAppsCardV1Section[]
+   * @param GoogleAppsCardV1Section[]
    */
   public function setSections($sections)
   {
     $this->sections = $sections;
   }
   /**
-   * @return Google_Service_HangoutsChat_GoogleAppsCardV1Section[]
+   * @return GoogleAppsCardV1Section[]
    */
   public function getSections()
   {
     return $this->sections;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleAppsCardV1Card::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Card');
