@@ -37,6 +37,7 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extend
 
   public $projects_locations;
   public $projects_locations_global_domains;
+  public $projects_locations_global_domains_sqlIntegrations;
   public $projects_locations_global_operations;
 
   /**
@@ -259,6 +260,52 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extend
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_global_domains_sqlIntegrations = new Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resource_ProjectsLocationsManagedidentitiesGlobalDomainsSqlIntegrations(
+        $this,
+        $this->serviceName,
+        'sqlIntegrations',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1/{+parent}/sqlIntegrations',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
