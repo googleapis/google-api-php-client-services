@@ -59,19 +59,17 @@ class ServiceTest extends TestCase
   public function getServiceClasses($service)
   {
     $classes = array();
-    $path = __DIR__ . '/../src/';
-    $serviceClass = 'Google\Service\\' . $service;
-    $classes[] = $serviceClass;
-    $classes[] = str_replace('\\', '_', $serviceClass); // legacy name
-    foreach (glob($path . "$service/*.php") as $file) {
-      $model = "Google\Service\\$service\\" . basename($file, '.php');
-      $classes[] = $model;
-      $classes[] = str_replace('\\', '_', $model); // legacy name
+    $classes[] = 'Google\Service\\' . $service;
+    $classes[] = 'Google_Service_' . $service; // legacy name
+    foreach (glob(__DIR__ . "/../src/$service/*.php") as $file) {
+      $className = basename($file, '.php');
+      $classes[] = "Google\Service\\$service\\" . $className;
+      $classes[] = "Google_Service_{$service}_" . $className; // legacy name
     }
-    foreach (glob($path . "$service/Resource/*.php") as $file) {
-      $resource = "Google\Service\\$service\Resource\\" . basename($file, '.php');
-      $classes[] = $resource;
-      $classes[] = str_replace('\\', '_', $resource); // legacy name
+    foreach (glob(__DIR__ . "/../src/$service/Resource/*.php") as $file) {
+      $className = basename($file, '.php');
+      $classes[] = "Google\Service\\$service\Resource\\" . $className;
+      $classes[] = "Google_Service_{$service}_Resource_" . $className; // legacy name
     }
 
     return $classes;
@@ -79,7 +77,6 @@ class ServiceTest extends TestCase
 
   public function apiProvider()
   {
-    $path = __DIR__ . '/../src/*';
-    return array_filter(glob($path), 'is_dir');
+    return array_filter(glob(__DIR__ . '/../src/*'), 'is_dir');
   }
 }
