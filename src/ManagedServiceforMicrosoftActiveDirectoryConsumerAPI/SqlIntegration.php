@@ -15,9 +15,7 @@
  * the License.
  */
 
-namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
-
-class SqlIntegration extends \Google\Model
+class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration extends Google_Model
 {
   public $createTime;
   public $name;
@@ -66,6 +64,3 @@ class SqlIntegration extends \Google\Model
     return $this->updateTime;
   }
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SqlIntegration::class, 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_SqlIntegration');

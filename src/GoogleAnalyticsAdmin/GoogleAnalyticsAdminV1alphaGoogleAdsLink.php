@@ -22,8 +22,8 @@ class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends \Google\Model
   public $adsPersonalizationEnabled;
   public $canManageClients;
   public $createTime;
+  public $creatorEmailAddress;
   public $customerId;
-  public $emailAddress;
   public $name;
   public $updateTime;
 
@@ -51,6 +51,14 @@ class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends \Google\Model
   {
     return $this->createTime;
   }
+  public function setCreatorEmailAddress($creatorEmailAddress)
+  {
+    $this->creatorEmailAddress = $creatorEmailAddress;
+  }
+  public function getCreatorEmailAddress()
+  {
+    return $this->creatorEmailAddress;
+  }
   public function setCustomerId($customerId)
   {
     $this->customerId = $customerId;
@@ -58,14 +66,6 @@ class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends \Google\Model
   public function getCustomerId()
   {
     return $this->customerId;
-  }
-  public function setEmailAddress($emailAddress)
-  {
-    $this->emailAddress = $emailAddress;
-  }
-  public function getEmailAddress()
-  {
-    return $this->emailAddress;
   }
   public function setName($name)
   {
