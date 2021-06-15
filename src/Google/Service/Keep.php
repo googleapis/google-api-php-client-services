@@ -30,7 +30,9 @@
  */
 class Google_Service_Keep extends Google_Service
 {
-
+  /** See, edit, create and permanently delete all your Google Keep data. */
+  const KEEP =
+      "https://www.googleapis.com/auth/keep";
 
   public $media;
   public $notes;

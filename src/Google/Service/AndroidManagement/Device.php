@@ -21,6 +21,8 @@ class Google_Service_AndroidManagement_Device extends Google_Collection
   public $apiLevel;
   protected $applicationReportsType = 'Google_Service_AndroidManagement_ApplicationReport';
   protected $applicationReportsDataType = 'array';
+  protected $appliedPasswordPoliciesType = 'Google_Service_AndroidManagement_PasswordRequirements';
+  protected $appliedPasswordPoliciesDataType = 'array';
   public $appliedPolicyName;
   public $appliedPolicyVersion;
   public $appliedState;
@@ -89,6 +91,20 @@ class Google_Service_AndroidManagement_Device extends Google_Collection
   public function getApplicationReports()
   {
     return $this->applicationReports;
+  }
+  /**
+   * @param Google_Service_AndroidManagement_PasswordRequirements[]
+   */
+  public function setAppliedPasswordPolicies($appliedPasswordPolicies)
+  {
+    $this->appliedPasswordPolicies = $appliedPasswordPolicies;
+  }
+  /**
+   * @return Google_Service_AndroidManagement_PasswordRequirements[]
+   */
+  public function getAppliedPasswordPolicies()
+  {
+    return $this->appliedPasswordPolicies;
   }
   public function setAppliedPolicyName($appliedPolicyName)
   {

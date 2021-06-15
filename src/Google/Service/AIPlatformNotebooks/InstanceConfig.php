@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudIAP_AccessDeniedPageSettings extends Google_Model
+class Google_Service_AIPlatformNotebooks_InstanceConfig extends Google_Model
 {
-  public $accessDeniedPageUri;
-  public $generateTroubleshootingUri;
+  public $enableHealthMonitoring;
+  public $notebookUpgradeSchedule;
 
-  public function setAccessDeniedPageUri($accessDeniedPageUri)
+  public function setEnableHealthMonitoring($enableHealthMonitoring)
   {
-    $this->accessDeniedPageUri = $accessDeniedPageUri;
+    $this->enableHealthMonitoring = $enableHealthMonitoring;
   }
-  public function getAccessDeniedPageUri()
+  public function getEnableHealthMonitoring()
   {
-    return $this->accessDeniedPageUri;
+    return $this->enableHealthMonitoring;
   }
-  public function setGenerateTroubleshootingUri($generateTroubleshootingUri)
+  public function setNotebookUpgradeSchedule($notebookUpgradeSchedule)
   {
-    $this->generateTroubleshootingUri = $generateTroubleshootingUri;
+    $this->notebookUpgradeSchedule = $notebookUpgradeSchedule;
   }
-  public function getGenerateTroubleshootingUri()
+  public function getNotebookUpgradeSchedule()
   {
-    return $this->generateTroubleshootingUri;
+    return $this->notebookUpgradeSchedule;
   }
 }

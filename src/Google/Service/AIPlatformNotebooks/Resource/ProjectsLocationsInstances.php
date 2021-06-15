@@ -324,6 +324,21 @@ class Google_Service_AIPlatformNotebooks_Resource_ProjectsLocationsInstances ext
     return $this->call('testIamPermissions', array($params), "Google_Service_AIPlatformNotebooks_TestIamPermissionsResponse");
   }
   /**
+   * Update Notebook Instance configurations. (instances.updateConfig)
+   *
+   * @param string $name Required. Format:
+   * `projects/{project_id}/locations/{location}/instances/{instance_id}`
+   * @param Google_Service_AIPlatformNotebooks_UpdateInstanceConfigRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_AIPlatformNotebooks_Operation
+   */
+  public function updateConfig($name, Google_Service_AIPlatformNotebooks_UpdateInstanceConfigRequest $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('updateConfig', array($params), "Google_Service_AIPlatformNotebooks_Operation");
+  }
+  /**
    * Updates the Shielded instance configuration of a single Instance.
    * (instances.updateShieldedInstanceConfig)
    *

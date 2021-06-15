@@ -80,9 +80,9 @@ class Google_Service_AdExchangeBuyerII_Resource_AccountsFinalizedProposals exten
    * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all
    * listed deals in the request. Currently, this method only applies to PG and PD
    * deals. For PA deals, please call accounts.proposals.resume endpoint. It is a
-   * no-op to resume already-running deals. It is an error to call
-   * ResumeProposalDeals for deals which are not part of the proposal of
-   * proposal_id or which are not finalized or renegotiating.
+   * no-op to resume running deals or deals paused by the other party. It is an
+   * error to call ResumeProposalDeals for deals which are not part of the
+   * proposal of proposal_id or which are not finalized or renegotiating.
    * (finalizedProposals.resume)
    *
    * @param string $accountId Account ID of the buyer.

@@ -15,25 +15,23 @@
  * the License.
  */
 
-class Google_Service_CloudIAP_AccessDeniedPageSettings extends Google_Model
+class Google_Service_AIPlatformNotebooks_UpdateInstanceConfigRequest extends Google_Model
 {
-  public $accessDeniedPageUri;
-  public $generateTroubleshootingUri;
+  protected $configType = 'Google_Service_AIPlatformNotebooks_InstanceConfig';
+  protected $configDataType = '';
 
-  public function setAccessDeniedPageUri($accessDeniedPageUri)
+  /**
+   * @param Google_Service_AIPlatformNotebooks_InstanceConfig
+   */
+  public function setConfig(Google_Service_AIPlatformNotebooks_InstanceConfig $config)
   {
-    $this->accessDeniedPageUri = $accessDeniedPageUri;
+    $this->config = $config;
   }
-  public function getAccessDeniedPageUri()
+  /**
+   * @return Google_Service_AIPlatformNotebooks_InstanceConfig
+   */
+  public function getConfig()
   {
-    return $this->accessDeniedPageUri;
-  }
-  public function setGenerateTroubleshootingUri($generateTroubleshootingUri)
-  {
-    $this->generateTroubleshootingUri = $generateTroubleshootingUri;
-  }
-  public function getGenerateTroubleshootingUri()
-  {
-    return $this->generateTroubleshootingUri;
+    return $this->config;
   }
 }

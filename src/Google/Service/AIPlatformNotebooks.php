@@ -434,6 +434,16 @@ class Google_Service_AIPlatformNotebooks extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'updateConfig' => array(
+              'path' => 'v1/{+name}:updateConfig',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'updateShieldedInstanceConfig' => array(
               'path' => 'v1/{+name}:updateShieldedInstanceConfig',
               'httpMethod' => 'PATCH',
