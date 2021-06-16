@@ -36,7 +36,8 @@ class Google_Service_Gmail_Resource_UsersHistory extends Google_Service_Resource
    *
    * @opt_param string historyTypes History types to be returned by the function
    * @opt_param string labelId Only return messages with a label matching the ID.
-   * @opt_param string maxResults The maximum number of history records to return.
+   * @opt_param string maxResults Maximum number of history records to return.
+   * This field defaults to 100. The maximum allowed value for this field is 500.
    * @opt_param string pageToken Page token to retrieve a specific page of results
    * in the list.
    * @opt_param string startHistoryId Required. Returns history records after the

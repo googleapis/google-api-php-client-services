@@ -68,7 +68,10 @@ class Google_Service_PeopleService_Resource_PeopleConnections extends Google_Ser
    * Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
    * @opt_param string syncToken Optional. A sync token, received from a previous
    * `ListConnections` call. Provide this to retrieve only the resources changed
-   * since the last request. When syncing, all other parameters provided to
+   * since the last request. When the `syncToken` is specified, resources deleted
+   * since the last sync will be returned as a person with [`PersonMetadata.delete
+   * d`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
+   * true. When the `syncToken` is specified, all other parameters provided to
    * `ListConnections` except `page_size` and `page_token` must match the initial
    * call that provided the sync token. Sync tokens expire after seven days, after
    * which a full sync request without a `sync_token` should be made.

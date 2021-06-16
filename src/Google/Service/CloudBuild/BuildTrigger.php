@@ -33,10 +33,13 @@ class Google_Service_CloudBuild_BuildTrigger extends Google_Collection
   public $name;
   protected $pubsubConfigType = 'Google_Service_CloudBuild_PubsubConfig';
   protected $pubsubConfigDataType = '';
+  public $resourceName;
   public $substitutions;
   public $tags;
   protected $triggerTemplateType = 'Google_Service_CloudBuild_RepoSource';
   protected $triggerTemplateDataType = '';
+  protected $webhookConfigType = 'Google_Service_CloudBuild_WebhookConfig';
+  protected $webhookConfigDataType = '';
 
   /**
    * @param Google_Service_CloudBuild_Build
@@ -152,6 +155,14 @@ class Google_Service_CloudBuild_BuildTrigger extends Google_Collection
   {
     return $this->pubsubConfig;
   }
+  public function setResourceName($resourceName)
+  {
+    $this->resourceName = $resourceName;
+  }
+  public function getResourceName()
+  {
+    return $this->resourceName;
+  }
   public function setSubstitutions($substitutions)
   {
     $this->substitutions = $substitutions;
@@ -181,5 +192,19 @@ class Google_Service_CloudBuild_BuildTrigger extends Google_Collection
   public function getTriggerTemplate()
   {
     return $this->triggerTemplate;
+  }
+  /**
+   * @param Google_Service_CloudBuild_WebhookConfig
+   */
+  public function setWebhookConfig(Google_Service_CloudBuild_WebhookConfig $webhookConfig)
+  {
+    $this->webhookConfig = $webhookConfig;
+  }
+  /**
+   * @return Google_Service_CloudBuild_WebhookConfig
+   */
+  public function getWebhookConfig()
+  {
+    return $this->webhookConfig;
   }
 }

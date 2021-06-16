@@ -45,12 +45,14 @@ class Google_Service_Recommender_Resource_ProjectsLocationsInsightTypesInsights 
    * (insights.listProjectsLocationsInsightTypesInsights)
    *
    * @param string $parent Required. The container resource on which to execute
-   * the request. Acceptable formats: 1. `projects/[PROJECT_NUMBER]/locations/[LOC
-   * ATION]/insightTypes/[INSIGHT_TYPE_ID]` 2. `billingAccounts/[BILLING_ACCOUNT_I
-   * D]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 3.
-   * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` 4.
-   * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_T
-   * YPE_ID]` LOCATION here refers to GCP Locations:
+   * the request. Acceptable formats: * `projects/[PROJECT_NUMBER]/locations/[LOCA
+   * TION]/insightTypes/[INSIGHT_TYPE_ID]` *
+   * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` *
+   * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSI
+   * GHT_TYPE_ID]` *
+   * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]` * `
+   * organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TY
+   * PE_ID]` LOCATION here refers to GCP Locations:
    * https://cloud.google.com/about/locations/ INSIGHT_TYPE_ID refers to supported
    * insight types: https://cloud.google.com/recommender/docs/insights/insight-
    * types.

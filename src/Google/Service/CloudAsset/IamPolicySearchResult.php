@@ -15,15 +15,27 @@
  * the License.
  */
 
-class Google_Service_CloudAsset_IamPolicySearchResult extends Google_Model
+class Google_Service_CloudAsset_IamPolicySearchResult extends Google_Collection
 {
+  protected $collection_key = 'folders';
+  public $assetType;
   protected $explanationType = 'Google_Service_CloudAsset_Explanation';
   protected $explanationDataType = '';
+  public $folders;
+  public $organization;
   protected $policyType = 'Google_Service_CloudAsset_Policy';
   protected $policyDataType = '';
   public $project;
   public $resource;
 
+  public function setAssetType($assetType)
+  {
+    $this->assetType = $assetType;
+  }
+  public function getAssetType()
+  {
+    return $this->assetType;
+  }
   /**
    * @param Google_Service_CloudAsset_Explanation
    */
@@ -37,6 +49,22 @@ class Google_Service_CloudAsset_IamPolicySearchResult extends Google_Model
   public function getExplanation()
   {
     return $this->explanation;
+  }
+  public function setFolders($folders)
+  {
+    $this->folders = $folders;
+  }
+  public function getFolders()
+  {
+    return $this->folders;
+  }
+  public function setOrganization($organization)
+  {
+    $this->organization = $organization;
+  }
+  public function getOrganization()
+  {
+    return $this->organization;
   }
   /**
    * @param Google_Service_CloudAsset_Policy

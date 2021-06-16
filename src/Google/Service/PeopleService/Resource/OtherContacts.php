@@ -66,7 +66,10 @@ class Google_Service_PeopleService_Resource_OtherContacts extends Google_Service
    * @opt_param string syncToken Optional. A sync token, received from a previous
    * `ListOtherContacts` call. Provide this to retrieve only the resources changed
    * since the last request. Sync requests that specify `sync_token` have an
-   * additional rate limit. When syncing, all other parameters provided to
+   * additional rate limit. When the `syncToken` is specified, resources deleted
+   * since the last sync will be returned as a person with [`PersonMetadata.delete
+   * d`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
+   * true. When the `syncToken` is specified, all other parameters provided to
    * `ListOtherContacts` must match the call that provided the sync token.
    * @return Google_Service_PeopleService_ListOtherContactsResponse
    */

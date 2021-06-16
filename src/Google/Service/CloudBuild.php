@@ -38,6 +38,7 @@ class Google_Service_CloudBuild extends Google_Service
   public $projects_builds;
   public $projects_locations_builds;
   public $projects_locations_operations;
+  public $projects_locations_triggers;
   public $projects_triggers;
 
   /**
@@ -302,6 +303,138 @@ class Google_Service_CloudBuild extends Google_Service
           )
         )
     );
+    $this->projects_locations_triggers = new Google_Service_CloudBuild_Resource_ProjectsLocationsTriggers(
+        $this,
+        $this->serviceName,
+        'triggers',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1/{+parent}/triggers',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'projectId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'delete' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'projectId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'triggerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'get' => array(
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'projectId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'triggerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1/{+parent}/triggers',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'projectId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'patch' => array(
+              'path' => 'v1/{+resourceName}',
+              'httpMethod' => 'PATCH',
+              'parameters' => array(
+                'resourceName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'projectId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'triggerId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'run' => array(
+              'path' => 'v1/{+name}:run',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'webhook' => array(
+              'path' => 'v1/{+name}:webhook',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'projectId' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'secret' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'trigger' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->projects_triggers = new Google_Service_CloudBuild_Resource_ProjectsTriggers(
         $this,
         $this->serviceName,
@@ -316,6 +449,10 @@ class Google_Service_CloudBuild extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'parent' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'delete' => array(
@@ -332,6 +469,10 @@ class Google_Service_CloudBuild extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'name' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'get' => array(
               'path' => 'v1/projects/{projectId}/triggers/{triggerId}',
@@ -346,6 +487,10 @@ class Google_Service_CloudBuild extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'name' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'list' => array(
@@ -362,6 +507,10 @@ class Google_Service_CloudBuild extends Google_Service
                   'type' => 'integer',
                 ),
                 'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'parent' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -395,6 +544,10 @@ class Google_Service_CloudBuild extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'name' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'webhook' => array(
               'path' => 'v1/projects/{projectId}/triggers/{trigger}:webhook',
@@ -409,6 +562,10 @@ class Google_Service_CloudBuild extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'name' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'secret' => array(
                   'location' => 'query',

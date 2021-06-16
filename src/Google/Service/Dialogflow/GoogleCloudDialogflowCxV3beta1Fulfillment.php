@@ -22,6 +22,7 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1Fulfillment extend
   protected $conditionalCasesDataType = 'array';
   protected $messagesType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1ResponseMessage';
   protected $messagesDataType = 'array';
+  public $returnPartialResponses;
   protected $setParameterActionsType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterAction';
   protected $setParameterActionsDataType = 'array';
   public $tag;
@@ -54,6 +55,14 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1Fulfillment extend
   public function getMessages()
   {
     return $this->messages;
+  }
+  public function setReturnPartialResponses($returnPartialResponses)
+  {
+    $this->returnPartialResponses = $returnPartialResponses;
+  }
+  public function getReturnPartialResponses()
+  {
+    return $this->returnPartialResponses;
   }
   /**
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterAction[]

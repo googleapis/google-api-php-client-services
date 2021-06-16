@@ -17,13 +17,23 @@
 
 class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3DetectIntentResponse extends Google_Model
 {
+  public $allowCancellation;
   public $outputAudio;
   protected $outputAudioConfigType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3OutputAudioConfig';
   protected $outputAudioConfigDataType = '';
   protected $queryResultType = 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3QueryResult';
   protected $queryResultDataType = '';
   public $responseId;
+  public $responseType;
 
+  public function setAllowCancellation($allowCancellation)
+  {
+    $this->allowCancellation = $allowCancellation;
+  }
+  public function getAllowCancellation()
+  {
+    return $this->allowCancellation;
+  }
   public function setOutputAudio($outputAudio)
   {
     $this->outputAudio = $outputAudio;
@@ -67,5 +77,13 @@ class Google_Service_Dialogflow_GoogleCloudDialogflowCxV3DetectIntentResponse ex
   public function getResponseId()
   {
     return $this->responseId;
+  }
+  public function setResponseType($responseType)
+  {
+    $this->responseType = $responseType;
+  }
+  public function getResponseType()
+  {
+    return $this->responseType;
   }
 }

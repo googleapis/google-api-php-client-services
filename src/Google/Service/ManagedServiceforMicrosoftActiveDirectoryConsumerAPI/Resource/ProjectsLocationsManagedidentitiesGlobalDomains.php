@@ -134,6 +134,20 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resour
     return $this->call('getIamPolicy', array($params), "Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Policy");
   }
   /**
+   * Gets the domain ldaps settings. (domains.getLdapssettings)
+   *
+   * @param string $name Required. The domain resource name using the form:
+   * `projects/{project_id}/locations/global/domains/{domain_name}`
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSSettings
+   */
+  public function getLdapssettings($name, $optParams = array())
+  {
+    $params = array('name' => $name);
+    $params = array_merge($params, $optParams);
+    return $this->call('getLdapssettings', array($params), "Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSSettings");
+  }
+  /**
    * Lists domains in a project.
    * (domains.listProjectsLocationsManagedidentitiesGlobalDomains)
    *
@@ -173,7 +187,7 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resour
    * @opt_param string updateMask Required. Mask of fields to update. At least one
    * path must be supplied in this field. The elements of the repeated paths field
    * may only include fields from Domain: * `labels` * `locations` *
-   * `authorized_networks`
+   * `authorized_networks` * `audit_logs_enabled`
    * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Operation
    */
   public function patch($name, Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Domain $postBody, $optParams = array())
@@ -250,6 +264,26 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Resour
     $params = array('resource' => $resource, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
     return $this->call('testIamPermissions', array($params), "Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_TestIamPermissionsResponse");
+  }
+  /**
+   * Patches a single ldaps settings. (domains.updateLdapssettings)
+   *
+   * @param string $name The resource name of the LDAPS settings. Uses the form:
+   * `projects/{project}/locations/{location}/domains/{domain}`.
+   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSSettings $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. Mask of fields to update. At least one
+   * path must be supplied in this field. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask
+   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Operation
+   */
+  public function updateLdapssettings($name, Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSSettings $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('updateLdapssettings', array($params), "Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Operation");
   }
   /**
    * Validates a trust state, that the target domain is reachable, and that the
