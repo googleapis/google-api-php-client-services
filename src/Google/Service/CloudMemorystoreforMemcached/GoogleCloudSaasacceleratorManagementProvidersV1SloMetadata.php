@@ -18,8 +18,6 @@
 class Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends Google_Collection
 {
   protected $collection_key = 'nodes';
-  protected $eligibilityType = 'Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility';
-  protected $eligibilityDataType = '';
   protected $exclusionsType = 'Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion';
   protected $exclusionsDataType = 'array';
   protected $nodesType = 'Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata';
@@ -28,20 +26,6 @@ class Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorMana
   protected $perSliEligibilityDataType = '';
   public $tier;
 
-  /**
-   * @param Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility
-   */
-  public function setEligibility(Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility $eligibility)
-  {
-    $this->eligibility = $eligibility;
-  }
-  /**
-   * @return Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility
-   */
-  public function getEligibility()
-  {
-    return $this->eligibility;
-  }
   /**
    * @param Google_Service_CloudMemorystoreforMemcached_GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion[]
    */

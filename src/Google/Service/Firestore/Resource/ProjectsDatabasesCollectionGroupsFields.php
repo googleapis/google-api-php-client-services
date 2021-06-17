@@ -43,7 +43,7 @@ class Google_Service_Firestore_Resource_ProjectsDatabasesCollectionGroupsFields 
    * Lists the field configuration and metadata for this database. Currently,
    * FirestoreAdmin.ListFields only supports listing fields that have been
    * explicitly overridden. To issue this query, call FirestoreAdmin.ListFields
-   * with the filter set to `indexConfig.usesAncestorConfig:false`.
+   * with the filter set to `indexConfig.usesAncestorConfig:false` .
    * (fields.listProjectsDatabasesCollectionGroupsFields)
    *
    * @param string $parent Required. A parent name of the form `projects/{project_
@@ -53,7 +53,7 @@ class Google_Service_Firestore_Resource_ProjectsDatabasesCollectionGroupsFields 
    * @opt_param string filter The filter to apply to list results. Currently,
    * FirestoreAdmin.ListFields only supports listing fields that have been
    * explicitly overridden. To issue this query, call FirestoreAdmin.ListFields
-   * with the filter set to `indexConfig.usesAncestorConfig:false`.
+   * with a filter that includes `indexConfig.usesAncestorConfig:false` .
    * @opt_param int pageSize The number of results to return.
    * @opt_param string pageToken A page token, returned from a previous call to
    * FirestoreAdmin.ListFields, that may be used to get the next page of results.

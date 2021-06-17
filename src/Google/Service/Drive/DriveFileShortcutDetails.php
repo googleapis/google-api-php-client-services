@@ -19,6 +19,7 @@ class Google_Service_Drive_DriveFileShortcutDetails extends Google_Model
 {
   public $targetId;
   public $targetMimeType;
+  public $targetResourceKey;
 
   public function setTargetId($targetId)
   {
@@ -35,5 +36,13 @@ class Google_Service_Drive_DriveFileShortcutDetails extends Google_Model
   public function getTargetMimeType()
   {
     return $this->targetMimeType;
+  }
+  public function setTargetResourceKey($targetResourceKey)
+  {
+    $this->targetResourceKey = $targetResourceKey;
+  }
+  public function getTargetResourceKey()
+  {
+    return $this->targetResourceKey;
   }
 }

@@ -33,6 +33,8 @@ class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSub
   protected $serviceLocationDataType = '';
   public $state;
   public $updateTime;
+  protected $upgradeDowngradeDetailsType = 'Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails';
+  protected $upgradeDowngradeDetailsDataType = '';
 
   /**
    * @param Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails
@@ -149,5 +151,19 @@ class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSub
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
+   */
+  public function setUpgradeDowngradeDetails(Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails $upgradeDowngradeDetails)
+  {
+    $this->upgradeDowngradeDetails = $upgradeDowngradeDetails;
+  }
+  /**
+   * @return Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
+   */
+  public function getUpgradeDowngradeDetails()
+  {
+    return $this->upgradeDowngradeDetails;
   }
 }
