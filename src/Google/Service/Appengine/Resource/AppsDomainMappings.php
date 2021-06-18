@@ -113,8 +113,8 @@ class Google_Service_Appengine_Resource_AppsDomainMappings extends Google_Servic
    * @param Google_Service_Appengine_DomainMapping $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Standard field mask for the set of fields to be
-   * updated.
+   * @opt_param string updateMask Required. Standard field mask for the set of
+   * fields to be updated.
    * @return Google_Service_Appengine_Operation
    */
   public function patch($appsId, $domainMappingsId, Google_Service_Appengine_DomainMapping $postBody, $optParams = array())

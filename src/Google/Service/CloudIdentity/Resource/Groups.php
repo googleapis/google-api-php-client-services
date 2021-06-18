@@ -117,7 +117,7 @@ class Google_Service_CloudIdentity_Resource_Groups extends Google_Service_Resour
    * such as a Google user or a Google Group. If specified, the `EntityKey`
    * represents an external-identity-mapped group. The namespace must correspond
    * to an identity source created in Admin Console and must be in the form of
-   * `identitysources/{identity_source_id}.
+   * `identitysources/{identity_source_id}`.
    * @return Google_Service_CloudIdentity_LookupGroupNameResponse
    */
   public function lookup($optParams = array())
@@ -136,7 +136,8 @@ class Google_Service_CloudIdentity_Resource_Groups extends Google_Service_Resour
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The fully-qualified names of fields to
-   * update. May only contain the following fields: `display_name`, `description`.
+   * update. May only contain the following fields: `display_name`, `description`,
+   * `labels`.
    * @return Google_Service_CloudIdentity_Operation
    */
   public function patch($name, Google_Service_CloudIdentity_Group $postBody, $optParams = array())

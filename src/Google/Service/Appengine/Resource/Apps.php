@@ -70,8 +70,8 @@ class Google_Service_Appengine_Resource_Apps extends Google_Service_Resource
    * @param Google_Service_Appengine_Application $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Standard field mask for the set of fields to be
-   * updated.
+   * @opt_param string updateMask Required. Standard field mask for the set of
+   * fields to be updated.
    * @return Google_Service_Appengine_Operation
    */
   public function patch($appsId, Google_Service_Appengine_Application $postBody, $optParams = array())

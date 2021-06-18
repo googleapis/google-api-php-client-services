@@ -15,14 +15,9 @@
  * the License.
  */
 
-class Google_Service_DataprocMetastore_MetadataImport extends Google_Model
+class Google_Service_Monitoring_OperationMetadata extends Google_Model
 {
   public $createTime;
-  protected $databaseDumpType = 'Google_Service_DataprocMetastore_DatabaseDump';
-  protected $databaseDumpDataType = '';
-  public $description;
-  public $endTime;
-  public $name;
   public $state;
   public $updateTime;
 
@@ -33,44 +28,6 @@ class Google_Service_DataprocMetastore_MetadataImport extends Google_Model
   public function getCreateTime()
   {
     return $this->createTime;
-  }
-  /**
-   * @param Google_Service_DataprocMetastore_DatabaseDump
-   */
-  public function setDatabaseDump(Google_Service_DataprocMetastore_DatabaseDump $databaseDump)
-  {
-    $this->databaseDump = $databaseDump;
-  }
-  /**
-   * @return Google_Service_DataprocMetastore_DatabaseDump
-   */
-  public function getDatabaseDump()
-  {
-    return $this->databaseDump;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setEndTime($endTime)
-  {
-    $this->endTime = $endTime;
-  }
-  public function getEndTime()
-  {
-    return $this->endTime;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
   }
   public function setState($state)
   {

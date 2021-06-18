@@ -57,7 +57,8 @@ class Google_Service_PeopleService_Resource_OtherContacts extends Google_Service
    * the call that provided the page token.
    * @opt_param string readMask Required. A field mask to restrict which fields on
    * each person are returned. Multiple fields can be specified by separating them
-   * with commas. Valid values are: * emailAddresses * names * phoneNumbers
+   * with commas. Valid values are: * emailAddresses * metadata * names *
+   * phoneNumbers
    * @opt_param bool requestSyncToken Optional. Whether the response should
    * include `next_sync_token`, which can be used to get all changes since the
    * last request. For subsequent sync requests use the `sync_token` param
@@ -99,7 +100,8 @@ class Google_Service_PeopleService_Resource_OtherContacts extends Google_Service
    * n", "nam", etc., but not "oo n".
    * @opt_param string readMask Required. A field mask to restrict which fields on
    * each person are returned. Multiple fields can be specified by separating them
-   * with commas. Valid values are: * emailAddresses * names * phoneNumbers
+   * with commas. Valid values are: * emailAddresses * metadata * names *
+   * phoneNumbers
    * @return Google_Service_PeopleService_SearchResponse
    */
   public function search($optParams = array())

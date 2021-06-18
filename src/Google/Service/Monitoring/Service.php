@@ -33,6 +33,7 @@ class Google_Service_Monitoring_Service extends Google_Model
   public $name;
   protected $telemetryType = 'Google_Service_Monitoring_Telemetry';
   protected $telemetryDataType = '';
+  public $userLabels;
 
   /**
    * @param Google_Service_Monitoring_AppEngine
@@ -147,5 +148,13 @@ class Google_Service_Monitoring_Service extends Google_Model
   public function getTelemetry()
   {
     return $this->telemetry;
+  }
+  public function setUserLabels($userLabels)
+  {
+    $this->userLabels = $userLabels;
+  }
+  public function getUserLabels()
+  {
+    return $this->userLabels;
   }
 }

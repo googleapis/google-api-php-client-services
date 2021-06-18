@@ -24,6 +24,7 @@ class Google_Service_Monitoring_ServiceLevelObjective extends Google_Model
   public $rollingPeriod;
   protected $serviceLevelIndicatorType = 'Google_Service_Monitoring_ServiceLevelIndicator';
   protected $serviceLevelIndicatorDataType = '';
+  public $userLabels;
 
   public function setCalendarPeriod($calendarPeriod)
   {
@@ -78,5 +79,13 @@ class Google_Service_Monitoring_ServiceLevelObjective extends Google_Model
   public function getServiceLevelIndicator()
   {
     return $this->serviceLevelIndicator;
+  }
+  public function setUserLabels($userLabels)
+  {
+    $this->userLabels = $userLabels;
+  }
+  public function getUserLabels()
+  {
+    return $this->userLabels;
   }
 }
