@@ -15,14 +15,19 @@
  * the License.
  */
 
+namespace Google\Service\ResourceSettings\Resource;
+
 /**
  * The "folders" collection of methods.
  * Typical usage is:
  *  <code>
- *   $resourcesettingsService = new Google_Service_ResourceSettings(...);
+ *   $resourcesettingsService = new Google\Service\ResourceSettings(...);
  *   $folders = $resourcesettingsService->folders;
  *  </code>
  */
-class Google_Service_ResourceSettings_Resource_Folders extends Google_Service_Resource
+class Folders extends \Google\Service\Resource
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Folders::class, 'Google_Service_ResourceSettings_Resource_Folders');

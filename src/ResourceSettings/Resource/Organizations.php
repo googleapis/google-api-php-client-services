@@ -15,14 +15,19 @@
  * the License.
  */
 
+namespace Google\Service\ResourceSettings\Resource;
+
 /**
  * The "organizations" collection of methods.
  * Typical usage is:
  *  <code>
- *   $resourcesettingsService = new Google_Service_ResourceSettings(...);
+ *   $resourcesettingsService = new Google\Service\ResourceSettings(...);
  *   $organizations = $resourcesettingsService->organizations;
  *  </code>
  */
-class Google_Service_ResourceSettings_Resource_Organizations extends Google_Service_Resource
+class Organizations extends \Google\Service\Resource
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Organizations::class, 'Google_Service_ResourceSettings_Resource_Organizations');

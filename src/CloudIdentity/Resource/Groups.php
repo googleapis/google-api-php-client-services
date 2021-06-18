@@ -125,7 +125,7 @@ class Groups extends \Google\Service\Resource
    * such as a Google user or a Google Group. If specified, the `EntityKey`
    * represents an external-identity-mapped group. The namespace must correspond
    * to an identity source created in Admin Console and must be in the form of
-   * `identitysources/{identity_source_id}.
+   * `identitysources/{identity_source_id}`.
    * @return LookupGroupNameResponse
    */
   public function lookup($optParams = [])
@@ -144,7 +144,8 @@ class Groups extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The fully-qualified names of fields to
-   * update. May only contain the following fields: `display_name`, `description`.
+   * update. May only contain the following fields: `display_name`, `description`,
+   * `labels`.
    * @return Operation
    */
   public function patch($name, Group $postBody, $optParams = [])

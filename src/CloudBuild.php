@@ -42,6 +42,7 @@ class CloudBuild extends \Google\Service
   public $projects_builds;
   public $projects_locations_builds;
   public $projects_locations_operations;
+  public $projects_locations_triggers;
   public $projects_triggers;
 
   /**
@@ -307,6 +308,138 @@ class CloudBuild extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_triggers = new CloudBuild\Resource\ProjectsLocationsTriggers(
+        $this,
+        $this->serviceName,
+        'triggers',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/triggers',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'projectId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'projectId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'triggerId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'projectId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'triggerId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/triggers',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'projectId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+resourceName}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'resourceName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'projectId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'triggerId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'run' => [
+              'path' => 'v1/{+name}:run',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'webhook' => [
+              'path' => 'v1/{+name}:webhook',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'projectId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'secret' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'trigger' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_triggers = new CloudBuild\Resource\ProjectsTriggers(
         $this,
         $this->serviceName,
@@ -321,6 +454,10 @@ class CloudBuild extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'parent' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'delete' => [
@@ -337,6 +474,10 @@ class CloudBuild extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'get' => [
               'path' => 'v1/projects/{projectId}/triggers/{triggerId}',
@@ -351,6 +492,10 @@ class CloudBuild extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'list' => [
@@ -367,6 +512,10 @@ class CloudBuild extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'parent' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -400,6 +549,10 @@ class CloudBuild extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'webhook' => [
               'path' => 'v1/projects/{projectId}/triggers/{trigger}:webhook',
@@ -414,6 +567,10 @@ class CloudBuild extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'secret' => [
                   'location' => 'query',

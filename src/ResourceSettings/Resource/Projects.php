@@ -15,14 +15,19 @@
  * the License.
  */
 
+namespace Google\Service\ResourceSettings\Resource;
+
 /**
  * The "projects" collection of methods.
  * Typical usage is:
  *  <code>
- *   $resourcesettingsService = new Google_Service_ResourceSettings(...);
+ *   $resourcesettingsService = new Google\Service\ResourceSettings(...);
  *   $projects = $resourcesettingsService->projects;
  *  </code>
  */
-class Google_Service_ResourceSettings_Resource_Projects extends Google_Service_Resource
+class Projects extends \Google\Service\Resource
 {
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Projects::class, 'Google_Service_ResourceSettings_Resource_Projects');

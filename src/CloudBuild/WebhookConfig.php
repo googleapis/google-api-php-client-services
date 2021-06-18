@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_CloudBuild_WebhookConfig extends Google_Model
+namespace Google\Service\CloudBuild;
+
+class WebhookConfig extends \Google\Model
 {
   public $secret;
   public $state;
@@ -37,3 +39,6 @@ class Google_Service_CloudBuild_WebhookConfig extends Google_Model
     return $this->state;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(WebhookConfig::class, 'Google_Service_CloudBuild_WebhookConfig');

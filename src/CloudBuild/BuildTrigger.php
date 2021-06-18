@@ -35,10 +35,13 @@ class BuildTrigger extends \Google\Collection
   public $name;
   protected $pubsubConfigType = PubsubConfig::class;
   protected $pubsubConfigDataType = '';
+  public $resourceName;
   public $substitutions;
   public $tags;
   protected $triggerTemplateType = RepoSource::class;
   protected $triggerTemplateDataType = '';
+  protected $webhookConfigType = WebhookConfig::class;
+  protected $webhookConfigDataType = '';
 
   /**
    * @param Build
@@ -154,6 +157,14 @@ class BuildTrigger extends \Google\Collection
   {
     return $this->pubsubConfig;
   }
+  public function setResourceName($resourceName)
+  {
+    $this->resourceName = $resourceName;
+  }
+  public function getResourceName()
+  {
+    return $this->resourceName;
+  }
   public function setSubstitutions($substitutions)
   {
     $this->substitutions = $substitutions;
@@ -183,6 +194,20 @@ class BuildTrigger extends \Google\Collection
   public function getTriggerTemplate()
   {
     return $this->triggerTemplate;
+  }
+  /**
+   * @param WebhookConfig
+   */
+  public function setWebhookConfig(WebhookConfig $webhookConfig)
+  {
+    $this->webhookConfig = $webhookConfig;
+  }
+  /**
+   * @return WebhookConfig
+   */
+  public function getWebhookConfig()
+  {
+    return $this->webhookConfig;
   }
 }
 

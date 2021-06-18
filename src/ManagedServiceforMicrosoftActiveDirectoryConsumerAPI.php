@@ -177,6 +177,16 @@ class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends \Google\Servi
                   'type' => 'integer',
                 ],
               ],
+            ],'getLdapssettings' => [
+              'path' => 'v1/{+name}/ldapssettings',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/domains',
               'httpMethod' => 'GET',
@@ -255,6 +265,20 @@ class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends \Google\Servi
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'updateLdapssettings' => [
+              'path' => 'v1/{+name}/ldapssettings',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'validateTrust' => [

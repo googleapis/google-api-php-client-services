@@ -44,10 +44,10 @@ class Projects extends \Google\Service\Resource
    * imageName.matches('*.jpg$')) && resource.mimeType.matches('^image/') } }
    * (projects.test)
    *
-   * @param string $name Tests may either provide `source` or a `Ruleset` resource
-   * name. For tests against `source`, the resource name must refer to the
-   * project: Format: `projects/{project_id}` For tests against a `Ruleset`, this
-   * must be the `Ruleset` resource name: Format:
+   * @param string $name Required. Tests may either provide `source` or a
+   * `Ruleset` resource name. For tests against `source`, the resource name must
+   * refer to the project: Format: `projects/{project_id}` For tests against a
+   * `Ruleset`, this must be the `Ruleset` resource name: Format:
    * `projects/{project_id}/rulesets/{ruleset_id}`
    * @param TestRulesetRequest $postBody
    * @param array $optParams Optional parameters.

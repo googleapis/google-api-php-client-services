@@ -15,15 +15,17 @@
  * the License.
  */
 
-class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value extends Google_Model
+namespace Google\Service\ResourceSettings;
+
+class GoogleCloudResourcesettingsV1Value extends \Google\Model
 {
   public $booleanValue;
   public $durationValue;
-  protected $enumValueType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueEnumValue';
+  protected $enumValueType = GoogleCloudResourcesettingsV1ValueEnumValue::class;
   protected $enumValueDataType = '';
-  protected $stringMapValueType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringMap';
+  protected $stringMapValueType = GoogleCloudResourcesettingsV1ValueStringMap::class;
   protected $stringMapValueDataType = '';
-  protected $stringSetValueType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringSet';
+  protected $stringSetValueType = GoogleCloudResourcesettingsV1ValueStringSet::class;
   protected $stringSetValueDataType = '';
   public $stringValue;
 
@@ -44,42 +46,42 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value extends
     return $this->durationValue;
   }
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueEnumValue
+   * @param GoogleCloudResourcesettingsV1ValueEnumValue
    */
-  public function setEnumValue(Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueEnumValue $enumValue)
+  public function setEnumValue(GoogleCloudResourcesettingsV1ValueEnumValue $enumValue)
   {
     $this->enumValue = $enumValue;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueEnumValue
+   * @return GoogleCloudResourcesettingsV1ValueEnumValue
    */
   public function getEnumValue()
   {
     return $this->enumValue;
   }
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringMap
+   * @param GoogleCloudResourcesettingsV1ValueStringMap
    */
-  public function setStringMapValue(Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringMap $stringMapValue)
+  public function setStringMapValue(GoogleCloudResourcesettingsV1ValueStringMap $stringMapValue)
   {
     $this->stringMapValue = $stringMapValue;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringMap
+   * @return GoogleCloudResourcesettingsV1ValueStringMap
    */
   public function getStringMapValue()
   {
     return $this->stringMapValue;
   }
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringSet
+   * @param GoogleCloudResourcesettingsV1ValueStringSet
    */
-  public function setStringSetValue(Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringSet $stringSetValue)
+  public function setStringSetValue(GoogleCloudResourcesettingsV1ValueStringSet $stringSetValue)
   {
     $this->stringSetValue = $stringSetValue;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringSet
+   * @return GoogleCloudResourcesettingsV1ValueStringSet
    */
   public function getStringSetValue()
   {
@@ -94,3 +96,6 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value extends
     return $this->stringValue;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudResourcesettingsV1Value::class, 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value');

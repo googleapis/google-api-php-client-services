@@ -15,30 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\AIPlatformNotebooks;
+namespace Google\Service\CloudSecurityToken;
 
-class InstanceConfig extends \Google\Model
+class GoogleIdentityStsV1IntrospectTokenRequest extends \Google\Model
 {
-  public $enableHealthMonitoring;
-  public $notebookUpgradeSchedule;
+  public $token;
+  public $tokenTypeHint;
 
-  public function setEnableHealthMonitoring($enableHealthMonitoring)
+  public function setToken($token)
   {
-    $this->enableHealthMonitoring = $enableHealthMonitoring;
+    $this->token = $token;
   }
-  public function getEnableHealthMonitoring()
+  public function getToken()
   {
-    return $this->enableHealthMonitoring;
+    return $this->token;
   }
-  public function setNotebookUpgradeSchedule($notebookUpgradeSchedule)
+  public function setTokenTypeHint($tokenTypeHint)
   {
-    $this->notebookUpgradeSchedule = $notebookUpgradeSchedule;
+    $this->tokenTypeHint = $tokenTypeHint;
   }
-  public function getNotebookUpgradeSchedule()
+  public function getTokenTypeHint()
   {
-    return $this->notebookUpgradeSchedule;
+    return $this->tokenTypeHint;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceConfig::class, 'Google_Service_AIPlatformNotebooks_InstanceConfig');
+class_alias(GoogleIdentityStsV1IntrospectTokenRequest::class, 'Google_Service_CloudSecurityToken_GoogleIdentityStsV1IntrospectTokenRequest');

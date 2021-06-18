@@ -15,26 +15,28 @@
  * the License.
  */
 
-class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting extends Google_Model
+namespace Google\Service\ResourceSettings;
+
+class GoogleCloudResourcesettingsV1Setting extends \Google\Model
 {
-  protected $effectiveValueType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value';
+  protected $effectiveValueType = GoogleCloudResourcesettingsV1Value::class;
   protected $effectiveValueDataType = '';
   public $etag;
-  protected $localValueType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value';
+  protected $localValueType = GoogleCloudResourcesettingsV1Value::class;
   protected $localValueDataType = '';
-  protected $metadataType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetadata';
+  protected $metadataType = GoogleCloudResourcesettingsV1SettingMetadata::class;
   protected $metadataDataType = '';
   public $name;
 
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value
+   * @param GoogleCloudResourcesettingsV1Value
    */
-  public function setEffectiveValue(Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value $effectiveValue)
+  public function setEffectiveValue(GoogleCloudResourcesettingsV1Value $effectiveValue)
   {
     $this->effectiveValue = $effectiveValue;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value
+   * @return GoogleCloudResourcesettingsV1Value
    */
   public function getEffectiveValue()
   {
@@ -49,28 +51,28 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting exten
     return $this->etag;
   }
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value
+   * @param GoogleCloudResourcesettingsV1Value
    */
-  public function setLocalValue(Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value $localValue)
+  public function setLocalValue(GoogleCloudResourcesettingsV1Value $localValue)
   {
     $this->localValue = $localValue;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value
+   * @return GoogleCloudResourcesettingsV1Value
    */
   public function getLocalValue()
   {
     return $this->localValue;
   }
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetadata
+   * @param GoogleCloudResourcesettingsV1SettingMetadata
    */
-  public function setMetadata(Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetadata $metadata)
+  public function setMetadata(GoogleCloudResourcesettingsV1SettingMetadata $metadata)
   {
     $this->metadata = $metadata;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetadata
+   * @return GoogleCloudResourcesettingsV1SettingMetadata
    */
   public function getMetadata()
   {
@@ -85,3 +87,6 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting exten
     return $this->name;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudResourcesettingsV1Setting::class, 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting');

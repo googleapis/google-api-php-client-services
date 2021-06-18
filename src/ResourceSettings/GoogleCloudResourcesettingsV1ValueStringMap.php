@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringMap extends Google_Model
+namespace Google\Service\ResourceSettings;
+
+class GoogleCloudResourcesettingsV1ValueStringMap extends \Google\Model
 {
   public $mappings;
 
@@ -28,3 +30,6 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringMa
     return $this->mappings;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudResourcesettingsV1ValueStringMap::class, 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringMap');

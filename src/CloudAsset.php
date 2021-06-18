@@ -320,6 +320,15 @@ class CloudAsset extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'assetTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',

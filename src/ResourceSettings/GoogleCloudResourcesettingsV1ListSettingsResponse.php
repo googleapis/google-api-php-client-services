@@ -15,11 +15,13 @@
  * the License.
  */
 
-class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ListSettingsResponse extends Google_Collection
+namespace Google\Service\ResourceSettings;
+
+class GoogleCloudResourcesettingsV1ListSettingsResponse extends \Google\Collection
 {
   protected $collection_key = 'settings';
   public $nextPageToken;
-  protected $settingsType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting';
+  protected $settingsType = GoogleCloudResourcesettingsV1Setting::class;
   protected $settingsDataType = 'array';
 
   public function setNextPageToken($nextPageToken)
@@ -31,17 +33,20 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ListSettingsR
     return $this->nextPageToken;
   }
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting[]
+   * @param GoogleCloudResourcesettingsV1Setting[]
    */
   public function setSettings($settings)
   {
     $this->settings = $settings;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting[]
+   * @return GoogleCloudResourcesettingsV1Setting[]
    */
   public function getSettings()
   {
     return $this->settings;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudResourcesettingsV1ListSettingsResponse::class, 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ListSettingsResponse');

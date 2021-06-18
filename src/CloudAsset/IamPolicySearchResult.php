@@ -17,15 +17,27 @@
 
 namespace Google\Service\CloudAsset;
 
-class IamPolicySearchResult extends \Google\Model
+class IamPolicySearchResult extends \Google\Collection
 {
+  protected $collection_key = 'folders';
+  public $assetType;
   protected $explanationType = Explanation::class;
   protected $explanationDataType = '';
+  public $folders;
+  public $organization;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
   public $project;
   public $resource;
 
+  public function setAssetType($assetType)
+  {
+    $this->assetType = $assetType;
+  }
+  public function getAssetType()
+  {
+    return $this->assetType;
+  }
   /**
    * @param Explanation
    */
@@ -39,6 +51,22 @@ class IamPolicySearchResult extends \Google\Model
   public function getExplanation()
   {
     return $this->explanation;
+  }
+  public function setFolders($folders)
+  {
+    $this->folders = $folders;
+  }
+  public function getFolders()
+  {
+    return $this->folders;
+  }
+  public function setOrganization($organization)
+  {
+    $this->organization = $organization;
+  }
+  public function getOrganization()
+  {
+    return $this->organization;
   }
   /**
    * @param Policy

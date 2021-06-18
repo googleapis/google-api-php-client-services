@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueEnumValue extends Google_Model
+namespace Google\Service\ResourceSettings;
+
+class GoogleCloudResourcesettingsV1ValueEnumValue extends \Google\Model
 {
   public $value;
 
@@ -28,3 +30,6 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueEnumValu
     return $this->value;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudResourcesettingsV1ValueEnumValue::class, 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueEnumValue');

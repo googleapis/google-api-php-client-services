@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_Drive_DriveFileLinkShareMetadata extends Google_Model
+namespace Google\Service\Drive;
+
+class DriveFileLinkShareMetadata extends \Google\Model
 {
   public $securityUpdateEligible;
   public $securityUpdateEnabled;
@@ -37,3 +39,6 @@ class Google_Service_Drive_DriveFileLinkShareMetadata extends Google_Model
     return $this->securityUpdateEnabled;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(DriveFileLinkShareMetadata::class, 'Google_Service_Drive_DriveFileLinkShareMetadata');

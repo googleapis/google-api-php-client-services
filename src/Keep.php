@@ -34,7 +34,9 @@ use Google\Client;
  */
 class Keep extends \Google\Service
 {
-
+  /** See, edit, create and permanently delete all your Google Keep data. */
+  const KEEP =
+      "https://www.googleapis.com/auth/keep";
 
   public $media;
   public $notes;

@@ -15,6 +15,10 @@
  * the License.
  */
 
+namespace Google\Service;
+
+use Google\Client;
+
 /**
  * Service definition for ResourceSettings (v1).
  *
@@ -30,7 +34,7 @@
  *
  * @author Google, Inc.
  */
-class Google_Service_ResourceSettings extends Google_Service
+class ResourceSettings extends \Google\Service
 {
   /** See, edit, configure, and delete your Google Cloud Platform data. */
   const CLOUD_PLATFORM =
@@ -43,185 +47,189 @@ class Google_Service_ResourceSettings extends Google_Service
   /**
    * Constructs the internal representation of the ResourceSettings service.
    *
-   * @param Google_Client $client The client used to deliver requests.
+   * @param Client|array $clientOrConfig The client used to deliver requests, or a
+   *                                     config array to pass to a new Client instance.
    * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client, $rootUrl = null)
+  public function __construct($clientOrConfig = [], $rootUrl = null)
   {
-    parent::__construct($client);
+    parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://resourcesettings.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
     $this->serviceName = 'resourcesettings';
 
-    $this->folders_settings = new Google_Service_ResourceSettings_Resource_FoldersSettings(
+    $this->folders_settings = new ResourceSettings\Resource\FoldersSettings(
         $this,
         $this->serviceName,
         'settings',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'view' => array(
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'list' => array(
+                ],
+              ],
+            ],'list' => [
               'path' => 'v1/{+parent}/settings',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'parent' => array(
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'pageSize' => array(
+                ],
+                'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'pageToken' => array(
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'view' => array(
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'patch' => array(
+                ],
+              ],
+            ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
-              'parameters' => array(
-                'name' => array(
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->organizations_settings = new Google_Service_ResourceSettings_Resource_OrganizationsSettings(
+    $this->organizations_settings = new ResourceSettings\Resource\OrganizationsSettings(
         $this,
         $this->serviceName,
         'settings',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'view' => array(
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'list' => array(
+                ],
+              ],
+            ],'list' => [
               'path' => 'v1/{+parent}/settings',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'parent' => array(
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'pageSize' => array(
+                ],
+                'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'pageToken' => array(
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'view' => array(
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'patch' => array(
+                ],
+              ],
+            ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
-              'parameters' => array(
-                'name' => array(
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
-    $this->projects_settings = new Google_Service_ResourceSettings_Resource_ProjectsSettings(
+    $this->projects_settings = new ResourceSettings\Resource\ProjectsSettings(
         $this,
         $this->serviceName,
         'settings',
-        array(
-          'methods' => array(
-            'get' => array(
+        [
+          'methods' => [
+            'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'name' => array(
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'view' => array(
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'list' => array(
+                ],
+              ],
+            ],'list' => [
               'path' => 'v1/{+parent}/settings',
               'httpMethod' => 'GET',
-              'parameters' => array(
-                'parent' => array(
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'pageSize' => array(
+                ],
+                'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'pageToken' => array(
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'view' => array(
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
-                ),
-              ),
-            ),'patch' => array(
+                ],
+              ],
+            ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
-              'parameters' => array(
-                'name' => array(
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
+                ],
+              ],
+            ],
+          ]
+        ]
     );
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ResourceSettings::class, 'Google_Service_ResourceSettings');

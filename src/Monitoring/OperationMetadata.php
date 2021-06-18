@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_Monitoring_OperationMetadata extends Google_Model
+namespace Google\Service\Monitoring;
+
+class OperationMetadata extends \Google\Model
 {
   public $createTime;
   public $state;
@@ -46,3 +48,6 @@ class Google_Service_Monitoring_OperationMetadata extends Google_Model
     return $this->updateTime;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(OperationMetadata::class, 'Google_Service_Monitoring_OperationMetadata');

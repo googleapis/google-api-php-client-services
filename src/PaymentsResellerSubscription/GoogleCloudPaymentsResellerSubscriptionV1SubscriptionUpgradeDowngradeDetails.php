@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails extends Google_Model
+namespace Google\Service\PaymentsResellerSubscription;
+
+class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails extends \Google\Model
 {
   public $billingCycleSpec;
   public $previousSubscriptionId;
@@ -37,3 +39,6 @@ class Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSub
     return $this->previousSubscriptionId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails::class, 'Google_Service_PaymentsResellerSubscription_GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails');

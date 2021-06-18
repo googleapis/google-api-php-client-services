@@ -15,23 +15,28 @@
  * the License.
  */
 
-class Google_Service_AIPlatformNotebooks_UpdateInstanceConfigRequest extends Google_Model
+namespace Google\Service\AIPlatformNotebooks;
+
+class UpdateInstanceConfigRequest extends \Google\Model
 {
-  protected $configType = 'Google_Service_AIPlatformNotebooks_InstanceConfig';
+  protected $configType = InstanceConfig::class;
   protected $configDataType = '';
 
   /**
-   * @param Google_Service_AIPlatformNotebooks_InstanceConfig
+   * @param InstanceConfig
    */
-  public function setConfig(Google_Service_AIPlatformNotebooks_InstanceConfig $config)
+  public function setConfig(InstanceConfig $config)
   {
     $this->config = $config;
   }
   /**
-   * @return Google_Service_AIPlatformNotebooks_InstanceConfig
+   * @return InstanceConfig
    */
   public function getConfig()
   {
     return $this->config;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(UpdateInstanceConfigRequest::class, 'Google_Service_AIPlatformNotebooks_UpdateInstanceConfigRequest');

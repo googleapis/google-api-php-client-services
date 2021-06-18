@@ -42,6 +42,9 @@ class ProjectsTriggers extends \Google\Service\Resource
    * automatic builds.
    * @param BuildTrigger $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string parent The parent resource where this trigger will be
+   * created. Format: `projects/{project}/locations/{location}`
    * @return BuildTrigger
    */
   public function create($projectId, BuildTrigger $postBody, $optParams = [])
@@ -57,6 +60,9 @@ class ProjectsTriggers extends \Google\Service\Resource
    * @param string $projectId Required. ID of the project that owns the trigger.
    * @param string $triggerId Required. ID of the `BuildTrigger` to delete.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string name The name of the `Trigger` to delete. Format:
+   * `projects/{project}/locations/{location}/triggers/{trigger}`
    * @return CloudbuildEmpty
    */
   public function delete($projectId, $triggerId, $optParams = [])
@@ -73,6 +79,9 @@ class ProjectsTriggers extends \Google\Service\Resource
    * @param string $triggerId Required. Identifier (`id` or `name`) of the
    * `BuildTrigger` to get.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string name The name of the `Trigger` to retrieve. Format:
+   * `projects/{project}/locations/{location}/triggers/{trigger}`
    * @return BuildTrigger
    */
   public function get($projectId, $triggerId, $optParams = [])
@@ -92,6 +101,8 @@ class ProjectsTriggers extends \Google\Service\Resource
    * @opt_param int pageSize Number of results to return in the list.
    * @opt_param string pageToken Token to provide to skip to a particular spot in
    * the list.
+   * @opt_param string parent The parent of the collection of `Triggers`. Format:
+   * `projects/{project}/locations/{location}`
    * @return ListBuildTriggersResponse
    */
   public function listProjectsTriggers($projectId, $optParams = [])
@@ -123,6 +134,9 @@ class ProjectsTriggers extends \Google\Service\Resource
    * @param string $triggerId Required. ID of the trigger.
    * @param RepoSource $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string name The name of the `Trigger` to run. Format:
+   * `projects/{project}/locations/{location}/triggers/{trigger}`
    * @return Operation
    */
   public function run($projectId, $triggerId, RepoSource $postBody, $optParams = [])
@@ -140,6 +154,8 @@ class ProjectsTriggers extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string name The name of the `ReceiveTriggerWebhook` to retrieve.
+   * Format: `projects/{project}/locations/{location}/triggers/{trigger}`
    * @opt_param string secret Secret token used for authorization if an OAuth
    * token isn't provided.
    * @return ReceiveTriggerWebhookResponse

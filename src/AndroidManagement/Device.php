@@ -23,6 +23,8 @@ class Device extends \Google\Collection
   public $apiLevel;
   protected $applicationReportsType = ApplicationReport::class;
   protected $applicationReportsDataType = 'array';
+  protected $appliedPasswordPoliciesType = PasswordRequirements::class;
+  protected $appliedPasswordPoliciesDataType = 'array';
   public $appliedPolicyName;
   public $appliedPolicyVersion;
   public $appliedState;
@@ -91,6 +93,20 @@ class Device extends \Google\Collection
   public function getApplicationReports()
   {
     return $this->applicationReports;
+  }
+  /**
+   * @param PasswordRequirements[]
+   */
+  public function setAppliedPasswordPolicies($appliedPasswordPolicies)
+  {
+    $this->appliedPasswordPolicies = $appliedPasswordPolicies;
+  }
+  /**
+   * @return PasswordRequirements[]
+   */
+  public function getAppliedPasswordPolicies()
+  {
+    return $this->appliedPasswordPolicies;
   }
   public function setAppliedPolicyName($appliedPolicyName)
   {

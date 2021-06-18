@@ -15,15 +15,20 @@
  * the License.
  */
 
+namespace Google\Service\ResourceSettings\Resource;
+
+use Google\Service\ResourceSettings\GoogleCloudResourcesettingsV1ListSettingsResponse;
+use Google\Service\ResourceSettings\GoogleCloudResourcesettingsV1Setting;
+
 /**
  * The "settings" collection of methods.
  * Typical usage is:
  *  <code>
- *   $resourcesettingsService = new Google_Service_ResourceSettings(...);
+ *   $resourcesettingsService = new Google\Service\ResourceSettings(...);
  *   $settings = $resourcesettingsService->settings;
  *  </code>
  */
-class Google_Service_ResourceSettings_Resource_OrganizationsSettings extends Google_Service_Resource
+class OrganizationsSettings extends \Google\Service\Resource
 {
   /**
    * Returns a specified setting. Returns a `google.rpc.Status` with
@@ -34,13 +39,13 @@ class Google_Service_ResourceSettings_Resource_OrganizationsSettings extends Goo
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view The SettingView for this request.
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting
+   * @return GoogleCloudResourcesettingsV1Setting
    */
-  public function get($name, $optParams = array())
+  public function get($name, $optParams = [])
   {
-    $params = array('name' => $name);
+    $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting");
+    return $this->call('get', [$params], GoogleCloudResourcesettingsV1Setting::class);
   }
   /**
    * Lists all the settings that are available on the Cloud resource `parent`.
@@ -56,13 +61,13 @@ class Google_Service_ResourceSettings_Resource_OrganizationsSettings extends Goo
    * @opt_param string pageToken Unused. A page token used to retrieve the next
    * page.
    * @opt_param string view The SettingView for this request.
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ListSettingsResponse
+   * @return GoogleCloudResourcesettingsV1ListSettingsResponse
    */
-  public function listOrganizationsSettings($parent, $optParams = array())
+  public function listOrganizationsSettings($parent, $optParams = [])
   {
-    $params = array('parent' => $parent);
+    $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ListSettingsResponse");
+    return $this->call('list', [$params], GoogleCloudResourcesettingsV1ListSettingsResponse::class);
   }
   /**
    * Updates a specified setting. Returns a `google.rpc.Status` with
@@ -81,14 +86,17 @@ class Google_Service_ResourceSettings_Resource_OrganizationsSettings extends Goo
    * `folders/{folder_id}/settings/{setting_name}` *
    * `organizations/{organization_id}/settings/{setting_name}` For example,
    * "/projects/123/settings/gcp-enableMyFeature"
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting $postBody
+   * @param GoogleCloudResourcesettingsV1Setting $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting
+   * @return GoogleCloudResourcesettingsV1Setting
    */
-  public function patch($name, Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting $postBody, $optParams = array())
+  public function patch($name, GoogleCloudResourcesettingsV1Setting $postBody, $optParams = [])
   {
-    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Setting");
+    return $this->call('patch', [$params], GoogleCloudResourcesettingsV1Setting::class);
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(OrganizationsSettings::class, 'Google_Service_ResourceSettings_Resource_OrganizationsSettings');

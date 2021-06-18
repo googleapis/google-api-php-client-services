@@ -35,6 +35,7 @@ use Google\Service\AIPlatformNotebooks\StartInstanceRequest;
 use Google\Service\AIPlatformNotebooks\StopInstanceRequest;
 use Google\Service\AIPlatformNotebooks\TestIamPermissionsRequest;
 use Google\Service\AIPlatformNotebooks\TestIamPermissionsResponse;
+use Google\Service\AIPlatformNotebooks\UpdateInstanceConfigRequest;
 use Google\Service\AIPlatformNotebooks\UpdateShieldedInstanceConfigRequest;
 use Google\Service\AIPlatformNotebooks\UpgradeInstanceInternalRequest;
 use Google\Service\AIPlatformNotebooks\UpgradeInstanceRequest;
@@ -346,6 +347,21 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
+  }
+  /**
+   * Update Notebook Instance configurations. (instances.updateConfig)
+   *
+   * @param string $name Required. Format:
+   * `projects/{project_id}/locations/{location}/instances/{instance_id}`
+   * @param UpdateInstanceConfigRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function updateConfig($name, UpdateInstanceConfigRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateConfig', [$params], Operation::class);
   }
   /**
    * Updates the Shielded instance configuration of a single Instance.

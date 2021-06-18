@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_Container_ILBSubsettingConfig extends Google_Model
+namespace Google\Service\Container;
+
+class ILBSubsettingConfig extends \Google\Model
 {
   public $enabled;
 
@@ -28,3 +30,6 @@ class Google_Service_Container_ILBSubsettingConfig extends Google_Model
     return $this->enabled;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(ILBSubsettingConfig::class, 'Google_Service_Container_ILBSubsettingConfig');

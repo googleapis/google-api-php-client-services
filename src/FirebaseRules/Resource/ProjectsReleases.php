@@ -49,8 +49,8 @@ class ProjectsReleases extends \Google\Service\Resource
    * However, `prod/v23` refers to a new `Ruleset`. The `Ruleset` reference for a
    * `Release` may be updated using the UpdateRelease method. (releases.create)
    *
-   * @param string $name Resource name for the project which owns this `Release`.
-   * Format: `projects/{project_id}`
+   * @param string $name Required. Resource name for the project which owns this
+   * `Release`. Format: `projects/{project_id}`
    * @param Release $postBody
    * @param array $optParams Optional parameters.
    * @return Release
@@ -64,8 +64,8 @@ class ProjectsReleases extends \Google\Service\Resource
   /**
    * Delete a `Release` by resource name. (releases.delete)
    *
-   * @param string $name Resource name for the `Release` to delete. Format:
-   * `projects/{project_id}/releases/{release_id}`
+   * @param string $name Required. Resource name for the `Release` to delete.
+   * Format: `projects/{project_id}/releases/{release_id}`
    * @param array $optParams Optional parameters.
    * @return FirebaserulesEmpty
    */
@@ -78,7 +78,7 @@ class ProjectsReleases extends \Google\Service\Resource
   /**
    * Get a `Release` by name. (releases.get)
    *
-   * @param string $name Resource name of the `Release`. Format:
+   * @param string $name Required. Resource name of the `Release`. Format:
    * `projects/{project_id}/releases/{release_id}`
    * @param array $optParams Optional parameters.
    * @return Release
@@ -93,7 +93,7 @@ class ProjectsReleases extends \Google\Service\Resource
    * Get the `Release` executable to use when enforcing rules.
    * (releases.getExecutable)
    *
-   * @param string $name Resource name of the `Release`. Format:
+   * @param string $name Required. Resource name of the `Release`. Format:
    * `projects/{project_id}/releases/{release_id}`
    * @param array $optParams Optional parameters.
    *
@@ -112,26 +112,24 @@ class ProjectsReleases extends \Google\Service\Resource
    * by `Release` name, `Ruleset` name, `TestSuite` name, or any combination
    * thereof. (releases.listProjectsReleases)
    *
-   * @param string $name Resource name for the project. Format:
+   * @param string $name Required. Resource name for the project. Format:
    * `projects/{project_id}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter `Release` filter. The list method supports filters
-   * with restrictions on the `Release.name`, `Release.ruleset_name`, and
-   * `Release.test_suite_name`. Example 1: A filter of 'name=prod*' might return
-   * `Release`s with names within 'projects/foo' prefixed with 'prod': Name |
-   * Ruleset Name ------------------------------|-------------
-   * projects/foo/releases/prod | projects/foo/rulesets/uuid1234
-   * projects/foo/releases/prod/v1 | projects/foo/rulesets/uuid1234
-   * projects/foo/releases/prod/v2 | projects/foo/rulesets/uuid8888 Example 2: A
+   * with restrictions on the `Release.name`, and `Release.ruleset_name`. Example
+   * 1: A filter of 'name=prod*' might return `Release`s with names within
+   * 'projects/foo' prefixed with 'prod': Name -> Ruleset Name: *
+   * projects/foo/releases/prod -> projects/foo/rulesets/uuid1234 *
+   * projects/foo/releases/prod/v1 -> projects/foo/rulesets/uuid1234 *
+   * projects/foo/releases/prod/v2 -> projects/foo/rulesets/uuid8888 Example 2: A
    * filter of `name=prod* ruleset_name=uuid1234` would return only `Release`
    * instances for 'projects/foo' with names prefixed with 'prod' referring to the
-   * same `Ruleset` name of 'uuid1234': Name | Ruleset Name
-   * ------------------------------|------------- projects/foo/releases/prod |
-   * projects/foo/rulesets/1234 projects/foo/releases/prod/v1 |
-   * projects/foo/rulesets/1234 In the examples, the filter parameters refer to
-   * the search filters are relative to the project. Fully qualified prefixed may
-   * also be used. e.g. `test_suite_name=projects/foo/testsuites/uuid1`
+   * same `Ruleset` name of 'uuid1234': Name -> Ruleset Name: *
+   * projects/foo/releases/prod -> projects/foo/rulesets/1234 *
+   * projects/foo/releases/prod/v1 -> projects/foo/rulesets/1234 In the examples,
+   * the filter parameters refer to the search filters are relative to the
+   * project. Fully qualified prefixed may also be used.
    * @opt_param int pageSize Page size to load. Maximum of 100. Defaults to 10.
    * Note: `page_size` is just a hint and the service may choose to load fewer
    * than `page_size` results due to the size of the output. To traverse all of
@@ -148,12 +146,12 @@ class ProjectsReleases extends \Google\Service\Resource
     return $this->call('list', [$params], ListReleasesResponse::class);
   }
   /**
-   * Update a `Release` via PATCH. Only updates to the `ruleset_name` and
-   * `test_suite_name` fields will be honored. `Release` rename is not supported.
-   * To create a `Release` use the CreateRelease method. (releases.patch)
+   * Update a `Release` via PATCH. Only updates to `ruleset_name` will be honored.
+   * `Release` rename is not supported. To create a `Release` use the
+   * CreateRelease method. (releases.patch)
    *
-   * @param string $name Resource name for the project which owns this `Release`.
-   * Format: `projects/{project_id}`
+   * @param string $name Required. Resource name for the project which owns this
+   * `Release`. Format: `projects/{project_id}`
    * @param UpdateReleaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Release

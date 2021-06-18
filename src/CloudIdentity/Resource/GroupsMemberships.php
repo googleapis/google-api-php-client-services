@@ -191,7 +191,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * such as a Google user or a Google Group. If specified, the `EntityKey`
    * represents an external-identity-mapped group. The namespace must correspond
    * to an identity source created in Admin Console and must be in the form of
-   * `identitysources/{identity_source_id}.
+   * `identitysources/{identity_source_id}`.
    * @return LookupMembershipNameResponse
    */
   public function lookup($parent, $optParams = [])

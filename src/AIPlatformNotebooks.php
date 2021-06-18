@@ -439,6 +439,16 @@ class AIPlatformNotebooks extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'updateConfig' => [
+              'path' => 'v1/{+name}:updateConfig',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'updateShieldedInstanceConfig' => [
               'path' => 'v1/{+name}:updateShieldedInstanceConfig',
               'httpMethod' => 'PATCH',

@@ -119,8 +119,8 @@ class AppsDomainMappings extends \Google\Service\Resource
    * @param DomainMapping $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Standard field mask for the set of fields to be
-   * updated.
+   * @opt_param string updateMask Required. Standard field mask for the set of
+   * fields to be updated.
    * @return Operation
    */
   public function patch($appsId, $domainMappingsId, DomainMapping $postBody, $optParams = [])

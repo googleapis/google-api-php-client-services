@@ -76,7 +76,8 @@ class UsersThreads extends \Google\Service\Resource
    * the results.
    * @opt_param string labelIds Only return threads with labels that match all of
    * the specified label IDs.
-   * @opt_param string maxResults Maximum number of threads to return.
+   * @opt_param string maxResults Maximum number of threads to return. This field
+   * defaults to 100. The maximum allowed value for this field is 500.
    * @opt_param string pageToken Page token to retrieve a specific page of results
    * in the list.
    * @opt_param string q Only return threads matching the specified query.

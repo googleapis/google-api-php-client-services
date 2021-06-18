@@ -15,11 +15,13 @@
  * the License.
  */
 
-class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate extends Google_Collection
+namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
+
+class Certificate extends \Google\Collection
 {
   protected $collection_key = 'subjectAlternativeName';
   public $expireTime;
-  protected $issuingCertificateType = 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate';
+  protected $issuingCertificateType = Certificate::class;
   protected $issuingCertificateDataType = '';
   public $subject;
   public $subjectAlternativeName;
@@ -34,14 +36,14 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certif
     return $this->expireTime;
   }
   /**
-   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate
+   * @param Certificate
    */
-  public function setIssuingCertificate(Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate $issuingCertificate)
+  public function setIssuingCertificate(Certificate $issuingCertificate)
   {
     $this->issuingCertificate = $issuingCertificate;
   }
   /**
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate
+   * @return Certificate
    */
   public function getIssuingCertificate()
   {
@@ -72,3 +74,6 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certif
     return $this->thumbprint;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(Certificate::class, 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate');

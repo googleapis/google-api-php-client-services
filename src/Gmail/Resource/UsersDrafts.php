@@ -87,7 +87,8 @@ class UsersDrafts extends \Google\Service\Resource
    *
    * @opt_param bool includeSpamTrash Include drafts from `SPAM` and `TRASH` in
    * the results.
-   * @opt_param string maxResults Maximum number of drafts to return.
+   * @opt_param string maxResults Maximum number of drafts to return. This field
+   * defaults to 100. The maximum allowed value for this field is 500.
    * @opt_param string pageToken Page token to retrieve a specific page of results
    * in the list.
    * @opt_param string q Only return draft messages matching the specified query.

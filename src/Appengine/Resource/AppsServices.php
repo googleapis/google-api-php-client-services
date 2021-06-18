@@ -102,8 +102,8 @@ class AppsServices extends \Google\Service\Resource
    * environment. For examples, see Migrating and Splitting Traffic
    * (https://cloud.google.com/appengine/docs/admin-api/migrating-splitting-
    * traffic).
-   * @opt_param string updateMask Standard field mask for the set of fields to be
-   * updated.
+   * @opt_param string updateMask Required. Standard field mask for the set of
+   * fields to be updated.
    * @return Operation
    */
   public function patch($appsId, $servicesId, Service $postBody, $optParams = [])

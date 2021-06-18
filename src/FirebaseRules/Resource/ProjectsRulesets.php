@@ -38,8 +38,8 @@ class ProjectsRulesets extends \Google\Service\Resource
    * encountered. For a detailed view of `Source` issues, use TestRuleset.
    * (rulesets.create)
    *
-   * @param string $name Resource name for Project which owns this `Ruleset`.
-   * Format: `projects/{project_id}`
+   * @param string $name Required. Resource name for Project which owns this
+   * `Ruleset`. Format: `projects/{project_id}`
    * @param Ruleset $postBody
    * @param array $optParams Optional parameters.
    * @return Ruleset
@@ -54,8 +54,8 @@ class ProjectsRulesets extends \Google\Service\Resource
    * Delete a `Ruleset` by resource name. If the `Ruleset` is referenced by a
    * `Release` the operation will fail. (rulesets.delete)
    *
-   * @param string $name Resource name for the ruleset to delete. Format:
-   * `projects/{project_id}/rulesets/{ruleset_id}`
+   * @param string $name Required. Resource name for the ruleset to delete.
+   * Format: `projects/{project_id}/rulesets/{ruleset_id}`
    * @param array $optParams Optional parameters.
    * @return FirebaserulesEmpty
    */
@@ -68,7 +68,7 @@ class ProjectsRulesets extends \Google\Service\Resource
   /**
    * Get a `Ruleset` by name including the full `Source` contents. (rulesets.get)
    *
-   * @param string $name Resource name for the ruleset to get. Format:
+   * @param string $name Required. Resource name for the ruleset to get. Format:
    * `projects/{project_id}/rulesets/{ruleset_id}`
    * @param array $optParams Optional parameters.
    * @return Ruleset
@@ -84,7 +84,7 @@ class ProjectsRulesets extends \Google\Service\Resource
    * name. The full `Source` contents of a `Ruleset` may be retrieved with
    * GetRuleset. (rulesets.listProjectsRulesets)
    *
-   * @param string $name Resource name for the project. Format:
+   * @param string $name Required. Resource name for the project. Format:
    * `projects/{project_id}`
    * @param array $optParams Optional parameters.
    *

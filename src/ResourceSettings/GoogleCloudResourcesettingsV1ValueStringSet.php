@@ -15,7 +15,9 @@
  * the License.
  */
 
-class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringSet extends Google_Collection
+namespace Google\Service\ResourceSettings;
+
+class GoogleCloudResourcesettingsV1ValueStringSet extends \Google\Collection
 {
   protected $collection_key = 'values';
   public $values;
@@ -29,3 +31,6 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringSe
     return $this->values;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudResourcesettingsV1ValueStringSet::class, 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1ValueStringSet');

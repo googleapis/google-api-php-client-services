@@ -35,6 +35,8 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   protected $serviceLocationDataType = '';
   public $state;
   public $updateTime;
+  protected $upgradeDowngradeDetailsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails::class;
+  protected $upgradeDowngradeDetailsDataType = '';
 
   /**
    * @param GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails
@@ -151,6 +153,20 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
+   */
+  public function setUpgradeDowngradeDetails(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails $upgradeDowngradeDetails)
+  {
+    $this->upgradeDowngradeDetails = $upgradeDowngradeDetails;
+  }
+  /**
+   * @return GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
+   */
+  public function getUpgradeDowngradeDetails()
+  {
+    return $this->upgradeDowngradeDetails;
   }
 }
 

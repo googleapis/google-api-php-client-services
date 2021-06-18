@@ -23,6 +23,7 @@ class NetworkConfig extends \Google\Model
   protected $defaultSnatStatusType = DefaultSnatStatus::class;
   protected $defaultSnatStatusDataType = '';
   public $enableIntraNodeVisibility;
+  public $enableL4ilbSubsetting;
   public $network;
   public $privateIpv6GoogleAccess;
   public $subnetwork;
@@ -56,6 +57,14 @@ class NetworkConfig extends \Google\Model
   public function getEnableIntraNodeVisibility()
   {
     return $this->enableIntraNodeVisibility;
+  }
+  public function setEnableL4ilbSubsetting($enableL4ilbSubsetting)
+  {
+    $this->enableL4ilbSubsetting = $enableL4ilbSubsetting;
+  }
+  public function getEnableL4ilbSubsetting()
+  {
+    return $this->enableL4ilbSubsetting;
   }
   public function setNetwork($network)
   {

@@ -15,9 +15,11 @@
  * the License.
  */
 
-class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSSettings extends Google_Model
+namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
+
+class LDAPSSettings extends \Google\Model
 {
-  protected $certificateType = 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate';
+  protected $certificateType = Certificate::class;
   protected $certificateDataType = '';
   public $certificatePassword;
   public $certificatePfx;
@@ -26,14 +28,14 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSS
   public $updateTime;
 
   /**
-   * @param Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate
+   * @param Certificate
    */
-  public function setCertificate(Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate $certificate)
+  public function setCertificate(Certificate $certificate)
   {
     $this->certificate = $certificate;
   }
   /**
-   * @return Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_Certificate
+   * @return Certificate
    */
   public function getCertificate()
   {
@@ -80,3 +82,6 @@ class Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSS
     return $this->updateTime;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(LDAPSSettings::class, 'Google_Service_ManagedServiceforMicrosoftActiveDirectoryConsumerAPI_LDAPSSettings');

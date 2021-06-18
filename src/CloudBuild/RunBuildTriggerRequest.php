@@ -15,10 +15,12 @@
  * the License.
  */
 
-class Google_Service_CloudBuild_RunBuildTriggerRequest extends Google_Model
+namespace Google\Service\CloudBuild;
+
+class RunBuildTriggerRequest extends \Google\Model
 {
   public $projectId;
-  protected $sourceType = 'Google_Service_CloudBuild_RepoSource';
+  protected $sourceType = RepoSource::class;
   protected $sourceDataType = '';
   public $triggerId;
 
@@ -31,14 +33,14 @@ class Google_Service_CloudBuild_RunBuildTriggerRequest extends Google_Model
     return $this->projectId;
   }
   /**
-   * @param Google_Service_CloudBuild_RepoSource
+   * @param RepoSource
    */
-  public function setSource(Google_Service_CloudBuild_RepoSource $source)
+  public function setSource(RepoSource $source)
   {
     $this->source = $source;
   }
   /**
-   * @return Google_Service_CloudBuild_RepoSource
+   * @return RepoSource
    */
   public function getSource()
   {
@@ -53,3 +55,6 @@ class Google_Service_CloudBuild_RunBuildTriggerRequest extends Google_Model
     return $this->triggerId;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(RunBuildTriggerRequest::class, 'Google_Service_CloudBuild_RunBuildTriggerRequest');

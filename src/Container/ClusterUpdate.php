@@ -36,6 +36,8 @@ class ClusterUpdate extends \Google\Collection
   public $desiredImageType;
   protected $desiredIntraNodeVisibilityConfigType = IntraNodeVisibilityConfig::class;
   protected $desiredIntraNodeVisibilityConfigDataType = '';
+  protected $desiredL4ilbSubsettingConfigType = ILBSubsettingConfig::class;
+  protected $desiredL4ilbSubsettingConfigDataType = '';
   public $desiredLocations;
   public $desiredLoggingService;
   protected $desiredMasterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
@@ -175,6 +177,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredIntraNodeVisibilityConfig()
   {
     return $this->desiredIntraNodeVisibilityConfig;
+  }
+  /**
+   * @param ILBSubsettingConfig
+   */
+  public function setDesiredL4ilbSubsettingConfig(ILBSubsettingConfig $desiredL4ilbSubsettingConfig)
+  {
+    $this->desiredL4ilbSubsettingConfig = $desiredL4ilbSubsettingConfig;
+  }
+  /**
+   * @return ILBSubsettingConfig
+   */
+  public function getDesiredL4ilbSubsettingConfig()
+  {
+    return $this->desiredL4ilbSubsettingConfig;
   }
   public function setDesiredLocations($desiredLocations)
   {

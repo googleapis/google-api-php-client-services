@@ -15,10 +15,12 @@
  * the License.
  */
 
-class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetadata extends Google_Model
+namespace Google\Service\ResourceSettings;
+
+class GoogleCloudResourcesettingsV1SettingMetadata extends \Google\Model
 {
   public $dataType;
-  protected $defaultValueType = 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value';
+  protected $defaultValueType = GoogleCloudResourcesettingsV1Value::class;
   protected $defaultValueDataType = '';
   public $description;
   public $displayName;
@@ -33,14 +35,14 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetada
     return $this->dataType;
   }
   /**
-   * @param Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value
+   * @param GoogleCloudResourcesettingsV1Value
    */
-  public function setDefaultValue(Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value $defaultValue)
+  public function setDefaultValue(GoogleCloudResourcesettingsV1Value $defaultValue)
   {
     $this->defaultValue = $defaultValue;
   }
   /**
-   * @return Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1Value
+   * @return GoogleCloudResourcesettingsV1Value
    */
   public function getDefaultValue()
   {
@@ -71,3 +73,6 @@ class Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetada
     return $this->readOnly;
   }
 }
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudResourcesettingsV1SettingMetadata::class, 'Google_Service_ResourceSettings_GoogleCloudResourcesettingsV1SettingMetadata');

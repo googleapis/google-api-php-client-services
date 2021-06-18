@@ -47,6 +47,8 @@ class DriveFile extends \Google\Collection
   public $kind;
   protected $lastModifyingUserType = User::class;
   protected $lastModifyingUserDataType = '';
+  protected $linkShareMetadataType = DriveFileLinkShareMetadata::class;
+  protected $linkShareMetadataDataType = '';
   public $md5Checksum;
   public $mimeType;
   public $modifiedByMe;
@@ -63,6 +65,7 @@ class DriveFile extends \Google\Collection
   protected $permissionsDataType = 'array';
   public $properties;
   public $quotaBytesUsed;
+  public $resourceKey;
   public $shared;
   public $sharedWithMeTime;
   protected $sharingUserType = User::class;
@@ -295,6 +298,20 @@ class DriveFile extends \Google\Collection
   {
     return $this->lastModifyingUser;
   }
+  /**
+   * @param DriveFileLinkShareMetadata
+   */
+  public function setLinkShareMetadata(DriveFileLinkShareMetadata $linkShareMetadata)
+  {
+    $this->linkShareMetadata = $linkShareMetadata;
+  }
+  /**
+   * @return DriveFileLinkShareMetadata
+   */
+  public function getLinkShareMetadata()
+  {
+    return $this->linkShareMetadata;
+  }
   public function setMd5Checksum($md5Checksum)
   {
     $this->md5Checksum = $md5Checksum;
@@ -418,6 +435,14 @@ class DriveFile extends \Google\Collection
   public function getQuotaBytesUsed()
   {
     return $this->quotaBytesUsed;
+  }
+  public function setResourceKey($resourceKey)
+  {
+    $this->resourceKey = $resourceKey;
+  }
+  public function getResourceKey()
+  {
+    return $this->resourceKey;
   }
   public function setShared($shared)
   {

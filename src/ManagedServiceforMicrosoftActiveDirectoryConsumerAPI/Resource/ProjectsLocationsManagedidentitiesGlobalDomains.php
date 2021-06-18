@@ -20,6 +20,7 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Re
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\AttachTrustRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\DetachTrustRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Domain;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\LDAPSSettings;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\ListDomainsResponse;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Operation;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Policy;
@@ -150,6 +151,20 @@ class ProjectsLocationsManagedidentitiesGlobalDomains extends \Google\Service\Re
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
+   * Gets the domain ldaps settings. (domains.getLdapssettings)
+   *
+   * @param string $name Required. The domain resource name using the form:
+   * `projects/{project_id}/locations/global/domains/{domain_name}`
+   * @param array $optParams Optional parameters.
+   * @return LDAPSSettings
+   */
+  public function getLdapssettings($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getLdapssettings', [$params], LDAPSSettings::class);
+  }
+  /**
    * Lists domains in a project.
    * (domains.listProjectsLocationsManagedidentitiesGlobalDomains)
    *
@@ -189,7 +204,7 @@ class ProjectsLocationsManagedidentitiesGlobalDomains extends \Google\Service\Re
    * @opt_param string updateMask Required. Mask of fields to update. At least one
    * path must be supplied in this field. The elements of the repeated paths field
    * may only include fields from Domain: * `labels` * `locations` *
-   * `authorized_networks`
+   * `authorized_networks` * `audit_logs_enabled`
    * @return Operation
    */
   public function patch($name, Domain $postBody, $optParams = [])
@@ -266,6 +281,26 @@ class ProjectsLocationsManagedidentitiesGlobalDomains extends \Google\Service\Re
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
+  }
+  /**
+   * Patches a single ldaps settings. (domains.updateLdapssettings)
+   *
+   * @param string $name The resource name of the LDAPS settings. Uses the form:
+   * `projects/{project}/locations/{location}/domains/{domain}`.
+   * @param LDAPSSettings $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. Mask of fields to update. At least one
+   * path must be supplied in this field. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask
+   * @return Operation
+   */
+  public function updateLdapssettings($name, LDAPSSettings $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateLdapssettings', [$params], Operation::class);
   }
   /**
    * Validates a trust state, that the target domain is reachable, and that the

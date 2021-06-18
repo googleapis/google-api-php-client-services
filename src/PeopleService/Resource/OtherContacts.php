@@ -107,7 +107,8 @@ class OtherContacts extends \Google\Service\Resource
    * n", "nam", etc., but not "oo n".
    * @opt_param string readMask Required. A field mask to restrict which fields on
    * each person are returned. Multiple fields can be specified by separating them
-   * with commas. Valid values are: * emailAddresses * names * phoneNumbers
+   * with commas. Valid values are: * emailAddresses * metadata * names *
+   * phoneNumbers
    * @return SearchResponse
    */
   public function search($optParams = [])
