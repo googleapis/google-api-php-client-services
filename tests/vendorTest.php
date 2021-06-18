@@ -22,7 +22,6 @@ use PHPUnit\Framework\TestCase;
 /**
  * Tests for when this package is installed in a vendored directory
  *
- * @group gcf-framework
  * @runInSeparateProcess
  */
 class vendorTest extends TestCase
