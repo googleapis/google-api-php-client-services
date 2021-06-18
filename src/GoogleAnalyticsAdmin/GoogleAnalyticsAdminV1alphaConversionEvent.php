@@ -20,6 +20,7 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1alphaConversionEvent extends \Google\Model
 {
   public $createTime;
+  public $custom;
   public $eventName;
   public $isDeletable;
   public $name;
@@ -31,6 +32,14 @@ class GoogleAnalyticsAdminV1alphaConversionEvent extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setCustom($custom)
+  {
+    $this->custom = $custom;
+  }
+  public function getCustom()
+  {
+    return $this->custom;
   }
   public function setEventName($eventName)
   {

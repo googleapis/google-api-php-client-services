@@ -21,6 +21,7 @@ class DriveFileShortcutDetails extends \Google\Model
 {
   public $targetId;
   public $targetMimeType;
+  public $targetResourceKey;
 
   public function setTargetId($targetId)
   {
@@ -37,6 +38,14 @@ class DriveFileShortcutDetails extends \Google\Model
   public function getTargetMimeType()
   {
     return $this->targetMimeType;
+  }
+  public function setTargetResourceKey($targetResourceKey)
+  {
+    $this->targetResourceKey = $targetResourceKey;
+  }
+  public function getTargetResourceKey()
+  {
+    return $this->targetResourceKey;
   }
 }
 

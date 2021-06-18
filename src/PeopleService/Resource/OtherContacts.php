@@ -64,7 +64,8 @@ class OtherContacts extends \Google\Service\Resource
    * the call that provided the page token.
    * @opt_param string readMask Required. A field mask to restrict which fields on
    * each person are returned. Multiple fields can be specified by separating them
-   * with commas. Valid values are: * emailAddresses * names * phoneNumbers
+   * with commas. Valid values are: * emailAddresses * metadata * names *
+   * phoneNumbers
    * @opt_param bool requestSyncToken Optional. Whether the response should
    * include `next_sync_token`, which can be used to get all changes since the
    * last request. For subsequent sync requests use the `sync_token` param
@@ -73,7 +74,10 @@ class OtherContacts extends \Google\Service\Resource
    * @opt_param string syncToken Optional. A sync token, received from a previous
    * `ListOtherContacts` call. Provide this to retrieve only the resources changed
    * since the last request. Sync requests that specify `sync_token` have an
-   * additional rate limit. When syncing, all other parameters provided to
+   * additional rate limit. When the `syncToken` is specified, resources deleted
+   * since the last sync will be returned as a person with [`PersonMetadata.delete
+   * d`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
+   * true. When the `syncToken` is specified, all other parameters provided to
    * `ListOtherContacts` must match the call that provided the sync token.
    * @return ListOtherContactsResponse
    */

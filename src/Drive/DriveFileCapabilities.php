@@ -23,6 +23,7 @@ class DriveFileCapabilities extends \Google\Model
   public $canAddFolderFromAnotherDrive;
   public $canAddMyDriveParent;
   public $canChangeCopyRequiresWriterPermission;
+  public $canChangeSecurityUpdateEnabled;
   public $canChangeViewersCanCopyContent;
   public $canComment;
   public $canCopy;
@@ -85,6 +86,14 @@ class DriveFileCapabilities extends \Google\Model
   public function getCanChangeCopyRequiresWriterPermission()
   {
     return $this->canChangeCopyRequiresWriterPermission;
+  }
+  public function setCanChangeSecurityUpdateEnabled($canChangeSecurityUpdateEnabled)
+  {
+    $this->canChangeSecurityUpdateEnabled = $canChangeSecurityUpdateEnabled;
+  }
+  public function getCanChangeSecurityUpdateEnabled()
+  {
+    return $this->canChangeSecurityUpdateEnabled;
   }
   public function setCanChangeViewersCanCopyContent($canChangeViewersCanCopyContent)
   {

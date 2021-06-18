@@ -26,6 +26,7 @@ class ServiceLevelObjective extends \Google\Model
   public $rollingPeriod;
   protected $serviceLevelIndicatorType = ServiceLevelIndicator::class;
   protected $serviceLevelIndicatorDataType = '';
+  public $userLabels;
 
   public function setCalendarPeriod($calendarPeriod)
   {
@@ -80,6 +81,14 @@ class ServiceLevelObjective extends \Google\Model
   public function getServiceLevelIndicator()
   {
     return $this->serviceLevelIndicator;
+  }
+  public function setUserLabels($userLabels)
+  {
+    $this->userLabels = $userLabels;
+  }
+  public function getUserLabels()
+  {
+    return $this->userLabels;
   }
 }
 
