@@ -24,7 +24,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @runInSeparateProcess
  */
-class vendorTest extends TestCase
+class VendorTest extends TestCase
 {
     /**
      * @dataProvider provideApiClientVersions
