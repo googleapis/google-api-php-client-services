@@ -101,16 +101,11 @@ def all_discoveries(skip=None, prefer=None):
         index = json.load(file)
     for api in index['items']:
         api_id = api['id']
-        if len(sys.argv) > 1:
-            if api_id in sys.argv:
-                continue
-            discos.pop(api_id, None)
-        else:
-            if prefer and api_id in prefer:
-                continue
-            if api['preferred']:
-                continue
-            discos.pop(api_id, None)
+        if prefer and api_id in prefer:
+            continue
+        if api['preferred']:
+            continue
+        discos.pop(api_id, None)
 
     return discos.values()
 
