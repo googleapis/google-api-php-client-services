@@ -41,9 +41,6 @@ class Orgunits extends \Google\Service\Resource
    * @param string $orgUnitPath The full path of the organizational unit or its
    * unique ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool allowPlus Parses org unit path without url decode to allow
-   * for plus in ou name
    */
   public function delete($customerId, $orgUnitPath, $optParams = [])
   {
@@ -62,9 +59,6 @@ class Orgunits extends \Google\Service\Resource
    * @param string $orgUnitPath The full path of the organizational unit or its
    * unique ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool allowPlus Parses org unit path without url decode to allow
-   * for plus in ou name
    * @return OrgUnit
    */
   public function get($customerId, $orgUnitPath, $optParams = [])
@@ -127,9 +121,6 @@ class Orgunits extends \Google\Service\Resource
    * unique ID.
    * @param OrgUnit $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool allowPlus Parses org unit path without url decode to allow
-   * for plus in ou name
    * @return OrgUnit
    */
   public function patch($customerId, $orgUnitPath, OrgUnit $postBody, $optParams = [])
@@ -150,9 +141,6 @@ class Orgunits extends \Google\Service\Resource
    * unique ID.
    * @param OrgUnit $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool allowPlus Parses org unit path without url decode to allow
-   * for plus in ou name
    * @return OrgUnit
    */
   public function update($customerId, $orgUnitPath, OrgUnit $postBody, $optParams = [])

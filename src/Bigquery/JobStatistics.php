@@ -42,8 +42,8 @@ class JobStatistics extends \Google\Collection
   protected $rowLevelSecurityStatisticsDataType = '';
   protected $scriptStatisticsType = ScriptStatistics::class;
   protected $scriptStatisticsDataType = '';
-  protected $sessionInfoTemplateType = SessionInfo::class;
-  protected $sessionInfoTemplateDataType = '';
+  protected $sessionInfoType = SessionInfo::class;
+  protected $sessionInfoDataType = '';
   public $startTime;
   public $totalBytesProcessed;
   public $totalSlotMs;
@@ -193,16 +193,16 @@ class JobStatistics extends \Google\Collection
   /**
    * @param SessionInfo
    */
-  public function setSessionInfoTemplate(SessionInfo $sessionInfoTemplate)
+  public function setSessionInfo(SessionInfo $sessionInfo)
   {
-    $this->sessionInfoTemplate = $sessionInfoTemplate;
+    $this->sessionInfo = $sessionInfo;
   }
   /**
    * @return SessionInfo
    */
-  public function getSessionInfoTemplate()
+  public function getSessionInfo()
   {
-    return $this->sessionInfoTemplate;
+    return $this->sessionInfo;
   }
   public function setStartTime($startTime)
   {

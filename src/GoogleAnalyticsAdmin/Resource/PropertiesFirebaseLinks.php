@@ -86,26 +86,6 @@ class PropertiesFirebaseLinks extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse::class);
   }
-  /**
-   * Updates a FirebaseLink on a property (firebaseLinks.patch)
-   *
-   * @param string $name Output only. Example format:
-   * properties/1234/firebaseLinks/5678
-   * @param GoogleAnalyticsAdminV1alphaFirebaseLink $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string updateMask Required. The list of fields to be updated.
-   * Field names must be in snake case (e.g., "field_to_update"). Omitted fields
-   * will not be updated. To replace the entire entity, use one path with the
-   * string "*" to match all fields.
-   * @return GoogleAnalyticsAdminV1alphaFirebaseLink
-   */
-  public function patch($name, GoogleAnalyticsAdminV1alphaFirebaseLink $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], GoogleAnalyticsAdminV1alphaFirebaseLink::class);
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

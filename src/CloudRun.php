@@ -24,7 +24,8 @@ use Google\Client;
  *
  * <p>
  * Deploy and manage user provided container images that scale automatically
- * based on HTTP traffic.</p>
+ * based on incoming requets. The Cloud Run Admin API follows the Knative
+ * Serving API specification.</p>
  *
  * <p>
  * For more information about this service, see the API

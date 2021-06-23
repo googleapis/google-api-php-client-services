@@ -17,8 +17,8 @@
 
 namespace Google\Service\DataCatalog\Resource;
 
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1SearchCatalogRequest;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1SearchCatalogResponse;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1SearchCatalogRequest;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1SearchCatalogResponse;
 
 /**
  * The "catalog" collection of methods.
@@ -31,26 +31,27 @@ use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1SearchCatalogRespons
 class Catalog extends \Google\Service\Resource
 {
   /**
-   * Searches Data Catalog for multiple resources like entries, tags that match a
-   * query. This is a custom method
-   * (https://cloud.google.com/apis/design/custom_methods) and does not return the
-   * complete resource, only the resource identifier and high level fields.
-   * Clients can subsequently call `Get` methods. Note that Data Catalog search
-   * queries do not guarantee full recall. Query results that match your query may
-   * not be returned, even in subsequent result pages. Also note that results
-   * returned (and not returned) can vary across repeated search queries. See
-   * [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-
-   * to/search-reference) for more information. (catalog.search)
+   * Searches Data Catalog for multiple resources like entries and tags that match
+   * a query. This is a [Custom Method]
+   * (https://cloud.google.com/apis/design/custom_methods) that doesn't return all
+   * information on a resource, only its ID and high level fields. To get more
+   * information, you can subsequently call specific get methods. Note: Data
+   * Catalog search queries don't guarantee full recall. Results that match your
+   * query might not be returned, even in subsequent result pages. Additionally,
+   * returned (and not returned) results can vary if you repeat search queries.
+   * For more information, see [Data Catalog search syntax]
+   * (https://cloud.google.com/data-catalog/docs/how-to/search-reference).
+   * (catalog.search)
    *
-   * @param GoogleCloudDatacatalogV1beta1SearchCatalogRequest $postBody
+   * @param GoogleCloudDatacatalogV1SearchCatalogRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDatacatalogV1beta1SearchCatalogResponse
+   * @return GoogleCloudDatacatalogV1SearchCatalogResponse
    */
-  public function search(GoogleCloudDatacatalogV1beta1SearchCatalogRequest $postBody, $optParams = [])
+  public function search(GoogleCloudDatacatalogV1SearchCatalogRequest $postBody, $optParams = [])
   {
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('search', [$params], GoogleCloudDatacatalogV1beta1SearchCatalogResponse::class);
+    return $this->call('search', [$params], GoogleCloudDatacatalogV1SearchCatalogResponse::class);
   }
 }
 

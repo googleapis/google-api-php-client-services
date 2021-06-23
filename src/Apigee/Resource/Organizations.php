@@ -21,6 +21,7 @@ use Google\Service\Apigee\GoogleCloudApigeeV1GetSyncAuthorizationRequest;
 use Google\Service\Apigee\GoogleCloudApigeeV1IngressConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1ListOrganizationsResponse;
 use Google\Service\Apigee\GoogleCloudApigeeV1Organization;
+use Google\Service\Apigee\GoogleCloudApigeeV1RuntimeConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1SetAddonsRequest;
 use Google\Service\Apigee\GoogleCloudApigeeV1SyncAuthorization;
 use Google\Service\Apigee\GoogleLongrunningOperation;
@@ -104,6 +105,20 @@ class Organizations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('getDeployedIngressConfig', [$params], GoogleCloudApigeeV1IngressConfig::class);
+  }
+  /**
+   * Get runtime config for an organization. (organizations.getRuntimeConfig)
+   *
+   * @param string $name Required. Name of the runtime config for the organization
+   * in the following format: 'organizations/{org}/runtimeConfig'.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1RuntimeConfig
+   */
+  public function getRuntimeConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getRuntimeConfig', [$params], GoogleCloudApigeeV1RuntimeConfig::class);
   }
   /**
    * Lists the service accounts with the permissions required to allow the

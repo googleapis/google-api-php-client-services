@@ -32,7 +32,10 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsIntents extends \Google\Service\Resource
 {
   /**
-   * Creates an intent in the specified agent. (intents.create)
+   * Creates an intent in the specified agent. Note: You should always train a
+   * flow prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (intents.create)
    *
    * @param string $parent Required. The agent to create an intent for. Format:
    * `projects//locations//agents/`.
@@ -54,7 +57,10 @@ class ProjectsLocationsAgentsIntents extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleCloudDialogflowCxV3Intent::class);
   }
   /**
-   * Deletes the specified intent. (intents.delete)
+   * Deletes the specified intent. Note: You should always train a flow prior to
+   * sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (intents.delete)
    *
    * @param string $name Required. The name of the intent to delete. Format:
    * `projects//locations//agents//intents/`.
@@ -119,7 +125,10 @@ class ProjectsLocationsAgentsIntents extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListIntentsResponse::class);
   }
   /**
-   * Updates the specified intent. (intents.patch)
+   * Updates the specified intent. Note: You should always train a flow prior to
+   * sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (intents.patch)
    *
    * @param string $name The unique identifier of the intent. Required for the
    * Intents.UpdateIntent method. Intents.CreateIntent populates the name

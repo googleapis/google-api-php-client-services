@@ -17,8 +17,8 @@
 
 namespace Google\Service\DataCatalog\Resource;
 
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1TagTemplateField;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1RenameTagTemplateFieldEnumValueRequest;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1TagTemplateField;
 
 /**
  * The "enumValues" collection of methods.
@@ -31,22 +31,19 @@ use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1TagTemplateField;
 class ProjectsLocationsTagTemplatesFieldsEnumValues extends \Google\Service\Resource
 {
   /**
-   * Renames an enum value in a tag template. The enum values have to be unique
-   * within one enum field. Thus, an enum value cannot be renamed with a name used
-   * in any other enum value within the same enum field. (enumValues.rename)
+   * Renames an enum value in a tag template. Within a single enum field, enum
+   * values must be unique. (enumValues.rename)
    *
-   * @param string $name Required. The name of the enum field value. Example: * pr
-   * ojects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/field
-   * s/{tag_template_field_id}/enumValues/{enum_value_display_name}
-   * @param GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest $postBody
+   * @param string $name Required. The name of the enum field value.
+   * @param GoogleCloudDatacatalogV1RenameTagTemplateFieldEnumValueRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDatacatalogV1beta1TagTemplateField
+   * @return GoogleCloudDatacatalogV1TagTemplateField
    */
-  public function rename($name, GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest $postBody, $optParams = [])
+  public function rename($name, GoogleCloudDatacatalogV1RenameTagTemplateFieldEnumValueRequest $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('rename', [$params], GoogleCloudDatacatalogV1beta1TagTemplateField::class);
+    return $this->call('rename', [$params], GoogleCloudDatacatalogV1TagTemplateField::class);
   }
 }
 

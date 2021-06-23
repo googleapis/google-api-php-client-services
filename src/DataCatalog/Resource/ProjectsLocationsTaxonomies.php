@@ -19,11 +19,12 @@ namespace Google\Service\DataCatalog\Resource;
 
 use Google\Service\DataCatalog\DatacatalogEmpty;
 use Google\Service\DataCatalog\GetIamPolicyRequest;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1ExportTaxonomiesResponse;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1ListTaxonomiesResponse;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1Taxonomy;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1ExportTaxonomiesResponse;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1ImportTaxonomiesRequest;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1ImportTaxonomiesResponse;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1ListTaxonomiesResponse;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1ReplaceTaxonomyRequest;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1Taxonomy;
 use Google\Service\DataCatalog\Policy;
 use Google\Service\DataCatalog\SetIamPolicyRequest;
 use Google\Service\DataCatalog\TestIamPermissionsRequest;
@@ -40,26 +41,28 @@ use Google\Service\DataCatalog\TestIamPermissionsResponse;
 class ProjectsLocationsTaxonomies extends \Google\Service\Resource
 {
   /**
-   * Creates a taxonomy in the specified project. (taxonomies.create)
+   * Creates a taxonomy in a specified project. The taxonomy is initially empty,
+   * that is, it doesn't contain policy tags. (taxonomies.create)
    *
    * @param string $parent Required. Resource name of the project that the
    * taxonomy will belong to.
-   * @param GoogleCloudDatacatalogV1beta1Taxonomy $postBody
+   * @param GoogleCloudDatacatalogV1Taxonomy $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDatacatalogV1beta1Taxonomy
+   * @return GoogleCloudDatacatalogV1Taxonomy
    */
-  public function create($parent, GoogleCloudDatacatalogV1beta1Taxonomy $postBody, $optParams = [])
+  public function create($parent, GoogleCloudDatacatalogV1Taxonomy $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], GoogleCloudDatacatalogV1beta1Taxonomy::class);
+    return $this->call('create', [$params], GoogleCloudDatacatalogV1Taxonomy::class);
   }
   /**
-   * Deletes a taxonomy. This operation will also delete all policy tags in this
-   * taxonomy along with their associated policies. (taxonomies.delete)
+   * Deletes a taxonomy, including all policy tags in this taxonomy, their
+   * associated policies, and the policy tags references from BigQuery columns.
+   * (taxonomies.delete)
    *
-   * @param string $name Required. Resource name of the taxonomy to be deleted.
-   * All policy tags in this taxonomy will also be deleted.
+   * @param string $name Required. Resource name of the taxonomy to delete. Note:
+   * All policy tags in this taxonomy are also deleted.
    * @param array $optParams Optional parameters.
    * @return DatacatalogEmpty
    */
@@ -70,41 +73,43 @@ class ProjectsLocationsTaxonomies extends \Google\Service\Resource
     return $this->call('delete', [$params], DatacatalogEmpty::class);
   }
   /**
-   * Exports all taxonomies and their policy tags in a project. This method
-   * generates SerializedTaxonomy protos with nested policy tags that can be used
-   * as an input for future ImportTaxonomies calls. (taxonomies.export)
+   * Exports taxonomies in the requested type and returns them, including their
+   * policy tags. The requested taxonomies must belong to the same project. This
+   * method generates `SerializedTaxonomy` protocol buffers with nested policy
+   * tags that can be used as input for `ImportTaxonomies` calls.
+   * (taxonomies.export)
    *
-   * @param string $parent Required. Resource name of the project that taxonomies
-   * to be exported will share.
+   * @param string $parent Required. Resource name of the project that the
+   * exported taxonomies belong to.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool serializedTaxonomies Export taxonomies as serialized
-   * taxonomies.
-   * @opt_param string taxonomies Required. Resource names of the taxonomies to be
-   * exported.
-   * @return GoogleCloudDatacatalogV1beta1ExportTaxonomiesResponse
+   * @opt_param bool serializedTaxonomies Serialized export taxonomies that
+   * contain all the policy tags as nested protocol buffers.
+   * @opt_param string taxonomies Required. Resource names of the taxonomies to
+   * export.
+   * @return GoogleCloudDatacatalogV1ExportTaxonomiesResponse
    */
   public function export($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('export', [$params], GoogleCloudDatacatalogV1beta1ExportTaxonomiesResponse::class);
+    return $this->call('export', [$params], GoogleCloudDatacatalogV1ExportTaxonomiesResponse::class);
   }
   /**
    * Gets a taxonomy. (taxonomies.get)
    *
-   * @param string $name Required. Resource name of the requested taxonomy.
+   * @param string $name Required. Resource name of the taxonomy to get.
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDatacatalogV1beta1Taxonomy
+   * @return GoogleCloudDatacatalogV1Taxonomy
    */
   public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoogleCloudDatacatalogV1beta1Taxonomy::class);
+    return $this->call('get', [$params], GoogleCloudDatacatalogV1Taxonomy::class);
   }
   /**
-   * Gets the IAM policy for a taxonomy or a policy tag. (taxonomies.getIamPolicy)
+   * Gets the IAM policy for a policy tag or a taxonomy. (taxonomies.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See the operation documentation for the appropriate value for this
@@ -120,64 +125,88 @@ class ProjectsLocationsTaxonomies extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Imports all taxonomies and their policy tags to a project as new taxonomies.
-   * This method provides a bulk taxonomy / policy tag creation using nested proto
-   * structure. (taxonomies.import)
+   * Creates new taxonomies (including their policy tags) in a given project by
+   * importing from inlined or cross-regional sources. For a cross-regional
+   * source, new taxonomies are created by copying from a source in another
+   * region. For an inlined source, taxonomies and policy tags are created in bulk
+   * using nested protocol buffer structures. (taxonomies.import)
    *
    * @param string $parent Required. Resource name of project that the imported
    * taxonomies will belong to.
-   * @param GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest $postBody
+   * @param GoogleCloudDatacatalogV1ImportTaxonomiesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse
+   * @return GoogleCloudDatacatalogV1ImportTaxonomiesResponse
    */
-  public function import($parent, GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest $postBody, $optParams = [])
+  public function import($parent, GoogleCloudDatacatalogV1ImportTaxonomiesRequest $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('import', [$params], GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse::class);
+    return $this->call('import', [$params], GoogleCloudDatacatalogV1ImportTaxonomiesResponse::class);
   }
   /**
-   * Lists all taxonomies in a project in a particular location that the caller
-   * has permission to view. (taxonomies.listProjectsLocationsTaxonomies)
+   * Lists all taxonomies in a project in a particular location that you have a
+   * permission to view. (taxonomies.listProjectsLocationsTaxonomies)
    *
    * @param string $parent Required. Resource name of the project to list the
    * taxonomies of.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of items to return. Must be a
-   * value between 1 and 1000. If not set, defaults to 50.
-   * @opt_param string pageToken The next_page_token value returned from a
-   * previous list request, if any. If not set, defaults to an empty string.
-   * @return GoogleCloudDatacatalogV1beta1ListTaxonomiesResponse
+   * value between 1 and 1000 inclusively. If not set, defaults to 50.
+   * @opt_param string pageToken The pagination token of the next results page. If
+   * not set, the first page is returned. The token is returned in the response to
+   * a previous list request.
+   * @return GoogleCloudDatacatalogV1ListTaxonomiesResponse
    */
   public function listProjectsLocationsTaxonomies($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], GoogleCloudDatacatalogV1beta1ListTaxonomiesResponse::class);
+    return $this->call('list', [$params], GoogleCloudDatacatalogV1ListTaxonomiesResponse::class);
   }
   /**
-   * Updates a taxonomy. (taxonomies.patch)
+   * Updates a taxonomy, including its display name, description, and activated
+   * policy types. (taxonomies.patch)
    *
-   * @param string $name Output only. Resource name of this taxonomy, whose format
-   * is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
-   * @param GoogleCloudDatacatalogV1beta1Taxonomy $postBody
+   * @param string $name Output only. Resource name of this taxonomy in URL
+   * format. Note: Policy tag manager generates unique taxonomy IDs.
+   * @param GoogleCloudDatacatalogV1Taxonomy $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The update mask applies to the resource. For the
-   * `FieldMask` definition, see https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all
-   * of the fields that are allowed to update.
-   * @return GoogleCloudDatacatalogV1beta1Taxonomy
+   * @opt_param string updateMask Specifies fields to update. If not set, defaults
+   * to all fields you can update. For more information, see [FieldMask]
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask).
+   * @return GoogleCloudDatacatalogV1Taxonomy
    */
-  public function patch($name, GoogleCloudDatacatalogV1beta1Taxonomy $postBody, $optParams = [])
+  public function patch($name, GoogleCloudDatacatalogV1Taxonomy $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], GoogleCloudDatacatalogV1beta1Taxonomy::class);
+    return $this->call('patch', [$params], GoogleCloudDatacatalogV1Taxonomy::class);
   }
   /**
-   * Sets the IAM policy for a taxonomy or a policy tag. (taxonomies.setIamPolicy)
+   * Replaces (updates) a taxonomy and all its policy tags. The taxonomy and its
+   * entire hierarchy of policy tags must be represented literally by
+   * `SerializedTaxonomy` and the nested `SerializedPolicyTag` messages. This
+   * operation automatically does the following: - Deletes the existing policy
+   * tags that are missing from the `SerializedPolicyTag`. - Creates policy tags
+   * that don't have resource names. They are considered new. - Updates policy
+   * tags with valid resources names accordingly. (taxonomies.replace)
+   *
+   * @param string $name Required. Resource name of the taxonomy to update.
+   * @param GoogleCloudDatacatalogV1ReplaceTaxonomyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDatacatalogV1Taxonomy
+   */
+  public function replace($name, GoogleCloudDatacatalogV1ReplaceTaxonomyRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('replace', [$params], GoogleCloudDatacatalogV1Taxonomy::class);
+  }
+  /**
+   * Sets the IAM policy for a policy tag or a taxonomy. (taxonomies.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See the operation documentation for the appropriate value for this
@@ -193,8 +222,8 @@ class ProjectsLocationsTaxonomies extends \Google\Service\Resource
     return $this->call('setIamPolicy', [$params], Policy::class);
   }
   /**
-   * Returns the permissions that a caller has on the specified taxonomy or policy
-   * tag. (taxonomies.testIamPermissions)
+   * Returns your permissions on a specified policy tag or taxonomy.
+   * (taxonomies.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. See the operation documentation for the appropriate value

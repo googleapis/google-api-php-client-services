@@ -34,8 +34,8 @@ class SuperChatEvents extends \Google\Service\Resource
    * (superChatEvents.listSuperChatEvents)
    *
    * @param string|array $part The *part* parameter specifies the superChatEvent
-   * resource parts that the API response will include. Supported values are id
-   * and snippet.
+   * resource parts that the API response will include. This parameter is
+   * currently not supported.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string hl Return rendered funding amounts in specified language.

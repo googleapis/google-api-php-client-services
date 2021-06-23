@@ -21,7 +21,8 @@ class QueryResponse extends \Google\Collection
 {
   protected $collection_key = 'rows';
   public $cacheHit;
-  public $dmlStats;
+  protected $dmlStatsType = DmlStatistics::class;
+  protected $dmlStatsDataType = '';
   protected $errorsType = ErrorProto::class;
   protected $errorsDataType = 'array';
   public $jobComplete;
@@ -47,10 +48,16 @@ class QueryResponse extends \Google\Collection
   {
     return $this->cacheHit;
   }
-  public function setDmlStats($dmlStats)
+  /**
+   * @param DmlStatistics
+   */
+  public function setDmlStats(DmlStatistics $dmlStats)
   {
     $this->dmlStats = $dmlStats;
   }
+  /**
+   * @return DmlStatistics
+   */
   public function getDmlStats()
   {
     return $this->dmlStats;

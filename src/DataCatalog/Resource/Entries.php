@@ -17,7 +17,7 @@
 
 namespace Google\Service\DataCatalog\Resource;
 
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1Entry;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1Entry;
 
 /**
  * The "entries" collection of methods.
@@ -30,33 +30,40 @@ use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1Entry;
 class Entries extends \Google\Service\Resource
 {
   /**
-   * Get an entry by target resource name. This method allows clients to use the
-   * resource name from the source Google Cloud Platform service to get the Data
-   * Catalog Entry. (entries.lookup)
+   * Gets an entry by its target resource name. The resource name comes from the
+   * source Google Cloud Platform service. (entries.lookup)
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string fullyQualifiedName Fully qualified name (FQN) of the
+   * resource. FQNs take two forms: * For non-regionalized resources:
+   * `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For
+   * regionalized resources:
+   * `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}`
+   * Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INS
+   * TANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
    * @opt_param string linkedResource The full name of the Google Cloud Platform
-   * resource the Data Catalog entry represents. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Full
-   * names are case-sensitive. Examples: * //bigquery.googleapis.com/projects/proj
-   * ectId/datasets/datasetId/tables/tableId *
-   * //pubsub.googleapis.com/projects/projectId/topics/topicId
+   * resource the Data Catalog entry represents. For more information, see [Full
+   * Resource Name]
+   * (https://cloud.google.com/apis/design/resource_names#full_resource_name).
+   * Full names are case-sensitive. For example: * `//bigquery.googleapis.com/proj
+   * ects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}` *
+   * `//pubsub.googleapis.com/projects/{PROJECT_ID}/topics/{TOPIC_ID}`
    * @opt_param string sqlResource The SQL name of the entry. SQL names are case-
-   * sensitive. Examples: * `pubsub.project_id.topic_id` *
-   * ``pubsub.project_id.`topic.id.with.dots` `` *
-   * `bigquery.table.project_id.dataset_id.table_id` *
-   * `bigquery.dataset.project_id.dataset_id` *
-   * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id` `*_id`s
-   * shoud satisfy the standard SQL rules for identifiers.
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
-   * @return GoogleCloudDatacatalogV1beta1Entry
+   * sensitive. Examples: * `pubsub.{PROJECT_ID}.{TOPIC_ID}` *
+   * `pubsub.{PROJECT_ID}.{TOPIC.ID.SEPARATED.WITH.DOTS}` *
+   * `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}` *
+   * `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}` *
+   * `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}`
+   * Identifiers (`*_ID`) should comply with the [Lexical structure in Standard
+   * SQL] (https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical).
+   * @return GoogleCloudDatacatalogV1Entry
    */
   public function lookup($optParams = [])
   {
     $params = [];
     $params = array_merge($params, $optParams);
-    return $this->call('lookup', [$params], GoogleCloudDatacatalogV1beta1Entry::class);
+    return $this->call('lookup', [$params], GoogleCloudDatacatalogV1Entry::class);
   }
 }
 

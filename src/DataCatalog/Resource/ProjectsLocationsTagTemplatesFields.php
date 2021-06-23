@@ -18,8 +18,8 @@
 namespace Google\Service\DataCatalog\Resource;
 
 use Google\Service\DataCatalog\DatacatalogEmpty;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldRequest;
-use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1TagTemplateField;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1RenameTagTemplateFieldRequest;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1TagTemplateField;
 
 /**
  * The "fields" collection of methods.
@@ -32,46 +32,43 @@ use Google\Service\DataCatalog\GoogleCloudDatacatalogV1beta1TagTemplateField;
 class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
 {
   /**
-   * Creates a field in a tag template. The user should enable the Data Catalog
-   * API in the project identified by the `parent` parameter (see [Data Catalog
-   * Resource Project](https://cloud.google.com/data-catalog/docs/concepts
-   * /resource-project) for more information). (fields.create)
+   * Creates a field in a tag template. You must enable the Data Catalog API in
+   * the project identified by the `parent` parameter. For more information, see
+   * [Data Catalog resource project](https://cloud.google.com/data-
+   * catalog/docs/concepts/resource-project). (fields.create)
    *
    * @param string $parent Required. The name of the project and the template
    * location [region](https://cloud.google.com/data-
-   * catalog/docs/concepts/regions). Example: * projects/{project_id}/locations
-   * /us-central1/tagTemplates/{tag_template_id}
-   * @param GoogleCloudDatacatalogV1beta1TagTemplateField $postBody
+   * catalog/docs/concepts/regions).
+   * @param GoogleCloudDatacatalogV1TagTemplateField $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string tagTemplateFieldId Required. The ID of the tag template
-   * field to create. Field ids can contain letters (both uppercase and
-   * lowercase), numbers (0-9), underscores (_) and dashes (-). Field IDs must be
-   * at least 1 character long and at most 128 characters long. Field IDs must
-   * also be unique within their template.
-   * @return GoogleCloudDatacatalogV1beta1TagTemplateField
+   * field to create. Note: Adding a required field to an existing template is
+   * *not* allowed. Field IDs can contain letters (both uppercase and lowercase),
+   * numbers (0-9), underscores (_) and dashes (-). Field IDs must be at least 1
+   * character long and at most 128 characters long. Field IDs must also be unique
+   * within their template.
+   * @return GoogleCloudDatacatalogV1TagTemplateField
    */
-  public function create($parent, GoogleCloudDatacatalogV1beta1TagTemplateField $postBody, $optParams = [])
+  public function create($parent, GoogleCloudDatacatalogV1TagTemplateField $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], GoogleCloudDatacatalogV1beta1TagTemplateField::class);
+    return $this->call('create', [$params], GoogleCloudDatacatalogV1TagTemplateField::class);
   }
   /**
-   * Deletes a field in a tag template and all uses of that field. Users should
-   * enable the Data Catalog API in the project identified by the `name` parameter
-   * (see [Data Catalog Resource Project] (https://cloud.google.com/data-
-   * catalog/docs/concepts/resource-project) for more information).
-   * (fields.delete)
+   * Deletes a field in a tag template and all uses of this field from the tags
+   * based on this template. You must enable the Data Catalog API in the project
+   * identified by the `name` parameter. For more information, see [Data Catalog
+   * resource project](https://cloud.google.com/data-catalog/docs/concepts
+   * /resource-project). (fields.delete)
    *
    * @param string $name Required. The name of the tag template field to delete.
-   * Example: * projects/{project_id}/locations/{location}/tagTemplates/{tag_templ
-   * ate_id}/fields/{tag_template_field_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool force Required. Currently, this field must always be set to
-   * `true`. This confirms the deletion of this field from any tags using this
-   * field. `force = false` will be supported in the future.
+   * @opt_param bool force Required. If true, deletes this field from any tags
+   * that use it. Currently, `true` is the only supported value.
    * @return DatacatalogEmpty
    */
   public function delete($name, $optParams = [])
@@ -81,16 +78,14 @@ class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
     return $this->call('delete', [$params], DatacatalogEmpty::class);
   }
   /**
-   * Updates a field in a tag template. This method cannot be used to update the
-   * field type. Users should enable the Data Catalog API in the project
-   * identified by the `name` parameter (see [Data Catalog Resource Project]
-   * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
-   * more information). (fields.patch)
+   * Updates a field in a tag template. You can't update the field type with this
+   * method. You must enable the Data Catalog API in the project identified by the
+   * `name` parameter. For more information, see [Data Catalog resource
+   * project](https://cloud.google.com/data-catalog/docs/concepts/resource-
+   * project). (fields.patch)
    *
-   * @param string $name Required. The name of the tag template field. Example: *
-   * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fie
-   * lds/{tag_template_field_id}
-   * @param GoogleCloudDatacatalogV1beta1TagTemplateField $postBody
+   * @param string $name Required. The name of the tag template field.
+   * @param GoogleCloudDatacatalogV1TagTemplateField $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Optional. Names of fields whose values to
@@ -102,32 +97,30 @@ class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
    * are merged with the existing values. Therefore, enum values can only be
    * added, existing enum values cannot be deleted or renamed. Additionally,
    * updating a template field from optional to required is *not* allowed.
-   * @return GoogleCloudDatacatalogV1beta1TagTemplateField
+   * @return GoogleCloudDatacatalogV1TagTemplateField
    */
-  public function patch($name, GoogleCloudDatacatalogV1beta1TagTemplateField $postBody, $optParams = [])
+  public function patch($name, GoogleCloudDatacatalogV1TagTemplateField $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], GoogleCloudDatacatalogV1beta1TagTemplateField::class);
+    return $this->call('patch', [$params], GoogleCloudDatacatalogV1TagTemplateField::class);
   }
   /**
-   * Renames a field in a tag template. The user should enable the Data Catalog
-   * API in the project identified by the `name` parameter (see [Data Catalog
-   * Resource Project](https://cloud.google.com/data-catalog/docs/concepts
-   * /resource-project) for more information). (fields.rename)
+   * Renames a field in a tag template. You must enable the Data Catalog API in
+   * the project identified by the `name` parameter. For more information, see
+   * [Data Catalog resource project] (https://cloud.google.com/data-
+   * catalog/docs/concepts/resource-project). (fields.rename)
    *
-   * @param string $name Required. The name of the tag template. Example: * projec
-   * ts/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{t
-   * ag_template_field_id}
-   * @param GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldRequest $postBody
+   * @param string $name Required. The name of the tag template.
+   * @param GoogleCloudDatacatalogV1RenameTagTemplateFieldRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDatacatalogV1beta1TagTemplateField
+   * @return GoogleCloudDatacatalogV1TagTemplateField
    */
-  public function rename($name, GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldRequest $postBody, $optParams = [])
+  public function rename($name, GoogleCloudDatacatalogV1RenameTagTemplateFieldRequest $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('rename', [$params], GoogleCloudDatacatalogV1beta1TagTemplateField::class);
+    return $this->call('rename', [$params], GoogleCloudDatacatalogV1TagTemplateField::class);
   }
 }
 

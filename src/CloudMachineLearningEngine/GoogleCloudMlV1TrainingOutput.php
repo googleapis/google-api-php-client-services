@@ -29,6 +29,7 @@ class GoogleCloudMlV1TrainingOutput extends \Google\Collection
   public $isHyperparameterTuningJob;
   protected $trialsType = GoogleCloudMlV1HyperparameterOutput::class;
   protected $trialsDataType = 'array';
+  public $webAccessUris;
 
   /**
    * @param GoogleCloudMlV1BuiltInAlgorithmOutput
@@ -97,6 +98,14 @@ class GoogleCloudMlV1TrainingOutput extends \Google\Collection
   public function getTrials()
   {
     return $this->trials;
+  }
+  public function setWebAccessUris($webAccessUris)
+  {
+    $this->webAccessUris = $webAccessUris;
+  }
+  public function getWebAccessUris()
+  {
+    return $this->webAccessUris;
   }
 }
 

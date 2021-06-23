@@ -23,6 +23,7 @@ class PackageData extends \Google\Model
   public $os;
   public $osVersion;
   public $package;
+  public $packageType;
   public $unused;
   public $version;
 
@@ -57,6 +58,14 @@ class PackageData extends \Google\Model
   public function getPackage()
   {
     return $this->package;
+  }
+  public function setPackageType($packageType)
+  {
+    $this->packageType = $packageType;
+  }
+  public function getPackageType()
+  {
+    return $this->packageType;
   }
   public function setUnused($unused)
   {

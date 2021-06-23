@@ -32,7 +32,10 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsFlowsPages extends \Google\Service\Resource
 {
   /**
-   * Creates a page in the specified flow. (pages.create)
+   * Creates a page in the specified flow. Note: You should always train a flow
+   * prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (pages.create)
    *
    * @param string $parent Required. The flow to create a page for. Format:
    * `projects//locations//agents//flows/`.
@@ -63,7 +66,10 @@ class ProjectsLocationsAgentsFlowsPages extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleCloudDialogflowCxV3Page::class);
   }
   /**
-   * Deletes the specified page. (pages.delete)
+   * Deletes the specified page. Note: You should always train a flow prior to
+   * sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (pages.delete)
    *
    * @param string $name Required. The name of the page to delete. Format:
    * `projects//locations//agents//Flows//pages/`.
@@ -149,7 +155,10 @@ class ProjectsLocationsAgentsFlowsPages extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListPagesResponse::class);
   }
   /**
-   * Updates the specified page. (pages.patch)
+   * Updates the specified page. Note: You should always train a flow prior to
+   * sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (pages.patch)
    *
    * @param string $name The unique identifier of the page. Required for the
    * Pages.UpdatePage method. Pages.CreatePage populates the name automatically.

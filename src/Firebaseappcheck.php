@@ -101,7 +101,27 @@ class Firebaseappcheck extends \Google\Service
         'apps',
         [
           'methods' => [
-            'exchangeCustomToken' => [
+            'exchangeAppAttestAssertion' => [
+              'path' => 'v1beta/{+app}:exchangeAppAttestAssertion',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'app' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'exchangeAppAttestAttestation' => [
+              'path' => 'v1beta/{+app}:exchangeAppAttestAttestation',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'app' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'exchangeCustomToken' => [
               'path' => 'v1beta/{+app}:exchangeCustomToken',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -143,6 +163,16 @@ class Firebaseappcheck extends \Google\Service
               ],
             ],'exchangeSafetyNetToken' => [
               'path' => 'v1beta/{+app}:exchangeSafetyNetToken',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'app' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generateAppAttestChallenge' => [
+              'path' => 'v1beta/{+app}:generateAppAttestChallenge',
               'httpMethod' => 'POST',
               'parameters' => [
                 'app' => [

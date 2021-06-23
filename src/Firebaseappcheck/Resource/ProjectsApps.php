@@ -17,12 +17,17 @@
 
 namespace Google\Service\Firebaseappcheck\Resource;
 
+use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaAttestationTokenResponse;
+use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest;
+use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest;
+use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeRecaptchaTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest;
+use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest;
 
 /**
  * The "apps" collection of methods.
@@ -34,6 +39,42 @@ use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeSafetyNe
  */
 class ProjectsApps extends \Google\Service\Resource
 {
+  /**
+   * Accepts a AppAttest Artifact and Assertion, and uses the developer's
+   * preconfigured auth token to verify the token with Apple. Returns an
+   * AttestationToken with the App ID as specified by the `app` field included as
+   * attested claims. (apps.exchangeAppAttestAssertion)
+   *
+   * @param string $app Required. The full resource name to the iOS App. Format:
+   * "projects/{project_id}/apps/{app_id}"
+   * @param GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleFirebaseAppcheckV1betaAttestationTokenResponse
+   */
+  public function exchangeAppAttestAssertion($app, GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest $postBody, $optParams = [])
+  {
+    $params = ['app' => $app, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('exchangeAppAttestAssertion', [$params], GoogleFirebaseAppcheckV1betaAttestationTokenResponse::class);
+  }
+  /**
+   * Accepts a AppAttest CBOR Attestation, and uses the developer's preconfigured
+   * team and bundle IDs to verify the token with Apple. Returns an Attestation
+   * Artifact that can later be exchanged for an AttestationToken in
+   * ExchangeAppAttestAssertion. (apps.exchangeAppAttestAttestation)
+   *
+   * @param string $app Required. The full resource name to the iOS App. Format:
+   * "projects/{project_id}/apps/{app_id}"
+   * @param GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse
+   */
+  public function exchangeAppAttestAttestation($app, GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest $postBody, $optParams = [])
+  {
+    $params = ['app' => $app, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('exchangeAppAttestAttestation', [$params], GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse::class);
+  }
   /**
    * Validates a custom token signed using your project's Admin SDK service
    * account credentials. If valid, returns an App Check token encapsulated in an
@@ -138,6 +179,22 @@ class ProjectsApps extends \Google\Service\Resource
     $params = ['app' => $app, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('exchangeSafetyNetToken', [$params], GoogleFirebaseAppcheckV1betaAttestationTokenResponse::class);
+  }
+  /**
+   * Initiates the App Attest flow by generating a challenge which will be used as
+   * a type of nonce for this attestation. (apps.generateAppAttestChallenge)
+   *
+   * @param string $app Required. The full resource name to the iOS App. Format:
+   * "projects/{project_id}/apps/{app_id}"
+   * @param GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse
+   */
+  public function generateAppAttestChallenge($app, GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest $postBody, $optParams = [])
+  {
+    $params = ['app' => $app, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateAppAttestChallenge', [$params], GoogleFirebaseAppcheckV1betaAppAttestChallengeResponse::class);
   }
 }
 

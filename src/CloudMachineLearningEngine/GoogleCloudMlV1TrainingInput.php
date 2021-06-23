@@ -21,6 +21,7 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
 {
   protected $collection_key = 'packageUris';
   public $args;
+  public $enableWebAccess;
   protected $encryptionConfigType = GoogleCloudMlV1EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   protected $evaluatorConfigType = GoogleCloudMlV1ReplicaConfig::class;
@@ -60,6 +61,14 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
   public function getArgs()
   {
     return $this->args;
+  }
+  public function setEnableWebAccess($enableWebAccess)
+  {
+    $this->enableWebAccess = $enableWebAccess;
+  }
+  public function getEnableWebAccess()
+  {
+    return $this->enableWebAccess;
   }
   /**
    * @param GoogleCloudMlV1EncryptionConfig

@@ -191,6 +191,16 @@ class Apigee extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'getRuntimeConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getSyncAuthorization' => [
               'path' => 'v1/{+name}:getSyncAuthorization',
               'httpMethod' => 'POST',

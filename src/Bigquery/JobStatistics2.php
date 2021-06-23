@@ -34,7 +34,8 @@ class JobStatistics2 extends \Google\Collection
   protected $ddlTargetRowAccessPolicyDataType = '';
   protected $ddlTargetTableType = TableReference::class;
   protected $ddlTargetTableDataType = '';
-  public $dmlStats;
+  protected $dmlStatsType = DmlStatistics::class;
+  protected $dmlStatsDataType = '';
   public $estimatedBytesProcessed;
   protected $modelTrainingType = BigQueryModelTraining::class;
   protected $modelTrainingDataType = '';
@@ -164,10 +165,16 @@ class JobStatistics2 extends \Google\Collection
   {
     return $this->ddlTargetTable;
   }
-  public function setDmlStats($dmlStats)
+  /**
+   * @param DmlStatistics
+   */
+  public function setDmlStats(DmlStatistics $dmlStats)
   {
     $this->dmlStats = $dmlStats;
   }
+  /**
+   * @return DmlStatistics
+   */
   public function getDmlStats()
   {
     return $this->dmlStats;

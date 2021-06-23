@@ -32,6 +32,7 @@ class GoogleCloudMlV1HyperparameterOutput extends \Google\Collection
   public $startTime;
   public $state;
   public $trialId;
+  public $webAccessUris;
 
   /**
    * @param GoogleCloudMlV1HyperparameterOutputHyperparameterMetric[]
@@ -122,6 +123,14 @@ class GoogleCloudMlV1HyperparameterOutput extends \Google\Collection
   public function getTrialId()
   {
     return $this->trialId;
+  }
+  public function setWebAccessUris($webAccessUris)
+  {
+    $this->webAccessUris = $webAccessUris;
+  }
+  public function getWebAccessUris()
+  {
+    return $this->webAccessUris;
   }
 }
 

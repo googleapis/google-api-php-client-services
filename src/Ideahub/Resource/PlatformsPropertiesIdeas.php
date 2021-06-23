@@ -41,7 +41,16 @@ class PlatformsPropertiesIdeas extends \Google\Service\Resource
    * user is accessing Idea Hub.
    * @opt_param string creator.platformId Identifies the platform account
    * (blog/site/etc.) for which to fetch Ideas.
-   * @opt_param string filter Filter semantics described below.
+   * @opt_param string filter Allows filtering. Supported syntax: * Filter
+   * expressions are made up of one or more restrictions. * Restrictions are
+   * implicitly combined, as if the `AND` operator was always used. The `OR`
+   * operator is currently unsupported. * Supported functions: - `saved(bool)`: If
+   * set to true, fetches only saved ideas. If set to false, fetches all except
+   * saved ideas. Can't be simultaneously used with `dismissed(bool)`. -
+   * `dismissed(bool)`: If set to true, fetches only dismissed ideas. Can't be
+   * simultaneously used with `saved(bool)`. The `false` value is currently
+   * unsupported. Examples: * `saved(true)` * `saved(false)` * `dismissed(true)`
+   * The length of this field should be no more than 500 characters.
    * @opt_param string orderBy Order semantics described below.
    * @opt_param int pageSize The maximum number of ideas per page. If unspecified,
    * at most 10 ideas will be returned. The maximum value is 2000; values above

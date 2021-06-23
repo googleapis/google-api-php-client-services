@@ -32,7 +32,9 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsFlowsTransitionRouteGroups extends \Google\Service\Resource
 {
   /**
-   * Creates an TransitionRouteGroup in the specified flow.
+   * Creates an TransitionRouteGroup in the specified flow. Note: You should
+   * always train a flow prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
    * (transitionRouteGroups.create)
    *
    * @param string $parent Required. The flow to create an TransitionRouteGroup
@@ -57,7 +59,10 @@ class ProjectsLocationsAgentsFlowsTransitionRouteGroups extends \Google\Service\
     return $this->call('create', [$params], GoogleCloudDialogflowCxV3TransitionRouteGroup::class);
   }
   /**
-   * Deletes the specified TransitionRouteGroup. (transitionRouteGroups.delete)
+   * Deletes the specified TransitionRouteGroup. Note: You should always train a
+   * flow prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (transitionRouteGroups.delete)
    *
    * @param string $name Required. The name of the TransitionRouteGroup to delete.
    * Format: `projects//locations//agents//flows//transitionRouteGroups/`.
@@ -129,7 +134,10 @@ class ProjectsLocationsAgentsFlowsTransitionRouteGroups extends \Google\Service\
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse::class);
   }
   /**
-   * Updates the specified TransitionRouteGroup. (transitionRouteGroups.patch)
+   * Updates the specified TransitionRouteGroup. Note: You should always train a
+   * flow prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (transitionRouteGroups.patch)
    *
    * @param string $name The unique identifier of the transition route group.
    * TransitionRouteGroups.CreateTransitionRouteGroup populates the name

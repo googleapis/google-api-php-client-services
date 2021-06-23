@@ -37,7 +37,10 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgents extends \Google\Service\Resource
 {
   /**
-   * Creates an agent in the specified location. (agents.create)
+   * Creates an agent in the specified location. Note: You should always train
+   * flows prior to sending them queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (agents.create)
    *
    * @param string $parent Required. The location to create a agent for. Format:
    * `projects//locations/`.
@@ -133,7 +136,10 @@ class ProjectsLocationsAgents extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListAgentsResponse::class);
   }
   /**
-   * Updates the specified agent. (agents.patch)
+   * Updates the specified agent. Note: You should always train flows prior to
+   * sending them queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (agents.patch)
    *
    * @param string $name The unique identifier of the agent. Required for the
    * Agents.UpdateAgent method. Agents.CreateAgent populates the name
@@ -154,7 +160,10 @@ class ProjectsLocationsAgents extends \Google\Service\Resource
   /**
    * Restores the specified agent from a binary file. Replaces the current agent
    * with a new one. Note that all existing resources in agent (e.g. intents,
-   * entity types, flows) will be removed. (agents.restore)
+   * entity types, flows) will be removed. Note: You should always train flows
+   * prior to sending them queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (agents.restore)
    *
    * @param string $name Required. The name of the agent to restore into. Format:
    * `projects//locations//agents/`.

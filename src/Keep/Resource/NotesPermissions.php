@@ -33,7 +33,7 @@ use Google\Service\Keep\KeepEmpty;
 class NotesPermissions extends \Google\Service\Resource
 {
   /**
-   * Creates one or more permission on the note. Only permissions with the
+   * Creates one or more permissions on the note. Only permissions with the
    * `WRITER` role may be created. If adding any permission fails, then the entire
    * request fails and no changes are made. (permissions.batchCreate)
    *

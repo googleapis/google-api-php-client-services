@@ -32,7 +32,10 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
 {
   /**
-   * Creates an entity type in the specified agent. (entityTypes.create)
+   * Creates an entity type in the specified agent. Note: You should always train
+   * a flow prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (entityTypes.create)
    *
    * @param string $parent Required. The agent to create a entity type for.
    * Format: `projects//locations//agents/`.
@@ -55,7 +58,10 @@ class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleCloudDialogflowCxV3EntityType::class);
   }
   /**
-   * Deletes the specified entity type. (entityTypes.delete)
+   * Deletes the specified entity type. Note: You should always train a flow prior
+   * to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (entityTypes.delete)
    *
    * @param string $name Required. The name of the entity type to delete. Format:
    * `projects//locations//agents//entityTypes/`.
@@ -126,7 +132,10 @@ class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListEntityTypesResponse::class);
   }
   /**
-   * Updates the specified entity type. (entityTypes.patch)
+   * Updates the specified entity type. Note: You should always train a flow prior
+   * to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (entityTypes.patch)
    *
    * @param string $name The unique identifier of the entity type. Required for
    * EntityTypes.UpdateEntityType. Format:

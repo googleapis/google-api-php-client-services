@@ -40,6 +40,7 @@ class Ideahub extends \Google\Service
   public $platforms_properties_ideaStates;
   public $platforms_properties_ideas;
   public $platforms_properties_locales;
+  public $platforms_properties_topicStates;
 
   /**
    * Constructs the internal representation of the Ideahub service.
@@ -188,6 +189,30 @@ class Ideahub extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->platforms_properties_topicStates = new Ideahub\Resource\PlatformsPropertiesTopicStates(
+        $this,
+        $this->serviceName,
+        'topicStates',
+        [
+          'methods' => [
+            'patch' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

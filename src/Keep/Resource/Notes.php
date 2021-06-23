@@ -87,9 +87,9 @@ class Notes extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Filter for list results. If no filter is supplied,
-   * the "-trashed" filter is applied by default. Valid fields to filter by are: -
-   * `create_time` - `update_time` - `trash_time` - `trashed` Filter syntax
-   * follows the Google AIP filtering spec: https://aip.dev/160
+   * the `trashed` filter is applied by default. Valid fields to filter by are:
+   * `create_time`, `update_time`, `trash_time`, and `trashed`. Filter syntax
+   * follows the [Google AIP filtering spec](https://aip.dev/160).
    * @opt_param int pageSize The maximum number of results to return.
    * @opt_param string pageToken The previous page's `next_page_token` field.
    * @return ListNotesResponse

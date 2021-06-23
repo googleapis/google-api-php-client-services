@@ -38,7 +38,10 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsFlows extends \Google\Service\Resource
 {
   /**
-   * Creates a flow in the specified agent. (flows.create)
+   * Creates a flow in the specified agent. Note: You should always train a flow
+   * prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (flows.create)
    *
    * @param string $parent Required. The agent to create a flow for. Format:
    * `projects//locations//agents/`.
@@ -144,7 +147,9 @@ class ProjectsLocationsAgentsFlows extends \Google\Service\Resource
     return $this->call('getValidationResult', [$params], GoogleCloudDialogflowCxV3FlowValidationResult::class);
   }
   /**
-   * Imports the specified flow to the specified agent from a binary file.
+   * Imports the specified flow to the specified agent from a binary file. Note:
+   * You should always train a flow prior to sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
    * (flows.import)
    *
    * @param string $parent Required. The agent to import the flow into. Format:
@@ -190,7 +195,10 @@ class ProjectsLocationsAgentsFlows extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListFlowsResponse::class);
   }
   /**
-   * Updates the specified flow. (flows.patch)
+   * Updates the specified flow. Note: You should always train a flow prior to
+   * sending it queries. See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (flows.patch)
    *
    * @param string $name The unique identifier of the flow. Format:
    * `projects//locations//agents//flows/`.
@@ -218,7 +226,10 @@ class ProjectsLocationsAgentsFlows extends \Google\Service\Resource
   }
   /**
    * Trains the specified flow. Note that only the flow in 'draft' environment is
-   * trained. (flows.train)
+   * trained. Note: You should always train a flow prior to sending it queries.
+   * See the [training
+   * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
+   * (flows.train)
    *
    * @param string $name Required. The flow to train. Format:
    * `projects//locations//agents//flows/`.

@@ -23,7 +23,8 @@ use Google\Client;
  * Service definition for Keep (v1).
  *
  * <p>
- * Allows clients to create, read, and write their Google Keep Notes.</p>
+ * This API is an enterprise-only API used to create and manage the Keep notes
+ * within your domain, including resolving issues identified by CASB software.</p>
  *
  * <p>
  * For more information about this service, see the API
