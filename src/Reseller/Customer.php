@@ -23,10 +23,13 @@ class Customer extends \Google\Model
   public $customerDomain;
   public $customerDomainVerified;
   public $customerId;
+  public $customerType;
   public $kind;
   public $phoneNumber;
   protected $postalAddressType = Address::class;
   protected $postalAddressDataType = '';
+  protected $primaryAdminType = PrimaryAdmin::class;
+  protected $primaryAdminDataType = '';
   public $resourceUiUrl;
 
   public function setAlternateEmail($alternateEmail)
@@ -61,6 +64,14 @@ class Customer extends \Google\Model
   {
     return $this->customerId;
   }
+  public function setCustomerType($customerType)
+  {
+    $this->customerType = $customerType;
+  }
+  public function getCustomerType()
+  {
+    return $this->customerType;
+  }
   public function setKind($kind)
   {
     $this->kind = $kind;
@@ -90,6 +101,20 @@ class Customer extends \Google\Model
   public function getPostalAddress()
   {
     return $this->postalAddress;
+  }
+  /**
+   * @param PrimaryAdmin
+   */
+  public function setPrimaryAdmin(PrimaryAdmin $primaryAdmin)
+  {
+    $this->primaryAdmin = $primaryAdmin;
+  }
+  /**
+   * @return PrimaryAdmin
+   */
+  public function getPrimaryAdmin()
+  {
+    return $this->primaryAdmin;
   }
   public function setResourceUiUrl($resourceUiUrl)
   {
