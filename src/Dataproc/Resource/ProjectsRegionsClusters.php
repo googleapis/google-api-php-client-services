@@ -212,7 +212,8 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
   /**
    * Updates a cluster in a project. The returned Operation.metadata will be
    * ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rp
-   * c/google.cloud.dataproc.v1#clusteroperationmetadata). (clusters.patch)
+   * c/google.cloud.dataproc.v1#clusteroperationmetadata). The cluster must be in
+   * a RUNNING state or an error is returned. (clusters.patch)
    *
    * @param string $projectId Required. The ID of the Google Cloud Platform
    * project the cluster belongs to.

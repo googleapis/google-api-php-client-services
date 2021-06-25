@@ -32,7 +32,7 @@ use Google\Service\Vault\VaultEmpty;
 class MattersExports extends \Google\Service\Resource
 {
   /**
-   * Creates an Export. (exports.create)
+   * Creates an export. (exports.create)
    *
    * @param string $matterId The matter ID.
    * @param Export $postBody
@@ -46,7 +46,7 @@ class MattersExports extends \Google\Service\Resource
     return $this->call('create', [$params], Export::class);
   }
   /**
-   * Deletes an Export. (exports.delete)
+   * Deletes an export. (exports.delete)
    *
    * @param string $matterId The matter ID.
    * @param string $exportId The export ID.
@@ -60,7 +60,7 @@ class MattersExports extends \Google\Service\Resource
     return $this->call('delete', [$params], VaultEmpty::class);
   }
   /**
-   * Gets an Export. (exports.get)
+   * Gets an export. (exports.get)
    *
    * @param string $matterId The matter ID.
    * @param string $exportId The export ID.
@@ -74,7 +74,8 @@ class MattersExports extends \Google\Service\Resource
     return $this->call('get', [$params], Export::class);
   }
   /**
-   * Lists Exports. (exports.listMattersExports)
+   * Lists details about the exports in the specified matter.
+   * (exports.listMattersExports)
    *
    * @param string $matterId The matter ID.
    * @param array $optParams Optional parameters.

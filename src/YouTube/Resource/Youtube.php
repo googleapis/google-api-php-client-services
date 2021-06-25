@@ -15,21 +15,19 @@
  * the License.
  */
 
-namespace Google\Service\SASPortalTesting;
+namespace Google\Service\YouTube\Resource;
 
-class SasPortalDeviceMetadata extends \Google\Model
+/**
+ * The "youtube" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $youtubeService = new Google\Service\YouTube(...);
+ *   $youtube = $youtubeService->youtube;
+ *  </code>
+ */
+class Youtube extends \Google\Service\Resource
 {
-  public $antennaModel;
-
-  public function setAntennaModel($antennaModel)
-  {
-    $this->antennaModel = $antennaModel;
-  }
-  public function getAntennaModel()
-  {
-    return $this->antennaModel;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_SASPortalTesting_SasPortalDeviceMetadata');
+class_alias(Youtube::class, 'Google_Service_YouTube_Resource_Youtube');

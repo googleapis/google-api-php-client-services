@@ -35,7 +35,6 @@ class Service extends \Google\Model
   public $name;
   protected $telemetryType = Telemetry::class;
   protected $telemetryDataType = '';
-  public $userLabels;
 
   /**
    * @param AppEngine
@@ -150,14 +149,6 @@ class Service extends \Google\Model
   public function getTelemetry()
   {
     return $this->telemetry;
-  }
-  public function setUserLabels($userLabels)
-  {
-    $this->userLabels = $userLabels;
-  }
-  public function getUserLabels()
-  {
-    return $this->userLabels;
   }
 }
 

@@ -84,23 +84,6 @@ class CommentThreads extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], CommentThreadListResponse::class);
   }
-  /**
-   * Updates an existing resource. (commentThreads.update)
-   *
-   * @param string|array $part The *part* parameter specifies a comma-separated
-   * list of commentThread resource properties that the API response will include.
-   * You must at least include the snippet part in the parameter value since that
-   * part contains all of the properties that the API request can update.
-   * @param CommentThread $postBody
-   * @param array $optParams Optional parameters.
-   * @return CommentThread
-   */
-  public function update($part, CommentThread $postBody, $optParams = [])
-  {
-    $params = ['part' => $part, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('update', [$params], CommentThread::class);
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

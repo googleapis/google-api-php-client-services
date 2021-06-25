@@ -65,7 +65,7 @@ class OtherContacts extends \Google\Service\Resource
    * @opt_param string readMask Required. A field mask to restrict which fields on
    * each person are returned. Multiple fields can be specified by separating them
    * with commas. Valid values are: * emailAddresses * metadata * names *
-   * phoneNumbers
+   * phoneNumbers * photos
    * @opt_param bool requestSyncToken Optional. Whether the response should
    * include `next_sync_token`, which can be used to get all changes since the
    * last request. For subsequent sync requests use the `sync_token` param
@@ -99,8 +99,8 @@ class OtherContacts extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The number of results to return. Defaults
-   * to 10 if field is not set, or set to 0. Values greater than 10 will be capped
-   * to 10.
+   * to 10 if field is not set, or set to 0. Values greater than 30 will be capped
+   * to 30.
    * @opt_param string query Required. The plain-text query for the request. The
    * query is used to match prefix phrases of the fields on a person. For example,
    * a person with name "foo name" matches queries such as "f", "fo", "foo", "foo

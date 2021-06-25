@@ -56,7 +56,7 @@ class Matters extends \Google\Service\Resource
     return $this->call('addPermissions', [$params], MatterPermission::class);
   }
   /**
-   * Closes the specified matter. Returns matter with updated state.
+   * Closes the specified matter. Returns the matter with updated state.
    * (matters.close)
    *
    * @param string $matterId The matter ID.
@@ -71,8 +71,7 @@ class Matters extends \Google\Service\Resource
     return $this->call('close', [$params], CloseMatterResponse::class);
   }
   /**
-   * Counts the artifacts within the context of a matter and returns a detailed
-   * breakdown of metrics. (matters.count)
+   * Counts the accounts processed by the specified query. (matters.count)
    *
    * @param string $matterId The matter ID.
    * @param CountArtifactsRequest $postBody
@@ -86,8 +85,8 @@ class Matters extends \Google\Service\Resource
     return $this->call('count', [$params], Operation::class);
   }
   /**
-   * Creates a new matter with the given name and description. The initial state
-   * is open, and the owner is the method caller. Returns the created matter with
+   * Creates a matter with the given name and description. The initial state is
+   * open, and the owner is the method caller. Returns the created matter with
    * default view. (matters.create)
    *
    * @param Matter $postBody
@@ -101,7 +100,7 @@ class Matters extends \Google\Service\Resource
     return $this->call('create', [$params], Matter::class);
   }
   /**
-   * Deletes the specified matter. Returns matter with updated state.
+   * Deletes the specified matter. Returns the matter with updated state.
    * (matters.delete)
    *
    * @param string $matterId The matter ID
@@ -120,8 +119,8 @@ class Matters extends \Google\Service\Resource
    * @param string $matterId The matter ID.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Specifies which parts of the Matter to return in the
-   * response.
+   * @opt_param string view Specifies how much information about the matter to
+   * return in the response.
    * @return Matter
    */
   public function get($matterId, $optParams = [])
@@ -131,17 +130,17 @@ class Matters extends \Google\Service\Resource
     return $this->call('get', [$params], Matter::class);
   }
   /**
-   * Lists matters the user has access to. (matters.listMatters)
+   * Lists matters the requestor has access to. (matters.listMatters)
    *
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The number of matters to return in the response.
    * Default and maximum are 100.
    * @opt_param string pageToken The pagination token as returned in the response.
-   * @opt_param string state If set, list only matters with that specific state.
-   * The default is listing matters of all states.
-   * @opt_param string view Specifies which parts of the matter to return in
-   * response.
+   * @opt_param string state If set, lists only matters with the specified state.
+   * The default lists matters of all states.
+   * @opt_param string view Specifies how much information about the matter to
+   * return in response.
    * @return ListMattersResponse
    */
   public function listMatters($optParams = [])
@@ -165,7 +164,7 @@ class Matters extends \Google\Service\Resource
     return $this->call('removePermissions', [$params], VaultEmpty::class);
   }
   /**
-   * Reopens the specified matter. Returns matter with updated state.
+   * Reopens the specified matter. Returns the matter with updated state.
    * (matters.reopen)
    *
    * @param string $matterId The matter ID.
@@ -180,7 +179,7 @@ class Matters extends \Google\Service\Resource
     return $this->call('reopen', [$params], ReopenMatterResponse::class);
   }
   /**
-   * Undeletes the specified matter. Returns matter with updated state.
+   * Undeletes the specified matter. Returns the matter with updated state.
    * (matters.undelete)
    *
    * @param string $matterId The matter ID.

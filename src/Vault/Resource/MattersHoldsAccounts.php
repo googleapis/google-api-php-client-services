@@ -32,9 +32,9 @@ use Google\Service\Vault\VaultEmpty;
 class MattersHoldsAccounts extends \Google\Service\Resource
 {
   /**
-   * Adds a HeldAccount to a hold. Accounts can only be added to a hold that has
-   * no held_org_unit set. Attempting to add an account to an OU-based hold will
-   * result in an error. (accounts.create)
+   * Adds an account to a hold. Accounts can be added only to a hold that does not
+   * have an organizational unit set. If you try to add an account to an
+   * organizational unit-based hold, an error is returned. (accounts.create)
    *
    * @param string $matterId The matter ID.
    * @param string $holdId The hold ID.
@@ -49,8 +49,7 @@ class MattersHoldsAccounts extends \Google\Service\Resource
     return $this->call('create', [$params], HeldAccount::class);
   }
   /**
-   * Removes a HeldAccount from a hold. If this request leaves the hold with no
-   * held accounts, the hold will not apply to any accounts. (accounts.delete)
+   * Removes an account from a hold. (accounts.delete)
    *
    * @param string $matterId The matter ID.
    * @param string $holdId The hold ID.
@@ -65,9 +64,11 @@ class MattersHoldsAccounts extends \Google\Service\Resource
     return $this->call('delete', [$params], VaultEmpty::class);
   }
   /**
-   * Lists HeldAccounts for a hold. This will only list individually specified
-   * held accounts. If the hold is on an OU, then use Admin SDK to enumerate its
-   * members. (accounts.listMattersHoldsAccounts)
+   * Lists the accounts covered by a hold. This can list only individually-
+   * specified accounts covered by the hold. If the hold covers an organizational
+   * unit, use the [Admin SDK](https://developers.google.com/admin-sdk/). to list
+   * the members of the organizational unit on hold.
+   * (accounts.listMattersHoldsAccounts)
    *
    * @param string $matterId The matter ID.
    * @param string $holdId The hold ID.

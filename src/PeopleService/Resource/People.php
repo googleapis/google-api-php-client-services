@@ -278,8 +278,8 @@ class People extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The number of results to return. Defaults
-   * to 10 if field is not set, or set to 0. Values greater than 10 will be capped
-   * to 10.
+   * to 10 if field is not set, or set to 0. Values greater than 30 will be capped
+   * to 30.
    * @opt_param string query Required. The plain-text query for the request. The
    * query is used to match prefix phrases of the fields on a person. For example,
    * a person with name "foo name" matches queries such as "f", "fo", "foo", "foo

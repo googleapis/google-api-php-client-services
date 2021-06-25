@@ -86,6 +86,7 @@ class YouTube extends \Google\Service
   public $videoCategories;
   public $videos;
   public $watermarks;
+  public $youtube_v3;
 
   /**
    * Constructs the internal representation of the YouTube service.
@@ -567,17 +568,6 @@ class YouTube extends \Google\Service
                 'videoId' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'update' => [
-              'path' => 'youtube/v3/commentThreads',
-              'httpMethod' => 'PUT',
-              'parameters' => [
-                'part' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                  'required' => true,
                 ],
               ],
             ],
@@ -2049,6 +2039,26 @@ class YouTube extends \Google\Service
                 'onBehalfOfContentOwner' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->youtube_v3 = new YouTube\Resource\YoutubeV3(
+        $this,
+        $this->serviceName,
+        'v3',
+        [
+          'methods' => [
+            'updateCommentThreads' => [
+              'path' => 'youtube/v3/commentThreads',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'part' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],

@@ -36,8 +36,8 @@ use Google\Service\Vault\VaultEmpty;
 class MattersHolds extends \Google\Service\Resource
 {
   /**
-   * Adds HeldAccounts to a hold. Returns a list of accounts that have been
-   * successfully added. Accounts can only be added to an existing account-based
+   * Adds accounts to a hold. Returns a list of accounts that have been
+   * successfully added. Accounts can be added only to an existing account-based
    * hold. (holds.addHeldAccounts)
    *
    * @param string $matterId The matter ID.
@@ -53,7 +53,7 @@ class MattersHolds extends \Google\Service\Resource
     return $this->call('addHeldAccounts', [$params], AddHeldAccountsResponse::class);
   }
   /**
-   * Creates a hold in the given matter. (holds.create)
+   * Creates a hold in the specified matter. (holds.create)
    *
    * @param string $matterId The matter ID.
    * @param Hold $postBody
@@ -67,8 +67,9 @@ class MattersHolds extends \Google\Service\Resource
     return $this->call('create', [$params], Hold::class);
   }
   /**
-   * Removes a hold by ID. This will release any HeldAccounts on this Hold.
-   * (holds.delete)
+   * Removes the specified hold and releases the accounts or organizational unit
+   * covered by the hold. If the data is not preserved by another hold or
+   * retention rule, it might be purged. (holds.delete)
    *
    * @param string $matterId The matter ID.
    * @param string $holdId The hold ID.
@@ -82,13 +83,13 @@ class MattersHolds extends \Google\Service\Resource
     return $this->call('delete', [$params], VaultEmpty::class);
   }
   /**
-   * Gets a hold by ID. (holds.get)
+   * Gets the specified hold. (holds.get)
    *
    * @param string $matterId The matter ID.
    * @param string $holdId The hold ID.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Specifies which parts of the Hold to return.
+   * @opt_param string view The amount of detail to return for a hold.
    * @return Hold
    */
   public function get($matterId, $holdId, $optParams = [])
@@ -98,18 +99,17 @@ class MattersHolds extends \Google\Service\Resource
     return $this->call('get', [$params], Hold::class);
   }
   /**
-   * Lists holds within a matter. An empty page token in ListHoldsResponse denotes
-   * no more holds to list. (holds.listMattersHolds)
+   * Lists the holds in a matter. (holds.listMattersHolds)
    *
    * @param string $matterId The matter ID.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The number of holds to return in the response,
    * between 0 and 100 inclusive. Leaving this empty, or as 0, is the same as
-   * page_size = 100.
+   * **page_size** = 100.
    * @opt_param string pageToken The pagination token as returned in the response.
    * An empty token means start from the beginning.
-   * @opt_param string view Specifies which parts of the Hold to return.
+   * @opt_param string view The amount of detail to return for a hold.
    * @return ListHoldsResponse
    */
   public function listMattersHolds($matterId, $optParams = [])
@@ -119,9 +119,8 @@ class MattersHolds extends \Google\Service\Resource
     return $this->call('list', [$params], ListHoldsResponse::class);
   }
   /**
-   * Removes HeldAccounts from a hold. Returns a list of statuses in the same
-   * order as the request. If this request leaves the hold with no held accounts,
-   * the hold will not apply to any accounts. (holds.removeHeldAccounts)
+   * Removes the specified accounts from a hold. Returns a list of statuses in the
+   * same order as the request. (holds.removeHeldAccounts)
    *
    * @param string $matterId The matter ID.
    * @param string $holdId The hold ID.
@@ -136,10 +135,10 @@ class MattersHolds extends \Google\Service\Resource
     return $this->call('removeHeldAccounts', [$params], RemoveHeldAccountsResponse::class);
   }
   /**
-   * Updates the OU and/or query parameters of a hold. You cannot add accounts to
-   * a hold that covers an OU, nor can you add OUs to a hold that covers
-   * individual accounts. Accounts listed in the hold will be ignored.
-   * (holds.update)
+   * Updates the scope (organizational unit or accounts) and query parameters of a
+   * hold. You cannot add accounts to a hold that covers an organizational unit,
+   * nor can you add organizational units to a hold that covers individual
+   * accounts. If you try, the unsupported values are ignored. (holds.update)
    *
    * @param string $matterId The matter ID.
    * @param string $holdId The ID of the hold.

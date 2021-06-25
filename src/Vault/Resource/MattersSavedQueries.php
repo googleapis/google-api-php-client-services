@@ -34,8 +34,7 @@ class MattersSavedQueries extends \Google\Service\Resource
   /**
    * Creates a saved query. (savedQueries.create)
    *
-   * @param string $matterId The matter ID of the parent matter for which the
-   * saved query is to be created.
+   * @param string $matterId The ID of the matter to create the saved query in.
    * @param SavedQuery $postBody
    * @param array $optParams Optional parameters.
    * @return SavedQuery
@@ -47,11 +46,10 @@ class MattersSavedQueries extends \Google\Service\Resource
     return $this->call('create', [$params], SavedQuery::class);
   }
   /**
-   * Deletes a saved query by Id. (savedQueries.delete)
+   * Deletes the specified saved query. (savedQueries.delete)
    *
-   * @param string $matterId The matter ID of the parent matter for which the
-   * saved query is to be deleted.
-   * @param string $savedQueryId ID of the saved query to be deleted.
+   * @param string $matterId The ID of the matter to delete the saved query from.
+   * @param string $savedQueryId ID of the saved query to delete.
    * @param array $optParams Optional parameters.
    * @return VaultEmpty
    */
@@ -62,11 +60,10 @@ class MattersSavedQueries extends \Google\Service\Resource
     return $this->call('delete', [$params], VaultEmpty::class);
   }
   /**
-   * Retrieves a saved query by Id. (savedQueries.get)
+   * Retrieves the specified saved query. (savedQueries.get)
    *
-   * @param string $matterId The matter ID of the parent matter for which the
-   * saved query is to be retrieved.
-   * @param string $savedQueryId ID of the saved query to be retrieved.
+   * @param string $matterId The ID of the matter to get the saved query from.
+   * @param string $savedQueryId ID of the saved query to retrieve.
    * @param array $optParams Optional parameters.
    * @return SavedQuery
    */
@@ -77,12 +74,9 @@ class MattersSavedQueries extends \Google\Service\Resource
     return $this->call('get', [$params], SavedQuery::class);
   }
   /**
-   * Lists saved queries within a matter. An empty page token in
-   * ListSavedQueriesResponse denotes no more saved queries to list.
-   * (savedQueries.listMattersSavedQueries)
+   * Lists the saved queries in a matter. (savedQueries.listMattersSavedQueries)
    *
-   * @param string $matterId The matter ID of the parent matter for which the
-   * saved queries are to be retrieved.
+   * @param string $matterId The ID of the matter to get the saved queries for.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of saved queries to return.
