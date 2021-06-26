@@ -23,8 +23,10 @@ class Company extends \Google\Collection
   public $adminEmails;
   public $companyId;
   public $companyName;
+  public $languageCode;
   public $name;
   public $ownerEmails;
+  public $skipWelcomeEmail;
   public $termsStatus;
 
   public function setAdminEmails($adminEmails)
@@ -51,6 +53,14 @@ class Company extends \Google\Collection
   {
     return $this->companyName;
   }
+  public function setLanguageCode($languageCode)
+  {
+    $this->languageCode = $languageCode;
+  }
+  public function getLanguageCode()
+  {
+    return $this->languageCode;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -66,6 +76,14 @@ class Company extends \Google\Collection
   public function getOwnerEmails()
   {
     return $this->ownerEmails;
+  }
+  public function setSkipWelcomeEmail($skipWelcomeEmail)
+  {
+    $this->skipWelcomeEmail = $skipWelcomeEmail;
+  }
+  public function getSkipWelcomeEmail()
+  {
+    return $this->skipWelcomeEmail;
   }
   public function setTermsStatus($termsStatus)
   {
