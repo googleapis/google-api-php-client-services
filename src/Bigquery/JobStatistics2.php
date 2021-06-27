@@ -20,6 +20,8 @@ namespace Google\Service\Bigquery;
 class JobStatistics2 extends \Google\Collection
 {
   protected $collection_key = 'undeclaredQueryParameters';
+  protected $biEngineStatisticsType = BiEngineStatistics::class;
+  protected $biEngineStatisticsDataType = '';
   public $billingTier;
   public $cacheHit;
   public $ddlAffectedRowAccessPolicyCount;
@@ -63,6 +65,20 @@ class JobStatistics2 extends \Google\Collection
   protected $undeclaredQueryParametersType = QueryParameter::class;
   protected $undeclaredQueryParametersDataType = 'array';
 
+  /**
+   * @param BiEngineStatistics
+   */
+  public function setBiEngineStatistics(BiEngineStatistics $biEngineStatistics)
+  {
+    $this->biEngineStatistics = $biEngineStatistics;
+  }
+  /**
+   * @return BiEngineStatistics
+   */
+  public function getBiEngineStatistics()
+  {
+    return $this->biEngineStatistics;
+  }
   public function setBillingTier($billingTier)
   {
     $this->billingTier = $billingTier;

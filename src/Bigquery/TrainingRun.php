@@ -24,8 +24,6 @@ class TrainingRun extends \Google\Collection
   protected $dataSplitResultDataType = '';
   protected $evaluationMetricsType = EvaluationMetrics::class;
   protected $evaluationMetricsDataType = '';
-  protected $globalExplanationsType = GlobalExplanation::class;
-  protected $globalExplanationsDataType = 'array';
   protected $resultsType = IterationResult::class;
   protected $resultsDataType = 'array';
   public $startTime;
@@ -59,20 +57,6 @@ class TrainingRun extends \Google\Collection
   public function getEvaluationMetrics()
   {
     return $this->evaluationMetrics;
-  }
-  /**
-   * @param GlobalExplanation[]
-   */
-  public function setGlobalExplanations($globalExplanations)
-  {
-    $this->globalExplanations = $globalExplanations;
-  }
-  /**
-   * @return GlobalExplanation[]
-   */
-  public function getGlobalExplanations()
-  {
-    return $this->globalExplanations;
   }
   /**
    * @param IterationResult[]
