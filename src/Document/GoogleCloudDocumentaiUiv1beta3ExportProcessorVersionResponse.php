@@ -15,21 +15,11 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\Document;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse extends \Google\Model
 {
-  public $antennaModel;
-
-  public function setAntennaModel($antennaModel)
-  {
-    $this->antennaModel = $antennaModel;
-  }
-  public function getAntennaModel()
-  {
-    return $this->antennaModel;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse::class, 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse');

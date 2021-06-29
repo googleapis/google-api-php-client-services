@@ -15,21 +15,29 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class MTLSPolicy extends \Google\Collection
 {
-  public $antennaModel;
+  protected $collection_key = 'clientValidationCa';
+  protected $clientValidationCaType = ValidationCA::class;
+  protected $clientValidationCaDataType = 'array';
 
-  public function setAntennaModel($antennaModel)
+  /**
+   * @param ValidationCA[]
+   */
+  public function setClientValidationCa($clientValidationCa)
   {
-    $this->antennaModel = $antennaModel;
+    $this->clientValidationCa = $clientValidationCa;
   }
-  public function getAntennaModel()
+  /**
+   * @return ValidationCA[]
+   */
+  public function getClientValidationCa()
   {
-    return $this->antennaModel;
+    return $this->clientValidationCa;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(MTLSPolicy::class, 'Google_Service_NetworkSecurity_MTLSPolicy');

@@ -15,21 +15,31 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class GoogleIamV1AuditLogConfig extends \Google\Collection
 {
-  public $antennaModel;
+  protected $collection_key = 'exemptedMembers';
+  public $exemptedMembers;
+  public $logType;
 
-  public function setAntennaModel($antennaModel)
+  public function setExemptedMembers($exemptedMembers)
   {
-    $this->antennaModel = $antennaModel;
+    $this->exemptedMembers = $exemptedMembers;
   }
-  public function getAntennaModel()
+  public function getExemptedMembers()
   {
-    return $this->antennaModel;
+    return $this->exemptedMembers;
+  }
+  public function setLogType($logType)
+  {
+    $this->logType = $logType;
+  }
+  public function getLogType()
+  {
+    return $this->logType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(GoogleIamV1AuditLogConfig::class, 'Google_Service_NetworkSecurity_GoogleIamV1AuditLogConfig');

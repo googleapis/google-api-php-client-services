@@ -30,6 +30,8 @@ class RunRealtimeReportRequest extends \Google\Collection
   protected $metricFilterDataType = '';
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
+  protected $minuteRangesType = MinuteRange::class;
+  protected $minuteRangesDataType = 'array';
   protected $orderBysType = OrderBy::class;
   protected $orderBysDataType = 'array';
   public $returnPropertyQuota;
@@ -105,6 +107,20 @@ class RunRealtimeReportRequest extends \Google\Collection
   public function getMetrics()
   {
     return $this->metrics;
+  }
+  /**
+   * @param MinuteRange[]
+   */
+  public function setMinuteRanges($minuteRanges)
+  {
+    $this->minuteRanges = $minuteRanges;
+  }
+  /**
+   * @return MinuteRange[]
+   */
+  public function getMinuteRanges()
+  {
+    return $this->minuteRanges;
   }
   /**
    * @param OrderBy[]

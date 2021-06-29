@@ -19,11 +19,20 @@ namespace Google\Service\Slides;
 
 class SlideProperties extends \Google\Model
 {
+  public $isSkipped;
   public $layoutObjectId;
   public $masterObjectId;
   protected $notesPageType = Page::class;
   protected $notesPageDataType = '';
 
+  public function setIsSkipped($isSkipped)
+  {
+    $this->isSkipped = $isSkipped;
+  }
+  public function getIsSkipped()
+  {
+    return $this->isSkipped;
+  }
   public function setLayoutObjectId($layoutObjectId)
   {
     $this->layoutObjectId = $layoutObjectId;

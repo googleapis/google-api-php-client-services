@@ -15,21 +15,11 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class CancelOperationRequest extends \Google\Model
 {
-  public $antennaModel;
-
-  public function setAntennaModel($antennaModel)
-  {
-    $this->antennaModel = $antennaModel;
-  }
-  public function getAntennaModel()
-  {
-    return $this->antennaModel;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(CancelOperationRequest::class, 'Google_Service_NetworkSecurity_CancelOperationRequest');

@@ -15,21 +15,21 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class CertificateProviderInstance extends \Google\Model
 {
-  public $antennaModel;
+  public $pluginInstance;
 
-  public function setAntennaModel($antennaModel)
+  public function setPluginInstance($pluginInstance)
   {
-    $this->antennaModel = $antennaModel;
+    $this->pluginInstance = $pluginInstance;
   }
-  public function getAntennaModel()
+  public function getPluginInstance()
   {
-    return $this->antennaModel;
+    return $this->pluginInstance;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(CertificateProviderInstance::class, 'Google_Service_NetworkSecurity_CertificateProviderInstance');

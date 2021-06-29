@@ -15,21 +15,40 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class Status extends \Google\Collection
 {
-  public $antennaModel;
+  protected $collection_key = 'details';
+  public $code;
+  public $details;
+  public $message;
 
-  public function setAntennaModel($antennaModel)
+  public function setCode($code)
   {
-    $this->antennaModel = $antennaModel;
+    $this->code = $code;
   }
-  public function getAntennaModel()
+  public function getCode()
   {
-    return $this->antennaModel;
+    return $this->code;
+  }
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  public function getDetails()
+  {
+    return $this->details;
+  }
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  public function getMessage()
+  {
+    return $this->message;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(Status::class, 'Google_Service_NetworkSecurity_Status');

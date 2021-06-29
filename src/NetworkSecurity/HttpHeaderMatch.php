@@ -15,21 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class HttpHeaderMatch extends \Google\Model
 {
-  public $antennaModel;
+  public $headerName;
+  public $regexMatch;
 
-  public function setAntennaModel($antennaModel)
+  public function setHeaderName($headerName)
   {
-    $this->antennaModel = $antennaModel;
+    $this->headerName = $headerName;
   }
-  public function getAntennaModel()
+  public function getHeaderName()
   {
-    return $this->antennaModel;
+    return $this->headerName;
+  }
+  public function setRegexMatch($regexMatch)
+  {
+    $this->regexMatch = $regexMatch;
+  }
+  public function getRegexMatch()
+  {
+    return $this->regexMatch;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(HttpHeaderMatch::class, 'Google_Service_NetworkSecurity_HttpHeaderMatch');

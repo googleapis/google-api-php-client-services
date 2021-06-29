@@ -20,6 +20,7 @@ namespace Google\Service\CloudBuild;
 class BuildTrigger extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  public $autodetect;
   protected $buildType = Build::class;
   protected $buildDataType = '';
   public $createTime;
@@ -43,6 +44,14 @@ class BuildTrigger extends \Google\Collection
   protected $webhookConfigType = WebhookConfig::class;
   protected $webhookConfigDataType = '';
 
+  public function setAutodetect($autodetect)
+  {
+    $this->autodetect = $autodetect;
+  }
+  public function getAutodetect()
+  {
+    return $this->autodetect;
+  }
   /**
    * @param Build
    */

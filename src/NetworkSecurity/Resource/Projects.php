@@ -15,21 +15,19 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity\Resource;
 
-class SasPortalDeviceMetadata extends \Google\Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $networksecurityService = new Google\Service\NetworkSecurity(...);
+ *   $projects = $networksecurityService->projects;
+ *  </code>
+ */
+class Projects extends \Google\Service\Resource
 {
-  public $antennaModel;
-
-  public function setAntennaModel($antennaModel)
-  {
-    $this->antennaModel = $antennaModel;
-  }
-  public function getAntennaModel()
-  {
-    return $this->antennaModel;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(Projects::class, 'Google_Service_NetworkSecurity_Resource_Projects');

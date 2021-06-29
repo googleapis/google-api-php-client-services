@@ -22,6 +22,8 @@ class ClusterUpdate extends \Google\Collection
   protected $collection_key = 'desiredLocations';
   protected $desiredAddonsConfigType = AddonsConfig::class;
   protected $desiredAddonsConfigDataType = '';
+  protected $desiredAuthenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
+  protected $desiredAuthenticatorGroupsConfigDataType = '';
   protected $desiredAutopilotType = Autopilot::class;
   protected $desiredAutopilotDataType = '';
   protected $desiredBinaryAuthorizationType = BinaryAuthorization::class;
@@ -77,6 +79,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredAddonsConfig()
   {
     return $this->desiredAddonsConfig;
+  }
+  /**
+   * @param AuthenticatorGroupsConfig
+   */
+  public function setDesiredAuthenticatorGroupsConfig(AuthenticatorGroupsConfig $desiredAuthenticatorGroupsConfig)
+  {
+    $this->desiredAuthenticatorGroupsConfig = $desiredAuthenticatorGroupsConfig;
+  }
+  /**
+   * @return AuthenticatorGroupsConfig
+   */
+  public function getDesiredAuthenticatorGroupsConfig()
+  {
+    return $this->desiredAuthenticatorGroupsConfig;
   }
   /**
    * @param Autopilot

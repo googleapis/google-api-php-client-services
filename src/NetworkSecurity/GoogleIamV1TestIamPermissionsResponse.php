@@ -15,21 +15,22 @@
  * the License.
  */
 
-namespace Google\Service\Sasportal;
+namespace Google\Service\NetworkSecurity;
 
-class SasPortalDeviceMetadata extends \Google\Model
+class GoogleIamV1TestIamPermissionsResponse extends \Google\Collection
 {
-  public $antennaModel;
+  protected $collection_key = 'permissions';
+  public $permissions;
 
-  public function setAntennaModel($antennaModel)
+  public function setPermissions($permissions)
   {
-    $this->antennaModel = $antennaModel;
+    $this->permissions = $permissions;
   }
-  public function getAntennaModel()
+  public function getPermissions()
   {
-    return $this->antennaModel;
+    return $this->permissions;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalDeviceMetadata::class, 'Google_Service_Sasportal_SasPortalDeviceMetadata');
+class_alias(GoogleIamV1TestIamPermissionsResponse::class, 'Google_Service_NetworkSecurity_GoogleIamV1TestIamPermissionsResponse');

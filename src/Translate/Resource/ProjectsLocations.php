@@ -114,10 +114,8 @@ class ProjectsLocations extends \Google\Service\Resource
    * format depends on model type: - AutoML Translation models: `projects
    * /{project-number-or-id}/locations/{location-id}/models/{model-id}` - General
    * (built-in) models: `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`, `projects/{project-number-or-id}/locations
-   * /{location-id}/models/general/base` Returns languages supported by the
-   * specified model. If missing, we get supported languages of Google general
-   * base (PBMT) model.
+   * id}/models/general/nmt`, Returns languages supported by the specified model.
+   * If missing, we get supported languages of Google general NMT model.
    * @return SupportedLanguages
    */
   public function getSupportedLanguages($parent, $optParams = [])
