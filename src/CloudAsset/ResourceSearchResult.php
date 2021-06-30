@@ -19,7 +19,7 @@ namespace Google\Service\CloudAsset;
 
 class ResourceSearchResult extends \Google\Collection
 {
-  protected $collection_key = 'networkTags';
+  protected $collection_key = 'versionedResources';
   public $additionalAttributes;
   public $assetType;
   public $createTime;
@@ -37,6 +37,8 @@ class ResourceSearchResult extends \Google\Collection
   public $project;
   public $state;
   public $updateTime;
+  protected $versionedResourcesType = VersionedResource::class;
+  protected $versionedResourcesDataType = 'array';
 
   public function setAdditionalAttributes($additionalAttributes)
   {
@@ -173,6 +175,20 @@ class ResourceSearchResult extends \Google\Collection
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param VersionedResource[]
+   */
+  public function setVersionedResources($versionedResources)
+  {
+    $this->versionedResources = $versionedResources;
+  }
+  /**
+   * @return VersionedResource[]
+   */
+  public function getVersionedResources()
+  {
+    return $this->versionedResources;
   }
 }
 

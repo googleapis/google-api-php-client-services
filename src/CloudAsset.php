@@ -372,6 +372,10 @@ class CloudAsset extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'readMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]
