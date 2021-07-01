@@ -19,6 +19,9 @@ namespace Google\Service\Groupssettings;
 
 class Groups extends \Google\Model
 {
+  protected $internal_gapi_mappings = [
+        "defaultSender" => "default_sender",
+  ];
   public $allowExternalMembers;
   public $allowGoogleCommunication;
   public $allowWebPosting;
@@ -27,6 +30,7 @@ class Groups extends \Google\Model
   public $customReplyTo;
   public $customRolesEnabledForSettingsToBeMerged;
   public $defaultMessageDenyNotificationText;
+  public $defaultSender;
   public $description;
   public $email;
   public $enableCollaborativeInbox;
@@ -144,6 +148,14 @@ class Groups extends \Google\Model
   public function getDefaultMessageDenyNotificationText()
   {
     return $this->defaultMessageDenyNotificationText;
+  }
+  public function setDefaultSender($defaultSender)
+  {
+    $this->defaultSender = $defaultSender;
+  }
+  public function getDefaultSender()
+  {
+    return $this->defaultSender;
   }
   public function setDescription($description)
   {

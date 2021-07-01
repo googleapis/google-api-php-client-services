@@ -15,30 +15,21 @@
  * the License.
  */
 
-namespace Google\Service\Storagetransfer;
+namespace Google\Service\DataFusion;
 
-class GoogleServiceAccount extends \Google\Model
+class CryptoKeyConfig extends \Google\Model
 {
-  public $accountEmail;
-  public $subjectId;
+  public $keyReference;
 
-  public function setAccountEmail($accountEmail)
+  public function setKeyReference($keyReference)
   {
-    $this->accountEmail = $accountEmail;
+    $this->keyReference = $keyReference;
   }
-  public function getAccountEmail()
+  public function getKeyReference()
   {
-    return $this->accountEmail;
-  }
-  public function setSubjectId($subjectId)
-  {
-    $this->subjectId = $subjectId;
-  }
-  public function getSubjectId()
-  {
-    return $this->subjectId;
+    return $this->keyReference;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleServiceAccount::class, 'Google_Service_Storagetransfer_GoogleServiceAccount');
+class_alias(CryptoKeyConfig::class, 'Google_Service_DataFusion_CryptoKeyConfig');

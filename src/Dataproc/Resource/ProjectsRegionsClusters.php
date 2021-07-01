@@ -24,6 +24,7 @@ use Google\Service\Dataproc\InjectCredentialsRequest;
 use Google\Service\Dataproc\ListClustersResponse;
 use Google\Service\Dataproc\Operation;
 use Google\Service\Dataproc\Policy;
+use Google\Service\Dataproc\RepairClusterRequest;
 use Google\Service\Dataproc\SetIamPolicyRequest;
 use Google\Service\Dataproc\StartClusterRequest;
 use Google\Service\Dataproc\StopClusterRequest;
@@ -52,13 +53,13 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    * @param Cluster $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique id used to identify the
+   * @opt_param string requestId Optional. A unique ID used to identify the
    * request. If the server receives two CreateClusterRequest (https://cloud.googl
    * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap
    * roc.v1.CreateClusterRequest)s with the same id, then the second request will
    * be ignored and the first google.longrunning.Operation created and stored in
    * the backend is returned.It is recommended to always set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
    * @return Operation
@@ -84,13 +85,13 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    * @opt_param string clusterUuid Optional. Specifying the cluster_uuid means the
    * RPC should fail (with error NOT_FOUND) if cluster with specified UUID does
    * not exist.
-   * @opt_param string requestId Optional. A unique id used to identify the
+   * @opt_param string requestId Optional. A unique ID used to identify the
    * request. If the server receives two DeleteClusterRequest (https://cloud.googl
    * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap
    * roc.v1.DeleteClusterRequest)s with the same id, then the second request will
    * be ignored and the first google.longrunning.Operation created and stored in
    * the backend is returned.It is recommended to always set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
    * @return Operation
@@ -232,13 +233,13 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    * representation of Duration (https://developers.google.com/protocol-
    * buffers/docs/proto3#json)).Only supported on Dataproc image versions 1.2 and
    * higher.
-   * @opt_param string requestId Optional. A unique id used to identify the
+   * @opt_param string requestId Optional. A unique ID used to identify the
    * request. If the server receives two UpdateClusterRequest (https://cloud.googl
    * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap
    * roc.v1.UpdateClusterRequest)s with the same id, then the second request will
    * be ignored and the first google.longrunning.Operation created and stored in
    * the backend is returned.It is recommended to always set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
    * @opt_param string updateMask Required. Specifies the path, relative to
@@ -263,6 +264,24 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
     $params = ['projectId' => $projectId, 'region' => $region, 'clusterName' => $clusterName, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Repairs a cluster. (clusters.repair)
+   *
+   * @param string $projectId Required. The ID of the Google Cloud Platform
+   * project the cluster belongs to.
+   * @param string $region Required. The Dataproc region in which to handle the
+   * request.
+   * @param string $clusterName Required. The cluster name.
+   * @param RepairClusterRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function repair($projectId, $region, $clusterName, RepairClusterRequest $postBody, $optParams = [])
+  {
+    $params = ['projectId' => $projectId, 'region' => $region, 'clusterName' => $clusterName, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('repair', [$params], Operation::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

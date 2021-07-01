@@ -24,6 +24,7 @@ class Execution extends \Google\Model
   public $displayName;
   protected $executionTemplateType = ExecutionTemplate::class;
   protected $executionTemplateDataType = '';
+  public $jobUri;
   public $name;
   public $outputNotebookFile;
   public $state;
@@ -66,6 +67,14 @@ class Execution extends \Google\Model
   public function getExecutionTemplate()
   {
     return $this->executionTemplate;
+  }
+  public function setJobUri($jobUri)
+  {
+    $this->jobUri = $jobUri;
+  }
+  public function getJobUri()
+  {
+    return $this->jobUri;
   }
   public function setName($name)
   {

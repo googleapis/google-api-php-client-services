@@ -570,6 +570,26 @@ class Dataproc extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'repair' => [
+              'path' => 'v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:repair',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'projectId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'clusterName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',

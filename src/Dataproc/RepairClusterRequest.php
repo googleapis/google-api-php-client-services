@@ -15,30 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Storagetransfer;
+namespace Google\Service\Dataproc;
 
-class GoogleServiceAccount extends \Google\Model
+class RepairClusterRequest extends \Google\Model
 {
-  public $accountEmail;
-  public $subjectId;
+  public $clusterUuid;
+  public $requestId;
 
-  public function setAccountEmail($accountEmail)
+  public function setClusterUuid($clusterUuid)
   {
-    $this->accountEmail = $accountEmail;
+    $this->clusterUuid = $clusterUuid;
   }
-  public function getAccountEmail()
+  public function getClusterUuid()
   {
-    return $this->accountEmail;
+    return $this->clusterUuid;
   }
-  public function setSubjectId($subjectId)
+  public function setRequestId($requestId)
   {
-    $this->subjectId = $subjectId;
+    $this->requestId = $requestId;
   }
-  public function getSubjectId()
+  public function getRequestId()
   {
-    return $this->subjectId;
+    return $this->requestId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleServiceAccount::class, 'Google_Service_Storagetransfer_GoogleServiceAccount');
+class_alias(RepairClusterRequest::class, 'Google_Service_Dataproc_RepairClusterRequest');

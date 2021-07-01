@@ -26,6 +26,8 @@ class Instance extends \Google\Collection
   protected $availableVersionType = Version::class;
   protected $availableVersionDataType = 'array';
   public $createTime;
+  protected $cryptoKeyConfigType = CryptoKeyConfig::class;
+  protected $cryptoKeyConfigDataType = '';
   public $dataprocServiceAccount;
   public $description;
   public $displayName;
@@ -93,6 +95,20 @@ class Instance extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param CryptoKeyConfig
+   */
+  public function setCryptoKeyConfig(CryptoKeyConfig $cryptoKeyConfig)
+  {
+    $this->cryptoKeyConfig = $cryptoKeyConfig;
+  }
+  /**
+   * @return CryptoKeyConfig
+   */
+  public function getCryptoKeyConfig()
+  {
+    return $this->cryptoKeyConfig;
   }
   public function setDataprocServiceAccount($dataprocServiceAccount)
   {
