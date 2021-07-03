@@ -17,8 +17,10 @@
 
 namespace Google\Service\Logging\Resource;
 
+use Google\Service\Logging\CopyLogEntriesRequest;
 use Google\Service\Logging\ListLogEntriesRequest;
 use Google\Service\Logging\ListLogEntriesResponse;
+use Google\Service\Logging\Operation;
 use Google\Service\Logging\TailLogEntriesRequest;
 use Google\Service\Logging\TailLogEntriesResponse;
 use Google\Service\Logging\WriteLogEntriesRequest;
@@ -34,6 +36,20 @@ use Google\Service\Logging\WriteLogEntriesResponse;
  */
 class Entries extends \Google\Service\Resource
 {
+  /**
+   * Copies a set of log entries from a logging bucket to a Cloud Storage bucket.
+   * (entries.copy)
+   *
+   * @param CopyLogEntriesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function copy(CopyLogEntriesRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('copy', [$params], Operation::class);
+  }
   /**
    * Lists log entries. Use this method to retrieve log entries that originated
    * from a project/folder/organization/billing account. For ways to export log
