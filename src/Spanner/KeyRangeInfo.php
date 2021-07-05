@@ -29,6 +29,7 @@ class KeyRangeInfo extends \Google\Collection
   protected $metricType = LocalizedString::class;
   protected $metricDataType = '';
   public $startKeyIndex;
+  public $timeOffset;
   protected $unitType = LocalizedString::class;
   protected $unitDataType = '';
   public $value;
@@ -98,6 +99,14 @@ class KeyRangeInfo extends \Google\Collection
   public function getStartKeyIndex()
   {
     return $this->startKeyIndex;
+  }
+  public function setTimeOffset($timeOffset)
+  {
+    $this->timeOffset = $timeOffset;
+  }
+  public function getTimeOffset()
+  {
+    return $this->timeOffset;
   }
   /**
    * @param LocalizedString

@@ -26,6 +26,8 @@ class BuildOptions extends \Google\Collection
   public $logStreamingOption;
   public $logging;
   public $machineType;
+  protected $poolType = PoolOption::class;
+  protected $poolDataType = '';
   public $requestedVerifyOption;
   public $secretEnv;
   public $sourceProvenanceHash;
@@ -81,6 +83,20 @@ class BuildOptions extends \Google\Collection
   public function getMachineType()
   {
     return $this->machineType;
+  }
+  /**
+   * @param PoolOption
+   */
+  public function setPool(PoolOption $pool)
+  {
+    $this->pool = $pool;
+  }
+  /**
+   * @return PoolOption
+   */
+  public function getPool()
+  {
+    return $this->pool;
   }
   public function setRequestedVerifyOption($requestedVerifyOption)
   {

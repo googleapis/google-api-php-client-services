@@ -28,6 +28,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   public $freeTrialEndTime;
   public $name;
   public $partnerUserToken;
+  public $processingState;
   public $products;
   public $promotions;
   public $redirectUri;
@@ -99,6 +100,14 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   public function getPartnerUserToken()
   {
     return $this->partnerUserToken;
+  }
+  public function setProcessingState($processingState)
+  {
+    $this->processingState = $processingState;
+  }
+  public function getProcessingState()
+  {
+    return $this->processingState;
   }
   public function setProducts($products)
   {
