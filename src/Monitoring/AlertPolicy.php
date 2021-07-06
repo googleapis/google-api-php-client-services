@@ -20,6 +20,8 @@ namespace Google\Service\Monitoring;
 class AlertPolicy extends \Google\Collection
 {
   protected $collection_key = 'notificationChannels';
+  protected $alertStrategyType = AlertStrategy::class;
+  protected $alertStrategyDataType = '';
   public $combiner;
   protected $conditionsType = Condition::class;
   protected $conditionsDataType = 'array';
@@ -37,6 +39,20 @@ class AlertPolicy extends \Google\Collection
   protected $validityType = Status::class;
   protected $validityDataType = '';
 
+  /**
+   * @param AlertStrategy
+   */
+  public function setAlertStrategy(AlertStrategy $alertStrategy)
+  {
+    $this->alertStrategy = $alertStrategy;
+  }
+  /**
+   * @return AlertStrategy
+   */
+  public function getAlertStrategy()
+  {
+    return $this->alertStrategy;
+  }
   public function setCombiner($combiner)
   {
     $this->combiner = $combiner;

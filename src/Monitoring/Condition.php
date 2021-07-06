@@ -21,6 +21,8 @@ class Condition extends \Google\Model
 {
   protected $conditionAbsentType = MetricAbsence::class;
   protected $conditionAbsentDataType = '';
+  protected $conditionMatchedLogType = LogMatch::class;
+  protected $conditionMatchedLogDataType = '';
   protected $conditionMonitoringQueryLanguageType = MonitoringQueryLanguageCondition::class;
   protected $conditionMonitoringQueryLanguageDataType = '';
   protected $conditionThresholdType = MetricThreshold::class;
@@ -41,6 +43,20 @@ class Condition extends \Google\Model
   public function getConditionAbsent()
   {
     return $this->conditionAbsent;
+  }
+  /**
+   * @param LogMatch
+   */
+  public function setConditionMatchedLog(LogMatch $conditionMatchedLog)
+  {
+    $this->conditionMatchedLog = $conditionMatchedLog;
+  }
+  /**
+   * @return LogMatch
+   */
+  public function getConditionMatchedLog()
+  {
+    return $this->conditionMatchedLog;
   }
   /**
    * @param MonitoringQueryLanguageCondition
