@@ -36,6 +36,8 @@ class ParagraphElement extends \Google\Model
   protected $pageBreakDataType = '';
   protected $personType = Person::class;
   protected $personDataType = '';
+  protected $richLinkType = RichLink::class;
+  protected $richLinkDataType = '';
   public $startIndex;
   protected $textRunType = TextRun::class;
   protected $textRunDataType = '';
@@ -159,6 +161,20 @@ class ParagraphElement extends \Google\Model
   public function getPerson()
   {
     return $this->person;
+  }
+  /**
+   * @param RichLink
+   */
+  public function setRichLink(RichLink $richLink)
+  {
+    $this->richLink = $richLink;
+  }
+  /**
+   * @return RichLink
+   */
+  public function getRichLink()
+  {
+    return $this->richLink;
   }
   public function setStartIndex($startIndex)
   {

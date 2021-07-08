@@ -38,6 +38,9 @@ class Keep extends \Google\Service
   /** See, edit, create and permanently delete all your Google Keep data. */
   const KEEP =
       "https://www.googleapis.com/auth/keep";
+  /** View all your Google Keep data. */
+  const KEEP_READONLY =
+      "https://www.googleapis.com/auth/keep.readonly";
 
   public $media;
   public $notes;
