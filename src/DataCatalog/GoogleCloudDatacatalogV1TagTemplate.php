@@ -22,6 +22,7 @@ class GoogleCloudDatacatalogV1TagTemplate extends \Google\Model
   public $displayName;
   protected $fieldsType = GoogleCloudDatacatalogV1TagTemplateField::class;
   protected $fieldsDataType = 'map';
+  public $isPubliclyReadable;
   public $name;
 
   public function setDisplayName($displayName)
@@ -45,6 +46,14 @@ class GoogleCloudDatacatalogV1TagTemplate extends \Google\Model
   public function getFields()
   {
     return $this->fields;
+  }
+  public function setIsPubliclyReadable($isPubliclyReadable)
+  {
+    $this->isPubliclyReadable = $isPubliclyReadable;
+  }
+  public function getIsPubliclyReadable()
+  {
+    return $this->isPubliclyReadable;
   }
   public function setName($name)
   {

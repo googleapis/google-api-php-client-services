@@ -23,6 +23,7 @@ class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends \Google\Collecti
   public $includeGcpPublicDatasets;
   public $includeOrgIds;
   public $includeProjectIds;
+  public $includePublicTagTemplates;
   public $restrictedLocations;
 
   public function setIncludeGcpPublicDatasets($includeGcpPublicDatasets)
@@ -48,6 +49,14 @@ class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends \Google\Collecti
   public function getIncludeProjectIds()
   {
     return $this->includeProjectIds;
+  }
+  public function setIncludePublicTagTemplates($includePublicTagTemplates)
+  {
+    $this->includePublicTagTemplates = $includePublicTagTemplates;
+  }
+  public function getIncludePublicTagTemplates()
+  {
+    return $this->includePublicTagTemplates;
   }
   public function setRestrictedLocations($restrictedLocations)
   {
