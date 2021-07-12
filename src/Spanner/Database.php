@@ -21,6 +21,7 @@ class Database extends \Google\Collection
 {
   protected $collection_key = 'encryptionInfo';
   public $createTime;
+  public $defaultLeader;
   public $earliestVersionTime;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
@@ -39,6 +40,14 @@ class Database extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setDefaultLeader($defaultLeader)
+  {
+    $this->defaultLeader = $defaultLeader;
+  }
+  public function getDefaultLeader()
+  {
+    return $this->defaultLeader;
   }
   public function setEarliestVersionTime($earliestVersionTime)
   {
