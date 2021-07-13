@@ -23,6 +23,7 @@ class AccountStatus extends \Google\Collection
   public $accountId;
   protected $accountLevelIssuesType = AccountStatusAccountLevelIssue::class;
   protected $accountLevelIssuesDataType = 'array';
+  public $accountManagement;
   public $kind;
   protected $productsType = AccountStatusProducts::class;
   protected $productsDataType = 'array';
@@ -49,6 +50,14 @@ class AccountStatus extends \Google\Collection
   public function getAccountLevelIssues()
   {
     return $this->accountLevelIssues;
+  }
+  public function setAccountManagement($accountManagement)
+  {
+    $this->accountManagement = $accountManagement;
+  }
+  public function getAccountManagement()
+  {
+    return $this->accountManagement;
   }
   public function setKind($kind)
   {

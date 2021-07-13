@@ -19,6 +19,16 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3ExportProcessorVersionResponse extends \Google\Model
 {
+  public $gcsUri;
+
+  public function setGcsUri($gcsUri)
+  {
+    $this->gcsUri = $gcsUri;
+  }
+  public function getGcsUri()
+  {
+    return $this->gcsUri;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

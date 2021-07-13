@@ -24,6 +24,8 @@ class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends \Go
   protected $exclusionsDataType = 'array';
   public $location;
   public $nodeId;
+  protected $perSliEligibilityType = GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility::class;
+  protected $perSliEligibilityDataType = '';
 
   /**
    * @param GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion[]
@@ -54,6 +56,20 @@ class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends \Go
   public function getNodeId()
   {
     return $this->nodeId;
+  }
+  /**
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility
+   */
+  public function setPerSliEligibility(GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility $perSliEligibility)
+  {
+    $this->perSliEligibility = $perSliEligibility;
+  }
+  /**
+   * @return GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility
+   */
+  public function getPerSliEligibility()
+  {
+    return $this->perSliEligibility;
   }
 }
 

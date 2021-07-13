@@ -49,7 +49,7 @@ class Script extends \Google\Service
   /** View and manage the provisioning of users on your domain. */
   const ADMIN_DIRECTORY_USER =
       "https://www.googleapis.com/auth/admin.directory.user";
-  /** See, create, and edit all Google Docs documents you have access to. */
+  /** See, edit, create, and delete all your Google Docs documents. */
   const DOCUMENTS =
       "https://www.googleapis.com/auth/documents";
   /** See, edit, create, and delete all of your Google Drive files. */
@@ -82,7 +82,7 @@ class Script extends \Google\Service
   /** View Google Apps Script projects. */
   const SCRIPT_PROJECTS_READONLY =
       "https://www.googleapis.com/auth/script.projects.readonly";
-  /** See, edit, create, and delete your spreadsheets in Google Drive. */
+  /** See, edit, create, and delete all your Google Sheets spreadsheets. */
   const SPREADSHEETS =
       "https://www.googleapis.com/auth/spreadsheets";
   /** See your primary Google Account email address. */

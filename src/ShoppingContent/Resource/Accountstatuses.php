@@ -80,6 +80,8 @@ class Accountstatuses extends \Google\Service\Resource
    * destination.
    * @opt_param string maxResults The maximum number of account statuses to return
    * in the response, used for paging.
+   * @opt_param string name If set, only the accounts with the given name (case
+   * sensitive) will be returned.
    * @opt_param string pageToken The token returned by the previous request.
    * @return AccountstatusesListResponse
    */

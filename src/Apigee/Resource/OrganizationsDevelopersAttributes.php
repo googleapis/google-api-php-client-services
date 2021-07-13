@@ -65,7 +65,7 @@ class OrganizationsDevelopersAttributes extends \Google\Service\Resource
    * (attributes.listOrganizationsDevelopersAttributes)
    *
    * @param string $parent Required. Email address of the developer for which
-   * attributes are being listed in the following format:
+   * attributes are being listed. Use the following structure in your request:
    * `organizations/{org}/developers/{developer_email}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Attributes

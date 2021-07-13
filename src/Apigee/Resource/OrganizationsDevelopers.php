@@ -45,7 +45,7 @@ class OrganizationsDevelopers extends \Google\Service\Resource
    * (developers.attributes)
    *
    * @param string $parent Required. Email address of the developer for which
-   * attributes are being updated in the following format:
+   * attributes are being updated. Use the following structure in your request:
    * `organizations/{org}/developers/{developer_email}`
    * @param GoogleCloudApigeeV1Attributes $postBody
    * @param array $optParams Optional parameters.
@@ -157,18 +157,18 @@ class OrganizationsDevelopers extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudApigeeV1ListOfDevelopersResponse::class);
   }
   /**
-   * Sets the status of a developer. Valid values are `active` or `inactive`. A
-   * developer is `active` by default. If you set a developer's status to
-   * `inactive`, the API keys assigned to the developer apps are no longer valid
-   * even though the API keys are set to `approved`. Inactive developers can still
-   * sign in to the developer portal and create apps; however, any new API keys
-   * generated during app creation won't work. If successful, the API call returns
-   * the following HTTP status code: `204 No Content`
-   * (developers.setDeveloperStatus)
+   * Sets the status of a developer. A developer is `active` by default. If you
+   * set a developer's status to `inactive`, the API keys assigned to the
+   * developer apps are no longer valid even though the API keys are set to
+   * `approved`. Inactive developers can still sign in to the developer portal and
+   * create apps; however, any new API keys generated during app creation won't
+   * work. To set the status of a developer, set the `action` query parameter to
+   * `active` or `inactive`, and the `Content-Type` header to `application/octet-
+   * stream`. If successful, the API call returns the following HTTP status code:
+   * `204 No Content` (developers.setDeveloperStatus)
    *
-   * @param string $name Required. Email address of the developer. Use the
-   * following structure in your request:
-   * `organizations/{org}/developers/{developer_email}`
+   * @param string $name Required. Name of the developer. Use the following
+   * structure in your request: `organizations/{org}/developers/{developer_id}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string action Status of the developer. Valid values are `active`

@@ -204,6 +204,10 @@ class ShoppingContent extends \Google\Service
                   'location' => 'query',
                   'type' => 'integer',
                 ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -465,6 +469,10 @@ class ShoppingContent extends \Google\Service
                 'maxResults' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'pageToken' => [
                   'location' => 'query',
