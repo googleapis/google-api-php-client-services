@@ -17,9 +17,10 @@
 
 namespace Google\Service\SQLAdmin\Resource;
 
-use Google\Service\SQLAdmin\Operation;
-use Google\Service\SQLAdmin\SqlInstancesRescheduleMaintenanceRequestBody;
-use Google\Service\SQLAdmin\SqlInstancesVerifyExternalSyncSettingsResponse;
+use Google\Service\SQLAdmin\ConnectSettings;
+use Google\Service\SQLAdmin\DatabaseInstance;
+use Google\Service\SQLAdmin\GenerateEphemeralCertRequest;
+use Google\Service\SQLAdmin\GenerateEphemeralCertResponse;
 
 /**
  * The "instances" collection of methods.
@@ -32,59 +33,58 @@ use Google\Service\SQLAdmin\SqlInstancesVerifyExternalSyncSettingsResponse;
 class ProjectsInstances extends \Google\Service\Resource
 {
   /**
-   * Reschedules the maintenance on the given instance.
-   * (instances.rescheduleMaintenance)
+   * Generates a short-lived X509 certificate containing the provided public key
+   * and signed by a private key specific to the target instance. Users may use
+   * the certificate to authenticate as themselves when connecting to the
+   * database. (instances.generateEphemeralCert)
    *
-   * @param string $project ID of the project that contains the instance.
+   * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param SqlInstancesRescheduleMaintenanceRequestBody $postBody
+   * @param GenerateEphemeralCertRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Operation
+   * @return GenerateEphemeralCertResponse
    */
-  public function rescheduleMaintenance($project, $instance, SqlInstancesRescheduleMaintenanceRequestBody $postBody, $optParams = [])
+  public function generateEphemeralCert($project, $instance, GenerateEphemeralCertRequest $postBody, $optParams = [])
   {
     $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('rescheduleMaintenance', [$params], Operation::class);
+    return $this->call('generateEphemeralCert', [$params], GenerateEphemeralCertResponse::class);
   }
   /**
-   * Start External primary instance migration. (instances.startExternalSync)
+   * Retrieves a resource containing information about a Cloud SQL instance.
+   * (instances.get)
    *
-   * @param string $project ID of the project that contains the instance.
-   * @param string $instance Cloud SQL instance ID. This does not include the
+   * @param string $project Project ID of the project that contains the instance.
+   * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool skipVerification Whether to skip the verification step
-   * (VESS).
-   * @opt_param string syncMode External sync mode.
-   * @return Operation
+   * @return DatabaseInstance
    */
-  public function startExternalSync($project, $instance, $optParams = [])
+  public function get($project, $instance, $optParams = [])
   {
     $params = ['project' => $project, 'instance' => $instance];
     $params = array_merge($params, $optParams);
-    return $this->call('startExternalSync', [$params], Operation::class);
+    return $this->call('get', [$params], DatabaseInstance::class);
   }
   /**
-   * Verify External primary instance external sync settings.
-   * (instances.verifyExternalSyncSettings)
+   * Retrieves connect settings about a Cloud SQL instance.
+   * (instances.getConnectSettings)
    *
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string syncMode External sync mode
-   * @opt_param bool verifyConnectionOnly Flag to enable verifying connection only
-   * @return SqlInstancesVerifyExternalSyncSettingsResponse
+   * @opt_param string readTime Optional. Optional snapshot read timestamp to
+   * trade freshness for performance.
+   * @return ConnectSettings
    */
-  public function verifyExternalSyncSettings($project, $instance, $optParams = [])
+  public function getConnectSettings($project, $instance, $optParams = [])
   {
     $params = ['project' => $project, 'instance' => $instance];
     $params = array_merge($params, $optParams);
-    return $this->call('verifyExternalSyncSettings', [$params], SqlInstancesVerifyExternalSyncSettingsResponse::class);
+    return $this->call('getConnectSettings', [$params], ConnectSettings::class);
   }
 }
 

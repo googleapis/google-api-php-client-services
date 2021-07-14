@@ -17,37 +17,28 @@
 
 namespace Google\Service\SQLAdmin;
 
-class LocationPreference extends \Google\Model
+class InstanceReference extends \Google\Model
 {
-  public $kind;
-  public $secondaryZone;
-  public $zone;
+  public $name;
+  public $region;
 
-  public function setKind($kind)
+  public function setName($name)
   {
-    $this->kind = $kind;
+    $this->name = $name;
   }
-  public function getKind()
+  public function getName()
   {
-    return $this->kind;
+    return $this->name;
   }
-  public function setSecondaryZone($secondaryZone)
+  public function setRegion($region)
   {
-    $this->secondaryZone = $secondaryZone;
+    $this->region = $region;
   }
-  public function getSecondaryZone()
+  public function getRegion()
   {
-    return $this->secondaryZone;
-  }
-  public function setZone($zone)
-  {
-    $this->zone = $zone;
-  }
-  public function getZone()
-  {
-    return $this->zone;
+    return $this->region;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LocationPreference::class, 'Google_Service_SQLAdmin_LocationPreference');
+class_alias(InstanceReference::class, 'Google_Service_SQLAdmin_InstanceReference');

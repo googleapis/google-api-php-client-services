@@ -19,7 +19,7 @@ namespace Google\Service\HangoutsChat;
 
 class Message extends \Google\Collection
 {
-  protected $collection_key = 'cardsV2';
+  protected $collection_key = 'cards';
   protected $actionResponseType = ActionResponse::class;
   protected $actionResponseDataType = '';
   protected $annotationsType = Annotation::class;
@@ -29,8 +29,6 @@ class Message extends \Google\Collection
   protected $attachmentDataType = 'array';
   protected $cardsType = Card::class;
   protected $cardsDataType = 'array';
-  protected $cardsV2Type = CardWithId::class;
-  protected $cardsV2DataType = 'array';
   public $createTime;
   public $fallbackText;
   public $name;
@@ -108,20 +106,6 @@ class Message extends \Google\Collection
   public function getCards()
   {
     return $this->cards;
-  }
-  /**
-   * @param CardWithId[]
-   */
-  public function setCardsV2($cardsV2)
-  {
-    $this->cardsV2 = $cardsV2;
-  }
-  /**
-   * @return CardWithId[]
-   */
-  public function getCardsV2()
-  {
-    return $this->cardsV2;
   }
   public function setCreateTime($createTime)
   {

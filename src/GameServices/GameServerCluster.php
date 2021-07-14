@@ -19,6 +19,8 @@ namespace Google\Service\GameServices;
 
 class GameServerCluster extends \Google\Model
 {
+  protected $clusterStateType = KubernetesClusterState::class;
+  protected $clusterStateDataType = '';
   protected $connectionInfoType = GameServerClusterConnectionInfo::class;
   protected $connectionInfoDataType = '';
   public $createTime;
@@ -28,6 +30,20 @@ class GameServerCluster extends \Google\Model
   public $name;
   public $updateTime;
 
+  /**
+   * @param KubernetesClusterState
+   */
+  public function setClusterState(KubernetesClusterState $clusterState)
+  {
+    $this->clusterState = $clusterState;
+  }
+  /**
+   * @return KubernetesClusterState
+   */
+  public function getClusterState()
+  {
+    return $this->clusterState;
+  }
   /**
    * @param GameServerClusterConnectionInfo
    */

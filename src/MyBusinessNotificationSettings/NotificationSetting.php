@@ -15,14 +15,14 @@
  * the License.
  */
 
-namespace Google\Service\Firebaseappcheck;
+namespace Google\Service\MyBusinessNotificationSettings;
 
-class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends \Google\Model
+class NotificationSetting extends \Google\Collection
 {
+  protected $collection_key = 'notificationTypes';
   public $name;
-  public $siteSecret;
-  public $siteSecretSet;
-  public $tokenTtl;
+  public $notificationTypes;
+  public $pubsubTopic;
 
   public function setName($name)
   {
@@ -32,31 +32,23 @@ class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends \Google\Model
   {
     return $this->name;
   }
-  public function setSiteSecret($siteSecret)
+  public function setNotificationTypes($notificationTypes)
   {
-    $this->siteSecret = $siteSecret;
+    $this->notificationTypes = $notificationTypes;
   }
-  public function getSiteSecret()
+  public function getNotificationTypes()
   {
-    return $this->siteSecret;
+    return $this->notificationTypes;
   }
-  public function setSiteSecretSet($siteSecretSet)
+  public function setPubsubTopic($pubsubTopic)
   {
-    $this->siteSecretSet = $siteSecretSet;
+    $this->pubsubTopic = $pubsubTopic;
   }
-  public function getSiteSecretSet()
+  public function getPubsubTopic()
   {
-    return $this->siteSecretSet;
-  }
-  public function setTokenTtl($tokenTtl)
-  {
-    $this->tokenTtl = $tokenTtl;
-  }
-  public function getTokenTtl()
-  {
-    return $this->tokenTtl;
+    return $this->pubsubTopic;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleFirebaseAppcheckV1betaRecaptchaConfig::class, 'Google_Service_Firebaseappcheck_GoogleFirebaseAppcheckV1betaRecaptchaConfig');
+class_alias(NotificationSetting::class, 'Google_Service_MyBusinessNotificationSettings_NotificationSetting');

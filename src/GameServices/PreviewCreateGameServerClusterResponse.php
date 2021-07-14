@@ -19,10 +19,26 @@ namespace Google\Service\GameServices;
 
 class PreviewCreateGameServerClusterResponse extends \Google\Model
 {
+  protected $clusterStateType = KubernetesClusterState::class;
+  protected $clusterStateDataType = '';
   public $etag;
   protected $targetStateType = TargetState::class;
   protected $targetStateDataType = '';
 
+  /**
+   * @param KubernetesClusterState
+   */
+  public function setClusterState(KubernetesClusterState $clusterState)
+  {
+    $this->clusterState = $clusterState;
+  }
+  /**
+   * @return KubernetesClusterState
+   */
+  public function getClusterState()
+  {
+    return $this->clusterState;
+  }
   public function setEtag($etag)
   {
     $this->etag = $etag;

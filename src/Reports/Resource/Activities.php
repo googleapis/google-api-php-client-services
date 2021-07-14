@@ -41,7 +41,9 @@ class Activities extends \Google\Service\Resource
    * @param string $userKey Represents the profile ID or the user email for which
    * the data should be filtered. Can be `all` for all information, or `userKey`
    * for a user's unique Google Workspace profile ID or their primary email
-   * address.
+   * address. Must not be a deleted user. For a deleted user, call `users.list` in
+   * Directory API with `showDeleted=true`, then use the returned `ID` as the
+   * `userKey`.
    * @param string $applicationName Application name for which the events are to
    * be retrieved.
    * @param array $optParams Optional parameters.
@@ -109,7 +111,7 @@ class Activities extends \Google\Service\Resource
    * returns the response corresponding to the remaining valid request parameters.
    * If no parameters are requested, all parameters are returned.
    * @opt_param string groupIdFilter Comma separated group ids (obfuscated) on
-   * which user activities are filtered, i.e, the response will contain activities
+   * which user activities are filtered, i.e. the response will contain activities
    * for only those users that are a part of at least one of the group ids
    * mentioned here. Format: "id:abc123,id:xyz456"
    * @opt_param int maxResults Determines how many activity records are shown on
@@ -145,7 +147,9 @@ class Activities extends \Google\Service\Resource
    * @param string $userKey Represents the profile ID or the user email for which
    * the data should be filtered. Can be `all` for all information, or `userKey`
    * for a user's unique Google Workspace profile ID or their primary email
-   * address.
+   * address. Must not be a deleted user. For a deleted user, call `users.list` in
+   * Directory API with `showDeleted=true`, then use the returned `ID` as the
+   * `userKey`.
    * @param string $applicationName Application name for which the events are to
    * be retrieved.
    * @param Channel $postBody
@@ -214,7 +218,7 @@ class Activities extends \Google\Service\Resource
    * returns the response corresponding to the remaining valid request parameters.
    * If no parameters are requested, all parameters are returned.
    * @opt_param string groupIdFilter Comma separated group ids (obfuscated) on
-   * which user activities are filtered, i.e, the response will contain activities
+   * which user activities are filtered, i.e. the response will contain activities
    * for only those users that are a part of at least one of the group ids
    * mentioned here. Format: "id:abc123,id:xyz456"
    * @opt_param int maxResults Determines how many activity records are shown on

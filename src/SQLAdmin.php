@@ -34,9 +34,16 @@ use Google\Client;
  */
 class SQLAdmin extends \Google\Service
 {
+  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  const CLOUD_PLATFORM =
+      "https://www.googleapis.com/auth/cloud-platform";
+  /** Manage your Google SQL Service instances. */
+  const SQLSERVICE_ADMIN =
+      "https://www.googleapis.com/auth/sqlservice.admin";
 
-
-
+  public $instances;
+  public $projects_instances;
+  public $projects_instances_createEphemeral;
 
   /**
    * Constructs the internal representation of the SQLAdmin service.
@@ -54,6 +61,122 @@ class SQLAdmin extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'sqladmin';
 
+    $this->instances = new SQLAdmin\Resource\Instances(
+        $this,
+        $this->serviceName,
+        'instances',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/projects/{project}/instances',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_instances = new SQLAdmin\Resource\ProjectsInstances(
+        $this,
+        $this->serviceName,
+        'instances',
+        [
+          'methods' => [
+            'generateEphemeralCert' => [
+              'path' => 'v1/projects/{project}/instances/{instance}:generateEphemeralCert',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/projects/{project}/instances/{instance}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getConnectSettings' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/connectSettings',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'readTime' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_instances_createEphemeral = new SQLAdmin\Resource\ProjectsInstancesCreateEphemeral(
+        $this,
+        $this->serviceName,
+        'createEphemeral',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/createEphemeral',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
   }
 }
 

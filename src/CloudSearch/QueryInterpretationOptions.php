@@ -20,6 +20,7 @@ namespace Google\Service\CloudSearch;
 class QueryInterpretationOptions extends \Google\Model
 {
   public $disableNlInterpretation;
+  public $disableSupplementalResults;
   public $enableVerbatimMode;
 
   public function setDisableNlInterpretation($disableNlInterpretation)
@@ -29,6 +30,14 @@ class QueryInterpretationOptions extends \Google\Model
   public function getDisableNlInterpretation()
   {
     return $this->disableNlInterpretation;
+  }
+  public function setDisableSupplementalResults($disableSupplementalResults)
+  {
+    $this->disableSupplementalResults = $disableSupplementalResults;
+  }
+  public function getDisableSupplementalResults()
+  {
+    return $this->disableSupplementalResults;
   }
   public function setEnableVerbatimMode($enableVerbatimMode)
   {

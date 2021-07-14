@@ -23,6 +23,7 @@ class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends \Google\Model
   public $name;
   public $privateKey;
   public $privateKeySet;
+  public $tokenTtl;
 
   public function setKeyId($keyId)
   {
@@ -55,6 +56,14 @@ class GoogleFirebaseAppcheckV1betaDeviceCheckConfig extends \Google\Model
   public function getPrivateKeySet()
   {
     return $this->privateKeySet;
+  }
+  public function setTokenTtl($tokenTtl)
+  {
+    $this->tokenTtl = $tokenTtl;
+  }
+  public function getTokenTtl()
+  {
+    return $this->tokenTtl;
   }
 }
 

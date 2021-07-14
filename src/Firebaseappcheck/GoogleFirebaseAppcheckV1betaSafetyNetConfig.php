@@ -15,39 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\SQLAdmin;
+namespace Google\Service\Firebaseappcheck;
 
-class LocationPreference extends \Google\Model
+class GoogleFirebaseAppcheckV1betaSafetyNetConfig extends \Google\Model
 {
-  public $kind;
-  public $secondaryZone;
-  public $zone;
+  public $name;
+  public $tokenTtl;
 
-  public function setKind($kind)
+  public function setName($name)
   {
-    $this->kind = $kind;
+    $this->name = $name;
   }
-  public function getKind()
+  public function getName()
   {
-    return $this->kind;
+    return $this->name;
   }
-  public function setSecondaryZone($secondaryZone)
+  public function setTokenTtl($tokenTtl)
   {
-    $this->secondaryZone = $secondaryZone;
+    $this->tokenTtl = $tokenTtl;
   }
-  public function getSecondaryZone()
+  public function getTokenTtl()
   {
-    return $this->secondaryZone;
-  }
-  public function setZone($zone)
-  {
-    $this->zone = $zone;
-  }
-  public function getZone()
-  {
-    return $this->zone;
+    return $this->tokenTtl;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LocationPreference::class, 'Google_Service_SQLAdmin_LocationPreference');
+class_alias(GoogleFirebaseAppcheckV1betaSafetyNetConfig::class, 'Google_Service_Firebaseappcheck_GoogleFirebaseAppcheckV1betaSafetyNetConfig');

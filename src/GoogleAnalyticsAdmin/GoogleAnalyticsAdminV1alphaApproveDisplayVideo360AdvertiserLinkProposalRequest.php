@@ -15,39 +15,11 @@
  * the License.
  */
 
-namespace Google\Service\SQLAdmin;
+namespace Google\Service\GoogleAnalyticsAdmin;
 
-class LocationPreference extends \Google\Model
+class GoogleAnalyticsAdminV1alphaApproveDisplayVideo360AdvertiserLinkProposalRequest extends \Google\Model
 {
-  public $kind;
-  public $secondaryZone;
-  public $zone;
-
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setSecondaryZone($secondaryZone)
-  {
-    $this->secondaryZone = $secondaryZone;
-  }
-  public function getSecondaryZone()
-  {
-    return $this->secondaryZone;
-  }
-  public function setZone($zone)
-  {
-    $this->zone = $zone;
-  }
-  public function getZone()
-  {
-    return $this->zone;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LocationPreference::class, 'Google_Service_SQLAdmin_LocationPreference');
+class_alias(GoogleAnalyticsAdminV1alphaApproveDisplayVideo360AdvertiserLinkProposalRequest::class, 'Google_Service_GoogleAnalyticsAdmin_GoogleAnalyticsAdminV1alphaApproveDisplayVideo360AdvertiserLinkProposalRequest');

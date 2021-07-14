@@ -244,6 +244,11 @@ class PeopleService extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'sources' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'syncToken' => [
                   'location' => 'query',
                   'type' => 'string',
