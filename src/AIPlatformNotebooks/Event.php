@@ -15,39 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Firebasestorage;
+namespace Google\Service\AIPlatformNotebooks;
 
-class Bucket extends \Google\Model
+class Event extends \Google\Model
 {
-  public $location;
-  public $name;
-  public $reconciling;
+  public $reportTime;
+  public $type;
 
-  public function setLocation($location)
+  public function setReportTime($reportTime)
   {
-    $this->location = $location;
+    $this->reportTime = $reportTime;
   }
-  public function getLocation()
+  public function getReportTime()
   {
-    return $this->location;
+    return $this->reportTime;
   }
-  public function setName($name)
+  public function setType($type)
   {
-    $this->name = $name;
+    $this->type = $type;
   }
-  public function getName()
+  public function getType()
   {
-    return $this->name;
-  }
-  public function setReconciling($reconciling)
-  {
-    $this->reconciling = $reconciling;
-  }
-  public function getReconciling()
-  {
-    return $this->reconciling;
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Bucket::class, 'Google_Service_Firebasestorage_Bucket');
+class_alias(Event::class, 'Google_Service_AIPlatformNotebooks_Event');

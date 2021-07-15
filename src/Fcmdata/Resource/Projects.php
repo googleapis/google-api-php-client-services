@@ -15,39 +15,19 @@
  * the License.
  */
 
-namespace Google\Service\Firebasestorage;
+namespace Google\Service\Fcmdata\Resource;
 
-class Bucket extends \Google\Model
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $fcmdataService = new Google\Service\Fcmdata(...);
+ *   $projects = $fcmdataService->projects;
+ *  </code>
+ */
+class Projects extends \Google\Service\Resource
 {
-  public $location;
-  public $name;
-  public $reconciling;
-
-  public function setLocation($location)
-  {
-    $this->location = $location;
-  }
-  public function getLocation()
-  {
-    return $this->location;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setReconciling($reconciling)
-  {
-    $this->reconciling = $reconciling;
-  }
-  public function getReconciling()
-  {
-    return $this->reconciling;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Bucket::class, 'Google_Service_Firebasestorage_Bucket');
+class_alias(Projects::class, 'Google_Service_Fcmdata_Resource_Projects');

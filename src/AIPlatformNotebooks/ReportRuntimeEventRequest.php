@@ -15,39 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\Firebasestorage;
+namespace Google\Service\AIPlatformNotebooks;
 
-class Bucket extends \Google\Model
+class ReportRuntimeEventRequest extends \Google\Model
 {
-  public $location;
-  public $name;
-  public $reconciling;
+  protected $eventType = Event::class;
+  protected $eventDataType = '';
+  public $vmId;
 
-  public function setLocation($location)
+  /**
+   * @param Event
+   */
+  public function setEvent(Event $event)
   {
-    $this->location = $location;
+    $this->event = $event;
   }
-  public function getLocation()
+  /**
+   * @return Event
+   */
+  public function getEvent()
   {
-    return $this->location;
+    return $this->event;
   }
-  public function setName($name)
+  public function setVmId($vmId)
   {
-    $this->name = $name;
+    $this->vmId = $vmId;
   }
-  public function getName()
+  public function getVmId()
   {
-    return $this->name;
-  }
-  public function setReconciling($reconciling)
-  {
-    $this->reconciling = $reconciling;
-  }
-  public function getReconciling()
-  {
-    return $this->reconciling;
+    return $this->vmId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Bucket::class, 'Google_Service_Firebasestorage_Bucket');
+class_alias(ReportRuntimeEventRequest::class, 'Google_Service_AIPlatformNotebooks_ReportRuntimeEventRequest');

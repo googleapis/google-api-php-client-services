@@ -47,6 +47,8 @@ class Instance extends \Google\Collection
   public $noRemoveDataDisk;
   public $postStartupScript;
   public $proxyUri;
+  protected $reservationAffinityType = ReservationAffinity::class;
+  protected $reservationAffinityDataType = '';
   public $serviceAccount;
   public $serviceAccountScopes;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
@@ -269,6 +271,20 @@ class Instance extends \Google\Collection
   public function getProxyUri()
   {
     return $this->proxyUri;
+  }
+  /**
+   * @param ReservationAffinity
+   */
+  public function setReservationAffinity(ReservationAffinity $reservationAffinity)
+  {
+    $this->reservationAffinity = $reservationAffinity;
+  }
+  /**
+   * @return ReservationAffinity
+   */
+  public function getReservationAffinity()
+  {
+    return $this->reservationAffinity;
   }
   public function setServiceAccount($serviceAccount)
   {

@@ -17,8 +17,9 @@
 
 namespace Google\Service\CloudFunctions;
 
-class CloudFunction extends \Google\Model
+class CloudFunction extends \Google\Collection
 {
+  protected $collection_key = 'secretVolumes';
   public $availableMemoryMb;
   public $buildEnvironmentVariables;
   public $buildId;
@@ -36,6 +37,10 @@ class CloudFunction extends \Google\Model
   public $name;
   public $network;
   public $runtime;
+  protected $secretEnvironmentVariablesType = SecretEnvVar::class;
+  protected $secretEnvironmentVariablesDataType = 'array';
+  protected $secretVolumesType = SecretVolume::class;
+  protected $secretVolumesDataType = 'array';
   public $serviceAccountEmail;
   public $sourceArchiveUrl;
   protected $sourceRepositoryType = SourceRepository::class;
@@ -180,6 +185,34 @@ class CloudFunction extends \Google\Model
   public function getRuntime()
   {
     return $this->runtime;
+  }
+  /**
+   * @param SecretEnvVar[]
+   */
+  public function setSecretEnvironmentVariables($secretEnvironmentVariables)
+  {
+    $this->secretEnvironmentVariables = $secretEnvironmentVariables;
+  }
+  /**
+   * @return SecretEnvVar[]
+   */
+  public function getSecretEnvironmentVariables()
+  {
+    return $this->secretEnvironmentVariables;
+  }
+  /**
+   * @param SecretVolume[]
+   */
+  public function setSecretVolumes($secretVolumes)
+  {
+    $this->secretVolumes = $secretVolumes;
+  }
+  /**
+   * @return SecretVolume[]
+   */
+  public function getSecretVolumes()
+  {
+    return $this->secretVolumes;
   }
   public function setServiceAccountEmail($serviceAccountEmail)
   {

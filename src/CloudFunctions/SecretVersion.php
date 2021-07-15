@@ -15,39 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Firebasestorage;
+namespace Google\Service\CloudFunctions;
 
-class Bucket extends \Google\Model
+class SecretVersion extends \Google\Model
 {
-  public $location;
-  public $name;
-  public $reconciling;
+  public $path;
+  public $version;
 
-  public function setLocation($location)
+  public function setPath($path)
   {
-    $this->location = $location;
+    $this->path = $path;
   }
-  public function getLocation()
+  public function getPath()
   {
-    return $this->location;
+    return $this->path;
   }
-  public function setName($name)
+  public function setVersion($version)
   {
-    $this->name = $name;
+    $this->version = $version;
   }
-  public function getName()
+  public function getVersion()
   {
-    return $this->name;
-  }
-  public function setReconciling($reconciling)
-  {
-    $this->reconciling = $reconciling;
-  }
-  public function getReconciling()
-  {
-    return $this->reconciling;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Bucket::class, 'Google_Service_Firebasestorage_Bucket');
+class_alias(SecretVersion::class, 'Google_Service_CloudFunctions_SecretVersion');

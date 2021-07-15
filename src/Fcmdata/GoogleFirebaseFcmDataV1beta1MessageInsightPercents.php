@@ -15,39 +15,21 @@
  * the License.
  */
 
-namespace Google\Service\Firebasestorage;
+namespace Google\Service\Fcmdata;
 
-class Bucket extends \Google\Model
+class GoogleFirebaseFcmDataV1beta1MessageInsightPercents extends \Google\Model
 {
-  public $location;
-  public $name;
-  public $reconciling;
+  public $priorityLowered;
 
-  public function setLocation($location)
+  public function setPriorityLowered($priorityLowered)
   {
-    $this->location = $location;
+    $this->priorityLowered = $priorityLowered;
   }
-  public function getLocation()
+  public function getPriorityLowered()
   {
-    return $this->location;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setReconciling($reconciling)
-  {
-    $this->reconciling = $reconciling;
-  }
-  public function getReconciling()
-  {
-    return $this->reconciling;
+    return $this->priorityLowered;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Bucket::class, 'Google_Service_Firebasestorage_Bucket');
+class_alias(GoogleFirebaseFcmDataV1beta1MessageInsightPercents::class, 'Google_Service_Fcmdata_GoogleFirebaseFcmDataV1beta1MessageInsightPercents');

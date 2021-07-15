@@ -19,6 +19,7 @@ namespace Google\Service\AIPlatformNotebooks\Resource;
 
 use Google\Service\AIPlatformNotebooks\ListRuntimesResponse;
 use Google\Service\AIPlatformNotebooks\Operation;
+use Google\Service\AIPlatformNotebooks\ReportRuntimeEventRequest;
 use Google\Service\AIPlatformNotebooks\ResetRuntimeRequest;
 use Google\Service\AIPlatformNotebooks\Runtime;
 use Google\Service\AIPlatformNotebooks\StartRuntimeRequest;
@@ -99,6 +100,21 @@ class ProjectsLocationsRuntimes extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListRuntimesResponse::class);
+  }
+  /**
+   * Report and process a runtime event. (runtimes.reportEvent)
+   *
+   * @param string $name Required. Format:
+   * `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
+   * @param ReportRuntimeEventRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function reportEvent($name, ReportRuntimeEventRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reportEvent', [$params], Operation::class);
   }
   /**
    * Resets a Managed Notebook Runtime. (runtimes.reset)

@@ -15,39 +15,39 @@
  * the License.
  */
 
-namespace Google\Service\Firebasestorage;
+namespace Google\Service\Fcmdata;
 
-class Bucket extends \Google\Model
+class GoogleTypeDate extends \Google\Model
 {
-  public $location;
-  public $name;
-  public $reconciling;
+  public $day;
+  public $month;
+  public $year;
 
-  public function setLocation($location)
+  public function setDay($day)
   {
-    $this->location = $location;
+    $this->day = $day;
   }
-  public function getLocation()
+  public function getDay()
   {
-    return $this->location;
+    return $this->day;
   }
-  public function setName($name)
+  public function setMonth($month)
   {
-    $this->name = $name;
+    $this->month = $month;
   }
-  public function getName()
+  public function getMonth()
   {
-    return $this->name;
+    return $this->month;
   }
-  public function setReconciling($reconciling)
+  public function setYear($year)
   {
-    $this->reconciling = $reconciling;
+    $this->year = $year;
   }
-  public function getReconciling()
+  public function getYear()
   {
-    return $this->reconciling;
+    return $this->year;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Bucket::class, 'Google_Service_Firebasestorage_Bucket');
+class_alias(GoogleTypeDate::class, 'Google_Service_Fcmdata_GoogleTypeDate');
