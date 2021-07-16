@@ -30,12 +30,18 @@ use Google\Service\PeopleService\ListConnectionsResponse;
 class PeopleConnections extends \Google\Service\Resource
 {
   /**
-   * Provides a list of the authenticated user's contacts. The request returns a
-   * 400 error if `personFields` is not specified. The request returns a 410 error
-   * if `sync_token` is specified and is expired. Sync tokens expire after 7 days
-   * to prevent data drift between clients and the server. To handle a sync token
-   * expired error, a request should be sent without `sync_token` to get all
-   * contacts. (connections.listPeopleConnections)
+   * Provides a list of the authenticated user's contacts. Sync tokens expire 7
+   * days after the full sync. A request with an expired sync token will result in
+   * a 410 error. In the case of such an error clients should make a full sync
+   * request without a `sync_token`. The first page of a full sync request has an
+   * additional quota. If the quota is exceeded, a 429 error will be returned.
+   * This quota is fixed and can not be increased. When the `sync_token` is
+   * specified, resources deleted since the last sync will be returned as a person
+   * with `PersonMetadata.deleted` set to true. When the `page_token` or
+   * `sync_token` is specified, all other request parameters must match the first
+   * call. See example usage at [List the user's contacts that have
+   * changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
+   * (connections.listPeopleConnections)
    *
    * @param string $resourceName Required. The resource name to return connections
    * for. Only `people/me` is valid.
@@ -45,9 +51,9 @@ class PeopleConnections extends \Google\Service\Resource
    * response. Valid values are between 1 and 1000, inclusive. Defaults to 100 if
    * not set or set to 0.
    * @opt_param string pageToken Optional. A page token, received from a previous
-   * `ListConnections` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListConnections` must match the
-   * call that provided the page token.
+   * response `next_page_token`. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to `people.connections.list`
+   * must match the first call that provided the page token.
    * @opt_param string personFields Required. A field mask to restrict which
    * fields on each person are returned. Multiple fields can be specified by
    * separating them with commas. Valid values are: * addresses * ageRanges *
@@ -59,26 +65,19 @@ class PeopleConnections extends \Google\Service\Resource
    * @opt_param string requestMask.includeField Required. Comma-separated list of
    * person fields to be included in the response. Each path should start with
    * `person.`: for example, `person.names` or `person.photos`.
-   * @opt_param bool requestSyncToken Optional. Whether the response should
-   * include `next_sync_token` on the last page, which can be used to get all
-   * changes since the last request. For subsequent sync requests use the
-   * `sync_token` param instead. Initial full sync requests that specify
-   * `request_sync_token` and do not specify `sync_token` have an additional rate
-   * limit per user. Each client should generally only be doing a full sync once
-   * every few days per user and so should not hit this limit.
+   * @opt_param bool requestSyncToken Optional. Whether the response should return
+   * `next_sync_token` on the last page of results. It can be used to get
+   * incremental changes since the last request by setting it on the request
+   * `sync_token`. More details about sync behavior at `people.connections.list`.
    * @opt_param string sortOrder Optional. The order in which the connections
    * should be sorted. Defaults to `LAST_MODIFIED_ASCENDING`.
    * @opt_param string sources Optional. A mask of what source types to return.
    * Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
    * @opt_param string syncToken Optional. A sync token, received from a previous
-   * `ListConnections` call. Provide this to retrieve only the resources changed
-   * since the last request. When the `syncToken` is specified, resources deleted
-   * since the last sync will be returned as a person with [`PersonMetadata.delete
-   * d`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to
-   * true. When the `syncToken` is specified, all other parameters provided to
-   * `ListConnections` except `page_size` and `page_token` must match the initial
-   * call that provided the sync token. Sync tokens expire after seven days, after
-   * which a full sync request without a `sync_token` should be made.
+   * response `next_sync_token` Provide this to retrieve only the resources
+   * changed since the last request. When syncing, all other parameters provided
+   * to `people.connections.list` must match the first call that provided the sync
+   * token. More details about sync behavior at `people.connections.list`.
    * @return ListConnectionsResponse
    */
   public function listPeopleConnections($resourceName, $optParams = [])

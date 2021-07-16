@@ -137,6 +137,10 @@ class ProjectsSecrets extends \Google\Service\Resource
    * with the Secrets, in the format `projects`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Filter string, adhering to the rules in
+   * [List-operation filtering](https://cloud.google.com/secret-
+   * manager/docs/filtering). List only secrets matching the filter. If filter is
+   * empty, all secrets are listed.
    * @opt_param int pageSize Optional. The maximum number of results to be
    * returned in a single page. If set to 0, the server decides the number of
    * results to return. If the number is greater than 25000, it is capped at
