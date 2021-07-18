@@ -21,7 +21,9 @@ class CheckUpgradeResponse extends \Google\Model
 {
   public $buildLogUri;
   public $containsPypiModulesConflict;
+  public $imageVersion;
   public $pypiConflictBuildLogExtract;
+  public $pypiDependencies;
 
   public function setBuildLogUri($buildLogUri)
   {
@@ -39,6 +41,14 @@ class CheckUpgradeResponse extends \Google\Model
   {
     return $this->containsPypiModulesConflict;
   }
+  public function setImageVersion($imageVersion)
+  {
+    $this->imageVersion = $imageVersion;
+  }
+  public function getImageVersion()
+  {
+    return $this->imageVersion;
+  }
   public function setPypiConflictBuildLogExtract($pypiConflictBuildLogExtract)
   {
     $this->pypiConflictBuildLogExtract = $pypiConflictBuildLogExtract;
@@ -46,6 +56,14 @@ class CheckUpgradeResponse extends \Google\Model
   public function getPypiConflictBuildLogExtract()
   {
     return $this->pypiConflictBuildLogExtract;
+  }
+  public function setPypiDependencies($pypiDependencies)
+  {
+    $this->pypiDependencies = $pypiDependencies;
+  }
+  public function getPypiDependencies()
+  {
+    return $this->pypiDependencies;
   }
 }
 

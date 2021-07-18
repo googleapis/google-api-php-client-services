@@ -164,7 +164,7 @@ class People extends \Google\Service\Resource
    * specify `people/me`. - To get information about a google account, specify
    * `people/{account_id}`. - To get information about a contact, specify the
    * resource name that identifies the contact as returned by
-   * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
+   * `people.connections.list`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string personFields Required. A field mask to restrict which
@@ -213,8 +213,7 @@ class People extends \Google\Service\Resource
    * specify `people/me`. - To get information about a google account, specify
    * `people/{account_id}`. - To get information about a contact, specify the
    * resource name that identifies the contact as returned by
-   * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
-   * There is a maximum of 200 resource names.
+   * `people.connections.list`. There is a maximum of 200 resource names.
    * @opt_param string sources Optional. A mask of what source types to return.
    * Defaults to READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
    * @return GetPeopleResponse
@@ -227,7 +226,13 @@ class People extends \Google\Service\Resource
   }
   /**
    * Provides a list of domain profiles and domain contacts in the authenticated
-   * user's domain directory. (people.listDirectoryPeople)
+   * user's domain directory. When the `sync_token` is specified, resources
+   * deleted since the last sync will be returned as a person with
+   * `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token`
+   * is specified, all other request parameters must match the first call. See
+   * example usage at [List the directory people that have
+   * changed](/people/v1/directory#list_the_directory_people_that_have_changed).
+   * (people.listDirectoryPeople)
    *
    * @param array $optParams Optional parameters.
    *
@@ -238,9 +243,10 @@ class People extends \Google\Service\Resource
    * response. Valid values are between 1 and 1000, inclusive. Defaults to 100 if
    * not set or set to 0.
    * @opt_param string pageToken Optional. A page token, received from a previous
-   * `ListDirectoryPeople` call. Provide this to retrieve the subsequent page.
-   * When paginating, all other parameters provided to `ListDirectoryPeople` must
-   * match the call that provided the page token.
+   * response `next_page_token`. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to
+   * `people.listDirectoryPeople` must match the first call that provided the page
+   * token.
    * @opt_param string readMask Required. A field mask to restrict which fields on
    * each person are returned. Multiple fields can be specified by separating them
    * with commas. Valid values are: * addresses * ageRanges * biographies *
@@ -249,15 +255,16 @@ class People extends \Google\Service\Resource
    * memberships * metadata * miscKeywords * names * nicknames * occupations *
    * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
    * urls * userDefined
-   * @opt_param bool requestSyncToken Optional. Whether the response should
-   * include `next_sync_token`, which can be used to get all changes since the
-   * last request. For subsequent sync requests use the `sync_token` param
-   * instead.
+   * @opt_param bool requestSyncToken Optional. Whether the response should return
+   * `next_sync_token`. It can be used to get incremental changes since the last
+   * request by setting it on the request `sync_token`. More details about sync
+   * behavior at `people.listDirectoryPeople`.
    * @opt_param string sources Required. Directory sources to return.
    * @opt_param string syncToken Optional. A sync token, received from a previous
-   * `ListDirectoryPeople` call. Provide this to retrieve only the resources
+   * response `next_sync_token` Provide this to retrieve only the resources
    * changed since the last request. When syncing, all other parameters provided
-   * to `ListDirectoryPeople` must match the call that provided the sync token.
+   * to `people.listDirectoryPeople` must match the first call that provided the
+   * sync token. More details about sync behavior at `people.listDirectoryPeople`.
    * @return ListDirectoryPeopleResponse
    */
   public function listDirectoryPeople($optParams = [])
@@ -316,9 +323,9 @@ class People extends \Google\Service\Resource
    * response. Valid values are between 1 and 500, inclusive. Defaults to 100 if
    * not set or set to 0.
    * @opt_param string pageToken Optional. A page token, received from a previous
-   * `SearchDirectoryPeople` call. Provide this to retrieve the subsequent page.
+   * response `next_page_token`. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to `SearchDirectoryPeople`
-   * must match the call that provided the page token.
+   * must match the first call that provided the page token.
    * @opt_param string query Required. Prefix query that matches fields in the
    * person. Does NOT use the read_mask for determining what fields to match.
    * @opt_param string readMask Required. A field mask to restrict which fields on

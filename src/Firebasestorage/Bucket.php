@@ -19,9 +19,18 @@ namespace Google\Service\Firebasestorage;
 
 class Bucket extends \Google\Model
 {
+  public $location;
   public $name;
   public $reconciling;
 
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  public function getLocation()
+  {
+    return $this->location;
+  }
   public function setName($name)
   {
     $this->name = $name;

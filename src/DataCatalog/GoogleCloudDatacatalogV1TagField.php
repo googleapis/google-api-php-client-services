@@ -25,6 +25,7 @@ class GoogleCloudDatacatalogV1TagField extends \Google\Model
   protected $enumValueType = GoogleCloudDatacatalogV1TagFieldEnumValue::class;
   protected $enumValueDataType = '';
   public $order;
+  public $richtextValue;
   public $stringValue;
   public $timestampValue;
 
@@ -73,6 +74,14 @@ class GoogleCloudDatacatalogV1TagField extends \Google\Model
   public function getOrder()
   {
     return $this->order;
+  }
+  public function setRichtextValue($richtextValue)
+  {
+    $this->richtextValue = $richtextValue;
+  }
+  public function getRichtextValue()
+  {
+    return $this->richtextValue;
   }
   public function setStringValue($stringValue)
   {

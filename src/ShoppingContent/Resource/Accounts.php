@@ -167,6 +167,8 @@ class Accounts extends \Google\Service\Resource
    * are assigned label with given ID.
    * @opt_param string maxResults The maximum number of accounts to return in the
    * response, used for paging.
+   * @opt_param string name If set, only the accounts with the given name (case
+   * sensitive) will be returned.
    * @opt_param string pageToken The token returned by the previous request.
    * @opt_param string view Controls which fields will be populated. Acceptable
    * values are: "merchant" and "css". The default value is "merchant".

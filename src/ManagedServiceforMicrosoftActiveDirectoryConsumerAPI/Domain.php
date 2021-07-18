@@ -21,6 +21,7 @@ class Domain extends \Google\Collection
 {
   protected $collection_key = 'trusts';
   public $admin;
+  public $auditLogsEnabled;
   public $authorizedNetworks;
   public $createTime;
   public $fqdn;
@@ -41,6 +42,14 @@ class Domain extends \Google\Collection
   public function getAdmin()
   {
     return $this->admin;
+  }
+  public function setAuditLogsEnabled($auditLogsEnabled)
+  {
+    $this->auditLogsEnabled = $auditLogsEnabled;
+  }
+  public function getAuditLogsEnabled()
+  {
+    return $this->auditLogsEnabled;
   }
   public function setAuthorizedNetworks($authorizedNetworks)
   {

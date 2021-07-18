@@ -21,6 +21,7 @@ class SqlScheduledMaintenance extends \Google\Model
 {
   public $canDefer;
   public $canReschedule;
+  public $scheduleDeadlineTime;
   public $startTime;
 
   public function setCanDefer($canDefer)
@@ -38,6 +39,14 @@ class SqlScheduledMaintenance extends \Google\Model
   public function getCanReschedule()
   {
     return $this->canReschedule;
+  }
+  public function setScheduleDeadlineTime($scheduleDeadlineTime)
+  {
+    $this->scheduleDeadlineTime = $scheduleDeadlineTime;
+  }
+  public function getScheduleDeadlineTime()
+  {
+    return $this->scheduleDeadlineTime;
   }
   public function setStartTime($startTime)
   {

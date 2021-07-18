@@ -76,6 +76,13 @@ class ProjectsLocationsRealmsGameServerClusters extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/realms/{realm-
    * id}/gameServerClusters/{cluster}`.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. View for the returned GameServerCluster
+   * objects. When `FULL` is specified, the `cluster_state` field is also returned
+   * in the GameServerCluster object, which includes the state of the referenced
+   * Kubernetes cluster such as versions and provider info. The default/unset
+   * value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC, which does not
+   * return the `cluster_state` field.
    * @return GameServerCluster
    */
   public function get($name, $optParams = [])
@@ -103,6 +110,12 @@ class ProjectsLocationsRealmsGameServerClusters extends \Google\Service\Resource
    * queried.
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous List request, if any.
+   * @opt_param string view Optional. View for the returned GameServerCluster
+   * objects. When `FULL` is specified, the `cluster_state` field is also returned
+   * in the GameServerCluster object, which includes the state of the referenced
+   * Kubernetes cluster such as versions and provider info. The default/unset
+   * value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC, which does not
+   * return the `cluster_state` field.
    * @return ListGameServerClustersResponse
    */
   public function listProjectsLocationsRealmsGameServerClusters($parent, $optParams = [])
@@ -147,6 +160,8 @@ class ProjectsLocationsRealmsGameServerClusters extends \Google\Service\Resource
    * cluster resource to be created.
    * @opt_param string previewTime Optional. The target timestamp to compute the
    * preview.
+   * @opt_param string view Optional. This field is deprecated, preview will
+   * always return KubernetesClusterState.
    * @return PreviewCreateGameServerClusterResponse
    */
   public function previewCreate($parent, GameServerCluster $postBody, $optParams = [])

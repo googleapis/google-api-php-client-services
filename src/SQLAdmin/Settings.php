@@ -23,7 +23,6 @@ class Settings extends \Google\Collection
   public $activationPolicy;
   protected $activeDirectoryConfigType = SqlActiveDirectoryConfig::class;
   protected $activeDirectoryConfigDataType = '';
-  public $authorizedGaeApplications;
   public $availabilityType;
   protected $backupConfigurationType = BackupConfiguration::class;
   protected $backupConfigurationDataType = '';
@@ -74,14 +73,6 @@ class Settings extends \Google\Collection
   public function getActiveDirectoryConfig()
   {
     return $this->activeDirectoryConfig;
-  }
-  public function setAuthorizedGaeApplications($authorizedGaeApplications)
-  {
-    $this->authorizedGaeApplications = $authorizedGaeApplications;
-  }
-  public function getAuthorizedGaeApplications()
-  {
-    return $this->authorizedGaeApplications;
   }
   public function setAvailabilityType($availabilityType)
   {

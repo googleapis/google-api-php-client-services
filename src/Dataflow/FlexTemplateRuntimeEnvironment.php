@@ -22,11 +22,13 @@ class FlexTemplateRuntimeEnvironment extends \Google\Collection
   protected $collection_key = 'additionalExperiments';
   public $additionalExperiments;
   public $additionalUserLabels;
+  public $diskSizeGb;
   public $enableStreamingEngine;
   public $flexrsGoal;
   public $ipConfiguration;
   public $kmsKeyName;
   public $machineType;
+  public $maxNumWorkers;
   public $maxWorkers;
   public $network;
   public $numWorkers;
@@ -54,6 +56,14 @@ class FlexTemplateRuntimeEnvironment extends \Google\Collection
   public function getAdditionalUserLabels()
   {
     return $this->additionalUserLabels;
+  }
+  public function setDiskSizeGb($diskSizeGb)
+  {
+    $this->diskSizeGb = $diskSizeGb;
+  }
+  public function getDiskSizeGb()
+  {
+    return $this->diskSizeGb;
   }
   public function setEnableStreamingEngine($enableStreamingEngine)
   {
@@ -94,6 +104,14 @@ class FlexTemplateRuntimeEnvironment extends \Google\Collection
   public function getMachineType()
   {
     return $this->machineType;
+  }
+  public function setMaxNumWorkers($maxNumWorkers)
+  {
+    $this->maxNumWorkers = $maxNumWorkers;
+  }
+  public function getMaxNumWorkers()
+  {
+    return $this->maxNumWorkers;
   }
   public function setMaxWorkers($maxWorkers)
   {

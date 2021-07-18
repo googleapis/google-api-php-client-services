@@ -38,14 +38,17 @@ class Enterprises extends \Google\Service\Resource
    * @param Enterprise $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool agreementAccepted This feature is not generally available
-   * yet. Whether the managed Google Play Agreement is presented and agreed.
+   * @opt_param bool agreementAccepted Whether the enterprise admin has seen and
+   * agreed to the managed Google Play Agreement
+   * (https://www.android.com/enterprise/terms/). Always set this to true when
+   * creating an EMM-managed enterprise. Do not create the enterprise until the
+   * admin has viewed and accepted the agreement.
    * @opt_param string enterpriseToken The enterprise token appended to the
-   * callback URL.
+   * callback URL. Only set this when creating a customer-managed enterprise.
    * @opt_param string projectId The ID of the Google Cloud Platform project which
    * will own the enterprise.
    * @opt_param string signupUrlName The name of the SignupUrl used to sign up for
-   * the enterprise.
+   * the enterprise. Only set this when creating a customer-managed enterprise.
    * @return Enterprise
    */
   public function create(Enterprise $postBody, $optParams = [])
@@ -55,11 +58,11 @@ class Enterprises extends \Google\Service\Resource
     return $this->call('create', [$params], Enterprise::class);
   }
   /**
-   * This feature is not generally available yet. Deletes an enterprise.
+   * Deletes an enterprise. Only available for EMM-managed enterprises.
    * (enterprises.delete)
    *
-   * @param string $name This feature is not generally available yet. The name of
-   * the enterprise in the form enterprises/{enterpriseId}.
+   * @param string $name The name of the enterprise in the form
+   * enterprises/{enterpriseId}.
    * @param array $optParams Optional parameters.
    * @return AndroidmanagementEmpty
    */
@@ -84,20 +87,19 @@ class Enterprises extends \Google\Service\Resource
     return $this->call('get', [$params], Enterprise::class);
   }
   /**
-   * This feature is not generally available yet. Lists enterprises that are
-   * managed by an EMM. Only partial views are returned.
+   * Lists EMM-managed enterprises. Only BASIC fields are returned.
    * (enterprises.listEnterprises)
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize This feature is not generally available yet. The
-   * requested page size. The actual page size may be fixed to a min or max value.
-   * @opt_param string pageToken This feature is not generally available yet. A
-   * token identifying a page of results returned by the server.
-   * @opt_param string projectId Required. This feature is not generally available
-   * yet. The ID of the Cloud project of the EMM the enterprises belongs to.
-   * @opt_param string view This feature is not generally available yet. View that
-   * specify that partial response should be returned.
+   * @opt_param int pageSize The requested page size. The actual page size may be
+   * fixed to a min or max value.
+   * @opt_param string pageToken A token identifying a page of results returned by
+   * the server.
+   * @opt_param string projectId Required. The Cloud project ID of the EMM
+   * managing the enterprises.
+   * @opt_param string view Specifies which Enterprise fields to return. This
+   * method only supports BASIC.
    * @return ListEnterprisesResponse
    */
   public function listEnterprises($optParams = [])

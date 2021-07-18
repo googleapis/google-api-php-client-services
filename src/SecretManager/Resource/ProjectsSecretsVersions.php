@@ -123,6 +123,10 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * with the SecretVersions to list, in the format `projects/secrets`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Filter string, adhering to the rules in
+   * [List-operation filtering](https://cloud.google.com/secret-
+   * manager/docs/filtering). List only secret versions matching the filter. If
+   * filter is empty, all secret versions are listed.
    * @opt_param int pageSize Optional. The maximum number of results to be
    * returned in a single page. If set to 0, the server decides the number of
    * results to return. If the number is greater than 25000, it is capped at

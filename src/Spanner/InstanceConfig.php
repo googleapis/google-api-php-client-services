@@ -21,6 +21,7 @@ class InstanceConfig extends \Google\Collection
 {
   protected $collection_key = 'replicas';
   public $displayName;
+  public $leaderOptions;
   public $name;
   protected $replicasType = ReplicaInfo::class;
   protected $replicasDataType = 'array';
@@ -32,6 +33,14 @@ class InstanceConfig extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  public function setLeaderOptions($leaderOptions)
+  {
+    $this->leaderOptions = $leaderOptions;
+  }
+  public function getLeaderOptions()
+  {
+    return $this->leaderOptions;
   }
   public function setName($name)
   {

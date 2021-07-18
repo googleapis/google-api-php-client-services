@@ -56,6 +56,8 @@ class GoogleAnalyticsAdmin extends \Google\Service
   public $properties_conversionEvents;
   public $properties_customDimensions;
   public $properties_customMetrics;
+  public $properties_displayVideo360AdvertiserLinkProposals;
+  public $properties_displayVideo360AdvertiserLinks;
   public $properties_firebaseLinks;
   public $properties_googleAdsLinks;
   public $properties_iosAppDataStreams;
@@ -710,6 +712,156 @@ class GoogleAnalyticsAdmin extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1alpha/{+parent}/customMetrics',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->properties_displayVideo360AdvertiserLinkProposals = new GoogleAnalyticsAdmin\Resource\PropertiesDisplayVideo360AdvertiserLinkProposals(
+        $this,
+        $this->serviceName,
+        'displayVideo360AdvertiserLinkProposals',
+        [
+          'methods' => [
+            'approve' => [
+              'path' => 'v1alpha/{+name}:approve',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'cancel' => [
+              'path' => 'v1alpha/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
+              'path' => 'v1alpha/{+parent}/displayVideo360AdvertiserLinkProposals',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1alpha/{+parent}/displayVideo360AdvertiserLinkProposals',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->properties_displayVideo360AdvertiserLinks = new GoogleAnalyticsAdmin\Resource\PropertiesDisplayVideo360AdvertiserLinks(
+        $this,
+        $this->serviceName,
+        'displayVideo360AdvertiserLinks',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1alpha/{+parent}/displayVideo360AdvertiserLinks',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1alpha/{+parent}/displayVideo360AdvertiserLinks',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [

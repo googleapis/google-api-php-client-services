@@ -38,9 +38,8 @@ class ProjectsBuckets extends \Google\Service\Resource
    * (buckets.addFirebase)
    *
    * @param string $bucket Required. Resource name of the bucket, mirrors the ID
-   * of the underlying Google Cloud Storage bucket. Because bucket resource names
-   * are unique across projects, you may omit the project number,
-   * `projects/-/buckets/{bucket_id}`.
+   * of the underlying Google Cloud Storage bucket,
+   * `projects/{project_number}/buckets/{bucket_id}`.
    * @param AddFirebaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Bucket
@@ -55,9 +54,8 @@ class ProjectsBuckets extends \Google\Service\Resource
    * Gets a single linked storage bucket. (buckets.get)
    *
    * @param string $name Required. Resource name of the bucket, mirrors the ID of
-   * the underlying Google Cloud Storage bucket. Because bucket resource names are
-   * unique across projects, you may omit the project number,
-   * `projects/-/buckets/{bucket_id}`.
+   * the underlying Google Cloud Storage bucket,
+   * `projects/{project_number}/buckets/{bucket_id}`.
    * @param array $optParams Optional parameters.
    * @return Bucket
    */
@@ -93,9 +91,8 @@ class ProjectsBuckets extends \Google\Service\Resource
    * (buckets.removeFirebase)
    *
    * @param string $bucket Required. Resource name of the bucket, mirrors the ID
-   * of the underlying Google Cloud Storage bucket. Because bucket resource names
-   * are unique across projects, you may omit the project number,
-   * `projects/-/buckets/{bucket_id}`.
+   * of the underlying Google Cloud Storage bucket,
+   * `projects/{project_number}/buckets/{bucket_id}`.
    * @param RemoveFirebaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return FirebasestorageEmpty

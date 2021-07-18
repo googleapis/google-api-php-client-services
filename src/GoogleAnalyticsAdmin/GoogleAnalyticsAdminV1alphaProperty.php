@@ -27,6 +27,7 @@ class GoogleAnalyticsAdminV1alphaProperty extends \Google\Model
   public $industryCategory;
   public $name;
   public $parent;
+  public $serviceLevel;
   public $timeZone;
   public $updateTime;
 
@@ -93,6 +94,14 @@ class GoogleAnalyticsAdminV1alphaProperty extends \Google\Model
   public function getParent()
   {
     return $this->parent;
+  }
+  public function setServiceLevel($serviceLevel)
+  {
+    $this->serviceLevel = $serviceLevel;
+  }
+  public function getServiceLevel()
+  {
+    return $this->serviceLevel;
   }
   public function setTimeZone($timeZone)
   {

@@ -22,6 +22,7 @@ class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends \Google\Model
   public $name;
   public $siteSecret;
   public $siteSecretSet;
+  public $tokenTtl;
 
   public function setName($name)
   {
@@ -46,6 +47,14 @@ class GoogleFirebaseAppcheckV1betaRecaptchaConfig extends \Google\Model
   public function getSiteSecretSet()
   {
     return $this->siteSecretSet;
+  }
+  public function setTokenTtl($tokenTtl)
+  {
+    $this->tokenTtl = $tokenTtl;
+  }
+  public function getTokenTtl()
+  {
+    return $this->tokenTtl;
   }
 }
 

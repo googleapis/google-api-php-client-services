@@ -19,8 +19,17 @@ namespace Google\Service\GKEHub;
 
 class GkeCluster extends \Google\Model
 {
+  public $clusterMissing;
   public $resourceLink;
 
+  public function setClusterMissing($clusterMissing)
+  {
+    $this->clusterMissing = $clusterMissing;
+  }
+  public function getClusterMissing()
+  {
+    return $this->clusterMissing;
+  }
   public function setResourceLink($resourceLink)
   {
     $this->resourceLink = $resourceLink;

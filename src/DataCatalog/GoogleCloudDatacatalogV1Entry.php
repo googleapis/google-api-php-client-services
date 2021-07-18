@@ -25,6 +25,8 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $bigqueryTableSpecDataType = '';
   protected $dataSourceType = GoogleCloudDatacatalogV1DataSource::class;
   protected $dataSourceDataType = '';
+  protected $dataSourceConnectionSpecType = GoogleCloudDatacatalogV1DataSourceConnectionSpec::class;
+  protected $dataSourceConnectionSpecDataType = '';
   protected $databaseTableSpecType = GoogleCloudDatacatalogV1DatabaseTableSpec::class;
   protected $databaseTableSpecDataType = '';
   public $description;
@@ -33,6 +35,7 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $gcsFilesetSpecType = GoogleCloudDatacatalogV1GcsFilesetSpec::class;
   protected $gcsFilesetSpecDataType = '';
   public $integratedSystem;
+  public $labels;
   public $linkedResource;
   public $name;
   protected $routineSpecType = GoogleCloudDatacatalogV1RoutineSpec::class;
@@ -88,6 +91,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getDataSource()
   {
     return $this->dataSource;
+  }
+  /**
+   * @param GoogleCloudDatacatalogV1DataSourceConnectionSpec
+   */
+  public function setDataSourceConnectionSpec(GoogleCloudDatacatalogV1DataSourceConnectionSpec $dataSourceConnectionSpec)
+  {
+    $this->dataSourceConnectionSpec = $dataSourceConnectionSpec;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1DataSourceConnectionSpec
+   */
+  public function getDataSourceConnectionSpec()
+  {
+    return $this->dataSourceConnectionSpec;
   }
   /**
    * @param GoogleCloudDatacatalogV1DatabaseTableSpec
@@ -148,6 +165,14 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getIntegratedSystem()
   {
     return $this->integratedSystem;
+  }
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  public function getLabels()
+  {
+    return $this->labels;
   }
   public function setLinkedResource($linkedResource)
   {

@@ -30,6 +30,8 @@ class SearchApplication extends \Google\Collection
   public $enableAuditLog;
   public $name;
   public $operationIds;
+  protected $queryInterpretationConfigType = QueryInterpretationConfig::class;
+  protected $queryInterpretationConfigDataType = '';
   protected $scoringConfigType = ScoringConfig::class;
   protected $scoringConfigDataType = '';
   protected $sourceConfigType = SourceConfig::class;
@@ -108,6 +110,20 @@ class SearchApplication extends \Google\Collection
   public function getOperationIds()
   {
     return $this->operationIds;
+  }
+  /**
+   * @param QueryInterpretationConfig
+   */
+  public function setQueryInterpretationConfig(QueryInterpretationConfig $queryInterpretationConfig)
+  {
+    $this->queryInterpretationConfig = $queryInterpretationConfig;
+  }
+  /**
+   * @return QueryInterpretationConfig
+   */
+  public function getQueryInterpretationConfig()
+  {
+    return $this->queryInterpretationConfig;
   }
   /**
    * @param ScoringConfig

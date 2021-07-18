@@ -91,6 +91,8 @@ class Request extends \Google\Model
   protected $updateParagraphStyleDataType = '';
   protected $updateShapePropertiesType = UpdateShapePropertiesRequest::class;
   protected $updateShapePropertiesDataType = '';
+  protected $updateSlidePropertiesType = UpdateSlidePropertiesRequest::class;
+  protected $updateSlidePropertiesDataType = '';
   protected $updateSlidesPositionType = UpdateSlidesPositionRequest::class;
   protected $updateSlidesPositionDataType = '';
   protected $updateTableBorderPropertiesType = UpdateTableBorderPropertiesRequest::class;
@@ -609,6 +611,20 @@ class Request extends \Google\Model
   public function getUpdateShapeProperties()
   {
     return $this->updateShapeProperties;
+  }
+  /**
+   * @param UpdateSlidePropertiesRequest
+   */
+  public function setUpdateSlideProperties(UpdateSlidePropertiesRequest $updateSlideProperties)
+  {
+    $this->updateSlideProperties = $updateSlideProperties;
+  }
+  /**
+   * @return UpdateSlidePropertiesRequest
+   */
+  public function getUpdateSlideProperties()
+  {
+    return $this->updateSlideProperties;
   }
   /**
    * @param UpdateSlidesPositionRequest
