@@ -21,6 +21,7 @@ class GoogleCloudMlV1Scheduling extends \Google\Model
 {
   public $maxRunningTime;
   public $maxWaitTime;
+  public $priority;
 
   public function setMaxRunningTime($maxRunningTime)
   {
@@ -37,6 +38,14 @@ class GoogleCloudMlV1Scheduling extends \Google\Model
   public function getMaxWaitTime()
   {
     return $this->maxWaitTime;
+  }
+  public function setPriority($priority)
+  {
+    $this->priority = $priority;
+  }
+  public function getPriority()
+  {
+    return $this->priority;
   }
 }
 

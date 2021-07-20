@@ -24,6 +24,9 @@ class Finding extends \Google\Model
   public $createTime;
   public $eventTime;
   public $externalUri;
+  public $findingClass;
+  protected $indicatorType = Indicator::class;
+  protected $indicatorDataType = '';
   public $name;
   public $parent;
   public $resourceName;
@@ -72,6 +75,28 @@ class Finding extends \Google\Model
   public function getExternalUri()
   {
     return $this->externalUri;
+  }
+  public function setFindingClass($findingClass)
+  {
+    $this->findingClass = $findingClass;
+  }
+  public function getFindingClass()
+  {
+    return $this->findingClass;
+  }
+  /**
+   * @param Indicator
+   */
+  public function setIndicator(Indicator $indicator)
+  {
+    $this->indicator = $indicator;
+  }
+  /**
+   * @return Indicator
+   */
+  public function getIndicator()
+  {
+    return $this->indicator;
   }
   public function setName($name)
   {

@@ -26,6 +26,8 @@ class Build extends \Google\Collection
   protected $availableSecretsDataType = '';
   public $buildTriggerId;
   public $createTime;
+  protected $failureInfoType = FailureInfo::class;
+  protected $failureInfoDataType = '';
   public $finishTime;
   public $id;
   public $images;
@@ -101,6 +103,20 @@ class Build extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param FailureInfo
+   */
+  public function setFailureInfo(FailureInfo $failureInfo)
+  {
+    $this->failureInfo = $failureInfo;
+  }
+  /**
+   * @return FailureInfo
+   */
+  public function getFailureInfo()
+  {
+    return $this->failureInfo;
   }
   public function setFinishTime($finishTime)
   {

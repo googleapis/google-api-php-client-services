@@ -19,12 +19,21 @@ namespace Google\Service\AndroidProvisioningPartner;
 
 class DeviceClaim extends \Google\Model
 {
+  public $additionalService;
   public $ownerCompanyId;
   public $resellerId;
   public $sectionType;
   public $vacationModeExpireTime;
   public $vacationModeStartTime;
 
+  public function setAdditionalService($additionalService)
+  {
+    $this->additionalService = $additionalService;
+  }
+  public function getAdditionalService()
+  {
+    return $this->additionalService;
+  }
   public function setOwnerCompanyId($ownerCompanyId)
   {
     $this->ownerCompanyId = $ownerCompanyId;

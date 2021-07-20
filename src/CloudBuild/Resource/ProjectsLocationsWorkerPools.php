@@ -91,7 +91,7 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    * Lists `WorkerPool`s. (workerPools.listProjectsLocationsWorkerPools)
    *
    * @param string $parent Required. The parent of the collection of
-   * `WorkerPools`. Format: `projects/{project}/locations/location`.
+   * `WorkerPools`. Format: `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of `WorkerPool`s to return. The

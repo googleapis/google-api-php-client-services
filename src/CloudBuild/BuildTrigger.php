@@ -37,6 +37,8 @@ class BuildTrigger extends \Google\Collection
   protected $pubsubConfigType = PubsubConfig::class;
   protected $pubsubConfigDataType = '';
   public $resourceName;
+  protected $sourceToBuildType = GitRepoSource::class;
+  protected $sourceToBuildDataType = '';
   public $substitutions;
   public $tags;
   protected $triggerTemplateType = RepoSource::class;
@@ -173,6 +175,20 @@ class BuildTrigger extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * @param GitRepoSource
+   */
+  public function setSourceToBuild(GitRepoSource $sourceToBuild)
+  {
+    $this->sourceToBuild = $sourceToBuild;
+  }
+  /**
+   * @return GitRepoSource
+   */
+  public function getSourceToBuild()
+  {
+    return $this->sourceToBuild;
   }
   public function setSubstitutions($substitutions)
   {
