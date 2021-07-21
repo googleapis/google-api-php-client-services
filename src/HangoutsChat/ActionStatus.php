@@ -17,44 +17,28 @@
 
 namespace Google\Service\HangoutsChat;
 
-class ActionResponse extends \Google\Model
+class ActionStatus extends \Google\Model
 {
-  protected $dialogActionType = DialogAction::class;
-  protected $dialogActionDataType = '';
-  public $type;
-  public $url;
+  public $statusCode;
+  public $userFacingMessage;
 
-  /**
-   * @param DialogAction
-   */
-  public function setDialogAction(DialogAction $dialogAction)
+  public function setStatusCode($statusCode)
   {
-    $this->dialogAction = $dialogAction;
+    $this->statusCode = $statusCode;
   }
-  /**
-   * @return DialogAction
-   */
-  public function getDialogAction()
+  public function getStatusCode()
   {
-    return $this->dialogAction;
+    return $this->statusCode;
   }
-  public function setType($type)
+  public function setUserFacingMessage($userFacingMessage)
   {
-    $this->type = $type;
+    $this->userFacingMessage = $userFacingMessage;
   }
-  public function getType()
+  public function getUserFacingMessage()
   {
-    return $this->type;
-  }
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-  public function getUrl()
-  {
-    return $this->url;
+    return $this->userFacingMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ActionResponse::class, 'Google_Service_HangoutsChat_ActionResponse');
+class_alias(ActionStatus::class, 'Google_Service_HangoutsChat_ActionStatus');

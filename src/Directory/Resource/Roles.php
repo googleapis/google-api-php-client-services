@@ -88,7 +88,7 @@ class Roles extends \Google\Service\Resource
     return $this->call('list', [$params], RolesModel::class);
   }
   /**
-   * Patch role via Apiary Patch Orchestration (roles.patch)
+   * Patches a role. (roles.patch)
    *
    * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleId Immutable ID of the role.

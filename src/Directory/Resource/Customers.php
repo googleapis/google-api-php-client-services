@@ -43,7 +43,7 @@ class Customers extends \Google\Service\Resource
     return $this->call('get', [$params], CustomerModel::class);
   }
   /**
-   * Patch Customers via Apiary Patch Orchestration (customers.patch)
+   * Patches a customer. (customers.patch)
    *
    * @param string $customerKey Id of the customer to be updated
    * @param CustomerModel $postBody

@@ -30,7 +30,7 @@ use Google\Service\Directory\VerificationCodes as VerificationCodesModel;
 class VerificationCodes extends \Google\Service\Resource
 {
   /**
-   * Generate new backup verification codes for the user.
+   * Generates new backup verification codes for the user.
    * (verificationCodes.generate)
    *
    * @param string $userKey Email or immutable ID of the user
@@ -43,7 +43,7 @@ class VerificationCodes extends \Google\Service\Resource
     return $this->call('generate', [$params]);
   }
   /**
-   * Invalidate the current backup verification codes for the user.
+   * Invalidates the current backup verification codes for the user.
    * (verificationCodes.invalidate)
    *
    * @param string $userKey Email or immutable ID of the user

@@ -71,7 +71,7 @@ class Groups extends \Google\Service\Resource
     return $this->call('insert', [$params], Group::class);
   }
   /**
-   * Retrieve all groups of a domain or of a user given a userKey (paginated)
+   * Retrieves all groups of a domain or of a user given a userKey (paginated).
    * (groups.listGroups)
    *
    * @param array $optParams Optional parameters.

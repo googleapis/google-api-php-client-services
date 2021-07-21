@@ -118,8 +118,8 @@ class Chromeosdevices extends \Google\Service\Resource
     return $this->call('list', [$params], ChromeOsDevicesModel::class);
   }
   /**
-   * Move or insert multiple Chrome OS devices to an organizational unit. You can
-   * move up to 50 devices at once. (chromeosdevices.moveDevicesToOu)
+   * Moves or inserts multiple Chrome OS devices to an organizational unit. You
+   * can move up to 50 devices at once. (chromeosdevices.moveDevicesToOu)
    *
    * @param string $customerId Immutable ID of the Google Workspace account
    * @param string $orgUnitPath Full path of the target organizational unit or its

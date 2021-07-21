@@ -160,7 +160,7 @@ class Users extends \Google\Service\Resource
     return $this->call('patch', [$params], User::class);
   }
   /**
-   * Sign a user out of all web and device sessions and reset their sign-in
+   * Signs a user out of all web and device sessions and reset their sign-in
    * cookies. User will have to sign in by authenticating again. (users.signOut)
    *
    * @param string $userKey Identifies the target user in the API request. The
@@ -206,7 +206,7 @@ class Users extends \Google\Service\Resource
     return $this->call('update', [$params], User::class);
   }
   /**
-   * Watch for changes in users list (users.watch)
+   * Watches for changes in users list. (users.watch)
    *
    * @param Channel $postBody
    * @param array $optParams Optional parameters.

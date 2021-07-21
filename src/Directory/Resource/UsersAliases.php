@@ -77,7 +77,7 @@ class UsersAliases extends \Google\Service\Resource
     return $this->call('list', [$params], Aliases::class);
   }
   /**
-   * Watch for changes in users list. (aliases.watch)
+   * Watches for changes in users list. (aliases.watch)
    *
    * @param string $userKey Email or immutable ID of the user
    * @param Channel $postBody

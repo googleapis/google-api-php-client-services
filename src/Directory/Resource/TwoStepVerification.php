@@ -28,7 +28,7 @@ namespace Google\Service\Directory\Resource;
 class TwoStepVerification extends \Google\Service\Resource
 {
   /**
-   * Turn off 2-Step Verification for user. (twoStepVerification.turnOff)
+   * Turns off 2-Step Verification for user. (twoStepVerification.turnOff)
    *
    * @param string $userKey Identifies the user in the API request. The value can
    * be the user's primary email address, alias email address, or unique user ID.

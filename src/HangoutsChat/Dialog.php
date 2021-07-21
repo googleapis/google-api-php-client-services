@@ -17,44 +17,26 @@
 
 namespace Google\Service\HangoutsChat;
 
-class ActionResponse extends \Google\Model
+class Dialog extends \Google\Model
 {
-  protected $dialogActionType = DialogAction::class;
-  protected $dialogActionDataType = '';
-  public $type;
-  public $url;
+  protected $bodyType = GoogleAppsCardV1Card::class;
+  protected $bodyDataType = '';
 
   /**
-   * @param DialogAction
+   * @param GoogleAppsCardV1Card
    */
-  public function setDialogAction(DialogAction $dialogAction)
+  public function setBody(GoogleAppsCardV1Card $body)
   {
-    $this->dialogAction = $dialogAction;
+    $this->body = $body;
   }
   /**
-   * @return DialogAction
+   * @return GoogleAppsCardV1Card
    */
-  public function getDialogAction()
+  public function getBody()
   {
-    return $this->dialogAction;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
-  }
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-  public function getUrl()
-  {
-    return $this->url;
+    return $this->body;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ActionResponse::class, 'Google_Service_HangoutsChat_ActionResponse');
+class_alias(Dialog::class, 'Google_Service_HangoutsChat_Dialog');

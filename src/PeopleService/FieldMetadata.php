@@ -22,6 +22,7 @@ class FieldMetadata extends \Google\Model
   public $primary;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
+  public $sourcePrimary;
   public $verified;
 
   public function setPrimary($primary)
@@ -45,6 +46,14 @@ class FieldMetadata extends \Google\Model
   public function getSource()
   {
     return $this->source;
+  }
+  public function setSourcePrimary($sourcePrimary)
+  {
+    $this->sourcePrimary = $sourcePrimary;
+  }
+  public function getSourcePrimary()
+  {
+    return $this->sourcePrimary;
   }
   public function setVerified($verified)
   {

@@ -146,8 +146,7 @@ class V1 extends \Google\Service\Resource
    * This method implements the google.longrunning.Operation, which allows you to
    * track the operation status. We recommend intervals of at least 2 seconds with
    * exponential backoff retry to poll the operation result. The metadata contains
-   * the request to help callers to map responses to requests.
-   * (v1.analyzeIamPolicyLongrunning)
+   * the metadata for the long-running operation. (v1.analyzeIamPolicyLongrunning)
    *
    * @param string $scope Required. The relative name of the root asset. Only
    * resources and IAM policies within the scope will be analyzed. This can only

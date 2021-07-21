@@ -100,7 +100,7 @@ class ResourcesBuildings extends \Google\Service\Resource
     return $this->call('list', [$params], Buildings::class);
   }
   /**
-   * Patches a building via Apiary Patch Orchestration. (buildings.patch)
+   * Patches a building. (buildings.patch)
    *
    * @param string $customer The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`

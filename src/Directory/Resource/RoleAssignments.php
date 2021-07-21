@@ -44,7 +44,7 @@ class RoleAssignments extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Retrieve a role assignment. (roleAssignments.get)
+   * Retrieves a role assignment. (roleAssignments.get)
    *
    * @param string $customer Immutable ID of the Google Workspace account.
    * @param string $roleAssignmentId Immutable ID of the role assignment.

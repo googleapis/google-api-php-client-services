@@ -97,7 +97,7 @@ class ResourcesFeatures extends \Google\Service\Resource
     return $this->call('list', [$params], Features::class);
   }
   /**
-   * Patches a feature via Apiary Patch Orchestration. (features.patch)
+   * Patches a feature. (features.patch)
    *
    * @param string $customer The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`

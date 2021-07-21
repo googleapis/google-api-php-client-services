@@ -56,7 +56,7 @@ class EditsBundles extends \Google\Service\Resource
    * @param string $editId Identifier of the edit.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool ackBundleInstallationWarning Must be set to true if the
+   * @opt_param bool ackBundleInstallationWarning Must be set to true if the app
    * bundle installation may trigger a warning on user devices (for example, if
    * installation size may be over a threshold, typically 100 MB).
    * @return Bundle
