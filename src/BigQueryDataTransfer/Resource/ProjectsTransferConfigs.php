@@ -111,8 +111,8 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
     return $this->call('get', [$params], TransferConfig::class);
   }
   /**
-   * Returns information about all data transfers in the project.
-   * (transferConfigs.listProjectsTransferConfigs)
+   * Returns information about all transfer configs owned by a project in the
+   * specified location. (transferConfigs.listProjectsTransferConfigs)
    *
    * @param string $parent Required. The BigQuery project id for which data
    * sources should be returned: `projects/{project_id}` or

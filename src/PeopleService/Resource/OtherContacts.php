@@ -59,8 +59,10 @@ class OtherContacts extends \Google\Service\Resource
    * `sync_token` is specified, resources deleted since the last sync will be
    * returned as a person with `PersonMetadata.deleted` set to true. When the
    * `page_token` or `sync_token` is specified, all other request parameters must
-   * match the first call. See example usage at [List the user's other contacts
-   * that have changed](/people/v1/other-
+   * match the first call. Writes may have a propagation delay of several minutes
+   * for sync requests. Incremental syncs are not intended for read-after-write
+   * use cases. See example usage at [List the user's other contacts that have
+   * changed](/people/v1/other-
    * contacts#list_the_users_other_contacts_that_have_changed).
    * (otherContacts.listOtherContacts)
    *

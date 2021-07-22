@@ -39,7 +39,9 @@ class PeopleConnections extends \Google\Service\Resource
    * specified, resources deleted since the last sync will be returned as a person
    * with `PersonMetadata.deleted` set to true. When the `page_token` or
    * `sync_token` is specified, all other request parameters must match the first
-   * call. See example usage at [List the user's contacts that have
+   * call. Writes may have a propagation delay of several minutes for sync
+   * requests. Incremental syncs are not intended for read-after-write use cases.
+   * See example usage at [List the user's contacts that have
    * changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
    * (connections.listPeopleConnections)
    *

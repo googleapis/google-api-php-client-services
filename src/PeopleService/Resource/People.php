@@ -229,7 +229,9 @@ class People extends \Google\Service\Resource
    * user's domain directory. When the `sync_token` is specified, resources
    * deleted since the last sync will be returned as a person with
    * `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token`
-   * is specified, all other request parameters must match the first call. See
+   * is specified, all other request parameters must match the first call. Writes
+   * may have a propagation delay of several minutes for sync requests.
+   * Incremental syncs are not intended for read-after-write use cases. See
    * example usage at [List the directory people that have
    * changed](/people/v1/directory#list_the_directory_people_that_have_changed).
    * (people.listDirectoryPeople)
