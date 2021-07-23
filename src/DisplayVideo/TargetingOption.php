@@ -27,6 +27,8 @@ class TargetingOption extends \Google\Model
   protected $authorizedSellerStatusDetailsDataType = '';
   protected $browserDetailsType = BrowserTargetingOptionDetails::class;
   protected $browserDetailsDataType = '';
+  protected $businessChainDetailsType = BusinessChainTargetingOptionDetails::class;
+  protected $businessChainDetailsDataType = '';
   protected $carrierAndIspDetailsType = CarrierAndIspTargetingOptionDetails::class;
   protected $carrierAndIspDetailsDataType = '';
   protected $categoryDetailsType = CategoryTargetingOptionDetails::class;
@@ -56,12 +58,16 @@ class TargetingOption extends \Google\Model
   public $name;
   protected $nativeContentPositionDetailsType = NativeContentPositionTargetingOptionDetails::class;
   protected $nativeContentPositionDetailsDataType = '';
+  protected $omidDetailsType = OmidTargetingOptionDetails::class;
+  protected $omidDetailsDataType = '';
   protected $onScreenPositionDetailsType = OnScreenPositionTargetingOptionDetails::class;
   protected $onScreenPositionDetailsDataType = '';
   protected $operatingSystemDetailsType = OperatingSystemTargetingOptionDetails::class;
   protected $operatingSystemDetailsDataType = '';
   protected $parentalStatusDetailsType = ParentalStatusTargetingOptionDetails::class;
   protected $parentalStatusDetailsDataType = '';
+  protected $poiDetailsType = PoiTargetingOptionDetails::class;
+  protected $poiDetailsDataType = '';
   protected $sensitiveCategoryDetailsType = SensitiveCategoryTargetingOptionDetails::class;
   protected $sensitiveCategoryDetailsDataType = '';
   protected $subExchangeDetailsType = SubExchangeTargetingOptionDetails::class;
@@ -130,6 +136,20 @@ class TargetingOption extends \Google\Model
   public function getBrowserDetails()
   {
     return $this->browserDetails;
+  }
+  /**
+   * @param BusinessChainTargetingOptionDetails
+   */
+  public function setBusinessChainDetails(BusinessChainTargetingOptionDetails $businessChainDetails)
+  {
+    $this->businessChainDetails = $businessChainDetails;
+  }
+  /**
+   * @return BusinessChainTargetingOptionDetails
+   */
+  public function getBusinessChainDetails()
+  {
+    return $this->businessChainDetails;
   }
   /**
    * @param CarrierAndIspTargetingOptionDetails
@@ -336,6 +356,20 @@ class TargetingOption extends \Google\Model
     return $this->nativeContentPositionDetails;
   }
   /**
+   * @param OmidTargetingOptionDetails
+   */
+  public function setOmidDetails(OmidTargetingOptionDetails $omidDetails)
+  {
+    $this->omidDetails = $omidDetails;
+  }
+  /**
+   * @return OmidTargetingOptionDetails
+   */
+  public function getOmidDetails()
+  {
+    return $this->omidDetails;
+  }
+  /**
    * @param OnScreenPositionTargetingOptionDetails
    */
   public function setOnScreenPositionDetails(OnScreenPositionTargetingOptionDetails $onScreenPositionDetails)
@@ -376,6 +410,20 @@ class TargetingOption extends \Google\Model
   public function getParentalStatusDetails()
   {
     return $this->parentalStatusDetails;
+  }
+  /**
+   * @param PoiTargetingOptionDetails
+   */
+  public function setPoiDetails(PoiTargetingOptionDetails $poiDetails)
+  {
+    $this->poiDetails = $poiDetails;
+  }
+  /**
+   * @return PoiTargetingOptionDetails
+   */
+  public function getPoiDetails()
+  {
+    return $this->poiDetails;
   }
   /**
    * @param SensitiveCategoryTargetingOptionDetails
