@@ -23,6 +23,10 @@ class GoogleCloudRetailV2PriceInfo extends \Google\Model
   public $currencyCode;
   public $originalPrice;
   public $price;
+  public $priceEffectiveTime;
+  public $priceExpireTime;
+  protected $priceRangeType = GoogleCloudRetailV2PriceInfoPriceRange::class;
+  protected $priceRangeDataType = '';
 
   public function setCost($cost)
   {
@@ -55,6 +59,36 @@ class GoogleCloudRetailV2PriceInfo extends \Google\Model
   public function getPrice()
   {
     return $this->price;
+  }
+  public function setPriceEffectiveTime($priceEffectiveTime)
+  {
+    $this->priceEffectiveTime = $priceEffectiveTime;
+  }
+  public function getPriceEffectiveTime()
+  {
+    return $this->priceEffectiveTime;
+  }
+  public function setPriceExpireTime($priceExpireTime)
+  {
+    $this->priceExpireTime = $priceExpireTime;
+  }
+  public function getPriceExpireTime()
+  {
+    return $this->priceExpireTime;
+  }
+  /**
+   * @param GoogleCloudRetailV2PriceInfoPriceRange
+   */
+  public function setPriceRange(GoogleCloudRetailV2PriceInfoPriceRange $priceRange)
+  {
+    $this->priceRange = $priceRange;
+  }
+  /**
+   * @return GoogleCloudRetailV2PriceInfoPriceRange
+   */
+  public function getPriceRange()
+  {
+    return $this->priceRange;
   }
 }
 

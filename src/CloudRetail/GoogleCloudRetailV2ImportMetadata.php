@@ -21,6 +21,8 @@ class GoogleCloudRetailV2ImportMetadata extends \Google\Model
 {
   public $createTime;
   public $failureCount;
+  public $notificationPubsubTopic;
+  public $requestId;
   public $successCount;
   public $updateTime;
 
@@ -39,6 +41,22 @@ class GoogleCloudRetailV2ImportMetadata extends \Google\Model
   public function getFailureCount()
   {
     return $this->failureCount;
+  }
+  public function setNotificationPubsubTopic($notificationPubsubTopic)
+  {
+    $this->notificationPubsubTopic = $notificationPubsubTopic;
+  }
+  public function getNotificationPubsubTopic()
+  {
+    return $this->notificationPubsubTopic;
+  }
+  public function setRequestId($requestId)
+  {
+    $this->requestId = $requestId;
+  }
+  public function getRequestId()
+  {
+    return $this->requestId;
   }
   public function setSuccessCount($successCount)
   {

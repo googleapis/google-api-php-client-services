@@ -22,6 +22,8 @@ class GoogleCloudRetailV2BigQuerySource extends \Google\Model
   public $dataSchema;
   public $datasetId;
   public $gcsStagingDir;
+  protected $partitionDateType = GoogleTypeDate::class;
+  protected $partitionDateDataType = '';
   public $projectId;
   public $tableId;
 
@@ -48,6 +50,20 @@ class GoogleCloudRetailV2BigQuerySource extends \Google\Model
   public function getGcsStagingDir()
   {
     return $this->gcsStagingDir;
+  }
+  /**
+   * @param GoogleTypeDate
+   */
+  public function setPartitionDate(GoogleTypeDate $partitionDate)
+  {
+    $this->partitionDate = $partitionDate;
+  }
+  /**
+   * @return GoogleTypeDate
+   */
+  public function getPartitionDate()
+  {
+    return $this->partitionDate;
   }
   public function setProjectId($projectId)
   {

@@ -24,9 +24,14 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   protected $attributesDataType = 'map';
   public $attributionToken;
   public $cartId;
+  protected $completionDetailType = GoogleCloudRetailV2CompletionDetail::class;
+  protected $completionDetailDataType = '';
   public $eventTime;
   public $eventType;
   public $experimentIds;
+  public $filter;
+  public $offset;
+  public $orderBy;
   public $pageCategories;
   public $pageViewId;
   protected $productDetailsType = GoogleCloudRetailV2ProductDetail::class;
@@ -35,6 +40,7 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   protected $purchaseTransactionDataType = '';
   public $referrerUri;
   public $searchQuery;
+  public $sessionId;
   public $uri;
   protected $userInfoType = GoogleCloudRetailV2UserInfo::class;
   protected $userInfoDataType = '';
@@ -70,6 +76,20 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   {
     return $this->cartId;
   }
+  /**
+   * @param GoogleCloudRetailV2CompletionDetail
+   */
+  public function setCompletionDetail(GoogleCloudRetailV2CompletionDetail $completionDetail)
+  {
+    $this->completionDetail = $completionDetail;
+  }
+  /**
+   * @return GoogleCloudRetailV2CompletionDetail
+   */
+  public function getCompletionDetail()
+  {
+    return $this->completionDetail;
+  }
   public function setEventTime($eventTime)
   {
     $this->eventTime = $eventTime;
@@ -93,6 +113,30 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public function getExperimentIds()
   {
     return $this->experimentIds;
+  }
+  public function setFilter($filter)
+  {
+    $this->filter = $filter;
+  }
+  public function getFilter()
+  {
+    return $this->filter;
+  }
+  public function setOffset($offset)
+  {
+    $this->offset = $offset;
+  }
+  public function getOffset()
+  {
+    return $this->offset;
+  }
+  public function setOrderBy($orderBy)
+  {
+    $this->orderBy = $orderBy;
+  }
+  public function getOrderBy()
+  {
+    return $this->orderBy;
   }
   public function setPageCategories($pageCategories)
   {
@@ -153,6 +197,14 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public function getSearchQuery()
   {
     return $this->searchQuery;
+  }
+  public function setSessionId($sessionId)
+  {
+    $this->sessionId = $sessionId;
+  }
+  public function getSessionId()
+  {
+    return $this->sessionId;
   }
   public function setUri($uri)
   {

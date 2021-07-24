@@ -23,6 +23,9 @@ class GoogleCloudRetailV2ImportProductsRequest extends \Google\Model
   protected $errorsConfigDataType = '';
   protected $inputConfigType = GoogleCloudRetailV2ProductInputConfig::class;
   protected $inputConfigDataType = '';
+  public $notificationPubsubTopic;
+  public $reconciliationMode;
+  public $requestId;
   public $updateMask;
 
   /**
@@ -52,6 +55,30 @@ class GoogleCloudRetailV2ImportProductsRequest extends \Google\Model
   public function getInputConfig()
   {
     return $this->inputConfig;
+  }
+  public function setNotificationPubsubTopic($notificationPubsubTopic)
+  {
+    $this->notificationPubsubTopic = $notificationPubsubTopic;
+  }
+  public function getNotificationPubsubTopic()
+  {
+    return $this->notificationPubsubTopic;
+  }
+  public function setReconciliationMode($reconciliationMode)
+  {
+    $this->reconciliationMode = $reconciliationMode;
+  }
+  public function getReconciliationMode()
+  {
+    return $this->reconciliationMode;
+  }
+  public function setRequestId($requestId)
+  {
+    $this->requestId = $requestId;
+  }
+  public function getRequestId()
+  {
+    return $this->requestId;
   }
   public function setUpdateMask($updateMask)
   {

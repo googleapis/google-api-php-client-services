@@ -17,8 +17,12 @@
 
 namespace Google\Service\CloudRetail\Resource;
 
+use Google\Service\CloudRetail\GoogleCloudRetailV2AddFulfillmentPlacesRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2ImportProductsRequest;
+use Google\Service\CloudRetail\GoogleCloudRetailV2ListProductsResponse;
 use Google\Service\CloudRetail\GoogleCloudRetailV2Product;
+use Google\Service\CloudRetail\GoogleCloudRetailV2RemoveFulfillmentPlacesRequest;
+use Google\Service\CloudRetail\GoogleCloudRetailV2SetInventoryRequest;
 use Google\Service\CloudRetail\GoogleLongrunningOperation;
 use Google\Service\CloudRetail\GoogleProtobufEmpty;
 
@@ -32,6 +36,32 @@ use Google\Service\CloudRetail\GoogleProtobufEmpty;
  */
 class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
 {
+  /**
+   * Incrementally adds place IDs to Product.fulfillment_info.place_ids. This
+   * process is asynchronous and does not require the Product to exist before
+   * updating fulfillment information. If the request is valid, the update will be
+   * enqueued and processed downstream. As a consequence, when a response is
+   * returned, the added place IDs are not immediately manifested in the Product
+   * queried by GetProduct or ListProducts. This feature is only available for
+   * users who have Retail Search enabled. Contact Retail Support (retail-search-
+   * support@google.com) if you are interested in using Retail Search.
+   * (products.addFulfillmentPlaces)
+   *
+   * @param string $product Required. Full resource name of Product, such as `proj
+   * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
+   * ts/some_product_id`. If the caller does not have permission to access the
+   * Product, regardless of whether or not it exists, a PERMISSION_DENIED error is
+   * returned.
+   * @param GoogleCloudRetailV2AddFulfillmentPlacesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function addFulfillmentPlaces($product, GoogleCloudRetailV2AddFulfillmentPlacesRequest $postBody, $optParams = [])
+  {
+    $params = ['product' => $product, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('addFulfillmentPlaces', [$params], GoogleLongrunningOperation::class);
+  }
   /**
    * Creates a Product. (products.create)
    *
@@ -115,6 +145,54 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
     return $this->call('import', [$params], GoogleLongrunningOperation::class);
   }
   /**
+   * Gets a list of Products.
+   * (products.listProjectsLocationsCatalogsBranchesProducts)
+   *
+   * @param string $parent Required. The parent branch resource name, such as
+   * `projects/locations/global/catalogs/default_catalog/branches/0`. Use
+   * `default_branch` as the branch ID, to list products under the default branch.
+   * If the caller does not have permission to list Products under this branch,
+   * regardless of whether or not this branch exists, a PERMISSION_DENIED error is
+   * returned.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter A filter to apply on the list results. Supported
+   * features: * List all the products under the parent branch if filter is unset.
+   * * List Product.Type.VARIANT Products sharing the same Product.Type.PRIMARY
+   * Product. For example: `primary_product_id = "some_product_id"` * List
+   * Products bundled in a Product.Type.COLLECTION Product. For example:
+   * `collection_product_id = "some_product_id"` * List Products with a partibular
+   * type. For example: `type = "PRIMARY"` `type = "VARIANT"` `type =
+   * "COLLECTION"` If the field is unrecognizable, an INVALID_ARGUMENT error is
+   * returned. If the specified Product.Type.PRIMARY Product or
+   * Product.Type.COLLECTION Product does not exist, a NOT_FOUND error is
+   * returned.
+   * @opt_param int pageSize Maximum number of Products to return. If unspecified,
+   * defaults to 100. The maximum allowed value is 1000. Values above 1000 will be
+   * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is
+   * returned.
+   * @opt_param string pageToken A page token
+   * ListProductsResponse.next_page_token, received from a previous
+   * ProductService.ListProducts call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to
+   * ProductService.ListProducts must match the call that provided the page token.
+   * Otherwise, an INVALID_ARGUMENT error is returned.
+   * @opt_param string readMask The fields of Product to return in the responses.
+   * If not set or empty, the following fields are returned: * Product.name *
+   * Product.id * Product.title * Product.uri * Product.images *
+   * Product.price_info * Product.brands If "*" is provided, all fields are
+   * returned. Product.name is always returned no matter what mask is set. If an
+   * unsupported or unknown field is provided, an INVALID_ARGUMENT error is
+   * returned.
+   * @return GoogleCloudRetailV2ListProductsResponse
+   */
+  public function listProjectsLocationsCatalogsBranchesProducts($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudRetailV2ListProductsResponse::class);
+  }
+  /**
    * Updates a Product. (products.patch)
    *
    * @param string $name Immutable. Full resource name of the product, such as `pr
@@ -137,6 +215,66 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleCloudRetailV2Product::class);
+  }
+  /**
+   * Incrementally removes place IDs from a Product.fulfillment_info.place_ids.
+   * This process is asynchronous and does not require the Product to exist before
+   * updating fulfillment information. If the request is valid, the update will be
+   * enqueued and processed downstream. As a consequence, when a response is
+   * returned, the removed place IDs are not immediately manifested in the Product
+   * queried by GetProduct or ListProducts. This feature is only available for
+   * users who have Retail Search enabled. Contact Retail Support (retail-search-
+   * support@google.com) if you are interested in using Retail Search.
+   * (products.removeFulfillmentPlaces)
+   *
+   * @param string $product Required. Full resource name of Product, such as `proj
+   * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
+   * ts/some_product_id`. If the caller does not have permission to access the
+   * Product, regardless of whether or not it exists, a PERMISSION_DENIED error is
+   * returned.
+   * @param GoogleCloudRetailV2RemoveFulfillmentPlacesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function removeFulfillmentPlaces($product, GoogleCloudRetailV2RemoveFulfillmentPlacesRequest $postBody, $optParams = [])
+  {
+    $params = ['product' => $product, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('removeFulfillmentPlaces', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Updates inventory information for a Product while respecting the last update
+   * timestamps of each inventory field. This process is asynchronous and does not
+   * require the Product to exist before updating fulfillment information. If the
+   * request is valid, the update will be enqueued and processed downstream. As a
+   * consequence, when a response is returned, updates are not immediately
+   * manifested in the Product queried by GetProduct or ListProducts. When
+   * inventory is updated with CreateProduct and UpdateProduct, the specified
+   * inventory field value(s) will overwrite any existing value(s) while ignoring
+   * the last update time for this field. Furthermore, the last update time for
+   * the specified inventory fields will be overwritten to the time of the
+   * CreateProduct or UpdateProduct request. If no inventory fields are set in
+   * CreateProductRequest.product, then any pre-existing inventory information for
+   * this product will be used. If no inventory fields are set in
+   * UpdateProductRequest.set_mask, then any existing inventory information will
+   * be preserved. Pre-existing inventory information can only be updated with
+   * SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature
+   * is only available for users who have Retail Search enabled. Contact Retail
+   * Support (retail-search-support@google.com) if you are interested in using
+   * Retail Search. (products.setInventory)
+   *
+   * @param string $name Immutable. Full resource name of the product, such as `pr
+   * ojects/locations/global/catalogs/default_catalog/branches/default_branch/prod
+   * ucts/product_id`. The branch ID must be "default_branch".
+   * @param GoogleCloudRetailV2SetInventoryRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function setInventory($name, GoogleCloudRetailV2SetInventoryRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setInventory', [$params], GoogleLongrunningOperation::class);
   }
 }
 

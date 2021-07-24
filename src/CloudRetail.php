@@ -43,6 +43,7 @@ class CloudRetail extends \Google\Service
   public $projects_locations_catalogs;
   public $projects_locations_catalogs_branches_operations;
   public $projects_locations_catalogs_branches_products;
+  public $projects_locations_catalogs_completionData;
   public $projects_locations_catalogs_operations;
   public $projects_locations_catalogs_placements;
   public $projects_locations_catalogs_userEvents;
@@ -70,7 +71,52 @@ class CloudRetail extends \Google\Service
         'catalogs',
         [
           'methods' => [
-            'list' => [
+            'completeQuery' => [
+              'path' => 'v2/{+catalog}:completeQuery',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'catalog' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'dataset' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'deviceType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'languageCodes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'maxSuggestions' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'query' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'visitorId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'getDefaultBranch' => [
+              'path' => 'v2/{+catalog}:getDefaultBranch',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'catalog' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
               'path' => 'v2/{+parent}/catalogs',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -100,6 +146,16 @@ class CloudRetail extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'setDefaultBranch' => [
+              'path' => 'v2/{+catalog}:setDefaultBranch',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'catalog' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -132,7 +188,17 @@ class CloudRetail extends \Google\Service
         'products',
         [
           'methods' => [
-            'create' => [
+            'addFulfillmentPlaces' => [
+              'path' => 'v2/{+product}:addFulfillmentPlaces',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'product' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v2/{+parent}/products',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -176,6 +242,32 @@ class CloudRetail extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/products',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'readMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'patch' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'PATCH',
@@ -192,6 +284,46 @@ class CloudRetail extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'removeFulfillmentPlaces' => [
+              'path' => 'v2/{+product}:removeFulfillmentPlaces',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'product' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'setInventory' => [
+              'path' => 'v2/{+name}:setInventory',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_catalogs_completionData = new CloudRetail\Resource\ProjectsLocationsCatalogsCompletionData(
+        $this,
+        $this->serviceName,
+        'completionData',
+        [
+          'methods' => [
+            'import' => [
+              'path' => 'v2/{+parent}/completionData:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -248,6 +380,16 @@ class CloudRetail extends \Google\Service
           'methods' => [
             'predict' => [
               'path' => 'v2/{+placement}:predict',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'placement' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'search' => [
+              'path' => 'v2/{+placement}:search',
               'httpMethod' => 'POST',
               'parameters' => [
                 'placement' => [

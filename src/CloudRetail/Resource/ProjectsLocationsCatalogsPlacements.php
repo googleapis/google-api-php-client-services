@@ -19,6 +19,8 @@ namespace Google\Service\CloudRetail\Resource;
 
 use Google\Service\CloudRetail\GoogleCloudRetailV2PredictRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2PredictResponse;
+use Google\Service\CloudRetail\GoogleCloudRetailV2SearchRequest;
+use Google\Service\CloudRetail\GoogleCloudRetailV2SearchResponse;
 
 /**
  * The "placements" collection of methods.
@@ -50,6 +52,26 @@ class ProjectsLocationsCatalogsPlacements extends \Google\Service\Resource
     $params = ['placement' => $placement, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('predict', [$params], GoogleCloudRetailV2PredictResponse::class);
+  }
+  /**
+   * Performs a search. This feature is only available for users who have Retail
+   * Search enabled. Contact Retail Support (retail-search-support@google.com) if
+   * you are interested in using Retail Search. (placements.search)
+   *
+   * @param string $placement Required. The resource name of the search engine
+   * placement, such as `projects/locations/global/catalogs/default_catalog/placem
+   * ents/default_search`. This field is used to identify the set of models that
+   * will be used to make the search. We currently support one placement with the
+   * following ID: * `default_search`.
+   * @param GoogleCloudRetailV2SearchRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudRetailV2SearchResponse
+   */
+  public function search($placement, GoogleCloudRetailV2SearchRequest $postBody, $optParams = [])
+  {
+    $params = ['placement' => $placement, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('search', [$params], GoogleCloudRetailV2SearchResponse::class);
   }
 }
 
