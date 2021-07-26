@@ -28,6 +28,10 @@ use Google\Service\ShoppingContent\AccountsListLinksResponse;
 use Google\Service\ShoppingContent\AccountsListResponse;
 use Google\Service\ShoppingContent\AccountsUpdateLabelsRequest;
 use Google\Service\ShoppingContent\AccountsUpdateLabelsResponse;
+use Google\Service\ShoppingContent\RequestPhoneVerificationRequest;
+use Google\Service\ShoppingContent\RequestPhoneVerificationResponse;
+use Google\Service\ShoppingContent\VerifyPhoneNumberRequest;
+use Google\Service\ShoppingContent\VerifyPhoneNumberResponse;
 
 /**
  * The "accounts" collection of methods.
@@ -204,6 +208,24 @@ class Accounts extends \Google\Service\Resource
     return $this->call('listlinks', [$params], AccountsListLinksResponse::class);
   }
   /**
+   * Request verification code to start phone verification.
+   * (accounts.requestphoneverification)
+   *
+   * @param string $merchantId Required. The ID of the managing account. If this
+   * parameter is not the same as accountId, then this account must be a multi-
+   * client account and accountId must be the ID of a sub-account of this account.
+   * @param string $accountId Required. The ID of the account.
+   * @param RequestPhoneVerificationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RequestPhoneVerificationResponse
+   */
+  public function requestphoneverification($merchantId, $accountId, RequestPhoneVerificationRequest $postBody, $optParams = [])
+  {
+    $params = ['merchantId' => $merchantId, 'accountId' => $accountId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('requestphoneverification', [$params], RequestPhoneVerificationResponse::class);
+  }
+  /**
    * Updates a Merchant Center account. Any fields that are not provided are
    * deleted from the resource. (accounts.update)
    *
@@ -236,6 +258,24 @@ class Accounts extends \Google\Service\Resource
     $params = ['merchantId' => $merchantId, 'accountId' => $accountId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('updatelabels', [$params], AccountsUpdateLabelsResponse::class);
+  }
+  /**
+   * Validates verification code to verify phone number for the account.
+   * (accounts.verifyphonenumber)
+   *
+   * @param string $merchantId Required. The ID of the managing account. If this
+   * parameter is not the same as accountId, then this account must be a multi-
+   * client account and accountId must be the ID of a sub-account of this account.
+   * @param string $accountId Required. The ID of the account.
+   * @param VerifyPhoneNumberRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return VerifyPhoneNumberResponse
+   */
+  public function verifyphonenumber($merchantId, $accountId, VerifyPhoneNumberRequest $postBody, $optParams = [])
+  {
+    $params = ['merchantId' => $merchantId, 'accountId' => $accountId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('verifyphonenumber', [$params], VerifyPhoneNumberResponse::class);
   }
 }
 
