@@ -53,7 +53,7 @@ class Accounts extends \Google\Service\Resource
    * empty notification_types (accounts.updateNotificationSetting)
    *
    * @param string $name Required. The resource name this setting is for. This is
-   * of the form `accounts/{account_id}/notifications/setting`.
+   * of the form `accounts/{account_id}/notificationSetting`.
    * @param NotificationSetting $postBody
    * @param array $optParams Optional parameters.
    *

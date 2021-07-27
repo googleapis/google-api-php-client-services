@@ -37,6 +37,7 @@ class BuildTrigger extends \Google\Collection
   protected $pubsubConfigType = PubsubConfig::class;
   protected $pubsubConfigDataType = '';
   public $resourceName;
+  public $serviceAccount;
   protected $sourceToBuildType = GitRepoSource::class;
   protected $sourceToBuildDataType = '';
   public $substitutions;
@@ -175,6 +176,14 @@ class BuildTrigger extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   /**
    * @param GitRepoSource

@@ -19,6 +19,7 @@ namespace Google\Service\CloudBuild;
 
 class GitHubEventsConfig extends \Google\Model
 {
+  public $enterpriseConfigResourceName;
   public $installationId;
   public $name;
   public $owner;
@@ -27,6 +28,14 @@ class GitHubEventsConfig extends \Google\Model
   protected $pushType = PushFilter::class;
   protected $pushDataType = '';
 
+  public function setEnterpriseConfigResourceName($enterpriseConfigResourceName)
+  {
+    $this->enterpriseConfigResourceName = $enterpriseConfigResourceName;
+  }
+  public function getEnterpriseConfigResourceName()
+  {
+    return $this->enterpriseConfigResourceName;
+  }
   public function setInstallationId($installationId)
   {
     $this->installationId = $installationId;
