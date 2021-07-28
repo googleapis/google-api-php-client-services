@@ -32,6 +32,7 @@ class GoogleCloudApigeeV1Deployment extends \Google\Collection
   public $revision;
   protected $routeConflictsType = GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict::class;
   protected $routeConflictsDataType = 'array';
+  public $serviceAccount;
   public $state;
 
   public function setApiProxy($apiProxy)
@@ -121,6 +122,14 @@ class GoogleCloudApigeeV1Deployment extends \Google\Collection
   public function getRouteConflicts()
   {
     return $this->routeConflicts;
+  }
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   public function setState($state)
   {

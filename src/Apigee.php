@@ -1824,6 +1824,10 @@ class Apigee extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'serviceAccount' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getDeployments' => [
               'path' => 'v1/{+name}/deployments',
@@ -2584,6 +2588,10 @@ class Apigee extends \Google\Service
                 'override' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'serviceAccount' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'getDeployments' => [

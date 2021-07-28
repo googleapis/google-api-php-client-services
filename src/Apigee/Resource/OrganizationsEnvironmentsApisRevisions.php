@@ -66,6 +66,10 @@ class OrganizationsEnvironmentsApisRevisions extends \Google\Service\Resource
    * be used to examine routing changes before issuing the deployment request, and
    * its response will indicate if a sequenced rollout is recommended for the
    * deployment.
+   * @opt_param string serviceAccount Google Cloud IAM service account. The
+   * service account represents the identity of the deployed proxy, and determines
+   * what permissions it has. The format must be
+   * `{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`.
    * @return GoogleCloudApigeeV1Deployment
    */
   public function deploy($name, $optParams = [])

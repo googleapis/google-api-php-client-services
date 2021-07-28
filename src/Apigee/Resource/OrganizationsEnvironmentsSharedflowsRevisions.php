@@ -51,6 +51,10 @@ class OrganizationsEnvironmentsSharedflowsRevisions extends \Google\Service\Reso
    * `override` to `true` to replace other deployed revisions. By default,
    * `override` is `false` and the deployment is rejected if other revisions of
    * the shared flow are deployed in the environment.
+   * @opt_param string serviceAccount Google Cloud IAM service account. The
+   * service account represents the identity of the deployed proxy, and determines
+   * what permissions it has. The format must be
+   * `{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`.
    * @return GoogleCloudApigeeV1Deployment
    */
   public function deploy($name, $optParams = [])

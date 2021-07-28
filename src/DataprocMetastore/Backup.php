@@ -17,12 +17,14 @@
 
 namespace Google\Service\DataprocMetastore;
 
-class Backup extends \Google\Model
+class Backup extends \Google\Collection
 {
+  protected $collection_key = 'restoringServices';
   public $createTime;
   public $description;
   public $endTime;
   public $name;
+  public $restoringServices;
   protected $serviceRevisionType = Service::class;
   protected $serviceRevisionDataType = '';
   public $state;
@@ -58,6 +60,14 @@ class Backup extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setRestoringServices($restoringServices)
+  {
+    $this->restoringServices = $restoringServices;
+  }
+  public function getRestoringServices()
+  {
+    return $this->restoringServices;
   }
   /**
    * @param Service

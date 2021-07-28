@@ -68,7 +68,7 @@ class ProjectsLocationsExecutions extends \Google\Service\Resource
    * Gets details of executions (executions.get)
    *
    * @param string $name Required. Format:
-   * `projects/{project_id}/locations/{location}/schedules/{execution_id}`
+   * `projects/{project_id}/locations/{location}/executions/{execution_id}`
    * @param array $optParams Optional parameters.
    * @return Execution
    */

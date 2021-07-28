@@ -20,12 +20,21 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ApiProxy extends \Google\Collection
 {
   protected $collection_key = 'revision';
+  public $labels;
   public $latestRevisionId;
   protected $metaDataType = GoogleCloudApigeeV1EntityMetadata::class;
   protected $metaDataDataType = '';
   public $name;
   public $revision;
 
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  public function getLabels()
+  {
+    return $this->labels;
+  }
   public function setLatestRevisionId($latestRevisionId)
   {
     $this->latestRevisionId = $latestRevisionId;
