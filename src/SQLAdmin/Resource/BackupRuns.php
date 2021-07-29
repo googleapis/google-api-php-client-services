@@ -37,7 +37,7 @@ class BackupRuns extends \Google\Service\Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param string $id The ID of the Backup Run to delete. To find a Backup Run
+   * @param string $id The ID of the backup run to delete. To find a backup run
    * ID, use the list method.
    * @param array $optParams Optional parameters.
    * @return Operation
@@ -55,7 +55,7 @@ class BackupRuns extends \Google\Service\Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
-   * @param string $id The ID of this Backup Run.
+   * @param string $id The ID of this backup run.
    * @param array $optParams Optional parameters.
    * @return BackupRun
    */
@@ -66,8 +66,7 @@ class BackupRuns extends \Google\Service\Resource
     return $this->call('get', [$params], BackupRun::class);
   }
   /**
-   * Creates a new backup run on demand. This method is applicable only to Second
-   * Generation instances. (backupRuns.insert)
+   * Creates a new backup run on demand. (backupRuns.insert)
    *
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
@@ -83,13 +82,13 @@ class BackupRuns extends \Google\Service\Resource
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Lists all backup runs associated with a given instance and configuration in
-   * the reverse chronological order of the backup initiation time.
-   * (backupRuns.listBackupRuns)
+   * Lists all backup runs associated with the project or a given instance and
+   * configuration in the reverse chronological order of the backup initiation
+   * time. (backupRuns.listBackupRuns)
    *
    * @param string $project Project ID of the project that contains the instance.
-   * @param string $instance Cloud SQL instance ID. This does not include the
-   * project ID.
+   * @param string $instance Cloud SQL instance ID, or "-" for all instances. This
+   * does not include the project ID.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of backup runs per response.

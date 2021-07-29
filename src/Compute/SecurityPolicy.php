@@ -20,6 +20,8 @@ namespace Google\Service\Compute;
 class SecurityPolicy extends \Google\Collection
 {
   protected $collection_key = 'rules';
+  protected $adaptiveProtectionConfigType = SecurityPolicyAdaptiveProtectionConfig::class;
+  protected $adaptiveProtectionConfigDataType = '';
   protected $advancedOptionsConfigType = SecurityPolicyAdvancedOptionsConfig::class;
   protected $advancedOptionsConfigDataType = '';
   public $creationTimestamp;
@@ -32,6 +34,20 @@ class SecurityPolicy extends \Google\Collection
   protected $rulesDataType = 'array';
   public $selfLink;
 
+  /**
+   * @param SecurityPolicyAdaptiveProtectionConfig
+   */
+  public function setAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfig $adaptiveProtectionConfig)
+  {
+    $this->adaptiveProtectionConfig = $adaptiveProtectionConfig;
+  }
+  /**
+   * @return SecurityPolicyAdaptiveProtectionConfig
+   */
+  public function getAdaptiveProtectionConfig()
+  {
+    return $this->adaptiveProtectionConfig;
+  }
   /**
    * @param SecurityPolicyAdvancedOptionsConfig
    */

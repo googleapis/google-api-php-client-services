@@ -40,6 +40,14 @@ class Occurrence extends \Google\Model
   public $remediation;
   protected $resourceType = ContaineranalysisResource::class;
   protected $resourceDataType = '';
+  protected $sbomType = DocumentOccurrence::class;
+  protected $sbomDataType = '';
+  protected $spdxFileType = FileOccurrence::class;
+  protected $spdxFileDataType = '';
+  protected $spdxPackageType = PackageOccurrence::class;
+  protected $spdxPackageDataType = '';
+  protected $spdxRelationshipType = RelationshipOccurrence::class;
+  protected $spdxRelationshipDataType = '';
   public $updateTime;
   protected $vulnerabilityType = GrafeasV1beta1VulnerabilityDetails::class;
   protected $vulnerabilityDataType = '';
@@ -195,6 +203,62 @@ class Occurrence extends \Google\Model
   public function getResource()
   {
     return $this->resource;
+  }
+  /**
+   * @param DocumentOccurrence
+   */
+  public function setSbom(DocumentOccurrence $sbom)
+  {
+    $this->sbom = $sbom;
+  }
+  /**
+   * @return DocumentOccurrence
+   */
+  public function getSbom()
+  {
+    return $this->sbom;
+  }
+  /**
+   * @param FileOccurrence
+   */
+  public function setSpdxFile(FileOccurrence $spdxFile)
+  {
+    $this->spdxFile = $spdxFile;
+  }
+  /**
+   * @return FileOccurrence
+   */
+  public function getSpdxFile()
+  {
+    return $this->spdxFile;
+  }
+  /**
+   * @param PackageOccurrence
+   */
+  public function setSpdxPackage(PackageOccurrence $spdxPackage)
+  {
+    $this->spdxPackage = $spdxPackage;
+  }
+  /**
+   * @return PackageOccurrence
+   */
+  public function getSpdxPackage()
+  {
+    return $this->spdxPackage;
+  }
+  /**
+   * @param RelationshipOccurrence
+   */
+  public function setSpdxRelationship(RelationshipOccurrence $spdxRelationship)
+  {
+    $this->spdxRelationship = $spdxRelationship;
+  }
+  /**
+   * @return RelationshipOccurrence
+   */
+  public function getSpdxRelationship()
+  {
+    return $this->spdxRelationship;
   }
   public function setUpdateTime($updateTime)
   {

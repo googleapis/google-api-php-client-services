@@ -22,6 +22,8 @@ class GoogleChromePolicyV1PolicySchemaFieldDescription extends \Google\Collectio
   protected $collection_key = 'nestedFieldDescriptions';
   public $description;
   public $field;
+  protected $fieldDependenciesType = GoogleChromePolicyV1PolicySchemaFieldDependencies::class;
+  protected $fieldDependenciesDataType = 'array';
   public $inputConstraint;
   protected $knownValueDescriptionsType = GoogleChromePolicyV1PolicySchemaFieldKnownValueDescription::class;
   protected $knownValueDescriptionsDataType = 'array';
@@ -43,6 +45,20 @@ class GoogleChromePolicyV1PolicySchemaFieldDescription extends \Google\Collectio
   public function getField()
   {
     return $this->field;
+  }
+  /**
+   * @param GoogleChromePolicyV1PolicySchemaFieldDependencies[]
+   */
+  public function setFieldDependencies($fieldDependencies)
+  {
+    $this->fieldDependencies = $fieldDependencies;
+  }
+  /**
+   * @return GoogleChromePolicyV1PolicySchemaFieldDependencies[]
+   */
+  public function getFieldDependencies()
+  {
+    return $this->fieldDependencies;
   }
   public function setInputConstraint($inputConstraint)
   {

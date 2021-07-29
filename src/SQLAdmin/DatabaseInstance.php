@@ -28,20 +28,15 @@ class DatabaseInstance extends \Google\Collection
   protected $diskEncryptionConfigurationDataType = '';
   protected $diskEncryptionStatusType = DiskEncryptionStatus::class;
   protected $diskEncryptionStatusDataType = '';
-  public $encryptedRootPassword;
   public $etag;
   protected $failoverReplicaType = DatabaseInstanceFailoverReplica::class;
   protected $failoverReplicaDataType = '';
   public $gceZone;
-  public $installedVersion;
   public $instanceType;
-  public $instanceUid;
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   public $ipv6Address;
   public $kind;
-  protected $masterInstanceType = InstanceReference::class;
-  protected $masterInstanceDataType = '';
   public $masterInstanceName;
   public $maxDiskSize;
   public $name;
@@ -53,8 +48,6 @@ class DatabaseInstance extends \Google\Collection
   public $region;
   protected $replicaConfigurationType = ReplicaConfiguration::class;
   protected $replicaConfigurationDataType = '';
-  protected $replicaInstancesType = InstanceReference::class;
-  protected $replicaInstancesDataType = 'array';
   public $replicaNames;
   public $rootPassword;
   public $satisfiesPzs;
@@ -130,14 +123,6 @@ class DatabaseInstance extends \Google\Collection
   {
     return $this->diskEncryptionStatus;
   }
-  public function setEncryptedRootPassword($encryptedRootPassword)
-  {
-    $this->encryptedRootPassword = $encryptedRootPassword;
-  }
-  public function getEncryptedRootPassword()
-  {
-    return $this->encryptedRootPassword;
-  }
   public function setEtag($etag)
   {
     $this->etag = $etag;
@@ -168,14 +153,6 @@ class DatabaseInstance extends \Google\Collection
   {
     return $this->gceZone;
   }
-  public function setInstalledVersion($installedVersion)
-  {
-    $this->installedVersion = $installedVersion;
-  }
-  public function getInstalledVersion()
-  {
-    return $this->installedVersion;
-  }
   public function setInstanceType($instanceType)
   {
     $this->instanceType = $instanceType;
@@ -183,14 +160,6 @@ class DatabaseInstance extends \Google\Collection
   public function getInstanceType()
   {
     return $this->instanceType;
-  }
-  public function setInstanceUid($instanceUid)
-  {
-    $this->instanceUid = $instanceUid;
-  }
-  public function getInstanceUid()
-  {
-    return $this->instanceUid;
   }
   /**
    * @param IpMapping[]
@@ -221,20 +190,6 @@ class DatabaseInstance extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
-  }
-  /**
-   * @param InstanceReference
-   */
-  public function setMasterInstance(InstanceReference $masterInstance)
-  {
-    $this->masterInstance = $masterInstance;
-  }
-  /**
-   * @return InstanceReference
-   */
-  public function getMasterInstance()
-  {
-    return $this->masterInstance;
   }
   public function setMasterInstanceName($masterInstanceName)
   {
@@ -317,20 +272,6 @@ class DatabaseInstance extends \Google\Collection
   public function getReplicaConfiguration()
   {
     return $this->replicaConfiguration;
-  }
-  /**
-   * @param InstanceReference[]
-   */
-  public function setReplicaInstances($replicaInstances)
-  {
-    $this->replicaInstances = $replicaInstances;
-  }
-  /**
-   * @return InstanceReference[]
-   */
-  public function getReplicaInstances()
-  {
-    return $this->replicaInstances;
   }
   public function setReplicaNames($replicaNames)
   {

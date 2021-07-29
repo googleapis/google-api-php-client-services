@@ -42,7 +42,15 @@ class Note extends \Google\Collection
   public $relatedNoteNames;
   protected $relatedUrlType = RelatedUrl::class;
   protected $relatedUrlDataType = 'array';
+  protected $sbomType = DocumentNote::class;
+  protected $sbomDataType = '';
   public $shortDescription;
+  protected $spdxFileType = FileNote::class;
+  protected $spdxFileDataType = '';
+  protected $spdxPackageType = PackageNote::class;
+  protected $spdxPackageDataType = '';
+  protected $spdxRelationshipType = RelationshipNote::class;
+  protected $spdxRelationshipDataType = '';
   public $updateTime;
   protected $vulnerabilityType = Vulnerability::class;
   protected $vulnerabilityDataType = '';
@@ -207,6 +215,20 @@ class Note extends \Google\Collection
   {
     return $this->relatedUrl;
   }
+  /**
+   * @param DocumentNote
+   */
+  public function setSbom(DocumentNote $sbom)
+  {
+    $this->sbom = $sbom;
+  }
+  /**
+   * @return DocumentNote
+   */
+  public function getSbom()
+  {
+    return $this->sbom;
+  }
   public function setShortDescription($shortDescription)
   {
     $this->shortDescription = $shortDescription;
@@ -214,6 +236,48 @@ class Note extends \Google\Collection
   public function getShortDescription()
   {
     return $this->shortDescription;
+  }
+  /**
+   * @param FileNote
+   */
+  public function setSpdxFile(FileNote $spdxFile)
+  {
+    $this->spdxFile = $spdxFile;
+  }
+  /**
+   * @return FileNote
+   */
+  public function getSpdxFile()
+  {
+    return $this->spdxFile;
+  }
+  /**
+   * @param PackageNote
+   */
+  public function setSpdxPackage(PackageNote $spdxPackage)
+  {
+    $this->spdxPackage = $spdxPackage;
+  }
+  /**
+   * @return PackageNote
+   */
+  public function getSpdxPackage()
+  {
+    return $this->spdxPackage;
+  }
+  /**
+   * @param RelationshipNote
+   */
+  public function setSpdxRelationship(RelationshipNote $spdxRelationship)
+  {
+    $this->spdxRelationship = $spdxRelationship;
+  }
+  /**
+   * @return RelationshipNote
+   */
+  public function getSpdxRelationship()
+  {
+    return $this->spdxRelationship;
   }
   public function setUpdateTime($updateTime)
   {

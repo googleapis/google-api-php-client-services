@@ -33,9 +33,9 @@ class LicenseCodes extends \Google\Service\Resource
 {
   /**
    * Return a specified license code. License codes are mirrored across all
-   * projects that have permissions to read the License Code.  Caution This
+   * projects that have permissions to read the License Code. *Caution* This
    * resource is intended for use only by third-party partners who are creating
-   * Cloud Marketplace images. (licenseCodes.get)
+   * Cloud Marketplace images.  (licenseCodes.get)
    *
    * @param string $project Project ID for this request.
    * @param string $licenseCode Number corresponding to the License code resource
@@ -50,9 +50,9 @@ class LicenseCodes extends \Google\Service\Resource
     return $this->call('get', [$params], LicenseCode::class);
   }
   /**
-   * Returns permissions that a caller has on the specified resource.  Caution
+   * Returns permissions that a caller has on the specified resource. *Caution*
    * This resource is intended for use only by third-party partners who are
-   * creating Cloud Marketplace images. (licenseCodes.testIamPermissions)
+   * creating Cloud Marketplace images.  (licenseCodes.testIamPermissions)
    *
    * @param string $project Project ID for this request.
    * @param string $resource Name or id of the resource for this request.

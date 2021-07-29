@@ -26,6 +26,7 @@ class SslCert extends \Google\Model
   public $expirationTime;
   public $instance;
   public $kind;
+  public $selfLink;
   public $sha1Fingerprint;
 
   public function setCert($cert)
@@ -83,6 +84,14 @@ class SslCert extends \Google\Model
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setSelfLink($selfLink)
+  {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink()
+  {
+    return $this->selfLink;
   }
   public function setSha1Fingerprint($sha1Fingerprint)
   {

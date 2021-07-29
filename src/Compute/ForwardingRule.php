@@ -47,6 +47,7 @@ class ForwardingRule extends \Google\Collection
   public $portRange;
   public $ports;
   public $pscConnectionId;
+  public $pscConnectionStatus;
   public $region;
   public $selfLink;
   protected $serviceDirectoryRegistrationsType = ForwardingRuleServiceDirectoryRegistration::class;
@@ -237,6 +238,14 @@ class ForwardingRule extends \Google\Collection
   public function getPscConnectionId()
   {
     return $this->pscConnectionId;
+  }
+  public function setPscConnectionStatus($pscConnectionStatus)
+  {
+    $this->pscConnectionStatus = $pscConnectionStatus;
+  }
+  public function getPscConnectionStatus()
+  {
+    return $this->pscConnectionStatus;
   }
   public function setRegion($region)
   {

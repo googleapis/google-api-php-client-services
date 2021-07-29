@@ -34,6 +34,7 @@ class NetworkInterface extends \Google\Collection
   public $network;
   public $networkIP;
   public $nicType;
+  public $queueCount;
   public $stackType;
   public $subnetwork;
 
@@ -142,6 +143,14 @@ class NetworkInterface extends \Google\Collection
   public function getNicType()
   {
     return $this->nicType;
+  }
+  public function setQueueCount($queueCount)
+  {
+    $this->queueCount = $queueCount;
+  }
+  public function getQueueCount()
+  {
+    return $this->queueCount;
   }
   public function setStackType($stackType)
   {

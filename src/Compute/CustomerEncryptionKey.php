@@ -22,6 +22,7 @@ class CustomerEncryptionKey extends \Google\Model
   public $kmsKeyName;
   public $kmsKeyServiceAccount;
   public $rawKey;
+  public $rsaEncryptedKey;
   public $sha256;
 
   public function setKmsKeyName($kmsKeyName)
@@ -47,6 +48,14 @@ class CustomerEncryptionKey extends \Google\Model
   public function getRawKey()
   {
     return $this->rawKey;
+  }
+  public function setRsaEncryptedKey($rsaEncryptedKey)
+  {
+    $this->rsaEncryptedKey = $rsaEncryptedKey;
+  }
+  public function getRsaEncryptedKey()
+  {
+    return $this->rsaEncryptedKey;
   }
   public function setSha256($sha256)
   {
