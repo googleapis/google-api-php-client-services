@@ -31,6 +31,8 @@ class TransferSpec extends \Google\Model
   protected $httpDataSourceDataType = '';
   protected $objectConditionsType = ObjectConditions::class;
   protected $objectConditionsDataType = '';
+  protected $posixDataSourceType = PosixFilesystem::class;
+  protected $posixDataSourceDataType = '';
   protected $transferOptionsType = TransferOptions::class;
   protected $transferOptionsDataType = '';
 
@@ -117,6 +119,20 @@ class TransferSpec extends \Google\Model
   public function getObjectConditions()
   {
     return $this->objectConditions;
+  }
+  /**
+   * @param PosixFilesystem
+   */
+  public function setPosixDataSource(PosixFilesystem $posixDataSource)
+  {
+    $this->posixDataSource = $posixDataSource;
+  }
+  /**
+   * @return PosixFilesystem
+   */
+  public function getPosixDataSource()
+  {
+    return $this->posixDataSource;
   }
   /**
    * @param TransferOptions

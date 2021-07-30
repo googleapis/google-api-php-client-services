@@ -15,39 +15,40 @@
  * the License.
  */
 
-namespace Google\Service\Ideahub;
+namespace Google\Service\NetworkServices;
 
-class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
+class Status extends \Google\Collection
 {
-  public $displayName;
-  public $mid;
-  public $name;
+  protected $collection_key = 'details';
+  public $code;
+  public $details;
+  public $message;
 
-  public function setDisplayName($displayName)
+  public function setCode($code)
   {
-    $this->displayName = $displayName;
+    $this->code = $code;
   }
-  public function getDisplayName()
+  public function getCode()
   {
-    return $this->displayName;
+    return $this->code;
   }
-  public function setMid($mid)
+  public function setDetails($details)
   {
-    $this->mid = $mid;
+    $this->details = $details;
   }
-  public function getMid()
+  public function getDetails()
   {
-    return $this->mid;
+    return $this->details;
   }
-  public function setName($name)
+  public function setMessage($message)
   {
-    $this->name = $name;
+    $this->message = $message;
   }
-  public function getName()
+  public function getMessage()
   {
-    return $this->name;
+    return $this->message;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleSearchIdeahubV1alphaTopic::class, 'Google_Service_Ideahub_GoogleSearchIdeahubV1alphaTopic');
+class_alias(Status::class, 'Google_Service_NetworkServices_Status');

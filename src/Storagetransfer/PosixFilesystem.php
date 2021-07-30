@@ -15,39 +15,21 @@
  * the License.
  */
 
-namespace Google\Service\Ideahub;
+namespace Google\Service\Storagetransfer;
 
-class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
+class PosixFilesystem extends \Google\Model
 {
-  public $displayName;
-  public $mid;
-  public $name;
+  public $rootDirectory;
 
-  public function setDisplayName($displayName)
+  public function setRootDirectory($rootDirectory)
   {
-    $this->displayName = $displayName;
+    $this->rootDirectory = $rootDirectory;
   }
-  public function getDisplayName()
+  public function getRootDirectory()
   {
-    return $this->displayName;
-  }
-  public function setMid($mid)
-  {
-    $this->mid = $mid;
-  }
-  public function getMid()
-  {
-    return $this->mid;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->rootDirectory;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleSearchIdeahubV1alphaTopic::class, 'Google_Service_Ideahub_GoogleSearchIdeahubV1alphaTopic');
+class_alias(PosixFilesystem::class, 'Google_Service_Storagetransfer_PosixFilesystem');

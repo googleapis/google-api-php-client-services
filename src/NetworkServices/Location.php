@@ -15,12 +15,14 @@
  * the License.
  */
 
-namespace Google\Service\Ideahub;
+namespace Google\Service\NetworkServices;
 
-class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
+class Location extends \Google\Model
 {
   public $displayName;
-  public $mid;
+  public $labels;
+  public $locationId;
+  public $metadata;
   public $name;
 
   public function setDisplayName($displayName)
@@ -31,13 +33,29 @@ class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
   {
     return $this->displayName;
   }
-  public function setMid($mid)
+  public function setLabels($labels)
   {
-    $this->mid = $mid;
+    $this->labels = $labels;
   }
-  public function getMid()
+  public function getLabels()
   {
-    return $this->mid;
+    return $this->labels;
+  }
+  public function setLocationId($locationId)
+  {
+    $this->locationId = $locationId;
+  }
+  public function getLocationId()
+  {
+    return $this->locationId;
+  }
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   public function setName($name)
   {
@@ -50,4 +68,4 @@ class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleSearchIdeahubV1alphaTopic::class, 'Google_Service_Ideahub_GoogleSearchIdeahubV1alphaTopic');
+class_alias(Location::class, 'Google_Service_NetworkServices_Location');

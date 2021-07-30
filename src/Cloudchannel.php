@@ -23,7 +23,9 @@ use Google\Client;
  * Service definition for Cloudchannel (v1).
  *
  * <p>
-</p>
+ * The Cloud Channel API enables Google Cloud partners to have a single unified
+ * resale platform and APIs across all of Google Cloud including GCP, Workspace,
+ * Maps and Chrome.</p>
  *
  * <p>
  * For more information about this service, see the API

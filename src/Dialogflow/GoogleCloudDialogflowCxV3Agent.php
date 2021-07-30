@@ -20,6 +20,8 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
 {
   protected $collection_key = 'supportedLanguageCodes';
+  protected $advancedSettingsType = GoogleCloudDialogflowCxV3AdvancedSettings::class;
+  protected $advancedSettingsDataType = '';
   public $avatarUri;
   public $defaultLanguageCode;
   public $description;
@@ -34,6 +36,20 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
   public $supportedLanguageCodes;
   public $timeZone;
 
+  /**
+   * @param GoogleCloudDialogflowCxV3AdvancedSettings
+   */
+  public function setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings $advancedSettings)
+  {
+    $this->advancedSettings = $advancedSettings;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3AdvancedSettings
+   */
+  public function getAdvancedSettings()
+  {
+    return $this->advancedSettings;
+  }
   public function setAvatarUri($avatarUri)
   {
     $this->avatarUri = $avatarUri;

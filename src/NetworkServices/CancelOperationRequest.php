@@ -15,39 +15,11 @@
  * the License.
  */
 
-namespace Google\Service\Ideahub;
+namespace Google\Service\NetworkServices;
 
-class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
+class CancelOperationRequest extends \Google\Model
 {
-  public $displayName;
-  public $mid;
-  public $name;
-
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  public function setMid($mid)
-  {
-    $this->mid = $mid;
-  }
-  public function getMid()
-  {
-    return $this->mid;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleSearchIdeahubV1alphaTopic::class, 'Google_Service_Ideahub_GoogleSearchIdeahubV1alphaTopic');
+class_alias(CancelOperationRequest::class, 'Google_Service_NetworkServices_CancelOperationRequest');

@@ -15,39 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\Ideahub;
+namespace Google\Service\NetworkServices;
 
-class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
+class SetIamPolicyRequest extends \Google\Model
 {
-  public $displayName;
-  public $mid;
-  public $name;
+  protected $policyType = Policy::class;
+  protected $policyDataType = '';
+  public $updateMask;
 
-  public function setDisplayName($displayName)
+  /**
+   * @param Policy
+   */
+  public function setPolicy(Policy $policy)
   {
-    $this->displayName = $displayName;
+    $this->policy = $policy;
   }
-  public function getDisplayName()
+  /**
+   * @return Policy
+   */
+  public function getPolicy()
   {
-    return $this->displayName;
+    return $this->policy;
   }
-  public function setMid($mid)
+  public function setUpdateMask($updateMask)
   {
-    $this->mid = $mid;
+    $this->updateMask = $updateMask;
   }
-  public function getMid()
+  public function getUpdateMask()
   {
-    return $this->mid;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->updateMask;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleSearchIdeahubV1alphaTopic::class, 'Google_Service_Ideahub_GoogleSearchIdeahubV1alphaTopic');
+class_alias(SetIamPolicyRequest::class, 'Google_Service_NetworkServices_SetIamPolicyRequest');

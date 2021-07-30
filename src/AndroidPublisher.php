@@ -951,6 +951,10 @@ class AndroidPublisher extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'allowMissing' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'autoConvertMissingPrices' => [
                   'location' => 'query',
                   'type' => 'boolean',

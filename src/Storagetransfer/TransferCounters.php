@@ -27,6 +27,9 @@ class TransferCounters extends \Google\Model
   public $bytesFoundOnlyFromSink;
   public $bytesFromSourceFailed;
   public $bytesFromSourceSkippedBySync;
+  public $directoriesFailedToListFromSource;
+  public $directoriesFoundFromSource;
+  public $directoriesSuccessfullyListedFromSource;
   public $objectsCopiedToSink;
   public $objectsDeletedFromSink;
   public $objectsDeletedFromSource;
@@ -99,6 +102,30 @@ class TransferCounters extends \Google\Model
   public function getBytesFromSourceSkippedBySync()
   {
     return $this->bytesFromSourceSkippedBySync;
+  }
+  public function setDirectoriesFailedToListFromSource($directoriesFailedToListFromSource)
+  {
+    $this->directoriesFailedToListFromSource = $directoriesFailedToListFromSource;
+  }
+  public function getDirectoriesFailedToListFromSource()
+  {
+    return $this->directoriesFailedToListFromSource;
+  }
+  public function setDirectoriesFoundFromSource($directoriesFoundFromSource)
+  {
+    $this->directoriesFoundFromSource = $directoriesFoundFromSource;
+  }
+  public function getDirectoriesFoundFromSource()
+  {
+    return $this->directoriesFoundFromSource;
+  }
+  public function setDirectoriesSuccessfullyListedFromSource($directoriesSuccessfullyListedFromSource)
+  {
+    $this->directoriesSuccessfullyListedFromSource = $directoriesSuccessfullyListedFromSource;
+  }
+  public function getDirectoriesSuccessfullyListedFromSource()
+  {
+    return $this->directoriesSuccessfullyListedFromSource;
   }
   public function setObjectsCopiedToSink($objectsCopiedToSink)
   {

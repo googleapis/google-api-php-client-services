@@ -129,6 +129,8 @@ class Inappproducts extends \Google\Service\Resource
    * @param InAppProduct $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool allowMissing If set to true, and the in-app product with the
+   * given package_name and sku doesn't exist, the in-app product will be created.
    * @opt_param bool autoConvertMissingPrices If true the prices for all regions
    * targeted by the parent app that don't have a price specified for this in-app
    * product will be auto converted to the target currency based on the default

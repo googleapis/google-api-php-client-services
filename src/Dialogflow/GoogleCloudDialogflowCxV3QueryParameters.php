@@ -23,6 +23,7 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   public $analyzeQueryTextSentiment;
   public $currentPage;
   public $disableWebhook;
+  public $flowVersions;
   protected $geoLocationType = GoogleTypeLatLng::class;
   protected $geoLocationDataType = '';
   public $parameters;
@@ -55,6 +56,14 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   public function getDisableWebhook()
   {
     return $this->disableWebhook;
+  }
+  public function setFlowVersions($flowVersions)
+  {
+    $this->flowVersions = $flowVersions;
+  }
+  public function getFlowVersions()
+  {
+    return $this->flowVersions;
   }
   /**
    * @param GoogleTypeLatLng

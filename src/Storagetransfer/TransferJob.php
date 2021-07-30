@@ -24,6 +24,8 @@ class TransferJob extends \Google\Model
   public $description;
   public $lastModificationTime;
   public $latestOperationName;
+  protected $loggingConfigType = LoggingConfig::class;
+  protected $loggingConfigDataType = '';
   public $name;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
@@ -73,6 +75,20 @@ class TransferJob extends \Google\Model
   public function getLatestOperationName()
   {
     return $this->latestOperationName;
+  }
+  /**
+   * @param LoggingConfig
+   */
+  public function setLoggingConfig(LoggingConfig $loggingConfig)
+  {
+    $this->loggingConfig = $loggingConfig;
+  }
+  /**
+   * @return LoggingConfig
+   */
+  public function getLoggingConfig()
+  {
+    return $this->loggingConfig;
   }
   public function setName($name)
   {

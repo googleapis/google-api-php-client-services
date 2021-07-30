@@ -15,39 +15,21 @@
  * the License.
  */
 
-namespace Google\Service\Ideahub;
+namespace Google\Service\Dialogflow;
 
-class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
+class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings extends \Google\Model
 {
-  public $displayName;
-  public $mid;
-  public $name;
+  public $enableInsightsExport;
 
-  public function setDisplayName($displayName)
+  public function setEnableInsightsExport($enableInsightsExport)
   {
-    $this->displayName = $displayName;
+    $this->enableInsightsExport = $enableInsightsExport;
   }
-  public function getDisplayName()
+  public function getEnableInsightsExport()
   {
-    return $this->displayName;
-  }
-  public function setMid($mid)
-  {
-    $this->mid = $mid;
-  }
-  public function getMid()
-  {
-    return $this->mid;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->enableInsightsExport;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleSearchIdeahubV1alphaTopic::class, 'Google_Service_Ideahub_GoogleSearchIdeahubV1alphaTopic');
+class_alias(GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings');

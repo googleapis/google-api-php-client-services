@@ -19,20 +19,20 @@ namespace Google\Service\Ideahub;
 
 class GoogleSearchIdeahubV1alphaIdeaActivity extends \Google\Collection
 {
-  protected $collection_key = 'topicIds';
-  public $ideaIds;
+  protected $collection_key = 'topics';
+  public $ideas;
   public $name;
-  public $topicIds;
+  public $topics;
   public $type;
   public $uri;
 
-  public function setIdeaIds($ideaIds)
+  public function setIdeas($ideas)
   {
-    $this->ideaIds = $ideaIds;
+    $this->ideas = $ideas;
   }
-  public function getIdeaIds()
+  public function getIdeas()
   {
-    return $this->ideaIds;
+    return $this->ideas;
   }
   public function setName($name)
   {
@@ -42,13 +42,13 @@ class GoogleSearchIdeahubV1alphaIdeaActivity extends \Google\Collection
   {
     return $this->name;
   }
-  public function setTopicIds($topicIds)
+  public function setTopics($topics)
   {
-    $this->topicIds = $topicIds;
+    $this->topics = $topics;
   }
-  public function getTopicIds()
+  public function getTopics()
   {
-    return $this->topicIds;
+    return $this->topics;
   }
   public function setType($type)
   {

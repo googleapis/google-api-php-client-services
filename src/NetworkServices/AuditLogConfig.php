@@ -15,39 +15,31 @@
  * the License.
  */
 
-namespace Google\Service\Ideahub;
+namespace Google\Service\NetworkServices;
 
-class GoogleSearchIdeahubV1alphaTopic extends \Google\Model
+class AuditLogConfig extends \Google\Collection
 {
-  public $displayName;
-  public $mid;
-  public $name;
+  protected $collection_key = 'exemptedMembers';
+  public $exemptedMembers;
+  public $logType;
 
-  public function setDisplayName($displayName)
+  public function setExemptedMembers($exemptedMembers)
   {
-    $this->displayName = $displayName;
+    $this->exemptedMembers = $exemptedMembers;
   }
-  public function getDisplayName()
+  public function getExemptedMembers()
   {
-    return $this->displayName;
+    return $this->exemptedMembers;
   }
-  public function setMid($mid)
+  public function setLogType($logType)
   {
-    $this->mid = $mid;
+    $this->logType = $logType;
   }
-  public function getMid()
+  public function getLogType()
   {
-    return $this->mid;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
+    return $this->logType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleSearchIdeahubV1alphaTopic::class, 'Google_Service_Ideahub_GoogleSearchIdeahubV1alphaTopic');
+class_alias(AuditLogConfig::class, 'Google_Service_NetworkServices_AuditLogConfig');
