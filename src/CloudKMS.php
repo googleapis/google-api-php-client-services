@@ -452,6 +452,26 @@ class CloudKMS extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'macSign' => [
+              'path' => 'v1/{+name}:macSign',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'macVerify' => [
+              'path' => 'v1/{+name}:macVerify',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',

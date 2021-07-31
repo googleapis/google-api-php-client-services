@@ -23,6 +23,7 @@ class ClusterAutoscaling extends \Google\Collection
   public $autoprovisioningLocations;
   protected $autoprovisioningNodePoolDefaultsType = AutoprovisioningNodePoolDefaults::class;
   protected $autoprovisioningNodePoolDefaultsDataType = '';
+  public $autoscalingProfile;
   public $enableNodeAutoprovisioning;
   protected $resourceLimitsType = ResourceLimit::class;
   protected $resourceLimitsDataType = 'array';
@@ -48,6 +49,14 @@ class ClusterAutoscaling extends \Google\Collection
   public function getAutoprovisioningNodePoolDefaults()
   {
     return $this->autoprovisioningNodePoolDefaults;
+  }
+  public function setAutoscalingProfile($autoscalingProfile)
+  {
+    $this->autoscalingProfile = $autoscalingProfile;
+  }
+  public function getAutoscalingProfile()
+  {
+    return $this->autoscalingProfile;
   }
   public function setEnableNodeAutoprovisioning($enableNodeAutoprovisioning)
   {

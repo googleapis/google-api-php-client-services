@@ -25,6 +25,10 @@ use Google\Service\CloudKMS\CryptoKeyVersion;
 use Google\Service\CloudKMS\DestroyCryptoKeyVersionRequest;
 use Google\Service\CloudKMS\ImportCryptoKeyVersionRequest;
 use Google\Service\CloudKMS\ListCryptoKeyVersionsResponse;
+use Google\Service\CloudKMS\MacSignRequest;
+use Google\Service\CloudKMS\MacSignResponse;
+use Google\Service\CloudKMS\MacVerifyRequest;
+use Google\Service\CloudKMS\MacVerifyResponse;
 use Google\Service\CloudKMS\PublicKey;
 use Google\Service\CloudKMS\RestoreCryptoKeyVersionRequest;
 
@@ -185,6 +189,40 @@ class ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions extends \Google\Servi
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListCryptoKeyVersionsResponse::class);
+  }
+  /**
+   * Signs data using a CryptoKeyVersion with CryptoKey.purpose MAC, producing a
+   * tag that can be verified by another source with the same key.
+   * (cryptoKeyVersions.macSign)
+   *
+   * @param string $name Required. The resource name of the CryptoKeyVersion to
+   * use for signing.
+   * @param MacSignRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return MacSignResponse
+   */
+  public function macSign($name, MacSignRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('macSign', [$params], MacSignResponse::class);
+  }
+  /**
+   * Verifies MAC tag using a CryptoKeyVersion with CryptoKey.purpose MAC, and
+   * returns a response that indicates whether or not the verification was
+   * successful. (cryptoKeyVersions.macVerify)
+   *
+   * @param string $name Required. The resource name of the CryptoKeyVersion to
+   * use for verification.
+   * @param MacVerifyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return MacVerifyResponse
+   */
+  public function macVerify($name, MacVerifyRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('macVerify', [$params], MacVerifyResponse::class);
   }
   /**
    * Update a CryptoKeyVersion's metadata. state may be changed between ENABLED
