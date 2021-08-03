@@ -35,6 +35,10 @@ class V1 extends \Google\Service\Resource
    *
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string webhookKey For GitHub Enterprise webhooks, this key is used
+   * to associate the webhook request with the GitHubEnterpriseConfig to use for
+   * validation.
    * @return CloudbuildEmpty
    */
   public function webhook(HttpBody $postBody, $optParams = [])

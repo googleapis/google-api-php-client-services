@@ -866,7 +866,12 @@ class CloudBuild extends \Google\Service
             'webhook' => [
               'path' => 'v1/webhook',
               'httpMethod' => 'POST',
-              'parameters' => [],
+              'parameters' => [
+                'webhookKey' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],
           ]
         ]
