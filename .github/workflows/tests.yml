@@ -1,0 +1,45 @@
+name: Test Suite
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                php: [ 5.6, "7.0", 7.1, 7.2, 7.3, 7.4, "8.0" ]
+        name: PHP ${{matrix.php }} Unit Test
+        steps:
+            - uses: actions/checkout@v2
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: ${{ matrix.php }}
+            - name: Install Dependencies
+              uses: nick-invision/retry@v1
+              with:
+                timeout_minutes: 10
+                max_attempts: 3
+                command: composer install
+            - name: Run Script
+              run: vendor/bin/phpunit
+    generator:
+        runs-on: ubuntu-latest
+        name: Generator Unit Tests
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Python 2.7
+              uses: actions/setup-python@v2
+              with:
+                python-version: 2.7
+            - name: Install dependencies
+              run: |
+                python -m pip install setuptools
+                python -m pip install -e generator/ --user
+            - name: Run Tests
+              run: |
+                bash generator/run_tests.sh
+

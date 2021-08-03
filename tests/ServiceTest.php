@@ -18,26 +18,24 @@
  * under the License.
  */
 
-class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
-{
-  public function setUp()
-  {
-    // ensure dependent classes exist
-    $this->getMock('Google_Service');
-    $this->getMock('Google_Model');
-    $this->getMock('Google_Collection');
-    $this->getMock('Google_Service_Resource');
-  }
+namespace Google\Service\Test;
 
+use PHPUnit\Framework\TestCase;
+
+class ServiceTest extends TestCase
+{
   /**
-   * @dataProvider serviceProvider
+   * @dataProvider allServices
+   * @runInSeparateProcess
    */
-  public function testIncludes($class)
+  public function testIncludes($service)
   {
-    $this->assertTrue(
-        class_exists($class),
-        sprintf('Failed asserting class %s exists.', $class)
-    );
+    foreach ($this->getServiceClasses($service) as $class) {
+      $this->assertTrue(
+          class_exists($class),
+          sprintf('Failed asserting class %s exists.', $class)
+      );
+    }
   }
 
   public function testCaseConflicts()
@@ -47,19 +45,31 @@ class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
     $this->assertCount(count($apis), $classes);
   }
 
-  public function serviceProvider()
+  public function allServices()
+  {
+     $services = array();
+     $path = __DIR__ . '/../src/';
+     foreach (glob($path . "*.php") as $file) {
+       $service = basename($file, '.php');
+       $services[$service] = array($service);
+     }
+     return $services;
+  }
+
+  public function getServiceClasses($service)
   {
     $classes = array();
-    $path = __DIR__ . '/../src/Google/Service/';
-    foreach (glob($path . "*.php") as $file) {
-      $service = basename($file, '.php');
-      $classes[] = array('Google_Service_' . $service);
-      foreach (glob($path . "{$service}/*.php") as $file) {
-        $classes[] = array("Google_Service_{$service}_" . basename($file, '.php'));
-      }
-      foreach (glob($path . "{$service}/Resource/*.php") as $file) {
-        $classes[] = array("Google_Service_{$service}_Resource_" . basename($file, '.php'));
-      }
+    $classes[] = 'Google\Service\\' . $service;
+    $classes[] = 'Google_Service_' . $service; // legacy name
+    foreach (glob(__DIR__ . "/../src/$service/*.php") as $file) {
+      $className = basename($file, '.php');
+      $classes[] = "Google\Service\\$service\\" . $className;
+      $classes[] = "Google_Service_{$service}_" . $className; // legacy name
+    }
+    foreach (glob(__DIR__ . "/../src/$service/Resource/*.php") as $file) {
+      $className = basename($file, '.php');
+      $classes[] = "Google\Service\\$service\Resource\\" . $className;
+      $classes[] = "Google_Service_{$service}_Resource_" . $className; // legacy name
     }
 
     return $classes;
@@ -67,7 +77,6 @@ class Google_Service_ServiceTest extends PHPUnit_Framework_TestCase
 
   public function apiProvider()
   {
-    $path = __DIR__ . '/../src/Google/Service/*';
-    return array_filter(glob($path), 'is_dir');
+    return array_filter(glob(__DIR__ . '/../src/*'), 'is_dir');
   }
 }
