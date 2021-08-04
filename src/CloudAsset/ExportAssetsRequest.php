@@ -19,12 +19,13 @@ namespace Google\Service\CloudAsset;
 
 class ExportAssetsRequest extends \Google\Collection
 {
-  protected $collection_key = 'assetTypes';
+  protected $collection_key = 'relationshipTypes';
   public $assetTypes;
   public $contentType;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
   public $readTime;
+  public $relationshipTypes;
 
   public function setAssetTypes($assetTypes)
   {
@@ -63,6 +64,14 @@ class ExportAssetsRequest extends \Google\Collection
   public function getReadTime()
   {
     return $this->readTime;
+  }
+  public function setRelationshipTypes($relationshipTypes)
+  {
+    $this->relationshipTypes = $relationshipTypes;
+  }
+  public function getRelationshipTypes()
+  {
+    return $this->relationshipTypes;
   }
 }
 

@@ -36,10 +36,16 @@ use Google\Client;
  */
 class ChromeManagement extends \Google\Service
 {
+  /** See detailed information about apps installed on Chrome browsers and devices managed by your organization. */
+  const CHROME_MANAGEMENT_APPDETAILS_READONLY =
+      "https://www.googleapis.com/auth/chrome.management.appdetails.readonly";
   /** See reports about devices and Chrome browsers managed within your organization. */
   const CHROME_MANAGEMENT_REPORTS_READONLY =
       "https://www.googleapis.com/auth/chrome.management.reports.readonly";
 
+  public $customers_apps_android;
+  public $customers_apps_chrome;
+  public $customers_apps_web;
   public $customers_reports;
 
   /**
@@ -58,6 +64,66 @@ class ChromeManagement extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'chromemanagement';
 
+    $this->customers_apps_android = new ChromeManagement\Resource\CustomersAppsAndroid(
+        $this,
+        $this->serviceName,
+        'android',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_apps_chrome = new ChromeManagement\Resource\CustomersAppsChrome(
+        $this,
+        $this->serviceName,
+        'chrome',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_apps_web = new ChromeManagement\Resource\CustomersAppsWeb(
+        $this,
+        $this->serviceName,
+        'web',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->customers_reports = new ChromeManagement\Resource\CustomersReports(
         $this,
         $this->serviceName,
