@@ -22,6 +22,7 @@ class GoogleCloudRecommenderV1RecommendationContent extends \Google\Collection
   protected $collection_key = 'operationGroups';
   protected $operationGroupsType = GoogleCloudRecommenderV1OperationGroup::class;
   protected $operationGroupsDataType = 'array';
+  public $overview;
 
   /**
    * @param GoogleCloudRecommenderV1OperationGroup[]
@@ -36,6 +37,14 @@ class GoogleCloudRecommenderV1RecommendationContent extends \Google\Collection
   public function getOperationGroups()
   {
     return $this->operationGroups;
+  }
+  public function setOverview($overview)
+  {
+    $this->overview = $overview;
+  }
+  public function getOverview()
+  {
+    return $this->overview;
   }
 }
 

@@ -31,6 +31,11 @@ class GoogleCloudDialogflowCxV3Experiment extends \Google\Collection
   public $name;
   protected $resultType = GoogleCloudDialogflowCxV3ExperimentResult::class;
   protected $resultDataType = '';
+  protected $rolloutConfigType = GoogleCloudDialogflowCxV3RolloutConfig::class;
+  protected $rolloutConfigDataType = '';
+  public $rolloutFailureReason;
+  protected $rolloutStateType = GoogleCloudDialogflowCxV3RolloutState::class;
+  protected $rolloutStateDataType = '';
   public $startTime;
   public $state;
   protected $variantsHistoryType = GoogleCloudDialogflowCxV3VariantsHistory::class;
@@ -119,6 +124,42 @@ class GoogleCloudDialogflowCxV3Experiment extends \Google\Collection
   public function getResult()
   {
     return $this->result;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3RolloutConfig
+   */
+  public function setRolloutConfig(GoogleCloudDialogflowCxV3RolloutConfig $rolloutConfig)
+  {
+    $this->rolloutConfig = $rolloutConfig;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3RolloutConfig
+   */
+  public function getRolloutConfig()
+  {
+    return $this->rolloutConfig;
+  }
+  public function setRolloutFailureReason($rolloutFailureReason)
+  {
+    $this->rolloutFailureReason = $rolloutFailureReason;
+  }
+  public function getRolloutFailureReason()
+  {
+    return $this->rolloutFailureReason;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3RolloutState
+   */
+  public function setRolloutState(GoogleCloudDialogflowCxV3RolloutState $rolloutState)
+  {
+    $this->rolloutState = $rolloutState;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3RolloutState
+   */
+  public function getRolloutState()
+  {
+    return $this->rolloutState;
   }
   public function setStartTime($startTime)
   {

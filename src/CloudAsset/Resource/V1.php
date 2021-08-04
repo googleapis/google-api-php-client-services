@@ -220,6 +220,18 @@ class V1 extends \Google\Service\Resource
    * (inclusive). If not specified, the current timestamp is used instead.
    * @opt_param string readTimeWindow.startTime Start time of the time window
    * (exclusive).
+   * @opt_param string relationshipTypes Optional. A list of relationship types to
+   * output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be
+   * specified if content_type=RELATIONSHIP. * If specified: it outputs specified
+   * relationships' history on the [asset_names]. It returns an error if any of
+   * the [relationship_types] doesn't belong to the supported relationship types
+   * of the [asset_names] or if any of the [asset_names]'s types doesn't belong to
+   * the source types of the [relationship_types]. * Otherwise: it outputs the
+   * supported relationships' history on the [asset_names] or returns an error if
+   * any of the [asset_names]'s types has no relationship support. See
+   * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-
+   * inventory/docs/overview) for all supported asset types and relationship
+   * types.
    * @return BatchGetAssetsHistoryResponse
    */
   public function batchGetAssetsHistory($parent, $optParams = [])

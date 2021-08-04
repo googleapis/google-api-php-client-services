@@ -19,7 +19,7 @@ namespace Google\Service\CloudAsset;
 
 class Feed extends \Google\Collection
 {
-  protected $collection_key = 'assetTypes';
+  protected $collection_key = 'relationshipTypes';
   public $assetNames;
   public $assetTypes;
   protected $conditionType = Expr::class;
@@ -28,6 +28,7 @@ class Feed extends \Google\Collection
   protected $feedOutputConfigType = FeedOutputConfig::class;
   protected $feedOutputConfigDataType = '';
   public $name;
+  public $relationshipTypes;
 
   public function setAssetNames($assetNames)
   {
@@ -88,6 +89,14 @@ class Feed extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  public function setRelationshipTypes($relationshipTypes)
+  {
+    $this->relationshipTypes = $relationshipTypes;
+  }
+  public function getRelationshipTypes()
+  {
+    return $this->relationshipTypes;
   }
 }
 

@@ -95,6 +95,11 @@ class CloudAsset extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'relationshipTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],
           ]
@@ -299,6 +304,11 @@ class CloudAsset extends \Google\Service
                 'readTimeWindow.startTime' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'relationshipTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],'exportAssets' => [
