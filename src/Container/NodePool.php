@@ -34,6 +34,8 @@ class NodePool extends \Google\Collection
   protected $maxPodsConstraintType = MaxPodsConstraint::class;
   protected $maxPodsConstraintDataType = '';
   public $name;
+  protected $networkConfigType = NodeNetworkConfig::class;
+  protected $networkConfigDataType = '';
   public $podIpv4CidrSize;
   public $selfLink;
   public $status;
@@ -143,6 +145,20 @@ class NodePool extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param NodeNetworkConfig
+   */
+  public function setNetworkConfig(NodeNetworkConfig $networkConfig)
+  {
+    $this->networkConfig = $networkConfig;
+  }
+  /**
+   * @return NodeNetworkConfig
+   */
+  public function getNetworkConfig()
+  {
+    return $this->networkConfig;
   }
   public function setPodIpv4CidrSize($podIpv4CidrSize)
   {

@@ -19,10 +19,26 @@ namespace Google\Service\OnDemandScanning;
 
 class BuildOccurrence extends \Google\Model
 {
+  protected $intotoProvenanceType = InTotoProvenance::class;
+  protected $intotoProvenanceDataType = '';
   protected $provenanceType = BuildProvenance::class;
   protected $provenanceDataType = '';
   public $provenanceBytes;
 
+  /**
+   * @param InTotoProvenance
+   */
+  public function setIntotoProvenance(InTotoProvenance $intotoProvenance)
+  {
+    $this->intotoProvenance = $intotoProvenance;
+  }
+  /**
+   * @return InTotoProvenance
+   */
+  public function getIntotoProvenance()
+  {
+    return $this->intotoProvenance;
+  }
   /**
    * @param BuildProvenance
    */

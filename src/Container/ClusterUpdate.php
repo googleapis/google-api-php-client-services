@@ -41,10 +41,14 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredL4ilbSubsettingConfigType = ILBSubsettingConfig::class;
   protected $desiredL4ilbSubsettingConfigDataType = '';
   public $desiredLocations;
+  protected $desiredLoggingConfigType = LoggingConfig::class;
+  protected $desiredLoggingConfigDataType = '';
   public $desiredLoggingService;
   protected $desiredMasterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $desiredMasterAuthorizedNetworksConfigDataType = '';
   public $desiredMasterVersion;
+  protected $desiredMonitoringConfigType = MonitoringConfig::class;
+  protected $desiredMonitoringConfigDataType = '';
   public $desiredMonitoringService;
   protected $desiredNodePoolAutoscalingType = NodePoolAutoscaling::class;
   protected $desiredNodePoolAutoscalingDataType = '';
@@ -216,6 +220,20 @@ class ClusterUpdate extends \Google\Collection
   {
     return $this->desiredLocations;
   }
+  /**
+   * @param LoggingConfig
+   */
+  public function setDesiredLoggingConfig(LoggingConfig $desiredLoggingConfig)
+  {
+    $this->desiredLoggingConfig = $desiredLoggingConfig;
+  }
+  /**
+   * @return LoggingConfig
+   */
+  public function getDesiredLoggingConfig()
+  {
+    return $this->desiredLoggingConfig;
+  }
   public function setDesiredLoggingService($desiredLoggingService)
   {
     $this->desiredLoggingService = $desiredLoggingService;
@@ -245,6 +263,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredMasterVersion()
   {
     return $this->desiredMasterVersion;
+  }
+  /**
+   * @param MonitoringConfig
+   */
+  public function setDesiredMonitoringConfig(MonitoringConfig $desiredMonitoringConfig)
+  {
+    $this->desiredMonitoringConfig = $desiredMonitoringConfig;
+  }
+  /**
+   * @return MonitoringConfig
+   */
+  public function getDesiredMonitoringConfig()
+  {
+    return $this->desiredMonitoringConfig;
   }
   public function setDesiredMonitoringService($desiredMonitoringService)
   {

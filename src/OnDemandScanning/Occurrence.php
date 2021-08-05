@@ -30,6 +30,10 @@ class Occurrence extends \Google\Model
   protected $deploymentDataType = '';
   protected $discoveryType = DiscoveryOccurrence::class;
   protected $discoveryDataType = '';
+  protected $dsseAttestationType = DSSEAttestationOccurrence::class;
+  protected $dsseAttestationDataType = '';
+  protected $envelopeType = Envelope::class;
+  protected $envelopeDataType = '';
   protected $imageType = ImageOccurrence::class;
   protected $imageDataType = '';
   public $kind;
@@ -122,6 +126,34 @@ class Occurrence extends \Google\Model
   public function getDiscovery()
   {
     return $this->discovery;
+  }
+  /**
+   * @param DSSEAttestationOccurrence
+   */
+  public function setDsseAttestation(DSSEAttestationOccurrence $dsseAttestation)
+  {
+    $this->dsseAttestation = $dsseAttestation;
+  }
+  /**
+   * @return DSSEAttestationOccurrence
+   */
+  public function getDsseAttestation()
+  {
+    return $this->dsseAttestation;
+  }
+  /**
+   * @param Envelope
+   */
+  public function setEnvelope(Envelope $envelope)
+  {
+    $this->envelope = $envelope;
+  }
+  /**
+   * @return Envelope
+   */
+  public function getEnvelope()
+  {
+    return $this->envelope;
   }
   /**
    * @param ImageOccurrence
