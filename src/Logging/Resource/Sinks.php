@@ -39,8 +39,8 @@ class Sinks extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource in which to create the sink:
    * "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]" Examples:
-   * "projects/my-logging-project", "organizations/123456789".
+   * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]" For
+   * examples:"projects/my-project" "organizations/123456789"
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
@@ -48,12 +48,12 @@ class Sinks extends \Google\Service\Resource
    * identity returned as writer_identity in the new sink. If this value is
    * omitted or set to false, and if the sink's parent is a project, then the
    * value returned as writer_identity is the same group or service account used
-   * by Logging before the addition of writer identities to this API. The sink's
-   * destination must be in the same project as the sink itself.If this field is
-   * set to true, or if the sink is owned by a non-project resource such as an
-   * organization, then the value of writer_identity will be a unique service
-   * account used only for exports from the new sink. For more information, see
-   * writer_identity in LogSink.
+   * by Cloud Logging before the addition of writer identities to this API. The
+   * sink's destination must be in the same project as the sink itself.If this
+   * field is set to true, or if the sink is owned by a non-project resource such
+   * as an organization, then the value of writer_identity will be a unique
+   * service account used only for exports from the new sink. For more
+   * information, see writer_identity in LogSink.
    * @return LogSink
    */
   public function create($parent, LogSink $postBody, $optParams = [])
@@ -71,8 +71,8 @@ class Sinks extends \Google\Service\Resource
    * "projects/[PROJECT_ID]/sinks/[SINK_ID]"
    * "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
-   * "folders/[FOLDER_ID]/sinks/[SINK_ID]" Example: "projects/my-project-id/sinks
-   * /my-sink-id".
+   * "folders/[FOLDER_ID]/sinks/[SINK_ID]" For example:"projects/my-project/sinks
+   * /my-sink"
    * @param array $optParams Optional parameters.
    * @return LoggingEmpty
    */
@@ -89,8 +89,8 @@ class Sinks extends \Google\Service\Resource
    * "projects/[PROJECT_ID]/sinks/[SINK_ID]"
    * "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
-   * "folders/[FOLDER_ID]/sinks/[SINK_ID]" Example: "projects/my-project-id/sinks
-   * /my-sink-id".
+   * "folders/[FOLDER_ID]/sinks/[SINK_ID]" For example:"projects/my-project/sinks
+   * /my-sink"
    * @param array $optParams Optional parameters.
    * @return LogSink
    */
@@ -134,8 +134,8 @@ class Sinks extends \Google\Service\Resource
    * "projects/[PROJECT_ID]/sinks/[SINK_ID]"
    * "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]"
-   * "folders/[FOLDER_ID]/sinks/[SINK_ID]" Example: "projects/my-project-id/sinks
-   * /my-sink-id".
+   * "folders/[FOLDER_ID]/sinks/[SINK_ID]" For example:"projects/my-project/sinks
+   * /my-sink"
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
@@ -151,12 +151,12 @@ class Sinks extends \Google\Service\Resource
    * in sink that need an update. A sink field will be overwritten if, and only
    * if, it is in the update mask. name and output only fields cannot be
    * updated.An empty updateMask is temporarily treated as using the following
-   * mask for backwards compatibility purposes: destination,filter,includeChildren
-   * At some point in the future, behavior will be removed and specifying an empty
-   * updateMask will be an error.For a detailed FieldMask definition, see
-   * https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
-   * updateMask=filter.
+   * mask for backwards compatibility
+   * purposes:destination,filter,includeChildrenAt some point in the future,
+   * behavior will be removed and specifying an empty updateMask will be an
+   * error.For a detailed FieldMask definition, see https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor
+   * example: updateMask=filter
    * @return LogSink
    */
   public function update($sinkName, LogSink $postBody, $optParams = [])

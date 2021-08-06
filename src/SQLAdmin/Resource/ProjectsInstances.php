@@ -19,6 +19,8 @@ namespace Google\Service\SQLAdmin\Resource;
 
 use Google\Service\SQLAdmin\Operation;
 use Google\Service\SQLAdmin\SqlInstancesRescheduleMaintenanceRequestBody;
+use Google\Service\SQLAdmin\SqlInstancesStartExternalSyncRequest;
+use Google\Service\SQLAdmin\SqlInstancesVerifyExternalSyncSettingsRequest;
 use Google\Service\SQLAdmin\SqlInstancesVerifyExternalSyncSettingsResponse;
 
 /**
@@ -54,16 +56,13 @@ class ProjectsInstances extends \Google\Service\Resource
    * @param string $project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
+   * @param SqlInstancesStartExternalSyncRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool skipVerification Whether to skip the verification step
-   * (VESS).
-   * @opt_param string syncMode External sync mode.
    * @return Operation
    */
-  public function startExternalSync($project, $instance, $optParams = [])
+  public function startExternalSync($project, $instance, SqlInstancesStartExternalSyncRequest $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'instance' => $instance];
+    $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('startExternalSync', [$params], Operation::class);
   }
@@ -74,15 +73,13 @@ class ProjectsInstances extends \Google\Service\Resource
    * @param string $project Project ID of the project that contains the instance.
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
+   * @param SqlInstancesVerifyExternalSyncSettingsRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string syncMode External sync mode
-   * @opt_param bool verifyConnectionOnly Flag to enable verifying connection only
    * @return SqlInstancesVerifyExternalSyncSettingsResponse
    */
-  public function verifyExternalSyncSettings($project, $instance, $optParams = [])
+  public function verifyExternalSyncSettings($project, $instance, SqlInstancesVerifyExternalSyncSettingsRequest $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'instance' => $instance];
+    $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('verifyExternalSyncSettings', [$params], SqlInstancesVerifyExternalSyncSettingsResponse::class);
   }

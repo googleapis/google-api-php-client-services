@@ -72,30 +72,6 @@ class Users extends \Google\Service\Resource
    * @param string $instance Database instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string body.etag This field is deprecated and will be removed from
-   * a future version of the API.
-   * @opt_param string body.host The host name from which the user can connect.
-   * For *insert* operations, host defaults to an empty string. For *update*
-   * operations, host is specified as part of the request URL. The host name
-   * cannot be updated after insertion.
-   * @opt_param string body.instance The name of the Cloud SQL instance. This does
-   * not include the project ID. Can be omitted for *update* since it is already
-   * specified on the URL.
-   * @opt_param string body.kind This is always *sql#user*.
-   * @opt_param string body.name The name of the user in the Cloud SQL instance.
-   * Can be omitted for *update* since it is already specified in the URL.
-   * @opt_param string body.password The password for the user.
-   * @opt_param string body.project The project ID of the project containing the
-   * Cloud SQL database. The Google apps domain is prefixed if applicable. Can be
-   * omitted for *update* since it is already specified on the URL.
-   * @opt_param bool body.sqlserverUserDetails.disabled If the user has been
-   * disabled
-   * @opt_param string body.sqlserverUserDetails.serverRoles The server roles for
-   * this user
-   * @opt_param string body.type The user type. It determines the method to
-   * authenticate the user during login. The default is the database's built-in
-   * user type.
    * @return UsersListResponse
    */
   public function listUsers($project, $instance, $optParams = [])

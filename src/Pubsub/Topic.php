@@ -21,6 +21,7 @@ class Topic extends \Google\Model
 {
   public $kmsKeyName;
   public $labels;
+  public $messageRetentionDuration;
   protected $messageStoragePolicyType = MessageStoragePolicy::class;
   protected $messageStoragePolicyDataType = '';
   public $name;
@@ -43,6 +44,14 @@ class Topic extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  public function setMessageRetentionDuration($messageRetentionDuration)
+  {
+    $this->messageRetentionDuration = $messageRetentionDuration;
+  }
+  public function getMessageRetentionDuration()
+  {
+    return $this->messageRetentionDuration;
   }
   /**
    * @param MessageStoragePolicy

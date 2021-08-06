@@ -20,12 +20,21 @@ namespace Google\Service\SQLAdmin;
 class IpConfiguration extends \Google\Collection
 {
   protected $collection_key = 'authorizedNetworks';
+  public $allocatedIpRange;
   protected $authorizedNetworksType = AclEntry::class;
   protected $authorizedNetworksDataType = 'array';
   public $ipv4Enabled;
   public $privateNetwork;
   public $requireSsl;
 
+  public function setAllocatedIpRange($allocatedIpRange)
+  {
+    $this->allocatedIpRange = $allocatedIpRange;
+  }
+  public function getAllocatedIpRange()
+  {
+    return $this->allocatedIpRange;
+  }
   /**
    * @param AclEntry[]
    */

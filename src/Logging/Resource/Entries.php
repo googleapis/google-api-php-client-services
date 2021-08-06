@@ -37,7 +37,7 @@ use Google\Service\Logging\WriteLogEntriesResponse;
 class Entries extends \Google\Service\Resource
 {
   /**
-   * Copies a set of log entries from a logging bucket to a Cloud Storage bucket.
+   * Copies a set of log entries from a log bucket to a Cloud Storage bucket.
    * (entries.copy)
    *
    * @param CopyLogEntriesRequest $postBody

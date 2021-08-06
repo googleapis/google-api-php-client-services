@@ -38,8 +38,8 @@ class OrganizationsExclusions extends \Google\Service\Resource
    *
    * @param string $parent Required. The parent resource in which to create the
    * exclusion: "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]" Examples:
-   * "projects/my-logging-project", "organizations/123456789".
+   * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]" For
+   * examples:"projects/my-logging-project" "organizations/123456789"
    * @param LogExclusion $postBody
    * @param array $optParams Optional parameters.
    * @return LogExclusion
@@ -57,8 +57,8 @@ class OrganizationsExclusions extends \Google\Service\Resource
    * delete: "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
    * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-   * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" Example: "projects/my-
-   * project-id/exclusions/my-exclusion-id".
+   * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+   * project/exclusions/my-exclusion"
    * @param array $optParams Optional parameters.
    * @return LoggingEmpty
    */
@@ -75,8 +75,8 @@ class OrganizationsExclusions extends \Google\Service\Resource
    * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
    * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-   * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" Example: "projects/my-
-   * project-id/exclusions/my-exclusion-id".
+   * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+   * project/exclusions/my-exclusion"
    * @param array $optParams Optional parameters.
    * @return LogExclusion
    */
@@ -117,8 +117,8 @@ class OrganizationsExclusions extends \Google\Service\Resource
    * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
    * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-   * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" Example: "projects/my-
-   * project-id/exclusions/my-exclusion-id".
+   * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+   * project/exclusions/my-exclusion"
    * @param LogExclusion $postBody
    * @param array $optParams Optional parameters.
    *

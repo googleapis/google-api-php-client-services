@@ -41,8 +41,8 @@ class V2 extends \Google\Service\Resource
    * settings. "projects/[PROJECT_ID]/cmekSettings"
    * "organizations/[ORGANIZATION_ID]/cmekSettings"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
-   * "folders/[FOLDER_ID]/cmekSettings" Example:
-   * "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can
+   * "folders/[FOLDER_ID]/cmekSettings" For
+   * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can
    * currently only be configured for GCP organizations. Once configured, it
    * applies to all projects and folders in the GCP organization.
    * @param array $optParams Optional parameters.
@@ -69,8 +69,8 @@ class V2 extends \Google\Service\Resource
    * update. "projects/[PROJECT_ID]/cmekSettings"
    * "organizations/[ORGANIZATION_ID]/cmekSettings"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/cmekSettings"
-   * "folders/[FOLDER_ID]/cmekSettings" Example:
-   * "organizations/12345/cmekSettings".Note: CMEK for the Logs Router can
+   * "folders/[FOLDER_ID]/cmekSettings" For
+   * example:"organizations/12345/cmekSettings"Note: CMEK for the Logs Router can
    * currently only be configured for GCP organizations. Once configured, it
    * applies to all projects and folders in the GCP organization.
    * @param CmekSettings $postBody
@@ -79,7 +79,7 @@ class V2 extends \Google\Service\Resource
    * @opt_param string updateMask Optional. Field mask identifying which fields
    * from cmek_settings should be updated. A field will be overwritten if and only
    * if it is in the update mask. Output only fields cannot be updated.See
-   * FieldMask for more information.Example: "updateMask=kmsKeyName"
+   * FieldMask for more information.For example: "updateMask=kmsKeyName"
    * @return CmekSettings
    */
   public function updateCmekSettings($name, CmekSettings $postBody, $optParams = [])

@@ -36,6 +36,7 @@ class Subscription extends \Google\Model
   protected $retryPolicyType = RetryPolicy::class;
   protected $retryPolicyDataType = '';
   public $topic;
+  public $topicMessageRetentionDuration;
 
   public function setAckDeadlineSeconds($ackDeadlineSeconds)
   {
@@ -164,6 +165,14 @@ class Subscription extends \Google\Model
   public function getTopic()
   {
     return $this->topic;
+  }
+  public function setTopicMessageRetentionDuration($topicMessageRetentionDuration)
+  {
+    $this->topicMessageRetentionDuration = $topicMessageRetentionDuration;
+  }
+  public function getTopicMessageRetentionDuration()
+  {
+    return $this->topicMessageRetentionDuration;
   }
 }
 
