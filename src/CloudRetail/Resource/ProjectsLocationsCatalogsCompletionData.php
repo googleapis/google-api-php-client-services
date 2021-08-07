@@ -33,9 +33,9 @@ class ProjectsLocationsCatalogsCompletionData extends \Google\Service\Resource
   /**
    * Bulk import of processed completion dataset. Request processing may be
    * synchronous. Partial updating is not supported. This feature is only
-   * available for users who have Retail Search enabled. Contact Retail Support
-   * (retail-search-support@google.com) if you are interested in using Retail
-   * Search. (completionData.import)
+   * available for users who have Retail Search enabled. Please submit a form
+   * [here](https://cloud.google.com/contact) to contact cloud sales if you are
+   * interested in using Retail Search. (completionData.import)
    *
    * @param string $parent Required. The catalog which the suggestions dataset
    * belongs to. Format:

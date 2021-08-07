@@ -43,9 +43,9 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * enqueued and processed downstream. As a consequence, when a response is
    * returned, the added place IDs are not immediately manifested in the Product
    * queried by GetProduct or ListProducts. This feature is only available for
-   * users who have Retail Search enabled. Contact Retail Support (retail-search-
-   * support@google.com) if you are interested in using Retail Search.
-   * (products.addFulfillmentPlaces)
+   * users who have Retail Search enabled. Please submit a form
+   * [here](https://cloud.google.com/contact) to contact cloud sales if you are
+   * interested in using Retail Search. (products.addFulfillmentPlaces)
    *
    * @param string $product Required. Full resource name of Product, such as `proj
    * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
@@ -223,9 +223,9 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * enqueued and processed downstream. As a consequence, when a response is
    * returned, the removed place IDs are not immediately manifested in the Product
    * queried by GetProduct or ListProducts. This feature is only available for
-   * users who have Retail Search enabled. Contact Retail Support (retail-search-
-   * support@google.com) if you are interested in using Retail Search.
-   * (products.removeFulfillmentPlaces)
+   * users who have Retail Search enabled. Please submit a form
+   * [here](https://cloud.google.com/contact) to contact cloud sales if you are
+   * interested in using Retail Search. (products.removeFulfillmentPlaces)
    *
    * @param string $product Required. Full resource name of Product, such as `proj
    * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
@@ -259,9 +259,9 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * UpdateProductRequest.set_mask, then any existing inventory information will
    * be preserved. Pre-existing inventory information can only be updated with
    * SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature
-   * is only available for users who have Retail Search enabled. Contact Retail
-   * Support (retail-search-support@google.com) if you are interested in using
-   * Retail Search. (products.setInventory)
+   * is only available for users who have Retail Search enabled. Please submit a
+   * form [here](https://cloud.google.com/contact) to contact cloud sales if you
+   * are interested in using Retail Search. (products.setInventory)
    *
    * @param string $name Immutable. Full resource name of the product, such as `pr
    * ojects/locations/global/catalogs/default_catalog/branches/default_branch/prod
