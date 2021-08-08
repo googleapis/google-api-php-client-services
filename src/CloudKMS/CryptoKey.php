@@ -20,6 +20,8 @@ namespace Google\Service\CloudKMS;
 class CryptoKey extends \Google\Model
 {
   public $createTime;
+  public $destroyScheduledDuration;
+  public $importOnly;
   public $labels;
   public $name;
   public $nextRotationTime;
@@ -37,6 +39,22 @@ class CryptoKey extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setDestroyScheduledDuration($destroyScheduledDuration)
+  {
+    $this->destroyScheduledDuration = $destroyScheduledDuration;
+  }
+  public function getDestroyScheduledDuration()
+  {
+    return $this->destroyScheduledDuration;
+  }
+  public function setImportOnly($importOnly)
+  {
+    $this->importOnly = $importOnly;
+  }
+  public function getImportOnly()
+  {
+    return $this->importOnly;
   }
   public function setLabels($labels)
   {

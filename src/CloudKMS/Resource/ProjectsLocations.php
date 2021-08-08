@@ -17,6 +17,8 @@
 
 namespace Google\Service\CloudKMS\Resource;
 
+use Google\Service\CloudKMS\GenerateRandomBytesRequest;
+use Google\Service\CloudKMS\GenerateRandomBytesResponse;
 use Google\Service\CloudKMS\ListLocationsResponse;
 use Google\Service\CloudKMS\Location;
 
@@ -30,6 +32,22 @@ use Google\Service\CloudKMS\Location;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Generate random bytes using the Cloud KMS randomness source in the provided
+   * location. (locations.generateRandomBytes)
+   *
+   * @param string $location The project-specific location in which to generate
+   * random bytes. For example, "projects/my-project/locations/us-central1".
+   * @param GenerateRandomBytesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GenerateRandomBytesResponse
+   */
+  public function generateRandomBytes($location, GenerateRandomBytesRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateRandomBytes', [$params], GenerateRandomBytesResponse::class);
+  }
   /**
    * Gets information about a location. (locations.get)
    *

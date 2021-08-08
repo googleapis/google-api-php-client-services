@@ -70,7 +70,17 @@ class CloudKMS extends \Google\Service
         'locations',
         [
           'methods' => [
-            'get' => [
+            'generateRandomBytes' => [
+              'path' => 'v1/{+location}:generateRandomBytes',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
