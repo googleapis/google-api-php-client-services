@@ -18,6 +18,7 @@
 namespace Google\Service;
 
 use Google\Client;
+use Google\Service\Tokeninfo;
 
 /**
  * Service definition for Oauth2 (v2).
