@@ -39,6 +39,7 @@ class Commitment extends \Google\Collection
   public $startTimestamp;
   public $status;
   public $statusMessage;
+  public $type;
 
   public function setCategory($category)
   {
@@ -185,6 +186,14 @@ class Commitment extends \Google\Collection
   public function getStatusMessage()
   {
     return $this->statusMessage;
+  }
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  public function getType()
+  {
+    return $this->type;
   }
 }
 

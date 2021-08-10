@@ -17,6 +17,7 @@
 
 namespace Google\Service\CloudBuild\Resource;
 
+use Google\Service\CloudBuild\ApproveBuildRequest;
 use Google\Service\CloudBuild\Build;
 use Google\Service\CloudBuild\CancelBuildRequest;
 use Google\Service\CloudBuild\ListBuildsResponse;
@@ -33,6 +34,23 @@ use Google\Service\CloudBuild\RetryBuildRequest;
  */
 class ProjectsLocationsBuilds extends \Google\Service\Resource
 {
+  /**
+   * Approves or rejects a pending build. If approved, the returned LRO will be
+   * analogous to the LRO returned from a CreateBuild call. If rejected, the
+   * returned LRO will be immediately done. (builds.approve)
+   *
+   * @param string $name Required. Name of the target build. For example:
+   * "projects/{$project_id}/builds/{$build_id}"
+   * @param ApproveBuildRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function approve($name, ApproveBuildRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('approve', [$params], Operation::class);
+  }
   /**
    * Cancels a build in progress. (builds.cancel)
    *

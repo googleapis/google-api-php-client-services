@@ -18,6 +18,7 @@
 namespace Google\Service\Cloudchannel\Resource;
 
 use Google\Service\Cloudchannel\GoogleCloudChannelV1Customer;
+use Google\Service\Cloudchannel\GoogleCloudChannelV1ImportCustomerRequest;
 use Google\Service\Cloudchannel\GoogleCloudChannelV1ListCustomersResponse;
 use Google\Service\Cloudchannel\GoogleProtobufEmpty;
 
@@ -86,6 +87,31 @@ class AccountsChannelPartnerLinksCustomers extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleCloudChannelV1Customer::class);
+  }
+  /**
+   * Imports a Customer from the Cloud Identity associated with the provided Cloud
+   * Identity ID or domain before a TransferEntitlements call. If a linked
+   * Customer already exists and overwrite_if_exists is true, it will update that
+   * Customer's data. Possible error codes: * PERMISSION_DENIED: The reseller
+   * account making the request is different from the reseller account in the API
+   * request. * NOT_FOUND: Cloud Identity doesn't exist or was deleted. *
+   * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+   * expired or invalid. * ALREADY_EXISTS: A customer already exists and has
+   * conflicting critical fields. Requires an overwrite. Return value: The
+   * Customer. (customers.import)
+   *
+   * @param string $parent Required. The resource name of the reseller's account.
+   * Parent takes the format: accounts/{account_id} or
+   * accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+   * @param GoogleCloudChannelV1ImportCustomerRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudChannelV1Customer
+   */
+  public function import($parent, GoogleCloudChannelV1ImportCustomerRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('import', [$params], GoogleCloudChannelV1Customer::class);
   }
   /**
    * List Customers. Possible error codes: * PERMISSION_DENIED: The reseller

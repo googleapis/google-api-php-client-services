@@ -38,7 +38,7 @@ class CloudBillingBudget extends \Google\Service
   /** View and manage your Google Cloud Platform billing accounts. */
   const CLOUD_BILLING =
       "https://www.googleapis.com/auth/cloud-billing";
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 

@@ -20,6 +20,7 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1EnvironmentConfig extends \Google\Collection
 {
   protected $collection_key = 'targets';
+  public $arcConfigLocation;
   public $createTime;
   protected $dataCollectorsType = GoogleCloudApigeeV1DataCollectorConfig::class;
   protected $dataCollectorsDataType = 'array';
@@ -30,6 +31,7 @@ class GoogleCloudApigeeV1EnvironmentConfig extends \Google\Collection
   public $featureFlags;
   protected $flowhooksType = GoogleCloudApigeeV1FlowHookConfig::class;
   protected $flowhooksDataType = 'array';
+  public $gatewayConfigLocation;
   protected $keystoresType = GoogleCloudApigeeV1KeystoreConfig::class;
   protected $keystoresDataType = 'array';
   public $name;
@@ -47,6 +49,14 @@ class GoogleCloudApigeeV1EnvironmentConfig extends \Google\Collection
   protected $traceConfigDataType = '';
   public $uid;
 
+  public function setArcConfigLocation($arcConfigLocation)
+  {
+    $this->arcConfigLocation = $arcConfigLocation;
+  }
+  public function getArcConfigLocation()
+  {
+    return $this->arcConfigLocation;
+  }
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
@@ -118,6 +128,14 @@ class GoogleCloudApigeeV1EnvironmentConfig extends \Google\Collection
   public function getFlowhooks()
   {
     return $this->flowhooks;
+  }
+  public function setGatewayConfigLocation($gatewayConfigLocation)
+  {
+    $this->gatewayConfigLocation = $gatewayConfigLocation;
+  }
+  public function getGatewayConfigLocation()
+  {
+    return $this->gatewayConfigLocation;
   }
   /**
    * @param GoogleCloudApigeeV1KeystoreConfig[]

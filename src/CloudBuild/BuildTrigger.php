@@ -20,6 +20,8 @@ namespace Google\Service\CloudBuild;
 class BuildTrigger extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  protected $approvalConfigType = ApprovalConfig::class;
+  protected $approvalConfigDataType = '';
   public $autodetect;
   protected $buildType = Build::class;
   protected $buildDataType = '';
@@ -28,6 +30,8 @@ class BuildTrigger extends \Google\Collection
   public $disabled;
   public $filename;
   public $filter;
+  protected $gitFileSourceType = GitFileSource::class;
+  protected $gitFileSourceDataType = '';
   protected $githubType = GitHubEventsConfig::class;
   protected $githubDataType = '';
   public $id;
@@ -47,6 +51,20 @@ class BuildTrigger extends \Google\Collection
   protected $webhookConfigType = WebhookConfig::class;
   protected $webhookConfigDataType = '';
 
+  /**
+   * @param ApprovalConfig
+   */
+  public function setApprovalConfig(ApprovalConfig $approvalConfig)
+  {
+    $this->approvalConfig = $approvalConfig;
+  }
+  /**
+   * @return ApprovalConfig
+   */
+  public function getApprovalConfig()
+  {
+    return $this->approvalConfig;
+  }
   public function setAutodetect($autodetect)
   {
     $this->autodetect = $autodetect;
@@ -108,6 +126,20 @@ class BuildTrigger extends \Google\Collection
   public function getFilter()
   {
     return $this->filter;
+  }
+  /**
+   * @param GitFileSource
+   */
+  public function setGitFileSource(GitFileSource $gitFileSource)
+  {
+    $this->gitFileSource = $gitFileSource;
+  }
+  /**
+   * @return GitFileSource
+   */
+  public function getGitFileSource()
+  {
+    return $this->gitFileSource;
   }
   /**
    * @param GitHubEventsConfig

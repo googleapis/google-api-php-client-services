@@ -28,6 +28,7 @@ class BuildStep extends \Google\Collection
   public $name;
   protected $pullTimingType = TimeSpan::class;
   protected $pullTimingDataType = '';
+  public $script;
   public $secretEnv;
   public $status;
   public $timeout;
@@ -98,6 +99,14 @@ class BuildStep extends \Google\Collection
   public function getPullTiming()
   {
     return $this->pullTiming;
+  }
+  public function setScript($script)
+  {
+    $this->script = $script;
+  }
+  public function getScript()
+  {
+    return $this->script;
   }
   public function setSecretEnv($secretEnv)
   {

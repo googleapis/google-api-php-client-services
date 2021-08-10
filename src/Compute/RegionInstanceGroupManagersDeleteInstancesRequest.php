@@ -21,6 +21,7 @@ class RegionInstanceGroupManagersDeleteInstancesRequest extends \Google\Collecti
 {
   protected $collection_key = 'instances';
   public $instances;
+  public $skipInstancesOnValidationError;
 
   public function setInstances($instances)
   {
@@ -29,6 +30,14 @@ class RegionInstanceGroupManagersDeleteInstancesRequest extends \Google\Collecti
   public function getInstances()
   {
     return $this->instances;
+  }
+  public function setSkipInstancesOnValidationError($skipInstancesOnValidationError)
+  {
+    $this->skipInstancesOnValidationError = $skipInstancesOnValidationError;
+  }
+  public function getSkipInstancesOnValidationError()
+  {
+    return $this->skipInstancesOnValidationError;
   }
 }
 

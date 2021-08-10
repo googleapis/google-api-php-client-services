@@ -246,6 +246,16 @@ class Cloudchannel extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'import' => [
+              'path' => 'v1/{+parent}/customers:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/customers',
               'httpMethod' => 'GET',
@@ -313,6 +323,16 @@ class Cloudchannel extends \Google\Service
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'import' => [
+              'path' => 'v1/{+parent}/customers:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

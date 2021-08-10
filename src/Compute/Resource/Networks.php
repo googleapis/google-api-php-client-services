@@ -329,10 +329,9 @@ class Networks extends \Google\Service\Resource
     return $this->call('switchToCustomMode', [$params], Operation::class);
   }
   /**
-   * Updates the specified network peering with the data included in the request
-   * Only the following fields can be modified:
-   * NetworkPeering.export_custom_routes, and NetworkPeering.import_custom_routes
-   * (networks.updatePeering)
+   * Updates the specified network peering with the data included in the request.
+   * You can only modify the NetworkPeering.export_custom_routes field and the
+   * NetworkPeering.import_custom_routes field. (networks.updatePeering)
    *
    * @param string $project Project ID for this request.
    * @param string $network Name of the network resource which the updated peering

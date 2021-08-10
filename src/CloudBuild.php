@@ -101,7 +101,17 @@ class CloudBuild extends \Google\Service
         'builds',
         [
           'methods' => [
-            'cancel' => [
+            'approve' => [
+              'path' => 'v1/{+name}:approve',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'cancel' => [
               'path' => 'v1/projects/{projectId}/builds/{id}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -288,7 +298,17 @@ class CloudBuild extends \Google\Service
         'builds',
         [
           'methods' => [
-            'cancel' => [
+            'approve' => [
+              'path' => 'v1/{+name}:approve',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'cancel' => [
               'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [

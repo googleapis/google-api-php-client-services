@@ -21,6 +21,7 @@ class InstanceGroupManagersDeleteInstancesRequest extends \Google\Collection
 {
   protected $collection_key = 'instances';
   public $instances;
+  public $skipInstancesOnValidationError;
 
   public function setInstances($instances)
   {
@@ -29,6 +30,14 @@ class InstanceGroupManagersDeleteInstancesRequest extends \Google\Collection
   public function getInstances()
   {
     return $this->instances;
+  }
+  public function setSkipInstancesOnValidationError($skipInstancesOnValidationError)
+  {
+    $this->skipInstancesOnValidationError = $skipInstancesOnValidationError;
+  }
+  public function getSkipInstancesOnValidationError()
+  {
+    return $this->skipInstancesOnValidationError;
   }
 }
 

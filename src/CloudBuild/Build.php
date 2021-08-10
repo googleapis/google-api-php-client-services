@@ -20,6 +20,8 @@ namespace Google\Service\CloudBuild;
 class Build extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  protected $approvalType = BuildApproval::class;
+  protected $approvalDataType = '';
   protected $artifactsType = Artifacts::class;
   protected $artifactsDataType = '';
   protected $availableSecretsType = Secrets::class;
@@ -60,6 +62,20 @@ class Build extends \Google\Collection
   protected $warningsType = Warning::class;
   protected $warningsDataType = 'array';
 
+  /**
+   * @param BuildApproval
+   */
+  public function setApproval(BuildApproval $approval)
+  {
+    $this->approval = $approval;
+  }
+  /**
+   * @return BuildApproval
+   */
+  public function getApproval()
+  {
+    return $this->approval;
+  }
   /**
    * @param Artifacts
    */

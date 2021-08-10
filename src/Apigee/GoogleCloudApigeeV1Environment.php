@@ -19,7 +19,9 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1Environment extends \Google\Model
 {
+  public $apiProxyType;
   public $createdAt;
+  public $deploymentType;
   public $description;
   public $displayName;
   public $lastModifiedAt;
@@ -28,6 +30,14 @@ class GoogleCloudApigeeV1Environment extends \Google\Model
   protected $propertiesDataType = '';
   public $state;
 
+  public function setApiProxyType($apiProxyType)
+  {
+    $this->apiProxyType = $apiProxyType;
+  }
+  public function getApiProxyType()
+  {
+    return $this->apiProxyType;
+  }
   public function setCreatedAt($createdAt)
   {
     $this->createdAt = $createdAt;
@@ -35,6 +45,14 @@ class GoogleCloudApigeeV1Environment extends \Google\Model
   public function getCreatedAt()
   {
     return $this->createdAt;
+  }
+  public function setDeploymentType($deploymentType)
+  {
+    $this->deploymentType = $deploymentType;
+  }
+  public function getDeploymentType()
+  {
+    return $this->deploymentType;
   }
   public function setDescription($description)
   {

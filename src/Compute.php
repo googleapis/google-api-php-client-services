@@ -34,7 +34,7 @@ use Google\Client;
  */
 class Compute extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
   /** View and manage your Google Compute Engine resources. */
@@ -43,13 +43,13 @@ class Compute extends \Google\Service
   /** View your Google Compute Engine resources. */
   const COMPUTE_READONLY =
       "https://www.googleapis.com/auth/compute.readonly";
-  /** Manage your data and permissions in Google Cloud Storage. */
+  /** Manage your data and permissions in Cloud Storage and see the email address for your Google Account. */
   const DEVSTORAGE_FULL_CONTROL =
       "https://www.googleapis.com/auth/devstorage.full_control";
   /** View your data in Google Cloud Storage. */
   const DEVSTORAGE_READ_ONLY =
       "https://www.googleapis.com/auth/devstorage.read_only";
-  /** Manage your data in Google Cloud Storage. */
+  /** Manage your data in Cloud Storage and see the email address of your Google Account. */
   const DEVSTORAGE_READ_WRITE =
       "https://www.googleapis.com/auth/devstorage.read_write";
 
@@ -73,6 +73,7 @@ class Compute extends \Google\Service
   public $healthChecks;
   public $httpHealthChecks;
   public $httpsHealthChecks;
+  public $imageFamilyViews;
   public $images;
   public $instanceGroupManagers;
   public $instanceGroups;
@@ -3249,6 +3250,36 @@ class Compute extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->imageFamilyViews = new Compute\Resource\ImageFamilyViews(
+        $this,
+        $this->serviceName,
+        'imageFamilyViews',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'projects/{project}/zones/{zone}/imageFamilyViews/{family}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'family' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
