@@ -30,18 +30,18 @@ use Google\Service\PolicyAnalyzer\GoogleCloudPolicyanalyzerV1QueryActivityRespon
 class ProjectsLocationsActivityTypesActivities extends \Google\Service\Resource
 {
   /**
-   * Queries policy activities on GCP resources. (activities.query)
+   * Queries policy activities on Google Cloud resources. (activities.query)
    *
    * @param string $parent Required. The container resource on which to execute
    * the request. Acceptable formats: `projects/[PROJECT_ID|PROJECT_NUMBER]/locati
-   * ons/[LOCATION]/activityTypes/[ACTIVITY_TYPE]` LOCATION here refers to GCP
-   * Locations: https://cloud.google.com/about/locations/
+   * ons/[LOCATION]/activityTypes/[ACTIVITY_TYPE]` LOCATION here refers to Google
+   * Cloud Locations: https://cloud.google.com/about/locations/
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Optional filter expression to restrict the
+   * @opt_param string filter Optional. Filter expression to restrict the
    * activities returned. Supported filters are: -
-   * service_account_last_authn.full_resource_name {=} -
-   * service_account_key_last_authn.full_resource_name {=}
+   * service_account_last_authn.full_resource_name {=} [STRING] -
+   * service_account_key_last_authn.full_resource_name {=} [STRING]
    * @opt_param int pageSize Optional. The maximum number of results to return
    * from this request. Max limit is 1000. Non-positive values are ignored. The
    * presence of `nextPageToken` in the response indicates that more results might

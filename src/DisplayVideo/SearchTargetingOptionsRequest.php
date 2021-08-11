@@ -20,14 +20,10 @@ namespace Google\Service\DisplayVideo;
 class SearchTargetingOptionsRequest extends \Google\Model
 {
   public $advertiserId;
-  protected $businessChainSearchTermsType = BusinessChainSearchTerms::class;
-  protected $businessChainSearchTermsDataType = '';
   protected $geoRegionSearchTermsType = GeoRegionSearchTerms::class;
   protected $geoRegionSearchTermsDataType = '';
   public $pageSize;
   public $pageToken;
-  protected $poiSearchTermsType = PoiSearchTerms::class;
-  protected $poiSearchTermsDataType = '';
 
   public function setAdvertiserId($advertiserId)
   {
@@ -36,20 +32,6 @@ class SearchTargetingOptionsRequest extends \Google\Model
   public function getAdvertiserId()
   {
     return $this->advertiserId;
-  }
-  /**
-   * @param BusinessChainSearchTerms
-   */
-  public function setBusinessChainSearchTerms(BusinessChainSearchTerms $businessChainSearchTerms)
-  {
-    $this->businessChainSearchTerms = $businessChainSearchTerms;
-  }
-  /**
-   * @return BusinessChainSearchTerms
-   */
-  public function getBusinessChainSearchTerms()
-  {
-    return $this->businessChainSearchTerms;
   }
   /**
    * @param GeoRegionSearchTerms
@@ -80,20 +62,6 @@ class SearchTargetingOptionsRequest extends \Google\Model
   public function getPageToken()
   {
     return $this->pageToken;
-  }
-  /**
-   * @param PoiSearchTerms
-   */
-  public function setPoiSearchTerms(PoiSearchTerms $poiSearchTerms)
-  {
-    $this->poiSearchTerms = $poiSearchTerms;
-  }
-  /**
-   * @return PoiSearchTerms
-   */
-  public function getPoiSearchTerms()
-  {
-    return $this->poiSearchTerms;
   }
 }
 

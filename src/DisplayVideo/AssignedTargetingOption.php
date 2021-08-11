@@ -32,8 +32,6 @@ class AssignedTargetingOption extends \Google\Model
   protected $authorizedSellerStatusDetailsDataType = '';
   protected $browserDetailsType = BrowserAssignedTargetingOptionDetails::class;
   protected $browserDetailsDataType = '';
-  protected $businessChainDetailsType = BusinessChainAssignedTargetingOptionDetails::class;
-  protected $businessChainDetailsDataType = '';
   protected $carrierAndIspDetailsType = CarrierAndIspAssignedTargetingOptionDetails::class;
   protected $carrierAndIspDetailsDataType = '';
   protected $categoryDetailsType = CategoryAssignedTargetingOptionDetails::class;
@@ -84,8 +82,6 @@ class AssignedTargetingOption extends \Google\Model
   protected $operatingSystemDetailsDataType = '';
   protected $parentalStatusDetailsType = ParentalStatusAssignedTargetingOptionDetails::class;
   protected $parentalStatusDetailsDataType = '';
-  protected $poiDetailsType = PoiAssignedTargetingOptionDetails::class;
-  protected $poiDetailsDataType = '';
   protected $proximityLocationListDetailsType = ProximityLocationListAssignedTargetingOptionDetails::class;
   protected $proximityLocationListDetailsDataType = '';
   protected $regionalLocationListDetailsType = RegionalLocationListAssignedTargetingOptionDetails::class;
@@ -197,20 +193,6 @@ class AssignedTargetingOption extends \Google\Model
   public function getBrowserDetails()
   {
     return $this->browserDetails;
-  }
-  /**
-   * @param BusinessChainAssignedTargetingOptionDetails
-   */
-  public function setBusinessChainDetails(BusinessChainAssignedTargetingOptionDetails $businessChainDetails)
-  {
-    $this->businessChainDetails = $businessChainDetails;
-  }
-  /**
-   * @return BusinessChainAssignedTargetingOptionDetails
-   */
-  public function getBusinessChainDetails()
-  {
-    return $this->businessChainDetails;
   }
   /**
    * @param CarrierAndIspAssignedTargetingOptionDetails
@@ -563,20 +545,6 @@ class AssignedTargetingOption extends \Google\Model
   public function getParentalStatusDetails()
   {
     return $this->parentalStatusDetails;
-  }
-  /**
-   * @param PoiAssignedTargetingOptionDetails
-   */
-  public function setPoiDetails(PoiAssignedTargetingOptionDetails $poiDetails)
-  {
-    $this->poiDetails = $poiDetails;
-  }
-  /**
-   * @return PoiAssignedTargetingOptionDetails
-   */
-  public function getPoiDetails()
-  {
-    return $this->poiDetails;
   }
   /**
    * @param ProximityLocationListAssignedTargetingOptionDetails

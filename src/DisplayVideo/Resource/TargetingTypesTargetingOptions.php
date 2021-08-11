@@ -99,8 +99,7 @@ class TargetingTypesTargetingOptions extends \Google\Service\Resource
    * terms. (targetingOptions.search)
    *
    * @param string $targetingType Required. The type of targeting options to
-   * retrieve. Accepted values are: * `TARGETING_TYPE_GEO_REGION` *
-   * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+   * retrieve. Accepted values are: * `TARGETING_TYPE_GEO_REGION`
    * @param SearchTargetingOptionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SearchTargetingOptionsResponse
