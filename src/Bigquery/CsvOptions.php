@@ -19,10 +19,14 @@ namespace Google\Service\Bigquery;
 
 class CsvOptions extends \Google\Model
 {
+  protected $internal_gapi_mappings = [
+        "nullMarker" => "null_marker",
+  ];
   public $allowJaggedRows;
   public $allowQuotedNewlines;
   public $encoding;
   public $fieldDelimiter;
+  public $nullMarker;
   public $quote;
   public $skipLeadingRows;
 
@@ -57,6 +61,14 @@ class CsvOptions extends \Google\Model
   public function getFieldDelimiter()
   {
     return $this->fieldDelimiter;
+  }
+  public function setNullMarker($nullMarker)
+  {
+    $this->nullMarker = $nullMarker;
+  }
+  public function getNullMarker()
+  {
+    return $this->nullMarker;
   }
   public function setQuote($quote)
   {

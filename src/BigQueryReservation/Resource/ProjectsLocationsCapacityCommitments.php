@@ -65,6 +65,10 @@ class ProjectsLocationsCapacityCommitments extends \Google\Service\Resource
    * @param string $name Required. Resource name of the capacity commitment to
    * delete. E.g., `projects/myproject/locations/US/capacityCommitments/123`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force Can be used to force delete commitments even if
+   * assignments exist. Deleting commitments with assignments may cause queries to
+   * fail if they no longer have access to slots.
    * @return BigqueryreservationEmpty
    */
   public function delete($name, $optParams = [])

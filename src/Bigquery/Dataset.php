@@ -33,6 +33,7 @@ class Dataset extends \Google\Collection
   public $etag;
   public $friendlyName;
   public $id;
+  public $isCaseInsensitive;
   public $kind;
   public $labels;
   public $lastModifiedTime;
@@ -137,6 +138,14 @@ class Dataset extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  public function setIsCaseInsensitive($isCaseInsensitive)
+  {
+    $this->isCaseInsensitive = $isCaseInsensitive;
+  }
+  public function getIsCaseInsensitive()
+  {
+    return $this->isCaseInsensitive;
   }
   public function setKind($kind)
   {

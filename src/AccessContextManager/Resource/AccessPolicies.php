@@ -105,7 +105,7 @@ class AccessPolicies extends \Google\Service\Resource
    * `metadata` as a BadRequest proto. (accessPolicies.patch)
    *
    * @param string $name Output only. Resource name of the `AccessPolicy`. Format:
-   * `accessPolicies/{policy_id}`
+   * `accessPolicies/{access_policy}`
    * @param AccessPolicy $postBody
    * @param array $optParams Optional parameters.
    *

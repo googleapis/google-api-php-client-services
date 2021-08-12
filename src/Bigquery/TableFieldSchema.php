@@ -22,6 +22,7 @@ class TableFieldSchema extends \Google\Collection
   protected $collection_key = 'fields';
   protected $categoriesType = TableFieldSchemaCategories::class;
   protected $categoriesDataType = '';
+  public $collationSpec;
   public $description;
   protected $fieldsType = TableFieldSchema::class;
   protected $fieldsDataType = 'array';
@@ -47,6 +48,14 @@ class TableFieldSchema extends \Google\Collection
   public function getCategories()
   {
     return $this->categories;
+  }
+  public function setCollationSpec($collationSpec)
+  {
+    $this->collationSpec = $collationSpec;
+  }
+  public function getCollationSpec()
+  {
+    return $this->collationSpec;
   }
   public function setDescription($description)
   {

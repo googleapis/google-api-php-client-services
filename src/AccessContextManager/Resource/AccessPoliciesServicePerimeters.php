@@ -136,7 +136,8 @@ class AccessPoliciesServicePerimeters extends \Google\Service\Resource
    *
    * @param string $name Required. Resource name for the ServicePerimeter. The
    * `short_name` component must begin with a letter and only include alphanumeric
-   * and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
+   * and '_'. Format:
+   * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
    * @param ServicePerimeter $postBody
    * @param array $optParams Optional parameters.
    *

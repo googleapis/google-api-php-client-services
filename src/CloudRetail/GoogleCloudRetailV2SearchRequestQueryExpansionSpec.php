@@ -20,6 +20,7 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchRequestQueryExpansionSpec extends \Google\Model
 {
   public $condition;
+  public $pinUnexpandedResults;
 
   public function setCondition($condition)
   {
@@ -28,6 +29,14 @@ class GoogleCloudRetailV2SearchRequestQueryExpansionSpec extends \Google\Model
   public function getCondition()
   {
     return $this->condition;
+  }
+  public function setPinUnexpandedResults($pinUnexpandedResults)
+  {
+    $this->pinUnexpandedResults = $pinUnexpandedResults;
+  }
+  public function getPinUnexpandedResults()
+  {
+    return $this->pinUnexpandedResults;
   }
 }
 

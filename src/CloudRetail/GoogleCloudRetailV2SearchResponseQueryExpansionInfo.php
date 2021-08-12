@@ -20,6 +20,7 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchResponseQueryExpansionInfo extends \Google\Model
 {
   public $expandedQuery;
+  public $pinnedResultCount;
 
   public function setExpandedQuery($expandedQuery)
   {
@@ -28,6 +29,14 @@ class GoogleCloudRetailV2SearchResponseQueryExpansionInfo extends \Google\Model
   public function getExpandedQuery()
   {
     return $this->expandedQuery;
+  }
+  public function setPinnedResultCount($pinnedResultCount)
+  {
+    $this->pinnedResultCount = $pinnedResultCount;
+  }
+  public function getPinnedResultCount()
+  {
+    return $this->pinnedResultCount;
   }
 }
 
