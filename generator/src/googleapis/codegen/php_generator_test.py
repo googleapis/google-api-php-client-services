@@ -55,15 +55,15 @@ class PHPApiTest(basetest.TestCase):
     """Test creating safe class names from object names."""
     test_schema = api.Schema(self.api, 'testSchema', {})
     type_to_hint = [
-        ({'$ref': 'Activity'}, 'Google_Service_Test_Activity'),
+        ({'$ref': 'Activity'}, 'Activity'),
         ({'type': 'boolean'}, ''),
         ({'type': 'integer'}, ''),
         ({'type': 'string'}, ''),  # PHP doesn't support primitive type hints.
         ({'type': 'StRing'}, ''),  # PHP var names are case-insensitive.
-        ({'$ref': 'Photo'}, 'Google_Service_Test_Photo'),
+        ({'$ref': 'Photo'}, 'Photo'),
         ({'type': 'array', 'items': {'type': 'string'}}, ''),
         ({'type': 'object', 'properties': {'p1': {'type': 'string'}}},
-         'Google_Service_Test_TestSchemaTest'),
+         'TestSchemaTest'),
         ]
     for type_dict, expected_hint in type_to_hint:
       test_property = schema.Property(self.api, test_schema, 'test', type_dict)
