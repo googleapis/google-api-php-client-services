@@ -709,12 +709,21 @@ namespace Google\Service\KitchSink;
 
 class Enum extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $name;
 
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
@@ -746,12 +755,21 @@ namespace Google\Service\KitchSink;
 
 class Geometry extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $type;
 
+  /**
+   * @param string
+   */
   public function setType($type)
   {
     $this->type = $type;
   }
+  /**
+   * @return string
+   */
   public function getType()
   {
     return $this->type;
@@ -835,15 +853,24 @@ use Google\Service\KitchSink\Geometry
 
 class GeometryPolygon extends Geometry
 {
+  /**
+   * @var string
+   */
   public $coordinates;
   protected function gapiInit()
   {
     $this->type = 'Polygon';
   }
+  /**
+   * @param string
+   */
   public function setCoordinates($coordinates)
   {
     $this->coordinates = $coordinates;
   }
+  /**
+   * @return string
+   */
   public function getCoordinates()
   {
     return $this->coordinates;
@@ -877,15 +904,24 @@ use Google\Service\KitchSink\Geometry
 
 class GeometryReference extends Geometry
 {
+  /**
+   * @var string
+   */
   public $coordinates;
   protected function gapiInit()
   {
     $this->type = 'Ref';
   }
+  /**
+   * @param string
+   */
   public function setCoordinates($coordinates)
   {
     $this->coordinates = $coordinates;
   }
+  /**
+   * @return string
+   */
   public function getCoordinates()
   {
     return $this->coordinates;
@@ -918,6 +954,9 @@ namespace Google\Service\KitchSink;
 class LatLong extends \Google\Model
 {
   public $latitude;
+  /**
+   * @var string
+   */
   public $location;
   public $longitude;
 
@@ -929,10 +968,16 @@ class LatLong extends \Google\Model
   {
     return $this->latitude;
   }
+  /**
+   * @param string
+   */
   public function setLocation($location)
   {
     $this->location = $location;
   }
+  /**
+   * @return string
+   */
   public function getLocation()
   {
     return $this->location;
@@ -1003,6 +1048,9 @@ class Profile extends \Google\Model
   protected $attributionDataType = '';
   protected $idType = ProfileId::class;
   protected $idDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
 
   /**
@@ -1033,10 +1081,16 @@ class Profile extends \Google\Model
   {
     return $this->id;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
@@ -1068,24 +1122,45 @@ namespace Google\Service\KitchSink;
 
 class ProfileAttribution extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $avatarUrl;
+  /**
+   * @var string
+   */
   public $displayName;
   protected $geoType = LatLong::class;
   protected $geoDataType = '';
+  /**
+   * @var string
+   */
   public $location;
 
+  /**
+   * @param string
+   */
   public function setAvatarUrl($avatarUrl)
   {
     $this->avatarUrl = $avatarUrl;
   }
+  /**
+   * @return string
+   */
   public function getAvatarUrl()
   {
     return $this->avatarUrl;
   }
+  /**
+   * @param string
+   */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
   }
+  /**
+   * @return string
+   */
   public function getDisplayName()
   {
     return $this->displayName;
@@ -1104,10 +1179,16 @@ class ProfileAttribution extends \Google\Model
   {
     return $this->geo;
   }
+  /**
+   * @param string
+   */
   public function setLocation($location)
   {
     $this->location = $location;
   }
+  /**
+   * @return string
+   */
   public function getLocation()
   {
     return $this->location;
@@ -1139,12 +1220,21 @@ namespace Google\Service\KitchSink;
 
 class ProfileId extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $user;
 
+  /**
+   * @param string
+   */
   public function setUser($user)
   {
     $this->user = $user;
   }
+  /**
+   * @return string
+   */
   public function getUser()
   {
     return $this->user;
@@ -2344,21 +2434,39 @@ namespace Google\Service\KitchSink;
 
 class RuleSubmissions extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $close;
+  /**
+   * @var int
+   */
   public $open;
 
+  /**
+   * @param int
+   */
   public function setClose($close)
   {
     $this->close = $close;
   }
+  /**
+   * @return int
+   */
   public function getClose()
   {
     return $this->close;
   }
+  /**
+   * @param int
+   */
   public function setOpen($open)
   {
     $this->open = $open;
   }
+  /**
+   * @return int
+   */
   public function getOpen()
   {
     return $this->open;
@@ -2390,21 +2498,45 @@ namespace Google\Service\KitchSink;
 
 class Series extends \Google\Model
 {
+  /**
+   * @var bool
+   */
   public $anonymousSubmissionAllowed;
   protected $countersType = SeriesCounters::class;
   protected $countersDataType = '';
+  /**
+   * @var string
+   */
   public $description;
   protected $idType = SeriesId::class;
   protected $idDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var int
+   */
   public $numTopics;
+  /**
+   * @var bool
+   */
   public $videoSubmissionAllowed;
 
+  /**
+   * @param bool
+   */
   public function setAnonymousSubmissionAllowed($anonymousSubmissionAllowed)
   {
     $this->anonymousSubmissionAllowed = $anonymousSubmissionAllowed;
   }
+  /**
+   * @return bool
+   */
   public function getAnonymousSubmissionAllowed()
   {
     return $this->anonymousSubmissionAllowed;
@@ -2423,10 +2555,16 @@ class Series extends \Google\Model
   {
     return $this->counters;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
@@ -2445,34 +2583,58 @@ class Series extends \Google\Model
   {
     return $this->id;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param int
+   */
   public function setNumTopics($numTopics)
   {
     $this->numTopics = $numTopics;
   }
+  /**
+   * @return int
+   */
   public function getNumTopics()
   {
     return $this->numTopics;
   }
+  /**
+   * @param bool
+   */
   public function setVideoSubmissionAllowed($videoSubmissionAllowed)
   {
     $this->videoSubmissionAllowed = $videoSubmissionAllowed;
   }
+  /**
+   * @return bool
+   */
   public function getVideoSubmissionAllowed()
   {
     return $this->videoSubmissionAllowed;
@@ -2509,20 +2671,47 @@ class SeriesCounters extends \Google\Model
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
+  /**
+   * @var int
+   */
   public $anonymousSubmissions;
   protected $countersType = SeriesCountersCounters::class;
   protected $countersDataType = '';
+  /**
+   * @var int
+   */
   public $else;
+  /**
+   * @var int
+   */
   public $minusVotes;
+  /**
+   * @var string
+   */
   public $noneVotes;
+  /**
+   * @var int
+   */
   public $plusVotes;
+  /**
+   * @var int
+   */
   public $submissions;
+  /**
+   * @var string
+   */
   public $users;
 
+  /**
+   * @param int
+   */
   public function setAnonymousSubmissions($anonymousSubmissions)
   {
     $this->anonymousSubmissions = $anonymousSubmissions;
   }
+  /**
+   * @return int
+   */
   public function getAnonymousSubmissions()
   {
     return $this->anonymousSubmissions;
@@ -2541,50 +2730,86 @@ class SeriesCounters extends \Google\Model
   {
     return $this->counters;
   }
+  /**
+   * @param int
+   */
   public function setElse($else)
   {
     $this->else = $else;
   }
+  /**
+   * @return int
+   */
   public function getElse()
   {
     return $this->else;
   }
+  /**
+   * @param int
+   */
   public function setMinusVotes($minusVotes)
   {
     $this->minusVotes = $minusVotes;
   }
+  /**
+   * @return int
+   */
   public function getMinusVotes()
   {
     return $this->minusVotes;
   }
+  /**
+   * @param string
+   */
   public function setNoneVotes($noneVotes)
   {
     $this->noneVotes = $noneVotes;
   }
+  /**
+   * @return string
+   */
   public function getNoneVotes()
   {
     return $this->noneVotes;
   }
+  /**
+   * @param int
+   */
   public function setPlusVotes($plusVotes)
   {
     $this->plusVotes = $plusVotes;
   }
+  /**
+   * @return int
+   */
   public function getPlusVotes()
   {
     return $this->plusVotes;
   }
+  /**
+   * @param int
+   */
   public function setSubmissions($submissions)
   {
     $this->submissions = $submissions;
   }
+  /**
+   * @return int
+   */
   public function getSubmissions()
   {
     return $this->submissions;
   }
+  /**
+   * @param string
+   */
   public function setUsers($users)
   {
     $this->users = $users;
   }
+  /**
+   * @return string
+   */
   public function getUsers()
   {
     return $this->users;
@@ -2619,12 +2844,21 @@ class SeriesCountersCounters extends \Google\Model
   protected $internal_gapi_mappings = [
         "allVotes" => "all-votes",
   ];
+  /**
+   * @var int
+   */
   public $allVotes;
 
+  /**
+   * @param int
+   */
   public function setAllVotes($allVotes)
   {
     $this->allVotes = $allVotes;
   }
+  /**
+   * @return int
+   */
   public function getAllVotes()
   {
     return $this->allVotes;
@@ -2656,12 +2890,21 @@ namespace Google\Service\KitchSink;
 
 class SeriesId extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $seriesId;
 
+  /**
+   * @param int
+   */
   public function setSeriesId($seriesId)
   {
     $this->seriesId = $seriesId;
   }
+  /**
+   * @return int
+   */
   public function getSeriesId()
   {
     return $this->seriesId;
@@ -2696,6 +2939,9 @@ class SeriesList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Series::class;
   protected $itemsDataType = 'array';
+  /**
+   * @var string
+   */
   public $kind;
 
   /**
@@ -2712,10 +2958,16 @@ class SeriesList extends \Google\Collection
   {
     return $this->items;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
@@ -2751,30 +3003,51 @@ class Submission extends \Google\Collection
   protected $internal_gapi_mappings = [
         "attachmentUrl" => "@attachmentUrl",
   ];
+  /**
+   * @var string
+   */
   public $attachmentUrl;
   protected $attributionType = SubmissionAttribution::class;
   protected $attributionDataType = '';
+  /**
+   * @var string
+   */
   public $author;
   protected $countersType = SubmissionCounters::class;
   protected $countersDataType = '';
+  /**
+   * @var int
+   */
   public $created;
   protected $geoType = LatLong::class;
   protected $geoDataType = 'array';
   protected $idType = SubmissionId::class;
   protected $idDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
   protected $parentSubmissionIdType = SubmissionParentSubmissionId::class;
   protected $parentSubmissionIdDataType = '';
+  /**
+   * @var string
+   */
   public $text;
   protected $topicsType = ModeratorTopicsResourcePartial::class;
   protected $topicsDataType = 'array';
   protected $translationsType = Translation::class;
   protected $translationsDataType = 'map';
 
+  /**
+   * @param string
+   */
   public function setAttachmentUrl($attachmentUrl)
   {
     $this->attachmentUrl = $attachmentUrl;
   }
+  /**
+   * @return string
+   */
   public function getAttachmentUrl()
   {
     return $this->attachmentUrl;
@@ -2793,10 +3066,16 @@ class Submission extends \Google\Collection
   {
     return $this->attribution;
   }
+  /**
+   * @param string
+   */
   public function setAuthor($author)
   {
     $this->author = $author;
   }
+  /**
+   * @return string
+   */
   public function getAuthor()
   {
     return $this->author;
@@ -2815,10 +3094,16 @@ class Submission extends \Google\Collection
   {
     return $this->counters;
   }
+  /**
+   * @param int
+   */
   public function setCreated($created)
   {
     $this->created = $created;
   }
+  /**
+   * @return int
+   */
   public function getCreated()
   {
     return $this->created;
@@ -2851,10 +3136,16 @@ class Submission extends \Google\Collection
   {
     return $this->id;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
@@ -2873,10 +3164,16 @@ class Submission extends \Google\Collection
   {
     return $this->parentSubmissionId;
   }
+  /**
+   * @param string
+   */
   public function setText($text)
   {
     $this->text = $text;
   }
+  /**
+   * @return string
+   */
   public function getText()
   {
     return $this->text;
@@ -2940,30 +3237,57 @@ class SubmissionAttribution extends \Google\Model
         "avatarUrl" => "$avatarUrl",
         "object" => "$object",
   ];
+  /**
+   * @var string
+   */
   public $avatarUrl;
+  /**
+   * @var string
+   */
   public $object;
+  /**
+   * @var string
+   */
   public $location;
 
+  /**
+   * @param string
+   */
   public function setAvatarUrl($avatarUrl)
   {
     $this->avatarUrl = $avatarUrl;
   }
+  /**
+   * @return string
+   */
   public function getAvatarUrl()
   {
     return $this->avatarUrl;
   }
+  /**
+   * @param string
+   */
   public function setObject($object)
   {
     $this->object = $object;
   }
+  /**
+   * @return string
+   */
   public function getObject()
   {
     return $this->object;
   }
+  /**
+   * @param string
+   */
   public function setLocation($location)
   {
     $this->location = $location;
   }
+  /**
+   * @return string
+   */
   public function getLocation()
   {
     return $this->location;
@@ -3000,30 +3324,57 @@ class SubmissionCounters extends \Google\Model
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
+  /**
+   * @var int
+   */
   public $minusVotes;
+  /**
+   * @var int
+   */
   public $noneVotes;
+  /**
+   * @var int
+   */
   public $plusVotes;
 
+  /**
+   * @param int
+   */
   public function setMinusVotes($minusVotes)
   {
     $this->minusVotes = $minusVotes;
   }
+  /**
+   * @return int
+   */
   public function getMinusVotes()
   {
     return $this->minusVotes;
   }
+  /**
+   * @param int
+   */
   public function setNoneVotes($noneVotes)
   {
     $this->noneVotes = $noneVotes;
   }
+  /**
+   * @return int
+   */
   public function getNoneVotes()
   {
     return $this->noneVotes;
   }
+  /**
+   * @param int
+   */
   public function setPlusVotes($plusVotes)
   {
     $this->plusVotes = $plusVotes;
   }
+  /**
+   * @return int
+   */
   public function getPlusVotes()
   {
     return $this->plusVotes;
@@ -3055,21 +3406,39 @@ namespace Google\Service\KitchSink;
 
 class SubmissionId extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $seriesId;
+  /**
+   * @var int
+   */
   public $submissionId;
 
+  /**
+   * @param int
+   */
   public function setSeriesId($seriesId)
   {
     $this->seriesId = $seriesId;
   }
+  /**
+   * @return int
+   */
   public function getSeriesId()
   {
     return $this->seriesId;
   }
+  /**
+   * @param int
+   */
   public function setSubmissionId($submissionId)
   {
     $this->submissionId = $submissionId;
   }
+  /**
+   * @return int
+   */
   public function getSubmissionId()
   {
     return $this->submissionId;
@@ -3104,6 +3473,9 @@ class SubmissionList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Submission::class;
   protected $itemsDataType = 'array';
+  /**
+   * @var string
+   */
   public $kind;
 
   /**
@@ -3120,10 +3492,16 @@ class SubmissionList extends \Google\Collection
   {
     return $this->items;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
@@ -3155,21 +3533,39 @@ namespace Google\Service\KitchSink;
 
 class SubmissionParentSubmissionId extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $seriesId;
+  /**
+   * @var int
+   */
   public $submissionId;
 
+  /**
+   * @param int
+   */
   public function setSeriesId($seriesId)
   {
     $this->seriesId = $seriesId;
   }
+  /**
+   * @return int
+   */
   public function getSeriesId()
   {
     return $this->seriesId;
   }
+  /**
+   * @param int
+   */
   public function setSubmissionId($submissionId)
   {
     $this->submissionId = $submissionId;
   }
+  /**
+   * @return int
+   */
   public function getSubmissionId()
   {
     return $this->submissionId;
@@ -3205,7 +3601,13 @@ class Tag extends \Google\Model
   protected $geometryDataType = '';
   protected $idType = TagId::class;
   protected $idDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
+  /**
+   * @var string
+   */
   public $text;
 
   /**
@@ -3236,18 +3638,30 @@ class Tag extends \Google\Model
   {
     return $this->id;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
   }
+  /**
+   * @param string
+   */
   public function setText($text)
   {
     $this->text = $text;
   }
+  /**
+   * @return string
+   */
   public function getText()
   {
     return $this->text;
@@ -3279,30 +3693,57 @@ namespace Google\Service\KitchSink;
 
 class TagId extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $seriesId;
+  /**
+   * @var int
+   */
   public $submissionId;
+  /**
+   * @var string
+   */
   public $tag;
 
+  /**
+   * @param int
+   */
   public function setSeriesId($seriesId)
   {
     $this->seriesId = $seriesId;
   }
+  /**
+   * @return int
+   */
   public function getSeriesId()
   {
     return $this->seriesId;
   }
+  /**
+   * @param int
+   */
   public function setSubmissionId($submissionId)
   {
     $this->submissionId = $submissionId;
   }
+  /**
+   * @return int
+   */
   public function getSubmissionId()
   {
     return $this->submissionId;
   }
+  /**
+   * @param string
+   */
   public function setTag($tag)
   {
     $this->tag = $tag;
   }
+  /**
+   * @return string
+   */
   public function getTag()
   {
     return $this->tag;
@@ -3336,11 +3777,23 @@ class Topic extends \Google\Model
 {
   protected $countersType = TopicCounters::class;
   protected $countersDataType = '';
+  /**
+   * @var string
+   */
   public $description;
   protected $idType = TopicId::class;
   protected $idDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
   public $presenter;
   protected $rulesType = TopicRules::class;
   protected $rulesDataType = '';
@@ -3359,10 +3812,16 @@ class Topic extends \Google\Model
   {
     return $this->counters;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
@@ -3381,26 +3840,44 @@ class Topic extends \Google\Model
   {
     return $this->id;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
   public function setPresenter($presenter)
   {
     $this->presenter = $presenter;
   }
+  /**
+   * @return string
+   */
   public function getPresenter()
   {
     return $this->presenter;
@@ -3449,13 +3926,25 @@ class Topic2 extends \Google\Collection
   protected $collection_key = 'rules';
   protected $countersType = Topic2Counters::class;
   protected $countersDataType = '';
+  /**
+   * @var string
+   */
   public $description;
   protected $featuredSubmissionType = Submission::class;
   protected $featuredSubmissionDataType = '';
   protected $idType = Topic2Id::class;
   protected $idDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
   public $presenter;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
@@ -3474,10 +3963,16 @@ class Topic2 extends \Google\Collection
   {
     return $this->counters;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
@@ -3510,26 +4005,44 @@ class Topic2 extends \Google\Collection
   {
     return $this->id;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
   public function setPresenter($presenter)
   {
     $this->presenter = $presenter;
   }
+  /**
+   * @return string
+   */
   public function getPresenter()
   {
     return $this->presenter;
@@ -3580,57 +4093,111 @@ class Topic2Counters extends \Google\Model
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
+  /**
+   * @var int
+   */
   public $minusVotes;
+  /**
+   * @var int
+   */
   public $noneVotes;
+  /**
+   * @var int
+   */
   public $plusVotes;
+  /**
+   * @var int
+   */
   public $submissions;
+  /**
+   * @var int
+   */
   public $users;
+  /**
+   * @var int
+   */
   public $videoSubmissions;
 
+  /**
+   * @param int
+   */
   public function setMinusVotes($minusVotes)
   {
     $this->minusVotes = $minusVotes;
   }
+  /**
+   * @return int
+   */
   public function getMinusVotes()
   {
     return $this->minusVotes;
   }
+  /**
+   * @param int
+   */
   public function setNoneVotes($noneVotes)
   {
     $this->noneVotes = $noneVotes;
   }
+  /**
+   * @return int
+   */
   public function getNoneVotes()
   {
     return $this->noneVotes;
   }
+  /**
+   * @param int
+   */
   public function setPlusVotes($plusVotes)
   {
     $this->plusVotes = $plusVotes;
   }
+  /**
+   * @return int
+   */
   public function getPlusVotes()
   {
     return $this->plusVotes;
   }
+  /**
+   * @param int
+   */
   public function setSubmissions($submissions)
   {
     $this->submissions = $submissions;
   }
+  /**
+   * @return int
+   */
   public function getSubmissions()
   {
     return $this->submissions;
   }
+  /**
+   * @param int
+   */
   public function setUsers($users)
   {
     $this->users = $users;
   }
+  /**
+   * @return int
+   */
   public function getUsers()
   {
     return $this->users;
   }
+  /**
+   * @param int
+   */
   public function setVideoSubmissions($videoSubmissions)
   {
     $this->videoSubmissions = $videoSubmissions;
   }
+  /**
+   * @return int
+   */
   public function getVideoSubmissions()
   {
     return $this->videoSubmissions;
@@ -3662,21 +4229,39 @@ namespace Google\Service\KitchSink;
 
 class Topic2Id extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $seriesId;
+  /**
+   * @var int
+   */
   public $topicId;
 
+  /**
+   * @param int
+   */
   public function setSeriesId($seriesId)
   {
     $this->seriesId = $seriesId;
   }
+  /**
+   * @return int
+   */
   public function getSeriesId()
   {
     return $this->seriesId;
   }
+  /**
+   * @param int
+   */
   public function setTopicId($topicId)
   {
     $this->topicId = $topicId;
   }
+  /**
+   * @return int
+   */
   public function getTopicId()
   {
     return $this->topicId;
@@ -3713,57 +4298,111 @@ class TopicCounters extends \Google\Model
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
+  /**
+   * @var int
+   */
   public $minusVotes;
+  /**
+   * @var int
+   */
   public $noneVotes;
+  /**
+   * @var int
+   */
   public $plusVotes;
+  /**
+   * @var int
+   */
   public $submissions;
+  /**
+   * @var int
+   */
   public $users;
+  /**
+   * @var int
+   */
   public $videoSubmissions;
 
+  /**
+   * @param int
+   */
   public function setMinusVotes($minusVotes)
   {
     $this->minusVotes = $minusVotes;
   }
+  /**
+   * @return int
+   */
   public function getMinusVotes()
   {
     return $this->minusVotes;
   }
+  /**
+   * @param int
+   */
   public function setNoneVotes($noneVotes)
   {
     $this->noneVotes = $noneVotes;
   }
+  /**
+   * @return int
+   */
   public function getNoneVotes()
   {
     return $this->noneVotes;
   }
+  /**
+   * @param int
+   */
   public function setPlusVotes($plusVotes)
   {
     $this->plusVotes = $plusVotes;
   }
+  /**
+   * @return int
+   */
   public function getPlusVotes()
   {
     return $this->plusVotes;
   }
+  /**
+   * @param int
+   */
   public function setSubmissions($submissions)
   {
     $this->submissions = $submissions;
   }
+  /**
+   * @return int
+   */
   public function getSubmissions()
   {
     return $this->submissions;
   }
+  /**
+   * @param int
+   */
   public function setUsers($users)
   {
     $this->users = $users;
   }
+  /**
+   * @return int
+   */
   public function getUsers()
   {
     return $this->users;
   }
+  /**
+   * @param int
+   */
   public function setVideoSubmissions($videoSubmissions)
   {
     $this->videoSubmissions = $videoSubmissions;
   }
+  /**
+   * @return int
+   */
   public function getVideoSubmissions()
   {
     return $this->videoSubmissions;
@@ -3795,21 +4434,39 @@ namespace Google\Service\KitchSink;
 
 class TopicId extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $seriesId;
+  /**
+   * @var int
+   */
   public $topicId;
 
+  /**
+   * @param int
+   */
   public function setSeriesId($seriesId)
   {
     $this->seriesId = $seriesId;
   }
+  /**
+   * @return int
+   */
   public function getSeriesId()
   {
     return $this->seriesId;
   }
+  /**
+   * @param int
+   */
   public function setTopicId($topicId)
   {
     $this->topicId = $topicId;
   }
+  /**
+   * @return int
+   */
   public function getTopicId()
   {
     return $this->topicId;
@@ -3844,6 +4501,9 @@ class TopicList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Topic::class;
   protected $itemsDataType = 'array';
+  /**
+   * @var string
+   */
   public $kind;
 
   /**
@@ -3860,10 +4520,16 @@ class TopicList extends \Google\Collection
   {
     return $this->items;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
@@ -3955,21 +4621,39 @@ namespace Google\Service\KitchSink;
 
 class TopicRulesSubmissions extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $close;
+  /**
+   * @var int
+   */
   public $open;
 
+  /**
+   * @param int
+   */
   public function setClose($close)
   {
     $this->close = $close;
   }
+  /**
+   * @return int
+   */
   public function getClose()
   {
     return $this->close;
   }
+  /**
+   * @param int
+   */
   public function setOpen($open)
   {
     $this->open = $open;
   }
+  /**
+   * @return int
+   */
   public function getOpen()
   {
     return $this->open;
@@ -4001,21 +4685,39 @@ namespace Google\Service\KitchSink;
 
 class TopicRulesVotes extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $close;
+  /**
+   * @var int
+   */
   public $open;
 
+  /**
+   * @param int
+   */
   public function setClose($close)
   {
     $this->close = $close;
   }
+  /**
+   * @return int
+   */
   public function getClose()
   {
     return $this->close;
   }
+  /**
+   * @param int
+   */
   public function setOpen($open)
   {
     $this->open = $open;
   }
+  /**
+   * @return int
+   */
   public function getOpen()
   {
     return $this->open;
@@ -4047,21 +4749,39 @@ namespace Google\Service\KitchSink;
 
 class Translation extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $lang;
+  /**
+   * @var string
+   */
   public $text;
 
+  /**
+   * @param string
+   */
   public function setLang($lang)
   {
     $this->lang = $lang;
   }
+  /**
+   * @return string
+   */
   public function getLang()
   {
     return $this->lang;
   }
+  /**
+   * @param string
+   */
   public function setText($text)
   {
     $this->text = $text;
   }
+  /**
+   * @return string
+   */
   public function getText()
   {
     return $this->text;
@@ -4093,16 +4813,31 @@ namespace Google\Service\KitchSink;
 
 class Vote extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $flag;
   protected $idType = VoteId::class;
   protected $idDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
+  /**
+   * @var string
+   */
   public $vote;
 
+  /**
+   * @param string
+   */
   public function setFlag($flag)
   {
     $this->flag = $flag;
   }
+  /**
+   * @return string
+   */
   public function getFlag()
   {
     return $this->flag;
@@ -4121,18 +4856,30 @@ class Vote extends \Google\Model
   {
     return $this->id;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
   }
+  /**
+   * @param string
+   */
   public function setVote($vote)
   {
     $this->vote = $vote;
   }
+  /**
+   * @return string
+   */
   public function getVote()
   {
     return $this->vote;
@@ -4194,6 +4941,9 @@ class VoteList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Vote::class;
   protected $itemsDataType = 'array';
+  /**
+   * @var string
+   */
   public $kind;
 
   /**
@@ -4210,10 +4960,16 @@ class VoteList extends \Google\Collection
   {
     return $this->items;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
