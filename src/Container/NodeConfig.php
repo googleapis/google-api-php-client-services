@@ -25,6 +25,8 @@ class NodeConfig extends \Google\Collection
   public $bootDiskKmsKey;
   public $diskSizeGb;
   public $diskType;
+  protected $gvnicType = VirtualNIC::class;
+  protected $gvnicDataType = '';
   public $imageType;
   protected $kubeletConfigType = NodeKubeletConfig::class;
   protected $kubeletConfigDataType = '';
@@ -88,6 +90,20 @@ class NodeConfig extends \Google\Collection
   public function getDiskType()
   {
     return $this->diskType;
+  }
+  /**
+   * @param VirtualNIC
+   */
+  public function setGvnic(VirtualNIC $gvnic)
+  {
+    $this->gvnic = $gvnic;
+  }
+  /**
+   * @return VirtualNIC
+   */
+  public function getGvnic()
+  {
+    return $this->gvnic;
   }
   public function setImageType($imageType)
   {
