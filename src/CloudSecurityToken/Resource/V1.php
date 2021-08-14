@@ -19,8 +19,6 @@ namespace Google\Service\CloudSecurityToken\Resource;
 
 use Google\Service\CloudSecurityToken\GoogleIdentityStsV1ExchangeTokenRequest;
 use Google\Service\CloudSecurityToken\GoogleIdentityStsV1ExchangeTokenResponse;
-use Google\Service\CloudSecurityToken\GoogleIdentityStsV1IntrospectTokenRequest;
-use Google\Service\CloudSecurityToken\GoogleIdentityStsV1IntrospectTokenResponse;
 
 /**
  * The "v1" collection of methods.
@@ -32,21 +30,6 @@ use Google\Service\CloudSecurityToken\GoogleIdentityStsV1IntrospectTokenResponse
  */
 class V1 extends \Google\Service\Resource
 {
-  /**
-   * Gets information about a Google OAuth 2.0 access token issued by the Google
-   * Cloud [Security Token Service
-   * API](https://cloud.google.com/iam/docs/reference/sts/rest). (v1.introspect)
-   *
-   * @param GoogleIdentityStsV1IntrospectTokenRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleIdentityStsV1IntrospectTokenResponse
-   */
-  public function introspect(GoogleIdentityStsV1IntrospectTokenRequest $postBody, $optParams = [])
-  {
-    $params = ['postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('introspect', [$params], GoogleIdentityStsV1IntrospectTokenResponse::class);
-  }
   /**
    * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts
    * an external identity within a workload identity pool, or it applies a
