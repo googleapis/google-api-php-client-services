@@ -22,7 +22,10 @@ class ExecutionTemplate extends \Google\Model
   protected $acceleratorConfigType = SchedulerAcceleratorConfig::class;
   protected $acceleratorConfigDataType = '';
   public $containerImageUri;
+  protected $dataprocParametersType = DataprocParameters::class;
+  protected $dataprocParametersDataType = '';
   public $inputNotebookFile;
+  public $jobType;
   public $labels;
   public $masterType;
   public $outputNotebookFolder;
@@ -53,6 +56,20 @@ class ExecutionTemplate extends \Google\Model
   {
     return $this->containerImageUri;
   }
+  /**
+   * @param DataprocParameters
+   */
+  public function setDataprocParameters(DataprocParameters $dataprocParameters)
+  {
+    $this->dataprocParameters = $dataprocParameters;
+  }
+  /**
+   * @return DataprocParameters
+   */
+  public function getDataprocParameters()
+  {
+    return $this->dataprocParameters;
+  }
   public function setInputNotebookFile($inputNotebookFile)
   {
     $this->inputNotebookFile = $inputNotebookFile;
@@ -60,6 +77,14 @@ class ExecutionTemplate extends \Google\Model
   public function getInputNotebookFile()
   {
     return $this->inputNotebookFile;
+  }
+  public function setJobType($jobType)
+  {
+    $this->jobType = $jobType;
+  }
+  public function getJobType()
+  {
+    return $this->jobType;
   }
   public function setLabels($labels)
   {

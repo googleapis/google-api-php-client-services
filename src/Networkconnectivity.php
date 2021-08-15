@@ -27,20 +27,19 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/network-connectivity/docs" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/network-connectivity/docs/reference/networkconnectivity/rest" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
 class Networkconnectivity extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations;
   public $projects_locations_global_hubs;
-  public $projects_locations_global_policyBasedRoutes;
   public $projects_locations_internalRanges;
   public $projects_locations_operations;
   public $projects_locations_spokes;
@@ -207,50 +206,6 @@ class Networkconnectivity extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1alpha1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1alpha1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_global_policyBasedRoutes = new Networkconnectivity\Resource\ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes(
-        $this,
-        $this->serviceName,
-        'policyBasedRoutes',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1alpha1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
                 ],
               ],
             ],'setIamPolicy' => [
