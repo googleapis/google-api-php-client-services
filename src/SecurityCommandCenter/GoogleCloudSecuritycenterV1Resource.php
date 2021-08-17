@@ -27,6 +27,7 @@ class GoogleCloudSecuritycenterV1Resource extends \Google\Collection
   public $parentDisplayName;
   public $project;
   public $projectDisplayName;
+  public $type;
 
   /**
    * @param Folder[]
@@ -81,6 +82,14 @@ class GoogleCloudSecuritycenterV1Resource extends \Google\Collection
   public function getProjectDisplayName()
   {
     return $this->projectDisplayName;
+  }
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
