@@ -55,7 +55,7 @@ class ProjectsGithubEnterpriseConfigs extends \Google\Service\Resource
    *
    * @param string $name This field should contain the name of the enterprise
    * config resource. For example:
-   * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+   * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
    * @param array $optParams Optional parameters.
    *
    * @opt_param string configId Unique identifier of the `GitHubEnterpriseConfig`
@@ -74,7 +74,7 @@ class ProjectsGithubEnterpriseConfigs extends \Google\Service\Resource
    *
    * @param string $name This field should contain the name of the enterprise
    * config resource. For example:
-   * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+   * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
    * @param array $optParams Optional parameters.
    *
    * @opt_param string configId Unique identifier of the `GitHubEnterpriseConfig`
@@ -110,7 +110,7 @@ class ProjectsGithubEnterpriseConfigs extends \Google\Service\Resource
    *
    * @param string $name Optional. The full resource name for the
    * GitHubEnterpriseConfig For example:
-   * "projects/{$project_id}/githubEnterpriseConfig/{$config_id}"
+   * "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
    * @param GitHubEnterpriseConfig $postBody
    * @param array $optParams Optional parameters.
    *

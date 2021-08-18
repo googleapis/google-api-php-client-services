@@ -63,6 +63,7 @@ class TagManager extends \Google\Service
   public $accounts_containers_versions;
   public $accounts_containers_workspaces;
   public $accounts_containers_workspaces_built_in_variables;
+  public $accounts_containers_workspaces_clients;
   public $accounts_containers_workspaces_folders;
   public $accounts_containers_workspaces_tags;
   public $accounts_containers_workspaces_templates;
@@ -588,6 +589,88 @@ class TagManager extends \Google\Service
                   'required' => true,
                 ],
                 'type' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->accounts_containers_workspaces_clients = new TagManager\Resource\AccountsContainersWorkspacesClients(
+        $this,
+        $this->serviceName,
+        'clients',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'tagmanager/v2/{+parent}/clients',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'tagmanager/v2/{+path}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'path' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'tagmanager/v2/{+path}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'path' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'tagmanager/v2/{+parent}/clients',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'revert' => [
+              'path' => 'tagmanager/v2/{+path}:revert',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'path' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'fingerprint' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'update' => [
+              'path' => 'tagmanager/v2/{+path}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'path' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'fingerprint' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
