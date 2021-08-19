@@ -23,6 +23,7 @@ class CloudFunction extends \Google\Collection
   public $availableMemoryMb;
   public $buildEnvironmentVariables;
   public $buildId;
+  public $buildName;
   public $buildWorkerPool;
   public $description;
   public $entryPoint;
@@ -34,6 +35,7 @@ class CloudFunction extends \Google\Collection
   public $ingressSettings;
   public $labels;
   public $maxInstances;
+  public $minInstances;
   public $name;
   public $network;
   public $runtime;
@@ -77,6 +79,14 @@ class CloudFunction extends \Google\Collection
   public function getBuildId()
   {
     return $this->buildId;
+  }
+  public function setBuildName($buildName)
+  {
+    $this->buildName = $buildName;
+  }
+  public function getBuildName()
+  {
+    return $this->buildName;
   }
   public function setBuildWorkerPool($buildWorkerPool)
   {
@@ -161,6 +171,14 @@ class CloudFunction extends \Google\Collection
   public function getMaxInstances()
   {
     return $this->maxInstances;
+  }
+  public function setMinInstances($minInstances)
+  {
+    $this->minInstances = $minInstances;
+  }
+  public function getMinInstances()
+  {
+    return $this->minInstances;
   }
   public function setName($name)
   {

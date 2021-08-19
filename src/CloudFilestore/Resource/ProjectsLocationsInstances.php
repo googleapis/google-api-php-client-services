@@ -39,7 +39,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * (instances.create)
    *
    * @param string $parent Required. The instance's project and location, in the
-   * format projects/{project_id}/locations/{location}. In Cloud Filestore,
+   * format `projects/{project_id}/locations/{location}`. In Cloud Filestore,
    * locations map to GCP zones, for example **us-west1-b**.
    * @param Instance $postBody
    * @param array $optParams Optional parameters.
@@ -58,7 +58,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * Deletes an instance. (instances.delete)
    *
    * @param string $name Required. The instance resource name, in the format
-   * projects/{project_id}/locations/{location}/instances/{instance_id}
+   * `projects/{project_id}/locations/{location}/instances/{instance_id}`
    * @param array $optParams Optional parameters.
    * @return Operation
    */
@@ -72,7 +72,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * Gets the details of a specific instance. (instances.get)
    *
    * @param string $name Required. The instance resource name, in the format
-   * projects/{project_id}/locations/{location}/instances/{instance_id}.
+   * `projects/{project_id}/locations/{location}/instances/{instance_id}`.
    * @param array $optParams Optional parameters.
    * @return Instance
    */
@@ -88,9 +88,9 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location for which to
    * retrieve instance information, in the format
-   * projects/{project_id}/locations/{location}. In Cloud Filestore, locations map
-   * to GCP zones, for example **us-west1-b**. To retrieve instance information
-   * for all locations, use "-" for the {location} value.
+   * `projects/{project_id}/locations/{location}`. In Cloud Filestore, locations
+   * map to GCP zones, for example **us-west1-b**. To retrieve instance
+   * information for all locations, use "-" for the `{location}` value.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter List filter.
@@ -111,7 +111,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * Updates the settings of a specific instance. (instances.patch)
    *
    * @param string $name Output only. The resource name of the instance, in the
-   * format projects/{project}/locations/{location}/instances/{instance}.
+   * format `projects/{project}/locations/{location}/instances/{instance}`.
    * @param Instance $postBody
    * @param array $optParams Optional parameters.
    *
@@ -134,7 +134,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    *
    * @param string $name Required. The resource name of the instance, in the
    * format
-   * projects/{project_number}/locations/{location_id}/instances/{instance_id}.
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}`.
    * @param RestoreInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

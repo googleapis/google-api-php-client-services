@@ -23,11 +23,13 @@ class PackageIssue extends \Google\Model
   public $affectedPackage;
   protected $affectedVersionType = Version::class;
   protected $affectedVersionDataType = '';
+  public $effectiveSeverity;
   public $fixAvailable;
   public $fixedCpeUri;
   public $fixedPackage;
   protected $fixedVersionType = Version::class;
   protected $fixedVersionDataType = '';
+  public $packageType;
 
   public function setAffectedCpeUri($affectedCpeUri)
   {
@@ -58,6 +60,14 @@ class PackageIssue extends \Google\Model
   public function getAffectedVersion()
   {
     return $this->affectedVersion;
+  }
+  public function setEffectiveSeverity($effectiveSeverity)
+  {
+    $this->effectiveSeverity = $effectiveSeverity;
+  }
+  public function getEffectiveSeverity()
+  {
+    return $this->effectiveSeverity;
   }
   public function setFixAvailable($fixAvailable)
   {
@@ -96,6 +106,14 @@ class PackageIssue extends \Google\Model
   public function getFixedVersion()
   {
     return $this->fixedVersion;
+  }
+  public function setPackageType($packageType)
+  {
+    $this->packageType = $packageType;
+  }
+  public function getPackageType()
+  {
+    return $this->packageType;
   }
 }
 

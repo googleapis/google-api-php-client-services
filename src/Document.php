@@ -36,7 +36,7 @@ use Google\Client;
  */
 class Document extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
@@ -134,9 +134,9 @@ class Document extends \Google\Service
         'operations',
         [
           'methods' => [
-            'cancelOperation' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
                   'location' => 'path',
@@ -328,9 +328,9 @@ class Document extends \Google\Service
         'operations',
         [
           'methods' => [
-            'cancelOperation' => [
-              'path' => 'uiv1beta3/{+name}',
-              'httpMethod' => 'DELETE',
+            'cancel' => [
+              'path' => 'uiv1beta3/{+name}:cancel',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
                   'location' => 'path',

@@ -21,8 +21,10 @@ class PackageIssue extends \Google\Model
 {
   protected $affectedLocationType = VulnerabilityLocation::class;
   protected $affectedLocationDataType = '';
+  public $effectiveSeverity;
   protected $fixedLocationType = VulnerabilityLocation::class;
   protected $fixedLocationDataType = '';
+  public $packageType;
   public $severityName;
 
   /**
@@ -39,6 +41,14 @@ class PackageIssue extends \Google\Model
   {
     return $this->affectedLocation;
   }
+  public function setEffectiveSeverity($effectiveSeverity)
+  {
+    $this->effectiveSeverity = $effectiveSeverity;
+  }
+  public function getEffectiveSeverity()
+  {
+    return $this->effectiveSeverity;
+  }
   /**
    * @param VulnerabilityLocation
    */
@@ -52,6 +62,14 @@ class PackageIssue extends \Google\Model
   public function getFixedLocation()
   {
     return $this->fixedLocation;
+  }
+  public function setPackageType($packageType)
+  {
+    $this->packageType = $packageType;
+  }
+  public function getPackageType()
+  {
+    return $this->packageType;
   }
   public function setSeverityName($severityName)
   {

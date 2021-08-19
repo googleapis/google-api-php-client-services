@@ -69,14 +69,6 @@ class Ideahub extends \Google\Service
               'path' => 'v1alpha/ideas',
               'httpMethod' => 'GET',
               'parameters' => [
-                'creator.platform' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'creator.platformId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -160,14 +152,6 @@ class Ideahub extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'creator.platform' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'creator.platformId' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
                 'filter' => [
                   'location' => 'query',
