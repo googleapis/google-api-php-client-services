@@ -29,6 +29,8 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource extend
   protected $customDimensionDataType = '';
   protected $customMetricType = GoogleAnalyticsAdminV1alphaCustomMetric::class;
   protected $customMetricDataType = '';
+  protected $dataRetentionSettingsType = GoogleAnalyticsAdminV1alphaDataRetentionSettings::class;
+  protected $dataRetentionSettingsDataType = '';
   protected $displayVideo360AdvertiserLinkType = GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink::class;
   protected $displayVideo360AdvertiserLinkDataType = '';
   protected $displayVideo360AdvertiserLinkProposalType = GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal::class;
@@ -117,6 +119,20 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource extend
   public function getCustomMetric()
   {
     return $this->customMetric;
+  }
+  /**
+   * @param GoogleAnalyticsAdminV1alphaDataRetentionSettings
+   */
+  public function setDataRetentionSettings(GoogleAnalyticsAdminV1alphaDataRetentionSettings $dataRetentionSettings)
+  {
+    $this->dataRetentionSettings = $dataRetentionSettings;
+  }
+  /**
+   * @return GoogleAnalyticsAdminV1alphaDataRetentionSettings
+   */
+  public function getDataRetentionSettings()
+  {
+    return $this->dataRetentionSettings;
   }
   /**
    * @param GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink

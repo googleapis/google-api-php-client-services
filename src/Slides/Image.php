@@ -22,6 +22,8 @@ class Image extends \Google\Model
   public $contentUrl;
   protected $imagePropertiesType = ImageProperties::class;
   protected $imagePropertiesDataType = '';
+  protected $placeholderType = Placeholder::class;
+  protected $placeholderDataType = '';
   public $sourceUrl;
 
   public function setContentUrl($contentUrl)
@@ -45,6 +47,20 @@ class Image extends \Google\Model
   public function getImageProperties()
   {
     return $this->imageProperties;
+  }
+  /**
+   * @param Placeholder
+   */
+  public function setPlaceholder(Placeholder $placeholder)
+  {
+    $this->placeholder = $placeholder;
+  }
+  /**
+   * @return Placeholder
+   */
+  public function getPlaceholder()
+  {
+    return $this->placeholder;
   }
   public function setSourceUrl($sourceUrl)
   {

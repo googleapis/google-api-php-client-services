@@ -35,6 +35,8 @@ class Finding extends \Google\Model
   public $severity;
   public $sourceProperties;
   public $state;
+  protected $vulnerabilityType = Vulnerability::class;
+  protected $vulnerabilityDataType = '';
 
   public function setCanonicalName($canonicalName)
   {
@@ -159,6 +161,20 @@ class Finding extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param Vulnerability
+   */
+  public function setVulnerability(Vulnerability $vulnerability)
+  {
+    $this->vulnerability = $vulnerability;
+  }
+  /**
+   * @return Vulnerability
+   */
+  public function getVulnerability()
+  {
+    return $this->vulnerability;
   }
 }
 
