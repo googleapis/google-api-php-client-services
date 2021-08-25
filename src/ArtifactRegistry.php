@@ -99,14 +99,15 @@ class ArtifactRegistry extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1/operations',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

@@ -214,8 +214,8 @@ class ProjectsLocationsAgentsFlows extends \Google\Service\Resource
    * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
    * are supported. Note: languages must be enabled in the agent before they can
    * be used.
-   * @opt_param string updateMask Required. The mask to control which fields get
-   * updated. If `update_mask` is not specified, an error will be returned.
+   * @opt_param string updateMask The mask to control which fields get updated. If
+   * the mask is not present, all fields will be updated.
    * @return GoogleCloudDialogflowCxV3Flow
    */
   public function patch($name, GoogleCloudDialogflowCxV3Flow $postBody, $optParams = [])
