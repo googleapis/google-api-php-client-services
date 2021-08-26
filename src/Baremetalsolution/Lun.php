@@ -25,6 +25,7 @@ class Lun extends \Google\Model
   public $shared;
   public $sizeGb;
   public $state;
+  public $storageType;
   public $storageVolume;
 
   public function setBootLun($bootLun)
@@ -74,6 +75,14 @@ class Lun extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  public function setStorageType($storageType)
+  {
+    $this->storageType = $storageType;
+  }
+  public function getStorageType()
+  {
+    return $this->storageType;
   }
   public function setStorageVolume($storageVolume)
   {

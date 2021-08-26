@@ -45,6 +45,8 @@ class Policy extends \Google\Collection
   protected $complianceRulesDataType = 'array';
   public $createWindowsDisabled;
   public $credentialsConfigDisabled;
+  protected $crossProfilePoliciesType = CrossProfilePolicies::class;
+  protected $crossProfilePoliciesDataType = '';
   public $dataRoamingDisabled;
   public $debuggingFeaturesAllowed;
   public $defaultPermissionPolicy;
@@ -315,6 +317,20 @@ class Policy extends \Google\Collection
   public function getCredentialsConfigDisabled()
   {
     return $this->credentialsConfigDisabled;
+  }
+  /**
+   * @param CrossProfilePolicies
+   */
+  public function setCrossProfilePolicies(CrossProfilePolicies $crossProfilePolicies)
+  {
+    $this->crossProfilePolicies = $crossProfilePolicies;
+  }
+  /**
+   * @return CrossProfilePolicies
+   */
+  public function getCrossProfilePolicies()
+  {
+    return $this->crossProfilePolicies;
   }
   public function setDataRoamingDisabled($dataRoamingDisabled)
   {

@@ -17,11 +17,13 @@
 
 namespace Google\Service\AndroidManagement;
 
-class AdvancedSecurityOverrides extends \Google\Model
+class AdvancedSecurityOverrides extends \Google\Collection
 {
+  protected $collection_key = 'personalAppsThatCanReadWorkNotifications';
   public $commonCriteriaMode;
   public $developerSettings;
   public $googlePlayProtectVerifyApps;
+  public $personalAppsThatCanReadWorkNotifications;
   public $untrustedAppsPolicy;
 
   public function setCommonCriteriaMode($commonCriteriaMode)
@@ -47,6 +49,14 @@ class AdvancedSecurityOverrides extends \Google\Model
   public function getGooglePlayProtectVerifyApps()
   {
     return $this->googlePlayProtectVerifyApps;
+  }
+  public function setPersonalAppsThatCanReadWorkNotifications($personalAppsThatCanReadWorkNotifications)
+  {
+    $this->personalAppsThatCanReadWorkNotifications = $personalAppsThatCanReadWorkNotifications;
+  }
+  public function getPersonalAppsThatCanReadWorkNotifications()
+  {
+    return $this->personalAppsThatCanReadWorkNotifications;
   }
   public function setUntrustedAppsPolicy($untrustedAppsPolicy)
   {
