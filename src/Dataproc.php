@@ -408,6 +408,10 @@ class Dataproc extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'actionOnFailedPrimaryWorkers' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',

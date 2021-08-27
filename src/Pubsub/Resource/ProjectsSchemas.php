@@ -81,8 +81,8 @@ class ProjectsSchemas extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view The set of fields to return in the response. If not
-   * set, returns a Schema with `name` and `type`, but not `definition`. Set to
-   * `FULL` to retrieve all fields.
+   * set, returns a Schema with all fields filled out. Set to `BASIC` to omit the
+   * `definition`.
    * @return Schema
    */
   public function get($name, $optParams = [])

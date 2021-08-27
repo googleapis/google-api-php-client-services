@@ -15,19 +15,22 @@
  * the License.
  */
 
-namespace Google\Service\Baremetalsolution\Resource;
+namespace Google\Service\BigQueryDataTransfer;
 
-/**
- * The "locations" collection of methods.
- * Typical usage is:
- *  <code>
- *   $baremetalsolutionService = new Google\Service\Baremetalsolution(...);
- *   $locations = $baremetalsolutionService->locations;
- *  </code>
- */
-class ProjectsLocations extends \Google\Service\Resource
+class EnrollDataSourcesRequest extends \Google\Collection
 {
+  protected $collection_key = 'dataSourceIds';
+  public $dataSourceIds;
+
+  public function setDataSourceIds($dataSourceIds)
+  {
+    $this->dataSourceIds = $dataSourceIds;
+  }
+  public function getDataSourceIds()
+  {
+    return $this->dataSourceIds;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_Baremetalsolution_Resource_ProjectsLocations');
+class_alias(EnrollDataSourcesRequest::class, 'Google_Service_BigQueryDataTransfer_EnrollDataSourcesRequest');

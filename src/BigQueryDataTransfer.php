@@ -45,6 +45,7 @@ class BigQueryDataTransfer extends \Google\Service
   const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
 
+  public $projects;
   public $projects_dataSources;
   public $projects_locations;
   public $projects_locations_dataSources;
@@ -71,6 +72,26 @@ class BigQueryDataTransfer extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'bigquerydatatransfer';
 
+    $this->projects = new BigQueryDataTransfer\Resource\Projects(
+        $this,
+        $this->serviceName,
+        'projects',
+        [
+          'methods' => [
+            'enrollDataSources' => [
+              'path' => 'v1/{+name}:enrollDataSources',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_dataSources = new BigQueryDataTransfer\Resource\ProjectsDataSources(
         $this,
         $this->serviceName,
@@ -125,7 +146,17 @@ class BigQueryDataTransfer extends \Google\Service
         'locations',
         [
           'methods' => [
-            'get' => [
+            'enrollDataSources' => [
+              'path' => 'v1/{+name}:enrollDataSources',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
