@@ -15,39 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\SQLAdmin;
+namespace Google\Service\GKEHub;
 
-class InstanceReference extends \Google\Model
+class MultiCloudCluster extends \Google\Model
 {
-  public $name;
-  public $project;
-  public $region;
+  public $clusterMissing;
+  public $resourceLink;
 
-  public function setName($name)
+  public function setClusterMissing($clusterMissing)
   {
-    $this->name = $name;
+    $this->clusterMissing = $clusterMissing;
   }
-  public function getName()
+  public function getClusterMissing()
   {
-    return $this->name;
+    return $this->clusterMissing;
   }
-  public function setProject($project)
+  public function setResourceLink($resourceLink)
   {
-    $this->project = $project;
+    $this->resourceLink = $resourceLink;
   }
-  public function getProject()
+  public function getResourceLink()
   {
-    return $this->project;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
+    return $this->resourceLink;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceReference::class, 'Google_Service_SQLAdmin_InstanceReference');
+class_alias(MultiCloudCluster::class, 'Google_Service_GKEHub_MultiCloudCluster');

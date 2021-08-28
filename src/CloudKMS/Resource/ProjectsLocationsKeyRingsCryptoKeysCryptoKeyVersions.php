@@ -144,12 +144,15 @@ class ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions extends \Google\Servi
     return $this->call('getPublicKey', [$params], PublicKey::class);
   }
   /**
-   * Imports a new CryptoKeyVersion into an existing CryptoKey using the wrapped
-   * key material provided in the request. The version ID will be assigned the
-   * next sequential id within the CryptoKey. (cryptoKeyVersions.import)
+   * Import wrapped key material into a CryptoKeyVersion. All requests must
+   * specify a CryptoKey. If a CryptoKeyVersion is additionally specified in the
+   * request, key material will be reimported into that version. Otherwise, a new
+   * version will be created, and will be assigned the next sequential id within
+   * the CryptoKey. (cryptoKeyVersions.import)
    *
    * @param string $parent Required. The name of the CryptoKey to be imported
-   * into.
+   * into. The create permission is only required on this key when creating a new
+   * CryptoKeyVersion.
    * @param ImportCryptoKeyVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CryptoKeyVersion

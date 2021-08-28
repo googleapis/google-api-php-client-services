@@ -33,7 +33,7 @@ class LocationsBucketsViews extends \Google\Service\Resource
 {
   /**
    * Creates a view over log entries in a log bucket. A bucket may contain a
-   * maximum of 50 views. (views.create)
+   * maximum of 30 views. (views.create)
    *
    * @param string $parent Required. The bucket in which to create the view
    * `"projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"` For

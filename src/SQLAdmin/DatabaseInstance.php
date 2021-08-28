@@ -22,6 +22,7 @@ class DatabaseInstance extends \Google\Collection
   protected $collection_key = 'suspensionReason';
   public $backendType;
   public $connectionName;
+  public $createTime;
   public $currentDiskSize;
   public $databaseVersion;
   protected $diskEncryptionConfigurationType = DiskEncryptionConfiguration::class;
@@ -78,6 +79,14 @@ class DatabaseInstance extends \Google\Collection
   public function getConnectionName()
   {
     return $this->connectionName;
+  }
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  public function getCreateTime()
+  {
+    return $this->createTime;
   }
   public function setCurrentDiskSize($currentDiskSize)
   {

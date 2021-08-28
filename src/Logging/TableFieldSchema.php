@@ -17,24 +17,16 @@
 
 namespace Google\Service\Logging;
 
-class LogView extends \Google\Model
+class TableFieldSchema extends \Google\Collection
 {
-  public $createTime;
+  protected $collection_key = 'fields';
   public $description;
-  public $filter;
+  protected $fieldsType = TableFieldSchema::class;
+  protected $fieldsDataType = 'array';
+  public $mode;
   public $name;
-  protected $schemaType = TableSchema::class;
-  protected $schemaDataType = '';
-  public $updateTime;
+  public $type;
 
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
   public function setDescription($description)
   {
     $this->description = $description;
@@ -43,13 +35,27 @@ class LogView extends \Google\Model
   {
     return $this->description;
   }
-  public function setFilter($filter)
+  /**
+   * @param TableFieldSchema[]
+   */
+  public function setFields($fields)
   {
-    $this->filter = $filter;
+    $this->fields = $fields;
   }
-  public function getFilter()
+  /**
+   * @return TableFieldSchema[]
+   */
+  public function getFields()
   {
-    return $this->filter;
+    return $this->fields;
+  }
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  public function getMode()
+  {
+    return $this->mode;
   }
   public function setName($name)
   {
@@ -59,29 +65,15 @@ class LogView extends \Google\Model
   {
     return $this->name;
   }
-  /**
-   * @param TableSchema
-   */
-  public function setSchema(TableSchema $schema)
+  public function setType($type)
   {
-    $this->schema = $schema;
+    $this->type = $type;
   }
-  /**
-   * @return TableSchema
-   */
-  public function getSchema()
+  public function getType()
   {
-    return $this->schema;
-  }
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LogView::class, 'Google_Service_Logging_LogView');
+class_alias(TableFieldSchema::class, 'Google_Service_Logging_TableFieldSchema');

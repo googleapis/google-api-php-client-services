@@ -15,39 +15,39 @@
  * the License.
  */
 
-namespace Google\Service\SQLAdmin;
+namespace Google\Service\GKEHub;
 
-class InstanceReference extends \Google\Model
+class OnPremCluster extends \Google\Model
 {
-  public $name;
-  public $project;
-  public $region;
+  public $adminCluster;
+  public $clusterMissing;
+  public $resourceLink;
 
-  public function setName($name)
+  public function setAdminCluster($adminCluster)
   {
-    $this->name = $name;
+    $this->adminCluster = $adminCluster;
   }
-  public function getName()
+  public function getAdminCluster()
   {
-    return $this->name;
+    return $this->adminCluster;
   }
-  public function setProject($project)
+  public function setClusterMissing($clusterMissing)
   {
-    $this->project = $project;
+    $this->clusterMissing = $clusterMissing;
   }
-  public function getProject()
+  public function getClusterMissing()
   {
-    return $this->project;
+    return $this->clusterMissing;
   }
-  public function setRegion($region)
+  public function setResourceLink($resourceLink)
   {
-    $this->region = $region;
+    $this->resourceLink = $resourceLink;
   }
-  public function getRegion()
+  public function getResourceLink()
   {
-    return $this->region;
+    return $this->resourceLink;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceReference::class, 'Google_Service_SQLAdmin_InstanceReference');
+class_alias(OnPremCluster::class, 'Google_Service_GKEHub_OnPremCluster');

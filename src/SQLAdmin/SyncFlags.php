@@ -17,11 +17,10 @@
 
 namespace Google\Service\SQLAdmin;
 
-class InstanceReference extends \Google\Model
+class SyncFlags extends \Google\Model
 {
   public $name;
-  public $project;
-  public $region;
+  public $value;
 
   public function setName($name)
   {
@@ -31,23 +30,15 @@ class InstanceReference extends \Google\Model
   {
     return $this->name;
   }
-  public function setProject($project)
+  public function setValue($value)
   {
-    $this->project = $project;
+    $this->value = $value;
   }
-  public function getProject()
+  public function getValue()
   {
-    return $this->project;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceReference::class, 'Google_Service_SQLAdmin_InstanceReference');
+class_alias(SyncFlags::class, 'Google_Service_SQLAdmin_SyncFlags');

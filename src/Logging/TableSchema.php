@@ -15,39 +15,29 @@
  * the License.
  */
 
-namespace Google\Service\SQLAdmin;
+namespace Google\Service\Logging;
 
-class InstanceReference extends \Google\Model
+class TableSchema extends \Google\Collection
 {
-  public $name;
-  public $project;
-  public $region;
+  protected $collection_key = 'fields';
+  protected $fieldsType = TableFieldSchema::class;
+  protected $fieldsDataType = 'array';
 
-  public function setName($name)
+  /**
+   * @param TableFieldSchema[]
+   */
+  public function setFields($fields)
   {
-    $this->name = $name;
+    $this->fields = $fields;
   }
-  public function getName()
+  /**
+   * @return TableFieldSchema[]
+   */
+  public function getFields()
   {
-    return $this->name;
-  }
-  public function setProject($project)
-  {
-    $this->project = $project;
-  }
-  public function getProject()
-  {
-    return $this->project;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
+    return $this->fields;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceReference::class, 'Google_Service_SQLAdmin_InstanceReference');
+class_alias(TableSchema::class, 'Google_Service_Logging_TableSchema');

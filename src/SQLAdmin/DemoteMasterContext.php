@@ -23,6 +23,7 @@ class DemoteMasterContext extends \Google\Model
   public $masterInstanceName;
   protected $replicaConfigurationType = DemoteMasterConfiguration::class;
   protected $replicaConfigurationDataType = '';
+  public $skipReplicationSetup;
   public $verifyGtidConsistency;
 
   public function setKind($kind)
@@ -54,6 +55,14 @@ class DemoteMasterContext extends \Google\Model
   public function getReplicaConfiguration()
   {
     return $this->replicaConfiguration;
+  }
+  public function setSkipReplicationSetup($skipReplicationSetup)
+  {
+    $this->skipReplicationSetup = $skipReplicationSetup;
+  }
+  public function getSkipReplicationSetup()
+  {
+    return $this->skipReplicationSetup;
   }
   public function setVerifyGtidConsistency($verifyGtidConsistency)
   {

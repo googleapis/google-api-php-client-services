@@ -35,8 +35,8 @@ class QueryResponse extends \Google\Collection
   protected $rowsDataType = 'array';
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
-  protected $sessionInfoTemplateType = SessionInfo::class;
-  protected $sessionInfoTemplateDataType = '';
+  protected $sessionInfoType = SessionInfo::class;
+  protected $sessionInfoDataType = '';
   public $totalBytesProcessed;
   public $totalRows;
 
@@ -153,16 +153,16 @@ class QueryResponse extends \Google\Collection
   /**
    * @param SessionInfo
    */
-  public function setSessionInfoTemplate(SessionInfo $sessionInfoTemplate)
+  public function setSessionInfo(SessionInfo $sessionInfo)
   {
-    $this->sessionInfoTemplate = $sessionInfoTemplate;
+    $this->sessionInfo = $sessionInfo;
   }
   /**
    * @return SessionInfo
    */
-  public function getSessionInfoTemplate()
+  public function getSessionInfo()
   {
-    return $this->sessionInfoTemplate;
+    return $this->sessionInfo;
   }
   public function setTotalBytesProcessed($totalBytesProcessed)
   {

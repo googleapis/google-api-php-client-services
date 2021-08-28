@@ -23,6 +23,10 @@ class MembershipEndpoint extends \Google\Model
   protected $gkeClusterDataType = '';
   protected $kubernetesMetadataType = KubernetesMetadata::class;
   protected $kubernetesMetadataDataType = '';
+  protected $multiCloudClusterType = MultiCloudCluster::class;
+  protected $multiCloudClusterDataType = '';
+  protected $onPremClusterType = OnPremCluster::class;
+  protected $onPremClusterDataType = '';
 
   /**
    * @param GkeCluster
@@ -51,6 +55,34 @@ class MembershipEndpoint extends \Google\Model
   public function getKubernetesMetadata()
   {
     return $this->kubernetesMetadata;
+  }
+  /**
+   * @param MultiCloudCluster
+   */
+  public function setMultiCloudCluster(MultiCloudCluster $multiCloudCluster)
+  {
+    $this->multiCloudCluster = $multiCloudCluster;
+  }
+  /**
+   * @return MultiCloudCluster
+   */
+  public function getMultiCloudCluster()
+  {
+    return $this->multiCloudCluster;
+  }
+  /**
+   * @param OnPremCluster
+   */
+  public function setOnPremCluster(OnPremCluster $onPremCluster)
+  {
+    $this->onPremCluster = $onPremCluster;
+  }
+  /**
+   * @return OnPremCluster
+   */
+  public function getOnPremCluster()
+  {
+    return $this->onPremCluster;
   }
 }
 
