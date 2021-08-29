@@ -17,7 +17,7 @@
 
 namespace Google\Service\NetworkSecurity;
 
-class ValidationCA extends \Google\Model
+class GoogleCloudNetworksecurityV1CertificateProvider extends \Google\Model
 {
   protected $certificateProviderInstanceType = CertificateProviderInstance::class;
   protected $certificateProviderInstanceDataType = '';
@@ -55,4 +55,4 @@ class ValidationCA extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ValidationCA::class, 'Google_Service_NetworkSecurity_ValidationCA');
+class_alias(GoogleCloudNetworksecurityV1CertificateProvider::class, 'Google_Service_NetworkSecurity_GoogleCloudNetworksecurityV1CertificateProvider');
