@@ -86,8 +86,16 @@ class Product extends \Google\Collection
   protected $priceDataType = '';
   protected $productDetailsType = ProductProductDetail::class;
   protected $productDetailsDataType = 'array';
+  protected $productHeightType = ProductDimension::class;
+  protected $productHeightDataType = '';
   public $productHighlights;
+  protected $productLengthType = ProductDimension::class;
+  protected $productLengthDataType = '';
   public $productTypes;
+  protected $productWeightType = ProductWeight::class;
+  protected $productWeightDataType = '';
+  protected $productWidthType = ProductDimension::class;
+  protected $productWidthDataType = '';
   public $promotionIds;
   protected $salePriceType = Price::class;
   protected $salePriceDataType = '';
@@ -638,6 +646,20 @@ class Product extends \Google\Collection
   {
     return $this->productDetails;
   }
+  /**
+   * @param ProductDimension
+   */
+  public function setProductHeight(ProductDimension $productHeight)
+  {
+    $this->productHeight = $productHeight;
+  }
+  /**
+   * @return ProductDimension
+   */
+  public function getProductHeight()
+  {
+    return $this->productHeight;
+  }
   public function setProductHighlights($productHighlights)
   {
     $this->productHighlights = $productHighlights;
@@ -646,6 +668,20 @@ class Product extends \Google\Collection
   {
     return $this->productHighlights;
   }
+  /**
+   * @param ProductDimension
+   */
+  public function setProductLength(ProductDimension $productLength)
+  {
+    $this->productLength = $productLength;
+  }
+  /**
+   * @return ProductDimension
+   */
+  public function getProductLength()
+  {
+    return $this->productLength;
+  }
   public function setProductTypes($productTypes)
   {
     $this->productTypes = $productTypes;
@@ -653,6 +689,34 @@ class Product extends \Google\Collection
   public function getProductTypes()
   {
     return $this->productTypes;
+  }
+  /**
+   * @param ProductWeight
+   */
+  public function setProductWeight(ProductWeight $productWeight)
+  {
+    $this->productWeight = $productWeight;
+  }
+  /**
+   * @return ProductWeight
+   */
+  public function getProductWeight()
+  {
+    return $this->productWeight;
+  }
+  /**
+   * @param ProductDimension
+   */
+  public function setProductWidth(ProductDimension $productWidth)
+  {
+    $this->productWidth = $productWidth;
+  }
+  /**
+   * @return ProductDimension
+   */
+  public function getProductWidth()
+  {
+    return $this->productWidth;
   }
   public function setPromotionIds($promotionIds)
   {

@@ -63,6 +63,7 @@ class ShoppingContent extends \Google\Service
   public $products;
   public $productstatuses;
   public $productstatuses_repricingreports;
+  public $promotions;
   public $pubsubnotificationsettings;
   public $regionalinventory;
   public $regions;
@@ -1568,6 +1569,21 @@ class ShoppingContent extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'captureOrder' => [
+              'path' => '{merchantId}/orders/{orderId}/captureOrder',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'orderId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'createtestorder' => [
               'path' => '{merchantId}/testorders',
               'httpMethod' => 'POST',
@@ -2164,6 +2180,26 @@ class ShoppingContent extends \Google\Service
                 'startDate' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->promotions = new ShoppingContent\Resource\Promotions(
+        $this,
+        $this->serviceName,
+        'promotions',
+        [
+          'methods' => [
+            'create' => [
+              'path' => '{merchantId}/promotions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
