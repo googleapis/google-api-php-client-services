@@ -19,8 +19,18 @@ namespace Google\Service\AnalyticsData;
 
 class ResponseMetaData extends \Google\Model
 {
+  public $currencyCode;
   public $dataLossFromOtherRow;
+  public $timeZone;
 
+  public function setCurrencyCode($currencyCode)
+  {
+    $this->currencyCode = $currencyCode;
+  }
+  public function getCurrencyCode()
+  {
+    return $this->currencyCode;
+  }
   public function setDataLossFromOtherRow($dataLossFromOtherRow)
   {
     $this->dataLossFromOtherRow = $dataLossFromOtherRow;
@@ -28,6 +38,14 @@ class ResponseMetaData extends \Google\Model
   public function getDataLossFromOtherRow()
   {
     return $this->dataLossFromOtherRow;
+  }
+  public function setTimeZone($timeZone)
+  {
+    $this->timeZone = $timeZone;
+  }
+  public function getTimeZone()
+  {
+    return $this->timeZone;
   }
 }
 

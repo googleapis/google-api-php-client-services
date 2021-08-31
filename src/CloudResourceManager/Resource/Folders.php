@@ -137,7 +137,8 @@ class Folders extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of folders to return in
-   * the response. If unspecified, server picks an appropriate default.
+   * the response. The server can return fewer folders than requested. If
+   * unspecified, server picks an appropriate default.
    * @opt_param string pageToken Optional. A pagination token returned from a
    * previous call to `ListFolders` that indicates where this listing should
    * continue from.
@@ -220,7 +221,8 @@ class Folders extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of folders to return in
-   * the response. If unspecified, server picks an appropriate default.
+   * the response. The server can return fewer folders than requested. If
+   * unspecified, server picks an appropriate default.
    * @opt_param string pageToken Optional. A pagination token returned from a
    * previous call to `SearchFolders` that indicates from where search should
    * continue.

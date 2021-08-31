@@ -25,10 +25,14 @@ class LiveChatMessageSnippet extends \Google\Model
   protected $fanFundingEventDetailsDataType = '';
   public $hasDisplayContent;
   public $liveChatId;
+  protected $memberMilestoneChatDetailsType = LiveChatMemberMilestoneChatDetails::class;
+  protected $memberMilestoneChatDetailsDataType = '';
   protected $messageDeletedDetailsType = LiveChatMessageDeletedDetails::class;
   protected $messageDeletedDetailsDataType = '';
   protected $messageRetractedDetailsType = LiveChatMessageRetractedDetails::class;
   protected $messageRetractedDetailsDataType = '';
+  protected $newSponsorDetailsType = LiveChatNewSponsorDetails::class;
+  protected $newSponsorDetailsDataType = '';
   public $publishedAt;
   protected $superChatDetailsType = LiveChatSuperChatDetails::class;
   protected $superChatDetailsDataType = '';
@@ -87,6 +91,20 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->liveChatId;
   }
   /**
+   * @param LiveChatMemberMilestoneChatDetails
+   */
+  public function setMemberMilestoneChatDetails(LiveChatMemberMilestoneChatDetails $memberMilestoneChatDetails)
+  {
+    $this->memberMilestoneChatDetails = $memberMilestoneChatDetails;
+  }
+  /**
+   * @return LiveChatMemberMilestoneChatDetails
+   */
+  public function getMemberMilestoneChatDetails()
+  {
+    return $this->memberMilestoneChatDetails;
+  }
+  /**
    * @param LiveChatMessageDeletedDetails
    */
   public function setMessageDeletedDetails(LiveChatMessageDeletedDetails $messageDeletedDetails)
@@ -113,6 +131,20 @@ class LiveChatMessageSnippet extends \Google\Model
   public function getMessageRetractedDetails()
   {
     return $this->messageRetractedDetails;
+  }
+  /**
+   * @param LiveChatNewSponsorDetails
+   */
+  public function setNewSponsorDetails(LiveChatNewSponsorDetails $newSponsorDetails)
+  {
+    $this->newSponsorDetails = $newSponsorDetails;
+  }
+  /**
+   * @return LiveChatNewSponsorDetails
+   */
+  public function getNewSponsorDetails()
+  {
+    return $this->newSponsorDetails;
   }
   public function setPublishedAt($publishedAt)
   {

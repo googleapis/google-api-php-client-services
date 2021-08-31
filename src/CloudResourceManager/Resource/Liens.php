@@ -87,7 +87,8 @@ class Liens extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of items to return. This is a
-   * suggestion for the server.
+   * suggestion for the server. The server can return fewer liens than requested.
+   * If unspecified, server picks an appropriate default.
    * @opt_param string pageToken The `next_page_token` value returned from a
    * previous List request, if any.
    * @opt_param string parent Required. The name of the resource to list all
