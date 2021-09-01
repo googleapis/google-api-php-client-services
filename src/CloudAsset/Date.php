@@ -15,39 +15,39 @@
  * the License.
  */
 
-namespace Google\Service\Contactcenterinsights;
+namespace Google\Service\CloudAsset;
 
-class GoogleCloudContactcenterinsightsV1IssueAssignment extends \Google\Model
+class Date extends \Google\Model
 {
-  public $displayName;
-  public $issue;
-  public $score;
+  public $day;
+  public $month;
+  public $year;
 
-  public function setDisplayName($displayName)
+  public function setDay($day)
   {
-    $this->displayName = $displayName;
+    $this->day = $day;
   }
-  public function getDisplayName()
+  public function getDay()
   {
-    return $this->displayName;
+    return $this->day;
   }
-  public function setIssue($issue)
+  public function setMonth($month)
   {
-    $this->issue = $issue;
+    $this->month = $month;
   }
-  public function getIssue()
+  public function getMonth()
   {
-    return $this->issue;
+    return $this->month;
   }
-  public function setScore($score)
+  public function setYear($year)
   {
-    $this->score = $score;
+    $this->year = $year;
   }
-  public function getScore()
+  public function getYear()
   {
-    return $this->score;
+    return $this->year;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContactcenterinsightsV1IssueAssignment::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1IssueAssignment');
+class_alias(Date::class, 'Google_Service_CloudAsset_Date');

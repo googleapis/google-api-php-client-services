@@ -27,6 +27,8 @@ class SoftwarePackage extends \Google\Model
   protected $googetPackageDataType = '';
   protected $qfePackageType = WindowsQuickFixEngineeringPackage::class;
   protected $qfePackageDataType = '';
+  protected $windowsApplicationType = WindowsApplication::class;
+  protected $windowsApplicationDataType = '';
   protected $wuaPackageType = WindowsUpdatePackage::class;
   protected $wuaPackageDataType = '';
   protected $yumPackageType = VersionedPackage::class;
@@ -91,6 +93,20 @@ class SoftwarePackage extends \Google\Model
   public function getQfePackage()
   {
     return $this->qfePackage;
+  }
+  /**
+   * @param WindowsApplication
+   */
+  public function setWindowsApplication(WindowsApplication $windowsApplication)
+  {
+    $this->windowsApplication = $windowsApplication;
+  }
+  /**
+   * @return WindowsApplication
+   */
+  public function getWindowsApplication()
+  {
+    return $this->windowsApplication;
   }
   /**
    * @param WindowsUpdatePackage

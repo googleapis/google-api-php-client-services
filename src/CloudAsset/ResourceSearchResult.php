@@ -37,6 +37,8 @@ class ResourceSearchResult extends \Google\Collection
   public $parentAssetType;
   public $parentFullResourceName;
   public $project;
+  protected $relationshipsType = RelatedResources::class;
+  protected $relationshipsDataType = 'map';
   public $state;
   public $updateTime;
   protected $versionedResourcesType = VersionedResource::class;
@@ -175,6 +177,20 @@ class ResourceSearchResult extends \Google\Collection
   public function getProject()
   {
     return $this->project;
+  }
+  /**
+   * @param RelatedResources[]
+   */
+  public function setRelationships($relationships)
+  {
+    $this->relationships = $relationships;
+  }
+  /**
+   * @return RelatedResources[]
+   */
+  public function getRelationships()
+  {
+    return $this->relationships;
   }
   public function setState($state)
   {
