@@ -34,7 +34,7 @@ use Google\Client;
  */
 class CloudHealthcare extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
@@ -55,6 +55,7 @@ class CloudHealthcare extends \Google\Service
   public $projects_locations_datasets_hl7V2Stores;
   public $projects_locations_datasets_hl7V2Stores_messages;
   public $projects_locations_datasets_operations;
+  public $projects_locations_services_nlp;
 
   /**
    * Constructs the internal representation of the CloudHealthcare service.
@@ -1820,6 +1821,26 @@ class CloudHealthcare extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_services_nlp = new CloudHealthcare\Resource\ProjectsLocationsServicesNlp(
+        $this,
+        $this->serviceName,
+        'nlp',
+        [
+          'methods' => [
+            'analyzeEntities' => [
+              'path' => 'v1/{+nlpService}:analyzeEntities',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'nlpService' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

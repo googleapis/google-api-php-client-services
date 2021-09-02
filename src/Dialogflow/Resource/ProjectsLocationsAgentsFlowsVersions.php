@@ -34,7 +34,11 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsFlowsVersions extends \Google\Service\Resource
 {
   /**
-   * Creates a Version in the specified Flow. (versions.create)
+   * Creates a Version in the specified Flow. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: CreateVersionOperationMetadata - `response`: Version
+   * (versions.create)
    *
    * @param string $parent Required. The Flow to create an Version for. Format:
    * `projects//locations//agents//flows/`.
@@ -97,7 +101,14 @@ class ProjectsLocationsAgentsFlowsVersions extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListVersionsResponse::class);
   }
   /**
-   * Loads resources in the specified version to the draft flow. (versions.load)
+   * Loads resources in the specified version to the draft flow. This method is a
+   * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how
+   * /long-running-operation). The returned `Operation` type has the following
+   * method-specific fields: - `metadata`: An empty [Struct
+   * message](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty
+   * message](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#empty) (versions.load)
    *
    * @param string $name Required. The Version to be loaded to draft flow. Format:
    * `projects//locations//agents//flows//versions/`.

@@ -17,7 +17,7 @@
 
 namespace Google\Service\Ideahub\Resource;
 
-use Google\Service\Ideahub\GoogleSearchIdeahubV1alphaTopicState;
+use Google\Service\Ideahub\GoogleSearchIdeahubV1betaTopicState;
 
 /**
  * The "topicStates" collection of methods.
@@ -34,17 +34,17 @@ class PlatformsPropertiesTopicStates extends \Google\Service\Resource
    *
    * @param string $name Unique identifier for the topic state. Format:
    * platforms/{platform}/properties/{property}/topicStates/{topic_state}
-   * @param GoogleSearchIdeahubV1alphaTopicState $postBody
+   * @param GoogleSearchIdeahubV1betaTopicState $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask The list of fields to be updated.
-   * @return GoogleSearchIdeahubV1alphaTopicState
+   * @return GoogleSearchIdeahubV1betaTopicState
    */
-  public function patch($name, GoogleSearchIdeahubV1alphaTopicState $postBody, $optParams = [])
+  public function patch($name, GoogleSearchIdeahubV1betaTopicState $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], GoogleSearchIdeahubV1alphaTopicState::class);
+    return $this->call('patch', [$params], GoogleSearchIdeahubV1betaTopicState::class);
   }
 }
 

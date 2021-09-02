@@ -54,7 +54,11 @@ class ProjectsLocationsAgentsTestCases extends \Google\Service\Resource
     return $this->call('batchDelete', [$params], GoogleProtobufEmpty::class);
   }
   /**
-   * Kicks off a batch run of test cases. (testCases.batchRun)
+   * Kicks off a batch run of test cases. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: BatchRunTestCasesMetadata - `response`:
+   * BatchRunTestCasesResponse (testCases.batchRun)
    *
    * @param string $parent Required. Agent name. Format:
    * `projects//locations//agents/ `.
@@ -101,8 +105,11 @@ class ProjectsLocationsAgentsTestCases extends \Google\Service\Resource
   }
   /**
    * Exports the test cases under the agent to a Cloud Storage bucket or a local
-   * file. Filter can be applied to export a subset of test cases.
-   * (testCases.export)
+   * file. Filter can be applied to export a subset of test cases. This method is
+   * a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how
+   * /long-running-operation). The returned `Operation` type has the following
+   * method-specific fields: - `metadata`: ExportTestCasesMetadata - `response`:
+   * ExportTestCasesResponse (testCases.export)
    *
    * @param string $parent Required. The agent where to export test cases from.
    * Format: `projects//locations//agents/`.
@@ -133,7 +140,11 @@ class ProjectsLocationsAgentsTestCases extends \Google\Service\Resource
   /**
    * Imports the test cases from a Cloud Storage bucket or a local file. It always
    * creates new test cases and won't overwite any existing ones. The provided ID
-   * in the imported test case is neglected. (testCases.import)
+   * in the imported test case is neglected. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: ImportTestCasesMetadata - `response`:
+   * ImportTestCasesResponse (testCases.import)
    *
    * @param string $parent Required. The agent to import test cases to. Format:
    * `projects//locations//agents/`.
@@ -191,7 +202,11 @@ class ProjectsLocationsAgentsTestCases extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleCloudDialogflowCxV3TestCase::class);
   }
   /**
-   * Kicks off a test case run. (testCases.run)
+   * Kicks off a test case run. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: RunTestCaseMetadata - `response`: RunTestCaseResponse
+   * (testCases.run)
    *
    * @param string $name Required. Format of test case name to run:
    * `projects//locations/ /agents//testCases/`.
