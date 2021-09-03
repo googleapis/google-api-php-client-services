@@ -29,6 +29,7 @@ class FlexTemplateRuntimeEnvironment extends \Google\Collection
   public $flexrsGoal;
   public $ipConfiguration;
   public $kmsKeyName;
+  public $launcherMachineType;
   public $machineType;
   public $maxWorkers;
   public $network;
@@ -114,6 +115,14 @@ class FlexTemplateRuntimeEnvironment extends \Google\Collection
   public function getKmsKeyName()
   {
     return $this->kmsKeyName;
+  }
+  public function setLauncherMachineType($launcherMachineType)
+  {
+    $this->launcherMachineType = $launcherMachineType;
+  }
+  public function getLauncherMachineType()
+  {
+    return $this->launcherMachineType;
   }
   public function setMachineType($machineType)
   {

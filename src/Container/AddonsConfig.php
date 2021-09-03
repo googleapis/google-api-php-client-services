@@ -27,6 +27,8 @@ class AddonsConfig extends \Google\Model
   protected $dnsCacheConfigDataType = '';
   protected $gcePersistentDiskCsiDriverConfigType = GcePersistentDiskCsiDriverConfig::class;
   protected $gcePersistentDiskCsiDriverConfigDataType = '';
+  protected $gcpFilestoreCsiDriverConfigType = GcpFilestoreCsiDriverConfig::class;
+  protected $gcpFilestoreCsiDriverConfigDataType = '';
   protected $horizontalPodAutoscalingType = HorizontalPodAutoscaling::class;
   protected $horizontalPodAutoscalingDataType = '';
   protected $httpLoadBalancingType = HttpLoadBalancing::class;
@@ -91,6 +93,20 @@ class AddonsConfig extends \Google\Model
   public function getGcePersistentDiskCsiDriverConfig()
   {
     return $this->gcePersistentDiskCsiDriverConfig;
+  }
+  /**
+   * @param GcpFilestoreCsiDriverConfig
+   */
+  public function setGcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfig $gcpFilestoreCsiDriverConfig)
+  {
+    $this->gcpFilestoreCsiDriverConfig = $gcpFilestoreCsiDriverConfig;
+  }
+  /**
+   * @return GcpFilestoreCsiDriverConfig
+   */
+  public function getGcpFilestoreCsiDriverConfig()
+  {
+    return $this->gcpFilestoreCsiDriverConfig;
   }
   /**
    * @param HorizontalPodAutoscaling

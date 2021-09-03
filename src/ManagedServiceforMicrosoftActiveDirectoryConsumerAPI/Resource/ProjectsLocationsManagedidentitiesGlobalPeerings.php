@@ -17,6 +17,9 @@
 
 namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Resource;
 
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\ListPeeringsResponse;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Operation;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Peering;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Policy;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\SetIamPolicyRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\TestIamPermissionsRequest;
@@ -32,6 +35,52 @@ use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\TestIamP
  */
 class ProjectsLocationsManagedidentitiesGlobalPeerings extends \Google\Service\Resource
 {
+  /**
+   * Creates a Peering for Managed AD instance. (peerings.create)
+   *
+   * @param string $parent Required. Resource project name and location using the
+   * form: `projects/{project_id}/locations/global`
+   * @param Peering $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string peeringId Required. Peering Id, unique name to identify
+   * peering.
+   * @return Operation
+   */
+  public function create($parent, Peering $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Operation::class);
+  }
+  /**
+   * Deletes identified Peering. (peerings.delete)
+   *
+   * @param string $name Required. Peering resource name using the form:
+   * `projects/{project_id}/locations/global/peerings/{peering_id}`
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Gets details of a single Peering. (peerings.get)
+   *
+   * @param string $name Required. Peering resource name using the form:
+   * `projects/{project_id}/locations/global/peerings/{peering_id}`
+   * @param array $optParams Optional parameters.
+   * @return Peering
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], Peering::class);
+  }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (peerings.getIamPolicy)
@@ -56,6 +105,55 @@ class ProjectsLocationsManagedidentitiesGlobalPeerings extends \Google\Service\R
     $params = ['resource' => $resource];
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Lists Peerings in a given project.
+   * (peerings.listProjectsLocationsManagedidentitiesGlobalPeerings)
+   *
+   * @param string $parent Required. The resource name of the peering location
+   * using the form: `projects/{project_id}/locations/global`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Filter specifying constraints of a list
+   * operation. For example, `peering.authorized_network="projects/myprojectid/glo
+   * bal/networks/mynetwork"`.
+   * @opt_param string orderBy Optional. Specifies the ordering of results
+   * following syntax at
+   * https://cloud.google.com/apis/design/design_patterns#sorting_order.
+   * @opt_param int pageSize Optional. The maximum number of items to return. If
+   * not specified, a default value of 1000 will be used by the service.
+   * Regardless of the page_size value, the response may include a partial list
+   * and a caller should only rely on response's next_page_token to determine if
+   * there are more instances left to be queried.
+   * @opt_param string pageToken Optional. The next_page_token value returned from
+   * a previous List request, if any.
+   * @return ListPeeringsResponse
+   */
+  public function listProjectsLocationsManagedidentitiesGlobalPeerings($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], ListPeeringsResponse::class);
+  }
+  /**
+   * Updates the labels for specified Peering. (peerings.patch)
+   *
+   * @param string $name Output only. Unique name of the peering in this scope
+   * including projects and location using the form:
+   * `projects/{project_id}/locations/global/peerings/{peering_id}`.
+   * @param Peering $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. Mask of fields to update. At least one
+   * path must be supplied in this field. The elements of the repeated paths field
+   * may only include these fields from Peering: * `labels`
+   * @return Operation
+   */
+  public function patch($name, Peering $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

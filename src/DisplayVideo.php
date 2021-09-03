@@ -2445,16 +2445,6 @@ class DisplayVideo extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'upload' => [
-              'path' => 'media/{+resourceName}',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resourceName' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],
           ]
         ]

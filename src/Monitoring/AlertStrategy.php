@@ -19,9 +19,18 @@ namespace Google\Service\Monitoring;
 
 class AlertStrategy extends \Google\Model
 {
+  public $autoClose;
   protected $notificationRateLimitType = NotificationRateLimit::class;
   protected $notificationRateLimitDataType = '';
 
+  public function setAutoClose($autoClose)
+  {
+    $this->autoClose = $autoClose;
+  }
+  public function getAutoClose()
+  {
+    return $this->autoClose;
+  }
   /**
    * @param NotificationRateLimit
    */
