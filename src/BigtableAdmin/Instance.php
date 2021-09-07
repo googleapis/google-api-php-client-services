@@ -19,12 +19,21 @@ namespace Google\Service\BigtableAdmin;
 
 class Instance extends \Google\Model
 {
+  public $createTime;
   public $displayName;
   public $labels;
   public $name;
   public $state;
   public $type;
 
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  public function getCreateTime()
+  {
+    return $this->createTime;
+  }
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
