@@ -1679,6 +1679,10 @@ class YouTube extends \Google\Service
                   'repeated' => true,
                   'required' => true,
                 ],
+                'externalChannelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]

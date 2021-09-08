@@ -63,6 +63,7 @@ class Apigee extends \Google\Service
   public $organizations_developers_apps_keys_apiproducts;
   public $organizations_developers_apps_keys_create;
   public $organizations_developers_attributes;
+  public $organizations_developers_balance;
   public $organizations_developers_subscriptions;
   public $organizations_envgroups;
   public $organizations_envgroups_attachments;
@@ -968,6 +969,26 @@ class Apigee extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'getBalance' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getMonetizationConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/developers',
               'httpMethod' => 'GET',
@@ -1017,6 +1038,16 @@ class Apigee extends \Google\Service
                 ],
               ],
             ],'update' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateMonetizationConfig' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PUT',
               'parameters' => [
@@ -1344,6 +1375,26 @@ class Apigee extends \Google\Service
               ],
             ],'updateDeveloperAttribute' => [
               'path' => 'v1/{+name}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_developers_balance = new Apigee\Resource\OrganizationsDevelopersBalance(
+        $this,
+        $this->serviceName,
+        'balance',
+        [
+          'methods' => [
+            'credit' => [
+              'path' => 'v1/{+name}:credit',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [

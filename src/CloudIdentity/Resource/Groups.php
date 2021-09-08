@@ -144,7 +144,8 @@ class Groups extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The names of fields to update. May
-   * only contain the following fields: `display_name`, `description`, `labels`.
+   * only contain the following field names: `display_name`, `description`,
+   * `labels`.
    * @return Operation
    */
   public function patch($name, Group $postBody, $optParams = [])

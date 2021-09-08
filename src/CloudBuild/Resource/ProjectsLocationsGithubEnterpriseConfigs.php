@@ -33,7 +33,7 @@ class ProjectsLocationsGithubEnterpriseConfigs extends \Google\Service\Resource
 {
   /**
    * Create an association between a GCP project and a GitHub Enterprise server.
-   * This API is experimental. (githubEnterpriseConfigs.create)
+   * (githubEnterpriseConfigs.create)
    *
    * @param string $parent Name of the parent project. For example:
    * projects/{$project_number} or projects/{$project_id}
@@ -51,7 +51,7 @@ class ProjectsLocationsGithubEnterpriseConfigs extends \Google\Service\Resource
   }
   /**
    * Delete an association between a GCP project and a GitHub Enterprise server.
-   * This API is experimental. (githubEnterpriseConfigs.delete)
+   * (githubEnterpriseConfigs.delete)
    *
    * @param string $name This field should contain the name of the enterprise
    * config resource. For example:
@@ -69,8 +69,7 @@ class ProjectsLocationsGithubEnterpriseConfigs extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Retrieve a GitHubEnterpriseConfig. This API is experimental.
-   * (githubEnterpriseConfigs.get)
+   * Retrieve a GitHubEnterpriseConfig. (githubEnterpriseConfigs.get)
    *
    * @param string $name This field should contain the name of the enterprise
    * config resource. For example:
@@ -88,8 +87,7 @@ class ProjectsLocationsGithubEnterpriseConfigs extends \Google\Service\Resource
     return $this->call('get', [$params], GitHubEnterpriseConfig::class);
   }
   /**
-   * List all GitHubEnterpriseConfigs for a given project. This API is
-   * experimental.
+   * List all GitHubEnterpriseConfigs for a given project.
    * (githubEnterpriseConfigs.listProjectsLocationsGithubEnterpriseConfigs)
    *
    * @param string $parent Name of the parent project. For example:
@@ -107,7 +105,7 @@ class ProjectsLocationsGithubEnterpriseConfigs extends \Google\Service\Resource
   }
   /**
    * Update an association between a GCP project and a GitHub Enterprise server.
-   * This API is experimental. (githubEnterpriseConfigs.patch)
+   * (githubEnterpriseConfigs.patch)
    *
    * @param string $name Optional. The full resource name for the
    * GitHubEnterpriseConfig For example:
