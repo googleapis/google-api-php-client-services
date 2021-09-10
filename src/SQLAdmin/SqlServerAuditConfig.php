@@ -15,30 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\DisplayVideo;
+namespace Google\Service\SQLAdmin;
 
-class BusinessChainSearchTerms extends \Google\Model
+class SqlServerAuditConfig extends \Google\Model
 {
-  public $businessChainQuery;
-  public $regionQuery;
+  public $bucket;
+  public $kind;
 
-  public function setBusinessChainQuery($businessChainQuery)
+  public function setBucket($bucket)
   {
-    $this->businessChainQuery = $businessChainQuery;
+    $this->bucket = $bucket;
   }
-  public function getBusinessChainQuery()
+  public function getBucket()
   {
-    return $this->businessChainQuery;
+    return $this->bucket;
   }
-  public function setRegionQuery($regionQuery)
+  public function setKind($kind)
   {
-    $this->regionQuery = $regionQuery;
+    $this->kind = $kind;
   }
-  public function getRegionQuery()
+  public function getKind()
   {
-    return $this->regionQuery;
+    return $this->kind;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BusinessChainSearchTerms::class, 'Google_Service_DisplayVideo_BusinessChainSearchTerms');
+class_alias(SqlServerAuditConfig::class, 'Google_Service_SQLAdmin_SqlServerAuditConfig');

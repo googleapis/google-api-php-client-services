@@ -110,7 +110,7 @@ class Photos extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Required. The filter expression. For example:
+   * @opt_param string filter Optional. The filter expression. For example:
    * `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The only filter supported at the
    * moment is `placeId`.
    * @opt_param string languageCode The BCP-47 language code, such as "en-US" or

@@ -23,6 +23,7 @@ class SqlInstancesVerifyExternalSyncSettingsRequest extends \Google\Model
   protected $mysqlSyncConfigDataType = '';
   public $syncMode;
   public $verifyConnectionOnly;
+  public $verifyReplicationOnly;
 
   /**
    * @param MySqlSyncConfig
@@ -53,6 +54,14 @@ class SqlInstancesVerifyExternalSyncSettingsRequest extends \Google\Model
   public function getVerifyConnectionOnly()
   {
     return $this->verifyConnectionOnly;
+  }
+  public function setVerifyReplicationOnly($verifyReplicationOnly)
+  {
+    $this->verifyReplicationOnly = $verifyReplicationOnly;
+  }
+  public function getVerifyReplicationOnly()
+  {
+    return $this->verifyReplicationOnly;
   }
 }
 

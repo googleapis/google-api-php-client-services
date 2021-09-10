@@ -31,20 +31,6 @@ use Google\Service\DisplayVideo\ListCustomBiddingAlgorithmsResponse;
 class CustomBiddingAlgorithms extends \Google\Service\Resource
 {
   /**
-   * Creates a new custom bidding algorithm. Returns the newly created custom
-   * bidding algorithm if successful. (customBiddingAlgorithms.create)
-   *
-   * @param CustomBiddingAlgorithm $postBody
-   * @param array $optParams Optional parameters.
-   * @return CustomBiddingAlgorithm
-   */
-  public function create(CustomBiddingAlgorithm $postBody, $optParams = [])
-  {
-    $params = ['postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], CustomBiddingAlgorithm::class);
-  }
-  /**
    * Gets a custom bidding algorithm. (customBiddingAlgorithms.get)
    *
    * @param string $customBiddingAlgorithmId Required. The ID of the custom
@@ -112,25 +98,6 @@ class CustomBiddingAlgorithms extends \Google\Service\Resource
     $params = [];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListCustomBiddingAlgorithmsResponse::class);
-  }
-  /**
-   * Updates an existing custom bidding algorithm. Returns the updated custom
-   * bidding algorithm if successful. (customBiddingAlgorithms.patch)
-   *
-   * @param string $customBiddingAlgorithmId Output only. The unique ID of the
-   * custom bidding algorithm. Assigned by the system.
-   * @param CustomBiddingAlgorithm $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string updateMask Required. The mask to control which fields to
-   * update.
-   * @return CustomBiddingAlgorithm
-   */
-  public function patch($customBiddingAlgorithmId, CustomBiddingAlgorithm $postBody, $optParams = [])
-  {
-    $params = ['customBiddingAlgorithmId' => $customBiddingAlgorithmId, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], CustomBiddingAlgorithm::class);
   }
 }
 

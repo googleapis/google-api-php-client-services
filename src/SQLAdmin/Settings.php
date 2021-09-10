@@ -48,6 +48,8 @@ class Settings extends \Google\Collection
   public $pricingPlan;
   public $replicationType;
   public $settingsVersion;
+  protected $sqlServerAuditConfigType = SqlServerAuditConfig::class;
+  protected $sqlServerAuditConfigDataType = '';
   public $storageAutoResize;
   public $storageAutoResizeLimit;
   public $tier;
@@ -260,6 +262,20 @@ class Settings extends \Google\Collection
   public function getSettingsVersion()
   {
     return $this->settingsVersion;
+  }
+  /**
+   * @param SqlServerAuditConfig
+   */
+  public function setSqlServerAuditConfig(SqlServerAuditConfig $sqlServerAuditConfig)
+  {
+    $this->sqlServerAuditConfig = $sqlServerAuditConfig;
+  }
+  /**
+   * @return SqlServerAuditConfig
+   */
+  public function getSqlServerAuditConfig()
+  {
+    return $this->sqlServerAuditConfig;
   }
   public function setStorageAutoResize($storageAutoResize)
   {

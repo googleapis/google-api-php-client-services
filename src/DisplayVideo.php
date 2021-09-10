@@ -1897,11 +1897,7 @@ class DisplayVideo extends \Google\Service
         'customBiddingAlgorithms',
         [
           'methods' => [
-            'create' => [
-              'path' => 'v1/customBiddingAlgorithms',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'get' => [
+            'get' => [
               'path' => 'v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1944,20 +1940,6 @@ class DisplayVideo extends \Google\Service
                   'type' => 'string',
                 ],
                 'partnerId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1/customBiddingAlgorithms/{+customBiddingAlgorithmId}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'customBiddingAlgorithmId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
