@@ -17,7 +17,7 @@
 
 namespace Google\Service\Ideahub\Resource;
 
-use Google\Service\Ideahub\GoogleSearchIdeahubV1alphaIdeaActivity;
+use Google\Service\Ideahub\GoogleSearchIdeahubV1betaIdeaActivity;
 
 /**
  * The "ideaActivities" collection of methods.
@@ -34,15 +34,15 @@ class PlatformsPropertiesIdeaActivities extends \Google\Service\Resource
    *
    * @param string $parent Required. The parent resource where this idea activity
    * will be created. Format: platforms/{platform}/property/{property}
-   * @param GoogleSearchIdeahubV1alphaIdeaActivity $postBody
+   * @param GoogleSearchIdeahubV1betaIdeaActivity $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleSearchIdeahubV1alphaIdeaActivity
+   * @return GoogleSearchIdeahubV1betaIdeaActivity
    */
-  public function create($parent, GoogleSearchIdeahubV1alphaIdeaActivity $postBody, $optParams = [])
+  public function create($parent, GoogleSearchIdeahubV1betaIdeaActivity $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], GoogleSearchIdeahubV1alphaIdeaActivity::class);
+    return $this->call('create', [$params], GoogleSearchIdeahubV1betaIdeaActivity::class);
   }
 }
 

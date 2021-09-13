@@ -27,6 +27,7 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   public $name;
   public $numLearnedRoutes;
   public $peerIpAddress;
+  public $routerApplianceInstance;
   public $state;
   public $status;
   public $uptime;
@@ -85,6 +86,14 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   public function getPeerIpAddress()
   {
     return $this->peerIpAddress;
+  }
+  public function setRouterApplianceInstance($routerApplianceInstance)
+  {
+    $this->routerApplianceInstance = $routerApplianceInstance;
+  }
+  public function getRouterApplianceInstance()
+  {
+    return $this->routerApplianceInstance;
   }
   public function setState($state)
   {

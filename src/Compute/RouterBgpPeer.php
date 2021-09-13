@@ -25,6 +25,8 @@ class RouterBgpPeer extends \Google\Collection
   protected $advertisedIpRangesType = RouterAdvertisedIpRange::class;
   protected $advertisedIpRangesDataType = 'array';
   public $advertisedRoutePriority;
+  protected $bfdType = RouterBgpPeerBfd::class;
+  protected $bfdDataType = '';
   public $enable;
   public $interfaceName;
   public $ipAddress;
@@ -32,6 +34,7 @@ class RouterBgpPeer extends \Google\Collection
   public $name;
   public $peerAsn;
   public $peerIpAddress;
+  public $routerApplianceInstance;
 
   public function setAdvertiseMode($advertiseMode)
   {
@@ -70,6 +73,20 @@ class RouterBgpPeer extends \Google\Collection
   public function getAdvertisedRoutePriority()
   {
     return $this->advertisedRoutePriority;
+  }
+  /**
+   * @param RouterBgpPeerBfd
+   */
+  public function setBfd(RouterBgpPeerBfd $bfd)
+  {
+    $this->bfd = $bfd;
+  }
+  /**
+   * @return RouterBgpPeerBfd
+   */
+  public function getBfd()
+  {
+    return $this->bfd;
   }
   public function setEnable($enable)
   {
@@ -126,6 +143,14 @@ class RouterBgpPeer extends \Google\Collection
   public function getPeerIpAddress()
   {
     return $this->peerIpAddress;
+  }
+  public function setRouterApplianceInstance($routerApplianceInstance)
+  {
+    $this->routerApplianceInstance = $routerApplianceInstance;
+  }
+  public function getRouterApplianceInstance()
+  {
+    return $this->routerApplianceInstance;
   }
 }
 

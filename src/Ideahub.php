@@ -36,6 +36,7 @@ class Ideahub extends \Google\Service
 {
 
 
+  public $platforms_properties_ideaActivities;
   public $platforms_properties_ideaStates;
   public $platforms_properties_ideas;
   public $platforms_properties_locales;
@@ -57,6 +58,26 @@ class Ideahub extends \Google\Service
     $this->version = 'v1beta';
     $this->serviceName = 'ideahub';
 
+    $this->platforms_properties_ideaActivities = new Ideahub\Resource\PlatformsPropertiesIdeaActivities(
+        $this,
+        $this->serviceName,
+        'ideaActivities',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1beta/{+parent}/ideaActivities',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->platforms_properties_ideaStates = new Ideahub\Resource\PlatformsPropertiesIdeaStates(
         $this,
         $this->serviceName,
