@@ -23,6 +23,7 @@ class AccountBusinessInformation extends \Google\Model
   protected $addressDataType = '';
   protected $customerServiceType = AccountCustomerService::class;
   protected $customerServiceDataType = '';
+  public $koreanBusinessRegistrationNumber;
   public $phoneNumber;
 
   /**
@@ -52,6 +53,14 @@ class AccountBusinessInformation extends \Google\Model
   public function getCustomerService()
   {
     return $this->customerService;
+  }
+  public function setKoreanBusinessRegistrationNumber($koreanBusinessRegistrationNumber)
+  {
+    $this->koreanBusinessRegistrationNumber = $koreanBusinessRegistrationNumber;
+  }
+  public function getKoreanBusinessRegistrationNumber()
+  {
+    return $this->koreanBusinessRegistrationNumber;
   }
   public function setPhoneNumber($phoneNumber)
   {

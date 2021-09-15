@@ -17,6 +17,7 @@
 
 namespace Google\Service\Document\Resource;
 
+use Google\Service\Document\GoogleCloudDocumentaiV1FetchProcessorTypesResponse;
 use Google\Service\Document\GoogleCloudLocationListLocationsResponse;
 use Google\Service\Document\GoogleCloudLocationLocation;
 
@@ -30,6 +31,21 @@ use Google\Service\Document\GoogleCloudLocationLocation;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Fetches processor types. (locations.fetchProcessorTypes)
+   *
+   * @param string $parent Required. The project of processor type to list. The
+   * available processor types may depend on the whitelisting on projects. Format:
+   * projects/{project}/locations/{location}
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDocumentaiV1FetchProcessorTypesResponse
+   */
+  public function fetchProcessorTypes($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchProcessorTypes', [$params], GoogleCloudDocumentaiV1FetchProcessorTypesResponse::class);
+  }
   /**
    * Gets information about a location. (locations.get)
    *

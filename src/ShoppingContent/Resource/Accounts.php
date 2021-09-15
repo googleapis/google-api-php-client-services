@@ -260,8 +260,10 @@ class Accounts extends \Google\Service\Resource
     return $this->call('updatelabels', [$params], AccountsUpdateLabelsResponse::class);
   }
   /**
-   * Validates verification code to verify phone number for the account.
-   * (accounts.verifyphonenumber)
+   * Validates verification code to verify phone number for the account. If
+   * successful this will overwrite the value of
+   * `accounts.businessinformation.phoneNumber`. Only verified phone number will
+   * replace an existing verified phone number. (accounts.verifyphonenumber)
    *
    * @param string $merchantId Required. The ID of the managing account. If this
    * parameter is not the same as accountId, then this account must be a multi-
