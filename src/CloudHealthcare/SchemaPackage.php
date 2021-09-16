@@ -26,6 +26,7 @@ class SchemaPackage extends \Google\Collection
   public $schematizedParsingType;
   protected $typesType = Hl7TypesConfig::class;
   protected $typesDataType = 'array';
+  public $unexpectedSegmentHandling;
 
   public function setIgnoreMinOccurs($ignoreMinOccurs)
   {
@@ -70,6 +71,14 @@ class SchemaPackage extends \Google\Collection
   public function getTypes()
   {
     return $this->types;
+  }
+  public function setUnexpectedSegmentHandling($unexpectedSegmentHandling)
+  {
+    $this->unexpectedSegmentHandling = $unexpectedSegmentHandling;
+  }
+  public function getUnexpectedSegmentHandling()
+  {
+    return $this->unexpectedSegmentHandling;
   }
 }
 
