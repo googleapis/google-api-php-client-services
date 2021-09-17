@@ -37,6 +37,8 @@ class ThirdPartyLinks extends \Google\Service\Resource
    * @param string $type Type of the link to be deleted.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string externalChannelId Channel ID to which changes should be
+   * applied, for delegation.
    * @opt_param string part Do not use. Required for compatibility.
    */
   public function delete($linkingToken, $type, $optParams = [])
@@ -53,6 +55,9 @@ class ThirdPartyLinks extends \Google\Service\Resource
    * values are linkingToken, status, and snippet.
    * @param ThirdPartyLink $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string externalChannelId Channel ID to which changes should be
+   * applied, for delegation.
    * @return ThirdPartyLink
    */
   public function insert($part, ThirdPartyLink $postBody, $optParams = [])
@@ -70,6 +75,8 @@ class ThirdPartyLinks extends \Google\Service\Resource
    * linkingToken, status, and snippet.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string externalChannelId Channel ID to which changes should be
+   * applied, for delegation.
    * @opt_param string linkingToken Get a third party link with the given linking
    * token.
    * @opt_param string type Get a third party link of the given type.
@@ -89,6 +96,9 @@ class ThirdPartyLinks extends \Google\Service\Resource
    * values are linkingToken, status, and snippet.
    * @param ThirdPartyLink $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string externalChannelId Channel ID to which changes should be
+   * applied, for delegation.
    * @return ThirdPartyLink
    */
   public function update($part, ThirdPartyLink $postBody, $optParams = [])
