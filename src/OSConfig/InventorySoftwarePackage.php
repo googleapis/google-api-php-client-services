@@ -27,6 +27,8 @@ class InventorySoftwarePackage extends \Google\Model
   protected $googetPackageDataType = '';
   protected $qfePackageType = InventoryWindowsQuickFixEngineeringPackage::class;
   protected $qfePackageDataType = '';
+  protected $windowsApplicationType = InventoryWindowsApplication::class;
+  protected $windowsApplicationDataType = '';
   protected $wuaPackageType = InventoryWindowsUpdatePackage::class;
   protected $wuaPackageDataType = '';
   protected $yumPackageType = InventoryVersionedPackage::class;
@@ -91,6 +93,20 @@ class InventorySoftwarePackage extends \Google\Model
   public function getQfePackage()
   {
     return $this->qfePackage;
+  }
+  /**
+   * @param InventoryWindowsApplication
+   */
+  public function setWindowsApplication(InventoryWindowsApplication $windowsApplication)
+  {
+    $this->windowsApplication = $windowsApplication;
+  }
+  /**
+   * @return InventoryWindowsApplication
+   */
+  public function getWindowsApplication()
+  {
+    return $this->windowsApplication;
   }
   /**
    * @param InventoryWindowsUpdatePackage
