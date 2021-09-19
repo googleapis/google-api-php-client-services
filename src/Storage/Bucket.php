@@ -50,6 +50,7 @@ class Bucket extends \Google\Collection
   public $projectNumber;
   protected $retentionPolicyType = BucketRetentionPolicy::class;
   protected $retentionPolicyDataType = '';
+  public $rpo;
   public $satisfiesPZS;
   public $selfLink;
   public $storageClass;
@@ -280,6 +281,14 @@ class Bucket extends \Google\Collection
   public function getRetentionPolicy()
   {
     return $this->retentionPolicy;
+  }
+  public function setRpo($rpo)
+  {
+    $this->rpo = $rpo;
+  }
+  public function getRpo()
+  {
+    return $this->rpo;
   }
   public function setSatisfiesPZS($satisfiesPZS)
   {
