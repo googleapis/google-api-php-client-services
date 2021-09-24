@@ -17,16 +17,16 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowCxV3Environment extends \Google\Collection
+class GoogleCloudDialogflowCxV3beta1Environment extends \Google\Collection
 {
   protected $collection_key = 'versionConfigs';
   public $description;
   public $displayName;
   public $name;
-  protected $testCasesConfigType = GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig::class;
+  protected $testCasesConfigType = GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig::class;
   protected $testCasesConfigDataType = '';
   public $updateTime;
-  protected $versionConfigsType = GoogleCloudDialogflowCxV3EnvironmentVersionConfig::class;
+  protected $versionConfigsType = GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig::class;
   protected $versionConfigsDataType = 'array';
 
   public function setDescription($description)
@@ -54,14 +54,14 @@ class GoogleCloudDialogflowCxV3Environment extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig
+   * @param GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig
    */
-  public function setTestCasesConfig(GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig $testCasesConfig)
+  public function setTestCasesConfig(GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig $testCasesConfig)
   {
     $this->testCasesConfig = $testCasesConfig;
   }
   /**
-   * @return GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig
+   * @return GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig
    */
   public function getTestCasesConfig()
   {
@@ -76,14 +76,14 @@ class GoogleCloudDialogflowCxV3Environment extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3EnvironmentVersionConfig[]
+   * @param GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig[]
    */
   public function setVersionConfigs($versionConfigs)
   {
     $this->versionConfigs = $versionConfigs;
   }
   /**
-   * @return GoogleCloudDialogflowCxV3EnvironmentVersionConfig[]
+   * @return GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig[]
    */
   public function getVersionConfigs()
   {
@@ -92,4 +92,4 @@ class GoogleCloudDialogflowCxV3Environment extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowCxV3Environment::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3Environment');
+class_alias(GoogleCloudDialogflowCxV3beta1Environment::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1Environment');

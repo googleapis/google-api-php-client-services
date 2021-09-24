@@ -163,7 +163,12 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * `config.softwareConfig.envVariables` * Replace all environment variables. If
    * a replacement environment variable map is not included in `environment`, all
    * custom environment variables are cleared. It is an error to provide both this
-   * mask and a mask specifying one or more individual environment variables.
+   * mask and a mask specifying one or more individual environment variables. *
+   * `config.softwareConfig.schedulerCount` * Horizontally scale the number of
+   * schedulers in Airflow. A positive integer not greater than the number of
+   * nodes must be provided in the `config.softwareConfig.schedulerCount` field.
+   * Supported for Cloud Composer environments in versions
+   * composer-1.*.*-airflow-2.*.*.
    * @return Operation
    */
   public function patch($name, Environment $postBody, $optParams = [])
