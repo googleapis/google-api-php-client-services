@@ -21,6 +21,8 @@ class ConfigManagementConfigSync extends \Google\Model
 {
   protected $gitType = ConfigManagementGitConfig::class;
   protected $gitDataType = '';
+  protected $resourceRequirementsType = ConfigManagementContainerResourceRequirements::class;
+  protected $resourceRequirementsDataType = 'map';
   public $sourceFormat;
 
   /**
@@ -36,6 +38,20 @@ class ConfigManagementConfigSync extends \Google\Model
   public function getGit()
   {
     return $this->git;
+  }
+  /**
+   * @param ConfigManagementContainerResourceRequirements[]
+   */
+  public function setResourceRequirements($resourceRequirements)
+  {
+    $this->resourceRequirements = $resourceRequirements;
+  }
+  /**
+   * @return ConfigManagementContainerResourceRequirements[]
+   */
+  public function getResourceRequirements()
+  {
+    return $this->resourceRequirements;
   }
   public function setSourceFormat($sourceFormat)
   {

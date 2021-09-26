@@ -21,9 +21,11 @@ class ConfigManagementGitConfig extends \Google\Model
 {
   public $gcpServiceAccountEmail;
   public $httpsProxy;
+  public $noSslVerify;
   public $policyDir;
   public $secretType;
   public $syncBranch;
+  public $syncDepth;
   public $syncRepo;
   public $syncRev;
   public $syncWaitSecs;
@@ -43,6 +45,14 @@ class ConfigManagementGitConfig extends \Google\Model
   public function getHttpsProxy()
   {
     return $this->httpsProxy;
+  }
+  public function setNoSslVerify($noSslVerify)
+  {
+    $this->noSslVerify = $noSslVerify;
+  }
+  public function getNoSslVerify()
+  {
+    return $this->noSslVerify;
   }
   public function setPolicyDir($policyDir)
   {
@@ -67,6 +77,14 @@ class ConfigManagementGitConfig extends \Google\Model
   public function getSyncBranch()
   {
     return $this->syncBranch;
+  }
+  public function setSyncDepth($syncDepth)
+  {
+    $this->syncDepth = $syncDepth;
+  }
+  public function getSyncDepth()
+  {
+    return $this->syncDepth;
   }
   public function setSyncRepo($syncRepo)
   {
