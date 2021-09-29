@@ -17,28 +17,29 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class RouterApplianceInstance extends \Google\Model
+class LinkedInterconnectAttachments extends \Google\Collection
 {
-  public $ipAddress;
-  public $virtualMachine;
+  protected $collection_key = 'uris';
+  public $siteToSiteDataTransfer;
+  public $uris;
 
-  public function setIpAddress($ipAddress)
+  public function setSiteToSiteDataTransfer($siteToSiteDataTransfer)
   {
-    $this->ipAddress = $ipAddress;
+    $this->siteToSiteDataTransfer = $siteToSiteDataTransfer;
   }
-  public function getIpAddress()
+  public function getSiteToSiteDataTransfer()
   {
-    return $this->ipAddress;
+    return $this->siteToSiteDataTransfer;
   }
-  public function setVirtualMachine($virtualMachine)
+  public function setUris($uris)
   {
-    $this->virtualMachine = $virtualMachine;
+    $this->uris = $uris;
   }
-  public function getVirtualMachine()
+  public function getUris()
   {
-    return $this->virtualMachine;
+    return $this->uris;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RouterApplianceInstance::class, 'Google_Service_Networkconnectivity_RouterApplianceInstance');
+class_alias(LinkedInterconnectAttachments::class, 'Google_Service_Networkconnectivity_LinkedInterconnectAttachments');

@@ -17,28 +17,19 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class RouterApplianceInstance extends \Google\Model
+class RoutingVPC extends \Google\Model
 {
-  public $ipAddress;
-  public $virtualMachine;
+  public $uri;
 
-  public function setIpAddress($ipAddress)
+  public function setUri($uri)
   {
-    $this->ipAddress = $ipAddress;
+    $this->uri = $uri;
   }
-  public function getIpAddress()
+  public function getUri()
   {
-    return $this->ipAddress;
-  }
-  public function setVirtualMachine($virtualMachine)
-  {
-    $this->virtualMachine = $virtualMachine;
-  }
-  public function getVirtualMachine()
-  {
-    return $this->virtualMachine;
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RouterApplianceInstance::class, 'Google_Service_Networkconnectivity_RouterApplianceInstance');
+class_alias(RoutingVPC::class, 'Google_Service_Networkconnectivity_RoutingVPC');

@@ -15,30 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Networkconnectivity;
+namespace Google\Service\Directory;
 
-class RouterApplianceInstance extends \Google\Model
+class ChromeOsDeviceCpuInfoLogicalCpusCStates extends \Google\Model
 {
-  public $ipAddress;
-  public $virtualMachine;
+  public $displayName;
+  public $sessionDuration;
 
-  public function setIpAddress($ipAddress)
+  public function setDisplayName($displayName)
   {
-    $this->ipAddress = $ipAddress;
+    $this->displayName = $displayName;
   }
-  public function getIpAddress()
+  public function getDisplayName()
   {
-    return $this->ipAddress;
+    return $this->displayName;
   }
-  public function setVirtualMachine($virtualMachine)
+  public function setSessionDuration($sessionDuration)
   {
-    $this->virtualMachine = $virtualMachine;
+    $this->sessionDuration = $sessionDuration;
   }
-  public function getVirtualMachine()
+  public function getSessionDuration()
   {
-    return $this->virtualMachine;
+    return $this->sessionDuration;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RouterApplianceInstance::class, 'Google_Service_Networkconnectivity_RouterApplianceInstance');
+class_alias(ChromeOsDeviceCpuInfoLogicalCpusCStates::class, 'Google_Service_Directory_ChromeOsDeviceCpuInfoLogicalCpusCStates');
