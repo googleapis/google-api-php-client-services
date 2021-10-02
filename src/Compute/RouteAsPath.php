@@ -15,22 +15,31 @@
  * the License.
  */
 
-namespace Google\Service\BigtableAdmin;
+namespace Google\Service\Compute;
 
-class MultiClusterRoutingUseAny extends \Google\Collection
+class RouteAsPath extends \Google\Collection
 {
-  protected $collection_key = 'clusterIds';
-  public $clusterIds;
+  protected $collection_key = 'asLists';
+  public $asLists;
+  public $pathSegmentType;
 
-  public function setClusterIds($clusterIds)
+  public function setAsLists($asLists)
   {
-    $this->clusterIds = $clusterIds;
+    $this->asLists = $asLists;
   }
-  public function getClusterIds()
+  public function getAsLists()
   {
-    return $this->clusterIds;
+    return $this->asLists;
+  }
+  public function setPathSegmentType($pathSegmentType)
+  {
+    $this->pathSegmentType = $pathSegmentType;
+  }
+  public function getPathSegmentType()
+  {
+    return $this->pathSegmentType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MultiClusterRoutingUseAny::class, 'Google_Service_BigtableAdmin_MultiClusterRoutingUseAny');
+class_alias(RouteAsPath::class, 'Google_Service_Compute_RouteAsPath');

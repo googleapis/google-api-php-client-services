@@ -15,22 +15,21 @@
  * the License.
  */
 
-namespace Google\Service\BigtableAdmin;
+namespace Google\Service\OSConfig;
 
-class MultiClusterRoutingUseAny extends \Google\Collection
+class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput extends \Google\Model
 {
-  protected $collection_key = 'clusterIds';
-  public $clusterIds;
+  public $enforcementOutput;
 
-  public function setClusterIds($clusterIds)
+  public function setEnforcementOutput($enforcementOutput)
   {
-    $this->clusterIds = $clusterIds;
+    $this->enforcementOutput = $enforcementOutput;
   }
-  public function getClusterIds()
+  public function getEnforcementOutput()
   {
-    return $this->clusterIds;
+    return $this->enforcementOutput;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MultiClusterRoutingUseAny::class, 'Google_Service_BigtableAdmin_MultiClusterRoutingUseAny');
+class_alias(OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput::class, 'Google_Service_OSConfig_OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput');

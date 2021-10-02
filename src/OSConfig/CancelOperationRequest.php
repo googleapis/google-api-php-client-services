@@ -15,22 +15,11 @@
  * the License.
  */
 
-namespace Google\Service\BigtableAdmin;
+namespace Google\Service\OSConfig;
 
-class MultiClusterRoutingUseAny extends \Google\Collection
+class CancelOperationRequest extends \Google\Model
 {
-  protected $collection_key = 'clusterIds';
-  public $clusterIds;
-
-  public function setClusterIds($clusterIds)
-  {
-    $this->clusterIds = $clusterIds;
-  }
-  public function getClusterIds()
-  {
-    return $this->clusterIds;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MultiClusterRoutingUseAny::class, 'Google_Service_BigtableAdmin_MultiClusterRoutingUseAny');
+class_alias(CancelOperationRequest::class, 'Google_Service_OSConfig_CancelOperationRequest');

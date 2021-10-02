@@ -15,22 +15,31 @@
  * the License.
  */
 
-namespace Google\Service\BigtableAdmin;
+namespace Google\Service\Compute;
 
-class MultiClusterRoutingUseAny extends \Google\Collection
+class RouterNatRuleAction extends \Google\Collection
 {
-  protected $collection_key = 'clusterIds';
-  public $clusterIds;
+  protected $collection_key = 'sourceNatDrainIps';
+  public $sourceNatActiveIps;
+  public $sourceNatDrainIps;
 
-  public function setClusterIds($clusterIds)
+  public function setSourceNatActiveIps($sourceNatActiveIps)
   {
-    $this->clusterIds = $clusterIds;
+    $this->sourceNatActiveIps = $sourceNatActiveIps;
   }
-  public function getClusterIds()
+  public function getSourceNatActiveIps()
   {
-    return $this->clusterIds;
+    return $this->sourceNatActiveIps;
+  }
+  public function setSourceNatDrainIps($sourceNatDrainIps)
+  {
+    $this->sourceNatDrainIps = $sourceNatDrainIps;
+  }
+  public function getSourceNatDrainIps()
+  {
+    return $this->sourceNatDrainIps;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MultiClusterRoutingUseAny::class, 'Google_Service_BigtableAdmin_MultiClusterRoutingUseAny');
+class_alias(RouterNatRuleAction::class, 'Google_Service_Compute_RouterNatRuleAction');

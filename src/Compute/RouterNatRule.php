@@ -15,23 +15,29 @@
  * the License.
  */
 
-namespace Google\Service\Logging;
+namespace Google\Service\Compute;
 
-class LogView extends \Google\Model
+class RouterNatRule extends \Google\Model
 {
-  public $createTime;
+  protected $actionType = RouterNatRuleAction::class;
+  protected $actionDataType = '';
   public $description;
-  public $filter;
-  public $name;
-  public $updateTime;
+  public $match;
+  public $ruleNumber;
 
-  public function setCreateTime($createTime)
+  /**
+   * @param RouterNatRuleAction
+   */
+  public function setAction(RouterNatRuleAction $action)
   {
-    $this->createTime = $createTime;
+    $this->action = $action;
   }
-  public function getCreateTime()
+  /**
+   * @return RouterNatRuleAction
+   */
+  public function getAction()
   {
-    return $this->createTime;
+    return $this->action;
   }
   public function setDescription($description)
   {
@@ -41,31 +47,23 @@ class LogView extends \Google\Model
   {
     return $this->description;
   }
-  public function setFilter($filter)
+  public function setMatch($match)
   {
-    $this->filter = $filter;
+    $this->match = $match;
   }
-  public function getFilter()
+  public function getMatch()
   {
-    return $this->filter;
+    return $this->match;
   }
-  public function setName($name)
+  public function setRuleNumber($ruleNumber)
   {
-    $this->name = $name;
+    $this->ruleNumber = $ruleNumber;
   }
-  public function getName()
+  public function getRuleNumber()
   {
-    return $this->name;
-  }
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
+    return $this->ruleNumber;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LogView::class, 'Google_Service_Logging_LogView');
+class_alias(RouterNatRule::class, 'Google_Service_Compute_RouterNatRule');
