@@ -15,37 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class Oauth2ClientCredentials extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  public $clientId;
+  protected $clientSecretType = Secret::class;
+  protected $clientSecretDataType = '';
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setClientId($clientId)
   {
-    $this->git = $git;
+    $this->clientId = $clientId;
+  }
+  public function getClientId()
+  {
+    return $this->clientId;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @param Secret
    */
-  public function getGit()
+  public function setClientSecret(Secret $clientSecret)
   {
-    return $this->git;
+    $this->clientSecret = $clientSecret;
   }
-  public function setSourceFormat($sourceFormat)
+  /**
+   * @return Secret
+   */
+  public function getClientSecret()
   {
-    $this->sourceFormat = $sourceFormat;
-  }
-  public function getSourceFormat()
-  {
-    return $this->sourceFormat;
+    return $this->clientSecret;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(Oauth2ClientCredentials::class, 'Google_Service_Connectors_Oauth2ClientCredentials');

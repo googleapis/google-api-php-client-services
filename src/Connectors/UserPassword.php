@@ -15,37 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class UserPassword extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  protected $passwordType = Secret::class;
+  protected $passwordDataType = '';
+  public $username;
 
   /**
-   * @param ConfigManagementGitConfig
+   * @param Secret
    */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setPassword(Secret $password)
   {
-    $this->git = $git;
+    $this->password = $password;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @return Secret
    */
-  public function getGit()
+  public function getPassword()
   {
-    return $this->git;
+    return $this->password;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setUsername($username)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->username = $username;
   }
-  public function getSourceFormat()
+  public function getUsername()
   {
-    return $this->sourceFormat;
+    return $this->username;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(UserPassword::class, 'Google_Service_Connectors_UserPassword');

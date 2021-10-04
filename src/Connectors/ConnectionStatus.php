@@ -15,37 +15,39 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class ConnectionStatus extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  public $description;
+  public $state;
+  public $status;
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setDescription($description)
   {
-    $this->git = $git;
+    $this->description = $description;
   }
-  /**
-   * @return ConfigManagementGitConfig
-   */
-  public function getGit()
+  public function getDescription()
   {
-    return $this->git;
+    return $this->description;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setState($state)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->state = $state;
   }
-  public function getSourceFormat()
+  public function getState()
   {
-    return $this->sourceFormat;
+    return $this->state;
+  }
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  public function getStatus()
+  {
+    return $this->status;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(ConnectionStatus::class, 'Google_Service_Connectors_ConnectionStatus');

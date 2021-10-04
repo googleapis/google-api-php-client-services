@@ -15,37 +15,39 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class SupportedRuntimeFeatures extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  public $actionApis;
+  public $entityApis;
+  public $sqlQuery;
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setActionApis($actionApis)
   {
-    $this->git = $git;
+    $this->actionApis = $actionApis;
   }
-  /**
-   * @return ConfigManagementGitConfig
-   */
-  public function getGit()
+  public function getActionApis()
   {
-    return $this->git;
+    return $this->actionApis;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setEntityApis($entityApis)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->entityApis = $entityApis;
   }
-  public function getSourceFormat()
+  public function getEntityApis()
   {
-    return $this->sourceFormat;
+    return $this->entityApis;
+  }
+  public function setSqlQuery($sqlQuery)
+  {
+    $this->sqlQuery = $sqlQuery;
+  }
+  public function getSqlQuery()
+  {
+    return $this->sqlQuery;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(SupportedRuntimeFeatures::class, 'Google_Service_Connectors_SupportedRuntimeFeatures');

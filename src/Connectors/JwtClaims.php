@@ -15,37 +15,39 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class JwtClaims extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  public $audience;
+  public $issuer;
+  public $subject;
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setAudience($audience)
   {
-    $this->git = $git;
+    $this->audience = $audience;
   }
-  /**
-   * @return ConfigManagementGitConfig
-   */
-  public function getGit()
+  public function getAudience()
   {
-    return $this->git;
+    return $this->audience;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setIssuer($issuer)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->issuer = $issuer;
   }
-  public function getSourceFormat()
+  public function getIssuer()
   {
-    return $this->sourceFormat;
+    return $this->issuer;
+  }
+  public function setSubject($subject)
+  {
+    $this->subject = $subject;
+  }
+  public function getSubject()
+  {
+    return $this->subject;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(JwtClaims::class, 'Google_Service_Connectors_JwtClaims');

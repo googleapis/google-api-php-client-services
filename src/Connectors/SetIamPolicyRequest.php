@@ -15,37 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class SetIamPolicyRequest extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  protected $policyType = Policy::class;
+  protected $policyDataType = '';
+  public $updateMask;
 
   /**
-   * @param ConfigManagementGitConfig
+   * @param Policy
    */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setPolicy(Policy $policy)
   {
-    $this->git = $git;
+    $this->policy = $policy;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @return Policy
    */
-  public function getGit()
+  public function getPolicy()
   {
-    return $this->git;
+    return $this->policy;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setUpdateMask($updateMask)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->updateMask = $updateMask;
   }
-  public function getSourceFormat()
+  public function getUpdateMask()
   {
-    return $this->sourceFormat;
+    return $this->updateMask;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(SetIamPolicyRequest::class, 'Google_Service_Connectors_SetIamPolicyRequest');

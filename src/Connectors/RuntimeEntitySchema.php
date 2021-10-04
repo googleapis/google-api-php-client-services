@@ -15,37 +15,38 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class RuntimeEntitySchema extends \Google\Collection
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  protected $collection_key = 'fields';
+  public $entity;
+  protected $fieldsType = Field::class;
+  protected $fieldsDataType = 'array';
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setEntity($entity)
   {
-    $this->git = $git;
+    $this->entity = $entity;
+  }
+  public function getEntity()
+  {
+    return $this->entity;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @param Field[]
    */
-  public function getGit()
+  public function setFields($fields)
   {
-    return $this->git;
+    $this->fields = $fields;
   }
-  public function setSourceFormat($sourceFormat)
+  /**
+   * @return Field[]
+   */
+  public function getFields()
   {
-    $this->sourceFormat = $sourceFormat;
-  }
-  public function getSourceFormat()
-  {
-    return $this->sourceFormat;
+    return $this->fields;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(RuntimeEntitySchema::class, 'Google_Service_Connectors_RuntimeEntitySchema');

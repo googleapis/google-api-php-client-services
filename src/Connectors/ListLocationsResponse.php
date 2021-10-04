@@ -15,37 +15,38 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class ListLocationsResponse extends \Google\Collection
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  protected $collection_key = 'locations';
+  protected $locationsType = Location::class;
+  protected $locationsDataType = 'array';
+  public $nextPageToken;
 
   /**
-   * @param ConfigManagementGitConfig
+   * @param Location[]
    */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setLocations($locations)
   {
-    $this->git = $git;
+    $this->locations = $locations;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @return Location[]
    */
-  public function getGit()
+  public function getLocations()
   {
-    return $this->git;
+    return $this->locations;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->nextPageToken = $nextPageToken;
   }
-  public function getSourceFormat()
+  public function getNextPageToken()
   {
-    return $this->sourceFormat;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(ListLocationsResponse::class, 'Google_Service_Connectors_ListLocationsResponse');

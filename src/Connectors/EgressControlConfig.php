@@ -15,37 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class EgressControlConfig extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  public $backends;
+  protected $extractionRulesType = ExtractionRules::class;
+  protected $extractionRulesDataType = '';
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setBackends($backends)
   {
-    $this->git = $git;
+    $this->backends = $backends;
+  }
+  public function getBackends()
+  {
+    return $this->backends;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @param ExtractionRules
    */
-  public function getGit()
+  public function setExtractionRules(ExtractionRules $extractionRules)
   {
-    return $this->git;
+    $this->extractionRules = $extractionRules;
   }
-  public function setSourceFormat($sourceFormat)
+  /**
+   * @return ExtractionRules
+   */
+  public function getExtractionRules()
   {
-    $this->sourceFormat = $sourceFormat;
-  }
-  public function getSourceFormat()
-  {
-    return $this->sourceFormat;
+    return $this->extractionRules;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(EgressControlConfig::class, 'Google_Service_Connectors_EgressControlConfig');

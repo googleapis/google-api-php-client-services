@@ -15,37 +15,38 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class AuditConfig extends \Google\Collection
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  protected $collection_key = 'auditLogConfigs';
+  protected $auditLogConfigsType = AuditLogConfig::class;
+  protected $auditLogConfigsDataType = 'array';
+  public $service;
 
   /**
-   * @param ConfigManagementGitConfig
+   * @param AuditLogConfig[]
    */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setAuditLogConfigs($auditLogConfigs)
   {
-    $this->git = $git;
+    $this->auditLogConfigs = $auditLogConfigs;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @return AuditLogConfig[]
    */
-  public function getGit()
+  public function getAuditLogConfigs()
   {
-    return $this->git;
+    return $this->auditLogConfigs;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setService($service)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->service = $service;
   }
-  public function getSourceFormat()
+  public function getService()
   {
-    return $this->sourceFormat;
+    return $this->service;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(AuditConfig::class, 'Google_Service_Connectors_AuditConfig');

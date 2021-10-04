@@ -15,37 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class ExtractionRule extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  public $extractionRegex;
+  protected $sourceType = Source::class;
+  protected $sourceDataType = '';
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setExtractionRegex($extractionRegex)
   {
-    $this->git = $git;
+    $this->extractionRegex = $extractionRegex;
+  }
+  public function getExtractionRegex()
+  {
+    return $this->extractionRegex;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @param Source
    */
-  public function getGit()
+  public function setSource(Source $source)
   {
-    return $this->git;
+    $this->source = $source;
   }
-  public function setSourceFormat($sourceFormat)
+  /**
+   * @return Source
+   */
+  public function getSource()
   {
-    $this->sourceFormat = $sourceFormat;
-  }
-  public function getSourceFormat()
-  {
-    return $this->sourceFormat;
+    return $this->source;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(ExtractionRule::class, 'Google_Service_Connectors_ExtractionRule');

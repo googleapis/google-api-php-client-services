@@ -15,37 +15,44 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class Oauth2JwtBearer extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  protected $clientKeyType = Secret::class;
+  protected $clientKeyDataType = '';
+  protected $jwtClaimsType = JwtClaims::class;
+  protected $jwtClaimsDataType = '';
 
   /**
-   * @param ConfigManagementGitConfig
+   * @param Secret
    */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setClientKey(Secret $clientKey)
   {
-    $this->git = $git;
+    $this->clientKey = $clientKey;
   }
   /**
-   * @return ConfigManagementGitConfig
+   * @return Secret
    */
-  public function getGit()
+  public function getClientKey()
   {
-    return $this->git;
+    return $this->clientKey;
   }
-  public function setSourceFormat($sourceFormat)
+  /**
+   * @param JwtClaims
+   */
+  public function setJwtClaims(JwtClaims $jwtClaims)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->jwtClaims = $jwtClaims;
   }
-  public function getSourceFormat()
+  /**
+   * @return JwtClaims
+   */
+  public function getJwtClaims()
   {
-    return $this->sourceFormat;
+    return $this->jwtClaims;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(Oauth2JwtBearer::class, 'Google_Service_Connectors_Oauth2JwtBearer');

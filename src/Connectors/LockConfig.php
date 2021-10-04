@@ -15,37 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\Connectors;
 
-class ConfigManagementConfigSync extends \Google\Model
+class LockConfig extends \Google\Model
 {
-  protected $gitType = ConfigManagementGitConfig::class;
-  protected $gitDataType = '';
-  public $sourceFormat;
+  public $locked;
+  public $reason;
 
-  /**
-   * @param ConfigManagementGitConfig
-   */
-  public function setGit(ConfigManagementGitConfig $git)
+  public function setLocked($locked)
   {
-    $this->git = $git;
+    $this->locked = $locked;
   }
-  /**
-   * @return ConfigManagementGitConfig
-   */
-  public function getGit()
+  public function getLocked()
   {
-    return $this->git;
+    return $this->locked;
   }
-  public function setSourceFormat($sourceFormat)
+  public function setReason($reason)
   {
-    $this->sourceFormat = $sourceFormat;
+    $this->reason = $reason;
   }
-  public function getSourceFormat()
+  public function getReason()
   {
-    return $this->sourceFormat;
+    return $this->reason;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementConfigSync::class, 'Google_Service_GKEHub_ConfigManagementConfigSync');
+class_alias(LockConfig::class, 'Google_Service_Connectors_LockConfig');
