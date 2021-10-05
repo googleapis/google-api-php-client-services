@@ -38,6 +38,7 @@ class AndroidPublisher extends \Google\Service
   const ANDROIDPUBLISHER =
       "https://www.googleapis.com/auth/androidpublisher";
 
+  public $applications_pricing;
   public $edits;
   public $edits_apks;
   public $edits_bundles;
@@ -73,6 +74,26 @@ class AndroidPublisher extends \Google\Service
     $this->version = 'v3';
     $this->serviceName = 'androidpublisher';
 
+    $this->applications_pricing = new AndroidPublisher\Resource\ApplicationsPricing(
+        $this,
+        $this->serviceName,
+        'pricing',
+        [
+          'methods' => [
+            'convertRegionPrices' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/pricing:convertRegionPrices',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->edits = new AndroidPublisher\Resource\Edits(
         $this,
         $this->serviceName,
