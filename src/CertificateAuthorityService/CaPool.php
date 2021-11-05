@@ -19,6 +19,7 @@ namespace Google\Service\CertificateAuthorityService;
 
 class CaPool extends \Google\Model
 {
+  public $createTime;
   protected $issuancePolicyType = IssuancePolicy::class;
   protected $issuancePolicyDataType = '';
   public $labels;
@@ -26,7 +27,16 @@ class CaPool extends \Google\Model
   protected $publishingOptionsType = PublishingOptions::class;
   protected $publishingOptionsDataType = '';
   public $tier;
+  public $updateTime;
 
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  public function getCreateTime()
+  {
+    return $this->createTime;
+  }
   /**
    * @param IssuancePolicy
    */
@@ -78,6 +88,14 @@ class CaPool extends \Google\Model
   public function getTier()
   {
     return $this->tier;
+  }
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }
 
