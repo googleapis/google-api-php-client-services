@@ -97,6 +97,7 @@ class Policy extends \Google\Collection
   public $playStoreMode;
   protected $policyEnforcementRulesType = PolicyEnforcementRule::class;
   protected $policyEnforcementRulesDataType = 'array';
+  public $preferentialNetworkService;
   public $privateKeySelectionEnabled;
   protected $recommendedGlobalProxyType = ProxyInfo::class;
   protected $recommendedGlobalProxyDataType = '';
@@ -707,6 +708,14 @@ class Policy extends \Google\Collection
   public function getPolicyEnforcementRules()
   {
     return $this->policyEnforcementRules;
+  }
+  public function setPreferentialNetworkService($preferentialNetworkService)
+  {
+    $this->preferentialNetworkService = $preferentialNetworkService;
+  }
+  public function getPreferentialNetworkService()
+  {
+    return $this->preferentialNetworkService;
   }
   public function setPrivateKeySelectionEnabled($privateKeySelectionEnabled)
   {

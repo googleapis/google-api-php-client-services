@@ -20,7 +20,6 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1Event extends \Google\Model
 {
   public $expectedAction;
-  public $hashedAccountId;
   public $siteKey;
   public $token;
   public $userAgent;
@@ -33,14 +32,6 @@ class GoogleCloudRecaptchaenterpriseV1Event extends \Google\Model
   public function getExpectedAction()
   {
     return $this->expectedAction;
-  }
-  public function setHashedAccountId($hashedAccountId)
-  {
-    $this->hashedAccountId = $hashedAccountId;
-  }
-  public function getHashedAccountId()
-  {
-    return $this->hashedAccountId;
   }
   public function setSiteKey($siteKey)
   {
