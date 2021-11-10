@@ -25,6 +25,7 @@ class EnvironmentConfig extends \Google\Model
   protected $databaseConfigDataType = '';
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
+  public $environmentSize;
   public $gkeCluster;
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
@@ -37,6 +38,8 @@ class EnvironmentConfig extends \Google\Model
   protected $webServerConfigDataType = '';
   protected $webServerNetworkAccessControlType = WebServerNetworkAccessControl::class;
   protected $webServerNetworkAccessControlDataType = '';
+  protected $workloadsConfigType = WorkloadsConfig::class;
+  protected $workloadsConfigDataType = '';
 
   public function setAirflowUri($airflowUri)
   {
@@ -81,6 +84,14 @@ class EnvironmentConfig extends \Google\Model
   public function getEncryptionConfig()
   {
     return $this->encryptionConfig;
+  }
+  public function setEnvironmentSize($environmentSize)
+  {
+    $this->environmentSize = $environmentSize;
+  }
+  public function getEnvironmentSize()
+  {
+    return $this->environmentSize;
   }
   public function setGkeCluster($gkeCluster)
   {
@@ -167,6 +178,20 @@ class EnvironmentConfig extends \Google\Model
   public function getWebServerNetworkAccessControl()
   {
     return $this->webServerNetworkAccessControl;
+  }
+  /**
+   * @param WorkloadsConfig
+   */
+  public function setWorkloadsConfig(WorkloadsConfig $workloadsConfig)
+  {
+    $this->workloadsConfig = $workloadsConfig;
+  }
+  /**
+   * @return WorkloadsConfig
+   */
+  public function getWorkloadsConfig()
+  {
+    return $this->workloadsConfig;
   }
 }
 

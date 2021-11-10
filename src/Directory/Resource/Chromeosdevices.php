@@ -109,7 +109,7 @@ class Chromeosdevices extends \Google\Service\Resource
    * @opt_param string projection Restrict information returned to a set of
    * selected fields.
    * @opt_param string query Search string in the format given at
-   * http://support.google.com/chromeos/a/bin/answer.py?answer=1698333
+   * https://developers.google.com/admin-sdk/directory/v1/list-query-operators
    * @opt_param string sortOrder Whether to return results in ascending or
    * descending order. Must be used with the `orderBy` parameter.
    * @return ChromeOsDevicesModel

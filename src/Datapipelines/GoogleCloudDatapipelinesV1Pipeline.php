@@ -24,6 +24,7 @@ class GoogleCloudDatapipelinesV1Pipeline extends \Google\Model
   public $jobCount;
   public $lastUpdateTime;
   public $name;
+  public $pipelineSources;
   protected $scheduleInfoType = GoogleCloudDatapipelinesV1ScheduleSpec::class;
   protected $scheduleInfoDataType = '';
   public $schedulerServiceAccountEmail;
@@ -71,6 +72,14 @@ class GoogleCloudDatapipelinesV1Pipeline extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setPipelineSources($pipelineSources)
+  {
+    $this->pipelineSources = $pipelineSources;
+  }
+  public function getPipelineSources()
+  {
+    return $this->pipelineSources;
   }
   /**
    * @param GoogleCloudDatapipelinesV1ScheduleSpec
