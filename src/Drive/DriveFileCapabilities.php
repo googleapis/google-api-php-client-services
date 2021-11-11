@@ -19,6 +19,7 @@ namespace Google\Service\Drive;
 
 class DriveFileCapabilities extends \Google\Model
 {
+  public $canAcceptOwnership;
   public $canAddChildren;
   public $canAddFolderFromAnotherDrive;
   public $canAddMyDriveParent;
@@ -55,6 +56,14 @@ class DriveFileCapabilities extends \Google\Model
   public $canTrashChildren;
   public $canUntrash;
 
+  public function setCanAcceptOwnership($canAcceptOwnership)
+  {
+    $this->canAcceptOwnership = $canAcceptOwnership;
+  }
+  public function getCanAcceptOwnership()
+  {
+    return $this->canAcceptOwnership;
+  }
   public function setCanAddChildren($canAddChildren)
   {
     $this->canAddChildren = $canAddChildren;
