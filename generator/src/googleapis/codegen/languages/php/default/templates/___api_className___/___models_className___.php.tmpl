@@ -26,6 +26,11 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
   protected ${{ property.memberName }}DataType = '{{ property.dataType }}';
   {% endif %}
  {% else %}
+ {% if property.annotationType %}
+  /**
+   * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
+   */
+ {% endif %}
   public ${{ property.memberName }};
  {% endif %}
 {% endfor %}
@@ -39,9 +44,9 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
  {% endif %}
 {% endfilter %}{% for property in model.properties %}
 {% filter noblanklines %}
-{% if property.typeHint %}
+{% if property.annotationType %}
   /**
-   * @param {{ property.typeHint }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
+   * @param {{ property.annotationType }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
    */
 {% endif %}
   {% if property.type == "array" or property.dataType == "map" or not property.typeHint %}
@@ -53,9 +58,9 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
     $this->{{ property.memberName }} = ${{ property.memberName }};
   }
 
-{% if property.typeHint %}
+{% if property.annotationType %}
   /**
-   * @return {{ property.typeHint }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
+   * @return {{ property.annotationType }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
    */
 {% endif %}
   public function {{ property.getterName }}()
