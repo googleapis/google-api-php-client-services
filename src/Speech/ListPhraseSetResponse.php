@@ -17,29 +17,36 @@
 
 namespace Google\Service\Speech;
 
-class SpeechContext extends \Google\Collection
+class ListPhraseSetResponse extends \Google\Collection
 {
-  protected $collection_key = 'phrases';
-  public $boost;
-  public $phrases;
+  protected $collection_key = 'phraseSets';
+  public $nextPageToken;
+  protected $phraseSetsType = PhraseSet::class;
+  protected $phraseSetsDataType = 'array';
 
-  public function setBoost($boost)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->boost = $boost;
+    $this->nextPageToken = $nextPageToken;
   }
-  public function getBoost()
+  public function getNextPageToken()
   {
-    return $this->boost;
+    return $this->nextPageToken;
   }
-  public function setPhrases($phrases)
+  /**
+   * @param PhraseSet[]
+   */
+  public function setPhraseSets($phraseSets)
   {
-    $this->phrases = $phrases;
+    $this->phraseSets = $phraseSets;
   }
-  public function getPhrases()
+  /**
+   * @return PhraseSet[]
+   */
+  public function getPhraseSets()
   {
-    return $this->phrases;
+    return $this->phraseSets;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpeechContext::class, 'Google_Service_Speech_SpeechContext');
+class_alias(ListPhraseSetResponse::class, 'Google_Service_Speech_ListPhraseSetResponse');

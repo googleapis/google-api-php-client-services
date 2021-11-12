@@ -17,29 +17,9 @@
 
 namespace Google\Service\Speech;
 
-class SpeechContext extends \Google\Collection
+class SpeechEmpty extends \Google\Model
 {
-  protected $collection_key = 'phrases';
-  public $boost;
-  public $phrases;
-
-  public function setBoost($boost)
-  {
-    $this->boost = $boost;
-  }
-  public function getBoost()
-  {
-    return $this->boost;
-  }
-  public function setPhrases($phrases)
-  {
-    $this->phrases = $phrases;
-  }
-  public function getPhrases()
-  {
-    return $this->phrases;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpeechContext::class, 'Google_Service_Speech_SpeechContext');
+class_alias(SpeechEmpty::class, 'Google_Service_Speech_SpeechEmpty');

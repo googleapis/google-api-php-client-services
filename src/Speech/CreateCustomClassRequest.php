@@ -17,29 +17,35 @@
 
 namespace Google\Service\Speech;
 
-class SpeechContext extends \Google\Collection
+class CreateCustomClassRequest extends \Google\Model
 {
-  protected $collection_key = 'phrases';
-  public $boost;
-  public $phrases;
+  protected $customClassType = CustomClass::class;
+  protected $customClassDataType = '';
+  public $customClassId;
 
-  public function setBoost($boost)
+  /**
+   * @param CustomClass
+   */
+  public function setCustomClass(CustomClass $customClass)
   {
-    $this->boost = $boost;
+    $this->customClass = $customClass;
   }
-  public function getBoost()
+  /**
+   * @return CustomClass
+   */
+  public function getCustomClass()
   {
-    return $this->boost;
+    return $this->customClass;
   }
-  public function setPhrases($phrases)
+  public function setCustomClassId($customClassId)
   {
-    $this->phrases = $phrases;
+    $this->customClassId = $customClassId;
   }
-  public function getPhrases()
+  public function getCustomClassId()
   {
-    return $this->phrases;
+    return $this->customClassId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpeechContext::class, 'Google_Service_Speech_SpeechContext');
+class_alias(CreateCustomClassRequest::class, 'Google_Service_Speech_CreateCustomClassRequest');

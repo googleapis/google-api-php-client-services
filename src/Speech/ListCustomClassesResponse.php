@@ -17,29 +17,36 @@
 
 namespace Google\Service\Speech;
 
-class SpeechContext extends \Google\Collection
+class ListCustomClassesResponse extends \Google\Collection
 {
-  protected $collection_key = 'phrases';
-  public $boost;
-  public $phrases;
+  protected $collection_key = 'customClasses';
+  protected $customClassesType = CustomClass::class;
+  protected $customClassesDataType = 'array';
+  public $nextPageToken;
 
-  public function setBoost($boost)
+  /**
+   * @param CustomClass[]
+   */
+  public function setCustomClasses($customClasses)
   {
-    $this->boost = $boost;
+    $this->customClasses = $customClasses;
   }
-  public function getBoost()
+  /**
+   * @return CustomClass[]
+   */
+  public function getCustomClasses()
   {
-    return $this->boost;
+    return $this->customClasses;
   }
-  public function setPhrases($phrases)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->phrases = $phrases;
+    $this->nextPageToken = $nextPageToken;
   }
-  public function getPhrases()
+  public function getNextPageToken()
   {
-    return $this->phrases;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpeechContext::class, 'Google_Service_Speech_SpeechContext');
+class_alias(ListCustomClassesResponse::class, 'Google_Service_Speech_ListCustomClassesResponse');

@@ -15,31 +15,19 @@
  * the License.
  */
 
-namespace Google\Service\Speech;
+namespace Google\Service\Speech\Resource;
 
-class SpeechContext extends \Google\Collection
+/**
+ * The "projects" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $speechService = new Google\Service\Speech(...);
+ *   $projects = $speechService->projects;
+ *  </code>
+ */
+class Projects extends \Google\Service\Resource
 {
-  protected $collection_key = 'phrases';
-  public $boost;
-  public $phrases;
-
-  public function setBoost($boost)
-  {
-    $this->boost = $boost;
-  }
-  public function getBoost()
-  {
-    return $this->boost;
-  }
-  public function setPhrases($phrases)
-  {
-    $this->phrases = $phrases;
-  }
-  public function getPhrases()
-  {
-    return $this->phrases;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpeechContext::class, 'Google_Service_Speech_SpeechContext');
+class_alias(Projects::class, 'Google_Service_Speech_Resource_Projects');

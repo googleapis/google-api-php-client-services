@@ -24,6 +24,7 @@ class SpeechRecognitionResult extends \Google\Collection
   protected $alternativesDataType = 'array';
   public $channelTag;
   public $languageCode;
+  public $resultEndTime;
 
   /**
    * @param SpeechRecognitionAlternative[]
@@ -54,6 +55,14 @@ class SpeechRecognitionResult extends \Google\Collection
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  public function setResultEndTime($resultEndTime)
+  {
+    $this->resultEndTime = $resultEndTime;
+  }
+  public function getResultEndTime()
+  {
+    return $this->resultEndTime;
   }
 }
 

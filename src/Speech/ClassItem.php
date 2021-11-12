@@ -17,29 +17,19 @@
 
 namespace Google\Service\Speech;
 
-class SpeechContext extends \Google\Collection
+class ClassItem extends \Google\Model
 {
-  protected $collection_key = 'phrases';
-  public $boost;
-  public $phrases;
+  public $value;
 
-  public function setBoost($boost)
+  public function setValue($value)
   {
-    $this->boost = $boost;
+    $this->value = $value;
   }
-  public function getBoost()
+  public function getValue()
   {
-    return $this->boost;
-  }
-  public function setPhrases($phrases)
-  {
-    $this->phrases = $phrases;
-  }
-  public function getPhrases()
-  {
-    return $this->phrases;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpeechContext::class, 'Google_Service_Speech_SpeechContext');
+class_alias(ClassItem::class, 'Google_Service_Speech_ClassItem');

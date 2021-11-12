@@ -20,6 +20,8 @@ namespace Google\Service\Speech;
 class RecognitionConfig extends \Google\Collection
 {
   protected $collection_key = 'speechContexts';
+  protected $adaptationType = SpeechAdaptation::class;
+  protected $adaptationDataType = '';
   public $alternativeLanguageCodes;
   public $audioChannelCount;
   protected $diarizationConfigType = SpeakerDiarizationConfig::class;
@@ -42,6 +44,20 @@ class RecognitionConfig extends \Google\Collection
   protected $speechContextsDataType = 'array';
   public $useEnhanced;
 
+  /**
+   * @param SpeechAdaptation
+   */
+  public function setAdaptation(SpeechAdaptation $adaptation)
+  {
+    $this->adaptation = $adaptation;
+  }
+  /**
+   * @return SpeechAdaptation
+   */
+  public function getAdaptation()
+  {
+    return $this->adaptation;
+  }
   public function setAlternativeLanguageCodes($alternativeLanguageCodes)
   {
     $this->alternativeLanguageCodes = $alternativeLanguageCodes;
