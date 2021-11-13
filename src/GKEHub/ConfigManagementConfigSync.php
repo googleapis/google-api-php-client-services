@@ -22,6 +22,7 @@ class ConfigManagementConfigSync extends \Google\Model
   public $enabled;
   protected $gitType = ConfigManagementGitConfig::class;
   protected $gitDataType = '';
+  public $preventDrift;
   public $sourceFormat;
 
   public function setEnabled($enabled)
@@ -45,6 +46,14 @@ class ConfigManagementConfigSync extends \Google\Model
   public function getGit()
   {
     return $this->git;
+  }
+  public function setPreventDrift($preventDrift)
+  {
+    $this->preventDrift = $preventDrift;
+  }
+  public function getPreventDrift()
+  {
+    return $this->preventDrift;
   }
   public function setSourceFormat($sourceFormat)
   {
