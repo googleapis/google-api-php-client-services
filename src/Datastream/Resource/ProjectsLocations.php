@@ -17,7 +17,6 @@
 
 namespace Google\Service\Datastream\Resource;
 
-use Google\Service\Datastream\FetchStaticIpsResponse;
 use Google\Service\Datastream\ListLocationsResponse;
 use Google\Service\Datastream\Location;
 
@@ -31,27 +30,6 @@ use Google\Service\Datastream\Location;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
-  /**
-   * The FetchStaticIps API call exposes the static ips used by Datastream.
-   * Typically, a request returns children data objects under a parent data object
-   * that's optionally supplied in the request. (locations.fetchStaticIps)
-   *
-   * @param string $name Required. The name resource of the Response type. Must be
-   * in the format `projects/locations`.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int pageSize Maximum number of Ips to return, will likely not be
-   * specified.
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListStaticIps` call. will likely not be specified.
-   * @return FetchStaticIpsResponse
-   */
-  public function fetchStaticIps($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('fetchStaticIps', [$params], FetchStaticIpsResponse::class);
-  }
   /**
    * Gets information about a location. (locations.get)
    *

@@ -15,24 +15,24 @@
  * the License.
  */
 
-namespace Google\Service\Datastream;
+namespace Google\Service\CloudFilestore;
 
-class Validation extends \Google\Collection
+class Snapshot extends \Google\Model
 {
-  protected $collection_key = 'message';
-  public $code;
+  public $createTime;
   public $description;
-  protected $messageType = ValidationMessage::class;
-  protected $messageDataType = 'array';
+  public $filesystemUsedBytes;
+  public $labels;
+  public $name;
   public $state;
 
-  public function setCode($code)
+  public function setCreateTime($createTime)
   {
-    $this->code = $code;
+    $this->createTime = $createTime;
   }
-  public function getCode()
+  public function getCreateTime()
   {
-    return $this->code;
+    return $this->createTime;
   }
   public function setDescription($description)
   {
@@ -42,19 +42,29 @@ class Validation extends \Google\Collection
   {
     return $this->description;
   }
-  /**
-   * @param ValidationMessage[]
-   */
-  public function setMessage($message)
+  public function setFilesystemUsedBytes($filesystemUsedBytes)
   {
-    $this->message = $message;
+    $this->filesystemUsedBytes = $filesystemUsedBytes;
   }
-  /**
-   * @return ValidationMessage[]
-   */
-  public function getMessage()
+  public function getFilesystemUsedBytes()
   {
-    return $this->message;
+    return $this->filesystemUsedBytes;
+  }
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  public function getLabels()
+  {
+    return $this->labels;
+  }
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  public function getName()
+  {
+    return $this->name;
   }
   public function setState($state)
   {
@@ -67,4 +77,4 @@ class Validation extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Validation::class, 'Google_Service_Datastream_Validation');
+class_alias(Snapshot::class, 'Google_Service_CloudFilestore_Snapshot');
