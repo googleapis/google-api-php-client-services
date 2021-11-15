@@ -17,8 +17,9 @@
 
 namespace Google\Service\VMMigrationService;
 
-class MigratingVm extends \Google\Model
+class MigratingVm extends \Google\Collection
 {
+  protected $collection_key = 'recentCutoverJobs';
   protected $computeEngineTargetDefaultsType = ComputeEngineTargetDefaults::class;
   protected $computeEngineTargetDefaultsDataType = '';
   public $createTime;
@@ -35,6 +36,10 @@ class MigratingVm extends \Google\Model
   public $name;
   protected $policyType = SchedulePolicy::class;
   protected $policyDataType = '';
+  protected $recentCloneJobsType = CloneJob::class;
+  protected $recentCloneJobsDataType = 'array';
+  protected $recentCutoverJobsType = CutoverJob::class;
+  protected $recentCutoverJobsDataType = 'array';
   public $sourceVmId;
   public $state;
   public $stateTime;
@@ -157,6 +162,34 @@ class MigratingVm extends \Google\Model
   public function getPolicy()
   {
     return $this->policy;
+  }
+  /**
+   * @param CloneJob[]
+   */
+  public function setRecentCloneJobs($recentCloneJobs)
+  {
+    $this->recentCloneJobs = $recentCloneJobs;
+  }
+  /**
+   * @return CloneJob[]
+   */
+  public function getRecentCloneJobs()
+  {
+    return $this->recentCloneJobs;
+  }
+  /**
+   * @param CutoverJob[]
+   */
+  public function setRecentCutoverJobs($recentCutoverJobs)
+  {
+    $this->recentCutoverJobs = $recentCutoverJobs;
+  }
+  /**
+   * @return CutoverJob[]
+   */
+  public function getRecentCutoverJobs()
+  {
+    return $this->recentCutoverJobs;
   }
   public function setSourceVmId($sourceVmId)
   {
