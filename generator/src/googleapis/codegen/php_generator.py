@@ -29,6 +29,7 @@ __author__ = 'chirags@google.com (Chirag Shah)'
 import collections
 import json
 import operator
+import re
 
 from googleapis.codegen import api
 from googleapis.codegen import api_library_generator
@@ -37,6 +38,7 @@ from googleapis.codegen import language_model
 from googleapis.codegen import utilities
 from googleapis.codegen.schema import Schema
 
+CONST_NAME_SUB = re.compile('[^a-zA-Z0-9_]+')
 
 class PHPGenerator(api_library_generator.ApiLibraryGenerator):
   """The PHP code generator."""
@@ -126,6 +128,7 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
     schema.SetTemplateValue('propNames', prop_names)
 
     self._SetTypeHint(prop)
+    self._SetEnum(prop)
 
   def _GenerateLibrarySource(self, the_api, source_package_writer):
     """Default operations to generate the package.
@@ -178,7 +181,23 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
       prop.values['typeHint'] = (code_type)
       prop.values['annotationType'] = code_type
 
+  def _SetEnum(self, prop):
+    enum = prop.values.get('enum')
+    if enum is None:
+      return
 
+    newEnum = []
+    enumDescriptions = prop.values.get('enumDescriptions') or []
+    for i, value in enumerate(enum):
+        newEnum.append({
+            'value': value,
+            'constName': CONST_NAME_SUB.sub('_', value),
+            'description': enumDescriptions[i] if i in enumDescriptions else None,
+        })
+
+    prop.values['oldEnum'] = enum
+    prop.values['enum'] = newEnum
+    
 class PhpLanguageModel(language_model.LanguageModel):
   """A LanguageModel tunded for PHP."""
 
