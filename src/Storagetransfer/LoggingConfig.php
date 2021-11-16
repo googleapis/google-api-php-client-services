@@ -17,9 +17,12 @@
 
 namespace Google\Service\Storagetransfer;
 
-class LoggingConfig extends \Google\Model
+class LoggingConfig extends \Google\Collection
 {
+  protected $collection_key = 'logActions';
   public $enableOnpremGcsTransferLogs;
+  public $logActionStates;
+  public $logActions;
 
   public function setEnableOnpremGcsTransferLogs($enableOnpremGcsTransferLogs)
   {
@@ -28,6 +31,22 @@ class LoggingConfig extends \Google\Model
   public function getEnableOnpremGcsTransferLogs()
   {
     return $this->enableOnpremGcsTransferLogs;
+  }
+  public function setLogActionStates($logActionStates)
+  {
+    $this->logActionStates = $logActionStates;
+  }
+  public function getLogActionStates()
+  {
+    return $this->logActionStates;
+  }
+  public function setLogActions($logActions)
+  {
+    $this->logActions = $logActions;
+  }
+  public function getLogActions()
+  {
+    return $this->logActions;
   }
 }
 

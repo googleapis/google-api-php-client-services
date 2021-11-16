@@ -23,10 +23,15 @@ class Finding extends \Google\Model
   public $category;
   public $createTime;
   public $eventTime;
+  protected $externalSystemsType = GoogleCloudSecuritycenterV1ExternalSystem::class;
+  protected $externalSystemsDataType = 'map';
   public $externalUri;
   public $findingClass;
   protected $indicatorType = Indicator::class;
   protected $indicatorDataType = '';
+  public $mute;
+  public $muteInitiator;
+  public $muteUpdateTime;
   public $name;
   public $parent;
   public $resourceName;
@@ -70,6 +75,20 @@ class Finding extends \Google\Model
   {
     return $this->eventTime;
   }
+  /**
+   * @param GoogleCloudSecuritycenterV1ExternalSystem[]
+   */
+  public function setExternalSystems($externalSystems)
+  {
+    $this->externalSystems = $externalSystems;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV1ExternalSystem[]
+   */
+  public function getExternalSystems()
+  {
+    return $this->externalSystems;
+  }
   public function setExternalUri($externalUri)
   {
     $this->externalUri = $externalUri;
@@ -99,6 +118,30 @@ class Finding extends \Google\Model
   public function getIndicator()
   {
     return $this->indicator;
+  }
+  public function setMute($mute)
+  {
+    $this->mute = $mute;
+  }
+  public function getMute()
+  {
+    return $this->mute;
+  }
+  public function setMuteInitiator($muteInitiator)
+  {
+    $this->muteInitiator = $muteInitiator;
+  }
+  public function getMuteInitiator()
+  {
+    return $this->muteInitiator;
+  }
+  public function setMuteUpdateTime($muteUpdateTime)
+  {
+    $this->muteUpdateTime = $muteUpdateTime;
+  }
+  public function getMuteUpdateTime()
+  {
+    return $this->muteUpdateTime;
   }
   public function setName($name)
   {
