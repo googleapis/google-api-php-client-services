@@ -26,7 +26,6 @@ class BackendBucket extends \Google\Collection
   public $creationTimestamp;
   public $customResponseHeaders;
   public $description;
-  public $edgeSecurityPolicy;
   public $enableCdn;
   public $id;
   public $kind;
@@ -78,14 +77,6 @@ class BackendBucket extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
-  }
-  public function setEdgeSecurityPolicy($edgeSecurityPolicy)
-  {
-    $this->edgeSecurityPolicy = $edgeSecurityPolicy;
-  }
-  public function getEdgeSecurityPolicy()
-  {
-    return $this->edgeSecurityPolicy;
   }
   public function setEnableCdn($enableCdn)
   {

@@ -23,7 +23,7 @@ use Google\Client;
  * Service definition for OrgPolicyAPI (v2).
  *
  * <p>
- * The Org Policy API allows users to configure governance ruleson their GCP
+ * The Org Policy API allows users to configure governance rules on their GCP
  * resources across the Cloud Resource Hierarchy.</p>
  *
  * <p>

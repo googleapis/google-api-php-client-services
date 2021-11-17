@@ -25,6 +25,7 @@ class Policy extends \Google\Collection
   protected $bindingsType = Binding::class;
   protected $bindingsDataType = 'array';
   public $etag;
+  public $iamOwned;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
   public $version;
@@ -64,6 +65,14 @@ class Policy extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  public function setIamOwned($iamOwned)
+  {
+    $this->iamOwned = $iamOwned;
+  }
+  public function getIamOwned()
+  {
+    return $this->iamOwned;
   }
   /**
    * @param Rule[]

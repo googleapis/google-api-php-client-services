@@ -51,8 +51,6 @@ class Instance extends \Google\Collection
   public $name;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
-  protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
-  protected $networkPerformanceConfigDataType = '';
   public $privateIpv6GoogleAccess;
   protected $reservationAffinityType = ReservationAffinity::class;
   protected $reservationAffinityDataType = '';
@@ -307,20 +305,6 @@ class Instance extends \Google\Collection
   public function getNetworkInterfaces()
   {
     return $this->networkInterfaces;
-  }
-  /**
-   * @param NetworkPerformanceConfig
-   */
-  public function setNetworkPerformanceConfig(NetworkPerformanceConfig $networkPerformanceConfig)
-  {
-    $this->networkPerformanceConfig = $networkPerformanceConfig;
-  }
-  /**
-   * @return NetworkPerformanceConfig
-   */
-  public function getNetworkPerformanceConfig()
-  {
-    return $this->networkPerformanceConfig;
   }
   public function setPrivateIpv6GoogleAccess($privateIpv6GoogleAccess)
   {

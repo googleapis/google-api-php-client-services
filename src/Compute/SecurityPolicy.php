@@ -33,7 +33,6 @@ class SecurityPolicy extends \Google\Collection
   protected $rulesType = SecurityPolicyRule::class;
   protected $rulesDataType = 'array';
   public $selfLink;
-  public $type;
 
   /**
    * @param SecurityPolicyAdaptiveProtectionConfig
@@ -132,14 +131,6 @@ class SecurityPolicy extends \Google\Collection
   public function getSelfLink()
   {
     return $this->selfLink;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
   }
 }
 

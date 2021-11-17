@@ -25,7 +25,6 @@ class InstanceGroupManagerUpdatePolicy extends \Google\Model
   protected $maxUnavailableType = FixedOrPercent::class;
   protected $maxUnavailableDataType = '';
   public $minimalAction;
-  public $mostDisruptiveAllowedAction;
   public $replacementMethod;
   public $type;
 
@@ -72,14 +71,6 @@ class InstanceGroupManagerUpdatePolicy extends \Google\Model
   public function getMinimalAction()
   {
     return $this->minimalAction;
-  }
-  public function setMostDisruptiveAllowedAction($mostDisruptiveAllowedAction)
-  {
-    $this->mostDisruptiveAllowedAction = $mostDisruptiveAllowedAction;
-  }
-  public function getMostDisruptiveAllowedAction()
-  {
-    return $this->mostDisruptiveAllowedAction;
   }
   public function setReplacementMethod($replacementMethod)
   {

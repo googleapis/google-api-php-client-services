@@ -727,25 +727,6 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'setEdgeSecurityPolicy' => [
-              'path' => 'projects/{project}/global/backendBuckets/{backendBucket}/setEdgeSecurityPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'backendBucket' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
             ],'update' => [
               'path' => 'projects/{project}/global/backendBuckets/{backendBucket}',
               'httpMethod' => 'PUT',
@@ -948,25 +929,6 @@ class Compute extends \Google\Service
             ],'patch' => [
               'path' => 'projects/{project}/global/backendServices/{backendService}',
               'httpMethod' => 'PATCH',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'backendService' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'setEdgeSecurityPolicy' => [
-              'path' => 'projects/{project}/global/backendServices/{backendService}/setEdgeSecurityPolicy',
-              'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
                   'location' => 'path',
@@ -10968,39 +10930,6 @@ class Compute extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'update' => [
-              'path' => 'projects/{project}/zones/{zone}/reservations/{reservation}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'zone' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'reservation' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'paths' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
             ],
           ]
         ]
@@ -12065,20 +11994,6 @@ class Compute extends \Google\Service
                 'optionsRequestedPolicyVersion' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ],
-              ],
-            ],'insert' => [
-              'path' => 'projects/{project}/global/snapshots',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'list' => [
