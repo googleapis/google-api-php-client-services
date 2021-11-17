@@ -51,7 +51,7 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
 {% filter noblanklines %}
 {% if property.annotationType %}
   /**
-   * @param {{ property.annotationType }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
+   * @param {{ property.annotationType }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %} ${{ property.memberName }}
    */
 {% endif %}
   {% if property.type == "array" or property.dataType == "map" or not property.typeHint %}
