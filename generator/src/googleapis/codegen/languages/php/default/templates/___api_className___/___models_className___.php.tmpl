@@ -8,6 +8,13 @@ use {{ api.ownerName }}\Service\{{ api.className }}\{{ model.superClass }}
 class {{ model.className }} extends {% if model.superClass %}{{ model.superClass }}{% else %}{% if model.dataType == "array" %}\Google\Collection{% else %}\Google\Model{% endif %}{% endif %}
 {{% if model.properties %}
 {% filter noblanklines %}
+{% for property in model.properties %}
+{% if property.enum %}
+{% for enum in property.enum %}
+  const {{ property.memberName|upper }}_{{ enum.constName|upper }} = "{{ enum.value }}";
+{% endfor %}
+{% endif %}
+{% endfor %}
 {% if not model.is_variant_base and model.collectionKey %}
   protected $collection_key = '{{ model.collectionKey }}';
 {% endif %}{% if model.has_gapi %}
@@ -26,11 +33,6 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
   protected ${{ property.memberName }}DataType = '{{ property.dataType }}';
   {% endif %}
  {% else %}
-  {% if property.enum %}
-  {% for enum in property.enum %}
-    const {{ property.memberName|upper }}_{{ enum.constName|upper }} = "{{ enum.value }}";
-  {% endfor %}
-  {% endif %}
  {% if property.annotationType %}
   /**
    * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
