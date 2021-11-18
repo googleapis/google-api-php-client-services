@@ -17,19 +17,9 @@
 
 namespace Google\Service\Datastream;
 
-class PrivateConnectivity extends \Google\Model
+class StopBackfillJobRequest extends \Google\Model
 {
-  public $privateConnection;
-
-  public function setPrivateConnection($privateConnection)
-  {
-    $this->privateConnection = $privateConnection;
-  }
-  public function getPrivateConnection()
-  {
-    return $this->privateConnection;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PrivateConnectivity::class, 'Google_Service_Datastream_PrivateConnectivity');
+class_alias(StopBackfillJobRequest::class, 'Google_Service_Datastream_StopBackfillJobRequest');

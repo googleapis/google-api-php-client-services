@@ -29,8 +29,6 @@ class ConnectionProfile extends \Google\Model
   protected $mysqlProfileType = MysqlProfile::class;
   protected $mysqlProfileDataType = '';
   public $name;
-  protected $noConnectivityType = NoConnectivitySettings::class;
-  protected $noConnectivityDataType = '';
   protected $oracleProfileType = OracleProfile::class;
   protected $oracleProfileDataType = '';
   protected $privateConnectivityType = PrivateConnectivity::class;
@@ -112,20 +110,6 @@ class ConnectionProfile extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param NoConnectivitySettings
-   */
-  public function setNoConnectivity(NoConnectivitySettings $noConnectivity)
-  {
-    $this->noConnectivity = $noConnectivity;
-  }
-  /**
-   * @return NoConnectivitySettings
-   */
-  public function getNoConnectivity()
-  {
-    return $this->noConnectivity;
   }
   /**
    * @param OracleProfile

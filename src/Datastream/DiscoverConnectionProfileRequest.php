@@ -22,12 +22,12 @@ class DiscoverConnectionProfileRequest extends \Google\Model
   protected $connectionProfileType = ConnectionProfile::class;
   protected $connectionProfileDataType = '';
   public $connectionProfileName;
+  public $fullHierarchy;
+  public $hierarchyDepth;
   protected $mysqlRdbmsType = MysqlRdbms::class;
   protected $mysqlRdbmsDataType = '';
   protected $oracleRdbmsType = OracleRdbms::class;
   protected $oracleRdbmsDataType = '';
-  public $recursionDepth;
-  public $recursive;
 
   /**
    * @param ConnectionProfile
@@ -50,6 +50,22 @@ class DiscoverConnectionProfileRequest extends \Google\Model
   public function getConnectionProfileName()
   {
     return $this->connectionProfileName;
+  }
+  public function setFullHierarchy($fullHierarchy)
+  {
+    $this->fullHierarchy = $fullHierarchy;
+  }
+  public function getFullHierarchy()
+  {
+    return $this->fullHierarchy;
+  }
+  public function setHierarchyDepth($hierarchyDepth)
+  {
+    $this->hierarchyDepth = $hierarchyDepth;
+  }
+  public function getHierarchyDepth()
+  {
+    return $this->hierarchyDepth;
   }
   /**
    * @param MysqlRdbms
@@ -78,22 +94,6 @@ class DiscoverConnectionProfileRequest extends \Google\Model
   public function getOracleRdbms()
   {
     return $this->oracleRdbms;
-  }
-  public function setRecursionDepth($recursionDepth)
-  {
-    $this->recursionDepth = $recursionDepth;
-  }
-  public function getRecursionDepth()
-  {
-    return $this->recursionDepth;
-  }
-  public function setRecursive($recursive)
-  {
-    $this->recursive = $recursive;
-  }
-  public function getRecursive()
-  {
-    return $this->recursive;
   }
 }
 

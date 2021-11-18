@@ -20,17 +20,17 @@ namespace Google\Service\Datastream;
 class MysqlDatabase extends \Google\Collection
 {
   protected $collection_key = 'mysqlTables';
-  public $databaseName;
+  public $database;
   protected $mysqlTablesType = MysqlTable::class;
   protected $mysqlTablesDataType = 'array';
 
-  public function setDatabaseName($databaseName)
+  public function setDatabase($database)
   {
-    $this->databaseName = $databaseName;
+    $this->database = $database;
   }
-  public function getDatabaseName()
+  public function getDatabase()
   {
-    return $this->databaseName;
+    return $this->database;
   }
   /**
    * @param MysqlTable[]

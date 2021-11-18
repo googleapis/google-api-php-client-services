@@ -20,7 +20,7 @@ namespace Google\Service\Datastream;
 class VpcPeeringConfig extends \Google\Model
 {
   public $subnet;
-  public $vpcName;
+  public $vpc;
 
   public function setSubnet($subnet)
   {
@@ -30,13 +30,13 @@ class VpcPeeringConfig extends \Google\Model
   {
     return $this->subnet;
   }
-  public function setVpcName($vpcName)
+  public function setVpc($vpc)
   {
-    $this->vpcName = $vpcName;
+    $this->vpc = $vpc;
   }
-  public function getVpcName()
+  public function getVpc()
   {
-    return $this->vpcName;
+    return $this->vpc;
   }
 }
 

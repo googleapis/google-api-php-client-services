@@ -19,7 +19,7 @@ namespace Google\Service\Datastream;
 
 class OracleColumn extends \Google\Model
 {
-  public $columnName;
+  public $column;
   public $dataType;
   public $encoding;
   public $length;
@@ -29,13 +29,13 @@ class OracleColumn extends \Google\Model
   public $primaryKey;
   public $scale;
 
-  public function setColumnName($columnName)
+  public function setColumn($column)
   {
-    $this->columnName = $columnName;
+    $this->column = $column;
   }
-  public function getColumnName()
+  public function getColumn()
   {
-    return $this->columnName;
+    return $this->column;
   }
   public function setDataType($dataType)
   {

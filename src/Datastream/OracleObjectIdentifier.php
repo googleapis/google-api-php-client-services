@@ -17,19 +17,28 @@
 
 namespace Google\Service\Datastream;
 
-class PrivateConnectivity extends \Google\Model
+class OracleObjectIdentifier extends \Google\Model
 {
-  public $privateConnection;
+  public $schema;
+  public $table;
 
-  public function setPrivateConnection($privateConnection)
+  public function setSchema($schema)
   {
-    $this->privateConnection = $privateConnection;
+    $this->schema = $schema;
   }
-  public function getPrivateConnection()
+  public function getSchema()
   {
-    return $this->privateConnection;
+    return $this->schema;
+  }
+  public function setTable($table)
+  {
+    $this->table = $table;
+  }
+  public function getTable()
+  {
+    return $this->table;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PrivateConnectivity::class, 'Google_Service_Datastream_PrivateConnectivity');
+class_alias(OracleObjectIdentifier::class, 'Google_Service_Datastream_OracleObjectIdentifier');

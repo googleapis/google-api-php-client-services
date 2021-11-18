@@ -17,19 +17,26 @@
 
 namespace Google\Service\Datastream;
 
-class PrivateConnectivity extends \Google\Model
+class StopBackfillJobResponse extends \Google\Model
 {
-  public $privateConnection;
+  protected $objectType = StreamObject::class;
+  protected $objectDataType = '';
 
-  public function setPrivateConnection($privateConnection)
+  /**
+   * @param StreamObject
+   */
+  public function setObject(StreamObject $object)
   {
-    $this->privateConnection = $privateConnection;
+    $this->object = $object;
   }
-  public function getPrivateConnection()
+  /**
+   * @return StreamObject
+   */
+  public function getObject()
   {
-    return $this->privateConnection;
+    return $this->object;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PrivateConnectivity::class, 'Google_Service_Datastream_PrivateConnectivity');
+class_alias(StopBackfillJobResponse::class, 'Google_Service_Datastream_StopBackfillJobResponse');

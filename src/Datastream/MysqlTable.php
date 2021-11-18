@@ -22,7 +22,7 @@ class MysqlTable extends \Google\Collection
   protected $collection_key = 'mysqlColumns';
   protected $mysqlColumnsType = MysqlColumn::class;
   protected $mysqlColumnsDataType = 'array';
-  public $tableName;
+  public $table;
 
   /**
    * @param MysqlColumn[]
@@ -38,13 +38,13 @@ class MysqlTable extends \Google\Collection
   {
     return $this->mysqlColumns;
   }
-  public function setTableName($tableName)
+  public function setTable($table)
   {
-    $this->tableName = $tableName;
+    $this->table = $table;
   }
-  public function getTableName()
+  public function getTable()
   {
-    return $this->tableName;
+    return $this->table;
   }
 }
 

@@ -23,7 +23,6 @@ class GcsDestinationConfig extends \Google\Model
   protected $avroFileFormatDataType = '';
   public $fileRotationInterval;
   public $fileRotationMb;
-  public $gcsFileFormat;
   protected $jsonFileFormatType = JsonFileFormat::class;
   protected $jsonFileFormatDataType = '';
   public $path;
@@ -57,14 +56,6 @@ class GcsDestinationConfig extends \Google\Model
   public function getFileRotationMb()
   {
     return $this->fileRotationMb;
-  }
-  public function setGcsFileFormat($gcsFileFormat)
-  {
-    $this->gcsFileFormat = $gcsFileFormat;
-  }
-  public function getGcsFileFormat()
-  {
-    return $this->gcsFileFormat;
   }
   /**
    * @param JsonFileFormat

@@ -20,7 +20,7 @@ namespace Google\Service\Datastream;
 class MysqlColumn extends \Google\Model
 {
   public $collation;
-  public $columnName;
+  public $column;
   public $dataType;
   public $length;
   public $nullable;
@@ -35,13 +35,13 @@ class MysqlColumn extends \Google\Model
   {
     return $this->collation;
   }
-  public function setColumnName($columnName)
+  public function setColumn($column)
   {
-    $this->columnName = $columnName;
+    $this->column = $column;
   }
-  public function getColumnName()
+  public function getColumn()
   {
-    return $this->columnName;
+    return $this->column;
   }
   public function setDataType($dataType)
   {

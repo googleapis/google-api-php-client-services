@@ -17,19 +17,26 @@
 
 namespace Google\Service\Datastream;
 
-class PrivateConnectivity extends \Google\Model
+class LookupStreamObjectRequest extends \Google\Model
 {
-  public $privateConnection;
+  protected $sourceObjectIdentifierType = SourceObjectIdentifier::class;
+  protected $sourceObjectIdentifierDataType = '';
 
-  public function setPrivateConnection($privateConnection)
+  /**
+   * @param SourceObjectIdentifier
+   */
+  public function setSourceObjectIdentifier(SourceObjectIdentifier $sourceObjectIdentifier)
   {
-    $this->privateConnection = $privateConnection;
+    $this->sourceObjectIdentifier = $sourceObjectIdentifier;
   }
-  public function getPrivateConnection()
+  /**
+   * @return SourceObjectIdentifier
+   */
+  public function getSourceObjectIdentifier()
   {
-    return $this->privateConnection;
+    return $this->sourceObjectIdentifier;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PrivateConnectivity::class, 'Google_Service_Datastream_PrivateConnectivity');
+class_alias(LookupStreamObjectRequest::class, 'Google_Service_Datastream_LookupStreamObjectRequest');

@@ -17,36 +17,36 @@
 
 namespace Google\Service\Datastream;
 
-class OracleTable extends \Google\Collection
+class ListStreamObjectsResponse extends \Google\Collection
 {
-  protected $collection_key = 'oracleColumns';
-  protected $oracleColumnsType = OracleColumn::class;
-  protected $oracleColumnsDataType = 'array';
-  public $table;
+  protected $collection_key = 'streamObjects';
+  public $nextPageToken;
+  protected $streamObjectsType = StreamObject::class;
+  protected $streamObjectsDataType = 'array';
 
-  /**
-   * @param OracleColumn[]
-   */
-  public function setOracleColumns($oracleColumns)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->oracleColumns = $oracleColumns;
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken()
+  {
+    return $this->nextPageToken;
   }
   /**
-   * @return OracleColumn[]
+   * @param StreamObject[]
    */
-  public function getOracleColumns()
+  public function setStreamObjects($streamObjects)
   {
-    return $this->oracleColumns;
+    $this->streamObjects = $streamObjects;
   }
-  public function setTable($table)
+  /**
+   * @return StreamObject[]
+   */
+  public function getStreamObjects()
   {
-    $this->table = $table;
-  }
-  public function getTable()
-  {
-    return $this->table;
+    return $this->streamObjects;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OracleTable::class, 'Google_Service_Datastream_OracleTable');
+class_alias(ListStreamObjectsResponse::class, 'Google_Service_Datastream_ListStreamObjectsResponse');

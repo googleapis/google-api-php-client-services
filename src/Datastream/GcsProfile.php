@@ -19,16 +19,16 @@ namespace Google\Service\Datastream;
 
 class GcsProfile extends \Google\Model
 {
-  public $bucketName;
+  public $bucket;
   public $rootPath;
 
-  public function setBucketName($bucketName)
+  public function setBucket($bucket)
   {
-    $this->bucketName = $bucketName;
+    $this->bucket = $bucket;
   }
-  public function getBucketName()
+  public function getBucket()
   {
-    return $this->bucketName;
+    return $this->bucket;
   }
   public function setRootPath($rootPath)
   {

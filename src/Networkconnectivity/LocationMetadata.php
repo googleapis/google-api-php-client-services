@@ -15,21 +15,22 @@
  * the License.
  */
 
-namespace Google\Service\Datastream;
+namespace Google\Service\Networkconnectivity;
 
-class PrivateConnectivity extends \Google\Model
+class LocationMetadata extends \Google\Collection
 {
-  public $privateConnection;
+  protected $collection_key = 'locationFeatures';
+  public $locationFeatures;
 
-  public function setPrivateConnection($privateConnection)
+  public function setLocationFeatures($locationFeatures)
   {
-    $this->privateConnection = $privateConnection;
+    $this->locationFeatures = $locationFeatures;
   }
-  public function getPrivateConnection()
+  public function getLocationFeatures()
   {
-    return $this->privateConnection;
+    return $this->locationFeatures;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PrivateConnectivity::class, 'Google_Service_Datastream_PrivateConnectivity');
+class_alias(LocationMetadata::class, 'Google_Service_Networkconnectivity_LocationMetadata');
