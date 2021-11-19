@@ -25,6 +25,8 @@ class User extends \Google\Model
   public $kind;
   public $name;
   public $password;
+  protected $passwordPolicyType = UserPasswordValidationPolicy::class;
+  protected $passwordPolicyDataType = '';
   public $project;
   protected $sqlserverUserDetailsType = SqlServerUserDetails::class;
   protected $sqlserverUserDetailsDataType = '';
@@ -77,6 +79,20 @@ class User extends \Google\Model
   public function getPassword()
   {
     return $this->password;
+  }
+  /**
+   * @param UserPasswordValidationPolicy
+   */
+  public function setPasswordPolicy(UserPasswordValidationPolicy $passwordPolicy)
+  {
+    $this->passwordPolicy = $passwordPolicy;
+  }
+  /**
+   * @return UserPasswordValidationPolicy
+   */
+  public function getPasswordPolicy()
+  {
+    return $this->passwordPolicy;
   }
   public function setProject($project)
   {

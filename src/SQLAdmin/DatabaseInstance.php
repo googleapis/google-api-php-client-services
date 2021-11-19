@@ -24,6 +24,7 @@ class DatabaseInstance extends \Google\Collection
   public $connectionName;
   public $createTime;
   public $currentDiskSize;
+  public $databaseInstalledVersion;
   public $databaseVersion;
   protected $diskEncryptionConfigurationType = DiskEncryptionConfiguration::class;
   protected $diskEncryptionConfigurationDataType = '';
@@ -95,6 +96,14 @@ class DatabaseInstance extends \Google\Collection
   public function getCurrentDiskSize()
   {
     return $this->currentDiskSize;
+  }
+  public function setDatabaseInstalledVersion($databaseInstalledVersion)
+  {
+    $this->databaseInstalledVersion = $databaseInstalledVersion;
+  }
+  public function getDatabaseInstalledVersion()
+  {
+    return $this->databaseInstalledVersion;
   }
   public function setDatabaseVersion($databaseVersion)
   {
