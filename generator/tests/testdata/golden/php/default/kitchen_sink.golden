@@ -19,6 +19,7 @@
 namespace Google\Service;
 
 use Google\Client;
+use Google\Service\KitchSink\Tag;
 
 /**
  * Service definition for KitchSink (v1).
@@ -59,7 +60,7 @@ class KitchSink extends \Google\Service
   public $topics;
   public $topics_submissions;
   public $votes;
-
+  private $base_methods;
   /**
    * Constructs the internal representation of the KitchSink service.
    *
@@ -681,6 +682,39 @@ class KitchSink extends \Google\Service
           ]
         ]
     );
+    $this->base_methods = new Resource(
+        $this,
+        $this->serviceName,
+        '',
+        [
+          'methods' => [
+            'tag' => [
+              'path' => 'kitchen_sink/v1/tag',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'access_token' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+  }
+  /**
+   * Get tag (tag)
+   *
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string access_token The oauth2 access token
+   * @return Tag
+   */
+  public function tag($optParams = [])
+  {
+    $params = [];
+    $params = array_merge($params, $optParams);
+    return $this->base_methods->call('tag', [$params], Tag::class);
   }
 }
 
