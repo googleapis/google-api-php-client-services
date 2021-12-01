@@ -28,6 +28,7 @@ class Permission extends \Google\Collection
   public $expirationTime;
   public $id;
   public $kind;
+  public $pendingOwner;
   protected $permissionDetailsType = PermissionPermissionDetails::class;
   protected $permissionDetailsDataType = 'array';
   public $photoLink;
@@ -100,6 +101,14 @@ class Permission extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setPendingOwner($pendingOwner)
+  {
+    $this->pendingOwner = $pendingOwner;
+  }
+  public function getPendingOwner()
+  {
+    return $this->pendingOwner;
   }
   /**
    * @param PermissionPermissionDetails[]

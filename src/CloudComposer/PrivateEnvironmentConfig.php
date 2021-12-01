@@ -19,6 +19,8 @@ namespace Google\Service\CloudComposer;
 
 class PrivateEnvironmentConfig extends \Google\Model
 {
+  public $cloudComposerNetworkIpv4CidrBlock;
+  public $cloudComposerNetworkIpv4ReservedRange;
   public $cloudSqlIpv4CidrBlock;
   public $enablePrivateEnvironment;
   protected $privateClusterConfigType = PrivateClusterConfig::class;
@@ -26,6 +28,22 @@ class PrivateEnvironmentConfig extends \Google\Model
   public $webServerIpv4CidrBlock;
   public $webServerIpv4ReservedRange;
 
+  public function setCloudComposerNetworkIpv4CidrBlock($cloudComposerNetworkIpv4CidrBlock)
+  {
+    $this->cloudComposerNetworkIpv4CidrBlock = $cloudComposerNetworkIpv4CidrBlock;
+  }
+  public function getCloudComposerNetworkIpv4CidrBlock()
+  {
+    return $this->cloudComposerNetworkIpv4CidrBlock;
+  }
+  public function setCloudComposerNetworkIpv4ReservedRange($cloudComposerNetworkIpv4ReservedRange)
+  {
+    $this->cloudComposerNetworkIpv4ReservedRange = $cloudComposerNetworkIpv4ReservedRange;
+  }
+  public function getCloudComposerNetworkIpv4ReservedRange()
+  {
+    return $this->cloudComposerNetworkIpv4ReservedRange;
+  }
   public function setCloudSqlIpv4CidrBlock($cloudSqlIpv4CidrBlock)
   {
     $this->cloudSqlIpv4CidrBlock = $cloudSqlIpv4CidrBlock;

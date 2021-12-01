@@ -20,9 +20,18 @@ namespace Google\Service\CloudHealthcare;
 class FhirConfig extends \Google\Collection
 {
   protected $collection_key = 'fieldMetadataList';
+  public $defaultKeepExtensions;
   protected $fieldMetadataListType = FieldMetadata::class;
   protected $fieldMetadataListDataType = 'array';
 
+  public function setDefaultKeepExtensions($defaultKeepExtensions)
+  {
+    $this->defaultKeepExtensions = $defaultKeepExtensions;
+  }
+  public function getDefaultKeepExtensions()
+  {
+    return $this->defaultKeepExtensions;
+  }
   /**
    * @param FieldMetadata[]
    */

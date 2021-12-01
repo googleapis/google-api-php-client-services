@@ -20,6 +20,7 @@ namespace Google\Service\OSConfig;
 class WeekDayOfMonth extends \Google\Model
 {
   public $dayOfWeek;
+  public $dayOffset;
   public $weekOrdinal;
 
   public function setDayOfWeek($dayOfWeek)
@@ -29,6 +30,14 @@ class WeekDayOfMonth extends \Google\Model
   public function getDayOfWeek()
   {
     return $this->dayOfWeek;
+  }
+  public function setDayOffset($dayOffset)
+  {
+    $this->dayOffset = $dayOffset;
+  }
+  public function getDayOffset()
+  {
+    return $this->dayOffset;
   }
   public function setWeekOrdinal($weekOrdinal)
   {

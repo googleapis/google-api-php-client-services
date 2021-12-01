@@ -21,11 +21,7 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
 {
   public $createTime;
   public $displayName;
-  protected $latestEvaluationType = GoogleCloudDocumentaiV1EvaluationReference::class;
-  protected $latestEvaluationDataType = '';
   public $name;
-  protected $schemaType = GoogleCloudDocumentaiV1Schema::class;
-  protected $schemaDataType = '';
   public $state;
 
   public function setCreateTime($createTime)
@@ -44,20 +40,6 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   {
     return $this->displayName;
   }
-  /**
-   * @param GoogleCloudDocumentaiV1EvaluationReference
-   */
-  public function setLatestEvaluation(GoogleCloudDocumentaiV1EvaluationReference $latestEvaluation)
-  {
-    $this->latestEvaluation = $latestEvaluation;
-  }
-  /**
-   * @return GoogleCloudDocumentaiV1EvaluationReference
-   */
-  public function getLatestEvaluation()
-  {
-    return $this->latestEvaluation;
-  }
   public function setName($name)
   {
     $this->name = $name;
@@ -65,20 +47,6 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param GoogleCloudDocumentaiV1Schema
-   */
-  public function setSchema(GoogleCloudDocumentaiV1Schema $schema)
-  {
-    $this->schema = $schema;
-  }
-  /**
-   * @return GoogleCloudDocumentaiV1Schema
-   */
-  public function getSchema()
-  {
-    return $this->schema;
   }
   public function setState($state)
   {

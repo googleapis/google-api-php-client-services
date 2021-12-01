@@ -26,6 +26,7 @@ class CloudFunction extends \Google\Collection
   public $buildName;
   public $buildWorkerPool;
   public $description;
+  public $dockerRepository;
   public $entryPoint;
   public $environmentVariables;
   protected $eventTriggerType = EventTrigger::class;
@@ -33,6 +34,7 @@ class CloudFunction extends \Google\Collection
   protected $httpsTriggerType = HttpsTrigger::class;
   protected $httpsTriggerDataType = '';
   public $ingressSettings;
+  public $kmsKeyName;
   public $labels;
   public $maxInstances;
   public $minInstances;
@@ -104,6 +106,14 @@ class CloudFunction extends \Google\Collection
   {
     return $this->description;
   }
+  public function setDockerRepository($dockerRepository)
+  {
+    $this->dockerRepository = $dockerRepository;
+  }
+  public function getDockerRepository()
+  {
+    return $this->dockerRepository;
+  }
   public function setEntryPoint($entryPoint)
   {
     $this->entryPoint = $entryPoint;
@@ -155,6 +165,14 @@ class CloudFunction extends \Google\Collection
   public function getIngressSettings()
   {
     return $this->ingressSettings;
+  }
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
   }
   public function setLabels($labels)
   {

@@ -34,10 +34,14 @@ class Dms extends \Google\Service\Resource
    * response. (dms.messages)
    *
    * @param string $parent Required. Space resource name, in the form "spaces".
-   * Example: spaces/AAAAMpdlehY
+   * Example: spaces/AAAAAAAAAAA
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestId Optional. A unique request ID for this message.
+   * If a message has already been created in the space with this request ID, the
+   * subsequent request will return the existing message and no new message will
+   * be created.
    * @opt_param string threadKey Optional. Opaque thread identifier string that
    * can be specified to group messages into a single thread. If this is the first
    * message with a given thread identifier, a new thread is created. Subsequent
@@ -59,10 +63,14 @@ class Dms extends \Google\Service\Resource
    * response. (dms.webhooks)
    *
    * @param string $parent Required. Space resource name, in the form "spaces".
-   * Example: spaces/AAAAMpdlehY
+   * Example: spaces/AAAAAAAAAAA
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestId Optional. A unique request ID for this message.
+   * If a message has already been created in the space with this request ID, the
+   * subsequent request will return the existing message and no new message will
+   * be created.
    * @opt_param string threadKey Optional. Opaque thread identifier string that
    * can be specified to group messages into a single thread. If this is the first
    * message with a given thread identifier, a new thread is created. Subsequent

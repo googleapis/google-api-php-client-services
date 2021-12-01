@@ -20,6 +20,7 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class Metadata extends \Google\Model
 {
   public $canDelete;
+  public $canHaveBusinessCalls;
   public $canHaveFoodMenus;
   public $canModifyServiceList;
   public $canOperateHealthData;
@@ -39,6 +40,14 @@ class Metadata extends \Google\Model
   public function getCanDelete()
   {
     return $this->canDelete;
+  }
+  public function setCanHaveBusinessCalls($canHaveBusinessCalls)
+  {
+    $this->canHaveBusinessCalls = $canHaveBusinessCalls;
+  }
+  public function getCanHaveBusinessCalls()
+  {
+    return $this->canHaveBusinessCalls;
   }
   public function setCanHaveFoodMenus($canHaveFoodMenus)
   {

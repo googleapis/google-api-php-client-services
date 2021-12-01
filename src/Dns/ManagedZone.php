@@ -20,6 +20,8 @@ namespace Google\Service\Dns;
 class ManagedZone extends \Google\Collection
 {
   protected $collection_key = 'nameServers';
+  protected $cloudLoggingConfigType = ManagedZoneCloudLoggingConfig::class;
+  protected $cloudLoggingConfigDataType = '';
   public $creationTime;
   public $description;
   public $dnsName;
@@ -43,6 +45,20 @@ class ManagedZone extends \Google\Collection
   protected $serviceDirectoryConfigDataType = '';
   public $visibility;
 
+  /**
+   * @param ManagedZoneCloudLoggingConfig
+   */
+  public function setCloudLoggingConfig(ManagedZoneCloudLoggingConfig $cloudLoggingConfig)
+  {
+    $this->cloudLoggingConfig = $cloudLoggingConfig;
+  }
+  /**
+   * @return ManagedZoneCloudLoggingConfig
+   */
+  public function getCloudLoggingConfig()
+  {
+    return $this->cloudLoggingConfig;
+  }
   public function setCreationTime($creationTime)
   {
     $this->creationTime = $creationTime;

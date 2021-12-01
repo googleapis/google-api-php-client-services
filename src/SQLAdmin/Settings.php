@@ -45,6 +45,8 @@ class Settings extends \Google\Collection
   protected $locationPreferenceDataType = '';
   protected $maintenanceWindowType = MaintenanceWindow::class;
   protected $maintenanceWindowDataType = '';
+  protected $passwordValidationPolicyType = PasswordValidationPolicy::class;
+  protected $passwordValidationPolicyDataType = '';
   public $pricingPlan;
   public $replicationType;
   public $settingsVersion;
@@ -238,6 +240,20 @@ class Settings extends \Google\Collection
   public function getMaintenanceWindow()
   {
     return $this->maintenanceWindow;
+  }
+  /**
+   * @param PasswordValidationPolicy
+   */
+  public function setPasswordValidationPolicy(PasswordValidationPolicy $passwordValidationPolicy)
+  {
+    $this->passwordValidationPolicy = $passwordValidationPolicy;
+  }
+  /**
+   * @return PasswordValidationPolicy
+   */
+  public function getPasswordValidationPolicy()
+  {
+    return $this->passwordValidationPolicy;
   }
   public function setPricingPlan($pricingPlan)
   {
