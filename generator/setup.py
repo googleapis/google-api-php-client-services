@@ -40,7 +40,7 @@ setup(
     include_package_data=True,
     # TODO(user): Any 1.8 version is OK, but django<1.9 seems to do the wrong
     #     thing. It installs version 1.9rc1, which is not compatible.
-    install_requires=['django==1.8.12',
+    install_requires=['django==1.11.29',
                       'httplib2',
                       'google-apputils',
                       'python-gflags'],
