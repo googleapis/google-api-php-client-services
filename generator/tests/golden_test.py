@@ -80,7 +80,7 @@ class GoldenTest(basetest.TestCase):
     if self.Generate(test.language, test.variant, test.input, test.options, out_file):
       cmd = ['diff', '--brief', test.golden_file, out_file]
       try:
-        subprocess.check_call(cmd, stderr=sys.stderr)
+        subprocess.check_call(cmd, stderr=sys.stderr, shell=True)
         print('PASS: %s, %s, %s, %s' % (test.language, test.variant, test.input, test.options))
         return True
       except subprocess.CalledProcessError as e:
