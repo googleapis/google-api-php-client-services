@@ -20,6 +20,7 @@ namespace Google\Service\Compute;
 class Commitment extends \Google\Collection
 {
   protected $collection_key = 'resources';
+  public $autoRenew;
   public $category;
   public $creationTimestamp;
   public $description;
@@ -41,6 +42,14 @@ class Commitment extends \Google\Collection
   public $statusMessage;
   public $type;
 
+  public function setAutoRenew($autoRenew)
+  {
+    $this->autoRenew = $autoRenew;
+  }
+  public function getAutoRenew()
+  {
+    return $this->autoRenew;
+  }
   public function setCategory($category)
   {
     $this->category = $category;

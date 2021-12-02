@@ -21,12 +21,14 @@ class Scheduling extends \Google\Collection
 {
   protected $collection_key = 'nodeAffinities';
   public $automaticRestart;
+  public $instanceTerminationAction;
   public $locationHint;
   public $minNodeCpus;
   protected $nodeAffinitiesType = SchedulingNodeAffinity::class;
   protected $nodeAffinitiesDataType = 'array';
   public $onHostMaintenance;
   public $preemptible;
+  public $provisioningModel;
 
   public function setAutomaticRestart($automaticRestart)
   {
@@ -35,6 +37,14 @@ class Scheduling extends \Google\Collection
   public function getAutomaticRestart()
   {
     return $this->automaticRestart;
+  }
+  public function setInstanceTerminationAction($instanceTerminationAction)
+  {
+    $this->instanceTerminationAction = $instanceTerminationAction;
+  }
+  public function getInstanceTerminationAction()
+  {
+    return $this->instanceTerminationAction;
   }
   public function setLocationHint($locationHint)
   {
@@ -81,6 +91,14 @@ class Scheduling extends \Google\Collection
   public function getPreemptible()
   {
     return $this->preemptible;
+  }
+  public function setProvisioningModel($provisioningModel)
+  {
+    $this->provisioningModel = $provisioningModel;
+  }
+  public function getProvisioningModel()
+  {
+    return $this->provisioningModel;
   }
 }
 

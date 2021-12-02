@@ -28,12 +28,15 @@ class RouterBgpPeer extends \Google\Collection
   protected $bfdType = RouterBgpPeerBfd::class;
   protected $bfdDataType = '';
   public $enable;
+  public $enableIpv6;
   public $interfaceName;
   public $ipAddress;
+  public $ipv6NexthopAddress;
   public $managementType;
   public $name;
   public $peerAsn;
   public $peerIpAddress;
+  public $peerIpv6NexthopAddress;
   public $routerApplianceInstance;
 
   public function setAdvertiseMode($advertiseMode)
@@ -96,6 +99,14 @@ class RouterBgpPeer extends \Google\Collection
   {
     return $this->enable;
   }
+  public function setEnableIpv6($enableIpv6)
+  {
+    $this->enableIpv6 = $enableIpv6;
+  }
+  public function getEnableIpv6()
+  {
+    return $this->enableIpv6;
+  }
   public function setInterfaceName($interfaceName)
   {
     $this->interfaceName = $interfaceName;
@@ -111,6 +122,14 @@ class RouterBgpPeer extends \Google\Collection
   public function getIpAddress()
   {
     return $this->ipAddress;
+  }
+  public function setIpv6NexthopAddress($ipv6NexthopAddress)
+  {
+    $this->ipv6NexthopAddress = $ipv6NexthopAddress;
+  }
+  public function getIpv6NexthopAddress()
+  {
+    return $this->ipv6NexthopAddress;
   }
   public function setManagementType($managementType)
   {
@@ -143,6 +162,14 @@ class RouterBgpPeer extends \Google\Collection
   public function getPeerIpAddress()
   {
     return $this->peerIpAddress;
+  }
+  public function setPeerIpv6NexthopAddress($peerIpv6NexthopAddress)
+  {
+    $this->peerIpv6NexthopAddress = $peerIpv6NexthopAddress;
+  }
+  public function getPeerIpv6NexthopAddress()
+  {
+    return $this->peerIpv6NexthopAddress;
   }
   public function setRouterApplianceInstance($routerApplianceInstance)
   {

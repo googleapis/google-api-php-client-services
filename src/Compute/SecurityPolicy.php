@@ -30,9 +30,12 @@ class SecurityPolicy extends \Google\Collection
   public $id;
   public $kind;
   public $name;
+  protected $recaptchaOptionsConfigType = SecurityPolicyRecaptchaOptionsConfig::class;
+  protected $recaptchaOptionsConfigDataType = '';
   protected $rulesType = SecurityPolicyRule::class;
   protected $rulesDataType = 'array';
   public $selfLink;
+  public $type;
 
   /**
    * @param SecurityPolicyAdaptiveProtectionConfig
@@ -111,6 +114,20 @@ class SecurityPolicy extends \Google\Collection
     return $this->name;
   }
   /**
+   * @param SecurityPolicyRecaptchaOptionsConfig
+   */
+  public function setRecaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfig $recaptchaOptionsConfig)
+  {
+    $this->recaptchaOptionsConfig = $recaptchaOptionsConfig;
+  }
+  /**
+   * @return SecurityPolicyRecaptchaOptionsConfig
+   */
+  public function getRecaptchaOptionsConfig()
+  {
+    return $this->recaptchaOptionsConfig;
+  }
+  /**
    * @param SecurityPolicyRule[]
    */
   public function setRules($rules)
@@ -131,6 +148,14 @@ class SecurityPolicy extends \Google\Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  public function getType()
+  {
+    return $this->type;
   }
 }
 

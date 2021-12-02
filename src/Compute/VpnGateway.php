@@ -30,6 +30,7 @@ class VpnGateway extends \Google\Collection
   public $network;
   public $region;
   public $selfLink;
+  public $stackType;
   protected $vpnInterfacesType = VpnGatewayVpnGatewayInterface::class;
   protected $vpnInterfacesDataType = 'array';
 
@@ -112,6 +113,14 @@ class VpnGateway extends \Google\Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  public function setStackType($stackType)
+  {
+    $this->stackType = $stackType;
+  }
+  public function getStackType()
+  {
+    return $this->stackType;
   }
   /**
    * @param VpnGatewayVpnGatewayInterface[]

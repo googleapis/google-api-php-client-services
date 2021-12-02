@@ -21,11 +21,17 @@ class SecurityPolicyRule extends \Google\Model
 {
   public $action;
   public $description;
+  protected $headerActionType = SecurityPolicyRuleHttpHeaderAction::class;
+  protected $headerActionDataType = '';
   public $kind;
   protected $matchType = SecurityPolicyRuleMatcher::class;
   protected $matchDataType = '';
   public $preview;
   public $priority;
+  protected $rateLimitOptionsType = SecurityPolicyRuleRateLimitOptions::class;
+  protected $rateLimitOptionsDataType = '';
+  protected $redirectOptionsType = SecurityPolicyRuleRedirectOptions::class;
+  protected $redirectOptionsDataType = '';
 
   public function setAction($action)
   {
@@ -42,6 +48,20 @@ class SecurityPolicyRule extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param SecurityPolicyRuleHttpHeaderAction
+   */
+  public function setHeaderAction(SecurityPolicyRuleHttpHeaderAction $headerAction)
+  {
+    $this->headerAction = $headerAction;
+  }
+  /**
+   * @return SecurityPolicyRuleHttpHeaderAction
+   */
+  public function getHeaderAction()
+  {
+    return $this->headerAction;
   }
   public function setKind($kind)
   {
@@ -80,6 +100,34 @@ class SecurityPolicyRule extends \Google\Model
   public function getPriority()
   {
     return $this->priority;
+  }
+  /**
+   * @param SecurityPolicyRuleRateLimitOptions
+   */
+  public function setRateLimitOptions(SecurityPolicyRuleRateLimitOptions $rateLimitOptions)
+  {
+    $this->rateLimitOptions = $rateLimitOptions;
+  }
+  /**
+   * @return SecurityPolicyRuleRateLimitOptions
+   */
+  public function getRateLimitOptions()
+  {
+    return $this->rateLimitOptions;
+  }
+  /**
+   * @param SecurityPolicyRuleRedirectOptions
+   */
+  public function setRedirectOptions(SecurityPolicyRuleRedirectOptions $redirectOptions)
+  {
+    $this->redirectOptions = $redirectOptions;
+  }
+  /**
+   * @return SecurityPolicyRuleRedirectOptions
+   */
+  public function getRedirectOptions()
+  {
+    return $this->redirectOptions;
   }
 }
 

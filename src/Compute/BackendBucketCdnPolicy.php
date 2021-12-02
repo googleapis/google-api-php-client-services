@@ -22,6 +22,8 @@ class BackendBucketCdnPolicy extends \Google\Collection
   protected $collection_key = 'signedUrlKeyNames';
   protected $bypassCacheOnRequestHeadersType = BackendBucketCdnPolicyBypassCacheOnRequestHeader::class;
   protected $bypassCacheOnRequestHeadersDataType = 'array';
+  protected $cacheKeyPolicyType = BackendBucketCdnPolicyCacheKeyPolicy::class;
+  protected $cacheKeyPolicyDataType = '';
   public $cacheMode;
   public $clientTtl;
   public $defaultTtl;
@@ -47,6 +49,20 @@ class BackendBucketCdnPolicy extends \Google\Collection
   public function getBypassCacheOnRequestHeaders()
   {
     return $this->bypassCacheOnRequestHeaders;
+  }
+  /**
+   * @param BackendBucketCdnPolicyCacheKeyPolicy
+   */
+  public function setCacheKeyPolicy(BackendBucketCdnPolicyCacheKeyPolicy $cacheKeyPolicy)
+  {
+    $this->cacheKeyPolicy = $cacheKeyPolicy;
+  }
+  /**
+   * @return BackendBucketCdnPolicyCacheKeyPolicy
+   */
+  public function getCacheKeyPolicy()
+  {
+    return $this->cacheKeyPolicy;
   }
   public function setCacheMode($cacheMode)
   {

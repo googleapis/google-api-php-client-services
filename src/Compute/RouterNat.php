@@ -21,10 +21,12 @@ class RouterNat extends \Google\Collection
 {
   protected $collection_key = 'subnetworks';
   public $drainNatIps;
+  public $enableDynamicPortAllocation;
   public $enableEndpointIndependentMapping;
   public $icmpIdleTimeoutSec;
   protected $logConfigType = RouterNatLogConfig::class;
   protected $logConfigDataType = '';
+  public $maxPortsPerVm;
   public $minPortsPerVm;
   public $name;
   public $natIpAllocateOption;
@@ -46,6 +48,14 @@ class RouterNat extends \Google\Collection
   public function getDrainNatIps()
   {
     return $this->drainNatIps;
+  }
+  public function setEnableDynamicPortAllocation($enableDynamicPortAllocation)
+  {
+    $this->enableDynamicPortAllocation = $enableDynamicPortAllocation;
+  }
+  public function getEnableDynamicPortAllocation()
+  {
+    return $this->enableDynamicPortAllocation;
   }
   public function setEnableEndpointIndependentMapping($enableEndpointIndependentMapping)
   {
@@ -76,6 +86,14 @@ class RouterNat extends \Google\Collection
   public function getLogConfig()
   {
     return $this->logConfig;
+  }
+  public function setMaxPortsPerVm($maxPortsPerVm)
+  {
+    $this->maxPortsPerVm = $maxPortsPerVm;
+  }
+  public function getMaxPortsPerVm()
+  {
+    return $this->maxPortsPerVm;
   }
   public function setMinPortsPerVm($minPortsPerVm)
   {
