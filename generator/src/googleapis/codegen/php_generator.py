@@ -207,7 +207,7 @@ class PhpLanguageModel(language_model.LanguageModel):
       'uint32': 'string',  # PHP doesn't support unsigned integers.
       'uint64': 'string',  # PHP doesn't support unsigned integers.
       'int32': 'int',
-      'int64': 'string',  # Size of an integer is platFullform-dependent.
+      'int64': 'string',  # Size of an integer is platform-dependent.
       'double': 'double',
       'float': 'float',
       }
