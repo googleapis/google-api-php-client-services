@@ -17,12 +17,27 @@
 
 namespace Google\Service\ShoppingContent;
 
-class BuyOnGoogleProgramStatus extends \Google\Model
+class BuyOnGoogleProgramStatus extends \Google\Collection
 {
+  protected $collection_key = 'businessModel';
+  public $businessModel;
   public $customerServicePendingEmail;
+  public $customerServicePendingPhoneNumber;
+  public $customerServicePendingPhoneRegionCode;
   public $customerServiceVerifiedEmail;
+  public $customerServiceVerifiedPhoneNumber;
+  public $customerServiceVerifiedPhoneRegionCode;
+  public $onlineSalesChannel;
   public $participationStage;
 
+  public function setBusinessModel($businessModel)
+  {
+    $this->businessModel = $businessModel;
+  }
+  public function getBusinessModel()
+  {
+    return $this->businessModel;
+  }
   public function setCustomerServicePendingEmail($customerServicePendingEmail)
   {
     $this->customerServicePendingEmail = $customerServicePendingEmail;
@@ -31,6 +46,22 @@ class BuyOnGoogleProgramStatus extends \Google\Model
   {
     return $this->customerServicePendingEmail;
   }
+  public function setCustomerServicePendingPhoneNumber($customerServicePendingPhoneNumber)
+  {
+    $this->customerServicePendingPhoneNumber = $customerServicePendingPhoneNumber;
+  }
+  public function getCustomerServicePendingPhoneNumber()
+  {
+    return $this->customerServicePendingPhoneNumber;
+  }
+  public function setCustomerServicePendingPhoneRegionCode($customerServicePendingPhoneRegionCode)
+  {
+    $this->customerServicePendingPhoneRegionCode = $customerServicePendingPhoneRegionCode;
+  }
+  public function getCustomerServicePendingPhoneRegionCode()
+  {
+    return $this->customerServicePendingPhoneRegionCode;
+  }
   public function setCustomerServiceVerifiedEmail($customerServiceVerifiedEmail)
   {
     $this->customerServiceVerifiedEmail = $customerServiceVerifiedEmail;
@@ -38,6 +69,30 @@ class BuyOnGoogleProgramStatus extends \Google\Model
   public function getCustomerServiceVerifiedEmail()
   {
     return $this->customerServiceVerifiedEmail;
+  }
+  public function setCustomerServiceVerifiedPhoneNumber($customerServiceVerifiedPhoneNumber)
+  {
+    $this->customerServiceVerifiedPhoneNumber = $customerServiceVerifiedPhoneNumber;
+  }
+  public function getCustomerServiceVerifiedPhoneNumber()
+  {
+    return $this->customerServiceVerifiedPhoneNumber;
+  }
+  public function setCustomerServiceVerifiedPhoneRegionCode($customerServiceVerifiedPhoneRegionCode)
+  {
+    $this->customerServiceVerifiedPhoneRegionCode = $customerServiceVerifiedPhoneRegionCode;
+  }
+  public function getCustomerServiceVerifiedPhoneRegionCode()
+  {
+    return $this->customerServiceVerifiedPhoneRegionCode;
+  }
+  public function setOnlineSalesChannel($onlineSalesChannel)
+  {
+    $this->onlineSalesChannel = $onlineSalesChannel;
+  }
+  public function getOnlineSalesChannel()
+  {
+    return $this->onlineSalesChannel;
   }
   public function setParticipationStage($participationStage)
   {

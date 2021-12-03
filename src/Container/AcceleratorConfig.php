@@ -21,6 +21,7 @@ class AcceleratorConfig extends \Google\Model
 {
   public $acceleratorCount;
   public $acceleratorType;
+  public $gpuPartitionSize;
 
   public function setAcceleratorCount($acceleratorCount)
   {
@@ -37,6 +38,14 @@ class AcceleratorConfig extends \Google\Model
   public function getAcceleratorType()
   {
     return $this->acceleratorType;
+  }
+  public function setGpuPartitionSize($gpuPartitionSize)
+  {
+    $this->gpuPartitionSize = $gpuPartitionSize;
+  }
+  public function getGpuPartitionSize()
+  {
+    return $this->gpuPartitionSize;
   }
 }
 

@@ -95,11 +95,12 @@ class ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions extends \Google\Servi
   }
   /**
    * Schedule a CryptoKeyVersion for destruction. Upon calling this method,
-   * CryptoKeyVersion.state will be set to DESTROY_SCHEDULED and destroy_time will
-   * be set to a time 24 hours in the future, at which point the state will be
-   * changed to DESTROYED, and the key material will be irrevocably destroyed.
-   * Before the destroy_time is reached, RestoreCryptoKeyVersion may be called to
-   * reverse the process. (cryptoKeyVersions.destroy)
+   * CryptoKeyVersion.state will be set to DESTROY_SCHEDULED, and destroy_time
+   * will be set to the time destroy_scheduled_duration in the future. At that
+   * time, the state will automatically change to DESTROYED, and the key material
+   * will be irrevocably destroyed. Before the destroy_time is reached,
+   * RestoreCryptoKeyVersion may be called to reverse the process.
+   * (cryptoKeyVersions.destroy)
    *
    * @param string $name Required. The resource name of the CryptoKeyVersion to
    * destroy.
@@ -143,12 +144,15 @@ class ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions extends \Google\Servi
     return $this->call('getPublicKey', [$params], PublicKey::class);
   }
   /**
-   * Imports a new CryptoKeyVersion into an existing CryptoKey using the wrapped
-   * key material provided in the request. The version ID will be assigned the
-   * next sequential id within the CryptoKey. (cryptoKeyVersions.import)
+   * Import wrapped key material into a CryptoKeyVersion. All requests must
+   * specify a CryptoKey. If a CryptoKeyVersion is additionally specified in the
+   * request, key material will be reimported into that version. Otherwise, a new
+   * version will be created, and will be assigned the next sequential id within
+   * the CryptoKey. (cryptoKeyVersions.import)
    *
    * @param string $parent Required. The name of the CryptoKey to be imported
-   * into.
+   * into. The create permission is only required on this key when creating a new
+   * CryptoKeyVersion.
    * @param ImportCryptoKeyVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CryptoKeyVersion

@@ -32,9 +32,10 @@ use Google\Service\Monitoring\MonitoringEmpty;
 class ProjectsMetricDescriptors extends \Google\Service\Resource
 {
   /**
-   * Creates a new metric descriptor. User-created metric descriptors define
-   * custom metrics (https://cloud.google.com/monitoring/custom-metrics).
-   * (metricDescriptors.create)
+   * Creates a new metric descriptor. The creation is executed asynchronously and
+   * callers may check the returned operation to track its progress. User-created
+   * metric descriptors define custom metrics (https://cloud.google.com/monitoring
+   * /custom-metrics). (metricDescriptors.create)
    *
    * @param string $name Required. The project
    * (https://cloud.google.com/monitoring/api/v3#project_name) on which to execute

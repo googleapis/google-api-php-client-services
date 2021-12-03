@@ -121,6 +121,23 @@ class OrganizationsApis extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudApigeeV1ListApiProxiesResponse::class);
   }
+  /**
+   * Updates an existing API proxy. (apis.patch)
+   *
+   * @param string $name Required. API proxy to update in the following format:
+   * `organizations/{org}/apis/{api}`
+   * @param GoogleCloudApigeeV1ApiProxy $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The list of fields to update.
+   * @return GoogleCloudApigeeV1ApiProxy
+   */
+  public function patch($name, GoogleCloudApigeeV1ApiProxy $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleCloudApigeeV1ApiProxy::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

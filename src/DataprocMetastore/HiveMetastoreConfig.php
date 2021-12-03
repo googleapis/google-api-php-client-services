@@ -20,6 +20,7 @@ namespace Google\Service\DataprocMetastore;
 class HiveMetastoreConfig extends \Google\Model
 {
   public $configOverrides;
+  public $endpointProtocol;
   protected $kerberosConfigType = KerberosConfig::class;
   protected $kerberosConfigDataType = '';
   public $version;
@@ -31,6 +32,14 @@ class HiveMetastoreConfig extends \Google\Model
   public function getConfigOverrides()
   {
     return $this->configOverrides;
+  }
+  public function setEndpointProtocol($endpointProtocol)
+  {
+    $this->endpointProtocol = $endpointProtocol;
+  }
+  public function getEndpointProtocol()
+  {
+    return $this->endpointProtocol;
   }
   /**
    * @param KerberosConfig

@@ -51,6 +51,8 @@ class Instance extends \Google\Collection
   public $name;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
+  protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
+  protected $networkPerformanceConfigDataType = '';
   public $privateIpv6GoogleAccess;
   protected $reservationAffinityType = ReservationAffinity::class;
   protected $reservationAffinityDataType = '';
@@ -65,6 +67,9 @@ class Instance extends \Google\Collection
   protected $shieldedInstanceConfigDataType = '';
   protected $shieldedInstanceIntegrityPolicyType = ShieldedInstanceIntegrityPolicy::class;
   protected $shieldedInstanceIntegrityPolicyDataType = '';
+  public $sourceMachineImage;
+  protected $sourceMachineImageEncryptionKeyType = CustomerEncryptionKey::class;
+  protected $sourceMachineImageEncryptionKeyDataType = '';
   public $startRestricted;
   public $status;
   public $statusMessage;
@@ -306,6 +311,20 @@ class Instance extends \Google\Collection
   {
     return $this->networkInterfaces;
   }
+  /**
+   * @param NetworkPerformanceConfig
+   */
+  public function setNetworkPerformanceConfig(NetworkPerformanceConfig $networkPerformanceConfig)
+  {
+    $this->networkPerformanceConfig = $networkPerformanceConfig;
+  }
+  /**
+   * @return NetworkPerformanceConfig
+   */
+  public function getNetworkPerformanceConfig()
+  {
+    return $this->networkPerformanceConfig;
+  }
   public function setPrivateIpv6GoogleAccess($privateIpv6GoogleAccess)
   {
     $this->privateIpv6GoogleAccess = $privateIpv6GoogleAccess;
@@ -407,6 +426,28 @@ class Instance extends \Google\Collection
   public function getShieldedInstanceIntegrityPolicy()
   {
     return $this->shieldedInstanceIntegrityPolicy;
+  }
+  public function setSourceMachineImage($sourceMachineImage)
+  {
+    $this->sourceMachineImage = $sourceMachineImage;
+  }
+  public function getSourceMachineImage()
+  {
+    return $this->sourceMachineImage;
+  }
+  /**
+   * @param CustomerEncryptionKey
+   */
+  public function setSourceMachineImageEncryptionKey(CustomerEncryptionKey $sourceMachineImageEncryptionKey)
+  {
+    $this->sourceMachineImageEncryptionKey = $sourceMachineImageEncryptionKey;
+  }
+  /**
+   * @return CustomerEncryptionKey
+   */
+  public function getSourceMachineImageEncryptionKey()
+  {
+    return $this->sourceMachineImageEncryptionKey;
   }
   public function setStartRestricted($startRestricted)
   {

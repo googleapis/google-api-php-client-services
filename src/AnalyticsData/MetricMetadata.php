@@ -21,6 +21,8 @@ class MetricMetadata extends \Google\Collection
 {
   protected $collection_key = 'deprecatedApiNames';
   public $apiName;
+  public $blockedReasons;
+  public $category;
   public $customDefinition;
   public $deprecatedApiNames;
   public $description;
@@ -35,6 +37,22 @@ class MetricMetadata extends \Google\Collection
   public function getApiName()
   {
     return $this->apiName;
+  }
+  public function setBlockedReasons($blockedReasons)
+  {
+    $this->blockedReasons = $blockedReasons;
+  }
+  public function getBlockedReasons()
+  {
+    return $this->blockedReasons;
+  }
+  public function setCategory($category)
+  {
+    $this->category = $category;
+  }
+  public function getCategory()
+  {
+    return $this->category;
   }
   public function setCustomDefinition($customDefinition)
   {

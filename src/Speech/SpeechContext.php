@@ -20,8 +20,17 @@ namespace Google\Service\Speech;
 class SpeechContext extends \Google\Collection
 {
   protected $collection_key = 'phrases';
+  public $boost;
   public $phrases;
 
+  public function setBoost($boost)
+  {
+    $this->boost = $boost;
+  }
+  public function getBoost()
+  {
+    return $this->boost;
+  }
   public function setPhrases($phrases)
   {
     $this->phrases = $phrases;

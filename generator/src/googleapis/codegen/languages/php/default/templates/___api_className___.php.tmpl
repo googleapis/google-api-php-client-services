@@ -3,7 +3,8 @@
 
 namespace {{ api.ownerName }}\Service;
 
-use Google\Client;
+use Google\Client;{% for method in api.methods %}{% if method.response %}
+use {{ api.ownerName }}\Service\{{api.className}}\{{ method.responseType.className }}{% if method.responseType.className|lower == resource.className|lower or method.responseType.className in api.resourceNames %}Model{% endif %};{% endif %}{% endfor %}
 
 /**
  * Service definition for {{ api.className }} ({{ api.version }}).

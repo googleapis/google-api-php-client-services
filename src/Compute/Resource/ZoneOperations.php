@@ -70,20 +70,24 @@ class ZoneOperations extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
-   * the response. The expression must specify the field name, a comparison
-   * operator, and the value that you want to use for filtering. The value must be
-   * a string, a number, or a boolean. The comparison operator must be either `=`,
-   * `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
-   * instances, you can exclude instances named `example-instance` by specifying
-   * `name != example-instance`. You can also filter nested fields. For example,
-   * you could specify `scheduling.automaticRestart = false` to include instances
-   * only if they are not scheduled for automatic restarts. You can use filtering
-   * on nested fields to filter based on resource labels. To filter on multiple
-   * expressions, provide each separate expression within parentheses. For
-   * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
-   * Skylake") ``` By default, each expression is an `AND` expression. However,
-   * you can include `AND` and `OR` expressions explicitly. For example: ```
-   * (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
+   * the response. The expression must specify the field name, an operator, and
+   * the value that you want to use for filtering. The value must be a string, a
+   * number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`,
+   * `>=` or `:`. For example, if you are filtering Compute Engine instances, you
+   * can exclude instances named `example-instance` by specifying `name !=
+   * example-instance`. The `:` operator can be used with string fields to match
+   * substrings. For non-string fields it is equivalent to the `=` operator. The
+   * `:*` comparison can be used to test whether a key has been defined. For
+   * example, to find all objects with `owner` label use: ``` labels.owner:* ```
+   * You can also filter nested fields. For example, you could specify
+   * `scheduling.automaticRestart = false` to include instances only if they are
+   * not scheduled for automatic restarts. You can use filtering on nested fields
+   * to filter based on resource labels. To filter on multiple expressions,
+   * provide each separate expression within parentheses. For example: ```
+   * (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+   * default, each expression is an `AND` expression. However, you can include
+   * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel
+   * Skylake") OR (cpuPlatform = "Intel Broadwell") AND
    * (scheduling.automaticRestart = true) ```
    * @opt_param string maxResults The maximum number of results per page that
    * should be returned. If the number of available results is larger than
@@ -115,15 +119,14 @@ class ZoneOperations extends \Google\Service\Resource
   /**
    * Waits for the specified Operation resource to return as `DONE` or for the
    * request to approach the 2 minute deadline, and retrieves the specified
-   * Operation resource. This method differs from the `GET` method in that it
-   * waits for no more than the default deadline (2 minutes) and then returns the
-   * current state of the operation, which might be `DONE` or still in progress.
-   * This method is called on a best-effort basis. Specifically: - In uncommon
-   * cases, when the server is overloaded, the request might return before the
-   * default deadline is reached, or might return after zero seconds. - If the
-   * default deadline is reached, there is no guarantee that the operation is
-   * actually done when the method returns. Be prepared to retry if the operation
-   * is not `DONE`.  (zoneOperations.wait)
+   * Operation resource. This method waits for no more than the 2 minutes and then
+   * returns the current state of the operation, which might be `DONE` or still in
+   * progress. This method is called on a best-effort basis. Specifically: - In
+   * uncommon cases, when the server is overloaded, the request might return
+   * before the default deadline is reached, or might return after zero seconds. -
+   * If the default deadline is reached, there is no guarantee that the operation
+   * is actually done when the method returns. Be prepared to retry if the
+   * operation is not `DONE`.  (zoneOperations.wait)
    *
    * @param string $project Project ID for this request.
    * @param string $zone Name of the zone for this request.

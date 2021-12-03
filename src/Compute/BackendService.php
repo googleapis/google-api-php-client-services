@@ -29,12 +29,15 @@ class BackendService extends \Google\Collection
   protected $circuitBreakersDataType = '';
   protected $connectionDrainingType = ConnectionDraining::class;
   protected $connectionDrainingDataType = '';
+  protected $connectionTrackingPolicyType = BackendServiceConnectionTrackingPolicy::class;
+  protected $connectionTrackingPolicyDataType = '';
   protected $consistentHashType = ConsistentHashLoadBalancerSettings::class;
   protected $consistentHashDataType = '';
   public $creationTimestamp;
   public $customRequestHeaders;
   public $customResponseHeaders;
   public $description;
+  public $edgeSecurityPolicy;
   public $enableCDN;
   protected $failoverPolicyType = BackendServiceFailoverPolicy::class;
   protected $failoverPolicyDataType = '';
@@ -63,6 +66,8 @@ class BackendService extends \Google\Collection
   protected $securitySettingsDataType = '';
   public $selfLink;
   public $sessionAffinity;
+  protected $subsettingType = Subsetting::class;
+  protected $subsettingDataType = '';
   public $timeoutSec;
 
   public function setAffinityCookieTtlSec($affinityCookieTtlSec)
@@ -130,6 +135,20 @@ class BackendService extends \Google\Collection
     return $this->connectionDraining;
   }
   /**
+   * @param BackendServiceConnectionTrackingPolicy
+   */
+  public function setConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicy $connectionTrackingPolicy)
+  {
+    $this->connectionTrackingPolicy = $connectionTrackingPolicy;
+  }
+  /**
+   * @return BackendServiceConnectionTrackingPolicy
+   */
+  public function getConnectionTrackingPolicy()
+  {
+    return $this->connectionTrackingPolicy;
+  }
+  /**
    * @param ConsistentHashLoadBalancerSettings
    */
   public function setConsistentHash(ConsistentHashLoadBalancerSettings $consistentHash)
@@ -174,6 +193,14 @@ class BackendService extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  public function setEdgeSecurityPolicy($edgeSecurityPolicy)
+  {
+    $this->edgeSecurityPolicy = $edgeSecurityPolicy;
+  }
+  public function getEdgeSecurityPolicy()
+  {
+    return $this->edgeSecurityPolicy;
   }
   public function setEnableCDN($enableCDN)
   {
@@ -386,6 +413,20 @@ class BackendService extends \Google\Collection
   public function getSessionAffinity()
   {
     return $this->sessionAffinity;
+  }
+  /**
+   * @param Subsetting
+   */
+  public function setSubsetting(Subsetting $subsetting)
+  {
+    $this->subsetting = $subsetting;
+  }
+  /**
+   * @return Subsetting
+   */
+  public function getSubsetting()
+  {
+    return $this->subsetting;
   }
   public function setTimeoutSec($timeoutSec)
   {

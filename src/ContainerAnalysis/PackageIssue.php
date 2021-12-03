@@ -19,47 +19,101 @@ namespace Google\Service\ContainerAnalysis;
 
 class PackageIssue extends \Google\Model
 {
-  protected $affectedLocationType = VulnerabilityLocation::class;
-  protected $affectedLocationDataType = '';
-  protected $fixedLocationType = VulnerabilityLocation::class;
-  protected $fixedLocationDataType = '';
-  public $severityName;
+  public $affectedCpeUri;
+  public $affectedPackage;
+  protected $affectedVersionType = Version::class;
+  protected $affectedVersionDataType = '';
+  public $effectiveSeverity;
+  public $fixAvailable;
+  public $fixedCpeUri;
+  public $fixedPackage;
+  protected $fixedVersionType = Version::class;
+  protected $fixedVersionDataType = '';
+  public $packageType;
 
-  /**
-   * @param VulnerabilityLocation
-   */
-  public function setAffectedLocation(VulnerabilityLocation $affectedLocation)
+  public function setAffectedCpeUri($affectedCpeUri)
   {
-    $this->affectedLocation = $affectedLocation;
+    $this->affectedCpeUri = $affectedCpeUri;
+  }
+  public function getAffectedCpeUri()
+  {
+    return $this->affectedCpeUri;
+  }
+  public function setAffectedPackage($affectedPackage)
+  {
+    $this->affectedPackage = $affectedPackage;
+  }
+  public function getAffectedPackage()
+  {
+    return $this->affectedPackage;
   }
   /**
-   * @return VulnerabilityLocation
+   * @param Version
    */
-  public function getAffectedLocation()
+  public function setAffectedVersion(Version $affectedVersion)
   {
-    return $this->affectedLocation;
+    $this->affectedVersion = $affectedVersion;
   }
   /**
-   * @param VulnerabilityLocation
+   * @return Version
    */
-  public function setFixedLocation(VulnerabilityLocation $fixedLocation)
+  public function getAffectedVersion()
   {
-    $this->fixedLocation = $fixedLocation;
+    return $this->affectedVersion;
+  }
+  public function setEffectiveSeverity($effectiveSeverity)
+  {
+    $this->effectiveSeverity = $effectiveSeverity;
+  }
+  public function getEffectiveSeverity()
+  {
+    return $this->effectiveSeverity;
+  }
+  public function setFixAvailable($fixAvailable)
+  {
+    $this->fixAvailable = $fixAvailable;
+  }
+  public function getFixAvailable()
+  {
+    return $this->fixAvailable;
+  }
+  public function setFixedCpeUri($fixedCpeUri)
+  {
+    $this->fixedCpeUri = $fixedCpeUri;
+  }
+  public function getFixedCpeUri()
+  {
+    return $this->fixedCpeUri;
+  }
+  public function setFixedPackage($fixedPackage)
+  {
+    $this->fixedPackage = $fixedPackage;
+  }
+  public function getFixedPackage()
+  {
+    return $this->fixedPackage;
   }
   /**
-   * @return VulnerabilityLocation
+   * @param Version
    */
-  public function getFixedLocation()
+  public function setFixedVersion(Version $fixedVersion)
   {
-    return $this->fixedLocation;
+    $this->fixedVersion = $fixedVersion;
   }
-  public function setSeverityName($severityName)
+  /**
+   * @return Version
+   */
+  public function getFixedVersion()
   {
-    $this->severityName = $severityName;
+    return $this->fixedVersion;
   }
-  public function getSeverityName()
+  public function setPackageType($packageType)
   {
-    return $this->severityName;
+    $this->packageType = $packageType;
+  }
+  public function getPackageType()
+  {
+    return $this->packageType;
   }
 }
 

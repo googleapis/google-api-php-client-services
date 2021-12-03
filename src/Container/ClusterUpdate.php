@@ -24,8 +24,6 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredAddonsConfigDataType = '';
   protected $desiredAuthenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
   protected $desiredAuthenticatorGroupsConfigDataType = '';
-  protected $desiredAutopilotType = Autopilot::class;
-  protected $desiredAutopilotDataType = '';
   protected $desiredBinaryAuthorizationType = BinaryAuthorization::class;
   protected $desiredBinaryAuthorizationDataType = '';
   protected $desiredClusterAutoscalingType = ClusterAutoscaling::class;
@@ -35,6 +33,10 @@ class ClusterUpdate extends \Google\Collection
   public $desiredDatapathProvider;
   protected $desiredDefaultSnatStatusType = DefaultSnatStatus::class;
   protected $desiredDefaultSnatStatusDataType = '';
+  protected $desiredDnsConfigType = DNSConfig::class;
+  protected $desiredDnsConfigDataType = '';
+  protected $desiredGcfsConfigType = GcfsConfig::class;
+  protected $desiredGcfsConfigDataType = '';
   public $desiredImageType;
   protected $desiredIntraNodeVisibilityConfigType = IntraNodeVisibilityConfig::class;
   protected $desiredIntraNodeVisibilityConfigDataType = '';
@@ -47,6 +49,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredMasterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $desiredMasterAuthorizedNetworksConfigDataType = '';
   public $desiredMasterVersion;
+  protected $desiredMeshCertificatesType = MeshCertificates::class;
+  protected $desiredMeshCertificatesDataType = '';
   protected $desiredMonitoringConfigType = MonitoringConfig::class;
   protected $desiredMonitoringConfigDataType = '';
   public $desiredMonitoringService;
@@ -97,20 +101,6 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredAuthenticatorGroupsConfig()
   {
     return $this->desiredAuthenticatorGroupsConfig;
-  }
-  /**
-   * @param Autopilot
-   */
-  public function setDesiredAutopilot(Autopilot $desiredAutopilot)
-  {
-    $this->desiredAutopilot = $desiredAutopilot;
-  }
-  /**
-   * @return Autopilot
-   */
-  public function getDesiredAutopilot()
-  {
-    return $this->desiredAutopilot;
   }
   /**
    * @param BinaryAuthorization
@@ -175,6 +165,34 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredDefaultSnatStatus()
   {
     return $this->desiredDefaultSnatStatus;
+  }
+  /**
+   * @param DNSConfig
+   */
+  public function setDesiredDnsConfig(DNSConfig $desiredDnsConfig)
+  {
+    $this->desiredDnsConfig = $desiredDnsConfig;
+  }
+  /**
+   * @return DNSConfig
+   */
+  public function getDesiredDnsConfig()
+  {
+    return $this->desiredDnsConfig;
+  }
+  /**
+   * @param GcfsConfig
+   */
+  public function setDesiredGcfsConfig(GcfsConfig $desiredGcfsConfig)
+  {
+    $this->desiredGcfsConfig = $desiredGcfsConfig;
+  }
+  /**
+   * @return GcfsConfig
+   */
+  public function getDesiredGcfsConfig()
+  {
+    return $this->desiredGcfsConfig;
   }
   public function setDesiredImageType($desiredImageType)
   {
@@ -263,6 +281,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredMasterVersion()
   {
     return $this->desiredMasterVersion;
+  }
+  /**
+   * @param MeshCertificates
+   */
+  public function setDesiredMeshCertificates(MeshCertificates $desiredMeshCertificates)
+  {
+    $this->desiredMeshCertificates = $desiredMeshCertificates;
+  }
+  /**
+   * @return MeshCertificates
+   */
+  public function getDesiredMeshCertificates()
+  {
+    return $this->desiredMeshCertificates;
   }
   /**
    * @param MonitoringConfig

@@ -37,6 +37,7 @@ class Routine extends \Google\Collection
   protected $routineReferenceType = RoutineReference::class;
   protected $routineReferenceDataType = '';
   public $routineType;
+  public $strictMode;
 
   /**
    * @param Argument[]
@@ -165,6 +166,14 @@ class Routine extends \Google\Collection
   public function getRoutineType()
   {
     return $this->routineType;
+  }
+  public function setStrictMode($strictMode)
+  {
+    $this->strictMode = $strictMode;
+  }
+  public function getStrictMode()
+  {
+    return $this->strictMode;
   }
 }
 

@@ -21,6 +21,8 @@ class ExternalDataConfiguration extends \Google\Collection
 {
   protected $collection_key = 'sourceUris';
   public $autodetect;
+  protected $avroOptionsType = AvroOptions::class;
+  protected $avroOptionsDataType = '';
   protected $bigtableOptionsType = BigtableOptions::class;
   protected $bigtableOptionsDataType = '';
   public $compression;
@@ -48,6 +50,20 @@ class ExternalDataConfiguration extends \Google\Collection
   public function getAutodetect()
   {
     return $this->autodetect;
+  }
+  /**
+   * @param AvroOptions
+   */
+  public function setAvroOptions(AvroOptions $avroOptions)
+  {
+    $this->avroOptions = $avroOptions;
+  }
+  /**
+   * @return AvroOptions
+   */
+  public function getAvroOptions()
+  {
+    return $this->avroOptions;
   }
   /**
    * @param BigtableOptions

@@ -17,11 +17,13 @@
 
 namespace Google\Service\CloudAsset;
 
-class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends \Google\Model
+class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends \Google\Collection
 {
+  protected $collection_key = 'scopes';
   public $etag;
   public $name;
   public $parent;
+  public $scopes;
   public $title;
 
   public function setEtag($etag)
@@ -47,6 +49,14 @@ class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends \Google\Model
   public function getParent()
   {
     return $this->parent;
+  }
+  public function setScopes($scopes)
+  {
+    $this->scopes = $scopes;
+  }
+  public function getScopes()
+  {
+    return $this->scopes;
   }
   public function setTitle($title)
   {

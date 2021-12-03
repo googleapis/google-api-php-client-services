@@ -20,10 +20,10 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for Ideahub (v1alpha).
+ * Service definition for Ideahub (v1beta).
  *
  * <p>
-</p>
+ * This is an invitation-only API.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -36,7 +36,6 @@ class Ideahub extends \Google\Service
 {
 
 
-  public $ideas;
   public $platforms_properties_ideaActivities;
   public $platforms_properties_ideaStates;
   public $platforms_properties_ideas;
@@ -56,52 +55,9 @@ class Ideahub extends \Google\Service
     $this->rootUrl = $rootUrl ?: 'https://ideahub.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1alpha';
+    $this->version = 'v1beta';
     $this->serviceName = 'ideahub';
 
-    $this->ideas = new Ideahub\Resource\Ideas(
-        $this,
-        $this->serviceName,
-        'ideas',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v1alpha/ideas',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'creator.platform' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'creator.platformId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'orderBy' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'parent' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->platforms_properties_ideaActivities = new Ideahub\Resource\PlatformsPropertiesIdeaActivities(
         $this,
         $this->serviceName,
@@ -109,7 +65,7 @@ class Ideahub extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1alpha/{+parent}/ideaActivities',
+              'path' => 'v1beta/{+parent}/ideaActivities',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -129,7 +85,7 @@ class Ideahub extends \Google\Service
         [
           'methods' => [
             'patch' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1beta/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -153,21 +109,13 @@ class Ideahub extends \Google\Service
         [
           'methods' => [
             'list' => [
-              'path' => 'v1alpha/{+parent}/ideas',
+              'path' => 'v1beta/{+parent}/ideas',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'creator.platform' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'creator.platformId' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
                 'filter' => [
                   'location' => 'query',
@@ -197,7 +145,7 @@ class Ideahub extends \Google\Service
         [
           'methods' => [
             'list' => [
-              'path' => 'v1alpha/{+parent}/locales',
+              'path' => 'v1beta/{+parent}/locales',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -225,7 +173,7 @@ class Ideahub extends \Google\Service
         [
           'methods' => [
             'patch' => [
-              'path' => 'v1alpha/{+name}',
+              'path' => 'v1beta/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [

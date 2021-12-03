@@ -35,10 +35,10 @@ use Google\Client;
  */
 class ArtifactRegistry extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View your data across Google Cloud Platform services. */
+  /** View your data across Google Cloud services and see the email address of your Google Account. */
   const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
 
@@ -68,27 +68,7 @@ class ArtifactRegistry extends \Google\Service
         'operations',
         [
           'methods' => [
-            'cancel' => [
-              'path' => 'v1/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
+            'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -96,27 +76,6 @@ class ArtifactRegistry extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/operations',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'name' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
@@ -167,7 +126,17 @@ class ArtifactRegistry extends \Google\Service
         'dockerImages',
         [
           'methods' => [
-            'list' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
               'path' => 'v1/{+parent}/dockerImages',
               'httpMethod' => 'GET',
               'parameters' => [

@@ -85,6 +85,16 @@ class AnalyticsData extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'checkCompatibility' => [
+              'path' => 'v1beta/{+property}:checkCompatibility',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'property' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getMetadata' => [
               'path' => 'v1beta/{+name}',
               'httpMethod' => 'GET',

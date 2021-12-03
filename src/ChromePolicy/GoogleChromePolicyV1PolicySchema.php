@@ -19,7 +19,7 @@ namespace Google\Service\ChromePolicy;
 
 class GoogleChromePolicyV1PolicySchema extends \Google\Collection
 {
-  protected $collection_key = 'notices';
+  protected $collection_key = 'validTargetResources';
   public $accessRestrictions;
   protected $additionalTargetKeyNamesType = GoogleChromePolicyV1AdditionalTargetKeyName::class;
   protected $additionalTargetKeyNamesDataType = 'array';
@@ -30,9 +30,12 @@ class GoogleChromePolicyV1PolicySchema extends \Google\Collection
   public $name;
   protected $noticesType = GoogleChromePolicyV1PolicySchemaNoticeDescription::class;
   protected $noticesDataType = 'array';
+  protected $policyApiLifeycleType = ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle::class;
+  protected $policyApiLifeycleDataType = '';
   public $policyDescription;
   public $schemaName;
   public $supportUri;
+  public $validTargetResources;
 
   public function setAccessRestrictions($accessRestrictions)
   {
@@ -106,6 +109,20 @@ class GoogleChromePolicyV1PolicySchema extends \Google\Collection
   {
     return $this->notices;
   }
+  /**
+   * @param ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
+   */
+  public function setPolicyApiLifeycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle $policyApiLifeycle)
+  {
+    $this->policyApiLifeycle = $policyApiLifeycle;
+  }
+  /**
+   * @return ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
+   */
+  public function getPolicyApiLifeycle()
+  {
+    return $this->policyApiLifeycle;
+  }
   public function setPolicyDescription($policyDescription)
   {
     $this->policyDescription = $policyDescription;
@@ -129,6 +146,14 @@ class GoogleChromePolicyV1PolicySchema extends \Google\Collection
   public function getSupportUri()
   {
     return $this->supportUri;
+  }
+  public function setValidTargetResources($validTargetResources)
+  {
+    $this->validTargetResources = $validTargetResources;
+  }
+  public function getValidTargetResources()
+  {
+    return $this->validTargetResources;
   }
 }
 

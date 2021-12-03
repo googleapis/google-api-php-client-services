@@ -122,7 +122,8 @@ class ProjectsLocationsNodes extends \Google\Service\Resource
     return $this->call('start', [$params], Operation::class);
   }
   /**
-   * Stops a node. (nodes.stop)
+   * Stops a node, this operation is only available with single TPU nodes.
+   * (nodes.stop)
    *
    * @param string $name The resource name.
    * @param StopNodeRequest $postBody

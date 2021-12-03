@@ -21,6 +21,7 @@ class DimensionMetadata extends \Google\Collection
 {
   protected $collection_key = 'deprecatedApiNames';
   public $apiName;
+  public $category;
   public $customDefinition;
   public $deprecatedApiNames;
   public $description;
@@ -33,6 +34,14 @@ class DimensionMetadata extends \Google\Collection
   public function getApiName()
   {
     return $this->apiName;
+  }
+  public function setCategory($category)
+  {
+    $this->category = $category;
+  }
+  public function getCategory()
+  {
+    return $this->category;
   }
   public function setCustomDefinition($customDefinition)
   {

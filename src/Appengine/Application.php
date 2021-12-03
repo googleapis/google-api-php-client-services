@@ -36,6 +36,7 @@ class Application extends \Google\Collection
   public $id;
   public $locationId;
   public $name;
+  public $serviceAccount;
   public $servingStatus;
 
   public function setAuthDomain($authDomain)
@@ -159,6 +160,14 @@ class Application extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   public function setServingStatus($servingStatus)
   {

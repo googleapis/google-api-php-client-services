@@ -31,6 +31,7 @@ class Message extends \Google\Collection
   protected $cardsDataType = 'array';
   public $createTime;
   public $fallbackText;
+  public $lastUpdateTime;
   public $name;
   public $previewText;
   protected $senderType = User::class;
@@ -122,6 +123,14 @@ class Message extends \Google\Collection
   public function getFallbackText()
   {
     return $this->fallbackText;
+  }
+  public function setLastUpdateTime($lastUpdateTime)
+  {
+    $this->lastUpdateTime = $lastUpdateTime;
+  }
+  public function getLastUpdateTime()
+  {
+    return $this->lastUpdateTime;
   }
   public function setName($name)
   {

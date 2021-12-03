@@ -26,6 +26,8 @@ class OnPremisesConfiguration extends \Google\Model
   public $hostPort;
   public $kind;
   public $password;
+  protected $sourceInstanceType = InstanceReference::class;
+  protected $sourceInstanceDataType = '';
   public $username;
 
   public function setCaCertificate($caCertificate)
@@ -83,6 +85,20 @@ class OnPremisesConfiguration extends \Google\Model
   public function getPassword()
   {
     return $this->password;
+  }
+  /**
+   * @param InstanceReference
+   */
+  public function setSourceInstance(InstanceReference $sourceInstance)
+  {
+    $this->sourceInstance = $sourceInstance;
+  }
+  /**
+   * @return InstanceReference
+   */
+  public function getSourceInstance()
+  {
+    return $this->sourceInstance;
   }
   public function setUsername($username)
   {

@@ -22,6 +22,7 @@ class Table extends \Google\Model
   protected $clusteringType = Clustering::class;
   protected $clusteringDataType = '';
   public $creationTime;
+  public $defaultCollation;
   public $description;
   protected $encryptionConfigurationType = EncryptionConfiguration::class;
   protected $encryptionConfigurationDataType = '';
@@ -82,6 +83,14 @@ class Table extends \Google\Model
   public function getCreationTime()
   {
     return $this->creationTime;
+  }
+  public function setDefaultCollation($defaultCollation)
+  {
+    $this->defaultCollation = $defaultCollation;
+  }
+  public function getDefaultCollation()
+  {
+    return $this->defaultCollation;
   }
   public function setDescription($description)
   {

@@ -1679,6 +1679,10 @@ class YouTube extends \Google\Service
                   'repeated' => true,
                   'required' => true,
                 ],
+                'externalChannelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]
@@ -1704,6 +1708,10 @@ class YouTube extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'externalChannelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'part' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1720,6 +1728,10 @@ class YouTube extends \Google\Service
                   'repeated' => true,
                   'required' => true,
                 ],
+                'externalChannelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'list' => [
               'path' => 'youtube/v3/thirdPartyLinks',
@@ -1730,6 +1742,10 @@ class YouTube extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                   'required' => true,
+                ],
+                'externalChannelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'linkingToken' => [
                   'location' => 'query',
@@ -1749,6 +1765,10 @@ class YouTube extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                   'required' => true,
+                ],
+                'externalChannelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

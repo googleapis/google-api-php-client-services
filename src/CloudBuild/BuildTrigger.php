@@ -28,6 +28,7 @@ class BuildTrigger extends \Google\Collection
   public $createTime;
   public $description;
   public $disabled;
+  public $eventType;
   public $filename;
   public $filter;
   protected $gitFileSourceType = GitFileSource::class;
@@ -110,6 +111,14 @@ class BuildTrigger extends \Google\Collection
   public function getDisabled()
   {
     return $this->disabled;
+  }
+  public function setEventType($eventType)
+  {
+    $this->eventType = $eventType;
+  }
+  public function getEventType()
+  {
+    return $this->eventType;
   }
   public function setFilename($filename)
   {

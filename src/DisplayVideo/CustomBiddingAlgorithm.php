@@ -17,15 +17,18 @@
 
 namespace Google\Service\DisplayVideo;
 
-class CustomBiddingAlgorithm extends \Google\Model
+class CustomBiddingAlgorithm extends \Google\Collection
 {
+  protected $collection_key = 'sharedAdvertiserIds';
   public $advertiserId;
   public $customBiddingAlgorithmId;
+  public $customBiddingAlgorithmState;
   public $customBiddingAlgorithmType;
   public $displayName;
   public $entityStatus;
   public $name;
   public $partnerId;
+  public $sharedAdvertiserIds;
 
   public function setAdvertiserId($advertiserId)
   {
@@ -42,6 +45,14 @@ class CustomBiddingAlgorithm extends \Google\Model
   public function getCustomBiddingAlgorithmId()
   {
     return $this->customBiddingAlgorithmId;
+  }
+  public function setCustomBiddingAlgorithmState($customBiddingAlgorithmState)
+  {
+    $this->customBiddingAlgorithmState = $customBiddingAlgorithmState;
+  }
+  public function getCustomBiddingAlgorithmState()
+  {
+    return $this->customBiddingAlgorithmState;
   }
   public function setCustomBiddingAlgorithmType($customBiddingAlgorithmType)
   {
@@ -82,6 +93,14 @@ class CustomBiddingAlgorithm extends \Google\Model
   public function getPartnerId()
   {
     return $this->partnerId;
+  }
+  public function setSharedAdvertiserIds($sharedAdvertiserIds)
+  {
+    $this->sharedAdvertiserIds = $sharedAdvertiserIds;
+  }
+  public function getSharedAdvertiserIds()
+  {
+    return $this->sharedAdvertiserIds;
   }
 }
 

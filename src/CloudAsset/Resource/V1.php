@@ -61,7 +61,7 @@ class V1 extends \Google\Service\Resource
    * earlier than the current time; otherwise, an INVALID_ARGUMENT error will be
    * returned.
    * @opt_param string analysisQuery.identitySelector.identity Required. The
-   * identity appear in the form of members in [IAM policy
+   * identity appear in the form of principals in [IAM policy
    * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The
    * examples of supported forms are: "user:mike@example.com",
    * "group:admins@example.com", "domain:google.com", "serviceAccount:my-project-
@@ -112,11 +112,11 @@ class V1 extends \Google\Service\Resource
    * the result will be determined by the selector, and this flag is not allowed
    * to set. Default is false.
    * @opt_param bool analysisQuery.options.outputGroupEdges Optional. If true, the
-   * result will output group identity edges, starting from the binding's group
-   * members, to any expanded identities. Default is false.
+   * result will output the relevant membership relationships between groups and
+   * other groups, and between groups and principals. Default is false.
    * @opt_param bool analysisQuery.options.outputResourceEdges Optional. If true,
-   * the result will output resource edges, starting from the policy attached
-   * resource, to any expanded resources. Default is false.
+   * the result will output the relevant parent/child relationships between
+   * resources. Default is false.
    * @opt_param string analysisQuery.resourceSelector.fullResourceName Required.
    * The [full resource name] (https://cloud.google.com/asset-inventory/docs
    * /resource-name-format) of a resource of [supported resource
@@ -130,6 +130,19 @@ class V1 extends \Google\Service\Resource
    * Otherwise, your query's execution will continue until the RPC deadline. If
    * it's not finished until then, you will get a DEADLINE_EXCEEDED error. Default
    * is empty.
+   * @opt_param string savedAnalysisQuery Optional. The name of a saved query,
+   * which must be in the format of: *
+   * projects/project_number/savedQueries/saved_query_id *
+   * folders/folder_number/savedQueries/saved_query_id *
+   * organizations/organization_number/savedQueries/saved_query_id If both
+   * `analysis_query` and `saved_analysis_query` are provided, they will be merged
+   * together with the `saved_analysis_query` as base and the `analysis_query` as
+   * overrides. For more details of the merge behavior, please refer to the
+   * [MergeFrom](https://developers.google.com/protocol-
+   * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details)
+   * page. Note that you cannot override primitive fields with default value, such
+   * as 0 or empty string, etc., because we use proto3, which doesn't support
+   * field presence yet.
    * @return AnalyzeIamPolicyResponse
    */
   public function analyzeIamPolicy($scope, $optParams = [])
@@ -245,12 +258,12 @@ class V1 extends \Google\Service\Resource
    * location/BigQuery table. For Cloud Storage location destinations, the output
    * format is newline-delimited JSON. Each line represents a
    * google.cloud.asset.v1.Asset in the JSON format; for BigQuery table
-   * destinations, the output table stores the fields in asset proto as columns.
-   * This API implements the google.longrunning.Operation API , which allows you
-   * to keep track of the export. We recommend intervals of at least 2 seconds
-   * with exponential retry to poll the export operation result. For regular-size
-   * resource parent, the export operation usually finishes within 5 minutes.
-   * (v1.exportAssets)
+   * destinations, the output table stores the fields in asset Protobuf as
+   * columns. This API implements the google.longrunning.Operation API, which
+   * allows you to keep track of the export. We recommend intervals of at least 2
+   * seconds with exponential retry to poll the export operation result. For
+   * regular-size resource parent, the export operation usually finishes within 5
+   * minutes. (v1.exportAssets)
    *
    * @param string $parent Required. The relative name of the root asset. This can
    * only be an organization number (such as "organizations/123"), a project ID
@@ -316,7 +329,7 @@ class V1 extends \Google\Service\Resource
    * policies#how_to_construct_a_query) for more information. If not specified or
    * empty, it will search all the IAM policies within the specified `scope`. Note
    * that the query string is compared against each Cloud IAM policy binding,
-   * including its members, roles, and Cloud IAM conditions. The returned Cloud
+   * including its principals, roles, and Cloud IAM conditions. The returned Cloud
    * IAM policies will only contain the bindings that match your query. To learn
    * more about the IAM policy structure, see [IAM policy
    * doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
@@ -342,7 +355,7 @@ class V1 extends \Google\Service\Resource
    * that are set on resources "instance1" or "instance2" and also specify user
    * "amy". * `roles:roles/compute.admin` to find IAM policy bindings that specify
    * the Compute Admin role. * `memberTypes:user` to find IAM policy bindings that
-   * contain the "user" member type.
+   * contain the principal type "user".
    * @return SearchAllIamPoliciesResponse
    */
   public function searchAllIamPolicies($scope, $optParams = [])

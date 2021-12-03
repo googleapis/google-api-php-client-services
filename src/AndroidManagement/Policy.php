@@ -45,6 +45,8 @@ class Policy extends \Google\Collection
   protected $complianceRulesDataType = 'array';
   public $createWindowsDisabled;
   public $credentialsConfigDisabled;
+  protected $crossProfilePoliciesType = CrossProfilePolicies::class;
+  protected $crossProfilePoliciesDataType = '';
   public $dataRoamingDisabled;
   public $debuggingFeaturesAllowed;
   public $defaultPermissionPolicy;
@@ -95,6 +97,7 @@ class Policy extends \Google\Collection
   public $playStoreMode;
   protected $policyEnforcementRulesType = PolicyEnforcementRule::class;
   protected $policyEnforcementRulesDataType = 'array';
+  public $preferentialNetworkService;
   public $privateKeySelectionEnabled;
   protected $recommendedGlobalProxyType = ProxyInfo::class;
   protected $recommendedGlobalProxyDataType = '';
@@ -315,6 +318,20 @@ class Policy extends \Google\Collection
   public function getCredentialsConfigDisabled()
   {
     return $this->credentialsConfigDisabled;
+  }
+  /**
+   * @param CrossProfilePolicies
+   */
+  public function setCrossProfilePolicies(CrossProfilePolicies $crossProfilePolicies)
+  {
+    $this->crossProfilePolicies = $crossProfilePolicies;
+  }
+  /**
+   * @return CrossProfilePolicies
+   */
+  public function getCrossProfilePolicies()
+  {
+    return $this->crossProfilePolicies;
   }
   public function setDataRoamingDisabled($dataRoamingDisabled)
   {
@@ -691,6 +708,14 @@ class Policy extends \Google\Collection
   public function getPolicyEnforcementRules()
   {
     return $this->policyEnforcementRules;
+  }
+  public function setPreferentialNetworkService($preferentialNetworkService)
+  {
+    $this->preferentialNetworkService = $preferentialNetworkService;
+  }
+  public function getPreferentialNetworkService()
+  {
+    return $this->preferentialNetworkService;
   }
   public function setPrivateKeySelectionEnabled($privateKeySelectionEnabled)
   {

@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for NetworkSecurity (v1beta1).
+ * Service definition for NetworkSecurity (v1).
  *
  * <p>
 </p>
@@ -57,7 +57,7 @@ class NetworkSecurity extends \Google\Service
     $this->rootUrl = $rootUrl ?: 'https://networksecurity.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta1';
+    $this->version = 'v1';
     $this->serviceName = 'networksecurity';
 
     $this->projects_locations = new NetworkSecurity\Resource\ProjectsLocations(
@@ -67,7 +67,7 @@ class NetworkSecurity extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -77,7 +77,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+name}/locations',
+              'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -109,7 +109,7 @@ class NetworkSecurity extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/authorizationPolicies',
+              'path' => 'v1/{+parent}/authorizationPolicies',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -123,7 +123,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -133,7 +133,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -143,7 +143,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => [
                 'resource' => [
@@ -157,7 +157,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/authorizationPolicies',
+              'path' => 'v1/{+parent}/authorizationPolicies',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -175,7 +175,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -189,7 +189,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -199,7 +199,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -219,7 +219,7 @@ class NetworkSecurity extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/clientTlsPolicies',
+              'path' => 'v1/{+parent}/clientTlsPolicies',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -233,7 +233,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -243,7 +243,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -253,7 +253,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => [
                 'resource' => [
@@ -267,7 +267,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/clientTlsPolicies',
+              'path' => 'v1/{+parent}/clientTlsPolicies',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -285,7 +285,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -299,7 +299,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -309,7 +309,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -329,7 +329,7 @@ class NetworkSecurity extends \Google\Service
         [
           'methods' => [
             'cancel' => [
-              'path' => 'v1beta1/{+name}:cancel',
+              'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -339,7 +339,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -349,7 +349,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -359,7 +359,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -391,7 +391,7 @@ class NetworkSecurity extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/serverTlsPolicies',
+              'path' => 'v1/{+parent}/serverTlsPolicies',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -405,7 +405,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -415,7 +415,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -425,7 +425,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => [
                 'resource' => [
@@ -439,7 +439,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/serverTlsPolicies',
+              'path' => 'v1/{+parent}/serverTlsPolicies',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -457,7 +457,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -471,7 +471,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -481,7 +481,7 @@ class NetworkSecurity extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [

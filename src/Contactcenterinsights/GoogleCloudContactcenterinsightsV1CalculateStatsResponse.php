@@ -26,6 +26,8 @@ class GoogleCloudContactcenterinsightsV1CalculateStatsResponse extends \Google\M
   protected $conversationCountTimeSeriesDataType = '';
   public $customHighlighterMatches;
   public $issueMatches;
+  protected $issueMatchesStatsType = GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats::class;
+  protected $issueMatchesStatsDataType = 'map';
   public $smartHighlighterMatches;
 
   public function setAverageDuration($averageDuration)
@@ -81,6 +83,20 @@ class GoogleCloudContactcenterinsightsV1CalculateStatsResponse extends \Google\M
   public function getIssueMatches()
   {
     return $this->issueMatches;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats[]
+   */
+  public function setIssueMatchesStats($issueMatchesStats)
+  {
+    $this->issueMatchesStats = $issueMatchesStats;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1IssueModelLabelStatsIssueStats[]
+   */
+  public function getIssueMatchesStats()
+  {
+    return $this->issueMatchesStats;
   }
   public function setSmartHighlighterMatches($smartHighlighterMatches)
   {

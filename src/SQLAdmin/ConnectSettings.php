@@ -25,6 +25,7 @@ class ConnectSettings extends \Google\Collection
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   public $kind;
+  public $region;
   protected $serverCaCertType = SslCert::class;
   protected $serverCaCertDataType = '';
 
@@ -65,6 +66,14 @@ class ConnectSettings extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  public function setRegion($region)
+  {
+    $this->region = $region;
+  }
+  public function getRegion()
+  {
+    return $this->region;
   }
   /**
    * @param SslCert

@@ -23,6 +23,8 @@ class LongRunningRecognizeRequest extends \Google\Model
   protected $audioDataType = '';
   protected $configType = RecognitionConfig::class;
   protected $configDataType = '';
+  protected $outputConfigType = TranscriptOutputConfig::class;
+  protected $outputConfigDataType = '';
 
   /**
    * @param RecognitionAudio
@@ -51,6 +53,20 @@ class LongRunningRecognizeRequest extends \Google\Model
   public function getConfig()
   {
     return $this->config;
+  }
+  /**
+   * @param TranscriptOutputConfig
+   */
+  public function setOutputConfig(TranscriptOutputConfig $outputConfig)
+  {
+    $this->outputConfig = $outputConfig;
+  }
+  /**
+   * @return TranscriptOutputConfig
+   */
+  public function getOutputConfig()
+  {
+    return $this->outputConfig;
   }
 }
 

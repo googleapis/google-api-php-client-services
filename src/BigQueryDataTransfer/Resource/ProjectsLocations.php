@@ -17,6 +17,8 @@
 
 namespace Google\Service\BigQueryDataTransfer\Resource;
 
+use Google\Service\BigQueryDataTransfer\BigquerydatatransferEmpty;
+use Google\Service\BigQueryDataTransfer\EnrollDataSourcesRequest;
 use Google\Service\BigQueryDataTransfer\ListLocationsResponse;
 use Google\Service\BigQueryDataTransfer\Location;
 
@@ -30,6 +32,27 @@ use Google\Service\BigQueryDataTransfer\Location;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Enroll data sources in a user project. This allows users to create transfer
+   * configurations for these data sources. They will also appear in the
+   * ListDataSources RPC and as such, will appear in the BigQuery UI
+   * 'https://bigquery.cloud.google.com' (and the documents can be found at
+   * https://cloud.google.com/bigquery/bigquery-web-ui and
+   * https://cloud.google.com/bigquery/docs/working-with-transfers).
+   * (locations.enrollDataSources)
+   *
+   * @param string $name The name of the project resource in the form:
+   * `projects/{project_id}`
+   * @param EnrollDataSourcesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return BigquerydatatransferEmpty
+   */
+  public function enrollDataSources($name, EnrollDataSourcesRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('enrollDataSources', [$params], BigquerydatatransferEmpty::class);
+  }
   /**
    * Gets information about a location. (locations.get)
    *

@@ -19,7 +19,7 @@ namespace Google\Service\OnDemandScanning;
 
 class Recipe extends \Google\Collection
 {
-  protected $collection_key = 'arguments';
+  protected $collection_key = 'environment';
   public $arguments;
   public $definedInMaterial;
   public $entryPoint;

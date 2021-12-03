@@ -19,6 +19,7 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
 {
+  public $enabled;
   public $host;
   public $name;
   public $port;
@@ -26,6 +27,14 @@ class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
   protected $tlsInfoType = GoogleCloudApigeeV1TlsInfoConfig::class;
   protected $tlsInfoDataType = '';
 
+  public function setEnabled($enabled)
+  {
+    $this->enabled = $enabled;
+  }
+  public function getEnabled()
+  {
+    return $this->enabled;
+  }
   public function setHost($host)
   {
     $this->host = $host;

@@ -53,6 +53,8 @@ class ProjectsRegionsClusters extends \Google\Service\Resource
    * @param Cluster $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string actionOnFailedPrimaryWorkers Optional. Failure action when
+   * primary worker creation fails.
    * @opt_param string requestId Optional. A unique ID used to identify the
    * request. If the server receives two CreateClusterRequest (https://cloud.googl
    * e.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datap

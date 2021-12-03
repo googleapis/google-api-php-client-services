@@ -26,6 +26,7 @@ class TargetInstance extends \Google\Model
   public $kind;
   public $name;
   public $natPolicy;
+  public $network;
   public $selfLink;
   public $zone;
 
@@ -84,6 +85,14 @@ class TargetInstance extends \Google\Model
   public function getNatPolicy()
   {
     return $this->natPolicy;
+  }
+  public function setNetwork($network)
+  {
+    $this->network = $network;
+  }
+  public function getNetwork()
+  {
+    return $this->network;
   }
   public function setSelfLink($selfLink)
   {

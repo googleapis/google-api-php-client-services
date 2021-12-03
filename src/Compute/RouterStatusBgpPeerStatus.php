@@ -22,11 +22,14 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   protected $collection_key = 'advertisedRoutes';
   protected $advertisedRoutesType = Route::class;
   protected $advertisedRoutesDataType = 'array';
+  protected $bfdStatusType = BfdStatus::class;
+  protected $bfdStatusDataType = '';
   public $ipAddress;
   public $linkedVpnTunnel;
   public $name;
   public $numLearnedRoutes;
   public $peerIpAddress;
+  public $routerApplianceInstance;
   public $state;
   public $status;
   public $uptime;
@@ -45,6 +48,20 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   public function getAdvertisedRoutes()
   {
     return $this->advertisedRoutes;
+  }
+  /**
+   * @param BfdStatus
+   */
+  public function setBfdStatus(BfdStatus $bfdStatus)
+  {
+    $this->bfdStatus = $bfdStatus;
+  }
+  /**
+   * @return BfdStatus
+   */
+  public function getBfdStatus()
+  {
+    return $this->bfdStatus;
   }
   public function setIpAddress($ipAddress)
   {
@@ -85,6 +102,14 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   public function getPeerIpAddress()
   {
     return $this->peerIpAddress;
+  }
+  public function setRouterApplianceInstance($routerApplianceInstance)
+  {
+    $this->routerApplianceInstance = $routerApplianceInstance;
+  }
+  public function getRouterApplianceInstance()
+  {
+    return $this->routerApplianceInstance;
   }
   public function setState($state)
   {

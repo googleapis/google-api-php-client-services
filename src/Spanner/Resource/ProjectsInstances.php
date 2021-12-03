@@ -177,7 +177,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * operation will have a name of the format `/operations/` and can be used to
    * track the instance modification. The metadata field type is
    * UpdateInstanceMetadata. The response field type is Instance, if successful.
-   * Authorization requires `spanner.instances.update` permission on resource
+   * Authorization requires `spanner.instances.update` permission on the resource
    * name. (instances.patch)
    *
    * @param string $name Required. A unique identifier for the instance, which

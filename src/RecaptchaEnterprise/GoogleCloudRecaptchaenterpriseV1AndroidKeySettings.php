@@ -20,8 +20,17 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends \Google\Collection
 {
   protected $collection_key = 'allowedPackageNames';
+  public $allowAllPackageNames;
   public $allowedPackageNames;
 
+  public function setAllowAllPackageNames($allowAllPackageNames)
+  {
+    $this->allowAllPackageNames = $allowAllPackageNames;
+  }
+  public function getAllowAllPackageNames()
+  {
+    return $this->allowAllPackageNames;
+  }
   public function setAllowedPackageNames($allowedPackageNames)
   {
     $this->allowedPackageNames = $allowedPackageNames;

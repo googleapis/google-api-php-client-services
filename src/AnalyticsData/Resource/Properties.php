@@ -21,6 +21,8 @@ use Google\Service\AnalyticsData\BatchRunPivotReportsRequest;
 use Google\Service\AnalyticsData\BatchRunPivotReportsResponse;
 use Google\Service\AnalyticsData\BatchRunReportsRequest;
 use Google\Service\AnalyticsData\BatchRunReportsResponse;
+use Google\Service\AnalyticsData\CheckCompatibilityRequest;
+use Google\Service\AnalyticsData\CheckCompatibilityResponse;
 use Google\Service\AnalyticsData\Metadata;
 use Google\Service\AnalyticsData\RunPivotReportRequest;
 use Google\Service\AnalyticsData\RunPivotReportResponse;
@@ -80,6 +82,33 @@ class Properties extends \Google\Service\Resource
     $params = ['property' => $property, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('batchRunReports', [$params], BatchRunReportsResponse::class);
+  }
+  /**
+   * This compatibility method lists dimensions and metrics that can be added to a
+   * report request and maintain compatibility. This method fails if the request's
+   * dimensions and metrics are incompatible. In Google Analytics, reports fail if
+   * they request incompatible dimensions and/or metrics; in that case, you will
+   * need to remove dimensions and/or metrics from the incompatible report until
+   * the report is compatible. The Realtime and Core reports have different
+   * compatibility rules. This method checks compatibility for Core reports.
+   * (properties.checkCompatibility)
+   *
+   * @param string $property A Google Analytics GA4 property identifier whose
+   * events are tracked. To learn more, see [where to find your Property
+   * ID](https://developers.google.com/analytics/devguides/reporting/data/v1
+   * /property-id). `property` should be the same value as in your `runReport`
+   * request. Example: properties/1234 Set the Property ID to 0 for compatibility
+   * checking on dimensions and metrics common to all properties. In this special
+   * mode, this method will not return custom dimensions and metrics.
+   * @param CheckCompatibilityRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CheckCompatibilityResponse
+   */
+  public function checkCompatibility($property, CheckCompatibilityRequest $postBody, $optParams = [])
+  {
+    $params = ['property' => $property, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkCompatibility', [$params], CheckCompatibilityResponse::class);
   }
   /**
    * Returns metadata for dimensions and metrics available in reporting methods.

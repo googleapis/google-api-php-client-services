@@ -36,11 +36,13 @@ use Google\Client;
  */
 class Iam extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $iamPolicies;
+  public $locations_workforcePools_operations;
+  public $locations_workforcePools_providers_operations;
   public $organizations_roles;
   public $permissions;
   public $projects_locations_workloadIdentityPools;
@@ -82,6 +84,46 @@ class Iam extends \Google\Service
               'path' => 'v1/iamPolicies:queryAuditableServices',
               'httpMethod' => 'POST',
               'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->locations_workforcePools_operations = new Iam\Resource\LocationsWorkforcePoolsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->locations_workforcePools_providers_operations = new Iam\Resource\LocationsWorkforcePoolsProvidersOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -689,6 +731,26 @@ class Iam extends \Google\Service
             ],'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'disable' => [
+              'path' => 'v1/{+name}:disable',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'enable' => [
+              'path' => 'v1/{+name}:enable',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
                   'location' => 'path',

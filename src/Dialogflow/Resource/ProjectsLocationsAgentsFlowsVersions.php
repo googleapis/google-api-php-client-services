@@ -17,6 +17,8 @@
 
 namespace Google\Service\Dialogflow\Resource;
 
+use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3CompareVersionsRequest;
+use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3CompareVersionsResponse;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3ListVersionsResponse;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3LoadVersionRequest;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3Version;
@@ -34,7 +36,28 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsFlowsVersions extends \Google\Service\Resource
 {
   /**
-   * Creates a Version in the specified Flow. (versions.create)
+   * Compares the specified base version with target version.
+   * (versions.compareVersions)
+   *
+   * @param string $baseVersion Required. Name of the base flow version to compare
+   * with the target version. Use version ID `0` to indicate the draft version of
+   * the specified flow. Format: `projects//locations//agents/ /flows//versions/`.
+   * @param GoogleCloudDialogflowCxV3CompareVersionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDialogflowCxV3CompareVersionsResponse
+   */
+  public function compareVersions($baseVersion, GoogleCloudDialogflowCxV3CompareVersionsRequest $postBody, $optParams = [])
+  {
+    $params = ['baseVersion' => $baseVersion, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('compareVersions', [$params], GoogleCloudDialogflowCxV3CompareVersionsResponse::class);
+  }
+  /**
+   * Creates a Version in the specified Flow. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: CreateVersionOperationMetadata - `response`: Version
+   * (versions.create)
    *
    * @param string $parent Required. The Flow to create an Version for. Format:
    * `projects//locations//agents//flows/`.
@@ -97,7 +120,14 @@ class ProjectsLocationsAgentsFlowsVersions extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDialogflowCxV3ListVersionsResponse::class);
   }
   /**
-   * Loads resources in the specified version to the draft flow. (versions.load)
+   * Loads resources in the specified version to the draft flow. This method is a
+   * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how
+   * /long-running-operation). The returned `Operation` type has the following
+   * method-specific fields: - `metadata`: An empty [Struct
+   * message](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty
+   * message](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#empty) (versions.load)
    *
    * @param string $name Required. The Version to be loaded to draft flow. Format:
    * `projects//locations//agents//flows//versions/`.

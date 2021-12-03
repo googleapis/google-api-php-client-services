@@ -19,8 +19,44 @@ namespace Google\Service\SQLAdmin;
 
 class ExportContextCsvExportOptions extends \Google\Model
 {
+  public $escapeCharacter;
+  public $fieldsTerminatedBy;
+  public $linesTerminatedBy;
+  public $quoteCharacter;
   public $selectQuery;
 
+  public function setEscapeCharacter($escapeCharacter)
+  {
+    $this->escapeCharacter = $escapeCharacter;
+  }
+  public function getEscapeCharacter()
+  {
+    return $this->escapeCharacter;
+  }
+  public function setFieldsTerminatedBy($fieldsTerminatedBy)
+  {
+    $this->fieldsTerminatedBy = $fieldsTerminatedBy;
+  }
+  public function getFieldsTerminatedBy()
+  {
+    return $this->fieldsTerminatedBy;
+  }
+  public function setLinesTerminatedBy($linesTerminatedBy)
+  {
+    $this->linesTerminatedBy = $linesTerminatedBy;
+  }
+  public function getLinesTerminatedBy()
+  {
+    return $this->linesTerminatedBy;
+  }
+  public function setQuoteCharacter($quoteCharacter)
+  {
+    $this->quoteCharacter = $quoteCharacter;
+  }
+  public function getQuoteCharacter()
+  {
+    return $this->quoteCharacter;
+  }
   public function setSelectQuery($selectQuery)
   {
     $this->selectQuery = $selectQuery;

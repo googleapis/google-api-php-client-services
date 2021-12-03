@@ -34,10 +34,10 @@ use Google\Client;
  */
 class BigQueryConnectionService extends \Google\Service
 {
-  /** View and manage your data in Google BigQuery. */
+  /** View and manage your data in Google BigQuery and see the email address for your Google Account. */
   const BIGQUERY =
       "https://www.googleapis.com/auth/bigquery";
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 

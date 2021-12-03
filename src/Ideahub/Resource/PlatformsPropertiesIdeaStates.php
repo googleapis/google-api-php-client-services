@@ -17,7 +17,7 @@
 
 namespace Google\Service\Ideahub\Resource;
 
-use Google\Service\Ideahub\GoogleSearchIdeahubV1alphaIdeaState;
+use Google\Service\Ideahub\GoogleSearchIdeahubV1betaIdeaState;
 
 /**
  * The "ideaStates" collection of methods.
@@ -34,17 +34,17 @@ class PlatformsPropertiesIdeaStates extends \Google\Service\Resource
    *
    * @param string $name Unique identifier for the idea state. Format:
    * platforms/{platform}/properties/{property}/ideaStates/{idea_state}
-   * @param GoogleSearchIdeahubV1alphaIdeaState $postBody
+   * @param GoogleSearchIdeahubV1betaIdeaState $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask The list of fields to be updated.
-   * @return GoogleSearchIdeahubV1alphaIdeaState
+   * @return GoogleSearchIdeahubV1betaIdeaState
    */
-  public function patch($name, GoogleSearchIdeahubV1alphaIdeaState $postBody, $optParams = [])
+  public function patch($name, GoogleSearchIdeahubV1betaIdeaState $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], GoogleSearchIdeahubV1alphaIdeaState::class);
+    return $this->call('patch', [$params], GoogleSearchIdeahubV1betaIdeaState::class);
   }
 }
 

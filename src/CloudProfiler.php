@@ -34,7 +34,7 @@ use Google\Client;
  */
 class CloudProfiler extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
   /** View and write monitoring data for all of your Google and third-party Cloud and API projects. */

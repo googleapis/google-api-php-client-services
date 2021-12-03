@@ -68,6 +68,8 @@ class Cluster extends \Google\Collection
   protected $masterAuthDataType = '';
   protected $masterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $masterAuthorizedNetworksConfigDataType = '';
+  protected $meshCertificatesType = MeshCertificates::class;
+  protected $meshCertificatesDataType = '';
   protected $monitoringConfigType = MonitoringConfig::class;
   protected $monitoringConfigDataType = '';
   public $monitoringService;
@@ -80,6 +82,8 @@ class Cluster extends \Google\Collection
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
   public $nodeIpv4CidrSize;
+  protected $nodePoolDefaultsType = NodePoolDefaults::class;
+  protected $nodePoolDefaultsDataType = '';
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
   protected $notificationConfigType = NotificationConfig::class;
@@ -460,6 +464,20 @@ class Cluster extends \Google\Collection
     return $this->masterAuthorizedNetworksConfig;
   }
   /**
+   * @param MeshCertificates
+   */
+  public function setMeshCertificates(MeshCertificates $meshCertificates)
+  {
+    $this->meshCertificates = $meshCertificates;
+  }
+  /**
+   * @return MeshCertificates
+   */
+  public function getMeshCertificates()
+  {
+    return $this->meshCertificates;
+  }
+  /**
    * @param MonitoringConfig
    */
   public function setMonitoringConfig(MonitoringConfig $monitoringConfig)
@@ -546,6 +564,20 @@ class Cluster extends \Google\Collection
   public function getNodeIpv4CidrSize()
   {
     return $this->nodeIpv4CidrSize;
+  }
+  /**
+   * @param NodePoolDefaults
+   */
+  public function setNodePoolDefaults(NodePoolDefaults $nodePoolDefaults)
+  {
+    $this->nodePoolDefaults = $nodePoolDefaults;
+  }
+  /**
+   * @return NodePoolDefaults
+   */
+  public function getNodePoolDefaults()
+  {
+    return $this->nodePoolDefaults;
   }
   /**
    * @param NodePool[]

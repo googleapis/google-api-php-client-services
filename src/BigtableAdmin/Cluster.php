@@ -19,6 +19,8 @@ namespace Google\Service\BigtableAdmin;
 
 class Cluster extends \Google\Model
 {
+  protected $clusterConfigType = ClusterConfig::class;
+  protected $clusterConfigDataType = '';
   public $defaultStorageType;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
@@ -27,6 +29,20 @@ class Cluster extends \Google\Model
   public $serveNodes;
   public $state;
 
+  /**
+   * @param ClusterConfig
+   */
+  public function setClusterConfig(ClusterConfig $clusterConfig)
+  {
+    $this->clusterConfig = $clusterConfig;
+  }
+  /**
+   * @return ClusterConfig
+   */
+  public function getClusterConfig()
+  {
+    return $this->clusterConfig;
+  }
   public function setDefaultStorageType($defaultStorageType)
   {
     $this->defaultStorageType = $defaultStorageType;
