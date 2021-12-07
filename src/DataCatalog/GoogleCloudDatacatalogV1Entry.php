@@ -38,6 +38,8 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public $labels;
   public $linkedResource;
   public $name;
+  protected $personalDetailsType = GoogleCloudDatacatalogV1PersonalDetails::class;
+  protected $personalDetailsDataType = '';
   protected $routineSpecType = GoogleCloudDatacatalogV1RoutineSpec::class;
   protected $routineSpecDataType = '';
   protected $schemaType = GoogleCloudDatacatalogV1Schema::class;
@@ -189,6 +191,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudDatacatalogV1PersonalDetails
+   */
+  public function setPersonalDetails(GoogleCloudDatacatalogV1PersonalDetails $personalDetails)
+  {
+    $this->personalDetails = $personalDetails;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1PersonalDetails
+   */
+  public function getPersonalDetails()
+  {
+    return $this->personalDetails;
   }
   /**
    * @param GoogleCloudDatacatalogV1RoutineSpec

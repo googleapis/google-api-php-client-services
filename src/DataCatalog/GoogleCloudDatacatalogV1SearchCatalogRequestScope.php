@@ -25,6 +25,7 @@ class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends \Google\Collecti
   public $includeProjectIds;
   public $includePublicTagTemplates;
   public $restrictedLocations;
+  public $starredOnly;
 
   public function setIncludeGcpPublicDatasets($includeGcpPublicDatasets)
   {
@@ -65,6 +66,14 @@ class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends \Google\Collecti
   public function getRestrictedLocations()
   {
     return $this->restrictedLocations;
+  }
+  public function setStarredOnly($starredOnly)
+  {
+    $this->starredOnly = $starredOnly;
+  }
+  public function getStarredOnly()
+  {
+    return $this->starredOnly;
   }
 }
 

@@ -218,8 +218,8 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * @param CloudFunction $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required list of fields to be updated in this
-   * request.
+   * @opt_param string updateMask Required. The list of fields in `CloudFunction`
+   * that have to be updated.
    * @return Operation
    */
   public function patch($name, CloudFunction $postBody, $optParams = [])

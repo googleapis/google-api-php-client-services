@@ -19,13 +19,14 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta2DocumentRevision extends \Google\Collection
 {
-  protected $collection_key = 'parent';
+  protected $collection_key = 'parentIds';
   public $agent;
   public $createTime;
   protected $humanReviewType = GoogleCloudDocumentaiV1beta2DocumentRevisionHumanReview::class;
   protected $humanReviewDataType = '';
   public $id;
   public $parent;
+  public $parentIds;
   public $processor;
 
   public function setAgent($agent)
@@ -73,6 +74,14 @@ class GoogleCloudDocumentaiV1beta2DocumentRevision extends \Google\Collection
   public function getParent()
   {
     return $this->parent;
+  }
+  public function setParentIds($parentIds)
+  {
+    $this->parentIds = $parentIds;
+  }
+  public function getParentIds()
+  {
+    return $this->parentIds;
   }
   public function setProcessor($processor)
   {
