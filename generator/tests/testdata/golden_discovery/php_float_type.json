@@ -1,0 +1,59 @@
+{
+ "name": "php_float_type",
+ "version": "v1",
+ "description": "verifying the PHP float primitive type",
+ "rootUrl": "https://www.googleapis.com/",
+ "servicePath" : "php_float_type/v1/",
+ "rpcPath": "/rpc",
+ "features": [
+  "dataWrapper"
+ ],
+ "parameters": {
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "A camelCased API parameter",
+   "default": "true",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "A typical scope"
+    },
+    "https://www.googleapis.com/auth/product": {
+     "description": "a product level scope"
+    },
+    "https://mail.google.com/": {
+      "description": "A non googleapis.com scope"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "ObjectWithFloat": {
+   "type": "object",
+   "properties": {
+    "propName": {
+     "type": "float"
+    }
+   }
+  }
+ },
+ "resources": {
+  "getwithfloat": {
+   "methods": {
+    "get": {
+     "path": "series",
+     "id": "withfloat.get",
+     "httpMethod": "GET",
+     "description": "returns an object with a float",
+     "response": {
+      "$ref": "ObjectWithFloat"
+     }
+    }
+   }
+  }
+ }
+}
