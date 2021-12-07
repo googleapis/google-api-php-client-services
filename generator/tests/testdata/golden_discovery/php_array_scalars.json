@@ -1,0 +1,80 @@
+{
+ "name": "php_array_scalars",
+ "version": "v1",
+ "description": "verifying the PHP float primitive type",
+ "rootUrl": "https://www.googleapis.com/",
+ "servicePath" : "php_float_type/v1/",
+ "rpcPath": "/rpc",
+ "features": [
+  "dataWrapper"
+ ],
+ "parameters": {
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "A camelCased API parameter",
+   "default": "true",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "A typical scope"
+    },
+    "https://www.googleapis.com/auth/product": {
+     "description": "a product level scope"
+    },
+    "https://mail.google.com/": {
+      "description": "A non googleapis.com scope"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "ObjectWithScalarArrays": {
+   "type": "object",
+   "properties": {
+    "arrayOfIntegers": {
+      "type": "array",
+      "items": {
+        "type": "int32"
+      }
+    },
+    "arrayOfStrings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "arrayOfFloats": {
+      "type": "array",
+      "items": {
+        "type": "float"
+      }
+    },
+    "arrayOfBooleans": {
+      "type": "array",
+      "items": {
+        "type": "boolean"
+      }
+    }
+   }
+  }
+ },
+ "resources": {
+  "getwitharrays": {
+   "methods": {
+    "get": {
+     "path": "arrays",
+     "id": "witharrays.get",
+     "httpMethod": "GET",
+     "description": "returns an object arrays of scalars",
+     "response": {
+      "$ref": "ObjectWithArrays"
+     }
+    }
+   }
+  }
+ }
+}
