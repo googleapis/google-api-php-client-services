@@ -24,6 +24,7 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Googl
   public $filter;
   public $kmsKey;
   public $parent;
+  public $writeDisposition;
 
   /**
    * @param GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination
@@ -62,6 +63,14 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Googl
   public function getParent()
   {
     return $this->parent;
+  }
+  public function setWriteDisposition($writeDisposition)
+  {
+    $this->writeDisposition = $writeDisposition;
+  }
+  public function getWriteDisposition()
+  {
+    return $this->writeDisposition;
   }
 }
 

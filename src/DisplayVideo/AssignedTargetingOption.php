@@ -28,6 +28,8 @@ class AssignedTargetingOption extends \Google\Model
   public $assignedTargetingOptionId;
   protected $audienceGroupDetailsType = AudienceGroupAssignedTargetingOptionDetails::class;
   protected $audienceGroupDetailsDataType = '';
+  protected $audioContentTypeDetailsType = AudioContentTypeAssignedTargetingOptionDetails::class;
+  protected $audioContentTypeDetailsDataType = '';
   protected $authorizedSellerStatusDetailsType = AuthorizedSellerStatusAssignedTargetingOptionDetails::class;
   protected $authorizedSellerStatusDetailsDataType = '';
   protected $browserDetailsType = BrowserAssignedTargetingOptionDetails::class;
@@ -169,6 +171,20 @@ class AssignedTargetingOption extends \Google\Model
   public function getAudienceGroupDetails()
   {
     return $this->audienceGroupDetails;
+  }
+  /**
+   * @param AudioContentTypeAssignedTargetingOptionDetails
+   */
+  public function setAudioContentTypeDetails(AudioContentTypeAssignedTargetingOptionDetails $audioContentTypeDetails)
+  {
+    $this->audioContentTypeDetails = $audioContentTypeDetails;
+  }
+  /**
+   * @return AudioContentTypeAssignedTargetingOptionDetails
+   */
+  public function getAudioContentTypeDetails()
+  {
+    return $this->audioContentTypeDetails;
   }
   /**
    * @param AuthorizedSellerStatusAssignedTargetingOptionDetails

@@ -23,6 +23,8 @@ class TargetingOption extends \Google\Model
   protected $ageRangeDetailsDataType = '';
   protected $appCategoryDetailsType = AppCategoryTargetingOptionDetails::class;
   protected $appCategoryDetailsDataType = '';
+  protected $audioContentTypeDetailsType = AudioContentTypeTargetingOptionDetails::class;
+  protected $audioContentTypeDetailsDataType = '';
   protected $authorizedSellerStatusDetailsType = AuthorizedSellerStatusTargetingOptionDetails::class;
   protected $authorizedSellerStatusDetailsDataType = '';
   protected $browserDetailsType = BrowserTargetingOptionDetails::class;
@@ -108,6 +110,20 @@ class TargetingOption extends \Google\Model
   public function getAppCategoryDetails()
   {
     return $this->appCategoryDetails;
+  }
+  /**
+   * @param AudioContentTypeTargetingOptionDetails
+   */
+  public function setAudioContentTypeDetails(AudioContentTypeTargetingOptionDetails $audioContentTypeDetails)
+  {
+    $this->audioContentTypeDetails = $audioContentTypeDetails;
+  }
+  /**
+   * @return AudioContentTypeTargetingOptionDetails
+   */
+  public function getAudioContentTypeDetails()
+  {
+    return $this->audioContentTypeDetails;
   }
   /**
    * @param AuthorizedSellerStatusTargetingOptionDetails

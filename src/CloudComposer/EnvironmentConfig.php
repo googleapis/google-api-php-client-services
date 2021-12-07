@@ -27,6 +27,8 @@ class EnvironmentConfig extends \Google\Model
   protected $encryptionConfigDataType = '';
   public $environmentSize;
   public $gkeCluster;
+  protected $maintenanceWindowType = MaintenanceWindow::class;
+  protected $maintenanceWindowDataType = '';
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
   public $nodeCount;
@@ -100,6 +102,20 @@ class EnvironmentConfig extends \Google\Model
   public function getGkeCluster()
   {
     return $this->gkeCluster;
+  }
+  /**
+   * @param MaintenanceWindow
+   */
+  public function setMaintenanceWindow(MaintenanceWindow $maintenanceWindow)
+  {
+    $this->maintenanceWindow = $maintenanceWindow;
+  }
+  /**
+   * @return MaintenanceWindow
+   */
+  public function getMaintenanceWindow()
+  {
+    return $this->maintenanceWindow;
   }
   /**
    * @param NodeConfig
