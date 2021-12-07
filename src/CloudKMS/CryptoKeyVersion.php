@@ -33,6 +33,7 @@ class CryptoKeyVersion extends \Google\Model
   public $importTime;
   public $name;
   public $protectionLevel;
+  public $reimportEligible;
   public $state;
 
   public function setAlgorithm($algorithm)
@@ -142,6 +143,14 @@ class CryptoKeyVersion extends \Google\Model
   public function getProtectionLevel()
   {
     return $this->protectionLevel;
+  }
+  public function setReimportEligible($reimportEligible)
+  {
+    $this->reimportEligible = $reimportEligible;
+  }
+  public function getReimportEligible()
+  {
+    return $this->reimportEligible;
   }
   public function setState($state)
   {

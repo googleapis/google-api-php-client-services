@@ -35,7 +35,7 @@ use Google\Client;
  */
 class Dialogflow extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
   /** View, manage and query your Dialogflow agents. */
@@ -44,9 +44,11 @@ class Dialogflow extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_agents;
+  public $projects_locations_agents_changelogs;
   public $projects_locations_agents_entityTypes;
   public $projects_locations_agents_environments;
   public $projects_locations_agents_environments_continuousTestResults;
+  public $projects_locations_agents_environments_deployments;
   public $projects_locations_agents_environments_experiments;
   public $projects_locations_agents_environments_sessions;
   public $projects_locations_agents_environments_sessions_entityTypes;
@@ -238,6 +240,48 @@ class Dialogflow extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_agents_changelogs = new Dialogflow\Resource\ProjectsLocationsAgentsChangelogs(
+        $this,
+        $this->serviceName,
+        'changelogs',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v3/{+parent}/changelogs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_agents_entityTypes = new Dialogflow\Resource\ProjectsLocationsAgentsEntityTypes(
         $this,
         $this->serviceName,
@@ -356,6 +400,16 @@ class Dialogflow extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'deployFlow' => [
+              'path' => 'v3/{+environment}:deployFlow',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'environment' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v3/{+name}',
               'httpMethod' => 'GET',
@@ -438,6 +492,44 @@ class Dialogflow extends \Google\Service
           'methods' => [
             'list' => [
               'path' => 'v3/{+parent}/continuousTestResults',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_agents_environments_deployments = new Dialogflow\Resource\ProjectsLocationsAgentsEnvironmentsDeployments(
+        $this,
+        $this->serviceName,
+        'deployments',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v3/{+parent}/deployments',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -998,7 +1090,17 @@ class Dialogflow extends \Google\Service
         'versions',
         [
           'methods' => [
-            'create' => [
+            'compareVersions' => [
+              'path' => 'v3/{+baseVersion}:compareVersions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'baseVersion' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v3/{+parent}/versions',
               'httpMethod' => 'POST',
               'parameters' => [

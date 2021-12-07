@@ -23,8 +23,9 @@ use Google\Client;
  * Service definition for BinaryAuthorization (v1).
  *
  * <p>
- * The management interface for Binary Authorization, a system providing policy
- * control for images deployed to Kubernetes Engine clusters.</p>
+ * The management interface for Binary Authorization, a service that provides
+ * policy-based deployment validation and control for images deployed to Google
+ * Kubernetes Engine (GKE), Anthos Service Mesh, Anthos Clusters, and Cloud Run.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -35,7 +36,7 @@ use Google\Client;
  */
 class BinaryAuthorization extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 

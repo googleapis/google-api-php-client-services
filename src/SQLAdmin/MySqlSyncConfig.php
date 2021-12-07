@@ -17,8 +17,26 @@
 
 namespace Google\Service\SQLAdmin;
 
-class MySqlSyncConfig extends \Google\Model
+class MySqlSyncConfig extends \Google\Collection
 {
+  protected $collection_key = 'initialSyncFlags';
+  protected $initialSyncFlagsType = SyncFlags::class;
+  protected $initialSyncFlagsDataType = 'array';
+
+  /**
+   * @param SyncFlags[]
+   */
+  public function setInitialSyncFlags($initialSyncFlags)
+  {
+    $this->initialSyncFlags = $initialSyncFlags;
+  }
+  /**
+   * @return SyncFlags[]
+   */
+  public function getInitialSyncFlags()
+  {
+    return $this->initialSyncFlags;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

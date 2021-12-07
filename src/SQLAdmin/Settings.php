@@ -45,9 +45,13 @@ class Settings extends \Google\Collection
   protected $locationPreferenceDataType = '';
   protected $maintenanceWindowType = MaintenanceWindow::class;
   protected $maintenanceWindowDataType = '';
+  protected $passwordValidationPolicyType = PasswordValidationPolicy::class;
+  protected $passwordValidationPolicyDataType = '';
   public $pricingPlan;
   public $replicationType;
   public $settingsVersion;
+  protected $sqlServerAuditConfigType = SqlServerAuditConfig::class;
+  protected $sqlServerAuditConfigDataType = '';
   public $storageAutoResize;
   public $storageAutoResizeLimit;
   public $tier;
@@ -237,6 +241,20 @@ class Settings extends \Google\Collection
   {
     return $this->maintenanceWindow;
   }
+  /**
+   * @param PasswordValidationPolicy
+   */
+  public function setPasswordValidationPolicy(PasswordValidationPolicy $passwordValidationPolicy)
+  {
+    $this->passwordValidationPolicy = $passwordValidationPolicy;
+  }
+  /**
+   * @return PasswordValidationPolicy
+   */
+  public function getPasswordValidationPolicy()
+  {
+    return $this->passwordValidationPolicy;
+  }
   public function setPricingPlan($pricingPlan)
   {
     $this->pricingPlan = $pricingPlan;
@@ -260,6 +278,20 @@ class Settings extends \Google\Collection
   public function getSettingsVersion()
   {
     return $this->settingsVersion;
+  }
+  /**
+   * @param SqlServerAuditConfig
+   */
+  public function setSqlServerAuditConfig(SqlServerAuditConfig $sqlServerAuditConfig)
+  {
+    $this->sqlServerAuditConfig = $sqlServerAuditConfig;
+  }
+  /**
+   * @return SqlServerAuditConfig
+   */
+  public function getSqlServerAuditConfig()
+  {
+    return $this->sqlServerAuditConfig;
   }
   public function setStorageAutoResize($storageAutoResize)
   {

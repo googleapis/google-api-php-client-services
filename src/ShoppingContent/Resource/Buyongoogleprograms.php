@@ -40,7 +40,7 @@ class Buyongoogleprograms extends \Google\Service\Resource
    * (buyongoogleprograms.activate)
    *
    * @param string $merchantId Required. The ID of the account.
-   * @param string $regionCode The program region code [ISO 3166-1
+   * @param string $regionCode Required. The program region code [ISO 3166-1
    * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US
    * is available.
    * @param ActivateBuyOnGoogleProgramRequest $postBody
@@ -57,7 +57,7 @@ class Buyongoogleprograms extends \Google\Service\Resource
    * (buyongoogleprograms.get)
    *
    * @param string $merchantId Required. The ID of the account.
-   * @param string $regionCode The Program region code [ISO 3166-1
+   * @param string $regionCode Required. The Program region code [ISO 3166-1
    * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US
    * is available.
    * @param array $optParams Optional parameters.
@@ -78,7 +78,7 @@ class Buyongoogleprograms extends \Google\Service\Resource
    * latest version is not currently signed. (buyongoogleprograms.onboard)
    *
    * @param string $merchantId Required. The ID of the account.
-   * @param string $regionCode The program region code [ISO 3166-1
+   * @param string $regionCode Required. The program region code [ISO 3166-1
    * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US
    * is available.
    * @param OnboardBuyOnGoogleProgramRequest $postBody
@@ -91,12 +91,34 @@ class Buyongoogleprograms extends \Google\Service\Resource
     return $this->call('onboard', [$params]);
   }
   /**
+   * Updates the status of the BoG program for your Merchant Center account.
+   * (buyongoogleprograms.patch)
+   *
+   * @param string $merchantId Required. The ID of the account.
+   * @param string $regionCode Required. The program region code [ISO 3166-1
+   * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US
+   * is available.
+   * @param BuyOnGoogleProgramStatus $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask The list of fields to update. If the update mask
+   * is not provided, then all the fields set in buyOnGoogleProgramStatus will be
+   * updated. Clearing fields is only possible if update mask is provided.
+   * @return BuyOnGoogleProgramStatus
+   */
+  public function patch($merchantId, $regionCode, BuyOnGoogleProgramStatus $postBody, $optParams = [])
+  {
+    $params = ['merchantId' => $merchantId, 'regionCode' => $regionCode, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], BuyOnGoogleProgramStatus::class);
+  }
+  /**
    * Pauses the BoG program in your Merchant Center account. Important: This
    * method is only whitelisted for selected merchants.
    * (buyongoogleprograms.pause)
    *
    * @param string $merchantId Required. The ID of the account.
-   * @param string $regionCode The program region code [ISO 3166-1
+   * @param string $regionCode Required. The program region code [ISO 3166-1
    * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US
    * is available.
    * @param PauseBuyOnGoogleProgramRequest $postBody
@@ -115,7 +137,7 @@ class Buyongoogleprograms extends \Google\Service\Resource
    * (buyongoogleprograms.requestreview)
    *
    * @param string $merchantId Required. The ID of the account.
-   * @param string $regionCode The program region code [ISO 3166-1
+   * @param string $regionCode Required. The program region code [ISO 3166-1
    * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US
    * is available.
    * @param RequestReviewBuyOnGoogleProgramRequest $postBody

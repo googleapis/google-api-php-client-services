@@ -37,25 +37,25 @@ class DevicesDeviceUsersClientStates extends \Google\Service\Resource
    * @param string $name Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the ClientState
    * in format:
-   * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
-   * where `device_id` is the unique ID assigned to the Device, `device_user_id`
-   * is the unique ID assigned to the User and `partner_id` identifies the partner
-   * storing the data. To get the client state for devices belonging to your own
-   * organization, the `partnerId` is in the format: `customerId-*anystring*`.
-   * Where the `customerId` is your organization's customer ID and `anystring` is
-   * any suffix. This suffix is used in setting up Custom Access Levels in
-   * Context-Aware Access. You may use `my_customer` instead of the customer ID
-   * for devices managed by your own organization. You may specify `-` in place of
-   * the `{device_id}`, so the ClientState resource name can be:
-   * `devices/-/deviceUsers/{device_user_resource_id}/clientStates/{partner_id}`.
+   * `devices/{device}/deviceUsers/{device_user}/clientStates/{partner}`, where
+   * `device` is the unique ID assigned to the Device, `device_user` is the unique
+   * ID assigned to the User and `partner` identifies the partner storing the
+   * data. To get the client state for devices belonging to your own organization,
+   * the `partnerId` is in the format: `customerId-*anystring*`. Where the
+   * `customerId` is your organization's customer ID and `anystring` is any
+   * suffix. This suffix is used in setting up Custom Access Levels in Context-
+   * Aware Access. You may use `my_customer` instead of the customer ID for
+   * devices managed by your own organization. You may specify `-` in place of the
+   * `{device}`, so the ClientState resource name can be:
+   * `devices/-/deviceUsers/{device_user_resource}/clientStates/{partner}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customer Optional. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
-   * organization, use `customers/{customer_id}`, where customer_id is the
-   * customer to whom the device belongs.
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
    * @return GoogleAppsCloudidentityDevicesV1ClientState
    */
   public function get($name, $optParams = [])
@@ -78,8 +78,8 @@ class DevicesDeviceUsersClientStates extends \Google\Service\Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
-   * organization, use `customers/{customer_id}`, where customer_id is the
-   * customer to whom the device belongs.
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
    * @opt_param string filter Optional. Additional restrictions when fetching list
    * of client states.
    * @opt_param string orderBy Optional. Order specification for client states in
@@ -105,12 +105,12 @@ class DevicesDeviceUsersClientStates extends \Google\Service\Resource
    * @param string $name Output only. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the ClientState
    * in format:
-   * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`,
-   * where partner_id corresponds to the partner storing the data. For partners
-   * belonging to the "BeyondCorp Alliance", this is the partner ID specified to
-   * you by Google. For all other callers, this is a string of the form:
-   * `{customer_id}-suffix`, where `customer_id` is your customer ID. The *suffix*
-   * is any string the caller specifies. This string will be displayed verbatim in
+   * `devices/{device}/deviceUsers/{device_user}/clientState/{partner}`, where
+   * partner corresponds to the partner storing the data. For partners belonging
+   * to the "BeyondCorp Alliance", this is the partner ID specified to you by
+   * Google. For all other callers, this is a string of the form:
+   * `{customer}-suffix`, where `customer` is your customer ID. The *suffix* is
+   * any string the caller specifies. This string will be displayed verbatim in
    * the administration console. This suffix is used in setting up Custom Access
    * Levels in Context-Aware Access. Your organization's customer ID can be
    * obtained from the URL: `GET
@@ -125,8 +125,8 @@ class DevicesDeviceUsersClientStates extends \Google\Service\Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
-   * organization, use `customers/{customer_id}`, where customer_id is the
-   * customer to whom the device belongs.
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
    * @opt_param string updateMask Optional. Comma-separated list of fully
    * qualified names of fields to be updated. If not specified, all updatable
    * fields in ClientState are updated.

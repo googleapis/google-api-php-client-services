@@ -24,6 +24,7 @@ class GoogleCloudMlV1Job extends \Google\Model
   public $errorMessage;
   public $etag;
   public $jobId;
+  public $jobPosition;
   public $labels;
   protected $predictionInputType = GoogleCloudMlV1PredictionInput::class;
   protected $predictionInputDataType = '';
@@ -75,6 +76,14 @@ class GoogleCloudMlV1Job extends \Google\Model
   public function getJobId()
   {
     return $this->jobId;
+  }
+  public function setJobPosition($jobPosition)
+  {
+    $this->jobPosition = $jobPosition;
+  }
+  public function getJobPosition()
+  {
+    return $this->jobPosition;
   }
   public function setLabels($labels)
   {

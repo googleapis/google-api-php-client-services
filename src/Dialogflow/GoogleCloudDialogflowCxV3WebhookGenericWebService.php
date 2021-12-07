@@ -17,13 +17,23 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowCxV3WebhookGenericWebService extends \Google\Model
+class GoogleCloudDialogflowCxV3WebhookGenericWebService extends \Google\Collection
 {
+  protected $collection_key = 'allowedCaCerts';
+  public $allowedCaCerts;
   public $password;
   public $requestHeaders;
   public $uri;
   public $username;
 
+  public function setAllowedCaCerts($allowedCaCerts)
+  {
+    $this->allowedCaCerts = $allowedCaCerts;
+  }
+  public function getAllowedCaCerts()
+  {
+    return $this->allowedCaCerts;
+  }
   public function setPassword($password)
   {
     $this->password = $password;

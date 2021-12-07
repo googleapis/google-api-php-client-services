@@ -41,9 +41,9 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    *
    * @param string $name Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the Device in
-   * format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id
-   * is the unique ID assigned to the Device, and device_user_id is the unique ID
-   * assigned to the User.
+   * format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+   * unique ID assigned to the Device, and device_user is the unique ID assigned
+   * to the User.
    * @param GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
@@ -59,9 +59,9 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    *
    * @param string $name Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the Device in
-   * format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id
-   * is the unique ID assigned to the Device, and device_user_id is the unique ID
-   * assigned to the User.
+   * format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+   * unique ID assigned to the Device, and device_user is the unique ID assigned
+   * to the User.
    * @param GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
@@ -79,9 +79,9 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    *
    * @param string $name Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the Device in
-   * format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id
-   * is the unique ID assigned to the Device, and device_user_id is the unique ID
-   * assigned to the User.
+   * format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+   * unique ID assigned to the Device, and device_user is the unique ID assigned
+   * to the User.
    * @param GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
@@ -98,17 +98,17 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    *
    * @param string $name Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the Device in
-   * format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id
-   * is the unique ID assigned to the Device, and device_user_id is the unique ID
-   * assigned to the User.
+   * format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+   * unique ID assigned to the Device, and device_user is the unique ID assigned
+   * to the User.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customer Optional. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
-   * organization, use `customers/{customer_id}`, where customer_id is the
-   * customer to whom the device belongs.
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
    * @return Operation
    */
   public function delete($name, $optParams = [])
@@ -122,17 +122,17 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    *
    * @param string $name Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the Device in
-   * format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id
-   * is the unique ID assigned to the Device, and device_user_id is the unique ID
-   * assigned to the User.
+   * format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+   * unique ID assigned to the Device, and device_user is the unique ID assigned
+   * to the User.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customer Optional. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
-   * organization, use `customers/{customer_id}`, where customer_id is the
-   * customer to whom the device belongs.
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
    * @return GoogleAppsCloudidentityDevicesV1DeviceUser
    */
   public function get($name, $optParams = [])
@@ -153,8 +153,8 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the customer.
    * If you're using this API for your own organization, use
    * `customers/my_customer` If you're using this API to manage another
-   * organization, use `customers/{customer_id}`, where customer_id is the
-   * customer to whom the device belongs.
+   * organization, use `customers/{customer}`, where customer is the customer to
+   * whom the device belongs.
    * @opt_param string filter Optional. Additional restrictions when fetching list
    * of devices. For a list of search fields, refer to [Mobile device search
    * fields](https://developers.google.com/admin-sdk/directory/v1/search-
@@ -232,9 +232,9 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    *
    * @param string $name Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the Device in
-   * format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id
-   * is the unique ID assigned to the Device, and device_user_id is the unique ID
-   * assigned to the User.
+   * format: `devices/{device}/deviceUsers/{device_user}`, where device is the
+   * unique ID assigned to the Device, and device_user is the unique ID assigned
+   * to the User.
    * @param GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

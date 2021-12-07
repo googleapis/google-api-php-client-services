@@ -17,6 +17,7 @@
 
 namespace Google\Service\Dialogflow\Resource;
 
+use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3DeployFlowRequest;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3Environment;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3ListEnvironmentsResponse;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse;
@@ -35,7 +36,12 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
 class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
 {
   /**
-   * Creates an Environment in the specified Agent. (environments.create)
+   * Creates an Environment in the specified Agent. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: An empty [Struct message](https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#struct) - `response`:
+   * Environment (environments.create)
    *
    * @param string $parent Required. The Agent to create an Environment for.
    * Format: `projects//locations//agents/`.
@@ -62,6 +68,25 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Deploys a flow to the specified Environment. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: DeployFlowMetadata - `response`: DeployFlowResponse
+   * (environments.deployFlow)
+   *
+   * @param string $environment Required. The environment to deploy the flow to.
+   * Format: `projects//locations//agents// environments/`.
+   * @param GoogleCloudDialogflowCxV3DeployFlowRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function deployFlow($environment, GoogleCloudDialogflowCxV3DeployFlowRequest $postBody, $optParams = [])
+  {
+    $params = ['environment' => $environment, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('deployFlow', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Retrieves the specified Environment. (environments.get)
@@ -118,7 +143,12 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
     return $this->call('lookupEnvironmentHistory', [$params], GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse::class);
   }
   /**
-   * Updates the specified Environment. (environments.patch)
+   * Updates the specified Environment. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: An empty [Struct message](https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#struct) - `response`:
+   * Environment (environments.patch)
    *
    * @param string $name The name of the environment. Format:
    * `projects//locations//agents//environments/`.
@@ -136,8 +166,11 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Kicks off a continuous test under the specified Environment.
-   * (environments.runContinuousTest)
+   * Kicks off a continuous test under the specified Environment. This method is a
+   * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how
+   * /long-running-operation). The returned `Operation` type has the following
+   * method-specific fields: - `metadata`: RunContinuousTestMetadata - `response`:
+   * RunContinuousTestResponse (environments.runContinuousTest)
    *
    * @param string $environment Required. Format:
    * `projects//locations//agents//environments/`.

@@ -23,6 +23,7 @@ class ParserConfig extends \Google\Model
   protected $schemaType = SchemaPackage::class;
   protected $schemaDataType = '';
   public $segmentTerminator;
+  public $version;
 
   public function setAllowNullHeader($allowNullHeader)
   {
@@ -53,6 +54,14 @@ class ParserConfig extends \Google\Model
   public function getSegmentTerminator()
   {
     return $this->segmentTerminator;
+  }
+  public function setVersion($version)
+  {
+    $this->version = $version;
+  }
+  public function getVersion()
+  {
+    return $this->version;
   }
 }
 

@@ -17,7 +17,7 @@
 
 namespace Google\Service\Ideahub\Resource;
 
-use Google\Service\Ideahub\GoogleSearchIdeahubV1alphaListAvailableLocalesResponse;
+use Google\Service\Ideahub\GoogleSearchIdeahubV1betaListAvailableLocalesResponse;
 
 /**
  * The "locales" collection of methods.
@@ -44,13 +44,13 @@ class PlatformsPropertiesLocales extends \Google\Service\Resource
    * `ListAvailableLocales` call. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to `ListAvailableLocales` must
    * match the call that provided the page token.
-   * @return GoogleSearchIdeahubV1alphaListAvailableLocalesResponse
+   * @return GoogleSearchIdeahubV1betaListAvailableLocalesResponse
    */
   public function listPlatformsPropertiesLocales($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], GoogleSearchIdeahubV1alphaListAvailableLocalesResponse::class);
+    return $this->call('list', [$params], GoogleSearchIdeahubV1betaListAvailableLocalesResponse::class);
   }
 }
 

@@ -26,6 +26,8 @@ class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue extends \Google\
   protected $dateValueDataType = '';
   protected $datetimeValueType = GoogleTypeDateTime::class;
   protected $datetimeValueDataType = '';
+  public $floatValue;
+  public $integerValue;
   protected $moneyValueType = GoogleTypeMoney::class;
   protected $moneyValueDataType = '';
   public $text;
@@ -79,6 +81,22 @@ class GoogleCloudDocumentaiV1beta2DocumentEntityNormalizedValue extends \Google\
   public function getDatetimeValue()
   {
     return $this->datetimeValue;
+  }
+  public function setFloatValue($floatValue)
+  {
+    $this->floatValue = $floatValue;
+  }
+  public function getFloatValue()
+  {
+    return $this->floatValue;
+  }
+  public function setIntegerValue($integerValue)
+  {
+    $this->integerValue = $integerValue;
+  }
+  public function getIntegerValue()
+  {
+    return $this->integerValue;
   }
   /**
    * @param GoogleTypeMoney

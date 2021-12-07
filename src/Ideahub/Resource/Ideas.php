@@ -34,10 +34,6 @@ class Ideas extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string creator.platform Identifies the platform from which this
-   * user is accessing Idea Hub.
-   * @opt_param string creator.platformId Identifies the platform account
-   * (blog/site/etc.) for which to fetch Ideas.
    * @opt_param string filter Allows filtering. Supported syntax: * Filter
    * expressions are made up of one or more restrictions. * Restrictions are
    * implicitly combined, as if the `AND` operator was always used. The `OR`

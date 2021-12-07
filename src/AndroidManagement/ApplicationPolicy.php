@@ -26,6 +26,8 @@ class ApplicationPolicy extends \Google\Collection
   public $defaultPermissionPolicy;
   public $delegatedScopes;
   public $disabled;
+  protected $extensionConfigType = ExtensionConfig::class;
+  protected $extensionConfigDataType = '';
   public $installType;
   public $lockTaskAllowed;
   public $managedConfiguration;
@@ -83,6 +85,20 @@ class ApplicationPolicy extends \Google\Collection
   public function getDisabled()
   {
     return $this->disabled;
+  }
+  /**
+   * @param ExtensionConfig
+   */
+  public function setExtensionConfig(ExtensionConfig $extensionConfig)
+  {
+    $this->extensionConfig = $extensionConfig;
+  }
+  /**
+   * @return ExtensionConfig
+   */
+  public function getExtensionConfig()
+  {
+    return $this->extensionConfig;
   }
   public function setInstallType($installType)
   {

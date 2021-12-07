@@ -21,6 +21,8 @@ class CacheKeyPolicy extends \Google\Collection
 {
   protected $collection_key = 'queryStringWhitelist';
   public $includeHost;
+  public $includeHttpHeaders;
+  public $includeNamedCookies;
   public $includeProtocol;
   public $includeQueryString;
   public $queryStringBlacklist;
@@ -33,6 +35,22 @@ class CacheKeyPolicy extends \Google\Collection
   public function getIncludeHost()
   {
     return $this->includeHost;
+  }
+  public function setIncludeHttpHeaders($includeHttpHeaders)
+  {
+    $this->includeHttpHeaders = $includeHttpHeaders;
+  }
+  public function getIncludeHttpHeaders()
+  {
+    return $this->includeHttpHeaders;
+  }
+  public function setIncludeNamedCookies($includeNamedCookies)
+  {
+    $this->includeNamedCookies = $includeNamedCookies;
+  }
+  public function getIncludeNamedCookies()
+  {
+    return $this->includeNamedCookies;
   }
   public function setIncludeProtocol($includeProtocol)
   {

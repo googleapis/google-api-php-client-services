@@ -19,12 +19,13 @@ namespace Google\Service\CloudFilestore;
 
 class Instance extends \Google\Collection
 {
-  protected $collection_key = 'networks';
+  protected $collection_key = 'suspensionReasons';
   public $createTime;
   public $description;
   public $etag;
   protected $fileSharesType = FileShareConfig::class;
   protected $fileSharesDataType = 'array';
+  public $kmsKeyName;
   public $labels;
   public $name;
   protected $networksType = NetworkConfig::class;
@@ -32,6 +33,7 @@ class Instance extends \Google\Collection
   public $satisfiesPzs;
   public $state;
   public $statusMessage;
+  public $suspensionReasons;
   public $tier;
 
   public function setCreateTime($createTime)
@@ -71,6 +73,14 @@ class Instance extends \Google\Collection
   public function getFileShares()
   {
     return $this->fileShares;
+  }
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
   }
   public function setLabels($labels)
   {
@@ -125,6 +135,14 @@ class Instance extends \Google\Collection
   public function getStatusMessage()
   {
     return $this->statusMessage;
+  }
+  public function setSuspensionReasons($suspensionReasons)
+  {
+    $this->suspensionReasons = $suspensionReasons;
+  }
+  public function getSuspensionReasons()
+  {
+    return $this->suspensionReasons;
   }
   public function setTier($tier)
   {

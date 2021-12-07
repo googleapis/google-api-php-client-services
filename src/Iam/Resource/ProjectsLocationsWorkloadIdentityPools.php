@@ -116,7 +116,7 @@ class ProjectsLocationsWorkloadIdentityPools extends \Google\Service\Resource
    * @param WorkloadIdentityPool $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required. The list of fields update.
+   * @opt_param string updateMask Required. The list of fields to update.
    * @return Operation
    */
   public function patch($name, WorkloadIdentityPool $postBody, $optParams = [])

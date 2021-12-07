@@ -20,10 +20,19 @@ namespace Google\Service\OnDemandScanning;
 class AnalyzePackagesRequestV1 extends \Google\Collection
 {
   protected $collection_key = 'packages';
+  public $includeOsvData;
   protected $packagesType = PackageData::class;
   protected $packagesDataType = 'array';
   public $resourceUri;
 
+  public function setIncludeOsvData($includeOsvData)
+  {
+    $this->includeOsvData = $includeOsvData;
+  }
+  public function getIncludeOsvData()
+  {
+    return $this->includeOsvData;
+  }
   /**
    * @param PackageData[]
    */

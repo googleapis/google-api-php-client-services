@@ -17,6 +17,8 @@
 
 namespace Google\Service\ShoppingContent\Resource;
 
+use Google\Service\ShoppingContent\CaptureOrderRequest;
+use Google\Service\ShoppingContent\CaptureOrderResponse;
 use Google\Service\ShoppingContent\Order;
 use Google\Service\ShoppingContent\OrdersAcknowledgeRequest;
 use Google\Service\ShoppingContent\OrdersAcknowledgeResponse;
@@ -145,6 +147,33 @@ class Orders extends \Google\Service\Resource
     $params = ['merchantId' => $merchantId, 'orderId' => $orderId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('canceltestorderbycustomer', [$params], OrdersCancelTestOrderByCustomerResponse::class);
+  }
+  /**
+   * Capture funds from the customer for the current order total. This method
+   * should be called after the merchant verifies that they are able and ready to
+   * start shipping the order. This method blocks until a response is received
+   * from the payment processsor. If this method succeeds, the merchant is
+   * guaranteed to receive funds for the order after shipment. If the request
+   * fails, it can be retried or the order may be cancelled. This method cannot be
+   * called after the entire order is already shipped. A rejected error code is
+   * returned when the payment service provider has declined the charge. This
+   * indicates a problem between the PSP and either the merchant's or customer's
+   * account. Sometimes this error will be resolved by the customer. We recommend
+   * retrying these errors once per day or cancelling the order with reason
+   * `failedToCaptureFunds` if the items cannot be held. (orders.captureOrder)
+   *
+   * @param string $merchantId Required. The ID of the account that manages the
+   * order. This cannot be a multi-client account.
+   * @param string $orderId Required. The ID of the Order.
+   * @param CaptureOrderRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CaptureOrderResponse
+   */
+  public function captureOrder($merchantId, $orderId, CaptureOrderRequest $postBody, $optParams = [])
+  {
+    $params = ['merchantId' => $merchantId, 'orderId' => $orderId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('captureOrder', [$params], CaptureOrderResponse::class);
   }
   /**
    * Sandbox only. Creates a test order. (orders.createtestorder)

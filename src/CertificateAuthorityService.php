@@ -25,7 +25,7 @@ use Google\Client;
  * <p>
  * The Certificate Authority Service API is a highly-available, scalable service
  * that enables you to simplify and automate the management of private
- * certificate authorities (CAs) while staying in control of your private keys."</p>
+ * certificate authorities (CAs) while staying in control of your private keys.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -36,7 +36,7 @@ use Google\Client;
  */
 class CertificateAuthorityService extends \Google\Service
 {
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 

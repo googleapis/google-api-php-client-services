@@ -20,6 +20,7 @@ namespace Google\Service\WorkflowExecutions;
 class Execution extends \Google\Model
 {
   public $argument;
+  public $callLogLevel;
   public $endTime;
   protected $errorType = Error::class;
   protected $errorDataType = '';
@@ -36,6 +37,14 @@ class Execution extends \Google\Model
   public function getArgument()
   {
     return $this->argument;
+  }
+  public function setCallLogLevel($callLogLevel)
+  {
+    $this->callLogLevel = $callLogLevel;
+  }
+  public function getCallLogLevel()
+  {
+    return $this->callLogLevel;
   }
   public function setEndTime($endTime)
   {

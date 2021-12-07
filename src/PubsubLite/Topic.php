@@ -22,6 +22,8 @@ class Topic extends \Google\Model
   public $name;
   protected $partitionConfigType = PartitionConfig::class;
   protected $partitionConfigDataType = '';
+  protected $reservationConfigType = ReservationConfig::class;
+  protected $reservationConfigDataType = '';
   protected $retentionConfigType = RetentionConfig::class;
   protected $retentionConfigDataType = '';
 
@@ -46,6 +48,20 @@ class Topic extends \Google\Model
   public function getPartitionConfig()
   {
     return $this->partitionConfig;
+  }
+  /**
+   * @param ReservationConfig
+   */
+  public function setReservationConfig(ReservationConfig $reservationConfig)
+  {
+    $this->reservationConfig = $reservationConfig;
+  }
+  /**
+   * @return ReservationConfig
+   */
+  public function getReservationConfig()
+  {
+    return $this->reservationConfig;
   }
   /**
    * @param RetentionConfig

@@ -29,6 +29,7 @@ class GoogleCloudApigeeV1Instance extends \Google\Model
   public $name;
   public $peeringCidrRange;
   public $port;
+  public $runtimeVersion;
   public $state;
 
   public function setCreatedAt($createdAt)
@@ -110,6 +111,14 @@ class GoogleCloudApigeeV1Instance extends \Google\Model
   public function getPort()
   {
     return $this->port;
+  }
+  public function setRuntimeVersion($runtimeVersion)
+  {
+    $this->runtimeVersion = $runtimeVersion;
+  }
+  public function getRuntimeVersion()
+  {
+    return $this->runtimeVersion;
   }
   public function setState($state)
   {

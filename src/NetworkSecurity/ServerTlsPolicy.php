@@ -26,7 +26,7 @@ class ServerTlsPolicy extends \Google\Model
   protected $mtlsPolicyType = MTLSPolicy::class;
   protected $mtlsPolicyDataType = '';
   public $name;
-  protected $serverCertificateType = GoogleCloudNetworksecurityV1beta1CertificateProvider::class;
+  protected $serverCertificateType = GoogleCloudNetworksecurityV1CertificateProvider::class;
   protected $serverCertificateDataType = '';
   public $updateTime;
 
@@ -85,14 +85,14 @@ class ServerTlsPolicy extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudNetworksecurityV1beta1CertificateProvider
+   * @param GoogleCloudNetworksecurityV1CertificateProvider
    */
-  public function setServerCertificate(GoogleCloudNetworksecurityV1beta1CertificateProvider $serverCertificate)
+  public function setServerCertificate(GoogleCloudNetworksecurityV1CertificateProvider $serverCertificate)
   {
     $this->serverCertificate = $serverCertificate;
   }
   /**
-   * @return GoogleCloudNetworksecurityV1beta1CertificateProvider
+   * @return GoogleCloudNetworksecurityV1CertificateProvider
    */
   public function getServerCertificate()
   {

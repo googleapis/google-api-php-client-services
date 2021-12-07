@@ -20,6 +20,8 @@ namespace Google\Service\Logging;
 class LogBucket extends \Google\Collection
 {
   protected $collection_key = 'restrictedFields';
+  protected $cmekSettingsType = CmekSettings::class;
+  protected $cmekSettingsDataType = '';
   public $createTime;
   public $description;
   public $lifecycleState;
@@ -29,6 +31,20 @@ class LogBucket extends \Google\Collection
   public $retentionDays;
   public $updateTime;
 
+  /**
+   * @param CmekSettings
+   */
+  public function setCmekSettings(CmekSettings $cmekSettings)
+  {
+    $this->cmekSettings = $cmekSettings;
+  }
+  /**
+   * @return CmekSettings
+   */
+  public function getCmekSettings()
+  {
+    return $this->cmekSettings;
+  }
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;

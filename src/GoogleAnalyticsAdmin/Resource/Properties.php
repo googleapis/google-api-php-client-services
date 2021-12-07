@@ -17,6 +17,9 @@
 
 namespace Google\Service\GoogleAnalyticsAdmin\Resource;
 
+use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest;
+use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionResponse;
+use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaDataRetentionSettings;
 use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaGoogleSignalsSettings;
 use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaListPropertiesResponse;
 use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaProperty;
@@ -31,6 +34,24 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaProperty;
  */
 class Properties extends \Google\Service\Resource
 {
+  /**
+   * Acknowledges the terms of user data collection for the specified property.
+   * This acknowledgement must be completed (either in the Google Analytics UI or
+   * via this API) before MeasurementProtocolSecret resources may be created.
+   * (properties.acknowledgeUserDataCollection)
+   *
+   * @param string $property Required. The property for which to acknowledge user
+   * data collection.
+   * @param GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionResponse
+   */
+  public function acknowledgeUserDataCollection($property, GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest $postBody, $optParams = [])
+  {
+    $params = ['property' => $property, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('acknowledgeUserDataCollection', [$params], GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionResponse::class);
+  }
   /**
    * Creates an "GA4" property with the specified location and attributes.
    * (properties.create)
@@ -78,6 +99,22 @@ class Properties extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleAnalyticsAdminV1alphaProperty::class);
+  }
+  /**
+   * Returns the singleton data retention settings for this property.
+   * (properties.getDataRetentionSettings)
+   *
+   * @param string $name Required. The name of the settings to lookup. Format:
+   * properties/{property}/dataRetentionSettings Example:
+   * "properties/1000/dataRetentionSettings"
+   * @param array $optParams Optional parameters.
+   * @return GoogleAnalyticsAdminV1alphaDataRetentionSettings
+   */
+  public function getDataRetentionSettings($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getDataRetentionSettings', [$params], GoogleAnalyticsAdminV1alphaDataRetentionSettings::class);
   }
   /**
    * Lookup for Google Signals settings for a property.
@@ -149,6 +186,27 @@ class Properties extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleAnalyticsAdminV1alphaProperty::class);
+  }
+  /**
+   * Updates the singleton data retention settings for this property.
+   * (properties.updateDataRetentionSettings)
+   *
+   * @param string $name Output only. Resource name for this DataRetentionSetting
+   * resource. Format: properties/{property}/dataRetentionSettings
+   * @param GoogleAnalyticsAdminV1alphaDataRetentionSettings $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The list of fields to be updated.
+   * Field names must be in snake case (e.g., "field_to_update"). Omitted fields
+   * will not be updated. To replace the entire entity, use one path with the
+   * string "*" to match all fields.
+   * @return GoogleAnalyticsAdminV1alphaDataRetentionSettings
+   */
+  public function updateDataRetentionSettings($name, GoogleAnalyticsAdminV1alphaDataRetentionSettings $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateDataRetentionSettings', [$params], GoogleAnalyticsAdminV1alphaDataRetentionSettings::class);
   }
   /**
    * Updates Google Signals settings for a property.

@@ -31,8 +31,14 @@ class TransferSpec extends \Google\Model
   protected $httpDataSourceDataType = '';
   protected $objectConditionsType = ObjectConditions::class;
   protected $objectConditionsDataType = '';
+  protected $posixDataSinkType = PosixFilesystem::class;
+  protected $posixDataSinkDataType = '';
   protected $posixDataSourceType = PosixFilesystem::class;
   protected $posixDataSourceDataType = '';
+  public $sinkAgentPoolName;
+  public $sourceAgentPoolName;
+  protected $transferManifestType = TransferManifest::class;
+  protected $transferManifestDataType = '';
   protected $transferOptionsType = TransferOptions::class;
   protected $transferOptionsDataType = '';
 
@@ -123,6 +129,20 @@ class TransferSpec extends \Google\Model
   /**
    * @param PosixFilesystem
    */
+  public function setPosixDataSink(PosixFilesystem $posixDataSink)
+  {
+    $this->posixDataSink = $posixDataSink;
+  }
+  /**
+   * @return PosixFilesystem
+   */
+  public function getPosixDataSink()
+  {
+    return $this->posixDataSink;
+  }
+  /**
+   * @param PosixFilesystem
+   */
   public function setPosixDataSource(PosixFilesystem $posixDataSource)
   {
     $this->posixDataSource = $posixDataSource;
@@ -133,6 +153,36 @@ class TransferSpec extends \Google\Model
   public function getPosixDataSource()
   {
     return $this->posixDataSource;
+  }
+  public function setSinkAgentPoolName($sinkAgentPoolName)
+  {
+    $this->sinkAgentPoolName = $sinkAgentPoolName;
+  }
+  public function getSinkAgentPoolName()
+  {
+    return $this->sinkAgentPoolName;
+  }
+  public function setSourceAgentPoolName($sourceAgentPoolName)
+  {
+    $this->sourceAgentPoolName = $sourceAgentPoolName;
+  }
+  public function getSourceAgentPoolName()
+  {
+    return $this->sourceAgentPoolName;
+  }
+  /**
+   * @param TransferManifest
+   */
+  public function setTransferManifest(TransferManifest $transferManifest)
+  {
+    $this->transferManifest = $transferManifest;
+  }
+  /**
+   * @return TransferManifest
+   */
+  public function getTransferManifest()
+  {
+    return $this->transferManifest;
   }
   /**
    * @param TransferOptions

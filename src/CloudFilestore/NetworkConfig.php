@@ -20,11 +20,20 @@ namespace Google\Service\CloudFilestore;
 class NetworkConfig extends \Google\Collection
 {
   protected $collection_key = 'modes';
+  public $connectMode;
   public $ipAddresses;
   public $modes;
   public $network;
   public $reservedIpRange;
 
+  public function setConnectMode($connectMode)
+  {
+    $this->connectMode = $connectMode;
+  }
+  public function getConnectMode()
+  {
+    return $this->connectMode;
+  }
   public function setIpAddresses($ipAddresses)
   {
     $this->ipAddresses = $ipAddresses;

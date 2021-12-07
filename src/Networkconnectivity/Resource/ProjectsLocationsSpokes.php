@@ -36,24 +36,24 @@ use Google\Service\Networkconnectivity\TestIamPermissionsResponse;
 class ProjectsLocationsSpokes extends \Google\Service\Resource
 {
   /**
-   * Creates a new Spoke in a given project and location. (spokes.create)
+   * Creates a spoke in the specified project and location. (spokes.create)
    *
-   * @param string $parent Required. The parent's resource name of the Spoke.
+   * @param string $parent Required. The parent resource.
    * @param Spoke $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. An optional request ID to identify
-   * requests. Specify a unique request ID so that if you must retry your request,
-   * the server will know to ignore the request if it has already been completed.
-   * The server will guarantee that for at least 60 minutes since the first
-   * request. For example, consider a situation where you make an initial request
-   * and t he request times out. If you make the request again with the same
-   * request ID, the server can check if original operation with the same request
-   * ID was received, and if so, will ignore the second request. This prevents
-   * clients from accidentally creating duplicate commitments. The request ID must
-   * be a valid UUID with the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string spokeId Optional. Unique id for the Spoke to create.
+   * @opt_param string requestId Optional. A unique request ID (optional). If you
+   * specify this ID, you can use it in cases when you need to retry your request.
+   * When you need to retry, this ID lets the server know that it can ignore the
+   * request if it has already been completed. The server guarantees that for at
+   * least 60 minutes after the first request. For example, consider a situation
+   * where you make an initial request and the request times out. If you make the
+   * request again with the same request ID, the server can check to see whether
+   * the original operation was received. If it was, the server ignores the second
+   * request. This behavior prevents clients from mistakenly creating duplicate
+   * commitments. The request ID must be a valid UUID, with the exception that
+   * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+   * @opt_param string spokeId Required. Unique id for the spoke to create.
    * @return GoogleLongrunningOperation
    */
   public function create($parent, Spoke $postBody, $optParams = [])
@@ -63,22 +63,22 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes a single Spoke. (spokes.delete)
+   * Deletes the specified spoke. (spokes.delete)
    *
-   * @param string $name Required. The name of the Spoke to delete.
+   * @param string $name Required. The name of the spoke to delete.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. An optional request ID to identify
-   * requests. Specify a unique request ID so that if you must retry your request,
-   * the server will know to ignore the request if it has already been completed.
-   * The server will guarantee that for at least 60 minutes after the first
-   * request. For example, consider a situation where you make an initial request
-   * and t he request times out. If you make the request again with the same
-   * request ID, the server can check if original operation with the same request
-   * ID was received, and if so, will ignore the second request. This prevents
-   * clients from accidentally creating duplicate commitments. The request ID must
-   * be a valid UUID with the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
+   * @opt_param string requestId Optional. A unique request ID (optional). If you
+   * specify this ID, you can use it in cases when you need to retry your request.
+   * When you need to retry, this ID lets the server know that it can ignore the
+   * request if it has already been completed. The server guarantees that for at
+   * least 60 minutes after the first request. For example, consider a situation
+   * where you make an initial request and the request times out. If you make the
+   * request again with the same request ID, the server can check to see whether
+   * the original operation was received. If it was, the server ignores the second
+   * request. This behavior prevents clients from mistakenly creating duplicate
+   * commitments. The request ID must be a valid UUID, with the exception that
+   * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
    */
   public function delete($name, $optParams = [])
@@ -88,9 +88,9 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Gets details of a single Spoke. (spokes.get)
+   * Gets details about the specified spoke. (spokes.get)
    *
-   * @param string $name Required. The name of Spoke resource.
+   * @param string $name Required. The name of the spoke resource.
    * @param array $optParams Optional parameters.
    * @return Spoke
    */
@@ -109,12 +109,16 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * field.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int options.requestedPolicyVersion Optional. The policy format
-   * version to be returned. Valid values are 0, 1, and 3. Requests specifying an
-   * invalid value will be rejected. Requests for policies with any conditional
-   * bindings must specify version 3. Policies without any conditional bindings
-   * may specify any valid value or leave the field unset. To learn which
-   * resources support conditions in their IAM policies, see the [IAM
+   * @opt_param int options.requestedPolicyVersion Optional. The maximum policy
+   * version that will be used to format the policy. Valid values are 0, 1, and 3.
+   * Requests specifying an invalid value will be rejected. Requests for policies
+   * with any conditional role bindings must specify version 3. Policies with no
+   * conditional role bindings may specify any valid value or leave the field
+   * unset. The policy in the response might use the policy version that you
+   * specified, or it might use a lower policy version. For example, if you
+   * specify version 3, but the policy has no conditional role bindings, the
+   * response uses version 1. To learn which resources support conditions in their
+   * IAM policies, see the [IAM
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
@@ -126,14 +130,14 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Lists Spokes in a given project and location.
+   * Lists the spokes in the specified project and location.
    * (spokes.listProjectsLocationsSpokes)
    *
-   * @param string $parent Required. The parent's resource name.
+   * @param string $parent Required. The parent resource.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter A filter expression that filters the results listed
-   * in the response.
+   * @opt_param string filter An expression that filters the results listed in the
+   * response.
    * @opt_param string orderBy Sort the results by a certain order.
    * @opt_param int pageSize The maximum number of results per page that should be
    * returned.
@@ -147,28 +151,30 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
     return $this->call('list', [$params], ListSpokesResponse::class);
   }
   /**
-   * Updates the parameters of a single Spoke. (spokes.patch)
+   * Updates the parameters of the specified spoke. (spokes.patch)
    *
-   * @param string $name Immutable. The name of a Spoke resource.
+   * @param string $name Immutable. The name of the spoke. Spoke names must be
+   * unique. They use the following form:
+   * `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
    * @param Spoke $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. An optional request ID to identify
-   * requests. Specify a unique request ID so that if you must retry your request,
-   * the server will know to ignore the request if it has already been completed.
-   * The server will guarantee that for at least 60 minutes since the first
-   * request. For example, consider a situation where you make an initial request
-   * and t he request times out. If you make the request again with the same
-   * request ID, the server can check if original operation with the same request
-   * ID was received, and if so, will ignore the second request. This prevents
-   * clients from accidentally creating duplicate commitments. The request ID must
-   * be a valid UUID with the exception that zero UUID is not supported
-   * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string updateMask Optional. Field mask is used to specify the
-   * fields to be overwritten in the Spoke resource by the update. The fields
-   * specified in the update_mask are relative to the resource, not the full
-   * request. A field will be overwritten if it is in the mask. If the user does
-   * not provide a mask then all fields will be overwritten.
+   * @opt_param string requestId Optional. A unique request ID (optional). If you
+   * specify this ID, you can use it in cases when you need to retry your request.
+   * When you need to retry, this ID lets the server know that it can ignore the
+   * request if it has already been completed. The server guarantees that for at
+   * least 60 minutes after the first request. For example, consider a situation
+   * where you make an initial request and the request times out. If you make the
+   * request again with the same request ID, the server can check to see whether
+   * the original operation was received. If it was, the server ignores the second
+   * request. This behavior prevents clients from mistakenly creating duplicate
+   * commitments. The request ID must be a valid UUID, with the exception that
+   * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Optional. In the case of an update to an
+   * existing spoke, field mask is used to specify the fields to be overwritten.
+   * The fields specified in the update_mask are relative to the resource, not the
+   * full request. A field is overwritten if it is in the mask. If the user does
+   * not provide a mask, then all fields are overwritten.
    * @return GoogleLongrunningOperation
    */
   public function patch($name, Spoke $postBody, $optParams = [])

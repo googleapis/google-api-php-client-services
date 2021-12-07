@@ -21,8 +21,12 @@ class DeprecatedEvent extends \Google\Model
 {
   protected $actionType = FormAction::class;
   protected $actionDataType = '';
+  protected $commonType = CommonEventObject::class;
+  protected $commonDataType = '';
   public $configCompleteRedirectUrl;
+  public $dialogEventType;
   public $eventTime;
+  public $isDialogEvent;
   protected $messageType = Message::class;
   protected $messageDataType = '';
   protected $spaceType = Space::class;
@@ -47,6 +51,20 @@ class DeprecatedEvent extends \Google\Model
   {
     return $this->action;
   }
+  /**
+   * @param CommonEventObject
+   */
+  public function setCommon(CommonEventObject $common)
+  {
+    $this->common = $common;
+  }
+  /**
+   * @return CommonEventObject
+   */
+  public function getCommon()
+  {
+    return $this->common;
+  }
   public function setConfigCompleteRedirectUrl($configCompleteRedirectUrl)
   {
     $this->configCompleteRedirectUrl = $configCompleteRedirectUrl;
@@ -55,6 +73,14 @@ class DeprecatedEvent extends \Google\Model
   {
     return $this->configCompleteRedirectUrl;
   }
+  public function setDialogEventType($dialogEventType)
+  {
+    $this->dialogEventType = $dialogEventType;
+  }
+  public function getDialogEventType()
+  {
+    return $this->dialogEventType;
+  }
   public function setEventTime($eventTime)
   {
     $this->eventTime = $eventTime;
@@ -62,6 +88,14 @@ class DeprecatedEvent extends \Google\Model
   public function getEventTime()
   {
     return $this->eventTime;
+  }
+  public function setIsDialogEvent($isDialogEvent)
+  {
+    $this->isDialogEvent = $isDialogEvent;
+  }
+  public function getIsDialogEvent()
+  {
+    return $this->isDialogEvent;
   }
   /**
    * @param Message

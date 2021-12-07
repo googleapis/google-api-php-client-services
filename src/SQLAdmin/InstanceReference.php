@@ -20,6 +20,7 @@ namespace Google\Service\SQLAdmin;
 class InstanceReference extends \Google\Model
 {
   public $name;
+  public $project;
   public $region;
 
   public function setName($name)
@@ -29,6 +30,14 @@ class InstanceReference extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setProject($project)
+  {
+    $this->project = $project;
+  }
+  public function getProject()
+  {
+    return $this->project;
   }
   public function setRegion($region)
   {

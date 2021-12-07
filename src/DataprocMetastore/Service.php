@@ -35,6 +35,8 @@ class Service extends \Google\Model
   protected $metadataManagementActivityDataType = '';
   public $name;
   public $network;
+  protected $networkConfigType = NetworkConfig::class;
+  protected $networkConfigDataType = '';
   public $port;
   public $releaseChannel;
   public $state;
@@ -160,6 +162,20 @@ class Service extends \Google\Model
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param NetworkConfig
+   */
+  public function setNetworkConfig(NetworkConfig $networkConfig)
+  {
+    $this->networkConfig = $networkConfig;
+  }
+  /**
+   * @return NetworkConfig
+   */
+  public function getNetworkConfig()
+  {
+    return $this->networkConfig;
   }
   public function setPort($port)
   {

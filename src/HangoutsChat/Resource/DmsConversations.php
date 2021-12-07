@@ -34,15 +34,19 @@ class DmsConversations extends \Google\Service\Resource
    * response. (conversations.messages)
    *
    * @param string $parent Required. Space resource name, in the form "spaces".
-   * Example: spaces/AAAAMpdlehY
+   * Example: spaces/AAAAAAAAAAA
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string threadKey Opaque thread identifier string that can be
-   * specified to group messages into a single thread. If this is the first
+   * @opt_param string requestId Optional. A unique request ID for this message.
+   * If a message has already been created in the space with this request ID, the
+   * subsequent request will return the existing message and no new message will
+   * be created.
+   * @opt_param string threadKey Optional. Opaque thread identifier string that
+   * can be specified to group messages into a single thread. If this is the first
    * message with a given thread identifier, a new thread is created. Subsequent
    * messages with the same thread identifier will be posted into the same thread.
-   * This relieves bots and webhooks from having to store the Hangouts Chat thread
+   * This relieves bots and webhooks from having to store the Google Chat thread
    * ID of a thread (created earlier by them) to post further updates to it. Has
    * no effect if thread field, corresponding to an existing thread, is set in
    * message.

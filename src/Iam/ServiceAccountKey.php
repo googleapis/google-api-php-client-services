@@ -19,6 +19,7 @@ namespace Google\Service\Iam;
 
 class ServiceAccountKey extends \Google\Model
 {
+  public $disabled;
   public $keyAlgorithm;
   public $keyOrigin;
   public $keyType;
@@ -29,6 +30,14 @@ class ServiceAccountKey extends \Google\Model
   public $validAfterTime;
   public $validBeforeTime;
 
+  public function setDisabled($disabled)
+  {
+    $this->disabled = $disabled;
+  }
+  public function getDisabled()
+  {
+    return $this->disabled;
+  }
   public function setKeyAlgorithm($keyAlgorithm)
   {
     $this->keyAlgorithm = $keyAlgorithm;

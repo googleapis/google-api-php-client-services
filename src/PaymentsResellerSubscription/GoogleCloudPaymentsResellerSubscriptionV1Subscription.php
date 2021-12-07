@@ -32,6 +32,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   public $products;
   public $promotions;
   public $redirectUri;
+  public $renewalTime;
   protected $serviceLocationType = GoogleCloudPaymentsResellerSubscriptionV1Location::class;
   protected $serviceLocationDataType = '';
   public $state;
@@ -132,6 +133,14 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   public function getRedirectUri()
   {
     return $this->redirectUri;
+  }
+  public function setRenewalTime($renewalTime)
+  {
+    $this->renewalTime = $renewalTime;
+  }
+  public function getRenewalTime()
+  {
+    return $this->renewalTime;
   }
   /**
    * @param GoogleCloudPaymentsResellerSubscriptionV1Location

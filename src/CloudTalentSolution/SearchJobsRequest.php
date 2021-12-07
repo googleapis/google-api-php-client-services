@@ -30,6 +30,7 @@ class SearchJobsRequest extends \Google\Collection
   protected $jobQueryType = JobQuery::class;
   protected $jobQueryDataType = '';
   public $jobView;
+  public $keywordMatchMode;
   public $maxPageSize;
   public $offset;
   public $orderBy;
@@ -111,6 +112,14 @@ class SearchJobsRequest extends \Google\Collection
   public function getJobView()
   {
     return $this->jobView;
+  }
+  public function setKeywordMatchMode($keywordMatchMode)
+  {
+    $this->keywordMatchMode = $keywordMatchMode;
+  }
+  public function getKeywordMatchMode()
+  {
+    return $this->keywordMatchMode;
   }
   public function setMaxPageSize($maxPageSize)
   {

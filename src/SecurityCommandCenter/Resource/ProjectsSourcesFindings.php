@@ -23,6 +23,7 @@ use Google\Service\SecurityCommandCenter\GroupFindingsResponse;
 use Google\Service\SecurityCommandCenter\ListFindingsResponse;
 use Google\Service\SecurityCommandCenter\SecurityMarks;
 use Google\Service\SecurityCommandCenter\SetFindingStateRequest;
+use Google\Service\SecurityCommandCenter\SetMuteRequest;
 
 /**
  * The "findings" collection of methods.
@@ -120,7 +121,8 @@ class ProjectsSourcesFindings extends \Google\Service\Resource
    * `-source_properties.my_property : ""` * resource: * resource.name: `=`, `:` *
    * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` *
    * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` *
-   * resource.type: `=`, `:` * resource.folders.resource_folder: `=`, `:`
+   * resource.type: `=`, `:` * resource.folders.resource_folder: `=`, `:` *
+   * resource.display_name: `=`, `:`
    * @opt_param string orderBy Expression that defines what fields and order to
    * use for sorting. The string value should follow SQL syntax: comma separated
    * list of fields. For example: "name,resource_properties.a_property". The
@@ -171,6 +173,25 @@ class ProjectsSourcesFindings extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Finding::class);
+  }
+  /**
+   * Updates the mute state of a finding. (findings.setMute)
+   *
+   * @param string $name Required. The relative resource name of the finding. See:
+   * https://cloud.google.com/apis/design/resource_names#relative_resource_name
+   * Example:
+   * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
+   * "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+   * @param SetMuteRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Finding
+   */
+  public function setMute($name, SetMuteRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setMute', [$params], Finding::class);
   }
   /**
    * Updates the state of a finding. (findings.setState)

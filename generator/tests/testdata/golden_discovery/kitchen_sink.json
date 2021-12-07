@@ -48,6 +48,24 @@
    }
   }
  },
+ "methods": {
+  "tag": {
+    "id": "kitchen_sink.tag",
+    "path": "kitchen_sink/v1/tag",
+    "httpMethod": "POST",
+    "description": "Get tag",
+    "parameters": {
+      "access_token": {
+        "type": "string",
+        "description": "The oauth2 access token",
+        "location": "query"
+      }
+    },
+    "response": {
+      "$ref": "Tag"
+    }
+  }
+ },
  "schemas": {
   "LatLong": {
    "type": "object",

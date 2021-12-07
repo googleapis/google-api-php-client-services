@@ -24,6 +24,9 @@ class RouterInterface extends \Google\Model
   public $linkedVpnTunnel;
   public $managementType;
   public $name;
+  public $privateIpAddress;
+  public $redundantInterface;
+  public $subnetwork;
 
   public function setIpRange($ipRange)
   {
@@ -64,6 +67,30 @@ class RouterInterface extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  public function setPrivateIpAddress($privateIpAddress)
+  {
+    $this->privateIpAddress = $privateIpAddress;
+  }
+  public function getPrivateIpAddress()
+  {
+    return $this->privateIpAddress;
+  }
+  public function setRedundantInterface($redundantInterface)
+  {
+    $this->redundantInterface = $redundantInterface;
+  }
+  public function getRedundantInterface()
+  {
+    return $this->redundantInterface;
+  }
+  public function setSubnetwork($subnetwork)
+  {
+    $this->subnetwork = $subnetwork;
+  }
+  public function getSubnetwork()
+  {
+    return $this->subnetwork;
   }
 }
 

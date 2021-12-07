@@ -19,8 +19,21 @@ namespace Google\Service\AnalyticsData;
 
 class ResponseMetaData extends \Google\Model
 {
+  public $currencyCode;
   public $dataLossFromOtherRow;
+  public $emptyReason;
+  protected $schemaRestrictionResponseType = SchemaRestrictionResponse::class;
+  protected $schemaRestrictionResponseDataType = '';
+  public $timeZone;
 
+  public function setCurrencyCode($currencyCode)
+  {
+    $this->currencyCode = $currencyCode;
+  }
+  public function getCurrencyCode()
+  {
+    return $this->currencyCode;
+  }
   public function setDataLossFromOtherRow($dataLossFromOtherRow)
   {
     $this->dataLossFromOtherRow = $dataLossFromOtherRow;
@@ -28,6 +41,36 @@ class ResponseMetaData extends \Google\Model
   public function getDataLossFromOtherRow()
   {
     return $this->dataLossFromOtherRow;
+  }
+  public function setEmptyReason($emptyReason)
+  {
+    $this->emptyReason = $emptyReason;
+  }
+  public function getEmptyReason()
+  {
+    return $this->emptyReason;
+  }
+  /**
+   * @param SchemaRestrictionResponse
+   */
+  public function setSchemaRestrictionResponse(SchemaRestrictionResponse $schemaRestrictionResponse)
+  {
+    $this->schemaRestrictionResponse = $schemaRestrictionResponse;
+  }
+  /**
+   * @return SchemaRestrictionResponse
+   */
+  public function getSchemaRestrictionResponse()
+  {
+    return $this->schemaRestrictionResponse;
+  }
+  public function setTimeZone($timeZone)
+  {
+    $this->timeZone = $timeZone;
+  }
+  public function getTimeZone()
+  {
+    return $this->timeZone;
   }
 }
 

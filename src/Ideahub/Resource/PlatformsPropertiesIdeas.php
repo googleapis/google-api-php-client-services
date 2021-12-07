@@ -17,7 +17,7 @@
 
 namespace Google\Service\Ideahub\Resource;
 
-use Google\Service\Ideahub\GoogleSearchIdeahubV1alphaListIdeasResponse;
+use Google\Service\Ideahub\GoogleSearchIdeahubV1betaListIdeasResponse;
 
 /**
  * The "ideas" collection of methods.
@@ -33,14 +33,10 @@ class PlatformsPropertiesIdeas extends \Google\Service\Resource
    * List ideas for a given Creator and filter and sort options.
    * (ideas.listPlatformsPropertiesIdeas)
    *
-   * @param string $parent If defined, specifies the creator for which to filter
-   * by. Format: publishers/{publisher}/properties/{property}
+   * @param string $parent Required. If defined, specifies the creator for which
+   * to filter by. Format: publishers/{publisher}/properties/{property}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string creator.platform Identifies the platform from which this
-   * user is accessing Idea Hub.
-   * @opt_param string creator.platformId Identifies the platform account
-   * (blog/site/etc.) for which to fetch Ideas.
    * @opt_param string filter Allows filtering. Supported syntax: * Filter
    * expressions are made up of one or more restrictions. * Restrictions are
    * implicitly combined, as if the `AND` operator was always used. The `OR`
@@ -56,13 +52,13 @@ class PlatformsPropertiesIdeas extends \Google\Service\Resource
    * at most 10 ideas will be returned. The maximum value is 2000; values above
    * 2000 will be coerced to 2000.
    * @opt_param string pageToken Used to fetch next page.
-   * @return GoogleSearchIdeahubV1alphaListIdeasResponse
+   * @return GoogleSearchIdeahubV1betaListIdeasResponse
    */
   public function listPlatformsPropertiesIdeas($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], GoogleSearchIdeahubV1alphaListIdeasResponse::class);
+    return $this->call('list', [$params], GoogleSearchIdeahubV1betaListIdeasResponse::class);
   }
 }
 

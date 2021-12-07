@@ -20,7 +20,7 @@ namespace Google\Service\NetworkSecurity;
 class ClientTlsPolicy extends \Google\Collection
 {
   protected $collection_key = 'serverValidationCa';
-  protected $clientCertificateType = GoogleCloudNetworksecurityV1beta1CertificateProvider::class;
+  protected $clientCertificateType = GoogleCloudNetworksecurityV1CertificateProvider::class;
   protected $clientCertificateDataType = '';
   public $createTime;
   public $description;
@@ -32,14 +32,14 @@ class ClientTlsPolicy extends \Google\Collection
   public $updateTime;
 
   /**
-   * @param GoogleCloudNetworksecurityV1beta1CertificateProvider
+   * @param GoogleCloudNetworksecurityV1CertificateProvider
    */
-  public function setClientCertificate(GoogleCloudNetworksecurityV1beta1CertificateProvider $clientCertificate)
+  public function setClientCertificate(GoogleCloudNetworksecurityV1CertificateProvider $clientCertificate)
   {
     $this->clientCertificate = $clientCertificate;
   }
   /**
-   * @return GoogleCloudNetworksecurityV1beta1CertificateProvider
+   * @return GoogleCloudNetworksecurityV1CertificateProvider
    */
   public function getClientCertificate()
   {

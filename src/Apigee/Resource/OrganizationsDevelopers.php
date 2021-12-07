@@ -19,6 +19,8 @@ namespace Google\Service\Apigee\Resource;
 
 use Google\Service\Apigee\GoogleCloudApigeeV1Attributes;
 use Google\Service\Apigee\GoogleCloudApigeeV1Developer;
+use Google\Service\Apigee\GoogleCloudApigeeV1DeveloperBalance;
+use Google\Service\Apigee\GoogleCloudApigeeV1DeveloperMonetizationConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1ListOfDevelopersResponse;
 use Google\Service\Apigee\GoogleProtobufEmpty;
 
@@ -119,6 +121,37 @@ class OrganizationsDevelopers extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudApigeeV1Developer::class);
   }
   /**
+   * Gets the account balance for the developer. (developers.getBalance)
+   *
+   * @param string $name Required. Account balance for the developer. Use the
+   * following structure in your request:
+   * `organizations/{org}/developers/{developer}/balance`
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1DeveloperBalance
+   */
+  public function getBalance($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getBalance', [$params], GoogleCloudApigeeV1DeveloperBalance::class);
+  }
+  /**
+   * Gets the monetization configuration for the developer.
+   * (developers.getMonetizationConfig)
+   *
+   * @param string $name Required. Monetization configuration for the developer.
+   * Use the following structure in your request:
+   * `organizations/{org}/developers/{developer}/monetizationConfig`
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1DeveloperMonetizationConfig
+   */
+  public function getMonetizationConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getMonetizationConfig', [$params], GoogleCloudApigeeV1DeveloperMonetizationConfig::class);
+  }
+  /**
    * Lists all developers in an organization by email address. By default, the
    * response does not include company developers. Set the `includeCompany` query
    * parameter to `true` to include company developers. **Note**: A maximum of
@@ -204,6 +237,23 @@ class OrganizationsDevelopers extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('update', [$params], GoogleCloudApigeeV1Developer::class);
+  }
+  /**
+   * Updates the monetization configuration for the developer.
+   * (developers.updateMonetizationConfig)
+   *
+   * @param string $name Required. Monetization configuration for the developer.
+   * Use the following structure in your request:
+   * `organizations/{org}/developers/{developer}/monetizationConfig`
+   * @param GoogleCloudApigeeV1DeveloperMonetizationConfig $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1DeveloperMonetizationConfig
+   */
+  public function updateMonetizationConfig($name, GoogleCloudApigeeV1DeveloperMonetizationConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateMonetizationConfig', [$params], GoogleCloudApigeeV1DeveloperMonetizationConfig::class);
   }
 }
 

@@ -23,6 +23,12 @@ class MembershipEndpoint extends \Google\Model
   protected $gkeClusterDataType = '';
   protected $kubernetesMetadataType = KubernetesMetadata::class;
   protected $kubernetesMetadataDataType = '';
+  protected $kubernetesResourceType = KubernetesResource::class;
+  protected $kubernetesResourceDataType = '';
+  protected $multiCloudClusterType = MultiCloudCluster::class;
+  protected $multiCloudClusterDataType = '';
+  protected $onPremClusterType = OnPremCluster::class;
+  protected $onPremClusterDataType = '';
 
   /**
    * @param GkeCluster
@@ -51,6 +57,48 @@ class MembershipEndpoint extends \Google\Model
   public function getKubernetesMetadata()
   {
     return $this->kubernetesMetadata;
+  }
+  /**
+   * @param KubernetesResource
+   */
+  public function setKubernetesResource(KubernetesResource $kubernetesResource)
+  {
+    $this->kubernetesResource = $kubernetesResource;
+  }
+  /**
+   * @return KubernetesResource
+   */
+  public function getKubernetesResource()
+  {
+    return $this->kubernetesResource;
+  }
+  /**
+   * @param MultiCloudCluster
+   */
+  public function setMultiCloudCluster(MultiCloudCluster $multiCloudCluster)
+  {
+    $this->multiCloudCluster = $multiCloudCluster;
+  }
+  /**
+   * @return MultiCloudCluster
+   */
+  public function getMultiCloudCluster()
+  {
+    return $this->multiCloudCluster;
+  }
+  /**
+   * @param OnPremCluster
+   */
+  public function setOnPremCluster(OnPremCluster $onPremCluster)
+  {
+    $this->onPremCluster = $onPremCluster;
+  }
+  /**
+   * @return OnPremCluster
+   */
+  public function getOnPremCluster()
+  {
+    return $this->onPremCluster;
   }
 }
 

@@ -23,8 +23,10 @@ class CloudFunction extends \Google\Collection
   public $availableMemoryMb;
   public $buildEnvironmentVariables;
   public $buildId;
+  public $buildName;
   public $buildWorkerPool;
   public $description;
+  public $dockerRepository;
   public $entryPoint;
   public $environmentVariables;
   protected $eventTriggerType = EventTrigger::class;
@@ -32,8 +34,10 @@ class CloudFunction extends \Google\Collection
   protected $httpsTriggerType = HttpsTrigger::class;
   protected $httpsTriggerDataType = '';
   public $ingressSettings;
+  public $kmsKeyName;
   public $labels;
   public $maxInstances;
+  public $minInstances;
   public $name;
   public $network;
   public $runtime;
@@ -78,6 +82,14 @@ class CloudFunction extends \Google\Collection
   {
     return $this->buildId;
   }
+  public function setBuildName($buildName)
+  {
+    $this->buildName = $buildName;
+  }
+  public function getBuildName()
+  {
+    return $this->buildName;
+  }
   public function setBuildWorkerPool($buildWorkerPool)
   {
     $this->buildWorkerPool = $buildWorkerPool;
@@ -93,6 +105,14 @@ class CloudFunction extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  public function setDockerRepository($dockerRepository)
+  {
+    $this->dockerRepository = $dockerRepository;
+  }
+  public function getDockerRepository()
+  {
+    return $this->dockerRepository;
   }
   public function setEntryPoint($entryPoint)
   {
@@ -146,6 +166,14 @@ class CloudFunction extends \Google\Collection
   {
     return $this->ingressSettings;
   }
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
+  }
   public function setLabels($labels)
   {
     $this->labels = $labels;
@@ -161,6 +189,14 @@ class CloudFunction extends \Google\Collection
   public function getMaxInstances()
   {
     return $this->maxInstances;
+  }
+  public function setMinInstances($minInstances)
+  {
+    $this->minInstances = $minInstances;
+  }
+  public function getMinInstances()
+  {
+    return $this->minInstances;
   }
   public function setName($name)
   {

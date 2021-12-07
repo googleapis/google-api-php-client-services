@@ -21,7 +21,7 @@ class ValidationCA extends \Google\Model
 {
   protected $certificateProviderInstanceType = CertificateProviderInstance::class;
   protected $certificateProviderInstanceDataType = '';
-  protected $grpcEndpointType = GoogleCloudNetworksecurityV1beta1GrpcEndpoint::class;
+  protected $grpcEndpointType = GoogleCloudNetworksecurityV1GrpcEndpoint::class;
   protected $grpcEndpointDataType = '';
 
   /**
@@ -39,14 +39,14 @@ class ValidationCA extends \Google\Model
     return $this->certificateProviderInstance;
   }
   /**
-   * @param GoogleCloudNetworksecurityV1beta1GrpcEndpoint
+   * @param GoogleCloudNetworksecurityV1GrpcEndpoint
    */
-  public function setGrpcEndpoint(GoogleCloudNetworksecurityV1beta1GrpcEndpoint $grpcEndpoint)
+  public function setGrpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpoint $grpcEndpoint)
   {
     $this->grpcEndpoint = $grpcEndpoint;
   }
   /**
-   * @return GoogleCloudNetworksecurityV1beta1GrpcEndpoint
+   * @return GoogleCloudNetworksecurityV1GrpcEndpoint
    */
   public function getGrpcEndpoint()
   {

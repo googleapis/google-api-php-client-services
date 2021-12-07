@@ -19,24 +19,24 @@ namespace Google\Service\DisplayVideo;
 
 class BusinessChainSearchTerms extends \Google\Model
 {
-  public $businessChain;
-  public $region;
+  public $businessChainQuery;
+  public $regionQuery;
 
-  public function setBusinessChain($businessChain)
+  public function setBusinessChainQuery($businessChainQuery)
   {
-    $this->businessChain = $businessChain;
+    $this->businessChainQuery = $businessChainQuery;
   }
-  public function getBusinessChain()
+  public function getBusinessChainQuery()
   {
-    return $this->businessChain;
+    return $this->businessChainQuery;
   }
-  public function setRegion($region)
+  public function setRegionQuery($regionQuery)
   {
-    $this->region = $region;
+    $this->regionQuery = $regionQuery;
   }
-  public function getRegion()
+  public function getRegionQuery()
   {
-    return $this->region;
+    return $this->regionQuery;
   }
 }
 

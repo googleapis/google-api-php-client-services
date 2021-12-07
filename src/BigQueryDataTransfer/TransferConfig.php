@@ -30,6 +30,8 @@ class TransferConfig extends \Google\Model
   public $name;
   public $nextRunTime;
   public $notificationPubsubTopic;
+  protected $ownerInfoType = UserInfo::class;
+  protected $ownerInfoDataType = '';
   public $params;
   public $schedule;
   protected $scheduleOptionsType = ScheduleOptions::class;
@@ -123,6 +125,20 @@ class TransferConfig extends \Google\Model
   public function getNotificationPubsubTopic()
   {
     return $this->notificationPubsubTopic;
+  }
+  /**
+   * @param UserInfo
+   */
+  public function setOwnerInfo(UserInfo $ownerInfo)
+  {
+    $this->ownerInfo = $ownerInfo;
+  }
+  /**
+   * @return UserInfo
+   */
+  public function getOwnerInfo()
+  {
+    return $this->ownerInfo;
   }
   public function setParams($params)
   {

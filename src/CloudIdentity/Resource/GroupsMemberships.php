@@ -49,9 +49,8 @@ class GroupsMemberships extends \Google\Service\Resource
    *
    * @param string $parent [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the group to
-   * check the transitive membership in. Format: `groups/{group_id}`, where
-   * `group_id` is the unique id assigned to the Group to which the Membership
-   * belongs to.
+   * check the transitive membership in. Format: `groups/{group}`, where `group`
+   * is the unique id assigned to the Group to which the Membership belongs to.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string query Required. A CEL expression that MUST include member
@@ -71,7 +70,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * Creates a `Membership`. (memberships.create)
    *
    * @param string $parent Required. The parent `Group` resource under which to
-   * create the `Membership`. Must be of the form `groups/{group_id}`.
+   * create the `Membership`. Must be of the form `groups/{group}`.
    * @param Membership $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
@@ -88,7 +87,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * @param string $name Required. The [resource
    * name](https://cloud.google.com/apis/design/resource_names) of the
    * `Membership` to delete. Must be of the form
-   * `groups/{group_id}/memberships/{membership_id}`
+   * `groups/{group}/memberships/{membership}`
    * @param array $optParams Optional parameters.
    * @return Operation
    */
@@ -104,7 +103,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * @param string $name Required. The [resource
    * name](https://cloud.google.com/apis/design/resource_names) of the
    * `Membership` to retrieve. Must be of the form
-   * `groups/{group_id}/memberships/{membership_id}`.
+   * `groups/{group}/memberships/{membership}`.
    * @param array $optParams Optional parameters.
    * @return Membership
    */
@@ -126,12 +125,12 @@ class GroupsMemberships extends \Google\Service\Resource
    *
    * @param string $parent Required. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the group to
-   * search transitive memberships in. Format: `groups/{group_id}`, where
-   * `group_id` is the unique ID assigned to the Group to which the Membership
-   * belongs to. group_id can be a wildcard collection id "-". When a group_id is
-   * specified, the membership graph will be constrained to paths between the
-   * member (defined in the query) and the parent. If a wildcard collection is
-   * provided, all membership paths connected to the member will be returned.
+   * search transitive memberships in. Format: `groups/{group}`, where `group` is
+   * the unique ID assigned to the Group to which the Membership belongs to. group
+   * can be a wildcard collection id "-". When a group is specified, the
+   * membership graph will be constrained to paths between the member (defined in
+   * the query) and the parent. If a wildcard collection is provided, all
+   * membership paths connected to the member will be returned.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string query Required. A CEL expression that MUST include member
@@ -151,7 +150,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * Lists the `Membership`s within a `Group`. (memberships.listGroupsMemberships)
    *
    * @param string $parent Required. The parent `Group` resource under which to
-   * lookup the `Membership` name. Must be of the form `groups/{group_id}`.
+   * lookup the `Membership` name. Must be of the form `groups/{group}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of results to return. Note that
@@ -179,7 +178,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * by its `EntityKey`. (memberships.lookup)
    *
    * @param string $parent Required. The parent `Group` resource under which to
-   * lookup the `Membership` name. Must be of the form `groups/{group_id}`.
+   * lookup the `Membership` name. Must be of the form `groups/{group}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string memberKey.id The ID of the entity. For Google-managed
@@ -191,7 +190,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * such as a Google user or a Google Group. If specified, the `EntityKey`
    * represents an external-identity-mapped group. The namespace must correspond
    * to an identity source created in Admin Console and must be in the form of
-   * `identitysources/{identity_source_id}`.
+   * `identitysources/{identity_source}`.
    * @return LookupMembershipNameResponse
    */
   public function lookup($parent, $optParams = [])
@@ -207,7 +206,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * @param string $name Required. The [resource
    * name](https://cloud.google.com/apis/design/resource_names) of the
    * `Membership` whose roles are to be modified. Must be of the form
-   * `groups/{group_id}/memberships/{membership_id}`.
+   * `groups/{group}/memberships/{membership}`.
    * @param ModifyMembershipRolesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ModifyMembershipRolesResponse
@@ -229,9 +228,8 @@ class GroupsMemberships extends \Google\Service\Resource
    *
    * @param string $parent [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the group to
-   * search transitive memberships in. Format: `groups/{group_id}`, where
-   * `group_id` is always '-' as this API will search across all groups for a
-   * given member.
+   * search transitive memberships in. Format: `groups/{group}`, where `group` is
+   * always '-' as this API will search across all groups for a given member.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The default page size is 200 (max 1000).
@@ -263,8 +261,8 @@ class GroupsMemberships extends \Google\Service\Resource
    *
    * @param string $parent [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the group to
-   * search transitive memberships in. Format: `groups/{group_id}`, where
-   * `group_id` is the unique ID assigned to the Group.
+   * search transitive memberships in. Format: `groups/{group}`, where `group` is
+   * the unique ID assigned to the Group.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The default page size is 200 (max 1000).

@@ -40,17 +40,17 @@ class Uiv1beta3ProjectsLocationsOperations extends \Google\Service\Resource
    * operation completed despite cancellation. On successful cancellation, the
    * operation is not deleted; instead, it becomes an operation with an
    * Operation.error value with a google.rpc.Status.code of 1, corresponding to
-   * `Code.CANCELLED`. (operations.cancelOperation)
+   * `Code.CANCELLED`. (operations.cancel)
    *
    * @param string $name The name of the operation resource to be cancelled.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
    */
-  public function cancelOperation($name, $optParams = [])
+  public function cancel($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('cancelOperation', [$params], GoogleProtobufEmpty::class);
+    return $this->call('cancel', [$params], GoogleProtobufEmpty::class);
   }
   /**
    * Gets the latest state of a long-running operation. Clients can use this

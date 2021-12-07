@@ -36,6 +36,7 @@ class Photo extends \Google\Collection
   public $transferStatus;
   protected $uploadReferenceType = UploadRef::class;
   protected $uploadReferenceDataType = '';
+  public $uploadTime;
   public $viewCount;
 
   public function setCaptureTime($captureTime)
@@ -155,6 +156,14 @@ class Photo extends \Google\Collection
   public function getUploadReference()
   {
     return $this->uploadReference;
+  }
+  public function setUploadTime($uploadTime)
+  {
+    $this->uploadTime = $uploadTime;
+  }
+  public function getUploadTime()
+  {
+    return $this->uploadTime;
   }
   public function setViewCount($viewCount)
   {
