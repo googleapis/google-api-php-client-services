@@ -767,6 +767,113 @@ class Enum extends \Google\Model
 // Adding a class alias for backwards compatibility with the previous class name.
 class_alias(Enum::class, 'Google_Service_KitchSink_Enum');
 === end: KitchSink/Enum.php
+=== begin: KitchSink/Enums/Alt.php
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\KitchSink\Enums;
+
+final class Alt
+{
+  /**
+   * The meaning for the enun value 'json'
+   * @var string
+   */
+  const JSON = "json";
+}
+=== end: KitchSink/Enums/Alt.php
+=== begin: KitchSink/Enums/LinkType.php
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\KitchSink\Enums;
+
+final class LinkType
+{
+  /**
+   * Doc comment for DOWNLOAD.
+   * @var string
+   */
+  const DOWNLOAD = "DOWNLOAD";
+  /**
+   * Doc comment for THUMBNAIL.
+   * @var string
+   */
+  const THUMBNAIL = "THUMBNAIL";
+  /**
+   * Doc comment for PDF.
+   * @var string
+   */
+  const PDF = "PDF";
+}
+=== end: KitchSink/Enums/LinkType.php
+=== begin: KitchSink/Enums/SeriesCounters/LinkType.php
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\KitchSink\Enums\SeriesCounters;
+
+final class LinkType
+{
+  /**
+   * Doc comment for DOWNLOAD.
+   * @var string
+   */
+  const DOWNLOAD = "DOWNLOAD";
+  /**
+   * Doc comment for THUMBNAIL.
+   * @var string
+   */
+  const THUMBNAIL = "THUMBNAIL";
+  /**
+   * Doc comment for PDF.
+   * @var string
+   */
+  const PDF = "PDF";
+}
+=== end: KitchSink/Enums/SeriesCounters/LinkType.php
 === begin: KitchSink/Geometry.php
 <?php
 /*

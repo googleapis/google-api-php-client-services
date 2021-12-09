@@ -1,0 +1,13 @@
+final class {{ enum.className }}
+{
+{% filter noblanklines %}
+{% indent %}{% for element in enum.elements %}
+/**
+ * {% if element.description %}{{ element.description }}{% endif %}
+ * @var string
+ */
+const {{ element.constantName|upper }} = "{{ element.value }}";
+{% endfor %}
+{% endindent %}
+{% endfilter %}
+}

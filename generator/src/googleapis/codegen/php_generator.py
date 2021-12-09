@@ -29,6 +29,7 @@ Features:
 __author__ = 'chirags@google.com (Chirag Shah)'
 
 import collections
+import copy
 import json
 import operator
 
@@ -37,7 +38,7 @@ from googleapis.codegen import api_library_generator
 from googleapis.codegen import data_types
 from googleapis.codegen import language_model
 from googleapis.codegen import utilities
-from googleapis.codegen.schema import Schema
+from googleapis.codegen.schema import Schema, Property
 
 
 class PHPGenerator(api_library_generator.ApiLibraryGenerator):
@@ -151,8 +152,13 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
       the_api: (Api) The Api instance we are writing a libary for.
       source_package_writer: (LibraryPackage) source output package.
     """
+    enums = EnumVisitor()
+    the_api.VisitAll(enums)
+
     list_replacements = {
         '___models_': ['model', the_api.ModelClasses()],
+        '___enums_': ['enum', enums.properties_with_enums],
+        '___topLevelEnums_': ['enum', enums.top_level_enums],
         '___resources_': ['resource', the_api.ResourceClasses()],
         '___topLevelModels_': ['model', the_api.TopLevelModelClasses()],
         }
@@ -160,8 +166,6 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
                           list_replacements,
                           self._top_level_defines, source_package_writer)
     # Call back to the language specific generator to give it a chance to emit
-    # special case elements.
-    self.GenerateExtraSourceOutput(source_package_writer)
 
   def _ToMethodName(self, method, resource):
     """Convert a wire format name into a suitable PHP variable name."""
@@ -371,3 +375,27 @@ def _StripResource(resource):
     if name not in _EXTRA_PROPERTIES:
       ret[name] = _StripResource(value)
   return ret
+
+
+class EnumVisitor(object):
+    """
+    Walks all API objects looking for enum schemas
+    """
+
+    def __init__(self):
+        self.properties_with_enums = []
+        self.top_level_enums = []
+
+    def __call__(self, api_object):
+        """
+        """
+        if self._is_enum(api_object):
+            self.top_level_enums.append(api_object)
+
+        if isinstance(api_object, Property) and self._is_enum(api_object.data_type):
+            target = copy.deepcopy(api_object.data_type)
+            target.SetTemplateValue('namespaceName', api_object.schema.GetTemplateValue('className'))
+            self.properties_with_enums.append(target)
+
+    def _is_enum(self, api_object):
+        return isinstance(api_object, data_types.Enum)
