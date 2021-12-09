@@ -328,8 +328,8 @@ class TemplateGenerator(object):
     Raises:
       ValueError: If the template_file_name does not match the call_info data.
     """
-    path_and_var_regex = r'%s([a-z][A-Za-z]*)___' % path_prefix
-    match_obj = re.compile(path_and_var_regex).match(template_file_name)
+    path_and_var_regex = re.compile(r'%s([a-z][A-Za-z]*)___' % path_prefix)
+    match_obj = path_and_var_regex.match(template_file_name)
     if not match_obj:
       raise ValueError(
           'file names which match path item for GenerateListOfFiles must'
@@ -340,12 +340,20 @@ class TemplateGenerator(object):
       file_name = template_file_name.replace(
           file_name_piece_to_replace, element.values[variable_name])
       name_in_zip = file_name[:-5]  # strip '.tmpl'
+
       if file_filter and not file_filter(None, name_in_zip):
         continue
+
+      element_relative_path = relative_path
+      for match_obj in path_and_var_regex.finditer(relative_path):
+        variable_name = match_obj.group(1)
+        element_relative_path = element_relative_path.replace(
+            path_prefix + variable_name + '___', element.values[variable_name])
+
       d = dict(variables)
       d[call_info[0]] = element
       self.RenderTemplateToFile(
-          template_path, d, package, os.path.join(relative_path, name_in_zip))
+          template_path, d, package, os.path.join(element_relative_path, name_in_zip))
 
 
 class ToolInformation(UseableInTemplates):
