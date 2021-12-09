@@ -22,6 +22,8 @@ class MembershipRole extends \Google\Model
   protected $expiryDetailType = ExpiryDetail::class;
   protected $expiryDetailDataType = '';
   public $name;
+  protected $restrictionEvaluationsType = RestrictionEvaluations::class;
+  protected $restrictionEvaluationsDataType = '';
 
   /**
    * @param ExpiryDetail
@@ -44,6 +46,20 @@ class MembershipRole extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param RestrictionEvaluations
+   */
+  public function setRestrictionEvaluations(RestrictionEvaluations $restrictionEvaluations)
+  {
+    $this->restrictionEvaluations = $restrictionEvaluations;
+  }
+  /**
+   * @return RestrictionEvaluations
+   */
+  public function getRestrictionEvaluations()
+  {
+    return $this->restrictionEvaluations;
   }
 }
 

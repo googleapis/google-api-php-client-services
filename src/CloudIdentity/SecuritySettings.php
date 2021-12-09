@@ -15,39 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\Directory;
+namespace Google\Service\CloudIdentity;
 
-class UserLanguage extends \Google\Model
+class SecuritySettings extends \Google\Model
 {
-  public $customLanguage;
-  public $languageCode;
-  public $preference;
+  protected $memberRestrictionType = MemberRestriction::class;
+  protected $memberRestrictionDataType = '';
+  public $name;
 
-  public function setCustomLanguage($customLanguage)
+  /**
+   * @param MemberRestriction
+   */
+  public function setMemberRestriction(MemberRestriction $memberRestriction)
   {
-    $this->customLanguage = $customLanguage;
+    $this->memberRestriction = $memberRestriction;
   }
-  public function getCustomLanguage()
+  /**
+   * @return MemberRestriction
+   */
+  public function getMemberRestriction()
   {
-    return $this->customLanguage;
+    return $this->memberRestriction;
   }
-  public function setLanguageCode($languageCode)
+  public function setName($name)
   {
-    $this->languageCode = $languageCode;
+    $this->name = $name;
   }
-  public function getLanguageCode()
+  public function getName()
   {
-    return $this->languageCode;
-  }
-  public function setPreference($preference)
-  {
-    $this->preference = $preference;
-  }
-  public function getPreference()
-  {
-    return $this->preference;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UserLanguage::class, 'Google_Service_Directory_UserLanguage');
+class_alias(SecuritySettings::class, 'Google_Service_CloudIdentity_SecuritySettings');

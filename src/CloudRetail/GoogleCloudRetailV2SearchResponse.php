@@ -20,6 +20,7 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
+  public $appliedControls;
   public $attributionToken;
   public $correctedQuery;
   protected $facetsType = GoogleCloudRetailV2SearchResponseFacet::class;
@@ -32,6 +33,14 @@ class GoogleCloudRetailV2SearchResponse extends \Google\Collection
   protected $resultsDataType = 'array';
   public $totalSize;
 
+  public function setAppliedControls($appliedControls)
+  {
+    $this->appliedControls = $appliedControls;
+  }
+  public function getAppliedControls()
+  {
+    return $this->appliedControls;
+  }
   public function setAttributionToken($attributionToken)
   {
     $this->attributionToken = $attributionToken;

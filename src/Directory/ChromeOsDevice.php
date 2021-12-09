@@ -52,6 +52,7 @@ class ChromeOsDevice extends \Google\Collection
   public $model;
   public $notes;
   public $orderNumber;
+  public $orgUnitId;
   public $orgUnitPath;
   public $osVersion;
   public $platformVersion;
@@ -312,6 +313,14 @@ class ChromeOsDevice extends \Google\Collection
   public function getOrderNumber()
   {
     return $this->orderNumber;
+  }
+  public function setOrgUnitId($orgUnitId)
+  {
+    $this->orgUnitId = $orgUnitId;
+  }
+  public function getOrgUnitId()
+  {
+    return $this->orgUnitId;
   }
   public function setOrgUnitPath($orgUnitPath)
   {
