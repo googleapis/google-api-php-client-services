@@ -19,6 +19,8 @@ namespace Google\Service\SecurityCommandCenter;
 
 class Finding extends \Google\Model
 {
+  protected $accessType = Access::class;
+  protected $accessDataType = '';
   public $canonicalName;
   public $category;
   public $createTime;
@@ -29,6 +31,8 @@ class Finding extends \Google\Model
   public $findingClass;
   protected $indicatorType = Indicator::class;
   protected $indicatorDataType = '';
+  protected $mitreAttackType = MitreAttack::class;
+  protected $mitreAttackDataType = '';
   public $mute;
   public $muteInitiator;
   public $muteUpdateTime;
@@ -43,6 +47,20 @@ class Finding extends \Google\Model
   protected $vulnerabilityType = Vulnerability::class;
   protected $vulnerabilityDataType = '';
 
+  /**
+   * @param Access
+   */
+  public function setAccess(Access $access)
+  {
+    $this->access = $access;
+  }
+  /**
+   * @return Access
+   */
+  public function getAccess()
+  {
+    return $this->access;
+  }
   public function setCanonicalName($canonicalName)
   {
     $this->canonicalName = $canonicalName;
@@ -118,6 +136,20 @@ class Finding extends \Google\Model
   public function getIndicator()
   {
     return $this->indicator;
+  }
+  /**
+   * @param MitreAttack
+   */
+  public function setMitreAttack(MitreAttack $mitreAttack)
+  {
+    $this->mitreAttack = $mitreAttack;
+  }
+  /**
+   * @return MitreAttack
+   */
+  public function getMitreAttack()
+  {
+    return $this->mitreAttack;
   }
   public function setMute($mute)
   {

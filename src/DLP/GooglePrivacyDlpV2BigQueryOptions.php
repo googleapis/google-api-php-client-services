@@ -19,11 +19,13 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2BigQueryOptions extends \Google\Collection
 {
-  protected $collection_key = 'identifyingFields';
+  protected $collection_key = 'includedFields';
   protected $excludedFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $excludedFieldsDataType = 'array';
   protected $identifyingFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $identifyingFieldsDataType = 'array';
+  protected $includedFieldsType = GooglePrivacyDlpV2FieldId::class;
+  protected $includedFieldsDataType = 'array';
   public $rowsLimit;
   public $rowsLimitPercent;
   public $sampleMethod;
@@ -57,6 +59,20 @@ class GooglePrivacyDlpV2BigQueryOptions extends \Google\Collection
   public function getIdentifyingFields()
   {
     return $this->identifyingFields;
+  }
+  /**
+   * @param GooglePrivacyDlpV2FieldId[]
+   */
+  public function setIncludedFields($includedFields)
+  {
+    $this->includedFields = $includedFields;
+  }
+  /**
+   * @return GooglePrivacyDlpV2FieldId[]
+   */
+  public function getIncludedFields()
+  {
+    return $this->includedFields;
   }
   public function setRowsLimit($rowsLimit)
   {

@@ -24,6 +24,7 @@ class ResponseMetaData extends \Google\Model
   public $emptyReason;
   protected $schemaRestrictionResponseType = SchemaRestrictionResponse::class;
   protected $schemaRestrictionResponseDataType = '';
+  public $thresholdingApplied;
   public $timeZone;
 
   public function setCurrencyCode($currencyCode)
@@ -63,6 +64,14 @@ class ResponseMetaData extends \Google\Model
   public function getSchemaRestrictionResponse()
   {
     return $this->schemaRestrictionResponse;
+  }
+  public function setThresholdingApplied($thresholdingApplied)
+  {
+    $this->thresholdingApplied = $thresholdingApplied;
+  }
+  public function getThresholdingApplied()
+  {
+    return $this->thresholdingApplied;
   }
   public function setTimeZone($timeZone)
   {
