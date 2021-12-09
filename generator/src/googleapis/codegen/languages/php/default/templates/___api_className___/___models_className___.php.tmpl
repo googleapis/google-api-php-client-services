@@ -29,6 +29,7 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
  {% if property.annotationType %}
   /**
    * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
+{% if property.enum %}   * @see {{ api.ownerName }}\Service\{{ api.className }}\Enums\{{ property.enum.namespaceName }}\{{ property.enum.className }}{% endif %}
    */
  {% endif %}
   public ${{ property.memberName }};

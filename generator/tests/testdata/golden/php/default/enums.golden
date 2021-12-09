@@ -178,6 +178,7 @@ class ObjectWithEnumProperty extends \Google\Model
   public $notEnum;
   /**
    * @var string
+   * @see Google\Service\Enums\Enums\ObjectWithEnumProperty\PropName
    */
   public $propName;
 

@@ -2840,6 +2840,7 @@ class SeriesCounters extends \Google\Model
   public $submissions;
   /**
    * @var string
+   * @see Google\Service\KitchSink\Enums\SeriesCounters\LinkType
    */
   public $users;
 

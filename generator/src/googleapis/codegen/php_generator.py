@@ -395,6 +395,7 @@ class EnumVisitor(object):
         if isinstance(api_object, Property) and self._is_enum(api_object.data_type):
             target = copy.deepcopy(api_object.data_type)
             target.SetTemplateValue('namespaceName', api_object.schema.GetTemplateValue('className'))
+            api_object.SetTemplateValue('enum', target)
             self.properties_with_enums.append(target)
 
     def _is_enum(self, api_object):
