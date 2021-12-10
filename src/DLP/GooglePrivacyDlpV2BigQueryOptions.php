@@ -26,8 +26,17 @@ class GooglePrivacyDlpV2BigQueryOptions extends \Google\Collection
   protected $identifyingFieldsDataType = 'array';
   protected $includedFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $includedFieldsDataType = 'array';
+  /**
+   * @var string
+   */
   public $rowsLimit;
+  /**
+   * @var int
+   */
   public $rowsLimitPercent;
+  /**
+   * @var string
+   */
   public $sampleMethod;
   protected $tableReferenceType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $tableReferenceDataType = '';
@@ -74,26 +83,44 @@ class GooglePrivacyDlpV2BigQueryOptions extends \Google\Collection
   {
     return $this->includedFields;
   }
+  /**
+   * @param string
+   */
   public function setRowsLimit($rowsLimit)
   {
     $this->rowsLimit = $rowsLimit;
   }
+  /**
+   * @return string
+   */
   public function getRowsLimit()
   {
     return $this->rowsLimit;
   }
+  /**
+   * @param int
+   */
   public function setRowsLimitPercent($rowsLimitPercent)
   {
     $this->rowsLimitPercent = $rowsLimitPercent;
   }
+  /**
+   * @return int
+   */
   public function getRowsLimitPercent()
   {
     return $this->rowsLimitPercent;
   }
+  /**
+   * @param string
+   */
   public function setSampleMethod($sampleMethod)
   {
     $this->sampleMethod = $sampleMethod;
   }
+  /**
+   * @return string
+   */
   public function getSampleMethod()
   {
     return $this->sampleMethod;

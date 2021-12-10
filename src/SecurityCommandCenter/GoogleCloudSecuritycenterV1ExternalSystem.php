@@ -20,48 +20,93 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV1ExternalSystem extends \Google\Collection
 {
   protected $collection_key = 'assignees';
+  /**
+   * @var string[]
+   */
   public $assignees;
+  /**
+   * @var string
+   */
   public $externalSystemUpdateTime;
+  /**
+   * @var string
+   */
   public $externalUid;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
   public $status;
 
+  /**
+   * @param string[]
+   */
   public function setAssignees($assignees)
   {
     $this->assignees = $assignees;
   }
+  /**
+   * @return string[]
+   */
   public function getAssignees()
   {
     return $this->assignees;
   }
+  /**
+   * @param string
+   */
   public function setExternalSystemUpdateTime($externalSystemUpdateTime)
   {
     $this->externalSystemUpdateTime = $externalSystemUpdateTime;
   }
+  /**
+   * @return string
+   */
   public function getExternalSystemUpdateTime()
   {
     return $this->externalSystemUpdateTime;
   }
+  /**
+   * @param string
+   */
   public function setExternalUid($externalUid)
   {
     $this->externalUid = $externalUid;
   }
+  /**
+   * @return string
+   */
   public function getExternalUid()
   {
     return $this->externalUid;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
   public function setStatus($status)
   {
     $this->status = $status;
   }
+  /**
+   * @return string
+   */
   public function getStatus()
   {
     return $this->status;

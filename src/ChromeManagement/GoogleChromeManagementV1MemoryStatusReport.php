@@ -19,39 +19,75 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1MemoryStatusReport extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $pageFaults;
+  /**
+   * @var string
+   */
   public $reportTime;
+  /**
+   * @var string
+   */
   public $sampleFrequency;
+  /**
+   * @var string
+   */
   public $systemRamFreeBytes;
 
+  /**
+   * @param int
+   */
   public function setPageFaults($pageFaults)
   {
     $this->pageFaults = $pageFaults;
   }
+  /**
+   * @return int
+   */
   public function getPageFaults()
   {
     return $this->pageFaults;
   }
+  /**
+   * @param string
+   */
   public function setReportTime($reportTime)
   {
     $this->reportTime = $reportTime;
   }
+  /**
+   * @return string
+   */
   public function getReportTime()
   {
     return $this->reportTime;
   }
+  /**
+   * @param string
+   */
   public function setSampleFrequency($sampleFrequency)
   {
     $this->sampleFrequency = $sampleFrequency;
   }
+  /**
+   * @return string
+   */
   public function getSampleFrequency()
   {
     return $this->sampleFrequency;
   }
+  /**
+   * @param string
+   */
   public function setSystemRamFreeBytes($systemRamFreeBytes)
   {
     $this->systemRamFreeBytes = $systemRamFreeBytes;
   }
+  /**
+   * @return string
+   */
   public function getSystemRamFreeBytes()
   {
     return $this->systemRamFreeBytes;

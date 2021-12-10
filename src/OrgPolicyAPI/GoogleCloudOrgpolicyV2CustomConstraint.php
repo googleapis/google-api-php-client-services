@@ -20,66 +20,129 @@ namespace Google\Service\OrgPolicyAPI;
 class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
 {
   protected $collection_key = 'resourceTypes';
+  /**
+   * @var string
+   */
   public $actionType;
+  /**
+   * @var string
+   */
   public $condition;
+  /**
+   * @var string
+   */
   public $description;
+  /**
+   * @var string
+   */
   public $displayName;
+  /**
+   * @var string[]
+   */
   public $methodTypes;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string[]
+   */
   public $resourceTypes;
 
+  /**
+   * @param string
+   */
   public function setActionType($actionType)
   {
     $this->actionType = $actionType;
   }
+  /**
+   * @return string
+   */
   public function getActionType()
   {
     return $this->actionType;
   }
+  /**
+   * @param string
+   */
   public function setCondition($condition)
   {
     $this->condition = $condition;
   }
+  /**
+   * @return string
+   */
   public function getCondition()
   {
     return $this->condition;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
   }
+  /**
+   * @param string
+   */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
   }
+  /**
+   * @return string
+   */
   public function getDisplayName()
   {
     return $this->displayName;
   }
+  /**
+   * @param string[]
+   */
   public function setMethodTypes($methodTypes)
   {
     $this->methodTypes = $methodTypes;
   }
+  /**
+   * @return string[]
+   */
   public function getMethodTypes()
   {
     return $this->methodTypes;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string[]
+   */
   public function setResourceTypes($resourceTypes)
   {
     $this->resourceTypes = $resourceTypes;
   }
+  /**
+   * @return string[]
+   */
   public function getResourceTypes()
   {
     return $this->resourceTypes;

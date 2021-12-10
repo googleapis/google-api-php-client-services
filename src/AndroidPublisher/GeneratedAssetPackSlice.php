@@ -19,39 +19,75 @@ namespace Google\Service\AndroidPublisher;
 
 class GeneratedAssetPackSlice extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $downloadId;
+  /**
+   * @var string
+   */
   public $moduleName;
+  /**
+   * @var string
+   */
   public $sliceId;
+  /**
+   * @var string
+   */
   public $version;
 
+  /**
+   * @param string
+   */
   public function setDownloadId($downloadId)
   {
     $this->downloadId = $downloadId;
   }
+  /**
+   * @return string
+   */
   public function getDownloadId()
   {
     return $this->downloadId;
   }
+  /**
+   * @param string
+   */
   public function setModuleName($moduleName)
   {
     $this->moduleName = $moduleName;
   }
+  /**
+   * @return string
+   */
   public function getModuleName()
   {
     return $this->moduleName;
   }
+  /**
+   * @param string
+   */
   public function setSliceId($sliceId)
   {
     $this->sliceId = $sliceId;
   }
+  /**
+   * @return string
+   */
   public function getSliceId()
   {
     return $this->sliceId;
   }
+  /**
+   * @param string
+   */
   public function setVersion($version)
   {
     $this->version = $version;
   }
+  /**
+   * @return string
+   */
   public function getVersion()
   {
     return $this->version;

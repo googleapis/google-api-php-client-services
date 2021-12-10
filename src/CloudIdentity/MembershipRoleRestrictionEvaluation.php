@@ -19,12 +19,21 @@ namespace Google\Service\CloudIdentity;
 
 class MembershipRoleRestrictionEvaluation extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $state;
 
+  /**
+   * @param string
+   */
   public function setState($state)
   {
     $this->state = $state;
   }
+  /**
+   * @return string
+   */
   public function getState()
   {
     return $this->state;

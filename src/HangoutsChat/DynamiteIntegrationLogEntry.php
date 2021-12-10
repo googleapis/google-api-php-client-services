@@ -19,23 +19,41 @@ namespace Google\Service\HangoutsChat;
 
 class DynamiteIntegrationLogEntry extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $deployment;
+  /**
+   * @var string
+   */
   public $deploymentFunction;
   protected $errorType = Status::class;
   protected $errorDataType = '';
 
+  /**
+   * @param string
+   */
   public function setDeployment($deployment)
   {
     $this->deployment = $deployment;
   }
+  /**
+   * @return string
+   */
   public function getDeployment()
   {
     return $this->deployment;
   }
+  /**
+   * @param string
+   */
   public function setDeploymentFunction($deploymentFunction)
   {
     $this->deploymentFunction = $deploymentFunction;
   }
+  /**
+   * @return string
+   */
   public function getDeploymentFunction()
   {
     return $this->deploymentFunction;

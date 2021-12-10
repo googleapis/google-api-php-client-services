@@ -20,27 +20,51 @@ namespace Google\Service\Transcoder;
 class MuxStream extends \Google\Collection
 {
   protected $collection_key = 'elementaryStreams';
+  /**
+   * @var string
+   */
   public $container;
+  /**
+   * @var string[]
+   */
   public $elementaryStreams;
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
+  /**
+   * @var string
+   */
   public $fileName;
+  /**
+   * @var string
+   */
   public $key;
   protected $segmentSettingsType = SegmentSettings::class;
   protected $segmentSettingsDataType = '';
 
+  /**
+   * @param string
+   */
   public function setContainer($container)
   {
     $this->container = $container;
   }
+  /**
+   * @return string
+   */
   public function getContainer()
   {
     return $this->container;
   }
+  /**
+   * @param string[]
+   */
   public function setElementaryStreams($elementaryStreams)
   {
     $this->elementaryStreams = $elementaryStreams;
   }
+  /**
+   * @return string[]
+   */
   public function getElementaryStreams()
   {
     return $this->elementaryStreams;
@@ -59,18 +83,30 @@ class MuxStream extends \Google\Collection
   {
     return $this->encryption;
   }
+  /**
+   * @param string
+   */
   public function setFileName($fileName)
   {
     $this->fileName = $fileName;
   }
+  /**
+   * @return string
+   */
   public function getFileName()
   {
     return $this->fileName;
   }
+  /**
+   * @param string
+   */
   public function setKey($key)
   {
     $this->key = $key;
   }
+  /**
+   * @return string
+   */
   public function getKey()
   {
     return $this->key;

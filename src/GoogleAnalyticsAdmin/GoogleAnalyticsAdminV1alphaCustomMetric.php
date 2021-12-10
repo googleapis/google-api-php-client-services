@@ -19,57 +19,111 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1alphaCustomMetric extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $description;
+  /**
+   * @var string
+   */
   public $displayName;
+  /**
+   * @var string
+   */
   public $measurementUnit;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
   public $parameterName;
+  /**
+   * @var string
+   */
   public $scope;
 
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
   }
+  /**
+   * @param string
+   */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
   }
+  /**
+   * @return string
+   */
   public function getDisplayName()
   {
     return $this->displayName;
   }
+  /**
+   * @param string
+   */
   public function setMeasurementUnit($measurementUnit)
   {
     $this->measurementUnit = $measurementUnit;
   }
+  /**
+   * @return string
+   */
   public function getMeasurementUnit()
   {
     return $this->measurementUnit;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
   public function setParameterName($parameterName)
   {
     $this->parameterName = $parameterName;
   }
+  /**
+   * @return string
+   */
   public function getParameterName()
   {
     return $this->parameterName;
   }
+  /**
+   * @param string
+   */
   public function setScope($scope)
   {
     $this->scope = $scope;
   }
+  /**
+   * @return string
+   */
   public function getScope()
   {
     return $this->scope;

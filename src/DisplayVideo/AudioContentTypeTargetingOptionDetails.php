@@ -19,12 +19,21 @@ namespace Google\Service\DisplayVideo;
 
 class AudioContentTypeTargetingOptionDetails extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $audioContentType;
 
+  /**
+   * @param string
+   */
   public function setAudioContentType($audioContentType)
   {
     $this->audioContentType = $audioContentType;
   }
+  /**
+   * @return string
+   */
   public function getAudioContentType()
   {
     return $this->audioContentType;

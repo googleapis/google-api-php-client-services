@@ -57,6 +57,9 @@ class TargetingOption extends \Google\Model
   protected $householdIncomeDetailsDataType = '';
   protected $languageDetailsType = LanguageTargetingOptionDetails::class;
   protected $languageDetailsDataType = '';
+  /**
+   * @var string
+   */
   public $name;
   protected $nativeContentPositionDetailsType = NativeContentPositionTargetingOptionDetails::class;
   protected $nativeContentPositionDetailsDataType = '';
@@ -74,7 +77,13 @@ class TargetingOption extends \Google\Model
   protected $sensitiveCategoryDetailsDataType = '';
   protected $subExchangeDetailsType = SubExchangeTargetingOptionDetails::class;
   protected $subExchangeDetailsDataType = '';
+  /**
+   * @var string
+   */
   public $targetingOptionId;
+  /**
+   * @var string
+   */
   public $targetingType;
   protected $userRewardedContentDetailsType = UserRewardedContentTargetingOptionDetails::class;
   protected $userRewardedContentDetailsDataType = '';
@@ -349,10 +358,16 @@ class TargetingOption extends \Google\Model
   {
     return $this->languageDetails;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
@@ -469,18 +484,30 @@ class TargetingOption extends \Google\Model
   {
     return $this->subExchangeDetails;
   }
+  /**
+   * @param string
+   */
   public function setTargetingOptionId($targetingOptionId)
   {
     $this->targetingOptionId = $targetingOptionId;
   }
+  /**
+   * @return string
+   */
   public function getTargetingOptionId()
   {
     return $this->targetingOptionId;
   }
+  /**
+   * @param string
+   */
   public function setTargetingType($targetingType)
   {
     $this->targetingType = $targetingType;
   }
+  /**
+   * @return string
+   */
   public function getTargetingType()
   {
     return $this->targetingType;

@@ -19,21 +19,39 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1CpuTemperatureInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $label;
+  /**
+   * @var int
+   */
   public $temperatureCelsius;
 
+  /**
+   * @param string
+   */
   public function setLabel($label)
   {
     $this->label = $label;
   }
+  /**
+   * @return string
+   */
   public function getLabel()
   {
     return $this->label;
   }
+  /**
+   * @param int
+   */
   public function setTemperatureCelsius($temperatureCelsius)
   {
     $this->temperatureCelsius = $temperatureCelsius;
   }
+  /**
+   * @return int
+   */
   public function getTemperatureCelsius()
   {
     return $this->temperatureCelsius;

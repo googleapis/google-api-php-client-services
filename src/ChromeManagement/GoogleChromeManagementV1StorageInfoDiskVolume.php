@@ -19,30 +19,57 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1StorageInfoDiskVolume extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $storageFreeBytes;
+  /**
+   * @var string
+   */
   public $storageTotalBytes;
+  /**
+   * @var string
+   */
   public $volumeId;
 
+  /**
+   * @param string
+   */
   public function setStorageFreeBytes($storageFreeBytes)
   {
     $this->storageFreeBytes = $storageFreeBytes;
   }
+  /**
+   * @return string
+   */
   public function getStorageFreeBytes()
   {
     return $this->storageFreeBytes;
   }
+  /**
+   * @param string
+   */
   public function setStorageTotalBytes($storageTotalBytes)
   {
     $this->storageTotalBytes = $storageTotalBytes;
   }
+  /**
+   * @return string
+   */
   public function getStorageTotalBytes()
   {
     return $this->storageTotalBytes;
   }
+  /**
+   * @param string
+   */
   public function setVolumeId($volumeId)
   {
     $this->volumeId = $volumeId;
   }
+  /**
+   * @return string
+   */
   public function getVolumeId()
   {
     return $this->volumeId;

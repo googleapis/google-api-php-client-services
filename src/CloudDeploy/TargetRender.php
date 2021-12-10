@@ -19,21 +19,39 @@ namespace Google\Service\CloudDeploy;
 
 class TargetRender extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $renderingBuild;
+  /**
+   * @var string
+   */
   public $renderingState;
 
+  /**
+   * @param string
+   */
   public function setRenderingBuild($renderingBuild)
   {
     $this->renderingBuild = $renderingBuild;
   }
+  /**
+   * @return string
+   */
   public function getRenderingBuild()
   {
     return $this->renderingBuild;
   }
+  /**
+   * @param string
+   */
   public function setRenderingState($renderingState)
   {
     $this->renderingState = $renderingState;
   }
+  /**
+   * @return string
+   */
   public function getRenderingState()
   {
     return $this->renderingState;

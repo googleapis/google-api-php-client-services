@@ -19,21 +19,39 @@ namespace Google\Service\Dns;
 
 class ManagedZoneCloudLoggingConfig extends \Google\Model
 {
+  /**
+   * @var bool
+   */
   public $enableLogging;
+  /**
+   * @var string
+   */
   public $kind;
 
+  /**
+   * @param bool
+   */
   public function setEnableLogging($enableLogging)
   {
     $this->enableLogging = $enableLogging;
   }
+  /**
+   * @return bool
+   */
   public function getEnableLogging()
   {
     return $this->enableLogging;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;

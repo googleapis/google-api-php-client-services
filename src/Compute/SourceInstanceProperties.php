@@ -20,17 +20,35 @@ namespace Google\Service\Compute;
 class SourceInstanceProperties extends \Google\Collection
 {
   protected $collection_key = 'serviceAccounts';
+  /**
+   * @var bool
+   */
   public $canIpForward;
+  /**
+   * @var bool
+   */
   public $deletionProtection;
+  /**
+   * @var string
+   */
   public $description;
   protected $disksType = SavedAttachedDisk::class;
   protected $disksDataType = 'array';
   protected $guestAcceleratorsType = AcceleratorConfig::class;
   protected $guestAcceleratorsDataType = 'array';
+  /**
+   * @var string[]
+   */
   public $labels;
+  /**
+   * @var string
+   */
   public $machineType;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var string
+   */
   public $minCpuPlatform;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
@@ -41,26 +59,44 @@ class SourceInstanceProperties extends \Google\Collection
   protected $tagsType = Tags::class;
   protected $tagsDataType = '';
 
+  /**
+   * @param bool
+   */
   public function setCanIpForward($canIpForward)
   {
     $this->canIpForward = $canIpForward;
   }
+  /**
+   * @return bool
+   */
   public function getCanIpForward()
   {
     return $this->canIpForward;
   }
+  /**
+   * @param bool
+   */
   public function setDeletionProtection($deletionProtection)
   {
     $this->deletionProtection = $deletionProtection;
   }
+  /**
+   * @return bool
+   */
   public function getDeletionProtection()
   {
     return $this->deletionProtection;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
@@ -93,18 +129,30 @@ class SourceInstanceProperties extends \Google\Collection
   {
     return $this->guestAccelerators;
   }
+  /**
+   * @param string[]
+   */
   public function setLabels($labels)
   {
     $this->labels = $labels;
   }
+  /**
+   * @return string[]
+   */
   public function getLabels()
   {
     return $this->labels;
   }
+  /**
+   * @param string
+   */
   public function setMachineType($machineType)
   {
     $this->machineType = $machineType;
   }
+  /**
+   * @return string
+   */
   public function getMachineType()
   {
     return $this->machineType;
@@ -123,10 +171,16 @@ class SourceInstanceProperties extends \Google\Collection
   {
     return $this->metadata;
   }
+  /**
+   * @param string
+   */
   public function setMinCpuPlatform($minCpuPlatform)
   {
     $this->minCpuPlatform = $minCpuPlatform;
   }
+  /**
+   * @return string
+   */
   public function getMinCpuPlatform()
   {
     return $this->minCpuPlatform;

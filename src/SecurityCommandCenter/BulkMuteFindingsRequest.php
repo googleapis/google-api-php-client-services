@@ -19,21 +19,39 @@ namespace Google\Service\SecurityCommandCenter;
 
 class BulkMuteFindingsRequest extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $filter;
+  /**
+   * @var string
+   */
   public $muteAnnotation;
 
+  /**
+   * @param string
+   */
   public function setFilter($filter)
   {
     $this->filter = $filter;
   }
+  /**
+   * @return string
+   */
   public function getFilter()
   {
     return $this->filter;
   }
+  /**
+   * @param string
+   */
   public function setMuteAnnotation($muteAnnotation)
   {
     $this->muteAnnotation = $muteAnnotation;
   }
+  /**
+   * @return string
+   */
   public function getMuteAnnotation()
   {
     return $this->muteAnnotation;

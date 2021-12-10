@@ -19,12 +19,21 @@ namespace Google\Service\AndroidPublisher;
 
 class TrackTargetedCountry extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $countryCode;
 
+  /**
+   * @param string
+   */
   public function setCountryCode($countryCode)
   {
     $this->countryCode = $countryCode;
   }
+  /**
+   * @return string
+   */
   public function getCountryCode()
   {
     return $this->countryCode;

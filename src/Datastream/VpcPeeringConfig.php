@@ -19,21 +19,39 @@ namespace Google\Service\Datastream;
 
 class VpcPeeringConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $subnet;
+  /**
+   * @var string
+   */
   public $vpc;
 
+  /**
+   * @param string
+   */
   public function setSubnet($subnet)
   {
     $this->subnet = $subnet;
   }
+  /**
+   * @return string
+   */
   public function getSubnet()
   {
     return $this->subnet;
   }
+  /**
+   * @param string
+   */
   public function setVpc($vpc)
   {
     $this->vpc = $vpc;
   }
+  /**
+   * @return string
+   */
   public function getVpc()
   {
     return $this->vpc;

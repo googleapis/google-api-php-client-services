@@ -21,12 +21,27 @@ class GoogleAnalyticsAdminV1alphaDataStream extends \Google\Model
 {
   protected $androidAppStreamDataType = GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamData::class;
   protected $androidAppStreamDataDataType = '';
+  /**
+   * @var string
+   */
   public $createTime;
+  /**
+   * @var string
+   */
   public $displayName;
   protected $iosAppStreamDataType = GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamData::class;
   protected $iosAppStreamDataDataType = '';
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
   public $type;
+  /**
+   * @var string
+   */
   public $updateTime;
   protected $webStreamDataType = GoogleAnalyticsAdminV1alphaDataStreamWebStreamData::class;
   protected $webStreamDataDataType = '';
@@ -45,18 +60,30 @@ class GoogleAnalyticsAdminV1alphaDataStream extends \Google\Model
   {
     return $this->androidAppStreamData;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;
   }
+  /**
+   * @param string
+   */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
   }
+  /**
+   * @return string
+   */
   public function getDisplayName()
   {
     return $this->displayName;
@@ -75,26 +102,44 @@ class GoogleAnalyticsAdminV1alphaDataStream extends \Google\Model
   {
     return $this->iosAppStreamData;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
   public function setType($type)
   {
     $this->type = $type;
   }
+  /**
+   * @return string
+   */
   public function getType()
   {
     return $this->type;
   }
+  /**
+   * @param string
+   */
   public function setUpdateTime($updateTime)
   {
     $this->updateTime = $updateTime;
   }
+  /**
+   * @return string
+   */
   public function getUpdateTime()
   {
     return $this->updateTime;

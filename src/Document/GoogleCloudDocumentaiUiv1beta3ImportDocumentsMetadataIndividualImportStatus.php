@@ -19,23 +19,41 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $inputGcsSource;
+  /**
+   * @var string
+   */
   public $outputGcsDestination;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 
+  /**
+   * @param string
+   */
   public function setInputGcsSource($inputGcsSource)
   {
     $this->inputGcsSource = $inputGcsSource;
   }
+  /**
+   * @return string
+   */
   public function getInputGcsSource()
   {
     return $this->inputGcsSource;
   }
+  /**
+   * @param string
+   */
   public function setOutputGcsDestination($outputGcsDestination)
   {
     $this->outputGcsDestination = $outputGcsDestination;
   }
+  /**
+   * @return string
+   */
   public function getOutputGcsDestination()
   {
     return $this->outputGcsDestination;

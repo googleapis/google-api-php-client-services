@@ -19,14 +19,23 @@ namespace Google\Service\Datastream;
 
 class DestinationConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $destinationConnectionProfile;
   protected $gcsDestinationConfigType = GcsDestinationConfig::class;
   protected $gcsDestinationConfigDataType = '';
 
+  /**
+   * @param string
+   */
   public function setDestinationConnectionProfile($destinationConnectionProfile)
   {
     $this->destinationConnectionProfile = $destinationConnectionProfile;
   }
+  /**
+   * @return string
+   */
   public function getDestinationConnectionProfile()
   {
     return $this->destinationConnectionProfile;

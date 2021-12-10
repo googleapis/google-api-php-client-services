@@ -19,21 +19,39 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamData extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $firebaseAppId;
+  /**
+   * @var string
+   */
   public $packageName;
 
+  /**
+   * @param string
+   */
   public function setFirebaseAppId($firebaseAppId)
   {
     $this->firebaseAppId = $firebaseAppId;
   }
+  /**
+   * @return string
+   */
   public function getFirebaseAppId()
   {
     return $this->firebaseAppId;
   }
+  /**
+   * @param string
+   */
   public function setPackageName($packageName)
   {
     $this->packageName = $packageName;
   }
+  /**
+   * @return string
+   */
   public function getPackageName()
   {
     return $this->packageName;

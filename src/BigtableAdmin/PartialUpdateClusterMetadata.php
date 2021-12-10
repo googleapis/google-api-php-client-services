@@ -19,15 +19,27 @@ namespace Google\Service\BigtableAdmin;
 
 class PartialUpdateClusterMetadata extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $finishTime;
   protected $originalRequestType = PartialUpdateClusterRequest::class;
   protected $originalRequestDataType = '';
+  /**
+   * @var string
+   */
   public $requestTime;
 
+  /**
+   * @param string
+   */
   public function setFinishTime($finishTime)
   {
     $this->finishTime = $finishTime;
   }
+  /**
+   * @return string
+   */
   public function getFinishTime()
   {
     return $this->finishTime;
@@ -46,10 +58,16 @@ class PartialUpdateClusterMetadata extends \Google\Model
   {
     return $this->originalRequest;
   }
+  /**
+   * @param string
+   */
   public function setRequestTime($requestTime)
   {
     $this->requestTime = $requestTime;
   }
+  /**
+   * @return string
+   */
   public function getRequestTime()
   {
     return $this->requestTime;

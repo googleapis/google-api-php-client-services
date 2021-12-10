@@ -19,21 +19,39 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $cwDocId;
+  /**
+   * @var string
+   */
   public $gcsUri;
 
+  /**
+   * @param string
+   */
   public function setCwDocId($cwDocId)
   {
     $this->cwDocId = $cwDocId;
   }
+  /**
+   * @return string
+   */
   public function getCwDocId()
   {
     return $this->cwDocId;
   }
+  /**
+   * @param string
+   */
   public function setGcsUri($gcsUri)
   {
     $this->gcsUri = $gcsUri;
   }
+  /**
+   * @return string
+   */
   public function getGcsUri()
   {
     return $this->gcsUri;

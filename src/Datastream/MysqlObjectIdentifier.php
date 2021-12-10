@@ -19,21 +19,39 @@ namespace Google\Service\Datastream;
 
 class MysqlObjectIdentifier extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $database;
+  /**
+   * @var string
+   */
   public $table;
 
+  /**
+   * @param string
+   */
   public function setDatabase($database)
   {
     $this->database = $database;
   }
+  /**
+   * @return string
+   */
   public function getDatabase()
   {
     return $this->database;
   }
+  /**
+   * @param string
+   */
   public function setTable($table)
   {
     $this->table = $table;
   }
+  /**
+   * @return string
+   */
   public function getTable()
   {
     return $this->table;

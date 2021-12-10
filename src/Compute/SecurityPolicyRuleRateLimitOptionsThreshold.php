@@ -19,21 +19,39 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyRuleRateLimitOptionsThreshold extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $count;
+  /**
+   * @var int
+   */
   public $intervalSec;
 
+  /**
+   * @param int
+   */
   public function setCount($count)
   {
     $this->count = $count;
   }
+  /**
+   * @return int
+   */
   public function getCount()
   {
     return $this->count;
   }
+  /**
+   * @param int
+   */
   public function setIntervalSec($intervalSec)
   {
     $this->intervalSec = $intervalSec;
   }
+  /**
+   * @return int
+   */
   public function getIntervalSec()
   {
     return $this->intervalSec;

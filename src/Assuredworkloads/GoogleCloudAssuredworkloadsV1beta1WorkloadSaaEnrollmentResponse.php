@@ -20,21 +20,39 @@ namespace Google\Service\Assuredworkloads;
 class GoogleCloudAssuredworkloadsV1beta1WorkloadSaaEnrollmentResponse extends \Google\Collection
 {
   protected $collection_key = 'setupErrors';
+  /**
+   * @var string[]
+   */
   public $setupErrors;
+  /**
+   * @var string
+   */
   public $setupStatus;
 
+  /**
+   * @param string[]
+   */
   public function setSetupErrors($setupErrors)
   {
     $this->setupErrors = $setupErrors;
   }
+  /**
+   * @return string[]
+   */
   public function getSetupErrors()
   {
     return $this->setupErrors;
   }
+  /**
+   * @param string
+   */
   public function setSetupStatus($setupStatus)
   {
     $this->setupStatus = $setupStatus;
   }
+  /**
+   * @return string
+   */
   public function getSetupStatus()
   {
     return $this->setupStatus;

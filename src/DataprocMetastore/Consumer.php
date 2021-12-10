@@ -19,21 +19,39 @@ namespace Google\Service\DataprocMetastore;
 
 class Consumer extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $endpointUri;
+  /**
+   * @var string
+   */
   public $subnetwork;
 
+  /**
+   * @param string
+   */
   public function setEndpointUri($endpointUri)
   {
     $this->endpointUri = $endpointUri;
   }
+  /**
+   * @return string
+   */
   public function getEndpointUri()
   {
     return $this->endpointUri;
   }
+  /**
+   * @param string
+   */
   public function setSubnetwork($subnetwork)
   {
     $this->subnetwork = $subnetwork;
   }
+  /**
+   * @return string
+   */
   public function getSubnetwork()
   {
     return $this->subnetwork;

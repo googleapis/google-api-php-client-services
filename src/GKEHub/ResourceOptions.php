@@ -19,21 +19,39 @@ namespace Google\Service\GKEHub;
 
 class ResourceOptions extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $connectVersion;
+  /**
+   * @var bool
+   */
   public $v1beta1Crd;
 
+  /**
+   * @param string
+   */
   public function setConnectVersion($connectVersion)
   {
     $this->connectVersion = $connectVersion;
   }
+  /**
+   * @return string
+   */
   public function getConnectVersion()
   {
     return $this->connectVersion;
   }
+  /**
+   * @param bool
+   */
   public function setV1beta1Crd($v1beta1Crd)
   {
     $this->v1beta1Crd = $v1beta1Crd;
   }
+  /**
+   * @return bool
+   */
   public function getV1beta1Crd()
   {
     return $this->v1beta1Crd;

@@ -22,6 +22,9 @@ class OracleSchema extends \Google\Collection
   protected $collection_key = 'oracleTables';
   protected $oracleTablesType = OracleTable::class;
   protected $oracleTablesDataType = 'array';
+  /**
+   * @var string
+   */
   public $schema;
 
   /**
@@ -38,10 +41,16 @@ class OracleSchema extends \Google\Collection
   {
     return $this->oracleTables;
   }
+  /**
+   * @param string
+   */
   public function setSchema($schema)
   {
     $this->schema = $schema;
   }
+  /**
+   * @return string
+   */
   public function getSchema()
   {
     return $this->schema;

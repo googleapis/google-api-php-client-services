@@ -20,57 +20,117 @@ namespace Google\Service\Compute;
 class MachineImage extends \Google\Collection
 {
   protected $collection_key = 'storageLocations';
+  /**
+   * @var string
+   */
   public $creationTimestamp;
+  /**
+   * @var string
+   */
   public $description;
+  /**
+   * @var bool
+   */
   public $guestFlush;
+  /**
+   * @var string
+   */
   public $id;
   protected $instancePropertiesType = InstanceProperties::class;
   protected $instancePropertiesDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
   protected $machineImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $machineImageEncryptionKeyDataType = '';
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var bool
+   */
   public $satisfiesPzs;
   protected $savedDisksType = SavedDisk::class;
   protected $savedDisksDataType = 'array';
+  /**
+   * @var string
+   */
   public $selfLink;
   protected $sourceDiskEncryptionKeysType = SourceDiskEncryptionKey::class;
   protected $sourceDiskEncryptionKeysDataType = 'array';
+  /**
+   * @var string
+   */
   public $sourceInstance;
   protected $sourceInstancePropertiesType = SourceInstanceProperties::class;
   protected $sourceInstancePropertiesDataType = '';
+  /**
+   * @var string
+   */
   public $status;
+  /**
+   * @var string[]
+   */
   public $storageLocations;
+  /**
+   * @var string
+   */
   public $totalStorageBytes;
 
+  /**
+   * @param string
+   */
   public function setCreationTimestamp($creationTimestamp)
   {
     $this->creationTimestamp = $creationTimestamp;
   }
+  /**
+   * @return string
+   */
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
   }
+  /**
+   * @param bool
+   */
   public function setGuestFlush($guestFlush)
   {
     $this->guestFlush = $guestFlush;
   }
+  /**
+   * @return bool
+   */
   public function getGuestFlush()
   {
     return $this->guestFlush;
   }
+  /**
+   * @param string
+   */
   public function setId($id)
   {
     $this->id = $id;
   }
+  /**
+   * @return string
+   */
   public function getId()
   {
     return $this->id;
@@ -89,10 +149,16 @@ class MachineImage extends \Google\Collection
   {
     return $this->instanceProperties;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
@@ -111,18 +177,30 @@ class MachineImage extends \Google\Collection
   {
     return $this->machineImageEncryptionKey;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param bool
+   */
   public function setSatisfiesPzs($satisfiesPzs)
   {
     $this->satisfiesPzs = $satisfiesPzs;
   }
+  /**
+   * @return bool
+   */
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
@@ -141,10 +219,16 @@ class MachineImage extends \Google\Collection
   {
     return $this->savedDisks;
   }
+  /**
+   * @param string
+   */
   public function setSelfLink($selfLink)
   {
     $this->selfLink = $selfLink;
   }
+  /**
+   * @return string
+   */
   public function getSelfLink()
   {
     return $this->selfLink;
@@ -163,10 +247,16 @@ class MachineImage extends \Google\Collection
   {
     return $this->sourceDiskEncryptionKeys;
   }
+  /**
+   * @param string
+   */
   public function setSourceInstance($sourceInstance)
   {
     $this->sourceInstance = $sourceInstance;
   }
+  /**
+   * @return string
+   */
   public function getSourceInstance()
   {
     return $this->sourceInstance;
@@ -185,26 +275,44 @@ class MachineImage extends \Google\Collection
   {
     return $this->sourceInstanceProperties;
   }
+  /**
+   * @param string
+   */
   public function setStatus($status)
   {
     $this->status = $status;
   }
+  /**
+   * @return string
+   */
   public function getStatus()
   {
     return $this->status;
   }
+  /**
+   * @param string[]
+   */
   public function setStorageLocations($storageLocations)
   {
     $this->storageLocations = $storageLocations;
   }
+  /**
+   * @return string[]
+   */
   public function getStorageLocations()
   {
     return $this->storageLocations;
   }
+  /**
+   * @param string
+   */
   public function setTotalStorageBytes($totalStorageBytes)
   {
     $this->totalStorageBytes = $totalStorageBytes;
   }
+  /**
+   * @return string
+   */
   public function getTotalStorageBytes()
   {
     return $this->totalStorageBytes;

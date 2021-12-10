@@ -19,15 +19,27 @@ namespace Google\Service\ChromePolicy;
 
 class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $description;
   protected $endSupportType = GoogleTypeDate::class;
   protected $endSupportDataType = '';
+  /**
+   * @var string
+   */
   public $policyApiLifecycleStage;
 
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
@@ -46,10 +58,16 @@ class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle extends \Google\Model
   {
     return $this->endSupport;
   }
+  /**
+   * @param string
+   */
   public function setPolicyApiLifecycleStage($policyApiLifecycleStage)
   {
     $this->policyApiLifecycleStage = $policyApiLifecycleStage;
   }
+  /**
+   * @return string
+   */
   public function getPolicyApiLifecycleStage()
   {
     return $this->policyApiLifecycleStage;

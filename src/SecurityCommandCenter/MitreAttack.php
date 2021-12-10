@@ -20,48 +20,93 @@ namespace Google\Service\SecurityCommandCenter;
 class MitreAttack extends \Google\Collection
 {
   protected $collection_key = 'primaryTechniques';
+  /**
+   * @var string[]
+   */
   public $additionalTactics;
+  /**
+   * @var string[]
+   */
   public $additionalTechniques;
+  /**
+   * @var string
+   */
   public $primaryTactic;
+  /**
+   * @var string[]
+   */
   public $primaryTechniques;
+  /**
+   * @var string
+   */
   public $version;
 
+  /**
+   * @param string[]
+   */
   public function setAdditionalTactics($additionalTactics)
   {
     $this->additionalTactics = $additionalTactics;
   }
+  /**
+   * @return string[]
+   */
   public function getAdditionalTactics()
   {
     return $this->additionalTactics;
   }
+  /**
+   * @param string[]
+   */
   public function setAdditionalTechniques($additionalTechniques)
   {
     $this->additionalTechniques = $additionalTechniques;
   }
+  /**
+   * @return string[]
+   */
   public function getAdditionalTechniques()
   {
     return $this->additionalTechniques;
   }
+  /**
+   * @param string
+   */
   public function setPrimaryTactic($primaryTactic)
   {
     $this->primaryTactic = $primaryTactic;
   }
+  /**
+   * @return string
+   */
   public function getPrimaryTactic()
   {
     return $this->primaryTactic;
   }
+  /**
+   * @param string[]
+   */
   public function setPrimaryTechniques($primaryTechniques)
   {
     $this->primaryTechniques = $primaryTechniques;
   }
+  /**
+   * @return string[]
+   */
   public function getPrimaryTechniques()
   {
     return $this->primaryTechniques;
   }
+  /**
+   * @param string
+   */
   public function setVersion($version)
   {
     $this->version = $version;
   }
+  /**
+   * @return string
+   */
   public function getVersion()
   {
     return $this->version;

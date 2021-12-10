@@ -131,7 +131,10 @@ class Disks extends \Google\Service\Resource
     return $this->call('aggregatedList', [$params], DiskAggregatedList::class);
   }
   /**
-   * Creates a snapshot of a specified persistent disk. (disks.createSnapshot)
+   * Creates a snapshot of a specified persistent disk. For regular snapshot
+   * creation, consider using snapshots.insert instead, as that method supports
+   * more features, such as creating snapshots in a project different from the
+   * source disk project. (disks.createSnapshot)
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.

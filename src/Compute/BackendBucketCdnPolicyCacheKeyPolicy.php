@@ -20,21 +20,39 @@ namespace Google\Service\Compute;
 class BackendBucketCdnPolicyCacheKeyPolicy extends \Google\Collection
 {
   protected $collection_key = 'queryStringWhitelist';
+  /**
+   * @var string[]
+   */
   public $includeHttpHeaders;
+  /**
+   * @var string[]
+   */
   public $queryStringWhitelist;
 
+  /**
+   * @param string[]
+   */
   public function setIncludeHttpHeaders($includeHttpHeaders)
   {
     $this->includeHttpHeaders = $includeHttpHeaders;
   }
+  /**
+   * @return string[]
+   */
   public function getIncludeHttpHeaders()
   {
     return $this->includeHttpHeaders;
   }
+  /**
+   * @param string[]
+   */
   public function setQueryStringWhitelist($queryStringWhitelist)
   {
     $this->queryStringWhitelist = $queryStringWhitelist;
   }
+  /**
+   * @return string[]
+   */
   public function getQueryStringWhitelist()
   {
     return $this->queryStringWhitelist;

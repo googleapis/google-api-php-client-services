@@ -19,48 +19,93 @@ namespace Google\Service\SQLAdmin;
 
 class PasswordValidationPolicy extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $complexity;
+  /**
+   * @var bool
+   */
   public $disallowUsernameSubstring;
+  /**
+   * @var int
+   */
   public $minLength;
+  /**
+   * @var string
+   */
   public $passwordChangeInterval;
+  /**
+   * @var int
+   */
   public $reuseInterval;
 
+  /**
+   * @param string
+   */
   public function setComplexity($complexity)
   {
     $this->complexity = $complexity;
   }
+  /**
+   * @return string
+   */
   public function getComplexity()
   {
     return $this->complexity;
   }
+  /**
+   * @param bool
+   */
   public function setDisallowUsernameSubstring($disallowUsernameSubstring)
   {
     $this->disallowUsernameSubstring = $disallowUsernameSubstring;
   }
+  /**
+   * @return bool
+   */
   public function getDisallowUsernameSubstring()
   {
     return $this->disallowUsernameSubstring;
   }
+  /**
+   * @param int
+   */
   public function setMinLength($minLength)
   {
     $this->minLength = $minLength;
   }
+  /**
+   * @return int
+   */
   public function getMinLength()
   {
     return $this->minLength;
   }
+  /**
+   * @param string
+   */
   public function setPasswordChangeInterval($passwordChangeInterval)
   {
     $this->passwordChangeInterval = $passwordChangeInterval;
   }
+  /**
+   * @return string
+   */
   public function getPasswordChangeInterval()
   {
     return $this->passwordChangeInterval;
   }
+  /**
+   * @param int
+   */
   public function setReuseInterval($reuseInterval)
   {
     $this->reuseInterval = $reuseInterval;
   }
+  /**
+   * @return int
+   */
   public function getReuseInterval()
   {
     return $this->reuseInterval;

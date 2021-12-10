@@ -20,23 +20,41 @@ namespace Google\Service\Speech;
 class PhraseSet extends \Google\Collection
 {
   protected $collection_key = 'phrases';
+  /**
+   * @var float
+   */
   public $boost;
+  /**
+   * @var string
+   */
   public $name;
   protected $phrasesType = Phrase::class;
   protected $phrasesDataType = 'array';
 
+  /**
+   * @param float
+   */
   public function setBoost($boost)
   {
     $this->boost = $boost;
   }
+  /**
+   * @return float
+   */
   public function getBoost()
   {
     return $this->boost;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;

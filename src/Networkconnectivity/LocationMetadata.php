@@ -20,12 +20,21 @@ namespace Google\Service\Networkconnectivity;
 class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'locationFeatures';
+  /**
+   * @var string[]
+   */
   public $locationFeatures;
 
+  /**
+   * @param string[]
+   */
   public function setLocationFeatures($locationFeatures)
   {
     $this->locationFeatures = $locationFeatures;
   }
+  /**
+   * @return string[]
+   */
   public function getLocationFeatures()
   {
     return $this->locationFeatures;

@@ -20,15 +20,27 @@ namespace Google\Service\Speech;
 class CustomClass extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var string
+   */
   public $customClassId;
   protected $itemsType = ClassItem::class;
   protected $itemsDataType = 'array';
+  /**
+   * @var string
+   */
   public $name;
 
+  /**
+   * @param string
+   */
   public function setCustomClassId($customClassId)
   {
     $this->customClassId = $customClassId;
   }
+  /**
+   * @return string
+   */
   public function getCustomClassId()
   {
     return $this->customClassId;
@@ -47,10 +59,16 @@ class CustomClass extends \Google\Collection
   {
     return $this->items;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;

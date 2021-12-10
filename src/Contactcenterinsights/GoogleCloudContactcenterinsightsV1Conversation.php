@@ -20,35 +20,77 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
 {
   protected $collection_key = 'runtimeAnnotations';
+  /**
+   * @var string
+   */
   public $agentId;
   protected $callMetadataType = GoogleCloudContactcenterinsightsV1ConversationCallMetadata::class;
   protected $callMetadataDataType = '';
+  /**
+   * @var string
+   */
   public $createTime;
   protected $dataSourceType = GoogleCloudContactcenterinsightsV1ConversationDataSource::class;
   protected $dataSourceDataType = '';
   protected $dialogflowIntentsType = GoogleCloudContactcenterinsightsV1DialogflowIntent::class;
   protected $dialogflowIntentsDataType = 'map';
+  /**
+   * @var string
+   */
   public $duration;
+  /**
+   * @var string
+   */
   public $expireTime;
+  /**
+   * @var string[]
+   */
   public $labels;
+  /**
+   * @var string
+   */
   public $languageCode;
   protected $latestAnalysisType = GoogleCloudContactcenterinsightsV1Analysis::class;
   protected $latestAnalysisDataType = '';
+  /**
+   * @var string
+   */
   public $medium;
+  /**
+   * @var string
+   */
   public $name;
   protected $runtimeAnnotationsType = GoogleCloudContactcenterinsightsV1RuntimeAnnotation::class;
   protected $runtimeAnnotationsDataType = 'array';
+  /**
+   * @var string
+   */
   public $startTime;
   protected $transcriptType = GoogleCloudContactcenterinsightsV1ConversationTranscript::class;
   protected $transcriptDataType = '';
+  /**
+   * @var string
+   */
   public $ttl;
+  /**
+   * @var int
+   */
   public $turnCount;
+  /**
+   * @var string
+   */
   public $updateTime;
 
+  /**
+   * @param string
+   */
   public function setAgentId($agentId)
   {
     $this->agentId = $agentId;
   }
+  /**
+   * @return string
+   */
   public function getAgentId()
   {
     return $this->agentId;
@@ -67,10 +109,16 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   {
     return $this->callMetadata;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;
@@ -103,34 +151,58 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   {
     return $this->dialogflowIntents;
   }
+  /**
+   * @param string
+   */
   public function setDuration($duration)
   {
     $this->duration = $duration;
   }
+  /**
+   * @return string
+   */
   public function getDuration()
   {
     return $this->duration;
   }
+  /**
+   * @param string
+   */
   public function setExpireTime($expireTime)
   {
     $this->expireTime = $expireTime;
   }
+  /**
+   * @return string
+   */
   public function getExpireTime()
   {
     return $this->expireTime;
   }
+  /**
+   * @param string[]
+   */
   public function setLabels($labels)
   {
     $this->labels = $labels;
   }
+  /**
+   * @return string[]
+   */
   public function getLabels()
   {
     return $this->labels;
   }
+  /**
+   * @param string
+   */
   public function setLanguageCode($languageCode)
   {
     $this->languageCode = $languageCode;
   }
+  /**
+   * @return string
+   */
   public function getLanguageCode()
   {
     return $this->languageCode;
@@ -149,18 +221,30 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   {
     return $this->latestAnalysis;
   }
+  /**
+   * @param string
+   */
   public function setMedium($medium)
   {
     $this->medium = $medium;
   }
+  /**
+   * @return string
+   */
   public function getMedium()
   {
     return $this->medium;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
@@ -179,10 +263,16 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   {
     return $this->runtimeAnnotations;
   }
+  /**
+   * @param string
+   */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
+  /**
+   * @return string
+   */
   public function getStartTime()
   {
     return $this->startTime;
@@ -201,26 +291,44 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   {
     return $this->transcript;
   }
+  /**
+   * @param string
+   */
   public function setTtl($ttl)
   {
     $this->ttl = $ttl;
   }
+  /**
+   * @return string
+   */
   public function getTtl()
   {
     return $this->ttl;
   }
+  /**
+   * @param int
+   */
   public function setTurnCount($turnCount)
   {
     $this->turnCount = $turnCount;
   }
+  /**
+   * @return int
+   */
   public function getTurnCount()
   {
     return $this->turnCount;
   }
+  /**
+   * @param string
+   */
   public function setUpdateTime($updateTime)
   {
     $this->updateTime = $updateTime;
   }
+  /**
+   * @return string
+   */
   public function getUpdateTime()
   {
     return $this->updateTime;

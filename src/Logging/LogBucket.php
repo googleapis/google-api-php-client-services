@@ -22,13 +22,37 @@ class LogBucket extends \Google\Collection
   protected $collection_key = 'restrictedFields';
   protected $cmekSettingsType = CmekSettings::class;
   protected $cmekSettingsDataType = '';
+  /**
+   * @var string
+   */
   public $createTime;
+  /**
+   * @var string
+   */
   public $description;
+  /**
+   * @var string
+   */
   public $lifecycleState;
+  /**
+   * @var bool
+   */
   public $locked;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string[]
+   */
   public $restrictedFields;
+  /**
+   * @var int
+   */
   public $retentionDays;
+  /**
+   * @var string
+   */
   public $updateTime;
 
   /**
@@ -45,66 +69,114 @@ class LogBucket extends \Google\Collection
   {
     return $this->cmekSettings;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
   }
+  /**
+   * @param string
+   */
   public function setLifecycleState($lifecycleState)
   {
     $this->lifecycleState = $lifecycleState;
   }
+  /**
+   * @return string
+   */
   public function getLifecycleState()
   {
     return $this->lifecycleState;
   }
+  /**
+   * @param bool
+   */
   public function setLocked($locked)
   {
     $this->locked = $locked;
   }
+  /**
+   * @return bool
+   */
   public function getLocked()
   {
     return $this->locked;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string[]
+   */
   public function setRestrictedFields($restrictedFields)
   {
     $this->restrictedFields = $restrictedFields;
   }
+  /**
+   * @return string[]
+   */
   public function getRestrictedFields()
   {
     return $this->restrictedFields;
   }
+  /**
+   * @param int
+   */
   public function setRetentionDays($retentionDays)
   {
     $this->retentionDays = $retentionDays;
   }
+  /**
+   * @return int
+   */
   public function getRetentionDays()
   {
     return $this->retentionDays;
   }
+  /**
+   * @param string
+   */
   public function setUpdateTime($updateTime)
   {
     $this->updateTime = $updateTime;
   }
+  /**
+   * @return string
+   */
   public function getUpdateTime()
   {
     return $this->updateTime;

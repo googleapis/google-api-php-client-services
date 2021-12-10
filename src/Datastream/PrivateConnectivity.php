@@ -19,12 +19,21 @@ namespace Google\Service\Datastream;
 
 class PrivateConnectivity extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $privateConnection;
 
+  /**
+   * @param string
+   */
   public function setPrivateConnection($privateConnection)
   {
     $this->privateConnection = $privateConnection;
   }
+  /**
+   * @return string
+   */
   public function getPrivateConnection()
   {
     return $this->privateConnection;

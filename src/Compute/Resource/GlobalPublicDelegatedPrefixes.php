@@ -49,8 +49,7 @@ class GlobalPublicDelegatedPrefixes extends \Google\Service\Resource
    * received, and if so, will ignore the second request. This prevents clients
    * from accidentally creating duplicate commitments. The request ID must be a
    * valid UUID with the exception that zero UUID is not supported (
-   * 00000000-0000-0000-0000-000000000000). end_interface:
-   * MixerMutationRequestBuilder
+   * 00000000-0000-0000-0000-000000000000).
    * @return Operation
    */
   public function delete($project, $publicDelegatedPrefix, $optParams = [])
@@ -93,8 +92,7 @@ class GlobalPublicDelegatedPrefixes extends \Google\Service\Resource
    * received, and if so, will ignore the second request. This prevents clients
    * from accidentally creating duplicate commitments. The request ID must be a
    * valid UUID with the exception that zero UUID is not supported (
-   * 00000000-0000-0000-0000-000000000000). end_interface:
-   * MixerMutationRequestBuilder
+   * 00000000-0000-0000-0000-000000000000).
    * @return Operation
    */
   public function insert($project, PublicDelegatedPrefix $postBody, $optParams = [])
@@ -178,8 +176,7 @@ class GlobalPublicDelegatedPrefixes extends \Google\Service\Resource
    * received, and if so, will ignore the second request. This prevents clients
    * from accidentally creating duplicate commitments. The request ID must be a
    * valid UUID with the exception that zero UUID is not supported (
-   * 00000000-0000-0000-0000-000000000000). end_interface:
-   * MixerMutationRequestBuilder
+   * 00000000-0000-0000-0000-000000000000).
    * @return Operation
    */
   public function patch($project, $publicDelegatedPrefix, PublicDelegatedPrefix $postBody, $optParams = [])

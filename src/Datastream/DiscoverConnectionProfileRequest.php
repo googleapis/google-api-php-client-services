@@ -21,8 +21,17 @@ class DiscoverConnectionProfileRequest extends \Google\Model
 {
   protected $connectionProfileType = ConnectionProfile::class;
   protected $connectionProfileDataType = '';
+  /**
+   * @var string
+   */
   public $connectionProfileName;
+  /**
+   * @var bool
+   */
   public $fullHierarchy;
+  /**
+   * @var int
+   */
   public $hierarchyDepth;
   protected $mysqlRdbmsType = MysqlRdbms::class;
   protected $mysqlRdbmsDataType = '';
@@ -43,26 +52,44 @@ class DiscoverConnectionProfileRequest extends \Google\Model
   {
     return $this->connectionProfile;
   }
+  /**
+   * @param string
+   */
   public function setConnectionProfileName($connectionProfileName)
   {
     $this->connectionProfileName = $connectionProfileName;
   }
+  /**
+   * @return string
+   */
   public function getConnectionProfileName()
   {
     return $this->connectionProfileName;
   }
+  /**
+   * @param bool
+   */
   public function setFullHierarchy($fullHierarchy)
   {
     $this->fullHierarchy = $fullHierarchy;
   }
+  /**
+   * @return bool
+   */
   public function getFullHierarchy()
   {
     return $this->fullHierarchy;
   }
+  /**
+   * @param int
+   */
   public function setHierarchyDepth($hierarchyDepth)
   {
     $this->hierarchyDepth = $hierarchyDepth;
   }
+  /**
+   * @return int
+   */
   public function getHierarchyDepth()
   {
     return $this->hierarchyDepth;

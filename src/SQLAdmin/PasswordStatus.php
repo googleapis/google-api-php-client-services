@@ -19,21 +19,39 @@ namespace Google\Service\SQLAdmin;
 
 class PasswordStatus extends \Google\Model
 {
+  /**
+   * @var bool
+   */
   public $locked;
+  /**
+   * @var string
+   */
   public $passwordExpirationTime;
 
+  /**
+   * @param bool
+   */
   public function setLocked($locked)
   {
     $this->locked = $locked;
   }
+  /**
+   * @return bool
+   */
   public function getLocked()
   {
     return $this->locked;
   }
+  /**
+   * @param string
+   */
   public function setPasswordExpirationTime($passwordExpirationTime)
   {
     $this->passwordExpirationTime = $passwordExpirationTime;
   }
+  /**
+   * @return string
+   */
   public function getPasswordExpirationTime()
   {
     return $this->passwordExpirationTime;

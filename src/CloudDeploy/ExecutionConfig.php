@@ -24,6 +24,9 @@ class ExecutionConfig extends \Google\Collection
   protected $defaultPoolDataType = '';
   protected $privatePoolType = PrivatePool::class;
   protected $privatePoolDataType = '';
+  /**
+   * @var string[]
+   */
   public $usages;
 
   /**
@@ -54,10 +57,16 @@ class ExecutionConfig extends \Google\Collection
   {
     return $this->privatePool;
   }
+  /**
+   * @param string[]
+   */
   public function setUsages($usages)
   {
     $this->usages = $usages;
   }
+  /**
+   * @return string[]
+   */
   public function getUsages()
   {
     return $this->usages;

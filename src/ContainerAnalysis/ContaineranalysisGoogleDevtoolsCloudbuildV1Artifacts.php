@@ -20,14 +20,23 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends \Google\Collection
 {
   protected $collection_key = 'images';
+  /**
+   * @var string[]
+   */
   public $images;
   protected $objectsType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects::class;
   protected $objectsDataType = '';
 
+  /**
+   * @param string[]
+   */
   public function setImages($images)
   {
     $this->images = $images;
   }
+  /**
+   * @return string[]
+   */
   public function getImages()
   {
     return $this->images;

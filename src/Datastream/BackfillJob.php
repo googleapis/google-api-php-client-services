@@ -22,9 +22,21 @@ class BackfillJob extends \Google\Collection
   protected $collection_key = 'errors';
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
+  /**
+   * @var string
+   */
   public $lastEndTime;
+  /**
+   * @var string
+   */
   public $lastStartTime;
+  /**
+   * @var string
+   */
   public $state;
+  /**
+   * @var string
+   */
   public $trigger;
 
   /**
@@ -41,34 +53,58 @@ class BackfillJob extends \Google\Collection
   {
     return $this->errors;
   }
+  /**
+   * @param string
+   */
   public function setLastEndTime($lastEndTime)
   {
     $this->lastEndTime = $lastEndTime;
   }
+  /**
+   * @return string
+   */
   public function getLastEndTime()
   {
     return $this->lastEndTime;
   }
+  /**
+   * @param string
+   */
   public function setLastStartTime($lastStartTime)
   {
     $this->lastStartTime = $lastStartTime;
   }
+  /**
+   * @return string
+   */
   public function getLastStartTime()
   {
     return $this->lastStartTime;
   }
+  /**
+   * @param string
+   */
   public function setState($state)
   {
     $this->state = $state;
   }
+  /**
+   * @return string
+   */
   public function getState()
   {
     return $this->state;
   }
+  /**
+   * @param string
+   */
   public function setTrigger($trigger)
   {
     $this->trigger = $trigger;
   }
+  /**
+   * @return string
+   */
   public function getTrigger()
   {
     return $this->trigger;

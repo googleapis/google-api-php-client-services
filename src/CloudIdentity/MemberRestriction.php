@@ -21,6 +21,9 @@ class MemberRestriction extends \Google\Model
 {
   protected $evaluationType = RestrictionEvaluation::class;
   protected $evaluationDataType = '';
+  /**
+   * @var string
+   */
   public $query;
 
   /**
@@ -37,10 +40,16 @@ class MemberRestriction extends \Google\Model
   {
     return $this->evaluation;
   }
+  /**
+   * @param string
+   */
   public function setQuery($query)
   {
     $this->query = $query;
   }
+  /**
+   * @return string
+   */
   public function getQuery()
   {
     return $this->query;

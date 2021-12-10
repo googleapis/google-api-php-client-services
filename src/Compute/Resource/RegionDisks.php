@@ -70,7 +70,10 @@ class RegionDisks extends \Google\Service\Resource
     return $this->call('addResourcePolicies', [$params], Operation::class);
   }
   /**
-   * Creates a snapshot of this regional disk. (regionDisks.createSnapshot)
+   * Creates a snapshot of a specified persistent disk. For regular snapshot
+   * creation, consider using snapshots.insert instead, as that method supports
+   * more features, such as creating snapshots in a project different from the
+   * source disk project. (regionDisks.createSnapshot)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region for this request.

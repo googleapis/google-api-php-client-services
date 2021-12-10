@@ -19,21 +19,39 @@ namespace Google\Service\Speech;
 
 class Phrase extends \Google\Model
 {
+  /**
+   * @var float
+   */
   public $boost;
+  /**
+   * @var string
+   */
   public $value;
 
+  /**
+   * @param float
+   */
   public function setBoost($boost)
   {
     $this->boost = $boost;
   }
+  /**
+   * @return float
+   */
   public function getBoost()
   {
     return $this->boost;
   }
+  /**
+   * @param string
+   */
   public function setValue($value)
   {
     $this->value = $value;
   }
+  /**
+   * @return string
+   */
   public function getValue()
   {
     return $this->value;

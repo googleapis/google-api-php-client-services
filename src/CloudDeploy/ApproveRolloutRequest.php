@@ -19,12 +19,21 @@ namespace Google\Service\CloudDeploy;
 
 class ApproveRolloutRequest extends \Google\Model
 {
+  /**
+   * @var bool
+   */
   public $approved;
 
+  /**
+   * @param bool
+   */
   public function setApproved($approved)
   {
     $this->approved = $approved;
   }
+  /**
+   * @return bool
+   */
   public function getApproved()
   {
     return $this->approved;

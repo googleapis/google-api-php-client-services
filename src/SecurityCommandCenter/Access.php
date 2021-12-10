@@ -19,18 +19,39 @@ namespace Google\Service\SecurityCommandCenter;
 
 class Access extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $callerIp;
   protected $callerIpGeoType = Geolocation::class;
   protected $callerIpGeoDataType = '';
+  /**
+   * @var string
+   */
   public $methodName;
+  /**
+   * @var string
+   */
   public $principalEmail;
+  /**
+   * @var string
+   */
   public $serviceName;
+  /**
+   * @var string
+   */
   public $userAgentFamily;
 
+  /**
+   * @param string
+   */
   public function setCallerIp($callerIp)
   {
     $this->callerIp = $callerIp;
   }
+  /**
+   * @return string
+   */
   public function getCallerIp()
   {
     return $this->callerIp;
@@ -49,34 +70,58 @@ class Access extends \Google\Model
   {
     return $this->callerIpGeo;
   }
+  /**
+   * @param string
+   */
   public function setMethodName($methodName)
   {
     $this->methodName = $methodName;
   }
+  /**
+   * @return string
+   */
   public function getMethodName()
   {
     return $this->methodName;
   }
+  /**
+   * @param string
+   */
   public function setPrincipalEmail($principalEmail)
   {
     $this->principalEmail = $principalEmail;
   }
+  /**
+   * @return string
+   */
   public function getPrincipalEmail()
   {
     return $this->principalEmail;
   }
+  /**
+   * @param string
+   */
   public function setServiceName($serviceName)
   {
     $this->serviceName = $serviceName;
   }
+  /**
+   * @return string
+   */
   public function getServiceName()
   {
     return $this->serviceName;
   }
+  /**
+   * @param string
+   */
   public function setUserAgentFamily($userAgentFamily)
   {
     $this->userAgentFamily = $userAgentFamily;
   }
+  /**
+   * @return string
+   */
   public function getUserAgentFamily()
   {
     return $this->userAgentFamily;

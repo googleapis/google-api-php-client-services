@@ -19,48 +19,93 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1NetworkStatusReport extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $gatewayIpAddress;
+  /**
+   * @var string
+   */
   public $lanIpAddress;
+  /**
+   * @var string
+   */
   public $reportTime;
+  /**
+   * @var string
+   */
   public $sampleFrequency;
+  /**
+   * @var int
+   */
   public $signalStrengthDbm;
 
+  /**
+   * @param string
+   */
   public function setGatewayIpAddress($gatewayIpAddress)
   {
     $this->gatewayIpAddress = $gatewayIpAddress;
   }
+  /**
+   * @return string
+   */
   public function getGatewayIpAddress()
   {
     return $this->gatewayIpAddress;
   }
+  /**
+   * @param string
+   */
   public function setLanIpAddress($lanIpAddress)
   {
     $this->lanIpAddress = $lanIpAddress;
   }
+  /**
+   * @return string
+   */
   public function getLanIpAddress()
   {
     return $this->lanIpAddress;
   }
+  /**
+   * @param string
+   */
   public function setReportTime($reportTime)
   {
     $this->reportTime = $reportTime;
   }
+  /**
+   * @return string
+   */
   public function getReportTime()
   {
     return $this->reportTime;
   }
+  /**
+   * @param string
+   */
   public function setSampleFrequency($sampleFrequency)
   {
     $this->sampleFrequency = $sampleFrequency;
   }
+  /**
+   * @return string
+   */
   public function getSampleFrequency()
   {
     return $this->sampleFrequency;
   }
+  /**
+   * @param int
+   */
   public function setSignalStrengthDbm($signalStrengthDbm)
   {
     $this->signalStrengthDbm = $signalStrengthDbm;
   }
+  /**
+   * @return int
+   */
   public function getSignalStrengthDbm()
   {
     return $this->signalStrengthDbm;

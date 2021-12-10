@@ -19,21 +19,39 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyRuleRedirectOptions extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $target;
+  /**
+   * @var string
+   */
   public $type;
 
+  /**
+   * @param string
+   */
   public function setTarget($target)
   {
     $this->target = $target;
   }
+  /**
+   * @return string
+   */
   public function getTarget()
   {
     return $this->target;
   }
+  /**
+   * @param string
+   */
   public function setType($type)
   {
     $this->type = $type;
   }
+  /**
+   * @return string
+   */
   public function getType()
   {
     return $this->type;

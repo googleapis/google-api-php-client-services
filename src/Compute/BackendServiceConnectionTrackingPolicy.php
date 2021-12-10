@@ -19,30 +19,57 @@ namespace Google\Service\Compute;
 
 class BackendServiceConnectionTrackingPolicy extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $connectionPersistenceOnUnhealthyBackends;
+  /**
+   * @var int
+   */
   public $idleTimeoutSec;
+  /**
+   * @var string
+   */
   public $trackingMode;
 
+  /**
+   * @param string
+   */
   public function setConnectionPersistenceOnUnhealthyBackends($connectionPersistenceOnUnhealthyBackends)
   {
     $this->connectionPersistenceOnUnhealthyBackends = $connectionPersistenceOnUnhealthyBackends;
   }
+  /**
+   * @return string
+   */
   public function getConnectionPersistenceOnUnhealthyBackends()
   {
     return $this->connectionPersistenceOnUnhealthyBackends;
   }
+  /**
+   * @param int
+   */
   public function setIdleTimeoutSec($idleTimeoutSec)
   {
     $this->idleTimeoutSec = $idleTimeoutSec;
   }
+  /**
+   * @return int
+   */
   public function getIdleTimeoutSec()
   {
     return $this->idleTimeoutSec;
   }
+  /**
+   * @param string
+   */
   public function setTrackingMode($trackingMode)
   {
     $this->trackingMode = $trackingMode;
   }
+  /**
+   * @return string
+   */
   public function getTrackingMode()
   {
     return $this->trackingMode;

@@ -35,7 +35,13 @@ class TransferSpec extends \Google\Model
   protected $posixDataSinkDataType = '';
   protected $posixDataSourceType = PosixFilesystem::class;
   protected $posixDataSourceDataType = '';
+  /**
+   * @var string
+   */
   public $sinkAgentPoolName;
+  /**
+   * @var string
+   */
   public $sourceAgentPoolName;
   protected $transferManifestType = TransferManifest::class;
   protected $transferManifestDataType = '';
@@ -154,18 +160,30 @@ class TransferSpec extends \Google\Model
   {
     return $this->posixDataSource;
   }
+  /**
+   * @param string
+   */
   public function setSinkAgentPoolName($sinkAgentPoolName)
   {
     $this->sinkAgentPoolName = $sinkAgentPoolName;
   }
+  /**
+   * @return string
+   */
   public function getSinkAgentPoolName()
   {
     return $this->sinkAgentPoolName;
   }
+  /**
+   * @param string
+   */
   public function setSourceAgentPoolName($sourceAgentPoolName)
   {
     $this->sourceAgentPoolName = $sourceAgentPoolName;
   }
+  /**
+   * @return string
+   */
   public function getSourceAgentPoolName()
   {
     return $this->sourceAgentPoolName;

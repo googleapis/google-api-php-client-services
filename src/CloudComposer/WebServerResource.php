@@ -19,30 +19,57 @@ namespace Google\Service\CloudComposer;
 
 class WebServerResource extends \Google\Model
 {
+  /**
+   * @var float
+   */
   public $cpu;
+  /**
+   * @var float
+   */
   public $memoryGb;
+  /**
+   * @var float
+   */
   public $storageGb;
 
+  /**
+   * @param float
+   */
   public function setCpu($cpu)
   {
     $this->cpu = $cpu;
   }
+  /**
+   * @return float
+   */
   public function getCpu()
   {
     return $this->cpu;
   }
+  /**
+   * @param float
+   */
   public function setMemoryGb($memoryGb)
   {
     $this->memoryGb = $memoryGb;
   }
+  /**
+   * @return float
+   */
   public function getMemoryGb()
   {
     return $this->memoryGb;
   }
+  /**
+   * @param float
+   */
   public function setStorageGb($storageGb)
   {
     $this->storageGb = $storageGb;
   }
+  /**
+   * @return float
+   */
   public function getStorageGb()
   {
     return $this->storageGb;

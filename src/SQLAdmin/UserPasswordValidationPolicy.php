@@ -19,32 +19,59 @@ namespace Google\Service\SQLAdmin;
 
 class UserPasswordValidationPolicy extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $allowedFailedAttempts;
+  /**
+   * @var bool
+   */
   public $enableFailedAttemptsCheck;
+  /**
+   * @var string
+   */
   public $passwordExpirationDuration;
   protected $statusType = PasswordStatus::class;
   protected $statusDataType = '';
 
+  /**
+   * @param int
+   */
   public function setAllowedFailedAttempts($allowedFailedAttempts)
   {
     $this->allowedFailedAttempts = $allowedFailedAttempts;
   }
+  /**
+   * @return int
+   */
   public function getAllowedFailedAttempts()
   {
     return $this->allowedFailedAttempts;
   }
+  /**
+   * @param bool
+   */
   public function setEnableFailedAttemptsCheck($enableFailedAttemptsCheck)
   {
     $this->enableFailedAttemptsCheck = $enableFailedAttemptsCheck;
   }
+  /**
+   * @return bool
+   */
   public function getEnableFailedAttemptsCheck()
   {
     return $this->enableFailedAttemptsCheck;
   }
+  /**
+   * @param string
+   */
   public function setPasswordExpirationDuration($passwordExpirationDuration)
   {
     $this->passwordExpirationDuration = $passwordExpirationDuration;
   }
+  /**
+   * @return string
+   */
   public function getPasswordExpirationDuration()
   {
     return $this->passwordExpirationDuration;

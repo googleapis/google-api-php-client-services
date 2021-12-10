@@ -19,21 +19,39 @@ namespace Google\Service\CloudDeploy;
 
 class BuildArtifact extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $image;
+  /**
+   * @var string
+   */
   public $tag;
 
+  /**
+   * @param string
+   */
   public function setImage($image)
   {
     $this->image = $image;
   }
+  /**
+   * @return string
+   */
   public function getImage()
   {
     return $this->image;
   }
+  /**
+   * @param string
+   */
   public function setTag($tag)
   {
     $this->tag = $tag;
   }
+  /**
+   * @return string
+   */
   public function getTag()
   {
     return $this->tag;

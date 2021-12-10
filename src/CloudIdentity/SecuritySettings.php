@@ -21,6 +21,9 @@ class SecuritySettings extends \Google\Model
 {
   protected $memberRestrictionType = MemberRestriction::class;
   protected $memberRestrictionDataType = '';
+  /**
+   * @var string
+   */
   public $name;
 
   /**
@@ -37,10 +40,16 @@ class SecuritySettings extends \Google\Model
   {
     return $this->memberRestriction;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;

@@ -19,12 +19,21 @@ namespace Google\Service\AndroidPublisher;
 
 class GeneratedUniversalApk extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $downloadId;
 
+  /**
+   * @param string
+   */
   public function setDownloadId($downloadId)
   {
     $this->downloadId = $downloadId;
   }
+  /**
+   * @return string
+   */
   public function getDownloadId()
   {
     return $this->downloadId;

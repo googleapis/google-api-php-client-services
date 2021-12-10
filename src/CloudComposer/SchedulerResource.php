@@ -19,39 +19,75 @@ namespace Google\Service\CloudComposer;
 
 class SchedulerResource extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $count;
+  /**
+   * @var float
+   */
   public $cpu;
+  /**
+   * @var float
+   */
   public $memoryGb;
+  /**
+   * @var float
+   */
   public $storageGb;
 
+  /**
+   * @param int
+   */
   public function setCount($count)
   {
     $this->count = $count;
   }
+  /**
+   * @return int
+   */
   public function getCount()
   {
     return $this->count;
   }
+  /**
+   * @param float
+   */
   public function setCpu($cpu)
   {
     $this->cpu = $cpu;
   }
+  /**
+   * @return float
+   */
   public function getCpu()
   {
     return $this->cpu;
   }
+  /**
+   * @param float
+   */
   public function setMemoryGb($memoryGb)
   {
     $this->memoryGb = $memoryGb;
   }
+  /**
+   * @return float
+   */
   public function getMemoryGb()
   {
     return $this->memoryGb;
   }
+  /**
+   * @param float
+   */
   public function setStorageGb($storageGb)
   {
     $this->storageGb = $storageGb;
   }
+  /**
+   * @return float
+   */
   public function getStorageGb()
   {
     return $this->storageGb;

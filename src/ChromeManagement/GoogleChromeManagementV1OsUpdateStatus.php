@@ -19,57 +19,111 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1OsUpdateStatus extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $lastRebootTime;
+  /**
+   * @var string
+   */
   public $lastUpdateCheckTime;
+  /**
+   * @var string
+   */
   public $lastUpdateTime;
+  /**
+   * @var string
+   */
   public $newPlatformVersion;
+  /**
+   * @var string
+   */
   public $newRequestedPlatformVersion;
+  /**
+   * @var string
+   */
   public $updateState;
 
+  /**
+   * @param string
+   */
   public function setLastRebootTime($lastRebootTime)
   {
     $this->lastRebootTime = $lastRebootTime;
   }
+  /**
+   * @return string
+   */
   public function getLastRebootTime()
   {
     return $this->lastRebootTime;
   }
+  /**
+   * @param string
+   */
   public function setLastUpdateCheckTime($lastUpdateCheckTime)
   {
     $this->lastUpdateCheckTime = $lastUpdateCheckTime;
   }
+  /**
+   * @return string
+   */
   public function getLastUpdateCheckTime()
   {
     return $this->lastUpdateCheckTime;
   }
+  /**
+   * @param string
+   */
   public function setLastUpdateTime($lastUpdateTime)
   {
     $this->lastUpdateTime = $lastUpdateTime;
   }
+  /**
+   * @return string
+   */
   public function getLastUpdateTime()
   {
     return $this->lastUpdateTime;
   }
+  /**
+   * @param string
+   */
   public function setNewPlatformVersion($newPlatformVersion)
   {
     $this->newPlatformVersion = $newPlatformVersion;
   }
+  /**
+   * @return string
+   */
   public function getNewPlatformVersion()
   {
     return $this->newPlatformVersion;
   }
+  /**
+   * @param string
+   */
   public function setNewRequestedPlatformVersion($newRequestedPlatformVersion)
   {
     $this->newRequestedPlatformVersion = $newRequestedPlatformVersion;
   }
+  /**
+   * @return string
+   */
   public function getNewRequestedPlatformVersion()
   {
     return $this->newRequestedPlatformVersion;
   }
+  /**
+   * @param string
+   */
   public function setUpdateState($updateState)
   {
     $this->updateState = $updateState;
   }
+  /**
+   * @return string
+   */
   public function getUpdateState()
   {
     return $this->updateState;

@@ -19,12 +19,21 @@ namespace Google\Service\BigtableAdmin;
 
 class AutoscalingTargets extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $cpuUtilizationPercent;
 
+  /**
+   * @param int
+   */
   public function setCpuUtilizationPercent($cpuUtilizationPercent)
   {
     $this->cpuUtilizationPercent = $cpuUtilizationPercent;
   }
+  /**
+   * @return int
+   */
   public function getCpuUtilizationPercent()
   {
     return $this->cpuUtilizationPercent;

@@ -20,21 +20,57 @@ namespace Google\Service\CloudDeploy;
 class Release extends \Google\Collection
 {
   protected $collection_key = 'targetSnapshots';
+  /**
+   * @var string[]
+   */
   public $annotations;
   protected $buildArtifactsType = BuildArtifact::class;
   protected $buildArtifactsDataType = 'array';
+  /**
+   * @var string
+   */
   public $createTime;
   protected $deliveryPipelineSnapshotType = DeliveryPipeline::class;
   protected $deliveryPipelineSnapshotDataType = '';
+  /**
+   * @var string
+   */
   public $description;
+  /**
+   * @var string
+   */
   public $etag;
+  /**
+   * @var string[]
+   */
   public $labels;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
   public $renderEndTime;
+  /**
+   * @var string
+   */
   public $renderStartTime;
+  /**
+   * @var string
+   */
   public $renderState;
+  /**
+   * @var string
+   */
   public $skaffoldConfigPath;
+  /**
+   * @var string
+   */
   public $skaffoldConfigUri;
+  /**
+   * @var string
+   */
   public $skaffoldVersion;
   protected $targetArtifactsType = TargetArtifact::class;
   protected $targetArtifactsDataType = 'map';
@@ -42,12 +78,21 @@ class Release extends \Google\Collection
   protected $targetRendersDataType = 'map';
   protected $targetSnapshotsType = Target::class;
   protected $targetSnapshotsDataType = 'array';
+  /**
+   * @var string
+   */
   public $uid;
 
+  /**
+   * @param string[]
+   */
   public function setAnnotations($annotations)
   {
     $this->annotations = $annotations;
   }
+  /**
+   * @return string[]
+   */
   public function getAnnotations()
   {
     return $this->annotations;
@@ -66,10 +111,16 @@ class Release extends \Google\Collection
   {
     return $this->buildArtifacts;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;
@@ -88,82 +139,142 @@ class Release extends \Google\Collection
   {
     return $this->deliveryPipelineSnapshot;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
   }
+  /**
+   * @param string
+   */
   public function setEtag($etag)
   {
     $this->etag = $etag;
   }
+  /**
+   * @return string
+   */
   public function getEtag()
   {
     return $this->etag;
   }
+  /**
+   * @param string[]
+   */
   public function setLabels($labels)
   {
     $this->labels = $labels;
   }
+  /**
+   * @return string[]
+   */
   public function getLabels()
   {
     return $this->labels;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
   public function setRenderEndTime($renderEndTime)
   {
     $this->renderEndTime = $renderEndTime;
   }
+  /**
+   * @return string
+   */
   public function getRenderEndTime()
   {
     return $this->renderEndTime;
   }
+  /**
+   * @param string
+   */
   public function setRenderStartTime($renderStartTime)
   {
     $this->renderStartTime = $renderStartTime;
   }
+  /**
+   * @return string
+   */
   public function getRenderStartTime()
   {
     return $this->renderStartTime;
   }
+  /**
+   * @param string
+   */
   public function setRenderState($renderState)
   {
     $this->renderState = $renderState;
   }
+  /**
+   * @return string
+   */
   public function getRenderState()
   {
     return $this->renderState;
   }
+  /**
+   * @param string
+   */
   public function setSkaffoldConfigPath($skaffoldConfigPath)
   {
     $this->skaffoldConfigPath = $skaffoldConfigPath;
   }
+  /**
+   * @return string
+   */
   public function getSkaffoldConfigPath()
   {
     return $this->skaffoldConfigPath;
   }
+  /**
+   * @param string
+   */
   public function setSkaffoldConfigUri($skaffoldConfigUri)
   {
     $this->skaffoldConfigUri = $skaffoldConfigUri;
   }
+  /**
+   * @return string
+   */
   public function getSkaffoldConfigUri()
   {
     return $this->skaffoldConfigUri;
   }
+  /**
+   * @param string
+   */
   public function setSkaffoldVersion($skaffoldVersion)
   {
     $this->skaffoldVersion = $skaffoldVersion;
   }
+  /**
+   * @return string
+   */
   public function getSkaffoldVersion()
   {
     return $this->skaffoldVersion;
@@ -210,10 +321,16 @@ class Release extends \Google\Collection
   {
     return $this->targetSnapshots;
   }
+  /**
+   * @param string
+   */
   public function setUid($uid)
   {
     $this->uid = $uid;
   }
+  /**
+   * @return string
+   */
   public function getUid()
   {
     return $this->uid;

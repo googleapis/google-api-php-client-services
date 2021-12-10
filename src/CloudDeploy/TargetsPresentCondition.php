@@ -20,30 +20,57 @@ namespace Google\Service\CloudDeploy;
 class TargetsPresentCondition extends \Google\Collection
 {
   protected $collection_key = 'missingTargets';
+  /**
+   * @var string[]
+   */
   public $missingTargets;
+  /**
+   * @var bool
+   */
   public $status;
+  /**
+   * @var string
+   */
   public $updateTime;
 
+  /**
+   * @param string[]
+   */
   public function setMissingTargets($missingTargets)
   {
     $this->missingTargets = $missingTargets;
   }
+  /**
+   * @return string[]
+   */
   public function getMissingTargets()
   {
     return $this->missingTargets;
   }
+  /**
+   * @param bool
+   */
   public function setStatus($status)
   {
     $this->status = $status;
   }
+  /**
+   * @return bool
+   */
   public function getStatus()
   {
     return $this->status;
   }
+  /**
+   * @param string
+   */
   public function setUpdateTime($updateTime)
   {
     $this->updateTime = $updateTime;
   }
+  /**
+   * @return string
+   */
   public function getUpdateTime()
   {
     return $this->updateTime;

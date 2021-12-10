@@ -19,21 +19,39 @@ namespace Google\Service\Datastore;
 
 class GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $migrationState;
+  /**
+   * @var string
+   */
   public $migrationStep;
 
+  /**
+   * @param string
+   */
   public function setMigrationState($migrationState)
   {
     $this->migrationState = $migrationState;
   }
+  /**
+   * @return string
+   */
   public function getMigrationState()
   {
     return $this->migrationState;
   }
+  /**
+   * @param string
+   */
   public function setMigrationStep($migrationStep)
   {
     $this->migrationStep = $migrationStep;
   }
+  /**
+   * @return string
+   */
   public function getMigrationStep()
   {
     return $this->migrationStep;

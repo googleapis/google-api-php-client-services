@@ -20,23 +20,41 @@ namespace Google\Service\Transcoder;
 class TextStream extends \Google\Collection
 {
   protected $collection_key = 'mapping';
+  /**
+   * @var string
+   */
   public $codec;
+  /**
+   * @var string
+   */
   public $languageCode;
   protected $mappingType = TextAtom::class;
   protected $mappingDataType = 'array';
 
+  /**
+   * @param string
+   */
   public function setCodec($codec)
   {
     $this->codec = $codec;
   }
+  /**
+   * @return string
+   */
   public function getCodec()
   {
     return $this->codec;
   }
+  /**
+   * @param string
+   */
   public function setLanguageCode($languageCode)
   {
     $this->languageCode = $languageCode;
   }
+  /**
+   * @return string
+   */
   public function getLanguageCode()
   {
     return $this->languageCode;

@@ -19,21 +19,39 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1MemoryInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $availableRamBytes;
+  /**
+   * @var string
+   */
   public $totalRamBytes;
 
+  /**
+   * @param string
+   */
   public function setAvailableRamBytes($availableRamBytes)
   {
     $this->availableRamBytes = $availableRamBytes;
   }
+  /**
+   * @return string
+   */
   public function getAvailableRamBytes()
   {
     return $this->availableRamBytes;
   }
+  /**
+   * @param string
+   */
   public function setTotalRamBytes($totalRamBytes)
   {
     $this->totalRamBytes = $totalRamBytes;
   }
+  /**
+   * @return string
+   */
   public function getTotalRamBytes()
   {
     return $this->totalRamBytes;

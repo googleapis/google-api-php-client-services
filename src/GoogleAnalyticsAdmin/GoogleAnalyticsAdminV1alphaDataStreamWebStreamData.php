@@ -19,30 +19,57 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1alphaDataStreamWebStreamData extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $defaultUri;
+  /**
+   * @var string
+   */
   public $firebaseAppId;
+  /**
+   * @var string
+   */
   public $measurementId;
 
+  /**
+   * @param string
+   */
   public function setDefaultUri($defaultUri)
   {
     $this->defaultUri = $defaultUri;
   }
+  /**
+   * @return string
+   */
   public function getDefaultUri()
   {
     return $this->defaultUri;
   }
+  /**
+   * @param string
+   */
   public function setFirebaseAppId($firebaseAppId)
   {
     $this->firebaseAppId = $firebaseAppId;
   }
+  /**
+   * @return string
+   */
   public function getFirebaseAppId()
   {
     return $this->firebaseAppId;
   }
+  /**
+   * @param string
+   */
   public function setMeasurementId($measurementId)
   {
     $this->measurementId = $measurementId;
   }
+  /**
+   * @return string
+   */
   public function getMeasurementId()
   {
     return $this->measurementId;

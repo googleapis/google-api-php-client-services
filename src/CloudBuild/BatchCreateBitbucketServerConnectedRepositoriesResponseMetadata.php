@@ -19,30 +19,57 @@ namespace Google\Service\CloudBuild;
 
 class BatchCreateBitbucketServerConnectedRepositoriesResponseMetadata extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $completeTime;
+  /**
+   * @var string
+   */
   public $config;
+  /**
+   * @var string
+   */
   public $createTime;
 
+  /**
+   * @param string
+   */
   public function setCompleteTime($completeTime)
   {
     $this->completeTime = $completeTime;
   }
+  /**
+   * @return string
+   */
   public function getCompleteTime()
   {
     return $this->completeTime;
   }
+  /**
+   * @param string
+   */
   public function setConfig($config)
   {
     $this->config = $config;
   }
+  /**
+   * @return string
+   */
   public function getConfig()
   {
     return $this->config;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;

@@ -19,21 +19,39 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamData extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $bundleId;
+  /**
+   * @var string
+   */
   public $firebaseAppId;
 
+  /**
+   * @param string
+   */
   public function setBundleId($bundleId)
   {
     $this->bundleId = $bundleId;
   }
+  /**
+   * @return string
+   */
   public function getBundleId()
   {
     return $this->bundleId;
   }
+  /**
+   * @param string
+   */
   public function setFirebaseAppId($firebaseAppId)
   {
     $this->firebaseAppId = $firebaseAppId;
   }
+  /**
+   * @return string
+   */
   public function getFirebaseAppId()
   {
     return $this->firebaseAppId;

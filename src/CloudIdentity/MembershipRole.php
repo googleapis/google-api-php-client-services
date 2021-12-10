@@ -21,6 +21,9 @@ class MembershipRole extends \Google\Model
 {
   protected $expiryDetailType = ExpiryDetail::class;
   protected $expiryDetailDataType = '';
+  /**
+   * @var string
+   */
   public $name;
   protected $restrictionEvaluationsType = RestrictionEvaluations::class;
   protected $restrictionEvaluationsDataType = '';
@@ -39,10 +42,16 @@ class MembershipRole extends \Google\Model
   {
     return $this->expiryDetail;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;

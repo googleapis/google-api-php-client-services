@@ -19,30 +19,57 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1GraphicsAdapterInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $adapter;
+  /**
+   * @var string
+   */
   public $deviceId;
+  /**
+   * @var string
+   */
   public $driverVersion;
 
+  /**
+   * @param string
+   */
   public function setAdapter($adapter)
   {
     $this->adapter = $adapter;
   }
+  /**
+   * @return string
+   */
   public function getAdapter()
   {
     return $this->adapter;
   }
+  /**
+   * @param string
+   */
   public function setDeviceId($deviceId)
   {
     $this->deviceId = $deviceId;
   }
+  /**
+   * @return string
+   */
   public function getDeviceId()
   {
     return $this->deviceId;
   }
+  /**
+   * @param string
+   */
   public function setDriverVersion($driverVersion)
   {
     $this->driverVersion = $driverVersion;
   }
+  /**
+   * @return string
+   */
   public function getDriverVersion()
   {
     return $this->driverVersion;

@@ -21,28 +21,73 @@ class Finding extends \Google\Model
 {
   protected $accessType = Access::class;
   protected $accessDataType = '';
+  /**
+   * @var string
+   */
   public $canonicalName;
+  /**
+   * @var string
+   */
   public $category;
+  /**
+   * @var string
+   */
   public $createTime;
+  /**
+   * @var string
+   */
   public $eventTime;
   protected $externalSystemsType = GoogleCloudSecuritycenterV1ExternalSystem::class;
   protected $externalSystemsDataType = 'map';
+  /**
+   * @var string
+   */
   public $externalUri;
+  /**
+   * @var string
+   */
   public $findingClass;
   protected $indicatorType = Indicator::class;
   protected $indicatorDataType = '';
   protected $mitreAttackType = MitreAttack::class;
   protected $mitreAttackDataType = '';
+  /**
+   * @var string
+   */
   public $mute;
+  /**
+   * @var string
+   */
   public $muteInitiator;
+  /**
+   * @var string
+   */
   public $muteUpdateTime;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
   public $parent;
+  /**
+   * @var string
+   */
   public $resourceName;
   protected $securityMarksType = SecurityMarks::class;
   protected $securityMarksDataType = '';
+  /**
+   * @var string
+   */
   public $severity;
+  /**
+   * @var array[]
+   */
   public $sourceProperties;
+  /**
+   * @var string
+   */
   public $state;
   protected $vulnerabilityType = Vulnerability::class;
   protected $vulnerabilityDataType = '';
@@ -61,34 +106,58 @@ class Finding extends \Google\Model
   {
     return $this->access;
   }
+  /**
+   * @param string
+   */
   public function setCanonicalName($canonicalName)
   {
     $this->canonicalName = $canonicalName;
   }
+  /**
+   * @return string
+   */
   public function getCanonicalName()
   {
     return $this->canonicalName;
   }
+  /**
+   * @param string
+   */
   public function setCategory($category)
   {
     $this->category = $category;
   }
+  /**
+   * @return string
+   */
   public function getCategory()
   {
     return $this->category;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;
   }
+  /**
+   * @param string
+   */
   public function setEventTime($eventTime)
   {
     $this->eventTime = $eventTime;
   }
+  /**
+   * @return string
+   */
   public function getEventTime()
   {
     return $this->eventTime;
@@ -107,18 +176,30 @@ class Finding extends \Google\Model
   {
     return $this->externalSystems;
   }
+  /**
+   * @param string
+   */
   public function setExternalUri($externalUri)
   {
     $this->externalUri = $externalUri;
   }
+  /**
+   * @return string
+   */
   public function getExternalUri()
   {
     return $this->externalUri;
   }
+  /**
+   * @param string
+   */
   public function setFindingClass($findingClass)
   {
     $this->findingClass = $findingClass;
   }
+  /**
+   * @return string
+   */
   public function getFindingClass()
   {
     return $this->findingClass;
@@ -151,50 +232,86 @@ class Finding extends \Google\Model
   {
     return $this->mitreAttack;
   }
+  /**
+   * @param string
+   */
   public function setMute($mute)
   {
     $this->mute = $mute;
   }
+  /**
+   * @return string
+   */
   public function getMute()
   {
     return $this->mute;
   }
+  /**
+   * @param string
+   */
   public function setMuteInitiator($muteInitiator)
   {
     $this->muteInitiator = $muteInitiator;
   }
+  /**
+   * @return string
+   */
   public function getMuteInitiator()
   {
     return $this->muteInitiator;
   }
+  /**
+   * @param string
+   */
   public function setMuteUpdateTime($muteUpdateTime)
   {
     $this->muteUpdateTime = $muteUpdateTime;
   }
+  /**
+   * @return string
+   */
   public function getMuteUpdateTime()
   {
     return $this->muteUpdateTime;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
   public function setParent($parent)
   {
     $this->parent = $parent;
   }
+  /**
+   * @return string
+   */
   public function getParent()
   {
     return $this->parent;
   }
+  /**
+   * @param string
+   */
   public function setResourceName($resourceName)
   {
     $this->resourceName = $resourceName;
   }
+  /**
+   * @return string
+   */
   public function getResourceName()
   {
     return $this->resourceName;
@@ -213,26 +330,44 @@ class Finding extends \Google\Model
   {
     return $this->securityMarks;
   }
+  /**
+   * @param string
+   */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
+  /**
+   * @return string
+   */
   public function getSeverity()
   {
     return $this->severity;
   }
+  /**
+   * @param array[]
+   */
   public function setSourceProperties($sourceProperties)
   {
     $this->sourceProperties = $sourceProperties;
   }
+  /**
+   * @return array[]
+   */
   public function getSourceProperties()
   {
     return $this->sourceProperties;
   }
+  /**
+   * @param string
+   */
   public function setState($state)
   {
     $this->state = $state;
   }
+  /**
+   * @return string
+   */
   public function getState()
   {
     return $this->state;

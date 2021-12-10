@@ -19,34 +19,67 @@ namespace Google\Service\AnalyticsData;
 
 class ResponseMetaData extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $currencyCode;
+  /**
+   * @var bool
+   */
   public $dataLossFromOtherRow;
+  /**
+   * @var string
+   */
   public $emptyReason;
   protected $schemaRestrictionResponseType = SchemaRestrictionResponse::class;
   protected $schemaRestrictionResponseDataType = '';
+  /**
+   * @var bool
+   */
   public $thresholdingApplied;
+  /**
+   * @var string
+   */
   public $timeZone;
 
+  /**
+   * @param string
+   */
   public function setCurrencyCode($currencyCode)
   {
     $this->currencyCode = $currencyCode;
   }
+  /**
+   * @return string
+   */
   public function getCurrencyCode()
   {
     return $this->currencyCode;
   }
+  /**
+   * @param bool
+   */
   public function setDataLossFromOtherRow($dataLossFromOtherRow)
   {
     $this->dataLossFromOtherRow = $dataLossFromOtherRow;
   }
+  /**
+   * @return bool
+   */
   public function getDataLossFromOtherRow()
   {
     return $this->dataLossFromOtherRow;
   }
+  /**
+   * @param string
+   */
   public function setEmptyReason($emptyReason)
   {
     $this->emptyReason = $emptyReason;
   }
+  /**
+   * @return string
+   */
   public function getEmptyReason()
   {
     return $this->emptyReason;
@@ -65,18 +98,30 @@ class ResponseMetaData extends \Google\Model
   {
     return $this->schemaRestrictionResponse;
   }
+  /**
+   * @param bool
+   */
   public function setThresholdingApplied($thresholdingApplied)
   {
     $this->thresholdingApplied = $thresholdingApplied;
   }
+  /**
+   * @return bool
+   */
   public function getThresholdingApplied()
   {
     return $this->thresholdingApplied;
   }
+  /**
+   * @param string
+   */
   public function setTimeZone($timeZone)
   {
     $this->timeZone = $timeZone;
   }
+  /**
+   * @return string
+   */
   public function getTimeZone()
   {
     return $this->timeZone;

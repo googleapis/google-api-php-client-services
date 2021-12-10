@@ -19,21 +19,39 @@ namespace Google\Service\CloudDeploy;
 
 class PipelineReadyCondition extends \Google\Model
 {
+  /**
+   * @var bool
+   */
   public $status;
+  /**
+   * @var string
+   */
   public $updateTime;
 
+  /**
+   * @param bool
+   */
   public function setStatus($status)
   {
     $this->status = $status;
   }
+  /**
+   * @return bool
+   */
   public function getStatus()
   {
     return $this->status;
   }
+  /**
+   * @param string
+   */
   public function setUpdateTime($updateTime)
   {
     $this->updateTime = $updateTime;
   }
+  /**
+   * @return string
+   */
   public function getUpdateTime()
   {
     return $this->updateTime;

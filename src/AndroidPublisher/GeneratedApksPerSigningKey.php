@@ -20,6 +20,9 @@ namespace Google\Service\AndroidPublisher;
 class GeneratedApksPerSigningKey extends \Google\Collection
 {
   protected $collection_key = 'generatedStandaloneApks';
+  /**
+   * @var string
+   */
   public $certificateSha256Hash;
   protected $generatedAssetPackSlicesType = GeneratedAssetPackSlice::class;
   protected $generatedAssetPackSlicesDataType = 'array';
@@ -30,10 +33,16 @@ class GeneratedApksPerSigningKey extends \Google\Collection
   protected $generatedUniversalApkType = GeneratedUniversalApk::class;
   protected $generatedUniversalApkDataType = '';
 
+  /**
+   * @param string
+   */
   public function setCertificateSha256Hash($certificateSha256Hash)
   {
     $this->certificateSha256Hash = $certificateSha256Hash;
   }
+  /**
+   * @return string
+   */
   public function getCertificateSha256Hash()
   {
     return $this->certificateSha256Hash;

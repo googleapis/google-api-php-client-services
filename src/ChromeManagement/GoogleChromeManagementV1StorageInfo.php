@@ -20,23 +20,41 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1StorageInfo extends \Google\Collection
 {
   protected $collection_key = 'volume';
+  /**
+   * @var string
+   */
   public $availableDiskBytes;
+  /**
+   * @var string
+   */
   public $totalDiskBytes;
   protected $volumeType = GoogleChromeManagementV1StorageInfoDiskVolume::class;
   protected $volumeDataType = 'array';
 
+  /**
+   * @param string
+   */
   public function setAvailableDiskBytes($availableDiskBytes)
   {
     $this->availableDiskBytes = $availableDiskBytes;
   }
+  /**
+   * @return string
+   */
   public function getAvailableDiskBytes()
   {
     return $this->availableDiskBytes;
   }
+  /**
+   * @param string
+   */
   public function setTotalDiskBytes($totalDiskBytes)
   {
     $this->totalDiskBytes = $totalDiskBytes;
   }
+  /**
+   * @return string
+   */
   public function getTotalDiskBytes()
   {
     return $this->totalDiskBytes;

@@ -37,7 +37,11 @@ class ProjectsLocationsCustomClasses extends \Google\Service\Resource
    *
    * @param string $parent Required. The parent resource where this custom class
    * will be created. Format:
-   * {api_version}/projects/{project}/locations/{location}/customClasses
+   * `projects/{project}/locations/{location}/customClasses` Speech-to-Text
+   * supports three locations: `global`, `us` (US North America), and `eu`
+   * (Europe). If you are calling the `speech.googleapis.com` endpoint, use the
+   * `global` location. To specify a region, use a [regional endpoint](/speech-to-
+   * text/docs/endpoints) with matching `us` or `eu` location value.
    * @param CreateCustomClassRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CustomClass
@@ -52,8 +56,11 @@ class ProjectsLocationsCustomClasses extends \Google\Service\Resource
    * Delete a custom class. (customClasses.delete)
    *
    * @param string $name Required. The name of the custom class to delete. Format:
-   * {api_version}/projects/{project}/locations/{location}/customClasses/{custom_c
-   * lass}
+   * `projects/{project}/locations/{location}/customClasses/{custom_class}`
+   * Speech-to-Text supports three locations: `global`, `us` (US North America),
+   * and `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint,
+   * use the `global` location. To specify a region, use a [regional endpoint
+   * ](/speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
    * @param array $optParams Optional parameters.
    * @return SpeechEmpty
    */
@@ -67,8 +74,8 @@ class ProjectsLocationsCustomClasses extends \Google\Service\Resource
    * Get a custom class. (customClasses.get)
    *
    * @param string $name Required. The name of the custom class to retrieve.
-   * Format: {api_version}/projects/{project}/locations/{location}/customClasses/{
-   * custom_class}
+   * Format:
+   * `projects/{project}/locations/{location}/customClasses/{custom_class}`
    * @param array $optParams Optional parameters.
    * @return CustomClass
    */
@@ -83,7 +90,11 @@ class ProjectsLocationsCustomClasses extends \Google\Service\Resource
    *
    * @param string $parent Required. The parent, which owns this collection of
    * custom classes. Format:
-   * {api_version}/projects/{project}/locations/{location}/customClasses
+   * `projects/{project}/locations/{location}/customClasses` Speech-to-Text
+   * supports three locations: `global`, `us` (US North America), and `eu`
+   * (Europe). If you are calling the `speech.googleapis.com` endpoint, use the
+   * `global` location. To specify a region, use a [regional endpoint](/speech-to-
+   * text/docs/endpoints) with matching `us` or `eu` location value.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of custom classes to return. The

@@ -19,32 +19,59 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyRule extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $action;
+  /**
+   * @var string
+   */
   public $description;
   protected $headerActionType = SecurityPolicyRuleHttpHeaderAction::class;
   protected $headerActionDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
   protected $matchType = SecurityPolicyRuleMatcher::class;
   protected $matchDataType = '';
+  /**
+   * @var bool
+   */
   public $preview;
+  /**
+   * @var int
+   */
   public $priority;
   protected $rateLimitOptionsType = SecurityPolicyRuleRateLimitOptions::class;
   protected $rateLimitOptionsDataType = '';
   protected $redirectOptionsType = SecurityPolicyRuleRedirectOptions::class;
   protected $redirectOptionsDataType = '';
 
+  /**
+   * @param string
+   */
   public function setAction($action)
   {
     $this->action = $action;
   }
+  /**
+   * @return string
+   */
   public function getAction()
   {
     return $this->action;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
@@ -63,10 +90,16 @@ class SecurityPolicyRule extends \Google\Model
   {
     return $this->headerAction;
   }
+  /**
+   * @param string
+   */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
+  /**
+   * @return string
+   */
   public function getKind()
   {
     return $this->kind;
@@ -85,18 +118,30 @@ class SecurityPolicyRule extends \Google\Model
   {
     return $this->match;
   }
+  /**
+   * @param bool
+   */
   public function setPreview($preview)
   {
     $this->preview = $preview;
   }
+  /**
+   * @return bool
+   */
   public function getPreview()
   {
     return $this->preview;
   }
+  /**
+   * @param int
+   */
   public function setPriority($priority)
   {
     $this->priority = $priority;
   }
+  /**
+   * @return int
+   */
   public function getPriority()
   {
     return $this->priority;

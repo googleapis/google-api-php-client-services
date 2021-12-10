@@ -19,30 +19,57 @@ namespace Google\Service\CloudDeploy;
 
 class TargetArtifact extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $artifactUri;
+  /**
+   * @var string
+   */
   public $manifestPath;
+  /**
+   * @var string
+   */
   public $skaffoldConfigPath;
 
+  /**
+   * @param string
+   */
   public function setArtifactUri($artifactUri)
   {
     $this->artifactUri = $artifactUri;
   }
+  /**
+   * @return string
+   */
   public function getArtifactUri()
   {
     return $this->artifactUri;
   }
+  /**
+   * @param string
+   */
   public function setManifestPath($manifestPath)
   {
     $this->manifestPath = $manifestPath;
   }
+  /**
+   * @return string
+   */
   public function getManifestPath()
   {
     return $this->manifestPath;
   }
+  /**
+   * @param string
+   */
   public function setSkaffoldConfigPath($skaffoldConfigPath)
   {
     $this->skaffoldConfigPath = $skaffoldConfigPath;
   }
+  /**
+   * @return string
+   */
   public function getSkaffoldConfigPath()
   {
     return $this->skaffoldConfigPath;

@@ -20,24 +20,45 @@ namespace Google\Service\Datastream;
 class Validation extends \Google\Collection
 {
   protected $collection_key = 'message';
+  /**
+   * @var string
+   */
   public $code;
+  /**
+   * @var string
+   */
   public $description;
   protected $messageType = ValidationMessage::class;
   protected $messageDataType = 'array';
+  /**
+   * @var string
+   */
   public $state;
 
+  /**
+   * @param string
+   */
   public function setCode($code)
   {
     $this->code = $code;
   }
+  /**
+   * @return string
+   */
   public function getCode()
   {
     return $this->code;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
@@ -56,10 +77,16 @@ class Validation extends \Google\Collection
   {
     return $this->message;
   }
+  /**
+   * @param string
+   */
   public function setState($state)
   {
     $this->state = $state;
   }
+  /**
+   * @return string
+   */
   public function getState()
   {
     return $this->state;

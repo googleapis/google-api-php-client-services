@@ -19,21 +19,39 @@ namespace Google\Service\BigtableAdmin;
 
 class AutoscalingLimits extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $maxServeNodes;
+  /**
+   * @var int
+   */
   public $minServeNodes;
 
+  /**
+   * @param int
+   */
   public function setMaxServeNodes($maxServeNodes)
   {
     $this->maxServeNodes = $maxServeNodes;
   }
+  /**
+   * @return int
+   */
   public function getMaxServeNodes()
   {
     return $this->maxServeNodes;
   }
+  /**
+   * @param int
+   */
   public function setMinServeNodes($minServeNodes)
   {
     $this->minServeNodes = $minServeNodes;
   }
+  /**
+   * @return int
+   */
   public function getMinServeNodes()
   {
     return $this->minServeNodes;

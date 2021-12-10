@@ -22,7 +22,13 @@ class TrackCountryAvailability extends \Google\Collection
   protected $collection_key = 'countries';
   protected $countriesType = TrackTargetedCountry::class;
   protected $countriesDataType = 'array';
+  /**
+   * @var bool
+   */
   public $restOfWorld;
+  /**
+   * @var bool
+   */
   public $syncWithProduction;
 
   /**
@@ -39,18 +45,30 @@ class TrackCountryAvailability extends \Google\Collection
   {
     return $this->countries;
   }
+  /**
+   * @param bool
+   */
   public function setRestOfWorld($restOfWorld)
   {
     $this->restOfWorld = $restOfWorld;
   }
+  /**
+   * @return bool
+   */
   public function getRestOfWorld()
   {
     return $this->restOfWorld;
   }
+  /**
+   * @param bool
+   */
   public function setSyncWithProduction($syncWithProduction)
   {
     $this->syncWithProduction = $syncWithProduction;
   }
+  /**
+   * @return bool
+   */
   public function getSyncWithProduction()
   {
     return $this->syncWithProduction;

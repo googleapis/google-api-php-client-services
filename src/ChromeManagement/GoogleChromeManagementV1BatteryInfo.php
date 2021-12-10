@@ -19,26 +19,53 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1BatteryInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $designCapacity;
+  /**
+   * @var int
+   */
   public $designMinVoltage;
   protected $manufactureDateType = GoogleTypeDate::class;
   protected $manufactureDateDataType = '';
+  /**
+   * @var string
+   */
   public $manufacturer;
+  /**
+   * @var string
+   */
   public $serialNumber;
+  /**
+   * @var string
+   */
   public $technology;
 
+  /**
+   * @param string
+   */
   public function setDesignCapacity($designCapacity)
   {
     $this->designCapacity = $designCapacity;
   }
+  /**
+   * @return string
+   */
   public function getDesignCapacity()
   {
     return $this->designCapacity;
   }
+  /**
+   * @param int
+   */
   public function setDesignMinVoltage($designMinVoltage)
   {
     $this->designMinVoltage = $designMinVoltage;
   }
+  /**
+   * @return int
+   */
   public function getDesignMinVoltage()
   {
     return $this->designMinVoltage;
@@ -57,26 +84,44 @@ class GoogleChromeManagementV1BatteryInfo extends \Google\Model
   {
     return $this->manufactureDate;
   }
+  /**
+   * @param string
+   */
   public function setManufacturer($manufacturer)
   {
     $this->manufacturer = $manufacturer;
   }
+  /**
+   * @return string
+   */
   public function getManufacturer()
   {
     return $this->manufacturer;
   }
+  /**
+   * @param string
+   */
   public function setSerialNumber($serialNumber)
   {
     $this->serialNumber = $serialNumber;
   }
+  /**
+   * @return string
+   */
   public function getSerialNumber()
   {
     return $this->serialNumber;
   }
+  /**
+   * @param string
+   */
   public function setTechnology($technology)
   {
     $this->technology = $technology;
   }
+  /**
+   * @return string
+   */
   public function getTechnology()
   {
     return $this->technology;

@@ -19,30 +19,57 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3RevisionReference extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $latestProcessorVersion;
+  /**
+   * @var string
+   */
   public $revisionCase;
+  /**
+   * @var string
+   */
   public $revisionId;
 
+  /**
+   * @param string
+   */
   public function setLatestProcessorVersion($latestProcessorVersion)
   {
     $this->latestProcessorVersion = $latestProcessorVersion;
   }
+  /**
+   * @return string
+   */
   public function getLatestProcessorVersion()
   {
     return $this->latestProcessorVersion;
   }
+  /**
+   * @param string
+   */
   public function setRevisionCase($revisionCase)
   {
     $this->revisionCase = $revisionCase;
   }
+  /**
+   * @return string
+   */
   public function getRevisionCase()
   {
     return $this->revisionCase;
   }
+  /**
+   * @param string
+   */
   public function setRevisionId($revisionId)
   {
     $this->revisionId = $revisionId;
   }
+  /**
+   * @return string
+   */
   public function getRevisionId()
   {
     return $this->revisionId;

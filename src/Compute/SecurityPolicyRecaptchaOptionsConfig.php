@@ -19,12 +19,21 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyRecaptchaOptionsConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $redirectSiteKey;
 
+  /**
+   * @param string
+   */
   public function setRedirectSiteKey($redirectSiteKey)
   {
     $this->redirectSiteKey = $redirectSiteKey;
   }
+  /**
+   * @return string
+   */
   public function getRedirectSiteKey()
   {
     return $this->redirectSiteKey;

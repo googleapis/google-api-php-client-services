@@ -19,21 +19,39 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyRuleHttpHeaderActionHttpHeaderOption extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $headerName;
+  /**
+   * @var string
+   */
   public $headerValue;
 
+  /**
+   * @param string
+   */
   public function setHeaderName($headerName)
   {
     $this->headerName = $headerName;
   }
+  /**
+   * @return string
+   */
   public function getHeaderName()
   {
     return $this->headerName;
   }
+  /**
+   * @param string
+   */
   public function setHeaderValue($headerValue)
   {
     $this->headerValue = $headerValue;
   }
+  /**
+   * @return string
+   */
   public function getHeaderValue()
   {
     return $this->headerValue;

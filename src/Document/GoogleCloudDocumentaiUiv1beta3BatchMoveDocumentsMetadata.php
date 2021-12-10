@@ -22,6 +22,9 @@ class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata extends \Google\C
   protected $collection_key = 'individualBatchMoveStatuses';
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  /**
+   * @var string
+   */
   public $destDatasetType;
   protected $individualBatchMoveStatusesType = GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMoveStatus::class;
   protected $individualBatchMoveStatusesDataType = 'array';
@@ -40,10 +43,16 @@ class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata extends \Google\C
   {
     return $this->commonMetadata;
   }
+  /**
+   * @param string
+   */
   public function setDestDatasetType($destDatasetType)
   {
     $this->destDatasetType = $destDatasetType;
   }
+  /**
+   * @return string
+   */
   public function getDestDatasetType()
   {
     return $this->destDatasetType;

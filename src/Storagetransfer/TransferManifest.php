@@ -19,12 +19,21 @@ namespace Google\Service\Storagetransfer;
 
 class TransferManifest extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $location;
 
+  /**
+   * @param string
+   */
   public function setLocation($location)
   {
     $this->location = $location;
   }
+  /**
+   * @return string
+   */
   public function getLocation()
   {
     return $this->location;

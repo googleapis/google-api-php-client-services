@@ -21,12 +21,33 @@ class SavedQuery extends \Google\Model
 {
   protected $contentType = QueryContent::class;
   protected $contentDataType = '';
+  /**
+   * @var string
+   */
   public $createTime;
+  /**
+   * @var string
+   */
   public $creator;
+  /**
+   * @var string
+   */
   public $description;
+  /**
+   * @var string[]
+   */
   public $labels;
+  /**
+   * @var string
+   */
   public $lastUpdateTime;
+  /**
+   * @var string
+   */
   public $lastUpdater;
+  /**
+   * @var string
+   */
   public $name;
 
   /**
@@ -43,58 +64,100 @@ class SavedQuery extends \Google\Model
   {
     return $this->content;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;
   }
+  /**
+   * @param string
+   */
   public function setCreator($creator)
   {
     $this->creator = $creator;
   }
+  /**
+   * @return string
+   */
   public function getCreator()
   {
     return $this->creator;
   }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
   }
+  /**
+   * @return string
+   */
   public function getDescription()
   {
     return $this->description;
   }
+  /**
+   * @param string[]
+   */
   public function setLabels($labels)
   {
     $this->labels = $labels;
   }
+  /**
+   * @return string[]
+   */
   public function getLabels()
   {
     return $this->labels;
   }
+  /**
+   * @param string
+   */
   public function setLastUpdateTime($lastUpdateTime)
   {
     $this->lastUpdateTime = $lastUpdateTime;
   }
+  /**
+   * @return string
+   */
   public function getLastUpdateTime()
   {
     return $this->lastUpdateTime;
   }
+  /**
+   * @param string
+   */
   public function setLastUpdater($lastUpdater)
   {
     $this->lastUpdater = $lastUpdater;
   }
+  /**
+   * @return string
+   */
   public function getLastUpdater()
   {
     return $this->lastUpdater;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;

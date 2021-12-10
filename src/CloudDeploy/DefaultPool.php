@@ -19,21 +19,39 @@ namespace Google\Service\CloudDeploy;
 
 class DefaultPool extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $artifactStorage;
+  /**
+   * @var string
+   */
   public $serviceAccount;
 
+  /**
+   * @param string
+   */
   public function setArtifactStorage($artifactStorage)
   {
     $this->artifactStorage = $artifactStorage;
   }
+  /**
+   * @return string
+   */
   public function getArtifactStorage()
   {
     return $this->artifactStorage;
   }
+  /**
+   * @param string
+   */
   public function setServiceAccount($serviceAccount)
   {
     $this->serviceAccount = $serviceAccount;
   }
+  /**
+   * @return string
+   */
   public function getServiceAccount()
   {
     return $this->serviceAccount;

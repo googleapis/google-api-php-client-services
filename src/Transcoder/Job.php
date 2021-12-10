@@ -22,22 +22,55 @@ class Job extends \Google\Collection
   protected $collection_key = 'failureDetails';
   protected $configType = JobConfig::class;
   protected $configDataType = '';
+  /**
+   * @var string
+   */
   public $createTime;
+  /**
+   * @var string
+   */
   public $endTime;
   protected $failureDetailsType = FailureDetail::class;
   protected $failureDetailsDataType = 'array';
+  /**
+   * @var string
+   */
   public $failureReason;
+  /**
+   * @var string
+   */
   public $inputUri;
+  /**
+   * @var string
+   */
   public $name;
   protected $originUriType = OriginUri::class;
   protected $originUriDataType = '';
+  /**
+   * @var string
+   */
   public $outputUri;
+  /**
+   * @var int
+   */
   public $priority;
   protected $progressType = Progress::class;
   protected $progressDataType = '';
+  /**
+   * @var string
+   */
   public $startTime;
+  /**
+   * @var string
+   */
   public $state;
+  /**
+   * @var string
+   */
   public $templateId;
+  /**
+   * @var int
+   */
   public $ttlAfterCompletionDays;
 
   /**
@@ -54,18 +87,30 @@ class Job extends \Google\Collection
   {
     return $this->config;
   }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
   }
+  /**
+   * @return string
+   */
   public function getCreateTime()
   {
     return $this->createTime;
   }
+  /**
+   * @param string
+   */
   public function setEndTime($endTime)
   {
     $this->endTime = $endTime;
   }
+  /**
+   * @return string
+   */
   public function getEndTime()
   {
     return $this->endTime;
@@ -84,26 +129,44 @@ class Job extends \Google\Collection
   {
     return $this->failureDetails;
   }
+  /**
+   * @param string
+   */
   public function setFailureReason($failureReason)
   {
     $this->failureReason = $failureReason;
   }
+  /**
+   * @return string
+   */
   public function getFailureReason()
   {
     return $this->failureReason;
   }
+  /**
+   * @param string
+   */
   public function setInputUri($inputUri)
   {
     $this->inputUri = $inputUri;
   }
+  /**
+   * @return string
+   */
   public function getInputUri()
   {
     return $this->inputUri;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;
@@ -122,18 +185,30 @@ class Job extends \Google\Collection
   {
     return $this->originUri;
   }
+  /**
+   * @param string
+   */
   public function setOutputUri($outputUri)
   {
     $this->outputUri = $outputUri;
   }
+  /**
+   * @return string
+   */
   public function getOutputUri()
   {
     return $this->outputUri;
   }
+  /**
+   * @param int
+   */
   public function setPriority($priority)
   {
     $this->priority = $priority;
   }
+  /**
+   * @return int
+   */
   public function getPriority()
   {
     return $this->priority;
@@ -152,34 +227,58 @@ class Job extends \Google\Collection
   {
     return $this->progress;
   }
+  /**
+   * @param string
+   */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
+  /**
+   * @return string
+   */
   public function getStartTime()
   {
     return $this->startTime;
   }
+  /**
+   * @param string
+   */
   public function setState($state)
   {
     $this->state = $state;
   }
+  /**
+   * @return string
+   */
   public function getState()
   {
     return $this->state;
   }
+  /**
+   * @param string
+   */
   public function setTemplateId($templateId)
   {
     $this->templateId = $templateId;
   }
+  /**
+   * @return string
+   */
   public function getTemplateId()
   {
     return $this->templateId;
   }
+  /**
+   * @param int
+   */
   public function setTtlAfterCompletionDays($ttlAfterCompletionDays)
   {
     $this->ttlAfterCompletionDays = $ttlAfterCompletionDays;
   }
+  /**
+   * @return int
+   */
   public function getTtlAfterCompletionDays()
   {
     return $this->ttlAfterCompletionDays;

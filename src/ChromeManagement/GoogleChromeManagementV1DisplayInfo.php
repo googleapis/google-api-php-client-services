@@ -19,48 +19,93 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1DisplayInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $deviceId;
+  /**
+   * @var bool
+   */
   public $isInternal;
+  /**
+   * @var int
+   */
   public $refreshRate;
+  /**
+   * @var int
+   */
   public $resolutionHeight;
+  /**
+   * @var int
+   */
   public $resolutionWidth;
 
+  /**
+   * @param string
+   */
   public function setDeviceId($deviceId)
   {
     $this->deviceId = $deviceId;
   }
+  /**
+   * @return string
+   */
   public function getDeviceId()
   {
     return $this->deviceId;
   }
+  /**
+   * @param bool
+   */
   public function setIsInternal($isInternal)
   {
     $this->isInternal = $isInternal;
   }
+  /**
+   * @return bool
+   */
   public function getIsInternal()
   {
     return $this->isInternal;
   }
+  /**
+   * @param int
+   */
   public function setRefreshRate($refreshRate)
   {
     $this->refreshRate = $refreshRate;
   }
+  /**
+   * @return int
+   */
   public function getRefreshRate()
   {
     return $this->refreshRate;
   }
+  /**
+   * @param int
+   */
   public function setResolutionHeight($resolutionHeight)
   {
     $this->resolutionHeight = $resolutionHeight;
   }
+  /**
+   * @return int
+   */
   public function getResolutionHeight()
   {
     return $this->resolutionHeight;
   }
+  /**
+   * @param int
+   */
   public function setResolutionWidth($resolutionWidth)
   {
     $this->resolutionWidth = $resolutionWidth;
   }
+  /**
+   * @return int
+   */
   public function getResolutionWidth()
   {
     return $this->resolutionWidth;

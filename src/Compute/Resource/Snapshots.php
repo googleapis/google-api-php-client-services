@@ -99,7 +99,10 @@ class Snapshots extends \Google\Service\Resource
   }
   /**
    * Creates a snapshot in the specified project using the data included in the
-   * request. (snapshots.insert)
+   * request. For regular snapshot creation, consider using this method instead of
+   * disks.createSnapshot, as this method supports more features, such as creating
+   * snapshots in a project different from the source disk project.
+   * (snapshots.insert)
    *
    * @param string $project Project ID for this request.
    * @param Snapshot $postBody

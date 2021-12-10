@@ -22,6 +22,9 @@ class GoogleAnalyticsAdminV1alphaListDataStreamsResponse extends \Google\Collect
   protected $collection_key = 'dataStreams';
   protected $dataStreamsType = GoogleAnalyticsAdminV1alphaDataStream::class;
   protected $dataStreamsDataType = 'array';
+  /**
+   * @var string
+   */
   public $nextPageToken;
 
   /**
@@ -38,10 +41,16 @@ class GoogleAnalyticsAdminV1alphaListDataStreamsResponse extends \Google\Collect
   {
     return $this->dataStreams;
   }
+  /**
+   * @param string
+   */
   public function setNextPageToken($nextPageToken)
   {
     $this->nextPageToken = $nextPageToken;
   }
+  /**
+   * @return string
+   */
   public function getNextPageToken()
   {
     return $this->nextPageToken;

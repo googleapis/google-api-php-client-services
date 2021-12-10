@@ -19,21 +19,39 @@ namespace Google\Service\GKEHub;
 
 class ResourceManifest extends \Google\Model
 {
+  /**
+   * @var bool
+   */
   public $clusterScoped;
+  /**
+   * @var string
+   */
   public $manifest;
 
+  /**
+   * @param bool
+   */
   public function setClusterScoped($clusterScoped)
   {
     $this->clusterScoped = $clusterScoped;
   }
+  /**
+   * @return bool
+   */
   public function getClusterScoped()
   {
     return $this->clusterScoped;
   }
+  /**
+   * @param string
+   */
   public function setManifest($manifest)
   {
     $this->manifest = $manifest;
   }
+  /**
+   * @return string
+   */
   public function getManifest()
   {
     return $this->manifest;

@@ -20,42 +20,81 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1BatteryStatusReport extends \Google\Collection
 {
   protected $collection_key = 'sample';
+  /**
+   * @var string
+   */
   public $batteryHealth;
+  /**
+   * @var int
+   */
   public $cycleCount;
+  /**
+   * @var string
+   */
   public $fullChargeCapacity;
+  /**
+   * @var string
+   */
   public $reportTime;
   protected $sampleType = GoogleChromeManagementV1BatterySampleReport::class;
   protected $sampleDataType = 'array';
+  /**
+   * @var string
+   */
   public $serialNumber;
 
+  /**
+   * @param string
+   */
   public function setBatteryHealth($batteryHealth)
   {
     $this->batteryHealth = $batteryHealth;
   }
+  /**
+   * @return string
+   */
   public function getBatteryHealth()
   {
     return $this->batteryHealth;
   }
+  /**
+   * @param int
+   */
   public function setCycleCount($cycleCount)
   {
     $this->cycleCount = $cycleCount;
   }
+  /**
+   * @return int
+   */
   public function getCycleCount()
   {
     return $this->cycleCount;
   }
+  /**
+   * @param string
+   */
   public function setFullChargeCapacity($fullChargeCapacity)
   {
     $this->fullChargeCapacity = $fullChargeCapacity;
   }
+  /**
+   * @return string
+   */
   public function getFullChargeCapacity()
   {
     return $this->fullChargeCapacity;
   }
+  /**
+   * @param string
+   */
   public function setReportTime($reportTime)
   {
     $this->reportTime = $reportTime;
   }
+  /**
+   * @return string
+   */
   public function getReportTime()
   {
     return $this->reportTime;
@@ -74,10 +113,16 @@ class GoogleChromeManagementV1BatteryStatusReport extends \Google\Collection
   {
     return $this->sample;
   }
+  /**
+   * @param string
+   */
   public function setSerialNumber($serialNumber)
   {
     $this->serialNumber = $serialNumber;
   }
+  /**
+   * @return string
+   */
   public function getSerialNumber()
   {
     return $this->serialNumber;

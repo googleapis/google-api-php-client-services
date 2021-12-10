@@ -29,6 +29,9 @@ class GoogleCloudDialogflowCxV3beta1ResponseMessage extends \Google\Model
   protected $mixedAudioDataType = '';
   protected $outputAudioTextType = GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioText::class;
   protected $outputAudioTextDataType = '';
+  /**
+   * @var array[]
+   */
   public $payload;
   protected $playAudioType = GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudio::class;
   protected $playAudioDataType = '';
@@ -107,10 +110,16 @@ class GoogleCloudDialogflowCxV3beta1ResponseMessage extends \Google\Model
   {
     return $this->outputAudioText;
   }
+  /**
+   * @param array[]
+   */
   public function setPayload($payload)
   {
     $this->payload = $payload;
   }
+  /**
+   * @return array[]
+   */
   public function getPayload()
   {
     return $this->payload;

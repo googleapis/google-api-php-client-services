@@ -20,23 +20,41 @@ namespace Google\Service\CloudDeploy;
 class Config extends \Google\Collection
 {
   protected $collection_key = 'supportedVersions';
+  /**
+   * @var string
+   */
   public $defaultSkaffoldVersion;
+  /**
+   * @var string
+   */
   public $name;
   protected $supportedVersionsType = SkaffoldVersion::class;
   protected $supportedVersionsDataType = 'array';
 
+  /**
+   * @param string
+   */
   public function setDefaultSkaffoldVersion($defaultSkaffoldVersion)
   {
     $this->defaultSkaffoldVersion = $defaultSkaffoldVersion;
   }
+  /**
+   * @return string
+   */
   public function getDefaultSkaffoldVersion()
   {
     return $this->defaultSkaffoldVersion;
   }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
   }
+  /**
+   * @return string
+   */
   public function getName()
   {
     return $this->name;

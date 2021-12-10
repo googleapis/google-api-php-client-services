@@ -19,30 +19,57 @@ namespace Google\Service\CloudComposer;
 
 class MaintenanceWindow extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $endTime;
+  /**
+   * @var string
+   */
   public $recurrence;
+  /**
+   * @var string
+   */
   public $startTime;
 
+  /**
+   * @param string
+   */
   public function setEndTime($endTime)
   {
     $this->endTime = $endTime;
   }
+  /**
+   * @return string
+   */
   public function getEndTime()
   {
     return $this->endTime;
   }
+  /**
+   * @param string
+   */
   public function setRecurrence($recurrence)
   {
     $this->recurrence = $recurrence;
   }
+  /**
+   * @return string
+   */
   public function getRecurrence()
   {
     return $this->recurrence;
   }
+  /**
+   * @param string
+   */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
+  /**
+   * @return string
+   */
   public function getStartTime()
   {
     return $this->startTime;

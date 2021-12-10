@@ -19,30 +19,57 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1CpuInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $architecture;
+  /**
+   * @var int
+   */
   public $maxClockSpeed;
+  /**
+   * @var string
+   */
   public $model;
 
+  /**
+   * @param string
+   */
   public function setArchitecture($architecture)
   {
     $this->architecture = $architecture;
   }
+  /**
+   * @return string
+   */
   public function getArchitecture()
   {
     return $this->architecture;
   }
+  /**
+   * @param int
+   */
   public function setMaxClockSpeed($maxClockSpeed)
   {
     $this->maxClockSpeed = $maxClockSpeed;
   }
+  /**
+   * @return int
+   */
   public function getMaxClockSpeed()
   {
     return $this->maxClockSpeed;
   }
+  /**
+   * @param string
+   */
   public function setModel($model)
   {
     $this->model = $model;
   }
+  /**
+   * @return string
+   */
   public function getModel()
   {
     return $this->model;

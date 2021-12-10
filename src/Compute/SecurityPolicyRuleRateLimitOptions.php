@@ -19,22 +19,43 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyRuleRateLimitOptions extends \Google\Model
 {
+  /**
+   * @var int
+   */
   public $banDurationSec;
   protected $banThresholdType = SecurityPolicyRuleRateLimitOptionsThreshold::class;
   protected $banThresholdDataType = '';
+  /**
+   * @var string
+   */
   public $conformAction;
+  /**
+   * @var string
+   */
   public $enforceOnKey;
+  /**
+   * @var string
+   */
   public $enforceOnKeyName;
+  /**
+   * @var string
+   */
   public $exceedAction;
   protected $exceedRedirectOptionsType = SecurityPolicyRuleRedirectOptions::class;
   protected $exceedRedirectOptionsDataType = '';
   protected $rateLimitThresholdType = SecurityPolicyRuleRateLimitOptionsThreshold::class;
   protected $rateLimitThresholdDataType = '';
 
+  /**
+   * @param int
+   */
   public function setBanDurationSec($banDurationSec)
   {
     $this->banDurationSec = $banDurationSec;
   }
+  /**
+   * @return int
+   */
   public function getBanDurationSec()
   {
     return $this->banDurationSec;
@@ -53,34 +74,58 @@ class SecurityPolicyRuleRateLimitOptions extends \Google\Model
   {
     return $this->banThreshold;
   }
+  /**
+   * @param string
+   */
   public function setConformAction($conformAction)
   {
     $this->conformAction = $conformAction;
   }
+  /**
+   * @return string
+   */
   public function getConformAction()
   {
     return $this->conformAction;
   }
+  /**
+   * @param string
+   */
   public function setEnforceOnKey($enforceOnKey)
   {
     $this->enforceOnKey = $enforceOnKey;
   }
+  /**
+   * @return string
+   */
   public function getEnforceOnKey()
   {
     return $this->enforceOnKey;
   }
+  /**
+   * @param string
+   */
   public function setEnforceOnKeyName($enforceOnKeyName)
   {
     $this->enforceOnKeyName = $enforceOnKeyName;
   }
+  /**
+   * @return string
+   */
   public function getEnforceOnKeyName()
   {
     return $this->enforceOnKeyName;
   }
+  /**
+   * @param string
+   */
   public function setExceedAction($exceedAction)
   {
     $this->exceedAction = $exceedAction;
   }
+  /**
+   * @return string
+   */
   public function getExceedAction()
   {
     return $this->exceedAction;

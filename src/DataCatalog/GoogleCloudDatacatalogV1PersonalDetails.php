@@ -19,21 +19,39 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1PersonalDetails extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $starTime;
+  /**
+   * @var bool
+   */
   public $starred;
 
+  /**
+   * @param string
+   */
   public function setStarTime($starTime)
   {
     $this->starTime = $starTime;
   }
+  /**
+   * @return string
+   */
   public function getStarTime()
   {
     return $this->starTime;
   }
+  /**
+   * @param bool
+   */
   public function setStarred($starred)
   {
     $this->starred = $starred;
   }
+  /**
+   * @return bool
+   */
   public function getStarred()
   {
     return $this->starred;

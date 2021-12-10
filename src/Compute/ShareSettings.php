@@ -21,6 +21,9 @@ class ShareSettings extends \Google\Model
 {
   protected $projectMapType = ShareSettingsProjectConfig::class;
   protected $projectMapDataType = 'map';
+  /**
+   * @var string
+   */
   public $shareType;
 
   /**
@@ -37,10 +40,16 @@ class ShareSettings extends \Google\Model
   {
     return $this->projectMap;
   }
+  /**
+   * @param string
+   */
   public function setShareType($shareType)
   {
     $this->shareType = $shareType;
   }
+  /**
+   * @return string
+   */
   public function getShareType()
   {
     return $this->shareType;

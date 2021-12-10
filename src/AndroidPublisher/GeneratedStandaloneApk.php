@@ -19,21 +19,39 @@ namespace Google\Service\AndroidPublisher;
 
 class GeneratedStandaloneApk extends \Google\Model
 {
+  /**
+   * @var string
+   */
   public $downloadId;
+  /**
+   * @var int
+   */
   public $variantId;
 
+  /**
+   * @param string
+   */
   public function setDownloadId($downloadId)
   {
     $this->downloadId = $downloadId;
   }
+  /**
+   * @return string
+   */
   public function getDownloadId()
   {
     return $this->downloadId;
   }
+  /**
+   * @param int
+   */
   public function setVariantId($variantId)
   {
     $this->variantId = $variantId;
   }
+  /**
+   * @return int
+   */
   public function getVariantId()
   {
     return $this->variantId;
