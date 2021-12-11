@@ -52,6 +52,10 @@ class PatchDeployment extends \Google\Model
   /**
    * @var string
    */
+  public $state;
+  /**
+   * @var string
+   */
   public $updateTime;
 
   /**
@@ -193,6 +197,20 @@ class PatchDeployment extends \Google\Model
   public function getRollout()
   {
     return $this->rollout;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * @param string

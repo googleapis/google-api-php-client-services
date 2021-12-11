@@ -30,6 +30,10 @@ class CloudSqlSettings extends \Google\Model
   /**
    * @var string
    */
+  public $cmekKeyName;
+  /**
+   * @var string
+   */
   public $collation;
   /**
    * @var string
@@ -105,6 +109,20 @@ class CloudSqlSettings extends \Google\Model
   public function getAutoStorageIncrease()
   {
     return $this->autoStorageIncrease;
+  }
+  /**
+   * @param string
+   */
+  public function setCmekKeyName($cmekKeyName)
+  {
+    $this->cmekKeyName = $cmekKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getCmekKeyName()
+  {
+    return $this->cmekKeyName;
   }
   /**
    * @param string

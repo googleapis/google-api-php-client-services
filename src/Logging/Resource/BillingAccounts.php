@@ -34,8 +34,8 @@ class BillingAccounts extends \Google\Service\Resource
    * Router can be configured for Google Cloud projects, folders, organizations
    * and billing accounts. Once configured for an organization, it applies to all
    * projects and folders in the Google Cloud organization.See Enabling CMEK for
-   * Logs Router (https://cloud.google.com/logging/docs/routing/managed-
-   * encryption) for more information. (billingAccounts.getCmekSettings)
+   * Log Router (https://cloud.google.com/logging/docs/routing/managed-encryption)
+   * for more information. (billingAccounts.getCmekSettings)
    *
    * @param string $name Required. The resource for which to retrieve CMEK
    * settings. "projects/[PROJECT_ID]/cmekSettings"

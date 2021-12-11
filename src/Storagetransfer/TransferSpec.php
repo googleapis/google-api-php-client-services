@@ -27,6 +27,8 @@ class TransferSpec extends \Google\Model
   protected $gcsDataSinkDataType = '';
   protected $gcsDataSourceType = GcsData::class;
   protected $gcsDataSourceDataType = '';
+  protected $gcsIntermediateDataLocationType = GcsData::class;
+  protected $gcsIntermediateDataLocationDataType = '';
   protected $httpDataSourceType = HttpData::class;
   protected $httpDataSourceDataType = '';
   protected $objectConditionsType = ObjectConditions::class;
@@ -103,6 +105,20 @@ class TransferSpec extends \Google\Model
   public function getGcsDataSource()
   {
     return $this->gcsDataSource;
+  }
+  /**
+   * @param GcsData
+   */
+  public function setGcsIntermediateDataLocation(GcsData $gcsIntermediateDataLocation)
+  {
+    $this->gcsIntermediateDataLocation = $gcsIntermediateDataLocation;
+  }
+  /**
+   * @return GcsData
+   */
+  public function getGcsIntermediateDataLocation()
+  {
+    return $this->gcsIntermediateDataLocation;
   }
   /**
    * @param HttpData
