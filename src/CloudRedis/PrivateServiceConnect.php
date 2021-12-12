@@ -15,66 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\CloudRedis;
 
-class ResourceOptions extends \Google\Model
+class PrivateServiceConnect extends \Google\Model
 {
   /**
    * @var string
    */
-  public $connectVersion;
+  public $pscService;
   /**
    * @var string
    */
-  public $k8sVersion;
-  /**
-   * @var bool
-   */
-  public $v1beta1Crd;
+  public $pscServiceRoute;
 
   /**
    * @param string
    */
-  public function setConnectVersion($connectVersion)
+  public function setPscService($pscService)
   {
-    $this->connectVersion = $connectVersion;
+    $this->pscService = $pscService;
   }
   /**
    * @return string
    */
-  public function getConnectVersion()
+  public function getPscService()
   {
-    return $this->connectVersion;
+    return $this->pscService;
   }
   /**
    * @param string
    */
-  public function setK8sVersion($k8sVersion)
+  public function setPscServiceRoute($pscServiceRoute)
   {
-    $this->k8sVersion = $k8sVersion;
+    $this->pscServiceRoute = $pscServiceRoute;
   }
   /**
    * @return string
    */
-  public function getK8sVersion()
+  public function getPscServiceRoute()
   {
-    return $this->k8sVersion;
-  }
-  /**
-   * @param bool
-   */
-  public function setV1beta1Crd($v1beta1Crd)
-  {
-    $this->v1beta1Crd = $v1beta1Crd;
-  }
-  /**
-   * @return bool
-   */
-  public function getV1beta1Crd()
-  {
-    return $this->v1beta1Crd;
+    return $this->pscServiceRoute;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResourceOptions::class, 'Google_Service_GKEHub_ResourceOptions');
+class_alias(PrivateServiceConnect::class, 'Google_Service_CloudRedis_PrivateServiceConnect');

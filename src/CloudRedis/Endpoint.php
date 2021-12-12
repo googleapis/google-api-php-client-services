@@ -15,66 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub;
+namespace Google\Service\CloudRedis;
 
-class ResourceOptions extends \Google\Model
+class Endpoint extends \Google\Model
 {
   /**
    * @var string
    */
-  public $connectVersion;
+  public $host;
   /**
-   * @var string
+   * @var int
    */
-  public $k8sVersion;
-  /**
-   * @var bool
-   */
-  public $v1beta1Crd;
+  public $port;
 
   /**
    * @param string
    */
-  public function setConnectVersion($connectVersion)
+  public function setHost($host)
   {
-    $this->connectVersion = $connectVersion;
+    $this->host = $host;
   }
   /**
    * @return string
    */
-  public function getConnectVersion()
+  public function getHost()
   {
-    return $this->connectVersion;
+    return $this->host;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setK8sVersion($k8sVersion)
+  public function setPort($port)
   {
-    $this->k8sVersion = $k8sVersion;
+    $this->port = $port;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getK8sVersion()
+  public function getPort()
   {
-    return $this->k8sVersion;
-  }
-  /**
-   * @param bool
-   */
-  public function setV1beta1Crd($v1beta1Crd)
-  {
-    $this->v1beta1Crd = $v1beta1Crd;
-  }
-  /**
-   * @return bool
-   */
-  public function getV1beta1Crd()
-  {
-    return $this->v1beta1Crd;
+    return $this->port;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResourceOptions::class, 'Google_Service_GKEHub_ResourceOptions');
+class_alias(Endpoint::class, 'Google_Service_CloudRedis_Endpoint');
