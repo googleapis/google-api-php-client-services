@@ -20,6 +20,10 @@ namespace Google\Service\VMMigrationService;
 class ComputeEngineTargetDetails extends \Google\Collection
 {
   protected $collection_key = 'networkTags';
+  /**
+   * @var string[]
+   */
+  public $additionalLicenses;
   protected $appliedLicenseType = AppliedLicense::class;
   protected $appliedLicenseDataType = '';
   /**
@@ -79,6 +83,20 @@ class ComputeEngineTargetDetails extends \Google\Collection
    */
   public $zone;
 
+  /**
+   * @param string[]
+   */
+  public function setAdditionalLicenses($additionalLicenses)
+  {
+    $this->additionalLicenses = $additionalLicenses;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAdditionalLicenses()
+  {
+    return $this->additionalLicenses;
+  }
   /**
    * @param AppliedLicense
    */
