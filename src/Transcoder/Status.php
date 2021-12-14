@@ -15,66 +15,67 @@
  * the License.
  */
 
-namespace Google\Service\CloudSearch;
+namespace Google\Service\Transcoder;
 
-class ItemCountByStatus extends \Google\Model
+class Status extends \Google\Collection
 {
+  protected $collection_key = 'details';
+  /**
+   * @var int
+   */
+  public $code;
+  /**
+   * @var array[]
+   */
+  public $details;
   /**
    * @var string
    */
-  public $count;
-  /**
-   * @var string
-   */
-  public $indexedItemsCount;
-  /**
-   * @var string
-   */
-  public $statusCode;
+  public $message;
 
   /**
+   * @param int
+   */
+  public function setCode($code)
+  {
+    $this->code = $code;
+  }
+  /**
+   * @return int
+   */
+  public function getCode()
+  {
+    return $this->code;
+  }
+  /**
+   * @param array[]
+   */
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  /**
+   * @return array[]
+   */
+  public function getDetails()
+  {
+    return $this->details;
+  }
+  /**
    * @param string
    */
-  public function setCount($count)
+  public function setMessage($message)
   {
-    $this->count = $count;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getCount()
+  public function getMessage()
   {
-    return $this->count;
-  }
-  /**
-   * @param string
-   */
-  public function setIndexedItemsCount($indexedItemsCount)
-  {
-    $this->indexedItemsCount = $indexedItemsCount;
-  }
-  /**
-   * @return string
-   */
-  public function getIndexedItemsCount()
-  {
-    return $this->indexedItemsCount;
-  }
-  /**
-   * @param string
-   */
-  public function setStatusCode($statusCode)
-  {
-    $this->statusCode = $statusCode;
-  }
-  /**
-   * @return string
-   */
-  public function getStatusCode()
-  {
-    return $this->statusCode;
+    return $this->message;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ItemCountByStatus::class, 'Google_Service_CloudSearch_ItemCountByStatus');
+class_alias(Status::class, 'Google_Service_Transcoder_Status');

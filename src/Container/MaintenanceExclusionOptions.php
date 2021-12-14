@@ -15,47 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Transcoder;
+namespace Google\Service\Container;
 
-class TextStream extends \Google\Collection
+class MaintenanceExclusionOptions extends \Google\Model
 {
-  protected $collection_key = 'mapping';
   /**
    * @var string
    */
-  public $codec;
-  protected $mappingType = TextMapping::class;
-  protected $mappingDataType = 'array';
+  public $scope;
 
   /**
    * @param string
    */
-  public function setCodec($codec)
+  public function setScope($scope)
   {
-    $this->codec = $codec;
+    $this->scope = $scope;
   }
   /**
    * @return string
    */
-  public function getCodec()
+  public function getScope()
   {
-    return $this->codec;
-  }
-  /**
-   * @param TextMapping[]
-   */
-  public function setMapping($mapping)
-  {
-    $this->mapping = $mapping;
-  }
-  /**
-   * @return TextMapping[]
-   */
-  public function getMapping()
-  {
-    return $this->mapping;
+    return $this->scope;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TextStream::class, 'Google_Service_Transcoder_TextStream');
+class_alias(MaintenanceExclusionOptions::class, 'Google_Service_Container_MaintenanceExclusionOptions');

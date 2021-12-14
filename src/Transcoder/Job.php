@@ -17,9 +17,8 @@
 
 namespace Google\Service\Transcoder;
 
-class Job extends \Google\Collection
+class Job extends \Google\Model
 {
-  protected $collection_key = 'failureDetails';
   protected $configType = JobConfig::class;
   protected $configDataType = '';
   /**
@@ -30,12 +29,8 @@ class Job extends \Google\Collection
    * @var string
    */
   public $endTime;
-  protected $failureDetailsType = FailureDetail::class;
-  protected $failureDetailsDataType = 'array';
-  /**
-   * @var string
-   */
-  public $failureReason;
+  protected $errorType = Status::class;
+  protected $errorDataType = '';
   /**
    * @var string
    */
@@ -44,18 +39,10 @@ class Job extends \Google\Collection
    * @var string
    */
   public $name;
-  protected $originUriType = OriginUri::class;
-  protected $originUriDataType = '';
   /**
    * @var string
    */
   public $outputUri;
-  /**
-   * @var int
-   */
-  public $priority;
-  protected $progressType = Progress::class;
-  protected $progressDataType = '';
   /**
    * @var string
    */
@@ -116,32 +103,18 @@ class Job extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param FailureDetail[]
+   * @param Status
    */
-  public function setFailureDetails($failureDetails)
+  public function setError(Status $error)
   {
-    $this->failureDetails = $failureDetails;
+    $this->error = $error;
   }
   /**
-   * @return FailureDetail[]
+   * @return Status
    */
-  public function getFailureDetails()
+  public function getError()
   {
-    return $this->failureDetails;
-  }
-  /**
-   * @param string
-   */
-  public function setFailureReason($failureReason)
-  {
-    $this->failureReason = $failureReason;
-  }
-  /**
-   * @return string
-   */
-  public function getFailureReason()
-  {
-    return $this->failureReason;
+    return $this->error;
   }
   /**
    * @param string
@@ -172,20 +145,6 @@ class Job extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param OriginUri
-   */
-  public function setOriginUri(OriginUri $originUri)
-  {
-    $this->originUri = $originUri;
-  }
-  /**
-   * @return OriginUri
-   */
-  public function getOriginUri()
-  {
-    return $this->originUri;
-  }
-  /**
    * @param string
    */
   public function setOutputUri($outputUri)
@@ -198,34 +157,6 @@ class Job extends \Google\Collection
   public function getOutputUri()
   {
     return $this->outputUri;
-  }
-  /**
-   * @param int
-   */
-  public function setPriority($priority)
-  {
-    $this->priority = $priority;
-  }
-  /**
-   * @return int
-   */
-  public function getPriority()
-  {
-    return $this->priority;
-  }
-  /**
-   * @param Progress
-   */
-  public function setProgress(Progress $progress)
-  {
-    $this->progress = $progress;
-  }
-  /**
-   * @return Progress
-   */
-  public function getProgress()
-  {
-    return $this->progress;
   }
   /**
    * @param string

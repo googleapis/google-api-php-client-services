@@ -25,6 +25,10 @@ class GoogleCloudApigeeV1OrganizationProjectMapping extends \Google\Collection
    */
   public $organization;
   /**
+   * @var string
+   */
+  public $projectId;
+  /**
    * @var string[]
    */
   public $projectIds;
@@ -42,6 +46,20 @@ class GoogleCloudApigeeV1OrganizationProjectMapping extends \Google\Collection
   public function getOrganization()
   {
     return $this->organization;
+  }
+  /**
+   * @param string
+   */
+  public function setProjectId($projectId)
+  {
+    $this->projectId = $projectId;
+  }
+  /**
+   * @return string
+   */
+  public function getProjectId()
+  {
+    return $this->projectId;
   }
   /**
    * @param string[]

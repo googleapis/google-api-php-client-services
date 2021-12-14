@@ -17,20 +17,14 @@
 
 namespace Google\Service\CloudSearch;
 
-class ItemCountByStatus extends \Google\Model
+class CustomerSearchApplicationStats extends \Google\Model
 {
   /**
    * @var string
    */
   public $count;
-  /**
-   * @var string
-   */
-  public $indexedItemsCount;
-  /**
-   * @var string
-   */
-  public $statusCode;
+  protected $dateType = Date::class;
+  protected $dateDataType = '';
 
   /**
    * @param string
@@ -47,34 +41,20 @@ class ItemCountByStatus extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * @param Date
    */
-  public function setIndexedItemsCount($indexedItemsCount)
+  public function setDate(Date $date)
   {
-    $this->indexedItemsCount = $indexedItemsCount;
+    $this->date = $date;
   }
   /**
-   * @return string
+   * @return Date
    */
-  public function getIndexedItemsCount()
+  public function getDate()
   {
-    return $this->indexedItemsCount;
-  }
-  /**
-   * @param string
-   */
-  public function setStatusCode($statusCode)
-  {
-    $this->statusCode = $statusCode;
-  }
-  /**
-   * @return string
-   */
-  public function getStatusCode()
-  {
-    return $this->statusCode;
+    return $this->date;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ItemCountByStatus::class, 'Google_Service_CloudSearch_ItemCountByStatus');
+class_alias(CustomerSearchApplicationStats::class, 'Google_Service_CloudSearch_CustomerSearchApplicationStats');

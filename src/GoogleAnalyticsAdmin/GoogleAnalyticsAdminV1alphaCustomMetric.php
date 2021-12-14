@@ -17,8 +17,9 @@
 
 namespace Google\Service\GoogleAnalyticsAdmin;
 
-class GoogleAnalyticsAdminV1alphaCustomMetric extends \Google\Model
+class GoogleAnalyticsAdminV1alphaCustomMetric extends \Google\Collection
 {
+  protected $collection_key = 'restrictedMetricType';
   /**
    * @var string
    */
@@ -39,6 +40,10 @@ class GoogleAnalyticsAdminV1alphaCustomMetric extends \Google\Model
    * @var string
    */
   public $parameterName;
+  /**
+   * @var string[]
+   */
+  public $restrictedMetricType;
   /**
    * @var string
    */
@@ -113,6 +118,20 @@ class GoogleAnalyticsAdminV1alphaCustomMetric extends \Google\Model
   public function getParameterName()
   {
     return $this->parameterName;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRestrictedMetricType($restrictedMetricType)
+  {
+    $this->restrictedMetricType = $restrictedMetricType;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRestrictedMetricType()
+  {
+    return $this->restrictedMetricType;
   }
   /**
    * @param string

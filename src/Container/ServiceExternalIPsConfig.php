@@ -15,47 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Transcoder;
+namespace Google\Service\Container;
 
-class TextStream extends \Google\Collection
+class ServiceExternalIPsConfig extends \Google\Model
 {
-  protected $collection_key = 'mapping';
   /**
-   * @var string
+   * @var bool
    */
-  public $codec;
-  protected $mappingType = TextMapping::class;
-  protected $mappingDataType = 'array';
+  public $enabled;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setCodec($codec)
+  public function setEnabled($enabled)
   {
-    $this->codec = $codec;
+    $this->enabled = $enabled;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getCodec()
+  public function getEnabled()
   {
-    return $this->codec;
-  }
-  /**
-   * @param TextMapping[]
-   */
-  public function setMapping($mapping)
-  {
-    $this->mapping = $mapping;
-  }
-  /**
-   * @return TextMapping[]
-   */
-  public function getMapping()
-  {
-    return $this->mapping;
+    return $this->enabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TextStream::class, 'Google_Service_Transcoder_TextStream');
+class_alias(ServiceExternalIPsConfig::class, 'Google_Service_Container_ServiceExternalIPsConfig');

@@ -24,6 +24,10 @@ class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment extends \Google\
    * @var string[]
    */
   public $labels;
+  /**
+   * @var string
+   */
+  public $recommendedAction;
 
   /**
    * @param string[]
@@ -38,6 +42,20 @@ class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment extends \Google\
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param string
+   */
+  public function setRecommendedAction($recommendedAction)
+  {
+    $this->recommendedAction = $recommendedAction;
+  }
+  /**
+   * @return string
+   */
+  public function getRecommendedAction()
+  {
+    return $this->recommendedAction;
   }
 }
 

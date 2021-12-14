@@ -19,13 +19,17 @@ namespace Google\Service\Transcoder;
 
 class ListJobTemplatesResponse extends \Google\Collection
 {
-  protected $collection_key = 'jobTemplates';
+  protected $collection_key = 'unreachable';
   protected $jobTemplatesType = JobTemplate::class;
   protected $jobTemplatesDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var string[]
+   */
+  public $unreachable;
 
   /**
    * @param JobTemplate[]
@@ -54,6 +58,20 @@ class ListJobTemplatesResponse extends \Google\Collection
   public function getNextPageToken()
   {
     return $this->nextPageToken;
+  }
+  /**
+   * @param string[]
+   */
+  public function setUnreachable($unreachable)
+  {
+    $this->unreachable = $unreachable;
+  }
+  /**
+   * @return string[]
+   */
+  public function getUnreachable()
+  {
+    return $this->unreachable;
   }
 }
 

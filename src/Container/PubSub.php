@@ -23,6 +23,8 @@ class PubSub extends \Google\Model
    * @var bool
    */
   public $enabled;
+  protected $filterType = Filter::class;
+  protected $filterDataType = '';
   /**
    * @var string
    */
@@ -41,6 +43,20 @@ class PubSub extends \Google\Model
   public function getEnabled()
   {
     return $this->enabled;
+  }
+  /**
+   * @param Filter
+   */
+  public function setFilter(Filter $filter)
+  {
+    $this->filter = $filter;
+  }
+  /**
+   * @return Filter
+   */
+  public function getFilter()
+  {
+    return $this->filter;
   }
   /**
    * @param string

@@ -23,6 +23,8 @@ class TimeWindow extends \Google\Model
    * @var string
    */
   public $endTime;
+  protected $maintenanceExclusionOptionsType = MaintenanceExclusionOptions::class;
+  protected $maintenanceExclusionOptionsDataType = '';
   /**
    * @var string
    */
@@ -41,6 +43,20 @@ class TimeWindow extends \Google\Model
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * @param MaintenanceExclusionOptions
+   */
+  public function setMaintenanceExclusionOptions(MaintenanceExclusionOptions $maintenanceExclusionOptions)
+  {
+    $this->maintenanceExclusionOptions = $maintenanceExclusionOptions;
+  }
+  /**
+   * @return MaintenanceExclusionOptions
+   */
+  public function getMaintenanceExclusionOptions()
+  {
+    return $this->maintenanceExclusionOptions;
   }
   /**
    * @param string

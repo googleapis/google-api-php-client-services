@@ -15,66 +15,66 @@
  * the License.
  */
 
-namespace Google\Service\CloudSearch;
+namespace Google\Service\Transcoder;
 
-class ItemCountByStatus extends \Google\Model
+class TextMapping extends \Google\Model
 {
   /**
    * @var string
    */
-  public $count;
+  public $atomKey;
   /**
    * @var string
    */
-  public $indexedItemsCount;
+  public $inputKey;
   /**
-   * @var string
+   * @var int
    */
-  public $statusCode;
+  public $inputTrack;
 
   /**
    * @param string
    */
-  public function setCount($count)
+  public function setAtomKey($atomKey)
   {
-    $this->count = $count;
+    $this->atomKey = $atomKey;
   }
   /**
    * @return string
    */
-  public function getCount()
+  public function getAtomKey()
   {
-    return $this->count;
+    return $this->atomKey;
   }
   /**
    * @param string
    */
-  public function setIndexedItemsCount($indexedItemsCount)
+  public function setInputKey($inputKey)
   {
-    $this->indexedItemsCount = $indexedItemsCount;
+    $this->inputKey = $inputKey;
   }
   /**
    * @return string
    */
-  public function getIndexedItemsCount()
+  public function getInputKey()
   {
-    return $this->indexedItemsCount;
+    return $this->inputKey;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setStatusCode($statusCode)
+  public function setInputTrack($inputTrack)
   {
-    $this->statusCode = $statusCode;
+    $this->inputTrack = $inputTrack;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getStatusCode()
+  public function getInputTrack()
   {
-    return $this->statusCode;
+    return $this->inputTrack;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ItemCountByStatus::class, 'Google_Service_CloudSearch_ItemCountByStatus');
+class_alias(TextMapping::class, 'Google_Service_Transcoder_TextMapping');

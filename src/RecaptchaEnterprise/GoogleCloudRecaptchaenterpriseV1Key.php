@@ -41,6 +41,8 @@ class GoogleCloudRecaptchaenterpriseV1Key extends \Google\Model
   public $name;
   protected $testingOptionsType = GoogleCloudRecaptchaenterpriseV1TestingOptions::class;
   protected $testingOptionsDataType = '';
+  protected $wafSettingsType = GoogleCloudRecaptchaenterpriseV1WafSettings::class;
+  protected $wafSettingsDataType = '';
   protected $webSettingsType = GoogleCloudRecaptchaenterpriseV1WebKeySettings::class;
   protected $webSettingsDataType = '';
 
@@ -141,6 +143,20 @@ class GoogleCloudRecaptchaenterpriseV1Key extends \Google\Model
   public function getTestingOptions()
   {
     return $this->testingOptions;
+  }
+  /**
+   * @param GoogleCloudRecaptchaenterpriseV1WafSettings
+   */
+  public function setWafSettings(GoogleCloudRecaptchaenterpriseV1WafSettings $wafSettings)
+  {
+    $this->wafSettings = $wafSettings;
+  }
+  /**
+   * @return GoogleCloudRecaptchaenterpriseV1WafSettings
+   */
+  public function getWafSettings()
+  {
+    return $this->wafSettings;
   }
   /**
    * @param GoogleCloudRecaptchaenterpriseV1WebKeySettings

@@ -43,6 +43,10 @@ class Metadata extends \Google\Collection
   /**
    * @var string
    */
+  public $thumbnailUrl;
+  /**
+   * @var string
+   */
   public $updateTime;
 
   /**
@@ -142,6 +146,20 @@ class Metadata extends \Google\Collection
   public function getSource()
   {
     return $this->source;
+  }
+  /**
+   * @param string
+   */
+  public function setThumbnailUrl($thumbnailUrl)
+  {
+    $this->thumbnailUrl = $thumbnailUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getThumbnailUrl()
+  {
+    return $this->thumbnailUrl;
   }
   /**
    * @param string

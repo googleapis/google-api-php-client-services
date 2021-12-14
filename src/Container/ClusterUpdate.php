@@ -94,6 +94,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredReleaseChannelDataType = '';
   protected $desiredResourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $desiredResourceUsageExportConfigDataType = '';
+  protected $desiredServiceExternalIpsConfigType = ServiceExternalIPsConfig::class;
+  protected $desiredServiceExternalIpsConfigDataType = '';
   protected $desiredShieldedNodesType = ShieldedNodes::class;
   protected $desiredShieldedNodesDataType = '';
   protected $desiredVerticalPodAutoscalingType = VerticalPodAutoscaling::class;
@@ -492,6 +494,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredResourceUsageExportConfig()
   {
     return $this->desiredResourceUsageExportConfig;
+  }
+  /**
+   * @param ServiceExternalIPsConfig
+   */
+  public function setDesiredServiceExternalIpsConfig(ServiceExternalIPsConfig $desiredServiceExternalIpsConfig)
+  {
+    $this->desiredServiceExternalIpsConfig = $desiredServiceExternalIpsConfig;
+  }
+  /**
+   * @return ServiceExternalIPsConfig
+   */
+  public function getDesiredServiceExternalIpsConfig()
+  {
+    return $this->desiredServiceExternalIpsConfig;
   }
   /**
    * @param ShieldedNodes

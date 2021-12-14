@@ -47,6 +47,10 @@ class DataSource extends \Google\Collection
    */
   public $operationIds;
   /**
+   * @var bool
+   */
+  public $returnThumbnailUrls;
+  /**
    * @var string
    */
   public $shortName;
@@ -148,6 +152,20 @@ class DataSource extends \Google\Collection
   public function getOperationIds()
   {
     return $this->operationIds;
+  }
+  /**
+   * @param bool
+   */
+  public function setReturnThumbnailUrls($returnThumbnailUrls)
+  {
+    $this->returnThumbnailUrls = $returnThumbnailUrls;
+  }
+  /**
+   * @return bool
+   */
+  public function getReturnThumbnailUrls()
+  {
+    return $this->returnThumbnailUrls;
   }
   /**
    * @param string

@@ -36,7 +36,7 @@ class AudioStream extends \Google\Collection
    * @var string
    */
   public $codec;
-  protected $mappingType = AudioAtom::class;
+  protected $mappingType = AudioMapping::class;
   protected $mappingDataType = 'array';
   /**
    * @var int
@@ -100,14 +100,14 @@ class AudioStream extends \Google\Collection
     return $this->codec;
   }
   /**
-   * @param AudioAtom[]
+   * @param AudioMapping[]
    */
   public function setMapping($mapping)
   {
     $this->mapping = $mapping;
   }
   /**
-   * @return AudioAtom[]
+   * @return AudioMapping[]
    */
   public function getMapping()
   {

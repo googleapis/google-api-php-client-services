@@ -19,366 +19,54 @@ namespace Google\Service\Transcoder;
 
 class VideoStream extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $allowOpenGop;
-  public $aqStrength;
-  /**
-   * @var int
-   */
-  public $bFrameCount;
-  /**
-   * @var bool
-   */
-  public $bPyramid;
-  /**
-   * @var int
-   */
-  public $bitrateBps;
-  /**
-   * @var string
-   */
-  public $codec;
-  /**
-   * @var int
-   */
-  public $crfLevel;
-  /**
-   * @var bool
-   */
-  public $enableTwoPass;
-  /**
-   * @var string
-   */
-  public $entropyCoder;
-  public $frameRate;
-  /**
-   * @var string
-   */
-  public $gopDuration;
-  /**
-   * @var int
-   */
-  public $gopFrameCount;
-  /**
-   * @var int
-   */
-  public $heightPixels;
-  /**
-   * @var string
-   */
-  public $pixelFormat;
-  /**
-   * @var string
-   */
-  public $preset;
-  /**
-   * @var string
-   */
-  public $profile;
-  /**
-   * @var string
-   */
-  public $rateControlMode;
-  /**
-   * @var string
-   */
-  public $tune;
-  /**
-   * @var int
-   */
-  public $vbvFullnessBits;
-  /**
-   * @var int
-   */
-  public $vbvSizeBits;
-  /**
-   * @var int
-   */
-  public $widthPixels;
+  protected $h264Type = H264CodecSettings::class;
+  protected $h264DataType = '';
+  protected $h265Type = H265CodecSettings::class;
+  protected $h265DataType = '';
+  protected $vp9Type = Vp9CodecSettings::class;
+  protected $vp9DataType = '';
 
   /**
-   * @param bool
+   * @param H264CodecSettings
    */
-  public function setAllowOpenGop($allowOpenGop)
+  public function setH264(H264CodecSettings $h264)
   {
-    $this->allowOpenGop = $allowOpenGop;
+    $this->h264 = $h264;
   }
   /**
-   * @return bool
+   * @return H264CodecSettings
    */
-  public function getAllowOpenGop()
+  public function getH264()
   {
-    return $this->allowOpenGop;
-  }
-  public function setAqStrength($aqStrength)
-  {
-    $this->aqStrength = $aqStrength;
-  }
-  public function getAqStrength()
-  {
-    return $this->aqStrength;
+    return $this->h264;
   }
   /**
-   * @param int
+   * @param H265CodecSettings
    */
-  public function setBFrameCount($bFrameCount)
+  public function setH265(H265CodecSettings $h265)
   {
-    $this->bFrameCount = $bFrameCount;
+    $this->h265 = $h265;
   }
   /**
-   * @return int
+   * @return H265CodecSettings
    */
-  public function getBFrameCount()
+  public function getH265()
   {
-    return $this->bFrameCount;
+    return $this->h265;
   }
   /**
-   * @param bool
+   * @param Vp9CodecSettings
    */
-  public function setBPyramid($bPyramid)
+  public function setVp9(Vp9CodecSettings $vp9)
   {
-    $this->bPyramid = $bPyramid;
+    $this->vp9 = $vp9;
   }
   /**
-   * @return bool
+   * @return Vp9CodecSettings
    */
-  public function getBPyramid()
+  public function getVp9()
   {
-    return $this->bPyramid;
-  }
-  /**
-   * @param int
-   */
-  public function setBitrateBps($bitrateBps)
-  {
-    $this->bitrateBps = $bitrateBps;
-  }
-  /**
-   * @return int
-   */
-  public function getBitrateBps()
-  {
-    return $this->bitrateBps;
-  }
-  /**
-   * @param string
-   */
-  public function setCodec($codec)
-  {
-    $this->codec = $codec;
-  }
-  /**
-   * @return string
-   */
-  public function getCodec()
-  {
-    return $this->codec;
-  }
-  /**
-   * @param int
-   */
-  public function setCrfLevel($crfLevel)
-  {
-    $this->crfLevel = $crfLevel;
-  }
-  /**
-   * @return int
-   */
-  public function getCrfLevel()
-  {
-    return $this->crfLevel;
-  }
-  /**
-   * @param bool
-   */
-  public function setEnableTwoPass($enableTwoPass)
-  {
-    $this->enableTwoPass = $enableTwoPass;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableTwoPass()
-  {
-    return $this->enableTwoPass;
-  }
-  /**
-   * @param string
-   */
-  public function setEntropyCoder($entropyCoder)
-  {
-    $this->entropyCoder = $entropyCoder;
-  }
-  /**
-   * @return string
-   */
-  public function getEntropyCoder()
-  {
-    return $this->entropyCoder;
-  }
-  public function setFrameRate($frameRate)
-  {
-    $this->frameRate = $frameRate;
-  }
-  public function getFrameRate()
-  {
-    return $this->frameRate;
-  }
-  /**
-   * @param string
-   */
-  public function setGopDuration($gopDuration)
-  {
-    $this->gopDuration = $gopDuration;
-  }
-  /**
-   * @return string
-   */
-  public function getGopDuration()
-  {
-    return $this->gopDuration;
-  }
-  /**
-   * @param int
-   */
-  public function setGopFrameCount($gopFrameCount)
-  {
-    $this->gopFrameCount = $gopFrameCount;
-  }
-  /**
-   * @return int
-   */
-  public function getGopFrameCount()
-  {
-    return $this->gopFrameCount;
-  }
-  /**
-   * @param int
-   */
-  public function setHeightPixels($heightPixels)
-  {
-    $this->heightPixels = $heightPixels;
-  }
-  /**
-   * @return int
-   */
-  public function getHeightPixels()
-  {
-    return $this->heightPixels;
-  }
-  /**
-   * @param string
-   */
-  public function setPixelFormat($pixelFormat)
-  {
-    $this->pixelFormat = $pixelFormat;
-  }
-  /**
-   * @return string
-   */
-  public function getPixelFormat()
-  {
-    return $this->pixelFormat;
-  }
-  /**
-   * @param string
-   */
-  public function setPreset($preset)
-  {
-    $this->preset = $preset;
-  }
-  /**
-   * @return string
-   */
-  public function getPreset()
-  {
-    return $this->preset;
-  }
-  /**
-   * @param string
-   */
-  public function setProfile($profile)
-  {
-    $this->profile = $profile;
-  }
-  /**
-   * @return string
-   */
-  public function getProfile()
-  {
-    return $this->profile;
-  }
-  /**
-   * @param string
-   */
-  public function setRateControlMode($rateControlMode)
-  {
-    $this->rateControlMode = $rateControlMode;
-  }
-  /**
-   * @return string
-   */
-  public function getRateControlMode()
-  {
-    return $this->rateControlMode;
-  }
-  /**
-   * @param string
-   */
-  public function setTune($tune)
-  {
-    $this->tune = $tune;
-  }
-  /**
-   * @return string
-   */
-  public function getTune()
-  {
-    return $this->tune;
-  }
-  /**
-   * @param int
-   */
-  public function setVbvFullnessBits($vbvFullnessBits)
-  {
-    $this->vbvFullnessBits = $vbvFullnessBits;
-  }
-  /**
-   * @return int
-   */
-  public function getVbvFullnessBits()
-  {
-    return $this->vbvFullnessBits;
-  }
-  /**
-   * @param int
-   */
-  public function setVbvSizeBits($vbvSizeBits)
-  {
-    $this->vbvSizeBits = $vbvSizeBits;
-  }
-  /**
-   * @return int
-   */
-  public function getVbvSizeBits()
-  {
-    return $this->vbvSizeBits;
-  }
-  /**
-   * @param int
-   */
-  public function setWidthPixels($widthPixels)
-  {
-    $this->widthPixels = $widthPixels;
-  }
-  /**
-   * @return int
-   */
-  public function getWidthPixels()
-  {
-    return $this->widthPixels;
+    return $this->vp9;
   }
 }
 

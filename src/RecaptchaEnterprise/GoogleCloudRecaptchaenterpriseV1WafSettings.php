@@ -15,66 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\CloudSearch;
+namespace Google\Service\RecaptchaEnterprise;
 
-class ItemCountByStatus extends \Google\Model
+class GoogleCloudRecaptchaenterpriseV1WafSettings extends \Google\Model
 {
   /**
    * @var string
    */
-  public $count;
+  public $wafFeature;
   /**
    * @var string
    */
-  public $indexedItemsCount;
-  /**
-   * @var string
-   */
-  public $statusCode;
+  public $wafService;
 
   /**
    * @param string
    */
-  public function setCount($count)
+  public function setWafFeature($wafFeature)
   {
-    $this->count = $count;
+    $this->wafFeature = $wafFeature;
   }
   /**
    * @return string
    */
-  public function getCount()
+  public function getWafFeature()
   {
-    return $this->count;
+    return $this->wafFeature;
   }
   /**
    * @param string
    */
-  public function setIndexedItemsCount($indexedItemsCount)
+  public function setWafService($wafService)
   {
-    $this->indexedItemsCount = $indexedItemsCount;
+    $this->wafService = $wafService;
   }
   /**
    * @return string
    */
-  public function getIndexedItemsCount()
+  public function getWafService()
   {
-    return $this->indexedItemsCount;
-  }
-  /**
-   * @param string
-   */
-  public function setStatusCode($statusCode)
-  {
-    $this->statusCode = $statusCode;
-  }
-  /**
-   * @return string
-   */
-  public function getStatusCode()
-  {
-    return $this->statusCode;
+    return $this->wafService;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ItemCountByStatus::class, 'Google_Service_CloudSearch_ItemCountByStatus');
+class_alias(GoogleCloudRecaptchaenterpriseV1WafSettings::class, 'Google_Service_RecaptchaEnterprise_GoogleCloudRecaptchaenterpriseV1WafSettings');

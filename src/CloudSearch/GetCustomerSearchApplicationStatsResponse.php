@@ -17,64 +17,45 @@
 
 namespace Google\Service\CloudSearch;
 
-class ItemCountByStatus extends \Google\Model
+class GetCustomerSearchApplicationStatsResponse extends \Google\Collection
 {
+  protected $collection_key = 'stats';
   /**
    * @var string
    */
-  public $count;
-  /**
-   * @var string
-   */
-  public $indexedItemsCount;
-  /**
-   * @var string
-   */
-  public $statusCode;
+  public $averageSearchApplicationCount;
+  protected $statsType = CustomerSearchApplicationStats::class;
+  protected $statsDataType = 'array';
 
   /**
    * @param string
    */
-  public function setCount($count)
+  public function setAverageSearchApplicationCount($averageSearchApplicationCount)
   {
-    $this->count = $count;
+    $this->averageSearchApplicationCount = $averageSearchApplicationCount;
   }
   /**
    * @return string
    */
-  public function getCount()
+  public function getAverageSearchApplicationCount()
   {
-    return $this->count;
+    return $this->averageSearchApplicationCount;
   }
   /**
-   * @param string
+   * @param CustomerSearchApplicationStats[]
    */
-  public function setIndexedItemsCount($indexedItemsCount)
+  public function setStats($stats)
   {
-    $this->indexedItemsCount = $indexedItemsCount;
+    $this->stats = $stats;
   }
   /**
-   * @return string
+   * @return CustomerSearchApplicationStats[]
    */
-  public function getIndexedItemsCount()
+  public function getStats()
   {
-    return $this->indexedItemsCount;
-  }
-  /**
-   * @param string
-   */
-  public function setStatusCode($statusCode)
-  {
-    $this->statusCode = $statusCode;
-  }
-  /**
-   * @return string
-   */
-  public function getStatusCode()
-  {
-    return $this->statusCode;
+    return $this->stats;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ItemCountByStatus::class, 'Google_Service_CloudSearch_ItemCountByStatus');
+class_alias(GetCustomerSearchApplicationStatsResponse::class, 'Google_Service_CloudSearch_GetCustomerSearchApplicationStatsResponse');

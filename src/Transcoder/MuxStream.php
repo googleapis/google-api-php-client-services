@@ -28,8 +28,6 @@ class MuxStream extends \Google\Collection
    * @var string[]
    */
   public $elementaryStreams;
-  protected $encryptionType = Encryption::class;
-  protected $encryptionDataType = '';
   /**
    * @var string
    */
@@ -68,20 +66,6 @@ class MuxStream extends \Google\Collection
   public function getElementaryStreams()
   {
     return $this->elementaryStreams;
-  }
-  /**
-   * @param Encryption
-   */
-  public function setEncryption(Encryption $encryption)
-  {
-    $this->encryption = $encryption;
-  }
-  /**
-   * @return Encryption
-   */
-  public function getEncryption()
-  {
-    return $this->encryption;
   }
   /**
    * @param string

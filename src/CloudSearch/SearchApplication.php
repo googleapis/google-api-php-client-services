@@ -44,6 +44,10 @@ class SearchApplication extends \Google\Collection
   public $operationIds;
   protected $queryInterpretationConfigType = QueryInterpretationConfig::class;
   protected $queryInterpretationConfigDataType = '';
+  /**
+   * @var bool
+   */
+  public $returnResultThumbnailUrls;
   protected $scoringConfigType = ScoringConfig::class;
   protected $scoringConfigDataType = '';
   protected $sourceConfigType = SourceConfig::class;
@@ -160,6 +164,20 @@ class SearchApplication extends \Google\Collection
   public function getQueryInterpretationConfig()
   {
     return $this->queryInterpretationConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setReturnResultThumbnailUrls($returnResultThumbnailUrls)
+  {
+    $this->returnResultThumbnailUrls = $returnResultThumbnailUrls;
+  }
+  /**
+   * @return bool
+   */
+  public function getReturnResultThumbnailUrls()
+  {
+    return $this->returnResultThumbnailUrls;
   }
   /**
    * @param ScoringConfig
