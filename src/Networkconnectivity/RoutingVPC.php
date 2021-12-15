@@ -20,10 +20,28 @@ namespace Google\Service\Networkconnectivity;
 class RoutingVPC extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $requiredForNewSiteToSiteDataTransferSpokes;
+  /**
    * @var string
    */
   public $uri;
 
+  /**
+   * @param bool
+   */
+  public function setRequiredForNewSiteToSiteDataTransferSpokes($requiredForNewSiteToSiteDataTransferSpokes)
+  {
+    $this->requiredForNewSiteToSiteDataTransferSpokes = $requiredForNewSiteToSiteDataTransferSpokes;
+  }
+  /**
+   * @return bool
+   */
+  public function getRequiredForNewSiteToSiteDataTransferSpokes()
+  {
+    return $this->requiredForNewSiteToSiteDataTransferSpokes;
+  }
   /**
    * @param string
    */
