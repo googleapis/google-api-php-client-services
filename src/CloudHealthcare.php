@@ -1423,25 +1423,6 @@ class CloudHealthcare extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'Resource-validate' => [
-              'path' => 'v1/{+parent}/fhir/{+type}/$validate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'type' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'profile' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
             ],'capabilities' => [
               'path' => 'v1/{+name}/fhir/metadata',
               'httpMethod' => 'GET',
