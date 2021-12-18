@@ -42,6 +42,10 @@ class Rollout extends \Google\Model
   /**
    * @var string
    */
+  public $deployFailureCause;
+  /**
+   * @var string
+   */
   public $deployStartTime;
   /**
    * @var string
@@ -153,6 +157,20 @@ class Rollout extends \Google\Model
   public function getDeployEndTime()
   {
     return $this->deployEndTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDeployFailureCause($deployFailureCause)
+  {
+    $this->deployFailureCause = $deployFailureCause;
+  }
+  /**
+   * @return string
+   */
+  public function getDeployFailureCause()
+  {
+    return $this->deployFailureCause;
   }
   /**
    * @param string

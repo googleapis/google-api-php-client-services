@@ -22,12 +22,30 @@ class TargetRender extends \Google\Model
   /**
    * @var string
    */
+  public $failureCause;
+  /**
+   * @var string
+   */
   public $renderingBuild;
   /**
    * @var string
    */
   public $renderingState;
 
+  /**
+   * @param string
+   */
+  public function setFailureCause($failureCause)
+  {
+    $this->failureCause = $failureCause;
+  }
+  /**
+   * @return string
+   */
+  public function getFailureCause()
+  {
+    return $this->failureCause;
+  }
   /**
    * @param string
    */
