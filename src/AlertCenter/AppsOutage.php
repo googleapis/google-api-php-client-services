@@ -27,6 +27,12 @@ class AppsOutage extends \Google\Collection
   /**
    * @var string
    */
+  public $incidentTrackingId;
+  protected $mergeInfoType = MergeInfo::class;
+  protected $mergeInfoDataType = '';
+  /**
+   * @var string
+   */
   public $nextUpdateTime;
   /**
    * @var string[]
@@ -54,6 +60,34 @@ class AppsOutage extends \Google\Collection
   public function getDashboardUri()
   {
     return $this->dashboardUri;
+  }
+  /**
+   * @param string
+   */
+  public function setIncidentTrackingId($incidentTrackingId)
+  {
+    $this->incidentTrackingId = $incidentTrackingId;
+  }
+  /**
+   * @return string
+   */
+  public function getIncidentTrackingId()
+  {
+    return $this->incidentTrackingId;
+  }
+  /**
+   * @param MergeInfo
+   */
+  public function setMergeInfo(MergeInfo $mergeInfo)
+  {
+    $this->mergeInfo = $mergeInfo;
+  }
+  /**
+   * @return MergeInfo
+   */
+  public function getMergeInfo()
+  {
+    return $this->mergeInfo;
   }
   /**
    * @param string
