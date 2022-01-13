@@ -19,6 +19,13 @@ namespace Google\Service\YouTube;
 
 class PlaylistStatus extends \Google\Model
 {
+  
+  const PUBLIC = 'public';
+
+  const PRIVATE = 'private';
+
+  const UNLISTED = 'unlisted';
+  
   /**
    * @var string
    */
