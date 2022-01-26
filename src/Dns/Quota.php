@@ -25,6 +25,10 @@ class Quota extends \Google\Collection
    */
   public $dnsKeysPerManagedZone;
   /**
+   * @var int
+   */
+  public $itemsPerRoutingPolicy;
+  /**
    * @var string
    */
   public $kind;
@@ -92,6 +96,20 @@ class Quota extends \Google\Collection
   public function getDnsKeysPerManagedZone()
   {
     return $this->dnsKeysPerManagedZone;
+  }
+  /**
+   * @param int
+   */
+  public function setItemsPerRoutingPolicy($itemsPerRoutingPolicy)
+  {
+    $this->itemsPerRoutingPolicy = $itemsPerRoutingPolicy;
+  }
+  /**
+   * @return int
+   */
+  public function getItemsPerRoutingPolicy()
+  {
+    return $this->itemsPerRoutingPolicy;
   }
   /**
    * @param string
