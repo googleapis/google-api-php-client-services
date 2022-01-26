@@ -112,10 +112,6 @@ class Cases extends \Google\Service\Resource
    * equals (=) and AND. Additionally, a global restriction (with no operator) can
    * be used to search across displayName, description, and comments (e.g. "my
    * search").
-   * @opt_param string orderBy A comma separated list of fields to order by,
-   * followed by `asc` or `desc` postfix. This list is case-insensitive, default
-   * sorting order is ascending, redundant space characters are insignificant.
-   * Example: `name asc,update_time, create_time desc`
    * @opt_param int pageSize The maximum number of cases fetched with each
    * request. Defaults to 10.
    * @opt_param string pageToken A token identifying the page of results to
