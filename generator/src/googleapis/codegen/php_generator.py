@@ -321,7 +321,7 @@ class PHPApi(api.Api):
     if s.lower() in PhpLanguageModel.RESERVED_CLASS_NAMES:
       # Prepend the service name.
       return utilities.CamelCase(self.values['name']) + utilities.CamelCase(s)
-    return utilities.CamelCase(s)
+    return utilities.CamelCase(s).replace('&', '')
 
   def ModelClasses(self):
     """Return all the model classes."""
