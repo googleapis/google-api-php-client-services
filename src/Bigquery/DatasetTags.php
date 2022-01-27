@@ -17,48 +17,46 @@
 
 namespace Google\Service\Bigquery;
 
-class DatasetAccessEntry extends \Google\Collection
+class DatasetTags extends \Google\Model
 {
-  protected $collection_key = 'target_types';
-  protected $internal_gapi_mappings = [
-        "targetTypes" => "target_types",
-  ];
-  protected $datasetType = DatasetReference::class;
-  protected $datasetDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $targetTypes;
+  public $tagKey;
+  /**
+   * @var string
+   */
+  public $tagValue;
 
   /**
-   * @param DatasetReference
+   * @param string
    */
-  public function setDataset(DatasetReference $dataset)
+  public function setTagKey($tagKey)
   {
-    $this->dataset = $dataset;
+    $this->tagKey = $tagKey;
   }
   /**
-   * @return DatasetReference
+   * @return string
    */
-  public function getDataset()
+  public function getTagKey()
   {
-    return $this->dataset;
+    return $this->tagKey;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setTargetTypes($targetTypes)
+  public function setTagValue($tagValue)
   {
-    $this->targetTypes = $targetTypes;
+    $this->tagValue = $tagValue;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getTargetTypes()
+  public function getTagValue()
   {
-    return $this->targetTypes;
+    return $this->tagValue;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DatasetAccessEntry::class, 'Google_Service_Bigquery_DatasetAccessEntry');
+class_alias(DatasetTags::class, 'Google_Service_Bigquery_DatasetTags');
