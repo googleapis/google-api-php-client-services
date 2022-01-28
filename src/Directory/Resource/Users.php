@@ -98,7 +98,7 @@ class Users extends \Google\Service\Resource
    * `customerId` is also returned as part of the [Users resource](/admin-
    * sdk/directory/v1/reference/users). Either the `customer` or the `domain`
    * parameter must be provided.
-   * @opt_param string domain The domain name. Use this field to get fields from
+   * @opt_param string domain The domain name. Use this field to get groups from
    * only one domain. To return all domains for a customer account, use the
    * `customer` query parameter instead. Either the `customer` or the `domain`
    * parameter must be provided.

@@ -18,6 +18,9 @@
 namespace Google\Service\GoogleAnalyticsAdmin\Resource;
 
 use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaGlobalSiteTag;
+use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaListWebDataStreamsResponse;
+use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaWebDataStream;
+use Google\Service\GoogleAnalyticsAdmin\GoogleProtobufEmpty;
 
 /**
  * The "webDataStreams" collection of methods.
@@ -29,6 +32,52 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleAnalyticsAdminV1alphaGlobalSiteTag
  */
 class PropertiesWebDataStreams extends \Google\Service\Resource
 {
+  /**
+   * Creates a web stream with the specified location and attributes.
+   * (webDataStreams.create)
+   *
+   * @param string $parent Required. The parent resource where this web data
+   * stream will be created. Format: properties/123
+   * @param GoogleAnalyticsAdminV1alphaWebDataStream $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleAnalyticsAdminV1alphaWebDataStream
+   */
+  public function create($parent, GoogleAnalyticsAdminV1alphaWebDataStream $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GoogleAnalyticsAdminV1alphaWebDataStream::class);
+  }
+  /**
+   * Deletes a web stream on a property. (webDataStreams.delete)
+   *
+   * @param string $name Required. The name of the web data stream to delete.
+   * Format: properties/{property_id}/webDataStreams/{stream_id} Example:
+   * "properties/123/webDataStreams/456"
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Lookup for a single WebDataStream (webDataStreams.get)
+   *
+   * @param string $name Required. The name of the web data stream to lookup.
+   * Format: properties/{property_id}/webDataStreams/{stream_id} Example:
+   * "properties/123/webDataStreams/456"
+   * @param array $optParams Optional parameters.
+   * @return GoogleAnalyticsAdminV1alphaWebDataStream
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleAnalyticsAdminV1alphaWebDataStream::class);
+  }
   /**
    * Returns the Site Tag for the specified web stream. Site Tags are immutable
    * singletons. (webDataStreams.getGlobalSiteTag)
@@ -45,6 +94,53 @@ class PropertiesWebDataStreams extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('getGlobalSiteTag', [$params], GoogleAnalyticsAdminV1alphaGlobalSiteTag::class);
+  }
+  /**
+   * Returns child web data streams under the specified parent property. Web data
+   * streams will be excluded if the caller does not have access. Returns an empty
+   * list if no relevant web data streams are found.
+   * (webDataStreams.listPropertiesWebDataStreams)
+   *
+   * @param string $parent Required. The name of the parent property. For example,
+   * to list results of web streams under the property with Id 123:
+   * "properties/123"
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize The maximum number of resources to return. If
+   * unspecified, at most 50 resources will be returned. The maximum value is 200;
+   * (higher values will be coerced to the maximum)
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListWebDataStreams` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListWebDataStreams` must match
+   * the call that provided the page token.
+   * @return GoogleAnalyticsAdminV1alphaListWebDataStreamsResponse
+   */
+  public function listPropertiesWebDataStreams($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleAnalyticsAdminV1alphaListWebDataStreamsResponse::class);
+  }
+  /**
+   * Updates a web stream on a property. (webDataStreams.patch)
+   *
+   * @param string $name Output only. Resource name of this Data Stream. Format:
+   * properties/{property_id}/webDataStreams/{stream_id} Example:
+   * "properties/1000/webDataStreams/2000"
+   * @param GoogleAnalyticsAdminV1alphaWebDataStream $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The list of fields to be updated.
+   * Field names must be in snake case (e.g., "field_to_update"). Omitted fields
+   * will not be updated. To replace the entire entity, use one path with the
+   * string "*" to match all fields.
+   * @return GoogleAnalyticsAdminV1alphaWebDataStream
+   */
+  public function patch($name, GoogleAnalyticsAdminV1alphaWebDataStream $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleAnalyticsAdminV1alphaWebDataStream::class);
   }
 }
 
