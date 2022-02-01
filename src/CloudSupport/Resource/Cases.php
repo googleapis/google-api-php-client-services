@@ -127,7 +127,8 @@ class Cases extends \Google\Service\Resource
   /**
    * Update the specified case. Only a subset of fields (display_name,
    * description, time_zone, subscriber_email_addresses, related_resources,
-   * severity, primary_contact, and labels) can be updated. (cases.patch)
+   * severity, priority, primary_contact, and labels) can be updated.
+   * (cases.patch)
    *
    * @param string $name The resource name for the case.
    * @param CloudsupportCase $postBody

@@ -15,14 +15,10 @@
  * the License.
  */
 
-namespace Google\Service\Apigee;
+namespace Google\Service\Document;
 
-class GoogleCloudApigeeV1DebugSession extends \Google\Model
+class GoogleCloudDocumentaiV1alpha1CommonOperationMetadata extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $count;
   /**
    * @var string
    */
@@ -30,38 +26,20 @@ class GoogleCloudApigeeV1DebugSession extends \Google\Model
   /**
    * @var string
    */
-  public $filter;
+  public $resource;
   /**
    * @var string
    */
-  public $name;
+  public $state;
   /**
    * @var string
    */
-  public $timeout;
+  public $stateMessage;
   /**
-   * @var int
+   * @var string
    */
-  public $tracesize;
-  /**
-   * @var int
-   */
-  public $validity;
+  public $updateTime;
 
-  /**
-   * @param int
-   */
-  public function setCount($count)
-  {
-    $this->count = $count;
-  }
-  /**
-   * @return int
-   */
-  public function getCount()
-  {
-    return $this->count;
-  }
   /**
    * @param string
    */
@@ -79,74 +57,60 @@ class GoogleCloudApigeeV1DebugSession extends \Google\Model
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setResource($resource)
   {
-    $this->filter = $filter;
+    $this->resource = $resource;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getResource()
   {
-    return $this->filter;
+    return $this->resource;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setState($state)
   {
-    $this->name = $name;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getState()
   {
-    return $this->name;
+    return $this->state;
   }
   /**
    * @param string
    */
-  public function setTimeout($timeout)
+  public function setStateMessage($stateMessage)
   {
-    $this->timeout = $timeout;
+    $this->stateMessage = $stateMessage;
   }
   /**
    * @return string
    */
-  public function getTimeout()
+  public function getStateMessage()
   {
-    return $this->timeout;
+    return $this->stateMessage;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setTracesize($tracesize)
+  public function setUpdateTime($updateTime)
   {
-    $this->tracesize = $tracesize;
+    $this->updateTime = $updateTime;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getTracesize()
+  public function getUpdateTime()
   {
-    return $this->tracesize;
-  }
-  /**
-   * @param int
-   */
-  public function setValidity($validity)
-  {
-    $this->validity = $validity;
-  }
-  /**
-   * @return int
-   */
-  public function getValidity()
-  {
-    return $this->validity;
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApigeeV1DebugSession::class, 'Google_Service_Apigee_GoogleCloudApigeeV1DebugSession');
+class_alias(GoogleCloudDocumentaiV1alpha1CommonOperationMetadata::class, 'Google_Service_Document_GoogleCloudDocumentaiV1alpha1CommonOperationMetadata');
