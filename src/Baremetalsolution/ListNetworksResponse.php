@@ -17,11 +17,11 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class ListInstancesResponse extends \Google\Collection
+class ListNetworksResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  protected $instancesType = Instance::class;
-  protected $instancesDataType = 'array';
+  protected $networksType = Network::class;
+  protected $networksDataType = 'array';
   /**
    * @var string
    */
@@ -32,18 +32,18 @@ class ListInstancesResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * @param Instance[]
+   * @param Network[]
    */
-  public function setInstances($instances)
+  public function setNetworks($networks)
   {
-    $this->instances = $instances;
+    $this->networks = $networks;
   }
   /**
-   * @return Instance[]
+   * @return Network[]
    */
-  public function getInstances()
+  public function getNetworks()
   {
-    return $this->instances;
+    return $this->networks;
   }
   /**
    * @param string
@@ -76,4 +76,4 @@ class ListInstancesResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListInstancesResponse::class, 'Google_Service_Baremetalsolution_ListInstancesResponse');
+class_alias(ListNetworksResponse::class, 'Google_Service_Baremetalsolution_ListNetworksResponse');

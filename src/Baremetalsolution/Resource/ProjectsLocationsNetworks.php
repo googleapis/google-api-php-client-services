@@ -17,90 +17,75 @@
 
 namespace Google\Service\Baremetalsolution\Resource;
 
-use Google\Service\Baremetalsolution\Instance;
-use Google\Service\Baremetalsolution\ListInstancesResponse;
+use Google\Service\Baremetalsolution\ListNetworksResponse;
+use Google\Service\Baremetalsolution\Network;
 use Google\Service\Baremetalsolution\Operation;
-use Google\Service\Baremetalsolution\ResetInstanceRequest;
 
 /**
- * The "instances" collection of methods.
+ * The "networks" collection of methods.
  * Typical usage is:
  *  <code>
  *   $baremetalsolutionService = new Google\Service\Baremetalsolution(...);
- *   $instances = $baremetalsolutionService->instances;
+ *   $networks = $baremetalsolutionService->networks;
  *  </code>
  */
-class ProjectsLocationsInstances extends \Google\Service\Resource
+class ProjectsLocationsNetworks extends \Google\Service\Resource
 {
   /**
-   * Get details about a single server. (instances.get)
+   * Get details of a single network. (networks.get)
    *
    * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
-   * @return Instance
+   * @return Network
    */
   public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], Instance::class);
+    return $this->call('get', [$params], Network::class);
   }
   /**
-   * List servers in a given project and location.
-   * (instances.listProjectsLocationsInstances)
+   * List network in a given project and location.
+   * (networks.listProjectsLocationsNetworks)
    *
-   * @param string $parent Required. Parent value for ListInstancesRequest.
+   * @param string $parent Required. Parent value for ListNetworksRequest.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter List filter.
-   * @opt_param int pageSize Requested page size. Server may return fewer items
-   * than requested. If unspecified, the server will pick an appropriate default.
+   * @opt_param int pageSize Requested page size. The server might return fewer
+   * items than requested. If unspecified, server will pick an appropriate
+   * default.
    * @opt_param string pageToken A token identifying a page of results from the
    * server.
-   * @return ListInstancesResponse
+   * @return ListNetworksResponse
    */
-  public function listProjectsLocationsInstances($parent, $optParams = [])
+  public function listProjectsLocationsNetworks($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ListInstancesResponse::class);
+    return $this->call('list', [$params], ListNetworksResponse::class);
   }
   /**
-   * Update details of a single server. (instances.patch)
+   * Update details of a single network. (networks.patch)
    *
-   * @param string $name Output only. The resource name of this `Instance`.
+   * @param string $name Output only. The resource name of this `Network`.
    * Resource names are schemeless URIs that follow the conventions in
    * https://cloud.google.com/apis/design/resource_names. Format:
-   * `projects/{project}/locations/{location}/instances/{instance}`
-   * @param Instance $postBody
+   * `projects/{project}/locations/{location}/networks/{network}`
+   * @param Network $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask The list of fields to update. The only currently
    * supported fields are: `labels`
    * @return Operation
    */
-  public function patch($name, Instance $postBody, $optParams = [])
+  public function patch($name, Network $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
   }
-  /**
-   * Perform an ungraceful, hard reset on a server. Equivalent to shutting the
-   * power off and then turning it back on. (instances.reset)
-   *
-   * @param string $name Required. Name of the resource.
-   * @param ResetInstanceRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Operation
-   */
-  public function reset($name, ResetInstanceRequest $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('reset', [$params], Operation::class);
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsInstances::class, 'Google_Service_Baremetalsolution_Resource_ProjectsLocationsInstances');
+class_alias(ProjectsLocationsNetworks::class, 'Google_Service_Baremetalsolution_Resource_ProjectsLocationsNetworks');

@@ -17,63 +17,64 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class ListInstancesResponse extends \Google\Collection
+class VlanAttachment extends \Google\Model
 {
-  protected $collection_key = 'unreachable';
-  protected $instancesType = Instance::class;
-  protected $instancesDataType = 'array';
   /**
    * @var string
    */
-  public $nextPageToken;
+  public $peerIp;
   /**
-   * @var string[]
+   * @var string
    */
-  public $unreachable;
+  public $peerVlanId;
+  /**
+   * @var string
+   */
+  public $routerIp;
 
-  /**
-   * @param Instance[]
-   */
-  public function setInstances($instances)
-  {
-    $this->instances = $instances;
-  }
-  /**
-   * @return Instance[]
-   */
-  public function getInstances()
-  {
-    return $this->instances;
-  }
   /**
    * @param string
    */
-  public function setNextPageToken($nextPageToken)
+  public function setPeerIp($peerIp)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->peerIp = $peerIp;
   }
   /**
    * @return string
    */
-  public function getNextPageToken()
+  public function getPeerIp()
   {
-    return $this->nextPageToken;
+    return $this->peerIp;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setUnreachable($unreachable)
+  public function setPeerVlanId($peerVlanId)
   {
-    $this->unreachable = $unreachable;
+    $this->peerVlanId = $peerVlanId;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getUnreachable()
+  public function getPeerVlanId()
   {
-    return $this->unreachable;
+    return $this->peerVlanId;
+  }
+  /**
+   * @param string
+   */
+  public function setRouterIp($routerIp)
+  {
+    $this->routerIp = $routerIp;
+  }
+  /**
+   * @return string
+   */
+  public function getRouterIp()
+  {
+    return $this->routerIp;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListInstancesResponse::class, 'Google_Service_Baremetalsolution_ListInstancesResponse');
+class_alias(VlanAttachment::class, 'Google_Service_Baremetalsolution_VlanAttachment');

@@ -15,47 +15,49 @@
  * the License.
  */
 
-namespace Google\Service\Baremetalsolution;
+namespace Google\Service\Dataproc;
 
-class ListLocationsResponse extends \Google\Collection
+class Metric extends \Google\Collection
 {
-  protected $collection_key = 'locations';
-  protected $locationsType = Location::class;
-  protected $locationsDataType = 'array';
+  protected $collection_key = 'metricOverrides';
+  /**
+   * @var string[]
+   */
+  public $metricOverrides;
   /**
    * @var string
    */
-  public $nextPageToken;
+  public $metricSource;
 
   /**
-   * @param Location[]
+   * @param string[]
    */
-  public function setLocations($locations)
+  public function setMetricOverrides($metricOverrides)
   {
-    $this->locations = $locations;
+    $this->metricOverrides = $metricOverrides;
   }
   /**
-   * @return Location[]
+   * @return string[]
    */
-  public function getLocations()
+  public function getMetricOverrides()
   {
-    return $this->locations;
+    return $this->metricOverrides;
   }
   /**
    * @param string
    */
-  public function setNextPageToken($nextPageToken)
+  public function setMetricSource($metricSource)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->metricSource = $metricSource;
   }
   /**
    * @return string
    */
-  public function getNextPageToken()
+  public function getMetricSource()
   {
-    return $this->nextPageToken;
+    return $this->metricSource;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLocationsResponse::class, 'Google_Service_Baremetalsolution_ListLocationsResponse');
+class_alias(Metric::class, 'Google_Service_Dataproc_Metric');

@@ -743,6 +743,16 @@ class GoogleAnalyticsAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getGlobalSiteTag' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1alpha/{+parent}/dataStreams',
               'httpMethod' => 'GET',
@@ -1327,16 +1337,6 @@ class GoogleAnalyticsAdmin extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'getGlobalSiteTag' => [
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [

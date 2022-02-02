@@ -73,12 +73,20 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * the name binding is the parent resource, without the operations collection
    * id. (operations.listProjectsLocationsOperations)
    *
-   * @param string $name The name of the operation's parent resource.
+   * @param string $name Required. To query for all of the operations for a
+   * project.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter The standard list filter.
-   * @opt_param int pageSize The standard list page size.
-   * @opt_param string pageToken The standard list page token.
+   * @opt_param string filter Optional. A filter for matching the completed or in-
+   * progress operations. The supported formats of *filter* are: To query for only
+   * completed operations: done:true To query for only ongoing operations:
+   * done:false Must be empty to query for all of the latest operations for the
+   * given parent project.
+   * @opt_param int pageSize The maximum number of records that should be
+   * returned. Requested page size cannot exceed 100. If not set or set to less
+   * than or equal to 0, the default page size is 100. .
+   * @opt_param string pageToken Token identifying which result to start with,
+   * which is returned by a previous list call.
    * @return GoogleLongrunningListOperationsResponse
    */
   public function listProjectsLocationsOperations($name, $optParams = [])

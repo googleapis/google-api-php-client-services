@@ -17,11 +17,11 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class ListInstancesResponse extends \Google\Collection
+class ListLunsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  protected $instancesType = Instance::class;
-  protected $instancesDataType = 'array';
+  protected $lunsType = Lun::class;
+  protected $lunsDataType = 'array';
   /**
    * @var string
    */
@@ -32,18 +32,18 @@ class ListInstancesResponse extends \Google\Collection
   public $unreachable;
 
   /**
-   * @param Instance[]
+   * @param Lun[]
    */
-  public function setInstances($instances)
+  public function setLuns($luns)
   {
-    $this->instances = $instances;
+    $this->luns = $luns;
   }
   /**
-   * @return Instance[]
+   * @return Lun[]
    */
-  public function getInstances()
+  public function getLuns()
   {
-    return $this->instances;
+    return $this->luns;
   }
   /**
    * @param string
@@ -76,4 +76,4 @@ class ListInstancesResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListInstancesResponse::class, 'Google_Service_Baremetalsolution_ListInstancesResponse');
+class_alias(ListLunsResponse::class, 'Google_Service_Baremetalsolution_ListLunsResponse');

@@ -17,63 +17,64 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class ListInstancesResponse extends \Google\Collection
+class Schedule extends \Google\Model
 {
-  protected $collection_key = 'unreachable';
-  protected $instancesType = Instance::class;
-  protected $instancesDataType = 'array';
   /**
    * @var string
    */
-  public $nextPageToken;
+  public $crontabSpec;
   /**
-   * @var string[]
+   * @var string
    */
-  public $unreachable;
+  public $prefix;
+  /**
+   * @var int
+   */
+  public $retentionCount;
 
-  /**
-   * @param Instance[]
-   */
-  public function setInstances($instances)
-  {
-    $this->instances = $instances;
-  }
-  /**
-   * @return Instance[]
-   */
-  public function getInstances()
-  {
-    return $this->instances;
-  }
   /**
    * @param string
    */
-  public function setNextPageToken($nextPageToken)
+  public function setCrontabSpec($crontabSpec)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->crontabSpec = $crontabSpec;
   }
   /**
    * @return string
    */
-  public function getNextPageToken()
+  public function getCrontabSpec()
   {
-    return $this->nextPageToken;
+    return $this->crontabSpec;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setUnreachable($unreachable)
+  public function setPrefix($prefix)
   {
-    $this->unreachable = $unreachable;
+    $this->prefix = $prefix;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getUnreachable()
+  public function getPrefix()
   {
-    return $this->unreachable;
+    return $this->prefix;
+  }
+  /**
+   * @param int
+   */
+  public function setRetentionCount($retentionCount)
+  {
+    $this->retentionCount = $retentionCount;
+  }
+  /**
+   * @return int
+   */
+  public function getRetentionCount()
+  {
+    return $this->retentionCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListInstancesResponse::class, 'Google_Service_Baremetalsolution_ListInstancesResponse');
+class_alias(Schedule::class, 'Google_Service_Baremetalsolution_Schedule');

@@ -17,11 +17,9 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class ListInstancesResponse extends \Google\Collection
+class ListVolumeSnapshotsResponse extends \Google\Collection
 {
-  protected $collection_key = 'unreachable';
-  protected $instancesType = Instance::class;
-  protected $instancesDataType = 'array';
+  protected $collection_key = 'volumeSnapshots';
   /**
    * @var string
    */
@@ -30,21 +28,9 @@ class ListInstancesResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
+  protected $volumeSnapshotsType = VolumeSnapshot::class;
+  protected $volumeSnapshotsDataType = 'array';
 
-  /**
-   * @param Instance[]
-   */
-  public function setInstances($instances)
-  {
-    $this->instances = $instances;
-  }
-  /**
-   * @return Instance[]
-   */
-  public function getInstances()
-  {
-    return $this->instances;
-  }
   /**
    * @param string
    */
@@ -73,7 +59,21 @@ class ListInstancesResponse extends \Google\Collection
   {
     return $this->unreachable;
   }
+  /**
+   * @param VolumeSnapshot[]
+   */
+  public function setVolumeSnapshots($volumeSnapshots)
+  {
+    $this->volumeSnapshots = $volumeSnapshots;
+  }
+  /**
+   * @return VolumeSnapshot[]
+   */
+  public function getVolumeSnapshots()
+  {
+    return $this->volumeSnapshots;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListInstancesResponse::class, 'Google_Service_Baremetalsolution_ListInstancesResponse');
+class_alias(ListVolumeSnapshotsResponse::class, 'Google_Service_Baremetalsolution_ListVolumeSnapshotsResponse');

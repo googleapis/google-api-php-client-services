@@ -17,12 +17,17 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class Location extends \Google\Model
+class SnapshotSchedulePolicy extends \Google\Collection
 {
+  protected $collection_key = 'schedules';
   /**
    * @var string
    */
-  public $displayName;
+  public $description;
+  /**
+   * @var string
+   */
+  public $id;
   /**
    * @var string[]
    */
@@ -30,29 +35,37 @@ class Location extends \Google\Model
   /**
    * @var string
    */
-  public $locationId;
-  /**
-   * @var array[]
-   */
-  public $metadata;
-  /**
-   * @var string
-   */
   public $name;
+  protected $schedulesType = Schedule::class;
+  protected $schedulesDataType = 'array';
 
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setDescription($description)
   {
-    $this->displayName = $displayName;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getDescription()
   {
-    return $this->displayName;
+    return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
   }
   /**
    * @param string[]
@@ -71,34 +84,6 @@ class Location extends \Google\Model
   /**
    * @param string
    */
-  public function setLocationId($locationId)
-  {
-    $this->locationId = $locationId;
-  }
-  /**
-   * @return string
-   */
-  public function getLocationId()
-  {
-    return $this->locationId;
-  }
-  /**
-   * @param array[]
-   */
-  public function setMetadata($metadata)
-  {
-    $this->metadata = $metadata;
-  }
-  /**
-   * @return array[]
-   */
-  public function getMetadata()
-  {
-    return $this->metadata;
-  }
-  /**
-   * @param string
-   */
   public function setName($name)
   {
     $this->name = $name;
@@ -110,7 +95,21 @@ class Location extends \Google\Model
   {
     return $this->name;
   }
+  /**
+   * @param Schedule[]
+   */
+  public function setSchedules($schedules)
+  {
+    $this->schedules = $schedules;
+  }
+  /**
+   * @return Schedule[]
+   */
+  public function getSchedules()
+  {
+    return $this->schedules;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Location::class, 'Google_Service_Baremetalsolution_Location');
+class_alias(SnapshotSchedulePolicy::class, 'Google_Service_Baremetalsolution_SnapshotSchedulePolicy');

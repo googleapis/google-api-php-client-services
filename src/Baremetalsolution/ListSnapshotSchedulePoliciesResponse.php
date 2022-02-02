@@ -17,34 +17,16 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class ListInstancesResponse extends \Google\Collection
+class ListSnapshotSchedulePoliciesResponse extends \Google\Collection
 {
-  protected $collection_key = 'unreachable';
-  protected $instancesType = Instance::class;
-  protected $instancesDataType = 'array';
+  protected $collection_key = 'snapshotSchedulePolicies';
   /**
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var string[]
-   */
-  public $unreachable;
+  protected $snapshotSchedulePoliciesType = SnapshotSchedulePolicy::class;
+  protected $snapshotSchedulePoliciesDataType = 'array';
 
-  /**
-   * @param Instance[]
-   */
-  public function setInstances($instances)
-  {
-    $this->instances = $instances;
-  }
-  /**
-   * @return Instance[]
-   */
-  public function getInstances()
-  {
-    return $this->instances;
-  }
   /**
    * @param string
    */
@@ -60,20 +42,20 @@ class ListInstancesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * @param SnapshotSchedulePolicy[]
    */
-  public function setUnreachable($unreachable)
+  public function setSnapshotSchedulePolicies($snapshotSchedulePolicies)
   {
-    $this->unreachable = $unreachable;
+    $this->snapshotSchedulePolicies = $snapshotSchedulePolicies;
   }
   /**
-   * @return string[]
+   * @return SnapshotSchedulePolicy[]
    */
-  public function getUnreachable()
+  public function getSnapshotSchedulePolicies()
   {
-    return $this->unreachable;
+    return $this->snapshotSchedulePolicies;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListInstancesResponse::class, 'Google_Service_Baremetalsolution_ListInstancesResponse');
+class_alias(ListSnapshotSchedulePoliciesResponse::class, 'Google_Service_Baremetalsolution_ListSnapshotSchedulePoliciesResponse');
