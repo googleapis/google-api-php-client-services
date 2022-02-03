@@ -15,19 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\Baremetalsolution\Resource;
+namespace Google\Service\CloudRetail;
 
-/**
- * The "locations" collection of methods.
- * Typical usage is:
- *  <code>
- *   $baremetalsolutionService = new Google\Service\Baremetalsolution(...);
- *   $locations = $baremetalsolutionService->locations;
- *  </code>
- */
-class ProjectsLocations extends \Google\Service\Resource
+class GoogleCloudRetailV2SearchRequestPersonalizationSpec extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $mode;
+
+  /**
+   * @param string
+   */
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  /**
+   * @return string
+   */
+  public function getMode()
+  {
+    return $this->mode;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_Baremetalsolution_Resource_ProjectsLocations');
+class_alias(GoogleCloudRetailV2SearchRequestPersonalizationSpec::class, 'Google_Service_CloudRetail_GoogleCloudRetailV2SearchRequestPersonalizationSpec');
