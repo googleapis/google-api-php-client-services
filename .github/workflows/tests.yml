@@ -7,14 +7,10 @@ on:
 
 jobs:
     test:
-        runs-on: ${{ matrix.os }}
+        runs-on: ubuntu-latest
         strategy:
             matrix:
-                os: [ubuntu-latest]
                 php: [ 5.6, "7.0", 7.1, 7.2, 7.3, 7.4, "8.0" ]
-                include:
-                  - os: macos-latest
-                    php: "8.0"
         name: PHP ${{matrix.php }} Unit Test
         steps:
             - uses: actions/checkout@v2
@@ -46,4 +42,17 @@ jobs:
             - name: Run Tests
               run: |
                 bash generator/run_tests.sh
-
+    macos:
+        runs-on: macos-latest
+        strategy:
+            matrix:
+                php: [ "8.0" ]
+        name: Check casing conflicts
+        steps:
+            - uses: actions/checkout@v2
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: ${{ matrix.php }}
+            - name: Run Script
+              run: git diff-index --quiet HEAD --
