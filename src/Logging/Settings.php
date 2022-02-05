@@ -15,17 +15,37 @@
  * the License.
  */
 
-namespace Google\Service\CloudBuild;
+namespace Google\Service\Logging;
 
-class PoolOption extends \Google\Model
+class Settings extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $disableDefaultSink;
   /**
    * @var string
    */
   public $name;
-  protected $workerConfigType = GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig::class;
-  protected $workerConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $storageLocation;
 
+  /**
+   * @param bool
+   */
+  public function setDisableDefaultSink($disableDefaultSink)
+  {
+    $this->disableDefaultSink = $disableDefaultSink;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableDefaultSink()
+  {
+    return $this->disableDefaultSink;
+  }
   /**
    * @param string
    */
@@ -41,20 +61,20 @@ class PoolOption extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig
+   * @param string
    */
-  public function setWorkerConfig(GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig $workerConfig)
+  public function setStorageLocation($storageLocation)
   {
-    $this->workerConfig = $workerConfig;
+    $this->storageLocation = $storageLocation;
   }
   /**
-   * @return GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig
+   * @return string
    */
-  public function getWorkerConfig()
+  public function getStorageLocation()
   {
-    return $this->workerConfig;
+    return $this->storageLocation;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PoolOption::class, 'Google_Service_CloudBuild_PoolOption');
+class_alias(Settings::class, 'Google_Service_Logging_Settings');

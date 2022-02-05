@@ -17,44 +17,44 @@
 
 namespace Google\Service\CloudBuild;
 
-class PoolOption extends \Google\Model
+class HybridPoolConfig extends \Google\Model
 {
+  protected $defaultWorkerConfigType = HybridWorkerConfig::class;
+  protected $defaultWorkerConfigDataType = '';
   /**
    * @var string
    */
-  public $name;
-  protected $workerConfigType = GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig::class;
-  protected $workerConfigDataType = '';
+  public $membership;
 
+  /**
+   * @param HybridWorkerConfig
+   */
+  public function setDefaultWorkerConfig(HybridWorkerConfig $defaultWorkerConfig)
+  {
+    $this->defaultWorkerConfig = $defaultWorkerConfig;
+  }
+  /**
+   * @return HybridWorkerConfig
+   */
+  public function getDefaultWorkerConfig()
+  {
+    return $this->defaultWorkerConfig;
+  }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setMembership($membership)
   {
-    $this->name = $name;
+    $this->membership = $membership;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getMembership()
   {
-    return $this->name;
-  }
-  /**
-   * @param GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig
-   */
-  public function setWorkerConfig(GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig $workerConfig)
-  {
-    $this->workerConfig = $workerConfig;
-  }
-  /**
-   * @return GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig
-   */
-  public function getWorkerConfig()
-  {
-    return $this->workerConfig;
+    return $this->membership;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PoolOption::class, 'Google_Service_CloudBuild_PoolOption');
+class_alias(HybridPoolConfig::class, 'Google_Service_CloudBuild_HybridPoolConfig');

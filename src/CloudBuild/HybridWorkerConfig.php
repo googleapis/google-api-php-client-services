@@ -17,44 +17,64 @@
 
 namespace Google\Service\CloudBuild;
 
-class PoolOption extends \Google\Model
+class HybridWorkerConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $name;
-  protected $workerConfigType = GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig::class;
-  protected $workerConfigDataType = '';
+  public $diskSizeGb;
+  /**
+   * @var float
+   */
+  public $memoryGb;
+  /**
+   * @var float
+   */
+  public $vcpuCount;
 
   /**
    * @param string
    */
-  public function setName($name)
+  public function setDiskSizeGb($diskSizeGb)
   {
-    $this->name = $name;
+    $this->diskSizeGb = $diskSizeGb;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getDiskSizeGb()
   {
-    return $this->name;
+    return $this->diskSizeGb;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig
+   * @param float
    */
-  public function setWorkerConfig(GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig $workerConfig)
+  public function setMemoryGb($memoryGb)
   {
-    $this->workerConfig = $workerConfig;
+    $this->memoryGb = $memoryGb;
   }
   /**
-   * @return GoogleDevtoolsCloudbuildV1BuildOptionsPoolOptionWorkerConfig
+   * @return float
    */
-  public function getWorkerConfig()
+  public function getMemoryGb()
   {
-    return $this->workerConfig;
+    return $this->memoryGb;
+  }
+  /**
+   * @param float
+   */
+  public function setVcpuCount($vcpuCount)
+  {
+    $this->vcpuCount = $vcpuCount;
+  }
+  /**
+   * @return float
+   */
+  public function getVcpuCount()
+  {
+    return $this->vcpuCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PoolOption::class, 'Google_Service_CloudBuild_PoolOption');
+class_alias(HybridWorkerConfig::class, 'Google_Service_CloudBuild_HybridWorkerConfig');
