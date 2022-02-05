@@ -42,12 +42,12 @@ jobs:
             - name: Run Tests
               run: |
                 bash generator/run_tests.sh
-    test:
+    macos:
         runs-on: macos-latest
         strategy:
             matrix:
                 php: [ "8.0" ]
-        name: PHP ${{matrix.php }} Unit Test
+        name: PHP ${{matrix.php }} Casing  Test
         steps:
             - uses: actions/checkout@v2
             - name: Setup PHP
