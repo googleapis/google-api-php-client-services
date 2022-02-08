@@ -40,6 +40,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredDnsConfigDataType = '';
   protected $desiredGcfsConfigType = GcfsConfig::class;
   protected $desiredGcfsConfigDataType = '';
+  protected $desiredIdentityServiceConfigType = IdentityServiceConfig::class;
+  protected $desiredIdentityServiceConfigDataType = '';
   /**
    * @var string
    */
@@ -228,6 +230,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredGcfsConfig()
   {
     return $this->desiredGcfsConfig;
+  }
+  /**
+   * @param IdentityServiceConfig
+   */
+  public function setDesiredIdentityServiceConfig(IdentityServiceConfig $desiredIdentityServiceConfig)
+  {
+    $this->desiredIdentityServiceConfig = $desiredIdentityServiceConfig;
+  }
+  /**
+   * @return IdentityServiceConfig
+   */
+  public function getDesiredIdentityServiceConfig()
+  {
+    return $this->desiredIdentityServiceConfig;
   }
   /**
    * @param string
