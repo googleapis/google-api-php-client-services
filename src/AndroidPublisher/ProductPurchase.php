@@ -238,7 +238,7 @@ class ProductPurchase extends \Google\Model
     $this->purchaseType = $purchaseType;
   }
   /**
-   * @return int
+   * @return int|null
    */
   public function getPurchaseType()
   {
