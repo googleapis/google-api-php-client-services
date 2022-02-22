@@ -1,0 +1,53 @@
+on:
+  schedule:
+    # daily at 12:30 am
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+name: codegen
+jobs:
+  discovery:
+    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
+
+  generate:
+    runs-on: ubuntu-latest
+    needs: discovery
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: 
+        service: ${{fromJson(needs.discovery.outputs.services)}}
+    steps:
+      - run: echo generating ${{ matrix.service }}
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          path: google-api-php-client-services
+      - uses: actions/checkout@v2
+        with:
+          repository: googleapis/discovery-artifact-manager
+          fetch-depth: 1
+          path: discovery-artifact-manager
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 2.7
+      - id: find-preferred-versions
+        run: |
+          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}" and .name != "discovery" and .name != "websecurityscanner") | select(.name == "admin" or .preferred).version] | join(",")' )
+          echo "::set-output name=versions::$versions"
+      - run: ./google-api-php-client-services/.github/workflows/generate.sh ${{ matrix.service }} ${{ steps.find-preferred-versions.outputs.versions }}
+      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+        env:
+          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+        with:
+          command: pr
+          upstream_owner: ${{ github.repository_owner }}
+          upstream_repo: google-api-php-client-services
+          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
+          title: 'Regenerate ${{ matrix.service }} client'
+          message: 'Regenerate ${{ matrix.service }} client'
+          branch: regenerate-${{ matrix.service }}
+          git_dir: 'google-api-php-client-services/src'
+          primary: main
+          force: true
+          fork: true
