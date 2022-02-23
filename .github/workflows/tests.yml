@@ -59,8 +59,4 @@ jobs:
               with:
                 php-version: ${{ matrix.php }}
             - name: Run Script
-              run: |
-                git diff-index --quiet HEAD --
-                if [ $? != "0" ]; then
-                  git status;
-                fi;
+              run: git diff-index --quiet HEAD --
