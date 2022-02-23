@@ -82,6 +82,8 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $id;
+  protected $identityServiceConfigType = IdentityServiceConfig::class;
+  protected $identityServiceConfigDataType = '';
   /**
    * @var string
    */
@@ -478,6 +480,20 @@ class Cluster extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * @param IdentityServiceConfig
+   */
+  public function setIdentityServiceConfig(IdentityServiceConfig $identityServiceConfig)
+  {
+    $this->identityServiceConfig = $identityServiceConfig;
+  }
+  /**
+   * @return IdentityServiceConfig
+   */
+  public function getIdentityServiceConfig()
+  {
+    return $this->identityServiceConfig;
   }
   /**
    * @param string
