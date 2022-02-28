@@ -46,16 +46,14 @@ class ArtifactRegistry extends \Google\Service
   public $projects;
   public $projects_locations_repositories;
   public $projects_locations_repositories_aptArtifacts;
-  public $projects_locations_repositories_aptartifacts;
   public $projects_locations_repositories_dockerImages;
   public $projects_locations_repositories_files;
   public $projects_locations_repositories_gooGetArtifacts;
-  public $projects_locations_repositories_googetartifacts;
+  public $projects_locations_repositories_googetArtifacts;
   public $projects_locations_repositories_packages;
   public $projects_locations_repositories_packages_tags;
   public $projects_locations_repositories_packages_versions;
   public $projects_locations_repositories_yumArtifacts;
-  public $projects_locations_repositories_yumartifacts;
 
   /**
    * Constructs the internal representation of the ArtifactRegistry service.
@@ -253,17 +251,7 @@ class ArtifactRegistry extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_repositories_aptartifacts = new ArtifactRegistry\Resource\ProjectsLocationsRepositoriesAptartifacts(
-        $this,
-        $this->serviceName,
-        'aptartifacts',
-        [
-          'methods' => [
-            'upload' => [
+            ],'upload' => [
               'path' => 'v1/{+parent}/aptArtifacts:create',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -377,10 +365,10 @@ class ArtifactRegistry extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_repositories_googetartifacts = new ArtifactRegistry\Resource\ProjectsLocationsRepositoriesGoogetartifacts(
+    $this->projects_locations_repositories_googetArtifacts = new ArtifactRegistry\Resource\ProjectsLocationsRepositoriesGoogetArtifacts(
         $this,
         $this->serviceName,
-        'googetartifacts',
+        'googetArtifacts',
         [
           'methods' => [
             'upload' => [
@@ -605,17 +593,7 @@ class ArtifactRegistry extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_repositories_yumartifacts = new ArtifactRegistry\Resource\ProjectsLocationsRepositoriesYumartifacts(
-        $this,
-        $this->serviceName,
-        'yumartifacts',
-        [
-          'methods' => [
-            'upload' => [
+            ],'upload' => [
               'path' => 'v1/{+parent}/yumArtifacts:create',
               'httpMethod' => 'POST',
               'parameters' => [

@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.head_ref, 'autosynth')
     steps:
-      - uses: actions/github-script@v5.1.0
+      - uses: actions/github-script@v6.0.0
         with:
           github-token: ${{secrets.YOSHI_APPROVER_TOKEN}}
           script: |
