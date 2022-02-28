@@ -17,6 +17,9 @@ jobs:
       max-parallel: 4
       matrix: 
         service: ${{fromJson(needs.discovery.outputs.services)}}
+        exclude:
+          - discovery
+          - websecurityscanner
     steps:
       - run: echo generating ${{ matrix.service }}
       - uses: actions/checkout@v2
@@ -33,7 +36,7 @@ jobs:
           python-version: 2.7
       - id: find-preferred-versions
         run: |
-          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}" and .name != "discovery" and .name != "websecurityscanner") | select(.name == "admin" or .preferred).version] | join(",")' )
+          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "admin" or .preferred).version] | join(",")' )
           echo "::set-output name=versions::$versions"
       - run: ./google-api-php-client-services/.github/workflows/generate.sh ${{ matrix.service }} ${{ steps.find-preferred-versions.outputs.versions }}
       - uses: googleapis/code-suggester@v2 # takes the changes from git directory
