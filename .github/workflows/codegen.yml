@@ -18,8 +18,8 @@ jobs:
       matrix: 
         service: ${{fromJson(needs.discovery.outputs.services)}}
         exclude:
-          - discovery
-          - websecurityscanner
+          - service: discovery
+          - service: websecurityscanner
     steps:
       - run: echo generating ${{ matrix.service }}
       - uses: actions/checkout@v2
