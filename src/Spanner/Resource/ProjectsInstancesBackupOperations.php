@@ -54,9 +54,9 @@ class ProjectsInstancesBackupOperations extends \Google\Service\Resource
    * if the operation is in progress, else true. * `metadata.@type` - the type of
    * metadata. For example, the type string for CreateBackupMetadata is
    * `type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata`.
-   * * `metadata.` - any field in metadata.value. `metadata.type_url` must be
-   * specified if filtering on metadata fields. * `error` - Error associated with
-   * the long-running operation. * `response.@type` - the type of response. *
+   * * `metadata.` - any field in metadata.value. `metadata.@type` must be
+   * specified first if filtering on metadata fields. * `error` - Error associated
+   * with the long-running operation. * `response.@type` - the type of response. *
    * `response.` - any field in response.value. You can combine multiple
    * expressions by enclosing each expression in parentheses. By default,
    * expressions are combined with AND logic, but you can specify AND, OR, and NOT
