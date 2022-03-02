@@ -42,8 +42,8 @@ class ArtifactRegistry extends \Google\Service
   const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
 
-  public $operations;
   public $projects;
+  public $projects_locations_operations;
   public $projects_locations_repositories;
   public $projects_locations_repositories_aptArtifacts;
   public $projects_locations_repositories_dockerImages;
@@ -71,26 +71,6 @@ class ArtifactRegistry extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'artifactregistry';
 
-    $this->operations = new ArtifactRegistry\Resource\Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects = new ArtifactRegistry\Resource\Projects(
         $this,
         $this->serviceName,
@@ -119,6 +99,26 @@ class ArtifactRegistry extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_operations = new ArtifactRegistry\Resource\ProjectsLocationsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -329,6 +329,10 @@ class ArtifactRegistry extends \Google\Service
                   'required' => true,
                 ],
                 'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
