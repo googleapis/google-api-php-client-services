@@ -17,44 +17,47 @@
 
 namespace Google\Service\DataCatalog;
 
-class GoogleCloudDatacatalogV1DatabaseTableSpec extends \Google\Model
+class GoogleCloudDatacatalogV1StorageProperties extends \Google\Collection
 {
-  protected $dataplexTableType = GoogleCloudDatacatalogV1DataplexTableSpec::class;
-  protected $dataplexTableDataType = '';
+  protected $collection_key = 'filePattern';
+  /**
+   * @var string[]
+   */
+  public $filePattern;
   /**
    * @var string
    */
-  public $type;
+  public $fileType;
 
   /**
-   * @param GoogleCloudDatacatalogV1DataplexTableSpec
+   * @param string[]
    */
-  public function setDataplexTable(GoogleCloudDatacatalogV1DataplexTableSpec $dataplexTable)
+  public function setFilePattern($filePattern)
   {
-    $this->dataplexTable = $dataplexTable;
+    $this->filePattern = $filePattern;
   }
   /**
-   * @return GoogleCloudDatacatalogV1DataplexTableSpec
+   * @return string[]
    */
-  public function getDataplexTable()
+  public function getFilePattern()
   {
-    return $this->dataplexTable;
+    return $this->filePattern;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setFileType($fileType)
   {
-    $this->type = $type;
+    $this->fileType = $fileType;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getFileType()
   {
-    return $this->type;
+    return $this->fileType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDatacatalogV1DatabaseTableSpec::class, 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1DatabaseTableSpec');
+class_alias(GoogleCloudDatacatalogV1StorageProperties::class, 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1StorageProperties');

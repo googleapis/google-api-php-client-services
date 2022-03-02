@@ -17,44 +17,28 @@
 
 namespace Google\Service\DataCatalog;
 
-class GoogleCloudDatacatalogV1DatabaseTableSpec extends \Google\Model
+class GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema extends \Google\Model
 {
-  protected $dataplexTableType = GoogleCloudDatacatalogV1DataplexTableSpec::class;
-  protected $dataplexTableDataType = '';
   /**
    * @var string
    */
-  public $type;
+  public $text;
 
-  /**
-   * @param GoogleCloudDatacatalogV1DataplexTableSpec
-   */
-  public function setDataplexTable(GoogleCloudDatacatalogV1DataplexTableSpec $dataplexTable)
-  {
-    $this->dataplexTable = $dataplexTable;
-  }
-  /**
-   * @return GoogleCloudDatacatalogV1DataplexTableSpec
-   */
-  public function getDataplexTable()
-  {
-    return $this->dataplexTable;
-  }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setText($text)
   {
-    $this->type = $type;
+    $this->text = $text;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getText()
   {
-    return $this->type;
+    return $this->text;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDatacatalogV1DatabaseTableSpec::class, 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1DatabaseTableSpec');
+class_alias(GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema::class, 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema');
