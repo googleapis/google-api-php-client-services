@@ -17,46 +17,48 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends \Google\Model
+class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \Google\Model
 {
-  protected $exportOperationMetadataType = GoogleCloudDialogflowV2ExportOperationMetadata::class;
-  protected $exportOperationMetadataDataType = '';
   /**
    * @var string
    */
-  public $knowledgeBase;
+  public $conversationModel;
+  /**
+   * @var string
+   */
+  public $createTime;
   /**
    * @var string
    */
   public $state;
 
   /**
-   * @param GoogleCloudDialogflowV2ExportOperationMetadata
-   */
-  public function setExportOperationMetadata(GoogleCloudDialogflowV2ExportOperationMetadata $exportOperationMetadata)
-  {
-    $this->exportOperationMetadata = $exportOperationMetadata;
-  }
-  /**
-   * @return GoogleCloudDialogflowV2ExportOperationMetadata
-   */
-  public function getExportOperationMetadata()
-  {
-    return $this->exportOperationMetadata;
-  }
-  /**
    * @param string
    */
-  public function setKnowledgeBase($knowledgeBase)
+  public function setConversationModel($conversationModel)
   {
-    $this->knowledgeBase = $knowledgeBase;
+    $this->conversationModel = $conversationModel;
   }
   /**
    * @return string
    */
-  public function getKnowledgeBase()
+  public function getConversationModel()
   {
-    return $this->knowledgeBase;
+    return $this->conversationModel;
+  }
+  /**
+   * @param string
+   */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
   }
   /**
    * @param string
@@ -75,4 +77,4 @@ class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowV2KnowledgeOperationMetadata::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowV2KnowledgeOperationMetadata');
+class_alias(GoogleCloudDialogflowV2CreateConversationModelOperationMetadata::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowV2CreateConversationModelOperationMetadata');
