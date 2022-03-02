@@ -20,7 +20,7 @@ name: auto-approve
 jobs:
   approve:
     runs-on: ubuntu-latest
-    if: contains(github.head_ref, 'Regenerate ')
+    if: contains(github.head_ref, ':regenerate-')
     steps:
       - uses: actions/github-script@v6.0.0
         with:
