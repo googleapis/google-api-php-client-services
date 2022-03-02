@@ -17,38 +17,37 @@
 
 namespace Google\Service\Baremetalsolution\Resource;
 
-use Google\Service\Baremetalsolution\ListVolumesResponse;
+use Google\Service\Baremetalsolution\ListNfsSharesResponse;
+use Google\Service\Baremetalsolution\NfsShare;
 use Google\Service\Baremetalsolution\Operation;
-use Google\Service\Baremetalsolution\Volume;
 
 /**
- * The "volumes" collection of methods.
+ * The "nfsShares" collection of methods.
  * Typical usage is:
  *  <code>
  *   $baremetalsolutionService = new Google\Service\Baremetalsolution(...);
- *   $volumes = $baremetalsolutionService->volumes;
+ *   $nfsShares = $baremetalsolutionService->nfsShares;
  *  </code>
  */
-class ProjectsLocationsVolumes extends \Google\Service\Resource
+class ProjectsLocationsNfsShares extends \Google\Service\Resource
 {
   /**
-   * Get details of a single storage volume. (volumes.get)
+   * Get details of a single NFS share. (nfsShares.get)
    *
    * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
-   * @return Volume
+   * @return NfsShare
    */
   public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], Volume::class);
+    return $this->call('get', [$params], NfsShare::class);
   }
   /**
-   * List storage volumes in a given project and location.
-   * (volumes.listProjectsLocationsVolumes)
+   * List NFS shares. (nfsShares.listProjectsLocationsNfsShares)
    *
-   * @param string $parent Required. Parent value for ListVolumesRequest.
+   * @param string $parent Required. Parent value for ListNfsSharesRequest.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter List filter.
@@ -57,30 +56,26 @@ class ProjectsLocationsVolumes extends \Google\Service\Resource
    * default.
    * @opt_param string pageToken A token identifying a page of results from the
    * server.
-   * @return ListVolumesResponse
+   * @return ListNfsSharesResponse
    */
-  public function listProjectsLocationsVolumes($parent, $optParams = [])
+  public function listProjectsLocationsNfsShares($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ListVolumesResponse::class);
+    return $this->call('list', [$params], ListNfsSharesResponse::class);
   }
   /**
-   * Update details of a single storage volume. (volumes.patch)
+   * Update details of a single NFS share. (nfsShares.patch)
    *
-   * @param string $name Output only. The resource name of this `Volume`. Resource
-   * names are schemeless URIs that follow the conventions in
-   * https://cloud.google.com/apis/design/resource_names. Format:
-   * `projects/{project}/locations/{location}/volumes/{volume}`
-   * @param Volume $postBody
+   * @param string $name Output only. The name of the NFS share.
+   * @param NfsShare $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask The list of fields to update. The only currently
-   * supported fields are: `snapshot_auto_delete_behavior`
-   * `snapshot_schedule_policy_name` 'labels' 'requested_size_gib'
+   * supported fields are: `labels`
    * @return Operation
    */
-  public function patch($name, Volume $postBody, $optParams = [])
+  public function patch($name, NfsShare $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
@@ -89,4 +84,4 @@ class ProjectsLocationsVolumes extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsVolumes::class, 'Google_Service_Baremetalsolution_Resource_ProjectsLocationsVolumes');
+class_alias(ProjectsLocationsNfsShares::class, 'Google_Service_Baremetalsolution_Resource_ProjectsLocationsNfsShares');

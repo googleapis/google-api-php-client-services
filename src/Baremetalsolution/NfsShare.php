@@ -17,17 +17,11 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class SnapshotSchedulePolicy extends \Google\Collection
+class NfsShare extends \Google\Collection
 {
-  protected $collection_key = 'schedules';
-  /**
-   * @var string
-   */
-  public $description;
-  /**
-   * @var string
-   */
-  public $id;
+  protected $collection_key = 'allowedClients';
+  protected $allowedClientsType = AllowedClient::class;
+  protected $allowedClientsDataType = 'array';
   /**
    * @var string[]
    */
@@ -36,40 +30,32 @@ class SnapshotSchedulePolicy extends \Google\Collection
    * @var string
    */
   public $name;
-  protected $schedulesType = Schedule::class;
-  protected $schedulesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $nfsShareId;
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var string
+   */
+  public $volume;
 
   /**
-   * @param string
+   * @param AllowedClient[]
    */
-  public function setDescription($description)
+  public function setAllowedClients($allowedClients)
   {
-    $this->description = $description;
+    $this->allowedClients = $allowedClients;
   }
   /**
-   * @return string
+   * @return AllowedClient[]
    */
-  public function getDescription()
+  public function getAllowedClients()
   {
-    return $this->description;
-  }
-  /**
-   * @param string
-   */
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  /**
-   * @return string
-   */
-  public function getId()
-  {
-    return $this->id;
+    return $this->allowedClients;
   }
   /**
    * @param string[]
@@ -100,18 +86,18 @@ class SnapshotSchedulePolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Schedule[]
+   * @param string
    */
-  public function setSchedules($schedules)
+  public function setNfsShareId($nfsShareId)
   {
-    $this->schedules = $schedules;
+    $this->nfsShareId = $nfsShareId;
   }
   /**
-   * @return Schedule[]
+   * @return string
    */
-  public function getSchedules()
+  public function getNfsShareId()
   {
-    return $this->schedules;
+    return $this->nfsShareId;
   }
   /**
    * @param string
@@ -127,7 +113,21 @@ class SnapshotSchedulePolicy extends \Google\Collection
   {
     return $this->state;
   }
+  /**
+   * @param string
+   */
+  public function setVolume($volume)
+  {
+    $this->volume = $volume;
+  }
+  /**
+   * @return string
+   */
+  public function getVolume()
+  {
+    return $this->volume;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SnapshotSchedulePolicy::class, 'Google_Service_Baremetalsolution_SnapshotSchedulePolicy');
+class_alias(NfsShare::class, 'Google_Service_Baremetalsolution_NfsShare');
