@@ -84,10 +84,8 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
   }
   /**
    * Get which branch is currently default branch set by
-   * CatalogService.SetDefaultBranch method under a specified parent catalog. This
-   * feature is only available for users who have Retail Search enabled. Please
-   * submit a form [here](https://cloud.google.com/contact) to contact cloud sales
-   * if you are interested in using Retail Search. (catalogs.getDefaultBranch)
+   * CatalogService.SetDefaultBranch method under a specified parent catalog.
+   * (catalogs.getDefaultBranch)
    *
    * @param string $catalog The parent catalog resource name, such as
    * `projects/locations/global/catalogs/default_catalog`.
@@ -164,10 +162,8 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * More specifically: * PredictionService will only return product IDs from
    * branch {newBranch}. * SearchService will only return product IDs from branch
    * {newBranch} (if branch is not explicitly set). * UserEventService will only
-   * join events with products from branch {newBranch}. This feature is only
-   * available for users who have Retail Search enabled. Please submit a form
-   * [here](https://cloud.google.com/contact) to contact cloud sales if you are
-   * interested in using Retail Search. (catalogs.setDefaultBranch)
+   * join events with products from branch {newBranch}.
+   * (catalogs.setDefaultBranch)
    *
    * @param string $catalog Full resource name of the catalog, such as
    * `projects/locations/global/catalogs/default_catalog`.
