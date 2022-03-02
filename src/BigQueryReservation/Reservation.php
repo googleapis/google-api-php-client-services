@@ -28,6 +28,10 @@ class Reservation extends \Google\Model
    */
   public $ignoreIdleSlots;
   /**
+   * @var bool
+   */
+  public $multiRegionAuxiliary;
+  /**
    * @var string
    */
   public $name;
@@ -67,6 +71,20 @@ class Reservation extends \Google\Model
   public function getIgnoreIdleSlots()
   {
     return $this->ignoreIdleSlots;
+  }
+  /**
+   * @param bool
+   */
+  public function setMultiRegionAuxiliary($multiRegionAuxiliary)
+  {
+    $this->multiRegionAuxiliary = $multiRegionAuxiliary;
+  }
+  /**
+   * @return bool
+   */
+  public function getMultiRegionAuxiliary()
+  {
+    return $this->multiRegionAuxiliary;
   }
   /**
    * @param string
