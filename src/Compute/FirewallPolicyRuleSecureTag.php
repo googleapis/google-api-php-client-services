@@ -17,45 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class UrlMapsValidateRequest extends \Google\Collection
+class FirewallPolicyRuleSecureTag extends \Google\Model
 {
-  protected $collection_key = 'loadBalancingSchemes';
   /**
-   * @var string[]
+   * @var string
    */
-  public $loadBalancingSchemes;
-  protected $resourceType = UrlMap::class;
-  protected $resourceDataType = '';
+  public $name;
+  /**
+   * @var string
+   */
+  public $state;
 
   /**
-   * @param string[]
+   * @param string
    */
-  public function setLoadBalancingSchemes($loadBalancingSchemes)
+  public function setName($name)
   {
-    $this->loadBalancingSchemes = $loadBalancingSchemes;
+    $this->name = $name;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getLoadBalancingSchemes()
+  public function getName()
   {
-    return $this->loadBalancingSchemes;
+    return $this->name;
   }
   /**
-   * @param UrlMap
+   * @param string
    */
-  public function setResource(UrlMap $resource)
+  public function setState($state)
   {
-    $this->resource = $resource;
+    $this->state = $state;
   }
   /**
-   * @return UrlMap
+   * @return string
    */
-  public function getResource()
+  public function getState()
   {
-    return $this->resource;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UrlMapsValidateRequest::class, 'Google_Service_Compute_UrlMapsValidateRequest');
+class_alias(FirewallPolicyRuleSecureTag::class, 'Google_Service_Compute_FirewallPolicyRuleSecureTag');

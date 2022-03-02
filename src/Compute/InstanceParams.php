@@ -17,45 +17,28 @@
 
 namespace Google\Service\Compute;
 
-class UrlMapsValidateRequest extends \Google\Collection
+class InstanceParams extends \Google\Model
 {
-  protected $collection_key = 'loadBalancingSchemes';
   /**
    * @var string[]
    */
-  public $loadBalancingSchemes;
-  protected $resourceType = UrlMap::class;
-  protected $resourceDataType = '';
+  public $resourceManagerTags;
 
   /**
    * @param string[]
    */
-  public function setLoadBalancingSchemes($loadBalancingSchemes)
+  public function setResourceManagerTags($resourceManagerTags)
   {
-    $this->loadBalancingSchemes = $loadBalancingSchemes;
+    $this->resourceManagerTags = $resourceManagerTags;
   }
   /**
    * @return string[]
    */
-  public function getLoadBalancingSchemes()
+  public function getResourceManagerTags()
   {
-    return $this->loadBalancingSchemes;
-  }
-  /**
-   * @param UrlMap
-   */
-  public function setResource(UrlMap $resource)
-  {
-    $this->resource = $resource;
-  }
-  /**
-   * @return UrlMap
-   */
-  public function getResource()
-  {
-    return $this->resource;
+    return $this->resourceManagerTags;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UrlMapsValidateRequest::class, 'Google_Service_Compute_UrlMapsValidateRequest');
+class_alias(InstanceParams::class, 'Google_Service_Compute_InstanceParams');

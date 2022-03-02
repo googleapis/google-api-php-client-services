@@ -58,6 +58,8 @@ class FirewallPolicyRule extends \Google\Collection
    * @var string[]
    */
   public $targetResources;
+  protected $targetSecureTagsType = FirewallPolicyRuleSecureTag::class;
+  protected $targetSecureTagsDataType = 'array';
   /**
    * @var string[]
    */
@@ -202,6 +204,20 @@ class FirewallPolicyRule extends \Google\Collection
   public function getTargetResources()
   {
     return $this->targetResources;
+  }
+  /**
+   * @param FirewallPolicyRuleSecureTag[]
+   */
+  public function setTargetSecureTags($targetSecureTags)
+  {
+    $this->targetSecureTags = $targetSecureTags;
+  }
+  /**
+   * @return FirewallPolicyRuleSecureTag[]
+   */
+  public function getTargetSecureTags()
+  {
+    return $this->targetSecureTags;
   }
   /**
    * @param string[]
