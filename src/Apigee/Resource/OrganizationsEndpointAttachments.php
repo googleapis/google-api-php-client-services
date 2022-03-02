@@ -32,17 +32,17 @@ use Google\Service\Apigee\GoogleLongrunningOperation;
 class OrganizationsEndpointAttachments extends \Google\Service\Resource
 {
   /**
-   * Creates an EndpointAttachment. **Note:** Not supported for Apigee hybrid.
+   * Creates an endpoint attachment. **Note:** Not supported for Apigee hybrid.
    * (endpointAttachments.create)
    *
-   * @param string $parent Required. The Organization this EndpointAttachment will
-   * be created in.
+   * @param string $parent Required. Organization the endpoint attachment will be
+   * created in.
    * @param GoogleCloudApigeeV1EndpointAttachment $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string endpointAttachmentId The ID to use for the endpoint
-   * attachment. ID must be a 1-20 characters string with lowercase letters and
-   * numbers and must start with a letter.
+   * @opt_param string endpointAttachmentId ID to use for the endpoint attachment.
+   * The ID can contain lowercase letters and numbers, must start with a letter,
+   * and must be 1-20 characters in length.
    * @return GoogleLongrunningOperation
    */
   public function create($parent, GoogleCloudApigeeV1EndpointAttachment $postBody, $optParams = [])
@@ -54,9 +54,9 @@ class OrganizationsEndpointAttachments extends \Google\Service\Resource
   /**
    * Deletes an endpoint attachment. (endpointAttachments.delete)
    *
-   * @param string $name Required. Name of the Endpoint Attachment in the
-   * following format:
-   * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+   * @param string $name Required. Name of the endpoint attachment. Use the
+   * following structure in your request:
+   * `organizations/{org}/endpointAttachments/{endpoint_attachment}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
    */
@@ -67,11 +67,11 @@ class OrganizationsEndpointAttachments extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Gets the specified EndpointAttachment. (endpointAttachments.get)
+   * Gets the endpoint attachment. (endpointAttachments.get)
    *
-   * @param string $name Required. Name of the Endpoint Attachment in the
-   * following format:
-   * `organizations/{organization}/endpointAttachments/{endpoint_attachment}`.
+   * @param string $name Required. Name of the endpoint attachment. Use the
+   * following structure in your request:
+   * `organizations/{org}/endpointAttachments/{endpoint_attachment}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1EndpointAttachment
    */
@@ -82,17 +82,18 @@ class OrganizationsEndpointAttachments extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudApigeeV1EndpointAttachment::class);
   }
   /**
-   * Lists the EndpointAttachments in the specified Organization.
+   * Lists the endpoint attachments in an organization.
    * (endpointAttachments.listOrganizationsEndpointAttachments)
    *
-   * @param string $parent Required. Name of the Organization for which to list
-   * Endpoint Attachments in the format: `organizations/{organization}`.
+   * @param string $parent Required. Name of the organization for which to list
+   * endpoint attachments. Use the following structure in your request:
+   * `organizations/{org}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. Maximum number of Endpoint Attachments to
+   * @opt_param int pageSize Optional. Maximum number of endpoint attachments to
    * return. If unspecified, at most 25 attachments will be returned.
    * @opt_param string pageToken Optional. Page token, returned from a previous
-   * ListEndpointAttachments call, that you can use to retrieve the next page.
+   * `ListEndpointAttachments` call, that you can use to retrieve the next page.
    * @return GoogleCloudApigeeV1ListEndpointAttachmentsResponse
    */
   public function listOrganizationsEndpointAttachments($parent, $optParams = [])
