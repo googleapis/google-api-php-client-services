@@ -19,11 +19,27 @@ namespace Google\Service\CloudHealthcare;
 
 class SearchResourcesRequest extends \Google\Model
 {
+  protected $requestBodyType = HttpBody::class;
+  protected $requestBodyDataType = '';
   /**
    * @var string
    */
   public $resourceType;
 
+  /**
+   * @param HttpBody
+   */
+  public function setRequestBody(HttpBody $requestBody)
+  {
+    $this->requestBody = $requestBody;
+  }
+  /**
+   * @return HttpBody
+   */
+  public function getRequestBody()
+  {
+    return $this->requestBody;
+  }
   /**
    * @param string
    */
