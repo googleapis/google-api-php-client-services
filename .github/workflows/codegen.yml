@@ -22,11 +22,11 @@ jobs:
           - service: websecurityscanner
     steps:
       - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
           path: google-api-php-client-services
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
