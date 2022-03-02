@@ -98,7 +98,7 @@ class SpacesMessages extends \Google\Service\Resource
    *
    * @opt_param string updateMask Required. The field paths to be updated, comma
    * separated if there are multiple. Currently supported field paths: * text *
-   * cards * gsuite_message_integration_render_data * attachment
+   * cards * attachment
    * @return Message
    */
   public function update($name, Message $postBody, $optParams = [])
