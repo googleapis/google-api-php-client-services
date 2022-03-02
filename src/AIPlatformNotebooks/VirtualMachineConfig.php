@@ -56,6 +56,10 @@ class VirtualMachineConfig extends \Google\Collection
    * @var string
    */
   public $nicType;
+  /**
+   * @var string
+   */
+  public $reservedIpRange;
   protected $shieldedInstanceConfigType = RuntimeShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
   /**
@@ -224,6 +228,20 @@ class VirtualMachineConfig extends \Google\Collection
   public function getNicType()
   {
     return $this->nicType;
+  }
+  /**
+   * @param string
+   */
+  public function setReservedIpRange($reservedIpRange)
+  {
+    $this->reservedIpRange = $reservedIpRange;
+  }
+  /**
+   * @return string
+   */
+  public function getReservedIpRange()
+  {
+    return $this->reservedIpRange;
   }
   /**
    * @param RuntimeShieldedInstanceConfig
