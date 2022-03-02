@@ -30,6 +30,14 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   /**
    * @var string
    */
+  public $kmsKeyName;
+  /**
+   * @var string
+   */
+  public $kmsKeyVersionName;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -63,6 +71,34 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKeyVersionName($kmsKeyVersionName)
+  {
+    $this->kmsKeyVersionName = $kmsKeyVersionName;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyVersionName()
+  {
+    return $this->kmsKeyVersionName;
   }
   /**
    * @param string
