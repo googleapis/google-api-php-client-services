@@ -6,4 +6,4 @@
 
 .github/auto-approve.yml  @googleapis/github-automation
 
-*                         @googleapis/yoshi-php yoshi-approver
+*                         @googleapis/yoshi-php @yoshi-approver
