@@ -4,5 +4,6 @@
 # For syntax help see:
 # https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners#codeowners-syntax
 
+.github/auto-approve.yml  @googleapis/github-automation
 
-*     @googleapis/yoshi-php yoshi-approver
+*                         @googleapis/yoshi-php @yoshi-approver
