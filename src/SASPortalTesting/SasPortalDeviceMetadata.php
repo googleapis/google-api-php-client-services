@@ -35,6 +35,8 @@ class SasPortalDeviceMetadata extends \Google\Model
    * @var bool
    */
   public $nrqzValidated;
+  protected $nrqzValidationType = SasPortalNrqzValidation::class;
+  protected $nrqzValidationDataType = '';
 
   /**
    * @param string
@@ -91,6 +93,20 @@ class SasPortalDeviceMetadata extends \Google\Model
   public function getNrqzValidated()
   {
     return $this->nrqzValidated;
+  }
+  /**
+   * @param SasPortalNrqzValidation
+   */
+  public function setNrqzValidation(SasPortalNrqzValidation $nrqzValidation)
+  {
+    $this->nrqzValidation = $nrqzValidation;
+  }
+  /**
+   * @return SasPortalNrqzValidation
+   */
+  public function getNrqzValidation()
+  {
+    return $this->nrqzValidation;
   }
 }
 
