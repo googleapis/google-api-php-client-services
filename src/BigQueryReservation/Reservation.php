@@ -22,6 +22,10 @@ class Reservation extends \Google\Model
   /**
    * @var string
    */
+  public $concurrency;
+  /**
+   * @var string
+   */
   public $creationTime;
   /**
    * @var bool
@@ -44,6 +48,20 @@ class Reservation extends \Google\Model
    */
   public $updateTime;
 
+  /**
+   * @param string
+   */
+  public function setConcurrency($concurrency)
+  {
+    $this->concurrency = $concurrency;
+  }
+  /**
+   * @return string
+   */
+  public function getConcurrency()
+  {
+    return $this->concurrency;
+  }
   /**
    * @param string
    */
