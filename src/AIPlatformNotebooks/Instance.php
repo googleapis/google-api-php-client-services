@@ -30,6 +30,10 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $bootDiskType;
+  /**
+   * @var bool
+   */
+  public $canIpForward;
   protected $containerImageType = ContainerImage::class;
   protected $containerImageDataType = '';
   /**
@@ -188,6 +192,20 @@ class Instance extends \Google\Collection
   public function getBootDiskType()
   {
     return $this->bootDiskType;
+  }
+  /**
+   * @param bool
+   */
+  public function setCanIpForward($canIpForward)
+  {
+    $this->canIpForward = $canIpForward;
+  }
+  /**
+   * @return bool
+   */
+  public function getCanIpForward()
+  {
+    return $this->canIpForward;
   }
   /**
    * @param ContainerImage
