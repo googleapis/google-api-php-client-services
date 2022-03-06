@@ -39,7 +39,7 @@ jobs:
           versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "admin" or .preferred).version] | join(",")' )
           echo "::set-output name=versions::$versions"
       - run: ./google-api-php-client-services/.github/workflows/generate.sh ${{ matrix.service }} ${{ steps.find-preferred-versions.outputs.versions }}
-      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+      - uses: googleapis/code-suggester@v2
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
         with:
