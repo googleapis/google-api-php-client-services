@@ -17,37 +17,19 @@
 
 namespace Google\Service\Bigquery;
 
-class Explanation extends \Google\Model
+class DimensionalityReductionMetrics extends \Google\Model
 {
-  public $attribution;
-  /**
-   * @var string
-   */
-  public $featureName;
+  public $totalExplainedVarianceRatio;
 
-  public function setAttribution($attribution)
+  public function setTotalExplainedVarianceRatio($totalExplainedVarianceRatio)
   {
-    $this->attribution = $attribution;
+    $this->totalExplainedVarianceRatio = $totalExplainedVarianceRatio;
   }
-  public function getAttribution()
+  public function getTotalExplainedVarianceRatio()
   {
-    return $this->attribution;
-  }
-  /**
-   * @param string
-   */
-  public function setFeatureName($featureName)
-  {
-    $this->featureName = $featureName;
-  }
-  /**
-   * @return string
-   */
-  public function getFeatureName()
-  {
-    return $this->featureName;
+    return $this->totalExplainedVarianceRatio;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Explanation::class, 'Google_Service_Bigquery_Explanation');
+class_alias(DimensionalityReductionMetrics::class, 'Google_Service_Bigquery_DimensionalityReductionMetrics');

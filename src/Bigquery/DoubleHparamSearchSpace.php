@@ -17,45 +17,42 @@
 
 namespace Google\Service\Bigquery;
 
-class GlobalExplanation extends \Google\Collection
+class DoubleHparamSearchSpace extends \Google\Model
 {
-  protected $collection_key = 'explanations';
-  /**
-   * @var string
-   */
-  public $classLabel;
-  protected $explanationsType = Explanation::class;
-  protected $explanationsDataType = 'array';
+  protected $candidatesType = DoubleCandidates::class;
+  protected $candidatesDataType = '';
+  protected $rangeType = DoubleRange::class;
+  protected $rangeDataType = '';
 
   /**
-   * @param string
+   * @param DoubleCandidates
    */
-  public function setClassLabel($classLabel)
+  public function setCandidates(DoubleCandidates $candidates)
   {
-    $this->classLabel = $classLabel;
+    $this->candidates = $candidates;
   }
   /**
-   * @return string
+   * @return DoubleCandidates
    */
-  public function getClassLabel()
+  public function getCandidates()
   {
-    return $this->classLabel;
+    return $this->candidates;
   }
   /**
-   * @param Explanation[]
+   * @param DoubleRange
    */
-  public function setExplanations($explanations)
+  public function setRange(DoubleRange $range)
   {
-    $this->explanations = $explanations;
+    $this->range = $range;
   }
   /**
-   * @return Explanation[]
+   * @return DoubleRange
    */
-  public function getExplanations()
+  public function getRange()
   {
-    return $this->explanations;
+    return $this->range;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GlobalExplanation::class, 'Google_Service_Bigquery_GlobalExplanation');
+class_alias(DoubleHparamSearchSpace::class, 'Google_Service_Bigquery_DoubleHparamSearchSpace');

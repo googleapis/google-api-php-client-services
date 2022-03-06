@@ -17,45 +17,29 @@
 
 namespace Google\Service\Bigquery;
 
-class GlobalExplanation extends \Google\Collection
+class StringHparamSearchSpace extends \Google\Collection
 {
-  protected $collection_key = 'explanations';
+  protected $collection_key = 'candidates';
   /**
-   * @var string
+   * @var string[]
    */
-  public $classLabel;
-  protected $explanationsType = Explanation::class;
-  protected $explanationsDataType = 'array';
+  public $candidates;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setClassLabel($classLabel)
+  public function setCandidates($candidates)
   {
-    $this->classLabel = $classLabel;
+    $this->candidates = $candidates;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getClassLabel()
+  public function getCandidates()
   {
-    return $this->classLabel;
-  }
-  /**
-   * @param Explanation[]
-   */
-  public function setExplanations($explanations)
-  {
-    $this->explanations = $explanations;
-  }
-  /**
-   * @return Explanation[]
-   */
-  public function getExplanations()
-  {
-    return $this->explanations;
+    return $this->candidates;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GlobalExplanation::class, 'Google_Service_Bigquery_GlobalExplanation');
+class_alias(StringHparamSearchSpace::class, 'Google_Service_Bigquery_StringHparamSearchSpace');

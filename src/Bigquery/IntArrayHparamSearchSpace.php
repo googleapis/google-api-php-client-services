@@ -17,37 +17,27 @@
 
 namespace Google\Service\Bigquery;
 
-class Explanation extends \Google\Model
+class IntArrayHparamSearchSpace extends \Google\Collection
 {
-  public $attribution;
-  /**
-   * @var string
-   */
-  public $featureName;
+  protected $collection_key = 'candidates';
+  protected $candidatesType = IntArray::class;
+  protected $candidatesDataType = 'array';
 
-  public function setAttribution($attribution)
+  /**
+   * @param IntArray[]
+   */
+  public function setCandidates($candidates)
   {
-    $this->attribution = $attribution;
-  }
-  public function getAttribution()
-  {
-    return $this->attribution;
+    $this->candidates = $candidates;
   }
   /**
-   * @param string
+   * @return IntArray[]
    */
-  public function setFeatureName($featureName)
+  public function getCandidates()
   {
-    $this->featureName = $featureName;
-  }
-  /**
-   * @return string
-   */
-  public function getFeatureName()
-  {
-    return $this->featureName;
+    return $this->candidates;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Explanation::class, 'Google_Service_Bigquery_Explanation');
+class_alias(IntArrayHparamSearchSpace::class, 'Google_Service_Bigquery_IntArrayHparamSearchSpace');

@@ -17,37 +17,20 @@
 
 namespace Google\Service\Bigquery;
 
-class Explanation extends \Google\Model
+class DoubleCandidates extends \Google\Collection
 {
-  public $attribution;
-  /**
-   * @var string
-   */
-  public $featureName;
+  protected $collection_key = 'candidates';
+  public $candidates;
 
-  public function setAttribution($attribution)
+  public function setCandidates($candidates)
   {
-    $this->attribution = $attribution;
+    $this->candidates = $candidates;
   }
-  public function getAttribution()
+  public function getCandidates()
   {
-    return $this->attribution;
-  }
-  /**
-   * @param string
-   */
-  public function setFeatureName($featureName)
-  {
-    $this->featureName = $featureName;
-  }
-  /**
-   * @return string
-   */
-  public function getFeatureName()
-  {
-    return $this->featureName;
+    return $this->candidates;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Explanation::class, 'Google_Service_Bigquery_Explanation');
+class_alias(DoubleCandidates::class, 'Google_Service_Bigquery_DoubleCandidates');

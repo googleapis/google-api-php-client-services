@@ -17,37 +17,28 @@
 
 namespace Google\Service\Bigquery;
 
-class Explanation extends \Google\Model
+class DoubleRange extends \Google\Model
 {
-  public $attribution;
-  /**
-   * @var string
-   */
-  public $featureName;
+  public $max;
+  public $min;
 
-  public function setAttribution($attribution)
+  public function setMax($max)
   {
-    $this->attribution = $attribution;
+    $this->max = $max;
   }
-  public function getAttribution()
+  public function getMax()
   {
-    return $this->attribution;
+    return $this->max;
   }
-  /**
-   * @param string
-   */
-  public function setFeatureName($featureName)
+  public function setMin($min)
   {
-    $this->featureName = $featureName;
+    $this->min = $min;
   }
-  /**
-   * @return string
-   */
-  public function getFeatureName()
+  public function getMin()
   {
-    return $this->featureName;
+    return $this->min;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Explanation::class, 'Google_Service_Bigquery_Explanation');
+class_alias(DoubleRange::class, 'Google_Service_Bigquery_DoubleRange');

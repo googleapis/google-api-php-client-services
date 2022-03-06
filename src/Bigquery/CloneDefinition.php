@@ -17,45 +17,44 @@
 
 namespace Google\Service\Bigquery;
 
-class GlobalExplanation extends \Google\Collection
+class CloneDefinition extends \Google\Model
 {
-  protected $collection_key = 'explanations';
+  protected $baseTableReferenceType = TableReference::class;
+  protected $baseTableReferenceDataType = '';
   /**
    * @var string
    */
-  public $classLabel;
-  protected $explanationsType = Explanation::class;
-  protected $explanationsDataType = 'array';
+  public $cloneTime;
 
+  /**
+   * @param TableReference
+   */
+  public function setBaseTableReference(TableReference $baseTableReference)
+  {
+    $this->baseTableReference = $baseTableReference;
+  }
+  /**
+   * @return TableReference
+   */
+  public function getBaseTableReference()
+  {
+    return $this->baseTableReference;
+  }
   /**
    * @param string
    */
-  public function setClassLabel($classLabel)
+  public function setCloneTime($cloneTime)
   {
-    $this->classLabel = $classLabel;
+    $this->cloneTime = $cloneTime;
   }
   /**
    * @return string
    */
-  public function getClassLabel()
+  public function getCloneTime()
   {
-    return $this->classLabel;
-  }
-  /**
-   * @param Explanation[]
-   */
-  public function setExplanations($explanations)
-  {
-    $this->explanations = $explanations;
-  }
-  /**
-   * @return Explanation[]
-   */
-  public function getExplanations()
-  {
-    return $this->explanations;
+    return $this->cloneTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GlobalExplanation::class, 'Google_Service_Bigquery_GlobalExplanation');
+class_alias(CloneDefinition::class, 'Google_Service_Bigquery_CloneDefinition');

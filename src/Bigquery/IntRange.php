@@ -17,45 +17,46 @@
 
 namespace Google\Service\Bigquery;
 
-class GlobalExplanation extends \Google\Collection
+class IntRange extends \Google\Model
 {
-  protected $collection_key = 'explanations';
   /**
    * @var string
    */
-  public $classLabel;
-  protected $explanationsType = Explanation::class;
-  protected $explanationsDataType = 'array';
+  public $max;
+  /**
+   * @var string
+   */
+  public $min;
 
   /**
    * @param string
    */
-  public function setClassLabel($classLabel)
+  public function setMax($max)
   {
-    $this->classLabel = $classLabel;
+    $this->max = $max;
   }
   /**
    * @return string
    */
-  public function getClassLabel()
+  public function getMax()
   {
-    return $this->classLabel;
+    return $this->max;
   }
   /**
-   * @param Explanation[]
+   * @param string
    */
-  public function setExplanations($explanations)
+  public function setMin($min)
   {
-    $this->explanations = $explanations;
+    $this->min = $min;
   }
   /**
-   * @return Explanation[]
+   * @return string
    */
-  public function getExplanations()
+  public function getMin()
   {
-    return $this->explanations;
+    return $this->min;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GlobalExplanation::class, 'Google_Service_Bigquery_GlobalExplanation');
+class_alias(IntRange::class, 'Google_Service_Bigquery_IntRange');

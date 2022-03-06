@@ -20,10 +20,14 @@ namespace Google\Service\Bigquery;
 class TrainingRun extends \Google\Collection
 {
   protected $collection_key = 'results';
+  protected $classLevelGlobalExplanationsType = GlobalExplanation::class;
+  protected $classLevelGlobalExplanationsDataType = 'array';
   protected $dataSplitResultType = DataSplitResult::class;
   protected $dataSplitResultDataType = '';
   protected $evaluationMetricsType = EvaluationMetrics::class;
   protected $evaluationMetricsDataType = '';
+  protected $modelLevelGlobalExplanationType = GlobalExplanation::class;
+  protected $modelLevelGlobalExplanationDataType = '';
   protected $resultsType = IterationResult::class;
   protected $resultsDataType = 'array';
   /**
@@ -33,6 +37,20 @@ class TrainingRun extends \Google\Collection
   protected $trainingOptionsType = TrainingOptions::class;
   protected $trainingOptionsDataType = '';
 
+  /**
+   * @param GlobalExplanation[]
+   */
+  public function setClassLevelGlobalExplanations($classLevelGlobalExplanations)
+  {
+    $this->classLevelGlobalExplanations = $classLevelGlobalExplanations;
+  }
+  /**
+   * @return GlobalExplanation[]
+   */
+  public function getClassLevelGlobalExplanations()
+  {
+    return $this->classLevelGlobalExplanations;
+  }
   /**
    * @param DataSplitResult
    */
@@ -60,6 +78,20 @@ class TrainingRun extends \Google\Collection
   public function getEvaluationMetrics()
   {
     return $this->evaluationMetrics;
+  }
+  /**
+   * @param GlobalExplanation
+   */
+  public function setModelLevelGlobalExplanation(GlobalExplanation $modelLevelGlobalExplanation)
+  {
+    $this->modelLevelGlobalExplanation = $modelLevelGlobalExplanation;
+  }
+  /**
+   * @return GlobalExplanation
+   */
+  public function getModelLevelGlobalExplanation()
+  {
+    return $this->modelLevelGlobalExplanation;
   }
   /**
    * @param IterationResult[]
