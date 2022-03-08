@@ -2580,6 +2580,16 @@ class Apigee extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getResulturl' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/queries',
               'httpMethod' => 'GET',
