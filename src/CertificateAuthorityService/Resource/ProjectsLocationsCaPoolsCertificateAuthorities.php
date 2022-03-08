@@ -105,6 +105,8 @@ class ProjectsLocationsCaPoolsCertificateAuthorities extends \Google\Service\Res
    * creating duplicate commitments. The request ID must be a valid UUID with the
    * exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
+   * @opt_param bool skipGracePeriod Optional. This field sets the CA to have a
+   * pending delete duration of 0.
    * @return Operation
    */
   public function delete($name, $optParams = [])
