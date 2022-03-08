@@ -17,45 +17,28 @@
 
 namespace Google\Service\ShoppingContent;
 
-class ShoppingAdsProgramStatus extends \Google\Collection
+class ShoppingAdsProgramStatusReviewIneligibilityReasonDetails extends \Google\Model
 {
-  protected $collection_key = 'regionStatuses';
   /**
    * @var string
    */
-  public $globalState;
-  protected $regionStatusesType = ShoppingAdsProgramStatusRegionStatus::class;
-  protected $regionStatusesDataType = 'array';
+  public $cooldownTime;
 
   /**
    * @param string
    */
-  public function setGlobalState($globalState)
+  public function setCooldownTime($cooldownTime)
   {
-    $this->globalState = $globalState;
+    $this->cooldownTime = $cooldownTime;
   }
   /**
    * @return string
    */
-  public function getGlobalState()
+  public function getCooldownTime()
   {
-    return $this->globalState;
-  }
-  /**
-   * @param ShoppingAdsProgramStatusRegionStatus[]
-   */
-  public function setRegionStatuses($regionStatuses)
-  {
-    $this->regionStatuses = $regionStatuses;
-  }
-  /**
-   * @return ShoppingAdsProgramStatusRegionStatus[]
-   */
-  public function getRegionStatuses()
-  {
-    return $this->regionStatuses;
+    return $this->cooldownTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ShoppingAdsProgramStatus::class, 'Google_Service_ShoppingContent_ShoppingAdsProgramStatus');
+class_alias(ShoppingAdsProgramStatusReviewIneligibilityReasonDetails::class, 'Google_Service_ShoppingContent_ShoppingAdsProgramStatusReviewIneligibilityReasonDetails');
