@@ -32,6 +32,10 @@ class SpaceInfo extends \Google\Model
   protected $groupIdType = GroupId::class;
   protected $groupIdDataType = '';
   /**
+   * @var bool
+   */
+  public $isExternal;
+  /**
    * @var string
    */
   public $name;
@@ -99,6 +103,20 @@ class SpaceInfo extends \Google\Model
   public function getGroupId()
   {
     return $this->groupId;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsExternal($isExternal)
+  {
+    $this->isExternal = $isExternal;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsExternal()
+  {
+    return $this->isExternal;
   }
   /**
    * @param string
