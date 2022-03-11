@@ -48,8 +48,6 @@ class ArtifactRegistry extends \Google\Service
   public $projects_locations_repositories_aptArtifacts;
   public $projects_locations_repositories_dockerImages;
   public $projects_locations_repositories_files;
-  public $projects_locations_repositories_gooGetArtifacts;
-  public $projects_locations_repositories_googetArtifacts;
   public $projects_locations_repositories_packages;
   public $projects_locations_repositories_packages_tags;
   public $projects_locations_repositories_packages_versions;
@@ -343,46 +341,6 @@ class ArtifactRegistry extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_repositories_gooGetArtifacts = new ArtifactRegistry\Resource\ProjectsLocationsRepositoriesGooGetArtifacts(
-        $this,
-        $this->serviceName,
-        'gooGetArtifacts',
-        [
-          'methods' => [
-            'import' => [
-              'path' => 'v1/{+parent}/gooGetArtifacts:import',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_repositories_googetArtifacts = new ArtifactRegistry\Resource\ProjectsLocationsRepositoriesGoogetArtifacts(
-        $this,
-        $this->serviceName,
-        'googetArtifacts',
-        [
-          'methods' => [
-            'upload' => [
-              'path' => 'v1/{+parent}/googetArtifacts:create',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],

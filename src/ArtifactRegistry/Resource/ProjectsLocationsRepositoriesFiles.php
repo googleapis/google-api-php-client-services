@@ -46,8 +46,8 @@ class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
   /**
    * Lists files. (files.listProjectsLocationsRepositoriesFiles)
    *
-   * @param string $parent The name of the parent resource whose files will be
-   * listed.
+   * @param string $parent The name of the repository whose files will be listed.
+   * For example: "projects/p1/locations/us-central1/repositories/repo1
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter An expression for filtering the results of the
