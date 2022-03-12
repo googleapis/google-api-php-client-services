@@ -48,6 +48,7 @@ class ProjectsLocationsRuntimes extends \Google\Service\Resource
    * @param Runtime $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string requestId Idempotent request UUID.
    * @opt_param string runtimeId Required. User-defined unique ID of this Runtime.
    * @return Operation
    */
@@ -63,6 +64,8 @@ class ProjectsLocationsRuntimes extends \Google\Service\Resource
    * @param string $name Required. Format:
    * `projects/{project_id}/locations/{location}/runtimes/{runtime_id}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Idempotent request UUID.
    * @return Operation
    */
   public function delete($name, $optParams = [])
