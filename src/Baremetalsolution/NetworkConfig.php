@@ -31,6 +31,10 @@ class NetworkConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $gcpService;
+  /**
+   * @var string
+   */
   public $id;
   /**
    * @var string
@@ -50,6 +54,10 @@ class NetworkConfig extends \Google\Collection
   public $userNote;
   protected $vlanAttachmentsType = IntakeVlanAttachment::class;
   protected $vlanAttachmentsDataType = 'array';
+  /**
+   * @var bool
+   */
+  public $vlanSameProject;
 
   /**
    * @param string
@@ -78,6 +86,20 @@ class NetworkConfig extends \Google\Collection
   public function getCidr()
   {
     return $this->cidr;
+  }
+  /**
+   * @param string
+   */
+  public function setGcpService($gcpService)
+  {
+    $this->gcpService = $gcpService;
+  }
+  /**
+   * @return string
+   */
+  public function getGcpService()
+  {
+    return $this->gcpService;
   }
   /**
    * @param string
@@ -162,6 +184,20 @@ class NetworkConfig extends \Google\Collection
   public function getVlanAttachments()
   {
     return $this->vlanAttachments;
+  }
+  /**
+   * @param bool
+   */
+  public function setVlanSameProject($vlanSameProject)
+  {
+    $this->vlanSameProject = $vlanSameProject;
+  }
+  /**
+   * @return bool
+   */
+  public function getVlanSameProject()
+  {
+    return $this->vlanSameProject;
   }
 }
 

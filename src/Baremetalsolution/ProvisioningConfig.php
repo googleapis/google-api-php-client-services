@@ -23,9 +23,21 @@ class ProvisioningConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $cloudConsoleUri;
+  /**
+   * @var string
+   */
+  public $email;
+  /**
+   * @var string
+   */
   public $handoverServiceAccount;
   protected $instancesType = InstanceConfig::class;
   protected $instancesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $location;
   /**
    * @var string
    */
@@ -35,10 +47,46 @@ class ProvisioningConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $state;
+  /**
+   * @var string
+   */
   public $ticketId;
+  /**
+   * @var string
+   */
+  public $updateTime;
   protected $volumesType = VolumeConfig::class;
   protected $volumesDataType = 'array';
 
+  /**
+   * @param string
+   */
+  public function setCloudConsoleUri($cloudConsoleUri)
+  {
+    $this->cloudConsoleUri = $cloudConsoleUri;
+  }
+  /**
+   * @return string
+   */
+  public function getCloudConsoleUri()
+  {
+    return $this->cloudConsoleUri;
+  }
+  /**
+   * @param string
+   */
+  public function setEmail($email)
+  {
+    $this->email = $email;
+  }
+  /**
+   * @return string
+   */
+  public function getEmail()
+  {
+    return $this->email;
+  }
   /**
    * @param string
    */
@@ -66,6 +114,20 @@ class ProvisioningConfig extends \Google\Collection
   public function getInstances()
   {
     return $this->instances;
+  }
+  /**
+   * @param string
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
   }
   /**
    * @param string
@@ -98,6 +160,20 @@ class ProvisioningConfig extends \Google\Collection
   /**
    * @param string
    */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
+  }
+  /**
+   * @param string
+   */
   public function setTicketId($ticketId)
   {
     $this->ticketId = $ticketId;
@@ -108,6 +184,20 @@ class ProvisioningConfig extends \Google\Collection
   public function getTicketId()
   {
     return $this->ticketId;
+  }
+  /**
+   * @param string
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
   /**
    * @param VolumeConfig[]

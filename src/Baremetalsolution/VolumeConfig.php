@@ -23,6 +23,10 @@ class VolumeConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $gcpService;
+  /**
+   * @var string
+   */
   public $id;
   protected $lunRangesType = LunRange::class;
   protected $lunRangesDataType = 'array';
@@ -57,6 +61,20 @@ class VolumeConfig extends \Google\Collection
    */
   public $userNote;
 
+  /**
+   * @param string
+   */
+  public function setGcpService($gcpService)
+  {
+    $this->gcpService = $gcpService;
+  }
+  /**
+   * @return string
+   */
+  public function getGcpService()
+  {
+    return $this->gcpService;
+  }
   /**
    * @param string
    */

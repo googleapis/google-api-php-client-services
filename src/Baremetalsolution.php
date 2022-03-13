@@ -42,7 +42,6 @@ class Baremetalsolution extends \Google\Service
   public $projects_locations;
   public $projects_locations_instances;
   public $projects_locations_networks;
-  public $projects_locations_nfsShares;
   public $projects_locations_provisioningConfigs;
   public $projects_locations_provisioningQuotas;
   public $projects_locations_snapshotSchedulePolicies;
@@ -250,13 +249,23 @@ class Baremetalsolution extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_nfsShares = new Baremetalsolution\Resource\ProjectsLocationsNfsShares(
+    $this->projects_locations_provisioningConfigs = new Baremetalsolution\Resource\ProjectsLocationsProvisioningConfigs(
         $this,
         $this->serviceName,
-        'nfsShares',
+        'provisioningConfigs',
         [
           'methods' => [
-            'get' => [
+            'create' => [
+              'path' => 'v2/{+parent}/provisioningConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -264,28 +273,6 @@ class Baremetalsolution extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v2/{+parent}/nfsShares',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'patch' => [
@@ -302,17 +289,7 @@ class Baremetalsolution extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_provisioningConfigs = new Baremetalsolution\Resource\ProjectsLocationsProvisioningConfigs(
-        $this,
-        $this->serviceName,
-        'provisioningConfigs',
-        [
-          'methods' => [
-            'submit' => [
+            ],'submit' => [
               'path' => 'v2/{+parent}/provisioningConfigs:submit',
               'httpMethod' => 'POST',
               'parameters' => [

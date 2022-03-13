@@ -17,6 +17,7 @@
 
 namespace Google\Service\Baremetalsolution\Resource;
 
+use Google\Service\Baremetalsolution\ProvisioningConfig;
 use Google\Service\Baremetalsolution\SubmitProvisioningConfigRequest;
 use Google\Service\Baremetalsolution\SubmitProvisioningConfigResponse;
 
@@ -30,6 +31,50 @@ use Google\Service\Baremetalsolution\SubmitProvisioningConfigResponse;
  */
 class ProjectsLocationsProvisioningConfigs extends \Google\Service\Resource
 {
+  /**
+   * Create new ProvisioningConfig. (provisioningConfigs.create)
+   *
+   * @param string $parent Required. The parent project and location containing
+   * the ProvisioningConfig.
+   * @param ProvisioningConfig $postBody
+   * @param array $optParams Optional parameters.
+   * @return ProvisioningConfig
+   */
+  public function create($parent, ProvisioningConfig $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], ProvisioningConfig::class);
+  }
+  /**
+   * Get ProvisioningConfig by name. (provisioningConfigs.get)
+   *
+   * @param string $name Required. Name of the ProvisioningConfig.
+   * @param array $optParams Optional parameters.
+   * @return ProvisioningConfig
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], ProvisioningConfig::class);
+  }
+  /**
+   * Update existing ProvisioningConfig. (provisioningConfigs.patch)
+   *
+   * @param string $name Output only. The name of the provisioning config.
+   * @param ProvisioningConfig $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The list of fields to update.
+   * @return ProvisioningConfig
+   */
+  public function patch($name, ProvisioningConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], ProvisioningConfig::class);
+  }
   /**
    * Submit a provisiong configuration for a given project.
    * (provisioningConfigs.submit)
