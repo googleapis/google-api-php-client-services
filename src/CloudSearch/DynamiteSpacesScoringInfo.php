@@ -19,12 +19,42 @@ namespace Google\Service\CloudSearch;
 
 class DynamiteSpacesScoringInfo extends \Google\Model
 {
+  public $affinityScore;
+  public $commonContactCountAffinityScore;
+  public $contactsIntersectionCount;
   public $finalScore;
   public $freshnessScore;
+  public $joinedSpacesAffinityScore;
   public $messageScore;
+  public $smallContactListAffinityScore;
+  public $smallUnjoinedSpacesAffinityScore;
   public $spaceAgeInDays;
   public $topicalityScore;
 
+  public function setAffinityScore($affinityScore)
+  {
+    $this->affinityScore = $affinityScore;
+  }
+  public function getAffinityScore()
+  {
+    return $this->affinityScore;
+  }
+  public function setCommonContactCountAffinityScore($commonContactCountAffinityScore)
+  {
+    $this->commonContactCountAffinityScore = $commonContactCountAffinityScore;
+  }
+  public function getCommonContactCountAffinityScore()
+  {
+    return $this->commonContactCountAffinityScore;
+  }
+  public function setContactsIntersectionCount($contactsIntersectionCount)
+  {
+    $this->contactsIntersectionCount = $contactsIntersectionCount;
+  }
+  public function getContactsIntersectionCount()
+  {
+    return $this->contactsIntersectionCount;
+  }
   public function setFinalScore($finalScore)
   {
     $this->finalScore = $finalScore;
@@ -41,6 +71,14 @@ class DynamiteSpacesScoringInfo extends \Google\Model
   {
     return $this->freshnessScore;
   }
+  public function setJoinedSpacesAffinityScore($joinedSpacesAffinityScore)
+  {
+    $this->joinedSpacesAffinityScore = $joinedSpacesAffinityScore;
+  }
+  public function getJoinedSpacesAffinityScore()
+  {
+    return $this->joinedSpacesAffinityScore;
+  }
   public function setMessageScore($messageScore)
   {
     $this->messageScore = $messageScore;
@@ -48,6 +86,22 @@ class DynamiteSpacesScoringInfo extends \Google\Model
   public function getMessageScore()
   {
     return $this->messageScore;
+  }
+  public function setSmallContactListAffinityScore($smallContactListAffinityScore)
+  {
+    $this->smallContactListAffinityScore = $smallContactListAffinityScore;
+  }
+  public function getSmallContactListAffinityScore()
+  {
+    return $this->smallContactListAffinityScore;
+  }
+  public function setSmallUnjoinedSpacesAffinityScore($smallUnjoinedSpacesAffinityScore)
+  {
+    $this->smallUnjoinedSpacesAffinityScore = $smallUnjoinedSpacesAffinityScore;
+  }
+  public function getSmallUnjoinedSpacesAffinityScore()
+  {
+    return $this->smallUnjoinedSpacesAffinityScore;
   }
   public function setSpaceAgeInDays($spaceAgeInDays)
   {
