@@ -164,6 +164,16 @@ class Firebaseappcheck extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'exchangeRecaptchaV3Token' => [
+              'path' => 'v1beta/{+app}:exchangeRecaptchaV3Token',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'app' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'exchangeSafetyNetToken' => [
               'path' => 'v1beta/{+app}:exchangeSafetyNetToken',
               'httpMethod' => 'POST',
