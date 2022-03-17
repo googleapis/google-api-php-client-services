@@ -42,6 +42,7 @@ class Iam extends \Google\Service
 
   public $iamPolicies;
   public $locations_workforcePools_operations;
+  public $locations_workforcePools_providers_keys_operations;
   public $locations_workforcePools_providers_operations;
   public $locations_workforcePools_subjects_operations;
   public $organizations_roles;
@@ -91,6 +92,26 @@ class Iam extends \Google\Service
         ]
     );
     $this->locations_workforcePools_operations = new Iam\Resource\LocationsWorkforcePoolsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->locations_workforcePools_providers_keys_operations = new Iam\Resource\LocationsWorkforcePoolsProvidersKeysOperations(
         $this,
         $this->serviceName,
         'operations',
