@@ -29,10 +29,6 @@ class SasPortalNrqzValidation extends \Google\Model
   public $cpiId;
   public $latitude;
   public $longitude;
-  /**
-   * @var string
-   */
-  public $state;
 
   /**
    * @param string
@@ -77,20 +73,6 @@ class SasPortalNrqzValidation extends \Google\Model
   public function getLongitude()
   {
     return $this->longitude;
-  }
-  /**
-   * @param string
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return string
-   */
-  public function getState()
-  {
-    return $this->state;
   }
 }
 
