@@ -17,19 +17,12 @@
 
 namespace Google\Service\Compute;
 
-class SecurityPolicy extends \Google\Collection
+class NetworkEdgeSecurityService extends \Google\Model
 {
-  protected $collection_key = 'rules';
-  protected $adaptiveProtectionConfigType = SecurityPolicyAdaptiveProtectionConfig::class;
-  protected $adaptiveProtectionConfigDataType = '';
-  protected $advancedOptionsConfigType = SecurityPolicyAdvancedOptionsConfig::class;
-  protected $advancedOptionsConfigDataType = '';
   /**
    * @var string
    */
   public $creationTimestamp;
-  protected $ddosProtectionConfigType = SecurityPolicyDdosProtectionConfig::class;
-  protected $ddosProtectionConfigDataType = '';
   /**
    * @var string
    */
@@ -50,14 +43,14 @@ class SecurityPolicy extends \Google\Collection
    * @var string
    */
   public $name;
-  protected $recaptchaOptionsConfigType = SecurityPolicyRecaptchaOptionsConfig::class;
-  protected $recaptchaOptionsConfigDataType = '';
   /**
    * @var string
    */
   public $region;
-  protected $rulesType = SecurityPolicyRule::class;
-  protected $rulesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $securityPolicy;
   /**
    * @var string
    */
@@ -65,36 +58,8 @@ class SecurityPolicy extends \Google\Collection
   /**
    * @var string
    */
-  public $type;
+  public $selfLinkWithId;
 
-  /**
-   * @param SecurityPolicyAdaptiveProtectionConfig
-   */
-  public function setAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfig $adaptiveProtectionConfig)
-  {
-    $this->adaptiveProtectionConfig = $adaptiveProtectionConfig;
-  }
-  /**
-   * @return SecurityPolicyAdaptiveProtectionConfig
-   */
-  public function getAdaptiveProtectionConfig()
-  {
-    return $this->adaptiveProtectionConfig;
-  }
-  /**
-   * @param SecurityPolicyAdvancedOptionsConfig
-   */
-  public function setAdvancedOptionsConfig(SecurityPolicyAdvancedOptionsConfig $advancedOptionsConfig)
-  {
-    $this->advancedOptionsConfig = $advancedOptionsConfig;
-  }
-  /**
-   * @return SecurityPolicyAdvancedOptionsConfig
-   */
-  public function getAdvancedOptionsConfig()
-  {
-    return $this->advancedOptionsConfig;
-  }
   /**
    * @param string
    */
@@ -108,20 +73,6 @@ class SecurityPolicy extends \Google\Collection
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
-  }
-  /**
-   * @param SecurityPolicyDdosProtectionConfig
-   */
-  public function setDdosProtectionConfig(SecurityPolicyDdosProtectionConfig $ddosProtectionConfig)
-  {
-    $this->ddosProtectionConfig = $ddosProtectionConfig;
-  }
-  /**
-   * @return SecurityPolicyDdosProtectionConfig
-   */
-  public function getDdosProtectionConfig()
-  {
-    return $this->ddosProtectionConfig;
   }
   /**
    * @param string
@@ -194,20 +145,6 @@ class SecurityPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param SecurityPolicyRecaptchaOptionsConfig
-   */
-  public function setRecaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfig $recaptchaOptionsConfig)
-  {
-    $this->recaptchaOptionsConfig = $recaptchaOptionsConfig;
-  }
-  /**
-   * @return SecurityPolicyRecaptchaOptionsConfig
-   */
-  public function getRecaptchaOptionsConfig()
-  {
-    return $this->recaptchaOptionsConfig;
-  }
-  /**
    * @param string
    */
   public function setRegion($region)
@@ -222,18 +159,18 @@ class SecurityPolicy extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param SecurityPolicyRule[]
+   * @param string
    */
-  public function setRules($rules)
+  public function setSecurityPolicy($securityPolicy)
   {
-    $this->rules = $rules;
+    $this->securityPolicy = $securityPolicy;
   }
   /**
-   * @return SecurityPolicyRule[]
+   * @return string
    */
-  public function getRules()
+  public function getSecurityPolicy()
   {
-    return $this->rules;
+    return $this->securityPolicy;
   }
   /**
    * @param string
@@ -252,18 +189,18 @@ class SecurityPolicy extends \Google\Collection
   /**
    * @param string
    */
-  public function setType($type)
+  public function setSelfLinkWithId($selfLinkWithId)
   {
-    $this->type = $type;
+    $this->selfLinkWithId = $selfLinkWithId;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getSelfLinkWithId()
   {
-    return $this->type;
+    return $this->selfLinkWithId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SecurityPolicy::class, 'Google_Service_Compute_SecurityPolicy');
+class_alias(NetworkEdgeSecurityService::class, 'Google_Service_Compute_NetworkEdgeSecurityService');
