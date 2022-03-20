@@ -19,6 +19,10 @@ namespace Google\Service\Baremetalsolution;
 
 class InstanceConfig extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $accountNetworksEnabled;
   protected $clientNetworkType = NetworkAddress::class;
   protected $clientNetworkDataType = '';
   /**
@@ -48,6 +52,20 @@ class InstanceConfig extends \Google\Model
    */
   public $userNote;
 
+  /**
+   * @param bool
+   */
+  public function setAccountNetworksEnabled($accountNetworksEnabled)
+  {
+    $this->accountNetworksEnabled = $accountNetworksEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAccountNetworksEnabled()
+  {
+    return $this->accountNetworksEnabled;
+  }
   /**
    * @param NetworkAddress
    */

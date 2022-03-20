@@ -38,6 +38,9 @@ class ProjectsLocationsProvisioningConfigs extends \Google\Service\Resource
    * the ProvisioningConfig.
    * @param ProvisioningConfig $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string email Optional. Email provided to send a confirmation with
+   * provisioning config to.
    * @return ProvisioningConfig
    */
   public function create($parent, ProvisioningConfig $postBody, $optParams = [])
@@ -66,6 +69,8 @@ class ProjectsLocationsProvisioningConfigs extends \Google\Service\Resource
    * @param ProvisioningConfig $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string email Optional. Email provided to send a confirmation with
+   * provisioning config to.
    * @opt_param string updateMask Required. The list of fields to update.
    * @return ProvisioningConfig
    */
