@@ -36,6 +36,14 @@ class TrainingRun extends \Google\Collection
   public $startTime;
   protected $trainingOptionsType = TrainingOptions::class;
   protected $trainingOptionsDataType = '';
+  /**
+   * @var string
+   */
+  public $vertexAiModelId;
+  /**
+   * @var string
+   */
+  public $vertexAiModelVersion;
 
   /**
    * @param GlobalExplanation[]
@@ -134,6 +142,34 @@ class TrainingRun extends \Google\Collection
   public function getTrainingOptions()
   {
     return $this->trainingOptions;
+  }
+  /**
+   * @param string
+   */
+  public function setVertexAiModelId($vertexAiModelId)
+  {
+    $this->vertexAiModelId = $vertexAiModelId;
+  }
+  /**
+   * @return string
+   */
+  public function getVertexAiModelId()
+  {
+    return $this->vertexAiModelId;
+  }
+  /**
+   * @param string
+   */
+  public function setVertexAiModelVersion($vertexAiModelVersion)
+  {
+    $this->vertexAiModelVersion = $vertexAiModelVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getVertexAiModelVersion()
+  {
+    return $this->vertexAiModelVersion;
   }
 }
 
