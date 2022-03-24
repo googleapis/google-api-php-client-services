@@ -23,17 +23,17 @@ use Google\Service\CloudRetail\GoogleCloudRetailV2SearchRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2SearchResponse;
 
 /**
- * The "placements" collection of methods.
+ * The "servingConfigs" collection of methods.
  * Typical usage is:
  *  <code>
  *   $retailService = new Google\Service\CloudRetail(...);
- *   $placements = $retailService->placements;
+ *   $servingConfigs = $retailService->servingConfigs;
  *  </code>
  */
-class ProjectsLocationsCatalogsPlacements extends \Google\Service\Resource
+class ProjectsLocationsCatalogsServingConfigs extends \Google\Service\Resource
 {
   /**
-   * Makes a recommendation prediction. (placements.predict)
+   * Makes a recommendation prediction. (servingConfigs.predict)
    *
    * @param string $placement Required. Full resource name of the format:
    * {name=projects/locations/global/catalogs/default_catalog/placements} or
@@ -58,7 +58,7 @@ class ProjectsLocationsCatalogsPlacements extends \Google\Service\Resource
    * Performs a search. This feature is only available for users who have Retail
    * Search enabled. Please submit a form [here](https://cloud.google.com/contact)
    * to contact cloud sales if you are interested in using Retail Search.
-   * (placements.search)
+   * (servingConfigs.search)
    *
    * @param string $placement Required. The resource name of the search engine
    * placement, such as `projects/locations/global/catalogs/default_catalog/placem
@@ -79,4 +79,4 @@ class ProjectsLocationsCatalogsPlacements extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsCatalogsPlacements::class, 'Google_Service_CloudRetail_Resource_ProjectsLocationsCatalogsPlacements');
+class_alias(ProjectsLocationsCatalogsServingConfigs::class, 'Google_Service_CloudRetail_Resource_ProjectsLocationsCatalogsServingConfigs');
