@@ -638,6 +638,16 @@ class AIPlatformNotebooks extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'refreshRuntimeTokenInternal' => [
+              'path' => 'v1/{+name}:refreshRuntimeTokenInternal',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'reportEvent' => [
               'path' => 'v1/{+name}:reportEvent',
               'httpMethod' => 'POST',
