@@ -41,6 +41,18 @@ class ProvisioningQuota extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $networkBandwidth;
+  /**
+   * @var string
+   */
+  public $serverCount;
+  /**
+   * @var string
+   */
+  public $storageGib;
 
   /**
    * @param string
@@ -125,6 +137,48 @@ class ProvisioningQuota extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setNetworkBandwidth($networkBandwidth)
+  {
+    $this->networkBandwidth = $networkBandwidth;
+  }
+  /**
+   * @return string
+   */
+  public function getNetworkBandwidth()
+  {
+    return $this->networkBandwidth;
+  }
+  /**
+   * @param string
+   */
+  public function setServerCount($serverCount)
+  {
+    $this->serverCount = $serverCount;
+  }
+  /**
+   * @return string
+   */
+  public function getServerCount()
+  {
+    return $this->serverCount;
+  }
+  /**
+   * @param string
+   */
+  public function setStorageGib($storageGib)
+  {
+    $this->storageGib = $storageGib;
+  }
+  /**
+   * @return string
+   */
+  public function getStorageGib()
+  {
+    return $this->storageGib;
   }
 }
 
