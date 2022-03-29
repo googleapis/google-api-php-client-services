@@ -42,8 +42,8 @@ class CoursesTeachers extends \Google\Service\Resource
    * `FAILED_PRECONDITION` if the requested user's account is disabled, for the
    * following request errors: * CourseMemberLimitReached * CourseNotModifiable *
    * CourseTeacherLimitReached * UserGroupsMembershipLimitReached *
-   * `ALREADY_EXISTS` if the user is already a teacher or student in the course.
-   * (teachers.create)
+   * InactiveCourseOwner * `ALREADY_EXISTS` if the user is already a teacher or
+   * student in the course. (teachers.create)
    *
    * @param string $courseId Identifier of the course. This identifier can be
    * either the Classroom-assigned identifier or an alias.

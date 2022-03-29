@@ -41,8 +41,8 @@ class CoursesStudents extends \Google\Service\Resource
    * access errors. * `NOT_FOUND` if the requested course ID does not exist. *
    * `FAILED_PRECONDITION` if the requested user's account is disabled, for the
    * following request errors: * CourseMemberLimitReached * CourseNotModifiable *
-   * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is already a
-   * student or teacher in the course. (students.create)
+   * UserGroupsMembershipLimitReached * InactiveCourseOwner * `ALREADY_EXISTS` if
+   * the user is already a student or teacher in the course. (students.create)
    *
    * @param string $courseId Identifier of the course to create the student in.
    * This identifier can be either the Classroom-assigned identifier or an alias.
