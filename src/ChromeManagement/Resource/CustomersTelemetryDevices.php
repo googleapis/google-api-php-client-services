@@ -37,7 +37,7 @@ class CustomersTelemetryDevices extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Only include resources that match the
-   * filter. Supported filter fields: - org_unit_id - serial_number
+   * filter. Supported filter fields: - org_unit_id - serial_number - device_id
    * @opt_param int pageSize Maximum number of results to return. Default value is
    * 100. Maximum value is 200.
    * @opt_param string pageToken Token to specify next page in the list.
