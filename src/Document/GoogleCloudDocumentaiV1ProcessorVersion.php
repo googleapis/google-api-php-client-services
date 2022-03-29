@@ -28,6 +28,10 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
    */
   public $displayName;
   /**
+   * @var bool
+   */
+  public $googleManaged;
+  /**
    * @var string
    */
   public $kmsKeyName;
@@ -71,6 +75,20 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param bool
+   */
+  public function setGoogleManaged($googleManaged)
+  {
+    $this->googleManaged = $googleManaged;
+  }
+  /**
+   * @return bool
+   */
+  public function getGoogleManaged()
+  {
+    return $this->googleManaged;
   }
   /**
    * @param string
