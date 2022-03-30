@@ -36,6 +36,9 @@ class ApplicationsDeviceTierConfigs extends \Google\Service\Resource
    * @param string $packageName Package name of the app.
    * @param DeviceTierConfig $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool allowUnknownDevices Whether the service should accept device
+   * IDs that are unknown to Play's device catalog.
    * @return DeviceTierConfig
    */
   public function create($packageName, DeviceTierConfig $postBody, $optParams = [])

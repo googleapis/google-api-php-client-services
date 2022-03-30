@@ -94,6 +94,10 @@ class AndroidPublisher extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'allowUnknownDevices' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'get' => [
               'path' => 'androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}',
