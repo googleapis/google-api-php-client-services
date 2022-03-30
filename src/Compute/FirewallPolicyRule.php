@@ -51,6 +51,10 @@ class FirewallPolicyRule extends \Google\Collection
    */
   public $priority;
   /**
+   * @var string
+   */
+  public $ruleName;
+  /**
    * @var int
    */
   public $ruleTupleCount;
@@ -176,6 +180,20 @@ class FirewallPolicyRule extends \Google\Collection
   public function getPriority()
   {
     return $this->priority;
+  }
+  /**
+   * @param string
+   */
+  public function setRuleName($ruleName)
+  {
+    $this->ruleName = $ruleName;
+  }
+  /**
+   * @return string
+   */
+  public function getRuleName()
+  {
+    return $this->ruleName;
   }
   /**
    * @param int
