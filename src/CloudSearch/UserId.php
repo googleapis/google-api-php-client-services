@@ -22,6 +22,10 @@ class UserId extends \Google\Model
   /**
    * @var string
    */
+  public $actingUserId;
+  /**
+   * @var string
+   */
   public $id;
   protected $originAppIdType = AppId::class;
   protected $originAppIdDataType = '';
@@ -30,6 +34,20 @@ class UserId extends \Google\Model
    */
   public $type;
 
+  /**
+   * @param string
+   */
+  public function setActingUserId($actingUserId)
+  {
+    $this->actingUserId = $actingUserId;
+  }
+  /**
+   * @return string
+   */
+  public function getActingUserId()
+  {
+    return $this->actingUserId;
+  }
   /**
    * @param string
    */

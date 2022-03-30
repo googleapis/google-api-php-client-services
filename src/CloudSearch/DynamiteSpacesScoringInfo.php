@@ -25,10 +25,23 @@ class DynamiteSpacesScoringInfo extends \Google\Model
   public $finalScore;
   public $freshnessScore;
   public $joinedSpacesAffinityScore;
+  /**
+   * @var string
+   */
+  public $lastMessagePostedTimestampMicros;
+  public $memberMetadataCount;
   public $messageScore;
+  /**
+   * @var string
+   */
+  public $numAucContacts;
   public $smallContactListAffinityScore;
   public $smallUnjoinedSpacesAffinityScore;
   public $spaceAgeInDays;
+  /**
+   * @var string
+   */
+  public $spaceCreationTimestampMicros;
   public $topicalityScore;
 
   public function setAffinityScore($affinityScore)
@@ -79,6 +92,28 @@ class DynamiteSpacesScoringInfo extends \Google\Model
   {
     return $this->joinedSpacesAffinityScore;
   }
+  /**
+   * @param string
+   */
+  public function setLastMessagePostedTimestampMicros($lastMessagePostedTimestampMicros)
+  {
+    $this->lastMessagePostedTimestampMicros = $lastMessagePostedTimestampMicros;
+  }
+  /**
+   * @return string
+   */
+  public function getLastMessagePostedTimestampMicros()
+  {
+    return $this->lastMessagePostedTimestampMicros;
+  }
+  public function setMemberMetadataCount($memberMetadataCount)
+  {
+    $this->memberMetadataCount = $memberMetadataCount;
+  }
+  public function getMemberMetadataCount()
+  {
+    return $this->memberMetadataCount;
+  }
   public function setMessageScore($messageScore)
   {
     $this->messageScore = $messageScore;
@@ -86,6 +121,20 @@ class DynamiteSpacesScoringInfo extends \Google\Model
   public function getMessageScore()
   {
     return $this->messageScore;
+  }
+  /**
+   * @param string
+   */
+  public function setNumAucContacts($numAucContacts)
+  {
+    $this->numAucContacts = $numAucContacts;
+  }
+  /**
+   * @return string
+   */
+  public function getNumAucContacts()
+  {
+    return $this->numAucContacts;
   }
   public function setSmallContactListAffinityScore($smallContactListAffinityScore)
   {
@@ -110,6 +159,20 @@ class DynamiteSpacesScoringInfo extends \Google\Model
   public function getSpaceAgeInDays()
   {
     return $this->spaceAgeInDays;
+  }
+  /**
+   * @param string
+   */
+  public function setSpaceCreationTimestampMicros($spaceCreationTimestampMicros)
+  {
+    $this->spaceCreationTimestampMicros = $spaceCreationTimestampMicros;
+  }
+  /**
+   * @return string
+   */
+  public function getSpaceCreationTimestampMicros()
+  {
+    return $this->spaceCreationTimestampMicros;
   }
   public function setTopicalityScore($topicalityScore)
   {
