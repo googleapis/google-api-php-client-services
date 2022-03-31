@@ -135,6 +135,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @opt_param string pageToken Token returned from a previous call to
    * `ListDatabaseInstances` indicating where in the set of database instances to
    * resume listing.
+   * @opt_param bool showDeleted Indicate that DatabaseInstances in the `DELETED`
+   * state should also be returned.
    * @return ListDatabaseInstancesResponse
    */
   public function listProjectsLocationsInstances($parent, $optParams = [])

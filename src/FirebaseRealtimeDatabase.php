@@ -138,6 +138,10 @@ class FirebaseRealtimeDatabase extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'showDeleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'reenable' => [
               'path' => 'v1beta/{+name}:reenable',
