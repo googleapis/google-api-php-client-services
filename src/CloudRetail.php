@@ -200,6 +200,16 @@ class CloudRetail extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'addLocalInventories' => [
+              'path' => 'v2/{+product}:addLocalInventories',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'product' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'create' => [
               'path' => 'v2/{+parent}/products',
               'httpMethod' => 'POST',
@@ -290,6 +300,16 @@ class CloudRetail extends \Google\Service
               ],
             ],'removeFulfillmentPlaces' => [
               'path' => 'v2/{+product}:removeFulfillmentPlaces',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'product' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'removeLocalInventories' => [
+              'path' => 'v2/{+product}:removeLocalInventories',
               'httpMethod' => 'POST',
               'parameters' => [
                 'product' => [

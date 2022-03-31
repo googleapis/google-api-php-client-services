@@ -36,9 +36,8 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
 {
   /**
    * Completes the specified prefix with keyword suggestions. This feature is only
-   * available for users who have Retail Search enabled. Please submit a form
-   * [here](https://cloud.google.com/contact) to contact cloud sales if you are
-   * interested in using Retail Search. (catalogs.completeQuery)
+   * available for users who have Retail Search enabled. Please enable Retail
+   * Search on Cloud Console before using this feature. (catalogs.completeQuery)
    *
    * @param string $catalog Required. Catalog for which the completion is
    * performed. Full resource name of catalog, such as
