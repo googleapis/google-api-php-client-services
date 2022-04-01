@@ -43,6 +43,15 @@ class Forms extends \Google\Service
   /** See and download all your Google Drive files. */
   const DRIVE_READONLY =
       "https://www.googleapis.com/auth/drive.readonly";
+  /** See, edit, create, and delete all your Google Forms forms. */
+  const FORMS_BODY =
+      "https://www.googleapis.com/auth/forms.body";
+  /** See all your Google Forms forms. */
+  const FORMS_BODY_READONLY =
+      "https://www.googleapis.com/auth/forms.body.readonly";
+  /** See all responses to your Google Forms forms. */
+  const FORMS_RESPONSES_READONLY =
+      "https://www.googleapis.com/auth/forms.responses.readonly";
 
   public $forms;
   public $forms_responses;
