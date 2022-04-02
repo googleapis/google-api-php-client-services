@@ -153,6 +153,16 @@ class FirebaseRealtimeDatabase extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'undelete' => [
+              'path' => 'v1beta/{+name}:undelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]

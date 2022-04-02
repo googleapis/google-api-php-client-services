@@ -21,6 +21,7 @@ use Google\Service\FirebaseRealtimeDatabase\DatabaseInstance;
 use Google\Service\FirebaseRealtimeDatabase\DisableDatabaseInstanceRequest;
 use Google\Service\FirebaseRealtimeDatabase\ListDatabaseInstancesResponse;
 use Google\Service\FirebaseRealtimeDatabase\ReenableDatabaseInstanceRequest;
+use Google\Service\FirebaseRealtimeDatabase\UndeleteDatabaseInstanceRequest;
 
 /**
  * The "instances" collection of methods.
@@ -162,6 +163,24 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('reenable', [$params], DatabaseInstance::class);
+  }
+  /**
+   * Restores a DatabaseInstance that was previously marked to be deleted. This
+   * may only be used on a DatabaseInstance in the DELETED state. Purged
+   * DatabaseInstance's may not be recovered. (instances.undelete)
+   *
+   * @param string $name The fully qualified resource name of the database
+   * instance, in the form: `projects/{project-number}/locations/{location-
+   * id}/instances/{database-id}`
+   * @param UndeleteDatabaseInstanceRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DatabaseInstance
+   */
+  public function undelete($name, UndeleteDatabaseInstanceRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('undelete', [$params], DatabaseInstance::class);
   }
 }
 
