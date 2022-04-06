@@ -47,6 +47,7 @@ class Firebaseappcheck extends \Google\Service
   public $projects_apps_appAttestConfig;
   public $projects_apps_debugTokens;
   public $projects_apps_deviceCheckConfig;
+  public $projects_apps_playIntegrityConfig;
   public $projects_apps_recaptchaConfig;
   public $projects_apps_recaptchaEnterpriseConfig;
   public $projects_apps_recaptchaV3Config;
@@ -145,6 +146,16 @@ class Firebaseappcheck extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'exchangePlayIntegrityToken' => [
+              'path' => 'v1beta/{+app}:exchangePlayIntegrityToken',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'app' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'exchangeRecaptchaEnterpriseToken' => [
               'path' => 'v1beta/{+app}:exchangeRecaptchaEnterpriseToken',
               'httpMethod' => 'POST',
@@ -187,6 +198,16 @@ class Firebaseappcheck extends \Google\Service
               ],
             ],'generateAppAttestChallenge' => [
               'path' => 'v1beta/{+app}:generateAppAttestChallenge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'app' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generatePlayIntegrityChallenge' => [
+              'path' => 'v1beta/{+app}:generatePlayIntegrityChallenge',
               'httpMethod' => 'POST',
               'parameters' => [
                 'app' => [
@@ -328,6 +349,55 @@ class Firebaseappcheck extends \Google\Service
           'methods' => [
             'batchGet' => [
               'path' => 'v1beta/{+parent}/apps/-/deviceCheckConfig:batchGet',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'names' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1beta/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1beta/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_apps_playIntegrityConfig = new Firebaseappcheck\Resource\ProjectsAppsPlayIntegrityConfig(
+        $this,
+        $this->serviceName,
+        'playIntegrityConfig',
+        [
+          'methods' => [
+            'batchGet' => [
+              'path' => 'v1beta/{+parent}/apps/-/playIntegrityConfig:batchGet',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
