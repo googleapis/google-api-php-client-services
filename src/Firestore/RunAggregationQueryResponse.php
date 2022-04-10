@@ -17,37 +17,19 @@
 
 namespace Google\Service\Firestore;
 
-class RunQueryResponse extends \Google\Model
+class RunAggregationQueryResponse extends \Google\Model
 {
-  protected $documentType = Document::class;
-  protected $documentDataType = '';
   /**
    * @var string
    */
   public $readTime;
-  /**
-   * @var int
-   */
-  public $skippedResults;
+  protected $resultType = AggregationResult::class;
+  protected $resultDataType = '';
   /**
    * @var string
    */
   public $transaction;
 
-  /**
-   * @param Document
-   */
-  public function setDocument(Document $document)
-  {
-    $this->document = $document;
-  }
-  /**
-   * @return Document
-   */
-  public function getDocument()
-  {
-    return $this->document;
-  }
   /**
    * @param string
    */
@@ -63,18 +45,18 @@ class RunQueryResponse extends \Google\Model
     return $this->readTime;
   }
   /**
-   * @param int
+   * @param AggregationResult
    */
-  public function setSkippedResults($skippedResults)
+  public function setResult(AggregationResult $result)
   {
-    $this->skippedResults = $skippedResults;
+    $this->result = $result;
   }
   /**
-   * @return int
+   * @return AggregationResult
    */
-  public function getSkippedResults()
+  public function getResult()
   {
-    return $this->skippedResults;
+    return $this->result;
   }
   /**
    * @param string
@@ -93,4 +75,4 @@ class RunQueryResponse extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RunQueryResponse::class, 'Google_Service_Firestore_RunQueryResponse');
+class_alias(RunAggregationQueryResponse::class, 'Google_Service_Firestore_RunAggregationQueryResponse');
