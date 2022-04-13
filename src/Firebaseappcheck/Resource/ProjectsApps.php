@@ -24,15 +24,12 @@ use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeAppAttes
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest;
-use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeRecaptchaEnterpriseTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeRecaptchaTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest;
 use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse;
-use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeRequest;
-use Google\Service\Firebaseappcheck\GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse;
 
 /**
  * The "apps" collection of methods.
@@ -149,27 +146,6 @@ class ProjectsApps extends \Google\Service\Resource
     return $this->call('exchangeDeviceCheckToken', [$params], GoogleFirebaseAppcheckV1betaAppCheckToken::class);
   }
   /**
-   * Validates an [integrity verdict response token from Play
-   * Integrity](https://developer.android.com/google/play/integrity/verdict
-   * #decrypt-verify). If valid, returns an AppCheckToken.
-   * (apps.exchangePlayIntegrityToken)
-   *
-   * @param string $app Required. The relative resource name of the Android app,
-   * in the format: ``` projects/{project_number}/apps/{app_id} ``` If necessary,
-   * the `project_number` element can be replaced with the project ID of the
-   * Firebase project. Learn more about using project identifiers in Google's [AIP
-   * 2510](https://google.aip.dev/cloud/2510) standard.
-   * @param GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleFirebaseAppcheckV1betaAppCheckToken
-   */
-  public function exchangePlayIntegrityToken($app, GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest $postBody, $optParams = [])
-  {
-    $params = ['app' => $app, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('exchangePlayIntegrityToken', [$params], GoogleFirebaseAppcheckV1betaAppCheckToken::class);
-  }
-  /**
    * Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com
    * /recaptcha-enterprise/docs/create-assessment#retrieve_token). If valid,
    * returns an App Check token AppCheckToken.
@@ -271,28 +247,6 @@ class ProjectsApps extends \Google\Service\Resource
     $params = ['app' => $app, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('generateAppAttestChallenge', [$params], GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse::class);
-  }
-  /**
-   * Generates a challenge that protects the integrity of an immediately following
-   * integrity verdict request to the Play Integrity API. The next call to
-   * ExchangePlayIntegrityToken using the resulting integrity token will verify
-   * the presence and validity of the challenge. A challenge should not be reused
-   * for multiple calls. (apps.generatePlayIntegrityChallenge)
-   *
-   * @param string $app Required. The relative resource name of the app, in the
-   * format: ``` projects/{project_number}/apps/{app_id} ``` If necessary, the
-   * `project_number` element can be replaced with the project ID of the Firebase
-   * project. Learn more about using project identifiers in Google's [AIP
-   * 2510](https://google.aip.dev/cloud/2510) standard.
-   * @param GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse
-   */
-  public function generatePlayIntegrityChallenge($app, GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeRequest $postBody, $optParams = [])
-  {
-    $params = ['app' => $app, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('generatePlayIntegrityChallenge', [$params], GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse::class);
   }
 }
 
