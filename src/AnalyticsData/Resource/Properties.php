@@ -165,7 +165,10 @@ class Properties extends \Google\Service\Resource
   /**
    * The Google Analytics Realtime API returns a customized report of realtime
    * event data for your property. These reports show events and usage from the
-   * last 30 minutes. (properties.runRealtimeReport)
+   * last 30 minutes. For a guide to constructing realtime requests &
+   * understanding responses, see [Creating a Realtime
+   * Report](https://developers.google.com/analytics/devguides/reporting/data/v1
+   * /realtime-basics). (properties.runRealtimeReport)
    *
    * @param string $property A Google Analytics GA4 property identifier whose
    * events are tracked. Specified in the URL path and not the body. To learn
@@ -189,7 +192,9 @@ class Properties extends \Google\Service\Resource
    * the requested dimensions and metrics. Metrics are individual measurements of
    * user activity on your property, such as active users or event count.
    * Dimensions break down metrics across some common criteria, such as country or
-   * event name. (properties.runReport)
+   * event name. For a guide to constructing requests & understanding responses,
+   * see [Creating a Report](https://developers.google.com/analytics/devguides/rep
+   * orting/data/v1/basics). (properties.runReport)
    *
    * @param string $property A Google Analytics GA4 property identifier whose
    * events are tracked. Specified in the URL path and not the body. To learn
