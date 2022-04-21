@@ -17,8 +17,9 @@
 
 namespace Google\Service\OnDemandScanning;
 
-class PackageData extends \Google\Model
+class PackageData extends \Google\Collection
 {
+  protected $collection_key = 'pathToFile';
   /**
    * @var string
    */
@@ -39,6 +40,10 @@ class PackageData extends \Google\Model
    * @var string
    */
   public $packageType;
+  /**
+   * @var string[]
+   */
+  public $pathToFile;
   /**
    * @var string
    */
@@ -117,6 +122,20 @@ class PackageData extends \Google\Model
   public function getPackageType()
   {
     return $this->packageType;
+  }
+  /**
+   * @param string[]
+   */
+  public function setPathToFile($pathToFile)
+  {
+    $this->pathToFile = $pathToFile;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPathToFile()
+  {
+    return $this->pathToFile;
   }
   /**
    * @param string
