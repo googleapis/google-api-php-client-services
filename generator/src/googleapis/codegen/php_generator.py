@@ -222,7 +222,7 @@ class PhpLanguageModel(language_model.LanguageModel):
       'finally', 'for', 'foreach', 'function', 'global', 'goto',
       'if', 'implements', 'interface', 'instanceof', 'list',
       'namespace', 'new', 'old_function', 'or', 'parent', 'private',
-      'protected', 'public', 'return', 'static', 'switch', 'throw',
+      'protected', 'public', 'readonly', 'return', 'static', 'switch', 'throw',
       'trait', 'try', 'unset', 'use', 'var', 'while', 'xor', 'yield',
       ))
 
