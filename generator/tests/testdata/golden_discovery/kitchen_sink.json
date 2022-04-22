@@ -690,6 +690,17 @@
      "type": "string"
     }
    }
+  },
+  "ReadOnly": {
+   "id": "ReadOnly",
+   "description": "ReadOnly type definition.",
+   "type": "object",
+   "properties": {
+    "name": {
+     "description": "ReadOnly type name.",
+     "type": "string"
+    }
+   }
   }
  },
  "resources": {

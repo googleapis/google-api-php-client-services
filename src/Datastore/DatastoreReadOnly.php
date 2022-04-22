@@ -17,42 +17,28 @@
 
 namespace Google\Service\Datastore;
 
-class TransactionOptions extends \Google\Model
+class DatastoreReadOnly extends \Google\Model
 {
-  protected $readOnlyType = DatastoreReadOnly::class;
-  protected $readOnlyDataType = '';
-  protected $readWriteType = ReadWrite::class;
-  protected $readWriteDataType = '';
+  /**
+   * @var string
+   */
+  public $readTime;
 
   /**
-   * @param DatastoreReadOnly
+   * @param string
    */
-  public function setReadOnly(DatastoreReadOnly $readOnly)
+  public function setReadTime($readTime)
   {
-    $this->readOnly = $readOnly;
+    $this->readTime = $readTime;
   }
   /**
-   * @return DatastoreReadOnly
+   * @return string
    */
-  public function getReadOnly()
+  public function getReadTime()
   {
-    return $this->readOnly;
-  }
-  /**
-   * @param ReadWrite
-   */
-  public function setReadWrite(ReadWrite $readWrite)
-  {
-    $this->readWrite = $readWrite;
-  }
-  /**
-   * @return ReadWrite
-   */
-  public function getReadWrite()
-  {
-    return $this->readWrite;
+    return $this->readTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TransactionOptions::class, 'Google_Service_Datastore_TransactionOptions');
+class_alias(DatastoreReadOnly::class, 'Google_Service_Datastore_DatastoreReadOnly');

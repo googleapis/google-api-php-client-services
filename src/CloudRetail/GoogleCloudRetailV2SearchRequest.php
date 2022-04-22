@@ -39,6 +39,10 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
    */
   public $filter;
   /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var int
    */
   public $offset;
@@ -164,6 +168,20 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   public function getFilter()
   {
     return $this->filter;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param int
