@@ -17,81 +17,64 @@
 
 namespace Google\Service\BigQueryReservation;
 
-class BiReservation extends \Google\Collection
+class TableReference extends \Google\Model
 {
-  protected $collection_key = 'preferredTables';
   /**
    * @var string
    */
-  public $name;
-  protected $preferredTablesType = TableReference::class;
-  protected $preferredTablesDataType = 'array';
+  public $datasetId;
   /**
    * @var string
    */
-  public $size;
+  public $projectId;
   /**
    * @var string
    */
-  public $updateTime;
+  public $tableId;
 
   /**
    * @param string
    */
-  public function setName($name)
+  public function setDatasetId($datasetId)
   {
-    $this->name = $name;
+    $this->datasetId = $datasetId;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getDatasetId()
   {
-    return $this->name;
-  }
-  /**
-   * @param TableReference[]
-   */
-  public function setPreferredTables($preferredTables)
-  {
-    $this->preferredTables = $preferredTables;
-  }
-  /**
-   * @return TableReference[]
-   */
-  public function getPreferredTables()
-  {
-    return $this->preferredTables;
+    return $this->datasetId;
   }
   /**
    * @param string
    */
-  public function setSize($size)
+  public function setProjectId($projectId)
   {
-    $this->size = $size;
+    $this->projectId = $projectId;
   }
   /**
    * @return string
    */
-  public function getSize()
+  public function getProjectId()
   {
-    return $this->size;
+    return $this->projectId;
   }
   /**
    * @param string
    */
-  public function setUpdateTime($updateTime)
+  public function setTableId($tableId)
   {
-    $this->updateTime = $updateTime;
+    $this->tableId = $tableId;
   }
   /**
    * @return string
    */
-  public function getUpdateTime()
+  public function getTableId()
   {
-    return $this->updateTime;
+    return $this->tableId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BiReservation::class, 'Google_Service_BigQueryReservation_BiReservation');
+class_alias(TableReference::class, 'Google_Service_BigQueryReservation_TableReference');
