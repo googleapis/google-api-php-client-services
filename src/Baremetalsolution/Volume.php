@@ -30,6 +30,10 @@ class Volume extends \Google\Model
   /**
    * @var string
    */
+  public $emergencySizeGib;
+  /**
+   * @var string
+   */
   public $id;
   /**
    * @var string[]
@@ -97,6 +101,20 @@ class Volume extends \Google\Model
   public function getCurrentSizeGib()
   {
     return $this->currentSizeGib;
+  }
+  /**
+   * @param string
+   */
+  public function setEmergencySizeGib($emergencySizeGib)
+  {
+    $this->emergencySizeGib = $emergencySizeGib;
+  }
+  /**
+   * @return string
+   */
+  public function getEmergencySizeGib()
+  {
+    return $this->emergencySizeGib;
   }
   /**
    * @param string

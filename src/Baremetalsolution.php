@@ -201,6 +201,16 @@ class Baremetalsolution extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'stop' => [
+              'path' => 'v2/{+name}:stop',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]

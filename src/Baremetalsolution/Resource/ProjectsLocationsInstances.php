@@ -22,6 +22,7 @@ use Google\Service\Baremetalsolution\ListInstancesResponse;
 use Google\Service\Baremetalsolution\Operation;
 use Google\Service\Baremetalsolution\ResetInstanceRequest;
 use Google\Service\Baremetalsolution\StartInstanceRequest;
+use Google\Service\Baremetalsolution\StopInstanceRequest;
 
 /**
  * The "instances" collection of methods.
@@ -77,7 +78,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask The list of fields to update. The only currently
-   * supported fields are: `labels`
+   * supported fields are: `labels` `hyperthreading_enabled`
    * @return Operation
    */
   public function patch($name, Instance $postBody, $optParams = [])
@@ -114,6 +115,20 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('start', [$params], Operation::class);
+  }
+  /**
+   * Stop a running server. (instances.stop)
+   *
+   * @param string $name Required. Name of the resource.
+   * @param StopInstanceRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function stop($name, StopInstanceRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('stop', [$params], Operation::class);
   }
 }
 
