@@ -34,7 +34,9 @@ use Google\Client;
  */
 class SASPortalTesting extends \Google\Service
 {
-
+  /** See your primary Google Account email address. */
+  const USERINFO_EMAIL =
+      "https://www.googleapis.com/auth/userinfo.email";
 
   public $customers;
   public $customers_deployments;
