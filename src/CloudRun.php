@@ -169,10 +169,6 @@ class CloudRun extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -466,10 +462,6 @@ class CloudRun extends \Google\Service
                 'allowMissing' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
                 'validateOnly' => [
                   'location' => 'query',
