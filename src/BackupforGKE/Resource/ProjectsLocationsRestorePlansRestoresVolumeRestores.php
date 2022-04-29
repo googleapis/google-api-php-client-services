@@ -38,8 +38,7 @@ class ProjectsLocationsRestorePlansRestoresVolumeRestores extends \Google\Servic
    * Retrieve the details of a single VolumeRestore. (volumeRestores.get)
    *
    * @param string $name Required. Full name of the VolumeRestore resource.
-   * Format: projects/{project}/locations/{location}/restorePlans/{restore_plan}/r
-   * estores/{restore}/volumeRestores/{volume_restore}
+   * Format: projects/locations/restorePlans/restores/volumeRestores
    * @param array $optParams Optional parameters.
    * @return VolumeRestore
    */
@@ -83,12 +82,11 @@ class ProjectsLocationsRestorePlansRestoresVolumeRestores extends \Google\Servic
    * (volumeRestores.listProjectsLocationsRestorePlansRestoresVolumeRestores)
    *
    * @param string $parent Required. The Restore that contains the VolumeRestores
-   * to list. Format: projects/{project}/locations/{location}/restorePlans/{restor
-   * e_plan}/restores/{restore}
+   * to list. Format: projects/locations/restorePlans/restores
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter List filter.
-   * @opt_param string orderBy Sort results.
+   * @opt_param string filter Field match expression used to filter the results.
+   * @opt_param string orderBy Field by which to sort the results.
    * @opt_param int pageSize The target number of results to return in a single
    * response. If not specified, a default value will be chosen by the service.
    * Note that the response may inclue a partial list and a caller should only

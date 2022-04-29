@@ -38,8 +38,7 @@ class ProjectsLocationsBackupPlansBackupsVolumeBackups extends \Google\Service\R
    * Retrieve the details of a single VolumeBackup. (volumeBackups.get)
    *
    * @param string $name Required. Full name of the VolumeBackup resource. Format:
-   * projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{ba
-   * ckup}/volumeBackups/{volume_backup}
+   * projects/locations/backupPlans/backups/volumeBackups
    * @param array $optParams Optional parameters.
    * @return VolumeBackup
    */
@@ -83,12 +82,11 @@ class ProjectsLocationsBackupPlansBackupsVolumeBackups extends \Google\Service\R
    * (volumeBackups.listProjectsLocationsBackupPlansBackupsVolumeBackups)
    *
    * @param string $parent Required. The Backup that contains the VolumeBackups to
-   * list. Format: projects/{project}/locations/{location}/backupPlans/{backup_pla
-   * n}/backups/{backup}
+   * list. Format: projects/locations/backupPlans/backups
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter List filter.
-   * @opt_param string orderBy Sort results.
+   * @opt_param string filter Field match expression used to filter the results.
+   * @opt_param string orderBy Field by which to sort the results.
    * @opt_param int pageSize The target number of results to return in a single
    * response. If not specified, a default value will be chosen by the service.
    * Note that the response may inclue a partial list and a caller should only
