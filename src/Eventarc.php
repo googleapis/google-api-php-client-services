@@ -23,7 +23,7 @@ use Google\Client;
  * Service definition for Eventarc (v1).
  *
  * <p>
-</p>
+ * Build event-driven applications on Google Cloud Platform.</p>
  *
  * <p>
  * For more information about this service, see the API
