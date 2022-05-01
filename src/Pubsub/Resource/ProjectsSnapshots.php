@@ -92,10 +92,11 @@ class ProjectsSnapshots extends \Google\Service\Resource
     return $this->call('delete', [$params], PubsubEmpty::class);
   }
   /**
-   * Gets the configuration details of a snapshot. Snapshots are used in Seek
-   * operations, which allow you to manage message acknowledgments in bulk. That
-   * is, you can set the acknowledgment state of messages in an existing
-   * subscription to the state captured by a snapshot. (snapshots.get)
+   * Gets the configuration details of a snapshot. Snapshots are used in
+   * [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
+   * which allow you to manage message acknowledgments in bulk. That is, you can
+   * set the acknowledgment state of messages in an existing subscription to the
+   * state captured by a snapshot. (snapshots.get)
    *
    * @param string $snapshot Required. The name of the snapshot to get. Format is
    * `projects/{project}/snapshots/{snap}`.
@@ -162,10 +163,11 @@ class ProjectsSnapshots extends \Google\Service\Resource
     return $this->call('list', [$params], ListSnapshotsResponse::class);
   }
   /**
-   * Updates an existing snapshot. Snapshots are used in Seek operations, which
-   * allow you to manage message acknowledgments in bulk. That is, you can set the
-   * acknowledgment state of messages in an existing subscription to the state
-   * captured by a snapshot. (snapshots.patch)
+   * Updates an existing snapshot. Snapshots are used in
+   * [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
+   * which allow you to manage message acknowledgments in bulk. That is, you can
+   * set the acknowledgment state of messages in an existing subscription to the
+   * state captured by a snapshot. (snapshots.patch)
    *
    * @param string $name The name of the snapshot.
    * @param UpdateSnapshotRequest $postBody
