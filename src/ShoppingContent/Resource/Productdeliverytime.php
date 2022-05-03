@@ -51,7 +51,7 @@ class Productdeliverytime extends \Google\Service\Resource
    * @param string $merchantId Required. The Google merchant ID of the account
    * that contains the product. This account cannot be a multi-client account.
    * @param string $productId Required. The Content API ID of the product, in the
-   * form channel:contentLanguage:targetCountry:offerId.
+   * form `channel:contentLanguage:targetCountry:offerId`.
    * @param array $optParams Optional parameters.
    */
   public function delete($merchantId, $productId, $optParams = [])
@@ -61,12 +61,12 @@ class Productdeliverytime extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Gets productDeliveryTime by productId (productdeliverytime.get)
+   * Gets `productDeliveryTime` by `productId`. (productdeliverytime.get)
    *
    * @param string $merchantId Required. The Google merchant ID of the account
    * that contains the product. This account cannot be a multi-client account.
    * @param string $productId Required. The Content API ID of the product, in the
-   * form channel:contentLanguage:targetCountry:offerId.
+   * form `channel:contentLanguage:targetCountry:offerId`.
    * @param array $optParams Optional parameters.
    * @return ProductDeliveryTimeModel
    */
