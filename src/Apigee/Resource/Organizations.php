@@ -24,6 +24,8 @@ use Google\Service\Apigee\GoogleCloudApigeeV1Organization;
 use Google\Service\Apigee\GoogleCloudApigeeV1RuntimeConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1SetAddonsRequest;
 use Google\Service\Apigee\GoogleCloudApigeeV1SyncAuthorization;
+use Google\Service\Apigee\GoogleIamV1TestIamPermissionsRequest;
+use Google\Service\Apigee\GoogleIamV1TestIamPermissionsResponse;
 use Google\Service\Apigee\GoogleLongrunningOperation;
 
 /**
@@ -201,6 +203,25 @@ class Organizations extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setSyncAuthorization', [$params], GoogleCloudApigeeV1SyncAuthorization::class);
+  }
+  /**
+   * Tests the permissions of a user on an organization, and returns a subset of
+   * permissions that the user has on the organization. If the organization does
+   * not exist, an empty permission set is returned (a NOT_FOUND error is not
+   * returned). (organizations.testIamPermissions)
+   *
+   * @param string $resource REQUIRED: The resource for which the policy detail is
+   * being requested. See the operation documentation for the appropriate value
+   * for this field.
+   * @param GoogleIamV1TestIamPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleIamV1TestIamPermissionsResponse
+   */
+  public function testIamPermissions($resource, GoogleIamV1TestIamPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], GoogleIamV1TestIamPermissionsResponse::class);
   }
   /**
    * Updates the properties for an Apigee organization. No other fields in the
