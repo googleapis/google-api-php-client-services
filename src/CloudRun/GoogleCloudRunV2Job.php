@@ -19,7 +19,7 @@ namespace Google\Service\CloudRun;
 
 class GoogleCloudRunV2Job extends \Google\Collection
 {
-  protected $collection_key = 'containerStatuses';
+  protected $collection_key = 'conditions';
   /**
    * @var string[]
    */
@@ -36,8 +36,6 @@ class GoogleCloudRunV2Job extends \Google\Collection
   public $clientVersion;
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
-  protected $containerStatusesType = GoogleCloudRunV2ContainerStatus::class;
-  protected $containerStatusesDataType = 'array';
   /**
    * @var string
    */
@@ -174,20 +172,6 @@ class GoogleCloudRunV2Job extends \Google\Collection
   public function getConditions()
   {
     return $this->conditions;
-  }
-  /**
-   * @param GoogleCloudRunV2ContainerStatus[]
-   */
-  public function setContainerStatuses($containerStatuses)
-  {
-    $this->containerStatuses = $containerStatuses;
-  }
-  /**
-   * @return GoogleCloudRunV2ContainerStatus[]
-   */
-  public function getContainerStatuses()
-  {
-    return $this->containerStatuses;
   }
   /**
    * @param string
