@@ -20,18 +20,20 @@ namespace Google\Service\ArtifactRegistry;
 class BatchDeleteVersionsMetadata extends \Google\Collection
 {
   protected $collection_key = 'failedVersions';
-  protected $failedVersionsType = Version::class;
-  protected $failedVersionsDataType = 'array';
+  /**
+   * @var string[]
+   */
+  public $failedVersions;
 
   /**
-   * @param Version[]
+   * @param string[]
    */
   public function setFailedVersions($failedVersions)
   {
     $this->failedVersions = $failedVersions;
   }
   /**
-   * @return Version[]
+   * @return string[]
    */
   public function getFailedVersions()
   {
