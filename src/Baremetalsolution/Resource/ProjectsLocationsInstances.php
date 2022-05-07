@@ -17,6 +17,7 @@
 
 namespace Google\Service\Baremetalsolution\Resource;
 
+use Google\Service\Baremetalsolution\DetachLunRequest;
 use Google\Service\Baremetalsolution\Instance;
 use Google\Service\Baremetalsolution\ListInstancesResponse;
 use Google\Service\Baremetalsolution\Operation;
@@ -34,6 +35,20 @@ use Google\Service\Baremetalsolution\StopInstanceRequest;
  */
 class ProjectsLocationsInstances extends \Google\Service\Resource
 {
+  /**
+   * Detach LUN from Instance. (instances.detachLun)
+   *
+   * @param string $instance Required. Name of the instance.
+   * @param DetachLunRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function detachLun($instance, DetachLunRequest $postBody, $optParams = [])
+  {
+    $params = ['instance' => $instance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('detachLun', [$params], Operation::class);
+  }
   /**
    * Get details about a single server. (instances.get)
    *
