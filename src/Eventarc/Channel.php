@@ -17,29 +17,16 @@
 
 namespace Google\Service\Eventarc;
 
-class Trigger extends \Google\Collection
+class Channel extends \Google\Model
 {
-  protected $collection_key = 'eventFilters';
   /**
    * @var string
    */
-  public $channel;
+  public $activationToken;
   /**
    * @var string
    */
   public $createTime;
-  protected $destinationType = Destination::class;
-  protected $destinationDataType = '';
-  /**
-   * @var string
-   */
-  public $etag;
-  protected $eventFiltersType = EventFilter::class;
-  protected $eventFiltersDataType = 'array';
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
@@ -47,9 +34,15 @@ class Trigger extends \Google\Collection
   /**
    * @var string
    */
-  public $serviceAccount;
-  protected $transportType = Transport::class;
-  protected $transportDataType = '';
+  public $provider;
+  /**
+   * @var string
+   */
+  public $pubsubTopic;
+  /**
+   * @var string
+   */
+  public $state;
   /**
    * @var string
    */
@@ -62,16 +55,16 @@ class Trigger extends \Google\Collection
   /**
    * @param string
    */
-  public function setChannel($channel)
+  public function setActivationToken($activationToken)
   {
-    $this->channel = $channel;
+    $this->activationToken = $activationToken;
   }
   /**
    * @return string
    */
-  public function getChannel()
+  public function getActivationToken()
   {
-    return $this->channel;
+    return $this->activationToken;
   }
   /**
    * @param string
@@ -86,62 +79,6 @@ class Trigger extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
-  }
-  /**
-   * @param Destination
-   */
-  public function setDestination(Destination $destination)
-  {
-    $this->destination = $destination;
-  }
-  /**
-   * @return Destination
-   */
-  public function getDestination()
-  {
-    return $this->destination;
-  }
-  /**
-   * @param string
-   */
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  /**
-   * @return string
-   */
-  public function getEtag()
-  {
-    return $this->etag;
-  }
-  /**
-   * @param EventFilter[]
-   */
-  public function setEventFilters($eventFilters)
-  {
-    $this->eventFilters = $eventFilters;
-  }
-  /**
-   * @return EventFilter[]
-   */
-  public function getEventFilters()
-  {
-    return $this->eventFilters;
-  }
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
   }
   /**
    * @param string
@@ -160,30 +97,44 @@ class Trigger extends \Google\Collection
   /**
    * @param string
    */
-  public function setServiceAccount($serviceAccount)
+  public function setProvider($provider)
   {
-    $this->serviceAccount = $serviceAccount;
+    $this->provider = $provider;
   }
   /**
    * @return string
    */
-  public function getServiceAccount()
+  public function getProvider()
   {
-    return $this->serviceAccount;
+    return $this->provider;
   }
   /**
-   * @param Transport
+   * @param string
    */
-  public function setTransport(Transport $transport)
+  public function setPubsubTopic($pubsubTopic)
   {
-    $this->transport = $transport;
+    $this->pubsubTopic = $pubsubTopic;
   }
   /**
-   * @return Transport
+   * @return string
    */
-  public function getTransport()
+  public function getPubsubTopic()
   {
-    return $this->transport;
+    return $this->pubsubTopic;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * @param string
@@ -216,4 +167,4 @@ class Trigger extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Trigger::class, 'Google_Service_Eventarc_Trigger');
+class_alias(Channel::class, 'Google_Service_Eventarc_Channel');
