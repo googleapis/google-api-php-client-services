@@ -63,7 +63,7 @@ class MyBusinessQA extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1/{+parent}',
+              'path' => 'v1/{+parent}/questions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -83,7 +83,7 @@ class MyBusinessQA extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1/{+parent}',
+              'path' => 'v1/{+parent}/questions',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
