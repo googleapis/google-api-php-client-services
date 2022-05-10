@@ -18,6 +18,7 @@
 namespace Google\Service\ChromeManagement\Resource;
 
 use Google\Service\ChromeManagement\GoogleChromeManagementV1ListTelemetryDevicesResponse;
+use Google\Service\ChromeManagement\GoogleChromeManagementV1TelemetryDevice;
 
 /**
  * The "devices" collection of methods.
@@ -29,6 +30,19 @@ use Google\Service\ChromeManagement\GoogleChromeManagementV1ListTelemetryDevices
  */
 class CustomersTelemetryDevices extends \Google\Service\Resource
 {
+  /**
+   * Get telemetry device. (devices.get)
+   *
+   * @param string $name Required. Name of the `TelemetryDevice` to return.
+   * @param array $optParams Optional parameters.
+   * @return GoogleChromeManagementV1TelemetryDevice
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleChromeManagementV1TelemetryDevice::class);
+  }
   /**
    * List all telemetry devices. (devices.listCustomersTelemetryDevices)
    *
