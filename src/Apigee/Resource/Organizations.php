@@ -24,8 +24,6 @@ use Google\Service\Apigee\GoogleCloudApigeeV1Organization;
 use Google\Service\Apigee\GoogleCloudApigeeV1RuntimeConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1SetAddonsRequest;
 use Google\Service\Apigee\GoogleCloudApigeeV1SyncAuthorization;
-use Google\Service\Apigee\GoogleIamV1TestIamPermissionsRequest;
-use Google\Service\Apigee\GoogleIamV1TestIamPermissionsResponse;
 use Google\Service\Apigee\GoogleLongrunningOperation;
 
 /**
@@ -58,12 +56,22 @@ class Organizations extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Delete an Apigee organization. Only supported for SubscriptionType TRIAL.
+   * Delete an Apigee organization. For organizations with BillingType EVALUATION,
+   * an immediate deletion is performed. For paid organizations, a soft-deletion
+   * is performed. The organization can be restored within the soft-deletion
+   * period - which can be controlled using the retention field in the request.
    * (organizations.delete)
    *
    * @param string $name Required. Name of the organization. Use the following
    * structure in your request: `organizations/{org}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string retention Optional. This setting is only applicable for
+   * organizations that are soft-deleted (i.e. BillingType is not EVALUATION). It
+   * controls how long Organization data will be retained after the initial delete
+   * operation completes. During this period, the Organization may be restored to
+   * its last known state. After this period, the Organization will no longer be
+   * able to be restored.
    * @return GoogleLongrunningOperation
    */
   public function delete($name, $optParams = [])
@@ -203,25 +211,6 @@ class Organizations extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setSyncAuthorization', [$params], GoogleCloudApigeeV1SyncAuthorization::class);
-  }
-  /**
-   * Tests the permissions of a user on an organization, and returns a subset of
-   * permissions that the user has on the organization. If the organization does
-   * not exist, an empty permission set is returned (a NOT_FOUND error is not
-   * returned). (organizations.testIamPermissions)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy detail is
-   * being requested. See the operation documentation for the appropriate value
-   * for this field.
-   * @param GoogleIamV1TestIamPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleIamV1TestIamPermissionsResponse
-   */
-  public function testIamPermissions($resource, GoogleIamV1TestIamPermissionsRequest $postBody, $optParams = [])
-  {
-    $params = ['resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', [$params], GoogleIamV1TestIamPermissionsResponse::class);
   }
   /**
    * Updates the properties for an Apigee organization. No other fields in the
