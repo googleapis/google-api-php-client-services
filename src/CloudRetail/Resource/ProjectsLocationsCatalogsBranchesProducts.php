@@ -315,10 +315,10 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * this product will be used. If no inventory fields are set in
    * SetInventoryRequest.set_mask, then any existing inventory information will be
    * preserved. Pre-existing inventory information can only be updated with
-   * SetInventory, AddFulfillmentPlaces, and RemoveFulfillmentPlaces. This feature
-   * is only available for users who have Retail Search enabled. Please enable
-   * Retail Search on Cloud Console before using this feature.
-   * (products.setInventory)
+   * SetInventory, ProductService.AddFulfillmentPlaces, and
+   * RemoveFulfillmentPlaces. This feature is only available for users who have
+   * Retail Search enabled. Please enable Retail Search on Cloud Console before
+   * using this feature. (products.setInventory)
    *
    * @param string $name Immutable. Full resource name of the product, such as `pr
    * ojects/locations/global/catalogs/default_catalog/branches/default_branch/prod
