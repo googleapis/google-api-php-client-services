@@ -37,7 +37,7 @@ class Spaces extends \Google\Service\Resource
    * accounts). (spaces.get)
    *
    * @param string $name Required. Resource name of the space, in the form
-   * "spaces". Example: spaces/AAAAAAAAAAAA
+   * "spaces". Format: spaces/{space}
    * @param array $optParams Optional parameters.
    * @return Space
    */
