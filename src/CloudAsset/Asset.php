@@ -42,6 +42,10 @@ class Asset extends \Google\Collection
   protected $orgPolicyDataType = 'array';
   protected $osInventoryType = Inventory::class;
   protected $osInventoryDataType = '';
+  protected $relatedAssetType = RelatedAsset::class;
+  protected $relatedAssetDataType = '';
+  protected $relatedAssetsType = RelatedAssets::class;
+  protected $relatedAssetsDataType = '';
   protected $resourceType = CloudassetResource::class;
   protected $resourceDataType = '';
   protected $servicePerimeterType = GoogleIdentityAccesscontextmanagerV1ServicePerimeter::class;
@@ -162,6 +166,34 @@ class Asset extends \Google\Collection
   public function getOsInventory()
   {
     return $this->osInventory;
+  }
+  /**
+   * @param RelatedAsset
+   */
+  public function setRelatedAsset(RelatedAsset $relatedAsset)
+  {
+    $this->relatedAsset = $relatedAsset;
+  }
+  /**
+   * @return RelatedAsset
+   */
+  public function getRelatedAsset()
+  {
+    return $this->relatedAsset;
+  }
+  /**
+   * @param RelatedAssets
+   */
+  public function setRelatedAssets(RelatedAssets $relatedAssets)
+  {
+    $this->relatedAssets = $relatedAssets;
+  }
+  /**
+   * @return RelatedAssets
+   */
+  public function getRelatedAssets()
+  {
+    return $this->relatedAssets;
   }
   /**
    * @param CloudassetResource
