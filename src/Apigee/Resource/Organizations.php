@@ -21,6 +21,7 @@ use Google\Service\Apigee\GoogleCloudApigeeV1GetSyncAuthorizationRequest;
 use Google\Service\Apigee\GoogleCloudApigeeV1IngressConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1ListOrganizationsResponse;
 use Google\Service\Apigee\GoogleCloudApigeeV1Organization;
+use Google\Service\Apigee\GoogleCloudApigeeV1OrganizationProjectMapping;
 use Google\Service\Apigee\GoogleCloudApigeeV1RuntimeConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1SetAddonsRequest;
 use Google\Service\Apigee\GoogleCloudApigeeV1SyncAuthorization;
@@ -115,6 +116,21 @@ class Organizations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('getDeployedIngressConfig', [$params], GoogleCloudApigeeV1IngressConfig::class);
+  }
+  /**
+   * Gets the project ID and region for an Apigee organization.
+   * (organizations.getProjectMapping)
+   *
+   * @param string $name Required. Apigee organization name in the following
+   * format: `organizations/{org}`
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1OrganizationProjectMapping
+   */
+  public function getProjectMapping($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getProjectMapping', [$params], GoogleCloudApigeeV1OrganizationProjectMapping::class);
   }
   /**
    * Get runtime config for an organization. (organizations.getRuntimeConfig)

@@ -198,6 +198,16 @@ class Apigee extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'getProjectMapping' => [
+              'path' => 'v1/{+name}:getProjectMapping',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getRuntimeConfig' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
