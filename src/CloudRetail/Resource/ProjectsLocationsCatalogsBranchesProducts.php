@@ -154,10 +154,9 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudRetailV2Product::class);
   }
   /**
-   * Bulk import of multiple Products. Request processing may be synchronous. No
-   * partial updating is supported. Non-existing items are created. Note that it
-   * is possible for a subset of the Products to be successfully updated.
-   * (products.import)
+   * Bulk import of multiple Products. Request processing may be synchronous. Non-
+   * existing items are created. Note that it is possible for a subset of the
+   * Products to be successfully updated. (products.import)
    *
    * @param string $parent Required. `projects/1234/locations/global/catalogs/defa
    * ult_catalog/branches/default_branch` If no updateMask is specified, requires
