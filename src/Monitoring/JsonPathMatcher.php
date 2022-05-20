@@ -17,62 +17,46 @@
 
 namespace Google\Service\Monitoring;
 
-class ContentMatcher extends \Google\Model
+class JsonPathMatcher extends \Google\Model
 {
   /**
    * @var string
    */
-  public $content;
-  protected $jsonPathMatcherType = JsonPathMatcher::class;
-  protected $jsonPathMatcherDataType = '';
+  public $jsonMatcher;
   /**
    * @var string
    */
-  public $matcher;
+  public $jsonPath;
 
   /**
    * @param string
    */
-  public function setContent($content)
+  public function setJsonMatcher($jsonMatcher)
   {
-    $this->content = $content;
+    $this->jsonMatcher = $jsonMatcher;
   }
   /**
    * @return string
    */
-  public function getContent()
+  public function getJsonMatcher()
   {
-    return $this->content;
-  }
-  /**
-   * @param JsonPathMatcher
-   */
-  public function setJsonPathMatcher(JsonPathMatcher $jsonPathMatcher)
-  {
-    $this->jsonPathMatcher = $jsonPathMatcher;
-  }
-  /**
-   * @return JsonPathMatcher
-   */
-  public function getJsonPathMatcher()
-  {
-    return $this->jsonPathMatcher;
+    return $this->jsonMatcher;
   }
   /**
    * @param string
    */
-  public function setMatcher($matcher)
+  public function setJsonPath($jsonPath)
   {
-    $this->matcher = $matcher;
+    $this->jsonPath = $jsonPath;
   }
   /**
    * @return string
    */
-  public function getMatcher()
+  public function getJsonPath()
   {
-    return $this->matcher;
+    return $this->jsonPath;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ContentMatcher::class, 'Google_Service_Monitoring_ContentMatcher');
+class_alias(JsonPathMatcher::class, 'Google_Service_Monitoring_JsonPathMatcher');
