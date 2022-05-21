@@ -46,6 +46,10 @@ class Volume extends \Google\Model
   /**
    * @var string
    */
+  public $pod;
+  /**
+   * @var string
+   */
   public $remainingSpaceGib;
   /**
    * @var string
@@ -157,6 +161,20 @@ class Volume extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setPod($pod)
+  {
+    $this->pod = $pod;
+  }
+  /**
+   * @return string
+   */
+  public function getPod()
+  {
+    return $this->pod;
   }
   /**
    * @param string
