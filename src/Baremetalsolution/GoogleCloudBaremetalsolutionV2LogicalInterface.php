@@ -17,47 +17,47 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class ServerNetworkTemplate extends \Google\Collection
+class GoogleCloudBaremetalsolutionV2LogicalInterface extends \Google\Collection
 {
-  protected $collection_key = 'logicalInterfaces';
+  protected $collection_key = 'logicalNetworkInterfaces';
   /**
-   * @var string[]
+   * @var int
    */
-  public $applicableInstanceTypes;
-  protected $logicalInterfacesType = GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface::class;
-  protected $logicalInterfacesDataType = 'array';
+  public $interfaceIndex;
+  protected $logicalNetworkInterfacesType = LogicalNetworkInterface::class;
+  protected $logicalNetworkInterfacesDataType = 'array';
   /**
    * @var string
    */
   public $name;
 
   /**
-   * @param string[]
+   * @param int
    */
-  public function setApplicableInstanceTypes($applicableInstanceTypes)
+  public function setInterfaceIndex($interfaceIndex)
   {
-    $this->applicableInstanceTypes = $applicableInstanceTypes;
+    $this->interfaceIndex = $interfaceIndex;
   }
   /**
-   * @return string[]
+   * @return int
    */
-  public function getApplicableInstanceTypes()
+  public function getInterfaceIndex()
   {
-    return $this->applicableInstanceTypes;
+    return $this->interfaceIndex;
   }
   /**
-   * @param GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface[]
+   * @param LogicalNetworkInterface[]
    */
-  public function setLogicalInterfaces($logicalInterfaces)
+  public function setLogicalNetworkInterfaces($logicalNetworkInterfaces)
   {
-    $this->logicalInterfaces = $logicalInterfaces;
+    $this->logicalNetworkInterfaces = $logicalNetworkInterfaces;
   }
   /**
-   * @return GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface[]
+   * @return LogicalNetworkInterface[]
    */
-  public function getLogicalInterfaces()
+  public function getLogicalNetworkInterfaces()
   {
-    return $this->logicalInterfaces;
+    return $this->logicalNetworkInterfaces;
   }
   /**
    * @param string
@@ -76,4 +76,4 @@ class ServerNetworkTemplate extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServerNetworkTemplate::class, 'Google_Service_Baremetalsolution_ServerNetworkTemplate');
+class_alias(GoogleCloudBaremetalsolutionV2LogicalInterface::class, 'Google_Service_Baremetalsolution_GoogleCloudBaremetalsolutionV2LogicalInterface');
