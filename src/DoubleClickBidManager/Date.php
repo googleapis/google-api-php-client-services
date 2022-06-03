@@ -17,45 +17,64 @@
 
 namespace Google\Service\DoubleClickBidManager;
 
-class ListReportsResponse extends \Google\Collection
+class Date extends \Google\Model
 {
-  protected $collection_key = 'reports';
   /**
-   * @var string
+   * @var int
    */
-  public $nextPageToken;
-  protected $reportsType = Report::class;
-  protected $reportsDataType = 'array';
+  public $day;
+  /**
+   * @var int
+   */
+  public $month;
+  /**
+   * @var int
+   */
+  public $year;
 
   /**
-   * @param string
+   * @param int
    */
-  public function setNextPageToken($nextPageToken)
+  public function setDay($day)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->day = $day;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getNextPageToken()
+  public function getDay()
   {
-    return $this->nextPageToken;
+    return $this->day;
   }
   /**
-   * @param Report[]
+   * @param int
    */
-  public function setReports($reports)
+  public function setMonth($month)
   {
-    $this->reports = $reports;
+    $this->month = $month;
   }
   /**
-   * @return Report[]
+   * @return int
    */
-  public function getReports()
+  public function getMonth()
   {
-    return $this->reports;
+    return $this->month;
+  }
+  /**
+   * @param int
+   */
+  public function setYear($year)
+  {
+    $this->year = $year;
+  }
+  /**
+   * @return int
+   */
+  public function getYear()
+  {
+    return $this->year;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListReportsResponse::class, 'Google_Service_DoubleClickBidManager_ListReportsResponse');
+class_alias(Date::class, 'Google_Service_DoubleClickBidManager_Date');

@@ -17,64 +17,60 @@
 
 namespace Google\Service\DoubleClickBidManager;
 
-class ReportStatus extends \Google\Model
+class DataRange extends \Google\Model
 {
+  protected $customEndDateType = Date::class;
+  protected $customEndDateDataType = '';
+  protected $customStartDateType = Date::class;
+  protected $customStartDateDataType = '';
   /**
    * @var string
    */
-  public $finishTime;
-  /**
-   * @var string
-   */
-  public $format;
-  /**
-   * @var string
-   */
-  public $state;
+  public $range;
 
   /**
+   * @param Date
+   */
+  public function setCustomEndDate(Date $customEndDate)
+  {
+    $this->customEndDate = $customEndDate;
+  }
+  /**
+   * @return Date
+   */
+  public function getCustomEndDate()
+  {
+    return $this->customEndDate;
+  }
+  /**
+   * @param Date
+   */
+  public function setCustomStartDate(Date $customStartDate)
+  {
+    $this->customStartDate = $customStartDate;
+  }
+  /**
+   * @return Date
+   */
+  public function getCustomStartDate()
+  {
+    return $this->customStartDate;
+  }
+  /**
    * @param string
    */
-  public function setFinishTime($finishTime)
+  public function setRange($range)
   {
-    $this->finishTime = $finishTime;
+    $this->range = $range;
   }
   /**
    * @return string
    */
-  public function getFinishTime()
+  public function getRange()
   {
-    return $this->finishTime;
-  }
-  /**
-   * @param string
-   */
-  public function setFormat($format)
-  {
-    $this->format = $format;
-  }
-  /**
-   * @return string
-   */
-  public function getFormat()
-  {
-    return $this->format;
-  }
-  /**
-   * @param string
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return string
-   */
-  public function getState()
-  {
-    return $this->state;
+    return $this->range;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReportStatus::class, 'Google_Service_DoubleClickBidManager_ReportStatus');
+class_alias(DataRange::class, 'Google_Service_DoubleClickBidManager_DataRange');
