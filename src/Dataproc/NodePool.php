@@ -17,63 +17,65 @@
 
 namespace Google\Service\Dataproc;
 
-class RepairClusterRequest extends \Google\Collection
+class NodePool extends \Google\Collection
 {
-  protected $collection_key = 'nodePools';
+  protected $collection_key = 'instanceNames';
   /**
    * @var string
    */
-  public $clusterUuid;
-  protected $nodePoolsType = NodePool::class;
-  protected $nodePoolsDataType = 'array';
+  public $id;
+  /**
+   * @var string[]
+   */
+  public $instanceNames;
   /**
    * @var string
    */
-  public $requestId;
+  public $repairAction;
 
   /**
    * @param string
    */
-  public function setClusterUuid($clusterUuid)
+  public function setId($id)
   {
-    $this->clusterUuid = $clusterUuid;
+    $this->id = $id;
   }
   /**
    * @return string
    */
-  public function getClusterUuid()
+  public function getId()
   {
-    return $this->clusterUuid;
+    return $this->id;
   }
   /**
-   * @param NodePool[]
+   * @param string[]
    */
-  public function setNodePools($nodePools)
+  public function setInstanceNames($instanceNames)
   {
-    $this->nodePools = $nodePools;
+    $this->instanceNames = $instanceNames;
   }
   /**
-   * @return NodePool[]
+   * @return string[]
    */
-  public function getNodePools()
+  public function getInstanceNames()
   {
-    return $this->nodePools;
+    return $this->instanceNames;
   }
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setRepairAction($repairAction)
   {
-    $this->requestId = $requestId;
+    $this->repairAction = $repairAction;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getRepairAction()
   {
-    return $this->requestId;
+    return $this->repairAction;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepairClusterRequest::class, 'Google_Service_Dataproc_RepairClusterRequest');
+class_alias(NodePool::class, 'Google_Service_Dataproc_NodePool');
