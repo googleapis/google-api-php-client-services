@@ -17,64 +17,64 @@
 
 namespace Google\Service\Document;
 
-class GoogleCloudDocumentaiV1ReviewDocumentResponse extends \Google\Model
+class GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty extends \Google\Model
 {
   /**
    * @var string
    */
-  public $gcsDestination;
+  public $name;
   /**
    * @var string
    */
-  public $rejectionReason;
+  public $occurrenceType;
   /**
    * @var string
    */
-  public $state;
+  public $valueType;
 
   /**
    * @param string
    */
-  public function setGcsDestination($gcsDestination)
+  public function setName($name)
   {
-    $this->gcsDestination = $gcsDestination;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getGcsDestination()
+  public function getName()
   {
-    return $this->gcsDestination;
+    return $this->name;
   }
   /**
    * @param string
    */
-  public function setRejectionReason($rejectionReason)
+  public function setOccurrenceType($occurrenceType)
   {
-    $this->rejectionReason = $rejectionReason;
+    $this->occurrenceType = $occurrenceType;
   }
   /**
    * @return string
    */
-  public function getRejectionReason()
+  public function getOccurrenceType()
   {
-    return $this->rejectionReason;
+    return $this->occurrenceType;
   }
   /**
    * @param string
    */
-  public function setState($state)
+  public function setValueType($valueType)
   {
-    $this->state = $state;
+    $this->valueType = $valueType;
   }
   /**
    * @return string
    */
-  public function getState()
+  public function getValueType()
   {
-    return $this->state;
+    return $this->valueType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDocumentaiV1ReviewDocumentResponse::class, 'Google_Service_Document_GoogleCloudDocumentaiV1ReviewDocumentResponse');
+class_alias(GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty::class, 'Google_Service_Document_GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty');
