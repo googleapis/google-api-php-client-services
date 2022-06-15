@@ -17,9 +17,9 @@
 
 namespace Google\Service\Compute;
 
-class VmEndpointNatMappingsInterfaceNatMappings extends \Google\Collection
+class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings extends \Google\Collection
 {
-  protected $collection_key = 'ruleMappings';
+  protected $collection_key = 'natIpPortRanges';
   /**
    * @var string[]
    */
@@ -36,16 +36,10 @@ class VmEndpointNatMappingsInterfaceNatMappings extends \Google\Collection
    * @var int
    */
   public $numTotalNatPorts;
-  protected $ruleMappingsType = VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings::class;
-  protected $ruleMappingsDataType = 'array';
   /**
-   * @var string
+   * @var int
    */
-  public $sourceAliasIpRange;
-  /**
-   * @var string
-   */
-  public $sourceVirtualIp;
+  public $ruleNumber;
 
   /**
    * @param string[]
@@ -104,48 +98,20 @@ class VmEndpointNatMappingsInterfaceNatMappings extends \Google\Collection
     return $this->numTotalNatPorts;
   }
   /**
-   * @param VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings[]
+   * @param int
    */
-  public function setRuleMappings($ruleMappings)
+  public function setRuleNumber($ruleNumber)
   {
-    $this->ruleMappings = $ruleMappings;
+    $this->ruleNumber = $ruleNumber;
   }
   /**
-   * @return VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings[]
+   * @return int
    */
-  public function getRuleMappings()
+  public function getRuleNumber()
   {
-    return $this->ruleMappings;
-  }
-  /**
-   * @param string
-   */
-  public function setSourceAliasIpRange($sourceAliasIpRange)
-  {
-    $this->sourceAliasIpRange = $sourceAliasIpRange;
-  }
-  /**
-   * @return string
-   */
-  public function getSourceAliasIpRange()
-  {
-    return $this->sourceAliasIpRange;
-  }
-  /**
-   * @param string
-   */
-  public function setSourceVirtualIp($sourceVirtualIp)
-  {
-    $this->sourceVirtualIp = $sourceVirtualIp;
-  }
-  /**
-   * @return string
-   */
-  public function getSourceVirtualIp()
-  {
-    return $this->sourceVirtualIp;
+    return $this->ruleNumber;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmEndpointNatMappingsInterfaceNatMappings::class, 'Google_Service_Compute_VmEndpointNatMappingsInterfaceNatMappings');
+class_alias(VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings::class, 'Google_Service_Compute_VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings');
