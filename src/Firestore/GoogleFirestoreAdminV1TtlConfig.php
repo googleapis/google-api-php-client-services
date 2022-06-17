@@ -17,64 +17,28 @@
 
 namespace Google\Service\Firestore;
 
-class ListCollectionIdsRequest extends \Google\Model
+class GoogleFirestoreAdminV1TtlConfig extends \Google\Model
 {
   /**
-   * @var int
-   */
-  public $pageSize;
-  /**
    * @var string
    */
-  public $pageToken;
-  /**
-   * @var string
-   */
-  public $readTime;
+  public $state;
 
   /**
-   * @param int
-   */
-  public function setPageSize($pageSize)
-  {
-    $this->pageSize = $pageSize;
-  }
-  /**
-   * @return int
-   */
-  public function getPageSize()
-  {
-    return $this->pageSize;
-  }
-  /**
    * @param string
    */
-  public function setPageToken($pageToken)
+  public function setState($state)
   {
-    $this->pageToken = $pageToken;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getPageToken()
+  public function getState()
   {
-    return $this->pageToken;
-  }
-  /**
-   * @param string
-   */
-  public function setReadTime($readTime)
-  {
-    $this->readTime = $readTime;
-  }
-  /**
-   * @return string
-   */
-  public function getReadTime()
-  {
-    return $this->readTime;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListCollectionIdsRequest::class, 'Google_Service_Firestore_ListCollectionIdsRequest');
+class_alias(GoogleFirestoreAdminV1TtlConfig::class, 'Google_Service_Firestore_GoogleFirestoreAdminV1TtlConfig');
