@@ -17,80 +17,62 @@
 
 namespace Google\Service\HangoutsChat;
 
-class GoogleAppsCardV1OpenLink extends \Google\Model
+class GoogleAppsCardV1AppUri extends \Google\Model
 {
-  protected $appUriType = GoogleAppsCardV1AppUri::class;
-  protected $appUriDataType = '';
+  protected $androidIntentType = GoogleAppsCardV1Intent::class;
+  protected $androidIntentDataType = '';
   /**
    * @var string
    */
-  public $onClose;
+  public $companionUri;
   /**
    * @var string
    */
-  public $openAs;
-  /**
-   * @var string
-   */
-  public $url;
+  public $iosUri;
 
   /**
-   * @param GoogleAppsCardV1AppUri
+   * @param GoogleAppsCardV1Intent
    */
-  public function setAppUri(GoogleAppsCardV1AppUri $appUri)
+  public function setAndroidIntent(GoogleAppsCardV1Intent $androidIntent)
   {
-    $this->appUri = $appUri;
+    $this->androidIntent = $androidIntent;
   }
   /**
-   * @return GoogleAppsCardV1AppUri
+   * @return GoogleAppsCardV1Intent
    */
-  public function getAppUri()
+  public function getAndroidIntent()
   {
-    return $this->appUri;
-  }
-  /**
-   * @param string
-   */
-  public function setOnClose($onClose)
-  {
-    $this->onClose = $onClose;
-  }
-  /**
-   * @return string
-   */
-  public function getOnClose()
-  {
-    return $this->onClose;
+    return $this->androidIntent;
   }
   /**
    * @param string
    */
-  public function setOpenAs($openAs)
+  public function setCompanionUri($companionUri)
   {
-    $this->openAs = $openAs;
+    $this->companionUri = $companionUri;
   }
   /**
    * @return string
    */
-  public function getOpenAs()
+  public function getCompanionUri()
   {
-    return $this->openAs;
+    return $this->companionUri;
   }
   /**
    * @param string
    */
-  public function setUrl($url)
+  public function setIosUri($iosUri)
   {
-    $this->url = $url;
+    $this->iosUri = $iosUri;
   }
   /**
    * @return string
    */
-  public function getUrl()
+  public function getIosUri()
   {
-    return $this->url;
+    return $this->iosUri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAppsCardV1OpenLink::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1OpenLink');
+class_alias(GoogleAppsCardV1AppUri::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1AppUri');
