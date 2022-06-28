@@ -418,6 +418,16 @@ class GoogleAnalyticsAdmin extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'runAccessReport' => [
+              'path' => 'v1alpha/{+entity}:runAccessReport',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'entity' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'updateAttributionSettings' => [
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'PATCH',
