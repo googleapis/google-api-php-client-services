@@ -111,6 +111,8 @@ class ProjectsAndroidApps extends \Google\Service\Resource
    * its own limit.
    * @opt_param string pageToken Token returned from a previous call to
    * `ListAndroidApps` indicating where in the set of Apps to resume listing.
+   * @opt_param bool showDeleted Controls whether Apps in the DELETED state should
+   * be returned. Defaults to false.
    * @return ListAndroidAppsResponse
    */
   public function listProjectsAndroidApps($parent, $optParams = [])
@@ -137,7 +139,8 @@ class ProjectsAndroidApps extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Specifies which fields to update. Note that the
-   * fields `name`, `app_id`, `project_id`, and `package_name` are all immutable.
+   * fields `name`, `app_id`, `project_id`, `package_name`, and `state` are all
+   * immutable.
    * @return AndroidApp
    */
   public function patch($name, AndroidApp $postBody, $optParams = [])

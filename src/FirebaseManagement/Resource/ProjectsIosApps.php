@@ -109,6 +109,8 @@ class ProjectsIosApps extends \Google\Service\Resource
    * limit.
    * @opt_param string pageToken Token returned from a previous call to
    * `ListIosApps` indicating where in the set of Apps to resume listing.
+   * @opt_param bool showDeleted Controls whether Apps in the DELETED state should
+   * be returned. Defaults to false.
    * @return ListIosAppsResponse
    */
   public function listProjectsIosApps($parent, $optParams = [])
@@ -135,7 +137,8 @@ class ProjectsIosApps extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Specifies which fields to update. Note that the
-   * fields `name`, `appId`, `projectId`, and `bundleId` are all immutable.
+   * fields `name`, `appId`, `projectId`, `bundleId`, and `state` are all
+   * immutable
    * @return IosApp
    */
   public function patch($name, IosApp $postBody, $optParams = [])

@@ -39,6 +39,10 @@ class FirebaseAppInfo extends \Google\Model
    * @var string
    */
   public $platform;
+  /**
+   * @var string
+   */
+  public $state;
 
   /**
    * @param string
@@ -109,6 +113,20 @@ class FirebaseAppInfo extends \Google\Model
   public function getPlatform()
   {
     return $this->platform;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 

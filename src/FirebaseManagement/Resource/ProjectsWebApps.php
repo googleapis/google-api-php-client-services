@@ -110,6 +110,8 @@ class ProjectsWebApps extends \Google\Service\Resource
    * its own limit.
    * @opt_param string pageToken Token returned from a previous call to
    * `ListWebApps` indicating where in the set of Apps to resume listing.
+   * @opt_param bool showDeleted Controls whether Apps in the DELETED state should
+   * be returned. Defaults to false.
    * @return ListWebAppsResponse
    */
   public function listProjectsWebApps($parent, $optParams = [])
@@ -136,7 +138,7 @@ class ProjectsWebApps extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Specifies which fields to update. Note that the
-   * fields `name`, `appId`, and `projectId` are all immutable.
+   * fields `name`, `appId`, `projectId` and `state` are all immutable
    * @return WebApp
    */
   public function patch($name, WebApp $postBody, $optParams = [])
