@@ -19,6 +19,7 @@ namespace Google\Service\ShoppingContent;
 
 class ProductsCustomBatchRequestEntry extends \Google\Model
 {
+  /* Note public properties are needed because library uses Reflection to flatten this class into JSON for API */
   /**
    * @var string
    */
@@ -41,6 +42,10 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
    * @var string
    */
   public $productId;
+  /**
+   * @var Product
+   */
+  public $product;
   /**
    * @var string
    */
