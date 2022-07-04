@@ -17,19 +17,12 @@
 
 namespace Google\Service\Compute;
 
-class OperationErrorErrors extends \Google\Collection
+class LocalizedMessage extends \Google\Model
 {
-  protected $collection_key = 'errorDetails';
   /**
    * @var string
    */
-  public $code;
-  protected $errorDetailsType = OperationErrorErrorsErrorDetails::class;
-  protected $errorDetailsDataType = 'array';
-  /**
-   * @var string
-   */
-  public $location;
+  public $locale;
   /**
    * @var string
    */
@@ -38,44 +31,16 @@ class OperationErrorErrors extends \Google\Collection
   /**
    * @param string
    */
-  public function setCode($code)
+  public function setLocale($locale)
   {
-    $this->code = $code;
+    $this->locale = $locale;
   }
   /**
    * @return string
    */
-  public function getCode()
+  public function getLocale()
   {
-    return $this->code;
-  }
-  /**
-   * @param OperationErrorErrorsErrorDetails[]
-   */
-  public function setErrorDetails($errorDetails)
-  {
-    $this->errorDetails = $errorDetails;
-  }
-  /**
-   * @return OperationErrorErrorsErrorDetails[]
-   */
-  public function getErrorDetails()
-  {
-    return $this->errorDetails;
-  }
-  /**
-   * @param string
-   */
-  public function setLocation($location)
-  {
-    $this->location = $location;
-  }
-  /**
-   * @return string
-   */
-  public function getLocation()
-  {
-    return $this->location;
+    return $this->locale;
   }
   /**
    * @param string
@@ -94,4 +59,4 @@ class OperationErrorErrors extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OperationErrorErrors::class, 'Google_Service_Compute_OperationErrorErrors');
+class_alias(LocalizedMessage::class, 'Google_Service_Compute_LocalizedMessage');

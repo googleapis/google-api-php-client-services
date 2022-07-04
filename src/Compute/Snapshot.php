@@ -21,6 +21,10 @@ class Snapshot extends \Google\Collection
 {
   protected $collection_key = 'storageLocations';
   /**
+   * @var string
+   */
+  public $architecture;
+  /**
    * @var bool
    */
   public $autoCreated;
@@ -113,6 +117,20 @@ class Snapshot extends \Google\Collection
    */
   public $storageLocations;
 
+  /**
+   * @param string
+   */
+  public function setArchitecture($architecture)
+  {
+    $this->architecture = $architecture;
+  }
+  /**
+   * @return string
+   */
+  public function getArchitecture()
+  {
+    return $this->architecture;
+  }
   /**
    * @param bool
    */
