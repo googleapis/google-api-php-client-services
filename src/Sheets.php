@@ -291,6 +291,10 @@ class Sheets extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'valueInputOption' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'batchUpdateByDataFilter' => [
               'path' => 'v4/spreadsheets/{spreadsheetId}/values:batchUpdateByDataFilter',
