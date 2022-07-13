@@ -103,6 +103,14 @@ class Snapshot extends \Google\Collection
   /**
    * @var string
    */
+  public $sourceSnapshotSchedulePolicy;
+  /**
+   * @var string
+   */
+  public $sourceSnapshotSchedulePolicyId;
+  /**
+   * @var string
+   */
   public $status;
   /**
    * @var string
@@ -410,6 +418,34 @@ class Snapshot extends \Google\Collection
   public function getSourceDiskId()
   {
     return $this->sourceDiskId;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceSnapshotSchedulePolicy($sourceSnapshotSchedulePolicy)
+  {
+    $this->sourceSnapshotSchedulePolicy = $sourceSnapshotSchedulePolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceSnapshotSchedulePolicy()
+  {
+    return $this->sourceSnapshotSchedulePolicy;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceSnapshotSchedulePolicyId($sourceSnapshotSchedulePolicyId)
+  {
+    $this->sourceSnapshotSchedulePolicyId = $sourceSnapshotSchedulePolicyId;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceSnapshotSchedulePolicyId()
+  {
+    return $this->sourceSnapshotSchedulePolicyId;
   }
   /**
    * @param string
