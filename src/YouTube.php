@@ -821,30 +821,6 @@ class YouTube extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                 ],
-                'resource.cueType' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'resource.durationSecs' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'resource.etag' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'resource.id' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'resource.insertionOffsetTimeMs' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'resource.walltimeMs' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'list' => [
               'path' => 'youtube/v3/liveBroadcasts',

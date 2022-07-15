@@ -163,6 +163,7 @@ class LiveBroadcasts extends \Google\Service\Resource
   /**
    * Insert cuepoints in a broadcast (liveBroadcasts.insertCuepoint)
    *
+   * @param Cuepoint $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string id Broadcast to insert ads to, or equivalently
@@ -197,20 +198,11 @@ class LiveBroadcasts extends \Google\Service\Resource
    * of one or more liveBroadcast resource properties that the API response will
    * include. The part names that you can include in the parameter value are id,
    * snippet, contentDetails, and status.
-   * @opt_param string resource.cueType
-   * @opt_param string resource.durationSecs The duration of this cuepoint.
-   * @opt_param string resource.etag
-   * @opt_param string resource.id The identifier for cuepoint resource.
-   * @opt_param string resource.insertionOffsetTimeMs The time when the cuepoint
-   * should be inserted by offset to the broadcast actual start time.
-   * @opt_param string resource.walltimeMs The wall clock time at which the
-   * cuepoint should be inserted. Only one of insertion_offset_time_ms and
-   * walltime_ms may be set at a time.
    * @return Cuepoint
    */
-  public function insertCuepoint($optParams = [])
+  public function insertCuepoint(Cuepoint $postBody, $optParams = [])
   {
-    $params = [];
+    $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insertCuepoint', [$params], Cuepoint::class);
   }
