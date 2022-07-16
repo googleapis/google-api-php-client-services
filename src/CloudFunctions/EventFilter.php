@@ -17,44 +17,64 @@
 
 namespace Google\Service\CloudFunctions;
 
-class GenerateUploadUrlResponse extends \Google\Model
+class EventFilter extends \Google\Model
 {
-  protected $storageSourceType = StorageSource::class;
-  protected $storageSourceDataType = '';
   /**
    * @var string
    */
-  public $uploadUrl;
+  public $attribute;
+  /**
+   * @var string
+   */
+  public $operator;
+  /**
+   * @var string
+   */
+  public $value;
 
-  /**
-   * @param StorageSource
-   */
-  public function setStorageSource(StorageSource $storageSource)
-  {
-    $this->storageSource = $storageSource;
-  }
-  /**
-   * @return StorageSource
-   */
-  public function getStorageSource()
-  {
-    return $this->storageSource;
-  }
   /**
    * @param string
    */
-  public function setUploadUrl($uploadUrl)
+  public function setAttribute($attribute)
   {
-    $this->uploadUrl = $uploadUrl;
+    $this->attribute = $attribute;
   }
   /**
    * @return string
    */
-  public function getUploadUrl()
+  public function getAttribute()
   {
-    return $this->uploadUrl;
+    return $this->attribute;
+  }
+  /**
+   * @param string
+   */
+  public function setOperator($operator)
+  {
+    $this->operator = $operator;
+  }
+  /**
+   * @return string
+   */
+  public function getOperator()
+  {
+    return $this->operator;
+  }
+  /**
+   * @param string
+   */
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  /**
+   * @return string
+   */
+  public function getValue()
+  {
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GenerateUploadUrlResponse::class, 'Google_Service_CloudFunctions_GenerateUploadUrlResponse');
+class_alias(EventFilter::class, 'Google_Service_CloudFunctions_EventFilter');

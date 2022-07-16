@@ -17,44 +17,64 @@
 
 namespace Google\Service\CloudFunctions;
 
-class GenerateUploadUrlResponse extends \Google\Model
+class StorageSource extends \Google\Model
 {
-  protected $storageSourceType = StorageSource::class;
-  protected $storageSourceDataType = '';
   /**
    * @var string
    */
-  public $uploadUrl;
+  public $bucket;
+  /**
+   * @var string
+   */
+  public $generation;
+  /**
+   * @var string
+   */
+  public $object;
 
-  /**
-   * @param StorageSource
-   */
-  public function setStorageSource(StorageSource $storageSource)
-  {
-    $this->storageSource = $storageSource;
-  }
-  /**
-   * @return StorageSource
-   */
-  public function getStorageSource()
-  {
-    return $this->storageSource;
-  }
   /**
    * @param string
    */
-  public function setUploadUrl($uploadUrl)
+  public function setBucket($bucket)
   {
-    $this->uploadUrl = $uploadUrl;
+    $this->bucket = $bucket;
   }
   /**
    * @return string
    */
-  public function getUploadUrl()
+  public function getBucket()
   {
-    return $this->uploadUrl;
+    return $this->bucket;
+  }
+  /**
+   * @param string
+   */
+  public function setGeneration($generation)
+  {
+    $this->generation = $generation;
+  }
+  /**
+   * @return string
+   */
+  public function getGeneration()
+  {
+    return $this->generation;
+  }
+  /**
+   * @param string
+   */
+  public function setObject($object)
+  {
+    $this->object = $object;
+  }
+  /**
+   * @return string
+   */
+  public function getObject()
+  {
+    return $this->object;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GenerateUploadUrlResponse::class, 'Google_Service_CloudFunctions_GenerateUploadUrlResponse');
+class_alias(StorageSource::class, 'Google_Service_CloudFunctions_StorageSource');

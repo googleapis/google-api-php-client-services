@@ -17,44 +17,27 @@
 
 namespace Google\Service\CloudFunctions;
 
-class GenerateUploadUrlResponse extends \Google\Model
+class ListRuntimesResponse extends \Google\Collection
 {
-  protected $storageSourceType = StorageSource::class;
-  protected $storageSourceDataType = '';
-  /**
-   * @var string
-   */
-  public $uploadUrl;
+  protected $collection_key = 'runtimes';
+  protected $runtimesType = Runtime::class;
+  protected $runtimesDataType = 'array';
 
   /**
-   * @param StorageSource
+   * @param Runtime[]
    */
-  public function setStorageSource(StorageSource $storageSource)
+  public function setRuntimes($runtimes)
   {
-    $this->storageSource = $storageSource;
+    $this->runtimes = $runtimes;
   }
   /**
-   * @return StorageSource
+   * @return Runtime[]
    */
-  public function getStorageSource()
+  public function getRuntimes()
   {
-    return $this->storageSource;
-  }
-  /**
-   * @param string
-   */
-  public function setUploadUrl($uploadUrl)
-  {
-    $this->uploadUrl = $uploadUrl;
-  }
-  /**
-   * @return string
-   */
-  public function getUploadUrl()
-  {
-    return $this->uploadUrl;
+    return $this->runtimes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GenerateUploadUrlResponse::class, 'Google_Service_CloudFunctions_GenerateUploadUrlResponse');
+class_alias(ListRuntimesResponse::class, 'Google_Service_CloudFunctions_ListRuntimesResponse');

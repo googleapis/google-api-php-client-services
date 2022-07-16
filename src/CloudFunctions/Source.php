@@ -17,15 +17,27 @@
 
 namespace Google\Service\CloudFunctions;
 
-class GenerateUploadUrlResponse extends \Google\Model
+class Source extends \Google\Model
 {
+  protected $repoSourceType = RepoSource::class;
+  protected $repoSourceDataType = '';
   protected $storageSourceType = StorageSource::class;
   protected $storageSourceDataType = '';
-  /**
-   * @var string
-   */
-  public $uploadUrl;
 
+  /**
+   * @param RepoSource
+   */
+  public function setRepoSource(RepoSource $repoSource)
+  {
+    $this->repoSource = $repoSource;
+  }
+  /**
+   * @return RepoSource
+   */
+  public function getRepoSource()
+  {
+    return $this->repoSource;
+  }
   /**
    * @param StorageSource
    */
@@ -40,21 +52,7 @@ class GenerateUploadUrlResponse extends \Google\Model
   {
     return $this->storageSource;
   }
-  /**
-   * @param string
-   */
-  public function setUploadUrl($uploadUrl)
-  {
-    $this->uploadUrl = $uploadUrl;
-  }
-  /**
-   * @return string
-   */
-  public function getUploadUrl()
-  {
-    return $this->uploadUrl;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GenerateUploadUrlResponse::class, 'Google_Service_CloudFunctions_GenerateUploadUrlResponse');
+class_alias(Source::class, 'Google_Service_CloudFunctions_Source');

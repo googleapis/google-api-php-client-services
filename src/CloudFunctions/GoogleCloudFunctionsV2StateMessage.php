@@ -17,44 +17,64 @@
 
 namespace Google\Service\CloudFunctions;
 
-class GenerateUploadUrlResponse extends \Google\Model
+class GoogleCloudFunctionsV2StateMessage extends \Google\Model
 {
-  protected $storageSourceType = StorageSource::class;
-  protected $storageSourceDataType = '';
   /**
    * @var string
    */
-  public $uploadUrl;
+  public $message;
+  /**
+   * @var string
+   */
+  public $severity;
+  /**
+   * @var string
+   */
+  public $type;
 
-  /**
-   * @param StorageSource
-   */
-  public function setStorageSource(StorageSource $storageSource)
-  {
-    $this->storageSource = $storageSource;
-  }
-  /**
-   * @return StorageSource
-   */
-  public function getStorageSource()
-  {
-    return $this->storageSource;
-  }
   /**
    * @param string
    */
-  public function setUploadUrl($uploadUrl)
+  public function setMessage($message)
   {
-    $this->uploadUrl = $uploadUrl;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getUploadUrl()
+  public function getMessage()
   {
-    return $this->uploadUrl;
+    return $this->message;
+  }
+  /**
+   * @param string
+   */
+  public function setSeverity($severity)
+  {
+    $this->severity = $severity;
+  }
+  /**
+   * @return string
+   */
+  public function getSeverity()
+  {
+    return $this->severity;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GenerateUploadUrlResponse::class, 'Google_Service_CloudFunctions_GenerateUploadUrlResponse');
+class_alias(GoogleCloudFunctionsV2StateMessage::class, 'Google_Service_CloudFunctions_GoogleCloudFunctionsV2StateMessage');
