@@ -24,10 +24,6 @@ class RepairClusterRequest extends \Google\Collection
    * @var string
    */
   public $clusterUuid;
-  /**
-   * @var string
-   */
-  public $gracefulDecommissionTimeout;
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
   /**
@@ -48,20 +44,6 @@ class RepairClusterRequest extends \Google\Collection
   public function getClusterUuid()
   {
     return $this->clusterUuid;
-  }
-  /**
-   * @param string
-   */
-  public function setGracefulDecommissionTimeout($gracefulDecommissionTimeout)
-  {
-    $this->gracefulDecommissionTimeout = $gracefulDecommissionTimeout;
-  }
-  /**
-   * @return string
-   */
-  public function getGracefulDecommissionTimeout()
-  {
-    return $this->gracefulDecommissionTimeout;
   }
   /**
    * @param NodePool[]
