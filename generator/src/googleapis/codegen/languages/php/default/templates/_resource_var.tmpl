@@ -1,6 +1,9 @@
 {% filter noblanklines %}
 
 {% if resource.json and resource.phpPropName %}
+  /**
+   * @var {{ api.className }}\Resource\{{ resource.className }}
+   */
   public ${{ resource.phpPropName }};
 {% endif %}
 

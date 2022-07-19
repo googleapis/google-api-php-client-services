@@ -14,11 +14,9 @@
 #  limitations under the License.
 
 """PHP library generator.
-
 This module generates a PHP service class from a given Google APIs Discovery
 document. The generated PHP code is intended to be used by the Google
 APIs PHP Client (http://code.google.com/p/google-api-php-client).
-
 Features:
 - Meta classes generated from the schema definition.
 - Type hinting in setter methods and api service methods.
@@ -31,6 +29,7 @@ __author__ = 'chirags@google.com (Chirag Shah)'
 import collections
 import json
 import operator
+import re
 
 from googleapis.codegen import api
 from googleapis.codegen import api_library_generator
@@ -39,13 +38,13 @@ from googleapis.codegen import language_model
 from googleapis.codegen import utilities
 from googleapis.codegen.schema import Schema
 
+CONST_NAME_SUB = re.compile('[^a-zA-Z0-9_]+')
 
 class PHPGenerator(api_library_generator.ApiLibraryGenerator):
   """The PHP code generator."""
 
   def __init__(self, discovery, options=None):
     """Create a new PHPGenerator.
-
     Args:
       discovery: (dict) The discovery document dictionary.
       options: (dict) A dictionary of options to guide the generator's behavior.
@@ -56,12 +55,9 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
 
   def AnnotateResource(self, the_api, resource):
     """Add the discovery dictionary as data to each resource.
-
     Override default implementation.
-
     Prepend the resource class name to each sub-resource since PHP doesn't
     support nested classes.
-
     Args:
       the_api: (Api) The API this Resource belongs to.
       resource: (Resource) The Resource to annotate.
@@ -88,13 +84,10 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
 
   def AnnotateMethod(self, unused_api, method, resource=None):
     """Format service request method parameters.
-
     Override default implementation.
-
     Annotates each method parameter with a type hint if possible.
     Adds the postBody parameter if there's a requestType parameter.
     Generates a list of service parameters used by the client library.
-
     Args:
       unused_api: (Api) The API this Method belongs to.
       method: (Method) The Method to annotate.
@@ -109,9 +102,7 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
 
   def AnnotateProperty(self, unused_api, prop, schema):
     """Annotate properties with a PHP type hint.
-
     Overrides default implementation.
-
     Args:
       unused_api: (Api) The API this Property belongs to.
       prop: (Property) The Property to annotate.
@@ -137,16 +128,15 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
     schema.SetTemplateValue('propNames', prop_names)
 
     self._SetTypeHint(prop)
+    self._SetEnum(prop)
 
   def _GenerateLibrarySource(self, the_api, source_package_writer):
     """Default operations to generate the package.
-
     Do all the default operations for generating a package.
     1. Walk the template tree to generate the source.
     2. Add in per-language additions to the source
     3. Optionally copy in dependencies
     4. (Side effect) Closes the source_package_writer.
-
     Args:
       the_api: (Api) The Api instance we are writing a libary for.
       source_package_writer: (LibraryPackage) source output package.
@@ -191,6 +181,22 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
       prop.values['typeHint'] = (code_type)
       prop.values['annotationType'] = code_type
 
+  def _SetEnum(self, prop):
+    enum = prop.values.get('enum')
+    if enum is None:
+      return
+
+    newEnum = []
+    enumDescriptions = prop.values.get('enumDescriptions') or []
+    for i, value in enumerate(enum):
+        newEnum.append({
+            'value': value,
+            'constName': CONST_NAME_SUB.sub('_', value),
+            'description': enumDescriptions[i] if i in enumDescriptions else None,
+        })
+
+    prop.values['oldEnum'] = enum
+    prop.values['enum'] = newEnum
 
 class PhpLanguageModel(language_model.LanguageModel):
   """A LanguageModel tunded for PHP."""
@@ -207,7 +213,7 @@ class PhpLanguageModel(language_model.LanguageModel):
       'uint32': 'string',  # PHP doesn't support unsigned integers.
       'uint64': 'string',  # PHP doesn't support unsigned integers.
       'int32': 'int',
-      'int64': 'string',  # Size of an integer is platform-dependent.
+      'int64': 'string',  # Size of an integer is platFullform-dependent.
       'double': 'double',
       'float': 'float',
       }
@@ -259,9 +265,7 @@ class PhpLanguageModel(language_model.LanguageModel):
 
   def GetCodeTypeFromDictionary(self, def_dict):
     """Convert a json primitive type to a suitable PHP type name.
-
     Overrides the default.
-
     Args:
       def_dict: (dict) A dictionary describing Json schema for this Property.
     Returns:
@@ -282,9 +286,7 @@ class PhpLanguageModel(language_model.LanguageModel):
 
   def ToMemberName(self, s, unused_api):
     """Convert a wire format name into a suitable PHP variable name.
-
     Overrides the default.
-
     Args:
       s: (string) The wire format name of a member variable.
     Returns:
@@ -308,9 +310,7 @@ class PHPApi(api.Api):
   # support nested classes.
   def ToClassName(self, s, unused_element, element_type=None):
     """Convert a discovery name to a suitable PHP class name.
-
     Overrides the default.
-
     Args:
       s: (string) The wire format name of a class.
       unused_element: (object) The object we need a class name for.
