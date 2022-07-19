@@ -46,6 +46,7 @@ class ChromePolicy extends \Google\Service
   public $customers_policies;
   public $customers_policies_orgunits;
   public $customers_policySchemas;
+  public $media;
 
   /**
    * Constructs the internal representation of the ChromePolicy service.
@@ -149,6 +150,26 @@ class ChromePolicy extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->media = new ChromePolicy\Resource\Media(
+        $this,
+        $this->serviceName,
+        'media',
+        [
+          'methods' => [
+            'upload' => [
+              'path' => 'v1/{+customer}/policies/files:uploadPolicyFile',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
