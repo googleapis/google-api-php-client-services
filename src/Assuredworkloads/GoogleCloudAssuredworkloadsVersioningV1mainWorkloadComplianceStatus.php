@@ -22,8 +22,26 @@ class GoogleCloudAssuredworkloadsVersioningV1mainWorkloadComplianceStatus extend
   /**
    * @var int
    */
+  public $acknowledgedViolationCount;
+  /**
+   * @var int
+   */
   public $activeViolationCount;
 
+  /**
+   * @param int
+   */
+  public function setAcknowledgedViolationCount($acknowledgedViolationCount)
+  {
+    $this->acknowledgedViolationCount = $acknowledgedViolationCount;
+  }
+  /**
+   * @return int
+   */
+  public function getAcknowledgedViolationCount()
+  {
+    return $this->acknowledgedViolationCount;
+  }
   /**
    * @param int
    */
