@@ -35,6 +35,10 @@ class Snapshot extends \Google\Collection
   /**
    * @var string
    */
+  public $creationSizeBytes;
+  /**
+   * @var string
+   */
   public $creationTimestamp;
   /**
    * @var string
@@ -90,6 +94,10 @@ class Snapshot extends \Google\Collection
   public $selfLink;
   protected $snapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $snapshotEncryptionKeyDataType = '';
+  /**
+   * @var string
+   */
+  public $snapshotType;
   /**
    * @var string
    */
@@ -166,6 +174,20 @@ class Snapshot extends \Google\Collection
   public function getChainName()
   {
     return $this->chainName;
+  }
+  /**
+   * @param string
+   */
+  public function setCreationSizeBytes($creationSizeBytes)
+  {
+    $this->creationSizeBytes = $creationSizeBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getCreationSizeBytes()
+  {
+    return $this->creationSizeBytes;
   }
   /**
    * @param string
@@ -376,6 +398,20 @@ class Snapshot extends \Google\Collection
   public function getSnapshotEncryptionKey()
   {
     return $this->snapshotEncryptionKey;
+  }
+  /**
+   * @param string
+   */
+  public function setSnapshotType($snapshotType)
+  {
+    $this->snapshotType = $snapshotType;
+  }
+  /**
+   * @return string
+   */
+  public function getSnapshotType()
+  {
+    return $this->snapshotType;
   }
   /**
    * @param string
