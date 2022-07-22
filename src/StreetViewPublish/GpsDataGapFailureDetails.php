@@ -26,7 +26,7 @@ class GpsDataGapFailureDetails extends \Google\Model
   /**
    * @var string
    */
-  public $gapTime;
+  public $gapStartTime;
 
   /**
    * @param string
@@ -45,16 +45,16 @@ class GpsDataGapFailureDetails extends \Google\Model
   /**
    * @param string
    */
-  public function setGapTime($gapTime)
+  public function setGapStartTime($gapStartTime)
   {
-    $this->gapTime = $gapTime;
+    $this->gapStartTime = $gapStartTime;
   }
   /**
    * @return string
    */
-  public function getGapTime()
+  public function getGapStartTime()
   {
-    return $this->gapTime;
+    return $this->gapStartTime;
   }
 }
 

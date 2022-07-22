@@ -22,21 +22,21 @@ class NotOutdoorsFailureDetails extends \Google\Model
   /**
    * @var string
    */
-  public $time;
+  public $startTime;
 
   /**
    * @param string
    */
-  public function setTime($time)
+  public function setStartTime($startTime)
   {
-    $this->time = $time;
+    $this->startTime = $startTime;
   }
   /**
    * @return string
    */
-  public function getTime()
+  public function getStartTime()
   {
-    return $this->time;
+    return $this->startTime;
   }
 }
 
