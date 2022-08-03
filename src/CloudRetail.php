@@ -41,6 +41,7 @@ class CloudRetail extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations_catalogs;
+  public $projects_locations_catalogs_attributesConfig;
   public $projects_locations_catalogs_branches_operations;
   public $projects_locations_catalogs_branches_products;
   public $projects_locations_catalogs_completionData;
@@ -108,6 +109,26 @@ class CloudRetail extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'getAttributesConfig' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getCompletionConfig' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getDefaultBranch' => [
               'path' => 'v2/{+catalog}:getDefaultBranch',
               'httpMethod' => 'GET',
@@ -155,6 +176,64 @@ class CloudRetail extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'catalog' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateAttributesConfig' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'updateCompletionConfig' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_catalogs_attributesConfig = new CloudRetail\Resource\ProjectsLocationsCatalogsAttributesConfig(
+        $this,
+        $this->serviceName,
+        'attributesConfig',
+        [
+          'methods' => [
+            'addCatalogAttribute' => [
+              'path' => 'v2/{+attributesConfig}:addCatalogAttribute',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'attributesConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'removeCatalogAttribute' => [
+              'path' => 'v2/{+attributesConfig}:removeCatalogAttribute',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'attributesConfig' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
