@@ -58,6 +58,10 @@ class Settings extends \Google\Collection
    * @var bool
    */
   public $databaseReplicationEnabled;
+  /**
+   * @var bool
+   */
+  public $deletionProtectionEnabled;
   protected $denyMaintenancePeriodsType = DenyMaintenancePeriod::class;
   protected $denyMaintenancePeriodsDataType = 'array';
   protected $insightsConfigType = InsightsConfig::class;
@@ -258,6 +262,20 @@ class Settings extends \Google\Collection
   public function getDatabaseReplicationEnabled()
   {
     return $this->databaseReplicationEnabled;
+  }
+  /**
+   * @param bool
+   */
+  public function setDeletionProtectionEnabled($deletionProtectionEnabled)
+  {
+    $this->deletionProtectionEnabled = $deletionProtectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeletionProtectionEnabled()
+  {
+    return $this->deletionProtectionEnabled;
   }
   /**
    * @param DenyMaintenancePeriod[]
