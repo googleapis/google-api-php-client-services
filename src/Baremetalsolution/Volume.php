@@ -24,6 +24,10 @@ class Volume extends \Google\Model
    */
   public $autoGrownSizeGib;
   /**
+   * @var bool
+   */
+  public $bootVolume;
+  /**
    * @var string
    */
   public $currentSizeGib;
@@ -103,6 +107,20 @@ class Volume extends \Google\Model
   public function getAutoGrownSizeGib()
   {
     return $this->autoGrownSizeGib;
+  }
+  /**
+   * @param bool
+   */
+  public function setBootVolume($bootVolume)
+  {
+    $this->bootVolume = $bootVolume;
+  }
+  /**
+   * @return bool
+   */
+  public function getBootVolume()
+  {
+    return $this->bootVolume;
   }
   /**
    * @param string
