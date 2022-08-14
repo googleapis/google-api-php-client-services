@@ -17,64 +17,45 @@
 
 namespace Google\Service\Connectors;
 
-class ResultMetadata extends \Google\Model
+class ListEntitiesResponse extends \Google\Collection
 {
+  protected $collection_key = 'entities';
+  protected $entitiesType = Entity::class;
+  protected $entitiesDataType = 'array';
   /**
    * @var string
    */
-  public $dataType;
-  /**
-   * @var string
-   */
-  public $description;
-  /**
-   * @var string
-   */
-  public $name;
+  public $nextPageToken;
 
   /**
-   * @param string
+   * @param Entity[]
    */
-  public function setDataType($dataType)
+  public function setEntities($entities)
   {
-    $this->dataType = $dataType;
+    $this->entities = $entities;
   }
   /**
-   * @return string
+   * @return Entity[]
    */
-  public function getDataType()
+  public function getEntities()
   {
-    return $this->dataType;
-  }
-  /**
-   * @param string
-   */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
+    return $this->entities;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->name = $name;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getNextPageToken()
   {
-    return $this->name;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResultMetadata::class, 'Google_Service_Connectors_ResultMetadata');
+class_alias(ListEntitiesResponse::class, 'Google_Service_Connectors_ListEntitiesResponse');

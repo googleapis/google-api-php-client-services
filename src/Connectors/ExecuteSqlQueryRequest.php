@@ -15,19 +15,28 @@
  * the License.
  */
 
-namespace Google\Service\Connectors\Resource;
+namespace Google\Service\Connectors;
 
-/**
- * The "locations" collection of methods.
- * Typical usage is:
- *  <code>
- *   $connectorsService = new Google\Service\Connectors(...);
- *   $locations = $connectorsService->locations;
- *  </code>
- */
-class ProjectsLocations extends \Google\Service\Resource
+class ExecuteSqlQueryRequest extends \Google\Model
 {
+  protected $queryType = Query::class;
+  protected $queryDataType = '';
+
+  /**
+   * @param Query
+   */
+  public function setQuery(Query $query)
+  {
+    $this->query = $query;
+  }
+  /**
+   * @return Query
+   */
+  public function getQuery()
+  {
+    return $this->query;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_Connectors_Resource_ProjectsLocations');
+class_alias(ExecuteSqlQueryRequest::class, 'Google_Service_Connectors_ExecuteSqlQueryRequest');

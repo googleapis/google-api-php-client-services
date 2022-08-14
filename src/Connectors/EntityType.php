@@ -17,48 +17,29 @@
 
 namespace Google\Service\Connectors;
 
-class ResultMetadata extends \Google\Model
+class EntityType extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $dataType;
-  /**
-   * @var string
-   */
-  public $description;
+  protected $collection_key = 'fields';
+  protected $fieldsType = Field::class;
+  protected $fieldsDataType = 'array';
   /**
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * @param Field[]
    */
-  public function setDataType($dataType)
+  public function setFields($fields)
   {
-    $this->dataType = $dataType;
+    $this->fields = $fields;
   }
   /**
-   * @return string
+   * @return Field[]
    */
-  public function getDataType()
+  public function getFields()
   {
-    return $this->dataType;
-  }
-  /**
-   * @param string
-   */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
+    return $this->fields;
   }
   /**
    * @param string
@@ -77,4 +58,4 @@ class ResultMetadata extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResultMetadata::class, 'Google_Service_Connectors_ResultMetadata');
+class_alias(EntityType::class, 'Google_Service_Connectors_EntityType');
