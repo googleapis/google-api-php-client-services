@@ -105,12 +105,10 @@ class ProjectsLocationsStoredInfoTypes extends \Google\Service\Resource
    * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
    * scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
    * Projects scope, no location specified (defaults to global):
-   * `projects/`PROJECT_ID + Organizations scope, location specified:
-   * `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no
-   * location specified (defaults to global): `organizations/`ORG_ID The following
-   * example `parent` string specifies a parent project with the identifier
-   * `example-project`, and specifies the `europe-west3` location for processing
-   * data: parent=projects/example-project/locations/europe-west3
+   * `projects/`PROJECT_ID The following example `parent` string specifies a
+   * parent project with the identifier `example-project`, and specifies the
+   * `europe-west3` location for processing data: parent=projects/example-
+   * project/locations/europe-west3
    * @param array $optParams Optional parameters.
    *
    * @opt_param string locationId Deprecated. This field has no effect.
