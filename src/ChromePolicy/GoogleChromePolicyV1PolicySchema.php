@@ -36,6 +36,8 @@ class GoogleChromePolicyV1PolicySchema extends \Google\Collection
   public $name;
   protected $noticesType = GoogleChromePolicyV1PolicySchemaNoticeDescription::class;
   protected $noticesDataType = 'array';
+  protected $policyApiLifecycleType = ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle::class;
+  protected $policyApiLifecycleDataType = '';
   protected $policyApiLifeycleType = ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle::class;
   protected $policyApiLifeycleDataType = '';
   /**
@@ -138,6 +140,20 @@ class GoogleChromePolicyV1PolicySchema extends \Google\Collection
   public function getNotices()
   {
     return $this->notices;
+  }
+  /**
+   * @param ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
+   */
+  public function setPolicyApiLifecycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle $policyApiLifecycle)
+  {
+    $this->policyApiLifecycle = $policyApiLifecycle;
+  }
+  /**
+   * @return ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
+   */
+  public function getPolicyApiLifecycle()
+  {
+    return $this->policyApiLifecycle;
   }
   /**
    * @param ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
