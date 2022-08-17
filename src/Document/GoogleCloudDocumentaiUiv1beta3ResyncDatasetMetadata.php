@@ -22,6 +22,10 @@ class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends \Google\Collec
   protected $collection_key = 'newlyAddedDocuments';
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  protected $datasetResyncStatusesType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus::class;
+  protected $datasetResyncStatusesDataType = 'array';
+  protected $individualDocumentResyncStatusesType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus::class;
+  protected $individualDocumentResyncStatusesDataType = 'array';
   protected $newlyAddedDocumentsType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument::class;
   protected $newlyAddedDocumentsDataType = 'array';
 
@@ -38,6 +42,34 @@ class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends \Google\Collec
   public function getCommonMetadata()
   {
     return $this->commonMetadata;
+  }
+  /**
+   * @param GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus[]
+   */
+  public function setDatasetResyncStatuses($datasetResyncStatuses)
+  {
+    $this->datasetResyncStatuses = $datasetResyncStatuses;
+  }
+  /**
+   * @return GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus[]
+   */
+  public function getDatasetResyncStatuses()
+  {
+    return $this->datasetResyncStatuses;
+  }
+  /**
+   * @param GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus[]
+   */
+  public function setIndividualDocumentResyncStatuses($individualDocumentResyncStatuses)
+  {
+    $this->individualDocumentResyncStatuses = $individualDocumentResyncStatuses;
+  }
+  /**
+   * @return GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus[]
+   */
+  public function getIndividualDocumentResyncStatuses()
+  {
+    return $this->individualDocumentResyncStatuses;
   }
   /**
    * @param GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument[]

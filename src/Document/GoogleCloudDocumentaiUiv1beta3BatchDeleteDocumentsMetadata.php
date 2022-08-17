@@ -24,6 +24,10 @@ class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata extends \Google
   protected $commonMetadataDataType = '';
   protected $individualBatchDeleteStatusesType = GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus::class;
   protected $individualBatchDeleteStatusesDataType = 'array';
+  /**
+   * @var int
+   */
+  public $totalDocumentCount;
 
   /**
    * @param GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
@@ -52,6 +56,20 @@ class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata extends \Google
   public function getIndividualBatchDeleteStatuses()
   {
     return $this->individualBatchDeleteStatuses;
+  }
+  /**
+   * @param int
+   */
+  public function setTotalDocumentCount($totalDocumentCount)
+  {
+    $this->totalDocumentCount = $totalDocumentCount;
+  }
+  /**
+   * @return int
+   */
+  public function getTotalDocumentCount()
+  {
+    return $this->totalDocumentCount;
   }
 }
 
