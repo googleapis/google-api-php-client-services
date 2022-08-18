@@ -62,7 +62,8 @@ class PropertiesAudiences extends \Google\Service\Resource
   }
   /**
    * Lookup for a single Audience. Audiences created before 2020 may not be
-   * supported. (audiences.get)
+   * supported. Default audiences will not show filter definitions.
+   * (audiences.get)
    *
    * @param string $name Required. The name of the Audience to get. Example
    * format: properties/1234/audiences/5678
@@ -77,7 +78,8 @@ class PropertiesAudiences extends \Google\Service\Resource
   }
   /**
    * Lists Audiences on a property. Audiences created before 2020 may not be
-   * supported. (audiences.listPropertiesAudiences)
+   * supported. Default audiences will not show filter definitions.
+   * (audiences.listPropertiesAudiences)
    *
    * @param string $parent Required. Example format: properties/1234
    * @param array $optParams Optional parameters.
