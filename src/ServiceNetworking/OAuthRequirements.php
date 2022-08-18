@@ -20,10 +20,28 @@ namespace Google\Service\ServiceNetworking;
 class OAuthRequirements extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $allowAnyScope;
+  /**
    * @var string
    */
   public $canonicalScopes;
 
+  /**
+   * @param bool
+   */
+  public function setAllowAnyScope($allowAnyScope)
+  {
+    $this->allowAnyScope = $allowAnyScope;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowAnyScope()
+  {
+    return $this->allowAnyScope;
+  }
   /**
    * @param string
    */
