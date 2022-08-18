@@ -17,44 +17,28 @@
 
 namespace Google\Service\PlayIntegrity;
 
-class AccountDetails extends \Google\Model
+class AccountRiskVerdict extends \Google\Model
 {
-  protected $accountRiskVerdictType = AccountRiskVerdict::class;
-  protected $accountRiskVerdictDataType = '';
   /**
    * @var string
    */
-  public $appLicensingVerdict;
+  public $riskLevel;
 
-  /**
-   * @param AccountRiskVerdict
-   */
-  public function setAccountRiskVerdict(AccountRiskVerdict $accountRiskVerdict)
-  {
-    $this->accountRiskVerdict = $accountRiskVerdict;
-  }
-  /**
-   * @return AccountRiskVerdict
-   */
-  public function getAccountRiskVerdict()
-  {
-    return $this->accountRiskVerdict;
-  }
   /**
    * @param string
    */
-  public function setAppLicensingVerdict($appLicensingVerdict)
+  public function setRiskLevel($riskLevel)
   {
-    $this->appLicensingVerdict = $appLicensingVerdict;
+    $this->riskLevel = $riskLevel;
   }
   /**
    * @return string
    */
-  public function getAppLicensingVerdict()
+  public function getRiskLevel()
   {
-    return $this->appLicensingVerdict;
+    return $this->riskLevel;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AccountDetails::class, 'Google_Service_PlayIntegrity_AccountDetails');
+class_alias(AccountRiskVerdict::class, 'Google_Service_PlayIntegrity_AccountRiskVerdict');
