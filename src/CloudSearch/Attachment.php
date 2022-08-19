@@ -19,40 +19,122 @@ namespace Google\Service\CloudSearch;
 
 class Attachment extends \Google\Model
 {
-  protected $embedItemType = EmbedClientItem::class;
-  protected $embedItemDataType = '';
+  protected $addOnDataType = GoogleChatV1ContextualAddOnMarkup::class;
+  protected $addOnDataDataType = '';
+  protected $appIdType = UserId::class;
+  protected $appIdDataType = '';
   /**
    * @var string
    */
-  public $id;
+  public $attachmentId;
+  protected $cardAddOnDataType = AppsDynamiteSharedCard::class;
+  protected $cardAddOnDataDataType = '';
+  protected $deprecatedAddOnDataType = ContextualAddOnMarkup::class;
+  protected $deprecatedAddOnDataDataType = '';
+  protected $slackDataType = AppsDynamiteV1ApiCompatV1Attachment::class;
+  protected $slackDataDataType = '';
+  /**
+   * @var int
+   */
+  public $slackDataImageUrlHeight;
 
   /**
-   * @param EmbedClientItem
+   * @param GoogleChatV1ContextualAddOnMarkup
    */
-  public function setEmbedItem(EmbedClientItem $embedItem)
+  public function setAddOnData(GoogleChatV1ContextualAddOnMarkup $addOnData)
   {
-    $this->embedItem = $embedItem;
+    $this->addOnData = $addOnData;
   }
   /**
-   * @return EmbedClientItem
+   * @return GoogleChatV1ContextualAddOnMarkup
    */
-  public function getEmbedItem()
+  public function getAddOnData()
   {
-    return $this->embedItem;
+    return $this->addOnData;
+  }
+  /**
+   * @param UserId
+   */
+  public function setAppId(UserId $appId)
+  {
+    $this->appId = $appId;
+  }
+  /**
+   * @return UserId
+   */
+  public function getAppId()
+  {
+    return $this->appId;
   }
   /**
    * @param string
    */
-  public function setId($id)
+  public function setAttachmentId($attachmentId)
   {
-    $this->id = $id;
+    $this->attachmentId = $attachmentId;
   }
   /**
    * @return string
    */
-  public function getId()
+  public function getAttachmentId()
   {
-    return $this->id;
+    return $this->attachmentId;
+  }
+  /**
+   * @param AppsDynamiteSharedCard
+   */
+  public function setCardAddOnData(AppsDynamiteSharedCard $cardAddOnData)
+  {
+    $this->cardAddOnData = $cardAddOnData;
+  }
+  /**
+   * @return AppsDynamiteSharedCard
+   */
+  public function getCardAddOnData()
+  {
+    return $this->cardAddOnData;
+  }
+  /**
+   * @param ContextualAddOnMarkup
+   */
+  public function setDeprecatedAddOnData(ContextualAddOnMarkup $deprecatedAddOnData)
+  {
+    $this->deprecatedAddOnData = $deprecatedAddOnData;
+  }
+  /**
+   * @return ContextualAddOnMarkup
+   */
+  public function getDeprecatedAddOnData()
+  {
+    return $this->deprecatedAddOnData;
+  }
+  /**
+   * @param AppsDynamiteV1ApiCompatV1Attachment
+   */
+  public function setSlackData(AppsDynamiteV1ApiCompatV1Attachment $slackData)
+  {
+    $this->slackData = $slackData;
+  }
+  /**
+   * @return AppsDynamiteV1ApiCompatV1Attachment
+   */
+  public function getSlackData()
+  {
+    return $this->slackData;
+  }
+  /**
+   * @param int
+   */
+  public function setSlackDataImageUrlHeight($slackDataImageUrlHeight)
+  {
+    $this->slackDataImageUrlHeight = $slackDataImageUrlHeight;
+  }
+  /**
+   * @return int
+   */
+  public function getSlackDataImageUrlHeight()
+  {
+    return $this->slackDataImageUrlHeight;
   }
 }
 

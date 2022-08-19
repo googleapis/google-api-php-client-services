@@ -19,7 +19,7 @@ namespace Google\Service\CloudSearch;
 
 class AppsDynamiteSharedTasksAnnotationDataTaskProperties extends \Google\Model
 {
-  protected $assigneeType = AppsDynamiteUserId::class;
+  protected $assigneeType = UserId::class;
   protected $assigneeDataType = '';
   /**
    * @var bool
@@ -45,14 +45,14 @@ class AppsDynamiteSharedTasksAnnotationDataTaskProperties extends \Google\Model
   public $title;
 
   /**
-   * @param AppsDynamiteUserId
+   * @param UserId
    */
-  public function setAssignee(AppsDynamiteUserId $assignee)
+  public function setAssignee(UserId $assignee)
   {
     $this->assignee = $assignee;
   }
   /**
-   * @return AppsDynamiteUserId
+   * @return UserId
    */
   public function getAssignee()
   {

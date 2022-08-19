@@ -19,7 +19,7 @@ namespace Google\Service\CloudSearch;
 
 class LinkData extends \Google\Model
 {
-  protected $attachmentType = Attachment::class;
+  protected $attachmentType = SocialCommonAttachmentAttachment::class;
   protected $attachmentDataType = '';
   /**
    * @var string
@@ -43,14 +43,14 @@ class LinkData extends \Google\Model
   public $title;
 
   /**
-   * @param Attachment
+   * @param SocialCommonAttachmentAttachment
    */
-  public function setAttachment(Attachment $attachment)
+  public function setAttachment(SocialCommonAttachmentAttachment $attachment)
   {
     $this->attachment = $attachment;
   }
   /**
-   * @return Attachment
+   * @return SocialCommonAttachmentAttachment
    */
   public function getAttachment()
   {

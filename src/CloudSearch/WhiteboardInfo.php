@@ -31,10 +31,6 @@ class WhiteboardInfo extends \Google\Model
    * @var string
    */
   public $uri;
-  /**
-   * @var string
-   */
-  public $whiteboardUri;
 
   /**
    * @param string
@@ -77,20 +73,6 @@ class WhiteboardInfo extends \Google\Model
   public function getUri()
   {
     return $this->uri;
-  }
-  /**
-   * @param string
-   */
-  public function setWhiteboardUri($whiteboardUri)
-  {
-    $this->whiteboardUri = $whiteboardUri;
-  }
-  /**
-   * @return string
-   */
-  public function getWhiteboardUri()
-  {
-    return $this->whiteboardUri;
   }
 }
 

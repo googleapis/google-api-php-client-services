@@ -34,6 +34,8 @@ class CallInfo extends \Google\Collection
    * @var string
    */
   public $calendarEventId;
+  protected $chatConfigType = ChatConfig::class;
+  protected $chatConfigDataType = '';
   protected $coActivityType = CoActivity::class;
   protected $coActivityDataType = '';
   protected $collaborationType = Collaboration::class;
@@ -64,10 +66,6 @@ class CallInfo extends \Google\Collection
   protected $settingsDataType = '';
   protected $streamingSessionsType = StreamingSessionInfo::class;
   protected $streamingSessionsDataType = 'array';
-  /**
-   * @var string[]
-   */
-  public $supportedCaptionLanguages;
   protected $transcriptionSessionInfoType = TranscriptionSessionInfo::class;
   protected $transcriptionSessionInfoDataType = '';
   /**
@@ -160,6 +158,20 @@ class CallInfo extends \Google\Collection
   public function getCalendarEventId()
   {
     return $this->calendarEventId;
+  }
+  /**
+   * @param ChatConfig
+   */
+  public function setChatConfig(ChatConfig $chatConfig)
+  {
+    $this->chatConfig = $chatConfig;
+  }
+  /**
+   * @return ChatConfig
+   */
+  public function getChatConfig()
+  {
+    return $this->chatConfig;
   }
   /**
    * @param CoActivity
@@ -328,20 +340,6 @@ class CallInfo extends \Google\Collection
   public function getStreamingSessions()
   {
     return $this->streamingSessions;
-  }
-  /**
-   * @param string[]
-   */
-  public function setSupportedCaptionLanguages($supportedCaptionLanguages)
-  {
-    $this->supportedCaptionLanguages = $supportedCaptionLanguages;
-  }
-  /**
-   * @return string[]
-   */
-  public function getSupportedCaptionLanguages()
-  {
-    return $this->supportedCaptionLanguages;
   }
   /**
    * @param TranscriptionSessionInfo

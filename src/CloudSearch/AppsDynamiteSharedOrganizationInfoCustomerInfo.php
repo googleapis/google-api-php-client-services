@@ -19,18 +19,18 @@ namespace Google\Service\CloudSearch;
 
 class AppsDynamiteSharedOrganizationInfoCustomerInfo extends \Google\Model
 {
-  protected $customerIdType = AppsDynamiteCustomerId::class;
+  protected $customerIdType = CustomerId::class;
   protected $customerIdDataType = '';
 
   /**
-   * @param AppsDynamiteCustomerId
+   * @param CustomerId
    */
-  public function setCustomerId(AppsDynamiteCustomerId $customerId)
+  public function setCustomerId(CustomerId $customerId)
   {
     $this->customerId = $customerId;
   }
   /**
-   * @return AppsDynamiteCustomerId
+   * @return CustomerId
    */
   public function getCustomerId()
   {

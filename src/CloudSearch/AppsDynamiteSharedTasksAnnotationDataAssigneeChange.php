@@ -19,18 +19,18 @@ namespace Google\Service\CloudSearch;
 
 class AppsDynamiteSharedTasksAnnotationDataAssigneeChange extends \Google\Model
 {
-  protected $oldAssigneeType = AppsDynamiteUserId::class;
+  protected $oldAssigneeType = UserId::class;
   protected $oldAssigneeDataType = '';
 
   /**
-   * @param AppsDynamiteUserId
+   * @param UserId
    */
-  public function setOldAssignee(AppsDynamiteUserId $oldAssignee)
+  public function setOldAssignee(UserId $oldAssignee)
   {
     $this->oldAssignee = $oldAssignee;
   }
   /**
-   * @return AppsDynamiteUserId
+   * @return UserId
    */
   public function getOldAssignee()
   {

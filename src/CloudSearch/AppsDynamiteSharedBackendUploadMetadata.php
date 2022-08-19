@@ -39,13 +39,13 @@ class AppsDynamiteSharedBackendUploadMetadata extends \Google\Model
    * @var string
    */
   public $dlpScanOutcome;
-  protected $dlpScanSummaryType = AppsDynamiteBackendDlpScanSummary::class;
+  protected $dlpScanSummaryType = DlpScanSummary::class;
   protected $dlpScanSummaryDataType = '';
-  protected $groupIdType = AppsDynamiteGroupId::class;
+  protected $groupIdType = GroupId::class;
   protected $groupIdDataType = '';
   protected $originalDimensionType = AppsDynamiteSharedDimension::class;
   protected $originalDimensionDataType = '';
-  protected $quoteReplyMessageIdType = AppsDynamiteMessageId::class;
+  protected $quoteReplyMessageIdType = MessageId::class;
   protected $quoteReplyMessageIdDataType = '';
   /**
    * @var string
@@ -143,28 +143,28 @@ class AppsDynamiteSharedBackendUploadMetadata extends \Google\Model
     return $this->dlpScanOutcome;
   }
   /**
-   * @param AppsDynamiteBackendDlpScanSummary
+   * @param DlpScanSummary
    */
-  public function setDlpScanSummary(AppsDynamiteBackendDlpScanSummary $dlpScanSummary)
+  public function setDlpScanSummary(DlpScanSummary $dlpScanSummary)
   {
     $this->dlpScanSummary = $dlpScanSummary;
   }
   /**
-   * @return AppsDynamiteBackendDlpScanSummary
+   * @return DlpScanSummary
    */
   public function getDlpScanSummary()
   {
     return $this->dlpScanSummary;
   }
   /**
-   * @param AppsDynamiteGroupId
+   * @param GroupId
    */
-  public function setGroupId(AppsDynamiteGroupId $groupId)
+  public function setGroupId(GroupId $groupId)
   {
     $this->groupId = $groupId;
   }
   /**
-   * @return AppsDynamiteGroupId
+   * @return GroupId
    */
   public function getGroupId()
   {
@@ -185,14 +185,14 @@ class AppsDynamiteSharedBackendUploadMetadata extends \Google\Model
     return $this->originalDimension;
   }
   /**
-   * @param AppsDynamiteMessageId
+   * @param MessageId
    */
-  public function setQuoteReplyMessageId(AppsDynamiteMessageId $quoteReplyMessageId)
+  public function setQuoteReplyMessageId(MessageId $quoteReplyMessageId)
   {
     $this->quoteReplyMessageId = $quoteReplyMessageId;
   }
   /**
-   * @return AppsDynamiteMessageId
+   * @return MessageId
    */
   public function getQuoteReplyMessageId()
   {

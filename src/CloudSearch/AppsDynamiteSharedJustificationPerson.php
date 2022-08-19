@@ -23,7 +23,7 @@ class AppsDynamiteSharedJustificationPerson extends \Google\Model
    * @var bool
    */
   public $isRecipient;
-  protected $userType = AppsDynamiteUserId::class;
+  protected $userType = UserId::class;
   protected $userDataType = '';
 
   /**
@@ -41,14 +41,14 @@ class AppsDynamiteSharedJustificationPerson extends \Google\Model
     return $this->isRecipient;
   }
   /**
-   * @param AppsDynamiteUserId
+   * @param UserId
    */
-  public function setUser(AppsDynamiteUserId $user)
+  public function setUser(UserId $user)
   {
     $this->user = $user;
   }
   /**
-   * @return AppsDynamiteUserId
+   * @return UserId
    */
   public function getUser()
   {

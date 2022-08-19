@@ -22,7 +22,7 @@ class ChatContentExtension extends \Google\Collection
   protected $collection_key = 'annotation';
   protected $annotationType = EventAnnotation::class;
   protected $annotationDataType = 'array';
-  protected $dynamitePlaceholderMetadataType = DynamitePlaceholderMetadata::class;
+  protected $dynamitePlaceholderMetadataType = ChatConserverDynamitePlaceholderMetadata::class;
   protected $dynamitePlaceholderMetadataDataType = '';
   /**
    * @var string
@@ -58,14 +58,14 @@ class ChatContentExtension extends \Google\Collection
     return $this->annotation;
   }
   /**
-   * @param DynamitePlaceholderMetadata
+   * @param ChatConserverDynamitePlaceholderMetadata
    */
-  public function setDynamitePlaceholderMetadata(DynamitePlaceholderMetadata $dynamitePlaceholderMetadata)
+  public function setDynamitePlaceholderMetadata(ChatConserverDynamitePlaceholderMetadata $dynamitePlaceholderMetadata)
   {
     $this->dynamitePlaceholderMetadata = $dynamitePlaceholderMetadata;
   }
   /**
-   * @return DynamitePlaceholderMetadata
+   * @return ChatConserverDynamitePlaceholderMetadata
    */
   public function getDynamitePlaceholderMetadata()
   {

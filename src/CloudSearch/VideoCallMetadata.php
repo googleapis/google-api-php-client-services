@@ -19,24 +19,58 @@ namespace Google\Service\CloudSearch;
 
 class VideoCallMetadata extends \Google\Model
 {
+  protected $meetingSpaceType = MeetingSpace::class;
+  protected $meetingSpaceDataType = '';
   /**
-   * @var string
+   * @var bool
    */
-  public $meetingUrl;
+  public $shouldNotRender;
+  /**
+   * @var bool
+   */
+  public $wasCreatedInCurrentGroup;
 
   /**
-   * @param string
+   * @param MeetingSpace
    */
-  public function setMeetingUrl($meetingUrl)
+  public function setMeetingSpace(MeetingSpace $meetingSpace)
   {
-    $this->meetingUrl = $meetingUrl;
+    $this->meetingSpace = $meetingSpace;
   }
   /**
-   * @return string
+   * @return MeetingSpace
    */
-  public function getMeetingUrl()
+  public function getMeetingSpace()
   {
-    return $this->meetingUrl;
+    return $this->meetingSpace;
+  }
+  /**
+   * @param bool
+   */
+  public function setShouldNotRender($shouldNotRender)
+  {
+    $this->shouldNotRender = $shouldNotRender;
+  }
+  /**
+   * @return bool
+   */
+  public function getShouldNotRender()
+  {
+    return $this->shouldNotRender;
+  }
+  /**
+   * @param bool
+   */
+  public function setWasCreatedInCurrentGroup($wasCreatedInCurrentGroup)
+  {
+    $this->wasCreatedInCurrentGroup = $wasCreatedInCurrentGroup;
+  }
+  /**
+   * @return bool
+   */
+  public function getWasCreatedInCurrentGroup()
+  {
+    return $this->wasCreatedInCurrentGroup;
   }
 }
 

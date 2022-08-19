@@ -35,7 +35,7 @@ class UserInfo extends \Google\Model
    * @var string
    */
   public $updaterToShowGaiaId;
-  protected $updaterToShowUserIdType = AppsDynamiteUserId::class;
+  protected $updaterToShowUserIdType = UserId::class;
   protected $updaterToShowUserIdDataType = '';
 
   /**
@@ -95,14 +95,14 @@ class UserInfo extends \Google\Model
     return $this->updaterToShowGaiaId;
   }
   /**
-   * @param AppsDynamiteUserId
+   * @param UserId
    */
-  public function setUpdaterToShowUserId(AppsDynamiteUserId $updaterToShowUserId)
+  public function setUpdaterToShowUserId(UserId $updaterToShowUserId)
   {
     $this->updaterToShowUserId = $updaterToShowUserId;
   }
   /**
-   * @return AppsDynamiteUserId
+   * @return UserId
    */
   public function getUpdaterToShowUserId()
   {

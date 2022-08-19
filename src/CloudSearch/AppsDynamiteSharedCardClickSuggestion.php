@@ -23,7 +23,7 @@ class AppsDynamiteSharedCardClickSuggestion extends \Google\Model
    * @var string
    */
   public $actionId;
-  protected $suggestionMessageIdType = AppsDynamiteMessageId::class;
+  protected $suggestionMessageIdType = MessageId::class;
   protected $suggestionMessageIdDataType = '';
 
   /**
@@ -41,14 +41,14 @@ class AppsDynamiteSharedCardClickSuggestion extends \Google\Model
     return $this->actionId;
   }
   /**
-   * @param AppsDynamiteMessageId
+   * @param MessageId
    */
-  public function setSuggestionMessageId(AppsDynamiteMessageId $suggestionMessageId)
+  public function setSuggestionMessageId(MessageId $suggestionMessageId)
   {
     $this->suggestionMessageId = $suggestionMessageId;
   }
   /**
-   * @return AppsDynamiteMessageId
+   * @return MessageId
    */
   public function getSuggestionMessageId()
   {

@@ -27,7 +27,7 @@ class AppsDynamiteSharedActivityFeedAnnotationDataUserInfo extends \Google\Model
    * @var int
    */
   public $updaterCountToShow;
-  protected $updaterToShowType = AppsDynamiteUserId::class;
+  protected $updaterToShowType = UserId::class;
   protected $updaterToShowDataType = '';
 
   /**
@@ -59,14 +59,14 @@ class AppsDynamiteSharedActivityFeedAnnotationDataUserInfo extends \Google\Model
     return $this->updaterCountToShow;
   }
   /**
-   * @param AppsDynamiteUserId
+   * @param UserId
    */
-  public function setUpdaterToShow(AppsDynamiteUserId $updaterToShow)
+  public function setUpdaterToShow(UserId $updaterToShow)
   {
     $this->updaterToShow = $updaterToShow;
   }
   /**
-   * @return AppsDynamiteUserId
+   * @return UserId
    */
   public function getUpdaterToShow()
   {

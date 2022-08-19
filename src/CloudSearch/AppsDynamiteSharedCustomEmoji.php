@@ -31,7 +31,7 @@ class AppsDynamiteSharedCustomEmoji extends \Google\Model
    * @var string
    */
   public $createTimeMicros;
-  protected $creatorUserIdType = AppsDynamiteUserId::class;
+  protected $creatorUserIdType = UserId::class;
   protected $creatorUserIdDataType = '';
   /**
    * @var string
@@ -41,7 +41,7 @@ class AppsDynamiteSharedCustomEmoji extends \Google\Model
    * @var string
    */
   public $ephemeralUrl;
-  protected $ownerCustomerIdType = AppsDynamiteCustomerId::class;
+  protected $ownerCustomerIdType = CustomerId::class;
   protected $ownerCustomerIdDataType = '';
   /**
    * @var string
@@ -107,14 +107,14 @@ class AppsDynamiteSharedCustomEmoji extends \Google\Model
     return $this->createTimeMicros;
   }
   /**
-   * @param AppsDynamiteUserId
+   * @param UserId
    */
-  public function setCreatorUserId(AppsDynamiteUserId $creatorUserId)
+  public function setCreatorUserId(UserId $creatorUserId)
   {
     $this->creatorUserId = $creatorUserId;
   }
   /**
-   * @return AppsDynamiteUserId
+   * @return UserId
    */
   public function getCreatorUserId()
   {
@@ -149,14 +149,14 @@ class AppsDynamiteSharedCustomEmoji extends \Google\Model
     return $this->ephemeralUrl;
   }
   /**
-   * @param AppsDynamiteCustomerId
+   * @param CustomerId
    */
-  public function setOwnerCustomerId(AppsDynamiteCustomerId $ownerCustomerId)
+  public function setOwnerCustomerId(CustomerId $ownerCustomerId)
   {
     $this->ownerCustomerId = $ownerCustomerId;
   }
   /**
-   * @return AppsDynamiteCustomerId
+   * @return CustomerId
    */
   public function getOwnerCustomerId()
   {

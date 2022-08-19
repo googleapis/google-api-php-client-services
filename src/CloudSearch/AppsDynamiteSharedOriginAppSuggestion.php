@@ -19,20 +19,20 @@ namespace Google\Service\CloudSearch;
 
 class AppsDynamiteSharedOriginAppSuggestion extends \Google\Model
 {
-  protected $appIdType = AppsDynamiteAppId::class;
+  protected $appIdType = AppId::class;
   protected $appIdDataType = '';
   protected $cardClickSuggestionType = AppsDynamiteSharedCardClickSuggestion::class;
   protected $cardClickSuggestionDataType = '';
 
   /**
-   * @param AppsDynamiteAppId
+   * @param AppId
    */
-  public function setAppId(AppsDynamiteAppId $appId)
+  public function setAppId(AppId $appId)
   {
     $this->appId = $appId;
   }
   /**
-   * @return AppsDynamiteAppId
+   * @return AppId
    */
   public function getAppId()
   {
