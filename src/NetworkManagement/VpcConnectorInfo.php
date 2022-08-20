@@ -17,65 +17,64 @@
 
 namespace Google\Service\NetworkManagement;
 
-class AbortInfo extends \Google\Collection
+class VpcConnectorInfo extends \Google\Model
 {
-  protected $collection_key = 'projectsMissingPermission';
   /**
    * @var string
    */
-  public $cause;
-  /**
-   * @var string[]
-   */
-  public $projectsMissingPermission;
+  public $displayName;
   /**
    * @var string
    */
-  public $resourceUri;
+  public $location;
+  /**
+   * @var string
+   */
+  public $uri;
 
   /**
    * @param string
    */
-  public function setCause($cause)
+  public function setDisplayName($displayName)
   {
-    $this->cause = $cause;
+    $this->displayName = $displayName;
   }
   /**
    * @return string
    */
-  public function getCause()
+  public function getDisplayName()
   {
-    return $this->cause;
-  }
-  /**
-   * @param string[]
-   */
-  public function setProjectsMissingPermission($projectsMissingPermission)
-  {
-    $this->projectsMissingPermission = $projectsMissingPermission;
-  }
-  /**
-   * @return string[]
-   */
-  public function getProjectsMissingPermission()
-  {
-    return $this->projectsMissingPermission;
+    return $this->displayName;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setLocation($location)
   {
-    $this->resourceUri = $resourceUri;
+    $this->location = $location;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getLocation()
   {
-    return $this->resourceUri;
+    return $this->location;
+  }
+  /**
+   * @param string
+   */
+  public function setUri($uri)
+  {
+    $this->uri = $uri;
+  }
+  /**
+   * @return string
+   */
+  public function getUri()
+  {
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AbortInfo::class, 'Google_Service_NetworkManagement_AbortInfo');
+class_alias(VpcConnectorInfo::class, 'Google_Service_NetworkManagement_VpcConnectorInfo');
