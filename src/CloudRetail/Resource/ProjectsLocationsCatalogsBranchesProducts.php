@@ -44,10 +44,13 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * updating fulfillment information. If the request is valid, the update will be
    * enqueued and processed downstream. As a consequence, when a response is
    * returned, the added place IDs are not immediately manifested in the Product
-   * queried by ProductService.GetProduct or ProductService.ListProducts. This
-   * feature is only available for users who have Retail Search enabled. Please
-   * enable Retail Search on Cloud Console before using this feature.
-   * (products.addFulfillmentPlaces)
+   * queried by ProductService.GetProduct or ProductService.ListProducts. The
+   * returned Operations will be obsolete after 1 day, and GetOperation API will
+   * return NOT_FOUND afterwards. If conflicting updates are issued, the
+   * Operations associated with the stale updates will not be marked as done until
+   * being obsolete. This feature is only available for users who have Retail
+   * Search enabled. Please enable Retail Search on Cloud Console before using
+   * this feature. (products.addFulfillmentPlaces)
    *
    * @param string $product Required. Full resource name of Product, such as `proj
    * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
@@ -74,9 +77,12 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * ProductService.GetProduct or ProductService.ListProducts. Local inventory
    * information can only be modified using this method.
    * ProductService.CreateProduct and ProductService.UpdateProduct has no effect
-   * on local inventories. This feature is only available for users who have
-   * Retail Search enabled. Please enable Retail Search on Cloud Console before
-   * using this feature. (products.addLocalInventories)
+   * on local inventories. The returned Operations will be obsolete after 1 day,
+   * and GetOperation API will return NOT_FOUND afterwards. If conflicting updates
+   * are issued, the Operations associated with the stale updates will not be
+   * marked as done until being obsolete. This feature is only available for users
+   * who have Retail Search enabled. Please enable Retail Search on Cloud Console
+   * before using this feature. (products.addLocalInventories)
    *
    * @param string $product Required. Full resource name of Product, such as `proj
    * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
@@ -255,10 +261,13 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * updating fulfillment information. If the request is valid, the update will be
    * enqueued and processed downstream. As a consequence, when a response is
    * returned, the removed place IDs are not immediately manifested in the Product
-   * queried by ProductService.GetProduct or ProductService.ListProducts. This
-   * feature is only available for users who have Retail Search enabled. Please
-   * enable Retail Search on Cloud Console before using this feature.
-   * (products.removeFulfillmentPlaces)
+   * queried by ProductService.GetProduct or ProductService.ListProducts. The
+   * returned Operations will be obsolete after 1 day, and GetOperation API will
+   * return NOT_FOUND afterwards. If conflicting updates are issued, the
+   * Operations associated with the stale updates will not be marked as done until
+   * being obsolete. This feature is only available for users who have Retail
+   * Search enabled. Please enable Retail Search on Cloud Console before using
+   * this feature. (products.removeFulfillmentPlaces)
    *
    * @param string $product Required. Full resource name of Product, such as `proj
    * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
@@ -283,9 +292,12 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * queried by ProductService.GetProduct or ProductService.ListProducts. Local
    * inventory information can only be removed using this method.
    * ProductService.CreateProduct and ProductService.UpdateProduct has no effect
-   * on local inventories. This feature is only available for users who have
-   * Retail Search enabled. Please enable Retail Search on Cloud Console before
-   * using this feature. (products.removeLocalInventories)
+   * on local inventories. The returned Operations will be obsolete after 1 day,
+   * and GetOperation API will return NOT_FOUND afterwards. If conflicting updates
+   * are issued, the Operations associated with the stale updates will not be
+   * marked as done until being obsolete. This feature is only available for users
+   * who have Retail Search enabled. Please enable Retail Search on Cloud Console
+   * before using this feature. (products.removeLocalInventories)
    *
    * @param string $product Required. Full resource name of Product, such as `proj
    * ects/locations/global/catalogs/default_catalog/branches/default_branch/produc
@@ -321,9 +333,12 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
    * information will be preserved. Pre-existing inventory information can only be
    * updated with ProductService.SetInventory,
    * ProductService.AddFulfillmentPlaces, and
-   * ProductService.RemoveFulfillmentPlaces. This feature is only available for
-   * users who have Retail Search enabled. Please enable Retail Search on Cloud
-   * Console before using this feature. (products.setInventory)
+   * ProductService.RemoveFulfillmentPlaces. The returned Operations will be
+   * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards.
+   * If conflicting updates are issued, the Operations associated with the stale
+   * updates will not be marked as done until being obsolete. This feature is only
+   * available for users who have Retail Search enabled. Please enable Retail
+   * Search on Cloud Console before using this feature. (products.setInventory)
    *
    * @param string $name Immutable. Full resource name of the product, such as `pr
    * ojects/locations/global/catalogs/default_catalog/branches/default_branch/prod
