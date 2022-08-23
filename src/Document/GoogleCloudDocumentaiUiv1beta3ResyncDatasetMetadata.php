@@ -19,15 +19,13 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends \Google\Collection
 {
-  protected $collection_key = 'newlyAddedDocuments';
+  protected $collection_key = 'individualDocumentResyncStatuses';
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
   protected $datasetResyncStatusesType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus::class;
   protected $datasetResyncStatusesDataType = 'array';
   protected $individualDocumentResyncStatusesType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus::class;
   protected $individualDocumentResyncStatusesDataType = 'array';
-  protected $newlyAddedDocumentsType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument::class;
-  protected $newlyAddedDocumentsDataType = 'array';
 
   /**
    * @param GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
@@ -70,20 +68,6 @@ class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends \Google\Collec
   public function getIndividualDocumentResyncStatuses()
   {
     return $this->individualDocumentResyncStatuses;
-  }
-  /**
-   * @param GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument[]
-   */
-  public function setNewlyAddedDocuments($newlyAddedDocuments)
-  {
-    $this->newlyAddedDocuments = $newlyAddedDocuments;
-  }
-  /**
-   * @return GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataUpdatedDocument[]
-   */
-  public function getNewlyAddedDocuments()
-  {
-    return $this->newlyAddedDocuments;
   }
 }
 
