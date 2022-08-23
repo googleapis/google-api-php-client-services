@@ -208,6 +208,8 @@ class Projects extends \Google\Service\Resource
    * @opt_param string pageToken Token returned from a previous call to
    * `ListFirebaseProjects` indicating where in the set of Projects to resume
    * listing.
+   * @opt_param bool showDeleted Optional. Controls whether Projects in the
+   * DELETING state should be returned. Defaults to false.
    * @return ListFirebaseProjectsResponse
    */
   public function listProjects($optParams = [])

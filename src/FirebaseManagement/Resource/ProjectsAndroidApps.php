@@ -22,6 +22,7 @@ use Google\Service\FirebaseManagement\AndroidAppConfig;
 use Google\Service\FirebaseManagement\ListAndroidAppsResponse;
 use Google\Service\FirebaseManagement\Operation;
 use Google\Service\FirebaseManagement\RemoveAndroidAppRequest;
+use Google\Service\FirebaseManagement\UndeleteAndroidAppRequest;
 
 /**
  * The "androidApps" collection of methods.
@@ -168,6 +169,25 @@ class ProjectsAndroidApps extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('remove', [$params], Operation::class);
+  }
+  /**
+   * Restores the specified AndroidApp to the project. (androidApps.undelete)
+   *
+   * @param string $name Required. The resource name of the AndroidApp, in the
+   * format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID Since an APP_ID is a
+   * unique identifier, the Unique Resource from Sub-Collection access pattern may
+   * be used here, in the format: projects/-/androidApps/APP_ID Refer to the
+   * AndroidApp [name](../projects.androidApps#AndroidApp.FIELDS.name) field for
+   * details about PROJECT_IDENTIFIER and APP_ID values.
+   * @param UndeleteAndroidAppRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function undelete($name, UndeleteAndroidAppRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('undelete', [$params], Operation::class);
   }
 }
 

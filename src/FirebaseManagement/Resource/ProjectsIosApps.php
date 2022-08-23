@@ -22,6 +22,7 @@ use Google\Service\FirebaseManagement\IosAppConfig;
 use Google\Service\FirebaseManagement\ListIosAppsResponse;
 use Google\Service\FirebaseManagement\Operation;
 use Google\Service\FirebaseManagement\RemoveIosAppRequest;
+use Google\Service\FirebaseManagement\UndeleteIosAppRequest;
 
 /**
  * The "iosApps" collection of methods.
@@ -166,6 +167,25 @@ class ProjectsIosApps extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('remove', [$params], Operation::class);
+  }
+  /**
+   * Restores the specified IosApp to the project. (iosApps.undelete)
+   *
+   * @param string $name Required. The resource name of the IosApp, in the format:
+   * projects/ PROJECT_IDENTIFIER/iosApps/APP_ID Since an APP_ID is a unique
+   * identifier, the Unique Resource from Sub-Collection access pattern may be
+   * used here, in the format: projects/-/iosApps/APP_ID Refer to the IosApp
+   * [name](../projects.iosApps#IosApp.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER and APP_ID values.
+   * @param UndeleteIosAppRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function undelete($name, UndeleteIosAppRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('undelete', [$params], Operation::class);
   }
 }
 
