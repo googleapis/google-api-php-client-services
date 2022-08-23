@@ -38,8 +38,8 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
 {
   /**
    * Completes the specified prefix with keyword suggestions. This feature is only
-   * available for users who have Retail Search enabled. Please enable Retail
-   * Search on Cloud Console before using this feature. (catalogs.completeQuery)
+   * available for users who have Retail Search enabled. Enable Retail Search on
+   * Cloud Console before using this feature. (catalogs.completeQuery)
    *
    * @param string $catalog Required. Catalog for which the completion is
    * performed. Full resource name of catalog, such as
@@ -105,9 +105,9 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
   /**
    * Gets a CompletionConfig. (catalogs.getCompletionConfig)
    *
-   * @param string $name Required. Full CompletionConfig resource name. Format: pr
-   * ojects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/complet
-   * ionConfig
+   * @param string $name Required. Full CompletionConfig resource name. Format: `p
+   * rojects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/comple
+   * tionConfig`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRetailV2CompletionConfig
    */

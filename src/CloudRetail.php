@@ -45,6 +45,7 @@ class CloudRetail extends \Google\Service
   public $projects_locations_catalogs_branches_operations;
   public $projects_locations_catalogs_branches_products;
   public $projects_locations_catalogs_completionData;
+  public $projects_locations_catalogs_controls;
   public $projects_locations_catalogs_operations;
   public $projects_locations_catalogs_placements;
   public $projects_locations_catalogs_servingConfigs;
@@ -231,6 +232,16 @@ class CloudRetail extends \Google\Service
               ],
             ],'removeCatalogAttribute' => [
               'path' => 'v2/{+attributesConfig}:removeCatalogAttribute',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'attributesConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'replaceCatalogAttribute' => [
+              'path' => 'v2/{+attributesConfig}:replaceCatalogAttribute',
               'httpMethod' => 'POST',
               'parameters' => [
                 'attributesConfig' => [
@@ -431,6 +442,86 @@ class CloudRetail extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_catalogs_controls = new CloudRetail\Resource\ProjectsLocationsCatalogsControls(
+        $this,
+        $this->serviceName,
+        'controls',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v2/{+parent}/controls',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'controlId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/controls',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_catalogs_operations = new CloudRetail\Resource\ProjectsLocationsCatalogsOperations(
         $this,
         $this->serviceName,
@@ -509,11 +600,97 @@ class CloudRetail extends \Google\Service
         'servingConfigs',
         [
           'methods' => [
-            'predict' => [
+            'addControl' => [
+              'path' => 'v2/{+servingConfig}:addControl',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
+              'path' => 'v2/{+parent}/servingConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'servingConfigId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/servingConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'predict' => [
               'path' => 'v2/{+placement}:predict',
               'httpMethod' => 'POST',
               'parameters' => [
                 'placement' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'removeControl' => [
+              'path' => 'v2/{+servingConfig}:removeControl',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

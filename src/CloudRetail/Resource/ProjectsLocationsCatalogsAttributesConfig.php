@@ -20,6 +20,7 @@ namespace Google\Service\CloudRetail\Resource;
 use Google\Service\CloudRetail\GoogleCloudRetailV2AddCatalogAttributeRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2AttributesConfig;
 use Google\Service\CloudRetail\GoogleCloudRetailV2RemoveCatalogAttributeRequest;
+use Google\Service\CloudRetail\GoogleCloudRetailV2ReplaceCatalogAttributeRequest;
 
 /**
  * The "attributesConfig" collection of methods.
@@ -66,6 +67,25 @@ class ProjectsLocationsCatalogsAttributesConfig extends \Google\Service\Resource
     $params = ['attributesConfig' => $attributesConfig, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('removeCatalogAttribute', [$params], GoogleCloudRetailV2AttributesConfig::class);
+  }
+  /**
+   * Replaces the specified CatalogAttribute in the AttributesConfig by updating
+   * the catalog attribute with the same CatalogAttribute.key. If the
+   * CatalogAttribute to replace does not exist, a NOT_FOUND error is returned.
+   * (attributesConfig.replaceCatalogAttribute)
+   *
+   * @param string $attributesConfig Required. Full AttributesConfig resource
+   * name. Format: `projects/{project_number}/locations/{location_id}/catalogs/{ca
+   * talog_id}/attributesConfig`
+   * @param GoogleCloudRetailV2ReplaceCatalogAttributeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudRetailV2AttributesConfig
+   */
+  public function replaceCatalogAttribute($attributesConfig, GoogleCloudRetailV2ReplaceCatalogAttributeRequest $postBody, $optParams = [])
+  {
+    $params = ['attributesConfig' => $attributesConfig, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('replaceCatalogAttribute', [$params], GoogleCloudRetailV2AttributesConfig::class);
   }
 }
 
