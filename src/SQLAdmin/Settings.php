@@ -41,6 +41,10 @@ class Settings extends \Google\Collection
    */
   public $collation;
   /**
+   * @var string
+   */
+  public $connectorEnforcement;
+  /**
    * @var bool
    */
   public $crashSafeReplicationEnabled;
@@ -192,6 +196,20 @@ class Settings extends \Google\Collection
   public function getCollation()
   {
     return $this->collation;
+  }
+  /**
+   * @param string
+   */
+  public function setConnectorEnforcement($connectorEnforcement)
+  {
+    $this->connectorEnforcement = $connectorEnforcement;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectorEnforcement()
+  {
+    return $this->connectorEnforcement;
   }
   /**
    * @param bool
