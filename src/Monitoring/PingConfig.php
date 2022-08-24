@@ -17,44 +17,28 @@
 
 namespace Google\Service\Monitoring;
 
-class TcpCheck extends \Google\Model
+class PingConfig extends \Google\Model
 {
-  protected $pingConfigType = PingConfig::class;
-  protected $pingConfigDataType = '';
   /**
    * @var int
    */
-  public $port;
+  public $pingsCount;
 
-  /**
-   * @param PingConfig
-   */
-  public function setPingConfig(PingConfig $pingConfig)
-  {
-    $this->pingConfig = $pingConfig;
-  }
-  /**
-   * @return PingConfig
-   */
-  public function getPingConfig()
-  {
-    return $this->pingConfig;
-  }
   /**
    * @param int
    */
-  public function setPort($port)
+  public function setPingsCount($pingsCount)
   {
-    $this->port = $port;
+    $this->pingsCount = $pingsCount;
   }
   /**
    * @return int
    */
-  public function getPort()
+  public function getPingsCount()
   {
-    return $this->port;
+    return $this->pingsCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TcpCheck::class, 'Google_Service_Monitoring_TcpCheck');
+class_alias(PingConfig::class, 'Google_Service_Monitoring_PingConfig');
