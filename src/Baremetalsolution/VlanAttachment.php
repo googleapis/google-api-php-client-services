@@ -22,16 +22,36 @@ class VlanAttachment extends \Google\Model
   /**
    * @var string
    */
+  public $pairingKey;
+  /**
+   * @var string
+   */
   public $peerIp;
   /**
    * @var string
    */
   public $peerVlanId;
+  protected $qosPolicyType = QosPolicy::class;
+  protected $qosPolicyDataType = '';
   /**
    * @var string
    */
   public $routerIp;
 
+  /**
+   * @param string
+   */
+  public function setPairingKey($pairingKey)
+  {
+    $this->pairingKey = $pairingKey;
+  }
+  /**
+   * @return string
+   */
+  public function getPairingKey()
+  {
+    return $this->pairingKey;
+  }
   /**
    * @param string
    */
@@ -59,6 +79,20 @@ class VlanAttachment extends \Google\Model
   public function getPeerVlanId()
   {
     return $this->peerVlanId;
+  }
+  /**
+   * @param QosPolicy
+   */
+  public function setQosPolicy(QosPolicy $qosPolicy)
+  {
+    $this->qosPolicy = $qosPolicy;
+  }
+  /**
+   * @return QosPolicy
+   */
+  public function getQosPolicy()
+  {
+    return $this->qosPolicy;
   }
   /**
    * @param string
