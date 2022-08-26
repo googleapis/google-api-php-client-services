@@ -35,8 +35,6 @@ class PlaceActionLink extends \Google\Model
    * @var string
    */
   public $name;
-  protected $orderOnlineMetadataType = OrderOnlineMetadata::class;
-  protected $orderOnlineMetadataDataType = '';
   /**
    * @var string
    */
@@ -109,20 +107,6 @@ class PlaceActionLink extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param OrderOnlineMetadata
-   */
-  public function setOrderOnlineMetadata(OrderOnlineMetadata $orderOnlineMetadata)
-  {
-    $this->orderOnlineMetadata = $orderOnlineMetadata;
-  }
-  /**
-   * @return OrderOnlineMetadata
-   */
-  public function getOrderOnlineMetadata()
-  {
-    return $this->orderOnlineMetadata;
   }
   /**
    * @param string
