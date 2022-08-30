@@ -26,6 +26,10 @@ class GoogleChromePolicyV1PolicySchema extends \Google\Collection
   public $accessRestrictions;
   protected $additionalTargetKeyNamesType = GoogleChromePolicyV1AdditionalTargetKeyName::class;
   protected $additionalTargetKeyNamesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $categoryTitle;
   protected $definitionType = Proto2FileDescriptorProto::class;
   protected $definitionDataType = '';
   protected $fieldDescriptionsType = GoogleChromePolicyV1PolicySchemaFieldDescription::class;
@@ -84,6 +88,20 @@ class GoogleChromePolicyV1PolicySchema extends \Google\Collection
   public function getAdditionalTargetKeyNames()
   {
     return $this->additionalTargetKeyNames;
+  }
+  /**
+   * @param string
+   */
+  public function setCategoryTitle($categoryTitle)
+  {
+    $this->categoryTitle = $categoryTitle;
+  }
+  /**
+   * @return string
+   */
+  public function getCategoryTitle()
+  {
+    return $this->categoryTitle;
   }
   /**
    * @param Proto2FileDescriptorProto
