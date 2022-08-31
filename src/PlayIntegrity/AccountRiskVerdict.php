@@ -22,8 +22,26 @@ class AccountRiskVerdict extends \Google\Model
   /**
    * @var string
    */
+  public $risk;
+  /**
+   * @var string
+   */
   public $riskLevel;
 
+  /**
+   * @param string
+   */
+  public function setRisk($risk)
+  {
+    $this->risk = $risk;
+  }
+  /**
+   * @return string
+   */
+  public function getRisk()
+  {
+    return $this->risk;
+  }
   /**
    * @param string
    */
