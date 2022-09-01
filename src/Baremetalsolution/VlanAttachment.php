@@ -22,6 +22,10 @@ class VlanAttachment extends \Google\Model
   /**
    * @var string
    */
+  public $id;
+  /**
+   * @var string
+   */
   public $pairingKey;
   /**
    * @var string
@@ -38,6 +42,20 @@ class VlanAttachment extends \Google\Model
    */
   public $routerIp;
 
+  /**
+   * @param string
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
+  }
   /**
    * @param string
    */

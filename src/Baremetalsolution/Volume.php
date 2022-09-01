@@ -54,7 +54,15 @@ class Volume extends \Google\Model
   /**
    * @var string
    */
+  public $notes;
+  /**
+   * @var string
+   */
   public $originallyRequestedSizeGib;
+  /**
+   * @var string
+   */
+  public $performanceTier;
   /**
    * @var string
    */
@@ -209,6 +217,20 @@ class Volume extends \Google\Model
   /**
    * @param string
    */
+  public function setNotes($notes)
+  {
+    $this->notes = $notes;
+  }
+  /**
+   * @return string
+   */
+  public function getNotes()
+  {
+    return $this->notes;
+  }
+  /**
+   * @param string
+   */
   public function setOriginallyRequestedSizeGib($originallyRequestedSizeGib)
   {
     $this->originallyRequestedSizeGib = $originallyRequestedSizeGib;
@@ -219,6 +241,20 @@ class Volume extends \Google\Model
   public function getOriginallyRequestedSizeGib()
   {
     return $this->originallyRequestedSizeGib;
+  }
+  /**
+   * @param string
+   */
+  public function setPerformanceTier($performanceTier)
+  {
+    $this->performanceTier = $performanceTier;
+  }
+  /**
+   * @return string
+   */
+  public function getPerformanceTier()
+  {
+    return $this->performanceTier;
   }
   /**
    * @param string
