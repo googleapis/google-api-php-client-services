@@ -75,6 +75,10 @@ class Message extends \Google\Collection
   /**
    * @var bool
    */
+  public $isContentPurged;
+  /**
+   * @var bool
+   */
   public $isInlineReply;
   /**
    * @var string
@@ -386,6 +390,20 @@ class Message extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsContentPurged($isContentPurged)
+  {
+    $this->isContentPurged = $isContentPurged;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsContentPurged()
+  {
+    return $this->isContentPurged;
   }
   /**
    * @param bool

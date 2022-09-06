@@ -19,10 +19,8 @@ namespace Google\Service\CloudSearch;
 
 class AppsDynamiteSharedActivityFeedAnnotationData extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $activityFeedMessageId;
+  protected $activityFeedMessageIdType = MessageId::class;
+  protected $activityFeedMessageIdDataType = '';
   protected $chatItemType = AppsDynamiteSharedChatItem::class;
   protected $chatItemDataType = '';
   protected $sharedUserInfoType = UserInfo::class;
@@ -31,14 +29,14 @@ class AppsDynamiteSharedActivityFeedAnnotationData extends \Google\Model
   protected $userInfoDataType = '';
 
   /**
-   * @param string
+   * @param MessageId
    */
-  public function setActivityFeedMessageId($activityFeedMessageId)
+  public function setActivityFeedMessageId(MessageId $activityFeedMessageId)
   {
     $this->activityFeedMessageId = $activityFeedMessageId;
   }
   /**
-   * @return string
+   * @return MessageId
    */
   public function getActivityFeedMessageId()
   {

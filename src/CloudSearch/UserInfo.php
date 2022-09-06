@@ -35,6 +35,10 @@ class UserInfo extends \Google\Model
    * @var string
    */
   public $updaterToShowGaiaId;
+  /**
+   * @var string
+   */
+  public $updaterToShowName;
   protected $updaterToShowUserIdType = UserId::class;
   protected $updaterToShowUserIdDataType = '';
 
@@ -93,6 +97,20 @@ class UserInfo extends \Google\Model
   public function getUpdaterToShowGaiaId()
   {
     return $this->updaterToShowGaiaId;
+  }
+  /**
+   * @param string
+   */
+  public function setUpdaterToShowName($updaterToShowName)
+  {
+    $this->updaterToShowName = $updaterToShowName;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdaterToShowName()
+  {
+    return $this->updaterToShowName;
   }
   /**
    * @param UserId
