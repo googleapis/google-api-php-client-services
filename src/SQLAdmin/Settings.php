@@ -109,6 +109,10 @@ class Settings extends \Google\Collection
    */
   public $tier;
   /**
+   * @var string
+   */
+  public $timeZone;
+  /**
    * @var string[]
    */
   public $userLabels;
@@ -490,6 +494,20 @@ class Settings extends \Google\Collection
   public function getTier()
   {
     return $this->tier;
+  }
+  /**
+   * @param string
+   */
+  public function setTimeZone($timeZone)
+  {
+    $this->timeZone = $timeZone;
+  }
+  /**
+   * @return string
+   */
+  public function getTimeZone()
+  {
+    return $this->timeZone;
   }
   /**
    * @param string[]
