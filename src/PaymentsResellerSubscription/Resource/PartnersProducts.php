@@ -42,11 +42,11 @@ class PartnersProducts extends \Google\Service\Resource
    * following caveats: - Only the following features are supported: - Logical
    * operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal
    * operator `.` - Has operator `:` (no wildcards `*`) - Only the following
-   * fields are supported: - `region_codes` -
-   * `youtube_payload.partner_eligibility_id` - `youtube_payload.postal_code` -
-   * Unless explicitly mentioned above, other features are not supported. Example:
-   * `region_codes:US AND youtube_payload.postal_code=94043 AND
-   * youtube_payload.partner_eligibility_id=eligibility-id`
+   * fields are supported: - `regionCodes` - `youtubePayload.partnerEligibilityId`
+   * - `youtubePayload.postalCode` - Unless explicitly mentioned above, other
+   * features are not supported. Example: `regionCodes:US AND
+   * youtubePayload.postalCode=94043 AND youtubePayload.partnerEligibilityId
+   * =eligibility-id`
    * @opt_param int pageSize Optional. The maximum number of products to return.
    * The service may return fewer than this value. If unspecified, at most 50
    * products will be returned. The maximum value is 1000; values above 1000 will
