@@ -41,6 +41,8 @@ class Roster extends \Google\Model
    * @var string
    */
   public $rosterState;
+  protected $segmentedMembershipCountsType = AppsDynamiteSharedSegmentedMembershipCounts::class;
+  protected $segmentedMembershipCountsDataType = '';
 
   /**
    * @param string
@@ -125,6 +127,20 @@ class Roster extends \Google\Model
   public function getRosterState()
   {
     return $this->rosterState;
+  }
+  /**
+   * @param AppsDynamiteSharedSegmentedMembershipCounts
+   */
+  public function setSegmentedMembershipCounts(AppsDynamiteSharedSegmentedMembershipCounts $segmentedMembershipCounts)
+  {
+    $this->segmentedMembershipCounts = $segmentedMembershipCounts;
+  }
+  /**
+   * @return AppsDynamiteSharedSegmentedMembershipCounts
+   */
+  public function getSegmentedMembershipCounts()
+  {
+    return $this->segmentedMembershipCounts;
   }
 }
 
