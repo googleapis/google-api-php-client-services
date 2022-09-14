@@ -17,46 +17,45 @@
 
 namespace Google\Service\GKEHub;
 
-class ServiceMeshMembershipSpec extends \Google\Model
+class ServiceMeshDataPlaneManagement extends \Google\Collection
 {
+  protected $collection_key = 'details';
+  protected $detailsType = ServiceMeshStatusDetails::class;
+  protected $detailsDataType = 'array';
   /**
    * @var string
    */
-  public $controlPlane;
-  /**
-   * @var string
-   */
-  public $management;
+  public $state;
 
   /**
+   * @param ServiceMeshStatusDetails[]
+   */
+  public function setDetails($details)
+  {
+    $this->details = $details;
+  }
+  /**
+   * @return ServiceMeshStatusDetails[]
+   */
+  public function getDetails()
+  {
+    return $this->details;
+  }
+  /**
    * @param string
    */
-  public function setControlPlane($controlPlane)
+  public function setState($state)
   {
-    $this->controlPlane = $controlPlane;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getControlPlane()
+  public function getState()
   {
-    return $this->controlPlane;
-  }
-  /**
-   * @param string
-   */
-  public function setManagement($management)
-  {
-    $this->management = $management;
-  }
-  /**
-   * @return string
-   */
-  public function getManagement()
-  {
-    return $this->management;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceMeshMembershipSpec::class, 'Google_Service_GKEHub_ServiceMeshMembershipSpec');
+class_alias(ServiceMeshDataPlaneManagement::class, 'Google_Service_GKEHub_ServiceMeshDataPlaneManagement');
