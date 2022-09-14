@@ -29,6 +29,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    */
   public $complianceRegime;
   /**
+   * @var string[]
+   */
+  public $compliantButDisallowedServices;
+  /**
    * @var string
    */
   public $createTime;
@@ -96,6 +100,20 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   public function getComplianceRegime()
   {
     return $this->complianceRegime;
+  }
+  /**
+   * @param string[]
+   */
+  public function setCompliantButDisallowedServices($compliantButDisallowedServices)
+  {
+    $this->compliantButDisallowedServices = $compliantButDisallowedServices;
+  }
+  /**
+   * @return string[]
+   */
+  public function getCompliantButDisallowedServices()
+  {
+    return $this->compliantButDisallowedServices;
   }
   /**
    * @param string
