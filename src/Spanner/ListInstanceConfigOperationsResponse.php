@@ -17,28 +17,45 @@
 
 namespace Google\Service\Spanner;
 
-class ReadWrite extends \Google\Model
+class ListInstanceConfigOperationsResponse extends \Google\Collection
 {
+  protected $collection_key = 'operations';
   /**
    * @var string
    */
-  public $readLockMode;
+  public $nextPageToken;
+  protected $operationsType = Operation::class;
+  protected $operationsDataType = 'array';
 
   /**
    * @param string
    */
-  public function setReadLockMode($readLockMode)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->readLockMode = $readLockMode;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getReadLockMode()
+  public function getNextPageToken()
   {
-    return $this->readLockMode;
+    return $this->nextPageToken;
+  }
+  /**
+   * @param Operation[]
+   */
+  public function setOperations($operations)
+  {
+    $this->operations = $operations;
+  }
+  /**
+   * @return Operation[]
+   */
+  public function getOperations()
+  {
+    return $this->operations;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReadWrite::class, 'Google_Service_Spanner_ReadWrite');
+class_alias(ListInstanceConfigOperationsResponse::class, 'Google_Service_Spanner_ListInstanceConfigOperationsResponse');
