@@ -17,63 +17,62 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Stage extends \Google\Collection
+class Phase extends \Google\Model
 {
-  protected $collection_key = 'profiles';
-  /**
-   * @var string[]
-   */
-  public $profiles;
-  protected $strategyType = Strategy::class;
-  protected $strategyDataType = '';
+  protected $deploymentJobsType = DeploymentJobs::class;
+  protected $deploymentJobsDataType = '';
   /**
    * @var string
    */
-  public $targetId;
+  public $id;
+  /**
+   * @var string
+   */
+  public $state;
 
   /**
-   * @param string[]
+   * @param DeploymentJobs
    */
-  public function setProfiles($profiles)
+  public function setDeploymentJobs(DeploymentJobs $deploymentJobs)
   {
-    $this->profiles = $profiles;
+    $this->deploymentJobs = $deploymentJobs;
   }
   /**
-   * @return string[]
+   * @return DeploymentJobs
    */
-  public function getProfiles()
+  public function getDeploymentJobs()
   {
-    return $this->profiles;
-  }
-  /**
-   * @param Strategy
-   */
-  public function setStrategy(Strategy $strategy)
-  {
-    $this->strategy = $strategy;
-  }
-  /**
-   * @return Strategy
-   */
-  public function getStrategy()
-  {
-    return $this->strategy;
+    return $this->deploymentJobs;
   }
   /**
    * @param string
    */
-  public function setTargetId($targetId)
+  public function setId($id)
   {
-    $this->targetId = $targetId;
+    $this->id = $id;
   }
   /**
    * @return string
    */
-  public function getTargetId()
+  public function getId()
   {
-    return $this->targetId;
+    return $this->id;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Stage::class, 'Google_Service_CloudDeploy_Stage');
+class_alias(Phase::class, 'Google_Service_CloudDeploy_Phase');

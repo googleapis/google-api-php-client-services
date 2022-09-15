@@ -17,63 +17,64 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Stage extends \Google\Collection
+class DeployJobRun extends \Google\Model
 {
-  protected $collection_key = 'profiles';
-  /**
-   * @var string[]
-   */
-  public $profiles;
-  protected $strategyType = Strategy::class;
-  protected $strategyDataType = '';
   /**
    * @var string
    */
-  public $targetId;
+  public $build;
+  /**
+   * @var string
+   */
+  public $failureCause;
+  /**
+   * @var string
+   */
+  public $failureMessage;
 
-  /**
-   * @param string[]
-   */
-  public function setProfiles($profiles)
-  {
-    $this->profiles = $profiles;
-  }
-  /**
-   * @return string[]
-   */
-  public function getProfiles()
-  {
-    return $this->profiles;
-  }
-  /**
-   * @param Strategy
-   */
-  public function setStrategy(Strategy $strategy)
-  {
-    $this->strategy = $strategy;
-  }
-  /**
-   * @return Strategy
-   */
-  public function getStrategy()
-  {
-    return $this->strategy;
-  }
   /**
    * @param string
    */
-  public function setTargetId($targetId)
+  public function setBuild($build)
   {
-    $this->targetId = $targetId;
+    $this->build = $build;
   }
   /**
    * @return string
    */
-  public function getTargetId()
+  public function getBuild()
   {
-    return $this->targetId;
+    return $this->build;
+  }
+  /**
+   * @param string
+   */
+  public function setFailureCause($failureCause)
+  {
+    $this->failureCause = $failureCause;
+  }
+  /**
+   * @return string
+   */
+  public function getFailureCause()
+  {
+    return $this->failureCause;
+  }
+  /**
+   * @param string
+   */
+  public function setFailureMessage($failureMessage)
+  {
+    $this->failureMessage = $failureMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getFailureMessage()
+  {
+    return $this->failureMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Stage::class, 'Google_Service_CloudDeploy_Stage');
+class_alias(DeployJobRun::class, 'Google_Service_CloudDeploy_DeployJobRun');

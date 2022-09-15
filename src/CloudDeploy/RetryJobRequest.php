@@ -17,63 +17,46 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Stage extends \Google\Collection
+class RetryJobRequest extends \Google\Model
 {
-  protected $collection_key = 'profiles';
-  /**
-   * @var string[]
-   */
-  public $profiles;
-  protected $strategyType = Strategy::class;
-  protected $strategyDataType = '';
   /**
    * @var string
    */
-  public $targetId;
+  public $jobId;
+  /**
+   * @var string
+   */
+  public $phaseId;
 
-  /**
-   * @param string[]
-   */
-  public function setProfiles($profiles)
-  {
-    $this->profiles = $profiles;
-  }
-  /**
-   * @return string[]
-   */
-  public function getProfiles()
-  {
-    return $this->profiles;
-  }
-  /**
-   * @param Strategy
-   */
-  public function setStrategy(Strategy $strategy)
-  {
-    $this->strategy = $strategy;
-  }
-  /**
-   * @return Strategy
-   */
-  public function getStrategy()
-  {
-    return $this->strategy;
-  }
   /**
    * @param string
    */
-  public function setTargetId($targetId)
+  public function setJobId($jobId)
   {
-    $this->targetId = $targetId;
+    $this->jobId = $jobId;
   }
   /**
    * @return string
    */
-  public function getTargetId()
+  public function getJobId()
   {
-    return $this->targetId;
+    return $this->jobId;
+  }
+  /**
+   * @param string
+   */
+  public function setPhaseId($phaseId)
+  {
+    $this->phaseId = $phaseId;
+  }
+  /**
+   * @return string
+   */
+  public function getPhaseId()
+  {
+    return $this->phaseId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Stage::class, 'Google_Service_CloudDeploy_Stage');
+class_alias(RetryJobRequest::class, 'Google_Service_CloudDeploy_RetryJobRequest');
