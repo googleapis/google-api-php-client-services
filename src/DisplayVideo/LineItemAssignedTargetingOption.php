@@ -17,28 +17,44 @@
 
 namespace Google\Service\DisplayVideo;
 
-class OmidAssignedTargetingOptionDetails extends \Google\Model
+class LineItemAssignedTargetingOption extends \Google\Model
 {
+  protected $assignedTargetingOptionType = AssignedTargetingOption::class;
+  protected $assignedTargetingOptionDataType = '';
   /**
    * @var string
    */
-  public $omid;
+  public $lineItemId;
 
+  /**
+   * @param AssignedTargetingOption
+   */
+  public function setAssignedTargetingOption(AssignedTargetingOption $assignedTargetingOption)
+  {
+    $this->assignedTargetingOption = $assignedTargetingOption;
+  }
+  /**
+   * @return AssignedTargetingOption
+   */
+  public function getAssignedTargetingOption()
+  {
+    return $this->assignedTargetingOption;
+  }
   /**
    * @param string
    */
-  public function setOmid($omid)
+  public function setLineItemId($lineItemId)
   {
-    $this->omid = $omid;
+    $this->lineItemId = $lineItemId;
   }
   /**
    * @return string
    */
-  public function getOmid()
+  public function getLineItemId()
   {
-    return $this->omid;
+    return $this->lineItemId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OmidAssignedTargetingOptionDetails::class, 'Google_Service_DisplayVideo_OmidAssignedTargetingOptionDetails');
+class_alias(LineItemAssignedTargetingOption::class, 'Google_Service_DisplayVideo_LineItemAssignedTargetingOption');

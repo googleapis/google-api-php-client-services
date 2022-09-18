@@ -17,37 +17,46 @@
 
 namespace Google\Service\DisplayVideo;
 
-class DeviceTypeAssignedTargetingOptionDetails extends \Google\Model
+class ThirdPartyVendorConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $deviceType;
-  public $youtubeAndPartnersBidMultiplier;
+  public $placementId;
+  /**
+   * @var string
+   */
+  public $vendor;
 
   /**
    * @param string
    */
-  public function setDeviceType($deviceType)
+  public function setPlacementId($placementId)
   {
-    $this->deviceType = $deviceType;
+    $this->placementId = $placementId;
   }
   /**
    * @return string
    */
-  public function getDeviceType()
+  public function getPlacementId()
   {
-    return $this->deviceType;
+    return $this->placementId;
   }
-  public function setYoutubeAndPartnersBidMultiplier($youtubeAndPartnersBidMultiplier)
+  /**
+   * @param string
+   */
+  public function setVendor($vendor)
   {
-    $this->youtubeAndPartnersBidMultiplier = $youtubeAndPartnersBidMultiplier;
+    $this->vendor = $vendor;
   }
-  public function getYoutubeAndPartnersBidMultiplier()
+  /**
+   * @return string
+   */
+  public function getVendor()
   {
-    return $this->youtubeAndPartnersBidMultiplier;
+    return $this->vendor;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeviceTypeAssignedTargetingOptionDetails::class, 'Google_Service_DisplayVideo_DeviceTypeAssignedTargetingOptionDetails');
+class_alias(ThirdPartyVendorConfig::class, 'Google_Service_DisplayVideo_ThirdPartyVendorConfig');

@@ -17,46 +17,64 @@
 
 namespace Google\Service\DisplayVideo;
 
-class ContentInstreamPositionAssignedTargetingOptionDetails extends \Google\Model
+class CustomBiddingModelDetails extends \Google\Model
 {
   /**
    * @var string
    */
-  public $adType;
+  public $advertiserId;
   /**
    * @var string
    */
-  public $contentInstreamPosition;
+  public $readinessState;
+  /**
+   * @var string
+   */
+  public $suspensionState;
 
   /**
    * @param string
    */
-  public function setAdType($adType)
+  public function setAdvertiserId($advertiserId)
   {
-    $this->adType = $adType;
+    $this->advertiserId = $advertiserId;
   }
   /**
    * @return string
    */
-  public function getAdType()
+  public function getAdvertiserId()
   {
-    return $this->adType;
+    return $this->advertiserId;
   }
   /**
    * @param string
    */
-  public function setContentInstreamPosition($contentInstreamPosition)
+  public function setReadinessState($readinessState)
   {
-    $this->contentInstreamPosition = $contentInstreamPosition;
+    $this->readinessState = $readinessState;
   }
   /**
    * @return string
    */
-  public function getContentInstreamPosition()
+  public function getReadinessState()
   {
-    return $this->contentInstreamPosition;
+    return $this->readinessState;
+  }
+  /**
+   * @param string
+   */
+  public function setSuspensionState($suspensionState)
+  {
+    $this->suspensionState = $suspensionState;
+  }
+  /**
+   * @return string
+   */
+  public function getSuspensionState()
+  {
+    return $this->suspensionState;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ContentInstreamPositionAssignedTargetingOptionDetails::class, 'Google_Service_DisplayVideo_ContentInstreamPositionAssignedTargetingOptionDetails');
+class_alias(CustomBiddingModelDetails::class, 'Google_Service_DisplayVideo_CustomBiddingModelDetails');
