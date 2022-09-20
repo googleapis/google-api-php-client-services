@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for AnalyticsHub (v1beta1).
+ * Service definition for AnalyticsHub (v1).
  *
  * <p>
  * Exchange data and analytics assets securely and efficiently.</p>
@@ -58,7 +58,7 @@ class AnalyticsHub extends \Google\Service
     $this->rootUrl = $rootUrl ?: 'https://analyticshub.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta1';
+    $this->version = 'v1';
     $this->serviceName = 'analyticshub';
 
     $this->organizations_locations_dataExchanges = new AnalyticsHub\Resource\OrganizationsLocationsDataExchanges(
@@ -68,7 +68,7 @@ class AnalyticsHub extends \Google\Service
         [
           'methods' => [
             'list' => [
-              'path' => 'v1beta1/{+organization}/dataExchanges',
+              'path' => 'v1/{+organization}/dataExchanges',
               'httpMethod' => 'GET',
               'parameters' => [
                 'organization' => [
@@ -96,7 +96,7 @@ class AnalyticsHub extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/dataExchanges',
+              'path' => 'v1/{+parent}/dataExchanges',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -110,7 +110,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -120,7 +120,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -130,7 +130,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -140,7 +140,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/dataExchanges',
+              'path' => 'v1/{+parent}/dataExchanges',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -158,7 +158,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -172,7 +172,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -182,7 +182,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -202,7 +202,7 @@ class AnalyticsHub extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/listings',
+              'path' => 'v1/{+parent}/listings',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -216,7 +216,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -226,7 +226,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -236,7 +236,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -246,7 +246,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/listings',
+              'path' => 'v1/{+parent}/listings',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -264,7 +264,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -278,7 +278,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -288,7 +288,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'subscribe' => [
-              'path' => 'v1beta1/{+name}:subscribe',
+              'path' => 'v1/{+name}:subscribe',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -298,7 +298,7 @@ class AnalyticsHub extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
