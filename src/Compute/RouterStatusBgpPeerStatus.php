@@ -33,6 +33,10 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
    */
   public $linkedVpnTunnel;
   /**
+   * @var bool
+   */
+  public $md5AuthEnabled;
+  /**
    * @var string
    */
   public $name;
@@ -56,6 +60,10 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
    * @var string
    */
   public $status;
+  /**
+   * @var string
+   */
+  public $statusReason;
   /**
    * @var string
    */
@@ -120,6 +128,20 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   public function getLinkedVpnTunnel()
   {
     return $this->linkedVpnTunnel;
+  }
+  /**
+   * @param bool
+   */
+  public function setMd5AuthEnabled($md5AuthEnabled)
+  {
+    $this->md5AuthEnabled = $md5AuthEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getMd5AuthEnabled()
+  {
+    return $this->md5AuthEnabled;
   }
   /**
    * @param string
@@ -204,6 +226,20 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   public function getStatus()
   {
     return $this->status;
+  }
+  /**
+   * @param string
+   */
+  public function setStatusReason($statusReason)
+  {
+    $this->statusReason = $statusReason;
+  }
+  /**
+   * @return string
+   */
+  public function getStatusReason()
+  {
+    return $this->statusReason;
   }
   /**
    * @param string
