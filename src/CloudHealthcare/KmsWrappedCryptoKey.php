@@ -17,14 +17,16 @@
 
 namespace Google\Service\CloudHealthcare;
 
-class DateShiftConfig extends \Google\Model
+class KmsWrappedCryptoKey extends \Google\Model
 {
   /**
    * @var string
    */
   public $cryptoKey;
-  protected $kmsWrappedType = KmsWrappedCryptoKey::class;
-  protected $kmsWrappedDataType = '';
+  /**
+   * @var string
+   */
+  public $wrappedKey;
 
   /**
    * @param string
@@ -41,20 +43,20 @@ class DateShiftConfig extends \Google\Model
     return $this->cryptoKey;
   }
   /**
-   * @param KmsWrappedCryptoKey
+   * @param string
    */
-  public function setKmsWrapped(KmsWrappedCryptoKey $kmsWrapped)
+  public function setWrappedKey($wrappedKey)
   {
-    $this->kmsWrapped = $kmsWrapped;
+    $this->wrappedKey = $wrappedKey;
   }
   /**
-   * @return KmsWrappedCryptoKey
+   * @return string
    */
-  public function getKmsWrapped()
+  public function getWrappedKey()
   {
-    return $this->kmsWrapped;
+    return $this->wrappedKey;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DateShiftConfig::class, 'Google_Service_CloudHealthcare_DateShiftConfig');
+class_alias(KmsWrappedCryptoKey::class, 'Google_Service_CloudHealthcare_KmsWrappedCryptoKey');

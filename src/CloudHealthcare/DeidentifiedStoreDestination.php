@@ -17,44 +17,44 @@
 
 namespace Google\Service\CloudHealthcare;
 
-class DateShiftConfig extends \Google\Model
+class DeidentifiedStoreDestination extends \Google\Model
 {
+  protected $configType = DeidentifyConfig::class;
+  protected $configDataType = '';
   /**
    * @var string
    */
-  public $cryptoKey;
-  protected $kmsWrappedType = KmsWrappedCryptoKey::class;
-  protected $kmsWrappedDataType = '';
+  public $store;
 
+  /**
+   * @param DeidentifyConfig
+   */
+  public function setConfig(DeidentifyConfig $config)
+  {
+    $this->config = $config;
+  }
+  /**
+   * @return DeidentifyConfig
+   */
+  public function getConfig()
+  {
+    return $this->config;
+  }
   /**
    * @param string
    */
-  public function setCryptoKey($cryptoKey)
+  public function setStore($store)
   {
-    $this->cryptoKey = $cryptoKey;
+    $this->store = $store;
   }
   /**
    * @return string
    */
-  public function getCryptoKey()
+  public function getStore()
   {
-    return $this->cryptoKey;
-  }
-  /**
-   * @param KmsWrappedCryptoKey
-   */
-  public function setKmsWrapped(KmsWrappedCryptoKey $kmsWrapped)
-  {
-    $this->kmsWrapped = $kmsWrapped;
-  }
-  /**
-   * @return KmsWrappedCryptoKey
-   */
-  public function getKmsWrapped()
-  {
-    return $this->kmsWrapped;
+    return $this->store;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DateShiftConfig::class, 'Google_Service_CloudHealthcare_DateShiftConfig');
+class_alias(DeidentifiedStoreDestination::class, 'Google_Service_CloudHealthcare_DeidentifiedStoreDestination');
