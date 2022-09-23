@@ -34,8 +34,8 @@ class AccountsAdclientsCustomchannels extends \Google\Service\Resource
 {
   /**
    * Creates a custom channel. This method can only be used by projects enabled
-   * for the [AdSense for Platforms
-   * product](https://developers.google.com/adsense/platforms/).
+   * for the [AdSense for
+   * Platforms](https://developers.google.com/adsense/platforms/) product.
    * (customchannels.create)
    *
    * @param string $parent Required. The ad client to create a custom channel
@@ -52,8 +52,8 @@ class AccountsAdclientsCustomchannels extends \Google\Service\Resource
   }
   /**
    * Deletes a custom channel. This method can only be used by projects enabled
-   * for the [AdSense for Platforms
-   * product](https://developers.google.com/adsense/platforms/).
+   * for the [AdSense for
+   * Platforms](https://developers.google.com/adsense/platforms/) product.
    * (customchannels.delete)
    *
    * @param string $name Required. Name of the custom channel to delete. Format:
@@ -132,8 +132,8 @@ class AccountsAdclientsCustomchannels extends \Google\Service\Resource
   }
   /**
    * Updates a custom channel. This method can only be used by projects enabled
-   * for the [AdSense for Platforms
-   * product](https://developers.google.com/adsense/platforms/).
+   * for the [AdSense for
+   * Platforms](https://developers.google.com/adsense/platforms/) product.
    * (customchannels.patch)
    *
    * @param string $name Output only. Resource name of the custom channel. Format:
