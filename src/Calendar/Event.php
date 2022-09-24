@@ -280,7 +280,7 @@ class Event extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param EventDateTime
+   * @param EventDateTime $end
    */
   public function setEnd(EventDateTime $end)
   {
@@ -616,7 +616,7 @@ class Event extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param EventDateTime
+   * @param EventDateTime $start
    */
   public function setStart(EventDateTime $start)
   {
