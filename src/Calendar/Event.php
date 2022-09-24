@@ -48,6 +48,10 @@ class Event extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var EventDateTime|null
+   */
+  protected $end = null;
   protected $endType = EventDateTime::class;
   protected $endDataType = '';
   /**
@@ -291,7 +295,7 @@ class Event extends \Google\Collection
     $this->end = $end;
   }
   /**
-   * @return EventDateTime
+   * @return EventDateTime|null
    */
   public function getEnd()
   {
