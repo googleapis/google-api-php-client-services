@@ -130,6 +130,10 @@ class Event extends \Google\Collection
   public $sequence;
   protected $sourceType = EventSource::class;
   protected $sourceDataType = '';
+  /**
+   * @var EventDateTime|null
+   */
+  protected $start = null;
   protected $startType = EventDateTime::class;
   protected $startDataType = '';
   /**
@@ -623,7 +627,7 @@ class Event extends \Google\Collection
     $this->start = $start;
   }
   /**
-   * @return EventDateTime
+   * @return EventDateTime|null
    */
   public function getStart()
   {
