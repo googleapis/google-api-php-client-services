@@ -25,7 +25,7 @@ class CreateInstanceConfigMetadata extends \Google\Model
   public $cancelTime;
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
-  protected $progressType = OperationProgress::class;
+  protected $progressType = InstanceOperationProgress::class;
   protected $progressDataType = '';
 
   /**
@@ -57,14 +57,14 @@ class CreateInstanceConfigMetadata extends \Google\Model
     return $this->instanceConfig;
   }
   /**
-   * @param OperationProgress
+   * @param InstanceOperationProgress
    */
-  public function setProgress(OperationProgress $progress)
+  public function setProgress(InstanceOperationProgress $progress)
   {
     $this->progress = $progress;
   }
   /**
-   * @return OperationProgress
+   * @return InstanceOperationProgress
    */
   public function getProgress()
   {
