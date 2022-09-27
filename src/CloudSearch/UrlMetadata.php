@@ -69,6 +69,10 @@ class UrlMetadata extends \Google\Model
   public $title;
   protected $urlType = SafeUrlProto::class;
   protected $urlDataType = '';
+  /**
+   * @var string
+   */
+  public $urlSource;
 
   /**
    * @param string
@@ -265,6 +269,20 @@ class UrlMetadata extends \Google\Model
   public function getUrl()
   {
     return $this->url;
+  }
+  /**
+   * @param string
+   */
+  public function setUrlSource($urlSource)
+  {
+    $this->urlSource = $urlSource;
+  }
+  /**
+   * @return string
+   */
+  public function getUrlSource()
+  {
+    return $this->urlSource;
   }
 }
 
