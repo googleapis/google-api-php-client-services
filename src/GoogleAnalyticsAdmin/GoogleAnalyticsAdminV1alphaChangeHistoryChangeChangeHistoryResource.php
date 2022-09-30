@@ -47,6 +47,8 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource extend
   protected $measurementProtocolSecretDataType = '';
   protected $propertyType = GoogleAnalyticsAdminV1alphaProperty::class;
   protected $propertyDataType = '';
+  protected $searchAds360LinkType = GoogleAnalyticsAdminV1alphaSearchAds360Link::class;
+  protected $searchAds360LinkDataType = '';
 
   /**
    * @param GoogleAnalyticsAdminV1alphaAccount
@@ -243,6 +245,20 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource extend
   public function getProperty()
   {
     return $this->property;
+  }
+  /**
+   * @param GoogleAnalyticsAdminV1alphaSearchAds360Link
+   */
+  public function setSearchAds360Link(GoogleAnalyticsAdminV1alphaSearchAds360Link $searchAds360Link)
+  {
+    $this->searchAds360Link = $searchAds360Link;
+  }
+  /**
+   * @return GoogleAnalyticsAdminV1alphaSearchAds360Link
+   */
+  public function getSearchAds360Link()
+  {
+    return $this->searchAds360Link;
   }
 }
 
