@@ -50,10 +50,6 @@ class CallSettings extends \Google\Model
   /**
    * @var bool
    */
-  public $projectDinoEnabled;
-  /**
-   * @var bool
-   */
   public $reactionsLock;
   /**
    * @var bool
@@ -157,20 +153,6 @@ class CallSettings extends \Google\Model
   public function getPresentLock()
   {
     return $this->presentLock;
-  }
-  /**
-   * @param bool
-   */
-  public function setProjectDinoEnabled($projectDinoEnabled)
-  {
-    $this->projectDinoEnabled = $projectDinoEnabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getProjectDinoEnabled()
-  {
-    return $this->projectDinoEnabled;
   }
   /**
    * @param bool

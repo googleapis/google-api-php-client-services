@@ -109,6 +109,14 @@ class SettingsSearchapplications extends \Google\Service\Resource
    * searchapplications/{application_id}.
    * @param SearchApplication $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Update mask to control which fields to update.
+   * If update_mask is non-empty then only the fields specified in the update_mask
+   * are updated. If you specify a field in the update_mask, but don't specify its
+   * value in the search_application then that field will be cleared. If the
+   * update_mask is not present or empty or has the value * then all fields will
+   * be updated. Some example field paths: search_application.name,
+   * search_application.display_name
    * @return Operation
    */
   public function patch($name, SearchApplication $postBody, $optParams = [])
@@ -142,6 +150,14 @@ class SettingsSearchapplications extends \Google\Service\Resource
    * searchapplications/{application_id}.
    * @param SearchApplication $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Update mask to control which fields to update.
+   * If update_mask is non-empty then only the fields specified in the update_mask
+   * are updated. If you specify a field in the update_mask, but don't specify its
+   * value in the search_application then that field will be cleared. If the
+   * update_mask is not present or empty or has the value * then all fields will
+   * be updated. Some example field paths: search_application.name,
+   * search_application.display_name
    * @return Operation
    */
   public function update($name, SearchApplication $postBody, $optParams = [])
