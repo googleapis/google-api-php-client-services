@@ -23,10 +23,6 @@ class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest extends \Google\M
    * @var string
    */
   public $comment;
-  /**
-   * @var string
-   */
-  public $nonCompliantOrgPolicy;
 
   /**
    * @param string
@@ -41,20 +37,6 @@ class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest extends \Google\M
   public function getComment()
   {
     return $this->comment;
-  }
-  /**
-   * @param string
-   */
-  public function setNonCompliantOrgPolicy($nonCompliantOrgPolicy)
-  {
-    $this->nonCompliantOrgPolicy = $nonCompliantOrgPolicy;
-  }
-  /**
-   * @return string
-   */
-  public function getNonCompliantOrgPolicy()
-  {
-    return $this->nonCompliantOrgPolicy;
   }
 }
 

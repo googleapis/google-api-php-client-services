@@ -46,6 +46,10 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Model
   /**
    * @var string
    */
+  public $exceptionAuditLogLink;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -153,6 +157,20 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setExceptionAuditLogLink($exceptionAuditLogLink)
+  {
+    $this->exceptionAuditLogLink = $exceptionAuditLogLink;
+  }
+  /**
+   * @return string
+   */
+  public function getExceptionAuditLogLink()
+  {
+    return $this->exceptionAuditLogLink;
   }
   /**
    * @param string
