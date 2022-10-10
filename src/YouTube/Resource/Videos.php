@@ -126,10 +126,10 @@ class Videos extends \Google\Service\Resource
    * @opt_param bool stabilize Should stabilize be applied to the upload.
    * @return Video
    */
-  public function insert($part, Video $postBody, $optParams = [])
+  public function insert($part, Video $postBody, $optParams = [], $otherParams = [])
   {
     $params = ['part' => $part, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
+    $params = array_merge($params, $optParams, $otherParams);
     return $this->call('insert', [$params], Video::class);
   }
   /**
