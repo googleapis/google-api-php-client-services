@@ -37,6 +37,8 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource extend
   protected $displayVideo360AdvertiserLinkDataType = '';
   protected $displayVideo360AdvertiserLinkProposalType = GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal::class;
   protected $displayVideo360AdvertiserLinkProposalDataType = '';
+  protected $expandedDataSetType = GoogleAnalyticsAdminV1alphaExpandedDataSet::class;
+  protected $expandedDataSetDataType = '';
   protected $firebaseLinkType = GoogleAnalyticsAdminV1alphaFirebaseLink::class;
   protected $firebaseLinkDataType = '';
   protected $googleAdsLinkType = GoogleAnalyticsAdminV1alphaGoogleAdsLink::class;
@@ -175,6 +177,20 @@ class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource extend
   public function getDisplayVideo360AdvertiserLinkProposal()
   {
     return $this->displayVideo360AdvertiserLinkProposal;
+  }
+  /**
+   * @param GoogleAnalyticsAdminV1alphaExpandedDataSet
+   */
+  public function setExpandedDataSet(GoogleAnalyticsAdminV1alphaExpandedDataSet $expandedDataSet)
+  {
+    $this->expandedDataSet = $expandedDataSet;
+  }
+  /**
+   * @return GoogleAnalyticsAdminV1alphaExpandedDataSet
+   */
+  public function getExpandedDataSet()
+  {
+    return $this->expandedDataSet;
   }
   /**
    * @param GoogleAnalyticsAdminV1alphaFirebaseLink
