@@ -17,14 +17,14 @@
 
 namespace Google\Service\ChromePolicy\Resource;
 
-use Google\Service\ChromePolicy\GoogleChromePolicyV1DefineCertificateRequest;
-use Google\Service\ChromePolicy\GoogleChromePolicyV1DefineCertificateResponse;
-use Google\Service\ChromePolicy\GoogleChromePolicyV1DefineNetworkRequest;
-use Google\Service\ChromePolicy\GoogleChromePolicyV1DefineNetworkResponse;
-use Google\Service\ChromePolicy\GoogleChromePolicyV1RemoveCertificateRequest;
-use Google\Service\ChromePolicy\GoogleChromePolicyV1RemoveCertificateResponse;
-use Google\Service\ChromePolicy\GoogleChromePolicyV1RemoveNetworkRequest;
-use Google\Service\ChromePolicy\GoogleChromePolicyV1RemoveNetworkResponse;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1DefineCertificateRequest;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1DefineCertificateResponse;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1DefineNetworkRequest;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1DefineNetworkResponse;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1RemoveCertificateRequest;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1RemoveCertificateResponse;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1RemoveNetworkRequest;
+use Google\Service\ChromePolicy\GoogleChromePolicyVersionsV1RemoveNetworkResponse;
 
 /**
  * The "networks" collection of methods.
@@ -42,58 +42,58 @@ class CustomersPoliciesNetworks extends \Google\Service\Resource
    *
    * @param string $customer Required. The customer for which the certificate will
    * apply.
-   * @param GoogleChromePolicyV1DefineCertificateRequest $postBody
+   * @param GoogleChromePolicyVersionsV1DefineCertificateRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleChromePolicyV1DefineCertificateResponse
+   * @return GoogleChromePolicyVersionsV1DefineCertificateResponse
    */
-  public function defineCertificate($customer, GoogleChromePolicyV1DefineCertificateRequest $postBody, $optParams = [])
+  public function defineCertificate($customer, GoogleChromePolicyVersionsV1DefineCertificateRequest $postBody, $optParams = [])
   {
     $params = ['customer' => $customer, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('defineCertificate', [$params], GoogleChromePolicyV1DefineCertificateResponse::class);
+    return $this->call('defineCertificate', [$params], GoogleChromePolicyVersionsV1DefineCertificateResponse::class);
   }
   /**
    * Define a new network. (networks.defineNetwork)
    *
    * @param string $customer Required. The customer who will own this new network.
-   * @param GoogleChromePolicyV1DefineNetworkRequest $postBody
+   * @param GoogleChromePolicyVersionsV1DefineNetworkRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleChromePolicyV1DefineNetworkResponse
+   * @return GoogleChromePolicyVersionsV1DefineNetworkResponse
    */
-  public function defineNetwork($customer, GoogleChromePolicyV1DefineNetworkRequest $postBody, $optParams = [])
+  public function defineNetwork($customer, GoogleChromePolicyVersionsV1DefineNetworkRequest $postBody, $optParams = [])
   {
     $params = ['customer' => $customer, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('defineNetwork', [$params], GoogleChromePolicyV1DefineNetworkResponse::class);
+    return $this->call('defineNetwork', [$params], GoogleChromePolicyVersionsV1DefineNetworkResponse::class);
   }
   /**
    * Remove an existing certificate by guid. (networks.removeCertificate)
    *
    * @param string $customer Required. The customer whose certificate will be
    * removed.
-   * @param GoogleChromePolicyV1RemoveCertificateRequest $postBody
+   * @param GoogleChromePolicyVersionsV1RemoveCertificateRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleChromePolicyV1RemoveCertificateResponse
+   * @return GoogleChromePolicyVersionsV1RemoveCertificateResponse
    */
-  public function removeCertificate($customer, GoogleChromePolicyV1RemoveCertificateRequest $postBody, $optParams = [])
+  public function removeCertificate($customer, GoogleChromePolicyVersionsV1RemoveCertificateRequest $postBody, $optParams = [])
   {
     $params = ['customer' => $customer, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('removeCertificate', [$params], GoogleChromePolicyV1RemoveCertificateResponse::class);
+    return $this->call('removeCertificate', [$params], GoogleChromePolicyVersionsV1RemoveCertificateResponse::class);
   }
   /**
    * Remove an existing network by guid. (networks.removeNetwork)
    *
    * @param string $customer Required. The customer whose network will be removed.
-   * @param GoogleChromePolicyV1RemoveNetworkRequest $postBody
+   * @param GoogleChromePolicyVersionsV1RemoveNetworkRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleChromePolicyV1RemoveNetworkResponse
+   * @return GoogleChromePolicyVersionsV1RemoveNetworkResponse
    */
-  public function removeNetwork($customer, GoogleChromePolicyV1RemoveNetworkRequest $postBody, $optParams = [])
+  public function removeNetwork($customer, GoogleChromePolicyVersionsV1RemoveNetworkRequest $postBody, $optParams = [])
   {
     $params = ['customer' => $customer, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('removeNetwork', [$params], GoogleChromePolicyV1RemoveNetworkResponse::class);
+    return $this->call('removeNetwork', [$params], GoogleChromePolicyVersionsV1RemoveNetworkResponse::class);
   }
 }
 
