@@ -55,7 +55,7 @@ class Access extends \Google\Collection
   /**
    * @var string
    */
-  public $username;
+  public $userName;
 
   /**
    * @param string
@@ -186,16 +186,16 @@ class Access extends \Google\Collection
   /**
    * @param string
    */
-  public function setUsername($username)
+  public function setUserName($userName)
   {
-    $this->username = $username;
+    $this->userName = $userName;
   }
   /**
    * @return string
    */
-  public function getUsername()
+  public function getUserName()
   {
-    return $this->username;
+    return $this->userName;
   }
 }
 

@@ -17,21 +17,15 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV1ExposedResource extends \Google\Collection
+class PathNode extends \Google\Collection
 {
-  protected $collection_key = 'methods';
+  protected $collection_key = 'associatedFindings';
+  protected $associatedFindingsType = AssociatedFinding::class;
+  protected $associatedFindingsDataType = 'array';
   /**
    * @var string
    */
   public $displayName;
-  /**
-   * @var string[]
-   */
-  public $methods;
-  /**
-   * @var string
-   */
-  public $name;
   /**
    * @var string
    */
@@ -40,11 +34,21 @@ class GoogleCloudSecuritycenterV1ExposedResource extends \Google\Collection
    * @var string
    */
   public $resourceType;
-  /**
-   * @var string
-   */
-  public $resourceValue;
 
+  /**
+   * @param AssociatedFinding[]
+   */
+  public function setAssociatedFindings($associatedFindings)
+  {
+    $this->associatedFindings = $associatedFindings;
+  }
+  /**
+   * @return AssociatedFinding[]
+   */
+  public function getAssociatedFindings()
+  {
+    return $this->associatedFindings;
+  }
   /**
    * @param string
    */
@@ -58,34 +62,6 @@ class GoogleCloudSecuritycenterV1ExposedResource extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
-  }
-  /**
-   * @param string[]
-   */
-  public function setMethods($methods)
-  {
-    $this->methods = $methods;
-  }
-  /**
-   * @return string[]
-   */
-  public function getMethods()
-  {
-    return $this->methods;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
   }
   /**
    * @param string
@@ -115,21 +91,7 @@ class GoogleCloudSecuritycenterV1ExposedResource extends \Google\Collection
   {
     return $this->resourceType;
   }
-  /**
-   * @param string
-   */
-  public function setResourceValue($resourceValue)
-  {
-    $this->resourceValue = $resourceValue;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceValue()
-  {
-    return $this->resourceValue;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudSecuritycenterV1ExposedResource::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1ExposedResource');
+class_alias(PathNode::class, 'Google_Service_SecurityCommandCenter_PathNode');

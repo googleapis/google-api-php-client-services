@@ -17,8 +17,76 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV1ExposurePath extends \Google\Model
+class GoogleCloudSecuritycenterV1ExposurePath extends \Google\Collection
 {
+  protected $collection_key = 'pathNodes';
+  protected $edgesType = Edge::class;
+  protected $edgesDataType = 'array';
+  protected $exposedResourceType = GoogleCloudSecuritycenterV1ExposedResource::class;
+  protected $exposedResourceDataType = '';
+  /**
+   * @var string
+   */
+  public $name;
+  protected $pathNodesType = PathNode::class;
+  protected $pathNodesDataType = 'array';
+
+  /**
+   * @param Edge[]
+   */
+  public function setEdges($edges)
+  {
+    $this->edges = $edges;
+  }
+  /**
+   * @return Edge[]
+   */
+  public function getEdges()
+  {
+    return $this->edges;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV1ExposedResource
+   */
+  public function setExposedResource(GoogleCloudSecuritycenterV1ExposedResource $exposedResource)
+  {
+    $this->exposedResource = $exposedResource;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV1ExposedResource
+   */
+  public function getExposedResource()
+  {
+    return $this->exposedResource;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
+  }
+  /**
+   * @param PathNode[]
+   */
+  public function setPathNodes($pathNodes)
+  {
+    $this->pathNodes = $pathNodes;
+  }
+  /**
+   * @return PathNode[]
+   */
+  public function getPathNodes()
+  {
+    return $this->pathNodes;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

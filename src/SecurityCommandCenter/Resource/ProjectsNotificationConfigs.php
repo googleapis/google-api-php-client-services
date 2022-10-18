@@ -29,7 +29,7 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
  *   $notificationConfigs = $securitycenterService->notificationConfigs;
  *  </code>
  */
-class OrganizationsNotificationConfigs extends \Google\Service\Resource
+class ProjectsNotificationConfigs extends \Google\Service\Resource
 {
   /**
    * Creates a notification config. (notificationConfigs.create)
@@ -81,7 +81,7 @@ class OrganizationsNotificationConfigs extends \Google\Service\Resource
   }
   /**
    * Lists notification configs.
-   * (notificationConfigs.listOrganizationsNotificationConfigs)
+   * (notificationConfigs.listProjectsNotificationConfigs)
    *
    * @param string $parent Required. Name of the organization to list notification
    * configs. Its format is "organizations/[organization_id]",
@@ -96,7 +96,7 @@ class OrganizationsNotificationConfigs extends \Google\Service\Resource
    * next page of data.
    * @return ListNotificationConfigsResponse
    */
-  public function listOrganizationsNotificationConfigs($parent, $optParams = [])
+  public function listProjectsNotificationConfigs($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -128,4 +128,4 @@ class OrganizationsNotificationConfigs extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OrganizationsNotificationConfigs::class, 'Google_Service_SecurityCommandCenter_Resource_OrganizationsNotificationConfigs');
+class_alias(ProjectsNotificationConfigs::class, 'Google_Service_SecurityCommandCenter_Resource_ProjectsNotificationConfigs');
