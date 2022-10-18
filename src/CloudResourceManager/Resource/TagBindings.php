@@ -32,8 +32,8 @@ use Google\Service\CloudResourceManager\TagBinding;
 class TagBindings extends \Google\Service\Resource
 {
   /**
-   * Creates a TagBinding between a TagValue and a cloud resource (currently
-   * project, folder, or organization). (tagBindings.create)
+   * Creates a TagBinding between a TagValue and a Google Cloud resource.
+   * (tagBindings.create)
    *
    * @param TagBinding $postBody
    * @param array $optParams Optional parameters.
@@ -64,7 +64,7 @@ class TagBindings extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Lists the TagBindings for the given cloud resource, as specified with
+   * Lists the TagBindings for the given Google Cloud resource, as specified with
    * `parent`. NOTE: The `parent` field is expected to be a full resource name:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * (tagBindings.listTagBindings)
