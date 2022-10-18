@@ -444,7 +444,17 @@ class BigtableAdmin extends \Google\Service
         'backups',
         [
           'methods' => [
-            'create' => [
+            'copy' => [
+              'path' => 'v2/{+parent}/backups:copy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v2/{+parent}/backups',
               'httpMethod' => 'POST',
               'parameters' => [

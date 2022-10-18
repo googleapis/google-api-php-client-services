@@ -17,56 +17,48 @@
 
 namespace Google\Service\BigtableAdmin;
 
-class BackupInfo extends \Google\Model
+class CopyBackupRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $backup;
+  public $backupId;
   /**
    * @var string
    */
-  public $endTime;
+  public $expireTime;
   /**
    * @var string
    */
   public $sourceBackup;
-  /**
-   * @var string
-   */
-  public $sourceTable;
-  /**
-   * @var string
-   */
-  public $startTime;
 
   /**
    * @param string
    */
-  public function setBackup($backup)
+  public function setBackupId($backupId)
   {
-    $this->backup = $backup;
+    $this->backupId = $backupId;
   }
   /**
    * @return string
    */
-  public function getBackup()
+  public function getBackupId()
   {
-    return $this->backup;
+    return $this->backupId;
   }
   /**
    * @param string
    */
-  public function setEndTime($endTime)
+  public function setExpireTime($expireTime)
   {
-    $this->endTime = $endTime;
+    $this->expireTime = $expireTime;
   }
   /**
    * @return string
    */
-  public function getEndTime()
+  public function getExpireTime()
   {
-    return $this->endTime;
+    return $this->expireTime;
   }
   /**
    * @param string
@@ -82,35 +74,7 @@ class BackupInfo extends \Google\Model
   {
     return $this->sourceBackup;
   }
-  /**
-   * @param string
-   */
-  public function setSourceTable($sourceTable)
-  {
-    $this->sourceTable = $sourceTable;
-  }
-  /**
-   * @return string
-   */
-  public function getSourceTable()
-  {
-    return $this->sourceTable;
-  }
-  /**
-   * @param string
-   */
-  public function setStartTime($startTime)
-  {
-    $this->startTime = $startTime;
-  }
-  /**
-   * @return string
-   */
-  public function getStartTime()
-  {
-    return $this->startTime;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BackupInfo::class, 'Google_Service_BigtableAdmin_BackupInfo');
+class_alias(CopyBackupRequest::class, 'Google_Service_BigtableAdmin_CopyBackupRequest');
