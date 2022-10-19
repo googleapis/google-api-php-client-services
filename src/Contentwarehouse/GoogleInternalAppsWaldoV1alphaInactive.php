@@ -19,6 +19,41 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaInactive extends \Google\Model
 {
+  protected $nextCommitmentStatusType = GoogleInternalAppsWaldoV1alphaUserStatus::class;
+  protected $nextCommitmentStatusDataType = '';
+  /**
+   * @var string
+   */
+  public $nextCommitmentTime;
+
+  /**
+   * @param GoogleInternalAppsWaldoV1alphaUserStatus
+   */
+  public function setNextCommitmentStatus(GoogleInternalAppsWaldoV1alphaUserStatus $nextCommitmentStatus)
+  {
+    $this->nextCommitmentStatus = $nextCommitmentStatus;
+  }
+  /**
+   * @return GoogleInternalAppsWaldoV1alphaUserStatus
+   */
+  public function getNextCommitmentStatus()
+  {
+    return $this->nextCommitmentStatus;
+  }
+  /**
+   * @param string
+   */
+  public function setNextCommitmentTime($nextCommitmentTime)
+  {
+    $this->nextCommitmentTime = $nextCommitmentTime;
+  }
+  /**
+   * @return string
+   */
+  public function getNextCommitmentTime()
+  {
+    return $this->nextCommitmentTime;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

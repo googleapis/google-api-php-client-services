@@ -52,12 +52,10 @@ class PornFlagData extends \Google\Collection
    * @var string
    */
   public $finalViolenceScoreVersion;
-  /**
-   * @var float
-   */
-  public $imageEntitiesViolenceScore;
   protected $imageStatsType = PornStatsImage::class;
   protected $imageStatsDataType = 'array';
+  protected $internalSignalsType = SafesearchInternalImageSignals::class;
+  protected $internalSignalsDataType = '';
   /**
    * @var float
    */
@@ -126,14 +124,6 @@ class PornFlagData extends \Google\Collection
    * @var float
    */
   public $semanticSexualizationScore;
-  /**
-   * @var float
-   */
-  public $starburstPornScore;
-  /**
-   * @var float
-   */
-  public $starburstViolenceScore;
   protected $textStatsType = PornStatsText::class;
   protected $textStatsDataType = 'array';
   /**
@@ -270,20 +260,6 @@ class PornFlagData extends \Google\Collection
     return $this->finalViolenceScoreVersion;
   }
   /**
-   * @param float
-   */
-  public function setImageEntitiesViolenceScore($imageEntitiesViolenceScore)
-  {
-    $this->imageEntitiesViolenceScore = $imageEntitiesViolenceScore;
-  }
-  /**
-   * @return float
-   */
-  public function getImageEntitiesViolenceScore()
-  {
-    return $this->imageEntitiesViolenceScore;
-  }
-  /**
    * @param PornStatsImage[]
    */
   public function setImageStats($imageStats)
@@ -296,6 +272,20 @@ class PornFlagData extends \Google\Collection
   public function getImageStats()
   {
     return $this->imageStats;
+  }
+  /**
+   * @param SafesearchInternalImageSignals
+   */
+  public function setInternalSignals(SafesearchInternalImageSignals $internalSignals)
+  {
+    $this->internalSignals = $internalSignals;
+  }
+  /**
+   * @return SafesearchInternalImageSignals
+   */
+  public function getInternalSignals()
+  {
+    return $this->internalSignals;
   }
   /**
    * @param float
@@ -562,34 +552,6 @@ class PornFlagData extends \Google\Collection
   public function getSemanticSexualizationScore()
   {
     return $this->semanticSexualizationScore;
-  }
-  /**
-   * @param float
-   */
-  public function setStarburstPornScore($starburstPornScore)
-  {
-    $this->starburstPornScore = $starburstPornScore;
-  }
-  /**
-   * @return float
-   */
-  public function getStarburstPornScore()
-  {
-    return $this->starburstPornScore;
-  }
-  /**
-   * @param float
-   */
-  public function setStarburstViolenceScore($starburstViolenceScore)
-  {
-    $this->starburstViolenceScore = $starburstViolenceScore;
-  }
-  /**
-   * @return float
-   */
-  public function getStarburstViolenceScore()
-  {
-    return $this->starburstViolenceScore;
   }
   /**
    * @param PornStatsText[]

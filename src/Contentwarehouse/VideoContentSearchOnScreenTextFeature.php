@@ -135,6 +135,10 @@ class VideoContentSearchOnScreenTextFeature extends \Google\Collection
    */
   public $mergedLineCount;
   /**
+   * @var int
+   */
+  public $nTextsInSameFrame;
+  /**
    * @var float
    */
   public $occurrenceCount;
@@ -582,6 +586,20 @@ class VideoContentSearchOnScreenTextFeature extends \Google\Collection
   public function getMergedLineCount()
   {
     return $this->mergedLineCount;
+  }
+  /**
+   * @param int
+   */
+  public function setNTextsInSameFrame($nTextsInSameFrame)
+  {
+    $this->nTextsInSameFrame = $nTextsInSameFrame;
+  }
+  /**
+   * @return int
+   */
+  public function getNTextsInSameFrame()
+  {
+    return $this->nTextsInSameFrame;
   }
   /**
    * @param float

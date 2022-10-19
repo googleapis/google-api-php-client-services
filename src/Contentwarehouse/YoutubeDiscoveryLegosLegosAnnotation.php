@@ -23,6 +23,8 @@ class YoutubeDiscoveryLegosLegosAnnotation extends \Google\Model
   protected $entityDataType = '';
   protected $formatType = YoutubeDiscoveryLegosLegosFormatRelationship::class;
   protected $formatDataType = '';
+  protected $presentType = YoutubeDiscoveryLegosLegosPresentRelationship::class;
+  protected $presentDataType = '';
   protected $semanticType = YoutubeDiscoveryLegosLegosSemanticRelationship::class;
   protected $semanticDataType = '';
   protected $taxonomicType = YoutubeDiscoveryLegosLegosTaxonomicRelationship::class;
@@ -55,6 +57,20 @@ class YoutubeDiscoveryLegosLegosAnnotation extends \Google\Model
   public function getFormat()
   {
     return $this->format;
+  }
+  /**
+   * @param YoutubeDiscoveryLegosLegosPresentRelationship
+   */
+  public function setPresent(YoutubeDiscoveryLegosLegosPresentRelationship $present)
+  {
+    $this->present = $present;
+  }
+  /**
+   * @return YoutubeDiscoveryLegosLegosPresentRelationship
+   */
+  public function getPresent()
+  {
+    return $this->present;
   }
   /**
    * @param YoutubeDiscoveryLegosLegosSemanticRelationship

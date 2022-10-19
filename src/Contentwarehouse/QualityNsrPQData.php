@@ -21,6 +21,10 @@ class QualityNsrPQData extends \Google\Collection
 {
   protected $collection_key = 'subchunkData';
   /**
+   * @var int
+   */
+  public $chard;
+  /**
    * @var float
    */
   public $deltaAutopilotScore;
@@ -32,6 +36,10 @@ class QualityNsrPQData extends \Google\Collection
    * @var float
    */
   public $deltaLinkOutgoing;
+  /**
+   * @var float
+   */
+  public $deltaPageQuality;
   /**
    * @var float
    */
@@ -47,14 +55,40 @@ class QualityNsrPQData extends \Google\Collection
   /**
    * @var float
    */
+  public $numOffdomainAnchors;
+  /**
+   * @var float
+   */
   public $page2vecLq;
   protected $subchunkDataType = QualityNsrPQDataSubchunkData::class;
   protected $subchunkDataDataType = 'array';
   /**
    * @var float
    */
+  public $tofu;
+  /**
+   * @var float
+   */
   public $urlAutopilotScore;
+  /**
+   * @var float
+   */
+  public $vlq;
 
+  /**
+   * @param int
+   */
+  public function setChard($chard)
+  {
+    $this->chard = $chard;
+  }
+  /**
+   * @return int
+   */
+  public function getChard()
+  {
+    return $this->chard;
+  }
   /**
    * @param float
    */
@@ -96,6 +130,20 @@ class QualityNsrPQData extends \Google\Collection
   public function getDeltaLinkOutgoing()
   {
     return $this->deltaLinkOutgoing;
+  }
+  /**
+   * @param float
+   */
+  public function setDeltaPageQuality($deltaPageQuality)
+  {
+    $this->deltaPageQuality = $deltaPageQuality;
+  }
+  /**
+   * @return float
+   */
+  public function getDeltaPageQuality()
+  {
+    return $this->deltaPageQuality;
   }
   /**
    * @param float
@@ -142,6 +190,20 @@ class QualityNsrPQData extends \Google\Collection
   /**
    * @param float
    */
+  public function setNumOffdomainAnchors($numOffdomainAnchors)
+  {
+    $this->numOffdomainAnchors = $numOffdomainAnchors;
+  }
+  /**
+   * @return float
+   */
+  public function getNumOffdomainAnchors()
+  {
+    return $this->numOffdomainAnchors;
+  }
+  /**
+   * @param float
+   */
   public function setPage2vecLq($page2vecLq)
   {
     $this->page2vecLq = $page2vecLq;
@@ -170,6 +232,20 @@ class QualityNsrPQData extends \Google\Collection
   /**
    * @param float
    */
+  public function setTofu($tofu)
+  {
+    $this->tofu = $tofu;
+  }
+  /**
+   * @return float
+   */
+  public function getTofu()
+  {
+    return $this->tofu;
+  }
+  /**
+   * @param float
+   */
   public function setUrlAutopilotScore($urlAutopilotScore)
   {
     $this->urlAutopilotScore = $urlAutopilotScore;
@@ -180,6 +256,20 @@ class QualityNsrPQData extends \Google\Collection
   public function getUrlAutopilotScore()
   {
     return $this->urlAutopilotScore;
+  }
+  /**
+   * @param float
+   */
+  public function setVlq($vlq)
+  {
+    $this->vlq = $vlq;
+  }
+  /**
+   * @return float
+   */
+  public function getVlq()
+  {
+    return $this->vlq;
   }
 }
 

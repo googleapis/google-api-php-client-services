@@ -29,6 +29,8 @@ class NlpSemanticParsingLocalLocationConstraint extends \Google\Model
   protected $evcsSpeedConstraintDataType = '';
   protected $gcidConstraintType = NlpSemanticParsingLocalGcidConstraint::class;
   protected $gcidConstraintDataType = '';
+  protected $healthInsuranceType = NlpSemanticParsingLocalHealthInsuranceConstraint::class;
+  protected $healthInsuranceDataType = '';
   protected $hyperReliableDataType = NlpSemanticParsingLocalHyperReliableData::class;
   protected $hyperReliableDataDataType = '';
   protected $menuItemType = NlpSemanticParsingLocalMenuItem::class;
@@ -147,6 +149,20 @@ class NlpSemanticParsingLocalLocationConstraint extends \Google\Model
   public function getGcidConstraint()
   {
     return $this->gcidConstraint;
+  }
+  /**
+   * @param NlpSemanticParsingLocalHealthInsuranceConstraint
+   */
+  public function setHealthInsurance(NlpSemanticParsingLocalHealthInsuranceConstraint $healthInsurance)
+  {
+    $this->healthInsurance = $healthInsurance;
+  }
+  /**
+   * @return NlpSemanticParsingLocalHealthInsuranceConstraint
+   */
+  public function getHealthInsurance()
+  {
+    return $this->healthInsurance;
   }
   /**
    * @param NlpSemanticParsingLocalHyperReliableData

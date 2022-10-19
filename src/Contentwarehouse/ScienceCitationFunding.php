@@ -17,11 +17,13 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class ScienceCitationFunding extends \Google\Model
+class ScienceCitationFunding extends \Google\Collection
 {
+  protected $collection_key = 'DebugExtractionInfo';
   protected $internal_gapi_mappings = [
         "agency" => "Agency",
         "agencyName" => "AgencyName",
+        "debugExtractionInfo" => "DebugExtractionInfo",
         "debugFundingTextBlock" => "DebugFundingTextBlock",
         "grantNumber" => "GrantNumber",
         "recipient" => "Recipient",
@@ -36,6 +38,8 @@ class ScienceCitationFunding extends \Google\Model
    * @var string
    */
   public $agencyName;
+  protected $debugExtractionInfoType = ScienceCitationFundingExtractionInfo::class;
+  protected $debugExtractionInfoDataType = 'array';
   /**
    * @var string
    */
@@ -84,6 +88,20 @@ class ScienceCitationFunding extends \Google\Model
   public function getAgencyName()
   {
     return $this->agencyName;
+  }
+  /**
+   * @param ScienceCitationFundingExtractionInfo[]
+   */
+  public function setDebugExtractionInfo($debugExtractionInfo)
+  {
+    $this->debugExtractionInfo = $debugExtractionInfo;
+  }
+  /**
+   * @return ScienceCitationFundingExtractionInfo[]
+   */
+  public function getDebugExtractionInfo()
+  {
+    return $this->debugExtractionInfo;
   }
   /**
    * @param string

@@ -44,6 +44,8 @@ class AppsPeopleOzExternalMergedpeopleapiPerson extends \Google\Collection
   protected $clientDataDataType = 'array';
   protected $communicationEmailType = AppsPeopleOzExternalMergedpeopleapiCommunicationEmail::class;
   protected $communicationEmailDataType = 'array';
+  protected $connectionReminderType = AppsPeopleOzExternalMergedpeopleapiConnectionReminder::class;
+  protected $connectionReminderDataType = 'array';
   protected $contactGroupMembershipType = AppsPeopleOzExternalMergedpeopleapiContactGroupMembership::class;
   protected $contactGroupMembershipDataType = 'array';
   protected $contactStateInfoType = AppsPeopleOzExternalMergedpeopleapiContactStateInfo::class;
@@ -324,6 +326,20 @@ class AppsPeopleOzExternalMergedpeopleapiPerson extends \Google\Collection
   public function getCommunicationEmail()
   {
     return $this->communicationEmail;
+  }
+  /**
+   * @param AppsPeopleOzExternalMergedpeopleapiConnectionReminder[]
+   */
+  public function setConnectionReminder($connectionReminder)
+  {
+    $this->connectionReminder = $connectionReminder;
+  }
+  /**
+   * @return AppsPeopleOzExternalMergedpeopleapiConnectionReminder[]
+   */
+  public function getConnectionReminder()
+  {
+    return $this->connectionReminder;
   }
   /**
    * @param AppsPeopleOzExternalMergedpeopleapiContactGroupMembership[]

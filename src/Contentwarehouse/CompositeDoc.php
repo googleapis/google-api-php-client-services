@@ -65,6 +65,10 @@ class CompositeDoc extends \Google\Collection
   protected $forwardingdupDataType = 'array';
   protected $includedcontentType = CompositeDocIncludedContent::class;
   protected $includedcontentDataType = 'array';
+  /**
+   * @var string
+   */
+  public $indexingIntermediate;
   protected $indexinginfoType = CompositeDocIndexingInfo::class;
   protected $indexinginfoDataType = '';
   protected $labelDataType = QualityLabelsGoogleLabelData::class;
@@ -77,8 +81,6 @@ class CompositeDoc extends \Google\Collection
   protected $localizedAlternateNameDataType = 'array';
   protected $localizedvariationsType = CompositeDocLocalizedVariations::class;
   protected $localizedvariationsDataType = '';
-  protected $manyboxDataType = ManyboxData::class;
-  protected $manyboxDataDataType = '';
   protected $partialUpdateInfoType = CompositeDocPartialUpdateInfo::class;
   protected $partialUpdateInfoDataType = '';
   protected $perDocDataType = PerDocData::class;
@@ -391,6 +393,20 @@ class CompositeDoc extends \Google\Collection
     return $this->includedcontent;
   }
   /**
+   * @param string
+   */
+  public function setIndexingIntermediate($indexingIntermediate)
+  {
+    $this->indexingIntermediate = $indexingIntermediate;
+  }
+  /**
+   * @return string
+   */
+  public function getIndexingIntermediate()
+  {
+    return $this->indexingIntermediate;
+  }
+  /**
    * @param CompositeDocIndexingInfo
    */
   public function setIndexinginfo(CompositeDocIndexingInfo $indexinginfo)
@@ -473,20 +489,6 @@ class CompositeDoc extends \Google\Collection
   public function getLocalizedvariations()
   {
     return $this->localizedvariations;
-  }
-  /**
-   * @param ManyboxData
-   */
-  public function setManyboxData(ManyboxData $manyboxData)
-  {
-    $this->manyboxData = $manyboxData;
-  }
-  /**
-   * @return ManyboxData
-   */
-  public function getManyboxData()
-  {
-    return $this->manyboxData;
   }
   /**
    * @param CompositeDocPartialUpdateInfo

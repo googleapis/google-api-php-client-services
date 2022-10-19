@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingDatetimeEvent extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $holiday;
   protected $moonEventType = NlpSemanticParsingDatetimeMoonEventInfo::class;
   protected $moonEventDataType = '';
   /**
@@ -30,6 +34,20 @@ class NlpSemanticParsingDatetimeEvent extends \Google\Model
    */
   public $type;
 
+  /**
+   * @param string
+   */
+  public function setHoliday($holiday)
+  {
+    $this->holiday = $holiday;
+  }
+  /**
+   * @return string
+   */
+  public function getHoliday()
+  {
+    return $this->holiday;
+  }
   /**
    * @param NlpSemanticParsingDatetimeMoonEventInfo
    */

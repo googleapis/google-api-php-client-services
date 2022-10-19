@@ -27,6 +27,8 @@ class GeostoreFeatureMetadataProto extends \Google\Model
    * @var string
    */
   public $coreVersionToken;
+  protected $featureReplacementInfoType = GeostoreFeatureReplacementInfoProto::class;
+  protected $featureReplacementInfoDataType = '';
   protected $fieldMetadataType = GeostoreFeatureFieldMetadataProto::class;
   protected $fieldMetadataDataType = '';
   protected $forwardingsType = GeostoreFeatureIdForwardingsProto::class;
@@ -65,6 +67,20 @@ class GeostoreFeatureMetadataProto extends \Google\Model
   public function getCoreVersionToken()
   {
     return $this->coreVersionToken;
+  }
+  /**
+   * @param GeostoreFeatureReplacementInfoProto
+   */
+  public function setFeatureReplacementInfo(GeostoreFeatureReplacementInfoProto $featureReplacementInfo)
+  {
+    $this->featureReplacementInfo = $featureReplacementInfo;
+  }
+  /**
+   * @return GeostoreFeatureReplacementInfoProto
+   */
+  public function getFeatureReplacementInfo()
+  {
+    return $this->featureReplacementInfo;
   }
   /**
    * @param GeostoreFeatureFieldMetadataProto

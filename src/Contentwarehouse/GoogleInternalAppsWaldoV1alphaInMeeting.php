@@ -22,6 +22,14 @@ class GoogleInternalAppsWaldoV1alphaInMeeting extends \Google\Model
   /**
    * @var string
    */
+  public $committedUntil;
+  /**
+   * @var bool
+   */
+  public $committedUntilIsMixed;
+  /**
+   * @var string
+   */
   public $eventSummary;
   /**
    * @var string
@@ -36,6 +44,34 @@ class GoogleInternalAppsWaldoV1alphaInMeeting extends \Google\Model
    */
   public $occupiedUntil;
 
+  /**
+   * @param string
+   */
+  public function setCommittedUntil($committedUntil)
+  {
+    $this->committedUntil = $committedUntil;
+  }
+  /**
+   * @return string
+   */
+  public function getCommittedUntil()
+  {
+    return $this->committedUntil;
+  }
+  /**
+   * @param bool
+   */
+  public function setCommittedUntilIsMixed($committedUntilIsMixed)
+  {
+    $this->committedUntilIsMixed = $committedUntilIsMixed;
+  }
+  /**
+   * @return bool
+   */
+  public function getCommittedUntilIsMixed()
+  {
+    return $this->committedUntilIsMixed;
+  }
   /**
    * @param string
    */

@@ -46,6 +46,10 @@ class NlpSemanticParsingDatetimeAbsoluteDateTime extends \Google\Model
    */
   public $isBc;
   /**
+   * @var string
+   */
+  public $meridiem;
+  /**
    * @var int
    */
   public $minute;
@@ -188,6 +192,20 @@ class NlpSemanticParsingDatetimeAbsoluteDateTime extends \Google\Model
   public function getIsBc()
   {
     return $this->isBc;
+  }
+  /**
+   * @param string
+   */
+  public function setMeridiem($meridiem)
+  {
+    $this->meridiem = $meridiem;
+  }
+  /**
+   * @return string
+   */
+  public function getMeridiem()
+  {
+    return $this->meridiem;
   }
   /**
    * @param int

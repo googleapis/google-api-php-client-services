@@ -43,10 +43,6 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
   /**
    * @var string
    */
-  public $snippetSource;
-  /**
-   * @var string
-   */
   public $snippetText;
   /**
    * @var string
@@ -136,20 +132,6 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
   public function getSnippet()
   {
     return $this->snippet;
-  }
-  /**
-   * @param string
-   */
-  public function setSnippetSource($snippetSource)
-  {
-    $this->snippetSource = $snippetSource;
-  }
-  /**
-   * @return string
-   */
-  public function getSnippetSource()
-  {
-    return $this->snippetSource;
   }
   /**
    * @param string

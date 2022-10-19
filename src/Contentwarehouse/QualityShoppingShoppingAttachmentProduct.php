@@ -33,10 +33,6 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   /**
    * @var string
    */
-  public $encodedProductSalientTerms;
-  /**
-   * @var string
-   */
   public $globalProductClusterId;
   protected $localeType = QualityShoppingShoppingAttachmentLocale::class;
   protected $localeDataType = '';
@@ -107,20 +103,6 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   public function getCatalogId()
   {
     return $this->catalogId;
-  }
-  /**
-   * @param string
-   */
-  public function setEncodedProductSalientTerms($encodedProductSalientTerms)
-  {
-    $this->encodedProductSalientTerms = $encodedProductSalientTerms;
-  }
-  /**
-   * @return string
-   */
-  public function getEncodedProductSalientTerms()
-  {
-    return $this->encodedProductSalientTerms;
   }
   /**
    * @param string

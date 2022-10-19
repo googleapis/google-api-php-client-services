@@ -30,6 +30,10 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   protected $callCapabilitiesDataType = '';
   protected $cameraType = AssistantApiCameraCapabilities::class;
   protected $cameraDataType = '';
+  /**
+   * @var string[]
+   */
+  public $carUxRestrictions;
   protected $castType = AssistantApiCastCapabilities::class;
   protected $castDataType = '';
   protected $communicationUiCapabilitiesType = AssistantApiCommunicationUiCapabilities::class;
@@ -66,6 +70,10 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   protected $notificationOutputRestrictionsDataType = '';
   protected $outputRestrictionsType = AssistantApiOutputRestrictions::class;
   protected $outputRestrictionsDataType = '';
+  /**
+   * @var string
+   */
+  public $popOnLockscreenCapability;
   /**
    * @var string
    */
@@ -162,6 +170,20 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   public function getCamera()
   {
     return $this->camera;
+  }
+  /**
+   * @param string[]
+   */
+  public function setCarUxRestrictions($carUxRestrictions)
+  {
+    $this->carUxRestrictions = $carUxRestrictions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getCarUxRestrictions()
+  {
+    return $this->carUxRestrictions;
   }
   /**
    * @param AssistantApiCastCapabilities
@@ -372,6 +394,20 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   public function getOutputRestrictions()
   {
     return $this->outputRestrictions;
+  }
+  /**
+   * @param string
+   */
+  public function setPopOnLockscreenCapability($popOnLockscreenCapability)
+  {
+    $this->popOnLockscreenCapability = $popOnLockscreenCapability;
+  }
+  /**
+   * @return string
+   */
+  public function getPopOnLockscreenCapability()
+  {
+    return $this->popOnLockscreenCapability;
   }
   /**
    * @param string

@@ -32,6 +32,8 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
    * @var string
    */
   public $deviceId;
+  protected $deviceIdLogType = AssistantLogsSettingsDeviceIdLog::class;
+  protected $deviceIdLogDataType = '';
   /**
    * @var int
    */
@@ -114,6 +116,20 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
   public function getDeviceId()
   {
     return $this->deviceId;
+  }
+  /**
+   * @param AssistantLogsSettingsDeviceIdLog
+   */
+  public function setDeviceIdLog(AssistantLogsSettingsDeviceIdLog $deviceIdLog)
+  {
+    $this->deviceIdLog = $deviceIdLog;
+  }
+  /**
+   * @return AssistantLogsSettingsDeviceIdLog
+   */
+  public function getDeviceIdLog()
+  {
+    return $this->deviceIdLog;
   }
   /**
    * @param int

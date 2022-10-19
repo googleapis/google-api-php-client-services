@@ -17,91 +17,88 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefEntityDebugInfo extends \Google\Model
+class ScienceCitationFundingExtractionInfo extends \Google\Model
 {
+  protected $internal_gapi_mappings = [
+        "debugFundingTextBlock" => "DebugFundingTextBlock",
+        "docPart" => "DocPart",
+        "parseSection" => "ParseSection",
+        "source" => "Source",
+  ];
   /**
    * @var string
    */
-  public $description;
+  public $debugFundingTextBlock;
   /**
    * @var string
    */
-  public $language;
-  public $score;
+  public $docPart;
   /**
    * @var string
    */
-  public $title;
+  public $parseSection;
   /**
    * @var string
    */
-  public $url;
+  public $source;
 
   /**
    * @param string
    */
-  public function setDescription($description)
+  public function setDebugFundingTextBlock($debugFundingTextBlock)
   {
-    $this->description = $description;
+    $this->debugFundingTextBlock = $debugFundingTextBlock;
   }
   /**
    * @return string
    */
-  public function getDescription()
+  public function getDebugFundingTextBlock()
   {
-    return $this->description;
+    return $this->debugFundingTextBlock;
   }
   /**
    * @param string
    */
-  public function setLanguage($language)
+  public function setDocPart($docPart)
   {
-    $this->language = $language;
+    $this->docPart = $docPart;
   }
   /**
    * @return string
    */
-  public function getLanguage()
+  public function getDocPart()
   {
-    return $this->language;
-  }
-  public function setScore($score)
-  {
-    $this->score = $score;
-  }
-  public function getScore()
-  {
-    return $this->score;
+    return $this->docPart;
   }
   /**
    * @param string
    */
-  public function setTitle($title)
+  public function setParseSection($parseSection)
   {
-    $this->title = $title;
+    $this->parseSection = $parseSection;
   }
   /**
    * @return string
    */
-  public function getTitle()
+  public function getParseSection()
   {
-    return $this->title;
+    return $this->parseSection;
   }
   /**
    * @param string
    */
-  public function setUrl($url)
+  public function setSource($source)
   {
-    $this->url = $url;
+    $this->source = $source;
   }
   /**
    * @return string
    */
-  public function getUrl()
+  public function getSource()
   {
-    return $this->url;
+    return $this->source;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefEntityDebugInfo::class, 'Google_Service_Contentwarehouse_RepositoryWebrefEntityDebugInfo');
+class_alias(ScienceCitationFundingExtractionInfo::class, 'Google_Service_Contentwarehouse_ScienceCitationFundingExtractionInfo');

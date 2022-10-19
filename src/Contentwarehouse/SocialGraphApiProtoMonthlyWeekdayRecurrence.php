@@ -17,46 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class SocialGraphApiProtoMonthlyWeekdayRecurrence extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $weekDay;
   /**
    * @var int
    */
-  public $id;
-  /**
-   * @var float
-   */
-  public $score;
+  public $weekDayNumber;
 
+  /**
+   * @param string
+   */
+  public function setWeekDay($weekDay)
+  {
+    $this->weekDay = $weekDay;
+  }
+  /**
+   * @return string
+   */
+  public function getWeekDay()
+  {
+    return $this->weekDay;
+  }
   /**
    * @param int
    */
-  public function setId($id)
+  public function setWeekDayNumber($weekDayNumber)
   {
-    $this->id = $id;
+    $this->weekDayNumber = $weekDayNumber;
   }
   /**
    * @return int
    */
-  public function getId()
+  public function getWeekDayNumber()
   {
-    return $this->id;
-  }
-  /**
-   * @param float
-   */
-  public function setScore($score)
-  {
-    $this->score = $score;
-  }
-  /**
-   * @return float
-   */
-  public function getScore()
-  {
-    return $this->score;
+    return $this->weekDayNumber;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(SocialGraphApiProtoMonthlyWeekdayRecurrence::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoMonthlyWeekdayRecurrence');

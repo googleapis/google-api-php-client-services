@@ -17,46 +17,44 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class SocialGraphApiProtoNotificationTrigger extends \Google\Model
 {
   /**
    * @var int
    */
-  public $id;
-  /**
-   * @var float
-   */
-  public $score;
+  public $daysBeforeActiveDate;
+  protected $notificationTimeOfDayType = GoogleTypeTimeOfDay::class;
+  protected $notificationTimeOfDayDataType = '';
 
   /**
    * @param int
    */
-  public function setId($id)
+  public function setDaysBeforeActiveDate($daysBeforeActiveDate)
   {
-    $this->id = $id;
+    $this->daysBeforeActiveDate = $daysBeforeActiveDate;
   }
   /**
    * @return int
    */
-  public function getId()
+  public function getDaysBeforeActiveDate()
   {
-    return $this->id;
+    return $this->daysBeforeActiveDate;
   }
   /**
-   * @param float
+   * @param GoogleTypeTimeOfDay
    */
-  public function setScore($score)
+  public function setNotificationTimeOfDay(GoogleTypeTimeOfDay $notificationTimeOfDay)
   {
-    $this->score = $score;
+    $this->notificationTimeOfDay = $notificationTimeOfDay;
   }
   /**
-   * @return float
+   * @return GoogleTypeTimeOfDay
    */
-  public function getScore()
+  public function getNotificationTimeOfDay()
   {
-    return $this->score;
+    return $this->notificationTimeOfDay;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(SocialGraphApiProtoNotificationTrigger::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoNotificationTrigger');

@@ -48,7 +48,8 @@ class ProjectsLocationsDocumentSchemas extends \Google\Service\Resource
   }
   /**
    * Deletes a document schema. Returns NOT_FOUND if the document schema does not
-   * exist. (documentSchemas.delete)
+   * exist. Returns BAD_REQUEST if the document schema has documents depending on
+   * it. (documentSchemas.delete)
    *
    * @param string $name Required. The name of the document schema to delete.
    * @param array $optParams Optional parameters.
@@ -101,8 +102,10 @@ class ProjectsLocationsDocumentSchemas extends \Google\Service\Resource
   /**
    * Updates a Document Schema. Returns INVALID_ARGUMENT if the name of the
    * Document Schema is non-empty and does not equal the existing name. Supports
-   * only appending new properties and updating existing properties will result
-   * into INVALID_ARGUMENT. (documentSchemas.patch)
+   * only appending new properties, adding new ENUM possible values, and updating
+   * the EnumTypeOptions.validation_check_disabled flag for ENUM possible values.
+   * Updating existing properties will result into INVALID_ARGUMENT.
+   * (documentSchemas.patch)
    *
    * @param string $name Required. The name of the document schema to update.
    * Format: projects/{project_number}/locations/{location}/documentSchemas/{docum

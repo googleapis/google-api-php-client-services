@@ -17,46 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $id;
   /**
    * @var float
    */
-  public $score;
+  public $confidence;
+  /**
+   * @var string
+   */
+  public $type;
 
-  /**
-   * @param int
-   */
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  /**
-   * @return int
-   */
-  public function getId()
-  {
-    return $this->id;
-  }
   /**
    * @param float
    */
-  public function setScore($score)
+  public function setConfidence($confidence)
   {
-    $this->score = $score;
+    $this->confidence = $confidence;
   }
   /**
    * @return float
    */
-  public function getScore()
+  public function getConfidence()
   {
-    return $this->score;
+    return $this->confidence;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect::class, 'Google_Service_Contentwarehouse_GoogleCloudDocumentaiV1DocumentPageImageQualityScoresDetectedDefect');

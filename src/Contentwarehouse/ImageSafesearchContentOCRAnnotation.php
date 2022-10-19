@@ -26,10 +26,6 @@ class ImageSafesearchContentOCRAnnotation extends \Google\Model
   /**
    * @var float
    */
-  public $offensiveScore;
-  /**
-   * @var float
-   */
   public $pornScore;
   /**
    * @var float
@@ -65,20 +61,6 @@ class ImageSafesearchContentOCRAnnotation extends \Google\Model
   public function getOcrProminenceScore()
   {
     return $this->ocrProminenceScore;
-  }
-  /**
-   * @param float
-   */
-  public function setOffensiveScore($offensiveScore)
-  {
-    $this->offensiveScore = $offensiveScore;
-  }
-  /**
-   * @return float
-   */
-  public function getOffensiveScore()
-  {
-    return $this->offensiveScore;
   }
   /**
    * @param float

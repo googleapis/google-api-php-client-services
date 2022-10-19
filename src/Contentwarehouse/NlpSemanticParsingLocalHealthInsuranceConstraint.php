@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class NlpSemanticParsingLocalHealthInsuranceConstraint extends \Google\Model
 {
   /**
-   * @var int
+   * @var string
    */
-  public $id;
-  /**
-   * @var float
-   */
-  public $score;
+  public $network;
 
   /**
-   * @param int
+   * @param string
    */
-  public function setId($id)
+  public function setNetwork($network)
   {
-    $this->id = $id;
+    $this->network = $network;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getId()
+  public function getNetwork()
   {
-    return $this->id;
-  }
-  /**
-   * @param float
-   */
-  public function setScore($score)
-  {
-    $this->score = $score;
-  }
-  /**
-   * @return float
-   */
-  public function getScore()
-  {
-    return $this->score;
+    return $this->network;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(NlpSemanticParsingLocalHealthInsuranceConstraint::class, 'Google_Service_Contentwarehouse_NlpSemanticParsingLocalHealthInsuranceConstraint');

@@ -35,8 +35,6 @@ class AppsPeopleOzExternalMergedpeopleapiLocation extends \Google\Model
    * @var string
    */
   public $deskCode;
-  protected $extendedDataType = AppsPeopleOzExternalMergedpeopleapiLocationExtendedData::class;
-  protected $extendedDataDataType = '';
   /**
    * @var string
    */
@@ -119,20 +117,6 @@ class AppsPeopleOzExternalMergedpeopleapiLocation extends \Google\Model
   public function getDeskCode()
   {
     return $this->deskCode;
-  }
-  /**
-   * @param AppsPeopleOzExternalMergedpeopleapiLocationExtendedData
-   */
-  public function setExtendedData(AppsPeopleOzExternalMergedpeopleapiLocationExtendedData $extendedData)
-  {
-    $this->extendedData = $extendedData;
-  }
-  /**
-   * @return AppsPeopleOzExternalMergedpeopleapiLocationExtendedData
-   */
-  public function getExtendedData()
-  {
-    return $this->extendedData;
   }
   /**
    * @param string

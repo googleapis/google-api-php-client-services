@@ -17,46 +17,47 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class SocialGraphApiProtoMonthlyDayRecurrence extends \Google\Collection
 {
+  protected $collection_key = 'monthDay';
   /**
-   * @var int
+   * @var int[]
    */
-  public $id;
+  public $monthDay;
   /**
-   * @var float
+   * @var bool
    */
-  public $score;
+  public $useLastDayIfMonthDayPastEnd;
 
   /**
-   * @param int
+   * @param int[]
    */
-  public function setId($id)
+  public function setMonthDay($monthDay)
   {
-    $this->id = $id;
+    $this->monthDay = $monthDay;
   }
   /**
-   * @return int
+   * @return int[]
    */
-  public function getId()
+  public function getMonthDay()
   {
-    return $this->id;
+    return $this->monthDay;
   }
   /**
-   * @param float
+   * @param bool
    */
-  public function setScore($score)
+  public function setUseLastDayIfMonthDayPastEnd($useLastDayIfMonthDayPastEnd)
   {
-    $this->score = $score;
+    $this->useLastDayIfMonthDayPastEnd = $useLastDayIfMonthDayPastEnd;
   }
   /**
-   * @return float
+   * @return bool
    */
-  public function getScore()
+  public function getUseLastDayIfMonthDayPastEnd()
   {
-    return $this->score;
+    return $this->useLastDayIfMonthDayPastEnd;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(SocialGraphApiProtoMonthlyDayRecurrence::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoMonthlyDayRecurrence');

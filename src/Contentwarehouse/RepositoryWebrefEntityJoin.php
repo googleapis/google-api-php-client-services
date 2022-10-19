@@ -42,8 +42,6 @@ class RepositoryWebrefEntityJoin extends \Google\Collection
   protected $nameInfoDataType = 'array';
   protected $nameSignalsType = RepositoryWebrefPreprocessingNameSignals::class;
   protected $nameSignalsDataType = '';
-  protected $preprocessingIdType = RepositoryWebrefAbsoluteLegacyId::class;
-  protected $preprocessingIdDataType = '';
   protected $refconNameInfoType = RepositoryWebrefRefconRefconNameInfo::class;
   protected $refconNameInfoDataType = 'array';
   protected $representationType = RepositoryWebrefDomainSpecificRepresentation::class;
@@ -202,20 +200,6 @@ class RepositoryWebrefEntityJoin extends \Google\Collection
   public function getNameSignals()
   {
     return $this->nameSignals;
-  }
-  /**
-   * @param RepositoryWebrefAbsoluteLegacyId
-   */
-  public function setPreprocessingId(RepositoryWebrefAbsoluteLegacyId $preprocessingId)
-  {
-    $this->preprocessingId = $preprocessingId;
-  }
-  /**
-   * @return RepositoryWebrefAbsoluteLegacyId
-   */
-  public function getPreprocessingId()
-  {
-    return $this->preprocessingId;
   }
   /**
    * @param RepositoryWebrefRefconRefconNameInfo[]

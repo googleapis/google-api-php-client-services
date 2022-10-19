@@ -31,6 +31,10 @@ class VideoContentSearchVideoAnchor extends \Google\Collection
   /**
    * @var string
    */
+  public $contextText;
+  /**
+   * @var string
+   */
   public $destinationUrl;
   /**
    * @var string
@@ -118,6 +122,20 @@ class VideoContentSearchVideoAnchor extends \Google\Collection
   public function getAnchorType()
   {
     return $this->anchorType;
+  }
+  /**
+   * @param string
+   */
+  public function setContextText($contextText)
+  {
+    $this->contextText = $contextText;
+  }
+  /**
+   * @return string
+   */
+  public function getContextText()
+  {
+    return $this->contextText;
   }
   /**
    * @param string

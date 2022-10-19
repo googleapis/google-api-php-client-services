@@ -35,6 +35,10 @@ class GeostoreFeaturePropertyIdProto extends \Google\Model
    * @var string
    */
   public $kgPropertyId;
+  /**
+   * @var string
+   */
+  public $nameLanguage;
 
   /**
    * @param string
@@ -91,6 +95,20 @@ class GeostoreFeaturePropertyIdProto extends \Google\Model
   public function getKgPropertyId()
   {
     return $this->kgPropertyId;
+  }
+  /**
+   * @param string
+   */
+  public function setNameLanguage($nameLanguage)
+  {
+    $this->nameLanguage = $nameLanguage;
+  }
+  /**
+   * @return string
+   */
+  public function getNameLanguage()
+  {
+    return $this->nameLanguage;
   }
 }
 

@@ -17,46 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class QualityNsrVersionedFloatSignal extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $id;
   /**
    * @var float
    */
-  public $score;
+  public $value;
+  /**
+   * @var int
+   */
+  public $versionId;
 
-  /**
-   * @param int
-   */
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  /**
-   * @return int
-   */
-  public function getId()
-  {
-    return $this->id;
-  }
   /**
    * @param float
    */
-  public function setScore($score)
+  public function setValue($value)
   {
-    $this->score = $score;
+    $this->value = $value;
   }
   /**
    * @return float
    */
-  public function getScore()
+  public function getValue()
   {
-    return $this->score;
+    return $this->value;
+  }
+  /**
+   * @param int
+   */
+  public function setVersionId($versionId)
+  {
+    $this->versionId = $versionId;
+  }
+  /**
+   * @return int
+   */
+  public function getVersionId()
+  {
+    return $this->versionId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(QualityNsrVersionedFloatSignal::class, 'Google_Service_Contentwarehouse_QualityNsrVersionedFloatSignal');

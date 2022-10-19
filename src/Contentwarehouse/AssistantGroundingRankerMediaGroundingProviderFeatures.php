@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $id;
   /**
    * @var float
    */
-  public $score;
+  public $mscRate;
 
-  /**
-   * @param int
-   */
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  /**
-   * @return int
-   */
-  public function getId()
-  {
-    return $this->id;
-  }
   /**
    * @param float
    */
-  public function setScore($score)
+  public function setMscRate($mscRate)
   {
-    $this->score = $score;
+    $this->mscRate = $mscRate;
   }
   /**
    * @return float
    */
-  public function getScore()
+  public function getMscRate()
   {
-    return $this->score;
+    return $this->mscRate;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(AssistantGroundingRankerMediaGroundingProviderFeatures::class, 'Google_Service_Contentwarehouse_AssistantGroundingRankerMediaGroundingProviderFeatures');

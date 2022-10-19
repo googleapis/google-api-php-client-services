@@ -25,6 +25,8 @@ class AssistantDevicesPlatformProtoSupportedDeviceOps extends \Google\Model
   protected $clientReconnectDataType = '';
   protected $deviceModifySettingType = AssistantDevicesPlatformProtoDeviceModifySettingCapability::class;
   protected $deviceModifySettingDataType = '';
+  protected $deviceTakePhotoType = AssistantDevicesPlatformProtoDeviceTakePhotoCapability::class;
+  protected $deviceTakePhotoDataType = '';
   protected $mediaNextType = AssistantDevicesPlatformProtoMediaNextCapability::class;
   protected $mediaNextDataType = '';
   protected $mediaPauseType = AssistantDevicesPlatformProtoMediaPauseCapability::class;
@@ -83,6 +85,20 @@ class AssistantDevicesPlatformProtoSupportedDeviceOps extends \Google\Model
   public function getDeviceModifySetting()
   {
     return $this->deviceModifySetting;
+  }
+  /**
+   * @param AssistantDevicesPlatformProtoDeviceTakePhotoCapability
+   */
+  public function setDeviceTakePhoto(AssistantDevicesPlatformProtoDeviceTakePhotoCapability $deviceTakePhoto)
+  {
+    $this->deviceTakePhoto = $deviceTakePhoto;
+  }
+  /**
+   * @return AssistantDevicesPlatformProtoDeviceTakePhotoCapability
+   */
+  public function getDeviceTakePhoto()
+  {
+    return $this->deviceTakePhoto;
   }
   /**
    * @param AssistantDevicesPlatformProtoMediaNextCapability

@@ -17,91 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefEntityDebugInfo extends \Google\Model
+class SnippetExtraInfoSnippetsBrainModelInfo extends \Google\Model
 {
   /**
    * @var string
    */
-  public $description;
+  public $snippetsbrainModelName;
   /**
    * @var string
    */
-  public $language;
-  public $score;
+  public $snippetsbrainModelPartition;
   /**
    * @var string
    */
-  public $title;
-  /**
-   * @var string
-   */
-  public $url;
+  public $snippetsbrainTokenizerType;
 
   /**
    * @param string
    */
-  public function setDescription($description)
+  public function setSnippetsbrainModelName($snippetsbrainModelName)
   {
-    $this->description = $description;
+    $this->snippetsbrainModelName = $snippetsbrainModelName;
   }
   /**
    * @return string
    */
-  public function getDescription()
+  public function getSnippetsbrainModelName()
   {
-    return $this->description;
+    return $this->snippetsbrainModelName;
   }
   /**
    * @param string
    */
-  public function setLanguage($language)
+  public function setSnippetsbrainModelPartition($snippetsbrainModelPartition)
   {
-    $this->language = $language;
+    $this->snippetsbrainModelPartition = $snippetsbrainModelPartition;
   }
   /**
    * @return string
    */
-  public function getLanguage()
+  public function getSnippetsbrainModelPartition()
   {
-    return $this->language;
-  }
-  public function setScore($score)
-  {
-    $this->score = $score;
-  }
-  public function getScore()
-  {
-    return $this->score;
+    return $this->snippetsbrainModelPartition;
   }
   /**
    * @param string
    */
-  public function setTitle($title)
+  public function setSnippetsbrainTokenizerType($snippetsbrainTokenizerType)
   {
-    $this->title = $title;
+    $this->snippetsbrainTokenizerType = $snippetsbrainTokenizerType;
   }
   /**
    * @return string
    */
-  public function getTitle()
+  public function getSnippetsbrainTokenizerType()
   {
-    return $this->title;
-  }
-  /**
-   * @param string
-   */
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-  /**
-   * @return string
-   */
-  public function getUrl()
-  {
-    return $this->url;
+    return $this->snippetsbrainTokenizerType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefEntityDebugInfo::class, 'Google_Service_Contentwarehouse_RepositoryWebrefEntityDebugInfo');
+class_alias(SnippetExtraInfoSnippetsBrainModelInfo::class, 'Google_Service_Contentwarehouse_SnippetExtraInfoSnippetsBrainModelInfo');

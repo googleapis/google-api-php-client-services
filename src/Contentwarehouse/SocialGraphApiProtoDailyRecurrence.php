@@ -17,46 +17,9 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class SocialGraphApiProtoDailyRecurrence extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $id;
-  /**
-   * @var float
-   */
-  public $score;
-
-  /**
-   * @param int
-   */
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  /**
-   * @return int
-   */
-  public function getId()
-  {
-    return $this->id;
-  }
-  /**
-   * @param float
-   */
-  public function setScore($score)
-  {
-    $this->score = $score;
-  }
-  /**
-   * @return float
-   */
-  public function getScore()
-  {
-    return $this->score;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(SocialGraphApiProtoDailyRecurrence::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoDailyRecurrence');

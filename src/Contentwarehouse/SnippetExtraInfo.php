@@ -38,6 +38,8 @@ class SnippetExtraInfo extends \Google\Collection
    * @var int
    */
   public $snippetBrainSelectedCandidateIndex;
+  protected $snippetsbrainModelInfoType = SnippetExtraInfoSnippetsBrainModelInfo::class;
+  protected $snippetsbrainModelInfoDataType = '';
 
   /**
    * @param SnippetExtraInfoSnippetCandidateInfo[]
@@ -108,6 +110,20 @@ class SnippetExtraInfo extends \Google\Collection
   public function getSnippetBrainSelectedCandidateIndex()
   {
     return $this->snippetBrainSelectedCandidateIndex;
+  }
+  /**
+   * @param SnippetExtraInfoSnippetsBrainModelInfo
+   */
+  public function setSnippetsbrainModelInfo(SnippetExtraInfoSnippetsBrainModelInfo $snippetsbrainModelInfo)
+  {
+    $this->snippetsbrainModelInfo = $snippetsbrainModelInfo;
+  }
+  /**
+   * @return SnippetExtraInfoSnippetsBrainModelInfo
+   */
+  public function getSnippetsbrainModelInfo()
+  {
+    return $this->snippetsbrainModelInfo;
   }
 }
 

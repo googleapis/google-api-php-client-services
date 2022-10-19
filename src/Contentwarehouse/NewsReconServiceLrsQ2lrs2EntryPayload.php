@@ -33,6 +33,10 @@ class NewsReconServiceLrsQ2lrs2EntryPayload extends \Google\Collection
    */
   public $isPlannedMoment;
   /**
+   * @var int[]
+   */
+  public $lrsTypes;
+  /**
    * @var string
    */
   public $momentRankingScore;
@@ -82,6 +86,20 @@ class NewsReconServiceLrsQ2lrs2EntryPayload extends \Google\Collection
   public function getIsPlannedMoment()
   {
     return $this->isPlannedMoment;
+  }
+  /**
+   * @param int[]
+   */
+  public function setLrsTypes($lrsTypes)
+  {
+    $this->lrsTypes = $lrsTypes;
+  }
+  /**
+   * @return int[]
+   */
+  public function getLrsTypes()
+  {
+    return $this->lrsTypes;
   }
   /**
    * @param string

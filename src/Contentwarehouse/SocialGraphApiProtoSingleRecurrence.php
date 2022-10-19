@@ -17,46 +17,26 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFatcatCategory extends \Google\Model
+class SocialGraphApiProtoSingleRecurrence extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $id;
-  /**
-   * @var float
-   */
-  public $score;
+  protected $dateType = GoogleTypeDate::class;
+  protected $dateDataType = '';
 
   /**
-   * @param int
+   * @param GoogleTypeDate
    */
-  public function setId($id)
+  public function setDate(GoogleTypeDate $date)
   {
-    $this->id = $id;
+    $this->date = $date;
   }
   /**
-   * @return int
+   * @return GoogleTypeDate
    */
-  public function getId()
+  public function getDate()
   {
-    return $this->id;
-  }
-  /**
-   * @param float
-   */
-  public function setScore($score)
-  {
-    $this->score = $score;
-  }
-  /**
-   * @return float
-   */
-  public function getScore()
-  {
-    return $this->score;
+    return $this->date;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFatcatCategory::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFatcatCategory');
+class_alias(SocialGraphApiProtoSingleRecurrence::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoSingleRecurrence');
