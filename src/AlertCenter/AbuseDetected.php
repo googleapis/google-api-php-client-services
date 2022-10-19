@@ -28,6 +28,10 @@ class AbuseDetected extends \Google\Model
   /**
    * @var string
    */
+  public $nextSteps;
+  /**
+   * @var string
+   */
   public $product;
   /**
    * @var string
@@ -65,6 +69,20 @@ class AbuseDetected extends \Google\Model
   public function getAlertDescriptor()
   {
     return $this->alertDescriptor;
+  }
+  /**
+   * @param string
+   */
+  public function setNextSteps($nextSteps)
+  {
+    $this->nextSteps = $nextSteps;
+  }
+  /**
+   * @return string
+   */
+  public function getNextSteps()
+  {
+    return $this->nextSteps;
   }
   /**
    * @param string
