@@ -17,28 +17,30 @@
 
 namespace Google\Service\SQLAdmin;
 
-class ImportContextBakImportOptions extends \Google\Model
+class ExportContextBakExportOptions extends \Google\Model
 {
-  protected $encryptionOptionsType = ImportContextBakImportOptionsEncryptionOptions::class;
-  protected $encryptionOptionsDataType = '';
+  /**
+   * @var int
+   */
+  public $stripeCount;
   /**
    * @var bool
    */
   public $striped;
 
   /**
-   * @param ImportContextBakImportOptionsEncryptionOptions
+   * @param int
    */
-  public function setEncryptionOptions(ImportContextBakImportOptionsEncryptionOptions $encryptionOptions)
+  public function setStripeCount($stripeCount)
   {
-    $this->encryptionOptions = $encryptionOptions;
+    $this->stripeCount = $stripeCount;
   }
   /**
-   * @return ImportContextBakImportOptionsEncryptionOptions
+   * @return int
    */
-  public function getEncryptionOptions()
+  public function getStripeCount()
   {
-    return $this->encryptionOptions;
+    return $this->stripeCount;
   }
   /**
    * @param bool
@@ -57,4 +59,4 @@ class ImportContextBakImportOptions extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ImportContextBakImportOptions::class, 'Google_Service_SQLAdmin_ImportContextBakImportOptions');
+class_alias(ExportContextBakExportOptions::class, 'Google_Service_SQLAdmin_ExportContextBakExportOptions');
