@@ -37,6 +37,10 @@ class Message extends \Google\Collection
   /**
    * @var string
    */
+  public $clientAssignedMessageId;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var string
@@ -148,6 +152,20 @@ class Message extends \Google\Collection
   public function getCardsV2()
   {
     return $this->cardsV2;
+  }
+  /**
+   * @param string
+   */
+  public function setClientAssignedMessageId($clientAssignedMessageId)
+  {
+    $this->clientAssignedMessageId = $clientAssignedMessageId;
+  }
+  /**
+   * @return string
+   */
+  public function getClientAssignedMessageId()
+  {
+    return $this->clientAssignedMessageId;
   }
   /**
    * @param string

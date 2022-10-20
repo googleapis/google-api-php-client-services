@@ -38,6 +38,12 @@ class RoomsConversations extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string messageId Optional. A custom name for a Chat message
+   * assigned at creation. Must start with `client-` and contain only lowercase
+   * letters, numbers, and hyphens up to 63 characters in length. Specify this
+   * field to get, update, or delete the message with the specified value. For
+   * example usage, see [Name a created message](https://developers.google.com/cha
+   * t/api/guides/crudl/messages#name_a_created_message).
    * @opt_param string requestId Optional. A unique request ID for this message.
    * Specifying an existing request ID returns the message created with that ID
    * instead of creating a new message.

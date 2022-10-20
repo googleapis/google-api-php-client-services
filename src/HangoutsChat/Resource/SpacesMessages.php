@@ -40,6 +40,12 @@ class SpacesMessages extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string messageId Optional. A custom name for a Chat message
+   * assigned at creation. Must start with `client-` and contain only lowercase
+   * letters, numbers, and hyphens up to 63 characters in length. Specify this
+   * field to get, update, or delete the message with the specified value. For
+   * example usage, see [Name a created message](https://developers.google.com/cha
+   * t/api/guides/crudl/messages#name_a_created_message).
    * @opt_param string requestId Optional. A unique request ID for this message.
    * Specifying an existing request ID returns the message created with that ID
    * instead of creating a new message.
@@ -59,7 +65,11 @@ class SpacesMessages extends \Google\Service\Resource
   /**
    * Deletes a message. Requires [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). (messages.delete)
+   * accounts). [Developer
+   * Preview](https://developers.google.com/workspace/preview): Deletes a message.
+   * Requires [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
+   * the `chat.messages` authorization scope. (messages.delete)
    *
    * @param string $name Required. Resource name of the message to be deleted, in
    * the form "spaces/messages" Example:
@@ -76,11 +86,20 @@ class SpacesMessages extends \Google\Service\Resource
   /**
    * Returns a message. Requires [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). (messages.get)
+   * accounts). [Developer
+   * Preview](https://developers.google.com/workspace/preview): Returns a message.
+   * Requires [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
+   * the `chat.messages` or `chat.messages.readonly` authorization scope.
+   * (messages.get)
    *
-   * @param string $name Required. Resource name of the message to be retrieved,
-   * in the form "spaces/messages". Example:
-   * spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+   * @param string $name Required. Resource name of the message to retrieve.
+   * Format: spaces/{space}/messages/{message} If the message begins with
+   * `client-`, then it has a custom name assigned by a Chat app that created it
+   * with the Chat REST API. That Chat app (but not others) can pass the custom
+   * name to get, update, or delete the message. To learn more, see [create and
+   * name a message] (https://developers.google.com/chat/api/guides/crudl/messages
+   * #name_a_created_message).
    * @param array $optParams Optional parameters.
    * @return Message
    */
@@ -100,6 +119,10 @@ class SpacesMessages extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool allowMissing Optional. If `true` and the message is not
+   * found, a new message is created and `updateMask` is ignored. The specified
+   * message ID must be [client-assigned](https://developers.google.com/chat/api/g
+   * uides/crudl/messages#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas. Currently supported field paths: - text - cards
    * (Requires [service account authentication](/chat/api/guides/auth/service-

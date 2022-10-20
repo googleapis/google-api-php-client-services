@@ -54,11 +54,14 @@ class Spaces extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. Requested page size. The value is capped at
-   * 1000. Server may return fewer results than requested. If unspecified, server
-   * will default to 100.
-   * @opt_param string pageToken Optional. A token identifying a page of results
-   * the server should return.
+   * @opt_param int pageSize Optional. The maximum number of spaces to return. The
+   * service may return fewer than this value. If unspecified, at most 100 spaces
+   * are returned. The maximum value is 1000; values above 1000 are coerced to
+   * 1000. Negative values return an INVALID_ARGUMENT error.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * list spaces call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided must match the call that provided
+   * the page token.
    * @return ListSpacesResponse
    */
   public function listSpaces($optParams = [])
@@ -76,6 +79,12 @@ class Spaces extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string messageId Optional. A custom name for a Chat message
+   * assigned at creation. Must start with `client-` and contain only lowercase
+   * letters, numbers, and hyphens up to 63 characters in length. Specify this
+   * field to get, update, or delete the message with the specified value. For
+   * example usage, see [Name a created message](https://developers.google.com/cha
+   * t/api/guides/crudl/messages#name_a_created_message).
    * @opt_param string requestId Optional. A unique request ID for this message.
    * Specifying an existing request ID returns the message created with that ID
    * instead of creating a new message.
