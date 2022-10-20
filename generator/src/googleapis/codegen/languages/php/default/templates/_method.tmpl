@@ -32,7 +32,7 @@ public function {{ method.name }}({% call_template _func_params method=method %}
     {% endif %}
   {% end_parameter_list %}];
   $params = array_merge($params, $optParams);
-{% if method.response %}
+{% if method.response and method.responseType.className %}
   return $this->{% if baseMethod == 1 %}base_methods->{% endif %}call('{{ method.wireName }}', [$params], {{ method.responseType.className }}{% if method.responseType.className|lower == resource.className|lower or method.responseType.className in api.resourceNames %}Model{% endif %}::class);
 {% else %}
   return $this->{% if baseMethod == 1 %}base_methods->{% endif %}call('{{ method.wireName }}', [$params]);
