@@ -23,8 +23,6 @@ class GoogleCloudRunV2Probe extends \Google\Model
    * @var int
    */
   public $failureThreshold;
-  protected $grpcType = GoogleCloudRunV2GRPCAction::class;
-  protected $grpcDataType = '';
   protected $httpGetType = GoogleCloudRunV2HTTPGetAction::class;
   protected $httpGetDataType = '';
   /**
@@ -55,20 +53,6 @@ class GoogleCloudRunV2Probe extends \Google\Model
   public function getFailureThreshold()
   {
     return $this->failureThreshold;
-  }
-  /**
-   * @param GoogleCloudRunV2GRPCAction
-   */
-  public function setGrpc(GoogleCloudRunV2GRPCAction $grpc)
-  {
-    $this->grpc = $grpc;
-  }
-  /**
-   * @return GoogleCloudRunV2GRPCAction
-   */
-  public function getGrpc()
-  {
-    return $this->grpc;
   }
   /**
    * @param GoogleCloudRunV2HTTPGetAction
