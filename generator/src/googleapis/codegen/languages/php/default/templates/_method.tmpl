@@ -15,7 +15,7 @@
  * @opt_param {{ param.codeType }} {{ param.wireName }}
  * {{ param.description }}{% endfilter %}{% endfor %}
 {% endif %}
-{% if method.response %}
+{% if method.response and method.responseType.className %}
  * @return {{ method.responseType.className }}{% if method.responseType.className|lower == resource.className|lower or method.requestType.className in api.resourceNames %}Model{% endif %}
 {% endif %}
  */
