@@ -36,8 +36,8 @@ class AccountsAdclientsAdunits extends \Google\Service\Resource
    * Creates an ad unit. This method can only be used by projects enabled for the
    * [AdSense for Platforms](https://developers.google.com/adsense/platforms/)
    * product. Note that ad units can only be created for ad clients with an "AFC"
-   * product code. For more info see the [AdClient resource](https://developers.go
-   * ogle.com/adsense/management/reference/rest/v2/accounts.adclients). For now,
+   * product code. For more info see the [AdClient
+   * resource](/adsense/management/reference/rest/v2/accounts.adclients). For now,
    * this method can only be used to create `DISPLAY` ad units. See:
    * https://support.google.com/adsense/answer/9183566 (adunits.create)
    *
