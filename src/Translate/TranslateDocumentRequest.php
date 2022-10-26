@@ -30,6 +30,10 @@ class TranslateDocumentRequest extends \Google\Model
   protected $glossaryConfigType = TranslateTextGlossaryConfig::class;
   protected $glossaryConfigDataType = '';
   /**
+   * @var bool
+   */
+  public $isTranslateNativePdfOnly;
+  /**
    * @var string[]
    */
   public $labels;
@@ -101,6 +105,20 @@ class TranslateDocumentRequest extends \Google\Model
   public function getGlossaryConfig()
   {
     return $this->glossaryConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsTranslateNativePdfOnly($isTranslateNativePdfOnly)
+  {
+    $this->isTranslateNativePdfOnly = $isTranslateNativePdfOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsTranslateNativePdfOnly()
+  {
+    return $this->isTranslateNativePdfOnly;
   }
   /**
    * @param string[]
