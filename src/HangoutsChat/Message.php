@@ -68,6 +68,10 @@ class Message extends \Google\Collection
   public $text;
   protected $threadType = Thread::class;
   protected $threadDataType = '';
+  /**
+   * @var bool
+   */
+  public $threadReply;
 
   /**
    * @param ActionResponse
@@ -306,6 +310,20 @@ class Message extends \Google\Collection
   public function getThread()
   {
     return $this->thread;
+  }
+  /**
+   * @param bool
+   */
+  public function setThreadReply($threadReply)
+  {
+    $this->threadReply = $threadReply;
+  }
+  /**
+   * @return bool
+   */
+  public function getThreadReply()
+  {
+    return $this->threadReply;
   }
 }
 

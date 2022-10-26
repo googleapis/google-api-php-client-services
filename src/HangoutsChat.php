@@ -84,6 +84,10 @@ class HangoutsChat extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'messageReplyOption' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -103,6 +107,10 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
                 'messageId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'messageReplyOption' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -135,6 +143,10 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
                 'messageId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'messageReplyOption' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -190,6 +202,10 @@ class HangoutsChat extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'messageReplyOption' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -209,6 +225,10 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
                 'messageId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'messageReplyOption' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -241,6 +261,10 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
                 'messageId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'messageReplyOption' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -296,6 +320,10 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
                 'messageId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'messageReplyOption' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -366,6 +394,10 @@ class HangoutsChat extends \Google\Service
                   'required' => true,
                 ],
                 'messageId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'messageReplyOption' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

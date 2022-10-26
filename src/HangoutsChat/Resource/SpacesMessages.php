@@ -31,9 +31,10 @@ use Google\Service\HangoutsChat\Message;
 class SpacesMessages extends \Google\Service\Resource
 {
   /**
-   * Creates a message. Requires [service account
-   * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). (messages.create)
+   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
+   * a message. Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth).
+   * (messages.create)
    *
    * @param string $parent Required. Space resource name, in the form "spaces".
    * Example: spaces/AAAAAAAAAAA
@@ -46,14 +47,16 @@ class SpacesMessages extends \Google\Service\Resource
    * field to get, update, or delete the message with the specified value. For
    * example usage, see [Name a created message](https://developers.google.com/cha
    * t/api/guides/crudl/messages#name_a_created_message).
+   * @opt_param string messageReplyOption Optional. Specifies whether a message
+   * starts a thread or replies to one. Only supported in named spaces.
    * @opt_param string requestId Optional. A unique request ID for this message.
    * Specifying an existing request ID returns the message created with that ID
    * instead of creating a new message.
-   * @opt_param string threadKey Optional. Opaque thread identifier. To start or
-   * add to a thread, create a message and specify a `threadKey` instead of
-   * thread.name. (Setting thread.name has no effect.) The first message with a
-   * given `threadKey` starts a new thread. Subsequent messages with the same
-   * `threadKey` post into the same thread.
+   * @opt_param string threadKey Optional. Deprecated: Use thread_key instead.
+   * Opaque thread identifier. To start or add to a thread, create a message and
+   * specify a `threadKey` or the thread.name. For example usage, see [Start or
+   * reply to a message
+   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
    * @return Message
    */
   public function create($parent, Message $postBody, $optParams = [])
@@ -90,7 +93,8 @@ class SpacesMessages extends \Google\Service\Resource
    * Preview](https://developers.google.com/workspace/preview): Returns a message.
    * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.messages` or `chat.messages.readonly` authorization scope.
+   * the `chat.messages` or `chat.messages.readonly` authorization scope. Messages
+   * from a blocked member or messages from a blocked space can also be fetched.
    * (messages.get)
    *
    * @param string $name Required. Resource name of the message to retrieve.
