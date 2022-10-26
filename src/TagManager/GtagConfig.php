@@ -17,14 +17,17 @@
 
 namespace Google\Service\TagManager;
 
-class Account extends \Google\Model
+class GtagConfig extends \Google\Collection
 {
+  protected $collection_key = 'parameter';
   /**
    * @var string
    */
   public $accountId;
-  protected $featuresType = AccountFeatures::class;
-  protected $featuresDataType = '';
+  /**
+   * @var string
+   */
+  public $containerId;
   /**
    * @var string
    */
@@ -32,19 +35,25 @@ class Account extends \Google\Model
   /**
    * @var string
    */
-  public $name;
+  public $gtagConfigId;
+  protected $parameterType = Parameter::class;
+  protected $parameterDataType = 'array';
   /**
    * @var string
    */
   public $path;
   /**
-   * @var bool
-   */
-  public $shareData;
-  /**
    * @var string
    */
   public $tagManagerUrl;
+  /**
+   * @var string
+   */
+  public $type;
+  /**
+   * @var string
+   */
+  public $workspaceId;
 
   /**
    * @param string
@@ -61,18 +70,18 @@ class Account extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param AccountFeatures
+   * @param string
    */
-  public function setFeatures(AccountFeatures $features)
+  public function setContainerId($containerId)
   {
-    $this->features = $features;
+    $this->containerId = $containerId;
   }
   /**
-   * @return AccountFeatures
+   * @return string
    */
-  public function getFeatures()
+  public function getContainerId()
   {
-    return $this->features;
+    return $this->containerId;
   }
   /**
    * @param string
@@ -91,16 +100,30 @@ class Account extends \Google\Model
   /**
    * @param string
    */
-  public function setName($name)
+  public function setGtagConfigId($gtagConfigId)
   {
-    $this->name = $name;
+    $this->gtagConfigId = $gtagConfigId;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getGtagConfigId()
   {
-    return $this->name;
+    return $this->gtagConfigId;
+  }
+  /**
+   * @param Parameter[]
+   */
+  public function setParameter($parameter)
+  {
+    $this->parameter = $parameter;
+  }
+  /**
+   * @return Parameter[]
+   */
+  public function getParameter()
+  {
+    return $this->parameter;
   }
   /**
    * @param string
@@ -117,20 +140,6 @@ class Account extends \Google\Model
     return $this->path;
   }
   /**
-   * @param bool
-   */
-  public function setShareData($shareData)
-  {
-    $this->shareData = $shareData;
-  }
-  /**
-   * @return bool
-   */
-  public function getShareData()
-  {
-    return $this->shareData;
-  }
-  /**
    * @param string
    */
   public function setTagManagerUrl($tagManagerUrl)
@@ -144,7 +153,35 @@ class Account extends \Google\Model
   {
     return $this->tagManagerUrl;
   }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
+  }
+  /**
+   * @param string
+   */
+  public function setWorkspaceId($workspaceId)
+  {
+    $this->workspaceId = $workspaceId;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkspaceId()
+  {
+    return $this->workspaceId;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Account::class, 'Google_Service_TagManager_Account');
+class_alias(GtagConfig::class, 'Google_Service_TagManager_GtagConfig');

@@ -49,6 +49,8 @@ class Accounts extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool includeGoogleTags Also retrieve accounts associated with
+   * Google Tag when true.
    * @opt_param string pageToken Continuation token for fetching the next page of
    * results.
    * @return ListAccountsResponse

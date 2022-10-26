@@ -17,14 +17,24 @@
 
 namespace Google\Service\TagManager;
 
-class Account extends \Google\Model
+class Destination extends \Google\Model
 {
   /**
    * @var string
    */
   public $accountId;
-  protected $featuresType = AccountFeatures::class;
-  protected $featuresDataType = '';
+  /**
+   * @var string
+   */
+  public $containerId;
+  /**
+   * @var string
+   */
+  public $destinationId;
+  /**
+   * @var string
+   */
+  public $destinationLinkId;
   /**
    * @var string
    */
@@ -37,10 +47,6 @@ class Account extends \Google\Model
    * @var string
    */
   public $path;
-  /**
-   * @var bool
-   */
-  public $shareData;
   /**
    * @var string
    */
@@ -61,18 +67,46 @@ class Account extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param AccountFeatures
+   * @param string
    */
-  public function setFeatures(AccountFeatures $features)
+  public function setContainerId($containerId)
   {
-    $this->features = $features;
+    $this->containerId = $containerId;
   }
   /**
-   * @return AccountFeatures
+   * @return string
    */
-  public function getFeatures()
+  public function getContainerId()
   {
-    return $this->features;
+    return $this->containerId;
+  }
+  /**
+   * @param string
+   */
+  public function setDestinationId($destinationId)
+  {
+    $this->destinationId = $destinationId;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationId()
+  {
+    return $this->destinationId;
+  }
+  /**
+   * @param string
+   */
+  public function setDestinationLinkId($destinationLinkId)
+  {
+    $this->destinationLinkId = $destinationLinkId;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationLinkId()
+  {
+    return $this->destinationLinkId;
   }
   /**
    * @param string
@@ -117,20 +151,6 @@ class Account extends \Google\Model
     return $this->path;
   }
   /**
-   * @param bool
-   */
-  public function setShareData($shareData)
-  {
-    $this->shareData = $shareData;
-  }
-  /**
-   * @return bool
-   */
-  public function getShareData()
-  {
-    return $this->shareData;
-  }
-  /**
    * @param string
    */
   public function setTagManagerUrl($tagManagerUrl)
@@ -147,4 +167,4 @@ class Account extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Account::class, 'Google_Service_TagManager_Account');
+class_alias(Destination::class, 'Google_Service_TagManager_Destination');
