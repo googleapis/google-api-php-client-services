@@ -94,7 +94,6 @@ class ProjectsLocationsProductsIntegrationsExecutions extends \Google\Service\Re
    * parameter_pair_value instead.
    * @opt_param string filterParams.startTime Start timestamp.
    * @opt_param string filterParams.taskStatuses List of possible task statuses.
-   * @opt_param string filterParams.triggerId Trigger id.
    * @opt_param string filterParams.workflowName Workflow name.
    * @opt_param string orderBy Optional. The results would be returned in order
    * you specified here. Currently supporting "last_modified_time" and

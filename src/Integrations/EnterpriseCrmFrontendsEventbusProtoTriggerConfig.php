@@ -22,6 +22,8 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   protected $collection_key = 'startTasks';
   protected $alertConfigType = EnterpriseCrmEventbusProtoWorkflowAlertConfig::class;
   protected $alertConfigDataType = 'array';
+  protected $cloudSchedulerConfigType = EnterpriseCrmEventbusProtoCloudSchedulerConfig::class;
+  protected $cloudSchedulerConfigDataType = '';
   /**
    * @var string
    */
@@ -78,6 +80,20 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   public function getAlertConfig()
   {
     return $this->alertConfig;
+  }
+  /**
+   * @param EnterpriseCrmEventbusProtoCloudSchedulerConfig
+   */
+  public function setCloudSchedulerConfig(EnterpriseCrmEventbusProtoCloudSchedulerConfig $cloudSchedulerConfig)
+  {
+    $this->cloudSchedulerConfig = $cloudSchedulerConfig;
+  }
+  /**
+   * @return EnterpriseCrmEventbusProtoCloudSchedulerConfig
+   */
+  public function getCloudSchedulerConfig()
+  {
+    return $this->cloudSchedulerConfig;
   }
   /**
    * @param string

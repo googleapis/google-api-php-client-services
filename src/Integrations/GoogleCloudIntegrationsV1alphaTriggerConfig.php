@@ -22,6 +22,8 @@ class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
   protected $collection_key = 'startTasks';
   protected $alertConfigType = GoogleCloudIntegrationsV1alphaIntegrationAlertConfig::class;
   protected $alertConfigDataType = 'array';
+  protected $cloudSchedulerConfigType = GoogleCloudIntegrationsV1alphaCloudSchedulerConfig::class;
+  protected $cloudSchedulerConfigDataType = '';
   /**
    * @var string
    */
@@ -66,6 +68,20 @@ class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
   public function getAlertConfig()
   {
     return $this->alertConfig;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaCloudSchedulerConfig
+   */
+  public function setCloudSchedulerConfig(GoogleCloudIntegrationsV1alphaCloudSchedulerConfig $cloudSchedulerConfig)
+  {
+    $this->cloudSchedulerConfig = $cloudSchedulerConfig;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaCloudSchedulerConfig
+   */
+  public function getCloudSchedulerConfig()
+  {
+    return $this->cloudSchedulerConfig;
   }
   /**
    * @param string

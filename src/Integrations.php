@@ -27,7 +27,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="http://www.google.com" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/application-integration" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -543,10 +543,6 @@ class Integrations extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
-                ],
-                'filterParams.triggerId' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
                 'filterParams.workflowName' => [
                   'location' => 'query',
@@ -1083,10 +1079,6 @@ class Integrations extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
-                ],
-                'filterParams.triggerId' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
                 'filterParams.workflowName' => [
                   'location' => 'query',
