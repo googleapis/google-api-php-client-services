@@ -29,9 +29,9 @@ class QualityNsrNsrData extends \Google\Collection
    */
   public $articleScoreV2;
   /**
-   * @var float
+   * @var int
    */
-  public $chard;
+  public $chardEncoded;
   /**
    * @var float
    */
@@ -118,6 +118,8 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $pnav;
+  protected $relativeNsrType = QualityNsrVersionedFloatSignal::class;
+  protected $relativeNsrDataType = 'array';
   /**
    * @var string
    */
@@ -220,18 +222,18 @@ class QualityNsrNsrData extends \Google\Collection
     return $this->articleScoreV2;
   }
   /**
-   * @param float
+   * @param int
    */
-  public function setChard($chard)
+  public function setChardEncoded($chardEncoded)
   {
-    $this->chard = $chard;
+    $this->chardEncoded = $chardEncoded;
   }
   /**
-   * @return float
+   * @return int
    */
-  public function getChard()
+  public function getChardEncoded()
   {
-    return $this->chard;
+    return $this->chardEncoded;
   }
   /**
    * @param float
@@ -554,6 +556,20 @@ class QualityNsrNsrData extends \Google\Collection
   public function getPnav()
   {
     return $this->pnav;
+  }
+  /**
+   * @param QualityNsrVersionedFloatSignal[]
+   */
+  public function setRelativeNsr($relativeNsr)
+  {
+    $this->relativeNsr = $relativeNsr;
+  }
+  /**
+   * @return QualityNsrVersionedFloatSignal[]
+   */
+  public function getRelativeNsr()
+  {
+    return $this->relativeNsr;
   }
   /**
    * @param string

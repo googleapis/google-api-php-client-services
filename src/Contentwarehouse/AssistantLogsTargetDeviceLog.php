@@ -25,6 +25,10 @@ class AssistantLogsTargetDeviceLog extends \Google\Collection
   /**
    * @var string
    */
+  public $lowConfidenceReason;
+  /**
+   * @var string
+   */
   public $resultConfidenceLevel;
 
   /**
@@ -40,6 +44,20 @@ class AssistantLogsTargetDeviceLog extends \Google\Collection
   public function getDevices()
   {
     return $this->devices;
+  }
+  /**
+   * @param string
+   */
+  public function setLowConfidenceReason($lowConfidenceReason)
+  {
+    $this->lowConfidenceReason = $lowConfidenceReason;
+  }
+  /**
+   * @return string
+   */
+  public function getLowConfidenceReason()
+  {
+    return $this->lowConfidenceReason;
   }
   /**
    * @param string

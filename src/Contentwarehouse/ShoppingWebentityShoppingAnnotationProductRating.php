@@ -26,8 +26,20 @@ class ShoppingWebentityShoppingAnnotationProductRating extends \Google\Model
   /**
    * @var string
    */
+  public $maxValueMillis;
+  /**
+   * @var string
+   */
+  public $minValueMillis;
+  /**
+   * @var string
+   */
   public $source;
   public $value;
+  /**
+   * @var string
+   */
+  public $valueMillis;
 
   /**
    * @param string
@@ -42,6 +54,34 @@ class ShoppingWebentityShoppingAnnotationProductRating extends \Google\Model
   public function getCount()
   {
     return $this->count;
+  }
+  /**
+   * @param string
+   */
+  public function setMaxValueMillis($maxValueMillis)
+  {
+    $this->maxValueMillis = $maxValueMillis;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxValueMillis()
+  {
+    return $this->maxValueMillis;
+  }
+  /**
+   * @param string
+   */
+  public function setMinValueMillis($minValueMillis)
+  {
+    $this->minValueMillis = $minValueMillis;
+  }
+  /**
+   * @return string
+   */
+  public function getMinValueMillis()
+  {
+    return $this->minValueMillis;
   }
   /**
    * @param string
@@ -64,6 +104,20 @@ class ShoppingWebentityShoppingAnnotationProductRating extends \Google\Model
   public function getValue()
   {
     return $this->value;
+  }
+  /**
+   * @param string
+   */
+  public function setValueMillis($valueMillis)
+  {
+    $this->valueMillis = $valueMillis;
+  }
+  /**
+   * @return string
+   */
+  public function getValueMillis()
+  {
+    return $this->valueMillis;
   }
 }
 

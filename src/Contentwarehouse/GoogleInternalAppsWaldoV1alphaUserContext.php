@@ -21,6 +21,8 @@ class GoogleInternalAppsWaldoV1alphaUserContext extends \Google\Model
 {
   protected $localTimeType = GoogleInternalAppsWaldoV1alphaLocalTimeContext::class;
   protected $localTimeDataType = '';
+  protected $upcomingCommitmentContextType = GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext::class;
+  protected $upcomingCommitmentContextDataType = '';
   protected $upcomingOooType = GoogleInternalAppsWaldoV1alphaUpcomingOooContext::class;
   protected $upcomingOooDataType = '';
   protected $workingElsewhereType = GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext::class;
@@ -39,6 +41,20 @@ class GoogleInternalAppsWaldoV1alphaUserContext extends \Google\Model
   public function getLocalTime()
   {
     return $this->localTime;
+  }
+  /**
+   * @param GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext
+   */
+  public function setUpcomingCommitmentContext(GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext $upcomingCommitmentContext)
+  {
+    $this->upcomingCommitmentContext = $upcomingCommitmentContext;
+  }
+  /**
+   * @return GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext
+   */
+  public function getUpcomingCommitmentContext()
+  {
+    return $this->upcomingCommitmentContext;
   }
   /**
    * @param GoogleInternalAppsWaldoV1alphaUpcomingOooContext

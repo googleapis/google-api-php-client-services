@@ -25,6 +25,10 @@ class KnowledgeAnswersIntentQueryParsingSignals extends \Google\Model
   /**
    * @var string
    */
+  public $qrewriteCallPathInfoFingerprint;
+  /**
+   * @var string
+   */
   public $source;
 
   public function setCalibratedParsingScore($calibratedParsingScore)
@@ -48,6 +52,20 @@ class KnowledgeAnswersIntentQueryParsingSignals extends \Google\Model
   public function getQrewriteCallPathInfo()
   {
     return $this->qrewriteCallPathInfo;
+  }
+  /**
+   * @param string
+   */
+  public function setQrewriteCallPathInfoFingerprint($qrewriteCallPathInfoFingerprint)
+  {
+    $this->qrewriteCallPathInfoFingerprint = $qrewriteCallPathInfoFingerprint;
+  }
+  /**
+   * @return string
+   */
+  public function getQrewriteCallPathInfoFingerprint()
+  {
+    return $this->qrewriteCallPathInfoFingerprint;
   }
   /**
    * @param string

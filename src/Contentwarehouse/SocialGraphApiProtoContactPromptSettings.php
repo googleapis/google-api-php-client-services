@@ -17,9 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleInternalAppsWaldoV1alphaInactive extends \Google\Model
+class SocialGraphApiProtoContactPromptSettings extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $contactActiveState;
+
+  /**
+   * @param string
+   */
+  public function setContactActiveState($contactActiveState)
+  {
+    $this->contactActiveState = $contactActiveState;
+  }
+  /**
+   * @return string
+   */
+  public function getContactActiveState()
+  {
+    return $this->contactActiveState;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleInternalAppsWaldoV1alphaInactive::class, 'Google_Service_Contentwarehouse_GoogleInternalAppsWaldoV1alphaInactive');
+class_alias(SocialGraphApiProtoContactPromptSettings::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoContactPromptSettings');

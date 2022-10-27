@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SocialGraphApiProtoPrompt extends \Google\Collection
 {
   protected $collection_key = 'notificationTriggers';
+  /**
+   * @var string
+   */
+  public $activeState;
   protected $contentType = SocialGraphApiProtoPromptContent::class;
   protected $contentDataType = '';
   protected $lastDismissDateType = GoogleTypeDate::class;
@@ -37,6 +41,20 @@ class SocialGraphApiProtoPrompt extends \Google\Collection
    */
   public $uniquePromptId;
 
+  /**
+   * @param string
+   */
+  public function setActiveState($activeState)
+  {
+    $this->activeState = $activeState;
+  }
+  /**
+   * @return string
+   */
+  public function getActiveState()
+  {
+    return $this->activeState;
+  }
   /**
    * @param SocialGraphApiProtoPromptContent
    */

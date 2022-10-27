@@ -26,6 +26,10 @@ class AssistantApiLoggingOnlyData extends \Google\Model
   /**
    * @var string
    */
+  public $androidId;
+  /**
+   * @var string
+   */
   public $appVersion;
   /**
    * @var string
@@ -79,6 +83,20 @@ class AssistantApiLoggingOnlyData extends \Google\Model
   public function getAcpVersion()
   {
     return $this->acpVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setAndroidId($androidId)
+  {
+    $this->androidId = $androidId;
+  }
+  /**
+   * @return string
+   */
+  public function getAndroidId()
+  {
+    return $this->androidId;
   }
   /**
    * @param string
