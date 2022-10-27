@@ -17,8 +17,8 @@
 
 namespace Google\Service\TagManager\Resource;
 
-use Google\Service\TagManager\None;
 use Google\Service\TagManager\Container;
+use Google\Service\TagManager\GetContainerSnippetResponse;
 use Google\Service\TagManager\ListContainersResponse;
 
 /**
@@ -157,17 +157,18 @@ class AccountsContainers extends \Google\Service\Resource
     return $this->call('move_tag_id', [$params], Container::class);
   }
   /**
-   * Gets the JavaScript snippet for a Container. (containers.snippet)
+   * Gets the tagging snippet for a Container. (containers.snippet)
    *
    * @param string $path Container snippet's API relative path. Example:
    * accounts/{account_id}/containers/{container_id}:snippet
    * @param array $optParams Optional parameters.
+   * @return GetContainerSnippetResponse
    */
   public function snippet($path, $optParams = [])
   {
     $params = ['path' => $path];
     $params = array_merge($params, $optParams);
-    return $this->call('snippet', [$params]);
+    return $this->call('snippet', [$params], GetContainerSnippetResponse::class);
   }
   /**
    * Updates a Container. (containers.update)

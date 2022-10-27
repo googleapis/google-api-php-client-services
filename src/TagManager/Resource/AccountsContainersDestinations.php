@@ -54,9 +54,8 @@ class AccountsContainersDestinations extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allowUserPermissionFeatureUpdate Must be set to true to allow
-   * features.user_permissions to change from false to true (i.e. Google product
-   * owned to GTM permission). If this operation causes an update but this bit is
-   * false, the operation will fail.
+   * features.user_permissions to change from false to true. If this operation
+   * causes an update but this bit is false, the operation will fail.
    * @opt_param string destinationId Destination ID to be linked to the current
    * container.
    * @return Destination
