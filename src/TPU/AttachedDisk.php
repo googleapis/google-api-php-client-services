@@ -17,62 +17,46 @@
 
 namespace Google\Service\TPU;
 
-class NetworkEndpoint extends \Google\Model
+class AttachedDisk extends \Google\Model
 {
-  protected $accessConfigType = AccessConfig::class;
-  protected $accessConfigDataType = '';
   /**
    * @var string
    */
-  public $ipAddress;
+  public $mode;
   /**
-   * @var int
+   * @var string
    */
-  public $port;
+  public $sourceDisk;
 
-  /**
-   * @param AccessConfig
-   */
-  public function setAccessConfig(AccessConfig $accessConfig)
-  {
-    $this->accessConfig = $accessConfig;
-  }
-  /**
-   * @return AccessConfig
-   */
-  public function getAccessConfig()
-  {
-    return $this->accessConfig;
-  }
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setMode($mode)
   {
-    $this->ipAddress = $ipAddress;
+    $this->mode = $mode;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getMode()
   {
-    return $this->ipAddress;
+    return $this->mode;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setPort($port)
+  public function setSourceDisk($sourceDisk)
   {
-    $this->port = $port;
+    $this->sourceDisk = $sourceDisk;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getPort()
+  public function getSourceDisk()
   {
-    return $this->port;
+    return $this->sourceDisk;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NetworkEndpoint::class, 'Google_Service_TPU_NetworkEndpoint');
+class_alias(AttachedDisk::class, 'Google_Service_TPU_AttachedDisk');

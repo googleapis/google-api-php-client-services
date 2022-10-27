@@ -17,62 +17,46 @@
 
 namespace Google\Service\TPU;
 
-class NetworkEndpoint extends \Google\Model
+class RuntimeVersion extends \Google\Model
 {
-  protected $accessConfigType = AccessConfig::class;
-  protected $accessConfigDataType = '';
   /**
    * @var string
    */
-  public $ipAddress;
+  public $name;
   /**
-   * @var int
+   * @var string
    */
-  public $port;
+  public $version;
 
-  /**
-   * @param AccessConfig
-   */
-  public function setAccessConfig(AccessConfig $accessConfig)
-  {
-    $this->accessConfig = $accessConfig;
-  }
-  /**
-   * @return AccessConfig
-   */
-  public function getAccessConfig()
-  {
-    return $this->accessConfig;
-  }
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setName($name)
   {
-    $this->ipAddress = $ipAddress;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getName()
   {
-    return $this->ipAddress;
+    return $this->name;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setPort($port)
+  public function setVersion($version)
   {
-    $this->port = $port;
+    $this->version = $version;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getPort()
+  public function getVersion()
   {
-    return $this->port;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NetworkEndpoint::class, 'Google_Service_TPU_NetworkEndpoint');
+class_alias(RuntimeVersion::class, 'Google_Service_TPU_RuntimeVersion');

@@ -17,62 +17,47 @@
 
 namespace Google\Service\TPU;
 
-class NetworkEndpoint extends \Google\Model
+class GetGuestAttributesRequest extends \Google\Collection
 {
-  protected $accessConfigType = AccessConfig::class;
-  protected $accessConfigDataType = '';
+  protected $collection_key = 'workerIds';
   /**
    * @var string
    */
-  public $ipAddress;
+  public $queryPath;
   /**
-   * @var int
+   * @var string[]
    */
-  public $port;
+  public $workerIds;
 
-  /**
-   * @param AccessConfig
-   */
-  public function setAccessConfig(AccessConfig $accessConfig)
-  {
-    $this->accessConfig = $accessConfig;
-  }
-  /**
-   * @return AccessConfig
-   */
-  public function getAccessConfig()
-  {
-    return $this->accessConfig;
-  }
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setQueryPath($queryPath)
   {
-    $this->ipAddress = $ipAddress;
+    $this->queryPath = $queryPath;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getQueryPath()
   {
-    return $this->ipAddress;
+    return $this->queryPath;
   }
   /**
-   * @param int
+   * @param string[]
    */
-  public function setPort($port)
+  public function setWorkerIds($workerIds)
   {
-    $this->port = $port;
+    $this->workerIds = $workerIds;
   }
   /**
-   * @return int
+   * @return string[]
    */
-  public function getPort()
+  public function getWorkerIds()
   {
-    return $this->port;
+    return $this->workerIds;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NetworkEndpoint::class, 'Google_Service_TPU_NetworkEndpoint');
+class_alias(GetGuestAttributesRequest::class, 'Google_Service_TPU_GetGuestAttributesRequest');

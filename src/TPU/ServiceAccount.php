@@ -17,62 +17,47 @@
 
 namespace Google\Service\TPU;
 
-class NetworkEndpoint extends \Google\Model
+class ServiceAccount extends \Google\Collection
 {
-  protected $accessConfigType = AccessConfig::class;
-  protected $accessConfigDataType = '';
+  protected $collection_key = 'scope';
   /**
    * @var string
    */
-  public $ipAddress;
+  public $email;
   /**
-   * @var int
+   * @var string[]
    */
-  public $port;
+  public $scope;
 
-  /**
-   * @param AccessConfig
-   */
-  public function setAccessConfig(AccessConfig $accessConfig)
-  {
-    $this->accessConfig = $accessConfig;
-  }
-  /**
-   * @return AccessConfig
-   */
-  public function getAccessConfig()
-  {
-    return $this->accessConfig;
-  }
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setEmail($email)
   {
-    $this->ipAddress = $ipAddress;
+    $this->email = $email;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getEmail()
   {
-    return $this->ipAddress;
+    return $this->email;
   }
   /**
-   * @param int
+   * @param string[]
    */
-  public function setPort($port)
+  public function setScope($scope)
   {
-    $this->port = $port;
+    $this->scope = $scope;
   }
   /**
-   * @return int
+   * @return string[]
    */
-  public function getPort()
+  public function getScope()
   {
-    return $this->port;
+    return $this->scope;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NetworkEndpoint::class, 'Google_Service_TPU_NetworkEndpoint');
+class_alias(ServiceAccount::class, 'Google_Service_TPU_ServiceAccount');
