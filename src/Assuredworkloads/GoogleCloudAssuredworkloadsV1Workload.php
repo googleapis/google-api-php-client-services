@@ -28,6 +28,8 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $complianceRegime;
+  protected $complianceStatusType = GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus::class;
+  protected $complianceStatusDataType = '';
   /**
    * @var string[]
    */
@@ -104,6 +106,20 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   public function getComplianceRegime()
   {
     return $this->complianceRegime;
+  }
+  /**
+   * @param GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus
+   */
+  public function setComplianceStatus(GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus $complianceStatus)
+  {
+    $this->complianceStatus = $complianceStatus;
+  }
+  /**
+   * @return GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus
+   */
+  public function getComplianceStatus()
+  {
+    return $this->complianceStatus;
   }
   /**
    * @param string[]
