@@ -23,6 +23,8 @@ use Google\Service\DisplayVideo\BulkListAssignedTargetingOptionsResponse;
 use Google\Service\DisplayVideo\BulkUpdateLineItemsRequest;
 use Google\Service\DisplayVideo\BulkUpdateLineItemsResponse;
 use Google\Service\DisplayVideo\DisplayvideoEmpty;
+use Google\Service\DisplayVideo\DuplicateLineItemRequest;
+use Google\Service\DisplayVideo\DuplicateLineItemResponse;
 use Google\Service\DisplayVideo\GenerateDefaultLineItemRequest;
 use Google\Service\DisplayVideo\LineItem;
 use Google\Service\DisplayVideo\ListLineItemsResponse;
@@ -145,6 +147,23 @@ class AdvertisersLineItems extends \Google\Service\Resource
     $params = ['advertiserId' => $advertiserId, 'lineItemId' => $lineItemId];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], DisplayvideoEmpty::class);
+  }
+  /**
+   * Duplicates a line item. Returns the newly created line item id if successful.
+   * (lineItems.duplicate)
+   *
+   * @param string $advertiserId Required. The ID of the advertiser this line item
+   * belongs to.
+   * @param string $lineItemId Required. The ID of the line item to duplicate.
+   * @param DuplicateLineItemRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DuplicateLineItemResponse
+   */
+  public function duplicate($advertiserId, $lineItemId, DuplicateLineItemRequest $postBody, $optParams = [])
+  {
+    $params = ['advertiserId' => $advertiserId, 'lineItemId' => $lineItemId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('duplicate', [$params], DuplicateLineItemResponse::class);
   }
   /**
    * Creates a new line item with settings (including targeting) inherited from

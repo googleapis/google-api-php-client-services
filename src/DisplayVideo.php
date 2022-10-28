@@ -885,7 +885,52 @@ class DisplayVideo extends \Google\Service
         'assignedTargetingOptions',
         [
           'methods' => [
-            'get' => [
+            'create' => [
+              'path' => 'v2/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}/targetingTypes/{+targetingType}/assignedTargetingOptions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'insertionOrderId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'targetingType' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v2/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'insertionOrderId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'targetingType' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'assignedTargetingOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v2/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1070,6 +1115,21 @@ class DisplayVideo extends \Google\Service
             ],'delete' => [
               'path' => 'v2/advertisers/{+advertiserId}/lineItems/{+lineItemId}',
               'httpMethod' => 'DELETE',
+              'parameters' => [
+                'advertiserId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'lineItemId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'duplicate' => [
+              'path' => 'v2/advertisers/{+advertiserId}/lineItems/{+lineItemId}:duplicate',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'advertiserId' => [
                   'location' => 'path',
