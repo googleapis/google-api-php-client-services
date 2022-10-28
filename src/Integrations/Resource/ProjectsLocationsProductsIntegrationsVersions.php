@@ -57,8 +57,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * released when Archiving a integration. Currently, there is no unarchive
    * mechanism. (versions.archive)
    *
-   * @param string $name Required. The version to archive. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to archive. Format: projects/{proje
+   * ct}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionResponse
@@ -74,7 +74,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * (versions.create)
    *
    * @param string $parent Required. The parent resource where this version will
-   * be created. Format: projects/{project}/integrations/{integration}
+   * be created. Format:
+   * projects/{project}/locations/{location}/integrations/{integration}
    * @param GoogleCloudIntegrationsV1alphaIntegrationVersion $postBody
    * @param array $optParams Optional parameters.
    *
@@ -98,8 +99,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * version being snapshot is not ACTIVE. Audit fields added include action,
    * action_by, action_timestamp. (versions.deactivate)
    *
-   * @param string $name Required. The version to deactivate. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to deactivate. Format: projects/{pr
+   * oject}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse
@@ -114,8 +115,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * Downloads an integration. Retrieves the `IntegrationVersion` for a given
    * `integration_id` and returns the response as a string. (versions.download)
    *
-   * @param string $name Required. The version to download. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to download. Format: projects/{proj
+   * ect}/locations/{location}/integrations/{integration}/versions/{version}
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fileFormat File format for download request.
@@ -130,8 +131,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
   /**
    * Get a integration in the specified project. (versions.get)
    *
-   * @param string $name Required. The version to retrieve. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to retrieve. Format: projects/{proj
+   * ect}/locations/{location}/integrations/{integration}/versions/{version}
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaIntegrationVersion
    */
@@ -160,7 +161,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * (versions.listProjectsLocationsProductsIntegrationsVersions)
    *
    * @param string $parent Required. The parent resource where this version will
-   * be created. Format: projects/{project}/integrations/{integration}
+   * be created. Format:
+   * projects/{project}/locations/{location}/integrations/{integration}
    * Specifically, when parent equals: 1. projects//locations//integrations/,
    * Meaning: "List versions (with filter) for a particular integration". 2.
    * projects//locations//integrations/- Meaning: "List versions (with filter) for
@@ -223,8 +225,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * last_published_by, last_modified_timestamp, last_modified_by. Any existing
    * lock is on this integration is released. (versions.publish)
    *
-   * @param string $name Required. The version to publish. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to publish. Format: projects/{proje
+   * ct}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaPublishIntegrationVersionResponse
@@ -250,8 +252,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * (versions.takeoverEditLock)
    *
    * @param string $integrationVersion Required. The version to take over edit
-   * lock. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * lock. Format: projects/{project}/locations/{location}/integrations/{integrati
+   * on}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse
@@ -284,7 +286,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * the IntegrationVersion content. (versions.upload)
    *
    * @param string $parent Required. The version to upload. Format:
-   * projects/{project}/integrations/{integration}
+   * projects/{project}/locations/{location}/integrations/{integration}
    * @param GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse
@@ -300,8 +302,8 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * is thrown. If validation fails a CanonicalCodeException is thrown. If there
    * was no failure an empty response is returned. (versions.validate)
    *
-   * @param string $name Required. The version to validate. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to validate. Format: projects/{proj
+   * ect}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse

@@ -51,8 +51,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * released when Archiving a integration. Currently, there is no unarchive
    * mechanism. (versions.archive)
    *
-   * @param string $name Required. The version to archive. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to archive. Format: projects/{proje
+   * ct}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionResponse
@@ -68,7 +68,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * (versions.create)
    *
    * @param string $parent Required. The parent resource where this version will
-   * be created. Format: projects/{project}/integrations/{integration}
+   * be created. Format:
+   * projects/{project}/locations/{location}/integrations/{integration}
    * @param GoogleCloudIntegrationsV1alphaIntegrationVersion $postBody
    * @param array $optParams Optional parameters.
    *
@@ -92,8 +93,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * version being snapshot is not ACTIVE. Audit fields added include action,
    * action_by, action_timestamp. (versions.deactivate)
    *
-   * @param string $name Required. The version to deactivate. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to deactivate. Format: projects/{pr
+   * oject}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse
@@ -107,8 +108,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
   /**
    * Get a integration in the specified project. (versions.get)
    *
-   * @param string $name Required. The version to retrieve. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to retrieve. Format: projects/{proj
+   * ect}/locations/{location}/integrations/{integration}/versions/{version}
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaIntegrationVersion
    */
@@ -123,7 +124,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * (versions.listProjectsLocationsIntegrationsVersions)
    *
    * @param string $parent Required. The parent resource where this version will
-   * be created. Format: projects/{project}/integrations/{integration}
+   * be created. Format:
+   * projects/{project}/locations/{location}/integrations/{integration}
    * Specifically, when parent equals: 1. projects//locations//integrations/,
    * Meaning: "List versions (with filter) for a particular integration". 2.
    * projects//locations//integrations/- Meaning: "List versions (with filter) for
@@ -186,8 +188,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * last_published_by, last_modified_timestamp, last_modified_by. Any existing
    * lock is on this integration is released. (versions.publish)
    *
-   * @param string $name Required. The version to publish. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to publish. Format: projects/{proje
+   * ct}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaPublishIntegrationVersionResponse
@@ -213,8 +215,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * (versions.takeoverEditLock)
    *
    * @param string $integrationVersion Required. The version to take over edit
-   * lock. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * lock. Format: projects/{project}/locations/{location}/integrations/{integrati
+   * on}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse
@@ -230,8 +232,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * is thrown. If validation fails a CanonicalCodeException is thrown. If there
    * was no failure an empty response is returned. (versions.validate)
    *
-   * @param string $name Required. The version to validate. Format:
-   * projects/{project}/integrations/{integration}/versions/{version}
+   * @param string $name Required. The version to validate. Format: projects/{proj
+   * ect}/locations/{location}/integrations/{integration}/versions/{version}
    * @param GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse

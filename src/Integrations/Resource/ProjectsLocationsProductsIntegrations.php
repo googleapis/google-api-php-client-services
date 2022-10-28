@@ -42,7 +42,7 @@ class ProjectsLocationsProductsIntegrations extends \Google\Service\Resource
    * SERVICE. Soft-deletes the bundle. (integrations.archiveBundle)
    *
    * @param string $name Required. The bundle to archive. Format:
-   * projects/{project}/integrations/{integration}
+   * projects/{project}/locations/{location}/integrations/{integration}
    * @param GoogleCloudIntegrationsV1alphaArchiveBundleRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaArchiveBundleResponse
