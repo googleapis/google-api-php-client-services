@@ -31,13 +31,22 @@ use Google\Service\HangoutsChat\Message;
 class SpacesMessages extends \Google\Service\Resource
 {
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
-   * a message. Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth).
+   * Creates a message. For example usage, see [Create a message](https://develope
+   * rs.google.com/chat/api/guides/crudl/messages#create_a_message). Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
+   * supports [service account
+   * authentication](https://developers.google.com/chat/api/guides/auth/service-
+   * accounts). Supports [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
+   * part of the [Google Workspace Developer Preview
+   * Program](https://developers.google.com/workspace/preview), which grants early
+   * access to certain features. [User
+   * authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * requires the `chat.messages` or `chat.messages.create` authorization scope.
    * (messages.create)
    *
-   * @param string $parent Required. Space resource name, in the form "spaces".
-   * Example: spaces/AAAAAAAAAAA
+   * @param string $parent Required. The resource name of the space in which to
+   * create a message. Format: spaces/{space}
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
@@ -52,10 +61,10 @@ class SpacesMessages extends \Google\Service\Resource
    * @opt_param string requestId Optional. A unique request ID for this message.
    * Specifying an existing request ID returns the message created with that ID
    * instead of creating a new message.
-   * @opt_param string threadKey Optional. Deprecated: Use thread_key instead.
-   * Opaque thread identifier. To start or add to a thread, create a message and
-   * specify a `threadKey` or the thread.name. For example usage, see [Start or
-   * reply to a message
+   * @opt_param string threadKey Optional. Deprecated: Use thread.thread_key
+   * instead. Opaque thread identifier. To start or add to a thread, create a
+   * message and specify a `threadKey` or the thread.name. For example usage, see
+   * [Start or reply to a message
    * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
    * @return Message
    */
@@ -66,13 +75,18 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('create', [$params], Message::class);
   }
   /**
-   * Deletes a message. Requires [service account
+   * Deletes a message. For example usage, see [Delete a message](https://develope
+   * rs.google.com/chat/api/guides/crudl/messages#delete_a_message). Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
+   * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). [Developer
-   * Preview](https://developers.google.com/workspace/preview): Deletes a message.
-   * Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.messages` authorization scope. (messages.delete)
+   * accounts). Supports [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
+   * part of the [Google Workspace Developer Preview
+   * Program](https://developers.google.com/workspace/preview), which grants early
+   * access to certain features. [User
+   * authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * requires the `chat.messages` authorization scope. (messages.delete)
    *
    * @param string $name Required. Resource name of the message to be deleted, in
    * the form "spaces/messages" Example:
@@ -87,15 +101,19 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('delete', [$params], ChatEmpty::class);
   }
   /**
-   * Returns a message. Requires [service account
+   * Returns a message. For example usage, see [Read a message](https://developers
+   * .google.com/chat/api/guides/crudl/messages#read_a_message). Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
+   * supports [Service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). [Developer
-   * Preview](https://developers.google.com/workspace/preview): Returns a message.
-   * Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.messages` or `chat.messages.readonly` authorization scope. Messages
-   * from a blocked member or messages from a blocked space can also be fetched.
-   * (messages.get)
+   * accounts). Supports [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
+   * part of the [Google Workspace Developer Preview
+   * Program](https://developers.google.com/workspace/preview), which grants early
+   * access to certain features. [User
+   * authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * requires the `chat.messages` or `chat.messages.readonly` authorization scope.
+   * Note: Might return a message from a blocked member or space. (messages.get)
    *
    * @param string $name Required. Resource name of the message to retrieve.
    * Format: spaces/{space}/messages/{message} If the message begins with
@@ -114,7 +132,9 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('get', [$params], Message::class);
   }
   /**
-   * Updates a message. Requires [service account
+   * Updates a message. For example usage, see [Update a message](https://develope
+   * rs.google.com/chat/api/guides/crudl/messages#update_a_message). Requires
+   * [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts). (messages.update)
    *
