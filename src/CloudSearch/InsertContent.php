@@ -17,28 +17,64 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class InsertContent extends \Google\Model
 {
   /**
    * @var string
    */
-  public $formattedDebugInfo;
+  public $content;
+  /**
+   * @var string
+   */
+  public $contentType;
+  /**
+   * @var string
+   */
+  public $mimeType;
 
   /**
    * @param string
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setContent($content)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->content = $content;
   }
   /**
    * @return string
    */
-  public function getFormattedDebugInfo()
+  public function getContent()
   {
-    return $this->formattedDebugInfo;
+    return $this->content;
+  }
+  /**
+   * @param string
+   */
+  public function setContentType($contentType)
+  {
+    $this->contentType = $contentType;
+  }
+  /**
+   * @return string
+   */
+  public function getContentType()
+  {
+    return $this->contentType;
+  }
+  /**
+   * @param string
+   */
+  public function setMimeType($mimeType)
+  {
+    $this->mimeType = $mimeType;
+  }
+  /**
+   * @return string
+   */
+  public function getMimeType()
+  {
+    return $this->mimeType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(InsertContent::class, 'Google_Service_CloudSearch_InsertContent');

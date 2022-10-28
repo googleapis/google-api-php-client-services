@@ -17,28 +17,45 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class UpdateBody extends \Google\Collection
 {
+  protected $collection_key = 'insertContents';
+  protected $insertContentsType = InsertContent::class;
+  protected $insertContentsDataType = 'array';
   /**
    * @var string
    */
-  public $formattedDebugInfo;
+  public $type;
 
+  /**
+   * @param InsertContent[]
+   */
+  public function setInsertContents($insertContents)
+  {
+    $this->insertContents = $insertContents;
+  }
+  /**
+   * @return InsertContent[]
+   */
+  public function getInsertContents()
+  {
+    return $this->insertContents;
+  }
   /**
    * @param string
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setType($type)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getFormattedDebugInfo()
+  public function getType()
   {
-    return $this->formattedDebugInfo;
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(UpdateBody::class, 'Google_Service_CloudSearch_UpdateBody');

@@ -17,28 +17,46 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class CustomFunctionReturnValueMarkup extends \Google\Model
 {
   /**
    * @var string
    */
-  public $formattedDebugInfo;
+  public $errorMessage;
+  /**
+   * @var array
+   */
+  public $value;
 
   /**
    * @param string
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setErrorMessage($errorMessage)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->errorMessage = $errorMessage;
   }
   /**
    * @return string
    */
-  public function getFormattedDebugInfo()
+  public function getErrorMessage()
   {
-    return $this->formattedDebugInfo;
+    return $this->errorMessage;
+  }
+  /**
+   * @param array
+   */
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  /**
+   * @return array
+   */
+  public function getValue()
+  {
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(CustomFunctionReturnValueMarkup::class, 'Google_Service_CloudSearch_CustomFunctionReturnValueMarkup');

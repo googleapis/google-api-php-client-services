@@ -17,28 +17,46 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkupError extends \Google\Model
 {
   /**
    * @var string
    */
-  public $formattedDebugInfo;
+  public $authenticationUrl;
+  /**
+   * @var string
+   */
+  public $type;
 
   /**
    * @param string
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setAuthenticationUrl($authenticationUrl)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->authenticationUrl = $authenticationUrl;
   }
   /**
    * @return string
    */
-  public function getFormattedDebugInfo()
+  public function getAuthenticationUrl()
   {
-    return $this->formattedDebugInfo;
+    return $this->authenticationUrl;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkupError::class, 'Google_Service_CloudSearch_AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkupError');

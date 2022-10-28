@@ -17,28 +17,26 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class DriveClientActionMarkup extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $formattedDebugInfo;
+  protected $requestFileScopeType = RequestFileScope::class;
+  protected $requestFileScopeDataType = '';
 
   /**
-   * @param string
+   * @param RequestFileScope
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setRequestFileScope(RequestFileScope $requestFileScope)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->requestFileScope = $requestFileScope;
   }
   /**
-   * @return string
+   * @return RequestFileScope
    */
-  public function getFormattedDebugInfo()
+  public function getRequestFileScope()
   {
-    return $this->formattedDebugInfo;
+    return $this->requestFileScope;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(DriveClientActionMarkup::class, 'Google_Service_CloudSearch_DriveClientActionMarkup');

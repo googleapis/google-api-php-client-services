@@ -17,28 +17,28 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class AddonComposeUiActionMarkup extends \Google\Model
 {
   /**
    * @var string
    */
-  public $formattedDebugInfo;
+  public $type;
 
   /**
    * @param string
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setType($type)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getFormattedDebugInfo()
+  public function getType()
   {
-    return $this->formattedDebugInfo;
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(AddonComposeUiActionMarkup::class, 'Google_Service_CloudSearch_AddonComposeUiActionMarkup');

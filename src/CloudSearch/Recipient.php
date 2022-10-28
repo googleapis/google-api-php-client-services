@@ -17,28 +17,28 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class Recipient extends \Google\Model
 {
   /**
    * @var string
    */
-  public $formattedDebugInfo;
+  public $email;
 
   /**
    * @param string
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setEmail($email)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->email = $email;
   }
   /**
    * @return string
    */
-  public function getFormattedDebugInfo()
+  public function getEmail()
   {
-    return $this->formattedDebugInfo;
+    return $this->email;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(Recipient::class, 'Google_Service_CloudSearch_Recipient');

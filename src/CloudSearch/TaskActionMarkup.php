@@ -17,28 +17,28 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class TaskActionMarkup extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $formattedDebugInfo;
+  public $reloadTasks;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setReloadTasks($reloadTasks)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->reloadTasks = $reloadTasks;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getFormattedDebugInfo()
+  public function getReloadTasks()
   {
-    return $this->formattedDebugInfo;
+    return $this->reloadTasks;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(TaskActionMarkup::class, 'Google_Service_CloudSearch_TaskActionMarkup');

@@ -17,28 +17,27 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class UpdateBccRecipients extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $formattedDebugInfo;
+  protected $collection_key = 'bccRecipients';
+  protected $bccRecipientsType = Recipient::class;
+  protected $bccRecipientsDataType = 'array';
 
   /**
-   * @param string
+   * @param Recipient[]
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setBccRecipients($bccRecipients)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->bccRecipients = $bccRecipients;
   }
   /**
-   * @return string
+   * @return Recipient[]
    */
-  public function getFormattedDebugInfo()
+  public function getBccRecipients()
   {
-    return $this->formattedDebugInfo;
+    return $this->bccRecipients;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(UpdateBccRecipients::class, 'Google_Service_CloudSearch_UpdateBccRecipients');

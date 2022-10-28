@@ -17,28 +17,29 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup extends \Google\Collection
 {
+  protected $collection_key = 'addAttendeeEmails';
   /**
-   * @var string
+   * @var string[]
    */
-  public $formattedDebugInfo;
+  public $addAttendeeEmails;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setAddAttendeeEmails($addAttendeeEmails)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->addAttendeeEmails = $addAttendeeEmails;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getFormattedDebugInfo()
+  public function getAddAttendeeEmails()
   {
-    return $this->formattedDebugInfo;
+    return $this->addAttendeeEmails;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup::class, 'Google_Service_CloudSearch_AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup');

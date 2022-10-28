@@ -17,28 +17,28 @@
 
 namespace Google\Service\CloudSearch;
 
-class ResponseDebugInfo extends \Google\Model
+class RequestFileScope extends \Google\Model
 {
   /**
    * @var string
    */
-  public $formattedDebugInfo;
+  public $itemId;
 
   /**
    * @param string
    */
-  public function setFormattedDebugInfo($formattedDebugInfo)
+  public function setItemId($itemId)
   {
-    $this->formattedDebugInfo = $formattedDebugInfo;
+    $this->itemId = $itemId;
   }
   /**
    * @return string
    */
-  public function getFormattedDebugInfo()
+  public function getItemId()
   {
-    return $this->formattedDebugInfo;
+    return $this->itemId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseDebugInfo::class, 'Google_Service_CloudSearch_ResponseDebugInfo');
+class_alias(RequestFileScope::class, 'Google_Service_CloudSearch_RequestFileScope');
