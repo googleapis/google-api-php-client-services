@@ -23,6 +23,8 @@ class MembershipFeatureSpec extends \Google\Model
   protected $anthosvmDataType = '';
   protected $configmanagementType = ConfigManagementMembershipSpec::class;
   protected $configmanagementDataType = '';
+  protected $fleetobservabilityType = FleetObservabilityMembershipSpec::class;
+  protected $fleetobservabilityDataType = '';
   protected $identityserviceType = IdentityServiceMembershipSpec::class;
   protected $identityserviceDataType = '';
   protected $meshType = ServiceMeshMembershipSpec::class;
@@ -55,6 +57,20 @@ class MembershipFeatureSpec extends \Google\Model
   public function getConfigmanagement()
   {
     return $this->configmanagement;
+  }
+  /**
+   * @param FleetObservabilityMembershipSpec
+   */
+  public function setFleetobservability(FleetObservabilityMembershipSpec $fleetobservability)
+  {
+    $this->fleetobservability = $fleetobservability;
+  }
+  /**
+   * @return FleetObservabilityMembershipSpec
+   */
+  public function getFleetobservability()
+  {
+    return $this->fleetobservability;
   }
   /**
    * @param IdentityServiceMembershipSpec

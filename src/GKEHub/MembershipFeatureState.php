@@ -25,6 +25,8 @@ class MembershipFeatureState extends \Google\Model
   protected $appdevexperienceDataType = '';
   protected $configmanagementType = ConfigManagementMembershipState::class;
   protected $configmanagementDataType = '';
+  protected $fleetobservabilityType = FleetObservabilityMembershipState::class;
+  protected $fleetobservabilityDataType = '';
   protected $identityserviceType = IdentityServiceMembershipState::class;
   protected $identityserviceDataType = '';
   protected $servicemeshType = ServiceMeshMembershipState::class;
@@ -73,6 +75,20 @@ class MembershipFeatureState extends \Google\Model
   public function getConfigmanagement()
   {
     return $this->configmanagement;
+  }
+  /**
+   * @param FleetObservabilityMembershipState
+   */
+  public function setFleetobservability(FleetObservabilityMembershipState $fleetobservability)
+  {
+    $this->fleetobservability = $fleetobservability;
+  }
+  /**
+   * @return FleetObservabilityMembershipState
+   */
+  public function getFleetobservability()
+  {
+    return $this->fleetobservability;
   }
   /**
    * @param IdentityServiceMembershipState
