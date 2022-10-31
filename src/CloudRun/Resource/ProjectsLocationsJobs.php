@@ -66,10 +66,6 @@ class ProjectsLocationsJobs extends \Google\Service\Resource
    *
    * @opt_param string etag A system-generated fingerprint for this version of the
    * resource. May be used to detect modification conflict during updates.
-   * @opt_param bool force If set to true, the Job and its Executions will be
-   * deleted no matter whether any Executions are still running or not. If set to
-   * false or unset, the Job and its Executions can only be deleted if there are
-   * no running Executions. Any running Execution will fail the deletion.
    * @opt_param bool validateOnly Indicates that the request should be validated
    * without actually deleting any resources.
    * @return GoogleLongrunningOperation
