@@ -47,9 +47,9 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('get', [$params], Membership::class);
   }
   /**
-   * Lists human memberships in a space for joined members. Requires [service
-   * account authentication](https://developers.google.com/chat/api/guides/auth
-   * /service-accounts). (members.listSpacesMembers)
+   * Lists memberships in a space. Requires [service account
+   * authentication](https://developers.google.com/chat/api/guides/auth/service-
+   * accounts). (members.listSpacesMembers)
    *
    * @param string $parent Required. The resource name of the space for which to
    * fetch a membership list. Format: spaces/{space}
