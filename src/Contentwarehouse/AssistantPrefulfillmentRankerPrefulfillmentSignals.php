@@ -46,6 +46,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $intentNameAuisScore;
   public $intentNameAuisScoreExp;
   /**
+   * @var int
+   */
+  public $kscorerRank;
+  /**
    * @var bool
    */
   public $maskCandidateLevelFeatures;
@@ -61,6 +65,14 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $numVariablesGrounded;
   public $pq2tVsAssistantIbstCosine;
   public $pq2tVsIbstCosine;
+  /**
+   * @var float
+   */
+  public $predictedIntentConfidence;
+  /**
+   * @var string
+   */
+  public $searchDispatch;
   /**
    * @var float
    */
@@ -187,6 +199,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->intentNameAuisScoreExp;
   }
   /**
+   * @param int
+   */
+  public function setKscorerRank($kscorerRank)
+  {
+    $this->kscorerRank = $kscorerRank;
+  }
+  /**
+   * @return int
+   */
+  public function getKscorerRank()
+  {
+    return $this->kscorerRank;
+  }
+  /**
    * @param bool
    */
   public function setMaskCandidateLevelFeatures($maskCandidateLevelFeatures)
@@ -277,6 +303,34 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getPq2tVsIbstCosine()
   {
     return $this->pq2tVsIbstCosine;
+  }
+  /**
+   * @param float
+   */
+  public function setPredictedIntentConfidence($predictedIntentConfidence)
+  {
+    $this->predictedIntentConfidence = $predictedIntentConfidence;
+  }
+  /**
+   * @return float
+   */
+  public function getPredictedIntentConfidence()
+  {
+    return $this->predictedIntentConfidence;
+  }
+  /**
+   * @param string
+   */
+  public function setSearchDispatch($searchDispatch)
+  {
+    $this->searchDispatch = $searchDispatch;
+  }
+  /**
+   * @return string
+   */
+  public function getSearchDispatch()
+  {
+    return $this->searchDispatch;
   }
   /**
    * @param float

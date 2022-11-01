@@ -68,6 +68,8 @@ class TravelFlightsAirlineConfig extends \Google\Collection
   public $mid;
   protected $namesType = TravelFlightsNameCatalogProto::class;
   protected $namesDataType = '';
+  protected $passengerAssistanceUrlsType = TravelFlightsNameCatalogProto::class;
+  protected $passengerAssistanceUrlsDataType = '';
   /**
    * @var int
    */
@@ -292,6 +294,20 @@ class TravelFlightsAirlineConfig extends \Google\Collection
   public function getNames()
   {
     return $this->names;
+  }
+  /**
+   * @param TravelFlightsNameCatalogProto
+   */
+  public function setPassengerAssistanceUrls(TravelFlightsNameCatalogProto $passengerAssistanceUrls)
+  {
+    $this->passengerAssistanceUrls = $passengerAssistanceUrls;
+  }
+  /**
+   * @return TravelFlightsNameCatalogProto
+   */
+  public function getPassengerAssistanceUrls()
+  {
+    return $this->passengerAssistanceUrls;
   }
   /**
    * @param int

@@ -393,6 +393,10 @@ class PerDocData extends \Google\Collection
   protected $spamMuppetSignalsType = SpamMuppetjoinsMuppetSignals::class;
   protected $spamMuppetSignalsDataType = '';
   /**
+   * @var float
+   */
+  public $spambrainTotalDocSpamScore;
+  /**
    * @var int
    */
   public $spamrank;
@@ -1938,6 +1942,20 @@ class PerDocData extends \Google\Collection
   public function getSpamMuppetSignals()
   {
     return $this->spamMuppetSignals;
+  }
+  /**
+   * @param float
+   */
+  public function setSpambrainTotalDocSpamScore($spambrainTotalDocSpamScore)
+  {
+    $this->spambrainTotalDocSpamScore = $spambrainTotalDocSpamScore;
+  }
+  /**
+   * @return float
+   */
+  public function getSpambrainTotalDocSpamScore()
+  {
+    return $this->spambrainTotalDocSpamScore;
   }
   /**
    * @param int

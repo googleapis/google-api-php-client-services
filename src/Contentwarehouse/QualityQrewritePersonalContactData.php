@@ -75,6 +75,10 @@ class QualityQrewritePersonalContactData extends \Google\Collection
    * @var bool
    */
   public $isVisibleToGuestsRelationship;
+  /**
+   * @var string
+   */
+  public $lookupNameSource;
   protected $matchSignalType = AssistantVerticalsCommonContactMatchSignal::class;
   protected $matchSignalDataType = '';
   /**
@@ -319,6 +323,20 @@ class QualityQrewritePersonalContactData extends \Google\Collection
   public function getIsVisibleToGuestsRelationship()
   {
     return $this->isVisibleToGuestsRelationship;
+  }
+  /**
+   * @param string
+   */
+  public function setLookupNameSource($lookupNameSource)
+  {
+    $this->lookupNameSource = $lookupNameSource;
+  }
+  /**
+   * @return string
+   */
+  public function getLookupNameSource()
+  {
+    return $this->lookupNameSource;
   }
   /**
    * @param AssistantVerticalsCommonContactMatchSignal

@@ -33,6 +33,30 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   protected $legalRemovalRegionsType = KeGovernanceTypedRegions::class;
   protected $legalRemovalRegionsDataType = 'array';
   /**
+   * @var bool
+   */
+  public $lmsIsEditorial;
+  protected $lmsRegionsAllowedType = KeGovernanceTypedRegions::class;
+  protected $lmsRegionsAllowedDataType = '';
+  protected $lmsRegionsDisallowedType = KeGovernanceTypedRegions::class;
+  protected $lmsRegionsDisallowedDataType = '';
+  /**
+   * @var bool
+   */
+  public $lmsRequiresAttribution;
+  /**
+   * @var bool
+   */
+  public $lmsRequiresFirstPartyOnly;
+  /**
+   * @var bool
+   */
+  public $lmsRequiresLink;
+  /**
+   * @var bool
+   */
+  public $lmsRequiresShareAlike;
+  /**
    * @var string
    */
   public $policySourceType;
@@ -92,6 +116,104 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   public function getLegalRemovalRegions()
   {
     return $this->legalRemovalRegions;
+  }
+  /**
+   * @param bool
+   */
+  public function setLmsIsEditorial($lmsIsEditorial)
+  {
+    $this->lmsIsEditorial = $lmsIsEditorial;
+  }
+  /**
+   * @return bool
+   */
+  public function getLmsIsEditorial()
+  {
+    return $this->lmsIsEditorial;
+  }
+  /**
+   * @param KeGovernanceTypedRegions
+   */
+  public function setLmsRegionsAllowed(KeGovernanceTypedRegions $lmsRegionsAllowed)
+  {
+    $this->lmsRegionsAllowed = $lmsRegionsAllowed;
+  }
+  /**
+   * @return KeGovernanceTypedRegions
+   */
+  public function getLmsRegionsAllowed()
+  {
+    return $this->lmsRegionsAllowed;
+  }
+  /**
+   * @param KeGovernanceTypedRegions
+   */
+  public function setLmsRegionsDisallowed(KeGovernanceTypedRegions $lmsRegionsDisallowed)
+  {
+    $this->lmsRegionsDisallowed = $lmsRegionsDisallowed;
+  }
+  /**
+   * @return KeGovernanceTypedRegions
+   */
+  public function getLmsRegionsDisallowed()
+  {
+    return $this->lmsRegionsDisallowed;
+  }
+  /**
+   * @param bool
+   */
+  public function setLmsRequiresAttribution($lmsRequiresAttribution)
+  {
+    $this->lmsRequiresAttribution = $lmsRequiresAttribution;
+  }
+  /**
+   * @return bool
+   */
+  public function getLmsRequiresAttribution()
+  {
+    return $this->lmsRequiresAttribution;
+  }
+  /**
+   * @param bool
+   */
+  public function setLmsRequiresFirstPartyOnly($lmsRequiresFirstPartyOnly)
+  {
+    $this->lmsRequiresFirstPartyOnly = $lmsRequiresFirstPartyOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getLmsRequiresFirstPartyOnly()
+  {
+    return $this->lmsRequiresFirstPartyOnly;
+  }
+  /**
+   * @param bool
+   */
+  public function setLmsRequiresLink($lmsRequiresLink)
+  {
+    $this->lmsRequiresLink = $lmsRequiresLink;
+  }
+  /**
+   * @return bool
+   */
+  public function getLmsRequiresLink()
+  {
+    return $this->lmsRequiresLink;
+  }
+  /**
+   * @param bool
+   */
+  public function setLmsRequiresShareAlike($lmsRequiresShareAlike)
+  {
+    $this->lmsRequiresShareAlike = $lmsRequiresShareAlike;
+  }
+  /**
+   * @return bool
+   */
+  public function getLmsRequiresShareAlike()
+  {
+    return $this->lmsRequiresShareAlike;
   }
   /**
    * @param string

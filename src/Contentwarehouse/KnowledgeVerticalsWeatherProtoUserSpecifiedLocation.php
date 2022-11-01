@@ -30,6 +30,10 @@ class KnowledgeVerticalsWeatherProtoUserSpecifiedLocation extends \Google\Model
   /**
    * @var string
    */
+  public $mid;
+  /**
+   * @var string
+   */
   public $timezone;
 
   /**
@@ -73,6 +77,20 @@ class KnowledgeVerticalsWeatherProtoUserSpecifiedLocation extends \Google\Model
   public function getLocationName()
   {
     return $this->locationName;
+  }
+  /**
+   * @param string
+   */
+  public function setMid($mid)
+  {
+    $this->mid = $mid;
+  }
+  /**
+   * @return string
+   */
+  public function getMid()
+  {
+    return $this->mid;
   }
   /**
    * @param string

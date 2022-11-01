@@ -17,28 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantApiAppControlSupport extends \Google\Model
+class RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData extends \Google\Model
 {
   /**
    * @var string
    */
-  public $enabled;
+  public $playStoreAppType;
 
   /**
    * @param string
    */
-  public function setEnabled($enabled)
+  public function setPlayStoreAppType($playStoreAppType)
   {
-    $this->enabled = $enabled;
+    $this->playStoreAppType = $playStoreAppType;
   }
   /**
    * @return string
    */
-  public function getEnabled()
+  public function getPlayStoreAppType()
   {
-    return $this->enabled;
+    return $this->playStoreAppType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AssistantApiAppControlSupport::class, 'Google_Service_Contentwarehouse_AssistantApiAppControlSupport');
+class_alias(RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData::class, 'Google_Service_Contentwarehouse_RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData');

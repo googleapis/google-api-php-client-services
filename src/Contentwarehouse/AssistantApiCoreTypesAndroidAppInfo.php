@@ -74,6 +74,10 @@ class AssistantApiCoreTypesAndroidAppInfo extends \Google\Model
   /**
    * @var string
    */
+  public $targetClass;
+  /**
+   * @var string
+   */
   public $versionName;
 
   /**
@@ -257,6 +261,20 @@ class AssistantApiCoreTypesAndroidAppInfo extends \Google\Model
   public function getShortcutId()
   {
     return $this->shortcutId;
+  }
+  /**
+   * @param string
+   */
+  public function setTargetClass($targetClass)
+  {
+    $this->targetClass = $targetClass;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetClass()
+  {
+    return $this->targetClass;
   }
   /**
    * @param string

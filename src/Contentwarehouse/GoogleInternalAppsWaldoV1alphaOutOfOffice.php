@@ -26,6 +26,14 @@ class GoogleInternalAppsWaldoV1alphaOutOfOffice extends \Google\Model
   /**
    * @var string
    */
+  public $committedUntil;
+  /**
+   * @var bool
+   */
+  public $committedUntilIsMixed;
+  /**
+   * @var string
+   */
   public $eventSummary;
 
   /**
@@ -41,6 +49,34 @@ class GoogleInternalAppsWaldoV1alphaOutOfOffice extends \Google\Model
   public function getComeBackTime()
   {
     return $this->comeBackTime;
+  }
+  /**
+   * @param string
+   */
+  public function setCommittedUntil($committedUntil)
+  {
+    $this->committedUntil = $committedUntil;
+  }
+  /**
+   * @return string
+   */
+  public function getCommittedUntil()
+  {
+    return $this->committedUntil;
+  }
+  /**
+   * @param bool
+   */
+  public function setCommittedUntilIsMixed($committedUntilIsMixed)
+  {
+    $this->committedUntilIsMixed = $committedUntilIsMixed;
+  }
+  /**
+   * @return bool
+   */
+  public function getCommittedUntilIsMixed()
+  {
+    return $this->committedUntilIsMixed;
   }
   /**
    * @param string

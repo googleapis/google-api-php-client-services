@@ -25,6 +25,7 @@ class QualityNavboostCrapsCrapsClickSignals extends \Google\Model
   public $goodClicks;
   public $impressions;
   public $lastLongestClicks;
+  public $unicornClicks;
   public $unsquashedClicks;
   public $unsquashedImpressions;
   public $unsquashedLastLongestClicks;
@@ -76,6 +77,14 @@ class QualityNavboostCrapsCrapsClickSignals extends \Google\Model
   public function getLastLongestClicks()
   {
     return $this->lastLongestClicks;
+  }
+  public function setUnicornClicks($unicornClicks)
+  {
+    $this->unicornClicks = $unicornClicks;
+  }
+  public function getUnicornClicks()
+  {
+    return $this->unicornClicks;
   }
   public function setUnsquashedClicks($unsquashedClicks)
   {
