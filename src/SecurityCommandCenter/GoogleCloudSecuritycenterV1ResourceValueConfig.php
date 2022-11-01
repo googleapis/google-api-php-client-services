@@ -27,7 +27,15 @@ class GoogleCloudSecuritycenterV1ResourceValueConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $resourceType;
+  /**
+   * @var string
+   */
   public $resourceValue;
+  /**
+   * @var string
+   */
+  public $scope;
   /**
    * @var string[]
    */
@@ -50,6 +58,20 @@ class GoogleCloudSecuritycenterV1ResourceValueConfig extends \Google\Collection
   /**
    * @param string
    */
+  public function setResourceType($resourceType)
+  {
+    $this->resourceType = $resourceType;
+  }
+  /**
+   * @return string
+   */
+  public function getResourceType()
+  {
+    return $this->resourceType;
+  }
+  /**
+   * @param string
+   */
   public function setResourceValue($resourceValue)
   {
     $this->resourceValue = $resourceValue;
@@ -60,6 +82,20 @@ class GoogleCloudSecuritycenterV1ResourceValueConfig extends \Google\Collection
   public function getResourceValue()
   {
     return $this->resourceValue;
+  }
+  /**
+   * @param string
+   */
+  public function setScope($scope)
+  {
+    $this->scope = $scope;
+  }
+  /**
+   * @return string
+   */
+  public function getScope()
+  {
+    return $this->scope;
   }
   /**
    * @param string[]
