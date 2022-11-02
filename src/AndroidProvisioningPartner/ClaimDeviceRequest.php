@@ -39,6 +39,10 @@ class ClaimDeviceRequest extends \Google\Model
    * @var string
    */
   public $sectionType;
+  /**
+   * @var string
+   */
+  public $simlockProfileId;
 
   /**
    * @param string
@@ -123,6 +127,20 @@ class ClaimDeviceRequest extends \Google\Model
   public function getSectionType()
   {
     return $this->sectionType;
+  }
+  /**
+   * @param string
+   */
+  public function setSimlockProfileId($simlockProfileId)
+  {
+    $this->simlockProfileId = $simlockProfileId;
+  }
+  /**
+   * @return string
+   */
+  public function getSimlockProfileId()
+  {
+    return $this->simlockProfileId;
   }
 }
 
