@@ -38,6 +38,15 @@ class HangoutsChat extends \Google\Service
   /** View, add, and remove members from conversations in Google Chat. */
   const CHAT_MEMBERSHIPS =
       "https://www.googleapis.com/auth/chat.memberships";
+  /** View, compose, send, update, and delete messages, and add, view, and delete reactions to messages.. */
+  const CHAT_MESSAGES =
+      "https://www.googleapis.com/auth/chat.messages";
+  /** Compose and send messages in Google Chat. */
+  const CHAT_MESSAGES_CREATE =
+      "https://www.googleapis.com/auth/chat.messages.create";
+  /** view messages and reactions in Google Chat. */
+  const CHAT_MESSAGES_READONLY =
+      "https://www.googleapis.com/auth/chat.messages.readonly";
 
   public $dms;
   public $dms_conversations;
