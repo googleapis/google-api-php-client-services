@@ -64,6 +64,8 @@ class UpdateNodePoolRequest extends \Google\Collection
    * @var string
    */
   public $projectId;
+  protected $resourceLabelsType = ResourceLabels::class;
+  protected $resourceLabelsDataType = '';
   protected $tagsType = NetworkTags::class;
   protected $tagsDataType = '';
   protected $taintsType = NodeTaints::class;
@@ -286,6 +288,20 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getProjectId()
   {
     return $this->projectId;
+  }
+  /**
+   * @param ResourceLabels
+   */
+  public function setResourceLabels(ResourceLabels $resourceLabels)
+  {
+    $this->resourceLabels = $resourceLabels;
+  }
+  /**
+   * @return ResourceLabels
+   */
+  public function getResourceLabels()
+  {
+    return $this->resourceLabels;
   }
   /**
    * @param NetworkTags

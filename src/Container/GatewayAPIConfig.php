@@ -17,46 +17,28 @@
 
 namespace Google\Service\Container;
 
-class LinuxNodeConfig extends \Google\Model
+class GatewayAPIConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $cgroupMode;
-  /**
-   * @var string[]
-   */
-  public $sysctls;
+  public $channel;
 
   /**
    * @param string
    */
-  public function setCgroupMode($cgroupMode)
+  public function setChannel($channel)
   {
-    $this->cgroupMode = $cgroupMode;
+    $this->channel = $channel;
   }
   /**
    * @return string
    */
-  public function getCgroupMode()
+  public function getChannel()
   {
-    return $this->cgroupMode;
-  }
-  /**
-   * @param string[]
-   */
-  public function setSysctls($sysctls)
-  {
-    $this->sysctls = $sysctls;
-  }
-  /**
-   * @return string[]
-   */
-  public function getSysctls()
-  {
-    return $this->sysctls;
+    return $this->channel;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LinuxNodeConfig::class, 'Google_Service_Container_LinuxNodeConfig');
+class_alias(GatewayAPIConfig::class, 'Google_Service_Container_GatewayAPIConfig');

@@ -17,46 +17,28 @@
 
 namespace Google\Service\Container;
 
-class LinuxNodeConfig extends \Google\Model
+class ResourceLabels extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $cgroupMode;
   /**
    * @var string[]
    */
-  public $sysctls;
+  public $labels;
 
-  /**
-   * @param string
-   */
-  public function setCgroupMode($cgroupMode)
-  {
-    $this->cgroupMode = $cgroupMode;
-  }
-  /**
-   * @return string
-   */
-  public function getCgroupMode()
-  {
-    return $this->cgroupMode;
-  }
   /**
    * @param string[]
    */
-  public function setSysctls($sysctls)
+  public function setLabels($labels)
   {
-    $this->sysctls = $sysctls;
+    $this->labels = $labels;
   }
   /**
    * @return string[]
    */
-  public function getSysctls()
+  public function getLabels()
   {
-    return $this->sysctls;
+    return $this->labels;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LinuxNodeConfig::class, 'Google_Service_Container_LinuxNodeConfig');
+class_alias(ResourceLabels::class, 'Google_Service_Container_ResourceLabels');

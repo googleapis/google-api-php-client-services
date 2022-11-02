@@ -86,6 +86,10 @@ class NodeConfig extends \Google\Collection
   public $preemptible;
   protected $reservationAffinityType = ReservationAffinity::class;
   protected $reservationAffinityDataType = '';
+  /**
+   * @var string[]
+   */
+  public $resourceLabels;
   protected $sandboxConfigType = SandboxConfig::class;
   protected $sandboxConfigDataType = '';
   /**
@@ -400,6 +404,20 @@ class NodeConfig extends \Google\Collection
   public function getReservationAffinity()
   {
     return $this->reservationAffinity;
+  }
+  /**
+   * @param string[]
+   */
+  public function setResourceLabels($resourceLabels)
+  {
+    $this->resourceLabels = $resourceLabels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getResourceLabels()
+  {
+    return $this->resourceLabels;
   }
   /**
    * @param SandboxConfig

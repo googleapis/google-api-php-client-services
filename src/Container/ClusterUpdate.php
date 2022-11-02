@@ -40,6 +40,12 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredDefaultSnatStatusDataType = '';
   protected $desiredDnsConfigType = DNSConfig::class;
   protected $desiredDnsConfigDataType = '';
+  /**
+   * @var bool
+   */
+  public $desiredEnablePrivateEndpoint;
+  protected $desiredGatewayApiConfigType = GatewayAPIConfig::class;
+  protected $desiredGatewayApiConfigDataType = '';
   protected $desiredGcfsConfigType = GcfsConfig::class;
   protected $desiredGcfsConfigDataType = '';
   protected $desiredIdentityServiceConfigType = IdentityServiceConfig::class;
@@ -236,6 +242,34 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredDnsConfig()
   {
     return $this->desiredDnsConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setDesiredEnablePrivateEndpoint($desiredEnablePrivateEndpoint)
+  {
+    $this->desiredEnablePrivateEndpoint = $desiredEnablePrivateEndpoint;
+  }
+  /**
+   * @return bool
+   */
+  public function getDesiredEnablePrivateEndpoint()
+  {
+    return $this->desiredEnablePrivateEndpoint;
+  }
+  /**
+   * @param GatewayAPIConfig
+   */
+  public function setDesiredGatewayApiConfig(GatewayAPIConfig $desiredGatewayApiConfig)
+  {
+    $this->desiredGatewayApiConfig = $desiredGatewayApiConfig;
+  }
+  /**
+   * @return GatewayAPIConfig
+   */
+  public function getDesiredGatewayApiConfig()
+  {
+    return $this->desiredGatewayApiConfig;
   }
   /**
    * @param GcfsConfig
