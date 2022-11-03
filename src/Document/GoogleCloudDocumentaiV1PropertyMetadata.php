@@ -19,45 +19,11 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1PropertyMetadata extends \Google\Model
 {
-  protected $humanReviewLabelingMetadataType = GoogleCloudDocumentaiV1HumanReviewLabelingMetadata::class;
-  protected $humanReviewLabelingMetadataDataType = '';
-  protected $humanReviewMetadataType = GoogleCloudDocumentaiV1HumanReviewValidationMetadata::class;
-  protected $humanReviewMetadataDataType = '';
   /**
    * @var bool
    */
   public $inactive;
-  protected $schemaMutabilityMetadataType = GoogleCloudDocumentaiV1SchemaMutabilityMetadata::class;
-  protected $schemaMutabilityMetadataDataType = '';
 
-  /**
-   * @param GoogleCloudDocumentaiV1HumanReviewLabelingMetadata
-   */
-  public function setHumanReviewLabelingMetadata(GoogleCloudDocumentaiV1HumanReviewLabelingMetadata $humanReviewLabelingMetadata)
-  {
-    $this->humanReviewLabelingMetadata = $humanReviewLabelingMetadata;
-  }
-  /**
-   * @return GoogleCloudDocumentaiV1HumanReviewLabelingMetadata
-   */
-  public function getHumanReviewLabelingMetadata()
-  {
-    return $this->humanReviewLabelingMetadata;
-  }
-  /**
-   * @param GoogleCloudDocumentaiV1HumanReviewValidationMetadata
-   */
-  public function setHumanReviewMetadata(GoogleCloudDocumentaiV1HumanReviewValidationMetadata $humanReviewMetadata)
-  {
-    $this->humanReviewMetadata = $humanReviewMetadata;
-  }
-  /**
-   * @return GoogleCloudDocumentaiV1HumanReviewValidationMetadata
-   */
-  public function getHumanReviewMetadata()
-  {
-    return $this->humanReviewMetadata;
-  }
   /**
    * @param bool
    */
@@ -71,20 +37,6 @@ class GoogleCloudDocumentaiV1PropertyMetadata extends \Google\Model
   public function getInactive()
   {
     return $this->inactive;
-  }
-  /**
-   * @param GoogleCloudDocumentaiV1SchemaMutabilityMetadata
-   */
-  public function setSchemaMutabilityMetadata(GoogleCloudDocumentaiV1SchemaMutabilityMetadata $schemaMutabilityMetadata)
-  {
-    $this->schemaMutabilityMetadata = $schemaMutabilityMetadata;
-  }
-  /**
-   * @return GoogleCloudDocumentaiV1SchemaMutabilityMetadata
-   */
-  public function getSchemaMutabilityMetadata()
-  {
-    return $this->schemaMutabilityMetadata;
   }
 }
 
