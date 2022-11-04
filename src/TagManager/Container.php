@@ -65,6 +65,10 @@ class Container extends \Google\Collection
   /**
    * @var string[]
    */
+  public $taggingServerUrls;
+  /**
+   * @var string[]
+   */
   public $usageContext;
 
   /**
@@ -220,6 +224,20 @@ class Container extends \Google\Collection
   public function getTagManagerUrl()
   {
     return $this->tagManagerUrl;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTaggingServerUrls($taggingServerUrls)
+  {
+    $this->taggingServerUrls = $taggingServerUrls;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTaggingServerUrls()
+  {
+    return $this->taggingServerUrls;
   }
   /**
    * @param string[]
