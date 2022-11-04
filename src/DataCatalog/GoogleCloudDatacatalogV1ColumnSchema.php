@@ -31,6 +31,10 @@ class GoogleCloudDatacatalogV1ColumnSchema extends \Google\Collection
   /**
    * @var string
    */
+  public $gcRule;
+  /**
+   * @var string
+   */
   public $mode;
   protected $subcolumnsType = GoogleCloudDatacatalogV1ColumnSchema::class;
   protected $subcolumnsDataType = 'array';
@@ -66,6 +70,20 @@ class GoogleCloudDatacatalogV1ColumnSchema extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setGcRule($gcRule)
+  {
+    $this->gcRule = $gcRule;
+  }
+  /**
+   * @return string
+   */
+  public function getGcRule()
+  {
+    return $this->gcRule;
   }
   /**
    * @param string
