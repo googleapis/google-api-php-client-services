@@ -19,8 +19,6 @@ namespace Google\Service\GKEHub;
 
 class MembershipFeatureState extends \Google\Model
 {
-  protected $anthosvmType = AnthosVMMembershipState::class;
-  protected $anthosvmDataType = '';
   protected $appdevexperienceType = AppDevExperienceFeatureState::class;
   protected $appdevexperienceDataType = '';
   protected $configmanagementType = ConfigManagementMembershipState::class;
@@ -34,20 +32,6 @@ class MembershipFeatureState extends \Google\Model
   protected $stateType = FeatureState::class;
   protected $stateDataType = '';
 
-  /**
-   * @param AnthosVMMembershipState
-   */
-  public function setAnthosvm(AnthosVMMembershipState $anthosvm)
-  {
-    $this->anthosvm = $anthosvm;
-  }
-  /**
-   * @return AnthosVMMembershipState
-   */
-  public function getAnthosvm()
-  {
-    return $this->anthosvm;
-  }
   /**
    * @param AppDevExperienceFeatureState
    */
