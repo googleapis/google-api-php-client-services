@@ -21,10 +21,6 @@ class ImportContextBakImportOptions extends \Google\Model
 {
   protected $encryptionOptionsType = ImportContextBakImportOptionsEncryptionOptions::class;
   protected $encryptionOptionsDataType = '';
-  /**
-   * @var bool
-   */
-  public $striped;
 
   /**
    * @param ImportContextBakImportOptionsEncryptionOptions
@@ -39,20 +35,6 @@ class ImportContextBakImportOptions extends \Google\Model
   public function getEncryptionOptions()
   {
     return $this->encryptionOptions;
-  }
-  /**
-   * @param bool
-   */
-  public function setStriped($striped)
-  {
-    $this->striped = $striped;
-  }
-  /**
-   * @return bool
-   */
-  public function getStriped()
-  {
-    return $this->striped;
   }
 }
 

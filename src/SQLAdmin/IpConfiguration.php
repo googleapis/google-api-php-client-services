@@ -29,10 +29,6 @@ class IpConfiguration extends \Google\Collection
   /**
    * @var bool
    */
-  public $enablePrivatePathForGoogleCloudServices;
-  /**
-   * @var bool
-   */
   public $ipv4Enabled;
   /**
    * @var string
@@ -70,20 +66,6 @@ class IpConfiguration extends \Google\Collection
   public function getAuthorizedNetworks()
   {
     return $this->authorizedNetworks;
-  }
-  /**
-   * @param bool
-   */
-  public function setEnablePrivatePathForGoogleCloudServices($enablePrivatePathForGoogleCloudServices)
-  {
-    $this->enablePrivatePathForGoogleCloudServices = $enablePrivatePathForGoogleCloudServices;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnablePrivatePathForGoogleCloudServices()
-  {
-    return $this->enablePrivatePathForGoogleCloudServices;
   }
   /**
    * @param bool
