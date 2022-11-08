@@ -149,8 +149,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
     return $this->call('delete', [$params], DisplayvideoEmpty::class);
   }
   /**
-   * Duplicates a line item. Returns the newly created line item id if successful.
-   * (lineItems.duplicate)
+   * Duplicates a line item. Returns the ID of the created line item if
+   * successful. (lineItems.duplicate)
    *
    * @param string $advertiserId Required. The ID of the advertiser this line item
    * belongs to.
@@ -245,7 +245,7 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * * `updateTime` The default sorting order is ascending. To specify descending
    * order for a field, a suffix "desc" should be added to the field name.
    * Example: `displayName desc`.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * @opt_param int pageSize Requested page size. Must be between `1` and `200`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
    * @opt_param string pageToken A token identifying a page of results the server
