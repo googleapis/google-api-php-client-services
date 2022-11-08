@@ -82,6 +82,8 @@ class BuildTrigger extends \Google\Collection
   public $name;
   protected $pubsubConfigType = PubsubConfig::class;
   protected $pubsubConfigDataType = '';
+  protected $repositoryEventConfigType = RepositoryEventConfig::class;
+  protected $repositoryEventConfigDataType = '';
   /**
    * @var string
    */
@@ -370,6 +372,20 @@ class BuildTrigger extends \Google\Collection
   public function getPubsubConfig()
   {
     return $this->pubsubConfig;
+  }
+  /**
+   * @param RepositoryEventConfig
+   */
+  public function setRepositoryEventConfig(RepositoryEventConfig $repositoryEventConfig)
+  {
+    $this->repositoryEventConfig = $repositoryEventConfig;
+  }
+  /**
+   * @return RepositoryEventConfig
+   */
+  public function getRepositoryEventConfig()
+  {
+    return $this->repositoryEventConfig;
   }
   /**
    * @param string
