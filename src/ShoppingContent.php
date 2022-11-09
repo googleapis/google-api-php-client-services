@@ -983,6 +983,10 @@ class ShoppingContent extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'feedLabel' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'language' => [
                   'location' => 'query',
                   'type' => 'string',
