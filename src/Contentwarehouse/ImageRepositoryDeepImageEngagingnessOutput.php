@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class ImageRepositoryUnwantedContent extends \Google\Model
+class ImageRepositoryDeepImageEngagingnessOutput extends \Google\Model
 {
   /**
-   * @var string
+   * @var float
    */
-  public $deletionReason;
-  /**
-   * @var string
-   */
-  public $hideReason;
+  public $score;
 
   /**
-   * @param string
+   * @param float
    */
-  public function setDeletionReason($deletionReason)
+  public function setScore($score)
   {
-    $this->deletionReason = $deletionReason;
+    $this->score = $score;
   }
   /**
-   * @return string
+   * @return float
    */
-  public function getDeletionReason()
+  public function getScore()
   {
-    return $this->deletionReason;
-  }
-  /**
-   * @param string
-   */
-  public function setHideReason($hideReason)
-  {
-    $this->hideReason = $hideReason;
-  }
-  /**
-   * @return string
-   */
-  public function getHideReason()
-  {
-    return $this->hideReason;
+    return $this->score;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ImageRepositoryUnwantedContent::class, 'Google_Service_Contentwarehouse_ImageRepositoryUnwantedContent');
+class_alias(ImageRepositoryDeepImageEngagingnessOutput::class, 'Google_Service_Contentwarehouse_ImageRepositoryDeepImageEngagingnessOutput');

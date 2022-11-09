@@ -50,6 +50,10 @@ class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends \Google\Collec
    * @var bool
    */
   public $requireTotalSize;
+  /**
+   * @var string
+   */
+  public $totalResultSize;
 
   /**
    * @param GoogleCloudContentwarehouseV1DocumentQuery
@@ -176,6 +180,20 @@ class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends \Google\Collec
   public function getRequireTotalSize()
   {
     return $this->requireTotalSize;
+  }
+  /**
+   * @param string
+   */
+  public function setTotalResultSize($totalResultSize)
+  {
+    $this->totalResultSize = $totalResultSize;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalResultSize()
+  {
+    return $this->totalResultSize;
   }
 }
 

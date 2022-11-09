@@ -81,6 +81,10 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   /**
    * @var string[]
    */
+  public $otherDeviceSources;
+  /**
+   * @var string[]
+   */
   public $parentNode;
   /**
    * @var string[]
@@ -124,6 +128,10 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var string[]
    */
   public $targetDeviceSignalStrengths;
+  /**
+   * @var string
+   */
+  public $tdssUpdateTimestamp;
   protected $traitRoutingHintsType = HomeGraphCommonTraitRoutingHints::class;
   protected $traitRoutingHintsDataType = 'array';
   protected $traitRoutingTableType = HomeGraphCommonRoutingTable::class;
@@ -376,6 +384,20 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   /**
    * @param string[]
    */
+  public function setOtherDeviceSources($otherDeviceSources)
+  {
+    $this->otherDeviceSources = $otherDeviceSources;
+  }
+  /**
+   * @return string[]
+   */
+  public function getOtherDeviceSources()
+  {
+    return $this->otherDeviceSources;
+  }
+  /**
+   * @param string[]
+   */
   public function setParentNode($parentNode)
   {
     $this->parentNode = $parentNode;
@@ -582,6 +604,20 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public function getTargetDeviceSignalStrengths()
   {
     return $this->targetDeviceSignalStrengths;
+  }
+  /**
+   * @param string
+   */
+  public function setTdssUpdateTimestamp($tdssUpdateTimestamp)
+  {
+    $this->tdssUpdateTimestamp = $tdssUpdateTimestamp;
+  }
+  /**
+   * @return string
+   */
+  public function getTdssUpdateTimestamp()
+  {
+    return $this->tdssUpdateTimestamp;
   }
   /**
    * @param HomeGraphCommonTraitRoutingHints[]

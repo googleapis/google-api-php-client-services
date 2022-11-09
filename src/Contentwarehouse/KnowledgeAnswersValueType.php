@@ -37,6 +37,10 @@ class KnowledgeAnswersValueType extends \Google\Model
   protected $durationTypeDataType = '';
   protected $entityTypeType = KnowledgeAnswersEntityType::class;
   protected $entityTypeDataType = '';
+  /**
+   * @var string
+   */
+  public $inputCompositionConfig;
   protected $measurementTypeType = KnowledgeAnswersMeasurementType::class;
   protected $measurementTypeDataType = '';
   protected $normalizedStringTypeType = KnowledgeAnswersNormalizedStringType::class;
@@ -195,6 +199,20 @@ class KnowledgeAnswersValueType extends \Google\Model
   public function getEntityType()
   {
     return $this->entityType;
+  }
+  /**
+   * @param string
+   */
+  public function setInputCompositionConfig($inputCompositionConfig)
+  {
+    $this->inputCompositionConfig = $inputCompositionConfig;
+  }
+  /**
+   * @return string
+   */
+  public function getInputCompositionConfig()
+  {
+    return $this->inputCompositionConfig;
   }
   /**
    * @param KnowledgeAnswersMeasurementType

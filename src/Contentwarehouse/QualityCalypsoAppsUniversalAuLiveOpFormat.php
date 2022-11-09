@@ -38,6 +38,14 @@ class QualityCalypsoAppsUniversalAuLiveOpFormat extends \Google\Model
   /**
    * @var string
    */
+  public $squareImageUrl;
+  /**
+   * @var string
+   */
+  public $status;
+  /**
+   * @var string
+   */
   public $title;
   /**
    * @var string
@@ -103,6 +111,34 @@ class QualityCalypsoAppsUniversalAuLiveOpFormat extends \Google\Model
   public function getImageUrl()
   {
     return $this->imageUrl;
+  }
+  /**
+   * @param string
+   */
+  public function setSquareImageUrl($squareImageUrl)
+  {
+    $this->squareImageUrl = $squareImageUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getSquareImageUrl()
+  {
+    return $this->squareImageUrl;
+  }
+  /**
+   * @param string
+   */
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return string
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
   /**
    * @param string

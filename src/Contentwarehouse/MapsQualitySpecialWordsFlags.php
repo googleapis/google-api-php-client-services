@@ -34,6 +34,10 @@ class MapsQualitySpecialWordsFlags extends \Google\Model
   /**
    * @var bool
    */
+  public $isDistanceMarker;
+  /**
+   * @var bool
+   */
   public $isForbiddenWord;
   /**
    * @var bool
@@ -137,6 +141,20 @@ class MapsQualitySpecialWordsFlags extends \Google\Model
   public function getIsDirectionalModifier()
   {
     return $this->isDirectionalModifier;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsDistanceMarker($isDistanceMarker)
+  {
+    $this->isDistanceMarker = $isDistanceMarker;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsDistanceMarker()
+  {
+    return $this->isDistanceMarker;
   }
   /**
    * @param bool

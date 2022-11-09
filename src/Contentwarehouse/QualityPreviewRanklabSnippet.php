@@ -25,6 +25,16 @@ class QualityPreviewRanklabSnippet extends \Google\Model
   protected $documentFeaturesDataType = '';
   protected $experimentalFeaturesType = QualityPreviewSnippetExperimentalFeatures::class;
   protected $experimentalFeaturesDataType = '';
+  /**
+   * @var float
+   */
+  public $finalScore;
+  /**
+   * @var bool
+   */
+  public $isMuppetSelectedSnippet;
+  protected $originalQueryTermCoverageFeaturesType = QualityPreviewSnippetQueryTermCoverageFeatures::class;
+  protected $originalQueryTermCoverageFeaturesDataType = '';
   protected $qualityFeaturesType = QualityPreviewSnippetQualityFeatures::class;
   protected $qualityFeaturesDataType = '';
   protected $queryFeaturesType = QualityPreviewSnippetQueryFeatures::class;
@@ -75,6 +85,48 @@ class QualityPreviewRanklabSnippet extends \Google\Model
   public function getExperimentalFeatures()
   {
     return $this->experimentalFeatures;
+  }
+  /**
+   * @param float
+   */
+  public function setFinalScore($finalScore)
+  {
+    $this->finalScore = $finalScore;
+  }
+  /**
+   * @return float
+   */
+  public function getFinalScore()
+  {
+    return $this->finalScore;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsMuppetSelectedSnippet($isMuppetSelectedSnippet)
+  {
+    $this->isMuppetSelectedSnippet = $isMuppetSelectedSnippet;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsMuppetSelectedSnippet()
+  {
+    return $this->isMuppetSelectedSnippet;
+  }
+  /**
+   * @param QualityPreviewSnippetQueryTermCoverageFeatures
+   */
+  public function setOriginalQueryTermCoverageFeatures(QualityPreviewSnippetQueryTermCoverageFeatures $originalQueryTermCoverageFeatures)
+  {
+    $this->originalQueryTermCoverageFeatures = $originalQueryTermCoverageFeatures;
+  }
+  /**
+   * @return QualityPreviewSnippetQueryTermCoverageFeatures
+   */
+  public function getOriginalQueryTermCoverageFeatures()
+  {
+    return $this->originalQueryTermCoverageFeatures;
   }
   /**
    * @param QualityPreviewSnippetQualityFeatures

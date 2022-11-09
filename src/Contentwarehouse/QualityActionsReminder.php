@@ -62,6 +62,10 @@ class QualityActionsReminder extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $documentAssignmentSourceType = QualityActionsReminderDocument::class;
+  protected $documentAssignmentSourceDataType = '';
+  protected $dynamiteGroupAssignmentSourceType = QualityActionsReminderDynamiteGroup::class;
+  protected $dynamiteGroupAssignmentSourceDataType = '';
   /**
    * @var string
    */
@@ -294,6 +298,34 @@ class QualityActionsReminder extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param QualityActionsReminderDocument
+   */
+  public function setDocumentAssignmentSource(QualityActionsReminderDocument $documentAssignmentSource)
+  {
+    $this->documentAssignmentSource = $documentAssignmentSource;
+  }
+  /**
+   * @return QualityActionsReminderDocument
+   */
+  public function getDocumentAssignmentSource()
+  {
+    return $this->documentAssignmentSource;
+  }
+  /**
+   * @param QualityActionsReminderDynamiteGroup
+   */
+  public function setDynamiteGroupAssignmentSource(QualityActionsReminderDynamiteGroup $dynamiteGroupAssignmentSource)
+  {
+    $this->dynamiteGroupAssignmentSource = $dynamiteGroupAssignmentSource;
+  }
+  /**
+   * @return QualityActionsReminderDynamiteGroup
+   */
+  public function getDynamiteGroupAssignmentSource()
+  {
+    return $this->dynamiteGroupAssignmentSource;
   }
   /**
    * @param string

@@ -29,6 +29,10 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   /**
    * @var string
    */
+  public $contentCategory;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var string
@@ -120,6 +124,20 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   public function getCloudAiDocument()
   {
     return $this->cloudAiDocument;
+  }
+  /**
+   * @param string
+   */
+  public function setContentCategory($contentCategory)
+  {
+    $this->contentCategory = $contentCategory;
+  }
+  /**
+   * @return string
+   */
+  public function getContentCategory()
+  {
+    return $this->contentCategory;
   }
   /**
    * @param string

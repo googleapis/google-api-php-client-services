@@ -192,6 +192,8 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public $textLength;
   protected $textQualityScoresType = YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation::class;
   protected $textQualityScoresDataType = '';
+  protected $textQualityScores2Type = YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation::class;
+  protected $textQualityScores2DataType = '';
   /**
    * @var string
    */
@@ -932,6 +934,20 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public function getTextQualityScores()
   {
     return $this->textQualityScores;
+  }
+  /**
+   * @param YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation
+   */
+  public function setTextQualityScores2(YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation $textQualityScores2)
+  {
+    $this->textQualityScores2 = $textQualityScores2;
+  }
+  /**
+   * @return YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation
+   */
+  public function getTextQualityScores2()
+  {
+    return $this->textQualityScores2;
   }
   /**
    * @param string

@@ -17,8 +17,9 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class VideoContentSearchVideoAnchorRatingScore extends \Google\Model
+class VideoContentSearchVideoAnchorRatingScore extends \Google\Collection
 {
+  protected $collection_key = 'furballUrl';
   /**
    * @var float
    */
@@ -27,6 +28,10 @@ class VideoContentSearchVideoAnchorRatingScore extends \Google\Model
    * @var float
    */
   public $averageDescriptionQuality;
+  /**
+   * @var string[]
+   */
+  public $furballUrl;
 
   /**
    * @param float
@@ -55,6 +60,20 @@ class VideoContentSearchVideoAnchorRatingScore extends \Google\Model
   public function getAverageDescriptionQuality()
   {
     return $this->averageDescriptionQuality;
+  }
+  /**
+   * @param string[]
+   */
+  public function setFurballUrl($furballUrl)
+  {
+    $this->furballUrl = $furballUrl;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFurballUrl()
+  {
+    return $this->furballUrl;
   }
 }
 

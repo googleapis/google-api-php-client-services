@@ -24,6 +24,8 @@ class AssistantLogsAmbiguousTargetDeviceLog extends \Google\Collection
    * @var int[]
    */
   public $ambiguousDeviceIndex;
+  protected $devicesAfterPromotersType = AssistantLogsDeviceInfoLog::class;
+  protected $devicesAfterPromotersDataType = 'array';
   protected $finalTargetDeviceType = AssistantLogsDeviceInfoLog::class;
   protected $finalTargetDeviceDataType = '';
   /**
@@ -50,6 +52,20 @@ class AssistantLogsAmbiguousTargetDeviceLog extends \Google\Collection
   public function getAmbiguousDeviceIndex()
   {
     return $this->ambiguousDeviceIndex;
+  }
+  /**
+   * @param AssistantLogsDeviceInfoLog[]
+   */
+  public function setDevicesAfterPromoters($devicesAfterPromoters)
+  {
+    $this->devicesAfterPromoters = $devicesAfterPromoters;
+  }
+  /**
+   * @return AssistantLogsDeviceInfoLog[]
+   */
+  public function getDevicesAfterPromoters()
+  {
+    return $this->devicesAfterPromoters;
   }
   /**
    * @param AssistantLogsDeviceInfoLog

@@ -26,6 +26,10 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
   /**
    * @var string
    */
+  public $entityType;
+  /**
+   * @var string
+   */
   public $mid;
 
   /**
@@ -41,6 +45,20 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setEntityType($entityType)
+  {
+    $this->entityType = $entityType;
+  }
+  /**
+   * @return string
+   */
+  public function getEntityType()
+  {
+    return $this->entityType;
   }
   /**
    * @param string
