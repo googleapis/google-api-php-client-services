@@ -60,6 +60,8 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $externalUri;
+  protected $filesType = SecuritycenterFile::class;
+  protected $filesDataType = 'array';
   /**
    * @var string
    */
@@ -318,6 +320,20 @@ class Finding extends \Google\Collection
   public function getExternalUri()
   {
     return $this->externalUri;
+  }
+  /**
+   * @param SecuritycenterFile[]
+   */
+  public function setFiles($files)
+  {
+    $this->files = $files;
+  }
+  /**
+   * @return SecuritycenterFile[]
+   */
+  public function getFiles()
+  {
+    return $this->files;
   }
   /**
    * @param string
