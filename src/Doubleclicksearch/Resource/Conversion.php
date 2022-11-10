@@ -33,36 +33,6 @@ class Conversion extends \Google\Service\Resource
 {
   /**
    * Retrieves a list of conversions from a DoubleClick Search engine account.
-   * (conversion.GetCustomerId)
-   *
-   * @param string $customerId Customer ID of a client account in the new Search
-   * Ads 360 experience.
-   * @param int $endDate Last date (inclusive) on which to retrieve conversions.
-   * Format is yyyymmdd.
-   * @param int $rowCount The number of conversions to return per call.
-   * @param int $startDate First date (inclusive) on which to retrieve
-   * conversions. Format is yyyymmdd.
-   * @param string $startRow The 0-based starting index for retrieving conversions
-   * results.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string adGroupId Numeric ID of the ad group.
-   * @opt_param string adId Numeric ID of the ad.
-   * @opt_param string advertiserId Numeric ID of the advertiser.
-   * @opt_param string agencyId Numeric ID of the agency.
-   * @opt_param string campaignId Numeric ID of the campaign.
-   * @opt_param string criterionId Numeric ID of the criterion.
-   * @opt_param string engineAccountId Numeric ID of the engine account.
-   * @return ConversionList
-   */
-  public function GetCustomerId($customerId, $endDate, $rowCount, $startDate, $startRow, $optParams = [])
-  {
-    $params = ['customerId' => $customerId, 'endDate' => $endDate, 'rowCount' => $rowCount, 'startDate' => $startDate, 'startRow' => $startRow];
-    $params = array_merge($params, $optParams);
-    return $this->call('GetCustomerId', [$params], ConversionList::class);
-  }
-  /**
-   * Retrieves a list of conversions from a DoubleClick Search engine account.
    * (conversion.get)
    *
    * @param string $agencyId Numeric ID of the agency.
@@ -90,6 +60,36 @@ class Conversion extends \Google\Service\Resource
     $params = ['agencyId' => $agencyId, 'advertiserId' => $advertiserId, 'engineAccountId' => $engineAccountId, 'endDate' => $endDate, 'rowCount' => $rowCount, 'startDate' => $startDate, 'startRow' => $startRow];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], ConversionList::class);
+  }
+  /**
+   * Retrieves a list of conversions from a DoubleClick Search engine account.
+   * (conversion.getByCustomerId)
+   *
+   * @param string $customerId Customer ID of a client account in the new Search
+   * Ads 360 experience.
+   * @param int $endDate Last date (inclusive) on which to retrieve conversions.
+   * Format is yyyymmdd.
+   * @param int $rowCount The number of conversions to return per call.
+   * @param int $startDate First date (inclusive) on which to retrieve
+   * conversions. Format is yyyymmdd.
+   * @param string $startRow The 0-based starting index for retrieving conversions
+   * results.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string adGroupId Numeric ID of the ad group.
+   * @opt_param string adId Numeric ID of the ad.
+   * @opt_param string advertiserId Numeric ID of the advertiser.
+   * @opt_param string agencyId Numeric ID of the agency.
+   * @opt_param string campaignId Numeric ID of the campaign.
+   * @opt_param string criterionId Numeric ID of the criterion.
+   * @opt_param string engineAccountId Numeric ID of the engine account.
+   * @return ConversionList
+   */
+  public function getByCustomerId($customerId, $endDate, $rowCount, $startDate, $startRow, $optParams = [])
+  {
+    $params = ['customerId' => $customerId, 'endDate' => $endDate, 'rowCount' => $rowCount, 'startDate' => $startDate, 'startRow' => $startRow];
+    $params = array_merge($params, $optParams);
+    return $this->call('getByCustomerId', [$params], ConversionList::class);
   }
   /**
    * Inserts a batch of new conversions into DoubleClick Search.
