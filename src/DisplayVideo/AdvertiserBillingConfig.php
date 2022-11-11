@@ -19,6 +19,25 @@ namespace Google\Service\DisplayVideo;
 
 class AdvertiserBillingConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $billingProfileId;
+
+  /**
+   * @param string
+   */
+  public function setBillingProfileId($billingProfileId)
+  {
+    $this->billingProfileId = $billingProfileId;
+  }
+  /**
+   * @return string
+   */
+  public function getBillingProfileId()
+  {
+    return $this->billingProfileId;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
