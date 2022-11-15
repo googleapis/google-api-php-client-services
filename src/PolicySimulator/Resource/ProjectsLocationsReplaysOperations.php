@@ -28,7 +28,7 @@ use Google\Service\PolicySimulator\GoogleLongrunningOperation;
  *   $operations = $policysimulatorService->operations;
  *  </code>
  */
-class Operations extends \Google\Service\Resource
+class ProjectsLocationsReplaysOperations extends \Google\Service\Resource
 {
   /**
    * Gets the latest state of a long-running operation. Clients can use this
@@ -54,7 +54,7 @@ class Operations extends \Google\Service\Resource
    * their service configuration. For backwards compatibility, the default name
    * includes the operations collection id, however overriding users must ensure
    * the name binding is the parent resource, without the operations collection
-   * id. (operations.listOperations)
+   * id. (operations.listProjectsLocationsReplaysOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
@@ -64,7 +64,7 @@ class Operations extends \Google\Service\Resource
    * @opt_param string pageToken The standard list page token.
    * @return GoogleLongrunningListOperationsResponse
    */
-  public function listOperations($name, $optParams = [])
+  public function listProjectsLocationsReplaysOperations($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
@@ -73,4 +73,4 @@ class Operations extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Operations::class, 'Google_Service_PolicySimulator_Resource_Operations');
+class_alias(ProjectsLocationsReplaysOperations::class, 'Google_Service_PolicySimulator_Resource_ProjectsLocationsReplaysOperations');
