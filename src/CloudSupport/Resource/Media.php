@@ -46,7 +46,8 @@ class Media extends \Google\Service\Resource
     return $this->call('download', [$params], MediaModel::class);
   }
   /**
-   * Create a file attachment on a case or Cloud resource. (media.upload)
+   * Create a file attachment on a case or Cloud resource. The attachment object
+   * must have the following fields set: filename. (media.upload)
    *
    * @param string $parent Required. The resource name of the case to which
    * attachment should be attached.

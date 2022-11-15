@@ -31,7 +31,8 @@ use Google\Service\CloudSupport\CreateAttachmentRequest;
 class Attachments extends \Google\Service\Resource
 {
   /**
-   * Create a file attachment on a case or Cloud resource. (attachments.create)
+   * Create a file attachment on a case or Cloud resource. The attachment object
+   * must have the following fields set: filename. (attachments.create)
    *
    * @param string $parent Required. The resource name of the case to which
    * attachment should be attached.

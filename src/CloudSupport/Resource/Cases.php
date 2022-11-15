@@ -49,8 +49,9 @@ class Cases extends \Google\Service\Resource
     return $this->call('close', [$params], CloudsupportCase::class);
   }
   /**
-   * Create a new case and associate it with the given Cloud resource.
-   * (cases.create)
+   * Create a new case and associate it with the given Cloud resource. The case
+   * object must have the following fields set: display_name, description,
+   * classification, and severity. (cases.create)
    *
    * @param string $parent Required. The name of the Cloud resource under which
    * the case should be created.
