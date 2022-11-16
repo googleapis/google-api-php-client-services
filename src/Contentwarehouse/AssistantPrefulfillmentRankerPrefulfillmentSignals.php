@@ -46,6 +46,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $intentNameAuisScore;
   public $intentNameAuisScoreExp;
   /**
+   * @var bool
+   */
+  public $isFeasible;
+  /**
    * @var int
    */
   public $kscorerRank;
@@ -197,6 +201,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIntentNameAuisScoreExp()
   {
     return $this->intentNameAuisScoreExp;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsFeasible($isFeasible)
+  {
+    $this->isFeasible = $isFeasible;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsFeasible()
+  {
+    return $this->isFeasible;
   }
   /**
    * @param int

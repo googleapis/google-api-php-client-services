@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class QualityPreviewSnippetBrainFeatures extends \Google\Model
+class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $isSnippetBrainBoldingTriggered;
   /**
    * @var float
    */
-  public $modelScore;
+  public $pslScore;
 
-  /**
-   * @param bool
-   */
-  public function setIsSnippetBrainBoldingTriggered($isSnippetBrainBoldingTriggered)
-  {
-    $this->isSnippetBrainBoldingTriggered = $isSnippetBrainBoldingTriggered;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsSnippetBrainBoldingTriggered()
-  {
-    return $this->isSnippetBrainBoldingTriggered;
-  }
   /**
    * @param float
    */
-  public function setModelScore($modelScore)
+  public function setPslScore($pslScore)
   {
-    $this->modelScore = $modelScore;
+    $this->pslScore = $pslScore;
   }
   /**
    * @return float
    */
-  public function getModelScore()
+  public function getPslScore()
   {
-    return $this->modelScore;
+    return $this->pslScore;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(QualityPreviewSnippetBrainFeatures::class, 'Google_Service_Contentwarehouse_QualityPreviewSnippetBrainFeatures');
+class_alias(AssistantGroundingRankerProviderGroundingProviderFeatures::class, 'Google_Service_Contentwarehouse_AssistantGroundingRankerProviderGroundingProviderFeatures');

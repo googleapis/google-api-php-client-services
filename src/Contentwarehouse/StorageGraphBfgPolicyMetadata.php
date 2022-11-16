@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class StorageGraphBfgPolicyMetadata extends \Google\Collection
 {
-  protected $collection_key = 'legalRemovalRegions';
+  protected $collection_key = 'lmsModificationsAllowed';
   /**
    * @var string
    */
@@ -33,9 +33,17 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   protected $legalRemovalRegionsType = KeGovernanceTypedRegions::class;
   protected $legalRemovalRegionsDataType = 'array';
   /**
+   * @var string[]
+   */
+  public $lmsClientIdsAllowed;
+  /**
    * @var bool
    */
   public $lmsIsEditorial;
+  /**
+   * @var string[]
+   */
+  public $lmsModificationsAllowed;
   protected $lmsRegionsAllowedType = KeGovernanceTypedRegions::class;
   protected $lmsRegionsAllowedDataType = '';
   protected $lmsRegionsDisallowedType = KeGovernanceTypedRegions::class;
@@ -60,6 +68,8 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
    * @var string
    */
   public $policySourceType;
+  protected $umpPolicyMetadataType = StorageGraphBfgUmpPolicyMetadata::class;
+  protected $umpPolicyMetadataDataType = '';
 
   /**
    * @param string
@@ -118,6 +128,20 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
     return $this->legalRemovalRegions;
   }
   /**
+   * @param string[]
+   */
+  public function setLmsClientIdsAllowed($lmsClientIdsAllowed)
+  {
+    $this->lmsClientIdsAllowed = $lmsClientIdsAllowed;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLmsClientIdsAllowed()
+  {
+    return $this->lmsClientIdsAllowed;
+  }
+  /**
    * @param bool
    */
   public function setLmsIsEditorial($lmsIsEditorial)
@@ -130,6 +154,20 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   public function getLmsIsEditorial()
   {
     return $this->lmsIsEditorial;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLmsModificationsAllowed($lmsModificationsAllowed)
+  {
+    $this->lmsModificationsAllowed = $lmsModificationsAllowed;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLmsModificationsAllowed()
+  {
+    return $this->lmsModificationsAllowed;
   }
   /**
    * @param KeGovernanceTypedRegions
@@ -228,6 +266,20 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   public function getPolicySourceType()
   {
     return $this->policySourceType;
+  }
+  /**
+   * @param StorageGraphBfgUmpPolicyMetadata
+   */
+  public function setUmpPolicyMetadata(StorageGraphBfgUmpPolicyMetadata $umpPolicyMetadata)
+  {
+    $this->umpPolicyMetadata = $umpPolicyMetadata;
+  }
+  /**
+   * @return StorageGraphBfgUmpPolicyMetadata
+   */
+  public function getUmpPolicyMetadata()
+  {
+    return $this->umpPolicyMetadata;
   }
 }
 

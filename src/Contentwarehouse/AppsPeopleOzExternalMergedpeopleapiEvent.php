@@ -27,6 +27,8 @@ class AppsPeopleOzExternalMergedpeopleapiEvent extends \Google\Model
   public $formattedType;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  protected $promptType = SocialGraphApiProtoPrompt::class;
+  protected $promptDataType = '';
   /**
    * @var string
    */
@@ -77,6 +79,20 @@ class AppsPeopleOzExternalMergedpeopleapiEvent extends \Google\Model
   public function getMetadata()
   {
     return $this->metadata;
+  }
+  /**
+   * @param SocialGraphApiProtoPrompt
+   */
+  public function setPrompt(SocialGraphApiProtoPrompt $prompt)
+  {
+    $this->prompt = $prompt;
+  }
+  /**
+   * @return SocialGraphApiProtoPrompt
+   */
+  public function getPrompt()
+  {
+    return $this->prompt;
   }
   /**
    * @param string

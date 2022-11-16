@@ -114,6 +114,10 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
    */
   public $isBasedOn;
   /**
+   * @var bool
+   */
+  public $isInferred;
+  /**
    * @var string[]
    */
   public $keyword;
@@ -601,6 +605,20 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   public function getIsBasedOn()
   {
     return $this->isBasedOn;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsInferred($isInferred)
+  {
+    $this->isInferred = $isInferred;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsInferred()
+  {
+    return $this->isInferred;
   }
   /**
    * @param string[]
