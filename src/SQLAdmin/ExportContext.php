@@ -20,6 +20,8 @@ namespace Google\Service\SQLAdmin;
 class ExportContext extends \Google\Collection
 {
   protected $collection_key = 'databases';
+  protected $bakExportOptionsType = ExportContextBakExportOptions::class;
+  protected $bakExportOptionsDataType = '';
   protected $csvExportOptionsType = ExportContextCsvExportOptions::class;
   protected $csvExportOptionsDataType = '';
   /**
@@ -45,6 +47,20 @@ class ExportContext extends \Google\Collection
    */
   public $uri;
 
+  /**
+   * @param ExportContextBakExportOptions
+   */
+  public function setBakExportOptions(ExportContextBakExportOptions $bakExportOptions)
+  {
+    $this->bakExportOptions = $bakExportOptions;
+  }
+  /**
+   * @return ExportContextBakExportOptions
+   */
+  public function getBakExportOptions()
+  {
+    return $this->bakExportOptions;
+  }
   /**
    * @param ExportContextCsvExportOptions
    */
