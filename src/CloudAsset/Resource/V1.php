@@ -20,9 +20,14 @@ namespace Google\Service\CloudAsset\Resource;
 use Google\Service\CloudAsset\AnalyzeIamPolicyLongrunningRequest;
 use Google\Service\CloudAsset\AnalyzeIamPolicyResponse;
 use Google\Service\CloudAsset\AnalyzeMoveResponse;
+use Google\Service\CloudAsset\AnalyzeOrgPoliciesResponse;
+use Google\Service\CloudAsset\AnalyzeOrgPolicyGovernedAssetsResponse;
+use Google\Service\CloudAsset\AnalyzeOrgPolicyGovernedContainersResponse;
 use Google\Service\CloudAsset\BatchGetAssetsHistoryResponse;
 use Google\Service\CloudAsset\ExportAssetsRequest;
 use Google\Service\CloudAsset\Operation;
+use Google\Service\CloudAsset\QueryAssetsRequest;
+use Google\Service\CloudAsset\QueryAssetsResponse;
 use Google\Service\CloudAsset\SearchAllIamPoliciesResponse;
 use Google\Service\CloudAsset\SearchAllResourcesResponse;
 
@@ -217,6 +222,110 @@ class V1 extends \Google\Service\Resource
     return $this->call('analyzeMove', [$params], AnalyzeMoveResponse::class);
   }
   /**
+   * Analyzes organization policies under a scope. (v1.analyzeOrgPolicies)
+   *
+   * @param string $scope Required. The organization to scope the request. Only
+   * organization policies within the scope will be analyzed. *
+   * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string constraint Required. The name of the constraint to analyze
+   * organization policies for. The response only contains analyzed organization
+   * policies for the provided constraint.
+   * @opt_param string filter The expression to filter
+   * AnalyzeOrgPoliciesResponse.org_policy_results. The only supported field is
+   * `consolidated_policy.attached_resource`, and the only supported operator is
+   * `=`. Example: consolidated_policy.attached_resource="//cloudresourcemanager.g
+   * oogleapis.com/folders/001" will return the org policy results
+   * of"folders/001".
+   * @opt_param int pageSize The maximum number of items to return per page. If
+   * unspecified, AnalyzeOrgPoliciesResponse.org_policy_results will contain 20
+   * items with a maximum of 200.
+   * @opt_param string pageToken The pagination token to retrieve the next page.
+   * @return AnalyzeOrgPoliciesResponse
+   */
+  public function analyzeOrgPolicies($scope, $optParams = [])
+  {
+    $params = ['scope' => $scope];
+    $params = array_merge($params, $optParams);
+    return $this->call('analyzeOrgPolicies', [$params], AnalyzeOrgPoliciesResponse::class);
+  }
+  /**
+   * Analyzes organization policies governed assets (GCP resources or policies)
+   * under a scope. This RPC supports custom constraints and the following 10
+   * canned constraints: * storage.uniformBucketLevelAccess *
+   * iam.disableServiceAccountKeyCreation * iam.allowedPolicyMemberDomains *
+   * compute.vmExternalIpAccess * appengine.enforceServiceAccountActAsCheck *
+   * gcp.resourceLocations * compute.trustedImageProjects *
+   * compute.skipDefaultNetworkCreation * compute.requireOsLogin *
+   * compute.disableNestedVirtualization This RPC only returns either: * resources
+   * of types supported by [searchable asset types](https://cloud.google.com
+   * /asset-inventory/docs/supported-asset-types#searchable_asset_types), or * IAM
+   * policies. (v1.analyzeOrgPolicyGovernedAssets)
+   *
+   * @param string $scope Required. The organization to scope the request. Only
+   * organization policies within the scope will be analyzed. The output assets
+   * will also be limited to the ones governed by those in-scope organization
+   * policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+   * "organizations/123456")
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string constraint Required. The name of the constraint to analyze
+   * governed assets for. The analysis only contains analyzed organization
+   * policies for the provided constraint.
+   * @opt_param string filter The expression to filter the governed assets in
+   * result. The only supported fields for governed resources are
+   * `governed_resource.project` and `governed_resource.folders`. The only
+   * supported fields for governed iam policies are `governed_iam_policy.project`
+   * and `governed_iam_policy.folders`. The only supported operator is `=`.
+   * Example 1: governed_resource.project="projects/12345678" filter will return
+   * all governed resources under projects/12345678 including the project ifself,
+   * if applicable. Example 2: governed_iam_policy.folders="folders/12345678"
+   * filter will return all governed iam policies under folders/12345678, if
+   * applicable.
+   * @opt_param int pageSize The maximum number of items to return per page. If
+   * unspecified, AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets will
+   * contain 100 items with a maximum of 200.
+   * @opt_param string pageToken The pagination token to retrieve the next page.
+   * @return AnalyzeOrgPolicyGovernedAssetsResponse
+   */
+  public function analyzeOrgPolicyGovernedAssets($scope, $optParams = [])
+  {
+    $params = ['scope' => $scope];
+    $params = array_merge($params, $optParams);
+    return $this->call('analyzeOrgPolicyGovernedAssets', [$params], AnalyzeOrgPolicyGovernedAssetsResponse::class);
+  }
+  /**
+   * Analyzes organization policies governed containers (projects, folders or
+   * organization) under a scope. (v1.analyzeOrgPolicyGovernedContainers)
+   *
+   * @param string $scope Required. The organization to scope the request. Only
+   * organization policies within the scope will be analyzed. The output
+   * containers will also be limited to the ones governed by those in-scope
+   * organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g.,
+   * "organizations/123456")
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string constraint Required. The name of the constraint to analyze
+   * governed containers for. The analysis only contains organization policies for
+   * the provided constraint.
+   * @opt_param string filter The expression to filter the governed containers in
+   * result. The only supported field is `parent`, and the only supported operator
+   * is `=`. Example: parent="//cloudresourcemanager.googleapis.com/folders/001"
+   * will return all containers under "folders/001".
+   * @opt_param int pageSize The maximum number of items to return per page. If
+   * unspecified, AnalyzeOrgPolicyGovernedContainersResponse.governed_containers
+   * will contain 100 items with a maximum of 200.
+   * @opt_param string pageToken The pagination token to retrieve the next page.
+   * @return AnalyzeOrgPolicyGovernedContainersResponse
+   */
+  public function analyzeOrgPolicyGovernedContainers($scope, $optParams = [])
+  {
+    $params = ['scope' => $scope];
+    $params = array_merge($params, $optParams);
+    return $this->call('analyzeOrgPolicyGovernedContainers', [$params], AnalyzeOrgPolicyGovernedContainersResponse::class);
+  }
+  /**
    * Batch gets the update history of assets that overlap a time window. For
    * IAM_POLICY content, this API outputs history when the asset and its attached
    * IAM POLICY both exist. This can create gaps in the output history. Otherwise,
@@ -285,6 +394,33 @@ class V1 extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('exportAssets', [$params], Operation::class);
+  }
+  /**
+   * Issue a job that queries assets using a SQL statement compatible with
+   * [BigQuery Standard SQL](http://cloud/bigquery/docs/reference/standard-sql
+   * /enabling-standard-sql). If the query execution finishes within timeout and
+   * there's no pagination, the full query results will be returned in the
+   * `QueryAssetsResponse`. Otherwise, full query results can be obtained by
+   * issuing extra requests with the `job_reference` from the a previous
+   * `QueryAssets` call. Note, the query result has approximately 10 GB limitation
+   * enforced by BigQuery https://cloud.google.com/bigquery/docs/best-practices-
+   * performance-output, queries return larger results will result in errors.
+   * (v1.queryAssets)
+   *
+   * @param string $parent Required. The relative name of the root asset. This can
+   * only be an organization number (such as "organizations/123"), a project ID
+   * (such as "projects/my-project-id"), or a project number (such as
+   * "projects/12345"), or a folder number (such as "folders/123"). Only assets
+   * belonging to the `parent` will be returned.
+   * @param QueryAssetsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return QueryAssetsResponse
+   */
+  public function queryAssets($parent, QueryAssetsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('queryAssets', [$params], QueryAssetsResponse::class);
   }
   /**
    * Searches all IAM policies within the specified scope, such as a project,

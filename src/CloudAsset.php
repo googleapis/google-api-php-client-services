@@ -390,6 +390,84 @@ class CloudAsset extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'analyzeOrgPolicies' => [
+              'path' => 'v1/{+scope}:analyzeOrgPolicies',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'scope' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'constraint' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'analyzeOrgPolicyGovernedAssets' => [
+              'path' => 'v1/{+scope}:analyzeOrgPolicyGovernedAssets',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'scope' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'constraint' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'analyzeOrgPolicyGovernedContainers' => [
+              'path' => 'v1/{+scope}:analyzeOrgPolicyGovernedContainers',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'scope' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'constraint' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'batchGetAssetsHistory' => [
               'path' => 'v1/{+parent}:batchGetAssetsHistory',
               'httpMethod' => 'GET',
@@ -424,6 +502,16 @@ class CloudAsset extends \Google\Service
               ],
             ],'exportAssets' => [
               'path' => 'v1/{+parent}:exportAssets',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'queryAssets' => [
+              'path' => 'v1/{+parent}:queryAssets',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
