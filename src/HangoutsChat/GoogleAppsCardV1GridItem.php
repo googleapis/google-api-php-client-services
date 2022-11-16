@@ -36,10 +36,6 @@ class GoogleAppsCardV1GridItem extends \Google\Model
   /**
    * @var string
    */
-  public $textAlignment;
-  /**
-   * @var string
-   */
   public $title;
 
   /**
@@ -97,20 +93,6 @@ class GoogleAppsCardV1GridItem extends \Google\Model
   public function getSubtitle()
   {
     return $this->subtitle;
-  }
-  /**
-   * @param string
-   */
-  public function setTextAlignment($textAlignment)
-  {
-    $this->textAlignment = $textAlignment;
-  }
-  /**
-   * @return string
-   */
-  public function getTextAlignment()
-  {
-    return $this->textAlignment;
   }
   /**
    * @param string

@@ -29,10 +29,6 @@ class GoogleAppsCardV1Widget extends \Google\Model
   protected $dividerDataType = '';
   protected $gridType = GoogleAppsCardV1Grid::class;
   protected $gridDataType = '';
-  /**
-   * @var string
-   */
-  public $horizontalAlignment;
   protected $imageType = GoogleAppsCardV1Image::class;
   protected $imageDataType = '';
   protected $selectionInputType = GoogleAppsCardV1SelectionInput::class;
@@ -111,20 +107,6 @@ class GoogleAppsCardV1Widget extends \Google\Model
   public function getGrid()
   {
     return $this->grid;
-  }
-  /**
-   * @param string
-   */
-  public function setHorizontalAlignment($horizontalAlignment)
-  {
-    $this->horizontalAlignment = $horizontalAlignment;
-  }
-  /**
-   * @return string
-   */
-  public function getHorizontalAlignment()
-  {
-    return $this->horizontalAlignment;
   }
   /**
    * @param GoogleAppsCardV1Image

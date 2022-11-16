@@ -32,9 +32,18 @@ use Google\Service\HangoutsChat\Space;
 class Spaces extends \Google\Service\Resource
 {
   /**
-   * Returns a space. Requires [service account
+   * Returns a space. Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
+   * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). (spaces.get)
+   * accounts). Supports [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
+   * part of the [Google Workspace Developer Preview
+   * Program](https://developers.google.com/workspace/preview), which grants early
+   * access to certain features. [User
+   * authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope.
+   * (spaces.get)
    *
    * @param string $name Required. Resource name of the space, in the form
    * "spaces". Format: spaces/{space}
@@ -48,9 +57,19 @@ class Spaces extends \Google\Service\Resource
     return $this->call('get', [$params], Space::class);
   }
   /**
-   * Lists spaces the caller is a member of. Requires [service account
+   * Lists spaces the caller is a member of. Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
+   * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts).  (spaces.listSpaces)
+   * accounts). Supports [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
+   * part of the [Google Workspace Developer Preview
+   * Program](https://developers.google.com/workspace/preview), which grants early
+   * access to certain features. [User
+   * authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope.
+   * Lists spaces visible to the caller or authenticated user. Group chats and DMs
+   * aren't listed until the first message is sent. (spaces.listSpaces)
    *
    * @param array $optParams Optional parameters.
    *
