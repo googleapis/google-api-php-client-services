@@ -17,7 +17,9 @@
 
 namespace Google\Service\Datapipelines\Resource;
 
+use Google\Service\Datapipelines\GoogleCloudDatapipelinesV1ComputeSchemaRequest;
 use Google\Service\Datapipelines\GoogleCloudDatapipelinesV1ListPipelinesResponse;
+use Google\Service\Datapipelines\GoogleCloudDatapipelinesV1Schema;
 
 /**
  * The "locations" collection of methods.
@@ -29,6 +31,35 @@ use Google\Service\Datapipelines\GoogleCloudDatapipelinesV1ListPipelinesResponse
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Computes the schema for the transform. Computation from `raw_schema` will
+   * always occur if it is set. This requires that the transform supports that
+   * encoding. If no raw schema is provided and if the transform is for an IO,
+   * then this will attempt to connect to the resource using the details provided
+   * in `config` and infer the schema from that. If the transform is not an IO, is
+   * a sink that doesn't exist yet, or is a sink with no schema requirement, then
+   * this will fall back to basing the schema off the one provided in
+   * `input_schemas`. The computed schema will be validated.
+   * (locations.computeSchema)
+   *
+   * @param string $location Required. The full location formatted as "projects
+   * /{your-project}/locations/{google-cloud-region}". If attempting to infer the
+   * schema from an existing Google Cloud resource, the default Data Pipelines
+   * service account for this project will be used in making requests for the
+   * resource. If the region given for "{google-cloud-region}" is different than
+   * the region where the resource is stored, then the data will be transferred to
+   * and processed in the region specified here, but it will not be persistently
+   * stored in this region.
+   * @param GoogleCloudDatapipelinesV1ComputeSchemaRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDatapipelinesV1Schema
+   */
+  public function computeSchema($location, GoogleCloudDatapipelinesV1ComputeSchemaRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('computeSchema', [$params], GoogleCloudDatapipelinesV1Schema::class);
+  }
   /**
    * Lists pipelines. Returns a "FORBIDDEN" error if the caller doesn't have
    * permission to access it. (locations.listPipelines)

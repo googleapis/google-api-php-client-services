@@ -42,6 +42,7 @@ class Datapipelines extends \Google\Service
   public $projects_locations;
   public $projects_locations_pipelines;
   public $projects_locations_pipelines_jobs;
+  public $projects_locations_transformDescriptions;
 
   /**
    * Constructs the internal representation of the Datapipelines service.
@@ -65,7 +66,17 @@ class Datapipelines extends \Google\Service
         'locations',
         [
           'methods' => [
-            'listPipelines' => [
+            'computeSchema' => [
+              'path' => 'v1/{+location}:computeSchema',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'listPipelines' => [
               'path' => 'v1/{+parent}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -187,6 +198,41 @@ class Datapipelines extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_transformDescriptions = new Datapipelines\Resource\ProjectsLocationsTransformDescriptions(
+        $this,
+        $this->serviceName,
+        'transformDescriptions',
+        [
+          'methods' => [
+            'batchGet' => [
+              'path' => 'v1/{+parent}/transformDescriptions:batchGet',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'names' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
