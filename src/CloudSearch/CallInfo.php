@@ -34,8 +34,6 @@ class CallInfo extends \Google\Collection
    * @var string
    */
   public $calendarEventId;
-  protected $chatConfigType = ChatConfig::class;
-  protected $chatConfigDataType = '';
   protected $coActivityType = CoActivity::class;
   protected $coActivityDataType = '';
   protected $collaborationType = Collaboration::class;
@@ -158,20 +156,6 @@ class CallInfo extends \Google\Collection
   public function getCalendarEventId()
   {
     return $this->calendarEventId;
-  }
-  /**
-   * @param ChatConfig
-   */
-  public function setChatConfig(ChatConfig $chatConfig)
-  {
-    $this->chatConfig = $chatConfig;
-  }
-  /**
-   * @return ChatConfig
-   */
-  public function getChatConfig()
-  {
-    return $this->chatConfig;
   }
   /**
    * @param CoActivity

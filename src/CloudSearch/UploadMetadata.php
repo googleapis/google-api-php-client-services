@@ -48,6 +48,10 @@ class UploadMetadata extends \Google\Model
   /**
    * @var string
    */
+  public $latestVirusScanTimestamp;
+  /**
+   * @var string
+   */
   public $localId;
   protected $originalDimensionType = AppsDynamiteSharedDimension::class;
   protected $originalDimensionDataType = '';
@@ -169,6 +173,20 @@ class UploadMetadata extends \Google\Model
   public function getDlpMetricsMetadata()
   {
     return $this->dlpMetricsMetadata;
+  }
+  /**
+   * @param string
+   */
+  public function setLatestVirusScanTimestamp($latestVirusScanTimestamp)
+  {
+    $this->latestVirusScanTimestamp = $latestVirusScanTimestamp;
+  }
+  /**
+   * @return string
+   */
+  public function getLatestVirusScanTimestamp()
+  {
+    return $this->latestVirusScanTimestamp;
   }
   /**
    * @param string

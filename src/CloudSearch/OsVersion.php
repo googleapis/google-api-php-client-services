@@ -17,78 +17,64 @@
 
 namespace Google\Service\CloudSearch;
 
-class FacetBucket extends \Google\Model
+class OsVersion extends \Google\Model
 {
   /**
    * @var int
    */
-  public $count;
-  protected $filterType = Filter::class;
-  protected $filterDataType = '';
+  public $majorVersion;
   /**
    * @var int
    */
-  public $percentage;
-  protected $valueType = Value::class;
-  protected $valueDataType = '';
+  public $minorVersion;
+  /**
+   * @var int
+   */
+  public $tertiaryVersion;
 
   /**
    * @param int
    */
-  public function setCount($count)
+  public function setMajorVersion($majorVersion)
   {
-    $this->count = $count;
+    $this->majorVersion = $majorVersion;
   }
   /**
    * @return int
    */
-  public function getCount()
+  public function getMajorVersion()
   {
-    return $this->count;
-  }
-  /**
-   * @param Filter
-   */
-  public function setFilter(Filter $filter)
-  {
-    $this->filter = $filter;
-  }
-  /**
-   * @return Filter
-   */
-  public function getFilter()
-  {
-    return $this->filter;
+    return $this->majorVersion;
   }
   /**
    * @param int
    */
-  public function setPercentage($percentage)
+  public function setMinorVersion($minorVersion)
   {
-    $this->percentage = $percentage;
+    $this->minorVersion = $minorVersion;
   }
   /**
    * @return int
    */
-  public function getPercentage()
+  public function getMinorVersion()
   {
-    return $this->percentage;
+    return $this->minorVersion;
   }
   /**
-   * @param Value
+   * @param int
    */
-  public function setValue(Value $value)
+  public function setTertiaryVersion($tertiaryVersion)
   {
-    $this->value = $value;
+    $this->tertiaryVersion = $tertiaryVersion;
   }
   /**
-   * @return Value
+   * @return int
    */
-  public function getValue()
+  public function getTertiaryVersion()
   {
-    return $this->value;
+    return $this->tertiaryVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FacetBucket::class, 'Google_Service_CloudSearch_FacetBucket');
+class_alias(OsVersion::class, 'Google_Service_CloudSearch_OsVersion');
