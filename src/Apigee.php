@@ -1792,6 +1792,16 @@ class Apigee extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getApiSecurityRuntimeConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getDebugmask' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',

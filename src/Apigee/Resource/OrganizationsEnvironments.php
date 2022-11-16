@@ -17,6 +17,7 @@
 
 namespace Google\Service\Apigee\Resource;
 
+use Google\Service\Apigee\GoogleCloudApigeeV1ApiSecurityRuntimeConfig;
 use Google\Service\Apigee\GoogleCloudApigeeV1DebugMask;
 use Google\Service\Apigee\GoogleCloudApigeeV1Environment;
 use Google\Service\Apigee\GoogleCloudApigeeV1EnvironmentConfig;
@@ -89,6 +90,23 @@ class OrganizationsEnvironments extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleCloudApigeeV1Environment::class);
+  }
+  /**
+   * Gets the API Security runtime configuration for an environment. This named
+   * ApiSecurityRuntimeConfig to prevent conflicts with ApiSecurityConfig from
+   * addon config. (environments.getApiSecurityRuntimeConfig)
+   *
+   * @param string $name Required. Name of the environment API Security Runtime
+   * configuration resource. Use the following structure in your request:
+   * `organizations/{org}/environments/{env}/apiSecurityRuntimeConfig`
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1ApiSecurityRuntimeConfig
+   */
+  public function getApiSecurityRuntimeConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getApiSecurityRuntimeConfig', [$params], GoogleCloudApigeeV1ApiSecurityRuntimeConfig::class);
   }
   /**
    * Gets the debug mask singleton resource for an environment.
