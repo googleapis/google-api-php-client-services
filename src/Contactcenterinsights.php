@@ -105,7 +105,17 @@ class Contactcenterinsights extends \Google\Service
         'conversations',
         [
           'methods' => [
-            'calculateStats' => [
+            'bulkAnalyze' => [
+              'path' => 'v1/{+parent}/conversations:bulkAnalyze',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'calculateStats' => [
               'path' => 'v1/{+location}/conversations:calculateStats',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -159,6 +169,16 @@ class Contactcenterinsights extends \Google\Service
                 'view' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'ingest' => [
+              'path' => 'v1/{+parent}/conversations:ingest',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'list' => [
