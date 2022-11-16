@@ -26,6 +26,8 @@ class UpdateNodePoolRequest extends \Google\Collection
   public $clusterId;
   protected $confidentialNodesType = ConfidentialNodes::class;
   protected $confidentialNodesDataType = '';
+  protected $fastSocketType = FastSocket::class;
+  protected $fastSocketDataType = '';
   protected $gcfsConfigType = GcfsConfig::class;
   protected $gcfsConfigDataType = '';
   protected $gvnicType = VirtualNIC::class;
@@ -106,6 +108,20 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getConfidentialNodes()
   {
     return $this->confidentialNodes;
+  }
+  /**
+   * @param FastSocket
+   */
+  public function setFastSocket(FastSocket $fastSocket)
+  {
+    $this->fastSocket = $fastSocket;
+  }
+  /**
+   * @return FastSocket
+   */
+  public function getFastSocket()
+  {
+    return $this->fastSocket;
   }
   /**
    * @param GcfsConfig

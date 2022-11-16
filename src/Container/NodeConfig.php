@@ -38,6 +38,8 @@ class NodeConfig extends \Google\Collection
    * @var string
    */
   public $diskType;
+  protected $fastSocketType = FastSocket::class;
+  protected $fastSocketDataType = '';
   protected $gcfsConfigType = GcfsConfig::class;
   protected $gcfsConfigDataType = '';
   protected $gvnicType = VirtualNIC::class;
@@ -194,6 +196,20 @@ class NodeConfig extends \Google\Collection
   public function getDiskType()
   {
     return $this->diskType;
+  }
+  /**
+   * @param FastSocket
+   */
+  public function setFastSocket(FastSocket $fastSocket)
+  {
+    $this->fastSocket = $fastSocket;
+  }
+  /**
+   * @return FastSocket
+   */
+  public function getFastSocket()
+  {
+    return $this->fastSocket;
   }
   /**
    * @param GcfsConfig
