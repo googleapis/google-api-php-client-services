@@ -30,6 +30,8 @@ class ApkManifest extends \Google\Collection
    * @var int
    */
   public $maxSdkVersion;
+  protected $metadataType = Metadata::class;
+  protected $metadataDataType = 'array';
   /**
    * @var int
    */
@@ -42,6 +44,8 @@ class ApkManifest extends \Google\Collection
    * @var int
    */
   public $targetSdkVersion;
+  protected $usesFeatureType = UsesFeature::class;
+  protected $usesFeatureDataType = 'array';
   /**
    * @var string[]
    */
@@ -98,6 +102,20 @@ class ApkManifest extends \Google\Collection
     return $this->maxSdkVersion;
   }
   /**
+   * @param Metadata[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return Metadata[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
+  }
+  /**
    * @param int
    */
   public function setMinSdkVersion($minSdkVersion)
@@ -138,6 +156,20 @@ class ApkManifest extends \Google\Collection
   public function getTargetSdkVersion()
   {
     return $this->targetSdkVersion;
+  }
+  /**
+   * @param UsesFeature[]
+   */
+  public function setUsesFeature($usesFeature)
+  {
+    $this->usesFeature = $usesFeature;
+  }
+  /**
+   * @return UsesFeature[]
+   */
+  public function getUsesFeature()
+  {
+    return $this->usesFeature;
   }
   /**
    * @param string[]
