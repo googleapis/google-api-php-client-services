@@ -48,8 +48,6 @@ class Document extends \Google\Service
   public $projects_locations_processors_humanReviewConfig;
   public $projects_locations_processors_processorVersions;
   public $projects_operations;
-  public $uiv1beta3_projects_locations;
-  public $uiv1beta3_projects_locations_operations;
 
   /**
    * Constructs the internal representation of the Document service.
@@ -449,100 +447,6 @@ class Document extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->uiv1beta3_projects_locations = new Document\Resource\Uiv1beta3ProjectsLocations(
-        $this,
-        $this->serviceName,
-        'locations',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'uiv1beta3/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'uiv1beta3/{+name}/locations',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->uiv1beta3_projects_locations_operations = new Document\Resource\Uiv1beta3ProjectsLocationsOperations(
-        $this,
-        $this->serviceName,
-        'operations',
-        [
-          'methods' => [
-            'cancel' => [
-              'path' => 'uiv1beta3/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'uiv1beta3/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'uiv1beta3/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
