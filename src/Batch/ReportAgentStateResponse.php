@@ -20,9 +20,27 @@ namespace Google\Service\Batch;
 class ReportAgentStateResponse extends \Google\Collection
 {
   protected $collection_key = 'tasks';
+  /**
+   * @var string
+   */
+  public $minReportInterval;
   protected $tasksType = AgentTask::class;
   protected $tasksDataType = 'array';
 
+  /**
+   * @param string
+   */
+  public function setMinReportInterval($minReportInterval)
+  {
+    $this->minReportInterval = $minReportInterval;
+  }
+  /**
+   * @return string
+   */
+  public function getMinReportInterval()
+  {
+    return $this->minReportInterval;
+  }
   /**
    * @param AgentTask[]
    */
