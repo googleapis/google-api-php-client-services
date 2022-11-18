@@ -19,6 +19,7 @@ namespace Google\Service\Contactcenterinsights\Resource;
 
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1Issue;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListIssuesResponse;
+use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
 
 /**
  * The "issues" collection of methods.
@@ -30,6 +31,19 @@ use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListI
  */
 class ProjectsLocationsIssueModelsIssues extends \Google\Service\Resource
 {
+  /**
+   * Deletes an issue. (issues.delete)
+   *
+   * @param string $name Required. The name of the issue to delete.
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
+  }
   /**
    * Gets an issue. (issues.get)
    *
