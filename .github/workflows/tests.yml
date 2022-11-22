@@ -10,7 +10,7 @@ jobs:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                os: [ubuntu-latest]
+                os: [ubuntu-20.04]
                 php: [ 5.6, "7.0", 7.1, 7.2, 7.3, 7.4, "8.0", 8.1 ]
                 include:
                   - os: macos-latest
@@ -31,7 +31,7 @@ jobs:
             - name: Run Script
               run: vendor/bin/phpunit
     generator:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
         name: Generator Unit Tests
         steps:
             - uses: actions/checkout@v3
