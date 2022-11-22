@@ -79,8 +79,8 @@ class Spaces extends \Google\Service\Resource
    * 1000. Negative values return an INVALID_ARGUMENT error.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * list spaces call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided must match the call that provided
-   * the page token.
+   * paginating, the filter value should match the call that provided the page
+   * token. Passing a different value may lead to unexpected results.
    * @return ListSpacesResponse
    */
   public function listSpaces($optParams = [])

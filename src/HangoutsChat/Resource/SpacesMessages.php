@@ -134,9 +134,16 @@ class SpacesMessages extends \Google\Service\Resource
   /**
    * Updates a message. For example usage, see [Update a message](https://develope
    * rs.google.com/chat/api/guides/crudl/messages#update_a_message). Requires
-   * [service account
+   * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
+   * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). (messages.update)
+   * accounts). Supports [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
+   * part of the [Google Workspace Developer Preview
+   * Program](https://developers.google.com/workspace/preview), which grants early
+   * access to certain features. [User
+   * authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * requires the `chat.messages` authorization scope. (messages.update)
    *
    * @param string $name Resource name in the form `spaces/messages`. Example:
    * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
