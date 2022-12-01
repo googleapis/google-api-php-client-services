@@ -43,6 +43,10 @@ class CloudsupportCase extends \Google\Collection
   /**
    * @var string
    */
+  public $languageCode;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -156,6 +160,20 @@ class CloudsupportCase extends \Google\Collection
   public function getEscalated()
   {
     return $this->escalated;
+  }
+  /**
+   * @param string
+   */
+  public function setLanguageCode($languageCode)
+  {
+    $this->languageCode = $languageCode;
+  }
+  /**
+   * @return string
+   */
+  public function getLanguageCode()
+  {
+    return $this->languageCode;
   }
   /**
    * @param string
