@@ -36,8 +36,8 @@ class ProjectsAssets extends \Google\Service\Resource
    * Filters an organization's assets and groups them by their specified
    * properties. (assets.group)
    *
-   * @param string $parent Required. Name of the organization to groupBy. Its
-   * format is "organizations/[organization_id], folders/[folder_id], or
+   * @param string $parent Required. Name of the parent to groupBy. Its format is
+   * "organizations/[organization_id], folders/[folder_id], or
    * projects/[project_id]".
    * @param GroupAssetsRequest $postBody
    * @param array $optParams Optional parameters.
@@ -52,8 +52,8 @@ class ProjectsAssets extends \Google\Service\Resource
   /**
    * Lists an organization's assets. (assets.listProjectsAssets)
    *
-   * @param string $parent Required. Name of the organization assets should belong
-   * to. Its format is "organizations/[organization_id], folders/[folder_id], or
+   * @param string $parent Required. Name of the parent assets should belong to.
+   * Its format is "organizations/[organization_id], folders/[folder_id], or
    * projects/[project_id]".
    * @param array $optParams Optional parameters.
    *

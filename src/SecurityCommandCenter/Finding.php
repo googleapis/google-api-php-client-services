@@ -70,6 +70,8 @@ class Finding extends \Google\Collection
   protected $iamBindingsDataType = 'array';
   protected $indicatorType = Indicator::class;
   protected $indicatorDataType = '';
+  protected $kernelRootkitType = KernelRootkit::class;
+  protected $kernelRootkitDataType = '';
   protected $kubernetesType = Kubernetes::class;
   protected $kubernetesDataType = '';
   protected $mitreAttackType = MitreAttack::class;
@@ -376,6 +378,20 @@ class Finding extends \Google\Collection
   public function getIndicator()
   {
     return $this->indicator;
+  }
+  /**
+   * @param KernelRootkit
+   */
+  public function setKernelRootkit(KernelRootkit $kernelRootkit)
+  {
+    $this->kernelRootkit = $kernelRootkit;
+  }
+  /**
+   * @return KernelRootkit
+   */
+  public function getKernelRootkit()
+  {
+    return $this->kernelRootkit;
   }
   /**
    * @param Kubernetes

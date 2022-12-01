@@ -55,7 +55,9 @@ class FoldersNotificationConfigs extends \Google\Service\Resource
    * Deletes a notification config. (notificationConfigs.delete)
    *
    * @param string $name Required. Name of the notification config to delete. Its
-   * format is "organizations/[organization_id]/notificationConfigs/[config_id]".
+   * format is "organizations/[organization_id]/notificationConfigs/[config_id]",
+   * "folders/[folder_id]/notificationConfigs/[config_id]", or
+   * "projects/[project_id]/notificationConfigs/[config_id]".
    * @param array $optParams Optional parameters.
    * @return SecuritycenterEmpty
    */
@@ -69,7 +71,9 @@ class FoldersNotificationConfigs extends \Google\Service\Resource
    * Gets a notification config. (notificationConfigs.get)
    *
    * @param string $name Required. Name of the notification config to get. Its
-   * format is "organizations/[organization_id]/notificationConfigs/[config_id]".
+   * format is "organizations/[organization_id]/notificationConfigs/[config_id]",
+   * "folders/[folder_id]/notificationConfigs/[config_id]", or
+   * "projects/[project_id]/notificationConfigs/[config_id]".
    * @param array $optParams Optional parameters.
    * @return NotificationConfig
    */
@@ -83,7 +87,7 @@ class FoldersNotificationConfigs extends \Google\Service\Resource
    * Lists notification configs.
    * (notificationConfigs.listFoldersNotificationConfigs)
    *
-   * @param string $parent Required. Name of the organization to list notification
+   * @param string $parent Required. Name of the parent to list notification
    * configs. Its format is "organizations/[organization_id]",
    * "folders/[folder_id]", or "projects/[project_id]".
    * @param array $optParams Optional parameters.
@@ -111,7 +115,9 @@ class FoldersNotificationConfigs extends \Google\Service\Resource
    * See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name
    * Example:
-   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
+   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
+   * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
+   * "projects/{project_id}/notificationConfigs/notify_public_bucket".
    * @param NotificationConfig $postBody
    * @param array $optParams Optional parameters.
    *
