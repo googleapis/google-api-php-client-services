@@ -47,10 +47,6 @@ class CallInfo extends \Google\Collection
   /**
    * @var string
    */
-  public $mediaBackendInfo;
-  /**
-   * @var string
-   */
   public $organizationName;
   protected $paygateInfoType = PaygateInfo::class;
   protected $paygateInfoDataType = '';
@@ -212,20 +208,6 @@ class CallInfo extends \Google\Collection
   public function getMaxJoinedDevices()
   {
     return $this->maxJoinedDevices;
-  }
-  /**
-   * @param string
-   */
-  public function setMediaBackendInfo($mediaBackendInfo)
-  {
-    $this->mediaBackendInfo = $mediaBackendInfo;
-  }
-  /**
-   * @return string
-   */
-  public function getMediaBackendInfo()
-  {
-    return $this->mediaBackendInfo;
   }
   /**
    * @param string

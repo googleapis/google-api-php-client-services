@@ -52,10 +52,6 @@ class UrlMetadata extends \Google\Model
   /**
    * @var string
    */
-  public $linkType;
-  /**
-   * @var string
-   */
   public $mimeType;
   protected $redirectUrlType = SafeUrlProto::class;
   protected $redirectUrlDataType = '';
@@ -189,20 +185,6 @@ class UrlMetadata extends \Google\Model
   public function getIntImageWidth()
   {
     return $this->intImageWidth;
-  }
-  /**
-   * @param string
-   */
-  public function setLinkType($linkType)
-  {
-    $this->linkType = $linkType;
-  }
-  /**
-   * @return string
-   */
-  public function getLinkType()
-  {
-    return $this->linkType;
   }
   /**
    * @param string
