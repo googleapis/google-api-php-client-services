@@ -17,83 +17,47 @@
 
 namespace Google\Service\ServiceManagement;
 
-class Endpoint extends \Google\Collection
+class CommonLanguageSettings extends \Google\Collection
 {
-  protected $collection_key = 'aliases';
+  protected $collection_key = 'destinations';
   /**
    * @var string[]
    */
-  public $aliases;
-  /**
-   * @var bool
-   */
-  public $allowCors;
+  public $destinations;
   /**
    * @var string
    */
-  public $name;
-  /**
-   * @var string
-   */
-  public $target;
+  public $referenceDocsUri;
 
   /**
    * @param string[]
    */
-  public function setAliases($aliases)
+  public function setDestinations($destinations)
   {
-    $this->aliases = $aliases;
+    $this->destinations = $destinations;
   }
   /**
    * @return string[]
    */
-  public function getAliases()
+  public function getDestinations()
   {
-    return $this->aliases;
-  }
-  /**
-   * @param bool
-   */
-  public function setAllowCors($allowCors)
-  {
-    $this->allowCors = $allowCors;
-  }
-  /**
-   * @return bool
-   */
-  public function getAllowCors()
-  {
-    return $this->allowCors;
+    return $this->destinations;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setReferenceDocsUri($referenceDocsUri)
   {
-    $this->name = $name;
+    $this->referenceDocsUri = $referenceDocsUri;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getReferenceDocsUri()
   {
-    return $this->name;
-  }
-  /**
-   * @param string
-   */
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  /**
-   * @return string
-   */
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->referenceDocsUri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Endpoint::class, 'Google_Service_ServiceManagement_Endpoint');
+class_alias(CommonLanguageSettings::class, 'Google_Service_ServiceManagement_CommonLanguageSettings');
