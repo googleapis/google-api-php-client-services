@@ -1093,10 +1093,10 @@ class DisplayVideo extends \Google\Service
                 ],
               ],
             ],'bulkUpdate' => [
-              'path' => 'v2/advertisers/{advertisersId}/lineItems:bulkUpdate',
+              'path' => 'v2/advertisers/{+advertiserId}/lineItems:bulkUpdate',
               'httpMethod' => 'POST',
               'parameters' => [
-                'advertisersId' => [
+                'advertiserId' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

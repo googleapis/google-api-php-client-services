@@ -111,14 +111,15 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
    * (lineItems.bulkUpdate)
    *
-   * @param string $advertisersId
+   * @param string $advertiserId Required. The ID of the advertiser this line item
+   * belongs to.
    * @param BulkUpdateLineItemsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BulkUpdateLineItemsResponse
    */
-  public function bulkUpdate($advertisersId, BulkUpdateLineItemsRequest $postBody, $optParams = [])
+  public function bulkUpdate($advertiserId, BulkUpdateLineItemsRequest $postBody, $optParams = [])
   {
-    $params = ['advertisersId' => $advertisersId, 'postBody' => $postBody];
+    $params = ['advertiserId' => $advertiserId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('bulkUpdate', [$params], BulkUpdateLineItemsResponse::class);
   }
