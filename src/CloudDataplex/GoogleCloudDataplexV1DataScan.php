@@ -43,6 +43,8 @@ class GoogleCloudDataplexV1DataScan extends \Google\Model
   public $displayName;
   protected $executionSpecType = GoogleCloudDataplexV1DataScanExecutionSpec::class;
   protected $executionSpecDataType = '';
+  protected $executionStatusType = GoogleCloudDataplexV1DataScanExecutionStatus::class;
+  protected $executionStatusDataType = '';
   /**
    * @var string[]
    */
@@ -193,6 +195,20 @@ class GoogleCloudDataplexV1DataScan extends \Google\Model
   public function getExecutionSpec()
   {
     return $this->executionSpec;
+  }
+  /**
+   * @param GoogleCloudDataplexV1DataScanExecutionStatus
+   */
+  public function setExecutionStatus(GoogleCloudDataplexV1DataScanExecutionStatus $executionStatus)
+  {
+    $this->executionStatus = $executionStatus;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataScanExecutionStatus
+   */
+  public function getExecutionStatus()
+  {
+    return $this->executionStatus;
   }
   /**
    * @param string[]
