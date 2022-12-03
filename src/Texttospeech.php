@@ -40,6 +40,7 @@ class Texttospeech extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $operations;
+  public $projects_locations_voices;
   public $text;
   public $voices;
 
@@ -115,6 +116,26 @@ class Texttospeech extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_voices = new Texttospeech\Resource\ProjectsLocationsVoices(
+        $this,
+        $this->serviceName,
+        'voices',
+        [
+          'methods' => [
+            'synthesizeLongAudio' => [
+              'path' => 'v1/{+parent}:SynthesizeLongAudio',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
