@@ -32,6 +32,10 @@ class InterconnectDiagnosticsLinkStatus extends \Google\Collection
   public $googleDemarc;
   protected $lacpStatusType = InterconnectDiagnosticsLinkLACPStatus::class;
   protected $lacpStatusDataType = '';
+  /**
+   * @var string
+   */
+  public $operationalStatus;
   protected $receivingOpticalPowerType = InterconnectDiagnosticsLinkOpticalPower::class;
   protected $receivingOpticalPowerDataType = '';
   protected $transmittingOpticalPowerType = InterconnectDiagnosticsLinkOpticalPower::class;
@@ -92,6 +96,20 @@ class InterconnectDiagnosticsLinkStatus extends \Google\Collection
   public function getLacpStatus()
   {
     return $this->lacpStatus;
+  }
+  /**
+   * @param string
+   */
+  public function setOperationalStatus($operationalStatus)
+  {
+    $this->operationalStatus = $operationalStatus;
+  }
+  /**
+   * @return string
+   */
+  public function getOperationalStatus()
+  {
+    return $this->operationalStatus;
   }
   /**
    * @param InterconnectDiagnosticsLinkOpticalPower

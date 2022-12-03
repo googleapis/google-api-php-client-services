@@ -17,64 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class ServiceAttachmentConsumerProjectLimit extends \Google\Model
+class NetworkAttachmentListWarningData extends \Google\Model
 {
   /**
    * @var string
    */
-  public $connectionLimit;
+  public $key;
   /**
    * @var string
    */
-  public $networkUrl;
-  /**
-   * @var string
-   */
-  public $projectIdOrNum;
+  public $value;
 
   /**
    * @param string
    */
-  public function setConnectionLimit($connectionLimit)
+  public function setKey($key)
   {
-    $this->connectionLimit = $connectionLimit;
+    $this->key = $key;
   }
   /**
    * @return string
    */
-  public function getConnectionLimit()
+  public function getKey()
   {
-    return $this->connectionLimit;
+    return $this->key;
   }
   /**
    * @param string
    */
-  public function setNetworkUrl($networkUrl)
+  public function setValue($value)
   {
-    $this->networkUrl = $networkUrl;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getNetworkUrl()
+  public function getValue()
   {
-    return $this->networkUrl;
-  }
-  /**
-   * @param string
-   */
-  public function setProjectIdOrNum($projectIdOrNum)
-  {
-    $this->projectIdOrNum = $projectIdOrNum;
-  }
-  /**
-   * @return string
-   */
-  public function getProjectIdOrNum()
-  {
-    return $this->projectIdOrNum;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceAttachmentConsumerProjectLimit::class, 'Google_Service_Compute_ServiceAttachmentConsumerProjectLimit');
+class_alias(NetworkAttachmentListWarningData::class, 'Google_Service_Compute_NetworkAttachmentListWarningData');

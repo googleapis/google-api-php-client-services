@@ -65,6 +65,10 @@ class Project extends \Google\Collection
   /**
    * @var string
    */
+  public $vmDnsSetting;
+  /**
+   * @var string
+   */
   public $xpnProjectStatus;
 
   /**
@@ -234,6 +238,20 @@ class Project extends \Google\Collection
   public function getUsageExportLocation()
   {
     return $this->usageExportLocation;
+  }
+  /**
+   * @param string
+   */
+  public function setVmDnsSetting($vmDnsSetting)
+  {
+    $this->vmDnsSetting = $vmDnsSetting;
+  }
+  /**
+   * @return string
+   */
+  public function getVmDnsSetting()
+  {
+    return $this->vmDnsSetting;
   }
   /**
    * @param string

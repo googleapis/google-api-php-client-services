@@ -17,64 +17,63 @@
 
 namespace Google\Service\Compute;
 
-class ServiceAttachmentConsumerProjectLimit extends \Google\Model
+class NetworkAttachmentsScopedListWarning extends \Google\Collection
 {
+  protected $collection_key = 'data';
   /**
    * @var string
    */
-  public $connectionLimit;
+  public $code;
+  protected $dataType = NetworkAttachmentsScopedListWarningData::class;
+  protected $dataDataType = 'array';
   /**
    * @var string
    */
-  public $networkUrl;
-  /**
-   * @var string
-   */
-  public $projectIdOrNum;
+  public $message;
 
   /**
    * @param string
    */
-  public function setConnectionLimit($connectionLimit)
+  public function setCode($code)
   {
-    $this->connectionLimit = $connectionLimit;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getConnectionLimit()
+  public function getCode()
   {
-    return $this->connectionLimit;
+    return $this->code;
+  }
+  /**
+   * @param NetworkAttachmentsScopedListWarningData[]
+   */
+  public function setData($data)
+  {
+    $this->data = $data;
+  }
+  /**
+   * @return NetworkAttachmentsScopedListWarningData[]
+   */
+  public function getData()
+  {
+    return $this->data;
   }
   /**
    * @param string
    */
-  public function setNetworkUrl($networkUrl)
+  public function setMessage($message)
   {
-    $this->networkUrl = $networkUrl;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getNetworkUrl()
+  public function getMessage()
   {
-    return $this->networkUrl;
-  }
-  /**
-   * @param string
-   */
-  public function setProjectIdOrNum($projectIdOrNum)
-  {
-    $this->projectIdOrNum = $projectIdOrNum;
-  }
-  /**
-   * @return string
-   */
-  public function getProjectIdOrNum()
-  {
-    return $this->projectIdOrNum;
+    return $this->message;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceAttachmentConsumerProjectLimit::class, 'Google_Service_Compute_ServiceAttachmentConsumerProjectLimit');
+class_alias(NetworkAttachmentsScopedListWarning::class, 'Google_Service_Compute_NetworkAttachmentsScopedListWarning');
