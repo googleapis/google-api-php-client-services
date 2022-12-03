@@ -51,6 +51,8 @@ class EnvironmentConfig extends \Google\Model
   public $nodeCount;
   protected $privateEnvironmentConfigType = PrivateEnvironmentConfig::class;
   protected $privateEnvironmentConfigDataType = '';
+  protected $recoveryConfigType = RecoveryConfig::class;
+  protected $recoveryConfigDataType = '';
   protected $softwareConfigType = SoftwareConfig::class;
   protected $softwareConfigDataType = '';
   protected $webServerConfigType = WebServerConfig::class;
@@ -213,6 +215,20 @@ class EnvironmentConfig extends \Google\Model
   public function getPrivateEnvironmentConfig()
   {
     return $this->privateEnvironmentConfig;
+  }
+  /**
+   * @param RecoveryConfig
+   */
+  public function setRecoveryConfig(RecoveryConfig $recoveryConfig)
+  {
+    $this->recoveryConfig = $recoveryConfig;
+  }
+  /**
+   * @return RecoveryConfig
+   */
+  public function getRecoveryConfig()
+  {
+    return $this->recoveryConfig;
   }
   /**
    * @param SoftwareConfig
