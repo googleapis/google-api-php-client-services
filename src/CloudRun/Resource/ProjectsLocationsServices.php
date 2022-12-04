@@ -131,9 +131,9 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * Lists Services. (services.listProjectsLocationsServices)
    *
    * @param string $parent Required. The location and project to list resources
-   * on. Location must be a valid GCP region, and cannot be the "-" wildcard.
-   * Format: projects/{project}/locations/{location}, where {project} can be
-   * project id or number.
+   * on. Location must be a valid Google Cloud region, and cannot be the "-"
+   * wildcard. Format: projects/{project}/locations/{location}, where {project}
+   * can be project id or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of Services to return in this call.
