@@ -101,6 +101,10 @@ class Volume extends \Google\Model
    * @var string
    */
   public $storageType;
+  /**
+   * @var string
+   */
+  public $workloadProfile;
 
   /**
    * @param string
@@ -395,6 +399,20 @@ class Volume extends \Google\Model
   public function getStorageType()
   {
     return $this->storageType;
+  }
+  /**
+   * @param string
+   */
+  public function setWorkloadProfile($workloadProfile)
+  {
+    $this->workloadProfile = $workloadProfile;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkloadProfile()
+  {
+    return $this->workloadProfile;
   }
 }
 

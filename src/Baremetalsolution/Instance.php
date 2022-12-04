@@ -80,6 +80,10 @@ class Instance extends \Google\Collection
   public $updateTime;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $workloadProfile;
 
   /**
    * @param string
@@ -318,6 +322,20 @@ class Instance extends \Google\Collection
   public function getVolumes()
   {
     return $this->volumes;
+  }
+  /**
+   * @param string
+   */
+  public function setWorkloadProfile($workloadProfile)
+  {
+    $this->workloadProfile = $workloadProfile;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkloadProfile()
+  {
+    return $this->workloadProfile;
   }
 }
 
