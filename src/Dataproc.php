@@ -44,6 +44,7 @@ class Dataproc extends \Google\Service
   public $projects_locations_workflowTemplates;
   public $projects_regions_autoscalingPolicies;
   public $projects_regions_clusters;
+  public $projects_regions_clusters_nodeGroups;
   public $projects_regions_jobs;
   public $projects_regions_operations;
   public $projects_regions_workflowTemplates;
@@ -779,6 +780,36 @@ class Dataproc extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_regions_clusters_nodeGroups = new Dataproc\Resource\ProjectsRegionsClustersNodeGroups(
+        $this,
+        $this->serviceName,
+        'nodeGroups',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'resize' => [
+              'path' => 'v1/{+name}:resize',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

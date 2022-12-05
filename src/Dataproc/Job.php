@@ -32,6 +32,8 @@ class Job extends \Google\Collection
    * @var string
    */
   public $driverOutputResourceUri;
+  protected $driverSchedulingConfigType = DriverSchedulingConfig::class;
+  protected $driverSchedulingConfigDataType = '';
   protected $hadoopJobType = HadoopJob::class;
   protected $hadoopJobDataType = '';
   protected $hiveJobType = HiveJob::class;
@@ -112,6 +114,20 @@ class Job extends \Google\Collection
   public function getDriverOutputResourceUri()
   {
     return $this->driverOutputResourceUri;
+  }
+  /**
+   * @param DriverSchedulingConfig
+   */
+  public function setDriverSchedulingConfig(DriverSchedulingConfig $driverSchedulingConfig)
+  {
+    $this->driverSchedulingConfig = $driverSchedulingConfig;
+  }
+  /**
+   * @return DriverSchedulingConfig
+   */
+  public function getDriverSchedulingConfig()
+  {
+    return $this->driverSchedulingConfig;
   }
   /**
    * @param HadoopJob
