@@ -19,9 +19,36 @@ namespace Google\Service\CloudSearch;
 
 class DynamiteMessagesScoringInfo extends \Google\Model
 {
+  public $finalScore;
+  public $freshnessScore;
+  public $joinedSpaceAffinityScore;
   public $messageAgeInDays;
   public $topicalityScore;
 
+  public function setFinalScore($finalScore)
+  {
+    $this->finalScore = $finalScore;
+  }
+  public function getFinalScore()
+  {
+    return $this->finalScore;
+  }
+  public function setFreshnessScore($freshnessScore)
+  {
+    $this->freshnessScore = $freshnessScore;
+  }
+  public function getFreshnessScore()
+  {
+    return $this->freshnessScore;
+  }
+  public function setJoinedSpaceAffinityScore($joinedSpaceAffinityScore)
+  {
+    $this->joinedSpaceAffinityScore = $joinedSpaceAffinityScore;
+  }
+  public function getJoinedSpaceAffinityScore()
+  {
+    return $this->joinedSpaceAffinityScore;
+  }
   public function setMessageAgeInDays($messageAgeInDays)
   {
     $this->messageAgeInDays = $messageAgeInDays;

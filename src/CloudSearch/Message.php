@@ -127,6 +127,10 @@ class Message extends \Google\Collection
   /**
    * @var string
    */
+  public $richTextFormattingType;
+  /**
+   * @var string
+   */
   public $secondaryMessageKey;
   /**
    * @var string
@@ -642,6 +646,20 @@ class Message extends \Google\Collection
   public function getRetentionSettings()
   {
     return $this->retentionSettings;
+  }
+  /**
+   * @param string
+   */
+  public function setRichTextFormattingType($richTextFormattingType)
+  {
+    $this->richTextFormattingType = $richTextFormattingType;
+  }
+  /**
+   * @return string
+   */
+  public function getRichTextFormattingType()
+  {
+    return $this->richTextFormattingType;
   }
   /**
    * @param string
