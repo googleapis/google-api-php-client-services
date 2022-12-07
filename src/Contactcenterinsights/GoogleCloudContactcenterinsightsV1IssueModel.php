@@ -32,6 +32,10 @@ class GoogleCloudContactcenterinsightsV1IssueModel extends \Google\Model
   /**
    * @var string
    */
+  public $issueCount;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -85,6 +89,20 @@ class GoogleCloudContactcenterinsightsV1IssueModel extends \Google\Model
   public function getInputDataConfig()
   {
     return $this->inputDataConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setIssueCount($issueCount)
+  {
+    $this->issueCount = $issueCount;
+  }
+  /**
+   * @return string
+   */
+  public function getIssueCount()
+  {
+    return $this->issueCount;
   }
   /**
    * @param string
