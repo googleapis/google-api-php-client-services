@@ -44,7 +44,7 @@ class HangoutsChat extends \Google\Service
   /** Compose and send messages in Google Chat. */
   const CHAT_MESSAGES_CREATE =
       "https://www.googleapis.com/auth/chat.messages.create";
-  /** view messages and reactions in Google Chat. */
+  /** View messages and reactions in Google Chat. */
   const CHAT_MESSAGES_READONLY =
       "https://www.googleapis.com/auth/chat.messages.readonly";
 
