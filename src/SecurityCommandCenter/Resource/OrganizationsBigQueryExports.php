@@ -32,9 +32,9 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
 class OrganizationsBigQueryExports extends \Google\Service\Resource
 {
   /**
-   * Creates a big query export. (bigQueryExports.create)
+   * Creates a BigQuery export. (bigQueryExports.create)
    *
-   * @param string $parent Required. Resource name of the new big query export's
+   * @param string $parent Required. Resource name of the new BigQuery export's
    * parent. Its format is "organizations/[organization_id]",
    * "folders/[folder_id]", or "projects/[project_id]".
    * @param GoogleCloudSecuritycenterV1BigQueryExport $postBody
@@ -53,9 +53,9 @@ class OrganizationsBigQueryExports extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleCloudSecuritycenterV1BigQueryExport::class);
   }
   /**
-   * Deletes an existing big query export. (bigQueryExports.delete)
+   * Deletes an existing BigQuery export. (bigQueryExports.delete)
    *
-   * @param string $name Required. Name of the big query export to delete. Its
+   * @param string $name Required. Name of the BigQuery export to delete. Its
    * format is organizations/{organization}/bigQueryExports/{export_id},
    * folders/{folder}/bigQueryExports/{export_id}, or
    * projects/{project}/bigQueryExports/{export_id}
@@ -69,9 +69,9 @@ class OrganizationsBigQueryExports extends \Google\Service\Resource
     return $this->call('delete', [$params], SecuritycenterEmpty::class);
   }
   /**
-   * Gets a big query export. (bigQueryExports.get)
+   * Gets a BigQuery export. (bigQueryExports.get)
    *
-   * @param string $name Required. Name of the big query export to retrieve. Its
+   * @param string $name Required. Name of the BigQuery export to retrieve. Its
    * format is organizations/{organization}/bigQueryExports/{export_id},
    * folders/{folder}/bigQueryExports/{export_id}, or
    * projects/{project}/bigQueryExports/{export_id}

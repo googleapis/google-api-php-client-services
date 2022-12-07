@@ -32,10 +32,10 @@ class ProjectsSourcesFindingsExternalSystems extends \Google\Service\Resource
   /**
    * Updates external system. This is for a given finding. (externalSystems.patch)
    *
-   * @param string $name External System Name e.g. jira, demisto, etc. e.g.:
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `folders/1234/sources/5678/findings/123456/externalSystems/jira`
-   * `projects/1234/sources/5678/findings/123456/externalSystems/jira`
+   * @param string $name Full resource name of the external system, for example:
+   * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
+   * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
    * @param GoogleCloudSecuritycenterV1ExternalSystem $postBody
    * @param array $optParams Optional parameters.
    *

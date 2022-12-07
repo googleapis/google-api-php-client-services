@@ -41,8 +41,8 @@ class FoldersNotificationConfigs extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string configId Required. Unique identifier provided by the client
-   * within the parent scope. It must be between 1 and 128 characters, and
-   * contains alphanumeric characters, underscores or hyphens only.
+   * within the parent scope. It must be between 1 and 128 characters, and contain
+   * alphanumeric characters, underscores or hyphens only.
    * @return NotificationConfig
    */
   public function create($parent, NotificationConfig $postBody, $optParams = [])
