@@ -19,7 +19,7 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1ProcessorType extends \Google\Collection
 {
-  protected $collection_key = 'availableLocations';
+  protected $collection_key = 'sampleDocumentUris';
   /**
    * @var bool
    */
@@ -38,6 +38,10 @@ class GoogleCloudDocumentaiV1ProcessorType extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var string[]
+   */
+  public $sampleDocumentUris;
   /**
    * @var string
    */
@@ -112,6 +116,20 @@ class GoogleCloudDocumentaiV1ProcessorType extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSampleDocumentUris($sampleDocumentUris)
+  {
+    $this->sampleDocumentUris = $sampleDocumentUris;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSampleDocumentUris()
+  {
+    return $this->sampleDocumentUris;
   }
   /**
    * @param string
