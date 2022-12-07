@@ -258,9 +258,9 @@ class V1 extends \Google\Service\Resource
    * compute.vmExternalIpAccess * appengine.enforceServiceAccountActAsCheck *
    * gcp.resourceLocations * compute.trustedImageProjects *
    * compute.skipDefaultNetworkCreation * compute.requireOsLogin *
-   * compute.disableNestedVirtualization This RPC only returns either: * resources
-   * of types supported by [searchable asset types](https://cloud.google.com
-   * /asset-inventory/docs/supported-asset-types#searchable_asset_types), or * IAM
+   * compute.disableNestedVirtualization This RPC only returns either resources of
+   * types supported by [searchable asset types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types#searchable_asset_types), or IAM
    * policies. (v1.analyzeOrgPolicyGovernedAssets)
    *
    * @param string $scope Required. The organization to scope the request. Only
