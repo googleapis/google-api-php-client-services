@@ -26,6 +26,8 @@ class KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery extends \Google
   protected $evalDataDataType = 'array';
   protected $eventIdType = EventIdMessage::class;
   protected $eventIdDataType = '';
+  protected $neuralLocationAnnotatorType = KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator::class;
+  protected $neuralLocationAnnotatorDataType = '';
   protected $roleType = KnowledgeAnswersIntentQueryArgumentProvenancePreviousQueryRole::class;
   protected $roleDataType = '';
   /**
@@ -74,6 +76,20 @@ class KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery extends \Google
   public function getEventId()
   {
     return $this->eventId;
+  }
+  /**
+   * @param KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator
+   */
+  public function setNeuralLocationAnnotator(KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator $neuralLocationAnnotator)
+  {
+    $this->neuralLocationAnnotator = $neuralLocationAnnotator;
+  }
+  /**
+   * @return KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator
+   */
+  public function getNeuralLocationAnnotator()
+  {
+    return $this->neuralLocationAnnotator;
   }
   /**
    * @param KnowledgeAnswersIntentQueryArgumentProvenancePreviousQueryRole

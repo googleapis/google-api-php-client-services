@@ -40,8 +40,6 @@ class RepositoryWebrefEntityJoin extends \Google\Collection
   protected $linkInfoDataType = 'array';
   protected $nameInfoType = RepositoryWebrefGlobalNameInfo::class;
   protected $nameInfoDataType = 'array';
-  protected $nameSignalsType = RepositoryWebrefPreprocessingNameSignals::class;
-  protected $nameSignalsDataType = '';
   protected $refconNameInfoType = RepositoryWebrefRefconRefconNameInfo::class;
   protected $refconNameInfoDataType = 'array';
   protected $representationType = RepositoryWebrefDomainSpecificRepresentation::class;
@@ -186,20 +184,6 @@ class RepositoryWebrefEntityJoin extends \Google\Collection
   public function getNameInfo()
   {
     return $this->nameInfo;
-  }
-  /**
-   * @param RepositoryWebrefPreprocessingNameSignals
-   */
-  public function setNameSignals(RepositoryWebrefPreprocessingNameSignals $nameSignals)
-  {
-    $this->nameSignals = $nameSignals;
-  }
-  /**
-   * @return RepositoryWebrefPreprocessingNameSignals
-   */
-  public function getNameSignals()
-  {
-    return $this->nameSignals;
   }
   /**
    * @param RepositoryWebrefRefconRefconNameInfo[]

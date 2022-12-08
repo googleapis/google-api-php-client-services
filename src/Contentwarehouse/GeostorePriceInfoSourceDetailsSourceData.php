@@ -17,46 +17,30 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class QualityTimebasedLastSignificantUpdate extends \Google\Model
+class GeostorePriceInfoSourceDetailsSourceData extends \Google\Model
 {
-  protected $adjustmentInfoType = QualityTimebasedLastSignificantUpdateAdjustments::class;
-  protected $adjustmentInfoDataType = '';
   /**
    * @var string
    */
-  public $date;
+  public $clientProjectNumber;
   /**
    * @var string
    */
   public $source;
 
   /**
-   * @param QualityTimebasedLastSignificantUpdateAdjustments
-   */
-  public function setAdjustmentInfo(QualityTimebasedLastSignificantUpdateAdjustments $adjustmentInfo)
-  {
-    $this->adjustmentInfo = $adjustmentInfo;
-  }
-  /**
-   * @return QualityTimebasedLastSignificantUpdateAdjustments
-   */
-  public function getAdjustmentInfo()
-  {
-    return $this->adjustmentInfo;
-  }
-  /**
    * @param string
    */
-  public function setDate($date)
+  public function setClientProjectNumber($clientProjectNumber)
   {
-    $this->date = $date;
+    $this->clientProjectNumber = $clientProjectNumber;
   }
   /**
    * @return string
    */
-  public function getDate()
+  public function getClientProjectNumber()
   {
-    return $this->date;
+    return $this->clientProjectNumber;
   }
   /**
    * @param string
@@ -75,4 +59,4 @@ class QualityTimebasedLastSignificantUpdate extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(QualityTimebasedLastSignificantUpdate::class, 'Google_Service_Contentwarehouse_QualityTimebasedLastSignificantUpdate');
+class_alias(GeostorePriceInfoSourceDetailsSourceData::class, 'Google_Service_Contentwarehouse_GeostorePriceInfoSourceDetailsSourceData');

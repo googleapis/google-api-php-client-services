@@ -23,6 +23,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $acceleratedShoppingSignalDataType = '';
   protected $chromeCountsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $chromeCountsDataType = '';
+  protected $instantNavboostType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $instantNavboostDataType = '';
   protected $localypType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $localypDataType = '';
   /**
@@ -85,6 +87,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getChromeCounts()
   {
     return $this->chromeCounts;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setInstantNavboost(IndexingDocjoinerDataVersionVersionInfo $instantNavboost)
+  {
+    $this->instantNavboost = $instantNavboost;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getInstantNavboost()
+  {
+    return $this->instantNavboost;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

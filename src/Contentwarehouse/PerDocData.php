@@ -44,7 +44,6 @@ class PerDocData extends \Google\Collection
         "scaledLinkAgeSpamScore" => "ScaledLinkAgeSpamScore",
         "scaledSpamScoreEric" => "ScaledSpamScoreEric",
         "scaledSpamScoreYoram" => "ScaledSpamScoreYoram",
-        "scienceData" => "ScienceData",
         "spamWordScore" => "SpamWordScore",
         "tagPageScore" => "TagPageScore",
         "toolBarData" => "ToolBarData",
@@ -130,8 +129,6 @@ class PerDocData extends \Google\Collection
    * @var int
    */
   public $scaledSpamScoreYoram;
-  protected $scienceDataType = SciencePerDocData::class;
-  protected $scienceDataDataType = '';
   /**
    * @var int
    */
@@ -392,6 +389,8 @@ class PerDocData extends \Google\Collection
   protected $spamCookbookActionDataType = '';
   protected $spamMuppetSignalsType = SpamMuppetjoinsMuppetSignals::class;
   protected $spamMuppetSignalsDataType = '';
+  protected $spambrainDataType = SpamBrainData::class;
+  protected $spambrainDataDataType = '';
   /**
    * @var float
    */
@@ -794,20 +793,6 @@ class PerDocData extends \Google\Collection
   public function getScaledSpamScoreYoram()
   {
     return $this->scaledSpamScoreYoram;
-  }
-  /**
-   * @param SciencePerDocData
-   */
-  public function setScienceData(SciencePerDocData $scienceData)
-  {
-    $this->scienceData = $scienceData;
-  }
-  /**
-   * @return SciencePerDocData
-   */
-  public function getScienceData()
-  {
-    return $this->scienceData;
   }
   /**
    * @param int
@@ -1942,6 +1927,20 @@ class PerDocData extends \Google\Collection
   public function getSpamMuppetSignals()
   {
     return $this->spamMuppetSignals;
+  }
+  /**
+   * @param SpamBrainData
+   */
+  public function setSpambrainData(SpamBrainData $spambrainData)
+  {
+    $this->spambrainData = $spambrainData;
+  }
+  /**
+   * @return SpamBrainData
+   */
+  public function getSpambrainData()
+  {
+    return $this->spambrainData;
   }
   /**
    * @param float

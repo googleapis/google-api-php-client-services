@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiLoggingOnlyData extends \Google\Model
 {
   /**
+   * @var int
+   */
+  public $accountIndex;
+  /**
    * @var string
    */
   public $acpVersion;
@@ -70,6 +74,20 @@ class AssistantApiLoggingOnlyData extends \Google\Model
    */
   public $virtualReleaseChannel;
 
+  /**
+   * @param int
+   */
+  public function setAccountIndex($accountIndex)
+  {
+    $this->accountIndex = $accountIndex;
+  }
+  /**
+   * @return int
+   */
+  public function getAccountIndex()
+  {
+    return $this->accountIndex;
+  }
   /**
    * @param string
    */

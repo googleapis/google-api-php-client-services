@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class StorageGraphBfgPolicyMetadata extends \Google\Collection
 {
-  protected $collection_key = 'lmsModificationsAllowed';
+  protected $collection_key = 'legalRemovalRegions';
   /**
    * @var string
    */
@@ -32,38 +32,8 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   protected $legalAllowedRegionsDataType = 'array';
   protected $legalRemovalRegionsType = KeGovernanceTypedRegions::class;
   protected $legalRemovalRegionsDataType = 'array';
-  /**
-   * @var string[]
-   */
-  public $lmsClientIdsAllowed;
-  /**
-   * @var bool
-   */
-  public $lmsIsEditorial;
-  /**
-   * @var string[]
-   */
-  public $lmsModificationsAllowed;
-  protected $lmsRegionsAllowedType = KeGovernanceTypedRegions::class;
-  protected $lmsRegionsAllowedDataType = '';
-  protected $lmsRegionsDisallowedType = KeGovernanceTypedRegions::class;
-  protected $lmsRegionsDisallowedDataType = '';
-  /**
-   * @var bool
-   */
-  public $lmsRequiresAttribution;
-  /**
-   * @var bool
-   */
-  public $lmsRequiresFirstPartyOnly;
-  /**
-   * @var bool
-   */
-  public $lmsRequiresLink;
-  /**
-   * @var bool
-   */
-  public $lmsRequiresShareAlike;
+  protected $lmsPolicyMetadataType = StorageGraphBfgLmsPolicyMetadata::class;
+  protected $lmsPolicyMetadataDataType = '';
   /**
    * @var string
    */
@@ -128,130 +98,18 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
     return $this->legalRemovalRegions;
   }
   /**
-   * @param string[]
+   * @param StorageGraphBfgLmsPolicyMetadata
    */
-  public function setLmsClientIdsAllowed($lmsClientIdsAllowed)
+  public function setLmsPolicyMetadata(StorageGraphBfgLmsPolicyMetadata $lmsPolicyMetadata)
   {
-    $this->lmsClientIdsAllowed = $lmsClientIdsAllowed;
+    $this->lmsPolicyMetadata = $lmsPolicyMetadata;
   }
   /**
-   * @return string[]
+   * @return StorageGraphBfgLmsPolicyMetadata
    */
-  public function getLmsClientIdsAllowed()
+  public function getLmsPolicyMetadata()
   {
-    return $this->lmsClientIdsAllowed;
-  }
-  /**
-   * @param bool
-   */
-  public function setLmsIsEditorial($lmsIsEditorial)
-  {
-    $this->lmsIsEditorial = $lmsIsEditorial;
-  }
-  /**
-   * @return bool
-   */
-  public function getLmsIsEditorial()
-  {
-    return $this->lmsIsEditorial;
-  }
-  /**
-   * @param string[]
-   */
-  public function setLmsModificationsAllowed($lmsModificationsAllowed)
-  {
-    $this->lmsModificationsAllowed = $lmsModificationsAllowed;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLmsModificationsAllowed()
-  {
-    return $this->lmsModificationsAllowed;
-  }
-  /**
-   * @param KeGovernanceTypedRegions
-   */
-  public function setLmsRegionsAllowed(KeGovernanceTypedRegions $lmsRegionsAllowed)
-  {
-    $this->lmsRegionsAllowed = $lmsRegionsAllowed;
-  }
-  /**
-   * @return KeGovernanceTypedRegions
-   */
-  public function getLmsRegionsAllowed()
-  {
-    return $this->lmsRegionsAllowed;
-  }
-  /**
-   * @param KeGovernanceTypedRegions
-   */
-  public function setLmsRegionsDisallowed(KeGovernanceTypedRegions $lmsRegionsDisallowed)
-  {
-    $this->lmsRegionsDisallowed = $lmsRegionsDisallowed;
-  }
-  /**
-   * @return KeGovernanceTypedRegions
-   */
-  public function getLmsRegionsDisallowed()
-  {
-    return $this->lmsRegionsDisallowed;
-  }
-  /**
-   * @param bool
-   */
-  public function setLmsRequiresAttribution($lmsRequiresAttribution)
-  {
-    $this->lmsRequiresAttribution = $lmsRequiresAttribution;
-  }
-  /**
-   * @return bool
-   */
-  public function getLmsRequiresAttribution()
-  {
-    return $this->lmsRequiresAttribution;
-  }
-  /**
-   * @param bool
-   */
-  public function setLmsRequiresFirstPartyOnly($lmsRequiresFirstPartyOnly)
-  {
-    $this->lmsRequiresFirstPartyOnly = $lmsRequiresFirstPartyOnly;
-  }
-  /**
-   * @return bool
-   */
-  public function getLmsRequiresFirstPartyOnly()
-  {
-    return $this->lmsRequiresFirstPartyOnly;
-  }
-  /**
-   * @param bool
-   */
-  public function setLmsRequiresLink($lmsRequiresLink)
-  {
-    $this->lmsRequiresLink = $lmsRequiresLink;
-  }
-  /**
-   * @return bool
-   */
-  public function getLmsRequiresLink()
-  {
-    return $this->lmsRequiresLink;
-  }
-  /**
-   * @param bool
-   */
-  public function setLmsRequiresShareAlike($lmsRequiresShareAlike)
-  {
-    $this->lmsRequiresShareAlike = $lmsRequiresShareAlike;
-  }
-  /**
-   * @return bool
-   */
-  public function getLmsRequiresShareAlike()
-  {
-    return $this->lmsRequiresShareAlike;
+    return $this->lmsPolicyMetadata;
   }
   /**
    * @param string

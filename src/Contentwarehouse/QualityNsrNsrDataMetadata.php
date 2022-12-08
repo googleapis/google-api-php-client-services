@@ -17,13 +17,58 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class QualityNsrNsrDataMetadata extends \Google\Model
+class QualityNsrNsrDataMetadata extends \Google\Collection
 {
+  protected $collection_key = 'raffiaLookupKeys';
+  /**
+   * @var int[]
+   */
+  public $goldmineLookupKeyPerField;
+  /**
+   * @var string[]
+   */
+  public $goldmineLookupKeys;
   /**
    * @var string
    */
   public $raffiaLookupKey;
+  /**
+   * @var int[]
+   */
+  public $raffiaLookupKeyPerField;
+  /**
+   * @var string[]
+   */
+  public $raffiaLookupKeys;
 
+  /**
+   * @param int[]
+   */
+  public function setGoldmineLookupKeyPerField($goldmineLookupKeyPerField)
+  {
+    $this->goldmineLookupKeyPerField = $goldmineLookupKeyPerField;
+  }
+  /**
+   * @return int[]
+   */
+  public function getGoldmineLookupKeyPerField()
+  {
+    return $this->goldmineLookupKeyPerField;
+  }
+  /**
+   * @param string[]
+   */
+  public function setGoldmineLookupKeys($goldmineLookupKeys)
+  {
+    $this->goldmineLookupKeys = $goldmineLookupKeys;
+  }
+  /**
+   * @return string[]
+   */
+  public function getGoldmineLookupKeys()
+  {
+    return $this->goldmineLookupKeys;
+  }
   /**
    * @param string
    */
@@ -37,6 +82,34 @@ class QualityNsrNsrDataMetadata extends \Google\Model
   public function getRaffiaLookupKey()
   {
     return $this->raffiaLookupKey;
+  }
+  /**
+   * @param int[]
+   */
+  public function setRaffiaLookupKeyPerField($raffiaLookupKeyPerField)
+  {
+    $this->raffiaLookupKeyPerField = $raffiaLookupKeyPerField;
+  }
+  /**
+   * @return int[]
+   */
+  public function getRaffiaLookupKeyPerField()
+  {
+    return $this->raffiaLookupKeyPerField;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRaffiaLookupKeys($raffiaLookupKeys)
+  {
+    $this->raffiaLookupKeys = $raffiaLookupKeys;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRaffiaLookupKeys()
+  {
+    return $this->raffiaLookupKeys;
   }
 }
 

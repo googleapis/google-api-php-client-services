@@ -78,6 +78,8 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
    * @var string
    */
   public $iconUrlThumbnail;
+  protected $imageDataType = QualityCalypsoAppsUniversalImageData::class;
+  protected $imageDataDataType = '';
   /**
    * @var bool
    */
@@ -432,6 +434,20 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   public function getIconUrlThumbnail()
   {
     return $this->iconUrlThumbnail;
+  }
+  /**
+   * @param QualityCalypsoAppsUniversalImageData
+   */
+  public function setImageData(QualityCalypsoAppsUniversalImageData $imageData)
+  {
+    $this->imageData = $imageData;
+  }
+  /**
+   * @return QualityCalypsoAppsUniversalImageData
+   */
+  public function getImageData()
+  {
+    return $this->imageData;
   }
   /**
    * @param bool

@@ -25,6 +25,10 @@ class FatcatCompactTaxonomicClassification extends \Google\Collection
   /**
    * @var string
    */
+  public $classifierVersion;
+  /**
+   * @var string
+   */
   public $taxonomy;
   /**
    * @var string
@@ -44,6 +48,20 @@ class FatcatCompactTaxonomicClassification extends \Google\Collection
   public function getCategory()
   {
     return $this->category;
+  }
+  /**
+   * @param string
+   */
+  public function setClassifierVersion($classifierVersion)
+  {
+    $this->classifierVersion = $classifierVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getClassifierVersion()
+  {
+    return $this->classifierVersion;
   }
   /**
    * @param string

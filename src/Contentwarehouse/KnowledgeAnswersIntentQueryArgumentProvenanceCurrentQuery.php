@@ -22,6 +22,8 @@ class KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery extends \Google\
   protected $collection_key = 'evalData';
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = 'array';
+  protected $neuralLocationAnnotatorType = KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator::class;
+  protected $neuralLocationAnnotatorDataType = '';
 
   /**
    * @param NlpSemanticParsingAnnotationEvalData[]
@@ -36,6 +38,20 @@ class KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery extends \Google\
   public function getEvalData()
   {
     return $this->evalData;
+  }
+  /**
+   * @param KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator
+   */
+  public function setNeuralLocationAnnotator(KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator $neuralLocationAnnotator)
+  {
+    $this->neuralLocationAnnotator = $neuralLocationAnnotator;
+  }
+  /**
+   * @return KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator
+   */
+  public function getNeuralLocationAnnotator()
+  {
+    return $this->neuralLocationAnnotator;
   }
 }
 

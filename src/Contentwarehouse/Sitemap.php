@@ -32,6 +32,8 @@ class Sitemap extends \Google\Collection
   protected $targetGroupsDataType = 'array';
   protected $deprecatedTargetType = SitemapDEPRECATEDTarget::class;
   protected $deprecatedTargetDataType = 'array';
+  protected $pageAnchorsDocInfoType = SdrPageAnchorsDocInfo::class;
+  protected $pageAnchorsDocInfoDataType = '';
   /**
    * @var bool
    */
@@ -92,6 +94,20 @@ class Sitemap extends \Google\Collection
   public function getDeprecatedTarget()
   {
     return $this->deprecatedTarget;
+  }
+  /**
+   * @param SdrPageAnchorsDocInfo
+   */
+  public function setPageAnchorsDocInfo(SdrPageAnchorsDocInfo $pageAnchorsDocInfo)
+  {
+    $this->pageAnchorsDocInfo = $pageAnchorsDocInfo;
+  }
+  /**
+   * @return SdrPageAnchorsDocInfo
+   */
+  public function getPageAnchorsDocInfo()
+  {
+    return $this->pageAnchorsDocInfo;
   }
   /**
    * @param bool

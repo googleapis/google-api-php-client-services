@@ -40,6 +40,7 @@ class ScienceCitation extends \Google\Collection
         "citationSource" => "CitationSource",
         "citationSourceUrl" => "CitationSourceUrl",
         "citationSrc" => "CitationSrc",
+        "clearedReason" => "ClearedReason",
         "clusterDiscoveryDate" => "ClusterDiscoveryDate",
         "conferenceId" => "ConferenceId",
         "conferenceNumber" => "ConferenceNumber",
@@ -192,6 +193,10 @@ class ScienceCitation extends \Google\Collection
    * @var string
    */
   public $citationSrc;
+  /**
+   * @var string
+   */
+  public $clearedReason;
   /**
    * @var string
    */
@@ -786,6 +791,20 @@ class ScienceCitation extends \Google\Collection
   public function getCitationSrc()
   {
     return $this->citationSrc;
+  }
+  /**
+   * @param string
+   */
+  public function setClearedReason($clearedReason)
+  {
+    $this->clearedReason = $clearedReason;
+  }
+  /**
+   * @return string
+   */
+  public function getClearedReason()
+  {
+    return $this->clearedReason;
   }
   /**
    * @param string

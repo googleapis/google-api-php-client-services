@@ -38,8 +38,6 @@ class RepositoryWebrefMdvcMetadata extends \Google\Collection
   public $isSynthetic;
   protected $perVerticalType = RepositoryWebrefMdvcMetadataPerVertical::class;
   protected $perVerticalDataType = 'array';
-  protected $queryToLongRunningStoryDatasetType = NewsReconServiceLrsQ2lrs2QueryToLrsDataset::class;
-  protected $queryToLongRunningStoryDatasetDataType = '';
   /**
    * @var int
    */
@@ -114,20 +112,6 @@ class RepositoryWebrefMdvcMetadata extends \Google\Collection
   public function getPerVertical()
   {
     return $this->perVertical;
-  }
-  /**
-   * @param NewsReconServiceLrsQ2lrs2QueryToLrsDataset
-   */
-  public function setQueryToLongRunningStoryDataset(NewsReconServiceLrsQ2lrs2QueryToLrsDataset $queryToLongRunningStoryDataset)
-  {
-    $this->queryToLongRunningStoryDataset = $queryToLongRunningStoryDataset;
-  }
-  /**
-   * @return NewsReconServiceLrsQ2lrs2QueryToLrsDataset
-   */
-  public function getQueryToLongRunningStoryDataset()
-  {
-    return $this->queryToLongRunningStoryDataset;
   }
   /**
    * @param int
