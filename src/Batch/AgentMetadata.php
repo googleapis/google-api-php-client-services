@@ -30,6 +30,10 @@ class AgentMetadata extends \Google\Model
   /**
    * @var string
    */
+  public $imageVersion;
+  /**
+   * @var string
+   */
   public $instance;
   /**
    * @var string
@@ -75,6 +79,20 @@ class AgentMetadata extends \Google\Model
   public function getCreator()
   {
     return $this->creator;
+  }
+  /**
+   * @param string
+   */
+  public function setImageVersion($imageVersion)
+  {
+    $this->imageVersion = $imageVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getImageVersion()
+  {
+    return $this->imageVersion;
   }
   /**
    * @param string
