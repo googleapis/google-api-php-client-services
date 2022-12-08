@@ -40,6 +40,7 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * @param PrivateConnection $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool force Optional. If set to true, will skip validations.
    * @opt_param string privateConnectionId Required. The private connectivity
    * identifier.
    * @opt_param string requestId Optional. A request ID to identify requests.
