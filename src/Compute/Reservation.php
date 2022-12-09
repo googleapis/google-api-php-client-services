@@ -44,10 +44,6 @@ class Reservation extends \Google\Model
    */
   public $name;
   /**
-   * @var string[]
-   */
-  public $resourcePolicies;
-  /**
    * @var bool
    */
   public $satisfiesPzs;
@@ -155,20 +151,6 @@ class Reservation extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param string[]
-   */
-  public function setResourcePolicies($resourcePolicies)
-  {
-    $this->resourcePolicies = $resourcePolicies;
-  }
-  /**
-   * @return string[]
-   */
-  public function getResourcePolicies()
-  {
-    return $this->resourcePolicies;
   }
   /**
    * @param bool
