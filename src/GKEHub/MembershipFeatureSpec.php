@@ -21,6 +21,10 @@ class MembershipFeatureSpec extends \Google\Model
 {
   protected $configmanagementType = ConfigManagementMembershipSpec::class;
   protected $configmanagementDataType = '';
+  /**
+   * @var bool
+   */
+  public $fleetInherited;
   protected $fleetobservabilityType = FleetObservabilityMembershipSpec::class;
   protected $fleetobservabilityDataType = '';
   protected $identityserviceType = IdentityServiceMembershipSpec::class;
@@ -41,6 +45,20 @@ class MembershipFeatureSpec extends \Google\Model
   public function getConfigmanagement()
   {
     return $this->configmanagement;
+  }
+  /**
+   * @param bool
+   */
+  public function setFleetInherited($fleetInherited)
+  {
+    $this->fleetInherited = $fleetInherited;
+  }
+  /**
+   * @return bool
+   */
+  public function getFleetInherited()
+  {
+    return $this->fleetInherited;
   }
   /**
    * @param FleetObservabilityMembershipSpec
