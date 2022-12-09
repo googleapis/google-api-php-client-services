@@ -33,6 +33,10 @@ class GoogleCloudChannelV1RenewalSettings extends \Google\Model
    * @var bool
    */
   public $resizeUnitCount;
+  /**
+   * @var string
+   */
+  public $scheduledRenewalOffer;
 
   /**
    * @param bool
@@ -89,6 +93,20 @@ class GoogleCloudChannelV1RenewalSettings extends \Google\Model
   public function getResizeUnitCount()
   {
     return $this->resizeUnitCount;
+  }
+  /**
+   * @param string
+   */
+  public function setScheduledRenewalOffer($scheduledRenewalOffer)
+  {
+    $this->scheduledRenewalOffer = $scheduledRenewalOffer;
+  }
+  /**
+   * @return string
+   */
+  public function getScheduledRenewalOffer()
+  {
+    return $this->scheduledRenewalOffer;
   }
 }
 
