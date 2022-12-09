@@ -23,6 +23,10 @@ class AddSubnetworkRequest extends \Google\Collection
   /**
    * @var bool
    */
+  public $allowSubnetCidrRoutesOverlap;
+  /**
+   * @var bool
+   */
   public $checkServiceNetworkingUsePermission;
   /**
    * @var string
@@ -83,6 +87,20 @@ class AddSubnetworkRequest extends \Google\Collection
    */
   public $useCustomComputeIdempotencyWindow;
 
+  /**
+   * @param bool
+   */
+  public function setAllowSubnetCidrRoutesOverlap($allowSubnetCidrRoutesOverlap)
+  {
+    $this->allowSubnetCidrRoutesOverlap = $allowSubnetCidrRoutesOverlap;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowSubnetCidrRoutesOverlap()
+  {
+    return $this->allowSubnetCidrRoutesOverlap;
+  }
   /**
    * @param bool
    */
