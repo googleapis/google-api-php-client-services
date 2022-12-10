@@ -112,6 +112,10 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredServiceExternalIpsConfigDataType = '';
   protected $desiredShieldedNodesType = ShieldedNodes::class;
   protected $desiredShieldedNodesDataType = '';
+  /**
+   * @var string
+   */
+  public $desiredStackType;
   protected $desiredVerticalPodAutoscalingType = VerticalPodAutoscaling::class;
   protected $desiredVerticalPodAutoscalingDataType = '';
   protected $desiredWorkloadIdentityConfigType = WorkloadIdentityConfig::class;
@@ -620,6 +624,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredShieldedNodes()
   {
     return $this->desiredShieldedNodes;
+  }
+  /**
+   * @param string
+   */
+  public function setDesiredStackType($desiredStackType)
+  {
+    $this->desiredStackType = $desiredStackType;
+  }
+  /**
+   * @return string
+   */
+  public function getDesiredStackType()
+  {
+    return $this->desiredStackType;
   }
   /**
    * @param VerticalPodAutoscaling
