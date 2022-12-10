@@ -21,6 +21,8 @@ class Subscription extends \Google\Model
 {
   protected $deliveryConfigType = DeliveryConfig::class;
   protected $deliveryConfigDataType = '';
+  protected $exportConfigType = ExportConfig::class;
+  protected $exportConfigDataType = '';
   /**
    * @var string
    */
@@ -43,6 +45,20 @@ class Subscription extends \Google\Model
   public function getDeliveryConfig()
   {
     return $this->deliveryConfig;
+  }
+  /**
+   * @param ExportConfig
+   */
+  public function setExportConfig(ExportConfig $exportConfig)
+  {
+    $this->exportConfig = $exportConfig;
+  }
+  /**
+   * @return ExportConfig
+   */
+  public function getExportConfig()
+  {
+    return $this->exportConfig;
   }
   /**
    * @param string
