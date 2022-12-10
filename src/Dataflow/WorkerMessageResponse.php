@@ -25,6 +25,8 @@ class WorkerMessageResponse extends \Google\Model
   protected $workerMetricsResponseDataType = '';
   protected $workerShutdownNoticeResponseType = WorkerShutdownNoticeResponse::class;
   protected $workerShutdownNoticeResponseDataType = '';
+  protected $workerThreadScalingReportResponseType = WorkerThreadScalingReportResponse::class;
+  protected $workerThreadScalingReportResponseDataType = '';
 
   /**
    * @param WorkerHealthReportResponse
@@ -67,6 +69,20 @@ class WorkerMessageResponse extends \Google\Model
   public function getWorkerShutdownNoticeResponse()
   {
     return $this->workerShutdownNoticeResponse;
+  }
+  /**
+   * @param WorkerThreadScalingReportResponse
+   */
+  public function setWorkerThreadScalingReportResponse(WorkerThreadScalingReportResponse $workerThreadScalingReportResponse)
+  {
+    $this->workerThreadScalingReportResponse = $workerThreadScalingReportResponse;
+  }
+  /**
+   * @return WorkerThreadScalingReportResponse
+   */
+  public function getWorkerThreadScalingReportResponse()
+  {
+    return $this->workerThreadScalingReportResponse;
   }
 }
 
