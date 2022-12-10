@@ -47,6 +47,12 @@ class HangoutsChat extends \Google\Service
   /** View messages and reactions in Google Chat. */
   const CHAT_MESSAGES_READONLY =
       "https://www.googleapis.com/auth/chat.messages.readonly";
+  /** Create conversations and spaces and view or update metadata (including history settings) in Google Chat. */
+  const CHAT_SPACES =
+      "https://www.googleapis.com/auth/chat.spaces";
+  /** View chat and spaces in Google Chat. */
+  const CHAT_SPACES_READONLY =
+      "https://www.googleapis.com/auth/chat.spaces.readonly";
 
   public $dms;
   public $dms_conversations;
