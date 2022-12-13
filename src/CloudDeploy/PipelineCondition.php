@@ -23,6 +23,8 @@ class PipelineCondition extends \Google\Model
   protected $pipelineReadyConditionDataType = '';
   protected $targetsPresentConditionType = TargetsPresentCondition::class;
   protected $targetsPresentConditionDataType = '';
+  protected $targetsTypeConditionType = TargetsTypeCondition::class;
+  protected $targetsTypeConditionDataType = '';
 
   /**
    * @param PipelineReadyCondition
@@ -51,6 +53,20 @@ class PipelineCondition extends \Google\Model
   public function getTargetsPresentCondition()
   {
     return $this->targetsPresentCondition;
+  }
+  /**
+   * @param TargetsTypeCondition
+   */
+  public function setTargetsTypeCondition(TargetsTypeCondition $targetsTypeCondition)
+  {
+    $this->targetsTypeCondition = $targetsTypeCondition;
+  }
+  /**
+   * @return TargetsTypeCondition
+   */
+  public function getTargetsTypeCondition()
+  {
+    return $this->targetsTypeCondition;
   }
 }
 
