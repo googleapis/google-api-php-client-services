@@ -196,7 +196,12 @@ class ProjectsSourcesFindings extends \Google\Service\Resource
   /**
    * Updates the state of a finding. (findings.setState)
    *
-   * @param string $name
+   * @param string $name Required. The [relative resource name](https://cloud.goog
+   * le.com/apis/design/resource_names#relative_resource_name) of the finding.
+   * Example:
+   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+   * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
    * @param SetFindingStateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Finding

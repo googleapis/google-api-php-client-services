@@ -41,8 +41,8 @@ class ProjectsNotificationConfigs extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string configId Required. Unique identifier provided by the client
-   * within the parent scope. It must be between 1 and 128 characters, and contain
-   * alphanumeric characters, underscores or hyphens only.
+   * within the parent scope. It must be between 1 and 128 characters and contain
+   * alphanumeric characters, underscores, or hyphens only.
    * @return NotificationConfig
    */
   public function create($parent, NotificationConfig $postBody, $optParams = [])
@@ -87,8 +87,8 @@ class ProjectsNotificationConfigs extends \Google\Service\Resource
    * Lists notification configs.
    * (notificationConfigs.listProjectsNotificationConfigs)
    *
-   * @param string $parent Required. Name of the parent to list notification
-   * configs. Its format is "organizations/[organization_id]",
+   * @param string $parent Required. The name of the parent in which to list the
+   * notification configurations. Its format is "organizations/[organization_id]",
    * "folders/[folder_id]", or "projects/[project_id]".
    * @param array $optParams Optional parameters.
    *

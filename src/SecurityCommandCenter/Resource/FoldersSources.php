@@ -34,7 +34,7 @@ class FoldersSources extends \Google\Service\Resource
    *
    * @param string $parent Required. Resource name of the parent of sources to
    * list. Its format should be "organizations/[organization_id],
-   * folders/[folder_id], or projects/[project_id]".
+   * "folders/[folder_id]", or "projects/[project_id]".
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of results to return in a single

@@ -34,8 +34,8 @@ class FoldersBigQueryExports extends \Google\Service\Resource
   /**
    * Creates a BigQuery export. (bigQueryExports.create)
    *
-   * @param string $parent Required. Resource name of the new BigQuery export's
-   * parent. Its format is "organizations/[organization_id]",
+   * @param string $parent Required. The name of the parent resource of the new
+   * BigQuery export. Its format is "organizations/[organization_id]",
    * "folders/[folder_id]", or "projects/[project_id]".
    * @param GoogleCloudSecuritycenterV1BigQueryExport $postBody
    * @param array $optParams Optional parameters.
@@ -55,7 +55,7 @@ class FoldersBigQueryExports extends \Google\Service\Resource
   /**
    * Deletes an existing BigQuery export. (bigQueryExports.delete)
    *
-   * @param string $name Required. Name of the BigQuery export to delete. Its
+   * @param string $name Required. The name of the BigQuery export to delete. Its
    * format is organizations/{organization}/bigQueryExports/{export_id},
    * folders/{folder}/bigQueryExports/{export_id}, or
    * projects/{project}/bigQueryExports/{export_id}
