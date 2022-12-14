@@ -40,6 +40,10 @@ class AgentMetadata extends \Google\Model
    */
   public $instanceId;
   /**
+   * @var bool
+   */
+  public $instancePreemptionNoticeReceived;
+  /**
    * @var string[]
    */
   public $osRelease;
@@ -121,6 +125,20 @@ class AgentMetadata extends \Google\Model
   public function getInstanceId()
   {
     return $this->instanceId;
+  }
+  /**
+   * @param bool
+   */
+  public function setInstancePreemptionNoticeReceived($instancePreemptionNoticeReceived)
+  {
+    $this->instancePreemptionNoticeReceived = $instancePreemptionNoticeReceived;
+  }
+  /**
+   * @return bool
+   */
+  public function getInstancePreemptionNoticeReceived()
+  {
+    return $this->instancePreemptionNoticeReceived;
   }
   /**
    * @param string[]
