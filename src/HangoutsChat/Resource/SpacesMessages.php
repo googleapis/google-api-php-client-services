@@ -43,7 +43,10 @@ class SpacesMessages extends \Google\Service\Resource
    * access to certain features. [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` or `chat.messages.create` authorization scope.
-   * (messages.create)
+   * Because Chat provides authentication for
+   * [webhooks](https://developers.google.com/chat/how-tos/webhooks) as part of
+   * the URL that's generated when a webhook is registered, webhooks can create
+   * messages without a service account or user authentication. (messages.create)
    *
    * @param string $parent Required. The resource name of the space in which to
    * create a message. Format: spaces/{space}
