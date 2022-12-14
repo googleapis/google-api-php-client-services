@@ -41,6 +41,8 @@ class QualityPreviewRanklabSnippet extends \Google\Model
   protected $queryFeaturesDataType = '';
   protected $queryTermCoverageFeaturesType = QualityPreviewSnippetQueryTermCoverageFeatures::class;
   protected $queryTermCoverageFeaturesDataType = '';
+  protected $radishFeaturesType = QualityPreviewSnippetRadishFeatures::class;
+  protected $radishFeaturesDataType = '';
   protected $snippetInfoType = QualityPreviewChosenSnippetInfo::class;
   protected $snippetInfoDataType = '';
 
@@ -169,6 +171,20 @@ class QualityPreviewRanklabSnippet extends \Google\Model
   public function getQueryTermCoverageFeatures()
   {
     return $this->queryTermCoverageFeatures;
+  }
+  /**
+   * @param QualityPreviewSnippetRadishFeatures
+   */
+  public function setRadishFeatures(QualityPreviewSnippetRadishFeatures $radishFeatures)
+  {
+    $this->radishFeatures = $radishFeatures;
+  }
+  /**
+   * @return QualityPreviewSnippetRadishFeatures
+   */
+  public function getRadishFeatures()
+  {
+    return $this->radishFeatures;
   }
   /**
    * @param QualityPreviewChosenSnippetInfo

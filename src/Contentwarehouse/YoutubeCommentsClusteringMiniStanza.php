@@ -203,6 +203,10 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    */
   public $videoTimestamps;
   public $wordEntropy;
+  /**
+   * @var string
+   */
+  public $ytAuthorChannelId;
   public $ytCommentQualityScore;
   public $ytCommentQualityScore2;
   public $ytCommentQualityScore3;
@@ -984,6 +988,20 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public function getWordEntropy()
   {
     return $this->wordEntropy;
+  }
+  /**
+   * @param string
+   */
+  public function setYtAuthorChannelId($ytAuthorChannelId)
+  {
+    $this->ytAuthorChannelId = $ytAuthorChannelId;
+  }
+  /**
+   * @return string
+   */
+  public function getYtAuthorChannelId()
+  {
+    return $this->ytAuthorChannelId;
   }
   public function setYtCommentQualityScore($ytCommentQualityScore)
   {

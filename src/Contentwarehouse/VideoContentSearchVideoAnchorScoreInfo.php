@@ -24,6 +24,10 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   protected $anchorCommonFeatureSetDataType = '';
   protected $attachmentsType = Proto2BridgeMessageSet::class;
   protected $attachmentsDataType = '';
+  /**
+   * @var string
+   */
+  public $babelCheckpointPath;
   protected $captionEntityAnchorFeaturesType = VideoContentSearchCaptionEntityAnchorFeatures::class;
   protected $captionEntityAnchorFeaturesDataType = '';
   protected $captionSpanAnchorFeaturesType = VideoContentSearchCaptionSpanAnchorFeatures::class;
@@ -58,6 +62,10 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   protected $multimodalTopicFeaturesDataType = '';
   protected $multimodalTopicTrainingFeaturesType = VideoContentSearchMultimodalTopicTrainingFeatures::class;
   protected $multimodalTopicTrainingFeaturesDataType = '';
+  /**
+   * @var float[]
+   */
+  public $normalizedBabelEmbedding;
   protected $ocrAnchorFeatureType = VideoContentSearchOnScreenTextFeature::class;
   protected $ocrAnchorFeatureDataType = '';
   protected $ocrDescriptionTrainingDataAnchorFeaturesType = VideoContentSearchOcrDescriptionTrainingDataAnchorFeatures::class;
@@ -102,6 +110,20 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   public function getAttachments()
   {
     return $this->attachments;
+  }
+  /**
+   * @param string
+   */
+  public function setBabelCheckpointPath($babelCheckpointPath)
+  {
+    $this->babelCheckpointPath = $babelCheckpointPath;
+  }
+  /**
+   * @return string
+   */
+  public function getBabelCheckpointPath()
+  {
+    return $this->babelCheckpointPath;
   }
   /**
    * @param VideoContentSearchCaptionEntityAnchorFeatures
@@ -298,6 +320,20 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   public function getMultimodalTopicTrainingFeatures()
   {
     return $this->multimodalTopicTrainingFeatures;
+  }
+  /**
+   * @param float[]
+   */
+  public function setNormalizedBabelEmbedding($normalizedBabelEmbedding)
+  {
+    $this->normalizedBabelEmbedding = $normalizedBabelEmbedding;
+  }
+  /**
+   * @return float[]
+   */
+  public function getNormalizedBabelEmbedding()
+  {
+    return $this->normalizedBabelEmbedding;
   }
   /**
    * @param VideoContentSearchOnScreenTextFeature

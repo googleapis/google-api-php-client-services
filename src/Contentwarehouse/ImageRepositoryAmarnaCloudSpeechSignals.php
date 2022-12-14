@@ -21,6 +21,10 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * @var bool
+   */
+  public $duplicateOfYtS3Asr;
+  /**
    * @var string
    */
   public $langWithoutLocale;
@@ -33,6 +37,20 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
   protected $transcriptAsrType = PseudoVideoData::class;
   protected $transcriptAsrDataType = '';
 
+  /**
+   * @param bool
+   */
+  public function setDuplicateOfYtS3Asr($duplicateOfYtS3Asr)
+  {
+    $this->duplicateOfYtS3Asr = $duplicateOfYtS3Asr;
+  }
+  /**
+   * @return bool
+   */
+  public function getDuplicateOfYtS3Asr()
+  {
+    return $this->duplicateOfYtS3Asr;
+  }
   /**
    * @param string
    */

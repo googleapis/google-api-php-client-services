@@ -61,6 +61,10 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   public $productPopularity;
   protected $relevanceEmbeddingType = QualityRankembedMustangMustangRankEmbedInfo::class;
   protected $relevanceEmbeddingDataType = 'array';
+  /**
+   * @var string
+   */
+  public $weakGlobalProductClusterId;
 
   /**
    * @param ShoppingWebentityShoppingAnnotationProductRating
@@ -251,6 +255,20 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   public function getRelevanceEmbedding()
   {
     return $this->relevanceEmbedding;
+  }
+  /**
+   * @param string
+   */
+  public function setWeakGlobalProductClusterId($weakGlobalProductClusterId)
+  {
+    $this->weakGlobalProductClusterId = $weakGlobalProductClusterId;
+  }
+  /**
+   * @return string
+   */
+  public function getWeakGlobalProductClusterId()
+  {
+    return $this->weakGlobalProductClusterId;
   }
 }
 
