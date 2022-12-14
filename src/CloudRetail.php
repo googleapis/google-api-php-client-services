@@ -785,6 +785,10 @@ class CloudRetail extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'writeAsync' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
