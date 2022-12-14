@@ -795,7 +795,25 @@ class Dataproc extends \Google\Service
         'nodeGroups',
         [
           'methods' => [
-            'get' => [
+            'create' => [
+              'path' => 'v1/{+parent}/nodeGroups',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'nodeGroupId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [

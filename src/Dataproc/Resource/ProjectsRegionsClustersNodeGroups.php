@@ -32,6 +32,38 @@ use Google\Service\Dataproc\ResizeNodeGroupRequest;
 class ProjectsRegionsClustersNodeGroups extends \Google\Service\Resource
 {
   /**
+   * Creates a node group in a cluster. The returned Operation.metadata is
+   * NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/
+   * rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata). (nodeGroups.create)
+   *
+   * @param string $parent Required. The parent resource where this node group
+   * will be created. Format:
+   * projects/{project}/regions/{region}/clusters/{cluster}
+   * @param NodeGroup $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string nodeGroupId Optional. An optional node group ID. Generated
+   * if not specified.The ID must contain only letters (a-z, A-Z), numbers (0-9),
+   * underscores (_), and hyphens (-). Cannot begin or end with underscore or
+   * hyphen. Must consist of from 3 to 33 characters.
+   * @opt_param string requestId Optional. A unique ID used to identify the
+   * request. If the server receives two CreateNodeGroupRequest (https://cloud.goo
+   * gle.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dat
+   * aproc.v1.CreateNodeGroupRequests) with the same ID, the second request is
+   * ignored and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
+   * (-). The maximum length is 40 characters.
+   * @return Operation
+   */
+  public function create($parent, NodeGroup $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Operation::class);
+  }
+  /**
    * Gets the resource representation for a node group in a cluster.
    * (nodeGroups.get)
    *
