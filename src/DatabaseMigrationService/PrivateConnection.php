@@ -17,12 +17,8 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConnectionProfile extends \Google\Model
+class PrivateConnection extends \Google\Model
 {
-  protected $alloydbType = AlloyDbConnectionProfile::class;
-  protected $alloydbDataType = '';
-  protected $cloudsqlType = CloudSqlConnectionProfile::class;
-  protected $cloudsqlDataType = '';
   /**
    * @var string
    */
@@ -37,20 +33,10 @@ class ConnectionProfile extends \Google\Model
    * @var string[]
    */
   public $labels;
-  protected $mysqlType = MySqlConnectionProfile::class;
-  protected $mysqlDataType = '';
   /**
    * @var string
    */
   public $name;
-  protected $oracleType = OracleConnectionProfile::class;
-  protected $oracleDataType = '';
-  protected $postgresqlType = PostgreSqlConnectionProfile::class;
-  protected $postgresqlDataType = '';
-  /**
-   * @var string
-   */
-  public $provider;
   /**
    * @var string
    */
@@ -59,35 +45,9 @@ class ConnectionProfile extends \Google\Model
    * @var string
    */
   public $updateTime;
+  protected $vpcPeeringConfigType = VpcPeeringConfig::class;
+  protected $vpcPeeringConfigDataType = '';
 
-  /**
-   * @param AlloyDbConnectionProfile
-   */
-  public function setAlloydb(AlloyDbConnectionProfile $alloydb)
-  {
-    $this->alloydb = $alloydb;
-  }
-  /**
-   * @return AlloyDbConnectionProfile
-   */
-  public function getAlloydb()
-  {
-    return $this->alloydb;
-  }
-  /**
-   * @param CloudSqlConnectionProfile
-   */
-  public function setCloudsql(CloudSqlConnectionProfile $cloudsql)
-  {
-    $this->cloudsql = $cloudsql;
-  }
-  /**
-   * @return CloudSqlConnectionProfile
-   */
-  public function getCloudsql()
-  {
-    return $this->cloudsql;
-  }
   /**
    * @param string
    */
@@ -145,20 +105,6 @@ class ConnectionProfile extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param MySqlConnectionProfile
-   */
-  public function setMysql(MySqlConnectionProfile $mysql)
-  {
-    $this->mysql = $mysql;
-  }
-  /**
-   * @return MySqlConnectionProfile
-   */
-  public function getMysql()
-  {
-    return $this->mysql;
-  }
-  /**
    * @param string
    */
   public function setName($name)
@@ -171,48 +117,6 @@ class ConnectionProfile extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param OracleConnectionProfile
-   */
-  public function setOracle(OracleConnectionProfile $oracle)
-  {
-    $this->oracle = $oracle;
-  }
-  /**
-   * @return OracleConnectionProfile
-   */
-  public function getOracle()
-  {
-    return $this->oracle;
-  }
-  /**
-   * @param PostgreSqlConnectionProfile
-   */
-  public function setPostgresql(PostgreSqlConnectionProfile $postgresql)
-  {
-    $this->postgresql = $postgresql;
-  }
-  /**
-   * @return PostgreSqlConnectionProfile
-   */
-  public function getPostgresql()
-  {
-    return $this->postgresql;
-  }
-  /**
-   * @param string
-   */
-  public function setProvider($provider)
-  {
-    $this->provider = $provider;
-  }
-  /**
-   * @return string
-   */
-  public function getProvider()
-  {
-    return $this->provider;
   }
   /**
    * @param string
@@ -242,7 +146,21 @@ class ConnectionProfile extends \Google\Model
   {
     return $this->updateTime;
   }
+  /**
+   * @param VpcPeeringConfig
+   */
+  public function setVpcPeeringConfig(VpcPeeringConfig $vpcPeeringConfig)
+  {
+    $this->vpcPeeringConfig = $vpcPeeringConfig;
+  }
+  /**
+   * @return VpcPeeringConfig
+   */
+  public function getVpcPeeringConfig()
+  {
+    return $this->vpcPeeringConfig;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConnectionProfile::class, 'Google_Service_DatabaseMigrationService_ConnectionProfile');
+class_alias(PrivateConnection::class, 'Google_Service_DatabaseMigrationService_PrivateConnection');

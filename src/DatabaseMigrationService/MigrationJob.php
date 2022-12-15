@@ -19,6 +19,8 @@ namespace Google\Service\DatabaseMigrationService;
 
 class MigrationJob extends \Google\Model
 {
+  protected $conversionWorkspaceType = ConversionWorkspaceInfo::class;
+  protected $conversionWorkspaceDataType = '';
   /**
    * @var string
    */
@@ -49,6 +51,10 @@ class MigrationJob extends \Google\Model
   public $endTime;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var string
+   */
+  public $filter;
   /**
    * @var string[]
    */
@@ -86,6 +92,20 @@ class MigrationJob extends \Google\Model
   protected $vpcPeeringConnectivityType = VpcPeeringConnectivity::class;
   protected $vpcPeeringConnectivityDataType = '';
 
+  /**
+   * @param ConversionWorkspaceInfo
+   */
+  public function setConversionWorkspace(ConversionWorkspaceInfo $conversionWorkspace)
+  {
+    $this->conversionWorkspace = $conversionWorkspace;
+  }
+  /**
+   * @return ConversionWorkspaceInfo
+   */
+  public function getConversionWorkspace()
+  {
+    return $this->conversionWorkspace;
+  }
   /**
    * @param string
    */
@@ -211,6 +231,20 @@ class MigrationJob extends \Google\Model
   public function getError()
   {
     return $this->error;
+  }
+  /**
+   * @param string
+   */
+  public function setFilter($filter)
+  {
+    $this->filter = $filter;
+  }
+  /**
+   * @return string
+   */
+  public function getFilter()
+  {
+    return $this->filter;
   }
   /**
    * @param string[]

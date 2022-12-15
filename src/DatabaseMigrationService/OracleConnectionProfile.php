@@ -17,20 +17,18 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class PostgreSqlConnectionProfile extends \Google\Model
+class OracleConnectionProfile extends \Google\Model
 {
   /**
    * @var string
    */
-  public $cloudSqlId;
+  public $databaseService;
+  protected $forwardSshConnectivityType = ForwardSshTunnelConnectivity::class;
+  protected $forwardSshConnectivityDataType = '';
   /**
    * @var string
    */
   public $host;
-  /**
-   * @var string
-   */
-  public $networkArchitecture;
   /**
    * @var string
    */
@@ -43,12 +41,10 @@ class PostgreSqlConnectionProfile extends \Google\Model
    * @var int
    */
   public $port;
-  protected $privateServiceConnectConnectivityType = PrivateServiceConnectConnectivity::class;
-  protected $privateServiceConnectConnectivityDataType = '';
-  protected $sslType = SslConfig::class;
-  protected $sslDataType = '';
-  protected $staticIpConnectivityType = StaticIpConnectivity::class;
-  protected $staticIpConnectivityDataType = '';
+  protected $privateConnectivityType = PrivateConnectivity::class;
+  protected $privateConnectivityDataType = '';
+  protected $staticServiceIpConnectivityType = StaticServiceIpConnectivity::class;
+  protected $staticServiceIpConnectivityDataType = '';
   /**
    * @var string
    */
@@ -57,16 +53,30 @@ class PostgreSqlConnectionProfile extends \Google\Model
   /**
    * @param string
    */
-  public function setCloudSqlId($cloudSqlId)
+  public function setDatabaseService($databaseService)
   {
-    $this->cloudSqlId = $cloudSqlId;
+    $this->databaseService = $databaseService;
   }
   /**
    * @return string
    */
-  public function getCloudSqlId()
+  public function getDatabaseService()
   {
-    return $this->cloudSqlId;
+    return $this->databaseService;
+  }
+  /**
+   * @param ForwardSshTunnelConnectivity
+   */
+  public function setForwardSshConnectivity(ForwardSshTunnelConnectivity $forwardSshConnectivity)
+  {
+    $this->forwardSshConnectivity = $forwardSshConnectivity;
+  }
+  /**
+   * @return ForwardSshTunnelConnectivity
+   */
+  public function getForwardSshConnectivity()
+  {
+    return $this->forwardSshConnectivity;
   }
   /**
    * @param string
@@ -81,20 +91,6 @@ class PostgreSqlConnectionProfile extends \Google\Model
   public function getHost()
   {
     return $this->host;
-  }
-  /**
-   * @param string
-   */
-  public function setNetworkArchitecture($networkArchitecture)
-  {
-    $this->networkArchitecture = $networkArchitecture;
-  }
-  /**
-   * @return string
-   */
-  public function getNetworkArchitecture()
-  {
-    return $this->networkArchitecture;
   }
   /**
    * @param string
@@ -139,46 +135,32 @@ class PostgreSqlConnectionProfile extends \Google\Model
     return $this->port;
   }
   /**
-   * @param PrivateServiceConnectConnectivity
+   * @param PrivateConnectivity
    */
-  public function setPrivateServiceConnectConnectivity(PrivateServiceConnectConnectivity $privateServiceConnectConnectivity)
+  public function setPrivateConnectivity(PrivateConnectivity $privateConnectivity)
   {
-    $this->privateServiceConnectConnectivity = $privateServiceConnectConnectivity;
+    $this->privateConnectivity = $privateConnectivity;
   }
   /**
-   * @return PrivateServiceConnectConnectivity
+   * @return PrivateConnectivity
    */
-  public function getPrivateServiceConnectConnectivity()
+  public function getPrivateConnectivity()
   {
-    return $this->privateServiceConnectConnectivity;
+    return $this->privateConnectivity;
   }
   /**
-   * @param SslConfig
+   * @param StaticServiceIpConnectivity
    */
-  public function setSsl(SslConfig $ssl)
+  public function setStaticServiceIpConnectivity(StaticServiceIpConnectivity $staticServiceIpConnectivity)
   {
-    $this->ssl = $ssl;
+    $this->staticServiceIpConnectivity = $staticServiceIpConnectivity;
   }
   /**
-   * @return SslConfig
+   * @return StaticServiceIpConnectivity
    */
-  public function getSsl()
+  public function getStaticServiceIpConnectivity()
   {
-    return $this->ssl;
-  }
-  /**
-   * @param StaticIpConnectivity
-   */
-  public function setStaticIpConnectivity(StaticIpConnectivity $staticIpConnectivity)
-  {
-    $this->staticIpConnectivity = $staticIpConnectivity;
-  }
-  /**
-   * @return StaticIpConnectivity
-   */
-  public function getStaticIpConnectivity()
-  {
-    return $this->staticIpConnectivity;
+    return $this->staticServiceIpConnectivity;
   }
   /**
    * @param string
@@ -197,4 +179,4 @@ class PostgreSqlConnectionProfile extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PostgreSqlConnectionProfile::class, 'Google_Service_DatabaseMigrationService_PostgreSqlConnectionProfile');
+class_alias(OracleConnectionProfile::class, 'Google_Service_DatabaseMigrationService_OracleConnectionProfile');
