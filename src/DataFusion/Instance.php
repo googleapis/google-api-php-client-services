@@ -62,6 +62,10 @@ class Instance extends \Google\Collection
    * @var bool
    */
   public $enableStackdriverMonitoring;
+  /**
+   * @var bool
+   */
+  public $enableZoneSeparation;
   protected $eventPublishConfigType = EventPublishConfig::class;
   protected $eventPublishConfigDataType = '';
   /**
@@ -294,6 +298,20 @@ class Instance extends \Google\Collection
   public function getEnableStackdriverMonitoring()
   {
     return $this->enableStackdriverMonitoring;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableZoneSeparation($enableZoneSeparation)
+  {
+    $this->enableZoneSeparation = $enableZoneSeparation;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableZoneSeparation()
+  {
+    return $this->enableZoneSeparation;
   }
   /**
    * @param EventPublishConfig
