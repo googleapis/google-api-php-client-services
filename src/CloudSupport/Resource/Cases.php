@@ -132,9 +132,7 @@ class Cases extends \Google\Service\Resource
     return $this->call('list', [$params], ListCasesResponse::class);
   }
   /**
-   * Update the specified case. Only a subset of fields (display_name,
-   * description, time_zone, subscriber_email_addresses, related_resources,
-   * severity, priority, primary_contact, and labels) can be updated.
+   * Update the specified case. Only a subset of fields can be updated.
    * (cases.patch)
    *
    * @param string $name The resource name for the case.
