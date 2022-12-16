@@ -27,7 +27,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://g3doc.corp.google.com/company/teams/compute-fe/index.md?cl=head" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/workload-manager/docs" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -40,6 +40,7 @@ class WorkloadManager extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_evaluations;
+  public $projects_locations_insights;
   public $projects_locations_operations;
 
   /**
@@ -158,6 +159,26 @@ class WorkloadManager extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_insights = new WorkloadManager\Resource\ProjectsLocationsInsights(
+        $this,
+        $this->serviceName,
+        'insights',
+        [
+          'methods' => [
+            'writeInsight' => [
+              'path' => 'v1/{+location}/insights:writeInsight',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
