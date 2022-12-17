@@ -17,64 +17,82 @@
 
 namespace Google\Service\Integrations;
 
-class EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit extends \Google\Model
+class GoogleCloudIntegrationsV1alphaCloudKmsConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $resolvedBy;
+  public $key;
   /**
    * @var string
    */
-  public $resolvedByCpi;
+  public $keyVersion;
   /**
    * @var string
    */
-  public $timestamp;
+  public $kmsLocation;
+  /**
+   * @var string
+   */
+  public $kmsRing;
 
   /**
    * @param string
    */
-  public function setResolvedBy($resolvedBy)
+  public function setKey($key)
   {
-    $this->resolvedBy = $resolvedBy;
+    $this->key = $key;
   }
   /**
    * @return string
    */
-  public function getResolvedBy()
+  public function getKey()
   {
-    return $this->resolvedBy;
+    return $this->key;
   }
   /**
    * @param string
    */
-  public function setResolvedByCpi($resolvedByCpi)
+  public function setKeyVersion($keyVersion)
   {
-    $this->resolvedByCpi = $resolvedByCpi;
+    $this->keyVersion = $keyVersion;
   }
   /**
    * @return string
    */
-  public function getResolvedByCpi()
+  public function getKeyVersion()
   {
-    return $this->resolvedByCpi;
+    return $this->keyVersion;
   }
   /**
    * @param string
    */
-  public function setTimestamp($timestamp)
+  public function setKmsLocation($kmsLocation)
   {
-    $this->timestamp = $timestamp;
+    $this->kmsLocation = $kmsLocation;
   }
   /**
    * @return string
    */
-  public function getTimestamp()
+  public function getKmsLocation()
   {
-    return $this->timestamp;
+    return $this->kmsLocation;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsRing($kmsRing)
+  {
+    $this->kmsRing = $kmsRing;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsRing()
+  {
+    return $this->kmsRing;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit::class, 'Google_Service_Integrations_EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit');
+class_alias(GoogleCloudIntegrationsV1alphaCloudKmsConfig::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaCloudKmsConfig');

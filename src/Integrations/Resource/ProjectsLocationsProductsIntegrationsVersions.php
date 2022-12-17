@@ -29,12 +29,14 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaPublishIntegration
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaPublishIntegrationVersionResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUpdateBundleRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUpdateBundleResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse;
+use Google\Service\Integrations\GoogleProtobufEmpty;
 
 /**
  * The "versions" collection of methods.
@@ -110,6 +112,28 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('deactivate', [$params], GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse::class);
+  }
+  /**
+   * Soft-deletes the integration. Changes the status of the integration to
+   * ARCHIVED. If the integration being ARCHIVED is tagged as "HEAD", the tag is
+   * removed from this snapshot and set to the previous non-ARCHIVED snapshot. The
+   * PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed too. This RPC throws an
+   * exception if the version being deleted is DRAFT, and if the `locked_by` user
+   * is not the same as the user performing the Delete. Audit fields updated
+   * include last_modified_timestamp, last_modified_by. Any existing lock is
+   * released when Deleting a integration. Currently, there is no undelete
+   * mechanism. (versions.delete)
+   *
+   * @param string $name Required. The version to delete. Format: projects/{projec
+   * t}/locations/{location}/integrations/{integration}/versions/{version}
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
   }
   /**
    * Downloads an integration. Retrieves the `IntegrationVersion` for a given
@@ -263,6 +287,25 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
     $params = ['integrationVersion' => $integrationVersion, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('takeoverEditLock', [$params], GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse::class);
+  }
+  /**
+   * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag
+   * "PREVIOUSLY_PUBLISHED" after validating it. The "HEAD" and
+   * "PUBLISH_REQUESTED" tags do not change. This RPC throws an exception if the
+   * version being snapshot is not ACTIVE. Audit fields added include action,
+   * action_by, action_timestamp. (versions.unpublish)
+   *
+   * @param string $name Required. The version to deactivate. Format: projects/{pr
+   * oject}/locations/{location}/integrations/{integration}/versions/{version}
+   * @param GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   */
+  public function unpublish($name, GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('unpublish', [$params], GoogleProtobufEmpty::class);
   }
   /**
    * THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. RPC to update the Bundle

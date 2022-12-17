@@ -17,64 +17,64 @@
 
 namespace Google\Service\Integrations;
 
-class EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit extends \Google\Model
+class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $resolvedBy;
+  public $functionName;
   /**
    * @var string
    */
-  public $resolvedByCpi;
+  public $functionRegion;
   /**
    * @var string
    */
-  public $timestamp;
+  public $projectId;
 
   /**
    * @param string
    */
-  public function setResolvedBy($resolvedBy)
+  public function setFunctionName($functionName)
   {
-    $this->resolvedBy = $resolvedBy;
+    $this->functionName = $functionName;
   }
   /**
    * @return string
    */
-  public function getResolvedBy()
+  public function getFunctionName()
   {
-    return $this->resolvedBy;
+    return $this->functionName;
   }
   /**
    * @param string
    */
-  public function setResolvedByCpi($resolvedByCpi)
+  public function setFunctionRegion($functionRegion)
   {
-    $this->resolvedByCpi = $resolvedByCpi;
+    $this->functionRegion = $functionRegion;
   }
   /**
    * @return string
    */
-  public function getResolvedByCpi()
+  public function getFunctionRegion()
   {
-    return $this->resolvedByCpi;
+    return $this->functionRegion;
   }
   /**
    * @param string
    */
-  public function setTimestamp($timestamp)
+  public function setProjectId($projectId)
   {
-    $this->timestamp = $timestamp;
+    $this->projectId = $projectId;
   }
   /**
    * @return string
    */
-  public function getTimestamp()
+  public function getProjectId()
   {
-    return $this->timestamp;
+    return $this->projectId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit::class, 'Google_Service_Integrations_EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit');
+class_alias(GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest');

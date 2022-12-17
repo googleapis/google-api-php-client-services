@@ -17,6 +17,7 @@
 
 namespace Google\Service\Integrations\Resource;
 
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaGetClientResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse;
 
 /**
@@ -29,6 +30,21 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListTaskEntitiesRe
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Gets the client configuration for the given project and location resource
+   * name (locations.getClients)
+   *
+   * @param string $parent Required. Required: The ID of the GCP Project to be
+   * provisioned.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudIntegrationsV1alphaGetClientResponse
+   */
+  public function getClients($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('getClients', [$params], GoogleCloudIntegrationsV1alphaGetClientResponse::class);
+  }
   /**
    * This is a UI only method and will be moved away. Returns a list of common
    * tasks. (locations.listTaskEntities)
