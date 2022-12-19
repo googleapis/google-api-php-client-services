@@ -837,6 +837,7 @@ use Google\Service\KitchSink\Geometry
 
 class GeometryCollection extends Geometry
 {
+  public $geometries;
   protected $collection_key = 'geometries';
   protected $geometriesType = Geometry::class;
   protected $geometriesDataType = 'array';
@@ -3016,6 +3017,7 @@ namespace Google\Service\KitchSink;
 
 class SeriesList extends \Google\Collection
 {
+  public $items;
   protected $collection_key = 'items';
   protected $itemsType = Series::class;
   protected $itemsDataType = 'array';
@@ -3079,6 +3081,7 @@ namespace Google\Service\KitchSink;
 
 class Submission extends \Google\Collection
 {
+  public $topics;
   protected $collection_key = 'topics';
   protected $internal_gapi_mappings = [
         "attachmentUrl" => "@attachmentUrl",
@@ -3550,6 +3553,7 @@ namespace Google\Service\KitchSink;
 
 class SubmissionList extends \Google\Collection
 {
+  public $items;
   protected $collection_key = 'items';
   protected $itemsType = Submission::class;
   protected $itemsDataType = 'array';
@@ -4003,6 +4007,7 @@ namespace Google\Service\KitchSink;
 
 class Topic2 extends \Google\Collection
 {
+  public $rules;
   protected $collection_key = 'rules';
   protected $countersType = Topic2Counters::class;
   protected $countersDataType = '';
@@ -4578,6 +4583,7 @@ namespace Google\Service\KitchSink;
 
 class TopicList extends \Google\Collection
 {
+  public $items;
   protected $collection_key = 'items';
   protected $itemsType = Topic::class;
   protected $itemsDataType = 'array';
@@ -5018,6 +5024,7 @@ namespace Google\Service\KitchSink;
 
 class VoteList extends \Google\Collection
 {
+  public $items;
   protected $collection_key = 'items';
   protected $itemsType = Vote::class;
   protected $itemsDataType = 'array';

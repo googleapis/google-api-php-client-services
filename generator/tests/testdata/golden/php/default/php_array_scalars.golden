@@ -104,6 +104,7 @@ namespace Google\Service\PhpArrayScalars;
 
 class ObjectWithScalarArrays extends \Google\Collection
 {
+  public $arrayOfStrings;
   protected $collection_key = 'arrayOfStrings';
   /**
    * @var bool[]

@@ -169,6 +169,7 @@ namespace NASA\Service\EccoDomaniIeri;
 
 class HelloGreetingCollection extends \Google\Collection
 {
+  public $items;
   protected $collection_key = 'items';
   protected $itemsType = HelloGreeting::class;
   protected $itemsDataType = 'array';
