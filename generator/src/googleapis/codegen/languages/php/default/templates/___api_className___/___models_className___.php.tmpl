@@ -9,7 +9,6 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
 {{% if model.properties %}
 {% filter noblanklines %}
 {% if not model.is_variant_base and model.collectionKey %}
-  public ${{ model.collectionKey }};
   protected $collection_key = '{{ model.collectionKey }}';
 {% endif %}{% if model.has_gapi %}
   protected $internal_gapi_mappings = [
@@ -32,8 +31,8 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
    * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
    */
  {% endif %}
-  public ${{ property.memberName }};
  {% endif %}
+  public ${{ property.memberName }};
 {% endfor %}
 {% endfilter %}
 {% filter noblanklines %}
