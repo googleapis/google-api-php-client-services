@@ -41,7 +41,7 @@ use Google\Service\CloudWorkstations\Workstation;
 class ProjectsLocationsWorkstationClustersWorkstationConfigsWorkstations extends \Google\Service\Resource
 {
   /**
-   * Creates a new Workstation. (workstations.create)
+   * Creates a new workstation. (workstations.create)
    *
    * @param string $parent Required. Parent resource name.
    * @param Workstation $postBody
@@ -59,7 +59,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigsWorkstations extends
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes the specified Workstation. (workstations.delete)
+   * Deletes the specified workstation. (workstations.delete)
    *
    * @param string $name Required. Name of the workstation to delete.
    * @param array $optParams Optional parameters.
@@ -93,7 +93,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigsWorkstations extends
     return $this->call('generateAccessToken', [$params], GenerateAccessTokenResponse::class);
   }
   /**
-   * Returns the requested Workstation. (workstations.get)
+   * Returns the requested workstation. (workstations.get)
    *
    * @param string $name Required. Name of the requested resource.
    * @param array $optParams Optional parameters.
@@ -172,7 +172,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigsWorkstations extends
     return $this->call('listUsable', [$params], ListUsableWorkstationsResponse::class);
   }
   /**
-   * Updates an existing Workstation. (workstations.patch)
+   * Updates an existing workstation. (workstations.patch)
    *
    * @param string $name Full name of this resource.
    * @param Workstation $postBody
