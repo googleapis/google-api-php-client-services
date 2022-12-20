@@ -40,7 +40,8 @@ class Texttospeech extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $operations;
-  public $projects_locations_voices;
+  public $projects_locations;
+  public $projects_locations_operations;
   public $text;
   public $voices;
 
@@ -86,7 +87,37 @@ class Texttospeech extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'get' => [
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations = new Texttospeech\Resource\ProjectsLocations(
+        $this,
+        $this->serviceName,
+        'locations',
+        [
+          'methods' => [
+            'synthesizeLongAudio' => [
+              'path' => 'v1/{+parent}:synthesizeLongAudio',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_operations = new Texttospeech\Resource\ProjectsLocationsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -97,7 +128,7 @@ class Texttospeech extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1/{+name}',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -116,26 +147,6 @@ class Texttospeech extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_voices = new Texttospeech\Resource\ProjectsLocationsVoices(
-        $this,
-        $this->serviceName,
-        'voices',
-        [
-          'methods' => [
-            'synthesizeLongAudio' => [
-              'path' => 'v1/{+parent}:SynthesizeLongAudio',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],

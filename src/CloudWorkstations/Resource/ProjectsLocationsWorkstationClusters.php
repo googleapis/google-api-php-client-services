@@ -32,7 +32,7 @@ use Google\Service\CloudWorkstations\WorkstationCluster;
 class ProjectsLocationsWorkstationClusters extends \Google\Service\Resource
 {
   /**
-   * Creates a new WorkstationCluster. (workstationClusters.create)
+   * Creates a new workstation cluster. (workstationClusters.create)
    *
    * @param string $parent Required. Parent resource name.
    * @param WorkstationCluster $postBody
@@ -50,16 +50,16 @@ class ProjectsLocationsWorkstationClusters extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes the specified WorkstationCluster. (workstationClusters.delete)
+   * Deletes the specified workstation cluster. (workstationClusters.delete)
    *
    * @param string $name Required. Name of the cluster to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string etag If set, the request will be rejected if the latest
    * version of the cluster on the server does not have this etag.
-   * @opt_param bool force If set, any WorkstationConfigs and Workstations in the
-   * cluster will also be deleted. Otherwise, the request will work only if the
-   * cluster has no configs or workstations.
+   * @opt_param bool force If set, any workstation configurations and workstations
+   * in the cluster will also be deleted. Otherwise, the request will work only if
+   * the cluster has no configurations or workstations.
    * @opt_param bool validateOnly If set, validate the request and preview the
    * review, but do not actually apply it.
    * @return Operation
@@ -71,7 +71,7 @@ class ProjectsLocationsWorkstationClusters extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the requested WorkstationCluster. (workstationClusters.get)
+   * Returns the requested workstation cluster. (workstationClusters.get)
    *
    * @param string $name Required. Name of the requested resource.
    * @param array $optParams Optional parameters.
@@ -84,7 +84,7 @@ class ProjectsLocationsWorkstationClusters extends \Google\Service\Resource
     return $this->call('get', [$params], WorkstationCluster::class);
   }
   /**
-   * Returns all WorkstationClusters in the specified location.
+   * Returns all workstation clusters in the specified location.
    * (workstationClusters.listProjectsLocationsWorkstationClusters)
    *
    * @param string $parent Required. Parent resource name.
@@ -102,7 +102,7 @@ class ProjectsLocationsWorkstationClusters extends \Google\Service\Resource
     return $this->call('list', [$params], ListWorkstationClustersResponse::class);
   }
   /**
-   * Updates an existing WorkstationCluster. (workstationClusters.patch)
+   * Updates an existing workstation cluster. (workstationClusters.patch)
    *
    * @param string $name Full name of this resource.
    * @param WorkstationCluster $postBody

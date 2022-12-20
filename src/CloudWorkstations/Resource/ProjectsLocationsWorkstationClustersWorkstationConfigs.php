@@ -37,7 +37,7 @@ use Google\Service\CloudWorkstations\WorkstationConfig;
 class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Service\Resource
 {
   /**
-   * Creates a new WorkstationConfig. (workstationConfigs.create)
+   * Creates a new workstation configuration. (workstationConfigs.create)
    *
    * @param string $parent Required. Parent resource name.
    * @param WorkstationConfig $postBody
@@ -55,7 +55,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Ser
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes the specified WorkstationConfig. (workstationConfigs.delete)
+   * Deletes the specified workstation configuration. (workstationConfigs.delete)
    *
    * @param string $name Required. Name of the config to delete.
    * @param array $optParams Optional parameters.
@@ -76,7 +76,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Ser
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the requested WorkstationConfig. (workstationConfigs.get)
+   * Returns the requested workstation configuration. (workstationConfigs.get)
    *
    * @param string $name Required. Name of the requested resource.
    * @param array $optParams Optional parameters.
@@ -120,8 +120,8 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Ser
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Returns all WorkstationConfigs in the specified cluster. (workstationConfigs.
-   * listProjectsLocationsWorkstationClustersWorkstationConfigs)
+   * Returns all workstation configurations in the specified cluster. (workstation
+   * Configs.listProjectsLocationsWorkstationClustersWorkstationConfigs)
    *
    * @param string $parent Required. Parent resource name.
    * @param array $optParams Optional parameters.
@@ -138,8 +138,8 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Ser
     return $this->call('list', [$params], ListWorkstationConfigsResponse::class);
   }
   /**
-   * Returns all WorkstationConfigs in the specified cluster on which the caller
-   * has the "workstations.workstation.create" permission.
+   * Returns all workstation configurations in the specified cluster on which the
+   * caller has the "workstations.workstation.create" permission.
    * (workstationConfigs.listUsable)
    *
    * @param string $parent Required. Parent resource name.
@@ -157,7 +157,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Ser
     return $this->call('listUsable', [$params], ListUsableWorkstationConfigsResponse::class);
   }
   /**
-   * Updates an existing WorkstationConfig. (workstationConfigs.patch)
+   * Updates an existing workstation configuration. (workstationConfigs.patch)
    *
    * @param string $name Full name of this resource.
    * @param WorkstationConfig $postBody
