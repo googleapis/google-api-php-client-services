@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,6 +22,7 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import contextlib
 import os
+import six
 
 from googleapis.codegen.filesys import files
 
@@ -43,7 +43,7 @@ class LibraryPackage(object):
       name: (str) path which will identify the contents in the archive.
 
     Returns:
-      A file-like object to write the contents to.
+      A file-like object (opened in binary mode) to write the contents to.
     """
     raise NotImplementedError(
         'Subclasses of LibraryPackage must implement StartFile')
@@ -83,7 +83,7 @@ class LibraryPackage(object):
       name: (str) name the file should have in the archive.
     """
     output_stream = self.StartFile(name)
-    output_stream.write(files.GetFileContents(path))
+    output_stream.write(six.ensure_binary(files.GetFileContents(path)))
     self.EndFile()
 
   def IncludeManyFiles(self, paths, strip_prefix='', new_prefix=None):
@@ -141,7 +141,7 @@ class LibraryPackage(object):
       file_name: (str) The file name.
     """
     output_stream = self.StartFile(file_name)
-    output_stream.write(content)
+    output_stream.write(six.ensure_binary(content))
     self.EndFile()
 
   def FileExtension(self):

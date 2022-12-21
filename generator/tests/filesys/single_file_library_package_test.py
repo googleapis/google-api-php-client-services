@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 #
 # Copyright 2012 Google Inc. All Rights Reserved.
@@ -23,14 +22,14 @@ from __future__ import print_function
 
 from io import BytesIO
 
-import gflags as flags
-from google.apputils import basetest
+from absl import flags
+from absl.testing import absltest
 from googleapis.codegen.filesys import single_file_library_package
 
 FLAGS = flags.FLAGS
 
 
-class SingleFileLibraryPackageTest(basetest.TestCase):
+class SingleFileLibraryPackageTest(absltest.TestCase):
 
   def setUp(self):
     self._output_stream = BytesIO()
@@ -61,4 +60,4 @@ class SingleFileLibraryPackageTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

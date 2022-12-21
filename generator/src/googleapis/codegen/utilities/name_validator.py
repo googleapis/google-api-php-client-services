@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,13 +21,14 @@ appear in discovery documents
 __author__ = 'wclarkso@google.com (Will Clarkson)'
 
 import re
+import sys
 
 
 # The first character must alpha (a-zA-Z), a slash (/), a '@', or an
 # underscore (no single digits).  Subsequent characters can be alpha
 # numeric. We also permit them to have a slash(/), underscore (_), dot
-# (.) or dash (-).  NOTE: the '$' character is to get around $ref
-# variable name in some APIs.
+# (.) or dash (-).  NOTE: the '$' character is to get around $ref or foo$bar
+# variable names in some APIs.
 _VARNAME_REGEX = re.compile(
     r'^[a-zA-Z]$|([a-zA-Z_/$@][a-zA-Z0-9_./$-]+)$')
 
@@ -120,7 +120,9 @@ def ValidateAndSanitizeComment(comment_string):
                      u'\\*',   # Escaped Multiline begin
                     ]
 
-  if isinstance(comment_string, str):
+  # Hacky python 2 vs. 3 portability
+  if ((sys.version_info[0] == 2 and isinstance(comment_string, str))
+      or (sys.version_info[0] == 3 and isinstance(comment_string, bytes))):
     comment_string = comment_string.decode('utf-8')
   change_made = True
   while change_made:

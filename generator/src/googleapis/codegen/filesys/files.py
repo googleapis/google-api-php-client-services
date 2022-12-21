@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,10 +12,8 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-
 import errno
 import os
-
 
 
 class FileDoesNotExist(Exception):
@@ -26,17 +23,17 @@ class FileDoesNotExist(Exception):
 def GetFileContents(filename):
   """Returns the contents of a file.
 
-
   Args:
     filename: path to a file.
   Returns:
-    a string.
+    bytes.
   Raises:
     FileDoesNotExist: if the file does not exist
     IOError: for other local IO errors
   """
   try:
-    return open(filename).read()
+    with open(filename, mode='rb') as f:
+      return f.read()
   except IOError as e:
     if e.errno == errno.ENOENT:
       raise FileDoesNotExist(filename)
@@ -59,5 +56,4 @@ def IterFiles(directory):
   for root, unused_dirs, filenames in os.walk(directory):
     for f in filenames:
       yield os.path.join(root, f)
-
 

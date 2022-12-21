@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 #
 # Copyright 2010 Google Inc. All Rights Reserved.
@@ -20,11 +19,12 @@
 
 __author__ = 'wclarkso@google.com (Will Clarkson)'
 
-from google.apputils import basetest
+import six
+from absl.testing import absltest
 from googleapis.codegen.utilities import name_validator
 
 
-class NameValidatorTest(basetest.TestCase):
+class NameValidatorTest(absltest.TestCase):
 
   def testVariableNameValidator(self):
     good_names = ['$ref', '_a', '_private', 'a_var.name', 't1', 'max-results',
@@ -87,7 +87,7 @@ class NameValidatorTest(basetest.TestCase):
 
   def testUtf8InComment(self):
     comment = 'Base64-encoded (RFC 4648 §5) data.'
-    unicode_comment = comment.decode('utf-8')
+    unicode_comment = six.ensure_str(comment, 'utf-8')
     self.assertEqual(unicode_comment,
                      name_validator.ValidateAndSanitizeComment(comment))
     self.assertEqual(
@@ -96,4 +96,4 @@ class NameValidatorTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

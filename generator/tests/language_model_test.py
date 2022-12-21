@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +16,7 @@
 
 __author__ = 'akesling@google.com (Alex Kesling)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import data_types
 from googleapis.codegen import data_value
@@ -25,7 +24,7 @@ from googleapis.codegen import language_model
 from googleapis.codegen.template_objects import CodeObject
 
 
-class LanguageModelTest(basetest.TestCase):
+class LanguageModelTest(absltest.TestCase):
 
   def setUp(self):
     self.language_model = language_model.LanguageModel()
@@ -98,7 +97,7 @@ class LanguageModelTest(basetest.TestCase):
     self.assertRaises(ValueError, render_method, float_dv)
 
 
-class LanguagePolicyTest(basetest.TestCase):
+class LanguagePolicyTest(absltest.TestCase):
 
   def testApplyCaseTransform(self):
 
@@ -113,29 +112,29 @@ class LanguagePolicyTest(basetest.TestCase):
     # which we expect to strip off.
     s = 'I-am -a_tesT@'
     p = language_model.NamingPolicy(case_transform=language_model.LOWER_CASE)
-    self.assertEquals('iamatest', m.ApplyCaseTransform(s, p))
+    self.assertEqual('iamatest', m.ApplyCaseTransform(s, p))
     p = language_model.NamingPolicy(
         case_transform=language_model.PRESERVE_CASE,
         separator='_')
-    self.assertEquals('I_am_a_tesT', m.ApplyCaseTransform(s, p))
+    self.assertEqual('I_am_a_tesT', m.ApplyCaseTransform(s, p))
     p = language_model.NamingPolicy(
         case_transform=language_model.UPPER_CASE,
         separator='_')
-    self.assertEquals('I_AM_A_TEST', m.ApplyCaseTransform(s, p))
+    self.assertEqual('I_AM_A_TEST', m.ApplyCaseTransform(s, p))
     p = language_model.NamingPolicy(
         case_transform=language_model.LOWER_CASE,
         separator='_')
-    self.assertEquals('i_am_a_test', m.ApplyCaseTransform(s, p))
+    self.assertEqual('i_am_a_test', m.ApplyCaseTransform(s, p))
     p = language_model.NamingPolicy(
         case_transform=language_model.UPPER_CAMEL_CASE)
-    self.assertEquals('IAmATesT', m.ApplyCaseTransform(s, p))
+    self.assertEqual('IAmATesT', m.ApplyCaseTransform(s, p))
     p = language_model.NamingPolicy(
         case_transform=language_model.LOWER_CAMEL_CASE)
-    self.assertEquals('iAmATesT', m.ApplyCaseTransform(s, p))
+    self.assertEqual('iAmATesT', m.ApplyCaseTransform(s, p))
     p = language_model.NamingPolicy(
         case_transform=language_model.UPPER_CAMEL_CASE)
     s = 'allow#this'
-    self.assertEquals('Allow#this', m.ApplyCaseTransform(s, p))
+    self.assertEqual('Allow#this', m.ApplyCaseTransform(s, p))
 
   def testApplyFormat(self):
 
@@ -156,9 +155,9 @@ class LanguagePolicyTest(basetest.TestCase):
     # Note: the transform will happen for the extra variables. The actual
     # member name is not transformed in this case, because we are only calling
     # ApplyFormat.
-    self.assertEquals('MyApi!MySchema!some_string',
+    self.assertEqual('MyApi!MySchema!some_string',
                       m.ApplyFormat(member, 'some_string', m.member_policy))
-    self.assertEquals('MyApi!MySchema!SomeString',
+    self.assertEqual('MyApi!MySchema!SomeString',
                       m.ApplyPolicy('member', member, 'some_string'))
 
   def testPoliciesGetUsedInTheRightMethods1(self):
@@ -180,9 +179,9 @@ class LanguagePolicyTest(basetest.TestCase):
     m = TestLanguageModel()
     max_results = 'max-results'
 
-    self.assertEquals('C Max!CLASS!Results',
+    self.assertEqual('C Max!CLASS!Results',
                       m.ApplyPolicy('class_name', None, max_results))
-    self.assertEquals('K MAX!CONSTANT!RESULTS',
+    self.assertEqual('K MAX!CONSTANT!RESULTS',
                       m.ApplyPolicy('constant', None, max_results))
 
   def testPoliciesGetUsedInTheRightMethods2(self):
@@ -209,11 +208,11 @@ class LanguagePolicyTest(basetest.TestCase):
     m = TestLanguageModel()
     max_results = 'max-results'
 
-    self.assertEquals('M max!MEMBER!results',
+    self.assertEqual('M max!MEMBER!results',
                       m.ApplyPolicy('member', None, max_results))
-    self.assertEquals('G max!GETTER!Results',
+    self.assertEqual('G max!GETTER!Results',
                       m.ApplyPolicy('getter', None, max_results))
-    self.assertEquals('S Max!SETTER!Results',
+    self.assertEqual('S Max!SETTER!Results',
                       m.ApplyPolicy('setter', None, max_results))
 
   def testArrayOf(self):
@@ -229,7 +228,7 @@ class LanguagePolicyTest(basetest.TestCase):
         super(TestLanguageModel, self).__init__(**kwargs)
 
     m = TestLanguageModel()
-    self.assertEquals('Array[foo-bar]', m.ArrayOf(None, 'foo-bar'))
+    self.assertEqual('Array[foo-bar]', m.ArrayOf(None, 'foo-bar'))
 
   def testAtSignPolicy(self):
 
@@ -245,21 +244,21 @@ class LanguagePolicyTest(basetest.TestCase):
     # which we expect to strip off.
     p = language_model.NamingPolicy(
         case_transform=language_model.UPPER_CAMEL_CASE)
-    self.assertEquals('Myname', m.ApplyCaseTransform('my@name', p))
-    self.assertEquals('Name', m.ApplyCaseTransform('@name', p))
+    self.assertEqual('Myname', m.ApplyCaseTransform('my@name', p))
+    self.assertEqual('Name', m.ApplyCaseTransform('@name', p))
 
     p = language_model.NamingPolicy(
         case_transform=language_model.UPPER_CAMEL_CASE,
         atsign_policy=language_model.ATSIGN_STRIP)
-    self.assertEquals('Myname', m.ApplyCaseTransform('my@name', p))
-    self.assertEquals('Name', m.ApplyCaseTransform('@name', p))
+    self.assertEqual('Myname', m.ApplyCaseTransform('my@name', p))
+    self.assertEqual('Name', m.ApplyCaseTransform('@name', p))
 
     p = language_model.NamingPolicy(
         case_transform=language_model.UPPER_CAMEL_CASE,
         atsign_policy=language_model.ATSIGN_BREAK)
-    self.assertEquals('MyName', m.ApplyCaseTransform('my@name', p))
-    self.assertEquals('Name', m.ApplyCaseTransform('@name', p))
+    self.assertEqual('MyName', m.ApplyCaseTransform('my@name', p))
+    self.assertEqual('Name', m.ApplyCaseTransform('@name', p))
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

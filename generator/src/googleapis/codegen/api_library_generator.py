@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +18,6 @@ This module specializes TemplateGenerator for building API libraries.
 """
 
 __author__ = 'aiuto@google.com (Tony Aiuto)'
-
 from googleapis.codegen.generator import TemplateGenerator
 
 
@@ -105,17 +103,17 @@ class ApiLibraryGenerator(TemplateGenerator):
         '___language_version___': self.language_version or '',
         }
 
-    for key, value in self.features.iteritems():
-      if isinstance(value, (unicode, str)):
+    for key, value in self.features.items():
+      if isinstance(value, str):
         self._path_replacements['___features_%s___' % key] = value
 
-    if not isinstance(self._api.values['revision'], (unicode, str)):
-        # Make sure revision is a string
+    if not isinstance(self._api.values['revision'], str):
+      # Make sure revision is a string
       self._path_replacements['___api_revision___'] = str(
           self._api.values['revision'])
 
-    for key, value in self._api.values.iteritems():
-      if isinstance(value, (unicode, str)):
+    for key, value in self._api.values.items():
+      if isinstance(value, str):
         self._path_replacements['___api_%s___' % key] = value
 
     self._path_replacements.update(path_replacements or {})
@@ -130,7 +128,7 @@ class ApiLibraryGenerator(TemplateGenerator):
     4. (Side effect) Closes the source_package_writer.
 
     Args:
-      api: (Api) The Api instance we are writing a libary for.
+      api: (Api) The Api instance we are writing a library for.
       source_package_writer: (LibraryPackage) source output package.
     """
     list_replacements = {

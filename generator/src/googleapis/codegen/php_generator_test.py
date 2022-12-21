@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,13 +18,13 @@ __author__ = 'chirags@google.com (Chirag Shah)'
 
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import api
 from googleapis.codegen import php_generator
 from googleapis.codegen import schema
 
 
-class PHPApiTest(basetest.TestCase):
+class PHPApiTest(absltest.TestCase):
 
   def setUp(self):
     gen_params = {'name': 'test', 'version': 'v1', 'resources': {}}
@@ -46,10 +45,10 @@ class PHPApiTest(basetest.TestCase):
     method = api.Method(self.api, 'count', param_dict)
     self.generator.AnnotateMethod(self.api, method)
 
-    self.assertEquals('myservice.foo.count', method.values['id'])
-    self.assertEquals('count', method.values['name'])
-    self.assertEquals('count', method.values['wireName'])
-    self.assertEquals('Count', method.values['className'])
+    self.assertEqual('myservice.foo.count', method.values['id'])
+    self.assertEqual('count', method.values['name'])
+    self.assertEqual('count', method.values['wireName'])
+    self.assertEqual('Count', method.values['className'])
 
   def testSetTypeHint(self):
     """Test creating safe class names from object names."""
@@ -69,36 +68,36 @@ class PHPApiTest(basetest.TestCase):
       test_property = schema.Property(self.api, test_schema, 'test', type_dict)
       test_property.SetLanguageModel(self.language_model)
       self.generator._SetTypeHint(test_property)
-      self.assertEquals(expected_hint, test_property.values['typeHint'])
+      self.assertEqual(expected_hint, test_property.values['typeHint'])
 
   def testToMethodName(self):
     """Test creating safe method names from wire names."""
     method = {'wireName': 'foo'}
     method_name = self.generator._ToMethodName(method, None)
-    self.assertEquals('foo', method_name)
+    self.assertEqual('foo', method_name)
 
     # Method name that doesn't conflict with a PHP keyword.
     method['wireName'] = 'get'
     resource = {'className': 'ResourceClassName'}
     method_name = self.generator._ToMethodName(method, resource)
-    self.assertEquals('get', method_name)
+    self.assertEqual('get', method_name)
 
     # Method name that conflicts with a PHP keyword.
     method['wireName'] = 'as'
     resource['className'] = 'Class'
     method_name = self.generator._ToMethodName(method, resource)
-    self.assertEquals('asClass', method_name)
+    self.assertEqual('asClass', method_name)
 
     # Method name that conflicts with a canonical PHP keyword.
     method['wireName'] = 'aS'
     method_name = self.generator._ToMethodName(method, resource)
-    self.assertEquals('aSClass', method_name)
+    self.assertEqual('aSClass', method_name)
 
   def testToClassName(self):
     """Test creating safe class names from object names."""
-    self.assertEquals('Foo', self.api.ToClassName('foo', None))
-    self.assertEquals('TestObject', self.api.ToClassName('object', None))
-    self.assertEquals('TestString', self.api.ToClassName('string', None))
+    self.assertEqual('Foo', self.api.ToClassName('foo', None))
+    self.assertEqual('TestObject', self.api.ToClassName('object', None))
+    self.assertEqual('TestString', self.api.ToClassName('string', None))
 
   def testGetCodeTypeFromDictionary(self):
     """Test mapping of JSON schema types to PHP class names."""
@@ -137,8 +136,8 @@ class PHPApiTest(basetest.TestCase):
     for schema_obj in php_type_to_schema:
       php_type = schema_obj[0]
       s = schema_obj[1]
-      self.assertEquals(php_type,
+      self.assertEqual(php_type,
                         self.language_model.GetCodeTypeFromDictionary(s))
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

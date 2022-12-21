@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,8 +12,8 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-
 """Command line tool to run the Google API library generator.
+
 Usage:
 $ PYTHONPATH=$(/bin/pwd)/src \
   $(/bin/pwd)/src/googleapis/codegen/generate_library.py \
@@ -26,10 +25,12 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import collections
 import json
 import logging
-import httplib2
+import os
 
-from google.apputils import app
-import gflags as flags
+from absl import app
+from absl import flags
+import httplib2
+import six
 from googleapis.codegen import generator_lookup
 from googleapis.codegen.filesys import package_writer_foundry
 from googleapis.codegen.targets import Targets
@@ -106,22 +107,27 @@ flags.DEFINE_string(
     'Use an alternate path for the generated code. This must be a file path'
     ' using "/" as a separator, not "."'
     )
+flags.DEFINE_boolean(
+    'reparent_methods_using_id',
+    False,
+    'If true, move methods to parent resource if the ID matches parent path')
 flags.DEFINE_bool('version_package', False, 'Put API version in package paths')
 flags.DEFINE_bool('verbose', False, 'Enable verbose logging')
 
-flags.DECLARE_key_flag('api_name')
-flags.DECLARE_key_flag('api_version')
-flags.DECLARE_key_flag('include_timestamp')
-flags.DECLARE_key_flag('input')
-flags.DECLARE_key_flag('language')
-flags.DECLARE_key_flag('language_variant')
-flags.DECLARE_key_flag('monolithic_source_name')
-flags.DECLARE_key_flag('output_dir')
-flags.DECLARE_key_flag('output_file')
-flags.DECLARE_key_flag('output_format')
-flags.DECLARE_key_flag('output_type')
-flags.DECLARE_key_flag('package_path')
-flags.DECLARE_key_flag('version_package')
+flags.declare_key_flag('api_name')
+flags.declare_key_flag('api_version')
+flags.declare_key_flag('include_timestamp')
+flags.declare_key_flag('input')
+flags.declare_key_flag('language')
+flags.declare_key_flag('language_variant')
+flags.declare_key_flag('monolithic_source_name')
+flags.declare_key_flag('output_dir')
+flags.declare_key_flag('output_file')
+flags.declare_key_flag('output_format')
+flags.declare_key_flag('output_type')
+flags.declare_key_flag('package_path')
+flags.declare_key_flag('reparent_methods_using_id')
+flags.declare_key_flag('version_package')
 
 
 def main(unused_argv):
@@ -140,18 +146,16 @@ def main(unused_argv):
   if FLAGS.verbose:
     logging.basicConfig(level=logging.DEBUG)
 
-
   # Get the discovery document
   if FLAGS.api_name:
     if not FLAGS.api_version:
       raise app.UsageError('You must specify --api_version with --api_name')
     content = GetApiDiscovery(FLAGS.api_name, FLAGS.api_version)
   else:
-    f = open(FLAGS.input)
-    content = f.read()
+    f = open(FLAGS.input, 'rb')
+    content = six.ensure_str(f.read())
     f.close()
   discovery_doc = json.loads(content, object_pairs_hook=collections.OrderedDict)
-
 
   package_writer = package_writer_foundry.GetPackageWriter(
       output_dir=FLAGS.output_dir, output_file=FLAGS.output_file,
@@ -173,7 +177,7 @@ def Generate(discovery_doc, package_writer,
              version_package=False,
              package_path=None,
              output_type='plain',
-             language='php',
+             language='java',
              language_variant='default',
              callback=None):
   """Generate a library package from discovery and options."""
@@ -191,6 +195,8 @@ def Generate(discovery_doc, package_writer,
     options['useSingleSourceFile'] = True
   if output_type == 'full':
     options['include_dependencies'] = True
+  if FLAGS.reparent_methods_using_id:
+    discovery_doc['reparentMethodsUsingId'] = True
 
   # determine language version from language variant.
   language_variations = Targets().VariationsForLanguage(language)
@@ -242,5 +248,6 @@ def GetApiDiscovery(api_name, api_version):
     raise app.Error(error)
   return content
 
+
 if __name__ == '__main__':
-  app.run()
+  app.run(main)

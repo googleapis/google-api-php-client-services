@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,8 +39,10 @@ setup(
     include_package_data=True,
     # TODO(user): Any 1.8 version is OK, but django<1.9 seems to do the wrong
     #     thing. It installs version 1.9rc1, which is not compatible.
-    install_requires=['django==1.8.12',
+    install_requires=['django==1.11',
+                      #'google-apputils',
                       'httplib2',
-                      'google-apputils',
+                      'absl-py',
+                      'six',
                       'python-gflags'],
     zip_safe=False)

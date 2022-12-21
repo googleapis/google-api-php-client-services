@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +15,7 @@
 """Tests for data_value.py."""
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import data_types
 from googleapis.codegen import data_value
@@ -25,7 +24,7 @@ from googleapis.codegen import schema
 from django import template as django_template  # pylint: disable=g-bad-import-order
 
 
-class DataValueTest(basetest.TestCase):
+class DataValueTest(absltest.TestCase):
 
   def setUp(self):
     super(DataValueTest, self).setUp()
@@ -114,7 +113,7 @@ class DataValueTest(basetest.TestCase):
     self.assertEqual(mock_api.schema, dv.data_type)
 
 
-class DataValueRenderingTest(basetest.TestCase):
+class DataValueRenderingTest(absltest.TestCase):
   """Tests for DataValue rendering methods in template_helpers."""
 
   def _GetContext(self, data=None):
@@ -135,7 +134,7 @@ class DataValueRenderingTest(basetest.TestCase):
     template = django_template.Template(source)
 
     context = self._GetContext({'data': dv})
-    self.assertEquals('"four"', template.render(context))
+    self.assertEqual('"four"', template.render(context))
 
     context = self._GetContext({'data': 'foo'})
     self.assertRaises(
@@ -155,4 +154,4 @@ class DataValueRenderingTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

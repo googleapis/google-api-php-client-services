@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,6 +19,13 @@ Convert a string like 10G/K/M/B to a number.
 
 
 def ConvertSize(size):
+  """Convert a size like 10G/K/M/B to a number.
+
+  Args:
+    size: (str) A number with unit indicators
+  Returns:
+    (int) The number represented by size.
+  """
   if not size:
     return None
   units = [('GB', 2 ** 30),

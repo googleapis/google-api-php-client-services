@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 #
 # Copyright 2010 Google Inc. All Rights Reserved.
@@ -23,14 +22,14 @@ import io
 import os
 import zipfile
 
-import gflags as flags
-from google.apputils import basetest
+from absl import flags
+from absl.testing import absltest
 from googleapis.codegen.filesys import zip_library_package
 
 FLAGS = flags.FLAGS
 
 
-class ZipLibraryPackageTest(basetest.TestCase):
+class ZipLibraryPackageTest(absltest.TestCase):
   _FILE_NAME = 'a_test'
   _DISALLOWED_FILE_NAME = 'unicode_☃☄'
   _FILE_CONTENTS = u'this is a test - ☃☄'
@@ -56,9 +55,9 @@ class ZipLibraryPackageTest(basetest.TestCase):
     # read it back and verify
     archive = zipfile.ZipFile(io.BytesIO(self._output_stream.getvalue()), 'r')
     info_list = archive.infolist()
-    self.assertEquals(1, len(info_list))
-    self.assertEquals(self._FILE_NAME, info_list[0].filename)
-    self.assertEquals(len(self._FILE_CONTENTS.encode('utf-8')),
+    self.assertEqual(1, len(info_list))
+    self.assertEqual(self._FILE_NAME, info_list[0].filename)
+    self.assertEqual(len(self._FILE_CONTENTS.encode('utf-8')),
                       info_list[0].file_size)
 
   def testStartAutomaticallyClosesPreviousFile(self):
@@ -72,9 +71,9 @@ class ZipLibraryPackageTest(basetest.TestCase):
     # read it back and verify
     archive = zipfile.ZipFile(io.BytesIO(self._output_stream.getvalue()), 'r')
     info_list = archive.infolist()
-    self.assertEquals(2, len(info_list))
-    self.assertEquals(self._FILE_NAME, info_list[0].filename)
-    self.assertEquals(file_name_2, info_list[1].filename)
+    self.assertEqual(2, len(info_list))
+    self.assertEqual(self._FILE_NAME, info_list[0].filename)
+    self.assertEqual(file_name_2, info_list[1].filename)
 
   def testDoneAutomaticallyEndsFile(self):
     stream = self._package.StartFile(self._FILE_NAME)
@@ -84,8 +83,8 @@ class ZipLibraryPackageTest(basetest.TestCase):
     # read it back and verify
     archive = zipfile.ZipFile(io.BytesIO(self._output_stream.getvalue()), 'r')
     info_list = archive.infolist()
-    self.assertEquals(1, len(info_list))
-    self.assertEquals(self._FILE_NAME, info_list[0].filename)
+    self.assertEqual(1, len(info_list))
+    self.assertEqual(self._FILE_NAME, info_list[0].filename)
 
   def testIncludeFile(self):
     made_up_dir = 'new_directory/'
@@ -99,11 +98,11 @@ class ZipLibraryPackageTest(basetest.TestCase):
     # read it back and verify
     archive = zipfile.ZipFile(io.BytesIO(self._output_stream.getvalue()), 'r')
     info_list = archive.infolist()
-    self.assertEquals(2, len(info_list))  # folder + file
-    self.assertEquals(made_up_dir, info_list[0].filename)
-    self.assertEquals(0, info_list[0].file_size)
-    self.assertEquals(made_up_path, info_list[1].filename)
-    self.assertEquals(expected_size, info_list[1].file_size)
+    self.assertEqual(2, len(info_list))  # folder + file
+    self.assertEqual(made_up_dir, info_list[0].filename)
+    self.assertEqual(0, info_list[0].file_size)
+    self.assertEqual(made_up_path, info_list[1].filename)
+    self.assertEqual(expected_size, info_list[1].file_size)
 
   def testManyFiles(self):
     top_of_tree = os.path.join(self._TEST_DATA_DIR, 'tree/')
@@ -119,7 +118,7 @@ class ZipLibraryPackageTest(basetest.TestCase):
     # check it
     archive = zipfile.ZipFile(io.BytesIO(self._output_stream.getvalue()), 'r')
     info_list = archive.infolist()
-    self.assertEquals(
+    self.assertEqual(
         total_files_in_testdata_tree + total_folders_in_testdata_tree,
         len(info_list))
 
@@ -142,11 +141,11 @@ class ZipLibraryPackageTest(basetest.TestCase):
     # read it back and verify
     archive = zipfile.ZipFile(io.BytesIO(self._output_stream.getvalue()), 'r')
     info_list = archive.infolist()
-    self.assertEquals(3, len(info_list))  # 2 folders + file
+    self.assertEqual(3, len(info_list))  # 2 folders + file
     expected_name = '%s/%s' % (prefix, self._FILE_NAME)
-    self.assertEquals('abc/', info_list[0].filename)
-    self.assertEquals('abc/def/', info_list[1].filename)
-    self.assertEquals(expected_name, info_list[2].filename)
+    self.assertEqual('abc/', info_list[0].filename)
+    self.assertEqual('abc/def/', info_list[1].filename)
+    self.assertEqual(expected_name, info_list[2].filename)
 
   def testDoNotOvercreateDirectories(self):
     """Make sure we do not create more directories than we need."""
@@ -164,52 +163,52 @@ class ZipLibraryPackageTest(basetest.TestCase):
     dir_bits = (040755 << 16) | 0x10
 
     index = 0
-    self.assertEquals('d1/', info_list[index].filename)
-    self.assertEquals(dir_bits, info_list[index].external_attr)
+    self.assertEqual('d1/', info_list[index].filename)
+    self.assertEqual(dir_bits, info_list[index].external_attr)
 
     index += 1
-    self.assertEquals('d1/d2/', info_list[index].filename)
-    self.assertEquals(dir_bits, info_list[index].external_attr)
+    self.assertEqual('d1/d2/', info_list[index].filename)
+    self.assertEqual(dir_bits, info_list[index].external_attr)
 
     index += 1
-    self.assertEquals('d1/d2/f1', info_list[index].filename)
+    self.assertEqual('d1/d2/f1', info_list[index].filename)
     index += 1
-    self.assertEquals('d1/d2/f2', info_list[index].filename)
+    self.assertEqual('d1/d2/f2', info_list[index].filename)
 
     index += 1
-    self.assertEquals('d1/d3/', info_list[index].filename)
-    self.assertEquals(dir_bits, info_list[index].external_attr)
+    self.assertEqual('d1/d3/', info_list[index].filename)
+    self.assertEqual(dir_bits, info_list[index].external_attr)
 
     index += 1
-    self.assertEquals('d1/d3/f1', info_list[index].filename)
+    self.assertEqual('d1/d3/f1', info_list[index].filename)
 
     index += 1
-    self.assertEquals('d4/', info_list[index].filename)
-    self.assertEquals(dir_bits, info_list[index].external_attr)
+    self.assertEqual('d4/', info_list[index].filename)
+    self.assertEqual(dir_bits, info_list[index].external_attr)
 
     index += 1
-    self.assertEquals('d4/d5/', info_list[index].filename)
-    self.assertEquals(dir_bits, info_list[index].external_attr)
+    self.assertEqual('d4/d5/', info_list[index].filename)
+    self.assertEqual(dir_bits, info_list[index].external_attr)
 
     index += 1
-    self.assertEquals('d4/d5/f1', info_list[index].filename)
+    self.assertEqual('d4/d5/f1', info_list[index].filename)
 
     index += 1
-    self.assertEquals('d4/f1', info_list[index].filename)
+    self.assertEqual('d4/f1', info_list[index].filename)
 
     index += 1
-    self.assertEquals('d1/f1', info_list[index].filename)
+    self.assertEqual('d1/f1', info_list[index].filename)
 
     index += 1
-    self.assertEquals('d1/d2/f3', info_list[index].filename)
+    self.assertEqual('d1/d2/f3', info_list[index].filename)
 
     index += 1
-    self.assertEquals(index, len(info_list))
+    self.assertEqual(index, len(info_list))
 
   def testFileProperties(self):
-    self.assertEquals('zip', self._package.FileExtension())
-    self.assertEquals('application/zip', self._package.MimeType())
+    self.assertEqual('zip', self._package.FileExtension())
+    self.assertEqual('application/zip', self._package.MimeType())
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

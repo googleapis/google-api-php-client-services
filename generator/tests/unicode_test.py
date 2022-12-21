@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
@@ -17,16 +16,17 @@
 
 import json
 import os
+import six
 
-import gflags as flags
-from google.apputils import basetest
+from absl import flags
+from absl.testing import absltest
 from googleapis.codegen import api
 
 FLAGS = flags.FLAGS
 
 
 
-class UnicodeTest(basetest.TestCase):
+class UnicodeTest(absltest.TestCase):
 
   _TEST_DISCOVERY_DOC = 'unicode.json'
 
@@ -41,7 +41,7 @@ class UnicodeTest(basetest.TestCase):
     """
 
     with open(os.path.join(os.path.dirname(__file__), 'testdata', path)) as f:
-      discovery_doc = json.loads(f.read().decode('utf-8'))
+      discovery_doc = json.loads(six.ensure_str(f.read(), 'utf-8'))
     return api.Api(discovery_doc)
 
   def testGiveMeAName(self):
@@ -68,7 +68,7 @@ class UnicodeTest(basetest.TestCase):
 
     url_counter = Counter()
     an_api.VisitAll(lambda x: CheckDescription(url_counter, x, accented))
-    self.assertEquals(rl_counter.value, url_counter.value)
+    self.assertEqual(rl_counter.value, url_counter.value)
 
     def CheckEnumDescription(counter, x, match):
       enum_type = x.values.get('enumType')
@@ -78,8 +78,8 @@ class UnicodeTest(basetest.TestCase):
 
     enum_counter = Counter()
     an_api.VisitAll(lambda x: CheckEnumDescription(enum_counter, x, accented))
-    self.assertEquals(2, enum_counter.value)
+    self.assertEqual(2, enum_counter.value)
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

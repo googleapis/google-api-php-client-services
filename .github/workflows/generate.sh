@@ -33,7 +33,7 @@ then
 fi
 
 # install the local generators
-python2 -m pip install -e ${ROOT_DIR}/google-api-php-client-services/generator --user -q
+python3 -m pip install -e ${ROOT_DIR}/google-api-php-client-services/generator --user -q
 
 pushd ${ROOT_DIR}/discovery-artifact-manager
 
@@ -47,7 +47,7 @@ do
   echo "Version: ${VERSION}"
   echo "Output: ${OUTPUT_DIR}"
   # run the local generator
-  python2 -m googleapis.codegen \
+  python3 -m googleapis.codegen \
       --output_dir=${OUTPUT_DIR} \
       --input=${DISCOVERY} \
       --language=php \

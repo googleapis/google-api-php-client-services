@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,14 +12,29 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+r"""Command line tool to run the Google APIs template expander.
+
+This tool takes a triplet of:
+  - an API discovery document
+  - a language (and variant)
+  - a template tree name
+and expands the template tree in the context of that API and tree.
+
+Usage:
+  expand_templates.py \
+    --discovery=myapi.json \
+    --language=python \
+    --templates=my_templates \
+    --output_dir=my_expanded_templates
+"""
 
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import json
 import os
 
-from google.apputils import app
-import gflags as flags
+from absl import app
+from absl import flags
 from googleapis.codegen import generator
 from googleapis.codegen import generator_lookup
 from googleapis.codegen import language_model
@@ -75,16 +89,16 @@ flags.DEFINE_string(
     'The name of the template suite (w.r.t. language and variant)')
 flags.DEFINE_bool('version_package', False, 'Put API version in package paths')
 
-flags.DECLARE_key_flag('discovery')
-flags.DECLARE_key_flag('include_timestamp')
-flags.DECLARE_key_flag('language')
-flags.DECLARE_key_flag('language_variant')
-flags.DECLARE_key_flag('output_dir')
-flags.DECLARE_key_flag('output_file')
-flags.DECLARE_key_flag('output_format')
-flags.DECLARE_key_flag('output_type')
-flags.DECLARE_key_flag('templates')
-flags.DECLARE_key_flag('version_package')
+flags.declare_key_flag('discovery')
+flags.declare_key_flag('include_timestamp')
+flags.declare_key_flag('language')
+flags.declare_key_flag('language_variant')
+flags.declare_key_flag('output_dir')
+flags.declare_key_flag('output_file')
+flags.declare_key_flag('output_format')
+flags.declare_key_flag('output_type')
+flags.declare_key_flag('templates')
+flags.declare_key_flag('version_package')
 
 
 def main(unused_argv):
@@ -189,4 +203,4 @@ class TemplateExpander(generator.TemplateGenerator):
 
 
 if __name__ == '__main__':
-  app.run()
+  app.run(main)

@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,6 +16,8 @@
 import json
 import re
 import sys
+
+import six
 
 
 # Note that we use $, not \n, because we want to retain the newlines of the
@@ -63,7 +64,7 @@ def Loads(json_string, **kw):
   Returns:
     Decoded json data.
   """
-  stripped = _StripComments(json_string)
+  stripped = _StripComments(six.ensure_str(json_string))
   return json.loads(stripped, **kw)
 
 

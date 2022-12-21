@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2012 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,12 +23,12 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import os
 import re
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.utilities import json_expander
 from googleapis.codegen.utilities import json_with_comments
 
 
-class ConfigurationTest(basetest.TestCase):
+class ConfigurationTest(absltest.TestCase):
 
   _SRC_DATA_DIR = os.path.dirname(__file__)
 
@@ -142,4 +141,4 @@ class ConfigurationTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

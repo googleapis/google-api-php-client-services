@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -326,7 +325,7 @@ class PHPApi(api.Api):
   def ModelClasses(self):
     """Return all the model classes."""
     ret = set(
-        s for s in self._schemas.itervalues()
+        s for s in self._schemas.values()
         if isinstance(s, Schema))
     return sorted(ret, key=operator.attrgetter('class_name'))
 
@@ -367,7 +366,7 @@ def _StripResource(resource):
   if not isinstance(resource, dict):
     return resource
   ret = collections.OrderedDict()
-  for name, value in resource.iteritems():
+  for name, value in resource.items():
     if name not in _EXTRA_PROPERTIES:
       ret[name] = _StripResource(value)
   return ret

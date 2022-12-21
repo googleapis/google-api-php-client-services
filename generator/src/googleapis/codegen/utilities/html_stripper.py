@@ -1,4 +1,5 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python
+#
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,21 +13,20 @@
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-#
 
 """HTMLStripper based on HTMLParser."""
 
 
 __author__ = 'wclarkso@google.com (Will Clarkson)'
 
-import HTMLParser
+import html.parser
 
 
-class HTMLStripper(HTMLParser.HTMLParser):
+class HTMLStripper(html.parser.HTMLParser):
   """Simple class to strip tags from HTML."""
 
   def __init__(self):
-    HTMLParser.HTMLParser.__init__(self)
+    html.parser.HTMLParser.__init__(self)
     self.reset()
     self.fed = []
 

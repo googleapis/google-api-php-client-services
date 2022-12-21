@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -104,7 +103,8 @@ def SanitizeDomain(s):
   if s is None:
     return None
   s = s.lower().replace('-', '_')
-  return ''.join([c for c in s if c.isalnum() or c in ['.', '_']])
+  return ''.join([c for c in s
+                  if (c.isalnum() and ord(c) < 128) or c in ['.', '_']])
 
 
 def ReversedDomainComponents(s):
