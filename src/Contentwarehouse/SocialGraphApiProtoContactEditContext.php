@@ -17,26 +17,26 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class LensDiscoveryStylePersonDetectionSignalsDetectedPerson extends \Google\Model
+class SocialGraphApiProtoContactEditContext extends \Google\Model
 {
-  protected $boundingBoxType = LensDiscoveryStyleBoundingBox::class;
-  protected $boundingBoxDataType = '';
+  protected $mutationContextType = SocialGraphApiProtoContactMutationContext::class;
+  protected $mutationContextDataType = '';
 
   /**
-   * @param LensDiscoveryStyleBoundingBox
+   * @param SocialGraphApiProtoContactMutationContext
    */
-  public function setBoundingBox(LensDiscoveryStyleBoundingBox $boundingBox)
+  public function setMutationContext(SocialGraphApiProtoContactMutationContext $mutationContext)
   {
-    $this->boundingBox = $boundingBox;
+    $this->mutationContext = $mutationContext;
   }
   /**
-   * @return LensDiscoveryStyleBoundingBox
+   * @return SocialGraphApiProtoContactMutationContext
    */
-  public function getBoundingBox()
+  public function getMutationContext()
   {
-    return $this->boundingBox;
+    return $this->mutationContext;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LensDiscoveryStylePersonDetectionSignalsDetectedPerson::class, 'Google_Service_Contentwarehouse_LensDiscoveryStylePersonDetectionSignalsDetectedPerson');
+class_alias(SocialGraphApiProtoContactEditContext::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoContactEditContext');

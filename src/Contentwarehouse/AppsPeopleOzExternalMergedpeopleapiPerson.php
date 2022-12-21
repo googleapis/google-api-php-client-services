@@ -46,6 +46,10 @@ class AppsPeopleOzExternalMergedpeopleapiPerson extends \Google\Collection
   protected $communicationEmailDataType = 'array';
   protected $connectionReminderType = AppsPeopleOzExternalMergedpeopleapiConnectionReminder::class;
   protected $connectionReminderDataType = 'array';
+  protected $contactCreateContextInfoType = AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo::class;
+  protected $contactCreateContextInfoDataType = 'array';
+  protected $contactEditContextInfoType = AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo::class;
+  protected $contactEditContextInfoDataType = 'array';
   protected $contactGroupMembershipType = AppsPeopleOzExternalMergedpeopleapiContactGroupMembership::class;
   protected $contactGroupMembershipDataType = 'array';
   protected $contactStateInfoType = AppsPeopleOzExternalMergedpeopleapiContactStateInfo::class;
@@ -340,6 +344,34 @@ class AppsPeopleOzExternalMergedpeopleapiPerson extends \Google\Collection
   public function getConnectionReminder()
   {
     return $this->connectionReminder;
+  }
+  /**
+   * @param AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo[]
+   */
+  public function setContactCreateContextInfo($contactCreateContextInfo)
+  {
+    $this->contactCreateContextInfo = $contactCreateContextInfo;
+  }
+  /**
+   * @return AppsPeopleOzExternalMergedpeopleapiContactCreateContextInfo[]
+   */
+  public function getContactCreateContextInfo()
+  {
+    return $this->contactCreateContextInfo;
+  }
+  /**
+   * @param AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo[]
+   */
+  public function setContactEditContextInfo($contactEditContextInfo)
+  {
+    $this->contactEditContextInfo = $contactEditContextInfo;
+  }
+  /**
+   * @return AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo[]
+   */
+  public function getContactEditContextInfo()
+  {
+    return $this->contactEditContextInfo;
   }
   /**
    * @param AppsPeopleOzExternalMergedpeopleapiContactGroupMembership[]

@@ -20,6 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
 {
   protected $collection_key = 'snippet';
+  protected $boldedRangesType = QualitySnippetsTruncationSnippetBoldedRange::class;
+  protected $boldedRangesDataType = 'array';
   /**
    * @var int
    */
@@ -49,6 +51,20 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
    */
   public $snippetType;
 
+  /**
+   * @param QualitySnippetsTruncationSnippetBoldedRange[]
+   */
+  public function setBoldedRanges($boldedRanges)
+  {
+    $this->boldedRanges = $boldedRanges;
+  }
+  /**
+   * @return QualitySnippetsTruncationSnippetBoldedRange[]
+   */
+  public function getBoldedRanges()
+  {
+    return $this->boldedRanges;
+  }
   /**
    * @param int
    */

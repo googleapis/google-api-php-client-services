@@ -20,10 +20,46 @@ namespace Google\Service\Contentwarehouse;
 class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $isSeedRadio;
+  /**
+   * @var bool
+   */
+  public $isSeedRadioRequest;
+  /**
    * @var float
    */
   public $mscRate;
 
+  /**
+   * @param bool
+   */
+  public function setIsSeedRadio($isSeedRadio)
+  {
+    $this->isSeedRadio = $isSeedRadio;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsSeedRadio()
+  {
+    return $this->isSeedRadio;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsSeedRadioRequest($isSeedRadioRequest)
+  {
+    $this->isSeedRadioRequest = $isSeedRadioRequest;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsSeedRadioRequest()
+  {
+    return $this->isSeedRadioRequest;
+  }
   /**
    * @param float
    */

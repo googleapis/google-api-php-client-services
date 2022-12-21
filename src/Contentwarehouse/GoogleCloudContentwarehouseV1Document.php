@@ -73,10 +73,6 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
    */
   public $referenceId;
   /**
-   * @var string
-   */
-  public $structuredContentUri;
-  /**
    * @var bool
    */
   public $textExtractionDisabled;
@@ -292,20 +288,6 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   public function getReferenceId()
   {
     return $this->referenceId;
-  }
-  /**
-   * @param string
-   */
-  public function setStructuredContentUri($structuredContentUri)
-  {
-    $this->structuredContentUri = $structuredContentUri;
-  }
-  /**
-   * @return string
-   */
-  public function getStructuredContentUri()
-  {
-    return $this->structuredContentUri;
   }
   /**
    * @param bool

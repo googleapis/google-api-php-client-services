@@ -17,26 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class LensDiscoveryStylePersonDetectionSignalsDetectedPerson extends \Google\Model
+class QualitySnippetsTruncationSnippetBoldedRangePosition extends \Google\Model
 {
-  protected $boundingBoxType = LensDiscoveryStyleBoundingBox::class;
-  protected $boundingBoxDataType = '';
+  /**
+   * @var int
+   */
+  public $byteOffset;
+  /**
+   * @var int
+   */
+  public $index;
 
   /**
-   * @param LensDiscoveryStyleBoundingBox
+   * @param int
    */
-  public function setBoundingBox(LensDiscoveryStyleBoundingBox $boundingBox)
+  public function setByteOffset($byteOffset)
   {
-    $this->boundingBox = $boundingBox;
+    $this->byteOffset = $byteOffset;
   }
   /**
-   * @return LensDiscoveryStyleBoundingBox
+   * @return int
    */
-  public function getBoundingBox()
+  public function getByteOffset()
   {
-    return $this->boundingBox;
+    return $this->byteOffset;
+  }
+  /**
+   * @param int
+   */
+  public function setIndex($index)
+  {
+    $this->index = $index;
+  }
+  /**
+   * @return int
+   */
+  public function getIndex()
+  {
+    return $this->index;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LensDiscoveryStylePersonDetectionSignalsDetectedPerson::class, 'Google_Service_Contentwarehouse_LensDiscoveryStylePersonDetectionSignalsDetectedPerson');
+class_alias(QualitySnippetsTruncationSnippetBoldedRangePosition::class, 'Google_Service_Contentwarehouse_QualitySnippetsTruncationSnippetBoldedRangePosition');

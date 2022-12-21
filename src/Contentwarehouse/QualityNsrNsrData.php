@@ -103,6 +103,10 @@ class QualityNsrNsrData extends \Google\Collection
    */
   public $nsr;
   /**
+   * @var string
+   */
+  public $nsrEpoch;
+  /**
    * @var float
    */
   public $nsrOverrideBid;
@@ -500,6 +504,20 @@ class QualityNsrNsrData extends \Google\Collection
   public function getNsr()
   {
     return $this->nsr;
+  }
+  /**
+   * @param string
+   */
+  public function setNsrEpoch($nsrEpoch)
+  {
+    $this->nsrEpoch = $nsrEpoch;
+  }
+  /**
+   * @return string
+   */
+  public function getNsrEpoch()
+  {
+    return $this->nsrEpoch;
   }
   /**
    * @param float
