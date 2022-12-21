@@ -17,48 +17,30 @@
 
 namespace Google\Service\Dataform;
 
-class ReleaseConfig extends \Google\Collection
+class WorkflowConfig extends \Google\Collection
 {
-  protected $collection_key = 'recentScheduledReleaseRecords';
-  protected $codeCompilationConfigType = CodeCompilationConfig::class;
-  protected $codeCompilationConfigDataType = '';
+  protected $collection_key = 'recentScheduledExecutionRecords';
   /**
    * @var string
    */
   public $cronSchedule;
-  /**
-   * @var string
-   */
-  public $gitCommitish;
+  protected $invocationConfigType = InvocationConfig::class;
+  protected $invocationConfigDataType = '';
   /**
    * @var string
    */
   public $name;
-  protected $recentScheduledReleaseRecordsType = ScheduledReleaseRecord::class;
-  protected $recentScheduledReleaseRecordsDataType = 'array';
+  protected $recentScheduledExecutionRecordsType = ScheduledExecutionRecord::class;
+  protected $recentScheduledExecutionRecordsDataType = 'array';
   /**
    * @var string
    */
-  public $releaseCompilationResult;
+  public $releaseConfig;
   /**
    * @var string
    */
   public $timeZone;
 
-  /**
-   * @param CodeCompilationConfig
-   */
-  public function setCodeCompilationConfig(CodeCompilationConfig $codeCompilationConfig)
-  {
-    $this->codeCompilationConfig = $codeCompilationConfig;
-  }
-  /**
-   * @return CodeCompilationConfig
-   */
-  public function getCodeCompilationConfig()
-  {
-    return $this->codeCompilationConfig;
-  }
   /**
    * @param string
    */
@@ -74,18 +56,18 @@ class ReleaseConfig extends \Google\Collection
     return $this->cronSchedule;
   }
   /**
-   * @param string
+   * @param InvocationConfig
    */
-  public function setGitCommitish($gitCommitish)
+  public function setInvocationConfig(InvocationConfig $invocationConfig)
   {
-    $this->gitCommitish = $gitCommitish;
+    $this->invocationConfig = $invocationConfig;
   }
   /**
-   * @return string
+   * @return InvocationConfig
    */
-  public function getGitCommitish()
+  public function getInvocationConfig()
   {
-    return $this->gitCommitish;
+    return $this->invocationConfig;
   }
   /**
    * @param string
@@ -102,32 +84,32 @@ class ReleaseConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ScheduledReleaseRecord[]
+   * @param ScheduledExecutionRecord[]
    */
-  public function setRecentScheduledReleaseRecords($recentScheduledReleaseRecords)
+  public function setRecentScheduledExecutionRecords($recentScheduledExecutionRecords)
   {
-    $this->recentScheduledReleaseRecords = $recentScheduledReleaseRecords;
+    $this->recentScheduledExecutionRecords = $recentScheduledExecutionRecords;
   }
   /**
-   * @return ScheduledReleaseRecord[]
+   * @return ScheduledExecutionRecord[]
    */
-  public function getRecentScheduledReleaseRecords()
+  public function getRecentScheduledExecutionRecords()
   {
-    return $this->recentScheduledReleaseRecords;
+    return $this->recentScheduledExecutionRecords;
   }
   /**
    * @param string
    */
-  public function setReleaseCompilationResult($releaseCompilationResult)
+  public function setReleaseConfig($releaseConfig)
   {
-    $this->releaseCompilationResult = $releaseCompilationResult;
+    $this->releaseConfig = $releaseConfig;
   }
   /**
    * @return string
    */
-  public function getReleaseCompilationResult()
+  public function getReleaseConfig()
   {
-    return $this->releaseCompilationResult;
+    return $this->releaseConfig;
   }
   /**
    * @param string
@@ -146,4 +128,4 @@ class ReleaseConfig extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReleaseConfig::class, 'Google_Service_Dataform_ReleaseConfig');
+class_alias(WorkflowConfig::class, 'Google_Service_Dataform_WorkflowConfig');

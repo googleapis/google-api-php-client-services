@@ -42,6 +42,7 @@ class Dataform extends \Google\Service
   public $projects_locations_repositories;
   public $projects_locations_repositories_compilationResults;
   public $projects_locations_repositories_releaseConfigs;
+  public $projects_locations_repositories_workflowConfigs;
   public $projects_locations_repositories_workflowInvocations;
   public $projects_locations_repositories_workspaces;
 
@@ -317,6 +318,82 @@ class Dataform extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1beta1/{+parent}/releaseConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1beta1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_repositories_workflowConfigs = new Dataform\Resource\ProjectsLocationsRepositoriesWorkflowConfigs(
+        $this,
+        $this->serviceName,
+        'workflowConfigs',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1beta1/{+parent}/workflowConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'workflowConfigId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1beta1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1beta1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1beta1/{+parent}/workflowConfigs',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
