@@ -21,20 +21,26 @@ class GoogleCloudRecaptchaenterpriseV1Assessment extends \Google\Model
 {
   protected $accountDefenderAssessmentType = GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment::class;
   protected $accountDefenderAssessmentDataType = '';
+  public $accountDefenderAssessment;
   protected $accountVerificationType = GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo::class;
   protected $accountVerificationDataType = '';
+  public $accountVerification;
   protected $eventType = GoogleCloudRecaptchaenterpriseV1Event::class;
   protected $eventDataType = '';
+  public $event;
   /**
    * @var string
    */
   public $name;
   protected $privatePasswordLeakVerificationType = GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification::class;
   protected $privatePasswordLeakVerificationDataType = '';
+  public $privatePasswordLeakVerification;
   protected $riskAnalysisType = GoogleCloudRecaptchaenterpriseV1RiskAnalysis::class;
   protected $riskAnalysisDataType = '';
+  public $riskAnalysis;
   protected $tokenPropertiesType = GoogleCloudRecaptchaenterpriseV1TokenProperties::class;
   protected $tokenPropertiesDataType = '';
+  public $tokenProperties;
 
   /**
    * @param GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment
