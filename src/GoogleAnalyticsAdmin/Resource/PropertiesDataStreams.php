@@ -26,7 +26,7 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $analyticsadminService = new Google\Service\GoogleAnalyticsAdmin(...);
- *   $dataStreams = $analyticsadminService->dataStreams;
+ *   $dataStreams = $analyticsadminService->properties_dataStreams;
  *  </code>
  */
 class PropertiesDataStreams extends \Google\Service\Resource

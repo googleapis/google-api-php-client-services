@@ -27,7 +27,7 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $analyticsadminService = new Google\Service\GoogleAnalyticsAdmin(...);
- *   $customMetrics = $analyticsadminService->customMetrics;
+ *   $customMetrics = $analyticsadminService->properties_customMetrics;
  *  </code>
  */
 class PropertiesCustomMetrics extends \Google\Service\Resource

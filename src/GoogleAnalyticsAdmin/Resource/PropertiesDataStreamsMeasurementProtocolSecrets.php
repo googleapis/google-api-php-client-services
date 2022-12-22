@@ -26,7 +26,7 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $analyticsadminService = new Google\Service\GoogleAnalyticsAdmin(...);
- *   $measurementProtocolSecrets = $analyticsadminService->measurementProtocolSecrets;
+ *   $measurementProtocolSecrets = $analyticsadminService->properties_dataStreams_measurementProtocolSecrets;
  *  </code>
  */
 class PropertiesDataStreamsMeasurementProtocolSecrets extends \Google\Service\Resource

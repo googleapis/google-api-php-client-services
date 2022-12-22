@@ -26,7 +26,7 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $analyticsadminService = new Google\Service\GoogleAnalyticsAdmin(...);
- *   $conversionEvents = $analyticsadminService->conversionEvents;
+ *   $conversionEvents = $analyticsadminService->properties_conversionEvents;
  *  </code>
  */
 class PropertiesConversionEvents extends \Google\Service\Resource

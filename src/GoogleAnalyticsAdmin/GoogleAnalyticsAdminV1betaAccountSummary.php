@@ -34,6 +34,7 @@ class GoogleAnalyticsAdminV1betaAccountSummary extends \Google\Collection
   public $name;
   protected $propertySummariesType = GoogleAnalyticsAdminV1betaPropertySummary::class;
   protected $propertySummariesDataType = 'array';
+  public $propertySummaries;
 
   /**
    * @param string

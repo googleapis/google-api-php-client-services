@@ -27,7 +27,7 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $analyticsadminService = new Google\Service\GoogleAnalyticsAdmin(...);
- *   $customDimensions = $analyticsadminService->customDimensions;
+ *   $customDimensions = $analyticsadminService->properties_customDimensions;
  *  </code>
  */
 class PropertiesCustomDimensions extends \Google\Service\Resource

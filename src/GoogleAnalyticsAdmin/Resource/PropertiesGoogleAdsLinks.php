@@ -26,7 +26,7 @@ use Google\Service\GoogleAnalyticsAdmin\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $analyticsadminService = new Google\Service\GoogleAnalyticsAdmin(...);
- *   $googleAdsLinks = $analyticsadminService->googleAdsLinks;
+ *   $googleAdsLinks = $analyticsadminService->properties_googleAdsLinks;
  *  </code>
  */
 class PropertiesGoogleAdsLinks extends \Google\Service\Resource
