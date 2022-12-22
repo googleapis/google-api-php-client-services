@@ -33,6 +33,7 @@ class SessionContext extends \Google\Model
   public $dusi;
   protected $imapSessionContextType = ImapSessionContext::class;
   protected $imapSessionContextDataType = '';
+  public $imapSessionContext;
   /**
    * @var int
    */

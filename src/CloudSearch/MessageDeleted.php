@@ -22,8 +22,10 @@ class MessageDeleted extends \Google\Collection
   protected $collection_key = 'messageKeys';
   protected $imapSyncMappingsType = ImapSyncDelete::class;
   protected $imapSyncMappingsDataType = 'array';
+  public $imapSyncMappings;
   protected $messageKeysType = MultiKey::class;
   protected $messageKeysDataType = 'array';
+  public $messageKeys;
 
   /**
    * @param ImapSyncDelete[]

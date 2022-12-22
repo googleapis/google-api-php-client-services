@@ -22,6 +22,7 @@ class References extends \Google\Collection
   protected $collection_key = 'references';
   protected $referencesType = Reference::class;
   protected $referencesDataType = 'array';
+  public $references;
 
   /**
    * @param Reference[]
