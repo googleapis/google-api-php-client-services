@@ -32,7 +32,7 @@ use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubsc
  * Typical usage is:
  *  <code>
  *   $paymentsresellersubscriptionService = new Google\Service\PaymentsResellerSubscription(...);
- *   $subscriptions = $paymentsresellersubscriptionService->subscriptions;
+ *   $subscriptions = $paymentsresellersubscriptionService->partners_subscriptions;
  *  </code>
  */
 class PartnersSubscriptions extends \Google\Service\Resource
