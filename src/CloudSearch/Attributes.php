@@ -22,6 +22,7 @@ class Attributes extends \Google\Collection
   protected $collection_key = 'attribute';
   protected $attributeType = Attribute::class;
   protected $attributeDataType = 'array';
+  public $attribute;
 
   /**
    * @param Attribute[]
