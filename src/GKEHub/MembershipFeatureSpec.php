@@ -21,16 +21,20 @@ class MembershipFeatureSpec extends \Google\Model
 {
   protected $configmanagementType = ConfigManagementMembershipSpec::class;
   protected $configmanagementDataType = '';
+  public $configmanagement;
   /**
    * @var bool
    */
   public $fleetInherited;
   protected $fleetobservabilityType = FleetObservabilityMembershipSpec::class;
   protected $fleetobservabilityDataType = '';
+  public $fleetobservability;
   protected $identityserviceType = IdentityServiceMembershipSpec::class;
   protected $identityserviceDataType = '';
+  public $identityservice;
   protected $meshType = ServiceMeshMembershipSpec::class;
   protected $meshDataType = '';
+  public $mesh;
 
   /**
    * @param ConfigManagementMembershipSpec

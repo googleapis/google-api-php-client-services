@@ -21,8 +21,10 @@ class ConfigManagementPolicyControllerState extends \Google\Model
 {
   protected $deploymentStateType = ConfigManagementGatekeeperDeploymentState::class;
   protected $deploymentStateDataType = '';
+  public $deploymentState;
   protected $versionType = ConfigManagementPolicyControllerVersion::class;
   protected $versionDataType = '';
+  public $version;
 
   /**
    * @param ConfigManagementGatekeeperDeploymentState

@@ -31,7 +31,7 @@ use Google\Service\GKEHub\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $gkehubService = new Google\Service\GKEHub(...);
- *   $memberships = $gkehubService->memberships;
+ *   $memberships = $gkehubService->projects_locations_memberships;
  *  </code>
  */
 class ProjectsLocationsMemberships extends \Google\Service\Resource

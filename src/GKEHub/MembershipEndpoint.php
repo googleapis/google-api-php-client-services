@@ -21,18 +21,25 @@ class MembershipEndpoint extends \Google\Model
 {
   protected $applianceClusterType = ApplianceCluster::class;
   protected $applianceClusterDataType = '';
+  public $applianceCluster;
   protected $edgeClusterType = EdgeCluster::class;
   protected $edgeClusterDataType = '';
+  public $edgeCluster;
   protected $gkeClusterType = GkeCluster::class;
   protected $gkeClusterDataType = '';
+  public $gkeCluster;
   protected $kubernetesMetadataType = KubernetesMetadata::class;
   protected $kubernetesMetadataDataType = '';
+  public $kubernetesMetadata;
   protected $kubernetesResourceType = KubernetesResource::class;
   protected $kubernetesResourceDataType = '';
+  public $kubernetesResource;
   protected $multiCloudClusterType = MultiCloudCluster::class;
   protected $multiCloudClusterDataType = '';
+  public $multiCloudCluster;
   protected $onPremClusterType = OnPremCluster::class;
   protected $onPremClusterDataType = '';
+  public $onPremCluster;
 
   /**
    * @param ApplianceCluster
