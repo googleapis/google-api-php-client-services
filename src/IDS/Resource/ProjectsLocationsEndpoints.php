@@ -30,7 +30,7 @@ use Google\Service\IDS\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $idsService = new Google\Service\IDS(...);
- *   $endpoints = $idsService->endpoints;
+ *   $endpoints = $idsService->projects_locations_endpoints;
  *  </code>
  */
 class ProjectsLocationsEndpoints extends \Google\Service\Resource
