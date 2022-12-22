@@ -10,7 +10,7 @@ namespace {{ api.ownerName }}\Service\{{ api.className }}\Resource;
  * Typical usage is:
  *  <code>
  *   ${{ api.name }}Service = new {{ api.ownerName }}\Service\{{ api.className }}(...);
- *   ${{ resource.codeName }} = ${{ api.name }}Service->{{ resource.codeName }};
+ *   ${{ resource.codeName }} = ${{ api.name }}Service->{{ resource.phpPropName }};
  *  </code>
  */
 class {{ resource.className }} extends \Google\Service\Resource

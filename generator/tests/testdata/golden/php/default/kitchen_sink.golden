@@ -1390,7 +1390,7 @@ use Google\Service\KitchSink\SeriesList;
  * Typical usage is:
  *  <code>
  *   $kitch_sinkService = new Google\Service\KitchSink(...);
- *   $series = $kitch_sinkService->series;
+ *   $series = $kitch_sinkService->featured_series;
  *  </code>
  */
 class FeaturedSeries extends \Google\Service\Resource
@@ -1474,7 +1474,7 @@ use Google\Service\KitchSink\SeriesList;
  * Typical usage is:
  *  <code>
  *   $kitch_sinkService = new Google\Service\KitchSink(...);
- *   $series = $kitch_sinkService->series;
+ *   $series = $kitch_sinkService->global_series;
  *  </code>
  */
 class KitchSinkGlobalSeries extends \Google\Service\Resource
@@ -1564,7 +1564,7 @@ use Google\Service\KitchSink\SeriesList;
  * Typical usage is:
  *  <code>
  *   $kitch_sinkService = new Google\Service\KitchSink(...);
- *   $series = $kitch_sinkService->series;
+ *   $series = $kitch_sinkService->my_series;
  *  </code>
  */
 class MySeries extends \Google\Service\Resource
@@ -1648,7 +1648,7 @@ use Google\Service\KitchSink\SeriesList;
  * Typical usage is:
  *  <code>
  *   $kitch_sinkService = new Google\Service\KitchSink(...);
- *   $private = $kitch_sinkService->private;
+ *   $private = $kitch_sinkService->myrecent_private;
  *  </code>
  */
 class MyrecentKitchSinkPrivate extends \Google\Service\Resource
@@ -1935,7 +1935,7 @@ use Google\Service\KitchSink\SeriesList;
  * Typical usage is:
  *  <code>
  *   $kitch_sinkService = new Google\Service\KitchSink(...);
- *   $responses = $kitch_sinkService->responses;
+ *   $responses = $kitch_sinkService->series_responses;
  *  </code>
  */
 class SeriesResponses extends \Google\Service\Resource
@@ -1995,7 +1995,7 @@ use Google\Service\KitchSink\SubmissionList;
  * Typical usage is:
  *  <code>
  *   $kitch_sinkService = new Google\Service\KitchSink(...);
- *   $submissions = $kitch_sinkService->submissions;
+ *   $submissions = $kitch_sinkService->series_submissions;
  *  </code>
  */
 class SeriesSubmissions extends \Google\Service\Resource
@@ -2314,7 +2314,7 @@ use Google\Service\KitchSink\SubmissionList;
  * Typical usage is:
  *  <code>
  *   $kitch_sinkService = new Google\Service\KitchSink(...);
- *   $submissions = $kitch_sinkService->submissions;
+ *   $submissions = $kitch_sinkService->topics_submissions;
  *  </code>
  */
 class TopicsSubmissions extends \Google\Service\Resource
