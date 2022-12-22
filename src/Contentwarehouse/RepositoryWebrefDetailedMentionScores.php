@@ -22,6 +22,7 @@ class RepositoryWebrefDetailedMentionScores extends \Google\Collection
   protected $collection_key = 'patternInfo';
   protected $patternInfoType = RepositoryWebrefPatternInfo::class;
   protected $patternInfoDataType = 'array';
+  public $patternInfo;
   /**
    * @var float
    */

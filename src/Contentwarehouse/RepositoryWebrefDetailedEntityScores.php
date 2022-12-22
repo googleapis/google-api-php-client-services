@@ -69,6 +69,7 @@ class RepositoryWebrefDetailedEntityScores extends \Google\Model
   public $normalizedTopicality;
   protected $referencePageScoresType = RepositoryWebrefReferencePageScores::class;
   protected $referencePageScoresDataType = '';
+  public $referencePageScores;
   /**
    * @var float
    */
