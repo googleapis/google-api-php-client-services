@@ -25,7 +25,7 @@ use Google\Service\CloudSupport\ListCommentsResponse;
  * Typical usage is:
  *  <code>
  *   $cloudsupportService = new Google\Service\CloudSupport(...);
- *   $comments = $cloudsupportService->comments;
+ *   $comments = $cloudsupportService->cases_comments;
  *  </code>
  */
 class CasesComments extends \Google\Service\Resource
