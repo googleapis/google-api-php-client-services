@@ -34,7 +34,7 @@ use Google\Service\CloudFunctions\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $cloudfunctionsService = new Google\Service\CloudFunctions(...);
- *   $functions = $cloudfunctionsService->functions;
+ *   $functions = $cloudfunctionsService->projects_locations_functions;
  *  </code>
  */
 class ProjectsLocationsFunctions extends \Google\Service\Resource
