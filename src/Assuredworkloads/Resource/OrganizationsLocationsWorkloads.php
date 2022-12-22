@@ -30,7 +30,7 @@ use Google\Service\Assuredworkloads\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $assuredworkloadsService = new Google\Service\Assuredworkloads(...);
- *   $workloads = $assuredworkloadsService->workloads;
+ *   $workloads = $assuredworkloadsService->organizations_locations_workloads;
  *  </code>
  */
 class OrganizationsLocationsWorkloads extends \Google\Service\Resource

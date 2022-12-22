@@ -25,6 +25,7 @@ class GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest extends \Goog
   public $etag;
   protected $partnerPermissionsType = GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions::class;
   protected $partnerPermissionsDataType = '';
+  public $partnerPermissions;
   /**
    * @var string
    */
