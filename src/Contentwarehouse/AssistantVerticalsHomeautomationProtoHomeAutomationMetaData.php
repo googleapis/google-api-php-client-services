@@ -22,8 +22,10 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   protected $collection_key = 'traitRoutingHints';
   protected $actionProjectConfigsType = AssistantVerticalsHomeautomationProtoActionProjectConfig::class;
   protected $actionProjectConfigsDataType = 'array';
+  public $actionProjectConfigs;
   protected $agentInformationType = AssistantVerticalsHomeautomationProtoAgentInformation::class;
   protected $agentInformationDataType = '';
+  public $agentInformation;
   /**
    * @var string
    */
@@ -78,6 +80,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public $operationalNodeId;
   protected $otherDeviceIdsType = AssistantVerticalsHomeautomationProtoAgentDeviceId::class;
   protected $otherDeviceIdsDataType = 'array';
+  public $otherDeviceIds;
   /**
    * @var string[]
    */
@@ -96,6 +99,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public $personalizedNicknames;
   protected $physicalLocationType = AssistantVerticalsHomeautomationProtoPhysicalLocation::class;
   protected $physicalLocationDataType = '';
+  public $physicalLocation;
   /**
    * @var string[]
    */
@@ -106,20 +110,26 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public $primaryName;
   protected $roleInformationType = AssistantVerticalsHomeautomationProtoRoleInformation::class;
   protected $roleInformationDataType = '';
+  public $roleInformation;
   /**
    * @var bool
    */
   public $routableViaGcm;
   protected $saftDocumentType = NlpSaftDocument::class;
   protected $saftDocumentDataType = '';
+  public $saftDocument;
   protected $smartDeviceManagementDataType = AssistantVerticalsHomeautomationProtoSmartDeviceManagementData::class;
   protected $smartDeviceManagementDataDataType = '';
+  public $smartDeviceManagementData;
   protected $smartHomeFeaturesType = AssistantVerticalsHomeautomationProtoSmartHomeFeatures::class;
   protected $smartHomeFeaturesDataType = '';
+  public $smartHomeFeatures;
   protected $supportedStructureFeaturesType = AssistantVerticalsHomeautomationProtoSupportedStructureFeatures::class;
   protected $supportedStructureFeaturesDataType = '';
+  public $supportedStructureFeatures;
   protected $supportedTraitsByAgentType = AssistantVerticalsHomeautomationProtoHomeAutomationMetaDataSupportedTraits::class;
   protected $supportedTraitsByAgentDataType = 'map';
+  public $supportedTraitsByAgent;
   /**
    * @var bool
    */
@@ -134,10 +144,13 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public $tdssUpdateTimestamp;
   protected $traitRoutingHintsType = HomeGraphCommonTraitRoutingHints::class;
   protected $traitRoutingHintsDataType = 'array';
+  public $traitRoutingHints;
   protected $traitRoutingTableType = HomeGraphCommonRoutingTable::class;
   protected $traitRoutingTableDataType = 'map';
+  public $traitRoutingTable;
   protected $traitToAttributeProtosType = AssistantVerticalsHomeautomationProtoAttributes::class;
   protected $traitToAttributeProtosDataType = 'map';
+  public $traitToAttributeProtos;
   /**
    * @var string
    */
@@ -156,6 +169,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public $willReportState;
   protected $zoneNameSaftDocumentType = NlpSaftDocument::class;
   protected $zoneNameSaftDocumentDataType = '';
+  public $zoneNameSaftDocument;
 
   /**
    * @param AssistantVerticalsHomeautomationProtoActionProjectConfig[]

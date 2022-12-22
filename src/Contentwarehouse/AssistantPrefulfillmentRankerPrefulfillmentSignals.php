@@ -35,6 +35,7 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $groundabilityScore;
   protected $groundingProviderFeaturesType = AssistantGroundingRankerGroundingProviderFeatures::class;
   protected $groundingProviderFeaturesDataType = '';
+  public $groundingProviderFeatures;
   /**
    * @var float
    */
