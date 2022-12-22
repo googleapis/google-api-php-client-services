@@ -25,7 +25,7 @@ use Google\Service\Texttospeech\Operation;
  * Typical usage is:
  *  <code>
  *   $texttospeechService = new Google\Service\Texttospeech(...);
- *   $operations = $texttospeechService->operations;
+ *   $operations = $texttospeechService->projects_locations_operations;
  *  </code>
  */
 class ProjectsLocationsOperations extends \Google\Service\Resource

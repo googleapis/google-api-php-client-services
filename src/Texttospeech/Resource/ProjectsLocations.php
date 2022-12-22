@@ -25,7 +25,7 @@ use Google\Service\Texttospeech\SynthesizeLongAudioRequest;
  * Typical usage is:
  *  <code>
  *   $texttospeechService = new Google\Service\Texttospeech(...);
- *   $locations = $texttospeechService->locations;
+ *   $locations = $texttospeechService->projects_locations;
  *  </code>
  */
 class ProjectsLocations extends \Google\Service\Resource
