@@ -47,7 +47,7 @@ use Google\Service\Firestore\WriteResponse;
  * Typical usage is:
  *  <code>
  *   $firestoreService = new Google\Service\Firestore(...);
- *   $documents = $firestoreService->documents;
+ *   $documents = $firestoreService->projects_databases_documents;
  *  </code>
  */
 class ProjectsDatabasesDocuments extends \Google\Service\Resource
