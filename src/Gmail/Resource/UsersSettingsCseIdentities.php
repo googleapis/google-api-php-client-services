@@ -113,7 +113,7 @@ class UsersSettingsCseIdentities extends \Google\Service\Resource
   /**
    * Associates a different key pair with an existing client-side encryption
    * identity. The updated key pair must validate against Google's [S/MIME
-   * certificate profiles](https://support.google.com/a/answer/7300887?hl=en).
+   * certificate profiles](https://support.google.com/a/answer/7300887).
    * [Beta](https://workspace.google.com/terms/service-terms/index.html).
    * (identities.patch)
    *
