@@ -29,8 +29,10 @@ class GoogleCloudIntegrationsV1alphaClientConfig extends \Google\Model
   public $clientState;
   protected $cloudKmsConfigType = GoogleCloudIntegrationsV1alphaCloudKmsConfig::class;
   protected $cloudKmsConfigDataType = '';
+  public $cloudKmsConfig;
   protected $cloudLoggingConfigType = GoogleCloudIntegrationsV1alphaCloudLoggingConfig::class;
   protected $cloudLoggingConfigDataType = '';
+  public $cloudLoggingConfig;
   /**
    * @var string
    */
