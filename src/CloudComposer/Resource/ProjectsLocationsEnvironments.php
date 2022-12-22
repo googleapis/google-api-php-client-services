@@ -28,7 +28,7 @@ use Google\Service\CloudComposer\SaveSnapshotRequest;
  * Typical usage is:
  *  <code>
  *   $composerService = new Google\Service\CloudComposer(...);
- *   $environments = $composerService->environments;
+ *   $environments = $composerService->projects_locations_environments;
  *  </code>
  */
 class ProjectsLocationsEnvironments extends \Google\Service\Resource
