@@ -21,6 +21,7 @@ class GoogleAssistantAccessoryV1ScreenOutConfig extends \Google\Model
 {
   protected $dimensionsType = GoogleAssistantAccessoryV1ScreenOutConfigDimensions::class;
   protected $dimensionsDataType = '';
+  public $dimensions;
 
   /**
    * @param GoogleAssistantAccessoryV1ScreenOutConfigDimensions
