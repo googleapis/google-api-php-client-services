@@ -35,7 +35,7 @@ use Google\Service\Apigee\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $apigeeService = new Google\Service\Apigee(...);
- *   $environments = $apigeeService->environments;
+ *   $environments = $apigeeService->organizations_environments;
  *  </code>
  */
 class OrganizationsEnvironments extends \Google\Service\Resource
