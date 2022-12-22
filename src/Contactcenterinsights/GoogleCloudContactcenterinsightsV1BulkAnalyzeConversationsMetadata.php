@@ -37,6 +37,7 @@ class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsMetadata extends
   public $failedAnalysesCount;
   protected $requestType = GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest::class;
   protected $requestDataType = '';
+  public $request;
   /**
    * @var int
    */

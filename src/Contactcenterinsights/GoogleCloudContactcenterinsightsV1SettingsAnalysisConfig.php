@@ -21,6 +21,7 @@ class GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig extends \Google\M
 {
   protected $annotatorSelectorType = GoogleCloudContactcenterinsightsV1AnnotatorSelector::class;
   protected $annotatorSelectorDataType = '';
+  public $annotatorSelector;
   public $runtimeIntegrationAnalysisPercentage;
 
   /**

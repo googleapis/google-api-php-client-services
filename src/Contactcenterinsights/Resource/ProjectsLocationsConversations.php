@@ -30,7 +30,7 @@ use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $contactcenterinsightsService = new Google\Service\Contactcenterinsights(...);
- *   $conversations = $contactcenterinsightsService->conversations;
+ *   $conversations = $contactcenterinsightsService->projects_locations_conversations;
  *  </code>
  */
 class ProjectsLocationsConversations extends \Google\Service\Resource

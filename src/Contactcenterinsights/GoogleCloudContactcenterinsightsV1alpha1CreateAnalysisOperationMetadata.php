@@ -21,6 +21,7 @@ class GoogleCloudContactcenterinsightsV1alpha1CreateAnalysisOperationMetadata ex
 {
   protected $annotatorSelectorType = GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelector::class;
   protected $annotatorSelectorDataType = '';
+  public $annotatorSelector;
   /**
    * @var string
    */
