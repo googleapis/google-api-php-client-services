@@ -21,6 +21,7 @@ class ImapsyncFolderAttributeFolderMessage extends \Google\Model
 {
   protected $flagsType = ImapsyncFolderAttributeFolderMessageFlags::class;
   protected $flagsDataType = '';
+  public $flags;
   /**
    * @var string
    */

@@ -21,6 +21,7 @@ class FacetOptions extends \Google\Model
 {
   protected $integerFacetingOptionsType = IntegerFacetingOptions::class;
   protected $integerFacetingOptionsDataType = '';
+  public $integerFacetingOptions;
   /**
    * @var int
    */

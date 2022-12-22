@@ -21,8 +21,10 @@ class FilterUpdate extends \Google\Model
 {
   protected $filterCreatedType = FilterCreated::class;
   protected $filterCreatedDataType = '';
+  public $filterCreated;
   protected $filterDeletedType = FilterDeleted::class;
   protected $filterDeletedDataType = '';
+  public $filterDeleted;
   /**
    * @var string
    */
