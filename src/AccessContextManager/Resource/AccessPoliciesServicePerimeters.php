@@ -30,7 +30,7 @@ use Google\Service\AccessContextManager\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $accesscontextmanagerService = new Google\Service\AccessContextManager(...);
- *   $servicePerimeters = $accesscontextmanagerService->servicePerimeters;
+ *   $servicePerimeters = $accesscontextmanagerService->accessPolicies_servicePerimeters;
  *  </code>
  */
 class AccessPoliciesServicePerimeters extends \Google\Service\Resource

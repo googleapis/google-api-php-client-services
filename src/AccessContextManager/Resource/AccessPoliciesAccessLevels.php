@@ -29,7 +29,7 @@ use Google\Service\AccessContextManager\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $accesscontextmanagerService = new Google\Service\AccessContextManager(...);
- *   $accessLevels = $accesscontextmanagerService->accessLevels;
+ *   $accessLevels = $accesscontextmanagerService->accessPolicies_accessLevels;
  *  </code>
  */
 class AccessPoliciesAccessLevels extends \Google\Service\Resource

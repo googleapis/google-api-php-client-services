@@ -22,6 +22,7 @@ class ListAuthorizedOrgsDescsResponse extends \Google\Collection
   protected $collection_key = 'authorizedOrgsDescs';
   protected $authorizedOrgsDescsType = AuthorizedOrgsDesc::class;
   protected $authorizedOrgsDescsDataType = 'array';
+  public $authorizedOrgsDescs;
   /**
    * @var string
    */

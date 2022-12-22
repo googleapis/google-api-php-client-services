@@ -26,7 +26,7 @@ use Google\Service\AccessContextManager\Operation;
  * Typical usage is:
  *  <code>
  *   $accesscontextmanagerService = new Google\Service\AccessContextManager(...);
- *   $authorizedOrgsDescs = $accesscontextmanagerService->authorizedOrgsDescs;
+ *   $authorizedOrgsDescs = $accesscontextmanagerService->accessPolicies_authorizedOrgsDescs;
  *  </code>
  */
 class AccessPoliciesAuthorizedOrgsDescs extends \Google\Service\Resource
