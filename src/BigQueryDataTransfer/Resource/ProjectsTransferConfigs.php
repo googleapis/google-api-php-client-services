@@ -30,7 +30,7 @@ use Google\Service\BigQueryDataTransfer\TransferConfig;
  * Typical usage is:
  *  <code>
  *   $bigquerydatatransferService = new Google\Service\BigQueryDataTransfer(...);
- *   $transferConfigs = $bigquerydatatransferService->transferConfigs;
+ *   $transferConfigs = $bigquerydatatransferService->projects_transferConfigs;
  *  </code>
  */
 class ProjectsTransferConfigs extends \Google\Service\Resource
