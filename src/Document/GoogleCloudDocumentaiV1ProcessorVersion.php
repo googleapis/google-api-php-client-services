@@ -25,12 +25,14 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   public $createTime;
   protected $deprecationInfoType = GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo::class;
   protected $deprecationInfoDataType = '';
+  public $deprecationInfo;
   /**
    * @var string
    */
   public $displayName;
   protected $documentSchemaType = GoogleCloudDocumentaiV1DocumentSchema::class;
   protected $documentSchemaDataType = '';
+  public $documentSchema;
   /**
    * @var bool
    */

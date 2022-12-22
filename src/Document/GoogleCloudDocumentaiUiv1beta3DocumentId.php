@@ -21,8 +21,10 @@ class GoogleCloudDocumentaiUiv1beta3DocumentId extends \Google\Model
 {
   protected $gcsManagedDocIdType = GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId::class;
   protected $gcsManagedDocIdDataType = '';
+  public $gcsManagedDocId;
   protected $revisionReferenceType = GoogleCloudDocumentaiUiv1beta3RevisionReference::class;
   protected $revisionReferenceDataType = '';
+  public $revisionReference;
 
   /**
    * @param GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId
