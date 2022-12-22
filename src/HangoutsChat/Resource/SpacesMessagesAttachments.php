@@ -24,7 +24,7 @@ use Google\Service\HangoutsChat\Attachment;
  * Typical usage is:
  *  <code>
  *   $chatService = new Google\Service\HangoutsChat(...);
- *   $attachments = $chatService->attachments;
+ *   $attachments = $chatService->spaces_messages_attachments;
  *  </code>
  */
 class SpacesMessagesAttachments extends \Google\Service\Resource

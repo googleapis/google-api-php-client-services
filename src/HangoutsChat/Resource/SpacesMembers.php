@@ -25,7 +25,7 @@ use Google\Service\HangoutsChat\Membership;
  * Typical usage is:
  *  <code>
  *   $chatService = new Google\Service\HangoutsChat(...);
- *   $members = $chatService->members;
+ *   $members = $chatService->spaces_members;
  *  </code>
  */
 class SpacesMembers extends \Google\Service\Resource
