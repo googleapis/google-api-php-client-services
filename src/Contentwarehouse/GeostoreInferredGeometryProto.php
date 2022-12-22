@@ -22,10 +22,13 @@ class GeostoreInferredGeometryProto extends \Google\Collection
   protected $collection_key = 'includesGeometryOf';
   protected $definesGeometryForType = GeostoreFeatureIdProto::class;
   protected $definesGeometryForDataType = 'array';
+  public $definesGeometryFor;
   protected $excludesGeometryOfType = GeostoreFeatureIdProto::class;
   protected $excludesGeometryOfDataType = 'array';
+  public $excludesGeometryOf;
   protected $includesGeometryOfType = GeostoreFeatureIdProto::class;
   protected $includesGeometryOfDataType = 'array';
+  public $includesGeometryOf;
 
   /**
    * @param GeostoreFeatureIdProto[]
