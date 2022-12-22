@@ -31,7 +31,7 @@ use Google\Service\Document\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $documentaiService = new Google\Service\Document(...);
- *   $processorVersions = $documentaiService->processorVersions;
+ *   $processorVersions = $documentaiService->projects_locations_processors_processorVersions;
  *  </code>
  */
 class ProjectsLocationsProcessorsProcessorVersions extends \Google\Service\Resource

@@ -24,7 +24,7 @@ use Google\Service\Document\GoogleCloudDocumentaiV1ListProcessorTypesResponse;
  * Typical usage is:
  *  <code>
  *   $documentaiService = new Google\Service\Document(...);
- *   $processorTypes = $documentaiService->processorTypes;
+ *   $processorTypes = $documentaiService->projects_locations_processorTypes;
  *  </code>
  */
 class ProjectsLocationsProcessorTypes extends \Google\Service\Resource
