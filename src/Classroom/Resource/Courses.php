@@ -130,7 +130,7 @@ class Courses extends \Google\Service\Resource
    * exists with the requested ID. * `INVALID_ARGUMENT` if invalid fields are
    * specified in the update mask or if no update mask is supplied. *
    * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable
-   * * InactiveCourseOwner (courses.patch)
+   * * InactiveCourseOwner * IneligibleOwner (courses.patch)
    *
    * @param string $id Identifier of the course to update. This identifier can be
    * either the Classroom-assigned identifier or an alias.
