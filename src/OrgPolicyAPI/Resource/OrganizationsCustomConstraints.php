@@ -26,7 +26,7 @@ use Google\Service\OrgPolicyAPI\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $orgpolicyService = new Google\Service\OrgPolicyAPI(...);
- *   $customConstraints = $orgpolicyService->customConstraints;
+ *   $customConstraints = $orgpolicyService->organizations_customConstraints;
  *  </code>
  */
 class OrganizationsCustomConstraints extends \Google\Service\Resource

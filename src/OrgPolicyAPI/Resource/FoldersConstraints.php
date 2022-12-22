@@ -24,7 +24,7 @@ use Google\Service\OrgPolicyAPI\GoogleCloudOrgpolicyV2ListConstraintsResponse;
  * Typical usage is:
  *  <code>
  *   $orgpolicyService = new Google\Service\OrgPolicyAPI(...);
- *   $constraints = $orgpolicyService->constraints;
+ *   $constraints = $orgpolicyService->folders_constraints;
  *  </code>
  */
 class FoldersConstraints extends \Google\Service\Resource

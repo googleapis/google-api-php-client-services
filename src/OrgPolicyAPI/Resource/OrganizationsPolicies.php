@@ -26,7 +26,7 @@ use Google\Service\OrgPolicyAPI\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $orgpolicyService = new Google\Service\OrgPolicyAPI(...);
- *   $policies = $orgpolicyService->policies;
+ *   $policies = $orgpolicyService->organizations_policies;
  *  </code>
  */
 class OrganizationsPolicies extends \Google\Service\Resource
