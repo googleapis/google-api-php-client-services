@@ -29,7 +29,7 @@ use Google\Service\Datapipelines\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $datapipelinesService = new Google\Service\Datapipelines(...);
- *   $pipelines = $datapipelinesService->pipelines;
+ *   $pipelines = $datapipelinesService->projects_locations_pipelines;
  *  </code>
  */
 class ProjectsLocationsPipelines extends \Google\Service\Resource

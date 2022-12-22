@@ -22,7 +22,7 @@ namespace Google\Service\Datapipelines\Resource;
  * Typical usage is:
  *  <code>
  *   $datapipelinesService = new Google\Service\Datapipelines(...);
- *   $locations = $datapipelinesService->locations;
+ *   $locations = $datapipelinesService->projects_locations;
  *  </code>
  */
 class ProjectsLocations extends \Google\Service\Resource
