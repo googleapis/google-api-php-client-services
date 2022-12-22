@@ -28,7 +28,7 @@ use Google\Service\Dataform\WorkflowInvocation;
  * Typical usage is:
  *  <code>
  *   $dataformService = new Google\Service\Dataform(...);
- *   $workflowInvocations = $dataformService->workflowInvocations;
+ *   $workflowInvocations = $dataformService->projects_locations_repositories_workflowInvocations;
  *  </code>
  */
 class ProjectsLocationsRepositoriesWorkflowInvocations extends \Google\Service\Resource

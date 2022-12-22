@@ -26,7 +26,7 @@ use Google\Service\Dataform\QueryCompilationResultActionsResponse;
  * Typical usage is:
  *  <code>
  *   $dataformService = new Google\Service\Dataform(...);
- *   $compilationResults = $dataformService->compilationResults;
+ *   $compilationResults = $dataformService->projects_locations_repositories_compilationResults;
  *  </code>
  */
 class ProjectsLocationsRepositoriesCompilationResults extends \Google\Service\Resource

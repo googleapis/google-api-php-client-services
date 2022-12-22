@@ -26,6 +26,7 @@ class RelationDescriptor extends \Google\Collection
   public $bigqueryLabels;
   protected $columnsType = ColumnDescriptor::class;
   protected $columnsDataType = 'array';
+  public $columns;
   /**
    * @var string
    */

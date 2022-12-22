@@ -22,6 +22,7 @@ class Operations extends \Google\Collection
   protected $collection_key = 'tags';
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
+  public $dependencyTargets;
   /**
    * @var bool
    */
@@ -36,6 +37,7 @@ class Operations extends \Google\Collection
   public $queries;
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
+  public $relationDescriptor;
   /**
    * @var string[]
    */

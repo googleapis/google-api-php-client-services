@@ -27,7 +27,7 @@ use Google\Service\Dataform\Repository;
  * Typical usage is:
  *  <code>
  *   $dataformService = new Google\Service\Dataform(...);
- *   $repositories = $dataformService->repositories;
+ *   $repositories = $dataformService->projects_locations_repositories;
  *  </code>
  */
 class ProjectsLocationsRepositories extends \Google\Service\Resource

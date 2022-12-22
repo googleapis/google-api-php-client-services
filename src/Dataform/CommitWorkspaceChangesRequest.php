@@ -22,6 +22,7 @@ class CommitWorkspaceChangesRequest extends \Google\Collection
   protected $collection_key = 'paths';
   protected $authorType = CommitAuthor::class;
   protected $authorDataType = '';
+  public $author;
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ use Google\Service\Dataform\WorkflowConfig;
  * Typical usage is:
  *  <code>
  *   $dataformService = new Google\Service\Dataform(...);
- *   $workflowConfigs = $dataformService->workflowConfigs;
+ *   $workflowConfigs = $dataformService->projects_locations_repositories_workflowConfigs;
  *  </code>
  */
 class ProjectsLocationsRepositoriesWorkflowConfigs extends \Google\Service\Resource

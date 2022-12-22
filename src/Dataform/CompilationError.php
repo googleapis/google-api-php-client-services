@@ -21,6 +21,7 @@ class CompilationError extends \Google\Model
 {
   protected $actionTargetType = Target::class;
   protected $actionTargetDataType = '';
+  public $actionTarget;
   /**
    * @var string
    */

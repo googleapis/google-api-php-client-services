@@ -25,6 +25,7 @@ class ScheduledReleaseRecord extends \Google\Model
   public $compilationResult;
   protected $errorStatusType = Status::class;
   protected $errorStatusDataType = '';
+  public $errorStatus;
   /**
    * @var string
    */

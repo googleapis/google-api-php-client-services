@@ -30,6 +30,7 @@ class InvocationConfig extends \Google\Collection
   public $includedTags;
   protected $includedTargetsType = Target::class;
   protected $includedTargetsDataType = 'array';
+  public $includedTargets;
   /**
    * @var bool
    */

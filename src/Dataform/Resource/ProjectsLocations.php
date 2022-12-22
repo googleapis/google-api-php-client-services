@@ -25,7 +25,7 @@ use Google\Service\Dataform\Location;
  * Typical usage is:
  *  <code>
  *   $dataformService = new Google\Service\Dataform(...);
- *   $locations = $dataformService->locations;
+ *   $locations = $dataformService->projects_locations;
  *  </code>
  */
 class ProjectsLocations extends \Google\Service\Resource

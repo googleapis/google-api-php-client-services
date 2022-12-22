@@ -21,6 +21,7 @@ class Repository extends \Google\Model
 {
   protected $gitRemoteSettingsType = GitRemoteSettings::class;
   protected $gitRemoteSettingsDataType = '';
+  public $gitRemoteSettings;
   /**
    * @var string
    */

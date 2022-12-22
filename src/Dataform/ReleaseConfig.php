@@ -22,6 +22,7 @@ class ReleaseConfig extends \Google\Collection
   protected $collection_key = 'recentScheduledReleaseRecords';
   protected $codeCompilationConfigType = CodeCompilationConfig::class;
   protected $codeCompilationConfigDataType = '';
+  public $codeCompilationConfig;
   /**
    * @var string
    */
@@ -36,6 +37,7 @@ class ReleaseConfig extends \Google\Collection
   public $name;
   protected $recentScheduledReleaseRecordsType = ScheduledReleaseRecord::class;
   protected $recentScheduledReleaseRecordsDataType = 'array';
+  public $recentScheduledReleaseRecords;
   /**
    * @var string
    */

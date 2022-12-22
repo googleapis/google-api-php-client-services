@@ -47,7 +47,7 @@ use Google\Service\Dataform\WriteFileResponse;
  * Typical usage is:
  *  <code>
  *   $dataformService = new Google\Service\Dataform(...);
- *   $workspaces = $dataformService->workspaces;
+ *   $workspaces = $dataformService->projects_locations_repositories_workspaces;
  *  </code>
  */
 class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource

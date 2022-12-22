@@ -26,6 +26,7 @@ class ListReleaseConfigsResponse extends \Google\Collection
   public $nextPageToken;
   protected $releaseConfigsType = ReleaseConfig::class;
   protected $releaseConfigsDataType = 'array';
+  public $releaseConfigs;
   /**
    * @var string[]
    */

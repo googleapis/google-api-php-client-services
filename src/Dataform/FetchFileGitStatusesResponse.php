@@ -22,6 +22,7 @@ class FetchFileGitStatusesResponse extends \Google\Collection
   protected $collection_key = 'uncommittedFileChanges';
   protected $uncommittedFileChangesType = UncommittedFileChange::class;
   protected $uncommittedFileChangesDataType = 'array';
+  public $uncommittedFileChanges;
 
   /**
    * @param UncommittedFileChange[]

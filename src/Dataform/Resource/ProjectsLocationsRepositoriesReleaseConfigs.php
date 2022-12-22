@@ -26,7 +26,7 @@ use Google\Service\Dataform\ReleaseConfig;
  * Typical usage is:
  *  <code>
  *   $dataformService = new Google\Service\Dataform(...);
- *   $releaseConfigs = $dataformService->releaseConfigs;
+ *   $releaseConfigs = $dataformService->projects_locations_repositories_releaseConfigs;
  *  </code>
  */
 class ProjectsLocationsRepositoriesReleaseConfigs extends \Google\Service\Resource
