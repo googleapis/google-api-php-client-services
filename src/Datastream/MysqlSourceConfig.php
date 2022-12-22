@@ -21,8 +21,10 @@ class MysqlSourceConfig extends \Google\Model
 {
   protected $excludeObjectsType = MysqlRdbms::class;
   protected $excludeObjectsDataType = '';
+  public $excludeObjects;
   protected $includeObjectsType = MysqlRdbms::class;
   protected $includeObjectsDataType = '';
+  public $includeObjects;
   /**
    * @var int
    */

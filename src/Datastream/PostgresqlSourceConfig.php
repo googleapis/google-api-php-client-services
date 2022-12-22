@@ -21,8 +21,10 @@ class PostgresqlSourceConfig extends \Google\Model
 {
   protected $excludeObjectsType = PostgresqlRdbms::class;
   protected $excludeObjectsDataType = '';
+  public $excludeObjects;
   protected $includeObjectsType = PostgresqlRdbms::class;
   protected $includeObjectsDataType = '';
+  public $includeObjects;
   /**
    * @var string
    */

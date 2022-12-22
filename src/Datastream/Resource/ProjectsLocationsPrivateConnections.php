@@ -26,7 +26,7 @@ use Google\Service\Datastream\PrivateConnection;
  * Typical usage is:
  *  <code>
  *   $datastreamService = new Google\Service\Datastream(...);
- *   $privateConnections = $datastreamService->privateConnections;
+ *   $privateConnections = $datastreamService->projects_locations_privateConnections;
  *  </code>
  */
 class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
