@@ -22,12 +22,14 @@ class DeviceTierConfig extends \Google\Collection
   protected $collection_key = 'deviceGroups';
   protected $deviceGroupsType = DeviceGroup::class;
   protected $deviceGroupsDataType = 'array';
+  public $deviceGroups;
   /**
    * @var string
    */
   public $deviceTierConfigId;
   protected $deviceTierSetType = DeviceTierSet::class;
   protected $deviceTierSetDataType = '';
+  public $deviceTierSet;
 
   /**
    * @param DeviceGroup[]

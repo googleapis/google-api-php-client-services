@@ -26,7 +26,7 @@ use Google\Service\AndroidPublisher\Subscription;
  * Typical usage is:
  *  <code>
  *   $androidpublisherService = new Google\Service\AndroidPublisher(...);
- *   $subscriptions = $androidpublisherService->subscriptions;
+ *   $subscriptions = $androidpublisherService->monetization_subscriptions;
  *  </code>
  */
 class MonetizationSubscriptions extends \Google\Service\Resource

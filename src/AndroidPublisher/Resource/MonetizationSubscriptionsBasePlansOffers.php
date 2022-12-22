@@ -27,7 +27,7 @@ use Google\Service\AndroidPublisher\SubscriptionOffer;
  * Typical usage is:
  *  <code>
  *   $androidpublisherService = new Google\Service\AndroidPublisher(...);
- *   $offers = $androidpublisherService->offers;
+ *   $offers = $androidpublisherService->monetization_subscriptions_basePlans_offers;
  *  </code>
  */
 class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
