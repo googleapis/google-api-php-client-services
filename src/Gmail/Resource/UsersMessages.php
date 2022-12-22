@@ -28,7 +28,7 @@ use Google\Service\Gmail\ModifyMessageRequest;
  * Typical usage is:
  *  <code>
  *   $gmailService = new Google\Service\Gmail(...);
- *   $messages = $gmailService->messages;
+ *   $messages = $gmailService->users_messages;
  *  </code>
  */
 class UsersMessages extends \Google\Service\Resource

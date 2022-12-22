@@ -28,7 +28,7 @@ use Google\Service\Gmail\ObliterateCseKeyPairRequest;
  * Typical usage is:
  *  <code>
  *   $gmailService = new Google\Service\Gmail(...);
- *   $keypairs = $gmailService->keypairs;
+ *   $keypairs = $gmailService->users_settings_cse_keypairs;
  *  </code>
  */
 class UsersSettingsCseKeypairs extends \Google\Service\Resource

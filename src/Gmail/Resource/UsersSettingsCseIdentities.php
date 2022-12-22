@@ -25,7 +25,7 @@ use Google\Service\Gmail\ListCseIdentitiesResponse;
  * Typical usage is:
  *  <code>
  *   $gmailService = new Google\Service\Gmail(...);
- *   $identities = $gmailService->identities;
+ *   $identities = $gmailService->users_settings_cse_identities;
  *  </code>
  */
 class UsersSettingsCseIdentities extends \Google\Service\Resource

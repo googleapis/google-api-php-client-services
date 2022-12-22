@@ -22,6 +22,7 @@ class ListCseIdentitiesResponse extends \Google\Collection
   protected $collection_key = 'cseIdentities';
   protected $cseIdentitiesType = CseIdentity::class;
   protected $cseIdentitiesDataType = 'array';
+  public $cseIdentities;
   /**
    * @var string
    */

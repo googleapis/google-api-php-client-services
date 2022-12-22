@@ -22,6 +22,7 @@ class ListCseKeyPairsResponse extends \Google\Collection
   protected $collection_key = 'cseKeyPairs';
   protected $cseKeyPairsType = CseKeyPair::class;
   protected $cseKeyPairsDataType = 'array';
+  public $cseKeyPairs;
   /**
    * @var string
    */

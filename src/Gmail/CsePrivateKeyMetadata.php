@@ -21,6 +21,7 @@ class CsePrivateKeyMetadata extends \Google\Model
 {
   protected $kaclsKeyMetadataType = KaclsKeyMetadata::class;
   protected $kaclsKeyMetadataDataType = '';
+  public $kaclsKeyMetadata;
   /**
    * @var string
    */

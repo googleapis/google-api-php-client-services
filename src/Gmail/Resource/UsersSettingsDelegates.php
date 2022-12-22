@@ -25,7 +25,7 @@ use Google\Service\Gmail\ListDelegatesResponse;
  * Typical usage is:
  *  <code>
  *   $gmailService = new Google\Service\Gmail(...);
- *   $delegates = $gmailService->delegates;
+ *   $delegates = $gmailService->users_settings_delegates;
  *  </code>
  */
 class UsersSettingsDelegates extends \Google\Service\Resource

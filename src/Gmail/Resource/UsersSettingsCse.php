@@ -22,7 +22,7 @@ namespace Google\Service\Gmail\Resource;
  * Typical usage is:
  *  <code>
  *   $gmailService = new Google\Service\Gmail(...);
- *   $cse = $gmailService->cse;
+ *   $cse = $gmailService->users_settings_cse;
  *  </code>
  */
 class UsersSettingsCse extends \Google\Service\Resource
