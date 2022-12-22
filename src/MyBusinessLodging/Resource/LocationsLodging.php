@@ -24,7 +24,7 @@ use Google\Service\MyBusinessLodging\GetGoogleUpdatedLodgingResponse;
  * Typical usage is:
  *  <code>
  *   $mybusinesslodgingService = new Google\Service\MyBusinessLodging(...);
- *   $lodging = $mybusinesslodgingService->lodging;
+ *   $lodging = $mybusinesslodgingService->locations_lodging;
  *  </code>
  */
 class LocationsLodging extends \Google\Service\Resource
