@@ -178,7 +178,7 @@ class SchemaTest(absltest.TestCase):
                       'RestDescriptionAuthOauth2Scopes',
                       'RestDescriptionAuthOauth2ScopesElement'}
     schema_names = set(x.values.get('className') for x
-                       in api._schemas.itervalues())
+                       in api._schemas.values())
     self.assertEqual(expected_names, schema_names)
     scopes_elem = api._schemas['RestDescription.auth.oauth2.scopesElement']
     self.assertEqual('ScopesElement', scopes_elem.safe_code_type)

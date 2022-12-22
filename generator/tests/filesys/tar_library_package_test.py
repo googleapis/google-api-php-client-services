@@ -21,6 +21,7 @@ __author__ = 'sammccall@google.com (Sam McCall)'
 from io import BytesIO
 import os
 import tarfile
+import six
 
 from absl import flags
 from absl.testing import absltest
@@ -49,7 +50,7 @@ class TarLibraryPackageTest(absltest.TestCase):
 
   def testBasicWriteFile(self):
     stream = self._package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.EndFile()
     self._package.DoneWritingArchive()
 
@@ -67,7 +68,7 @@ class TarLibraryPackageTest(absltest.TestCase):
     package = tar_library_package.TarLibraryPackage(
         output_stream, compress=False)
     stream = package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     package.EndFile()
     package.DoneWritingArchive()
 
@@ -81,10 +82,10 @@ class TarLibraryPackageTest(absltest.TestCase):
 
   def testStartAutomaticallyClosesPreviousFile(self):
     stream = self._package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     file_name_2 = '%s_2' % self._FILE_NAME
     stream = self._package.StartFile(file_name_2)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.EndFile()
     self._package.DoneWritingArchive()
     # read it back and verify
@@ -97,7 +98,7 @@ class TarLibraryPackageTest(absltest.TestCase):
 
   def testDoneAutomaticallyEndsFile(self):
     stream = self._package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.DoneWritingArchive()
 
     # read it back and verify

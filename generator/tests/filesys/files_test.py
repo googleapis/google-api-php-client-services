@@ -33,7 +33,7 @@ class FilesTest(absltest.TestCase):
   def testGetFileContentsLocal(self):
     filename = os.path.join(self.tempdir, 'a')
     contents = files.GetFileContents(filename)
-    self.assertEqual('a', contents)
+    self.assertEqual(b'a', contents)
 
   def testIterFilesLocal(self):
     listing = sorted(files.IterFiles(self.tempdir))

@@ -21,6 +21,7 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import io
 import os
 import zipfile
+import six
 
 from absl import flags
 from absl.testing import absltest
@@ -48,7 +49,7 @@ class ZipLibraryPackageTest(absltest.TestCase):
 
   def testBasicWriteFile(self):
     stream = self._package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.EndFile()
     self._package.DoneWritingArchive()
 
@@ -62,10 +63,10 @@ class ZipLibraryPackageTest(absltest.TestCase):
 
   def testStartAutomaticallyClosesPreviousFile(self):
     stream = self._package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     file_name_2 = '%s_2' % self._FILE_NAME
     stream = self._package.StartFile(file_name_2)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.EndFile()
     self._package.DoneWritingArchive()
     # read it back and verify
@@ -77,7 +78,7 @@ class ZipLibraryPackageTest(absltest.TestCase):
 
   def testDoneAutomaticallyEndsFile(self):
     stream = self._package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.DoneWritingArchive()
 
     # read it back and verify
@@ -134,7 +135,7 @@ class ZipLibraryPackageTest(absltest.TestCase):
     prefix = 'abc/def'
     self._package.SetFilePathPrefix(prefix)
     stream = self._package.StartFile(self._FILE_NAME)
-    stream.write(self._FILE_CONTENTS)
+    stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.EndFile()
     self._package.DoneWritingArchive()
 
@@ -153,14 +154,14 @@ class ZipLibraryPackageTest(absltest.TestCase):
     for file_name in ['d1/d2/f1', 'd1/d2/f2', 'd1/d3/f1', 'd4/d5/f1', 'd4/f1',
                       'd1/f1', 'd1/d2/f3']:
       stream = self._package.StartFile(file_name)
-      stream.write(self._FILE_CONTENTS)
+      stream.write(six.ensure_binary(self._FILE_CONTENTS))
     self._package.EndFile()
     self._package.DoneWritingArchive()
 
     # read it back and verify
     archive = zipfile.ZipFile(io.BytesIO(self._output_stream.getvalue()), 'r')
     info_list = archive.infolist()
-    dir_bits = (040755 << 16) | 0x10
+    dir_bits = (0o40755 << 16) | 0x10
 
     index = 0
     self.assertEqual('d1/', info_list[index].filename)

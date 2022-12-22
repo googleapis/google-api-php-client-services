@@ -20,11 +20,11 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from io import BytesIO
-
 from absl import flags
 from absl.testing import absltest
 from googleapis.codegen.filesys import single_file_library_package
+import io
+import six
 
 FLAGS = flags.FLAGS
 
@@ -32,7 +32,7 @@ FLAGS = flags.FLAGS
 class SingleFileLibraryPackageTest(absltest.TestCase):
 
   def setUp(self):
-    self._output_stream = BytesIO()
+    self._output_stream = io.StringIO()
     self._package = single_file_library_package.SingleFileLibraryPackage(
         self._output_stream)
 
@@ -47,9 +47,9 @@ class SingleFileLibraryPackageTest(absltest.TestCase):
     expected_tmpl = '=== begin: %s\n%s=== end: %s\n'
 
     stream = self._package.StartFile(name1)
-    stream.write(content1)
+    stream.write(six.ensure_binary(content1))
     stream = self._package.StartFile(name2)
-    stream.write(content2)
+    stream.write(six.ensure_binary(content2))
     self._package.DoneWritingArchive()
 
     # read it back and verify
