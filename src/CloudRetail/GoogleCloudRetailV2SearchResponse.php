@@ -34,20 +34,24 @@ class GoogleCloudRetailV2SearchResponse extends \Google\Collection
   public $correctedQuery;
   protected $facetsType = GoogleCloudRetailV2SearchResponseFacet::class;
   protected $facetsDataType = 'array';
+  public $facets;
   protected $invalidConditionBoostSpecsType = GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec::class;
   protected $invalidConditionBoostSpecsDataType = 'array';
+  public $invalidConditionBoostSpecs;
   /**
    * @var string
    */
   public $nextPageToken;
   protected $queryExpansionInfoType = GoogleCloudRetailV2SearchResponseQueryExpansionInfo::class;
   protected $queryExpansionInfoDataType = '';
+  public $queryExpansionInfo;
   /**
    * @var string
    */
   public $redirectUri;
   protected $resultsType = GoogleCloudRetailV2SearchResponseSearchResult::class;
   protected $resultsDataType = 'array';
+  public $results;
   /**
    * @var int
    */

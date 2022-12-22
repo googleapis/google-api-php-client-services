@@ -29,7 +29,7 @@ use Google\Service\CloudRetail\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $retailService = new Google\Service\CloudRetail(...);
- *   $userEvents = $retailService->userEvents;
+ *   $userEvents = $retailService->projects_locations_catalogs_userEvents;
  *  </code>
  */
 class ProjectsLocationsCatalogsUserEvents extends \Google\Service\Resource

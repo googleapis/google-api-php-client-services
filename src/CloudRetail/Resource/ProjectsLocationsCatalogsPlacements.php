@@ -27,7 +27,7 @@ use Google\Service\CloudRetail\GoogleCloudRetailV2SearchResponse;
  * Typical usage is:
  *  <code>
  *   $retailService = new Google\Service\CloudRetail(...);
- *   $placements = $retailService->placements;
+ *   $placements = $retailService->projects_locations_catalogs_placements;
  *  </code>
  */
 class ProjectsLocationsCatalogsPlacements extends \Google\Service\Resource

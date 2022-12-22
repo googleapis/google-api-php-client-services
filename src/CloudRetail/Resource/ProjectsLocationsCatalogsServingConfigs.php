@@ -32,7 +32,7 @@ use Google\Service\CloudRetail\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $retailService = new Google\Service\CloudRetail(...);
- *   $servingConfigs = $retailService->servingConfigs;
+ *   $servingConfigs = $retailService->projects_locations_catalogs_servingConfigs;
  *  </code>
  */
 class ProjectsLocationsCatalogsServingConfigs extends \Google\Service\Resource
