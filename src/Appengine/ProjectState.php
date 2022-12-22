@@ -21,8 +21,10 @@ class ProjectState extends \Google\Model
 {
   protected $currentReasonsType = Reasons::class;
   protected $currentReasonsDataType = '';
+  public $currentReasons;
   protected $previousReasonsType = Reasons::class;
   protected $previousReasonsDataType = '';
+  public $previousReasons;
   /**
    * @var string
    */
