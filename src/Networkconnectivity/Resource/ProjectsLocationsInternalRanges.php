@@ -26,7 +26,7 @@ use Google\Service\Networkconnectivity\ListInternalRangesResponse;
  * Typical usage is:
  *  <code>
  *   $networkconnectivityService = new Google\Service\Networkconnectivity(...);
- *   $internalRanges = $networkconnectivityService->internalRanges;
+ *   $internalRanges = $networkconnectivityService->projects_locations_internalRanges;
  *  </code>
  */
 class ProjectsLocationsInternalRanges extends \Google\Service\Resource
