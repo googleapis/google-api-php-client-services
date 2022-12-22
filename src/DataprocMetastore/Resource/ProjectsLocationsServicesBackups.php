@@ -28,7 +28,7 @@ use Google\Service\DataprocMetastore\SetIamPolicyRequest;
  * Typical usage is:
  *  <code>
  *   $metastoreService = new Google\Service\DataprocMetastore(...);
- *   $backups = $metastoreService->backups;
+ *   $backups = $metastoreService->projects_locations_services_backups;
  *  </code>
  */
 class ProjectsLocationsServicesBackups extends \Google\Service\Resource

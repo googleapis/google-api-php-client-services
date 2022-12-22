@@ -26,7 +26,7 @@ use Google\Service\DataprocMetastore\Operation;
  * Typical usage is:
  *  <code>
  *   $metastoreService = new Google\Service\DataprocMetastore(...);
- *   $operations = $metastoreService->operations;
+ *   $operations = $metastoreService->projects_locations_operations;
  *  </code>
  */
 class ProjectsLocationsOperations extends \Google\Service\Resource

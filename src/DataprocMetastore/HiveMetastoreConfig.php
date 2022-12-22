@@ -25,6 +25,7 @@ class HiveMetastoreConfig extends \Google\Model
   public $configOverrides;
   protected $kerberosConfigType = KerberosConfig::class;
   protected $kerberosConfigDataType = '';
+  public $kerberosConfig;
   /**
    * @var string
    */
