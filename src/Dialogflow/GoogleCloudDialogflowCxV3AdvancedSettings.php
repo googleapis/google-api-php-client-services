@@ -21,6 +21,7 @@ class GoogleCloudDialogflowCxV3AdvancedSettings extends \Google\Model
 {
   protected $loggingSettingsType = GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettings::class;
   protected $loggingSettingsDataType = '';
+  public $loggingSettings;
 
   /**
    * @param GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettings
