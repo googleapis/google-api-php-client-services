@@ -21,6 +21,7 @@ class SdrScrollTo extends \Google\Model
 {
   protected $onpageMatchesType = SdrScrollToOnPageMatches::class;
   protected $onpageMatchesDataType = '';
+  public $onpageMatches;
   /**
    * @var string
    */

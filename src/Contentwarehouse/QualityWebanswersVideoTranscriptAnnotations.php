@@ -33,12 +33,16 @@ class QualityWebanswersVideoTranscriptAnnotations extends \Google\Model
   public $punctuatedTranscript;
   protected $saftDocumentType = NlpSaftDocument::class;
   protected $saftDocumentDataType = '';
+  public $saftDocument;
   protected $saftSentenceBoundaryType = SentenceBoundaryAnnotations::class;
   protected $saftSentenceBoundaryDataType = '';
+  public $saftSentenceBoundary;
   protected $timingInfoType = QualityWebanswersVideoYouTubeCaptionTimingInfoAnnotations::class;
   protected $timingInfoDataType = '';
+  public $timingInfo;
   protected $webrefEntitiesType = RepositoryWebrefWebrefEntities::class;
   protected $webrefEntitiesDataType = '';
+  public $webrefEntities;
 
   /**
    * @param string

@@ -21,16 +21,20 @@ class DrishtiFeatureSetDataFeatureSetElement extends \Google\Model
 {
   protected $denseType = DrishtiDenseFeatureData::class;
   protected $denseDataType = '';
+  public $dense;
   protected $indexedType = DrishtiIndexedFeatureData::class;
   protected $indexedDataType = '';
+  public $indexed;
   /**
    * @var string
    */
   public $name;
   protected $quantizedType = DrishtiQuantizedDenseFeatureData::class;
   protected $quantizedDataType = '';
+  public $quantized;
   protected $sparseType = DrishtiSparseFeatureData::class;
   protected $sparseDataType = '';
+  public $sparse;
 
   /**
    * @param DrishtiDenseFeatureData

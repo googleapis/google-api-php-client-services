@@ -42,12 +42,14 @@ class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
   public $isMonogram;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  public $metadata;
   /**
    * @var string
    */
   public $monogramBackground;
   protected $photoIdType = AppsPeopleOzExternalMergedpeopleapiPhotoPhotoStorageId::class;
   protected $photoIdDataType = '';
+  public $photoId;
   /**
    * @var string
    */

@@ -21,6 +21,7 @@ class SdrPageAnchorsSitelink extends \Google\Model
 {
   protected $embeddingType = SdrEmbedding::class;
   protected $embeddingDataType = '';
+  public $embedding;
   /**
    * @var float
    */
@@ -39,6 +40,7 @@ class SdrPageAnchorsSitelink extends \Google\Model
   public $level;
   protected $scrollToType = SdrScrollTo::class;
   protected $scrollToDataType = '';
+  public $scrollTo;
   /**
    * @var int
    */

@@ -21,8 +21,10 @@ class AppsPeopleOzExternalMergedpeopleapiContactEditContextInfo extends \Google\
 {
   protected $contactEditContextType = SocialGraphApiProtoContactEditContext::class;
   protected $contactEditContextDataType = '';
+  public $contactEditContext;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  public $metadata;
 
   /**
    * @param SocialGraphApiProtoContactEditContext

@@ -54,6 +54,7 @@ class AssistantApiSuggestionsSupport extends \Google\Collection
   public $executionContextSupported;
   protected $featureSpecificActionSupportType = AssistantApiFeatureSpecificActionSupport::class;
   protected $featureSpecificActionSupportDataType = '';
+  public $featureSpecificActionSupport;
   /**
    * @var bool
    */
@@ -72,6 +73,7 @@ class AssistantApiSuggestionsSupport extends \Google\Collection
   public $showTranslationSupported;
   protected $supportedDisplayTargetsType = AssistantApiSuggestionsSupportDisplayTargetSupport::class;
   protected $supportedDisplayTargetsDataType = 'array';
+  public $supportedDisplayTargets;
   /**
    * @var bool
    */

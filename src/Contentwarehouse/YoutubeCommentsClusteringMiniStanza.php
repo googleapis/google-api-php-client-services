@@ -24,6 +24,7 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public $automodScores;
   protected $blarneyStoneScoreType = YoutubeDistillerBlarneyStoneScores::class;
   protected $blarneyStoneScoreDataType = '';
+  public $blarneyStoneScore;
   /**
    * @var string
    */
@@ -70,12 +71,14 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public $detailedLanguageCode;
   protected $distillerEngagementsType = AppsPeopleActivityStreamqualityDistillerEngagements::class;
   protected $distillerEngagementsDataType = '';
+  public $distillerEngagements;
   /**
    * @var string[]
    */
   public $eligibleQualifiedTeaserFilters;
   protected $empiricalCtrsType = VideoYoutubeCommentsRankingCTRMetrics::class;
   protected $empiricalCtrsDataType = '';
+  public $empiricalCtrs;
   public $fds;
   /**
    * @var bool
@@ -161,19 +164,24 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public $rankingPostLanguage;
   protected $segmentsType = SocialCommonSegments::class;
   protected $segmentsDataType = '';
+  public $segments;
   public $sensitivityScores;
   protected $sentimentType = YoutubeCommentsSentimentSentiment::class;
   protected $sentimentDataType = '';
+  public $sentiment;
   protected $smartRepliesType = VideoYoutubeCommentsClassificationProtoYouTubeCommentSmartReply::class;
   protected $smartRepliesDataType = 'map';
+  public $smartReplies;
   /**
    * @var string
    */
   public $stanzaId;
   protected $stanzaRestrictionsType = SocialStanzaStanzaRestriction::class;
   protected $stanzaRestrictionsDataType = 'array';
+  public $stanzaRestrictions;
   protected $subjectType = SecurityCredentialsPrincipalProto::class;
   protected $subjectDataType = '';
+  public $subject;
   /**
    * @var bool
    */
@@ -184,16 +192,20 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public $subscriptionTimestamp;
   protected $superThanksInfoType = YoutubeBackstageSuperVodCommentInfo::class;
   protected $superThanksInfoDataType = '';
+  public $superThanksInfo;
   protected $textEmbeddingType = YoutubeCommentsRankingYouTubeCommentTextEmbedding::class;
   protected $textEmbeddingDataType = 'map';
+  public $textEmbedding;
   /**
    * @var int
    */
   public $textLength;
   protected $textQualityScoresType = YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation::class;
   protected $textQualityScoresDataType = '';
+  public $textQualityScores;
   protected $textQualityScores2Type = YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation::class;
   protected $textQualityScores2DataType = '';
+  public $textQualityScores2;
   /**
    * @var string
    */

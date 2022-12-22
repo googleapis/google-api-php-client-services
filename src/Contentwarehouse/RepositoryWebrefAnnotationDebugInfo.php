@@ -30,6 +30,7 @@ class RepositoryWebrefAnnotationDebugInfo extends \Google\Collection
   public $infoString;
   protected $rawClassificationType = EntitySignalsEntityClassification::class;
   protected $rawClassificationDataType = '';
+  public $rawClassification;
   /**
    * @var string
    */
