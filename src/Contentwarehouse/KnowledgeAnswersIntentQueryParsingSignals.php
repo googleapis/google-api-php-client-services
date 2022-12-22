@@ -22,6 +22,7 @@ class KnowledgeAnswersIntentQueryParsingSignals extends \Google\Model
   public $calibratedParsingScore;
   protected $qrewriteCallPathInfoType = NlpLoggingQRewriteClientCallPathInfo::class;
   protected $qrewriteCallPathInfoDataType = '';
+  public $qrewriteCallPathInfo;
   /**
    * @var string
    */

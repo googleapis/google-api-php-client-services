@@ -30,8 +30,10 @@ class KnowledgeAnswersSemanticType extends \Google\Collection
   public $name;
   protected $nameRemodelingsType = NlpMeaningSemanticTypeNameMeaningRemodelings::class;
   protected $nameRemodelingsDataType = 'array';
+  public $nameRemodelings;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
+  public $remodelings;
 
   /**
    * @param bool
