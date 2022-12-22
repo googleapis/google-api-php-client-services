@@ -34,7 +34,7 @@ use Google\Service\Pubsub\ValidateSchemaResponse;
  * Typical usage is:
  *  <code>
  *   $pubsubService = new Google\Service\Pubsub(...);
- *   $schemas = $pubsubService->schemas;
+ *   $schemas = $pubsubService->projects_schemas;
  *  </code>
  */
 class ProjectsSchemas extends \Google\Service\Resource
