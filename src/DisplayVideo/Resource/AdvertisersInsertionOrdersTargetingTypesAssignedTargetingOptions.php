@@ -26,7 +26,7 @@ use Google\Service\DisplayVideo\ListInsertionOrderAssignedTargetingOptionsRespon
  * Typical usage is:
  *  <code>
  *   $displayvideoService = new Google\Service\DisplayVideo(...);
- *   $assignedTargetingOptions = $displayvideoService->assignedTargetingOptions;
+ *   $assignedTargetingOptions = $displayvideoService->advertisers_insertionOrders_targetingTypes_assignedTargetingOptions;
  *  </code>
  */
 class AdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptions extends \Google\Service\Resource

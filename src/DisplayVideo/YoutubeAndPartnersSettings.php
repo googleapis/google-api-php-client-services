@@ -21,16 +21,20 @@ class YoutubeAndPartnersSettings extends \Google\Model
 {
   protected $biddingStrategyType = YoutubeAndPartnersBiddingStrategy::class;
   protected $biddingStrategyDataType = '';
+  public $biddingStrategy;
   /**
    * @var string
    */
   public $contentCategory;
   protected $inventorySourceSettingsType = YoutubeAndPartnersInventorySourceConfig::class;
   protected $inventorySourceSettingsDataType = '';
+  public $inventorySourceSettings;
   protected $thirdPartyMeasurementSettingsType = YoutubeAndPartnersThirdPartyMeasurementSettings::class;
   protected $thirdPartyMeasurementSettingsDataType = '';
+  public $thirdPartyMeasurementSettings;
   protected $viewFrequencyCapType = FrequencyCap::class;
   protected $viewFrequencyCapDataType = '';
+  public $viewFrequencyCap;
 
   /**
    * @param YoutubeAndPartnersBiddingStrategy

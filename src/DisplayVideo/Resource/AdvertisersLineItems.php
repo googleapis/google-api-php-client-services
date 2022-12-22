@@ -34,7 +34,7 @@ use Google\Service\DisplayVideo\ListLineItemsResponse;
  * Typical usage is:
  *  <code>
  *   $displayvideoService = new Google\Service\DisplayVideo(...);
- *   $lineItems = $displayvideoService->lineItems;
+ *   $lineItems = $displayvideoService->advertisers_lineItems;
  *  </code>
  */
 class AdvertisersLineItems extends \Google\Service\Resource
