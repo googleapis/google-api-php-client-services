@@ -33,7 +33,7 @@ use Google\Service\Integrations\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $integrations = $integrationsService->integrations;
+ *   $integrations = $integrationsService->projects_locations_integrations;
  *  </code>
  */
 class ProjectsLocationsIntegrations extends \Google\Service\Resource

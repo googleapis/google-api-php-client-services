@@ -29,10 +29,13 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends \Google\Mode
   public $deadlineSecondsTime;
   protected $inputParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $inputParametersDataType = 'map';
+  public $inputParameters;
   protected $integrationVersionType = GoogleCloudIntegrationsV1alphaIntegrationVersion::class;
   protected $integrationVersionDataType = '';
+  public $integrationVersion;
   protected $parametersType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $parametersDataType = '';
+  public $parameters;
   /**
    * @var bool
    */

@@ -26,7 +26,7 @@ use Google\Service\Integrations\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $clients = $integrationsService->clients;
+ *   $clients = $integrationsService->projects_locations_clients;
  *  </code>
  */
 class ProjectsLocationsClients extends \Google\Service\Resource

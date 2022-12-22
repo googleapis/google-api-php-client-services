@@ -21,6 +21,7 @@ class GoogleCloudIntegrationsV1alphaProvisionClientRequest extends \Google\Model
 {
   protected $cloudKmsConfigType = GoogleCloudIntegrationsV1alphaCloudKmsConfig::class;
   protected $cloudKmsConfigDataType = '';
+  public $cloudKmsConfig;
   /**
    * @var bool
    */

@@ -28,7 +28,7 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListExecutionsResp
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $executions = $integrationsService->executions;
+ *   $executions = $integrationsService->projects_locations_products_integrations_executions;
  *  </code>
  */
 class ProjectsLocationsProductsIntegrationsExecutions extends \Google\Service\Resource

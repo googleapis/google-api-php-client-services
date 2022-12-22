@@ -24,7 +24,7 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListExecutionSnaps
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $executionsnapshots = $integrationsService->executionsnapshots;
+ *   $executionsnapshots = $integrationsService->projects_locations_integrations_executionsnapshots;
  *  </code>
  */
 class ProjectsLocationsIntegrationsExecutionsnapshots extends \Google\Service\Resource

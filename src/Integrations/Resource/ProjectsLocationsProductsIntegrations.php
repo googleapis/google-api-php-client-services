@@ -34,7 +34,7 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTestIntegrationsRe
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $integrations = $integrationsService->integrations;
+ *   $integrations = $integrationsService->projects_locations_products_integrations;
  *  </code>
  */
 class ProjectsLocationsProductsIntegrations extends \Google\Service\Resource

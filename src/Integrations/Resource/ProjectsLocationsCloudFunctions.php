@@ -25,7 +25,7 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaCreateCloudFunctio
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $cloudFunctions = $integrationsService->cloudFunctions;
+ *   $cloudFunctions = $integrationsService->projects_locations_cloudFunctions;
  *  </code>
  */
 class ProjectsLocationsCloudFunctions extends \Google\Service\Resource

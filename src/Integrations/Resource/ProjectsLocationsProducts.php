@@ -26,7 +26,7 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListTaskEntitiesRe
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $products = $integrationsService->products;
+ *   $products = $integrationsService->projects_locations_products;
  *  </code>
  */
 class ProjectsLocationsProducts extends \Google\Service\Resource

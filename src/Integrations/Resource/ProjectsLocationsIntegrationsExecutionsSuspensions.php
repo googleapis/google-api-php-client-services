@@ -28,7 +28,7 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaResolveSuspensionR
  * Typical usage is:
  *  <code>
  *   $integrationsService = new Google\Service\Integrations(...);
- *   $suspensions = $integrationsService->suspensions;
+ *   $suspensions = $integrationsService->projects_locations_integrations_executions_suspensions;
  *  </code>
  */
 class ProjectsLocationsIntegrationsExecutionsSuspensions extends \Google\Service\Resource
