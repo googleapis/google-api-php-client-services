@@ -21,6 +21,7 @@ class TopicStateUpdate extends \Google\Model
 {
   protected $topicStateType = TopicState::class;
   protected $topicStateDataType = '';
+  public $topicState;
 
   /**
    * @param TopicState

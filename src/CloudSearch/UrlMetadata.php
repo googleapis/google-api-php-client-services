@@ -25,6 +25,7 @@ class UrlMetadata extends \Google\Model
   public $domain;
   protected $gwsUrlType = SafeUrlProto::class;
   protected $gwsUrlDataType = '';
+  public $gwsUrl;
   /**
    * @var string
    */
@@ -55,6 +56,7 @@ class UrlMetadata extends \Google\Model
   public $mimeType;
   protected $redirectUrlType = SafeUrlProto::class;
   protected $redirectUrlDataType = '';
+  public $redirectUrl;
   /**
    * @var bool
    */
@@ -69,6 +71,7 @@ class UrlMetadata extends \Google\Model
   public $title;
   protected $urlType = SafeUrlProto::class;
   protected $urlDataType = '';
+  public $url;
   /**
    * @var string
    */
