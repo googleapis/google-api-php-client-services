@@ -22,12 +22,14 @@ class MetricThreshold extends \Google\Collection
   protected $collection_key = 'denominatorAggregations';
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
+  public $aggregations;
   /**
    * @var string
    */
   public $comparison;
   protected $denominatorAggregationsType = Aggregation::class;
   protected $denominatorAggregationsDataType = 'array';
+  public $denominatorAggregations;
   /**
    * @var string
    */
@@ -46,9 +48,11 @@ class MetricThreshold extends \Google\Collection
   public $filter;
   protected $forecastOptionsType = ForecastOptions::class;
   protected $forecastOptionsDataType = '';
+  public $forecastOptions;
   public $thresholdValue;
   protected $triggerType = Trigger::class;
   protected $triggerDataType = '';
+  public $trigger;
 
   /**
    * @param Aggregation[]

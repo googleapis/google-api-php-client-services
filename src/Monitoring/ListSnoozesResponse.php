@@ -26,6 +26,7 @@ class ListSnoozesResponse extends \Google\Collection
   public $nextPageToken;
   protected $snoozesType = Snooze::class;
   protected $snoozesDataType = 'array';
+  public $snoozes;
 
   /**
    * @param string

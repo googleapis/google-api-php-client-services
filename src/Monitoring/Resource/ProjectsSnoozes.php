@@ -25,7 +25,7 @@ use Google\Service\Monitoring\Snooze;
  * Typical usage is:
  *  <code>
  *   $monitoringService = new Google\Service\Monitoring(...);
- *   $snoozes = $monitoringService->snoozes;
+ *   $snoozes = $monitoringService->projects_snoozes;
  *  </code>
  */
 class ProjectsSnoozes extends \Google\Service\Resource
