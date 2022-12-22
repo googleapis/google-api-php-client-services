@@ -26,7 +26,7 @@ use Google\Service\DataCatalog\Operation;
  * Typical usage is:
  *  <code>
  *   $datacatalogService = new Google\Service\DataCatalog(...);
- *   $operations = $datacatalogService->operations;
+ *   $operations = $datacatalogService->projects_locations_operations;
  *  </code>
  */
 class ProjectsLocationsOperations extends \Google\Service\Resource

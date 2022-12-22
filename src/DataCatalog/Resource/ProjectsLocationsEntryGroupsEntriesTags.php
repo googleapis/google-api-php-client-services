@@ -26,7 +26,7 @@ use Google\Service\DataCatalog\GoogleCloudDatacatalogV1Tag;
  * Typical usage is:
  *  <code>
  *   $datacatalogService = new Google\Service\DataCatalog(...);
- *   $tags = $datacatalogService->tags;
+ *   $tags = $datacatalogService->projects_locations_entryGroups_entries_tags;
  *  </code>
  */
 class ProjectsLocationsEntryGroupsEntriesTags extends \Google\Service\Resource

@@ -42,6 +42,7 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
   public $policyTagCount;
   protected $taxonomyTimestampsType = GoogleCloudDatacatalogV1SystemTimestamps::class;
   protected $taxonomyTimestampsDataType = '';
+  public $taxonomyTimestamps;
 
   /**
    * @param string[]

@@ -40,7 +40,7 @@ use Google\Service\DataCatalog\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $datacatalogService = new Google\Service\DataCatalog(...);
- *   $entries = $datacatalogService->entries;
+ *   $entries = $datacatalogService->projects_locations_entryGroups_entries;
  *  </code>
  */
 class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
