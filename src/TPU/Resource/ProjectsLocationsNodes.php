@@ -30,7 +30,7 @@ use Google\Service\TPU\StopNodeRequest;
  * Typical usage is:
  *  <code>
  *   $tpuService = new Google\Service\TPU(...);
- *   $nodes = $tpuService->nodes;
+ *   $nodes = $tpuService->projects_locations_nodes;
  *  </code>
  */
 class ProjectsLocationsNodes extends \Google\Service\Resource
