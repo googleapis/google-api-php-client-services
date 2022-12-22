@@ -30,7 +30,7 @@ use Google\Service\CloudDeploy\Rollout;
  * Typical usage is:
  *  <code>
  *   $clouddeployService = new Google\Service\CloudDeploy(...);
- *   $rollouts = $clouddeployService->rollouts;
+ *   $rollouts = $clouddeployService->projects_locations_deliveryPipelines_releases_rollouts;
  *  </code>
  */
 class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service\Resource
