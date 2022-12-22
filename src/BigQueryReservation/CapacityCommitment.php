@@ -29,6 +29,7 @@ class CapacityCommitment extends \Google\Model
   public $commitmentStartTime;
   protected $failureStatusType = Status::class;
   protected $failureStatusDataType = '';
+  public $failureStatus;
   /**
    * @var bool
    */
