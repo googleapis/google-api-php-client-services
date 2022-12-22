@@ -32,7 +32,7 @@ use Google\Service\BeyondCorp\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $beyondcorpService = new Google\Service\BeyondCorp(...);
- *   $appConnectors = $beyondcorpService->appConnectors;
+ *   $appConnectors = $beyondcorpService->projects_locations_appConnectors;
  *  </code>
  */
 class ProjectsLocationsAppConnectors extends \Google\Service\Resource

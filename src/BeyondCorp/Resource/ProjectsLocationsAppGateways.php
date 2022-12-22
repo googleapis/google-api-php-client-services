@@ -30,7 +30,7 @@ use Google\Service\BeyondCorp\ListAppGatewaysResponse;
  * Typical usage is:
  *  <code>
  *   $beyondcorpService = new Google\Service\BeyondCorp(...);
- *   $appGateways = $beyondcorpService->appGateways;
+ *   $appGateways = $beyondcorpService->projects_locations_appGateways;
  *  </code>
  */
 class ProjectsLocationsAppGateways extends \Google\Service\Resource

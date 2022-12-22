@@ -30,7 +30,7 @@ use Google\Service\BeyondCorp\ListClientGatewaysResponse;
  * Typical usage is:
  *  <code>
  *   $beyondcorpService = new Google\Service\BeyondCorp(...);
- *   $clientGateways = $beyondcorpService->clientGateways;
+ *   $clientGateways = $beyondcorpService->projects_locations_clientGateways;
  *  </code>
  */
 class ProjectsLocationsClientGateways extends \Google\Service\Resource
