@@ -21,6 +21,7 @@ class Runtime extends \Google\Model
 {
   protected $accessConfigType = RuntimeAccessConfig::class;
   protected $accessConfigDataType = '';
+  public $accessConfig;
   /**
    * @var string
    */
@@ -31,12 +32,14 @@ class Runtime extends \Google\Model
   public $healthState;
   protected $metricsType = RuntimeMetrics::class;
   protected $metricsDataType = '';
+  public $metrics;
   /**
    * @var string
    */
   public $name;
   protected $softwareConfigType = RuntimeSoftwareConfig::class;
   protected $softwareConfigDataType = '';
+  public $softwareConfig;
   /**
    * @var string
    */
@@ -47,6 +50,7 @@ class Runtime extends \Google\Model
   public $updateTime;
   protected $virtualMachineType = VirtualMachine::class;
   protected $virtualMachineDataType = '';
+  public $virtualMachine;
 
   /**
    * @param RuntimeAccessConfig

@@ -39,7 +39,7 @@ use Google\Service\AIPlatformNotebooks\UpgradeRuntimeRequest;
  * Typical usage is:
  *  <code>
  *   $notebooksService = new Google\Service\AIPlatformNotebooks(...);
- *   $runtimes = $notebooksService->runtimes;
+ *   $runtimes = $notebooksService->projects_locations_runtimes;
  *  </code>
  */
 class ProjectsLocationsRuntimes extends \Google\Service\Resource

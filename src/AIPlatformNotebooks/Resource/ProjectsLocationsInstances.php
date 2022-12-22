@@ -48,7 +48,7 @@ use Google\Service\AIPlatformNotebooks\UpgradeInstanceRequest;
  * Typical usage is:
  *  <code>
  *   $notebooksService = new Google\Service\AIPlatformNotebooks(...);
- *   $instances = $notebooksService->instances;
+ *   $instances = $notebooksService->projects_locations_instances;
  *  </code>
  */
 class ProjectsLocationsInstances extends \Google\Service\Resource
