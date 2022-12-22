@@ -25,6 +25,7 @@ class MutationResult extends \Google\Model
   public $conflictDetected;
   protected $keyType = Key::class;
   protected $keyDataType = '';
+  public $key;
   /**
    * @var string
    */

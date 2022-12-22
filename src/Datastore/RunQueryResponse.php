@@ -21,8 +21,10 @@ class RunQueryResponse extends \Google\Model
 {
   protected $batchType = QueryResultBatch::class;
   protected $batchDataType = '';
+  public $batch;
   protected $queryType = Query::class;
   protected $queryDataType = '';
+  public $query;
 
   /**
    * @param QueryResultBatch
