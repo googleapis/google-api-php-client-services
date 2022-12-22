@@ -26,7 +26,7 @@ use Google\Service\DatabaseMigrationService\PrivateConnection;
  * Typical usage is:
  *  <code>
  *   $datamigrationService = new Google\Service\DatabaseMigrationService(...);
- *   $privateConnections = $datamigrationService->privateConnections;
+ *   $privateConnections = $datamigrationService->projects_locations_privateConnections;
  *  </code>
  */
 class ProjectsLocationsPrivateConnections extends \Google\Service\Resource

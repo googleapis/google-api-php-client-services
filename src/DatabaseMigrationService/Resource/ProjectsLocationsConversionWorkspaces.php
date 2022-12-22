@@ -34,7 +34,7 @@ use Google\Service\DatabaseMigrationService\SeedConversionWorkspaceRequest;
  * Typical usage is:
  *  <code>
  *   $datamigrationService = new Google\Service\DatabaseMigrationService(...);
- *   $conversionWorkspaces = $datamigrationService->conversionWorkspaces;
+ *   $conversionWorkspaces = $datamigrationService->projects_locations_conversionWorkspaces;
  *  </code>
  */
 class ProjectsLocationsConversionWorkspaces extends \Google\Service\Resource

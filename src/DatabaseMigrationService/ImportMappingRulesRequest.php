@@ -26,6 +26,7 @@ class ImportMappingRulesRequest extends \Google\Collection
   public $autoCommit;
   protected $rulesFilesType = RulesFile::class;
   protected $rulesFilesDataType = 'array';
+  public $rulesFiles;
   /**
    * @var string
    */

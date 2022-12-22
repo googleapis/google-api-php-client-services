@@ -30,7 +30,7 @@ use Google\Service\DatabaseMigrationService\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $datamigrationService = new Google\Service\DatabaseMigrationService(...);
- *   $connectionProfiles = $datamigrationService->connectionProfiles;
+ *   $connectionProfiles = $datamigrationService->projects_locations_connectionProfiles;
  *  </code>
  */
 class ProjectsLocationsConnectionProfiles extends \Google\Service\Resource

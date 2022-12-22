@@ -45,10 +45,13 @@ class PostgreSqlConnectionProfile extends \Google\Model
   public $port;
   protected $privateServiceConnectConnectivityType = PrivateServiceConnectConnectivity::class;
   protected $privateServiceConnectConnectivityDataType = '';
+  public $privateServiceConnectConnectivity;
   protected $sslType = SslConfig::class;
   protected $sslDataType = '';
+  public $ssl;
   protected $staticIpConnectivityType = StaticIpConnectivity::class;
   protected $staticIpConnectivityDataType = '';
+  public $staticIpConnectivity;
   /**
    * @var string
    */

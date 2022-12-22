@@ -25,7 +25,7 @@ use Google\Service\DatabaseMigrationService\Operation;
  * Typical usage is:
  *  <code>
  *   $datamigrationService = new Google\Service\DatabaseMigrationService(...);
- *   $mappingRules = $datamigrationService->mappingRules;
+ *   $mappingRules = $datamigrationService->projects_locations_conversionWorkspaces_mappingRules;
  *  </code>
  */
 class ProjectsLocationsConversionWorkspacesMappingRules extends \Google\Service\Resource

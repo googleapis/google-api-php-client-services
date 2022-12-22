@@ -22,6 +22,7 @@ class ViewEntity extends \Google\Collection
   protected $collection_key = 'constraints';
   protected $constraintsType = ConstraintEntity::class;
   protected $constraintsDataType = 'array';
+  public $constraints;
   /**
    * @var array[]
    */
