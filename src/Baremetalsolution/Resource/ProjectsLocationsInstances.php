@@ -32,7 +32,7 @@ use Google\Service\Baremetalsolution\StopInstanceRequest;
  * Typical usage is:
  *  <code>
  *   $baremetalsolutionService = new Google\Service\Baremetalsolution(...);
- *   $instances = $baremetalsolutionService->instances;
+ *   $instances = $baremetalsolutionService->projects_locations_instances;
  *  </code>
  */
 class ProjectsLocationsInstances extends \Google\Service\Resource

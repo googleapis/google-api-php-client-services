@@ -25,7 +25,7 @@ use Google\Service\Baremetalsolution\Lun;
  * Typical usage is:
  *  <code>
  *   $baremetalsolutionService = new Google\Service\Baremetalsolution(...);
- *   $luns = $baremetalsolutionService->luns;
+ *   $luns = $baremetalsolutionService->projects_locations_volumes_luns;
  *  </code>
  */
 class ProjectsLocationsVolumesLuns extends \Google\Service\Resource

@@ -42,12 +42,14 @@ class Instance extends \Google\Collection
   public $labels;
   protected $logicalInterfacesType = GoogleCloudBaremetalsolutionV2LogicalInterface::class;
   protected $logicalInterfacesDataType = 'array';
+  public $logicalInterfaces;
   /**
    * @var string
    */
   public $loginInfo;
   protected $lunsType = Lun::class;
   protected $lunsDataType = 'array';
+  public $luns;
   /**
    * @var string
    */
@@ -62,6 +64,7 @@ class Instance extends \Google\Collection
   public $networkTemplate;
   protected $networksType = Network::class;
   protected $networksDataType = 'array';
+  public $networks;
   /**
    * @var string
    */
@@ -80,6 +83,7 @@ class Instance extends \Google\Collection
   public $updateTime;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
+  public $volumes;
   /**
    * @var string
    */

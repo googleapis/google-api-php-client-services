@@ -27,7 +27,7 @@ use Google\Service\Baremetalsolution\Volume;
  * Typical usage is:
  *  <code>
  *   $baremetalsolutionService = new Google\Service\Baremetalsolution(...);
- *   $volumes = $baremetalsolutionService->volumes;
+ *   $volumes = $baremetalsolutionService->projects_locations_volumes;
  *  </code>
  */
 class ProjectsLocationsVolumes extends \Google\Service\Resource
