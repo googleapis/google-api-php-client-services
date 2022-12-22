@@ -26,6 +26,7 @@ class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
   public $createTime;
   protected $hashesType = Hash::class;
   protected $hashesDataType = 'array';
+  public $hashes;
   /**
    * @var string
    */

@@ -41,6 +41,7 @@ class Repository extends \Google\Model
   public $labels;
   protected $mavenConfigType = MavenRepositoryConfig::class;
   protected $mavenConfigDataType = '';
+  public $mavenConfig;
   /**
    * @var string
    */

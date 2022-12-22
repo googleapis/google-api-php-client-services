@@ -25,7 +25,7 @@ use Google\Service\ArtifactRegistry\Location;
  * Typical usage is:
  *  <code>
  *   $artifactregistryService = new Google\Service\ArtifactRegistry(...);
- *   $locations = $artifactregistryService->locations;
+ *   $locations = $artifactregistryService->projects_locations;
  *  </code>
  */
 class ProjectsLocations extends \Google\Service\Resource

@@ -25,7 +25,7 @@ use Google\Service\ArtifactRegistry\ListFilesResponse;
  * Typical usage is:
  *  <code>
  *   $artifactregistryService = new Google\Service\ArtifactRegistry(...);
- *   $files = $artifactregistryService->files;
+ *   $files = $artifactregistryService->projects_locations_repositories_files;
  *  </code>
  */
 class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
