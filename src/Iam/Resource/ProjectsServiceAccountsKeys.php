@@ -30,7 +30,7 @@ use Google\Service\Iam\UploadServiceAccountKeyRequest;
  * Typical usage is:
  *  <code>
  *   $iamService = new Google\Service\Iam(...);
- *   $keys = $iamService->keys;
+ *   $keys = $iamService->projects_serviceAccounts_keys;
  *  </code>
  */
 class ProjectsServiceAccountsKeys extends \Google\Service\Resource

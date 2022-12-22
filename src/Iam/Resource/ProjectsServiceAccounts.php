@@ -40,7 +40,7 @@ use Google\Service\Iam\UndeleteServiceAccountResponse;
  * Typical usage is:
  *  <code>
  *   $iamService = new Google\Service\Iam(...);
- *   $serviceAccounts = $iamService->serviceAccounts;
+ *   $serviceAccounts = $iamService->projects_serviceAccounts;
  *  </code>
  */
 class ProjectsServiceAccounts extends \Google\Service\Resource
