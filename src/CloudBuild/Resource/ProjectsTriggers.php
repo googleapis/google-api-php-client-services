@@ -30,7 +30,7 @@ use Google\Service\CloudBuild\RepoSource;
  * Typical usage is:
  *  <code>
  *   $cloudbuildService = new Google\Service\CloudBuild(...);
- *   $triggers = $cloudbuildService->triggers;
+ *   $triggers = $cloudbuildService->projects_triggers;
  *  </code>
  */
 class ProjectsTriggers extends \Google\Service\Resource

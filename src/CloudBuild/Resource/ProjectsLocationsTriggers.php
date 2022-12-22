@@ -30,7 +30,7 @@ use Google\Service\CloudBuild\RunBuildTriggerRequest;
  * Typical usage is:
  *  <code>
  *   $cloudbuildService = new Google\Service\CloudBuild(...);
- *   $triggers = $cloudbuildService->triggers;
+ *   $triggers = $cloudbuildService->projects_locations_triggers;
  *  </code>
  */
 class ProjectsLocationsTriggers extends \Google\Service\Resource

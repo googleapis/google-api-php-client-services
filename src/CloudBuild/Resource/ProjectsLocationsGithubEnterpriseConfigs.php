@@ -26,7 +26,7 @@ use Google\Service\CloudBuild\Operation;
  * Typical usage is:
  *  <code>
  *   $cloudbuildService = new Google\Service\CloudBuild(...);
- *   $githubEnterpriseConfigs = $cloudbuildService->githubEnterpriseConfigs;
+ *   $githubEnterpriseConfigs = $cloudbuildService->projects_locations_githubEnterpriseConfigs;
  *  </code>
  */
 class ProjectsLocationsGithubEnterpriseConfigs extends \Google\Service\Resource
