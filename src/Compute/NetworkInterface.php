@@ -22,8 +22,10 @@ class NetworkInterface extends \Google\Collection
   protected $collection_key = 'ipv6AccessConfigs';
   protected $accessConfigsType = AccessConfig::class;
   protected $accessConfigsDataType = 'array';
+  public $accessConfigs;
   protected $aliasIpRangesType = AliasIpRange::class;
   protected $aliasIpRangesDataType = 'array';
+  public $aliasIpRanges;
   /**
    * @var string
    */
@@ -34,6 +36,7 @@ class NetworkInterface extends \Google\Collection
   public $internalIpv6PrefixLength;
   protected $ipv6AccessConfigsType = AccessConfig::class;
   protected $ipv6AccessConfigsDataType = 'array';
+  public $ipv6AccessConfigs;
   /**
    * @var string
    */

@@ -22,8 +22,10 @@ class NetworkAttachmentsScopedList extends \Google\Collection
   protected $collection_key = 'networkAttachments';
   protected $networkAttachmentsType = NetworkAttachment::class;
   protected $networkAttachmentsDataType = 'array';
+  public $networkAttachments;
   protected $warningType = NetworkAttachmentsScopedListWarning::class;
   protected $warningDataType = '';
+  public $warning;
 
   /**
    * @param NetworkAttachment[]
