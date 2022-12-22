@@ -29,7 +29,7 @@ use Google\Service\ChromeManagement\GoogleChromeManagementV1FindInstalledAppDevi
  * Typical usage is:
  *  <code>
  *   $chromemanagementService = new Google\Service\ChromeManagement(...);
- *   $reports = $chromemanagementService->reports;
+ *   $reports = $chromemanagementService->customers_reports;
  *  </code>
  */
 class CustomersReports extends \Google\Service\Resource

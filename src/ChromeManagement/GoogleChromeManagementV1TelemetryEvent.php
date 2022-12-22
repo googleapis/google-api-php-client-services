@@ -21,26 +21,31 @@ class GoogleChromeManagementV1TelemetryEvent extends \Google\Model
 {
   protected $audioSevereUnderrunEventType = GoogleChromeManagementV1TelemetryAudioSevereUnderrunEvent::class;
   protected $audioSevereUnderrunEventDataType = '';
+  public $audioSevereUnderrunEvent;
   protected $deviceType = GoogleChromeManagementV1TelemetryDeviceInfo::class;
   protected $deviceDataType = '';
+  public $device;
   /**
    * @var string
    */
   public $eventType;
   protected $httpsLatencyChangeEventType = GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent::class;
   protected $httpsLatencyChangeEventDataType = '';
+  public $httpsLatencyChangeEvent;
   /**
    * @var string
    */
   public $name;
   protected $networkConnectionStateChangeEventType = GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent::class;
   protected $networkConnectionStateChangeEventDataType = '';
+  public $networkConnectionStateChangeEvent;
   /**
    * @var string
    */
   public $reportTime;
   protected $userType = GoogleChromeManagementV1TelemetryUserInfo::class;
   protected $userDataType = '';
+  public $user;
 
   /**
    * @param GoogleChromeManagementV1TelemetryAudioSevereUnderrunEvent

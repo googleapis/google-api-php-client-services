@@ -24,7 +24,7 @@ use Google\Service\ChromeManagement\GoogleChromeManagementV1ListTelemetryEventsR
  * Typical usage is:
  *  <code>
  *   $chromemanagementService = new Google\Service\ChromeManagement(...);
- *   $events = $chromemanagementService->events;
+ *   $events = $chromemanagementService->customers_telemetry_events;
  *  </code>
  */
 class CustomersTelemetryEvents extends \Google\Service\Resource
