@@ -26,12 +26,14 @@ class ApkManifest extends \Google\Collection
   public $applicationLabel;
   protected $intentFiltersType = IntentFilter::class;
   protected $intentFiltersDataType = 'array';
+  public $intentFilters;
   /**
    * @var int
    */
   public $maxSdkVersion;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = 'array';
+  public $metadata;
   /**
    * @var int
    */
@@ -46,6 +48,7 @@ class ApkManifest extends \Google\Collection
   public $targetSdkVersion;
   protected $usesFeatureType = UsesFeature::class;
   protected $usesFeatureDataType = 'array';
+  public $usesFeature;
   /**
    * @var string[]
    */
