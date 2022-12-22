@@ -25,7 +25,7 @@ use Google\Service\Contentwarehouse\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $contentwarehouseService = new Google\Service\Contentwarehouse(...);
- *   $locations = $contentwarehouseService->locations;
+ *   $locations = $contentwarehouseService->projects_locations;
  *  </code>
  */
 class ProjectsLocations extends \Google\Service\Resource
