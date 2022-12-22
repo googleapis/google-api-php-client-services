@@ -26,7 +26,7 @@ use Google\Service\Dataproc\ResizeNodeGroupRequest;
  * Typical usage is:
  *  <code>
  *   $dataprocService = new Google\Service\Dataproc(...);
- *   $nodeGroups = $dataprocService->nodeGroups;
+ *   $nodeGroups = $dataprocService->projects_regions_clusters_nodeGroups;
  *  </code>
  */
 class ProjectsRegionsClustersNodeGroups extends \Google\Service\Resource

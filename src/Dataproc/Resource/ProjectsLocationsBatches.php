@@ -27,7 +27,7 @@ use Google\Service\Dataproc\Operation;
  * Typical usage is:
  *  <code>
  *   $dataprocService = new Google\Service\Dataproc(...);
- *   $batches = $dataprocService->batches;
+ *   $batches = $dataprocService->projects_locations_batches;
  *  </code>
  */
 class ProjectsLocationsBatches extends \Google\Service\Resource
