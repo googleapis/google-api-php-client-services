@@ -26,7 +26,7 @@ use Google\Service\CloudRun\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $runService = new Google\Service\CloudRun(...);
- *   $operations = $runService->operations;
+ *   $operations = $runService->projects_locations_operations;
  *  </code>
  */
 class ProjectsLocationsOperations extends \Google\Service\Resource

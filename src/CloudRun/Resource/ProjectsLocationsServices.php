@@ -30,7 +30,7 @@ use Google\Service\CloudRun\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $runService = new Google\Service\CloudRun(...);
- *   $services = $runService->services;
+ *   $services = $runService->projects_locations_services;
  *  </code>
  */
 class ProjectsLocationsServices extends \Google\Service\Resource
