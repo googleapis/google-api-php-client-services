@@ -26,7 +26,7 @@ use Google\Service\CloudFilestore\Operation;
  * Typical usage is:
  *  <code>
  *   $fileService = new Google\Service\CloudFilestore(...);
- *   $backups = $fileService->backups;
+ *   $backups = $fileService->projects_locations_backups;
  *  </code>
  */
 class ProjectsLocationsBackups extends \Google\Service\Resource

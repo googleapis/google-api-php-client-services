@@ -27,7 +27,7 @@ use Google\Service\CloudFilestore\RestoreInstanceRequest;
  * Typical usage is:
  *  <code>
  *   $fileService = new Google\Service\CloudFilestore(...);
- *   $instances = $fileService->instances;
+ *   $instances = $fileService->projects_locations_instances;
  *  </code>
  */
 class ProjectsLocationsInstances extends \Google\Service\Resource
