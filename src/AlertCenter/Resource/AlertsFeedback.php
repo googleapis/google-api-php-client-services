@@ -25,7 +25,7 @@ use Google\Service\AlertCenter\ListAlertFeedbackResponse;
  * Typical usage is:
  *  <code>
  *   $alertcenterService = new Google\Service\AlertCenter(...);
- *   $feedback = $alertcenterService->feedback;
+ *   $feedback = $alertcenterService->alerts_feedback;
  *  </code>
  */
 class AlertsFeedback extends \Google\Service\Resource

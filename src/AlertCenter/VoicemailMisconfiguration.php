@@ -22,6 +22,7 @@ class VoicemailMisconfiguration extends \Google\Collection
   protected $collection_key = 'errors';
   protected $errorsType = VoicemailRecipientError::class;
   protected $errorsDataType = 'array';
+  public $errors;
 
   /**
    * @param VoicemailRecipientError[]
