@@ -21,6 +21,7 @@ class GoogleCloudDataplexV1RunTaskResponse extends \Google\Model
 {
   protected $jobType = GoogleCloudDataplexV1Job::class;
   protected $jobDataType = '';
+  public $job;
 
   /**
    * @param GoogleCloudDataplexV1Job

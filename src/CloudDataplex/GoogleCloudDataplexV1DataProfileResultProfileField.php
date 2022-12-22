@@ -29,6 +29,7 @@ class GoogleCloudDataplexV1DataProfileResultProfileField extends \Google\Model
   public $name;
   protected $profileType = GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo::class;
   protected $profileDataType = '';
+  public $profile;
   /**
    * @var string
    */

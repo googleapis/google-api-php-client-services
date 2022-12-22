@@ -32,7 +32,7 @@ use Google\Service\CloudDataplex\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $dataplexService = new Google\Service\CloudDataplex(...);
- *   $dataScans = $dataplexService->dataScans;
+ *   $dataScans = $dataplexService->projects_locations_dataScans;
  *  </code>
  */
 class ProjectsLocationsDataScans extends \Google\Service\Resource

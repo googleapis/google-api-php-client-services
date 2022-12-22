@@ -21,6 +21,7 @@ class GoogleCloudDataplexV1Entity extends \Google\Model
 {
   protected $accessType = GoogleCloudDataplexV1StorageAccess::class;
   protected $accessDataType = '';
+  public $access;
   /**
    * @var string
    */
@@ -31,6 +32,7 @@ class GoogleCloudDataplexV1Entity extends \Google\Model
   public $catalogEntry;
   protected $compatibilityType = GoogleCloudDataplexV1EntityCompatibilityStatus::class;
   protected $compatibilityDataType = '';
+  public $compatibility;
   /**
    * @var string
    */
@@ -57,6 +59,7 @@ class GoogleCloudDataplexV1Entity extends \Google\Model
   public $etag;
   protected $formatType = GoogleCloudDataplexV1StorageFormat::class;
   protected $formatDataType = '';
+  public $format;
   /**
    * @var string
    */
@@ -67,6 +70,7 @@ class GoogleCloudDataplexV1Entity extends \Google\Model
   public $name;
   protected $schemaType = GoogleCloudDataplexV1Schema::class;
   protected $schemaDataType = '';
+  public $schema;
   /**
    * @var string
    */

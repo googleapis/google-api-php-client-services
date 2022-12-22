@@ -25,14 +25,19 @@ class GoogleCloudDataplexV1DataScan extends \Google\Model
   public $createTime;
   protected $dataType = GoogleCloudDataplexV1DataSource::class;
   protected $dataDataType = '';
+  public $data;
   protected $dataProfileResultType = GoogleCloudDataplexV1DataProfileResult::class;
   protected $dataProfileResultDataType = '';
+  public $dataProfileResult;
   protected $dataProfileSpecType = GoogleCloudDataplexV1DataProfileSpec::class;
   protected $dataProfileSpecDataType = '';
+  public $dataProfileSpec;
   protected $dataQualityResultType = GoogleCloudDataplexV1DataQualityResult::class;
   protected $dataQualityResultDataType = '';
+  public $dataQualityResult;
   protected $dataQualitySpecType = GoogleCloudDataplexV1DataQualitySpec::class;
   protected $dataQualitySpecDataType = '';
+  public $dataQualitySpec;
   /**
    * @var string
    */
@@ -43,8 +48,10 @@ class GoogleCloudDataplexV1DataScan extends \Google\Model
   public $displayName;
   protected $executionSpecType = GoogleCloudDataplexV1DataScanExecutionSpec::class;
   protected $executionSpecDataType = '';
+  public $executionSpec;
   protected $executionStatusType = GoogleCloudDataplexV1DataScanExecutionStatus::class;
   protected $executionStatusDataType = '';
+  public $executionStatus;
   /**
    * @var string[]
    */

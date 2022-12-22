@@ -27,7 +27,7 @@ use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $dataplexService = new Google\Service\CloudDataplex(...);
- *   $dataTaxonomies = $dataplexService->dataTaxonomies;
+ *   $dataTaxonomies = $dataplexService->projects_locations_dataTaxonomies;
  *  </code>
  */
 class ProjectsLocationsDataTaxonomies extends \Google\Service\Resource

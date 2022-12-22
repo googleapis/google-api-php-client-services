@@ -21,6 +21,7 @@ class GoogleCloudDataplexV1ScannedData extends \Google\Model
 {
   protected $incrementalFieldType = GoogleCloudDataplexV1ScannedDataIncrementalField::class;
   protected $incrementalFieldDataType = '';
+  public $incrementalField;
 
   /**
    * @param GoogleCloudDataplexV1ScannedDataIncrementalField

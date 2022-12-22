@@ -22,6 +22,7 @@ class GoogleCloudDataplexV1DataProfileResultProfile extends \Google\Collection
   protected $collection_key = 'fields';
   protected $fieldsType = GoogleCloudDataplexV1DataProfileResultProfileField::class;
   protected $fieldsDataType = 'array';
+  public $fields;
 
   /**
    * @param GoogleCloudDataplexV1DataProfileResultProfileField[]

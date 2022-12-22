@@ -27,7 +27,7 @@ use Google\Service\CloudDataplex\GoogleIamV1TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $dataplexService = new Google\Service\CloudDataplex(...);
- *   $dataAttributeBindings = $dataplexService->dataAttributeBindings;
+ *   $dataAttributeBindings = $dataplexService->projects_locations_dataAttributeBindings;
  *  </code>
  */
 class ProjectsLocationsDataAttributeBindings extends \Google\Service\Resource
