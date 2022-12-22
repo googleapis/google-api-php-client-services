@@ -21,8 +21,10 @@ class AnalyzerOrgPolicyConstraint extends \Google\Model
 {
   protected $customConstraintType = GoogleCloudAssetV1CustomConstraint::class;
   protected $customConstraintDataType = '';
+  public $customConstraint;
   protected $googleDefinedConstraintType = GoogleCloudAssetV1Constraint::class;
   protected $googleDefinedConstraintDataType = '';
+  public $googleDefinedConstraint;
 
   /**
    * @param GoogleCloudAssetV1CustomConstraint

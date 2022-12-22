@@ -25,6 +25,7 @@ class QueryAssetsRequest extends \Google\Model
   public $jobReference;
   protected $outputConfigType = QueryAssetsOutputConfig::class;
   protected $outputConfigDataType = '';
+  public $outputConfig;
   /**
    * @var int
    */
@@ -39,6 +40,7 @@ class QueryAssetsRequest extends \Google\Model
   public $readTime;
   protected $readTimeWindowType = TimeWindow::class;
   protected $readTimeWindowDataType = '';
+  public $readTimeWindow;
   /**
    * @var string
    */

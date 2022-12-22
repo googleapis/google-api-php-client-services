@@ -22,8 +22,10 @@ class OrgPolicyResult extends \Google\Collection
   protected $collection_key = 'policyBundle';
   protected $consolidatedPolicyType = AnalyzerOrgPolicy::class;
   protected $consolidatedPolicyDataType = '';
+  public $consolidatedPolicy;
   protected $policyBundleType = AnalyzerOrgPolicy::class;
   protected $policyBundleDataType = 'array';
+  public $policyBundle;
 
   /**
    * @param AnalyzerOrgPolicy

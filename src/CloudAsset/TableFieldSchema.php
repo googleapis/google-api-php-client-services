@@ -26,6 +26,7 @@ class TableFieldSchema extends \Google\Collection
   public $field;
   protected $fieldsType = TableFieldSchema::class;
   protected $fieldsDataType = 'array';
+  public $fields;
   /**
    * @var string
    */

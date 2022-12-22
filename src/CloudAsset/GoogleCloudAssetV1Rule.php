@@ -25,6 +25,7 @@ class GoogleCloudAssetV1Rule extends \Google\Model
   public $allowAll;
   protected $conditionType = Expr::class;
   protected $conditionDataType = '';
+  public $condition;
   /**
    * @var bool
    */
@@ -35,6 +36,7 @@ class GoogleCloudAssetV1Rule extends \Google\Model
   public $enforce;
   protected $valuesType = GoogleCloudAssetV1StringValues::class;
   protected $valuesDataType = '';
+  public $values;
 
   /**
    * @param bool
