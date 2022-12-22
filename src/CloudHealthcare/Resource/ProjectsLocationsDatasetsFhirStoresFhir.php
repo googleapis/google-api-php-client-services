@@ -26,7 +26,7 @@ use Google\Service\CloudHealthcare\SearchResourcesRequest;
  * Typical usage is:
  *  <code>
  *   $healthcareService = new Google\Service\CloudHealthcare(...);
- *   $fhir = $healthcareService->fhir;
+ *   $fhir = $healthcareService->projects_locations_datasets_fhirStores_fhir;
  *  </code>
  */
 class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
