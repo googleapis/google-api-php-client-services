@@ -25,7 +25,7 @@ use Google\Service\PolicySimulator\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $policysimulatorService = new Google\Service\PolicySimulator(...);
- *   $operations = $policysimulatorService->operations;
+ *   $operations = $policysimulatorService->folders_locations_replays_operations;
  *  </code>
  */
 class FoldersLocationsReplaysOperations extends \Google\Service\Resource
