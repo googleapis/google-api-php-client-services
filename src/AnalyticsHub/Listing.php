@@ -22,12 +22,14 @@ class Listing extends \Google\Collection
   protected $collection_key = 'categories';
   protected $bigqueryDatasetType = BigQueryDatasetSource::class;
   protected $bigqueryDatasetDataType = '';
+  public $bigqueryDataset;
   /**
    * @var string[]
    */
   public $categories;
   protected $dataProviderType = DataProvider::class;
   protected $dataProviderDataType = '';
+  public $dataProvider;
   /**
    * @var string
    */
@@ -54,6 +56,7 @@ class Listing extends \Google\Collection
   public $primaryContact;
   protected $publisherType = Publisher::class;
   protected $publisherDataType = '';
+  public $publisher;
   /**
    * @var string
    */
