@@ -28,7 +28,7 @@ use Google\Service\Recommender\GoogleCloudRecommenderV1Recommendation;
  * Typical usage is:
  *  <code>
  *   $recommenderService = new Google\Service\Recommender(...);
- *   $recommendations = $recommenderService->recommendations;
+ *   $recommendations = $recommenderService->billingAccounts_locations_recommenders_recommendations;
  *  </code>
  */
 class BillingAccountsLocationsRecommendersRecommendations extends \Google\Service\Resource
