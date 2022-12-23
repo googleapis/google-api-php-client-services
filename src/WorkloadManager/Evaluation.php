@@ -38,8 +38,10 @@ class Evaluation extends \Google\Collection
   public $name;
   protected $resourceFilterType = ResourceFilter::class;
   protected $resourceFilterDataType = '';
+  public $resourceFilter;
   protected $resourceStatusType = ResourceStatus::class;
   protected $resourceStatusDataType = '';
+  public $resourceStatus;
   /**
    * @var string[]
    */

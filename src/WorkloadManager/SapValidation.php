@@ -22,6 +22,7 @@ class SapValidation extends \Google\Collection
   protected $collection_key = 'validationDetails';
   protected $validationDetailsType = SapValidationValidationDetail::class;
   protected $validationDetailsDataType = 'array';
+  public $validationDetails;
 
   /**
    * @param SapValidationValidationDetail[]

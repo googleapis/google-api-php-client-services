@@ -26,7 +26,7 @@ use Google\Service\WorkloadManager\Operation;
  * Typical usage is:
  *  <code>
  *   $workloadmanagerService = new Google\Service\WorkloadManager(...);
- *   $evaluations = $workloadmanagerService->evaluations;
+ *   $evaluations = $workloadmanagerService->projects_locations_evaluations;
  *  </code>
  */
 class ProjectsLocationsEvaluations extends \Google\Service\Resource

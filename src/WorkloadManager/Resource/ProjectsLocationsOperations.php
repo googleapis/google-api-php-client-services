@@ -27,7 +27,7 @@ use Google\Service\WorkloadManager\WorkloadmanagerEmpty;
  * Typical usage is:
  *  <code>
  *   $workloadmanagerService = new Google\Service\WorkloadManager(...);
- *   $operations = $workloadmanagerService->operations;
+ *   $operations = $workloadmanagerService->projects_locations_operations;
  *  </code>
  */
 class ProjectsLocationsOperations extends \Google\Service\Resource

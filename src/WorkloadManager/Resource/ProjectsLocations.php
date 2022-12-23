@@ -25,7 +25,7 @@ use Google\Service\WorkloadManager\Location;
  * Typical usage is:
  *  <code>
  *   $workloadmanagerService = new Google\Service\WorkloadManager(...);
- *   $locations = $workloadmanagerService->locations;
+ *   $locations = $workloadmanagerService->projects_locations;
  *  </code>
  */
 class ProjectsLocations extends \Google\Service\Resource
