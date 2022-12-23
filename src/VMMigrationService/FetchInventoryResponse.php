@@ -29,6 +29,7 @@ class FetchInventoryResponse extends \Google\Model
   public $updateTime;
   protected $vmwareVmsType = VmwareVmsDetails::class;
   protected $vmwareVmsDataType = '';
+  public $vmwareVms;
 
   /**
    * @param string
