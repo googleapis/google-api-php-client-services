@@ -26,7 +26,7 @@ use Google\Service\WorkflowExecutions\ListExecutionsResponse;
  * Typical usage is:
  *  <code>
  *   $workflowexecutionsService = new Google\Service\WorkflowExecutions(...);
- *   $executions = $workflowexecutionsService->executions;
+ *   $executions = $workflowexecutionsService->projects_locations_workflows_executions;
  *  </code>
  */
 class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
