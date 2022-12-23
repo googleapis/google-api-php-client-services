@@ -25,10 +25,13 @@ class TranslateDocumentRequest extends \Google\Model
   public $customizedAttribution;
   protected $documentInputConfigType = DocumentInputConfig::class;
   protected $documentInputConfigDataType = '';
+  public $documentInputConfig;
   protected $documentOutputConfigType = DocumentOutputConfig::class;
   protected $documentOutputConfigDataType = '';
+  public $documentOutputConfig;
   protected $glossaryConfigType = TranslateTextGlossaryConfig::class;
   protected $glossaryConfigDataType = '';
+  public $glossaryConfig;
   /**
    * @var bool
    */

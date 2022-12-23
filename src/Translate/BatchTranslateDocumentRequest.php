@@ -26,14 +26,17 @@ class BatchTranslateDocumentRequest extends \Google\Collection
   public $formatConversions;
   protected $glossariesType = TranslateTextGlossaryConfig::class;
   protected $glossariesDataType = 'map';
+  public $glossaries;
   protected $inputConfigsType = BatchDocumentInputConfig::class;
   protected $inputConfigsDataType = 'array';
+  public $inputConfigs;
   /**
    * @var string[]
    */
   public $models;
   protected $outputConfigType = BatchDocumentOutputConfig::class;
   protected $outputConfigDataType = '';
+  public $outputConfig;
   /**
    * @var string
    */
