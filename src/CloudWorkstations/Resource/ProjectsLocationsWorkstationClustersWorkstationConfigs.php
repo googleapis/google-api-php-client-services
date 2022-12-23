@@ -31,7 +31,7 @@ use Google\Service\CloudWorkstations\WorkstationConfig;
  * Typical usage is:
  *  <code>
  *   $workstationsService = new Google\Service\CloudWorkstations(...);
- *   $workstationConfigs = $workstationsService->workstationConfigs;
+ *   $workstationConfigs = $workstationsService->projects_locations_workstationClusters_workstationConfigs;
  *  </code>
  */
 class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Service\Resource

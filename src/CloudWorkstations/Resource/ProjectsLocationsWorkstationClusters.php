@@ -26,7 +26,7 @@ use Google\Service\CloudWorkstations\WorkstationCluster;
  * Typical usage is:
  *  <code>
  *   $workstationsService = new Google\Service\CloudWorkstations(...);
- *   $workstationClusters = $workstationsService->workstationClusters;
+ *   $workstationClusters = $workstationsService->projects_locations_workstationClusters;
  *  </code>
  */
 class ProjectsLocationsWorkstationClusters extends \Google\Service\Resource

@@ -26,6 +26,7 @@ class GceInstance extends \Google\Collection
   public $bootDiskSizeGb;
   protected $confidentialInstanceConfigType = GceConfidentialInstanceConfig::class;
   protected $confidentialInstanceConfigDataType = '';
+  public $confidentialInstanceConfig;
   /**
    * @var bool
    */
@@ -44,6 +45,7 @@ class GceInstance extends \Google\Collection
   public $serviceAccount;
   protected $shieldedInstanceConfigType = GceShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
+  public $shieldedInstanceConfig;
   /**
    * @var string[]
    */

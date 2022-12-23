@@ -30,6 +30,7 @@ class ListWorkstationConfigsResponse extends \Google\Collection
   public $unreachable;
   protected $workstationConfigsType = WorkstationConfig::class;
   protected $workstationConfigsDataType = 'array';
+  public $workstationConfigs;
 
   /**
    * @param string

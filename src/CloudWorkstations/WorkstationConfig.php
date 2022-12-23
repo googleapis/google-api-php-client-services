@@ -26,8 +26,10 @@ class WorkstationConfig extends \Google\Collection
   public $annotations;
   protected $conditionsType = Status::class;
   protected $conditionsDataType = 'array';
+  public $conditions;
   protected $containerType = Container::class;
   protected $containerDataType = '';
+  public $container;
   /**
    * @var string
    */
@@ -50,6 +52,7 @@ class WorkstationConfig extends \Google\Collection
   public $etag;
   protected $hostType = Host::class;
   protected $hostDataType = '';
+  public $host;
   /**
    * @var string
    */
@@ -60,6 +63,7 @@ class WorkstationConfig extends \Google\Collection
   public $name;
   protected $persistentDirectoriesType = PersistentDirectory::class;
   protected $persistentDirectoriesDataType = 'array';
+  public $persistentDirectories;
   /**
    * @var bool
    */

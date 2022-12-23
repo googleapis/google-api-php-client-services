@@ -21,6 +21,7 @@ class PersistentDirectory extends \Google\Model
 {
   protected $gcePdType = GceRegionalPersistentDisk::class;
   protected $gcePdDataType = '';
+  public $gcePd;
   /**
    * @var string
    */

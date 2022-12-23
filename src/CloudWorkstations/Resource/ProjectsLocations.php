@@ -22,7 +22,7 @@ namespace Google\Service\CloudWorkstations\Resource;
  * Typical usage is:
  *  <code>
  *   $workstationsService = new Google\Service\CloudWorkstations(...);
- *   $locations = $workstationsService->locations;
+ *   $locations = $workstationsService->projects_locations;
  *  </code>
  */
 class ProjectsLocations extends \Google\Service\Resource

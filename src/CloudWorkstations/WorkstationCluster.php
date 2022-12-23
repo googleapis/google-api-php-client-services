@@ -26,6 +26,7 @@ class WorkstationCluster extends \Google\Collection
   public $annotations;
   protected $conditionsType = Status::class;
   protected $conditionsDataType = 'array';
+  public $conditions;
   /**
    * @var string
    */
@@ -56,6 +57,7 @@ class WorkstationCluster extends \Google\Collection
   public $network;
   protected $privateClusterConfigType = PrivateClusterConfig::class;
   protected $privateClusterConfigDataType = '';
+  public $privateClusterConfig;
   /**
    * @var bool
    */

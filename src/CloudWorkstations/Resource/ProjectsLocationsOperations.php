@@ -27,7 +27,7 @@ use Google\Service\CloudWorkstations\WorkstationsEmpty;
  * Typical usage is:
  *  <code>
  *   $workstationsService = new Google\Service\CloudWorkstations(...);
- *   $operations = $workstationsService->operations;
+ *   $operations = $workstationsService->projects_locations_operations;
  *  </code>
  */
 class ProjectsLocationsOperations extends \Google\Service\Resource
