@@ -26,6 +26,7 @@ class IpConfiguration extends \Google\Collection
   public $allocatedIpRange;
   protected $authorizedNetworksType = AclEntry::class;
   protected $authorizedNetworksDataType = 'array';
+  public $authorizedNetworks;
   /**
    * @var bool
    */

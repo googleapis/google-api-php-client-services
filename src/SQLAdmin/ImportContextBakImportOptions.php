@@ -21,6 +21,7 @@ class ImportContextBakImportOptions extends \Google\Model
 {
   protected $encryptionOptionsType = ImportContextBakImportOptionsEncryptionOptions::class;
   protected $encryptionOptionsDataType = '';
+  public $encryptionOptions;
   /**
    * @var bool
    */
