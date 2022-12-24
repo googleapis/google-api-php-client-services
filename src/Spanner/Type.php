@@ -21,6 +21,7 @@ class Type extends \Google\Model
 {
   protected $arrayElementTypeType = Type::class;
   protected $arrayElementTypeDataType = '';
+  public $arrayElementType;
   /**
    * @var string
    */
@@ -31,6 +32,7 @@ class Type extends \Google\Model
   public $protoTypeFqn;
   protected $structTypeType = StructType::class;
   protected $structTypeDataType = '';
+  public $structType;
   /**
    * @var string
    */

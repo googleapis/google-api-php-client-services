@@ -30,6 +30,7 @@ class CreateDatabaseRequest extends \Google\Collection
   public $databaseDialect;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
+  public $encryptionConfig;
   /**
    * @var string[]
    */
