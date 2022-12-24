@@ -26,7 +26,7 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $notificationConfigs = $securitycenterService->notificationConfigs;
+ *   $notificationConfigs = $securitycenterService->projects_notificationConfigs;
  *  </code>
  */
 class ProjectsNotificationConfigs extends \Google\Service\Resource

@@ -24,7 +24,7 @@ use Google\Service\SecurityCommandCenter\GoogleCloudSecuritycenterV1ExternalSyst
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $externalSystems = $securitycenterService->externalSystems;
+ *   $externalSystems = $securitycenterService->organizations_sources_findings_externalSystems;
  *  </code>
  */
 class OrganizationsSourcesFindingsExternalSystems extends \Google\Service\Resource

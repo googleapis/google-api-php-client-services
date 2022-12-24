@@ -24,7 +24,7 @@ use Google\Service\SecurityCommandCenter\ListSourcesResponse;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $sources = $securitycenterService->sources;
+ *   $sources = $securitycenterService->projects_sources;
  *  </code>
  */
 class ProjectsSources extends \Google\Service\Resource

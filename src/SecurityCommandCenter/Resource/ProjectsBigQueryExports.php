@@ -26,7 +26,7 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $bigQueryExports = $securitycenterService->bigQueryExports;
+ *   $bigQueryExports = $securitycenterService->projects_bigQueryExports;
  *  </code>
  */
 class ProjectsBigQueryExports extends \Google\Service\Resource

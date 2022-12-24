@@ -30,7 +30,7 @@ use Google\Service\SecurityCommandCenter\SetMuteRequest;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $findings = $securitycenterService->findings;
+ *   $findings = $securitycenterService->organizations_sources_findings;
  *  </code>
  */
 class OrganizationsSourcesFindings extends \Google\Service\Resource

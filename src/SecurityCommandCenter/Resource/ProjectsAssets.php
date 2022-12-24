@@ -27,7 +27,7 @@ use Google\Service\SecurityCommandCenter\SecurityMarks;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $assets = $securitycenterService->assets;
+ *   $assets = $securitycenterService->projects_assets;
  *  </code>
  */
 class ProjectsAssets extends \Google\Service\Resource

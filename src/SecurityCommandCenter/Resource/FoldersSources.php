@@ -24,7 +24,7 @@ use Google\Service\SecurityCommandCenter\ListSourcesResponse;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $sources = $securitycenterService->sources;
+ *   $sources = $securitycenterService->folders_sources;
  *  </code>
  */
 class FoldersSources extends \Google\Service\Resource

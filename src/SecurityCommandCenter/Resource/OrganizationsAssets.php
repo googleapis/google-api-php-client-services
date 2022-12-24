@@ -29,7 +29,7 @@ use Google\Service\SecurityCommandCenter\SecurityMarks;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $assets = $securitycenterService->assets;
+ *   $assets = $securitycenterService->organizations_assets;
  *  </code>
  */
 class OrganizationsAssets extends \Google\Service\Resource

@@ -30,7 +30,7 @@ use Google\Service\SecurityCommandCenter\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $sources = $securitycenterService->sources;
+ *   $sources = $securitycenterService->organizations_sources;
  *  </code>
  */
 class OrganizationsSources extends \Google\Service\Resource
