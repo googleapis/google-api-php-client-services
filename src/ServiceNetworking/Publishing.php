@@ -42,8 +42,10 @@ class Publishing extends \Google\Collection
   public $githubLabel;
   protected $librarySettingsType = ClientLibrarySettings::class;
   protected $librarySettingsDataType = 'array';
+  public $librarySettings;
   protected $methodSettingsType = MethodSettings::class;
   protected $methodSettingsDataType = 'array';
+  public $methodSettings;
   /**
    * @var string
    */
