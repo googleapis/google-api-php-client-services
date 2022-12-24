@@ -21,6 +21,7 @@ class PythonSettings extends \Google\Model
 {
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
+  public $common;
 
   /**
    * @param CommonLanguageSettings
