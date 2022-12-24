@@ -21,6 +21,7 @@ class MethodSettings extends \Google\Model
 {
   protected $longRunningType = LongRunning::class;
   protected $longRunningDataType = '';
+  public $longRunning;
   /**
    * @var string
    */
