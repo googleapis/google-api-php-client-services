@@ -48,7 +48,8 @@ class ProjectsLocationsCatalogsUserEvents extends \Google\Service\Resource
    * browser caching of otherwise identical get requests. The name is abbreviated
    * to reduce the payload bytes.
    * @opt_param string prebuiltRule The prebuilt rule name that can convert a
-   * specific type of raw_json. For example: "default_schema/v1.0"
+   * specific type of raw_json. For example: "ga4_bq" rule for the GA4 user event
+   * schema.
    * @opt_param string rawJson An arbitrary serialized JSON string that contains
    * necessary information that can comprise a user event. When this field is
    * specified, the user_event field will be ignored. Note: line-delimited JSON is
