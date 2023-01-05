@@ -142,7 +142,8 @@ class ProjectsLocationsConversionWorkspaces extends \Google\Service\Resource
    * ions/{location}/conversionWorkspaces/{conversion_workspace}.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string commitId Optional filter to request a specific commit id
+   * @opt_param string commitId Optional. Optional filter to request a specific
+   * commit id
    * @return DescribeConversionWorkspaceRevisionsResponse
    */
   public function describeConversionWorkspaceRevisions($conversionWorkspace, $optParams = [])
