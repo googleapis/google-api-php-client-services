@@ -82,6 +82,10 @@ class GoogleCloudRunV2Task extends \Google\Collection
   protected $lastAttemptResultDataType = '';
   public $lastAttemptResult;
   /**
+   * @var string
+   */
+  public $logUri;
+  /**
    * @var int
    */
   public $maxRetries;
@@ -351,6 +355,20 @@ class GoogleCloudRunV2Task extends \Google\Collection
   public function getLastAttemptResult()
   {
     return $this->lastAttemptResult;
+  }
+  /**
+   * @param string
+   */
+  public function setLogUri($logUri)
+  {
+    $this->logUri = $logUri;
+  }
+  /**
+   * @return string
+   */
+  public function getLogUri()
+  {
+    return $this->logUri;
   }
   /**
    * @param int
