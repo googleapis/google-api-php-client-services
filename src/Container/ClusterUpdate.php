@@ -148,6 +148,10 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredWorkloadIdentityConfigType = WorkloadIdentityConfig::class;
   protected $desiredWorkloadIdentityConfigDataType = '';
   public $desiredWorkloadIdentityConfig;
+  /**
+   * @var string
+   */
+  public $etag;
 
   /**
    * @param AddonsConfig
@@ -694,6 +698,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredWorkloadIdentityConfig()
   {
     return $this->desiredWorkloadIdentityConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  /**
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
   }
 }
 

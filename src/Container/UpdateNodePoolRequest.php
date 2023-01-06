@@ -27,6 +27,10 @@ class UpdateNodePoolRequest extends \Google\Collection
   protected $confidentialNodesType = ConfidentialNodes::class;
   protected $confidentialNodesDataType = '';
   public $confidentialNodes;
+  /**
+   * @var string
+   */
+  public $etag;
   protected $fastSocketType = FastSocket::class;
   protected $fastSocketDataType = '';
   public $fastSocket;
@@ -87,6 +91,9 @@ class UpdateNodePoolRequest extends \Google\Collection
   protected $upgradeSettingsType = UpgradeSettings::class;
   protected $upgradeSettingsDataType = '';
   public $upgradeSettings;
+  protected $windowsNodeConfigType = WindowsNodeConfig::class;
+  protected $windowsNodeConfigDataType = '';
+  public $windowsNodeConfig;
   protected $workloadMetadataConfigType = WorkloadMetadataConfig::class;
   protected $workloadMetadataConfigDataType = '';
   public $workloadMetadataConfig;
@@ -122,6 +129,20 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getConfidentialNodes()
   {
     return $this->confidentialNodes;
+  }
+  /**
+   * @param string
+   */
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  /**
+   * @return string
+   */
+  public function getEtag()
+  {
+    return $this->etag;
   }
   /**
    * @param FastSocket
@@ -374,6 +395,20 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getUpgradeSettings()
   {
     return $this->upgradeSettings;
+  }
+  /**
+   * @param WindowsNodeConfig
+   */
+  public function setWindowsNodeConfig(WindowsNodeConfig $windowsNodeConfig)
+  {
+    $this->windowsNodeConfig = $windowsNodeConfig;
+  }
+  /**
+   * @return WindowsNodeConfig
+   */
+  public function getWindowsNodeConfig()
+  {
+    return $this->windowsNodeConfig;
   }
   /**
    * @param WorkloadMetadataConfig
