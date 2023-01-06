@@ -32,6 +32,9 @@ class YoutubeAndPartnersSettings extends \Google\Model
   protected $thirdPartyMeasurementSettingsType = YoutubeAndPartnersThirdPartyMeasurementSettings::class;
   protected $thirdPartyMeasurementSettingsDataType = '';
   public $thirdPartyMeasurementSettings;
+  protected $videoAdSequenceSettingsType = VideoAdSequenceSettings::class;
+  protected $videoAdSequenceSettingsDataType = '';
+  public $videoAdSequenceSettings;
   protected $viewFrequencyCapType = FrequencyCap::class;
   protected $viewFrequencyCapDataType = '';
   public $viewFrequencyCap;
@@ -91,6 +94,20 @@ class YoutubeAndPartnersSettings extends \Google\Model
   public function getThirdPartyMeasurementSettings()
   {
     return $this->thirdPartyMeasurementSettings;
+  }
+  /**
+   * @param VideoAdSequenceSettings
+   */
+  public function setVideoAdSequenceSettings(VideoAdSequenceSettings $videoAdSequenceSettings)
+  {
+    $this->videoAdSequenceSettings = $videoAdSequenceSettings;
+  }
+  /**
+   * @return VideoAdSequenceSettings
+   */
+  public function getVideoAdSequenceSettings()
+  {
+    return $this->videoAdSequenceSettings;
   }
   /**
    * @param FrequencyCap
