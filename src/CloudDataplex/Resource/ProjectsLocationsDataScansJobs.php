@@ -31,16 +31,16 @@ use Google\Service\CloudDataplex\GoogleCloudDataplexV1ListDataScanJobsResponse;
 class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
 {
   /**
-   * Get DataScanJob resource. (jobs.get)
+   * Gets a DataScanJob resource. (jobs.get)
    *
    * @param string $name Required. The resource name of the DataScanJob: projects/
    * {project}/locations/{location_id}/dataScans/{data_scan_id}/dataScanJobs/{data
-   * _scan_job_id} where {project} refers to a project_id or project_number and
+   * _scan_job_id} where project refers to a project_id or project_number and
    * location_id refers to a GCP region.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Optional. Used to select the subset of DataScan
-   * information to return. Defaults to BASIC.
+   * @opt_param string view Optional. Select the DataScanJob view to return.
+   * Defaults to BASIC.
    * @return GoogleCloudDataplexV1DataScanJob
    */
   public function get($name, $optParams = [])
@@ -50,13 +50,13 @@ class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudDataplexV1DataScanJob::class);
   }
   /**
-   * Lists DataScanJobs under the given dataScan.
+   * Lists DataScanJobs under the given DataScan.
    * (jobs.listProjectsLocationsDataScansJobs)
    *
    * @param string $parent Required. The resource name of the parent environment:
    * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where
-   * {project} refers to a project_id or project_number and location_id refers to
-   * a GCP region.
+   * project refers to a project_id or project_number and location_id refers to a
+   * GCP region.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. Maximum number of DataScanJobs to return.

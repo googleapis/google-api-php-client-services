@@ -82,6 +82,10 @@ class GoogleCloudDataplexV1Entity extends \Google\Model
   /**
    * @var string
    */
+  public $uid;
+  /**
+   * @var string
+   */
   public $updateTime;
 
   /**
@@ -307,6 +311,20 @@ class GoogleCloudDataplexV1Entity extends \Google\Model
   public function getType()
   {
     return $this->type;
+  }
+  /**
+   * @param string
+   */
+  public function setUid($uid)
+  {
+    $this->uid = $uid;
+  }
+  /**
+   * @return string
+   */
+  public function getUid()
+  {
+    return $this->uid;
   }
   /**
    * @param string

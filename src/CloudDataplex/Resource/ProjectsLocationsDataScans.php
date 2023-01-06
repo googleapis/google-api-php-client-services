@@ -38,18 +38,18 @@ use Google\Service\CloudDataplex\GoogleLongrunningOperation;
 class ProjectsLocationsDataScans extends \Google\Service\Resource
 {
   /**
-   * Creates a dataScan resource. (dataScans.create)
+   * Creates a DataScan resource. (dataScans.create)
    *
    * @param string $parent Required. The resource name of the parent location:
-   * projects/{project}/locations/{location_id} where {project} refers to a
+   * projects/{project}/locations/{location_id} where project refers to a
    * project_id or project_number and location_id refers to a GCP region.
    * @param GoogleCloudDataplexV1DataScan $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string dataScanId Required. DataScan identifier. * Must contain
-   * only lowercase letters, numbers and hyphens. * Must start with a letter. *
-   * Must end with a number or a letter. * Must be between 1-63 characters. * Must
-   * be unique within the customer project / location.
+   * @opt_param string dataScanId Required. DataScan identifier. Must contain only
+   * lowercase letters, numbers and hyphens. Must start with a letter. Must end
+   * with a number or a letter. Must be between 1-63 characters. Must be unique
+   * within the customer project / location.
    * @return GoogleLongrunningOperation
    */
   public function create($parent, GoogleCloudDataplexV1DataScan $postBody, $optParams = [])
@@ -59,12 +59,12 @@ class ProjectsLocationsDataScans extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Delete the dataScan resource. (dataScans.delete)
+   * Deletes a DataScan resource. (dataScans.delete)
    *
    * @param string $name Required. The resource name of the dataScan:
    * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where
-   * {project} refers to a project_id or project_number and location_id refers to
-   * a GCP region.
+   * project refers to a project_id or project_number and location_id refers to a
+   * GCP region.
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
    */
@@ -75,16 +75,16 @@ class ProjectsLocationsDataScans extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Get dataScan resource. (dataScans.get)
+   * Gets a DataScan resource. (dataScans.get)
    *
    * @param string $name Required. The resource name of the dataScan:
    * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where
-   * {project} refers to a project_id or project_number and location_id refers to
-   * a GCP region.
+   * project refers to a project_id or project_number and location_id refers to a
+   * GCP region.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Optional. Used to select the subset of DataScan
-   * information to return. Defaults to BASIC.
+   * @opt_param string view Optional. Select the DataScan view to return. Defaults
+   * to BASIC.
    * @return GoogleCloudDataplexV1DataScan
    */
   public function get($name, $optParams = [])
@@ -123,11 +123,11 @@ class ProjectsLocationsDataScans extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], GoogleIamV1Policy::class);
   }
   /**
-   * Lists dataScans. (dataScans.listProjectsLocationsDataScans)
+   * Lists DataScans. (dataScans.listProjectsLocationsDataScans)
    *
-   * @param string $parent Required. projects/{project}/locations/{location_id}
-   * where {project} refers to a project_id or project_number and location_id
-   * refers to a GCP region.
+   * @param string $parent Required. The resource name of the parent location:
+   * projects/{project}/locations/{location_id} where project refers to a
+   * project_id or project_number and location_id refers to a GCP region.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter request.
@@ -150,12 +150,12 @@ class ProjectsLocationsDataScans extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDataplexV1ListDataScansResponse::class);
   }
   /**
-   * Update the dataScan resource. (dataScans.patch)
+   * Updates a DataScan resource. (dataScans.patch)
    *
    * @param string $name Output only. The relative resource name of the scan, of
-   * the form: projects/{project}/locations/{location_id}/dataScans/{datascan_id}.
-   * where {project} refers to a project_id or project_number and location_id
-   * refers to a GCP region.
+   * the form: projects/{project}/locations/{location_id}/dataScans/{datascan_id},
+   * where project refers to a project_id or project_number and location_id refers
+   * to a GCP region.
    * @param GoogleCloudDataplexV1DataScan $postBody
    * @param array $optParams Optional parameters.
    *
@@ -169,12 +169,12 @@ class ProjectsLocationsDataScans extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Run an on demand execution of a DataScan. (dataScans.run)
+   * Runs an on-demand execution of a DataScan (dataScans.run)
    *
    * @param string $name Required. The resource name of the DataScan:
    * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where
-   * {project} refers to a project_id or project_number and location_id refers to
-   * a GCP region. Only on-demand DataScans are allowed.
+   * project refers to a project_id or project_number and location_id refers to a
+   * GCP region.Only OnDemand data scans are allowed.
    * @param GoogleCloudDataplexV1RunDataScanRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDataplexV1RunDataScanResponse
