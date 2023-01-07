@@ -17,8 +17,6 @@
 
 namespace Google\Service\CCAIPlatform\Resource;
 
-use Google\Service\CCAIPlatform\ContactCenterQuota;
-
 /**
  * The "projects" collection of methods.
  * Typical usage is:
@@ -29,21 +27,6 @@ use Google\Service\CCAIPlatform\ContactCenterQuota;
  */
 class Projects extends \Google\Service\Resource
 {
-  /**
-   * Queries the contact center quota, an aggregation over all the projects, that
-   * belongs to the billing account, which the input project belongs to.
-   * (projects.queryContactCenterQuota)
-   *
-   * @param string $parent Required. Parent project resource id.
-   * @param array $optParams Optional parameters.
-   * @return ContactCenterQuota
-   */
-  public function queryContactCenterQuota($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('queryContactCenterQuota', [$params], ContactCenterQuota::class);
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

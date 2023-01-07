@@ -38,7 +38,6 @@ class CCAIPlatform extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $projects;
   public $projects_locations;
   public $projects_locations_contactCenters;
   public $projects_locations_operations;
@@ -59,26 +58,6 @@ class CCAIPlatform extends \Google\Service
     $this->version = 'v1alpha1';
     $this->serviceName = 'contactcenteraiplatform';
 
-    $this->projects = new CCAIPlatform\Resource\Projects(
-        $this,
-        $this->serviceName,
-        'projects',
-        [
-          'methods' => [
-            'queryContactCenterQuota' => [
-              'path' => 'v1alpha1/{+parent}:queryContactCenterQuota',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects_locations = new CCAIPlatform\Resource\ProjectsLocations(
         $this,
         $this->serviceName,
@@ -118,15 +97,10 @@ class CCAIPlatform extends \Google\Service
                 ],
               ],
             ],'queryContactCenterQuota' => [
-              'path' => 'v1alpha1/{+parent}/locations/{locationsId}:queryContactCenterQuota',
+              'path' => 'v1alpha1/{+parent}:queryContactCenterQuota',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'locationsId' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

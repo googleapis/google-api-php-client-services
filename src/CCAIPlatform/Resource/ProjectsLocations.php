@@ -73,13 +73,12 @@ class ProjectsLocations extends \Google\Service\Resource
    * (locations.queryContactCenterQuota)
    *
    * @param string $parent Required. Parent project resource id.
-   * @param string $locationsId
    * @param array $optParams Optional parameters.
    * @return ContactCenterQuota
    */
-  public function queryContactCenterQuota($parent, $locationsId, $optParams = [])
+  public function queryContactCenterQuota($parent, $optParams = [])
   {
-    $params = ['parent' => $parent, 'locationsId' => $locationsId];
+    $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('queryContactCenterQuota', [$params], ContactCenterQuota::class);
   }
