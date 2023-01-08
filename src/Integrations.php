@@ -610,6 +610,16 @@ class Integrations extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'monitorexecutionstats' => [
+              'path' => 'v1/{+parent}:monitorexecutionstats',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'schedule' => [
               'path' => 'v1/{+name}:schedule',
               'httpMethod' => 'POST',
@@ -1290,6 +1300,16 @@ class Integrations extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'monitorexecutionstats' => [
+              'path' => 'v1/{+parent}:monitorexecutionstats',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'schedule' => [
