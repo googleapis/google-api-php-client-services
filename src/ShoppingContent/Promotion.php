@@ -145,6 +145,9 @@ class Promotion extends \Google\Collection
    * @var string
    */
   public $promotionId;
+  protected $promotionStatusType = PromotionPromotionStatus::class;
+  protected $promotionStatusDataType = '';
+  public $promotionStatus;
   /**
    * @var string
    */
@@ -635,6 +638,20 @@ class Promotion extends \Google\Collection
   public function getPromotionId()
   {
     return $this->promotionId;
+  }
+  /**
+   * @param PromotionPromotionStatus
+   */
+  public function setPromotionStatus(PromotionPromotionStatus $promotionStatus)
+  {
+    $this->promotionStatus = $promotionStatus;
+  }
+  /**
+   * @return PromotionPromotionStatus
+   */
+  public function getPromotionStatus()
+  {
+    return $this->promotionStatus;
   }
   /**
    * @param string
