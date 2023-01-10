@@ -37,6 +37,10 @@ class WorkflowInvocation extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var string
+   */
+  public $workflowConfig;
 
   /**
    * @param string
@@ -107,6 +111,20 @@ class WorkflowInvocation extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setWorkflowConfig($workflowConfig)
+  {
+    $this->workflowConfig = $workflowConfig;
+  }
+  /**
+   * @return string
+   */
+  public function getWorkflowConfig()
+  {
+    return $this->workflowConfig;
   }
 }
 
