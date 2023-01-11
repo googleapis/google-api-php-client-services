@@ -195,7 +195,17 @@ class Document extends \Google\Service
         'processorTypes',
         [
           'methods' => [
-            'list' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
               'path' => 'v1/{+parent}/processorTypes',
               'httpMethod' => 'GET',
               'parameters' => [

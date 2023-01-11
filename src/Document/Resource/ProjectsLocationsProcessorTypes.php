@@ -18,6 +18,7 @@
 namespace Google\Service\Document\Resource;
 
 use Google\Service\Document\GoogleCloudDocumentaiV1ListProcessorTypesResponse;
+use Google\Service\Document\GoogleCloudDocumentaiV1ProcessorType;
 
 /**
  * The "processorTypes" collection of methods.
@@ -29,6 +30,19 @@ use Google\Service\Document\GoogleCloudDocumentaiV1ListProcessorTypesResponse;
  */
 class ProjectsLocationsProcessorTypes extends \Google\Service\Resource
 {
+  /**
+   * Gets a processor type detail. (processorTypes.get)
+   *
+   * @param string $name Required. The processor type resource name.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDocumentaiV1ProcessorType
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudDocumentaiV1ProcessorType::class);
+  }
   /**
    * Lists the processor types that exist.
    * (processorTypes.listProjectsLocationsProcessorTypes)
