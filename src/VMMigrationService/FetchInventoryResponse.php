@@ -19,6 +19,9 @@ namespace Google\Service\VMMigrationService;
 
 class FetchInventoryResponse extends \Google\Model
 {
+  protected $awsVmsType = AwsVmsDetails::class;
+  protected $awsVmsDataType = '';
+  public $awsVms;
   /**
    * @var string
    */
@@ -31,6 +34,20 @@ class FetchInventoryResponse extends \Google\Model
   protected $vmwareVmsDataType = '';
   public $vmwareVms;
 
+  /**
+   * @param AwsVmsDetails
+   */
+  public function setAwsVms(AwsVmsDetails $awsVms)
+  {
+    $this->awsVms = $awsVms;
+  }
+  /**
+   * @return AwsVmsDetails
+   */
+  public function getAwsVms()
+  {
+    return $this->awsVms;
+  }
   /**
    * @param string
    */
