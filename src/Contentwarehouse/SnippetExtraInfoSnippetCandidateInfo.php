@@ -41,6 +41,9 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
   protected $scoringInfoType = SnippetExtraInfoSnippetScoringInfo::class;
   protected $scoringInfoDataType = '';
   public $scoringInfo;
+  protected $sentenceStartsType = QualitySnippetsTruncationSnippetBoldedRangePosition::class;
+  protected $sentenceStartsDataType = 'array';
+  public $sentenceStarts;
   /**
    * @var string[]
    */
@@ -137,6 +140,20 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
   public function getScoringInfo()
   {
     return $this->scoringInfo;
+  }
+  /**
+   * @param QualitySnippetsTruncationSnippetBoldedRangePosition[]
+   */
+  public function setSentenceStarts($sentenceStarts)
+  {
+    $this->sentenceStarts = $sentenceStarts;
+  }
+  /**
+   * @return QualitySnippetsTruncationSnippetBoldedRangePosition[]
+   */
+  public function getSentenceStarts()
+  {
+    return $this->sentenceStarts;
   }
   /**
    * @param string[]

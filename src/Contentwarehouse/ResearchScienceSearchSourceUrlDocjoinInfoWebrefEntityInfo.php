@@ -17,8 +17,9 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\Model
+class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\Collection
 {
+  protected $collection_key = 'kgCollection';
   /**
    * @var string
    */
@@ -27,6 +28,10 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
    * @var string
    */
   public $entityType;
+  /**
+   * @var string[]
+   */
+  public $kgCollection;
   /**
    * @var string
    */
@@ -59,6 +64,20 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
   public function getEntityType()
   {
     return $this->entityType;
+  }
+  /**
+   * @param string[]
+   */
+  public function setKgCollection($kgCollection)
+  {
+    $this->kgCollection = $kgCollection;
+  }
+  /**
+   * @return string[]
+   */
+  public function getKgCollection()
+  {
+    return $this->kgCollection;
   }
   /**
    * @param string

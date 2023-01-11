@@ -21,6 +21,10 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
 {
   protected $collection_key = 'raffiaLookupKeys';
   /**
+   * @var string
+   */
+  public $encodedLookupInformation;
+  /**
    * @var int[]
    */
   public $goldmineLookupKeyPerField;
@@ -41,6 +45,20 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
    */
   public $raffiaLookupKeys;
 
+  /**
+   * @param string
+   */
+  public function setEncodedLookupInformation($encodedLookupInformation)
+  {
+    $this->encodedLookupInformation = $encodedLookupInformation;
+  }
+  /**
+   * @return string
+   */
+  public function getEncodedLookupInformation()
+  {
+    return $this->encodedLookupInformation;
+  }
   /**
    * @param int[]
    */

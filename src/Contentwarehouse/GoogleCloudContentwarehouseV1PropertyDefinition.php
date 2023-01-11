@@ -65,6 +65,10 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Model
   protected $propertyTypeOptionsType = GoogleCloudContentwarehouseV1PropertyTypeOptions::class;
   protected $propertyTypeOptionsDataType = '';
   public $propertyTypeOptions;
+  /**
+   * @var string
+   */
+  public $retrievalImportance;
   protected $textTypeOptionsType = GoogleCloudContentwarehouseV1TextTypeOptions::class;
   protected $textTypeOptionsDataType = '';
   public $textTypeOptions;
@@ -253,6 +257,20 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Model
   public function getPropertyTypeOptions()
   {
     return $this->propertyTypeOptions;
+  }
+  /**
+   * @param string
+   */
+  public function setRetrievalImportance($retrievalImportance)
+  {
+    $this->retrievalImportance = $retrievalImportance;
+  }
+  /**
+   * @return string
+   */
+  public function getRetrievalImportance()
+  {
+    return $this->retrievalImportance;
   }
   /**
    * @param GoogleCloudContentwarehouseV1TextTypeOptions

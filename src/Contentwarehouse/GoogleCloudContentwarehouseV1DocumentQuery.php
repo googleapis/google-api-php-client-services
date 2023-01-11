@@ -24,6 +24,9 @@ class GoogleCloudContentwarehouseV1DocumentQuery extends \Google\Collection
    * @var string
    */
   public $customPropertyFilter;
+  protected $customWeightsMetadataType = GoogleCloudContentwarehouseV1CustomWeightsMetadata::class;
+  protected $customWeightsMetadataDataType = '';
+  public $customWeightsMetadata;
   /**
    * @var string[]
    */
@@ -71,6 +74,20 @@ class GoogleCloudContentwarehouseV1DocumentQuery extends \Google\Collection
   public function getCustomPropertyFilter()
   {
     return $this->customPropertyFilter;
+  }
+  /**
+   * @param GoogleCloudContentwarehouseV1CustomWeightsMetadata
+   */
+  public function setCustomWeightsMetadata(GoogleCloudContentwarehouseV1CustomWeightsMetadata $customWeightsMetadata)
+  {
+    $this->customWeightsMetadata = $customWeightsMetadata;
+  }
+  /**
+   * @return GoogleCloudContentwarehouseV1CustomWeightsMetadata
+   */
+  public function getCustomWeightsMetadata()
+  {
+    return $this->customWeightsMetadata;
   }
   /**
    * @param string[]

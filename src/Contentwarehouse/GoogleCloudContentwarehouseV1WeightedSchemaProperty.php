@@ -17,46 +17,47 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class NlpSemanticParsingExpressionStatus extends \Google\Model
+class GoogleCloudContentwarehouseV1WeightedSchemaProperty extends \Google\Collection
 {
+  protected $collection_key = 'propertyNames';
   /**
    * @var string
    */
-  public $status;
+  public $documentSchemaName;
   /**
-   * @var float
+   * @var string[]
    */
-  public $textCompletenessProbability;
+  public $propertyNames;
 
   /**
    * @param string
    */
-  public function setStatus($status)
+  public function setDocumentSchemaName($documentSchemaName)
   {
-    $this->status = $status;
+    $this->documentSchemaName = $documentSchemaName;
   }
   /**
    * @return string
    */
-  public function getStatus()
+  public function getDocumentSchemaName()
   {
-    return $this->status;
+    return $this->documentSchemaName;
   }
   /**
-   * @param float
+   * @param string[]
    */
-  public function setTextCompletenessProbability($textCompletenessProbability)
+  public function setPropertyNames($propertyNames)
   {
-    $this->textCompletenessProbability = $textCompletenessProbability;
+    $this->propertyNames = $propertyNames;
   }
   /**
-   * @return float
+   * @return string[]
    */
-  public function getTextCompletenessProbability()
+  public function getPropertyNames()
   {
-    return $this->textCompletenessProbability;
+    return $this->propertyNames;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NlpSemanticParsingExpressionStatus::class, 'Google_Service_Contentwarehouse_NlpSemanticParsingExpressionStatus');
+class_alias(GoogleCloudContentwarehouseV1WeightedSchemaProperty::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1WeightedSchemaProperty');

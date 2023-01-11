@@ -30,7 +30,11 @@ class QualityTimebasedLastSignificantUpdateAdjustments extends \Google\Model
   /**
    * @var string
    */
-  public $unadjustedTimestampInSeconds;
+  public $unboundedTimestampInSeconds;
+  /**
+   * @var string
+   */
+  public $unboundedTimestampSource;
   /**
    * @var string
    */
@@ -67,16 +71,30 @@ class QualityTimebasedLastSignificantUpdateAdjustments extends \Google\Model
   /**
    * @param string
    */
-  public function setUnadjustedTimestampInSeconds($unadjustedTimestampInSeconds)
+  public function setUnboundedTimestampInSeconds($unboundedTimestampInSeconds)
   {
-    $this->unadjustedTimestampInSeconds = $unadjustedTimestampInSeconds;
+    $this->unboundedTimestampInSeconds = $unboundedTimestampInSeconds;
   }
   /**
    * @return string
    */
-  public function getUnadjustedTimestampInSeconds()
+  public function getUnboundedTimestampInSeconds()
   {
-    return $this->unadjustedTimestampInSeconds;
+    return $this->unboundedTimestampInSeconds;
+  }
+  /**
+   * @param string
+   */
+  public function setUnboundedTimestampSource($unboundedTimestampSource)
+  {
+    $this->unboundedTimestampSource = $unboundedTimestampSource;
+  }
+  /**
+   * @return string
+   */
+  public function getUnboundedTimestampSource()
+  {
+    return $this->unboundedTimestampSource;
   }
   /**
    * @param string

@@ -23,6 +23,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var float
    */
   public $bindingSetAuis;
+  /**
+   * @var float
+   */
+  public $bindingSetPauis;
   public $calibratedParsingScore;
   /**
    * @var bool
@@ -58,6 +62,7 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var bool
    */
   public $maskCandidateLevelFeatures;
+  public $maxHgrScoreAcrossBindingSets;
   /**
    * @var float
    */
@@ -100,6 +105,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getBindingSetAuis()
   {
     return $this->bindingSetAuis;
+  }
+  /**
+   * @param float
+   */
+  public function setBindingSetPauis($bindingSetPauis)
+  {
+    $this->bindingSetPauis = $bindingSetPauis;
+  }
+  /**
+   * @return float
+   */
+  public function getBindingSetPauis()
+  {
+    return $this->bindingSetPauis;
   }
   public function setCalibratedParsingScore($calibratedParsingScore)
   {
@@ -244,6 +263,14 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getMaskCandidateLevelFeatures()
   {
     return $this->maskCandidateLevelFeatures;
+  }
+  public function setMaxHgrScoreAcrossBindingSets($maxHgrScoreAcrossBindingSets)
+  {
+    $this->maxHgrScoreAcrossBindingSets = $maxHgrScoreAcrossBindingSets;
+  }
+  public function getMaxHgrScoreAcrossBindingSets()
+  {
+    return $this->maxHgrScoreAcrossBindingSets;
   }
   /**
    * @param float

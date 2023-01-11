@@ -47,6 +47,10 @@ class ResearchScienceSearchLocation extends \Google\Collection
   /**
    * @var string
    */
+  public $locationResource;
+  /**
+   * @var string
+   */
   public $pointCoordinates;
   /**
    * @var string
@@ -136,6 +140,20 @@ class ResearchScienceSearchLocation extends \Google\Collection
   public function getLocationName()
   {
     return $this->locationName;
+  }
+  /**
+   * @param string
+   */
+  public function setLocationResource($locationResource)
+  {
+    $this->locationResource = $locationResource;
+  }
+  /**
+   * @return string
+   */
+  public function getLocationResource()
+  {
+    return $this->locationResource;
   }
   /**
    * @param string

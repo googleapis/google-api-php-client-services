@@ -64,6 +64,9 @@ class MediaIndexRegion extends \Google\Collection
   protected $starburstV4Type = ImageContentStarburstVersionGroup::class;
   protected $starburstV4DataType = '';
   public $starburstV4;
+  protected $starburstV5Type = ImageContentStarburstVersionGroup::class;
+  protected $starburstV5DataType = '';
+  public $starburstV5;
 
   /**
    * @param MediaIndexBoundingbox
@@ -232,6 +235,20 @@ class MediaIndexRegion extends \Google\Collection
   public function getStarburstV4()
   {
     return $this->starburstV4;
+  }
+  /**
+   * @param ImageContentStarburstVersionGroup
+   */
+  public function setStarburstV5(ImageContentStarburstVersionGroup $starburstV5)
+  {
+    $this->starburstV5 = $starburstV5;
+  }
+  /**
+   * @return ImageContentStarburstVersionGroup
+   */
+  public function getStarburstV5()
+  {
+    return $this->starburstV5;
   }
 }
 

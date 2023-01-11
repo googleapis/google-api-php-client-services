@@ -64,6 +64,10 @@ class ImageRepositoryVenomStatus extends \Google\Collection
    * @var string
    */
   public $venomMutationGeneration;
+  /**
+   * @var string
+   */
+  public $videoVenomSetting;
 
   /**
    * @param VideoAssetsVenomACL
@@ -232,6 +236,20 @@ class ImageRepositoryVenomStatus extends \Google\Collection
   public function getVenomMutationGeneration()
   {
     return $this->venomMutationGeneration;
+  }
+  /**
+   * @param string
+   */
+  public function setVideoVenomSetting($videoVenomSetting)
+  {
+    $this->videoVenomSetting = $videoVenomSetting;
+  }
+  /**
+   * @return string
+   */
+  public function getVideoVenomSetting()
+  {
+    return $this->videoVenomSetting;
   }
 }
 
