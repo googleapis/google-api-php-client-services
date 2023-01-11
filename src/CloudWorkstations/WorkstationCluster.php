@@ -48,6 +48,10 @@ class WorkstationCluster extends \Google\Collection
    */
   public $etag;
   /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var string
    */
   public $name;
@@ -172,6 +176,20 @@ class WorkstationCluster extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param string

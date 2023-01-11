@@ -58,6 +58,10 @@ class WorkstationConfig extends \Google\Collection
    */
   public $idleTimeout;
   /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var string
    */
   public $name;
@@ -220,6 +224,20 @@ class WorkstationConfig extends \Google\Collection
   public function getIdleTimeout()
   {
     return $this->idleTimeout;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param string

@@ -44,6 +44,10 @@ class Workstation extends \Google\Model
    */
   public $host;
   /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var string
    */
   public $name;
@@ -147,6 +151,20 @@ class Workstation extends \Google\Model
   public function getHost()
   {
     return $this->host;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param string
