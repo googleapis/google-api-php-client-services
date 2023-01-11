@@ -23,6 +23,9 @@ class InstancePolicy extends \Google\Collection
   protected $acceleratorsType = Accelerator::class;
   protected $acceleratorsDataType = 'array';
   public $accelerators;
+  protected $bootDiskType = Disk::class;
+  protected $bootDiskDataType = '';
+  public $bootDisk;
   protected $disksType = AttachedDisk::class;
   protected $disksDataType = 'array';
   public $disks;
@@ -52,6 +55,20 @@ class InstancePolicy extends \Google\Collection
   public function getAccelerators()
   {
     return $this->accelerators;
+  }
+  /**
+   * @param Disk
+   */
+  public function setBootDisk(Disk $bootDisk)
+  {
+    $this->bootDisk = $bootDisk;
+  }
+  /**
+   * @return Disk
+   */
+  public function getBootDisk()
+  {
+    return $this->bootDisk;
   }
   /**
    * @param AttachedDisk[]
