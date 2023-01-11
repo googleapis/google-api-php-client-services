@@ -47,6 +47,8 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * second request will be ignored. It is recommended to always set this value to
    * a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
    * underscores (_), and hyphens (-). The maximum length is 40 characters.
+   * @opt_param bool skipValidation Optional. If set to true, will skip
+   * validations.
    * @return Operation
    */
   public function create($parent, PrivateConnection $postBody, $optParams = [])

@@ -776,6 +776,10 @@ class DatabaseMigrationService extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'skipValidation' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
