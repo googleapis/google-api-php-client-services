@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3ResponseMessage extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $channel;
   protected $conversationSuccessType = GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess::class;
   protected $conversationSuccessDataType = '';
   public $conversationSuccess;
@@ -48,6 +52,20 @@ class GoogleCloudDialogflowCxV3ResponseMessage extends \Google\Model
   protected $textDataType = '';
   public $text;
 
+  /**
+   * @param string
+   */
+  public function setChannel($channel)
+  {
+    $this->channel = $channel;
+  }
+  /**
+   * @return string
+   */
+  public function getChannel()
+  {
+    return $this->channel;
+  }
   /**
    * @param GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess
    */
