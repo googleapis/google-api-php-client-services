@@ -139,14 +139,13 @@ class Cases extends \Google\Service\Resource
    * @param CloudsupportCase $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask A field that represents attributes of a case
-   * object that should be updated as part of this request. Supported values are
-   * severity, display_name, and subscriber_email_addresses. If no fields are
-   * specified, all supported fields will be updated. WARNING: If you do not
-   * provide a field mask then you may accidentally clear some fields. For
-   * example, if you leave field mask empty and do not provide a value for
-   * subscriber_email_addresses then subscriber_email_addresses will be updated to
-   * empty.
+   * @opt_param string updateMask A list of attributes of the case object that
+   * should be updated as part of this request. Supported values are severity,
+   * display_name, and subscriber_email_addresses. If no fields are specified, all
+   * supported fields are updated. WARNING: If you do not provide a field mask,
+   * then you may accidentally clear some fields. For example, if you leave field
+   * mask empty and do not provide a value for subscriber_email_addresses, then
+   * subscriber_email_addresses is updated to empty.
    * @return CloudsupportCase
    */
   public function patch($name, CloudsupportCase $postBody, $optParams = [])
