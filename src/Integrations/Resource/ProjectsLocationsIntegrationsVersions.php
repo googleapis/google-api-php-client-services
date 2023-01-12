@@ -21,17 +21,14 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaArchiveIntegration
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse;
-use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaIntegrationVersion;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaPublishIntegrationVersionResponse;
-use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest;
-use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest;
-use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse;
-use Google\Service\Integrations\GoogleProtobufEmpty;
 
 /**
  * The "versions" collection of methods.
@@ -107,45 +104,6 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('deactivate', [$params], GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse::class);
-  }
-  /**
-   * Soft-deletes the integration. Changes the status of the integration to
-   * ARCHIVED. If the integration being ARCHIVED is tagged as "HEAD", the tag is
-   * removed from this snapshot and set to the previous non-ARCHIVED snapshot. The
-   * PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed too. This RPC throws an
-   * exception if the version being deleted is DRAFT, and if the `locked_by` user
-   * is not the same as the user performing the Delete. Audit fields updated
-   * include last_modified_timestamp, last_modified_by. Any existing lock is
-   * released when Deleting a integration. Currently, there is no undelete
-   * mechanism. (versions.delete)
-   *
-   * @param string $name Required. The version to delete. Format: projects/{projec
-   * t}/locations/{location}/integrations/{integration}/versions/{version}
-   * @param array $optParams Optional parameters.
-   * @return GoogleProtobufEmpty
-   */
-  public function delete($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
-  }
-  /**
-   * Downloads an integration. Retrieves the `IntegrationVersion` for a given
-   * `integration_id` and returns the response as a string. (versions.download)
-   *
-   * @param string $name Required. The version to download. Format: projects/{proj
-   * ect}/locations/{location}/integrations/{integration}/versions/{version}
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string fileFormat File format for download request.
-   * @return GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse
-   */
-  public function download($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('download', [$params], GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse::class);
   }
   /**
    * Get a integration in the specified project. (versions.get)
@@ -243,41 +201,31 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
     return $this->call('publish', [$params], GoogleCloudIntegrationsV1alphaPublishIntegrationVersionResponse::class);
   }
   /**
-   * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag
-   * "PREVIOUSLY_PUBLISHED" after validating it. The "HEAD" and
-   * "PUBLISH_REQUESTED" tags do not change. This RPC throws an exception if the
-   * version being snapshot is not ACTIVE. Audit fields added include action,
-   * action_by, action_timestamp. (versions.unpublish)
+   * Clears the `locked_by` and `locked_at_timestamp`in the DRAFT version of this
+   * integration. It then performs the same action as the
+   * CreateDraftIntegrationVersion (i.e., copies the DRAFT version of the
+   * integration as a SNAPSHOT and then creates a new DRAFT version with the
+   * `locked_by` set to the `user_taking_over` and the `locked_at_timestamp` set
+   * to the current timestamp). Both the `locked_by` and `user_taking_over` are
+   * notified via email about the takeover. This RPC throws an exception if the
+   * integration is not in DRAFT status or if the `locked_by` and
+   * `locked_at_timestamp` fields are not set.The TakeoverEdit lock is treated the
+   * same as an edit of the integration, and hence shares ACLs with edit. Audit
+   * fields updated include last_modified_timestamp, last_modified_by.
+   * (versions.takeoverEditLock)
    *
-   * @param string $name Required. The version to deactivate. Format: projects/{pr
-   * oject}/locations/{location}/integrations/{integration}/versions/{version}
-   * @param GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest $postBody
+   * @param string $integrationVersion Required. The version to take over edit
+   * lock. Format: projects/{project}/locations/{location}/integrations/{integrati
+   * on}/versions/{version}
+   * @param GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleProtobufEmpty
+   * @return GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse
    */
-  public function unpublish($name, GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest $postBody, $optParams = [])
+  public function takeoverEditLock($integrationVersion, GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest $postBody, $optParams = [])
   {
-    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = ['integrationVersion' => $integrationVersion, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('unpublish', [$params], GoogleProtobufEmpty::class);
-  }
-  /**
-   * Uploads an integration. The content can be a previously downloaded
-   * integration. Performs the same function as CreateDraftIntegrationVersion, but
-   * accepts input in a string format, which holds the complete representation of
-   * the IntegrationVersion content. (versions.upload)
-   *
-   * @param string $parent Required. The version to upload. Format:
-   * projects/{project}/locations/{location}/integrations/{integration}
-   * @param GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse
-   */
-  public function upload($parent, GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('upload', [$params], GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse::class);
+    return $this->call('takeoverEditLock', [$params], GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse::class);
   }
   /**
    * Validates the given integration. If the id doesn't exist, a NotFoundException

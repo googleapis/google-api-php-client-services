@@ -17,8 +17,6 @@
 
 namespace Google\Service\Integrations\Resource;
 
-use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaGetClientMetadataResponse;
-
 /**
  * The "projects" collection of methods.
  * Typical usage is:
@@ -29,20 +27,6 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaGetClientMetadataR
  */
 class Projects extends \Google\Service\Resource
 {
-  /**
-   * Gets the metadata info for the requested client (projects.getClientmetadata)
-   *
-   * @param string $parent Required. Required: The ID of the GCP Project to be
-   * provisioned.
-   * @param array $optParams Optional parameters.
-   * @return GoogleCloudIntegrationsV1alphaGetClientMetadataResponse
-   */
-  public function getClientmetadata($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('getClientmetadata', [$params], GoogleCloudIntegrationsV1alphaGetClientMetadataResponse::class);
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

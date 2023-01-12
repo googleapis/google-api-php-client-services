@@ -24,8 +24,6 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaExecuteIntegration
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListIntegrationsResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaScheduleIntegrationsResponse;
-use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTestIntegrationsRequest;
-use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTestIntegrationsResponse;
 
 /**
  * The "integrations" collection of methods.
@@ -116,20 +114,6 @@ class ProjectsLocationsProductsIntegrations extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('schedule', [$params], GoogleCloudIntegrationsV1alphaScheduleIntegrationsResponse::class);
-  }
-  /**
-   * Execute the integration in draft state (integrations.test)
-   *
-   * @param string $name Output only. Auto-generated primary key.
-   * @param GoogleCloudIntegrationsV1alphaTestIntegrationsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleCloudIntegrationsV1alphaTestIntegrationsResponse
-   */
-  public function test($name, GoogleCloudIntegrationsV1alphaTestIntegrationsRequest $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('test', [$params], GoogleCloudIntegrationsV1alphaTestIntegrationsResponse::class);
   }
 }
 
