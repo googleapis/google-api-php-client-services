@@ -60,6 +60,10 @@ class NetworkInterface extends \Google\Collection
   /**
    * @var string
    */
+  public $networkAttachment;
+  /**
+   * @var string
+   */
   public $networkIP;
   /**
    * @var string
@@ -217,6 +221,20 @@ class NetworkInterface extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param string
+   */
+  public function setNetworkAttachment($networkAttachment)
+  {
+    $this->networkAttachment = $networkAttachment;
+  }
+  /**
+   * @return string
+   */
+  public function getNetworkAttachment()
+  {
+    return $this->networkAttachment;
   }
   /**
    * @param string

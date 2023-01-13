@@ -34,6 +34,10 @@ class AllocationSpecificSKUReservation extends \Google\Model
   protected $instancePropertiesType = AllocationSpecificSKUAllocationReservedInstanceProperties::class;
   protected $instancePropertiesDataType = '';
   public $instanceProperties;
+  /**
+   * @var string
+   */
+  public $sourceInstanceTemplate;
 
   /**
    * @param string
@@ -90,6 +94,20 @@ class AllocationSpecificSKUReservation extends \Google\Model
   public function getInstanceProperties()
   {
     return $this->instanceProperties;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceInstanceTemplate($sourceInstanceTemplate)
+  {
+    $this->sourceInstanceTemplate = $sourceInstanceTemplate;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceInstanceTemplate()
+  {
+    return $this->sourceInstanceTemplate;
   }
 }
 
