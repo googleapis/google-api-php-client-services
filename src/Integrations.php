@@ -49,6 +49,7 @@ class Integrations extends \Google\Service
   public $projects_locations_connections_runtimeEntitySchemas;
   public $projects_locations_integrations;
   public $projects_locations_integrations_executions;
+  public $projects_locations_integrations_executions_suspensions;
   public $projects_locations_integrations_versions;
   public $projects_locations_products;
   public $projects_locations_products_authConfigs;
@@ -561,6 +562,62 @@ class Integrations extends \Google\Service
                 'truncateParams' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_integrations_executions_suspensions = new Integrations\Resource\ProjectsLocationsIntegrationsExecutionsSuspensions(
+        $this,
+        $this->serviceName,
+        'suspensions',
+        [
+          'methods' => [
+            'lift' => [
+              'path' => 'v1alpha/{+name}:lift',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1alpha/{+parent}/suspensions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'resolve' => [
+              'path' => 'v1alpha/{+name}:resolve',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
