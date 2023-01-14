@@ -87,7 +87,7 @@ class OrganizationsSources extends \Google\Service\Resource
    * (sources.listOrganizationsSources)
    *
    * @param string $parent Required. Resource name of the parent of sources to
-   * list. Its format should be "organizations/[organization_id],
+   * list. Its format should be "organizations/[organization_id]",
    * "folders/[folder_id]", or "projects/[project_id]".
    * @param array $optParams Optional parameters.
    *
