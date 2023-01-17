@@ -29,7 +29,7 @@ class Attachment extends \Google\Model
    * @var string
    */
   public $attachmentId;
-  protected $cardAddOnDataType = AppsDynamiteSharedCard::class;
+  protected $cardAddOnDataType = AppsDynamiteStorageCard::class;
   protected $cardAddOnDataDataType = '';
   public $cardAddOnData;
   protected $deprecatedAddOnDataType = ContextualAddOnMarkup::class;
@@ -86,14 +86,14 @@ class Attachment extends \Google\Model
     return $this->attachmentId;
   }
   /**
-   * @param AppsDynamiteSharedCard
+   * @param AppsDynamiteStorageCard
    */
-  public function setCardAddOnData(AppsDynamiteSharedCard $cardAddOnData)
+  public function setCardAddOnData(AppsDynamiteStorageCard $cardAddOnData)
   {
     $this->cardAddOnData = $cardAddOnData;
   }
   /**
-   * @return AppsDynamiteSharedCard
+   * @return AppsDynamiteStorageCard
    */
   public function getCardAddOnData()
   {

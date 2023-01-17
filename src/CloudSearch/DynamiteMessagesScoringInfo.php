@@ -23,7 +23,9 @@ class DynamiteMessagesScoringInfo extends \Google\Model
   public $freshnessScore;
   public $joinedSpaceAffinityScore;
   public $messageAgeInDays;
+  public $messageSenderAffinityScore;
   public $topicalityScore;
+  public $unjoinedSpaceAffinityScore;
 
   public function setFinalScore($finalScore)
   {
@@ -57,6 +59,14 @@ class DynamiteMessagesScoringInfo extends \Google\Model
   {
     return $this->messageAgeInDays;
   }
+  public function setMessageSenderAffinityScore($messageSenderAffinityScore)
+  {
+    $this->messageSenderAffinityScore = $messageSenderAffinityScore;
+  }
+  public function getMessageSenderAffinityScore()
+  {
+    return $this->messageSenderAffinityScore;
+  }
   public function setTopicalityScore($topicalityScore)
   {
     $this->topicalityScore = $topicalityScore;
@@ -64,6 +74,14 @@ class DynamiteMessagesScoringInfo extends \Google\Model
   public function getTopicalityScore()
   {
     return $this->topicalityScore;
+  }
+  public function setUnjoinedSpaceAffinityScore($unjoinedSpaceAffinityScore)
+  {
+    $this->unjoinedSpaceAffinityScore = $unjoinedSpaceAffinityScore;
+  }
+  public function getUnjoinedSpaceAffinityScore()
+  {
+    return $this->unjoinedSpaceAffinityScore;
   }
 }
 

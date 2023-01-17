@@ -29,6 +29,10 @@ class CallInfo extends \Google\Collection
   protected $attachedDocumentsType = DocumentInfo::class;
   protected $attachedDocumentsDataType = 'array';
   public $attachedDocuments;
+  /**
+   * @var string[]
+   */
+  public $availableAccessTypes;
   protected $availableReactionsType = ReactionInfo::class;
   protected $availableReactionsDataType = 'array';
   public $availableReactions;
@@ -126,6 +130,20 @@ class CallInfo extends \Google\Collection
   public function getAttachedDocuments()
   {
     return $this->attachedDocuments;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAvailableAccessTypes($availableAccessTypes)
+  {
+    $this->availableAccessTypes = $availableAccessTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAvailableAccessTypes()
+  {
+    return $this->availableAccessTypes;
   }
   /**
    * @param ReactionInfo[]
