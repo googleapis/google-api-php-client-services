@@ -147,6 +147,10 @@ class FoldersPolicies extends \Google\Service\Resource
    * project number.
    * @param GoogleCloudOrgpolicyV2Policy $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Field mask used to specify the fields to be
+   * overwritten in the policy by the set. The fields specified in the update_mask
+   * are relative to the policy, not the full request.
    * @return GoogleCloudOrgpolicyV2Policy
    */
   public function patch($name, GoogleCloudOrgpolicyV2Policy $postBody, $optParams = [])
