@@ -72,6 +72,10 @@ class AddSubnetworkRequest extends \Google\Collection
    * @var string[]
    */
   public $requestedRanges;
+  /**
+   * @var string
+   */
+  public $role;
   protected $secondaryIpRangeSpecsType = SecondaryIpRangeSpec::class;
   protected $secondaryIpRangeSpecsDataType = 'array';
   public $secondaryIpRangeSpecs;
@@ -269,6 +273,20 @@ class AddSubnetworkRequest extends \Google\Collection
   public function getRequestedRanges()
   {
     return $this->requestedRanges;
+  }
+  /**
+   * @param string
+   */
+  public function setRole($role)
+  {
+    $this->role = $role;
+  }
+  /**
+   * @return string
+   */
+  public function getRole()
+  {
+    return $this->role;
   }
   /**
    * @param SecondaryIpRangeSpec[]
