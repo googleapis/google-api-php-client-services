@@ -22,6 +22,9 @@ class GoogleCloudDocumentaiUiv1beta3DocumentId extends \Google\Model
   protected $gcsManagedDocIdType = GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId::class;
   protected $gcsManagedDocIdDataType = '';
   public $gcsManagedDocId;
+  protected $revisionRefType = GoogleCloudDocumentaiUiv1beta3RevisionRef::class;
+  protected $revisionRefDataType = '';
+  public $revisionRef;
   protected $revisionReferenceType = GoogleCloudDocumentaiUiv1beta3RevisionReference::class;
   protected $revisionReferenceDataType = '';
   public $revisionReference;
@@ -39,6 +42,20 @@ class GoogleCloudDocumentaiUiv1beta3DocumentId extends \Google\Model
   public function getGcsManagedDocId()
   {
     return $this->gcsManagedDocId;
+  }
+  /**
+   * @param GoogleCloudDocumentaiUiv1beta3RevisionRef
+   */
+  public function setRevisionRef(GoogleCloudDocumentaiUiv1beta3RevisionRef $revisionRef)
+  {
+    $this->revisionRef = $revisionRef;
+  }
+  /**
+   * @return GoogleCloudDocumentaiUiv1beta3RevisionRef
+   */
+  public function getRevisionRef()
+  {
+    return $this->revisionRef;
   }
   /**
    * @param GoogleCloudDocumentaiUiv1beta3RevisionReference

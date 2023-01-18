@@ -47,6 +47,7 @@ class Document extends \Google\Service
   public $projects_locations_processors;
   public $projects_locations_processors_humanReviewConfig;
   public $projects_locations_processors_processorVersions;
+  public $projects_locations_processors_processorVersions_evaluations;
   public $projects_operations;
 
   /**
@@ -391,6 +392,16 @@ class Document extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'evaluateProcessorVersion' => [
+              'path' => 'v1/{+processorVersion}:evaluateProcessorVersion',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'processorVersion' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -429,6 +440,16 @@ class Document extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'train' => [
+              'path' => 'v1/{+parent}/processorVersions:train',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'undeploy' => [
               'path' => 'v1/{+name}:undeploy',
               'httpMethod' => 'POST',
@@ -437,6 +458,44 @@ class Document extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_processors_processorVersions_evaluations = new Document\Resource\ProjectsLocationsProcessorsProcessorVersionsEvaluations(
+        $this,
+        $this->serviceName,
+        'evaluations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/evaluations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
