@@ -31,8 +31,7 @@ use Google\Service\HangoutsChat\Membership;
 class SpacesMembers extends \Google\Service\Resource
 {
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Returns
-   * a membership. Requires
+   * Returns a membership. Requires
    * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
@@ -57,8 +56,7 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('get', [$params], Membership::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Lists
-   * memberships in a space. Requires
+   * Lists memberships in a space. Requires
    * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
