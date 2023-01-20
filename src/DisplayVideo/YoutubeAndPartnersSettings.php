@@ -17,8 +17,9 @@
 
 namespace Google\Service\DisplayVideo;
 
-class YoutubeAndPartnersSettings extends \Google\Model
+class YoutubeAndPartnersSettings extends \Google\Collection
 {
+  protected $collection_key = 'relatedVideoIds';
   protected $biddingStrategyType = YoutubeAndPartnersBiddingStrategy::class;
   protected $biddingStrategyDataType = '';
   public $biddingStrategy;
@@ -29,6 +30,21 @@ class YoutubeAndPartnersSettings extends \Google\Model
   protected $inventorySourceSettingsType = YoutubeAndPartnersInventorySourceConfig::class;
   protected $inventorySourceSettingsDataType = '';
   public $inventorySourceSettings;
+  /**
+   * @var string
+   */
+  public $leadFormId;
+  /**
+   * @var string
+   */
+  public $linkedMerchantId;
+  /**
+   * @var string[]
+   */
+  public $relatedVideoIds;
+  protected $targetFrequencyType = TargetFrequency::class;
+  protected $targetFrequencyDataType = '';
+  public $targetFrequency;
   protected $thirdPartyMeasurementSettingsType = YoutubeAndPartnersThirdPartyMeasurementSettings::class;
   protected $thirdPartyMeasurementSettingsDataType = '';
   public $thirdPartyMeasurementSettings;
@@ -80,6 +96,62 @@ class YoutubeAndPartnersSettings extends \Google\Model
   public function getInventorySourceSettings()
   {
     return $this->inventorySourceSettings;
+  }
+  /**
+   * @param string
+   */
+  public function setLeadFormId($leadFormId)
+  {
+    $this->leadFormId = $leadFormId;
+  }
+  /**
+   * @return string
+   */
+  public function getLeadFormId()
+  {
+    return $this->leadFormId;
+  }
+  /**
+   * @param string
+   */
+  public function setLinkedMerchantId($linkedMerchantId)
+  {
+    $this->linkedMerchantId = $linkedMerchantId;
+  }
+  /**
+   * @return string
+   */
+  public function getLinkedMerchantId()
+  {
+    return $this->linkedMerchantId;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRelatedVideoIds($relatedVideoIds)
+  {
+    $this->relatedVideoIds = $relatedVideoIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRelatedVideoIds()
+  {
+    return $this->relatedVideoIds;
+  }
+  /**
+   * @param TargetFrequency
+   */
+  public function setTargetFrequency(TargetFrequency $targetFrequency)
+  {
+    $this->targetFrequency = $targetFrequency;
+  }
+  /**
+   * @return TargetFrequency
+   */
+  public function getTargetFrequency()
+  {
+    return $this->targetFrequency;
   }
   /**
    * @param YoutubeAndPartnersThirdPartyMeasurementSettings

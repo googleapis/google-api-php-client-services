@@ -17,82 +17,99 @@
 
 namespace Google\Service\DisplayVideo;
 
-class YoutubeAndPartnersBiddingStrategy extends \Google\Model
+class VideoDiscoveryAd extends \Google\Model
 {
   /**
    * @var string
    */
-  public $adGroupEffectiveTargetCpaSource;
+  public $description1;
   /**
    * @var string
    */
-  public $adGroupEffectiveTargetCpaValue;
+  public $description2;
   /**
    * @var string
    */
-  public $type;
+  public $headline;
   /**
    * @var string
    */
-  public $value;
+  public $thumbnail;
+  protected $videoType = YoutubeVideoDetails::class;
+  protected $videoDataType = '';
+  public $video;
 
   /**
    * @param string
    */
-  public function setAdGroupEffectiveTargetCpaSource($adGroupEffectiveTargetCpaSource)
+  public function setDescription1($description1)
   {
-    $this->adGroupEffectiveTargetCpaSource = $adGroupEffectiveTargetCpaSource;
+    $this->description1 = $description1;
   }
   /**
    * @return string
    */
-  public function getAdGroupEffectiveTargetCpaSource()
+  public function getDescription1()
   {
-    return $this->adGroupEffectiveTargetCpaSource;
+    return $this->description1;
   }
   /**
    * @param string
    */
-  public function setAdGroupEffectiveTargetCpaValue($adGroupEffectiveTargetCpaValue)
+  public function setDescription2($description2)
   {
-    $this->adGroupEffectiveTargetCpaValue = $adGroupEffectiveTargetCpaValue;
+    $this->description2 = $description2;
   }
   /**
    * @return string
    */
-  public function getAdGroupEffectiveTargetCpaValue()
+  public function getDescription2()
   {
-    return $this->adGroupEffectiveTargetCpaValue;
+    return $this->description2;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setHeadline($headline)
   {
-    $this->type = $type;
+    $this->headline = $headline;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getHeadline()
   {
-    return $this->type;
+    return $this->headline;
   }
   /**
    * @param string
    */
-  public function setValue($value)
+  public function setThumbnail($thumbnail)
   {
-    $this->value = $value;
+    $this->thumbnail = $thumbnail;
   }
   /**
    * @return string
    */
-  public function getValue()
+  public function getThumbnail()
   {
-    return $this->value;
+    return $this->thumbnail;
+  }
+  /**
+   * @param YoutubeVideoDetails
+   */
+  public function setVideo(YoutubeVideoDetails $video)
+  {
+    $this->video = $video;
+  }
+  /**
+   * @return YoutubeVideoDetails
+   */
+  public function getVideo()
+  {
+    return $this->video;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(YoutubeAndPartnersBiddingStrategy::class, 'Google_Service_DisplayVideo_YoutubeAndPartnersBiddingStrategy');
+class_alias(VideoDiscoveryAd::class, 'Google_Service_DisplayVideo_VideoDiscoveryAd');
