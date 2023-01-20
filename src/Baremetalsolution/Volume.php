@@ -101,6 +101,10 @@ class Volume extends \Google\Model
   /**
    * @var string
    */
+  public $storageAggregatePool;
+  /**
+   * @var string
+   */
   public $storageType;
   /**
    * @var string
@@ -386,6 +390,20 @@ class Volume extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setStorageAggregatePool($storageAggregatePool)
+  {
+    $this->storageAggregatePool = $storageAggregatePool;
+  }
+  /**
+   * @return string
+   */
+  public function getStorageAggregatePool()
+  {
+    return $this->storageAggregatePool;
   }
   /**
    * @param string

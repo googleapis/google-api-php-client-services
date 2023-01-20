@@ -61,6 +61,10 @@ class VolumeConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $storageAggregatePool;
+  /**
+   * @var string
+   */
   public $type;
   /**
    * @var string
@@ -206,6 +210,20 @@ class VolumeConfig extends \Google\Collection
   public function getSnapshotsEnabled()
   {
     return $this->snapshotsEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setStorageAggregatePool($storageAggregatePool)
+  {
+    $this->storageAggregatePool = $storageAggregatePool;
+  }
+  /**
+   * @return string
+   */
+  public function getStorageAggregatePool()
+  {
+    return $this->storageAggregatePool;
   }
   /**
    * @param string
