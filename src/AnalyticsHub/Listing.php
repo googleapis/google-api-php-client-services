@@ -61,6 +61,9 @@ class Listing extends \Google\Collection
    * @var string
    */
   public $requestAccess;
+  protected $restrictedExportConfigType = RestrictedExportConfig::class;
+  protected $restrictedExportConfigDataType = '';
+  public $restrictedExportConfig;
   /**
    * @var string
    */
@@ -219,6 +222,20 @@ class Listing extends \Google\Collection
   public function getRequestAccess()
   {
     return $this->requestAccess;
+  }
+  /**
+   * @param RestrictedExportConfig
+   */
+  public function setRestrictedExportConfig(RestrictedExportConfig $restrictedExportConfig)
+  {
+    $this->restrictedExportConfig = $restrictedExportConfig;
+  }
+  /**
+   * @return RestrictedExportConfig
+   */
+  public function getRestrictedExportConfig()
+  {
+    return $this->restrictedExportConfig;
   }
   /**
    * @param string
