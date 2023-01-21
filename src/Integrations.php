@@ -420,7 +420,17 @@ class Integrations extends \Google\Service
         'integrations',
         [
           'methods' => [
-            'execute' => [
+            'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'execute' => [
               'path' => 'v1alpha/{+name}:execute',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -664,6 +674,30 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'download' => [
+              'path' => 'v1alpha/{+name}:download',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'fileFormat' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'get' => [
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'GET',
@@ -733,6 +767,26 @@ class Integrations extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'integrationVersion' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'unpublish' => [
+              'path' => 'v1alpha/{+name}:unpublish',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'upload' => [
+              'path' => 'v1alpha/{+parent}/versions:upload',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -1282,6 +1336,16 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'download' => [
               'path' => 'v1alpha/{+name}:download',
               'httpMethod' => 'GET',
@@ -1375,6 +1439,16 @@ class Integrations extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'integrationVersion' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'unpublish' => [
+              'path' => 'v1alpha/{+name}:unpublish',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
