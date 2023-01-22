@@ -67,6 +67,9 @@ class ProjectsDatabases extends \Google\Service\Resource
    * @opt_param string etag The current etag of the Database. If an etag is
    * provided and does not match the current etag of the database, deletion will
    * be blocked and a FAILED_PRECONDITION error will be returned.
+   * @opt_param bool freeId If set, will free the database_id associated with this
+   * database. uid will be used as the resource id to identify this deleted
+   * database.
    * @opt_param bool validateOnly If set, validate the request and preview the
    * response, but do not actually delete the database.
    * @return GoogleLongrunningOperation
