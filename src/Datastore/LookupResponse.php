@@ -33,6 +33,10 @@ class LookupResponse extends \Google\Collection
    * @var string
    */
   public $readTime;
+  /**
+   * @var string
+   */
+  public $transaction;
 
   /**
    * @param Key[]
@@ -89,6 +93,20 @@ class LookupResponse extends \Google\Collection
   public function getReadTime()
   {
     return $this->readTime;
+  }
+  /**
+   * @param string
+   */
+  public function setTransaction($transaction)
+  {
+    $this->transaction = $transaction;
+  }
+  /**
+   * @return string
+   */
+  public function getTransaction()
+  {
+    return $this->transaction;
   }
 }
 
