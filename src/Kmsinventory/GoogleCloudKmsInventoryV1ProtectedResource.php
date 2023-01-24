@@ -17,8 +17,9 @@
 
 namespace Google\Service\Kmsinventory;
 
-class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Model
+class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
 {
+  protected $collection_key = 'cryptoKeyVersions';
   /**
    * @var string
    */
@@ -31,6 +32,10 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Model
    * @var string
    */
   public $cryptoKeyVersion;
+  /**
+   * @var string[]
+   */
+  public $cryptoKeyVersions;
   /**
    * @var string[]
    */
@@ -97,6 +102,20 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Model
   public function getCryptoKeyVersion()
   {
     return $this->cryptoKeyVersion;
+  }
+  /**
+   * @param string[]
+   */
+  public function setCryptoKeyVersions($cryptoKeyVersions)
+  {
+    $this->cryptoKeyVersions = $cryptoKeyVersions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getCryptoKeyVersions()
+  {
+    return $this->cryptoKeyVersions;
   }
   /**
    * @param string[]
