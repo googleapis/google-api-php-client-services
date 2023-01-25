@@ -17,64 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefEntityNameRatingsEntityNameRating extends \Google\Model
+class GoogleCloudContentwarehouseV1ProcessorInfo extends \Google\Model
 {
   /**
    * @var string
    */
-  public $comment;
+  public $documentType;
   /**
    * @var string
    */
-  public $label;
+  public $processorName;
   /**
    * @var string
    */
-  public $source;
+  public $schemaName;
 
   /**
    * @param string
    */
-  public function setComment($comment)
+  public function setDocumentType($documentType)
   {
-    $this->comment = $comment;
+    $this->documentType = $documentType;
   }
   /**
    * @return string
    */
-  public function getComment()
+  public function getDocumentType()
   {
-    return $this->comment;
+    return $this->documentType;
   }
   /**
    * @param string
    */
-  public function setLabel($label)
+  public function setProcessorName($processorName)
   {
-    $this->label = $label;
+    $this->processorName = $processorName;
   }
   /**
    * @return string
    */
-  public function getLabel()
+  public function getProcessorName()
   {
-    return $this->label;
+    return $this->processorName;
   }
   /**
    * @param string
    */
-  public function setSource($source)
+  public function setSchemaName($schemaName)
   {
-    $this->source = $source;
+    $this->schemaName = $schemaName;
   }
   /**
    * @return string
    */
-  public function getSource()
+  public function getSchemaName()
   {
-    return $this->source;
+    return $this->schemaName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefEntityNameRatingsEntityNameRating::class, 'Google_Service_Contentwarehouse_RepositoryWebrefEntityNameRatingsEntityNameRating');
+class_alias(GoogleCloudContentwarehouseV1ProcessorInfo::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1ProcessorInfo');

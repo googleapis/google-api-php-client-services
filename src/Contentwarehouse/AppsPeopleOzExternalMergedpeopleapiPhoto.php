@@ -20,6 +20,9 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
 {
   protected $collection_key = 'htmlAttribution';
+  protected $decorationType = SocialGraphApiProtoDecorationOverlay::class;
+  protected $decorationDataType = 'array';
+  public $decoration;
   /**
    * @var string
    */
@@ -47,6 +50,9 @@ class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
    * @var string
    */
   public $monogramBackground;
+  protected $originalPhotoType = SocialGraphApiProtoImageReference::class;
+  protected $originalPhotoDataType = '';
+  public $originalPhoto;
   protected $photoIdType = AppsPeopleOzExternalMergedpeopleapiPhotoPhotoStorageId::class;
   protected $photoIdDataType = '';
   public $photoId;
@@ -63,6 +69,20 @@ class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
    */
   public $viewerUrl;
 
+  /**
+   * @param SocialGraphApiProtoDecorationOverlay[]
+   */
+  public function setDecoration($decoration)
+  {
+    $this->decoration = $decoration;
+  }
+  /**
+   * @return SocialGraphApiProtoDecorationOverlay[]
+   */
+  public function getDecoration()
+  {
+    return $this->decoration;
+  }
   /**
    * @param string
    */
@@ -160,6 +180,20 @@ class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
   public function getMonogramBackground()
   {
     return $this->monogramBackground;
+  }
+  /**
+   * @param SocialGraphApiProtoImageReference
+   */
+  public function setOriginalPhoto(SocialGraphApiProtoImageReference $originalPhoto)
+  {
+    $this->originalPhoto = $originalPhoto;
+  }
+  /**
+   * @return SocialGraphApiProtoImageReference
+   */
+  public function getOriginalPhoto()
+  {
+    return $this->originalPhoto;
   }
   /**
    * @param AppsPeopleOzExternalMergedpeopleapiPhotoPhotoStorageId

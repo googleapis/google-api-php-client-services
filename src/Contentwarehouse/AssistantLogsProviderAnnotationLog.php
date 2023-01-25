@@ -17,28 +17,29 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefDetailedMentionScores extends \Google\Model
+class AssistantLogsProviderAnnotationLog extends \Google\Collection
 {
+  protected $collection_key = 'packageNames';
   /**
-   * @var float
+   * @var string[]
    */
-  public $resultEntityScore;
+  public $packageNames;
 
   /**
-   * @param float
+   * @param string[]
    */
-  public function setResultEntityScore($resultEntityScore)
+  public function setPackageNames($packageNames)
   {
-    $this->resultEntityScore = $resultEntityScore;
+    $this->packageNames = $packageNames;
   }
   /**
-   * @return float
+   * @return string[]
    */
-  public function getResultEntityScore()
+  public function getPackageNames()
   {
-    return $this->resultEntityScore;
+    return $this->packageNames;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefDetailedMentionScores::class, 'Google_Service_Contentwarehouse_RepositoryWebrefDetailedMentionScores');
+class_alias(AssistantLogsProviderAnnotationLog::class, 'Google_Service_Contentwarehouse_AssistantLogsProviderAnnotationLog');

@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefEntityNameRatingsEntityNameRating extends \Google\Model
+class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
 {
   /**
    * @var string
    */
-  public $comment;
+  public $inputPath;
   /**
    * @var string
    */
-  public $label;
-  /**
-   * @var string
-   */
-  public $source;
+  public $schemaName;
 
   /**
    * @param string
    */
-  public function setComment($comment)
+  public function setInputPath($inputPath)
   {
-    $this->comment = $comment;
+    $this->inputPath = $inputPath;
   }
   /**
    * @return string
    */
-  public function getComment()
+  public function getInputPath()
   {
-    return $this->comment;
+    return $this->inputPath;
   }
   /**
    * @param string
    */
-  public function setLabel($label)
+  public function setSchemaName($schemaName)
   {
-    $this->label = $label;
+    $this->schemaName = $schemaName;
   }
   /**
    * @return string
    */
-  public function getLabel()
+  public function getSchemaName()
   {
-    return $this->label;
-  }
-  /**
-   * @param string
-   */
-  public function setSource($source)
-  {
-    $this->source = $source;
-  }
-  /**
-   * @return string
-   */
-  public function getSource()
-  {
-    return $this->source;
+    return $this->schemaName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefEntityNameRatingsEntityNameRating::class, 'Google_Service_Contentwarehouse_RepositoryWebrefEntityNameRatingsEntityNameRating');
+class_alias(GoogleCloudContentwarehouseV1GcsIngestPipeline::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1GcsIngestPipeline');

@@ -17,28 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefDetailedMentionScores extends \Google\Model
+class SocialGraphApiProtoImageReference extends \Google\Model
 {
   /**
-   * @var float
+   * @var string
    */
-  public $resultEntityScore;
+  public $mediaId;
 
   /**
-   * @param float
+   * @param string
    */
-  public function setResultEntityScore($resultEntityScore)
+  public function setMediaId($mediaId)
   {
-    $this->resultEntityScore = $resultEntityScore;
+    $this->mediaId = $mediaId;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getResultEntityScore()
+  public function getMediaId()
   {
-    return $this->resultEntityScore;
+    return $this->mediaId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefDetailedMentionScores::class, 'Google_Service_Contentwarehouse_RepositoryWebrefDetailedMentionScores');
+class_alias(SocialGraphApiProtoImageReference::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoImageReference');

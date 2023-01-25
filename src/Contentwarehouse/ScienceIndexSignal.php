@@ -21,7 +21,6 @@ class ScienceIndexSignal extends \Google\Collection
 {
   protected $collection_key = 'author';
   protected $internal_gapi_mappings = [
-        "holdingsId" => "HoldingsId",
         "htmlTitleFp" => "HtmlTitleFp",
         "indexSelectionScore" => "IndexSelectionScore",
         "numBackwardLinks" => "NumBackwardLinks",
@@ -35,10 +34,6 @@ class ScienceIndexSignal extends \Google\Collection
         "title" => "Title",
         "visiblePrefixTerms" => "VisiblePrefixTerms",
   ];
-  /**
-   * @var string[]
-   */
-  public $holdingsId;
   /**
    * @var string
    */
@@ -91,20 +86,6 @@ class ScienceIndexSignal extends \Google\Collection
   protected $authorDataType = 'array';
   public $author;
 
-  /**
-   * @param string[]
-   */
-  public function setHoldingsId($holdingsId)
-  {
-    $this->holdingsId = $holdingsId;
-  }
-  /**
-   * @return string[]
-   */
-  public function getHoldingsId()
-  {
-    return $this->holdingsId;
-  }
   /**
    * @param string
    */

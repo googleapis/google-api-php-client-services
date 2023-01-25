@@ -35,6 +35,18 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
   /**
    * @var string
    */
+  public $lastTimeProcessedGoldmineInSeconds;
+  /**
+   * @var string
+   */
+  public $lastTimeProcessedMduInSeconds;
+  /**
+   * @var string
+   */
+  public $lastTimeProcessedRaffiaInSeconds;
+  /**
+   * @var string
+   */
   public $raffiaLookupKey;
   /**
    * @var int[]
@@ -86,6 +98,48 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
   public function getGoldmineLookupKeys()
   {
     return $this->goldmineLookupKeys;
+  }
+  /**
+   * @param string
+   */
+  public function setLastTimeProcessedGoldmineInSeconds($lastTimeProcessedGoldmineInSeconds)
+  {
+    $this->lastTimeProcessedGoldmineInSeconds = $lastTimeProcessedGoldmineInSeconds;
+  }
+  /**
+   * @return string
+   */
+  public function getLastTimeProcessedGoldmineInSeconds()
+  {
+    return $this->lastTimeProcessedGoldmineInSeconds;
+  }
+  /**
+   * @param string
+   */
+  public function setLastTimeProcessedMduInSeconds($lastTimeProcessedMduInSeconds)
+  {
+    $this->lastTimeProcessedMduInSeconds = $lastTimeProcessedMduInSeconds;
+  }
+  /**
+   * @return string
+   */
+  public function getLastTimeProcessedMduInSeconds()
+  {
+    return $this->lastTimeProcessedMduInSeconds;
+  }
+  /**
+   * @param string
+   */
+  public function setLastTimeProcessedRaffiaInSeconds($lastTimeProcessedRaffiaInSeconds)
+  {
+    $this->lastTimeProcessedRaffiaInSeconds = $lastTimeProcessedRaffiaInSeconds;
+  }
+  /**
+   * @return string
+   */
+  public function getLastTimeProcessedRaffiaInSeconds()
+  {
+    return $this->lastTimeProcessedRaffiaInSeconds;
   }
   /**
    * @param string

@@ -17,64 +17,45 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefEntityNameRatingsEntityNameRating extends \Google\Model
+class SocialGraphApiProtoDecorationOverlay extends \Google\Model
 {
+  protected $overlayType = SocialGraphApiProtoPhotoOverlay::class;
+  protected $overlayDataType = '';
+  public $overlay;
   /**
    * @var string
    */
-  public $comment;
-  /**
-   * @var string
-   */
-  public $label;
-  /**
-   * @var string
-   */
-  public $source;
+  public $sibsId;
 
   /**
-   * @param string
+   * @param SocialGraphApiProtoPhotoOverlay
    */
-  public function setComment($comment)
+  public function setOverlay(SocialGraphApiProtoPhotoOverlay $overlay)
   {
-    $this->comment = $comment;
+    $this->overlay = $overlay;
   }
   /**
-   * @return string
+   * @return SocialGraphApiProtoPhotoOverlay
    */
-  public function getComment()
+  public function getOverlay()
   {
-    return $this->comment;
-  }
-  /**
-   * @param string
-   */
-  public function setLabel($label)
-  {
-    $this->label = $label;
-  }
-  /**
-   * @return string
-   */
-  public function getLabel()
-  {
-    return $this->label;
+    return $this->overlay;
   }
   /**
    * @param string
    */
-  public function setSource($source)
+  public function setSibsId($sibsId)
   {
-    $this->source = $source;
+    $this->sibsId = $sibsId;
   }
   /**
    * @return string
    */
-  public function getSource()
+  public function getSibsId()
   {
-    return $this->source;
+    return $this->sibsId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefEntityNameRatingsEntityNameRating::class, 'Google_Service_Contentwarehouse_RepositoryWebrefEntityNameRatingsEntityNameRating');
+class_alias(SocialGraphApiProtoDecorationOverlay::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoDecorationOverlay');
