@@ -34,7 +34,7 @@ class LocationsLodging extends \Google\Service\Resource
    * (lodging.getGoogleUpdated)
    *
    * @param string $name Required. Google identifier for this location in the
-   * form: `accounts/{account_id}/locations/{location_id}/lodging`
+   * form: `locations/{location_id}/lodging`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string readMask Required. The specific fields to return. Use "*"
