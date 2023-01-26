@@ -53,6 +53,7 @@ class ChromeManagement extends \Google\Service
   public $customers_reports;
   public $customers_telemetry_devices;
   public $customers_telemetry_events;
+  public $customers_telemetry_users;
 
   /**
    * Constructs the internal representation of the ChromeManagement service.
@@ -386,6 +387,56 @@ class ChromeManagement extends \Google\Service
           'methods' => [
             'list' => [
               'path' => 'v1/{+parent}/telemetry/events',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'readMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_telemetry_users = new ChromeManagement\Resource\CustomersTelemetryUsers(
+        $this,
+        $this->serviceName,
+        'users',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'readMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/telemetry/users',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
