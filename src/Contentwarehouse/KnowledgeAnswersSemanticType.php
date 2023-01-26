@@ -23,6 +23,10 @@ class KnowledgeAnswersSemanticType extends \Google\Collection
   /**
    * @var bool
    */
+  public $allowAll;
+  /**
+   * @var bool
+   */
   public $includesContainingIntent;
   /**
    * @var string[]
@@ -35,6 +39,20 @@ class KnowledgeAnswersSemanticType extends \Google\Collection
   protected $remodelingsDataType = '';
   public $remodelings;
 
+  /**
+   * @param bool
+   */
+  public function setAllowAll($allowAll)
+  {
+    $this->allowAll = $allowAll;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowAll()
+  {
+    return $this->allowAll;
+  }
   /**
    * @param bool
    */

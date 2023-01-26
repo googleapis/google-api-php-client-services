@@ -22,6 +22,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   /**
    * @var bool
    */
+  public $isCastVideo;
+  /**
+   * @var bool
+   */
   public $isSeedRadio;
   /**
    * @var bool
@@ -31,7 +35,22 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    * @var float
    */
   public $mscRate;
+  public $scubedPSaiMusic;
 
+  /**
+   * @param bool
+   */
+  public function setIsCastVideo($isCastVideo)
+  {
+    $this->isCastVideo = $isCastVideo;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsCastVideo()
+  {
+    return $this->isCastVideo;
+  }
   /**
    * @param bool
    */
@@ -73,6 +92,14 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getMscRate()
   {
     return $this->mscRate;
+  }
+  public function setScubedPSaiMusic($scubedPSaiMusic)
+  {
+    $this->scubedPSaiMusic = $scubedPSaiMusic;
+  }
+  public function getScubedPSaiMusic()
+  {
+    return $this->scubedPSaiMusic;
   }
 }
 

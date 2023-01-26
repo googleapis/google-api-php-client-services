@@ -17,65 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule extends \Google\Collection
+class SocialGraphApiProtoNamePronunciationAudioMetadata extends \Google\Model
 {
-  protected $collection_key = 'services';
   /**
    * @var string
    */
-  public $name;
-  /**
-   * @var string[]
-   */
-  public $services;
+  public $audioSource;
   /**
    * @var string
    */
-  public $useCase;
+  public $audioState;
 
   /**
    * @param string
    */
-  public function setName($name)
+  public function setAudioSource($audioSource)
   {
-    $this->name = $name;
+    $this->audioSource = $audioSource;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getAudioSource()
   {
-    return $this->name;
-  }
-  /**
-   * @param string[]
-   */
-  public function setServices($services)
-  {
-    $this->services = $services;
-  }
-  /**
-   * @return string[]
-   */
-  public function getServices()
-  {
-    return $this->services;
+    return $this->audioSource;
   }
   /**
    * @param string
    */
-  public function setUseCase($useCase)
+  public function setAudioState($audioState)
   {
-    $this->useCase = $useCase;
+    $this->audioState = $audioState;
   }
   /**
    * @return string
    */
-  public function getUseCase()
+  public function getAudioState()
   {
-    return $this->useCase;
+    return $this->audioState;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule::class, 'Google_Service_Contentwarehouse_BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule');
+class_alias(SocialGraphApiProtoNamePronunciationAudioMetadata::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoNamePronunciationAudioMetadata');

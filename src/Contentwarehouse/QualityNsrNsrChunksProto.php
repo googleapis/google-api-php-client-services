@@ -17,65 +17,47 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule extends \Google\Collection
+class QualityNsrNsrChunksProto extends \Google\Collection
 {
-  protected $collection_key = 'services';
+  protected $collection_key = 'secondaryChunks';
   /**
    * @var string
    */
-  public $name;
+  public $primaryChunk;
   /**
    * @var string[]
    */
-  public $services;
-  /**
-   * @var string
-   */
-  public $useCase;
+  public $secondaryChunks;
 
   /**
    * @param string
    */
-  public function setName($name)
+  public function setPrimaryChunk($primaryChunk)
   {
-    $this->name = $name;
+    $this->primaryChunk = $primaryChunk;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getPrimaryChunk()
   {
-    return $this->name;
+    return $this->primaryChunk;
   }
   /**
    * @param string[]
    */
-  public function setServices($services)
+  public function setSecondaryChunks($secondaryChunks)
   {
-    $this->services = $services;
+    $this->secondaryChunks = $secondaryChunks;
   }
   /**
    * @return string[]
    */
-  public function getServices()
+  public function getSecondaryChunks()
   {
-    return $this->services;
-  }
-  /**
-   * @param string
-   */
-  public function setUseCase($useCase)
-  {
-    $this->useCase = $useCase;
-  }
-  /**
-   * @return string
-   */
-  public function getUseCase()
-  {
-    return $this->useCase;
+    return $this->secondaryChunks;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule::class, 'Google_Service_Contentwarehouse_BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule');
+class_alias(QualityNsrNsrChunksProto::class, 'Google_Service_Contentwarehouse_QualityNsrNsrChunksProto');

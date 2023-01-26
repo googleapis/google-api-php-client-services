@@ -192,6 +192,10 @@ class WWWDocInfo extends \Google\Collection
    */
   public $noimageframeoverlayreason;
   /**
+   * @var string
+   */
+  public $nsrSitechunk;
+  /**
    * @var bool
    */
   public $partialBoilerplateMetadescription;
@@ -889,6 +893,20 @@ class WWWDocInfo extends \Google\Collection
   public function getNoimageframeoverlayreason()
   {
     return $this->noimageframeoverlayreason;
+  }
+  /**
+   * @param string
+   */
+  public function setNsrSitechunk($nsrSitechunk)
+  {
+    $this->nsrSitechunk = $nsrSitechunk;
+  }
+  /**
+   * @return string
+   */
+  public function getNsrSitechunk()
+  {
+    return $this->nsrSitechunk;
   }
   /**
    * @param bool

@@ -44,6 +44,9 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
    * @var string
    */
   public $lastTimeProcessedRaffiaInSeconds;
+  protected $nsrChunksWithSourceInfoType = QualityNsrNsrChunksWithSourceInfo::class;
+  protected $nsrChunksWithSourceInfoDataType = '';
+  public $nsrChunksWithSourceInfo;
   /**
    * @var string
    */
@@ -140,6 +143,20 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
   public function getLastTimeProcessedRaffiaInSeconds()
   {
     return $this->lastTimeProcessedRaffiaInSeconds;
+  }
+  /**
+   * @param QualityNsrNsrChunksWithSourceInfo
+   */
+  public function setNsrChunksWithSourceInfo(QualityNsrNsrChunksWithSourceInfo $nsrChunksWithSourceInfo)
+  {
+    $this->nsrChunksWithSourceInfo = $nsrChunksWithSourceInfo;
+  }
+  /**
+   * @return QualityNsrNsrChunksWithSourceInfo
+   */
+  public function getNsrChunksWithSourceInfo()
+  {
+    return $this->nsrChunksWithSourceInfo;
   }
   /**
    * @param string
