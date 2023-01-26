@@ -196,7 +196,9 @@ class UsersMessages extends \Google\Service\Resource
   }
   /**
    * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc`
-   * headers. (messages.send)
+   * headers. For example usage, see [Sending
+   * email](https://developers.google.com/gmail/api/guides/sending).
+   * (messages.send)
    *
    * @param string $userId The user's email address. The special value `me` can be
    * used to indicate the authenticated user.
