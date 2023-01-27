@@ -22,6 +22,7 @@ class GoogleIdentityStsV1ExchangeOauthTokenResponse extends \Google\Model
   protected $internal_gapi_mappings = [
         "accessToken" => "access_token",
         "expiresIn" => "expires_in",
+        "idToken" => "id_token",
         "refreshToken" => "refresh_token",
         "tokenType" => "token_type",
   ];
@@ -33,6 +34,10 @@ class GoogleIdentityStsV1ExchangeOauthTokenResponse extends \Google\Model
    * @var int
    */
   public $expiresIn;
+  /**
+   * @var string
+   */
+  public $idToken;
   /**
    * @var string
    */
@@ -73,6 +78,20 @@ class GoogleIdentityStsV1ExchangeOauthTokenResponse extends \Google\Model
   public function getExpiresIn()
   {
     return $this->expiresIn;
+  }
+  /**
+   * @param string
+   */
+  public function setIdToken($idToken)
+  {
+    $this->idToken = $idToken;
+  }
+  /**
+   * @return string
+   */
+  public function getIdToken()
+  {
+    return $this->idToken;
   }
   /**
    * @param string
