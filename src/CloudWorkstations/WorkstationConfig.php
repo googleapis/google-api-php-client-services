@@ -46,6 +46,9 @@ class WorkstationConfig extends \Google\Collection
    * @var string
    */
   public $displayName;
+  protected $encryptionKeyType = CustomerEncryptionKey::class;
+  protected $encryptionKeyDataType = '';
+  public $encryptionKey;
   /**
    * @var string
    */
@@ -182,6 +185,20 @@ class WorkstationConfig extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param CustomerEncryptionKey
+   */
+  public function setEncryptionKey(CustomerEncryptionKey $encryptionKey)
+  {
+    $this->encryptionKey = $encryptionKey;
+  }
+  /**
+   * @return CustomerEncryptionKey
+   */
+  public function getEncryptionKey()
+  {
+    return $this->encryptionKey;
   }
   /**
    * @param string

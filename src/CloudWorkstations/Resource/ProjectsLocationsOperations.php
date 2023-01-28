@@ -18,9 +18,9 @@
 namespace Google\Service\CloudWorkstations\Resource;
 
 use Google\Service\CloudWorkstations\CancelOperationRequest;
+use Google\Service\CloudWorkstations\GoogleProtobufEmpty;
 use Google\Service\CloudWorkstations\ListOperationsResponse;
 use Google\Service\CloudWorkstations\Operation;
-use Google\Service\CloudWorkstations\WorkstationsEmpty;
 
 /**
  * The "operations" collection of methods.
@@ -46,13 +46,13 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * @param string $name The name of the operation resource to be cancelled.
    * @param CancelOperationRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return WorkstationsEmpty
+   * @return GoogleProtobufEmpty
    */
   public function cancel($name, CancelOperationRequest $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('cancel', [$params], WorkstationsEmpty::class);
+    return $this->call('cancel', [$params], GoogleProtobufEmpty::class);
   }
   /**
    * Deletes a long-running operation. This method indicates that the client is no
@@ -62,13 +62,13 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    *
    * @param string $name The name of the operation resource to be deleted.
    * @param array $optParams Optional parameters.
-   * @return WorkstationsEmpty
+   * @return GoogleProtobufEmpty
    */
   public function delete($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('delete', [$params], WorkstationsEmpty::class);
+    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
   }
   /**
    * Gets the latest state of a long-running operation. Clients can use this
