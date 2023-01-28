@@ -174,9 +174,10 @@ class ProjectsLocationsRuntimes extends \Google\Service\Resource
    * value, as follows: { "software_config":{ "kernels": [{ 'repository': 'gcr.io
    * /deeplearning-platform-release/pytorch-gpu', 'tag': 'latest' }], } }
    * Currently, only the following fields can be updated: -
-   * software_config.kernels - software_config.post_startup_script -
-   * software_config.custom_gpu_driver_path - software_config.idle_shutdown -
-   * software_config.idle_shutdown_timeout - software_config.disable_terminal
+   * `software_config.kernels` - `software_config.post_startup_script` -
+   * `software_config.custom_gpu_driver_path` - `software_config.idle_shutdown` -
+   * `software_config.idle_shutdown_timeout` - `software_config.disable_terminal`
+   * - `labels`
    * @return Operation
    */
   public function patch($name, Runtime $postBody, $optParams = [])

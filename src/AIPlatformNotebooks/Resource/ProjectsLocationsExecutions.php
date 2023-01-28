@@ -86,7 +86,7 @@ class ProjectsLocationsExecutions extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Filter applied to resulting executions. Currently
-   * only supports filtering executions by a specified schedule_id. Format:
+   * only supports filtering executions by a specified `schedule_id`. Format:
    * `schedule_id=`
    * @opt_param string orderBy Sort by field.
    * @opt_param int pageSize Maximum return size of the list call.
