@@ -53,7 +53,7 @@ class CustomersTelemetryUsers extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Only include resources that match the filter.
-   * Supported filter fields: * user_id * user_org_unit_id
+   * Supported filter fields: - user_id - user_org_unit_id
    * @opt_param int pageSize Maximum number of results to return. Default value is
    * 100. Maximum value is 1000.
    * @opt_param string pageToken Token to specify next page in the list.
