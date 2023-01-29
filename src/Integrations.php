@@ -40,7 +40,6 @@ class Integrations extends \Google\Service
 
   public $callback;
   public $connectorPlatformRegions;
-  public $projects_locations;
   public $projects_locations_appsScriptProjects;
   public $projects_locations_authConfigs;
   public $projects_locations_certificates;
@@ -51,13 +50,11 @@ class Integrations extends \Google\Service
   public $projects_locations_integrations_executions;
   public $projects_locations_integrations_executions_suspensions;
   public $projects_locations_integrations_versions;
-  public $projects_locations_products;
   public $projects_locations_products_authConfigs;
   public $projects_locations_products_certificates;
   public $projects_locations_products_integrations;
   public $projects_locations_products_integrations_executions;
   public $projects_locations_products_integrations_executions_suspensions;
-  public $projects_locations_products_integrations_executionsnapshots;
   public $projects_locations_products_integrations_versions;
   public $projects_locations_products_integrationtemplates_versions;
   public $projects_locations_products_sfdcInstances;
@@ -126,26 +123,6 @@ class Integrations extends \Google\Service
               'path' => 'v1alpha/connectorPlatformRegions:enumerate',
               'httpMethod' => 'GET',
               'parameters' => [],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations = new Integrations\Resource\ProjectsLocations(
-        $this,
-        $this->serviceName,
-        'locations',
-        [
-          'methods' => [
-            'listTaskEntities' => [
-              'path' => 'v1alpha/{+parent}:listTaskEntities',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],
           ]
         ]
@@ -640,17 +617,7 @@ class Integrations extends \Google\Service
         'versions',
         [
           'methods' => [
-            'archive' => [
-              'path' => 'v1alpha/{+name}:archive',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v1alpha/{+parent}/versions',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -662,16 +629,6 @@ class Integrations extends \Google\Service
                 'newIntegration' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ],
-              ],
-            ],'deactivate' => [
-              'path' => 'v1alpha/{+name}:deactivate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'delete' => [
@@ -785,46 +742,6 @@ class Integrations extends \Google\Service
             ],'upload' => [
               'path' => 'v1alpha/{+parent}/versions:upload',
               'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'validate' => [
-              'path' => 'v1alpha/{+name}:validate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_products = new Integrations\Resource\ProjectsLocationsProducts(
-        $this,
-        $this->serviceName,
-        'products',
-        [
-          'methods' => [
-            'createBundle' => [
-              'path' => 'v1alpha/{+parent}:createBundle',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'listTaskEntities' => [
-              'path' => 'v1alpha/{+parent}:listTaskEntities',
-              'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
                   'location' => 'path',
@@ -1026,17 +943,7 @@ class Integrations extends \Google\Service
         'integrations',
         [
           'methods' => [
-            'archiveBundle' => [
-              'path' => 'v1alpha/{+name}:archiveBundle',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'execute' => [
+            'execute' => [
               'path' => 'v1alpha/{+name}:execute',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -1260,59 +1167,13 @@ class Integrations extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_products_integrations_executionsnapshots = new Integrations\Resource\ProjectsLocationsProductsIntegrationsExecutionsnapshots(
-        $this,
-        $this->serviceName,
-        'executionsnapshots',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v1alpha/{+parent}/executionsnapshots',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'readMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects_locations_products_integrations_versions = new Integrations\Resource\ProjectsLocationsProductsIntegrationsVersions(
         $this,
         $this->serviceName,
         'versions',
         [
           'methods' => [
-            'archive' => [
-              'path' => 'v1alpha/{+name}:archive',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v1alpha/{+parent}/versions',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -1324,16 +1185,6 @@ class Integrations extends \Google\Service
                 'newIntegration' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ],
-              ],
-            ],'deactivate' => [
-              'path' => 'v1alpha/{+name}:deactivate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'delete' => [
@@ -1362,16 +1213,6 @@ class Integrations extends \Google\Service
               ],
             ],'get' => [
               'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'getBundle' => [
-              'path' => 'v1alpha/{+name}:getBundle',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1454,31 +1295,11 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'updateBundle' => [
-              'path' => 'v1alpha/{+name}:updateBundle',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'upload' => [
               'path' => 'v1alpha/{+parent}/versions:upload',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'validate' => [
-              'path' => 'v1alpha/{+name}:validate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
