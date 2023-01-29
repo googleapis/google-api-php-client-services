@@ -39,6 +39,10 @@ class Execution extends \Google\Model
   protected $errorDataType = '';
   public $error;
   /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var string
    */
   public $name;
@@ -131,6 +135,20 @@ class Execution extends \Google\Model
   public function getError()
   {
     return $this->error;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param string
