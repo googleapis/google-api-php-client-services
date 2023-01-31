@@ -30,6 +30,9 @@ class Repository extends \Google\Model
    * @var string
    */
   public $npmrcEnvironmentVariablesSecretVersion;
+  protected $workspaceCompilationOverridesType = WorkspaceCompilationOverrides::class;
+  protected $workspaceCompilationOverridesDataType = '';
+  public $workspaceCompilationOverrides;
 
   /**
    * @param GitRemoteSettings
@@ -72,6 +75,20 @@ class Repository extends \Google\Model
   public function getNpmrcEnvironmentVariablesSecretVersion()
   {
     return $this->npmrcEnvironmentVariablesSecretVersion;
+  }
+  /**
+   * @param WorkspaceCompilationOverrides
+   */
+  public function setWorkspaceCompilationOverrides(WorkspaceCompilationOverrides $workspaceCompilationOverrides)
+  {
+    $this->workspaceCompilationOverrides = $workspaceCompilationOverrides;
+  }
+  /**
+   * @return WorkspaceCompilationOverrides
+   */
+  public function getWorkspaceCompilationOverrides()
+  {
+    return $this->workspaceCompilationOverrides;
   }
 }
 
