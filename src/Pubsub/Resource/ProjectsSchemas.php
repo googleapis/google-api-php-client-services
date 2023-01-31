@@ -95,8 +95,8 @@ class ProjectsSchemas extends \Google\Service\Resource
    * Deletes a specific schema revision. (schemas.deleteRevision)
    *
    * @param string $name Required. The name of the schema revision to be deleted,
-   * with a revision ID explicitly included. Example: projects/123/schemas/my-
-   * schema@c7cfa2a8
+   * with a revision ID explicitly included. Example: `projects/123/schemas/my-
+   * schema@c7cfa2a8`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string revisionId Required. The revision ID to roll back to. It
