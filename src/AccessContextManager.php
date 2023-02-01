@@ -23,7 +23,7 @@ use Google\Client;
  * Service definition for AccessContextManager (v1).
  *
  * <p>
- * An API for setting attribute based access control to requests to GCP
+ * An API for setting attribute based access control to requests to Google Cloud
  * services.</p>
  *
  * <p>
