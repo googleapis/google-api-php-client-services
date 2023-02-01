@@ -19,14 +19,112 @@ namespace Google\Service\CloudSearch;
 
 class DynamiteMessagesScoringInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $commonContactCount;
+  public $commonCountToContactListCountRatio;
+  public $commonCountToMembershipCountRatio;
+  /**
+   * @var string
+   */
+  public $creatorGaiaId;
+  /**
+   * @var bool
+   */
+  public $creatorInSearcherContactList;
+  /**
+   * @var string
+   */
+  public $dasContactCount;
   public $finalScore;
   public $freshnessScore;
   public $joinedSpaceAffinityScore;
   public $messageAgeInDays;
   public $messageSenderAffinityScore;
+  /**
+   * @var string
+   */
+  public $spaceId;
+  /**
+   * @var string
+   */
+  public $spaceMembershipCount;
   public $topicalityScore;
   public $unjoinedSpaceAffinityScore;
 
+  /**
+   * @param string
+   */
+  public function setCommonContactCount($commonContactCount)
+  {
+    $this->commonContactCount = $commonContactCount;
+  }
+  /**
+   * @return string
+   */
+  public function getCommonContactCount()
+  {
+    return $this->commonContactCount;
+  }
+  public function setCommonCountToContactListCountRatio($commonCountToContactListCountRatio)
+  {
+    $this->commonCountToContactListCountRatio = $commonCountToContactListCountRatio;
+  }
+  public function getCommonCountToContactListCountRatio()
+  {
+    return $this->commonCountToContactListCountRatio;
+  }
+  public function setCommonCountToMembershipCountRatio($commonCountToMembershipCountRatio)
+  {
+    $this->commonCountToMembershipCountRatio = $commonCountToMembershipCountRatio;
+  }
+  public function getCommonCountToMembershipCountRatio()
+  {
+    return $this->commonCountToMembershipCountRatio;
+  }
+  /**
+   * @param string
+   */
+  public function setCreatorGaiaId($creatorGaiaId)
+  {
+    $this->creatorGaiaId = $creatorGaiaId;
+  }
+  /**
+   * @return string
+   */
+  public function getCreatorGaiaId()
+  {
+    return $this->creatorGaiaId;
+  }
+  /**
+   * @param bool
+   */
+  public function setCreatorInSearcherContactList($creatorInSearcherContactList)
+  {
+    $this->creatorInSearcherContactList = $creatorInSearcherContactList;
+  }
+  /**
+   * @return bool
+   */
+  public function getCreatorInSearcherContactList()
+  {
+    return $this->creatorInSearcherContactList;
+  }
+  /**
+   * @param string
+   */
+  public function setDasContactCount($dasContactCount)
+  {
+    $this->dasContactCount = $dasContactCount;
+  }
+  /**
+   * @return string
+   */
+  public function getDasContactCount()
+  {
+    return $this->dasContactCount;
+  }
   public function setFinalScore($finalScore)
   {
     $this->finalScore = $finalScore;
@@ -66,6 +164,34 @@ class DynamiteMessagesScoringInfo extends \Google\Model
   public function getMessageSenderAffinityScore()
   {
     return $this->messageSenderAffinityScore;
+  }
+  /**
+   * @param string
+   */
+  public function setSpaceId($spaceId)
+  {
+    $this->spaceId = $spaceId;
+  }
+  /**
+   * @return string
+   */
+  public function getSpaceId()
+  {
+    return $this->spaceId;
+  }
+  /**
+   * @param string
+   */
+  public function setSpaceMembershipCount($spaceMembershipCount)
+  {
+    $this->spaceMembershipCount = $spaceMembershipCount;
+  }
+  /**
+   * @return string
+   */
+  public function getSpaceMembershipCount()
+  {
+    return $this->spaceMembershipCount;
   }
   public function setTopicalityScore($topicalityScore)
   {
