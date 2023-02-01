@@ -28,6 +28,9 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsMetadata extends \Goo
    * @var string
    */
   public $endTime;
+  protected $ingestConversationsStatsType = GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConversationsStats::class;
+  protected $ingestConversationsStatsDataType = '';
+  public $ingestConversationsStats;
   protected $partialErrorsType = GoogleRpcStatus::class;
   protected $partialErrorsDataType = 'array';
   public $partialErrors;
@@ -62,6 +65,20 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsMetadata extends \Goo
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConversationsStats
+   */
+  public function setIngestConversationsStats(GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConversationsStats $ingestConversationsStats)
+  {
+    $this->ingestConversationsStats = $ingestConversationsStats;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConversationsStats
+   */
+  public function getIngestConversationsStats()
+  {
+    return $this->ingestConversationsStats;
   }
   /**
    * @param GoogleRpcStatus[]
