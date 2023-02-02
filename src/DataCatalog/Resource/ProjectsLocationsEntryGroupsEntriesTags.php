@@ -19,7 +19,9 @@ namespace Google\Service\DataCatalog\Resource;
 
 use Google\Service\DataCatalog\DatacatalogEmpty;
 use Google\Service\DataCatalog\GoogleCloudDatacatalogV1ListTagsResponse;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1ReconcileTagsRequest;
 use Google\Service\DataCatalog\GoogleCloudDatacatalogV1Tag;
+use Google\Service\DataCatalog\Operation;
 
 /**
  * The "tags" collection of methods.
@@ -112,6 +114,27 @@ class ProjectsLocationsEntryGroupsEntriesTags extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleCloudDatacatalogV1Tag::class);
+  }
+  /**
+   * Reconciles tags created with a given tag template on a given Entry.
+   * Reconciliation is an operation that given a list of tags creates or updates
+   * them on the entry. Additionally, the operation is also able to delete tags
+   * not mentioned in the tag list. It can be achieved by setting
+   * force_delete_missing parameter. Reconciliation is a long-running operation
+   * done in the background, so this method returns long-running operation
+   * resource. The resource can be queried with Operations.GetOperation which
+   * contains metadata and response. (tags.reconcile)
+   *
+   * @param string $parent Required. Name of Entry to be tagged.
+   * @param GoogleCloudDatacatalogV1ReconcileTagsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function reconcile($parent, GoogleCloudDatacatalogV1ReconcileTagsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reconcile', [$params], Operation::class);
   }
 }
 
