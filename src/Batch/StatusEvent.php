@@ -33,6 +33,10 @@ class StatusEvent extends \Google\Model
   /**
    * @var string
    */
+  public $taskState;
+  /**
+   * @var string
+   */
   public $type;
 
   /**
@@ -76,6 +80,20 @@ class StatusEvent extends \Google\Model
   public function getTaskExecution()
   {
     return $this->taskExecution;
+  }
+  /**
+   * @param string
+   */
+  public function setTaskState($taskState)
+  {
+    $this->taskState = $taskState;
+  }
+  /**
+   * @return string
+   */
+  public function getTaskState()
+  {
+    return $this->taskState;
   }
   /**
    * @param string
