@@ -78,6 +78,9 @@ class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
   protected $osUpdateStatusType = GoogleChromeManagementV1OsUpdateStatus::class;
   protected $osUpdateStatusDataType = 'array';
   public $osUpdateStatus;
+  protected $peripheralsReportType = GoogleChromeManagementV1PeripheralsReport::class;
+  protected $peripheralsReportDataType = 'array';
+  public $peripheralsReport;
   /**
    * @var string
    */
@@ -343,6 +346,20 @@ class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
   public function getOsUpdateStatus()
   {
     return $this->osUpdateStatus;
+  }
+  /**
+   * @param GoogleChromeManagementV1PeripheralsReport[]
+   */
+  public function setPeripheralsReport($peripheralsReport)
+  {
+    $this->peripheralsReport = $peripheralsReport;
+  }
+  /**
+   * @return GoogleChromeManagementV1PeripheralsReport[]
+   */
+  public function getPeripheralsReport()
+  {
+    return $this->peripheralsReport;
   }
   /**
    * @param string
