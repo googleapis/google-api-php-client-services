@@ -67,8 +67,8 @@ class SpacesMessages extends \Google\Service\Resource
    * @opt_param string threadKey Optional. Deprecated: Use thread.thread_key
    * instead. Opaque thread identifier. To start or add to a thread, create a
    * message and specify a `threadKey` or the thread.name. For example usage, see
-   * [Start or reply to a message
-   * thread](/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+   * [Start or reply to a message thread](https://developers.google.com/chat/api/g
+   * uides/crudl/messages#start_or_reply_to_a_message_thread).
    * @return Message
    */
   public function create($parent, Message $postBody, $optParams = [])
