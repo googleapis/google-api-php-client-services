@@ -39,7 +39,6 @@ class DataprocMetastore extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $operations;
   public $projects_locations;
   public $projects_locations_federations;
   public $projects_locations_operations;
@@ -63,26 +62,6 @@ class DataprocMetastore extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'metastore';
 
-    $this->operations = new DataprocMetastore\Resource\Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        [
-          'methods' => [
-            'cancel' => [
-              'path' => 'v1/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects_locations = new DataprocMetastore\Resource\ProjectsLocations(
         $this,
         $this->serviceName,
@@ -261,7 +240,17 @@ class DataprocMetastore extends \Google\Service
         'operations',
         [
           'methods' => [
-            'delete' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
