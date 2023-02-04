@@ -39,6 +39,10 @@ class AndroidApp extends \Google\Collection
   /**
    * @var string
    */
+  public $expireTime;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -116,6 +120,20 @@ class AndroidApp extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param string
+   */
+  public function setExpireTime($expireTime)
+  {
+    $this->expireTime = $expireTime;
+  }
+  /**
+   * @return string
+   */
+  public function getExpireTime()
+  {
+    return $this->expireTime;
   }
   /**
    * @param string

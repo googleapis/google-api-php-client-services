@@ -46,6 +46,10 @@ class IosApp extends \Google\Model
   /**
    * @var string
    */
+  public $expireTime;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -143,6 +147,20 @@ class IosApp extends \Google\Model
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param string
+   */
+  public function setExpireTime($expireTime)
+  {
+    $this->expireTime = $expireTime;
+  }
+  /**
+   * @return string
+   */
+  public function getExpireTime()
+  {
+    return $this->expireTime;
   }
   /**
    * @param string
