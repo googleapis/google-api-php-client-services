@@ -17,8 +17,13 @@
 
 namespace Google\Service\CloudWorkstations;
 
-class PrivateClusterConfig extends \Google\Model
+class PrivateClusterConfig extends \Google\Collection
 {
+  protected $collection_key = 'allowedProjects';
+  /**
+   * @var string[]
+   */
+  public $allowedProjects;
   /**
    * @var string
    */
@@ -32,6 +37,20 @@ class PrivateClusterConfig extends \Google\Model
    */
   public $serviceAttachmentUri;
 
+  /**
+   * @param string[]
+   */
+  public function setAllowedProjects($allowedProjects)
+  {
+    $this->allowedProjects = $allowedProjects;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAllowedProjects()
+  {
+    return $this->allowedProjects;
+  }
   /**
    * @param string
    */
