@@ -22,6 +22,9 @@ class ConfigManagementPolicyControllerState extends \Google\Model
   protected $deploymentStateType = ConfigManagementGatekeeperDeploymentState::class;
   protected $deploymentStateDataType = '';
   public $deploymentState;
+  protected $migrationType = ConfigManagementPolicyControllerMigration::class;
+  protected $migrationDataType = '';
+  public $migration;
   protected $versionType = ConfigManagementPolicyControllerVersion::class;
   protected $versionDataType = '';
   public $version;
@@ -39,6 +42,20 @@ class ConfigManagementPolicyControllerState extends \Google\Model
   public function getDeploymentState()
   {
     return $this->deploymentState;
+  }
+  /**
+   * @param ConfigManagementPolicyControllerMigration
+   */
+  public function setMigration(ConfigManagementPolicyControllerMigration $migration)
+  {
+    $this->migration = $migration;
+  }
+  /**
+   * @return ConfigManagementPolicyControllerMigration
+   */
+  public function getMigration()
+  {
+    return $this->migration;
   }
   /**
    * @param ConfigManagementPolicyControllerVersion

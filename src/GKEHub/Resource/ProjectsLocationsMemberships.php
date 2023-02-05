@@ -186,6 +186,7 @@ class ProjectsLocationsMemberships extends \Google\Service\Resource
    *
    * @param string $parent Required. The parent (project and location) where the
    * Memberships will be listed. Specified in the format `projects/locations`.
+   * `projects/locations/-` list memberships in all the regions.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Lists Memberships that match the filter
