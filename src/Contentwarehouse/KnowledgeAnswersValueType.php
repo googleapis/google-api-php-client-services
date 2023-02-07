@@ -75,10 +75,6 @@ class KnowledgeAnswersValueType extends \Google\Model
   protected $semanticTypeType = KnowledgeAnswersSemanticType::class;
   protected $semanticTypeDataType = '';
   public $semanticType;
-  /**
-   * @var string
-   */
-  public $slotName;
   protected $stateOfAffairsTypeType = KnowledgeAnswersStateOfAffairsType::class;
   protected $stateOfAffairsTypeDataType = '';
   public $stateOfAffairsType;
@@ -346,20 +342,6 @@ class KnowledgeAnswersValueType extends \Google\Model
   public function getSemanticType()
   {
     return $this->semanticType;
-  }
-  /**
-   * @param string
-   */
-  public function setSlotName($slotName)
-  {
-    $this->slotName = $slotName;
-  }
-  /**
-   * @return string
-   */
-  public function getSlotName()
-  {
-    return $this->slotName;
   }
   /**
    * @param KnowledgeAnswersStateOfAffairsType

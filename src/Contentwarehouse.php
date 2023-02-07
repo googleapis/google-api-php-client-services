@@ -110,6 +110,16 @@ class Contentwarehouse extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'runPipeline' => [
+              'path' => 'v1/{+name}:runPipeline',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]

@@ -31,11 +31,19 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $deepMediaDominant;
+  /**
+   * @var bool
+   */
   public $dominant;
   /**
    * @var float
    */
   public $effectiveArgSpanLength;
+  /**
+   * @var bool
+   */
+  public $fulfillableDominantMedia;
   public $groundabilityScore;
   protected $groundingProviderFeaturesType = AssistantGroundingRankerGroundingProviderFeatures::class;
   protected $groundingProviderFeaturesDataType = '';
@@ -58,6 +66,9 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var int
    */
   public $kscorerRank;
+  protected $laaFeaturesType = AssistantGroundingRankerLaaFeatures::class;
+  protected $laaFeaturesDataType = '';
+  public $laaFeatures;
   /**
    * @var bool
    */
@@ -131,6 +142,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @param bool
    */
+  public function setDeepMediaDominant($deepMediaDominant)
+  {
+    $this->deepMediaDominant = $deepMediaDominant;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeepMediaDominant()
+  {
+    return $this->deepMediaDominant;
+  }
+  /**
+   * @param bool
+   */
   public function setDominant($dominant)
   {
     $this->dominant = $dominant;
@@ -155,6 +180,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getEffectiveArgSpanLength()
   {
     return $this->effectiveArgSpanLength;
+  }
+  /**
+   * @param bool
+   */
+  public function setFulfillableDominantMedia($fulfillableDominantMedia)
+  {
+    $this->fulfillableDominantMedia = $fulfillableDominantMedia;
+  }
+  /**
+   * @return bool
+   */
+  public function getFulfillableDominantMedia()
+  {
+    return $this->fulfillableDominantMedia;
   }
   public function setGroundabilityScore($groundabilityScore)
   {
@@ -249,6 +288,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getKscorerRank()
   {
     return $this->kscorerRank;
+  }
+  /**
+   * @param AssistantGroundingRankerLaaFeatures
+   */
+  public function setLaaFeatures(AssistantGroundingRankerLaaFeatures $laaFeatures)
+  {
+    $this->laaFeatures = $laaFeatures;
+  }
+  /**
+   * @return AssistantGroundingRankerLaaFeatures
+   */
+  public function getLaaFeatures()
+  {
+    return $this->laaFeatures;
   }
   /**
    * @param bool

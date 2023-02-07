@@ -169,6 +169,10 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   protected $sentimentType = YoutubeCommentsSentimentSentiment::class;
   protected $sentimentDataType = '';
   public $sentiment;
+  /**
+   * @var string
+   */
+  public $shortReplyVideoId;
   protected $smartRepliesType = VideoYoutubeCommentsClassificationProtoYouTubeCommentSmartReply::class;
   protected $smartRepliesDataType = 'map';
   public $smartReplies;
@@ -810,6 +814,20 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public function getSentiment()
   {
     return $this->sentiment;
+  }
+  /**
+   * @param string
+   */
+  public function setShortReplyVideoId($shortReplyVideoId)
+  {
+    $this->shortReplyVideoId = $shortReplyVideoId;
+  }
+  /**
+   * @return string
+   */
+  public function getShortReplyVideoId()
+  {
+    return $this->shortReplyVideoId;
   }
   /**
    * @param VideoYoutubeCommentsClassificationProtoYouTubeCommentSmartReply[]

@@ -23,11 +23,15 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
   /**
    * @var string
    */
-  public $description;
+  public $deprecatedEntityType;
   /**
    * @var string
    */
-  public $entityType;
+  public $description;
+  /**
+   * @var string[]
+   */
+  public $entityCollectionType;
   /**
    * @var string[]
    */
@@ -37,6 +41,20 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
    */
   public $mid;
 
+  /**
+   * @param string
+   */
+  public function setDeprecatedEntityType($deprecatedEntityType)
+  {
+    $this->deprecatedEntityType = $deprecatedEntityType;
+  }
+  /**
+   * @return string
+   */
+  public function getDeprecatedEntityType()
+  {
+    return $this->deprecatedEntityType;
+  }
   /**
    * @param string
    */
@@ -52,18 +70,18 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
     return $this->description;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setEntityType($entityType)
+  public function setEntityCollectionType($entityCollectionType)
   {
-    $this->entityType = $entityType;
+    $this->entityCollectionType = $entityCollectionType;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getEntityType()
+  public function getEntityCollectionType()
   {
-    return $this->entityType;
+    return $this->entityCollectionType;
   }
   /**
    * @param string[]

@@ -59,6 +59,10 @@ class ImageData extends \Google\Collection
    */
   public $clipartDetectorVersion;
   /**
+   * @var string
+   */
+  public $clusterId;
+  /**
    * @var int
    */
   public $codomainStrength;
@@ -492,6 +496,20 @@ class ImageData extends \Google\Collection
   public function getClipartDetectorVersion()
   {
     return $this->clipartDetectorVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setClusterId($clusterId)
+  {
+    $this->clusterId = $clusterId;
+  }
+  /**
+   * @return string
+   */
+  public function getClusterId()
+  {
+    return $this->clusterId;
   }
   /**
    * @param int

@@ -23,6 +23,9 @@ class QualityWebanswersVideoTranscriptAnnotations extends \Google\Model
    * @var string
    */
   public $amarnaDocid;
+  protected $asrRepairType = IndexingVideosAsrTranscriptRepairAnnotation::class;
+  protected $asrRepairDataType = '';
+  public $asrRepair;
   /**
    * @var string
    */
@@ -57,6 +60,20 @@ class QualityWebanswersVideoTranscriptAnnotations extends \Google\Model
   public function getAmarnaDocid()
   {
     return $this->amarnaDocid;
+  }
+  /**
+   * @param IndexingVideosAsrTranscriptRepairAnnotation
+   */
+  public function setAsrRepair(IndexingVideosAsrTranscriptRepairAnnotation $asrRepair)
+  {
+    $this->asrRepair = $asrRepair;
+  }
+  /**
+   * @return IndexingVideosAsrTranscriptRepairAnnotation
+   */
+  public function getAsrRepair()
+  {
+    return $this->asrRepair;
   }
   /**
    * @param string
