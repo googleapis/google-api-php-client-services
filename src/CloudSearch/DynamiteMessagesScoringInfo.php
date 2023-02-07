@@ -40,6 +40,7 @@ class DynamiteMessagesScoringInfo extends \Google\Model
   public $finalScore;
   public $freshnessScore;
   public $joinedSpaceAffinityScore;
+  public $lastReadTimestampAgeInDays;
   public $messageAgeInDays;
   public $messageSenderAffinityScore;
   /**
@@ -148,6 +149,14 @@ class DynamiteMessagesScoringInfo extends \Google\Model
   public function getJoinedSpaceAffinityScore()
   {
     return $this->joinedSpaceAffinityScore;
+  }
+  public function setLastReadTimestampAgeInDays($lastReadTimestampAgeInDays)
+  {
+    $this->lastReadTimestampAgeInDays = $lastReadTimestampAgeInDays;
+  }
+  public function getLastReadTimestampAgeInDays()
+  {
+    return $this->lastReadTimestampAgeInDays;
   }
   public function setMessageAgeInDays($messageAgeInDays)
   {
