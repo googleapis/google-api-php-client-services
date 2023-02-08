@@ -30,10 +30,10 @@ use Google\Service\OrgPolicyAPI\GoogleCloudOrgpolicyV2ListConstraintsResponse;
 class OrganizationsConstraints extends \Google\Service\Resource
 {
   /**
-   * Lists `Constraints` that could be applied on the specified resource.
+   * Lists constraints that could be applied on the specified resource.
    * (constraints.listOrganizationsConstraints)
    *
-   * @param string $parent Required. The Cloud resource that parents the
+   * @param string $parent Required. The Google Cloud resource that parents the
    * constraint. Must be in one of the following forms: *
    * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}`
    * * `organizations/{organization_id}`
