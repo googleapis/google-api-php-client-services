@@ -25,9 +25,6 @@ class GoogleCloudDocumentaiUiv1beta3DocumentId extends \Google\Model
   protected $revisionRefType = GoogleCloudDocumentaiUiv1beta3RevisionRef::class;
   protected $revisionRefDataType = '';
   public $revisionRef;
-  protected $revisionReferenceType = GoogleCloudDocumentaiUiv1beta3RevisionReference::class;
-  protected $revisionReferenceDataType = '';
-  public $revisionReference;
 
   /**
    * @param GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId
@@ -56,20 +53,6 @@ class GoogleCloudDocumentaiUiv1beta3DocumentId extends \Google\Model
   public function getRevisionRef()
   {
     return $this->revisionRef;
-  }
-  /**
-   * @param GoogleCloudDocumentaiUiv1beta3RevisionReference
-   */
-  public function setRevisionReference(GoogleCloudDocumentaiUiv1beta3RevisionReference $revisionReference)
-  {
-    $this->revisionReference = $revisionReference;
-  }
-  /**
-   * @return GoogleCloudDocumentaiUiv1beta3RevisionReference
-   */
-  public function getRevisionReference()
-  {
-    return $this->revisionReference;
   }
 }
 
