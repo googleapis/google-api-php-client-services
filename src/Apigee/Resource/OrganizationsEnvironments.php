@@ -49,8 +49,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1Environment $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string name Optional. Name of the environment. Alternatively, the
-   * name may be specified in the request body in the name field.
+   * @opt_param string name Optional. Name of the environment.
    * @return GoogleLongrunningOperation
    */
   public function create($parent, GoogleCloudApigeeV1Environment $postBody, $optParams = [])
