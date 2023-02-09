@@ -19,7 +19,7 @@ namespace Google\Service\AndroidPublisher;
 
 class DeviceTierConfig extends \Google\Collection
 {
-  protected $collection_key = 'deviceGroups';
+  protected $collection_key = 'userCountrySets';
   protected $deviceGroupsType = DeviceGroup::class;
   protected $deviceGroupsDataType = 'array';
   public $deviceGroups;
@@ -30,6 +30,9 @@ class DeviceTierConfig extends \Google\Collection
   protected $deviceTierSetType = DeviceTierSet::class;
   protected $deviceTierSetDataType = '';
   public $deviceTierSet;
+  protected $userCountrySetsType = UserCountrySet::class;
+  protected $userCountrySetsDataType = 'array';
+  public $userCountrySets;
 
   /**
    * @param DeviceGroup[]
@@ -72,6 +75,20 @@ class DeviceTierConfig extends \Google\Collection
   public function getDeviceTierSet()
   {
     return $this->deviceTierSet;
+  }
+  /**
+   * @param UserCountrySet[]
+   */
+  public function setUserCountrySets($userCountrySets)
+  {
+    $this->userCountrySets = $userCountrySets;
+  }
+  /**
+   * @return UserCountrySet[]
+   */
+  public function getUserCountrySets()
+  {
+    return $this->userCountrySets;
   }
 }
 
