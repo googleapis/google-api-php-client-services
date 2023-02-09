@@ -27,6 +27,10 @@ class GoogleCloudRunV2HTTPGetAction extends \Google\Collection
    * @var string
    */
   public $path;
+  /**
+   * @var int
+   */
+  public $port;
 
   /**
    * @param GoogleCloudRunV2HTTPHeader[]
@@ -55,6 +59,20 @@ class GoogleCloudRunV2HTTPGetAction extends \Google\Collection
   public function getPath()
   {
     return $this->path;
+  }
+  /**
+   * @param int
+   */
+  public function setPort($port)
+  {
+    $this->port = $port;
+  }
+  /**
+   * @return int
+   */
+  public function getPort()
+  {
+    return $this->port;
   }
 }
 
