@@ -17,6 +17,7 @@
 
 namespace Google\Service\ChromeManagement\Resource;
 
+use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse;
@@ -34,6 +35,25 @@ use Google\Service\ChromeManagement\GoogleChromeManagementV1FindInstalledAppDevi
  */
 class CustomersReports extends \Google\Service\Resource
 {
+  /**
+   * Count of Chrome Browsers that have been recently enrolled, have new policy to
+   * be synced, or have no recent activity.
+   * (reports.countChromeBrowsersNeedingAttention)
+   *
+   * @param string $customer Required. The customer ID or "my_customer" prefixed
+   * with "customers/".
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string orgUnitId Optional. The ID of the organizational unit. If
+   * omitted, all data will be returned.
+   * @return GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse
+   */
+  public function countChromeBrowsersNeedingAttention($customer, $optParams = [])
+  {
+    $params = ['customer' => $customer];
+    $params = array_merge($params, $optParams);
+    return $this->call('countChromeBrowsersNeedingAttention', [$params], GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse::class);
+  }
   /**
    * Generate report of the number of devices expiring in each month of the
    * selected time frame. Devices are grouped by auto update expiration date and

@@ -173,7 +173,21 @@ class ChromeManagement extends \Google\Service
         'reports',
         [
           'methods' => [
-            'countChromeDevicesReachingAutoExpirationDate' => [
+            'countChromeBrowsersNeedingAttention' => [
+              'path' => 'v1/{+customer}/reports:countChromeBrowsersNeedingAttention',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'orgUnitId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'countChromeDevicesReachingAutoExpirationDate' => [
               'path' => 'v1/{+customer}/reports:countChromeDevicesReachingAutoExpirationDate',
               'httpMethod' => 'GET',
               'parameters' => [
