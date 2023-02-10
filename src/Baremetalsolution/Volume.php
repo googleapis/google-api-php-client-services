@@ -38,6 +38,10 @@ class Volume extends \Google\Model
   /**
    * @var string
    */
+  public $expireTime;
+  /**
+   * @var string
+   */
   public $id;
   /**
    * @var string[]
@@ -166,6 +170,20 @@ class Volume extends \Google\Model
   public function getEmergencySizeGib()
   {
     return $this->emergencySizeGib;
+  }
+  /**
+   * @param string
+   */
+  public function setExpireTime($expireTime)
+  {
+    $this->expireTime = $expireTime;
+  }
+  /**
+   * @return string
+   */
+  public function getExpireTime()
+  {
+    return $this->expireTime;
   }
   /**
    * @param string
