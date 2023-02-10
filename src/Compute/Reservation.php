@@ -43,6 +43,10 @@ class Reservation extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string[]
+   */
+  public $resourcePolicies;
   protected $resourceStatusType = AllocationResourceStatus::class;
   protected $resourceStatusDataType = '';
   public $resourceStatus;
@@ -156,6 +160,20 @@ class Reservation extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string[]
+   */
+  public function setResourcePolicies($resourcePolicies)
+  {
+    $this->resourcePolicies = $resourcePolicies;
+  }
+  /**
+   * @return string[]
+   */
+  public function getResourcePolicies()
+  {
+    return $this->resourcePolicies;
   }
   /**
    * @param AllocationResourceStatus
