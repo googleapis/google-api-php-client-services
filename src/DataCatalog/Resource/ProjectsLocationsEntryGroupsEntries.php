@@ -128,14 +128,13 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Imports entries from some source (e.g. dump in a Cloud Storage bucket) to the
-   * Data Catalog. Dump here is a snapshot of the third-party system state, that
-   * needs to be ingested in the Data Catalog. Import of entries is a sync
-   * operation that reconciles state of the third-party system and Data Catalog.
-   * ImportEntries is a long-running operation done in the background, so this
-   * method returns long-running operation resource. The resource can be queried
-   * with Operations.GetOperation which contains metadata and response.
-   * (entries.import)
+   * Imports entries from a source, such as data previously dumped into a Cloud
+   * Storage bucket, into Data Catalog. `ImportEntries` accepts source data
+   * snapshots of third-party system state. Import of entries is a sync operation
+   * that reconciles the state of the third-party system with Data Catalog.
+   * `ImportEntries` returns a long-running operation resource that can be queried
+   * with Operations.GetOperation to return ImportEntriesMetadata and an
+   * ImportEntriesResponse message. (entries.import)
    *
    * @param string $parent Required. Target entry group for ingested entries.
    * @param GoogleCloudDatacatalogV1ImportEntriesRequest $postBody

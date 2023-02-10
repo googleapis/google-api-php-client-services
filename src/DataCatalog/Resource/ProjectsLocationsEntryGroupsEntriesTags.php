@@ -116,14 +116,12 @@ class ProjectsLocationsEntryGroupsEntriesTags extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleCloudDatacatalogV1Tag::class);
   }
   /**
-   * Reconciles tags created with a given tag template on a given Entry.
-   * Reconciliation is an operation that given a list of tags creates or updates
-   * them on the entry. Additionally, the operation is also able to delete tags
-   * not mentioned in the tag list. It can be achieved by setting
-   * force_delete_missing parameter. Reconciliation is a long-running operation
-   * done in the background, so this method returns long-running operation
-   * resource. The resource can be queried with Operations.GetOperation which
-   * contains metadata and response. (tags.reconcile)
+   * `ReconcileTags` creates or updates a list of tags on the entry. If the
+   * ReconcileTagsRequest.force_delete_missing parameter is set, the operation
+   * deletes tags not included in the input tag list. `ReconcileTags` returns a
+   * long-running operation resource that can be queried with
+   * Operations.GetOperation to return ReconcileTagsMetadata and a
+   * ReconcileTagsResponse message. (tags.reconcile)
    *
    * @param string $parent Required. Name of Entry to be tagged.
    * @param GoogleCloudDatacatalogV1ReconcileTagsRequest $postBody
