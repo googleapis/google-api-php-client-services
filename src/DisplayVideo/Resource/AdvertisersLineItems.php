@@ -90,7 +90,7 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * a suffix "desc" should be added to the field name. Example: `targetingType
    * desc`.
    * @opt_param int pageSize Requested page size. The size must be an integer
-   * between `1` and `5000`. If unspecified, the default is '5000'. Returns error
+   * between `1` and `5000`. If unspecified, the default is `5000`. Returns error
    * code `INVALID_ARGUMENT` if an invalid value is specified.
    * @opt_param string pageToken A token that lets the client fetch the next page
    * of results. Typically, this is the value of next_page_token returned from the
