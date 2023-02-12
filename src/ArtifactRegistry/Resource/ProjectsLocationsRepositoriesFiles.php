@@ -33,7 +33,7 @@ class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
   /**
    * Gets a file. (files.get)
    *
-   * @param string $name The name of the file to retrieve.
+   * @param string $name Required. The name of the file to retrieve.
    * @param array $optParams Optional parameters.
    * @return GoogleDevtoolsArtifactregistryV1File
    */
@@ -46,8 +46,8 @@ class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
   /**
    * Lists files. (files.listProjectsLocationsRepositoriesFiles)
    *
-   * @param string $parent The name of the repository whose files will be listed.
-   * For example: "projects/p1/locations/us-central1/repositories/repo1
+   * @param string $parent Required. The name of the repository whose files will
+   * be listed. For example: "projects/p1/locations/us-central1/repositories/repo1
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter An expression for filtering the results of the
