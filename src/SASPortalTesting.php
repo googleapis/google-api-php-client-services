@@ -58,6 +58,7 @@ class SASPortalTesting extends \Google\Service
   public $nodes_nodes_devices;
   public $nodes_nodes_nodes;
   public $policies;
+  public $provisioning;
 
   /**
    * Constructs the internal representation of the SASPortalTesting service.
@@ -1212,6 +1213,20 @@ class SASPortalTesting extends \Google\Service
               'parameters' => [],
             ],'test' => [
               'path' => 'v1alpha1/policies:test',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->provisioning = new SASPortalTesting\Resource\Provisioning(
+        $this,
+        $this->serviceName,
+        'provisioning',
+        [
+          'methods' => [
+            'provisionDeployment' => [
+              'path' => 'v1alpha1/provisioning:provisionDeployment',
               'httpMethod' => 'POST',
               'parameters' => [],
             ],
