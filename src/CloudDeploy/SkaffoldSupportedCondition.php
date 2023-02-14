@@ -17,23 +17,24 @@
 
 namespace Google\Service\CloudDeploy;
 
-class SkaffoldVersion extends \Google\Model
+class SkaffoldSupportedCondition extends \Google\Model
 {
   /**
    * @var string
    */
   public $maintenanceModeTime;
-  protected $supportEndDateType = Date::class;
-  protected $supportEndDateDataType = '';
-  public $supportEndDate;
+  /**
+   * @var string
+   */
+  public $skaffoldSupportState;
+  /**
+   * @var bool
+   */
+  public $status;
   /**
    * @var string
    */
   public $supportExpirationTime;
-  /**
-   * @var string
-   */
-  public $version;
 
   /**
    * @param string
@@ -50,18 +51,32 @@ class SkaffoldVersion extends \Google\Model
     return $this->maintenanceModeTime;
   }
   /**
-   * @param Date
+   * @param string
    */
-  public function setSupportEndDate(Date $supportEndDate)
+  public function setSkaffoldSupportState($skaffoldSupportState)
   {
-    $this->supportEndDate = $supportEndDate;
+    $this->skaffoldSupportState = $skaffoldSupportState;
   }
   /**
-   * @return Date
+   * @return string
    */
-  public function getSupportEndDate()
+  public function getSkaffoldSupportState()
   {
-    return $this->supportEndDate;
+    return $this->skaffoldSupportState;
+  }
+  /**
+   * @param bool
+   */
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return bool
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
   /**
    * @param string
@@ -77,21 +92,7 @@ class SkaffoldVersion extends \Google\Model
   {
     return $this->supportExpirationTime;
   }
-  /**
-   * @param string
-   */
-  public function setVersion($version)
-  {
-    $this->version = $version;
-  }
-  /**
-   * @return string
-   */
-  public function getVersion()
-  {
-    return $this->version;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SkaffoldVersion::class, 'Google_Service_CloudDeploy_SkaffoldVersion');
+class_alias(SkaffoldSupportedCondition::class, 'Google_Service_CloudDeploy_SkaffoldSupportedCondition');
