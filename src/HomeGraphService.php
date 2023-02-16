@@ -23,9 +23,6 @@ use Google\Client;
  * Service definition for HomeGraphService (v1).
  *
  * <p>
-</p>
- *
- * <p>
  * For more information about this service, see the API
  * <a href="https://developers.home.google.com/cloud-to-cloud/get-started" target="_blank">Documentation</a>
  * </p>
