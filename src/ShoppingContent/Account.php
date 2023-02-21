@@ -41,6 +41,9 @@ class Account extends \Google\Collection
   protected $businessInformationType = AccountBusinessInformation::class;
   protected $businessInformationDataType = '';
   public $businessInformation;
+  protected $conversionSettingsType = AccountConversionSettings::class;
+  protected $conversionSettingsDataType = '';
+  public $conversionSettings;
   /**
    * @var string
    */
@@ -162,6 +165,20 @@ class Account extends \Google\Collection
   public function getBusinessInformation()
   {
     return $this->businessInformation;
+  }
+  /**
+   * @param AccountConversionSettings
+   */
+  public function setConversionSettings(AccountConversionSettings $conversionSettings)
+  {
+    $this->conversionSettings = $conversionSettings;
+  }
+  /**
+   * @return AccountConversionSettings
+   */
+  public function getConversionSettings()
+  {
+    return $this->conversionSettings;
   }
   /**
    * @param string
