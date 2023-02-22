@@ -42,11 +42,11 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    *
    * @opt_param string privateConnectionId Required. The private connection
    * identifier.
-   * @opt_param string requestId Optional. A unique id used to identify the
-   * request. If the server receives two requests with the same id, then the
-   * second request will be ignored. It is recommended to always set this value to
-   * a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-   * underscores (_), and hyphens (-). The maximum length is 40 characters.
+   * @opt_param string requestId Optional. A unique ID used to identify the
+   * request. If the server receives two requests with the same ID, then the
+   * second request is ignored. It is recommended to always set this value to a
+   * UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
+   * (_), and hyphens (-). The maximum length is 40 characters.
    * @opt_param bool skipValidation Optional. If set to true, will skip
    * validations.
    * @return Operation
@@ -64,11 +64,11 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * @param string $name Required. The name of the private connection to delete.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique id used to identify the
-   * request. If the server receives two requests with the same id, then the
-   * second request will be ignored. It is recommended to always set this value to
-   * a UUID. The id must contain only letters (a-z, A-Z), numbers (0-9),
-   * underscores (_), and hyphens (-). The maximum length is 40 characters.
+   * @opt_param string requestId Optional. A unique ID used to identify the
+   * request. If the server receives two requests with the same ID, then the
+   * second request is ignored. It is recommended to always set this value to a
+   * UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
+   * (_), and hyphens (-). The maximum length is 40 characters.
    * @return Operation
    */
   public function delete($name, $optParams = [])
@@ -106,8 +106,8 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * year by specifying **createTime %gt; 2021-01-01T00:00:00.000000000Z**.
    * @opt_param string orderBy Order by fields for the result.
    * @opt_param int pageSize Maximum number of private connections to return. If
-   * unspecified, at most 50 private connections that will be returned. The
-   * maximum value is 1000; values above 1000 will be coerced to 1000.
+   * unspecified, at most 50 private connections that are returned. The maximum
+   * value is 1000; values above 1000 are coerced to 1000.
    * @opt_param string pageToken Page token received from a previous
    * `ListPrivateConnections` call. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to `ListPrivateConnections`
