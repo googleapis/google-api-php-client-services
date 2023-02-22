@@ -164,6 +164,9 @@ class Event extends \Google\Collection
    * @var string
    */
   public $visibility;
+  protected $workingLocationPropertiesType = EventWorkingLocationProperties::class;
+  protected $workingLocationPropertiesDataType = '';
+  public $workingLocationProperties;
 
   /**
    * @param bool
@@ -710,6 +713,20 @@ class Event extends \Google\Collection
   public function getVisibility()
   {
     return $this->visibility;
+  }
+  /**
+   * @param EventWorkingLocationProperties
+   */
+  public function setWorkingLocationProperties(EventWorkingLocationProperties $workingLocationProperties)
+  {
+    $this->workingLocationProperties = $workingLocationProperties;
+  }
+  /**
+   * @return EventWorkingLocationProperties
+   */
+  public function getWorkingLocationProperties()
+  {
+    return $this->workingLocationProperties;
   }
 }
 
