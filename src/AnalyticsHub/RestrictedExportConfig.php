@@ -22,12 +22,30 @@ class RestrictedExportConfig extends \Google\Model
   /**
    * @var bool
    */
+  public $enabled;
+  /**
+   * @var bool
+   */
   public $restrictDirectTableAccess;
   /**
    * @var bool
    */
   public $restrictQueryResult;
 
+  /**
+   * @param bool
+   */
+  public function setEnabled($enabled)
+  {
+    $this->enabled = $enabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnabled()
+  {
+    return $this->enabled;
+  }
   /**
    * @param bool
    */
