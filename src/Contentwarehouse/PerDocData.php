@@ -376,6 +376,9 @@ class PerDocData extends \Google\Collection
   protected $rsApplicationType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplication::class;
   protected $rsApplicationDataType = '';
   public $rsApplication;
+  protected $s3AudioLanguageType = S3AudioLanguageS3AudioLanguage::class;
+  protected $s3AudioLanguageDataType = '';
+  public $s3AudioLanguage;
   /**
    * @var int[]
    */
@@ -1778,6 +1781,20 @@ class PerDocData extends \Google\Collection
   public function getRsApplication()
   {
     return $this->rsApplication;
+  }
+  /**
+   * @param S3AudioLanguageS3AudioLanguage
+   */
+  public function setS3AudioLanguage(S3AudioLanguageS3AudioLanguage $s3AudioLanguage)
+  {
+    $this->s3AudioLanguage = $s3AudioLanguage;
+  }
+  /**
+   * @return S3AudioLanguageS3AudioLanguage
+   */
+  public function getS3AudioLanguage()
+  {
+    return $this->s3AudioLanguage;
   }
   /**
    * @param int[]

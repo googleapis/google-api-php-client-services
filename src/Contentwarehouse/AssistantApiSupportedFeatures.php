@@ -63,6 +63,10 @@ class AssistantApiSupportedFeatures extends \Google\Model
   /**
    * @var bool
    */
+  public $confirmationBeforeReadingMultipleMessagesSupported;
+  /**
+   * @var bool
+   */
   public $crossDeviceBroadcastSupported;
   /**
    * @var string
@@ -398,6 +402,20 @@ class AssistantApiSupportedFeatures extends \Google\Model
   public function getClientOpResultBatchingSupported()
   {
     return $this->clientOpResultBatchingSupported;
+  }
+  /**
+   * @param bool
+   */
+  public function setConfirmationBeforeReadingMultipleMessagesSupported($confirmationBeforeReadingMultipleMessagesSupported)
+  {
+    $this->confirmationBeforeReadingMultipleMessagesSupported = $confirmationBeforeReadingMultipleMessagesSupported;
+  }
+  /**
+   * @return bool
+   */
+  public function getConfirmationBeforeReadingMultipleMessagesSupported()
+  {
+    return $this->confirmationBeforeReadingMultipleMessagesSupported;
   }
   /**
    * @param bool

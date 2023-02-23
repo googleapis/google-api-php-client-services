@@ -17,11 +17,15 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Model
+class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collection
 {
+  protected $collection_key = 'longRunningOperations';
   protected $documentType = GoogleCloudContentwarehouseV1Document::class;
   protected $documentDataType = '';
   public $document;
+  protected $longRunningOperationsType = GoogleLongrunningOperation::class;
+  protected $longRunningOperationsDataType = 'array';
+  public $longRunningOperations;
   protected $metadataType = GoogleCloudContentwarehouseV1ResponseMetadata::class;
   protected $metadataDataType = '';
   public $metadata;
@@ -42,6 +46,20 @@ class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Model
   public function getDocument()
   {
     return $this->document;
+  }
+  /**
+   * @param GoogleLongrunningOperation[]
+   */
+  public function setLongRunningOperations($longRunningOperations)
+  {
+    $this->longRunningOperations = $longRunningOperations;
+  }
+  /**
+   * @return GoogleLongrunningOperation[]
+   */
+  public function getLongRunningOperations()
+  {
+    return $this->longRunningOperations;
   }
   /**
    * @param GoogleCloudContentwarehouseV1ResponseMetadata

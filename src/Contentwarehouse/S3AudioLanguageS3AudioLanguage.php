@@ -17,64 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class ShoppingWebentityShoppingAnnotationInferredImage extends \Google\Model
+class S3AudioLanguageS3AudioLanguage extends \Google\Model
 {
   /**
    * @var string
    */
-  public $inferredImageId;
+  public $language;
   /**
    * @var string
    */
-  public $inferredImageSource;
+  public $languageConfidence;
   /**
    * @var string
    */
-  public $inferredImageType;
+  public $speechClass;
 
   /**
    * @param string
    */
-  public function setInferredImageId($inferredImageId)
+  public function setLanguage($language)
   {
-    $this->inferredImageId = $inferredImageId;
+    $this->language = $language;
   }
   /**
    * @return string
    */
-  public function getInferredImageId()
+  public function getLanguage()
   {
-    return $this->inferredImageId;
+    return $this->language;
   }
   /**
    * @param string
    */
-  public function setInferredImageSource($inferredImageSource)
+  public function setLanguageConfidence($languageConfidence)
   {
-    $this->inferredImageSource = $inferredImageSource;
+    $this->languageConfidence = $languageConfidence;
   }
   /**
    * @return string
    */
-  public function getInferredImageSource()
+  public function getLanguageConfidence()
   {
-    return $this->inferredImageSource;
+    return $this->languageConfidence;
   }
   /**
    * @param string
    */
-  public function setInferredImageType($inferredImageType)
+  public function setSpeechClass($speechClass)
   {
-    $this->inferredImageType = $inferredImageType;
+    $this->speechClass = $speechClass;
   }
   /**
    * @return string
    */
-  public function getInferredImageType()
+  public function getSpeechClass()
   {
-    return $this->inferredImageType;
+    return $this->speechClass;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ShoppingWebentityShoppingAnnotationInferredImage::class, 'Google_Service_Contentwarehouse_ShoppingWebentityShoppingAnnotationInferredImage');
+class_alias(S3AudioLanguageS3AudioLanguage::class, 'Google_Service_Contentwarehouse_S3AudioLanguageS3AudioLanguage');

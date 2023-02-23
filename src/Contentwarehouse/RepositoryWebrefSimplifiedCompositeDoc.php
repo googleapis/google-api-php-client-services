@@ -31,9 +31,6 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
   protected $matchingMetadataType = RepositoryWebrefPreprocessingUrlMatchingMetadata::class;
   protected $matchingMetadataDataType = '';
   public $matchingMetadata;
-  protected $obsoleteAnchorsWithoutInterwikiType = RepositoryWebrefSimplifiedAnchors::class;
-  protected $obsoleteAnchorsWithoutInterwikiDataType = '';
-  public $obsoleteAnchorsWithoutInterwiki;
   protected $refconDocumentMetadataType = RepositoryWebrefRefconRefconDocumentMetadata::class;
   protected $refconDocumentMetadataDataType = '';
   public $refconDocumentMetadata;
@@ -104,20 +101,6 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
   public function getMatchingMetadata()
   {
     return $this->matchingMetadata;
-  }
-  /**
-   * @param RepositoryWebrefSimplifiedAnchors
-   */
-  public function setObsoleteAnchorsWithoutInterwiki(RepositoryWebrefSimplifiedAnchors $obsoleteAnchorsWithoutInterwiki)
-  {
-    $this->obsoleteAnchorsWithoutInterwiki = $obsoleteAnchorsWithoutInterwiki;
-  }
-  /**
-   * @return RepositoryWebrefSimplifiedAnchors
-   */
-  public function getObsoleteAnchorsWithoutInterwiki()
-  {
-    return $this->obsoleteAnchorsWithoutInterwiki;
   }
   /**
    * @param RepositoryWebrefRefconRefconDocumentMetadata

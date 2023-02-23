@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SocialGraphApiProtoImageReference extends \Google\Model
+class AssistantApiCapabilitiesHomeAppCapabilities extends \Google\Model
 {
   /**
    * @var string
    */
-  public $contentVersion;
-  /**
-   * @var string
-   */
-  public $mediaId;
+  public $setupState;
 
   /**
    * @param string
    */
-  public function setContentVersion($contentVersion)
+  public function setSetupState($setupState)
   {
-    $this->contentVersion = $contentVersion;
+    $this->setupState = $setupState;
   }
   /**
    * @return string
    */
-  public function getContentVersion()
+  public function getSetupState()
   {
-    return $this->contentVersion;
-  }
-  /**
-   * @param string
-   */
-  public function setMediaId($mediaId)
-  {
-    $this->mediaId = $mediaId;
-  }
-  /**
-   * @return string
-   */
-  public function getMediaId()
-  {
-    return $this->mediaId;
+    return $this->setupState;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SocialGraphApiProtoImageReference::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoImageReference');
+class_alias(AssistantApiCapabilitiesHomeAppCapabilities::class, 'Google_Service_Contentwarehouse_AssistantApiCapabilitiesHomeAppCapabilities');

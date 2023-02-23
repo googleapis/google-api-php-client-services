@@ -22,9 +22,6 @@ class CompositeDocQualitySignals extends \Google\Model
   protected $lastSignificantUpdateType = QualityTimebasedLastSignificantUpdate::class;
   protected $lastSignificantUpdateDataType = '';
   public $lastSignificantUpdate;
-  protected $oldnessInfoType = QualityTimebasedOldnessInfo::class;
-  protected $oldnessInfoDataType = '';
-  public $oldnessInfo;
   protected $pagetypeType = QualityTimebasedPageType::class;
   protected $pagetypeDataType = '';
   public $pagetype;
@@ -42,20 +39,6 @@ class CompositeDocQualitySignals extends \Google\Model
   public function getLastSignificantUpdate()
   {
     return $this->lastSignificantUpdate;
-  }
-  /**
-   * @param QualityTimebasedOldnessInfo
-   */
-  public function setOldnessInfo(QualityTimebasedOldnessInfo $oldnessInfo)
-  {
-    $this->oldnessInfo = $oldnessInfo;
-  }
-  /**
-   * @return QualityTimebasedOldnessInfo
-   */
-  public function getOldnessInfo()
-  {
-    return $this->oldnessInfo;
   }
   /**
    * @param QualityTimebasedPageType

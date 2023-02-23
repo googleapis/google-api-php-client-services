@@ -47,6 +47,9 @@ class AssistantApiSoftwareCapabilities extends \Google\Collection
   protected $gcmCapabilitiesType = AssistantApiGcmCapabilities::class;
   protected $gcmCapabilitiesDataType = '';
   public $gcmCapabilities;
+  protected $homeAppCapabilitiesType = AssistantApiCapabilitiesHomeAppCapabilities::class;
+  protected $homeAppCapabilitiesDataType = '';
+  public $homeAppCapabilities;
   protected $liveTvChannelCapabilitiesType = AssistantApiLiveTvChannelCapabilities::class;
   protected $liveTvChannelCapabilitiesDataType = '';
   public $liveTvChannelCapabilities;
@@ -216,6 +219,20 @@ class AssistantApiSoftwareCapabilities extends \Google\Collection
   public function getGcmCapabilities()
   {
     return $this->gcmCapabilities;
+  }
+  /**
+   * @param AssistantApiCapabilitiesHomeAppCapabilities
+   */
+  public function setHomeAppCapabilities(AssistantApiCapabilitiesHomeAppCapabilities $homeAppCapabilities)
+  {
+    $this->homeAppCapabilities = $homeAppCapabilities;
+  }
+  /**
+   * @return AssistantApiCapabilitiesHomeAppCapabilities
+   */
+  public function getHomeAppCapabilities()
+  {
+    return $this->homeAppCapabilities;
   }
   /**
    * @param AssistantApiLiveTvChannelCapabilities

@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SocialGraphApiProtoImageReference extends \Google\Model
+class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $contentVersion;
-  /**
-   * @var string
-   */
-  public $mediaId;
+  protected $collection_key = 'propertyValue';
+  protected $propertyValueType = FreebasePropertyValue::class;
+  protected $propertyValueDataType = 'array';
+  public $propertyValue;
 
   /**
-   * @param string
+   * @param FreebasePropertyValue[]
    */
-  public function setContentVersion($contentVersion)
+  public function setPropertyValue($propertyValue)
   {
-    $this->contentVersion = $contentVersion;
+    $this->propertyValue = $propertyValue;
   }
   /**
-   * @return string
+   * @return FreebasePropertyValue[]
    */
-  public function getContentVersion()
+  public function getPropertyValue()
   {
-    return $this->contentVersion;
-  }
-  /**
-   * @param string
-   */
-  public function setMediaId($mediaId)
-  {
-    $this->mediaId = $mediaId;
-  }
-  /**
-   * @return string
-   */
-  public function getMediaId()
-  {
-    return $this->mediaId;
+    return $this->propertyValue;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SocialGraphApiProtoImageReference::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoImageReference');
+class_alias(KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals::class, 'Google_Service_Contentwarehouse_KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals');

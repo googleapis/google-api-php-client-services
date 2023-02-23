@@ -17,13 +17,9 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collection
+class GoogleCloudContentwarehouseV1ProcessWithDocAi extends \Google\Collection
 {
   protected $collection_key = 'documents';
-  /**
-   * @var string
-   */
-  public $docAiDataset;
   /**
    * @var string[]
    */
@@ -32,25 +28,14 @@ class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collectio
    * @var string
    */
   public $exportFolderPath;
+  protected $processorInfoType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
+  protected $processorInfoDataType = '';
+  public $processorInfo;
   /**
-   * @var float
+   * @var string
    */
-  public $trainingSplitRatio;
+  public $processorResultsFolderPath;
 
-  /**
-   * @param string
-   */
-  public function setDocAiDataset($docAiDataset)
-  {
-    $this->docAiDataset = $docAiDataset;
-  }
-  /**
-   * @return string
-   */
-  public function getDocAiDataset()
-  {
-    return $this->docAiDataset;
-  }
   /**
    * @param string[]
    */
@@ -80,20 +65,34 @@ class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collectio
     return $this->exportFolderPath;
   }
   /**
-   * @param float
+   * @param GoogleCloudContentwarehouseV1ProcessorInfo
    */
-  public function setTrainingSplitRatio($trainingSplitRatio)
+  public function setProcessorInfo(GoogleCloudContentwarehouseV1ProcessorInfo $processorInfo)
   {
-    $this->trainingSplitRatio = $trainingSplitRatio;
+    $this->processorInfo = $processorInfo;
   }
   /**
-   * @return float
+   * @return GoogleCloudContentwarehouseV1ProcessorInfo
    */
-  public function getTrainingSplitRatio()
+  public function getProcessorInfo()
   {
-    return $this->trainingSplitRatio;
+    return $this->processorInfo;
+  }
+  /**
+   * @param string
+   */
+  public function setProcessorResultsFolderPath($processorResultsFolderPath)
+  {
+    $this->processorResultsFolderPath = $processorResultsFolderPath;
+  }
+  /**
+   * @return string
+   */
+  public function getProcessorResultsFolderPath()
+  {
+    return $this->processorResultsFolderPath;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContentwarehouseV1ExportToCdwPipeline::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1ExportToCdwPipeline');
+class_alias(GoogleCloudContentwarehouseV1ProcessWithDocAi::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1ProcessWithDocAi');

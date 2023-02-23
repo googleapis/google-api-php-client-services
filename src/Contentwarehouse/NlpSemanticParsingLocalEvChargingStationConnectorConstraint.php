@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SocialGraphApiProtoImageReference extends \Google\Model
+class NlpSemanticParsingLocalEvChargingStationConnectorConstraint extends \Google\Model
 {
   /**
    * @var string
    */
-  public $contentVersion;
-  /**
-   * @var string
-   */
-  public $mediaId;
+  public $connectorType;
 
   /**
    * @param string
    */
-  public function setContentVersion($contentVersion)
+  public function setConnectorType($connectorType)
   {
-    $this->contentVersion = $contentVersion;
+    $this->connectorType = $connectorType;
   }
   /**
    * @return string
    */
-  public function getContentVersion()
+  public function getConnectorType()
   {
-    return $this->contentVersion;
-  }
-  /**
-   * @param string
-   */
-  public function setMediaId($mediaId)
-  {
-    $this->mediaId = $mediaId;
-  }
-  /**
-   * @return string
-   */
-  public function getMediaId()
-  {
-    return $this->mediaId;
+    return $this->connectorType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SocialGraphApiProtoImageReference::class, 'Google_Service_Contentwarehouse_SocialGraphApiProtoImageReference');
+class_alias(NlpSemanticParsingLocalEvChargingStationConnectorConstraint::class, 'Google_Service_Contentwarehouse_NlpSemanticParsingLocalEvChargingStationConnectorConstraint');
