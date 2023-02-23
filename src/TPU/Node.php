@@ -20,6 +20,9 @@ namespace Google\Service\TPU;
 class Node extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  protected $acceleratorConfigType = AcceleratorConfig::class;
+  protected $acceleratorConfigDataType = '';
+  public $acceleratorConfig;
   /**
    * @var string
    */
@@ -98,6 +101,20 @@ class Node extends \Google\Collection
    */
   public $tags;
 
+  /**
+   * @param AcceleratorConfig
+   */
+  public function setAcceleratorConfig(AcceleratorConfig $acceleratorConfig)
+  {
+    $this->acceleratorConfig = $acceleratorConfig;
+  }
+  /**
+   * @return AcceleratorConfig
+   */
+  public function getAcceleratorConfig()
+  {
+    return $this->acceleratorConfig;
+  }
   /**
    * @param string
    */

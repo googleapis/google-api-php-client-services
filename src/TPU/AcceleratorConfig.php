@@ -17,48 +17,30 @@
 
 namespace Google\Service\TPU;
 
-class AcceleratorType extends \Google\Collection
+class AcceleratorConfig extends \Google\Model
 {
-  protected $collection_key = 'acceleratorConfigs';
-  protected $acceleratorConfigsType = AcceleratorConfig::class;
-  protected $acceleratorConfigsDataType = 'array';
-  public $acceleratorConfigs;
   /**
    * @var string
    */
-  public $name;
+  public $topology;
   /**
    * @var string
    */
   public $type;
 
   /**
-   * @param AcceleratorConfig[]
-   */
-  public function setAcceleratorConfigs($acceleratorConfigs)
-  {
-    $this->acceleratorConfigs = $acceleratorConfigs;
-  }
-  /**
-   * @return AcceleratorConfig[]
-   */
-  public function getAcceleratorConfigs()
-  {
-    return $this->acceleratorConfigs;
-  }
-  /**
    * @param string
    */
-  public function setName($name)
+  public function setTopology($topology)
   {
-    $this->name = $name;
+    $this->topology = $topology;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getTopology()
   {
-    return $this->name;
+    return $this->topology;
   }
   /**
    * @param string
@@ -77,4 +59,4 @@ class AcceleratorType extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AcceleratorType::class, 'Google_Service_TPU_AcceleratorType');
+class_alias(AcceleratorConfig::class, 'Google_Service_TPU_AcceleratorConfig');
