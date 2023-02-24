@@ -35,6 +35,9 @@ class GoogleCloudRecaptchaenterpriseV1Event extends \Google\Model
    * @var string
    */
   public $token;
+  protected $transactionDataType = GoogleCloudRecaptchaenterpriseV1TransactionData::class;
+  protected $transactionDataDataType = '';
+  public $transactionData;
   /**
    * @var string
    */
@@ -99,6 +102,20 @@ class GoogleCloudRecaptchaenterpriseV1Event extends \Google\Model
   public function getToken()
   {
     return $this->token;
+  }
+  /**
+   * @param GoogleCloudRecaptchaenterpriseV1TransactionData
+   */
+  public function setTransactionData(GoogleCloudRecaptchaenterpriseV1TransactionData $transactionData)
+  {
+    $this->transactionData = $transactionData;
+  }
+  /**
+   * @return GoogleCloudRecaptchaenterpriseV1TransactionData
+   */
+  public function getTransactionData()
+  {
+    return $this->transactionData;
   }
   /**
    * @param string
