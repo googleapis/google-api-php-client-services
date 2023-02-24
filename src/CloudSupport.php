@@ -43,8 +43,10 @@ class CloudSupport extends \Google\Service
   public $caseClassifications;
   public $cases;
   public $cases_attachments;
-  public $cases_comments;
+  public $customers_cases_comments;
   public $media;
+  public $organizations_cases_comments;
+  public $projects_cases_comments;
 
   /**
    * Constructs the internal representation of the CloudSupport service.
@@ -240,7 +242,7 @@ class CloudSupport extends \Google\Service
           ]
         ]
     );
-    $this->cases_comments = new CloudSupport\Resource\CasesComments(
+    $this->customers_cases_comments = new CloudSupport\Resource\CustomersCasesComments(
         $this,
         $this->serviceName,
         'comments',
@@ -302,6 +304,82 @@ class CloudSupport extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_cases_comments = new CloudSupport\Resource\OrganizationsCasesComments(
+        $this,
+        $this->serviceName,
+        'comments',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v2beta/{+parent}/comments',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2beta/{+parent}/comments',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_cases_comments = new CloudSupport\Resource\ProjectsCasesComments(
+        $this,
+        $this->serviceName,
+        'comments',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v2beta/{+parent}/comments',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2beta/{+parent}/comments',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
