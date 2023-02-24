@@ -53,9 +53,16 @@ class Annotation extends \Google\Model
   protected $incomingWebhookChangedMetadataType = IncomingWebhookChangedMetadata::class;
   protected $incomingWebhookChangedMetadataDataType = '';
   public $incomingWebhookChangedMetadata;
+  /**
+   * @var string
+   */
+  public $inlineRenderFormat;
   protected $integrationConfigUpdatedType = IntegrationConfigUpdatedMetadata::class;
   protected $integrationConfigUpdatedDataType = '';
   public $integrationConfigUpdated;
+  protected $interactionDataType = InteractionData::class;
+  protected $interactionDataDataType = '';
+  public $interactionData;
   /**
    * @var int
    */
@@ -266,6 +273,20 @@ class Annotation extends \Google\Model
     return $this->incomingWebhookChangedMetadata;
   }
   /**
+   * @param string
+   */
+  public function setInlineRenderFormat($inlineRenderFormat)
+  {
+    $this->inlineRenderFormat = $inlineRenderFormat;
+  }
+  /**
+   * @return string
+   */
+  public function getInlineRenderFormat()
+  {
+    return $this->inlineRenderFormat;
+  }
+  /**
    * @param IntegrationConfigUpdatedMetadata
    */
   public function setIntegrationConfigUpdated(IntegrationConfigUpdatedMetadata $integrationConfigUpdated)
@@ -278,6 +299,20 @@ class Annotation extends \Google\Model
   public function getIntegrationConfigUpdated()
   {
     return $this->integrationConfigUpdated;
+  }
+  /**
+   * @param InteractionData
+   */
+  public function setInteractionData(InteractionData $interactionData)
+  {
+    $this->interactionData = $interactionData;
+  }
+  /**
+   * @return InteractionData
+   */
+  public function getInteractionData()
+  {
+    return $this->interactionData;
   }
   /**
    * @param int

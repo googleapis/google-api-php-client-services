@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class MessageInfo extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $authorUserType;
   protected $messageType = Message::class;
   protected $messageDataType = '';
   public $message;
@@ -27,6 +31,20 @@ class MessageInfo extends \Google\Model
    */
   public $searcherMembershipState;
 
+  /**
+   * @param string
+   */
+  public function setAuthorUserType($authorUserType)
+  {
+    $this->authorUserType = $authorUserType;
+  }
+  /**
+   * @return string
+   */
+  public function getAuthorUserType()
+  {
+    return $this->authorUserType;
+  }
   /**
    * @param Message
    */
