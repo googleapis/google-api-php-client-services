@@ -35,6 +35,10 @@ class CloudfunctionsFunction extends \Google\Collection
   protected $eventTriggerDataType = '';
   public $eventTrigger;
   /**
+   * @var string
+   */
+  public $kmsKeyName;
+  /**
    * @var string[]
    */
   public $labels;
@@ -112,6 +116,20 @@ class CloudfunctionsFunction extends \Google\Collection
   public function getEventTrigger()
   {
     return $this->eventTrigger;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
   }
   /**
    * @param string[]
