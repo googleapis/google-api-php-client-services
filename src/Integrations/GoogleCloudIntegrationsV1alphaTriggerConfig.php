@@ -33,6 +33,10 @@ class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $errorCatcherConfigId;
+  /**
+   * @var string
+   */
   public $label;
   /**
    * @var string
@@ -99,6 +103,20 @@ class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setErrorCatcherConfigId($errorCatcherConfigId)
+  {
+    $this->errorCatcherConfigId = $errorCatcherConfigId;
+  }
+  /**
+   * @return string
+   */
+  public function getErrorCatcherConfigId()
+  {
+    return $this->errorCatcherConfigId;
   }
   /**
    * @param string

@@ -39,6 +39,14 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
    * @var bool
    */
   public $disableStrictTypeValidation;
+  /**
+   * @var string
+   */
+  public $errorCatcherConfigId;
+  /**
+   * @var string
+   */
+  public $externalTaskType;
   protected $failurePolicyType = EnterpriseCrmEventbusProtoFailurePolicy::class;
   protected $failurePolicyDataType = '';
   public $failurePolicy;
@@ -185,6 +193,34 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   public function getDisableStrictTypeValidation()
   {
     return $this->disableStrictTypeValidation;
+  }
+  /**
+   * @param string
+   */
+  public function setErrorCatcherConfigId($errorCatcherConfigId)
+  {
+    $this->errorCatcherConfigId = $errorCatcherConfigId;
+  }
+  /**
+   * @return string
+   */
+  public function getErrorCatcherConfigId()
+  {
+    return $this->errorCatcherConfigId;
+  }
+  /**
+   * @param string
+   */
+  public function setExternalTaskType($externalTaskType)
+  {
+    $this->externalTaskType = $externalTaskType;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalTaskType()
+  {
+    return $this->externalTaskType;
   }
   /**
    * @param EnterpriseCrmEventbusProtoFailurePolicy

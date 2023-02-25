@@ -71,6 +71,9 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
    * @var string
    */
   public $serviceDirectory;
+  protected $sslConfigType = GoogleCloudConnectorsV1SslConfig::class;
+  protected $sslConfigDataType = '';
+  public $sslConfig;
   protected $statusType = GoogleCloudConnectorsV1ConnectionStatus::class;
   protected $statusDataType = '';
   public $status;
@@ -278,6 +281,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getServiceDirectory()
   {
     return $this->serviceDirectory;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1SslConfig
+   */
+  public function setSslConfig(GoogleCloudConnectorsV1SslConfig $sslConfig)
+  {
+    $this->sslConfig = $sslConfig;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1SslConfig
+   */
+  public function getSslConfig()
+  {
+    return $this->sslConfig;
   }
   /**
    * @param GoogleCloudConnectorsV1ConnectionStatus

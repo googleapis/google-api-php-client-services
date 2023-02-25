@@ -28,6 +28,14 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var string
+   */
+  public $errorCatcherConfigId;
+  /**
+   * @var string
+   */
+  public $externalTaskType;
   protected $failurePolicyType = GoogleCloudIntegrationsV1alphaFailurePolicy::class;
   protected $failurePolicyDataType = '';
   public $failurePolicy;
@@ -95,6 +103,34 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param string
+   */
+  public function setErrorCatcherConfigId($errorCatcherConfigId)
+  {
+    $this->errorCatcherConfigId = $errorCatcherConfigId;
+  }
+  /**
+   * @return string
+   */
+  public function getErrorCatcherConfigId()
+  {
+    return $this->errorCatcherConfigId;
+  }
+  /**
+   * @param string
+   */
+  public function setExternalTaskType($externalTaskType)
+  {
+    $this->externalTaskType = $externalTaskType;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalTaskType()
+  {
+    return $this->externalTaskType;
   }
   /**
    * @param GoogleCloudIntegrationsV1alphaFailurePolicy

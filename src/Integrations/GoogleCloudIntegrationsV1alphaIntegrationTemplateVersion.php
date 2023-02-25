@@ -32,6 +32,9 @@ class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion extends \Google\C
    * @var string
    */
   public $description;
+  protected $errorCatcherConfigsType = GoogleCloudIntegrationsV1alphaErrorCatcherConfig::class;
+  protected $errorCatcherConfigsDataType = 'array';
+  public $errorCatcherConfigs;
   /**
    * @var string
    */
@@ -114,6 +117,20 @@ class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion extends \Google\C
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaErrorCatcherConfig[]
+   */
+  public function setErrorCatcherConfigs($errorCatcherConfigs)
+  {
+    $this->errorCatcherConfigs = $errorCatcherConfigs;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaErrorCatcherConfig[]
+   */
+  public function getErrorCatcherConfigs()
+  {
+    return $this->errorCatcherConfigs;
   }
   /**
    * @param string
