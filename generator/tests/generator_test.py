@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,13 +22,13 @@ import os
 import zipfile
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import generator
 from googleapis.codegen.filesys import zip_library_package
 
 
-class GeneratorTest(basetest.TestCase):
+class GeneratorTest(absltest.TestCase):
 
   _TEST_DATA_DIR = os.path.abspath(
     os.path.join(os.path.dirname(__file__), 'testdata')
@@ -64,7 +63,7 @@ class GeneratorTest(basetest.TestCase):
       if path in (must_not_contain or []):
         self.fail('Found unexpected file %s in archive' % path)
     # We should have seen everything we expect
-    self.assertEquals(0, len(expect_to_see))
+    self.assertEqual(0, len(expect_to_see))
 
   def testWalkTemplateTree(self):
     gen = generator.TemplateGenerator()
@@ -106,4 +105,4 @@ class GeneratorTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

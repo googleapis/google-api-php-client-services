@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,13 +18,16 @@ This module aids in the construction of a ZIP file containing all the
 components generated and required by a library.
 """
 
-__author__ = 'aiuto@google.com (Tony Aiuto)'
-
+import io
 import os
-import StringIO
 import zipfile
 
+import six
+
 from googleapis.codegen.filesys.library_package import LibraryPackage
+
+
+__author__ = 'aiuto@google.com (Tony Aiuto)'
 
 
 class ZipLibraryPackage(LibraryPackage):
@@ -49,13 +51,13 @@ class ZipLibraryPackage(LibraryPackage):
       name: (str) path which will identify the contents in the archive.
 
     Returns:
-      A file-like object to write the contents to.
+      A file-like object (opened in binary mode) to write the contents to.
     """
     self.EndFile()
-    self._current_file_data = StringIO.StringIO()
+    self._current_file_data = io.BytesIO()
     name = '%s%s' % (self._file_path_prefix, name)
     # Let this explode if the name is not ascii.
-    self._current_file_name = name.encode('ascii')
+    self._current_file_name = six.ensure_str(name.encode('ascii'))
     self.CreateDirectory(os.path.dirname(self._current_file_name))
     return self._current_file_data
 
@@ -81,14 +83,15 @@ class ZipLibraryPackage(LibraryPackage):
     for directory in to_create:
       # Create the directory entry.  File and directory names must be
       # ascii.
-      info = zipfile.ZipInfo((directory + '/').encode('ascii'),
-                             date_time=self.ZipTimestamp())
+      info = zipfile.ZipInfo(
+          six.ensure_str((six.ensure_str(directory) + '/').encode('ascii')),
+          date_time=self.ZipTimestamp())
       # Notes from the web and zipfile sources:
       # external_attr is 32 in size, with the unix permissions in the
       # high order 16 bit, and the MS-DOS FAT attributes in the lower 16.
       # man 2 stat tells us that 040755 should be a drwxr-xr-x style file,
       # and word of mouth tells me that bit 4 marks directories in FAT.
-      info.external_attr = (040755 << 16) | 0x10
+      info.external_attr = (0o40755 << 16) | 0x10
       self._zip.writestr(info, '')
 
   def EndFile(self):
@@ -97,11 +100,11 @@ class ZipLibraryPackage(LibraryPackage):
       info = zipfile.ZipInfo(self._current_file_name,
                              date_time=self.ZipTimestamp())
       # This is a chmod 0644, but you have to read the zipfile sources to know
-      info.external_attr = 0644 << 16
+      info.external_attr = 0o644 << 16
       data = self._current_file_data.getvalue()
       # File contents may be utf-8
-      if isinstance(data, unicode):
-        data = data.encode('utf-8')
+      if not isinstance(data, bytes):
+        data = six.ensure_binary(data, 'utf-8')
       self._zip.writestr(info, data)
       self._current_file_data.close()
       self._current_file_data = None

@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +14,7 @@
 """Ordered set implementations."""
 
 import collections
+import collections.abc
 
 
 class _OrderedSetBase(object):
@@ -47,9 +47,10 @@ class _MutableSetBase(_OrderedSetBase):
     self._set.clear()
 
 
-class FrozenOrderedSet(_OrderedSetBase, collections.Set, collections.Hashable):
-  __hash__ = collections.Set._hash
+class FrozenOrderedSet(_OrderedSetBase, collections.abc.Set,
+                       collections.abc.Hashable):
+  __hash__ = collections.abc.Set._hash
 
 
-class MutableOrderedSet(_MutableSetBase, collections.MutableSet):
+class MutableOrderedSet(_MutableSetBase, collections.abc.MutableSet):
   pass

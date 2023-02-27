@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2017 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,11 +20,9 @@ sorted by name. This is designed to make diffing output against a golden copy
 easy, but is is wildly inefficent, as we store all the data before writing any.
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+import io
 
-import StringIO
+import six
 
 from googleapis.codegen.filesys.library_package import LibraryPackage
 
@@ -51,10 +48,10 @@ class SingleFileLibraryPackage(LibraryPackage):
       name: (str) path which will identify the contents in the archive.
 
     Returns:
-      A file-like object to write the contents to.
+      A file-like object (opened in binary mode) to write the contents to.
     """
     self.EndFile()
-    self._current_file_data = StringIO.StringIO()
+    self._current_file_data = io.BytesIO()
     self._current_file_name = '%s%s' % (self._file_path_prefix, name)
     return self._current_file_data
 
@@ -66,11 +63,12 @@ class SingleFileLibraryPackage(LibraryPackage):
       self._current_file_data = None
       # File contents may be utf-8
       if not isinstance(data, bytes):
-        data = data.encode('utf-8')
+        data = six.ensure_binary(data, 'utf-8')
       # Replace CRLF with LF because in the C# .xml files, some have CRLF but
       # others do not. This causes confusion because depending on how you do
       # a diff on golden output, you get either a change or not.
-      self._files[self._current_file_name] = data.replace('\r\n', '\n')
+      self._files[self._current_file_name] = six.ensure_str(data).replace(
+          '\r\n', '\n')
 
   def DoneWritingArchive(self):
     """Signal that we are done writing the entire package.

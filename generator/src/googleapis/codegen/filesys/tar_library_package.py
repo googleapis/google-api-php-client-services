@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2012 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,14 +18,17 @@ This module aids in the construction of a .tar.gz file containing all the
 components generated and required by a library.
 """
 
-__author__ = 'sammccall@google.com (Sam McCall)'
-
+import io
 from io import BytesIO
-import StringIO
 import tarfile
 import time
 
+import six
+
 from googleapis.codegen.filesys.library_package import LibraryPackage
+
+
+__author__ = 'sammccall@google.com (Sam McCall)'
 
 
 class TarLibraryPackage(LibraryPackage):
@@ -52,13 +54,13 @@ class TarLibraryPackage(LibraryPackage):
       name: (str) path which will identify the contents in the archive.
 
     Returns:
-      A file-like object to write the contents to.
+      A file-like object (opened in binary mode) to write the contents to.
     """
     self.EndFile()
-    self._current_file_data = StringIO.StringIO()
+    self._current_file_data = io.BytesIO()
     name = '%s%s' % (self._file_path_prefix, name)
     # Let this explode if the name is not ascii.
-    self._current_file_name = name.encode('ascii')
+    self._current_file_name = six.ensure_str(name.encode('ascii'))
     return self._current_file_data
 
   def EndFile(self):
@@ -66,10 +68,10 @@ class TarLibraryPackage(LibraryPackage):
     if self._current_file_data:
       info = tarfile.TarInfo(self._current_file_name)
       info.mtime = time.time()
-      info.mode = 0644
+      info.mode = 0o644
       data = self._current_file_data.getvalue()
-      if isinstance(data, unicode):
-        data = data.encode('utf-8')
+      if not isinstance(data, bytes):
+        data = six.ensure_binary(data, 'utf-8')
       info.size = len(data)
       self._tar.addfile(info, BytesIO(data))
       self._current_file_data.close()

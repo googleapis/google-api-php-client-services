@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -511,7 +510,7 @@ class Enum(PrimitiveDataType):
     names = [FixName(s) for s in values]
     def FixDescription(desc):
       return self.ValidateAndSanitizeComment(self.StripHTML(desc))
-    pairs = zip(names, values, map(FixDescription, descriptions))
+    pairs = list(zip(names, values, map(FixDescription, descriptions)))
     self.SetTemplateValue('pairs', pairs)
 
   @property

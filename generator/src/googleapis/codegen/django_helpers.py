@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,11 +21,10 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import os
 
-
-
 from django import template as django_template
 from django import utils as django_utils
 from django.conf import settings
+import six
 # COV_NF_START
 try:
   # In AppEngine, we have to call use_library() in our main. Doing that causes
@@ -46,9 +44,9 @@ from googleapis.codegen.filesys import files
 # support that use case.  Instead you are supposed to put a package of filters
 # in a specific place and the Django web server finds them for you. We are a
 # standalone app, not running in their context, so we have to go under the hood
-# a little.
-django_template.base.add_to_builtins(
-    'googleapis.codegen.template_helpers')
+# a little. We must create all templates with this engine.
+_ENGINE = django_template.engine.Engine(
+    builtins=['googleapis.codegen.template_helpers'])
 
 
 def DjangoRenderTemplate(template_path, context_dict):
@@ -61,8 +59,19 @@ def DjangoRenderTemplate(template_path, context_dict):
     (str) The expanded template.
   """
 
-  source = files.GetFileContents(template_path).decode('utf-8')
+  source = six.ensure_str(files.GetFileContents(template_path))
   return _DjangoRenderTemplateSource(source, context_dict)
+
+
+def DjangoTemplate(source):
+  """Returns a template configured for our default engine.
+
+  Args:
+    source: (str) Template source.
+  Returns:
+    (django.template.Template)
+  """
+  return django_template.Template(source, engine=_ENGINE)
 
 
 def _DjangoRenderTemplateSource(template_source, context_dict):
@@ -74,7 +83,7 @@ def _DjangoRenderTemplateSource(template_source, context_dict):
   Returns:
     (str) The expanded template.
   """
-  t = django_template.Template(template_source)
+  t = DjangoTemplate(template_source)
   ctxt = django_template.Context(context_dict)
   with template_helpers.SetCurrentContext(ctxt):
     return t.render(ctxt)

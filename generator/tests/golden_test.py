@@ -9,7 +9,7 @@ from __future__ import division
 from __future__ import print_function
 
 from collections import namedtuple
-from google.apputils import basetest
+from absl.testing import absltest
 import os
 import subprocess
 import sys
@@ -27,7 +27,7 @@ Test = namedtuple('Test', [
     'options',
     'golden_file'])
 
-class GoldenTest(basetest.TestCase):
+class GoldenTest(absltest.TestCase):
   def FindTests(self):
     """Finds golden files and returns Test cases for each."""
     for root, _, files in os.walk(GOLDEN_CASES_DIR):
@@ -105,4 +105,4 @@ class GoldenTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

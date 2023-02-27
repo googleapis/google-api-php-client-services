@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -42,6 +41,7 @@ setup(
     #     thing. It installs version 1.9rc1, which is not compatible.
     install_requires=['django==2.2.24',
                       'httplib2',
-                      'google-apputils',
+                      'absl-py',
+                      'six',
                       'python-gflags'],
     zip_safe=False)

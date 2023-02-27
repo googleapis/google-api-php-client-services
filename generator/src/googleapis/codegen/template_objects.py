@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -189,8 +188,8 @@ class CodeObject(UseableInTemplates):
       return self.parent.module
     if self.api:
       return self.api.module
-    raise ValueError('Asked for module of CodeObject without any: %s, %s' %
-                     (self.values.get('wireName', '<unnamed>'), self))
+    raise AttributeError('Asked for module of CodeObject without any: %s, %s' %
+                         (self.values.get('wireName', '<unnamed>'), self))
 
   @property
   def codeName(self):  # pylint: disable=g-bad-name
@@ -416,7 +415,7 @@ class Module(CodeObject):
           is intended for use inside documentation.
 
   These values are derived from elements defining the owner of the API or
-  shared data type as described in http://goto/apiarylibrarynamespacing
+  shared data type.
 
   Typically, a code generator will create a model (e.g. an Api) and assign a
   a Module to the top node. Other nodes in the model might be in different

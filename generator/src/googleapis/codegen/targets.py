@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +18,6 @@ __author__ = 'wclarkso@google.com (Will Clarkson)'
 
 import logging
 import os
-
 
 from googleapis.codegen.filesys import files
 from googleapis.codegen.utilities import json_expander
@@ -112,7 +110,7 @@ class Targets(object):
     """
     # This is not a classmethod because we don't want subclasses
     # to shadow this value.
-    logging.info('setting default template root to %s', path)
+    logging.debug('setting default template root to %s', path)
     Targets._default_template_root = path
 
   @staticmethod

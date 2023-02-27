@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,27 +21,27 @@ import hashlib
 import os
 import textwrap
 
-from google.apputils import basetest
+from absl.testing import absltest
 # pylint: disable=unused-import
 from googleapis.codegen import django_helpers
 from googleapis.codegen import template_helpers
 from django import template as django_template  # pylint: disable=g-bad-import-order
 
 
-class TemplateHelpersTest(basetest.TestCase):
+class TemplateHelpersTest(absltest.TestCase):
 
   _TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'testdata')
 
   def testExtractCommentPrefix(self):
-    self.assertEquals('   *',
+    self.assertEqual('   *',
                       template_helpers._ExtractCommentPrefix('   * hello'))
-    self.assertEquals('   *',
+    self.assertEqual('   *',
                       template_helpers._ExtractCommentPrefix('   *hello'))
-    self.assertEquals('//',
+    self.assertEqual('//',
                       template_helpers._ExtractCommentPrefix('// hello'))
-    self.assertEquals('#',
+    self.assertEqual('#',
                       template_helpers._ExtractCommentPrefix('# hello'))
-    self.assertEquals('  #',
+    self.assertEqual('  #',
                       template_helpers._ExtractCommentPrefix('  # hello'))
 
   def testDivideIntoBlocks(self):
@@ -58,10 +57,10 @@ class TemplateHelpersTest(basetest.TestCase):
     for block in template_helpers._DivideIntoBlocks(test.split('\n'),
                                                     '      //'):
       blocks.append(block)
-    self.assertEquals(3, len(blocks))
-    self.assertEquals(1, len(blocks[0]))
-    self.assertEquals(2, len(blocks[1]))
-    self.assertEquals(1, len(blocks[2]))
+    self.assertEqual(3, len(blocks))
+    self.assertEqual(1, len(blocks[0]))
+    self.assertEqual(2, len(blocks[1]))
+    self.assertEqual(1, len(blocks[2]))
 
   def testCommentFragment(self):
     value = '123456789 ' * 15
@@ -69,7 +68,7 @@ class TemplateHelpersTest(basetest.TestCase):
     # What we expect is that 9 of the sequences above will fit on the first
     # line, then we wrap. It's only 89 because the trailing space is trimmed.
     expected = value[:89] + '\n' + (' ' * indent) + ' * ' + value[90:-1]
-    self.assertEquals(expected,
+    self.assertEqual(expected,
                       template_helpers.java_comment_fragment(value, indent))
 
   def testCommentBlockJavaDoc(self):
@@ -81,7 +80,7 @@ class TemplateHelpersTest(basetest.TestCase):
     expected = """
        * %s %s %s
        * %s %s""" % (alphabet, alphabet, alphabet, alphabet, alphabet)
-    self.assertEquals(expected, template_helpers.block_comment(value))
+    self.assertEqual(expected, template_helpers.block_comment(value))
     value = """
        // %s %s
        // %s %s %s
@@ -89,10 +88,10 @@ class TemplateHelpersTest(basetest.TestCase):
     expected = """
        // %s %s %s
        // %s %s""" % (alphabet, alphabet, alphabet, alphabet, alphabet)
-    self.assertEquals(expected, template_helpers.block_comment(value))
+    self.assertEqual(expected, template_helpers.block_comment(value))
     value = '// %s %s %s %s' % ((alphabet,) * 4)
     expected = '// %s %s %s\n// %s' % ((alphabet,) * 4)
-    self.assertEquals(expected, template_helpers.block_comment(value))
+    self.assertEqual(expected, template_helpers.block_comment(value))
 
   def testCommentBlockPerLanguage(self):
     text = ('Confectis bellis quinquiens triumphavit, post devictum '
@@ -124,9 +123,9 @@ class TemplateHelpersTest(basetest.TestCase):
       TestLanguage(language)
 
   def testNoblanklines(self):
-    self.assertEquals('a\nb', template_helpers.noblanklines('a\nb'))
-    self.assertEquals('a\nb', template_helpers.noblanklines('a\nb\n\n'))
-    self.assertEquals('a\nb', template_helpers.noblanklines('\na\n\nb\n'))
+    self.assertEqual('a\nb', template_helpers.noblanklines('a\nb'))
+    self.assertEqual('a\nb', template_helpers.noblanklines('a\nb\n\n'))
+    self.assertEqual('a\nb', template_helpers.noblanklines('\na\n\nb\n'))
 
   def _GetContext(self, data=None):
     return django_template.Context(data or {})
@@ -143,17 +142,17 @@ class TemplateHelpersTest(basetest.TestCase):
         return self._ret
 
     collapse_node = template_helpers.CollapsedNewLinesNode(NodesList('ab'))
-    self.assertEquals('ab', collapse_node.render(context))
+    self.assertEqual('ab', collapse_node.render(context))
     collapse_node = template_helpers.CollapsedNewLinesNode(NodesList('a\nb'))
-    self.assertEquals('a\nb', collapse_node.render(context))
+    self.assertEqual('a\nb', collapse_node.render(context))
     collapse_node = template_helpers.CollapsedNewLinesNode(NodesList('a\n\nb'))
-    self.assertEquals('a\n\nb', collapse_node.render(context))
+    self.assertEqual('a\n\nb', collapse_node.render(context))
     collapse_node = template_helpers.CollapsedNewLinesNode(
         NodesList('a\n\n\nb'))
-    self.assertEquals('a\n\nb', collapse_node.render(context))
+    self.assertEqual('a\n\nb', collapse_node.render(context))
     collapse_node = template_helpers.CollapsedNewLinesNode(
         NodesList('a\n\n\n\nb'))
-    self.assertEquals('a\n\nb', collapse_node.render(context))
+    self.assertEqual('a\n\nb', collapse_node.render(context))
 
   def testDocCommentBlocks(self):
 
@@ -199,7 +198,7 @@ class TemplateHelpersTest(basetest.TestCase):
           continue_prefix=' * ',
           comment_end=' */', begin_tag='', end_tag='',
           available_width=80)
-      self.assertEquals(expected, wrapped)
+      self.assertEqual(expected, wrapped)
 
   def testDocCommmentsEol(self):
     source_tmpl = textwrap.dedent("""\
@@ -214,7 +213,7 @@ class TemplateHelpersTest(basetest.TestCase):
     """)
     for should_block in ('block', 'noblock'):
       source = source_tmpl.replace('XXX', should_block)
-      template = django_template.Template(source)
+      template = django_helpers.DjangoTemplate(source)
       context = self._GetContext({
           'p': {
               'deprecated': True,
@@ -232,7 +231,7 @@ class TemplateHelpersTest(basetest.TestCase):
           ' *\n'
           ' * @param[in] value A description.\n'
           ' */\n')
-      self.assertEquals(expected, rendered, 'should block is %s' % should_block)
+      self.assertEqual(expected, rendered, 'should block is %s' % should_block)
 
   def testDocComments(self):
     def TryDocComment(language, input_text, expected):
@@ -242,7 +241,7 @@ class TemplateHelpersTest(basetest.TestCase):
       context['_LINE_WIDTH'] = 50  # to make expected easier to read
       doc_comment_node = template_helpers.DocCommentNode(
           text=input_text, comment_type='doc')
-      self.assertEquals(expected, doc_comment_node.render(context))
+      self.assertEqual(expected, doc_comment_node.render(context))
 
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
@@ -292,7 +291,7 @@ class TemplateHelpersTest(basetest.TestCase):
 
   def testCallTemplate(self):
     source = 'abc {% call_template _call_test foo bar qux api.xxx %} def'
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext({
         'template_dir': self._TEST_DATA_DIR,
         'api': {
@@ -300,19 +299,19 @@ class TemplateHelpersTest(basetest.TestCase):
             },
         'bar': 'baz'
         }))
-    self.assertEquals('abc 1baz1 2yyy2 3yyy3 def', rendered)
+    self.assertEqual('abc 1baz1 2yyy2 3yyy3 def', rendered)
 
   def testCallTemplateOutOfDirectory(self):
     source = 'abc {% call_template ../_out_of_dir %} def'
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext({
         'template_dir': os.path.join(self._TEST_DATA_DIR, 'languages'),
         }))
-    self.assertEquals('abc OUT OF DIR def', rendered)
+    self.assertEqual('abc OUT OF DIR def', rendered)
 
   def testCallTemplateWithEqualsSyntax(self):
     source = 'abc {% call_template _call_test foo=bar qux=api.xxx %} def'
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext({
         'template_dir': self._TEST_DATA_DIR,
         'api': {
@@ -320,12 +319,12 @@ class TemplateHelpersTest(basetest.TestCase):
             },
         'bar': 'baz'
         }))
-    self.assertEquals('abc 1baz1 2yyy2 3yyy3 def', rendered)
+    self.assertEqual('abc 1baz1 2yyy2 3yyy3 def', rendered)
 
   def testCallTemplateRestoreVar(self):
     """Make sure variable stacking happens correctly on call_template."""
     source = 'abc {% call_template _call_test foo bar qux api.xxx %} {{foo}}'
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext({
         'template_dir': self._TEST_DATA_DIR,
         'api': {
@@ -334,7 +333,7 @@ class TemplateHelpersTest(basetest.TestCase):
         'bar': 'baz',
         'foo': 'OrigFoo'
         }))
-    self.assertEquals('abc 1baz1 2yyy2 3yyy3 OrigFoo', rendered)
+    self.assertEqual('abc 1baz1 2yyy2 3yyy3 OrigFoo', rendered)
 
   def testParamList(self):
     source = """method({% parameter_list %}
@@ -346,52 +345,52 @@ class TemplateHelpersTest(basetest.TestCase):
           {% end_parameter %}
           {% parameter %}string b{% end_parameter %}
         {% end_parameter_list %})"""
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext())
-    self.assertEquals('method(int a, string b)', rendered)
+    self.assertEqual('method(int a, string b)', rendered)
 
   def testParamEscaping(self):
     source = """method({% parameter_list %}
         {% parameter %}JsonCppArray<string> a{% end_parameter %}
         {% end_parameter_list %})"""
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext({}))
-    self.assertEquals('method(JsonCppArray<string> a)', rendered)
+    self.assertEqual('method(JsonCppArray<string> a)', rendered)
     source = """method({% parameter_list %}
         {% parameter %}{{ foo }} a{% end_parameter %}
         {% end_parameter_list %})"""
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext(
         {'foo': 'JsonCppArray<string>'}))
     # HTML escaping has not been turned off
-    self.assertEquals('method(JsonCppArray&lt;string&gt; a)', rendered)
+    self.assertEqual('method(JsonCppArray&lt;string&gt; a)', rendered)
     source = '{% language cpp %}' + source
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext(
         {'foo': 'JsonCppArray<string>'}))
-    self.assertEquals('method(JsonCppArray<string> a)', rendered)
+    self.assertEqual('method(JsonCppArray<string> a)', rendered)
     source = """{% language cpp %}
         {% call_template _escape_test foo foo %}
     """
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext(
         {'template_dir': self._TEST_DATA_DIR,
          'foo': 'JsonCppArray<string>'})).strip()
-    self.assertEquals('method(JsonCppArray<string> a)', rendered)
+    self.assertEqual('method(JsonCppArray<string> a)', rendered)
 
   def testImportWithoutManager(self):
     expected = """import hello_world
                   import abc"""
     source = '{% imports x %}\n' + expected + '\n{% endimports %}'
-    template = django_template.Template(source)
+    template = django_helpers.DjangoTemplate(source)
     rendered = template.render(self._GetContext({'x': {}}))
-    self.assertEquals(expected, rendered)
+    self.assertEqual(expected, rendered)
 
   def testNoEol(self):
     def TryIt(source, expected, ctxt=None):
-      template = django_template.Template(source)
+      template = django_helpers.DjangoTemplate(source)
       rendered = template.render(self._GetContext(ctxt))
-      self.assertEquals(expected, rendered)
+      self.assertEqual(expected, rendered)
 
     source = textwrap.dedent("""\
     {% noeol %}
@@ -419,9 +418,9 @@ class TemplateHelpersTest(basetest.TestCase):
 
   def testNoBlank(self):
     def TryIt(source, expected, ctxt=None):
-      template = django_template.Template(source)
+      template = django_helpers.DjangoTemplate(source)
       rendered = template.render(self._GetContext(ctxt))
-      self.assertEquals(expected, rendered)
+      self.assertEqual(expected, rendered)
 
     source = textwrap.dedent("""\
     {% noblank %}
@@ -471,8 +470,8 @@ class TemplateHelpersTest(basetest.TestCase):
     {% endnoblank %}X
     """)
     expected = 'Foo\nBar\n\nX\n'
-    template = django_template.Template(source)
-    self.assertEquals(expected, template.render(self._GetContext({})))
+    template = django_helpers.DjangoTemplate(source)
+    self.assertEqual(expected, template.render(self._GetContext({})))
 
   def testNoBlankRecurse(self):
 
@@ -480,9 +479,9 @@ class TemplateHelpersTest(basetest.TestCase):
       ctxt = self._GetContext({
           'template_dir': self._TEST_DATA_DIR
           })
-      template = django_template.Template(source)
+      template = django_helpers.DjangoTemplate(source)
       gotten = template.render(ctxt)
-      self.assertEquals(expected, gotten)
+      self.assertEqual(expected, gotten)
 
     recurse_source = textwrap.dedent("""\
     {% noblank recurse %}
@@ -532,7 +531,7 @@ class TemplateHelpersTest(basetest.TestCase):
       lang_node.render(context)
       context['_LINE_WIDTH'] = 50  # to make expected easier to read
       node = template_helpers.LiteralStringNode(input_text)
-      self.assertEquals(expected, node.render(context))
+      self.assertEqual(expected, node.render(context))
 
     TryTestLiteral('dart', ['foo', 'bar'], '"foo\\nb\\"a\\$rbaz"')
     TryTestLiteral('java', ['foo'], '"foo\\nb\\"a$r"')
@@ -544,7 +543,7 @@ class TemplateHelpersTest(basetest.TestCase):
   def testCopyright(self):
     copyright_text = 'MY COPYRIGHT TEXT'
     expected_license_preamble = 'Licensed under the Apache License'
-    template = django_template.Template(
+    template = django_helpers.DjangoTemplate(
         '{% language java %}{% copyright_block %}')
     context = self._GetContext({
         'template_dir': self._TEST_DATA_DIR,
@@ -553,14 +552,14 @@ class TemplateHelpersTest(basetest.TestCase):
     text_without_copyright = template.render(context)
     license_pos = text_without_copyright.find(expected_license_preamble)
     self.assertLess(3, license_pos)
-    self.assertEquals(-1, text_without_copyright.find(copyright_text))
+    self.assertEqual(-1, text_without_copyright.find(copyright_text))
     context['api']['copyright'] = copyright_text
     text_with_copyright = template.render(context)
     license_pos_with_copyright = text_with_copyright.find(
         expected_license_preamble)
     self.assertLess(license_pos, license_pos_with_copyright)
     copyright_pos = text_with_copyright.find(copyright_text)
-    self.assertEquals(license_pos, copyright_pos)
+    self.assertEqual(license_pos, copyright_pos)
 
   def testGetArgFromToken(self):
     # This tests indirectly by going through a few tags known to call
@@ -568,17 +567,17 @@ class TemplateHelpersTest(basetest.TestCase):
     # at a low level.
 
     # try a good one
-    template = django_template.Template('{% camel_case foo %}')
+    template = django_helpers.DjangoTemplate('{% camel_case foo %}')
     context = self._GetContext({'foo': 'hello_world'})
-    self.assertEquals('HelloWorld', template.render(context))
+    self.assertEqual('HelloWorld', template.render(context))
 
     # Missing the arg
     for tag in ['language', 'comment_if', 'doc_comment_if']:
       try:
-        template = django_template.Template('{%% %s %%}' % tag)
+        template = django_helpers.DjangoTemplate('{%% %s %%}' % tag)
         self.fail('TemplateSyntaxError not raised')
       except django_template.TemplateSyntaxError as e:
-        self.assertEquals('tag requires a single argument: %s' % tag, str(e))
+        self.assertEqual('tag requires a single argument: %s' % tag, str(e))
 
   def testCache(self):
     loader = template_helpers.CachingTemplateLoader()
@@ -592,21 +591,21 @@ class TemplateHelpersTest(basetest.TestCase):
 
   def testHalt(self):
     # See that it raises the error
-    template = django_template.Template('{% halt %}')
+    template = django_helpers.DjangoTemplate('{% halt %}')
     context = self._GetContext({})
     self.assertRaises(
         template_helpers.Halt, template.render, context)
     # But make sure it raises on execution, not parsing. :-)
-    template = django_template.Template('{% if false %}{% halt %}{% endif %}OK')
+    template = django_helpers.DjangoTemplate('{% if false %}{% halt %}{% endif %}OK')
     context = self._GetContext({})
-    self.assertEquals('OK', template.render(context))
+    self.assertEqual('OK', template.render(context))
 
   def testBool(self):
     source = '{% bool x %}|{% bool y %}'
 
     def Test(language, x):
       ctxt = self._GetContext({'_LANGUAGE': language, 'x': x, 'y': not x})
-      template = django_template.Template(source)
+      template = django_helpers.DjangoTemplate(source)
       key = template_helpers._BOOLEAN_LITERALS
       vals = template_helpers._language_defaults[language].get(
           key, template_helpers._defaults[key])
@@ -614,7 +613,7 @@ class TemplateHelpersTest(basetest.TestCase):
         # If x, true precedes false in the output.
         vals = vals[::-1]
       expected = '|'.join(vals)
-      self.assertEquals(expected, template.render(ctxt))
+      self.assertEqual(expected, template.render(ctxt))
 
     for language in template_helpers._language_defaults:
       for value in (True, False, 'truthy string', ''):
@@ -623,15 +622,15 @@ class TemplateHelpersTest(basetest.TestCase):
   def testDivChecksum(self):
     source = '<p>This is some test text.</p>'
     context = self._GetContext()
-    template = django_template.Template(
+    template = django_helpers.DjangoTemplate(
         '{% checksummed_div %}'
         'someId'
         '{% divbody %}' + source + '{% endchecksummed_div %}')
-    checksum = hashlib.sha1(source).hexdigest()
+    checksum = hashlib.sha1(source.encode('utf-8')).hexdigest()
     expected = ('<div id="someId" checksum="%s">' % checksum +
                 source +
                 '</div>')
-    self.assertEquals(expected, template.render(context))
+    self.assertEqual(expected, template.render(context))
 
   def testWrite(self):
     self.name_to_content = {}
@@ -640,7 +639,7 @@ class TemplateHelpersTest(basetest.TestCase):
       """Capture the write event."""
       self.name_to_content[name] = content
 
-    template = django_template.Template(
+    template = django_helpers.DjangoTemplate(
         'a{% write file1 %}foo{% endwrite %}'
         'b{% write file2 %}bar{% endwrite %}')
     context = self._GetContext({
@@ -648,12 +647,12 @@ class TemplateHelpersTest(basetest.TestCase):
         'file1': 'x',
         'file2': 'y',
         })
-    self.assertEquals('ab', template.render(context))
-    self.assertEquals('foo', self.name_to_content['x'])
-    self.assertEquals('bar', self.name_to_content['y'])
+    self.assertEqual('ab', template.render(context))
+    self.assertEqual('foo', self.name_to_content['x'])
+    self.assertEqual('bar', self.name_to_content['y'])
 
 
-class TemplateGlobalsTest(basetest.TestCase):
+class TemplateGlobalsTest(absltest.TestCase):
 
   def testSetContext(self):
     self.assertIsNone(template_helpers.GetCurrentContext())
@@ -661,8 +660,8 @@ class TemplateGlobalsTest(basetest.TestCase):
     with template_helpers.SetCurrentContext(data):
       ctxt = template_helpers.GetCurrentContext()
       self.assertIsNotNone(ctxt)
-      self.assertEquals('value', ctxt['key'])
+      self.assertEqual('value', ctxt['key'])
     self.assertIsNone(template_helpers.GetCurrentContext())
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

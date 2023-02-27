@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,7 +17,7 @@
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import language_model
 from googleapis.codegen.api import Api
@@ -52,7 +51,7 @@ def MakeApiWithSchemas(schemas):
   return api
 
 
-class SchemaTest(basetest.TestCase):
+class SchemaTest(absltest.TestCase):
   """Tests for the Schema class."""
 
   def testArrayOfArray(self):
@@ -81,7 +80,7 @@ class SchemaTest(basetest.TestCase):
             if prop.values['wireName'] == 'array_of_arrays']
     self.assertTrue(len(prop) == 1)
     prop = prop[0]
-    self.assertEquals('Array[Array[string]]', prop.codeType)
+    self.assertEqual('Array[Array[string]]', prop.codeType)
 
   def testDetectInvalidSchema(self):
     bad_discovery = {
@@ -100,7 +99,7 @@ class SchemaTest(basetest.TestCase):
         })
     for name, schema in api._schemas.items():
       if name == 'NoProperties':
-        self.assertEquals(0, len(schema.values.get('properties')))
+        self.assertEqual(0, len(schema.values.get('properties')))
         return
     self.fail('Did not find NoProperties')
 
@@ -179,15 +178,15 @@ class SchemaTest(basetest.TestCase):
                       'RestDescriptionAuthOauth2Scopes',
                       'RestDescriptionAuthOauth2ScopesElement'}
     schema_names = set(x.values.get('className') for x
-                       in api._schemas.itervalues())
-    self.assertEquals(expected_names, schema_names)
+                       in api._schemas.values())
+    self.assertEqual(expected_names, schema_names)
     scopes_elem = api._schemas['RestDescription.auth.oauth2.scopesElement']
-    self.assertEquals('ScopesElement', scopes_elem.safe_code_type)
-    self.assertEquals('RestDescriptionAuthOauth2ScopesElement',
+    self.assertEqual('ScopesElement', scopes_elem.safe_code_type)
+    self.assertEqual('RestDescriptionAuthOauth2ScopesElement',
                       scopes_elem.code_type)
     oauth2_elem = api._schemas['RestDescription.auth.oauth2']
-    self.assertEquals('Oauth2', oauth2_elem.safe_code_type)
-    self.assertEquals('RestDescriptionAuthOauth2', oauth2_elem.code_type)
+    self.assertEqual('Oauth2', oauth2_elem.safe_code_type)
+    self.assertEqual('RestDescriptionAuthOauth2', oauth2_elem.code_type)
 
   def testSchemaWithAdditionalPropertiesWithId(self):
     api = MakeApiWithSchemas({
@@ -281,30 +280,30 @@ class SchemaTest(basetest.TestCase):
             }
         }
     schema = Schema.Create(api, 'foo', wrapped_container_def, 'foo', None)
-    self.assertEquals(1, len(schema.properties))
+    self.assertEqual(1, len(schema.properties))
     self.assertIsNotNone(schema.isContainerWrapper)
     container_property = schema.containerProperty
     self.assertIsNotNone(container_property)
     array_of = container_property.data_type.GetTemplateValue('arrayOf')
     self.assertIsNotNone(array_of)
-    self.assertEquals('Snorg', array_of.values['wireName'])
+    self.assertEqual('Snorg', array_of.values['wireName'])
 
     # Add a kind
     wrapped_container_def['properties'].update({'kind': {'type': 'string'}})
     schema = Schema.Create(api, 'foo', wrapped_container_def, 'foo', None)
-    self.assertEquals(2, len(schema.properties))
+    self.assertEqual(2, len(schema.properties))
     self.assertTrue(schema.isContainerWrapper)
 
     # Add an etag
     wrapped_container_def['properties'].update({'etag': {'type': 'string'}})
     schema = Schema.Create(api, 'foo', wrapped_container_def, 'foo', None)
-    self.assertEquals(3, len(schema.properties))
+    self.assertEqual(3, len(schema.properties))
     self.assertTrue(schema.isContainerWrapper)
 
     # Add a field which disqualifies
     wrapped_container_def['properties'].update({'foo': {'type': 'string'}})
     schema = Schema.Create(api, 'foo', wrapped_container_def, 'foo', None)
-    self.assertEquals(4, len(schema.properties))
+    self.assertEqual(4, len(schema.properties))
     self.assertFalse(schema.isContainerWrapper)
 
     # Make the main property not a container
@@ -317,7 +316,7 @@ class SchemaTest(basetest.TestCase):
             }
         }
     schema = Schema.Create(api, 'foo', not_wrapped_container_def, 'foo', None)
-    self.assertEquals(2, len(schema.properties))
+    self.assertEqual(2, len(schema.properties))
     self.assertFalse(schema.isContainerWrapper)
 
   def testMemberNameIsJsonName(self):
@@ -341,15 +340,15 @@ class SchemaTest(basetest.TestCase):
         expect_len = len(schema.values.get('properties'))
         got = 0
         for p in schema.values.get('properties'):
-          self.assertEquals(
+          self.assertEqual(
               p.values['expect'], p.member_name_is_json_name,
               'Unexpected code name %s for json name: %s' % (
                   p.memberName, p.values['wireName']))
           got += 1
-        self.assertEquals(expect_len, got)
+        self.assertEqual(expect_len, got)
         return
     self.fail('Did not find schema')
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

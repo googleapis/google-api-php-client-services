@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,11 +17,11 @@ __author__ = 'jcgregorio@google.com (Joe Gregorio)'
 
 import os
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import targets
 
 
-class BaseTargetsTest(basetest.TestCase):
+class BaseTargetsTest(absltest.TestCase):
 
   def setUp(self):
     testdata_dir = os.path.join(os.path.dirname(__file__), 'testdata')
@@ -53,18 +52,18 @@ class FeaturesLoadingTest(BaseTargetsTest):
     variations = self.targets.VariationsForLanguage('php')
     features = variations.GetFeatures('preview')
     # Something from the top level
-    self.assertEquals(True, features.get('library'))
+    self.assertEqual(True, features.get('library'))
     # Something overridden in the variation specific file
-    self.assertEquals('base-client-library', features.get('baseClientLibrary'))
-    self.assertEquals('release-version', features.get('releaseVersion'))
+    self.assertEqual('base-client-library', features.get('baseClientLibrary'))
+    self.assertEqual('release-version', features.get('releaseVersion'))
 
   def testGetFeaturesWithoutOverride(self):
     """Ask for features of a service without a local override."""
     variations = self.targets.VariationsForLanguage('php')
     features = variations.GetFeatures('not_built_in')
-    self.assertEquals('this-is-from-top-level', features.get('releaseVersion'))
+    self.assertEqual('this-is-from-top-level', features.get('releaseVersion'))
     self.assertIsNone(features.get('baseClientLibrary'))
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

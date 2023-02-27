@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2018 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,4 +15,4 @@
 from googleapis.codegen.generate_library import main, app
 
 if __name__ == '__main__':
-  app.run()
+  app.run(main)

@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,14 +33,17 @@ def GetPackageWriter(output_dir=None, output_file=None, output_format='zip'):
     package_writer = filesystem_library_package.FilesystemLibraryPackage(
         output_dir)
   else:
-    out = open(output_file, 'w')
     if output_format == 'tgz':
+      out = open(output_file, 'wb')
       package_writer = tar_library_package.TarLibraryPackage(out)
     elif output_format == 'tar':
+      out = open(output_file, 'wb')
       package_writer = tar_library_package.TarLibraryPackage(out,
                                                              compress=False)
     elif output_format == 'txt':
+      out = open(output_file, 'wt', encoding='utf8')
       package_writer = single_file_library_package.SingleFileLibraryPackage(out)
     else:
+      out = open(output_file, 'wb')
       package_writer = zip_library_package.ZipLibraryPackage(out)
   return package_writer

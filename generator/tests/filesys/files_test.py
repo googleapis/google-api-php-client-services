@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,11 +16,11 @@ import os
 import shutil
 import tempfile
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.filesys import files
 
 
-class FilesTest(basetest.TestCase):
+class FilesTest(absltest.TestCase):
 
   def setUp(self):
     self.tempdir = tempfile.mkdtemp()
@@ -34,16 +33,16 @@ class FilesTest(basetest.TestCase):
   def testGetFileContentsLocal(self):
     filename = os.path.join(self.tempdir, 'a')
     contents = files.GetFileContents(filename)
-    self.assertEquals('a', contents)
+    self.assertEqual(b'a', contents)
 
   def testIterFilesLocal(self):
     listing = sorted(files.IterFiles(self.tempdir))
     expected = [os.path.join(self.tempdir, x) for x in 'abc']
-    self.assertEquals(expected, listing)
+    self.assertEqual(expected, listing)
 
   def testIsFileLocal(self):
     self.assertTrue(files.IsFile(os.path.join(self.tempdir, 'a')))
     self.assertFalse(files.IsFile(self.tempdir))
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

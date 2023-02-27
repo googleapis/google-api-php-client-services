@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,19 +14,19 @@
 
 """Tests for api_exception.py."""
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen.api_exception import ApiException
 
 
-class ApiExceptionTest(basetest.TestCase):
+class ApiExceptionTest(absltest.TestCase):
 
   def testExceptionStr(self):
     e = ApiException('foo')
-    self.assertEquals('foo', str(e))
+    self.assertEqual('foo', str(e))
     e = ApiException('foo', {'bar': 1})
-    self.assertEquals("""foo: {'bar': 1}""", str(e))
+    self.assertEqual("""foo: {'bar': 1}""", str(e))
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

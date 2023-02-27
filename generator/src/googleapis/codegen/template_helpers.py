@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,8 +28,8 @@ import string
 import textwrap
 import threading
 
-
 import django.template as django_template  # pylint: disable=g-bad-import-order
+import six
 
 from googleapis.codegen import utilities
 from googleapis.codegen.filesys import files
@@ -224,6 +223,20 @@ _language_defaults = {
 _TEMPLATE_GLOBALS = threading.local()
 _TEMPLATE_GLOBALS.current_context = None
 
+_ENGINE = django_template.engine.Engine(
+    builtins=['googleapis.codegen.template_helpers'])
+
+
+def DjangoTemplate(source):
+  """Returns a template configured for our default engine.
+
+  Args:
+    source: (str) Template source.
+  Returns:
+    (django.template.Template)
+  """
+  return django_template.Template(source, engine=_ENGINE)
+
 
 def GetCurrentContext():
   return _TEMPLATE_GLOBALS.current_context
@@ -288,8 +301,8 @@ class CachingTemplateLoader(object):
     return template
 
   def _LoadTemplate(self, template_path):
-    source = files.GetFileContents(template_path).decode('utf-8')
-    return django_template.Template(source)
+    source = six.ensure_str(files.GetFileContents(template_path))
+    return DjangoTemplate(source)
 
 
 _TEMPLATE_LOADER = CachingTemplateLoader()
@@ -966,7 +979,7 @@ class CommentIfNode(DocCommentNode):
   def render(self, context):  # pylint: disable=g-bad-name
     """Render the node."""
     try:
-      text = django_template.resolve_variable(self._variable_name, context)
+      text = django_template.Variable(self._variable_name).resolve(context)
       if text:
         return self.RenderText(text, context)
     except django_template.base.VariableDoesNotExist:
@@ -1036,7 +1049,7 @@ class CamelCaseNode(django_template.Node):
 
   def render(self, context):  # pylint: disable=g-bad-name
     try:
-      text = django_template.resolve_variable(self._variable_name, context)
+      text = django_template.Variable(self._variable_name).resolve(context)
       if text:
         return utilities.CamelCase(text)
     except django_template.base.VariableDoesNotExist:
@@ -1066,7 +1079,7 @@ class ParameterGetterChainNode(django_template.Node):
   def render(self, context):  # pylint: disable=g-bad-name
     """Render the node."""
     try:
-      prop = django_template.resolve_variable(self._variable_name, context)
+      prop = django_template.Variable(self._variable_name).resolve(context)
     except django_template.base.VariableDoesNotExist:
       return ''
 
@@ -1114,8 +1127,8 @@ class ImportsNode(django_template.Node):
     # - get the complete import set
     import_lists = None
     try:
-      import_manager = django_template.resolve_variable(
-          '%s.importManager' % self._element, context)
+      import_manager = django_template.Variable(
+          '%s.importManager' % self._element).resolve(context)
       import_regex = _GetFromContext(context, _IMPORT_REGEX)
       for line in explicit_import_text.split('\n'):
         match_obj = re.match(import_regex, line)
@@ -1152,10 +1165,11 @@ def Imports(parser, token):
 class ParameterListNode(django_template.Node):
   """Node for parameter_list blocks."""
 
-  def __init__(self, nodelist, separator):
+  def __init__(self, nodelist, separator, append=False):
     super(ParameterListNode, self).__init__()
     self._nodelist = nodelist
     self._separator = separator
+    self._append = append
 
   def render(self, context):  # pylint: disable=g-bad-name
     """Render the node."""
@@ -1163,9 +1177,11 @@ class ParameterListNode(django_template.Node):
     # Split apart on paramater boundaries, getting rid of white space between
     # parameters
     for block in self._nodelist.render(context).split(ParameterNode.BEGIN):
-      block = block.rstrip().replace(ParameterNode.END, '')
+      block = block.lstrip().rstrip().replace(ParameterNode.END, '')
       if block:
         blocks.append(block)
+    if self._append and blocks:
+      blocks.insert(0, '')
     return self._separator.join(blocks)
 
 
@@ -1188,18 +1204,25 @@ class ParameterNode(django_template.Node):
 
 @register.tag(name='parameter_list')
 def DoParameterList(parser, token):
-  """Gather a list of parameter declarations and join them with ','.
+  r"""Gather a list of parameter declarations and join them with ','.
 
   Gathers all 'parameter' nodes until the 'end_parameter_list' tag and joins
   them together with a ', ' separator. Extra white space between nodes is
-  removed, but other text is left intact, joined to the end of the preceeding
+  removed, but other text is left intact, joined to the end of the preceding
   parameter node. Blank parameters are omitted from the list.
 
   Usage:
-    foo({% parameter_list separator %}{% for p in method.parameters %}
-        {{ p.type }} {{ p.name }}
+    foo({% parameter_list [separator [append]] %}{% for p in m.parameters %}
+        {% parameter %}
+          {{ p.type }} {{ p.name }}
+        {% end_parameter %}
         {% endfor %}
         {% end_parameter_list %})
+
+    separater: may contain \n, \t, \r, and \b (for space)
+    append: indicates that this list appends another. If there are any
+    parameters in the list, a leading separator will be emitted. This
+    effectively 'appends' this parameter_list to any previous output.
 
   Args:
     parser: (parser) the Django parser context.
@@ -1208,14 +1231,25 @@ def DoParameterList(parser, token):
   Returns:
     a ParameterListNode
   """
-  try:
-    unused_tag_name, separator = token.split_contents()
-  except ValueError:
-    # No separator, set default.
-    separator = ', '
+  separator = ', '
+  append = False
+  args = token.split_contents()
+  if len(args) > 1:
+    separator = args[1]
+    separator = separator.replace(r'\n', '\n')
+    separator = separator.replace(r'\r', '\r')
+    separator = separator.replace(r'\t', '\t')
+    separator = separator.replace(r'\b', ' ')
+  if len(args) > 2:
+    if args[2] == 'append':
+      append = True
+  if len(args) > 3:
+    raise django_template.TemplateSyntaxError(
+        'parameter_list expects at most two arguments')
+
   nodelist = parser.parse(('end_parameter_list',))
   parser.delete_first_token()
-  return ParameterListNode(nodelist, separator)
+  return ParameterListNode(nodelist, separator, append)
 
 
 @register.tag(name='parameter')
@@ -1274,9 +1308,9 @@ class TemplateNode(django_template.Node):
     template_path = os.path.join(context['template_dir'], self._template_name)
     # Collect new additions to the context
     newvars = {}
-    for target, source in self._bindings.iteritems():
+    for target, source in self._bindings.items():
       try:
-        newvars[target] = django_template.resolve_variable(source, context)
+        newvars[target] = django_template.Variable(source).resolve(context)
       except django_template.base.VariableDoesNotExist:
         raise django_template.TemplateSyntaxError(
             'can not resolve %s when calling template %s' % (
@@ -1417,11 +1451,10 @@ class LiteralStringNode(django_template.Node):
 
   def render(self, context):  # pylint: disable=g-bad-name
     """Render the node."""
-    resolve = django_template.resolve_variable
     texts = []
     for v in self._variables:
       try:
-        texts.append(resolve(v, context))
+        texts.append(django_template.Variable(v).resolve(context))
       except django_template.base.VariableDoesNotExist:
         pass
     text = ''.join(texts)
@@ -1434,7 +1467,7 @@ class LiteralStringNode(django_template.Node):
 
 @register.tag(name='literal')
 def DoLiteralString(unused_parser, token):
-  """Emit a variable as a string literal, escaped for the current language.
+  r"""Emit a variable as a string literal, escaped for the current language.
 
   A variable foo containing 'ab<newline>c' would be emitted as "ab\\nc"
   (with no literal newline character). Multiple variables are concatenated.
@@ -1461,9 +1494,7 @@ class DataContextNode(django_template.Node):
 
   def render(self, context):  # pylint: disable=g-bad-name
     """Make sure this is actually a Node and render it."""
-    resolve = django_template.resolve_variable
-
-    data = resolve(self._variable, context)
+    data = django_template.Variable(self._variable).resolve(context)
     if hasattr(data, 'GetLanguageModel') and hasattr(data, 'value'):
       model = data.GetLanguageModel()
       # TODO(user): Fix the fact that Arrays don't know their language
@@ -1494,7 +1525,7 @@ class BoolNode(django_template.Node):
     self._variable = variable
 
   def render(self, context):  # pylint:disable=g-bad-name
-    data = bool(django_template.resolve_variable(self._variable, context))
+    data = bool(django_template.Variable(self._variable).resolve(context))
     return _GetFromContext(context, _BOOLEAN_LITERALS)[data]
 
 
@@ -1513,7 +1544,7 @@ class DivChecksumNode(django_template.Node):
   def render(self, context):  # pylint:disable=g-bad-name
     body = self._body_nodes.render(context)
     element_id = self._id_nodes.render(context)
-    checksum = hashlib.sha1(body).hexdigest()
+    checksum = hashlib.sha1(six.ensure_binary(body)).hexdigest()
     return ('<div id="%s" checksum="%s">%s</div>' %
             (element_id, checksum, body))
 
@@ -1555,7 +1586,7 @@ class WriteNode(django_template.Node):
     Raises:
       ValueError: If the file writer method can not be found.
     """
-    path = django_template.resolve_variable(self._path_variable, context)
+    path = django_template.Variable(self._path_variable).resolve(context)
     content = self._nodelist.render(context)
     file_writer = _GetFromContext(context, FILE_WRITER)
     if not file_writer:

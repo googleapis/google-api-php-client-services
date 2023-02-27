@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,12 +20,13 @@ This module holds the base classes used for all code generators.
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import datetime
+import io
 import os
 import re
-import StringIO
 import time
 import zipfile
 
+import six
 
 from googleapis.codegen.django_helpers import DjangoRenderTemplate
 from googleapis.codegen.language_model import LanguageModel
@@ -39,8 +39,8 @@ from googleapis.codegen.filesys import files
 # into templates.
 _GENERATOR_INFORMATION = {
     'name': 'google-apis-code-generator',
-    'version': '1.5.1',
-    'buildDate': '2015-03-24',
+    'version': '1.6.0',
+    'buildDate': '2019-01-29',
     }
 
 # app.yaml and other names that app engine refuses to open.
@@ -131,10 +131,10 @@ class TemplateGenerator(object):
 
     def WriteFileInPackage(path, content):
       """Writes content to a path in our current package writer."""
-      if isinstance(content, unicode):
+      if isinstance(content, str):
         content = content.encode('utf-8', errors='ignore')
       out = package.StartFile(os.path.join(output_dir, path))
-      out.write(content)
+      out.write(six.ensure_binary(content))
       package.EndFile()
 
     try:
@@ -189,10 +189,10 @@ class TemplateGenerator(object):
       """
       full_path = os.path.join(self._template_dir, path)
       zip_slurp = files.GetFileContents(full_path)
-      archive = zipfile.ZipFile(StringIO.StringIO(zip_slurp), 'r')
+      archive = zipfile.ZipFile(io.BytesIO(zip_slurp), 'r')
       for info in archive.infolist():
         package.WriteDataAsFile(
-            archive.read(info.filename),
+            six.ensure_str(archive.read(info.filename)),
             os.path.join(relative_path, info.filename))
 
     top_of_tree = os.path.normpath(
@@ -205,13 +205,13 @@ class TemplateGenerator(object):
       relative_path = root[len(top_of_tree) + 1:]
 
       # Perform the replacements on the path and file name
-      for path_item, replacement in path_replacements.iteritems():
+      for path_item, replacement in path_replacements.items():
         relative_path = relative_path.replace(path_item, replacement)
-      for path_item, replacement in path_replacements.iteritems():
+      for path_item, replacement in path_replacements.items():
         file_name = file_name.replace(path_item, replacement)
       full_template_path = os.path.join(relative_path, template_path)
 
-      for path_item, call_info in list_replacements.iteritems():
+      for path_item, call_info in list_replacements.items():
         if file_name.find(path_item) >= 0:
           self.GenerateListOfFiles(path_item, call_info, path, relative_path,
                                    file_name, variables, package,

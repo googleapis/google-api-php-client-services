@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,9 +32,11 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import json
 import logging
 import operator
-import urlparse
+import six
+import functools
 
 
+from six.moves.urllib import parse as urlparse
 from googleapis.codegen import data_types
 from googleapis.codegen import template_objects
 from googleapis.codegen import utilities
@@ -171,7 +172,7 @@ class Api(template_objects.CodeObject):
         self.values['auth'].get('oauth2') and
         self.values['auth']['oauth2'].get('scopes')):
       for value, auth_dict in sorted(
-          self.values['auth']['oauth2']['scopes'].iteritems()):
+          six.iteritems(self.values['auth']['oauth2']['scopes'])):
         self._authscopes.append(AuthScope(self, value, auth_dict))
       self.SetTemplateValue('authscopes', self._authscopes)
 
@@ -227,13 +228,13 @@ class Api(template_objects.CodeObject):
       for name in sorted(schemas):
         def_dict = schemas[name]
         # Upgrade the string format schema to a dict.
-        if isinstance(def_dict, unicode):
+        if isinstance(def_dict, str):
           def_dict = json.loads(def_dict)
         self._schemas[name] = self.DataTypeFromJson(def_dict, name)
 
       # Late bind info for variant types, and mark the discriminant
       # field and value.
-      for name, info in self._variant_info.iteritems():
+      for name, info in six.iteritems(self._variant_info):
         if name not in self._schemas:
           # The error will be reported elsewhere
           continue
@@ -304,7 +305,7 @@ class Api(template_objects.CodeObject):
     service_path = self.values.get('servicePath')
     rpc_path = self.values.get('rpcPath')
     if root_url:
-      # oauth2 has a servicePath of "". This is wierd but OK for that API, but
+      # oauth2 has a servicePath of "". This is weird but OK for that API, but
       # it means we must explicitly check against None.
       if service_path is not None:
         base_url = root_url + service_path
@@ -343,7 +344,7 @@ class Api(template_objects.CodeObject):
   def ModelClasses(self):
     """Return all the model classes."""
     ret = set(
-        s for s in self._schemas.itervalues()
+        s for s in six.itervalues(self._schemas)
         if isinstance(s, Schema) or isinstance(s, data_types.MapDataType))
     return sorted(ret, key=operator.attrgetter('class_name'))
 
@@ -543,6 +544,18 @@ class Api(template_objects.CodeObject):
 
 
 class Resource(template_objects.CodeObject):
+  """The definition of a resource.
+
+  Resources are a fiction of the Apiary stack and Discovery. When they detect a
+  pattern of method names of the form   api.<common_name>.get|put..., two
+  things happen:
+    The stack might synthesize a patch method from get and put. Discovery sees
+      and reports that new method, so we have no more special processing here.
+    Discovery clusters methods into a resource named by the common_name.
+
+  Since the common part might have dots in it, you can end up with a hierarchy
+  of resources.
+  """
 
   def __init__(self, api, name, def_dict, parent=None):
     """Creates a Resource.
@@ -734,7 +747,7 @@ class Method(template_objects.CodeObject):
     order = self.values.get('parameterOrder', [])
     req_parameters = []
     opt_parameters = []
-    for name, def_dict in self.values.get('parameters', {}).iteritems():
+    for name, def_dict in six.iteritems(self.values.get('parameters', {})):
       param = Parameter(api, name, def_dict, self)
       if name == 'alt':
         # Treat the alt parameter differently
@@ -750,16 +763,22 @@ class Method(template_objects.CodeObject):
         # optional parameters are appended in the order they're declared.
         opt_parameters.append(param)
     # pylint: disable=g-long-lambda
-    req_parameters.sort(lambda x, y: cmp(order.index(x.values['wireName']),
-                                         order.index(y.values['wireName'])))
+    req_parameters.sort(key=functools.cmp_to_key(
+                        lambda x, y: self.cmp(order.index(x.values['wireName']),
+                                              order.index(y.values['wireName']))))
     # sort optional parameters by name to avoid code churn
-    opt_parameters.sort(lambda x, y: cmp(x.values['wireName'], y.values['wireName']))
+    opt_parameters.sort(key=functools.cmp_to_key(
+                        lambda x, y: self.cmp(x.values['wireName'],
+                                              y.values['wireName'])))
     req_parameters.extend(opt_parameters)
     self.SetTemplateValue('parameters', req_parameters)
 
     self._InitMediaUpload(parent)
     self._InitPageable(api)
     api.AddMethod(self)
+
+  def cmp(self, a, b):
+    return (a > b) - (a < b)
 
   def _InitMediaUpload(self, parent):
     media_upload = self.values.get('mediaUpload')

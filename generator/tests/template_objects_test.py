@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2010 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,12 +18,13 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 
 from django import template as django_template  # pylint:disable=g-bad-import-order
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import language_model
+from googleapis.codegen import template_helpers
 from googleapis.codegen import template_objects
 
 
-class TemplateObjectsTest(basetest.TestCase):
+class TemplateObjectsTest(absltest.TestCase):
 
   def setUp(self):
     super(TemplateObjectsTest, self).setUp()
@@ -38,23 +38,23 @@ class TemplateObjectsTest(basetest.TestCase):
     bar = template_objects.CodeObject({'className': 'Bar'}, None, parent=foo)
     baz = template_objects.CodeObject({'className': 'Baz'}, None, parent=bar)
 
-    self.assertEquals('test|Foo|Bar|Baz', baz.fullClassName)
-    self.assertEquals('', baz.RelativeClassName(baz))
-    self.assertEquals('Baz', baz.RelativeClassName(bar))
-    self.assertEquals('Bar|Baz', baz.RelativeClassName(foo))
+    self.assertEqual('test|Foo|Bar|Baz', baz.fullClassName)
+    self.assertEqual('', baz.RelativeClassName(baz))
+    self.assertEqual('Baz', baz.RelativeClassName(bar))
+    self.assertEqual('Bar|Baz', baz.RelativeClassName(foo))
 
   def testModule(self):
     m = template_objects.Module('hello/world',
                                 language_model=self.language_model)
-    self.assertEquals('hello|world', m.name)
-    self.assertEquals('hello/world', m.path)
+    self.assertEqual('hello|world', m.name)
+    self.assertEqual('hello/world', m.path)
 
   def testModuleParenting(self):
     m = template_objects.Module('hello/world',
                                 language_model=self.language_model)
     child = template_objects.Module('everyone', parent=m)
-    self.assertEquals('hello|world|everyone', child.name)
-    self.assertEquals('hello/world/everyone', child.path)
+    self.assertEqual('hello|world|everyone', child.name)
+    self.assertEqual('hello/world/everyone', child.path)
 
   def testModuleNaming(self):
     p = template_objects.Module('hello/world',
@@ -65,20 +65,20 @@ class TemplateObjectsTest(basetest.TestCase):
     bar = template_objects.CodeObject({'className': 'Bar'}, None, parent=foo)
     baz = template_objects.CodeObject({'className': 'Baz'}, None, parent=bar)
 
-    self.assertEquals('Foo|Bar|Baz', baz.packageRelativeClassName)
-    self.assertEquals('hello|world|Foo|Bar|Baz', baz.fullClassName)
+    self.assertEqual('Foo|Bar|Baz', baz.packageRelativeClassName)
+    self.assertEqual('hello|world|Foo|Bar|Baz', baz.fullClassName)
 
   def testParentPath(self):
     foo = template_objects.CodeObject({'className': 'Foo'}, None,
                                       language_model=self.language_model)
     bar = template_objects.CodeObject({'className': 'Bar'}, None, parent=foo)
     baz = template_objects.CodeObject({'className': 'Baz'}, None, parent=bar)
-    self.assertEquals(['Foo', 'Bar'], baz.parentPath)
+    self.assertEqual(['Foo', 'Bar'], baz.parentPath)
 
   def _TestRender(self, source, ctxt, expected):
-    t = django_template.Template(source)
+    t = template_helpers.DjangoTemplate(source)
     rendered = t.render(django_template.Context(ctxt))
-    self.assertEquals(expected, rendered)
+    self.assertEqual(expected, rendered)
 
   def testSimpleUseableInTemplates(self):
     d = dict(x=1, y=2, z=3)
@@ -119,7 +119,7 @@ class TemplateObjectsTest(basetest.TestCase):
     self._TestRender(t, {'o': useable}, 'here I am')
 
 
-class ConstantTest(basetest.TestCase):
+class ConstantTest(absltest.TestCase):
 
   def setUp(self):
     super(ConstantTest, self).setUp()
@@ -133,42 +133,42 @@ class ConstantTest(basetest.TestCase):
   def testConstantNameFixer(self):
     c = template_objects.Constant('hello_world',
                                   language_model=self.language_model)
-    self.assertEquals('hello_world', c.value)
-    self.assertEquals('hello_world', c.name)
-    self.assertEquals('Hello|World', c.constantName)
+    self.assertEqual('hello_world', c.value)
+    self.assertEqual('hello_world', c.name)
+    self.assertEqual('Hello|World', c.constantName)
     self.assertIsNone(c.description)
 
     c = template_objects.Constant('42', language_model=self.language_model)
-    self.assertEquals('42', c.value)
-    self.assertEquals('value_42', c.name)
-    self.assertEquals('Value|42', c.constantName)
+    self.assertEqual('42', c.value)
+    self.assertEqual('value_42', c.name)
+    self.assertEqual('Value|42', c.constantName)
 
     c = template_objects.Constant(42, language_model=self.language_model)
-    self.assertEquals('42', c.value)
-    self.assertEquals('value_42', c.name)
-    self.assertEquals('Value|42', c.constantName)
+    self.assertEqual('42', c.value)
+    self.assertEqual('value_42', c.name)
+    self.assertEqual('Value|42', c.constantName)
 
     c = template_objects.Constant(42, name='answer',
                                   language_model=self.language_model)
-    self.assertEquals('42', c.value)
-    self.assertEquals('answer', c.name)
-    self.assertEquals('Answer', c.constantName)
+    self.assertEqual('42', c.value)
+    self.assertEqual('answer', c.name)
+    self.assertEqual('Answer', c.constantName)
 
     c = template_objects.Constant('@me', language_model=self.language_model)
-    self.assertEquals('@me', c.value)
-    self.assertEquals('me', c.name)
-    self.assertEquals('Me', c.constantName)
+    self.assertEqual('@me', c.value)
+    self.assertEqual('me', c.name)
+    self.assertEqual('Me', c.constantName)
 
     c = template_objects.Constant('_foo', language_model=self.language_model)
-    self.assertEquals('_foo', c.value)
-    self.assertEquals('foo', c.name)
-    self.assertEquals('Foo', c.constantName)
+    self.assertEqual('_foo', c.value)
+    self.assertEqual('foo', c.name)
+    self.assertEqual('Foo', c.constantName)
 
     c = template_objects.Constant('_&@', language_model=self.language_model)
-    self.assertEquals('_&@', c.value)
-    self.assertEquals('value__&@', c.name)
-    self.assertEquals('Value', c.constantName)
+    self.assertEqual('_&@', c.value)
+    self.assertEqual('value__&@', c.name)
+    self.assertEqual('Value', c.constantName)
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

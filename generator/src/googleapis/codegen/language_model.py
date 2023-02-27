@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # Copyright 2011 Google Inc. All Rights Reserved.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -167,7 +166,7 @@ class LanguageModel(object):
     Returns:
       (str) String representation of value once cast to an integer.
     """
-    return u'%d' % long(data_value.value)
+    return u'%d' % int(data_value.value)
 
   def _Float(self, data_value):
     """Convert provided float to language specific literal.
@@ -187,7 +186,7 @@ class LanguageModel(object):
       raise ValueError('DataValue does not support rendering of provided Type '
                        '(%s)' % value)
 
-    value = unicode(value)
+    value = str(value)
     # Note that unicode(float()) already appends '.0' if is an integral value.
     return value
 
@@ -214,7 +213,7 @@ class LanguageModel(object):
         ('\r', '\\r'),
         ('\f', '\\f'),
         ]
-    value = unicode(data_value.value)
+    value = str(data_value.value)
     for special, replacement in literal_escape:
       value = value.replace(special, replacement)
     return u'"%s"' % value
@@ -233,7 +232,7 @@ class LanguageModel(object):
     Subclasses should override as appropriate.
 
     Args:
-      json_schema: (dict) The defintion dictionary for this type
+      json_schema: (dict) The definition dictionary for this type
     Returns:
       A name suitable for use as a class in the generator's target language.
     """
@@ -250,7 +249,7 @@ class LanguageModel(object):
     exists.
 
     Args:
-      unused_json_schema: (dict) The defintion dictionary for this type
+      unused_json_schema: (dict) The definition dictionary for this type
     Returns:
       A name suitable for use as a class in the generator's target language.
     """
@@ -305,7 +304,7 @@ class LanguageModel(object):
   def ApplyPolicy(self, policy_name, variable, name):
     """Apply a naming policy to a string.
 
-    Maps the policy name to the tranformation class and applies it.
+    Maps the policy name to the transformation class and applies it.
 
     Args:
       policy_name: (str) The name of a policy.
@@ -556,7 +555,7 @@ class DocumentingLanguageModel(LanguageModel):
     Subclasses should override as appropriate.
 
     Args:
-      json_schema: (dict) The defintion dictionary for this type
+      json_schema: (dict) The definition dictionary for this type
     Returns:
       A name suitable for use as a class in the generator's target language.
     """
