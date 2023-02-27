@@ -107,10 +107,6 @@ flags.DEFINE_string(
     'Use an alternate path for the generated code. This must be a file path'
     ' using "/" as a separator, not "."'
     )
-flags.DEFINE_boolean(
-    'reparent_methods_using_id',
-    False,
-    'If true, move methods to parent resource if the ID matches parent path')
 flags.DEFINE_bool('version_package', False, 'Put API version in package paths')
 flags.DEFINE_bool('verbose', False, 'Enable verbose logging')
 
@@ -126,7 +122,6 @@ flags.declare_key_flag('output_file')
 flags.declare_key_flag('output_format')
 flags.declare_key_flag('output_type')
 flags.declare_key_flag('package_path')
-flags.declare_key_flag('reparent_methods_using_id')
 flags.declare_key_flag('version_package')
 
 
@@ -177,7 +172,7 @@ def Generate(discovery_doc, package_writer,
              version_package=False,
              package_path=None,
              output_type='plain',
-             language='java',
+             language='php',
              language_variant='default',
              callback=None):
   """Generate a library package from discovery and options."""
@@ -195,8 +190,6 @@ def Generate(discovery_doc, package_writer,
     options['useSingleSourceFile'] = True
   if output_type == 'full':
     options['include_dependencies'] = True
-  if FLAGS.reparent_methods_using_id:
-    discovery_doc['reparentMethodsUsingId'] = True
 
   # determine language version from language variant.
   language_variations = Targets().VariationsForLanguage(language)

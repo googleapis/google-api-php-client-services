@@ -228,7 +228,7 @@ class Api(template_objects.CodeObject):
       for name in sorted(schemas):
         def_dict = schemas[name]
         # Upgrade the string format schema to a dict.
-        if isinstance(def_dict, six.text_type):
+        if isinstance(def_dict, str):
           def_dict = json.loads(def_dict)
         self._schemas[name] = self.DataTypeFromJson(def_dict, name)
 
