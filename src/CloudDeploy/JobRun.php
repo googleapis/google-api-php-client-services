@@ -19,6 +19,12 @@ namespace Google\Service\CloudDeploy;
 
 class JobRun extends \Google\Model
 {
+  protected $advanceChildRolloutJobRunType = AdvanceChildRolloutJobRun::class;
+  protected $advanceChildRolloutJobRunDataType = '';
+  public $advanceChildRolloutJobRun;
+  protected $createChildRolloutJobRunType = CreateChildRolloutJobRun::class;
+  protected $createChildRolloutJobRunDataType = '';
+  public $createChildRolloutJobRun;
   /**
    * @var string
    */
@@ -62,6 +68,34 @@ class JobRun extends \Google\Model
   protected $verifyJobRunDataType = '';
   public $verifyJobRun;
 
+  /**
+   * @param AdvanceChildRolloutJobRun
+   */
+  public function setAdvanceChildRolloutJobRun(AdvanceChildRolloutJobRun $advanceChildRolloutJobRun)
+  {
+    $this->advanceChildRolloutJobRun = $advanceChildRolloutJobRun;
+  }
+  /**
+   * @return AdvanceChildRolloutJobRun
+   */
+  public function getAdvanceChildRolloutJobRun()
+  {
+    return $this->advanceChildRolloutJobRun;
+  }
+  /**
+   * @param CreateChildRolloutJobRun
+   */
+  public function setCreateChildRolloutJobRun(CreateChildRolloutJobRun $createChildRolloutJobRun)
+  {
+    $this->createChildRolloutJobRun = $createChildRolloutJobRun;
+  }
+  /**
+   * @return CreateChildRolloutJobRun
+   */
+  public function getCreateChildRolloutJobRun()
+  {
+    return $this->createChildRolloutJobRun;
+  }
   /**
    * @param string
    */

@@ -19,6 +19,12 @@ namespace Google\Service\CloudDeploy;
 
 class Job extends \Google\Model
 {
+  protected $advanceChildRolloutJobType = AdvanceChildRolloutJob::class;
+  protected $advanceChildRolloutJobDataType = '';
+  public $advanceChildRolloutJob;
+  protected $createChildRolloutJobType = CreateChildRolloutJob::class;
+  protected $createChildRolloutJobDataType = '';
+  public $createChildRolloutJob;
   protected $deployJobType = DeployJob::class;
   protected $deployJobDataType = '';
   public $deployJob;
@@ -38,6 +44,34 @@ class Job extends \Google\Model
   protected $verifyJobDataType = '';
   public $verifyJob;
 
+  /**
+   * @param AdvanceChildRolloutJob
+   */
+  public function setAdvanceChildRolloutJob(AdvanceChildRolloutJob $advanceChildRolloutJob)
+  {
+    $this->advanceChildRolloutJob = $advanceChildRolloutJob;
+  }
+  /**
+   * @return AdvanceChildRolloutJob
+   */
+  public function getAdvanceChildRolloutJob()
+  {
+    return $this->advanceChildRolloutJob;
+  }
+  /**
+   * @param CreateChildRolloutJob
+   */
+  public function setCreateChildRolloutJob(CreateChildRolloutJob $createChildRolloutJob)
+  {
+    $this->createChildRolloutJob = $createChildRolloutJob;
+  }
+  /**
+   * @return CreateChildRolloutJob
+   */
+  public function getCreateChildRolloutJob()
+  {
+    return $this->createChildRolloutJob;
+  }
   /**
    * @param DeployJob
    */
