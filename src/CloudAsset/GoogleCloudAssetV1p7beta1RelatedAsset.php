@@ -23,7 +23,7 @@ class GoogleCloudAssetV1p7beta1RelatedAsset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ancestors;
+  public $ancestors = [];
   /**
    * @var string
    */

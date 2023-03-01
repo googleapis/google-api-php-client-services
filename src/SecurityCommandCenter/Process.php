@@ -23,7 +23,7 @@ class Process extends \Google\Collection
   /**
    * @var string[]
    */
-  public $args;
+  public $args = [];
   /**
    * @var bool
    */
@@ -33,14 +33,14 @@ class Process extends \Google\Collection
   public $binary;
   protected $envVariablesType = EnvironmentVariable::class;
   protected $envVariablesDataType = 'array';
-  public $envVariables;
+  public $envVariables = [];
   /**
    * @var bool
    */
   public $envVariablesTruncated;
   protected $librariesType = SecuritycenterFile::class;
   protected $librariesDataType = 'array';
-  public $libraries;
+  public $libraries = [];
   /**
    * @var string
    */

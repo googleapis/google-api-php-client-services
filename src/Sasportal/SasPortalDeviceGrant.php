@@ -42,7 +42,7 @@ class SasPortalDeviceGrant extends \Google\Collection
   public $maxEirp;
   protected $moveListType = SasPortalDpaMoveList::class;
   protected $moveListDataType = 'array';
-  public $moveList;
+  public $moveList = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class SasPortalDeviceGrant extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suspensionReason;
+  public $suspensionReason = [];
 
   /**
    * @param string

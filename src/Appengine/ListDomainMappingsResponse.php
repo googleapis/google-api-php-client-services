@@ -22,7 +22,7 @@ class ListDomainMappingsResponse extends \Google\Collection
   protected $collection_key = 'domainMappings';
   protected $domainMappingsType = DomainMapping::class;
   protected $domainMappingsDataType = 'array';
-  public $domainMappings;
+  public $domainMappings = [];
   /**
    * @var string
    */

@@ -23,10 +23,10 @@ class GooglePrivacyDlpV2InspectConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $contentOptions;
+  public $contentOptions = [];
   protected $customInfoTypesType = GooglePrivacyDlpV2CustomInfoType::class;
   protected $customInfoTypesDataType = 'array';
-  public $customInfoTypes;
+  public $customInfoTypes = [];
   /**
    * @var bool
    */
@@ -37,7 +37,7 @@ class GooglePrivacyDlpV2InspectConfig extends \Google\Collection
   public $includeQuote;
   protected $infoTypesType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypesDataType = 'array';
-  public $infoTypes;
+  public $infoTypes = [];
   protected $limitsType = GooglePrivacyDlpV2FindingLimits::class;
   protected $limitsDataType = '';
   public $limits;
@@ -47,7 +47,7 @@ class GooglePrivacyDlpV2InspectConfig extends \Google\Collection
   public $minLikelihood;
   protected $ruleSetType = GooglePrivacyDlpV2InspectionRuleSet::class;
   protected $ruleSetDataType = 'array';
-  public $ruleSet;
+  public $ruleSet = [];
 
   /**
    * @param string[]

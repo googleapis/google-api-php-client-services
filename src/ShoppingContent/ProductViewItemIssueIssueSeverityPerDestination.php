@@ -23,7 +23,7 @@ class ProductViewItemIssueIssueSeverityPerDestination extends \Google\Collection
   /**
    * @var string[]
    */
-  public $demotedCountries;
+  public $demotedCountries = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class ProductViewItemIssueIssueSeverityPerDestination extends \Google\Collection
   /**
    * @var string[]
    */
-  public $disapprovedCountries;
+  public $disapprovedCountries = [];
 
   /**
    * @param string[]

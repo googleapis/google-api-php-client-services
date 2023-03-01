@@ -40,7 +40,7 @@ class SubscriptionPurchaseV2 extends \Google\Collection
   public $latestOrderId;
   protected $lineItemsType = SubscriptionPurchaseLineItem::class;
   protected $lineItemsDataType = 'array';
-  public $lineItems;
+  public $lineItems = [];
   /**
    * @var string
    */

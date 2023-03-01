@@ -22,7 +22,7 @@ class BatchUpdateIngressRulesRequest extends \Google\Collection
   protected $collection_key = 'ingressRules';
   protected $ingressRulesType = FirewallRule::class;
   protected $ingressRulesDataType = 'array';
-  public $ingressRules;
+  public $ingressRules = [];
 
   /**
    * @param FirewallRule[]

@@ -31,7 +31,7 @@ class HtmlrenderWebkitHeadlessProtoStyle extends \Google\Collection
   /**
    * @var string[]
    */
-  public $backgroundGradientColorStopArgb;
+  public $backgroundGradientColorStopArgb = [];
   /**
    * @var bool
    */
@@ -198,7 +198,7 @@ class HtmlrenderWebkitHeadlessProtoStyle extends \Google\Collection
   /**
    * @var int[]
    */
-  public $referencedResourceIndex;
+  public $referencedResourceIndex = [];
   /**
    * @var string
    */

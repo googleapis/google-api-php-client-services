@@ -22,7 +22,7 @@ class GoogleCloudAssetV1p7beta1Resource extends \Google\Model
   /**
    * @var array[]
    */
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

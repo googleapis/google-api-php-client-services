@@ -26,7 +26,7 @@ class QualityActionsRingtone extends \Google\Collection
   /**
    * @var string[]
    */
-  public $soundUrl;
+  public $soundUrl = [];
 
   /**
    * @param AssistantApiDuration

@@ -22,7 +22,7 @@ class TravelFlightsAirlineConfigCountryContactInfo extends \Google\Collection
   protected $collection_key = 'contactInfo';
   protected $contactInfoType = TravelFlightsAirlineConfigContactInfo::class;
   protected $contactInfoDataType = 'array';
-  public $contactInfo;
+  public $contactInfo = [];
   /**
    * @var string
    */

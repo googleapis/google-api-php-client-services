@@ -23,7 +23,7 @@ class TargetsPresentCondition extends \Google\Collection
   /**
    * @var string[]
    */
-  public $missingTargets;
+  public $missingTargets = [];
   /**
    * @var bool
    */

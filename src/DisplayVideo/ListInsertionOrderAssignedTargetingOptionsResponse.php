@@ -22,7 +22,7 @@ class ListInsertionOrderAssignedTargetingOptionsResponse extends \Google\Collect
   protected $collection_key = 'assignedTargetingOptions';
   protected $assignedTargetingOptionsType = AssignedTargetingOption::class;
   protected $assignedTargetingOptionsDataType = 'array';
-  public $assignedTargetingOptions;
+  public $assignedTargetingOptions = [];
   /**
    * @var string
    */

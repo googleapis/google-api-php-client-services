@@ -22,7 +22,7 @@ class GeostoreLocaleProto extends \Google\Collection
   protected $collection_key = 'language';
   protected $languageType = GeostoreLocaleLanguageProto::class;
   protected $languageDataType = 'array';
-  public $language;
+  public $language = [];
   /**
    * @var string
    */

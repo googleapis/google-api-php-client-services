@@ -26,7 +26,7 @@ class UrlMapsAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = UrlMapsScopedList::class;
   protected $itemsDataType = 'map';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class UrlMapsAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables;
+  public $unreachables = [];
   protected $warningType = UrlMapsAggregatedListWarning::class;
   protected $warningDataType = '';
   public $warning;

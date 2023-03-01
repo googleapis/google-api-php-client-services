@@ -25,16 +25,16 @@ class DeviceSelector extends \Google\Collection
   public $deviceRam;
   protected $excludedDeviceIdsType = DeviceId::class;
   protected $excludedDeviceIdsDataType = 'array';
-  public $excludedDeviceIds;
+  public $excludedDeviceIds = [];
   protected $forbiddenSystemFeaturesType = SystemFeature::class;
   protected $forbiddenSystemFeaturesDataType = 'array';
-  public $forbiddenSystemFeatures;
+  public $forbiddenSystemFeatures = [];
   protected $includedDeviceIdsType = DeviceId::class;
   protected $includedDeviceIdsDataType = 'array';
-  public $includedDeviceIds;
+  public $includedDeviceIds = [];
   protected $requiredSystemFeaturesType = SystemFeature::class;
   protected $requiredSystemFeaturesDataType = 'array';
-  public $requiredSystemFeatures;
+  public $requiredSystemFeatures = [];
 
   /**
    * @param DeviceRam

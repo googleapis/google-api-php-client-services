@@ -35,7 +35,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $endpointUris;
+  public $endpointUris = [];
   protected $freeInstanceMetadataType = FreeInstanceMetadata::class;
   protected $freeInstanceMetadataDataType = '';
   public $freeInstanceMetadata;
@@ -46,7 +46,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

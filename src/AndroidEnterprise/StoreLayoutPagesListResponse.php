@@ -22,7 +22,7 @@ class StoreLayoutPagesListResponse extends \Google\Collection
   protected $collection_key = 'page';
   protected $pageType = StorePage::class;
   protected $pageDataType = 'array';
-  public $page;
+  public $page = [];
 
   /**
    * @param StorePage[]

@@ -29,7 +29,7 @@ class Format extends \Google\Collection
   public $formatType;
   protected $resourcesType = PolyFile::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
   protected $rootType = PolyFile::class;
   protected $rootDataType = '';
   public $root;

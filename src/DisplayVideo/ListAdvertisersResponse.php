@@ -22,7 +22,7 @@ class ListAdvertisersResponse extends \Google\Collection
   protected $collection_key = 'advertisers';
   protected $advertisersType = Advertiser::class;
   protected $advertisersDataType = 'array';
-  public $advertisers;
+  public $advertisers = [];
   /**
    * @var string
    */

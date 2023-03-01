@@ -29,7 +29,7 @@ class MergedResult extends \Google\Collection
   public $state;
   protected $testSuiteOverviewsType = TestSuiteOverview::class;
   protected $testSuiteOverviewsDataType = 'array';
-  public $testSuiteOverviews;
+  public $testSuiteOverviews = [];
 
   /**
    * @param Outcome

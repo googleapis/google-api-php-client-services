@@ -23,7 +23,7 @@ class Network extends \Google\Collection
   /**
    * @var string[]
    */
-  public $forwardedPorts;
+  public $forwardedPorts = [];
   /**
    * @var string
    */

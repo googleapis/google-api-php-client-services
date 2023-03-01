@@ -26,7 +26,7 @@ class FirewallList extends \Google\Collection
   public $id;
   protected $itemsType = Firewall::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

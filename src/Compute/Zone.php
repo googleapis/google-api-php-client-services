@@ -23,7 +23,7 @@ class Zone extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableCpuPlatforms;
+  public $availableCpuPlatforms = [];
   /**
    * @var string
    */

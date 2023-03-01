@@ -23,23 +23,23 @@ class TestResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $debugMessages;
+  public $debugMessages = [];
   protected $errorPositionType = SourcePosition::class;
   protected $errorPositionDataType = '';
   public $errorPosition;
   protected $expressionReportsType = ExpressionReport::class;
   protected $expressionReportsDataType = 'array';
-  public $expressionReports;
+  public $expressionReports = [];
   protected $functionCallsType = FunctionCall::class;
   protected $functionCallsDataType = 'array';
-  public $functionCalls;
+  public $functionCalls = [];
   /**
    * @var string
    */
   public $state;
   protected $visitedExpressionsType = VisitedExpression::class;
   protected $visitedExpressionsDataType = 'array';
-  public $visitedExpressions;
+  public $visitedExpressions = [];
 
   /**
    * @param string[]

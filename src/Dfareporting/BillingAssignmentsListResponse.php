@@ -22,7 +22,7 @@ class BillingAssignmentsListResponse extends \Google\Collection
   protected $collection_key = 'billingAssignments';
   protected $billingAssignmentsType = BillingAssignment::class;
   protected $billingAssignmentsDataType = 'array';
-  public $billingAssignments;
+  public $billingAssignments = [];
   /**
    * @var string
    */

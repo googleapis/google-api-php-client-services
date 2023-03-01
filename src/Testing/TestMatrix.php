@@ -55,7 +55,7 @@ class TestMatrix extends \Google\Collection
   public $state;
   protected $testExecutionsType = TestExecution::class;
   protected $testExecutionsDataType = 'array';
-  public $testExecutions;
+  public $testExecutions = [];
   /**
    * @var string
    */

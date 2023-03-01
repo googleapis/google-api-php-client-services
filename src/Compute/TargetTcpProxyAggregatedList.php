@@ -26,7 +26,7 @@ class TargetTcpProxyAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = TargetTcpProxiesScopedList::class;
   protected $itemsDataType = 'map';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class TargetTcpProxyAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables;
+  public $unreachables = [];
   protected $warningType = TargetTcpProxyAggregatedListWarning::class;
   protected $warningDataType = '';
   public $warning;

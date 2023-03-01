@@ -23,7 +23,7 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetReques
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetReques
   /**
    * @var string[]
    */
-  public $metrics;
+  public $metrics = [];
   /**
    * @var int
    */

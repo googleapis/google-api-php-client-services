@@ -35,7 +35,7 @@ class Page extends \Google\Collection
   public $objectId;
   protected $pageElementsType = PageElement::class;
   protected $pageElementsDataType = 'array';
-  public $pageElements;
+  public $pageElements = [];
   protected $pagePropertiesType = PageProperties::class;
   protected $pagePropertiesDataType = '';
   public $pageProperties;

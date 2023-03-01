@@ -26,7 +26,7 @@ class GooglePrivacyDlpV2ListStoredInfoTypesResponse extends \Google\Collection
   public $nextPageToken;
   protected $storedInfoTypesType = GooglePrivacyDlpV2StoredInfoType::class;
   protected $storedInfoTypesDataType = 'array';
-  public $storedInfoTypes;
+  public $storedInfoTypes = [];
 
   /**
    * @param string

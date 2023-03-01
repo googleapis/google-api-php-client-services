@@ -30,18 +30,18 @@ class AppRestrictionsSchemaRestriction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $entry;
+  public $entry = [];
   /**
    * @var string[]
    */
-  public $entryValue;
+  public $entryValue = [];
   /**
    * @var string
    */
   public $key;
   protected $nestedRestrictionType = AppRestrictionsSchemaRestriction::class;
   protected $nestedRestrictionDataType = 'array';
-  public $nestedRestriction;
+  public $nestedRestriction = [];
   /**
    * @var string
    */

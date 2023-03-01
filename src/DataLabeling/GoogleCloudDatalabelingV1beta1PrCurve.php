@@ -29,7 +29,7 @@ class GoogleCloudDatalabelingV1beta1PrCurve extends \Google\Collection
   public $areaUnderCurve;
   protected $confidenceMetricsEntriesType = GoogleCloudDatalabelingV1beta1ConfidenceMetricsEntry::class;
   protected $confidenceMetricsEntriesDataType = 'array';
-  public $confidenceMetricsEntries;
+  public $confidenceMetricsEntries = [];
   /**
    * @var float
    */

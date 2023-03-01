@@ -39,7 +39,7 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $methodTypes;
+  public $methodTypes = [];
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceTypes;
+  public $resourceTypes = [];
   /**
    * @var string
    */

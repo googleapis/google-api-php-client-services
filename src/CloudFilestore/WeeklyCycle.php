@@ -22,7 +22,7 @@ class WeeklyCycle extends \Google\Collection
   protected $collection_key = 'schedule';
   protected $scheduleType = Schedule::class;
   protected $scheduleDataType = 'array';
-  public $schedule;
+  public $schedule = [];
 
   /**
    * @param Schedule[]

@@ -54,7 +54,7 @@ class GoogleCloudIntegrationsV1alphaAuthConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $expiryNotificationDuration;
+  public $expiryNotificationDuration = [];
   /**
    * @var string
    */

@@ -25,7 +25,7 @@ class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collec
   public $document;
   protected $longRunningOperationsType = GoogleLongrunningOperation::class;
   protected $longRunningOperationsDataType = 'array';
-  public $longRunningOperations;
+  public $longRunningOperations = [];
   protected $metadataType = GoogleCloudContentwarehouseV1ResponseMetadata::class;
   protected $metadataDataType = '';
   public $metadata;

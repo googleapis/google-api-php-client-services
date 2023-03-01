@@ -22,7 +22,7 @@ class RetrieveImportableDomainsResponse extends \Google\Collection
   protected $collection_key = 'domains';
   protected $domainsType = Domain::class;
   protected $domainsDataType = 'array';
-  public $domains;
+  public $domains = [];
   /**
    * @var string
    */

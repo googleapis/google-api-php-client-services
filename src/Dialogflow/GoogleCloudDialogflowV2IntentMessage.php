@@ -46,7 +46,7 @@ class GoogleCloudDialogflowV2IntentMessage extends \Google\Model
   /**
    * @var array[]
    */
-  public $payload;
+  public $payload = [];
   /**
    * @var string
    */

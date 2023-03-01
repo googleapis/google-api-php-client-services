@@ -23,7 +23,7 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $collectionIds;
+  public $collectionIds = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $namespaceIds;
+  public $namespaceIds = [];
   /**
    * @var string
    */

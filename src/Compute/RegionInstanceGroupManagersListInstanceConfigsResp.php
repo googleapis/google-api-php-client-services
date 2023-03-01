@@ -22,7 +22,7 @@ class RegionInstanceGroupManagersListInstanceConfigsResp extends \Google\Collect
   protected $collection_key = 'items';
   protected $itemsType = PerInstanceConfig::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

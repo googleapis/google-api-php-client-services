@@ -23,7 +23,7 @@ class CountryTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $countries;
+  public $countries = [];
   /**
    * @var bool
    */

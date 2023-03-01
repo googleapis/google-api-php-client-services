@@ -37,7 +37,7 @@ class GeostoreEstablishmentProto extends \Google\Collection
   public $serviceArea;
   protected $telephoneType = GeostoreTelephoneProto::class;
   protected $telephoneDataType = 'array';
-  public $telephone;
+  public $telephone = [];
   /**
    * @var string
    */

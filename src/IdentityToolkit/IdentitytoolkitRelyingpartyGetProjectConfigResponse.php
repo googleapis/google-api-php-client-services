@@ -31,7 +31,7 @@ class IdentitytoolkitRelyingpartyGetProjectConfigResponse extends \Google\Collec
   /**
    * @var string[]
    */
-  public $authorizedDomains;
+  public $authorizedDomains = [];
   protected $changeEmailTemplateType = EmailTemplate::class;
   protected $changeEmailTemplateDataType = '';
   public $changeEmailTemplate;
@@ -45,7 +45,7 @@ class IdentitytoolkitRelyingpartyGetProjectConfigResponse extends \Google\Collec
   public $enableAnonymousUser;
   protected $idpConfigType = IdpConfig::class;
   protected $idpConfigDataType = 'array';
-  public $idpConfig;
+  public $idpConfig = [];
   protected $legacyResetPasswordTemplateType = EmailTemplate::class;
   protected $legacyResetPasswordTemplateDataType = '';
   public $legacyResetPasswordTemplate;

@@ -22,13 +22,13 @@ class SearchRequest extends \Google\Collection
   protected $collection_key = 'facetOptions';
   protected $contextAttributesType = ContextAttribute::class;
   protected $contextAttributesDataType = 'array';
-  public $contextAttributes;
+  public $contextAttributes = [];
   protected $dataSourceRestrictionsType = DataSourceRestriction::class;
   protected $dataSourceRestrictionsDataType = 'array';
-  public $dataSourceRestrictions;
+  public $dataSourceRestrictions = [];
   protected $facetOptionsType = FacetOptions::class;
   protected $facetOptionsDataType = 'array';
-  public $facetOptions;
+  public $facetOptions = [];
   /**
    * @var int
    */

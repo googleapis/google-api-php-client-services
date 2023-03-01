@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2AuxiliaryTable extends \Google\Collection
   protected $collection_key = 'quasiIds';
   protected $quasiIdsType = GooglePrivacyDlpV2QuasiIdField::class;
   protected $quasiIdsDataType = 'array';
-  public $quasiIds;
+  public $quasiIds = [];
   protected $relativeFrequencyType = GooglePrivacyDlpV2FieldId::class;
   protected $relativeFrequencyDataType = '';
   public $relativeFrequency;

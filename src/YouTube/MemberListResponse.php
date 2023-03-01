@@ -30,7 +30,7 @@ class MemberListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = Member::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

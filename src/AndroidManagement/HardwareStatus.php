@@ -23,15 +23,15 @@ class HardwareStatus extends \Google\Collection
   /**
    * @var float[]
    */
-  public $batteryTemperatures;
+  public $batteryTemperatures = [];
   /**
    * @var float[]
    */
-  public $cpuTemperatures;
+  public $cpuTemperatures = [];
   /**
    * @var float[]
    */
-  public $cpuUsages;
+  public $cpuUsages = [];
   /**
    * @var string
    */
@@ -39,15 +39,15 @@ class HardwareStatus extends \Google\Collection
   /**
    * @var float[]
    */
-  public $fanSpeeds;
+  public $fanSpeeds = [];
   /**
    * @var float[]
    */
-  public $gpuTemperatures;
+  public $gpuTemperatures = [];
   /**
    * @var float[]
    */
-  public $skinTemperatures;
+  public $skinTemperatures = [];
 
   /**
    * @param float[]

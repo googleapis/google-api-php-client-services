@@ -35,7 +35,7 @@ class NlpSemanticParsingLocalLocation extends \Google\Collection
   public $isMerged;
   protected $locationConstraintType = NlpSemanticParsingLocalLocationConstraint::class;
   protected $locationConstraintDataType = 'array';
-  public $locationConstraint;
+  public $locationConstraint = [];
   /**
    * @var int
    */

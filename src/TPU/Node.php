@@ -41,7 +41,7 @@ class Node extends \Google\Collection
   public $createTime;
   protected $dataDisksType = AttachedDisk::class;
   protected $dataDisksDataType = 'array';
-  public $dataDisks;
+  public $dataDisks = [];
   /**
    * @var string
    */
@@ -61,11 +61,11 @@ class Node extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class Node extends \Google\Collection
   public $networkConfig;
   protected $networkEndpointsType = NetworkEndpoint::class;
   protected $networkEndpointsDataType = 'array';
-  public $networkEndpoints;
+  public $networkEndpoints = [];
   /**
    * @var string
    */
@@ -95,11 +95,11 @@ class Node extends \Google\Collection
   public $state;
   protected $symptomsType = Symptom::class;
   protected $symptomsDataType = 'array';
-  public $symptoms;
+  public $symptoms = [];
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
 
   /**
    * @param AcceleratorConfig

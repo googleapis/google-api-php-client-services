@@ -29,7 +29,7 @@ class VideoContentSearchCaptionSpanAnchorFeatures extends \Google\Collection
   /**
    * @var float[]
    */
-  public $embeddingDistance;
+  public $embeddingDistance = [];
   /**
    * @var int
    */

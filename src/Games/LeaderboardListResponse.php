@@ -22,7 +22,7 @@ class LeaderboardListResponse extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Leaderboard::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

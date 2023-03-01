@@ -22,7 +22,7 @@ class SelectionList extends \Google\Collection
   protected $collection_key = 'values';
   protected $valuesType = Selection::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param Selection[]

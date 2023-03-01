@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1SecurityReportQuery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class GoogleCloudApigeeV1SecurityReportQuery extends \Google\Collection
   public $limit;
   protected $metricsType = GoogleCloudApigeeV1SecurityReportQueryMetric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   /**
    * @var string
    */

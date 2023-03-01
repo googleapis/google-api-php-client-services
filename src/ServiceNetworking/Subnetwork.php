@@ -42,7 +42,7 @@ class Subnetwork extends \Google\Collection
   public $region;
   protected $secondaryIpRangesType = SecondaryIpRange::class;
   protected $secondaryIpRangesDataType = 'array';
-  public $secondaryIpRanges;
+  public $secondaryIpRanges = [];
 
   /**
    * @param string

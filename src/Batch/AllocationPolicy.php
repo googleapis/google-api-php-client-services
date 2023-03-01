@@ -22,11 +22,11 @@ class AllocationPolicy extends \Google\Collection
   protected $collection_key = 'instances';
   protected $instancesType = InstancePolicyOrTemplate::class;
   protected $instancesDataType = 'array';
-  public $instances;
+  public $instances = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $locationType = LocationPolicy::class;
   protected $locationDataType = '';
   public $location;

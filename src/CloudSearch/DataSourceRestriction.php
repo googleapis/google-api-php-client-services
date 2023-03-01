@@ -22,7 +22,7 @@ class DataSourceRestriction extends \Google\Collection
   protected $collection_key = 'filterOptions';
   protected $filterOptionsType = FilterOptions::class;
   protected $filterOptionsDataType = 'array';
-  public $filterOptions;
+  public $filterOptions = [];
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
   public $source;

@@ -31,7 +31,7 @@ class GoogleCloudMlV1PredictionInput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputPaths;
+  public $inputPaths = [];
   /**
    * @var string
    */

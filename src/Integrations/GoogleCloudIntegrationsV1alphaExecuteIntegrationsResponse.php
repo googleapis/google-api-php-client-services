@@ -34,10 +34,10 @@ class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse extends \Google\
   /**
    * @var array[]
    */
-  public $outputParameters;
+  public $outputParameters = [];
   protected $parameterEntriesType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $parameterEntriesDataType = 'array';
-  public $parameterEntries;
+  public $parameterEntries = [];
 
   /**
    * @param EnterpriseCrmFrontendsEventbusProtoEventParameters

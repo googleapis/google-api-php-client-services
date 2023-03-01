@@ -26,7 +26,7 @@ class ListPhotosResponse extends \Google\Collection
   public $nextPageToken;
   protected $photosType = Photo::class;
   protected $photosDataType = 'array';
-  public $photos;
+  public $photos = [];
 
   /**
    * @param string

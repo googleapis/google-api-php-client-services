@@ -26,7 +26,7 @@ class ListQuerySourcesResponse extends \Google\Collection
   public $nextPageToken;
   protected $sourcesType = QuerySource::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
 
   /**
    * @param string

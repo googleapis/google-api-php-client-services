@@ -31,7 +31,7 @@ class NodeGroupOperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -45,11 +45,11 @@ class NodeGroupOperationMetadata extends \Google\Collection
   public $status;
   protected $statusHistoryType = ClusterOperationStatus::class;
   protected $statusHistoryDataType = 'array';
-  public $statusHistory;
+  public $statusHistory = [];
   /**
    * @var string[]
    */
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param string

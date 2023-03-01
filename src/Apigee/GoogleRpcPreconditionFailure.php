@@ -22,7 +22,7 @@ class GoogleRpcPreconditionFailure extends \Google\Collection
   protected $collection_key = 'violations';
   protected $violationsType = GoogleRpcPreconditionFailureViolation::class;
   protected $violationsDataType = 'array';
-  public $violations;
+  public $violations = [];
 
   /**
    * @param GoogleRpcPreconditionFailureViolation[]

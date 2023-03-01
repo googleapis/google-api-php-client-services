@@ -22,7 +22,7 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   protected $collection_key = 'nextTasks';
   protected $alertConfigsType = EnterpriseCrmEventbusProtoTaskAlertConfig::class;
   protected $alertConfigsDataType = 'array';
-  public $alertConfigs;
+  public $alertConfigs = [];
   /**
    * @var string
    */
@@ -68,14 +68,14 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   public $lastModifiedTime;
   protected $nextTasksType = EnterpriseCrmEventbusProtoNextTask::class;
   protected $nextTasksDataType = 'array';
-  public $nextTasks;
+  public $nextTasks = [];
   /**
    * @var string
    */
   public $nextTasksExecutionPolicy;
   protected $parametersType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $parametersDataType = 'map';
-  public $parameters;
+  public $parameters = [];
   protected $positionType = EnterpriseCrmEventbusProtoCoordinate::class;
   protected $positionDataType = '';
   public $position;

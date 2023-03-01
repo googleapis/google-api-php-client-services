@@ -22,7 +22,7 @@ class AssistantLogsDeviceSelectionLog extends \Google\Collection
   protected $collection_key = 'testCodes';
   protected $allDefaultDevicesType = AssistantLogsDefaultDeviceLog::class;
   protected $allDefaultDevicesDataType = 'array';
-  public $allDefaultDevices;
+  public $allDefaultDevices = [];
   protected $allMediaStreamLogType = AssistantLogsAllMediaStreamLog::class;
   protected $allMediaStreamLogDataType = '';
   public $allMediaStreamLog;
@@ -38,10 +38,10 @@ class AssistantLogsDeviceSelectionLog extends \Google\Collection
   /**
    * @var string[]
    */
-  public $devicesStr;
+  public $devicesStr = [];
   protected $inputErrorLogType = AssistantLogsInputErrorLog::class;
   protected $inputErrorLogDataType = 'array';
-  public $inputErrorLog;
+  public $inputErrorLog = [];
   protected $localDeviceType = AssistantLogsDeviceInfoLog::class;
   protected $localDeviceDataType = '';
   public $localDevice;
@@ -66,7 +66,7 @@ class AssistantLogsDeviceSelectionLog extends \Google\Collection
   public $selectionResult;
   protected $testCodesType = AssistantLogsDeviceTargetingTestCode::class;
   protected $testCodesDataType = 'array';
-  public $testCodes;
+  public $testCodes = [];
 
   /**
    * @param AssistantLogsDefaultDeviceLog[]

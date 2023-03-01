@@ -22,7 +22,7 @@ class ListFederationsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $federationsType = Federation::class;
   protected $federationsDataType = 'array';
-  public $federations;
+  public $federations = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListFederationsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param Federation[]

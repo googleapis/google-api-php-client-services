@@ -25,7 +25,7 @@ class GeostoreTransitLineVariantProto extends \Google\Collection
   public $lineConcept;
   protected $stopsType = GeostoreServicedStopProto::class;
   protected $stopsDataType = 'array';
-  public $stops;
+  public $stops = [];
 
   /**
    * @param GeostoreFeatureIdProto

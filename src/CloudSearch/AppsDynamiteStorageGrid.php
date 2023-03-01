@@ -29,7 +29,7 @@ class AppsDynamiteStorageGrid extends \Google\Collection
   public $columnCount;
   protected $itemsType = AppsDynamiteStorageGridGridItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   protected $onClickType = AppsDynamiteStorageOnClick::class;
   protected $onClickDataType = '';
   public $onClick;

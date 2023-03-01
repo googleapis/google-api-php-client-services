@@ -44,7 +44,7 @@ class GoogleCloudDocumentaiV1beta2DocumentEntity extends \Google\Collection
   public $pageAnchor;
   protected $propertiesType = GoogleCloudDocumentaiV1beta2DocumentEntity::class;
   protected $propertiesDataType = 'array';
-  public $properties;
+  public $properties = [];
   protected $provenanceType = GoogleCloudDocumentaiV1beta2DocumentProvenance::class;
   protected $provenanceDataType = '';
   public $provenance;

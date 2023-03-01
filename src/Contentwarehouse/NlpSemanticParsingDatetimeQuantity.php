@@ -30,7 +30,7 @@ class NlpSemanticParsingDatetimeQuantity extends \Google\Collection
   public $numberSpan;
   protected $symbolicQuantityType = NlpSemanticParsingDatetimeQuantity::class;
   protected $symbolicQuantityDataType = 'array';
-  public $symbolicQuantity;
+  public $symbolicQuantity = [];
   /**
    * @var string
    */

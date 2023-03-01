@@ -30,7 +30,7 @@ class Thread extends \Google\Collection
   public $id;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
-  public $messages;
+  public $messages = [];
   /**
    * @var string
    */

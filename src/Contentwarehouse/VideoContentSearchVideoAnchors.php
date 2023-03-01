@@ -34,7 +34,7 @@ class VideoContentSearchVideoAnchors extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filterReason;
+  public $filterReason = [];
   /**
    * @var bool
    */
@@ -42,7 +42,7 @@ class VideoContentSearchVideoAnchors extends \Google\Collection
   /**
    * @var string[]
    */
-  public $mergedAnchorsSources;
+  public $mergedAnchorsSources = [];
   /**
    * @var float
    */
@@ -67,7 +67,7 @@ class VideoContentSearchVideoAnchors extends \Google\Collection
   public $thumbnailSetInfo;
   protected $videoAnchorType = VideoContentSearchVideoAnchor::class;
   protected $videoAnchorDataType = 'array';
-  public $videoAnchor;
+  public $videoAnchor = [];
   protected $videoIntroductionType = VideoContentSearchVideoIntroduction::class;
   protected $videoIntroductionDataType = '';
   public $videoIntroduction;

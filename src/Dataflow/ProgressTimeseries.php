@@ -23,7 +23,7 @@ class ProgressTimeseries extends \Google\Collection
   public $currentProgress;
   protected $dataPointsType = Point::class;
   protected $dataPointsDataType = 'array';
-  public $dataPoints;
+  public $dataPoints = [];
 
   public function setCurrentProgress($currentProgress)
   {

@@ -22,7 +22,7 @@ class ListGcpUserAccessBindingsResponse extends \Google\Collection
   protected $collection_key = 'gcpUserAccessBindings';
   protected $gcpUserAccessBindingsType = GcpUserAccessBinding::class;
   protected $gcpUserAccessBindingsDataType = 'array';
-  public $gcpUserAccessBindings;
+  public $gcpUserAccessBindings = [];
   /**
    * @var string
    */

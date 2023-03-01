@@ -26,7 +26,7 @@ class CommitmentList extends \Google\Collection
   public $id;
   protected $itemsType = Commitment::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -34,7 +34,7 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
   public $modelIdentifier;
   protected $resultsType = ImageRepositorySpeechRecognitionResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   protected $transcriptAsrType = PseudoVideoData::class;
   protected $transcriptAsrDataType = '';
   public $transcriptAsr;

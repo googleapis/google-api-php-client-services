@@ -23,7 +23,7 @@ class GeostoreNameProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $flag;
+  public $flag = [];
   /**
    * @var string
    */

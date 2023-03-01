@@ -33,7 +33,7 @@ class GoogleCloudVisionV1p3beta1Block extends \Google\Collection
   public $confidence;
   protected $paragraphsType = GoogleCloudVisionV1p3beta1Paragraph::class;
   protected $paragraphsDataType = 'array';
-  public $paragraphs;
+  public $paragraphs = [];
   protected $propertyType = GoogleCloudVisionV1p3beta1TextAnnotationTextProperty::class;
   protected $propertyDataType = '';
   public $property;

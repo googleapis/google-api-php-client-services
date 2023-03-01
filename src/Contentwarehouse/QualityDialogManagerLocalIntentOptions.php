@@ -23,7 +23,7 @@ class QualityDialogManagerLocalIntentOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $intent;
+  public $intent = [];
 
   /**
    * @param string[]

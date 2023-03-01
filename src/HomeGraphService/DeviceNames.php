@@ -23,7 +23,7 @@ class DeviceNames extends \Google\Collection
   /**
    * @var string[]
    */
-  public $defaultNames;
+  public $defaultNames = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class DeviceNames extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nicknames;
+  public $nicknames = [];
 
   /**
    * @param string[]

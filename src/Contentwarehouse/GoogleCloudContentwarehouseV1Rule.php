@@ -22,7 +22,7 @@ class GoogleCloudContentwarehouseV1Rule extends \Google\Collection
   protected $collection_key = 'actions';
   protected $actionsType = GoogleCloudContentwarehouseV1Action::class;
   protected $actionsDataType = 'array';
-  public $actions;
+  public $actions = [];
   /**
    * @var string
    */

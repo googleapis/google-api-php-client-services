@@ -22,7 +22,7 @@ class NodeConfig extends \Google\Collection
   protected $collection_key = 'taints';
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
-  public $accelerators;
+  public $accelerators = [];
   protected $advancedMachineFeaturesType = AdvancedMachineFeatures::class;
   protected $advancedMachineFeaturesDataType = '';
   public $advancedMachineFeatures;
@@ -63,7 +63,7 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $linuxNodeConfigType = LinuxNodeConfig::class;
   protected $linuxNodeConfigDataType = '';
   public $linuxNodeConfig;
@@ -84,7 +84,7 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -96,7 +96,7 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $oauthScopes;
+  public $oauthScopes = [];
   /**
    * @var bool
    */
@@ -107,7 +107,7 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceLabels;
+  public $resourceLabels = [];
   protected $sandboxConfigType = SandboxConfig::class;
   protected $sandboxConfigDataType = '';
   public $sandboxConfig;
@@ -125,10 +125,10 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   protected $taintsType = NodeTaint::class;
   protected $taintsDataType = 'array';
-  public $taints;
+  public $taints = [];
   protected $windowsNodeConfigType = WindowsNodeConfig::class;
   protected $windowsNodeConfigDataType = '';
   public $windowsNodeConfig;

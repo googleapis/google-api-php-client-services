@@ -22,7 +22,7 @@ class DeviceTierConfig extends \Google\Collection
   protected $collection_key = 'userCountrySets';
   protected $deviceGroupsType = DeviceGroup::class;
   protected $deviceGroupsDataType = 'array';
-  public $deviceGroups;
+  public $deviceGroups = [];
   /**
    * @var string
    */
@@ -32,7 +32,7 @@ class DeviceTierConfig extends \Google\Collection
   public $deviceTierSet;
   protected $userCountrySetsType = UserCountrySet::class;
   protected $userCountrySetsDataType = 'array';
-  public $userCountrySets;
+  public $userCountrySets = [];
 
   /**
    * @param DeviceGroup[]

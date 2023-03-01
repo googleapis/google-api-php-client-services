@@ -22,14 +22,14 @@ class Presentation extends \Google\Collection
   protected $collection_key = 'slides';
   protected $layoutsType = Page::class;
   protected $layoutsDataType = 'array';
-  public $layouts;
+  public $layouts = [];
   /**
    * @var string
    */
   public $locale;
   protected $mastersType = Page::class;
   protected $mastersDataType = 'array';
-  public $masters;
+  public $masters = [];
   protected $notesMasterType = Page::class;
   protected $notesMasterDataType = '';
   public $notesMaster;
@@ -46,7 +46,7 @@ class Presentation extends \Google\Collection
   public $revisionId;
   protected $slidesType = Page::class;
   protected $slidesDataType = 'array';
-  public $slides;
+  public $slides = [];
   /**
    * @var string
    */

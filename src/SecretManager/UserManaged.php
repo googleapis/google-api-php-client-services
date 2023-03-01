@@ -22,7 +22,7 @@ class UserManaged extends \Google\Collection
   protected $collection_key = 'replicas';
   protected $replicasType = Replica::class;
   protected $replicasDataType = 'array';
-  public $replicas;
+  public $replicas = [];
 
   /**
    * @param Replica[]

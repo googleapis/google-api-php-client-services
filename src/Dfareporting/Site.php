@@ -56,7 +56,7 @@ class Site extends \Google\Collection
   public $name;
   protected $siteContactsType = SiteContact::class;
   protected $siteContactsDataType = 'array';
-  public $siteContacts;
+  public $siteContacts = [];
   protected $siteSettingsType = SiteSettings::class;
   protected $siteSettingsDataType = '';
   public $siteSettings;

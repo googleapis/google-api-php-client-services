@@ -30,7 +30,7 @@ class EnumValue extends \Google\Collection
   public $number;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
-  public $options;
+  public $options = [];
 
   /**
    * @param string

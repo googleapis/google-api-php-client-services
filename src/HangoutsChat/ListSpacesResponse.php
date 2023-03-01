@@ -26,7 +26,7 @@ class ListSpacesResponse extends \Google\Collection
   public $nextPageToken;
   protected $spacesType = Space::class;
   protected $spacesDataType = 'array';
-  public $spaces;
+  public $spaces = [];
 
   /**
    * @param string

@@ -22,7 +22,7 @@ class GoogleCloudChannelV1ListCustomerRepricingConfigsResponse extends \Google\C
   protected $collection_key = 'customerRepricingConfigs';
   protected $customerRepricingConfigsType = GoogleCloudChannelV1CustomerRepricingConfig::class;
   protected $customerRepricingConfigsDataType = 'array';
-  public $customerRepricingConfigs;
+  public $customerRepricingConfigs = [];
   /**
    * @var string
    */

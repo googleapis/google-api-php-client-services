@@ -26,7 +26,7 @@ class UptimeCheckConfig extends \Google\Collection
   public $checkerType;
   protected $contentMatchersType = ContentMatcher::class;
   protected $contentMatchersDataType = 'array';
-  public $contentMatchers;
+  public $contentMatchers = [];
   /**
    * @var string
    */
@@ -36,7 +36,7 @@ class UptimeCheckConfig extends \Google\Collection
   public $httpCheck;
   protected $internalCheckersType = InternalChecker::class;
   protected $internalCheckersDataType = 'array';
-  public $internalCheckers;
+  public $internalCheckers = [];
   /**
    * @var bool
    */
@@ -58,7 +58,7 @@ class UptimeCheckConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $selectedRegions;
+  public $selectedRegions = [];
   protected $tcpCheckType = TcpCheck::class;
   protected $tcpCheckDataType = '';
   public $tcpCheck;
@@ -69,7 +69,7 @@ class UptimeCheckConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $userLabels;
+  public $userLabels = [];
 
   /**
    * @param string

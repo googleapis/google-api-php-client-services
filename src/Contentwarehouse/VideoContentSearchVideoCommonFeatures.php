@@ -34,7 +34,7 @@ class VideoContentSearchVideoCommonFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unifiedScoringBertModels;
+  public $unifiedScoringBertModels = [];
 
   /**
    * @param int

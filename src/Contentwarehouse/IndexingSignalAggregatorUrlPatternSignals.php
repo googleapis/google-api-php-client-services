@@ -31,7 +31,7 @@ class IndexingSignalAggregatorUrlPatternSignals extends \Google\Collection
   public $patternScore;
   protected $priorSignalType = IndexingSignalAggregatorUrlPatternSignalsPriorSignal::class;
   protected $priorSignalDataType = 'array';
-  public $priorSignal;
+  public $priorSignal = [];
   protected $regexpPatternScoreType = IndexingSignalAggregatorAggregatedScore::class;
   protected $regexpPatternScoreDataType = '';
   public $regexpPatternScore;

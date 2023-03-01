@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1QueryTabularStatsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $columns;
+  public $columns = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GoogleCloudApigeeV1QueryTabularStatsResponse extends \Google\Collection
   /**
    * @var array[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string[]

@@ -30,7 +30,7 @@ class ProjectsGetXpnResources extends \Google\Collection
   public $nextPageToken;
   protected $resourcesType = XpnResourceId::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
 
   /**
    * @param string

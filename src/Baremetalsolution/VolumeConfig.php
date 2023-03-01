@@ -30,18 +30,18 @@ class VolumeConfig extends \Google\Collection
   public $id;
   protected $lunRangesType = LunRange::class;
   protected $lunRangesDataType = 'array';
-  public $lunRanges;
+  public $lunRanges = [];
   /**
    * @var string[]
    */
-  public $machineIds;
+  public $machineIds = [];
   /**
    * @var string
    */
   public $name;
   protected $nfsExportsType = NfsExport::class;
   protected $nfsExportsDataType = 'array';
-  public $nfsExports;
+  public $nfsExports = [];
   /**
    * @var string
    */

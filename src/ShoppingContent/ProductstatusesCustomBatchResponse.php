@@ -22,7 +22,7 @@ class ProductstatusesCustomBatchResponse extends \Google\Collection
   protected $collection_key = 'entries';
   protected $entriesType = ProductstatusesCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
-  public $entries;
+  public $entries = [];
   /**
    * @var string
    */

@@ -44,7 +44,7 @@ class Post extends \Google\Collection
   public $id;
   protected $imagesType = PostImages::class;
   protected $imagesDataType = 'array';
-  public $images;
+  public $images = [];
   /**
    * @var string
    */
@@ -52,7 +52,7 @@ class Post extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $locationType = PostLocation::class;
   protected $locationDataType = '';
   public $location;

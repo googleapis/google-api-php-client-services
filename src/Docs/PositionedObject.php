@@ -30,14 +30,14 @@ class PositionedObject extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds;
+  public $suggestedDeletionIds = [];
   /**
    * @var string
    */
   public $suggestedInsertionId;
   protected $suggestedPositionedObjectPropertiesChangesType = SuggestedPositionedObjectProperties::class;
   protected $suggestedPositionedObjectPropertiesChangesDataType = 'map';
-  public $suggestedPositionedObjectPropertiesChanges;
+  public $suggestedPositionedObjectPropertiesChanges = [];
 
   /**
    * @param string

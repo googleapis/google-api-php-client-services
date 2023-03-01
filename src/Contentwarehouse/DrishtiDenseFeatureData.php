@@ -22,14 +22,14 @@ class DrishtiDenseFeatureData extends \Google\Collection
   protected $collection_key = 'value';
   protected $extraType = DrishtiFeatureExtra::class;
   protected $extraDataType = 'array';
-  public $extra;
+  public $extra = [];
   protected $generalExtraType = DrishtiFeatureExtra::class;
   protected $generalExtraDataType = '';
   public $generalExtra;
   /**
    * @var float[]
    */
-  public $value;
+  public $value = [];
 
   /**
    * @param DrishtiFeatureExtra[]

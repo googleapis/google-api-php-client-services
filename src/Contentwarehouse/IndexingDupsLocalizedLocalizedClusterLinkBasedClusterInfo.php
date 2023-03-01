@@ -34,10 +34,10 @@ class IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo extends \Google\
   public $lastProcessedOutputTimestampMs;
   protected $linkMemberType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfoLinkMember::class;
   protected $linkMemberDataType = 'array';
-  public $linkMember;
+  public $linkMember = [];
   protected $unvalidatedOutlinkType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfoLinkData::class;
   protected $unvalidatedOutlinkDataType = 'array';
-  public $unvalidatedOutlink;
+  public $unvalidatedOutlink = [];
 
   /**
    * @param string

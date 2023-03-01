@@ -25,7 +25,7 @@ class VideoContentSearchVideoAnchorSets extends \Google\Collection
   public $videoActions;
   protected $videoAnchorsType = VideoContentSearchVideoAnchors::class;
   protected $videoAnchorsDataType = 'array';
-  public $videoAnchors;
+  public $videoAnchors = [];
   protected $videoInfoType = VideoContentSearchVideoInfo::class;
   protected $videoInfoDataType = '';
   public $videoInfo;

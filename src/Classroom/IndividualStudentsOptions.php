@@ -23,7 +23,7 @@ class IndividualStudentsOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $studentIds;
+  public $studentIds = [];
 
   /**
    * @param string[]

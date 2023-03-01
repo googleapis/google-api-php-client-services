@@ -22,7 +22,7 @@ class AppliedLabelChange extends \Google\Collection
   protected $collection_key = 'changes';
   protected $changesType = AppliedLabelChangeDetail::class;
   protected $changesDataType = 'array';
-  public $changes;
+  public $changes = [];
 
   /**
    * @param AppliedLabelChangeDetail[]

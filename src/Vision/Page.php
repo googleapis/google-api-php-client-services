@@ -22,7 +22,7 @@ class Page extends \Google\Collection
   protected $collection_key = 'blocks';
   protected $blocksType = Block::class;
   protected $blocksDataType = 'array';
-  public $blocks;
+  public $blocks = [];
   /**
    * @var float
    */

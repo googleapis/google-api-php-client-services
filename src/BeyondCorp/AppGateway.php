@@ -22,7 +22,7 @@ class AppGateway extends \Google\Collection
   protected $collection_key = 'allocatedConnections';
   protected $allocatedConnectionsType = AllocatedConnection::class;
   protected $allocatedConnectionsDataType = 'array';
-  public $allocatedConnections;
+  public $allocatedConnections = [];
   /**
    * @var string
    */
@@ -38,7 +38,7 @@ class AppGateway extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

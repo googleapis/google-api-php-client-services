@@ -33,10 +33,10 @@ class CreativeAssignment extends \Google\Collection
   public $clickThroughUrl;
   protected $companionCreativeOverridesType = CompanionClickThroughOverride::class;
   protected $companionCreativeOverridesDataType = 'array';
-  public $companionCreativeOverrides;
+  public $companionCreativeOverrides = [];
   protected $creativeGroupAssignmentsType = CreativeGroupAssignment::class;
   protected $creativeGroupAssignmentsDataType = 'array';
-  public $creativeGroupAssignments;
+  public $creativeGroupAssignments = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class CreativeAssignment extends \Google\Collection
   public $endTime;
   protected $richMediaExitOverridesType = RichMediaExitOverride::class;
   protected $richMediaExitOverridesDataType = 'array';
-  public $richMediaExitOverrides;
+  public $richMediaExitOverrides = [];
   /**
    * @var int
    */

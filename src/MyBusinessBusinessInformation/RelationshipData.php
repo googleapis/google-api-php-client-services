@@ -22,7 +22,7 @@ class RelationshipData extends \Google\Collection
   protected $collection_key = 'childrenLocations';
   protected $childrenLocationsType = RelevantLocation::class;
   protected $childrenLocationsDataType = 'array';
-  public $childrenLocations;
+  public $childrenLocations = [];
   /**
    * @var string
    */

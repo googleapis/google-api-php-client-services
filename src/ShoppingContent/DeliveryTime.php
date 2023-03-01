@@ -28,7 +28,7 @@ class DeliveryTime extends \Google\Collection
   public $handlingBusinessDayConfig;
   protected $holidayCutoffsType = HolidayCutoff::class;
   protected $holidayCutoffsDataType = 'array';
-  public $holidayCutoffs;
+  public $holidayCutoffs = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class DeliveryTime extends \Google\Collection
   public $transitTimeTable;
   protected $warehouseBasedDeliveryTimesType = WarehouseBasedDeliveryTime::class;
   protected $warehouseBasedDeliveryTimesDataType = 'array';
-  public $warehouseBasedDeliveryTimes;
+  public $warehouseBasedDeliveryTimes = [];
 
   /**
    * @param CutoffTime

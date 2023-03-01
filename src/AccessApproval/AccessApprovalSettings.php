@@ -34,7 +34,7 @@ class AccessApprovalSettings extends \Google\Collection
   public $enrolledAncestor;
   protected $enrolledServicesType = EnrolledService::class;
   protected $enrolledServicesDataType = 'array';
-  public $enrolledServices;
+  public $enrolledServices = [];
   /**
    * @var bool
    */
@@ -46,7 +46,7 @@ class AccessApprovalSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $notificationEmails;
+  public $notificationEmails = [];
 
   /**
    * @param string

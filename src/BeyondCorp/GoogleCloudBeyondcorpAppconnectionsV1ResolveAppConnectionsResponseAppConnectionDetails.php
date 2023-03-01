@@ -26,7 +26,7 @@ class GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConne
   /**
    * @var string[]
    */
-  public $recentMigVms;
+  public $recentMigVms = [];
 
   /**
    * @param GoogleCloudBeyondcorpAppconnectionsV1AppConnection

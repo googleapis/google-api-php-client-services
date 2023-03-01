@@ -23,7 +23,7 @@ class EditGuaranteedOrderReadAccessorsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $addedAdvertisers;
+  public $addedAdvertisers = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class EditGuaranteedOrderReadAccessorsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $removedAdvertisers;
+  public $removedAdvertisers = [];
 
   /**
    * @param string[]

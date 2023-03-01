@@ -23,7 +23,7 @@ class VpcAccessibleServices extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedServices;
+  public $allowedServices = [];
   /**
    * @var bool
    */

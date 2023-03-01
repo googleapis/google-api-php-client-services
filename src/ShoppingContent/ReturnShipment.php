@@ -38,7 +38,7 @@ class ReturnShipment extends \Google\Collection
   public $shipmentId;
   protected $shipmentTrackingInfosType = ShipmentTrackingInfo::class;
   protected $shipmentTrackingInfosDataType = 'array';
-  public $shipmentTrackingInfos;
+  public $shipmentTrackingInfos = [];
   /**
    * @var string
    */

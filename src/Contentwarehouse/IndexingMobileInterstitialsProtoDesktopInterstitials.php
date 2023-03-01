@@ -22,7 +22,7 @@ class IndexingMobileInterstitialsProtoDesktopInterstitials extends \Google\Colle
   protected $collection_key = 'details';
   protected $detailsType = IndexingMobileInterstitialsProtoDesktopInterstitialsDetails::class;
   protected $detailsDataType = 'array';
-  public $details;
+  public $details = [];
   /**
    * @var string
    */

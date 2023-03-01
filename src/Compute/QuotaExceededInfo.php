@@ -22,7 +22,7 @@ class QuotaExceededInfo extends \Google\Model
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   public $limit;
   /**
    * @var string

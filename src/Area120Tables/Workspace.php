@@ -34,7 +34,7 @@ class Workspace extends \Google\Collection
   public $name;
   protected $tablesType = Table::class;
   protected $tablesDataType = 'array';
-  public $tables;
+  public $tables = [];
   /**
    * @var string
    */

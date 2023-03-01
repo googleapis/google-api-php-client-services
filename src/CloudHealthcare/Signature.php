@@ -25,7 +25,7 @@ class Signature extends \Google\Model
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

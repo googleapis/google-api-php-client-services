@@ -48,7 +48,7 @@ class CloneJob extends \Google\Collection
   public $stateTime;
   protected $stepsType = CloneStep::class;
   protected $stepsDataType = 'array';
-  public $steps;
+  public $steps = [];
 
   /**
    * @param ComputeEngineTargetDetails

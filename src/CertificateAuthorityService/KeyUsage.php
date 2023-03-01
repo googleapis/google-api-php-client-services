@@ -28,7 +28,7 @@ class KeyUsage extends \Google\Collection
   public $extendedKeyUsage;
   protected $unknownExtendedKeyUsagesType = ObjectId::class;
   protected $unknownExtendedKeyUsagesDataType = 'array';
-  public $unknownExtendedKeyUsages;
+  public $unknownExtendedKeyUsages = [];
 
   /**
    * @param KeyUsageOptions

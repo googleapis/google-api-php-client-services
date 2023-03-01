@@ -22,7 +22,7 @@ class FunctionMock extends \Google\Collection
   protected $collection_key = 'args';
   protected $argsType = Arg::class;
   protected $argsDataType = 'array';
-  public $args;
+  public $args = [];
   /**
    * @var string
    */

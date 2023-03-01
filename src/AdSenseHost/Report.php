@@ -23,10 +23,10 @@ class Report extends \Google\Collection
   /**
    * @var string[]
    */
-  public $averages;
+  public $averages = [];
   protected $headersType = ReportHeaders::class;
   protected $headersDataType = 'array';
-  public $headers;
+  public $headers = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class Report extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rows;
+  public $rows = [];
   /**
    * @var string
    */
@@ -42,11 +42,11 @@ class Report extends \Google\Collection
   /**
    * @var string[]
    */
-  public $totals;
+  public $totals = [];
   /**
    * @var string[]
    */
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param string[]

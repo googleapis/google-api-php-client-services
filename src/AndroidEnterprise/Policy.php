@@ -37,7 +37,7 @@ class Policy extends \Google\Collection
   public $productAvailabilityPolicy;
   protected $productPolicyType = ProductPolicy::class;
   protected $productPolicyDataType = 'array';
-  public $productPolicy;
+  public $productPolicy = [];
 
   /**
    * @param string

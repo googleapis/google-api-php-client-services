@@ -22,7 +22,7 @@ class NodeGroupsScopedList extends \Google\Collection
   protected $collection_key = 'nodeGroups';
   protected $nodeGroupsType = NodeGroup::class;
   protected $nodeGroupsDataType = 'array';
-  public $nodeGroups;
+  public $nodeGroups = [];
   protected $warningType = NodeGroupsScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

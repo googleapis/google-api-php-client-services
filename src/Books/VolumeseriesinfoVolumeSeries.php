@@ -22,7 +22,7 @@ class VolumeseriesinfoVolumeSeries extends \Google\Collection
   protected $collection_key = 'issue';
   protected $issueType = VolumeseriesinfoVolumeSeriesIssue::class;
   protected $issueDataType = 'array';
-  public $issue;
+  public $issue = [];
   /**
    * @var int
    */

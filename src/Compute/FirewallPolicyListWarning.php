@@ -26,7 +26,7 @@ class FirewallPolicyListWarning extends \Google\Collection
   public $code;
   protected $dataType = FirewallPolicyListWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

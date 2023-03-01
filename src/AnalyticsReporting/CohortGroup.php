@@ -22,7 +22,7 @@ class CohortGroup extends \Google\Collection
   protected $collection_key = 'cohorts';
   protected $cohortsType = Cohort::class;
   protected $cohortsDataType = 'array';
-  public $cohorts;
+  public $cohorts = [];
   /**
    * @var bool
    */

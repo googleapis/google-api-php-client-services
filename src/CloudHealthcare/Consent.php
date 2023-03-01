@@ -31,14 +31,14 @@ class Consent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
   public $name;
   protected $policiesType = GoogleCloudHealthcareV1ConsentPolicy::class;
   protected $policiesDataType = 'array';
-  public $policies;
+  public $policies = [];
   /**
    * @var string
    */

@@ -22,11 +22,11 @@ class Schema extends \Google\Collection
   protected $collection_key = 'operationIds';
   protected $objectDefinitionsType = ObjectDefinition::class;
   protected $objectDefinitionsDataType = 'array';
-  public $objectDefinitions;
+  public $objectDefinitions = [];
   /**
    * @var string[]
    */
-  public $operationIds;
+  public $operationIds = [];
 
   /**
    * @param ObjectDefinition[]

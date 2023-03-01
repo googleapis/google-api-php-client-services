@@ -29,7 +29,7 @@ class CreateManagedShortLinkResponse extends \Google\Collection
   public $previewLink;
   protected $warningType = DynamicLinkWarning::class;
   protected $warningDataType = 'array';
-  public $warning;
+  public $warning = [];
 
   /**
    * @param ManagedShortLink

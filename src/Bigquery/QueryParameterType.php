@@ -25,7 +25,7 @@ class QueryParameterType extends \Google\Collection
   public $arrayType;
   protected $structTypesType = QueryParameterTypeStructTypes::class;
   protected $structTypesDataType = 'array';
-  public $structTypes;
+  public $structTypes = [];
   /**
    * @var string
    */

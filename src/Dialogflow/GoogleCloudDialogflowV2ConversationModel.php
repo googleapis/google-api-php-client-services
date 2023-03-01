@@ -29,7 +29,7 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
   public $createTime;
   protected $datasetsType = GoogleCloudDialogflowV2InputDataset::class;
   protected $datasetsDataType = 'array';
-  public $datasets;
+  public $datasets = [];
   /**
    * @var string
    */

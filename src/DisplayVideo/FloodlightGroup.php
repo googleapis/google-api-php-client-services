@@ -25,7 +25,7 @@ class FloodlightGroup extends \Google\Model
   /**
    * @var array[]
    */
-  public $customVariables;
+  public $customVariables = [];
   /**
    * @var string
    */

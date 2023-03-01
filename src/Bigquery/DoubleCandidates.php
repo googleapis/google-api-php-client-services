@@ -20,7 +20,7 @@ namespace Google\Service\Bigquery;
 class DoubleCandidates extends \Google\Collection
 {
   protected $collection_key = 'candidates';
-  public $candidates;
+  public $candidates = [];
 
   public function setCandidates($candidates)
   {

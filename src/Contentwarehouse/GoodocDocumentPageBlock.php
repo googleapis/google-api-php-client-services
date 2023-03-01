@@ -44,7 +44,7 @@ class GoodocDocumentPageBlock extends \Google\Collection
   public $orientationLabel;
   protected $paragraphType = GoodocParagraph::class;
   protected $paragraphDataType = 'array';
-  public $paragraph;
+  public $paragraph = [];
   protected $rotatedBoxType = GoodocRotatedBoundingBox::class;
   protected $rotatedBoxDataType = '';
   public $rotatedBox;

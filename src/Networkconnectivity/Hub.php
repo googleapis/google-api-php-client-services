@@ -31,14 +31,14 @@ class Hub extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
   public $name;
   protected $routingVpcsType = RoutingVPC::class;
   protected $routingVpcsDataType = 'array';
-  public $routingVpcs;
+  public $routingVpcs = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class ListAssignedLocationsResponse extends \Google\Collection
   protected $collection_key = 'assignedLocations';
   protected $assignedLocationsType = AssignedLocation::class;
   protected $assignedLocationsDataType = 'array';
-  public $assignedLocations;
+  public $assignedLocations = [];
   /**
    * @var string
    */

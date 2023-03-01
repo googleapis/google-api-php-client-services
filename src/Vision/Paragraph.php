@@ -32,7 +32,7 @@ class Paragraph extends \Google\Collection
   public $property;
   protected $wordsType = Word::class;
   protected $wordsDataType = 'array';
-  public $words;
+  public $words = [];
 
   /**
    * @param BoundingPoly

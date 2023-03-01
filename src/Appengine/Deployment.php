@@ -27,7 +27,7 @@ class Deployment extends \Google\Model
   public $container;
   protected $filesType = FileInfo::class;
   protected $filesDataType = 'map';
-  public $files;
+  public $files = [];
   protected $zipType = ZipInfo::class;
   protected $zipDataType = '';
   public $zip;

@@ -42,7 +42,7 @@ class Value extends \Google\Model
   /**
    * @var array[]
    */
-  public $protoValue;
+  public $protoValue = [];
   /**
    * @var string
    */

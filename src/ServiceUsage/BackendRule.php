@@ -36,7 +36,7 @@ class BackendRule extends \Google\Model
   public $operationDeadline;
   protected $overridesByRequestProtocolType = BackendRule::class;
   protected $overridesByRequestProtocolDataType = 'map';
-  public $overridesByRequestProtocol;
+  public $overridesByRequestProtocol = [];
   /**
    * @var string
    */

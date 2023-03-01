@@ -69,7 +69,7 @@ class CourseWork extends \Google\Collection
   public $individualStudentsOptions;
   protected $materialsType = Material::class;
   protected $materialsDataType = 'array';
-  public $materials;
+  public $materials = [];
   public $maxPoints;
   protected $multipleChoiceQuestionType = MultipleChoiceQuestion::class;
   protected $multipleChoiceQuestionDataType = '';

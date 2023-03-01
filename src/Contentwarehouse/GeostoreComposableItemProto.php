@@ -28,10 +28,10 @@ class GeostoreComposableItemProto extends \Google\Collection
   public $jobMetadata;
   protected $mediaType = GeostoreMediaItemProto::class;
   protected $mediaDataType = 'array';
-  public $media;
+  public $media = [];
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
-  public $nameInfo;
+  public $nameInfo = [];
   /**
    * @var string
    */

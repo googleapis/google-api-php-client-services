@@ -23,11 +23,11 @@ class ReturnPolicyOnline extends \Google\Collection
   /**
    * @var string[]
    */
-  public $countries;
+  public $countries = [];
   /**
    * @var string[]
    */
-  public $itemConditions;
+  public $itemConditions = [];
   /**
    * @var string
    */
@@ -45,7 +45,7 @@ class ReturnPolicyOnline extends \Google\Collection
   /**
    * @var string[]
    */
-  public $returnMethods;
+  public $returnMethods = [];
   /**
    * @var string
    */
@@ -56,7 +56,7 @@ class ReturnPolicyOnline extends \Google\Collection
   public $returnPolicyUri;
   protected $returnReasonCategoryInfoType = ReturnPolicyOnlineReturnReasonCategoryInfo::class;
   protected $returnReasonCategoryInfoDataType = 'array';
-  public $returnReasonCategoryInfo;
+  public $returnReasonCategoryInfo = [];
 
   /**
    * @param string[]

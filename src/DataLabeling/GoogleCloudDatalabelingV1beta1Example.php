@@ -22,7 +22,7 @@ class GoogleCloudDatalabelingV1beta1Example extends \Google\Collection
   protected $collection_key = 'annotations';
   protected $annotationsType = GoogleCloudDatalabelingV1beta1Annotation::class;
   protected $annotationsDataType = 'array';
-  public $annotations;
+  public $annotations = [];
   protected $imagePayloadType = GoogleCloudDatalabelingV1beta1ImagePayload::class;
   protected $imagePayloadDataType = '';
   public $imagePayload;

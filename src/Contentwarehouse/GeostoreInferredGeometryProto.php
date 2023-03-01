@@ -22,7 +22,7 @@ class GeostoreInferredGeometryProto extends \Google\Collection
   protected $collection_key = 'definesGeometryFor';
   protected $definesGeometryForType = GeostoreFeatureIdProto::class;
   protected $definesGeometryForDataType = 'array';
-  public $definesGeometryFor;
+  public $definesGeometryFor = [];
   protected $geometryCompositionType = GeostoreGeometryComposition::class;
   protected $geometryCompositionDataType = '';
   public $geometryComposition;

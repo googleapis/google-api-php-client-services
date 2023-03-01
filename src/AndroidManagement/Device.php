@@ -26,10 +26,10 @@ class Device extends \Google\Collection
   public $apiLevel;
   protected $applicationReportsType = ApplicationReport::class;
   protected $applicationReportsDataType = 'array';
-  public $applicationReports;
+  public $applicationReports = [];
   protected $appliedPasswordPoliciesType = PasswordRequirements::class;
   protected $appliedPasswordPoliciesDataType = 'array';
-  public $appliedPasswordPolicies;
+  public $appliedPasswordPolicies = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class Device extends \Google\Collection
   public $disabledReason;
   protected $displaysType = Display::class;
   protected $displaysDataType = 'array';
-  public $displays;
+  public $displays = [];
   /**
    * @var string
    */
@@ -71,7 +71,7 @@ class Device extends \Google\Collection
   public $hardwareInfo;
   protected $hardwareStatusSamplesType = HardwareStatus::class;
   protected $hardwareStatusSamplesDataType = 'array';
-  public $hardwareStatusSamples;
+  public $hardwareStatusSamples = [];
   /**
    * @var string
    */
@@ -90,7 +90,7 @@ class Device extends \Google\Collection
   public $managementMode;
   protected $memoryEventsType = MemoryEvent::class;
   protected $memoryEventsDataType = 'array';
-  public $memoryEvents;
+  public $memoryEvents = [];
   protected $memoryInfoType = MemoryInfo::class;
   protected $memoryInfoDataType = '';
   public $memoryInfo;
@@ -103,7 +103,7 @@ class Device extends \Google\Collection
   public $networkInfo;
   protected $nonComplianceDetailsType = NonComplianceDetail::class;
   protected $nonComplianceDetailsDataType = 'array';
-  public $nonComplianceDetails;
+  public $nonComplianceDetails = [];
   /**
    * @var string
    */
@@ -118,11 +118,11 @@ class Device extends \Google\Collection
   public $policyName;
   protected $powerManagementEventsType = PowerManagementEvent::class;
   protected $powerManagementEventsDataType = 'array';
-  public $powerManagementEvents;
+  public $powerManagementEvents = [];
   /**
    * @var string[]
    */
-  public $previousDeviceNames;
+  public $previousDeviceNames = [];
   protected $securityPostureType = SecurityPosture::class;
   protected $securityPostureDataType = '';
   public $securityPosture;
@@ -136,7 +136,7 @@ class Device extends \Google\Collection
   /**
    * @var string[]
    */
-  public $systemProperties;
+  public $systemProperties = [];
   protected $userType = User::class;
   protected $userDataType = '';
   public $user;

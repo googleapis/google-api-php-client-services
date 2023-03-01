@@ -23,11 +23,11 @@ class WWWSnippetResponse extends \Google\Collection
   /**
    * @var int[]
    */
-  public $answerDocMatches;
+  public $answerDocMatches = [];
   /**
    * @var int[]
    */
-  public $chosenBodyTidbits;
+  public $chosenBodyTidbits = [];
   protected $docInfoType = WWWDocInfo::class;
   protected $docInfoDataType = '';
   public $docInfo;
@@ -51,7 +51,7 @@ class WWWSnippetResponse extends \Google\Collection
   /**
    * @var int[]
    */
-  public $hasMessageType;
+  public $hasMessageType = [];
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   public $info;
@@ -66,7 +66,7 @@ class WWWSnippetResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keyword;
+  public $keyword = [];
   protected $listSnippetType = ListSnippetResponse::class;
   protected $listSnippetDataType = '';
   public $listSnippet;
@@ -87,7 +87,7 @@ class WWWSnippetResponse extends \Google\Collection
   public $matchesBitmapSize;
   protected $metaTagsType = WWWMetaTag::class;
   protected $metaTagsDataType = 'array';
-  public $metaTags;
+  public $metaTags = [];
   /**
    * @var int
    */
@@ -136,7 +136,7 @@ class WWWSnippetResponse extends \Google\Collection
   public $seenNotTerm;
   protected $sentimentSnippetsType = RepositoryAnnotationsMustangSentimentSnippetAnnotations::class;
   protected $sentimentSnippetsDataType = 'array';
-  public $sentimentSnippets;
+  public $sentimentSnippets = [];
   /**
    * @var string
    */
@@ -150,7 +150,7 @@ class WWWSnippetResponse extends \Google\Collection
   public $snippetExtraInfo;
   protected $snippetHighlightMatchesBitmapType = WWWSnippetResponseBitmapPB::class;
   protected $snippetHighlightMatchesBitmapDataType = 'array';
-  public $snippetHighlightMatchesBitmap;
+  public $snippetHighlightMatchesBitmap = [];
   /**
    * @var int
    */
@@ -161,7 +161,7 @@ class WWWSnippetResponse extends \Google\Collection
   public $snippetPrefixCharCount;
   protected $snippetRenderedTokenType = MustangSnippetsRenderedToken::class;
   protected $snippetRenderedTokenDataType = 'array';
-  public $snippetRenderedToken;
+  public $snippetRenderedToken = [];
   /**
    * @var string
    */
@@ -179,7 +179,7 @@ class WWWSnippetResponse extends \Google\Collection
   public $titleLengthAdjustedForBrowserWidth;
   protected $titleRenderedTokenType = MustangSnippetsRenderedToken::class;
   protected $titleRenderedTokenDataType = 'array';
-  public $titleRenderedToken;
+  public $titleRenderedToken = [];
   protected $titleSizeParamsType = TitleSizeParams::class;
   protected $titleSizeParamsDataType = '';
   public $titleSizeParams;

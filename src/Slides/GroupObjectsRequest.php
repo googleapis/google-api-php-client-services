@@ -23,7 +23,7 @@ class GroupObjectsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $childrenObjectIds;
+  public $childrenObjectIds = [];
   /**
    * @var string
    */

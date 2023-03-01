@@ -93,7 +93,7 @@ class Deal extends \Google\Collection
   public $proposalId;
   protected $sellerContactsType = ContactInformation::class;
   protected $sellerContactsDataType = 'array';
-  public $sellerContacts;
+  public $sellerContacts = [];
   /**
    * @var string
    */
@@ -103,7 +103,7 @@ class Deal extends \Google\Collection
   public $targeting;
   protected $targetingCriterionType = TargetingCriteria::class;
   protected $targetingCriterionDataType = 'array';
-  public $targetingCriterion;
+  public $targetingCriterion = [];
   /**
    * @var string
    */

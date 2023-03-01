@@ -22,7 +22,7 @@ class StorageObject extends \Google\Collection
   protected $collection_key = 'acl';
   protected $aclType = ObjectAccessControl::class;
   protected $aclDataType = 'array';
-  public $acl;
+  public $acl = [];
   /**
    * @var string
    */
@@ -97,7 +97,7 @@ class StorageObject extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

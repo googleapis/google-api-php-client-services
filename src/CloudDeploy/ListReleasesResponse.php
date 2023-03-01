@@ -26,11 +26,11 @@ class ListReleasesResponse extends \Google\Collection
   public $nextPageToken;
   protected $releasesType = Release::class;
   protected $releasesDataType = 'array';
-  public $releases;
+  public $releases = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

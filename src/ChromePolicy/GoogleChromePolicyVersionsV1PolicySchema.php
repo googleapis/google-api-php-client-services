@@ -23,10 +23,10 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accessRestrictions;
+  public $accessRestrictions = [];
   protected $additionalTargetKeyNamesType = GoogleChromePolicyVersionsV1AdditionalTargetKeyName::class;
   protected $additionalTargetKeyNamesDataType = 'array';
-  public $additionalTargetKeyNames;
+  public $additionalTargetKeyNames = [];
   /**
    * @var string
    */
@@ -36,14 +36,14 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   public $definition;
   protected $fieldDescriptionsType = GoogleChromePolicyVersionsV1PolicySchemaFieldDescription::class;
   protected $fieldDescriptionsDataType = 'array';
-  public $fieldDescriptions;
+  public $fieldDescriptions = [];
   /**
    * @var string
    */
   public $name;
   protected $noticesType = GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription::class;
   protected $noticesDataType = 'array';
-  public $notices;
+  public $notices = [];
   protected $policyApiLifecycleType = ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle::class;
   protected $policyApiLifecycleDataType = '';
   public $policyApiLifecycle;
@@ -65,7 +65,7 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   /**
    * @var string[]
    */
-  public $validTargetResources;
+  public $validTargetResources = [];
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
   protected $collection_key = 'additionalVariables';
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
-  public $additionalVariables;
+  public $additionalVariables = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class NlpSemanticParsingLocalLocationElement extends \Google\Collection
   protected $collection_key = 'dialogReferents';
   protected $aliasIconType = PersonalizationMapsAliasIcon::class;
   protected $aliasIconDataType = 'array';
-  public $aliasIcon;
+  public $aliasIcon = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class NlpSemanticParsingLocalLocationElement extends \Google\Collection
   public $contactLocation;
   protected $dialogReferentsType = NlpSemanticParsingModelsDialogReferentsDialogReferents::class;
   protected $dialogReferentsDataType = 'array';
-  public $dialogReferents;
+  public $dialogReferents = [];
   /**
    * @var string
    */

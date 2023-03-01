@@ -26,7 +26,7 @@ class NlpSemanticParsingDatetimeRecurrent extends \Google\Collection
   public $countRestriction;
   protected $exceptionType = NlpSemanticParsingDatetimeDateTime::class;
   protected $exceptionDataType = 'array';
-  public $exception;
+  public $exception = [];
   /**
    * @var string
    */
@@ -50,16 +50,16 @@ class NlpSemanticParsingDatetimeRecurrent extends \Google\Collection
   public $restriction;
   protected $startType = NlpSemanticParsingDatetimeDateTime::class;
   protected $startDataType = 'array';
-  public $start;
+  public $start = [];
   protected $startPointType = NlpSemanticParsingDatetimeAbsoluteDateTime::class;
   protected $startPointDataType = 'array';
-  public $startPoint;
+  public $startPoint = [];
   protected $startRangeType = NlpSemanticParsingDatetimeRange::class;
   protected $startRangeDataType = 'array';
-  public $startRange;
+  public $startRange = [];
   protected $startRelativeType = NlpSemanticParsingDatetimeRelativeDateTime::class;
   protected $startRelativeDataType = 'array';
-  public $startRelative;
+  public $startRelative = [];
   protected $targetType = NlpSemanticParsingDatetimeTargetToFetch::class;
   protected $targetDataType = '';
   public $target;

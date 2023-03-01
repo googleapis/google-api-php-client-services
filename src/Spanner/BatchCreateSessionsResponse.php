@@ -22,7 +22,7 @@ class BatchCreateSessionsResponse extends \Google\Collection
   protected $collection_key = 'session';
   protected $sessionType = Session::class;
   protected $sessionDataType = 'array';
-  public $session;
+  public $session = [];
 
   /**
    * @param Session[]

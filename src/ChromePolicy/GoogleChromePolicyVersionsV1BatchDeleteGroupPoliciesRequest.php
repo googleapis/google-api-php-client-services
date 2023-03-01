@@ -22,7 +22,7 @@ class GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest extends \Googl
   protected $collection_key = 'requests';
   protected $requestsType = GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest::class;
   protected $requestsDataType = 'array';
-  public $requests;
+  public $requests = [];
 
   /**
    * @param GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest[]

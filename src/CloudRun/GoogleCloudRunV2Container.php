@@ -23,14 +23,14 @@ class GoogleCloudRunV2Container extends \Google\Collection
   /**
    * @var string[]
    */
-  public $args;
+  public $args = [];
   /**
    * @var string[]
    */
-  public $command;
+  public $command = [];
   protected $envType = GoogleCloudRunV2EnvVar::class;
   protected $envDataType = 'array';
-  public $env;
+  public $env = [];
   /**
    * @var string
    */
@@ -44,7 +44,7 @@ class GoogleCloudRunV2Container extends \Google\Collection
   public $name;
   protected $portsType = GoogleCloudRunV2ContainerPort::class;
   protected $portsDataType = 'array';
-  public $ports;
+  public $ports = [];
   protected $resourcesType = GoogleCloudRunV2ResourceRequirements::class;
   protected $resourcesDataType = '';
   public $resources;
@@ -53,7 +53,7 @@ class GoogleCloudRunV2Container extends \Google\Collection
   public $startupProbe;
   protected $volumeMountsType = GoogleCloudRunV2VolumeMount::class;
   protected $volumeMountsDataType = 'array';
-  public $volumeMounts;
+  public $volumeMounts = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class NlpSemanticParsingEntitySourceData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $entitySources;
+  public $entitySources = [];
 
   /**
    * @param string[]

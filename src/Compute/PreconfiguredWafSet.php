@@ -22,7 +22,7 @@ class PreconfiguredWafSet extends \Google\Collection
   protected $collection_key = 'expressionSets';
   protected $expressionSetsType = WafExpressionSet::class;
   protected $expressionSetsDataType = 'array';
-  public $expressionSets;
+  public $expressionSets = [];
 
   /**
    * @param WafExpressionSet[]

@@ -26,7 +26,7 @@ class GoogleIdentityStsV1betaAccessBoundaryRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availablePermissions;
+  public $availablePermissions = [];
   /**
    * @var string
    */

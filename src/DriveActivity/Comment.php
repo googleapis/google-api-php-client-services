@@ -25,7 +25,7 @@ class Comment extends \Google\Collection
   public $assignment;
   protected $mentionedUsersType = User::class;
   protected $mentionedUsersDataType = 'array';
-  public $mentionedUsers;
+  public $mentionedUsers = [];
   protected $postType = Post::class;
   protected $postDataType = '';
   public $post;

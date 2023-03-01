@@ -23,7 +23,7 @@ class GoogleCloudVideointelligenceV1SpeechContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $phrases;
+  public $phrases = [];
 
   /**
    * @param string[]

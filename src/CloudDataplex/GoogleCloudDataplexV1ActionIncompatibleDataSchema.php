@@ -31,7 +31,7 @@ class GoogleCloudDataplexV1ActionIncompatibleDataSchema extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $sampledDataLocations;
+  public $sampledDataLocations = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1Operation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $methods;
+  public $methods = [];
   /**
    * @var string
    */

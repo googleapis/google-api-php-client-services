@@ -22,7 +22,7 @@ class GoogleAnalyticsAdminV1betaListFirebaseLinksResponse extends \Google\Collec
   protected $collection_key = 'firebaseLinks';
   protected $firebaseLinksType = GoogleAnalyticsAdminV1betaFirebaseLink::class;
   protected $firebaseLinksDataType = 'array';
-  public $firebaseLinks;
+  public $firebaseLinks = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class VideoFormatsListResponse extends \Google\Collection
   public $kind;
   protected $videoFormatsType = VideoFormat::class;
   protected $videoFormatsDataType = 'array';
-  public $videoFormats;
+  public $videoFormats = [];
 
   /**
    * @param string

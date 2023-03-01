@@ -53,7 +53,7 @@ class GoogleCloudDatacatalogV1ColumnSchema extends \Google\Collection
   public $ordinalPosition;
   protected $subcolumnsType = GoogleCloudDatacatalogV1ColumnSchema::class;
   protected $subcolumnsDataType = 'array';
-  public $subcolumns;
+  public $subcolumns = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class NotificationSet extends \Google\Collection
   protected $collection_key = 'notification';
   protected $notificationType = Notification::class;
   protected $notificationDataType = 'array';
-  public $notification;
+  public $notification = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class ListExamplesResponse extends \Google\Collection
   protected $collection_key = 'examples';
   protected $examplesType = Example::class;
   protected $examplesDataType = 'array';
-  public $examples;
+  public $examples = [];
   /**
    * @var string
    */

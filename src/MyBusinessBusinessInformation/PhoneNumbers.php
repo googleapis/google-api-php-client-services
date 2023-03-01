@@ -23,7 +23,7 @@ class PhoneNumbers extends \Google\Collection
   /**
    * @var string[]
    */
-  public $additionalPhones;
+  public $additionalPhones = [];
   /**
    * @var string
    */

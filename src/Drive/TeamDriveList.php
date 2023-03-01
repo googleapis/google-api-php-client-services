@@ -30,7 +30,7 @@ class TeamDriveList extends \Google\Collection
   public $nextPageToken;
   protected $teamDrivesType = TeamDrive::class;
   protected $teamDrivesDataType = 'array';
-  public $teamDrives;
+  public $teamDrives = [];
 
   /**
    * @param string

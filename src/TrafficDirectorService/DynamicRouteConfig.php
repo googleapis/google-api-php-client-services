@@ -26,7 +26,7 @@ class DynamicRouteConfig extends \Google\Model
   /**
    * @var array[]
    */
-  public $routeConfig;
+  public $routeConfig = [];
   /**
    * @var string
    */

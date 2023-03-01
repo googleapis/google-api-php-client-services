@@ -42,11 +42,11 @@ class Collection extends \Google\Collection
   public $customLabel4;
   protected $featuredProductType = CollectionFeaturedProduct::class;
   protected $featuredProductDataType = 'array';
-  public $featuredProduct;
+  public $featuredProduct = [];
   /**
    * @var string[]
    */
-  public $headline;
+  public $headline = [];
   /**
    * @var string
    */
@@ -54,7 +54,7 @@ class Collection extends \Google\Collection
   /**
    * @var string[]
    */
-  public $imageLink;
+  public $imageLink = [];
   /**
    * @var string
    */

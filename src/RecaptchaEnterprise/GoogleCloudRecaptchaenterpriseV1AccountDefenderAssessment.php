@@ -23,7 +23,7 @@ class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment extends \Google\
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
 
   /**
    * @param string[]

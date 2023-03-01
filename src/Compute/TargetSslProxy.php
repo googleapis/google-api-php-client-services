@@ -59,7 +59,7 @@ class TargetSslProxy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sslCertificates;
+  public $sslCertificates = [];
   /**
    * @var string
    */

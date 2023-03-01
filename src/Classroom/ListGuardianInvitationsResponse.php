@@ -22,7 +22,7 @@ class ListGuardianInvitationsResponse extends \Google\Collection
   protected $collection_key = 'guardianInvitations';
   protected $guardianInvitationsType = GuardianInvitation::class;
   protected $guardianInvitationsDataType = 'array';
-  public $guardianInvitations;
+  public $guardianInvitations = [];
   /**
    * @var string
    */

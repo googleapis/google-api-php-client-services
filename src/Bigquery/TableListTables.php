@@ -45,7 +45,7 @@ class TableListTables extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
   public $rangePartitioning;

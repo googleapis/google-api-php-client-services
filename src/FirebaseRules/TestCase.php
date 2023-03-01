@@ -30,7 +30,7 @@ class TestCase extends \Google\Collection
   public $expressionReportLevel;
   protected $functionMocksType = FunctionMock::class;
   protected $functionMocksDataType = 'array';
-  public $functionMocks;
+  public $functionMocks = [];
   /**
    * @var string
    */

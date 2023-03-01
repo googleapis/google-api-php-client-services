@@ -23,7 +23,7 @@ class CardCapabilityMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $requiredCapabilities;
+  public $requiredCapabilities = [];
 
   /**
    * @param string[]

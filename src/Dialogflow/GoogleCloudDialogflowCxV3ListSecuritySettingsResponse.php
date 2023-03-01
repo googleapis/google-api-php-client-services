@@ -26,7 +26,7 @@ class GoogleCloudDialogflowCxV3ListSecuritySettingsResponse extends \Google\Coll
   public $nextPageToken;
   protected $securitySettingsType = GoogleCloudDialogflowCxV3SecuritySettings::class;
   protected $securitySettingsDataType = 'array';
-  public $securitySettings;
+  public $securitySettings = [];
 
   /**
    * @param string

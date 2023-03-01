@@ -26,7 +26,7 @@ class QueryRequest extends \Google\Collection
   public $agentUserId;
   protected $inputsType = QueryRequestInput::class;
   protected $inputsDataType = 'array';
-  public $inputs;
+  public $inputs = [];
   /**
    * @var string
    */

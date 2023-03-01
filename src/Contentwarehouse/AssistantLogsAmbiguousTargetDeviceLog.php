@@ -23,24 +23,24 @@ class AssistantLogsAmbiguousTargetDeviceLog extends \Google\Collection
   /**
    * @var int[]
    */
-  public $ambiguousDeviceIndex;
+  public $ambiguousDeviceIndex = [];
   protected $devicesAfterPromotersType = AssistantLogsDeviceInfoLog::class;
   protected $devicesAfterPromotersDataType = 'array';
-  public $devicesAfterPromoters;
+  public $devicesAfterPromoters = [];
   protected $finalTargetDeviceType = AssistantLogsDeviceInfoLog::class;
   protected $finalTargetDeviceDataType = '';
   public $finalTargetDevice;
   /**
    * @var int[]
    */
-  public $playabilityFilteredDevicesIndex;
+  public $playabilityFilteredDevicesIndex = [];
   protected $puntInfoLogType = AssistantLogsAmbiguousTargetDeviceLogPuntInfoLog::class;
   protected $puntInfoLogDataType = 'array';
-  public $puntInfoLog;
+  public $puntInfoLog = [];
   /**
    * @var int[]
    */
-  public $structureFilteredDeviceIndex;
+  public $structureFilteredDeviceIndex = [];
 
   /**
    * @param int[]

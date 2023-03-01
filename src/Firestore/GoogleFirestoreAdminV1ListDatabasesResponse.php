@@ -22,7 +22,7 @@ class GoogleFirestoreAdminV1ListDatabasesResponse extends \Google\Collection
   protected $collection_key = 'databases';
   protected $databasesType = GoogleFirestoreAdminV1Database::class;
   protected $databasesDataType = 'array';
-  public $databases;
+  public $databases = [];
 
   /**
    * @param GoogleFirestoreAdminV1Database[]

@@ -39,7 +39,7 @@ class TelephoneNumber extends \Google\Collection
   /**
    * @var string[]
    */
-  public $number;
+  public $number = [];
 
   /**
    * @param string

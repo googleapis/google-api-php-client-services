@@ -20,7 +20,7 @@ namespace Google\Service\ChromeUXReport;
 class TimeseriesBin extends \Google\Collection
 {
   protected $collection_key = 'densities';
-  public $densities;
+  public $densities = [];
   /**
    * @var array
    */

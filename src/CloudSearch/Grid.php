@@ -25,7 +25,7 @@ class Grid extends \Google\Collection
   public $borderStyle;
   protected $itemsType = GridItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var int
    */

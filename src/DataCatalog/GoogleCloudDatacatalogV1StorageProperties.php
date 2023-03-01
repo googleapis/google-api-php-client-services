@@ -23,7 +23,7 @@ class GoogleCloudDatacatalogV1StorageProperties extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filePattern;
+  public $filePattern = [];
   /**
    * @var string
    */

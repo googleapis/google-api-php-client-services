@@ -49,7 +49,7 @@ class Policy extends \Google\Collection
   public $name;
   protected $networksType = PolicyNetwork::class;
   protected $networksDataType = 'array';
-  public $networks;
+  public $networks = [];
 
   /**
    * @param PolicyAlternativeNameServerConfig

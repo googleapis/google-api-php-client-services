@@ -25,7 +25,7 @@ class StructuredQuery extends \Google\Collection
   public $endAt;
   protected $fromType = CollectionSelector::class;
   protected $fromDataType = 'array';
-  public $from;
+  public $from = [];
   /**
    * @var int
    */
@@ -36,7 +36,7 @@ class StructuredQuery extends \Google\Collection
   public $offset;
   protected $orderByType = Order::class;
   protected $orderByDataType = 'array';
-  public $orderBy;
+  public $orderBy = [];
   protected $selectType = Projection::class;
   protected $selectDataType = '';
   public $select;

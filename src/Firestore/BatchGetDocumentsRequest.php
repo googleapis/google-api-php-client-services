@@ -23,7 +23,7 @@ class BatchGetDocumentsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $documents;
+  public $documents = [];
   protected $maskType = DocumentMask::class;
   protected $maskDataType = '';
   public $mask;

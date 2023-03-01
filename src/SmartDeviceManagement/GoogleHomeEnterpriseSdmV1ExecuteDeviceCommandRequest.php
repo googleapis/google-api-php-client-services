@@ -26,7 +26,7 @@ class GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest extends \Google\Model
   /**
    * @var array[]
    */
-  public $params;
+  public $params = [];
 
   /**
    * @param string

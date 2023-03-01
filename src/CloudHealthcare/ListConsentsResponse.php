@@ -22,7 +22,7 @@ class ListConsentsResponse extends \Google\Collection
   protected $collection_key = 'consents';
   protected $consentsType = Consent::class;
   protected $consentsDataType = 'array';
-  public $consents;
+  public $consents = [];
   /**
    * @var string
    */

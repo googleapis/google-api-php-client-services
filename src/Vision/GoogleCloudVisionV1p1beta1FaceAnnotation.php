@@ -52,7 +52,7 @@ class GoogleCloudVisionV1p1beta1FaceAnnotation extends \Google\Collection
   public $landmarkingConfidence;
   protected $landmarksType = GoogleCloudVisionV1p1beta1FaceAnnotationLandmark::class;
   protected $landmarksDataType = 'array';
-  public $landmarks;
+  public $landmarks = [];
   /**
    * @var float
    */

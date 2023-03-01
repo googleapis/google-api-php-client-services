@@ -26,7 +26,7 @@ class CalendarList extends \Google\Collection
   public $etag;
   protected $itemsType = CalendarListEntry::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class IndexingSignalAggregatorSccSignal extends \Google\Collection
   /**
    * @var string[]
    */
-  public $debugInfo;
+  public $debugInfo = [];
   public $numImageUrls;
   /**
    * @var string

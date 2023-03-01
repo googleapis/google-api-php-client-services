@@ -30,7 +30,7 @@ class AssistantRemindersAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $surfaceType;
+  public $surfaceType = [];
 
   /**
    * @param string

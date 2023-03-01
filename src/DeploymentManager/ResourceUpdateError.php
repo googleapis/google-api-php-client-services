@@ -22,7 +22,7 @@ class ResourceUpdateError extends \Google\Collection
   protected $collection_key = 'errors';
   protected $errorsType = ResourceUpdateErrorErrors::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
 
   /**
    * @param ResourceUpdateErrorErrors[]

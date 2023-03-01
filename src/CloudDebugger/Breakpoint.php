@@ -38,11 +38,11 @@ class Breakpoint extends \Google\Collection
   public $createTime;
   protected $evaluatedExpressionsType = Variable::class;
   protected $evaluatedExpressionsDataType = 'array';
-  public $evaluatedExpressions;
+  public $evaluatedExpressions = [];
   /**
    * @var string[]
    */
-  public $expressions;
+  public $expressions = [];
   /**
    * @var string
    */
@@ -58,7 +58,7 @@ class Breakpoint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $locationType = SourceLocation::class;
   protected $locationDataType = '';
   public $location;
@@ -72,7 +72,7 @@ class Breakpoint extends \Google\Collection
   public $logMessageFormat;
   protected $stackFramesType = StackFrame::class;
   protected $stackFramesDataType = 'array';
-  public $stackFrames;
+  public $stackFrames = [];
   /**
    * @var string
    */
@@ -86,7 +86,7 @@ class Breakpoint extends \Google\Collection
   public $userEmail;
   protected $variableTableType = Variable::class;
   protected $variableTableDataType = 'array';
-  public $variableTable;
+  public $variableTable = [];
 
   /**
    * @param string

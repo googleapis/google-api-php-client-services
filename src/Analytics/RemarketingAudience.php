@@ -53,11 +53,11 @@ class RemarketingAudience extends \Google\Collection
   public $kind;
   protected $linkedAdAccountsType = LinkedForeignAccount::class;
   protected $linkedAdAccountsDataType = 'array';
-  public $linkedAdAccounts;
+  public $linkedAdAccounts = [];
   /**
    * @var string[]
    */
-  public $linkedViews;
+  public $linkedViews = [];
   /**
    * @var string
    */

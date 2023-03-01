@@ -26,11 +26,11 @@ class ListTargetsResponse extends \Google\Collection
   public $nextPageToken;
   protected $targetsType = Target::class;
   protected $targetsDataType = 'array';
-  public $targets;
+  public $targets = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

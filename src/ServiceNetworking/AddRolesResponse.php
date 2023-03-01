@@ -22,7 +22,7 @@ class AddRolesResponse extends \Google\Collection
   protected $collection_key = 'policyBinding';
   protected $policyBindingType = PolicyBinding::class;
   protected $policyBindingDataType = 'array';
-  public $policyBinding;
+  public $policyBinding = [];
 
   /**
    * @param PolicyBinding[]

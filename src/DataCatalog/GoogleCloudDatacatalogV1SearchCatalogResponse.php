@@ -26,11 +26,11 @@ class GoogleCloudDatacatalogV1SearchCatalogResponse extends \Google\Collection
   public $nextPageToken;
   protected $resultsType = GoogleCloudDatacatalogV1SearchCatalogResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

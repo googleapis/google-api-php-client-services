@@ -23,7 +23,7 @@ class PrecomputedRestricts extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restricts;
+  public $restricts = [];
 
   /**
    * @param string[]

@@ -67,10 +67,10 @@ class Note extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relatedNoteNames;
+  public $relatedNoteNames = [];
   protected $relatedUrlType = RelatedUrl::class;
   protected $relatedUrlDataType = 'array';
-  public $relatedUrl;
+  public $relatedUrl = [];
   /**
    * @var string
    */

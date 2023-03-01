@@ -23,7 +23,7 @@ class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldIn
   public $average;
   public $max;
   public $min;
-  public $quartiles;
+  public $quartiles = [];
   public $standardDeviation;
 
   public function setAverage($average)

@@ -29,7 +29,7 @@ class ApigatewayOperation extends \Google\Model
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class ApigatewayOperation extends \Google\Model
   /**
    * @var array[]
    */
-  public $response;
+  public $response = [];
 
   /**
    * @param bool

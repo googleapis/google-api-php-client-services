@@ -32,7 +32,7 @@ class TestCase extends \Google\Collection
   public $skippedMessage;
   protected $stackTracesType = StackTrace::class;
   protected $stackTracesDataType = 'array';
-  public $stackTraces;
+  public $stackTraces = [];
   protected $startTimeType = Timestamp::class;
   protected $startTimeDataType = '';
   public $startTime;
@@ -49,7 +49,7 @@ class TestCase extends \Google\Collection
   public $testCaseReference;
   protected $toolOutputsType = ToolOutputReference::class;
   protected $toolOutputsDataType = 'array';
-  public $toolOutputs;
+  public $toolOutputs = [];
 
   /**
    * @param Duration

@@ -22,7 +22,7 @@ class Revision extends \Google\Model
   /**
    * @var string[]
    */
-  public $exportLinks;
+  public $exportLinks = [];
   /**
    * @var string
    */

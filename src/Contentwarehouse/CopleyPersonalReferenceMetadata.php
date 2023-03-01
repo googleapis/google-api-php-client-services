@@ -26,7 +26,7 @@ class CopleyPersonalReferenceMetadata extends \Google\Collection
   public $referenceScore;
   protected $referencesType = CopleyPersonalReference::class;
   protected $referencesDataType = 'array';
-  public $references;
+  public $references = [];
   protected $subreferenceMetadataType = CopleySubreferenceMetadata::class;
   protected $subreferenceMetadataDataType = '';
   public $subreferenceMetadata;

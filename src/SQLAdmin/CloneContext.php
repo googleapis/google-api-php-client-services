@@ -30,7 +30,7 @@ class CloneContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $databaseNames;
+  public $databaseNames = [];
   /**
    * @var string
    */

@@ -33,7 +33,7 @@ class ConversionWorkspace extends \Google\Model
   /**
    * @var string[]
    */
-  public $globalSettings;
+  public $globalSettings = [];
   /**
    * @var bool
    */

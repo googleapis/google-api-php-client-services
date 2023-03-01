@@ -29,7 +29,7 @@ class AlertPolicy extends \Google\Collection
   public $combiner;
   protected $conditionsType = Condition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   protected $creationRecordType = MutationRecord::class;
   protected $creationRecordDataType = '';
   public $creationRecord;
@@ -54,11 +54,11 @@ class AlertPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $notificationChannels;
+  public $notificationChannels = [];
   /**
    * @var string[]
    */
-  public $userLabels;
+  public $userLabels = [];
   protected $validityType = Status::class;
   protected $validityDataType = '';
   public $validity;

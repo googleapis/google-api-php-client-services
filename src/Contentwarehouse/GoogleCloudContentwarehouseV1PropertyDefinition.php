@@ -72,7 +72,7 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
   public $retrievalImportance;
   protected $schemaSourcesType = GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource::class;
   protected $schemaSourcesDataType = 'array';
-  public $schemaSources;
+  public $schemaSources = [];
   protected $textTypeOptionsType = GoogleCloudContentwarehouseV1TextTypeOptions::class;
   protected $textTypeOptionsDataType = '';
   public $textTypeOptions;

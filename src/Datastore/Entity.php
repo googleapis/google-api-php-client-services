@@ -24,7 +24,7 @@ class Entity extends \Google\Model
   public $key;
   protected $propertiesType = Value::class;
   protected $propertiesDataType = 'map';
-  public $properties;
+  public $properties = [];
 
   /**
    * @param Key

@@ -21,7 +21,7 @@ class BatchUpdateContactsResponse extends \Google\Model
 {
   protected $updateResultType = PersonResponse::class;
   protected $updateResultDataType = 'map';
-  public $updateResult;
+  public $updateResult = [];
 
   /**
    * @param PersonResponse[]

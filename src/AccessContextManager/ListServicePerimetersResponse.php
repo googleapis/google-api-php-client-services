@@ -26,7 +26,7 @@ class ListServicePerimetersResponse extends \Google\Collection
   public $nextPageToken;
   protected $servicePerimetersType = ServicePerimeter::class;
   protected $servicePerimetersDataType = 'array';
-  public $servicePerimeters;
+  public $servicePerimeters = [];
 
   /**
    * @param string

@@ -22,11 +22,11 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var int
    */

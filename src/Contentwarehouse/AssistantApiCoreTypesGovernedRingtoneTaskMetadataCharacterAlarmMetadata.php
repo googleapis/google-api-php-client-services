@@ -23,15 +23,15 @@ class AssistantApiCoreTypesGovernedRingtoneTaskMetadataCharacterAlarmMetadata ex
   /**
    * @var string[]
    */
-  public $agentIds;
+  public $agentIds = [];
   /**
    * @var string[]
    */
-  public $characterTags;
+  public $characterTags = [];
   /**
    * @var string[]
    */
-  public $iconUrls;
+  public $iconUrls = [];
 
   /**
    * @param string[]

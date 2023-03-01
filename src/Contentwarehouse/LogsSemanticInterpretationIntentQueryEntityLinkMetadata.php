@@ -25,7 +25,7 @@ class LogsSemanticInterpretationIntentQueryEntityLinkMetadata extends \Google\Co
   public $aggregateFlags;
   protected $kindInfoType = LogsSemanticInterpretationIntentQueryLinkKindInfo::class;
   protected $kindInfoDataType = 'array';
-  public $kindInfo;
+  public $kindInfo = [];
 
   /**
    * @param LogsSemanticInterpretationIntentQueryLinkKindFlags

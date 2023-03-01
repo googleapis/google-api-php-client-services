@@ -22,7 +22,7 @@ class JobPlacement extends \Google\Model
   /**
    * @var string[]
    */
-  public $clusterLabels;
+  public $clusterLabels = [];
   /**
    * @var string
    */

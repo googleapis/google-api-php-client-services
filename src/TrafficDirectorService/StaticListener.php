@@ -26,7 +26,7 @@ class StaticListener extends \Google\Model
   /**
    * @var array[]
    */
-  public $listener;
+  public $listener = [];
 
   /**
    * @param string

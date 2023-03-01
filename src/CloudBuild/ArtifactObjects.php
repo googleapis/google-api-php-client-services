@@ -27,7 +27,7 @@ class ArtifactObjects extends \Google\Collection
   /**
    * @var string[]
    */
-  public $paths;
+  public $paths = [];
   protected $timingType = TimeSpan::class;
   protected $timingDataType = '';
   public $timing;

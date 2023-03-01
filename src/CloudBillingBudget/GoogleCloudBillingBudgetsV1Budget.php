@@ -43,7 +43,7 @@ class GoogleCloudBillingBudgetsV1Budget extends \Google\Collection
   public $notificationsRule;
   protected $thresholdRulesType = GoogleCloudBillingBudgetsV1ThresholdRule::class;
   protected $thresholdRulesDataType = 'array';
-  public $thresholdRules;
+  public $thresholdRules = [];
 
   /**
    * @param GoogleCloudBillingBudgetsV1BudgetAmount

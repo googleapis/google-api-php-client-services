@@ -23,7 +23,7 @@ class SecurityPolicyRuleMatcherConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $srcIpRanges;
+  public $srcIpRanges = [];
 
   /**
    * @param string[]

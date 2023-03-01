@@ -34,7 +34,7 @@ class AppsDynamiteSharedJustification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $topics;
+  public $topics = [];
 
   /**
    * @param string

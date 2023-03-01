@@ -25,7 +25,7 @@ class GoogleCloudDocumentaiV1beta1DocumentPageToken extends \Google\Collection
   public $detectedBreak;
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1beta1DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
-  public $detectedLanguages;
+  public $detectedLanguages = [];
   protected $layoutType = GoogleCloudDocumentaiV1beta1DocumentPageLayout::class;
   protected $layoutDataType = '';
   public $layout;

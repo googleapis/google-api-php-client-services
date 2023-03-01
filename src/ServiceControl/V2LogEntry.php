@@ -29,11 +29,11 @@ class V2LogEntry extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $monitoredResourceLabels;
+  public $monitoredResourceLabels = [];
   /**
    * @var string
    */
@@ -44,7 +44,7 @@ class V2LogEntry extends \Google\Model
   /**
    * @var array[]
    */
-  public $protoPayload;
+  public $protoPayload = [];
   /**
    * @var string
    */
@@ -55,7 +55,7 @@ class V2LogEntry extends \Google\Model
   /**
    * @var array[]
    */
-  public $structPayload;
+  public $structPayload = [];
   /**
    * @var string
    */

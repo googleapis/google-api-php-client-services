@@ -30,7 +30,7 @@ class MonitoredResourceDescriptor extends \Google\Collection
   public $displayName;
   protected $labelsType = LabelDescriptor::class;
   protected $labelsDataType = 'array';
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

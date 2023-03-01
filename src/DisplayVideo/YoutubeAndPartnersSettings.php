@@ -41,7 +41,7 @@ class YoutubeAndPartnersSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relatedVideoIds;
+  public $relatedVideoIds = [];
   protected $targetFrequencyType = TargetFrequency::class;
   protected $targetFrequencyDataType = '';
   public $targetFrequency;

@@ -32,7 +32,7 @@ class NlpSaftRelation extends \Google\Collection
   public $kind;
   protected $mentionType = NlpSaftRelationMention::class;
   protected $mentionDataType = 'array';
-  public $mention;
+  public $mention = [];
   /**
    * @var float
    */

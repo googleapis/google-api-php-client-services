@@ -26,7 +26,7 @@ class StaticRouteConfig extends \Google\Model
   /**
    * @var array[]
    */
-  public $routeConfig;
+  public $routeConfig = [];
 
   /**
    * @param string

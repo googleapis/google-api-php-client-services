@@ -26,7 +26,7 @@ class RegionalInventory extends \Google\Collection
   public $availability;
   protected $customAttributesType = CustomAttribute::class;
   protected $customAttributesDataType = 'array';
-  public $customAttributes;
+  public $customAttributes = [];
   /**
    * @var string
    */

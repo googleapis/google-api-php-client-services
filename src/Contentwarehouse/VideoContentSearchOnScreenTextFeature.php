@@ -122,7 +122,7 @@ class VideoContentSearchOnScreenTextFeature extends \Google\Collection
   public $isCountingNumberOoo;
   protected $languagesType = GoodocLanguageCombinationLanguage::class;
   protected $languagesDataType = 'array';
-  public $languages;
+  public $languages = [];
   /**
    * @var float
    */

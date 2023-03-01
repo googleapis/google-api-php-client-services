@@ -25,7 +25,7 @@ class AnalyticsDetails extends \Google\Collection
   public $analyticsProperty;
   protected $streamMappingsType = StreamMapping::class;
   protected $streamMappingsDataType = 'array';
-  public $streamMappings;
+  public $streamMappings = [];
 
   /**
    * @param AnalyticsProperty

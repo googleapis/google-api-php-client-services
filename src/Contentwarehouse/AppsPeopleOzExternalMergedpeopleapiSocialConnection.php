@@ -26,7 +26,7 @@ class AppsPeopleOzExternalMergedpeopleapiSocialConnection extends \Google\Collec
   /**
    * @var string[]
    */
-  public $type;
+  public $type = [];
 
   /**
    * @param AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata

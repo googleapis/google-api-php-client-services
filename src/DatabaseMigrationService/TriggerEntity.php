@@ -23,7 +23,7 @@ class TriggerEntity extends \Google\Collection
   /**
    * @var array[]
    */
-  public $customFeatures;
+  public $customFeatures = [];
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class TriggerEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $triggeringEvents;
+  public $triggeringEvents = [];
 
   /**
    * @param array[]

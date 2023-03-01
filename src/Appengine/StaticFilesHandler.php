@@ -30,7 +30,7 @@ class StaticFilesHandler extends \Google\Model
   /**
    * @var string[]
    */
-  public $httpHeaders;
+  public $httpHeaders = [];
   /**
    * @var string
    */

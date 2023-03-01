@@ -29,7 +29,7 @@ class MessagePart extends \Google\Collection
   public $filename;
   protected $headersType = MessagePartHeader::class;
   protected $headersDataType = 'array';
-  public $headers;
+  public $headers = [];
   /**
    * @var string
    */
@@ -40,7 +40,7 @@ class MessagePart extends \Google\Collection
   public $partId;
   protected $partsType = MessagePart::class;
   protected $partsDataType = 'array';
-  public $parts;
+  public $parts = [];
 
   /**
    * @param MessagePartBody

@@ -23,15 +23,15 @@ class ChannelSectionTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $countries;
+  public $countries = [];
   /**
    * @var string[]
    */
-  public $languages;
+  public $languages = [];
   /**
    * @var string[]
    */
-  public $regions;
+  public $regions = [];
 
   /**
    * @param string[]

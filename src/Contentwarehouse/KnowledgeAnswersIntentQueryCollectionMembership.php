@@ -34,7 +34,7 @@ class KnowledgeAnswersIntentQueryCollectionMembership extends \Google\Collection
   public $collectionScore;
   protected $scoreType = KnowledgeAnswersIntentQueryCollectionScore::class;
   protected $scoreDataType = 'array';
-  public $score;
+  public $score = [];
 
   /**
    * @param string

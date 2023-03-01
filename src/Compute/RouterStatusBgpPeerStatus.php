@@ -22,7 +22,7 @@ class RouterStatusBgpPeerStatus extends \Google\Collection
   protected $collection_key = 'advertisedRoutes';
   protected $advertisedRoutesType = Route::class;
   protected $advertisedRoutesDataType = 'array';
-  public $advertisedRoutes;
+  public $advertisedRoutes = [];
   protected $bfdStatusType = BfdStatus::class;
   protected $bfdStatusDataType = '';
   public $bfdStatus;

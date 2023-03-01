@@ -22,7 +22,7 @@ class ImageUnderstandingIndexingLabelGroup extends \Google\Collection
   protected $collection_key = 'label';
   protected $labelType = ImageUnderstandingIndexingLabel::class;
   protected $labelDataType = 'array';
-  public $label;
+  public $label = [];
   /**
    * @var string
    */

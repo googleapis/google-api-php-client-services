@@ -28,7 +28,7 @@ class CompensationInfo extends \Google\Collection
   public $annualizedTotalCompensationRange;
   protected $entriesType = CompensationEntry::class;
   protected $entriesDataType = 'array';
-  public $entries;
+  public $entries = [];
 
   /**
    * @param CompensationRange

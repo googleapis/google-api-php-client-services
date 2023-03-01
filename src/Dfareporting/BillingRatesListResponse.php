@@ -22,7 +22,7 @@ class BillingRatesListResponse extends \Google\Collection
   protected $collection_key = 'billingRates';
   protected $billingRatesType = BillingRate::class;
   protected $billingRatesDataType = 'array';
-  public $billingRates;
+  public $billingRates = [];
   /**
    * @var string
    */

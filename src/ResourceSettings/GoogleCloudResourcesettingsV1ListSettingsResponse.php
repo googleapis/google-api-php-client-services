@@ -26,7 +26,7 @@ class GoogleCloudResourcesettingsV1ListSettingsResponse extends \Google\Collecti
   public $nextPageToken;
   protected $settingsType = GoogleCloudResourcesettingsV1Setting::class;
   protected $settingsDataType = 'array';
-  public $settings;
+  public $settings = [];
 
   /**
    * @param string

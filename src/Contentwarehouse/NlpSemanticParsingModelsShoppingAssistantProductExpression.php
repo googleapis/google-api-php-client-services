@@ -33,7 +33,7 @@ class NlpSemanticParsingModelsShoppingAssistantProductExpression extends \Google
   public $grammaticalNumber;
   protected $phrasesType = NlpSemanticParsingModelsShoppingAssistantPhrase::class;
   protected $phrasesDataType = 'array';
-  public $phrases;
+  public $phrases = [];
   protected $productClassificationType = NlpSemanticParsingModelsShoppingAssistantProductClassification::class;
   protected $productClassificationDataType = '';
   public $productClassification;

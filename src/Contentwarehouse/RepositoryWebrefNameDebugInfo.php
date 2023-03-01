@@ -22,7 +22,7 @@ class RepositoryWebrefNameDebugInfo extends \Google\Collection
   protected $collection_key = 'candidates';
   protected $candidatesType = RepositoryWebrefNameDebugInfoCandidateInfo::class;
   protected $candidatesDataType = 'array';
-  public $candidates;
+  public $candidates = [];
   protected $queryType = RepositoryWebrefLocalizedString::class;
   protected $queryDataType = '';
   public $query;

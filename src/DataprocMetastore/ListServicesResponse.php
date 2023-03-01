@@ -26,11 +26,11 @@ class ListServicesResponse extends \Google\Collection
   public $nextPageToken;
   protected $servicesType = Service::class;
   protected $servicesDataType = 'array';
-  public $services;
+  public $services = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

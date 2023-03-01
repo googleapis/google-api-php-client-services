@@ -31,7 +31,7 @@ class HomeGraphCommonRoute extends \Google\Collection
   /**
    * @var int[]
    */
-  public $chipEndpoint;
+  public $chipEndpoint = [];
   /**
    * @var string
    */

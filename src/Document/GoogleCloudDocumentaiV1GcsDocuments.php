@@ -22,7 +22,7 @@ class GoogleCloudDocumentaiV1GcsDocuments extends \Google\Collection
   protected $collection_key = 'documents';
   protected $documentsType = GoogleCloudDocumentaiV1GcsDocument::class;
   protected $documentsDataType = 'array';
-  public $documents;
+  public $documents = [];
 
   /**
    * @param GoogleCloudDocumentaiV1GcsDocument[]

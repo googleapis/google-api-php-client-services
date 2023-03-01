@@ -26,7 +26,7 @@ class ListTablesResponse extends \Google\Collection
   public $nextPageToken;
   protected $tablesType = Table::class;
   protected $tablesDataType = 'array';
-  public $tables;
+  public $tables = [];
 
   /**
    * @param string

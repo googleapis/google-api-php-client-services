@@ -22,7 +22,7 @@ class GoogleAppsCardV1SelectionInput extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = GoogleAppsCardV1SelectionItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

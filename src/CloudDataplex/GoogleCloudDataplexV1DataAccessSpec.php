@@ -23,7 +23,7 @@ class GoogleCloudDataplexV1DataAccessSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $readers;
+  public $readers = [];
 
   /**
    * @param string[]

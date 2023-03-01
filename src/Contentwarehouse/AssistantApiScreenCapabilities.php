@@ -27,7 +27,7 @@ class AssistantApiScreenCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputType;
+  public $inputType = [];
   protected $maskType = AssistantApiScreenCapabilitiesMask::class;
   protected $maskDataType = '';
   public $mask;
@@ -52,7 +52,7 @@ class AssistantApiScreenCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedScreenStates;
+  public $supportedScreenStates = [];
   /**
    * @var bool
    */

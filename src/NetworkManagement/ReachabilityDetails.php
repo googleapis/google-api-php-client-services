@@ -29,7 +29,7 @@ class ReachabilityDetails extends \Google\Collection
   public $result;
   protected $tracesType = Trace::class;
   protected $tracesDataType = 'array';
-  public $traces;
+  public $traces = [];
   /**
    * @var string
    */

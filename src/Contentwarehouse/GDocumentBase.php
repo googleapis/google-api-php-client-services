@@ -136,7 +136,7 @@ class GDocumentBase extends \Google\Collection
   public $content;
   protected $directoryType = GDocumentBaseDirectory::class;
   protected $directoryDataType = 'array';
-  public $directory;
+  public $directory = [];
   /**
    * @var string
    */

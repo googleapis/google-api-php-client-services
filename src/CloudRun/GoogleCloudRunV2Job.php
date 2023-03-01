@@ -23,7 +23,7 @@ class GoogleCloudRunV2Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   protected $binaryAuthorizationType = GoogleCloudRunV2BinaryAuthorization::class;
   protected $binaryAuthorizationDataType = '';
   public $binaryAuthorization;
@@ -37,7 +37,7 @@ class GoogleCloudRunV2Job extends \Google\Collection
   public $clientVersion;
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   /**
    * @var string
    */
@@ -69,7 +69,7 @@ class GoogleCloudRunV2Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

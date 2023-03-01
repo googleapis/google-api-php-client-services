@@ -22,7 +22,7 @@ class ImageRepositoryVenomProcessingInfo extends \Google\Collection
   protected $collection_key = 'venomStatus';
   protected $venomStatusType = ImageRepositoryVenomStatus::class;
   protected $venomStatusDataType = 'array';
-  public $venomStatus;
+  public $venomStatus = [];
 
   /**
    * @param ImageRepositoryVenomStatus[]

@@ -39,7 +39,7 @@ class ConnectionProfile extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $mysqlType = MySqlConnectionProfile::class;
   protected $mysqlDataType = '';
   public $mysql;

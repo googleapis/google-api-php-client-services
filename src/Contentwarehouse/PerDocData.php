@@ -58,7 +58,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dEPRECATEDAuthorObfuscatedGaia;
+  public $dEPRECATEDAuthorObfuscatedGaia = [];
   /**
    * @var bool
    */
@@ -69,7 +69,7 @@ class PerDocData extends \Google\Collection
   public $docLevelSpamScore;
   protected $eventType = PerDocDebugEvent::class;
   protected $eventDataType = 'array';
-  public $event;
+  public $event = [];
   /**
    * @var int
    */
@@ -159,7 +159,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $authorObfuscatedGaiaStr;
+  public $authorObfuscatedGaiaStr = [];
   protected $biasingdataType = BiasingPerDocData::class;
   protected $biasingdataDataType = '';
   public $biasingdata;
@@ -218,7 +218,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $eventsDate;
+  public $eventsDate = [];
   protected $extraDataType = Proto2BridgeMessageSet::class;
   protected $extraDataDataType = '';
   public $extraData;
@@ -276,7 +276,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var int[]
    */
-  public $languages;
+  public $languages = [];
   /**
    * @var string
    */
@@ -339,7 +339,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var int[]
    */
-  public $pageTags;
+  public $pageTags = [];
   /**
    * @var float
    */
@@ -372,7 +372,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rosettaLanguages;
+  public $rosettaLanguages = [];
   protected $rsApplicationType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplication::class;
   protected $rsApplicationDataType = '';
   public $rsApplication;
@@ -382,7 +382,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var int[]
    */
-  public $saftLanguageInt;
+  public $saftLanguageInt = [];
   /**
    * @var int
    */
@@ -394,7 +394,7 @@ class PerDocData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scienceHoldingsIds;
+  public $scienceHoldingsIds = [];
   /**
    * @var int
    */

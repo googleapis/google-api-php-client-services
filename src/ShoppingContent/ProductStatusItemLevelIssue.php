@@ -23,7 +23,7 @@ class ProductStatusItemLevelIssue extends \Google\Collection
   /**
    * @var string[]
    */
-  public $applicableCountries;
+  public $applicableCountries = [];
   /**
    * @var string
    */

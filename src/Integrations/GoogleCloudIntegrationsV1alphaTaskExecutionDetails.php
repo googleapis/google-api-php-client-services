@@ -22,7 +22,7 @@ class GoogleCloudIntegrationsV1alphaTaskExecutionDetails extends \Google\Collect
   protected $collection_key = 'taskAttemptStats';
   protected $taskAttemptStatsType = GoogleCloudIntegrationsV1alphaAttemptStats::class;
   protected $taskAttemptStatsDataType = 'array';
-  public $taskAttemptStats;
+  public $taskAttemptStats = [];
   /**
    * @var string
    */

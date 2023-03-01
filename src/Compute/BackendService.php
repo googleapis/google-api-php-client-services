@@ -26,7 +26,7 @@ class BackendService extends \Google\Collection
   public $affinityCookieTtlSec;
   protected $backendsType = Backend::class;
   protected $backendsDataType = 'array';
-  public $backends;
+  public $backends = [];
   protected $cdnPolicyType = BackendServiceCdnPolicy::class;
   protected $cdnPolicyDataType = '';
   public $cdnPolicy;
@@ -53,11 +53,11 @@ class BackendService extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customRequestHeaders;
+  public $customRequestHeaders = [];
   /**
    * @var string[]
    */
-  public $customResponseHeaders;
+  public $customResponseHeaders = [];
   /**
    * @var string
    */
@@ -80,7 +80,7 @@ class BackendService extends \Google\Collection
   /**
    * @var string[]
    */
-  public $healthChecks;
+  public $healthChecks = [];
   protected $iapType = BackendServiceIAP::class;
   protected $iapDataType = '';
   public $iap;
@@ -98,7 +98,7 @@ class BackendService extends \Google\Collection
   public $loadBalancingScheme;
   protected $localityLbPoliciesType = BackendServiceLocalityLoadBalancingPolicyConfig::class;
   protected $localityLbPoliciesDataType = 'array';
-  public $localityLbPolicies;
+  public $localityLbPolicies = [];
   /**
    * @var string
    */
@@ -150,7 +150,7 @@ class BackendService extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceBindings;
+  public $serviceBindings = [];
   /**
    * @var string
    */

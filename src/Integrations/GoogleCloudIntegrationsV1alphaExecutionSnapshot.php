@@ -29,10 +29,10 @@ class GoogleCloudIntegrationsV1alphaExecutionSnapshot extends \Google\Collection
   public $executionSnapshotMetadata;
   protected $paramsType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $paramsDataType = 'map';
-  public $params;
+  public $params = [];
   protected $taskExecutionDetailsType = GoogleCloudIntegrationsV1alphaTaskExecutionDetails::class;
   protected $taskExecutionDetailsDataType = 'array';
-  public $taskExecutionDetails;
+  public $taskExecutionDetails = [];
 
   /**
    * @param string

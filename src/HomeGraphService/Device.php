@@ -23,11 +23,11 @@ class Device extends \Google\Collection
   /**
    * @var array[]
    */
-  public $attributes;
+  public $attributes = [];
   /**
    * @var array[]
    */
-  public $customData;
+  public $customData = [];
   protected $deviceInfoType = DeviceInfo::class;
   protected $deviceInfoDataType = '';
   public $deviceInfo;
@@ -44,7 +44,7 @@ class Device extends \Google\Collection
   public $notificationSupportedByAgent;
   protected $otherDeviceIdsType = AgentOtherDeviceId::class;
   protected $otherDeviceIdsDataType = 'array';
-  public $otherDeviceIds;
+  public $otherDeviceIds = [];
   /**
    * @var string
    */
@@ -56,7 +56,7 @@ class Device extends \Google\Collection
   /**
    * @var string[]
    */
-  public $traits;
+  public $traits = [];
   /**
    * @var string
    */

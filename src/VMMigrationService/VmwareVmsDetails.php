@@ -22,7 +22,7 @@ class VmwareVmsDetails extends \Google\Collection
   protected $collection_key = 'details';
   protected $detailsType = VmwareVmDetails::class;
   protected $detailsDataType = 'array';
-  public $details;
+  public $details = [];
 
   /**
    * @param VmwareVmDetails[]

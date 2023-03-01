@@ -22,7 +22,7 @@ class TargetTcpProxiesScopedList extends \Google\Collection
   protected $collection_key = 'targetTcpProxies';
   protected $targetTcpProxiesType = TargetTcpProxy::class;
   protected $targetTcpProxiesDataType = 'array';
-  public $targetTcpProxies;
+  public $targetTcpProxies = [];
   protected $warningType = TargetTcpProxiesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

@@ -45,7 +45,7 @@ class ArimaSingleModelForecastingMetrics extends \Google\Collection
   /**
    * @var string[]
    */
-  public $seasonalPeriods;
+  public $seasonalPeriods = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class ArimaSingleModelForecastingMetrics extends \Google\Collection
   /**
    * @var string[]
    */
-  public $timeSeriesIds;
+  public $timeSeriesIds = [];
 
   /**
    * @param ArimaFittingMetrics

@@ -23,19 +23,19 @@ class SparkBatch extends \Google\Collection
   /**
    * @var string[]
    */
-  public $archiveUris;
+  public $archiveUris = [];
   /**
    * @var string[]
    */
-  public $args;
+  public $args = [];
   /**
    * @var string[]
    */
-  public $fileUris;
+  public $fileUris = [];
   /**
    * @var string[]
    */
-  public $jarFileUris;
+  public $jarFileUris = [];
   /**
    * @var string
    */

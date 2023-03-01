@@ -34,11 +34,11 @@ class RepositoryWebrefTripleAnnotation extends \Google\Collection
   public $kgVerified;
   protected $mentionsType = RepositoryWebrefTripleMention::class;
   protected $mentionsDataType = 'array';
-  public $mentions;
+  public $mentions = [];
   /**
    * @var string[]
    */
-  public $predMid;
+  public $predMid = [];
   protected $stuffType = Proto2BridgeMessageSet::class;
   protected $stuffDataType = '';
   public $stuff;

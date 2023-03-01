@@ -22,7 +22,7 @@ class StructType extends \Google\Collection
   protected $collection_key = 'fields';
   protected $fieldsType = Field::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
 
   /**
    * @param Field[]

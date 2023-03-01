@@ -26,7 +26,7 @@ class AggregateBucket extends \Google\Collection
   public $activity;
   protected $datasetType = Dataset::class;
   protected $datasetDataType = 'array';
-  public $dataset;
+  public $dataset = [];
   /**
    * @var string
    */

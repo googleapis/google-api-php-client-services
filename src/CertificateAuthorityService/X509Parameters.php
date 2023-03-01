@@ -22,11 +22,11 @@ class X509Parameters extends \Google\Collection
   protected $collection_key = 'policyIds';
   protected $additionalExtensionsType = X509Extension::class;
   protected $additionalExtensionsDataType = 'array';
-  public $additionalExtensions;
+  public $additionalExtensions = [];
   /**
    * @var string[]
    */
-  public $aiaOcspServers;
+  public $aiaOcspServers = [];
   protected $caOptionsType = CaOptions::class;
   protected $caOptionsDataType = '';
   public $caOptions;
@@ -38,7 +38,7 @@ class X509Parameters extends \Google\Collection
   public $nameConstraints;
   protected $policyIdsType = ObjectId::class;
   protected $policyIdsDataType = 'array';
-  public $policyIds;
+  public $policyIds = [];
 
   /**
    * @param X509Extension[]

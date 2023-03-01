@@ -22,7 +22,7 @@ class Query extends \Google\Collection
   protected $collection_key = 'projection';
   protected $distinctOnType = PropertyReference::class;
   protected $distinctOnDataType = 'array';
-  public $distinctOn;
+  public $distinctOn = [];
   /**
    * @var string
    */
@@ -32,7 +32,7 @@ class Query extends \Google\Collection
   public $filter;
   protected $kindType = KindExpression::class;
   protected $kindDataType = 'array';
-  public $kind;
+  public $kind = [];
   /**
    * @var int
    */
@@ -43,10 +43,10 @@ class Query extends \Google\Collection
   public $offset;
   protected $orderType = PropertyOrder::class;
   protected $orderDataType = 'array';
-  public $order;
+  public $order = [];
   protected $projectionType = Projection::class;
   protected $projectionDataType = 'array';
-  public $projection;
+  public $projection = [];
   /**
    * @var string
    */

@@ -25,11 +25,11 @@ class QueryAccessibleDataRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $requestAttributes;
+  public $requestAttributes = [];
   /**
    * @var string[]
    */
-  public $resourceAttributes;
+  public $resourceAttributes = [];
 
   /**
    * @param GoogleCloudHealthcareV1ConsentGcsDestination

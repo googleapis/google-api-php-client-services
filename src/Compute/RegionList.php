@@ -26,7 +26,7 @@ class RegionList extends \Google\Collection
   public $id;
   protected $itemsType = Region::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

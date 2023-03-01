@@ -22,10 +22,10 @@ class Hl7TypesConfig extends \Google\Collection
   protected $collection_key = 'version';
   protected $typeType = Type::class;
   protected $typeDataType = 'array';
-  public $type;
+  public $type = [];
   protected $versionType = VersionSource::class;
   protected $versionDataType = 'array';
-  public $version;
+  public $version = [];
 
   /**
    * @param Type[]

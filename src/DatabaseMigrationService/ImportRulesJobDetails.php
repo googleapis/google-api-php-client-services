@@ -27,7 +27,7 @@ class ImportRulesJobDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $files;
+  public $files = [];
 
   /**
    * @param string

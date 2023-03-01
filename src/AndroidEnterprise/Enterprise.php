@@ -22,7 +22,7 @@ class Enterprise extends \Google\Collection
   protected $collection_key = 'administrator';
   protected $administratorType = Administrator::class;
   protected $administratorDataType = 'array';
-  public $administrator;
+  public $administrator = [];
   protected $googleAuthenticationSettingsType = GoogleAuthenticationSettings::class;
   protected $googleAuthenticationSettingsDataType = '';
   public $googleAuthenticationSettings;

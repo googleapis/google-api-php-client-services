@@ -23,7 +23,7 @@ class AssistantLogsAmbiguousTargetDeviceLogPuntInfoLog extends \Google\Collectio
   /**
    * @var int[]
    */
-  public $deviceIndex;
+  public $deviceIndex = [];
   /**
    * @var int
    */

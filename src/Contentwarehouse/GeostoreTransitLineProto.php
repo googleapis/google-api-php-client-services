@@ -22,7 +22,7 @@ class GeostoreTransitLineProto extends \Google\Collection
   protected $collection_key = 'stations';
   protected $agencyType = GeostoreFeatureIdProto::class;
   protected $agencyDataType = 'array';
-  public $agency;
+  public $agency = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class GeostoreTransitLineProto extends \Google\Collection
   public $labelTextColor;
   protected $stationsType = GeostoreFeatureIdProto::class;
   protected $stationsDataType = 'array';
-  public $stations;
+  public $stations = [];
   /**
    * @var string
    */

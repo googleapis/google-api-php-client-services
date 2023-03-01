@@ -22,11 +22,11 @@ class ChromeOsDeviceCpuStatusReports extends \Google\Collection
   protected $collection_key = 'cpuUtilizationPercentageInfo';
   protected $cpuTemperatureInfoType = ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo::class;
   protected $cpuTemperatureInfoDataType = 'array';
-  public $cpuTemperatureInfo;
+  public $cpuTemperatureInfo = [];
   /**
    * @var int[]
    */
-  public $cpuUtilizationPercentageInfo;
+  public $cpuUtilizationPercentageInfo = [];
   /**
    * @var string
    */

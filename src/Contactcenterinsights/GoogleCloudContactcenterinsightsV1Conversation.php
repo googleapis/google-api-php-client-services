@@ -36,7 +36,7 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   public $dataSource;
   protected $dialogflowIntentsType = GoogleCloudContactcenterinsightsV1DialogflowIntent::class;
   protected $dialogflowIntentsDataType = 'map';
-  public $dialogflowIntents;
+  public $dialogflowIntents = [];
   /**
    * @var string
    */
@@ -48,7 +48,7 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -70,7 +70,7 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   public $obfuscatedUserId;
   protected $runtimeAnnotationsType = GoogleCloudContactcenterinsightsV1RuntimeAnnotation::class;
   protected $runtimeAnnotationsDataType = 'array';
-  public $runtimeAnnotations;
+  public $runtimeAnnotations = [];
   /**
    * @var string
    */

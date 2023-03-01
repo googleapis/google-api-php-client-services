@@ -21,11 +21,11 @@ class PreservedState extends \Google\Model
 {
   protected $disksType = PreservedStatePreservedDisk::class;
   protected $disksDataType = 'map';
-  public $disks;
+  public $disks = [];
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
 
   /**
    * @param PreservedStatePreservedDisk[]

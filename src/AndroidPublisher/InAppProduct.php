@@ -32,7 +32,7 @@ class InAppProduct extends \Google\Model
   public $gracePeriod;
   protected $listingsType = InAppProductListing::class;
   protected $listingsDataType = 'map';
-  public $listings;
+  public $listings = [];
   protected $managedProductTaxesAndComplianceSettingsType = ManagedProductTaxAndComplianceSettings::class;
   protected $managedProductTaxesAndComplianceSettingsDataType = '';
   public $managedProductTaxesAndComplianceSettings;
@@ -42,7 +42,7 @@ class InAppProduct extends \Google\Model
   public $packageName;
   protected $pricesType = Price::class;
   protected $pricesDataType = 'map';
-  public $prices;
+  public $prices = [];
   /**
    * @var string
    */

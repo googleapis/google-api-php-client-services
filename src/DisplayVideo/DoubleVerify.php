@@ -26,7 +26,7 @@ class DoubleVerify extends \Google\Collection
   /**
    * @var string[]
    */
-  public $avoidedAgeRatings;
+  public $avoidedAgeRatings = [];
   protected $brandSafetyCategoriesType = DoubleVerifyBrandSafetyCategories::class;
   protected $brandSafetyCategoriesDataType = '';
   public $brandSafetyCategories;

@@ -40,14 +40,14 @@ class AssistantDevicesPlatformProtoDeviceActionCapability extends \Google\Collec
   public $inlinedActionCapability;
   protected $intentsType = AssistantDevicesPlatformProtoIntent::class;
   protected $intentsDataType = 'array';
-  public $intents;
+  public $intents = [];
   protected $providedDataType = AssistantDevicesPlatformProtoProvidedData::class;
   protected $providedDataDataType = 'array';
-  public $providedData;
+  public $providedData = [];
   /**
    * @var string[]
    */
-  public $traits;
+  public $traits = [];
   protected $understandingConfigType = AssistantDevicesPlatformProtoUnderstandingConfig::class;
   protected $understandingConfigDataType = '';
   public $understandingConfig;

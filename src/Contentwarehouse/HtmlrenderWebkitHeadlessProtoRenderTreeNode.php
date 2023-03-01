@@ -26,14 +26,14 @@ class HtmlrenderWebkitHeadlessProtoRenderTreeNode extends \Google\Collection
   /**
    * @var int[]
    */
-  public $childRenderTreeNodeIndex;
+  public $childRenderTreeNodeIndex = [];
   /**
    * @var int
    */
   public $domTreeNodeIndex;
   protected $inlineTextBoxType = HtmlrenderWebkitHeadlessProtoRenderTreeNodeInlineTextBox::class;
   protected $inlineTextBoxDataType = 'array';
-  public $inlineTextBox;
+  public $inlineTextBox = [];
   /**
    * @var string
    */

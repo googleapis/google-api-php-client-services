@@ -27,7 +27,7 @@ class ExtensionConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $signingKeyFingerprintsSha256;
+  public $signingKeyFingerprintsSha256 = [];
 
   /**
    * @param string

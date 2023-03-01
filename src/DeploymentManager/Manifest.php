@@ -33,7 +33,7 @@ class Manifest extends \Google\Collection
   public $id;
   protected $importsType = ImportFile::class;
   protected $importsDataType = 'array';
-  public $imports;
+  public $imports = [];
   /**
    * @var string
    */

@@ -27,11 +27,11 @@ class DoubleVerifyBrandSafetyCategories extends \Google\Collection
   /**
    * @var string[]
    */
-  public $avoidedHighSeverityCategories;
+  public $avoidedHighSeverityCategories = [];
   /**
    * @var string[]
    */
-  public $avoidedMediumSeverityCategories;
+  public $avoidedMediumSeverityCategories = [];
 
   /**
    * @param bool

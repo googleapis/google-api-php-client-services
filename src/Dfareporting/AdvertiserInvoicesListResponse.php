@@ -22,7 +22,7 @@ class AdvertiserInvoicesListResponse extends \Google\Collection
   protected $collection_key = 'invoices';
   protected $invoicesType = Invoice::class;
   protected $invoicesDataType = 'array';
-  public $invoices;
+  public $invoices = [];
   /**
    * @var string
    */

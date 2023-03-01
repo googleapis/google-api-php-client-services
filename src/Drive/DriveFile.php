@@ -23,7 +23,7 @@ class DriveFile extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appProperties;
+  public $appProperties = [];
   protected $capabilitiesType = DriveFileCapabilities::class;
   protected $capabilitiesDataType = '';
   public $capabilities;
@@ -32,7 +32,7 @@ class DriveFile extends \Google\Collection
   public $contentHints;
   protected $contentRestrictionsType = ContentRestriction::class;
   protected $contentRestrictionsDataType = 'array';
-  public $contentRestrictions;
+  public $contentRestrictions = [];
   /**
    * @var bool
    */
@@ -56,7 +56,7 @@ class DriveFile extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exportLinks;
+  public $exportLinks = [];
   /**
    * @var string
    */
@@ -143,22 +143,22 @@ class DriveFile extends \Google\Collection
   public $ownedByMe;
   protected $ownersType = User::class;
   protected $ownersDataType = 'array';
-  public $owners;
+  public $owners = [];
   /**
    * @var string[]
    */
-  public $parents;
+  public $parents = [];
   /**
    * @var string[]
    */
-  public $permissionIds;
+  public $permissionIds = [];
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
-  public $permissions;
+  public $permissions = [];
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   /**
    * @var string
    */
@@ -196,7 +196,7 @@ class DriveFile extends \Google\Collection
   /**
    * @var string[]
    */
-  public $spaces;
+  public $spaces = [];
   /**
    * @var bool
    */

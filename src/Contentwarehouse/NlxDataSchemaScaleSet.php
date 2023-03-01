@@ -22,7 +22,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   protected $collection_key = 'token';
   protected $byteType = NlxDataSchemaByte::class;
   protected $byteDataType = 'array';
-  public $byte;
+  public $byte = [];
   protected $byteDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $byteDocumentPresenceDataType = '';
   public $byteDocumentPresence;
@@ -31,7 +31,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $bytePresence;
   protected $characterType = NlxDataSchemaCharacter::class;
   protected $characterDataType = 'array';
-  public $character;
+  public $character = [];
   protected $characterDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $characterDocumentPresenceDataType = '';
   public $characterDocumentPresence;
@@ -52,7 +52,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $characterTokenPresence;
   protected $documentType = NlxDataSchemaDocument::class;
   protected $documentDataType = 'array';
-  public $document;
+  public $document = [];
   protected $documentAuthorPresenceType = MultiscaleFieldPresence::class;
   protected $documentAuthorPresenceDataType = '';
   public $documentAuthorPresence;
@@ -94,7 +94,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $documentUrlPresence;
   protected $entityType = NlxDataSchemaEntity::class;
   protected $entityDataType = 'array';
-  public $entity;
+  public $entity = [];
   protected $entityGenderPresenceType = MultiscaleFieldPresence::class;
   protected $entityGenderPresenceDataType = '';
   public $entityGenderPresence;
@@ -112,7 +112,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $entityTypePresence;
   protected $languageSpanType = NlxDataSchemaLanguageSpan::class;
   protected $languageSpanDataType = 'array';
-  public $languageSpan;
+  public $languageSpan = [];
   protected $languageSpanBytesPresenceType = MultiscaleFieldPresence::class;
   protected $languageSpanBytesPresenceDataType = '';
   public $languageSpanBytesPresence;
@@ -130,7 +130,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $languageSpanPresence;
   protected $mentionType = NlxDataSchemaMention::class;
   protected $mentionDataType = 'array';
-  public $mention;
+  public $mention = [];
   protected $mentionBytesPresenceType = MultiscaleFieldPresence::class;
   protected $mentionBytesPresenceDataType = '';
   public $mentionBytesPresence;
@@ -157,7 +157,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $mentionTypePresence;
   protected $paragraphType = NlxDataSchemaParagraph::class;
   protected $paragraphDataType = 'array';
-  public $paragraph;
+  public $paragraph = [];
   protected $paragraphBytesPresenceType = MultiscaleFieldPresence::class;
   protected $paragraphBytesPresenceDataType = '';
   public $paragraphBytesPresence;
@@ -181,7 +181,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $paragraphTokensPresence;
   protected $sentenceType = NlxDataSchemaSentence::class;
   protected $sentenceDataType = 'array';
-  public $sentence;
+  public $sentence = [];
   protected $sentenceBytesPresenceType = MultiscaleFieldPresence::class;
   protected $sentenceBytesPresenceDataType = '';
   public $sentenceBytesPresence;
@@ -205,7 +205,7 @@ class NlxDataSchemaScaleSet extends \Google\Collection
   public $sentenceTokensPresence;
   protected $tokenType = NlxDataSchemaToken::class;
   protected $tokenDataType = 'array';
-  public $token;
+  public $token = [];
   protected $tokenBytesPresenceType = MultiscaleFieldPresence::class;
   protected $tokenBytesPresenceDataType = '';
   public $tokenBytesPresence;

@@ -22,7 +22,7 @@ class MediaIndexVideoCentroid extends \Google\Collection
   protected $collection_key = 'domainScores';
   protected $domainScoresType = MediaIndexVideoCentroidDomainScore::class;
   protected $domainScoresDataType = 'array';
-  public $domainScores;
+  public $domainScores = [];
 
   /**
    * @param MediaIndexVideoCentroidDomainScore[]

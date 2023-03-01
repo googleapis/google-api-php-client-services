@@ -22,7 +22,7 @@ class KnowledgeAnswersIntentQueryLocalSignals extends \Google\Collection
   protected $collection_key = 'localResultSignals';
   protected $localResultSignalsType = KnowledgeAnswersIntentQueryLocalResultSignals::class;
   protected $localResultSignalsDataType = 'array';
-  public $localResultSignals;
+  public $localResultSignals = [];
   /**
    * @var float
    */

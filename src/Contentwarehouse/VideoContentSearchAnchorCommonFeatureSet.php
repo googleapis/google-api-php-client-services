@@ -41,7 +41,7 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
   public $dolphinDescriptivenessScore;
   protected $dolphinEnsembleScoreType = VideoContentSearchDolphinEnsembleScore::class;
   protected $dolphinEnsembleScoreDataType = 'array';
-  public $dolphinEnsembleScore;
+  public $dolphinEnsembleScore = [];
   protected $dolphinFeaturesType = VideoContentSearchDolphinFeatures::class;
   protected $dolphinFeaturesDataType = '';
   public $dolphinFeatures;
@@ -56,7 +56,7 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
   /**
    * @var float[]
    */
-  public $labelPhraseEmbedding;
+  public $labelPhraseEmbedding = [];
   /**
    * @var float
    */
@@ -74,10 +74,10 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
   public $saftDocument;
   protected $timedLabelFeaturesType = VideoContentSearchCaptionLabelFeatures::class;
   protected $timedLabelFeaturesDataType = 'array';
-  public $timedLabelFeatures;
+  public $timedLabelFeatures = [];
   protected $timestampType = VideoContentSearchAnchorCommonFeatureSetLabelSpanTimestamp::class;
   protected $timestampDataType = 'array';
-  public $timestamp;
+  public $timestamp = [];
   /**
    * @var float
    */

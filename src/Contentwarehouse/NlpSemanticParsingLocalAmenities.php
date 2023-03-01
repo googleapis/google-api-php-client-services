@@ -23,7 +23,7 @@ class NlpSemanticParsingLocalAmenities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $type;
+  public $type = [];
 
   /**
    * @param string[]

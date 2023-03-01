@@ -44,7 +44,7 @@ class ExternalDataConfiguration extends \Google\Collection
   /**
    * @var string[]
    */
-  public $decimalTargetTypes;
+  public $decimalTargetTypes = [];
   protected $googleSheetsOptionsType = GoogleSheetsOptions::class;
   protected $googleSheetsOptionsDataType = '';
   public $googleSheetsOptions;
@@ -84,7 +84,7 @@ class ExternalDataConfiguration extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceUris;
+  public $sourceUris = [];
 
   /**
    * @param bool

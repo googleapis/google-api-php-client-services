@@ -23,11 +23,11 @@ class ImageRepositoryShoppingProductInformationProductInformation extends \Googl
   /**
    * @var int[]
    */
-  public $categoryId;
+  public $categoryId = [];
   /**
    * @var int[]
    */
-  public $clusterIds;
+  public $clusterIds = [];
   /**
    * @var float
    */
@@ -38,7 +38,7 @@ class ImageRepositoryShoppingProductInformationProductInformation extends \Googl
   public $embedding;
   protected $entitiesType = ImageRepositoryShoppingProductInformationEntity::class;
   protected $entitiesDataType = 'array';
-  public $entities;
+  public $entities = [];
   /**
    * @var string
    */
@@ -48,7 +48,7 @@ class ImageRepositoryShoppingProductInformationProductInformation extends \Googl
   public $productLocation;
   protected $tokenGroupsType = ImageRepositoryShoppingProductInformationProductInformationTokenGroup::class;
   protected $tokenGroupsDataType = 'array';
-  public $tokenGroups;
+  public $tokenGroups = [];
 
   /**
    * @param int[]

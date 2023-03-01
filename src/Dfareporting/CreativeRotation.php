@@ -22,7 +22,7 @@ class CreativeRotation extends \Google\Collection
   protected $collection_key = 'creativeAssignments';
   protected $creativeAssignmentsType = CreativeAssignment::class;
   protected $creativeAssignmentsDataType = 'array';
-  public $creativeAssignments;
+  public $creativeAssignments = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class SubstitutionRule extends \Google\Collection
   public $originalValuePattern;
   protected $targetGroupKindsType = GroupKind::class;
   protected $targetGroupKindsDataType = 'array';
-  public $targetGroupKinds;
+  public $targetGroupKinds = [];
   /**
    * @var string
    */
@@ -38,7 +38,7 @@ class SubstitutionRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetNamespaces;
+  public $targetNamespaces = [];
 
   /**
    * @param string

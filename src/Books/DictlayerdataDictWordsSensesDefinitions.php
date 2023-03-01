@@ -26,7 +26,7 @@ class DictlayerdataDictWordsSensesDefinitions extends \Google\Collection
   public $definition;
   protected $examplesType = DictlayerdataDictWordsSensesDefinitionsExamples::class;
   protected $examplesDataType = 'array';
-  public $examples;
+  public $examples = [];
 
   /**
    * @param string

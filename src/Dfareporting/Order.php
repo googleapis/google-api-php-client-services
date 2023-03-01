@@ -31,7 +31,7 @@ class Order extends \Google\Collection
   /**
    * @var string[]
    */
-  public $approverUserProfileIds;
+  public $approverUserProfileIds = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class Order extends \Google\Collection
   public $comments;
   protected $contactsType = OrderContact::class;
   protected $contactsDataType = 'array';
-  public $contacts;
+  public $contacts = [];
   /**
    * @var string
    */
@@ -85,11 +85,11 @@ class Order extends \Google\Collection
   /**
    * @var string[]
    */
-  public $siteId;
+  public $siteId = [];
   /**
    * @var string[]
    */
-  public $siteNames;
+  public $siteNames = [];
   /**
    * @var string
    */

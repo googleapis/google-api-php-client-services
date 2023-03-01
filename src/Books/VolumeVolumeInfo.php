@@ -27,7 +27,7 @@ class VolumeVolumeInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $authors;
+  public $authors = [];
   public $averageRating;
   /**
    * @var string
@@ -36,7 +36,7 @@ class VolumeVolumeInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categories;
+  public $categories = [];
   /**
    * @var bool
    */
@@ -57,7 +57,7 @@ class VolumeVolumeInfo extends \Google\Collection
   public $imageLinks;
   protected $industryIdentifiersType = VolumeVolumeInfoIndustryIdentifiers::class;
   protected $industryIdentifiersDataType = 'array';
-  public $industryIdentifiers;
+  public $industryIdentifiers = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class ClusterOperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $childOperationIds;
+  public $childOperationIds = [];
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class ClusterOperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -49,11 +49,11 @@ class ClusterOperationMetadata extends \Google\Collection
   public $status;
   protected $statusHistoryType = ClusterOperationStatus::class;
   protected $statusHistoryDataType = 'array';
-  public $statusHistory;
+  public $statusHistory = [];
   /**
    * @var string[]
    */
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param string[]

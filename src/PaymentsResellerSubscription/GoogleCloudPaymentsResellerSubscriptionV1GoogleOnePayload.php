@@ -23,7 +23,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload extends \Google\
   /**
    * @var string[]
    */
-  public $campaigns;
+  public $campaigns = [];
   /**
    * @var string
    */

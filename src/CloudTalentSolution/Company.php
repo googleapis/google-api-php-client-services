@@ -54,7 +54,7 @@ class Company extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keywordSearchableJobCustomAttributes;
+  public $keywordSearchableJobCustomAttributes = [];
   /**
    * @var string
    */

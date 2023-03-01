@@ -25,7 +25,7 @@ class GeostoreAttributeProto extends \Google\Collection
   public $applicationData;
   protected $attributeDisplayType = GeostoreAttributeValueDisplayProto::class;
   protected $attributeDisplayDataType = 'array';
-  public $attributeDisplay;
+  public $attributeDisplay = [];
   /**
    * @var bool
    */
@@ -69,7 +69,7 @@ class GeostoreAttributeProto extends \Google\Collection
   public $uint32Value;
   protected $valueDisplayType = GeostoreAttributeValueDisplayProto::class;
   protected $valueDisplayDataType = 'array';
-  public $valueDisplay;
+  public $valueDisplay = [];
   protected $valueSpaceIdType = GeostoreAttributeIdProto::class;
   protected $valueSpaceIdDataType = '';
   public $valueSpaceId;

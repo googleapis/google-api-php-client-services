@@ -22,7 +22,7 @@ class TestSuite extends \Google\Collection
   protected $collection_key = 'testCases';
   protected $testCasesType = TestCase::class;
   protected $testCasesDataType = 'array';
-  public $testCases;
+  public $testCases = [];
 
   /**
    * @param TestCase[]

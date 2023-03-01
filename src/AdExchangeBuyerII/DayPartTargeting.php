@@ -22,7 +22,7 @@ class DayPartTargeting extends \Google\Collection
   protected $collection_key = 'dayParts';
   protected $dayPartsType = DayPart::class;
   protected $dayPartsDataType = 'array';
-  public $dayParts;
+  public $dayParts = [];
   /**
    * @var string
    */

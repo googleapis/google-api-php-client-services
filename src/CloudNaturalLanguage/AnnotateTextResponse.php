@@ -22,23 +22,23 @@ class AnnotateTextResponse extends \Google\Collection
   protected $collection_key = 'tokens';
   protected $categoriesType = ClassificationCategory::class;
   protected $categoriesDataType = 'array';
-  public $categories;
+  public $categories = [];
   protected $documentSentimentType = Sentiment::class;
   protected $documentSentimentDataType = '';
   public $documentSentiment;
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
-  public $entities;
+  public $entities = [];
   /**
    * @var string
    */
   public $language;
   protected $sentencesType = Sentence::class;
   protected $sentencesDataType = 'array';
-  public $sentences;
+  public $sentences = [];
   protected $tokensType = Token::class;
   protected $tokensDataType = 'array';
-  public $tokens;
+  public $tokens = [];
 
   /**
    * @param ClassificationCategory[]

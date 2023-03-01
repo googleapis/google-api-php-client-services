@@ -26,7 +26,7 @@ class LanguagesListResponse extends \Google\Collection
   public $kind;
   protected $languagesType = Language::class;
   protected $languagesDataType = 'array';
-  public $languages;
+  public $languages = [];
 
   /**
    * @param string

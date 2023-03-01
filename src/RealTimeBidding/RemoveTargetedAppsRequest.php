@@ -23,7 +23,7 @@ class RemoveTargetedAppsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appIds;
+  public $appIds = [];
 
   /**
    * @param string[]

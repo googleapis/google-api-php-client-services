@@ -22,7 +22,7 @@ class GoogleCloudContactcenterinsightsV1ListAnalysesResponse extends \Google\Col
   protected $collection_key = 'analyses';
   protected $analysesType = GoogleCloudContactcenterinsightsV1Analysis::class;
   protected $analysesDataType = 'array';
-  public $analyses;
+  public $analyses = [];
   /**
    * @var string
    */

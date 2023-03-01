@@ -25,7 +25,7 @@ class TargetConfiguration extends \Google\Collection
   public $config;
   protected $importsType = ImportFile::class;
   protected $importsDataType = 'array';
-  public $imports;
+  public $imports = [];
 
   /**
    * @param ConfigFile

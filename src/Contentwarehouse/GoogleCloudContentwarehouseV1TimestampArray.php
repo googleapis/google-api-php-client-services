@@ -22,7 +22,7 @@ class GoogleCloudContentwarehouseV1TimestampArray extends \Google\Collection
   protected $collection_key = 'values';
   protected $valuesType = GoogleCloudContentwarehouseV1TimestampValue::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param GoogleCloudContentwarehouseV1TimestampValue[]

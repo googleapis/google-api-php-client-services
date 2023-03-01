@@ -26,7 +26,7 @@ class Trigger extends \Google\Collection
   public $accountId;
   protected $autoEventFilterType = Condition::class;
   protected $autoEventFilterDataType = 'array';
-  public $autoEventFilter;
+  public $autoEventFilter = [];
   protected $checkValidationType = Parameter::class;
   protected $checkValidationDataType = '';
   public $checkValidation;
@@ -39,13 +39,13 @@ class Trigger extends \Google\Collection
   public $continuousTimeMinMilliseconds;
   protected $customEventFilterType = Condition::class;
   protected $customEventFilterDataType = 'array';
-  public $customEventFilter;
+  public $customEventFilter = [];
   protected $eventNameType = Parameter::class;
   protected $eventNameDataType = '';
   public $eventName;
   protected $filterType = Condition::class;
   protected $filterDataType = 'array';
-  public $filter;
+  public $filter = [];
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class Trigger extends \Google\Collection
   public $notes;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
-  public $parameter;
+  public $parameter = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class AllocateIdsResponse extends \Google\Collection
   protected $collection_key = 'keys';
   protected $keysType = Key::class;
   protected $keysDataType = 'array';
-  public $keys;
+  public $keys = [];
 
   /**
    * @param Key[]

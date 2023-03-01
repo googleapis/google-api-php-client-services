@@ -22,7 +22,7 @@ class CopleySubreferenceMetadata extends \Google\Collection
   protected $collection_key = 'mostCompoundResolvedEntities';
   protected $mostCompoundResolvedEntitiesType = CopleySubreferenceResolution::class;
   protected $mostCompoundResolvedEntitiesDataType = 'array';
-  public $mostCompoundResolvedEntities;
+  public $mostCompoundResolvedEntities = [];
   protected $mostNestedUnresolvedReferenceType = CopleySubreferenceReference::class;
   protected $mostNestedUnresolvedReferenceDataType = '';
   public $mostNestedUnresolvedReference;

@@ -23,7 +23,7 @@ class GoogleSecuritySafebrowsingV4RawIndices extends \Google\Collection
   /**
    * @var int[]
    */
-  public $indices;
+  public $indices = [];
 
   /**
    * @param int[]

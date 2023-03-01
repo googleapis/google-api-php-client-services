@@ -26,7 +26,7 @@ class MapTask extends \Google\Collection
   public $counterPrefix;
   protected $instructionsType = ParallelInstruction::class;
   protected $instructionsDataType = 'array';
-  public $instructions;
+  public $instructions = [];
   /**
    * @var string
    */

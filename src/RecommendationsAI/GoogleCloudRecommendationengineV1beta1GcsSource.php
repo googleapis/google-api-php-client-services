@@ -23,7 +23,7 @@ class GoogleCloudRecommendationengineV1beta1GcsSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputUris;
+  public $inputUris = [];
   /**
    * @var string
    */

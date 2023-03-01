@@ -23,7 +23,7 @@ class GoogleCloudWebriskV1Submission extends \Google\Collection
   /**
    * @var string[]
    */
-  public $threatTypes;
+  public $threatTypes = [];
   /**
    * @var string
    */

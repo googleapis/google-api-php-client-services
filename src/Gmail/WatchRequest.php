@@ -27,7 +27,7 @@ class WatchRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labelIds;
+  public $labelIds = [];
   /**
    * @var string
    */

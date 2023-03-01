@@ -22,10 +22,10 @@ class GooglePrivacyDlpV2KMapEstimationConfig extends \Google\Collection
   protected $collection_key = 'quasiIds';
   protected $auxiliaryTablesType = GooglePrivacyDlpV2AuxiliaryTable::class;
   protected $auxiliaryTablesDataType = 'array';
-  public $auxiliaryTables;
+  public $auxiliaryTables = [];
   protected $quasiIdsType = GooglePrivacyDlpV2TaggedField::class;
   protected $quasiIdsDataType = 'array';
-  public $quasiIds;
+  public $quasiIds = [];
   /**
    * @var string
    */

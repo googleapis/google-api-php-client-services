@@ -23,7 +23,7 @@ class ParameterMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customMetadata;
+  public $customMetadata = [];
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class ParameterMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $regexes;
+  public $regexes = [];
 
   /**
    * @param string[]

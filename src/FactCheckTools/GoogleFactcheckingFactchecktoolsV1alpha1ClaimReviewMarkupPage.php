@@ -25,7 +25,7 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage extends \Goo
   public $claimReviewAuthor;
   protected $claimReviewMarkupsType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup::class;
   protected $claimReviewMarkupsDataType = 'array';
-  public $claimReviewMarkups;
+  public $claimReviewMarkups = [];
   /**
    * @var string
    */

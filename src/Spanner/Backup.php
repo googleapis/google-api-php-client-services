@@ -50,11 +50,11 @@ class Backup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referencingBackups;
+  public $referencingBackups = [];
   /**
    * @var string[]
    */
-  public $referencingDatabases;
+  public $referencingDatabases = [];
   /**
    * @var string
    */

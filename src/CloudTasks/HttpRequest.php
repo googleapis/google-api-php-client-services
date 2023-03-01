@@ -26,7 +26,7 @@ class HttpRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $headers;
+  public $headers = [];
   /**
    * @var string
    */

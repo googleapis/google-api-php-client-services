@@ -66,7 +66,7 @@ class User extends \Google\Collection
   public $organizationInfo;
   protected $phoneNumberType = AppsDynamiteSharedPhoneNumber::class;
   protected $phoneNumberDataType = 'array';
-  public $phoneNumber;
+  public $phoneNumber = [];
   /**
    * @var string
    */

@@ -25,7 +25,7 @@ class InStreamAd extends \Google\Model
   /**
    * @var string[]
    */
-  public $customParameters;
+  public $customParameters = [];
 
   /**
    * @param CommonInStreamAttribute

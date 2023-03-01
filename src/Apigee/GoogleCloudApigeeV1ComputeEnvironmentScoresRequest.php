@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ComputeEnvironmentScoresRequest extends \Google\Collect
   protected $collection_key = 'filters';
   protected $filtersType = GoogleCloudApigeeV1ComputeEnvironmentScoresRequestFilter::class;
   protected $filtersDataType = 'array';
-  public $filters;
+  public $filters = [];
   /**
    * @var int
    */

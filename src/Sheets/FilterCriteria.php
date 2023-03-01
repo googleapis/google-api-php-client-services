@@ -26,7 +26,7 @@ class FilterCriteria extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hiddenValues;
+  public $hiddenValues = [];
   protected $visibleBackgroundColorType = Color::class;
   protected $visibleBackgroundColorDataType = '';
   public $visibleBackgroundColor;

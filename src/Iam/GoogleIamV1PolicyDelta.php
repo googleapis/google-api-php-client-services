@@ -22,7 +22,7 @@ class GoogleIamV1PolicyDelta extends \Google\Collection
   protected $collection_key = 'bindingDeltas';
   protected $bindingDeltasType = GoogleIamV1BindingDelta::class;
   protected $bindingDeltasDataType = 'array';
-  public $bindingDeltas;
+  public $bindingDeltas = [];
 
   /**
    * @param GoogleIamV1BindingDelta[]

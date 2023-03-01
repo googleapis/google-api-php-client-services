@@ -22,7 +22,7 @@ class RegionInstanceGroupManagersCreateInstancesRequest extends \Google\Collecti
   protected $collection_key = 'instances';
   protected $instancesType = PerInstanceConfig::class;
   protected $instancesDataType = 'array';
-  public $instances;
+  public $instances = [];
 
   /**
    * @param PerInstanceConfig[]

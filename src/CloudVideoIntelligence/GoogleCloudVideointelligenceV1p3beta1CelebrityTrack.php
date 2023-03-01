@@ -22,7 +22,7 @@ class GoogleCloudVideointelligenceV1p3beta1CelebrityTrack extends \Google\Collec
   protected $collection_key = 'celebrities';
   protected $celebritiesType = GoogleCloudVideointelligenceV1p3beta1RecognizedCelebrity::class;
   protected $celebritiesDataType = 'array';
-  public $celebrities;
+  public $celebrities = [];
   protected $faceTrackType = GoogleCloudVideointelligenceV1p3beta1Track::class;
   protected $faceTrackDataType = '';
   public $faceTrack;

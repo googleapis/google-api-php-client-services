@@ -41,7 +41,7 @@ class GoodocSymbol extends \Google\Collection
   public $rotatedBox;
   protected $symbolvariantType = GoodocSymbolSymbolVariant::class;
   protected $symbolvariantDataType = 'array';
-  public $symbolvariant;
+  public $symbolvariant = [];
 
   /**
    * @param GoodocBoundingBox

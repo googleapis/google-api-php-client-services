@@ -29,7 +29,7 @@ class Deployment extends \Google\Collection
   public $deploymentId;
   protected $entryPointsType = EntryPoint::class;
   protected $entryPointsDataType = 'array';
-  public $entryPoints;
+  public $entryPoints = [];
   /**
    * @var string
    */

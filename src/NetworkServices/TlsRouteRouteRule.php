@@ -25,7 +25,7 @@ class TlsRouteRouteRule extends \Google\Collection
   public $action;
   protected $matchesType = TlsRouteRouteMatch::class;
   protected $matchesDataType = 'array';
-  public $matches;
+  public $matches = [];
 
   /**
    * @param TlsRouteRouteAction

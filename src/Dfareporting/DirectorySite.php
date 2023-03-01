@@ -30,11 +30,11 @@ class DirectorySite extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inpageTagFormats;
+  public $inpageTagFormats = [];
   /**
    * @var string[]
    */
-  public $interstitialTagFormats;
+  public $interstitialTagFormats = [];
   /**
    * @var string
    */

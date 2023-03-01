@@ -26,7 +26,7 @@ class ListQueriesResponse extends \Google\Collection
   public $nextPageToken;
   protected $queriesType = Query::class;
   protected $queriesDataType = 'array';
-  public $queries;
+  public $queries = [];
 
   /**
    * @param string

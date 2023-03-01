@@ -29,7 +29,7 @@ class Cve extends \Google\Collection
   public $id;
   protected $referencesType = Reference::class;
   protected $referencesDataType = 'array';
-  public $references;
+  public $references = [];
   /**
    * @var bool
    */

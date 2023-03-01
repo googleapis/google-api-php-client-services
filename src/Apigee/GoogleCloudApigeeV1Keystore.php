@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1Keystore extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aliases;
+  public $aliases = [];
   /**
    * @var string
    */

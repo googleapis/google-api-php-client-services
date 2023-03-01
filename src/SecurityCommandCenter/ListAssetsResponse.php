@@ -22,7 +22,7 @@ class ListAssetsResponse extends \Google\Collection
   protected $collection_key = 'listAssetsResults';
   protected $listAssetsResultsType = ListAssetsResult::class;
   protected $listAssetsResultsDataType = 'array';
-  public $listAssetsResults;
+  public $listAssetsResults = [];
   /**
    * @var string
    */

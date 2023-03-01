@@ -27,7 +27,7 @@ class UpdateSlidesPositionRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $slideObjectIds;
+  public $slideObjectIds = [];
 
   /**
    * @param int

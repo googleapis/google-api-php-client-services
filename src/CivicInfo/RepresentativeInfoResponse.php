@@ -22,7 +22,7 @@ class RepresentativeInfoResponse extends \Google\Collection
   protected $collection_key = 'officials';
   protected $divisionsType = GeographicDivision::class;
   protected $divisionsDataType = 'map';
-  public $divisions;
+  public $divisions = [];
   /**
    * @var string
    */
@@ -32,10 +32,10 @@ class RepresentativeInfoResponse extends \Google\Collection
   public $normalizedInput;
   protected $officesType = Office::class;
   protected $officesDataType = 'array';
-  public $offices;
+  public $offices = [];
   protected $officialsType = Official::class;
   protected $officialsDataType = 'array';
-  public $officials;
+  public $officials = [];
 
   /**
    * @param GeographicDivision[]

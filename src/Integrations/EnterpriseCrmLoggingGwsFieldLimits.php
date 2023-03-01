@@ -27,7 +27,7 @@ class EnterpriseCrmLoggingGwsFieldLimits extends \Google\Collection
   /**
    * @var string[]
    */
-  public $logType;
+  public $logType = [];
   /**
    * @var int
    */

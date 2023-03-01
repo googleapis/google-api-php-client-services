@@ -39,7 +39,7 @@ class VideoContentSearchCaptionEntityAnchorFeatures extends \Google\Collection
   /**
    * @var float[]
    */
-  public $bertScores;
+  public $bertScores = [];
   /**
    * @var float
    */
@@ -118,11 +118,11 @@ class VideoContentSearchCaptionEntityAnchorFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $otherAsrMentionText;
+  public $otherAsrMentionText = [];
   /**
    * @var int[]
    */
-  public $otherEstimatedMentionTimes;
+  public $otherEstimatedMentionTimes = [];
   /**
    * @var string
    */

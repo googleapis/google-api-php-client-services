@@ -30,7 +30,7 @@ class SitesListResponse extends \Google\Collection
   public $nextPageToken;
   protected $sitesType = Site::class;
   protected $sitesDataType = 'array';
-  public $sites;
+  public $sites = [];
 
   /**
    * @param string

@@ -31,7 +31,7 @@ class HttpBody extends \Google\Collection
   /**
    * @var array[]
    */
-  public $extensions;
+  public $extensions = [];
 
   /**
    * @param string

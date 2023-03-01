@@ -21,7 +21,7 @@ class Result extends \Google\Model
 {
   protected $consentDetailsType = ConsentEvaluation::class;
   protected $consentDetailsDataType = 'map';
-  public $consentDetails;
+  public $consentDetails = [];
   /**
    * @var bool
    */

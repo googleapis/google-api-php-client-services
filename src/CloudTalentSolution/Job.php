@@ -23,7 +23,7 @@ class Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $addresses;
+  public $addresses = [];
   protected $applicationInfoType = ApplicationInfo::class;
   protected $applicationInfoDataType = '';
   public $applicationInfo;
@@ -40,11 +40,11 @@ class Job extends \Google\Collection
   public $compensationInfo;
   protected $customAttributesType = CustomAttribute::class;
   protected $customAttributesDataType = 'map';
-  public $customAttributes;
+  public $customAttributes = [];
   /**
    * @var string[]
    */
-  public $degreeTypes;
+  public $degreeTypes = [];
   /**
    * @var string
    */
@@ -59,7 +59,7 @@ class Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $employmentTypes;
+  public $employmentTypes = [];
   /**
    * @var string
    */
@@ -67,7 +67,7 @@ class Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jobBenefits;
+  public $jobBenefits = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class UrlMapListWarning extends \Google\Collection
   public $code;
   protected $dataType = UrlMapListWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class GceClusterConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -52,7 +52,7 @@ class GceClusterConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceAccountScopes;
+  public $serviceAccountScopes = [];
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
   public $shieldedInstanceConfig;
@@ -63,7 +63,7 @@ class GceClusterConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   /**
    * @var string
    */

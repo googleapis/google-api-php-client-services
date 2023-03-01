@@ -22,7 +22,7 @@ class Row extends \Google\Collection
   protected $collection_key = 'cells';
   protected $cellsType = Value::class;
   protected $cellsDataType = 'array';
-  public $cells;
+  public $cells = [];
 
   /**
    * @param Value[]

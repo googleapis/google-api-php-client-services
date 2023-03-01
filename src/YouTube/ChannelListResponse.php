@@ -30,7 +30,7 @@ class ChannelListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = Channel::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

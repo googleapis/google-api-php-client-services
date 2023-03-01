@@ -44,7 +44,7 @@ class ProtectedRange extends \Google\Collection
   public $requestingUserCanEdit;
   protected $unprotectedRangesType = GridRange::class;
   protected $unprotectedRangesDataType = 'array';
-  public $unprotectedRanges;
+  public $unprotectedRanges = [];
   /**
    * @var bool
    */

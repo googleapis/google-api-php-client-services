@@ -22,7 +22,7 @@ class ApiOperation extends \Google\Collection
   protected $collection_key = 'methodSelectors';
   protected $methodSelectorsType = MethodSelector::class;
   protected $methodSelectorsDataType = 'array';
-  public $methodSelectors;
+  public $methodSelectors = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class GoogleAppsCardV1Grid extends \Google\Collection
   public $columnCount;
   protected $itemsType = GoogleAppsCardV1GridItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
   public $onClick;

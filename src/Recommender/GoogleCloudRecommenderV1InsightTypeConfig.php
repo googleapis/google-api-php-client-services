@@ -22,7 +22,7 @@ class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string
    */

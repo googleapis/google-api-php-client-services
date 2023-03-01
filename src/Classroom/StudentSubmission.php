@@ -69,7 +69,7 @@ class StudentSubmission extends \Google\Collection
   public $state;
   protected $submissionHistoryType = SubmissionHistory::class;
   protected $submissionHistoryDataType = 'array';
-  public $submissionHistory;
+  public $submissionHistory = [];
   /**
    * @var string
    */

@@ -25,7 +25,7 @@ class QualitySitemapTwoLevelTarget extends \Google\Collection
   public $firstLevelTarget;
   protected $secondLevelTargetType = QualitySitemapTarget::class;
   protected $secondLevelTargetDataType = 'array';
-  public $secondLevelTarget;
+  public $secondLevelTarget = [];
 
   /**
    * @param QualitySitemapTarget

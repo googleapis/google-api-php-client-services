@@ -22,7 +22,7 @@ class MachineType extends \Google\Collection
   protected $collection_key = 'scratchDisks';
   protected $acceleratorsType = MachineTypeAccelerators::class;
   protected $acceleratorsDataType = 'array';
-  public $accelerators;
+  public $accelerators = [];
   /**
    * @var string
    */
@@ -72,7 +72,7 @@ class MachineType extends \Google\Collection
   public $name;
   protected $scratchDisksType = MachineTypeScratchDisks::class;
   protected $scratchDisksDataType = 'array';
-  public $scratchDisks;
+  public $scratchDisks = [];
   /**
    * @var string
    */

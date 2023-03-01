@@ -26,7 +26,7 @@ class CreateProfileRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $profileType;
+  public $profileType = [];
 
   /**
    * @param Deployment

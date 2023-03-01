@@ -30,10 +30,10 @@ class GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics extends \Google\Co
   public $auprcExact;
   protected $confidenceLevelMetricsType = GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics::class;
   protected $confidenceLevelMetricsDataType = 'array';
-  public $confidenceLevelMetrics;
+  public $confidenceLevelMetrics = [];
   protected $confidenceLevelMetricsExactType = GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics::class;
   protected $confidenceLevelMetricsExactDataType = 'array';
-  public $confidenceLevelMetricsExact;
+  public $confidenceLevelMetricsExact = [];
   /**
    * @var float
    */

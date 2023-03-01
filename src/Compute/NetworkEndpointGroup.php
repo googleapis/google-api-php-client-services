@@ -22,7 +22,7 @@ class NetworkEndpointGroup extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   protected $appEngineType = NetworkEndpointGroupAppEngine::class;
   protected $appEngineDataType = '';
   public $appEngine;

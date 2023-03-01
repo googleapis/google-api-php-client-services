@@ -26,7 +26,7 @@ class NetworkUsage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $usedIps;
+  public $usedIps = [];
 
   /**
    * @param Network

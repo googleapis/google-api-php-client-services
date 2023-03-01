@@ -25,7 +25,7 @@ class RichsnippetsPageMap extends \Google\Collection
   ];
   protected $dataObjectType = RichsnippetsDataObject::class;
   protected $dataObjectDataType = 'array';
-  public $dataObject;
+  public $dataObject = [];
   /**
    * @var bool
    */
@@ -36,7 +36,7 @@ class RichsnippetsPageMap extends \Google\Collection
   public $src;
   protected $templatetypeType = RichsnippetsPageMapTemplateType::class;
   protected $templatetypeDataType = 'array';
-  public $templatetype;
+  public $templatetype = [];
 
   /**
    * @param RichsnippetsDataObject[]

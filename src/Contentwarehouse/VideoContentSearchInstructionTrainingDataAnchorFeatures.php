@@ -22,13 +22,13 @@ class VideoContentSearchInstructionTrainingDataAnchorFeatures extends \Google\Co
   protected $collection_key = 'instructionAnchorsMatchInfo';
   protected $bestAsrAndDescriptionAnchorsMatchInfoType = VideoContentSearchSimilarityMatchInfo::class;
   protected $bestAsrAndDescriptionAnchorsMatchInfoDataType = 'array';
-  public $bestAsrAndDescriptionAnchorsMatchInfo;
+  public $bestAsrAndDescriptionAnchorsMatchInfo = [];
   protected $bestDescriptionAndInstructionAnchorsMatchInfoType = VideoContentSearchSimilarityMatchInfo::class;
   protected $bestDescriptionAndInstructionAnchorsMatchInfoDataType = 'array';
-  public $bestDescriptionAndInstructionAnchorsMatchInfo;
+  public $bestDescriptionAndInstructionAnchorsMatchInfo = [];
   protected $instructionAnchorsMatchInfoType = VideoContentSearchSimilarityMatchInfo::class;
   protected $instructionAnchorsMatchInfoDataType = 'array';
-  public $instructionAnchorsMatchInfo;
+  public $instructionAnchorsMatchInfo = [];
 
   /**
    * @param VideoContentSearchSimilarityMatchInfo[]

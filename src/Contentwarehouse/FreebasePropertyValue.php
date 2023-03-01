@@ -29,7 +29,7 @@ class FreebasePropertyValue extends \Google\Collection
   public $totalValueCount;
   protected $valueType = FreebaseValue::class;
   protected $valueDataType = 'array';
-  public $value;
+  public $value = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class LabelList extends \Google\Collection
   public $kind;
   protected $labelsType = Label::class;
   protected $labelsDataType = 'array';
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

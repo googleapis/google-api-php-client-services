@@ -30,10 +30,10 @@ class InlineObject extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds;
+  public $suggestedDeletionIds = [];
   protected $suggestedInlineObjectPropertiesChangesType = SuggestedInlineObjectProperties::class;
   protected $suggestedInlineObjectPropertiesChangesDataType = 'map';
-  public $suggestedInlineObjectPropertiesChanges;
+  public $suggestedInlineObjectPropertiesChanges = [];
   /**
    * @var string
    */

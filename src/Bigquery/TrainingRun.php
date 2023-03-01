@@ -22,7 +22,7 @@ class TrainingRun extends \Google\Collection
   protected $collection_key = 'results';
   protected $classLevelGlobalExplanationsType = GlobalExplanation::class;
   protected $classLevelGlobalExplanationsDataType = 'array';
-  public $classLevelGlobalExplanations;
+  public $classLevelGlobalExplanations = [];
   protected $dataSplitResultType = DataSplitResult::class;
   protected $dataSplitResultDataType = '';
   public $dataSplitResult;
@@ -34,7 +34,7 @@ class TrainingRun extends \Google\Collection
   public $modelLevelGlobalExplanation;
   protected $resultsType = IterationResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   /**
    * @var string
    */

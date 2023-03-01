@@ -28,7 +28,7 @@ class GeostorePolyLineProto extends \Google\Collection
   public $temporaryData;
   protected $vertexType = GeostorePointProto::class;
   protected $vertexDataType = 'array';
-  public $vertex;
+  public $vertex = [];
 
   /**
    * @param GeostoreFieldMetadataProto

@@ -37,7 +37,7 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $metastoreType = GoogleCloudDataplexV1LakeMetastore::class;
   protected $metastoreDataType = '';
   public $metastore;

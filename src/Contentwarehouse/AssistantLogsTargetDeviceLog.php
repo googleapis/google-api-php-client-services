@@ -22,7 +22,7 @@ class AssistantLogsTargetDeviceLog extends \Google\Collection
   protected $collection_key = 'devices';
   protected $devicesType = AssistantLogsDeviceInfoLog::class;
   protected $devicesDataType = 'array';
-  public $devices;
+  public $devices = [];
   /**
    * @var string
    */

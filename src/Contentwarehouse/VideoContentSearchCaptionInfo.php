@@ -22,7 +22,7 @@ class VideoContentSearchCaptionInfo extends \Google\Collection
   protected $collection_key = 'asrCaption';
   protected $asrCaptionType = VideoContentSearchAsrCaption::class;
   protected $asrCaptionDataType = 'array';
-  public $asrCaption;
+  public $asrCaption = [];
   protected $saftDocumentType = NlpSaftDocument::class;
   protected $saftDocumentDataType = '';
   public $saftDocument;

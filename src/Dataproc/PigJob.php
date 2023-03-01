@@ -27,14 +27,14 @@ class PigJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jarFileUris;
+  public $jarFileUris = [];
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   public $loggingConfig;
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   /**
    * @var string
    */
@@ -45,7 +45,7 @@ class PigJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scriptVariables;
+  public $scriptVariables = [];
 
   /**
    * @param bool

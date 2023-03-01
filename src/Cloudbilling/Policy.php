@@ -22,10 +22,10 @@ class Policy extends \Google\Collection
   protected $collection_key = 'bindings';
   protected $auditConfigsType = AuditConfig::class;
   protected $auditConfigsDataType = 'array';
-  public $auditConfigs;
+  public $auditConfigs = [];
   protected $bindingsType = Binding::class;
   protected $bindingsDataType = 'array';
-  public $bindings;
+  public $bindings = [];
   /**
    * @var string
    */

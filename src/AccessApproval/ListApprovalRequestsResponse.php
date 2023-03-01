@@ -22,7 +22,7 @@ class ListApprovalRequestsResponse extends \Google\Collection
   protected $collection_key = 'approvalRequests';
   protected $approvalRequestsType = ApprovalRequest::class;
   protected $approvalRequestsDataType = 'array';
-  public $approvalRequests;
+  public $approvalRequests = [];
   /**
    * @var string
    */

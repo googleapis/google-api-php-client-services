@@ -25,7 +25,7 @@ class NodeMatcher extends \Google\Collection
   public $nodeId;
   protected $nodeMetadatasType = StructMatcher::class;
   protected $nodeMetadatasDataType = 'array';
-  public $nodeMetadatas;
+  public $nodeMetadatas = [];
 
   /**
    * @param StringMatcher

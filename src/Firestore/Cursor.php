@@ -26,7 +26,7 @@ class Cursor extends \Google\Collection
   public $before;
   protected $valuesType = Value::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param bool

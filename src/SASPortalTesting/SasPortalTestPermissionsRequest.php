@@ -23,7 +23,7 @@ class SasPortalTestPermissionsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $permissions;
+  public $permissions = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class InstanceGroupManager extends \Google\Collection
   protected $collection_key = 'versions';
   protected $autoHealingPoliciesType = InstanceGroupManagerAutoHealingPolicy::class;
   protected $autoHealingPoliciesDataType = 'array';
-  public $autoHealingPolicies;
+  public $autoHealingPolicies = [];
   /**
    * @var string
    */
@@ -71,7 +71,7 @@ class InstanceGroupManager extends \Google\Collection
   public $name;
   protected $namedPortsType = NamedPort::class;
   protected $namedPortsDataType = 'array';
-  public $namedPorts;
+  public $namedPorts = [];
   /**
    * @var string
    */
@@ -89,7 +89,7 @@ class InstanceGroupManager extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetPools;
+  public $targetPools = [];
   /**
    * @var int
    */
@@ -99,7 +99,7 @@ class InstanceGroupManager extends \Google\Collection
   public $updatePolicy;
   protected $versionsType = InstanceGroupManagerVersion::class;
   protected $versionsDataType = 'array';
-  public $versions;
+  public $versions = [];
   /**
    * @var string
    */

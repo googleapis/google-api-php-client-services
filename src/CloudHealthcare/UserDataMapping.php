@@ -38,7 +38,7 @@ class UserDataMapping extends \Google\Collection
   public $name;
   protected $resourceAttributesType = Attribute::class;
   protected $resourceAttributesDataType = 'array';
-  public $resourceAttributes;
+  public $resourceAttributes = [];
   /**
    * @var string
    */

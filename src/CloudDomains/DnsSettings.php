@@ -25,7 +25,7 @@ class DnsSettings extends \Google\Collection
   public $customDns;
   protected $glueRecordsType = GlueRecord::class;
   protected $glueRecordsDataType = 'array';
-  public $glueRecords;
+  public $glueRecords = [];
   protected $googleDomainsDnsType = GoogleDomainsDns::class;
   protected $googleDomainsDnsDataType = '';
   public $googleDomainsDns;

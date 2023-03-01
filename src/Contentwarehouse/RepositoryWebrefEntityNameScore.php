@@ -29,16 +29,16 @@ class RepositoryWebrefEntityNameScore extends \Google\Collection
   public $confidence;
   protected $debugInfoType = RepositoryWebrefEntityDebugInfo::class;
   protected $debugInfoDataType = 'array';
-  public $debugInfo;
+  public $debugInfo = [];
   protected $debugVariantSignalsType = RepositoryWebrefPreprocessingNameVariantSignals::class;
   protected $debugVariantSignalsDataType = 'array';
-  public $debugVariantSignals;
+  public $debugVariantSignals = [];
   protected $entityType = RepositoryWebrefEntityJoin::class;
   protected $entityDataType = '';
   public $entity;
   protected $extendedScoreRatioType = RepositoryWebrefExtendedEntityNameScore::class;
   protected $extendedScoreRatioDataType = 'array';
-  public $extendedScoreRatio;
+  public $extendedScoreRatio = [];
   /**
    * @var bool
    */
@@ -76,7 +76,7 @@ class RepositoryWebrefEntityNameScore extends \Google\Collection
   public $nameMetadata;
   protected $rangeMetadataType = RepositoryWebrefRangeMetadata::class;
   protected $rangeMetadataDataType = 'array';
-  public $rangeMetadata;
+  public $rangeMetadata = [];
   /**
    * @var float
    */

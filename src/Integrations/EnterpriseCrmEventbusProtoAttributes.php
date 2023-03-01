@@ -45,7 +45,7 @@ class EnterpriseCrmEventbusProtoAttributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $taskVisibility;
+  public $taskVisibility = [];
 
   /**
    * @param string

@@ -21,7 +21,7 @@ class QualityCalypsoAppsUniversalAuLiveOpDetail extends \Google\Model
 {
   protected $countryLevelScheduleInformationType = QualityCalypsoAppsUniversalAuLiveOpEvent::class;
   protected $countryLevelScheduleInformationDataType = 'map';
-  public $countryLevelScheduleInformation;
+  public $countryLevelScheduleInformation = [];
   protected $defaultFormatInformationType = QualityCalypsoAppsUniversalAuLiveOpFormat::class;
   protected $defaultFormatInformationDataType = '';
   public $defaultFormatInformation;
@@ -42,7 +42,7 @@ class QualityCalypsoAppsUniversalAuLiveOpDetail extends \Google\Model
   public $eventUrl;
   protected $localeLevelFormatInformationType = QualityCalypsoAppsUniversalAuLiveOpFormat::class;
   protected $localeLevelFormatInformationDataType = 'map';
-  public $localeLevelFormatInformation;
+  public $localeLevelFormatInformation = [];
   /**
    * @var string
    */

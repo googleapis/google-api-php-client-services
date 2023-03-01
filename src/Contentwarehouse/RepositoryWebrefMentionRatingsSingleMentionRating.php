@@ -54,7 +54,7 @@ class RepositoryWebrefMentionRatingsSingleMentionRating extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $topicMentionedInResult;
+  public $topicMentionedInResult = [];
 
   /**
    * @param bool

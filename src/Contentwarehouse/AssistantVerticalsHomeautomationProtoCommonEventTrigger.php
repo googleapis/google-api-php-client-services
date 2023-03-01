@@ -26,7 +26,7 @@ class AssistantVerticalsHomeautomationProtoCommonEventTrigger extends \Google\Mo
   /**
    * @var array[]
    */
-  public $eventTriggerPayload;
+  public $eventTriggerPayload = [];
   /**
    * @var string
    */

@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1Query extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class GoogleCloudApigeeV1Query extends \Google\Collection
   public $limit;
   protected $metricsType = GoogleCloudApigeeV1QueryMetric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   /**
    * @var string
    */

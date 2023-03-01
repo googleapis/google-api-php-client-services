@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2ImageTransformations extends \Google\Collection
   protected $collection_key = 'transforms';
   protected $transformsType = GooglePrivacyDlpV2ImageTransformation::class;
   protected $transformsDataType = 'array';
-  public $transforms;
+  public $transforms = [];
 
   /**
    * @param GooglePrivacyDlpV2ImageTransformation[]

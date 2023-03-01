@@ -31,7 +31,7 @@ class OSPolicyResourceRepositoryResourceZypperRepository extends \Google\Collect
   /**
    * @var string[]
    */
-  public $gpgKeys;
+  public $gpgKeys = [];
   /**
    * @var string
    */

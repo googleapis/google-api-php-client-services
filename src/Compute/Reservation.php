@@ -46,7 +46,7 @@ class Reservation extends \Google\Model
   /**
    * @var string[]
    */
-  public $resourcePolicies;
+  public $resourcePolicies = [];
   protected $resourceStatusType = AllocationResourceStatus::class;
   protected $resourceStatusDataType = '';
   public $resourceStatus;

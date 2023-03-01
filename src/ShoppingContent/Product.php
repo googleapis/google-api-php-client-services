@@ -23,7 +23,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $additionalImageLinks;
+  public $additionalImageLinks = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $adsLabels;
+  public $adsLabels = [];
   /**
    * @var string
    */
@@ -85,7 +85,7 @@ class Product extends \Google\Collection
   public $costOfGoodsSold;
   protected $customAttributesType = CustomAttribute::class;
   protected $customAttributesDataType = 'array';
-  public $customAttributes;
+  public $customAttributes = [];
   /**
    * @var string
    */
@@ -121,7 +121,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $displayAdsSimilarIds;
+  public $displayAdsSimilarIds = [];
   /**
    * @var string
    */
@@ -134,7 +134,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedDestinations;
+  public $excludedDestinations = [];
   /**
    * @var string
    */
@@ -174,7 +174,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $includedDestinations;
+  public $includedDestinations = [];
   protected $installmentType = Installment::class;
   protected $installmentDataType = '';
   public $installment;
@@ -193,7 +193,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $lifestyleImageLinks;
+  public $lifestyleImageLinks = [];
   /**
    * @var string
    */
@@ -266,21 +266,21 @@ class Product extends \Google\Collection
   public $price;
   protected $productDetailsType = ProductProductDetail::class;
   protected $productDetailsDataType = 'array';
-  public $productDetails;
+  public $productDetails = [];
   protected $productHeightType = ProductDimension::class;
   protected $productHeightDataType = '';
   public $productHeight;
   /**
    * @var string[]
    */
-  public $productHighlights;
+  public $productHighlights = [];
   protected $productLengthType = ProductDimension::class;
   protected $productLengthDataType = '';
   public $productLength;
   /**
    * @var string[]
    */
-  public $productTypes;
+  public $productTypes = [];
   protected $productWeightType = ProductWeight::class;
   protected $productWeightDataType = '';
   public $productWeight;
@@ -290,7 +290,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $promotionIds;
+  public $promotionIds = [];
   protected $salePriceType = Price::class;
   protected $salePriceDataType = '';
   public $salePrice;
@@ -304,7 +304,7 @@ class Product extends \Google\Collection
   public $sellOnGoogleQuantity;
   protected $shippingType = ProductShipping::class;
   protected $shippingDataType = 'array';
-  public $shipping;
+  public $shipping = [];
   protected $shippingHeightType = ProductShippingDimension::class;
   protected $shippingHeightDataType = '';
   public $shippingHeight;
@@ -324,7 +324,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $shoppingAdsExcludedCountries;
+  public $shoppingAdsExcludedCountries = [];
   /**
    * @var string
    */
@@ -336,7 +336,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sizes;
+  public $sizes = [];
   /**
    * @var string
    */
@@ -354,7 +354,7 @@ class Product extends \Google\Collection
   public $taxCategory;
   protected $taxesType = ProductTax::class;
   protected $taxesDataType = 'array';
-  public $taxes;
+  public $taxes = [];
   /**
    * @var string
    */

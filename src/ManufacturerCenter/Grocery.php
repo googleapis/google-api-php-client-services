@@ -32,7 +32,7 @@ class Grocery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $derivedNutritionClaim;
+  public $derivedNutritionClaim = [];
   /**
    * @var string
    */
@@ -48,7 +48,7 @@ class Grocery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nutritionClaim;
+  public $nutritionClaim = [];
   /**
    * @var string
    */

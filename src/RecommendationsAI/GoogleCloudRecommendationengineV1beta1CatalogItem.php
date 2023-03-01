@@ -22,7 +22,7 @@ class GoogleCloudRecommendationengineV1beta1CatalogItem extends \Google\Collecti
   protected $collection_key = 'tags';
   protected $categoryHierarchiesType = GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy::class;
   protected $categoryHierarchiesDataType = 'array';
-  public $categoryHierarchies;
+  public $categoryHierarchies = [];
   /**
    * @var string
    */
@@ -48,7 +48,7 @@ class GoogleCloudRecommendationengineV1beta1CatalogItem extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   /**
    * @var string
    */

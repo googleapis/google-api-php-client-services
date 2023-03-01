@@ -22,7 +22,7 @@ class RepositoryWebrefLexicalAnnotation extends \Google\Collection
   protected $collection_key = 'lexicalRange';
   protected $lexicalRangeType = RepositoryWebrefLexicalRange::class;
   protected $lexicalRangeDataType = 'array';
-  public $lexicalRange;
+  public $lexicalRange = [];
 
   /**
    * @param RepositoryWebrefLexicalRange[]

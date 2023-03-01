@@ -33,7 +33,7 @@ class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo extends \Goo
   public $stringProfile;
   protected $topNValuesType = GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue::class;
   protected $topNValuesDataType = 'array';
-  public $topNValues;
+  public $topNValues = [];
 
   public function setDistinctRatio($distinctRatio)
   {

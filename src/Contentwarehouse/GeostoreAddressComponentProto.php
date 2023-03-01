@@ -33,7 +33,7 @@ class GeostoreAddressComponentProto extends \Google\Collection
   public $index;
   protected $parsedNameType = GeostoreNameProto::class;
   protected $parsedNameDataType = 'array';
-  public $parsedName;
+  public $parsedName = [];
   protected $rangeType = GeostoreAddressRangeProto::class;
   protected $rangeDataType = '';
   public $range;
@@ -42,7 +42,7 @@ class GeostoreAddressComponentProto extends \Google\Collection
   public $temporaryData;
   protected $textAffixType = GeostoreTextAffixProto::class;
   protected $textAffixDataType = 'array';
-  public $textAffix;
+  public $textAffix = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1ListDataScanJobsResponse extends \Google\Collection
   protected $collection_key = 'dataScanJobs';
   protected $dataScanJobsType = GoogleCloudDataplexV1DataScanJob::class;
   protected $dataScanJobsDataType = 'array';
-  public $dataScanJobs;
+  public $dataScanJobs = [];
   /**
    * @var string
    */

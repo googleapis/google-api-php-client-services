@@ -23,7 +23,7 @@ class InAppProductListing extends \Google\Collection
   /**
    * @var string[]
    */
-  public $benefits;
+  public $benefits = [];
   /**
    * @var string
    */

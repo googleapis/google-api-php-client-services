@@ -23,7 +23,7 @@ class SocialGraphApiProtoMonthlyDayRecurrence extends \Google\Collection
   /**
    * @var int[]
    */
-  public $monthDay;
+  public $monthDay = [];
   /**
    * @var bool
    */

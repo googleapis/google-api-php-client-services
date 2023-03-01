@@ -28,14 +28,14 @@ class CallInfo extends \Google\Collection
   public $artifactOwner;
   protected $attachedDocumentsType = DocumentInfo::class;
   protected $attachedDocumentsDataType = 'array';
-  public $attachedDocuments;
+  public $attachedDocuments = [];
   /**
    * @var string[]
    */
-  public $availableAccessTypes;
+  public $availableAccessTypes = [];
   protected $availableReactionsType = ReactionInfo::class;
   protected $availableReactionsDataType = 'array';
-  public $availableReactions;
+  public $availableReactions = [];
   protected $broadcastSessionInfoType = BroadcastSessionInfo::class;
   protected $broadcastSessionInfoDataType = '';
   public $broadcastSessionInfo;
@@ -77,7 +77,7 @@ class CallInfo extends \Google\Collection
   public $settings;
   protected $streamingSessionsType = StreamingSessionInfo::class;
   protected $streamingSessionsDataType = 'array';
-  public $streamingSessions;
+  public $streamingSessions = [];
   protected $transcriptionSessionInfoType = TranscriptionSessionInfo::class;
   protected $transcriptionSessionInfoDataType = '';
   public $transcriptionSessionInfo;
@@ -87,7 +87,7 @@ class CallInfo extends \Google\Collection
   public $viewerCount;
   protected $youTubeBroadcastSessionInfosType = YouTubeBroadcastSessionInfo::class;
   protected $youTubeBroadcastSessionInfosDataType = 'array';
-  public $youTubeBroadcastSessionInfos;
+  public $youTubeBroadcastSessionInfos = [];
 
   /**
    * @param AbuseReportingConfig

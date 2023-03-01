@@ -22,10 +22,10 @@ class Exfiltration extends \Google\Collection
   protected $collection_key = 'targets';
   protected $sourcesType = ExfilResource::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
   protected $targetsType = ExfilResource::class;
   protected $targetsDataType = 'array';
-  public $targets;
+  public $targets = [];
 
   /**
    * @param ExfilResource[]

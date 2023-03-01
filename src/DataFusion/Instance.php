@@ -22,14 +22,14 @@ class Instance extends \Google\Collection
   protected $collection_key = 'disabledReason';
   protected $acceleratorsType = Accelerator::class;
   protected $acceleratorsDataType = 'array';
-  public $accelerators;
+  public $accelerators = [];
   /**
    * @var string
    */
   public $apiEndpoint;
   protected $availableVersionType = Version::class;
   protected $availableVersionDataType = 'array';
-  public $availableVersion;
+  public $availableVersion = [];
   /**
    * @var string
    */
@@ -48,7 +48,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $disabledReason;
+  public $disabledReason = [];
   /**
    * @var string
    */
@@ -79,7 +79,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -90,7 +90,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $options;
+  public $options = [];
   /**
    * @var string
    */

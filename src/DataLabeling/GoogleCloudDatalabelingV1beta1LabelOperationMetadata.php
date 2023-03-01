@@ -52,7 +52,7 @@ class GoogleCloudDatalabelingV1beta1LabelOperationMetadata extends \Google\Colle
   public $imageSegmentationDetails;
   protected $partialFailuresType = GoogleRpcStatus::class;
   protected $partialFailuresDataType = 'array';
-  public $partialFailures;
+  public $partialFailures = [];
   /**
    * @var int
    */

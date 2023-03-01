@@ -26,7 +26,7 @@ class ErrorInfo extends \Google\Model
   /**
    * @var string[]
    */
-  public $metadatas;
+  public $metadatas = [];
   /**
    * @var string
    */

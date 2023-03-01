@@ -34,7 +34,7 @@ class AppsDynamiteStorageColumnsColumn extends \Google\Collection
   public $verticalAlignment;
   protected $widgetsType = AppsDynamiteStorageColumnsColumnWidgets::class;
   protected $widgetsDataType = 'array';
-  public $widgets;
+  public $widgets = [];
 
   /**
    * @param string

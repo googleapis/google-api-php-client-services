@@ -22,13 +22,13 @@ class HtmlrenderWebkitHeadlessProtoRenderStats extends \Google\Collection
   protected $collection_key = 'counter';
   protected $anonRenderFineTimingStatsType = HtmlrenderWebkitHeadlessProtoAnonTimingStatPair::class;
   protected $anonRenderFineTimingStatsDataType = 'array';
-  public $anonRenderFineTimingStats;
+  public $anonRenderFineTimingStats = [];
   protected $consoleLogEntryType = HtmlrenderWebkitHeadlessProtoConsoleLogEntry::class;
   protected $consoleLogEntryDataType = 'array';
-  public $consoleLogEntry;
+  public $consoleLogEntry = [];
   protected $counterType = HtmlrenderWebkitHeadlessProtoRenderStatsCounter::class;
   protected $counterDataType = 'array';
-  public $counter;
+  public $counter = [];
   /**
    * @var int
    */

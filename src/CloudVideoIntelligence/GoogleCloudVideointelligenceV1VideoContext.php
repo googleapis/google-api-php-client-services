@@ -37,7 +37,7 @@ class GoogleCloudVideointelligenceV1VideoContext extends \Google\Collection
   public $personDetectionConfig;
   protected $segmentsType = GoogleCloudVideointelligenceV1VideoSegment::class;
   protected $segmentsDataType = 'array';
-  public $segments;
+  public $segments = [];
   protected $shotChangeDetectionConfigType = GoogleCloudVideointelligenceV1ShotChangeDetectionConfig::class;
   protected $shotChangeDetectionConfigDataType = '';
   public $shotChangeDetectionConfig;

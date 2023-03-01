@@ -34,7 +34,7 @@ class ManagedInstance extends \Google\Collection
   public $instance;
   protected $instanceHealthType = ManagedInstanceInstanceHealth::class;
   protected $instanceHealthDataType = 'array';
-  public $instanceHealth;
+  public $instanceHealth = [];
   /**
    * @var string
    */

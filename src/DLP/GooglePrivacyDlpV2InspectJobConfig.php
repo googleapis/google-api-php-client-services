@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2InspectJobConfig extends \Google\Collection
   protected $collection_key = 'actions';
   protected $actionsType = GooglePrivacyDlpV2Action::class;
   protected $actionsDataType = 'array';
-  public $actions;
+  public $actions = [];
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   public $inspectConfig;

@@ -25,7 +25,7 @@ class AlloyDbSettings extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $primaryInstanceSettingsType = PrimaryInstanceSettings::class;
   protected $primaryInstanceSettingsDataType = '';
   public $primaryInstanceSettings;

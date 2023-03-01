@@ -22,7 +22,7 @@ class AssistantDevicesPlatformProtoIntent extends \Google\Collection
   protected $collection_key = 'triggerConditions';
   protected $argSpecsType = AssistantDevicesPlatformProtoArgSpec::class;
   protected $argSpecsDataType = 'map';
-  public $argSpecs;
+  public $argSpecs = [];
   protected $executionConfigType = AssistantDevicesPlatformProtoExecutionConfig::class;
   protected $executionConfigDataType = '';
   public $executionConfig;
@@ -33,13 +33,13 @@ class AssistantDevicesPlatformProtoIntent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $providedDataNames;
+  public $providedDataNames = [];
   protected $securityConfigType = AssistantDevicesPlatformProtoSecurityConfig::class;
   protected $securityConfigDataType = '';
   public $securityConfig;
   protected $triggerConditionsType = AssistantDevicesPlatformProtoTriggerCondition::class;
   protected $triggerConditionsDataType = 'array';
-  public $triggerConditions;
+  public $triggerConditions = [];
 
   /**
    * @param AssistantDevicesPlatformProtoArgSpec[]

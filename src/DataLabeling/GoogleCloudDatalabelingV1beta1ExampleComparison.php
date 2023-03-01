@@ -25,7 +25,7 @@ class GoogleCloudDatalabelingV1beta1ExampleComparison extends \Google\Collection
   public $groundTruthExample;
   protected $modelCreatedExamplesType = GoogleCloudDatalabelingV1beta1Example::class;
   protected $modelCreatedExamplesDataType = 'array';
-  public $modelCreatedExamples;
+  public $modelCreatedExamples = [];
 
   /**
    * @param GoogleCloudDatalabelingV1beta1Example

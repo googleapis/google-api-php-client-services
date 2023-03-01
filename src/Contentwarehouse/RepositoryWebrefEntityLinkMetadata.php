@@ -25,7 +25,7 @@ class RepositoryWebrefEntityLinkMetadata extends \Google\Collection
   public $aggregateFlags;
   protected $kindInfoType = RepositoryWebrefLinkKindInfo::class;
   protected $kindInfoDataType = 'array';
-  public $kindInfo;
+  public $kindInfo = [];
 
   /**
    * @param RepositoryWebrefLinkKindFlags

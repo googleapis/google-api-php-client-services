@@ -25,10 +25,10 @@ class GeostoreIntersectionProto extends \Google\Collection
   public $intersectionGroup;
   protected $outSegmentType = GeostoreFeatureIdProto::class;
   protected $outSegmentDataType = 'array';
-  public $outSegment;
+  public $outSegment = [];
   protected $segmentType = GeostoreFeatureIdProto::class;
   protected $segmentDataType = 'array';
-  public $segment;
+  public $segment = [];
   protected $tollClusterIdType = GeostoreFeatureIdProto::class;
   protected $tollClusterIdDataType = '';
   public $tollClusterId;

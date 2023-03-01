@@ -23,7 +23,7 @@ class EnrollDataSourcesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dataSourceIds;
+  public $dataSourceIds = [];
 
   /**
    * @param string[]

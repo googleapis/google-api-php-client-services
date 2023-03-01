@@ -27,7 +27,7 @@ class AssistantApiClientOpPropertiesDeviceModifySettingClientOpProperty extends 
   /**
    * @var string[]
    */
-  public $supportedSettings;
+  public $supportedSettings = [];
   /**
    * @var bool
    */

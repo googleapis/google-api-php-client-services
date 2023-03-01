@@ -33,7 +33,7 @@ class TrackRelease extends \Google\Collection
   public $name;
   protected $releaseNotesType = LocalizedText::class;
   protected $releaseNotesDataType = 'array';
-  public $releaseNotes;
+  public $releaseNotes = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class TrackRelease extends \Google\Collection
   /**
    * @var string[]
    */
-  public $versionCodes;
+  public $versionCodes = [];
 
   /**
    * @param CountryTargeting

@@ -22,7 +22,7 @@ class NetworkEdgeSecurityServicesScopedList extends \Google\Collection
   protected $collection_key = 'networkEdgeSecurityServices';
   protected $networkEdgeSecurityServicesType = NetworkEdgeSecurityService::class;
   protected $networkEdgeSecurityServicesDataType = 'array';
-  public $networkEdgeSecurityServices;
+  public $networkEdgeSecurityServices = [];
   protected $warningType = NetworkEdgeSecurityServicesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

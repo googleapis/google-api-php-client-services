@@ -30,19 +30,19 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public $allowedFuzzyMatch;
   protected $annotatedRelationshipType = LogsSemanticInterpretationIntentQueryWebrefEntityRelationship::class;
   protected $annotatedRelationshipDataType = 'array';
-  public $annotatedRelationship;
+  public $annotatedRelationship = [];
   protected $annotationLayerSignalsType = KnowledgeAnswersIntentQueryAnnotationLayerSignals::class;
   protected $annotationLayerSignalsDataType = '';
   public $annotationLayerSignals;
   protected $chainIdType = LocalsearchChainId::class;
   protected $chainIdDataType = 'array';
-  public $chainId;
+  public $chainId = [];
   protected $clusterInfoType = QualityViewsExtractionClusterInfo::class;
   protected $clusterInfoDataType = '';
   public $clusterInfo;
   protected $collectionMembershipType = KnowledgeAnswersIntentQueryCollectionMembership::class;
   protected $collectionMembershipDataType = 'array';
-  public $collectionMembership;
+  public $collectionMembership = [];
   /**
    * @var string
    */
@@ -50,18 +50,18 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deprecatedFreebaseType;
+  public $deprecatedFreebaseType = [];
   /**
    * @var string[]
    */
-  public $deprecatedSupportingMid;
+  public $deprecatedSupportingMid = [];
   /**
    * @var int
    */
   public $entityNumber;
   protected $entityRelationshipType = NlpSemanticParsingQRefAnnotationEntityRelationship::class;
   protected $entityRelationshipDataType = 'array';
-  public $entityRelationship;
+  public $entityRelationship = [];
   protected $expressionStatusType = NlpSemanticParsingExpressionStatus::class;
   protected $expressionStatusDataType = '';
   public $expressionStatus;
@@ -119,7 +119,7 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public $mediaEntitySignals;
   protected $mergedImpliedEntityType = KnowledgeAnswersIntentQueryImpliedEntity::class;
   protected $mergedImpliedEntityDataType = 'array';
-  public $mergedImpliedEntity;
+  public $mergedImpliedEntity = [];
   /**
    * @var string
    */
@@ -140,13 +140,13 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $parsedDueToExperiment;
+  public $parsedDueToExperiment = [];
   protected $personalEntityType = KnowledgeAnswersIntentQueryPersonalEntity::class;
   protected $personalEntityDataType = 'array';
-  public $personalEntity;
+  public $personalEntity = [];
   protected $provenanceType = KnowledgeAnswersIntentQueryArgumentProvenance::class;
   protected $provenanceDataType = 'array';
-  public $provenance;
+  public $provenance = [];
   /**
    * @var float
    */
@@ -161,7 +161,7 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public $rawQueryText;
   protected $relatedEntityType = NlpSemanticParsingRelatedEntity::class;
   protected $relatedEntityDataType = 'array';
-  public $relatedEntity;
+  public $relatedEntity = [];
   protected $relatednessSignalsType = KnowledgeAnswersIntentQueryRelatednessSignals::class;
   protected $relatednessSignalsDataType = '';
   public $relatednessSignals;
@@ -175,7 +175,7 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public $resolvedFromPronoun;
   protected $resultSupportType = UniversalsearchNewPackerKnowledgeResultSupport::class;
   protected $resultSupportDataType = 'array';
-  public $resultSupport;
+  public $resultSupport = [];
   protected $saftSignalsType = KnowledgeAnswersIntentQuerySaftSignals::class;
   protected $saftSignalsDataType = '';
   public $saftSignals;
@@ -184,7 +184,7 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public $shoppingIds;
   protected $supportTransferRulesType = LogsSemanticInterpretationIntentQuerySupportTransferRule::class;
   protected $supportTransferRulesDataType = 'array';
-  public $supportTransferRules;
+  public $supportTransferRules = [];
   protected $supportTransferSignalsType = KnowledgeAnswersIntentQuerySupportTransferSignals::class;
   protected $supportTransferSignalsDataType = '';
   public $supportTransferSignals;

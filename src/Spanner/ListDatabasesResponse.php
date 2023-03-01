@@ -22,7 +22,7 @@ class ListDatabasesResponse extends \Google\Collection
   protected $collection_key = 'databases';
   protected $databasesType = Database::class;
   protected $databasesDataType = 'array';
-  public $databases;
+  public $databases = [];
   /**
    * @var string
    */

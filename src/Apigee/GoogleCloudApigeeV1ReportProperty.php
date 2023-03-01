@@ -26,7 +26,7 @@ class GoogleCloudApigeeV1ReportProperty extends \Google\Collection
   public $property;
   protected $valueType = GoogleCloudApigeeV1Attribute::class;
   protected $valueDataType = 'array';
-  public $value;
+  public $value = [];
 
   /**
    * @param string

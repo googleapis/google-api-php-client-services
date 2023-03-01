@@ -22,7 +22,7 @@ class Config extends \Google\Collection
   protected $collection_key = 'destinationRoutes';
   protected $destinationRoutesType = DestinationRoute::class;
   protected $destinationRoutesDataType = 'array';
-  public $destinationRoutes;
+  public $destinationRoutes = [];
   /**
    * @var string
    */

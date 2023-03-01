@@ -23,7 +23,7 @@ class GoogleCloudWebriskV1RawIndices extends \Google\Collection
   /**
    * @var int[]
    */
-  public $indices;
+  public $indices = [];
 
   /**
    * @param int[]

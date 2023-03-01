@@ -22,7 +22,7 @@ class ContactInfoList extends \Google\Collection
   protected $collection_key = 'contactInfos';
   protected $contactInfosType = ContactInfo::class;
   protected $contactInfosDataType = 'array';
-  public $contactInfos;
+  public $contactInfos = [];
 
   /**
    * @param ContactInfo[]

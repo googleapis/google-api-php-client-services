@@ -22,7 +22,7 @@ class ChatContentExtension extends \Google\Collection
   protected $collection_key = 'annotation';
   protected $annotationType = EventAnnotation::class;
   protected $annotationDataType = 'array';
-  public $annotation;
+  public $annotation = [];
   protected $dynamitePlaceholderMetadataType = ChatConserverDynamitePlaceholderMetadata::class;
   protected $dynamitePlaceholderMetadataDataType = '';
   public $dynamitePlaceholderMetadata;

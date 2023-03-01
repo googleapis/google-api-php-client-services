@@ -26,11 +26,11 @@ class ListRuntimeVersionsResponse extends \Google\Collection
   public $nextPageToken;
   protected $runtimeVersionsType = RuntimeVersion::class;
   protected $runtimeVersionsDataType = 'array';
-  public $runtimeVersions;
+  public $runtimeVersions = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

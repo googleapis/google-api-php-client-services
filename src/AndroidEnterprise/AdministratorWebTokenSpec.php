@@ -30,7 +30,7 @@ class AdministratorWebTokenSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $permission;
+  public $permission = [];
   protected $playSearchType = AdministratorWebTokenSpecPlaySearch::class;
   protected $playSearchDataType = '';
   public $playSearch;

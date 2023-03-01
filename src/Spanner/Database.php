@@ -41,7 +41,7 @@ class Database extends \Google\Collection
   public $encryptionConfig;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = 'array';
-  public $encryptionInfo;
+  public $encryptionInfo = [];
   /**
    * @var string
    */

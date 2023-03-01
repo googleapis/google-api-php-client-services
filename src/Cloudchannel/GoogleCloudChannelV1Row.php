@@ -22,7 +22,7 @@ class GoogleCloudChannelV1Row extends \Google\Collection
   protected $collection_key = 'values';
   protected $valuesType = GoogleCloudChannelV1ReportValue::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param GoogleCloudChannelV1ReportValue[]

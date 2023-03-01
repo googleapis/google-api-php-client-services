@@ -29,14 +29,14 @@ class RepricingRuleReport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $impactedProducts;
+  public $impactedProducts = [];
   protected $inapplicabilityDetailsType = InapplicabilityDetails::class;
   protected $inapplicabilityDetailsDataType = 'array';
-  public $inapplicabilityDetails;
+  public $inapplicabilityDetails = [];
   /**
    * @var string[]
    */
-  public $inapplicableProducts;
+  public $inapplicableProducts = [];
   /**
    * @var int
    */

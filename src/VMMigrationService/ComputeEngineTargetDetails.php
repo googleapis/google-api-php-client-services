@@ -23,7 +23,7 @@ class ComputeEngineTargetDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $additionalLicenses;
+  public $additionalLicenses = [];
   protected $appliedLicenseType = AppliedLicense::class;
   protected $appliedLicenseDataType = '';
   public $appliedLicense;
@@ -45,7 +45,7 @@ class ComputeEngineTargetDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -61,14 +61,14 @@ class ComputeEngineTargetDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
-  public $networkInterfaces;
+  public $networkInterfaces = [];
   /**
    * @var string[]
    */
-  public $networkTags;
+  public $networkTags = [];
   /**
    * @var string
    */

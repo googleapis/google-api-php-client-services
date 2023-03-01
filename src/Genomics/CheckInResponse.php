@@ -26,11 +26,11 @@ class CheckInResponse extends \Google\Model
   /**
    * @var array[]
    */
-  public $features;
+  public $features = [];
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
 
   /**
    * @param string

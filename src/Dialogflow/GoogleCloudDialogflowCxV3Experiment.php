@@ -74,7 +74,7 @@ class GoogleCloudDialogflowCxV3Experiment extends \Google\Collection
   public $state;
   protected $variantsHistoryType = GoogleCloudDialogflowCxV3VariantsHistory::class;
   protected $variantsHistoryDataType = 'array';
-  public $variantsHistory;
+  public $variantsHistory = [];
 
   /**
    * @param string

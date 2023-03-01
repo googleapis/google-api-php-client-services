@@ -23,7 +23,7 @@ class ListLogsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $logNames;
+  public $logNames = [];
   /**
    * @var string
    */

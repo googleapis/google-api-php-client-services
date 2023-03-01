@@ -23,7 +23,7 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
   /**
    * @var string[]
    */
-  public $claimAppearances;
+  public $claimAppearances = [];
   protected $claimAuthorType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor::class;
   protected $claimAuthorDataType = '';
   public $claimAuthor;

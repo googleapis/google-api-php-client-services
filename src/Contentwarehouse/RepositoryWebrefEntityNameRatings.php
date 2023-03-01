@@ -30,11 +30,11 @@ class RepositoryWebrefEntityNameRatings extends \Google\Collection
   public $name;
   protected $ratingsType = RepositoryWebrefEntityNameRatingsEntityNameRating::class;
   protected $ratingsDataType = 'array';
-  public $ratings;
+  public $ratings = [];
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
 
   /**
    * @param string

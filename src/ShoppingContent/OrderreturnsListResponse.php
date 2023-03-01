@@ -30,7 +30,7 @@ class OrderreturnsListResponse extends \Google\Collection
   public $nextPageToken;
   protected $resourcesType = MerchantOrderReturn::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
 
   /**
    * @param string

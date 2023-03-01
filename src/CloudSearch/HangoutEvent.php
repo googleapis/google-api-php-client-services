@@ -30,7 +30,7 @@ class HangoutEvent extends \Google\Collection
   public $mediaType;
   protected $participantIdType = StoredParticipantId::class;
   protected $participantIdDataType = 'array';
-  public $participantId;
+  public $participantId = [];
   /**
    * @var string
    */

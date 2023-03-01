@@ -91,7 +91,7 @@ class Address extends \Google\Collection
   /**
    * @var string[]
    */
-  public $users;
+  public $users = [];
 
   /**
    * @param string

@@ -25,7 +25,7 @@ class NetworkAttachmentAggregatedList extends \Google\Model
   public $id;
   protected $itemsType = NetworkAttachmentsScopedList::class;
   protected $itemsDataType = 'map';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

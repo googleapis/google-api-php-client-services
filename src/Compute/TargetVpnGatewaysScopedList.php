@@ -22,7 +22,7 @@ class TargetVpnGatewaysScopedList extends \Google\Collection
   protected $collection_key = 'targetVpnGateways';
   protected $targetVpnGatewaysType = TargetVpnGateway::class;
   protected $targetVpnGatewaysDataType = 'array';
-  public $targetVpnGateways;
+  public $targetVpnGateways = [];
   protected $warningType = TargetVpnGatewaysScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

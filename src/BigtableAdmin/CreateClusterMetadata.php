@@ -32,7 +32,7 @@ class CreateClusterMetadata extends \Google\Model
   public $requestTime;
   protected $tablesType = TableProgress::class;
   protected $tablesDataType = 'map';
-  public $tables;
+  public $tables = [];
 
   /**
    * @param string

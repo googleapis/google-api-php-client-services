@@ -26,7 +26,7 @@ class TaskStatus extends \Google\Collection
   public $state;
   protected $statusEventsType = StatusEvent::class;
   protected $statusEventsDataType = 'array';
-  public $statusEvents;
+  public $statusEvents = [];
 
   /**
    * @param string

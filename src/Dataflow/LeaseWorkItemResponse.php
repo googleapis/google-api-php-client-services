@@ -23,10 +23,10 @@ class LeaseWorkItemResponse extends \Google\Collection
   /**
    * @var array[]
    */
-  public $unifiedWorkerResponse;
+  public $unifiedWorkerResponse = [];
   protected $workItemsType = WorkItem::class;
   protected $workItemsDataType = 'array';
-  public $workItems;
+  public $workItems = [];
 
   /**
    * @param array[]

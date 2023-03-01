@@ -42,7 +42,7 @@ class IdentitytoolkitRelyingpartyCreateAuthUriRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $customParameter;
+  public $customParameter = [];
   /**
    * @var string
    */

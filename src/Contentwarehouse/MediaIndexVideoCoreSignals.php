@@ -25,7 +25,7 @@ class MediaIndexVideoCoreSignals extends \Google\Collection
   public $centroid;
   protected $videoFramesType = MediaIndexVideoFrame::class;
   protected $videoFramesDataType = 'array';
-  public $videoFrames;
+  public $videoFrames = [];
 
   /**
    * @param MediaIndexVideoCentroid

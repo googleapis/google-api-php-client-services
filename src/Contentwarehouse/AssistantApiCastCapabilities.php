@@ -26,7 +26,7 @@ class AssistantApiCastCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cameraStreamSupportedProtocols;
+  public $cameraStreamSupportedProtocols = [];
   /**
    * @var bool
    */

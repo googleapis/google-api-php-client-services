@@ -23,7 +23,7 @@ class BuildingAddress extends \Google\Collection
   /**
    * @var string[]
    */
-  public $addressLines;
+  public $addressLines = [];
   /**
    * @var string
    */

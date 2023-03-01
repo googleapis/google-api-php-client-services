@@ -22,7 +22,7 @@ class GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse extends \Googl
   protected $collection_key = 'androidDeliveryData';
   protected $androidDeliveryDataType = GoogleFirebaseFcmDataV1beta1AndroidDeliveryData::class;
   protected $androidDeliveryDataDataType = 'array';
-  public $androidDeliveryData;
+  public $androidDeliveryData = [];
   /**
    * @var string
    */

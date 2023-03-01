@@ -22,7 +22,7 @@ class DeviceIpBlockCatalog extends \Google\Collection
   protected $collection_key = 'ipBlocks';
   protected $ipBlocksType = DeviceIpBlock::class;
   protected $ipBlocksDataType = 'array';
-  public $ipBlocks;
+  public $ipBlocks = [];
 
   /**
    * @param DeviceIpBlock[]

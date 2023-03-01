@@ -28,7 +28,7 @@ class GoogleCloudChannelV1RepricingConfig extends \Google\Collection
   public $channelPartnerGranularity;
   protected $conditionalOverridesType = GoogleCloudChannelV1ConditionalOverride::class;
   protected $conditionalOverridesDataType = 'array';
-  public $conditionalOverrides;
+  public $conditionalOverrides = [];
   protected $effectiveInvoiceMonthType = GoogleTypeDate::class;
   protected $effectiveInvoiceMonthDataType = '';
   public $effectiveInvoiceMonth;

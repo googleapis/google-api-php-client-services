@@ -26,7 +26,7 @@ class ListProductCertificationsResponse extends \Google\Collection
   public $nextPageToken;
   protected $productCertificationsType = ProductCertification::class;
   protected $productCertificationsDataType = 'array';
-  public $productCertifications;
+  public $productCertifications = [];
 
   /**
    * @param string

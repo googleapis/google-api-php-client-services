@@ -41,7 +41,7 @@ class SasPortalDeviceConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $measurementCapabilities;
+  public $measurementCapabilities = [];
   protected $modelType = SasPortalDeviceModel::class;
   protected $modelDataType = '';
   public $model;

@@ -23,7 +23,7 @@ class ApplicationPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accessibleTrackIds;
+  public $accessibleTrackIds = [];
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class ApplicationPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $delegatedScopes;
+  public $delegatedScopes = [];
   /**
    * @var bool
    */
@@ -62,7 +62,7 @@ class ApplicationPolicy extends \Google\Collection
   /**
    * @var array[]
    */
-  public $managedConfiguration;
+  public $managedConfiguration = [];
   protected $managedConfigurationTemplateType = ManagedConfigurationTemplate::class;
   protected $managedConfigurationTemplateDataType = '';
   public $managedConfigurationTemplate;
@@ -76,7 +76,7 @@ class ApplicationPolicy extends \Google\Collection
   public $packageName;
   protected $permissionGrantsType = PermissionGrant::class;
   protected $permissionGrantsDataType = 'array';
-  public $permissionGrants;
+  public $permissionGrants = [];
   /**
    * @var string
    */

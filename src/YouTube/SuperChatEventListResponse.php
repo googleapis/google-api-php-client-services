@@ -30,7 +30,7 @@ class SuperChatEventListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = SuperChatEvent::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

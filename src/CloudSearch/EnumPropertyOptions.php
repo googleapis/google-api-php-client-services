@@ -29,7 +29,7 @@ class EnumPropertyOptions extends \Google\Collection
   public $orderedRanking;
   protected $possibleValuesType = EnumValuePair::class;
   protected $possibleValuesDataType = 'array';
-  public $possibleValues;
+  public $possibleValues = [];
 
   /**
    * @param EnumOperatorOptions

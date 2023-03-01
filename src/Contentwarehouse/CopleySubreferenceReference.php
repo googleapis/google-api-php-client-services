@@ -23,7 +23,7 @@ class CopleySubreferenceReference extends \Google\Collection
   /**
    * @var string[]
    */
-  public $personalReferenceTypes;
+  public $personalReferenceTypes = [];
   /**
    * @var float
    */

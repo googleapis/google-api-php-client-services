@@ -23,7 +23,7 @@ class QualityActionsAppInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $androidIntent;
+  public $androidIntent = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class QualityActionsAppInfo extends \Google\Collection
   public $source;
   protected $sourceDataType = QualityActionsAppInfoSourceData::class;
   protected $sourceDataDataType = 'array';
-  public $sourceData;
+  public $sourceData = [];
 
   /**
    * @param string[]

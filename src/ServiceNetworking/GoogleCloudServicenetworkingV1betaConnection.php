@@ -31,7 +31,7 @@ class GoogleCloudServicenetworkingV1betaConnection extends \Google\Collection
   /**
    * @var string[]
    */
-  public $reservedPeeringRanges;
+  public $reservedPeeringRanges = [];
   /**
    * @var string
    */

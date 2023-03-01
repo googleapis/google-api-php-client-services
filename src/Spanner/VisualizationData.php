@@ -30,11 +30,11 @@ class VisualizationData extends \Google\Collection
   public $dataSourceSeparatorToken;
   protected $diagnosticMessagesType = DiagnosticMessage::class;
   protected $diagnosticMessagesDataType = 'array';
-  public $diagnosticMessages;
+  public $diagnosticMessages = [];
   /**
    * @var string[]
    */
-  public $endKeyStrings;
+  public $endKeyStrings = [];
   /**
    * @var bool
    */
@@ -42,7 +42,7 @@ class VisualizationData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $indexedKeys;
+  public $indexedKeys = [];
   /**
    * @var string
    */
@@ -53,10 +53,10 @@ class VisualizationData extends \Google\Collection
   public $keyUnit;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   protected $prefixNodesType = PrefixNode::class;
   protected $prefixNodesDataType = 'array';
-  public $prefixNodes;
+  public $prefixNodes = [];
 
   /**
    * @param string

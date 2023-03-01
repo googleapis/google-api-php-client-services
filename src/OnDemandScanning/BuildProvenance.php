@@ -23,17 +23,17 @@ class BuildProvenance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $buildOptions;
+  public $buildOptions = [];
   /**
    * @var string
    */
   public $builderVersion;
   protected $builtArtifactsType = Artifact::class;
   protected $builtArtifactsDataType = 'array';
-  public $builtArtifacts;
+  public $builtArtifacts = [];
   protected $commandsType = Command::class;
   protected $commandsDataType = 'array';
-  public $commands;
+  public $commands = [];
   /**
    * @var string
    */

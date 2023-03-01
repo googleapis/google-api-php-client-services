@@ -47,7 +47,7 @@ class UrlMap extends \Google\Collection
   public $headerAction;
   protected $hostRulesType = HostRule::class;
   protected $hostRulesDataType = 'array';
-  public $hostRules;
+  public $hostRules = [];
   /**
    * @var string
    */
@@ -62,7 +62,7 @@ class UrlMap extends \Google\Collection
   public $name;
   protected $pathMatchersType = PathMatcher::class;
   protected $pathMatchersDataType = 'array';
-  public $pathMatchers;
+  public $pathMatchers = [];
   /**
    * @var string
    */
@@ -73,7 +73,7 @@ class UrlMap extends \Google\Collection
   public $selfLink;
   protected $testsType = UrlMapTest::class;
   protected $testsDataType = 'array';
-  public $tests;
+  public $tests = [];
 
   /**
    * @param string

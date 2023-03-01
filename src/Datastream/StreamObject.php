@@ -33,7 +33,7 @@ class StreamObject extends \Google\Collection
   public $displayName;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class AggregateResponse extends \Google\Collection
   protected $collection_key = 'bucket';
   protected $bucketType = AggregateBucket::class;
   protected $bucketDataType = 'array';
-  public $bucket;
+  public $bucket = [];
 
   /**
    * @param AggregateBucket[]

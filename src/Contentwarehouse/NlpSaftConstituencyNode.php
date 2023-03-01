@@ -23,7 +23,7 @@ class NlpSaftConstituencyNode extends \Google\Collection
   /**
    * @var int[]
    */
-  public $child;
+  public $child = [];
   /**
    * @var string
    */

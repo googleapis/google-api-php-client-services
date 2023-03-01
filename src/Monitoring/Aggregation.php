@@ -31,7 +31,7 @@ class Aggregation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $groupByFields;
+  public $groupByFields = [];
   /**
    * @var string
    */

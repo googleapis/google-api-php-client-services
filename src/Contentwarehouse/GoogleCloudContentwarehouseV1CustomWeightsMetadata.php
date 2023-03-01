@@ -22,7 +22,7 @@ class GoogleCloudContentwarehouseV1CustomWeightsMetadata extends \Google\Collect
   protected $collection_key = 'weightedSchemaProperties';
   protected $weightedSchemaPropertiesType = GoogleCloudContentwarehouseV1WeightedSchemaProperty::class;
   protected $weightedSchemaPropertiesDataType = 'array';
-  public $weightedSchemaProperties;
+  public $weightedSchemaProperties = [];
 
   /**
    * @param GoogleCloudContentwarehouseV1WeightedSchemaProperty[]

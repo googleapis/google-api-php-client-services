@@ -26,7 +26,7 @@ class SocialGraphWireProtoPeopleapiExtensionPeopleStackExtendedData extends \Goo
   public $familyStatus;
   protected $hiddenKeysType = SocialDiscoveryExternalEntityKey::class;
   protected $hiddenKeysDataType = 'array';
-  public $hiddenKeys;
+  public $hiddenKeys = [];
   /**
    * @var string
    */

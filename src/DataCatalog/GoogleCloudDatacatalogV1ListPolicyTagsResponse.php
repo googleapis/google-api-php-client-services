@@ -26,7 +26,7 @@ class GoogleCloudDatacatalogV1ListPolicyTagsResponse extends \Google\Collection
   public $nextPageToken;
   protected $policyTagsType = GoogleCloudDatacatalogV1PolicyTag::class;
   protected $policyTagsDataType = 'array';
-  public $policyTags;
+  public $policyTags = [];
 
   /**
    * @param string

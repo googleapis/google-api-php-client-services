@@ -26,7 +26,7 @@ class TargetInstanceList extends \Google\Collection
   public $id;
   protected $itemsType = TargetInstance::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

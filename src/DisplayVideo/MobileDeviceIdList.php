@@ -23,7 +23,7 @@ class MobileDeviceIdList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $mobileDeviceIds;
+  public $mobileDeviceIds = [];
 
   /**
    * @param string[]

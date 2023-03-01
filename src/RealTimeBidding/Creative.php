@@ -54,30 +54,30 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dealIds;
+  public $dealIds = [];
   /**
    * @var string[]
    */
-  public $declaredAttributes;
+  public $declaredAttributes = [];
   /**
    * @var string[]
    */
-  public $declaredClickThroughUrls;
+  public $declaredClickThroughUrls = [];
   /**
    * @var string[]
    */
-  public $declaredRestrictedCategories;
+  public $declaredRestrictedCategories = [];
   /**
    * @var int[]
    */
-  public $declaredVendorIds;
+  public $declaredVendorIds = [];
   protected $htmlType = HtmlContent::class;
   protected $htmlDataType = '';
   public $html;
   /**
    * @var string[]
    */
-  public $impressionTrackingUrls;
+  public $impressionTrackingUrls = [];
   /**
    * @var string
    */
@@ -92,7 +92,7 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictedCategories;
+  public $restrictedCategories = [];
   /**
    * @var int
    */

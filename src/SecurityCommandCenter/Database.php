@@ -27,7 +27,7 @@ class Database extends \Google\Collection
   /**
    * @var string[]
    */
-  public $grantees;
+  public $grantees = [];
   /**
    * @var string
    */

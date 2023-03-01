@@ -23,7 +23,7 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
   /**
    * @var string[]
    */
-  public $folders;
+  public $folders = [];
   /**
    * @var string
    */

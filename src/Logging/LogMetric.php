@@ -45,7 +45,7 @@ class LogMetric extends \Google\Model
   /**
    * @var string[]
    */
-  public $labelExtractors;
+  public $labelExtractors = [];
   protected $metricDescriptorType = MetricDescriptor::class;
   protected $metricDescriptorDataType = '';
   public $metricDescriptor;

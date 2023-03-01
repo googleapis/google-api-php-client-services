@@ -27,7 +27,7 @@ class SasPortalStatus extends \Google\Collection
   /**
    * @var array[]
    */
-  public $details;
+  public $details = [];
   /**
    * @var string
    */

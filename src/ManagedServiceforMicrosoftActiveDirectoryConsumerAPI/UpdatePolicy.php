@@ -26,7 +26,7 @@ class UpdatePolicy extends \Google\Collection
   public $channel;
   protected $denyMaintenancePeriodsType = DenyMaintenancePeriod::class;
   protected $denyMaintenancePeriodsDataType = 'array';
-  public $denyMaintenancePeriods;
+  public $denyMaintenancePeriods = [];
   protected $windowType = MaintenanceWindow::class;
   protected $windowDataType = '';
   public $window;

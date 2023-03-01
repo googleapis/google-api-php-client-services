@@ -73,7 +73,7 @@ class BuildTrigger extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ignoredFiles;
+  public $ignoredFiles = [];
   /**
    * @var string
    */
@@ -81,7 +81,7 @@ class BuildTrigger extends \Google\Collection
   /**
    * @var string[]
    */
-  public $includedFiles;
+  public $includedFiles = [];
   /**
    * @var string
    */
@@ -106,11 +106,11 @@ class BuildTrigger extends \Google\Collection
   /**
    * @var string[]
    */
-  public $substitutions;
+  public $substitutions = [];
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   protected $triggerTemplateType = RepoSource::class;
   protected $triggerTemplateDataType = '';
   public $triggerTemplate;

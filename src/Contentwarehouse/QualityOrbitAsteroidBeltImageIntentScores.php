@@ -23,11 +23,11 @@ class QualityOrbitAsteroidBeltImageIntentScores extends \Google\Collection
   /**
    * @var string[]
    */
-  public $intents;
+  public $intents = [];
   /**
    * @var int[]
    */
-  public $scores;
+  public $scores = [];
 
   /**
    * @param string[]

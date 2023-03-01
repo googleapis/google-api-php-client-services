@@ -22,7 +22,7 @@ class GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse extends \G
   protected $collection_key = 'unreachable';
   protected $appConnectionsType = GoogleCloudBeyondcorpAppconnectionsV1AppConnection::class;
   protected $appConnectionsDataType = 'array';
-  public $appConnections;
+  public $appConnections = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse extends \G
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param GoogleCloudBeyondcorpAppconnectionsV1AppConnection[]

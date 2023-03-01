@@ -23,7 +23,7 @@ class AttributeDefinition extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedValues;
+  public $allowedValues = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class AttributeDefinition extends \Google\Collection
   /**
    * @var string[]
    */
-  public $consentDefaultValues;
+  public $consentDefaultValues = [];
   /**
    * @var string
    */

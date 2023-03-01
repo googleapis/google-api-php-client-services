@@ -33,7 +33,7 @@ class NlpSaftRelationMention extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceInfo;
+  public $sourceInfo = [];
   /**
    * @var int
    */

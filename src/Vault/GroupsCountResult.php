@@ -22,10 +22,10 @@ class GroupsCountResult extends \Google\Collection
   protected $collection_key = 'nonQueryableAccounts';
   protected $accountCountErrorsType = AccountCountError::class;
   protected $accountCountErrorsDataType = 'array';
-  public $accountCountErrors;
+  public $accountCountErrors = [];
   protected $accountCountsType = AccountCount::class;
   protected $accountCountsDataType = 'array';
-  public $accountCounts;
+  public $accountCounts = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class GroupsCountResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nonQueryableAccounts;
+  public $nonQueryableAccounts = [];
   /**
    * @var string
    */

@@ -23,11 +23,11 @@ class KnowledgeAnswersIntentQuerySupportTransferSignals extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $supportTransferSource;
+  public $supportTransferSource = [];
   /**
    * @var string[]
    */
-  public $supportTransferTarget;
+  public $supportTransferTarget = [];
 
   /**
    * @param string[]

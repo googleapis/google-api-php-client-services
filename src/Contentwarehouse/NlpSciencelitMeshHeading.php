@@ -25,7 +25,7 @@ class NlpSciencelitMeshHeading extends \Google\Collection
   public $meshDescriptor;
   protected $meshQualifierType = NlpSciencelitSubjectHeading::class;
   protected $meshQualifierDataType = 'array';
-  public $meshQualifier;
+  public $meshQualifier = [];
 
   /**
    * @param NlpSciencelitSubjectHeading

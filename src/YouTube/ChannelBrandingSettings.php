@@ -25,7 +25,7 @@ class ChannelBrandingSettings extends \Google\Collection
   public $channel;
   protected $hintsType = PropertyValue::class;
   protected $hintsDataType = 'array';
-  public $hints;
+  public $hints = [];
   protected $imageType = ImageSettings::class;
   protected $imageDataType = '';
   public $image;

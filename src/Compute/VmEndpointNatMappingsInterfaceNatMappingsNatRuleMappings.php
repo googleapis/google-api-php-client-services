@@ -23,11 +23,11 @@ class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings extends \Google\C
   /**
    * @var string[]
    */
-  public $drainNatIpPortRanges;
+  public $drainNatIpPortRanges = [];
   /**
    * @var string[]
    */
-  public $natIpPortRanges;
+  public $natIpPortRanges = [];
   /**
    * @var int
    */

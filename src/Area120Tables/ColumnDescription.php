@@ -33,7 +33,7 @@ class ColumnDescription extends \Google\Collection
   public $id;
   protected $labelsType = LabeledItem::class;
   protected $labelsDataType = 'array';
-  public $labels;
+  public $labels = [];
   protected $lookupDetailsType = LookupDetails::class;
   protected $lookupDetailsDataType = '';
   public $lookupDetails;

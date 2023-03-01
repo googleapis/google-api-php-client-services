@@ -31,11 +31,11 @@ class KnowledgeAnswersIntentQueryIndexingIQLAttachment extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $piannoConfidenceScoreE2;
+  public $piannoConfidenceScoreE2 = [];
   /**
    * @var string[]
    */
-  public $piannoIqlBitmap;
+  public $piannoIqlBitmap = [];
 
   /**
    * @param string

@@ -27,11 +27,11 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
   /**
    * @var int[]
    */
-  public $goldmineLookupKeyPerField;
+  public $goldmineLookupKeyPerField = [];
   /**
    * @var string[]
    */
-  public $goldmineLookupKeys;
+  public $goldmineLookupKeys = [];
   /**
    * @var string
    */
@@ -54,11 +54,11 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
   /**
    * @var int[]
    */
-  public $raffiaLookupKeyPerField;
+  public $raffiaLookupKeyPerField = [];
   /**
    * @var string[]
    */
-  public $raffiaLookupKeys;
+  public $raffiaLookupKeys = [];
 
   /**
    * @param string

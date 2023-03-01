@@ -22,7 +22,7 @@ class QualitySitemapCoClickTarget extends \Google\Collection
   protected $collection_key = 'docs';
   protected $docsType = QualitySitemapCoClickTargetDoc::class;
   protected $docsDataType = 'array';
-  public $docs;
+  public $docs = [];
   /**
    * @var string
    */

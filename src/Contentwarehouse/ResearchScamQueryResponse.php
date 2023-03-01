@@ -22,7 +22,7 @@ class ResearchScamQueryResponse extends \Google\Collection
   protected $collection_key = 'results';
   protected $latencyType = ResearchScamOnlineSearchLatencyStats::class;
   protected $latencyDataType = 'array';
-  public $latency;
+  public $latency = [];
   /**
    * @var string
    */
@@ -41,10 +41,10 @@ class ResearchScamQueryResponse extends \Google\Collection
   public $numUnreachableMachines;
   protected $restrictStatsType = ResearchScamRestrictStats::class;
   protected $restrictStatsDataType = 'array';
-  public $restrictStats;
+  public $restrictStats = [];
   protected $resultsType = ResearchScamNearestNeighbors::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   protected $statusType = UtilStatusProto::class;
   protected $statusDataType = '';
   public $status;

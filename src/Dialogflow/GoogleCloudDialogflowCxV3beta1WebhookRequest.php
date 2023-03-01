@@ -36,14 +36,14 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
   public $languageCode;
   protected $messagesType = GoogleCloudDialogflowCxV3beta1ResponseMessage::class;
   protected $messagesDataType = 'array';
-  public $messages;
+  public $messages = [];
   protected $pageInfoType = GoogleCloudDialogflowCxV3beta1PageInfo::class;
   protected $pageInfoDataType = '';
   public $pageInfo;
   /**
    * @var array[]
    */
-  public $payload;
+  public $payload = [];
   protected $sentimentAnalysisResultType = GoogleCloudDialogflowCxV3beta1WebhookRequestSentimentAnalysisResult::class;
   protected $sentimentAnalysisResultDataType = '';
   public $sentimentAnalysisResult;

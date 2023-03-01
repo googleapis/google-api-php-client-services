@@ -33,7 +33,7 @@ class ScreenshotCluster extends \Google\Collection
   public $keyScreen;
   protected $screensType = Screen::class;
   protected $screensDataType = 'array';
-  public $screens;
+  public $screens = [];
 
   /**
    * @param string

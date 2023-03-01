@@ -23,7 +23,7 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blockingResources;
+  public $blockingResources = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
   public $displayName;
   protected $inputConfigsType = GoogleCloudDatalabelingV1beta1InputConfig::class;
   protected $inputConfigsDataType = 'array';
-  public $inputConfigs;
+  public $inputConfigs = [];
   /**
    * @var string
    */

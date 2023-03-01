@@ -22,7 +22,7 @@ class MembershipAdjacencyList extends \Google\Collection
   protected $collection_key = 'edges';
   protected $edgesType = Membership::class;
   protected $edgesDataType = 'array';
-  public $edges;
+  public $edges = [];
   /**
    * @var string
    */

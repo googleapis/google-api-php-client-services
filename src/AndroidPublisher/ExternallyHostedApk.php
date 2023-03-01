@@ -27,7 +27,7 @@ class ExternallyHostedApk extends \Google\Collection
   /**
    * @var string[]
    */
-  public $certificateBase64s;
+  public $certificateBase64s = [];
   /**
    * @var string
    */
@@ -59,7 +59,7 @@ class ExternallyHostedApk extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nativeCodes;
+  public $nativeCodes = [];
   /**
    * @var string
    */
@@ -67,10 +67,10 @@ class ExternallyHostedApk extends \Google\Collection
   /**
    * @var string[]
    */
-  public $usesFeatures;
+  public $usesFeatures = [];
   protected $usesPermissionsType = UsesPermission::class;
   protected $usesPermissionsDataType = 'array';
-  public $usesPermissions;
+  public $usesPermissions = [];
   /**
    * @var int
    */

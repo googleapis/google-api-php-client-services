@@ -35,11 +35,11 @@ class IosVersion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedXcodeVersionIds;
+  public $supportedXcodeVersionIds = [];
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
 
   /**
    * @param string

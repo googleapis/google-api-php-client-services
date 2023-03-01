@@ -26,7 +26,7 @@ class ListPretargetingConfigsResponse extends \Google\Collection
   public $nextPageToken;
   protected $pretargetingConfigsType = PretargetingConfig::class;
   protected $pretargetingConfigsDataType = 'array';
-  public $pretargetingConfigs;
+  public $pretargetingConfigs = [];
 
   /**
    * @param string

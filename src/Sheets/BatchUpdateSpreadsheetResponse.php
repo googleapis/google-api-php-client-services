@@ -22,7 +22,7 @@ class BatchUpdateSpreadsheetResponse extends \Google\Collection
   protected $collection_key = 'replies';
   protected $repliesType = Response::class;
   protected $repliesDataType = 'array';
-  public $replies;
+  public $replies = [];
   /**
    * @var string
    */

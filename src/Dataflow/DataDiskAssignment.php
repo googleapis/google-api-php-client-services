@@ -23,7 +23,7 @@ class DataDiskAssignment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dataDisks;
+  public $dataDisks = [];
   /**
    * @var string
    */

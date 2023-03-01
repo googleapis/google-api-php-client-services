@@ -31,7 +31,7 @@ class IndexingDupsLocalizedLocalizedClusterCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deprecatedDebugInfo;
+  public $deprecatedDebugInfo = [];
   /**
    * @var bool
    */

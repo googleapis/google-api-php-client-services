@@ -47,7 +47,7 @@ class RepositoryWebrefRefconRefconNameInfo extends \Google\Collection
   /**
    * @var int[]
    */
-  public $language;
+  public $language = [];
   /**
    * @var float
    */

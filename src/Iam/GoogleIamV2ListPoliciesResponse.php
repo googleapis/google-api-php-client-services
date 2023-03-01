@@ -26,7 +26,7 @@ class GoogleIamV2ListPoliciesResponse extends \Google\Collection
   public $nextPageToken;
   protected $policiesType = GoogleIamV2Policy::class;
   protected $policiesDataType = 'array';
-  public $policies;
+  public $policies = [];
 
   /**
    * @param string

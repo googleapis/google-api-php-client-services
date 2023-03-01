@@ -34,7 +34,7 @@ class Debuggee extends \Google\Collection
   public $description;
   protected $extSourceContextsType = ExtendedSourceContext::class;
   protected $extSourceContextsDataType = 'array';
-  public $extSourceContexts;
+  public $extSourceContexts = [];
   /**
    * @var string
    */
@@ -50,14 +50,14 @@ class Debuggee extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
   public $project;
   protected $sourceContextsType = SourceContext::class;
   protected $sourceContextsDataType = 'array';
-  public $sourceContexts;
+  public $sourceContexts = [];
   protected $statusType = StatusMessage::class;
   protected $statusDataType = '';
   public $status;

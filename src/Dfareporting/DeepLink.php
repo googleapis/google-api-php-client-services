@@ -38,7 +38,7 @@ class DeepLink extends \Google\Collection
   /**
    * @var string[]
    */
-  public $remarketingListIds;
+  public $remarketingListIds = [];
 
   /**
    * @param string

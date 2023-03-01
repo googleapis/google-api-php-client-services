@@ -26,7 +26,7 @@ class GoogleIdentityStsV1Options extends \Google\Collection
   /**
    * @var string[]
    */
-  public $audiences;
+  public $audiences = [];
   /**
    * @var string
    */

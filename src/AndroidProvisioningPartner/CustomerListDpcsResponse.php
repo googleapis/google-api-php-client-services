@@ -22,7 +22,7 @@ class CustomerListDpcsResponse extends \Google\Collection
   protected $collection_key = 'dpcs';
   protected $dpcsType = Dpc::class;
   protected $dpcsDataType = 'array';
-  public $dpcs;
+  public $dpcs = [];
 
   /**
    * @param Dpc[]

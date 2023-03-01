@@ -26,7 +26,7 @@ class DataSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dataQualityStandard;
+  public $dataQualityStandard = [];
   /**
    * @var string
    */

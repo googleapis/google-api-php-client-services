@@ -29,7 +29,7 @@ class GoogleDatastoreAdminV1ImportEntitiesRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
 
   /**
    * @param GoogleDatastoreAdminV1EntityFilter

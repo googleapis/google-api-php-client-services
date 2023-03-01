@@ -28,7 +28,7 @@ class GooglePrivacyDlpV2NumericalStatsResult extends \Google\Collection
   public $minValue;
   protected $quantileValuesType = GooglePrivacyDlpV2Value::class;
   protected $quantileValuesDataType = 'array';
-  public $quantileValues;
+  public $quantileValues = [];
 
   /**
    * @param GooglePrivacyDlpV2Value

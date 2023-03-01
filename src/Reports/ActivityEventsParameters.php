@@ -34,14 +34,14 @@ class ActivityEventsParameters extends \Google\Collection
   /**
    * @var string[]
    */
-  public $multiIntValue;
+  public $multiIntValue = [];
   protected $multiMessageValueType = ActivityEventsParametersMultiMessageValue::class;
   protected $multiMessageValueDataType = 'array';
-  public $multiMessageValue;
+  public $multiMessageValue = [];
   /**
    * @var string[]
    */
-  public $multiValue;
+  public $multiValue = [];
   /**
    * @var string
    */

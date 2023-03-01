@@ -23,7 +23,7 @@ class NonSdkApiInsight extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exampleTraceMessages;
+  public $exampleTraceMessages = [];
   /**
    * @var string
    */

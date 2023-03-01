@@ -25,10 +25,10 @@ class GoogleCloudVisionV1p1beta1ProductSearchResultsGroupedResult extends \Googl
   public $boundingPoly;
   protected $objectAnnotationsType = GoogleCloudVisionV1p1beta1ProductSearchResultsObjectAnnotation::class;
   protected $objectAnnotationsDataType = 'array';
-  public $objectAnnotations;
+  public $objectAnnotations = [];
   protected $resultsType = GoogleCloudVisionV1p1beta1ProductSearchResultsResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
 
   /**
    * @param GoogleCloudVisionV1p1beta1BoundingPoly

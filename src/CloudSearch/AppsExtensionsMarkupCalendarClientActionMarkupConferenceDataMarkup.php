@@ -30,7 +30,7 @@ class AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkup extends
   public $conferenceSolutionId;
   protected $entryPointsType = AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkupEntryPointMarkup::class;
   protected $entryPointsDataType = 'array';
-  public $entryPoints;
+  public $entryPoints = [];
   protected $errorType = AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkupError::class;
   protected $errorDataType = '';
   public $error;
@@ -40,7 +40,7 @@ class AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkup extends
   public $note;
   protected $parametersType = AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkupParameter::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

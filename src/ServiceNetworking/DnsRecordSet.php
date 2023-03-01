@@ -23,7 +23,7 @@ class DnsRecordSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

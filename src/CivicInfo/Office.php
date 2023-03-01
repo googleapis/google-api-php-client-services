@@ -27,7 +27,7 @@ class Office extends \Google\Collection
   /**
    * @var string[]
    */
-  public $levels;
+  public $levels = [];
   /**
    * @var string
    */
@@ -35,14 +35,14 @@ class Office extends \Google\Collection
   /**
    * @var string[]
    */
-  public $officialIndices;
+  public $officialIndices = [];
   /**
    * @var string[]
    */
-  public $roles;
+  public $roles = [];
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
 
   /**
    * @param string

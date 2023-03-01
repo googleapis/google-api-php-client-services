@@ -68,10 +68,10 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   public $name;
   protected $otherInfoTypesType = GooglePrivacyDlpV2OtherInfoTypeSummary::class;
   protected $otherInfoTypesDataType = 'array';
-  public $otherInfoTypes;
+  public $otherInfoTypes = [];
   protected $predictedInfoTypesType = GooglePrivacyDlpV2InfoTypeSummary::class;
   protected $predictedInfoTypesDataType = 'array';
-  public $predictedInfoTypes;
+  public $predictedInfoTypes = [];
   /**
    * @var string
    */
@@ -86,7 +86,7 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceLabels;
+  public $resourceLabels = [];
   /**
    * @var string
    */

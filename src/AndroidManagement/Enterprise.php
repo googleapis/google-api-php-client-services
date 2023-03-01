@@ -30,7 +30,7 @@ class Enterprise extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enabledNotificationTypes;
+  public $enabledNotificationTypes = [];
   /**
    * @var string
    */
@@ -52,10 +52,10 @@ class Enterprise extends \Google\Collection
   public $pubsubTopic;
   protected $signinDetailsType = SigninDetail::class;
   protected $signinDetailsDataType = 'array';
-  public $signinDetails;
+  public $signinDetails = [];
   protected $termsAndConditionsType = TermsAndConditions::class;
   protected $termsAndConditionsDataType = 'array';
-  public $termsAndConditions;
+  public $termsAndConditions = [];
 
   /**
    * @param bool

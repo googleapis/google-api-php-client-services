@@ -38,7 +38,7 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labelIds;
+  public $labelIds = [];
   protected $linkRequestType = AccountsCustomBatchRequestEntryLinkRequest::class;
   protected $linkRequestDataType = '';
   public $linkRequest;

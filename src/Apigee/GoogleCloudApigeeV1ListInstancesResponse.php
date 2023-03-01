@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ListInstancesResponse extends \Google\Collection
   protected $collection_key = 'instances';
   protected $instancesType = GoogleCloudApigeeV1Instance::class;
   protected $instancesDataType = 'array';
-  public $instances;
+  public $instances = [];
   /**
    * @var string
    */

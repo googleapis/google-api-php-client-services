@@ -22,16 +22,16 @@ class PrivateMessageInfo extends \Google\Collection
   protected $collection_key = 'gsuiteIntegrationMetadata';
   protected $annotationsType = Annotation::class;
   protected $annotationsDataType = 'array';
-  public $annotations;
+  public $annotations = [];
   protected $attachmentsType = Attachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments;
+  public $attachments = [];
   protected $contextualAddOnMarkupType = GoogleChatV1ContextualAddOnMarkup::class;
   protected $contextualAddOnMarkupDataType = 'array';
-  public $contextualAddOnMarkup;
+  public $contextualAddOnMarkup = [];
   protected $gsuiteIntegrationMetadataType = GsuiteIntegrationMetadata::class;
   protected $gsuiteIntegrationMetadataDataType = 'array';
-  public $gsuiteIntegrationMetadata;
+  public $gsuiteIntegrationMetadata = [];
   /**
    * @var string
    */

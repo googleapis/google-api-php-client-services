@@ -23,7 +23,7 @@ class DrishtiVesperThumbnail extends \Google\Collection
   /**
    * @var float[]
    */
-  public $denseFeatures;
+  public $denseFeatures = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class DrishtiVesperThumbnail extends \Google\Collection
   public $encodedImageStringSmall;
   protected $encodedThumbnailsType = DrishtiVesperEncodedThumbnail::class;
   protected $encodedThumbnailsDataType = 'array';
-  public $encodedThumbnails;
+  public $encodedThumbnails = [];
   /**
    * @var string
    */
@@ -45,7 +45,7 @@ class DrishtiVesperThumbnail extends \Google\Collection
   public $ocrText;
   protected $qualityScoresType = DrishtiVesperThumbnailQualityScore::class;
   protected $qualityScoresDataType = 'array';
-  public $qualityScores;
+  public $qualityScores = [];
   /**
    * @var bool
    */
@@ -67,7 +67,7 @@ class DrishtiVesperThumbnail extends \Google\Collection
   public $userReportedThumbnail;
   protected $userReportedThumbnailsType = DrishtiVesperUserReportUserReportedThumbnail::class;
   protected $userReportedThumbnailsDataType = 'array';
-  public $userReportedThumbnails;
+  public $userReportedThumbnails = [];
   /**
    * @var string
    */

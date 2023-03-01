@@ -22,7 +22,7 @@ class QualitySherlockKnexAnnotation extends \Google\Collection
   protected $collection_key = 'item';
   protected $itemType = QualitySherlockKnexAnnotationItem::class;
   protected $itemDataType = 'array';
-  public $item;
+  public $item = [];
 
   /**
    * @param QualitySherlockKnexAnnotationItem[]

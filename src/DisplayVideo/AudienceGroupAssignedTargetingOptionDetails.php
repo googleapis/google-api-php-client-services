@@ -34,7 +34,7 @@ class AudienceGroupAssignedTargetingOptionDetails extends \Google\Collection
   public $includedCustomListGroup;
   protected $includedFirstAndThirdPartyAudienceGroupsType = FirstAndThirdPartyAudienceGroup::class;
   protected $includedFirstAndThirdPartyAudienceGroupsDataType = 'array';
-  public $includedFirstAndThirdPartyAudienceGroups;
+  public $includedFirstAndThirdPartyAudienceGroups = [];
   protected $includedGoogleAudienceGroupType = GoogleAudienceGroup::class;
   protected $includedGoogleAudienceGroupDataType = '';
   public $includedGoogleAudienceGroup;

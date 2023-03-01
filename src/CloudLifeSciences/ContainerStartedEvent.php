@@ -30,7 +30,7 @@ class ContainerStartedEvent extends \Google\Model
   /**
    * @var int[]
    */
-  public $portMappings;
+  public $portMappings = [];
 
   /**
    * @param int

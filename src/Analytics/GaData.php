@@ -22,7 +22,7 @@ class GaData extends \Google\Collection
   protected $collection_key = 'rows';
   protected $columnHeadersType = GaDataColumnHeaders::class;
   protected $columnHeadersDataType = 'array';
-  public $columnHeaders;
+  public $columnHeaders = [];
   /**
    * @var bool
    */
@@ -63,7 +63,7 @@ class GaData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rows;
+  public $rows = [];
   /**
    * @var string
    */
@@ -83,7 +83,7 @@ class GaData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $totalsForAllResults;
+  public $totalsForAllResults = [];
 
   /**
    * @param GaDataColumnHeaders[]

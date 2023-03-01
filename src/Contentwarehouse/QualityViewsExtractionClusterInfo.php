@@ -31,14 +31,14 @@ class QualityViewsExtractionClusterInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clusterSiblingMid;
+  public $clusterSiblingMid = [];
   /**
    * @var float
    */
   public $score;
   protected $subClusterType = QualityViewsExtractionClusterInfo::class;
   protected $subClusterDataType = 'array';
-  public $subCluster;
+  public $subCluster = [];
 
   /**
    * @param string

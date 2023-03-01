@@ -29,7 +29,7 @@ class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata extends \Google
   public $errorDocumentCount;
   protected $individualBatchDeleteStatusesType = GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus::class;
   protected $individualBatchDeleteStatusesDataType = 'array';
-  public $individualBatchDeleteStatuses;
+  public $individualBatchDeleteStatuses = [];
   /**
    * @var int
    */

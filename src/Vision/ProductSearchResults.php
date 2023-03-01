@@ -26,10 +26,10 @@ class ProductSearchResults extends \Google\Collection
   public $indexTime;
   protected $productGroupedResultsType = GroupedResult::class;
   protected $productGroupedResultsDataType = 'array';
-  public $productGroupedResults;
+  public $productGroupedResults = [];
   protected $resultsType = Result::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
 
   /**
    * @param string

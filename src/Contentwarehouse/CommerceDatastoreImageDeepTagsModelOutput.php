@@ -46,7 +46,7 @@ class CommerceDatastoreImageDeepTagsModelOutput extends \Google\Collection
   public $selfie;
   protected $textOverlayType = CommerceDatastoreDeepTag::class;
   protected $textOverlayDataType = 'array';
-  public $textOverlay;
+  public $textOverlay = [];
   /**
    * @var string
    */

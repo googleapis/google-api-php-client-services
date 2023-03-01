@@ -42,7 +42,7 @@ class InTotoStatement extends \Google\Collection
   public $slsaProvenanceZeroTwo;
   protected $subjectType = Subject::class;
   protected $subjectDataType = 'array';
-  public $subject;
+  public $subject = [];
 
   /**
    * @param string

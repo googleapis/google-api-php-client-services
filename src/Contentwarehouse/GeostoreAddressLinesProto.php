@@ -27,7 +27,7 @@ class GeostoreAddressLinesProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $line;
+  public $line = [];
 
   /**
    * @param string

@@ -22,7 +22,7 @@ class ValidateConsumerConfigResponse extends \Google\Collection
   protected $collection_key = 'existingSubnetworkCandidates';
   protected $existingSubnetworkCandidatesType = Subnetwork::class;
   protected $existingSubnetworkCandidatesDataType = 'array';
-  public $existingSubnetworkCandidates;
+  public $existingSubnetworkCandidates = [];
   /**
    * @var bool
    */

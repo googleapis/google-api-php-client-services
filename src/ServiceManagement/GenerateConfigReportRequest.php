@@ -22,11 +22,11 @@ class GenerateConfigReportRequest extends \Google\Model
   /**
    * @var array[]
    */
-  public $newConfig;
+  public $newConfig = [];
   /**
    * @var array[]
    */
-  public $oldConfig;
+  public $oldConfig = [];
 
   /**
    * @param array[]

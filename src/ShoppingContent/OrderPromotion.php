@@ -22,10 +22,10 @@ class OrderPromotion extends \Google\Collection
   protected $collection_key = 'appliedItems';
   protected $applicableItemsType = OrderPromotionItem::class;
   protected $applicableItemsDataType = 'array';
-  public $applicableItems;
+  public $applicableItems = [];
   protected $appliedItemsType = OrderPromotionItem::class;
   protected $appliedItemsDataType = 'array';
-  public $appliedItems;
+  public $appliedItems = [];
   /**
    * @var string
    */

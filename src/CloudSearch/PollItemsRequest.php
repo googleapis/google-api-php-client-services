@@ -38,7 +38,7 @@ class PollItemsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $statusCodes;
+  public $statusCodes = [];
 
   /**
    * @param string

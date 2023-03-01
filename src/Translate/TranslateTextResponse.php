@@ -22,10 +22,10 @@ class TranslateTextResponse extends \Google\Collection
   protected $collection_key = 'translations';
   protected $glossaryTranslationsType = Translation::class;
   protected $glossaryTranslationsDataType = 'array';
-  public $glossaryTranslations;
+  public $glossaryTranslations = [];
   protected $translationsType = Translation::class;
   protected $translationsDataType = 'array';
-  public $translations;
+  public $translations = [];
 
   /**
    * @param Translation[]

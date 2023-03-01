@@ -25,7 +25,7 @@ class DimensionProperties extends \Google\Collection
   public $dataSourceColumnReference;
   protected $developerMetadataType = DeveloperMetadata::class;
   protected $developerMetadataDataType = 'array';
-  public $developerMetadata;
+  public $developerMetadata = [];
   /**
    * @var bool
    */

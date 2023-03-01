@@ -23,7 +23,7 @@ class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse extends \Google
   /**
    * @var string[]
    */
-  public $setupErrors;
+  public $setupErrors = [];
   /**
    * @var string
    */

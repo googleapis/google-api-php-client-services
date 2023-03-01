@@ -22,7 +22,7 @@ class BiasingPerDocData2 extends \Google\Collection
   protected $collection_key = 'biasingField';
   protected $biasingFieldType = BiasingPerDocData2BiasingField::class;
   protected $biasingFieldDataType = 'array';
-  public $biasingField;
+  public $biasingField = [];
 
   /**
    * @param BiasingPerDocData2BiasingField[]

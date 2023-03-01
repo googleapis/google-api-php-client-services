@@ -26,7 +26,7 @@ class ListTransferJobsResponse extends \Google\Collection
   public $nextPageToken;
   protected $transferJobsType = TransferJob::class;
   protected $transferJobsDataType = 'array';
-  public $transferJobs;
+  public $transferJobs = [];
 
   /**
    * @param string

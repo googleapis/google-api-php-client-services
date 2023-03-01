@@ -22,11 +22,11 @@ class BatchDeletePrintServersResponse extends \Google\Collection
   protected $collection_key = 'printServerIds';
   protected $failedPrintServersType = PrintServerFailureInfo::class;
   protected $failedPrintServersDataType = 'array';
-  public $failedPrintServers;
+  public $failedPrintServers = [];
   /**
    * @var string[]
    */
-  public $printServerIds;
+  public $printServerIds = [];
 
   /**
    * @param PrintServerFailureInfo[]

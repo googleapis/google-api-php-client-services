@@ -22,7 +22,7 @@ class ListAuthorizedDomainsResponse extends \Google\Collection
   protected $collection_key = 'domains';
   protected $domainsType = AuthorizedDomain::class;
   protected $domainsDataType = 'array';
-  public $domains;
+  public $domains = [];
   /**
    * @var string
    */

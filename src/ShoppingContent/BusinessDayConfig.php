@@ -23,7 +23,7 @@ class BusinessDayConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $businessDays;
+  public $businessDays = [];
 
   /**
    * @param string[]

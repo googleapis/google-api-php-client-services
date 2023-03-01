@@ -22,7 +22,7 @@ class GlossaryTermsSet extends \Google\Collection
   protected $collection_key = 'terms';
   protected $termsType = GlossaryTerm::class;
   protected $termsDataType = 'array';
-  public $terms;
+  public $terms = [];
 
   /**
    * @param GlossaryTerm[]

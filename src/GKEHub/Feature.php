@@ -33,13 +33,13 @@ class Feature extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $membershipSpecsType = MembershipFeatureSpec::class;
   protected $membershipSpecsDataType = 'map';
-  public $membershipSpecs;
+  public $membershipSpecs = [];
   protected $membershipStatesType = MembershipFeatureState::class;
   protected $membershipStatesDataType = 'map';
-  public $membershipStates;
+  public $membershipStates = [];
   /**
    * @var string
    */
@@ -49,10 +49,10 @@ class Feature extends \Google\Model
   public $resourceState;
   protected $scopeSpecsType = ScopeFeatureSpec::class;
   protected $scopeSpecsDataType = 'map';
-  public $scopeSpecs;
+  public $scopeSpecs = [];
   protected $scopeStatesType = ScopeFeatureState::class;
   protected $scopeStatesDataType = 'map';
-  public $scopeStates;
+  public $scopeStates = [];
   protected $specType = CommonFeatureSpec::class;
   protected $specDataType = '';
   public $spec;

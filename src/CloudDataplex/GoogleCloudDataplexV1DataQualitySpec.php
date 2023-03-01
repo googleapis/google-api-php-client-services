@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1DataQualitySpec extends \Google\Collection
   protected $collection_key = 'rules';
   protected $rulesType = GoogleCloudDataplexV1DataQualityRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
 
   /**
    * @param GoogleCloudDataplexV1DataQualityRule[]

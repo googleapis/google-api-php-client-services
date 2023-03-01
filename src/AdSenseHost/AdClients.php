@@ -26,7 +26,7 @@ class AdClients extends \Google\Collection
   public $etag;
   protected $itemsType = AdClient::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

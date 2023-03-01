@@ -23,7 +23,7 @@ class EnterpriseCrmFrontendsEventbusProtoIntParameterArray extends \Google\Colle
   /**
    * @var string[]
    */
-  public $intValues;
+  public $intValues = [];
 
   /**
    * @param string[]

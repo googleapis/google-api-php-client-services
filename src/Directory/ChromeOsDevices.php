@@ -22,7 +22,7 @@ class ChromeOsDevices extends \Google\Collection
   protected $collection_key = 'chromeosdevices';
   protected $chromeosdevicesType = ChromeOsDevice::class;
   protected $chromeosdevicesDataType = 'array';
-  public $chromeosdevices;
+  public $chromeosdevices = [];
   /**
    * @var string
    */

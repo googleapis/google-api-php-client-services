@@ -23,7 +23,7 @@ class ObjectId extends \Google\Collection
   /**
    * @var int[]
    */
-  public $objectIdPath;
+  public $objectIdPath = [];
 
   /**
    * @param int[]

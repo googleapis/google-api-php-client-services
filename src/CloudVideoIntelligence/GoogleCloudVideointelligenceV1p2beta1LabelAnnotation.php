@@ -22,16 +22,16 @@ class GoogleCloudVideointelligenceV1p2beta1LabelAnnotation extends \Google\Colle
   protected $collection_key = 'segments';
   protected $categoryEntitiesType = GoogleCloudVideointelligenceV1p2beta1Entity::class;
   protected $categoryEntitiesDataType = 'array';
-  public $categoryEntities;
+  public $categoryEntities = [];
   protected $entityType = GoogleCloudVideointelligenceV1p2beta1Entity::class;
   protected $entityDataType = '';
   public $entity;
   protected $framesType = GoogleCloudVideointelligenceV1p2beta1LabelFrame::class;
   protected $framesDataType = 'array';
-  public $frames;
+  public $frames = [];
   protected $segmentsType = GoogleCloudVideointelligenceV1p2beta1LabelSegment::class;
   protected $segmentsDataType = 'array';
-  public $segments;
+  public $segments = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class VideoTimedtextS4ALIResults extends \Google\Collection
   protected $collection_key = 'langResults';
   protected $langResultsType = VideoTimedtextS4LangScore::class;
   protected $langResultsDataType = 'array';
-  public $langResults;
+  public $langResults = [];
   /**
    * @var string
    */

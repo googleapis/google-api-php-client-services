@@ -35,10 +35,10 @@ class NlpSemanticParsingModelsDialogReferentsDialogReferents extends \Google\Col
   public $next;
   protected $selectionType = NlpSemanticParsingModelsDialogReferentsListSelection::class;
   protected $selectionDataType = 'array';
-  public $selection;
+  public $selection = [];
   protected $taskMentionType = NlpSemanticParsingModelsDialogReferentsListSelection::class;
   protected $taskMentionDataType = 'array';
-  public $taskMention;
+  public $taskMention = [];
 
   /**
    * @param NlpSemanticParsingAnnotationEvalData

@@ -31,7 +31,7 @@ class PubsubNotificationSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $registeredEvents;
+  public $registeredEvents = [];
 
   /**
    * @param string

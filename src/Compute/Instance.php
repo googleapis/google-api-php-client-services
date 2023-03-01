@@ -48,7 +48,7 @@ class Instance extends \Google\Collection
   public $description;
   protected $disksType = AttachedDisk::class;
   protected $disksDataType = 'array';
-  public $disks;
+  public $disks = [];
   protected $displayDeviceType = DisplayDevice::class;
   protected $displayDeviceDataType = '';
   public $displayDevice;
@@ -58,7 +58,7 @@ class Instance extends \Google\Collection
   public $fingerprint;
   protected $guestAcceleratorsType = AcceleratorConfig::class;
   protected $guestAcceleratorsDataType = 'array';
-  public $guestAccelerators;
+  public $guestAccelerators = [];
   /**
    * @var string
    */
@@ -82,7 +82,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -112,7 +112,7 @@ class Instance extends \Google\Collection
   public $name;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
-  public $networkInterfaces;
+  public $networkInterfaces = [];
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
   public $networkPerformanceConfig;
@@ -129,7 +129,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourcePolicies;
+  public $resourcePolicies = [];
   protected $resourceStatusType = ResourceStatus::class;
   protected $resourceStatusDataType = '';
   public $resourceStatus;
@@ -146,7 +146,7 @@ class Instance extends \Google\Collection
   public $selfLink;
   protected $serviceAccountsType = ServiceAccount::class;
   protected $serviceAccountsDataType = 'array';
-  public $serviceAccounts;
+  public $serviceAccounts = [];
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
   public $shieldedInstanceConfig;

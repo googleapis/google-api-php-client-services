@@ -22,7 +22,7 @@ class AppsPeopleOzExternalMergedpeopleapiOrganization extends \Google\Collection
   protected $collection_key = 'project';
   protected $assignmentType = AppsPeopleOzExternalMergedpeopleapiOrganizationAssignment::class;
   protected $assignmentDataType = 'array';
-  public $assignment;
+  public $assignment = [];
   /**
    * @var string
    */
@@ -83,7 +83,7 @@ class AppsPeopleOzExternalMergedpeopleapiOrganization extends \Google\Collection
   public $name;
   protected $projectType = AppsPeopleOzExternalMergedpeopleapiOrganizationProject::class;
   protected $projectDataType = 'array';
-  public $project;
+  public $project = [];
   protected $startCalendarDayType = GoogleTypeDate::class;
   protected $startCalendarDayDataType = '';
   public $startCalendarDay;

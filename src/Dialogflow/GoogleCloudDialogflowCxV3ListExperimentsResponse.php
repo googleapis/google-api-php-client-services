@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3ListExperimentsResponse extends \Google\Collectio
   protected $collection_key = 'experiments';
   protected $experimentsType = GoogleCloudDialogflowCxV3Experiment::class;
   protected $experimentsDataType = 'array';
-  public $experiments;
+  public $experiments = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class SecurityPolicyAdvancedOptionsConfigJsonCustomConfig extends \Google\Collec
   /**
    * @var string[]
    */
-  public $contentTypes;
+  public $contentTypes = [];
 
   /**
    * @param string[]

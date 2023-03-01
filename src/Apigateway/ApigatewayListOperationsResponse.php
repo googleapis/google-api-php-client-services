@@ -26,7 +26,7 @@ class ApigatewayListOperationsResponse extends \Google\Collection
   public $nextPageToken;
   protected $operationsType = ApigatewayOperation::class;
   protected $operationsDataType = 'array';
-  public $operations;
+  public $operations = [];
 
   /**
    * @param string

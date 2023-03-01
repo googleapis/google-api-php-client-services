@@ -23,7 +23,7 @@ class BatchDeletePrintersRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $printerIds;
+  public $printerIds = [];
 
   /**
    * @param string[]

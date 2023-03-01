@@ -27,7 +27,7 @@ class AssistantDevicesPlatformProtoCloudEndpoint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scopes;
+  public $scopes = [];
   /**
    * @var string
    */

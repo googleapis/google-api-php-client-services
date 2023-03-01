@@ -23,7 +23,7 @@ class ListItemNamesForUnmappedIdentityResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $itemNames;
+  public $itemNames = [];
   /**
    * @var string
    */

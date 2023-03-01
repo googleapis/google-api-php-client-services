@@ -23,11 +23,11 @@ class ResearchScienceSearchOrganization extends \Google\Collection
   /**
    * @var string[]
    */
-  public $organizationMid;
+  public $organizationMid = [];
   /**
    * @var string[]
    */
-  public $organizationMidLabel;
+  public $organizationMidLabel = [];
   /**
    * @var string
    */

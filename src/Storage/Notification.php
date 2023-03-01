@@ -29,7 +29,7 @@ class Notification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customAttributes;
+  public $customAttributes = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class Notification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $eventTypes;
+  public $eventTypes = [];
   /**
    * @var string
    */

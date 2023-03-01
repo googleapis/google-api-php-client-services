@@ -26,7 +26,7 @@ class BatchUpdatePresentationResponse extends \Google\Collection
   public $presentationId;
   protected $repliesType = Response::class;
   protected $repliesDataType = 'array';
-  public $replies;
+  public $replies = [];
   protected $writeControlType = WriteControl::class;
   protected $writeControlDataType = '';
   public $writeControl;

@@ -22,7 +22,7 @@ class AddDimensionGroupResponse extends \Google\Collection
   protected $collection_key = 'dimensionGroups';
   protected $dimensionGroupsType = DimensionGroup::class;
   protected $dimensionGroupsDataType = 'array';
-  public $dimensionGroups;
+  public $dimensionGroups = [];
 
   /**
    * @param DimensionGroup[]

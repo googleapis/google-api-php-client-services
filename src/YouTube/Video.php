@@ -45,7 +45,7 @@ class Video extends \Google\Model
   public $liveStreamingDetails;
   protected $localizationsType = VideoLocalization::class;
   protected $localizationsDataType = 'map';
-  public $localizations;
+  public $localizations = [];
   protected $monetizationDetailsType = VideoMonetizationDetails::class;
   protected $monetizationDetailsDataType = '';
   public $monetizationDetails;

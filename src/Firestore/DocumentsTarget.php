@@ -23,7 +23,7 @@ class DocumentsTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $documents;
+  public $documents = [];
 
   /**
    * @param string[]

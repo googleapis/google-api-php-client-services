@@ -30,7 +30,7 @@ class UsableSubnetwork extends \Google\Collection
   public $network;
   protected $secondaryIpRangesType = UsableSubnetworkSecondaryRange::class;
   protected $secondaryIpRangesDataType = 'array';
-  public $secondaryIpRanges;
+  public $secondaryIpRanges = [];
   /**
    * @var string
    */

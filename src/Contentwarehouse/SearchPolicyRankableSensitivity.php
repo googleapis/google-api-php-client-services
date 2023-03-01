@@ -22,7 +22,7 @@ class SearchPolicyRankableSensitivity extends \Google\Collection
   protected $collection_key = 'accountProvenance';
   protected $accountProvenanceType = QualityQrewriteAccountProvenance::class;
   protected $accountProvenanceDataType = 'array';
-  public $accountProvenance;
+  public $accountProvenance = [];
   protected $attentionalEntityType = SearchPolicyRankableSensitivityAttentionalEntity::class;
   protected $attentionalEntityDataType = '';
   public $attentionalEntity;

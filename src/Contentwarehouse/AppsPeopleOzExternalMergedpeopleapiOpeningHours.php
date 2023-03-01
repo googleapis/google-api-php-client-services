@@ -26,11 +26,11 @@ class AppsPeopleOzExternalMergedpeopleapiOpeningHours extends \Google\Collection
   public $openNow;
   protected $periodsType = AppsPeopleOzExternalMergedpeopleapiOpeningHoursPeriod::class;
   protected $periodsDataType = 'array';
-  public $periods;
+  public $periods = [];
   /**
    * @var string[]
    */
-  public $weekdayTexts;
+  public $weekdayTexts = [];
 
   /**
    * @param bool

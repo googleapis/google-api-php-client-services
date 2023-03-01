@@ -25,13 +25,13 @@ class RepositoryWebrefEntityJoin extends \Google\Collection
   public $annotatedEntityId;
   protected $cdocType = RepositoryWebrefSimplifiedCompositeDoc::class;
   protected $cdocDataType = 'array';
-  public $cdoc;
+  public $cdoc = [];
   protected $contextNameInfoType = RepositoryWebrefGlobalNameInfo::class;
   protected $contextNameInfoDataType = 'array';
-  public $contextNameInfo;
+  public $contextNameInfo = [];
   protected $debugInfoType = RepositoryWebrefEntityDebugInfo::class;
   protected $debugInfoDataType = 'array';
-  public $debugInfo;
+  public $debugInfo = [];
   protected $enricherAnnotatorProfileType = RepositoryWebrefAnnotatorProfile::class;
   protected $enricherAnnotatorProfileDataType = '';
   public $enricherAnnotatorProfile;
@@ -46,16 +46,16 @@ class RepositoryWebrefEntityJoin extends \Google\Collection
   public $humanRatings;
   protected $linkInfoType = RepositoryWebrefGlobalLinkInfo::class;
   protected $linkInfoDataType = 'array';
-  public $linkInfo;
+  public $linkInfo = [];
   protected $nameInfoType = RepositoryWebrefGlobalNameInfo::class;
   protected $nameInfoDataType = 'array';
-  public $nameInfo;
+  public $nameInfo = [];
   protected $refconNameInfoType = RepositoryWebrefRefconRefconNameInfo::class;
   protected $refconNameInfoDataType = 'array';
-  public $refconNameInfo;
+  public $refconNameInfo = [];
   protected $representationType = RepositoryWebrefDomainSpecificRepresentation::class;
   protected $representationDataType = 'array';
-  public $representation;
+  public $representation = [];
 
   /**
    * @param RepositoryWebrefWebrefEntityId

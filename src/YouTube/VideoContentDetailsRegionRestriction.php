@@ -23,11 +23,11 @@ class VideoContentDetailsRegionRestriction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowed;
+  public $allowed = [];
   /**
    * @var string[]
    */
-  public $blocked;
+  public $blocked = [];
 
   /**
    * @param string[]

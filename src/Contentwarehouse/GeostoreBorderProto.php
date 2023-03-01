@@ -28,10 +28,10 @@ class GeostoreBorderProto extends \Google\Collection
   public $featureIdRight;
   protected $logicalBorderType = GeostoreFeatureIdProto::class;
   protected $logicalBorderDataType = 'array';
-  public $logicalBorder;
+  public $logicalBorder = [];
   protected $overrideStatusType = GeostoreOverrideBorderStatusProto::class;
   protected $overrideStatusDataType = 'array';
-  public $overrideStatus;
+  public $overrideStatus = [];
   /**
    * @var string
    */

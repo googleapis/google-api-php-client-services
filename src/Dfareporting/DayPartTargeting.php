@@ -23,11 +23,11 @@ class DayPartTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $daysOfWeek;
+  public $daysOfWeek = [];
   /**
    * @var int[]
    */
-  public $hoursOfDay;
+  public $hoursOfDay = [];
   /**
    * @var bool
    */

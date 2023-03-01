@@ -42,20 +42,20 @@ class ResearchScamGenericFeatureVector extends \Google\Collection
   /**
    * @var string[]
    */
-  public $featureIndex;
+  public $featureIndex = [];
   /**
    * @var string
    */
   public $featureType;
-  public $featureValueDouble;
+  public $featureValueDouble = [];
   /**
    * @var float[]
    */
-  public $featureValueFloat;
+  public $featureValueFloat = [];
   /**
    * @var string[]
    */
-  public $featureValueInt64;
+  public $featureValueInt64 = [];
   /**
    * @var string
    */
@@ -80,7 +80,7 @@ class ResearchScamGenericFeatureVector extends \Google\Collection
   /**
    * @var int[]
    */
-  public $tokens;
+  public $tokens = [];
   /**
    * @var string
    */

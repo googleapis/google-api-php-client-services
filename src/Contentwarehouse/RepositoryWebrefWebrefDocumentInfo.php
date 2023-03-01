@@ -32,7 +32,7 @@ class RepositoryWebrefWebrefDocumentInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $webrefParsedContentSentence;
+  public $webrefParsedContentSentence = [];
 
   /**
    * @param RepositoryWebrefDocumentMetadata

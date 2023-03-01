@@ -22,7 +22,7 @@ class ComputeFlightEmissionsRequest extends \Google\Collection
   protected $collection_key = 'flights';
   protected $flightsType = Flight::class;
   protected $flightsDataType = 'array';
-  public $flights;
+  public $flights = [];
 
   /**
    * @param Flight[]

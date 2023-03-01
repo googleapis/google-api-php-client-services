@@ -33,7 +33,7 @@ class VRF extends \Google\Collection
   public $state;
   protected $vlanAttachmentsType = VlanAttachment::class;
   protected $vlanAttachmentsDataType = 'array';
-  public $vlanAttachments;
+  public $vlanAttachments = [];
 
   /**
    * @param string

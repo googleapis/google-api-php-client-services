@@ -41,7 +41,7 @@ class LogSink extends \Google\Collection
   public $disabled;
   protected $exclusionsType = LogExclusion::class;
   protected $exclusionsDataType = 'array';
-  public $exclusions;
+  public $exclusions = [];
   /**
    * @var string
    */

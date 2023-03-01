@@ -22,7 +22,7 @@ class VersionedResource extends \Google\Model
   /**
    * @var array[]
    */
-  public $resource;
+  public $resource = [];
   /**
    * @var string
    */

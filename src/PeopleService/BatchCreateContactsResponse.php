@@ -22,7 +22,7 @@ class BatchCreateContactsResponse extends \Google\Collection
   protected $collection_key = 'createdPeople';
   protected $createdPeopleType = PersonResponse::class;
   protected $createdPeopleDataType = 'array';
-  public $createdPeople;
+  public $createdPeople = [];
 
   /**
    * @param PersonResponse[]

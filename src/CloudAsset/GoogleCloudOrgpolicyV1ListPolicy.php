@@ -27,11 +27,11 @@ class GoogleCloudOrgpolicyV1ListPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedValues;
+  public $allowedValues = [];
   /**
    * @var string[]
    */
-  public $deniedValues;
+  public $deniedValues = [];
   /**
    * @var bool
    */

@@ -22,10 +22,10 @@ class OSPolicyResourceGroup extends \Google\Collection
   protected $collection_key = 'resources';
   protected $inventoryFiltersType = OSPolicyInventoryFilter::class;
   protected $inventoryFiltersDataType = 'array';
-  public $inventoryFilters;
+  public $inventoryFilters = [];
   protected $resourcesType = OSPolicyResource::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
 
   /**
    * @param OSPolicyInventoryFilter[]

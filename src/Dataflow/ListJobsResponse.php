@@ -22,10 +22,10 @@ class ListJobsResponse extends \Google\Collection
   protected $collection_key = 'jobs';
   protected $failedLocationType = FailedLocation::class;
   protected $failedLocationDataType = 'array';
-  public $failedLocation;
+  public $failedLocation = [];
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
-  public $jobs;
+  public $jobs = [];
   /**
    * @var string
    */

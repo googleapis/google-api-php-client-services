@@ -22,7 +22,7 @@ class Policy extends \Google\Collection
   protected $collection_key = 'bindings';
   protected $bindingsType = PolicyBindings::class;
   protected $bindingsDataType = 'array';
-  public $bindings;
+  public $bindings = [];
   /**
    * @var string
    */

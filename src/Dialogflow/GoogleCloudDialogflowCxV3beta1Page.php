@@ -29,7 +29,7 @@ class GoogleCloudDialogflowCxV3beta1Page extends \Google\Collection
   public $entryFulfillment;
   protected $eventHandlersType = GoogleCloudDialogflowCxV3beta1EventHandler::class;
   protected $eventHandlersDataType = 'array';
-  public $eventHandlers;
+  public $eventHandlers = [];
   protected $formType = GoogleCloudDialogflowCxV3beta1Form::class;
   protected $formDataType = '';
   public $form;
@@ -40,10 +40,10 @@ class GoogleCloudDialogflowCxV3beta1Page extends \Google\Collection
   /**
    * @var string[]
    */
-  public $transitionRouteGroups;
+  public $transitionRouteGroups = [];
   protected $transitionRoutesType = GoogleCloudDialogflowCxV3beta1TransitionRoute::class;
   protected $transitionRoutesDataType = 'array';
-  public $transitionRoutes;
+  public $transitionRoutes = [];
 
   /**
    * @param string

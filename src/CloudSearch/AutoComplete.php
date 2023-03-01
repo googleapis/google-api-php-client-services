@@ -22,7 +22,7 @@ class AutoComplete extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = AutoCompleteItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
 
   /**
    * @param AutoCompleteItem[]

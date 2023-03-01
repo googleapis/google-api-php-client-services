@@ -22,7 +22,7 @@ class InstancesListResponse extends \Google\Collection
   protected $collection_key = 'warnings';
   protected $itemsType = DatabaseInstance::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class InstancesListResponse extends \Google\Collection
   public $nextPageToken;
   protected $warningsType = ApiWarning::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param DatabaseInstance[]

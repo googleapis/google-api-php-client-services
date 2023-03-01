@@ -22,7 +22,7 @@ class HttpRule extends \Google\Collection
   protected $collection_key = 'additionalBindings';
   protected $additionalBindingsType = HttpRule::class;
   protected $additionalBindingsDataType = 'array';
-  public $additionalBindings;
+  public $additionalBindings = [];
   /**
    * @var string
    */

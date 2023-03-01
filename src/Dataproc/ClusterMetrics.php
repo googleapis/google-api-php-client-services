@@ -22,11 +22,11 @@ class ClusterMetrics extends \Google\Model
   /**
    * @var string[]
    */
-  public $hdfsMetrics;
+  public $hdfsMetrics = [];
   /**
    * @var string[]
    */
-  public $yarnMetrics;
+  public $yarnMetrics = [];
 
   /**
    * @param string[]

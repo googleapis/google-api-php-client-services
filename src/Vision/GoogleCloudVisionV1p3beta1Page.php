@@ -22,7 +22,7 @@ class GoogleCloudVisionV1p3beta1Page extends \Google\Collection
   protected $collection_key = 'blocks';
   protected $blocksType = GoogleCloudVisionV1p3beta1Block::class;
   protected $blocksDataType = 'array';
-  public $blocks;
+  public $blocks = [];
   /**
    * @var float
    */

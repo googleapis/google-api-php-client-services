@@ -25,7 +25,7 @@ class ItemThread extends \Google\Collection
   public $clusterInfo;
   protected $itemType = FuseboxItem::class;
   protected $itemDataType = 'array';
-  public $item;
+  public $item = [];
   /**
    * @var string
    */

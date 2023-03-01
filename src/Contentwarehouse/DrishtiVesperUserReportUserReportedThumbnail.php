@@ -23,7 +23,7 @@ class DrishtiVesperUserReportUserReportedThumbnail extends \Google\Collection
   /**
    * @var float[]
    */
-  public $denseFeatures;
+  public $denseFeatures = [];
   /**
    * @var int
    */
@@ -41,7 +41,7 @@ class DrishtiVesperUserReportUserReportedThumbnail extends \Google\Collection
   public $needHumanLabel;
   protected $rawHumanLabelsType = DrishtiVesperUserReportHumanLabel::class;
   protected $rawHumanLabelsDataType = 'array';
-  public $rawHumanLabels;
+  public $rawHumanLabels = [];
   protected $reportScoreType = DrishtiVesperUserReportModelScore::class;
   protected $reportScoreDataType = '';
   public $reportScore;

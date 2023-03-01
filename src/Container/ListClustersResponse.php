@@ -22,11 +22,11 @@ class ListClustersResponse extends \Google\Collection
   protected $collection_key = 'missingZones';
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
-  public $clusters;
+  public $clusters = [];
   /**
    * @var string[]
    */
-  public $missingZones;
+  public $missingZones = [];
 
   /**
    * @param Cluster[]

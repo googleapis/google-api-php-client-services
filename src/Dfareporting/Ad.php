@@ -69,7 +69,7 @@ class Ad extends \Google\Collection
   public $createInfo;
   protected $creativeGroupAssignmentsType = CreativeGroupAssignment::class;
   protected $creativeGroupAssignmentsDataType = 'array';
-  public $creativeGroupAssignments;
+  public $creativeGroupAssignments = [];
   protected $creativeRotationType = CreativeRotation::class;
   protected $creativeRotationDataType = '';
   public $creativeRotation;
@@ -92,7 +92,7 @@ class Ad extends \Google\Collection
   public $endTime;
   protected $eventTagOverridesType = EventTagOverride::class;
   protected $eventTagOverridesDataType = 'array';
-  public $eventTagOverrides;
+  public $eventTagOverrides = [];
   protected $geoTargetingType = GeoTargeting::class;
   protected $geoTargetingDataType = '';
   public $geoTargeting;
@@ -122,7 +122,7 @@ class Ad extends \Google\Collection
   public $name;
   protected $placementAssignmentsType = PlacementAssignment::class;
   protected $placementAssignmentsDataType = 'array';
-  public $placementAssignments;
+  public $placementAssignments = [];
   protected $remarketingListExpressionType = ListTargetingExpression::class;
   protected $remarketingListExpressionDataType = '';
   public $remarketingListExpression;

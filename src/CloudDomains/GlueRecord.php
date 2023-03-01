@@ -27,11 +27,11 @@ class GlueRecord extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ipv4Addresses;
+  public $ipv4Addresses = [];
   /**
    * @var string[]
    */
-  public $ipv6Addresses;
+  public $ipv6Addresses = [];
 
   /**
    * @param string

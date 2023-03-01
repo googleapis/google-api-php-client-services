@@ -23,7 +23,7 @@ class OceanDocTagBookSpecific extends \Google\Collection
   /**
    * @var string[]
    */
-  public $auxBibkeys;
+  public $auxBibkeys = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class OceanDocTagBookSpecific extends \Google\Collection
   public $numRatingHalfStars;
   protected $numberingrangeType = OceanDocTagBookSpecificNumberingRange::class;
   protected $numberingrangeDataType = 'array';
-  public $numberingrange;
+  public $numberingrange = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class ListOSPolicyAssignmentsResponse extends \Google\Collection
   public $nextPageToken;
   protected $osPolicyAssignmentsType = OSPolicyAssignment::class;
   protected $osPolicyAssignmentsDataType = 'array';
-  public $osPolicyAssignments;
+  public $osPolicyAssignments = [];
 
   /**
    * @param string

@@ -39,7 +39,7 @@ class GsuiteIntegrationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $indexableTexts;
+  public $indexableTexts = [];
   protected $tasksDataType = AppsDynamiteSharedTasksAnnotationData::class;
   protected $tasksDataDataType = '';
   public $tasksData;

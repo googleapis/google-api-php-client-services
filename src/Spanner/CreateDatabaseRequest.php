@@ -34,7 +34,7 @@ class CreateDatabaseRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $extraStatements;
+  public $extraStatements = [];
   /**
    * @var string
    */

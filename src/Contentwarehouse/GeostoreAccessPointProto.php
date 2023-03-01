@@ -61,7 +61,7 @@ class GeostoreAccessPointProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unsuitableTravelMode;
+  public $unsuitableTravelMode = [];
 
   /**
    * @param bool

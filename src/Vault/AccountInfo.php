@@ -23,7 +23,7 @@ class AccountInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $emails;
+  public $emails = [];
 
   /**
    * @param string[]

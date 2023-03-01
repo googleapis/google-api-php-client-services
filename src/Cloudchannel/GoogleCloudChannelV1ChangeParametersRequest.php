@@ -22,7 +22,7 @@ class GoogleCloudChannelV1ChangeParametersRequest extends \Google\Collection
   protected $collection_key = 'parameters';
   protected $parametersType = GoogleCloudChannelV1Parameter::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */

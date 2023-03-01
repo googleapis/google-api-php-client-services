@@ -41,7 +41,7 @@ class GoogleCloudDialogflowCxV3beta1Environment extends \Google\Collection
   public $updateTime;
   protected $versionConfigsType = GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig::class;
   protected $versionConfigsDataType = 'array';
-  public $versionConfigs;
+  public $versionConfigs = [];
   protected $webhookConfigType = GoogleCloudDialogflowCxV3beta1EnvironmentWebhookConfig::class;
   protected $webhookConfigDataType = '';
   public $webhookConfig;

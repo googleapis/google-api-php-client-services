@@ -27,11 +27,11 @@ class GooglePrivacyDlpV2CloudStorageRegexFileSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludeRegex;
+  public $excludeRegex = [];
   /**
    * @var string[]
    */
-  public $includeRegex;
+  public $includeRegex = [];
 
   /**
    * @param string

@@ -23,7 +23,7 @@ class GoogleCloudVideointelligenceV1TextDetectionConfig extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $languageHints;
+  public $languageHints = [];
   /**
    * @var string
    */

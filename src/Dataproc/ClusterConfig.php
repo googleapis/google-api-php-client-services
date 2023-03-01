@@ -25,7 +25,7 @@ class ClusterConfig extends \Google\Collection
   public $autoscalingConfig;
   protected $auxiliaryNodeGroupsType = AuxiliaryNodeGroup::class;
   protected $auxiliaryNodeGroupsDataType = 'array';
-  public $auxiliaryNodeGroups;
+  public $auxiliaryNodeGroups = [];
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class ClusterConfig extends \Google\Collection
   public $gkeClusterConfig;
   protected $initializationActionsType = NodeInitializationAction::class;
   protected $initializationActionsDataType = 'array';
-  public $initializationActions;
+  public $initializationActions = [];
   protected $lifecycleConfigType = LifecycleConfig::class;
   protected $lifecycleConfigDataType = '';
   public $lifecycleConfig;

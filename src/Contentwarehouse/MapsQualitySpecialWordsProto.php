@@ -23,22 +23,22 @@ class MapsQualitySpecialWordsProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $alternate;
+  public $alternate = [];
   /**
    * @var string[]
    */
-  public $canonical;
+  public $canonical = [];
   /**
    * @var string[]
    */
-  public $country;
+  public $country = [];
   protected $flagsType = MapsQualitySpecialWordsFlags::class;
   protected $flagsDataType = '';
   public $flags;
   /**
    * @var string[]
    */
-  public $language;
+  public $language = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class MapsQualitySpecialWordsProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $visibleTypeId;
+  public $visibleTypeId = [];
 
   /**
    * @param string[]

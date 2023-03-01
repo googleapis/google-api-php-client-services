@@ -41,7 +41,7 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   /**
    * @var string[]
    */
-  public $pubsubNotificationSettings;
+  public $pubsubNotificationSettings = [];
   /**
    * @var string
    */

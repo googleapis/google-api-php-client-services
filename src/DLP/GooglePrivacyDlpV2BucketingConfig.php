@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2BucketingConfig extends \Google\Collection
   protected $collection_key = 'buckets';
   protected $bucketsType = GooglePrivacyDlpV2Bucket::class;
   protected $bucketsDataType = 'array';
-  public $buckets;
+  public $buckets = [];
 
   /**
    * @param GooglePrivacyDlpV2Bucket[]

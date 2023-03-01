@@ -38,7 +38,7 @@ class Deployment extends \Google\Collection
   public $insertTime;
   protected $labelsType = DeploymentLabelEntry::class;
   protected $labelsDataType = 'array';
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

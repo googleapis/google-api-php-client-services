@@ -22,7 +22,7 @@ class BatchDeletePhotosResponse extends \Google\Collection
   protected $collection_key = 'status';
   protected $statusType = Status::class;
   protected $statusDataType = 'array';
-  public $status;
+  public $status = [];
 
   /**
    * @param Status[]

@@ -62,7 +62,7 @@ class SecurityPolicy extends \Google\Collection
   public $region;
   protected $rulesType = SecurityPolicyRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
   /**
    * @var string
    */

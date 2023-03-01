@@ -25,7 +25,7 @@ class HttpRouteRouteAction extends \Google\Collection
   public $corsPolicy;
   protected $destinationsType = HttpRouteDestination::class;
   protected $destinationsDataType = 'array';
-  public $destinations;
+  public $destinations = [];
   protected $faultInjectionPolicyType = HttpRouteFaultInjectionPolicy::class;
   protected $faultInjectionPolicyDataType = '';
   public $faultInjectionPolicy;

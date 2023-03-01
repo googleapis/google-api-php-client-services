@@ -58,7 +58,7 @@ class VideoSnippet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   protected $thumbnailsType = ThumbnailDetails::class;
   protected $thumbnailsDataType = '';
   public $thumbnails;

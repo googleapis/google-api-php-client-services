@@ -22,7 +22,7 @@ class GoogleCloudVideointelligenceV1beta2SpeechTranscription extends \Google\Col
   protected $collection_key = 'alternatives';
   protected $alternativesType = GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative::class;
   protected $alternativesDataType = 'array';
-  public $alternatives;
+  public $alternatives = [];
   /**
    * @var string
    */

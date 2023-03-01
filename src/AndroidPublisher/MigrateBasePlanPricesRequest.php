@@ -22,7 +22,7 @@ class MigrateBasePlanPricesRequest extends \Google\Collection
   protected $collection_key = 'regionalPriceMigrations';
   protected $regionalPriceMigrationsType = RegionalPriceMigrationConfig::class;
   protected $regionalPriceMigrationsDataType = 'array';
-  public $regionalPriceMigrations;
+  public $regionalPriceMigrations = [];
   protected $regionsVersionType = RegionsVersion::class;
   protected $regionsVersionDataType = '';
   public $regionsVersion;

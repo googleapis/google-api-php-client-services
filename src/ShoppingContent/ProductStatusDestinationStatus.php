@@ -23,7 +23,7 @@ class ProductStatusDestinationStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $approvedCountries;
+  public $approvedCountries = [];
   /**
    * @var string
    */
@@ -31,11 +31,11 @@ class ProductStatusDestinationStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $disapprovedCountries;
+  public $disapprovedCountries = [];
   /**
    * @var string[]
    */
-  public $pendingCountries;
+  public $pendingCountries = [];
   /**
    * @var string
    */

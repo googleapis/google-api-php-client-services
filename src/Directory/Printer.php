@@ -22,7 +22,7 @@ class Printer extends \Google\Collection
   protected $collection_key = 'auxiliaryMessages';
   protected $auxiliaryMessagesType = AuxiliaryMessage::class;
   protected $auxiliaryMessagesDataType = 'array';
-  public $auxiliaryMessages;
+  public $auxiliaryMessages = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class GeostoreServiceAreaProto extends \Google\Collection
   protected $collection_key = 'servedFeature';
   protected $servedFeatureType = GeostoreFeatureIdProto::class;
   protected $servedFeatureDataType = 'array';
-  public $servedFeature;
+  public $servedFeature = [];
 
   /**
    * @param GeostoreFeatureIdProto[]

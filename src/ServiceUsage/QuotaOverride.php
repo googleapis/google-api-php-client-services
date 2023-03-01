@@ -26,7 +26,7 @@ class QuotaOverride extends \Google\Model
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class Histogram extends \Google\Collection
   /**
    * @var string[]
    */
-  public $bucketCounts;
+  public $bucketCounts = [];
   /**
    * @var int
    */

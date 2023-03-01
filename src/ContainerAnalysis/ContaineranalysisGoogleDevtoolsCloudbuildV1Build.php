@@ -51,7 +51,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $images;
+  public $images = [];
   /**
    * @var string
    */
@@ -80,7 +80,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
   public $results;
   protected $secretsType = ContaineranalysisGoogleDevtoolsCloudbuildV1Secret::class;
   protected $secretsDataType = 'array';
-  public $secrets;
+  public $secrets = [];
   /**
    * @var string
    */
@@ -105,25 +105,25 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
   public $statusDetail;
   protected $stepsType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep::class;
   protected $stepsDataType = 'array';
-  public $steps;
+  public $steps = [];
   /**
    * @var string[]
    */
-  public $substitutions;
+  public $substitutions = [];
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   /**
    * @var string
    */
   public $timeout;
   protected $timingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $timingDataType = 'map';
-  public $timing;
+  public $timing = [];
   protected $warningsType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildWarning::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param ContaineranalysisGoogleDevtoolsCloudbuildV1BuildApproval

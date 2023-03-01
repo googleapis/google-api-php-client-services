@@ -22,7 +22,7 @@ class DataSourceSheetProperties extends \Google\Collection
   protected $collection_key = 'columns';
   protected $columnsType = DataSourceColumn::class;
   protected $columnsDataType = 'array';
-  public $columns;
+  public $columns = [];
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   public $dataExecutionStatus;

@@ -73,7 +73,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $advisory;
+  public $advisory = [];
   public $altitude;
   protected $animationMetadataType = PhotosAnimationMetadata::class;
   protected $animationMetadataDataType = '';
@@ -89,7 +89,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $artworkorobject;
+  public $artworkorobject = [];
   /**
    * @var string
    */
@@ -201,7 +201,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ciadrextadr;
+  public $ciadrextadr = [];
   /**
    * @var string
    */
@@ -253,11 +253,11 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $contentlocationcode;
+  public $contentlocationcode = [];
   /**
    * @var string[]
    */
-  public $contentlocationname;
+  public $contentlocationname = [];
   /**
    * @var int
    */
@@ -265,7 +265,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $contributor;
+  public $contributor = [];
   /**
    * @var string
    */
@@ -313,7 +313,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cvterm;
+  public $cvterm = [];
   /**
    * @var string
    */
@@ -337,11 +337,11 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var int[]
    */
-  public $daylightsavings;
+  public $daylightsavings = [];
   /**
    * @var string[]
    */
-  public $destination;
+  public $destination = [];
   public $destinationLatitude;
   public $destinationLongitude;
   /**
@@ -529,7 +529,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gcameradisableautocreation;
+  public $gcameradisableautocreation = [];
   /**
    * @var int
    */
@@ -656,7 +656,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var float[]
    */
-  public $gpstime;
+  public $gpstime = [];
   /**
    * @var float
    */
@@ -692,7 +692,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $identifier;
+  public $identifier = [];
   /**
    * @var string
    */
@@ -755,7 +755,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keyword;
+  public $keyword = [];
   /**
    * @var string
    */
@@ -763,7 +763,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $language;
+  public $language = [];
   /**
    * @var string
    */
@@ -796,7 +796,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $locationshown;
+  public $locationshown = [];
   public $longitude;
   /**
    * @var bool
@@ -849,11 +849,11 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var int[]
    */
-  public $modelage;
+  public $modelage = [];
   /**
    * @var string[]
    */
-  public $modelreleaseid;
+  public $modelreleaseid = [];
   /**
    * @var string
    */
@@ -873,7 +873,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $objectattributereference;
+  public $objectattributereference = [];
   /**
    * @var string
    */
@@ -897,11 +897,11 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $organisationinimagecode;
+  public $organisationinimagecode = [];
   /**
    * @var string[]
    */
-  public $organisationinimagename;
+  public $organisationinimagename = [];
   /**
    * @var int
    */
@@ -913,7 +913,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $owner;
+  public $owner = [];
   /**
    * @var string
    */
@@ -924,7 +924,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $personinimage;
+  public $personinimage = [];
   /**
    * @var int
    */
@@ -952,7 +952,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productid;
+  public $productid = [];
   /**
    * @var string
    */
@@ -964,7 +964,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $propertyreleaseid;
+  public $propertyreleaseid = [];
   /**
    * @var string
    */
@@ -972,7 +972,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $publisher;
+  public $publisher = [];
   /**
    * @var float
    */
@@ -988,15 +988,15 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referencedate;
+  public $referencedate = [];
   /**
    * @var string[]
    */
-  public $referencenumber;
+  public $referencenumber = [];
   /**
    * @var string[]
    */
-  public $referenceservice;
+  public $referenceservice = [];
   /**
    * @var string
    */
@@ -1016,7 +1016,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relation;
+  public $relation = [];
   /**
    * @var string
    */
@@ -1048,7 +1048,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scene;
+  public $scene = [];
   /**
    * @var int
    */
@@ -1120,7 +1120,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subjectcode;
+  public $subjectcode = [];
   /**
    * @var int
    */
@@ -1132,7 +1132,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subjectreference;
+  public $subjectreference = [];
   /**
    * @var string
    */
@@ -1152,7 +1152,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supplementalcategory;
+  public $supplementalcategory = [];
   /**
    * @var int
    */
@@ -1168,11 +1168,11 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var int[]
    */
-  public $timezoneminutes;
+  public $timezoneminutes = [];
   /**
    * @var int[]
    */
-  public $timezoneoffset;
+  public $timezoneoffset = [];
   /**
    * @var string
    */
@@ -1184,7 +1184,7 @@ class PhotosImageMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $type;
+  public $type = [];
   /**
    * @var string
    */

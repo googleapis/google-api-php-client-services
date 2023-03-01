@@ -22,7 +22,7 @@ class BatchRunReportsRequest extends \Google\Collection
   protected $collection_key = 'requests';
   protected $requestsType = RunReportRequest::class;
   protected $requestsDataType = 'array';
-  public $requests;
+  public $requests = [];
 
   /**
    * @param RunReportRequest[]

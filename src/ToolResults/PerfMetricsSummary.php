@@ -40,7 +40,7 @@ class PerfMetricsSummary extends \Google\Collection
   /**
    * @var string[]
    */
-  public $perfMetrics;
+  public $perfMetrics = [];
   /**
    * @var string
    */

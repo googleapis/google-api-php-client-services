@@ -22,10 +22,10 @@ class DeviceRegistry extends \Google\Collection
   protected $collection_key = 'eventNotificationConfigs';
   protected $credentialsType = RegistryCredential::class;
   protected $credentialsDataType = 'array';
-  public $credentials;
+  public $credentials = [];
   protected $eventNotificationConfigsType = EventNotificationConfig::class;
   protected $eventNotificationConfigsDataType = 'array';
-  public $eventNotificationConfigs;
+  public $eventNotificationConfigs = [];
   protected $httpConfigType = HttpConfig::class;
   protected $httpConfigDataType = '';
   public $httpConfig;

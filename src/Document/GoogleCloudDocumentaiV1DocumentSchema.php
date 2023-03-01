@@ -30,7 +30,7 @@ class GoogleCloudDocumentaiV1DocumentSchema extends \Google\Collection
   public $displayName;
   protected $entityTypesType = GoogleCloudDocumentaiV1DocumentSchemaEntityType::class;
   protected $entityTypesDataType = 'array';
-  public $entityTypes;
+  public $entityTypes = [];
   protected $metadataType = GoogleCloudDocumentaiV1DocumentSchemaMetadata::class;
   protected $metadataDataType = '';
   public $metadata;

@@ -22,7 +22,7 @@ class ListDeploymentsResponse extends \Google\Collection
   protected $collection_key = 'deployments';
   protected $deploymentsType = Deployment::class;
   protected $deploymentsDataType = 'array';
-  public $deployments;
+  public $deployments = [];
   /**
    * @var string
    */

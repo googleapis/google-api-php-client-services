@@ -47,7 +47,7 @@ class VideoContentSearchVideoAnchor extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filterReason;
+  public $filterReason = [];
   /**
    * @var bool
    */
@@ -74,7 +74,7 @@ class VideoContentSearchVideoAnchor extends \Google\Collection
   public $mid;
   protected $namedEntityType = VideoContentSearchNamedEntity::class;
   protected $namedEntityDataType = 'array';
-  public $namedEntity;
+  public $namedEntity = [];
   /**
    * @var float
    */
@@ -98,7 +98,7 @@ class VideoContentSearchVideoAnchor extends \Google\Collection
   public $time;
   protected $tokenTimingInfoType = VideoContentSearchTokenTimingInfo::class;
   protected $tokenTimingInfoDataType = 'array';
-  public $tokenTimingInfo;
+  public $tokenTimingInfo = [];
 
   /**
    * @param float

@@ -22,7 +22,7 @@ class RepositoryWebrefPreprocessingUrlMatchingMetadata extends \Google\Collectio
   protected $collection_key = 'source';
   protected $sourceType = RepositoryWebrefPreprocessingUrlSourceInfo::class;
   protected $sourceDataType = 'array';
-  public $source;
+  public $source = [];
 
   /**
    * @param RepositoryWebrefPreprocessingUrlSourceInfo[]

@@ -25,7 +25,7 @@ class FreebaseTopic extends \Google\Collection
   public $id;
   protected $propertyValueType = FreebasePropertyValue::class;
   protected $propertyValueDataType = 'array';
-  public $propertyValue;
+  public $propertyValue = [];
 
   /**
    * @param FreebaseId

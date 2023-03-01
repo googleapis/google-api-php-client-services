@@ -26,7 +26,7 @@ class Trigger extends \Google\Collection
   public $channel;
   protected $conditionsType = StateCondition::class;
   protected $conditionsDataType = 'map';
-  public $conditions;
+  public $conditions = [];
   /**
    * @var string
    */
@@ -40,11 +40,11 @@ class Trigger extends \Google\Collection
   public $etag;
   protected $eventFiltersType = EventFilter::class;
   protected $eventFiltersDataType = 'array';
-  public $eventFilters;
+  public $eventFilters = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

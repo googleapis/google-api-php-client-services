@@ -27,11 +27,11 @@ class RouterNatSubnetworkToNat extends \Google\Collection
   /**
    * @var string[]
    */
-  public $secondaryIpRangeNames;
+  public $secondaryIpRangeNames = [];
   /**
    * @var string[]
    */
-  public $sourceIpRangesToNat;
+  public $sourceIpRangesToNat = [];
 
   /**
    * @param string

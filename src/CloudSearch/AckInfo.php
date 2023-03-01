@@ -27,7 +27,7 @@ class AckInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unackedDeviceIds;
+  public $unackedDeviceIds = [];
 
   /**
    * @param int

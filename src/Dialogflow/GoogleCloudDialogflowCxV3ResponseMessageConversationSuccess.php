@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess extends \Googl
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
 
   /**
    * @param array[]

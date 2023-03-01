@@ -26,7 +26,7 @@ class NetworkEndpointGroupsListNetworkEndpointsWarning extends \Google\Collectio
   public $code;
   protected $dataType = NetworkEndpointGroupsListNetworkEndpointsWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

@@ -69,7 +69,7 @@ class DrishtiVesperMovingThumbnail extends \Google\Collection
   public $scoreComponents;
   protected $thumbnailsType = DrishtiVesperThumbnail::class;
   protected $thumbnailsDataType = 'array';
-  public $thumbnails;
+  public $thumbnails = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class DeepLinkData extends \Google\Collection
   public $appId;
   protected $clientType = PackagingServiceClient::class;
   protected $clientDataType = 'array';
-  public $client;
+  public $client = [];
   /**
    * @var string
    */

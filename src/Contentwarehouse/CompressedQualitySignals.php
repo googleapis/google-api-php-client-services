@@ -65,7 +65,7 @@ class CompressedQualitySignals extends \Google\Collection
   public $experimentalNsrTeamData;
   protected $experimentalNsrTeamWsjDataType = QualityNsrExperimentalNsrTeamWSJData::class;
   protected $experimentalNsrTeamWsjDataDataType = 'array';
-  public $experimentalNsrTeamWsjData;
+  public $experimentalNsrTeamWsjData = [];
   /**
    * @var float
    */
@@ -96,13 +96,13 @@ class CompressedQualitySignals extends \Google\Collection
   public $nsrOverrideBid;
   protected $nsrVersionedDataType = NSRVersionedItem::class;
   protected $nsrVersionedDataDataType = 'array';
-  public $nsrVersionedData;
+  public $nsrVersionedData = [];
   protected $pairwiseqScoringDataType = PairwiseQScoringData::class;
   protected $pairwiseqScoringDataDataType = '';
   public $pairwiseqScoringData;
   protected $pairwiseqVersionedDataType = PairwiseQVersionedItem::class;
   protected $pairwiseqVersionedDataDataType = 'array';
-  public $pairwiseqVersionedData;
+  public $pairwiseqVersionedData = [];
   /**
    * @var string
    */
@@ -152,7 +152,7 @@ class CompressedQualitySignals extends \Google\Collection
   public $siteAuthority;
   protected $topicEmbeddingsVersionedDataType = QualityAuthorityTopicEmbeddingsVersionedItem::class;
   protected $topicEmbeddingsVersionedDataDataType = 'array';
-  public $topicEmbeddingsVersionedData;
+  public $topicEmbeddingsVersionedData = [];
   /**
    * @var string
    */

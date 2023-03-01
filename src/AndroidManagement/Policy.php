@@ -23,7 +23,7 @@ class Policy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accountTypesWithManagementDisabled;
+  public $accountTypesWithManagementDisabled = [];
   /**
    * @var bool
    */
@@ -41,14 +41,14 @@ class Policy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $androidDevicePolicyTracks;
+  public $androidDevicePolicyTracks = [];
   /**
    * @var string
    */
   public $appAutoUpdatePolicy;
   protected $applicationsType = ApplicationPolicy::class;
   protected $applicationsDataType = 'array';
-  public $applications;
+  public $applications = [];
   /**
    * @var string
    */
@@ -87,10 +87,10 @@ class Policy extends \Google\Collection
   public $cellBroadcastsConfigDisabled;
   protected $choosePrivateKeyRulesType = ChoosePrivateKeyRule::class;
   protected $choosePrivateKeyRulesDataType = 'array';
-  public $choosePrivateKeyRules;
+  public $choosePrivateKeyRules = [];
   protected $complianceRulesType = ComplianceRule::class;
   protected $complianceRulesDataType = 'array';
-  public $complianceRules;
+  public $complianceRules = [];
   /**
    * @var bool
    */
@@ -132,7 +132,7 @@ class Policy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $frpAdminEmails;
+  public $frpAdminEmails = [];
   /**
    * @var bool
    */
@@ -152,7 +152,7 @@ class Policy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keyguardDisabledFeatures;
+  public $keyguardDisabledFeatures = [];
   /**
    * @var bool
    */
@@ -205,11 +205,11 @@ class Policy extends \Google\Collection
   public $networkResetDisabled;
   protected $oncCertificateProvidersType = OncCertificateProvider::class;
   protected $oncCertificateProvidersDataType = 'array';
-  public $oncCertificateProviders;
+  public $oncCertificateProviders = [];
   /**
    * @var array[]
    */
-  public $openNetworkConfiguration;
+  public $openNetworkConfiguration = [];
   /**
    * @var bool
    */
@@ -220,13 +220,13 @@ class Policy extends \Google\Collection
   public $outgoingCallsDisabled;
   protected $passwordPoliciesType = PasswordRequirements::class;
   protected $passwordPoliciesDataType = 'array';
-  public $passwordPolicies;
+  public $passwordPolicies = [];
   protected $passwordRequirementsType = PasswordRequirements::class;
   protected $passwordRequirementsDataType = '';
   public $passwordRequirements;
   protected $permissionGrantsType = PermissionGrant::class;
   protected $permissionGrantsDataType = 'array';
-  public $permissionGrants;
+  public $permissionGrants = [];
   protected $permittedAccessibilityServicesType = PackageNameList::class;
   protected $permittedAccessibilityServicesDataType = '';
   public $permittedAccessibilityServices;
@@ -235,7 +235,7 @@ class Policy extends \Google\Collection
   public $permittedInputMethods;
   protected $persistentPreferredActivitiesType = PersistentPreferredActivity::class;
   protected $persistentPreferredActivitiesDataType = 'array';
-  public $persistentPreferredActivities;
+  public $persistentPreferredActivities = [];
   protected $personalUsagePoliciesType = PersonalUsagePolicies::class;
   protected $personalUsagePoliciesDataType = '';
   public $personalUsagePolicies;
@@ -245,7 +245,7 @@ class Policy extends \Google\Collection
   public $playStoreMode;
   protected $policyEnforcementRulesType = PolicyEnforcementRule::class;
   protected $policyEnforcementRulesDataType = 'array';
-  public $policyEnforcementRules;
+  public $policyEnforcementRules = [];
   /**
    * @var string
    */
@@ -279,7 +279,7 @@ class Policy extends \Google\Collection
   public $setWallpaperDisabled;
   protected $setupActionsType = SetupAction::class;
   protected $setupActionsDataType = 'array';
-  public $setupActions;
+  public $setupActions = [];
   /**
    * @var bool
    */
@@ -305,7 +305,7 @@ class Policy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $stayOnPluggedModes;
+  public $stayOnPluggedModes = [];
   protected $systemUpdateType = SystemUpdate::class;
   protected $systemUpdateDataType = '';
   public $systemUpdate;

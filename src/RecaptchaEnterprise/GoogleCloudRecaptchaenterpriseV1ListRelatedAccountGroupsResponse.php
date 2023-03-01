@@ -26,7 +26,7 @@ class GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse extends \
   public $nextPageToken;
   protected $relatedAccountGroupsType = GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup::class;
   protected $relatedAccountGroupsDataType = 'array';
-  public $relatedAccountGroups;
+  public $relatedAccountGroups = [];
 
   /**
    * @param string

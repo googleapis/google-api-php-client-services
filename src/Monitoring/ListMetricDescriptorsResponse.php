@@ -22,7 +22,7 @@ class ListMetricDescriptorsResponse extends \Google\Collection
   protected $collection_key = 'metricDescriptors';
   protected $metricDescriptorsType = MetricDescriptor::class;
   protected $metricDescriptorsDataType = 'array';
-  public $metricDescriptors;
+  public $metricDescriptors = [];
   /**
    * @var string
    */

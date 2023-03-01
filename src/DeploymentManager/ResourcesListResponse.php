@@ -26,7 +26,7 @@ class ResourcesListResponse extends \Google\Collection
   public $nextPageToken;
   protected $resourcesType = DeploymentmanagerResource::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
 
   /**
    * @param string

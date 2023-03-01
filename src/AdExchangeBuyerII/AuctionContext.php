@@ -23,7 +23,7 @@ class AuctionContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $auctionTypes;
+  public $auctionTypes = [];
 
   /**
    * @param string[]

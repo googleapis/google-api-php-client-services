@@ -22,7 +22,7 @@ class TopicState extends \Google\Model
   /**
    * @var int[]
    */
-  public $labelIdMessageCount;
+  public $labelIdMessageCount = [];
   /**
    * @var int
    */

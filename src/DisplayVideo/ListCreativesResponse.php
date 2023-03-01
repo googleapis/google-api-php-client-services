@@ -22,7 +22,7 @@ class ListCreativesResponse extends \Google\Collection
   protected $collection_key = 'creatives';
   protected $creativesType = Creative::class;
   protected $creativesDataType = 'array';
-  public $creatives;
+  public $creatives = [];
   /**
    * @var string
    */

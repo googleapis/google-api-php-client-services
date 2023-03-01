@@ -23,7 +23,7 @@ class Account extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accountPermissionIds;
+  public $accountPermissionIds = [];
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class Account extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availablePermissionIds;
+  public $availablePermissionIds = [];
   /**
    * @var string
    */

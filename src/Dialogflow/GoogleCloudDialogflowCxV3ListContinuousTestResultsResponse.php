@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3ListContinuousTestResultsResponse extends \Google
   protected $collection_key = 'continuousTestResults';
   protected $continuousTestResultsType = GoogleCloudDialogflowCxV3ContinuousTestResult::class;
   protected $continuousTestResultsDataType = 'array';
-  public $continuousTestResults;
+  public $continuousTestResults = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class DatafeedsListResponse extends \Google\Collection
   public $nextPageToken;
   protected $resourcesType = Datafeed::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
 
   /**
    * @param string

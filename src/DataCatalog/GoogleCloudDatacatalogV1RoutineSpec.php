@@ -37,7 +37,7 @@ class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
   public $returnType;
   protected $routineArgumentsType = GoogleCloudDatacatalogV1RoutineSpecArgument::class;
   protected $routineArgumentsDataType = 'array';
-  public $routineArguments;
+  public $routineArguments = [];
   /**
    * @var string
    */

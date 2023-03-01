@@ -69,7 +69,7 @@ class InsertionOrder extends \Google\Collection
   public $pacing;
   protected $partnerCostsType = PartnerCost::class;
   protected $partnerCostsDataType = 'array';
-  public $partnerCosts;
+  public $partnerCosts = [];
   protected $performanceGoalType = PerformanceGoal::class;
   protected $performanceGoalDataType = '';
   public $performanceGoal;

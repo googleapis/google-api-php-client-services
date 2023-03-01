@@ -23,14 +23,14 @@ class RepositoryWebrefCompactFlatPropertyValue extends \Google\Collection
   /**
    * @var string[]
    */
-  public $predicateEncodedMid;
+  public $predicateEncodedMid = [];
   /**
    * @var string
    */
   public $propertyName;
   protected $valueType = RepositoryWebrefCompactKgValue::class;
   protected $valueDataType = 'array';
-  public $value;
+  public $value = [];
 
   /**
    * @param string[]

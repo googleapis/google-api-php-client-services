@@ -30,7 +30,7 @@ class ConnectSettings extends \Google\Collection
   public $databaseVersion;
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
-  public $ipAddresses;
+  public $ipAddresses = [];
   /**
    * @var string
    */

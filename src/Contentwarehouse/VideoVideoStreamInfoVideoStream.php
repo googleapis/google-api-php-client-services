@@ -111,7 +111,7 @@ class VideoVideoStreamInfoVideoStream extends \Google\Collection
   public $isInsaneSize;
   protected $ituTT35Type = VideoUserDataRegisteredItuTT35::class;
   protected $ituTT35DataType = 'array';
-  public $ituTT35;
+  public $ituTT35 = [];
   public $length;
   /**
    * @var int
@@ -123,7 +123,7 @@ class VideoVideoStreamInfoVideoStream extends \Google\Collection
   public $maxFps;
   protected $metadataType = VideoClipInfo::class;
   protected $metadataDataType = 'array';
-  public $metadata;
+  public $metadata = [];
   public $minFps;
   /**
    * @var string
@@ -151,7 +151,7 @@ class VideoVideoStreamInfoVideoStream extends \Google\Collection
   public $rotation;
   protected $seiMessageType = VideoSEIMessage::class;
   protected $seiMessageDataType = 'array';
-  public $seiMessage;
+  public $seiMessage = [];
   protected $sphericalType = VideoFileSphericalMetadata::class;
   protected $sphericalDataType = '';
   public $spherical;
@@ -169,7 +169,7 @@ class VideoVideoStreamInfoVideoStream extends \Google\Collection
   public $streamIndex;
   protected $userDataUnregisteredType = VideoUserDataUnregistered::class;
   protected $userDataUnregisteredDataType = 'array';
-  public $userDataUnregistered;
+  public $userDataUnregistered = [];
   /**
    * @var int
    */

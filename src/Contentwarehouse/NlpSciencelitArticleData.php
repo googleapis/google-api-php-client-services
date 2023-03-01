@@ -25,10 +25,10 @@ class NlpSciencelitArticleData extends \Google\Collection
   public $analyzedText;
   protected $articleIdType = NlpSciencelitArticleId::class;
   protected $articleIdDataType = 'array';
-  public $articleId;
+  public $articleId = [];
   protected $citationType = NlpSciencelitCitationData::class;
   protected $citationDataType = 'array';
-  public $citation;
+  public $citation = [];
   /**
    * @var string
    */
@@ -46,16 +46,16 @@ class NlpSciencelitArticleData extends \Google\Collection
   public $parsedFrom;
   protected $pubDateType = NlpSciencelitPubDate::class;
   protected $pubDateDataType = 'array';
-  public $pubDate;
+  public $pubDate = [];
   protected $referencedBlockType = NlpSciencelitReferencedBlock::class;
   protected $referencedBlockDataType = 'array';
-  public $referencedBlock;
+  public $referencedBlock = [];
   protected $scholarCitationType = ScienceCitation::class;
   protected $scholarCitationDataType = '';
   public $scholarCitation;
   protected $scholarDocumentType = CompositeDoc::class;
   protected $scholarDocumentDataType = 'array';
-  public $scholarDocument;
+  public $scholarDocument = [];
   protected $scholarSignalType = ScienceIndexSignal::class;
   protected $scholarSignalDataType = '';
   public $scholarSignal;

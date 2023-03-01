@@ -25,10 +25,10 @@ class ExtraSnippetInfoResponse extends \Google\Collection
   public $matchinfo;
   protected $querysubitemType = ExtraSnippetInfoResponseQuerySubitem::class;
   protected $querysubitemDataType = 'array';
-  public $querysubitem;
+  public $querysubitem = [];
   protected $tidbitType = ExtraSnippetInfoResponseTidbit::class;
   protected $tidbitDataType = 'array';
-  public $tidbit;
+  public $tidbit = [];
 
   /**
    * @param ExtraSnippetInfoResponseMatchInfo

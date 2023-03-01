@@ -27,7 +27,7 @@ class RepositoryWebrefClusterProtoMidListRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $mid;
+  public $mid = [];
 
   /**
    * @param string

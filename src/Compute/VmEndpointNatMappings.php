@@ -26,7 +26,7 @@ class VmEndpointNatMappings extends \Google\Collection
   public $instanceName;
   protected $interfaceNatMappingsType = VmEndpointNatMappingsInterfaceNatMappings::class;
   protected $interfaceNatMappingsDataType = 'array';
-  public $interfaceNatMappings;
+  public $interfaceNatMappings = [];
 
   /**
    * @param string

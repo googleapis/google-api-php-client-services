@@ -22,14 +22,14 @@ class KubernetesResource extends \Google\Collection
   protected $collection_key = 'membershipResources';
   protected $connectResourcesType = ResourceManifest::class;
   protected $connectResourcesDataType = 'array';
-  public $connectResources;
+  public $connectResources = [];
   /**
    * @var string
    */
   public $membershipCrManifest;
   protected $membershipResourcesType = ResourceManifest::class;
   protected $membershipResourcesDataType = 'array';
-  public $membershipResources;
+  public $membershipResources = [];
   protected $resourceOptionsType = ResourceOptions::class;
   protected $resourceOptionsDataType = '';
   public $resourceOptions;

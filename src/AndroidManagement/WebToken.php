@@ -23,7 +23,7 @@ class WebToken extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enabledFeatures;
+  public $enabledFeatures = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class WebToken extends \Google\Collection
   /**
    * @var string[]
    */
-  public $permissions;
+  public $permissions = [];
   /**
    * @var string
    */

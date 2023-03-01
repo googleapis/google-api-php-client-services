@@ -45,7 +45,7 @@ class GoogleCloudDialogflowCxV3SecuritySettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $purgeDataTypes;
+  public $purgeDataTypes = [];
   /**
    * @var string
    */

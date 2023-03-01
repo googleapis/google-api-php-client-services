@@ -22,7 +22,7 @@ class SecurityPoliciesScopedList extends \Google\Collection
   protected $collection_key = 'securityPolicies';
   protected $securityPoliciesType = SecurityPolicy::class;
   protected $securityPoliciesDataType = 'array';
-  public $securityPolicies;
+  public $securityPolicies = [];
   protected $warningType = SecurityPoliciesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

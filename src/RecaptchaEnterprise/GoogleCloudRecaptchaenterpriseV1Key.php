@@ -36,7 +36,7 @@ class GoogleCloudRecaptchaenterpriseV1Key extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

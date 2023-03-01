@@ -52,7 +52,7 @@ class FaceAnnotation extends \Google\Collection
   public $landmarkingConfidence;
   protected $landmarksType = Landmark::class;
   protected $landmarksDataType = 'array';
-  public $landmarks;
+  public $landmarks = [];
   /**
    * @var float
    */

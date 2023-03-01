@@ -25,7 +25,7 @@ class GoogleCloudDiscoveryengineV1alphaImportUserEventsResponse extends \Google\
   public $errorConfig;
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
-  public $errorSamples;
+  public $errorSamples = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class GoogleCloudRetailV2ServingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $boostControlIds;
+  public $boostControlIds = [];
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class GoogleCloudRetailV2ServingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $doNotAssociateControlIds;
+  public $doNotAssociateControlIds = [];
   protected $dynamicFacetSpecType = GoogleCloudRetailV2SearchRequestDynamicFacetSpec::class;
   protected $dynamicFacetSpecDataType = '';
   public $dynamicFacetSpec;
@@ -50,15 +50,15 @@ class GoogleCloudRetailV2ServingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $facetControlIds;
+  public $facetControlIds = [];
   /**
    * @var string[]
    */
-  public $filterControlIds;
+  public $filterControlIds = [];
   /**
    * @var string[]
    */
-  public $ignoreControlIds;
+  public $ignoreControlIds = [];
   /**
    * @var string
    */
@@ -70,7 +70,7 @@ class GoogleCloudRetailV2ServingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $onewaySynonymsControlIds;
+  public $onewaySynonymsControlIds = [];
   protected $personalizationSpecType = GoogleCloudRetailV2SearchRequestPersonalizationSpec::class;
   protected $personalizationSpecDataType = '';
   public $personalizationSpec;
@@ -81,19 +81,19 @@ class GoogleCloudRetailV2ServingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $redirectControlIds;
+  public $redirectControlIds = [];
   /**
    * @var string[]
    */
-  public $replacementControlIds;
+  public $replacementControlIds = [];
   /**
    * @var string[]
    */
-  public $solutionTypes;
+  public $solutionTypes = [];
   /**
    * @var string[]
    */
-  public $twowaySynonymsControlIds;
+  public $twowaySynonymsControlIds = [];
 
   /**
    * @param string[]

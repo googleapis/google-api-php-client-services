@@ -23,7 +23,7 @@ class WWWDocInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $additionalSafesearchStats;
+  public $additionalSafesearchStats = [];
   /**
    * @var int
    */
@@ -39,7 +39,7 @@ class WWWDocInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $bodyTitleLanguages;
+  public $bodyTitleLanguages = [];
   /**
    * @var bool
    */
@@ -182,7 +182,7 @@ class WWWDocInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metaDescriptionLanguages;
+  public $metaDescriptionLanguages = [];
   /**
    * @var string
    */
@@ -213,7 +213,7 @@ class WWWDocInfo extends \Google\Collection
   public $referrerUrl;
   protected $relatedimagesType = WWWDocInfoRelatedImages::class;
   protected $relatedimagesDataType = 'array';
-  public $relatedimages;
+  public $relatedimages = [];
   /**
    * @var bool
    */
@@ -247,7 +247,7 @@ class WWWDocInfo extends \Google\Collection
   public $shoppingAttachment;
   protected $shoppingOffersType = ImageMustangShoppingOffer::class;
   protected $shoppingOffersDataType = 'array';
-  public $shoppingOffers;
+  public $shoppingOffers = [];
   /**
    * @var int
    */
@@ -262,7 +262,7 @@ class WWWDocInfo extends \Google\Collection
   public $thumbWidth;
   protected $thumbnailType = WWWDocInfoThumbnail::class;
   protected $thumbnailDataType = 'array';
-  public $thumbnail;
+  public $thumbnail = [];
   /**
    * @var string
    */

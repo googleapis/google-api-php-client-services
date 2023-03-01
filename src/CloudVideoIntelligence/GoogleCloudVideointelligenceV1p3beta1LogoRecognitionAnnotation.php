@@ -25,10 +25,10 @@ class GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation extends \Go
   public $entity;
   protected $segmentsType = GoogleCloudVideointelligenceV1p3beta1VideoSegment::class;
   protected $segmentsDataType = 'array';
-  public $segments;
+  public $segments = [];
   protected $tracksType = GoogleCloudVideointelligenceV1p3beta1Track::class;
   protected $tracksDataType = 'array';
-  public $tracks;
+  public $tracks = [];
 
   /**
    * @param GoogleCloudVideointelligenceV1p3beta1Entity

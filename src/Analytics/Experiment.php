@@ -114,7 +114,7 @@ class Experiment extends \Google\Collection
   public $updated;
   protected $variationsType = ExperimentVariations::class;
   protected $variationsDataType = 'array';
-  public $variations;
+  public $variations = [];
   /**
    * @var string
    */

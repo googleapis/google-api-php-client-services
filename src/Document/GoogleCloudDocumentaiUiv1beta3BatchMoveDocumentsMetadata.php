@@ -33,7 +33,7 @@ class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata extends \Google\C
   public $destSplitType;
   protected $individualBatchMoveStatusesType = GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMoveStatus::class;
   protected $individualBatchMoveStatusesDataType = 'array';
-  public $individualBatchMoveStatuses;
+  public $individualBatchMoveStatuses = [];
 
   /**
    * @param GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata

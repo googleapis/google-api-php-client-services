@@ -29,7 +29,7 @@ class ExecuteBatchDmlRequest extends \Google\Collection
   public $seqno;
   protected $statementsType = Statement::class;
   protected $statementsDataType = 'array';
-  public $statements;
+  public $statements = [];
   protected $transactionType = TransactionSelector::class;
   protected $transactionDataType = '';
   public $transaction;

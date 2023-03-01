@@ -22,14 +22,14 @@ class AbuseReport extends \Google\Collection
   protected $collection_key = 'relatedEntities';
   protected $abuseTypesType = AbuseType::class;
   protected $abuseTypesDataType = 'array';
-  public $abuseTypes;
+  public $abuseTypes = [];
   /**
    * @var string
    */
   public $description;
   protected $relatedEntitiesType = RelatedEntity::class;
   protected $relatedEntitiesDataType = 'array';
-  public $relatedEntities;
+  public $relatedEntities = [];
   protected $subjectType = Entity::class;
   protected $subjectDataType = '';
   public $subject;

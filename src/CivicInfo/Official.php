@@ -22,17 +22,17 @@ class Official extends \Google\Collection
   protected $collection_key = 'urls';
   protected $addressType = SimpleAddressType::class;
   protected $addressDataType = 'array';
-  public $address;
+  public $address = [];
   protected $channelsType = Channel::class;
   protected $channelsDataType = 'array';
-  public $channels;
+  public $channels = [];
   /**
    * @var string[]
    */
-  public $emails;
+  public $emails = [];
   protected $geocodingSummariesType = GeocodingSummary::class;
   protected $geocodingSummariesDataType = 'array';
-  public $geocodingSummaries;
+  public $geocodingSummaries = [];
   /**
    * @var string
    */
@@ -44,7 +44,7 @@ class Official extends \Google\Collection
   /**
    * @var string[]
    */
-  public $phones;
+  public $phones = [];
   /**
    * @var string
    */
@@ -52,7 +52,7 @@ class Official extends \Google\Collection
   /**
    * @var string[]
    */
-  public $urls;
+  public $urls = [];
 
   /**
    * @param SimpleAddressType[]

@@ -23,11 +23,11 @@ class UsageLog extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enabledLogTypes;
+  public $enabledLogTypes = [];
   /**
    * @var string[]
    */
-  public $uploadOnCellularAllowed;
+  public $uploadOnCellularAllowed = [];
 
   /**
    * @param string[]

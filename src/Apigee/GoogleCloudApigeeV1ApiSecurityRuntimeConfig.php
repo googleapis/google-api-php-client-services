@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1ApiSecurityRuntimeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $location;
+  public $location = [];
   /**
    * @var string
    */

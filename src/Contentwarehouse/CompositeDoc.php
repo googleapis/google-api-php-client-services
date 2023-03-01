@@ -35,7 +35,7 @@ class CompositeDoc extends \Google\Collection
   public $additionalchecksums;
   protected $alternatenameType = CompositeDocAlternateName::class;
   protected $alternatenameDataType = 'array';
-  public $alternatename;
+  public $alternatename = [];
   protected $anchorStatsType = IndexingDocjoinerAnchorStatistics::class;
   protected $anchorStatsDataType = '';
   public $anchorStats;
@@ -47,7 +47,7 @@ class CompositeDoc extends \Google\Collection
   public $badSslCertificate;
   protected $cseIdType = QualityProseCSEUrlInfo::class;
   protected $cseIdDataType = 'array';
-  public $cseId;
+  public $cseId = [];
   /**
    * @var int
    */
@@ -63,10 +63,10 @@ class CompositeDoc extends \Google\Collection
   public $docAttachments;
   protected $docImagesType = ImageData::class;
   protected $docImagesDataType = 'array';
-  public $docImages;
+  public $docImages = [];
   protected $docVideosType = ImageRepositoryVideoProperties::class;
   protected $docVideosDataType = 'array';
-  public $docVideos;
+  public $docVideos = [];
   protected $docinfoPassthroughAttachmentsType = Proto2BridgeMessageSet::class;
   protected $docinfoPassthroughAttachmentsDataType = '';
   public $docinfoPassthroughAttachments;
@@ -75,13 +75,13 @@ class CompositeDoc extends \Google\Collection
   public $embeddedContentInfo;
   protected $extradupType = CompositeDocExtraDup::class;
   protected $extradupDataType = 'array';
-  public $extradup;
+  public $extradup = [];
   protected $forwardingdupType = CompositeDocForwardingDup::class;
   protected $forwardingdupDataType = 'array';
-  public $forwardingdup;
+  public $forwardingdup = [];
   protected $includedcontentType = CompositeDocIncludedContent::class;
   protected $includedcontentDataType = 'array';
-  public $includedcontent;
+  public $includedcontent = [];
   /**
    * @var string
    */
@@ -100,7 +100,7 @@ class CompositeDoc extends \Google\Collection
   public $localinfo;
   protected $localizedAlternateNameType = IndexingConverterLocalizedAlternateName::class;
   protected $localizedAlternateNameDataType = 'array';
-  public $localizedAlternateName;
+  public $localizedAlternateName = [];
   protected $localizedvariationsType = CompositeDocLocalizedVariations::class;
   protected $localizedvariationsDataType = '';
   public $localizedvariations;
@@ -148,7 +148,7 @@ class CompositeDoc extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subindexid;
+  public $subindexid = [];
   protected $syntacticDateType = QualityTimebasedSyntacticDate::class;
   protected $syntacticDateDataType = '';
   public $syntacticDate;

@@ -26,7 +26,7 @@ class QualityQrewritePersonalContactData extends \Google\Collection
   /**
    * @var array[]
    */
-  public $additionalContactMetadata;
+  public $additionalContactMetadata = [];
   /**
    * @var float
    */
@@ -117,7 +117,7 @@ class QualityQrewritePersonalContactData extends \Google\Collection
   public $relationshipLexicalInfo;
   protected $relationshipMemoryType = QualityQrewriteRelationshipMemoryData::class;
   protected $relationshipMemoryDataType = 'array';
-  public $relationshipMemory;
+  public $relationshipMemory = [];
   /**
    * @var string
    */

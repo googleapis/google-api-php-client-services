@@ -37,7 +37,7 @@ class JobConfigurationLoad extends \Google\Collection
   public $clustering;
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
-  public $connectionProperties;
+  public $connectionProperties = [];
   /**
    * @var string
    */
@@ -49,7 +49,7 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $decimalTargetTypes;
+  public $decimalTargetTypes = [];
   protected $destinationEncryptionConfigurationType = EncryptionConfiguration::class;
   protected $destinationEncryptionConfigurationDataType = '';
   public $destinationEncryptionConfiguration;
@@ -96,7 +96,7 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $projectionFields;
+  public $projectionFields = [];
   /**
    * @var string
    */
@@ -122,7 +122,7 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $schemaUpdateOptions;
+  public $schemaUpdateOptions = [];
   /**
    * @var int
    */
@@ -134,7 +134,7 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceUris;
+  public $sourceUris = [];
   protected $timePartitioningType = TimePartitioning::class;
   protected $timePartitioningDataType = '';
   public $timePartitioning;

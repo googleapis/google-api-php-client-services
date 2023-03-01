@@ -22,7 +22,7 @@ class Note extends \Google\Collection
   protected $collection_key = 'permissions';
   protected $attachmentsType = Attachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments;
+  public $attachments = [];
   protected $bodyType = Section::class;
   protected $bodyDataType = '';
   public $body;
@@ -36,7 +36,7 @@ class Note extends \Google\Collection
   public $name;
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
-  public $permissions;
+  public $permissions = [];
   /**
    * @var string
    */

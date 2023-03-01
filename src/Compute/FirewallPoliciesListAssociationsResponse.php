@@ -22,7 +22,7 @@ class FirewallPoliciesListAssociationsResponse extends \Google\Collection
   protected $collection_key = 'associations';
   protected $associationsType = FirewallPolicyAssociation::class;
   protected $associationsDataType = 'array';
-  public $associations;
+  public $associations = [];
   /**
    * @var string
    */

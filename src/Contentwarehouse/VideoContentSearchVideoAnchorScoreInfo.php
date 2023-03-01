@@ -42,14 +42,14 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filterReason;
+  public $filterReason = [];
   /**
    * @var bool
    */
   public $filtered;
   protected $generativeFeaturesType = VideoContentSearchGenerativePredictionFeatures::class;
   protected $generativeFeaturesDataType = 'array';
-  public $generativeFeatures;
+  public $generativeFeatures = [];
   protected $instructionAnchorFeaturesType = VideoContentSearchInstructionAnchorFeatures::class;
   protected $instructionAnchorFeaturesDataType = '';
   public $instructionAnchorFeatures;
@@ -62,7 +62,7 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   public $labelLanguage;
   protected $labelTransformationType = VideoContentSearchVideoAnchorScoreInfoLabelTransformation::class;
   protected $labelTransformationDataType = 'array';
-  public $labelTransformation;
+  public $labelTransformation = [];
   protected $listAnchorFeaturesType = VideoContentSearchListAnchorFeatures::class;
   protected $listAnchorFeaturesDataType = '';
   public $listAnchorFeatures;
@@ -78,7 +78,7 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $normalizedBabelEmbedding;
+  public $normalizedBabelEmbedding = [];
   protected $ocrAnchorFeatureType = VideoContentSearchOnScreenTextFeature::class;
   protected $ocrAnchorFeatureDataType = '';
   public $ocrAnchorFeature;
@@ -99,7 +99,7 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
   public $safeSearchClassifierOutput;
   protected $textSimilarityFeaturesType = VideoContentSearchTextSimilarityFeatures::class;
   protected $textSimilarityFeaturesDataType = 'array';
-  public $textSimilarityFeatures;
+  public $textSimilarityFeatures = [];
   protected $thumbnailInfoType = VideoContentSearchAnchorThumbnailInfo::class;
   protected $thumbnailInfoDataType = '';
   public $thumbnailInfo;

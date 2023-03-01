@@ -23,7 +23,7 @@ class BatchEnableServicesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceIds;
+  public $serviceIds = [];
 
   /**
    * @param string[]

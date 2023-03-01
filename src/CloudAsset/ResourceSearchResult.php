@@ -23,14 +23,14 @@ class ResourceSearchResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $additionalAttributes;
+  public $additionalAttributes = [];
   /**
    * @var string
    */
   public $assetType;
   protected $attachedResourcesType = AttachedResource::class;
   protected $attachedResourcesDataType = 'array';
-  public $attachedResources;
+  public $attachedResources = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class ResourceSearchResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $folders;
+  public $folders = [];
   /**
    * @var string
    */
@@ -54,11 +54,11 @@ class ResourceSearchResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $kmsKeys;
+  public $kmsKeys = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -70,7 +70,7 @@ class ResourceSearchResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $networkTags;
+  public $networkTags = [];
   /**
    * @var string
    */
@@ -89,7 +89,7 @@ class ResourceSearchResult extends \Google\Collection
   public $project;
   protected $relationshipsType = RelatedResources::class;
   protected $relationshipsDataType = 'map';
-  public $relationships;
+  public $relationships = [];
   /**
    * @var string
    */
@@ -97,22 +97,22 @@ class ResourceSearchResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tagKeys;
+  public $tagKeys = [];
   /**
    * @var string[]
    */
-  public $tagValueIds;
+  public $tagValueIds = [];
   /**
    * @var string[]
    */
-  public $tagValues;
+  public $tagValues = [];
   /**
    * @var string
    */
   public $updateTime;
   protected $versionedResourcesType = VersionedResource::class;
   protected $versionedResourcesDataType = 'array';
-  public $versionedResources;
+  public $versionedResources = [];
 
   /**
    * @param array[]

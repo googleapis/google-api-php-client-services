@@ -27,11 +27,11 @@ class ProductVisibility extends \Google\Collection
   /**
    * @var string[]
    */
-  public $trackIds;
+  public $trackIds = [];
   /**
    * @var string[]
    */
-  public $tracks;
+  public $tracks = [];
 
   /**
    * @param string

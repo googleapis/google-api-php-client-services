@@ -27,7 +27,7 @@ class WorkerHealthReport extends \Google\Collection
   /**
    * @var array[]
    */
-  public $pods;
+  public $pods = [];
   /**
    * @var string
    */

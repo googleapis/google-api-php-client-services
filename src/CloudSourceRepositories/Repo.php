@@ -28,7 +28,7 @@ class Repo extends \Google\Model
   public $name;
   protected $pubsubConfigsType = PubsubConfig::class;
   protected $pubsubConfigsDataType = 'map';
-  public $pubsubConfigs;
+  public $pubsubConfigs = [];
   /**
    * @var string
    */

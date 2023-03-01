@@ -23,11 +23,11 @@ class GoogleCloudDataplexV1TaskNotebookTaskConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $archiveUris;
+  public $archiveUris = [];
   /**
    * @var string[]
    */
-  public $fileUris;
+  public $fileUris = [];
   protected $infrastructureSpecType = GoogleCloudDataplexV1TaskInfrastructureSpec::class;
   protected $infrastructureSpecDataType = '';
   public $infrastructureSpec;

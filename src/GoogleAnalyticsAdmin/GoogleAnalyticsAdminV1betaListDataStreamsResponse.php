@@ -22,7 +22,7 @@ class GoogleAnalyticsAdminV1betaListDataStreamsResponse extends \Google\Collecti
   protected $collection_key = 'dataStreams';
   protected $dataStreamsType = GoogleAnalyticsAdminV1betaDataStream::class;
   protected $dataStreamsDataType = 'array';
-  public $dataStreams;
+  public $dataStreams = [];
   /**
    * @var string
    */

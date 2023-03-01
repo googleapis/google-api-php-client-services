@@ -30,7 +30,7 @@ class ListDirectoryPeopleResponse extends \Google\Collection
   public $nextSyncToken;
   protected $peopleType = Person::class;
   protected $peopleDataType = 'array';
-  public $people;
+  public $people = [];
 
   /**
    * @param string

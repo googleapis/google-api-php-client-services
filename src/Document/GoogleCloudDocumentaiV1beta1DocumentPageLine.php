@@ -22,7 +22,7 @@ class GoogleCloudDocumentaiV1beta1DocumentPageLine extends \Google\Collection
   protected $collection_key = 'detectedLanguages';
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1beta1DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
-  public $detectedLanguages;
+  public $detectedLanguages = [];
   protected $layoutType = GoogleCloudDocumentaiV1beta1DocumentPageLayout::class;
   protected $layoutDataType = '';
   public $layout;

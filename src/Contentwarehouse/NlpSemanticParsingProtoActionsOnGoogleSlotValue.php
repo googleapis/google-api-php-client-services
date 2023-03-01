@@ -22,7 +22,7 @@ class NlpSemanticParsingProtoActionsOnGoogleSlotValue extends \Google\Collection
   protected $collection_key = 'values';
   protected $valuesType = NlpSemanticParsingProtoActionsOnGoogleSlotValueSingleValue::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param NlpSemanticParsingProtoActionsOnGoogleSlotValueSingleValue[]

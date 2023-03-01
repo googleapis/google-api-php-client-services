@@ -33,7 +33,7 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
   public $state;
   protected $tunnelsType = VpnGatewayStatusTunnel::class;
   protected $tunnelsDataType = 'array';
-  public $tunnels;
+  public $tunnels = [];
 
   /**
    * @param string

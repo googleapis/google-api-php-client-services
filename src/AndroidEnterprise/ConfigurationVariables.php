@@ -26,7 +26,7 @@ class ConfigurationVariables extends \Google\Collection
   public $mcmId;
   protected $variableSetType = VariableSet::class;
   protected $variableSetDataType = 'array';
-  public $variableSet;
+  public $variableSet = [];
 
   /**
    * @param string

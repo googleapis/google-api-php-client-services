@@ -22,13 +22,13 @@ class GoogleCloudDocumentaiV1DocumentPageTable extends \Google\Collection
   protected $collection_key = 'headerRows';
   protected $bodyRowsType = GoogleCloudDocumentaiV1DocumentPageTableTableRow::class;
   protected $bodyRowsDataType = 'array';
-  public $bodyRows;
+  public $bodyRows = [];
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
-  public $detectedLanguages;
+  public $detectedLanguages = [];
   protected $headerRowsType = GoogleCloudDocumentaiV1DocumentPageTableTableRow::class;
   protected $headerRowsDataType = 'array';
-  public $headerRows;
+  public $headerRows = [];
   protected $layoutType = GoogleCloudDocumentaiV1DocumentPageLayout::class;
   protected $layoutDataType = '';
   public $layout;

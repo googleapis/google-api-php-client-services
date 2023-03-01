@@ -38,7 +38,7 @@ class OSPolicy extends \Google\Collection
   public $mode;
   protected $resourceGroupsType = OSPolicyResourceGroup::class;
   protected $resourceGroupsDataType = 'array';
-  public $resourceGroups;
+  public $resourceGroups = [];
 
   /**
    * @param bool

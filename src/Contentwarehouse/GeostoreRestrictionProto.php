@@ -23,7 +23,7 @@ class GeostoreRestrictionProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $autonomousDrivingProducts;
+  public $autonomousDrivingProducts = [];
   protected $intersectionGroupType = GeostoreFeatureIdProto::class;
   protected $intersectionGroupDataType = '';
   public $intersectionGroup;
@@ -46,14 +46,14 @@ class GeostoreRestrictionProto extends \Google\Collection
   public $style;
   protected $subpathType = GeostoreFeatureIdProto::class;
   protected $subpathDataType = 'array';
-  public $subpath;
+  public $subpath = [];
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
   public $temporaryData;
   /**
    * @var string[]
    */
-  public $travelMode;
+  public $travelMode = [];
   /**
    * @var string
    */

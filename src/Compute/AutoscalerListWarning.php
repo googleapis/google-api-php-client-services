@@ -26,7 +26,7 @@ class AutoscalerListWarning extends \Google\Collection
   public $code;
   protected $dataType = AutoscalerListWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

@@ -50,7 +50,7 @@ class Task extends \Google\Collection
   public $kind;
   protected $linksType = TaskLinks::class;
   protected $linksDataType = 'array';
-  public $links;
+  public $links = [];
   /**
    * @var string
    */

@@ -34,7 +34,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationDeviceItem extends \Goo
   /**
    * @var string[]
    */
-  public $matchedItemValue;
+  public $matchedItemValue = [];
 
   /**
    * @param AssistantVerticalsHomeautomationProtoHomeAutomationMetaData

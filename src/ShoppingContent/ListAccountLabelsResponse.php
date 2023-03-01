@@ -22,7 +22,7 @@ class ListAccountLabelsResponse extends \Google\Collection
   protected $collection_key = 'accountLabels';
   protected $accountLabelsType = AccountLabel::class;
   protected $accountLabelsDataType = 'array';
-  public $accountLabels;
+  public $accountLabels = [];
   /**
    * @var string
    */

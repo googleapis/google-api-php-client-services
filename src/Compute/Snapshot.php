@@ -67,15 +67,15 @@ class Snapshot extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $licenseCodes;
+  public $licenseCodes = [];
   /**
    * @var string[]
    */
-  public $licenses;
+  public $licenses = [];
   /**
    * @var string
    */
@@ -133,7 +133,7 @@ class Snapshot extends \Google\Collection
   /**
    * @var string[]
    */
-  public $storageLocations;
+  public $storageLocations = [];
 
   /**
    * @param string

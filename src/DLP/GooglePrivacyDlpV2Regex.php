@@ -23,7 +23,7 @@ class GooglePrivacyDlpV2Regex extends \Google\Collection
   /**
    * @var int[]
    */
-  public $groupIndexes;
+  public $groupIndexes = [];
   /**
    * @var string
    */

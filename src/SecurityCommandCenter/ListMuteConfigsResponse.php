@@ -22,7 +22,7 @@ class ListMuteConfigsResponse extends \Google\Collection
   protected $collection_key = 'muteConfigs';
   protected $muteConfigsType = GoogleCloudSecuritycenterV1MuteConfig::class;
   protected $muteConfigsDataType = 'array';
-  public $muteConfigs;
+  public $muteConfigs = [];
   /**
    * @var string
    */

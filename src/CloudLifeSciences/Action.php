@@ -31,7 +31,7 @@ class Action extends \Google\Collection
   /**
    * @var string[]
    */
-  public $commands;
+  public $commands = [];
   /**
    * @var string
    */
@@ -61,7 +61,7 @@ class Action extends \Google\Collection
   /**
    * @var string[]
    */
-  public $environment;
+  public $environment = [];
   /**
    * @var bool
    */
@@ -73,10 +73,10 @@ class Action extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $mountsType = Mount::class;
   protected $mountsDataType = 'array';
-  public $mounts;
+  public $mounts = [];
   /**
    * @var string
    */
@@ -84,7 +84,7 @@ class Action extends \Google\Collection
   /**
    * @var int[]
    */
-  public $portMappings;
+  public $portMappings = [];
   /**
    * @var bool
    */

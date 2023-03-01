@@ -22,11 +22,11 @@ class GoogleCloudApigeeV1EnvironmentGroupConfig extends \Google\Collection
   protected $collection_key = 'routingRules';
   protected $endpointChainingRulesType = GoogleCloudApigeeV1EndpointChainingRule::class;
   protected $endpointChainingRulesDataType = 'array';
-  public $endpointChainingRules;
+  public $endpointChainingRules = [];
   /**
    * @var string[]
    */
-  public $hostnames;
+  public $hostnames = [];
   /**
    * @var string
    */
@@ -41,7 +41,7 @@ class GoogleCloudApigeeV1EnvironmentGroupConfig extends \Google\Collection
   public $revisionId;
   protected $routingRulesType = GoogleCloudApigeeV1RoutingRule::class;
   protected $routingRulesDataType = 'array';
-  public $routingRules;
+  public $routingRules = [];
   /**
    * @var string
    */

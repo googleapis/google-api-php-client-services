@@ -30,7 +30,7 @@ class UserOwnedGrafeasNote extends \Google\Collection
   public $noteReference;
   protected $publicKeysType = AttestorPublicKey::class;
   protected $publicKeysDataType = 'array';
-  public $publicKeys;
+  public $publicKeys = [];
 
   /**
    * @param string

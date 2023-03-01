@@ -22,7 +22,7 @@ class IamPolicyAnalysisResult extends \Google\Collection
   protected $collection_key = 'accessControlLists';
   protected $accessControlListsType = GoogleCloudAssetV1AccessControlList::class;
   protected $accessControlListsDataType = 'array';
-  public $accessControlLists;
+  public $accessControlLists = [];
   /**
    * @var string
    */

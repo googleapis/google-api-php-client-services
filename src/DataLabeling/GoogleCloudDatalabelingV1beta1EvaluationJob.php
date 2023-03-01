@@ -26,7 +26,7 @@ class GoogleCloudDatalabelingV1beta1EvaluationJob extends \Google\Collection
   public $annotationSpecSet;
   protected $attemptsType = GoogleCloudDatalabelingV1beta1Attempt::class;
   protected $attemptsDataType = 'array';
-  public $attempts;
+  public $attempts = [];
   /**
    * @var string
    */

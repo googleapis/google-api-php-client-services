@@ -20,7 +20,7 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaDoubleParameterArray extends \Google\Collection
 {
   protected $collection_key = 'doubleValues';
-  public $doubleValues;
+  public $doubleValues = [];
 
   public function setDoubleValues($doubleValues)
   {

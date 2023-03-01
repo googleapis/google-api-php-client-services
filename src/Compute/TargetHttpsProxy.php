@@ -75,7 +75,7 @@ class TargetHttpsProxy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sslCertificates;
+  public $sslCertificates = [];
   /**
    * @var string
    */

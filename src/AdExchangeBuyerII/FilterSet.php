@@ -26,7 +26,7 @@ class FilterSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $breakdownDimensions;
+  public $breakdownDimensions = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class FilterSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $formats;
+  public $formats = [];
   /**
    * @var string
    */
@@ -54,11 +54,11 @@ class FilterSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $platforms;
+  public $platforms = [];
   /**
    * @var string[]
    */
-  public $publisherIdentifiers;
+  public $publisherIdentifiers = [];
   protected $realtimeTimeRangeType = RealtimeTimeRange::class;
   protected $realtimeTimeRangeDataType = '';
   public $realtimeTimeRange;
@@ -68,7 +68,7 @@ class FilterSet extends \Google\Collection
   /**
    * @var int[]
    */
-  public $sellerNetworkIds;
+  public $sellerNetworkIds = [];
   /**
    * @var string
    */

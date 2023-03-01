@@ -22,13 +22,13 @@ class Metrics extends \Google\Collection
   protected $collection_key = 'totalExecutions';
   protected $activeUsersType = MetricsValue::class;
   protected $activeUsersDataType = 'array';
-  public $activeUsers;
+  public $activeUsers = [];
   protected $failedExecutionsType = MetricsValue::class;
   protected $failedExecutionsDataType = 'array';
-  public $failedExecutions;
+  public $failedExecutions = [];
   protected $totalExecutionsType = MetricsValue::class;
   protected $totalExecutionsDataType = 'array';
-  public $totalExecutions;
+  public $totalExecutions = [];
 
   /**
    * @param MetricsValue[]

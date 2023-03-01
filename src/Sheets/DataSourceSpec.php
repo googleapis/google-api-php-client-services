@@ -25,7 +25,7 @@ class DataSourceSpec extends \Google\Collection
   public $bigQuery;
   protected $parametersType = DataSourceParameter::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param BigQueryDataSourceSpec

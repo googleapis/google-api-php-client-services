@@ -22,7 +22,7 @@ class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse extends \Google
   protected $collection_key = 'listUpdateResponses';
   protected $listUpdateResponsesType = GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse::class;
   protected $listUpdateResponsesDataType = 'array';
-  public $listUpdateResponses;
+  public $listUpdateResponses = [];
   /**
    * @var string
    */

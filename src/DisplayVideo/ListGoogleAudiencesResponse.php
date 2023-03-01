@@ -22,7 +22,7 @@ class ListGoogleAudiencesResponse extends \Google\Collection
   protected $collection_key = 'googleAudiences';
   protected $googleAudiencesType = GoogleAudience::class;
   protected $googleAudiencesDataType = 'array';
-  public $googleAudiences;
+  public $googleAudiences = [];
   /**
    * @var string
    */

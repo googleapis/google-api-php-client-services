@@ -27,7 +27,7 @@ class MuxStream extends \Google\Collection
   /**
    * @var string[]
    */
-  public $elementaryStreams;
+  public $elementaryStreams = [];
   /**
    * @var string
    */

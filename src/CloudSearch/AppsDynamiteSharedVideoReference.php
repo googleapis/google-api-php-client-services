@@ -23,7 +23,7 @@ class AppsDynamiteSharedVideoReference extends \Google\Collection
   /**
    * @var int[]
    */
-  public $format;
+  public $format = [];
   /**
    * @var string
    */

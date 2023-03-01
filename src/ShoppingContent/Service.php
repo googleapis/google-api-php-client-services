@@ -54,7 +54,7 @@ class Service extends \Google\Collection
   public $pickupService;
   protected $rateGroupsType = RateGroup::class;
   protected $rateGroupsDataType = 'array';
-  public $rateGroups;
+  public $rateGroups = [];
   /**
    * @var string
    */

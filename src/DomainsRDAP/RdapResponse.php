@@ -23,7 +23,7 @@ class RdapResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $description;
+  public $description = [];
   /**
    * @var int
    */
@@ -37,11 +37,11 @@ class RdapResponse extends \Google\Collection
   public $lang;
   protected $noticesType = Notice::class;
   protected $noticesDataType = 'array';
-  public $notices;
+  public $notices = [];
   /**
    * @var string[]
    */
-  public $rdapConformance;
+  public $rdapConformance = [];
   /**
    * @var string
    */

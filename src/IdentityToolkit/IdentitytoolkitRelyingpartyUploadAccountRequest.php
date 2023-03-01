@@ -74,7 +74,7 @@ class IdentitytoolkitRelyingpartyUploadAccountRequest extends \Google\Collection
   public $targetProjectId;
   protected $usersType = UserInfo::class;
   protected $usersDataType = 'array';
-  public $users;
+  public $users = [];
 
   /**
    * @param bool

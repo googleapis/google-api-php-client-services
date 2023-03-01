@@ -26,7 +26,7 @@ class NodeTypeAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = NodeTypesScopedList::class;
   protected $itemsDataType = 'map';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class NodeTypeAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables;
+  public $unreachables = [];
   protected $warningType = NodeTypeAggregatedListWarning::class;
   protected $warningDataType = '';
   public $warning;

@@ -35,7 +35,7 @@ class GoogleCloudContactcenterinsightsV1Issue extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sampleUtterances;
+  public $sampleUtterances = [];
   /**
    * @var string
    */

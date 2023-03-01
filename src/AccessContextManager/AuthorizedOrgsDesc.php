@@ -39,7 +39,7 @@ class AuthorizedOrgsDesc extends \Google\Collection
   /**
    * @var string[]
    */
-  public $orgs;
+  public $orgs = [];
 
   /**
    * @param string

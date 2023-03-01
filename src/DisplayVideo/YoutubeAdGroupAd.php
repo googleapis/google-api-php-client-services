@@ -30,7 +30,7 @@ class YoutubeAdGroupAd extends \Google\Collection
   public $adGroupId;
   protected $adUrlsType = AdUrl::class;
   protected $adUrlsDataType = 'array';
-  public $adUrls;
+  public $adUrls = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class Matter extends \Google\Collection
   public $matterId;
   protected $matterPermissionsType = MatterPermission::class;
   protected $matterPermissionsDataType = 'array';
-  public $matterPermissions;
+  public $matterPermissions = [];
   /**
    * @var string
    */

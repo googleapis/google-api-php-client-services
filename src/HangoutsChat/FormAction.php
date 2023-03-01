@@ -26,7 +26,7 @@ class FormAction extends \Google\Collection
   public $actionMethodName;
   protected $parametersType = ActionParameter::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

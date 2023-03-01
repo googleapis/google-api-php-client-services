@@ -43,7 +43,7 @@ class RepositoryWebrefEntityAnnotations extends \Google\Collection
   public $isResolution;
   protected $segmentMentionsType = RepositoryWebrefSegmentMentions::class;
   protected $segmentMentionsDataType = 'array';
-  public $segmentMentions;
+  public $segmentMentions = [];
   /**
    * @var int
    */

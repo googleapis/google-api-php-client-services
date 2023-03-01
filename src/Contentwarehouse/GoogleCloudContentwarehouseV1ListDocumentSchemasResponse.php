@@ -22,7 +22,7 @@ class GoogleCloudContentwarehouseV1ListDocumentSchemasResponse extends \Google\C
   protected $collection_key = 'documentSchemas';
   protected $documentSchemasType = GoogleCloudContentwarehouseV1DocumentSchema::class;
   protected $documentSchemasDataType = 'array';
-  public $documentSchemas;
+  public $documentSchemas = [];
   /**
    * @var string
    */

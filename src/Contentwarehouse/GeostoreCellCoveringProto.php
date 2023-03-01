@@ -23,7 +23,7 @@ class GeostoreCellCoveringProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cellId;
+  public $cellId = [];
 
   /**
    * @param string[]

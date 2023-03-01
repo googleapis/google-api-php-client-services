@@ -23,7 +23,7 @@ class LabelField extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dateString;
+  public $dateString = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class LabelField extends \Google\Collection
   /**
    * @var string[]
    */
-  public $integer;
+  public $integer = [];
   /**
    * @var string
    */
@@ -39,14 +39,14 @@ class LabelField extends \Google\Collection
   /**
    * @var string[]
    */
-  public $selection;
+  public $selection = [];
   /**
    * @var string[]
    */
-  public $text;
+  public $text = [];
   protected $userType = User::class;
   protected $userDataType = 'array';
-  public $user;
+  public $user = [];
   /**
    * @var string
    */

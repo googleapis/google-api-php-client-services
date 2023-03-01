@@ -22,7 +22,7 @@ class SearchResponse extends \Google\Collection
   protected $collection_key = 'results';
   protected $resultsType = SearchResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
 
   /**
    * @param SearchResult[]

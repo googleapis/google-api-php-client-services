@@ -22,10 +22,10 @@ class Monitoring extends \Google\Collection
   protected $collection_key = 'producerDestinations';
   protected $consumerDestinationsType = MonitoringDestination::class;
   protected $consumerDestinationsDataType = 'array';
-  public $consumerDestinations;
+  public $consumerDestinations = [];
   protected $producerDestinationsType = MonitoringDestination::class;
   protected $producerDestinationsDataType = 'array';
-  public $producerDestinations;
+  public $producerDestinations = [];
 
   /**
    * @param MonitoringDestination[]

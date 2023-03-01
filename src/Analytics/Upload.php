@@ -31,7 +31,7 @@ class Upload extends \Google\Collection
   /**
    * @var string[]
    */
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

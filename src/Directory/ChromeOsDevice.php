@@ -22,7 +22,7 @@ class ChromeOsDevice extends \Google\Collection
   protected $collection_key = 'systemRamFreeReports';
   protected $activeTimeRangesType = ChromeOsDeviceActiveTimeRanges::class;
   protected $activeTimeRangesDataType = 'array';
-  public $activeTimeRanges;
+  public $activeTimeRanges = [];
   /**
    * @var string
    */
@@ -45,24 +45,24 @@ class ChromeOsDevice extends \Google\Collection
   public $bootMode;
   protected $cpuInfoType = ChromeOsDeviceCpuInfo::class;
   protected $cpuInfoDataType = 'array';
-  public $cpuInfo;
+  public $cpuInfo = [];
   protected $cpuStatusReportsType = ChromeOsDeviceCpuStatusReports::class;
   protected $cpuStatusReportsDataType = 'array';
-  public $cpuStatusReports;
+  public $cpuStatusReports = [];
   /**
    * @var string
    */
   public $deprovisionReason;
   protected $deviceFilesType = ChromeOsDeviceDeviceFiles::class;
   protected $deviceFilesDataType = 'array';
-  public $deviceFiles;
+  public $deviceFiles = [];
   /**
    * @var string
    */
   public $deviceId;
   protected $diskVolumeReportsType = ChromeOsDeviceDiskVolumeReports::class;
   protected $diskVolumeReportsDataType = 'array';
-  public $diskVolumeReports;
+  public $diskVolumeReports = [];
   /**
    * @var string
    */
@@ -101,7 +101,7 @@ class ChromeOsDevice extends \Google\Collection
   public $lastEnrollmentTime;
   protected $lastKnownNetworkType = ChromeOsDeviceLastKnownNetwork::class;
   protected $lastKnownNetworkDataType = 'array';
-  public $lastKnownNetwork;
+  public $lastKnownNetwork = [];
   /**
    * @var string
    */
@@ -151,10 +151,10 @@ class ChromeOsDevice extends \Google\Collection
   public $platformVersion;
   protected $recentUsersType = ChromeOsDeviceRecentUsers::class;
   protected $recentUsersDataType = 'array';
-  public $recentUsers;
+  public $recentUsers = [];
   protected $screenshotFilesType = ChromeOsDeviceScreenshotFiles::class;
   protected $screenshotFilesDataType = 'array';
-  public $screenshotFiles;
+  public $screenshotFiles = [];
   /**
    * @var string
    */
@@ -169,7 +169,7 @@ class ChromeOsDevice extends \Google\Collection
   public $supportEndDate;
   protected $systemRamFreeReportsType = ChromeOsDeviceSystemRamFreeReports::class;
   protected $systemRamFreeReportsDataType = 'array';
-  public $systemRamFreeReports;
+  public $systemRamFreeReports = [];
   /**
    * @var string
    */

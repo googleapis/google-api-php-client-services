@@ -26,7 +26,7 @@ class KnowledgeAnswersMarkerOpenQuestion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $slotName;
+  public $slotName = [];
 
   /**
    * @param KnowledgeAnswersMeaningSchemaSlotKey

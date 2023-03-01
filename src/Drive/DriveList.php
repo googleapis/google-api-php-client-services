@@ -22,7 +22,7 @@ class DriveList extends \Google\Collection
   protected $collection_key = 'drives';
   protected $drivesType = Drive::class;
   protected $drivesDataType = 'array';
-  public $drives;
+  public $drives = [];
   /**
    * @var string
    */

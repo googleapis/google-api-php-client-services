@@ -22,7 +22,7 @@ class LensDiscoveryStylePersonDetectionSignals extends \Google\Collection
   protected $collection_key = 'detectedPersons';
   protected $detectedPersonsType = LensDiscoveryStylePersonDetectionSignalsDetectedPerson::class;
   protected $detectedPersonsDataType = 'array';
-  public $detectedPersons;
+  public $detectedPersons = [];
   /**
    * @var string
    */

@@ -27,7 +27,7 @@ class AssistantApiAndroidIntentCapabilitiesAndroidIntentCapability extends \Goog
   /**
    * @var string[]
    */
-  public $packageNames;
+  public $packageNames = [];
 
   /**
    * @param string

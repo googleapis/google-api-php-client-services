@@ -34,7 +34,7 @@ class Course extends \Google\Collection
   public $courseGroupEmail;
   protected $courseMaterialSetsType = CourseMaterialSet::class;
   protected $courseMaterialSetsDataType = 'array';
-  public $courseMaterialSets;
+  public $courseMaterialSets = [];
   /**
    * @var string
    */

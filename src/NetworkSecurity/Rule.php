@@ -22,10 +22,10 @@ class Rule extends \Google\Collection
   protected $collection_key = 'sources';
   protected $destinationsType = Destination::class;
   protected $destinationsDataType = 'array';
-  public $destinations;
+  public $destinations = [];
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
 
   /**
    * @param Destination[]

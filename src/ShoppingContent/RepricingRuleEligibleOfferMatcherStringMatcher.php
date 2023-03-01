@@ -23,7 +23,7 @@ class RepricingRuleEligibleOfferMatcherStringMatcher extends \Google\Collection
   /**
    * @var string[]
    */
-  public $strAttributes;
+  public $strAttributes = [];
 
   /**
    * @param string[]

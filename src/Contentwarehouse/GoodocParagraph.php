@@ -73,7 +73,7 @@ class GoodocParagraph extends \Google\Collection
   public $spaceBefore;
   protected $subsumedParagraphPropertiesType = GoodocParagraph::class;
   protected $subsumedParagraphPropertiesDataType = 'array';
-  public $subsumedParagraphProperties;
+  public $subsumedParagraphProperties = [];
   /**
    * @var int
    */
@@ -91,7 +91,7 @@ class GoodocParagraph extends \Google\Collection
   public $droppedcap;
   protected $routeType = GoodocParagraphRoute::class;
   protected $routeDataType = 'array';
-  public $route;
+  public $route = [];
 
   /**
    * @param GoodocBoundingBox

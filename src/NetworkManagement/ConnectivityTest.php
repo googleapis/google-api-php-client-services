@@ -38,7 +38,7 @@ class ConnectivityTest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class ConnectivityTest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relatedProjects;
+  public $relatedProjects = [];
   protected $sourceType = Endpoint::class;
   protected $sourceDataType = '';
   public $source;

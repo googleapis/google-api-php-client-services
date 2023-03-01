@@ -22,7 +22,7 @@ class ListContainersResponse extends \Google\Collection
   protected $collection_key = 'container';
   protected $containerType = Container::class;
   protected $containerDataType = 'array';
-  public $container;
+  public $container = [];
   /**
    * @var string
    */

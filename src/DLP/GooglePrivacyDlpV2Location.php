@@ -31,7 +31,7 @@ class GooglePrivacyDlpV2Location extends \Google\Collection
   public $container;
   protected $contentLocationsType = GooglePrivacyDlpV2ContentLocation::class;
   protected $contentLocationsDataType = 'array';
-  public $contentLocations;
+  public $contentLocations = [];
 
   /**
    * @param GooglePrivacyDlpV2Range

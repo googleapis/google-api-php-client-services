@@ -28,7 +28,7 @@ class QualityCalypsoAppsUniversalImageData extends \Google\Collection
   public $featureGraphic;
   protected $screenshotType = QualityCalypsoAppsUniversalImage::class;
   protected $screenshotDataType = 'array';
-  public $screenshot;
+  public $screenshot = [];
 
   /**
    * @param QualityCalypsoAppsUniversalImage

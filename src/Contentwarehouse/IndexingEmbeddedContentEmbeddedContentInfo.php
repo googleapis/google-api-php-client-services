@@ -47,7 +47,7 @@ class IndexingEmbeddedContentEmbeddedContentInfo extends \Google\Collection
   public $rawRedirectInfo;
   protected $referencedResourceType = HtmlrenderWebkitHeadlessProtoReferencedResource::class;
   protected $referencedResourceDataType = 'array';
-  public $referencedResource;
+  public $referencedResource = [];
   protected $renderedSnapshotType = HtmlrenderWebkitHeadlessProtoImage::class;
   protected $renderedSnapshotDataType = '';
   public $renderedSnapshot;

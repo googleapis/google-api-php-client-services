@@ -31,38 +31,38 @@ class Document extends \Google\Model
   public $documentStyle;
   protected $footersType = Footer::class;
   protected $footersDataType = 'map';
-  public $footers;
+  public $footers = [];
   protected $footnotesType = Footnote::class;
   protected $footnotesDataType = 'map';
-  public $footnotes;
+  public $footnotes = [];
   protected $headersType = Header::class;
   protected $headersDataType = 'map';
-  public $headers;
+  public $headers = [];
   protected $inlineObjectsType = InlineObject::class;
   protected $inlineObjectsDataType = 'map';
-  public $inlineObjects;
+  public $inlineObjects = [];
   protected $listsType = DocsList::class;
   protected $listsDataType = 'map';
-  public $lists;
+  public $lists = [];
   protected $namedRangesType = NamedRanges::class;
   protected $namedRangesDataType = 'map';
-  public $namedRanges;
+  public $namedRanges = [];
   protected $namedStylesType = NamedStyles::class;
   protected $namedStylesDataType = '';
   public $namedStyles;
   protected $positionedObjectsType = PositionedObject::class;
   protected $positionedObjectsDataType = 'map';
-  public $positionedObjects;
+  public $positionedObjects = [];
   /**
    * @var string
    */
   public $revisionId;
   protected $suggestedDocumentStyleChangesType = SuggestedDocumentStyle::class;
   protected $suggestedDocumentStyleChangesDataType = 'map';
-  public $suggestedDocumentStyleChanges;
+  public $suggestedDocumentStyleChanges = [];
   protected $suggestedNamedStylesChangesType = SuggestedNamedStyles::class;
   protected $suggestedNamedStylesChangesDataType = 'map';
-  public $suggestedNamedStylesChanges;
+  public $suggestedNamedStylesChanges = [];
   /**
    * @var string
    */

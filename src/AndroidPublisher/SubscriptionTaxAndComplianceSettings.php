@@ -25,7 +25,7 @@ class SubscriptionTaxAndComplianceSettings extends \Google\Model
   public $eeaWithdrawalRightType;
   protected $taxRateInfoByRegionCodeType = RegionalTaxRateInfo::class;
   protected $taxRateInfoByRegionCodeDataType = 'map';
-  public $taxRateInfoByRegionCode;
+  public $taxRateInfoByRegionCode = [];
 
   /**
    * @param string

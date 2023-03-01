@@ -22,7 +22,7 @@ class DataSource extends \Google\Collection
   protected $collection_key = 'calculatedColumns';
   protected $calculatedColumnsType = DataSourceColumn::class;
   protected $calculatedColumnsDataType = 'array';
-  public $calculatedColumns;
+  public $calculatedColumns = [];
   /**
    * @var string
    */

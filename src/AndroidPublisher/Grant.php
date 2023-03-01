@@ -23,7 +23,7 @@ class Grant extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appLevelPermissions;
+  public $appLevelPermissions = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1IngressConfig extends \Google\Collection
   protected $collection_key = 'environmentGroups';
   protected $environmentGroupsType = GoogleCloudApigeeV1EnvironmentGroupConfig::class;
   protected $environmentGroupsDataType = 'array';
-  public $environmentGroups;
+  public $environmentGroups = [];
   /**
    * @var string
    */

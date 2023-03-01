@@ -22,7 +22,7 @@ class GeostoreTimeBasedRateProto extends \Google\Collection
   protected $collection_key = 'durationBasedRate';
   protected $durationBasedRateType = GeostoreDurationBasedRateProto::class;
   protected $durationBasedRateDataType = 'array';
-  public $durationBasedRate;
+  public $durationBasedRate = [];
   /**
    * @var bool
    */

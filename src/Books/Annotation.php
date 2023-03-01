@@ -68,7 +68,7 @@ class Annotation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pageIds;
+  public $pageIds = [];
   /**
    * @var string
    */

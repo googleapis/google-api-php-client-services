@@ -22,7 +22,7 @@ class HtmlrenderWebkitHeadlessProtoPartialRender extends \Google\Collection
   protected $collection_key = 'cookie';
   protected $cookieType = HtmlrenderWebkitHeadlessProtoCookie::class;
   protected $cookieDataType = 'array';
-  public $cookie;
+  public $cookie = [];
   /**
    * @var string
    */

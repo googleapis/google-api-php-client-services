@@ -22,7 +22,7 @@ class Buildings extends \Google\Collection
   protected $collection_key = 'buildings';
   protected $buildingsType = Building::class;
   protected $buildingsDataType = 'array';
-  public $buildings;
+  public $buildings = [];
   /**
    * @var string
    */

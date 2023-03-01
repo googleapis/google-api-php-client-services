@@ -22,7 +22,7 @@ class NlpSemanticParsingLocalBasicLocation extends \Google\Collection
   protected $collection_key = 'element';
   protected $elementType = NlpSemanticParsingLocalLocationElement::class;
   protected $elementDataType = 'array';
-  public $element;
+  public $element = [];
 
   /**
    * @param NlpSemanticParsingLocalLocationElement[]

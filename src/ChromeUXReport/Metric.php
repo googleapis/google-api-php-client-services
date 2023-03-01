@@ -22,7 +22,7 @@ class Metric extends \Google\Collection
   protected $collection_key = 'histogram';
   protected $histogramType = Bin::class;
   protected $histogramDataType = 'array';
-  public $histogram;
+  public $histogram = [];
   protected $percentilesType = Percentiles::class;
   protected $percentilesDataType = '';
   public $percentiles;

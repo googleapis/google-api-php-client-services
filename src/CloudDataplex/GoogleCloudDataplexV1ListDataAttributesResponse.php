@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1ListDataAttributesResponse extends \Google\Collection
   protected $collection_key = 'unreachableLocations';
   protected $dataAttributesType = GoogleCloudDataplexV1DataAttribute::class;
   protected $dataAttributesDataType = 'array';
-  public $dataAttributes;
+  public $dataAttributes = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class GoogleCloudDataplexV1ListDataAttributesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachableLocations;
+  public $unreachableLocations = [];
 
   /**
    * @param GoogleCloudDataplexV1DataAttribute[]

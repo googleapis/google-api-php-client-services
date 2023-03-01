@@ -34,14 +34,14 @@ class ClientTlsPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
   public $name;
   protected $serverValidationCaType = ValidationCA::class;
   protected $serverValidationCaDataType = 'array';
-  public $serverValidationCa;
+  public $serverValidationCa = [];
   /**
    * @var string
    */

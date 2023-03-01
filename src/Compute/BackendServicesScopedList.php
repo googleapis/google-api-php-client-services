@@ -22,7 +22,7 @@ class BackendServicesScopedList extends \Google\Collection
   protected $collection_key = 'backendServices';
   protected $backendServicesType = BackendService::class;
   protected $backendServicesDataType = 'array';
-  public $backendServices;
+  public $backendServices = [];
   protected $warningType = BackendServicesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

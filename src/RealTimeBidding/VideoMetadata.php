@@ -34,7 +34,7 @@ class VideoMetadata extends \Google\Collection
   public $isVpaid;
   protected $mediaFilesType = MediaFile::class;
   protected $mediaFilesDataType = 'array';
-  public $mediaFiles;
+  public $mediaFiles = [];
   /**
    * @var string
    */

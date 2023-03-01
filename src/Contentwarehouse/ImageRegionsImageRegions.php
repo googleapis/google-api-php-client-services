@@ -56,7 +56,7 @@ class ImageRegionsImageRegions extends \Google\Collection
   public $racyScore;
   protected $regionType = ImageRegionsImageRegion::class;
   protected $regionDataType = 'array';
-  public $region;
+  public $region = [];
 
   /**
    * @param float

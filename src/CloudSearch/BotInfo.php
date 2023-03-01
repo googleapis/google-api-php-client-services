@@ -61,7 +61,7 @@ class BotInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedUses;
+  public $supportedUses = [];
 
   /**
    * @param string

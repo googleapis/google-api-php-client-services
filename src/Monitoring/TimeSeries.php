@@ -32,7 +32,7 @@ class TimeSeries extends \Google\Collection
   public $metricKind;
   protected $pointsType = Point::class;
   protected $pointsDataType = 'array';
-  public $points;
+  public $points = [];
   protected $resourceType = MonitoredResource::class;
   protected $resourceDataType = '';
   public $resource;

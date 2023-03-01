@@ -31,7 +31,7 @@ class UpdateDatabaseDdlRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $statements;
+  public $statements = [];
 
   /**
    * @param string

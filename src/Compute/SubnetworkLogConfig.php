@@ -43,7 +43,7 @@ class SubnetworkLogConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadataFields;
+  public $metadataFields = [];
 
   /**
    * @param string

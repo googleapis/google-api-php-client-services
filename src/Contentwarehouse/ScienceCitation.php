@@ -154,7 +154,7 @@ class ScienceCitation extends \Google\Collection
   public $alternateVersionID;
   protected $anchorsType = ScienceCitationAnchor::class;
   protected $anchorsDataType = 'array';
-  public $anchors;
+  public $anchors = [];
   /**
    * @var string
    */
@@ -250,7 +250,7 @@ class ScienceCitation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $editor;
+  public $editor = [];
   /**
    * @var int
    */
@@ -270,7 +270,7 @@ class ScienceCitation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $iSBNVariant;
+  public $iSBNVariant = [];
   /**
    * @var string
    */
@@ -278,7 +278,7 @@ class ScienceCitation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $iSSNVariant;
+  public $iSSNVariant = [];
   /**
    * @var bool
    */
@@ -290,7 +290,7 @@ class ScienceCitation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keywords;
+  public $keywords = [];
   /**
    * @var string
    */
@@ -401,11 +401,11 @@ class ScienceCitation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $patentClassification;
+  public $patentClassification = [];
   /**
    * @var string[]
    */
-  public $patentCountry;
+  public $patentCountry = [];
   /**
    * @var string
    */
@@ -433,7 +433,7 @@ class ScienceCitation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $publicationVenueVariant;
+  public $publicationVenueVariant = [];
   /**
    * @var int
    */
@@ -489,11 +489,11 @@ class ScienceCitation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unmatchedEmailAddr;
+  public $unmatchedEmailAddr = [];
   /**
    * @var string[]
    */
-  public $unmatchedInstitution;
+  public $unmatchedInstitution = [];
   /**
    * @var string
    */
@@ -512,37 +512,37 @@ class ScienceCitation extends \Google\Collection
   public $worldViewable;
   protected $accessurlType = ScienceCitationAccessURL::class;
   protected $accessurlDataType = 'array';
-  public $accessurl;
+  public $accessurl = [];
   protected $alternateabstractType = ScienceCitationAlternateAbstract::class;
   protected $alternateabstractDataType = 'array';
-  public $alternateabstract;
+  public $alternateabstract = [];
   protected $alternatetitleType = ScienceCitationAlternateTitle::class;
   protected $alternatetitleDataType = 'array';
-  public $alternatetitle;
+  public $alternatetitle = [];
   protected $authorType = ScienceCitationAuthor::class;
   protected $authorDataType = 'array';
-  public $author;
+  public $author = [];
   protected $categoryType = ScienceCitationCategory::class;
   protected $categoryDataType = 'array';
-  public $category;
+  public $category = [];
   protected $downloadurlType = ScienceCitationDownloadURL::class;
   protected $downloadurlDataType = 'array';
-  public $downloadurl;
+  public $downloadurl = [];
   protected $fundingType = ScienceCitationFunding::class;
   protected $fundingDataType = 'array';
-  public $funding;
+  public $funding = [];
   protected $referencediscussionType = ScienceCitationReferenceDiscussion::class;
   protected $referencediscussionDataType = 'array';
-  public $referencediscussion;
+  public $referencediscussion = [];
   protected $subjectType = ScienceCitationSubject::class;
   protected $subjectDataType = 'array';
-  public $subject;
+  public $subject = [];
   protected $translatedauthorType = ScienceCitationTranslatedAuthor::class;
   protected $translatedauthorDataType = 'array';
-  public $translatedauthor;
+  public $translatedauthor = [];
   protected $unioncatalogType = ScienceCitationUnionCatalog::class;
   protected $unioncatalogDataType = 'array';
-  public $unioncatalog;
+  public $unioncatalog = [];
 
   /**
    * @param int

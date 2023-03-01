@@ -22,7 +22,7 @@ class Feedback extends \Google\Collection
   protected $collection_key = 'material';
   protected $materialType = ExtraMaterial::class;
   protected $materialDataType = 'array';
-  public $material;
+  public $material = [];
   /**
    * @var string
    */

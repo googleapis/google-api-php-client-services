@@ -35,7 +35,7 @@ class AssistantApiActionV2SupportedFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedActionType;
+  public $supportedActionType = [];
   /**
    * @var bool
    */

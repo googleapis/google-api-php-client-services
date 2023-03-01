@@ -23,15 +23,15 @@ class AdTechnologyProviders extends \Google\Collection
   /**
    * @var string[]
    */
-  public $detectedGvlIds;
+  public $detectedGvlIds = [];
   /**
    * @var string[]
    */
-  public $detectedProviderIds;
+  public $detectedProviderIds = [];
   /**
    * @var string[]
    */
-  public $unidentifiedProviderDomains;
+  public $unidentifiedProviderDomains = [];
 
   /**
    * @param string[]

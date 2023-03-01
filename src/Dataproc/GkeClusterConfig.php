@@ -29,7 +29,7 @@ class GkeClusterConfig extends \Google\Collection
   public $namespacedGkeDeploymentTarget;
   protected $nodePoolTargetType = GkeNodePoolTarget::class;
   protected $nodePoolTargetDataType = 'array';
-  public $nodePoolTarget;
+  public $nodePoolTarget = [];
 
   /**
    * @param string

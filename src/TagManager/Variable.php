@@ -31,11 +31,11 @@ class Variable extends \Google\Collection
   /**
    * @var string[]
    */
-  public $disablingTriggerId;
+  public $disablingTriggerId = [];
   /**
    * @var string[]
    */
-  public $enablingTriggerId;
+  public $enablingTriggerId = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class Variable extends \Google\Collection
   public $notes;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
-  public $parameter;
+  public $parameter = [];
   /**
    * @var string
    */

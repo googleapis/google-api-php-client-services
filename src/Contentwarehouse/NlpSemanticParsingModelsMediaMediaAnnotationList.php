@@ -22,7 +22,7 @@ class NlpSemanticParsingModelsMediaMediaAnnotationList extends \Google\Collectio
   protected $collection_key = 'annotation';
   protected $annotationType = NlpSemanticParsingModelsMediaMediaAnnotation::class;
   protected $annotationDataType = 'array';
-  public $annotation;
+  public $annotation = [];
 
   /**
    * @param NlpSemanticParsingModelsMediaMediaAnnotation[]

@@ -26,11 +26,11 @@ class WriteLogEntriesRequest extends \Google\Collection
   public $dryRun;
   protected $entriesType = LogEntry::class;
   protected $entriesDataType = 'array';
-  public $entries;
+  public $entries = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

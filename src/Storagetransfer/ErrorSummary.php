@@ -30,7 +30,7 @@ class ErrorSummary extends \Google\Collection
   public $errorCount;
   protected $errorLogEntriesType = ErrorLogEntry::class;
   protected $errorLogEntriesDataType = 'array';
-  public $errorLogEntries;
+  public $errorLogEntries = [];
 
   /**
    * @param string

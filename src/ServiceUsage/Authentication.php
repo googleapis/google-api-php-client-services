@@ -22,10 +22,10 @@ class Authentication extends \Google\Collection
   protected $collection_key = 'rules';
   protected $providersType = AuthProvider::class;
   protected $providersDataType = 'array';
-  public $providers;
+  public $providers = [];
   protected $rulesType = AuthenticationRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
 
   /**
    * @param AuthProvider[]

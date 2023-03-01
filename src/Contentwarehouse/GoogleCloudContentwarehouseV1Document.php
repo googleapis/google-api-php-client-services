@@ -61,7 +61,7 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   public $plainText;
   protected $propertiesType = GoogleCloudContentwarehouseV1Property::class;
   protected $propertiesDataType = 'array';
-  public $properties;
+  public $properties = [];
   /**
    * @var string
    */

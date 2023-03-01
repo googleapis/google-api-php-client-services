@@ -34,7 +34,7 @@ class Placement extends \Google\Collection
   public $adBlockingOptOut;
   protected $additionalSizesType = Size::class;
   protected $additionalSizesDataType = 'array';
-  public $additionalSizes;
+  public $additionalSizes = [];
   /**
    * @var string
    */
@@ -157,7 +157,7 @@ class Placement extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tagFormats;
+  public $tagFormats = [];
   protected $tagSettingType = TagSetting::class;
   protected $tagSettingDataType = '';
   public $tagSetting;

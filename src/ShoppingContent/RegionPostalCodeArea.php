@@ -22,7 +22,7 @@ class RegionPostalCodeArea extends \Google\Collection
   protected $collection_key = 'postalCodes';
   protected $postalCodesType = RegionPostalCodeAreaPostalCodeRange::class;
   protected $postalCodesDataType = 'array';
-  public $postalCodes;
+  public $postalCodes = [];
   /**
    * @var string
    */

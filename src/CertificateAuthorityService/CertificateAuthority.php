@@ -25,7 +25,7 @@ class CertificateAuthority extends \Google\Collection
   public $accessUrls;
   protected $caCertificateDescriptionsType = CertificateDescription::class;
   protected $caCertificateDescriptionsDataType = 'array';
-  public $caCertificateDescriptions;
+  public $caCertificateDescriptions = [];
   protected $configType = CertificateConfig::class;
   protected $configDataType = '';
   public $config;
@@ -51,7 +51,7 @@ class CertificateAuthority extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -63,7 +63,7 @@ class CertificateAuthority extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pemCaCertificates;
+  public $pemCaCertificates = [];
   /**
    * @var string
    */

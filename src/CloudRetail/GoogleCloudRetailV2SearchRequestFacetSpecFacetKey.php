@@ -27,10 +27,10 @@ class GoogleCloudRetailV2SearchRequestFacetSpecFacetKey extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $contains;
+  public $contains = [];
   protected $intervalsType = GoogleCloudRetailV2Interval::class;
   protected $intervalsDataType = 'array';
-  public $intervals;
+  public $intervals = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class GoogleCloudRetailV2SearchRequestFacetSpecFacetKey extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $prefixes;
+  public $prefixes = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class GoogleCloudRetailV2SearchRequestFacetSpecFacetKey extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $restrictedValues;
+  public $restrictedValues = [];
   /**
    * @var bool
    */

@@ -23,7 +23,7 @@ class GmailMessageInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attachmentsSha256Hash;
+  public $attachmentsSha256Hash = [];
   /**
    * @var string
    */

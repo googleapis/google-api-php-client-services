@@ -25,7 +25,7 @@ class AssistantApiOemCapabilities extends \Google\Model
   /**
    * @var array[]
    */
-  public $cloudDeviceCapabilities;
+  public $cloudDeviceCapabilities = [];
   /**
    * @var string
    */

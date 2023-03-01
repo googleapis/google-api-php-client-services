@@ -48,7 +48,7 @@ class AdministrativeBody extends \Google\Collection
   public $electionNoticeUrl;
   protected $electionOfficialsType = ElectionOfficial::class;
   protected $electionOfficialsDataType = 'array';
-  public $electionOfficials;
+  public $electionOfficials = [];
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class AdministrativeBody extends \Google\Collection
   /**
    * @var string[]
    */
-  public $voterServices;
+  public $voterServices = [];
   /**
    * @var string
    */

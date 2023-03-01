@@ -30,7 +30,7 @@ class AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo extends \Google\Co
   public $accountType;
   protected $appContactDataType = SocialGraphApiAppContactData::class;
   protected $appContactDataDataType = 'array';
-  public $appContactData;
+  public $appContactData = [];
   protected $appInfoType = AppsPeopleOzExternalMergedpeopleapiAppUniqueInfo::class;
   protected $appInfoDataType = '';
   public $appInfo;

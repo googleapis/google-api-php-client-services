@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ListDatastoresResponse extends \Google\Collection
   protected $collection_key = 'datastores';
   protected $datastoresType = GoogleCloudApigeeV1Datastore::class;
   protected $datastoresDataType = 'array';
-  public $datastores;
+  public $datastores = [];
 
   /**
    * @param GoogleCloudApigeeV1Datastore[]

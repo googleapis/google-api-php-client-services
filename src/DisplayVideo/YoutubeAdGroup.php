@@ -60,7 +60,7 @@ class YoutubeAdGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $youtubeAdIds;
+  public $youtubeAdIds = [];
 
   /**
    * @param string

@@ -23,7 +23,7 @@ class LocationContext extends \Google\Collection
   /**
    * @var int[]
    */
-  public $geoCriteriaIds;
+  public $geoCriteriaIds = [];
 
   /**
    * @param int[]

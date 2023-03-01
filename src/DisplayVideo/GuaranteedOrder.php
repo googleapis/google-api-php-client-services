@@ -59,7 +59,7 @@ class GuaranteedOrder extends \Google\Collection
   /**
    * @var string[]
    */
-  public $readAdvertiserIds;
+  public $readAdvertiserIds = [];
   /**
    * @var string
    */

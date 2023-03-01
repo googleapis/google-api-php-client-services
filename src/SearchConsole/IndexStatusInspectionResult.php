@@ -47,7 +47,7 @@ class IndexStatusInspectionResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referringUrls;
+  public $referringUrls = [];
   /**
    * @var string
    */
@@ -55,7 +55,7 @@ class IndexStatusInspectionResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sitemap;
+  public $sitemap = [];
   /**
    * @var string
    */

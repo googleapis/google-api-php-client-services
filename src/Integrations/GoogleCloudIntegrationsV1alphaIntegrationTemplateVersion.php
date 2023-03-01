@@ -34,7 +34,7 @@ class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion extends \Google\C
   public $description;
   protected $errorCatcherConfigsType = GoogleCloudIntegrationsV1alphaErrorCatcherConfig::class;
   protected $errorCatcherConfigsDataType = 'array';
-  public $errorCatcherConfigs;
+  public $errorCatcherConfigs = [];
   /**
    * @var string
    */
@@ -57,7 +57,7 @@ class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion extends \Google\C
   public $status;
   protected $taskConfigsType = EnterpriseCrmFrontendsEventbusProtoTaskConfig::class;
   protected $taskConfigsDataType = 'array';
-  public $taskConfigs;
+  public $taskConfigs = [];
   protected $teardownType = EnterpriseCrmEventbusProtoTeardown::class;
   protected $teardownDataType = '';
   public $teardown;
@@ -66,7 +66,7 @@ class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion extends \Google\C
   public $templateParameters;
   protected $triggerConfigsType = EnterpriseCrmFrontendsEventbusProtoTriggerConfig::class;
   protected $triggerConfigsDataType = 'array';
-  public $triggerConfigs;
+  public $triggerConfigs = [];
   /**
    * @var string
    */

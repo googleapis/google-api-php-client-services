@@ -22,7 +22,7 @@ class MysqlRdbms extends \Google\Collection
   protected $collection_key = 'mysqlDatabases';
   protected $mysqlDatabasesType = MysqlDatabase::class;
   protected $mysqlDatabasesDataType = 'array';
-  public $mysqlDatabases;
+  public $mysqlDatabases = [];
 
   /**
    * @param MysqlDatabase[]

@@ -26,11 +26,11 @@ class ListRolloutsResponse extends \Google\Collection
   public $nextPageToken;
   protected $rolloutsType = Rollout::class;
   protected $rolloutsDataType = 'array';
-  public $rollouts;
+  public $rollouts = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

@@ -23,7 +23,7 @@ class GoogleCloudDataplexV1DataAttributeBindingPath extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributes;
+  public $attributes = [];
   /**
    * @var string
    */

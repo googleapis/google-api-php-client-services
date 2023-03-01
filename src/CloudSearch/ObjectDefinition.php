@@ -29,7 +29,7 @@ class ObjectDefinition extends \Google\Collection
   public $options;
   protected $propertyDefinitionsType = PropertyDefinition::class;
   protected $propertyDefinitionsDataType = 'array';
-  public $propertyDefinitions;
+  public $propertyDefinitions = [];
 
   /**
    * @param string

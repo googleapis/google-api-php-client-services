@@ -30,7 +30,7 @@ class GoogleFirestoreAdminV1FieldOperationMetadata extends \Google\Collection
   public $field;
   protected $indexConfigDeltasType = GoogleFirestoreAdminV1IndexConfigDelta::class;
   protected $indexConfigDeltasDataType = 'array';
-  public $indexConfigDeltas;
+  public $indexConfigDeltas = [];
   protected $progressBytesType = GoogleFirestoreAdminV1Progress::class;
   protected $progressBytesDataType = '';
   public $progressBytes;

@@ -50,7 +50,7 @@ class DataPoint extends \Google\Collection
   public $startTimeNanos;
   protected $valueType = Value::class;
   protected $valueDataType = 'array';
-  public $value;
+  public $value = [];
 
   /**
    * @param string

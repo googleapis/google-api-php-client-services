@@ -22,7 +22,7 @@ class ChannelGroupingRule extends \Google\Collection
   protected $collection_key = 'disjunctiveMatchStatements';
   protected $disjunctiveMatchStatementsType = DisjunctiveMatchStatement::class;
   protected $disjunctiveMatchStatementsDataType = 'array';
-  public $disjunctiveMatchStatements;
+  public $disjunctiveMatchStatements = [];
   /**
    * @var string
    */

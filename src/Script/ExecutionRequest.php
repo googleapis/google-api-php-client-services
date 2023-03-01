@@ -31,7 +31,7 @@ class ExecutionRequest extends \Google\Collection
   /**
    * @var array[]
    */
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */

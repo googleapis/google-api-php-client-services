@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1AddToFolderAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $folders;
+  public $folders = [];
 
   /**
    * @param string[]

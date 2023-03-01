@@ -23,11 +23,11 @@ class GeostoreAddressRangeProto extends \Google\Collection
   /**
    * @var int[]
    */
-  public $number;
+  public $number = [];
   /**
    * @var float[]
    */
-  public $parameter;
+  public $parameter = [];
   /**
    * @var string
    */

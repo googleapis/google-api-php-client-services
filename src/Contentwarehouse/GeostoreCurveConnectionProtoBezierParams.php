@@ -22,7 +22,7 @@ class GeostoreCurveConnectionProtoBezierParams extends \Google\Collection
   protected $collection_key = 'controlPoint';
   protected $controlPointType = GeostoreCurveConnectionProtoBezierParamsControlPoint::class;
   protected $controlPointDataType = 'array';
-  public $controlPoint;
+  public $controlPoint = [];
 
   /**
    * @param GeostoreCurveConnectionProtoBezierParamsControlPoint[]

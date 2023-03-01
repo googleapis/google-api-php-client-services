@@ -27,7 +27,7 @@ class GoogleCloudContentwarehouseV1WeightedSchemaProperty extends \Google\Collec
   /**
    * @var string[]
    */
-  public $propertyNames;
+  public $propertyNames = [];
 
   /**
    * @param string

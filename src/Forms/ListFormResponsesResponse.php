@@ -26,7 +26,7 @@ class ListFormResponsesResponse extends \Google\Collection
   public $nextPageToken;
   protected $responsesType = FormResponse::class;
   protected $responsesDataType = 'array';
-  public $responses;
+  public $responses = [];
 
   /**
    * @param string

@@ -60,7 +60,7 @@ class NlpSemanticParsingDatetimeDateTimeProperty extends \Google\Collection
   /**
    * @var string[]
    */
-  public $timeFormat;
+  public $timeFormat = [];
   /**
    * @var bool
    */

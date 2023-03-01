@@ -32,7 +32,7 @@ class GoogleSecuritySafebrowsingV4ThreatHit extends \Google\Collection
   public $platformType;
   protected $resourcesType = GoogleSecuritySafebrowsingV4ThreatHitThreatSource::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
   /**
    * @var string
    */

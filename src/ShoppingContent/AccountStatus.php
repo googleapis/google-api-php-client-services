@@ -26,7 +26,7 @@ class AccountStatus extends \Google\Collection
   public $accountId;
   protected $accountLevelIssuesType = AccountStatusAccountLevelIssue::class;
   protected $accountLevelIssuesDataType = 'array';
-  public $accountLevelIssues;
+  public $accountLevelIssues = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class AccountStatus extends \Google\Collection
   public $kind;
   protected $productsType = AccountStatusProducts::class;
   protected $productsDataType = 'array';
-  public $products;
+  public $products = [];
   /**
    * @var bool
    */

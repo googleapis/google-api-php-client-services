@@ -29,7 +29,7 @@ class GoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation extends \Googl
   public $entity;
   protected $framesType = GoogleCloudVideointelligenceV1beta2ObjectTrackingFrame::class;
   protected $framesDataType = 'array';
-  public $frames;
+  public $frames = [];
   protected $segmentType = GoogleCloudVideointelligenceV1beta2VideoSegment::class;
   protected $segmentDataType = '';
   public $segment;

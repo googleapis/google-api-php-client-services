@@ -28,7 +28,7 @@ class GoogleCloudDialogflowCxV3WebhookResponse extends \Google\Model
   /**
    * @var array[]
    */
-  public $payload;
+  public $payload = [];
   protected $sessionInfoType = GoogleCloudDialogflowCxV3SessionInfo::class;
   protected $sessionInfoDataType = '';
   public $sessionInfo;

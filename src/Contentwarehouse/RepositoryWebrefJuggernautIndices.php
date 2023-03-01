@@ -23,7 +23,7 @@ class RepositoryWebrefJuggernautIndices extends \Google\Collection
   /**
    * @var int[]
    */
-  public $index;
+  public $index = [];
   /**
    * @var string
    */

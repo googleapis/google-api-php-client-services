@@ -22,7 +22,7 @@ class Routine extends \Google\Collection
   protected $collection_key = 'importedLibraries';
   protected $argumentsType = Argument::class;
   protected $argumentsDataType = 'array';
-  public $arguments;
+  public $arguments = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class Routine extends \Google\Collection
   /**
    * @var string[]
    */
-  public $importedLibraries;
+  public $importedLibraries = [];
   /**
    * @var string
    */

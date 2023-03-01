@@ -21,11 +21,11 @@ class Statement extends \Google\Model
 {
   protected $paramTypesType = Type::class;
   protected $paramTypesDataType = 'map';
-  public $paramTypes;
+  public $paramTypes = [];
   /**
    * @var array[]
    */
-  public $params;
+  public $params = [];
   /**
    * @var string
    */

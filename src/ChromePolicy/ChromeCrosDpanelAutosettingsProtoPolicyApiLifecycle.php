@@ -23,7 +23,7 @@ class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle extends \Google\Collec
   /**
    * @var string[]
    */
-  public $deprecatedInFavorOf;
+  public $deprecatedInFavorOf = [];
   /**
    * @var string
    */

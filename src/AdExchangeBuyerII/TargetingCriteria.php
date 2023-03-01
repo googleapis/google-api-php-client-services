@@ -22,10 +22,10 @@ class TargetingCriteria extends \Google\Collection
   protected $collection_key = 'inclusions';
   protected $exclusionsType = TargetingValue::class;
   protected $exclusionsDataType = 'array';
-  public $exclusions;
+  public $exclusions = [];
   protected $inclusionsType = TargetingValue::class;
   protected $inclusionsDataType = 'array';
-  public $inclusions;
+  public $inclusions = [];
   /**
    * @var string
    */

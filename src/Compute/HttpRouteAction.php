@@ -43,7 +43,7 @@ class HttpRouteAction extends \Google\Collection
   public $urlRewrite;
   protected $weightedBackendServicesType = WeightedBackendService::class;
   protected $weightedBackendServicesDataType = 'array';
-  public $weightedBackendServices;
+  public $weightedBackendServices = [];
 
   /**
    * @param CorsPolicy

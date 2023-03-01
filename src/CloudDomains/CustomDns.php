@@ -22,11 +22,11 @@ class CustomDns extends \Google\Collection
   protected $collection_key = 'nameServers';
   protected $dsRecordsType = DsRecord::class;
   protected $dsRecordsDataType = 'array';
-  public $dsRecords;
+  public $dsRecords = [];
   /**
    * @var string[]
    */
-  public $nameServers;
+  public $nameServers = [];
 
   /**
    * @param DsRecord[]

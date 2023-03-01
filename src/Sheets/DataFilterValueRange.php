@@ -30,7 +30,7 @@ class DataFilterValueRange extends \Google\Collection
   /**
    * @var array[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param DataFilter

@@ -22,7 +22,7 @@ class SendRfpRequest extends \Google\Collection
   protected $collection_key = 'buyerContacts';
   protected $buyerContactsType = Contact::class;
   protected $buyerContactsDataType = 'array';
-  public $buyerContacts;
+  public $buyerContacts = [];
   /**
    * @var string
    */

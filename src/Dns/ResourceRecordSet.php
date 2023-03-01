@@ -34,11 +34,11 @@ class ResourceRecordSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rrdatas;
+  public $rrdatas = [];
   /**
    * @var string[]
    */
-  public $signatureRrdatas;
+  public $signatureRrdatas = [];
   /**
    * @var int
    */

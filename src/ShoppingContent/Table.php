@@ -32,7 +32,7 @@ class Table extends \Google\Collection
   public $rowHeaders;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
 
   /**
    * @param Headers

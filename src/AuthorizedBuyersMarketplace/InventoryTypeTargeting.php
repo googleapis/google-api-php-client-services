@@ -23,7 +23,7 @@ class InventoryTypeTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inventoryTypes;
+  public $inventoryTypes = [];
 
   /**
    * @param string[]

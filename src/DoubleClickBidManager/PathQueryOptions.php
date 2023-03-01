@@ -25,7 +25,7 @@ class PathQueryOptions extends \Google\Collection
   public $channelGrouping;
   protected $pathFiltersType = PathFilter::class;
   protected $pathFiltersDataType = 'array';
-  public $pathFilters;
+  public $pathFilters = [];
 
   /**
    * @param ChannelGrouping

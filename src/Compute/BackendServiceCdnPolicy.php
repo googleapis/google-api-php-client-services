@@ -22,7 +22,7 @@ class BackendServiceCdnPolicy extends \Google\Collection
   protected $collection_key = 'signedUrlKeyNames';
   protected $bypassCacheOnRequestHeadersType = BackendServiceCdnPolicyBypassCacheOnRequestHeader::class;
   protected $bypassCacheOnRequestHeadersDataType = 'array';
-  public $bypassCacheOnRequestHeaders;
+  public $bypassCacheOnRequestHeaders = [];
   protected $cacheKeyPolicyType = CacheKeyPolicy::class;
   protected $cacheKeyPolicyDataType = '';
   public $cacheKeyPolicy;
@@ -48,7 +48,7 @@ class BackendServiceCdnPolicy extends \Google\Collection
   public $negativeCaching;
   protected $negativeCachingPolicyType = BackendServiceCdnPolicyNegativeCachingPolicy::class;
   protected $negativeCachingPolicyDataType = 'array';
-  public $negativeCachingPolicy;
+  public $negativeCachingPolicy = [];
   /**
    * @var bool
    */
@@ -64,7 +64,7 @@ class BackendServiceCdnPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $signedUrlKeyNames;
+  public $signedUrlKeyNames = [];
 
   /**
    * @param BackendServiceCdnPolicyBypassCacheOnRequestHeader[]

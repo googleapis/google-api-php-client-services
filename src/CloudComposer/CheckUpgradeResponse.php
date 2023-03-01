@@ -38,7 +38,7 @@ class CheckUpgradeResponse extends \Google\Model
   /**
    * @var string[]
    */
-  public $pypiDependencies;
+  public $pypiDependencies = [];
 
   /**
    * @param string

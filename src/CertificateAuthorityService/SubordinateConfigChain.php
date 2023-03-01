@@ -23,7 +23,7 @@ class SubordinateConfigChain extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pemCertificates;
+  public $pemCertificates = [];
 
   /**
    * @param string[]

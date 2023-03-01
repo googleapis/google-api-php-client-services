@@ -41,7 +41,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   public $freeTrialEndTime;
   protected $lineItemsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem::class;
   protected $lineItemsDataType = 'array';
-  public $lineItems;
+  public $lineItems = [];
   /**
    * @var string
    */
@@ -57,14 +57,14 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
   /**
    * @var string[]
    */
-  public $products;
+  public $products = [];
   protected $promotionSpecsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec::class;
   protected $promotionSpecsDataType = 'array';
-  public $promotionSpecs;
+  public $promotionSpecs = [];
   /**
    * @var string[]
    */
-  public $promotions;
+  public $promotions = [];
   /**
    * @var string
    */

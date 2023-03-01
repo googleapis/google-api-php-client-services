@@ -33,7 +33,7 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo extends \Google\Coll
   public $errorCode;
   protected $errorsType = EnterpriseCrmEventbusProtoErrorDetail::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   protected $eventExecutionDetailsType = EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails::class;
   protected $eventExecutionDetailsDataType = '';
   public $eventExecutionDetails;

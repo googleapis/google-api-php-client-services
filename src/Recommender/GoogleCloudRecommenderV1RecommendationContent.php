@@ -22,11 +22,11 @@ class GoogleCloudRecommenderV1RecommendationContent extends \Google\Collection
   protected $collection_key = 'operationGroups';
   protected $operationGroupsType = GoogleCloudRecommenderV1OperationGroup::class;
   protected $operationGroupsDataType = 'array';
-  public $operationGroups;
+  public $operationGroups = [];
   /**
    * @var array[]
    */
-  public $overview;
+  public $overview = [];
 
   /**
    * @param GoogleCloudRecommenderV1OperationGroup[]

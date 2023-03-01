@@ -23,7 +23,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload extends \Google\Co
   /**
    * @var string[]
    */
-  public $partnerEligibilityIds;
+  public $partnerEligibilityIds = [];
 
   /**
    * @param string[]

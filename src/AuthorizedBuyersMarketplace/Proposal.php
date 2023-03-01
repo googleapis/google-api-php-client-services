@@ -30,7 +30,7 @@ class Proposal extends \Google\Collection
   public $buyer;
   protected $buyerContactsType = Contact::class;
   protected $buyerContactsDataType = 'array';
-  public $buyerContacts;
+  public $buyerContacts = [];
   protected $buyerPrivateDataType = PrivateData::class;
   protected $buyerPrivateDataDataType = '';
   public $buyerPrivateData;
@@ -60,7 +60,7 @@ class Proposal extends \Google\Collection
   public $name;
   protected $notesType = Note::class;
   protected $notesDataType = 'array';
-  public $notes;
+  public $notes = [];
   /**
    * @var string
    */
@@ -79,7 +79,7 @@ class Proposal extends \Google\Collection
   public $publisherProfile;
   protected $sellerContactsType = Contact::class;
   protected $sellerContactsDataType = 'array';
-  public $sellerContacts;
+  public $sellerContacts = [];
   /**
    * @var string
    */

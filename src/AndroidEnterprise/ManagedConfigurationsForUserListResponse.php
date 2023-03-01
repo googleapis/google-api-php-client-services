@@ -22,7 +22,7 @@ class ManagedConfigurationsForUserListResponse extends \Google\Collection
   protected $collection_key = 'managedConfigurationForUser';
   protected $managedConfigurationForUserType = ManagedConfiguration::class;
   protected $managedConfigurationForUserDataType = 'array';
-  public $managedConfigurationForUser;
+  public $managedConfigurationForUser = [];
 
   /**
    * @param ManagedConfiguration[]

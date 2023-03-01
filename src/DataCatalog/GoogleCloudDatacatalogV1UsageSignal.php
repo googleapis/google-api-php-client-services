@@ -21,7 +21,7 @@ class GoogleCloudDatacatalogV1UsageSignal extends \Google\Model
 {
   protected $commonUsageWithinTimeRangeType = GoogleCloudDatacatalogV1CommonUsageStats::class;
   protected $commonUsageWithinTimeRangeDataType = 'map';
-  public $commonUsageWithinTimeRange;
+  public $commonUsageWithinTimeRange = [];
   /**
    * @var string
    */
@@ -32,7 +32,7 @@ class GoogleCloudDatacatalogV1UsageSignal extends \Google\Model
   public $updateTime;
   protected $usageWithinTimeRangeType = GoogleCloudDatacatalogV1UsageStats::class;
   protected $usageWithinTimeRangeDataType = 'map';
-  public $usageWithinTimeRange;
+  public $usageWithinTimeRange = [];
 
   /**
    * @param GoogleCloudDatacatalogV1CommonUsageStats[]

@@ -78,10 +78,10 @@ class Conversion extends \Google\Collection
   public $currencyCode;
   protected $customDimensionType = CustomDimension::class;
   protected $customDimensionDataType = 'array';
-  public $customDimension;
+  public $customDimension = [];
   protected $customMetricType = CustomMetric::class;
   protected $customMetricDataType = 'array';
-  public $customMetric;
+  public $customMetric = [];
   /**
    * @var string
    */

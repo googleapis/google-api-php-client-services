@@ -22,7 +22,7 @@ class ListLinkedAdUnitsResponse extends \Google\Collection
   protected $collection_key = 'adUnits';
   protected $adUnitsType = AdUnit::class;
   protected $adUnitsDataType = 'array';
-  public $adUnits;
+  public $adUnits = [];
   /**
    * @var string
    */

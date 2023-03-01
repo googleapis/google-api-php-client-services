@@ -38,7 +38,7 @@ class AccountSummary extends \Google\Collection
   public $starred;
   protected $webPropertiesType = WebPropertySummary::class;
   protected $webPropertiesDataType = 'array';
-  public $webProperties;
+  public $webProperties = [];
 
   /**
    * @param string

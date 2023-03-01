@@ -45,7 +45,7 @@ class Command extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resetPasswordFlags;
+  public $resetPasswordFlags = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class FunctionCall extends \Google\Collection
   /**
    * @var array[]
    */
-  public $args;
+  public $args = [];
   /**
    * @var string
    */

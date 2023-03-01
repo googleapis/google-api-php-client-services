@@ -21,7 +21,7 @@ class CommonEventObject extends \Google\Model
 {
   protected $formInputsType = Inputs::class;
   protected $formInputsDataType = 'map';
-  public $formInputs;
+  public $formInputs = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class CommonEventObject extends \Google\Model
   /**
    * @var string[]
    */
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */

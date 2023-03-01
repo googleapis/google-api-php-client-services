@@ -42,7 +42,7 @@ class ScienceCitationUnionCatalog extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subject;
+  public $subject = [];
   /**
    * @var string
    */

@@ -43,7 +43,7 @@ class Css extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labelIds;
+  public $labelIds = [];
 
   /**
    * @param string

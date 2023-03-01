@@ -22,7 +22,7 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   protected $collection_key = 'productDetails';
   protected $attributesType = GoogleCloudRetailV2CustomAttribute::class;
   protected $attributesDataType = 'map';
-  public $attributes;
+  public $attributes = [];
   /**
    * @var string
    */
@@ -45,7 +45,7 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $experimentIds;
+  public $experimentIds = [];
   /**
    * @var string
    */
@@ -61,14 +61,14 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pageCategories;
+  public $pageCategories = [];
   /**
    * @var string
    */
   public $pageViewId;
   protected $productDetailsType = GoogleCloudRetailV2ProductDetail::class;
   protected $productDetailsDataType = 'array';
-  public $productDetails;
+  public $productDetails = [];
   protected $purchaseTransactionType = GoogleCloudRetailV2PurchaseTransaction::class;
   protected $purchaseTransactionDataType = '';
   public $purchaseTransaction;

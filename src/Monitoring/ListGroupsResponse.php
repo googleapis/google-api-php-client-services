@@ -22,7 +22,7 @@ class ListGroupsResponse extends \Google\Collection
   protected $collection_key = 'group';
   protected $groupType = Group::class;
   protected $groupDataType = 'array';
-  public $group;
+  public $group = [];
   /**
    * @var string
    */

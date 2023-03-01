@@ -22,11 +22,11 @@ class GoogleIdentityAccesscontextmanagerV1IngressTo extends \Google\Collection
   protected $collection_key = 'resources';
   protected $operationsType = GoogleIdentityAccesscontextmanagerV1ApiOperation::class;
   protected $operationsDataType = 'array';
-  public $operations;
+  public $operations = [];
   /**
    * @var string[]
    */
-  public $resources;
+  public $resources = [];
 
   /**
    * @param GoogleIdentityAccesscontextmanagerV1ApiOperation[]

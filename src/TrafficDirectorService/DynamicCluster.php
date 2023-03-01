@@ -22,7 +22,7 @@ class DynamicCluster extends \Google\Model
   /**
    * @var array[]
    */
-  public $cluster;
+  public $cluster = [];
   /**
    * @var string
    */

@@ -41,11 +41,11 @@ class Registration extends \Google\Collection
   /**
    * @var string[]
    */
-  public $issues;
+  public $issues = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $managementSettingsType = ManagementSettings::class;
   protected $managementSettingsDataType = '';
   public $managementSettings;
@@ -67,7 +67,7 @@ class Registration extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedPrivacy;
+  public $supportedPrivacy = [];
   /**
    * @var string
    */

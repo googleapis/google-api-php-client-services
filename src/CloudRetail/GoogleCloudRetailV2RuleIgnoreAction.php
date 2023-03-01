@@ -23,7 +23,7 @@ class GoogleCloudRetailV2RuleIgnoreAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ignoreTerms;
+  public $ignoreTerms = [];
 
   /**
    * @param string[]

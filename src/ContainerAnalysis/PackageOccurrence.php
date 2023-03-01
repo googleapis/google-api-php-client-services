@@ -33,7 +33,7 @@ class PackageOccurrence extends \Google\Collection
   public $license;
   protected $locationType = Location::class;
   protected $locationDataType = 'array';
-  public $location;
+  public $location = [];
   /**
    * @var string
    */

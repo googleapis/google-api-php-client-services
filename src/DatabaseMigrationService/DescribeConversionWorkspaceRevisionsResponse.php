@@ -22,7 +22,7 @@ class DescribeConversionWorkspaceRevisionsResponse extends \Google\Collection
   protected $collection_key = 'revisions';
   protected $revisionsType = ConversionWorkspace::class;
   protected $revisionsDataType = 'array';
-  public $revisions;
+  public $revisions = [];
 
   /**
    * @param ConversionWorkspace[]

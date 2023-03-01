@@ -23,7 +23,7 @@ class AssistantDevicesPlatformProtoInternalCapability extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedAssistantSdkAuthProjectIds;
+  public $allowedAssistantSdkAuthProjectIds = [];
   /**
    * @var bool
    */

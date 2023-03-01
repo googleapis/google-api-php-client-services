@@ -42,10 +42,10 @@ class Metric extends \Google\Model
   public $hotValue;
   protected $indexedHotKeysType = IndexedHotKey::class;
   protected $indexedHotKeysDataType = 'map';
-  public $indexedHotKeys;
+  public $indexedHotKeys = [];
   protected $indexedKeyRangeInfosType = IndexedKeyRangeInfos::class;
   protected $indexedKeyRangeInfosDataType = 'map';
-  public $indexedKeyRangeInfos;
+  public $indexedKeyRangeInfos = [];
   protected $infoType = LocalizedString::class;
   protected $infoDataType = '';
   public $info;

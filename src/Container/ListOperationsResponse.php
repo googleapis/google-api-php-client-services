@@ -23,10 +23,10 @@ class ListOperationsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $missingZones;
+  public $missingZones = [];
   protected $operationsType = Operation::class;
   protected $operationsDataType = 'array';
-  public $operations;
+  public $operations = [];
 
   /**
    * @param string[]

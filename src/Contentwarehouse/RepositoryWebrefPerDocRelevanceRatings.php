@@ -26,13 +26,13 @@ class RepositoryWebrefPerDocRelevanceRatings extends \Google\Collection
   public $docFp;
   protected $entityNameRatingType = RepositoryWebrefEntityNameRatings::class;
   protected $entityNameRatingDataType = 'array';
-  public $entityNameRating;
+  public $entityNameRating = [];
   protected $mentionRatingType = RepositoryWebrefMentionRatings::class;
   protected $mentionRatingDataType = 'array';
-  public $mentionRating;
+  public $mentionRating = [];
   protected $taskLevelRatingType = RepositoryWebrefPerDocRelevanceRating::class;
   protected $taskLevelRatingDataType = 'array';
-  public $taskLevelRating;
+  public $taskLevelRating = [];
   /**
    * @var string
    */

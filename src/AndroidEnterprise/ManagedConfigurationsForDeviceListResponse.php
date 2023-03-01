@@ -22,7 +22,7 @@ class ManagedConfigurationsForDeviceListResponse extends \Google\Collection
   protected $collection_key = 'managedConfigurationForDevice';
   protected $managedConfigurationForDeviceType = ManagedConfiguration::class;
   protected $managedConfigurationForDeviceDataType = 'array';
-  public $managedConfigurationForDevice;
+  public $managedConfigurationForDevice = [];
 
   /**
    * @param ManagedConfiguration[]

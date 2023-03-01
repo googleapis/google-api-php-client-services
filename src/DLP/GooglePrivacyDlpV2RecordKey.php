@@ -29,7 +29,7 @@ class GooglePrivacyDlpV2RecordKey extends \Google\Collection
   /**
    * @var string[]
    */
-  public $idValues;
+  public $idValues = [];
 
   /**
    * @param GooglePrivacyDlpV2BigQueryKey

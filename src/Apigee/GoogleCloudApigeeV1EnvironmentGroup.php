@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1EnvironmentGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hostnames;
+  public $hostnames = [];
   /**
    * @var string
    */

@@ -34,7 +34,7 @@ class QueryMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $shareEmailAddress;
+  public $shareEmailAddress = [];
   /**
    * @var string
    */

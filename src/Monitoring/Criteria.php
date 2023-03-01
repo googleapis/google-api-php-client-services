@@ -23,7 +23,7 @@ class Criteria extends \Google\Collection
   /**
    * @var string[]
    */
-  public $policies;
+  public $policies = [];
 
   /**
    * @param string[]

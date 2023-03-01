@@ -34,7 +34,7 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   /**
    * @var string[]
    */
-  public $compliantButDisallowedServices;
+  public $compliantButDisallowedServices = [];
   /**
    * @var string
    */
@@ -61,7 +61,7 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -76,10 +76,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   public $provisionedResourcesParent;
   protected $resourceSettingsType = GoogleCloudAssuredworkloadsV1WorkloadResourceSettings::class;
   protected $resourceSettingsDataType = 'array';
-  public $resourceSettings;
+  public $resourceSettings = [];
   protected $resourcesType = GoogleCloudAssuredworkloadsV1WorkloadResourceInfo::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
   protected $saaEnrollmentResponseType = GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse::class;
   protected $saaEnrollmentResponseDataType = '';
   public $saaEnrollmentResponse;

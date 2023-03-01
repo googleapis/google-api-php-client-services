@@ -22,7 +22,7 @@ class AggregateRequest extends \Google\Collection
   protected $collection_key = 'filteredDataQualityStandard';
   protected $aggregateByType = AggregateBy::class;
   protected $aggregateByDataType = 'array';
-  public $aggregateBy;
+  public $aggregateBy = [];
   protected $bucketByActivitySegmentType = BucketByActivity::class;
   protected $bucketByActivitySegmentDataType = '';
   public $bucketByActivitySegment;
@@ -42,7 +42,7 @@ class AggregateRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filteredDataQualityStandard;
+  public $filteredDataQualityStandard = [];
   /**
    * @var string
    */

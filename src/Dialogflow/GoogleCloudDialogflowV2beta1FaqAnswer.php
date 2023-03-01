@@ -34,7 +34,7 @@ class GoogleCloudDialogflowV2beta1FaqAnswer extends \Google\Model
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class GoogleApiServiceusageV1ServiceConfig extends \Google\Collection
   protected $collection_key = 'monitoredResources';
   protected $apisType = Api::class;
   protected $apisDataType = 'array';
-  public $apis;
+  public $apis = [];
   protected $authenticationType = Authentication::class;
   protected $authenticationDataType = '';
   public $authentication;
@@ -31,10 +31,10 @@ class GoogleApiServiceusageV1ServiceConfig extends \Google\Collection
   public $documentation;
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
-  public $endpoints;
+  public $endpoints = [];
   protected $monitoredResourcesType = MonitoredResourceDescriptor::class;
   protected $monitoredResourcesDataType = 'array';
-  public $monitoredResources;
+  public $monitoredResources = [];
   protected $monitoringType = Monitoring::class;
   protected $monitoringDataType = '';
   public $monitoring;

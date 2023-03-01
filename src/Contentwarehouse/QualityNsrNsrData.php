@@ -49,7 +49,7 @@ class QualityNsrNsrData extends \Google\Collection
   public $clutterScore;
   protected $clutterScoresType = QualityNsrVersionedFloatSignal::class;
   protected $clutterScoresDataType = 'array';
-  public $clutterScores;
+  public $clutterScores = [];
   /**
    * @var float
    */
@@ -127,7 +127,7 @@ class QualityNsrNsrData extends \Google\Collection
   public $pnav;
   protected $priorAdjustedNsrType = QualityNsrVersionedFloatSignal::class;
   protected $priorAdjustedNsrDataType = 'array';
-  public $priorAdjustedNsr;
+  public $priorAdjustedNsr = [];
   /**
    * @var string
    */
@@ -170,7 +170,7 @@ class QualityNsrNsrData extends \Google\Collection
   public $spambrainLavcScore;
   protected $spambrainLavcScoresType = QualityNsrVersionedFloatSignal::class;
   protected $spambrainLavcScoresDataType = 'array';
-  public $spambrainLavcScores;
+  public $spambrainLavcScores = [];
   /**
    * @var float
    */
@@ -185,10 +185,10 @@ class QualityNsrNsrData extends \Google\Collection
   public $url;
   protected $versionedAsrDataType = QualityNsrVersionedFloatSignal::class;
   protected $versionedAsrDataDataType = 'array';
-  public $versionedAsrData;
+  public $versionedAsrData = [];
   protected $versionedDataType = QualityNsrNSRVersionedData::class;
   protected $versionedDataDataType = 'array';
-  public $versionedData;
+  public $versionedData = [];
   /**
    * @var float
    */

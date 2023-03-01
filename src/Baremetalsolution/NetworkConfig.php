@@ -58,7 +58,7 @@ class NetworkConfig extends \Google\Collection
   public $userNote;
   protected $vlanAttachmentsType = IntakeVlanAttachment::class;
   protected $vlanAttachmentsDataType = 'array';
-  public $vlanAttachments;
+  public $vlanAttachments = [];
   /**
    * @var bool
    */

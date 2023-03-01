@@ -26,7 +26,7 @@ class DuplicateObjectRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $objectIds;
+  public $objectIds = [];
 
   /**
    * @param string

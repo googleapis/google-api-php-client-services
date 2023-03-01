@@ -22,7 +22,7 @@ class GoogleChatV1WidgetMarkup extends \Google\Collection
   protected $collection_key = 'buttons';
   protected $buttonsType = GoogleChatV1WidgetMarkupButton::class;
   protected $buttonsDataType = 'array';
-  public $buttons;
+  public $buttons = [];
   protected $imageType = GoogleChatV1WidgetMarkupImage::class;
   protected $imageDataType = '';
   public $image;

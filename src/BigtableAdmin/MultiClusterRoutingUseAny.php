@@ -23,7 +23,7 @@ class MultiClusterRoutingUseAny extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clusterIds;
+  public $clusterIds = [];
 
   /**
    * @param string[]

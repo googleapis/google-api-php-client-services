@@ -23,7 +23,7 @@ class GoogleCloudResourcesettingsV1ValueStringSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string[]

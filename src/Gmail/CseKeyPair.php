@@ -42,11 +42,11 @@ class CseKeyPair extends \Google\Collection
   public $pkcs7;
   protected $privateKeyMetadataType = CsePrivateKeyMetadata::class;
   protected $privateKeyMetadataDataType = 'array';
-  public $privateKeyMetadata;
+  public $privateKeyMetadata = [];
   /**
    * @var string[]
    */
-  public $subjectEmailAddresses;
+  public $subjectEmailAddresses = [];
 
   /**
    * @param string

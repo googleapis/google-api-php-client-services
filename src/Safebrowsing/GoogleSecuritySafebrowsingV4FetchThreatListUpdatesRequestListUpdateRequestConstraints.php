@@ -43,7 +43,7 @@ class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest
   /**
    * @var string[]
    */
-  public $supportedCompressions;
+  public $supportedCompressions = [];
 
   /**
    * @param string

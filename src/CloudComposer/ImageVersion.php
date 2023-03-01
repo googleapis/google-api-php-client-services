@@ -38,7 +38,7 @@ class ImageVersion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedPythonVersions;
+  public $supportedPythonVersions = [];
   /**
    * @var bool
    */

@@ -95,7 +95,7 @@ class ParagraphStyle extends \Google\Collection
   public $spacingMode;
   protected $tabStopsType = TabStop::class;
   protected $tabStopsDataType = 'array';
-  public $tabStops;
+  public $tabStops = [];
 
   /**
    * @param string

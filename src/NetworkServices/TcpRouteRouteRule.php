@@ -25,7 +25,7 @@ class TcpRouteRouteRule extends \Google\Collection
   public $action;
   protected $matchesType = TcpRouteRouteMatch::class;
   protected $matchesDataType = 'array';
-  public $matches;
+  public $matches = [];
 
   /**
    * @param TcpRouteRouteAction

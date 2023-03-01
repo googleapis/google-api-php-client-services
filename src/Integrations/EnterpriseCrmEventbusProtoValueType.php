@@ -37,7 +37,7 @@ class EnterpriseCrmEventbusProtoValueType extends \Google\Model
   /**
    * @var array[]
    */
-  public $protoValue;
+  public $protoValue = [];
   protected $stringArrayType = EnterpriseCrmEventbusProtoStringArray::class;
   protected $stringArrayDataType = '';
   public $stringArray;

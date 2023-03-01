@@ -22,7 +22,7 @@ class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
   protected $collection_key = 'htmlAttribution';
   protected $decorationType = SocialGraphApiProtoDecorationOverlay::class;
   protected $decorationDataType = 'array';
-  public $decoration;
+  public $decoration = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $htmlAttribution;
+  public $htmlAttribution = [];
   /**
    * @var bool
    */

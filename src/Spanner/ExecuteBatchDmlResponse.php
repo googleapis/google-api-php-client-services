@@ -22,7 +22,7 @@ class ExecuteBatchDmlResponse extends \Google\Collection
   protected $collection_key = 'resultSets';
   protected $resultSetsType = ResultSet::class;
   protected $resultSetsDataType = 'array';
-  public $resultSets;
+  public $resultSets = [];
   protected $statusType = Status::class;
   protected $statusDataType = '';
   public $status;

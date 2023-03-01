@@ -43,7 +43,7 @@ class GoogleAnalyticsAdminV1betaCustomMetric extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictedMetricType;
+  public $restrictedMetricType = [];
   /**
    * @var string
    */

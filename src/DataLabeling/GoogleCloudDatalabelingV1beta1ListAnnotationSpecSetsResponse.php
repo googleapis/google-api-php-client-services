@@ -22,7 +22,7 @@ class GoogleCloudDatalabelingV1beta1ListAnnotationSpecSetsResponse extends \Goog
   protected $collection_key = 'annotationSpecSets';
   protected $annotationSpecSetsType = GoogleCloudDatalabelingV1beta1AnnotationSpecSet::class;
   protected $annotationSpecSetsDataType = 'array';
-  public $annotationSpecSets;
+  public $annotationSpecSets = [];
   /**
    * @var string
    */

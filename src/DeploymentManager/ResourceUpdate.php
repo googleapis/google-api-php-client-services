@@ -48,7 +48,7 @@ class ResourceUpdate extends \Google\Collection
   public $state;
   protected $warningsType = ResourceUpdateWarnings::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param ResourceAccessControl

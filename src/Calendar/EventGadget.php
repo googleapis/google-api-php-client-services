@@ -38,7 +38,7 @@ class EventGadget extends \Google\Model
   /**
    * @var string[]
    */
-  public $preferences;
+  public $preferences = [];
   /**
    * @var string
    */

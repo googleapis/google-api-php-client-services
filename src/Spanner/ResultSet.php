@@ -26,7 +26,7 @@ class ResultSet extends \Google\Collection
   /**
    * @var array[]
    */
-  public $rows;
+  public $rows = [];
   protected $statsType = ResultSetStats::class;
   protected $statsDataType = '';
   public $stats;

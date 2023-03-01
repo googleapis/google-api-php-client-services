@@ -22,7 +22,7 @@ class GoogleCloudDatalabelingV1beta1LabelStats extends \Google\Model
   /**
    * @var string[]
    */
-  public $exampleCount;
+  public $exampleCount = [];
 
   /**
    * @param string[]

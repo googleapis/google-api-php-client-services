@@ -27,7 +27,7 @@ class GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork extends \Google\Coll
   /**
    * @var string[]
    */
-  public $networkTags;
+  public $networkTags = [];
   /**
    * @var string
    */

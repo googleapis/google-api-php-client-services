@@ -35,7 +35,7 @@ class AdministrationRegion extends \Google\Collection
   public $name;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
 
   /**
    * @param AdministrativeBody

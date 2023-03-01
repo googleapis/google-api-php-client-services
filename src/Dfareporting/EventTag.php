@@ -65,7 +65,7 @@ class EventTag extends \Google\Collection
   /**
    * @var string[]
    */
-  public $siteIds;
+  public $siteIds = [];
   /**
    * @var bool
    */

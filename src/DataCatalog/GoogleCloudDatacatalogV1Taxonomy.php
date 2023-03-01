@@ -23,7 +23,7 @@ class GoogleCloudDatacatalogV1Taxonomy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $activatedPolicyTypes;
+  public $activatedPolicyTypes = [];
   /**
    * @var string
    */

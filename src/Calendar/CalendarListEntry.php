@@ -37,7 +37,7 @@ class CalendarListEntry extends \Google\Collection
   public $conferenceProperties;
   protected $defaultRemindersType = EventReminder::class;
   protected $defaultRemindersDataType = 'array';
-  public $defaultReminders;
+  public $defaultReminders = [];
   /**
    * @var bool
    */

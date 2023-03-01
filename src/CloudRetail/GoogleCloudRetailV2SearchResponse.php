@@ -23,7 +23,7 @@ class GoogleCloudRetailV2SearchResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appliedControls;
+  public $appliedControls = [];
   /**
    * @var string
    */
@@ -34,13 +34,13 @@ class GoogleCloudRetailV2SearchResponse extends \Google\Collection
   public $correctedQuery;
   protected $experimentInfoType = GoogleCloudRetailV2ExperimentInfo::class;
   protected $experimentInfoDataType = 'array';
-  public $experimentInfo;
+  public $experimentInfo = [];
   protected $facetsType = GoogleCloudRetailV2SearchResponseFacet::class;
   protected $facetsDataType = 'array';
-  public $facets;
+  public $facets = [];
   protected $invalidConditionBoostSpecsType = GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec::class;
   protected $invalidConditionBoostSpecsDataType = 'array';
-  public $invalidConditionBoostSpecs;
+  public $invalidConditionBoostSpecs = [];
   /**
    * @var string
    */
@@ -54,7 +54,7 @@ class GoogleCloudRetailV2SearchResponse extends \Google\Collection
   public $redirectUri;
   protected $resultsType = GoogleCloudRetailV2SearchResponseSearchResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   /**
    * @var int
    */

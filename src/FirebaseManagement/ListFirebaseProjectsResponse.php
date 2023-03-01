@@ -26,7 +26,7 @@ class ListFirebaseProjectsResponse extends \Google\Collection
   public $nextPageToken;
   protected $resultsType = FirebaseProject::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
 
   /**
    * @param string

@@ -26,7 +26,7 @@ class Tasks extends \Google\Collection
   public $etag;
   protected $itemsType = Task::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

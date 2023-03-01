@@ -25,7 +25,7 @@ class TableRow extends \Google\Collection
   public $rowHeight;
   protected $tableCellsType = TableCell::class;
   protected $tableCellsDataType = 'array';
-  public $tableCells;
+  public $tableCells = [];
   protected $tableRowPropertiesType = TableRowProperties::class;
   protected $tableRowPropertiesDataType = '';
   public $tableRowProperties;

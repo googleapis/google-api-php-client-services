@@ -26,7 +26,7 @@ class UserFacingMessage extends \Google\Model
   /**
    * @var string[]
    */
-  public $localizedMessages;
+  public $localizedMessages = [];
 
   /**
    * @param string

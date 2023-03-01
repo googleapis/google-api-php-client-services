@@ -37,7 +37,7 @@ class SearchJobsRequest extends \Google\Collection
   public $enableBroadening;
   protected $histogramQueriesType = HistogramQuery::class;
   protected $histogramQueriesDataType = 'array';
-  public $histogramQueries;
+  public $histogramQueries = [];
   protected $jobQueryType = JobQuery::class;
   protected $jobQueryDataType = '';
   public $jobQuery;

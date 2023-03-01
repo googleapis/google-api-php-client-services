@@ -23,11 +23,11 @@ class SslCertificateManagedSslCertificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domainStatus;
+  public $domainStatus = [];
   /**
    * @var string[]
    */
-  public $domains;
+  public $domains = [];
   /**
    * @var string
    */

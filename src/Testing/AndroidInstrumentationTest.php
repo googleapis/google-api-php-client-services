@@ -51,7 +51,7 @@ class AndroidInstrumentationTest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $testTargets;
+  public $testTargets = [];
 
   /**
    * @param FileReference

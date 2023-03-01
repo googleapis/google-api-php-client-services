@@ -34,7 +34,7 @@ class AppsDynamiteStorageCardSection extends \Google\Collection
   public $uncollapsibleWidgetsCount;
   protected $widgetsType = AppsDynamiteStorageWidget::class;
   protected $widgetsDataType = 'array';
-  public $widgets;
+  public $widgets = [];
 
   /**
    * @param bool

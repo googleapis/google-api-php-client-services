@@ -30,11 +30,11 @@ class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rrdatas;
+  public $rrdatas = [];
   /**
    * @var string[]
    */
-  public $signatureRrdatas;
+  public $signatureRrdatas = [];
   public $weight;
 
   /**

@@ -29,7 +29,7 @@ class ObjectOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestionFilteringOperators;
+  public $suggestionFilteringOperators = [];
 
   /**
    * @param ObjectDisplayOptions

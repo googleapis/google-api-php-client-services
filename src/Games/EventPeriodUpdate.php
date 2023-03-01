@@ -29,7 +29,7 @@ class EventPeriodUpdate extends \Google\Collection
   public $timePeriod;
   protected $updatesType = EventUpdateRequest::class;
   protected $updatesDataType = 'array';
-  public $updates;
+  public $updates = [];
 
   /**
    * @param string

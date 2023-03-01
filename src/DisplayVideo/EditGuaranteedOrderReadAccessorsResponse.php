@@ -27,7 +27,7 @@ class EditGuaranteedOrderReadAccessorsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $readAdvertiserIds;
+  public $readAdvertiserIds = [];
 
   /**
    * @param bool

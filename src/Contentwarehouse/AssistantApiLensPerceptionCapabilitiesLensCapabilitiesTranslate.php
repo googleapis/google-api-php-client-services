@@ -23,7 +23,7 @@ class AssistantApiLensPerceptionCapabilitiesLensCapabilitiesTranslate extends \G
   /**
    * @var string[]
    */
-  public $supportedLanguageTags;
+  public $supportedLanguageTags = [];
 
   /**
    * @param string[]

@@ -23,7 +23,7 @@ class NonSdkApiUsageViolation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $apiSignatures;
+  public $apiSignatures = [];
   /**
    * @var int
    */

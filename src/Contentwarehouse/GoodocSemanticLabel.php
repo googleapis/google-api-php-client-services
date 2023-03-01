@@ -41,7 +41,7 @@ class GoodocSemanticLabel extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attribute;
+  public $attribute = [];
   /**
    * @var bool
    */
@@ -49,7 +49,7 @@ class GoodocSemanticLabel extends \Google\Collection
   /**
    * @var int[]
    */
-  public $cleanupAnnotation;
+  public $cleanupAnnotation = [];
   /**
    * @var bool
    */
@@ -91,13 +91,13 @@ class GoodocSemanticLabel extends \Google\Collection
   public $contentlink;
   protected $editcorrectioncandidateType = GoodocSemanticLabelEditCorrectionCandidate::class;
   protected $editcorrectioncandidateDataType = 'array';
-  public $editcorrectioncandidate;
+  public $editcorrectioncandidate = [];
   protected $overridesType = GoodocOverrides::class;
   protected $overridesDataType = '';
   public $overrides;
   protected $snippetfilterType = GoodocSemanticLabelSnippetFilter::class;
   protected $snippetfilterDataType = 'array';
-  public $snippetfilter;
+  public $snippetfilter = [];
   protected $tablecelldetailsType = GoodocSemanticLabelTableCellDetails::class;
   protected $tablecelldetailsDataType = '';
   public $tablecelldetails;

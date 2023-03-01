@@ -23,11 +23,11 @@ class HardwareInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $batteryShutdownTemperatures;
+  public $batteryShutdownTemperatures = [];
   /**
    * @var float[]
    */
-  public $batteryThrottlingTemperatures;
+  public $batteryThrottlingTemperatures = [];
   /**
    * @var string
    */
@@ -35,11 +35,11 @@ class HardwareInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $cpuShutdownTemperatures;
+  public $cpuShutdownTemperatures = [];
   /**
    * @var float[]
    */
-  public $cpuThrottlingTemperatures;
+  public $cpuThrottlingTemperatures = [];
   /**
    * @var string
    */
@@ -51,11 +51,11 @@ class HardwareInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $gpuShutdownTemperatures;
+  public $gpuShutdownTemperatures = [];
   /**
    * @var float[]
    */
-  public $gpuThrottlingTemperatures;
+  public $gpuThrottlingTemperatures = [];
   /**
    * @var string
    */
@@ -75,11 +75,11 @@ class HardwareInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $skinShutdownTemperatures;
+  public $skinShutdownTemperatures = [];
   /**
    * @var float[]
    */
-  public $skinThrottlingTemperatures;
+  public $skinThrottlingTemperatures = [];
 
   /**
    * @param float[]

@@ -22,7 +22,7 @@ class ProfileFilterLinks extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = ProfileFilterLink::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var int
    */

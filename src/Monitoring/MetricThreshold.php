@@ -22,14 +22,14 @@ class MetricThreshold extends \Google\Collection
   protected $collection_key = 'denominatorAggregations';
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
-  public $aggregations;
+  public $aggregations = [];
   /**
    * @var string
    */
   public $comparison;
   protected $denominatorAggregationsType = Aggregation::class;
   protected $denominatorAggregationsDataType = 'array';
-  public $denominatorAggregations;
+  public $denominatorAggregations = [];
   /**
    * @var string
    */

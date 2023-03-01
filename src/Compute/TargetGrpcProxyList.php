@@ -26,7 +26,7 @@ class TargetGrpcProxyList extends \Google\Collection
   public $id;
   protected $itemsType = TargetGrpcProxy::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

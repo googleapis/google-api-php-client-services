@@ -74,7 +74,7 @@ class ClusterUpdate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $desiredLocations;
+  public $desiredLocations = [];
   protected $desiredLoggingConfigType = LoggingConfig::class;
   protected $desiredLoggingConfigDataType = '';
   public $desiredLoggingConfig;

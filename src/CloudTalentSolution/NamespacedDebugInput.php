@@ -23,27 +23,27 @@ class NamespacedDebugInput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $absolutelyForcedExpNames;
+  public $absolutelyForcedExpNames = [];
   /**
    * @var string[]
    */
-  public $absolutelyForcedExpTags;
+  public $absolutelyForcedExpTags = [];
   /**
    * @var int[]
    */
-  public $absolutelyForcedExps;
+  public $absolutelyForcedExps = [];
   /**
    * @var string[]
    */
-  public $conditionallyForcedExpNames;
+  public $conditionallyForcedExpNames = [];
   /**
    * @var string[]
    */
-  public $conditionallyForcedExpTags;
+  public $conditionallyForcedExpTags = [];
   /**
    * @var int[]
    */
-  public $conditionallyForcedExps;
+  public $conditionallyForcedExps = [];
   /**
    * @var bool
    */
@@ -51,15 +51,15 @@ class NamespacedDebugInput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $disableExpNames;
+  public $disableExpNames = [];
   /**
    * @var string[]
    */
-  public $disableExpTags;
+  public $disableExpTags = [];
   /**
    * @var int[]
    */
-  public $disableExps;
+  public $disableExps = [];
   /**
    * @var bool
    */
@@ -71,11 +71,11 @@ class NamespacedDebugInput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $forcedFlags;
+  public $forcedFlags = [];
   /**
    * @var bool[]
    */
-  public $forcedRollouts;
+  public $forcedRollouts = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class PushConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $attributes;
+  public $attributes = [];
   protected $oidcTokenType = OidcToken::class;
   protected $oidcTokenDataType = '';
   public $oidcToken;

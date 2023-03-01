@@ -40,7 +40,7 @@ class JobConfiguration extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $loadType = JobConfigurationLoad::class;
   protected $loadDataType = '';
   public $load;

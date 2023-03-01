@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2ListDeidentifyTemplatesResponse extends \Google\Collecti
   protected $collection_key = 'deidentifyTemplates';
   protected $deidentifyTemplatesType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $deidentifyTemplatesDataType = 'array';
-  public $deidentifyTemplates;
+  public $deidentifyTemplates = [];
   /**
    * @var string
    */

@@ -30,10 +30,10 @@ class Documentation extends \Google\Collection
   public $overview;
   protected $pagesType = Page::class;
   protected $pagesDataType = 'array';
-  public $pages;
+  public $pages = [];
   protected $rulesType = DocumentationRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
   /**
    * @var string
    */

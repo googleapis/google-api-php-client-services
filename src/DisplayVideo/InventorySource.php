@@ -26,7 +26,7 @@ class InventorySource extends \Google\Collection
   public $commitment;
   protected $creativeConfigsType = CreativeConfig::class;
   protected $creativeConfigsDataType = 'array';
-  public $creativeConfigs;
+  public $creativeConfigs = [];
   /**
    * @var string
    */
@@ -73,11 +73,11 @@ class InventorySource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $readAdvertiserIds;
+  public $readAdvertiserIds = [];
   /**
    * @var string[]
    */
-  public $readPartnerIds;
+  public $readPartnerIds = [];
   protected $readWriteAccessorsType = InventorySourceAccessors::class;
   protected $readWriteAccessorsDataType = '';
   public $readWriteAccessors;

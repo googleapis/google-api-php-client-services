@@ -22,7 +22,7 @@ class Device extends \Google\Collection
   protected $collection_key = 'claims';
   protected $claimsType = DeviceClaim::class;
   protected $claimsDataType = 'array';
-  public $claims;
+  public $claims = [];
   /**
    * @var string
    */

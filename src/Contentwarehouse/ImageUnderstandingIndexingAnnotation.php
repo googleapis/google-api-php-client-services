@@ -22,10 +22,10 @@ class ImageUnderstandingIndexingAnnotation extends \Google\Collection
   protected $collection_key = 'labelGroup';
   protected $featureType = ImageUnderstandingIndexingFeature::class;
   protected $featureDataType = 'array';
-  public $feature;
+  public $feature = [];
   protected $labelGroupType = ImageUnderstandingIndexingLabelGroup::class;
   protected $labelGroupDataType = 'array';
-  public $labelGroup;
+  public $labelGroup = [];
   protected $roiType = ImageUnderstandingIndexingImageRegion::class;
   protected $roiDataType = '';
   public $roi;

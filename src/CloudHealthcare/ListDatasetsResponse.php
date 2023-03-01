@@ -22,7 +22,7 @@ class ListDatasetsResponse extends \Google\Collection
   protected $collection_key = 'datasets';
   protected $datasetsType = Dataset::class;
   protected $datasetsDataType = 'array';
-  public $datasets;
+  public $datasets = [];
   /**
    * @var string
    */

@@ -23,14 +23,14 @@ class DevicePolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedDeviceManagementLevels;
+  public $allowedDeviceManagementLevels = [];
   /**
    * @var string[]
    */
-  public $allowedEncryptionStatuses;
+  public $allowedEncryptionStatuses = [];
   protected $osConstraintsType = OsConstraint::class;
   protected $osConstraintsDataType = 'array';
-  public $osConstraints;
+  public $osConstraints = [];
   /**
    * @var bool
    */

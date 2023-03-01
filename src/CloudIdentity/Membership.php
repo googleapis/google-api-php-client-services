@@ -33,7 +33,7 @@ class Membership extends \Google\Collection
   public $preferredMemberKey;
   protected $rolesType = MembershipRole::class;
   protected $rolesDataType = 'array';
-  public $roles;
+  public $roles = [];
   /**
    * @var string
    */

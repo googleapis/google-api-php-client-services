@@ -32,7 +32,7 @@ class GeostoreRelationProto extends \Google\Collection
   public $otherFeatureId;
   protected $otherFeatureNameType = GeostoreNameProto::class;
   protected $otherFeatureNameDataType = 'array';
-  public $otherFeatureName;
+  public $otherFeatureName = [];
   /**
    * @var string
    */

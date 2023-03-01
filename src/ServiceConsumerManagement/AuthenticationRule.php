@@ -29,7 +29,7 @@ class AuthenticationRule extends \Google\Collection
   public $oauth;
   protected $requirementsType = AuthRequirement::class;
   protected $requirementsDataType = 'array';
-  public $requirements;
+  public $requirements = [];
   /**
    * @var string
    */

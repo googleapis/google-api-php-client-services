@@ -22,7 +22,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1InlineSecret extends \Google\Mo
   /**
    * @var string[]
    */
-  public $envMap;
+  public $envMap = [];
   /**
    * @var string
    */

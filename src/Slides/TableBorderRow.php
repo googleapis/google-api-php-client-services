@@ -22,7 +22,7 @@ class TableBorderRow extends \Google\Collection
   protected $collection_key = 'tableBorderCells';
   protected $tableBorderCellsType = TableBorderCell::class;
   protected $tableBorderCellsDataType = 'array';
-  public $tableBorderCells;
+  public $tableBorderCells = [];
 
   /**
    * @param TableBorderCell[]

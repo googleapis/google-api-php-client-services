@@ -30,7 +30,7 @@ class Contest extends \Google\Collection
   public $ballotTitle;
   protected $candidatesType = Candidate::class;
   protected $candidatesDataType = 'array';
-  public $candidates;
+  public $candidates = [];
   protected $districtType = ElectoralDistrict::class;
   protected $districtDataType = '';
   public $district;
@@ -41,7 +41,7 @@ class Contest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $level;
+  public $level = [];
   /**
    * @var string
    */
@@ -57,7 +57,7 @@ class Contest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $primaryParties;
+  public $primaryParties = [];
   /**
    * @var string
    */
@@ -65,7 +65,7 @@ class Contest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referendumBallotResponses;
+  public $referendumBallotResponses = [];
   /**
    * @var string
    */
@@ -105,10 +105,10 @@ class Contest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $roles;
+  public $roles = [];
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
   /**
    * @var string
    */

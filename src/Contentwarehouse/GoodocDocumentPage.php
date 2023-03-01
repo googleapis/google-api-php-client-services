@@ -65,10 +65,10 @@ class GoodocDocumentPage extends \Google\Collection
   public $width;
   protected $blockType = GoodocDocumentPageBlock::class;
   protected $blockDataType = 'array';
-  public $block;
+  public $block = [];
   protected $mergedpageinfoType = GoodocDocumentPageMergedPageInfo::class;
   protected $mergedpageinfoDataType = 'array';
-  public $mergedpageinfo;
+  public $mergedpageinfo = [];
   /**
    * @var bool
    */

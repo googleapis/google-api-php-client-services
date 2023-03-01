@@ -22,10 +22,10 @@ class Secrets extends \Google\Collection
   protected $collection_key = 'secretManager';
   protected $inlineType = InlineSecret::class;
   protected $inlineDataType = 'array';
-  public $inline;
+  public $inline = [];
   protected $secretManagerType = SecretManagerSecret::class;
   protected $secretManagerDataType = 'array';
-  public $secretManager;
+  public $secretManager = [];
 
   /**
    * @param InlineSecret[]

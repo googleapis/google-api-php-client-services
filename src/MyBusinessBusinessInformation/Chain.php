@@ -22,7 +22,7 @@ class Chain extends \Google\Collection
   protected $collection_key = 'websites';
   protected $chainNamesType = ChainName::class;
   protected $chainNamesDataType = 'array';
-  public $chainNames;
+  public $chainNames = [];
   /**
    * @var int
    */
@@ -33,7 +33,7 @@ class Chain extends \Google\Collection
   public $name;
   protected $websitesType = ChainUri::class;
   protected $websitesDataType = 'array';
-  public $websites;
+  public $websites = [];
 
   /**
    * @param ChainName[]

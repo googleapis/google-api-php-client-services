@@ -26,7 +26,7 @@ class GooglePrivacyDlpV2Error extends \Google\Collection
   /**
    * @var string[]
    */
-  public $timestamps;
+  public $timestamps = [];
 
   /**
    * @param GoogleRpcStatus

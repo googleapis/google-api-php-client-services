@@ -22,7 +22,7 @@ class TableDataInsertAllResponseInsertErrors extends \Google\Collection
   protected $collection_key = 'errors';
   protected $errorsType = ErrorProto::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class RevisionList extends \Google\Collection
   public $nextPageToken;
   protected $revisionsType = Revision::class;
   protected $revisionsDataType = 'array';
-  public $revisions;
+  public $revisions = [];
 
   /**
    * @param string

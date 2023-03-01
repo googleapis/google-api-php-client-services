@@ -30,7 +30,7 @@ class GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative extends \G
   public $transcript;
   protected $wordsType = GoogleCloudVideointelligenceV1beta2WordInfo::class;
   protected $wordsDataType = 'array';
-  public $words;
+  public $words = [];
 
   /**
    * @param float

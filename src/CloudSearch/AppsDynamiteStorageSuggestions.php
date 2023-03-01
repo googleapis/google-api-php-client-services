@@ -22,7 +22,7 @@ class AppsDynamiteStorageSuggestions extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = AppsDynamiteStorageSuggestionsSuggestionItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
 
   /**
    * @param AppsDynamiteStorageSuggestionsSuggestionItem[]

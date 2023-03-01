@@ -29,15 +29,15 @@ class BasicSli extends \Google\Collection
   /**
    * @var string[]
    */
-  public $location;
+  public $location = [];
   /**
    * @var string[]
    */
-  public $method;
+  public $method = [];
   /**
    * @var string[]
    */
-  public $version;
+  public $version = [];
 
   /**
    * @param AvailabilityCriteria

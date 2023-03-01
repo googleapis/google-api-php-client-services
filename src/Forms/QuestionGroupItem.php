@@ -28,7 +28,7 @@ class QuestionGroupItem extends \Google\Collection
   public $image;
   protected $questionsType = Question::class;
   protected $questionsDataType = 'array';
-  public $questions;
+  public $questions = [];
 
   /**
    * @param Grid

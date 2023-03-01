@@ -22,7 +22,7 @@ class NetworkEndpointWithHealthStatus extends \Google\Collection
   protected $collection_key = 'healths';
   protected $healthsType = HealthStatusForNetworkEndpoint::class;
   protected $healthsDataType = 'array';
-  public $healths;
+  public $healths = [];
   protected $networkEndpointType = NetworkEndpoint::class;
   protected $networkEndpointDataType = '';
   public $networkEndpoint;

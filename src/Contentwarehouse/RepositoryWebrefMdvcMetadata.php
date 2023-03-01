@@ -23,22 +23,22 @@ class RepositoryWebrefMdvcMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimension;
+  public $dimension = [];
   /**
    * @var string[]
    */
-  public $expandedOutputConceptId;
+  public $expandedOutputConceptId = [];
   /**
    * @var string[]
    */
-  public $generalization;
+  public $generalization = [];
   /**
    * @var bool
    */
   public $isSynthetic;
   protected $perVerticalType = RepositoryWebrefMdvcMetadataPerVertical::class;
   protected $perVerticalDataType = 'array';
-  public $perVertical;
+  public $perVertical = [];
   /**
    * @var int
    */

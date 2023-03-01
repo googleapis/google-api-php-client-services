@@ -29,7 +29,7 @@ class ResponsePolicyRulesListResponse extends \Google\Collection
   public $nextPageToken;
   protected $responsePolicyRulesType = ResponsePolicyRule::class;
   protected $responsePolicyRulesDataType = 'array';
-  public $responsePolicyRules;
+  public $responsePolicyRules = [];
 
   /**
    * @param ResponseHeader

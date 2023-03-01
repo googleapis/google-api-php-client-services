@@ -34,7 +34,7 @@ class Spoke extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $linkedInterconnectAttachmentsType = LinkedInterconnectAttachments::class;
   protected $linkedInterconnectAttachmentsDataType = '';
   public $linkedInterconnectAttachments;

@@ -26,7 +26,7 @@ class GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult exte
   /**
    * @var array[]
    */
-  public $itemMetadata;
+  public $itemMetadata = [];
 
   /**
    * @param string

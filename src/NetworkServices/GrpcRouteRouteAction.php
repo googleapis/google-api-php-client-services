@@ -22,7 +22,7 @@ class GrpcRouteRouteAction extends \Google\Collection
   protected $collection_key = 'destinations';
   protected $destinationsType = GrpcRouteDestination::class;
   protected $destinationsDataType = 'array';
-  public $destinations;
+  public $destinations = [];
   protected $faultInjectionPolicyType = GrpcRouteFaultInjectionPolicy::class;
   protected $faultInjectionPolicyDataType = '';
   public $faultInjectionPolicy;

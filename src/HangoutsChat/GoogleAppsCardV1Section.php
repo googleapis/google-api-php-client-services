@@ -34,7 +34,7 @@ class GoogleAppsCardV1Section extends \Google\Collection
   public $uncollapsibleWidgetsCount;
   protected $widgetsType = GoogleAppsCardV1Widget::class;
   protected $widgetsDataType = 'array';
-  public $widgets;
+  public $widgets = [];
 
   /**
    * @param bool

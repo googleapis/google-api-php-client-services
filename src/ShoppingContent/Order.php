@@ -26,7 +26,7 @@ class Order extends \Google\Collection
   public $acknowledged;
   protected $annotationsType = OrderOrderAnnotation::class;
   protected $annotationsDataType = 'array';
-  public $annotations;
+  public $annotations = [];
   protected $billingAddressType = OrderAddress::class;
   protected $billingAddressDataType = '';
   public $billingAddress;
@@ -46,7 +46,7 @@ class Order extends \Google\Collection
   public $kind;
   protected $lineItemsType = OrderLineItem::class;
   protected $lineItemsDataType = 'array';
-  public $lineItems;
+  public $lineItems = [];
   /**
    * @var string
    */
@@ -74,13 +74,13 @@ class Order extends \Google\Collection
   public $placedDate;
   protected $promotionsType = OrderPromotion::class;
   protected $promotionsDataType = 'array';
-  public $promotions;
+  public $promotions = [];
   protected $refundsType = OrderRefund::class;
   protected $refundsDataType = 'array';
-  public $refunds;
+  public $refunds = [];
   protected $shipmentsType = OrderShipment::class;
   protected $shipmentsDataType = 'array';
-  public $shipments;
+  public $shipments = [];
   protected $shippingCostType = Price::class;
   protected $shippingCostDataType = '';
   public $shippingCost;

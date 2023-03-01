@@ -49,7 +49,7 @@ class Image extends \Google\Collection
   public $family;
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
-  public $guestOsFeatures;
+  public $guestOsFeatures = [];
   /**
    * @var string
    */
@@ -68,15 +68,15 @@ class Image extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $licenseCodes;
+  public $licenseCodes = [];
   /**
    * @var string[]
    */
-  public $licenses;
+  public $licenses = [];
   /**
    * @var string
    */
@@ -139,7 +139,7 @@ class Image extends \Google\Collection
   /**
    * @var string[]
    */
-  public $storageLocations;
+  public $storageLocations = [];
 
   /**
    * @param string

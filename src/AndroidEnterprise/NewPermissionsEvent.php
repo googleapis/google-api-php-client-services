@@ -23,7 +23,7 @@ class NewPermissionsEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $approvedPermissions;
+  public $approvedPermissions = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class NewPermissionsEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $requestedPermissions;
+  public $requestedPermissions = [];
 
   /**
    * @param string[]

@@ -27,11 +27,11 @@ class CacheKeyPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $includeHttpHeaders;
+  public $includeHttpHeaders = [];
   /**
    * @var string[]
    */
-  public $includeNamedCookies;
+  public $includeNamedCookies = [];
   /**
    * @var bool
    */
@@ -43,11 +43,11 @@ class CacheKeyPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $queryStringBlacklist;
+  public $queryStringBlacklist = [];
   /**
    * @var string[]
    */
-  public $queryStringWhitelist;
+  public $queryStringWhitelist = [];
 
   /**
    * @param bool

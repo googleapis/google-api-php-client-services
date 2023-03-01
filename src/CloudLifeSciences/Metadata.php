@@ -30,11 +30,11 @@ class Metadata extends \Google\Collection
   public $endTime;
   protected $eventsType = Event::class;
   protected $eventsDataType = 'array';
-  public $events;
+  public $events = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $pipelineType = Pipeline::class;
   protected $pipelineDataType = '';
   public $pipeline;

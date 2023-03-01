@@ -30,7 +30,7 @@ class Subscriptions extends \Google\Collection
   public $nextPageToken;
   protected $subscriptionsType = Subscription::class;
   protected $subscriptionsDataType = 'array';
-  public $subscriptions;
+  public $subscriptions = [];
 
   /**
    * @param string

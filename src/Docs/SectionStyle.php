@@ -22,7 +22,7 @@ class SectionStyle extends \Google\Collection
   protected $collection_key = 'columnProperties';
   protected $columnPropertiesType = SectionColumnProperties::class;
   protected $columnPropertiesDataType = 'array';
-  public $columnProperties;
+  public $columnProperties = [];
   /**
    * @var string
    */

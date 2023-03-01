@@ -26,7 +26,7 @@ class RepositoryWebrefMention extends \Google\Collection
   public $addedByCloseAnswers;
   protected $additionalExplainedRangeType = RepositoryWebrefMentionAdditionalExplainedRange::class;
   protected $additionalExplainedRangeDataType = 'array';
-  public $additionalExplainedRange;
+  public $additionalExplainedRange = [];
   /**
    * @var int
    */
@@ -37,7 +37,7 @@ class RepositoryWebrefMention extends \Google\Collection
   public $beginTokenIndex;
   protected $compoundMentionType = RepositoryWebrefMentionCompoundMention::class;
   protected $compoundMentionDataType = 'array';
-  public $compoundMention;
+  public $compoundMention = [];
   /**
    * @var float
    */
@@ -62,7 +62,7 @@ class RepositoryWebrefMention extends \Google\Collection
   /**
    * @var int[]
    */
-  public $interpretationNumber;
+  public $interpretationNumber = [];
   /**
    * @var bool
    */

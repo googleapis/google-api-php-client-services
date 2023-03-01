@@ -25,7 +25,7 @@ class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
   public $adapterInfo;
   protected $displayDevicesType = GoogleChromeManagementV1DisplayDevice::class;
   protected $displayDevicesDataType = 'array';
-  public $displayDevices;
+  public $displayDevices = [];
   /**
    * @var bool
    */

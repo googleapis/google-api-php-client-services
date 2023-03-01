@@ -36,7 +36,7 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   public $dynamicFacetSpec;
   protected $facetSpecsType = GoogleCloudRetailV2SearchRequestFacetSpec::class;
   protected $facetSpecsDataType = 'array';
-  public $facetSpecs;
+  public $facetSpecs = [];
   /**
    * @var string
    */
@@ -44,7 +44,7 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var int
    */
@@ -56,7 +56,7 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pageCategories;
+  public $pageCategories = [];
   /**
    * @var int
    */
@@ -88,7 +88,7 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $variantRollupKeys;
+  public $variantRollupKeys = [];
   /**
    * @var string
    */

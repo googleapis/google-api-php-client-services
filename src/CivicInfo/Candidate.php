@@ -26,7 +26,7 @@ class Candidate extends \Google\Collection
   public $candidateUrl;
   protected $channelsType = Channel::class;
   protected $channelsDataType = 'array';
-  public $channels;
+  public $channels = [];
   /**
    * @var string
    */

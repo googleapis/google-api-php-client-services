@@ -31,7 +31,7 @@ class VideoPipelineViperVSIColumnData extends \Google\Collection
   public $totalVsiTime;
   protected $vsiStatsType = VideoPipelineViperVSIColumnDataVsiStats::class;
   protected $vsiStatsDataType = 'array';
-  public $vsiStats;
+  public $vsiStats = [];
 
   /**
    * @param VideoVideoStreamInfo

@@ -36,7 +36,7 @@ class Notification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $crmExperimentIds;
+  public $crmExperimentIds = [];
   /**
    * @var string
    */

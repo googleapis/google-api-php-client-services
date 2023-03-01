@@ -22,7 +22,7 @@ class Context extends \Google\Collection
   protected $collection_key = 'rules';
   protected $rulesType = ContextRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
 
   /**
    * @param ContextRule[]

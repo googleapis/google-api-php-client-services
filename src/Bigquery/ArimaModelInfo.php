@@ -48,7 +48,7 @@ class ArimaModelInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $seasonalPeriods;
+  public $seasonalPeriods = [];
   /**
    * @var string
    */
@@ -56,7 +56,7 @@ class ArimaModelInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $timeSeriesIds;
+  public $timeSeriesIds = [];
 
   /**
    * @param ArimaCoefficients

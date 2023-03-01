@@ -30,7 +30,7 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnector extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

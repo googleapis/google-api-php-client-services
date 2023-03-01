@@ -31,7 +31,7 @@ class GoogleCloudRecommendationengineV1beta1ProductCatalogItem extends \Google\C
   /**
    * @var float[]
    */
-  public $costs;
+  public $costs = [];
   /**
    * @var string
    */
@@ -41,7 +41,7 @@ class GoogleCloudRecommendationengineV1beta1ProductCatalogItem extends \Google\C
   public $exactPrice;
   protected $imagesType = GoogleCloudRecommendationengineV1beta1Image::class;
   protected $imagesDataType = 'array';
-  public $images;
+  public $images = [];
   protected $priceRangeType = GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange::class;
   protected $priceRangeDataType = '';
   public $priceRange;

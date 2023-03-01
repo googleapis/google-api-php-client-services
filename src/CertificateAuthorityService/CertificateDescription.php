@@ -23,7 +23,7 @@ class CertificateDescription extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aiaIssuingCertificateUrls;
+  public $aiaIssuingCertificateUrls = [];
   protected $authorityKeyIdType = KeyId::class;
   protected $authorityKeyIdDataType = '';
   public $authorityKeyId;
@@ -33,7 +33,7 @@ class CertificateDescription extends \Google\Collection
   /**
    * @var string[]
    */
-  public $crlDistributionPoints;
+  public $crlDistributionPoints = [];
   protected $publicKeyType = PublicKey::class;
   protected $publicKeyDataType = '';
   public $publicKey;

@@ -25,7 +25,7 @@ class CohortSpec extends \Google\Collection
   public $cohortReportSettings;
   protected $cohortsType = Cohort::class;
   protected $cohortsDataType = 'array';
-  public $cohorts;
+  public $cohorts = [];
   protected $cohortsRangeType = CohortsRange::class;
   protected $cohortsRangeDataType = '';
   public $cohortsRange;

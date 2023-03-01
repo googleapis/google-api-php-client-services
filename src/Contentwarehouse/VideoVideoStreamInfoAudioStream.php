@@ -30,7 +30,7 @@ class VideoVideoStreamInfoAudioStream extends \Google\Collection
   /**
    * @var string[]
    */
-  public $channelPosition;
+  public $channelPosition = [];
   /**
    * @var int
    */
@@ -74,7 +74,7 @@ class VideoVideoStreamInfoAudioStream extends \Google\Collection
   public $length;
   protected $metadataType = VideoClipInfo::class;
   protected $metadataDataType = 'array';
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

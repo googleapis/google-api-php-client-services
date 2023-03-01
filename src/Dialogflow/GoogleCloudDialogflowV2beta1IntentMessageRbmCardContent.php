@@ -29,7 +29,7 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends \Google\Co
   public $media;
   protected $suggestionsType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion::class;
   protected $suggestionsDataType = 'array';
-  public $suggestions;
+  public $suggestions = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class ManagedZonesListResponse extends \Google\Collection
   public $kind;
   protected $managedZonesType = ManagedZone::class;
   protected $managedZonesDataType = 'array';
-  public $managedZones;
+  public $managedZones = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class Metadata extends \Google\Collection
   public $displayOptions;
   protected $fieldsType = NamedProperty::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
   /**
    * @var string
    */

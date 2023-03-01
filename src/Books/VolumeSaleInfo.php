@@ -37,7 +37,7 @@ class VolumeSaleInfo extends \Google\Collection
   public $listPrice;
   protected $offersType = VolumeSaleInfoOffers::class;
   protected $offersDataType = 'array';
-  public $offers;
+  public $offers = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class NlpSaftSemanticNode extends \Google\Collection
   protected $collection_key = 'arc';
   protected $arcType = NlpSaftSemanticNodeArc::class;
   protected $arcDataType = 'array';
-  public $arc;
+  public $arc = [];
   /**
    * @var float
    */

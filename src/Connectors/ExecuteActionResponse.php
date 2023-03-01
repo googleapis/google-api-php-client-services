@@ -23,7 +23,7 @@ class ExecuteActionResponse extends \Google\Collection
   /**
    * @var array[]
    */
-  public $results;
+  public $results = [];
 
   /**
    * @param array[]

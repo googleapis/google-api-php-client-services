@@ -29,14 +29,14 @@ class OrderedJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $pigJobType = PigJob::class;
   protected $pigJobDataType = '';
   public $pigJob;
   /**
    * @var string[]
    */
-  public $prerequisiteStepIds;
+  public $prerequisiteStepIds = [];
   protected $prestoJobType = PrestoJob::class;
   protected $prestoJobDataType = '';
   public $prestoJob;

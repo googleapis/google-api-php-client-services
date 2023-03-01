@@ -33,7 +33,7 @@ class GoogleCloudSecuritycenterV1Binding extends \Google\Collection
   public $role;
   protected $subjectsType = Subject::class;
   protected $subjectsDataType = 'array';
-  public $subjects;
+  public $subjects = [];
 
   /**
    * @param string

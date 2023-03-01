@@ -22,7 +22,7 @@ class QualityWebanswersTranscriptAnnotations extends \Google\Collection
   protected $collection_key = 'videoTranscriptAnnotations';
   protected $videoTranscriptAnnotationsType = QualityWebanswersVideoTranscriptAnnotations::class;
   protected $videoTranscriptAnnotationsDataType = 'array';
-  public $videoTranscriptAnnotations;
+  public $videoTranscriptAnnotations = [];
 
   /**
    * @param QualityWebanswersVideoTranscriptAnnotations[]

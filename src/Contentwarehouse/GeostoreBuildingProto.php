@@ -43,7 +43,7 @@ class GeostoreBuildingProto extends \Google\Collection
   public $heightMetersMetadata;
   protected $levelType = GeostoreFeatureIdProto::class;
   protected $levelDataType = 'array';
-  public $level;
+  public $level = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class JobConfigurationQuery extends \Google\Collection
   public $clustering;
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
-  public $connectionProperties;
+  public $connectionProperties = [];
   /**
    * @var string
    */
@@ -77,17 +77,17 @@ class JobConfigurationQuery extends \Google\Collection
   public $query;
   protected $queryParametersType = QueryParameter::class;
   protected $queryParametersDataType = 'array';
-  public $queryParameters;
+  public $queryParameters = [];
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
   public $rangePartitioning;
   /**
    * @var string[]
    */
-  public $schemaUpdateOptions;
+  public $schemaUpdateOptions = [];
   protected $tableDefinitionsType = ExternalDataConfiguration::class;
   protected $tableDefinitionsDataType = 'map';
-  public $tableDefinitions;
+  public $tableDefinitions = [];
   protected $timePartitioningType = TimePartitioning::class;
   protected $timePartitioningDataType = '';
   public $timePartitioning;
@@ -101,7 +101,7 @@ class JobConfigurationQuery extends \Google\Collection
   public $useQueryCache;
   protected $userDefinedFunctionResourcesType = UserDefinedFunctionResource::class;
   protected $userDefinedFunctionResourcesDataType = 'array';
-  public $userDefinedFunctionResources;
+  public $userDefinedFunctionResources = [];
   /**
    * @var string
    */

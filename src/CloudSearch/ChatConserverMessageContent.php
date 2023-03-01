@@ -22,10 +22,10 @@ class ChatConserverMessageContent extends \Google\Collection
   protected $collection_key = 'segment';
   protected $attachmentType = SocialCommonAttachmentAttachment::class;
   protected $attachmentDataType = 'array';
-  public $attachment;
+  public $attachment = [];
   protected $segmentType = Segment::class;
   protected $segmentDataType = 'array';
-  public $segment;
+  public $segment = [];
 
   /**
    * @param SocialCommonAttachmentAttachment[]

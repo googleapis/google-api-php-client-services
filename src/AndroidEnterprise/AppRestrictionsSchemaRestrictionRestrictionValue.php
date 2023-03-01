@@ -35,7 +35,7 @@ class AppRestrictionsSchemaRestrictionRestrictionValue extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $valueMultiselect;
+  public $valueMultiselect = [];
   /**
    * @var string
    */

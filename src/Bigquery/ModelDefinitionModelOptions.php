@@ -23,7 +23,7 @@ class ModelDefinitionModelOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

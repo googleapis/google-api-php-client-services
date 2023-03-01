@@ -51,7 +51,7 @@ class MigratingVm extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $lastReplicationCycleType = ReplicationCycle::class;
   protected $lastReplicationCycleDataType = '';
   public $lastReplicationCycle;
@@ -67,10 +67,10 @@ class MigratingVm extends \Google\Collection
   public $policy;
   protected $recentCloneJobsType = CloneJob::class;
   protected $recentCloneJobsDataType = 'array';
-  public $recentCloneJobs;
+  public $recentCloneJobs = [];
   protected $recentCutoverJobsType = CutoverJob::class;
   protected $recentCutoverJobsDataType = 'array';
-  public $recentCutoverJobs;
+  public $recentCutoverJobs = [];
   /**
    * @var string
    */

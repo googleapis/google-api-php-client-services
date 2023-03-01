@@ -22,7 +22,7 @@ class TargetPoolsScopedList extends \Google\Collection
   protected $collection_key = 'targetPools';
   protected $targetPoolsType = TargetPool::class;
   protected $targetPoolsDataType = 'array';
-  public $targetPools;
+  public $targetPools = [];
   protected $warningType = TargetPoolsScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

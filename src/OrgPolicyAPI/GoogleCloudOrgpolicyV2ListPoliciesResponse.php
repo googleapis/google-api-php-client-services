@@ -26,7 +26,7 @@ class GoogleCloudOrgpolicyV2ListPoliciesResponse extends \Google\Collection
   public $nextPageToken;
   protected $policiesType = GoogleCloudOrgpolicyV2Policy::class;
   protected $policiesDataType = 'array';
-  public $policies;
+  public $policies = [];
 
   /**
    * @param string

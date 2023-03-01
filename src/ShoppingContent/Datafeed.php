@@ -52,7 +52,7 @@ class Datafeed extends \Google\Collection
   public $name;
   protected $targetsType = DatafeedTarget::class;
   protected $targetsDataType = 'array';
-  public $targets;
+  public $targets = [];
 
   /**
    * @param string

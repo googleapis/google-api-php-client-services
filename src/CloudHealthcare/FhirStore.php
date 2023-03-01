@@ -43,7 +43,7 @@ class FhirStore extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class FhirStore extends \Google\Collection
   public $notificationConfig;
   protected $streamConfigsType = StreamConfig::class;
   protected $streamConfigsDataType = 'array';
-  public $streamConfigs;
+  public $streamConfigs = [];
   protected $validationConfigType = ValidationConfig::class;
   protected $validationConfigDataType = '';
   public $validationConfig;

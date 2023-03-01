@@ -26,7 +26,7 @@ class AdvertiserLandingPagesListResponse extends \Google\Collection
   public $kind;
   protected $landingPagesType = LandingPage::class;
   protected $landingPagesDataType = 'array';
-  public $landingPages;
+  public $landingPages = [];
   /**
    * @var string
    */

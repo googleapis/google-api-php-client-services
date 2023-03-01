@@ -26,7 +26,7 @@ class ListNoteOccurrencesResponse extends \Google\Collection
   public $nextPageToken;
   protected $occurrencesType = Occurrence::class;
   protected $occurrencesDataType = 'array';
-  public $occurrences;
+  public $occurrences = [];
 
   /**
    * @param string

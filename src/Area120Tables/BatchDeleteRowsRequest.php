@@ -23,7 +23,7 @@ class BatchDeleteRowsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $names;
+  public $names = [];
 
   /**
    * @param string[]

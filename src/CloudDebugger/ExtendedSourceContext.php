@@ -25,7 +25,7 @@ class ExtendedSourceContext extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
 
   /**
    * @param SourceContext

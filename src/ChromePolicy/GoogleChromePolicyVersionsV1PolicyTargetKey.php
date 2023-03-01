@@ -22,7 +22,7 @@ class GoogleChromePolicyVersionsV1PolicyTargetKey extends \Google\Model
   /**
    * @var string[]
    */
-  public $additionalTargetKeys;
+  public $additionalTargetKeys = [];
   /**
    * @var string
    */

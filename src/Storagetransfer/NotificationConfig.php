@@ -23,7 +23,7 @@ class NotificationConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $eventTypes;
+  public $eventTypes = [];
   /**
    * @var string
    */

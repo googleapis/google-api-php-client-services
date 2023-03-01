@@ -31,7 +31,7 @@ class PlayerScoreResetResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resetScoreTimeSpans;
+  public $resetScoreTimeSpans = [];
 
   /**
    * @param string

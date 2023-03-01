@@ -30,7 +30,7 @@ class I18nRegionListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = I18nRegion::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

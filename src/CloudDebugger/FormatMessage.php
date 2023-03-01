@@ -27,7 +27,7 @@ class FormatMessage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

@@ -41,7 +41,7 @@ class Activity extends \Google\Collection
   public $channelGrouping;
   protected $customDimensionType = CustomDimension::class;
   protected $customDimensionDataType = 'array';
-  public $customDimension;
+  public $customDimension = [];
   protected $ecommerceType = EcommerceData::class;
   protected $ecommerceDataType = '';
   public $ecommerce;

@@ -22,11 +22,11 @@ class ListClustersResponse extends \Google\Collection
   protected $collection_key = 'failedLocations';
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
-  public $clusters;
+  public $clusters = [];
   /**
    * @var string[]
    */
-  public $failedLocations;
+  public $failedLocations = [];
   /**
    * @var string
    */

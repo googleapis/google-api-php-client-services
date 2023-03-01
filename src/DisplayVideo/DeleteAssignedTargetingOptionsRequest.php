@@ -23,7 +23,7 @@ class DeleteAssignedTargetingOptionsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assignedTargetingOptionIds;
+  public $assignedTargetingOptionIds = [];
   /**
    * @var string
    */

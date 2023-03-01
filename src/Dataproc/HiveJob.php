@@ -27,11 +27,11 @@ class HiveJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jarFileUris;
+  public $jarFileUris = [];
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class HiveJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scriptVariables;
+  public $scriptVariables = [];
 
   /**
    * @param bool

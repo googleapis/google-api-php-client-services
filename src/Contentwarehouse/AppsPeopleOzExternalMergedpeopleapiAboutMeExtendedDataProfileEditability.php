@@ -23,7 +23,7 @@ class AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataProfileEditability e
   /**
    * @var string[]
    */
-  public $lockedField;
+  public $lockedField = [];
 
   /**
    * @param string[]

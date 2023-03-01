@@ -22,7 +22,7 @@ class GeostoreSourceInfoProto extends \Google\Collection
   protected $collection_key = 'rawData';
   protected $attributionUrlType = GeostoreUrlProto::class;
   protected $attributionUrlDataType = 'array';
-  public $attributionUrl;
+  public $attributionUrl = [];
   protected $collectionDateType = GeostoreDateTimeProto::class;
   protected $collectionDateDataType = '';
   public $collectionDate;
@@ -55,7 +55,7 @@ class GeostoreSourceInfoProto extends \Google\Collection
   public $provider;
   protected $rawDataType = GeostoreRawDataProto::class;
   protected $rawDataDataType = 'array';
-  public $rawData;
+  public $rawData = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class GetDataSourceIndexStatsResponse extends \Google\Collection
   public $averageIndexedItemCount;
   protected $statsType = DataSourceIndexStats::class;
   protected $statsDataType = 'array';
-  public $stats;
+  public $stats = [];
 
   /**
    * @param string

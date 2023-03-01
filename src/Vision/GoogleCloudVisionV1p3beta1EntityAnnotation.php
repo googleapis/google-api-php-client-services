@@ -37,14 +37,14 @@ class GoogleCloudVisionV1p3beta1EntityAnnotation extends \Google\Collection
   public $locale;
   protected $locationsType = GoogleCloudVisionV1p3beta1LocationInfo::class;
   protected $locationsDataType = 'array';
-  public $locations;
+  public $locations = [];
   /**
    * @var string
    */
   public $mid;
   protected $propertiesType = GoogleCloudVisionV1p3beta1Property::class;
   protected $propertiesDataType = 'array';
-  public $properties;
+  public $properties = [];
   /**
    * @var float
    */

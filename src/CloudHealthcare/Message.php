@@ -31,7 +31,7 @@ class Message extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -45,7 +45,7 @@ class Message extends \Google\Collection
   public $parsedData;
   protected $patientIdsType = PatientId::class;
   protected $patientIdsDataType = 'array';
-  public $patientIds;
+  public $patientIds = [];
   protected $schematizedDataType = SchematizedData::class;
   protected $schematizedDataDataType = '';
   public $schematizedData;

@@ -26,7 +26,7 @@ class MobileDevice extends \Google\Collection
   public $adbStatus;
   protected $applicationsType = MobileDeviceApplications::class;
   protected $applicationsDataType = 'array';
-  public $applications;
+  public $applications = [];
   /**
    * @var string
    */
@@ -66,7 +66,7 @@ class MobileDevice extends \Google\Collection
   /**
    * @var string[]
    */
-  public $email;
+  public $email = [];
   /**
    * @var string
    */
@@ -122,7 +122,7 @@ class MobileDevice extends \Google\Collection
   /**
    * @var string[]
    */
-  public $name;
+  public $name = [];
   /**
    * @var string
    */
@@ -134,7 +134,7 @@ class MobileDevice extends \Google\Collection
   /**
    * @var string[]
    */
-  public $otherAccountsInfo;
+  public $otherAccountsInfo = [];
   /**
    * @var string
    */

@@ -40,7 +40,7 @@ class GoogleCloudChannelV1Entitlement extends \Google\Collection
   public $offer;
   protected $parametersType = GoogleCloudChannelV1Parameter::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
   protected $provisionedServiceType = GoogleCloudChannelV1ProvisionedService::class;
   protected $provisionedServiceDataType = '';
   public $provisionedService;
@@ -55,7 +55,7 @@ class GoogleCloudChannelV1Entitlement extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suspensionReasons;
+  public $suspensionReasons = [];
   protected $trialSettingsType = GoogleCloudChannelV1TrialSettings::class;
   protected $trialSettingsDataType = '';
   public $trialSettings;

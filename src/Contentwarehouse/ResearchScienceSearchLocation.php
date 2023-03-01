@@ -31,15 +31,15 @@ class ResearchScienceSearchLocation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $containedInMid;
+  public $containedInMid = [];
   /**
    * @var string[]
    */
-  public $locationMid;
+  public $locationMid = [];
   /**
    * @var string[]
    */
-  public $locationMidLabel;
+  public $locationMidLabel = [];
   /**
    * @var string
    */

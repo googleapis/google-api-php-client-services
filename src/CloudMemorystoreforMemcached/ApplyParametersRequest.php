@@ -27,7 +27,7 @@ class ApplyParametersRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nodeIds;
+  public $nodeIds = [];
 
   /**
    * @param bool

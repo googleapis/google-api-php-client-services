@@ -27,11 +27,11 @@ class NlpSemanticParsingDateTimeAnnotation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $endDate;
+  public $endDate = [];
   /**
    * @var string[]
    */
-  public $endTime;
+  public $endTime = [];
   /**
    * @var string
    */
@@ -43,11 +43,11 @@ class NlpSemanticParsingDateTimeAnnotation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $startDate;
+  public $startDate = [];
   /**
    * @var string[]
    */
-  public $startTime;
+  public $startTime = [];
   /**
    * @var string
    */

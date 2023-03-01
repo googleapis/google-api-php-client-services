@@ -23,7 +23,7 @@ class ApplicationInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $emails;
+  public $emails = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class ApplicationInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $uris;
+  public $uris = [];
 
   /**
    * @param string[]

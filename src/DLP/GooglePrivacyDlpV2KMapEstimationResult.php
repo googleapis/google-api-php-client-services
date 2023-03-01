@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2KMapEstimationResult extends \Google\Collection
   protected $collection_key = 'kMapEstimationHistogram';
   protected $kMapEstimationHistogramType = GooglePrivacyDlpV2KMapEstimationHistogramBucket::class;
   protected $kMapEstimationHistogramDataType = 'array';
-  public $kMapEstimationHistogram;
+  public $kMapEstimationHistogram = [];
 
   /**
    * @param GooglePrivacyDlpV2KMapEstimationHistogramBucket[]

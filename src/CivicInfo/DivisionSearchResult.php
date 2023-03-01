@@ -23,7 +23,7 @@ class DivisionSearchResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aliases;
+  public $aliases = [];
   /**
    * @var string
    */

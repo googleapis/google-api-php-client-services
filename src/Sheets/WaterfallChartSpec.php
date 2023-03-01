@@ -36,7 +36,7 @@ class WaterfallChartSpec extends \Google\Collection
   public $hideConnectorLines;
   protected $seriesType = WaterfallChartSeries::class;
   protected $seriesDataType = 'array';
-  public $series;
+  public $series = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class TargetSslProxyList extends \Google\Collection
   public $id;
   protected $itemsType = TargetSslProxy::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

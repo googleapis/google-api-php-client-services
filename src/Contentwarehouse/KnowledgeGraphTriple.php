@@ -33,10 +33,10 @@ class KnowledgeGraphTriple extends \Google\Collection
   public $pred;
   protected $provenanceType = KnowledgeGraphTripleProvenance::class;
   protected $provenanceDataType = 'array';
-  public $provenance;
+  public $provenance = [];
   protected $qualifierSetsType = KnowledgeGraphQualifierSet::class;
   protected $qualifierSetsDataType = 'array';
-  public $qualifierSets;
+  public $qualifierSets = [];
   /**
    * @var string
    */

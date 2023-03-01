@@ -22,11 +22,11 @@ class StragglerSummary extends \Google\Collection
   protected $collection_key = 'recentStragglers';
   protected $recentStragglersType = Straggler::class;
   protected $recentStragglersDataType = 'array';
-  public $recentStragglers;
+  public $recentStragglers = [];
   /**
    * @var string[]
    */
-  public $stragglerCauseCount;
+  public $stragglerCauseCount = [];
   /**
    * @var string
    */

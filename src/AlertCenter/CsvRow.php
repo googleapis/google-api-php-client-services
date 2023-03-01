@@ -23,7 +23,7 @@ class CsvRow extends \Google\Collection
   /**
    * @var string[]
    */
-  public $entries;
+  public $entries = [];
 
   /**
    * @param string[]

@@ -27,7 +27,7 @@ class OrionDocEntitiesProto extends \Google\Collection
   /**
    * @var int[]
    */
-  public $encodedEntity;
+  public $encodedEntity = [];
 
   /**
    * @param string

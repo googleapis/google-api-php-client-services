@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1DimensionMetric extends \Google\Collection
   protected $collection_key = 'metrics';
   protected $metricsType = GoogleCloudApigeeV1Metric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   /**
    * @var string
    */

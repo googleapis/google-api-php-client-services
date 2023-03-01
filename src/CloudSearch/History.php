@@ -22,7 +22,7 @@ class History extends \Google\Collection
   protected $collection_key = 'record';
   protected $recordType = HistoryRecord::class;
   protected $recordDataType = 'array';
-  public $record;
+  public $record = [];
 
   /**
    * @param HistoryRecord[]

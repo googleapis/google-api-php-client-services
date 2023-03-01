@@ -26,7 +26,7 @@ class SecurityPolicyList extends \Google\Collection
   public $id;
   protected $itemsType = SecurityPolicy::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class UserPermission extends \Google\Collection
   public $accountId;
   protected $containerAccessType = ContainerAccess::class;
   protected $containerAccessDataType = 'array';
-  public $containerAccess;
+  public $containerAccess = [];
   /**
    * @var string
    */

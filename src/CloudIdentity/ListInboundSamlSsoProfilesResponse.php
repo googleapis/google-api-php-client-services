@@ -22,7 +22,7 @@ class ListInboundSamlSsoProfilesResponse extends \Google\Collection
   protected $collection_key = 'inboundSamlSsoProfiles';
   protected $inboundSamlSsoProfilesType = InboundSamlSsoProfile::class;
   protected $inboundSamlSsoProfilesDataType = 'array';
-  public $inboundSamlSsoProfiles;
+  public $inboundSamlSsoProfiles = [];
   /**
    * @var string
    */

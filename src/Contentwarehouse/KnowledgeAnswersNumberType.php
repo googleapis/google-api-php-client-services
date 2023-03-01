@@ -33,7 +33,7 @@ class KnowledgeAnswersNumberType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subType;
+  public $subType = [];
 
   /**
    * @param bool

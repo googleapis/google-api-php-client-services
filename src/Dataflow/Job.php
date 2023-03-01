@@ -56,7 +56,7 @@ class Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -90,14 +90,14 @@ class Job extends \Google\Collection
   public $satisfiesPzs;
   protected $stageStatesType = ExecutionStageState::class;
   protected $stageStatesDataType = 'array';
-  public $stageStates;
+  public $stageStates = [];
   /**
    * @var string
    */
   public $startTime;
   protected $stepsType = Step::class;
   protected $stepsDataType = 'array';
-  public $steps;
+  public $steps = [];
   /**
    * @var string
    */
@@ -105,11 +105,11 @@ class Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tempFiles;
+  public $tempFiles = [];
   /**
    * @var string[]
    */
-  public $transformNameMapping;
+  public $transformNameMapping = [];
   /**
    * @var string
    */

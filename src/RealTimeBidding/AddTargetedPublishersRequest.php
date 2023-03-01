@@ -23,7 +23,7 @@ class AddTargetedPublishersRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $publisherIds;
+  public $publisherIds = [];
   /**
    * @var string
    */

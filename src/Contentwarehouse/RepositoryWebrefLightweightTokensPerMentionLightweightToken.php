@@ -22,7 +22,7 @@ class RepositoryWebrefLightweightTokensPerMentionLightweightToken extends \Googl
   protected $collection_key = 'matchedLightweightToken';
   protected $matchedLightweightTokenType = RepositoryWebrefLightweightTokensMatchedLightweightToken::class;
   protected $matchedLightweightTokenDataType = 'array';
-  public $matchedLightweightToken;
+  public $matchedLightweightToken = [];
 
   /**
    * @param RepositoryWebrefLightweightTokensMatchedLightweightToken[]

@@ -49,7 +49,7 @@ class Announcement extends \Google\Collection
   public $individualStudentsOptions;
   protected $materialsType = Material::class;
   protected $materialsDataType = 'array';
-  public $materials;
+  public $materials = [];
   /**
    * @var string
    */

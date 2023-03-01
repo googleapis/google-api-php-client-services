@@ -61,7 +61,7 @@ class GoogleCloudSecuritycenterV1p1beta1Finding extends \Google\Model
   /**
    * @var array[]
    */
-  public $sourceProperties;
+  public $sourceProperties = [];
   /**
    * @var string
    */

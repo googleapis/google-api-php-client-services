@@ -34,7 +34,7 @@ class VmEndpointNatMappingsList extends \Google\Collection
   public $nextPageToken;
   protected $resultType = VmEndpointNatMappings::class;
   protected $resultDataType = 'array';
-  public $result;
+  public $result = [];
   /**
    * @var string
    */

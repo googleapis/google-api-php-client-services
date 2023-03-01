@@ -23,18 +23,18 @@ class OrgPolicyViolationInfo extends \Google\Collection
   /**
    * @var array[]
    */
-  public $payload;
+  public $payload = [];
   /**
    * @var string[]
    */
-  public $resourceTags;
+  public $resourceTags = [];
   /**
    * @var string
    */
   public $resourceType;
   protected $violationInfoType = ViolationInfo::class;
   protected $violationInfoDataType = 'array';
-  public $violationInfo;
+  public $violationInfo = [];
 
   /**
    * @param array[]

@@ -22,7 +22,7 @@ class WidgetMarkup extends \Google\Collection
   protected $collection_key = 'buttons';
   protected $buttonsType = Button::class;
   protected $buttonsDataType = 'array';
-  public $buttons;
+  public $buttons = [];
   protected $dateTimePickerType = DateTimePicker::class;
   protected $dateTimePickerDataType = '';
   public $dateTimePicker;

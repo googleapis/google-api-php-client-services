@@ -23,7 +23,7 @@ class RegexValidation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $regexes;
+  public $regexes = [];
 
   /**
    * @param string[]

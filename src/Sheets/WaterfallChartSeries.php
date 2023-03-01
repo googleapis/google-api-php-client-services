@@ -22,7 +22,7 @@ class WaterfallChartSeries extends \Google\Collection
   protected $collection_key = 'customSubtotals';
   protected $customSubtotalsType = WaterfallChartCustomSubtotal::class;
   protected $customSubtotalsDataType = 'array';
-  public $customSubtotals;
+  public $customSubtotals = [];
   protected $dataType = ChartData::class;
   protected $dataDataType = '';
   public $data;

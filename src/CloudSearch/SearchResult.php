@@ -22,7 +22,7 @@ class SearchResult extends \Google\Collection
   protected $collection_key = 'clusteredResults';
   protected $clusteredResultsType = SearchResult::class;
   protected $clusteredResultsDataType = 'array';
-  public $clusteredResults;
+  public $clusteredResults = [];
   protected $debugInfoType = ResultDebugInfo::class;
   protected $debugInfoDataType = '';
   public $debugInfo;

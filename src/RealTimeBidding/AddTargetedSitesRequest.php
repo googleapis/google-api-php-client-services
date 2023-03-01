@@ -23,7 +23,7 @@ class AddTargetedSitesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sites;
+  public $sites = [];
   /**
    * @var string
    */

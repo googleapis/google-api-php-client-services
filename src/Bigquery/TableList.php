@@ -34,7 +34,7 @@ class TableList extends \Google\Collection
   public $nextPageToken;
   protected $tablesType = TableListTables::class;
   protected $tablesDataType = 'array';
-  public $tables;
+  public $tables = [];
   /**
    * @var int
    */

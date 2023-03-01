@@ -29,7 +29,7 @@ class TransferOperation extends \Google\Collection
   public $endTime;
   protected $errorBreakdownsType = ErrorSummary::class;
   protected $errorBreakdownsDataType = 'array';
-  public $errorBreakdowns;
+  public $errorBreakdowns = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class SearchTransitiveGroupsResponse extends \Google\Collection
   protected $collection_key = 'memberships';
   protected $membershipsType = GroupRelation::class;
   protected $membershipsDataType = 'array';
-  public $memberships;
+  public $memberships = [];
   /**
    * @var string
    */

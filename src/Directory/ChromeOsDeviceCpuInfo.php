@@ -26,7 +26,7 @@ class ChromeOsDeviceCpuInfo extends \Google\Collection
   public $architecture;
   protected $logicalCpusType = ChromeOsDeviceCpuInfoLogicalCpus::class;
   protected $logicalCpusDataType = 'array';
-  public $logicalCpus;
+  public $logicalCpus = [];
   /**
    * @var int
    */

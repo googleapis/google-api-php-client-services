@@ -22,7 +22,7 @@ class AssistantApiSettingsHospitalityCardSettings extends \Google\Collection
   protected $collection_key = 'youtubeCardConfig';
   protected $cardConfigType = AssistantApiSettingsHospitalityCardSettingsCardConfig::class;
   protected $cardConfigDataType = 'array';
-  public $cardConfig;
+  public $cardConfig = [];
   /**
    * @var bool
    */
@@ -33,7 +33,7 @@ class AssistantApiSettingsHospitalityCardSettings extends \Google\Collection
   public $showPhotoSwipeGestureTutorial;
   protected $youtubeCardConfigType = AssistantApiSettingsHospitalityCardSettingsYouTubeCardConfig::class;
   protected $youtubeCardConfigDataType = 'array';
-  public $youtubeCardConfig;
+  public $youtubeCardConfig = [];
 
   /**
    * @param AssistantApiSettingsHospitalityCardSettingsCardConfig[]

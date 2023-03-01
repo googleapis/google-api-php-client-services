@@ -27,7 +27,7 @@ class GoogleCloudDialogflowV2IntentMessageSelectItemInfo extends \Google\Collect
   /**
    * @var string[]
    */
-  public $synonyms;
+  public $synonyms = [];
 
   /**
    * @param string

@@ -26,7 +26,7 @@ class JobExecutionDetails extends \Google\Collection
   public $nextPageToken;
   protected $stagesType = StageSummary::class;
   protected $stagesDataType = 'array';
-  public $stages;
+  public $stages = [];
 
   /**
    * @param string

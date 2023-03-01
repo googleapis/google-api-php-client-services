@@ -26,7 +26,7 @@ class DynamicListenerState extends \Google\Model
   /**
    * @var array[]
    */
-  public $listener;
+  public $listener = [];
   /**
    * @var string
    */

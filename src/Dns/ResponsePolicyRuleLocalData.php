@@ -22,7 +22,7 @@ class ResponsePolicyRuleLocalData extends \Google\Collection
   protected $collection_key = 'localDatas';
   protected $localDatasType = ResourceRecordSet::class;
   protected $localDatasDataType = 'array';
-  public $localDatas;
+  public $localDatas = [];
 
   /**
    * @param ResourceRecordSet[]

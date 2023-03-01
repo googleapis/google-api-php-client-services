@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ListAsyncQueriesResponse extends \Google\Collection
   protected $collection_key = 'queries';
   protected $queriesType = GoogleCloudApigeeV1AsyncQuery::class;
   protected $queriesDataType = 'array';
-  public $queries;
+  public $queries = [];
 
   /**
    * @param GoogleCloudApigeeV1AsyncQuery[]

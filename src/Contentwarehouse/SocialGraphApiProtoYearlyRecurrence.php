@@ -26,7 +26,7 @@ class SocialGraphApiProtoYearlyRecurrence extends \Google\Collection
   /**
    * @var string[]
    */
-  public $months;
+  public $months = [];
 
   /**
    * @param SocialGraphApiProtoMonthlyRecurrence

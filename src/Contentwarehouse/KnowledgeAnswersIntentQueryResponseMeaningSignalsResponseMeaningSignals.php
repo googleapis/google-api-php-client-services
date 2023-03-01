@@ -22,7 +22,7 @@ class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals ex
   protected $collection_key = 'propertyValue';
   protected $propertyValueType = FreebasePropertyValue::class;
   protected $propertyValueDataType = 'array';
-  public $propertyValue;
+  public $propertyValue = [];
 
   /**
    * @param FreebasePropertyValue[]

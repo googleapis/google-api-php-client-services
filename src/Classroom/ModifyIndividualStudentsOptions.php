@@ -23,11 +23,11 @@ class ModifyIndividualStudentsOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $addStudentIds;
+  public $addStudentIds = [];
   /**
    * @var string[]
    */
-  public $removeStudentIds;
+  public $removeStudentIds = [];
 
   /**
    * @param string[]

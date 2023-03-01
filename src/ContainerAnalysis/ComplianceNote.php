@@ -45,7 +45,7 @@ class ComplianceNote extends \Google\Collection
   public $title;
   protected $versionType = ComplianceVersion::class;
   protected $versionDataType = 'array';
-  public $version;
+  public $version = [];
 
   /**
    * @param CisBenchmark

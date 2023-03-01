@@ -49,15 +49,15 @@ class IndexingSignalAggregatorAggregatedScore extends \Google\Collection
   /**
    * @var string[]
    */
-  public $patternsUsedInMediation;
-  public $percentile;
+  public $patternsUsedInMediation = [];
+  public $percentile = [];
   protected $runningMeanAndVarianceInternalStateType = IndexingSignalAggregatorRunningMeanAndVarianceInternalState::class;
   protected $runningMeanAndVarianceInternalStateDataType = '';
   public $runningMeanAndVarianceInternalState;
   protected $samplesType = IndexingSignalAggregatorUrlScore::class;
   protected $samplesDataType = 'array';
-  public $samples;
-  public $scores;
+  public $samples = [];
+  public $scores = [];
   /**
    * @var int
    */

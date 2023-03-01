@@ -33,7 +33,7 @@ class ImageOccurrence extends \Google\Collection
   public $fingerprint;
   protected $layerInfoType = Layer::class;
   protected $layerInfoDataType = 'array';
-  public $layerInfo;
+  public $layerInfo = [];
 
   /**
    * @param string

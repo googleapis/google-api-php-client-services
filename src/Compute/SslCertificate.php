@@ -69,7 +69,7 @@ class SslCertificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subjectAlternativeNames;
+  public $subjectAlternativeNames = [];
   /**
    * @var string
    */

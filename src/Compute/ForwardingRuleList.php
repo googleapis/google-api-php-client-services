@@ -26,7 +26,7 @@ class ForwardingRuleList extends \Google\Collection
   public $id;
   protected $itemsType = ForwardingRule::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

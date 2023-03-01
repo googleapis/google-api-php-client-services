@@ -41,7 +41,7 @@ class AndroidVersion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   /**
    * @var string
    */

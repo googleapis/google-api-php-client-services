@@ -22,14 +22,14 @@ class Enum extends \Google\Collection
   protected $collection_key = 'options';
   protected $enumvalueType = EnumValue::class;
   protected $enumvalueDataType = 'array';
-  public $enumvalue;
+  public $enumvalue = [];
   /**
    * @var string
    */
   public $name;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
-  public $options;
+  public $options = [];
   protected $sourceContextType = SourceContext::class;
   protected $sourceContextDataType = '';
   public $sourceContext;

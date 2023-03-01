@@ -26,7 +26,7 @@ class ListNotesResponse extends \Google\Collection
   public $nextPageToken;
   protected $notesType = Note::class;
   protected $notesDataType = 'array';
-  public $notes;
+  public $notes = [];
 
   /**
    * @param string

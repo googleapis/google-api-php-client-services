@@ -22,7 +22,7 @@ class RealtimeData extends \Google\Collection
   protected $collection_key = 'rows';
   protected $columnHeadersType = RealtimeDataColumnHeaders::class;
   protected $columnHeadersDataType = 'array';
-  public $columnHeaders;
+  public $columnHeaders = [];
   /**
    * @var string
    */
@@ -40,7 +40,7 @@ class RealtimeData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rows;
+  public $rows = [];
   /**
    * @var string
    */
@@ -52,7 +52,7 @@ class RealtimeData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $totalsForAllResults;
+  public $totalsForAllResults = [];
 
   /**
    * @param RealtimeDataColumnHeaders[]

@@ -46,7 +46,7 @@ class GoogleCloudMlV1Job extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $predictionInputType = GoogleCloudMlV1PredictionInput::class;
   protected $predictionInputDataType = '';
   public $predictionInput;

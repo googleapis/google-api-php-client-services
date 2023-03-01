@@ -22,7 +22,7 @@ class ServerConfig extends \Google\Collection
   protected $collection_key = 'validNodeVersions';
   protected $channelsType = ReleaseChannelConfig::class;
   protected $channelsDataType = 'array';
-  public $channels;
+  public $channels = [];
   /**
    * @var string
    */
@@ -34,15 +34,15 @@ class ServerConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $validImageTypes;
+  public $validImageTypes = [];
   /**
    * @var string[]
    */
-  public $validMasterVersions;
+  public $validMasterVersions = [];
   /**
    * @var string[]
    */
-  public $validNodeVersions;
+  public $validNodeVersions = [];
 
   /**
    * @param ReleaseChannelConfig[]

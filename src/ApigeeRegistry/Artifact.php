@@ -22,7 +22,7 @@ class Artifact extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string
    */
@@ -38,7 +38,7 @@ class Artifact extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

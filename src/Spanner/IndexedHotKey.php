@@ -22,7 +22,7 @@ class IndexedHotKey extends \Google\Model
   /**
    * @var int[]
    */
-  public $sparseHotKeys;
+  public $sparseHotKeys = [];
 
   /**
    * @param int[]

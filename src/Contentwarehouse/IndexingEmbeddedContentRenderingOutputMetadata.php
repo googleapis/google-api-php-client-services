@@ -60,7 +60,7 @@ class IndexingEmbeddedContentRenderingOutputMetadata extends \Google\Collection
   public $renderEngine;
   protected $renderEventType = HtmlrenderWebkitHeadlessProtoRenderEvent::class;
   protected $renderEventDataType = 'array';
-  public $renderEvent;
+  public $renderEvent = [];
   /**
    * @var string
    */

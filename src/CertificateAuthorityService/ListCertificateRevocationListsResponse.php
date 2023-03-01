@@ -22,7 +22,7 @@ class ListCertificateRevocationListsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $certificateRevocationListsType = CertificateRevocationList::class;
   protected $certificateRevocationListsDataType = 'array';
-  public $certificateRevocationLists;
+  public $certificateRevocationLists = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListCertificateRevocationListsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param CertificateRevocationList[]

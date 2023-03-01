@@ -22,14 +22,14 @@ class StackFrame extends \Google\Collection
   protected $collection_key = 'locals';
   protected $argumentsType = Variable::class;
   protected $argumentsDataType = 'array';
-  public $arguments;
+  public $arguments = [];
   /**
    * @var string
    */
   public $function;
   protected $localsType = Variable::class;
   protected $localsDataType = 'array';
-  public $locals;
+  public $locals = [];
   protected $locationType = SourceLocation::class;
   protected $locationDataType = '';
   public $location;

@@ -22,7 +22,7 @@ class CommitServicePerimetersResponse extends \Google\Collection
   protected $collection_key = 'servicePerimeters';
   protected $servicePerimetersType = ServicePerimeter::class;
   protected $servicePerimetersDataType = 'array';
-  public $servicePerimeters;
+  public $servicePerimeters = [];
 
   /**
    * @param ServicePerimeter[]

@@ -29,7 +29,7 @@ class MigrationWarning extends \Google\Collection
   public $code;
   protected $helpLinksType = Link::class;
   protected $helpLinksDataType = 'array';
-  public $helpLinks;
+  public $helpLinks = [];
   protected $warningMessageType = LocalizedMessage::class;
   protected $warningMessageDataType = '';
   public $warningMessage;

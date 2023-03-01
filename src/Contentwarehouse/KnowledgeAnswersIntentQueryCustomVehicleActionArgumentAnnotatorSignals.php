@@ -22,7 +22,7 @@ class KnowledgeAnswersIntentQueryCustomVehicleActionArgumentAnnotatorSignals ext
   /**
    * @var string[]
    */
-  public $additionalAnnotationData;
+  public $additionalAnnotationData = [];
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class UrlMapsScopedList extends \Google\Collection
   protected $collection_key = 'urlMaps';
   protected $urlMapsType = UrlMap::class;
   protected $urlMapsDataType = 'array';
-  public $urlMaps;
+  public $urlMaps = [];
   protected $warningType = UrlMapsScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

@@ -33,7 +33,7 @@ class OrderTrackingSignal extends \Google\Collection
   public $deliveryRegionCode;
   protected $lineItemsType = OrderTrackingSignalLineItemDetails::class;
   protected $lineItemsDataType = 'array';
-  public $lineItems;
+  public $lineItems = [];
   /**
    * @var string
    */
@@ -51,10 +51,10 @@ class OrderTrackingSignal extends \Google\Collection
   public $orderTrackingSignalId;
   protected $shipmentLineItemMappingType = OrderTrackingSignalShipmentLineItemMapping::class;
   protected $shipmentLineItemMappingDataType = 'array';
-  public $shipmentLineItemMapping;
+  public $shipmentLineItemMapping = [];
   protected $shippingInfoType = OrderTrackingSignalShippingInfo::class;
   protected $shippingInfoDataType = 'array';
-  public $shippingInfo;
+  public $shippingInfo = [];
 
   /**
    * @param PriceAmount

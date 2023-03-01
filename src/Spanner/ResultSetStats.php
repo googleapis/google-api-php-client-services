@@ -25,7 +25,7 @@ class ResultSetStats extends \Google\Model
   /**
    * @var array[]
    */
-  public $queryStats;
+  public $queryStats = [];
   /**
    * @var string
    */

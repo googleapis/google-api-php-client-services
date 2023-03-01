@@ -80,10 +80,10 @@ class FloodlightConfiguration extends \Google\Collection
   public $tagSettings;
   protected $thirdPartyAuthenticationTokensType = ThirdPartyAuthenticationToken::class;
   protected $thirdPartyAuthenticationTokensDataType = 'array';
-  public $thirdPartyAuthenticationTokens;
+  public $thirdPartyAuthenticationTokens = [];
   protected $userDefinedVariableConfigurationsType = UserDefinedVariableConfiguration::class;
   protected $userDefinedVariableConfigurationsDataType = 'array';
-  public $userDefinedVariableConfigurations;
+  public $userDefinedVariableConfigurations = [];
 
   /**
    * @param string

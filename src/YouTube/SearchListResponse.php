@@ -30,7 +30,7 @@ class SearchListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = SearchResult::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class Annotations extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Annotation::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

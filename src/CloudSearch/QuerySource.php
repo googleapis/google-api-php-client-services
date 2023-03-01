@@ -26,7 +26,7 @@ class QuerySource extends \Google\Collection
   public $displayName;
   protected $operatorsType = QueryOperator::class;
   protected $operatorsDataType = 'array';
-  public $operators;
+  public $operators = [];
   /**
    * @var string
    */

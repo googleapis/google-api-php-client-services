@@ -46,7 +46,7 @@ class Application extends \Google\Collection
   public $defaultHostname;
   protected $dispatchRulesType = UrlDispatchRule::class;
   protected $dispatchRulesDataType = 'array';
-  public $dispatchRules;
+  public $dispatchRules = [];
   protected $featureSettingsType = FeatureSettings::class;
   protected $featureSettingsDataType = '';
   public $featureSettings;

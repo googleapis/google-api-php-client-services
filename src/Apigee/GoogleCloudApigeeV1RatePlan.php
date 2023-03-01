@@ -30,7 +30,7 @@ class GoogleCloudApigeeV1RatePlan extends \Google\Collection
   public $billingPeriod;
   protected $consumptionPricingRatesType = GoogleCloudApigeeV1RateRange::class;
   protected $consumptionPricingRatesDataType = 'array';
-  public $consumptionPricingRates;
+  public $consumptionPricingRates = [];
   /**
    * @var string
    */
@@ -76,7 +76,7 @@ class GoogleCloudApigeeV1RatePlan extends \Google\Collection
   public $paymentFundingModel;
   protected $revenueShareRatesType = GoogleCloudApigeeV1RevenueShareRange::class;
   protected $revenueShareRatesDataType = 'array';
-  public $revenueShareRates;
+  public $revenueShareRates = [];
   /**
    * @var string
    */

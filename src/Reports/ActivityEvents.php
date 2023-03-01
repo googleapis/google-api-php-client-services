@@ -26,7 +26,7 @@ class ActivityEvents extends \Google\Collection
   public $name;
   protected $parametersType = ActivityEventsParameters::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */

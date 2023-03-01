@@ -32,7 +32,7 @@ class Message extends \Google\Model
   /**
    * @var string[]
    */
-  public $data;
+  public $data = [];
   protected $fcmOptionsType = FcmOptions::class;
   protected $fcmOptionsDataType = '';
   public $fcmOptions;

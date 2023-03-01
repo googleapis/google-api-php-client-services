@@ -30,7 +30,7 @@ class Volume extends \Google\Collection
   /**
    * @var string[]
    */
-  public $mountOptions;
+  public $mountOptions = [];
   /**
    * @var string
    */

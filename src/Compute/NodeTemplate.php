@@ -22,7 +22,7 @@ class NodeTemplate extends \Google\Collection
   protected $collection_key = 'disks';
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
-  public $accelerators;
+  public $accelerators = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class NodeTemplate extends \Google\Collection
   public $description;
   protected $disksType = LocalDisk::class;
   protected $disksDataType = 'array';
-  public $disks;
+  public $disks = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class NodeTemplate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nodeAffinityLabels;
+  public $nodeAffinityLabels = [];
   /**
    * @var string
    */

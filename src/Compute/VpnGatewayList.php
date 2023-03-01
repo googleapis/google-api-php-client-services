@@ -26,7 +26,7 @@ class VpnGatewayList extends \Google\Collection
   public $id;
   protected $itemsType = VpnGateway::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

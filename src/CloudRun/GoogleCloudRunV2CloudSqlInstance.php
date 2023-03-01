@@ -23,7 +23,7 @@ class GoogleCloudRunV2CloudSqlInstance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instances;
+  public $instances = [];
 
   /**
    * @param string[]

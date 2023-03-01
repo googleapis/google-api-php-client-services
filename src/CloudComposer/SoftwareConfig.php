@@ -22,11 +22,11 @@ class SoftwareConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $airflowConfigOverrides;
+  public $airflowConfigOverrides = [];
   /**
    * @var string[]
    */
-  public $envVariables;
+  public $envVariables = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class SoftwareConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $pypiPackages;
+  public $pypiPackages = [];
   /**
    * @var string
    */

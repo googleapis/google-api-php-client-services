@@ -40,7 +40,7 @@ class BulkCheckRequest extends \Google\Collection
   public $skipCacheLookup;
   protected $statementsType = StatementTemplate::class;
   protected $statementsDataType = 'array';
-  public $statements;
+  public $statements = [];
 
   /**
    * @param bool

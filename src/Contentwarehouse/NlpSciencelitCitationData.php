@@ -22,10 +22,10 @@ class NlpSciencelitCitationData extends \Google\Collection
   protected $collection_key = 'author';
   protected $articleIdType = NlpSciencelitArticleId::class;
   protected $articleIdDataType = 'array';
-  public $articleId;
+  public $articleId = [];
   protected $authorType = NlpSciencelitAuthor::class;
   protected $authorDataType = 'array';
-  public $author;
+  public $author = [];
   /**
    * @var string
    */

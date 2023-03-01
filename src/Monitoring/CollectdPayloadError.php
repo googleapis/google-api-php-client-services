@@ -29,7 +29,7 @@ class CollectdPayloadError extends \Google\Collection
   public $index;
   protected $valueErrorsType = CollectdValueError::class;
   protected $valueErrorsDataType = 'array';
-  public $valueErrors;
+  public $valueErrors = [];
 
   /**
    * @param Status

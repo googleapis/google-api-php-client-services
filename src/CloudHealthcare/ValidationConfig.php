@@ -39,7 +39,7 @@ class ValidationConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enabledImplementationGuides;
+  public $enabledImplementationGuides = [];
 
   /**
    * @param bool

@@ -22,7 +22,7 @@ class BatchUpdateJobsResponse extends \Google\Collection
   protected $collection_key = 'jobResults';
   protected $jobResultsType = JobResult::class;
   protected $jobResultsDataType = 'array';
-  public $jobResults;
+  public $jobResults = [];
 
   /**
    * @param JobResult[]

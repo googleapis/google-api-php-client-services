@@ -34,7 +34,7 @@ class GoogleCloudOrgpolicyV2PolicySpec extends \Google\Collection
   public $reset;
   protected $rulesType = GoogleCloudOrgpolicyV2PolicySpecPolicyRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
   /**
    * @var string
    */

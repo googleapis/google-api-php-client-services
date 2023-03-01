@@ -22,17 +22,17 @@ class GoogleCloudDialogflowCxV3beta1Fulfillment extends \Google\Collection
   protected $collection_key = 'setParameterActions';
   protected $conditionalCasesType = GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases::class;
   protected $conditionalCasesDataType = 'array';
-  public $conditionalCases;
+  public $conditionalCases = [];
   protected $messagesType = GoogleCloudDialogflowCxV3beta1ResponseMessage::class;
   protected $messagesDataType = 'array';
-  public $messages;
+  public $messages = [];
   /**
    * @var bool
    */
   public $returnPartialResponses;
   protected $setParameterActionsType = GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterAction::class;
   protected $setParameterActionsDataType = 'array';
-  public $setParameterActions;
+  public $setParameterActions = [];
   /**
    * @var string
    */

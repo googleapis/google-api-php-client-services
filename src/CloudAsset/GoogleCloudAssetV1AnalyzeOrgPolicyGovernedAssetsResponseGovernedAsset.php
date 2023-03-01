@@ -31,7 +31,7 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset exte
   public $governedResource;
   protected $policyBundleType = AnalyzerOrgPolicy::class;
   protected $policyBundleDataType = 'array';
-  public $policyBundle;
+  public $policyBundle = [];
 
   /**
    * @param AnalyzerOrgPolicy

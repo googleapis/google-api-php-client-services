@@ -22,7 +22,7 @@ class GeostoreHtmlTextProto extends \Google\Collection
   protected $collection_key = 'text';
   protected $textType = GeostoreLanguageTaggedTextProto::class;
   protected $textDataType = 'array';
-  public $text;
+  public $text = [];
   /**
    * @var string
    */

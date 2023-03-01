@@ -22,10 +22,10 @@ class GoogleCloudApigeeV1DeploymentChangeReport extends \Google\Collection
   protected $collection_key = 'routingConflicts';
   protected $routingChangesType = GoogleCloudApigeeV1DeploymentChangeReportRoutingChange::class;
   protected $routingChangesDataType = 'array';
-  public $routingChanges;
+  public $routingChanges = [];
   protected $routingConflictsType = GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict::class;
   protected $routingConflictsDataType = 'array';
-  public $routingConflicts;
+  public $routingConflicts = [];
   protected $validationErrorsType = GoogleRpcPreconditionFailure::class;
   protected $validationErrorsDataType = '';
   public $validationErrors;

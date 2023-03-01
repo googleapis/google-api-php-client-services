@@ -22,7 +22,7 @@ class ObjectValues extends \Google\Collection
   protected $collection_key = 'values';
   protected $valuesType = StructuredDataObject::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param StructuredDataObject[]

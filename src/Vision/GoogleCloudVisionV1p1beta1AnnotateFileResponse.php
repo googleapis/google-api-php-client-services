@@ -28,7 +28,7 @@ class GoogleCloudVisionV1p1beta1AnnotateFileResponse extends \Google\Collection
   public $inputConfig;
   protected $responsesType = GoogleCloudVisionV1p1beta1AnnotateImageResponse::class;
   protected $responsesDataType = 'array';
-  public $responses;
+  public $responses = [];
   /**
    * @var int
    */

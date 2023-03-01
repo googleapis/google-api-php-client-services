@@ -25,7 +25,7 @@ class HttpRouteRouteRule extends \Google\Collection
   public $action;
   protected $matchesType = HttpRouteRouteMatch::class;
   protected $matchesDataType = 'array';
-  public $matches;
+  public $matches = [];
 
   /**
    * @param HttpRouteRouteAction

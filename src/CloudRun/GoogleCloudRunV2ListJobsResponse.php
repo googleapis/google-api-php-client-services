@@ -22,7 +22,7 @@ class GoogleCloudRunV2ListJobsResponse extends \Google\Collection
   protected $collection_key = 'jobs';
   protected $jobsType = GoogleCloudRunV2Job::class;
   protected $jobsDataType = 'array';
-  public $jobs;
+  public $jobs = [];
   /**
    * @var string
    */

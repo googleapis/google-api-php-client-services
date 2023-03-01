@@ -23,7 +23,7 @@ class ResearchScamGenericFeatureVectorRestrictTokens extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blacklistToken;
+  public $blacklistToken = [];
   protected $definitionType = ResearchScamCoscamRestrictDefinition::class;
   protected $definitionDataType = '';
   public $definition;
@@ -33,7 +33,7 @@ class ResearchScamGenericFeatureVectorRestrictTokens extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tokenMembership;
+  public $tokenMembership = [];
   protected $tokensType = ResearchScamCoscamRestrictTokensV2::class;
   protected $tokensDataType = '';
   public $tokens;
@@ -47,7 +47,7 @@ class ResearchScamGenericFeatureVectorRestrictTokens extends \Google\Collection
   /**
    * @var string[]
    */
-  public $whitelistToken;
+  public $whitelistToken = [];
 
   /**
    * @param string[]

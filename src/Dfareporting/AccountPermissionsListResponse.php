@@ -22,7 +22,7 @@ class AccountPermissionsListResponse extends \Google\Collection
   protected $collection_key = 'accountPermissions';
   protected $accountPermissionsType = AccountPermission::class;
   protected $accountPermissionsDataType = 'array';
-  public $accountPermissions;
+  public $accountPermissions = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class GuestUnitType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $codes;
+  public $codes = [];
   protected $featuresType = GuestUnitFeatures::class;
   protected $featuresDataType = '';
   public $features;

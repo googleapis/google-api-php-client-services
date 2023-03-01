@@ -47,7 +47,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
   /**
    * @var array[]
    */
-  public $protoValue;
+  public $protoValue = [];
   protected $serializedObjectValueType = EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter::class;
   protected $serializedObjectValueDataType = '';
   public $serializedObjectValue;

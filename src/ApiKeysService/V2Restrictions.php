@@ -25,7 +25,7 @@ class V2Restrictions extends \Google\Collection
   public $androidKeyRestrictions;
   protected $apiTargetsType = V2ApiTarget::class;
   protected $apiTargetsDataType = 'array';
-  public $apiTargets;
+  public $apiTargets = [];
   protected $browserKeyRestrictionsType = V2BrowserKeyRestrictions::class;
   protected $browserKeyRestrictionsDataType = '';
   public $browserKeyRestrictions;

@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ListNatAddressesResponse extends \Google\Collection
   protected $collection_key = 'natAddresses';
   protected $natAddressesType = GoogleCloudApigeeV1NatAddress::class;
   protected $natAddressesDataType = 'array';
-  public $natAddresses;
+  public $natAddresses = [];
   /**
    * @var string
    */

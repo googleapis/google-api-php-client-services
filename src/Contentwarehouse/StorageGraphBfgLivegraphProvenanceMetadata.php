@@ -23,7 +23,7 @@ class StorageGraphBfgLivegraphProvenanceMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $directWriteRecordIds;
+  public $directWriteRecordIds = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class StorageGraphBfgLivegraphProvenanceMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $triangulationKey;
+  public $triangulationKey = [];
   /**
    * @var bool
    */

@@ -27,7 +27,7 @@ class TestDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $progressMessages;
+  public $progressMessages = [];
 
   /**
    * @param string

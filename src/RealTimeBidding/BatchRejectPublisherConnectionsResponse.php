@@ -22,7 +22,7 @@ class BatchRejectPublisherConnectionsResponse extends \Google\Collection
   protected $collection_key = 'publisherConnections';
   protected $publisherConnectionsType = PublisherConnection::class;
   protected $publisherConnectionsDataType = 'array';
-  public $publisherConnections;
+  public $publisherConnections = [];
 
   /**
    * @param PublisherConnection[]

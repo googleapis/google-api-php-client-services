@@ -27,7 +27,7 @@ class InstanceGroupManagersApplyUpdatesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instances;
+  public $instances = [];
   /**
    * @var string
    */

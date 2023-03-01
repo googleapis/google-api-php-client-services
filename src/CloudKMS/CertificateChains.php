@@ -23,15 +23,15 @@ class CertificateChains extends \Google\Collection
   /**
    * @var string[]
    */
-  public $caviumCerts;
+  public $caviumCerts = [];
   /**
    * @var string[]
    */
-  public $googleCardCerts;
+  public $googleCardCerts = [];
   /**
    * @var string[]
    */
-  public $googlePartitionCerts;
+  public $googlePartitionCerts = [];
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ListInstanceAttachmentsResponse extends \Google\Collect
   protected $collection_key = 'attachments';
   protected $attachmentsType = GoogleCloudApigeeV1InstanceAttachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments;
+  public $attachments = [];
   /**
    * @var string
    */

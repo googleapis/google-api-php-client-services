@@ -30,7 +30,7 @@ class ProductSearchParams extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productCategories;
+  public $productCategories = [];
   /**
    * @var string
    */

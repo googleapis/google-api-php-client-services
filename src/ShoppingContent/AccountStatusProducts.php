@@ -34,7 +34,7 @@ class AccountStatusProducts extends \Google\Collection
   public $destination;
   protected $itemLevelIssuesType = AccountStatusItemLevelIssue::class;
   protected $itemLevelIssuesDataType = 'array';
-  public $itemLevelIssues;
+  public $itemLevelIssues = [];
   protected $statisticsType = AccountStatusStatistics::class;
   protected $statisticsDataType = '';
   public $statistics;

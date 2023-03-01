@@ -22,7 +22,7 @@ class GoogleCloudContentwarehouseV1DataValidationAction extends \Google\Model
   /**
    * @var string[]
    */
-  public $conditions;
+  public $conditions = [];
 
   /**
    * @param string[]

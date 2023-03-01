@@ -23,7 +23,7 @@ class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends \Google\Collect
   /**
    * @var string[]
    */
-  public $applicableProducts;
+  public $applicableProducts = [];
   /**
    * @var string
    */
@@ -45,14 +45,14 @@ class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends \Google\Collect
   /**
    * @var string[]
    */
-  public $regionCodes;
+  public $regionCodes = [];
   /**
    * @var string
    */
   public $startTime;
   protected $titlesType = GoogleTypeLocalizedText::class;
   protected $titlesDataType = 'array';
-  public $titles;
+  public $titles = [];
 
   /**
    * @param string[]

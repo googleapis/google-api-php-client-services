@@ -25,17 +25,17 @@ class CreativeAssetMetadata extends \Google\Collection
   public $assetIdentifier;
   protected $clickTagsType = ClickTag::class;
   protected $clickTagsDataType = 'array';
-  public $clickTags;
+  public $clickTags = [];
   protected $counterCustomEventsType = CreativeCustomEvent::class;
   protected $counterCustomEventsDataType = 'array';
-  public $counterCustomEvents;
+  public $counterCustomEvents = [];
   /**
    * @var string[]
    */
-  public $detectedFeatures;
+  public $detectedFeatures = [];
   protected $exitCustomEventsType = CreativeCustomEvent::class;
   protected $exitCustomEventsDataType = 'array';
-  public $exitCustomEvents;
+  public $exitCustomEvents = [];
   /**
    * @var string
    */
@@ -53,11 +53,11 @@ class CreativeAssetMetadata extends \Google\Collection
   public $richMedia;
   protected $timerCustomEventsType = CreativeCustomEvent::class;
   protected $timerCustomEventsDataType = 'array';
-  public $timerCustomEvents;
+  public $timerCustomEvents = [];
   /**
    * @var string[]
    */
-  public $warnedValidationRules;
+  public $warnedValidationRules = [];
 
   /**
    * @param CreativeAssetId

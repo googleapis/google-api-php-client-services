@@ -27,10 +27,10 @@ class GoogleCloudDiscoveryengineV1betaRecommendResponse extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $missingIds;
+  public $missingIds = [];
   protected $resultsType = GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   /**
    * @var bool
    */

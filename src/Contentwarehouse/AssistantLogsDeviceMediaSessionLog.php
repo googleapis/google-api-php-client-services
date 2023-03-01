@@ -42,7 +42,7 @@ class AssistantLogsDeviceMediaSessionLog extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedTransportControl;
+  public $supportedTransportControl = [];
 
   /**
    * @param AssistantApiCoreTypesDeviceId

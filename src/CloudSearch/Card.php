@@ -22,7 +22,7 @@ class Card extends \Google\Collection
   protected $collection_key = 'sections';
   protected $cardActionsType = CardAction::class;
   protected $cardActionsDataType = 'array';
-  public $cardActions;
+  public $cardActions = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class Card extends \Google\Collection
   public $peekCardHeader;
   protected $sectionsType = Section::class;
   protected $sectionsDataType = 'array';
-  public $sections;
+  public $sections = [];
 
   /**
    * @param CardAction[]

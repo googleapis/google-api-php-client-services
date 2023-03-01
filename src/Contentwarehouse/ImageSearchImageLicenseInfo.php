@@ -35,7 +35,7 @@ class ImageSearchImageLicenseInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $creator;
+  public $creator = [];
   /**
    * @var string
    */

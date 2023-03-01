@@ -30,7 +30,7 @@ class PermissionList extends \Google\Collection
   public $nextPageToken;
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
-  public $permissions;
+  public $permissions = [];
 
   /**
    * @param string

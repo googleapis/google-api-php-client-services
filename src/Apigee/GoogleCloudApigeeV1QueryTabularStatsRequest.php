@@ -23,14 +23,14 @@ class GoogleCloudApigeeV1QueryTabularStatsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */
   public $filter;
   protected $metricsType = GoogleCloudApigeeV1MetricAggregation::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   /**
    * @var int
    */

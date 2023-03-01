@@ -34,7 +34,7 @@ class Batch extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -67,7 +67,7 @@ class Batch extends \Google\Collection
   public $state;
   protected $stateHistoryType = StateHistory::class;
   protected $stateHistoryDataType = 'array';
-  public $stateHistory;
+  public $stateHistory = [];
   /**
    * @var string
    */

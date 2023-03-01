@@ -45,7 +45,7 @@ class Building extends \Google\Collection
   /**
    * @var string[]
    */
-  public $floorNames;
+  public $floorNames = [];
   /**
    * @var string
    */

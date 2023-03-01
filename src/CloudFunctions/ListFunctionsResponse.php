@@ -22,7 +22,7 @@ class ListFunctionsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $functionsType = CloudfunctionsFunction::class;
   protected $functionsDataType = 'array';
-  public $functions;
+  public $functions = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListFunctionsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param CloudfunctionsFunction[]

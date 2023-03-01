@@ -22,7 +22,7 @@ class GetSearchApplicationUserStatsResponse extends \Google\Collection
   protected $collection_key = 'stats';
   protected $statsType = SearchApplicationUserStats::class;
   protected $statsDataType = 'array';
-  public $stats;
+  public $stats = [];
 
   /**
    * @param SearchApplicationUserStats[]

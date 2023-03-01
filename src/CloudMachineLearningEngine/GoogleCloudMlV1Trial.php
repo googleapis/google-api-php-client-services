@@ -37,14 +37,14 @@ class GoogleCloudMlV1Trial extends \Google\Collection
   public $infeasibleReason;
   protected $measurementsType = GoogleCloudMlV1Measurement::class;
   protected $measurementsDataType = 'array';
-  public $measurements;
+  public $measurements = [];
   /**
    * @var string
    */
   public $name;
   protected $parametersType = GoogleCloudMlV1TrialParameter::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */

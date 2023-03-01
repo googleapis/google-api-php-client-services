@@ -21,7 +21,7 @@ class Inventory extends \Google\Model
 {
   protected $itemsType = Item::class;
   protected $itemsDataType = 'map';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

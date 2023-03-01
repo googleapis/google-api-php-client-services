@@ -80,7 +80,7 @@ class StorageGraphBfgTripleProvenance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictions;
+  public $restrictions = [];
   /**
    * @var string
    */
@@ -88,11 +88,11 @@ class StorageGraphBfgTripleProvenance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceCategory;
+  public $sourceCategory = [];
   /**
    * @var string[]
    */
-  public $sourceDocId;
+  public $sourceDocId = [];
   protected $spiiCertificationType = StorageGraphBfgSpiiCertification::class;
   protected $spiiCertificationDataType = '';
   public $spiiCertification;

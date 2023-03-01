@@ -23,7 +23,7 @@ class VideoContentSearchVideoGeneratedQueryFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filterReason;
+  public $filterReason = [];
   /**
    * @var int
    */

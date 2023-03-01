@@ -22,19 +22,19 @@ class GeostoreFeatureProto extends \Google\Collection
   protected $collection_key = 'website';
   protected $accessPointType = GeostoreAccessPointProto::class;
   protected $accessPointDataType = 'array';
-  public $accessPoint;
+  public $accessPoint = [];
   protected $addressType = GeostoreAddressProto::class;
   protected $addressDataType = 'array';
-  public $address;
+  public $address = [];
   protected $anchoredGeometryType = GeostoreAnchoredGeometryProto::class;
   protected $anchoredGeometryDataType = '';
   public $anchoredGeometry;
   protected $attachmentType = GeostoreAttachmentsAttachmentProto::class;
   protected $attachmentDataType = 'array';
-  public $attachment;
+  public $attachment = [];
   protected $attributeType = GeostoreAttributeProto::class;
   protected $attributeDataType = 'array';
-  public $attribute;
+  public $attribute = [];
   protected $bestLocaleType = GeostoreBestLocaleProto::class;
   protected $bestLocaleDataType = '';
   public $bestLocale;
@@ -55,7 +55,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $center;
   protected $childType = GeostoreFeatureIdProto::class;
   protected $childDataType = 'array';
-  public $child;
+  public $child = [];
   protected $coveringType = GeostoreCellCoveringProto::class;
   protected $coveringDataType = '';
   public $covering;
@@ -82,7 +82,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $establishment;
   protected $exemptRegulatedAreaType = GeostoreFeatureIdProto::class;
   protected $exemptRegulatedAreaDataType = 'array';
-  public $exemptRegulatedArea;
+  public $exemptRegulatedArea = [];
   protected $futureGeometryType = GeostoreFeatureIdProto::class;
   protected $futureGeometryDataType = '';
   public $futureGeometry;
@@ -95,7 +95,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $geopoliticalGeometry;
   protected $htmlTextType = GeostoreHtmlTextProto::class;
   protected $htmlTextDataType = 'array';
-  public $htmlText;
+  public $htmlText = [];
   protected $idType = GeostoreFeatureIdProto::class;
   protected $idDataType = '';
   public $id;
@@ -116,7 +116,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $intersectionGroup;
   protected $kgPropertyType = FreebasePropertyValue::class;
   protected $kgPropertyDataType = 'array';
-  public $kgProperty;
+  public $kgProperty = [];
   protected $knowledgeGraphReferenceType = GeostoreKnowledgeGraphReferenceProto::class;
   protected $knowledgeGraphReferenceDataType = '';
   public $knowledgeGraphReference;
@@ -137,7 +137,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $metadata;
   protected $nameType = GeostoreNameProto::class;
   protected $nameDataType = 'array';
-  public $name;
+  public $name = [];
   protected $operationsType = GeostoreOperationsProto::class;
   protected $operationsDataType = '';
   public $operations;
@@ -146,25 +146,25 @@ class GeostoreFeatureProto extends \Google\Collection
   public $originalId;
   protected $parentType = GeostoreFeatureIdProto::class;
   protected $parentDataType = 'array';
-  public $parent;
+  public $parent = [];
   protected $parkingType = GeostoreParkingProto::class;
   protected $parkingDataType = '';
   public $parking;
   protected $pointType = GeostorePointProto::class;
   protected $pointDataType = 'array';
-  public $point;
+  public $point = [];
   protected $politicalType = GeostorePoliticalProto::class;
   protected $politicalDataType = '';
   public $political;
   protected $polygonType = GeostorePolygonProto::class;
   protected $polygonDataType = 'array';
-  public $polygon;
+  public $polygon = [];
   protected $polygonForDisplayType = GeostorePolygonProto::class;
   protected $polygonForDisplayDataType = '';
   public $polygonForDisplay;
   protected $polylineType = GeostorePolyLineProto::class;
   protected $polylineDataType = 'array';
-  public $polyline;
+  public $polyline = [];
   protected $poseType = GeostorePoseProto::class;
   protected $poseDataType = '';
   public $pose;
@@ -173,7 +173,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $preferredViewport;
   protected $propertyValueStatusType = GeostorePropertyValueStatusProto::class;
   protected $propertyValueStatusDataType = 'array';
-  public $propertyValueStatus;
+  public $propertyValueStatus = [];
   /**
    * @var float
    */
@@ -189,19 +189,19 @@ class GeostoreFeatureProto extends \Google\Collection
   public $regulatedArea;
   protected $relatedBorderType = GeostoreFeatureIdProto::class;
   protected $relatedBorderDataType = 'array';
-  public $relatedBorder;
+  public $relatedBorder = [];
   protected $relatedEntranceType = GeostoreEntranceReferenceProto::class;
   protected $relatedEntranceDataType = 'array';
-  public $relatedEntrance;
+  public $relatedEntrance = [];
   protected $relatedFeatureType = GeostoreRelationProto::class;
   protected $relatedFeatureDataType = 'array';
-  public $relatedFeature;
+  public $relatedFeature = [];
   protected $relatedTerminalPointType = GeostoreFeatureIdProto::class;
   protected $relatedTerminalPointDataType = 'array';
-  public $relatedTerminalPoint;
+  public $relatedTerminalPoint = [];
   protected $relatedTimezoneType = GeostoreTimezoneProto::class;
   protected $relatedTimezoneDataType = 'array';
-  public $relatedTimezone;
+  public $relatedTimezone = [];
   protected $restrictionGroupType = GeostoreRestrictionGroupProto::class;
   protected $restrictionGroupDataType = '';
   public $restrictionGroup;
@@ -237,13 +237,13 @@ class GeostoreFeatureProto extends \Google\Collection
   public $socialReference;
   protected $sourceInfoType = GeostoreSourceInfoProto::class;
   protected $sourceInfoDataType = 'array';
-  public $sourceInfo;
+  public $sourceInfo = [];
   protected $statusType = GeostoreExistenceProto::class;
   protected $statusDataType = '';
   public $status;
   protected $storefrontGeometryType = GeostoreAnchoredGeometryProto::class;
   protected $storefrontGeometryDataType = 'array';
-  public $storefrontGeometry;
+  public $storefrontGeometry = [];
   /**
    * @var bool
    */
@@ -259,7 +259,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $tollCluster;
   protected $trackType = GeostoreTrackProto::class;
   protected $trackDataType = 'array';
-  public $track;
+  public $track = [];
   protected $transitLineType = GeostoreTransitLineProto::class;
   protected $transitLineDataType = '';
   public $transitLine;
@@ -281,7 +281,7 @@ class GeostoreFeatureProto extends \Google\Collection
   public $waterRemovedPolygon;
   protected $websiteType = GeostoreUrlProto::class;
   protected $websiteDataType = 'array';
-  public $website;
+  public $website = [];
 
   /**
    * @param GeostoreAccessPointProto[]

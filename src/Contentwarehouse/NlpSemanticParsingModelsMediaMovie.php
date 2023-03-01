@@ -36,7 +36,7 @@ class NlpSemanticParsingModelsMediaMovie extends \Google\Collection
   public $isFromFastPath;
   protected $providerMetadataType = NlpSemanticParsingModelsMediaProviderMetadata::class;
   protected $providerMetadataDataType = 'array';
-  public $providerMetadata;
+  public $providerMetadata = [];
   protected $qrefType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefDataType = '';
   public $qref;

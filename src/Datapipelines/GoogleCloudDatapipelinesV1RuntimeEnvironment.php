@@ -23,11 +23,11 @@ class GoogleCloudDatapipelinesV1RuntimeEnvironment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $additionalExperiments;
+  public $additionalExperiments = [];
   /**
    * @var string[]
    */
-  public $additionalUserLabels;
+  public $additionalUserLabels = [];
   /**
    * @var bool
    */

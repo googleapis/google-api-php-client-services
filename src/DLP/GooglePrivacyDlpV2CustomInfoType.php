@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2CustomInfoType extends \Google\Collection
   protected $collection_key = 'detectionRules';
   protected $detectionRulesType = GooglePrivacyDlpV2DetectionRule::class;
   protected $detectionRulesDataType = 'array';
-  public $detectionRules;
+  public $detectionRules = [];
   protected $dictionaryType = GooglePrivacyDlpV2Dictionary::class;
   protected $dictionaryDataType = '';
   public $dictionary;

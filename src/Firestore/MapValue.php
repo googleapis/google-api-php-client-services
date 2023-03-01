@@ -21,7 +21,7 @@ class MapValue extends \Google\Model
 {
   protected $fieldsType = Value::class;
   protected $fieldsDataType = 'map';
-  public $fields;
+  public $fields = [];
 
   /**
    * @param Value[]

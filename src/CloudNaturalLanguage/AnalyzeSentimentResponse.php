@@ -29,7 +29,7 @@ class AnalyzeSentimentResponse extends \Google\Collection
   public $language;
   protected $sentencesType = Sentence::class;
   protected $sentencesDataType = 'array';
-  public $sentences;
+  public $sentences = [];
 
   /**
    * @param Sentiment

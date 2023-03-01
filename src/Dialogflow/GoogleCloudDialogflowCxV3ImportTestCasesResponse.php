@@ -23,7 +23,7 @@ class GoogleCloudDialogflowCxV3ImportTestCasesResponse extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $names;
+  public $names = [];
 
   /**
    * @param string[]

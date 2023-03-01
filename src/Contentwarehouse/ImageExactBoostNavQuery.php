@@ -39,7 +39,7 @@ class ImageExactBoostNavQuery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referrerDocid;
+  public $referrerDocid = [];
   /**
    * @var int
    */

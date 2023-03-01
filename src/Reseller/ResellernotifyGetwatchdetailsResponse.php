@@ -23,7 +23,7 @@ class ResellernotifyGetwatchdetailsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceAccountEmailAddresses;
+  public $serviceAccountEmailAddresses = [];
   /**
    * @var string
    */

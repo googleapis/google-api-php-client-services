@@ -22,7 +22,7 @@ class GoogleFirestoreAdminV1ListIndexesResponse extends \Google\Collection
   protected $collection_key = 'indexes';
   protected $indexesType = GoogleFirestoreAdminV1Index::class;
   protected $indexesDataType = 'array';
-  public $indexes;
+  public $indexes = [];
   /**
    * @var string
    */

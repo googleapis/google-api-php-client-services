@@ -26,7 +26,7 @@ class NodeGroupsListNodes extends \Google\Collection
   public $id;
   protected $itemsType = NodeGroupNode::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

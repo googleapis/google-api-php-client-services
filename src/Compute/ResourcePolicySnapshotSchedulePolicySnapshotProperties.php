@@ -31,11 +31,11 @@ class ResourcePolicySnapshotSchedulePolicySnapshotProperties extends \Google\Col
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $storageLocations;
+  public $storageLocations = [];
 
   /**
    * @param string

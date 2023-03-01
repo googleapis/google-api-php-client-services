@@ -39,7 +39,7 @@ class VideoContentSearchMultimodalTopicTrainingFeatures extends \Google\Collecti
   /**
    * @var float[]
    */
-  public $topicDenseVector;
+  public $topicDenseVector = [];
 
   /**
    * @param VideoContentSearchFrameSimilarityInterval

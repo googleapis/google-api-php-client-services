@@ -22,13 +22,13 @@ class ResourceUtilizationReport extends \Google\Collection
   protected $collection_key = 'memoryInfo';
   protected $containersType = ResourceUtilizationReport::class;
   protected $containersDataType = 'map';
-  public $containers;
+  public $containers = [];
   protected $cpuTimeType = CPUTime::class;
   protected $cpuTimeDataType = 'array';
-  public $cpuTime;
+  public $cpuTime = [];
   protected $memoryInfoType = MemInfo::class;
   protected $memoryInfoDataType = 'array';
-  public $memoryInfo;
+  public $memoryInfo = [];
 
   /**
    * @param ResourceUtilizationReport[]

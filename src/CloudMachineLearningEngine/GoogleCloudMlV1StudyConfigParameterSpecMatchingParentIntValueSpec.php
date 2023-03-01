@@ -23,7 +23,7 @@ class GoogleCloudMlV1StudyConfigParameterSpecMatchingParentIntValueSpec extends 
   /**
    * @var string[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string[]

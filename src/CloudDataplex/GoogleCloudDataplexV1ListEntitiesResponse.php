@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1ListEntitiesResponse extends \Google\Collection
   protected $collection_key = 'entities';
   protected $entitiesType = GoogleCloudDataplexV1Entity::class;
   protected $entitiesDataType = 'array';
-  public $entities;
+  public $entities = [];
   /**
    * @var string
    */

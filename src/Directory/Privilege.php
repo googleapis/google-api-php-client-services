@@ -22,7 +22,7 @@ class Privilege extends \Google\Collection
   protected $collection_key = 'childPrivileges';
   protected $childPrivilegesType = Privilege::class;
   protected $childPrivilegesDataType = 'array';
-  public $childPrivileges;
+  public $childPrivileges = [];
   /**
    * @var string
    */

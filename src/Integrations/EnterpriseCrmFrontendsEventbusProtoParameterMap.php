@@ -22,7 +22,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterMap extends \Google\Collection
   protected $collection_key = 'entries';
   protected $entriesType = EnterpriseCrmFrontendsEventbusProtoParameterMapEntry::class;
   protected $entriesDataType = 'array';
-  public $entries;
+  public $entries = [];
   /**
    * @var string
    */

@@ -34,7 +34,7 @@ class QualityNavboostCrapsCrapsData extends \Google\Collection
   public $device;
   protected $featuresType = QualityNavboostCrapsFeatureCrapsData::class;
   protected $featuresDataType = 'array';
-  public $features;
+  public $features = [];
   public $goodClicks;
   public $impressions;
   /**

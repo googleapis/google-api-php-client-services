@@ -29,7 +29,7 @@ class ListSnippetResponse extends \Google\Collection
   public $isTable;
   protected $rowType = ListSnippetResponseRow::class;
   protected $rowDataType = 'array';
-  public $row;
+  public $row = [];
   /**
    * @var int
    */

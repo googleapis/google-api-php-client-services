@@ -30,7 +30,7 @@ class ListPopulationRule extends \Google\Collection
   public $floodlightActivityName;
   protected $listPopulationClausesType = ListPopulationClause::class;
   protected $listPopulationClausesDataType = 'array';
-  public $listPopulationClauses;
+  public $listPopulationClauses = [];
 
   /**
    * @param string

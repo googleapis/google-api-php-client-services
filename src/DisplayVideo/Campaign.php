@@ -26,7 +26,7 @@ class Campaign extends \Google\Collection
   public $advertiserId;
   protected $campaignBudgetsType = CampaignBudget::class;
   protected $campaignBudgetsDataType = 'array';
-  public $campaignBudgets;
+  public $campaignBudgets = [];
   protected $campaignFlightType = CampaignFlight::class;
   protected $campaignFlightDataType = '';
   public $campaignFlight;

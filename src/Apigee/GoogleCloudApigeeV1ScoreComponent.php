@@ -31,10 +31,10 @@ class GoogleCloudApigeeV1ScoreComponent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $drilldownPaths;
+  public $drilldownPaths = [];
   protected $recommendationsType = GoogleCloudApigeeV1ScoreComponentRecommendation::class;
   protected $recommendationsDataType = 'array';
-  public $recommendations;
+  public $recommendations = [];
   /**
    * @var int
    */

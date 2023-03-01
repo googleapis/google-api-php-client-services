@@ -22,7 +22,7 @@ class AppliedLabelChangeDetail extends \Google\Collection
   protected $collection_key = 'types';
   protected $fieldChangesType = FieldValueChange::class;
   protected $fieldChangesDataType = 'array';
-  public $fieldChanges;
+  public $fieldChanges = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class AppliedLabelChangeDetail extends \Google\Collection
   /**
    * @var string[]
    */
-  public $types;
+  public $types = [];
 
   /**
    * @param FieldValueChange[]

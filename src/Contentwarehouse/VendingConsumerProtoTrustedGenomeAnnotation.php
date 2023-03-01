@@ -26,10 +26,10 @@ class VendingConsumerProtoTrustedGenomeAnnotation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $testCode;
+  public $testCode = [];
   protected $trustedGenomeHierarchyType = VendingConsumerProtoTrustedGenomeHierarchy::class;
   protected $trustedGenomeHierarchyDataType = 'array';
-  public $trustedGenomeHierarchy;
+  public $trustedGenomeHierarchy = [];
 
   /**
    * @param VendingConsumerProtoTrustedGenomePolicy

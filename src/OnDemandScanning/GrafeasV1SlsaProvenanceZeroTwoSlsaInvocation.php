@@ -25,11 +25,11 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation extends \Google\Model
   /**
    * @var array[]
    */
-  public $environment;
+  public $environment = [];
   /**
    * @var array[]
    */
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource

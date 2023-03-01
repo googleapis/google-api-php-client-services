@@ -25,21 +25,21 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
   public $followupEventInput;
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
-  public $fulfillmentMessages;
+  public $fulfillmentMessages = [];
   /**
    * @var string
    */
   public $fulfillmentText;
   protected $outputContextsType = GoogleCloudDialogflowV2Context::class;
   protected $outputContextsDataType = 'array';
-  public $outputContexts;
+  public $outputContexts = [];
   /**
    * @var array[]
    */
-  public $payload;
+  public $payload = [];
   protected $sessionEntityTypesType = GoogleCloudDialogflowV2SessionEntityType::class;
   protected $sessionEntityTypesDataType = 'array';
-  public $sessionEntityTypes;
+  public $sessionEntityTypes = [];
   /**
    * @var string
    */

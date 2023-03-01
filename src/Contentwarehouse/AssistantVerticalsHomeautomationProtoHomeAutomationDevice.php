@@ -34,7 +34,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationDevice extends \Google\
   public $homeautomationMetadata;
   protected $listType = AssistantVerticalsHomeautomationProtoHomeAutomationDeviceItem::class;
   protected $listDataType = 'array';
-  public $list;
+  public $list = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationDevice extends \Google\
   /**
    * @var string[]
    */
-  public $matchedItemValue;
+  public $matchedItemValue = [];
 
   /**
    * @param AssistantLogsDeviceSelectionLog

@@ -33,15 +33,15 @@ class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter extends \Google\Mode
   /**
    * @var string[]
    */
-  public $launchOptions;
+  public $launchOptions = [];
   /**
    * @var string[]
    */
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string[]
    */
-  public $transformNameMappings;
+  public $transformNameMappings = [];
   /**
    * @var bool
    */

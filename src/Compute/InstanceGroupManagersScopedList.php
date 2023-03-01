@@ -22,7 +22,7 @@ class InstanceGroupManagersScopedList extends \Google\Collection
   protected $collection_key = 'instanceGroupManagers';
   protected $instanceGroupManagersType = InstanceGroupManager::class;
   protected $instanceGroupManagersDataType = 'array';
-  public $instanceGroupManagers;
+  public $instanceGroupManagers = [];
   protected $warningType = InstanceGroupManagersScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

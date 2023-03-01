@@ -29,10 +29,10 @@ class TaskSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $environments;
+  public $environments = [];
   protected $lifecyclePoliciesType = LifecyclePolicy::class;
   protected $lifecyclePoliciesDataType = 'array';
-  public $lifecyclePolicies;
+  public $lifecyclePolicies = [];
   /**
    * @var int
    */
@@ -43,10 +43,10 @@ class TaskSpec extends \Google\Collection
   public $maxRunDuration;
   protected $runnablesType = Runnable::class;
   protected $runnablesDataType = 'array';
-  public $runnables;
+  public $runnables = [];
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes;
+  public $volumes = [];
 
   /**
    * @param ComputeResource

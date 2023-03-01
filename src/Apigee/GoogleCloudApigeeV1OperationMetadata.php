@@ -38,7 +38,7 @@ class GoogleCloudApigeeV1OperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param string

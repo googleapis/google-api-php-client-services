@@ -34,7 +34,7 @@ class AuthorizedCertificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domainNames;
+  public $domainNames = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class AuthorizedCertificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $visibleDomainMappings;
+  public $visibleDomainMappings = [];
 
   /**
    * @param CertificateRawData

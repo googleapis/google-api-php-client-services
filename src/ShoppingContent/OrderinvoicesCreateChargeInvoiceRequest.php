@@ -29,7 +29,7 @@ class OrderinvoicesCreateChargeInvoiceRequest extends \Google\Collection
   public $invoiceSummary;
   protected $lineItemInvoicesType = ShipmentInvoiceLineItemInvoice::class;
   protected $lineItemInvoicesDataType = 'array';
-  public $lineItemInvoices;
+  public $lineItemInvoices = [];
   /**
    * @var string
    */

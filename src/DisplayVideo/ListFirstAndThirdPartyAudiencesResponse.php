@@ -22,7 +22,7 @@ class ListFirstAndThirdPartyAudiencesResponse extends \Google\Collection
   protected $collection_key = 'firstAndThirdPartyAudiences';
   protected $firstAndThirdPartyAudiencesType = FirstAndThirdPartyAudience::class;
   protected $firstAndThirdPartyAudiencesDataType = 'array';
-  public $firstAndThirdPartyAudiences;
+  public $firstAndThirdPartyAudiences = [];
   /**
    * @var string
    */

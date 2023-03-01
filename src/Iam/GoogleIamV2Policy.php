@@ -23,7 +23,7 @@ class GoogleIamV2Policy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class GoogleIamV2Policy extends \Google\Collection
   public $name;
   protected $rulesType = GoogleIamV2PolicyRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
   /**
    * @var string
    */

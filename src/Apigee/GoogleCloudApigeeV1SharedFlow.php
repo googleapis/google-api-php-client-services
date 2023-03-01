@@ -34,7 +34,7 @@ class GoogleCloudApigeeV1SharedFlow extends \Google\Collection
   /**
    * @var string[]
    */
-  public $revision;
+  public $revision = [];
 
   /**
    * @param string

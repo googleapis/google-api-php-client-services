@@ -35,7 +35,7 @@ class AdvancedSecurityOverrides extends \Google\Collection
   /**
    * @var string[]
    */
-  public $personalAppsThatCanReadWorkNotifications;
+  public $personalAppsThatCanReadWorkNotifications = [];
   /**
    * @var string
    */

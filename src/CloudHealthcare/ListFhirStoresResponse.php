@@ -22,7 +22,7 @@ class ListFhirStoresResponse extends \Google\Collection
   protected $collection_key = 'fhirStores';
   protected $fhirStoresType = FhirStore::class;
   protected $fhirStoresDataType = 'array';
-  public $fhirStores;
+  public $fhirStores = [];
   /**
    * @var string
    */

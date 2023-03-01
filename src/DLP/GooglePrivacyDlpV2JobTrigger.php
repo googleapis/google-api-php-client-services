@@ -34,7 +34,7 @@ class GooglePrivacyDlpV2JobTrigger extends \Google\Collection
   public $displayName;
   protected $errorsType = GooglePrivacyDlpV2Error::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   protected $inspectJobType = GooglePrivacyDlpV2InspectJobConfig::class;
   protected $inspectJobDataType = '';
   public $inspectJob;
@@ -52,7 +52,7 @@ class GooglePrivacyDlpV2JobTrigger extends \Google\Collection
   public $status;
   protected $triggersType = GooglePrivacyDlpV2Trigger::class;
   protected $triggersDataType = 'array';
-  public $triggers;
+  public $triggers = [];
   /**
    * @var string
    */

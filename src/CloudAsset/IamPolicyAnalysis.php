@@ -25,14 +25,14 @@ class IamPolicyAnalysis extends \Google\Collection
   public $analysisQuery;
   protected $analysisResultsType = IamPolicyAnalysisResult::class;
   protected $analysisResultsDataType = 'array';
-  public $analysisResults;
+  public $analysisResults = [];
   /**
    * @var bool
    */
   public $fullyExplored;
   protected $nonCriticalErrorsType = IamPolicyAnalysisState::class;
   protected $nonCriticalErrorsDataType = 'array';
-  public $nonCriticalErrors;
+  public $nonCriticalErrors = [];
 
   /**
    * @param IamPolicyAnalysisQuery

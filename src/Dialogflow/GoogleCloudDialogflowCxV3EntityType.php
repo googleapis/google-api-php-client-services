@@ -34,10 +34,10 @@ class GoogleCloudDialogflowCxV3EntityType extends \Google\Collection
   public $enableFuzzyExtraction;
   protected $entitiesType = GoogleCloudDialogflowCxV3EntityTypeEntity::class;
   protected $entitiesDataType = 'array';
-  public $entities;
+  public $entities = [];
   protected $excludedPhrasesType = GoogleCloudDialogflowCxV3EntityTypeExcludedPhrase::class;
   protected $excludedPhrasesDataType = 'array';
-  public $excludedPhrases;
+  public $excludedPhrases = [];
   /**
    * @var string
    */

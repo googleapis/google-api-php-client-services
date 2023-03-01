@@ -22,7 +22,7 @@ class TcpRouteRouteAction extends \Google\Collection
   protected $collection_key = 'destinations';
   protected $destinationsType = TcpRouteRouteDestination::class;
   protected $destinationsDataType = 'array';
-  public $destinations;
+  public $destinations = [];
   /**
    * @var bool
    */

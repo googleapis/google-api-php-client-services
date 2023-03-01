@@ -30,7 +30,7 @@ class CreativeAsset extends \Google\Collection
   public $active;
   protected $additionalSizesType = Size::class;
   protected $additionalSizesDataType = 'array';
-  public $additionalSizes;
+  public $additionalSizes = [];
   /**
    * @var string
    */
@@ -67,7 +67,7 @@ class CreativeAsset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $companionCreativeIds;
+  public $companionCreativeIds = [];
   /**
    * @var int
    */
@@ -75,7 +75,7 @@ class CreativeAsset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $detectedFeatures;
+  public $detectedFeatures = [];
   /**
    * @var string
    */

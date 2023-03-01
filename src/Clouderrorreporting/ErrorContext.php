@@ -28,7 +28,7 @@ class ErrorContext extends \Google\Collection
   public $reportLocation;
   protected $sourceReferencesType = SourceReference::class;
   protected $sourceReferencesDataType = 'array';
-  public $sourceReferences;
+  public $sourceReferences = [];
   /**
    * @var string
    */

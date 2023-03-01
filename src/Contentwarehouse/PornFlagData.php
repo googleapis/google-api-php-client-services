@@ -29,7 +29,7 @@ class PornFlagData extends \Google\Collection
   public $csaiScore;
   protected $debugInfoType = ImagePornDebugInfo::class;
   protected $debugInfoDataType = 'array';
-  public $debugInfo;
+  public $debugInfo = [];
   /**
    * @var float
    */

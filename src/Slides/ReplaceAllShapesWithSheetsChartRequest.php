@@ -34,7 +34,7 @@ class ReplaceAllShapesWithSheetsChartRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pageObjectIds;
+  public $pageObjectIds = [];
   /**
    * @var string
    */

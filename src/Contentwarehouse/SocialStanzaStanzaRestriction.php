@@ -22,7 +22,7 @@ class SocialStanzaStanzaRestriction extends \Google\Collection
   protected $collection_key = 'deleteReason';
   protected $abuseTypesType = AbuseiamAbuseType::class;
   protected $abuseTypesDataType = 'array';
-  public $abuseTypes;
+  public $abuseTypes = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class SocialStanzaStanzaRestriction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deleteReason;
+  public $deleteReason = [];
   protected $deliveryRestrictionType = SocialStanzaDeliveryRestriction::class;
   protected $deliveryRestrictionDataType = '';
   public $deliveryRestriction;

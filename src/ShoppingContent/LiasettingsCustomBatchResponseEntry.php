@@ -39,7 +39,7 @@ class LiasettingsCustomBatchResponseEntry extends \Google\Collection
   public $liaSettings;
   protected $posDataProvidersType = PosDataProviders::class;
   protected $posDataProvidersDataType = 'array';
-  public $posDataProviders;
+  public $posDataProviders = [];
 
   /**
    * @param string

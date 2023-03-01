@@ -22,7 +22,7 @@ class ReservationsScopedList extends \Google\Collection
   protected $collection_key = 'reservations';
   protected $reservationsType = Reservation::class;
   protected $reservationsDataType = 'array';
-  public $reservations;
+  public $reservations = [];
   protected $warningType = ReservationsScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

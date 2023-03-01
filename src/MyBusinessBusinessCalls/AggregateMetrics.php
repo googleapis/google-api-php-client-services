@@ -29,7 +29,7 @@ class AggregateMetrics extends \Google\Collection
   public $endDate;
   protected $hourlyMetricsType = HourlyMetrics::class;
   protected $hourlyMetricsDataType = 'array';
-  public $hourlyMetrics;
+  public $hourlyMetrics = [];
   /**
    * @var int
    */
@@ -39,7 +39,7 @@ class AggregateMetrics extends \Google\Collection
   public $startDate;
   protected $weekdayMetricsType = WeekDayMetrics::class;
   protected $weekdayMetricsDataType = 'array';
-  public $weekdayMetrics;
+  public $weekdayMetrics = [];
 
   /**
    * @param int

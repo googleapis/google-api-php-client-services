@@ -31,7 +31,7 @@ class GoogleCloudDataplexV1ActionInvalidDataFormat extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sampledDataLocations;
+  public $sampledDataLocations = [];
 
   /**
    * @param string

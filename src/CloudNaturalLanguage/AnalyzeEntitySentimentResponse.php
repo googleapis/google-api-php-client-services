@@ -22,7 +22,7 @@ class AnalyzeEntitySentimentResponse extends \Google\Collection
   protected $collection_key = 'entities';
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
-  public $entities;
+  public $entities = [];
   /**
    * @var string
    */

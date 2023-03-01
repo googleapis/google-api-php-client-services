@@ -34,7 +34,7 @@ class Alert extends \Google\Model
   /**
    * @var array[]
    */
-  public $data;
+  public $data = [];
   /**
    * @var bool
    */

@@ -22,25 +22,25 @@ class JobMetadata extends \Google\Collection
   protected $collection_key = 'spannerDetails';
   protected $bigTableDetailsType = BigTableIODetails::class;
   protected $bigTableDetailsDataType = 'array';
-  public $bigTableDetails;
+  public $bigTableDetails = [];
   protected $bigqueryDetailsType = BigQueryIODetails::class;
   protected $bigqueryDetailsDataType = 'array';
-  public $bigqueryDetails;
+  public $bigqueryDetails = [];
   protected $datastoreDetailsType = DatastoreIODetails::class;
   protected $datastoreDetailsDataType = 'array';
-  public $datastoreDetails;
+  public $datastoreDetails = [];
   protected $fileDetailsType = FileIODetails::class;
   protected $fileDetailsDataType = 'array';
-  public $fileDetails;
+  public $fileDetails = [];
   protected $pubsubDetailsType = PubSubIODetails::class;
   protected $pubsubDetailsDataType = 'array';
-  public $pubsubDetails;
+  public $pubsubDetails = [];
   protected $sdkVersionType = SdkVersion::class;
   protected $sdkVersionDataType = '';
   public $sdkVersion;
   protected $spannerDetailsType = SpannerIODetails::class;
   protected $spannerDetailsDataType = 'array';
-  public $spannerDetails;
+  public $spannerDetails = [];
 
   /**
    * @param BigTableIODetails[]

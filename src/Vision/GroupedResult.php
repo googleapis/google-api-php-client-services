@@ -25,10 +25,10 @@ class GroupedResult extends \Google\Collection
   public $boundingPoly;
   protected $objectAnnotationsType = ObjectAnnotation::class;
   protected $objectAnnotationsDataType = 'array';
-  public $objectAnnotations;
+  public $objectAnnotations = [];
   protected $resultsType = Result::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
 
   /**
    * @param BoundingPoly

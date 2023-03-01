@@ -22,7 +22,7 @@ class RepositoryWebrefExtraMetadata extends \Google\Collection
   protected $collection_key = 'supportTransferRules';
   protected $bookEditionMetadataType = RepositoryWebrefBookEditionMetadata::class;
   protected $bookEditionMetadataDataType = 'array';
-  public $bookEditionMetadata;
+  public $bookEditionMetadata = [];
   protected $categoryInfoType = RepositoryWebrefCategoryInfo::class;
   protected $categoryInfoDataType = '';
   public $categoryInfo;
@@ -37,7 +37,7 @@ class RepositoryWebrefExtraMetadata extends \Google\Collection
   public $entityScores;
   protected $equivalentEntityIdType = RepositoryWebrefWebrefEntityId::class;
   protected $equivalentEntityIdDataType = 'array';
-  public $equivalentEntityId;
+  public $equivalentEntityId = [];
   protected $geoMetadataType = RepositoryWebrefGeoMetadataProto::class;
   protected $geoMetadataDataType = '';
   public $geoMetadata;
@@ -66,10 +66,10 @@ class RepositoryWebrefExtraMetadata extends \Google\Collection
   public $specialEntityType;
   protected $specialWordType = MapsQualitySpecialWordsProto::class;
   protected $specialWordDataType = 'array';
-  public $specialWord;
+  public $specialWord = [];
   protected $supportTransferRulesType = RepositoryWebrefSupportTransferRule::class;
   protected $supportTransferRulesDataType = 'array';
-  public $supportTransferRules;
+  public $supportTransferRules = [];
 
   /**
    * @param RepositoryWebrefBookEditionMetadata[]

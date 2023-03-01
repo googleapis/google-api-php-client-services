@@ -27,7 +27,7 @@ class GoogleCloudWebriskV1SearchUrisResponseThreatUri extends \Google\Collection
   /**
    * @var string[]
    */
-  public $threatTypes;
+  public $threatTypes = [];
 
   /**
    * @param string

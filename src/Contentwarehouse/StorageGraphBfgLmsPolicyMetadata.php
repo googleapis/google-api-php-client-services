@@ -23,7 +23,7 @@ class StorageGraphBfgLmsPolicyMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clientIdsAllowed;
+  public $clientIdsAllowed = [];
   /**
    * @var bool
    */
@@ -31,7 +31,7 @@ class StorageGraphBfgLmsPolicyMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $modificationsAllowed;
+  public $modificationsAllowed = [];
   protected $regionsAllowedType = KeGovernanceTypedRegions::class;
   protected $regionsAllowedDataType = '';
   public $regionsAllowed;

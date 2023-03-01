@@ -22,11 +22,11 @@ class KubernetesSoftwareConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $componentVersion;
+  public $componentVersion = [];
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
 
   /**
    * @param string[]

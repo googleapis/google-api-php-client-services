@@ -23,11 +23,11 @@ class AccessSelector extends \Google\Collection
   /**
    * @var string[]
    */
-  public $permissions;
+  public $permissions = [];
   /**
    * @var string[]
    */
-  public $roles;
+  public $roles = [];
 
   /**
    * @param string[]

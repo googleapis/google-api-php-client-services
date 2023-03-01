@@ -22,7 +22,7 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $bigqueryImportKeys;
+  public $bigqueryImportKeys = [];
   protected $boundingPolyConfigType = GoogleCloudDatalabelingV1beta1BoundingPolyConfig::class;
   protected $boundingPolyConfigDataType = '';
   public $boundingPolyConfig;

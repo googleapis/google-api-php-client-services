@@ -26,7 +26,7 @@ class IndexingDupsLocalizedLocalizedCluster extends \Google\Collection
   public $boostSourceBlocker;
   protected $clusterType = IndexingDupsLocalizedLocalizedClusterCluster::class;
   protected $clusterDataType = 'array';
-  public $cluster;
+  public $cluster = [];
   protected $deprecatedHreflangInfoType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo::class;
   protected $deprecatedHreflangInfoDataType = '';
   public $deprecatedHreflangInfo;
@@ -49,11 +49,11 @@ class IndexingDupsLocalizedLocalizedCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sitedupRuleId;
+  public $sitedupRuleId = [];
   /**
    * @var string[]
    */
-  public $warningMessage;
+  public $warningMessage = [];
 
   /**
    * @param bool

@@ -22,7 +22,7 @@ class AnalyzeMoveResponse extends \Google\Collection
   protected $collection_key = 'moveAnalysis';
   protected $moveAnalysisType = MoveAnalysis::class;
   protected $moveAnalysisDataType = 'array';
-  public $moveAnalysis;
+  public $moveAnalysis = [];
 
   /**
    * @param MoveAnalysis[]

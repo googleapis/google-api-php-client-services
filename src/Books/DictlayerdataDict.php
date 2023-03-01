@@ -25,7 +25,7 @@ class DictlayerdataDict extends \Google\Collection
   public $source;
   protected $wordsType = DictlayerdataDictWords::class;
   protected $wordsDataType = 'array';
-  public $words;
+  public $words = [];
 
   /**
    * @param DictlayerdataDictSource

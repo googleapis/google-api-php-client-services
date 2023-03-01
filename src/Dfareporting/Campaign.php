@@ -29,7 +29,7 @@ class Campaign extends \Google\Collection
   public $adBlockingConfiguration;
   protected $additionalCreativeOptimizationConfigurationsType = CreativeOptimizationConfiguration::class;
   protected $additionalCreativeOptimizationConfigurationsDataType = 'array';
-  public $additionalCreativeOptimizationConfigurations;
+  public $additionalCreativeOptimizationConfigurations = [];
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class Campaign extends \Google\Collection
   public $archived;
   protected $audienceSegmentGroupsType = AudienceSegmentGroup::class;
   protected $audienceSegmentGroupsDataType = 'array';
-  public $audienceSegmentGroups;
+  public $audienceSegmentGroups = [];
   /**
    * @var string
    */
@@ -65,7 +65,7 @@ class Campaign extends \Google\Collection
   /**
    * @var string[]
    */
-  public $creativeGroupIds;
+  public $creativeGroupIds = [];
   protected $creativeOptimizationConfigurationType = CreativeOptimizationConfiguration::class;
   protected $creativeOptimizationConfigurationDataType = '';
   public $creativeOptimizationConfiguration;
@@ -82,7 +82,7 @@ class Campaign extends \Google\Collection
   public $endDate;
   protected $eventTagOverridesType = EventTagOverride::class;
   protected $eventTagOverridesDataType = 'array';
-  public $eventTagOverrides;
+  public $eventTagOverrides = [];
   /**
    * @var string
    */

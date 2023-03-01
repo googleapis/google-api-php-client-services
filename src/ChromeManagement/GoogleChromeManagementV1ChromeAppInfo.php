@@ -50,10 +50,10 @@ class GoogleChromeManagementV1ChromeAppInfo extends \Google\Collection
   public $minUserCount;
   protected $permissionsType = GoogleChromeManagementV1ChromeAppPermission::class;
   protected $permissionsDataType = 'array';
-  public $permissions;
+  public $permissions = [];
   protected $siteAccessType = GoogleChromeManagementV1ChromeAppSiteAccess::class;
   protected $siteAccessDataType = 'array';
-  public $siteAccess;
+  public $siteAccess = [];
   /**
    * @var bool
    */

@@ -26,7 +26,7 @@ class GoogleCloudContactcenterinsightsV1ArticleSuggestionData extends \Google\Mo
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

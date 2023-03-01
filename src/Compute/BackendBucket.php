@@ -38,7 +38,7 @@ class BackendBucket extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customResponseHeaders;
+  public $customResponseHeaders = [];
   /**
    * @var string
    */

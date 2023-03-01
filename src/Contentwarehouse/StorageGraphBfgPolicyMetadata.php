@@ -30,10 +30,10 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   public $availabilityStartTimestamp;
   protected $legalAllowedRegionsType = KeGovernanceTypedRegions::class;
   protected $legalAllowedRegionsDataType = 'array';
-  public $legalAllowedRegions;
+  public $legalAllowedRegions = [];
   protected $legalRemovalRegionsType = KeGovernanceTypedRegions::class;
   protected $legalRemovalRegionsDataType = 'array';
-  public $legalRemovalRegions;
+  public $legalRemovalRegions = [];
   protected $lmsPolicyMetadataType = StorageGraphBfgLmsPolicyMetadata::class;
   protected $lmsPolicyMetadataDataType = '';
   public $lmsPolicyMetadata;

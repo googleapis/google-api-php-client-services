@@ -47,7 +47,7 @@ class ThreadUpdate extends \Google\Collection
   public $originalThreadKey;
   protected $preStateType = PreState::class;
   protected $preStateDataType = 'array';
-  public $preState;
+  public $preState = [];
   protected $threadKeyType = MultiKey::class;
   protected $threadKeyDataType = '';
   public $threadKey;

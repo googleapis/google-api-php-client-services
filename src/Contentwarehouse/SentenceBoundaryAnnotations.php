@@ -25,7 +25,7 @@ class SentenceBoundaryAnnotations extends \Google\Collection
   public $info;
   protected $instanceType = SentenceBoundaryAnnotationsInstance::class;
   protected $instanceDataType = 'array';
-  public $instance;
+  public $instance = [];
 
   /**
    * @param Proto2BridgeMessageSet

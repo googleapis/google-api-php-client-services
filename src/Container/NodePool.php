@@ -25,7 +25,7 @@ class NodePool extends \Google\Collection
   public $autoscaling;
   protected $conditionsType = StatusCondition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   protected $configType = NodeConfig::class;
   protected $configDataType = '';
   public $config;
@@ -40,11 +40,11 @@ class NodePool extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instanceGroupUrls;
+  public $instanceGroupUrls = [];
   /**
    * @var string[]
    */
-  public $locations;
+  public $locations = [];
   protected $managementType = NodeManagement::class;
   protected $managementDataType = '';
   public $management;

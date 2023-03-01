@@ -22,7 +22,7 @@ class ListSendAsResponse extends \Google\Collection
   protected $collection_key = 'sendAs';
   protected $sendAsType = SendAs::class;
   protected $sendAsDataType = 'array';
-  public $sendAs;
+  public $sendAs = [];
 
   /**
    * @param SendAs[]

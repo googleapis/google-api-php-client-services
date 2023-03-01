@@ -26,7 +26,7 @@ class InventoryItem extends \Google\Collection
   public $accountId;
   protected $adSlotsType = AdSlot::class;
   protected $adSlotsDataType = 'array';
-  public $adSlots;
+  public $adSlots = [];
   /**
    * @var string
    */

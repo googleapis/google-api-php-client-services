@@ -21,7 +21,7 @@ class GoogleCloudDatacatalogV1ReconcileTagsMetadata extends \Google\Model
 {
   protected $errorsType = Status::class;
   protected $errorsDataType = 'map';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

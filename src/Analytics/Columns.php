@@ -23,14 +23,14 @@ class Columns extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributeNames;
+  public $attributeNames = [];
   /**
    * @var string
    */
   public $etag;
   protected $itemsType = Column::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class CloudassetResource extends \Google\Model
   /**
    * @var array[]
    */
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

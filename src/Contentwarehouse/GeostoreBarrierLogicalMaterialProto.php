@@ -23,7 +23,7 @@ class GeostoreBarrierLogicalMaterialProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $material;
+  public $material = [];
 
   /**
    * @param string[]

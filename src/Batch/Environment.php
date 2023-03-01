@@ -25,11 +25,11 @@ class Environment extends \Google\Model
   /**
    * @var string[]
    */
-  public $secretVariables;
+  public $secretVariables = [];
   /**
    * @var string[]
    */
-  public $variables;
+  public $variables = [];
 
   /**
    * @param KMSEnvMap

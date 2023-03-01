@@ -27,7 +27,7 @@ class ImageRepositoryShoppingProductInformationProductInformationTokenGroup exte
   /**
    * @var int[]
    */
-  public $tokens;
+  public $tokens = [];
 
   /**
    * @param string

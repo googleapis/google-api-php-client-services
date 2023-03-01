@@ -22,7 +22,7 @@ class RelatedResources extends \Google\Collection
   protected $collection_key = 'relatedResources';
   protected $relatedResourcesType = RelatedResource::class;
   protected $relatedResourcesDataType = 'array';
-  public $relatedResources;
+  public $relatedResources = [];
 
   /**
    * @param RelatedResource[]

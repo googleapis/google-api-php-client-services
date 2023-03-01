@@ -30,7 +30,7 @@ class RemarketingListsListResponse extends \Google\Collection
   public $nextPageToken;
   protected $remarketingListsType = RemarketingList::class;
   protected $remarketingListsDataType = 'array';
-  public $remarketingLists;
+  public $remarketingLists = [];
 
   /**
    * @param string

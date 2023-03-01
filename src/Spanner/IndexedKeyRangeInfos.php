@@ -21,7 +21,7 @@ class IndexedKeyRangeInfos extends \Google\Model
 {
   protected $keyRangeInfosType = KeyRangeInfos::class;
   protected $keyRangeInfosDataType = 'map';
-  public $keyRangeInfos;
+  public $keyRangeInfos = [];
 
   /**
    * @param KeyRangeInfos[]

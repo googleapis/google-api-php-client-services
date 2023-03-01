@@ -32,7 +32,7 @@ class MailPhishing extends \Google\Collection
   public $maliciousEntity;
   protected $messagesType = GmailMessageInfo::class;
   protected $messagesDataType = 'array';
-  public $messages;
+  public $messages = [];
   /**
    * @var string
    */

@@ -32,7 +32,7 @@ class GoogleCloudVisionV1p3beta1Paragraph extends \Google\Collection
   public $property;
   protected $wordsType = GoogleCloudVisionV1p3beta1Word::class;
   protected $wordsDataType = 'array';
-  public $words;
+  public $words = [];
 
   /**
    * @param GoogleCloudVisionV1p3beta1BoundingPoly

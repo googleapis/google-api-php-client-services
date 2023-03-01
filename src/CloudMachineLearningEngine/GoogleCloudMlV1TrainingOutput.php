@@ -42,11 +42,11 @@ class GoogleCloudMlV1TrainingOutput extends \Google\Collection
   public $isHyperparameterTuningJob;
   protected $trialsType = GoogleCloudMlV1HyperparameterOutput::class;
   protected $trialsDataType = 'array';
-  public $trials;
+  public $trials = [];
   /**
    * @var string[]
    */
-  public $webAccessUris;
+  public $webAccessUris = [];
 
   /**
    * @param GoogleCloudMlV1BuiltInAlgorithmOutput

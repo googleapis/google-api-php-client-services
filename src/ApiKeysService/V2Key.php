@@ -22,7 +22,7 @@ class V2Key extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string
    */

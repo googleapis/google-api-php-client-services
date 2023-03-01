@@ -22,7 +22,7 @@ class ListImpressionMetricsResponse extends \Google\Collection
   protected $collection_key = 'impressionMetricsRows';
   protected $impressionMetricsRowsType = ImpressionMetricsRow::class;
   protected $impressionMetricsRowsDataType = 'array';
-  public $impressionMetricsRows;
+  public $impressionMetricsRows = [];
   /**
    * @var string
    */

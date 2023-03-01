@@ -22,10 +22,10 @@ class GeostoreGeometryComposition extends \Google\Collection
   protected $collection_key = 'includesGeometryOf';
   protected $excludesGeometryOfType = GeostoreFeatureIdProto::class;
   protected $excludesGeometryOfDataType = 'array';
-  public $excludesGeometryOf;
+  public $excludesGeometryOf = [];
   protected $includesGeometryOfType = GeostoreFeatureIdProto::class;
   protected $includesGeometryOfDataType = 'array';
-  public $includesGeometryOf;
+  public $includesGeometryOf = [];
 
   /**
    * @param GeostoreFeatureIdProto[]

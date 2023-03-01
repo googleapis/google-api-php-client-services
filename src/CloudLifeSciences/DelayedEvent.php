@@ -27,7 +27,7 @@ class DelayedEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metrics;
+  public $metrics = [];
 
   /**
    * @param string

@@ -25,7 +25,7 @@ class GooglePrivacyDlpV2FieldTransformation extends \Google\Collection
   public $condition;
   protected $fieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
   protected $infoTypeTransformationsType = GooglePrivacyDlpV2InfoTypeTransformations::class;
   protected $infoTypeTransformationsDataType = '';
   public $infoTypeTransformations;

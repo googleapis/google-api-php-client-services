@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1UserInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $groupIds;
+  public $groupIds = [];
   /**
    * @var string
    */

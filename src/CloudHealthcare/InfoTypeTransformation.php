@@ -32,7 +32,7 @@ class InfoTypeTransformation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $infoTypes;
+  public $infoTypes = [];
   protected $redactConfigType = RedactConfig::class;
   protected $redactConfigDataType = '';
   public $redactConfig;

@@ -23,14 +23,14 @@ class GenericSnippetResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $debugInfo;
+  public $debugInfo = [];
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   public $info;
   /**
    * @var string[]
    */
-  public $snippet;
+  public $snippet = [];
   /**
    * @var string
    */

@@ -35,7 +35,7 @@ class JobConfigurationExtract extends \Google\Collection
   /**
    * @var string[]
    */
-  public $destinationUris;
+  public $destinationUris = [];
   /**
    * @var string
    */

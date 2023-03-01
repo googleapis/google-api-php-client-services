@@ -22,7 +22,7 @@ class CropHintsAnnotation extends \Google\Collection
   protected $collection_key = 'cropHints';
   protected $cropHintsType = CropHint::class;
   protected $cropHintsDataType = 'array';
-  public $cropHints;
+  public $cropHints = [];
 
   /**
    * @param CropHint[]

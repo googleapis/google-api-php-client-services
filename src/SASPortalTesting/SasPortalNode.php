@@ -31,7 +31,7 @@ class SasPortalNode extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sasUserIds;
+  public $sasUserIds = [];
 
   /**
    * @param string

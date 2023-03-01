@@ -40,13 +40,13 @@ class NlpSemanticParsingDatetimeDateTime extends \Google\Collection
   public $groundingStage;
   protected $pointType = NlpSemanticParsingDatetimeAbsoluteDateTime::class;
   protected $pointDataType = 'array';
-  public $point;
+  public $point = [];
   protected $propertiesType = NlpSemanticParsingDatetimeResolutionProperties::class;
   protected $propertiesDataType = '';
   public $properties;
   protected $rangeType = NlpSemanticParsingDatetimeRange::class;
   protected $rangeDataType = 'array';
-  public $range;
+  public $range = [];
   protected $recurrentType = NlpSemanticParsingDatetimeRecurrent::class;
   protected $recurrentDataType = '';
   public $recurrent;

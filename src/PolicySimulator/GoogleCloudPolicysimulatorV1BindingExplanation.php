@@ -28,7 +28,7 @@ class GoogleCloudPolicysimulatorV1BindingExplanation extends \Google\Model
   public $condition;
   protected $membershipsType = GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembership::class;
   protected $membershipsDataType = 'map';
-  public $memberships;
+  public $memberships = [];
   /**
    * @var string
    */

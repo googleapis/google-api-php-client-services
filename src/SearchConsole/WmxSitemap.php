@@ -22,7 +22,7 @@ class WmxSitemap extends \Google\Collection
   protected $collection_key = 'contents';
   protected $contentsType = WmxSitemapContent::class;
   protected $contentsDataType = 'array';
-  public $contents;
+  public $contents = [];
   /**
    * @var string
    */

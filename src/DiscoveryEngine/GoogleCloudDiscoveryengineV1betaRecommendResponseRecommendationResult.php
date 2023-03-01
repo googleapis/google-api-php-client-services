@@ -29,7 +29,7 @@ class GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult exte
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
 
   /**
    * @param GoogleCloudDiscoveryengineV1betaDocument

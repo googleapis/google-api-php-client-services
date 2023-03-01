@@ -22,7 +22,7 @@ class HttpCheck extends \Google\Collection
   protected $collection_key = 'acceptedResponseStatusCodes';
   protected $acceptedResponseStatusCodesType = ResponseStatusCode::class;
   protected $acceptedResponseStatusCodesDataType = 'array';
-  public $acceptedResponseStatusCodes;
+  public $acceptedResponseStatusCodes = [];
   protected $authInfoType = BasicAuthentication::class;
   protected $authInfoDataType = '';
   public $authInfo;
@@ -41,7 +41,7 @@ class HttpCheck extends \Google\Collection
   /**
    * @var string[]
    */
-  public $headers;
+  public $headers = [];
   /**
    * @var bool
    */

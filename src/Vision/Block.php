@@ -33,7 +33,7 @@ class Block extends \Google\Collection
   public $confidence;
   protected $paragraphsType = Paragraph::class;
   protected $paragraphsDataType = 'array';
-  public $paragraphs;
+  public $paragraphs = [];
   protected $propertyType = TextProperty::class;
   protected $propertyDataType = '';
   public $property;

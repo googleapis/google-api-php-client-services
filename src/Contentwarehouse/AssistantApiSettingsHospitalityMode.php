@@ -23,7 +23,7 @@ class AssistantApiSettingsHospitalityMode extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aogContextId;
+  public $aogContextId = [];
   /**
    * @var string
    */
@@ -65,7 +65,7 @@ class AssistantApiSettingsHospitalityMode extends \Google\Collection
   /**
    * @var string[]
    */
-  public $promotedLanguages;
+  public $promotedLanguages = [];
   /**
    * @var string
    */

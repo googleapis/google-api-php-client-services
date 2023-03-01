@@ -56,7 +56,7 @@ class VideoVideoStreamInfo extends \Google\Collection
   public $audioStartTimestamp;
   protected $audioStreamType = VideoVideoStreamInfoAudioStream::class;
   protected $audioStreamDataType = 'array';
-  public $audioStream;
+  public $audioStream = [];
   /**
    * @var string
    */
@@ -85,7 +85,7 @@ class VideoVideoStreamInfo extends \Google\Collection
   public $containsChapters;
   protected $dataStreamType = VideoVideoStreamInfoDataStream::class;
   protected $dataStreamDataType = 'array';
-  public $dataStream;
+  public $dataStream = [];
   /**
    * @var int
    */
@@ -120,7 +120,7 @@ class VideoVideoStreamInfo extends \Google\Collection
   public $fileType;
   protected $imageStreamType = VideoVideoStreamInfoVideoStream::class;
   protected $imageStreamDataType = 'array';
-  public $imageStream;
+  public $imageStream = [];
   /**
    * @var bool
    */
@@ -178,7 +178,7 @@ class VideoVideoStreamInfo extends \Google\Collection
   public $profile;
   protected $timedtextStreamType = VideoVideoStreamInfoTimedTextStream::class;
   protected $timedtextStreamDataType = 'array';
-  public $timedtextStream;
+  public $timedtextStream = [];
   public $videoBitrate;
   protected $videoClipInfoType = VideoVideoClipInfo::class;
   protected $videoClipInfoDataType = '';
@@ -256,7 +256,7 @@ class VideoVideoStreamInfo extends \Google\Collection
   public $videoStartTimestamp;
   protected $videoStreamType = VideoVideoStreamInfoVideoStream::class;
   protected $videoStreamDataType = 'array';
-  public $videoStream;
+  public $videoStream = [];
   /**
    * @var int
    */

@@ -22,10 +22,10 @@ class TimeSeriesData extends \Google\Collection
   protected $collection_key = 'pointData';
   protected $labelValuesType = LabelValue::class;
   protected $labelValuesDataType = 'array';
-  public $labelValues;
+  public $labelValues = [];
   protected $pointDataType = PointData::class;
   protected $pointDataDataType = 'array';
-  public $pointData;
+  public $pointData = [];
 
   /**
    * @param LabelValue[]

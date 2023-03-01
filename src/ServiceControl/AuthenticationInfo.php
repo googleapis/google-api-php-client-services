@@ -34,7 +34,7 @@ class AuthenticationInfo extends \Google\Collection
   public $principalSubject;
   protected $serviceAccountDelegationInfoType = ServiceAccountDelegationInfo::class;
   protected $serviceAccountDelegationInfoDataType = 'array';
-  public $serviceAccountDelegationInfo;
+  public $serviceAccountDelegationInfo = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class AuthenticationInfo extends \Google\Collection
   /**
    * @var array[]
    */
-  public $thirdPartyPrincipal;
+  public $thirdPartyPrincipal = [];
 
   /**
    * @param string

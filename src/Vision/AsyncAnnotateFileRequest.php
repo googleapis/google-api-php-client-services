@@ -22,7 +22,7 @@ class AsyncAnnotateFileRequest extends \Google\Collection
   protected $collection_key = 'features';
   protected $featuresType = Feature::class;
   protected $featuresDataType = 'array';
-  public $features;
+  public $features = [];
   protected $imageContextType = ImageContext::class;
   protected $imageContextDataType = '';
   public $imageContext;

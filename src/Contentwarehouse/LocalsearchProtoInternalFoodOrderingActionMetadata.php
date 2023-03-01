@@ -46,7 +46,7 @@ class LocalsearchProtoInternalFoodOrderingActionMetadata extends \Google\Collect
   public $onlyOrderAheadServicesAvailable;
   protected $serviceInfoType = LocalsearchProtoInternalFoodOrderingActionMetadataServiceInfo::class;
   protected $serviceInfoDataType = 'array';
-  public $serviceInfo;
+  public $serviceInfo = [];
   /**
    * @var string
    */

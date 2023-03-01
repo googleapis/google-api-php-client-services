@@ -71,14 +71,14 @@ class AddSubnetworkRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $requestedRanges;
+  public $requestedRanges = [];
   /**
    * @var string
    */
   public $role;
   protected $secondaryIpRangeSpecsType = SecondaryIpRangeSpec::class;
   protected $secondaryIpRangeSpecsDataType = 'array';
-  public $secondaryIpRangeSpecs;
+  public $secondaryIpRangeSpecs = [];
   /**
    * @var string
    */
@@ -86,7 +86,7 @@ class AddSubnetworkRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subnetworkUsers;
+  public $subnetworkUsers = [];
   /**
    * @var bool
    */

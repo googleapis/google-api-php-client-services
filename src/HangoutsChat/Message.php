@@ -25,20 +25,20 @@ class Message extends \Google\Collection
   public $actionResponse;
   protected $annotationsType = Annotation::class;
   protected $annotationsDataType = 'array';
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string
    */
   public $argumentText;
   protected $attachmentType = Attachment::class;
   protected $attachmentDataType = 'array';
-  public $attachment;
+  public $attachment = [];
   protected $cardsType = Card::class;
   protected $cardsDataType = 'array';
-  public $cards;
+  public $cards = [];
   protected $cardsV2Type = CardWithId::class;
   protected $cardsV2DataType = 'array';
-  public $cardsV2;
+  public $cardsV2 = [];
   /**
    * @var string
    */

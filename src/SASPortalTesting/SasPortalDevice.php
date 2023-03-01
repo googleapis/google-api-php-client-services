@@ -25,7 +25,7 @@ class SasPortalDevice extends \Google\Collection
   public $activeConfig;
   protected $currentChannelsType = SasPortalChannelWithScore::class;
   protected $currentChannelsDataType = 'array';
-  public $currentChannels;
+  public $currentChannels = [];
   protected $deviceMetadataType = SasPortalDeviceMetadata::class;
   protected $deviceMetadataDataType = '';
   public $deviceMetadata;
@@ -39,10 +39,10 @@ class SasPortalDevice extends \Google\Collection
   public $fccId;
   protected $grantRangeAllowlistsType = SasPortalFrequencyRange::class;
   protected $grantRangeAllowlistsDataType = 'array';
-  public $grantRangeAllowlists;
+  public $grantRangeAllowlists = [];
   protected $grantsType = SasPortalDeviceGrant::class;
   protected $grantsDataType = 'array';
-  public $grants;
+  public $grants = [];
   /**
    * @var string
    */

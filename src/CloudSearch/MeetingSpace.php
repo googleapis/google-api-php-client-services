@@ -23,7 +23,7 @@ class MeetingSpace extends \Google\Collection
   /**
    * @var string[]
    */
-  public $acceptedNumberClass;
+  public $acceptedNumberClass = [];
   protected $broadcastAccessType = BroadcastAccess::class;
   protected $broadcastAccessDataType = '';
   public $broadcastAccess;
@@ -35,7 +35,7 @@ class MeetingSpace extends \Google\Collection
   public $gatewayAccess;
   protected $gatewaySipAccessType = GatewaySipAccess::class;
   protected $gatewaySipAccessDataType = 'array';
-  public $gatewaySipAccess;
+  public $gatewaySipAccess = [];
   /**
    * @var string
    */
@@ -58,7 +58,7 @@ class MeetingSpace extends \Google\Collection
   public $moreJoinUrl;
   protected $phoneAccessType = PhoneAccess::class;
   protected $phoneAccessDataType = 'array';
-  public $phoneAccess;
+  public $phoneAccess = [];
   protected $settingsType = Settings::class;
   protected $settingsDataType = '';
   public $settings;

@@ -26,10 +26,10 @@ class Parameter extends \Google\Collection
   public $key;
   protected $listType = Parameter::class;
   protected $listDataType = 'array';
-  public $list;
+  public $list = [];
   protected $mapType = Parameter::class;
   protected $mapDataType = 'array';
-  public $map;
+  public $map = [];
   /**
    * @var string
    */

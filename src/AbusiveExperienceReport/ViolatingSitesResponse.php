@@ -22,7 +22,7 @@ class ViolatingSitesResponse extends \Google\Collection
   protected $collection_key = 'violatingSites';
   protected $violatingSitesType = SiteSummaryResponse::class;
   protected $violatingSitesDataType = 'array';
-  public $violatingSites;
+  public $violatingSites = [];
 
   /**
    * @param SiteSummaryResponse[]

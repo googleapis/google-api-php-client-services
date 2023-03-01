@@ -23,15 +23,15 @@ class WindowsUpdateSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $classifications;
+  public $classifications = [];
   /**
    * @var string[]
    */
-  public $excludes;
+  public $excludes = [];
   /**
    * @var string[]
    */
-  public $exclusivePatches;
+  public $exclusivePatches = [];
 
   /**
    * @param string[]

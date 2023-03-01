@@ -23,7 +23,7 @@ class DocumentMask extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fieldPaths;
+  public $fieldPaths = [];
 
   /**
    * @param string[]

@@ -44,7 +44,7 @@ class AndroidRoboTest extends \Google\Collection
   public $maxSteps;
   protected $roboDirectivesType = RoboDirective::class;
   protected $roboDirectivesDataType = 'array';
-  public $roboDirectives;
+  public $roboDirectives = [];
   /**
    * @var string
    */
@@ -54,7 +54,7 @@ class AndroidRoboTest extends \Google\Collection
   public $roboScript;
   protected $startingIntentsType = RoboStartingIntent::class;
   protected $startingIntentsDataType = 'array';
-  public $startingIntents;
+  public $startingIntents = [];
 
   /**
    * @param FileReference

@@ -22,7 +22,7 @@ class GroupFindingsResponse extends \Google\Collection
   protected $collection_key = 'groupByResults';
   protected $groupByResultsType = GroupResult::class;
   protected $groupByResultsDataType = 'array';
-  public $groupByResults;
+  public $groupByResults = [];
   /**
    * @var string
    */

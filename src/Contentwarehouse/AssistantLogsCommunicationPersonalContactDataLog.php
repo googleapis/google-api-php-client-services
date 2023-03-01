@@ -34,14 +34,14 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   /**
    * @var int[]
    */
-  public $deviceContactAttributes;
+  public $deviceContactAttributes = [];
   /**
    * @var int
    */
   public $emailIdCount;
   protected $fuzzyNgramMatchType = AssistantLogsCommunicationFuzzyNgramMatchLog::class;
   protected $fuzzyNgramMatchDataType = 'array';
-  public $fuzzyNgramMatch;
+  public $fuzzyNgramMatch = [];
   /**
    * @var string
    */
@@ -77,21 +77,21 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $matchedStarlightLookupName;
+  public $matchedStarlightLookupName = [];
   protected $metadataType = AssistantLogsCommunicationPersonMetadataLog::class;
   protected $metadataDataType = '';
   public $metadata;
   /**
    * @var int[]
    */
-  public $nameMatchedContactIndex;
+  public $nameMatchedContactIndex = [];
   /**
    * @var string
    */
   public $originalQueryName;
   protected $phoneType = AssistantLogsCommunicationPhoneLog::class;
   protected $phoneDataType = 'array';
-  public $phone;
+  public $phone = [];
   /**
    * @var int
    */
@@ -125,7 +125,7 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   /**
    * @var int[]
    */
-  public $systemContactGroupId;
+  public $systemContactGroupId = [];
   /**
    * @var int
    */

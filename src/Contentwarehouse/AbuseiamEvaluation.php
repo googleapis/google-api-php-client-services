@@ -36,13 +36,13 @@ class AbuseiamEvaluation extends \Google\Collection
   public $comment;
   protected $featureType = AbuseiamFeature::class;
   protected $featureDataType = 'array';
-  public $feature;
+  public $feature = [];
   protected $manualReviewInfoType = AbuseiamManualReviewEvaluationInfo::class;
   protected $manualReviewInfoDataType = '';
   public $manualReviewInfo;
   protected $miscDataType = AbuseiamNameValuePair::class;
   protected $miscDataDataType = 'array';
-  public $miscData;
+  public $miscData = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class AbuseiamEvaluation extends \Google\Collection
   public $processedMicros;
   protected $regionType = AbuseiamRegion::class;
   protected $regionDataType = 'array';
-  public $region;
+  public $region = [];
   public $score;
   /**
    * @var string

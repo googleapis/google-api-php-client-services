@@ -56,14 +56,14 @@ class MachineImage extends \Google\Collection
   public $satisfiesPzs;
   protected $savedDisksType = SavedDisk::class;
   protected $savedDisksDataType = 'array';
-  public $savedDisks;
+  public $savedDisks = [];
   /**
    * @var string
    */
   public $selfLink;
   protected $sourceDiskEncryptionKeysType = SourceDiskEncryptionKey::class;
   protected $sourceDiskEncryptionKeysDataType = 'array';
-  public $sourceDiskEncryptionKeys;
+  public $sourceDiskEncryptionKeys = [];
   /**
    * @var string
    */
@@ -78,7 +78,7 @@ class MachineImage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $storageLocations;
+  public $storageLocations = [];
   /**
    * @var string
    */

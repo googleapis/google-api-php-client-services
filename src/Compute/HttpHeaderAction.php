@@ -22,18 +22,18 @@ class HttpHeaderAction extends \Google\Collection
   protected $collection_key = 'responseHeadersToRemove';
   protected $requestHeadersToAddType = HttpHeaderOption::class;
   protected $requestHeadersToAddDataType = 'array';
-  public $requestHeadersToAdd;
+  public $requestHeadersToAdd = [];
   /**
    * @var string[]
    */
-  public $requestHeadersToRemove;
+  public $requestHeadersToRemove = [];
   protected $responseHeadersToAddType = HttpHeaderOption::class;
   protected $responseHeadersToAddDataType = 'array';
-  public $responseHeadersToAdd;
+  public $responseHeadersToAdd = [];
   /**
    * @var string[]
    */
-  public $responseHeadersToRemove;
+  public $responseHeadersToRemove = [];
 
   /**
    * @param HttpHeaderOption[]

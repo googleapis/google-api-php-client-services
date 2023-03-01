@@ -29,7 +29,7 @@ class GeostoreRoadConditionalProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $vehicleType;
+  public $vehicleType = [];
 
   /**
    * @param GeostoreTimeScheduleProto

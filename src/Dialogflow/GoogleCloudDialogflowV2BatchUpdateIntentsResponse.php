@@ -22,7 +22,7 @@ class GoogleCloudDialogflowV2BatchUpdateIntentsResponse extends \Google\Collecti
   protected $collection_key = 'intents';
   protected $intentsType = GoogleCloudDialogflowV2Intent::class;
   protected $intentsDataType = 'array';
-  public $intents;
+  public $intents = [];
 
   /**
    * @param GoogleCloudDialogflowV2Intent[]

@@ -27,11 +27,11 @@ class AclFixStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fixableEmailAddress;
+  public $fixableEmailAddress = [];
   /**
    * @var string[]
    */
-  public $outOfDomainWarningEmailAddress;
+  public $outOfDomainWarningEmailAddress = [];
 
   /**
    * @param string

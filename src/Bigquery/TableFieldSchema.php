@@ -37,7 +37,7 @@ class TableFieldSchema extends \Google\Collection
   public $description;
   protected $fieldsType = TableFieldSchema::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
   /**
    * @var string
    */

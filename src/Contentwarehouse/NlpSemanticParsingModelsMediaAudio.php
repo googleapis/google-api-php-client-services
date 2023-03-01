@@ -34,7 +34,7 @@ class NlpSemanticParsingModelsMediaAudio extends \Google\Collection
   public $dateTime;
   protected $episodeConstraintType = NlpSemanticParsingModelsMediaEpisodeConstraint::class;
   protected $episodeConstraintDataType = 'array';
-  public $episodeConstraint;
+  public $episodeConstraint = [];
   protected $gameType = NlpSemanticParsingModelsMediaGame::class;
   protected $gameDataType = '';
   public $game;
@@ -83,7 +83,7 @@ class NlpSemanticParsingModelsMediaAudio extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tag;
+  public $tag = [];
   protected $tvShowType = NlpSemanticParsingModelsMediaTVShow::class;
   protected $tvShowDataType = '';
   public $tvShow;

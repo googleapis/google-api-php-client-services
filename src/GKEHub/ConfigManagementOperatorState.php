@@ -26,7 +26,7 @@ class ConfigManagementOperatorState extends \Google\Collection
   public $deploymentState;
   protected $errorsType = ConfigManagementInstallError::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

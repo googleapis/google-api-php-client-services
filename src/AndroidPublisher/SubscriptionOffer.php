@@ -30,7 +30,7 @@ class SubscriptionOffer extends \Google\Collection
   public $offerId;
   protected $offerTagsType = OfferTag::class;
   protected $offerTagsDataType = 'array';
-  public $offerTags;
+  public $offerTags = [];
   protected $otherRegionsConfigType = OtherRegionsSubscriptionOfferConfig::class;
   protected $otherRegionsConfigDataType = '';
   public $otherRegionsConfig;
@@ -40,14 +40,14 @@ class SubscriptionOffer extends \Google\Collection
   public $packageName;
   protected $phasesType = SubscriptionOfferPhase::class;
   protected $phasesDataType = 'array';
-  public $phases;
+  public $phases = [];
   /**
    * @var string
    */
   public $productId;
   protected $regionalConfigsType = RegionalSubscriptionOfferConfig::class;
   protected $regionalConfigsDataType = 'array';
-  public $regionalConfigs;
+  public $regionalConfigs = [];
   /**
    * @var string
    */

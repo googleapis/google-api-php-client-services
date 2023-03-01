@@ -35,7 +35,7 @@ class OrderDocument extends \Google\Collection
   /**
    * @var string[]
    */
-  public $approvedByUserProfileIds;
+  public $approvedByUserProfileIds = [];
   /**
    * @var bool
    */
@@ -58,7 +58,7 @@ class OrderDocument extends \Google\Collection
   /**
    * @var string[]
    */
-  public $lastSentRecipients;
+  public $lastSentRecipients = [];
   /**
    * @var string
    */

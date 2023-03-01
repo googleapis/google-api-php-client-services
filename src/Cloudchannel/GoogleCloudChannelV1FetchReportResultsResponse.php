@@ -29,7 +29,7 @@ class GoogleCloudChannelV1FetchReportResultsResponse extends \Google\Collection
   public $reportMetadata;
   protected $rowsType = GoogleCloudChannelV1Row::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
 
   /**
    * @param string

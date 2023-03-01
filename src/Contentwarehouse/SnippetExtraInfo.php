@@ -22,7 +22,7 @@ class SnippetExtraInfo extends \Google\Collection
   protected $collection_key = 'candidateInfo';
   protected $candidateInfoType = SnippetExtraInfoSnippetCandidateInfo::class;
   protected $candidateInfoDataType = 'array';
-  public $candidateInfo;
+  public $candidateInfo = [];
   /**
    * @var bool
    */

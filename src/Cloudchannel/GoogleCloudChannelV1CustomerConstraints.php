@@ -23,15 +23,15 @@ class GoogleCloudChannelV1CustomerConstraints extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedCustomerTypes;
+  public $allowedCustomerTypes = [];
   /**
    * @var string[]
    */
-  public $allowedRegions;
+  public $allowedRegions = [];
   /**
    * @var string[]
    */
-  public $promotionalOrderTypes;
+  public $promotionalOrderTypes = [];
 
   /**
    * @param string[]

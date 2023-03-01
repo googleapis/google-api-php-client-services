@@ -27,7 +27,7 @@ class UpdateTableRowStyleRequest extends \Google\Collection
   /**
    * @var int[]
    */
-  public $rowIndices;
+  public $rowIndices = [];
   protected $tableRowStyleType = TableRowStyle::class;
   protected $tableRowStyleDataType = '';
   public $tableRowStyle;

@@ -22,7 +22,7 @@ class Snippet extends \Google\Collection
   protected $collection_key = 'matchRanges';
   protected $matchRangesType = MatchRange::class;
   protected $matchRangesDataType = 'array';
-  public $matchRanges;
+  public $matchRanges = [];
   /**
    * @var string
    */

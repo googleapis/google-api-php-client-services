@@ -27,7 +27,7 @@ class ContactInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hashedEmails;
+  public $hashedEmails = [];
   /**
    * @var string
    */
@@ -39,11 +39,11 @@ class ContactInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hashedPhoneNumbers;
+  public $hashedPhoneNumbers = [];
   /**
    * @var string[]
    */
-  public $zipCodes;
+  public $zipCodes = [];
 
   /**
    * @param string

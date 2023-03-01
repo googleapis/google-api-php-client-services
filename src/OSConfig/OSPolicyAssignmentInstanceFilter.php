@@ -26,13 +26,13 @@ class OSPolicyAssignmentInstanceFilter extends \Google\Collection
   public $all;
   protected $exclusionLabelsType = OSPolicyAssignmentLabelSet::class;
   protected $exclusionLabelsDataType = 'array';
-  public $exclusionLabels;
+  public $exclusionLabels = [];
   protected $inclusionLabelsType = OSPolicyAssignmentLabelSet::class;
   protected $inclusionLabelsDataType = 'array';
-  public $inclusionLabels;
+  public $inclusionLabels = [];
   protected $inventoriesType = OSPolicyAssignmentInstanceFilterInventory::class;
   protected $inventoriesDataType = 'array';
-  public $inventories;
+  public $inventories = [];
 
   /**
    * @param bool

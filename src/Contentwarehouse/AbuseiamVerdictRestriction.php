@@ -22,7 +22,7 @@ class AbuseiamVerdictRestriction extends \Google\Collection
   protected $collection_key = 'context';
   protected $contextType = AbuseiamVerdictRestrictionContext::class;
   protected $contextDataType = 'array';
-  public $context;
+  public $context = [];
   protected $userRestrictionType = AbuseiamUserRestriction::class;
   protected $userRestrictionDataType = '';
   public $userRestriction;

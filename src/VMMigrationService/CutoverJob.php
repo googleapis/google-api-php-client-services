@@ -56,7 +56,7 @@ class CutoverJob extends \Google\Collection
   public $stateTime;
   protected $stepsType = CutoverStep::class;
   protected $stepsDataType = 'array';
-  public $steps;
+  public $steps = [];
 
   /**
    * @param ComputeEngineTargetDetails

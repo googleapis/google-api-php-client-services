@@ -35,7 +35,7 @@ class UsageReportParameters extends \Google\Collection
   /**
    * @var array[]
    */
-  public $msgValue;
+  public $msgValue = [];
   /**
    * @var string
    */

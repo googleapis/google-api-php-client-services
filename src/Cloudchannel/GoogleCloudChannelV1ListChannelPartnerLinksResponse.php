@@ -22,7 +22,7 @@ class GoogleCloudChannelV1ListChannelPartnerLinksResponse extends \Google\Collec
   protected $collection_key = 'channelPartnerLinks';
   protected $channelPartnerLinksType = GoogleCloudChannelV1ChannelPartnerLink::class;
   protected $channelPartnerLinksDataType = 'array';
-  public $channelPartnerLinks;
+  public $channelPartnerLinks = [];
   /**
    * @var string
    */

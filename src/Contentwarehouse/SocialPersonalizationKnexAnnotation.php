@@ -22,7 +22,7 @@ class SocialPersonalizationKnexAnnotation extends \Google\Collection
   protected $collection_key = 'item';
   protected $itemType = SocialPersonalizationKnexAnnotationItem::class;
   protected $itemDataType = 'array';
-  public $item;
+  public $item = [];
 
   /**
    * @param SocialPersonalizationKnexAnnotationItem[]

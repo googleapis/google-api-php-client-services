@@ -22,7 +22,7 @@ class Scan extends \Google\Model
   /**
    * @var array[]
    */
-  public $details;
+  public $details = [];
   /**
    * @var string
    */

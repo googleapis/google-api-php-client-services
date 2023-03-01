@@ -22,14 +22,14 @@ class ManagedZonePrivateVisibilityConfig extends \Google\Collection
   protected $collection_key = 'networks';
   protected $gkeClustersType = ManagedZonePrivateVisibilityConfigGKECluster::class;
   protected $gkeClustersDataType = 'array';
-  public $gkeClusters;
+  public $gkeClusters = [];
   /**
    * @var string
    */
   public $kind;
   protected $networksType = ManagedZonePrivateVisibilityConfigNetwork::class;
   protected $networksDataType = 'array';
-  public $networks;
+  public $networks = [];
 
   /**
    * @param ManagedZonePrivateVisibilityConfigGKECluster[]

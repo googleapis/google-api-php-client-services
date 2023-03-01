@@ -22,7 +22,7 @@ class AppsPeopleOzExternalMergedpeopleapiPlayGamesExtendedData extends \Google\C
   protected $collection_key = 'achievements';
   protected $achievementsType = AppsPeopleOzExternalMergedpeopleapiPlayGamesExtendedDataAchievement::class;
   protected $achievementsDataType = 'array';
-  public $achievements;
+  public $achievements = [];
   /**
    * @var string
    */

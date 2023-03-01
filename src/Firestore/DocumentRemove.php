@@ -31,7 +31,7 @@ class DocumentRemove extends \Google\Collection
   /**
    * @var int[]
    */
-  public $removedTargetIds;
+  public $removedTargetIds = [];
 
   /**
    * @param string

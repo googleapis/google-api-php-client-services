@@ -27,7 +27,7 @@ class IndexingDocjoinerAnchorTrustedInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $matchedScoreInfo;
+  public $matchedScoreInfo = [];
   /**
    * @var float
    */
@@ -39,7 +39,7 @@ class IndexingDocjoinerAnchorTrustedInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $text;
+  public $text = [];
   /**
    * @var float
    */

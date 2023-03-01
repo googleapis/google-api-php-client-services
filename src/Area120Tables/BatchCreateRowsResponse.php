@@ -22,7 +22,7 @@ class BatchCreateRowsResponse extends \Google\Collection
   protected $collection_key = 'rows';
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
 
   /**
    * @param Row[]

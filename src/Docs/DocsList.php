@@ -26,14 +26,14 @@ class DocsList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds;
+  public $suggestedDeletionIds = [];
   /**
    * @var string
    */
   public $suggestedInsertionId;
   protected $suggestedListPropertiesChangesType = SuggestedListProperties::class;
   protected $suggestedListPropertiesChangesDataType = 'map';
-  public $suggestedListPropertiesChanges;
+  public $suggestedListPropertiesChanges = [];
 
   /**
    * @param ListProperties

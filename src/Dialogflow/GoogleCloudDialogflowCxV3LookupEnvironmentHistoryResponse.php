@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse extends \Google\
   protected $collection_key = 'environments';
   protected $environmentsType = GoogleCloudDialogflowCxV3Environment::class;
   protected $environmentsDataType = 'array';
-  public $environments;
+  public $environments = [];
   /**
    * @var string
    */

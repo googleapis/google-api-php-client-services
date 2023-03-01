@@ -38,7 +38,7 @@ class TargetChange extends \Google\Collection
   /**
    * @var int[]
    */
-  public $targetIds;
+  public $targetIds = [];
 
   /**
    * @param Status

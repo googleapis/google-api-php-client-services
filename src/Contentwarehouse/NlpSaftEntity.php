@@ -28,7 +28,7 @@ class NlpSaftEntity extends \Google\Collection
    * @var string
    */
   public $entityType;
-  public $entityTypeProbability;
+  public $entityTypeProbability = [];
   /**
    * @var string
    */
@@ -38,7 +38,7 @@ class NlpSaftEntity extends \Google\Collection
   public $info;
   protected $mentionType = NlpSaftMention::class;
   protected $mentionDataType = 'array';
-  public $mention;
+  public $mention = [];
   /**
    * @var string
    */
@@ -56,7 +56,7 @@ class NlpSaftEntity extends \Google\Collection
   public $salience;
   protected $typeType = NlpSaftEntityType::class;
   protected $typeDataType = 'array';
-  public $type;
+  public $type = [];
 
   /**
    * @param int

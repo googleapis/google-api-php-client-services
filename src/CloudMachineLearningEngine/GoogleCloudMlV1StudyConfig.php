@@ -29,10 +29,10 @@ class GoogleCloudMlV1StudyConfig extends \Google\Collection
   public $automatedStoppingConfig;
   protected $metricsType = GoogleCloudMlV1StudyConfigMetricSpec::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   protected $parametersType = GoogleCloudMlV1StudyConfigParameterSpec::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

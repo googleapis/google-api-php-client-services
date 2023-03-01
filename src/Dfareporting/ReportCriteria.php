@@ -31,14 +31,14 @@ class ReportCriteria extends \Google\Collection
   public $dateRange;
   protected $dimensionFiltersType = DimensionValue::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters;
+  public $dimensionFilters = [];
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string[]
    */
-  public $metricNames;
+  public $metricNames = [];
 
   /**
    * @param Activities

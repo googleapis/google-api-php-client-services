@@ -38,7 +38,7 @@ class CompositeDocIndexingInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $demotionTags;
+  public $demotionTags = [];
   /**
    * @var int
    */
@@ -46,7 +46,7 @@ class CompositeDocIndexingInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $freshdocsCorpora;
+  public $freshdocsCorpora = [];
   /**
    * @var string
    */
@@ -89,7 +89,7 @@ class CompositeDocIndexingInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tracingId;
+  public $tracingId = [];
   protected $urlChangerateType = CrawlerChangerateUrlChangerate::class;
   protected $urlChangerateDataType = '';
   public $urlChangerate;

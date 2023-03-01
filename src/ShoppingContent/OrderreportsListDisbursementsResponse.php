@@ -22,7 +22,7 @@ class OrderreportsListDisbursementsResponse extends \Google\Collection
   protected $collection_key = 'disbursements';
   protected $disbursementsType = OrderReportDisbursement::class;
   protected $disbursementsDataType = 'array';
-  public $disbursements;
+  public $disbursements = [];
   /**
    * @var string
    */

@@ -35,7 +35,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableMaintenanceVersions;
+  public $availableMaintenanceVersions = [];
   /**
    * @var string
    */
@@ -63,7 +63,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -88,7 +88,7 @@ class Instance extends \Google\Collection
   public $name;
   protected $nodesType = NodeInfo::class;
   protected $nodesDataType = 'array';
-  public $nodes;
+  public $nodes = [];
   protected $persistenceConfigType = PersistenceConfig::class;
   protected $persistenceConfigDataType = '';
   public $persistenceConfig;
@@ -115,7 +115,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $redisConfigs;
+  public $redisConfigs = [];
   /**
    * @var string
    */
@@ -134,7 +134,7 @@ class Instance extends \Google\Collection
   public $secondaryIpRange;
   protected $serverCaCertsType = TlsCertificate::class;
   protected $serverCaCertsDataType = 'array';
-  public $serverCaCerts;
+  public $serverCaCerts = [];
   /**
    * @var string
    */
@@ -146,7 +146,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suspensionReasons;
+  public $suspensionReasons = [];
   /**
    * @var string
    */

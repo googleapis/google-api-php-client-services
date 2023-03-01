@@ -43,14 +43,14 @@ class Network extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $macAddress;
+  public $macAddress = [];
   protected $mountPointsType = NetworkMountPoint::class;
   protected $mountPointsDataType = 'array';
-  public $mountPoints;
+  public $mountPoints = [];
   /**
    * @var string
    */
@@ -61,7 +61,7 @@ class Network extends \Google\Collection
   public $pod;
   protected $reservationsType = NetworkAddressReservation::class;
   protected $reservationsDataType = 'array';
-  public $reservations;
+  public $reservations = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class GoogleCloudDatacatalogV1BigQueryRoutineSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $importedLibraries;
+  public $importedLibraries = [];
 
   /**
    * @param string[]

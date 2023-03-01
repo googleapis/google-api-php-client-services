@@ -23,7 +23,7 @@ class V1AddVisibilityLabelsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
 
   /**
    * @param string[]

@@ -27,7 +27,7 @@ class EditAtom extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputs;
+  public $inputs = [];
   /**
    * @var string
    */

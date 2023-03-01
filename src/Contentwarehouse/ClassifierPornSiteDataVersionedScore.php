@@ -27,7 +27,7 @@ class ClassifierPornSiteDataVersionedScore extends \Google\Collection
   /**
    * @var string[]
    */
-  public $siteRule;
+  public $siteRule = [];
   /**
    * @var int
    */

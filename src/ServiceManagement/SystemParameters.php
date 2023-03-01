@@ -22,7 +22,7 @@ class SystemParameters extends \Google\Collection
   protected $collection_key = 'rules';
   protected $rulesType = SystemParameterRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
 
   /**
    * @param SystemParameterRule[]

@@ -33,7 +33,7 @@ class ComplianceRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $packageNamesToDisable;
+  public $packageNamesToDisable = [];
 
   /**
    * @param ApiLevelCondition

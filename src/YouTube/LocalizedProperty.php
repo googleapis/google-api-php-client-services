@@ -29,7 +29,7 @@ class LocalizedProperty extends \Google\Collection
   public $defaultLanguage;
   protected $localizedType = LocalizedString::class;
   protected $localizedDataType = 'array';
-  public $localized;
+  public $localized = [];
 
   /**
    * @param string

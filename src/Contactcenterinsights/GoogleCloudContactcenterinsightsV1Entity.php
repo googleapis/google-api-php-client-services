@@ -26,7 +26,7 @@ class GoogleCloudContactcenterinsightsV1Entity extends \Google\Model
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var float
    */

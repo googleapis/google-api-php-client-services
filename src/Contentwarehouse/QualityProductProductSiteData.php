@@ -22,7 +22,7 @@ class QualityProductProductSiteData extends \Google\Collection
   protected $collection_key = 'locale';
   protected $localeType = QualityProductProductSiteDataLocaleData::class;
   protected $localeDataType = 'array';
-  public $locale;
+  public $locale = [];
 
   /**
    * @param QualityProductProductSiteDataLocaleData[]

@@ -22,7 +22,7 @@ class MetricAbsence extends \Google\Collection
   protected $collection_key = 'aggregations';
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
-  public $aggregations;
+  public $aggregations = [];
   /**
    * @var string
    */

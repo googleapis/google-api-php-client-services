@@ -22,7 +22,7 @@ class RegionInstanceGroupManagerUpdateInstanceConfigReq extends \Google\Collecti
   protected $collection_key = 'perInstanceConfigs';
   protected $perInstanceConfigsType = PerInstanceConfig::class;
   protected $perInstanceConfigsDataType = 'array';
-  public $perInstanceConfigs;
+  public $perInstanceConfigs = [];
 
   /**
    * @param PerInstanceConfig[]

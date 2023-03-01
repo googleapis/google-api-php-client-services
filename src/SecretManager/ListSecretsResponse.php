@@ -26,7 +26,7 @@ class ListSecretsResponse extends \Google\Collection
   public $nextPageToken;
   protected $secretsType = Secret::class;
   protected $secretsDataType = 'array';
-  public $secrets;
+  public $secrets = [];
   /**
    * @var int
    */

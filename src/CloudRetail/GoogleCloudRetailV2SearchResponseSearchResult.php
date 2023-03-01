@@ -31,18 +31,18 @@ class GoogleCloudRetailV2SearchResponseSearchResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $matchingVariantFields;
+  public $matchingVariantFields = [];
   /**
    * @var string[]
    */
-  public $personalLabels;
+  public $personalLabels = [];
   protected $productType = GoogleCloudRetailV2Product::class;
   protected $productDataType = '';
   public $product;
   /**
    * @var array[]
    */
-  public $variantRollupValues;
+  public $variantRollupValues = [];
 
   /**
    * @param string

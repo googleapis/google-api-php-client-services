@@ -26,7 +26,7 @@ class AddressList extends \Google\Collection
   public $id;
   protected $itemsType = Address::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableFeatures;
+  public $availableFeatures = [];
   /**
    * @var bool
    */

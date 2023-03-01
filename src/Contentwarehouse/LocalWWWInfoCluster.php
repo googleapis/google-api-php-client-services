@@ -78,7 +78,7 @@ class LocalWWWInfoCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $menuUrl;
+  public $menuUrl = [];
   /**
    * @var int
    */
@@ -104,7 +104,7 @@ class LocalWWWInfoCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $source;
+  public $source = [];
   /**
    * @var string
    */

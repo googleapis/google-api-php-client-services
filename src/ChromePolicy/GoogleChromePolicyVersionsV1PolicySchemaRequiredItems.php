@@ -23,11 +23,11 @@ class GoogleChromePolicyVersionsV1PolicySchemaRequiredItems extends \Google\Coll
   /**
    * @var string[]
    */
-  public $fieldConditions;
+  public $fieldConditions = [];
   /**
    * @var string[]
    */
-  public $requiredFields;
+  public $requiredFields = [];
 
   /**
    * @param string[]

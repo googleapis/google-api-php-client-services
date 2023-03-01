@@ -29,7 +29,7 @@ class AnalyzeOrgPoliciesResponse extends \Google\Collection
   public $nextPageToken;
   protected $orgPolicyResultsType = OrgPolicyResult::class;
   protected $orgPolicyResultsDataType = 'array';
-  public $orgPolicyResults;
+  public $orgPolicyResults = [];
 
   /**
    * @param AnalyzerOrgPolicyConstraint

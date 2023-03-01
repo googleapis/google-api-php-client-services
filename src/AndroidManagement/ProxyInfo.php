@@ -23,7 +23,7 @@ class ProxyInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedHosts;
+  public $excludedHosts = [];
   /**
    * @var string
    */

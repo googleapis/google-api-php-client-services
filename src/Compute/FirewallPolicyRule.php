@@ -62,14 +62,14 @@ class FirewallPolicyRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetResources;
+  public $targetResources = [];
   protected $targetSecureTagsType = FirewallPolicyRuleSecureTag::class;
   protected $targetSecureTagsDataType = 'array';
-  public $targetSecureTags;
+  public $targetSecureTags = [];
   /**
    * @var string[]
    */
-  public $targetServiceAccounts;
+  public $targetServiceAccounts = [];
 
   /**
    * @param string

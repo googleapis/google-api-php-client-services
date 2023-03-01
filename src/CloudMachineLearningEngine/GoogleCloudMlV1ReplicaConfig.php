@@ -26,11 +26,11 @@ class GoogleCloudMlV1ReplicaConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $containerArgs;
+  public $containerArgs = [];
   /**
    * @var string[]
    */
-  public $containerCommand;
+  public $containerCommand = [];
   protected $diskConfigType = GoogleCloudMlV1DiskConfig::class;
   protected $diskConfigDataType = '';
   public $diskConfig;

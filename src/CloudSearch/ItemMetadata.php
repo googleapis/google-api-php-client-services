@@ -30,7 +30,7 @@ class ItemMetadata extends \Google\Collection
   public $contentLanguage;
   protected $contextAttributesType = ContextAttribute::class;
   protected $contextAttributesDataType = 'array';
-  public $contextAttributes;
+  public $contextAttributes = [];
   /**
    * @var string
    */
@@ -41,11 +41,11 @@ class ItemMetadata extends \Google\Collection
   public $hash;
   protected $interactionsType = Interaction::class;
   protected $interactionsDataType = 'array';
-  public $interactions;
+  public $interactions = [];
   /**
    * @var string[]
    */
-  public $keywords;
+  public $keywords = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class KnowledgeAnswersAttributeType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attribute;
+  public $attribute = [];
   /**
    * @var string
    */

@@ -23,13 +23,13 @@ class GoogleCloudRunV2Revision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
-  public $containers;
+  public $containers = [];
   /**
    * @var string
    */
@@ -69,7 +69,7 @@ class GoogleCloudRunV2Revision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -119,7 +119,7 @@ class GoogleCloudRunV2Revision extends \Google\Collection
   public $updateTime;
   protected $volumesType = GoogleCloudRunV2Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes;
+  public $volumes = [];
   protected $vpcAccessType = GoogleCloudRunV2VpcAccess::class;
   protected $vpcAccessDataType = '';
   public $vpcAccess;

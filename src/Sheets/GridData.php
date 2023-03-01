@@ -22,13 +22,13 @@ class GridData extends \Google\Collection
   protected $collection_key = 'rowMetadata';
   protected $columnMetadataType = DimensionProperties::class;
   protected $columnMetadataDataType = 'array';
-  public $columnMetadata;
+  public $columnMetadata = [];
   protected $rowDataType = RowData::class;
   protected $rowDataDataType = 'array';
-  public $rowData;
+  public $rowData = [];
   protected $rowMetadataType = DimensionProperties::class;
   protected $rowMetadataDataType = 'array';
-  public $rowMetadata;
+  public $rowMetadata = [];
   /**
    * @var int
    */

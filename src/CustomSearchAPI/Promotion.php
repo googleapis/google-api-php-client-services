@@ -22,7 +22,7 @@ class Promotion extends \Google\Collection
   protected $collection_key = 'bodyLines';
   protected $bodyLinesType = PromotionBodyLines::class;
   protected $bodyLinesDataType = 'array';
-  public $bodyLines;
+  public $bodyLines = [];
   /**
    * @var string
    */

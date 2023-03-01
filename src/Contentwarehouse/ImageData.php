@@ -69,7 +69,7 @@ class ImageData extends \Google\Collection
   /**
    * @var float[]
    */
-  public $colorScore;
+  public $colorScore = [];
   /**
    * @var int
    */
@@ -84,7 +84,7 @@ class ImageData extends \Google\Collection
   public $contentFirstCrawlTime;
   protected $corpusSelectionInfoType = CorpusSelectionInfo::class;
   protected $corpusSelectionInfoDataType = 'array';
-  public $corpusSelectionInfo;
+  public $corpusSelectionInfo = [];
   protected $cropsType = ContentAwareCropsIndexing::class;
   protected $cropsDataType = '';
   public $crops;
@@ -226,7 +226,7 @@ class ImageData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nearDupFeaturesSmall;
+  public $nearDupFeaturesSmall = [];
   /**
    * @var int
    */
@@ -244,7 +244,7 @@ class ImageData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $noIndexReason;
+  public $noIndexReason = [];
   /**
    * @var int
    */
@@ -257,7 +257,7 @@ class ImageData extends \Google\Collection
   public $ocrTaser;
   protected $ocrTextboxesType = OcrPhotoTextBox::class;
   protected $ocrTextboxesDataType = 'array';
-  public $ocrTextboxes;
+  public $ocrTextboxes = [];
   /**
    * @var string
    */
@@ -292,7 +292,7 @@ class ImageData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictStrings;
+  public $restrictStrings = [];
   /**
    * @var string
    */
@@ -307,10 +307,10 @@ class ImageData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $smearedTopWebLandingPageDocids;
+  public $smearedTopWebLandingPageDocids = [];
   protected $smearedTopWebLandingPagesType = SmearedWebLandingPageEntry::class;
   protected $smearedTopWebLandingPagesDataType = 'array';
-  public $smearedTopWebLandingPages;
+  public $smearedTopWebLandingPages = [];
   protected $styleAestheticsScoreType = LensDiscoveryStyleAestheticsScoreSignals::class;
   protected $styleAestheticsScoreDataType = '';
   public $styleAestheticsScore;
@@ -335,7 +335,7 @@ class ImageData extends \Google\Collection
   public $thumbWidth;
   protected $thumbnailType = ImageDataThumbnail::class;
   protected $thumbnailDataType = 'array';
-  public $thumbnail;
+  public $thumbnail = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class NetworkAttachment extends \Google\Collection
   protected $collection_key = 'subnetworks';
   protected $connectionEndpointsType = NetworkAttachmentConnectedEndpoint::class;
   protected $connectionEndpointsDataType = 'array';
-  public $connectionEndpoints;
+  public $connectionEndpoints = [];
   /**
    * @var string
    */
@@ -58,11 +58,11 @@ class NetworkAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $producerAcceptLists;
+  public $producerAcceptLists = [];
   /**
    * @var string[]
    */
-  public $producerRejectLists;
+  public $producerRejectLists = [];
   /**
    * @var string
    */
@@ -78,7 +78,7 @@ class NetworkAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subnetworks;
+  public $subnetworks = [];
 
   /**
    * @param NetworkAttachmentConnectedEndpoint[]

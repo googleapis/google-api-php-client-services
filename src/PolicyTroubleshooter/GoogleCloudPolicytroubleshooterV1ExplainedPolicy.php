@@ -26,7 +26,7 @@ class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends \Google\Collectio
   public $access;
   protected $bindingExplanationsType = GoogleCloudPolicytroubleshooterV1BindingExplanation::class;
   protected $bindingExplanationsDataType = 'array';
-  public $bindingExplanations;
+  public $bindingExplanations = [];
   /**
    * @var string
    */

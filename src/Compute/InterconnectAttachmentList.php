@@ -26,7 +26,7 @@ class InterconnectAttachmentList extends \Google\Collection
   public $id;
   protected $itemsType = InterconnectAttachment::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

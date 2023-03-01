@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1EndpointChainingRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $proxyIds;
+  public $proxyIds = [];
 
   /**
    * @param string

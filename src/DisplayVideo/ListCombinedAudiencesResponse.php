@@ -22,7 +22,7 @@ class ListCombinedAudiencesResponse extends \Google\Collection
   protected $collection_key = 'combinedAudiences';
   protected $combinedAudiencesType = CombinedAudience::class;
   protected $combinedAudiencesDataType = 'array';
-  public $combinedAudiences;
+  public $combinedAudiences = [];
   /**
    * @var string
    */

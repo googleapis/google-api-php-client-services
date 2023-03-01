@@ -40,7 +40,7 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   public $locale;
   protected $mokaFacetType = QualityShoppingShoppingAttachmentMokaFacetValue::class;
   protected $mokaFacetDataType = 'array';
-  public $mokaFacet;
+  public $mokaFacet = [];
   /**
    * @var string
    */
@@ -66,7 +66,7 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   public $productPopularity;
   protected $relevanceEmbeddingType = QualityRankembedMustangMustangRankEmbedInfo::class;
   protected $relevanceEmbeddingDataType = 'array';
-  public $relevanceEmbedding;
+  public $relevanceEmbedding = [];
   /**
    * @var string
    */

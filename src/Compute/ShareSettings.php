@@ -21,7 +21,7 @@ class ShareSettings extends \Google\Model
 {
   protected $projectMapType = ShareSettingsProjectConfig::class;
   protected $projectMapDataType = 'map';
-  public $projectMap;
+  public $projectMap = [];
   /**
    * @var string
    */

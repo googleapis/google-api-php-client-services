@@ -40,7 +40,7 @@ class BasicChartSeries extends \Google\Collection
   public $series;
   protected $styleOverridesType = BasicSeriesDataPointStyleOverride::class;
   protected $styleOverridesDataType = 'array';
-  public $styleOverrides;
+  public $styleOverrides = [];
   /**
    * @var string
    */

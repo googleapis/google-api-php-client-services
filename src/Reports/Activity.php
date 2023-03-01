@@ -29,7 +29,7 @@ class Activity extends \Google\Collection
   public $etag;
   protected $eventsType = ActivityEvents::class;
   protected $eventsDataType = 'array';
-  public $events;
+  public $events = [];
   protected $idType = ActivityId::class;
   protected $idDataType = '';
   public $id;

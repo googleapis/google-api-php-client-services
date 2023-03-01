@@ -26,7 +26,7 @@ class GoogleChromeManagementV1ListTelemetryUsersResponse extends \Google\Collect
   public $nextPageToken;
   protected $telemetryUsersType = GoogleChromeManagementV1TelemetryUser::class;
   protected $telemetryUsersDataType = 'array';
-  public $telemetryUsers;
+  public $telemetryUsers = [];
 
   /**
    * @param string

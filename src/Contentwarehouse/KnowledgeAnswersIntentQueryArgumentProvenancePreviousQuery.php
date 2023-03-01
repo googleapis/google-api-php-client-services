@@ -22,10 +22,10 @@ class KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery extends \Google
   protected $collection_key = 'evalData';
   protected $currentQueryEvalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $currentQueryEvalDataDataType = 'array';
-  public $currentQueryEvalData;
+  public $currentQueryEvalData = [];
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = 'array';
-  public $evalData;
+  public $evalData = [];
   protected $eventIdType = EventIdMessage::class;
   protected $eventIdDataType = '';
   public $eventId;

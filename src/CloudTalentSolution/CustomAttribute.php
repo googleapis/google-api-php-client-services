@@ -31,11 +31,11 @@ class CustomAttribute extends \Google\Collection
   /**
    * @var string[]
    */
-  public $longValues;
+  public $longValues = [];
   /**
    * @var string[]
    */
-  public $stringValues;
+  public $stringValues = [];
 
   /**
    * @param bool

@@ -120,7 +120,7 @@ class Nutrition extends \Google\Collection
   public $vitaminDDailyPercentage;
   protected $voluntaryNutritionFactType = VoluntaryNutritionFact::class;
   protected $voluntaryNutritionFactDataType = 'array';
-  public $voluntaryNutritionFact;
+  public $voluntaryNutritionFact = [];
 
   /**
    * @param FloatUnit

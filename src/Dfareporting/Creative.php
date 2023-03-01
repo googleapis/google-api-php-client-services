@@ -35,10 +35,10 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $adTagKeys;
+  public $adTagKeys = [];
   protected $additionalSizesType = Size::class;
   protected $additionalSizesDataType = 'array';
-  public $additionalSizes;
+  public $additionalSizes = [];
   /**
    * @var string
    */
@@ -77,7 +77,7 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $backupImageFeatures;
+  public $backupImageFeatures = [];
   /**
    * @var string
    */
@@ -87,7 +87,7 @@ class Creative extends \Google\Collection
   public $backupImageTargetWindow;
   protected $clickTagsType = ClickTag::class;
   protected $clickTagsDataType = 'array';
-  public $clickTags;
+  public $clickTags = [];
   /**
    * @var string
    */
@@ -95,38 +95,38 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $companionCreatives;
+  public $companionCreatives = [];
   /**
    * @var string[]
    */
-  public $compatibility;
+  public $compatibility = [];
   /**
    * @var bool
    */
   public $convertFlashToHtml5;
   protected $counterCustomEventsType = CreativeCustomEvent::class;
   protected $counterCustomEventsDataType = 'array';
-  public $counterCustomEvents;
+  public $counterCustomEvents = [];
   protected $creativeAssetSelectionType = CreativeAssetSelection::class;
   protected $creativeAssetSelectionDataType = '';
   public $creativeAssetSelection;
   protected $creativeAssetsType = CreativeAsset::class;
   protected $creativeAssetsDataType = 'array';
-  public $creativeAssets;
+  public $creativeAssets = [];
   protected $creativeFieldAssignmentsType = CreativeFieldAssignment::class;
   protected $creativeFieldAssignmentsDataType = 'array';
-  public $creativeFieldAssignments;
+  public $creativeFieldAssignments = [];
   /**
    * @var string[]
    */
-  public $customKeyValues;
+  public $customKeyValues = [];
   /**
    * @var bool
    */
   public $dynamicAssetSelection;
   protected $exitCustomEventsType = CreativeCustomEvent::class;
   protected $exitCustomEventsDataType = 'array';
-  public $exitCustomEvents;
+  public $exitCustomEvents = [];
   protected $fsCommandType = FsCommand::class;
   protected $fsCommandDataType = '';
   public $fsCommand;
@@ -241,10 +241,10 @@ class Creative extends \Google\Collection
   public $thirdPartyRichMediaImpressionsUrl;
   protected $thirdPartyUrlsType = ThirdPartyTrackingUrl::class;
   protected $thirdPartyUrlsDataType = 'array';
-  public $thirdPartyUrls;
+  public $thirdPartyUrls = [];
   protected $timerCustomEventsType = CreativeCustomEvent::class;
   protected $timerCustomEventsDataType = 'array';
-  public $timerCustomEvents;
+  public $timerCustomEvents = [];
   /**
    * @var string
    */

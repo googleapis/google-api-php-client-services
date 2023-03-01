@@ -22,10 +22,10 @@ class GaDataDataTable extends \Google\Collection
   protected $collection_key = 'rows';
   protected $colsType = GaDataDataTableCols::class;
   protected $colsDataType = 'array';
-  public $cols;
+  public $cols = [];
   protected $rowsType = GaDataDataTableRows::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
 
   /**
    * @param GaDataDataTableCols[]

@@ -22,7 +22,7 @@ class BatchUpdateValuesByDataFilterRequest extends \Google\Collection
   protected $collection_key = 'data';
   protected $dataType = DataFilterValueRange::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var bool
    */

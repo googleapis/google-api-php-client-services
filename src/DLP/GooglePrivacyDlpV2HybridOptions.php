@@ -27,11 +27,11 @@ class GooglePrivacyDlpV2HybridOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $requiredFindingLabelKeys;
+  public $requiredFindingLabelKeys = [];
   protected $tableOptionsType = GooglePrivacyDlpV2TableOptions::class;
   protected $tableOptionsDataType = '';
   public $tableOptions;

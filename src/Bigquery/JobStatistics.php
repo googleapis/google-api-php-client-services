@@ -58,10 +58,10 @@ class JobStatistics extends \Google\Collection
   /**
    * @var string[]
    */
-  public $quotaDeferments;
+  public $quotaDeferments = [];
   protected $reservationUsageType = JobStatisticsReservationUsage::class;
   protected $reservationUsageDataType = 'array';
-  public $reservationUsage;
+  public $reservationUsage = [];
   /**
    * @var string
    */

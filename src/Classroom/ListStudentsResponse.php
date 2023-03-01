@@ -26,7 +26,7 @@ class ListStudentsResponse extends \Google\Collection
   public $nextPageToken;
   protected $studentsType = Student::class;
   protected $studentsDataType = 'array';
-  public $students;
+  public $students = [];
 
   /**
    * @param string

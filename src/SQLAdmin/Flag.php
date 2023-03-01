@@ -23,15 +23,15 @@ class Flag extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedIntValues;
+  public $allowedIntValues = [];
   /**
    * @var string[]
    */
-  public $allowedStringValues;
+  public $allowedStringValues = [];
   /**
    * @var string[]
    */
-  public $appliesTo;
+  public $appliesTo = [];
   /**
    * @var bool
    */

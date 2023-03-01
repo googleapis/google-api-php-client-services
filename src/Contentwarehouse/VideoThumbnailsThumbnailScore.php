@@ -31,7 +31,7 @@ class VideoThumbnailsThumbnailScore extends \Google\Collection
   /**
    * @var float[]
    */
-  public $denseFeatures;
+  public $denseFeatures = [];
   protected $denseGeneralExtraFeaturesType = DrishtiFeatureExtra::class;
   protected $denseGeneralExtraFeaturesDataType = '';
   public $denseGeneralExtraFeatures;

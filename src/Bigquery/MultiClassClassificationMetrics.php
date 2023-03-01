@@ -25,7 +25,7 @@ class MultiClassClassificationMetrics extends \Google\Collection
   public $aggregateClassificationMetrics;
   protected $confusionMatrixListType = ConfusionMatrix::class;
   protected $confusionMatrixListDataType = 'array';
-  public $confusionMatrixList;
+  public $confusionMatrixList = [];
 
   /**
    * @param AggregateClassificationMetrics

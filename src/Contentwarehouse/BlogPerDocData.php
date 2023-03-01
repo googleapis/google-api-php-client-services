@@ -52,7 +52,7 @@ class BlogPerDocData extends \Google\Collection
   public $numMentions;
   protected $outlinksType = BlogPerDocDataOutlinks::class;
   protected $outlinksDataType = 'array';
-  public $outlinks;
+  public $outlinks = [];
   /**
    * @var int
    */

@@ -26,7 +26,7 @@ class ListTransferConfigsResponse extends \Google\Collection
   public $nextPageToken;
   protected $transferConfigsType = TransferConfig::class;
   protected $transferConfigsDataType = 'array';
-  public $transferConfigs;
+  public $transferConfigs = [];
 
   /**
    * @param string

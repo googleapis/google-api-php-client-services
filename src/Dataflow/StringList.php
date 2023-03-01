@@ -23,7 +23,7 @@ class StringList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $elements;
+  public $elements = [];
 
   /**
    * @param string[]

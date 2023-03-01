@@ -22,7 +22,7 @@ class NetworkConfigurationCatalog extends \Google\Collection
   protected $collection_key = 'configurations';
   protected $configurationsType = NetworkConfiguration::class;
   protected $configurationsDataType = 'array';
-  public $configurations;
+  public $configurations = [];
 
   /**
    * @param NetworkConfiguration[]

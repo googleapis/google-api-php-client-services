@@ -26,11 +26,11 @@ class ListStreamsResponse extends \Google\Collection
   public $nextPageToken;
   protected $streamsType = Stream::class;
   protected $streamsDataType = 'array';
-  public $streams;
+  public $streams = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

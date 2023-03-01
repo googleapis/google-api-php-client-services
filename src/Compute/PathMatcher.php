@@ -43,10 +43,10 @@ class PathMatcher extends \Google\Collection
   public $name;
   protected $pathRulesType = PathRule::class;
   protected $pathRulesDataType = 'array';
-  public $pathRules;
+  public $pathRules = [];
   protected $routeRulesType = HttpRouteRule::class;
   protected $routeRulesDataType = 'array';
-  public $routeRules;
+  public $routeRules = [];
 
   /**
    * @param HttpRouteAction

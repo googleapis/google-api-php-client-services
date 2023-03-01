@@ -22,7 +22,7 @@ class SelectionControl extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = SelectionItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

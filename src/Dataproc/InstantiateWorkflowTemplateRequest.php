@@ -22,7 +22,7 @@ class InstantiateWorkflowTemplateRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */

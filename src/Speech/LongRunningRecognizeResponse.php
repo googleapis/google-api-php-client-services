@@ -32,7 +32,7 @@ class LongRunningRecognizeResponse extends \Google\Collection
   public $requestId;
   protected $resultsType = SpeechRecognitionResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   protected $speechAdaptationInfoType = SpeechAdaptationInfo::class;
   protected $speechAdaptationInfoDataType = '';
   public $speechAdaptationInfo;

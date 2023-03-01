@@ -22,13 +22,13 @@ class LookupResponse extends \Google\Collection
   protected $collection_key = 'missing';
   protected $deferredType = Key::class;
   protected $deferredDataType = 'array';
-  public $deferred;
+  public $deferred = [];
   protected $foundType = EntityResult::class;
   protected $foundDataType = 'array';
-  public $found;
+  public $found = [];
   protected $missingType = EntityResult::class;
   protected $missingDataType = 'array';
-  public $missing;
+  public $missing = [];
   /**
    * @var string
    */

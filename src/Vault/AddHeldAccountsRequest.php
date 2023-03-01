@@ -23,11 +23,11 @@ class AddHeldAccountsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accountIds;
+  public $accountIds = [];
   /**
    * @var string[]
    */
-  public $emails;
+  public $emails = [];
 
   /**
    * @param string[]

@@ -23,18 +23,18 @@ class Destination extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hosts;
+  public $hosts = [];
   protected $httpHeaderMatchType = HttpHeaderMatch::class;
   protected $httpHeaderMatchDataType = '';
   public $httpHeaderMatch;
   /**
    * @var string[]
    */
-  public $methods;
+  public $methods = [];
   /**
    * @var string[]
    */
-  public $ports;
+  public $ports = [];
 
   /**
    * @param string[]

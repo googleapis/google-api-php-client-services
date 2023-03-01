@@ -30,7 +30,7 @@ class TemplateMetadata extends \Google\Collection
   public $name;
   protected $parametersType = ParameterMetadata::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

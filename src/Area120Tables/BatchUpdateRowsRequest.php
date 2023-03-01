@@ -22,7 +22,7 @@ class BatchUpdateRowsRequest extends \Google\Collection
   protected $collection_key = 'requests';
   protected $requestsType = UpdateRowRequest::class;
   protected $requestsDataType = 'array';
-  public $requests;
+  public $requests = [];
 
   /**
    * @param UpdateRowRequest[]

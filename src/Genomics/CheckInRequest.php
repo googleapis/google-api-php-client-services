@@ -26,10 +26,10 @@ class CheckInRequest extends \Google\Collection
   /**
    * @var array[]
    */
-  public $event;
+  public $event = [];
   protected $eventsType = TimestampedEvent::class;
   protected $eventsDataType = 'array';
-  public $events;
+  public $events = [];
   protected $resultType = Status::class;
   protected $resultDataType = '';
   public $result;

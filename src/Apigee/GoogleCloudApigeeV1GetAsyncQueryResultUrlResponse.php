@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1GetAsyncQueryResultUrlResponse extends \Google\Collecti
   protected $collection_key = 'urls';
   protected $urlsType = GoogleCloudApigeeV1GetAsyncQueryResultUrlResponseURLInfo::class;
   protected $urlsDataType = 'array';
-  public $urls;
+  public $urls = [];
 
   /**
    * @param GoogleCloudApigeeV1GetAsyncQueryResultUrlResponseURLInfo[]

@@ -23,7 +23,7 @@ class SecurityBulletinEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $affectedSupportedMinors;
+  public $affectedSupportedMinors = [];
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class SecurityBulletinEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cveIds;
+  public $cveIds = [];
   /**
    * @var bool
    */
@@ -47,7 +47,7 @@ class SecurityBulletinEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $patchedVersions;
+  public $patchedVersions = [];
   /**
    * @var string
    */

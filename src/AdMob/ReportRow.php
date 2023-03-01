@@ -21,10 +21,10 @@ class ReportRow extends \Google\Model
 {
   protected $dimensionValuesType = ReportRowDimensionValue::class;
   protected $dimensionValuesDataType = 'map';
-  public $dimensionValues;
+  public $dimensionValues = [];
   protected $metricValuesType = ReportRowMetricValue::class;
   protected $metricValuesDataType = 'map';
-  public $metricValues;
+  public $metricValues = [];
 
   /**
    * @param ReportRowDimensionValue[]

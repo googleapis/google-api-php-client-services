@@ -42,7 +42,7 @@ class GoogleCloudDatapipelinesV1Pipeline extends \Google\Model
   /**
    * @var string[]
    */
-  public $pipelineSources;
+  public $pipelineSources = [];
   protected $scheduleInfoType = GoogleCloudDatapipelinesV1ScheduleSpec::class;
   protected $scheduleInfoDataType = '';
   public $scheduleInfo;

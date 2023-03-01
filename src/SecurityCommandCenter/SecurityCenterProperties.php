@@ -22,7 +22,7 @@ class SecurityCenterProperties extends \Google\Collection
   protected $collection_key = 'resourceOwners';
   protected $foldersType = Folder::class;
   protected $foldersDataType = 'array';
-  public $folders;
+  public $folders = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class SecurityCenterProperties extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceOwners;
+  public $resourceOwners = [];
   /**
    * @var string
    */

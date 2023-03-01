@@ -25,7 +25,7 @@ class RepositoryAnnotationsGeoTopic extends \Google\Collection
   public $address;
   protected $componentScoresType = RepositoryAnnotationsGeoTopicalityScore::class;
   protected $componentScoresDataType = 'array';
-  public $componentScores;
+  public $componentScores = [];
   /**
    * @var float
    */

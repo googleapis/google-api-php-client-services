@@ -22,7 +22,7 @@ class GoogleCloudAssetV1p7beta1RelatedAssets extends \Google\Collection
   protected $collection_key = 'assets';
   protected $assetsType = GoogleCloudAssetV1p7beta1RelatedAsset::class;
   protected $assetsDataType = 'array';
-  public $assets;
+  public $assets = [];
   protected $relationshipAttributesType = GoogleCloudAssetV1p7beta1RelationshipAttributes::class;
   protected $relationshipAttributesDataType = '';
   public $relationshipAttributes;

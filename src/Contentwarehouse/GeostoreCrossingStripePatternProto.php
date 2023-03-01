@@ -29,7 +29,7 @@ class GeostoreCrossingStripePatternProto extends \Google\Collection
   public $borderPattern;
   protected $colorType = GeostorePaintedElementLogicalColorProto::class;
   protected $colorDataType = 'array';
-  public $color;
+  public $color = [];
   /**
    * @var string
    */

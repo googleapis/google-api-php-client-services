@@ -30,7 +30,7 @@ class KnowledgeAnswersIntentQueryToken extends \Google\Collection
   /**
    * @var string[]
    */
-  public $parsedDueToExperiment;
+  public $parsedDueToExperiment = [];
   /**
    * @var float
    */
@@ -42,14 +42,14 @@ class KnowledgeAnswersIntentQueryToken extends \Google\Collection
   /**
    * @var string[]
    */
-  public $provenanceId;
+  public $provenanceId = [];
   /**
    * @var string
    */
   public $provenanceLanguage;
   protected $synonymsType = KnowledgeAnswersIntentQueryTokenSynonym::class;
   protected $synonymsDataType = 'array';
-  public $synonyms;
+  public $synonyms = [];
 
   /**
    * @param NlpSemanticParsingAnnotationEvalData

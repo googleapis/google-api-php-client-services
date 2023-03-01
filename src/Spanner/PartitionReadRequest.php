@@ -23,7 +23,7 @@ class PartitionReadRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $columns;
+  public $columns = [];
   /**
    * @var string
    */

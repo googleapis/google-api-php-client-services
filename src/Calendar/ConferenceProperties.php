@@ -23,7 +23,7 @@ class ConferenceProperties extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedConferenceSolutionTypes;
+  public $allowedConferenceSolutionTypes = [];
 
   /**
    * @param string[]

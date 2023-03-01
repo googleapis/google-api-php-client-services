@@ -30,11 +30,11 @@ class SearchAnalyticsQueryRequest extends \Google\Collection
   public $dataState;
   protected $dimensionFilterGroupsType = ApiDimensionFilterGroup::class;
   protected $dimensionFilterGroupsDataType = 'array';
-  public $dimensionFilterGroups;
+  public $dimensionFilterGroups = [];
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */

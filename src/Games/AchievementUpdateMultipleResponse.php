@@ -26,7 +26,7 @@ class AchievementUpdateMultipleResponse extends \Google\Collection
   public $kind;
   protected $updatedAchievementsType = AchievementUpdateResponse::class;
   protected $updatedAchievementsDataType = 'array';
-  public $updatedAchievements;
+  public $updatedAchievements = [];
 
   /**
    * @param string

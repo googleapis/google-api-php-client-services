@@ -23,7 +23,7 @@ class StorageGraphBfgPublicInformationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributionUrl;
+  public $attributionUrl = [];
   /**
    * @var string
    */

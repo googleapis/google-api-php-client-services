@@ -36,7 +36,7 @@ class Playlist extends \Google\Model
   public $kind;
   protected $localizationsType = PlaylistLocalization::class;
   protected $localizationsDataType = 'map';
-  public $localizations;
+  public $localizations = [];
   protected $playerType = PlaylistPlayer::class;
   protected $playerDataType = '';
   public $player;

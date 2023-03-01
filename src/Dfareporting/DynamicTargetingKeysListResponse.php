@@ -22,7 +22,7 @@ class DynamicTargetingKeysListResponse extends \Google\Collection
   protected $collection_key = 'dynamicTargetingKeys';
   protected $dynamicTargetingKeysType = DynamicTargetingKey::class;
   protected $dynamicTargetingKeysDataType = 'array';
-  public $dynamicTargetingKeys;
+  public $dynamicTargetingKeys = [];
   /**
    * @var string
    */

@@ -40,7 +40,7 @@ class LineItem extends \Google\Collection
   /**
    * @var string[]
    */
-  public $creativeIds;
+  public $creativeIds = [];
   /**
    * @var string
    */
@@ -86,7 +86,7 @@ class LineItem extends \Google\Collection
   public $pacing;
   protected $partnerCostsType = PartnerCost::class;
   protected $partnerCostsDataType = 'array';
-  public $partnerCosts;
+  public $partnerCosts = [];
   protected $partnerRevenueModelType = PartnerRevenueModel::class;
   protected $partnerRevenueModelDataType = '';
   public $partnerRevenueModel;
@@ -104,7 +104,7 @@ class LineItem extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warningMessages;
+  public $warningMessages = [];
   protected $youtubeAndPartnersSettingsType = YoutubeAndPartnersSettings::class;
   protected $youtubeAndPartnersSettingsDataType = '';
   public $youtubeAndPartnersSettings;

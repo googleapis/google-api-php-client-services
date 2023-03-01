@@ -31,10 +31,10 @@ class ReportWorkItemStatusRequest extends \Google\Collection
   /**
    * @var array[]
    */
-  public $unifiedWorkerRequest;
+  public $unifiedWorkerRequest = [];
   protected $workItemStatusesType = WorkItemStatus::class;
   protected $workItemStatusesDataType = 'array';
-  public $workItemStatuses;
+  public $workItemStatuses = [];
   /**
    * @var string
    */

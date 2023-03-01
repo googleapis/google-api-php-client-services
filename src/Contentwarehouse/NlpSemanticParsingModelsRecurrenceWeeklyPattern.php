@@ -23,7 +23,7 @@ class NlpSemanticParsingModelsRecurrenceWeeklyPattern extends \Google\Collection
   /**
    * @var string[]
    */
-  public $weekDay;
+  public $weekDay = [];
   /**
    * @var string
    */

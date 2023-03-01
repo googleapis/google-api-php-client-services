@@ -22,7 +22,7 @@ class ObjectAccessControls extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = ObjectAccessControl::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -27,7 +27,7 @@ class GoogleCloudChannelV1ListSubscribersResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceAccounts;
+  public $serviceAccounts = [];
   /**
    * @var string
    */

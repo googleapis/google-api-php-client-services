@@ -22,7 +22,7 @@ class ListAttachmentsResponse extends \Google\Collection
   protected $collection_key = 'attachments';
   protected $attachmentsType = Attachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments;
+  public $attachments = [];
   /**
    * @var string
    */

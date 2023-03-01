@@ -22,7 +22,7 @@ class ResearchScamV3Restrict extends \Google\Collection
   protected $collection_key = 'namespaces';
   protected $namespacesType = ResearchScamTokenNamespace::class;
   protected $namespacesDataType = 'array';
-  public $namespaces;
+  public $namespaces = [];
 
   /**
    * @param ResearchScamTokenNamespace[]

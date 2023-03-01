@@ -26,7 +26,7 @@ class InstanceGroupsListInstances extends \Google\Collection
   public $id;
   protected $itemsType = InstanceWithNamedPorts::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

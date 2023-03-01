@@ -30,7 +30,7 @@ class SpeechRecognitionAlternative extends \Google\Collection
   public $transcript;
   protected $wordsType = WordInfo::class;
   protected $wordsDataType = 'array';
-  public $words;
+  public $words = [];
 
   /**
    * @param float

@@ -26,11 +26,11 @@ class NlpSciencelitRetrievalSearchResultDebugInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $goldDocid;
+  public $goldDocid = [];
   /**
    * @var string[]
    */
-  public $goldSnippets;
+  public $goldSnippets = [];
   /**
    * @var bool
    */
@@ -46,7 +46,7 @@ class NlpSciencelitRetrievalSearchResultDebugInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $sectionIrScore;
+  public $sectionIrScore = [];
 
   /**
    * @param NlpSciencelitArticleData

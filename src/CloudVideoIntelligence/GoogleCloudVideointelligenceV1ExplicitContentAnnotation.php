@@ -22,7 +22,7 @@ class GoogleCloudVideointelligenceV1ExplicitContentAnnotation extends \Google\Co
   protected $collection_key = 'frames';
   protected $framesType = GoogleCloudVideointelligenceV1ExplicitContentFrame::class;
   protected $framesDataType = 'array';
-  public $frames;
+  public $frames = [];
   /**
    * @var string
    */

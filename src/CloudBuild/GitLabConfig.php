@@ -22,7 +22,7 @@ class GitLabConfig extends \Google\Collection
   protected $collection_key = 'connectedRepositories';
   protected $connectedRepositoriesType = GitLabRepositoryId::class;
   protected $connectedRepositoriesDataType = 'array';
-  public $connectedRepositories;
+  public $connectedRepositories = [];
   /**
    * @var string
    */

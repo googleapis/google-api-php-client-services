@@ -25,7 +25,7 @@ class GoogleCloudMlV1StudyConfigParameterSpec extends \Google\Collection
   public $categoricalValueSpec;
   protected $childParameterSpecsType = GoogleCloudMlV1StudyConfigParameterSpec::class;
   protected $childParameterSpecsDataType = 'array';
-  public $childParameterSpecs;
+  public $childParameterSpecs = [];
   protected $discreteValueSpecType = GoogleCloudMlV1StudyConfigParameterSpecDiscreteValueSpec::class;
   protected $discreteValueSpecDataType = '';
   public $discreteValueSpec;

@@ -22,7 +22,7 @@ class OperationError extends \Google\Collection
   protected $collection_key = 'errors';
   protected $errorsType = OperationErrorErrors::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
 
   /**
    * @param OperationErrorErrors[]

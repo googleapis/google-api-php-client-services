@@ -26,7 +26,7 @@ class WorkItemServiceState extends \Google\Collection
   /**
    * @var array[]
    */
-  public $harnessData;
+  public $harnessData = [];
   protected $hotKeyDetectionType = HotKeyDetection::class;
   protected $hotKeyDetectionDataType = '';
   public $hotKeyDetection;
@@ -36,7 +36,7 @@ class WorkItemServiceState extends \Google\Collection
   public $leaseExpireTime;
   protected $metricShortIdType = MetricShortId::class;
   protected $metricShortIdDataType = 'array';
-  public $metricShortId;
+  public $metricShortId = [];
   /**
    * @var string
    */

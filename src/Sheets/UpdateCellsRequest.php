@@ -29,7 +29,7 @@ class UpdateCellsRequest extends \Google\Collection
   public $range;
   protected $rowsType = RowData::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
   protected $startType = GridCoordinate::class;
   protected $startDataType = '';
   public $start;

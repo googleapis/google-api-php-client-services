@@ -27,7 +27,7 @@ class Record extends \Google\Model
   public $key;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'map';
-  public $metrics;
+  public $metrics = [];
 
   /**
    * @param CollectionPeriod

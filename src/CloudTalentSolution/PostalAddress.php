@@ -23,7 +23,7 @@ class PostalAddress extends \Google\Collection
   /**
    * @var string[]
    */
-  public $addressLines;
+  public $addressLines = [];
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class PostalAddress extends \Google\Collection
   /**
    * @var string[]
    */
-  public $recipients;
+  public $recipients = [];
   /**
    * @var string
    */

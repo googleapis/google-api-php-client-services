@@ -31,7 +31,7 @@ class Entity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $vocabularyCodes;
+  public $vocabularyCodes = [];
 
   /**
    * @param string

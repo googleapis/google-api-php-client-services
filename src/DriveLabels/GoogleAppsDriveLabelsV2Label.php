@@ -45,7 +45,7 @@ class GoogleAppsDriveLabelsV2Label extends \Google\Collection
   public $displayHints;
   protected $fieldsType = GoogleAppsDriveLabelsV2Field::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
   /**
    * @var string
    */

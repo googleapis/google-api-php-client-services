@@ -23,7 +23,7 @@ class SlsaProvenanceZeroTwo extends \Google\Collection
   /**
    * @var array[]
    */
-  public $buildConfig;
+  public $buildConfig = [];
   /**
    * @var string
    */
@@ -36,7 +36,7 @@ class SlsaProvenanceZeroTwo extends \Google\Collection
   public $invocation;
   protected $materialsType = GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial::class;
   protected $materialsDataType = 'array';
-  public $materials;
+  public $materials = [];
   protected $metadataType = GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata::class;
   protected $metadataDataType = '';
   public $metadata;

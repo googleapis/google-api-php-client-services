@@ -46,7 +46,7 @@ class AgentMetadata extends \Google\Model
   /**
    * @var string[]
    */
-  public $osRelease;
+  public $osRelease = [];
   /**
    * @var string
    */

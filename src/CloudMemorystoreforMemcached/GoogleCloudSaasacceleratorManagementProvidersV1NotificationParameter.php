@@ -23,7 +23,7 @@ class GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter exten
   /**
    * @var string[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string[]

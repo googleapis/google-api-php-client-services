@@ -22,7 +22,7 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends \Google\Collectio
   protected $collection_key = 'rbmSuggestion';
   protected $rbmSuggestionType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion::class;
   protected $rbmSuggestionDataType = 'array';
-  public $rbmSuggestion;
+  public $rbmSuggestion = [];
   /**
    * @var string
    */

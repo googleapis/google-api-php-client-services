@@ -22,7 +22,7 @@ class HealthChecksScopedList extends \Google\Collection
   protected $collection_key = 'healthChecks';
   protected $healthChecksType = HealthCheck::class;
   protected $healthChecksDataType = 'array';
-  public $healthChecks;
+  public $healthChecks = [];
   protected $warningType = HealthChecksScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

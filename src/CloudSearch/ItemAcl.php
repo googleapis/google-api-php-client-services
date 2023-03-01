@@ -26,17 +26,17 @@ class ItemAcl extends \Google\Collection
   public $aclInheritanceType;
   protected $deniedReadersType = Principal::class;
   protected $deniedReadersDataType = 'array';
-  public $deniedReaders;
+  public $deniedReaders = [];
   /**
    * @var string
    */
   public $inheritAclFrom;
   protected $ownersType = Principal::class;
   protected $ownersDataType = 'array';
-  public $owners;
+  public $owners = [];
   protected $readersType = Principal::class;
   protected $readersDataType = 'array';
-  public $readers;
+  public $readers = [];
 
   /**
    * @param string

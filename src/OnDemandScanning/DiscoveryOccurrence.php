@@ -25,7 +25,7 @@ class DiscoveryOccurrence extends \Google\Collection
   public $analysisCompleted;
   protected $analysisErrorType = Status::class;
   protected $analysisErrorDataType = 'array';
-  public $analysisError;
+  public $analysisError = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class Field extends \Google\Model
   /**
    * @var array[]
    */
-  public $additionalDetails;
+  public $additionalDetails = [];
   /**
    * @var string
    */

@@ -23,11 +23,11 @@ class VideoTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedPositionTypes;
+  public $excludedPositionTypes = [];
   /**
    * @var string[]
    */
-  public $targetedPositionTypes;
+  public $targetedPositionTypes = [];
 
   /**
    * @param string[]

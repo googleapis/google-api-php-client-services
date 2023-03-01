@@ -22,7 +22,7 @@ class KeyRangeInfo extends \Google\Collection
   protected $collection_key = 'contextValues';
   protected $contextValuesType = ContextValue::class;
   protected $contextValuesDataType = 'array';
-  public $contextValues;
+  public $contextValues = [];
   /**
    * @var int
    */

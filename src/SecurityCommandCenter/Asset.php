@@ -37,7 +37,7 @@ class Asset extends \Google\Model
   /**
    * @var array[]
    */
-  public $resourceProperties;
+  public $resourceProperties = [];
   protected $securityCenterPropertiesType = SecurityCenterProperties::class;
   protected $securityCenterPropertiesDataType = '';
   public $securityCenterProperties;

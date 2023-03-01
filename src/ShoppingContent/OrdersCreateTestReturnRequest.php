@@ -22,7 +22,7 @@ class OrdersCreateTestReturnRequest extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = OrdersCustomBatchRequestEntryCreateTestReturnReturnItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
 
   /**
    * @param OrdersCustomBatchRequestEntryCreateTestReturnReturnItem[]

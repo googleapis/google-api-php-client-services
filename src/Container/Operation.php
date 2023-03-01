@@ -22,7 +22,7 @@ class Operation extends \Google\Collection
   protected $collection_key = 'nodepoolConditions';
   protected $clusterConditionsType = StatusCondition::class;
   protected $clusterConditionsDataType = 'array';
-  public $clusterConditions;
+  public $clusterConditions = [];
   /**
    * @var string
    */
@@ -44,7 +44,7 @@ class Operation extends \Google\Collection
   public $name;
   protected $nodepoolConditionsType = StatusCondition::class;
   protected $nodepoolConditionsDataType = 'array';
-  public $nodepoolConditions;
+  public $nodepoolConditions = [];
   /**
    * @var string
    */

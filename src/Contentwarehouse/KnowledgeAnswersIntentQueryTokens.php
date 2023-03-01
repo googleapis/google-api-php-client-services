@@ -26,7 +26,7 @@ class KnowledgeAnswersIntentQueryTokens extends \Google\Collection
   public $score;
   protected $tokenType = KnowledgeAnswersIntentQueryToken::class;
   protected $tokenDataType = 'array';
-  public $token;
+  public $token = [];
 
   /**
    * @param float

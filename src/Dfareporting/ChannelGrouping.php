@@ -34,7 +34,7 @@ class ChannelGrouping extends \Google\Collection
   public $name;
   protected $rulesType = ChannelGroupingRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
 
   /**
    * @param string

@@ -26,11 +26,11 @@ class ListSpokesResponse extends \Google\Collection
   public $nextPageToken;
   protected $spokesType = Spoke::class;
   protected $spokesDataType = 'array';
-  public $spokes;
+  public $spokes = [];
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param string

@@ -30,7 +30,7 @@ class PivotFilterCriteria extends \Google\Collection
   /**
    * @var string[]
    */
-  public $visibleValues;
+  public $visibleValues = [];
 
   /**
    * @param BooleanCondition

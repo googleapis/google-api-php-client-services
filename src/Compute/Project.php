@@ -42,7 +42,7 @@ class Project extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enabledFeatures;
+  public $enabledFeatures = [];
   /**
    * @var string
    */
@@ -57,7 +57,7 @@ class Project extends \Google\Collection
   public $name;
   protected $quotasType = Quota::class;
   protected $quotasDataType = 'array';
-  public $quotas;
+  public $quotas = [];
   /**
    * @var string
    */

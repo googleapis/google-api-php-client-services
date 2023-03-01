@@ -29,7 +29,7 @@ class Attribute extends \Google\Collection
   public $repeatedEnumValue;
   protected $uriValuesType = UriAttributeValue::class;
   protected $uriValuesDataType = 'array';
-  public $uriValues;
+  public $uriValues = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class Attribute extends \Google\Collection
   /**
    * @var array[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string

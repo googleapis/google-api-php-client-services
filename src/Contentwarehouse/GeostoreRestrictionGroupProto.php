@@ -25,7 +25,7 @@ class GeostoreRestrictionGroupProto extends \Google\Collection
   public $metadata;
   protected $segmentType = GeostoreFeatureIdProto::class;
   protected $segmentDataType = 'array';
-  public $segment;
+  public $segment = [];
 
   /**
    * @param GeostoreFieldMetadataProto

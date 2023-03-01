@@ -25,7 +25,7 @@ class SocialGraphApiProtoSearchProfileEducation extends \Google\Collection
   public $endTime;
   protected $fieldOfStudyType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $fieldOfStudyDataType = 'array';
-  public $fieldOfStudy;
+  public $fieldOfStudy = [];
   protected $institutionType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $institutionDataType = '';
   public $institution;

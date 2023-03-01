@@ -22,20 +22,20 @@ class CrossDimensionReachReportCompatibleFields extends \Google\Collection
   protected $collection_key = 'overlapMetrics';
   protected $breakdownType = Dimension::class;
   protected $breakdownDataType = 'array';
-  public $breakdown;
+  public $breakdown = [];
   protected $dimensionFiltersType = Dimension::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters;
+  public $dimensionFilters = [];
   /**
    * @var string
    */
   public $kind;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   protected $overlapMetricsType = Metric::class;
   protected $overlapMetricsDataType = 'array';
-  public $overlapMetrics;
+  public $overlapMetrics = [];
 
   /**
    * @param Dimension[]

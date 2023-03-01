@@ -35,7 +35,7 @@ class NlpSemanticParsingDatetimeFetchedRelativeDateTime extends \Google\Collecti
   /**
    * @var int[]
    */
-  public $ordinal;
+  public $ordinal = [];
   protected $rangeType = NlpSemanticParsingDatetimeRange::class;
   protected $rangeDataType = '';
   public $range;

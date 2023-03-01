@@ -22,7 +22,7 @@ class ClientStatusResponse extends \Google\Collection
   protected $collection_key = 'config';
   protected $configType = ClientConfig::class;
   protected $configDataType = 'array';
-  public $config;
+  public $config = [];
 
   /**
    * @param ClientConfig[]

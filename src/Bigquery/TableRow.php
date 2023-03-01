@@ -22,7 +22,7 @@ class TableRow extends \Google\Collection
   protected $collection_key = 'f';
   protected $fType = TableCell::class;
   protected $fDataType = 'array';
-  public $f;
+  public $f = [];
 
   /**
    * @param TableCell[]

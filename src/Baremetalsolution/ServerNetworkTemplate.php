@@ -23,10 +23,10 @@ class ServerNetworkTemplate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $applicableInstanceTypes;
+  public $applicableInstanceTypes = [];
   protected $logicalInterfacesType = GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface::class;
   protected $logicalInterfacesDataType = 'array';
-  public $logicalInterfaces;
+  public $logicalInterfaces = [];
   /**
    * @var string
    */

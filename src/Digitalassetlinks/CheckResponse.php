@@ -27,7 +27,7 @@ class CheckResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $errorCode;
+  public $errorCode = [];
   /**
    * @var bool
    */

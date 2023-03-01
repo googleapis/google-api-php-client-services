@@ -22,7 +22,7 @@ class User extends \Google\Collection
   protected $collection_key = 'assignedUserRoles';
   protected $assignedUserRolesType = AssignedUserRole::class;
   protected $assignedUserRolesDataType = 'array';
-  public $assignedUserRoles;
+  public $assignedUserRoles = [];
   /**
    * @var string
    */

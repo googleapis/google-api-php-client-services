@@ -22,7 +22,7 @@ class UpgradeNote extends \Google\Collection
   protected $collection_key = 'distributions';
   protected $distributionsType = UpgradeDistribution::class;
   protected $distributionsDataType = 'array';
-  public $distributions;
+  public $distributions = [];
   /**
    * @var string
    */

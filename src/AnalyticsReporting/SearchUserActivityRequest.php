@@ -23,7 +23,7 @@ class SearchUserActivityRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $activityTypes;
+  public $activityTypes = [];
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
   public $dateRange;

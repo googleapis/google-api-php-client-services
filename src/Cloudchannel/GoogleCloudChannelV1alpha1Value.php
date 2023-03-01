@@ -31,7 +31,7 @@ class GoogleCloudChannelV1alpha1Value extends \Google\Model
   /**
    * @var array[]
    */
-  public $protoValue;
+  public $protoValue = [];
   /**
    * @var string
    */

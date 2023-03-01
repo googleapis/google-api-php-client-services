@@ -22,7 +22,7 @@ class SpecialHours extends \Google\Collection
   protected $collection_key = 'specialHourPeriods';
   protected $specialHourPeriodsType = SpecialHourPeriod::class;
   protected $specialHourPeriodsDataType = 'array';
-  public $specialHourPeriods;
+  public $specialHourPeriods = [];
 
   /**
    * @param SpecialHourPeriod[]

@@ -25,7 +25,7 @@ class ConversionStatus extends \Google\Collection
   public $conversion;
   protected $errorsType = ConversionError::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

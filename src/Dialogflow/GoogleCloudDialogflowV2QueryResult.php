@@ -35,10 +35,10 @@ class GoogleCloudDialogflowV2QueryResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $diagnosticInfo;
+  public $diagnosticInfo = [];
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
-  public $fulfillmentMessages;
+  public $fulfillmentMessages = [];
   /**
    * @var string
    */
@@ -56,11 +56,11 @@ class GoogleCloudDialogflowV2QueryResult extends \Google\Collection
   public $languageCode;
   protected $outputContextsType = GoogleCloudDialogflowV2Context::class;
   protected $outputContextsDataType = 'array';
-  public $outputContexts;
+  public $outputContexts = [];
   /**
    * @var array[]
    */
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class GoogleCloudDialogflowV2QueryResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $webhookPayload;
+  public $webhookPayload = [];
   /**
    * @var string
    */

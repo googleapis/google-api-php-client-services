@@ -35,7 +35,7 @@ class ServiceConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $environmentVariables;
+  public $environmentVariables = [];
   /**
    * @var string
    */
@@ -58,10 +58,10 @@ class ServiceConfig extends \Google\Collection
   public $revision;
   protected $secretEnvironmentVariablesType = SecretEnvVar::class;
   protected $secretEnvironmentVariablesDataType = 'array';
-  public $secretEnvironmentVariables;
+  public $secretEnvironmentVariables = [];
   protected $secretVolumesType = SecretVolume::class;
   protected $secretVolumesDataType = 'array';
-  public $secretVolumes;
+  public $secretVolumes = [];
   /**
    * @var string
    */

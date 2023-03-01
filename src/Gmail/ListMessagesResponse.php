@@ -22,7 +22,7 @@ class ListMessagesResponse extends \Google\Collection
   protected $collection_key = 'messages';
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
-  public $messages;
+  public $messages = [];
   /**
    * @var string
    */

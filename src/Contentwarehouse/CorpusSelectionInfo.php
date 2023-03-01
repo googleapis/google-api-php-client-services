@@ -35,11 +35,11 @@ class CorpusSelectionInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referrerDocid;
+  public $referrerDocid = [];
   /**
    * @var string[]
    */
-  public $referrerUrls;
+  public $referrerUrls = [];
 
   /**
    * @param string

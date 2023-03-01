@@ -22,7 +22,7 @@ class GoogleCloudRetailV2alphaExportUserEventsResponse extends \Google\Collectio
   protected $collection_key = 'errorSamples';
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
-  public $errorSamples;
+  public $errorSamples = [];
   protected $errorsConfigType = GoogleCloudRetailV2alphaExportErrorsConfig::class;
   protected $errorsConfigDataType = '';
   public $errorsConfig;

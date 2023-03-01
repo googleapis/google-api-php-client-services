@@ -22,7 +22,7 @@ class Variable extends \Google\Collection
   protected $collection_key = 'members';
   protected $membersType = Variable::class;
   protected $membersDataType = 'array';
-  public $members;
+  public $members = [];
   /**
    * @var string
    */

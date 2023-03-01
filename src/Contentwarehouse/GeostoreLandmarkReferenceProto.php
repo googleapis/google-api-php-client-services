@@ -30,7 +30,7 @@ class GeostoreLandmarkReferenceProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $travelMode;
+  public $travelMode = [];
 
   /**
    * @param int

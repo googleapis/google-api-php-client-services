@@ -22,7 +22,7 @@ class ListContactGroupsResponse extends \Google\Collection
   protected $collection_key = 'contactGroups';
   protected $contactGroupsType = ContactGroup::class;
   protected $contactGroupsDataType = 'array';
-  public $contactGroups;
+  public $contactGroups = [];
   /**
    * @var string
    */

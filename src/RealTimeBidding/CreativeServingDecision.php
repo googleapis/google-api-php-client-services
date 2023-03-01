@@ -31,35 +31,35 @@ class CreativeServingDecision extends \Google\Collection
   public $dealsPolicyCompliance;
   protected $detectedAdvertisersType = AdvertiserAndBrand::class;
   protected $detectedAdvertisersDataType = 'array';
-  public $detectedAdvertisers;
+  public $detectedAdvertisers = [];
   /**
    * @var string[]
    */
-  public $detectedAttributes;
+  public $detectedAttributes = [];
   /**
    * @var string[]
    */
-  public $detectedClickThroughUrls;
+  public $detectedClickThroughUrls = [];
   /**
    * @var string[]
    */
-  public $detectedDomains;
+  public $detectedDomains = [];
   /**
    * @var string[]
    */
-  public $detectedLanguages;
+  public $detectedLanguages = [];
   /**
    * @var int[]
    */
-  public $detectedProductCategories;
+  public $detectedProductCategories = [];
   /**
    * @var int[]
    */
-  public $detectedSensitiveCategories;
+  public $detectedSensitiveCategories = [];
   /**
    * @var int[]
    */
-  public $detectedVendorIds;
+  public $detectedVendorIds = [];
   /**
    * @var string
    */

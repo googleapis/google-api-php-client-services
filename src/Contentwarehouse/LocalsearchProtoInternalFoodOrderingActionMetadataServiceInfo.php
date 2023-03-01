@@ -22,7 +22,7 @@ class LocalsearchProtoInternalFoodOrderingActionMetadataServiceInfo extends \Goo
   protected $collection_key = 'availablePartnerInfo';
   protected $availablePartnerInfoType = LocalsearchProtoInternalFoodOrderingActionMetadataAvailablePartnerInfo::class;
   protected $availablePartnerInfoDataType = 'array';
-  public $availablePartnerInfo;
+  public $availablePartnerInfo = [];
   /**
    * @var string
    */

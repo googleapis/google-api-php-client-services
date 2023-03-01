@@ -23,7 +23,7 @@ class BlueGreenInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blueInstanceGroupUrls;
+  public $blueInstanceGroupUrls = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class BlueGreenInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $greenInstanceGroupUrls;
+  public $greenInstanceGroupUrls = [];
   /**
    * @var string
    */

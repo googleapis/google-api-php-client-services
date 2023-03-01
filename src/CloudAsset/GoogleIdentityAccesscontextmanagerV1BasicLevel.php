@@ -26,7 +26,7 @@ class GoogleIdentityAccesscontextmanagerV1BasicLevel extends \Google\Collection
   public $combiningFunction;
   protected $conditionsType = GoogleIdentityAccesscontextmanagerV1Condition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
 
   /**
    * @param string

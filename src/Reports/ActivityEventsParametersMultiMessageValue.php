@@ -22,7 +22,7 @@ class ActivityEventsParametersMultiMessageValue extends \Google\Collection
   protected $collection_key = 'parameter';
   protected $parameterType = NestedParameter::class;
   protected $parameterDataType = 'array';
-  public $parameter;
+  public $parameter = [];
 
   /**
    * @param NestedParameter[]

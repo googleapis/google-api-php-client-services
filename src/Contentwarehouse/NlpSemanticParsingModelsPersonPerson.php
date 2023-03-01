@@ -22,18 +22,18 @@ class NlpSemanticParsingModelsPersonPerson extends \Google\Collection
   protected $collection_key = 'contactData';
   protected $alternativeNameInfoType = QualityQrewriteAlternativeNameInfo::class;
   protected $alternativeNameInfoDataType = 'array';
-  public $alternativeNameInfo;
+  public $alternativeNameInfo = [];
   /**
    * @var string[]
    */
-  public $alternativeNames;
+  public $alternativeNames = [];
   /**
    * @var string[]
    */
-  public $annotationSource;
+  public $annotationSource = [];
   protected $contactDataType = QualityQrewritePersonalContactData::class;
   protected $contactDataDataType = 'array';
-  public $contactData;
+  public $contactData = [];
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   public $evalData;

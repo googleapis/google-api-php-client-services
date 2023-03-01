@@ -23,7 +23,7 @@ class GoogleCloudIntegrationsV1alphaIntParameterArray extends \Google\Collection
   /**
    * @var string[]
    */
-  public $intValues;
+  public $intValues = [];
 
   /**
    * @param string[]

@@ -21,7 +21,7 @@ class AggregationResult extends \Google\Model
 {
   protected $aggregatePropertiesType = Value::class;
   protected $aggregatePropertiesDataType = 'map';
-  public $aggregateProperties;
+  public $aggregateProperties = [];
 
   /**
    * @param Value[]

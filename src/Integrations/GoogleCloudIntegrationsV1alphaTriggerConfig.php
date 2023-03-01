@@ -22,7 +22,7 @@ class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
   protected $collection_key = 'startTasks';
   protected $alertConfigType = GoogleCloudIntegrationsV1alphaIntegrationAlertConfig::class;
   protected $alertConfigDataType = 'array';
-  public $alertConfig;
+  public $alertConfig = [];
   protected $cloudSchedulerConfigType = GoogleCloudIntegrationsV1alphaCloudSchedulerConfig::class;
   protected $cloudSchedulerConfigDataType = '';
   public $cloudSchedulerConfig;
@@ -45,10 +45,10 @@ class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   protected $startTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $startTasksDataType = 'array';
-  public $startTasks;
+  public $startTasks = [];
   /**
    * @var string
    */

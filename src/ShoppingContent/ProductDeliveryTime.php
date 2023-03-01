@@ -22,7 +22,7 @@ class ProductDeliveryTime extends \Google\Collection
   protected $collection_key = 'areaDeliveryTimes';
   protected $areaDeliveryTimesType = ProductDeliveryTimeAreaDeliveryTime::class;
   protected $areaDeliveryTimesDataType = 'array';
-  public $areaDeliveryTimes;
+  public $areaDeliveryTimes = [];
   protected $productIdType = ProductId::class;
   protected $productIdDataType = '';
   public $productId;

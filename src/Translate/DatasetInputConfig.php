@@ -22,7 +22,7 @@ class DatasetInputConfig extends \Google\Collection
   protected $collection_key = 'inputFiles';
   protected $inputFilesType = InputFile::class;
   protected $inputFilesDataType = 'array';
-  public $inputFiles;
+  public $inputFiles = [];
 
   /**
    * @param InputFile[]

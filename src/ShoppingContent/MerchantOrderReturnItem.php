@@ -46,7 +46,7 @@ class MerchantOrderReturnItem extends \Google\Collection
   /**
    * @var string[]
    */
-  public $returnShipmentIds;
+  public $returnShipmentIds = [];
   /**
    * @var string
    */

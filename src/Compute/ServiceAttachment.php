@@ -22,18 +22,18 @@ class ServiceAttachment extends \Google\Collection
   protected $collection_key = 'natSubnets';
   protected $connectedEndpointsType = ServiceAttachmentConnectedEndpoint::class;
   protected $connectedEndpointsDataType = 'array';
-  public $connectedEndpoints;
+  public $connectedEndpoints = [];
   /**
    * @var string
    */
   public $connectionPreference;
   protected $consumerAcceptListsType = ServiceAttachmentConsumerProjectLimit::class;
   protected $consumerAcceptListsDataType = 'array';
-  public $consumerAcceptLists;
+  public $consumerAcceptLists = [];
   /**
    * @var string[]
    */
-  public $consumerRejectLists;
+  public $consumerRejectLists = [];
   /**
    * @var string
    */
@@ -45,7 +45,7 @@ class ServiceAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domainNames;
+  public $domainNames = [];
   /**
    * @var bool
    */
@@ -69,7 +69,7 @@ class ServiceAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $natSubnets;
+  public $natSubnets = [];
   /**
    * @var string
    */

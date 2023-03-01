@@ -23,21 +23,21 @@ class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig extends \Google
   /**
    * @var string[]
    */
-  public $accessLevels;
+  public $accessLevels = [];
   protected $egressPoliciesType = GoogleIdentityAccesscontextmanagerV1EgressPolicy::class;
   protected $egressPoliciesDataType = 'array';
-  public $egressPolicies;
+  public $egressPolicies = [];
   protected $ingressPoliciesType = GoogleIdentityAccesscontextmanagerV1IngressPolicy::class;
   protected $ingressPoliciesDataType = 'array';
-  public $ingressPolicies;
+  public $ingressPolicies = [];
   /**
    * @var string[]
    */
-  public $resources;
+  public $resources = [];
   /**
    * @var string[]
    */
-  public $restrictedServices;
+  public $restrictedServices = [];
   protected $vpcAccessibleServicesType = GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices::class;
   protected $vpcAccessibleServicesDataType = '';
   public $vpcAccessibleServices;

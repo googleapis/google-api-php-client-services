@@ -43,7 +43,7 @@ class JobConfigurationTableCopy extends \Google\Collection
   public $sourceTable;
   protected $sourceTablesType = TableReference::class;
   protected $sourceTablesDataType = 'array';
-  public $sourceTables;
+  public $sourceTables = [];
   /**
    * @var string
    */

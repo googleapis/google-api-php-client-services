@@ -23,7 +23,7 @@ class Company extends \Google\Collection
   /**
    * @var string[]
    */
-  public $adminEmails;
+  public $adminEmails = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class Company extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ownerEmails;
+  public $ownerEmails = [];
   /**
    * @var bool
    */

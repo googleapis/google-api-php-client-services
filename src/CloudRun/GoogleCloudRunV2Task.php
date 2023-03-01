@@ -23,17 +23,17 @@ class GoogleCloudRunV2Task extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string
    */
   public $completionTime;
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
-  public $containers;
+  public $containers = [];
   /**
    * @var string
    */
@@ -77,7 +77,7 @@ class GoogleCloudRunV2Task extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $lastAttemptResultType = GoogleCloudRunV2TaskAttemptResult::class;
   protected $lastAttemptResultDataType = '';
   public $lastAttemptResult;
@@ -127,7 +127,7 @@ class GoogleCloudRunV2Task extends \Google\Collection
   public $updateTime;
   protected $volumesType = GoogleCloudRunV2Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes;
+  public $volumes = [];
   protected $vpcAccessType = GoogleCloudRunV2VpcAccess::class;
   protected $vpcAccessDataType = '';
   public $vpcAccess;

@@ -22,7 +22,7 @@ class ListBitbucketServerRepositoriesResponse extends \Google\Collection
   protected $collection_key = 'bitbucketServerRepositories';
   protected $bitbucketServerRepositoriesType = BitbucketServerRepository::class;
   protected $bitbucketServerRepositoriesDataType = 'array';
-  public $bitbucketServerRepositories;
+  public $bitbucketServerRepositories = [];
   /**
    * @var string
    */

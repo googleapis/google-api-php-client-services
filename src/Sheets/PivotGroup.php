@@ -54,7 +54,7 @@ class PivotGroup extends \Google\Collection
   public $valueBucket;
   protected $valueMetadataType = PivotGroupValueMetadata::class;
   protected $valueMetadataDataType = 'array';
-  public $valueMetadata;
+  public $valueMetadata = [];
 
   /**
    * @param DataSourceColumnReference

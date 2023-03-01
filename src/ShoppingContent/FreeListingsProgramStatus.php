@@ -26,7 +26,7 @@ class FreeListingsProgramStatus extends \Google\Collection
   public $globalState;
   protected $regionStatusesType = FreeListingsProgramStatusRegionStatus::class;
   protected $regionStatusesDataType = 'array';
-  public $regionStatuses;
+  public $regionStatuses = [];
 
   /**
    * @param string

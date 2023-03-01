@@ -101,7 +101,7 @@ class Subnetwork extends \Google\Collection
   public $role;
   protected $secondaryIpRangesType = SubnetworkSecondaryRange::class;
   protected $secondaryIpRangesDataType = 'array';
-  public $secondaryIpRanges;
+  public $secondaryIpRanges = [];
   /**
    * @var string
    */

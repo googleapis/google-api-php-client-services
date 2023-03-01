@@ -23,7 +23,7 @@ class PublishResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $messageIds;
+  public $messageIds = [];
 
   /**
    * @param string[]

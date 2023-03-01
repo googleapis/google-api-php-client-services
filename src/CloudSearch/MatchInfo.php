@@ -23,7 +23,7 @@ class MatchInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $matchingImageReferenceKey;
+  public $matchingImageReferenceKey = [];
 
   /**
    * @param string[]

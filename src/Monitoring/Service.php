@@ -66,7 +66,7 @@ class Service extends \Google\Model
   /**
    * @var string[]
    */
-  public $userLabels;
+  public $userLabels = [];
 
   /**
    * @param AppEngine

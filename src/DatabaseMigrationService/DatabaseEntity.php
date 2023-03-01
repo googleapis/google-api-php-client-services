@@ -32,7 +32,7 @@ class DatabaseEntity extends \Google\Collection
   public $entityType;
   protected $mappingsType = EntityMapping::class;
   protected $mappingsDataType = 'array';
-  public $mappings;
+  public $mappings = [];
   /**
    * @var string
    */

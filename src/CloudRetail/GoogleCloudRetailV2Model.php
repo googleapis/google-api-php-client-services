@@ -54,7 +54,7 @@ class GoogleCloudRetailV2Model extends \Google\Collection
   public $periodicTuningState;
   protected $servingConfigListsType = GoogleCloudRetailV2ModelServingConfigList::class;
   protected $servingConfigListsDataType = 'array';
-  public $servingConfigLists;
+  public $servingConfigLists = [];
   /**
    * @var string
    */

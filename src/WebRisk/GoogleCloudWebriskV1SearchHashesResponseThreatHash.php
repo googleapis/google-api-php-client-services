@@ -31,7 +31,7 @@ class GoogleCloudWebriskV1SearchHashesResponseThreatHash extends \Google\Collect
   /**
    * @var string[]
    */
-  public $threatTypes;
+  public $threatTypes = [];
 
   /**
    * @param string

@@ -43,7 +43,7 @@ class IdpConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $whitelistedAudiences;
+  public $whitelistedAudiences = [];
 
   /**
    * @param string

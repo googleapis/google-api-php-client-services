@@ -22,7 +22,7 @@ class ComputeFlightEmissionsResponse extends \Google\Collection
   protected $collection_key = 'flightEmissions';
   protected $flightEmissionsType = FlightWithEmissions::class;
   protected $flightEmissionsDataType = 'array';
-  public $flightEmissions;
+  public $flightEmissions = [];
   protected $modelVersionType = ModelVersion::class;
   protected $modelVersionDataType = '';
   public $modelVersion;

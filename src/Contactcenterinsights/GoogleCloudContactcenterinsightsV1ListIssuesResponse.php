@@ -22,7 +22,7 @@ class GoogleCloudContactcenterinsightsV1ListIssuesResponse extends \Google\Colle
   protected $collection_key = 'issues';
   protected $issuesType = GoogleCloudContactcenterinsightsV1Issue::class;
   protected $issuesDataType = 'array';
-  public $issues;
+  public $issues = [];
 
   /**
    * @param GoogleCloudContactcenterinsightsV1Issue[]

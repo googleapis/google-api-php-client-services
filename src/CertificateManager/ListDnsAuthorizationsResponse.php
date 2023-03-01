@@ -22,7 +22,7 @@ class ListDnsAuthorizationsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $dnsAuthorizationsType = DnsAuthorization::class;
   protected $dnsAuthorizationsDataType = 'array';
-  public $dnsAuthorizations;
+  public $dnsAuthorizations = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListDnsAuthorizationsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param DnsAuthorization[]

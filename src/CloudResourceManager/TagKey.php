@@ -50,7 +50,7 @@ class TagKey extends \Google\Model
   /**
    * @var string[]
    */
-  public $purposeData;
+  public $purposeData = [];
   /**
    * @var string
    */

@@ -27,7 +27,7 @@ class ListTopicSubscriptionsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subscriptions;
+  public $subscriptions = [];
 
   /**
    * @param string

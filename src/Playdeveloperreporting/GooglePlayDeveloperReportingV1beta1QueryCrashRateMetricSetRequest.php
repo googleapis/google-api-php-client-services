@@ -23,7 +23,7 @@ class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest extends 
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest extends 
   /**
    * @var string[]
    */
-  public $metrics;
+  public $metrics = [];
   /**
    * @var int
    */

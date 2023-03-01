@@ -43,7 +43,7 @@ class RestoreConfig extends \Google\Collection
   public $selectedNamespaces;
   protected $substitutionRulesType = SubstitutionRule::class;
   protected $substitutionRulesDataType = 'array';
-  public $substitutionRules;
+  public $substitutionRules = [];
   /**
    * @var string
    */

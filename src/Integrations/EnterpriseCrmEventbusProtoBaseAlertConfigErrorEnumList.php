@@ -23,7 +23,7 @@ class EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList extends \Google\Col
   /**
    * @var string[]
    */
-  public $enumStrings;
+  public $enumStrings = [];
   /**
    * @var string
    */

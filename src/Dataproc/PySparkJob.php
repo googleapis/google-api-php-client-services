@@ -23,19 +23,19 @@ class PySparkJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $archiveUris;
+  public $archiveUris = [];
   /**
    * @var string[]
    */
-  public $args;
+  public $args = [];
   /**
    * @var string[]
    */
-  public $fileUris;
+  public $fileUris = [];
   /**
    * @var string[]
    */
-  public $jarFileUris;
+  public $jarFileUris = [];
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   public $loggingConfig;
@@ -46,11 +46,11 @@ class PySparkJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   /**
    * @var string[]
    */
-  public $pythonFileUris;
+  public $pythonFileUris = [];
 
   /**
    * @param string[]

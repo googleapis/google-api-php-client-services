@@ -30,7 +30,7 @@ class LabelRemoved extends \Google\Collection
   public $labelName;
   protected $messageKeysType = MultiKey::class;
   protected $messageKeysDataType = 'array';
-  public $messageKeys;
+  public $messageKeys = [];
   /**
    * @var string
    */

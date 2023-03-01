@@ -39,11 +39,11 @@ class TrawlerSSLCertificateInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $certificateChain;
+  public $certificateChain = [];
   /**
    * @var string[]
    */
-  public $errorMessages;
+  public $errorMessages = [];
   /**
    * @var bool
    */

@@ -29,7 +29,7 @@ class StreamConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceTypes;
+  public $resourceTypes = [];
 
   /**
    * @param GoogleCloudHealthcareV1FhirBigQueryDestination

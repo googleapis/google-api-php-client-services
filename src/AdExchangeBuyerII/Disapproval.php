@@ -23,7 +23,7 @@ class Disapproval extends \Google\Collection
   /**
    * @var string[]
    */
-  public $details;
+  public $details = [];
   /**
    * @var string
    */

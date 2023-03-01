@@ -22,10 +22,10 @@ class PermissionChange extends \Google\Collection
   protected $collection_key = 'removedPermissions';
   protected $addedPermissionsType = Permission::class;
   protected $addedPermissionsDataType = 'array';
-  public $addedPermissions;
+  public $addedPermissions = [];
   protected $removedPermissionsType = Permission::class;
   protected $removedPermissionsDataType = 'array';
-  public $removedPermissions;
+  public $removedPermissions = [];
 
   /**
    * @param Permission[]

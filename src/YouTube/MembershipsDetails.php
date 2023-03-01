@@ -23,7 +23,7 @@ class MembershipsDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accessibleLevels;
+  public $accessibleLevels = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class MembershipsDetails extends \Google\Collection
   public $membershipsDuration;
   protected $membershipsDurationAtLevelsType = MembershipsDurationAtLevel::class;
   protected $membershipsDurationAtLevelsDataType = 'array';
-  public $membershipsDurationAtLevels;
+  public $membershipsDurationAtLevels = [];
 
   /**
    * @param string[]

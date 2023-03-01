@@ -39,10 +39,10 @@ class GoogleCloudFunctionsV2OperationMetadata extends \Google\Collection
   /**
    * @var array[]
    */
-  public $requestResource;
+  public $requestResource = [];
   protected $stagesType = GoogleCloudFunctionsV2Stage::class;
   protected $stagesDataType = 'array';
-  public $stages;
+  public $stages = [];
   /**
    * @var string
    */

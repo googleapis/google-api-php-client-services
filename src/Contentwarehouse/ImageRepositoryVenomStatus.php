@@ -49,7 +49,7 @@ class ImageRepositoryVenomStatus extends \Google\Collection
   public $reason;
   protected $settingsType = VideoAssetsVenomSettings::class;
   protected $settingsDataType = 'array';
-  public $settings;
+  public $settings = [];
   /**
    * @var string
    */

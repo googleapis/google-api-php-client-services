@@ -33,7 +33,7 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsMetadata extend
   public $ingestConversationsStats;
   protected $partialErrorsType = GoogleRpcStatus::class;
   protected $partialErrorsDataType = 'array';
-  public $partialErrors;
+  public $partialErrors = [];
   protected $requestType = GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest::class;
   protected $requestDataType = '';
   public $request;

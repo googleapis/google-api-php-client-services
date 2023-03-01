@@ -26,7 +26,7 @@ class GoogleCloudDocumentaiV1beta2DocumentTextChange extends \Google\Collection
   public $changedText;
   protected $provenanceType = GoogleCloudDocumentaiV1beta2DocumentProvenance::class;
   protected $provenanceDataType = 'array';
-  public $provenance;
+  public $provenance = [];
   protected $textAnchorType = GoogleCloudDocumentaiV1beta2DocumentTextAnchor::class;
   protected $textAnchorDataType = '';
   public $textAnchor;

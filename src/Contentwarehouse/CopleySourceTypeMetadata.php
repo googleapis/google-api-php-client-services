@@ -49,7 +49,7 @@ class CopleySourceTypeMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $provenanceCategory;
+  public $provenanceCategory = [];
   protected $sensitivityType = KnowledgeAnswersSensitivitySensitivity::class;
   protected $sensitivityDataType = '';
   public $sensitivity;

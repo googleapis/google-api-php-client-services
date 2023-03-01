@@ -23,7 +23,7 @@ class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $baseTypes;
+  public $baseTypes = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends \Google\Collection
   public $name;
   protected $propertiesType = GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty::class;
   protected $propertiesDataType = 'array';
-  public $properties;
+  public $properties = [];
 
   /**
    * @param string[]

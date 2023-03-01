@@ -26,7 +26,7 @@ class SpreadsheetTheme extends \Google\Collection
   public $primaryFontFamily;
   protected $themeColorsType = ThemeColorPair::class;
   protected $themeColorsDataType = 'array';
-  public $themeColors;
+  public $themeColors = [];
 
   /**
    * @param string

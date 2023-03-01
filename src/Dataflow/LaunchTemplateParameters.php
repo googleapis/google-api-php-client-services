@@ -29,11 +29,11 @@ class LaunchTemplateParameters extends \Google\Model
   /**
    * @var string[]
    */
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string[]
    */
-  public $transformNameMapping;
+  public $transformNameMapping = [];
   /**
    * @var bool
    */

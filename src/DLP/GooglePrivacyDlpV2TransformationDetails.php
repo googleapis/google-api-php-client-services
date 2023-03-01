@@ -33,7 +33,7 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
   public $statusDetails;
   protected $transformationType = GooglePrivacyDlpV2TransformationDescription::class;
   protected $transformationDataType = 'array';
-  public $transformation;
+  public $transformation = [];
   protected $transformationLocationType = GooglePrivacyDlpV2TransformationLocation::class;
   protected $transformationLocationDataType = '';
   public $transformationLocation;

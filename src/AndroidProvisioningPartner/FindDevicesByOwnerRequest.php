@@ -23,11 +23,11 @@ class FindDevicesByOwnerRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customerId;
+  public $customerId = [];
   /**
    * @var string[]
    */
-  public $googleWorkspaceCustomerId;
+  public $googleWorkspaceCustomerId = [];
   /**
    * @var string
    */

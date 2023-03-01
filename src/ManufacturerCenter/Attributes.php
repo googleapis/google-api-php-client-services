@@ -22,7 +22,7 @@ class Attributes extends \Google\Collection
   protected $collection_key = 'videoLink';
   protected $additionalImageLinkType = Image::class;
   protected $additionalImageLinkDataType = 'array';
-  public $additionalImageLink;
+  public $additionalImageLink = [];
   /**
    * @var string
    */
@@ -52,10 +52,10 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedDestination;
+  public $excludedDestination = [];
   protected $featureDescriptionType = FeatureDescription::class;
   protected $featureDescriptionDataType = 'array';
-  public $featureDescription;
+  public $featureDescription = [];
   /**
    * @var string
    */
@@ -74,14 +74,14 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gtin;
+  public $gtin = [];
   protected $imageLinkType = Image::class;
   protected $imageLinkDataType = '';
   public $imageLink;
   /**
    * @var string[]
    */
-  public $includedDestination;
+  public $includedDestination = [];
   /**
    * @var string
    */
@@ -103,11 +103,11 @@ class Attributes extends \Google\Collection
   public $pattern;
   protected $productDetailType = ProductDetail::class;
   protected $productDetailDataType = 'array';
-  public $productDetail;
+  public $productDetail = [];
   /**
    * @var string[]
    */
-  public $productHighlight;
+  public $productHighlight = [];
   /**
    * @var string
    */
@@ -123,7 +123,7 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productType;
+  public $productType = [];
   /**
    * @var string
    */
@@ -131,7 +131,7 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $richProductContent;
+  public $richProductContent = [];
   /**
    * @var string
    */
@@ -147,7 +147,7 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sizeType;
+  public $sizeType = [];
   protected $suggestedRetailPriceType = Price::class;
   protected $suggestedRetailPriceDataType = '';
   public $suggestedRetailPrice;
@@ -166,7 +166,7 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $videoLink;
+  public $videoLink = [];
 
   /**
    * @param Image[]

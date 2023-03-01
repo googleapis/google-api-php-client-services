@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1SyncAuthorization extends \Google\Collection
   /**
    * @var string[]
    */
-  public $identities;
+  public $identities = [];
 
   /**
    * @param string

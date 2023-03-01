@@ -22,7 +22,7 @@ class EdgeConfigstoreBundleBadBundle extends \Google\Collection
   protected $collection_key = 'violations';
   protected $violationsType = EdgeConfigstoreBundleBadBundleViolation::class;
   protected $violationsDataType = 'array';
-  public $violations;
+  public $violations = [];
 
   /**
    * @param EdgeConfigstoreBundleBadBundleViolation[]

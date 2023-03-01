@@ -22,7 +22,7 @@ class ClusteringMetrics extends \Google\Collection
   protected $collection_key = 'clusters';
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
-  public $clusters;
+  public $clusters = [];
   public $daviesBouldinIndex;
   public $meanSquaredDistance;
 

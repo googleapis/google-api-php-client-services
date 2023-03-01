@@ -26,7 +26,7 @@ class SubnetworkList extends \Google\Collection
   public $id;
   protected $itemsType = Subnetwork::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

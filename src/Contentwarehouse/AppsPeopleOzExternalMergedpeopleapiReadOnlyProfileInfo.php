@@ -26,7 +26,7 @@ class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extends \Google\Col
   /**
    * @var string[]
    */
-  public $blockType;
+  public $blockType = [];
   protected $customerInfoType = AppsPeopleOzExternalMergedpeopleapiCustomerInfo::class;
   protected $customerInfoDataType = '';
   public $customerInfo;
@@ -40,7 +40,7 @@ class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extends \Google\Col
   /**
    * @var string[]
    */
-  public $incomingBlockType;
+  public $incomingBlockType = [];
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   public $metadata;
@@ -55,7 +55,7 @@ class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extends \Google\Col
   /**
    * @var string[]
    */
-  public $ownerUserType;
+  public $ownerUserType = [];
   /**
    * @var string
    */

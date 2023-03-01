@@ -27,7 +27,7 @@ class GoogleCloudDiscoveryengineV1betaGcsSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputUris;
+  public $inputUris = [];
 
   /**
    * @param string

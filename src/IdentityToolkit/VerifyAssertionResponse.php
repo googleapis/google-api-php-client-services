@@ -175,7 +175,7 @@ class VerifyAssertionResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $verifiedProvider;
+  public $verifiedProvider = [];
 
   /**
    * @param string

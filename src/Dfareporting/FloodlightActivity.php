@@ -45,7 +45,7 @@ class FloodlightActivity extends \Google\Collection
   public $countingMethod;
   protected $defaultTagsType = FloodlightActivityDynamicTag::class;
   protected $defaultTagsDataType = 'array';
-  public $defaultTags;
+  public $defaultTags = [];
   /**
    * @var string
    */
@@ -98,7 +98,7 @@ class FloodlightActivity extends \Google\Collection
   public $notes;
   protected $publisherTagsType = FloodlightActivityPublisherDynamicTag::class;
   protected $publisherTagsDataType = 'array';
-  public $publisherTags;
+  public $publisherTags = [];
   /**
    * @var bool
    */
@@ -130,7 +130,7 @@ class FloodlightActivity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $userDefinedVariableTypes;
+  public $userDefinedVariableTypes = [];
 
   /**
    * @param string

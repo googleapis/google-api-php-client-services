@@ -23,11 +23,11 @@ class RegisterDomainRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $contactNotices;
+  public $contactNotices = [];
   /**
    * @var string[]
    */
-  public $domainNotices;
+  public $domainNotices = [];
   protected $registrationType = Registration::class;
   protected $registrationDataType = '';
   public $registration;

@@ -52,7 +52,7 @@ class CellData extends \Google\Collection
   public $pivotTable;
   protected $textFormatRunsType = TextFormatRun::class;
   protected $textFormatRunsDataType = 'array';
-  public $textFormatRuns;
+  public $textFormatRuns = [];
   protected $userEnteredFormatType = CellFormat::class;
   protected $userEnteredFormatDataType = '';
   public $userEnteredFormat;

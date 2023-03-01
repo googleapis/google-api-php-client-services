@@ -37,7 +37,7 @@ class UsageReport extends \Google\Collection
   public $kind;
   protected $parametersType = UsageReportParameters::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

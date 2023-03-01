@@ -50,7 +50,7 @@ class NlpSemanticParsingDatetimeTargetToFetch extends \Google\Collection
   /**
    * @var string[]
    */
-  public $weekday;
+  public $weekday = [];
 
   /**
    * @param NlpSemanticParsingDatetimeEvent

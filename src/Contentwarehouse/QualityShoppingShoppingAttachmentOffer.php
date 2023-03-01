@@ -31,14 +31,14 @@ class QualityShoppingShoppingAttachmentOffer extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fingerprintOfOfferUrls;
+  public $fingerprintOfOfferUrls = [];
   /**
    * @var string[]
    */
-  public $imageId;
+  public $imageId = [];
   protected $inferredImagesType = ShoppingWebentityShoppingAnnotationInferredImage::class;
   protected $inferredImagesDataType = 'array';
-  public $inferredImages;
+  public $inferredImages = [];
   /**
    * @var bool
    */

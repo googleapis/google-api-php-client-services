@@ -33,16 +33,16 @@ class Finding extends \Google\Collection
   public $category;
   protected $compliancesType = Compliance::class;
   protected $compliancesDataType = 'array';
-  public $compliances;
+  public $compliances = [];
   protected $connectionsType = Connection::class;
   protected $connectionsDataType = 'array';
-  public $connections;
+  public $connections = [];
   protected $contactsType = ContactDetails::class;
   protected $contactsDataType = 'map';
-  public $contacts;
+  public $contacts = [];
   protected $containersType = Container::class;
   protected $containersDataType = 'array';
-  public $containers;
+  public $containers = [];
   /**
    * @var string
    */
@@ -63,21 +63,21 @@ class Finding extends \Google\Collection
   public $exfiltration;
   protected $externalSystemsType = GoogleCloudSecuritycenterV1ExternalSystem::class;
   protected $externalSystemsDataType = 'map';
-  public $externalSystems;
+  public $externalSystems = [];
   /**
    * @var string
    */
   public $externalUri;
   protected $filesType = SecuritycenterFile::class;
   protected $filesDataType = 'array';
-  public $files;
+  public $files = [];
   /**
    * @var string
    */
   public $findingClass;
   protected $iamBindingsType = IamBinding::class;
   protected $iamBindingsDataType = 'array';
-  public $iamBindings;
+  public $iamBindings = [];
   protected $indicatorType = Indicator::class;
   protected $indicatorDataType = '';
   public $indicator;
@@ -120,7 +120,7 @@ class Finding extends \Google\Collection
   public $parentDisplayName;
   protected $processesType = Process::class;
   protected $processesDataType = 'array';
-  public $processes;
+  public $processes = [];
   /**
    * @var string
    */
@@ -135,7 +135,7 @@ class Finding extends \Google\Collection
   /**
    * @var array[]
    */
-  public $sourceProperties;
+  public $sourceProperties = [];
   /**
    * @var string
    */

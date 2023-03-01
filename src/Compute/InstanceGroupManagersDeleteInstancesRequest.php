@@ -23,7 +23,7 @@ class InstanceGroupManagersDeleteInstancesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instances;
+  public $instances = [];
   /**
    * @var bool
    */

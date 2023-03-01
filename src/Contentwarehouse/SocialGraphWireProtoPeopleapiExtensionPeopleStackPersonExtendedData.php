@@ -30,7 +30,7 @@ class SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtendedData extend
   public $familyStatus;
   protected $hiddenKeysType = SocialDiscoveryExternalEntityKey::class;
   protected $hiddenKeysDataType = 'array';
-  public $hiddenKeys;
+  public $hiddenKeys = [];
   /**
    * @var string
    */

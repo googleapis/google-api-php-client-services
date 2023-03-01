@@ -26,7 +26,7 @@ class RegionAutoscalerList extends \Google\Collection
   public $id;
   protected $itemsType = Autoscaler::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

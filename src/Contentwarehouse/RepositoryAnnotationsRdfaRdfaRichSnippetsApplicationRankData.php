@@ -23,10 +23,10 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationRankData extends \Goog
   /**
    * @var string[]
    */
-  public $playwrightCategoryId;
+  public $playwrightCategoryId = [];
   protected $rankType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationRank::class;
   protected $rankDataType = 'array';
-  public $rank;
+  public $rank = [];
 
   /**
    * @param string[]

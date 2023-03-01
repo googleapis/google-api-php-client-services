@@ -29,13 +29,13 @@ class RunPivotReportRequest extends \Google\Collection
   public $currencyCode;
   protected $dateRangesType = DateRange::class;
   protected $dateRangesDataType = 'array';
-  public $dateRanges;
+  public $dateRanges = [];
   protected $dimensionFilterType = FilterExpression::class;
   protected $dimensionFilterDataType = '';
   public $dimensionFilter;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var bool
    */
@@ -45,10 +45,10 @@ class RunPivotReportRequest extends \Google\Collection
   public $metricFilter;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   protected $pivotsType = Pivot::class;
   protected $pivotsDataType = 'array';
-  public $pivots;
+  public $pivots = [];
   /**
    * @var string
    */

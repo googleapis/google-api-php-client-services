@@ -30,24 +30,24 @@ class Results extends \Google\Collection
   /**
    * @var string[]
    */
-  public $buildStepImages;
+  public $buildStepImages = [];
   /**
    * @var string[]
    */
-  public $buildStepOutputs;
+  public $buildStepOutputs = [];
   protected $imagesType = BuiltImage::class;
   protected $imagesDataType = 'array';
-  public $images;
+  public $images = [];
   protected $mavenArtifactsType = UploadedMavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
-  public $mavenArtifacts;
+  public $mavenArtifacts = [];
   /**
    * @var string
    */
   public $numArtifacts;
   protected $pythonPackagesType = UploadedPythonPackage::class;
   protected $pythonPackagesDataType = 'array';
-  public $pythonPackages;
+  public $pythonPackages = [];
 
   /**
    * @param string

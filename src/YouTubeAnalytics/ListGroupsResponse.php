@@ -29,7 +29,7 @@ class ListGroupsResponse extends \Google\Collection
   public $etag;
   protected $itemsType = Group::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

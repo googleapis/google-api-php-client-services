@@ -23,7 +23,7 @@ class V2ServerKeyRestrictions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedIps;
+  public $allowedIps = [];
 
   /**
    * @param string[]

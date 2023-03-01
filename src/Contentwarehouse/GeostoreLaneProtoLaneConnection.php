@@ -22,7 +22,7 @@ class GeostoreLaneProtoLaneConnection extends \Google\Collection
   protected $collection_key = 'boundingMarker';
   protected $boundingMarkerType = GeostoreBoundingMarkerProto::class;
   protected $boundingMarkerDataType = 'array';
-  public $boundingMarker;
+  public $boundingMarker = [];
   /**
    * @var string
    */

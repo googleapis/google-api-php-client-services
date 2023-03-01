@@ -23,7 +23,7 @@ class RegionGeoTargetArea extends \Google\Collection
   /**
    * @var string[]
    */
-  public $geotargetCriteriaIds;
+  public $geotargetCriteriaIds = [];
 
   /**
    * @param string[]

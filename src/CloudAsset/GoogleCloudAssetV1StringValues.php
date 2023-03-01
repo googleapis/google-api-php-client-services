@@ -23,11 +23,11 @@ class GoogleCloudAssetV1StringValues extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedValues;
+  public $allowedValues = [];
   /**
    * @var string[]
    */
-  public $deniedValues;
+  public $deniedValues = [];
 
   /**
    * @param string[]

@@ -22,11 +22,11 @@ class Entity extends \Google\Collection
   protected $collection_key = 'mentions';
   protected $mentionsType = EntityMention::class;
   protected $mentionsDataType = 'array';
-  public $mentions;
+  public $mentions = [];
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

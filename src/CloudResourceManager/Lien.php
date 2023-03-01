@@ -43,7 +43,7 @@ class Lien extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictions;
+  public $restrictions = [];
 
   /**
    * @param string

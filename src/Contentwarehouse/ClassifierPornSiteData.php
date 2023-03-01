@@ -50,7 +50,7 @@ class ClassifierPornSiteData extends \Google\Collection
   public $siteSoftpornRatio;
   protected $versionedscoreType = ClassifierPornSiteDataVersionedScore::class;
   protected $versionedscoreDataType = 'array';
-  public $versionedscore;
+  public $versionedscore = [];
   protected $violenceStatsType = ClassifierPornSiteViolenceStats::class;
   protected $violenceStatsDataType = '';
   public $violenceStats;

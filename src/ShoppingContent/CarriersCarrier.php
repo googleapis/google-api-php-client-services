@@ -27,7 +27,7 @@ class CarriersCarrier extends \Google\Collection
   /**
    * @var string[]
    */
-  public $eddServices;
+  public $eddServices = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class CarriersCarrier extends \Google\Collection
   /**
    * @var string[]
    */
-  public $services;
+  public $services = [];
 
   /**
    * @param string

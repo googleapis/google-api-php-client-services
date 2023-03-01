@@ -27,7 +27,7 @@ class InListFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param bool

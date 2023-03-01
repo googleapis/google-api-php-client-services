@@ -22,7 +22,7 @@ class MediaIndexXtagList extends \Google\Collection
   protected $collection_key = 'xtags';
   protected $xtagsType = MediaIndexXtag::class;
   protected $xtagsDataType = 'array';
-  public $xtags;
+  public $xtags = [];
 
   /**
    * @param MediaIndexXtag[]

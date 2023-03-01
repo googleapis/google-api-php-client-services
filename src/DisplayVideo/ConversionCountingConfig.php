@@ -22,7 +22,7 @@ class ConversionCountingConfig extends \Google\Collection
   protected $collection_key = 'floodlightActivityConfigs';
   protected $floodlightActivityConfigsType = TrackingFloodlightActivityConfig::class;
   protected $floodlightActivityConfigsDataType = 'array';
-  public $floodlightActivityConfigs;
+  public $floodlightActivityConfigs = [];
   /**
    * @var string
    */

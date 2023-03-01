@@ -22,7 +22,7 @@ class ResearchScamCoscamRestrictTokensV2 extends \Google\Collection
   protected $collection_key = 'tokenGroups';
   protected $tokenGroupsType = ResearchScamCoscamTokenGroup::class;
   protected $tokenGroupsDataType = 'array';
-  public $tokenGroups;
+  public $tokenGroups = [];
 
   /**
    * @param ResearchScamCoscamTokenGroup[]

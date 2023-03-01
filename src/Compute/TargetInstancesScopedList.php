@@ -22,7 +22,7 @@ class TargetInstancesScopedList extends \Google\Collection
   protected $collection_key = 'targetInstances';
   protected $targetInstancesType = TargetInstance::class;
   protected $targetInstancesDataType = 'array';
-  public $targetInstances;
+  public $targetInstances = [];
   protected $warningType = TargetInstancesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

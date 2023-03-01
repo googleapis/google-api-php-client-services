@@ -23,10 +23,10 @@ class JobDerivedInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jobCategories;
+  public $jobCategories = [];
   protected $locationsType = Location::class;
   protected $locationsDataType = 'array';
-  public $locations;
+  public $locations = [];
 
   /**
    * @param string[]

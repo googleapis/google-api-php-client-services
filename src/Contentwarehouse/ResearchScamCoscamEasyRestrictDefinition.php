@@ -22,7 +22,7 @@ class ResearchScamCoscamEasyRestrictDefinition extends \Google\Collection
   protected $collection_key = 'conjunctions';
   protected $conjunctionsType = ResearchScamCoscamEasyConjunction::class;
   protected $conjunctionsDataType = 'array';
-  public $conjunctions;
+  public $conjunctions = [];
 
   /**
    * @param ResearchScamCoscamEasyConjunction[]

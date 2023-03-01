@@ -30,7 +30,7 @@ class Config extends \Google\Collection
   public $name;
   protected $supportedVersionsType = SkaffoldVersion::class;
   protected $supportedVersionsDataType = 'array';
-  public $supportedVersions;
+  public $supportedVersions = [];
 
   /**
    * @param string

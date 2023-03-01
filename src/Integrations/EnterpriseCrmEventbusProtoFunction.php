@@ -25,7 +25,7 @@ class EnterpriseCrmEventbusProtoFunction extends \Google\Collection
   public $functionType;
   protected $parametersType = EnterpriseCrmEventbusProtoTransformExpression::class;
   protected $parametersDataType = 'array';
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param EnterpriseCrmEventbusProtoFunctionType

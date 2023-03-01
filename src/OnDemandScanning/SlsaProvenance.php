@@ -25,7 +25,7 @@ class SlsaProvenance extends \Google\Collection
   public $builder;
   protected $materialsType = Material::class;
   protected $materialsDataType = 'array';
-  public $materials;
+  public $materials = [];
   protected $metadataType = SlsaMetadata::class;
   protected $metadataDataType = '';
   public $metadata;

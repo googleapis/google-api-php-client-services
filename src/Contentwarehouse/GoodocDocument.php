@@ -29,24 +29,24 @@ class GoodocDocument extends \Google\Collection
   /**
    * @var string[]
    */
-  public $editingHistory;
+  public $editingHistory = [];
   /**
    * @var string[]
    */
-  public $logicalEntity;
+  public $logicalEntity = [];
   /**
    * @var string[]
    */
-  public $logicalEntityMessageName;
+  public $logicalEntityMessageName = [];
   protected $subDocumentsType = GoodocDocument::class;
   protected $subDocumentsDataType = 'array';
-  public $subDocuments;
+  public $subDocuments = [];
   protected $headerType = GoodocDocumentHeader::class;
   protected $headerDataType = '';
   public $header;
   protected $pageType = GoodocDocumentPage::class;
   protected $pageDataType = 'array';
-  public $page;
+  public $page = [];
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class GoogleCloudDocumentaiV1FetchProcessorTypesResponse extends \Google\Collect
   protected $collection_key = 'processorTypes';
   protected $processorTypesType = GoogleCloudDocumentaiV1ProcessorType::class;
   protected $processorTypesDataType = 'array';
-  public $processorTypes;
+  public $processorTypes = [];
 
   /**
    * @param GoogleCloudDocumentaiV1ProcessorType[]

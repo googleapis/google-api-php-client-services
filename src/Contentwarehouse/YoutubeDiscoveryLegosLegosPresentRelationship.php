@@ -26,7 +26,7 @@ class YoutubeDiscoveryLegosLegosPresentRelationship extends \Google\Collection
   public $confidence;
   protected $contextsType = YoutubeDiscoveryLegosLegosSemanticRelationshipContext::class;
   protected $contextsDataType = 'array';
-  public $contexts;
+  public $contexts = [];
 
   /**
    * @param float

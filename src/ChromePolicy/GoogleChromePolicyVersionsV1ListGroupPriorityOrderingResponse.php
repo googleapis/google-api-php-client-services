@@ -23,7 +23,7 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
   /**
    * @var string[]
    */
-  public $groupIds;
+  public $groupIds = [];
   /**
    * @var string
    */

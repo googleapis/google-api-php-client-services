@@ -27,7 +27,7 @@ class EncounteredNonAndroidUiWidgetScreen extends \Google\Collection
   /**
    * @var string[]
    */
-  public $screenIds;
+  public $screenIds = [];
 
   /**
    * @param int

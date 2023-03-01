@@ -32,11 +32,11 @@ class GoogleCloudDiscoveryengineLoggingErrorLog extends \Google\Model
   /**
    * @var array[]
    */
-  public $requestPayload;
+  public $requestPayload = [];
   /**
    * @var array[]
    */
-  public $responsePayload;
+  public $responsePayload = [];
   protected $serviceContextType = GoogleCloudDiscoveryengineLoggingServiceContext::class;
   protected $serviceContextDataType = '';
   public $serviceContext;

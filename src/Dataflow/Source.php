@@ -23,11 +23,11 @@ class Source extends \Google\Collection
   /**
    * @var array[]
    */
-  public $baseSpecs;
+  public $baseSpecs = [];
   /**
    * @var array[]
    */
-  public $codec;
+  public $codec = [];
   /**
    * @var bool
    */
@@ -38,7 +38,7 @@ class Source extends \Google\Collection
   /**
    * @var array[]
    */
-  public $spec;
+  public $spec = [];
 
   /**
    * @param array[]

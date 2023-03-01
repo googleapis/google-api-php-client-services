@@ -33,14 +33,14 @@ class AwsSourceDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inventorySecurityGroupNames;
+  public $inventorySecurityGroupNames = [];
   protected $inventoryTagListType = Tag::class;
   protected $inventoryTagListDataType = 'array';
-  public $inventoryTagList;
+  public $inventoryTagList = [];
   /**
    * @var string[]
    */
-  public $migrationResourcesUserTags;
+  public $migrationResourcesUserTags = [];
   /**
    * @var string
    */

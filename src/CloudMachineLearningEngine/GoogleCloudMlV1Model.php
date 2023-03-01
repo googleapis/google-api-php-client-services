@@ -34,7 +34,7 @@ class GoogleCloudMlV1Model extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class GoogleCloudMlV1Model extends \Google\Collection
   /**
    * @var string[]
    */
-  public $regions;
+  public $regions = [];
 
   /**
    * @param GoogleCloudMlV1Version

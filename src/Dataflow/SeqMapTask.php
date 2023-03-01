@@ -22,14 +22,14 @@ class SeqMapTask extends \Google\Collection
   protected $collection_key = 'outputInfos';
   protected $inputsType = SideInputInfo::class;
   protected $inputsDataType = 'array';
-  public $inputs;
+  public $inputs = [];
   /**
    * @var string
    */
   public $name;
   protected $outputInfosType = SeqMapTaskOutputInfo::class;
   protected $outputInfosDataType = 'array';
-  public $outputInfos;
+  public $outputInfos = [];
   /**
    * @var string
    */
@@ -41,7 +41,7 @@ class SeqMapTask extends \Google\Collection
   /**
    * @var array[]
    */
-  public $userFn;
+  public $userFn = [];
 
   /**
    * @param SideInputInfo[]

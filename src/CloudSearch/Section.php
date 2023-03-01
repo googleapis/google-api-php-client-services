@@ -34,7 +34,7 @@ class Section extends \Google\Collection
   public $numUncollapsableWidgets;
   protected $widgetsType = WidgetMarkup::class;
   protected $widgetsDataType = 'array';
-  public $widgets;
+  public $widgets = [];
 
   /**
    * @param bool

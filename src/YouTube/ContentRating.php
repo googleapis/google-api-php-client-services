@@ -103,7 +103,7 @@ class ContentRating extends \Google\Collection
   /**
    * @var string[]
    */
-  public $djctqRatingReasons;
+  public $djctqRatingReasons = [];
   /**
    * @var string
    */
@@ -139,7 +139,7 @@ class ContentRating extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fpbRatingReasons;
+  public $fpbRatingReasons = [];
   /**
    * @var string
    */

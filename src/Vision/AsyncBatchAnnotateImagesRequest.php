@@ -29,7 +29,7 @@ class AsyncBatchAnnotateImagesRequest extends \Google\Collection
   public $parent;
   protected $requestsType = AnnotateImageRequest::class;
   protected $requestsDataType = 'array';
-  public $requests;
+  public $requests = [];
 
   /**
    * @param OutputConfig

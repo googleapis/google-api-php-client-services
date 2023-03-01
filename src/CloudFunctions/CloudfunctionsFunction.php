@@ -41,7 +41,7 @@ class CloudfunctionsFunction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -55,7 +55,7 @@ class CloudfunctionsFunction extends \Google\Collection
   public $state;
   protected $stateMessagesType = GoogleCloudFunctionsV2StateMessage::class;
   protected $stateMessagesDataType = 'array';
-  public $stateMessages;
+  public $stateMessages = [];
   /**
    * @var string
    */

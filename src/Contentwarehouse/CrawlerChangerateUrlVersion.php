@@ -70,7 +70,7 @@ class CrawlerChangerateUrlVersion extends \Google\Collection
   /**
    * @var int[]
    */
-  public $tile;
+  public $tile = [];
   /**
    * @var int
    */

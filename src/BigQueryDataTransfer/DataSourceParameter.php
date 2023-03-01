@@ -23,7 +23,7 @@ class DataSourceParameter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedValues;
+  public $allowedValues = [];
   /**
    * @var bool
    */
@@ -38,7 +38,7 @@ class DataSourceParameter extends \Google\Collection
   public $displayName;
   protected $fieldsType = DataSourceParameter::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
   /**
    * @var bool
    */

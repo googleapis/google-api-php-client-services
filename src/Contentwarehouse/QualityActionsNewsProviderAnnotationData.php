@@ -22,7 +22,7 @@ class QualityActionsNewsProviderAnnotationData extends \Google\Collection
   protected $collection_key = 'providers';
   protected $providersType = QualityActionsNewsProviderAnnotationDataProvider::class;
   protected $providersDataType = 'array';
-  public $providers;
+  public $providers = [];
 
   /**
    * @param QualityActionsNewsProviderAnnotationDataProvider[]

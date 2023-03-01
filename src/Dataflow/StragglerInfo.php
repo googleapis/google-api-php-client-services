@@ -21,7 +21,7 @@ class StragglerInfo extends \Google\Model
 {
   protected $causesType = StragglerDebuggingInfo::class;
   protected $causesDataType = 'map';
-  public $causes;
+  public $causes = [];
   /**
    * @var string
    */

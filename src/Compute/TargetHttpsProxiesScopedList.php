@@ -22,7 +22,7 @@ class TargetHttpsProxiesScopedList extends \Google\Collection
   protected $collection_key = 'targetHttpsProxies';
   protected $targetHttpsProxiesType = TargetHttpsProxy::class;
   protected $targetHttpsProxiesDataType = 'array';
-  public $targetHttpsProxies;
+  public $targetHttpsProxies = [];
   protected $warningType = TargetHttpsProxiesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

@@ -23,7 +23,7 @@ class AccountPermission extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accountProfiles;
+  public $accountProfiles = [];
   /**
    * @var string
    */

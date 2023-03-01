@@ -26,7 +26,7 @@ class GoogleCloudApigeeV1DebugSessionTransaction extends \Google\Collection
   public $completed;
   protected $pointType = GoogleCloudApigeeV1Point::class;
   protected $pointDataType = 'array';
-  public $point;
+  public $point = [];
 
   /**
    * @param bool

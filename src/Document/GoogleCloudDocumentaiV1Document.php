@@ -26,10 +26,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   public $content;
   protected $entitiesType = GoogleCloudDocumentaiV1DocumentEntity::class;
   protected $entitiesDataType = 'array';
-  public $entities;
+  public $entities = [];
   protected $entityRelationsType = GoogleCloudDocumentaiV1DocumentEntityRelation::class;
   protected $entityRelationsDataType = 'array';
-  public $entityRelations;
+  public $entityRelations = [];
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   public $error;
@@ -39,10 +39,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   public $mimeType;
   protected $pagesType = GoogleCloudDocumentaiV1DocumentPage::class;
   protected $pagesDataType = 'array';
-  public $pages;
+  public $pages = [];
   protected $revisionsType = GoogleCloudDocumentaiV1DocumentRevision::class;
   protected $revisionsDataType = 'array';
-  public $revisions;
+  public $revisions = [];
   protected $shardInfoType = GoogleCloudDocumentaiV1DocumentShardInfo::class;
   protected $shardInfoDataType = '';
   public $shardInfo;
@@ -52,10 +52,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   public $text;
   protected $textChangesType = GoogleCloudDocumentaiV1DocumentTextChange::class;
   protected $textChangesDataType = 'array';
-  public $textChanges;
+  public $textChanges = [];
   protected $textStylesType = GoogleCloudDocumentaiV1DocumentStyle::class;
   protected $textStylesDataType = 'array';
-  public $textStyles;
+  public $textStyles = [];
   /**
    * @var string
    */

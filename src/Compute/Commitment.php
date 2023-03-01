@@ -54,7 +54,7 @@ class Commitment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $mergeSourceCommitments;
+  public $mergeSourceCommitments = [];
   /**
    * @var string
    */
@@ -69,10 +69,10 @@ class Commitment extends \Google\Collection
   public $region;
   protected $reservationsType = Reservation::class;
   protected $reservationsDataType = 'array';
-  public $reservations;
+  public $reservations = [];
   protected $resourcesType = ResourceCommitment::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
   /**
    * @var string
    */

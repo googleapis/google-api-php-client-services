@@ -31,7 +31,7 @@ class GoogleCloudDiscoveryengineV1betaDocumentInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $promotionIds;
+  public $promotionIds = [];
   /**
    * @var int
    */

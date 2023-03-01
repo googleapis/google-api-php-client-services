@@ -28,7 +28,7 @@ class Environment extends \Google\Collection
   public $creationTime;
   protected $dimensionValueType = EnvironmentDimensionValueEntry::class;
   protected $dimensionValueDataType = 'array';
-  public $dimensionValue;
+  public $dimensionValue = [];
   /**
    * @var string
    */
@@ -57,7 +57,7 @@ class Environment extends \Google\Collection
   public $resultsStorage;
   protected $shardSummariesType = ShardSummary::class;
   protected $shardSummariesDataType = 'array';
-  public $shardSummaries;
+  public $shardSummaries = [];
 
   /**
    * @param Timestamp

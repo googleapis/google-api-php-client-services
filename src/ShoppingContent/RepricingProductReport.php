@@ -35,7 +35,7 @@ class RepricingProductReport extends \Google\Collection
   public $highWatermark;
   protected $inapplicabilityDetailsType = InapplicabilityDetails::class;
   protected $inapplicabilityDetailsDataType = 'array';
-  public $inapplicabilityDetails;
+  public $inapplicabilityDetails = [];
   protected $lowWatermarkType = PriceAmount::class;
   protected $lowWatermarkDataType = '';
   public $lowWatermark;
@@ -46,7 +46,7 @@ class RepricingProductReport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ruleIds;
+  public $ruleIds = [];
   protected $totalGmvType = PriceAmount::class;
   protected $totalGmvDataType = '';
   public $totalGmv;

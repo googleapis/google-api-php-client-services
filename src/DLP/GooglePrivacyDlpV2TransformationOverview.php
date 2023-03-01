@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2TransformationOverview extends \Google\Collection
   protected $collection_key = 'transformationSummaries';
   protected $transformationSummariesType = GooglePrivacyDlpV2TransformationSummary::class;
   protected $transformationSummariesDataType = 'array';
-  public $transformationSummaries;
+  public $transformationSummaries = [];
   /**
    * @var string
    */

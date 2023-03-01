@@ -32,7 +32,7 @@ class PhishingSpike extends \Google\Collection
   public $maliciousEntity;
   protected $messagesType = GmailMessageInfo::class;
   protected $messagesDataType = 'array';
-  public $messages;
+  public $messages = [];
 
   /**
    * @param DomainId

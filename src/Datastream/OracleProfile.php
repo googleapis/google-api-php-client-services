@@ -22,7 +22,7 @@ class OracleProfile extends \Google\Model
   /**
    * @var string[]
    */
-  public $connectionAttributes;
+  public $connectionAttributes = [];
   /**
    * @var string
    */

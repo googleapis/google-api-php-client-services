@@ -22,7 +22,7 @@ class ConsentArtifact extends \Google\Collection
   protected $collection_key = 'consentContentScreenshots';
   protected $consentContentScreenshotsType = Image::class;
   protected $consentContentScreenshotsDataType = 'array';
-  public $consentContentScreenshots;
+  public $consentContentScreenshots = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class ConsentArtifact extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class ConfigManagementSyncState extends \Google\Collection
   public $code;
   protected $errorsType = ConfigManagementSyncError::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

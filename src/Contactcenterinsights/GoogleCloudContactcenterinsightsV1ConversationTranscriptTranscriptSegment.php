@@ -51,7 +51,7 @@ class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment 
   public $text;
   protected $wordsType = GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo::class;
   protected $wordsDataType = 'array';
-  public $words;
+  public $words = [];
 
   /**
    * @param int

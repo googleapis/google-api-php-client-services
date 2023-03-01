@@ -35,7 +35,7 @@ class AccountsCustomBatchRequestEntryLinkRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $services;
+  public $services = [];
 
   /**
    * @param string

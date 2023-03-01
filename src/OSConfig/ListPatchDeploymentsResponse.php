@@ -26,7 +26,7 @@ class ListPatchDeploymentsResponse extends \Google\Collection
   public $nextPageToken;
   protected $patchDeploymentsType = PatchDeployment::class;
   protected $patchDeploymentsDataType = 'array';
-  public $patchDeployments;
+  public $patchDeployments = [];
 
   /**
    * @param string

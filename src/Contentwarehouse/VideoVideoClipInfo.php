@@ -77,7 +77,7 @@ class VideoVideoClipInfo extends \Google\Collection
   public $medium;
   protected $metadataType = VideoClipInfo::class;
   protected $metadataDataType = 'array';
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

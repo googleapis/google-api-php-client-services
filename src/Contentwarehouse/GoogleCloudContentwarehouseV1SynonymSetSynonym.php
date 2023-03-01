@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1SynonymSetSynonym extends \Google\Collection
   /**
    * @var string[]
    */
-  public $words;
+  public $words = [];
 
   /**
    * @param string[]

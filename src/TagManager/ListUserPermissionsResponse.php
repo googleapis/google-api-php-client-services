@@ -26,7 +26,7 @@ class ListUserPermissionsResponse extends \Google\Collection
   public $nextPageToken;
   protected $userPermissionType = UserPermission::class;
   protected $userPermissionDataType = 'array';
-  public $userPermission;
+  public $userPermission = [];
 
   /**
    * @param string

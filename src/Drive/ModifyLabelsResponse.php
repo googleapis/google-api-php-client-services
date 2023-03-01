@@ -26,7 +26,7 @@ class ModifyLabelsResponse extends \Google\Collection
   public $kind;
   protected $modifiedLabelsType = Label::class;
   protected $modifiedLabelsDataType = 'array';
-  public $modifiedLabels;
+  public $modifiedLabels = [];
 
   /**
    * @param string

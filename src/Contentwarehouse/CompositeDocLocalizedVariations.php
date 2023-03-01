@@ -22,10 +22,10 @@ class CompositeDocLocalizedVariations extends \Google\Collection
   protected $collection_key = 'webmasterAlternateNames';
   protected $dupsComputedAlternateNamesType = IndexingDupsComputedLocalizedAlternateNamesLocaleEntry::class;
   protected $dupsComputedAlternateNamesDataType = 'array';
-  public $dupsComputedAlternateNames;
+  public $dupsComputedAlternateNames = [];
   protected $webmasterAlternateNamesType = IndexingConverterLocalizedAlternateName::class;
   protected $webmasterAlternateNamesDataType = 'array';
-  public $webmasterAlternateNames;
+  public $webmasterAlternateNames = [];
 
   /**
    * @param IndexingDupsComputedLocalizedAlternateNamesLocaleEntry[]

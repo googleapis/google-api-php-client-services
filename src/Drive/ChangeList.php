@@ -22,7 +22,7 @@ class ChangeList extends \Google\Collection
   protected $collection_key = 'changes';
   protected $changesType = Change::class;
   protected $changesDataType = 'array';
-  public $changes;
+  public $changes = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class RegionListWarning extends \Google\Collection
   public $code;
   protected $dataType = RegionListWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

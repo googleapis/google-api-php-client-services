@@ -25,21 +25,21 @@ class TestSetup extends \Google\Collection
   public $account;
   protected $additionalApksType = Apk::class;
   protected $additionalApksDataType = 'array';
-  public $additionalApks;
+  public $additionalApks = [];
   /**
    * @var string[]
    */
-  public $directoriesToPull;
+  public $directoriesToPull = [];
   /**
    * @var bool
    */
   public $dontAutograntPermissions;
   protected $environmentVariablesType = EnvironmentVariable::class;
   protected $environmentVariablesDataType = 'array';
-  public $environmentVariables;
+  public $environmentVariables = [];
   protected $filesToPushType = DeviceFile::class;
   protected $filesToPushDataType = 'array';
-  public $filesToPush;
+  public $filesToPush = [];
   /**
    * @var string
    */

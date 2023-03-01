@@ -22,7 +22,7 @@ class AnnotateImageRequest extends \Google\Collection
   protected $collection_key = 'features';
   protected $featuresType = Feature::class;
   protected $featuresDataType = 'array';
-  public $features;
+  public $features = [];
   protected $imageType = Image::class;
   protected $imageDataType = '';
   public $image;

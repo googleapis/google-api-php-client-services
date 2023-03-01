@@ -31,7 +31,7 @@ class GoogleCloudDialogflowV3alpha1TurnSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $failureReasons;
+  public $failureReasons = [];
   /**
    * @var bool
    */
@@ -55,7 +55,7 @@ class GoogleCloudDialogflowV3alpha1TurnSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $webhookStatuses;
+  public $webhookStatuses = [];
 
   /**
    * @param bool

@@ -48,7 +48,7 @@ class Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $pigJobType = PigJob::class;
   protected $pigJobDataType = '';
   public $pigJob;
@@ -81,13 +81,13 @@ class Job extends \Google\Collection
   public $status;
   protected $statusHistoryType = JobStatus::class;
   protected $statusHistoryDataType = 'array';
-  public $statusHistory;
+  public $statusHistory = [];
   protected $trinoJobType = TrinoJob::class;
   protected $trinoJobDataType = '';
   public $trinoJob;
   protected $yarnApplicationsType = YarnApplication::class;
   protected $yarnApplicationsDataType = 'array';
-  public $yarnApplications;
+  public $yarnApplications = [];
 
   /**
    * @param bool

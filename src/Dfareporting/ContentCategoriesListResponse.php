@@ -22,7 +22,7 @@ class ContentCategoriesListResponse extends \Google\Collection
   protected $collection_key = 'contentCategories';
   protected $contentCategoriesType = ContentCategory::class;
   protected $contentCategoriesDataType = 'array';
-  public $contentCategories;
+  public $contentCategories = [];
   /**
    * @var string
    */

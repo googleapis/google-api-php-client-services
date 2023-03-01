@@ -36,7 +36,7 @@ class OceanVolumeViewability extends \Google\Collection
   public $inViewabilityLimbo;
   protected $localeType = OceanVolumeViewabilityLocale::class;
   protected $localeDataType = 'array';
-  public $locale;
+  public $locale = [];
   /**
    * @var bool
    */

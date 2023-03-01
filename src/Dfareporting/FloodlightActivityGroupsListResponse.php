@@ -22,7 +22,7 @@ class FloodlightActivityGroupsListResponse extends \Google\Collection
   protected $collection_key = 'floodlightActivityGroups';
   protected $floodlightActivityGroupsType = FloodlightActivityGroup::class;
   protected $floodlightActivityGroupsDataType = 'array';
-  public $floodlightActivityGroups;
+  public $floodlightActivityGroups = [];
   /**
    * @var string
    */

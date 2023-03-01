@@ -31,7 +31,7 @@ class TailLogEntriesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceNames;
+  public $resourceNames = [];
 
   /**
    * @param string

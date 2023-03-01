@@ -42,7 +42,7 @@ class MastheadAd extends \Google\Collection
   public $callToActionTrackingUrl;
   protected $companionYoutubeVideosType = YoutubeVideoDetails::class;
   protected $companionYoutubeVideosDataType = 'array';
-  public $companionYoutubeVideos;
+  public $companionYoutubeVideos = [];
   /**
    * @var string
    */

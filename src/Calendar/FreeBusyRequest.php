@@ -30,7 +30,7 @@ class FreeBusyRequest extends \Google\Collection
   public $groupExpansionMax;
   protected $itemsType = FreeBusyRequestItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

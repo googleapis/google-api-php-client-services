@@ -25,7 +25,7 @@ class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends \Google\Collec
   public $documentQuery;
   protected $histogramQueriesType = GoogleCloudContentwarehouseV1HistogramQuery::class;
   protected $histogramQueriesDataType = 'array';
-  public $histogramQueries;
+  public $histogramQueries = [];
   /**
    * @var int
    */

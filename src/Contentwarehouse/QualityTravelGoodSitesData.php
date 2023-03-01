@@ -22,7 +22,7 @@ class QualityTravelGoodSitesData extends \Google\Collection
   protected $collection_key = 'signal';
   protected $i18nType = QualityTravelGoodSitesDataI18n::class;
   protected $i18nDataType = 'array';
-  public $i18n;
+  public $i18n = [];
   /**
    * @var bool
    */
@@ -45,7 +45,7 @@ class QualityTravelGoodSitesData extends \Google\Collection
   public $normalizationFactor;
   protected $signalType = QualityTravelGoodSitesDataSignal::class;
   protected $signalDataType = 'array';
-  public $signal;
+  public $signal = [];
   /**
    * @var string
    */

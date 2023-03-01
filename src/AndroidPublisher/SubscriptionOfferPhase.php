@@ -33,7 +33,7 @@ class SubscriptionOfferPhase extends \Google\Collection
   public $recurrenceCount;
   protected $regionalConfigsType = RegionalSubscriptionOfferPhaseConfig::class;
   protected $regionalConfigsDataType = 'array';
-  public $regionalConfigs;
+  public $regionalConfigs = [];
 
   /**
    * @param string

@@ -29,7 +29,7 @@ class MediaIndexVideoFrame extends \Google\Collection
   public $frameIdentifier;
   protected $regionsType = MediaIndexRegion::class;
   protected $regionsDataType = 'array';
-  public $regions;
+  public $regions = [];
   /**
    * @var string
    */
@@ -37,11 +37,11 @@ class MediaIndexVideoFrame extends \Google\Collection
   /**
    * @var string[]
    */
-  public $starburstTokensV4;
+  public $starburstTokensV4 = [];
   /**
    * @var string[]
    */
-  public $thumbnailType;
+  public $thumbnailType = [];
 
   /**
    * @param string

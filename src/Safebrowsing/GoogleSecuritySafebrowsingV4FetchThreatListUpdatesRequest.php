@@ -25,7 +25,7 @@ class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest extends \Google\
   public $client;
   protected $listUpdateRequestsType = GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest::class;
   protected $listUpdateRequestsDataType = 'array';
-  public $listUpdateRequests;
+  public $listUpdateRequests = [];
 
   /**
    * @param GoogleSecuritySafebrowsingV4ClientInfo

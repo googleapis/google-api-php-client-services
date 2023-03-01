@@ -30,7 +30,7 @@ class GoogleAnalyticsAdminV1betaChangeHistoryEvent extends \Google\Collection
   public $changeTime;
   protected $changesType = GoogleAnalyticsAdminV1betaChangeHistoryChange::class;
   protected $changesDataType = 'array';
-  public $changes;
+  public $changes = [];
   /**
    * @var bool
    */

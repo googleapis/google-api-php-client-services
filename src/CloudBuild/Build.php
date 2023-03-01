@@ -51,7 +51,7 @@ class Build extends \Google\Collection
   /**
    * @var string[]
    */
-  public $images;
+  public $images = [];
   /**
    * @var string
    */
@@ -80,7 +80,7 @@ class Build extends \Google\Collection
   public $results;
   protected $secretsType = Secret::class;
   protected $secretsDataType = 'array';
-  public $secrets;
+  public $secrets = [];
   /**
    * @var string
    */
@@ -105,25 +105,25 @@ class Build extends \Google\Collection
   public $statusDetail;
   protected $stepsType = BuildStep::class;
   protected $stepsDataType = 'array';
-  public $steps;
+  public $steps = [];
   /**
    * @var string[]
    */
-  public $substitutions;
+  public $substitutions = [];
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   /**
    * @var string
    */
   public $timeout;
   protected $timingType = TimeSpan::class;
   protected $timingDataType = 'map';
-  public $timing;
+  public $timing = [];
   protected $warningsType = Warning::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param BuildApproval

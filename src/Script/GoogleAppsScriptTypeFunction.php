@@ -27,7 +27,7 @@ class GoogleAppsScriptTypeFunction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

@@ -49,7 +49,7 @@ class AttachedDisk extends \Google\Collection
   public $forceAttach;
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
-  public $guestOsFeatures;
+  public $guestOsFeatures = [];
   /**
    * @var int
    */
@@ -68,7 +68,7 @@ class AttachedDisk extends \Google\Collection
   /**
    * @var string[]
    */
-  public $licenses;
+  public $licenses = [];
   /**
    * @var string
    */

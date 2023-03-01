@@ -26,7 +26,7 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $diagnosticInfo;
+  public $diagnosticInfo = [];
   protected $dtmfType = GoogleCloudDialogflowCxV3DtmfInput::class;
   protected $dtmfDataType = '';
   public $dtmf;
@@ -47,10 +47,10 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $parameters;
+  public $parameters = [];
   protected $responseMessagesType = GoogleCloudDialogflowCxV3ResponseMessage::class;
   protected $responseMessagesDataType = 'array';
-  public $responseMessages;
+  public $responseMessages = [];
   protected $sentimentAnalysisResultType = GoogleCloudDialogflowCxV3SentimentAnalysisResult::class;
   protected $sentimentAnalysisResultDataType = '';
   public $sentimentAnalysisResult;
@@ -73,10 +73,10 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $webhookPayloads;
+  public $webhookPayloads = [];
   protected $webhookStatusesType = GoogleRpcStatus::class;
   protected $webhookStatusesDataType = 'array';
-  public $webhookStatuses;
+  public $webhookStatuses = [];
 
   /**
    * @param GoogleCloudDialogflowCxV3Page

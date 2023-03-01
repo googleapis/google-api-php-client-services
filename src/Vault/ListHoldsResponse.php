@@ -22,7 +22,7 @@ class ListHoldsResponse extends \Google\Collection
   protected $collection_key = 'holds';
   protected $holdsType = Hold::class;
   protected $holdsDataType = 'array';
-  public $holds;
+  public $holds = [];
   /**
    * @var string
    */

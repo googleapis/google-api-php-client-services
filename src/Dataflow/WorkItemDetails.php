@@ -30,7 +30,7 @@ class WorkItemDetails extends \Google\Collection
   public $endTime;
   protected $metricsType = MetricUpdate::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   protected $progressType = ProgressTimeseries::class;
   protected $progressDataType = '';
   public $progress;

@@ -49,7 +49,7 @@ class SettlementReport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $transferIds;
+  public $transferIds = [];
 
   /**
    * @param string

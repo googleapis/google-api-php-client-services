@@ -34,7 +34,7 @@ class GoogleCloudDataplexV1Content extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

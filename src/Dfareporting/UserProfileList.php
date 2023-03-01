@@ -26,7 +26,7 @@ class UserProfileList extends \Google\Collection
   public $etag;
   protected $itemsType = UserProfile::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

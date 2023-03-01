@@ -29,7 +29,7 @@ class ManagedConfiguration extends \Google\Collection
   public $kind;
   protected $managedPropertyType = ManagedProperty::class;
   protected $managedPropertyDataType = 'array';
-  public $managedProperty;
+  public $managedProperty = [];
   /**
    * @var string
    */

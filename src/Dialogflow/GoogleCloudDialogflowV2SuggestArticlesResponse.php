@@ -22,7 +22,7 @@ class GoogleCloudDialogflowV2SuggestArticlesResponse extends \Google\Collection
   protected $collection_key = 'articleAnswers';
   protected $articleAnswersType = GoogleCloudDialogflowV2ArticleAnswer::class;
   protected $articleAnswersDataType = 'array';
-  public $articleAnswers;
+  public $articleAnswers = [];
   /**
    * @var int
    */

@@ -25,7 +25,7 @@ class AnalyzeOrgPolicyGovernedAssetsResponse extends \Google\Collection
   public $constraint;
   protected $governedAssetsType = GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset::class;
   protected $governedAssetsDataType = 'array';
-  public $governedAssets;
+  public $governedAssets = [];
   /**
    * @var string
    */

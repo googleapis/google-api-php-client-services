@@ -22,13 +22,13 @@ class GeostoreAddressProto extends \Google\Collection
   protected $collection_key = 'crossStreet';
   protected $addressLinesType = GeostoreAddressLinesProto::class;
   protected $addressLinesDataType = 'array';
-  public $addressLines;
+  public $addressLines = [];
   protected $componentType = GeostoreAddressComponentProto::class;
   protected $componentDataType = 'array';
-  public $component;
+  public $component = [];
   protected $crossStreetType = GeostoreAddressComponentProto::class;
   protected $crossStreetDataType = 'array';
-  public $crossStreet;
+  public $crossStreet = [];
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
   public $metadata;

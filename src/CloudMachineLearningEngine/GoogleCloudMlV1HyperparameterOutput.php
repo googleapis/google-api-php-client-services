@@ -22,7 +22,7 @@ class GoogleCloudMlV1HyperparameterOutput extends \Google\Collection
   protected $collection_key = 'allMetrics';
   protected $allMetricsType = GoogleCloudMlV1HyperparameterOutputHyperparameterMetric::class;
   protected $allMetricsDataType = 'array';
-  public $allMetrics;
+  public $allMetrics = [];
   protected $builtInAlgorithmOutputType = GoogleCloudMlV1BuiltInAlgorithmOutput::class;
   protected $builtInAlgorithmOutputDataType = '';
   public $builtInAlgorithmOutput;
@@ -36,7 +36,7 @@ class GoogleCloudMlV1HyperparameterOutput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hyperparameters;
+  public $hyperparameters = [];
   /**
    * @var bool
    */
@@ -56,7 +56,7 @@ class GoogleCloudMlV1HyperparameterOutput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $webAccessUris;
+  public $webAccessUris = [];
 
   /**
    * @param GoogleCloudMlV1HyperparameterOutputHyperparameterMetric[]

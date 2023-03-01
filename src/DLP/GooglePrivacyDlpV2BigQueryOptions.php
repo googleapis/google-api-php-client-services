@@ -22,13 +22,13 @@ class GooglePrivacyDlpV2BigQueryOptions extends \Google\Collection
   protected $collection_key = 'includedFields';
   protected $excludedFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $excludedFieldsDataType = 'array';
-  public $excludedFields;
+  public $excludedFields = [];
   protected $identifyingFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $identifyingFieldsDataType = 'array';
-  public $identifyingFields;
+  public $identifyingFields = [];
   protected $includedFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $includedFieldsDataType = 'array';
-  public $includedFields;
+  public $includedFields = [];
   /**
    * @var string
    */

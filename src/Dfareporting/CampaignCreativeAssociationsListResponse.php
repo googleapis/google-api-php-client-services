@@ -22,7 +22,7 @@ class CampaignCreativeAssociationsListResponse extends \Google\Collection
   protected $collection_key = 'campaignCreativeAssociations';
   protected $campaignCreativeAssociationsType = CampaignCreativeAssociation::class;
   protected $campaignCreativeAssociationsDataType = 'array';
-  public $campaignCreativeAssociations;
+  public $campaignCreativeAssociations = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class ListVoicesResponse extends \Google\Collection
   protected $collection_key = 'voices';
   protected $voicesType = Voice::class;
   protected $voicesDataType = 'array';
-  public $voices;
+  public $voices = [];
 
   /**
    * @param Voice[]

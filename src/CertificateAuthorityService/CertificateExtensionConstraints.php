@@ -22,11 +22,11 @@ class CertificateExtensionConstraints extends \Google\Collection
   protected $collection_key = 'knownExtensions';
   protected $additionalExtensionsType = ObjectId::class;
   protected $additionalExtensionsDataType = 'array';
-  public $additionalExtensions;
+  public $additionalExtensions = [];
   /**
    * @var string[]
    */
-  public $knownExtensions;
+  public $knownExtensions = [];
 
   /**
    * @param ObjectId[]

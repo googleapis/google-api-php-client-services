@@ -25,7 +25,7 @@ class OrderPickupDetails extends \Google\Collection
   public $address;
   protected $collectorsType = OrderPickupDetailsCollector::class;
   protected $collectorsDataType = 'array';
-  public $collectors;
+  public $collectors = [];
   /**
    * @var string
    */

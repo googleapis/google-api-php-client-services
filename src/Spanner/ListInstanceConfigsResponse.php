@@ -22,7 +22,7 @@ class ListInstanceConfigsResponse extends \Google\Collection
   protected $collection_key = 'instanceConfigs';
   protected $instanceConfigsType = InstanceConfig::class;
   protected $instanceConfigsDataType = 'array';
-  public $instanceConfigs;
+  public $instanceConfigs = [];
   /**
    * @var string
    */

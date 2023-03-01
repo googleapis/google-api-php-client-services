@@ -27,7 +27,7 @@ class SslPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customFeatures;
+  public $customFeatures = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class SslPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enabledFeatures;
+  public $enabledFeatures = [];
   /**
    * @var string
    */
@@ -70,7 +70,7 @@ class SslPolicy extends \Google\Collection
   public $selfLink;
   protected $warningsType = SslPolicyWarnings::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param string

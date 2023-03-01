@@ -23,19 +23,19 @@ class AndroidMatrix extends \Google\Collection
   /**
    * @var string[]
    */
-  public $androidModelIds;
+  public $androidModelIds = [];
   /**
    * @var string[]
    */
-  public $androidVersionIds;
+  public $androidVersionIds = [];
   /**
    * @var string[]
    */
-  public $locales;
+  public $locales = [];
   /**
    * @var string[]
    */
-  public $orientations;
+  public $orientations = [];
 
   /**
    * @param string[]

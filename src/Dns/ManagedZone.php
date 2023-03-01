@@ -52,7 +52,7 @@ class ManagedZone extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -64,7 +64,7 @@ class ManagedZone extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nameServers;
+  public $nameServers = [];
   protected $peeringConfigType = ManagedZonePeeringConfig::class;
   protected $peeringConfigDataType = '';
   public $peeringConfig;

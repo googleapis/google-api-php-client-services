@@ -23,7 +23,7 @@ class TestTargetsForShard extends \Google\Collection
   /**
    * @var string[]
    */
-  public $testTargets;
+  public $testTargets = [];
 
   /**
    * @param string[]

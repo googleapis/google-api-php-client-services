@@ -23,11 +23,11 @@ class ParentEntityFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fileType;
+  public $fileType = [];
   /**
    * @var string[]
    */
-  public $filterIds;
+  public $filterIds = [];
   /**
    * @var string
    */

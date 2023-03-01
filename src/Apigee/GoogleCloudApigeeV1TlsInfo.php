@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ciphers;
+  public $ciphers = [];
   /**
    * @var bool
    */
@@ -50,7 +50,7 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $protocols;
+  public $protocols = [];
   /**
    * @var string
    */

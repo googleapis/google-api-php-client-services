@@ -23,14 +23,14 @@ class QualitySalientCountriesSalientCountrySet extends \Google\Collection
   /**
    * @var int[]
    */
-  public $packedCountry;
+  public $packedCountry = [];
   /**
    * @var int[]
    */
-  public $packedSalience;
+  public $packedSalience = [];
   protected $salientCountryType = QualitySalientCountriesSalientCountry::class;
   protected $salientCountryDataType = 'array';
-  public $salientCountry;
+  public $salientCountry = [];
 
   /**
    * @param int[]

@@ -28,7 +28,7 @@ class ConditionalFormatRule extends \Google\Collection
   public $gradientRule;
   protected $rangesType = GridRange::class;
   protected $rangesDataType = 'array';
-  public $ranges;
+  public $ranges = [];
 
   /**
    * @param BooleanRule

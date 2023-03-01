@@ -49,14 +49,14 @@ class PhotoSequence extends \Google\Collection
   public $imu;
   protected $photosType = Photo::class;
   protected $photosDataType = 'array';
-  public $photos;
+  public $photos = [];
   /**
    * @var string
    */
   public $processingState;
   protected $rawGpsTimelineType = Pose::class;
   protected $rawGpsTimelineDataType = 'array';
-  public $rawGpsTimeline;
+  public $rawGpsTimeline = [];
   protected $sequenceBoundsType = LatLngBounds::class;
   protected $sequenceBoundsDataType = '';
   public $sequenceBounds;

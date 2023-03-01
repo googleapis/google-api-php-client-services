@@ -26,7 +26,7 @@ class UserPageLoadMetricV5 extends \Google\Collection
   public $category;
   protected $distributionsType = Bucket::class;
   protected $distributionsDataType = 'array';
-  public $distributions;
+  public $distributions = [];
   /**
    * @var string
    */

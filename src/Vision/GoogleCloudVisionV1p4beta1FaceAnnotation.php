@@ -52,14 +52,14 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
   public $landmarkingConfidence;
   protected $landmarksType = GoogleCloudVisionV1p4beta1FaceAnnotationLandmark::class;
   protected $landmarksDataType = 'array';
-  public $landmarks;
+  public $landmarks = [];
   /**
    * @var float
    */
   public $panAngle;
   protected $recognitionResultType = GoogleCloudVisionV1p4beta1FaceRecognitionResult::class;
   protected $recognitionResultDataType = 'array';
-  public $recognitionResult;
+  public $recognitionResult = [];
   /**
    * @var float
    */

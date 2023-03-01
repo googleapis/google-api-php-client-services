@@ -22,17 +22,17 @@ class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extends \Google\Col
   protected $collection_key = 'productMetadata';
   protected $aclChoicesType = AppsPeopleOzExternalMergedpeopleapiFieldAcl::class;
   protected $aclChoicesDataType = 'array';
-  public $aclChoices;
+  public $aclChoices = [];
   protected $additionalContainerInfoType = AppsPeopleOzExternalMergedpeopleapiAdditionalContainerInfo::class;
   protected $additionalContainerInfoDataType = '';
   public $additionalContainerInfo;
   protected $affinityType = AppsPeopleOzExternalMergedpeopleapiAffinity::class;
   protected $affinityDataType = 'array';
-  public $affinity;
+  public $affinity = [];
   /**
    * @var string[]
    */
-  public $contactVisibility;
+  public $contactVisibility = [];
   /**
    * @var string
    */
@@ -66,7 +66,7 @@ class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extends \Google\Col
   public $edgeKey;
   protected $edgeKeyInfoType = AppsPeopleOzExternalMergedpeopleapiEdgeKeyInfo::class;
   protected $edgeKeyInfoDataType = 'array';
-  public $edgeKeyInfo;
+  public $edgeKeyInfo = [];
   /**
    * @var string
    */
@@ -80,17 +80,17 @@ class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extends \Google\Col
   public $lastUpdateTime;
   protected $matchingInfoType = AppsPeopleOzExternalMergedpeopleapiMatchInfo::class;
   protected $matchingInfoDataType = 'array';
-  public $matchingInfo;
+  public $matchingInfo = [];
   protected $otherDedupedContainersType = AppsPeopleOzExternalMergedpeopleapiDedupedContainerInfo::class;
   protected $otherDedupedContainersDataType = 'array';
-  public $otherDedupedContainers;
+  public $otherDedupedContainers = [];
   /**
    * @var bool
    */
   public $primary;
   protected $productMetadataType = AppsPeopleOzExternalMergedpeopleapiProductMetadata::class;
   protected $productMetadataDataType = 'array';
-  public $productMetadata;
+  public $productMetadata = [];
   /**
    * @var bool
    */

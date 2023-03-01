@@ -30,7 +30,7 @@ class SubaccountsListResponse extends \Google\Collection
   public $nextPageToken;
   protected $subaccountsType = Subaccount::class;
   protected $subaccountsDataType = 'array';
-  public $subaccounts;
+  public $subaccounts = [];
 
   /**
    * @param string

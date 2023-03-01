@@ -69,7 +69,7 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedLanguageCodes;
+  public $supportedLanguageCodes = [];
   protected $textToSpeechSettingsType = GoogleCloudDialogflowCxV3TextToSpeechSettings::class;
   protected $textToSpeechSettingsDataType = '';
   public $textToSpeechSettings;

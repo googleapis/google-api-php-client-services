@@ -42,7 +42,7 @@ class GoogleCloudDiscoveryengineV1betaDocument extends \Google\Model
   /**
    * @var array[]
    */
-  public $structData;
+  public $structData = [];
 
   /**
    * @param string

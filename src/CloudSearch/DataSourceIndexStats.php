@@ -25,7 +25,7 @@ class DataSourceIndexStats extends \Google\Collection
   public $date;
   protected $itemCountByStatusType = ItemCountByStatus::class;
   protected $itemCountByStatusDataType = 'array';
-  public $itemCountByStatus;
+  public $itemCountByStatus = [];
 
   /**
    * @param Date

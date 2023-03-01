@@ -22,7 +22,7 @@ class PivotDimensionHeader extends \Google\Collection
   protected $collection_key = 'dimensionValues';
   protected $dimensionValuesType = DimensionValue::class;
   protected $dimensionValuesDataType = 'array';
-  public $dimensionValues;
+  public $dimensionValues = [];
 
   /**
    * @param DimensionValue[]

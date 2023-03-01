@@ -26,7 +26,7 @@ class ListVolumeRestoresResponse extends \Google\Collection
   public $nextPageToken;
   protected $volumeRestoresType = VolumeRestore::class;
   protected $volumeRestoresDataType = 'array';
-  public $volumeRestores;
+  public $volumeRestores = [];
 
   /**
    * @param string

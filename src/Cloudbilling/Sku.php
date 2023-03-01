@@ -36,7 +36,7 @@ class Sku extends \Google\Collection
   public $name;
   protected $pricingInfoType = PricingInfo::class;
   protected $pricingInfoDataType = 'array';
-  public $pricingInfo;
+  public $pricingInfo = [];
   /**
    * @var string
    */
@@ -44,7 +44,7 @@ class Sku extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceRegions;
+  public $serviceRegions = [];
   /**
    * @var string
    */

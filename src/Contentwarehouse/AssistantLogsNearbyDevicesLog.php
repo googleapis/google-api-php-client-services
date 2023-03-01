@@ -45,7 +45,7 @@ class AssistantLogsNearbyDevicesLog extends \Google\Collection
   public $localDevice;
   protected $nearbyDevicesType = AssistantLogsDeviceInfoLog::class;
   protected $nearbyDevicesDataType = 'array';
-  public $nearbyDevices;
+  public $nearbyDevices = [];
   /**
    * @var int
    */

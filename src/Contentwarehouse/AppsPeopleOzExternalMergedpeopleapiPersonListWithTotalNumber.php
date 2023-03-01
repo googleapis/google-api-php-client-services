@@ -22,7 +22,7 @@ class AppsPeopleOzExternalMergedpeopleapiPersonListWithTotalNumber extends \Goog
   protected $collection_key = 'people';
   protected $peopleType = AppsPeopleOzExternalMergedpeopleapiPerson::class;
   protected $peopleDataType = 'array';
-  public $people;
+  public $people = [];
   /**
    * @var int
    */

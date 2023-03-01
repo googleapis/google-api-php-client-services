@@ -22,7 +22,7 @@ class GroupLicenseUsersListResponse extends \Google\Collection
   protected $collection_key = 'user';
   protected $userType = User::class;
   protected $userDataType = 'array';
-  public $user;
+  public $user = [];
 
   /**
    * @param User[]

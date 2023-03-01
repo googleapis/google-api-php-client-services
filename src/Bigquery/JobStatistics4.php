@@ -23,7 +23,7 @@ class JobStatistics4 extends \Google\Collection
   /**
    * @var string[]
    */
-  public $destinationUriFileCounts;
+  public $destinationUriFileCounts = [];
   /**
    * @var string
    */

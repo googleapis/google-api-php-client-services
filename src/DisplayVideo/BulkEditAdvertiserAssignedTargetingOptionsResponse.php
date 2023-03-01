@@ -22,7 +22,7 @@ class BulkEditAdvertiserAssignedTargetingOptionsResponse extends \Google\Collect
   protected $collection_key = 'createdAssignedTargetingOptions';
   protected $createdAssignedTargetingOptionsType = AssignedTargetingOption::class;
   protected $createdAssignedTargetingOptionsDataType = 'array';
-  public $createdAssignedTargetingOptions;
+  public $createdAssignedTargetingOptions = [];
 
   /**
    * @param AssignedTargetingOption[]

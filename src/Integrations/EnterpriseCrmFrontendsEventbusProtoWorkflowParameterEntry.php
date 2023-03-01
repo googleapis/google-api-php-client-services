@@ -25,7 +25,7 @@ class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry extends \Google\
   public $attributes;
   protected $childrenType = EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry::class;
   protected $childrenDataType = 'array';
-  public $children;
+  public $children = [];
   /**
    * @var string
    */

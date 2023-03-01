@@ -38,7 +38,7 @@ class NlpSaftReferent extends \Google\Collection
   public $role;
   protected $tokenType = NlpSaftToken::class;
   protected $tokenDataType = 'array';
-  public $token;
+  public $token = [];
 
   public function setDistance($distance)
   {

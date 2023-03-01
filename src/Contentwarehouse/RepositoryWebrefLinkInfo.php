@@ -33,7 +33,7 @@ class RepositoryWebrefLinkInfo extends \Google\Collection
   public $metadata;
   protected $sourceType = RepositoryWebrefEntityLinkSource::class;
   protected $sourceDataType = 'array';
-  public $source;
+  public $source = [];
 
   /**
    * @param float

@@ -26,7 +26,7 @@ class BackendServiceList extends \Google\Collection
   public $id;
   protected $itemsType = BackendService::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

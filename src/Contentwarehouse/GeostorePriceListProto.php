@@ -30,13 +30,13 @@ class GeostorePriceListProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cuisines;
+  public $cuisines = [];
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
-  public $nameInfo;
+  public $nameInfo = [];
   protected $sectionType = GeostorePriceListSectionProto::class;
   protected $sectionDataType = 'array';
-  public $section;
+  public $section = [];
   protected $sourceUrlType = GeostoreUrlListProto::class;
   protected $sourceUrlDataType = '';
   public $sourceUrl;

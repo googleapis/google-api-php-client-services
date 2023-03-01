@@ -27,7 +27,7 @@ class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $documents;
+  public $documents = [];
   /**
    * @var string
    */

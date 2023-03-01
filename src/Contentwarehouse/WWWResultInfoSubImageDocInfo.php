@@ -23,7 +23,7 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
   /**
    * @var int[]
    */
-  public $additionalSafesearchSignals;
+  public $additionalSafesearchSignals = [];
   /**
    * @var string
    */

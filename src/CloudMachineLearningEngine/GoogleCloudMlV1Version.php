@@ -63,7 +63,7 @@ class GoogleCloudMlV1Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -90,7 +90,7 @@ class GoogleCloudMlV1Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $packageUris;
+  public $packageUris = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class GoogleChromePolicyVersionsV1RemoveCertificateErrorDetails extends \Google\
   protected $collection_key = 'certificateReferences';
   protected $certificateReferencesType = GoogleChromePolicyVersionsV1CertificateReference::class;
   protected $certificateReferencesDataType = 'array';
-  public $certificateReferences;
+  public $certificateReferences = [];
 
   /**
    * @param GoogleChromePolicyVersionsV1CertificateReference[]

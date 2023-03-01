@@ -49,7 +49,7 @@ class Model extends \Google\Collection
   public $expirationTime;
   protected $featureColumnsType = StandardSqlField::class;
   protected $featureColumnsDataType = 'array';
-  public $featureColumns;
+  public $featureColumns = [];
   /**
    * @var string
    */
@@ -59,14 +59,14 @@ class Model extends \Google\Collection
   public $hparamSearchSpaces;
   protected $hparamTrialsType = HparamTuningTrial::class;
   protected $hparamTrialsDataType = 'array';
-  public $hparamTrials;
+  public $hparamTrials = [];
   protected $labelColumnsType = StandardSqlField::class;
   protected $labelColumnsDataType = 'array';
-  public $labelColumns;
+  public $labelColumns = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -85,10 +85,10 @@ class Model extends \Google\Collection
   /**
    * @var string[]
    */
-  public $optimalTrialIds;
+  public $optimalTrialIds = [];
   protected $trainingRunsType = TrainingRun::class;
   protected $trainingRunsDataType = 'array';
-  public $trainingRuns;
+  public $trainingRuns = [];
 
   /**
    * @param string

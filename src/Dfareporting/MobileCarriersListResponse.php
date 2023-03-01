@@ -26,7 +26,7 @@ class MobileCarriersListResponse extends \Google\Collection
   public $kind;
   protected $mobileCarriersType = MobileCarrier::class;
   protected $mobileCarriersDataType = 'array';
-  public $mobileCarriers;
+  public $mobileCarriers = [];
 
   /**
    * @param string

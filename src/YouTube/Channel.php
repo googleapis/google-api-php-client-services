@@ -48,7 +48,7 @@ class Channel extends \Google\Model
   public $kind;
   protected $localizationsType = ChannelLocalization::class;
   protected $localizationsDataType = 'map';
-  public $localizations;
+  public $localizations = [];
   protected $snippetType = ChannelSnippet::class;
   protected $snippetDataType = '';
   public $snippet;

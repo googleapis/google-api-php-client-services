@@ -22,7 +22,7 @@ class MetricRule extends \Google\Model
   /**
    * @var string[]
    */
-  public $metricCosts;
+  public $metricCosts = [];
   /**
    * @var string
    */

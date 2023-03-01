@@ -29,7 +29,7 @@ class HttpRouteRule extends \Google\Collection
   public $headerAction;
   protected $matchRulesType = HttpRouteRuleMatch::class;
   protected $matchRulesDataType = 'array';
-  public $matchRules;
+  public $matchRules = [];
   /**
    * @var int
    */

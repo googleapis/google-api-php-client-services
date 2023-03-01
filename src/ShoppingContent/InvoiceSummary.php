@@ -22,7 +22,7 @@ class InvoiceSummary extends \Google\Collection
   protected $collection_key = 'additionalChargeSummaries';
   protected $additionalChargeSummariesType = InvoiceSummaryAdditionalChargeSummary::class;
   protected $additionalChargeSummariesDataType = 'array';
-  public $additionalChargeSummaries;
+  public $additionalChargeSummaries = [];
   protected $productTotalType = Amount::class;
   protected $productTotalDataType = '';
   public $productTotal;

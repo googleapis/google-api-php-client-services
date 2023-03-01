@@ -38,7 +38,7 @@ class Asset extends \Google\Collection
   public $displayName;
   protected $formatsType = Format::class;
   protected $formatsDataType = 'array';
-  public $formats;
+  public $formats = [];
   /**
    * @var bool
    */

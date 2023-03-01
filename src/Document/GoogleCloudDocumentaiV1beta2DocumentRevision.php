@@ -38,11 +38,11 @@ class GoogleCloudDocumentaiV1beta2DocumentRevision extends \Google\Collection
   /**
    * @var int[]
    */
-  public $parent;
+  public $parent = [];
   /**
    * @var string[]
    */
-  public $parentIds;
+  public $parentIds = [];
   /**
    * @var string
    */

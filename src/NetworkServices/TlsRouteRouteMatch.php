@@ -23,11 +23,11 @@ class TlsRouteRouteMatch extends \Google\Collection
   /**
    * @var string[]
    */
-  public $alpn;
+  public $alpn = [];
   /**
    * @var string[]
    */
-  public $sniHost;
+  public $sniHost = [];
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3ListEntityTypesResponse extends \Google\Collectio
   protected $collection_key = 'entityTypes';
   protected $entityTypesType = GoogleCloudDialogflowCxV3EntityType::class;
   protected $entityTypesDataType = 'array';
-  public $entityTypes;
+  public $entityTypes = [];
   /**
    * @var string
    */

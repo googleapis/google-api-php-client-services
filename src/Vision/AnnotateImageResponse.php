@@ -31,7 +31,7 @@ class AnnotateImageResponse extends \Google\Collection
   public $error;
   protected $faceAnnotationsType = FaceAnnotation::class;
   protected $faceAnnotationsDataType = 'array';
-  public $faceAnnotations;
+  public $faceAnnotations = [];
   protected $fullTextAnnotationType = TextAnnotation::class;
   protected $fullTextAnnotationDataType = '';
   public $fullTextAnnotation;
@@ -40,16 +40,16 @@ class AnnotateImageResponse extends \Google\Collection
   public $imagePropertiesAnnotation;
   protected $labelAnnotationsType = EntityAnnotation::class;
   protected $labelAnnotationsDataType = 'array';
-  public $labelAnnotations;
+  public $labelAnnotations = [];
   protected $landmarkAnnotationsType = EntityAnnotation::class;
   protected $landmarkAnnotationsDataType = 'array';
-  public $landmarkAnnotations;
+  public $landmarkAnnotations = [];
   protected $localizedObjectAnnotationsType = LocalizedObjectAnnotation::class;
   protected $localizedObjectAnnotationsDataType = 'array';
-  public $localizedObjectAnnotations;
+  public $localizedObjectAnnotations = [];
   protected $logoAnnotationsType = EntityAnnotation::class;
   protected $logoAnnotationsDataType = 'array';
-  public $logoAnnotations;
+  public $logoAnnotations = [];
   protected $productSearchResultsType = ProductSearchResults::class;
   protected $productSearchResultsDataType = '';
   public $productSearchResults;
@@ -58,7 +58,7 @@ class AnnotateImageResponse extends \Google\Collection
   public $safeSearchAnnotation;
   protected $textAnnotationsType = EntityAnnotation::class;
   protected $textAnnotationsDataType = 'array';
-  public $textAnnotations;
+  public $textAnnotations = [];
   protected $webDetectionType = WebDetection::class;
   protected $webDetectionDataType = '';
   public $webDetection;

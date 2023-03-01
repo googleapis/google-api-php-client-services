@@ -62,7 +62,7 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $navqueries;
+  public $navqueries = [];
   /**
    * @var float
    */
@@ -87,7 +87,7 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   /**
    * @var int[]
    */
-  public $subindexid;
+  public $subindexid = [];
   /**
    * @var string
    */
@@ -109,7 +109,7 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   public $url;
   protected $verticalItemType = IndexingMlVerticalVerticalItem::class;
   protected $verticalItemDataType = 'array';
-  public $verticalItem;
+  public $verticalItem = [];
   /**
    * @var string
    */

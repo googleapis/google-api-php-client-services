@@ -22,7 +22,7 @@ class AwsVmsDetails extends \Google\Collection
   protected $collection_key = 'details';
   protected $detailsType = AwsVmDetails::class;
   protected $detailsDataType = 'array';
-  public $details;
+  public $details = [];
 
   /**
    * @param AwsVmDetails[]

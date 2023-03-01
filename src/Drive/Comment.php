@@ -60,7 +60,7 @@ class Comment extends \Google\Collection
   public $quotedFileContent;
   protected $repliesType = Reply::class;
   protected $repliesDataType = 'array';
-  public $replies;
+  public $replies = [];
   /**
    * @var bool
    */

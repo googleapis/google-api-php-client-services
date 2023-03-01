@@ -22,7 +22,7 @@ class Status extends \Google\Collection
   protected $collection_key = 'currentSteps';
   protected $currentStepsType = Step::class;
   protected $currentStepsDataType = 'array';
-  public $currentSteps;
+  public $currentSteps = [];
 
   /**
    * @param Step[]

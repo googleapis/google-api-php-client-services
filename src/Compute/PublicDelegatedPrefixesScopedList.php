@@ -22,7 +22,7 @@ class PublicDelegatedPrefixesScopedList extends \Google\Collection
   protected $collection_key = 'publicDelegatedPrefixes';
   protected $publicDelegatedPrefixesType = PublicDelegatedPrefix::class;
   protected $publicDelegatedPrefixesDataType = 'array';
-  public $publicDelegatedPrefixes;
+  public $publicDelegatedPrefixes = [];
   protected $warningType = PublicDelegatedPrefixesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

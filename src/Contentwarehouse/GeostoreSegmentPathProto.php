@@ -22,7 +22,7 @@ class GeostoreSegmentPathProto extends \Google\Collection
   protected $collection_key = 'subpath';
   protected $subpathType = GeostoreFeatureIdProto::class;
   protected $subpathDataType = 'array';
-  public $subpath;
+  public $subpath = [];
 
   /**
    * @param GeostoreFeatureIdProto[]

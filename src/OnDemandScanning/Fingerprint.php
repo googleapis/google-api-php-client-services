@@ -27,7 +27,7 @@ class Fingerprint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $v2Blob;
+  public $v2Blob = [];
   /**
    * @var string
    */

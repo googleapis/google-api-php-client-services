@@ -20,7 +20,7 @@ namespace Google\Service\CloudSearch;
 class DoubleValues extends \Google\Collection
 {
   protected $collection_key = 'values';
-  public $values;
+  public $values = [];
 
   public function setValues($values)
   {

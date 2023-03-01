@@ -22,14 +22,14 @@ class AppsPeopleOzExternalMergedpeopleapiEmail extends \Google\Collection
   protected $collection_key = 'contactGroupPreference';
   protected $certificateType = AppsPeopleOzExternalMergedpeopleapiEmailCertificate::class;
   protected $certificateDataType = 'array';
-  public $certificate;
+  public $certificate = [];
   /**
    * @var string
    */
   public $classification;
   protected $contactGroupPreferenceType = AppsPeopleOzExternalMergedpeopleapiEmailContactGroupPreference::class;
   protected $contactGroupPreferenceDataType = 'array';
-  public $contactGroupPreference;
+  public $contactGroupPreference = [];
   /**
    * @var string
    */

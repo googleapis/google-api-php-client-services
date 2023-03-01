@@ -25,7 +25,7 @@ class GetJSONWebKeysResponse extends \Google\Collection
   public $cacheHeader;
   protected $keysType = Jwk::class;
   protected $keysDataType = 'array';
-  public $keys;
+  public $keys = [];
 
   /**
    * @param HttpCacheControlResponseHeader

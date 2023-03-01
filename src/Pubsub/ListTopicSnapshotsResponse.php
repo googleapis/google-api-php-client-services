@@ -27,7 +27,7 @@ class ListTopicSnapshotsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $snapshots;
+  public $snapshots = [];
 
   /**
    * @param string

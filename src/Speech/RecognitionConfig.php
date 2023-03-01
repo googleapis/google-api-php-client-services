@@ -26,7 +26,7 @@ class RecognitionConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $alternativeLanguageCodes;
+  public $alternativeLanguageCodes = [];
   /**
    * @var int
    */
@@ -87,7 +87,7 @@ class RecognitionConfig extends \Google\Collection
   public $sampleRateHertz;
   protected $speechContextsType = SpeechContext::class;
   protected $speechContextsDataType = 'array';
-  public $speechContexts;
+  public $speechContexts = [];
   /**
    * @var bool
    */

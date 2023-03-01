@@ -26,14 +26,14 @@ class PromotionPromotionStatus extends \Google\Collection
   public $creationDate;
   protected $destinationStatusesType = PromotionPromotionStatusDestinationStatus::class;
   protected $destinationStatusesDataType = 'array';
-  public $destinationStatuses;
+  public $destinationStatuses = [];
   /**
    * @var string
    */
   public $lastUpdateDate;
   protected $promotionIssueType = PromotionPromotionStatusPromotionIssue::class;
   protected $promotionIssueDataType = 'array';
-  public $promotionIssue;
+  public $promotionIssue = [];
 
   /**
    * @param string

@@ -30,10 +30,10 @@ class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest extends \Google\C
   public $executionId;
   protected $inputParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $inputParametersDataType = 'map';
-  public $inputParameters;
+  public $inputParameters = [];
   protected $parameterEntriesType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $parameterEntriesDataType = 'array';
-  public $parameterEntries;
+  public $parameterEntries = [];
   protected $parametersType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $parametersDataType = '';
   public $parameters;

@@ -80,7 +80,7 @@ class Subscription extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suspensionReasons;
+  public $suspensionReasons = [];
   protected $transferInfoType = SubscriptionTransferInfo::class;
   protected $transferInfoDataType = '';
   public $transferInfo;

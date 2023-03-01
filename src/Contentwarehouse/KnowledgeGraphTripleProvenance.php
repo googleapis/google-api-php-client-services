@@ -49,7 +49,7 @@ class KnowledgeGraphTripleProvenance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictions;
+  public $restrictions = [];
   /**
    * @var string
    */

@@ -28,10 +28,10 @@ class ReportResult extends \Google\Collection
   public $endDate;
   protected $headersType = Header::class;
   protected $headersDataType = 'array';
-  public $headers;
+  public $headers = [];
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
   public $startDate;
@@ -45,7 +45,7 @@ class ReportResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param Row

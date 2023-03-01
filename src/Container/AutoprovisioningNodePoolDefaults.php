@@ -46,7 +46,7 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
   /**
    * @var string[]
    */
-  public $oauthScopes;
+  public $oauthScopes = [];
   /**
    * @var string
    */

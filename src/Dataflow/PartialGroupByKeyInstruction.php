@@ -26,7 +26,7 @@ class PartialGroupByKeyInstruction extends \Google\Collection
   /**
    * @var array[]
    */
-  public $inputElementCodec;
+  public $inputElementCodec = [];
   /**
    * @var string
    */
@@ -37,11 +37,11 @@ class PartialGroupByKeyInstruction extends \Google\Collection
   public $originalCombineValuesStepName;
   protected $sideInputsType = SideInputInfo::class;
   protected $sideInputsDataType = 'array';
-  public $sideInputs;
+  public $sideInputs = [];
   /**
    * @var array[]
    */
-  public $valueCombiningFn;
+  public $valueCombiningFn = [];
 
   /**
    * @param InstructionInput

@@ -22,7 +22,7 @@ class BatchGetValuesByDataFilterRequest extends \Google\Collection
   protected $collection_key = 'dataFilters';
   protected $dataFiltersType = DataFilter::class;
   protected $dataFiltersDataType = 'array';
-  public $dataFilters;
+  public $dataFilters = [];
   /**
    * @var string
    */

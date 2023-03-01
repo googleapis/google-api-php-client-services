@@ -27,7 +27,7 @@ class QueryOperator extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enumValues;
+  public $enumValues = [];
   /**
    * @var string
    */

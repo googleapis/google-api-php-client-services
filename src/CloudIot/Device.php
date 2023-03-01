@@ -29,7 +29,7 @@ class Device extends \Google\Collection
   public $config;
   protected $credentialsType = DeviceCredential::class;
   protected $credentialsDataType = 'array';
-  public $credentials;
+  public $credentials = [];
   protected $gatewayConfigType = GatewayConfig::class;
   protected $gatewayConfigDataType = '';
   public $gatewayConfig;
@@ -71,7 +71,7 @@ class Device extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

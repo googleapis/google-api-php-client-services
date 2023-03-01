@@ -30,7 +30,7 @@ class Settings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $authorizedGaeApplications;
+  public $authorizedGaeApplications = [];
   /**
    * @var string
    */
@@ -60,7 +60,7 @@ class Settings extends \Google\Collection
   public $dataDiskType;
   protected $databaseFlagsType = DatabaseFlags::class;
   protected $databaseFlagsDataType = 'array';
-  public $databaseFlags;
+  public $databaseFlags = [];
   /**
    * @var bool
    */
@@ -71,7 +71,7 @@ class Settings extends \Google\Collection
   public $deletionProtectionEnabled;
   protected $denyMaintenancePeriodsType = DenyMaintenancePeriod::class;
   protected $denyMaintenancePeriodsDataType = 'array';
-  public $denyMaintenancePeriods;
+  public $denyMaintenancePeriods = [];
   protected $insightsConfigType = InsightsConfig::class;
   protected $insightsConfigDataType = '';
   public $insightsConfig;
@@ -125,7 +125,7 @@ class Settings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $userLabels;
+  public $userLabels = [];
 
   /**
    * @param string

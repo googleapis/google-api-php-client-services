@@ -35,7 +35,7 @@ class Environment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $publicKeys;
+  public $publicKeys = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class DatabaseInstance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableMaintenanceVersions;
+  public $availableMaintenanceVersions = [];
   /**
    * @var string
    */
@@ -71,7 +71,7 @@ class DatabaseInstance extends \Google\Collection
   public $instanceType;
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
-  public $ipAddresses;
+  public $ipAddresses = [];
   /**
    * @var string
    */
@@ -116,7 +116,7 @@ class DatabaseInstance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $replicaNames;
+  public $replicaNames = [];
   /**
    * @var string
    */
@@ -153,7 +153,7 @@ class DatabaseInstance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suspensionReason;
+  public $suspensionReason = [];
 
   /**
    * @param string[]

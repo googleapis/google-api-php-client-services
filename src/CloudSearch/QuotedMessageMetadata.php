@@ -22,7 +22,7 @@ class QuotedMessageMetadata extends \Google\Collection
   protected $collection_key = 'uploadMetadata';
   protected $annotationsType = Annotation::class;
   protected $annotationsDataType = 'array';
-  public $annotations;
+  public $annotations = [];
   protected $appProfileType = AppsDynamiteSharedAppProfile::class;
   protected $appProfileDataType = '';
   public $appProfile;
@@ -64,7 +64,7 @@ class QuotedMessageMetadata extends \Google\Collection
   public $updaterId;
   protected $uploadMetadataType = UploadMetadata::class;
   protected $uploadMetadataDataType = 'array';
-  public $uploadMetadata;
+  public $uploadMetadata = [];
 
   /**
    * @param Annotation[]

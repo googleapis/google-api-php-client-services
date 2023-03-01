@@ -23,10 +23,10 @@ class WafExpressionSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aliases;
+  public $aliases = [];
   protected $expressionsType = WafExpressionSetExpression::class;
   protected $expressionsDataType = 'array';
-  public $expressions;
+  public $expressions = [];
   /**
    * @var string
    */

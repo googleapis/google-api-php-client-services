@@ -35,7 +35,7 @@ class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends \Google\Collect
   /**
    * @var string[]
    */
-  public $testCaseResults;
+  public $testCaseResults = [];
 
   /**
    * @param string

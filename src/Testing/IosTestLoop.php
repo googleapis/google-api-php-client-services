@@ -30,7 +30,7 @@ class IosTestLoop extends \Google\Collection
   /**
    * @var int[]
    */
-  public $scenarios;
+  public $scenarios = [];
 
   /**
    * @param string

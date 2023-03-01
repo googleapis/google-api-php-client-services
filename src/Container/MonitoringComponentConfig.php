@@ -23,7 +23,7 @@ class MonitoringComponentConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $enableComponents;
+  public $enableComponents = [];
 
   /**
    * @param string[]

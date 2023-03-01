@@ -23,7 +23,7 @@ class GoogleCloudVideointelligenceV1AnnotateVideoRequest extends \Google\Collect
   /**
    * @var string[]
    */
-  public $features;
+  public $features = [];
   /**
    * @var string
    */

@@ -36,7 +36,7 @@ class OrderinvoicesCreateRefundInvoiceRequest extends \Google\Collection
   public $returnOption;
   protected $shipmentInvoicesType = ShipmentInvoice::class;
   protected $shipmentInvoicesDataType = 'array';
-  public $shipmentInvoices;
+  public $shipmentInvoices = [];
 
   /**
    * @param string

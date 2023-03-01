@@ -22,7 +22,7 @@ class ListDeviceTierConfigsResponse extends \Google\Collection
   protected $collection_key = 'deviceTierConfigs';
   protected $deviceTierConfigsType = DeviceTierConfig::class;
   protected $deviceTierConfigsDataType = 'array';
-  public $deviceTierConfigs;
+  public $deviceTierConfigs = [];
   /**
    * @var string
    */

@@ -46,7 +46,7 @@ class PlaylistSnippet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
   /**
    * @var string
    */

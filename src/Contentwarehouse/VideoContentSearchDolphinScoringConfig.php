@@ -27,7 +27,7 @@ class VideoContentSearchDolphinScoringConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ensembleModelNames;
+  public $ensembleModelNames = [];
   /**
    * @var int
    */

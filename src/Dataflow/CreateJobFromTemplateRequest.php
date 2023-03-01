@@ -37,7 +37,7 @@ class CreateJobFromTemplateRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param RuntimeEnvironment

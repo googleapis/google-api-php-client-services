@@ -36,13 +36,13 @@ class GoogleCloudDocumentaiV1beta2DocumentPageFormField extends \Google\Collecti
   public $fieldValue;
   protected $nameDetectedLanguagesType = GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage::class;
   protected $nameDetectedLanguagesDataType = 'array';
-  public $nameDetectedLanguages;
+  public $nameDetectedLanguages = [];
   protected $provenanceType = GoogleCloudDocumentaiV1beta2DocumentProvenance::class;
   protected $provenanceDataType = '';
   public $provenance;
   protected $valueDetectedLanguagesType = GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage::class;
   protected $valueDetectedLanguagesDataType = 'array';
-  public $valueDetectedLanguages;
+  public $valueDetectedLanguages = [];
   /**
    * @var string
    */

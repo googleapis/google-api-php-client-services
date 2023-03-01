@@ -34,7 +34,7 @@ class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fileTypes;
+  public $fileTypes = [];
   /**
    * @var int
    */

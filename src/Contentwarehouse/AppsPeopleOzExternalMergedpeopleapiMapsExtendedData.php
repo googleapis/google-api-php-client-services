@@ -46,7 +46,7 @@ class AppsPeopleOzExternalMergedpeopleapiMapsExtendedData extends \Google\Collec
   /**
    * @var string[]
    */
-  public $topicExpertise;
+  public $topicExpertise = [];
   /**
    * @var string
    */

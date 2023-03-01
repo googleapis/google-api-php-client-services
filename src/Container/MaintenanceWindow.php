@@ -24,7 +24,7 @@ class MaintenanceWindow extends \Google\Model
   public $dailyMaintenanceWindow;
   protected $maintenanceExclusionsType = TimeWindow::class;
   protected $maintenanceExclusionsDataType = 'map';
-  public $maintenanceExclusions;
+  public $maintenanceExclusions = [];
   protected $recurringWindowType = RecurringTimeWindow::class;
   protected $recurringWindowDataType = '';
   public $recurringWindow;

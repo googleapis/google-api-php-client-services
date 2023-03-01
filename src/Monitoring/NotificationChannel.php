@@ -38,10 +38,10 @@ class NotificationChannel extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $mutationRecordsType = MutationRecord::class;
   protected $mutationRecordsDataType = 'array';
-  public $mutationRecords;
+  public $mutationRecords = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class NotificationChannel extends \Google\Collection
   /**
    * @var string[]
    */
-  public $userLabels;
+  public $userLabels = [];
   /**
    * @var string
    */

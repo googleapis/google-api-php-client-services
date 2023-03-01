@@ -22,7 +22,7 @@ class McfData extends \Google\Collection
   protected $collection_key = 'rows';
   protected $columnHeadersType = McfDataColumnHeaders::class;
   protected $columnHeadersDataType = 'array';
-  public $columnHeaders;
+  public $columnHeaders = [];
   /**
    * @var bool
    */
@@ -55,7 +55,7 @@ class McfData extends \Google\Collection
   public $query;
   protected $rowsType = McfDataRows::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class McfData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $totalsForAllResults;
+  public $totalsForAllResults = [];
 
   /**
    * @param McfDataColumnHeaders[]

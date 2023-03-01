@@ -42,7 +42,7 @@ class GoogleCloudApigeeV1SharedFlowRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $entityMetaDataAsProperties;
+  public $entityMetaDataAsProperties = [];
   /**
    * @var string
    */
@@ -54,14 +54,14 @@ class GoogleCloudApigeeV1SharedFlowRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $policies;
+  public $policies = [];
   protected $resourceFilesType = GoogleCloudApigeeV1ResourceFiles::class;
   protected $resourceFilesDataType = '';
   public $resourceFiles;
   /**
    * @var string[]
    */
-  public $resources;
+  public $resources = [];
   /**
    * @var string
    */
@@ -69,7 +69,7 @@ class GoogleCloudApigeeV1SharedFlowRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sharedFlows;
+  public $sharedFlows = [];
   /**
    * @var string
    */

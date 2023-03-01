@@ -29,7 +29,7 @@ class CheckRequest extends \Google\Collection
   public $flags;
   protected $resourcesType = ResourceInfo::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
   /**
    * @var string
    */

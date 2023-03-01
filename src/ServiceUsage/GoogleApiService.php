@@ -22,7 +22,7 @@ class GoogleApiService extends \Google\Collection
   protected $collection_key = 'types';
   protected $apisType = Api::class;
   protected $apisDataType = 'array';
-  public $apis;
+  public $apis = [];
   protected $authenticationType = Authentication::class;
   protected $authenticationDataType = '';
   public $authentication;
@@ -50,10 +50,10 @@ class GoogleApiService extends \Google\Collection
   public $documentation;
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
-  public $endpoints;
+  public $endpoints = [];
   protected $enumsType = Enum::class;
   protected $enumsDataType = 'array';
-  public $enums;
+  public $enums = [];
   protected $httpType = Http::class;
   protected $httpDataType = '';
   public $http;
@@ -66,13 +66,13 @@ class GoogleApiService extends \Google\Collection
   public $logging;
   protected $logsType = LogDescriptor::class;
   protected $logsDataType = 'array';
-  public $logs;
+  public $logs = [];
   protected $metricsType = MetricDescriptor::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   protected $monitoredResourcesType = MonitoredResourceDescriptor::class;
   protected $monitoredResourcesDataType = 'array';
-  public $monitoredResources;
+  public $monitoredResources = [];
   protected $monitoringType = Monitoring::class;
   protected $monitoringDataType = '';
   public $monitoring;
@@ -98,14 +98,14 @@ class GoogleApiService extends \Google\Collection
   public $systemParameters;
   protected $systemTypesType = Type::class;
   protected $systemTypesDataType = 'array';
-  public $systemTypes;
+  public $systemTypes = [];
   /**
    * @var string
    */
   public $title;
   protected $typesType = Type::class;
   protected $typesDataType = 'array';
-  public $types;
+  public $types = [];
   protected $usageType = Usage::class;
   protected $usageDataType = '';
   public $usage;

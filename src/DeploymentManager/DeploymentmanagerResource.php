@@ -64,7 +64,7 @@ class DeploymentmanagerResource extends \Google\Collection
   public $url;
   protected $warningsType = DeploymentmanagerResourceWarnings::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param ResourceAccessControl

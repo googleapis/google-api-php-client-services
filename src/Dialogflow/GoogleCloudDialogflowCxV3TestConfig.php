@@ -31,7 +31,7 @@ class GoogleCloudDialogflowCxV3TestConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $trackingParameters;
+  public $trackingParameters = [];
 
   /**
    * @param string

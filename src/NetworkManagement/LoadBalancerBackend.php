@@ -27,11 +27,11 @@ class LoadBalancerBackend extends \Google\Collection
   /**
    * @var string[]
    */
-  public $healthCheckAllowingFirewallRules;
+  public $healthCheckAllowingFirewallRules = [];
   /**
    * @var string[]
    */
-  public $healthCheckBlockingFirewallRules;
+  public $healthCheckBlockingFirewallRules = [];
   /**
    * @var string
    */

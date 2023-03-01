@@ -22,10 +22,10 @@ class ApigatewayPolicy extends \Google\Collection
   protected $collection_key = 'bindings';
   protected $auditConfigsType = ApigatewayAuditConfig::class;
   protected $auditConfigsDataType = 'array';
-  public $auditConfigs;
+  public $auditConfigs = [];
   protected $bindingsType = ApigatewayBinding::class;
   protected $bindingsDataType = 'array';
-  public $bindings;
+  public $bindings = [];
   /**
    * @var string
    */

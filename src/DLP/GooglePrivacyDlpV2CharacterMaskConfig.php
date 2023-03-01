@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2CharacterMaskConfig extends \Google\Collection
   protected $collection_key = 'charactersToIgnore';
   protected $charactersToIgnoreType = GooglePrivacyDlpV2CharsToIgnore::class;
   protected $charactersToIgnoreDataType = 'array';
-  public $charactersToIgnore;
+  public $charactersToIgnore = [];
   /**
    * @var string
    */

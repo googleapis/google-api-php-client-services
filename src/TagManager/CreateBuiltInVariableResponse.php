@@ -22,7 +22,7 @@ class CreateBuiltInVariableResponse extends \Google\Collection
   protected $collection_key = 'builtInVariable';
   protected $builtInVariableType = BuiltInVariable::class;
   protected $builtInVariableDataType = 'array';
-  public $builtInVariable;
+  public $builtInVariable = [];
 
   /**
    * @param BuiltInVariable[]

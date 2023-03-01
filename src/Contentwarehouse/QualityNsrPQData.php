@@ -62,7 +62,7 @@ class QualityNsrPQData extends \Google\Collection
   public $page2vecLq;
   protected $subchunkDataType = QualityNsrPQDataSubchunkData::class;
   protected $subchunkDataDataType = 'array';
-  public $subchunkData;
+  public $subchunkData = [];
   /**
    * @var float
    */

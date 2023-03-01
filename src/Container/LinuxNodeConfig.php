@@ -26,7 +26,7 @@ class LinuxNodeConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $sysctls;
+  public $sysctls = [];
 
   /**
    * @param string

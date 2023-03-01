@@ -31,26 +31,26 @@ class GrpcRoute extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gateways;
+  public $gateways = [];
   /**
    * @var string[]
    */
-  public $hostnames;
+  public $hostnames = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string[]
    */
-  public $meshes;
+  public $meshes = [];
   /**
    * @var string
    */
   public $name;
   protected $rulesType = GrpcRouteRouteRule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
   /**
    * @var string
    */

@@ -28,7 +28,7 @@ class SearchResponse extends \Google\Collection
   public $errorInfo;
   protected $facetResultsType = FacetResult::class;
   protected $facetResultsDataType = 'array';
-  public $facetResults;
+  public $facetResults = [];
   /**
    * @var bool
    */
@@ -49,13 +49,13 @@ class SearchResponse extends \Google\Collection
   public $resultCounts;
   protected $resultsType = SearchResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   protected $spellResultsType = SpellResult::class;
   protected $spellResultsDataType = 'array';
-  public $spellResults;
+  public $spellResults = [];
   protected $structuredResultsType = StructuredResult::class;
   protected $structuredResultsDataType = 'array';
-  public $structuredResults;
+  public $structuredResults = [];
 
   /**
    * @param ResponseDebugInfo

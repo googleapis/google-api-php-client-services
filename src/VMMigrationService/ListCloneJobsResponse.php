@@ -22,7 +22,7 @@ class ListCloneJobsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $cloneJobsType = CloneJob::class;
   protected $cloneJobsDataType = 'array';
-  public $cloneJobs;
+  public $cloneJobs = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListCloneJobsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param CloneJob[]

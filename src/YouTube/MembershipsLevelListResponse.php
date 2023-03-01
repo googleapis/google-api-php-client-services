@@ -30,7 +30,7 @@ class MembershipsLevelListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = MembershipsLevel::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

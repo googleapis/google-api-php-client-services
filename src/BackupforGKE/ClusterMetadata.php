@@ -26,7 +26,7 @@ class ClusterMetadata extends \Google\Model
   /**
    * @var string[]
    */
-  public $backupCrdVersions;
+  public $backupCrdVersions = [];
   /**
    * @var string
    */

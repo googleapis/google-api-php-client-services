@@ -39,7 +39,7 @@ class Runtime extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param string

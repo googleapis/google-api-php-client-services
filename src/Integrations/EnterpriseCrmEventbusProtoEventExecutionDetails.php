@@ -22,10 +22,10 @@ class EnterpriseCrmEventbusProtoEventExecutionDetails extends \Google\Collection
   protected $collection_key = 'eventExecutionSnapshot';
   protected $eventAttemptStatsType = EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats::class;
   protected $eventAttemptStatsDataType = 'array';
-  public $eventAttemptStats;
+  public $eventAttemptStats = [];
   protected $eventExecutionSnapshotType = EnterpriseCrmEventbusProtoEventExecutionSnapshot::class;
   protected $eventExecutionSnapshotDataType = 'array';
-  public $eventExecutionSnapshot;
+  public $eventExecutionSnapshot = [];
   /**
    * @var string
    */

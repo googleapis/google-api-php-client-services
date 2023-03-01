@@ -23,17 +23,17 @@ class Search extends \Google\Collection
   /**
    * @var array[]
    */
-  public $context;
+  public $context = [];
   protected $itemsType = Result::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
   public $kind;
   protected $promotionsType = Promotion::class;
   protected $promotionsDataType = 'array';
-  public $promotions;
+  public $promotions = [];
   protected $queriesType = SearchQueries::class;
   protected $queriesDataType = '';
   public $queries;

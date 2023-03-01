@@ -38,7 +38,7 @@ class Write extends \Google\Collection
   public $updateMask;
   protected $updateTransformsType = FieldTransform::class;
   protected $updateTransformsDataType = 'array';
-  public $updateTransforms;
+  public $updateTransforms = [];
 
   /**
    * @param Precondition

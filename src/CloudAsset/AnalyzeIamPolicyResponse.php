@@ -29,7 +29,7 @@ class AnalyzeIamPolicyResponse extends \Google\Collection
   public $mainAnalysis;
   protected $serviceAccountImpersonationAnalysisType = IamPolicyAnalysis::class;
   protected $serviceAccountImpersonationAnalysisDataType = 'array';
-  public $serviceAccountImpersonationAnalysis;
+  public $serviceAccountImpersonationAnalysis = [];
 
   /**
    * @param bool

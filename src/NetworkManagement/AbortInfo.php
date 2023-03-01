@@ -27,7 +27,7 @@ class AbortInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $projectsMissingPermission;
+  public $projectsMissingPermission = [];
   /**
    * @var string
    */

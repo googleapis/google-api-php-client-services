@@ -22,10 +22,10 @@ class MetricHeader extends \Google\Collection
   protected $collection_key = 'pivotHeaders';
   protected $metricHeaderEntriesType = MetricHeaderEntry::class;
   protected $metricHeaderEntriesDataType = 'array';
-  public $metricHeaderEntries;
+  public $metricHeaderEntries = [];
   protected $pivotHeadersType = PivotHeader::class;
   protected $pivotHeadersDataType = 'array';
-  public $pivotHeaders;
+  public $pivotHeaders = [];
 
   /**
    * @param MetricHeaderEntry[]

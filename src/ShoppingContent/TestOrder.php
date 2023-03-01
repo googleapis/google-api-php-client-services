@@ -33,7 +33,7 @@ class TestOrder extends \Google\Collection
   public $kind;
   protected $lineItemsType = TestOrderLineItem::class;
   protected $lineItemsDataType = 'array';
-  public $lineItems;
+  public $lineItems = [];
   /**
    * @var string
    */
@@ -59,7 +59,7 @@ class TestOrder extends \Google\Collection
   public $predefinedPickupDetails;
   protected $promotionsType = OrderPromotion::class;
   protected $promotionsDataType = 'array';
-  public $promotions;
+  public $promotions = [];
   protected $shippingCostType = Price::class;
   protected $shippingCostDataType = '';
   public $shippingCost;

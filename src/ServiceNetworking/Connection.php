@@ -31,7 +31,7 @@ class Connection extends \Google\Collection
   /**
    * @var string[]
    */
-  public $reservedPeeringRanges;
+  public $reservedPeeringRanges = [];
   /**
    * @var string
    */

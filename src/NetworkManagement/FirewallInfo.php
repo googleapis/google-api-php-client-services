@@ -51,11 +51,11 @@ class FirewallInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetServiceAccounts;
+  public $targetServiceAccounts = [];
   /**
    * @var string[]
    */
-  public $targetTags;
+  public $targetTags = [];
   /**
    * @var string
    */

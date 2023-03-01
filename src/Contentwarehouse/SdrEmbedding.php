@@ -26,7 +26,7 @@ class SdrEmbedding extends \Google\Collection
   /**
    * @var float[]
    */
-  public $values;
+  public $values = [];
   /**
    * @var int
    */

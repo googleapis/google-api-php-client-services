@@ -58,7 +58,7 @@ class PublicDelegatedPrefix extends \Google\Collection
   public $parentPrefix;
   protected $publicDelegatedSubPrefixsType = PublicDelegatedPrefixPublicDelegatedSubPrefix::class;
   protected $publicDelegatedSubPrefixsDataType = 'array';
-  public $publicDelegatedSubPrefixs;
+  public $publicDelegatedSubPrefixs = [];
   /**
    * @var string
    */

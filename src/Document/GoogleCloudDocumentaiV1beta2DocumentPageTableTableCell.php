@@ -26,7 +26,7 @@ class GoogleCloudDocumentaiV1beta2DocumentPageTableTableCell extends \Google\Col
   public $colSpan;
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
-  public $detectedLanguages;
+  public $detectedLanguages = [];
   protected $layoutType = GoogleCloudDocumentaiV1beta2DocumentPageLayout::class;
   protected $layoutDataType = '';
   public $layout;

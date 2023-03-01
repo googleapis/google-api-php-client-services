@@ -22,7 +22,7 @@ class ListInventorySourcesResponse extends \Google\Collection
   protected $collection_key = 'inventorySources';
   protected $inventorySourcesType = InventorySource::class;
   protected $inventorySourcesDataType = 'array';
-  public $inventorySources;
+  public $inventorySources = [];
   /**
    * @var string
    */

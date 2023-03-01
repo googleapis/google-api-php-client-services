@@ -33,7 +33,7 @@ class GoogleCloudAssetV1GovernedContainer extends \Google\Collection
   public $parent;
   protected $policyBundleType = AnalyzerOrgPolicy::class;
   protected $policyBundleDataType = 'array';
-  public $policyBundle;
+  public $policyBundle = [];
 
   /**
    * @param AnalyzerOrgPolicy

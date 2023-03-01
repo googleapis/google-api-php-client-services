@@ -23,7 +23,7 @@ class EnterpriseCrmEventbusProtoIntArray extends \Google\Collection
   /**
    * @var string[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string[]

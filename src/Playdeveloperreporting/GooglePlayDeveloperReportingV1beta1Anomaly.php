@@ -22,7 +22,7 @@ class GooglePlayDeveloperReportingV1beta1Anomaly extends \Google\Collection
   protected $collection_key = 'dimensions';
   protected $dimensionsType = GooglePlayDeveloperReportingV1beta1DimensionValue::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   protected $metricType = GooglePlayDeveloperReportingV1beta1MetricValue::class;
   protected $metricDataType = '';
   public $metric;

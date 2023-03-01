@@ -35,14 +35,14 @@ class Step extends \Google\Collection
   public $deviceUsageDuration;
   protected $dimensionValueType = StepDimensionValueEntry::class;
   protected $dimensionValueDataType = 'array';
-  public $dimensionValue;
+  public $dimensionValue = [];
   /**
    * @var bool
    */
   public $hasImages;
   protected $labelsType = StepLabelsEntry::class;
   protected $labelsDataType = 'array';
-  public $labels;
+  public $labels = [];
   protected $multiStepType = MultiStep::class;
   protected $multiStepDataType = '';
   public $multiStep;

@@ -37,7 +37,7 @@ class Question extends \Google\Collection
   public $text;
   protected $topAnswersType = Answer::class;
   protected $topAnswersDataType = 'array';
-  public $topAnswers;
+  public $topAnswers = [];
   /**
    * @var int
    */

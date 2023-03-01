@@ -22,11 +22,11 @@ class BatchUndeleteAlertsResponse extends \Google\Collection
   protected $collection_key = 'successAlertIds';
   protected $failedAlertStatusType = Status::class;
   protected $failedAlertStatusDataType = 'map';
-  public $failedAlertStatus;
+  public $failedAlertStatus = [];
   /**
    * @var string[]
    */
-  public $successAlertIds;
+  public $successAlertIds = [];
 
   /**
    * @param Status[]

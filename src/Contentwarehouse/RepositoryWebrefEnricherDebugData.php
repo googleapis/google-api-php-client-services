@@ -22,13 +22,13 @@ class RepositoryWebrefEnricherDebugData extends \Google\Collection
   protected $collection_key = 'relatedPage';
   protected $nonMidPropertiesType = RepositoryWebrefCompactFlatPropertyValue::class;
   protected $nonMidPropertiesDataType = 'array';
-  public $nonMidProperties;
+  public $nonMidProperties = [];
   protected $referencePageType = RepositoryWebrefSimplifiedCompositeDoc::class;
   protected $referencePageDataType = 'array';
-  public $referencePage;
+  public $referencePage = [];
   protected $relatedPageType = RepositoryWebrefSimplifiedCompositeDoc::class;
   protected $relatedPageDataType = 'array';
-  public $relatedPage;
+  public $relatedPage = [];
 
   /**
    * @param RepositoryWebrefCompactFlatPropertyValue[]

@@ -32,7 +32,7 @@ class GoogleCloudVisionV1p2beta1Word extends \Google\Collection
   public $property;
   protected $symbolsType = GoogleCloudVisionV1p2beta1Symbol::class;
   protected $symbolsDataType = 'array';
-  public $symbols;
+  public $symbols = [];
 
   /**
    * @param GoogleCloudVisionV1p2beta1BoundingPoly

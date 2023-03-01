@@ -29,7 +29,7 @@ class JavaSettings extends \Google\Model
   /**
    * @var string[]
    */
-  public $serviceClassNames;
+  public $serviceClassNames = [];
 
   /**
    * @param CommonLanguageSettings

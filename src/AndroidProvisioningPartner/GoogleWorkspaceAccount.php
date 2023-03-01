@@ -27,7 +27,7 @@ class GoogleWorkspaceAccount extends \Google\Collection
   /**
    * @var string[]
    */
-  public $preProvisioningTokens;
+  public $preProvisioningTokens = [];
 
   /**
    * @param string

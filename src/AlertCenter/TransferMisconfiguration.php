@@ -22,7 +22,7 @@ class TransferMisconfiguration extends \Google\Collection
   protected $collection_key = 'errors';
   protected $errorsType = TransferError::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
 
   /**
    * @param TransferError[]

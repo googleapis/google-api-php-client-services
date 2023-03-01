@@ -36,7 +36,7 @@ class MigrationError extends \Google\Collection
   public $errorTime;
   protected $helpLinksType = Link::class;
   protected $helpLinksDataType = 'array';
-  public $helpLinks;
+  public $helpLinks = [];
 
   /**
    * @param LocalizedMessage

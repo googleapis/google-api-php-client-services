@@ -22,7 +22,7 @@ class SearchChainsResponse extends \Google\Collection
   protected $collection_key = 'chains';
   protected $chainsType = Chain::class;
   protected $chainsDataType = 'array';
-  public $chains;
+  public $chains = [];
 
   /**
    * @param Chain[]

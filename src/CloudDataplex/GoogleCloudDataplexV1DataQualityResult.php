@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1DataQualityResult extends \Google\Collection
   protected $collection_key = 'rules';
   protected $dimensionsType = GoogleCloudDataplexV1DataQualityDimensionResult::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var bool
    */
@@ -33,7 +33,7 @@ class GoogleCloudDataplexV1DataQualityResult extends \Google\Collection
   public $rowCount;
   protected $rulesType = GoogleCloudDataplexV1DataQualityRuleResult::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
   protected $scannedDataType = GoogleCloudDataplexV1ScannedData::class;
   protected $scannedDataDataType = '';
   public $scannedData;

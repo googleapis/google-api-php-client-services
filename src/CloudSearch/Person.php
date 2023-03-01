@@ -22,7 +22,7 @@ class Person extends \Google\Collection
   protected $collection_key = 'photos';
   protected $emailAddressesType = EmailAddress::class;
   protected $emailAddressesDataType = 'array';
-  public $emailAddresses;
+  public $emailAddresses = [];
   /**
    * @var string
    */
@@ -33,13 +33,13 @@ class Person extends \Google\Collection
   public $obfuscatedId;
   protected $personNamesType = Name::class;
   protected $personNamesDataType = 'array';
-  public $personNames;
+  public $personNames = [];
   protected $phoneNumbersType = PhoneNumber::class;
   protected $phoneNumbersDataType = 'array';
-  public $phoneNumbers;
+  public $phoneNumbers = [];
   protected $photosType = Photo::class;
   protected $photosDataType = 'array';
-  public $photos;
+  public $photos = [];
 
   /**
    * @param EmailAddress[]

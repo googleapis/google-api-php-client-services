@@ -38,7 +38,7 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $carUxRestrictions;
+  public $carUxRestrictions = [];
   protected $castType = AssistantApiCastCapabilities::class;
   protected $castDataType = '';
   public $cast;
@@ -110,7 +110,7 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedLocale;
+  public $supportedLocale = [];
   protected $surfaceIdentityType = AssistantApiCoreTypesSurfaceIdentity::class;
   protected $surfaceIdentityDataType = '';
   public $surfaceIdentity;

@@ -42,7 +42,7 @@ class SocialPersonalizationKnexAnnotationItem extends \Google\Collection
   public $mid;
   protected $relatedEntityType = SocialPersonalizationKnexAnnotationItemTopic::class;
   protected $relatedEntityDataType = 'array';
-  public $relatedEntity;
+  public $relatedEntity = [];
   /**
    * @var float
    */

@@ -22,7 +22,7 @@ class Hold extends \Google\Collection
   protected $collection_key = 'accounts';
   protected $accountsType = HeldAccount::class;
   protected $accountsDataType = 'array';
-  public $accounts;
+  public $accounts = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class GoogleCloudVideointelligenceV1p2beta1Track extends \Google\Collection
   protected $collection_key = 'timestampedObjects';
   protected $attributesType = GoogleCloudVideointelligenceV1p2beta1DetectedAttribute::class;
   protected $attributesDataType = 'array';
-  public $attributes;
+  public $attributes = [];
   /**
    * @var float
    */
@@ -32,7 +32,7 @@ class GoogleCloudVideointelligenceV1p2beta1Track extends \Google\Collection
   public $segment;
   protected $timestampedObjectsType = GoogleCloudVideointelligenceV1p2beta1TimestampedObject::class;
   protected $timestampedObjectsDataType = 'array';
-  public $timestampedObjects;
+  public $timestampedObjects = [];
 
   /**
    * @param GoogleCloudVideointelligenceV1p2beta1DetectedAttribute[]

@@ -22,7 +22,7 @@ class ImageRepositorySpeechRecognitionResult extends \Google\Collection
   protected $collection_key = 'alternatives';
   protected $alternativesType = ImageRepositorySpeechRecognitionAlternative::class;
   protected $alternativesDataType = 'array';
-  public $alternatives;
+  public $alternatives = [];
   /**
    * @var int
    */

@@ -31,11 +31,11 @@ class ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo extends \Google\
   /**
    * @var string[]
    */
-  public $entityCollectionType;
+  public $entityCollectionType = [];
   /**
    * @var string[]
    */
-  public $kgCollection;
+  public $kgCollection = [];
   /**
    * @var string
    */

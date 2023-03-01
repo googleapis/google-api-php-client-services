@@ -23,7 +23,7 @@ class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification extends \G
   /**
    * @var string[]
    */
-  public $encryptedLeakMatchPrefixes;
+  public $encryptedLeakMatchPrefixes = [];
   /**
    * @var string
    */

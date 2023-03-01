@@ -57,7 +57,7 @@ class Result extends \Google\Collection
   public $kind;
   protected $labelsType = ResultLabels::class;
   protected $labelsDataType = 'array';
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -69,7 +69,7 @@ class Result extends \Google\Collection
   /**
    * @var array[]
    */
-  public $pagemap;
+  public $pagemap = [];
   /**
    * @var string
    */

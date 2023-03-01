@@ -41,7 +41,7 @@ class Access extends \Google\Collection
   public $principalSubject;
   protected $serviceAccountDelegationInfoType = ServiceAccountDelegationInfo::class;
   protected $serviceAccountDelegationInfoDataType = 'array';
-  public $serviceAccountDelegationInfo;
+  public $serviceAccountDelegationInfo = [];
   /**
    * @var string
    */

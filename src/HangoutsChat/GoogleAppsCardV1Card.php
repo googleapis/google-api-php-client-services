@@ -22,7 +22,7 @@ class GoogleAppsCardV1Card extends \Google\Collection
   protected $collection_key = 'sections';
   protected $cardActionsType = GoogleAppsCardV1CardAction::class;
   protected $cardActionsDataType = 'array';
-  public $cardActions;
+  public $cardActions = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class GoogleAppsCardV1Card extends \Google\Collection
   public $peekCardHeader;
   protected $sectionsType = GoogleAppsCardV1Section::class;
   protected $sectionsDataType = 'array';
-  public $sections;
+  public $sections = [];
 
   /**
    * @param GoogleAppsCardV1CardAction[]

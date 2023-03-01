@@ -23,7 +23,7 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categories;
+  public $categories = [];
   /**
    * @var int
    */

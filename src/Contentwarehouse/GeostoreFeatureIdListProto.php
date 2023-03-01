@@ -22,7 +22,7 @@ class GeostoreFeatureIdListProto extends \Google\Collection
   protected $collection_key = 'id';
   protected $idType = GeostoreFeatureIdProto::class;
   protected $idDataType = 'array';
-  public $id;
+  public $id = [];
 
   /**
    * @param GeostoreFeatureIdProto[]

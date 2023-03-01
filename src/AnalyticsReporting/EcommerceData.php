@@ -30,7 +30,7 @@ class EcommerceData extends \Google\Collection
   public $ecommerceType;
   protected $productsType = ProductData::class;
   protected $productsDataType = 'array';
-  public $products;
+  public $products = [];
   protected $transactionType = TransactionData::class;
   protected $transactionDataType = '';
   public $transaction;

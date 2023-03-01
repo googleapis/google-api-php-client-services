@@ -23,7 +23,7 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
   /**
    * @var int[]
    */
-  public $columnIndices;
+  public $columnIndices = [];
   /**
    * @var string
    */

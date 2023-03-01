@@ -37,27 +37,27 @@ class AbuseiamVerdict extends \Google\Collection
   public $durationMins;
   protected $evaluationType = AbuseiamEvaluation::class;
   protected $evaluationDataType = 'array';
-  public $evaluation;
+  public $evaluation = [];
   protected $hashesType = AbuseiamHash::class;
   protected $hashesDataType = 'array';
-  public $hashes;
+  public $hashes = [];
   /**
    * @var bool
    */
   public $isLegalIssued;
   protected $miscScoresType = AbuseiamNameValuePair::class;
   protected $miscScoresDataType = 'array';
-  public $miscScores;
+  public $miscScores = [];
   /**
    * @var string
    */
   public $reasonCode;
   protected $regionType = AbuseiamRegion::class;
   protected $regionDataType = 'array';
-  public $region;
+  public $region = [];
   protected $restrictionType = AbuseiamVerdictRestriction::class;
   protected $restrictionDataType = 'array';
-  public $restriction;
+  public $restriction = [];
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class AbuseiamVerdict extends \Google\Collection
   public $timestampMicros;
   protected $userNotificationType = AbuseiamUserNotification::class;
   protected $userNotificationDataType = 'array';
-  public $userNotification;
+  public $userNotification = [];
   /**
    * @var string
    */

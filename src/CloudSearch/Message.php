@@ -22,22 +22,22 @@ class Message extends \Google\Collection
   protected $collection_key = 'uploadMetadata';
   protected $annotationsType = Annotation::class;
   protected $annotationsDataType = 'array';
-  public $annotations;
+  public $annotations = [];
   protected $appProfileType = AppsDynamiteSharedAppProfile::class;
   protected $appProfileDataType = '';
   public $appProfile;
   protected $attachmentsType = Attachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments;
+  public $attachments = [];
   protected $attributesType = MessageAttributes::class;
   protected $attributesDataType = '';
   public $attributes;
   protected $botResponsesType = BotResponse::class;
   protected $botResponsesDataType = 'array';
-  public $botResponses;
+  public $botResponses = [];
   protected $communalLabelsType = CommunalLabelTag::class;
   protected $communalLabelsDataType = 'array';
-  public $communalLabels;
+  public $communalLabels = [];
   protected $contentReportSummaryType = ContentReportSummary::class;
   protected $contentReportSummaryDataType = '';
   public $contentReportSummary;
@@ -115,13 +115,13 @@ class Message extends \Google\Collection
   public $messageState;
   protected $originAppSuggestionsType = AppsDynamiteSharedOriginAppSuggestion::class;
   protected $originAppSuggestionsDataType = 'array';
-  public $originAppSuggestions;
+  public $originAppSuggestions = [];
   protected $personalLabelsType = PersonalLabelTag::class;
   protected $personalLabelsDataType = 'array';
-  public $personalLabels;
+  public $personalLabels = [];
   protected $privateMessageInfosType = PrivateMessageInfo::class;
   protected $privateMessageInfosDataType = 'array';
-  public $privateMessageInfos;
+  public $privateMessageInfos = [];
   protected $privateMessageViewerType = UserId::class;
   protected $privateMessageViewerDataType = '';
   public $privateMessageViewer;
@@ -137,10 +137,10 @@ class Message extends \Google\Collection
   public $quotedMessageMetadata;
   protected $reactionsType = AppsDynamiteSharedReaction::class;
   protected $reactionsDataType = 'array';
-  public $reactions;
+  public $reactions = [];
   protected $reportsType = ContentReport::class;
   protected $reportsDataType = 'array';
-  public $reports;
+  public $reports = [];
   protected $retentionSettingsType = AppsDynamiteSharedRetentionSettings::class;
   protected $retentionSettingsDataType = '';
   public $retentionSettings;
@@ -164,7 +164,7 @@ class Message extends \Google\Collection
   public $updaterId;
   protected $uploadMetadataType = UploadMetadata::class;
   protected $uploadMetadataDataType = 'array';
-  public $uploadMetadata;
+  public $uploadMetadata = [];
 
   /**
    * @param Annotation[]

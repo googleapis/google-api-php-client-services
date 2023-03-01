@@ -31,7 +31,7 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aliasName;
+  public $aliasName = [];
   /**
    * @var bool
    */
@@ -95,7 +95,7 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $faceEnrollmentErrors;
+  public $faceEnrollmentErrors = [];
   /**
    * @var string
    */
@@ -160,10 +160,10 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
   public $lastUsedCoarseTimestamp;
   protected $linkedDeviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $linkedDeviceIdDataType = 'array';
-  public $linkedDeviceId;
+  public $linkedDeviceId = [];
   protected $linkedUsersType = AssistantApiSettingsLinkedUser::class;
   protected $linkedUsersDataType = 'array';
-  public $linkedUsers;
+  public $linkedUsers = [];
   /**
    * @var string
    */

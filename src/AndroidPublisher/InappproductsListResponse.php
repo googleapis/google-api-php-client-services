@@ -22,7 +22,7 @@ class InappproductsListResponse extends \Google\Collection
   protected $collection_key = 'inappproduct';
   protected $inappproductType = InAppProduct::class;
   protected $inappproductDataType = 'array';
-  public $inappproduct;
+  public $inappproduct = [];
   /**
    * @var string
    */

@@ -33,7 +33,7 @@ class TestOrderPickupDetails extends \Google\Collection
   public $pickupLocationType;
   protected $pickupPersonsType = TestOrderPickupDetailsPickupPerson::class;
   protected $pickupPersonsDataType = 'array';
-  public $pickupPersons;
+  public $pickupPersons = [];
 
   /**
    * @param string

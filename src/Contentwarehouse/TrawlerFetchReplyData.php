@@ -107,7 +107,7 @@ class TrawlerFetchReplyData extends \Google\Collection
   public $endpoints;
   protected $eventsType = TrawlerEvent::class;
   protected $eventsDataType = 'array';
-  public $events;
+  public $events = [];
   /**
    * @var string
    */
@@ -134,7 +134,7 @@ class TrawlerFetchReplyData extends \Google\Collection
   public $hSTSInfo;
   protected $hTTPTrailersType = TrawlerFetchReplyDataHTTPHeader::class;
   protected $hTTPTrailersDataType = 'array';
-  public $hTTPTrailers;
+  public $hTTPTrailers = [];
   /**
    * @var string
    */
@@ -183,7 +183,7 @@ class TrawlerFetchReplyData extends \Google\Collection
   public $lastUrlStatus;
   protected $policyDataType = TrawlerPolicyData::class;
   protected $policyDataDataType = 'array';
-  public $policyData;
+  public $policyData = [];
   /**
    * @var string
    */
@@ -244,7 +244,7 @@ class TrawlerFetchReplyData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $transparentRewrites;
+  public $transparentRewrites = [];
   protected $trawlerPrivateType = TrawlerTrawlerPrivateFetchReplyData::class;
   protected $trawlerPrivateDataType = '';
   public $trawlerPrivate;
@@ -281,7 +281,7 @@ class TrawlerFetchReplyData extends \Google\Collection
   public $protocolresponse;
   protected $redirectsType = TrawlerFetchReplyDataRedirects::class;
   protected $redirectsDataType = 'array';
-  public $redirects;
+  public $redirects = [];
   /**
    * @var string
    */

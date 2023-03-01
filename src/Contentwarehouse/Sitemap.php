@@ -30,10 +30,10 @@ class Sitemap extends \Google\Collection
   public $dEPRECATEDSourceTitle;
   protected $targetGroupsType = QualitySitemapTargetGroup::class;
   protected $targetGroupsDataType = 'array';
-  public $targetGroups;
+  public $targetGroups = [];
   protected $deprecatedTargetType = SitemapDEPRECATEDTarget::class;
   protected $deprecatedTargetDataType = 'array';
-  public $deprecatedTarget;
+  public $deprecatedTarget = [];
   protected $pageAnchorsDocInfoType = SdrPageAnchorsDocInfo::class;
   protected $pageAnchorsDocInfoDataType = '';
   public $pageAnchorsDocInfo;

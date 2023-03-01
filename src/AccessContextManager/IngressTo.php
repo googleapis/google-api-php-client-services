@@ -22,11 +22,11 @@ class IngressTo extends \Google\Collection
   protected $collection_key = 'resources';
   protected $operationsType = ApiOperation::class;
   protected $operationsDataType = 'array';
-  public $operations;
+  public $operations = [];
   /**
    * @var string[]
    */
-  public $resources;
+  public $resources = [];
 
   /**
    * @param ApiOperation[]

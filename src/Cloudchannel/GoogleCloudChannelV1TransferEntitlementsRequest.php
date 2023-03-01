@@ -26,7 +26,7 @@ class GoogleCloudChannelV1TransferEntitlementsRequest extends \Google\Collection
   public $authToken;
   protected $entitlementsType = GoogleCloudChannelV1Entitlement::class;
   protected $entitlementsDataType = 'array';
-  public $entitlements;
+  public $entitlements = [];
   /**
    * @var string
    */

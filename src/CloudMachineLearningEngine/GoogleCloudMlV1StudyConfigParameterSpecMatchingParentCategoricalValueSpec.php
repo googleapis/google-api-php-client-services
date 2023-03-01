@@ -23,7 +23,7 @@ class GoogleCloudMlV1StudyConfigParameterSpecMatchingParentCategoricalValueSpec 
   /**
    * @var string[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string[]

@@ -33,7 +33,7 @@ class BfdStatus extends \Google\Collection
   public $controlPacketCounts;
   protected $controlPacketIntervalsType = PacketIntervals::class;
   protected $controlPacketIntervalsDataType = 'array';
-  public $controlPacketIntervals;
+  public $controlPacketIntervals = [];
   /**
    * @var string
    */

@@ -66,7 +66,7 @@ class AnchorsAnchorSource extends \Google\Collection
   /**
    * @var int[]
    */
-  public $localCountryCodes;
+  public $localCountryCodes = [];
   /**
    * @var string
    */
@@ -86,7 +86,7 @@ class AnchorsAnchorSource extends \Google\Collection
   /**
    * @var int[]
    */
-  public $pageTags;
+  public $pageTags = [];
   /**
    * @var int
    */

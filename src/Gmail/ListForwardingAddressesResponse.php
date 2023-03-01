@@ -22,7 +22,7 @@ class ListForwardingAddressesResponse extends \Google\Collection
   protected $collection_key = 'forwardingAddresses';
   protected $forwardingAddressesType = ForwardingAddress::class;
   protected $forwardingAddressesDataType = 'array';
-  public $forwardingAddresses;
+  public $forwardingAddresses = [];
 
   /**
    * @param ForwardingAddress[]

@@ -27,7 +27,7 @@ class BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule ex
   /**
    * @var string[]
    */
-  public $services;
+  public $services = [];
   /**
    * @var string
    */

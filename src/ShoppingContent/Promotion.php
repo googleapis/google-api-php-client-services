@@ -23,11 +23,11 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $brand;
+  public $brand = [];
   /**
    * @var string[]
    */
-  public $brandExclusion;
+  public $brandExclusion = [];
   /**
    * @var string
    */
@@ -62,19 +62,19 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $itemGroupId;
+  public $itemGroupId = [];
   /**
    * @var string[]
    */
-  public $itemGroupIdExclusion;
+  public $itemGroupIdExclusion = [];
   /**
    * @var string[]
    */
-  public $itemId;
+  public $itemId = [];
   /**
    * @var string[]
    */
-  public $itemIdExclusion;
+  public $itemIdExclusion = [];
   /**
    * @var int
    */
@@ -118,15 +118,15 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productType;
+  public $productType = [];
   /**
    * @var string[]
    */
-  public $productTypeExclusion;
+  public $productTypeExclusion = [];
   /**
    * @var string[]
    */
-  public $promotionDestinationIds;
+  public $promotionDestinationIds = [];
   /**
    * @var string
    */
@@ -155,11 +155,11 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $redemptionChannel;
+  public $redemptionChannel = [];
   /**
    * @var string[]
    */
-  public $shippingServiceNames;
+  public $shippingServiceNames = [];
   /**
    * @var string
    */
@@ -167,11 +167,11 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $storeCode;
+  public $storeCode = [];
   /**
    * @var string[]
    */
-  public $storeCodeExclusion;
+  public $storeCodeExclusion = [];
   /**
    * @var string
    */

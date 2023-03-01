@@ -23,7 +23,7 @@ class ExportAssetsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assetTypes;
+  public $assetTypes = [];
   /**
    * @var string
    */
@@ -38,7 +38,7 @@ class ExportAssetsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relationshipTypes;
+  public $relationshipTypes = [];
 
   /**
    * @param string[]

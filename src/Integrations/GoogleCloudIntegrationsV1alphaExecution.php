@@ -26,7 +26,7 @@ class GoogleCloudIntegrationsV1alphaExecution extends \Google\Collection
   public $createTime;
   protected $directSubExecutionsType = GoogleCloudIntegrationsV1alphaExecution::class;
   protected $directSubExecutionsDataType = 'array';
-  public $directSubExecutions;
+  public $directSubExecutions = [];
   protected $eventExecutionDetailsType = EnterpriseCrmEventbusProtoEventExecutionDetails::class;
   protected $eventExecutionDetailsDataType = '';
   public $eventExecutionDetails;
@@ -43,16 +43,16 @@ class GoogleCloudIntegrationsV1alphaExecution extends \Google\Collection
   public $name;
   protected $requestParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $requestParametersDataType = 'map';
-  public $requestParameters;
+  public $requestParameters = [];
   protected $requestParamsType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $requestParamsDataType = 'array';
-  public $requestParams;
+  public $requestParams = [];
   protected $responseParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $responseParametersDataType = 'map';
-  public $responseParameters;
+  public $responseParameters = [];
   protected $responseParamsType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $responseParamsDataType = 'array';
-  public $responseParams;
+  public $responseParams = [];
   /**
    * @var string
    */

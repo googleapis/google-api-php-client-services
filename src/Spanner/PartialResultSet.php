@@ -37,7 +37,7 @@ class PartialResultSet extends \Google\Collection
   /**
    * @var array[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param bool

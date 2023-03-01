@@ -58,7 +58,7 @@ class Permission extends \Google\Collection
   public $pendingOwner;
   protected $permissionDetailsType = PermissionPermissionDetails::class;
   protected $permissionDetailsDataType = 'array';
-  public $permissionDetails;
+  public $permissionDetails = [];
   /**
    * @var string
    */
@@ -69,7 +69,7 @@ class Permission extends \Google\Collection
   public $role;
   protected $teamDrivePermissionDetailsType = PermissionTeamDrivePermissionDetails::class;
   protected $teamDrivePermissionDetailsDataType = 'array';
-  public $teamDrivePermissionDetails;
+  public $teamDrivePermissionDetails = [];
   /**
    * @var string
    */

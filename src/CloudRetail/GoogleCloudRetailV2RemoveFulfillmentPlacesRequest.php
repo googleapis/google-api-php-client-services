@@ -27,7 +27,7 @@ class GoogleCloudRetailV2RemoveFulfillmentPlacesRequest extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $placeIds;
+  public $placeIds = [];
   /**
    * @var string
    */

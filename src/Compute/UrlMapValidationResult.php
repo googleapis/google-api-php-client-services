@@ -23,14 +23,14 @@ class UrlMapValidationResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $loadErrors;
+  public $loadErrors = [];
   /**
    * @var bool
    */
   public $loadSucceeded;
   protected $testFailuresType = TestFailure::class;
   protected $testFailuresDataType = 'array';
-  public $testFailures;
+  public $testFailures = [];
   /**
    * @var bool
    */

@@ -30,7 +30,7 @@ class AccounttaxListResponse extends \Google\Collection
   public $nextPageToken;
   protected $resourcesType = AccountTax::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
 
   /**
    * @param string

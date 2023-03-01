@@ -35,7 +35,7 @@ class Account extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pendingTasks;
+  public $pendingTasks = [];
   /**
    * @var bool
    */

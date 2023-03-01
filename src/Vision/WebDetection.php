@@ -22,22 +22,22 @@ class WebDetection extends \Google\Collection
   protected $collection_key = 'webEntities';
   protected $bestGuessLabelsType = WebLabel::class;
   protected $bestGuessLabelsDataType = 'array';
-  public $bestGuessLabels;
+  public $bestGuessLabels = [];
   protected $fullMatchingImagesType = WebImage::class;
   protected $fullMatchingImagesDataType = 'array';
-  public $fullMatchingImages;
+  public $fullMatchingImages = [];
   protected $pagesWithMatchingImagesType = WebPage::class;
   protected $pagesWithMatchingImagesDataType = 'array';
-  public $pagesWithMatchingImages;
+  public $pagesWithMatchingImages = [];
   protected $partialMatchingImagesType = WebImage::class;
   protected $partialMatchingImagesDataType = 'array';
-  public $partialMatchingImages;
+  public $partialMatchingImages = [];
   protected $visuallySimilarImagesType = WebImage::class;
   protected $visuallySimilarImagesDataType = 'array';
-  public $visuallySimilarImages;
+  public $visuallySimilarImages = [];
   protected $webEntitiesType = WebEntity::class;
   protected $webEntitiesDataType = 'array';
-  public $webEntities;
+  public $webEntities = [];
 
   /**
    * @param WebLabel[]

@@ -30,7 +30,7 @@ class GkeNodePoolTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $roles;
+  public $roles = [];
 
   /**
    * @param string

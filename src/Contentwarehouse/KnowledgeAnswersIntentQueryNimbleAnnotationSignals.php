@@ -31,7 +31,7 @@ class KnowledgeAnswersIntentQueryNimbleAnnotationSignals extends \Google\Collect
   /**
    * @var string[]
    */
-  public $version;
+  public $version = [];
 
   /**
    * @param string

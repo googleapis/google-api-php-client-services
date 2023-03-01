@@ -22,7 +22,7 @@ class ListChannelsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $channelsType = Channel::class;
   protected $channelsDataType = 'array';
-  public $channels;
+  public $channels = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListChannelsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param Channel[]

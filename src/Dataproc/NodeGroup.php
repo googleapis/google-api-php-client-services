@@ -23,7 +23,7 @@ class NodeGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class NodeGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $roles;
+  public $roles = [];
 
   /**
    * @param string[]

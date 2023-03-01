@@ -26,7 +26,7 @@ class GoogleCloudMlV1ListVersionsResponse extends \Google\Collection
   public $nextPageToken;
   protected $versionsType = GoogleCloudMlV1Version::class;
   protected $versionsDataType = 'array';
-  public $versions;
+  public $versions = [];
 
   /**
    * @param string

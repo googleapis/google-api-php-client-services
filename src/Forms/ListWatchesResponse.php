@@ -22,7 +22,7 @@ class ListWatchesResponse extends \Google\Collection
   protected $collection_key = 'watches';
   protected $watchesType = Watch::class;
   protected $watchesDataType = 'array';
-  public $watches;
+  public $watches = [];
 
   /**
    * @param Watch[]

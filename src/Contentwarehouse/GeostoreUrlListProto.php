@@ -22,7 +22,7 @@ class GeostoreUrlListProto extends \Google\Collection
   protected $collection_key = 'url';
   protected $urlType = GeostoreUrlProto::class;
   protected $urlDataType = 'array';
-  public $url;
+  public $url = [];
 
   /**
    * @param GeostoreUrlProto[]

@@ -26,7 +26,7 @@ class GoodocSummaryStats extends \Google\Collection
   public $estimatedFontSizes;
   protected $fontSizeHistogramType = GoodocFontSizeStats::class;
   protected $fontSizeHistogramDataType = 'array';
-  public $fontSizeHistogram;
+  public $fontSizeHistogram = [];
   /**
    * @var int
    */

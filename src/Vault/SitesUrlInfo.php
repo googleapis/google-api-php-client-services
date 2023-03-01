@@ -23,7 +23,7 @@ class SitesUrlInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $urls;
+  public $urls = [];
 
   /**
    * @param string[]

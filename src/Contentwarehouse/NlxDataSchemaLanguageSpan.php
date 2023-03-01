@@ -32,7 +32,7 @@ class NlxDataSchemaLanguageSpan extends \Google\Collection
   /**
    * @var string[]
    */
-  public $languageCode;
+  public $languageCode = [];
 
   /**
    * @param MultiscalePointerSpan

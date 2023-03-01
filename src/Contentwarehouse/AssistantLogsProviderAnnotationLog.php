@@ -27,11 +27,11 @@ class AssistantLogsProviderAnnotationLog extends \Google\Collection
   /**
    * @var string[]
    */
-  public $localizedNames;
+  public $localizedNames = [];
   /**
    * @var string[]
    */
-  public $packageNames;
+  public $packageNames = [];
 
   /**
    * @param string

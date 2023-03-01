@@ -22,7 +22,7 @@ class DetectLanguageResponse extends \Google\Collection
   protected $collection_key = 'languages';
   protected $languagesType = DetectedLanguage::class;
   protected $languagesDataType = 'array';
-  public $languages;
+  public $languages = [];
 
   /**
    * @param DetectedLanguage[]

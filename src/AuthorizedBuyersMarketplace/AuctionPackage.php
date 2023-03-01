@@ -43,7 +43,7 @@ class AuctionPackage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subscribedClients;
+  public $subscribedClients = [];
   /**
    * @var string
    */

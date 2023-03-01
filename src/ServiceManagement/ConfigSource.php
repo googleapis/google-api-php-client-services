@@ -22,7 +22,7 @@ class ConfigSource extends \Google\Collection
   protected $collection_key = 'files';
   protected $filesType = ConfigFile::class;
   protected $filesDataType = 'array';
-  public $files;
+  public $files = [];
   /**
    * @var string
    */

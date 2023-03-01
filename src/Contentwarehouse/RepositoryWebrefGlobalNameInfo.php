@@ -26,7 +26,7 @@ class RepositoryWebrefGlobalNameInfo extends \Google\Collection
   public $normalizedName;
   protected $variantInfoType = RepositoryWebrefNameInfo::class;
   protected $variantInfoDataType = 'array';
-  public $variantInfo;
+  public $variantInfo = [];
 
   /**
    * @param string

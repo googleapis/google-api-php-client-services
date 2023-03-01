@@ -22,7 +22,7 @@ class AccountUserProfilesListResponse extends \Google\Collection
   protected $collection_key = 'accountUserProfiles';
   protected $accountUserProfilesType = AccountUserProfile::class;
   protected $accountUserProfilesDataType = 'array';
-  public $accountUserProfiles;
+  public $accountUserProfiles = [];
   /**
    * @var string
    */

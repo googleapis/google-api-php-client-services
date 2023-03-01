@@ -46,7 +46,7 @@ class Lodging extends \Google\Collection
   public $foodAndDrink;
   protected $guestUnitsType = GuestUnitType::class;
   protected $guestUnitsDataType = 'array';
-  public $guestUnits;
+  public $guestUnits = [];
   protected $healthAndSafetyType = HealthAndSafety::class;
   protected $healthAndSafetyDataType = '';
   public $healthAndSafety;

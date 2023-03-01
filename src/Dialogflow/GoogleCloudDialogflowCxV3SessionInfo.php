@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3SessionInfo extends \Google\Model
   /**
    * @var array[]
    */
-  public $parameters;
+  public $parameters = [];
   /**
    * @var string
    */

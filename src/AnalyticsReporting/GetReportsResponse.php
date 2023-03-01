@@ -26,7 +26,7 @@ class GetReportsResponse extends \Google\Collection
   public $queryCost;
   protected $reportsType = Report::class;
   protected $reportsDataType = 'array';
-  public $reports;
+  public $reports = [];
   protected $resourceQuotasRemainingType = ResourceQuotasRemaining::class;
   protected $resourceQuotasRemainingDataType = '';
   public $resourceQuotasRemaining;

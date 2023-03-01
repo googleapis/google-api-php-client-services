@@ -22,7 +22,7 @@ class ListAnnouncementsResponse extends \Google\Collection
   protected $collection_key = 'announcements';
   protected $announcementsType = Announcement::class;
   protected $announcementsDataType = 'array';
-  public $announcements;
+  public $announcements = [];
   /**
    * @var string
    */

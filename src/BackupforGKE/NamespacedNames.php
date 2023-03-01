@@ -22,7 +22,7 @@ class NamespacedNames extends \Google\Collection
   protected $collection_key = 'namespacedNames';
   protected $namespacedNamesType = NamespacedName::class;
   protected $namespacedNamesDataType = 'array';
-  public $namespacedNames;
+  public $namespacedNames = [];
 
   /**
    * @param NamespacedName[]

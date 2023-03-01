@@ -23,11 +23,11 @@ class GoogleCloudContentwarehouseV1HistogramQueryPropertyNameFilter extends \Goo
   /**
    * @var string[]
    */
-  public $documentSchemas;
+  public $documentSchemas = [];
   /**
    * @var string[]
    */
-  public $propertyNames;
+  public $propertyNames = [];
   /**
    * @var string
    */

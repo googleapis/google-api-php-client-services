@@ -22,7 +22,7 @@ class GoogleAnalyticsAdminV1betaListCustomDimensionsResponse extends \Google\Col
   protected $collection_key = 'customDimensions';
   protected $customDimensionsType = GoogleAnalyticsAdminV1betaCustomDimension::class;
   protected $customDimensionsDataType = 'array';
-  public $customDimensions;
+  public $customDimensions = [];
   /**
    * @var string
    */

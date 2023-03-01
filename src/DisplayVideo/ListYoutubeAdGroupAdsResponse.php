@@ -26,7 +26,7 @@ class ListYoutubeAdGroupAdsResponse extends \Google\Collection
   public $nextPageToken;
   protected $youtubeAdGroupAdsType = YoutubeAdGroupAd::class;
   protected $youtubeAdGroupAdsDataType = 'array';
-  public $youtubeAdGroupAds;
+  public $youtubeAdGroupAds = [];
 
   /**
    * @param string

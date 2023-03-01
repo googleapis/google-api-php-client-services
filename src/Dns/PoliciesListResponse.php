@@ -33,7 +33,7 @@ class PoliciesListResponse extends \Google\Collection
   public $nextPageToken;
   protected $policiesType = Policy::class;
   protected $policiesDataType = 'array';
-  public $policies;
+  public $policies = [];
 
   /**
    * @param ResponseHeader

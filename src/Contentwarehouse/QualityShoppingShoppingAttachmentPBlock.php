@@ -27,10 +27,10 @@ class QualityShoppingShoppingAttachmentPBlock extends \Google\Collection
   /**
    * @var string[]
    */
-  public $imageDocid;
+  public $imageDocid = [];
   protected $imageInfoType = QualityShoppingShoppingAttachmentPBlockImageInfo::class;
   protected $imageInfoDataType = 'array';
-  public $imageInfo;
+  public $imageInfo = [];
   /**
    * @var bool
    */

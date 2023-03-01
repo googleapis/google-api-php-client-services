@@ -36,7 +36,7 @@ class ChannelSection extends \Google\Model
   public $kind;
   protected $localizationsType = ChannelSectionLocalization::class;
   protected $localizationsDataType = 'map';
-  public $localizations;
+  public $localizations = [];
   protected $snippetType = ChannelSectionSnippet::class;
   protected $snippetDataType = '';
   public $snippet;

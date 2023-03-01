@@ -22,7 +22,7 @@ class ListDataExchangesResponse extends \Google\Collection
   protected $collection_key = 'dataExchanges';
   protected $dataExchangesType = DataExchange::class;
   protected $dataExchangesDataType = 'array';
-  public $dataExchanges;
+  public $dataExchanges = [];
   /**
    * @var string
    */

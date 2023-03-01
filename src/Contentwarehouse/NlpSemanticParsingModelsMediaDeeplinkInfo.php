@@ -27,11 +27,11 @@ class NlpSemanticParsingModelsMediaDeeplinkInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blacklistedCountry;
+  public $blacklistedCountry = [];
   /**
    * @var string[]
    */
-  public $country;
+  public $country = [];
   /**
    * @var string
    */
@@ -47,23 +47,23 @@ class NlpSemanticParsingModelsMediaDeeplinkInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $offer;
+  public $offer = [];
   protected $paidOfferDetailType = NlpSemanticParsingModelsMediaPaidOfferDetail::class;
   protected $paidOfferDetailDataType = 'array';
-  public $paidOfferDetail;
+  public $paidOfferDetail = [];
   /**
    * @var string[]
    */
-  public $platform;
+  public $platform = [];
   public $score;
   /**
    * @var string[]
    */
-  public $subscriptionPackageName;
+  public $subscriptionPackageName = [];
   /**
    * @var string[]
    */
-  public $tag;
+  public $tag = [];
   protected $validTimeWindowType = NlpSemanticParsingModelsMediaDeeplinkInfoTimeWindow::class;
   protected $validTimeWindowDataType = '';
   public $validTimeWindow;

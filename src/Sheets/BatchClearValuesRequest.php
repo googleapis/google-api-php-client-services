@@ -23,7 +23,7 @@ class BatchClearValuesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ranges;
+  public $ranges = [];
 
   /**
    * @param string[]

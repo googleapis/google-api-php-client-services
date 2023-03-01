@@ -22,7 +22,7 @@ class SearchDeveloperMetadataResponse extends \Google\Collection
   protected $collection_key = 'matchedDeveloperMetadata';
   protected $matchedDeveloperMetadataType = MatchedDeveloperMetadata::class;
   protected $matchedDeveloperMetadataDataType = 'array';
-  public $matchedDeveloperMetadata;
+  public $matchedDeveloperMetadata = [];
 
   /**
    * @param MatchedDeveloperMetadata[]

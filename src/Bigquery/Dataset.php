@@ -22,7 +22,7 @@ class Dataset extends \Google\Collection
   protected $collection_key = 'tags';
   protected $accessType = DatasetAccess::class;
   protected $accessDataType = 'array';
-  public $access;
+  public $access = [];
   /**
    * @var string
    */
@@ -76,7 +76,7 @@ class Dataset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -103,7 +103,7 @@ class Dataset extends \Google\Collection
   public $storageBillingModel;
   protected $tagsType = DatasetTags::class;
   protected $tagsDataType = 'array';
-  public $tags;
+  public $tags = [];
 
   /**
    * @param DatasetAccess[]

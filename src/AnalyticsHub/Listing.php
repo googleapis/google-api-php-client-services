@@ -26,7 +26,7 @@ class Listing extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categories;
+  public $categories = [];
   protected $dataProviderType = DataProvider::class;
   protected $dataProviderDataType = '';
   public $dataProvider;

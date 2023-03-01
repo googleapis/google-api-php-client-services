@@ -22,7 +22,7 @@ class SslCertificatesScopedList extends \Google\Collection
   protected $collection_key = 'sslCertificates';
   protected $sslCertificatesType = SslCertificate::class;
   protected $sslCertificatesDataType = 'array';
-  public $sslCertificates;
+  public $sslCertificates = [];
   protected $warningType = SslCertificatesScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

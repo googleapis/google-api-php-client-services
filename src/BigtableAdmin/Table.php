@@ -21,10 +21,10 @@ class Table extends \Google\Model
 {
   protected $clusterStatesType = ClusterState::class;
   protected $clusterStatesDataType = 'map';
-  public $clusterStates;
+  public $clusterStates = [];
   protected $columnFamiliesType = ColumnFamily::class;
   protected $columnFamiliesDataType = 'map';
-  public $columnFamilies;
+  public $columnFamilies = [];
   /**
    * @var bool
    */

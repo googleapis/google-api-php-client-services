@@ -23,7 +23,7 @@ class RepositoryWebrefFreebaseType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $provenance;
+  public $provenance = [];
   /**
    * @var float
    */

@@ -26,7 +26,7 @@ class GoogleCloudIntegrationsV1alphaListSuspensionsResponse extends \Google\Coll
   public $nextPageToken;
   protected $suspensionsType = GoogleCloudIntegrationsV1alphaSuspension::class;
   protected $suspensionsDataType = 'array';
-  public $suspensions;
+  public $suspensions = [];
 
   /**
    * @param string

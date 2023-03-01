@@ -23,7 +23,7 @@ class TimeseriesPercentiles extends \Google\Collection
   /**
    * @var array[]
    */
-  public $p75s;
+  public $p75s = [];
 
   /**
    * @param array[]

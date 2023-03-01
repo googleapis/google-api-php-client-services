@@ -22,10 +22,10 @@ class TailLogEntriesResponse extends \Google\Collection
   protected $collection_key = 'suppressionInfo';
   protected $entriesType = LogEntry::class;
   protected $entriesDataType = 'array';
-  public $entries;
+  public $entries = [];
   protected $suppressionInfoType = SuppressionInfo::class;
   protected $suppressionInfoDataType = 'array';
-  public $suppressionInfo;
+  public $suppressionInfo = [];
 
   /**
    * @param LogEntry[]

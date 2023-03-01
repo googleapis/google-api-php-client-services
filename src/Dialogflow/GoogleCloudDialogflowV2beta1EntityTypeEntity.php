@@ -23,7 +23,7 @@ class GoogleCloudDialogflowV2beta1EntityTypeEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $synonyms;
+  public $synonyms = [];
   /**
    * @var string
    */

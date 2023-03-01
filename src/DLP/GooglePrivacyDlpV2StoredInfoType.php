@@ -29,7 +29,7 @@ class GooglePrivacyDlpV2StoredInfoType extends \Google\Collection
   public $name;
   protected $pendingVersionsType = GooglePrivacyDlpV2StoredInfoTypeVersion::class;
   protected $pendingVersionsDataType = 'array';
-  public $pendingVersions;
+  public $pendingVersions = [];
 
   /**
    * @param GooglePrivacyDlpV2StoredInfoTypeVersion

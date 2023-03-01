@@ -32,7 +32,7 @@ class RuntimeInfo extends \Google\Model
   /**
    * @var string[]
    */
-  public $endpoints;
+  public $endpoints = [];
   /**
    * @var string
    */

@@ -22,13 +22,13 @@ class AssistantApiSoftwareCapabilities extends \Google\Collection
   protected $collection_key = 'supportedClientOp';
   protected $appCapabilitiesType = AssistantApiAppCapabilities::class;
   protected $appCapabilitiesDataType = 'array';
-  public $appCapabilities;
+  public $appCapabilities = [];
   protected $appCapabilitiesDeltaType = AssistantApiAppCapabilitiesDelta::class;
   protected $appCapabilitiesDeltaDataType = 'array';
-  public $appCapabilitiesDelta;
+  public $appCapabilitiesDelta = [];
   protected $appIntegrationsSettingsType = AssistantApiAppIntegrationsSettings::class;
   protected $appIntegrationsSettingsDataType = 'map';
-  public $appIntegrationsSettings;
+  public $appIntegrationsSettings = [];
   protected $carAssistantCapabilitiesType = AssistantApiCarAssistantCapabilities::class;
   protected $carAssistantCapabilitiesDataType = '';
   public $carAssistantCapabilities;
@@ -71,7 +71,7 @@ class AssistantApiSoftwareCapabilities extends \Google\Collection
   public $operatingSystem;
   protected $orderedLiveTvProvidersType = AssistantApiLiveTvProvider::class;
   protected $orderedLiveTvProvidersDataType = 'array';
-  public $orderedLiveTvProviders;
+  public $orderedLiveTvProviders = [];
   protected $selinaCapabilitiesType = AssistantApiSelinaCapabilites::class;
   protected $selinaCapabilitiesDataType = '';
   public $selinaCapabilities;
@@ -80,7 +80,7 @@ class AssistantApiSoftwareCapabilities extends \Google\Collection
   public $settingsAppCapabilities;
   protected $supportedClientOpType = AssistantApiSupportedClientOp::class;
   protected $supportedClientOpDataType = 'array';
-  public $supportedClientOp;
+  public $supportedClientOp = [];
   protected $supportedFeaturesType = AssistantApiSupportedFeatures::class;
   protected $supportedFeaturesDataType = '';
   public $supportedFeatures;

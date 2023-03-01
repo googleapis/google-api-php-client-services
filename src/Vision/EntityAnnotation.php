@@ -37,14 +37,14 @@ class EntityAnnotation extends \Google\Collection
   public $locale;
   protected $locationsType = LocationInfo::class;
   protected $locationsDataType = 'array';
-  public $locations;
+  public $locations = [];
   /**
    * @var string
    */
   public $mid;
   protected $propertiesType = Property::class;
   protected $propertiesDataType = 'array';
-  public $properties;
+  public $properties = [];
   /**
    * @var float
    */

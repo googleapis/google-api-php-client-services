@@ -22,7 +22,7 @@ class GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest extends \Go
   protected $collection_key = 'requests';
   protected $requestsType = GoogleChromePolicyVersionsV1InheritOrgUnitPolicyRequest::class;
   protected $requestsDataType = 'array';
-  public $requests;
+  public $requests = [];
 
   /**
    * @param GoogleChromePolicyVersionsV1InheritOrgUnitPolicyRequest[]

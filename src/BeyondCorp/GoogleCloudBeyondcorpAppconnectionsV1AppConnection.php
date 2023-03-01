@@ -26,7 +26,7 @@ class GoogleCloudBeyondcorpAppconnectionsV1AppConnection extends \Google\Collect
   /**
    * @var string[]
    */
-  public $connectors;
+  public $connectors = [];
   /**
    * @var string
    */
@@ -41,7 +41,7 @@ class GoogleCloudBeyondcorpAppconnectionsV1AppConnection extends \Google\Collect
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

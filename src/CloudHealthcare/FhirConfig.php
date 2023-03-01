@@ -26,7 +26,7 @@ class FhirConfig extends \Google\Collection
   public $defaultKeepExtensions;
   protected $fieldMetadataListType = FieldMetadata::class;
   protected $fieldMetadataListDataType = 'array';
-  public $fieldMetadataList;
+  public $fieldMetadataList = [];
 
   /**
    * @param bool

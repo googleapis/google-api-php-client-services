@@ -30,7 +30,7 @@ class ExportContextSqlExportOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tables;
+  public $tables = [];
 
   /**
    * @param ExportContextSqlExportOptionsMysqlExportOptions

@@ -33,7 +33,7 @@ class UserProfile extends \Google\Collection
   public $name;
   protected $permissionsType = GlobalPermission::class;
   protected $permissionsDataType = 'array';
-  public $permissions;
+  public $permissions = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class NlpSemanticParsingModelsRecurrenceYearlyPattern extends \Google\Collection
   /**
    * @var string[]
    */
-  public $yearMonth;
+  public $yearMonth = [];
 
   /**
    * @param NlpSemanticParsingModelsRecurrenceMonthlyPattern

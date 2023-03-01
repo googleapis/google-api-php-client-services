@@ -22,7 +22,7 @@ class BackupRunsListResponse extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = BackupRun::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -25,7 +25,7 @@ class IndexingEmbeddedContentEmbeddedLinksInfo extends \Google\Collection
   public $embedderInfo;
   protected $linkType = IndexingEmbeddedContentLinkInfo::class;
   protected $linkDataType = 'array';
-  public $link;
+  public $link = [];
   protected $pageSizeInfoType = IndexingEmbeddedContentPageSizeInfo::class;
   protected $pageSizeInfoDataType = '';
   public $pageSizeInfo;
@@ -36,7 +36,7 @@ class IndexingEmbeddedContentEmbeddedLinksInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $uncrawledLinkUrl;
+  public $uncrawledLinkUrl = [];
 
   /**
    * @param IndexingEmbeddedContentEmbedderInfo

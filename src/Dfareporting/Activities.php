@@ -22,7 +22,7 @@ class Activities extends \Google\Collection
   protected $collection_key = 'metricNames';
   protected $filtersType = DimensionValue::class;
   protected $filtersDataType = 'array';
-  public $filters;
+  public $filters = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class Activities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metricNames;
+  public $metricNames = [];
 
   /**
    * @param DimensionValue[]

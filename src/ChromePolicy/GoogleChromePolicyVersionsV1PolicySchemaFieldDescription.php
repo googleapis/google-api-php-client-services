@@ -37,7 +37,7 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription extends \Google\C
   public $fieldConstraints;
   protected $fieldDependenciesType = GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies::class;
   protected $fieldDependenciesDataType = 'array';
-  public $fieldDependencies;
+  public $fieldDependencies = [];
   /**
    * @var string
    */
@@ -48,17 +48,17 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription extends \Google\C
   public $inputConstraint;
   protected $knownValueDescriptionsType = GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription::class;
   protected $knownValueDescriptionsDataType = 'array';
-  public $knownValueDescriptions;
+  public $knownValueDescriptions = [];
   /**
    * @var string
    */
   public $name;
   protected $nestedFieldDescriptionsType = GoogleChromePolicyVersionsV1PolicySchemaFieldDescription::class;
   protected $nestedFieldDescriptionsDataType = 'array';
-  public $nestedFieldDescriptions;
+  public $nestedFieldDescriptions = [];
   protected $requiredItemsType = GoogleChromePolicyVersionsV1PolicySchemaRequiredItems::class;
   protected $requiredItemsDataType = 'array';
-  public $requiredItems;
+  public $requiredItems = [];
 
   /**
    * @param array

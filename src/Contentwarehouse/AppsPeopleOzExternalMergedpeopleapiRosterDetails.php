@@ -22,7 +22,7 @@ class AppsPeopleOzExternalMergedpeopleapiRosterDetails extends \Google\Collectio
   protected $collection_key = 'abridgedRosterMemberships';
   protected $abridgedRosterMembershipsType = AppsPeopleOzExternalMergedpeopleapiRosterMember::class;
   protected $abridgedRosterMembershipsDataType = 'array';
-  public $abridgedRosterMemberships;
+  public $abridgedRosterMemberships = [];
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   public $metadata;

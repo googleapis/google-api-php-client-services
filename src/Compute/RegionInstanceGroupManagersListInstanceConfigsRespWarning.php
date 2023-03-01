@@ -26,7 +26,7 @@ class RegionInstanceGroupManagersListInstanceConfigsRespWarning extends \Google\
   public $code;
   protected $dataType = RegionInstanceGroupManagersListInstanceConfigsRespWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

@@ -25,7 +25,7 @@ class GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation extends \Googl
   public $annotationSpec;
   protected $objectTrackingFramesType = GoogleCloudDatalabelingV1beta1ObjectTrackingFrame::class;
   protected $objectTrackingFramesDataType = 'array';
-  public $objectTrackingFrames;
+  public $objectTrackingFrames = [];
   protected $timeSegmentType = GoogleCloudDatalabelingV1beta1TimeSegment::class;
   protected $timeSegmentDataType = '';
   public $timeSegment;

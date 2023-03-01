@@ -35,7 +35,7 @@ class Provenance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $itemtype;
+  public $itemtype = [];
   /**
    * @var string
    */

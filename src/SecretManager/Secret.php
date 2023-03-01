@@ -23,7 +23,7 @@ class Secret extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class Secret extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -52,7 +52,7 @@ class Secret extends \Google\Collection
   public $rotation;
   protected $topicsType = Topic::class;
   protected $topicsDataType = 'array';
-  public $topics;
+  public $topics = [];
   /**
    * @var string
    */
@@ -60,7 +60,7 @@ class Secret extends \Google\Collection
   /**
    * @var string[]
    */
-  public $versionAliases;
+  public $versionAliases = [];
 
   /**
    * @param string[]

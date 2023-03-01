@@ -44,7 +44,7 @@ class ChartSpec extends \Google\Collection
   public $dataSourceChartProperties;
   protected $filterSpecsType = FilterSpec::class;
   protected $filterSpecsDataType = 'array';
-  public $filterSpecs;
+  public $filterSpecs = [];
   /**
    * @var string
    */
@@ -71,7 +71,7 @@ class ChartSpec extends \Google\Collection
   public $scorecardChart;
   protected $sortSpecsType = SortSpec::class;
   protected $sortSpecsDataType = 'array';
-  public $sortSpecs;
+  public $sortSpecs = [];
   /**
    * @var string
    */

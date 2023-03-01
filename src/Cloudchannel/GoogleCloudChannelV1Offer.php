@@ -40,13 +40,13 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
   public $name;
   protected $parameterDefinitionsType = GoogleCloudChannelV1ParameterDefinition::class;
   protected $parameterDefinitionsDataType = 'array';
-  public $parameterDefinitions;
+  public $parameterDefinitions = [];
   protected $planType = GoogleCloudChannelV1Plan::class;
   protected $planDataType = '';
   public $plan;
   protected $priceByResourcesType = GoogleCloudChannelV1PriceByResource::class;
   protected $priceByResourcesDataType = 'array';
-  public $priceByResources;
+  public $priceByResources = [];
   protected $skuType = GoogleCloudChannelV1Sku::class;
   protected $skuDataType = '';
   public $sku;

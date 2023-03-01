@@ -25,18 +25,18 @@ class ParDoInstruction extends \Google\Collection
   public $input;
   protected $multiOutputInfosType = MultiOutputInfo::class;
   protected $multiOutputInfosDataType = 'array';
-  public $multiOutputInfos;
+  public $multiOutputInfos = [];
   /**
    * @var int
    */
   public $numOutputs;
   protected $sideInputsType = SideInputInfo::class;
   protected $sideInputsDataType = 'array';
-  public $sideInputs;
+  public $sideInputs = [];
   /**
    * @var array[]
    */
-  public $userFn;
+  public $userFn = [];
 
   /**
    * @param InstructionInput

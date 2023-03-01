@@ -28,7 +28,7 @@ class Execution extends \Google\Collection
   public $creationTime;
   protected $dimensionDefinitionsType = MatrixDimensionDefinition::class;
   protected $dimensionDefinitionsDataType = 'array';
-  public $dimensionDefinitions;
+  public $dimensionDefinitions = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class GoogleSecuritySafebrowsingV4FindFullHashesRequest extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $clientStates;
+  public $clientStates = [];
   protected $threatInfoType = GoogleSecuritySafebrowsingV4ThreatInfo::class;
   protected $threatInfoDataType = '';
   public $threatInfo;

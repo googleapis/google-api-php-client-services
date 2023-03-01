@@ -22,7 +22,7 @@ class CreateCollectdTimeSeriesRequest extends \Google\Collection
   protected $collection_key = 'collectdPayloads';
   protected $collectdPayloadsType = CollectdPayload::class;
   protected $collectdPayloadsDataType = 'array';
-  public $collectdPayloads;
+  public $collectdPayloads = [];
   /**
    * @var string
    */

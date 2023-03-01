@@ -29,7 +29,7 @@ class ComposeRequest extends \Google\Collection
   public $kind;
   protected $sourceObjectsType = ComposeRequestSourceObjects::class;
   protected $sourceObjectsDataType = 'array';
-  public $sourceObjects;
+  public $sourceObjects = [];
 
   /**
    * @param StorageObject

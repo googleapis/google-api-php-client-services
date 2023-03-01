@@ -22,7 +22,7 @@ class ListBidResponseErrorsResponse extends \Google\Collection
   protected $collection_key = 'calloutStatusRows';
   protected $calloutStatusRowsType = CalloutStatusRow::class;
   protected $calloutStatusRowsDataType = 'array';
-  public $calloutStatusRows;
+  public $calloutStatusRows = [];
   /**
    * @var string
    */

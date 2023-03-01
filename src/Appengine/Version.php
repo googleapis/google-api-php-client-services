@@ -36,11 +36,11 @@ class Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $betaSettings;
+  public $betaSettings = [];
   /**
    * @var string[]
    */
-  public $buildEnvVariables;
+  public $buildEnvVariables = [];
   /**
    * @var string
    */
@@ -73,16 +73,16 @@ class Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $envVariables;
+  public $envVariables = [];
   protected $errorHandlersType = ErrorHandler::class;
   protected $errorHandlersDataType = 'array';
-  public $errorHandlers;
+  public $errorHandlers = [];
   protected $flexibleRuntimeSettingsType = FlexibleRuntimeSettings::class;
   protected $flexibleRuntimeSettingsDataType = '';
   public $flexibleRuntimeSettings;
   protected $handlersType = UrlMap::class;
   protected $handlersDataType = 'array';
-  public $handlers;
+  public $handlers = [];
   protected $healthCheckType = HealthCheck::class;
   protected $healthCheckDataType = '';
   public $healthCheck;
@@ -93,14 +93,14 @@ class Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inboundServices;
+  public $inboundServices = [];
   /**
    * @var string
    */
   public $instanceClass;
   protected $librariesType = Library::class;
   protected $librariesDataType = 'array';
-  public $libraries;
+  public $libraries = [];
   protected $livenessCheckType = LivenessCheck::class;
   protected $livenessCheckDataType = '';
   public $livenessCheck;
@@ -166,7 +166,7 @@ class Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $zones;
+  public $zones = [];
 
   /**
    * @param ApiConfigHandler

@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3FulfillmentConditionalCases extends \Google\Colle
   protected $collection_key = 'cases';
   protected $casesType = GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCase::class;
   protected $casesDataType = 'array';
-  public $cases;
+  public $cases = [];
 
   /**
    * @param GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCase[]

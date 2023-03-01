@@ -26,7 +26,7 @@ class NodePool extends \Google\Collection
   public $name;
   protected $nodesType = Node::class;
   protected $nodesDataType = 'array';
-  public $nodes;
+  public $nodes = [];
 
   /**
    * @param string

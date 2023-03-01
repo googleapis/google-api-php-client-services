@@ -22,7 +22,7 @@ class EntitlementsListResponse extends \Google\Collection
   protected $collection_key = 'entitlement';
   protected $entitlementType = Entitlement::class;
   protected $entitlementDataType = 'array';
-  public $entitlement;
+  public $entitlement = [];
 
   /**
    * @param Entitlement[]

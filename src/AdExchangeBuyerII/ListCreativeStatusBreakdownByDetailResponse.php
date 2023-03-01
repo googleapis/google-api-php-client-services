@@ -26,7 +26,7 @@ class ListCreativeStatusBreakdownByDetailResponse extends \Google\Collection
   public $detailType;
   protected $filteredBidDetailRowsType = FilteredBidDetailRow::class;
   protected $filteredBidDetailRowsDataType = 'array';
-  public $filteredBidDetailRows;
+  public $filteredBidDetailRows = [];
   /**
    * @var string
    */

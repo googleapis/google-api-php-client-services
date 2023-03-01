@@ -29,11 +29,11 @@ class NlpSemanticParsingModelsShoppingAssistantMerchant extends \Google\Collecti
   public $localMerchantId;
   protected $mcidType = NlpSemanticParsingModelsShoppingAssistantMerchantMerchantCenterId::class;
   protected $mcidDataType = 'array';
-  public $mcid;
+  public $mcid = [];
   /**
    * @var string[]
    */
-  public $merchantId;
+  public $merchantId = [];
   /**
    * @var string
    */

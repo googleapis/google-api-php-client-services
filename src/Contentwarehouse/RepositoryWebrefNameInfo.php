@@ -25,10 +25,10 @@ class RepositoryWebrefNameInfo extends \Google\Collection
   public $aggregatedScores;
   protected $annotatedCategoryType = RepositoryWebrefAnnotatedCategoryInfo::class;
   protected $annotatedCategoryDataType = 'array';
-  public $annotatedCategory;
+  public $annotatedCategory = [];
   protected $debugDetailsType = RepositoryWebrefNameDebugInfo::class;
   protected $debugDetailsDataType = 'array';
-  public $debugDetails;
+  public $debugDetails = [];
   /**
    * @var bool
    */
@@ -47,7 +47,7 @@ class RepositoryWebrefNameInfo extends \Google\Collection
   public $scores;
   protected $sourceType = RepositoryWebrefEntityNameSource::class;
   protected $sourceDataType = 'array';
-  public $source;
+  public $source = [];
 
   /**
    * @param RepositoryWebrefAggregatedEntityNameScores

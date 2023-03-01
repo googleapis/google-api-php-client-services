@@ -22,7 +22,7 @@ class QualityActionsCustomizedNotification extends \Google\Collection
   protected $collection_key = 'buttons';
   protected $buttonsType = QualityActionsCustomizedNotificationButton::class;
   protected $buttonsDataType = 'array';
-  public $buttons;
+  public $buttons = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class NonGuaranteedFixedPriceTerms extends \Google\Collection
   protected $collection_key = 'fixedPrices';
   protected $fixedPricesType = PricePerBuyer::class;
   protected $fixedPricesDataType = 'array';
-  public $fixedPrices;
+  public $fixedPrices = [];
 
   /**
    * @param PricePerBuyer[]

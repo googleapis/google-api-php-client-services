@@ -23,7 +23,7 @@ class GoogleCloudContactcenterinsightsV1SmartReplyData extends \Google\Model
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */

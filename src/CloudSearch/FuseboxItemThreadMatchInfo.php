@@ -33,7 +33,7 @@ class FuseboxItemThreadMatchInfo extends \Google\Collection
   public $lastMatchingItemKey;
   protected $matchingItemKeyType = MultiKey::class;
   protected $matchingItemKeyDataType = 'array';
-  public $matchingItemKey;
+  public $matchingItemKey = [];
   protected $rankType = Rank::class;
   protected $rankDataType = '';
   public $rank;

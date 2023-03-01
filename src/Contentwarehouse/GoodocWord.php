@@ -81,7 +81,7 @@ class GoodocWord extends \Google\Collection
   public $rotatedBox;
   protected $symbolType = GoodocSymbol::class;
   protected $symbolDataType = 'array';
-  public $symbol;
+  public $symbol = [];
   protected $alternatesType = GoodocWordAlternates::class;
   protected $alternatesDataType = '';
   public $alternates;

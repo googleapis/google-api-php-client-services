@@ -22,7 +22,7 @@ class GoogleCloudVisionV1p4beta1ReferenceImage extends \Google\Collection
   protected $collection_key = 'boundingPolys';
   protected $boundingPolysType = GoogleCloudVisionV1p4beta1BoundingPoly::class;
   protected $boundingPolysDataType = 'array';
-  public $boundingPolys;
+  public $boundingPolys = [];
   /**
    * @var string
    */

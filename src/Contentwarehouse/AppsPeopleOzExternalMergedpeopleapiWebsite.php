@@ -29,7 +29,7 @@ class AppsPeopleOzExternalMergedpeopleapiWebsite extends \Google\Collection
   public $metadata;
   protected $relType = AppsPeopleOzExternalMergedpeopleapiWebsiteRelationshipInfo::class;
   protected $relDataType = 'array';
-  public $rel;
+  public $rel = [];
   /**
    * @var string
    */

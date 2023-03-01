@@ -27,7 +27,7 @@ class DatafeedTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedDestinations;
+  public $excludedDestinations = [];
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class DatafeedTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $includedDestinations;
+  public $includedDestinations = [];
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class DatafeedTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetCountries;
+  public $targetCountries = [];
 
   /**
    * @param string

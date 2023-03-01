@@ -23,7 +23,7 @@ class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy extends
   /**
    * @var string[]
    */
-  public $categories;
+  public $categories = [];
 
   /**
    * @param string[]

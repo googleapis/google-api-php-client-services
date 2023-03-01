@@ -22,7 +22,7 @@ class SuggestRequest extends \Google\Collection
   protected $collection_key = 'dataSourceRestrictions';
   protected $dataSourceRestrictionsType = DataSourceRestriction::class;
   protected $dataSourceRestrictionsDataType = 'array';
-  public $dataSourceRestrictions;
+  public $dataSourceRestrictions = [];
   /**
    * @var string
    */

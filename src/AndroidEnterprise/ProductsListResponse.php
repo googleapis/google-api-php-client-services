@@ -25,7 +25,7 @@ class ProductsListResponse extends \Google\Collection
   public $pageInfo;
   protected $productType = Product::class;
   protected $productDataType = 'array';
-  public $product;
+  public $product = [];
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   public $tokenPagination;

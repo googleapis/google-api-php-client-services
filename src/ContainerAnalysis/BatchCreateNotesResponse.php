@@ -22,7 +22,7 @@ class BatchCreateNotesResponse extends \Google\Collection
   protected $collection_key = 'notes';
   protected $notesType = Note::class;
   protected $notesDataType = 'array';
-  public $notes;
+  public $notes = [];
 
   /**
    * @param Note[]

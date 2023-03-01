@@ -23,11 +23,11 @@ class PersistentPreferredActivity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $actions;
+  public $actions = [];
   /**
    * @var string[]
    */
-  public $categories;
+  public $categories = [];
   /**
    * @var string
    */

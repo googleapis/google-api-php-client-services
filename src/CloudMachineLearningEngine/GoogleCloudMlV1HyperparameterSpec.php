@@ -50,7 +50,7 @@ class GoogleCloudMlV1HyperparameterSpec extends \Google\Collection
   public $maxTrials;
   protected $paramsType = GoogleCloudMlV1ParameterSpec::class;
   protected $paramsDataType = 'array';
-  public $params;
+  public $params = [];
   /**
    * @var string
    */

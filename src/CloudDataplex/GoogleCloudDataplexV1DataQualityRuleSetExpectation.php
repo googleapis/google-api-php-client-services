@@ -23,7 +23,7 @@ class GoogleCloudDataplexV1DataQualityRuleSetExpectation extends \Google\Collect
   /**
    * @var string[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string[]

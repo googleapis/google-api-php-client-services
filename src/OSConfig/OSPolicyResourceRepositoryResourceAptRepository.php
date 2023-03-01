@@ -27,7 +27,7 @@ class OSPolicyResourceRepositoryResourceAptRepository extends \Google\Collection
   /**
    * @var string[]
    */
-  public $components;
+  public $components = [];
   /**
    * @var string
    */

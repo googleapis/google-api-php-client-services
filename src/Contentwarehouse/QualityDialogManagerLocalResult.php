@@ -98,7 +98,7 @@ class QualityDialogManagerLocalResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $synonym;
+  public $synonym = [];
   /**
    * @var string
    */

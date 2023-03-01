@@ -25,7 +25,7 @@ class IssuancePolicy extends \Google\Collection
   public $allowedIssuanceModes;
   protected $allowedKeyTypesType = AllowedKeyType::class;
   protected $allowedKeyTypesDataType = 'array';
-  public $allowedKeyTypes;
+  public $allowedKeyTypes = [];
   protected $baselineValuesType = X509Parameters::class;
   protected $baselineValuesDataType = '';
   public $baselineValues;

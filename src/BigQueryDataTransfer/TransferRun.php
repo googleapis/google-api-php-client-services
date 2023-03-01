@@ -48,7 +48,7 @@ class TransferRun extends \Google\Model
   /**
    * @var array[]
    */
-  public $params;
+  public $params = [];
   /**
    * @var string
    */

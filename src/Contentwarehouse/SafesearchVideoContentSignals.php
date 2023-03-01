@@ -22,7 +22,7 @@ class SafesearchVideoContentSignals extends \Google\Model
   /**
    * @var float[]
    */
-  public $scores;
+  public $scores = [];
   /**
    * @var string
    */

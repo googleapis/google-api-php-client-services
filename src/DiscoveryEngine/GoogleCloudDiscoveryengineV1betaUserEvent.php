@@ -22,7 +22,7 @@ class GoogleCloudDiscoveryengineV1betaUserEvent extends \Google\Collection
   protected $collection_key = 'tagIds';
   protected $attributesType = GoogleCloudDiscoveryengineV1betaCustomAttribute::class;
   protected $attributesDataType = 'map';
-  public $attributes;
+  public $attributes = [];
   /**
    * @var string
    */
@@ -36,7 +36,7 @@ class GoogleCloudDiscoveryengineV1betaUserEvent extends \Google\Collection
   public $directUserRequest;
   protected $documentsType = GoogleCloudDiscoveryengineV1betaDocumentInfo::class;
   protected $documentsDataType = 'array';
-  public $documents;
+  public $documents = [];
   /**
    * @var string
    */
@@ -61,7 +61,7 @@ class GoogleCloudDiscoveryengineV1betaUserEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $promotionIds;
+  public $promotionIds = [];
   protected $searchInfoType = GoogleCloudDiscoveryengineV1betaSearchInfo::class;
   protected $searchInfoDataType = '';
   public $searchInfo;
@@ -72,7 +72,7 @@ class GoogleCloudDiscoveryengineV1betaUserEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tagIds;
+  public $tagIds = [];
   protected $transactionInfoType = GoogleCloudDiscoveryengineV1betaTransactionInfo::class;
   protected $transactionInfoDataType = '';
   public $transactionInfo;

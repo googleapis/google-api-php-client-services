@@ -23,7 +23,7 @@ class ConstraintEntity extends \Google\Collection
   /**
    * @var array[]
    */
-  public $customFeatures;
+  public $customFeatures = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class ConstraintEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referenceColumns;
+  public $referenceColumns = [];
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class ConstraintEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tableColumns;
+  public $tableColumns = [];
   /**
    * @var string
    */

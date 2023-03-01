@@ -22,7 +22,7 @@ class GoogleAppsCardV1Suggestions extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = GoogleAppsCardV1SuggestionItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
 
   /**
    * @param GoogleAppsCardV1SuggestionItem[]

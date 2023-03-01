@@ -23,7 +23,7 @@ class GenerateAccessTokenRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $delegates;
+  public $delegates = [];
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GenerateAccessTokenRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scope;
+  public $scope = [];
 
   /**
    * @param string[]

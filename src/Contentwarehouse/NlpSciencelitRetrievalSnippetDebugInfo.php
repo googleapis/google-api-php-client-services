@@ -23,15 +23,15 @@ class NlpSciencelitRetrievalSnippetDebugInfo extends \Google\Collection
   /**
    * @var int[]
    */
-  public $goldHighlightSentenceIndices;
+  public $goldHighlightSentenceIndices = [];
   /**
    * @var float[]
    */
-  public $highlightIdxToOverlap;
+  public $highlightIdxToOverlap = [];
   /**
    * @var float[]
    */
-  public $highlightIdxToSentenceOverlap;
+  public $highlightIdxToSentenceOverlap = [];
   /**
    * @var bool
    */

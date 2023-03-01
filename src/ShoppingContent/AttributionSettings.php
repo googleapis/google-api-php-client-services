@@ -30,7 +30,7 @@ class AttributionSettings extends \Google\Collection
   public $attributionModel;
   protected $conversionTypeType = AttributionSettingsConversionType::class;
   protected $conversionTypeDataType = 'array';
-  public $conversionType;
+  public $conversionType = [];
 
   /**
    * @param int

@@ -22,13 +22,13 @@ class VoterInfoResponse extends \Google\Collection
   protected $collection_key = 'state';
   protected $contestsType = Contest::class;
   protected $contestsDataType = 'array';
-  public $contests;
+  public $contests = [];
   protected $dropOffLocationsType = PollingLocation::class;
   protected $dropOffLocationsDataType = 'array';
-  public $dropOffLocations;
+  public $dropOffLocations = [];
   protected $earlyVoteSitesType = PollingLocation::class;
   protected $earlyVoteSitesDataType = 'array';
-  public $earlyVoteSites;
+  public $earlyVoteSites = [];
   protected $electionType = Election::class;
   protected $electionDataType = '';
   public $election;
@@ -45,20 +45,20 @@ class VoterInfoResponse extends \Google\Collection
   public $normalizedInput;
   protected $otherElectionsType = Election::class;
   protected $otherElectionsDataType = 'array';
-  public $otherElections;
+  public $otherElections = [];
   protected $pollingLocationsType = PollingLocation::class;
   protected $pollingLocationsDataType = 'array';
-  public $pollingLocations;
+  public $pollingLocations = [];
   /**
    * @var string
    */
   public $precinctId;
   protected $precinctsType = Precinct::class;
   protected $precinctsDataType = 'array';
-  public $precincts;
+  public $precincts = [];
   protected $stateType = AdministrationRegion::class;
   protected $stateDataType = 'array';
-  public $state;
+  public $state = [];
 
   /**
    * @param Contest[]

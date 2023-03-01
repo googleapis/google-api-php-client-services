@@ -26,7 +26,7 @@ class LogMatch extends \Google\Model
   /**
    * @var string[]
    */
-  public $labelExtractors;
+  public $labelExtractors = [];
 
   /**
    * @param string

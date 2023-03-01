@@ -30,7 +30,7 @@ class PlaylistItemListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = PlaylistItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

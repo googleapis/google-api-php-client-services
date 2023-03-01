@@ -22,7 +22,7 @@ class ListLiensResponse extends \Google\Collection
   protected $collection_key = 'liens';
   protected $liensType = Lien::class;
   protected $liensDataType = 'array';
-  public $liens;
+  public $liens = [];
   /**
    * @var string
    */

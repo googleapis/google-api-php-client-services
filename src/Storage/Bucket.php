@@ -22,7 +22,7 @@ class Bucket extends \Google\Collection
   protected $collection_key = 'defaultObjectAcl';
   protected $aclType = BucketAccessControl::class;
   protected $aclDataType = 'array';
-  public $acl;
+  public $acl = [];
   protected $autoclassType = BucketAutoclass::class;
   protected $autoclassDataType = '';
   public $autoclass;
@@ -31,7 +31,7 @@ class Bucket extends \Google\Collection
   public $billing;
   protected $corsType = BucketCors::class;
   protected $corsDataType = 'array';
-  public $cors;
+  public $cors = [];
   protected $customPlacementConfigType = BucketCustomPlacementConfig::class;
   protected $customPlacementConfigDataType = '';
   public $customPlacementConfig;
@@ -41,7 +41,7 @@ class Bucket extends \Google\Collection
   public $defaultEventBasedHold;
   protected $defaultObjectAclType = ObjectAccessControl::class;
   protected $defaultObjectAclDataType = 'array';
-  public $defaultObjectAcl;
+  public $defaultObjectAcl = [];
   protected $encryptionType = BucketEncryption::class;
   protected $encryptionDataType = '';
   public $encryption;
@@ -63,7 +63,7 @@ class Bucket extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $lifecycleType = BucketLifecycle::class;
   protected $lifecycleDataType = '';
   public $lifecycle;

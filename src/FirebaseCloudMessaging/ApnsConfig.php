@@ -25,11 +25,11 @@ class ApnsConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $headers;
+  public $headers = [];
   /**
    * @var array[]
    */
-  public $payload;
+  public $payload = [];
 
   /**
    * @param ApnsFcmOptions

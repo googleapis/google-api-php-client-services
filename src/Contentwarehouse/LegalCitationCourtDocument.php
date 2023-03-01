@@ -34,7 +34,7 @@ class LegalCitationCourtDocument extends \Google\Collection
   ];
   protected $arguedBeforeType = LegalPerson::class;
   protected $arguedBeforeDataType = 'array';
-  public $arguedBefore;
+  public $arguedBefore = [];
   protected $arguedDateType = LegalDate::class;
   protected $arguedDateDataType = '';
   public $arguedDate;
@@ -72,16 +72,16 @@ class LegalCitationCourtDocument extends \Google\Collection
   public $court;
   protected $opinioninfoType = LegalCitationCourtDocumentOpinionInfo::class;
   protected $opinioninfoDataType = 'array';
-  public $opinioninfo;
+  public $opinioninfo = [];
   protected $perdocketinfoType = LegalCitationCourtDocumentPerDocketInfo::class;
   protected $perdocketinfoDataType = 'array';
-  public $perdocketinfo;
+  public $perdocketinfo = [];
   protected $pubType = LegalCitationCourtDocumentPub::class;
   protected $pubDataType = 'array';
-  public $pub;
+  public $pub = [];
   protected $unknowndateType = LegalCitationCourtDocumentUnknownDate::class;
   protected $unknowndateDataType = 'array';
-  public $unknowndate;
+  public $unknowndate = [];
 
   /**
    * @param LegalPerson[]

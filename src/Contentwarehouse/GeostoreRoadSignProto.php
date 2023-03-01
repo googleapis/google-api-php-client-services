@@ -22,7 +22,7 @@ class GeostoreRoadSignProto extends \Google\Collection
   protected $collection_key = 'component';
   protected $componentType = GeostoreRoadSignComponentProto::class;
   protected $componentDataType = 'array';
-  public $component;
+  public $component = [];
 
   /**
    * @param GeostoreRoadSignComponentProto[]

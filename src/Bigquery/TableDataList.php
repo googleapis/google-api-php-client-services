@@ -34,7 +34,7 @@ class TableDataList extends \Google\Collection
   public $pageToken;
   protected $rowsType = TableRow::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
   /**
    * @var string
    */

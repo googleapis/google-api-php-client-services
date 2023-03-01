@@ -23,7 +23,7 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest extends \Go
   /**
    * @var string[]
    */
-  public $groupIds;
+  public $groupIds = [];
   /**
    * @var string
    */

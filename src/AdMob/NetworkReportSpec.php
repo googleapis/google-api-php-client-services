@@ -25,11 +25,11 @@ class NetworkReportSpec extends \Google\Collection
   public $dateRange;
   protected $dimensionFiltersType = NetworkReportSpecDimensionFilter::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters;
+  public $dimensionFilters = [];
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   protected $localizationSettingsType = LocalizationSettings::class;
   protected $localizationSettingsDataType = '';
   public $localizationSettings;
@@ -40,10 +40,10 @@ class NetworkReportSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metrics;
+  public $metrics = [];
   protected $sortConditionsType = NetworkReportSpecSortCondition::class;
   protected $sortConditionsDataType = 'array';
-  public $sortConditions;
+  public $sortConditions = [];
   /**
    * @var string
    */

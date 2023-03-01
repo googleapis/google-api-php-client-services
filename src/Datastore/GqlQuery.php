@@ -26,10 +26,10 @@ class GqlQuery extends \Google\Collection
   public $allowLiterals;
   protected $namedBindingsType = GqlQueryParameter::class;
   protected $namedBindingsDataType = 'map';
-  public $namedBindings;
+  public $namedBindings = [];
   protected $positionalBindingsType = GqlQueryParameter::class;
   protected $positionalBindingsDataType = 'array';
-  public $positionalBindings;
+  public $positionalBindings = [];
   /**
    * @var string
    */

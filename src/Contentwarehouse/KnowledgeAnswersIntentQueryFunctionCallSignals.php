@@ -26,7 +26,7 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $argumentComposingMid;
   protected $attributeSignalsType = KnowledgeAnswersIntentQueryAttributeSignal::class;
   protected $attributeSignalsDataType = 'array';
-  public $attributeSignals;
+  public $attributeSignals = [];
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $confidenceLevel;
   protected $dedupedFuncallsType = KnowledgeAnswersIntentQueryFunctionCall::class;
   protected $dedupedFuncallsDataType = 'array';
-  public $dedupedFuncalls;
+  public $dedupedFuncalls = [];
   protected $expressionStatusType = NlpSemanticParsingExpressionStatus::class;
   protected $expressionStatusDataType = '';
   public $expressionStatus;
@@ -55,18 +55,18 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $intentAnnotationSources;
+  public $intentAnnotationSources = [];
   /**
    * @var string
    */
   public $intentComposingMid;
   protected $intentProvenanceType = KnowledgeAnswersIntentQueryArgumentProvenance::class;
   protected $intentProvenanceDataType = 'array';
-  public $intentProvenance;
+  public $intentProvenance = [];
   /**
    * @var string[]
    */
-  public $intentRelevantMid;
+  public $intentRelevantMid = [];
   /**
    * @var bool
    */
@@ -97,7 +97,7 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $parsedDueToExperiment;
+  public $parsedDueToExperiment = [];
   protected $parsingSignalsType = KnowledgeAnswersIntentQueryParsingSignals::class;
   protected $parsingSignalsDataType = '';
   public $parsingSignals;
@@ -120,7 +120,7 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $responseMeaningSignals;
   protected $resultSupportType = UniversalsearchNewPackerKnowledgeResultSupport::class;
   protected $resultSupportDataType = 'array';
-  public $resultSupport;
+  public $resultSupport = [];
   /**
    * @var string
    */
@@ -134,7 +134,7 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $shoppingIds;
   protected $signalsFallbackIntentsType = KnowledgeAnswersIntentQuerySignalComputationFallbackIntent::class;
   protected $signalsFallbackIntentsDataType = 'array';
-  public $signalsFallbackIntents;
+  public $signalsFallbackIntents = [];
 
   /**
    * @param string

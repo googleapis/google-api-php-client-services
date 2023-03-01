@@ -23,7 +23,7 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $args;
+  public $args = [];
   /**
    * @var bool
    */
@@ -63,7 +63,7 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
   /**
    * @var string[]
    */
-  public $packageUris;
+  public $packageUris = [];
   protected $parameterServerConfigType = GoogleCloudMlV1ReplicaConfig::class;
   protected $parameterServerConfigDataType = '';
   public $parameterServerConfig;

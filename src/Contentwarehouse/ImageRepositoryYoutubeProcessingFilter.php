@@ -23,7 +23,7 @@ class ImageRepositoryYoutubeProcessingFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $previewsFilteredReason;
+  public $previewsFilteredReason = [];
 
   /**
    * @param string[]

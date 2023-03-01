@@ -65,7 +65,7 @@ class CloudsupportCase extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subscriberEmailAddresses;
+  public $subscriberEmailAddresses = [];
   /**
    * @var bool
    */

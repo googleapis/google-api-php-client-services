@@ -45,14 +45,14 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   public $jsonValidationOption;
   protected $nextTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $nextTasksDataType = 'array';
-  public $nextTasks;
+  public $nextTasks = [];
   /**
    * @var string
    */
   public $nextTasksExecutionPolicy;
   protected $parametersType = GoogleCloudIntegrationsV1alphaEventParameter::class;
   protected $parametersDataType = 'map';
-  public $parameters;
+  public $parameters = [];
   protected $successPolicyType = GoogleCloudIntegrationsV1alphaSuccessPolicy::class;
   protected $successPolicyDataType = '';
   public $successPolicy;

@@ -27,7 +27,7 @@ class StartActivityIntent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categories;
+  public $categories = [];
   /**
    * @var string
    */

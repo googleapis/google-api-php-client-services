@@ -34,7 +34,7 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributes;
+  public $attributes = [];
   /**
    * @var string
    */
@@ -66,7 +66,7 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   /**
    * @var string[]
    */
-  public $environments;
+  public $environments = [];
   /**
    * @var string
    */

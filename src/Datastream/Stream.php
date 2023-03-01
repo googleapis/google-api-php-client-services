@@ -43,11 +43,11 @@ class Stream extends \Google\Collection
   public $displayName;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

@@ -43,7 +43,7 @@ class BatchOperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -51,7 +51,7 @@ class BatchOperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param string

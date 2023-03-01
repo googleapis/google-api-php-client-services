@@ -34,15 +34,15 @@ class GetOpenIDConfigResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $claimsSupported;
+  public $claimsSupported = [];
   /**
    * @var string[]
    */
-  public $grantTypes;
+  public $grantTypes = [];
   /**
    * @var string[]
    */
-  public $idTokenSigningAlgValuesSupported;
+  public $idTokenSigningAlgValuesSupported = [];
   /**
    * @var string
    */
@@ -54,11 +54,11 @@ class GetOpenIDConfigResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $responseTypesSupported;
+  public $responseTypesSupported = [];
   /**
    * @var string[]
    */
-  public $subjectTypesSupported;
+  public $subjectTypesSupported = [];
 
   /**
    * @param HttpCacheControlResponseHeader

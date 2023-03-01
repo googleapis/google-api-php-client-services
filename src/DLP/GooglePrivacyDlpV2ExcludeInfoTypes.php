@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2ExcludeInfoTypes extends \Google\Collection
   protected $collection_key = 'infoTypes';
   protected $infoTypesType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypesDataType = 'array';
-  public $infoTypes;
+  public $infoTypes = [];
 
   /**
    * @param GooglePrivacyDlpV2InfoType[]

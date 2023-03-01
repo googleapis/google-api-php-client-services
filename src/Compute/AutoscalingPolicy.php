@@ -29,7 +29,7 @@ class AutoscalingPolicy extends \Google\Collection
   public $cpuUtilization;
   protected $customMetricUtilizationsType = AutoscalingPolicyCustomMetricUtilization::class;
   protected $customMetricUtilizationsDataType = 'array';
-  public $customMetricUtilizations;
+  public $customMetricUtilizations = [];
   protected $loadBalancingUtilizationType = AutoscalingPolicyLoadBalancingUtilization::class;
   protected $loadBalancingUtilizationDataType = '';
   public $loadBalancingUtilization;
@@ -50,7 +50,7 @@ class AutoscalingPolicy extends \Google\Collection
   public $scaleInControl;
   protected $scalingSchedulesType = AutoscalingPolicyScalingSchedule::class;
   protected $scalingSchedulesDataType = 'map';
-  public $scalingSchedules;
+  public $scalingSchedules = [];
 
   /**
    * @param int

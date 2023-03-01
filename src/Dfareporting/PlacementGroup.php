@@ -45,7 +45,7 @@ class PlacementGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $childPlacementIds;
+  public $childPlacementIds = [];
   /**
    * @var string
    */

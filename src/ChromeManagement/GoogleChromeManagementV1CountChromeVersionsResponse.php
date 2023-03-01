@@ -22,7 +22,7 @@ class GoogleChromeManagementV1CountChromeVersionsResponse extends \Google\Collec
   protected $collection_key = 'browserVersions';
   protected $browserVersionsType = GoogleChromeManagementV1BrowserVersion::class;
   protected $browserVersionsDataType = 'array';
-  public $browserVersions;
+  public $browserVersions = [];
   /**
    * @var string
    */

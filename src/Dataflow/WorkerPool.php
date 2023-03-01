@@ -25,7 +25,7 @@ class WorkerPool extends \Google\Collection
   public $autoscalingSettings;
   protected $dataDisksType = Disk::class;
   protected $dataDisksDataType = 'array';
-  public $dataDisks;
+  public $dataDisks = [];
   /**
    * @var string
    */
@@ -57,7 +57,7 @@ class WorkerPool extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -76,14 +76,14 @@ class WorkerPool extends \Google\Collection
   public $onHostMaintenance;
   protected $packagesType = Package::class;
   protected $packagesDataType = 'array';
-  public $packages;
+  public $packages = [];
   /**
    * @var array[]
    */
-  public $poolArgs;
+  public $poolArgs = [];
   protected $sdkHarnessContainerImagesType = SdkHarnessContainerImage::class;
   protected $sdkHarnessContainerImagesDataType = 'array';
-  public $sdkHarnessContainerImages;
+  public $sdkHarnessContainerImages = [];
   /**
    * @var string
    */

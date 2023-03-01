@@ -43,7 +43,7 @@ class AssistantLogsDeviceSelectionResultLog extends \Google\Collection
   public $mediaFocusSelectionErrorType;
   protected $processorInfoType = AssistantLogsLumosProcessorInfo::class;
   protected $processorInfoDataType = 'array';
-  public $processorInfo;
+  public $processorInfo = [];
   protected $qualifiedDevicesType = AssistantLogsAmbiguousTargetDeviceLog::class;
   protected $qualifiedDevicesDataType = '';
   public $qualifiedDevices;

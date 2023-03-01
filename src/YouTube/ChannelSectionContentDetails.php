@@ -23,11 +23,11 @@ class ChannelSectionContentDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $channels;
+  public $channels = [];
   /**
    * @var string[]
    */
-  public $playlists;
+  public $playlists = [];
 
   /**
    * @param string[]

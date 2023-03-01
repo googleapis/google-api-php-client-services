@@ -41,7 +41,7 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -57,7 +57,7 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pemCertificateChain;
+  public $pemCertificateChain = [];
   /**
    * @var string
    */

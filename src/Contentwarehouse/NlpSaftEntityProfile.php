@@ -22,13 +22,13 @@ class NlpSaftEntityProfile extends \Google\Collection
   protected $collection_key = 'related';
   protected $alternateType = NlpSaftEntityProfileAlternate::class;
   protected $alternateDataType = 'array';
-  public $alternate;
+  public $alternate = [];
   protected $annotationsType = Proto2BridgeMessageSet::class;
   protected $annotationsDataType = '';
   public $annotations;
   protected $attributeType = NlpSaftEntityProfileAttribute::class;
   protected $attributeDataType = 'array';
-  public $attribute;
+  public $attribute = [];
   /**
    * @var string
    */
@@ -44,7 +44,7 @@ class NlpSaftEntityProfile extends \Google\Collection
   /**
    * @var float[]
    */
-  public $embedding;
+  public $embedding = [];
   /**
    * @var string
    */
@@ -59,10 +59,10 @@ class NlpSaftEntityProfile extends \Google\Collection
   public $id;
   protected $identifierType = NlpSaftIdentifier::class;
   protected $identifierDataType = 'array';
-  public $identifier;
+  public $identifier = [];
   protected $keywordType = NlpSaftEntityProfileKeyword::class;
   protected $keywordDataType = 'array';
-  public $keyword;
+  public $keyword = [];
   /**
    * @var string
    */
@@ -81,10 +81,10 @@ class NlpSaftEntityProfile extends \Google\Collection
   public $nature;
   protected $referenceType = NlpSaftEntityProfileReference::class;
   protected $referenceDataType = 'array';
-  public $reference;
+  public $reference = [];
   protected $relatedType = NlpSaftEntityProfileRelated::class;
   protected $relatedDataType = 'array';
-  public $related;
+  public $related = [];
   /**
    * @var string
    */

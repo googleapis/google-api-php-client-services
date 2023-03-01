@@ -23,7 +23,7 @@ class SdkHarnessContainerImage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $capabilities;
+  public $capabilities = [];
   /**
    * @var string
    */

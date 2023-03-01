@@ -46,14 +46,14 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributes;
+  public $attributes = [];
   /**
    * @var string[]
    */
-  public $clickThroughUrls;
+  public $clickThroughUrls = [];
   protected $correctionsType = Correction::class;
   protected $correctionsDataType = 'array';
-  public $corrections;
+  public $corrections = [];
   /**
    * @var string
    */
@@ -65,34 +65,34 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $declaredClickThroughUrls;
+  public $declaredClickThroughUrls = [];
   /**
    * @var string[]
    */
-  public $detectedAdvertiserIds;
+  public $detectedAdvertiserIds = [];
   /**
    * @var string[]
    */
-  public $detectedDomains;
+  public $detectedDomains = [];
   /**
    * @var string[]
    */
-  public $detectedLanguages;
+  public $detectedLanguages = [];
   /**
    * @var int[]
    */
-  public $detectedProductCategories;
+  public $detectedProductCategories = [];
   /**
    * @var int[]
    */
-  public $detectedSensitiveCategories;
+  public $detectedSensitiveCategories = [];
   protected $htmlType = HtmlContent::class;
   protected $htmlDataType = '';
   public $html;
   /**
    * @var string[]
    */
-  public $impressionTrackingUrls;
+  public $impressionTrackingUrls = [];
   protected $nativeType = NativeContent::class;
   protected $nativeDataType = '';
   public $native;
@@ -103,14 +103,14 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictedCategories;
+  public $restrictedCategories = [];
   protected $servingRestrictionsType = ServingRestriction::class;
   protected $servingRestrictionsDataType = 'array';
-  public $servingRestrictions;
+  public $servingRestrictions = [];
   /**
    * @var int[]
    */
-  public $vendorIds;
+  public $vendorIds = [];
   /**
    * @var int
    */

@@ -31,7 +31,7 @@ class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends \Google\Collection
   public $error;
   protected $faceAnnotationsType = GoogleCloudVisionV1p1beta1FaceAnnotation::class;
   protected $faceAnnotationsDataType = 'array';
-  public $faceAnnotations;
+  public $faceAnnotations = [];
   protected $fullTextAnnotationType = GoogleCloudVisionV1p1beta1TextAnnotation::class;
   protected $fullTextAnnotationDataType = '';
   public $fullTextAnnotation;
@@ -40,16 +40,16 @@ class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends \Google\Collection
   public $imagePropertiesAnnotation;
   protected $labelAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $labelAnnotationsDataType = 'array';
-  public $labelAnnotations;
+  public $labelAnnotations = [];
   protected $landmarkAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $landmarkAnnotationsDataType = 'array';
-  public $landmarkAnnotations;
+  public $landmarkAnnotations = [];
   protected $localizedObjectAnnotationsType = GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation::class;
   protected $localizedObjectAnnotationsDataType = 'array';
-  public $localizedObjectAnnotations;
+  public $localizedObjectAnnotations = [];
   protected $logoAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $logoAnnotationsDataType = 'array';
-  public $logoAnnotations;
+  public $logoAnnotations = [];
   protected $productSearchResultsType = GoogleCloudVisionV1p1beta1ProductSearchResults::class;
   protected $productSearchResultsDataType = '';
   public $productSearchResults;
@@ -58,7 +58,7 @@ class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends \Google\Collection
   public $safeSearchAnnotation;
   protected $textAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $textAnnotationsDataType = 'array';
-  public $textAnnotations;
+  public $textAnnotations = [];
   protected $webDetectionType = GoogleCloudVisionV1p1beta1WebDetection::class;
   protected $webDetectionDataType = '';
   public $webDetection;

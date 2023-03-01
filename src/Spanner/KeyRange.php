@@ -23,19 +23,19 @@ class KeyRange extends \Google\Collection
   /**
    * @var array[]
    */
-  public $endClosed;
+  public $endClosed = [];
   /**
    * @var array[]
    */
-  public $endOpen;
+  public $endOpen = [];
   /**
    * @var array[]
    */
-  public $startClosed;
+  public $startClosed = [];
   /**
    * @var array[]
    */
-  public $startOpen;
+  public $startOpen = [];
 
   /**
    * @param array[]

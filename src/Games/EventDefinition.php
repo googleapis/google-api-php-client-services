@@ -22,7 +22,7 @@ class EventDefinition extends \Google\Collection
   protected $collection_key = 'childEvents';
   protected $childEventsType = EventChild::class;
   protected $childEventsDataType = 'array';
-  public $childEvents;
+  public $childEvents = [];
   /**
    * @var string
    */

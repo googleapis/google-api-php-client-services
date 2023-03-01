@@ -31,10 +31,10 @@ class ReportReachCriteria extends \Google\Collection
   public $dateRange;
   protected $dimensionFiltersType = DimensionValue::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters;
+  public $dimensionFilters = [];
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var bool
    */
@@ -42,11 +42,11 @@ class ReportReachCriteria extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metricNames;
+  public $metricNames = [];
   /**
    * @var string[]
    */
-  public $reachByFrequencyMetricNames;
+  public $reachByFrequencyMetricNames = [];
 
   /**
    * @param Activities

@@ -20,7 +20,7 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray extends \Google\Collection
 {
   protected $collection_key = 'doubleValues';
-  public $doubleValues;
+  public $doubleValues = [];
 
   public function setDoubleValues($doubleValues)
   {

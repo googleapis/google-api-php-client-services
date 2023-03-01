@@ -23,19 +23,19 @@ class ContextRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedRequestExtensions;
+  public $allowedRequestExtensions = [];
   /**
    * @var string[]
    */
-  public $allowedResponseExtensions;
+  public $allowedResponseExtensions = [];
   /**
    * @var string[]
    */
-  public $provided;
+  public $provided = [];
   /**
    * @var string[]
    */
-  public $requested;
+  public $requested = [];
   /**
    * @var string
    */

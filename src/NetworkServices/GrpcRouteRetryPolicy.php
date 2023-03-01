@@ -27,7 +27,7 @@ class GrpcRouteRetryPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $retryConditions;
+  public $retryConditions = [];
 
   /**
    * @param string

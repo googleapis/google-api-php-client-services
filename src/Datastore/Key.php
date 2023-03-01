@@ -25,7 +25,7 @@ class Key extends \Google\Collection
   public $partitionId;
   protected $pathType = PathElement::class;
   protected $pathDataType = 'array';
-  public $path;
+  public $path = [];
 
   /**
    * @param PartitionId

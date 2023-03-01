@@ -25,23 +25,23 @@ class Paragraph extends \Google\Collection
   public $bullet;
   protected $elementsType = ParagraphElement::class;
   protected $elementsDataType = 'array';
-  public $elements;
+  public $elements = [];
   protected $paragraphStyleType = ParagraphStyle::class;
   protected $paragraphStyleDataType = '';
   public $paragraphStyle;
   /**
    * @var string[]
    */
-  public $positionedObjectIds;
+  public $positionedObjectIds = [];
   protected $suggestedBulletChangesType = SuggestedBullet::class;
   protected $suggestedBulletChangesDataType = 'map';
-  public $suggestedBulletChanges;
+  public $suggestedBulletChanges = [];
   protected $suggestedParagraphStyleChangesType = SuggestedParagraphStyle::class;
   protected $suggestedParagraphStyleChangesDataType = 'map';
-  public $suggestedParagraphStyleChanges;
+  public $suggestedParagraphStyleChanges = [];
   protected $suggestedPositionedObjectIdsType = ObjectReferences::class;
   protected $suggestedPositionedObjectIdsDataType = 'map';
-  public $suggestedPositionedObjectIds;
+  public $suggestedPositionedObjectIds = [];
 
   /**
    * @param Bullet

@@ -22,7 +22,7 @@ class ListAlertsResponse extends \Google\Collection
   protected $collection_key = 'alerts';
   protected $alertsType = Alert::class;
   protected $alertsDataType = 'array';
-  public $alerts;
+  public $alerts = [];
   /**
    * @var string
    */

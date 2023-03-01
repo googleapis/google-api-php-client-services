@@ -26,7 +26,7 @@ class InstanceGroupList extends \Google\Collection
   public $id;
   protected $itemsType = InstanceGroup::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

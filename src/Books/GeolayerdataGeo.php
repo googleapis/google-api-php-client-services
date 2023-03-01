@@ -23,7 +23,7 @@ class GeolayerdataGeo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $boundary;
+  public $boundary = [];
   /**
    * @var string
    */

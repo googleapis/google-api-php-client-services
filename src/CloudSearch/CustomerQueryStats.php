@@ -25,7 +25,7 @@ class CustomerQueryStats extends \Google\Collection
   public $date;
   protected $queryCountByStatusType = QueryCountByStatus::class;
   protected $queryCountByStatusDataType = 'array';
-  public $queryCountByStatus;
+  public $queryCountByStatus = [];
 
   /**
    * @param Date

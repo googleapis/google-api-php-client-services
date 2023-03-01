@@ -30,11 +30,11 @@ class GoogleCloudDataplexV1AssetDiscoverySpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludePatterns;
+  public $excludePatterns = [];
   /**
    * @var string[]
    */
-  public $includePatterns;
+  public $includePatterns = [];
   protected $jsonOptionsType = GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions::class;
   protected $jsonOptionsDataType = '';
   public $jsonOptions;

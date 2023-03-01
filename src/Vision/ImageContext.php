@@ -26,7 +26,7 @@ class ImageContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $languageHints;
+  public $languageHints = [];
   protected $latLongRectType = LatLongRect::class;
   protected $latLongRectDataType = '';
   public $latLongRect;

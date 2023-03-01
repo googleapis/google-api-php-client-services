@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1IntegerArray extends \Google\Collection
   /**
    * @var int[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param int[]

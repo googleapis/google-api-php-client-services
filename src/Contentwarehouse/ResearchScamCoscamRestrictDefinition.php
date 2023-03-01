@@ -22,10 +22,10 @@ class ResearchScamCoscamRestrictDefinition extends \Google\Collection
   protected $collection_key = 'disjunctions';
   protected $conjunctionsType = ResearchScamCoscamConjunction::class;
   protected $conjunctionsDataType = 'array';
-  public $conjunctions;
+  public $conjunctions = [];
   protected $disjunctionsType = ResearchScamCoscamDisjunction::class;
   protected $disjunctionsDataType = 'array';
-  public $disjunctions;
+  public $disjunctions = [];
   /**
    * @var string
    */

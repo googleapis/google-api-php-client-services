@@ -38,7 +38,7 @@ class Application extends \Google\Collection
   public $name;
   protected $transferParamsType = ApplicationTransferParam::class;
   protected $transferParamsDataType = 'array';
-  public $transferParams;
+  public $transferParams = [];
 
   /**
    * @param string

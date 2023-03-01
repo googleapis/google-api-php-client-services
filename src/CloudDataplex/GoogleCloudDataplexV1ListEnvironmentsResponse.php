@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1ListEnvironmentsResponse extends \Google\Collection
   protected $collection_key = 'environments';
   protected $environmentsType = GoogleCloudDataplexV1Environment::class;
   protected $environmentsDataType = 'array';
-  public $environments;
+  public $environments = [];
   /**
    * @var string
    */

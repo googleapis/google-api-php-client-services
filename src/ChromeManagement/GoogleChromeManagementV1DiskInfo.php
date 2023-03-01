@@ -67,7 +67,7 @@ class GoogleChromeManagementV1DiskInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $volumeIds;
+  public $volumeIds = [];
   /**
    * @var string
    */

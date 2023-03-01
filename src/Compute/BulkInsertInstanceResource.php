@@ -39,7 +39,7 @@ class BulkInsertInstanceResource extends \Google\Model
   public $namePattern;
   protected $perInstancePropertiesType = BulkInsertInstanceResourcePerInstanceProperties::class;
   protected $perInstancePropertiesDataType = 'map';
-  public $perInstanceProperties;
+  public $perInstanceProperties = [];
   /**
    * @var string
    */

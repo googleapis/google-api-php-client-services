@@ -41,7 +41,7 @@ class Cluster extends \Google\Collection
   public $clusterIpv4Cidr;
   protected $conditionsType = StatusCondition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   protected $confidentialNodesType = ConfidentialNodes::class;
   protected $confidentialNodesDataType = '';
   public $confidentialNodes;
@@ -112,7 +112,7 @@ class Cluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instanceGroupUrls;
+  public $instanceGroupUrls = [];
   protected $ipAllocationPolicyType = IPAllocationPolicy::class;
   protected $ipAllocationPolicyDataType = '';
   public $ipAllocationPolicy;
@@ -130,7 +130,7 @@ class Cluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $locations;
+  public $locations = [];
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   public $loggingConfig;
@@ -186,7 +186,7 @@ class Cluster extends \Google\Collection
   public $nodePoolDefaults;
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
-  public $nodePools;
+  public $nodePools = [];
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
   public $notificationConfig;
@@ -199,7 +199,7 @@ class Cluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceLabels;
+  public $resourceLabels = [];
   protected $resourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $resourceUsageExportConfigDataType = '';
   public $resourceUsageExportConfig;

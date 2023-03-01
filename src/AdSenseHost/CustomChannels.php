@@ -26,7 +26,7 @@ class CustomChannels extends \Google\Collection
   public $etag;
   protected $itemsType = CustomChannel::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

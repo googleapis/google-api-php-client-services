@@ -23,7 +23,7 @@ class NodeGroupsDeleteNodesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nodes;
+  public $nodes = [];
 
   /**
    * @param string[]

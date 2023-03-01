@@ -45,7 +45,7 @@ class OSPolicyAssignment extends \Google\Collection
   public $name;
   protected $osPoliciesType = OSPolicy::class;
   protected $osPoliciesDataType = 'array';
-  public $osPolicies;
+  public $osPolicies = [];
   /**
    * @var bool
    */

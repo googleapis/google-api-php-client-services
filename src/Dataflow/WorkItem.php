@@ -45,7 +45,7 @@ class WorkItem extends \Google\Collection
   public $mapTask;
   protected $packagesType = Package::class;
   protected $packagesDataType = 'array';
-  public $packages;
+  public $packages = [];
   /**
    * @var string
    */

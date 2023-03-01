@@ -31,7 +31,7 @@ class GoogleCloudDocumentaiV1Evaluation extends \Google\Model
   public $documentCounters;
   protected $entityMetricsType = GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics::class;
   protected $entityMetricsDataType = 'map';
-  public $entityMetrics;
+  public $entityMetrics = [];
   /**
    * @var string
    */

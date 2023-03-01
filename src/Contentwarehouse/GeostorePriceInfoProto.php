@@ -22,10 +22,10 @@ class GeostorePriceInfoProto extends \Google\Collection
   protected $collection_key = 'priceListUrl';
   protected $priceListType = GeostorePriceListProto::class;
   protected $priceListDataType = 'array';
-  public $priceList;
+  public $priceList = [];
   protected $priceListUrlType = GeostoreUrlListProto::class;
   protected $priceListUrlDataType = 'array';
-  public $priceListUrl;
+  public $priceListUrl = [];
   protected $statusType = GeostorePriceInfoStatus::class;
   protected $statusDataType = '';
   public $status;

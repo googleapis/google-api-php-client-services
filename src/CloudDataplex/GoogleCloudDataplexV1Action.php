@@ -31,7 +31,7 @@ class GoogleCloudDataplexV1Action extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dataLocations;
+  public $dataLocations = [];
   /**
    * @var string
    */

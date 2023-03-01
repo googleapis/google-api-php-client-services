@@ -40,7 +40,7 @@ class TravelFlightsAirlineConfig extends \Google\Collection
   public $countryCode;
   protected $countryContactInfoType = TravelFlightsAirlineConfigCountryContactInfo::class;
   protected $countryContactInfoDataType = 'array';
-  public $countryContactInfo;
+  public $countryContactInfo = [];
   /**
    * @var bool
    */
@@ -51,7 +51,7 @@ class TravelFlightsAirlineConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fqtvPartnerCode;
+  public $fqtvPartnerCode = [];
   /**
    * @var string
    */
@@ -66,7 +66,7 @@ class TravelFlightsAirlineConfig extends \Google\Collection
   public $innovataCode;
   protected $localizedContactInfoType = TravelFlightsAirlineConfigLocalizedContactInfo::class;
   protected $localizedContactInfoDataType = 'array';
-  public $localizedContactInfo;
+  public $localizedContactInfo = [];
   /**
    * @var string
    */

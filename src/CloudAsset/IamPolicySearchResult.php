@@ -30,7 +30,7 @@ class IamPolicySearchResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $folders;
+  public $folders = [];
   /**
    * @var string
    */

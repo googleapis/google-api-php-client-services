@@ -26,7 +26,7 @@ class TargetInstanceAggregatedListWarning extends \Google\Collection
   public $code;
   protected $dataType = TargetInstanceAggregatedListWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

@@ -27,7 +27,7 @@ class LinkedVpnTunnels extends \Google\Collection
   /**
    * @var string[]
    */
-  public $uris;
+  public $uris = [];
   /**
    * @var string
    */

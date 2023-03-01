@@ -26,7 +26,7 @@ class ListUsersResponse extends \Google\Collection
   public $nextPageToken;
   protected $usersType = User::class;
   protected $usersDataType = 'array';
-  public $users;
+  public $users = [];
 
   /**
    * @param string

@@ -22,7 +22,7 @@ class FatcatCompactRephilClusters extends \Google\Collection
   protected $collection_key = 'cluster';
   protected $clusterType = FatcatCompactRephilClustersCluster::class;
   protected $clusterDataType = 'array';
-  public $cluster;
+  public $cluster = [];
 
   /**
    * @param FatcatCompactRephilClustersCluster[]

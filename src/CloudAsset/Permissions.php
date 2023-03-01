@@ -23,7 +23,7 @@ class Permissions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $permissions;
+  public $permissions = [];
 
   /**
    * @param string[]

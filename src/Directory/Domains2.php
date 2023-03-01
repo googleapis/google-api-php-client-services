@@ -22,7 +22,7 @@ class Domains2 extends \Google\Collection
   protected $collection_key = 'domains';
   protected $domainsType = Domains::class;
   protected $domainsDataType = 'array';
-  public $domains;
+  public $domains = [];
   /**
    * @var string
    */

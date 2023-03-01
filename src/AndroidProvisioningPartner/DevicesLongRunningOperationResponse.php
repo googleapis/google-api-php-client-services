@@ -22,7 +22,7 @@ class DevicesLongRunningOperationResponse extends \Google\Collection
   protected $collection_key = 'perDeviceStatus';
   protected $perDeviceStatusType = OperationPerDevice::class;
   protected $perDeviceStatusDataType = 'array';
-  public $perDeviceStatus;
+  public $perDeviceStatus = [];
   /**
    * @var int
    */

@@ -22,7 +22,7 @@ class BatchUpdateContactsRequest extends \Google\Collection
   protected $collection_key = 'sources';
   protected $contactsType = Person::class;
   protected $contactsDataType = 'map';
-  public $contacts;
+  public $contacts = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class BatchUpdateContactsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sources;
+  public $sources = [];
   /**
    * @var string
    */

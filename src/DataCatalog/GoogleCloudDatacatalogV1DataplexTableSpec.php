@@ -25,7 +25,7 @@ class GoogleCloudDatacatalogV1DataplexTableSpec extends \Google\Collection
   public $dataplexSpec;
   protected $externalTablesType = GoogleCloudDatacatalogV1DataplexExternalTable::class;
   protected $externalTablesDataType = 'array';
-  public $externalTables;
+  public $externalTables = [];
   /**
    * @var bool
    */

@@ -26,7 +26,7 @@ class GoogleCloudRunV2ResourceRequirements extends \Google\Model
   /**
    * @var string[]
    */
-  public $limits;
+  public $limits = [];
 
   /**
    * @param bool

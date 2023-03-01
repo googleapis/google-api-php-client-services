@@ -34,7 +34,7 @@ class Cluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $metricsType = ClusterMetrics::class;
   protected $metricsDataType = '';
   public $metrics;
@@ -47,7 +47,7 @@ class Cluster extends \Google\Collection
   public $status;
   protected $statusHistoryType = ClusterStatus::class;
   protected $statusHistoryDataType = 'array';
-  public $statusHistory;
+  public $statusHistory = [];
   protected $virtualClusterConfigType = VirtualClusterConfig::class;
   protected $virtualClusterConfigDataType = '';
   public $virtualClusterConfig;

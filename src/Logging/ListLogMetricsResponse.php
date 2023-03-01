@@ -22,7 +22,7 @@ class ListLogMetricsResponse extends \Google\Collection
   protected $collection_key = 'metrics';
   protected $metricsType = LogMetric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   /**
    * @var string
    */

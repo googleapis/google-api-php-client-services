@@ -22,7 +22,7 @@ class RepositoryWebrefWebrefOutlinkInfos extends \Google\Collection
   protected $collection_key = 'outlinkInfo';
   protected $outlinkInfoType = RepositoryWebrefWebrefOutlinkInfo::class;
   protected $outlinkInfoDataType = 'array';
-  public $outlinkInfo;
+  public $outlinkInfo = [];
 
   /**
    * @param RepositoryWebrefWebrefOutlinkInfo[]

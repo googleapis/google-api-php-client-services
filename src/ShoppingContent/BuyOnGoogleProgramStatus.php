@@ -23,7 +23,7 @@ class BuyOnGoogleProgramStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $businessModel;
+  public $businessModel = [];
   /**
    * @var string
    */

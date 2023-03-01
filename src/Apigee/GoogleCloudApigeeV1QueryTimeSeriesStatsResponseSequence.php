@@ -23,11 +23,11 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsResponseSequence extends \Google\Co
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var array[]
    */
-  public $points;
+  public $points = [];
 
   /**
    * @param string[]

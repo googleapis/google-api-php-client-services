@@ -26,7 +26,7 @@ class RepositoryWebrefWebrefAnnotationStats extends \Google\Collection
   public $docWeight;
   protected $ngramContextType = RepositoryWebrefNgramContext::class;
   protected $ngramContextDataType = 'array';
-  public $ngramContext;
+  public $ngramContext = [];
   /**
    * @var string
    */
@@ -45,7 +45,7 @@ class RepositoryWebrefWebrefAnnotationStats extends \Google\Collection
   public $numRangesWithCandidates;
   protected $statsPerTypeType = RepositoryWebrefAnnotationStatsPerType::class;
   protected $statsPerTypeDataType = 'array';
-  public $statsPerType;
+  public $statsPerType = [];
 
   /**
    * @param float

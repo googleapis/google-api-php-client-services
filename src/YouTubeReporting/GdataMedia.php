@@ -37,7 +37,7 @@ class GdataMedia extends \Google\Collection
   public $blobstore2Info;
   protected $compositeMediaType = GdataCompositeMedia::class;
   protected $compositeMediaDataType = 'array';
-  public $compositeMedia;
+  public $compositeMedia = [];
   /**
    * @var string
    */

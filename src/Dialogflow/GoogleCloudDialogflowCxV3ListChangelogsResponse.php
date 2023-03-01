@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3ListChangelogsResponse extends \Google\Collection
   protected $collection_key = 'changelogs';
   protected $changelogsType = GoogleCloudDialogflowCxV3Changelog::class;
   protected $changelogsDataType = 'array';
-  public $changelogs;
+  public $changelogs = [];
   /**
    * @var string
    */

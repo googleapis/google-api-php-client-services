@@ -26,7 +26,7 @@ class CalendarResources extends \Google\Collection
   public $etag;
   protected $itemsType = CalendarResource::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

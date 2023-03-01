@@ -28,7 +28,7 @@ class NlpSemanticParsingQRefAnnotationSubCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clusterSiblingMid;
+  public $clusterSiblingMid = [];
 
   /**
    * @param string

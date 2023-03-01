@@ -22,7 +22,7 @@ class InstancesStartWithEncryptionKeyRequest extends \Google\Collection
   protected $collection_key = 'disks';
   protected $disksType = CustomerEncryptionKeyProtectedDisk::class;
   protected $disksDataType = 'array';
-  public $disks;
+  public $disks = [];
 
   /**
    * @param CustomerEncryptionKeyProtectedDisk[]

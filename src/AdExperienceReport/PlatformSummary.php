@@ -39,7 +39,7 @@ class PlatformSummary extends \Google\Collection
   /**
    * @var string[]
    */
-  public $region;
+  public $region = [];
   /**
    * @var string
    */

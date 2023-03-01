@@ -23,22 +23,22 @@ class VideoSuggestions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $editorSuggestions;
+  public $editorSuggestions = [];
   /**
    * @var string[]
    */
-  public $processingErrors;
+  public $processingErrors = [];
   /**
    * @var string[]
    */
-  public $processingHints;
+  public $processingHints = [];
   /**
    * @var string[]
    */
-  public $processingWarnings;
+  public $processingWarnings = [];
   protected $tagSuggestionsType = VideoSuggestionsTagSuggestion::class;
   protected $tagSuggestionsDataType = 'array';
-  public $tagSuggestions;
+  public $tagSuggestions = [];
 
   /**
    * @param string[]

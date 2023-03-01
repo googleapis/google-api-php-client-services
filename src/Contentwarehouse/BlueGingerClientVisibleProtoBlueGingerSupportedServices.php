@@ -22,7 +22,7 @@ class BlueGingerClientVisibleProtoBlueGingerSupportedServices extends \Google\Co
   protected $collection_key = 'modules';
   protected $modulesType = BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule::class;
   protected $modulesDataType = 'array';
-  public $modules;
+  public $modules = [];
 
   /**
    * @param BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule[]

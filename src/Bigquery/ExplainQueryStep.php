@@ -27,7 +27,7 @@ class ExplainQueryStep extends \Google\Collection
   /**
    * @var string[]
    */
-  public $substeps;
+  public $substeps = [];
 
   /**
    * @param string

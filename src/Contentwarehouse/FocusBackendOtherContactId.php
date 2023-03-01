@@ -22,7 +22,7 @@ class FocusBackendOtherContactId extends \Google\Collection
   protected $collection_key = 'deviceContactId';
   protected $deviceContactIdType = FocusBackendDeviceContactId::class;
   protected $deviceContactIdDataType = 'array';
-  public $deviceContactId;
+  public $deviceContactId = [];
 
   /**
    * @param FocusBackendDeviceContactId[]

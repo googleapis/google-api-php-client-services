@@ -23,7 +23,7 @@ class OSPolicyResourcePackageResourceMSI extends \Google\Collection
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   protected $sourceType = OSPolicyResourceFile::class;
   protected $sourceDataType = '';
   public $source;

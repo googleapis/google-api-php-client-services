@@ -22,7 +22,7 @@ class ListCertificateAuthoritiesResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $certificateAuthoritiesType = CertificateAuthority::class;
   protected $certificateAuthoritiesDataType = 'array';
-  public $certificateAuthorities;
+  public $certificateAuthorities = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListCertificateAuthoritiesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param CertificateAuthority[]

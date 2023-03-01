@@ -31,7 +31,7 @@ class CloudRunMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceUrls;
+  public $serviceUrls = [];
 
   /**
    * @param string

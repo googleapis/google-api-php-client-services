@@ -27,11 +27,11 @@ class Tag extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blockingRuleId;
+  public $blockingRuleId = [];
   /**
    * @var string[]
    */
-  public $blockingTriggerId;
+  public $blockingTriggerId = [];
   protected $consentSettingsType = TagConsentSetting::class;
   protected $consentSettingsDataType = '';
   public $consentSettings;
@@ -46,11 +46,11 @@ class Tag extends \Google\Collection
   /**
    * @var string[]
    */
-  public $firingRuleId;
+  public $firingRuleId = [];
   /**
    * @var string[]
    */
-  public $firingTriggerId;
+  public $firingTriggerId = [];
   /**
    * @var bool
    */
@@ -72,7 +72,7 @@ class Tag extends \Google\Collection
   public $notes;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
-  public $parameter;
+  public $parameter = [];
   /**
    * @var string
    */
@@ -98,7 +98,7 @@ class Tag extends \Google\Collection
   public $scheduleStartMs;
   protected $setupTagType = SetupTag::class;
   protected $setupTagDataType = 'array';
-  public $setupTag;
+  public $setupTag = [];
   /**
    * @var string
    */
@@ -113,7 +113,7 @@ class Tag extends \Google\Collection
   public $tagManagerUrl;
   protected $teardownTagType = TeardownTag::class;
   protected $teardownTagDataType = 'array';
-  public $teardownTag;
+  public $teardownTag = [];
   /**
    * @var string
    */

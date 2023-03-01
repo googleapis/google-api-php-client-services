@@ -33,7 +33,7 @@ class NlpSemanticParsingModelsMediaMediaAnnotation extends \Google\Collection
   public $contentType;
   protected $imageType = AssistantApiCoreTypesImage::class;
   protected $imageDataType = 'array';
-  public $image;
+  public $image = [];
   /**
    * @var string
    */
@@ -58,7 +58,7 @@ class NlpSemanticParsingModelsMediaMediaAnnotation extends \Google\Collection
   public $primaryEntityMid;
   protected $providerInfoType = NlpSemanticParsingModelsMediaMediaProviderInfo::class;
   protected $providerInfoDataType = 'array';
-  public $providerInfo;
+  public $providerInfo = [];
   protected $purchaseInfoType = NlpSemanticParsingModelsMediaPurchaseInfo::class;
   protected $purchaseInfoDataType = '';
   public $purchaseInfo;

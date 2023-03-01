@@ -22,7 +22,7 @@ class AssistantApiCoreTypesCalendarEvent extends \Google\Collection
   protected $collection_key = 'rooms';
   protected $attendeesType = AssistantApiCoreTypesCalendarEventAttendee::class;
   protected $attendeesDataType = 'array';
-  public $attendees;
+  public $attendees = [];
   /**
    * @var int
    */
@@ -83,7 +83,7 @@ class AssistantApiCoreTypesCalendarEvent extends \Google\Collection
   public $location;
   protected $meetingContactsType = AssistantApiCoreTypesCalendarEventMeetingContact::class;
   protected $meetingContactsDataType = 'array';
-  public $meetingContacts;
+  public $meetingContacts = [];
   protected $organizerType = AssistantApiCoreTypesCalendarEventAttendee::class;
   protected $organizerDataType = '';
   public $organizer;
@@ -101,7 +101,7 @@ class AssistantApiCoreTypesCalendarEvent extends \Google\Collection
   public $recurringEventId;
   protected $roomsType = AssistantApiCoreTypesCalendarEventRoom::class;
   protected $roomsDataType = 'array';
-  public $rooms;
+  public $rooms = [];
   protected $startType = AssistantApiDateTime::class;
   protected $startDataType = '';
   public $start;

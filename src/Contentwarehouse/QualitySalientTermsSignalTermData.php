@@ -66,7 +66,7 @@ class QualitySalientTermsSignalTermData extends \Google\Collection
   public $observedTf;
   protected $originalTermType = QualitySalientTermsSignalTermData::class;
   protected $originalTermDataType = 'array';
-  public $originalTerm;
+  public $originalTerm = [];
   /**
    * @var float
    */

@@ -26,7 +26,7 @@ class AndroidConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $data;
+  public $data = [];
   /**
    * @var bool
    */

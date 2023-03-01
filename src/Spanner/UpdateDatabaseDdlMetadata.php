@@ -23,18 +23,18 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $commitTimestamps;
+  public $commitTimestamps = [];
   /**
    * @var string
    */
   public $database;
   protected $progressType = OperationProgress::class;
   protected $progressDataType = 'array';
-  public $progress;
+  public $progress = [];
   /**
    * @var string[]
    */
-  public $statements;
+  public $statements = [];
   /**
    * @var bool
    */

@@ -26,7 +26,7 @@ class DatasetAccessEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetTypes;
+  public $targetTypes = [];
 
   /**
    * @param DatasetReference

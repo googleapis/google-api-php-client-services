@@ -22,7 +22,7 @@ class GoogleCloudRecommenderV1SecurityProjection extends \Google\Model
   /**
    * @var array[]
    */
-  public $details;
+  public $details = [];
 
   /**
    * @param array[]

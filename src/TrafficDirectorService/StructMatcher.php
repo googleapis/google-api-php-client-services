@@ -22,7 +22,7 @@ class StructMatcher extends \Google\Collection
   protected $collection_key = 'path';
   protected $pathType = PathSegment::class;
   protected $pathDataType = 'array';
-  public $path;
+  public $path = [];
   protected $valueType = ValueMatcher::class;
   protected $valueDataType = '';
   public $value;

@@ -26,7 +26,7 @@ class DiskTypeList extends \Google\Collection
   public $id;
   protected $itemsType = DiskType::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

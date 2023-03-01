@@ -23,7 +23,7 @@ class InstancesRemoveResourcePoliciesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourcePolicies;
+  public $resourcePolicies = [];
 
   /**
    * @param string[]

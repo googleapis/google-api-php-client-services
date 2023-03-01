@@ -26,7 +26,7 @@ class StreamingComputationRanges extends \Google\Collection
   public $computationId;
   protected $rangeAssignmentsType = KeyRangeDataDiskAssignment::class;
   protected $rangeAssignmentsDataType = 'array';
-  public $rangeAssignments;
+  public $rangeAssignments = [];
 
   /**
    * @param string

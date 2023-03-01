@@ -23,7 +23,7 @@ class Voice extends \Google\Collection
   /**
    * @var string[]
    */
-  public $languageCodes;
+  public $languageCodes = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class CommitRequest extends \Google\Collection
   public $mode;
   protected $mutationsType = Mutation::class;
   protected $mutationsDataType = 'array';
-  public $mutations;
+  public $mutations = [];
   protected $singleUseTransactionType = TransactionOptions::class;
   protected $singleUseTransactionDataType = '';
   public $singleUseTransaction;

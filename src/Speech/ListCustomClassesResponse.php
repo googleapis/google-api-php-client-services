@@ -22,7 +22,7 @@ class ListCustomClassesResponse extends \Google\Collection
   protected $collection_key = 'customClasses';
   protected $customClassesType = CustomClass::class;
   protected $customClassesDataType = 'array';
-  public $customClasses;
+  public $customClasses = [];
   /**
    * @var string
    */

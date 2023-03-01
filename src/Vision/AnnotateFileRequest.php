@@ -22,7 +22,7 @@ class AnnotateFileRequest extends \Google\Collection
   protected $collection_key = 'pages';
   protected $featuresType = Feature::class;
   protected $featuresDataType = 'array';
-  public $features;
+  public $features = [];
   protected $imageContextType = ImageContext::class;
   protected $imageContextDataType = '';
   public $imageContext;
@@ -32,7 +32,7 @@ class AnnotateFileRequest extends \Google\Collection
   /**
    * @var int[]
    */
-  public $pages;
+  public $pages = [];
 
   /**
    * @param Feature[]

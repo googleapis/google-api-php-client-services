@@ -22,7 +22,7 @@ class ListGtagConfigResponse extends \Google\Collection
   protected $collection_key = 'gtagConfig';
   protected $gtagConfigType = GtagConfig::class;
   protected $gtagConfigDataType = 'array';
-  public $gtagConfig;
+  public $gtagConfig = [];
   /**
    * @var string
    */

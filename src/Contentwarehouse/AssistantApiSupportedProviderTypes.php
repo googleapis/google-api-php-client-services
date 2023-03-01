@@ -23,7 +23,7 @@ class AssistantApiSupportedProviderTypes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedTypes;
+  public $supportedTypes = [];
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class RepositoryWebrefWebrefEntityCollections extends \Google\Collection
   protected $collection_key = 'collection';
   protected $collectionType = RepositoryWebrefKGCollection::class;
   protected $collectionDataType = 'array';
-  public $collection;
+  public $collection = [];
 
   /**
    * @param RepositoryWebrefKGCollection[]

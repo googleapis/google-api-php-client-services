@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
   protected $collection_key = 'app';
   protected $appType = GoogleCloudApigeeV1App::class;
   protected $appDataType = 'array';
-  public $app;
+  public $app = [];
 
   /**
    * @param GoogleCloudApigeeV1App[]

@@ -22,7 +22,7 @@ class DroppedLabels extends \Google\Model
   /**
    * @var string[]
    */
-  public $label;
+  public $label = [];
 
   /**
    * @param string[]

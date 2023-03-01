@@ -72,7 +72,7 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
   public $name;
   protected $sessionsType = AssistantLogsDeviceMediaSessionLog::class;
   protected $sessionsDataType = 'array';
-  public $sessions;
+  public $sessions = [];
   /**
    * @var string
    */

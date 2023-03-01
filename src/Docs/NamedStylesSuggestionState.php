@@ -22,7 +22,7 @@ class NamedStylesSuggestionState extends \Google\Collection
   protected $collection_key = 'stylesSuggestionStates';
   protected $stylesSuggestionStatesType = NamedStyleSuggestionState::class;
   protected $stylesSuggestionStatesDataType = 'array';
-  public $stylesSuggestionStates;
+  public $stylesSuggestionStates = [];
 
   /**
    * @param NamedStyleSuggestionState[]

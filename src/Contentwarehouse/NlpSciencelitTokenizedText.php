@@ -27,7 +27,7 @@ class NlpSciencelitTokenizedText extends \Google\Collection
   /**
    * @var string[]
    */
-  public $token;
+  public $token = [];
 
   /**
    * @param string

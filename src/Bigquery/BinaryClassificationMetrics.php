@@ -25,7 +25,7 @@ class BinaryClassificationMetrics extends \Google\Collection
   public $aggregateClassificationMetrics;
   protected $binaryConfusionMatrixListType = BinaryConfusionMatrix::class;
   protected $binaryConfusionMatrixListDataType = 'array';
-  public $binaryConfusionMatrixList;
+  public $binaryConfusionMatrixList = [];
   /**
    * @var string
    */

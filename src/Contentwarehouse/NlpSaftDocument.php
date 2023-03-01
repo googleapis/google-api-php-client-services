@@ -22,25 +22,25 @@ class NlpSaftDocument extends \Google\Collection
   protected $collection_key = 'topic';
   protected $annotatedPhraseType = NlpSaftAnnotatedPhrase::class;
   protected $annotatedPhraseDataType = 'array';
-  public $annotatedPhrase;
+  public $annotatedPhrase = [];
   protected $annotationsType = Proto2BridgeMessageSet::class;
   protected $annotationsDataType = '';
   public $annotations;
   /**
    * @var string[]
    */
-  public $author;
+  public $author = [];
   /**
    * @var string
    */
   public $bylineDate;
   protected $constituencyNodeType = NlpSaftConstituencyNode::class;
   protected $constituencyNodeDataType = 'array';
-  public $constituencyNode;
+  public $constituencyNode = [];
   /**
    * @var int[]
    */
-  public $constituencyRoot;
+  public $constituencyRoot = [];
   /**
    * @var string
    */
@@ -63,11 +63,11 @@ class NlpSaftDocument extends \Google\Collection
   public $docid;
   protected $entityType = NlpSaftEntity::class;
   protected $entityDataType = 'array';
-  public $entity;
+  public $entity = [];
   /**
    * @var string[]
    */
-  public $entityLabel;
+  public $entityLabel = [];
   /**
    * @var int
    */
@@ -82,10 +82,10 @@ class NlpSaftDocument extends \Google\Collection
   public $httpHeaders;
   protected $hyperlinkType = NlpSaftHyperlink::class;
   protected $hyperlinkDataType = 'array';
-  public $hyperlink;
+  public $hyperlink = [];
   protected $labeledSpansType = NlpSaftLabeledSpans::class;
   protected $labeledSpansDataType = 'map';
-  public $labeledSpans;
+  public $labeledSpans = [];
   /**
    * @var int
    */
@@ -96,24 +96,24 @@ class NlpSaftDocument extends \Google\Collection
   public $lastSignificantUpdate;
   protected $measureType = NlpSaftMeasure::class;
   protected $measureDataType = 'array';
-  public $measure;
+  public $measure = [];
   /**
    * @var bool
    */
   public $privacySensitive;
   protected $relationType = NlpSaftRelation::class;
   protected $relationDataType = 'array';
-  public $relation;
+  public $relation = [];
   /**
    * @var bool
    */
   public $rpcError;
   protected $semanticNodeType = NlpSaftSemanticNode::class;
   protected $semanticNodeDataType = 'array';
-  public $semanticNode;
+  public $semanticNode = [];
   protected $subsectionType = NlpSaftDocument::class;
   protected $subsectionDataType = 'array';
-  public $subsection;
+  public $subsection = [];
   /**
    * @var string
    */
@@ -128,10 +128,10 @@ class NlpSaftDocument extends \Google\Collection
   public $title;
   protected $tokenType = NlpSaftToken::class;
   protected $tokenDataType = 'array';
-  public $token;
+  public $token = [];
   protected $topicType = NlpSaftDocumentTopic::class;
   protected $topicDataType = 'array';
-  public $topic;
+  public $topic = [];
   /**
    * @var bool
    */

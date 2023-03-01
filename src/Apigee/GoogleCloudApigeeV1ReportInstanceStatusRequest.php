@@ -30,7 +30,7 @@ class GoogleCloudApigeeV1ReportInstanceStatusRequest extends \Google\Collection
   public $reportTime;
   protected $resourcesType = GoogleCloudApigeeV1ResourceStatus::class;
   protected $resourcesDataType = 'array';
-  public $resources;
+  public $resources = [];
 
   /**
    * @param string

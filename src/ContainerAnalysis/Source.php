@@ -22,7 +22,7 @@ class Source extends \Google\Collection
   protected $collection_key = 'additionalContexts';
   protected $additionalContextsType = SourceContext::class;
   protected $additionalContextsDataType = 'array';
-  public $additionalContexts;
+  public $additionalContexts = [];
   /**
    * @var string
    */
@@ -32,7 +32,7 @@ class Source extends \Google\Collection
   public $context;
   protected $fileHashesType = FileHashes::class;
   protected $fileHashesDataType = 'map';
-  public $fileHashes;
+  public $fileHashes = [];
 
   /**
    * @param SourceContext[]

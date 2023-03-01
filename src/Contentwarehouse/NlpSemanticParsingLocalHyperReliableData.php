@@ -26,7 +26,7 @@ class NlpSemanticParsingLocalHyperReliableData extends \Google\Collection
   public $commodityStrength;
   protected $gcidsynsOverrideType = NlpSemanticParsingLocalHyperReliableDataGCIDSynsOverride::class;
   protected $gcidsynsOverrideDataType = 'array';
-  public $gcidsynsOverride;
+  public $gcidsynsOverride = [];
   /**
    * @var bool
    */
@@ -34,7 +34,7 @@ class NlpSemanticParsingLocalHyperReliableData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $retrievalGcids;
+  public $retrievalGcids = [];
 
   /**
    * @param float

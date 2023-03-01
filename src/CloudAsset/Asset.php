@@ -29,7 +29,7 @@ class Asset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ancestors;
+  public $ancestors = [];
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class Asset extends \Google\Collection
   public $name;
   protected $orgPolicyType = GoogleCloudOrgpolicyV1Policy::class;
   protected $orgPolicyDataType = 'array';
-  public $orgPolicy;
+  public $orgPolicy = [];
   protected $osInventoryType = Inventory::class;
   protected $osInventoryDataType = '';
   public $osInventory;

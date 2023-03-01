@@ -23,7 +23,7 @@ class Stage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $profiles;
+  public $profiles = [];
   protected $strategyType = Strategy::class;
   protected $strategyDataType = '';
   public $strategy;

@@ -50,7 +50,7 @@ class Field extends \Google\Collection
   public $oneofIndex;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
-  public $options;
+  public $options = [];
   /**
    * @var bool
    */

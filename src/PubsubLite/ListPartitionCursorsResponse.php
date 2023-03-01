@@ -26,7 +26,7 @@ class ListPartitionCursorsResponse extends \Google\Collection
   public $nextPageToken;
   protected $partitionCursorsType = PartitionCursor::class;
   protected $partitionCursorsDataType = 'array';
-  public $partitionCursors;
+  public $partitionCursors = [];
 
   /**
    * @param string

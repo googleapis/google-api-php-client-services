@@ -27,7 +27,7 @@ class GooglePrivacyDlpV2Deidentify extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fileTypesToTransform;
+  public $fileTypesToTransform = [];
   protected $transformationConfigType = GooglePrivacyDlpV2TransformationConfig::class;
   protected $transformationConfigDataType = '';
   public $transformationConfig;

@@ -22,7 +22,7 @@ class ListGatewaysResponse extends \Google\Collection
   protected $collection_key = 'gateways';
   protected $gatewaysType = Gateway::class;
   protected $gatewaysDataType = 'array';
-  public $gateways;
+  public $gateways = [];
   /**
    * @var string
    */

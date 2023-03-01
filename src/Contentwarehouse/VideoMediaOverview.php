@@ -26,7 +26,7 @@ class VideoMediaOverview extends \Google\Collection
   public $aspectRatio;
   protected $audioOverviewType = VideoMediaOverviewAudioOverview::class;
   protected $audioOverviewDataType = 'array';
-  public $audioOverview;
+  public $audioOverview = [];
   /**
    * @var string
    */
@@ -41,7 +41,7 @@ class VideoMediaOverview extends \Google\Collection
   public $creationTimeStampUsec;
   protected $dataOverviewType = VideoMediaOverviewDataOverview::class;
   protected $dataOverviewDataType = 'array';
-  public $dataOverview;
+  public $dataOverview = [];
   /**
    * @var string
    */
@@ -79,10 +79,10 @@ class VideoMediaOverview extends \Google\Collection
   public $stereoMode;
   protected $timedtextOverviewType = VideoMediaOverviewTimedTextOverview::class;
   protected $timedtextOverviewDataType = 'array';
-  public $timedtextOverview;
+  public $timedtextOverview = [];
   protected $videoOverviewType = VideoMediaOverviewVideoOverview::class;
   protected $videoOverviewDataType = 'array';
-  public $videoOverview;
+  public $videoOverview = [];
   /**
    * @var string
    */

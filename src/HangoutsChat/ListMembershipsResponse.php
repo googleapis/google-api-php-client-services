@@ -22,7 +22,7 @@ class ListMembershipsResponse extends \Google\Collection
   protected $collection_key = 'memberships';
   protected $membershipsType = Membership::class;
   protected $membershipsDataType = 'array';
-  public $memberships;
+  public $memberships = [];
   /**
    * @var string
    */

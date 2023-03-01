@@ -33,7 +33,7 @@ class ResourceRecordSetsListResponse extends \Google\Collection
   public $nextPageToken;
   protected $rrsetsType = ResourceRecordSet::class;
   protected $rrsetsDataType = 'array';
-  public $rrsets;
+  public $rrsets = [];
 
   /**
    * @param ResponseHeader

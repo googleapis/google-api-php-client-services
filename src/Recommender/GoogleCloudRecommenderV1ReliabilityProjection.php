@@ -23,11 +23,11 @@ class GoogleCloudRecommenderV1ReliabilityProjection extends \Google\Collection
   /**
    * @var array[]
    */
-  public $details;
+  public $details = [];
   /**
    * @var string[]
    */
-  public $risks;
+  public $risks = [];
 
   /**
    * @param array[]

@@ -27,11 +27,11 @@ class AnchorsAnchor extends \Google\Collection
   /**
    * @var int[]
    */
-  public $catfishTags;
+  public $catfishTags = [];
   /**
    * @var string[]
    */
-  public $compressedImageUrls;
+  public $compressedImageUrls = [];
   /**
    * @var string
    */
@@ -95,11 +95,11 @@ class AnchorsAnchor extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fullLeftContext;
+  public $fullLeftContext = [];
   /**
    * @var string[]
    */
-  public $fullRightContext;
+  public $fullRightContext = [];
   /**
    * @var bool
    */
@@ -114,7 +114,7 @@ class AnchorsAnchor extends \Google\Collection
   /**
    * @var int[]
    */
-  public $linkTags;
+  public $linkTags = [];
   /**
    * @var int
    */

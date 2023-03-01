@@ -41,7 +41,7 @@ class ExecutionConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $usages;
+  public $usages = [];
   /**
    * @var string
    */

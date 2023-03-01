@@ -22,19 +22,19 @@ class GoogleCloudDocumentaiV1beta1DocumentPage extends \Google\Collection
   protected $collection_key = 'visualElements';
   protected $blocksType = GoogleCloudDocumentaiV1beta1DocumentPageBlock::class;
   protected $blocksDataType = 'array';
-  public $blocks;
+  public $blocks = [];
   protected $detectedBarcodesType = GoogleCloudDocumentaiV1beta1DocumentPageDetectedBarcode::class;
   protected $detectedBarcodesDataType = 'array';
-  public $detectedBarcodes;
+  public $detectedBarcodes = [];
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1beta1DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
-  public $detectedLanguages;
+  public $detectedLanguages = [];
   protected $dimensionType = GoogleCloudDocumentaiV1beta1DocumentPageDimension::class;
   protected $dimensionDataType = '';
   public $dimension;
   protected $formFieldsType = GoogleCloudDocumentaiV1beta1DocumentPageFormField::class;
   protected $formFieldsDataType = 'array';
-  public $formFields;
+  public $formFields = [];
   protected $imageType = GoogleCloudDocumentaiV1beta1DocumentPageImage::class;
   protected $imageDataType = '';
   public $image;
@@ -46,32 +46,32 @@ class GoogleCloudDocumentaiV1beta1DocumentPage extends \Google\Collection
   public $layout;
   protected $linesType = GoogleCloudDocumentaiV1beta1DocumentPageLine::class;
   protected $linesDataType = 'array';
-  public $lines;
+  public $lines = [];
   /**
    * @var int
    */
   public $pageNumber;
   protected $paragraphsType = GoogleCloudDocumentaiV1beta1DocumentPageParagraph::class;
   protected $paragraphsDataType = 'array';
-  public $paragraphs;
+  public $paragraphs = [];
   protected $provenanceType = GoogleCloudDocumentaiV1beta1DocumentProvenance::class;
   protected $provenanceDataType = '';
   public $provenance;
   protected $symbolsType = GoogleCloudDocumentaiV1beta1DocumentPageSymbol::class;
   protected $symbolsDataType = 'array';
-  public $symbols;
+  public $symbols = [];
   protected $tablesType = GoogleCloudDocumentaiV1beta1DocumentPageTable::class;
   protected $tablesDataType = 'array';
-  public $tables;
+  public $tables = [];
   protected $tokensType = GoogleCloudDocumentaiV1beta1DocumentPageToken::class;
   protected $tokensDataType = 'array';
-  public $tokens;
+  public $tokens = [];
   protected $transformsType = GoogleCloudDocumentaiV1beta1DocumentPageMatrix::class;
   protected $transformsDataType = 'array';
-  public $transforms;
+  public $transforms = [];
   protected $visualElementsType = GoogleCloudDocumentaiV1beta1DocumentPageVisualElement::class;
   protected $visualElementsDataType = 'array';
-  public $visualElements;
+  public $visualElements = [];
 
   /**
    * @param GoogleCloudDocumentaiV1beta1DocumentPageBlock[]

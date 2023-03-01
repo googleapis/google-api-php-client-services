@@ -43,7 +43,7 @@ class ChannelSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $featuredChannelsUrls;
+  public $featuredChannelsUrls = [];
   /**
    * @var string
    */

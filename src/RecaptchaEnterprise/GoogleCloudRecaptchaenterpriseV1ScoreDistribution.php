@@ -22,7 +22,7 @@ class GoogleCloudRecaptchaenterpriseV1ScoreDistribution extends \Google\Model
   /**
    * @var string[]
    */
-  public $scoreBuckets;
+  public $scoreBuckets = [];
 
   /**
    * @param string[]

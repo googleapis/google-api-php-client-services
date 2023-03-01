@@ -31,7 +31,7 @@ class CertificateRevocationList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class CertificateRevocationList extends \Google\Collection
   public $revisionId;
   protected $revokedCertificatesType = RevokedCertificate::class;
   protected $revokedCertificatesDataType = 'array';
-  public $revokedCertificates;
+  public $revokedCertificates = [];
   /**
    * @var string
    */

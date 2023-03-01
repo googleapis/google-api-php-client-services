@@ -47,7 +47,7 @@ class NlpSemanticParsingLocalBusinessType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cuisineGcid;
+  public $cuisineGcid = [];
   /**
    * @var bool
    */
@@ -171,7 +171,7 @@ class NlpSemanticParsingLocalBusinessType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $vehicleType;
+  public $vehicleType = [];
   /**
    * @var bool
    */

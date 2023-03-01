@@ -25,7 +25,7 @@ class RepositoryWebrefGeoMetadataProto extends \Google\Collection
   public $address;
   protected $addressSynonymsType = RepositoryWebrefGeoMetadataProtoAddressSynonym::class;
   protected $addressSynonymsDataType = 'array';
-  public $addressSynonyms;
+  public $addressSynonyms = [];
   public $areaKm2;
   protected $boundType = GeostoreRectProto::class;
   protected $boundDataType = '';
@@ -53,7 +53,7 @@ class RepositoryWebrefGeoMetadataProto extends \Google\Collection
   public $timezone;
   protected $wpLocationType = RepositoryWebrefWikipediaGeocode::class;
   protected $wpLocationDataType = 'array';
-  public $wpLocation;
+  public $wpLocation = [];
 
   /**
    * @param GeostoreAddressProto

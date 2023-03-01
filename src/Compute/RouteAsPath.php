@@ -23,7 +23,7 @@ class RouteAsPath extends \Google\Collection
   /**
    * @var string[]
    */
-  public $asLists;
+  public $asLists = [];
   /**
    * @var string
    */

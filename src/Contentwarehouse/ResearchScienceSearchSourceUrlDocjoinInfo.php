@@ -35,7 +35,7 @@ class ResearchScienceSearchSourceUrlDocjoinInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $indexTier;
+  public $indexTier = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class ResearchScienceSearchSourceUrlDocjoinInfo extends \Google\Collection
   public $latestPageUpdateDate;
   protected $navboostQueryType = ResearchScienceSearchNavboostQueryInfo::class;
   protected $navboostQueryDataType = 'array';
-  public $navboostQuery;
+  public $navboostQuery = [];
   /**
    * @var int
    */
@@ -63,21 +63,21 @@ class ResearchScienceSearchSourceUrlDocjoinInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sporeGraphMid;
+  public $sporeGraphMid = [];
   /**
    * @var string
    */
   public $title;
   protected $topEntityType = RepositoryWebrefWebrefEntity::class;
   protected $topEntityDataType = 'array';
-  public $topEntity;
+  public $topEntity = [];
   /**
    * @var string
    */
   public $url;
   protected $webrefEntityType = ResearchScienceSearchSourceUrlDocjoinInfoWebrefEntityInfo::class;
   protected $webrefEntityDataType = 'array';
-  public $webrefEntity;
+  public $webrefEntity = [];
 
   /**
    * @param string

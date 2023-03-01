@@ -29,7 +29,7 @@ class Zone extends \Google\Collection
   public $boundary;
   protected $childContainerType = ZoneChildContainer::class;
   protected $childContainerDataType = 'array';
-  public $childContainer;
+  public $childContainer = [];
   /**
    * @var string
    */

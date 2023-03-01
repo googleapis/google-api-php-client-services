@@ -32,7 +32,7 @@ class ConferenceData extends \Google\Collection
   public $createRequest;
   protected $entryPointsType = EntryPoint::class;
   protected $entryPointsDataType = 'array';
-  public $entryPoints;
+  public $entryPoints = [];
   /**
    * @var string
    */

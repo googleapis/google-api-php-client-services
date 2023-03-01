@@ -23,7 +23,7 @@ class ChoosePrivateKeyRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $packageNames;
+  public $packageNames = [];
   /**
    * @var string
    */

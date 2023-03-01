@@ -37,7 +37,7 @@ class LogBucket extends \Google\Collection
   public $description;
   protected $indexConfigsType = IndexConfig::class;
   protected $indexConfigsDataType = 'array';
-  public $indexConfigs;
+  public $indexConfigs = [];
   /**
    * @var string
    */
@@ -53,7 +53,7 @@ class LogBucket extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictedFields;
+  public $restrictedFields = [];
   /**
    * @var int
    */

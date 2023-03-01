@@ -30,7 +30,7 @@ class PlacementStrategiesListResponse extends \Google\Collection
   public $nextPageToken;
   protected $placementStrategiesType = PlacementStrategy::class;
   protected $placementStrategiesDataType = 'array';
-  public $placementStrategies;
+  public $placementStrategies = [];
 
   /**
    * @param string

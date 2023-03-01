@@ -22,10 +22,10 @@ class GeostoreFoodMenuItemProto extends \Google\Collection
   protected $collection_key = 'nameInfo';
   protected $itemOptionType = GeostoreFoodMenuItemOptionProto::class;
   protected $itemOptionDataType = 'array';
-  public $itemOption;
+  public $itemOption = [];
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
-  public $nameInfo;
+  public $nameInfo = [];
 
   /**
    * @param GeostoreFoodMenuItemOptionProto[]

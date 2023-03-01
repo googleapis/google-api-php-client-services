@@ -33,7 +33,7 @@ class ParallelInstruction extends \Google\Collection
   public $originalName;
   protected $outputsType = InstructionOutput::class;
   protected $outputsDataType = 'array';
-  public $outputs;
+  public $outputs = [];
   protected $parDoType = ParDoInstruction::class;
   protected $parDoDataType = '';
   public $parDo;

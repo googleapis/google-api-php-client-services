@@ -21,7 +21,7 @@ class PhotosVisionObjectrecImageTemplateSubSet extends \Google\Collection
 {
   protected $collection_key = 'descriptor';
   protected $descriptorDataType = 'array';
-  public $descriptor;
+  public $descriptor = [];
   /**
    * @var int
    */

@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1ApiProxy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -46,7 +46,7 @@ class GoogleCloudApigeeV1ApiProxy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $revision;
+  public $revision = [];
 
   /**
    * @param string

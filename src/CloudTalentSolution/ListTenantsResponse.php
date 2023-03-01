@@ -29,7 +29,7 @@ class ListTenantsResponse extends \Google\Collection
   public $nextPageToken;
   protected $tenantsType = Tenant::class;
   protected $tenantsDataType = 'array';
-  public $tenants;
+  public $tenants = [];
 
   /**
    * @param ResponseMetadata

@@ -22,22 +22,22 @@ class Kubernetes extends \Google\Collection
   protected $collection_key = 'roles';
   protected $accessReviewsType = AccessReview::class;
   protected $accessReviewsDataType = 'array';
-  public $accessReviews;
+  public $accessReviews = [];
   protected $bindingsType = GoogleCloudSecuritycenterV1Binding::class;
   protected $bindingsDataType = 'array';
-  public $bindings;
+  public $bindings = [];
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
-  public $nodePools;
+  public $nodePools = [];
   protected $nodesType = Node::class;
   protected $nodesDataType = 'array';
-  public $nodes;
+  public $nodes = [];
   protected $podsType = Pod::class;
   protected $podsDataType = 'array';
-  public $pods;
+  public $pods = [];
   protected $rolesType = Role::class;
   protected $rolesDataType = 'array';
-  public $roles;
+  public $roles = [];
 
   /**
    * @param AccessReview[]

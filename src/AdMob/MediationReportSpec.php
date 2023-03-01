@@ -25,11 +25,11 @@ class MediationReportSpec extends \Google\Collection
   public $dateRange;
   protected $dimensionFiltersType = MediationReportSpecDimensionFilter::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters;
+  public $dimensionFilters = [];
   /**
    * @var string[]
    */
-  public $dimensions;
+  public $dimensions = [];
   protected $localizationSettingsType = LocalizationSettings::class;
   protected $localizationSettingsDataType = '';
   public $localizationSettings;
@@ -40,10 +40,10 @@ class MediationReportSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metrics;
+  public $metrics = [];
   protected $sortConditionsType = MediationReportSpecSortCondition::class;
   protected $sortConditionsDataType = 'array';
-  public $sortConditions;
+  public $sortConditions = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class ExportContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $databases;
+  public $databases = [];
   /**
    * @var string
    */

@@ -31,7 +31,7 @@ class Webfont extends \Google\Collection
   /**
    * @var string[]
    */
-  public $files;
+  public $files = [];
   /**
    * @var string
    */
@@ -43,11 +43,11 @@ class Webfont extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subsets;
+  public $subsets = [];
   /**
    * @var string[]
    */
-  public $variants;
+  public $variants = [];
   /**
    * @var string
    */

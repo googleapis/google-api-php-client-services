@@ -25,7 +25,7 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
   public $field;
   protected $fieldTransformationsType = GooglePrivacyDlpV2FieldTransformation::class;
   protected $fieldTransformationsDataType = 'array';
-  public $fieldTransformations;
+  public $fieldTransformations = [];
   protected $infoTypeType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypeDataType = '';
   public $infoType;
@@ -34,7 +34,7 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
   public $recordSuppress;
   protected $resultsType = GooglePrivacyDlpV2SummaryResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   protected $transformationType = GooglePrivacyDlpV2PrimitiveTransformation::class;
   protected $transformationDataType = '';
   public $transformation;

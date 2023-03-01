@@ -30,7 +30,7 @@ class Job extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $logsPolicyType = LogsPolicy::class;
   protected $logsPolicyDataType = '';
   public $logsPolicy;
@@ -40,7 +40,7 @@ class Job extends \Google\Collection
   public $name;
   protected $notificationsType = JobNotification::class;
   protected $notificationsDataType = 'array';
-  public $notifications;
+  public $notifications = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class Job extends \Google\Collection
   public $status;
   protected $taskGroupsType = TaskGroup::class;
   protected $taskGroupsDataType = 'array';
-  public $taskGroups;
+  public $taskGroups = [];
   /**
    * @var string
    */

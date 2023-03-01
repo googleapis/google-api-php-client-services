@@ -26,7 +26,7 @@ class TransferDomainRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $contactNotices;
+  public $contactNotices = [];
   protected $registrationType = Registration::class;
   protected $registrationDataType = '';
   public $registration;

@@ -22,7 +22,7 @@ class CreativeFieldValuesListResponse extends \Google\Collection
   protected $collection_key = 'creativeFieldValues';
   protected $creativeFieldValuesType = CreativeFieldValue::class;
   protected $creativeFieldValuesDataType = 'array';
-  public $creativeFieldValues;
+  public $creativeFieldValues = [];
   /**
    * @var string
    */

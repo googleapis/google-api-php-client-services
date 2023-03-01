@@ -31,14 +31,14 @@ class Version extends \Google\Collection
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
   public $name;
   protected $relatedTagsType = Tag::class;
   protected $relatedTagsDataType = 'array';
-  public $relatedTags;
+  public $relatedTags = [];
   /**
    * @var string
    */

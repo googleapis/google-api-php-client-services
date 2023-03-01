@@ -26,7 +26,7 @@ class Invoice extends \Google\Collection
   public $budgetInvoiceGroupingId;
   protected $budgetSummariesType = BudgetSummary::class;
   protected $budgetSummariesDataType = 'array';
-  public $budgetSummaries;
+  public $budgetSummaries = [];
   /**
    * @var string
    */
@@ -80,7 +80,7 @@ class Invoice extends \Google\Collection
   /**
    * @var string[]
    */
-  public $replacedInvoiceIds;
+  public $replacedInvoiceIds = [];
   protected $serviceDateRangeType = DateRange::class;
   protected $serviceDateRangeDataType = '';
   public $serviceDateRange;

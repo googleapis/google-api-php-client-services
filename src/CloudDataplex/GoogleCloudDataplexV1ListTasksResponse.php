@@ -26,11 +26,11 @@ class GoogleCloudDataplexV1ListTasksResponse extends \Google\Collection
   public $nextPageToken;
   protected $tasksType = GoogleCloudDataplexV1Task::class;
   protected $tasksDataType = 'array';
-  public $tasks;
+  public $tasks = [];
   /**
    * @var string[]
    */
-  public $unreachableLocations;
+  public $unreachableLocations = [];
 
   /**
    * @param string

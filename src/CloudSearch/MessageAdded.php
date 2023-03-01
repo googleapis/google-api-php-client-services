@@ -23,18 +23,18 @@ class MessageAdded extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributeIds;
+  public $attributeIds = [];
   /**
    * @var string[]
    */
-  public $labelIds;
+  public $labelIds = [];
   protected $messageKeyType = MultiKey::class;
   protected $messageKeyDataType = '';
   public $messageKey;
   /**
    * @var string[]
    */
-  public $syncIds;
+  public $syncIds = [];
 
   /**
    * @param string[]

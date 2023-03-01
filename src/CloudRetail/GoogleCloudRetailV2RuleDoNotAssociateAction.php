@@ -23,15 +23,15 @@ class GoogleCloudRetailV2RuleDoNotAssociateAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $doNotAssociateTerms;
+  public $doNotAssociateTerms = [];
   /**
    * @var string[]
    */
-  public $queryTerms;
+  public $queryTerms = [];
   /**
    * @var string[]
    */
-  public $terms;
+  public $terms = [];
 
   /**
    * @param string[]

@@ -26,19 +26,19 @@ class GoogleIamV2DenyRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deniedPermissions;
+  public $deniedPermissions = [];
   /**
    * @var string[]
    */
-  public $deniedPrincipals;
+  public $deniedPrincipals = [];
   /**
    * @var string[]
    */
-  public $exceptionPermissions;
+  public $exceptionPermissions = [];
   /**
    * @var string[]
    */
-  public $exceptionPrincipals;
+  public $exceptionPrincipals = [];
 
   /**
    * @param GoogleTypeExpr

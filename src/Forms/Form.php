@@ -29,7 +29,7 @@ class Form extends \Google\Collection
   public $info;
   protected $itemsType = Item::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

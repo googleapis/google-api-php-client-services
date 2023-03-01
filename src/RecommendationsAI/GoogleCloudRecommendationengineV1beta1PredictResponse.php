@@ -27,11 +27,11 @@ class GoogleCloudRecommendationengineV1beta1PredictResponse extends \Google\Coll
   /**
    * @var string[]
    */
-  public $itemsMissingInCatalog;
+  public $itemsMissingInCatalog = [];
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class GoogleCloudRecommendationengineV1beta1PredictResponse extends \Google\Coll
   public $recommendationToken;
   protected $resultsType = GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
 
   /**
    * @param bool

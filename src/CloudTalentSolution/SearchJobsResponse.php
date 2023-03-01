@@ -26,13 +26,13 @@ class SearchJobsResponse extends \Google\Collection
   public $broadenedQueryJobsCount;
   protected $histogramQueryResultsType = HistogramQueryResult::class;
   protected $histogramQueryResultsDataType = 'array';
-  public $histogramQueryResults;
+  public $histogramQueryResults = [];
   protected $locationFiltersType = Location::class;
   protected $locationFiltersDataType = 'array';
-  public $locationFilters;
+  public $locationFilters = [];
   protected $matchingJobsType = MatchingJob::class;
   protected $matchingJobsDataType = 'array';
-  public $matchingJobs;
+  public $matchingJobs = [];
   protected $metadataType = ResponseMetadata::class;
   protected $metadataDataType = '';
   public $metadata;

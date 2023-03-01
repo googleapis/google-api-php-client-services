@@ -22,13 +22,13 @@ class ContentAttributions extends \Google\Collection
   protected $collection_key = 'onlineOutgoing';
   protected $freshdocsOutgoingType = ContentAttributionsOutgoingAttribution::class;
   protected $freshdocsOutgoingDataType = 'array';
-  public $freshdocsOutgoing;
+  public $freshdocsOutgoing = [];
   protected $offlineOutgoingType = ContentAttributionsOutgoingAttribution::class;
   protected $offlineOutgoingDataType = 'array';
-  public $offlineOutgoing;
+  public $offlineOutgoing = [];
   protected $onlineOutgoingType = ContentAttributionsOutgoingAttribution::class;
   protected $onlineOutgoingDataType = 'array';
-  public $onlineOutgoing;
+  public $onlineOutgoing = [];
 
   /**
    * @param ContentAttributionsOutgoingAttribution[]

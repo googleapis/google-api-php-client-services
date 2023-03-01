@@ -23,7 +23,7 @@ class ImageMustangShoppingOffer extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inferredImageTypes;
+  public $inferredImageTypes = [];
   /**
    * @var string
    */

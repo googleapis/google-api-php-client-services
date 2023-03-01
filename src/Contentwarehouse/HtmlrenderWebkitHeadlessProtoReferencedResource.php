@@ -31,28 +31,28 @@ class HtmlrenderWebkitHeadlessProtoReferencedResource extends \Google\Collection
   /**
    * @var int[]
    */
-  public $domTreeNodeIndex;
+  public $domTreeNodeIndex = [];
   /**
    * @var bool
    */
   public $failedHttpAccessControlCheck;
   protected $fetchSourceInfoType = WirelessTranscoderFetchFetchSourceInfo::class;
   protected $fetchSourceInfoDataType = 'array';
-  public $fetchSourceInfo;
+  public $fetchSourceInfo = [];
   /**
    * @var string
    */
   public $fetchStatus;
   protected $httpHeaderType = HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader::class;
   protected $httpHeaderDataType = 'array';
-  public $httpHeader;
+  public $httpHeader = [];
   /**
    * @var int
    */
   public $httpResponseCode;
   protected $metadataType = WirelessTranscoderFetchFetchMetadata::class;
   protected $metadataDataType = 'array';
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -67,7 +67,7 @@ class HtmlrenderWebkitHeadlessProtoReferencedResource extends \Google\Collection
   public $referencedResourceContentIndex;
   protected $requestHeaderType = HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader::class;
   protected $requestHeaderDataType = 'array';
-  public $requestHeader;
+  public $requestHeader = [];
   /**
    * @var int
    */
@@ -75,14 +75,14 @@ class HtmlrenderWebkitHeadlessProtoReferencedResource extends \Google\Collection
   /**
    * @var int[]
    */
-  public $styleIndex;
+  public $styleIndex = [];
   /**
    * @var bool
    */
   public $synchronouslyFetched;
   protected $timingType = HtmlrenderWebkitHeadlessProtoReferencedResourceFetchTiming::class;
   protected $timingDataType = 'array';
-  public $timing;
+  public $timing = [];
   /**
    * @var string
    */

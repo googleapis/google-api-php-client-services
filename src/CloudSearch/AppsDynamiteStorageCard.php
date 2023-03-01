@@ -22,7 +22,7 @@ class AppsDynamiteStorageCard extends \Google\Collection
   protected $collection_key = 'sections';
   protected $cardActionsType = AppsDynamiteStorageCardCardAction::class;
   protected $cardActionsDataType = 'array';
-  public $cardActions;
+  public $cardActions = [];
   protected $headerType = AppsDynamiteStorageCardCardHeader::class;
   protected $headerDataType = '';
   public $header;
@@ -32,7 +32,7 @@ class AppsDynamiteStorageCard extends \Google\Collection
   public $name;
   protected $sectionsType = AppsDynamiteStorageCardSection::class;
   protected $sectionsDataType = 'array';
-  public $sections;
+  public $sections = [];
 
   /**
    * @param AppsDynamiteStorageCardCardAction[]

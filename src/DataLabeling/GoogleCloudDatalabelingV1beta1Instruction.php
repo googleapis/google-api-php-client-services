@@ -23,7 +23,7 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blockingResources;
+  public $blockingResources = [];
   /**
    * @var string
    */

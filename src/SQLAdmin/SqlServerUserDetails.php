@@ -27,7 +27,7 @@ class SqlServerUserDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serverRoles;
+  public $serverRoles = [];
 
   /**
    * @param bool

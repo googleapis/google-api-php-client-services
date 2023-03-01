@@ -22,7 +22,7 @@ class GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse extends \Google\Mode
   /**
    * @var array[]
    */
-  public $results;
+  public $results = [];
 
   /**
    * @param array[]

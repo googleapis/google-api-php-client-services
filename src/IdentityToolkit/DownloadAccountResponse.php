@@ -30,7 +30,7 @@ class DownloadAccountResponse extends \Google\Collection
   public $nextPageToken;
   protected $usersType = UserInfo::class;
   protected $usersDataType = 'array';
-  public $users;
+  public $users = [];
 
   /**
    * @param string

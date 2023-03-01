@@ -25,7 +25,7 @@ class ReviewsListResponse extends \Google\Collection
   public $pageInfo;
   protected $reviewsType = Review::class;
   protected $reviewsDataType = 'array';
-  public $reviews;
+  public $reviews = [];
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   public $tokenPagination;

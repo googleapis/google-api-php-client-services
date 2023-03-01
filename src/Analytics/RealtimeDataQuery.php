@@ -42,11 +42,11 @@ class RealtimeDataQuery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metrics;
+  public $metrics = [];
   /**
    * @var string[]
    */
-  public $sort;
+  public $sort = [];
 
   /**
    * @param string

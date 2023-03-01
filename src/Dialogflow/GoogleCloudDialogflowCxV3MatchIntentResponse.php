@@ -25,7 +25,7 @@ class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
   public $currentPage;
   protected $matchesType = GoogleCloudDialogflowCxV3Match::class;
   protected $matchesDataType = 'array';
-  public $matches;
+  public $matches = [];
   /**
    * @var string
    */

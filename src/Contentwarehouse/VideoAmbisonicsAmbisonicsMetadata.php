@@ -23,7 +23,7 @@ class VideoAmbisonicsAmbisonicsMetadata extends \Google\Collection
   /**
    * @var int[]
    */
-  public $channelMap;
+  public $channelMap = [];
   /**
    * @var string
    */

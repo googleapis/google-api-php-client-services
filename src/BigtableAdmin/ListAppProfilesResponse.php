@@ -22,11 +22,11 @@ class ListAppProfilesResponse extends \Google\Collection
   protected $collection_key = 'failedLocations';
   protected $appProfilesType = AppProfile::class;
   protected $appProfilesDataType = 'array';
-  public $appProfiles;
+  public $appProfiles = [];
   /**
    * @var string[]
    */
-  public $failedLocations;
+  public $failedLocations = [];
   /**
    * @var string
    */

@@ -30,11 +30,11 @@ class GeostoreParkingRestrictionProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceType;
+  public $serviceType = [];
   /**
    * @var string[]
    */
-  public $vehicleType;
+  public $vehicleType = [];
 
   /**
    * @param GeostoreTimeScheduleProto

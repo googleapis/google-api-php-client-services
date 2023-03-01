@@ -22,23 +22,23 @@ class ReportFloodlightCriteria extends \Google\Collection
   protected $collection_key = 'metricNames';
   protected $customRichMediaEventsType = DimensionValue::class;
   protected $customRichMediaEventsDataType = 'array';
-  public $customRichMediaEvents;
+  public $customRichMediaEvents = [];
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
   public $dateRange;
   protected $dimensionFiltersType = DimensionValue::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters;
+  public $dimensionFilters = [];
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   protected $floodlightConfigIdType = DimensionValue::class;
   protected $floodlightConfigIdDataType = '';
   public $floodlightConfigId;
   /**
    * @var string[]
    */
-  public $metricNames;
+  public $metricNames = [];
   protected $reportPropertiesType = ReportFloodlightCriteriaReportProperties::class;
   protected $reportPropertiesDataType = '';
   public $reportProperties;

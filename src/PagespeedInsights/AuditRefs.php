@@ -35,7 +35,7 @@ class AuditRefs extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relevantAudits;
+  public $relevantAudits = [];
   public $weight;
 
   /**

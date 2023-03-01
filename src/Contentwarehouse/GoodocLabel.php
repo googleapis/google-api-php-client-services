@@ -29,7 +29,7 @@ class GoodocLabel extends \Google\Collection
   ];
   protected $anchorLabelType = GoodocAnchorLabel::class;
   protected $anchorLabelDataType = 'array';
-  public $anchorLabel;
+  public $anchorLabel = [];
   protected $breakLabelType = GoodocBreakLabel::class;
   protected $breakLabelDataType = '';
   public $breakLabel;
@@ -38,7 +38,7 @@ class GoodocLabel extends \Google\Collection
   public $charLabel;
   protected $languageLabelType = GoodocLanguageLabel::class;
   protected $languageLabelDataType = 'array';
-  public $languageLabel;
+  public $languageLabel = [];
   protected $semanticLabelType = GoodocSemanticLabel::class;
   protected $semanticLabelDataType = '';
   public $semanticLabel;

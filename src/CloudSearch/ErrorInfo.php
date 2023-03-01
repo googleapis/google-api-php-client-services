@@ -22,7 +22,7 @@ class ErrorInfo extends \Google\Collection
   protected $collection_key = 'errorMessages';
   protected $errorMessagesType = ErrorMessage::class;
   protected $errorMessagesDataType = 'array';
-  public $errorMessages;
+  public $errorMessages = [];
 
   /**
    * @param ErrorMessage[]

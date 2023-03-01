@@ -35,7 +35,7 @@ class DimensionMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deprecatedApiNames;
+  public $deprecatedApiNames = [];
   /**
    * @var string
    */

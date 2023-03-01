@@ -22,7 +22,7 @@ class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
   /**
    * @var array[]
    */
-  public $activity;
+  public $activity = [];
   /**
    * @var string
    */

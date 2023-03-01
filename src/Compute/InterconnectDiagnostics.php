@@ -22,7 +22,7 @@ class InterconnectDiagnostics extends \Google\Collection
   protected $collection_key = 'links';
   protected $arpCachesType = InterconnectDiagnosticsARPEntry::class;
   protected $arpCachesDataType = 'array';
-  public $arpCaches;
+  public $arpCaches = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class InterconnectDiagnostics extends \Google\Collection
   public $bundleOperationalStatus;
   protected $linksType = InterconnectDiagnosticsLinkStatus::class;
   protected $linksDataType = 'array';
-  public $links;
+  public $links = [];
   /**
    * @var string
    */

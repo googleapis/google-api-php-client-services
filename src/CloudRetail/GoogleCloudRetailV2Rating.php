@@ -31,7 +31,7 @@ class GoogleCloudRetailV2Rating extends \Google\Collection
   /**
    * @var int[]
    */
-  public $ratingHistogram;
+  public $ratingHistogram = [];
 
   /**
    * @param float

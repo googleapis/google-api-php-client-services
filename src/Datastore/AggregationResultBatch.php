@@ -22,7 +22,7 @@ class AggregationResultBatch extends \Google\Collection
   protected $collection_key = 'aggregationResults';
   protected $aggregationResultsType = AggregationResult::class;
   protected $aggregationResultsDataType = 'array';
-  public $aggregationResults;
+  public $aggregationResults = [];
   /**
    * @var string
    */

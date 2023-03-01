@@ -22,7 +22,7 @@ class ManagedPropertyBundle extends \Google\Collection
   protected $collection_key = 'managedProperty';
   protected $managedPropertyType = ManagedProperty::class;
   protected $managedPropertyDataType = 'array';
-  public $managedProperty;
+  public $managedProperty = [];
 
   /**
    * @param ManagedProperty[]

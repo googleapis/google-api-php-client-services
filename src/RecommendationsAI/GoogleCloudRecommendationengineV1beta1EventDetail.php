@@ -26,7 +26,7 @@ class GoogleCloudRecommendationengineV1beta1EventDetail extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $experimentIds;
+  public $experimentIds = [];
   /**
    * @var string
    */

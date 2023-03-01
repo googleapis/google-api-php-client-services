@@ -27,35 +27,35 @@ class NameConstraints extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedDnsNames;
+  public $excludedDnsNames = [];
   /**
    * @var string[]
    */
-  public $excludedEmailAddresses;
+  public $excludedEmailAddresses = [];
   /**
    * @var string[]
    */
-  public $excludedIpRanges;
+  public $excludedIpRanges = [];
   /**
    * @var string[]
    */
-  public $excludedUris;
+  public $excludedUris = [];
   /**
    * @var string[]
    */
-  public $permittedDnsNames;
+  public $permittedDnsNames = [];
   /**
    * @var string[]
    */
-  public $permittedEmailAddresses;
+  public $permittedEmailAddresses = [];
   /**
    * @var string[]
    */
-  public $permittedIpRanges;
+  public $permittedIpRanges = [];
   /**
    * @var string[]
    */
-  public $permittedUris;
+  public $permittedUris = [];
 
   /**
    * @param bool

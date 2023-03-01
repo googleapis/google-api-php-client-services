@@ -22,7 +22,7 @@ class ListMethodQuotasResponse extends \Google\Collection
   protected $collection_key = 'methodQuotas';
   protected $methodQuotasType = MethodQuota::class;
   protected $methodQuotasDataType = 'array';
-  public $methodQuotas;
+  public $methodQuotas = [];
   /**
    * @var string
    */

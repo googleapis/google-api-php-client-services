@@ -22,15 +22,15 @@ class BulkEditAssignedTargetingOptionsResponse extends \Google\Collection
   protected $collection_key = 'updatedLineItemIds';
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string[]
    */
-  public $failedLineItemIds;
+  public $failedLineItemIds = [];
   /**
    * @var string[]
    */
-  public $updatedLineItemIds;
+  public $updatedLineItemIds = [];
 
   /**
    * @param Status[]

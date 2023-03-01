@@ -22,7 +22,7 @@ class GoogleChromePolicyVersionsV1PolicyModificationErrorDetails extends \Google
   protected $collection_key = 'modificationErrors';
   protected $modificationErrorsType = GoogleChromePolicyVersionsV1PolicyModificationError::class;
   protected $modificationErrorsDataType = 'array';
-  public $modificationErrors;
+  public $modificationErrors = [];
 
   /**
    * @param GoogleChromePolicyVersionsV1PolicyModificationError[]

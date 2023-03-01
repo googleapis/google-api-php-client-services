@@ -22,7 +22,7 @@ class StackPack extends \Google\Model
   /**
    * @var string[]
    */
-  public $descriptions;
+  public $descriptions = [];
   /**
    * @var string
    */

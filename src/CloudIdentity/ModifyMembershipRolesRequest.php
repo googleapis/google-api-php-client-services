@@ -22,14 +22,14 @@ class ModifyMembershipRolesRequest extends \Google\Collection
   protected $collection_key = 'updateRolesParams';
   protected $addRolesType = MembershipRole::class;
   protected $addRolesDataType = 'array';
-  public $addRoles;
+  public $addRoles = [];
   /**
    * @var string[]
    */
-  public $removeRoles;
+  public $removeRoles = [];
   protected $updateRolesParamsType = UpdateMembershipRolesParams::class;
   protected $updateRolesParamsDataType = 'array';
-  public $updateRolesParams;
+  public $updateRolesParams = [];
 
   /**
    * @param MembershipRole[]

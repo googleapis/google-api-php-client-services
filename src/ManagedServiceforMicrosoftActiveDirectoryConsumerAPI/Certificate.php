@@ -34,7 +34,7 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subjectAlternativeName;
+  public $subjectAlternativeName = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class InstanceGroupsScopedList extends \Google\Collection
   protected $collection_key = 'instanceGroups';
   protected $instanceGroupsType = InstanceGroup::class;
   protected $instanceGroupsDataType = 'array';
-  public $instanceGroups;
+  public $instanceGroups = [];
   protected $warningType = InstanceGroupsScopedListWarning::class;
   protected $warningDataType = '';
   public $warning;

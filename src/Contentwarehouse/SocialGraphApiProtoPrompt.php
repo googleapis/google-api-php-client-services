@@ -32,7 +32,7 @@ class SocialGraphApiProtoPrompt extends \Google\Collection
   public $lastDismissDate;
   protected $notificationTriggersType = SocialGraphApiProtoNotificationTrigger::class;
   protected $notificationTriggersDataType = 'array';
-  public $notificationTriggers;
+  public $notificationTriggers = [];
   /**
    * @var string
    */

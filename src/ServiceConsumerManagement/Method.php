@@ -26,7 +26,7 @@ class Method extends \Google\Collection
   public $name;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
-  public $options;
+  public $options = [];
   /**
    * @var bool
    */

@@ -33,11 +33,11 @@ class AndroidTestLoop extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scenarioLabels;
+  public $scenarioLabels = [];
   /**
    * @var int[]
    */
-  public $scenarios;
+  public $scenarios = [];
 
   /**
    * @param FileReference

@@ -22,15 +22,15 @@ class AppsPeopleOzExternalMergedpeopleapiFieldAcl extends \Google\Collection
   protected $collection_key = 'predefinedAclEntry';
   protected $aclEntryType = AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntry::class;
   protected $aclEntryDataType = 'array';
-  public $aclEntry;
+  public $aclEntry = [];
   /**
    * @var string[]
    */
-  public $authorizedViewers;
+  public $authorizedViewers = [];
   /**
    * @var string[]
    */
-  public $predefinedAclEntry;
+  public $predefinedAclEntry = [];
 
   /**
    * @param AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntry[]

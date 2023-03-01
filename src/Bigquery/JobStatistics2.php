@@ -81,16 +81,16 @@ class JobStatistics2 extends \Google\Collection
   public $numDmlAffectedRows;
   protected $queryPlanType = ExplainQueryStage::class;
   protected $queryPlanDataType = 'array';
-  public $queryPlan;
+  public $queryPlan = [];
   protected $referencedRoutinesType = RoutineReference::class;
   protected $referencedRoutinesDataType = 'array';
-  public $referencedRoutines;
+  public $referencedRoutines = [];
   protected $referencedTablesType = TableReference::class;
   protected $referencedTablesDataType = 'array';
-  public $referencedTables;
+  public $referencedTables = [];
   protected $reservationUsageType = JobStatistics2ReservationUsage::class;
   protected $reservationUsageDataType = 'array';
-  public $reservationUsage;
+  public $reservationUsage = [];
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
   public $schema;
@@ -106,7 +106,7 @@ class JobStatistics2 extends \Google\Collection
   public $statementType;
   protected $timelineType = QueryTimelineSample::class;
   protected $timelineDataType = 'array';
-  public $timeline;
+  public $timeline = [];
   /**
    * @var string
    */
@@ -133,7 +133,7 @@ class JobStatistics2 extends \Google\Collection
   public $transferredBytes;
   protected $undeclaredQueryParametersType = QueryParameter::class;
   protected $undeclaredQueryParametersDataType = 'array';
-  public $undeclaredQueryParameters;
+  public $undeclaredQueryParameters = [];
 
   /**
    * @param BiEngineStatistics

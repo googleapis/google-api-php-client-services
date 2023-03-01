@@ -33,7 +33,7 @@ class OrderreturnsProcessRequest extends \Google\Collection
   public $refundShippingFee;
   protected $returnItemsType = OrderreturnsReturnItem::class;
   protected $returnItemsDataType = 'array';
-  public $returnItems;
+  public $returnItems = [];
 
   /**
    * @param bool

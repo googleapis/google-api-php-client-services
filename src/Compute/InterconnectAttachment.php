@@ -31,11 +31,11 @@ class InterconnectAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $candidateIpv6Subnets;
+  public $candidateIpv6Subnets = [];
   /**
    * @var string[]
    */
-  public $candidateSubnets;
+  public $candidateSubnets = [];
   /**
    * @var string
    */
@@ -95,7 +95,7 @@ class InterconnectAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ipsecInternalAddresses;
+  public $ipsecInternalAddresses = [];
   /**
    * @var string
    */

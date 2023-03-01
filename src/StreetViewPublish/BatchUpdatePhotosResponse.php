@@ -22,7 +22,7 @@ class BatchUpdatePhotosResponse extends \Google\Collection
   protected $collection_key = 'results';
   protected $resultsType = PhotoResponse::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
 
   /**
    * @param PhotoResponse[]

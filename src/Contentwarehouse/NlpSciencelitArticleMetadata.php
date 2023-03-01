@@ -25,13 +25,13 @@ class NlpSciencelitArticleMetadata extends \Google\Collection
   public $abstract;
   protected $articleIdType = NlpSciencelitArticleId::class;
   protected $articleIdDataType = 'array';
-  public $articleId;
+  public $articleId = [];
   protected $authorType = NlpSciencelitAuthor::class;
   protected $authorDataType = 'array';
-  public $author;
+  public $author = [];
   protected $datasetType = NlpSciencelitDataset::class;
   protected $datasetDataType = 'array';
-  public $dataset;
+  public $dataset = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class NlpSciencelitArticleMetadata extends \Google\Collection
   public $deleted;
   protected $headingType = NlpSciencelitMeshHeading::class;
   protected $headingDataType = 'array';
-  public $heading;
+  public $heading = [];
   /**
    * @var string
    */
@@ -62,7 +62,7 @@ class NlpSciencelitArticleMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadataSource;
+  public $metadataSource = [];
   /**
    * @var string
    */
@@ -73,7 +73,7 @@ class NlpSciencelitArticleMetadata extends \Google\Collection
   public $pmid;
   protected $publicationTypeType = NlpSciencelitPublicationType::class;
   protected $publicationTypeDataType = 'array';
-  public $publicationType;
+  public $publicationType = [];
   protected $scamRestrictTokensType = ResearchScamV3Restrict::class;
   protected $scamRestrictTokensDataType = '';
   public $scamRestrictTokens;
@@ -84,7 +84,7 @@ class NlpSciencelitArticleMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $url;
+  public $url = [];
   /**
    * @var string
    */

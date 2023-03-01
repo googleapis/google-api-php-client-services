@@ -29,11 +29,11 @@ class LogEntry extends \Google\Model
   /**
    * @var array[]
    */
-  public $jsonPayload;
+  public $jsonPayload = [];
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class LogEntry extends \Google\Model
   /**
    * @var array[]
    */
-  public $protoPayload;
+  public $protoPayload = [];
   /**
    * @var string
    */

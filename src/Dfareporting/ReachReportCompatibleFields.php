@@ -22,23 +22,23 @@ class ReachReportCompatibleFields extends \Google\Collection
   protected $collection_key = 'reachByFrequencyMetrics';
   protected $dimensionFiltersType = Dimension::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters;
+  public $dimensionFilters = [];
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   /**
    * @var string
    */
   public $kind;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
   protected $pivotedActivityMetricsType = Metric::class;
   protected $pivotedActivityMetricsDataType = 'array';
-  public $pivotedActivityMetrics;
+  public $pivotedActivityMetrics = [];
   protected $reachByFrequencyMetricsType = Metric::class;
   protected $reachByFrequencyMetricsDataType = 'array';
-  public $reachByFrequencyMetrics;
+  public $reachByFrequencyMetrics = [];
 
   /**
    * @param Dimension[]

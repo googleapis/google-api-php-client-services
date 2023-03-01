@@ -22,7 +22,7 @@ class SasPortalListCustomersResponse extends \Google\Collection
   protected $collection_key = 'customers';
   protected $customersType = SasPortalCustomer::class;
   protected $customersDataType = 'array';
-  public $customers;
+  public $customers = [];
   /**
    * @var string
    */

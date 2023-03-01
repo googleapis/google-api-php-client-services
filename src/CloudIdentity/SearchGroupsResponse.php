@@ -22,7 +22,7 @@ class SearchGroupsResponse extends \Google\Collection
   protected $collection_key = 'groups';
   protected $groupsType = Group::class;
   protected $groupsDataType = 'array';
-  public $groups;
+  public $groups = [];
   /**
    * @var string
    */

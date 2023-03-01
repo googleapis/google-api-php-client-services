@@ -22,7 +22,7 @@ class CommitRequest extends \Google\Collection
   protected $collection_key = 'mutations';
   protected $mutationsType = Mutation::class;
   protected $mutationsDataType = 'array';
-  public $mutations;
+  public $mutations = [];
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
   public $requestOptions;

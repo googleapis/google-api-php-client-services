@@ -29,7 +29,7 @@ class GooglePrivacyDlpV2StoredInfoTypeVersion extends \Google\Collection
   public $createTime;
   protected $errorsType = GooglePrivacyDlpV2Error::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

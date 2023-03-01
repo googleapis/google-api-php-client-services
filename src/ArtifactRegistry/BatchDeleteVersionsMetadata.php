@@ -23,7 +23,7 @@ class BatchDeleteVersionsMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $failedVersions;
+  public $failedVersions = [];
 
   /**
    * @param string[]

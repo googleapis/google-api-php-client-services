@@ -30,7 +30,7 @@ class DeliveryControl extends \Google\Collection
   public $deliveryRateType;
   protected $frequencyCapsType = FrequencyCap::class;
   protected $frequencyCapsDataType = 'array';
-  public $frequencyCaps;
+  public $frequencyCaps = [];
 
   /**
    * @param string

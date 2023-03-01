@@ -26,10 +26,10 @@ class Event extends \Google\Collection
   public $anyoneCanAddSelf;
   protected $attachmentsType = EventAttachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments;
+  public $attachments = [];
   protected $attendeesType = EventAttendee::class;
   protected $attendeesDataType = 'array';
-  public $attendees;
+  public $attendees = [];
   /**
    * @var bool
    */
@@ -126,7 +126,7 @@ class Event extends \Google\Collection
   /**
    * @var string[]
    */
-  public $recurrence;
+  public $recurrence = [];
   /**
    * @var string
    */

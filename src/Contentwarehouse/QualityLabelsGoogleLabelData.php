@@ -22,7 +22,7 @@ class QualityLabelsGoogleLabelData extends \Google\Collection
   protected $collection_key = 'label';
   protected $labelType = QualityLabelsGoogleLabelDataLabel::class;
   protected $labelDataType = 'array';
-  public $label;
+  public $label = [];
 
   /**
    * @param QualityLabelsGoogleLabelDataLabel[]

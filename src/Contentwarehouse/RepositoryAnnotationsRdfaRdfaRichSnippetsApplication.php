@@ -33,14 +33,14 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $category;
+  public $category = [];
   /**
    * @var string[]
    */
-  public $countriesSupported;
+  public $countriesSupported = [];
   protected $countryPricesType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationCountryPrice::class;
   protected $countryPricesDataType = 'array';
-  public $countryPrices;
+  public $countryPrices = [];
   /**
    * @var string
    */
@@ -60,15 +60,15 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var int[]
    */
-  public $extractedIconColors;
+  public $extractedIconColors = [];
   /**
    * @var string[]
    */
-  public $filteringTag;
+  public $filteringTag = [];
   /**
    * @var string[]
    */
-  public $genre;
+  public $genre = [];
   /**
    * @var bool
    */
@@ -121,7 +121,7 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $operatingSystems;
+  public $operatingSystems = [];
   /**
    * @var bool
    */
@@ -133,11 +133,11 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $physicalDeviceTags;
+  public $physicalDeviceTags = [];
   /**
    * @var string[]
    */
-  public $platformTags;
+  public $platformTags = [];
   /**
    * @var float
    */
@@ -172,11 +172,11 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $screenUrlHref;
+  public $screenUrlHref = [];
   /**
    * @var string[]
    */
-  public $screenUrlThumbnail;
+  public $screenUrlThumbnail = [];
   /**
    * @var string
    */
@@ -184,7 +184,7 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $subcategory;
+  public $subcategory = [];
   /**
    * @var bool
    */
@@ -203,7 +203,7 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   public $totalRatingCount;
   protected $trustedGenomeDataType = VendingConsumerProtoTrustedGenomeAnnotation::class;
   protected $trustedGenomeDataDataType = 'map';
-  public $trustedGenomeData;
+  public $trustedGenomeData = [];
   /**
    * @var string
    */

@@ -25,7 +25,7 @@ class JobStatus extends \Google\Collection
   public $errorResult;
   protected $errorsType = ErrorProto::class;
   protected $errorsDataType = 'array';
-  public $errors;
+  public $errors = [];
   /**
    * @var string
    */

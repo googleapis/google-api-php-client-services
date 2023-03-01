@@ -22,7 +22,7 @@ class ChangeReport extends \Google\Collection
   protected $collection_key = 'configChanges';
   protected $configChangesType = ConfigChange::class;
   protected $configChangesDataType = 'array';
-  public $configChanges;
+  public $configChanges = [];
 
   /**
    * @param ConfigChange[]

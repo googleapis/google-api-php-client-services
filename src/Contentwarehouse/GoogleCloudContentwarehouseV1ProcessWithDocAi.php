@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1ProcessWithDocAi extends \Google\Collection
   /**
    * @var string[]
    */
-  public $documents;
+  public $documents = [];
   /**
    * @var string
    */

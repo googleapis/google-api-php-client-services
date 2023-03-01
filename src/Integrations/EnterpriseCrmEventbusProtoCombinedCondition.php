@@ -22,7 +22,7 @@ class EnterpriseCrmEventbusProtoCombinedCondition extends \Google\Collection
   protected $collection_key = 'conditions';
   protected $conditionsType = EnterpriseCrmEventbusProtoCondition::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
 
   /**
    * @param EnterpriseCrmEventbusProtoCondition[]

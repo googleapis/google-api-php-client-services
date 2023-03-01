@@ -22,20 +22,20 @@ class KnowledgeAnswersIntentQueryFunctionCall extends \Google\Collection
   protected $collection_key = 'unexplainedTokens';
   protected $argumentType = KnowledgeAnswersIntentQueryArgument::class;
   protected $argumentDataType = 'array';
-  public $argument;
+  public $argument = [];
   /**
    * @var string
    */
   public $catalogVersion;
   protected $contextualSensitivityType = KnowledgeAnswersSensitivitySensitivity::class;
   protected $contextualSensitivityDataType = 'array';
-  public $contextualSensitivity;
+  public $contextualSensitivity = [];
   protected $enabledRemodelingsType = NlpMeaningMeaningRemodelingControl::class;
   protected $enabledRemodelingsDataType = '';
   public $enabledRemodelings;
   protected $ignoredTokensType = KnowledgeAnswersIntentQueryTokens::class;
   protected $ignoredTokensDataType = 'array';
-  public $ignoredTokens;
+  public $ignoredTokens = [];
   protected $keyType = KnowledgeAnswersMeaningSchemaKey::class;
   protected $keyDataType = '';
   public $key;
@@ -57,7 +57,7 @@ class KnowledgeAnswersIntentQueryFunctionCall extends \Google\Collection
   public $signals;
   protected $unexplainedTokensType = KnowledgeAnswersIntentQueryTokens::class;
   protected $unexplainedTokensDataType = 'array';
-  public $unexplainedTokens;
+  public $unexplainedTokens = [];
 
   /**
    * @param KnowledgeAnswersIntentQueryArgument[]

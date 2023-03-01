@@ -23,11 +23,11 @@ class Equation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds;
+  public $suggestedDeletionIds = [];
   /**
    * @var string[]
    */
-  public $suggestedInsertionIds;
+  public $suggestedInsertionIds = [];
 
   /**
    * @param string[]

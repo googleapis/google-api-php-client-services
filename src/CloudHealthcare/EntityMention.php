@@ -26,7 +26,7 @@ class EntityMention extends \Google\Collection
   public $confidence;
   protected $linkedEntitiesType = LinkedEntity::class;
   protected $linkedEntitiesDataType = 'array';
-  public $linkedEntities;
+  public $linkedEntities = [];
   /**
    * @var string
    */

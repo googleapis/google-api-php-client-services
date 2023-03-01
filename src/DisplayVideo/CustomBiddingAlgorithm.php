@@ -42,7 +42,7 @@ class CustomBiddingAlgorithm extends \Google\Collection
   public $entityStatus;
   protected $modelDetailsType = CustomBiddingModelDetails::class;
   protected $modelDetailsDataType = 'array';
-  public $modelDetails;
+  public $modelDetails = [];
   /**
    * @var string
    */
@@ -54,7 +54,7 @@ class CustomBiddingAlgorithm extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sharedAdvertiserIds;
+  public $sharedAdvertiserIds = [];
 
   /**
    * @param string

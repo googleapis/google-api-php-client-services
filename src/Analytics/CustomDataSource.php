@@ -57,11 +57,11 @@ class CustomDataSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $profilesLinked;
+  public $profilesLinked = [];
   /**
    * @var string[]
    */
-  public $schema;
+  public $schema = [];
   /**
    * @var string
    */

@@ -35,7 +35,7 @@ class NlpSemanticParsingQRefAnnotationEntityRelationship extends \Google\Collect
   /**
    * @var string[]
    */
-  public $linkPropertyName;
+  public $linkPropertyName = [];
 
   /**
    * @param int

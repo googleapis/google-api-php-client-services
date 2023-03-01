@@ -22,7 +22,7 @@ class GooglePrivacyDlpV2ImageLocation extends \Google\Collection
   protected $collection_key = 'boundingBoxes';
   protected $boundingBoxesType = GooglePrivacyDlpV2BoundingBox::class;
   protected $boundingBoxesDataType = 'array';
-  public $boundingBoxes;
+  public $boundingBoxes = [];
 
   /**
    * @param GooglePrivacyDlpV2BoundingBox[]

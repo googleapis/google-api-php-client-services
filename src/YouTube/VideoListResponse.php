@@ -30,7 +30,7 @@ class VideoListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = Video::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

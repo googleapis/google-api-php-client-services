@@ -22,7 +22,7 @@ class ListBatchesResponse extends \Google\Collection
   protected $collection_key = 'batches';
   protected $batchesType = Batch::class;
   protected $batchesDataType = 'array';
-  public $batches;
+  public $batches = [];
   /**
    * @var string
    */

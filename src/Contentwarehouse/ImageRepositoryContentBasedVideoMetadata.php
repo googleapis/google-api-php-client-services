@@ -92,7 +92,7 @@ class ImageRepositoryContentBasedVideoMetadata extends \Google\Collection
   public $thumbnailerData;
   protected $transcodeMetadataType = ImageRepositoryApiItagSpecificMetadata::class;
   protected $transcodeMetadataDataType = 'array';
-  public $transcodeMetadata;
+  public $transcodeMetadata = [];
   protected $transcriptAsrType = PseudoVideoData::class;
   protected $transcriptAsrDataType = '';
   public $transcriptAsr;
@@ -123,10 +123,10 @@ class ImageRepositoryContentBasedVideoMetadata extends \Google\Collection
   public $videoPornScoreV4;
   protected $videoPreviewBytesType = ImageRepositoryVideoPreviewsVideoPreview::class;
   protected $videoPreviewBytesDataType = 'array';
-  public $videoPreviewBytes;
+  public $videoPreviewBytes = [];
   protected $videoPreviewsType = ImageBaseVideoPreviewMetadata::class;
   protected $videoPreviewsDataType = 'array';
-  public $videoPreviews;
+  public $videoPreviews = [];
   protected $videoStreamInfoType = VideoPipelineViperVSIColumnData::class;
   protected $videoStreamInfoDataType = '';
   public $videoStreamInfo;

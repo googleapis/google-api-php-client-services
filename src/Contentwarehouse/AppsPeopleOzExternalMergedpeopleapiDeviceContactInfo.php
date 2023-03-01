@@ -40,7 +40,7 @@ class AppsPeopleOzExternalMergedpeopleapiDeviceContactInfo extends \Google\Colle
   public $lookupKey;
   protected $rawContactInfoType = AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo::class;
   protected $rawContactInfoDataType = 'array';
-  public $rawContactInfo;
+  public $rawContactInfo = [];
 
   /**
    * @param AppsPeopleOzExternalMergedpeopleapiDeviceContactExtraMetadata

@@ -34,7 +34,7 @@ class ValidationMessage extends \Google\Model
   /**
    * @var string[]
    */
-  public $metadata;
+  public $metadata = [];
 
   /**
    * @param string

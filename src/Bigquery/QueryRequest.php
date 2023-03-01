@@ -22,7 +22,7 @@ class QueryRequest extends \Google\Collection
   protected $collection_key = 'queryParameters';
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
-  public $connectionProperties;
+  public $connectionProperties = [];
   /**
    * @var bool
    */
@@ -41,7 +41,7 @@ class QueryRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -68,7 +68,7 @@ class QueryRequest extends \Google\Collection
   public $query;
   protected $queryParametersType = QueryParameter::class;
   protected $queryParametersDataType = 'array';
-  public $queryParameters;
+  public $queryParameters = [];
   /**
    * @var string
    */

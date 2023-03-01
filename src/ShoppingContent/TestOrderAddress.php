@@ -27,7 +27,7 @@ class TestOrderAddress extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fullAddress;
+  public $fullAddress = [];
   /**
    * @var bool
    */
@@ -51,7 +51,7 @@ class TestOrderAddress extends \Google\Collection
   /**
    * @var string[]
    */
-  public $streetAddress;
+  public $streetAddress = [];
 
   /**
    * @param string

@@ -23,24 +23,24 @@ class GeostoreFoodMenuItemOptionProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allergenAbsent;
+  public $allergenAbsent = [];
   /**
    * @var string[]
    */
-  public $allergenPresent;
+  public $allergenPresent = [];
   /**
    * @var int
    */
   public $calories;
   protected $ingredientsType = GeostoreFoodMenuItemOptionProtoIngredient::class;
   protected $ingredientsDataType = 'array';
-  public $ingredients;
+  public $ingredients = [];
   protected $mediaType = GeostoreMediaItemProto::class;
   protected $mediaDataType = 'array';
-  public $media;
+  public $media = [];
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
-  public $nameInfo;
+  public $nameInfo = [];
   protected $nutritionFactsType = GeostorePriceInfoFoodNutritionFacts::class;
   protected $nutritionFactsDataType = '';
   public $nutritionFacts;
@@ -50,14 +50,14 @@ class GeostoreFoodMenuItemOptionProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $preparationMethods;
+  public $preparationMethods = [];
   protected $priceType = GeostorePriceRangeProto::class;
   protected $priceDataType = '';
   public $price;
   /**
    * @var string[]
    */
-  public $restriction;
+  public $restriction = [];
   /**
    * @var int
    */

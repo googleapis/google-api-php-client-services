@@ -32,7 +32,7 @@ class Word extends \Google\Collection
   public $property;
   protected $symbolsType = Symbol::class;
   protected $symbolsDataType = 'array';
-  public $symbols;
+  public $symbols = [];
 
   /**
    * @param BoundingPoly

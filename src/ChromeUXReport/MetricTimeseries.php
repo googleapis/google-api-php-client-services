@@ -22,7 +22,7 @@ class MetricTimeseries extends \Google\Collection
   protected $collection_key = 'histogramTimeseries';
   protected $histogramTimeseriesType = TimeseriesBin::class;
   protected $histogramTimeseriesDataType = 'array';
-  public $histogramTimeseries;
+  public $histogramTimeseries = [];
   protected $percentilesTimeseriesType = TimeseriesPercentiles::class;
   protected $percentilesTimeseriesDataType = '';
   public $percentilesTimeseries;

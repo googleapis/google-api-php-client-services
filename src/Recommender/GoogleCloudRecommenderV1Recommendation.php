@@ -22,10 +22,10 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
   protected $collection_key = 'associatedInsights';
   protected $additionalImpactType = GoogleCloudRecommenderV1Impact::class;
   protected $additionalImpactDataType = 'array';
-  public $additionalImpact;
+  public $additionalImpact = [];
   protected $associatedInsightsType = GoogleCloudRecommenderV1RecommendationInsightReference::class;
   protected $associatedInsightsDataType = 'array';
-  public $associatedInsights;
+  public $associatedInsights = [];
   protected $contentType = GoogleCloudRecommenderV1RecommendationContent::class;
   protected $contentDataType = '';
   public $content;

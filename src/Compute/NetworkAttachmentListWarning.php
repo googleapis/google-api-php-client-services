@@ -26,7 +26,7 @@ class NetworkAttachmentListWarning extends \Google\Collection
   public $code;
   protected $dataType = NetworkAttachmentListWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

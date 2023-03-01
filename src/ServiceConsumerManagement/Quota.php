@@ -22,10 +22,10 @@ class Quota extends \Google\Collection
   protected $collection_key = 'metricRules';
   protected $limitsType = QuotaLimit::class;
   protected $limitsDataType = 'array';
-  public $limits;
+  public $limits = [];
   protected $metricRulesType = MetricRule::class;
   protected $metricRulesDataType = 'array';
-  public $metricRules;
+  public $metricRules = [];
 
   /**
    * @param QuotaLimit[]

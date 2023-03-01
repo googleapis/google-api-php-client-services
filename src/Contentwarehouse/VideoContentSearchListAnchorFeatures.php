@@ -32,7 +32,7 @@ class VideoContentSearchListAnchorFeatures extends \Google\Collection
   public $listItemIndex;
   protected $matchScoresType = VideoContentSearchMatchScores::class;
   protected $matchScoresDataType = 'array';
-  public $matchScores;
+  public $matchScores = [];
   /**
    * @var float
    */

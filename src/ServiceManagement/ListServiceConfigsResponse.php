@@ -26,7 +26,7 @@ class ListServiceConfigsResponse extends \Google\Collection
   public $nextPageToken;
   protected $serviceConfigsType = Service::class;
   protected $serviceConfigsDataType = 'array';
-  public $serviceConfigs;
+  public $serviceConfigs = [];
 
   /**
    * @param string

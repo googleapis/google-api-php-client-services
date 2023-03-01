@@ -31,11 +31,11 @@ class RegisterParameters extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domainNotices;
+  public $domainNotices = [];
   /**
    * @var string[]
    */
-  public $supportedPrivacy;
+  public $supportedPrivacy = [];
   protected $yearlyPriceType = Money::class;
   protected $yearlyPriceDataType = '';
   public $yearlyPrice;

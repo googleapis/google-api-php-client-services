@@ -42,7 +42,7 @@ class BuildConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $environmentVariables;
+  public $environmentVariables = [];
   /**
    * @var string
    */

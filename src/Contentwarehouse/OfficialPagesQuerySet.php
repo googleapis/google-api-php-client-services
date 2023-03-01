@@ -22,11 +22,11 @@ class OfficialPagesQuerySet extends \Google\Collection
   protected $collection_key = 'queryCountryLanguageFingerprints';
   protected $queriesType = OfficialPagesOfficialKey::class;
   protected $queriesDataType = 'array';
-  public $queries;
+  public $queries = [];
   /**
    * @var string[]
    */
-  public $queryCountryLanguageFingerprints;
+  public $queryCountryLanguageFingerprints = [];
 
   /**
    * @param OfficialPagesOfficialKey[]

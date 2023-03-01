@@ -31,7 +31,7 @@ class BuildOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $env;
+  public $env = [];
   /**
    * @var string
    */
@@ -54,18 +54,18 @@ class BuildOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $secretEnv;
+  public $secretEnv = [];
   /**
    * @var string[]
    */
-  public $sourceProvenanceHash;
+  public $sourceProvenanceHash = [];
   /**
    * @var string
    */
   public $substitutionOption;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes;
+  public $volumes = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class CreateShortDynamicLinkResponse extends \Google\Collection
   public $shortLink;
   protected $warningType = DynamicLinkWarning::class;
   protected $warningDataType = 'array';
-  public $warning;
+  public $warning = [];
 
   /**
    * @param string

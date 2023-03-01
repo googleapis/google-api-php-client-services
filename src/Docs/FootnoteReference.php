@@ -31,14 +31,14 @@ class FootnoteReference extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds;
+  public $suggestedDeletionIds = [];
   /**
    * @var string[]
    */
-  public $suggestedInsertionIds;
+  public $suggestedInsertionIds = [];
   protected $suggestedTextStyleChangesType = SuggestedTextStyle::class;
   protected $suggestedTextStyleChangesDataType = 'map';
-  public $suggestedTextStyleChanges;
+  public $suggestedTextStyleChanges = [];
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
   public $textStyle;

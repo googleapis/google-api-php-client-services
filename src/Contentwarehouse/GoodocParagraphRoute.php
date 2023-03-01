@@ -38,7 +38,7 @@ class GoodocParagraphRoute extends \Google\Collection
   public $weight;
   protected $wordType = GoodocWord::class;
   protected $wordDataType = 'array';
-  public $word;
+  public $word = [];
 
   /**
    * @param GoodocRoutePoint

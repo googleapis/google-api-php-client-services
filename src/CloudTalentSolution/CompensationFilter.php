@@ -34,7 +34,7 @@ class CompensationFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $units;
+  public $units = [];
 
   /**
    * @param bool

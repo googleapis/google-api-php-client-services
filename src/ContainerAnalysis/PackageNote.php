@@ -34,10 +34,10 @@ class PackageNote extends \Google\Collection
   public $description;
   protected $digestType = Digest::class;
   protected $digestDataType = 'array';
-  public $digest;
+  public $digest = [];
   protected $distributionType = Distribution::class;
   protected $distributionDataType = 'array';
-  public $distribution;
+  public $distribution = [];
   protected $licenseType = License::class;
   protected $licenseDataType = '';
   public $license;

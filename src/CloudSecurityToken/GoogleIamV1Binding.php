@@ -26,7 +26,7 @@ class GoogleIamV1Binding extends \Google\Collection
   /**
    * @var string[]
    */
-  public $members;
+  public $members = [];
   /**
    * @var string
    */

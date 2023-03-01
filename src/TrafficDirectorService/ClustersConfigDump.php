@@ -22,13 +22,13 @@ class ClustersConfigDump extends \Google\Collection
   protected $collection_key = 'staticClusters';
   protected $dynamicActiveClustersType = DynamicCluster::class;
   protected $dynamicActiveClustersDataType = 'array';
-  public $dynamicActiveClusters;
+  public $dynamicActiveClusters = [];
   protected $dynamicWarmingClustersType = DynamicCluster::class;
   protected $dynamicWarmingClustersDataType = 'array';
-  public $dynamicWarmingClusters;
+  public $dynamicWarmingClusters = [];
   protected $staticClustersType = StaticCluster::class;
   protected $staticClustersDataType = 'array';
-  public $staticClusters;
+  public $staticClusters = [];
   /**
    * @var string
    */

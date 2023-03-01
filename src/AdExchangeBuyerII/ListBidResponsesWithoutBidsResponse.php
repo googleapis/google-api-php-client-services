@@ -22,7 +22,7 @@ class ListBidResponsesWithoutBidsResponse extends \Google\Collection
   protected $collection_key = 'bidResponseWithoutBidsStatusRows';
   protected $bidResponseWithoutBidsStatusRowsType = BidResponseWithoutBidsStatusRow::class;
   protected $bidResponseWithoutBidsStatusRowsDataType = 'array';
-  public $bidResponseWithoutBidsStatusRows;
+  public $bidResponseWithoutBidsStatusRows = [];
   /**
    * @var string
    */

@@ -29,7 +29,7 @@ class BasePlan extends \Google\Collection
   public $basePlanId;
   protected $offerTagsType = OfferTag::class;
   protected $offerTagsDataType = 'array';
-  public $offerTags;
+  public $offerTags = [];
   protected $otherRegionsConfigType = OtherRegionsBasePlanConfig::class;
   protected $otherRegionsConfigDataType = '';
   public $otherRegionsConfig;
@@ -38,7 +38,7 @@ class BasePlan extends \Google\Collection
   public $prepaidBasePlanType;
   protected $regionalConfigsType = RegionalBasePlanConfig::class;
   protected $regionalConfigsDataType = 'array';
-  public $regionalConfigs;
+  public $regionalConfigs = [];
   /**
    * @var string
    */

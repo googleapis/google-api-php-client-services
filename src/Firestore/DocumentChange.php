@@ -26,11 +26,11 @@ class DocumentChange extends \Google\Collection
   /**
    * @var int[]
    */
-  public $removedTargetIds;
+  public $removedTargetIds = [];
   /**
    * @var int[]
    */
-  public $targetIds;
+  public $targetIds = [];
 
   /**
    * @param Document

@@ -23,10 +23,10 @@ class KnowledgeAnswersIntentQueryArgumentProvenancePreviousTaskState extends \Go
   /**
    * @var string[]
    */
-  public $argumentName;
+  public $argumentName = [];
   protected $currentQueryEvalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $currentQueryEvalDataDataType = 'array';
-  public $currentQueryEvalData;
+  public $currentQueryEvalData = [];
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class CollectdPayload extends \Google\Collection
   public $endTime;
   protected $metadataType = TypedValue::class;
   protected $metadataDataType = 'map';
-  public $metadata;
+  public $metadata = [];
   /**
    * @var string
    */
@@ -49,7 +49,7 @@ class CollectdPayload extends \Google\Collection
   public $typeInstance;
   protected $valuesType = CollectdValue::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param string

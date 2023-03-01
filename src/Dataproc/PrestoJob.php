@@ -23,7 +23,7 @@ class PrestoJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clientTags;
+  public $clientTags = [];
   /**
    * @var bool
    */
@@ -38,7 +38,7 @@ class PrestoJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   /**
    * @var string
    */

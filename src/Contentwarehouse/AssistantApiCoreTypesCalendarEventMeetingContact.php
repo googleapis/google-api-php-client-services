@@ -27,7 +27,7 @@ class AssistantApiCoreTypesCalendarEventMeetingContact extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $dialInNumberClasses;
+  public $dialInNumberClasses = [];
   /**
    * @var string
    */

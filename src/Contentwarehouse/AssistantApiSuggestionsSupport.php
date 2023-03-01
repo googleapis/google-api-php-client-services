@@ -77,7 +77,7 @@ class AssistantApiSuggestionsSupport extends \Google\Collection
   public $showTranslationSupported;
   protected $supportedDisplayTargetsType = AssistantApiSuggestionsSupportDisplayTargetSupport::class;
   protected $supportedDisplayTargetsDataType = 'array';
-  public $supportedDisplayTargets;
+  public $supportedDisplayTargets = [];
   /**
    * @var bool
    */

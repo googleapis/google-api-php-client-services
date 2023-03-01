@@ -25,7 +25,7 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig extends \Go
   /**
    * @var array[]
    */
-  public $instanceConfig;
+  public $instanceConfig = [];
   protected $notificationConfigType = GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig::class;
   protected $notificationConfigDataType = '';
   public $notificationConfig;

@@ -34,7 +34,7 @@ class Product extends \Google\Collection
   public $createTime;
   protected $creatorContactsType = ContactInformation::class;
   protected $creatorContactsDataType = 'array';
-  public $creatorContacts;
+  public $creatorContacts = [];
   /**
    * @var string
    */
@@ -64,7 +64,7 @@ class Product extends \Google\Collection
   public $syndicationProduct;
   protected $targetingCriterionType = TargetingCriteria::class;
   protected $targetingCriterionDataType = 'array';
-  public $targetingCriterion;
+  public $targetingCriterion = [];
   protected $termsType = DealTerms::class;
   protected $termsDataType = '';
   public $terms;

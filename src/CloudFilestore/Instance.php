@@ -34,7 +34,7 @@ class Instance extends \Google\Collection
   public $etag;
   protected $fileSharesType = FileShareConfig::class;
   protected $fileSharesDataType = 'array';
-  public $fileShares;
+  public $fileShares = [];
   /**
    * @var string
    */
@@ -42,14 +42,14 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
   public $name;
   protected $networksType = NetworkConfig::class;
   protected $networksDataType = 'array';
-  public $networks;
+  public $networks = [];
   /**
    * @var bool
    */
@@ -65,7 +65,7 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suspensionReasons;
+  public $suspensionReasons = [];
   /**
    * @var string
    */

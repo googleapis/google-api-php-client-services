@@ -22,7 +22,7 @@ class UpdateBody extends \Google\Collection
   protected $collection_key = 'insertContents';
   protected $insertContentsType = InsertContent::class;
   protected $insertContentsDataType = 'array';
-  public $insertContents;
+  public $insertContents = [];
   /**
    * @var string
    */

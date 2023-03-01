@@ -25,7 +25,7 @@ class PointData extends \Google\Collection
   public $timeInterval;
   protected $valuesType = TypedValue::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param TimeInterval

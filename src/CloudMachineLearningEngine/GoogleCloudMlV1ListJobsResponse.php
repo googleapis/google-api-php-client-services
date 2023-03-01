@@ -22,7 +22,7 @@ class GoogleCloudMlV1ListJobsResponse extends \Google\Collection
   protected $collection_key = 'jobs';
   protected $jobsType = GoogleCloudMlV1Job::class;
   protected $jobsDataType = 'array';
-  public $jobs;
+  public $jobs = [];
   /**
    * @var string
    */

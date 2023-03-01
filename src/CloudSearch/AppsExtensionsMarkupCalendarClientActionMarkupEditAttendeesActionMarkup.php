@@ -23,7 +23,7 @@ class AppsExtensionsMarkupCalendarClientActionMarkupEditAttendeesActionMarkup ex
   /**
    * @var string[]
    */
-  public $addAttendeeEmails;
+  public $addAttendeeEmails = [];
 
   /**
    * @param string[]

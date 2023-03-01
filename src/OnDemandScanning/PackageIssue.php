@@ -37,7 +37,7 @@ class PackageIssue extends \Google\Collection
   public $effectiveSeverity;
   protected $fileLocationType = GrafeasV1FileLocation::class;
   protected $fileLocationDataType = 'array';
-  public $fileLocation;
+  public $fileLocation = [];
   /**
    * @var bool
    */

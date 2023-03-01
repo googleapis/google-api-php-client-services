@@ -30,7 +30,7 @@ class ApigatewayOperationMetadata extends \Google\Collection
   public $createTime;
   protected $diagnosticsType = ApigatewayOperationMetadataDiagnostic::class;
   protected $diagnosticsDataType = 'array';
-  public $diagnostics;
+  public $diagnostics = [];
   /**
    * @var string
    */

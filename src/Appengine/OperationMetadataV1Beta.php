@@ -50,7 +50,7 @@ class OperationMetadataV1Beta extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warning;
+  public $warning = [];
 
   /**
    * @param CreateVersionMetadataV1Beta

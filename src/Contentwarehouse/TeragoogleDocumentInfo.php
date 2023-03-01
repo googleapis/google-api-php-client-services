@@ -22,7 +22,7 @@ class TeragoogleDocumentInfo extends \Google\Collection
   protected $collection_key = 'section';
   protected $attachmentType = TeragoogleDocumentInfoAttachment::class;
   protected $attachmentDataType = 'array';
-  public $attachment;
+  public $attachment = [];
   /**
    * @var int
    */
@@ -43,7 +43,7 @@ class TeragoogleDocumentInfo extends \Google\Collection
    */
   public $originalEncoding;
   protected $sectionDataType = 'array';
-  public $section;
+  public $section = [];
   /**
    * @var string
    */

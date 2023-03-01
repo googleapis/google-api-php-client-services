@@ -23,14 +23,14 @@ class AppsPeopleOzExternalMergedpeopleapiIdentityInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $originalLookupToken;
+  public $originalLookupToken = [];
   /**
    * @var string[]
    */
-  public $previousPersonId;
+  public $previousPersonId = [];
   protected $sourceIdsType = AppsPeopleOzExternalMergedpeopleapiSourceIdentity::class;
   protected $sourceIdsDataType = 'array';
-  public $sourceIds;
+  public $sourceIds = [];
 
   /**
    * @param string[]

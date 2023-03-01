@@ -31,15 +31,15 @@ class VideoCrawlVideoInlinePlaybackMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $playbackCountryBlacklist;
+  public $playbackCountryBlacklist = [];
   /**
    * @var string[]
    */
-  public $playbackCountryWhitelist;
+  public $playbackCountryWhitelist = [];
   /**
    * @var int[]
    */
-  public $transcodeItags;
+  public $transcodeItags = [];
   /**
    * @var string
    */

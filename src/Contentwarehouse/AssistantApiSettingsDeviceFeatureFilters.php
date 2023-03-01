@@ -30,7 +30,7 @@ class AssistantApiSettingsDeviceFeatureFilters extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targets;
+  public $targets = [];
 
   /**
    * @param bool

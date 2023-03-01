@@ -30,7 +30,7 @@ class ReportRequestFilters extends \Google\Collection
   /**
    * @var array[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param ReportApiColumnSpec

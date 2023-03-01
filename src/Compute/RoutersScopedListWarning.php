@@ -26,7 +26,7 @@ class RoutersScopedListWarning extends \Google\Collection
   public $code;
   protected $dataType = RoutersScopedListWarningData::class;
   protected $dataDataType = 'array';
-  public $data;
+  public $data = [];
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class QualitySitemapTargetGroup extends \Google\Collection
   public $dEPRECATEDCountry;
   protected $targetType = QualitySitemapTarget::class;
   protected $targetDataType = 'array';
-  public $target;
+  public $target = [];
   /**
    * @var bool
    */
@@ -44,7 +44,7 @@ class QualitySitemapTargetGroup extends \Google\Collection
   public $breadcrumbTarget;
   protected $coClickTargetType = QualitySitemapCoClickTarget::class;
   protected $coClickTargetDataType = 'array';
-  public $coClickTarget;
+  public $coClickTarget = [];
   /**
    * @var string
    */
@@ -66,10 +66,10 @@ class QualitySitemapTargetGroup extends \Google\Collection
   public $scoringSignals;
   protected $topUrlType = QualitySitemapTopURL::class;
   protected $topUrlDataType = 'array';
-  public $topUrl;
+  public $topUrl = [];
   protected $twoLevelTargetType = QualitySitemapTwoLevelTarget::class;
   protected $twoLevelTargetDataType = 'array';
-  public $twoLevelTarget;
+  public $twoLevelTarget = [];
 
   /**
    * @param int

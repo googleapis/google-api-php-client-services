@@ -31,7 +31,7 @@ class ReleaseChannelConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $validVersions;
+  public $validVersions = [];
 
   /**
    * @param string

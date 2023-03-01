@@ -23,11 +23,11 @@ class ObjectConditions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludePrefixes;
+  public $excludePrefixes = [];
   /**
    * @var string[]
    */
-  public $includePrefixes;
+  public $includePrefixes = [];
   /**
    * @var string
    */

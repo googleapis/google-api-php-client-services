@@ -25,10 +25,10 @@ class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadata extends \Google\Coll
   public $commonMetadata;
   protected $importConfigValidationResultsType = GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidationResult::class;
   protected $importConfigValidationResultsDataType = 'array';
-  public $importConfigValidationResults;
+  public $importConfigValidationResults = [];
   protected $individualImportStatusesType = GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus::class;
   protected $individualImportStatusesDataType = 'array';
-  public $individualImportStatuses;
+  public $individualImportStatuses = [];
   /**
    * @var int
    */

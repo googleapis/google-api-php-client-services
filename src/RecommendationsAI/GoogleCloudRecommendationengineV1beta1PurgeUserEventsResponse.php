@@ -26,7 +26,7 @@ class GoogleCloudRecommendationengineV1beta1PurgeUserEventsResponse extends \Goo
   public $purgedEventsCount;
   protected $userEventsSampleType = GoogleCloudRecommendationengineV1beta1UserEvent::class;
   protected $userEventsSampleDataType = 'array';
-  public $userEventsSample;
+  public $userEventsSample = [];
 
   /**
    * @param string

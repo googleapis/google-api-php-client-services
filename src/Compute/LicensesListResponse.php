@@ -26,7 +26,7 @@ class LicensesListResponse extends \Google\Collection
   public $id;
   protected $itemsType = License::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

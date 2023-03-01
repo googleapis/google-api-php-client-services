@@ -57,7 +57,7 @@ class UtilizationReport extends \Google\Collection
   public $vmCount;
   protected $vmsType = VmUtilizationInfo::class;
   protected $vmsDataType = 'array';
-  public $vms;
+  public $vms = [];
 
   /**
    * @param string

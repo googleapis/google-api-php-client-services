@@ -23,7 +23,7 @@ class VoiceOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $coveredData;
+  public $coveredData = [];
 
   /**
    * @param string[]

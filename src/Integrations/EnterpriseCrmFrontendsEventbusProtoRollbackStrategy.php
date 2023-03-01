@@ -30,7 +30,7 @@ class EnterpriseCrmFrontendsEventbusProtoRollbackStrategy extends \Google\Collec
   /**
    * @var string[]
    */
-  public $taskNumbersToRollback;
+  public $taskNumbersToRollback = [];
 
   /**
    * @param EnterpriseCrmFrontendsEventbusProtoEventParameters

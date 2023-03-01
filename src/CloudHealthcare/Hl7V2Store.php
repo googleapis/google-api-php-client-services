@@ -23,14 +23,14 @@ class Hl7V2Store extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
   public $name;
   protected $notificationConfigsType = Hl7V2NotificationConfig::class;
   protected $notificationConfigsDataType = 'array';
-  public $notificationConfigs;
+  public $notificationConfigs = [];
   protected $parserConfigType = ParserConfig::class;
   protected $parserConfigDataType = '';
   public $parserConfig;

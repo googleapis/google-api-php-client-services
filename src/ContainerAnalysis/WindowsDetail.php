@@ -30,7 +30,7 @@ class WindowsDetail extends \Google\Collection
   public $description;
   protected $fixingKbsType = KnowledgeBase::class;
   protected $fixingKbsDataType = 'array';
-  public $fixingKbs;
+  public $fixingKbs = [];
   /**
    * @var string
    */

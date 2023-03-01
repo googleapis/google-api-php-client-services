@@ -31,7 +31,7 @@ class AppVersion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $trackId;
+  public $trackId = [];
   /**
    * @var int
    */

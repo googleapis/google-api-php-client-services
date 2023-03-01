@@ -27,7 +27,7 @@ class BlogsearchConversationNode extends \Google\Collection
   /**
    * @var string[]
    */
-  public $children;
+  public $children = [];
   /**
    * @var string
    */

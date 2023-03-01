@@ -41,7 +41,7 @@ class GoogleCloudDialogflowCxV3beta1ResponseMessage extends \Google\Model
   /**
    * @var array[]
    */
-  public $payload;
+  public $payload = [];
   protected $playAudioType = GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudio::class;
   protected $playAudioDataType = '';
   public $playAudio;

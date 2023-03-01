@@ -22,13 +22,13 @@ class AnalyzeEntitiesResponse extends \Google\Collection
   protected $collection_key = 'relationships';
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
-  public $entities;
+  public $entities = [];
   protected $entityMentionsType = EntityMention::class;
   protected $entityMentionsDataType = 'array';
-  public $entityMentions;
+  public $entityMentions = [];
   protected $relationshipsType = EntityMentionRelationship::class;
   protected $relationshipsDataType = 'array';
-  public $relationships;
+  public $relationships = [];
 
   /**
    * @param Entity[]

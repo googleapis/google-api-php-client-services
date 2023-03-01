@@ -21,7 +21,7 @@ class SnippetsLeadingtextLeadingTextAnnotation extends \Google\Collection
 {
   protected $collection_key = 'piece';
   protected $pieceDataType = 'array';
-  public $piece;
+  public $piece = [];
   /**
    * @var string
    */

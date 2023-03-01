@@ -31,7 +31,7 @@ class ConfigManagementPolicyController extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exemptableNamespaces;
+  public $exemptableNamespaces = [];
   /**
    * @var bool
    */

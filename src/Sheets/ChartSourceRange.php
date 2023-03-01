@@ -22,7 +22,7 @@ class ChartSourceRange extends \Google\Collection
   protected $collection_key = 'sources';
   protected $sourcesType = GridRange::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
 
   /**
    * @param GridRange[]

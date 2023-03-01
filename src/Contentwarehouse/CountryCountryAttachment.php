@@ -34,7 +34,7 @@ class CountryCountryAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $debugSourceUrl;
+  public $debugSourceUrl = [];
   /**
    * @var string
    */
@@ -85,39 +85,39 @@ class CountryCountryAttachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $localCountries;
+  public $localCountries = [];
   /**
    * @var int[]
    */
-  public $localCountryCodes;
+  public $localCountryCodes = [];
   protected $metroIdListType = CountryMetroNBFeature::class;
   protected $metroIdListDataType = 'array';
-  public $metroIdList;
+  public $metroIdList = [];
   /**
    * @var string[]
    */
-  public $metroLocationId;
+  public $metroLocationId = [];
   protected $metroNavboostType = CountryMetroNBFeature::class;
   protected $metroNavboostDataType = 'array';
-  public $metroNavboost;
+  public $metroNavboost = [];
   protected $provinceGeotokenListType = CountryProvinceGeotoken::class;
   protected $provinceGeotokenListDataType = 'array';
-  public $provinceGeotokenList;
+  public $provinceGeotokenList = [];
   /**
    * @var string[]
    */
-  public $relatedCountries;
+  public $relatedCountries = [];
   /**
    * @var int[]
    */
-  public $relatedCountryCodes;
+  public $relatedCountryCodes = [];
   /**
    * @var string[]
    */
-  public $restrictCountries;
+  public $restrictCountries = [];
   protected $salientCountriesType = CountrySalientCountry::class;
   protected $salientCountriesDataType = 'array';
-  public $salientCountries;
+  public $salientCountries = [];
   protected $salientCountrySetType = QualitySalientCountriesSalientCountrySet::class;
   protected $salientCountrySetDataType = '';
   public $salientCountrySet;

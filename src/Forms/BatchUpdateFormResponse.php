@@ -25,7 +25,7 @@ class BatchUpdateFormResponse extends \Google\Collection
   public $form;
   protected $repliesType = Response::class;
   protected $repliesDataType = 'array';
-  public $replies;
+  public $replies = [];
   protected $writeControlType = WriteControl::class;
   protected $writeControlDataType = '';
   public $writeControl;

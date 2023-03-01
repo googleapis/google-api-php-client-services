@@ -34,7 +34,7 @@ class ServerTlsPolicy extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $mtlsPolicyType = MTLSPolicy::class;
   protected $mtlsPolicyDataType = '';
   public $mtlsPolicy;

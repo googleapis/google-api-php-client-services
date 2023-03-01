@@ -37,7 +37,7 @@ class QualityActionsReminder extends \Google\Collection
   public $asyncInteractionType;
   protected $attachmentType = AssistantRemindersAttachment::class;
   protected $attachmentDataType = 'array';
-  public $attachment;
+  public $attachment = [];
   /**
    * @var string
    */
@@ -61,7 +61,7 @@ class QualityActionsReminder extends \Google\Collection
   public $creator;
   protected $customizedNotificationCardType = QualityActionsCustomizedNotification::class;
   protected $customizedNotificationCardDataType = 'array';
-  public $customizedNotificationCard;
+  public $customizedNotificationCard = [];
   protected $datetimeType = AssistantApiDateTime::class;
   protected $datetimeDataType = '';
   public $datetime;

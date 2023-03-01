@@ -23,7 +23,7 @@ class QualityQrewriteAccountProvenance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dataSources;
+  public $dataSources = [];
   protected $googleAccountType = QualityQrewriteAccountProvenanceGoogleAccount::class;
   protected $googleAccountDataType = '';
   public $googleAccount;

@@ -49,14 +49,14 @@ class ReplicationCycle extends \Google\Collection
   public $state;
   protected $stepsType = CycleStep::class;
   protected $stepsDataType = 'array';
-  public $steps;
+  public $steps = [];
   /**
    * @var string
    */
   public $totalPauseDuration;
   protected $warningsType = MigrationWarning::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
 
   /**
    * @param int

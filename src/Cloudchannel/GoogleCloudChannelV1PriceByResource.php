@@ -25,7 +25,7 @@ class GoogleCloudChannelV1PriceByResource extends \Google\Collection
   public $price;
   protected $pricePhasesType = GoogleCloudChannelV1PricePhase::class;
   protected $pricePhasesDataType = 'array';
-  public $pricePhases;
+  public $pricePhases = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class ConfigManagementPolicyControllerMonitoring extends \Google\Collection
   /**
    * @var string[]
    */
-  public $backends;
+  public $backends = [];
 
   /**
    * @param string[]

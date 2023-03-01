@@ -26,7 +26,7 @@ class ApiDataRow extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keys;
+  public $keys = [];
   public $position;
 
   public function setClicks($clicks)

@@ -38,7 +38,7 @@ class AppsOutage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $products;
+  public $products = [];
   /**
    * @var string
    */

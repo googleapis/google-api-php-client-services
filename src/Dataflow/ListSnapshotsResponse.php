@@ -22,7 +22,7 @@ class ListSnapshotsResponse extends \Google\Collection
   protected $collection_key = 'snapshots';
   protected $snapshotsType = Snapshot::class;
   protected $snapshotsDataType = 'array';
-  public $snapshots;
+  public $snapshots = [];
 
   /**
    * @param Snapshot[]

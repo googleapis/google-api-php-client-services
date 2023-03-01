@@ -22,7 +22,7 @@ class Help extends \Google\Collection
   protected $collection_key = 'links';
   protected $linksType = HelpLink::class;
   protected $linksDataType = 'array';
-  public $links;
+  public $links = [];
 
   /**
    * @param HelpLink[]

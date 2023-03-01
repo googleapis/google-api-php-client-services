@@ -22,7 +22,7 @@ class GoogleFirebaseAppcheckV1BatchUpdateServicesRequest extends \Google\Collect
   protected $collection_key = 'requests';
   protected $requestsType = GoogleFirebaseAppcheckV1UpdateServiceRequest::class;
   protected $requestsDataType = 'array';
-  public $requests;
+  public $requests = [];
   /**
    * @var string
    */

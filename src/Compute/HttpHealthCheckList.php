@@ -26,7 +26,7 @@ class HttpHealthCheckList extends \Google\Collection
   public $id;
   protected $itemsType = HttpHealthCheck::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class ListNetworksResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $networksType = Network::class;
   protected $networksDataType = 'array';
-  public $networks;
+  public $networks = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListNetworksResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param Network[]

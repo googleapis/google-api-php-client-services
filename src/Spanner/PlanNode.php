@@ -22,7 +22,7 @@ class PlanNode extends \Google\Collection
   protected $collection_key = 'childLinks';
   protected $childLinksType = ChildLink::class;
   protected $childLinksDataType = 'array';
-  public $childLinks;
+  public $childLinks = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class PlanNode extends \Google\Collection
   /**
    * @var array[]
    */
-  public $executionStats;
+  public $executionStats = [];
   /**
    * @var int
    */
@@ -42,7 +42,7 @@ class PlanNode extends \Google\Collection
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
   protected $shortRepresentationType = ShortRepresentation::class;
   protected $shortRepresentationDataType = '';
   public $shortRepresentation;

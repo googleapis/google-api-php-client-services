@@ -22,10 +22,10 @@ class GoogleCloudDataplexV1Schema extends \Google\Collection
   protected $collection_key = 'partitionFields';
   protected $fieldsType = GoogleCloudDataplexV1SchemaSchemaField::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
   protected $partitionFieldsType = GoogleCloudDataplexV1SchemaPartitionField::class;
   protected $partitionFieldsDataType = 'array';
-  public $partitionFields;
+  public $partitionFields = [];
   /**
    * @var string
    */

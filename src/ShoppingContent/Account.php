@@ -26,7 +26,7 @@ class Account extends \Google\Collection
   public $accountManagement;
   protected $adsLinksType = AccountAdsLink::class;
   protected $adsLinksDataType = 'array';
-  public $adsLinks;
+  public $adsLinks = [];
   /**
    * @var bool
    */
@@ -37,7 +37,7 @@ class Account extends \Google\Collection
   /**
    * @var string[]
    */
-  public $automaticLabelIds;
+  public $automaticLabelIds = [];
   protected $businessInformationType = AccountBusinessInformation::class;
   protected $businessInformationDataType = '';
   public $businessInformation;
@@ -62,7 +62,7 @@ class Account extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labelIds;
+  public $labelIds = [];
   /**
    * @var string
    */
@@ -73,14 +73,14 @@ class Account extends \Google\Collection
   public $sellerId;
   protected $usersType = AccountUser::class;
   protected $usersDataType = 'array';
-  public $users;
+  public $users = [];
   /**
    * @var string
    */
   public $websiteUrl;
   protected $youtubeChannelLinksType = AccountYouTubeChannelLink::class;
   protected $youtubeChannelLinksDataType = 'array';
-  public $youtubeChannelLinks;
+  public $youtubeChannelLinks = [];
 
   /**
    * @param string

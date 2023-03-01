@@ -34,7 +34,7 @@ class OcrPhotoTextBox extends \Google\Collection
   /**
    * @var int[]
    */
-  public $symbolWidths;
+  public $symbolWidths = [];
   /**
    * @var string
    */

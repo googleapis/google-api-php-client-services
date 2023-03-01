@@ -22,14 +22,14 @@ class KnowledgeAnswersSensitivitySensitivity extends \Google\Collection
   protected $collection_key = 'source';
   protected $accountProvenanceType = QualityQrewriteAccountProvenance::class;
   protected $accountProvenanceDataType = 'array';
-  public $accountProvenance;
+  public $accountProvenance = [];
   protected $instructionType = KnowledgeAnswersSensitivityInstruction::class;
   protected $instructionDataType = '';
   public $instruction;
   /**
    * @var string[]
    */
-  public $source;
+  public $source = [];
   /**
    * @var string
    */

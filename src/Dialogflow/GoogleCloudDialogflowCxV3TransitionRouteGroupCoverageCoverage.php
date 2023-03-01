@@ -29,7 +29,7 @@ class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverage extends \Goo
   public $routeGroup;
   protected $transitionsType = GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverageTransition::class;
   protected $transitionsDataType = 'array';
-  public $transitions;
+  public $transitions = [];
 
   /**
    * @param float

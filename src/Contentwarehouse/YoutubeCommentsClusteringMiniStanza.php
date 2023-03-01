@@ -20,8 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
 {
   protected $collection_key = 'videoTimestamps';
-  public $ansibleScores;
-  public $automodScores;
+  public $ansibleScores = [];
+  public $automodScores = [];
   protected $blarneyStoneScoreType = YoutubeDistillerBlarneyStoneScores::class;
   protected $blarneyStoneScoreDataType = '';
   public $blarneyStoneScore;
@@ -33,14 +33,14 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    * @var string
    */
   public $channelId;
-  public $channelProfileQualityScores;
+  public $channelProfileQualityScores = [];
   public $charEntropy;
-  public $commentClassification;
+  public $commentClassification = [];
   /**
    * @var string[]
    */
-  public $commentClassificationBuckets;
-  public $commentClassificationRanking;
+  public $commentClassificationBuckets = [];
+  public $commentClassificationRanking = [];
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   /**
    * @var string[]
    */
-  public $eligibleQualifiedTeaserFilters;
+  public $eligibleQualifiedTeaserFilters = [];
   protected $empiricalCtrsType = VideoYoutubeCommentsRankingCTRMetrics::class;
   protected $empiricalCtrsDataType = '';
   public $empiricalCtrs;
@@ -123,12 +123,12 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   /**
    * @var bool[]
    */
-  public $lowQualityDecisions;
+  public $lowQualityDecisions = [];
   /**
    * @var int
    */
   public $mentionedTimestampCommentSecond;
-  public $misinfoScores;
+  public $misinfoScores = [];
   /**
    * @var int
    */
@@ -149,7 +149,7 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    * @var int
    */
   public $numSubscribersBucket;
-  public $offlineEngagementScores;
+  public $offlineEngagementScores = [];
   /**
    * @var string
    */
@@ -165,7 +165,7 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   protected $segmentsType = SocialCommonSegments::class;
   protected $segmentsDataType = '';
   public $segments;
-  public $sensitivityScores;
+  public $sensitivityScores = [];
   protected $sentimentType = YoutubeCommentsSentimentSentiment::class;
   protected $sentimentDataType = '';
   public $sentiment;
@@ -175,14 +175,14 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public $shortReplyVideoId;
   protected $smartRepliesType = VideoYoutubeCommentsClassificationProtoYouTubeCommentSmartReply::class;
   protected $smartRepliesDataType = 'map';
-  public $smartReplies;
+  public $smartReplies = [];
   /**
    * @var string
    */
   public $stanzaId;
   protected $stanzaRestrictionsType = SocialStanzaStanzaRestriction::class;
   protected $stanzaRestrictionsDataType = 'array';
-  public $stanzaRestrictions;
+  public $stanzaRestrictions = [];
   protected $subjectType = SecurityCredentialsPrincipalProto::class;
   protected $subjectDataType = '';
   public $subject;
@@ -199,7 +199,7 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public $superThanksInfo;
   protected $textEmbeddingType = YoutubeCommentsRankingYouTubeCommentTextEmbedding::class;
   protected $textEmbeddingDataType = 'map';
-  public $textEmbedding;
+  public $textEmbedding = [];
   /**
    * @var int
    */
@@ -217,7 +217,7 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   /**
    * @var int[]
    */
-  public $videoTimestamps;
+  public $videoTimestamps = [];
   public $wordEntropy;
   /**
    * @var string

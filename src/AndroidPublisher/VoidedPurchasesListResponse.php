@@ -28,7 +28,7 @@ class VoidedPurchasesListResponse extends \Google\Collection
   public $tokenPagination;
   protected $voidedPurchasesType = VoidedPurchase::class;
   protected $voidedPurchasesDataType = 'array';
-  public $voidedPurchases;
+  public $voidedPurchases = [];
 
   /**
    * @param PageInfo

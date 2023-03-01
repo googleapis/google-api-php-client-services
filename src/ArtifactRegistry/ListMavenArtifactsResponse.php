@@ -22,7 +22,7 @@ class ListMavenArtifactsResponse extends \Google\Collection
   protected $collection_key = 'mavenArtifacts';
   protected $mavenArtifactsType = MavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
-  public $mavenArtifacts;
+  public $mavenArtifacts = [];
   /**
    * @var string
    */

@@ -109,7 +109,7 @@ class KnowledgeAnswersIntentQueryArgumentValue extends \Google\Collection
   public $sensitiveValue;
   protected $sensitivityType = KnowledgeAnswersSensitivitySensitivity::class;
   protected $sensitivityDataType = 'array';
-  public $sensitivity;
+  public $sensitivity = [];
   protected $shoppingMerchantType = NlpSemanticParsingModelsShoppingAssistantMerchant::class;
   protected $shoppingMerchantDataType = '';
   public $shoppingMerchant;

@@ -23,7 +23,7 @@ class CropHintsParams extends \Google\Collection
   /**
    * @var float[]
    */
-  public $aspectRatios;
+  public $aspectRatios = [];
 
   /**
    * @param float[]

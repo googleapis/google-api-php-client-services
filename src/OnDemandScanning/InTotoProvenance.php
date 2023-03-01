@@ -26,7 +26,7 @@ class InTotoProvenance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $materials;
+  public $materials = [];
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
   public $metadata;

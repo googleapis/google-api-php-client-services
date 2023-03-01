@@ -30,7 +30,7 @@ class HttpRetryPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $retryConditions;
+  public $retryConditions = [];
 
   /**
    * @param string

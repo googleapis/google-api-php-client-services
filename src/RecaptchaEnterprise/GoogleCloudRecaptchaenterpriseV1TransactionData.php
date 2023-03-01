@@ -40,10 +40,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionData extends \Google\Collection
   public $gatewayInfo;
   protected $itemsType = GoogleCloudRecaptchaenterpriseV1TransactionDataItem::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   protected $merchantsType = GoogleCloudRecaptchaenterpriseV1TransactionDataUser::class;
   protected $merchantsDataType = 'array';
-  public $merchants;
+  public $merchants = [];
   /**
    * @var string
    */

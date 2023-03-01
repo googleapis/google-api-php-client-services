@@ -28,7 +28,7 @@ class GeostoreFeatureIdForwardingsProto extends \Google\Collection
   public $forwardedId;
   protected $inactiveDuplicateType = GeostoreFeatureIdProto::class;
   protected $inactiveDuplicateDataType = 'array';
-  public $inactiveDuplicate;
+  public $inactiveDuplicate = [];
   protected $replacedByType = GeostoreFeatureIdListProto::class;
   protected $replacedByDataType = '';
   public $replacedBy;

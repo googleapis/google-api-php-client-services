@@ -22,11 +22,11 @@ class ViewEntity extends \Google\Collection
   protected $collection_key = 'constraints';
   protected $constraintsType = ConstraintEntity::class;
   protected $constraintsDataType = 'array';
-  public $constraints;
+  public $constraints = [];
   /**
    * @var array[]
    */
-  public $customFeatures;
+  public $customFeatures = [];
   /**
    * @var string
    */

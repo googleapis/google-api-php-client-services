@@ -22,23 +22,23 @@ class RunReportResponse extends \Google\Collection
   protected $collection_key = 'totals';
   protected $dimensionHeadersType = DimensionHeader::class;
   protected $dimensionHeadersDataType = 'array';
-  public $dimensionHeaders;
+  public $dimensionHeaders = [];
   /**
    * @var string
    */
   public $kind;
   protected $maximumsType = Row::class;
   protected $maximumsDataType = 'array';
-  public $maximums;
+  public $maximums = [];
   protected $metadataType = ResponseMetaData::class;
   protected $metadataDataType = '';
   public $metadata;
   protected $metricHeadersType = MetricHeader::class;
   protected $metricHeadersDataType = 'array';
-  public $metricHeaders;
+  public $metricHeaders = [];
   protected $minimumsType = Row::class;
   protected $minimumsDataType = 'array';
-  public $minimums;
+  public $minimums = [];
   protected $propertyQuotaType = PropertyQuota::class;
   protected $propertyQuotaDataType = '';
   public $propertyQuota;
@@ -48,10 +48,10 @@ class RunReportResponse extends \Google\Collection
   public $rowCount;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
   protected $totalsType = Row::class;
   protected $totalsDataType = 'array';
-  public $totals;
+  public $totals = [];
 
   /**
    * @param DimensionHeader[]

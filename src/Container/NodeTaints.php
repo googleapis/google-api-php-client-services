@@ -22,7 +22,7 @@ class NodeTaints extends \Google\Collection
   protected $collection_key = 'taints';
   protected $taintsType = NodeTaint::class;
   protected $taintsDataType = 'array';
-  public $taints;
+  public $taints = [];
 
   /**
    * @param NodeTaint[]

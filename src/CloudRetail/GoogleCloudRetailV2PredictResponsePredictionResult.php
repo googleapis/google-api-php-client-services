@@ -26,7 +26,7 @@ class GoogleCloudRetailV2PredictResponsePredictionResult extends \Google\Model
   /**
    * @var array[]
    */
-  public $metadata;
+  public $metadata = [];
 
   /**
    * @param string

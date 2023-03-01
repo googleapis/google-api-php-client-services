@@ -29,13 +29,13 @@ class CheckCompatibilityRequest extends \Google\Collection
   public $dimensionFilter;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions;
+  public $dimensions = [];
   protected $metricFilterType = FilterExpression::class;
   protected $metricFilterDataType = '';
   public $metricFilter;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  public $metrics;
+  public $metrics = [];
 
   /**
    * @param string

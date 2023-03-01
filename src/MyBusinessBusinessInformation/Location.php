@@ -29,7 +29,7 @@ class Location extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class Location extends \Google\Collection
   public $metadata;
   protected $moreHoursType = MoreHours::class;
   protected $moreHoursDataType = 'array';
-  public $moreHours;
+  public $moreHours = [];
   /**
    * @var string
    */
@@ -67,7 +67,7 @@ class Location extends \Google\Collection
   public $serviceArea;
   protected $serviceItemsType = ServiceItem::class;
   protected $serviceItemsDataType = 'array';
-  public $serviceItems;
+  public $serviceItems = [];
   protected $specialHoursType = SpecialHours::class;
   protected $specialHoursDataType = '';
   public $specialHours;

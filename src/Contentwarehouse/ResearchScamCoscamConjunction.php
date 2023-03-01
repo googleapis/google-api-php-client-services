@@ -23,11 +23,11 @@ class ResearchScamCoscamConjunction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $disjunctionId;
+  public $disjunctionId = [];
   /**
    * @var bool[]
    */
-  public $isPositive;
+  public $isPositive = [];
 
   /**
    * @param string[]

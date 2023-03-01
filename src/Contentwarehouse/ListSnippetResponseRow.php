@@ -23,7 +23,7 @@ class ListSnippetResponseRow extends \Google\Collection
   /**
    * @var string[]
    */
-  public $column;
+  public $column = [];
 
   /**
    * @param string[]

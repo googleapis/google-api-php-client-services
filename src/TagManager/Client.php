@@ -46,7 +46,7 @@ class Client extends \Google\Collection
   public $notes;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
-  public $parameter;
+  public $parameter = [];
   /**
    * @var string
    */

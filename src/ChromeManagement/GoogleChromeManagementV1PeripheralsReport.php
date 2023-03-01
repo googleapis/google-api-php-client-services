@@ -26,7 +26,7 @@ class GoogleChromeManagementV1PeripheralsReport extends \Google\Collection
   public $reportTime;
   protected $usbPeripheralReportType = GoogleChromeManagementV1UsbPeripheralReport::class;
   protected $usbPeripheralReportDataType = 'array';
-  public $usbPeripheralReport;
+  public $usbPeripheralReport = [];
 
   /**
    * @param string

@@ -22,7 +22,7 @@ class ListAttestorsResponse extends \Google\Collection
   protected $collection_key = 'attestors';
   protected $attestorsType = Attestor::class;
   protected $attestorsDataType = 'array';
-  public $attestors;
+  public $attestors = [];
   /**
    * @var string
    */

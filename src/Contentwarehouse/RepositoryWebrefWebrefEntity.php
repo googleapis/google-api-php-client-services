@@ -22,7 +22,7 @@ class RepositoryWebrefWebrefEntity extends \Google\Collection
   protected $collection_key = 'mrf';
   protected $annotatedRelationshipType = RepositoryWebrefWebrefEntityRelationship::class;
   protected $annotatedRelationshipDataType = 'array';
-  public $annotatedRelationship;
+  public $annotatedRelationship = [];
   protected $annotationsType = RepositoryWebrefEntityAnnotations::class;
   protected $annotationsDataType = '';
   public $annotations;
@@ -37,7 +37,7 @@ class RepositoryWebrefWebrefEntity extends \Google\Collection
   public $id;
   protected $mrfType = KnowledgeAnswersIntentQueryArgument::class;
   protected $mrfDataType = 'array';
-  public $mrf;
+  public $mrf = [];
 
   /**
    * @param RepositoryWebrefWebrefEntityRelationship[]

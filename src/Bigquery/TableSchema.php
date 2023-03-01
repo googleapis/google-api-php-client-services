@@ -22,7 +22,7 @@ class TableSchema extends \Google\Collection
   protected $collection_key = 'fields';
   protected $fieldsType = TableFieldSchema::class;
   protected $fieldsDataType = 'array';
-  public $fields;
+  public $fields = [];
 
   /**
    * @param TableFieldSchema[]

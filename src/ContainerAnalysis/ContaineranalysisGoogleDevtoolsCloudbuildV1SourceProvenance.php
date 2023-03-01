@@ -21,7 +21,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1SourceProvenance extends \Googl
 {
   protected $fileHashesType = ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes::class;
   protected $fileHashesDataType = 'map';
-  public $fileHashes;
+  public $fileHashes = [];
   protected $resolvedRepoSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource::class;
   protected $resolvedRepoSourceDataType = '';
   public $resolvedRepoSource;

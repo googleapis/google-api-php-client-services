@@ -41,7 +41,7 @@ class LegalCitationLaw extends \Google\Collection
   public $collectionname;
   protected $levelType = LegalCitationLawLevel::class;
   protected $levelDataType = 'array';
-  public $level;
+  public $level = [];
 
   /**
    * @param LegalDate

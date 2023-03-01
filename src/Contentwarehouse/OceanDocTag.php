@@ -71,7 +71,7 @@ class OceanDocTag extends \Google\Collection
   public $contentType;
   protected $contributorType = OceanDocTagContributor::class;
   protected $contributorDataType = 'array';
-  public $contributor;
+  public $contributor = [];
   /**
    * @var string
    */
@@ -94,7 +94,7 @@ class OceanDocTag extends \Google\Collection
   /**
    * @var string[]
    */
-  public $geoRestrict;
+  public $geoRestrict = [];
   /**
    * @var int
    */
@@ -102,7 +102,7 @@ class OceanDocTag extends \Google\Collection
   /**
    * @var string[]
    */
-  public $grantableLocale;
+  public $grantableLocale = [];
   /**
    * @var bool
    */

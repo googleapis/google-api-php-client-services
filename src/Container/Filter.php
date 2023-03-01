@@ -23,7 +23,7 @@ class Filter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $eventType;
+  public $eventType = [];
 
   /**
    * @param string[]

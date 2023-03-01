@@ -22,7 +22,7 @@ class LighthouseCategoryV5 extends \Google\Collection
   protected $collection_key = 'auditRefs';
   protected $auditRefsType = AuditRefs::class;
   protected $auditRefsDataType = 'array';
-  public $auditRefs;
+  public $auditRefs = [];
   /**
    * @var string
    */

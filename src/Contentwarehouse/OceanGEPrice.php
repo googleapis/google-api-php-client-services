@@ -22,7 +22,7 @@ class OceanGEPrice extends \Google\Collection
   protected $collection_key = 'locale';
   protected $localeType = OceanGEPriceLocale::class;
   protected $localeDataType = 'array';
-  public $locale;
+  public $locale = [];
 
   /**
    * @param OceanGEPriceLocale[]

@@ -22,10 +22,10 @@ class PivotTable extends \Google\Collection
   protected $collection_key = 'values';
   protected $columnsType = PivotGroup::class;
   protected $columnsDataType = 'array';
-  public $columns;
+  public $columns = [];
   protected $criteriaType = PivotFilterCriteria::class;
   protected $criteriaDataType = 'map';
-  public $criteria;
+  public $criteria = [];
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   public $dataExecutionStatus;
@@ -35,10 +35,10 @@ class PivotTable extends \Google\Collection
   public $dataSourceId;
   protected $filterSpecsType = PivotFilterSpec::class;
   protected $filterSpecsDataType = 'array';
-  public $filterSpecs;
+  public $filterSpecs = [];
   protected $rowsType = PivotGroup::class;
   protected $rowsDataType = 'array';
-  public $rows;
+  public $rows = [];
   protected $sourceType = GridRange::class;
   protected $sourceDataType = '';
   public $source;
@@ -48,7 +48,7 @@ class PivotTable extends \Google\Collection
   public $valueLayout;
   protected $valuesType = PivotValue::class;
   protected $valuesDataType = 'array';
-  public $values;
+  public $values = [];
 
   /**
    * @param PivotGroup[]

@@ -22,7 +22,7 @@ class LinkedRouterApplianceInstances extends \Google\Collection
   protected $collection_key = 'instances';
   protected $instancesType = RouterApplianceInstance::class;
   protected $instancesDataType = 'array';
-  public $instances;
+  public $instances = [];
   /**
    * @var bool
    */

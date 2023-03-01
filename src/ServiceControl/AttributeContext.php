@@ -29,7 +29,7 @@ class AttributeContext extends \Google\Collection
   /**
    * @var array[]
    */
-  public $extensions;
+  public $extensions = [];
   protected $originType = Peer::class;
   protected $originDataType = '';
   public $origin;

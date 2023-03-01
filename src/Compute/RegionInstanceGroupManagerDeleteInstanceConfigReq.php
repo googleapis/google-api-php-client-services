@@ -23,7 +23,7 @@ class RegionInstanceGroupManagerDeleteInstanceConfigReq extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $names;
+  public $names = [];
 
   /**
    * @param string[]

@@ -41,7 +41,7 @@ class InstanceConfig extends \Google\Collection
   public $instanceType;
   protected $logicalInterfacesType = GoogleCloudBaremetalsolutionV2LogicalInterface::class;
   protected $logicalInterfacesDataType = 'array';
-  public $logicalInterfaces;
+  public $logicalInterfaces = [];
   /**
    * @var string
    */

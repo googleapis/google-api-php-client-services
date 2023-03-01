@@ -22,7 +22,7 @@ class ListBrandsResponse extends \Google\Collection
   protected $collection_key = 'brands';
   protected $brandsType = Brand::class;
   protected $brandsDataType = 'array';
-  public $brands;
+  public $brands = [];
 
   /**
    * @param Brand[]

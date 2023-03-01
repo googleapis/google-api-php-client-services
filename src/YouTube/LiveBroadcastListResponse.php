@@ -30,7 +30,7 @@ class LiveBroadcastListResponse extends \Google\Collection
   public $eventId;
   protected $itemsType = LiveBroadcast::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

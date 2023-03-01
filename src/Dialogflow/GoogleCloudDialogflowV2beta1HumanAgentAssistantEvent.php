@@ -30,7 +30,7 @@ class GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent extends \Google\Colle
   public $participant;
   protected $suggestionResultsType = GoogleCloudDialogflowV2beta1SuggestionResult::class;
   protected $suggestionResultsDataType = 'array';
-  public $suggestionResults;
+  public $suggestionResults = [];
 
   /**
    * @param string

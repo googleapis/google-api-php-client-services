@@ -35,7 +35,7 @@ class AppsPeopleOzExternalMergedpeopleapiPersonExtendedData extends \Google\Coll
   /**
    * @var string[]
    */
-  public $domainName;
+  public $domainName = [];
   protected $dynamiteExtendedDataType = SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData::class;
   protected $dynamiteExtendedDataDataType = '';
   public $dynamiteExtendedData;

@@ -23,7 +23,7 @@ class NlpMeaningMeaningRemodelingControl extends \Google\Collection
   /**
    * @var string[]
    */
-  public $remodelingId;
+  public $remodelingId = [];
 
   /**
    * @param string[]

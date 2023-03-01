@@ -23,11 +23,11 @@ class ModifyContactGroupMembersRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceNamesToAdd;
+  public $resourceNamesToAdd = [];
   /**
    * @var string[]
    */
-  public $resourceNamesToRemove;
+  public $resourceNamesToRemove = [];
 
   /**
    * @param string[]

@@ -30,7 +30,7 @@ class GoogleCloudDialogflowV2EventInput extends \Google\Model
   /**
    * @var array[]
    */
-  public $parameters;
+  public $parameters = [];
 
   /**
    * @param string

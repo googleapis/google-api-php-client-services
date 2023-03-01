@@ -22,10 +22,10 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
   protected $collection_key = 'synonyms';
   protected $conjugationsType = DictlayerdataDictWordsSensesConjugations::class;
   protected $conjugationsDataType = 'array';
-  public $conjugations;
+  public $conjugations = [];
   protected $definitionsType = DictlayerdataDictWordsSensesDefinitions::class;
   protected $definitionsDataType = 'array';
-  public $definitions;
+  public $definitions = [];
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
   public $syllabification;
   protected $synonymsType = DictlayerdataDictWordsSensesSynonyms::class;
   protected $synonymsDataType = 'array';
-  public $synonyms;
+  public $synonyms = [];
 
   /**
    * @param DictlayerdataDictWordsSensesConjugations[]

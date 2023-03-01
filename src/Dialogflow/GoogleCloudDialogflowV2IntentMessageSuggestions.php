@@ -22,7 +22,7 @@ class GoogleCloudDialogflowV2IntentMessageSuggestions extends \Google\Collection
   protected $collection_key = 'suggestions';
   protected $suggestionsType = GoogleCloudDialogflowV2IntentMessageSuggestion::class;
   protected $suggestionsDataType = 'array';
-  public $suggestions;
+  public $suggestions = [];
 
   /**
    * @param GoogleCloudDialogflowV2IntentMessageSuggestion[]

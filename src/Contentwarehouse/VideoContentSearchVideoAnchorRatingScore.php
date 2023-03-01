@@ -31,7 +31,7 @@ class VideoContentSearchVideoAnchorRatingScore extends \Google\Collection
   /**
    * @var string[]
    */
-  public $furballUrl;
+  public $furballUrl = [];
 
   /**
    * @param float

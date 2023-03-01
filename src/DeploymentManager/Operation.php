@@ -109,7 +109,7 @@ class Operation extends \Google\Collection
   public $user;
   protected $warningsType = OperationWarnings::class;
   protected $warningsDataType = 'array';
-  public $warnings;
+  public $warnings = [];
   /**
    * @var string
    */

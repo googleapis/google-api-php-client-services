@@ -27,7 +27,7 @@ class Manifest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $muxStreams;
+  public $muxStreams = [];
   /**
    * @var string
    */

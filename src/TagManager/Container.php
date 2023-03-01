@@ -31,7 +31,7 @@ class Container extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domainName;
+  public $domainName = [];
   protected $featuresType = ContainerFeatures::class;
   protected $featuresDataType = '';
   public $features;
@@ -58,7 +58,7 @@ class Container extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tagIds;
+  public $tagIds = [];
   /**
    * @var string
    */
@@ -66,11 +66,11 @@ class Container extends \Google\Collection
   /**
    * @var string[]
    */
-  public $taggingServerUrls;
+  public $taggingServerUrls = [];
   /**
    * @var string[]
    */
-  public $usageContext;
+  public $usageContext = [];
 
   /**
    * @param string

@@ -22,7 +22,7 @@ class ListAlertFeedbackResponse extends \Google\Collection
   protected $collection_key = 'feedback';
   protected $feedbackType = AlertFeedback::class;
   protected $feedbackDataType = 'array';
-  public $feedback;
+  public $feedback = [];
 
   /**
    * @param AlertFeedback[]

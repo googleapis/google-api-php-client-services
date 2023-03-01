@@ -22,7 +22,7 @@ class PostureDetail extends \Google\Collection
   protected $collection_key = 'advice';
   protected $adviceType = UserFacingMessage::class;
   protected $adviceDataType = 'array';
-  public $advice;
+  public $advice = [];
   /**
    * @var string
    */

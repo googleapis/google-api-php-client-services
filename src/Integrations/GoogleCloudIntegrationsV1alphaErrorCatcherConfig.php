@@ -38,7 +38,7 @@ class GoogleCloudIntegrationsV1alphaErrorCatcherConfig extends \Google\Collectio
   public $label;
   protected $startErrorTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $startErrorTasksDataType = 'array';
-  public $startErrorTasks;
+  public $startErrorTasks = [];
 
   /**
    * @param string

@@ -22,7 +22,7 @@ class CreativeSpecification extends \Google\Collection
   protected $collection_key = 'creativeCompanionSizes';
   protected $creativeCompanionSizesType = AdSize::class;
   protected $creativeCompanionSizesDataType = 'array';
-  public $creativeCompanionSizes;
+  public $creativeCompanionSizes = [];
   protected $creativeSizeType = AdSize::class;
   protected $creativeSizeDataType = '';
   public $creativeSize;

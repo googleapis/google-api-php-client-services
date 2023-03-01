@@ -34,7 +34,7 @@ class GoogleCloudApigeeV1AsyncQueryResultView extends \Google\Collection
   /**
    * @var array[]
    */
-  public $rows;
+  public $rows = [];
   /**
    * @var string
    */

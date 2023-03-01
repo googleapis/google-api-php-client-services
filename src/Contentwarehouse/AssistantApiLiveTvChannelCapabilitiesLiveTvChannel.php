@@ -27,7 +27,7 @@ class AssistantApiLiveTvChannelCapabilitiesLiveTvChannel extends \Google\Collect
   /**
    * @var string[]
    */
-  public $channelName;
+  public $channelName = [];
   /**
    * @var string
    */

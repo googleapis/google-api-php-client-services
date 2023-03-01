@@ -22,7 +22,7 @@ class GoogleInternalAppsWaldoV1alphaUserAvailabilities extends \Google\Collectio
   protected $collection_key = 'availabilities';
   protected $availabilitiesType = GoogleInternalAppsWaldoV1alphaUserAvailability::class;
   protected $availabilitiesDataType = 'array';
-  public $availabilities;
+  public $availabilities = [];
   /**
    * @var string
    */

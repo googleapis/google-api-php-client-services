@@ -30,11 +30,11 @@ class GoogleCloudContentwarehouseV1DocumentQuery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $documentCreatorFilter;
+  public $documentCreatorFilter = [];
   /**
    * @var string[]
    */
-  public $documentSchemaNames;
+  public $documentSchemaNames = [];
   protected $fileTypeFilterType = GoogleCloudContentwarehouseV1FileTypeFilter::class;
   protected $fileTypeFilterDataType = '';
   public $fileTypeFilter;
@@ -48,7 +48,7 @@ class GoogleCloudContentwarehouseV1DocumentQuery extends \Google\Collection
   public $isNlQuery;
   protected $propertyFilterType = GoogleCloudContentwarehouseV1PropertyFilter::class;
   protected $propertyFilterDataType = 'array';
-  public $propertyFilter;
+  public $propertyFilter = [];
   /**
    * @var string
    */
@@ -56,10 +56,10 @@ class GoogleCloudContentwarehouseV1DocumentQuery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $queryContext;
+  public $queryContext = [];
   protected $timeFiltersType = GoogleCloudContentwarehouseV1TimeFilter::class;
   protected $timeFiltersDataType = 'array';
-  public $timeFilters;
+  public $timeFilters = [];
 
   /**
    * @param string

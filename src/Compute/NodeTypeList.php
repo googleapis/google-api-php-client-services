@@ -26,7 +26,7 @@ class NodeTypeList extends \Google\Collection
   public $id;
   protected $itemsType = NodeType::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */

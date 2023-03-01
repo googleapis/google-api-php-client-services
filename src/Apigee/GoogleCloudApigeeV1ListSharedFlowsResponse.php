@@ -22,7 +22,7 @@ class GoogleCloudApigeeV1ListSharedFlowsResponse extends \Google\Collection
   protected $collection_key = 'sharedFlows';
   protected $sharedFlowsType = GoogleCloudApigeeV1SharedFlow::class;
   protected $sharedFlowsDataType = 'array';
-  public $sharedFlows;
+  public $sharedFlows = [];
 
   /**
    * @param GoogleCloudApigeeV1SharedFlow[]

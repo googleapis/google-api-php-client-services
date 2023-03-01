@@ -23,7 +23,7 @@ class GeneratedIds extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ids;
+  public $ids = [];
   /**
    * @var string
    */

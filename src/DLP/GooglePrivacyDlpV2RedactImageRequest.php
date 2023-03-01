@@ -25,7 +25,7 @@ class GooglePrivacyDlpV2RedactImageRequest extends \Google\Collection
   public $byteItem;
   protected $imageRedactionConfigsType = GooglePrivacyDlpV2ImageRedactionConfig::class;
   protected $imageRedactionConfigsDataType = 'array';
-  public $imageRedactionConfigs;
+  public $imageRedactionConfigs = [];
   /**
    * @var bool
    */

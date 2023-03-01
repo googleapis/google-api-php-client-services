@@ -29,13 +29,13 @@ class GoogleCloudVideointelligenceV1p3beta1StreamingVideoAnnotationResults exten
   public $frameTimestamp;
   protected $labelAnnotationsType = GoogleCloudVideointelligenceV1p3beta1LabelAnnotation::class;
   protected $labelAnnotationsDataType = 'array';
-  public $labelAnnotations;
+  public $labelAnnotations = [];
   protected $objectAnnotationsType = GoogleCloudVideointelligenceV1p3beta1ObjectTrackingAnnotation::class;
   protected $objectAnnotationsDataType = 'array';
-  public $objectAnnotations;
+  public $objectAnnotations = [];
   protected $shotAnnotationsType = GoogleCloudVideointelligenceV1p3beta1VideoSegment::class;
   protected $shotAnnotationsDataType = 'array';
-  public $shotAnnotations;
+  public $shotAnnotations = [];
 
   /**
    * @param GoogleCloudVideointelligenceV1p3beta1ExplicitContentAnnotation

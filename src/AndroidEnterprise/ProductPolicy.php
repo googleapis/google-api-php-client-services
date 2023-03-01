@@ -29,7 +29,7 @@ class ProductPolicy extends \Google\Collection
   public $autoUpdateMode;
   protected $enterpriseAuthenticationAppLinkConfigsType = EnterpriseAuthenticationAppLinkConfig::class;
   protected $enterpriseAuthenticationAppLinkConfigsDataType = 'array';
-  public $enterpriseAuthenticationAppLinkConfigs;
+  public $enterpriseAuthenticationAppLinkConfigs = [];
   protected $managedConfigurationType = ManagedConfiguration::class;
   protected $managedConfigurationDataType = '';
   public $managedConfiguration;
@@ -40,11 +40,11 @@ class ProductPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $trackIds;
+  public $trackIds = [];
   /**
    * @var string[]
    */
-  public $tracks;
+  public $tracks = [];
 
   /**
    * @param AutoInstallPolicy

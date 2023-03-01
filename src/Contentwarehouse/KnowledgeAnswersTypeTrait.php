@@ -26,7 +26,7 @@ class KnowledgeAnswersTypeTrait extends \Google\Collection
   /**
    * @var string[]
    */
-  public $traitId;
+  public $traitId = [];
 
   /**
    * @param NlpMeaningMeaningRemodelings

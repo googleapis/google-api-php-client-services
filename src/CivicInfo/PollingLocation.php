@@ -43,7 +43,7 @@ class PollingLocation extends \Google\Collection
   public $pollingHours;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
-  public $sources;
+  public $sources = [];
   /**
    * @var string
    */

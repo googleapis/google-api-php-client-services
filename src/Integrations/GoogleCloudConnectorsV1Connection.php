@@ -25,7 +25,7 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public $authConfig;
   protected $configVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $configVariablesDataType = 'array';
-  public $configVariables;
+  public $configVariables = [];
   /**
    * @var string
    */
@@ -40,7 +40,7 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public $description;
   protected $destinationConfigsType = GoogleCloudConnectorsV1DestinationConfig::class;
   protected $destinationConfigsDataType = 'array';
-  public $destinationConfigs;
+  public $destinationConfigs = [];
   /**
    * @var string
    */
@@ -52,7 +52,7 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $lockConfigType = GoogleCloudConnectorsV1LockConfig::class;
   protected $lockConfigDataType = '';
   public $lockConfig;

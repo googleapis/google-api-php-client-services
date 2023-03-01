@@ -23,11 +23,11 @@ class UriTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedUris;
+  public $excludedUris = [];
   /**
    * @var string[]
    */
-  public $targetedUris;
+  public $targetedUris = [];
 
   /**
    * @param string[]

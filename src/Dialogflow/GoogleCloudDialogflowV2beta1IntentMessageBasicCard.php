@@ -22,7 +22,7 @@ class GoogleCloudDialogflowV2beta1IntentMessageBasicCard extends \Google\Collect
   protected $collection_key = 'buttons';
   protected $buttonsType = GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton::class;
   protected $buttonsDataType = 'array';
-  public $buttons;
+  public $buttons = [];
   /**
    * @var string
    */

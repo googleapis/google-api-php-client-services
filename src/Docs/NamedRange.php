@@ -30,7 +30,7 @@ class NamedRange extends \Google\Collection
   public $namedRangeId;
   protected $rangesType = Range::class;
   protected $rangesDataType = 'array';
-  public $ranges;
+  public $ranges = [];
 
   /**
    * @param string

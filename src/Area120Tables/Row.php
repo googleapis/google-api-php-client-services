@@ -34,7 +34,7 @@ class Row extends \Google\Model
   /**
    * @var array[]
    */
-  public $values;
+  public $values = [];
 
   /**
    * @param string

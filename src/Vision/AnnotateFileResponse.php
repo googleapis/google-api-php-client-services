@@ -28,7 +28,7 @@ class AnnotateFileResponse extends \Google\Collection
   public $inputConfig;
   protected $responsesType = AnnotateImageResponse::class;
   protected $responsesDataType = 'array';
-  public $responses;
+  public $responses = [];
   /**
    * @var int
    */

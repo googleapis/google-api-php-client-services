@@ -23,7 +23,7 @@ class RepositoryWebrefProductMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productLineId;
+  public $productLineId = [];
   protected $shoppingIdsType = KnowledgeAnswersIntentQueryShoppingIds::class;
   protected $shoppingIdsDataType = '';
   public $shoppingIds;
@@ -34,7 +34,7 @@ class RepositoryWebrefProductMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $variantClusterId;
+  public $variantClusterId = [];
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly extends \Google\Colle
   protected $collection_key = 'normalizedVertices';
   protected $normalizedVerticesType = GoogleCloudDatalabelingV1beta1NormalizedVertex::class;
   protected $normalizedVerticesDataType = 'array';
-  public $normalizedVertices;
+  public $normalizedVertices = [];
 
   /**
    * @param GoogleCloudDatalabelingV1beta1NormalizedVertex[]

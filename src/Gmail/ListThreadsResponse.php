@@ -30,7 +30,7 @@ class ListThreadsResponse extends \Google\Collection
   public $resultSizeEstimate;
   protected $threadsType = Thread::class;
   protected $threadsDataType = 'array';
-  public $threads;
+  public $threads = [];
 
   /**
    * @param string

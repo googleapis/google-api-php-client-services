@@ -29,10 +29,10 @@ class Product extends \Google\Collection
   public $contentLanguage;
   protected $destinationStatusesType = DestinationStatus::class;
   protected $destinationStatusesDataType = 'array';
-  public $destinationStatuses;
+  public $destinationStatuses = [];
   protected $issuesType = Issue::class;
   protected $issuesDataType = 'array';
-  public $issues;
+  public $issues = [];
   /**
    * @var string
    */

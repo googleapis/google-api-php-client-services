@@ -29,10 +29,10 @@ class AssistantLogsMediaFocusesLog extends \Google\Collection
   public $localMediaFocus;
   protected $mediaFocusesType = AssistantLogsMediaFocusInfoLog::class;
   protected $mediaFocusesDataType = 'array';
-  public $mediaFocuses;
+  public $mediaFocuses = [];
   protected $nearbyMediaFocusesType = AssistantLogsMediaFocusInfoLog::class;
   protected $nearbyMediaFocusesDataType = 'array';
-  public $nearbyMediaFocuses;
+  public $nearbyMediaFocuses = [];
 
   /**
    * @param bool

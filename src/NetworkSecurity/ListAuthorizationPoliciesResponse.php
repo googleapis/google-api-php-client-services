@@ -22,7 +22,7 @@ class ListAuthorizationPoliciesResponse extends \Google\Collection
   protected $collection_key = 'authorizationPolicies';
   protected $authorizationPoliciesType = AuthorizationPolicy::class;
   protected $authorizationPoliciesDataType = 'array';
-  public $authorizationPolicies;
+  public $authorizationPolicies = [];
   /**
    * @var string
    */

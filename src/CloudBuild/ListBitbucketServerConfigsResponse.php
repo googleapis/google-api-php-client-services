@@ -22,7 +22,7 @@ class ListBitbucketServerConfigsResponse extends \Google\Collection
   protected $collection_key = 'bitbucketServerConfigs';
   protected $bitbucketServerConfigsType = BitbucketServerConfig::class;
   protected $bitbucketServerConfigsDataType = 'array';
-  public $bitbucketServerConfigs;
+  public $bitbucketServerConfigs = [];
   /**
    * @var string
    */

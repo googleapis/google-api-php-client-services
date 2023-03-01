@@ -25,7 +25,7 @@ class GoogleCloudVisionV1p4beta1TextAnnotationTextProperty extends \Google\Colle
   public $detectedBreak;
   protected $detectedLanguagesType = GoogleCloudVisionV1p4beta1TextAnnotationDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
-  public $detectedLanguages;
+  public $detectedLanguages = [];
 
   /**
    * @param GoogleCloudVisionV1p4beta1TextAnnotationDetectedBreak

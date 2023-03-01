@@ -32,7 +32,7 @@ class FreebaseValue extends \Google\Collection
   public $compoundValue;
   protected $deletionProvenanceType = StorageGraphBfgTripleProvenance::class;
   protected $deletionProvenanceDataType = 'array';
-  public $deletionProvenance;
+  public $deletionProvenance = [];
   /**
    * @var string
    */
@@ -72,7 +72,7 @@ class FreebaseValue extends \Google\Collection
   public $nestedStruct;
   protected $provenanceType = StorageGraphBfgTripleProvenance::class;
   protected $provenanceDataType = 'array';
-  public $provenance;
+  public $provenance = [];
   /**
    * @var string
    */
@@ -84,7 +84,7 @@ class FreebaseValue extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subgraphId;
+  public $subgraphId = [];
   /**
    * @var string
    */

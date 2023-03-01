@@ -23,7 +23,7 @@ class GcpUserAccessBinding extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accessLevels;
+  public $accessLevels = [];
   /**
    * @var string
    */

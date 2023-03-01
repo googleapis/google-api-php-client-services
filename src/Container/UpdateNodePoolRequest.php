@@ -56,7 +56,7 @@ class UpdateNodePoolRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $locations;
+  public $locations = [];
   protected $loggingConfigType = NodePoolLoggingConfig::class;
   protected $loggingConfigDataType = '';
   public $loggingConfig;

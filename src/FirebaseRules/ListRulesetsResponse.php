@@ -26,7 +26,7 @@ class ListRulesetsResponse extends \Google\Collection
   public $nextPageToken;
   protected $rulesetsType = Ruleset::class;
   protected $rulesetsDataType = 'array';
-  public $rulesets;
+  public $rulesets = [];
 
   /**
    * @param string
