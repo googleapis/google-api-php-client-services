@@ -840,7 +840,7 @@ class GeometryCollection extends Geometry
   protected $collection_key = 'geometries';
   protected $geometriesType = Geometry::class;
   protected $geometriesDataType = 'array';
-  public $geometries;
+  public $geometries = [];
   protected function gapiInit()
   {
     $this->type = 'Collection';
@@ -3027,7 +3027,7 @@ class SeriesList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Series::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
@@ -3112,7 +3112,7 @@ class Submission extends \Google\Collection
   public $created;
   protected $geoType = LatLong::class;
   protected $geoDataType = 'array';
-  public $geo;
+  public $geo = [];
   protected $idType = SubmissionId::class;
   protected $idDataType = '';
   public $id;
@@ -3129,10 +3129,10 @@ class Submission extends \Google\Collection
   public $text;
   protected $topicsType = ModeratorTopicsResourcePartial::class;
   protected $topicsDataType = 'array';
-  public $topics;
+  public $topics = [];
   protected $translationsType = Translation::class;
   protected $translationsDataType = 'map';
-  public $translations;
+  public $translations = [];
 
   /**
    * @param string
@@ -3569,7 +3569,7 @@ class SubmissionList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Submission::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
@@ -4053,7 +4053,7 @@ class Topic2 extends \Google\Collection
   public $presenter;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
-  public $rules;
+  public $rules = [];
 
   /**
    * @param Topic2Counters
@@ -4607,7 +4607,7 @@ class TopicList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Topic::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
@@ -5051,7 +5051,7 @@ class VoteList extends \Google\Collection
   protected $collection_key = 'items';
   protected $itemsType = Vote::class;
   protected $itemsDataType = 'array';
-  public $items;
+  public $items = [];
   /**
    * @var string
    */
