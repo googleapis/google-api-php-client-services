@@ -34,6 +34,9 @@ class PackageData extends \Google\Collection
    * @var string
    */
   public $hashDigest;
+  protected $maintainerType = Maintainer::class;
+  protected $maintainerDataType = '';
+  public $maintainer;
   /**
    * @var string
    */
@@ -118,6 +121,20 @@ class PackageData extends \Google\Collection
   public function getHashDigest()
   {
     return $this->hashDigest;
+  }
+  /**
+   * @param Maintainer
+   */
+  public function setMaintainer(Maintainer $maintainer)
+  {
+    $this->maintainer = $maintainer;
+  }
+  /**
+   * @return Maintainer
+   */
+  public function getMaintainer()
+  {
+    return $this->maintainer;
   }
   /**
    * @param string
