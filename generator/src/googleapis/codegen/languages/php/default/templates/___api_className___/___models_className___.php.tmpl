@@ -28,11 +28,11 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
  {% else %}
  {% if property.annotationType %}
   /**
-   * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
+   * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]|null{% endif %}
    */
  {% endif %}
  {% endif %}
-  public ${{ property.memberName }}{% if property.dataType == "array" or property.dataType == "map" %} = []{% endif %};
+  public ${{ property.memberName }}{% if property.dataType == "array" %} = []{% endif %};
 {% endfor %}
 {% endfilter %}
 {% filter noblanklines %}
@@ -65,7 +65,7 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
 {% endif %}
   public function {{ property.getterName }}()
   {
-    return $this->{{ property.memberName }};
+    return $this->{{ property.memberName }}{% if property.type == "array" or property.dataType == "map" %} ?: []{% endif %};
   }
 {% endfilter %}{% endfor %}{% endif %}
 }
