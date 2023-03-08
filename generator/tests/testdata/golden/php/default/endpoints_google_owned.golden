@@ -186,7 +186,7 @@ class HelloGreetingCollection extends \Google\Collection
    */
   public function getItems()
   {
-    return $this->items;
+    return $this->items ?: [];
   }
 }
 

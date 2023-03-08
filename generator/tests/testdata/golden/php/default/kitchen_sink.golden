@@ -857,7 +857,7 @@ class GeometryCollection extends Geometry
    */
   public function getGeometries()
   {
-    return $this->geometries;
+    return $this->geometries ?: [];
   }
 }
 
@@ -3045,7 +3045,7 @@ class SeriesList extends \Google\Collection
    */
   public function getItems()
   {
-    return $this->items;
+    return $this->items ?: [];
   }
   /**
    * @param string
@@ -3132,7 +3132,7 @@ class Submission extends \Google\Collection
   public $topics = [];
   protected $translationsType = Translation::class;
   protected $translationsDataType = 'map';
-  public $translations = [];
+  public $translations;
 
   /**
    * @param string
@@ -3216,7 +3216,7 @@ class Submission extends \Google\Collection
    */
   public function getGeo()
   {
-    return $this->geo;
+    return $this->geo ?: [];
   }
   /**
    * @param SubmissionId
@@ -3286,7 +3286,7 @@ class Submission extends \Google\Collection
    */
   public function getTopics()
   {
-    return $this->topics;
+    return $this->topics ?: [];
   }
   /**
    * @param Translation[]
@@ -3300,7 +3300,7 @@ class Submission extends \Google\Collection
    */
   public function getTranslations()
   {
-    return $this->translations;
+    return $this->translations ?: [];
   }
 }
 
@@ -3587,7 +3587,7 @@ class SubmissionList extends \Google\Collection
    */
   public function getItems()
   {
-    return $this->items;
+    return $this->items ?: [];
   }
   /**
    * @param string
@@ -4165,7 +4165,7 @@ class Topic2 extends \Google\Collection
    */
   public function getRules()
   {
-    return $this->rules;
+    return $this->rules ?: [];
   }
 }
 
@@ -4625,7 +4625,7 @@ class TopicList extends \Google\Collection
    */
   public function getItems()
   {
-    return $this->items;
+    return $this->items ?: [];
   }
   /**
    * @param string
@@ -5069,7 +5069,7 @@ class VoteList extends \Google\Collection
    */
   public function getItems()
   {
-    return $this->items;
+    return $this->items ?: [];
   }
   /**
    * @param string
