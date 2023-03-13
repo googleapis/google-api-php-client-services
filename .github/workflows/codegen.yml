@@ -26,7 +26,7 @@ jobs:
             };
             for (let i = 0; i < services.length; i++) {
               if (services[i] != "discovery" && services[i] != "websecurityscanner") {
-                j = i % MAX_BATCH_SIZE ? "one" : "two";
+                j = i % 2 ? "one" : "two";
                 result[j].push(services[i])
               }
             }
