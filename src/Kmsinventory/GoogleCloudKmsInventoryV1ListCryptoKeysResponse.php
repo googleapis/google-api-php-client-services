@@ -22,7 +22,7 @@ class GoogleCloudKmsInventoryV1ListCryptoKeysResponse extends \Google\Collection
   protected $collection_key = 'cryptoKeys';
   protected $cryptoKeysType = GoogleCloudKmsV1CryptoKey::class;
   protected $cryptoKeysDataType = 'array';
-  public $cryptoKeys;
+  public $cryptoKeys = [];
   /**
    * @var string
    */
