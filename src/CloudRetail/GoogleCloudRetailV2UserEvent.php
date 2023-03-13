@@ -37,6 +37,10 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @var string
    */
+  public $domain;
+  /**
+   * @var string
+   */
   public $eventTime;
   /**
    * @var string
@@ -151,6 +155,20 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public function getCompletionDetail()
   {
     return $this->completionDetail;
+  }
+  /**
+   * @param string
+   */
+  public function setDomain($domain)
+  {
+    $this->domain = $domain;
+  }
+  /**
+   * @return string
+   */
+  public function getDomain()
+  {
+    return $this->domain;
   }
   /**
    * @param string
