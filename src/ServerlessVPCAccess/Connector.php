@@ -23,7 +23,7 @@ class Connector extends \Google\Collection
   /**
    * @var string[]
    */
-  public $connectedProjects;
+  public $connectedProjects = [];
   /**
    * @var string
    */

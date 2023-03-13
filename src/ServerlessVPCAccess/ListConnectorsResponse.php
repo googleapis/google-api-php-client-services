@@ -22,7 +22,7 @@ class ListConnectorsResponse extends \Google\Collection
   protected $collection_key = 'connectors';
   protected $connectorsType = Connector::class;
   protected $connectorsDataType = 'array';
-  public $connectors;
+  public $connectors = [];
   /**
    * @var string
    */
