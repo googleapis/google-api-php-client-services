@@ -32,7 +32,7 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
    */
  {% endif %}
  {% endif %}
-  public ${{ property.memberName }}{% if property.dataType == "array" or property.dataType == "map" %} = []{% endif %};
+  public ${{ property.memberName }};
 {% endfor %}
 {% endfilter %}
 {% filter noblanklines %}
