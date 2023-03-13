@@ -25,10 +25,10 @@ use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $operations = $discoveryengineService->projects_locations_operations;
+ *   $operations = $discoveryengineService->projects_locations_collections_dataStores_branches_operations;
  *  </code>
  */
-class ProjectsLocationsOperations extends \Google\Service\Resource
+class ProjectsLocationsCollectionsDataStoresBranchesOperations extends \Google\Service\Resource
 {
   /**
    * Gets the latest state of a long-running operation. Clients can use this
@@ -48,7 +48,7 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
   /**
    * Lists operations that match the specified filter in the request. If the
    * server doesn't support this method, it returns `UNIMPLEMENTED`.
-   * (operations.listProjectsLocationsOperations)
+   * (operations.listProjectsLocationsCollectionsDataStoresBranchesOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
@@ -58,7 +58,7 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * @opt_param string pageToken The standard list page token.
    * @return GoogleLongrunningListOperationsResponse
    */
-  public function listProjectsLocationsOperations($name, $optParams = [])
+  public function listProjectsLocationsCollectionsDataStoresBranchesOperations($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
@@ -67,4 +67,4 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsOperations::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsOperations');
+class_alias(ProjectsLocationsCollectionsDataStoresBranchesOperations::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsDataStoresBranchesOperations');

@@ -25,10 +25,10 @@ use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaRecommendResp
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $servingConfigs = $discoveryengineService->projects_locations_dataStores_servingConfigs;
+ *   $servingConfigs = $discoveryengineService->projects_locations_collections_dataStores_servingConfigs;
  *  </code>
  */
-class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
+class ProjectsLocationsCollectionsDataStoresServingConfigs extends \Google\Service\Resource
 {
   /**
    * Makes a recommendation, which requires a contextual user event.
@@ -51,4 +51,4 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsDataStoresServingConfigs::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsDataStoresServingConfigs');
+class_alias(ProjectsLocationsCollectionsDataStoresServingConfigs::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsDataStoresServingConfigs');

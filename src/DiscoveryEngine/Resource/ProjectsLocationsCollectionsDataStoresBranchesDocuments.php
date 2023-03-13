@@ -28,10 +28,10 @@ use Google\Service\DiscoveryEngine\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $documents = $discoveryengineService->projects_locations_dataStores_branches_documents;
+ *   $documents = $discoveryengineService->projects_locations_collections_dataStores_branches_documents;
  *  </code>
  */
-class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resource
+class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Service\Resource
 {
   /**
    * Creates a Document. (documents.create)
@@ -114,7 +114,7 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
   }
   /**
    * Gets a list of Documents.
-   * (documents.listProjectsLocationsDataStoresBranchesDocuments)
+   * (documents.listProjectsLocationsCollectionsDataStoresBranchesDocuments)
    *
    * @param string $parent Required. The parent branch resource name, such as `pro
    * jects/{project}/locations/{location}/collections/{collection}/dataStores/{dat
@@ -136,7 +136,7 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * token. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return GoogleCloudDiscoveryengineV1betaListDocumentsResponse
    */
-  public function listProjectsLocationsDataStoresBranchesDocuments($parent, $optParams = [])
+  public function listProjectsLocationsCollectionsDataStoresBranchesDocuments($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -165,4 +165,4 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsDataStoresBranchesDocuments::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsDataStoresBranchesDocuments');
+class_alias(ProjectsLocationsCollectionsDataStoresBranchesDocuments::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsDataStoresBranchesDocuments');

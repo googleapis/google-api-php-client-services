@@ -27,10 +27,10 @@ use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $userEvents = $discoveryengineService->projects_locations_dataStores_userEvents;
+ *   $userEvents = $discoveryengineService->projects_locations_collections_dataStores_userEvents;
  *  </code>
  */
-class ProjectsLocationsDataStoresUserEvents extends \Google\Service\Resource
+class ProjectsLocationsCollectionsDataStoresUserEvents extends \Google\Service\Resource
 {
   /**
    * Writes a single user event from the browser. This uses a GET request to due
@@ -99,4 +99,4 @@ class ProjectsLocationsDataStoresUserEvents extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsDataStoresUserEvents::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsDataStoresUserEvents');
+class_alias(ProjectsLocationsCollectionsDataStoresUserEvents::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsDataStoresUserEvents');
