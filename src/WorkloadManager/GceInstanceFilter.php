@@ -23,7 +23,7 @@ class GceInstanceFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceAccounts;
+  public $serviceAccounts = [];
 
   /**
    * @param string[]

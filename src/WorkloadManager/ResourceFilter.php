@@ -26,15 +26,15 @@ class ResourceFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inclusionLabels;
+  public $inclusionLabels = [];
   /**
    * @var string[]
    */
-  public $resourceIdPatterns;
+  public $resourceIdPatterns = [];
   /**
    * @var string[]
    */
-  public $scopes;
+  public $scopes = [];
 
   /**
    * @param GceInstanceFilter

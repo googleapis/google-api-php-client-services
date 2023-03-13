@@ -23,7 +23,7 @@ class SapDiscoveryResource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relatedResources;
+  public $relatedResources = [];
   /**
    * @var string
    */

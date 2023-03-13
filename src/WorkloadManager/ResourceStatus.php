@@ -23,7 +23,7 @@ class ResourceStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rulesNewerVersions;
+  public $rulesNewerVersions = [];
   /**
    * @var string
    */

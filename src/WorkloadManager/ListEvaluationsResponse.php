@@ -22,7 +22,7 @@ class ListEvaluationsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $evaluationsType = Evaluation::class;
   protected $evaluationsDataType = 'array';
-  public $evaluations;
+  public $evaluations = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListEvaluationsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param Evaluation[]

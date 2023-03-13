@@ -31,7 +31,7 @@ class Evaluation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -45,11 +45,11 @@ class Evaluation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ruleNames;
+  public $ruleNames = [];
   /**
    * @var string[]
    */
-  public $ruleVersions;
+  public $ruleVersions = [];
   /**
    * @var string
    */

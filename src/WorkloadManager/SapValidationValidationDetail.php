@@ -22,7 +22,7 @@ class SapValidationValidationDetail extends \Google\Model
   /**
    * @var string[]
    */
-  public $details;
+  public $details = [];
   /**
    * @var string
    */
