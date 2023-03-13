@@ -31,7 +31,7 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   /**
    * @var string
    */
-  public $errorCatcherConfigId;
+  public $errorCatcherId;
   /**
    * @var string
    */
@@ -53,6 +53,9 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   protected $parametersType = GoogleCloudIntegrationsV1alphaEventParameter::class;
   protected $parametersDataType = 'map';
   public $parameters = [];
+  protected $positionType = GoogleCloudIntegrationsV1alphaCoordinate::class;
+  protected $positionDataType = '';
+  public $position;
   protected $successPolicyType = GoogleCloudIntegrationsV1alphaSuccessPolicy::class;
   protected $successPolicyDataType = '';
   public $successPolicy;
@@ -107,16 +110,16 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   /**
    * @param string
    */
-  public function setErrorCatcherConfigId($errorCatcherConfigId)
+  public function setErrorCatcherId($errorCatcherId)
   {
-    $this->errorCatcherConfigId = $errorCatcherConfigId;
+    $this->errorCatcherId = $errorCatcherId;
   }
   /**
    * @return string
    */
-  public function getErrorCatcherConfigId()
+  public function getErrorCatcherId()
   {
-    return $this->errorCatcherConfigId;
+    return $this->errorCatcherId;
   }
   /**
    * @param string
@@ -201,6 +204,20 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   public function getParameters()
   {
     return $this->parameters;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaCoordinate
+   */
+  public function setPosition(GoogleCloudIntegrationsV1alphaCoordinate $position)
+  {
+    $this->position = $position;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaCoordinate
+   */
+  public function getPosition()
+  {
+    return $this->position;
   }
   /**
    * @param GoogleCloudIntegrationsV1alphaSuccessPolicy

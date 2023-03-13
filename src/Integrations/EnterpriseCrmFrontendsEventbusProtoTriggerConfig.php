@@ -37,7 +37,7 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   /**
    * @var string
    */
-  public $errorCatcherConfigId;
+  public $errorCatcherId;
   /**
    * @var string
    */
@@ -135,16 +135,16 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   /**
    * @param string
    */
-  public function setErrorCatcherConfigId($errorCatcherConfigId)
+  public function setErrorCatcherId($errorCatcherId)
   {
-    $this->errorCatcherConfigId = $errorCatcherConfigId;
+    $this->errorCatcherId = $errorCatcherId;
   }
   /**
    * @return string
    */
-  public function getErrorCatcherConfigId()
+  public function getErrorCatcherId()
   {
-    return $this->errorCatcherConfigId;
+    return $this->errorCatcherId;
   }
   /**
    * @param string
