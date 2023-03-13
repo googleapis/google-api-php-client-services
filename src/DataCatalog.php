@@ -431,16 +431,6 @@ class DataCatalog extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'reconcile' => [
-              'path' => 'v1/{+parent}/tags:reconcile',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],
           ]
         ]
