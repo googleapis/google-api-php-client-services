@@ -31,8 +31,8 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
    * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
    */
  {% endif %}
- {% endif %}
   public ${{ property.memberName }};
+ {% endif %}
 {% endfor %}
 {% endfilter %}
 {% filter noblanklines %}
