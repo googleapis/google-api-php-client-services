@@ -20,10 +20,10 @@ jobs:
           script: |
             console.log('splitting service names list into batches')
             const services = ${{ needs.discovery.outputs.services }}
-            const result = [
+            const result = {
               "one": [],
               "two": [],
-            ];
+            };
             for (let i = 0; i < services.length; i++) {
               if (services[i] != "discovery" && services[i] != "websecurityscanner") {
                 j = i % MAX_BATCH_SIZE ? "one" : "two";
