@@ -43,6 +43,10 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetReques
   protected $timelineSpecType = GooglePlayDeveloperReportingV1beta1TimelineSpec::class;
   protected $timelineSpecDataType = '';
   public $timelineSpec;
+  /**
+   * @var string
+   */
+  public $userCohort;
 
   /**
    * @param string[]
@@ -127,6 +131,20 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetReques
   public function getTimelineSpec()
   {
     return $this->timelineSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setUserCohort($userCohort)
+  {
+    $this->userCohort = $userCohort;
+  }
+  /**
+   * @return string
+   */
+  public function getUserCohort()
+  {
+    return $this->userCohort;
   }
 }
 
