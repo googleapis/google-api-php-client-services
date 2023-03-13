@@ -94,6 +94,10 @@ class GoogleCloudRunV2Revision extends \Google\Collection
    * @var bool
    */
   public $reconciling;
+  /**
+   * @var bool
+   */
+  public $satisfiesPzs;
   protected $scalingType = GoogleCloudRunV2RevisionScaling::class;
   protected $scalingDataType = '';
   public $scaling;
@@ -389,6 +393,20 @@ class GoogleCloudRunV2Revision extends \Google\Collection
   public function getReconciling()
   {
     return $this->reconciling;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param GoogleCloudRunV2RevisionScaling

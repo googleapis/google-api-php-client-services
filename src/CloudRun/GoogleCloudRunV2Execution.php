@@ -100,6 +100,10 @@ class GoogleCloudRunV2Execution extends \Google\Collection
    */
   public $runningCount;
   /**
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * @var string
    */
   public $startTime;
@@ -402,6 +406,20 @@ class GoogleCloudRunV2Execution extends \Google\Collection
   public function getRunningCount()
   {
     return $this->runningCount;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param string
