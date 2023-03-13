@@ -23,10 +23,10 @@ class WorkstationCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   protected $conditionsType = Status::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   /**
    * @var string
    */
@@ -50,7 +50,7 @@ class WorkstationCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */

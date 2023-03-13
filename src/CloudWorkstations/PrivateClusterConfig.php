@@ -23,7 +23,7 @@ class PrivateClusterConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedProjects;
+  public $allowedProjects = [];
   /**
    * @var string
    */

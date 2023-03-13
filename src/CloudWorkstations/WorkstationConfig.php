@@ -23,10 +23,10 @@ class WorkstationConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations;
+  public $annotations = [];
   protected $conditionsType = Status::class;
   protected $conditionsDataType = 'array';
-  public $conditions;
+  public $conditions = [];
   protected $containerType = Container::class;
   protected $containerDataType = '';
   public $container;
@@ -63,14 +63,14 @@ class WorkstationConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
   public $name;
   protected $persistentDirectoriesType = PersistentDirectory::class;
   protected $persistentDirectoriesDataType = 'array';
-  public $persistentDirectories;
+  public $persistentDirectories = [];
   /**
    * @var bool
    */

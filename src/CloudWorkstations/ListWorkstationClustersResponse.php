@@ -27,10 +27,10 @@ class ListWorkstationClustersResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
   protected $workstationClustersType = WorkstationCluster::class;
   protected $workstationClustersDataType = 'array';
-  public $workstationClusters;
+  public $workstationClusters = [];
 
   /**
    * @param string

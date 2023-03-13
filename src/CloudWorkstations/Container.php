@@ -23,15 +23,15 @@ class Container extends \Google\Collection
   /**
    * @var string[]
    */
-  public $args;
+  public $args = [];
   /**
    * @var string[]
    */
-  public $command;
+  public $command = [];
   /**
    * @var string[]
    */
-  public $env;
+  public $env = [];
   /**
    * @var string
    */
