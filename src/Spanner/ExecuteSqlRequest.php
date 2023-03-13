@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class ExecuteSqlRequest extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $dataBoostEnabled;
   protected $paramTypesType = Type::class;
   protected $paramTypesDataType = 'map';
   public $paramTypes = [];
@@ -56,6 +60,20 @@ class ExecuteSqlRequest extends \Google\Model
   protected $transactionDataType = '';
   public $transaction;
 
+  /**
+   * @param bool
+   */
+  public function setDataBoostEnabled($dataBoostEnabled)
+  {
+    $this->dataBoostEnabled = $dataBoostEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDataBoostEnabled()
+  {
+    return $this->dataBoostEnabled;
+  }
   /**
    * @param Type[]
    */
