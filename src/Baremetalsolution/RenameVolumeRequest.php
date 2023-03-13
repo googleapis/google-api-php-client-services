@@ -17,28 +17,28 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class RenameInstanceRequest extends \Google\Model
+class RenameVolumeRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $newInstanceId;
+  public $newVolumeId;
 
   /**
    * @param string
    */
-  public function setNewInstanceId($newInstanceId)
+  public function setNewVolumeId($newVolumeId)
   {
-    $this->newInstanceId = $newInstanceId;
+    $this->newVolumeId = $newVolumeId;
   }
   /**
    * @return string
    */
-  public function getNewInstanceId()
+  public function getNewVolumeId()
   {
-    return $this->newInstanceId;
+    return $this->newVolumeId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenameInstanceRequest::class, 'Google_Service_Baremetalsolution_RenameInstanceRequest');
+class_alias(RenameVolumeRequest::class, 'Google_Service_Baremetalsolution_RenameVolumeRequest');

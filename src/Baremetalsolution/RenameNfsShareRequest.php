@@ -17,28 +17,28 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class RenameInstanceRequest extends \Google\Model
+class RenameNfsShareRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $newInstanceId;
+  public $newNfsshareId;
 
   /**
    * @param string
    */
-  public function setNewInstanceId($newInstanceId)
+  public function setNewNfsshareId($newNfsshareId)
   {
-    $this->newInstanceId = $newInstanceId;
+    $this->newNfsshareId = $newNfsshareId;
   }
   /**
    * @return string
    */
-  public function getNewInstanceId()
+  public function getNewNfsshareId()
   {
-    return $this->newInstanceId;
+    return $this->newNfsshareId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenameInstanceRequest::class, 'Google_Service_Baremetalsolution_RenameInstanceRequest');
+class_alias(RenameNfsShareRequest::class, 'Google_Service_Baremetalsolution_RenameNfsShareRequest');

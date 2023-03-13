@@ -17,28 +17,28 @@
 
 namespace Google\Service\Baremetalsolution;
 
-class RenameInstanceRequest extends \Google\Model
+class RenameNetworkRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $newInstanceId;
+  public $newNetworkId;
 
   /**
    * @param string
    */
-  public function setNewInstanceId($newInstanceId)
+  public function setNewNetworkId($newNetworkId)
   {
-    $this->newInstanceId = $newInstanceId;
+    $this->newNetworkId = $newNetworkId;
   }
   /**
    * @return string
    */
-  public function getNewInstanceId()
+  public function getNewNetworkId()
   {
-    return $this->newInstanceId;
+    return $this->newNetworkId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenameInstanceRequest::class, 'Google_Service_Baremetalsolution_RenameInstanceRequest');
+class_alias(RenameNetworkRequest::class, 'Google_Service_Baremetalsolution_RenameNetworkRequest');
