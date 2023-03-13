@@ -49,6 +49,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   protected $groundingProviderFeaturesDataType = '';
   public $groundingProviderFeatures;
   /**
+   * @var bool
+   */
+  public $hasAnswerGroup;
+  /**
    * @var float
    */
   public $inQueryMaxEffectiveArgSpanLength;
@@ -71,6 +75,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    */
   public $isPlayGenericMusic;
   /**
+   * @var bool
+   */
+  public $isPodcastIntent;
+  /**
    * @var int
    */
   public $kscorerRank;
@@ -92,6 +100,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $numGroundedArgs;
   public $numVariables;
   public $numVariablesGrounded;
+  /**
+   * @var int
+   */
+  public $parsingScoreMse8BucketId;
   public $pq2tVsAssistantIbstCosine;
   public $pq2tVsIbstCosine;
   /**
@@ -226,6 +238,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->groundingProviderFeatures;
   }
   /**
+   * @param bool
+   */
+  public function setHasAnswerGroup($hasAnswerGroup)
+  {
+    $this->hasAnswerGroup = $hasAnswerGroup;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasAnswerGroup()
+  {
+    return $this->hasAnswerGroup;
+  }
+  /**
    * @param float
    */
   public function setInQueryMaxEffectiveArgSpanLength($inQueryMaxEffectiveArgSpanLength)
@@ -310,6 +336,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsPlayGenericMusic()
   {
     return $this->isPlayGenericMusic;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsPodcastIntent($isPodcastIntent)
+  {
+    $this->isPodcastIntent = $isPodcastIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsPodcastIntent()
+  {
+    return $this->isPodcastIntent;
   }
   /**
    * @param int
@@ -422,6 +462,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getNumVariablesGrounded()
   {
     return $this->numVariablesGrounded;
+  }
+  /**
+   * @param int
+   */
+  public function setParsingScoreMse8BucketId($parsingScoreMse8BucketId)
+  {
+    $this->parsingScoreMse8BucketId = $parsingScoreMse8BucketId;
+  }
+  /**
+   * @return int
+   */
+  public function getParsingScoreMse8BucketId()
+  {
+    return $this->parsingScoreMse8BucketId;
   }
   public function setPq2tVsAssistantIbstCosine($pq2tVsAssistantIbstCosine)
   {

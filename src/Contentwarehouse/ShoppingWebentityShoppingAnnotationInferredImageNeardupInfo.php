@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
+class ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo extends \Google\Model
 {
   /**
    * @var string
    */
-  public $inputPath;
+  public $inferredImageSource;
   /**
    * @var string
    */
-  public $processorType;
-  /**
-   * @var string
-   */
-  public $schemaName;
+  public $inferredImageType;
 
   /**
    * @param string
    */
-  public function setInputPath($inputPath)
+  public function setInferredImageSource($inferredImageSource)
   {
-    $this->inputPath = $inputPath;
+    $this->inferredImageSource = $inferredImageSource;
   }
   /**
    * @return string
    */
-  public function getInputPath()
+  public function getInferredImageSource()
   {
-    return $this->inputPath;
+    return $this->inferredImageSource;
   }
   /**
    * @param string
    */
-  public function setProcessorType($processorType)
+  public function setInferredImageType($inferredImageType)
   {
-    $this->processorType = $processorType;
+    $this->inferredImageType = $inferredImageType;
   }
   /**
    * @return string
    */
-  public function getProcessorType()
+  public function getInferredImageType()
   {
-    return $this->processorType;
-  }
-  /**
-   * @param string
-   */
-  public function setSchemaName($schemaName)
-  {
-    $this->schemaName = $schemaName;
-  }
-  /**
-   * @return string
-   */
-  public function getSchemaName()
-  {
-    return $this->schemaName;
+    return $this->inferredImageType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContentwarehouseV1GcsIngestPipeline::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1GcsIngestPipeline');
+class_alias(ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo::class, 'Google_Service_Contentwarehouse_ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo');

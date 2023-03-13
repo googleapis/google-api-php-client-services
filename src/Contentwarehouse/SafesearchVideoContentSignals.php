@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SafesearchVideoContentSignals extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $isAbuseWithHighConfidence;
+  /**
    * @var float[]
    */
   public $scores = [];
@@ -31,6 +35,20 @@ class SafesearchVideoContentSignals extends \Google\Model
   protected $videoClassifierOutputDataType = '';
   public $videoClassifierOutput;
 
+  /**
+   * @param bool
+   */
+  public function setIsAbuseWithHighConfidence($isAbuseWithHighConfidence)
+  {
+    $this->isAbuseWithHighConfidence = $isAbuseWithHighConfidence;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsAbuseWithHighConfidence()
+  {
+    return $this->isAbuseWithHighConfidence;
+  }
   /**
    * @param float[]
    */

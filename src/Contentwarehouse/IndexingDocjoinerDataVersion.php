@@ -25,6 +25,9 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $chromeCountsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $chromeCountsDataType = '';
   public $chromeCounts;
+  protected $creatorType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $creatorDataType = '';
+  public $creator;
   protected $instantNavboostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $instantNavboostDataType = '';
   public $instantNavboost;
@@ -97,6 +100,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getChromeCounts()
   {
     return $this->chromeCounts;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setCreator(IndexingDocjoinerDataVersionVersionInfo $creator)
+  {
+    $this->creator = $creator;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getCreator()
+  {
+    return $this->creator;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

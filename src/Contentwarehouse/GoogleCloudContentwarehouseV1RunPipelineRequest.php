@@ -31,6 +31,9 @@ class GoogleCloudContentwarehouseV1RunPipelineRequest extends \Google\Model
   protected $processWithDocAiPipelineType = GoogleCloudContentwarehouseV1ProcessWithDocAi::class;
   protected $processWithDocAiPipelineDataType = '';
   public $processWithDocAiPipeline;
+  protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
+  protected $requestMetadataDataType = '';
+  public $requestMetadata;
 
   /**
    * @param GoogleCloudContentwarehouseV1ExportToCdwPipeline
@@ -87,6 +90,20 @@ class GoogleCloudContentwarehouseV1RunPipelineRequest extends \Google\Model
   public function getProcessWithDocAiPipeline()
   {
     return $this->processWithDocAiPipeline;
+  }
+  /**
+   * @param GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public function setRequestMetadata(GoogleCloudContentwarehouseV1RequestMetadata $requestMetadata)
+  {
+    $this->requestMetadata = $requestMetadata;
+  }
+  /**
+   * @return GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public function getRequestMetadata()
+  {
+    return $this->requestMetadata;
   }
 }
 
