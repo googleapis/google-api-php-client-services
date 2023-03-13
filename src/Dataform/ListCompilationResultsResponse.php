@@ -22,7 +22,7 @@ class ListCompilationResultsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $compilationResultsType = CompilationResult::class;
   protected $compilationResultsDataType = 'array';
-  public $compilationResults;
+  public $compilationResults = [];
   /**
    * @var string
    */
@@ -30,7 +30,7 @@ class ListCompilationResultsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $unreachable = [];
 
   /**
    * @param CompilationResult[]

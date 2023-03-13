@@ -17,47 +17,46 @@
 
 namespace Google\Service\Dataform;
 
-class ResetWorkspaceChangesRequest extends \Google\Collection
+class FetchRepositoryHistoryResponse extends \Google\Collection
 {
-  protected $collection_key = 'paths';
+  protected $collection_key = 'commits';
+  protected $commitsType = CommitLogEntry::class;
+  protected $commitsDataType = 'array';
+  public $commits = [];
   /**
-   * @var bool
+   * @var string
    */
-  public $clean;
-  /**
-   * @var string[]
-   */
-  public $paths = [];
+  public $nextPageToken;
 
   /**
-   * @param bool
+   * @param CommitLogEntry[]
    */
-  public function setClean($clean)
+  public function setCommits($commits)
   {
-    $this->clean = $clean;
+    $this->commits = $commits;
   }
   /**
-   * @return bool
+   * @return CommitLogEntry[]
    */
-  public function getClean()
+  public function getCommits()
   {
-    return $this->clean;
+    return $this->commits;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setPaths($paths)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->paths = $paths;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getPaths()
+  public function getNextPageToken()
   {
-    return $this->paths;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetWorkspaceChangesRequest::class, 'Google_Service_Dataform_ResetWorkspaceChangesRequest');
+class_alias(FetchRepositoryHistoryResponse::class, 'Google_Service_Dataform_FetchRepositoryHistoryResponse');

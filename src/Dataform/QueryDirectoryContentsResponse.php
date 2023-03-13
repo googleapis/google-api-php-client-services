@@ -22,7 +22,7 @@ class QueryDirectoryContentsResponse extends \Google\Collection
   protected $collection_key = 'directoryEntries';
   protected $directoryEntriesType = DirectoryEntry::class;
   protected $directoryEntriesDataType = 'array';
-  public $directoryEntries;
+  public $directoryEntries = [];
   /**
    * @var string
    */

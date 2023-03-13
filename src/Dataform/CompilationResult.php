@@ -25,7 +25,7 @@ class CompilationResult extends \Google\Collection
   public $codeCompilationConfig;
   protected $compilationErrorsType = CompilationError::class;
   protected $compilationErrorsDataType = 'array';
-  public $compilationErrors;
+  public $compilationErrors = [];
   /**
    * @var string
    */

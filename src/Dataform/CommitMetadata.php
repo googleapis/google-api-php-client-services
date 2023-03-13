@@ -17,47 +17,45 @@
 
 namespace Google\Service\Dataform;
 
-class ResetWorkspaceChangesRequest extends \Google\Collection
+class CommitMetadata extends \Google\Model
 {
-  protected $collection_key = 'paths';
+  protected $authorType = CommitAuthor::class;
+  protected $authorDataType = '';
+  public $author;
   /**
-   * @var bool
+   * @var string
    */
-  public $clean;
-  /**
-   * @var string[]
-   */
-  public $paths = [];
+  public $commitMessage;
 
   /**
-   * @param bool
+   * @param CommitAuthor
    */
-  public function setClean($clean)
+  public function setAuthor(CommitAuthor $author)
   {
-    $this->clean = $clean;
+    $this->author = $author;
   }
   /**
-   * @return bool
+   * @return CommitAuthor
    */
-  public function getClean()
+  public function getAuthor()
   {
-    return $this->clean;
+    return $this->author;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setPaths($paths)
+  public function setCommitMessage($commitMessage)
   {
-    $this->paths = $paths;
+    $this->commitMessage = $commitMessage;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getPaths()
+  public function getCommitMessage()
   {
-    return $this->paths;
+    return $this->commitMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetWorkspaceChangesRequest::class, 'Google_Service_Dataform_ResetWorkspaceChangesRequest');
+class_alias(CommitMetadata::class, 'Google_Service_Dataform_CommitMetadata');

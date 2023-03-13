@@ -23,14 +23,14 @@ class Relation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $additionalOptions;
+  public $additionalOptions = [];
   /**
    * @var string[]
    */
-  public $clusterExpressions;
+  public $clusterExpressions = [];
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
-  public $dependencyTargets;
+  public $dependencyTargets = [];
   /**
    * @var bool
    */
@@ -49,11 +49,11 @@ class Relation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $postOperations;
+  public $postOperations = [];
   /**
    * @var string[]
    */
-  public $preOperations;
+  public $preOperations = [];
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
   public $relationDescriptor;
@@ -72,7 +72,7 @@ class Relation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
 
   /**
    * @param string[]

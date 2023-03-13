@@ -17,47 +17,9 @@
 
 namespace Google\Service\Dataform;
 
-class ResetWorkspaceChangesRequest extends \Google\Collection
+class DeleteFile extends \Google\Model
 {
-  protected $collection_key = 'paths';
-  /**
-   * @var bool
-   */
-  public $clean;
-  /**
-   * @var string[]
-   */
-  public $paths = [];
-
-  /**
-   * @param bool
-   */
-  public function setClean($clean)
-  {
-    $this->clean = $clean;
-  }
-  /**
-   * @return bool
-   */
-  public function getClean()
-  {
-    return $this->clean;
-  }
-  /**
-   * @param string[]
-   */
-  public function setPaths($paths)
-  {
-    $this->paths = $paths;
-  }
-  /**
-   * @return string[]
-   */
-  public function getPaths()
-  {
-    return $this->paths;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetWorkspaceChangesRequest::class, 'Google_Service_Dataform_ResetWorkspaceChangesRequest');
+class_alias(DeleteFile::class, 'Google_Service_Dataform_DeleteFile');

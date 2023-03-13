@@ -17,64 +17,46 @@
 
 namespace Google\Service\Dataform;
 
-class Policy extends \Google\Collection
+class QueryRepositoryDirectoryContentsResponse extends \Google\Collection
 {
-  protected $collection_key = 'bindings';
-  protected $bindingsType = Binding::class;
-  protected $bindingsDataType = 'array';
-  public $bindings = [];
+  protected $collection_key = 'directoryEntries';
+  protected $directoryEntriesType = DirectoryEntry::class;
+  protected $directoryEntriesDataType = 'array';
+  public $directoryEntries = [];
   /**
    * @var string
    */
-  public $etag;
-  /**
-   * @var int
-   */
-  public $version;
+  public $nextPageToken;
 
   /**
-   * @param Binding[]
+   * @param DirectoryEntry[]
    */
-  public function setBindings($bindings)
+  public function setDirectoryEntries($directoryEntries)
   {
-    $this->bindings = $bindings;
+    $this->directoryEntries = $directoryEntries;
   }
   /**
-   * @return Binding[]
+   * @return DirectoryEntry[]
    */
-  public function getBindings()
+  public function getDirectoryEntries()
   {
-    return $this->bindings;
+    return $this->directoryEntries;
   }
   /**
    * @param string
    */
-  public function setEtag($etag)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->etag = $etag;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getEtag()
+  public function getNextPageToken()
   {
-    return $this->etag;
-  }
-  /**
-   * @param int
-   */
-  public function setVersion($version)
-  {
-    $this->version = $version;
-  }
-  /**
-   * @return int
-   */
-  public function getVersion()
-  {
-    return $this->version;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Policy::class, 'Google_Service_Dataform_Policy');
+class_alias(QueryRepositoryDirectoryContentsResponse::class, 'Google_Service_Dataform_QueryRepositoryDirectoryContentsResponse');

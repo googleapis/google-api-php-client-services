@@ -17,9 +17,8 @@
 
 namespace Google\Service\Dataform;
 
-class CommitWorkspaceChangesRequest extends \Google\Collection
+class CommitLogEntry extends \Google\Model
 {
-  protected $collection_key = 'paths';
   protected $authorType = CommitAuthor::class;
   protected $authorDataType = '';
   public $author;
@@ -28,9 +27,13 @@ class CommitWorkspaceChangesRequest extends \Google\Collection
    */
   public $commitMessage;
   /**
-   * @var string[]
+   * @var string
    */
-  public $paths = [];
+  public $commitSha;
+  /**
+   * @var string
+   */
+  public $commitTime;
 
   /**
    * @param CommitAuthor
@@ -61,20 +64,34 @@ class CommitWorkspaceChangesRequest extends \Google\Collection
     return $this->commitMessage;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setPaths($paths)
+  public function setCommitSha($commitSha)
   {
-    $this->paths = $paths;
+    $this->commitSha = $commitSha;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getPaths()
+  public function getCommitSha()
   {
-    return $this->paths;
+    return $this->commitSha;
+  }
+  /**
+   * @param string
+   */
+  public function setCommitTime($commitTime)
+  {
+    $this->commitTime = $commitTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCommitTime()
+  {
+    return $this->commitTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CommitWorkspaceChangesRequest::class, 'Google_Service_Dataform_CommitWorkspaceChangesRequest');
+class_alias(CommitLogEntry::class, 'Google_Service_Dataform_CommitLogEntry');

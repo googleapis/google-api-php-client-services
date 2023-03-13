@@ -17,47 +17,28 @@
 
 namespace Google\Service\Dataform;
 
-class ResetWorkspaceChangesRequest extends \Google\Collection
+class WriteFile extends \Google\Model
 {
-  protected $collection_key = 'paths';
   /**
-   * @var bool
+   * @var string
    */
-  public $clean;
-  /**
-   * @var string[]
-   */
-  public $paths = [];
+  public $contents;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setClean($clean)
+  public function setContents($contents)
   {
-    $this->clean = $clean;
+    $this->contents = $contents;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getClean()
+  public function getContents()
   {
-    return $this->clean;
-  }
-  /**
-   * @param string[]
-   */
-  public function setPaths($paths)
-  {
-    $this->paths = $paths;
-  }
-  /**
-   * @return string[]
-   */
-  public function getPaths()
-  {
-    return $this->paths;
+    return $this->contents;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetWorkspaceChangesRequest::class, 'Google_Service_Dataform_ResetWorkspaceChangesRequest');
+class_alias(WriteFile::class, 'Google_Service_Dataform_WriteFile');

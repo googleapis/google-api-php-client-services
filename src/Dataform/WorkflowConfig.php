@@ -33,7 +33,7 @@ class WorkflowConfig extends \Google\Collection
   public $name;
   protected $recentScheduledExecutionRecordsType = ScheduledExecutionRecord::class;
   protected $recentScheduledExecutionRecordsDataType = 'array';
-  public $recentScheduledExecutionRecords;
+  public $recentScheduledExecutionRecords = [];
   /**
    * @var string
    */
