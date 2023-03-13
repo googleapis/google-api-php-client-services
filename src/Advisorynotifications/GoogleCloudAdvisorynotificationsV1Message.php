@@ -22,7 +22,7 @@ class GoogleCloudAdvisorynotificationsV1Message extends \Google\Collection
   protected $collection_key = 'attachments';
   protected $attachmentsType = GoogleCloudAdvisorynotificationsV1Attachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments;
+  public $attachments = [];
   protected $bodyType = GoogleCloudAdvisorynotificationsV1MessageBody::class;
   protected $bodyDataType = '';
   public $body;
