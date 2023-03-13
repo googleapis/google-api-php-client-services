@@ -23,6 +23,10 @@ class PackageData extends \Google\Collection
   /**
    * @var string
    */
+  public $architecture;
+  /**
+   * @var string
+   */
   public $cpeUri;
   protected $dependencyChainType = LanguagePackageDependency::class;
   protected $dependencyChainDataType = 'array';
@@ -34,6 +38,9 @@ class PackageData extends \Google\Collection
    * @var string
    */
   public $hashDigest;
+  protected $maintainerType = Maintainer::class;
+  protected $maintainerDataType = '';
+  public $maintainer;
   /**
    * @var string
    */
@@ -63,6 +70,20 @@ class PackageData extends \Google\Collection
    */
   public $version;
 
+  /**
+   * @param string
+   */
+  public function setArchitecture($architecture)
+  {
+    $this->architecture = $architecture;
+  }
+  /**
+   * @return string
+   */
+  public function getArchitecture()
+  {
+    return $this->architecture;
+  }
   /**
    * @param string
    */
@@ -118,6 +139,20 @@ class PackageData extends \Google\Collection
   public function getHashDigest()
   {
     return $this->hashDigest;
+  }
+  /**
+   * @param Maintainer
+   */
+  public function setMaintainer(Maintainer $maintainer)
+  {
+    $this->maintainer = $maintainer;
+  }
+  /**
+   * @return Maintainer
+   */
+  public function getMaintainer()
+  {
+    return $this->maintainer;
   }
   /**
    * @param string
