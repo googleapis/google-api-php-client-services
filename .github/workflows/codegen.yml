@@ -20,14 +20,14 @@ jobs:
           script: |
             console.log('splitting service names list into batches')
             const services = ${{ needs.discovery.outputs.services }}
-            const MAX_BATCH_SIZE = 2
-            const result = [];
-            for (let i = 0; i < MAX_BATCH_SIZE; i++) {
-              result[i] = [];
-            }
+            const result = [
+              "one": [],
+              "two": [],
+            ];
             for (let i = 0; i < services.length; i++) {
               if (services[i] != "discovery" && services[i] != "websecurityscanner") {
-                result[i % MAX_BATCH_SIZE].push(services[i])
+                j = i % MAX_BATCH_SIZE ? "one" : "two";
+                result[j].push(services[i])
               }
             }
             return result
@@ -38,7 +38,7 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        service: ${{fromJson(needs.batch.outputs.services).1}}
+        service: ${{fromJson(needs.batch.outputs.services).one}}
     steps:
       - run: echo generating ${{ matrix.service }}
       - uses: actions/checkout@v3
@@ -81,7 +81,7 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        service: ${{fromJson(needs.batch.outputs.services).2}}
+        service: ${{fromJson(needs.batch.outputs.services).two}}
     steps:
       - run: echo generating ${{ matrix.service }}
       - uses: actions/checkout@v3
