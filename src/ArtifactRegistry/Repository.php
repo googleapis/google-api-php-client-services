@@ -27,6 +27,9 @@ class Repository extends \Google\Model
    * @var string
    */
   public $description;
+  protected $dockerConfigType = DockerRepositoryConfig::class;
+  protected $dockerConfigDataType = '';
+  public $dockerConfig;
   /**
    * @var string
    */
@@ -96,6 +99,20 @@ class Repository extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param DockerRepositoryConfig
+   */
+  public function setDockerConfig(DockerRepositoryConfig $dockerConfig)
+  {
+    $this->dockerConfig = $dockerConfig;
+  }
+  /**
+   * @return DockerRepositoryConfig
+   */
+  public function getDockerConfig()
+  {
+    return $this->dockerConfig;
   }
   /**
    * @param string
