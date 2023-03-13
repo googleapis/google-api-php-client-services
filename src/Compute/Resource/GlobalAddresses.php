@@ -58,8 +58,7 @@ class GlobalAddresses extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified address resource. Gets a list of available addresses by
-   * making a list() request. (globalAddresses.get)
+   * Returns the specified address resource. (globalAddresses.get)
    *
    * @param string $project Project ID for this request.
    * @param string $address Name of the address resource to return.
