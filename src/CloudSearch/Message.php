@@ -64,10 +64,6 @@ class Message extends \Google\Collection
    * @var bool
    */
   public $deletedByVault;
-  /**
-   * @var string
-   */
-  public $dlpScanOutcome;
   protected $dlpScanSummaryType = DlpScanSummary::class;
   protected $dlpScanSummaryDataType = '';
   public $dlpScanSummary;
@@ -347,20 +343,6 @@ class Message extends \Google\Collection
   public function getDeletedByVault()
   {
     return $this->deletedByVault;
-  }
-  /**
-   * @param string
-   */
-  public function setDlpScanOutcome($dlpScanOutcome)
-  {
-    $this->dlpScanOutcome = $dlpScanOutcome;
-  }
-  /**
-   * @return string
-   */
-  public function getDlpScanOutcome()
-  {
-    return $this->dlpScanOutcome;
   }
   /**
    * @param DlpScanSummary
