@@ -26,7 +26,7 @@ class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse extends \G
   public $nextPageToken;
   protected $resultsType = GoogleAdsSearchads360V0ResourcesSearchAds360Field::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   /**
    * @var string
    */

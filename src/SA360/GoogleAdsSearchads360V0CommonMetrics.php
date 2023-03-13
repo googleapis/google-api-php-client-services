@@ -91,7 +91,7 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   /**
    * @var string[]
    */
-  public $interactionEventTypes;
+  public $interactionEventTypes = [];
   public $interactionRate;
   /**
    * @var string

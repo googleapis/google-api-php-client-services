@@ -51,7 +51,7 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $finalUrls;
+  public $finalUrls = [];
   protected $genderType = GoogleAdsSearchads360V0CommonGenderInfo::class;
   protected $genderDataType = '';
   public $gender;

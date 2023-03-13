@@ -46,7 +46,7 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
   public $conversionAction;
   protected $customColumnsType = GoogleAdsSearchads360V0CommonValue::class;
   protected $customColumnsDataType = 'array';
-  public $customColumns;
+  public $customColumns = [];
   protected $customerType = GoogleAdsSearchads360V0ResourcesCustomer::class;
   protected $customerDataType = '';
   public $customer;

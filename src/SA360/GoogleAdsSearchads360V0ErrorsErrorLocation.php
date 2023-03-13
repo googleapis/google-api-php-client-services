@@ -22,7 +22,7 @@ class GoogleAdsSearchads360V0ErrorsErrorLocation extends \Google\Collection
   protected $collection_key = 'fieldPathElements';
   protected $fieldPathElementsType = GoogleAdsSearchads360V0ErrorsErrorLocationFieldPathElement::class;
   protected $fieldPathElementsDataType = 'array';
-  public $fieldPathElements;
+  public $fieldPathElements = [];
 
   /**
    * @param GoogleAdsSearchads360V0ErrorsErrorLocationFieldPathElement[]
