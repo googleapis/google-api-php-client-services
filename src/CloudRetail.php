@@ -553,16 +553,6 @@ class CloudRetail extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'get' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v2/{+parent}/models',
               'httpMethod' => 'GET',

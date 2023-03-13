@@ -38,7 +38,7 @@ class SetLabelsRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $resourceLabels = [];
+  public $resourceLabels;
   /**
    * @var string
    */

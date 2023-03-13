@@ -31,14 +31,13 @@ class Action extends \Google\Collection
   /**
    * @var string[]
    */
-  public $commands = [];
+  public $commands;
   /**
    * @var string
    */
   public $containerName;
   protected $credentialsType = Secret::class;
   protected $credentialsDataType = '';
-  public $credentials;
   /**
    * @var bool
    */
@@ -53,7 +52,6 @@ class Action extends \Google\Collection
   public $enableFuse;
   protected $encryptedEnvironmentType = Secret::class;
   protected $encryptedEnvironmentDataType = '';
-  public $encryptedEnvironment;
   /**
    * @var string
    */
@@ -61,7 +59,7 @@ class Action extends \Google\Collection
   /**
    * @var string[]
    */
-  public $environment = [];
+  public $environment;
   /**
    * @var bool
    */
@@ -73,10 +71,9 @@ class Action extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $mountsType = Mount::class;
   protected $mountsDataType = 'array';
-  public $mounts = [];
   /**
    * @var string
    */
@@ -84,7 +81,7 @@ class Action extends \Google\Collection
   /**
    * @var int[]
    */
-  public $portMappings = [];
+  public $portMappings;
   /**
    * @var bool
    */

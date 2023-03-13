@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1SecurityReportMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimensions = [];
+  public $dimensions;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GoogleCloudApigeeV1SecurityReportMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metrics = [];
+  public $metrics;
   /**
    * @var string
    */

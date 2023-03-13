@@ -103,7 +103,8 @@ class NodeTypes extends \Google\Service\Resource
     return $this->call('aggregatedList', [$params], NodeTypeAggregatedList::class);
   }
   /**
-   * Returns the specified node type. (nodeTypes.get)
+   * Returns the specified node type. Gets a list of available node types by
+   * making a list() request. (nodeTypes.get)
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.

@@ -22,7 +22,7 @@ class PubsubMessage extends \Google\Model
   /**
    * @var string[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */

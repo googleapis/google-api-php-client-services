@@ -22,7 +22,7 @@ class Segment extends \Google\Model
   /**
    * @var string[]
    */
-  public $fields = [];
+  public $fields;
   /**
    * @var string
    */

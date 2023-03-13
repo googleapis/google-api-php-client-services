@@ -133,7 +133,8 @@ class Routers extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified Router resource. (routers.get)
+   * Returns the specified Router resource. Gets a list of available routers by
+   * making a list() request. (routers.get)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region for this request.

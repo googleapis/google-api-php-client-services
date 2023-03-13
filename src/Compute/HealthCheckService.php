@@ -35,7 +35,7 @@ class HealthCheckService extends \Google\Collection
   /**
    * @var string[]
    */
-  public $healthChecks = [];
+  public $healthChecks;
   /**
    * @var string
    */
@@ -55,11 +55,11 @@ class HealthCheckService extends \Google\Collection
   /**
    * @var string[]
    */
-  public $networkEndpointGroups = [];
+  public $networkEndpointGroups;
   /**
    * @var string[]
    */
-  public $notificationEndpoints = [];
+  public $notificationEndpoints;
   /**
    * @var string
    */

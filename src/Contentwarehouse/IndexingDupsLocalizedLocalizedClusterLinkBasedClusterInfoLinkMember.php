@@ -27,7 +27,7 @@ class IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfoLinkMember extend
   /**
    * @var string[]
    */
-  public $languageCode = [];
+  public $languageCode;
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class SequenceEntity extends \Google\Model
   /**
    * @var array[]
    */
-  public $customFeatures = [];
+  public $customFeatures;
   /**
    * @var bool
    */

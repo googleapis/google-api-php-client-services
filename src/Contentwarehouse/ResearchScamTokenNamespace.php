@@ -27,19 +27,19 @@ class ResearchScamTokenNamespace extends \Google\Collection
   /**
    * @var string[]
    */
-  public $stringBlacklistTokens = [];
+  public $stringBlacklistTokens;
   /**
    * @var string[]
    */
-  public $stringTokens = [];
+  public $stringTokens;
   /**
    * @var string[]
    */
-  public $uint64BlacklistTokens = [];
+  public $uint64BlacklistTokens;
   /**
    * @var string[]
    */
-  public $uint64Tokens = [];
+  public $uint64Tokens;
 
   /**
    * @param string

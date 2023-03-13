@@ -23,10 +23,9 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
-  public $containers = [];
   /**
    * @var string
    */
@@ -38,7 +37,7 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var int
    */
@@ -49,7 +48,6 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
   public $revision;
   protected $scalingType = GoogleCloudRunV2RevisionScaling::class;
   protected $scalingDataType = '';
-  public $scaling;
   /**
    * @var string
    */
@@ -60,10 +58,8 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
   public $timeout;
   protected $volumesType = GoogleCloudRunV2Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes = [];
   protected $vpcAccessType = GoogleCloudRunV2VpcAccess::class;
   protected $vpcAccessDataType = '';
-  public $vpcAccess;
 
   /**
    * @param string[]

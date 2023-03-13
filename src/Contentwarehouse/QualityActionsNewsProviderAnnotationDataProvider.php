@@ -23,7 +23,7 @@ class QualityActionsNewsProviderAnnotationDataProvider extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $locales = [];
+  public $locales;
   /**
    * @var string
    */

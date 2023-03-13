@@ -37,7 +37,6 @@ class GoogleCloudRecaptchaenterpriseV1Event extends \Google\Model
   public $token;
   protected $transactionDataType = GoogleCloudRecaptchaenterpriseV1TransactionData::class;
   protected $transactionDataDataType = '';
-  public $transactionData;
   /**
    * @var string
    */

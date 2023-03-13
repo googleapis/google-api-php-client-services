@@ -23,14 +23,13 @@ class TrinoJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clientTags = [];
+  public $clientTags;
   /**
    * @var bool
    */
   public $continueOnFailure;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
-  public $loggingConfig;
   /**
    * @var string
    */
@@ -38,14 +37,13 @@ class TrinoJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
   /**
    * @var string
    */
   public $queryFileUri;
   protected $queryListType = QueryList::class;
   protected $queryListDataType = '';
-  public $queryList;
 
   /**
    * @param string[]

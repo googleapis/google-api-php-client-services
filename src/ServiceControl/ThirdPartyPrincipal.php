@@ -22,7 +22,7 @@ class ThirdPartyPrincipal extends \Google\Model
   /**
    * @var array[]
    */
-  public $thirdPartyClaims = [];
+  public $thirdPartyClaims;
 
   /**
    * @param array[]

@@ -22,7 +22,7 @@ class InstructionOutput extends \Google\Model
   /**
    * @var array[]
    */
-  public $codec = [];
+  public $codec;
   /**
    * @var string
    */

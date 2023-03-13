@@ -26,7 +26,7 @@ class GoogleCloudRecommenderV1MarkRecommendationClaimedRequest extends \Google\M
   /**
    * @var string[]
    */
-  public $stateMetadata = [];
+  public $stateMetadata;
 
   /**
    * @param string

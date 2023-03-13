@@ -162,16 +162,6 @@ class GoogleAnalyticsAdmin extends \Google\Service
               'path' => 'v1beta/accounts:provisionAccountTicket',
               'httpMethod' => 'POST',
               'parameters' => [],
-            ],'runAccessReport' => [
-              'path' => 'v1beta/{+entity}:runAccessReport',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'entity' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'searchChangeHistoryEvents' => [
               'path' => 'v1beta/{+account}:searchChangeHistoryEvents',
               'httpMethod' => 'POST',
@@ -269,16 +259,6 @@ class GoogleAnalyticsAdmin extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'runAccessReport' => [
-              'path' => 'v1beta/{+entity}:runAccessReport',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'entity' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'updateDataRetentionSettings' => [

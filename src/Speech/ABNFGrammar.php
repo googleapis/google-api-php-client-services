@@ -23,7 +23,7 @@ class ABNFGrammar extends \Google\Collection
   /**
    * @var string[]
    */
-  public $abnfStrings = [];
+  public $abnfStrings;
 
   /**
    * @param string[]

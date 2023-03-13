@@ -46,7 +46,7 @@ class Restore extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -65,7 +65,6 @@ class Restore extends \Google\Model
   public $resourcesRestoredCount;
   protected $restoreConfigType = RestoreConfig::class;
   protected $restoreConfigDataType = '';
-  public $restoreConfig;
   /**
    * @var string
    */

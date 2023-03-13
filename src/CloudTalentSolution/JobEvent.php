@@ -23,7 +23,7 @@ class JobEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jobs = [];
+  public $jobs;
   /**
    * @var string
    */

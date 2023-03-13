@@ -35,7 +35,7 @@ class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $scopes = [];
+  public $scopes;
   /**
    * @var string
    */

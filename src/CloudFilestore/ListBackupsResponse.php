@@ -22,7 +22,6 @@ class ListBackupsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $backupsType = Backup::class;
   protected $backupsDataType = 'array';
-  public $backups = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListBackupsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param Backup[]

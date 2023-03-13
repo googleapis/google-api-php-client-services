@@ -27,7 +27,7 @@ class AdUnit extends \Google\Collection
   /**
    * @var string[]
    */
-  public $adTypes = [];
+  public $adTypes;
   /**
    * @var string
    */

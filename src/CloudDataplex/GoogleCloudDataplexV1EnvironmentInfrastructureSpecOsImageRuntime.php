@@ -27,15 +27,15 @@ class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime extends \
   /**
    * @var string[]
    */
-  public $javaLibraries = [];
+  public $javaLibraries;
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
   /**
    * @var string[]
    */
-  public $pythonPackages = [];
+  public $pythonPackages;
 
   /**
    * @param string

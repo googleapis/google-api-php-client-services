@@ -39,7 +39,7 @@ class ReportSchedule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $repeatsOnWeekDays = [];
+  public $repeatsOnWeekDays;
   /**
    * @var string
    */

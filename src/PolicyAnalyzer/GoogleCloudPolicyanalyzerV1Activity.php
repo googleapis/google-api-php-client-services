@@ -22,7 +22,7 @@ class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
   /**
    * @var array[]
    */
-  public $activity = [];
+  public $activity;
   /**
    * @var string
    */
@@ -33,7 +33,6 @@ class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
   public $fullResourceName;
   protected $observationPeriodType = GoogleCloudPolicyanalyzerV1ObservationPeriod::class;
   protected $observationPeriodDataType = '';
-  public $observationPeriod;
 
   /**
    * @param array[]

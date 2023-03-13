@@ -22,7 +22,6 @@ class GoogleCloudDataplexV1ListDataScansResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $dataScansType = GoogleCloudDataplexV1DataScan::class;
   protected $dataScansDataType = 'array';
-  public $dataScans = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class GoogleCloudDataplexV1ListDataScansResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param GoogleCloudDataplexV1DataScan[]

@@ -23,15 +23,15 @@ class RepositoryWebrefRefconMentionSpans extends \Google\Collection
   /**
    * @var string[]
    */
-  public $segment = [];
+  public $segment;
   /**
    * @var string[]
    */
-  public $shortToken = [];
+  public $shortToken;
   /**
    * @var string[]
    */
-  public $token = [];
+  public $token;
 
   /**
    * @param string[]

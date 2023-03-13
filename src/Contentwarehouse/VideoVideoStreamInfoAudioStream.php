@@ -22,7 +22,6 @@ class VideoVideoStreamInfoAudioStream extends \Google\Collection
   protected $collection_key = 'metadata';
   protected $ambisonicsType = VideoAmbisonicsAmbisonicsMetadata::class;
   protected $ambisonicsDataType = '';
-  public $ambisonics;
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class VideoVideoStreamInfoAudioStream extends \Google\Collection
   /**
    * @var string[]
    */
-  public $channelPosition = [];
+  public $channelPosition;
   /**
    * @var int
    */
@@ -74,7 +73,6 @@ class VideoVideoStreamInfoAudioStream extends \Google\Collection
   public $length;
   protected $metadataType = VideoClipInfo::class;
   protected $metadataDataType = 'array';
-  public $metadata = [];
   /**
    * @var string
    */

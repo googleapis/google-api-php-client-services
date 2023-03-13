@@ -23,10 +23,9 @@ class FreeBusyGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $calendars = [];
+  public $calendars;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
-  public $errors = [];
 
   /**
    * @param string[]

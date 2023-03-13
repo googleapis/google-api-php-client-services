@@ -31,7 +31,7 @@ class AssistantLogsMediaDeviceSelectionDecisionSummary extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $miscSelectionSignal = [];
+  public $miscSelectionSignal;
 
   /**
    * @param string

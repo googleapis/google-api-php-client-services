@@ -35,7 +35,7 @@ class PublisherProfile extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domains = [];
+  public $domains;
   /**
    * @var bool
    */
@@ -50,7 +50,6 @@ class PublisherProfile extends \Google\Collection
   public $mediaKitUrl;
   protected $mobileAppsType = PublisherProfileMobileApplication::class;
   protected $mobileAppsDataType = 'array';
-  public $mobileApps = [];
   /**
    * @var string
    */
@@ -78,7 +77,7 @@ class PublisherProfile extends \Google\Collection
   /**
    * @var string[]
    */
-  public $topHeadlines = [];
+  public $topHeadlines;
 
   /**
    * @param string

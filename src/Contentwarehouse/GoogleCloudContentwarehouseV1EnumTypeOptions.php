@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1EnumTypeOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $possibleValues = [];
+  public $possibleValues;
   /**
    * @var bool
    */

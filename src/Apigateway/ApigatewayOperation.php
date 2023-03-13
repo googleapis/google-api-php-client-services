@@ -25,11 +25,10 @@ class ApigatewayOperation extends \Google\Model
   public $done;
   protected $errorType = ApigatewayStatus::class;
   protected $errorDataType = '';
-  public $error;
   /**
    * @var array[]
    */
-  public $metadata = [];
+  public $metadata;
   /**
    * @var string
    */
@@ -37,7 +36,7 @@ class ApigatewayOperation extends \Google\Model
   /**
    * @var array[]
    */
-  public $response = [];
+  public $response;
 
   /**
    * @param bool

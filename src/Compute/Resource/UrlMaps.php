@@ -133,7 +133,8 @@ class UrlMaps extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified UrlMap resource. (urlMaps.get)
+   * Returns the specified UrlMap resource. Gets a list of available URL maps by
+   * making a list() request. (urlMaps.get)
    *
    * @param string $project Project ID for this request.
    * @param string $urlMap Name of the UrlMap resource to return.

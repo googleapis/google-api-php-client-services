@@ -23,7 +23,7 @@ class ErrorProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $argument = [];
+  public $argument;
   /**
    * @var string
    */

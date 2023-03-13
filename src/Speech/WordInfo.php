@@ -28,10 +28,6 @@ class WordInfo extends \Google\Model
    */
   public $endTime;
   /**
-   * @var string
-   */
-  public $speakerLabel;
-  /**
    * @var int
    */
   public $speakerTag;
@@ -71,20 +67,6 @@ class WordInfo extends \Google\Model
   public function getEndTime()
   {
     return $this->endTime;
-  }
-  /**
-   * @param string
-   */
-  public function setSpeakerLabel($speakerLabel)
-  {
-    $this->speakerLabel = $speakerLabel;
-  }
-  /**
-   * @return string
-   */
-  public function getSpeakerLabel()
-  {
-    return $this->speakerLabel;
   }
   /**
    * @param int

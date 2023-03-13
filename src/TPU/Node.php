@@ -22,7 +22,6 @@ class Node extends \Google\Collection
   protected $collection_key = 'tags';
   protected $acceleratorConfigType = AcceleratorConfig::class;
   protected $acceleratorConfigDataType = '';
-  public $acceleratorConfig;
   /**
    * @var string
    */
@@ -41,7 +40,6 @@ class Node extends \Google\Collection
   public $createTime;
   protected $dataDisksType = AttachedDisk::class;
   protected $dataDisksDataType = 'array';
-  public $dataDisks = [];
   /**
    * @var string
    */
@@ -61,45 +59,39 @@ class Node extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $metadata = [];
+  public $metadata;
   /**
    * @var string
    */
   public $name;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
-  public $networkConfig;
   protected $networkEndpointsType = NetworkEndpoint::class;
   protected $networkEndpointsDataType = 'array';
-  public $networkEndpoints = [];
   /**
    * @var string
    */
   public $runtimeVersion;
   protected $schedulingConfigType = SchedulingConfig::class;
   protected $schedulingConfigDataType = '';
-  public $schedulingConfig;
   protected $serviceAccountType = ServiceAccount::class;
   protected $serviceAccountDataType = '';
-  public $serviceAccount;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
-  public $shieldedInstanceConfig;
   /**
    * @var string
    */
   public $state;
   protected $symptomsType = Symptom::class;
   protected $symptomsDataType = 'array';
-  public $symptoms = [];
   /**
    * @var string[]
    */
-  public $tags = [];
+  public $tags;
 
   /**
    * @param AcceleratorConfig

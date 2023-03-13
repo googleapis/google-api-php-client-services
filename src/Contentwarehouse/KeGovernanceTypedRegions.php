@@ -27,7 +27,7 @@ class KeGovernanceTypedRegions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $regions = [];
+  public $regions;
 
   /**
    * @param string

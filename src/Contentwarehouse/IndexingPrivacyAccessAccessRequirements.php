@@ -23,7 +23,7 @@ class IndexingPrivacyAccessAccessRequirements extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictionCategories = [];
+  public $restrictionCategories;
 
   /**
    * @param string[]

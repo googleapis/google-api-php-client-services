@@ -29,10 +29,8 @@ class AgentTask extends \Google\Model
   public $reachedBarrier;
   protected $specType = TaskSpec::class;
   protected $specDataType = '';
-  public $spec;
   protected $statusType = TaskStatus::class;
   protected $statusDataType = '';
-  public $status;
   /**
    * @var string
    */

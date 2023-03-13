@@ -27,7 +27,7 @@ class ImapUidsReassign extends \Google\Collection
   /**
    * @var string[]
    */
-  public $messageId = [];
+  public $messageId;
 
   /**
    * @param string

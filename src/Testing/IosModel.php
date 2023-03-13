@@ -23,7 +23,7 @@ class IosModel extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deviceCapabilities = [];
+  public $deviceCapabilities;
   /**
    * @var string
    */
@@ -38,7 +38,6 @@ class IosModel extends \Google\Collection
   public $name;
   protected $perVersionInfoType = PerIosVersionInfo::class;
   protected $perVersionInfoDataType = 'array';
-  public $perVersionInfo = [];
   /**
    * @var int
    */
@@ -54,11 +53,11 @@ class IosModel extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedVersionIds = [];
+  public $supportedVersionIds;
   /**
    * @var string[]
    */
-  public $tags = [];
+  public $tags;
 
   /**
    * @param string[]

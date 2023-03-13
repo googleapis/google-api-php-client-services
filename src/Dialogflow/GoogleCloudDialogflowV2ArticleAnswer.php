@@ -31,11 +31,11 @@ class GoogleCloudDialogflowV2ArticleAnswer extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata = [];
+  public $metadata;
   /**
    * @var string[]
    */
-  public $snippets = [];
+  public $snippets;
   /**
    * @var string
    */

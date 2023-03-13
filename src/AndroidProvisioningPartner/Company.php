@@ -23,7 +23,7 @@ class Company extends \Google\Collection
   /**
    * @var string[]
    */
-  public $adminEmails = [];
+  public $adminEmails;
   /**
    * @var string
    */
@@ -34,7 +34,6 @@ class Company extends \Google\Collection
   public $companyName;
   protected $googleWorkspaceAccountType = GoogleWorkspaceAccount::class;
   protected $googleWorkspaceAccountDataType = '';
-  public $googleWorkspaceAccount;
   /**
    * @var string
    */
@@ -46,7 +45,7 @@ class Company extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ownerEmails = [];
+  public $ownerEmails;
   /**
    * @var bool
    */

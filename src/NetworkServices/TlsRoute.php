@@ -31,18 +31,17 @@ class TlsRoute extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gateways = [];
+  public $gateways;
   /**
    * @var string[]
    */
-  public $meshes = [];
+  public $meshes;
   /**
    * @var string
    */
   public $name;
   protected $rulesType = TlsRouteRouteRule::class;
   protected $rulesDataType = 'array';
-  public $rules = [];
   /**
    * @var string
    */

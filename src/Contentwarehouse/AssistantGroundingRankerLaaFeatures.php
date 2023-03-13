@@ -21,16 +21,12 @@ class AssistantGroundingRankerLaaFeatures extends \Google\Model
 {
   protected $bindingSetType = AssistantGroundingRankerLaaFeaturesBindingSet::class;
   protected $bindingSetDataType = '';
-  public $bindingSet;
   protected $communicationEndpointType = AssistantGroundingRankerLaaFeaturesCommunicationEndpoint::class;
   protected $communicationEndpointDataType = '';
-  public $communicationEndpoint;
   protected $contactType = AssistantGroundingRankerLaaFeaturesContact::class;
   protected $contactDataType = '';
-  public $contact;
   protected $providerType = AssistantGroundingRankerLaaFeaturesProvider::class;
   protected $providerDataType = '';
-  public $provider;
 
   /**
    * @param AssistantGroundingRankerLaaFeaturesBindingSet

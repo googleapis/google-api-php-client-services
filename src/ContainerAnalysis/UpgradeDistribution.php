@@ -31,7 +31,7 @@ class UpgradeDistribution extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cve = [];
+  public $cve;
   /**
    * @var string
    */

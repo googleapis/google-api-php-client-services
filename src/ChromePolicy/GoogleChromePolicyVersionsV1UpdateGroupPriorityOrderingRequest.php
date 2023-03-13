@@ -23,14 +23,13 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest extends \Go
   /**
    * @var string[]
    */
-  public $groupIds = [];
+  public $groupIds;
   /**
    * @var string
    */
   public $policyNamespace;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
-  public $policyTargetKey;
 
   /**
    * @param string[]

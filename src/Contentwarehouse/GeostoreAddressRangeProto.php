@@ -23,11 +23,11 @@ class GeostoreAddressRangeProto extends \Google\Collection
   /**
    * @var int[]
    */
-  public $number = [];
+  public $number;
   /**
    * @var float[]
    */
-  public $parameter = [];
+  public $parameter;
   /**
    * @var string
    */
@@ -42,7 +42,6 @@ class GeostoreAddressRangeProto extends \Google\Collection
   public $suffix;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
-  public $temporaryData;
 
   /**
    * @param int[]

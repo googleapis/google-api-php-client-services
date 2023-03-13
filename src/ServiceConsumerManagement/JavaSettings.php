@@ -21,7 +21,6 @@ class JavaSettings extends \Google\Model
 {
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
-  public $common;
   /**
    * @var string
    */
@@ -29,7 +28,7 @@ class JavaSettings extends \Google\Model
   /**
    * @var string[]
    */
-  public $serviceClassNames = [];
+  public $serviceClassNames;
 
   /**
    * @param CommonLanguageSettings

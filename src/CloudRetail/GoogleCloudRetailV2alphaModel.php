@@ -50,14 +50,12 @@ class GoogleCloudRetailV2alphaModel extends \Google\Collection
   public $optimizationObjective;
   protected $pageOptimizationConfigType = GoogleCloudRetailV2alphaModelPageOptimizationConfig::class;
   protected $pageOptimizationConfigDataType = '';
-  public $pageOptimizationConfig;
   /**
    * @var string
    */
   public $periodicTuningState;
   protected $servingConfigListsType = GoogleCloudRetailV2alphaModelServingConfigList::class;
   protected $servingConfigListsDataType = 'array';
-  public $servingConfigLists = [];
   /**
    * @var string
    */

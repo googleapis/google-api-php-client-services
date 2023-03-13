@@ -23,7 +23,7 @@ class Exemplar extends \Google\Collection
   /**
    * @var array[]
    */
-  public $attachments = [];
+  public $attachments;
   /**
    * @var string
    */

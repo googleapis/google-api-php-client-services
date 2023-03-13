@@ -23,7 +23,7 @@ class VideoSuggestionsTagSuggestion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categoryRestricts = [];
+  public $categoryRestricts;
   /**
    * @var string
    */

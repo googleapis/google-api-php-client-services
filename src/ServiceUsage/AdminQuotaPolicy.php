@@ -26,7 +26,7 @@ class AdminQuotaPolicy extends \Google\Model
   /**
    * @var string[]
    */
-  public $dimensions = [];
+  public $dimensions;
   /**
    * @var string
    */

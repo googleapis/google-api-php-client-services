@@ -23,7 +23,7 @@ class AbuseiamManualReviewerInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $credential = [];
+  public $credential;
   /**
    * @var string
    */

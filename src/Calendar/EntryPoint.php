@@ -27,7 +27,7 @@ class EntryPoint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $entryPointFeatures = [];
+  public $entryPointFeatures;
   /**
    * @var string
    */

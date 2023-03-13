@@ -23,11 +23,11 @@ class GoogleCloudIntegrationsV1alphaConnectionSchemaMetadata extends \Google\Col
   /**
    * @var string[]
    */
-  public $actions = [];
+  public $actions;
   /**
    * @var string[]
    */
-  public $entities = [];
+  public $entities;
 
   /**
    * @param string[]

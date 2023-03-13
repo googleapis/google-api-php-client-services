@@ -22,7 +22,7 @@ class ServicecontrolResource extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class ServicecontrolResource extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

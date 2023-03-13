@@ -27,7 +27,7 @@ class AccessPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exception = [];
+  public $exception;
 
   /**
    * @param bool

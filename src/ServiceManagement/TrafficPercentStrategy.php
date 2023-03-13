@@ -19,7 +19,7 @@ namespace Google\Service\ServiceManagement;
 
 class TrafficPercentStrategy extends \Google\Model
 {
-  public $percentages = [];
+  public $percentages;
 
   public function setPercentages($percentages)
   {

@@ -22,18 +22,16 @@ class HtmlrenderWebkitHeadlessProtoDOMTreeNode extends \Google\Collection
   protected $collection_key = 'renderTreeNodeIndex';
   protected $attributeType = HtmlrenderWebkitHeadlessProtoDOMTreeNodeAttribute::class;
   protected $attributeDataType = 'array';
-  public $attribute = [];
   /**
    * @var int[]
    */
-  public $childDomTreeNodeIndex = [];
+  public $childDomTreeNodeIndex;
   /**
    * @var string
    */
   public $currentSourceUrl;
   protected $documentType = HtmlrenderWebkitHeadlessProtoDocument::class;
   protected $documentDataType = '';
-  public $document;
   /**
    * @var int
    */
@@ -53,11 +51,11 @@ class HtmlrenderWebkitHeadlessProtoDOMTreeNode extends \Google\Collection
   /**
    * @var int[]
    */
-  public $referencedResourceIndex = [];
+  public $referencedResourceIndex;
   /**
    * @var int[]
    */
-  public $renderTreeNodeIndex = [];
+  public $renderTreeNodeIndex;
   /**
    * @var string
    */

@@ -27,16 +27,13 @@ class AssistantApiScreenCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputType = [];
+  public $inputType;
   protected $maskType = AssistantApiScreenCapabilitiesMask::class;
   protected $maskDataType = '';
-  public $mask;
   protected $protoLayoutTargetedSchemaType = AssistantApiScreenCapabilitiesProtoLayoutVersion::class;
   protected $protoLayoutTargetedSchemaDataType = '';
-  public $protoLayoutTargetedSchema;
   protected $resolutionType = AssistantApiScreenCapabilitiesResolution::class;
   protected $resolutionDataType = '';
-  public $resolution;
   /**
    * @var bool
    */
@@ -52,7 +49,7 @@ class AssistantApiScreenCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedScreenStates = [];
+  public $supportedScreenStates;
   /**
    * @var bool
    */

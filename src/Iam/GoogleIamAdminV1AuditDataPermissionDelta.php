@@ -23,11 +23,11 @@ class GoogleIamAdminV1AuditDataPermissionDelta extends \Google\Collection
   /**
    * @var string[]
    */
-  public $addedPermissions = [];
+  public $addedPermissions;
   /**
    * @var string[]
    */
-  public $removedPermissions = [];
+  public $removedPermissions;
 
   /**
    * @param string[]

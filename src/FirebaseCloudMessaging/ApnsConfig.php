@@ -21,15 +21,14 @@ class ApnsConfig extends \Google\Model
 {
   protected $fcmOptionsType = ApnsFcmOptions::class;
   protected $fcmOptionsDataType = '';
-  public $fcmOptions;
   /**
    * @var string[]
    */
-  public $headers = [];
+  public $headers;
   /**
    * @var array[]
    */
-  public $payload = [];
+  public $payload;
 
   /**
    * @param ApnsFcmOptions

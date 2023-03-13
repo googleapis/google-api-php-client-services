@@ -21,14 +21,12 @@ class AlloyDbSettings extends \Google\Model
 {
   protected $initialUserType = UserPassword::class;
   protected $initialUserDataType = '';
-  public $initialUser;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $primaryInstanceSettingsType = PrimaryInstanceSettings::class;
   protected $primaryInstanceSettingsDataType = '';
-  public $primaryInstanceSettings;
   /**
    * @var string
    */

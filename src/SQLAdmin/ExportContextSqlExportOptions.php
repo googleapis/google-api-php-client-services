@@ -22,7 +22,6 @@ class ExportContextSqlExportOptions extends \Google\Collection
   protected $collection_key = 'tables';
   protected $mysqlExportOptionsType = ExportContextSqlExportOptionsMysqlExportOptions::class;
   protected $mysqlExportOptionsDataType = '';
-  public $mysqlExportOptions;
   /**
    * @var bool
    */
@@ -30,7 +29,7 @@ class ExportContextSqlExportOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tables = [];
+  public $tables;
 
   /**
    * @param ExportContextSqlExportOptionsMysqlExportOptions

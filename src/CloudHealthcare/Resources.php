@@ -23,7 +23,7 @@ class Resources extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resources = [];
+  public $resources;
 
   /**
    * @param string[]

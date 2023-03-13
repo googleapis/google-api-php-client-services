@@ -22,10 +22,8 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   protected $collection_key = 'startTasks';
   protected $alertConfigType = EnterpriseCrmEventbusProtoWorkflowAlertConfig::class;
   protected $alertConfigDataType = 'array';
-  public $alertConfig = [];
   protected $cloudSchedulerConfigType = EnterpriseCrmEventbusProtoCloudSchedulerConfig::class;
   protected $cloudSchedulerConfigDataType = '';
-  public $cloudSchedulerConfig;
   /**
    * @var string
    */
@@ -33,11 +31,11 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $enabledClients = [];
+  public $enabledClients;
   /**
    * @var string
    */
-  public $errorCatcherId;
+  public $errorCatcherConfigId;
   /**
    * @var string
    */
@@ -52,17 +50,14 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   public $pauseWorkflowExecutions;
   protected $positionType = EnterpriseCrmEventbusProtoCoordinate::class;
   protected $positionDataType = '';
-  public $position;
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
   protected $startTasksType = EnterpriseCrmEventbusProtoNextTask::class;
   protected $startTasksDataType = 'array';
-  public $startTasks = [];
   protected $triggerCriteriaType = EnterpriseCrmEventbusProtoTriggerCriteria::class;
   protected $triggerCriteriaDataType = '';
-  public $triggerCriteria;
   /**
    * @var string
    */
@@ -135,16 +130,16 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   /**
    * @param string
    */
-  public function setErrorCatcherId($errorCatcherId)
+  public function setErrorCatcherConfigId($errorCatcherConfigId)
   {
-    $this->errorCatcherId = $errorCatcherId;
+    $this->errorCatcherConfigId = $errorCatcherConfigId;
   }
   /**
    * @return string
    */
-  public function getErrorCatcherId()
+  public function getErrorCatcherConfigId()
   {
-    return $this->errorCatcherId;
+    return $this->errorCatcherConfigId;
   }
   /**
    * @param string

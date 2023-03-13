@@ -51,11 +51,11 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
   /**
    * @var string[]
    */
-  public $forecastingUrl = [];
+  public $forecastingUrl;
   /**
    * @var string[]
    */
-  public $impressionUrl = [];
+  public $impressionUrl;
   /**
    * @var string
    */

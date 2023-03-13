@@ -25,7 +25,6 @@ class MessageInfo extends \Google\Model
   public $authorUserType;
   protected $messageType = Message::class;
   protected $messageDataType = '';
-  public $message;
   /**
    * @var string
    */

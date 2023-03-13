@@ -31,13 +31,11 @@ class KnowledgeAnswersSemanticType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $name = [];
+  public $name;
   protected $nameRemodelingsType = NlpMeaningSemanticTypeNameMeaningRemodelings::class;
   protected $nameRemodelingsDataType = 'array';
-  public $nameRemodelings = [];
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
-  public $remodelings;
 
   /**
    * @param bool

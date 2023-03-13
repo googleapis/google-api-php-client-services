@@ -23,15 +23,15 @@ class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud extend
   /**
    * @var string[]
    */
-  public $additionalLinks = [];
+  public $additionalLinks;
   /**
    * @var string[]
    */
-  public $gcloudCommands = [];
+  public $gcloudCommands;
   /**
    * @var string[]
    */
-  public $steps = [];
+  public $steps;
 
   /**
    * @param string[]

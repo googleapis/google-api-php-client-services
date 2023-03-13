@@ -23,17 +23,15 @@ class GoogleChromePolicyVersionsV1PolicyModificationError extends \Google\Collec
   /**
    * @var string[]
    */
-  public $errors = [];
+  public $errors;
   protected $fieldErrorsType = GoogleChromePolicyVersionsV1PolicyModificationFieldError::class;
   protected $fieldErrorsDataType = 'array';
-  public $fieldErrors = [];
   /**
    * @var string
    */
   public $policySchema;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
-  public $policyTargetKey;
 
   /**
    * @param string[]

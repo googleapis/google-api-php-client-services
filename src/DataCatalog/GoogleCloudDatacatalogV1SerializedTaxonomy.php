@@ -23,7 +23,7 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $activatedPolicyTypes = [];
+  public $activatedPolicyTypes;
   /**
    * @var string
    */
@@ -34,7 +34,6 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
   public $displayName;
   protected $policyTagsType = GoogleCloudDatacatalogV1SerializedPolicyTag::class;
   protected $policyTagsDataType = 'array';
-  public $policyTags = [];
 
   /**
    * @param string[]

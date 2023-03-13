@@ -23,7 +23,7 @@ class GoogleCloudIntegrationsV1alphaEnumerateConnectorPlatformRegionsResponse ex
   /**
    * @var string[]
    */
-  public $regions = [];
+  public $regions;
 
   /**
    * @param string[]

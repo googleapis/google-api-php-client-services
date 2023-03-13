@@ -30,7 +30,7 @@ class GoogleCloudContactcenterinsightsV1FaqAnswerData extends \Google\Model
   /**
    * @var string[]
    */
-  public $metadata = [];
+  public $metadata;
   /**
    * @var string
    */

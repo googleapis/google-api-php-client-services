@@ -23,7 +23,7 @@ class Aliases extends \Google\Collection
   /**
    * @var array[]
    */
-  public $aliases = [];
+  public $aliases;
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class QueryAccessibleDataResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gcsUris = [];
+  public $gcsUris;
 
   /**
    * @param string[]

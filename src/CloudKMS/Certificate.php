@@ -55,7 +55,7 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subjectAlternativeDnsNames = [];
+  public $subjectAlternativeDnsNames;
 
   /**
    * @param string

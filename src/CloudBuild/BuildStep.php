@@ -23,7 +23,7 @@ class BuildStep extends \Google\Collection
   /**
    * @var int[]
    */
-  public $allowExitCodes = [];
+  public $allowExitCodes;
   /**
    * @var bool
    */
@@ -31,7 +31,7 @@ class BuildStep extends \Google\Collection
   /**
    * @var string[]
    */
-  public $args = [];
+  public $args;
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class BuildStep extends \Google\Collection
   /**
    * @var string[]
    */
-  public $env = [];
+  public $env;
   /**
    * @var int
    */
@@ -58,7 +58,6 @@ class BuildStep extends \Google\Collection
   public $name;
   protected $pullTimingType = TimeSpan::class;
   protected $pullTimingDataType = '';
-  public $pullTiming;
   /**
    * @var string
    */
@@ -66,7 +65,7 @@ class BuildStep extends \Google\Collection
   /**
    * @var string[]
    */
-  public $secretEnv = [];
+  public $secretEnv;
   /**
    * @var string
    */
@@ -77,14 +76,12 @@ class BuildStep extends \Google\Collection
   public $timeout;
   protected $timingType = TimeSpan::class;
   protected $timingDataType = '';
-  public $timing;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes = [];
   /**
    * @var string[]
    */
-  public $waitFor = [];
+  public $waitFor;
 
   /**
    * @param int[]

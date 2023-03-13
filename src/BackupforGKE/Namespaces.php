@@ -23,7 +23,7 @@ class Namespaces extends \Google\Collection
   /**
    * @var string[]
    */
-  public $namespaces = [];
+  public $namespaces;
 
   /**
    * @param string[]

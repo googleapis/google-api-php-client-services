@@ -46,7 +46,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends \Google\Mode
   /**
    * @var string[]
    */
-  public $substitutions = [];
+  public $substitutions;
   /**
    * @var string
    */

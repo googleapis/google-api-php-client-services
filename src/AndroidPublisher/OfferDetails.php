@@ -31,7 +31,7 @@ class OfferDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $offerTags = [];
+  public $offerTags;
 
   /**
    * @param string

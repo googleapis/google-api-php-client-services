@@ -1289,16 +1289,6 @@ class CloudHealthcare extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getFHIRStoreMetrics' => [
-              'path' => 'v1/{+name}:getFHIRStoreMetrics',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'getIamPolicy' => [
               'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',

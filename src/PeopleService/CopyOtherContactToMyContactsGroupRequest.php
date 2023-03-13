@@ -31,7 +31,7 @@ class CopyOtherContactToMyContactsGroupRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sources = [];
+  public $sources;
 
   /**
    * @param string

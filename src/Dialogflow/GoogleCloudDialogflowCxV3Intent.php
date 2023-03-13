@@ -35,21 +35,19 @@ class GoogleCloudDialogflowCxV3Intent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $parametersType = GoogleCloudDialogflowCxV3IntentParameter::class;
   protected $parametersDataType = 'array';
-  public $parameters = [];
   /**
    * @var int
    */
   public $priority;
   protected $trainingPhrasesType = GoogleCloudDialogflowCxV3IntentTrainingPhrase::class;
   protected $trainingPhrasesDataType = 'array';
-  public $trainingPhrases = [];
 
   /**
    * @param string

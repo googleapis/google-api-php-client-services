@@ -23,11 +23,11 @@ class VmEndpointNatMappingsInterfaceNatMappings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $drainNatIpPortRanges = [];
+  public $drainNatIpPortRanges;
   /**
    * @var string[]
    */
-  public $natIpPortRanges = [];
+  public $natIpPortRanges;
   /**
    * @var int
    */
@@ -38,7 +38,6 @@ class VmEndpointNatMappingsInterfaceNatMappings extends \Google\Collection
   public $numTotalNatPorts;
   protected $ruleMappingsType = VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings::class;
   protected $ruleMappingsDataType = 'array';
-  public $ruleMappings = [];
   /**
    * @var string
    */

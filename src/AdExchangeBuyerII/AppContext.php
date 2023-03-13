@@ -23,7 +23,7 @@ class AppContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appTypes = [];
+  public $appTypes;
 
   /**
    * @param string[]

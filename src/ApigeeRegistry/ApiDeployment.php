@@ -26,7 +26,7 @@ class ApiDeployment extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string
    */
@@ -58,7 +58,7 @@ class ApiDeployment extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

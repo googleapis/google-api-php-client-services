@@ -26,7 +26,7 @@ class EndpointConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $httpPorts = [];
+  public $httpPorts;
 
   /**
    * @param bool

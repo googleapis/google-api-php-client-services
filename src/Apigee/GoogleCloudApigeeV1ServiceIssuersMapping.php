@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1ServiceIssuersMapping extends \Google\Collection
   /**
    * @var string[]
    */
-  public $emailIds = [];
+  public $emailIds;
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1FloatArray extends \Google\Collection
   /**
    * @var float[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param float[]

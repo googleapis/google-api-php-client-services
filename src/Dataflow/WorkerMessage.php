@@ -22,29 +22,23 @@ class WorkerMessage extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $time;
   protected $workerHealthReportType = WorkerHealthReport::class;
   protected $workerHealthReportDataType = '';
-  public $workerHealthReport;
   protected $workerLifecycleEventType = WorkerLifecycleEvent::class;
   protected $workerLifecycleEventDataType = '';
-  public $workerLifecycleEvent;
   protected $workerMessageCodeType = WorkerMessageCode::class;
   protected $workerMessageCodeDataType = '';
-  public $workerMessageCode;
   protected $workerMetricsType = ResourceUtilizationReport::class;
   protected $workerMetricsDataType = '';
-  public $workerMetrics;
   protected $workerShutdownNoticeType = WorkerShutdownNotice::class;
   protected $workerShutdownNoticeDataType = '';
-  public $workerShutdownNotice;
   protected $workerThreadScalingReportType = WorkerThreadScalingReport::class;
   protected $workerThreadScalingReportDataType = '';
-  public $workerThreadScalingReport;
 
   /**
    * @param string[]

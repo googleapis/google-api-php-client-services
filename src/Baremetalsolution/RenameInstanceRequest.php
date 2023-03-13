@@ -22,21 +22,21 @@ class RenameInstanceRequest extends \Google\Model
   /**
    * @var string
    */
-  public $newInstanceId;
+  public $newName;
 
   /**
    * @param string
    */
-  public function setNewInstanceId($newInstanceId)
+  public function setNewName($newName)
   {
-    $this->newInstanceId = $newInstanceId;
+    $this->newName = $newName;
   }
   /**
    * @return string
    */
-  public function getNewInstanceId()
+  public function getNewName()
   {
-    return $this->newInstanceId;
+    return $this->newName;
   }
 }
 

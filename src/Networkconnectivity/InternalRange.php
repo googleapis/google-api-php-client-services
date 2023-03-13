@@ -35,7 +35,7 @@ class InternalRange extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class InternalRange extends \Google\Collection
   /**
    * @var string[]
    */
-  public $overlaps = [];
+  public $overlaps;
   /**
    * @var string
    */
@@ -59,7 +59,7 @@ class InternalRange extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetCidrRange = [];
+  public $targetCidrRange;
   /**
    * @var string
    */
@@ -71,7 +71,7 @@ class InternalRange extends \Google\Collection
   /**
    * @var string[]
    */
-  public $users = [];
+  public $users;
 
   /**
    * @param string

@@ -21,11 +21,10 @@ class InStreamAd extends \Google\Model
 {
   protected $commonInStreamAttributeType = CommonInStreamAttribute::class;
   protected $commonInStreamAttributeDataType = '';
-  public $commonInStreamAttribute;
   /**
    * @var string[]
    */
-  public $customParameters = [];
+  public $customParameters;
 
   /**
    * @param CommonInStreamAttribute

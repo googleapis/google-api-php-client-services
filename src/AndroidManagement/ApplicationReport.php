@@ -30,14 +30,12 @@ class ApplicationReport extends \Google\Collection
   public $displayName;
   protected $eventsType = ApplicationEvent::class;
   protected $eventsDataType = 'array';
-  public $events = [];
   /**
    * @var string
    */
   public $installerPackageName;
   protected $keyedAppStatesType = KeyedAppState::class;
   protected $keyedAppStatesDataType = 'array';
-  public $keyedAppStates = [];
   /**
    * @var string
    */
@@ -49,7 +47,7 @@ class ApplicationReport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $signingKeyCertFingerprints = [];
+  public $signingKeyCertFingerprints;
   /**
    * @var string
    */

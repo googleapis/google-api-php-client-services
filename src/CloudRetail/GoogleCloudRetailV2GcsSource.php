@@ -27,7 +27,7 @@ class GoogleCloudRetailV2GcsSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputUris = [];
+  public $inputUris;
 
   /**
    * @param string

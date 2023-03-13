@@ -22,7 +22,6 @@ class ListCertificateIssuanceConfigsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $certificateIssuanceConfigsType = CertificateIssuanceConfig::class;
   protected $certificateIssuanceConfigsDataType = 'array';
-  public $certificateIssuanceConfigs = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListCertificateIssuanceConfigsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param CertificateIssuanceConfig[]

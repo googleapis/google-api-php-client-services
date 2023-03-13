@@ -26,19 +26,18 @@ class PatchInstanceFilter extends \Google\Collection
   public $all;
   protected $groupLabelsType = PatchInstanceFilterGroupLabel::class;
   protected $groupLabelsDataType = 'array';
-  public $groupLabels = [];
   /**
    * @var string[]
    */
-  public $instanceNamePrefixes = [];
+  public $instanceNamePrefixes;
   /**
    * @var string[]
    */
-  public $instances = [];
+  public $instances;
   /**
    * @var string[]
    */
-  public $zones = [];
+  public $zones;
 
   /**
    * @param bool

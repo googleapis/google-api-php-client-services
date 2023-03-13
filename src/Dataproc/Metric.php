@@ -23,7 +23,7 @@ class Metric extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metricOverrides = [];
+  public $metricOverrides;
   /**
    * @var string
    */

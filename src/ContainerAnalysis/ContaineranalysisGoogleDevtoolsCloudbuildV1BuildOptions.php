@@ -31,7 +31,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
   /**
    * @var string[]
    */
-  public $env = [];
+  public $env;
   /**
    * @var string
    */
@@ -46,7 +46,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
   public $machineType;
   protected $poolType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption::class;
   protected $poolDataType = '';
-  public $pool;
   /**
    * @var string
    */
@@ -54,18 +53,17 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
   /**
    * @var string[]
    */
-  public $secretEnv = [];
+  public $secretEnv;
   /**
    * @var string[]
    */
-  public $sourceProvenanceHash = [];
+  public $sourceProvenanceHash;
   /**
    * @var string
    */
   public $substitutionOption;
   protected $volumesType = ContaineranalysisGoogleDevtoolsCloudbuildV1Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes = [];
   /**
    * @var string
    */

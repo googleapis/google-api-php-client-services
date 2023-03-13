@@ -22,7 +22,6 @@ class Attributes extends \Google\Collection
   protected $collection_key = 'videoLink';
   protected $additionalImageLinkType = Image::class;
   protected $additionalImageLinkDataType = 'array';
-  public $additionalImageLink = [];
   /**
    * @var string
    */
@@ -33,14 +32,12 @@ class Attributes extends \Google\Collection
   public $brand;
   protected $capacityType = Capacity::class;
   protected $capacityDataType = '';
-  public $capacity;
   /**
    * @var string
    */
   public $color;
   protected $countType = Count::class;
   protected $countDataType = '';
-  public $count;
   /**
    * @var string
    */
@@ -52,10 +49,9 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedDestination = [];
+  public $excludedDestination;
   protected $featureDescriptionType = FeatureDescription::class;
   protected $featureDescriptionDataType = 'array';
-  public $featureDescription = [];
   /**
    * @var string
    */
@@ -70,18 +66,16 @@ class Attributes extends \Google\Collection
   public $gender;
   protected $groceryType = Grocery::class;
   protected $groceryDataType = '';
-  public $grocery;
   /**
    * @var string[]
    */
-  public $gtin = [];
+  public $gtin;
   protected $imageLinkType = Image::class;
   protected $imageLinkDataType = '';
-  public $imageLink;
   /**
    * @var string[]
    */
-  public $includedDestination = [];
+  public $includedDestination;
   /**
    * @var string
    */
@@ -96,18 +90,16 @@ class Attributes extends \Google\Collection
   public $mpn;
   protected $nutritionType = Nutrition::class;
   protected $nutritionDataType = '';
-  public $nutrition;
   /**
    * @var string
    */
   public $pattern;
   protected $productDetailType = ProductDetail::class;
   protected $productDetailDataType = 'array';
-  public $productDetail = [];
   /**
    * @var string[]
    */
-  public $productHighlight = [];
+  public $productHighlight;
   /**
    * @var string
    */
@@ -123,7 +115,7 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productType = [];
+  public $productType;
   /**
    * @var string
    */
@@ -131,7 +123,7 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $richProductContent = [];
+  public $richProductContent;
   /**
    * @var string
    */
@@ -147,10 +139,9 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sizeType = [];
+  public $sizeType;
   protected $suggestedRetailPriceType = Price::class;
   protected $suggestedRetailPriceDataType = '';
-  public $suggestedRetailPrice;
   /**
    * @var string
    */
@@ -166,7 +157,7 @@ class Attributes extends \Google\Collection
   /**
    * @var string[]
    */
-  public $videoLink = [];
+  public $videoLink;
 
   /**
    * @param Image[]

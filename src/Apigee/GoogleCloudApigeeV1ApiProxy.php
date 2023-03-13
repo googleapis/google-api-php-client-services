@@ -27,14 +27,13 @@ class GoogleCloudApigeeV1ApiProxy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $latestRevisionId;
   protected $metaDataType = GoogleCloudApigeeV1EntityMetadata::class;
   protected $metaDataDataType = '';
-  public $metaData;
   /**
    * @var string
    */
@@ -46,7 +45,7 @@ class GoogleCloudApigeeV1ApiProxy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $revision = [];
+  public $revision;
 
   /**
    * @param string

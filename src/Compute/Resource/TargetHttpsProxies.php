@@ -136,7 +136,8 @@ class TargetHttpsProxies extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified TargetHttpsProxy resource. (targetHttpsProxies.get)
+   * Returns the specified TargetHttpsProxy resource. Gets a list of available
+   * target HTTPS proxies by making a list() request. (targetHttpsProxies.get)
    *
    * @param string $project Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to

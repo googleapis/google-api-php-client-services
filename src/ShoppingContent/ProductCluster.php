@@ -59,7 +59,7 @@ class ProductCluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $variantGtins = [];
+  public $variantGtins;
 
   /**
    * @param string

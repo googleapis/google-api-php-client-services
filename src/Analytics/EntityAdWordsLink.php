@@ -22,10 +22,8 @@ class EntityAdWordsLink extends \Google\Collection
   protected $collection_key = 'profileIds';
   protected $adWordsAccountsType = AdWordsAccount::class;
   protected $adWordsAccountsDataType = 'array';
-  public $adWordsAccounts = [];
   protected $entityType = EntityAdWordsLinkEntity::class;
   protected $entityDataType = '';
-  public $entity;
   /**
    * @var string
    */
@@ -41,7 +39,7 @@ class EntityAdWordsLink extends \Google\Collection
   /**
    * @var string[]
    */
-  public $profileIds = [];
+  public $profileIds;
   /**
    * @var string
    */

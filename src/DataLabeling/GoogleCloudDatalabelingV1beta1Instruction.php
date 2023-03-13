@@ -23,14 +23,13 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blockingResources = [];
+  public $blockingResources;
   /**
    * @var string
    */
   public $createTime;
   protected $csvInstructionType = GoogleCloudDatalabelingV1beta1CsvInstruction::class;
   protected $csvInstructionDataType = '';
-  public $csvInstruction;
   /**
    * @var string
    */
@@ -49,7 +48,6 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
   public $name;
   protected $pdfInstructionType = GoogleCloudDatalabelingV1beta1PdfInstruction::class;
   protected $pdfInstructionDataType = '';
-  public $pdfInstruction;
   /**
    * @var string
    */

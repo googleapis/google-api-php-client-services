@@ -46,7 +46,7 @@ class Volume extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -93,7 +93,6 @@ class Volume extends \Google\Model
   public $snapshotEnabled;
   protected $snapshotReservationDetailType = SnapshotReservationDetail::class;
   protected $snapshotReservationDetailDataType = '';
-  public $snapshotReservationDetail;
   /**
    * @var string
    */

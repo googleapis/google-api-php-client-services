@@ -31,15 +31,15 @@ class NestedParameter extends \Google\Collection
   /**
    * @var bool[]
    */
-  public $multiBoolValue = [];
+  public $multiBoolValue;
   /**
    * @var string[]
    */
-  public $multiIntValue = [];
+  public $multiIntValue;
   /**
    * @var string[]
    */
-  public $multiValue = [];
+  public $multiValue;
   /**
    * @var string
    */

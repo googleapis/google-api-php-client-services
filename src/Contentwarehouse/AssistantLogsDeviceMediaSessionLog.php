@@ -22,7 +22,6 @@ class AssistantLogsDeviceMediaSessionLog extends \Google\Collection
   protected $collection_key = 'supportedTransportControl';
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
-  public $deviceId;
   /**
    * @var string
    */
@@ -42,7 +41,7 @@ class AssistantLogsDeviceMediaSessionLog extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedTransportControl = [];
+  public $supportedTransportControl;
 
   /**
    * @param AssistantApiCoreTypesDeviceId

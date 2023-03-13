@@ -23,7 +23,7 @@ class Location extends \Google\Collection
   /**
    * @var string[]
    */
-  public $features = [];
+  public $features;
   /**
    * @var string
    */

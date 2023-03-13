@@ -23,7 +23,7 @@ class GoogleCloudIntegrationsV1alphaStringParameterArray extends \Google\Collect
   /**
    * @var string[]
    */
-  public $stringValues = [];
+  public $stringValues;
 
   /**
    * @param string[]

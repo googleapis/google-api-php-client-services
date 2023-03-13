@@ -26,7 +26,6 @@ class DiskAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = DisksScopedList::class;
   protected $itemsDataType = 'map';
-  public $items = [];
   /**
    * @var string
    */
@@ -42,10 +41,9 @@ class DiskAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables = [];
+  public $unreachables;
   protected $warningType = DiskAggregatedListWarning::class;
   protected $warningDataType = '';
-  public $warning;
 
   /**
    * @param string

@@ -26,7 +26,6 @@ class VideoContentSearchVideoCommonFeatures extends \Google\Collection
   public $anchorCount;
   protected $captionInfoType = VideoContentSearchCaptionInfo::class;
   protected $captionInfoDataType = '';
-  public $captionInfo;
   /**
    * @var string
    */
@@ -34,7 +33,7 @@ class VideoContentSearchVideoCommonFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unifiedScoringBertModels = [];
+  public $unifiedScoringBertModels;
 
   /**
    * @param int

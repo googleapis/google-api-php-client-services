@@ -22,7 +22,7 @@ class LoggingConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $driverLogLevels = [];
+  public $driverLogLevels;
 
   /**
    * @param string[]

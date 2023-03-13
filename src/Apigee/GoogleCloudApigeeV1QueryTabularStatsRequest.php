@@ -23,14 +23,13 @@ class GoogleCloudApigeeV1QueryTabularStatsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimensions = [];
+  public $dimensions;
   /**
    * @var string
    */
   public $filter;
   protected $metricsType = GoogleCloudApigeeV1MetricAggregation::class;
   protected $metricsDataType = 'array';
-  public $metrics = [];
   /**
    * @var int
    */
@@ -41,7 +40,6 @@ class GoogleCloudApigeeV1QueryTabularStatsRequest extends \Google\Collection
   public $pageToken;
   protected $timeRangeType = GoogleTypeInterval::class;
   protected $timeRangeDataType = '';
-  public $timeRange;
 
   /**
    * @param string[]

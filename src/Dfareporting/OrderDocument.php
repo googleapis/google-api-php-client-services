@@ -35,14 +35,13 @@ class OrderDocument extends \Google\Collection
   /**
    * @var string[]
    */
-  public $approvedByUserProfileIds = [];
+  public $approvedByUserProfileIds;
   /**
    * @var bool
    */
   public $cancelled;
   protected $createdInfoType = LastModifiedInfo::class;
   protected $createdInfoDataType = '';
-  public $createdInfo;
   /**
    * @var string
    */
@@ -58,7 +57,7 @@ class OrderDocument extends \Google\Collection
   /**
    * @var string[]
    */
-  public $lastSentRecipients = [];
+  public $lastSentRecipients;
   /**
    * @var string
    */

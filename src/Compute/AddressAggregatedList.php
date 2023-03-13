@@ -26,7 +26,6 @@ class AddressAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = AddressesScopedList::class;
   protected $itemsDataType = 'map';
-  public $items = [];
   /**
    * @var string
    */
@@ -42,10 +41,9 @@ class AddressAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables = [];
+  public $unreachables;
   protected $warningType = AddressAggregatedListWarning::class;
   protected $warningDataType = '';
-  public $warning;
 
   /**
    * @param string

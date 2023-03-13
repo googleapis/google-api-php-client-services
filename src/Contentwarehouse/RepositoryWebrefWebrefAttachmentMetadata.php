@@ -37,7 +37,6 @@ class RepositoryWebrefWebrefAttachmentMetadata extends \Google\Model
   public $lngE7;
   protected $oysterIdType = GeostoreFeatureIdProto::class;
   protected $oysterIdDataType = '';
-  public $oysterId;
   /**
    * @var int
    */

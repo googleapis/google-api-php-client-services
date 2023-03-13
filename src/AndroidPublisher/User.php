@@ -27,7 +27,7 @@ class User extends \Google\Collection
   /**
    * @var string[]
    */
-  public $developerAccountPermissions = [];
+  public $developerAccountPermissions;
   /**
    * @var string
    */
@@ -38,7 +38,6 @@ class User extends \Google\Collection
   public $expirationTime;
   protected $grantsType = Grant::class;
   protected $grantsDataType = 'array';
-  public $grants = [];
   /**
    * @var string
    */

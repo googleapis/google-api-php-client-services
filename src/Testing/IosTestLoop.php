@@ -26,11 +26,10 @@ class IosTestLoop extends \Google\Collection
   public $appBundleId;
   protected $appIpaType = FileReference::class;
   protected $appIpaDataType = '';
-  public $appIpa;
   /**
    * @var int[]
    */
-  public $scenarios = [];
+  public $scenarios;
 
   /**
    * @param string

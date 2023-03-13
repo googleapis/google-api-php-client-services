@@ -31,37 +31,29 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   /**
    * @var string
    */
-  public $errorCatcherId;
+  public $errorCatcherConfigId;
   /**
    * @var string
    */
   public $externalTaskType;
   protected $failurePolicyType = GoogleCloudIntegrationsV1alphaFailurePolicy::class;
   protected $failurePolicyDataType = '';
-  public $failurePolicy;
   /**
    * @var string
    */
   public $jsonValidationOption;
   protected $nextTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $nextTasksDataType = 'array';
-  public $nextTasks = [];
   /**
    * @var string
    */
   public $nextTasksExecutionPolicy;
   protected $parametersType = GoogleCloudIntegrationsV1alphaEventParameter::class;
   protected $parametersDataType = 'map';
-  public $parameters = [];
-  protected $positionType = GoogleCloudIntegrationsV1alphaCoordinate::class;
-  protected $positionDataType = '';
-  public $position;
   protected $successPolicyType = GoogleCloudIntegrationsV1alphaSuccessPolicy::class;
   protected $successPolicyDataType = '';
-  public $successPolicy;
   protected $synchronousCallFailurePolicyType = GoogleCloudIntegrationsV1alphaFailurePolicy::class;
   protected $synchronousCallFailurePolicyDataType = '';
-  public $synchronousCallFailurePolicy;
   /**
    * @var string
    */
@@ -110,16 +102,16 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   /**
    * @param string
    */
-  public function setErrorCatcherId($errorCatcherId)
+  public function setErrorCatcherConfigId($errorCatcherConfigId)
   {
-    $this->errorCatcherId = $errorCatcherId;
+    $this->errorCatcherConfigId = $errorCatcherConfigId;
   }
   /**
    * @return string
    */
-  public function getErrorCatcherId()
+  public function getErrorCatcherConfigId()
   {
-    return $this->errorCatcherId;
+    return $this->errorCatcherConfigId;
   }
   /**
    * @param string
@@ -204,20 +196,6 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   public function getParameters()
   {
     return $this->parameters;
-  }
-  /**
-   * @param GoogleCloudIntegrationsV1alphaCoordinate
-   */
-  public function setPosition(GoogleCloudIntegrationsV1alphaCoordinate $position)
-  {
-    $this->position = $position;
-  }
-  /**
-   * @return GoogleCloudIntegrationsV1alphaCoordinate
-   */
-  public function getPosition()
-  {
-    return $this->position;
   }
   /**
    * @param GoogleCloudIntegrationsV1alphaSuccessPolicy

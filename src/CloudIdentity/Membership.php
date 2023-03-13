@@ -30,10 +30,8 @@ class Membership extends \Google\Collection
   public $name;
   protected $preferredMemberKeyType = EntityKey::class;
   protected $preferredMemberKeyDataType = '';
-  public $preferredMemberKey;
   protected $rolesType = MembershipRole::class;
   protected $rolesDataType = 'array';
-  public $roles = [];
   /**
    * @var string
    */

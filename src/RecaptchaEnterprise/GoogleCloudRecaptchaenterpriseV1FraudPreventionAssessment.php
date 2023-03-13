@@ -21,10 +21,8 @@ class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment extends \Google\
 {
   protected $cardTestingVerdictType = GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict::class;
   protected $cardTestingVerdictDataType = '';
-  public $cardTestingVerdict;
   protected $stolenInstrumentVerdictType = GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict::class;
   protected $stolenInstrumentVerdictDataType = '';
-  public $stolenInstrumentVerdict;
   /**
    * @var float
    */

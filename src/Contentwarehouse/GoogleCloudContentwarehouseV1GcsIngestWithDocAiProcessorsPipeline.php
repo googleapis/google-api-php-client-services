@@ -22,7 +22,6 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
   protected $collection_key = 'extractProcessorInfos';
   protected $extractProcessorInfosType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $extractProcessorInfosDataType = 'array';
-  public $extractProcessorInfos = [];
   /**
    * @var string
    */
@@ -33,7 +32,6 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
   public $processorResultsFolderPath;
   protected $splitClassifyProcessorInfoType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $splitClassifyProcessorInfoDataType = '';
-  public $splitClassifyProcessorInfo;
 
   /**
    * @param GoogleCloudContentwarehouseV1ProcessorInfo[]

@@ -27,10 +27,9 @@ class ManagedShortLink extends \Google\Collection
   /**
    * @var string[]
    */
-  public $flaggedAttribute = [];
+  public $flaggedAttribute;
   protected $infoType = DynamicLinkInfo::class;
   protected $infoDataType = '';
-  public $info;
   /**
    * @var string
    */

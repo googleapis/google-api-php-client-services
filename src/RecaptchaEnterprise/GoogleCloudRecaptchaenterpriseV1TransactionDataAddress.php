@@ -23,7 +23,7 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends \Google\Col
   /**
    * @var string[]
    */
-  public $address = [];
+  public $address;
   /**
    * @var string
    */

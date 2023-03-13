@@ -31,7 +31,7 @@ class SegmentDimensionFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $expressions = [];
+  public $expressions;
   /**
    * @var string
    */

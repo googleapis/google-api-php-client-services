@@ -27,7 +27,7 @@ class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedBundleIds = [];
+  public $allowedBundleIds;
 
   /**
    * @param bool

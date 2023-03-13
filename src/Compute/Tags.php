@@ -27,7 +27,7 @@ class Tags extends \Google\Collection
   /**
    * @var string[]
    */
-  public $items = [];
+  public $items;
 
   /**
    * @param string

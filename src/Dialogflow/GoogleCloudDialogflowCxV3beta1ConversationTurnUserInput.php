@@ -26,10 +26,9 @@ class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput extends \Google\Mo
   /**
    * @var array[]
    */
-  public $injectedParameters = [];
+  public $injectedParameters;
   protected $inputType = GoogleCloudDialogflowCxV3beta1QueryInput::class;
   protected $inputDataType = '';
-  public $input;
   /**
    * @var bool
    */

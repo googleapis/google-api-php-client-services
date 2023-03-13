@@ -26,28 +26,24 @@ class Results extends \Google\Collection
   public $artifactManifest;
   protected $artifactTimingType = TimeSpan::class;
   protected $artifactTimingDataType = '';
-  public $artifactTiming;
   /**
    * @var string[]
    */
-  public $buildStepImages = [];
+  public $buildStepImages;
   /**
    * @var string[]
    */
-  public $buildStepOutputs = [];
+  public $buildStepOutputs;
   protected $imagesType = BuiltImage::class;
   protected $imagesDataType = 'array';
-  public $images = [];
   protected $mavenArtifactsType = UploadedMavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
-  public $mavenArtifacts = [];
   /**
    * @var string
    */
   public $numArtifacts;
   protected $pythonPackagesType = UploadedPythonPackage::class;
   protected $pythonPackagesDataType = 'array';
-  public $pythonPackages = [];
 
   /**
    * @param string

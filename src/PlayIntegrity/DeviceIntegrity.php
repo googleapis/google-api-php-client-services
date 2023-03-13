@@ -23,7 +23,7 @@ class DeviceIntegrity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deviceRecognitionVerdict = [];
+  public $deviceRecognitionVerdict;
 
   /**
    * @param string[]

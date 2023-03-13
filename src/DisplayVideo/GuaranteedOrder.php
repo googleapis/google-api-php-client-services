@@ -59,7 +59,7 @@ class GuaranteedOrder extends \Google\Collection
   /**
    * @var string[]
    */
-  public $readAdvertiserIds = [];
+  public $readAdvertiserIds;
   /**
    * @var string
    */
@@ -70,7 +70,6 @@ class GuaranteedOrder extends \Google\Collection
   public $readWritePartnerId;
   protected $statusType = GuaranteedOrderStatus::class;
   protected $statusDataType = '';
-  public $status;
   /**
    * @var string
    */

@@ -22,14 +22,12 @@ class CloudsupportCase extends \Google\Collection
   protected $collection_key = 'subscriberEmailAddresses';
   protected $classificationType = CaseClassification::class;
   protected $classificationDataType = '';
-  public $classification;
   /**
    * @var string
    */
   public $createTime;
   protected $creatorType = Actor::class;
   protected $creatorDataType = '';
-  public $creator;
   /**
    * @var string
    */
@@ -65,7 +63,7 @@ class CloudsupportCase extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subscriberEmailAddresses = [];
+  public $subscriberEmailAddresses;
   /**
    * @var bool
    */

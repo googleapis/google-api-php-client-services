@@ -31,7 +31,7 @@ class AdmissionRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $requireAttestationsBy = [];
+  public $requireAttestationsBy;
 
   /**
    * @param string

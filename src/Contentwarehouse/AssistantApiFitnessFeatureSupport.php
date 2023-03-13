@@ -23,7 +23,7 @@ class AssistantApiFitnessFeatureSupport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedActivities = [];
+  public $supportedActivities;
 
   /**
    * @param string[]

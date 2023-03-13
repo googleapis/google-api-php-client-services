@@ -31,7 +31,7 @@ class AttributePropagationSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $outputCredentials = [];
+  public $outputCredentials;
 
   /**
    * @param bool

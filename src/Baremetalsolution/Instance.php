@@ -25,10 +25,6 @@ class Instance extends \Google\Collection
    */
   public $createTime;
   /**
-   * @var string
-   */
-  public $firmwareVersion;
-  /**
    * @var bool
    */
   public $hyperthreadingEnabled;
@@ -43,17 +39,15 @@ class Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $logicalInterfacesType = GoogleCloudBaremetalsolutionV2LogicalInterface::class;
   protected $logicalInterfacesDataType = 'array';
-  public $logicalInterfaces = [];
   /**
    * @var string
    */
   public $loginInfo;
   protected $lunsType = Lun::class;
   protected $lunsDataType = 'array';
-  public $luns = [];
   /**
    * @var string
    */
@@ -68,7 +62,6 @@ class Instance extends \Google\Collection
   public $networkTemplate;
   protected $networksType = Network::class;
   protected $networksDataType = 'array';
-  public $networks = [];
   /**
    * @var string
    */
@@ -87,7 +80,6 @@ class Instance extends \Google\Collection
   public $updateTime;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes = [];
   /**
    * @var string
    */
@@ -106,20 +98,6 @@ class Instance extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
-  }
-  /**
-   * @param string
-   */
-  public function setFirmwareVersion($firmwareVersion)
-  {
-    $this->firmwareVersion = $firmwareVersion;
-  }
-  /**
-   * @return string
-   */
-  public function getFirmwareVersion()
-  {
-    return $this->firmwareVersion;
   }
   /**
    * @param bool

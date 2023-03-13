@@ -27,7 +27,7 @@ class CreateItemResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $questionId = [];
+  public $questionId;
 
   /**
    * @param string

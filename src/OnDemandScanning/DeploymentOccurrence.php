@@ -39,7 +39,7 @@ class DeploymentOccurrence extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceUri = [];
+  public $resourceUri;
   /**
    * @var string
    */

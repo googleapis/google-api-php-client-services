@@ -31,17 +31,15 @@ class Table extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds = [];
+  public $suggestedDeletionIds;
   /**
    * @var string[]
    */
-  public $suggestedInsertionIds = [];
+  public $suggestedInsertionIds;
   protected $tableRowsType = TableRow::class;
   protected $tableRowsDataType = 'array';
-  public $tableRows = [];
   protected $tableStyleType = TableStyle::class;
   protected $tableStyleDataType = '';
-  public $tableStyle;
 
   /**
    * @param int

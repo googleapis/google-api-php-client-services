@@ -22,7 +22,6 @@ class NfsShare extends \Google\Collection
   protected $collection_key = 'allowedClients';
   protected $allowedClientsType = AllowedClient::class;
   protected $allowedClientsDataType = 'array';
-  public $allowedClients = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class NfsShare extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

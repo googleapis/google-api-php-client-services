@@ -42,7 +42,7 @@ class TrawlerEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $oldestTimeStampInUS = [];
+  public $oldestTimeStampInUS;
   /**
    * @var string
    */

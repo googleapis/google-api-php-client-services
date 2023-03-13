@@ -23,14 +23,13 @@ class AssistantDevicesPlatformProtoInternalCapability extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedAssistantSdkAuthProjectIds = [];
+  public $allowedAssistantSdkAuthProjectIds;
   /**
    * @var bool
    */
   public $appCapabilitiesFromDeviceInstallApps;
   protected $cloudDeviceActionEndpointType = AssistantDevicesPlatformProtoCloudEndpoint::class;
   protected $cloudDeviceActionEndpointDataType = '';
-  public $cloudDeviceActionEndpoint;
   /**
    * @var bool
    */
@@ -57,7 +56,6 @@ class AssistantDevicesPlatformProtoInternalCapability extends \Google\Collection
   public $overrideProjectIdForDeviceLookup;
   protected $stadiaAssistantConfigType = AssistantDevicesPlatformProtoInternalCapabilityStadiaAssistantConfig::class;
   protected $stadiaAssistantConfigDataType = '';
-  public $stadiaAssistantConfig;
   /**
    * @var bool
    */

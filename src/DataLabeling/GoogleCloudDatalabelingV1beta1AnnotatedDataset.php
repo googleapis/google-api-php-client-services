@@ -31,7 +31,7 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDataset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blockingResources = [];
+  public $blockingResources;
   /**
    * @var string
    */
@@ -54,10 +54,8 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDataset extends \Google\Collection
   public $exampleCount;
   protected $labelStatsType = GoogleCloudDatalabelingV1beta1LabelStats::class;
   protected $labelStatsDataType = '';
-  public $labelStats;
   protected $metadataType = GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   /**
    * @var string
    */

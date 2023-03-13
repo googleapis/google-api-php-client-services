@@ -130,7 +130,8 @@ class Autoscalers extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified autoscaler resource. (autoscalers.get)
+   * Returns the specified autoscaler resource. Gets a list of available
+   * autoscalers by making a list() request. (autoscalers.get)
    *
    * @param string $project Project ID for this request.
    * @param string $zone Name of the zone for this request.

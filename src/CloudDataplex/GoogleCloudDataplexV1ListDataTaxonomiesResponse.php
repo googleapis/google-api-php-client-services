@@ -22,7 +22,6 @@ class GoogleCloudDataplexV1ListDataTaxonomiesResponse extends \Google\Collection
   protected $collection_key = 'unreachableLocations';
   protected $dataTaxonomiesType = GoogleCloudDataplexV1DataTaxonomy::class;
   protected $dataTaxonomiesDataType = 'array';
-  public $dataTaxonomies = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class GoogleCloudDataplexV1ListDataTaxonomiesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachableLocations = [];
+  public $unreachableLocations;
 
   /**
    * @param GoogleCloudDataplexV1DataTaxonomy[]

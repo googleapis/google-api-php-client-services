@@ -22,7 +22,6 @@ class ArimaSingleModelForecastingMetrics extends \Google\Collection
   protected $collection_key = 'timeSeriesIds';
   protected $arimaFittingMetricsType = ArimaFittingMetrics::class;
   protected $arimaFittingMetricsDataType = '';
-  public $arimaFittingMetrics;
   /**
    * @var bool
    */
@@ -41,11 +40,10 @@ class ArimaSingleModelForecastingMetrics extends \Google\Collection
   public $hasStepChanges;
   protected $nonSeasonalOrderType = ArimaOrder::class;
   protected $nonSeasonalOrderDataType = '';
-  public $nonSeasonalOrder;
   /**
    * @var string[]
    */
-  public $seasonalPeriods = [];
+  public $seasonalPeriods;
   /**
    * @var string
    */
@@ -53,7 +51,7 @@ class ArimaSingleModelForecastingMetrics extends \Google\Collection
   /**
    * @var string[]
    */
-  public $timeSeriesIds = [];
+  public $timeSeriesIds;
 
   /**
    * @param ArimaFittingMetrics

@@ -23,7 +23,7 @@ class SharedDriveInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sharedDriveIds = [];
+  public $sharedDriveIds;
 
   /**
    * @param string[]

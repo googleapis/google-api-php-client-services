@@ -27,35 +27,35 @@ class QualityGeoBrainlocBrainlocAttachment extends \Google\Collection
   /**
    * @var int[]
    */
-  public $topCitiesRawScores = [];
+  public $topCitiesRawScores;
   /**
    * @var int[]
    */
-  public $topCitiesVocabIds = [];
+  public $topCitiesVocabIds;
   /**
    * @var int[]
    */
-  public $topCountiesRawScores = [];
+  public $topCountiesRawScores;
   /**
    * @var int[]
    */
-  public $topCountiesVocabIds = [];
+  public $topCountiesVocabIds;
   /**
    * @var int[]
    */
-  public $topCountriesRawScores = [];
+  public $topCountriesRawScores;
   /**
    * @var int[]
    */
-  public $topCountriesVocabIds = [];
+  public $topCountriesVocabIds;
   /**
    * @var int[]
    */
-  public $topStatesRawScores = [];
+  public $topStatesRawScores;
   /**
    * @var int[]
    */
-  public $topStatesVocabIds = [];
+  public $topStatesVocabIds;
 
   /**
    * @param int

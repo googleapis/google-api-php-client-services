@@ -22,10 +22,8 @@ class ChildRolloutJobs extends \Google\Collection
   protected $collection_key = 'createRolloutJobs';
   protected $advanceRolloutJobsType = Job::class;
   protected $advanceRolloutJobsDataType = 'array';
-  public $advanceRolloutJobs = [];
   protected $createRolloutJobsType = Job::class;
   protected $createRolloutJobsDataType = 'array';
-  public $createRolloutJobs = [];
 
   /**
    * @param Job[]

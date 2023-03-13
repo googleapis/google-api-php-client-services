@@ -22,7 +22,6 @@ class ListConversionWorkspacesResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $conversionWorkspacesType = ConversionWorkspace::class;
   protected $conversionWorkspacesDataType = 'array';
-  public $conversionWorkspaces = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListConversionWorkspacesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param ConversionWorkspace[]

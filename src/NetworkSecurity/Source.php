@@ -23,11 +23,11 @@ class Source extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ipBlocks = [];
+  public $ipBlocks;
   /**
    * @var string[]
    */
-  public $principals = [];
+  public $principals;
 
   /**
    * @param string[]

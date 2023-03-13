@@ -23,7 +23,7 @@ class PhotosVisionObjectrecFeatureVector extends \Google\Collection
   /**
    * @var float[]
    */
-  public $floatData = [];
+  public $floatData;
 
   /**
    * @param float[]

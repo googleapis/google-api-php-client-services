@@ -26,11 +26,10 @@ class GkeNodePoolTarget extends \Google\Collection
   public $nodePool;
   protected $nodePoolConfigType = GkeNodePoolConfig::class;
   protected $nodePoolConfigDataType = '';
-  public $nodePoolConfig;
   /**
    * @var string[]
    */
-  public $roles = [];
+  public $roles;
 
   /**
    * @param string

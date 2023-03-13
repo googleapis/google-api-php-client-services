@@ -27,7 +27,7 @@ class RegionInstanceGroupManagersSetTargetPoolsRequest extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $targetPools = [];
+  public $targetPools;
 
   /**
    * @param string

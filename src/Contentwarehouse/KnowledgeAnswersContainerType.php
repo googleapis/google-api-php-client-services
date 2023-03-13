@@ -23,7 +23,7 @@ class KnowledgeAnswersContainerType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $slotNames = [];
+  public $slotNames;
 
   /**
    * @param string[]

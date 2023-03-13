@@ -30,7 +30,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   public $asrLanguage;
   protected $crapsDataType = QualityNavboostCrapsCrapsData::class;
   protected $crapsDataDataType = '';
-  public $crapsData;
   /**
    * @var string
    */
@@ -62,7 +61,7 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $navqueries = [];
+  public $navqueries;
   /**
    * @var float
    */
@@ -73,21 +72,18 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   public $numViews;
   protected $pseudoVideoDataType = PseudoVideoData::class;
   protected $pseudoVideoDataDataType = '';
-  public $pseudoVideoData;
   protected $saftDocType = NlpSaftDocument::class;
   protected $saftDocDataType = '';
-  public $saftDoc;
   /**
    * @var string
    */
   public $saftTranscript;
   protected $salientTermSetType = QualitySalientTermsSalientTermSet::class;
   protected $salientTermSetDataType = '';
-  public $salientTermSet;
   /**
    * @var int[]
    */
-  public $subindexid = [];
+  public $subindexid;
   /**
    * @var string
    */
@@ -98,7 +94,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   public $titleLanguage;
   protected $transcriptAnnotationsType = QualityWebanswersTranscriptAnnotations::class;
   protected $transcriptAnnotationsDataType = '';
-  public $transcriptAnnotations;
   /**
    * @var int
    */
@@ -109,7 +104,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   public $url;
   protected $verticalItemType = IndexingMlVerticalVerticalItem::class;
   protected $verticalItemDataType = 'array';
-  public $verticalItem = [];
   /**
    * @var string
    */
@@ -124,7 +118,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
   public $videoUrl;
   protected $webrefEntitiesType = RepositoryWebrefWebrefEntities::class;
   protected $webrefEntitiesDataType = '';
-  public $webrefEntities;
 
   /**
    * @param string

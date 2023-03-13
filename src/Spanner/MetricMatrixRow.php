@@ -23,7 +23,7 @@ class MetricMatrixRow extends \Google\Collection
   /**
    * @var float[]
    */
-  public $cols = [];
+  public $cols;
 
   /**
    * @param float[]

@@ -30,7 +30,6 @@ class PhraseSet extends \Google\Collection
   public $name;
   protected $phrasesType = Phrase::class;
   protected $phrasesDataType = 'array';
-  public $phrases = [];
 
   /**
    * @param float

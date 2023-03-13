@@ -23,7 +23,7 @@ class TeamDriveInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $teamDriveIds = [];
+  public $teamDriveIds;
 
   /**
    * @param string[]

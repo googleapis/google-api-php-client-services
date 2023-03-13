@@ -23,7 +23,7 @@ class AllowedDomainsSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domains = [];
+  public $domains;
   /**
    * @var bool
    */

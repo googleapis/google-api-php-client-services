@@ -23,7 +23,7 @@ class MergeCapacityCommitmentsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $capacityCommitmentIds = [];
+  public $capacityCommitmentIds;
 
   /**
    * @param string[]

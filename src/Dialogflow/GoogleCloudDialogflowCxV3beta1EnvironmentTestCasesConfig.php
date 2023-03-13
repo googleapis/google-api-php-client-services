@@ -31,7 +31,7 @@ class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig extends \Google\C
   /**
    * @var string[]
    */
-  public $testCases = [];
+  public $testCases;
 
   /**
    * @param bool

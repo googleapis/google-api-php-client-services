@@ -26,11 +26,10 @@ class ListSqlIntegrationsResponse extends \Google\Collection
   public $nextPageToken;
   protected $sqlIntegrationsType = SqlIntegration::class;
   protected $sqlIntegrationsDataType = 'array';
-  public $sqlIntegrations = [];
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param string

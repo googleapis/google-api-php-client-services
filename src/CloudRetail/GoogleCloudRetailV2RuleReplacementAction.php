@@ -23,7 +23,7 @@ class GoogleCloudRetailV2RuleReplacementAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $queryTerms = [];
+  public $queryTerms;
   /**
    * @var string
    */

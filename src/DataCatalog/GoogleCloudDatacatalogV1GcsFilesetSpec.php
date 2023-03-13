@@ -23,10 +23,9 @@ class GoogleCloudDatacatalogV1GcsFilesetSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filePatterns = [];
+  public $filePatterns;
   protected $sampleGcsFileSpecsType = GoogleCloudDatacatalogV1GcsFileSpec::class;
   protected $sampleGcsFileSpecsDataType = 'array';
-  public $sampleGcsFileSpecs = [];
 
   /**
    * @param string[]

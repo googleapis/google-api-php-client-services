@@ -34,11 +34,10 @@ class ImageVersion extends \Google\Collection
   public $isDefault;
   protected $releaseDateType = Date::class;
   protected $releaseDateDataType = '';
-  public $releaseDate;
   /**
    * @var string[]
    */
-  public $supportedPythonVersions = [];
+  public $supportedPythonVersions;
   /**
    * @var bool
    */

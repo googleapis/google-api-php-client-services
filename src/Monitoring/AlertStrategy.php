@@ -25,7 +25,6 @@ class AlertStrategy extends \Google\Model
   public $autoClose;
   protected $notificationRateLimitType = NotificationRateLimit::class;
   protected $notificationRateLimitDataType = '';
-  public $notificationRateLimit;
 
   /**
    * @param string

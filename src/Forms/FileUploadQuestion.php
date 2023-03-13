@@ -35,7 +35,7 @@ class FileUploadQuestion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $types = [];
+  public $types;
 
   /**
    * @param string

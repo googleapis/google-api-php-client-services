@@ -23,7 +23,7 @@ class RegionTargetHttpsProxiesSetSslCertificatesRequest extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $sslCertificates = [];
+  public $sslCertificates;
 
   /**
    * @param string[]

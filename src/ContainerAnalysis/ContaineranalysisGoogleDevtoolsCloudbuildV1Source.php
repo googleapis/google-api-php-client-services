@@ -21,13 +21,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends \Google\Model
 {
   protected $repoSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource::class;
   protected $repoSourceDataType = '';
-  public $repoSource;
   protected $storageSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource::class;
   protected $storageSourceDataType = '';
-  public $storageSource;
   protected $storageSourceManifestType = ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest::class;
   protected $storageSourceManifestDataType = '';
-  public $storageSourceManifest;
 
   /**
    * @param ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource

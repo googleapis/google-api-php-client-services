@@ -23,7 +23,7 @@ class Recipe extends \Google\Collection
   /**
    * @var array[]
    */
-  public $arguments = [];
+  public $arguments;
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class Recipe extends \Google\Collection
   /**
    * @var array[]
    */
-  public $environment = [];
+  public $environment;
   /**
    * @var string
    */

@@ -725,28 +725,6 @@ class Cloudchannel extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'listEntitlementChanges' => [
-              'path' => 'v1/{+parent}:listEntitlementChanges',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
             ],'lookupOffer' => [
               'path' => 'v1/{+entitlement}:lookupOffer',
               'httpMethod' => 'GET',
@@ -811,10 +789,6 @@ class Cloudchannel extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'showFutureOffers' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ],
               ],
             ],

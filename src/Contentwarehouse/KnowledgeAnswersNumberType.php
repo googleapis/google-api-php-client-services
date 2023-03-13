@@ -26,14 +26,12 @@ class KnowledgeAnswersNumberType extends \Google\Collection
   public $keepAsString;
   protected $rangeConstraintType = KnowledgeAnswersRangeConstraint::class;
   protected $rangeConstraintDataType = '';
-  public $rangeConstraint;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
-  public $remodelings;
   /**
    * @var string[]
    */
-  public $subType = [];
+  public $subType;
 
   /**
    * @param bool

@@ -27,7 +27,7 @@ class ContentProviderEndpoint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $signingCertsSha256 = [];
+  public $signingCertsSha256;
   /**
    * @var string
    */

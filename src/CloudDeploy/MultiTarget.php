@@ -23,7 +23,7 @@ class MultiTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetIds = [];
+  public $targetIds;
 
   /**
    * @param string[]

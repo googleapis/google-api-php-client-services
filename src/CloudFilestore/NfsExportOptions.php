@@ -35,7 +35,7 @@ class NfsExportOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ipRanges = [];
+  public $ipRanges;
   /**
    * @var string
    */

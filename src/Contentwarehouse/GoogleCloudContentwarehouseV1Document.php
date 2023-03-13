@@ -22,7 +22,6 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   protected $collection_key = 'properties';
   protected $cloudAiDocumentType = GoogleCloudDocumentaiV1Document::class;
   protected $cloudAiDocumentDataType = '';
-  public $cloudAiDocument;
   /**
    * @var string
    */
@@ -61,7 +60,6 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   public $plainText;
   protected $propertiesType = GoogleCloudContentwarehouseV1Property::class;
   protected $propertiesDataType = 'array';
-  public $properties = [];
   /**
    * @var string
    */

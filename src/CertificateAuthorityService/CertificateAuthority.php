@@ -22,13 +22,10 @@ class CertificateAuthority extends \Google\Collection
   protected $collection_key = 'pemCaCertificates';
   protected $accessUrlsType = AccessUrls::class;
   protected $accessUrlsDataType = '';
-  public $accessUrls;
   protected $caCertificateDescriptionsType = CertificateDescription::class;
   protected $caCertificateDescriptionsDataType = 'array';
-  public $caCertificateDescriptions = [];
   protected $configType = CertificateConfig::class;
   protected $configDataType = '';
-  public $config;
   /**
    * @var string
    */
@@ -47,11 +44,10 @@ class CertificateAuthority extends \Google\Collection
   public $gcsBucket;
   protected $keySpecType = KeyVersionSpec::class;
   protected $keySpecDataType = '';
-  public $keySpec;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -63,14 +59,13 @@ class CertificateAuthority extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pemCaCertificates = [];
+  public $pemCaCertificates;
   /**
    * @var string
    */
   public $state;
   protected $subordinateConfigType = SubordinateConfig::class;
   protected $subordinateConfigDataType = '';
-  public $subordinateConfig;
   /**
    * @var string
    */

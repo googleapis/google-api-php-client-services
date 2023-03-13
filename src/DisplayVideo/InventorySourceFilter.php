@@ -23,7 +23,7 @@ class InventorySourceFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inventorySourceIds = [];
+  public $inventorySourceIds;
 
   /**
    * @param string[]

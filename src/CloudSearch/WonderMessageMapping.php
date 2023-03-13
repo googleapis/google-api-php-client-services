@@ -23,7 +23,7 @@ class WonderMessageMapping extends \Google\Collection
   /**
    * @var string[]
    */
-  public $wonderCardMessageId = [];
+  public $wonderCardMessageId;
 
   /**
    * @param string[]

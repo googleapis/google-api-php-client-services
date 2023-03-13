@@ -22,7 +22,6 @@ class GoogleCloudRecommenderV1Insight extends \Google\Collection
   protected $collection_key = 'targetResources';
   protected $associatedRecommendationsType = GoogleCloudRecommenderV1InsightRecommendationReference::class;
   protected $associatedRecommendationsDataType = 'array';
-  public $associatedRecommendations = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class GoogleCloudRecommenderV1Insight extends \Google\Collection
   /**
    * @var array[]
    */
-  public $content = [];
+  public $content;
   /**
    * @var string
    */
@@ -61,11 +60,10 @@ class GoogleCloudRecommenderV1Insight extends \Google\Collection
   public $severity;
   protected $stateInfoType = GoogleCloudRecommenderV1InsightStateInfo::class;
   protected $stateInfoDataType = '';
-  public $stateInfo;
   /**
    * @var string[]
    */
-  public $targetResources = [];
+  public $targetResources;
 
   /**
    * @param GoogleCloudRecommenderV1InsightRecommendationReference[]

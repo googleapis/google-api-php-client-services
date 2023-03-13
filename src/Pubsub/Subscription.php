@@ -25,10 +25,8 @@ class Subscription extends \Google\Model
   public $ackDeadlineSeconds;
   protected $bigqueryConfigType = BigQueryConfig::class;
   protected $bigqueryConfigDataType = '';
-  public $bigqueryConfig;
   protected $deadLetterPolicyType = DeadLetterPolicy::class;
   protected $deadLetterPolicyDataType = '';
-  public $deadLetterPolicy;
   /**
    * @var bool
    */
@@ -43,7 +41,6 @@ class Subscription extends \Google\Model
   public $enableMessageOrdering;
   protected $expirationPolicyType = ExpirationPolicy::class;
   protected $expirationPolicyDataType = '';
-  public $expirationPolicy;
   /**
    * @var string
    */
@@ -51,7 +48,7 @@ class Subscription extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -62,14 +59,12 @@ class Subscription extends \Google\Model
   public $name;
   protected $pushConfigType = PushConfig::class;
   protected $pushConfigDataType = '';
-  public $pushConfig;
   /**
    * @var bool
    */
   public $retainAckedMessages;
   protected $retryPolicyType = RetryPolicy::class;
   protected $retryPolicyDataType = '';
-  public $retryPolicy;
   /**
    * @var string
    */

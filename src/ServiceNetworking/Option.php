@@ -26,7 +26,7 @@ class Option extends \Google\Model
   /**
    * @var array[]
    */
-  public $value = [];
+  public $value;
 
   /**
    * @param string

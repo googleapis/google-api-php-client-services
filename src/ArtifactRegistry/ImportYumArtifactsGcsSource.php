@@ -23,7 +23,7 @@ class ImportYumArtifactsGcsSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $uris = [];
+  public $uris;
   /**
    * @var bool
    */

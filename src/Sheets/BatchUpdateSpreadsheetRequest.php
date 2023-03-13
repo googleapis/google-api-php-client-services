@@ -26,7 +26,6 @@ class BatchUpdateSpreadsheetRequest extends \Google\Collection
   public $includeSpreadsheetInResponse;
   protected $requestsType = Request::class;
   protected $requestsDataType = 'array';
-  public $requests = [];
   /**
    * @var bool
    */
@@ -34,7 +33,7 @@ class BatchUpdateSpreadsheetRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $responseRanges = [];
+  public $responseRanges;
 
   /**
    * @param bool

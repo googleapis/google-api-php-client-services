@@ -23,25 +23,23 @@ class RdapResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $description = [];
+  public $description;
   /**
    * @var int
    */
   public $errorCode;
   protected $jsonResponseType = HttpBody::class;
   protected $jsonResponseDataType = '';
-  public $jsonResponse;
   /**
    * @var string
    */
   public $lang;
   protected $noticesType = Notice::class;
   protected $noticesDataType = 'array';
-  public $notices = [];
   /**
    * @var string[]
    */
-  public $rdapConformance = [];
+  public $rdapConformance;
   /**
    * @var string
    */

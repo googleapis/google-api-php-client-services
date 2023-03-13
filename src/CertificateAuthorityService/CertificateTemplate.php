@@ -29,21 +29,18 @@ class CertificateTemplate extends \Google\Model
   public $description;
   protected $identityConstraintsType = CertificateIdentityConstraints::class;
   protected $identityConstraintsDataType = '';
-  public $identityConstraints;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $passthroughExtensionsType = CertificateExtensionConstraints::class;
   protected $passthroughExtensionsDataType = '';
-  public $passthroughExtensions;
   protected $predefinedValuesType = X509Parameters::class;
   protected $predefinedValuesDataType = '';
-  public $predefinedValues;
   /**
    * @var string
    */

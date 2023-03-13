@@ -39,7 +39,7 @@ class InstanceInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $networkTags = [];
+  public $networkTags;
   /**
    * @var string
    */

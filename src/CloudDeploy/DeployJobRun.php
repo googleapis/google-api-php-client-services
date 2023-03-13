@@ -33,7 +33,6 @@ class DeployJobRun extends \Google\Model
   public $failureMessage;
   protected $metadataType = DeployJobRunMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
 
   /**
    * @param string

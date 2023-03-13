@@ -62,7 +62,8 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified TargetHttpsProxy resource in the specified region.
+   * Returns the specified TargetHttpsProxy resource in the specified region. Gets
+   * a list of available target HTTP proxies by making a list() request.
    * (regionTargetHttpsProxies.get)
    *
    * @param string $project Project ID for this request.

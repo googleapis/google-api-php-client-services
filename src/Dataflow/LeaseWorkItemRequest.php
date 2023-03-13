@@ -35,15 +35,15 @@ class LeaseWorkItemRequest extends \Google\Collection
   /**
    * @var array[]
    */
-  public $unifiedWorkerRequest = [];
+  public $unifiedWorkerRequest;
   /**
    * @var string[]
    */
-  public $workItemTypes = [];
+  public $workItemTypes;
   /**
    * @var string[]
    */
-  public $workerCapabilities = [];
+  public $workerCapabilities;
   /**
    * @var string
    */

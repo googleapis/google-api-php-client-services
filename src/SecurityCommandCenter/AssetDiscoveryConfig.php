@@ -23,7 +23,7 @@ class AssetDiscoveryConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $folderIds = [];
+  public $folderIds;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class AssetDiscoveryConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $projectIds = [];
+  public $projectIds;
 
   /**
    * @param string[]

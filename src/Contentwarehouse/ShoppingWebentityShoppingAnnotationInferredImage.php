@@ -17,9 +17,8 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class ShoppingWebentityShoppingAnnotationInferredImage extends \Google\Collection
+class ShoppingWebentityShoppingAnnotationInferredImage extends \Google\Model
 {
-  protected $collection_key = 'neardupInfo';
   /**
    * @var string
    */
@@ -32,9 +31,6 @@ class ShoppingWebentityShoppingAnnotationInferredImage extends \Google\Collectio
    * @var string
    */
   public $inferredImageType;
-  protected $neardupInfoType = ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo::class;
-  protected $neardupInfoDataType = 'array';
-  public $neardupInfo = [];
 
   /**
    * @param string
@@ -77,20 +73,6 @@ class ShoppingWebentityShoppingAnnotationInferredImage extends \Google\Collectio
   public function getInferredImageType()
   {
     return $this->inferredImageType;
-  }
-  /**
-   * @param ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo[]
-   */
-  public function setNeardupInfo($neardupInfo)
-  {
-    $this->neardupInfo = $neardupInfo;
-  }
-  /**
-   * @return ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo[]
-   */
-  public function getNeardupInfo()
-  {
-    return $this->neardupInfo;
   }
 }
 

@@ -25,11 +25,9 @@ class EnterpriseCrmEventbusProtoValueType extends \Google\Model
   public $booleanValue;
   protected $doubleArrayType = EnterpriseCrmEventbusProtoDoubleArray::class;
   protected $doubleArrayDataType = '';
-  public $doubleArray;
   public $doubleValue;
   protected $intArrayType = EnterpriseCrmEventbusProtoIntArray::class;
   protected $intArrayDataType = '';
-  public $intArray;
   /**
    * @var string
    */
@@ -37,10 +35,9 @@ class EnterpriseCrmEventbusProtoValueType extends \Google\Model
   /**
    * @var array[]
    */
-  public $protoValue = [];
+  public $protoValue;
   protected $stringArrayType = EnterpriseCrmEventbusProtoStringArray::class;
   protected $stringArrayDataType = '';
-  public $stringArray;
   /**
    * @var string
    */

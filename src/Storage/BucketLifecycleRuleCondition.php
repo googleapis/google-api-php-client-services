@@ -51,15 +51,15 @@ class BucketLifecycleRuleCondition extends \Google\Collection
   /**
    * @var string[]
    */
-  public $matchesPrefix = [];
+  public $matchesPrefix;
   /**
    * @var string[]
    */
-  public $matchesStorageClass = [];
+  public $matchesStorageClass;
   /**
    * @var string[]
    */
-  public $matchesSuffix = [];
+  public $matchesSuffix;
   /**
    * @var string
    */

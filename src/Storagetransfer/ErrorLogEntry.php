@@ -23,7 +23,7 @@ class ErrorLogEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $errorDetails = [];
+  public $errorDetails;
   /**
    * @var string
    */

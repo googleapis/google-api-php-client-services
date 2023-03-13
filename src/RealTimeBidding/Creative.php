@@ -50,41 +50,38 @@ class Creative extends \Google\Collection
   public $creativeId;
   protected $creativeServingDecisionType = CreativeServingDecision::class;
   protected $creativeServingDecisionDataType = '';
-  public $creativeServingDecision;
   /**
    * @var string[]
    */
-  public $dealIds = [];
+  public $dealIds;
   /**
    * @var string[]
    */
-  public $declaredAttributes = [];
+  public $declaredAttributes;
   /**
    * @var string[]
    */
-  public $declaredClickThroughUrls = [];
+  public $declaredClickThroughUrls;
   /**
    * @var string[]
    */
-  public $declaredRestrictedCategories = [];
+  public $declaredRestrictedCategories;
   /**
    * @var int[]
    */
-  public $declaredVendorIds = [];
+  public $declaredVendorIds;
   protected $htmlType = HtmlContent::class;
   protected $htmlDataType = '';
-  public $html;
   /**
    * @var string[]
    */
-  public $impressionTrackingUrls = [];
+  public $impressionTrackingUrls;
   /**
    * @var string
    */
   public $name;
   protected $nativeType = NativeContent::class;
   protected $nativeDataType = '';
-  public $native;
   /**
    * @var string
    */
@@ -92,14 +89,13 @@ class Creative extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictedCategories = [];
+  public $restrictedCategories;
   /**
    * @var int
    */
   public $version;
   protected $videoType = VideoContent::class;
   protected $videoDataType = '';
-  public $video;
 
   /**
    * @param string

@@ -55,7 +55,7 @@ class GoogleCloudApigeeV1CertInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subjectAlternativeNames = [];
+  public $subjectAlternativeNames;
   /**
    * @var string
    */

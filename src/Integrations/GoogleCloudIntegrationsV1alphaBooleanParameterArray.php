@@ -23,7 +23,7 @@ class GoogleCloudIntegrationsV1alphaBooleanParameterArray extends \Google\Collec
   /**
    * @var bool[]
    */
-  public $booleanValues = [];
+  public $booleanValues;
 
   /**
    * @param bool[]

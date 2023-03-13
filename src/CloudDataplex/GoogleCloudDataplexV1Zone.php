@@ -21,7 +21,6 @@ class GoogleCloudDataplexV1Zone extends \Google\Model
 {
   protected $assetStatusType = GoogleCloudDataplexV1AssetStatus::class;
   protected $assetStatusDataType = '';
-  public $assetStatus;
   /**
    * @var string
    */
@@ -32,7 +31,6 @@ class GoogleCloudDataplexV1Zone extends \Google\Model
   public $description;
   protected $discoverySpecType = GoogleCloudDataplexV1ZoneDiscoverySpec::class;
   protected $discoverySpecDataType = '';
-  public $discoverySpec;
   /**
    * @var string
    */
@@ -40,14 +38,13 @@ class GoogleCloudDataplexV1Zone extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $resourceSpecType = GoogleCloudDataplexV1ZoneResourceSpec::class;
   protected $resourceSpecDataType = '';
-  public $resourceSpec;
   /**
    * @var string
    */

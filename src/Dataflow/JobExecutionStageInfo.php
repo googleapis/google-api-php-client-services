@@ -23,7 +23,7 @@ class JobExecutionStageInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $stepName = [];
+  public $stepName;
 
   /**
    * @param string[]

@@ -35,7 +35,7 @@ class CmHybridConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cmSyncableSiteIds = [];
+  public $cmSyncableSiteIds;
   /**
    * @var bool
    */

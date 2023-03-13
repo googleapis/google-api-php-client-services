@@ -23,7 +23,7 @@ class ListCollectionIdsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $collectionIds = [];
+  public $collectionIds;
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class MessageStoragePolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedPersistenceRegions = [];
+  public $allowedPersistenceRegions;
 
   /**
    * @param string[]

@@ -22,11 +22,10 @@ class GooglePrivacyDlpV2Error extends \Google\Collection
   protected $collection_key = 'timestamps';
   protected $detailsType = GoogleRpcStatus::class;
   protected $detailsDataType = '';
-  public $details;
   /**
    * @var string[]
    */
-  public $timestamps = [];
+  public $timestamps;
 
   /**
    * @param GoogleRpcStatus

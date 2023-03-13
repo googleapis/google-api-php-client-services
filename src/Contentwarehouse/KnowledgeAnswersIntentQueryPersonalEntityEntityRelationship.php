@@ -27,7 +27,7 @@ class KnowledgeAnswersIntentQueryPersonalEntityEntityRelationship extends \Googl
   /**
    * @var string[]
    */
-  public $linkPropertyName = [];
+  public $linkPropertyName;
 
   /**
    * @param int

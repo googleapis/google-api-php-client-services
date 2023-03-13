@@ -23,7 +23,7 @@ class RepositoryWebrefAnchorIndices extends \Google\Collection
   /**
    * @var int[]
    */
-  public $index = [];
+  public $index;
 
   /**
    * @param int[]

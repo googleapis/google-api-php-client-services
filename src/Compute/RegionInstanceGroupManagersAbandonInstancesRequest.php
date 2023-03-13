@@ -23,7 +23,7 @@ class RegionInstanceGroupManagersAbandonInstancesRequest extends \Google\Collect
   /**
    * @var string[]
    */
-  public $instances = [];
+  public $instances;
 
   /**
    * @param string[]

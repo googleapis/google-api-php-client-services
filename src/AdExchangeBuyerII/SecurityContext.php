@@ -23,7 +23,7 @@ class SecurityContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $securities = [];
+  public $securities;
 
   /**
    * @param string[]

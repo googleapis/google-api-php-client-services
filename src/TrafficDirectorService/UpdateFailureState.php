@@ -26,7 +26,7 @@ class UpdateFailureState extends \Google\Model
   /**
    * @var array[]
    */
-  public $failedConfiguration = [];
+  public $failedConfiguration;
   /**
    * @var string
    */

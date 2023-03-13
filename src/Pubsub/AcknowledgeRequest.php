@@ -23,7 +23,7 @@ class AcknowledgeRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ackIds = [];
+  public $ackIds;
 
   /**
    * @param string[]

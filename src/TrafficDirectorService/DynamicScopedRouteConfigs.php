@@ -31,7 +31,7 @@ class DynamicScopedRouteConfigs extends \Google\Collection
   /**
    * @var array[]
    */
-  public $scopedRouteConfigs = [];
+  public $scopedRouteConfigs;
   /**
    * @var string
    */

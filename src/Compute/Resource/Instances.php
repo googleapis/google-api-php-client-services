@@ -340,7 +340,8 @@ class Instances extends \Google\Service\Resource
     return $this->call('detachDisk', [$params], Operation::class);
   }
   /**
-   * Returns the specified Instance resource. (instances.get)
+   * Returns the specified Instance resource. Gets a list of available instances
+   * by making a list() request. (instances.get)
    *
    * @param string $project Project ID for this request.
    * @param string $zone The name of the zone for this request.

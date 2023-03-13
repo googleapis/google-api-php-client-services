@@ -22,7 +22,7 @@ class InlineSecret extends \Google\Model
   /**
    * @var string[]
    */
-  public $envMap = [];
+  public $envMap;
   /**
    * @var string
    */

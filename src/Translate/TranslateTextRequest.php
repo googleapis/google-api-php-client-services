@@ -23,14 +23,13 @@ class TranslateTextRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $contents = [];
+  public $contents;
   protected $glossaryConfigType = TranslateTextGlossaryConfig::class;
   protected $glossaryConfigDataType = '';
-  public $glossaryConfig;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

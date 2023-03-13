@@ -23,11 +23,11 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $brand = [];
+  public $brand;
   /**
    * @var string[]
    */
-  public $brandExclusion = [];
+  public $brandExclusion;
   /**
    * @var string
    */
@@ -46,7 +46,6 @@ class Promotion extends \Google\Collection
   public $freeGiftItemId;
   protected $freeGiftValueType = PriceAmount::class;
   protected $freeGiftValueDataType = '';
-  public $freeGiftValue;
   /**
    * @var string
    */
@@ -62,43 +61,39 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $itemGroupId = [];
+  public $itemGroupId;
   /**
    * @var string[]
    */
-  public $itemGroupIdExclusion = [];
+  public $itemGroupIdExclusion;
   /**
    * @var string[]
    */
-  public $itemId = [];
+  public $itemId;
   /**
    * @var string[]
    */
-  public $itemIdExclusion = [];
+  public $itemIdExclusion;
   /**
    * @var int
    */
   public $limitQuantity;
   protected $limitValueType = PriceAmount::class;
   protected $limitValueDataType = '';
-  public $limitValue;
   /**
    * @var string
    */
   public $longTitle;
   protected $minimumPurchaseAmountType = PriceAmount::class;
   protected $minimumPurchaseAmountDataType = '';
-  public $minimumPurchaseAmount;
   /**
    * @var int
    */
   public $minimumPurchaseQuantity;
   protected $moneyBudgetType = PriceAmount::class;
   protected $moneyBudgetDataType = '';
-  public $moneyBudget;
   protected $moneyOffAmountType = PriceAmount::class;
   protected $moneyOffAmountDataType = '';
-  public $moneyOffAmount;
   /**
    * @var string
    */
@@ -118,36 +113,33 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productType = [];
+  public $productType;
   /**
    * @var string[]
    */
-  public $productTypeExclusion = [];
+  public $productTypeExclusion;
   /**
    * @var string[]
    */
-  public $promotionDestinationIds = [];
+  public $promotionDestinationIds;
   /**
    * @var string
    */
   public $promotionDisplayDates;
   protected $promotionDisplayTimePeriodType = TimePeriod::class;
   protected $promotionDisplayTimePeriodDataType = '';
-  public $promotionDisplayTimePeriod;
   /**
    * @var string
    */
   public $promotionEffectiveDates;
   protected $promotionEffectiveTimePeriodType = TimePeriod::class;
   protected $promotionEffectiveTimePeriodDataType = '';
-  public $promotionEffectiveTimePeriod;
   /**
    * @var string
    */
   public $promotionId;
   protected $promotionStatusType = PromotionPromotionStatus::class;
   protected $promotionStatusDataType = '';
-  public $promotionStatus;
   /**
    * @var string
    */
@@ -155,11 +147,11 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $redemptionChannel = [];
+  public $redemptionChannel;
   /**
    * @var string[]
    */
-  public $shippingServiceNames = [];
+  public $shippingServiceNames;
   /**
    * @var string
    */
@@ -167,11 +159,11 @@ class Promotion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $storeCode = [];
+  public $storeCode;
   /**
    * @var string[]
    */
-  public $storeCodeExclusion = [];
+  public $storeCodeExclusion;
   /**
    * @var string
    */

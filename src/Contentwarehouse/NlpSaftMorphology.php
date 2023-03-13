@@ -23,7 +23,7 @@ class NlpSaftMorphology extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attrValue = [];
+  public $attrValue;
 
   /**
    * @param string[]

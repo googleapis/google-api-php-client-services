@@ -22,25 +22,22 @@ class Version extends \Google\Collection
   protected $collection_key = 'zones';
   protected $apiConfigType = ApiConfigHandler::class;
   protected $apiConfigDataType = '';
-  public $apiConfig;
   /**
    * @var bool
    */
   public $appEngineApis;
   protected $automaticScalingType = AutomaticScaling::class;
   protected $automaticScalingDataType = '';
-  public $automaticScaling;
   protected $basicScalingType = BasicScaling::class;
   protected $basicScalingDataType = '';
-  public $basicScaling;
   /**
    * @var string[]
    */
-  public $betaSettings = [];
+  public $betaSettings;
   /**
    * @var string[]
    */
-  public $buildEnvVariables = [];
+  public $buildEnvVariables;
   /**
    * @var string
    */
@@ -55,17 +52,14 @@ class Version extends \Google\Collection
   public $defaultExpiration;
   protected $deploymentType = Deployment::class;
   protected $deploymentDataType = '';
-  public $deployment;
   /**
    * @var string
    */
   public $diskUsageBytes;
   protected $endpointsApiServiceType = EndpointsApiService::class;
   protected $endpointsApiServiceDataType = '';
-  public $endpointsApiService;
   protected $entrypointType = Entrypoint::class;
   protected $entrypointDataType = '';
-  public $entrypoint;
   /**
    * @var string
    */
@@ -73,19 +67,15 @@ class Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $envVariables = [];
+  public $envVariables;
   protected $errorHandlersType = ErrorHandler::class;
   protected $errorHandlersDataType = 'array';
-  public $errorHandlers = [];
   protected $flexibleRuntimeSettingsType = FlexibleRuntimeSettings::class;
   protected $flexibleRuntimeSettingsDataType = '';
-  public $flexibleRuntimeSettings;
   protected $handlersType = UrlMap::class;
   protected $handlersDataType = 'array';
-  public $handlers = [];
   protected $healthCheckType = HealthCheck::class;
   protected $healthCheckDataType = '';
-  public $healthCheck;
   /**
    * @var string
    */
@@ -93,37 +83,31 @@ class Version extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inboundServices = [];
+  public $inboundServices;
   /**
    * @var string
    */
   public $instanceClass;
   protected $librariesType = Library::class;
   protected $librariesDataType = 'array';
-  public $libraries = [];
   protected $livenessCheckType = LivenessCheck::class;
   protected $livenessCheckDataType = '';
-  public $livenessCheck;
   protected $manualScalingType = ManualScaling::class;
   protected $manualScalingDataType = '';
-  public $manualScaling;
   /**
    * @var string
    */
   public $name;
   protected $networkType = Network::class;
   protected $networkDataType = '';
-  public $network;
   /**
    * @var string
    */
   public $nobuildFilesRegex;
   protected $readinessCheckType = ReadinessCheck::class;
   protected $readinessCheckDataType = '';
-  public $readinessCheck;
   protected $resourcesType = Resources::class;
   protected $resourcesDataType = '';
-  public $resources;
   /**
    * @var string
    */
@@ -162,11 +146,10 @@ class Version extends \Google\Collection
   public $vm;
   protected $vpcAccessConnectorType = VpcAccessConnector::class;
   protected $vpcAccessConnectorDataType = '';
-  public $vpcAccessConnector;
   /**
    * @var string[]
    */
-  public $zones = [];
+  public $zones;
 
   /**
    * @param ApiConfigHandler

@@ -23,11 +23,11 @@ class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest extends \Google
   /**
    * @var string[]
    */
-  public $action = [];
+  public $action;
   /**
    * @var string[]
    */
-  public $actorEmail = [];
+  public $actorEmail;
   /**
    * @var string
    */
@@ -51,7 +51,7 @@ class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest extends \Google
   /**
    * @var string[]
    */
-  public $resourceType = [];
+  public $resourceType;
 
   /**
    * @param string[]

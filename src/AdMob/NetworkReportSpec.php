@@ -22,17 +22,14 @@ class NetworkReportSpec extends \Google\Collection
   protected $collection_key = 'sortConditions';
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
-  public $dateRange;
   protected $dimensionFiltersType = NetworkReportSpecDimensionFilter::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters = [];
   /**
    * @var string[]
    */
-  public $dimensions = [];
+  public $dimensions;
   protected $localizationSettingsType = LocalizationSettings::class;
   protected $localizationSettingsDataType = '';
-  public $localizationSettings;
   /**
    * @var int
    */
@@ -40,10 +37,9 @@ class NetworkReportSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metrics = [];
+  public $metrics;
   protected $sortConditionsType = NetworkReportSpecSortCondition::class;
   protected $sortConditionsDataType = 'array';
-  public $sortConditions = [];
   /**
    * @var string
    */

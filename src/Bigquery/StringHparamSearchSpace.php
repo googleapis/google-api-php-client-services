@@ -23,7 +23,7 @@ class StringHparamSearchSpace extends \Google\Collection
   /**
    * @var string[]
    */
-  public $candidates = [];
+  public $candidates;
 
   /**
    * @param string[]

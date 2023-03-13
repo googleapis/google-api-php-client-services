@@ -22,25 +22,22 @@ class AwsSourceDetails extends \Google\Collection
   protected $collection_key = 'inventoryTagList';
   protected $accessKeyCredsType = AccessKeyCredentials::class;
   protected $accessKeyCredsDataType = '';
-  public $accessKeyCreds;
   /**
    * @var string
    */
   public $awsRegion;
   protected $errorType = Status::class;
   protected $errorDataType = '';
-  public $error;
   /**
    * @var string[]
    */
-  public $inventorySecurityGroupNames = [];
+  public $inventorySecurityGroupNames;
   protected $inventoryTagListType = Tag::class;
   protected $inventoryTagListDataType = 'array';
-  public $inventoryTagList = [];
   /**
    * @var string[]
    */
-  public $migrationResourcesUserTags = [];
+  public $migrationResourcesUserTags;
   /**
    * @var string
    */

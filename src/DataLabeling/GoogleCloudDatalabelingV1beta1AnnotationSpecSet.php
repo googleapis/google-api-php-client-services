@@ -22,11 +22,10 @@ class GoogleCloudDatalabelingV1beta1AnnotationSpecSet extends \Google\Collection
   protected $collection_key = 'blockingResources';
   protected $annotationSpecsType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecsDataType = 'array';
-  public $annotationSpecs = [];
   /**
    * @var string[]
    */
-  public $blockingResources = [];
+  public $blockingResources;
   /**
    * @var string
    */

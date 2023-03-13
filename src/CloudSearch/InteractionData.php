@@ -21,7 +21,6 @@ class InteractionData extends \Google\Model
 {
   protected $urlType = SafeUrlProto::class;
   protected $urlDataType = '';
-  public $url;
 
   /**
    * @param SafeUrlProto

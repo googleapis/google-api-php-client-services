@@ -23,7 +23,7 @@ class SignBlobRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $delegates = [];
+  public $delegates;
   /**
    * @var string
    */

@@ -27,11 +27,11 @@ class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $includeOrgIds = [];
+  public $includeOrgIds;
   /**
    * @var string[]
    */
-  public $includeProjectIds = [];
+  public $includeProjectIds;
   /**
    * @var bool
    */
@@ -39,7 +39,7 @@ class GoogleCloudDatacatalogV1SearchCatalogRequestScope extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $restrictedLocations = [];
+  public $restrictedLocations;
   /**
    * @var bool
    */

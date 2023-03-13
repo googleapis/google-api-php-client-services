@@ -22,18 +22,16 @@ class GoogleCloudMlV1ReplicaConfig extends \Google\Collection
   protected $collection_key = 'containerCommand';
   protected $acceleratorConfigType = GoogleCloudMlV1AcceleratorConfig::class;
   protected $acceleratorConfigDataType = '';
-  public $acceleratorConfig;
   /**
    * @var string[]
    */
-  public $containerArgs = [];
+  public $containerArgs;
   /**
    * @var string[]
    */
-  public $containerCommand = [];
+  public $containerCommand;
   protected $diskConfigType = GoogleCloudMlV1DiskConfig::class;
   protected $diskConfigDataType = '';
-  public $diskConfig;
   /**
    * @var string
    */

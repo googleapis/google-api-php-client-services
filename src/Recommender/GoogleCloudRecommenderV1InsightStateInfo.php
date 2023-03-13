@@ -26,7 +26,7 @@ class GoogleCloudRecommenderV1InsightStateInfo extends \Google\Model
   /**
    * @var string[]
    */
-  public $stateMetadata = [];
+  public $stateMetadata;
 
   /**
    * @param string

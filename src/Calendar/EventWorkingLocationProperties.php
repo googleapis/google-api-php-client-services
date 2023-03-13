@@ -21,14 +21,12 @@ class EventWorkingLocationProperties extends \Google\Model
 {
   protected $customLocationType = EventWorkingLocationPropertiesCustomLocation::class;
   protected $customLocationDataType = '';
-  public $customLocation;
   /**
    * @var array
    */
   public $homeOffice;
   protected $officeLocationType = EventWorkingLocationPropertiesOfficeLocation::class;
   protected $officeLocationDataType = '';
-  public $officeLocation;
 
   /**
    * @param EventWorkingLocationPropertiesCustomLocation

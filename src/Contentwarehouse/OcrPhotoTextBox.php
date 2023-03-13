@@ -26,7 +26,6 @@ class OcrPhotoTextBox extends \Google\Collection
   public $blockId;
   protected $boxType = OcrPhotoBoundingBox::class;
   protected $boxDataType = '';
-  public $box;
   /**
    * @var string
    */
@@ -34,7 +33,7 @@ class OcrPhotoTextBox extends \Google\Collection
   /**
    * @var int[]
    */
-  public $symbolWidths = [];
+  public $symbolWidths;
   /**
    * @var string
    */

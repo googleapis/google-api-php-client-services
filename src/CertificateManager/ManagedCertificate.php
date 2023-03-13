@@ -22,22 +22,20 @@ class ManagedCertificate extends \Google\Collection
   protected $collection_key = 'domains';
   protected $authorizationAttemptInfoType = AuthorizationAttemptInfo::class;
   protected $authorizationAttemptInfoDataType = 'array';
-  public $authorizationAttemptInfo = [];
   /**
    * @var string[]
    */
-  public $dnsAuthorizations = [];
+  public $dnsAuthorizations;
   /**
    * @var string[]
    */
-  public $domains = [];
+  public $domains;
   /**
    * @var string
    */
   public $issuanceConfig;
   protected $provisioningIssueType = ProvisioningIssue::class;
   protected $provisioningIssueDataType = '';
-  public $provisioningIssue;
   /**
    * @var string
    */

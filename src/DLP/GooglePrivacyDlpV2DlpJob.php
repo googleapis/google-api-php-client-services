@@ -30,10 +30,8 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
   public $endTime;
   protected $errorsType = GooglePrivacyDlpV2Error::class;
   protected $errorsDataType = 'array';
-  public $errors = [];
   protected $inspectDetailsType = GooglePrivacyDlpV2InspectDataSourceDetails::class;
   protected $inspectDetailsDataType = '';
-  public $inspectDetails;
   /**
    * @var string
    */
@@ -44,7 +42,6 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
   public $name;
   protected $riskDetailsType = GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails::class;
   protected $riskDetailsDataType = '';
-  public $riskDetails;
   /**
    * @var string
    */

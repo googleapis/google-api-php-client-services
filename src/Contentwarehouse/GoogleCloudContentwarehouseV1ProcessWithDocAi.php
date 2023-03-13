@@ -23,14 +23,13 @@ class GoogleCloudContentwarehouseV1ProcessWithDocAi extends \Google\Collection
   /**
    * @var string[]
    */
-  public $documents = [];
+  public $documents;
   /**
    * @var string
    */
   public $exportFolderPath;
   protected $processorInfoType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $processorInfoDataType = '';
-  public $processorInfo;
   /**
    * @var string
    */

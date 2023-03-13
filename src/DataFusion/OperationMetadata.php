@@ -22,7 +22,7 @@ class OperationMetadata extends \Google\Model
   /**
    * @var string[]
    */
-  public $additionalStatus = [];
+  public $additionalStatus;
   /**
    * @var string
    */

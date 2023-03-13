@@ -27,19 +27,19 @@ class CorsPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowHeaders = [];
+  public $allowHeaders;
   /**
    * @var string[]
    */
-  public $allowMethods = [];
+  public $allowMethods;
   /**
    * @var string[]
    */
-  public $allowOriginRegexes = [];
+  public $allowOriginRegexes;
   /**
    * @var string[]
    */
-  public $allowOrigins = [];
+  public $allowOrigins;
   /**
    * @var bool
    */
@@ -47,7 +47,7 @@ class CorsPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exposeHeaders = [];
+  public $exposeHeaders;
   /**
    * @var int
    */

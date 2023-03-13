@@ -26,7 +26,7 @@ class GoogleCloudSecuritycenterV1p1beta1SecurityMarks extends \Google\Model
   /**
    * @var string[]
    */
-  public $marks = [];
+  public $marks;
   /**
    * @var string
    */

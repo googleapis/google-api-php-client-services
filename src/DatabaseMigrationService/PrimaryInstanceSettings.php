@@ -22,7 +22,7 @@ class PrimaryInstanceSettings extends \Google\Model
   /**
    * @var string[]
    */
-  public $databaseFlags = [];
+  public $databaseFlags;
   /**
    * @var string
    */
@@ -30,10 +30,9 @@ class PrimaryInstanceSettings extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $machineConfigType = MachineConfig::class;
   protected $machineConfigDataType = '';
-  public $machineConfig;
   /**
    * @var string
    */

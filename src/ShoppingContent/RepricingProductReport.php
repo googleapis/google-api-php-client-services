@@ -26,19 +26,14 @@ class RepricingProductReport extends \Google\Collection
   public $applicationCount;
   protected $buyboxWinningProductStatsType = RepricingProductReportBuyboxWinningProductStats::class;
   protected $buyboxWinningProductStatsDataType = '';
-  public $buyboxWinningProductStats;
   protected $dateType = Date::class;
   protected $dateDataType = '';
-  public $date;
   protected $highWatermarkType = PriceAmount::class;
   protected $highWatermarkDataType = '';
-  public $highWatermark;
   protected $inapplicabilityDetailsType = InapplicabilityDetails::class;
   protected $inapplicabilityDetailsDataType = 'array';
-  public $inapplicabilityDetails = [];
   protected $lowWatermarkType = PriceAmount::class;
   protected $lowWatermarkDataType = '';
-  public $lowWatermark;
   /**
    * @var int
    */
@@ -46,10 +41,9 @@ class RepricingProductReport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ruleIds = [];
+  public $ruleIds;
   protected $totalGmvType = PriceAmount::class;
   protected $totalGmvDataType = '';
-  public $totalGmv;
   /**
    * @var string
    */

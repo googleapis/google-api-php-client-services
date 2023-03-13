@@ -26,7 +26,6 @@ class Interconnect extends \Google\Collection
   public $adminEnabled;
   protected $circuitInfosType = InterconnectCircuitInfo::class;
   protected $circuitInfosDataType = 'array';
-  public $circuitInfos = [];
   /**
    * @var string
    */
@@ -41,7 +40,6 @@ class Interconnect extends \Google\Collection
   public $description;
   protected $expectedOutagesType = InterconnectOutageNotification::class;
   protected $expectedOutagesDataType = 'array';
-  public $expectedOutages = [];
   /**
    * @var string
    */
@@ -57,7 +55,7 @@ class Interconnect extends \Google\Collection
   /**
    * @var string[]
    */
-  public $interconnectAttachments = [];
+  public $interconnectAttachments;
   /**
    * @var string
    */

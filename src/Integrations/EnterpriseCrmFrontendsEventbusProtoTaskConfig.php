@@ -22,7 +22,6 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   protected $collection_key = 'nextTasks';
   protected $alertConfigsType = EnterpriseCrmEventbusProtoTaskAlertConfig::class;
   protected $alertConfigsDataType = 'array';
-  public $alertConfigs = [];
   /**
    * @var string
    */
@@ -42,14 +41,13 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   /**
    * @var string
    */
-  public $errorCatcherId;
+  public $errorCatcherConfigId;
   /**
    * @var string
    */
   public $externalTaskType;
   protected $failurePolicyType = EnterpriseCrmEventbusProtoFailurePolicy::class;
   protected $failurePolicyDataType = '';
-  public $failurePolicy;
   /**
    * @var int
    */
@@ -68,17 +66,14 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   public $lastModifiedTime;
   protected $nextTasksType = EnterpriseCrmEventbusProtoNextTask::class;
   protected $nextTasksDataType = 'array';
-  public $nextTasks = [];
   /**
    * @var string
    */
   public $nextTasksExecutionPolicy;
   protected $parametersType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $parametersDataType = 'map';
-  public $parameters = [];
   protected $positionType = EnterpriseCrmEventbusProtoCoordinate::class;
   protected $positionDataType = '';
-  public $position;
   /**
    * @var string
    */
@@ -89,16 +84,12 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   public $preconditionLabel;
   protected $rollbackStrategyType = EnterpriseCrmFrontendsEventbusProtoRollbackStrategy::class;
   protected $rollbackStrategyDataType = '';
-  public $rollbackStrategy;
   protected $successPolicyType = EnterpriseCrmEventbusProtoSuccessPolicy::class;
   protected $successPolicyDataType = '';
-  public $successPolicy;
   protected $synchronousCallFailurePolicyType = EnterpriseCrmEventbusProtoFailurePolicy::class;
   protected $synchronousCallFailurePolicyDataType = '';
-  public $synchronousCallFailurePolicy;
   protected $taskEntityType = EnterpriseCrmFrontendsEventbusProtoTaskEntity::class;
   protected $taskEntityDataType = '';
-  public $taskEntity;
   /**
    * @var string
    */
@@ -197,16 +188,16 @@ class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends \Google\Collection
   /**
    * @param string
    */
-  public function setErrorCatcherId($errorCatcherId)
+  public function setErrorCatcherConfigId($errorCatcherConfigId)
   {
-    $this->errorCatcherId = $errorCatcherId;
+    $this->errorCatcherConfigId = $errorCatcherConfigId;
   }
   /**
    * @return string
    */
-  public function getErrorCatcherId()
+  public function getErrorCatcherConfigId()
   {
-    return $this->errorCatcherId;
+    return $this->errorCatcherConfigId;
   }
   /**
    * @param string

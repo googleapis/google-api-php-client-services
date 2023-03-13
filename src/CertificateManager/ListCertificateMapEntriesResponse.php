@@ -22,7 +22,6 @@ class ListCertificateMapEntriesResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $certificateMapEntriesType = CertificateMapEntry::class;
   protected $certificateMapEntriesDataType = 'array';
-  public $certificateMapEntries = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListCertificateMapEntriesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param CertificateMapEntry[]

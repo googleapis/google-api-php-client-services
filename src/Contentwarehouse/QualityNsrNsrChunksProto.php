@@ -27,7 +27,7 @@ class QualityNsrNsrChunksProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $secondaryChunks = [];
+  public $secondaryChunks;
 
   /**
    * @param string

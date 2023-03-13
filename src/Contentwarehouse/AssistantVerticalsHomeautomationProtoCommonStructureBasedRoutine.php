@@ -35,7 +35,7 @@ class AssistantVerticalsHomeautomationProtoCommonStructureBasedRoutine extends \
   /**
    * @var array[]
    */
-  public $payload = [];
+  public $payload;
   /**
    * @var string
    */
@@ -47,14 +47,13 @@ class AssistantVerticalsHomeautomationProtoCommonStructureBasedRoutine extends \
   /**
    * @var array[]
    */
-  public $storagePayload = [];
+  public $storagePayload;
   /**
    * @var string
    */
   public $structureId;
   protected $triggersType = AssistantVerticalsHomeautomationProtoCommonStructureBasedRoutineTrigger::class;
   protected $triggersDataType = 'array';
-  public $triggers = [];
   /**
    * @var string
    */
@@ -62,7 +61,7 @@ class AssistantVerticalsHomeautomationProtoCommonStructureBasedRoutine extends \
   /**
    * @var array[]
    */
-  public $uiPayload = [];
+  public $uiPayload;
 
   /**
    * @param bool

@@ -23,7 +23,7 @@ class AssistantVerticalsHomeautomationProtoConciergeFeatures extends \Google\Col
   /**
    * @var string[]
    */
-  public $conciergeProductFeatures = [];
+  public $conciergeProductFeatures;
 
   /**
    * @param string[]

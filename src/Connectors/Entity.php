@@ -22,7 +22,7 @@ class Entity extends \Google\Model
   /**
    * @var array[]
    */
-  public $fields = [];
+  public $fields;
   /**
    * @var string
    */

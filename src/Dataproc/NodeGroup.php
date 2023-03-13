@@ -23,18 +23,17 @@ class NodeGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $nodeGroupConfigType = InstanceGroupConfig::class;
   protected $nodeGroupConfigDataType = '';
-  public $nodeGroupConfig;
   /**
    * @var string[]
    */
-  public $roles = [];
+  public $roles;
 
   /**
    * @param string[]

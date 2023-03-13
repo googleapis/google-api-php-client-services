@@ -26,11 +26,10 @@ class GoogleHomeEnterpriseSdmV1Device extends \Google\Collection
   public $name;
   protected $parentRelationsType = GoogleHomeEnterpriseSdmV1ParentRelation::class;
   protected $parentRelationsDataType = 'array';
-  public $parentRelations = [];
   /**
    * @var array[]
    */
-  public $traits = [];
+  public $traits;
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class ScoresResetMultipleForAllRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $leaderboardIds = [];
+  public $leaderboardIds;
 
   /**
    * @param string

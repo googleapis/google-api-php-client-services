@@ -23,7 +23,7 @@ class RepositoryWebrefForwardingUrls extends \Google\Collection
   /**
    * @var string[]
    */
-  public $forwardingUrl = [];
+  public $forwardingUrl;
 
   /**
    * @param string[]

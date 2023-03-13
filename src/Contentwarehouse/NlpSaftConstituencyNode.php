@@ -23,14 +23,13 @@ class NlpSaftConstituencyNode extends \Google\Collection
   /**
    * @var int[]
    */
-  public $child = [];
+  public $child;
   /**
    * @var string
    */
   public $label;
   protected $phraseType = NlpSaftPhrase::class;
   protected $phraseDataType = '';
-  public $phrase;
 
   /**
    * @param int[]

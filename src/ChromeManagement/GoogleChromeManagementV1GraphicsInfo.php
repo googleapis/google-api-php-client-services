@@ -22,17 +22,14 @@ class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
   protected $collection_key = 'displayDevices';
   protected $adapterInfoType = GoogleChromeManagementV1GraphicsAdapterInfo::class;
   protected $adapterInfoDataType = '';
-  public $adapterInfo;
   protected $displayDevicesType = GoogleChromeManagementV1DisplayDevice::class;
   protected $displayDevicesDataType = 'array';
-  public $displayDevices = [];
   /**
    * @var bool
    */
   public $eprivacySupported;
   protected $touchScreenInfoType = GoogleChromeManagementV1TouchScreenInfo::class;
   protected $touchScreenInfoDataType = '';
-  public $touchScreenInfo;
 
   /**
    * @param GoogleChromeManagementV1GraphicsAdapterInfo

@@ -38,7 +38,6 @@ class GoogleCloudIntegrationsV1alphaAuthConfig extends \Google\Collection
   public $credentialType;
   protected $decryptedCredentialType = GoogleCloudIntegrationsV1alphaCredential::class;
   protected $decryptedCredentialDataType = '';
-  public $decryptedCredential;
   /**
    * @var string
    */
@@ -54,7 +53,7 @@ class GoogleCloudIntegrationsV1alphaAuthConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $expiryNotificationDuration = [];
+  public $expiryNotificationDuration;
   /**
    * @var string
    */

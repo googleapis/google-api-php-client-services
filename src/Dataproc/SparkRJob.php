@@ -23,18 +23,17 @@ class SparkRJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $archiveUris = [];
+  public $archiveUris;
   /**
    * @var string[]
    */
-  public $args = [];
+  public $args;
   /**
    * @var string[]
    */
-  public $fileUris = [];
+  public $fileUris;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
-  public $loggingConfig;
   /**
    * @var string
    */
@@ -42,7 +41,7 @@ class SparkRJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
 
   /**
    * @param string[]

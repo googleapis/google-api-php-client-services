@@ -22,7 +22,7 @@ class UpdateEntitiesWithConditionsResponse extends \Google\Model
   /**
    * @var array[]
    */
-  public $response = [];
+  public $response;
 
   /**
    * @param array[]

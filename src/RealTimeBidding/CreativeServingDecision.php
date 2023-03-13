@@ -22,57 +22,50 @@ class CreativeServingDecision extends \Google\Collection
   protected $collection_key = 'detectedVendorIds';
   protected $adTechnologyProvidersType = AdTechnologyProviders::class;
   protected $adTechnologyProvidersDataType = '';
-  public $adTechnologyProviders;
   protected $chinaPolicyComplianceType = PolicyCompliance::class;
   protected $chinaPolicyComplianceDataType = '';
-  public $chinaPolicyCompliance;
   protected $dealsPolicyComplianceType = PolicyCompliance::class;
   protected $dealsPolicyComplianceDataType = '';
-  public $dealsPolicyCompliance;
   protected $detectedAdvertisersType = AdvertiserAndBrand::class;
   protected $detectedAdvertisersDataType = 'array';
-  public $detectedAdvertisers = [];
   /**
    * @var string[]
    */
-  public $detectedAttributes = [];
+  public $detectedAttributes;
   /**
    * @var string[]
    */
-  public $detectedClickThroughUrls = [];
+  public $detectedClickThroughUrls;
   /**
    * @var string[]
    */
-  public $detectedDomains = [];
+  public $detectedDomains;
   /**
    * @var string[]
    */
-  public $detectedLanguages = [];
+  public $detectedLanguages;
   /**
    * @var int[]
    */
-  public $detectedProductCategories = [];
+  public $detectedProductCategories;
   /**
    * @var int[]
    */
-  public $detectedSensitiveCategories = [];
+  public $detectedSensitiveCategories;
   /**
    * @var int[]
    */
-  public $detectedVendorIds = [];
+  public $detectedVendorIds;
   /**
    * @var string
    */
   public $lastStatusUpdate;
   protected $networkPolicyComplianceType = PolicyCompliance::class;
   protected $networkPolicyComplianceDataType = '';
-  public $networkPolicyCompliance;
   protected $platformPolicyComplianceType = PolicyCompliance::class;
   protected $platformPolicyComplianceDataType = '';
-  public $platformPolicyCompliance;
   protected $russiaPolicyComplianceType = PolicyCompliance::class;
   protected $russiaPolicyComplianceDataType = '';
-  public $russiaPolicyCompliance;
 
   /**
    * @param AdTechnologyProviders

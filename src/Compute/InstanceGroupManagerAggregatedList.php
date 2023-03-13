@@ -26,7 +26,6 @@ class InstanceGroupManagerAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = InstanceGroupManagersScopedList::class;
   protected $itemsDataType = 'map';
-  public $items = [];
   /**
    * @var string
    */
@@ -42,10 +41,9 @@ class InstanceGroupManagerAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables = [];
+  public $unreachables;
   protected $warningType = InstanceGroupManagerAggregatedListWarning::class;
   protected $warningDataType = '';
-  public $warning;
 
   /**
    * @param string

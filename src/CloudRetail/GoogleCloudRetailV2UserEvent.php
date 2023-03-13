@@ -22,7 +22,6 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   protected $collection_key = 'productDetails';
   protected $attributesType = GoogleCloudRetailV2CustomAttribute::class;
   protected $attributesDataType = 'map';
-  public $attributes = [];
   /**
    * @var string
    */
@@ -33,11 +32,6 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public $cartId;
   protected $completionDetailType = GoogleCloudRetailV2CompletionDetail::class;
   protected $completionDetailDataType = '';
-  public $completionDetail;
-  /**
-   * @var string
-   */
-  public $domain;
   /**
    * @var string
    */
@@ -49,7 +43,7 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $experimentIds = [];
+  public $experimentIds;
   /**
    * @var string
    */
@@ -65,17 +59,15 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pageCategories = [];
+  public $pageCategories;
   /**
    * @var string
    */
   public $pageViewId;
   protected $productDetailsType = GoogleCloudRetailV2ProductDetail::class;
   protected $productDetailsDataType = 'array';
-  public $productDetails = [];
   protected $purchaseTransactionType = GoogleCloudRetailV2PurchaseTransaction::class;
   protected $purchaseTransactionDataType = '';
-  public $purchaseTransaction;
   /**
    * @var string
    */
@@ -94,7 +86,6 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public $uri;
   protected $userInfoType = GoogleCloudRetailV2UserInfo::class;
   protected $userInfoDataType = '';
-  public $userInfo;
   /**
    * @var string
    */
@@ -155,20 +146,6 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public function getCompletionDetail()
   {
     return $this->completionDetail;
-  }
-  /**
-   * @param string
-   */
-  public function setDomain($domain)
-  {
-    $this->domain = $domain;
-  }
-  /**
-   * @return string
-   */
-  public function getDomain()
-  {
-    return $this->domain;
   }
   /**
    * @param string

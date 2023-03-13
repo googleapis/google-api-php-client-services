@@ -241,13 +241,7 @@ class GroupsMemberships extends \Google\Service\Resource
    * Identity-mapped groups are uniquely identified by both a `member_key_id` and
    * a `member_key_namespace`, which requires an additional query input:
    * `member_key_namespace`. Example query: `member_key_id ==
-   * 'member_key_id_value' && in labels` Query may optionally contain equality
-   * operators on the parent of the group restricting the search within a
-   * particular customer, e.g. `parent == 'customers/{customer_id}'`. The
-   * `customer_id` must begin with "C" (for example, 'C046psxkn'). This filtering
-   * is only supported for Admins with groups read permissons on the input
-   * customer. Example query: `member_key_id == 'member_key_id_value' && in labels
-   * && parent == 'customers/C046psxkn'`
+   * 'member_key_id_value' && in labels`
    * @return SearchTransitiveGroupsResponse
    */
   public function searchTransitiveGroups($parent, $optParams = [])

@@ -23,7 +23,7 @@ class AnalysisCompleted extends \Google\Collection
   /**
    * @var string[]
    */
-  public $analysisType = [];
+  public $analysisType;
 
   /**
    * @param string[]

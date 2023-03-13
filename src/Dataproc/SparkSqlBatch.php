@@ -23,7 +23,7 @@ class SparkSqlBatch extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jarFileUris = [];
+  public $jarFileUris;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class SparkSqlBatch extends \Google\Collection
   /**
    * @var string[]
    */
-  public $queryVariables = [];
+  public $queryVariables;
 
   /**
    * @param string[]

@@ -34,7 +34,7 @@ class DestinationTableProperties extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
 
   /**
    * @param string

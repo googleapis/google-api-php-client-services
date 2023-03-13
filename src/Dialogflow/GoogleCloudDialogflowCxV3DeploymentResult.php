@@ -23,7 +23,7 @@ class GoogleCloudDialogflowCxV3DeploymentResult extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deploymentTestResults = [];
+  public $deploymentTestResults;
   /**
    * @var string
    */

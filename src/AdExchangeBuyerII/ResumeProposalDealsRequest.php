@@ -23,7 +23,7 @@ class ResumeProposalDealsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $externalDealIds = [];
+  public $externalDealIds;
 
   /**
    * @param string[]

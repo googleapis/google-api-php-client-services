@@ -31,7 +31,7 @@ class AudioStream extends \Google\Collection
   /**
    * @var string[]
    */
-  public $channelLayout = [];
+  public $channelLayout;
   /**
    * @var string
    */
@@ -46,7 +46,6 @@ class AudioStream extends \Google\Collection
   public $languageCode;
   protected $mappingType = AudioMapping::class;
   protected $mappingDataType = 'array';
-  public $mapping = [];
   /**
    * @var int
    */

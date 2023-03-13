@@ -27,7 +27,7 @@ class AccessUrls extends \Google\Collection
   /**
    * @var string[]
    */
-  public $crlAccessUrls = [];
+  public $crlAccessUrls;
 
   /**
    * @param string

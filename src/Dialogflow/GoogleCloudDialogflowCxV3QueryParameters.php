@@ -39,21 +39,19 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   /**
    * @var string[]
    */
-  public $flowVersions = [];
+  public $flowVersions;
   protected $geoLocationType = GoogleTypeLatLng::class;
   protected $geoLocationDataType = '';
-  public $geoLocation;
   /**
    * @var array[]
    */
-  public $parameters = [];
+  public $parameters;
   /**
    * @var array[]
    */
-  public $payload = [];
+  public $payload;
   protected $sessionEntityTypesType = GoogleCloudDialogflowCxV3SessionEntityType::class;
   protected $sessionEntityTypesDataType = 'array';
-  public $sessionEntityTypes = [];
   /**
    * @var string
    */
@@ -61,7 +59,7 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   /**
    * @var string[]
    */
-  public $webhookHeaders = [];
+  public $webhookHeaders;
 
   /**
    * @param bool

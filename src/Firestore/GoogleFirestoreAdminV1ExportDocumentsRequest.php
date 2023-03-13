@@ -23,11 +23,11 @@ class GoogleFirestoreAdminV1ExportDocumentsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $collectionIds = [];
+  public $collectionIds;
   /**
    * @var string[]
    */
-  public $namespaceIds = [];
+  public $namespaceIds;
   /**
    * @var string
    */

@@ -27,7 +27,7 @@ class GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse extends \Goo
   /**
    * @var string[]
    */
-  public $names = [];
+  public $names;
   /**
    * @var string
    */

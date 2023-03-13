@@ -23,7 +23,7 @@ class RepositoryWebrefWebrefMustangAttachmentUndermergedMembers extends \Google\
   /**
    * @var string[]
    */
-  public $encodedMid = [];
+  public $encodedMid;
 
   /**
    * @param string[]

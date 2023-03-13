@@ -26,7 +26,7 @@ class EventsResetMultipleForAllRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $eventIds = [];
+  public $eventIds;
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class QueryResponsePayload extends \Google\Model
   /**
    * @var array[]
    */
-  public $devices = [];
+  public $devices;
 
   /**
    * @param array[]

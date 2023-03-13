@@ -23,11 +23,11 @@ class RouterStatusNatStatusNatRuleStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $activeNatIps = [];
+  public $activeNatIps;
   /**
    * @var string[]
    */
-  public $drainNatIps = [];
+  public $drainNatIps;
   /**
    * @var int
    */

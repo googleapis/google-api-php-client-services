@@ -45,7 +45,6 @@ class TransferConfig extends \Google\Model
   public $displayName;
   protected $emailPreferencesType = EmailPreferences::class;
   protected $emailPreferencesDataType = '';
-  public $emailPreferences;
   /**
    * @var string
    */
@@ -60,18 +59,16 @@ class TransferConfig extends \Google\Model
   public $notificationPubsubTopic;
   protected $ownerInfoType = UserInfo::class;
   protected $ownerInfoDataType = '';
-  public $ownerInfo;
   /**
    * @var array[]
    */
-  public $params = [];
+  public $params;
   /**
    * @var string
    */
   public $schedule;
   protected $scheduleOptionsType = ScheduleOptions::class;
   protected $scheduleOptionsDataType = '';
-  public $scheduleOptions;
   /**
    * @var string
    */

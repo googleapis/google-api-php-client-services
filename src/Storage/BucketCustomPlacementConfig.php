@@ -23,7 +23,7 @@ class BucketCustomPlacementConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dataLocations = [];
+  public $dataLocations;
 
   /**
    * @param string[]

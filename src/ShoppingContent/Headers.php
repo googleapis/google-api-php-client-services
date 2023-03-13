@@ -22,21 +22,18 @@ class Headers extends \Google\Collection
   protected $collection_key = 'weights';
   protected $locationsType = LocationIdSet::class;
   protected $locationsDataType = 'array';
-  public $locations = [];
   /**
    * @var string[]
    */
-  public $numberOfItems = [];
+  public $numberOfItems;
   /**
    * @var string[]
    */
-  public $postalCodeGroupNames = [];
+  public $postalCodeGroupNames;
   protected $pricesType = Price::class;
   protected $pricesDataType = 'array';
-  public $prices = [];
   protected $weightsType = Weight::class;
   protected $weightsDataType = 'array';
-  public $weights = [];
 
   /**
    * @param LocationIdSet[]

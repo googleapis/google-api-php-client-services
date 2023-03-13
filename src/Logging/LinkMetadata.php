@@ -21,10 +21,8 @@ class LinkMetadata extends \Google\Model
 {
   protected $createLinkRequestType = CreateLinkRequest::class;
   protected $createLinkRequestDataType = '';
-  public $createLinkRequest;
   protected $deleteLinkRequestType = DeleteLinkRequest::class;
   protected $deleteLinkRequestDataType = '';
-  public $deleteLinkRequest;
   /**
    * @var string
    */

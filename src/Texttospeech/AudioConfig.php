@@ -27,7 +27,7 @@ class AudioConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $effectsProfileId = [];
+  public $effectsProfileId;
   public $pitch;
   /**
    * @var int

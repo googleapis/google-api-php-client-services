@@ -22,7 +22,6 @@ class ConsumerConfig extends \Google\Collection
   protected $collection_key = 'usedIpRanges';
   protected $cloudsqlConfigsType = CloudSQLConfig::class;
   protected $cloudsqlConfigsDataType = 'array';
-  public $cloudsqlConfigs = [];
   /**
    * @var bool
    */
@@ -61,11 +60,10 @@ class ConsumerConfig extends \Google\Collection
   public $producerNetwork;
   protected $reservedRangesType = GoogleCloudServicenetworkingV1ConsumerConfigReservedRange::class;
   protected $reservedRangesDataType = 'array';
-  public $reservedRanges = [];
   /**
    * @var string[]
    */
-  public $usedIpRanges = [];
+  public $usedIpRanges;
   /**
    * @var bool
    */

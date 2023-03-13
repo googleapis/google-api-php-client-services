@@ -22,7 +22,6 @@ class GoogleAppsCloudidentityDevicesV1Device extends \Google\Collection
   protected $collection_key = 'wifiMacAddresses';
   protected $androidSpecificAttributesType = GoogleAppsCloudidentityDevicesV1AndroidAttributes::class;
   protected $androidSpecificAttributesDataType = '';
-  public $androidSpecificAttributes;
   /**
    * @var string
    */
@@ -114,7 +113,7 @@ class GoogleAppsCloudidentityDevicesV1Device extends \Google\Collection
   /**
    * @var string[]
    */
-  public $otherAccounts = [];
+  public $otherAccounts;
   /**
    * @var string
    */
@@ -134,7 +133,7 @@ class GoogleAppsCloudidentityDevicesV1Device extends \Google\Collection
   /**
    * @var string[]
    */
-  public $wifiMacAddresses = [];
+  public $wifiMacAddresses;
 
   /**
    * @param GoogleAppsCloudidentityDevicesV1AndroidAttributes

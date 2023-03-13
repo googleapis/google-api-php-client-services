@@ -26,41 +26,34 @@ class SocialGraphApiProtoSearchProfileData extends \Google\Collection
   public $description;
   protected $educationType = SocialGraphApiProtoSearchProfileEducation::class;
   protected $educationDataType = 'array';
-  public $education = [];
   protected $interestType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $interestDataType = 'array';
-  public $interest = [];
   /**
    * @var string
    */
   public $language;
   protected $locationType = SocialGraphApiProtoSearchProfileLocation::class;
   protected $locationDataType = 'array';
-  public $location = [];
   protected $metadataType = SocialGraphApiProtoSearchProfileMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   protected $occupationType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $occupationDataType = 'array';
-  public $occupation = [];
   /**
    * @var string[]
    */
-  public $publicEmail = [];
+  public $publicEmail;
   /**
    * @var string[]
    */
-  public $publicPhoneNumber = [];
+  public $publicPhoneNumber;
   protected $socialLinkType = SocialGraphApiProtoSearchProfileSocialLink::class;
   protected $socialLinkDataType = 'array';
-  public $socialLink = [];
   /**
    * @var string[]
    */
-  public $website = [];
+  public $website;
   protected $workplaceType = SocialGraphApiProtoSearchProfileWorkplace::class;
   protected $workplaceDataType = 'array';
-  public $workplace = [];
 
   /**
    * @param string

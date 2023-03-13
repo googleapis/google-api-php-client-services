@@ -31,7 +31,7 @@ class WorkflowNode extends \Google\Collection
   /**
    * @var string[]
    */
-  public $prerequisiteStepIds = [];
+  public $prerequisiteStepIds;
   /**
    * @var string
    */

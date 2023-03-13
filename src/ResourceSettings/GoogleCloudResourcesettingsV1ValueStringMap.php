@@ -22,7 +22,7 @@ class GoogleCloudResourcesettingsV1ValueStringMap extends \Google\Model
   /**
    * @var string[]
    */
-  public $mappings = [];
+  public $mappings;
 
   /**
    * @param string[]

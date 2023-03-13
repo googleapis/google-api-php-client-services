@@ -22,7 +22,6 @@ class ApigatewayListApisResponse extends \Google\Collection
   protected $collection_key = 'unreachableLocations';
   protected $apisType = ApigatewayApi::class;
   protected $apisDataType = 'array';
-  public $apis = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ApigatewayListApisResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachableLocations = [];
+  public $unreachableLocations;
 
   /**
    * @param ApigatewayApi[]

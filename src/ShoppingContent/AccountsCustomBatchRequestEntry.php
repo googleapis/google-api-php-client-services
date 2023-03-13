@@ -22,7 +22,6 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
   protected $collection_key = 'labelIds';
   protected $accountType = Account::class;
   protected $accountDataType = '';
-  public $account;
   /**
    * @var string
    */
@@ -38,10 +37,9 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labelIds = [];
+  public $labelIds;
   protected $linkRequestType = AccountsCustomBatchRequestEntryLinkRequest::class;
   protected $linkRequestDataType = '';
-  public $linkRequest;
   /**
    * @var string
    */

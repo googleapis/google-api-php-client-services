@@ -31,7 +31,7 @@ class MobileDeviceApplications extends \Google\Collection
   /**
    * @var string[]
    */
-  public $permission = [];
+  public $permission;
   /**
    * @var int
    */

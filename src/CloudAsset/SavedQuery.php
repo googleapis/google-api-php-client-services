@@ -21,7 +21,6 @@ class SavedQuery extends \Google\Model
 {
   protected $contentType = QueryContent::class;
   protected $contentDataType = '';
-  public $content;
   /**
    * @var string
    */
@@ -37,7 +36,7 @@ class SavedQuery extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

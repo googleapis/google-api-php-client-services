@@ -26,7 +26,6 @@ class PacketMirroringAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = PacketMirroringsScopedList::class;
   protected $itemsDataType = 'map';
-  public $items = [];
   /**
    * @var string
    */
@@ -42,10 +41,9 @@ class PacketMirroringAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables = [];
+  public $unreachables;
   protected $warningType = PacketMirroringAggregatedListWarning::class;
   protected $warningDataType = '';
-  public $warning;
 
   /**
    * @param string

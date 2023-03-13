@@ -23,7 +23,7 @@ class PlayerScoreResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $beatenScoreTimeSpans = [];
+  public $beatenScoreTimeSpans;
   /**
    * @var string
    */
@@ -42,7 +42,6 @@ class PlayerScoreResponse extends \Google\Collection
   public $scoreTag;
   protected $unbeatenScoresType = PlayerScore::class;
   protected $unbeatenScoresDataType = 'array';
-  public $unbeatenScores = [];
 
   /**
    * @param string[]

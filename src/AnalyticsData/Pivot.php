@@ -23,7 +23,7 @@ class Pivot extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fieldNames = [];
+  public $fieldNames;
   /**
    * @var string
    */
@@ -31,14 +31,13 @@ class Pivot extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metricAggregations = [];
+  public $metricAggregations;
   /**
    * @var string
    */
   public $offset;
   protected $orderBysType = OrderBy::class;
   protected $orderBysDataType = 'array';
-  public $orderBys = [];
 
   /**
    * @param string[]

@@ -23,15 +23,15 @@ class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole exten
   /**
    * @var string[]
    */
-  public $additionalLinks = [];
+  public $additionalLinks;
   /**
    * @var string[]
    */
-  public $consoleUris = [];
+  public $consoleUris;
   /**
    * @var string[]
    */
-  public $steps = [];
+  public $steps;
 
   /**
    * @param string[]

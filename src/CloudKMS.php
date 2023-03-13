@@ -92,16 +92,6 @@ class CloudKMS extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getEkmConfig' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
@@ -120,20 +110,6 @@ class CloudKMS extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'updateEkmConfig' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

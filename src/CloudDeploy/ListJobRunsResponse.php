@@ -22,7 +22,6 @@ class ListJobRunsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $jobRunsType = JobRun::class;
   protected $jobRunsDataType = 'array';
-  public $jobRuns = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListJobRunsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param JobRun[]

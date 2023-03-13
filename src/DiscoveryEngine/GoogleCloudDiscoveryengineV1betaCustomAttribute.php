@@ -20,11 +20,11 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaCustomAttribute extends \Google\Collection
 {
   protected $collection_key = 'text';
-  public $numbers = [];
+  public $numbers;
   /**
    * @var string[]
    */
-  public $text = [];
+  public $text;
 
   public function setNumbers($numbers)
   {

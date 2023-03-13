@@ -21,7 +21,6 @@ class AutoscalingPolicy extends \Google\Model
 {
   protected $basicAlgorithmType = BasicAutoscalingAlgorithm::class;
   protected $basicAlgorithmDataType = '';
-  public $basicAlgorithm;
   /**
    * @var string
    */
@@ -29,17 +28,15 @@ class AutoscalingPolicy extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $secondaryWorkerConfigType = InstanceGroupAutoscalingPolicyConfig::class;
   protected $secondaryWorkerConfigDataType = '';
-  public $secondaryWorkerConfig;
   protected $workerConfigType = InstanceGroupAutoscalingPolicyConfig::class;
   protected $workerConfigDataType = '';
-  public $workerConfig;
 
   /**
    * @param BasicAutoscalingAlgorithm

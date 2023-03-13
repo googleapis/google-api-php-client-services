@@ -70,11 +70,10 @@ class DataSource extends \Google\Collection
   public $name;
   protected $parametersType = DataSourceParameter::class;
   protected $parametersDataType = 'array';
-  public $parameters = [];
   /**
    * @var string[]
    */
-  public $scopes = [];
+  public $scopes;
   /**
    * @var bool
    */

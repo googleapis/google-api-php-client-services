@@ -17,8 +17,11 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefDocumentMetadata extends \Google\Model
+class RepositoryWebrefDocumentMetadata extends \Google\Collection
 {
+  protected $collection_key = 'repeatedCdocAttachments';
+  protected $cdocAttachmentsType = Proto2BridgeMessageSet::class;
+  protected $cdocAttachmentsDataType = '';
   /**
    * @var string
    */
@@ -33,7 +36,6 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
   public $docId;
   protected $forwardingUrlsType = RepositoryWebrefForwardingUrls::class;
   protected $forwardingUrlsDataType = '';
-  public $forwardingUrls;
   /**
    * @var bool
    */
@@ -46,9 +48,10 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
    * @var float
    */
   public $numIncomingAnchors;
+  protected $repeatedCdocAttachmentsType = Proto2BridgeMessageSet::class;
+  protected $repeatedCdocAttachmentsDataType = 'array';
   protected $salientTermsType = QualitySalientTermsSalientTermSet::class;
   protected $salientTermsDataType = '';
-  public $salientTerms;
   /**
    * @var string
    */
@@ -62,6 +65,20 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
    */
   public $url;
 
+  /**
+   * @param Proto2BridgeMessageSet
+   */
+  public function setCdocAttachments(Proto2BridgeMessageSet $cdocAttachments)
+  {
+    $this->cdocAttachments = $cdocAttachments;
+  }
+  /**
+   * @return Proto2BridgeMessageSet
+   */
+  public function getCdocAttachments()
+  {
+    return $this->cdocAttachments;
+  }
   /**
    * @param string
    */
@@ -159,6 +176,20 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
   public function getNumIncomingAnchors()
   {
     return $this->numIncomingAnchors;
+  }
+  /**
+   * @param Proto2BridgeMessageSet[]
+   */
+  public function setRepeatedCdocAttachments($repeatedCdocAttachments)
+  {
+    $this->repeatedCdocAttachments = $repeatedCdocAttachments;
+  }
+  /**
+   * @return Proto2BridgeMessageSet[]
+   */
+  public function getRepeatedCdocAttachments()
+  {
+    return $this->repeatedCdocAttachments;
   }
   /**
    * @param QualitySalientTermsSalientTermSet

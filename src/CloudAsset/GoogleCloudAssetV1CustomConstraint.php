@@ -39,7 +39,7 @@ class GoogleCloudAssetV1CustomConstraint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $methodTypes = [];
+  public $methodTypes;
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class GoogleCloudAssetV1CustomConstraint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceTypes = [];
+  public $resourceTypes;
 
   /**
    * @param string

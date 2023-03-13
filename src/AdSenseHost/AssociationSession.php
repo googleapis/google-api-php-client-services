@@ -35,7 +35,7 @@ class AssociationSession extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productCodes = [];
+  public $productCodes;
   /**
    * @var string
    */

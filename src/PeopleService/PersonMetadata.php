@@ -27,7 +27,7 @@ class PersonMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $linkedPeopleResourceNames = [];
+  public $linkedPeopleResourceNames;
   /**
    * @var string
    */
@@ -35,10 +35,9 @@ class PersonMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $previousResourceNames = [];
+  public $previousResourceNames;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
-  public $sources = [];
 
   /**
    * @param bool

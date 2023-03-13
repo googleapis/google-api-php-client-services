@@ -23,7 +23,7 @@ class AddTargetedAppsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appIds = [];
+  public $appIds;
   /**
    * @var string
    */

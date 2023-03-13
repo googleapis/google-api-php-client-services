@@ -22,7 +22,6 @@ class ListBackupPlansResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $backupPlansType = BackupPlan::class;
   protected $backupPlansDataType = 'array';
-  public $backupPlans = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListBackupPlansResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param BackupPlan[]

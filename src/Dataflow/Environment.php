@@ -30,11 +30,10 @@ class Environment extends \Google\Collection
   public $dataset;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
-  public $debugOptions;
   /**
    * @var string[]
    */
-  public $experiments = [];
+  public $experiments;
   /**
    * @var string
    */
@@ -42,11 +41,11 @@ class Environment extends \Google\Collection
   /**
    * @var array[]
    */
-  public $internalExperiments = [];
+  public $internalExperiments;
   /**
    * @var array[]
    */
-  public $sdkPipelineOptions = [];
+  public $sdkPipelineOptions;
   /**
    * @var string
    */
@@ -58,7 +57,7 @@ class Environment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceOptions = [];
+  public $serviceOptions;
   /**
    * @var string
    */
@@ -70,14 +69,13 @@ class Environment extends \Google\Collection
   /**
    * @var array[]
    */
-  public $userAgent = [];
+  public $userAgent;
   /**
    * @var array[]
    */
-  public $version = [];
+  public $version;
   protected $workerPoolsType = WorkerPool::class;
   protected $workerPoolsDataType = 'array';
-  public $workerPools = [];
   /**
    * @var string
    */

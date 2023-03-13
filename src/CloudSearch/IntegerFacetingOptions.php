@@ -23,7 +23,7 @@ class IntegerFacetingOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $integerBuckets = [];
+  public $integerBuckets;
 
   /**
    * @param string[]

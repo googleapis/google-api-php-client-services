@@ -35,14 +35,13 @@ class AuthorizationPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
-  public $rules = [];
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class CreateAuthUriResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allProviders = [];
+  public $allProviders;
   /**
    * @var string
    */
@@ -55,7 +55,7 @@ class CreateAuthUriResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $signinMethods = [];
+  public $signinMethods;
 
   /**
    * @param string[]

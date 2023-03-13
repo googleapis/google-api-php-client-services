@@ -27,7 +27,7 @@ class Subaccount extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availablePermissionIds = [];
+  public $availablePermissionIds;
   /**
    * @var string
    */

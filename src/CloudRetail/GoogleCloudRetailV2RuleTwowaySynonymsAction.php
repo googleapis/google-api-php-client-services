@@ -23,7 +23,7 @@ class GoogleCloudRetailV2RuleTwowaySynonymsAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $synonyms = [];
+  public $synonyms;
 
   /**
    * @param string[]

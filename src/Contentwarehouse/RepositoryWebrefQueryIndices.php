@@ -23,7 +23,7 @@ class RepositoryWebrefQueryIndices extends \Google\Collection
   /**
    * @var int[]
    */
-  public $featuresIndex = [];
+  public $featuresIndex;
   /**
    * @var int
    */

@@ -22,7 +22,6 @@ class AnchorsAnchorSource extends \Google\Collection
   protected $collection_key = 'pageTags';
   protected $additionalInfoType = Proto2BridgeMessageSet::class;
   protected $additionalInfoDataType = '';
-  public $additionalInfo;
   /**
    * @var int
    */
@@ -66,7 +65,7 @@ class AnchorsAnchorSource extends \Google\Collection
   /**
    * @var int[]
    */
-  public $localCountryCodes = [];
+  public $localCountryCodes;
   /**
    * @var string
    */
@@ -86,7 +85,7 @@ class AnchorsAnchorSource extends \Google\Collection
   /**
    * @var int[]
    */
-  public $pageTags = [];
+  public $pageTags;
   /**
    * @var int
    */

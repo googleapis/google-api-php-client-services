@@ -22,11 +22,10 @@ class GoogleCloudBeyondcorpAppconnectionsV1AppConnection extends \Google\Collect
   protected $collection_key = 'connectors';
   protected $applicationEndpointType = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint::class;
   protected $applicationEndpointDataType = '';
-  public $applicationEndpoint;
   /**
    * @var string[]
    */
-  public $connectors = [];
+  public $connectors;
   /**
    * @var string
    */
@@ -37,11 +36,10 @@ class GoogleCloudBeyondcorpAppconnectionsV1AppConnection extends \Google\Collect
   public $displayName;
   protected $gatewayType = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway::class;
   protected $gatewayDataType = '';
-  public $gateway;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

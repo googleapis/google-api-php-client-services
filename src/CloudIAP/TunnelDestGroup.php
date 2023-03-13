@@ -23,11 +23,11 @@ class TunnelDestGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cidrs = [];
+  public $cidrs;
   /**
    * @var string[]
    */
-  public $fqdns = [];
+  public $fqdns;
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class Location extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class Location extends \Google\Model
   /**
    * @var array[]
    */
-  public $metadata = [];
+  public $metadata;
   /**
    * @var string
    */

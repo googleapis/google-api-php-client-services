@@ -27,10 +27,9 @@ class ListVolumesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes = [];
 
   /**
    * @param string

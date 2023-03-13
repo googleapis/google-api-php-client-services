@@ -21,11 +21,10 @@ class ListenRequest extends \Google\Model
 {
   protected $addTargetType = Target::class;
   protected $addTargetDataType = '';
-  public $addTarget;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var int
    */

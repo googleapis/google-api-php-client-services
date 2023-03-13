@@ -33,7 +33,6 @@ class Scope extends \Google\Model
   public $name;
   protected $stateType = ScopeLifecycleState::class;
   protected $stateDataType = '';
-  public $state;
   /**
    * @var string
    */

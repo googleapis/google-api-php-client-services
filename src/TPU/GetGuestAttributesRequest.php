@@ -27,7 +27,7 @@ class GetGuestAttributesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $workerIds = [];
+  public $workerIds;
 
   /**
    * @param string

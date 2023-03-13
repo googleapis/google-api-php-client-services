@@ -23,7 +23,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
   /**
    * @var int[]
    */
-  public $allowExitCodes = [];
+  public $allowExitCodes;
   /**
    * @var bool
    */
@@ -31,7 +31,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
   /**
    * @var string[]
    */
-  public $args = [];
+  public $args;
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
   /**
    * @var string[]
    */
-  public $env = [];
+  public $env;
   /**
    * @var int
    */
@@ -58,7 +58,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
   public $name;
   protected $pullTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $pullTimingDataType = '';
-  public $pullTiming;
   /**
    * @var string
    */
@@ -66,7 +65,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
   /**
    * @var string[]
    */
-  public $secretEnv = [];
+  public $secretEnv;
   /**
    * @var string
    */
@@ -77,14 +76,12 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
   public $timeout;
   protected $timingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $timingDataType = '';
-  public $timing;
   protected $volumesType = ContaineranalysisGoogleDevtoolsCloudbuildV1Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes = [];
   /**
    * @var string[]
    */
-  public $waitFor = [];
+  public $waitFor;
 
   /**
    * @param int[]

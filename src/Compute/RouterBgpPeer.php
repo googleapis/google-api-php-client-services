@@ -27,17 +27,15 @@ class RouterBgpPeer extends \Google\Collection
   /**
    * @var string[]
    */
-  public $advertisedGroups = [];
+  public $advertisedGroups;
   protected $advertisedIpRangesType = RouterAdvertisedIpRange::class;
   protected $advertisedIpRangesDataType = 'array';
-  public $advertisedIpRanges = [];
   /**
    * @var string
    */
   public $advertisedRoutePriority;
   protected $bfdType = RouterBgpPeerBfd::class;
   protected $bfdDataType = '';
-  public $bfd;
   /**
    * @var string
    */

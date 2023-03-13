@@ -23,15 +23,15 @@ class RouterStatusNatStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $autoAllocatedNatIps = [];
+  public $autoAllocatedNatIps;
   /**
    * @var string[]
    */
-  public $drainAutoAllocatedNatIps = [];
+  public $drainAutoAllocatedNatIps;
   /**
    * @var string[]
    */
-  public $drainUserAllocatedNatIps = [];
+  public $drainUserAllocatedNatIps;
   /**
    * @var int
    */
@@ -46,15 +46,14 @@ class RouterStatusNatStatus extends \Google\Collection
   public $numVmEndpointsWithNatMappings;
   protected $ruleStatusType = RouterStatusNatStatusNatRuleStatus::class;
   protected $ruleStatusDataType = 'array';
-  public $ruleStatus = [];
   /**
    * @var string[]
    */
-  public $userAllocatedNatIpResources = [];
+  public $userAllocatedNatIpResources;
   /**
    * @var string[]
    */
-  public $userAllocatedNatIps = [];
+  public $userAllocatedNatIps;
 
   /**
    * @param string[]

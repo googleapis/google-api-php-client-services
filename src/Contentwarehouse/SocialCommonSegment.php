@@ -21,13 +21,10 @@ class SocialCommonSegment extends \Google\Model
 {
   protected $formattingType = SocialCommonFormatting::class;
   protected $formattingDataType = '';
-  public $formatting;
   protected $hashtagDataType = SocialCommonHashtagData::class;
   protected $hashtagDataDataType = '';
-  public $hashtagData;
   protected $linkDataType = SocialCommonLinkData::class;
   protected $linkDataDataType = '';
-  public $linkData;
   /**
    * @var string
    */
@@ -38,7 +35,6 @@ class SocialCommonSegment extends \Google\Model
   public $type;
   protected $userMentionDataType = SocialCommonUserMentionData::class;
   protected $userMentionDataDataType = '';
-  public $userMentionData;
 
   /**
    * @param SocialCommonFormatting

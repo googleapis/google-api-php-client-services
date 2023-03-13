@@ -23,7 +23,7 @@ class LanguageConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $spokenLanguages = [];
+  public $spokenLanguages;
 
   /**
    * @param string[]

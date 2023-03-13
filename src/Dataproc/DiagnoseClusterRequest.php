@@ -21,7 +21,6 @@ class DiagnoseClusterRequest extends \Google\Model
 {
   protected $diagnosisIntervalType = Interval::class;
   protected $diagnosisIntervalDataType = '';
-  public $diagnosisInterval;
   /**
    * @var string
    */

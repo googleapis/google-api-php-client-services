@@ -23,7 +23,7 @@ class SubscribeClientsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clients = [];
+  public $clients;
 
   /**
    * @param string[]

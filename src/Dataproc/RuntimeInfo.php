@@ -21,10 +21,8 @@ class RuntimeInfo extends \Google\Model
 {
   protected $approximateUsageType = UsageMetrics::class;
   protected $approximateUsageDataType = '';
-  public $approximateUsage;
   protected $currentUsageType = UsageSnapshot::class;
   protected $currentUsageDataType = '';
-  public $currentUsage;
   /**
    * @var string
    */
@@ -32,7 +30,7 @@ class RuntimeInfo extends \Google\Model
   /**
    * @var string[]
    */
-  public $endpoints = [];
+  public $endpoints;
   /**
    * @var string
    */

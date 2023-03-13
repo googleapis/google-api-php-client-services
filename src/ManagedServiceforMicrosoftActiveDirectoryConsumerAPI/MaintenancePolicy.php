@@ -30,7 +30,7 @@ class MaintenancePolicy extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -41,7 +41,6 @@ class MaintenancePolicy extends \Google\Model
   public $state;
   protected $updatePolicyType = UpdatePolicy::class;
   protected $updatePolicyDataType = '';
-  public $updatePolicy;
   /**
    * @var string
    */

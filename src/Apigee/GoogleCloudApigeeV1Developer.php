@@ -31,14 +31,13 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
   /**
    * @var string[]
    */
-  public $apps = [];
+  public $apps;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
-  public $attributes = [];
   /**
    * @var string[]
    */
-  public $companies = [];
+  public $companies;
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class FirewallDenied extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ports = [];
+  public $ports;
 
   /**
    * @param string

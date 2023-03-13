@@ -23,7 +23,7 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
   /**
    * @var int[]
    */
-  public $columnIndices = [];
+  public $columnIndices;
   /**
    * @var string
    */
@@ -34,7 +34,6 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
   public $objectId;
   protected $tableColumnPropertiesType = TableColumnProperties::class;
   protected $tableColumnPropertiesDataType = '';
-  public $tableColumnProperties;
 
   /**
    * @param int[]

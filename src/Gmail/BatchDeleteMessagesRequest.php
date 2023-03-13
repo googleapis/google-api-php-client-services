@@ -23,7 +23,7 @@ class BatchDeleteMessagesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ids = [];
+  public $ids;
 
   /**
    * @param string[]

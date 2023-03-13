@@ -55,11 +55,11 @@ class AndroidApp extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sha1Hashes = [];
+  public $sha1Hashes;
   /**
    * @var string[]
    */
-  public $sha256Hashes = [];
+  public $sha256Hashes;
   /**
    * @var string
    */

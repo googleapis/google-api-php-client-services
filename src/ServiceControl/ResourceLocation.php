@@ -23,11 +23,11 @@ class ResourceLocation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $currentLocations = [];
+  public $currentLocations;
   /**
    * @var string[]
    */
-  public $originalLocations = [];
+  public $originalLocations;
 
   /**
    * @param string[]

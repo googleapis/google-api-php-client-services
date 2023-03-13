@@ -23,7 +23,7 @@ class MediaIndexSparseFloatVector extends \Google\Collection
   /**
    * @var string[]
    */
-  public $columns = [];
+  public $columns;
   /**
    * @var string
    */
@@ -31,11 +31,11 @@ class MediaIndexSparseFloatVector extends \Google\Collection
   /**
    * @var int[]
    */
-  public $columnsInt32 = [];
+  public $columnsInt32;
   /**
    * @var string[]
    */
-  public $columnsInt64 = [];
+  public $columnsInt64;
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class MediaIndexSparseFloatVector extends \Google\Collection
   /**
    * @var float[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param string[]

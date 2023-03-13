@@ -27,7 +27,7 @@ class Presenter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $copresenterDeviceIds = [];
+  public $copresenterDeviceIds;
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class V2IosKeyRestrictions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedBundleIds = [];
+  public $allowedBundleIds;
 
   /**
    * @param string[]

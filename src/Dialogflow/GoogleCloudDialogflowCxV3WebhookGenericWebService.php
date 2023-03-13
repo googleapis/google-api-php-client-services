@@ -23,7 +23,7 @@ class GoogleCloudDialogflowCxV3WebhookGenericWebService extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $allowedCaCerts = [];
+  public $allowedCaCerts;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GoogleCloudDialogflowCxV3WebhookGenericWebService extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $requestHeaders = [];
+  public $requestHeaders;
   /**
    * @var string
    */

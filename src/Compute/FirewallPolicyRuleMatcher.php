@@ -23,17 +23,15 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
   /**
    * @var string[]
    */
-  public $destIpRanges = [];
+  public $destIpRanges;
   protected $layer4ConfigsType = FirewallPolicyRuleMatcherLayer4Config::class;
   protected $layer4ConfigsDataType = 'array';
-  public $layer4Configs = [];
   /**
    * @var string[]
    */
-  public $srcIpRanges = [];
+  public $srcIpRanges;
   protected $srcSecureTagsType = FirewallPolicyRuleSecureTag::class;
   protected $srcSecureTagsDataType = 'array';
-  public $srcSecureTags = [];
 
   /**
    * @param string[]

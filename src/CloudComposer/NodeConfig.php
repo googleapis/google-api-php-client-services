@@ -30,7 +30,6 @@ class NodeConfig extends \Google\Collection
   public $enableIpMasqAgent;
   protected $ipAllocationPolicyType = IPAllocationPolicy::class;
   protected $ipAllocationPolicyDataType = '';
-  public $ipAllocationPolicy;
   /**
    * @var string
    */
@@ -46,7 +45,7 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $oauthScopes = [];
+  public $oauthScopes;
   /**
    * @var string
    */
@@ -58,7 +57,7 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags = [];
+  public $tags;
 
   /**
    * @param int

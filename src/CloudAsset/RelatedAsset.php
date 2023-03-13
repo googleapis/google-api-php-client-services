@@ -23,7 +23,7 @@ class RelatedAsset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ancestors = [];
+  public $ancestors;
   /**
    * @var string
    */

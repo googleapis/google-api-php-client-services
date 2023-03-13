@@ -31,7 +31,7 @@ class NetworkAttachmentConnectedEndpoint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $secondaryIpCidrRanges = [];
+  public $secondaryIpCidrRanges;
   /**
    * @var string
    */

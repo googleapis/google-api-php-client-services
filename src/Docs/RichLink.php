@@ -26,21 +26,18 @@ class RichLink extends \Google\Collection
   public $richLinkId;
   protected $richLinkPropertiesType = RichLinkProperties::class;
   protected $richLinkPropertiesDataType = '';
-  public $richLinkProperties;
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds = [];
+  public $suggestedDeletionIds;
   /**
    * @var string[]
    */
-  public $suggestedInsertionIds = [];
+  public $suggestedInsertionIds;
   protected $suggestedTextStyleChangesType = SuggestedTextStyle::class;
   protected $suggestedTextStyleChangesDataType = 'map';
-  public $suggestedTextStyleChanges = [];
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
-  public $textStyle;
 
   /**
    * @param string

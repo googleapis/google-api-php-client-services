@@ -22,11 +22,10 @@ class ZoneBoundary extends \Google\Collection
   protected $collection_key = 'customEvaluationTriggerId';
   protected $conditionType = Condition::class;
   protected $conditionDataType = 'array';
-  public $condition = [];
   /**
    * @var string[]
    */
-  public $customEvaluationTriggerId = [];
+  public $customEvaluationTriggerId;
 
   /**
    * @param Condition[]

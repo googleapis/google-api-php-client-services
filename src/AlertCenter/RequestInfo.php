@@ -23,7 +23,7 @@ class RequestInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appDeveloperEmail = [];
+  public $appDeveloperEmail;
   /**
    * @var string
    */

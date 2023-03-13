@@ -31,22 +31,21 @@ class TcpRoute extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gateways = [];
+  public $gateways;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $meshes = [];
+  public $meshes;
   /**
    * @var string
    */
   public $name;
   protected $rulesType = TcpRouteRouteRule::class;
   protected $rulesDataType = 'array';
-  public $rules = [];
   /**
    * @var string
    */

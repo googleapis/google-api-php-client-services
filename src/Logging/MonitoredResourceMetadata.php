@@ -22,11 +22,11 @@ class MonitoredResourceMetadata extends \Google\Model
   /**
    * @var array[]
    */
-  public $systemLabels = [];
+  public $systemLabels;
   /**
    * @var string[]
    */
-  public $userLabels = [];
+  public $userLabels;
 
   /**
    * @param array[]

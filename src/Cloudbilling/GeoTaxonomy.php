@@ -23,7 +23,7 @@ class GeoTaxonomy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $regions = [];
+  public $regions;
   /**
    * @var string
    */

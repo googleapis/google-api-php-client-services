@@ -22,23 +22,18 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
   protected $collection_key = 'additionalVariables';
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
-  public $additionalVariables = [];
   /**
    * @var string
    */
   public $clientCertType;
   protected $clientCertificateType = GoogleCloudConnectorsV1Secret::class;
   protected $clientCertificateDataType = '';
-  public $clientCertificate;
   protected $clientPrivateKeyType = GoogleCloudConnectorsV1Secret::class;
   protected $clientPrivateKeyDataType = '';
-  public $clientPrivateKey;
   protected $clientPrivateKeyPassType = GoogleCloudConnectorsV1Secret::class;
   protected $clientPrivateKeyPassDataType = '';
-  public $clientPrivateKeyPass;
   protected $privateServerCertificateType = GoogleCloudConnectorsV1Secret::class;
   protected $privateServerCertificateDataType = '';
-  public $privateServerCertificate;
   /**
    * @var string
    */

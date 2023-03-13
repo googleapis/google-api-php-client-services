@@ -26,11 +26,10 @@ class ListRestorePlansResponse extends \Google\Collection
   public $nextPageToken;
   protected $restorePlansType = RestorePlan::class;
   protected $restorePlansDataType = 'array';
-  public $restorePlans = [];
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param string

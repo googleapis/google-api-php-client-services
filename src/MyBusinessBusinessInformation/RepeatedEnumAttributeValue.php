@@ -23,11 +23,11 @@ class RepeatedEnumAttributeValue extends \Google\Collection
   /**
    * @var string[]
    */
-  public $setValues = [];
+  public $setValues;
   /**
    * @var string[]
    */
-  public $unsetValues = [];
+  public $unsetValues;
 
   /**
    * @param string[]

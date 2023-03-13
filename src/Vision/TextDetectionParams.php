@@ -23,7 +23,7 @@ class TextDetectionParams extends \Google\Collection
   /**
    * @var string[]
    */
-  public $advancedOcrOptions = [];
+  public $advancedOcrOptions;
   /**
    * @var bool
    */

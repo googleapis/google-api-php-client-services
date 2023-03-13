@@ -21,19 +21,14 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
 {
   protected $anchorsType = RepositoryWebrefSimplifiedAnchors::class;
   protected $anchorsDataType = '';
-  public $anchors;
   protected $cdocContainerType = Proto2BridgeMessageSet::class;
   protected $cdocContainerDataType = '';
-  public $cdocContainer;
   protected $documentMentionSpansType = RepositoryWebrefRefconDocumentMentionSpans::class;
   protected $documentMentionSpansDataType = '';
-  public $documentMentionSpans;
   protected $matchingMetadataType = RepositoryWebrefPreprocessingUrlMatchingMetadata::class;
   protected $matchingMetadataDataType = '';
-  public $matchingMetadata;
   protected $refconDocumentMetadataType = RepositoryWebrefRefconRefconDocumentMetadata::class;
   protected $refconDocumentMetadataDataType = '';
-  public $refconDocumentMetadata;
   /**
    * @var string
    */
@@ -44,7 +39,6 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
   public $url;
   protected $webrefOutlinksType = Proto2BridgeMessageSet::class;
   protected $webrefOutlinksDataType = '';
-  public $webrefOutlinks;
 
   /**
    * @param RepositoryWebrefSimplifiedAnchors

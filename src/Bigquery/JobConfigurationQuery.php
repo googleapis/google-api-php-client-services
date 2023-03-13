@@ -26,10 +26,8 @@ class JobConfigurationQuery extends \Google\Collection
   public $allowLargeResults;
   protected $clusteringType = Clustering::class;
   protected $clusteringDataType = '';
-  public $clustering;
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
-  public $connectionProperties = [];
   /**
    * @var string
    */
@@ -40,13 +38,10 @@ class JobConfigurationQuery extends \Google\Collection
   public $createSession;
   protected $defaultDatasetType = DatasetReference::class;
   protected $defaultDatasetDataType = '';
-  public $defaultDataset;
   protected $destinationEncryptionConfigurationType = EncryptionConfiguration::class;
   protected $destinationEncryptionConfigurationDataType = '';
-  public $destinationEncryptionConfiguration;
   protected $destinationTableType = TableReference::class;
   protected $destinationTableDataType = '';
-  public $destinationTable;
   /**
    * @var bool
    */
@@ -77,20 +72,16 @@ class JobConfigurationQuery extends \Google\Collection
   public $query;
   protected $queryParametersType = QueryParameter::class;
   protected $queryParametersDataType = 'array';
-  public $queryParameters = [];
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
-  public $rangePartitioning;
   /**
    * @var string[]
    */
-  public $schemaUpdateOptions = [];
+  public $schemaUpdateOptions;
   protected $tableDefinitionsType = ExternalDataConfiguration::class;
   protected $tableDefinitionsDataType = 'map';
-  public $tableDefinitions = [];
   protected $timePartitioningType = TimePartitioning::class;
   protected $timePartitioningDataType = '';
-  public $timePartitioning;
   /**
    * @var bool
    */
@@ -101,7 +92,6 @@ class JobConfigurationQuery extends \Google\Collection
   public $useQueryCache;
   protected $userDefinedFunctionResourcesType = UserDefinedFunctionResource::class;
   protected $userDefinedFunctionResourcesDataType = 'array';
-  public $userDefinedFunctionResources = [];
   /**
    * @var string
    */

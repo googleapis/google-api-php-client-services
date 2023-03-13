@@ -23,11 +23,11 @@ class GoogleCloudApigeeV1DebugMask extends \Google\Collection
   /**
    * @var string[]
    */
-  public $faultJSONPaths = [];
+  public $faultJSONPaths;
   /**
    * @var string[]
    */
-  public $faultXPaths = [];
+  public $faultXPaths;
   /**
    * @var string
    */
@@ -35,27 +35,27 @@ class GoogleCloudApigeeV1DebugMask extends \Google\Collection
   /**
    * @var string[]
    */
-  public $namespaces = [];
+  public $namespaces;
   /**
    * @var string[]
    */
-  public $requestJSONPaths = [];
+  public $requestJSONPaths;
   /**
    * @var string[]
    */
-  public $requestXPaths = [];
+  public $requestXPaths;
   /**
    * @var string[]
    */
-  public $responseJSONPaths = [];
+  public $responseJSONPaths;
   /**
    * @var string[]
    */
-  public $responseXPaths = [];
+  public $responseXPaths;
   /**
    * @var string[]
    */
-  public $variables = [];
+  public $variables;
 
   /**
    * @param string[]

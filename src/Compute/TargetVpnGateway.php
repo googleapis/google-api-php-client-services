@@ -31,7 +31,7 @@ class TargetVpnGateway extends \Google\Collection
   /**
    * @var string[]
    */
-  public $forwardingRules = [];
+  public $forwardingRules;
   /**
    * @var string
    */
@@ -63,7 +63,7 @@ class TargetVpnGateway extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tunnels = [];
+  public $tunnels;
 
   /**
    * @param string

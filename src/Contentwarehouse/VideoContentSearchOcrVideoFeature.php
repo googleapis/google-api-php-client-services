@@ -26,7 +26,7 @@ class VideoContentSearchOcrVideoFeature extends \Google\Model
   /**
    * @var int[]
    */
-  public $clusterIdToFrameSize = [];
+  public $clusterIdToFrameSize;
   /**
    * @var int
    */

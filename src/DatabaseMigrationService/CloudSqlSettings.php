@@ -50,14 +50,13 @@ class CloudSqlSettings extends \Google\Model
   /**
    * @var string[]
    */
-  public $databaseFlags = [];
+  public $databaseFlags;
   /**
    * @var string
    */
   public $databaseVersion;
   protected $ipConfigType = SqlIpConfig::class;
   protected $ipConfigDataType = '';
-  public $ipConfig;
   /**
    * @var string
    */
@@ -85,7 +84,7 @@ class CloudSqlSettings extends \Google\Model
   /**
    * @var string[]
    */
-  public $userLabels = [];
+  public $userLabels;
   /**
    * @var string
    */

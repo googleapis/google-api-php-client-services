@@ -27,7 +27,7 @@ class ChromeOsDeviceSystemRamFreeReports extends \Google\Collection
   /**
    * @var string[]
    */
-  public $systemRamFreeInfo = [];
+  public $systemRamFreeInfo;
 
   /**
    * @param string

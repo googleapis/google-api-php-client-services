@@ -27,7 +27,7 @@ class AssistantApiCoreTypesCalendarEventMeetingContact extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $dialInNumberClasses = [];
+  public $dialInNumberClasses;
   /**
    * @var string
    */
@@ -38,7 +38,6 @@ class AssistantApiCoreTypesCalendarEventMeetingContact extends \Google\Collectio
   public $pinNumber;
   protected $providerType = AssistantApiCoreTypesProvider::class;
   protected $providerDataType = '';
-  public $provider;
   /**
    * @var string
    */

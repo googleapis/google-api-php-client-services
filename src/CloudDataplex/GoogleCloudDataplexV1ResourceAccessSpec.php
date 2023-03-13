@@ -23,15 +23,15 @@ class GoogleCloudDataplexV1ResourceAccessSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $owners = [];
+  public $owners;
   /**
    * @var string[]
    */
-  public $readers = [];
+  public $readers;
   /**
    * @var string[]
    */
-  public $writers = [];
+  public $writers;
 
   /**
    * @param string[]

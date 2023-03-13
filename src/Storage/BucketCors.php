@@ -27,15 +27,15 @@ class BucketCors extends \Google\Collection
   /**
    * @var string[]
    */
-  public $method = [];
+  public $method;
   /**
    * @var string[]
    */
-  public $origin = [];
+  public $origin;
   /**
    * @var string[]
    */
-  public $responseHeader = [];
+  public $responseHeader;
 
   /**
    * @param int

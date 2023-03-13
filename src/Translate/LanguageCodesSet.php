@@ -23,7 +23,7 @@ class LanguageCodesSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $languageCodes = [];
+  public $languageCodes;
 
   /**
    * @param string[]

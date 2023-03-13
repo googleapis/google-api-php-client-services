@@ -23,17 +23,15 @@ class NonSdkApiInsight extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exampleTraceMessages = [];
+  public $exampleTraceMessages;
   /**
    * @var string
    */
   public $matcherId;
   protected $pendingGoogleUpdateInsightType = PendingGoogleUpdateInsight::class;
   protected $pendingGoogleUpdateInsightDataType = '';
-  public $pendingGoogleUpdateInsight;
   protected $upgradeInsightType = UpgradeInsight::class;
   protected $upgradeInsightDataType = '';
-  public $upgradeInsight;
 
   /**
    * @param string[]

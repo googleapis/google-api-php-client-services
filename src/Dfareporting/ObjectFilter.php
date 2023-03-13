@@ -27,7 +27,7 @@ class ObjectFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $objectIds = [];
+  public $objectIds;
   /**
    * @var string
    */

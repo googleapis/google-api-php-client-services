@@ -31,7 +31,7 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedDomains = [];
+  public $allowedDomains;
   /**
    * @var string
    */

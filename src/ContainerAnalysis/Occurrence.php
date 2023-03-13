@@ -21,32 +21,24 @@ class Occurrence extends \Google\Model
 {
   protected $attestationType = AttestationOccurrence::class;
   protected $attestationDataType = '';
-  public $attestation;
   protected $buildType = BuildOccurrence::class;
   protected $buildDataType = '';
-  public $build;
   protected $complianceType = ComplianceOccurrence::class;
   protected $complianceDataType = '';
-  public $compliance;
   /**
    * @var string
    */
   public $createTime;
   protected $deploymentType = DeploymentOccurrence::class;
   protected $deploymentDataType = '';
-  public $deployment;
   protected $discoveryType = DiscoveryOccurrence::class;
   protected $discoveryDataType = '';
-  public $discovery;
   protected $dsseAttestationType = DSSEAttestationOccurrence::class;
   protected $dsseAttestationDataType = '';
-  public $dsseAttestation;
   protected $envelopeType = Envelope::class;
   protected $envelopeDataType = '';
-  public $envelope;
   protected $imageType = ImageOccurrence::class;
   protected $imageDataType = '';
-  public $image;
   /**
    * @var string
    */
@@ -61,7 +53,6 @@ class Occurrence extends \Google\Model
   public $noteName;
   protected $packageType = PackageOccurrence::class;
   protected $packageDataType = '';
-  public $package;
   /**
    * @var string
    */
@@ -76,10 +67,8 @@ class Occurrence extends \Google\Model
   public $updateTime;
   protected $upgradeType = UpgradeOccurrence::class;
   protected $upgradeDataType = '';
-  public $upgrade;
   protected $vulnerabilityType = VulnerabilityOccurrence::class;
   protected $vulnerabilityDataType = '';
-  public $vulnerability;
 
   /**
    * @param AttestationOccurrence

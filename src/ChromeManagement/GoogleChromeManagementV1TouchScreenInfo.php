@@ -22,7 +22,6 @@ class GoogleChromeManagementV1TouchScreenInfo extends \Google\Collection
   protected $collection_key = 'devices';
   protected $devicesType = GoogleChromeManagementV1TouchScreenDevice::class;
   protected $devicesDataType = 'array';
-  public $devices = [];
   /**
    * @var string
    */

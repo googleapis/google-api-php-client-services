@@ -22,26 +22,24 @@ class DrishtiLabelSetData extends \Google\Collection
   protected $collection_key = 'targetWeight';
   protected $extraType = DrishtiFeatureExtra::class;
   protected $extraDataType = 'array';
-  public $extra = [];
   protected $generalExtraType = DrishtiFeatureExtra::class;
   protected $generalExtraDataType = '';
-  public $generalExtra;
   /**
    * @var string[]
    */
-  public $targetClass = [];
+  public $targetClass;
   /**
    * @var string[]
    */
-  public $targetClassName = [];
+  public $targetClassName;
   /**
    * @var float[]
    */
-  public $targetValue = [];
+  public $targetValue;
   /**
    * @var float[]
    */
-  public $targetWeight = [];
+  public $targetWeight;
   /**
    * @var float
    */

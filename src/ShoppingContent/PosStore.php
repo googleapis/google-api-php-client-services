@@ -23,7 +23,7 @@ class PosStore extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gcidCategory = [];
+  public $gcidCategory;
   /**
    * @var string
    */

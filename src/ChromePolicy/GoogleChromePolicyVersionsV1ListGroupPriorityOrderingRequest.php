@@ -25,7 +25,6 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest extends \Goog
   public $policyNamespace;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
-  public $policyTargetKey;
 
   /**
    * @param string

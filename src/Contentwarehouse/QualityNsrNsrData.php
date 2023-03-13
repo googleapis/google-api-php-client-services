@@ -42,14 +42,12 @@ class QualityNsrNsrData extends \Google\Collection
   public $clusterId;
   protected $clusterUpliftType = QualityNsrNsrDataClusterUplift::class;
   protected $clusterUpliftDataType = '';
-  public $clusterUplift;
   /**
    * @var float
    */
   public $clutterScore;
   protected $clutterScoresType = QualityNsrVersionedFloatSignal::class;
   protected $clutterScoresDataType = 'array';
-  public $clutterScores = [];
   /**
    * @var float
    */
@@ -96,7 +94,6 @@ class QualityNsrNsrData extends \Google\Collection
   public $localityScore;
   protected $metadataType = QualityNsrNsrDataMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   /**
    * @var float
    */
@@ -127,7 +124,6 @@ class QualityNsrNsrData extends \Google\Collection
   public $pnav;
   protected $priorAdjustedNsrType = QualityNsrVersionedFloatSignal::class;
   protected $priorAdjustedNsrDataType = 'array';
-  public $priorAdjustedNsr = [];
   /**
    * @var string
    */
@@ -170,7 +166,6 @@ class QualityNsrNsrData extends \Google\Collection
   public $spambrainLavcScore;
   protected $spambrainLavcScoresType = QualityNsrVersionedFloatSignal::class;
   protected $spambrainLavcScoresDataType = 'array';
-  public $spambrainLavcScores = [];
   /**
    * @var float
    */
@@ -185,10 +180,8 @@ class QualityNsrNsrData extends \Google\Collection
   public $url;
   protected $versionedAsrDataType = QualityNsrVersionedFloatSignal::class;
   protected $versionedAsrDataDataType = 'array';
-  public $versionedAsrData = [];
   protected $versionedDataType = QualityNsrNSRVersionedData::class;
   protected $versionedDataDataType = 'array';
-  public $versionedData = [];
   /**
    * @var float
    */

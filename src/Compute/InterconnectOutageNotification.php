@@ -23,7 +23,7 @@ class InterconnectOutageNotification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $affectedCircuits = [];
+  public $affectedCircuits;
   /**
    * @var string
    */

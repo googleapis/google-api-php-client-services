@@ -23,10 +23,9 @@ class PretargetingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedUserTargetingModes = [];
+  public $allowedUserTargetingModes;
   protected $appTargetingType = AppTargeting::class;
   protected $appTargetingDataType = '';
-  public $appTargeting;
   /**
    * @var string
    */
@@ -38,37 +37,35 @@ class PretargetingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedContentLabelIds = [];
+  public $excludedContentLabelIds;
   protected $geoTargetingType = NumericTargetingDimension::class;
   protected $geoTargetingDataType = '';
-  public $geoTargeting;
   protected $includedCreativeDimensionsType = CreativeDimensions::class;
   protected $includedCreativeDimensionsDataType = 'array';
-  public $includedCreativeDimensions = [];
   /**
    * @var string[]
    */
-  public $includedEnvironments = [];
+  public $includedEnvironments;
   /**
    * @var string[]
    */
-  public $includedFormats = [];
+  public $includedFormats;
   /**
    * @var string[]
    */
-  public $includedLanguages = [];
+  public $includedLanguages;
   /**
    * @var string[]
    */
-  public $includedMobileOperatingSystemIds = [];
+  public $includedMobileOperatingSystemIds;
   /**
    * @var string[]
    */
-  public $includedPlatforms = [];
+  public $includedPlatforms;
   /**
    * @var string[]
    */
-  public $includedUserIdTypes = [];
+  public $includedUserIdTypes;
   /**
    * @var string
    */
@@ -76,7 +73,7 @@ class PretargetingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $invalidGeoIds = [];
+  public $invalidGeoIds;
   /**
    * @var string
    */
@@ -91,20 +88,16 @@ class PretargetingConfig extends \Google\Collection
   public $name;
   protected $publisherTargetingType = StringTargetingDimension::class;
   protected $publisherTargetingDataType = '';
-  public $publisherTargeting;
   /**
    * @var string
    */
   public $state;
   protected $userListTargetingType = NumericTargetingDimension::class;
   protected $userListTargetingDataType = '';
-  public $userListTargeting;
   protected $verticalTargetingType = NumericTargetingDimension::class;
   protected $verticalTargetingDataType = '';
-  public $verticalTargeting;
   protected $webTargetingType = StringTargetingDimension::class;
   protected $webTargetingDataType = '';
-  public $webTargeting;
 
   /**
    * @param string[]

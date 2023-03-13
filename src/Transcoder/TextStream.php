@@ -34,7 +34,6 @@ class TextStream extends \Google\Collection
   public $languageCode;
   protected $mappingType = TextMapping::class;
   protected $mappingDataType = 'array';
-  public $mapping = [];
 
   /**
    * @param string

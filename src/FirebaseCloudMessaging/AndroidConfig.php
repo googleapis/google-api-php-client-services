@@ -26,17 +26,15 @@ class AndroidConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $data = [];
+  public $data;
   /**
    * @var bool
    */
   public $directBootOk;
   protected $fcmOptionsType = AndroidFcmOptions::class;
   protected $fcmOptionsDataType = '';
-  public $fcmOptions;
   protected $notificationType = AndroidNotification::class;
   protected $notificationDataType = '';
-  public $notification;
   /**
    * @var string
    */

@@ -27,10 +27,9 @@ class RouterBgp extends \Google\Collection
   /**
    * @var string[]
    */
-  public $advertisedGroups = [];
+  public $advertisedGroups;
   protected $advertisedIpRangesType = RouterAdvertisedIpRange::class;
   protected $advertisedIpRangesDataType = 'array';
-  public $advertisedIpRanges = [];
   /**
    * @var string
    */

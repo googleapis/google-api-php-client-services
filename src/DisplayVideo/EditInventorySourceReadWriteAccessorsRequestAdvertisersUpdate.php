@@ -23,11 +23,11 @@ class EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate extends \Goo
   /**
    * @var string[]
    */
-  public $addedAdvertisers = [];
+  public $addedAdvertisers;
   /**
    * @var string[]
    */
-  public $removedAdvertisers = [];
+  public $removedAdvertisers;
 
   /**
    * @param string[]

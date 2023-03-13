@@ -26,17 +26,15 @@ class GoogleCloudApigeeV1OptimizedStatsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $timeUnit = [];
+  public $timeUnit;
   protected $metaDataType = GoogleCloudApigeeV1Metadata::class;
   protected $metaDataDataType = '';
-  public $metaData;
   /**
    * @var bool
    */
   public $resultTruncated;
   protected $statsType = GoogleCloudApigeeV1OptimizedStatsNode::class;
   protected $statsDataType = '';
-  public $stats;
 
   /**
    * @param string[]

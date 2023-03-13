@@ -23,7 +23,7 @@ class GoogleCloudRetailV2FulfillmentInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $placeIds = [];
+  public $placeIds;
   /**
    * @var string
    */

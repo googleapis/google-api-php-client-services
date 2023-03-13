@@ -23,7 +23,7 @@ class GoogleCloudContentwarehouseV1PublishAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $messages = [];
+  public $messages;
   /**
    * @var string
    */

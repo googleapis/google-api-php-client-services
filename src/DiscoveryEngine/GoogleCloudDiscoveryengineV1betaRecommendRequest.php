@@ -30,14 +30,13 @@ class GoogleCloudDiscoveryengineV1betaRecommendRequest extends \Google\Model
   /**
    * @var array[]
    */
-  public $params = [];
+  public $params;
   protected $userEventType = GoogleCloudDiscoveryengineV1betaUserEvent::class;
   protected $userEventDataType = '';
-  public $userEvent;
   /**
    * @var string[]
    */
-  public $userLabels = [];
+  public $userLabels;
   /**
    * @var bool
    */

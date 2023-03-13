@@ -23,11 +23,11 @@ class MitreAttack extends \Google\Collection
   /**
    * @var string[]
    */
-  public $additionalTactics = [];
+  public $additionalTactics;
   /**
    * @var string[]
    */
-  public $additionalTechniques = [];
+  public $additionalTechniques;
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class MitreAttack extends \Google\Collection
   /**
    * @var string[]
    */
-  public $primaryTechniques = [];
+  public $primaryTechniques;
   /**
    * @var string
    */

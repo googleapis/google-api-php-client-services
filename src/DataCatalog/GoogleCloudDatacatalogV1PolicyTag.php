@@ -23,7 +23,7 @@ class GoogleCloudDatacatalogV1PolicyTag extends \Google\Collection
   /**
    * @var string[]
    */
-  public $childPolicyTags = [];
+  public $childPolicyTags;
   /**
    * @var string
    */

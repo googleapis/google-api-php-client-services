@@ -26,7 +26,7 @@ class ShortRepresentation extends \Google\Model
   /**
    * @var int[]
    */
-  public $subqueries = [];
+  public $subqueries;
 
   /**
    * @param string

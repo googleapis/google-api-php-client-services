@@ -22,11 +22,11 @@ class ReportStateAndNotificationDevice extends \Google\Model
   /**
    * @var array[]
    */
-  public $notifications = [];
+  public $notifications;
   /**
    * @var array[]
    */
-  public $states = [];
+  public $states;
 
   /**
    * @param array[]

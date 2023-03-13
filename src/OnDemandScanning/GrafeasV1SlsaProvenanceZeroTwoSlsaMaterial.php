@@ -22,7 +22,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial extends \Google\Model
   /**
    * @var string[]
    */
-  public $digest = [];
+  public $digest;
   /**
    * @var string
    */

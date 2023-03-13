@@ -22,7 +22,7 @@ class Field extends \Google\Model
   /**
    * @var array[]
    */
-  public $additionalDetails = [];
+  public $additionalDetails;
   /**
    * @var string
    */
@@ -49,7 +49,6 @@ class Field extends \Google\Model
   public $nullable;
   protected $referenceType = Reference::class;
   protected $referenceDataType = '';
-  public $reference;
 
   /**
    * @param array[]

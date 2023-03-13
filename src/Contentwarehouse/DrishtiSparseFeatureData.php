@@ -22,18 +22,16 @@ class DrishtiSparseFeatureData extends \Google\Collection
   protected $collection_key = 'value';
   protected $extraType = DrishtiFeatureExtra::class;
   protected $extraDataType = 'array';
-  public $extra = [];
   protected $generalExtraType = DrishtiFeatureExtra::class;
   protected $generalExtraDataType = '';
-  public $generalExtra;
   /**
    * @var string[]
    */
-  public $label = [];
+  public $label;
   /**
    * @var float[]
    */
-  public $value = [];
+  public $value;
 
   /**
    * @param DrishtiFeatureExtra[]

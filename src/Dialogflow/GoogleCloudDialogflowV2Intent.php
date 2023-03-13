@@ -27,7 +27,7 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $defaultResponsePlatforms = [];
+  public $defaultResponsePlatforms;
   /**
    * @var string
    */
@@ -39,14 +39,13 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $events = [];
+  public $events;
   protected $followupIntentInfoType = GoogleCloudDialogflowV2IntentFollowupIntentInfo::class;
   protected $followupIntentInfoDataType = 'array';
-  public $followupIntentInfo = [];
   /**
    * @var string[]
    */
-  public $inputContextNames = [];
+  public $inputContextNames;
   /**
    * @var bool
    */
@@ -57,7 +56,6 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
   public $liveAgentHandoff;
   protected $messagesType = GoogleCloudDialogflowV2IntentMessage::class;
   protected $messagesDataType = 'array';
-  public $messages = [];
   /**
    * @var bool
    */
@@ -68,10 +66,8 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
   public $name;
   protected $outputContextsType = GoogleCloudDialogflowV2Context::class;
   protected $outputContextsDataType = 'array';
-  public $outputContexts = [];
   protected $parametersType = GoogleCloudDialogflowV2IntentParameter::class;
   protected $parametersDataType = 'array';
-  public $parameters = [];
   /**
    * @var string
    */
@@ -90,7 +86,6 @@ class GoogleCloudDialogflowV2Intent extends \Google\Collection
   public $rootFollowupIntentName;
   protected $trainingPhrasesType = GoogleCloudDialogflowV2IntentTrainingPhrase::class;
   protected $trainingPhrasesDataType = 'array';
-  public $trainingPhrases = [];
   /**
    * @var string
    */

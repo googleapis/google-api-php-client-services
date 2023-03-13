@@ -23,7 +23,7 @@ class Attachment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $mimeType = [];
+  public $mimeType;
   /**
    * @var string
    */

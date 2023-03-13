@@ -23,16 +23,13 @@ class AppsPeopleOzExternalMergedpeopleapiInAppNotificationTarget extends \Google
   /**
    * @var string[]
    */
-  public $app = [];
+  public $app;
   protected $clientDataType = AppsPeopleOzExternalMergedpeopleapiInAppNotificationTargetClientData::class;
   protected $clientDataDataType = 'array';
-  public $clientData = [];
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   protected $originatingFieldType = AppsPeopleOzExternalMergedpeopleapiInAppNotificationTargetOriginatingField::class;
   protected $originatingFieldDataType = 'array';
-  public $originatingField = [];
   /**
    * @var string
    */

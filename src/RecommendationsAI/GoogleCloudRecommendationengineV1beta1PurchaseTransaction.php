@@ -22,7 +22,7 @@ class GoogleCloudRecommendationengineV1beta1PurchaseTransaction extends \Google\
   /**
    * @var float[]
    */
-  public $costs = [];
+  public $costs;
   /**
    * @var string
    */
@@ -38,7 +38,7 @@ class GoogleCloudRecommendationengineV1beta1PurchaseTransaction extends \Google\
   /**
    * @var float[]
    */
-  public $taxes = [];
+  public $taxes;
 
   /**
    * @param float[]

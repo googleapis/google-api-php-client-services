@@ -21,7 +21,6 @@ class CreateLinkRequest extends \Google\Model
 {
   protected $linkType = Link::class;
   protected $linkDataType = '';
-  public $link;
   /**
    * @var string
    */

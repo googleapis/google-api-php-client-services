@@ -27,7 +27,7 @@ class ModifyAckDeadlineRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ackIds = [];
+  public $ackIds;
 
   /**
    * @param int

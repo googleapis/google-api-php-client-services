@@ -23,7 +23,7 @@ class GoogleCloudSecuritycenterV1ExternalSystem extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assignees = [];
+  public $assignees;
   /**
    * @var string
    */

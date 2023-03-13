@@ -23,7 +23,7 @@ class GoogleIdentityAccesscontextmanagerV1EgressFrom extends \Google\Collection
   /**
    * @var string[]
    */
-  public $identities = [];
+  public $identities;
   /**
    * @var string
    */

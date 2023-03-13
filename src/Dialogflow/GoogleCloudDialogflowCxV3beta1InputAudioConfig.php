@@ -39,7 +39,7 @@ class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $phraseHints = [];
+  public $phraseHints;
   /**
    * @var int
    */

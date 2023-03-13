@@ -26,7 +26,6 @@ class TargetVpnGatewayAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = TargetVpnGatewaysScopedList::class;
   protected $itemsDataType = 'map';
-  public $items = [];
   /**
    * @var string
    */
@@ -42,10 +41,9 @@ class TargetVpnGatewayAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables = [];
+  public $unreachables;
   protected $warningType = TargetVpnGatewayAggregatedListWarning::class;
   protected $warningDataType = '';
-  public $warning;
 
   /**
    * @param string

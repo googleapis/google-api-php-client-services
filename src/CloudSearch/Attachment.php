@@ -21,23 +21,18 @@ class Attachment extends \Google\Model
 {
   protected $addOnDataType = GoogleChatV1ContextualAddOnMarkup::class;
   protected $addOnDataDataType = '';
-  public $addOnData;
   protected $appIdType = UserId::class;
   protected $appIdDataType = '';
-  public $appId;
   /**
    * @var string
    */
   public $attachmentId;
   protected $cardAddOnDataType = AppsDynamiteStorageCard::class;
   protected $cardAddOnDataDataType = '';
-  public $cardAddOnData;
   protected $deprecatedAddOnDataType = ContextualAddOnMarkup::class;
   protected $deprecatedAddOnDataDataType = '';
-  public $deprecatedAddOnData;
   protected $slackDataType = AppsDynamiteV1ApiCompatV1Attachment::class;
   protected $slackDataDataType = '';
-  public $slackData;
   /**
    * @var int
    */

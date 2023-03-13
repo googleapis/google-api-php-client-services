@@ -23,7 +23,7 @@ class V2ApiTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $methods = [];
+  public $methods;
   /**
    * @var string
    */

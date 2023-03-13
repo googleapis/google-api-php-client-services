@@ -43,20 +43,17 @@ class FhirStore extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
-  public $notificationConfig;
   protected $streamConfigsType = StreamConfig::class;
   protected $streamConfigsDataType = 'array';
-  public $streamConfigs = [];
   protected $validationConfigType = ValidationConfig::class;
   protected $validationConfigDataType = '';
-  public $validationConfig;
   /**
    * @var string
    */

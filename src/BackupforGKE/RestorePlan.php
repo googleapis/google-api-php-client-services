@@ -42,14 +42,13 @@ class RestorePlan extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $restoreConfigType = RestoreConfig::class;
   protected $restoreConfigDataType = '';
-  public $restoreConfig;
   /**
    * @var string
    */

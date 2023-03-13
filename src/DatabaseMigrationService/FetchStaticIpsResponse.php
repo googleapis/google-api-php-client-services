@@ -27,7 +27,7 @@ class FetchStaticIpsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $staticIps = [];
+  public $staticIps;
 
   /**
    * @param string

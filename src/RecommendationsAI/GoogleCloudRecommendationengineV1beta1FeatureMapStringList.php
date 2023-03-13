@@ -23,7 +23,7 @@ class GoogleCloudRecommendationengineV1beta1FeatureMapStringList extends \Google
   /**
    * @var string[]
    */
-  public $value = [];
+  public $value;
 
   /**
    * @param string[]

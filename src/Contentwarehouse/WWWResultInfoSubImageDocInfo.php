@@ -23,7 +23,7 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
   /**
    * @var int[]
    */
-  public $additionalSafesearchSignals = [];
+  public $additionalSafesearchSignals;
   /**
    * @var string
    */
@@ -54,7 +54,6 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
   public $estRelevance;
   protected $flowOutputType = ImageContentFlowProtoProd::class;
   protected $flowOutputDataType = '';
-  public $flowOutput;
   /**
    * @var int
    */

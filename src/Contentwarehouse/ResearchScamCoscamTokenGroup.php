@@ -23,7 +23,7 @@ class ResearchScamCoscamTokenGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $debugTokenStrings = [];
+  public $debugTokenStrings;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class ResearchScamCoscamTokenGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tokens = [];
+  public $tokens;
 
   /**
    * @param string[]

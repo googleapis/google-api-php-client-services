@@ -26,7 +26,6 @@ class Company extends \Google\Collection
   public $careerSiteUri;
   protected $derivedInfoType = CompanyDerivedInfo::class;
   protected $derivedInfoDataType = '';
-  public $derivedInfo;
   /**
    * @var string
    */
@@ -54,7 +53,7 @@ class Company extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keywordSearchableJobCustomAttributes = [];
+  public $keywordSearchableJobCustomAttributes;
   /**
    * @var string
    */

@@ -35,10 +35,9 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $managedType = ManagedCertificate::class;
   protected $managedDataType = '';
-  public $managed;
   /**
    * @var string
    */
@@ -50,14 +49,13 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sanDnsnames = [];
+  public $sanDnsnames;
   /**
    * @var string
    */
   public $scope;
   protected $selfManagedType = SelfManagedCertificate::class;
   protected $selfManagedDataType = '';
-  public $selfManaged;
   /**
    * @var string
    */

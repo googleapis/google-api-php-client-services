@@ -22,7 +22,7 @@ class IdentityConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $userServiceAccountMapping = [];
+  public $userServiceAccountMapping;
 
   /**
    * @param string[]

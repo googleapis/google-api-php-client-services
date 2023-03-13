@@ -23,15 +23,15 @@ class AssistantApiCallCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $callFormats = [];
+  public $callFormats;
   /**
    * @var string[]
    */
-  public $callMediums = [];
+  public $callMediums;
   /**
    * @var string[]
    */
-  public $callOptions = [];
+  public $callOptions;
   /**
    * @var bool
    */
@@ -39,7 +39,7 @@ class AssistantApiCallCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedRecipientTypes = [];
+  public $supportedRecipientTypes;
   /**
    * @var bool
    */

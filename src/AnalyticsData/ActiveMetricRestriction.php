@@ -27,7 +27,7 @@ class ActiveMetricRestriction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $restrictedMetricTypes = [];
+  public $restrictedMetricTypes;
 
   /**
    * @param string

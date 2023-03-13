@@ -26,10 +26,8 @@ class Application extends \Google\Collection
   public $appPricing;
   protected $appTracksType = AppTrackInfo::class;
   protected $appTracksDataType = 'array';
-  public $appTracks = [];
   protected $appVersionsType = AppVersion::class;
   protected $appVersionsDataType = 'array';
-  public $appVersions = [];
   /**
    * @var string
    */
@@ -37,7 +35,7 @@ class Application extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableCountries = [];
+  public $availableCountries;
   /**
    * @var string
    */
@@ -57,7 +55,7 @@ class Application extends \Google\Collection
   /**
    * @var string[]
    */
-  public $features = [];
+  public $features;
   /**
    * @var string
    */
@@ -68,7 +66,6 @@ class Application extends \Google\Collection
   public $iconUrl;
   protected $managedPropertiesType = ManagedProperty::class;
   protected $managedPropertiesDataType = 'array';
-  public $managedProperties = [];
   /**
    * @var int
    */
@@ -79,7 +76,6 @@ class Application extends \Google\Collection
   public $name;
   protected $permissionsType = ApplicationPermission::class;
   protected $permissionsDataType = 'array';
-  public $permissions = [];
   /**
    * @var string
    */
@@ -91,7 +87,7 @@ class Application extends \Google\Collection
   /**
    * @var string[]
    */
-  public $screenshotUrls = [];
+  public $screenshotUrls;
   /**
    * @var string
    */

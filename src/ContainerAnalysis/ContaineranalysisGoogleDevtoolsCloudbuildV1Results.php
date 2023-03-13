@@ -26,28 +26,24 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends \Google\Collect
   public $artifactManifest;
   protected $artifactTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $artifactTimingDataType = '';
-  public $artifactTiming;
   /**
    * @var string[]
    */
-  public $buildStepImages = [];
+  public $buildStepImages;
   /**
    * @var string[]
    */
-  public $buildStepOutputs = [];
+  public $buildStepOutputs;
   protected $imagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage::class;
   protected $imagesDataType = 'array';
-  public $images = [];
   protected $mavenArtifactsType = ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
-  public $mavenArtifacts = [];
   /**
    * @var string
    */
   public $numArtifacts;
   protected $pythonPackagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage::class;
   protected $pythonPackagesDataType = 'array';
-  public $pythonPackages = [];
 
   /**
    * @param string

@@ -23,19 +23,19 @@ class OceanDocTagBookSpecificNumberingRange extends \Google\Collection
   /**
    * @var string[]
    */
-  public $endNumbering = [];
+  public $endNumbering;
   /**
    * @var int[]
    */
-  public $numberType = [];
+  public $numberType;
   /**
    * @var int[]
    */
-  public $numberingSchema = [];
+  public $numberingSchema;
   /**
    * @var string[]
    */
-  public $startNumbering = [];
+  public $startNumbering;
 
   /**
    * @param string[]

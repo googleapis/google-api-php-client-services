@@ -23,7 +23,7 @@ class PackageNameList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $packageNames = [];
+  public $packageNames;
 
   /**
    * @param string[]

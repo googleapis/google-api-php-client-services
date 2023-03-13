@@ -22,7 +22,6 @@ class TransformSummary extends \Google\Collection
   protected $collection_key = 'outputCollectionName';
   protected $displayDataType = DisplayData::class;
   protected $displayDataDataType = 'array';
-  public $displayData = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class TransformSummary extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputCollectionName = [];
+  public $inputCollectionName;
   /**
    * @var string
    */
@@ -42,7 +41,7 @@ class TransformSummary extends \Google\Collection
   /**
    * @var string[]
    */
-  public $outputCollectionName = [];
+  public $outputCollectionName;
 
   /**
    * @param DisplayData[]

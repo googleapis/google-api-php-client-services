@@ -23,31 +23,27 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $alternateName = [];
+  public $alternateName;
   /**
    * @var string
    */
   public $authorList;
   protected $catalogType = ResearchScienceSearchCatalog::class;
   protected $catalogDataType = '';
-  public $catalog;
   /**
    * @var string[]
    */
-  public $compactIdentifier = [];
+  public $compactIdentifier;
   /**
    * @var string[]
    */
-  public $compactIdentifierFromCitation = [];
+  public $compactIdentifierFromCitation;
   protected $coverageEndDateType = ResearchScienceSearchDate::class;
   protected $coverageEndDateDataType = '';
-  public $coverageEndDate;
   protected $coverageStartDateType = ResearchScienceSearchDate::class;
   protected $coverageStartDateDataType = '';
-  public $coverageStartDate;
   protected $dataDownloadType = ResearchScienceSearchDataDownload::class;
   protected $dataDownloadDataType = 'array';
-  public $dataDownload = [];
   /**
    * @var string
    */
@@ -55,28 +51,24 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   public $datasetClassificationScore;
   protected $dateCreatedType = ResearchScienceSearchDate::class;
   protected $dateCreatedDataType = '';
-  public $dateCreated;
   protected $dateModifiedType = ResearchScienceSearchDate::class;
   protected $dateModifiedDataType = '';
-  public $dateModified;
   protected $datePublishedType = ResearchScienceSearchDate::class;
   protected $datePublishedDataType = '';
-  public $datePublished;
   protected $dateUpdatedType = ResearchScienceSearchDate::class;
   protected $dateUpdatedDataType = '';
-  public $dateUpdated;
   /**
    * @var string[]
    */
-  public $denylistStatus = [];
+  public $denylistStatus;
   /**
    * @var string[]
    */
-  public $description = [];
+  public $description;
   /**
    * @var string[]
    */
-  public $descriptionInHtml = [];
+  public $descriptionInHtml;
   /**
    * @var string
    */
@@ -84,17 +76,15 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $doiFromCitation = [];
+  public $doiFromCitation;
   protected $fieldOfStudyType = ResearchScienceSearchFieldOfStudyInfo::class;
   protected $fieldOfStudyDataType = 'array';
-  public $fieldOfStudy = [];
   /**
    * @var string
    */
   public $fingerprint;
   protected $funderType = ResearchScienceSearchOrganization::class;
   protected $funderDataType = 'array';
-  public $funder = [];
   /**
    * @var bool
    */
@@ -106,11 +96,11 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $identifierFromSource = [];
+  public $identifierFromSource;
   /**
    * @var string[]
    */
-  public $imageUrl = [];
+  public $imageUrl;
   /**
    * @var int
    */
@@ -122,7 +112,7 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $isBasedOn = [];
+  public $isBasedOn;
   /**
    * @var bool
    */
@@ -130,26 +120,25 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keyword = [];
+  public $keyword;
   /**
    * @var string
    */
   public $languageCode;
   protected $licenseType = ResearchScienceSearchLicense::class;
   protected $licenseDataType = 'array';
-  public $license = [];
   /**
    * @var string[]
    */
-  public $licenseDeprecated = [];
+  public $licenseDeprecated;
   /**
    * @var string[]
    */
-  public $measurementTechnique = [];
+  public $measurementTechnique;
   /**
    * @var string[]
    */
-  public $mentionedUrls = [];
+  public $mentionedUrls;
   /**
    * @var string
    */
@@ -157,7 +146,7 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $name = [];
+  public $name;
   /**
    * @var int
    */
@@ -168,53 +157,46 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   public $numberOfScholarCitations;
   protected $publicationType = ResearchScienceSearchCitation::class;
   protected $publicationDataType = 'array';
-  public $publication = [];
   /**
    * @var string
    */
   public $relatedArticleUrl;
   protected $replicaType = ResearchScienceSearchReplica::class;
   protected $replicaDataType = 'array';
-  public $replica = [];
   /**
    * @var string[]
    */
-  public $sameAs = [];
+  public $sameAs;
   /**
    * @var string
    */
   public $scholarQuery;
   protected $scholarlyArticleType = ResearchScienceSearchScholarlyArticle::class;
   protected $scholarlyArticleDataType = '';
-  public $scholarlyArticle;
   protected $sourceOrganizationType = ResearchScienceSearchOrganization::class;
   protected $sourceOrganizationDataType = 'array';
-  public $sourceOrganization = [];
   /**
    * @var string
    */
   public $sourceUrl;
   protected $sourceUrlDocjoinInfoType = ResearchScienceSearchSourceUrlDocjoinInfo::class;
   protected $sourceUrlDocjoinInfoDataType = '';
-  public $sourceUrlDocjoinInfo;
   protected $spatialCoverageType = ResearchScienceSearchLocation::class;
   protected $spatialCoverageDataType = 'array';
-  public $spatialCoverage = [];
   /**
    * @var string[]
    */
-  public $topSalientTermLabel = [];
+  public $topSalientTermLabel;
   /**
    * @var string[]
    */
-  public $url = [];
+  public $url;
   /**
    * @var string[]
    */
-  public $variable = [];
+  public $variable;
   protected $versionClusterInfoType = ResearchScienceSearchVersionClusterInfo::class;
   protected $versionClusterInfoDataType = '';
-  public $versionClusterInfo;
   /**
    * @var string
    */
@@ -222,7 +204,7 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var float[]
    */
-  public $versionEmbeddingVector = [];
+  public $versionEmbeddingVector;
 
   /**
    * @param string[]

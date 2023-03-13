@@ -22,7 +22,6 @@ class ListConversionSourcesResponse extends \Google\Collection
   protected $collection_key = 'conversionSources';
   protected $conversionSourcesType = ConversionSource::class;
   protected $conversionSourcesDataType = 'array';
-  public $conversionSources = [];
   /**
    * @var string
    */

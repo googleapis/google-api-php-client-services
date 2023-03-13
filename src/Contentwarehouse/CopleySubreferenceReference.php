@@ -23,14 +23,13 @@ class CopleySubreferenceReference extends \Google\Collection
   /**
    * @var string[]
    */
-  public $personalReferenceTypes = [];
+  public $personalReferenceTypes;
   /**
    * @var float
    */
   public $referenceScore;
   protected $relationshipLexicalInfoType = CopleyLexicalMetadata::class;
   protected $relationshipLexicalInfoDataType = '';
-  public $relationshipLexicalInfo;
 
   /**
    * @param string[]

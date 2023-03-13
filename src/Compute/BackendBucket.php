@@ -26,7 +26,6 @@ class BackendBucket extends \Google\Collection
   public $bucketName;
   protected $cdnPolicyType = BackendBucketCdnPolicy::class;
   protected $cdnPolicyDataType = '';
-  public $cdnPolicy;
   /**
    * @var string
    */
@@ -38,7 +37,7 @@ class BackendBucket extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customResponseHeaders = [];
+  public $customResponseHeaders;
   /**
    * @var string
    */

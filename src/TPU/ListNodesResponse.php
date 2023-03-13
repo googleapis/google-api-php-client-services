@@ -26,11 +26,10 @@ class ListNodesResponse extends \Google\Collection
   public $nextPageToken;
   protected $nodesType = Node::class;
   protected $nodesDataType = 'array';
-  public $nodes = [];
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param string

@@ -23,25 +23,23 @@ class SparkSqlJob extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jarFileUris = [];
+  public $jarFileUris;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
-  public $loggingConfig;
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
   /**
    * @var string
    */
   public $queryFileUri;
   protected $queryListType = QueryList::class;
   protected $queryListDataType = '';
-  public $queryList;
   /**
    * @var string[]
    */
-  public $scriptVariables = [];
+  public $scriptVariables;
 
   /**
    * @param string[]

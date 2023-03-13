@@ -23,7 +23,7 @@ class GoogleCloudRetailV2ModelServingConfigList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $servingConfigIds = [];
+  public $servingConfigIds;
 
   /**
    * @param string[]

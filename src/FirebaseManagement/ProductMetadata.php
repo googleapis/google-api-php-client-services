@@ -23,7 +23,7 @@ class ProductMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warningMessages = [];
+  public $warningMessages;
 
   /**
    * @param string[]

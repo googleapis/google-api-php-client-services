@@ -23,11 +23,11 @@ class RepositoryWebrefWebrefOutlinkInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $byteLength = [];
+  public $byteLength;
   /**
    * @var string[]
    */
-  public $byteOffset = [];
+  public $byteOffset;
   /**
    * @var bool
    */
@@ -35,7 +35,7 @@ class RepositoryWebrefWebrefOutlinkInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $topicalityWeight = [];
+  public $topicalityWeight;
   /**
    * @var string
    */

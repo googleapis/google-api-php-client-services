@@ -44,7 +44,6 @@ class Baremetalsolution extends \Google\Service
   public $projects_locations_instances;
   public $projects_locations_networks;
   public $projects_locations_nfsShares;
-  public $projects_locations_nfsshares;
   public $projects_locations_operations;
   public $projects_locations_provisioningConfigs;
   public $projects_locations_provisioningQuotas;
@@ -329,16 +328,6 @@ class Baremetalsolution extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'rename' => [
-              'path' => 'v2/{+name}:rename',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],
           ]
         ]
@@ -413,26 +402,6 @@ class Baremetalsolution extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_nfsshares = new Baremetalsolution\Resource\ProjectsLocationsNfsshares(
-        $this,
-        $this->serviceName,
-        'nfsshares',
-        [
-          'methods' => [
-            'rename' => [
-              'path' => 'v2/{+name}:rename',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],
@@ -661,16 +630,6 @@ class Baremetalsolution extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'rename' => [
-              'path' => 'v2/{+name}:rename',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'resize' => [

@@ -22,7 +22,6 @@ class ListCertificateTemplatesResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $certificateTemplatesType = CertificateTemplate::class;
   protected $certificateTemplatesDataType = 'array';
-  public $certificateTemplates = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListCertificateTemplatesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param CertificateTemplate[]

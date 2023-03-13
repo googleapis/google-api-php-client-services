@@ -30,14 +30,12 @@ class MetricDescriptor extends \Google\Collection
   public $displayName;
   protected $labelsType = LabelDescriptor::class;
   protected $labelsDataType = 'array';
-  public $labels = [];
   /**
    * @var string
    */
   public $launchStage;
   protected $metadataType = MetricDescriptorMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   /**
    * @var string
    */
@@ -45,7 +43,7 @@ class MetricDescriptor extends \Google\Collection
   /**
    * @var string[]
    */
-  public $monitoredResourceTypes = [];
+  public $monitoredResourceTypes;
   /**
    * @var string
    */

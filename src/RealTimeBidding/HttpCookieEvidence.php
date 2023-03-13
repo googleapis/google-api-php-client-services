@@ -23,7 +23,7 @@ class HttpCookieEvidence extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cookieNames = [];
+  public $cookieNames;
   /**
    * @var int
    */

@@ -23,11 +23,11 @@ class GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelector extends \Google\
   /**
    * @var string[]
    */
-  public $issueModels = [];
+  public $issueModels;
   /**
    * @var string[]
    */
-  public $phraseMatchers = [];
+  public $phraseMatchers;
   /**
    * @var bool
    */

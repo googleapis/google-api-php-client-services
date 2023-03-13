@@ -23,19 +23,19 @@ class RepositoryWebrefMdvcMetadataPerVertical extends \Google\Collection
   /**
    * @var string[]
    */
-  public $compatibleIds = [];
+  public $compatibleIds;
   /**
    * @var string[]
    */
-  public $dimensionIds = [];
+  public $dimensionIds;
   /**
    * @var string[]
    */
-  public $expandedOutputIds = [];
+  public $expandedOutputIds;
   /**
    * @var string[]
    */
-  public $generalizationIds = [];
+  public $generalizationIds;
   /**
    * @var bool
    */
@@ -55,7 +55,7 @@ class RepositoryWebrefMdvcMetadataPerVertical extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subVerticalFp = [];
+  public $subVerticalFp;
   /**
    * @var string
    */

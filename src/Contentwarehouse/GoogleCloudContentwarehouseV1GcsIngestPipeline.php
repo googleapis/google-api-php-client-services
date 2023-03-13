@@ -26,7 +26,7 @@ class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
   /**
    * @var string
    */
-  public $processorType;
+  public $processorResultsFolderPath;
   /**
    * @var string
    */
@@ -49,16 +49,16 @@ class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
   /**
    * @param string
    */
-  public function setProcessorType($processorType)
+  public function setProcessorResultsFolderPath($processorResultsFolderPath)
   {
-    $this->processorType = $processorType;
+    $this->processorResultsFolderPath = $processorResultsFolderPath;
   }
   /**
    * @return string
    */
-  public function getProcessorType()
+  public function getProcessorResultsFolderPath()
   {
-    return $this->processorType;
+    return $this->processorResultsFolderPath;
   }
   /**
    * @param string

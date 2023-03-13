@@ -22,7 +22,7 @@ class ExecuteActionRequest extends \Google\Model
   /**
    * @var array[]
    */
-  public $parameters = [];
+  public $parameters;
 
   /**
    * @param array[]

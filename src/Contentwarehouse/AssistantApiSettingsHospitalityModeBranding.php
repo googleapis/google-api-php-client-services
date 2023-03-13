@@ -26,7 +26,7 @@ class AssistantApiSettingsHospitalityModeBranding extends \Google\Model
   /**
    * @var string[]
    */
-  public $displayNameForLanguage = [];
+  public $displayNameForLanguage;
   /**
    * @var string
    */

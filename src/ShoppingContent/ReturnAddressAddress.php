@@ -43,7 +43,7 @@ class ReturnAddressAddress extends \Google\Collection
   /**
    * @var string[]
    */
-  public $streetAddress = [];
+  public $streetAddress;
 
   /**
    * @param string

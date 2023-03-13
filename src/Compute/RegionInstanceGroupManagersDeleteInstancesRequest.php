@@ -23,7 +23,7 @@ class RegionInstanceGroupManagersDeleteInstancesRequest extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $instances = [];
+  public $instances;
   /**
    * @var bool
    */

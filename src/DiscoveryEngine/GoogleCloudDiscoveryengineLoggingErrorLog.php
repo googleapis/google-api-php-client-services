@@ -21,20 +21,24 @@ class GoogleCloudDiscoveryengineLoggingErrorLog extends \Google\Model
 {
   protected $contextType = GoogleCloudDiscoveryengineLoggingErrorContext::class;
   protected $contextDataType = '';
-  public $context;
   protected $importPayloadType = GoogleCloudDiscoveryengineLoggingImportErrorContext::class;
   protected $importPayloadDataType = '';
-  public $importPayload;
   /**
    * @var string
    */
   public $message;
+  /**
+   * @var array[]
+   */
+  public $requestPayload;
+  /**
+   * @var array[]
+   */
+  public $responsePayload;
   protected $serviceContextType = GoogleCloudDiscoveryengineLoggingServiceContext::class;
   protected $serviceContextDataType = '';
-  public $serviceContext;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
-  public $status;
 
   /**
    * @param GoogleCloudDiscoveryengineLoggingErrorContext
@@ -77,6 +81,34 @@ class GoogleCloudDiscoveryengineLoggingErrorLog extends \Google\Model
   public function getMessage()
   {
     return $this->message;
+  }
+  /**
+   * @param array[]
+   */
+  public function setRequestPayload($requestPayload)
+  {
+    $this->requestPayload = $requestPayload;
+  }
+  /**
+   * @return array[]
+   */
+  public function getRequestPayload()
+  {
+    return $this->requestPayload;
+  }
+  /**
+   * @param array[]
+   */
+  public function setResponsePayload($responsePayload)
+  {
+    $this->responsePayload = $responsePayload;
+  }
+  /**
+   * @return array[]
+   */
+  public function getResponsePayload()
+  {
+    return $this->responsePayload;
   }
   /**
    * @param GoogleCloudDiscoveryengineLoggingServiceContext

@@ -22,7 +22,7 @@ class GoogleCloudDialogflowV2OriginalDetectIntentRequest extends \Google\Model
   /**
    * @var array[]
    */
-  public $payload = [];
+  public $payload;
   /**
    * @var string
    */

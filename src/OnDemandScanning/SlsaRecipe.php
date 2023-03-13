@@ -22,7 +22,7 @@ class SlsaRecipe extends \Google\Model
   /**
    * @var array[]
    */
-  public $arguments = [];
+  public $arguments;
   /**
    * @var string
    */
@@ -34,7 +34,7 @@ class SlsaRecipe extends \Google\Model
   /**
    * @var array[]
    */
-  public $environment = [];
+  public $environment;
   /**
    * @var string
    */

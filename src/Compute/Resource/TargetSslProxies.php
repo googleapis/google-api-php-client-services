@@ -62,7 +62,8 @@ class TargetSslProxies extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified TargetSslProxy resource. (targetSslProxies.get)
+   * Returns the specified TargetSslProxy resource. Gets a list of available
+   * target SSL proxies by making a list() request. (targetSslProxies.get)
    *
    * @param string $project Project ID for this request.
    * @param string $targetSslProxy Name of the TargetSslProxy resource to return.

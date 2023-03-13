@@ -298,7 +298,8 @@ class InstanceGroupManagers extends \Google\Service\Resource
     return $this->call('deletePerInstanceConfigs', [$params], Operation::class);
   }
   /**
-   * Returns all of the details about the specified managed instance group.
+   * Returns all of the details about the specified managed instance group. Gets a
+   * list of available managed instance groups by making a list() request.
    * (instanceGroupManagers.get)
    *
    * @param string $project Project ID for this request.

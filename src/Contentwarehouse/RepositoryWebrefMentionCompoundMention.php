@@ -22,11 +22,10 @@ class RepositoryWebrefMentionCompoundMention extends \Google\Collection
   protected $collection_key = 'mrfIndex';
   protected $componentType = RepositoryWebrefMentionComponent::class;
   protected $componentDataType = 'array';
-  public $component = [];
   /**
    * @var int[]
    */
-  public $mrfIndex = [];
+  public $mrfIndex;
 
   /**
    * @param RepositoryWebrefMentionComponent[]

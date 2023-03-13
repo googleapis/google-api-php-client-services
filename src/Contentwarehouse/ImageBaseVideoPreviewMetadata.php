@@ -60,14 +60,6 @@ class ImageBaseVideoPreviewMetadata extends \Google\Model
    */
   public $type;
   /**
-   * @var string
-   */
-  public $videoSegmentEndUs;
-  /**
-   * @var string
-   */
-  public $videoSegmentStartUs;
-  /**
    * @var int
    */
   public $width;
@@ -211,34 +203,6 @@ class ImageBaseVideoPreviewMetadata extends \Google\Model
   public function getType()
   {
     return $this->type;
-  }
-  /**
-   * @param string
-   */
-  public function setVideoSegmentEndUs($videoSegmentEndUs)
-  {
-    $this->videoSegmentEndUs = $videoSegmentEndUs;
-  }
-  /**
-   * @return string
-   */
-  public function getVideoSegmentEndUs()
-  {
-    return $this->videoSegmentEndUs;
-  }
-  /**
-   * @param string
-   */
-  public function setVideoSegmentStartUs($videoSegmentStartUs)
-  {
-    $this->videoSegmentStartUs = $videoSegmentStartUs;
-  }
-  /**
-   * @return string
-   */
-  public function getVideoSegmentStartUs()
-  {
-    return $this->videoSegmentStartUs;
   }
   /**
    * @param int

@@ -27,7 +27,7 @@ class AppIntegrity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $certificateSha256Digest = [];
+  public $certificateSha256Digest;
   /**
    * @var string
    */

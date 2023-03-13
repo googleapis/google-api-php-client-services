@@ -23,15 +23,15 @@ class Auth extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accessLevels = [];
+  public $accessLevels;
   /**
    * @var string[]
    */
-  public $audiences = [];
+  public $audiences;
   /**
    * @var array[]
    */
-  public $claims = [];
+  public $claims;
   /**
    * @var string
    */

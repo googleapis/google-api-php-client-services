@@ -34,11 +34,10 @@ class DeepLink extends \Google\Collection
   public $kind;
   protected $mobileAppType = MobileApp::class;
   protected $mobileAppDataType = '';
-  public $mobileApp;
   /**
    * @var string[]
    */
-  public $remarketingListIds = [];
+  public $remarketingListIds;
 
   /**
    * @param string

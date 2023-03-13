@@ -26,7 +26,7 @@ class GroupResult extends \Google\Model
   /**
    * @var array[]
    */
-  public $properties = [];
+  public $properties;
 
   /**
    * @param string

@@ -22,11 +22,10 @@ class CreateProfileRequest extends \Google\Collection
   protected $collection_key = 'profileType';
   protected $deploymentType = Deployment::class;
   protected $deploymentDataType = '';
-  public $deployment;
   /**
    * @var string[]
    */
-  public $profileType = [];
+  public $profileType;
 
   /**
    * @param Deployment

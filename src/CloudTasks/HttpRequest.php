@@ -26,17 +26,15 @@ class HttpRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $headers = [];
+  public $headers;
   /**
    * @var string
    */
   public $httpMethod;
   protected $oauthTokenType = OAuthToken::class;
   protected $oauthTokenDataType = '';
-  public $oauthToken;
   protected $oidcTokenType = OidcToken::class;
   protected $oidcTokenDataType = '';
-  public $oidcToken;
   /**
    * @var string
    */

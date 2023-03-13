@@ -23,21 +23,19 @@ class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $baseTypes = [];
+  public $baseTypes;
   /**
    * @var string
    */
   public $displayName;
   protected $enumValuesType = GoogleCloudDocumentaiV1DocumentSchemaEntityTypeEnumValues::class;
   protected $enumValuesDataType = '';
-  public $enumValues;
   /**
    * @var string
    */
   public $name;
   protected $propertiesType = GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty::class;
   protected $propertiesDataType = 'array';
-  public $properties = [];
 
   /**
    * @param string[]

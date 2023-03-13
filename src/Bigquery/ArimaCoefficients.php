@@ -20,9 +20,9 @@ namespace Google\Service\Bigquery;
 class ArimaCoefficients extends \Google\Collection
 {
   protected $collection_key = 'movingAverageCoefficients';
-  public $autoRegressiveCoefficients = [];
+  public $autoRegressiveCoefficients;
   public $interceptCoefficient;
-  public $movingAverageCoefficients = [];
+  public $movingAverageCoefficients;
 
   public function setAutoRegressiveCoefficients($autoRegressiveCoefficients)
   {

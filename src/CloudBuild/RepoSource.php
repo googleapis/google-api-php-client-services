@@ -46,7 +46,7 @@ class RepoSource extends \Google\Model
   /**
    * @var string[]
    */
-  public $substitutions = [];
+  public $substitutions;
   /**
    * @var string
    */

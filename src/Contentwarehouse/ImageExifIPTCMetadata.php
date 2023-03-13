@@ -26,10 +26,8 @@ class ImageExifIPTCMetadata extends \Google\Collection
   public $acquireLicensePage;
   protected $artworkType = ImageExifIPTCMetadataArtwork::class;
   protected $artworkDataType = 'array';
-  public $artwork = [];
   protected $contactinfoType = ImageExifIPTCMetadataContactInfo::class;
   protected $contactinfoDataType = '';
-  public $contactinfo;
   /**
    * @var string
    */
@@ -37,7 +35,7 @@ class ImageExifIPTCMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $creator = [];
+  public $creator;
   /**
    * @var string
    */
@@ -77,20 +75,17 @@ class ImageExifIPTCMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $keywords = [];
+  public $keywords;
   /**
    * @var string
    */
   public $licenseUrl;
   protected $locationType = ImageExifIPTCMetadataLocation::class;
   protected $locationDataType = '';
-  public $location;
   protected $locationCreatedType = ImageExifIPTCMetadataLocationInfo::class;
   protected $locationCreatedDataType = '';
-  public $locationCreated;
   protected $locationShownType = ImageExifIPTCMetadataLocationInfo::class;
   protected $locationShownDataType = 'array';
-  public $locationShown = [];
   /**
    * @var string
    */
@@ -110,7 +105,7 @@ class ImageExifIPTCMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supplementalCategories = [];
+  public $supplementalCategories;
   /**
    * @var string
    */

@@ -27,7 +27,7 @@ class IdentitytoolkitRelyingpartyGetAccountInfoRequest extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $email = [];
+  public $email;
   /**
    * @var string
    */
@@ -35,11 +35,11 @@ class IdentitytoolkitRelyingpartyGetAccountInfoRequest extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $localId = [];
+  public $localId;
   /**
    * @var string[]
    */
-  public $phoneNumber = [];
+  public $phoneNumber;
 
   /**
    * @param string

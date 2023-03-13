@@ -21,10 +21,8 @@ class Phase extends \Google\Model
 {
   protected $childRolloutJobsType = ChildRolloutJobs::class;
   protected $childRolloutJobsDataType = '';
-  public $childRolloutJobs;
   protected $deploymentJobsType = DeploymentJobs::class;
   protected $deploymentJobsDataType = '';
-  public $deploymentJobs;
   /**
    * @var string
    */

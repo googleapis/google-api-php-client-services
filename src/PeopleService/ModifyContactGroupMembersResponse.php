@@ -23,11 +23,11 @@ class ModifyContactGroupMembersResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $canNotRemoveLastContactGroupResourceNames = [];
+  public $canNotRemoveLastContactGroupResourceNames;
   /**
    * @var string[]
    */
-  public $notFoundResourceNames = [];
+  public $notFoundResourceNames;
 
   /**
    * @param string[]
