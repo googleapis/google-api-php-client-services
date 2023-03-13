@@ -94,9 +94,9 @@ class RoleAssignments extends \Google\Service\Resource
    * @opt_param string pageToken Token to specify the next page in the list.
    * @opt_param string roleId Immutable ID of a role. If included in the request,
    * returns only role assignments containing this role ID.
-   * @opt_param string userKey The user's primary email address, alias email
-   * address, or unique user ID. If included in the request, returns role
-   * assignments only for this user.
+   * @opt_param string userKey The primary email address, alias email address, or
+   * unique user or group ID. If included in the request, returns role assignments
+   * only for this user or group.
    * @return RoleAssignmentsModel
    */
   public function listRoleAssignments($customer, $optParams = [])
