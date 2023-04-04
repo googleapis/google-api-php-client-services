@@ -17,44 +17,46 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Strategy extends \Google\Model
+class ServiceNetworking extends \Google\Model
 {
-  protected $canaryType = Canary::class;
-  protected $canaryDataType = '';
-  public $canary;
-  protected $standardType = Standard::class;
-  protected $standardDataType = '';
-  public $standard;
+  /**
+   * @var string
+   */
+  public $deployment;
+  /**
+   * @var string
+   */
+  public $service;
 
   /**
-   * @param Canary
+   * @param string
    */
-  public function setCanary(Canary $canary)
+  public function setDeployment($deployment)
   {
-    $this->canary = $canary;
+    $this->deployment = $deployment;
   }
   /**
-   * @return Canary
+   * @return string
    */
-  public function getCanary()
+  public function getDeployment()
   {
-    return $this->canary;
+    return $this->deployment;
   }
   /**
-   * @param Standard
+   * @param string
    */
-  public function setStandard(Standard $standard)
+  public function setService($service)
   {
-    $this->standard = $standard;
+    $this->service = $service;
   }
   /**
-   * @return Standard
+   * @return string
    */
-  public function getStandard()
+  public function getService()
   {
-    return $this->standard;
+    return $this->service;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Strategy::class, 'Google_Service_CloudDeploy_Strategy');
+class_alias(ServiceNetworking::class, 'Google_Service_CloudDeploy_ServiceNetworking');

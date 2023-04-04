@@ -17,44 +17,28 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Strategy extends \Google\Model
+class CustomCanaryDeployment extends \Google\Collection
 {
-  protected $canaryType = Canary::class;
-  protected $canaryDataType = '';
-  public $canary;
-  protected $standardType = Standard::class;
-  protected $standardDataType = '';
-  public $standard;
+  protected $collection_key = 'phaseConfigs';
+  protected $phaseConfigsType = PhaseConfig::class;
+  protected $phaseConfigsDataType = 'array';
+  public $phaseConfigs = [];
 
   /**
-   * @param Canary
+   * @param PhaseConfig[]
    */
-  public function setCanary(Canary $canary)
+  public function setPhaseConfigs($phaseConfigs)
   {
-    $this->canary = $canary;
+    $this->phaseConfigs = $phaseConfigs;
   }
   /**
-   * @return Canary
+   * @return PhaseConfig[]
    */
-  public function getCanary()
+  public function getPhaseConfigs()
   {
-    return $this->canary;
-  }
-  /**
-   * @param Standard
-   */
-  public function setStandard(Standard $standard)
-  {
-    $this->standard = $standard;
-  }
-  /**
-   * @return Standard
-   */
-  public function getStandard()
-  {
-    return $this->standard;
+    return $this->phaseConfigs;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Strategy::class, 'Google_Service_CloudDeploy_Strategy');
+class_alias(CustomCanaryDeployment::class, 'Google_Service_CloudDeploy_CustomCanaryDeployment');

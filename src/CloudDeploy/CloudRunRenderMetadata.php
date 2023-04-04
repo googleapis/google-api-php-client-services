@@ -17,44 +17,28 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Strategy extends \Google\Model
+class CloudRunRenderMetadata extends \Google\Model
 {
-  protected $canaryType = Canary::class;
-  protected $canaryDataType = '';
-  public $canary;
-  protected $standardType = Standard::class;
-  protected $standardDataType = '';
-  public $standard;
+  /**
+   * @var string
+   */
+  public $service;
 
   /**
-   * @param Canary
+   * @param string
    */
-  public function setCanary(Canary $canary)
+  public function setService($service)
   {
-    $this->canary = $canary;
+    $this->service = $service;
   }
   /**
-   * @return Canary
+   * @return string
    */
-  public function getCanary()
+  public function getService()
   {
-    return $this->canary;
-  }
-  /**
-   * @param Standard
-   */
-  public function setStandard(Standard $standard)
-  {
-    $this->standard = $standard;
-  }
-  /**
-   * @return Standard
-   */
-  public function getStandard()
-  {
-    return $this->standard;
+    return $this->service;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Strategy::class, 'Google_Service_CloudDeploy_Strategy');
+class_alias(CloudRunRenderMetadata::class, 'Google_Service_CloudDeploy_CloudRunRenderMetadata');

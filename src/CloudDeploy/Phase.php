@@ -21,12 +21,18 @@ class Phase extends \Google\Model
 {
   protected $childRolloutJobsType = ChildRolloutJobs::class;
   protected $childRolloutJobsDataType = '';
+  public $childRolloutJobs;
   protected $deploymentJobsType = DeploymentJobs::class;
   protected $deploymentJobsDataType = '';
+  public $deploymentJobs;
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var string
+   */
+  public $skipMessage;
   /**
    * @var string
    */
@@ -73,6 +79,20 @@ class Phase extends \Google\Model
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * @param string
+   */
+  public function setSkipMessage($skipMessage)
+  {
+    $this->skipMessage = $skipMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getSkipMessage()
+  {
+    return $this->skipMessage;
   }
   /**
    * @param string

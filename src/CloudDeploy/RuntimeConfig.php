@@ -17,44 +17,44 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Strategy extends \Google\Model
+class RuntimeConfig extends \Google\Model
 {
-  protected $canaryType = Canary::class;
-  protected $canaryDataType = '';
-  public $canary;
-  protected $standardType = Standard::class;
-  protected $standardDataType = '';
-  public $standard;
+  protected $cloudRunType = CloudRunConfig::class;
+  protected $cloudRunDataType = '';
+  public $cloudRun;
+  protected $kubernetesType = KubernetesConfig::class;
+  protected $kubernetesDataType = '';
+  public $kubernetes;
 
   /**
-   * @param Canary
+   * @param CloudRunConfig
    */
-  public function setCanary(Canary $canary)
+  public function setCloudRun(CloudRunConfig $cloudRun)
   {
-    $this->canary = $canary;
+    $this->cloudRun = $cloudRun;
   }
   /**
-   * @return Canary
+   * @return CloudRunConfig
    */
-  public function getCanary()
+  public function getCloudRun()
   {
-    return $this->canary;
+    return $this->cloudRun;
   }
   /**
-   * @param Standard
+   * @param KubernetesConfig
    */
-  public function setStandard(Standard $standard)
+  public function setKubernetes(KubernetesConfig $kubernetes)
   {
-    $this->standard = $standard;
+    $this->kubernetes = $kubernetes;
   }
   /**
-   * @return Standard
+   * @return KubernetesConfig
    */
-  public function getStandard()
+  public function getKubernetes()
   {
-    return $this->standard;
+    return $this->kubernetes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Strategy::class, 'Google_Service_CloudDeploy_Strategy');
+class_alias(RuntimeConfig::class, 'Google_Service_CloudDeploy_RuntimeConfig');

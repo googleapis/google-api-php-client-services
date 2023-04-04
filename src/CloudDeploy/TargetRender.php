@@ -27,6 +27,9 @@ class TargetRender extends \Google\Model
    * @var string
    */
   public $failureMessage;
+  protected $metadataType = RenderMetadata::class;
+  protected $metadataDataType = '';
+  public $metadata;
   /**
    * @var string
    */
@@ -63,6 +66,20 @@ class TargetRender extends \Google\Model
   public function getFailureMessage()
   {
     return $this->failureMessage;
+  }
+  /**
+   * @param RenderMetadata
+   */
+  public function setMetadata(RenderMetadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return RenderMetadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string

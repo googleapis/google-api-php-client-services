@@ -17,44 +17,47 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Strategy extends \Google\Model
+class CanaryDeployment extends \Google\Collection
 {
-  protected $canaryType = Canary::class;
-  protected $canaryDataType = '';
-  public $canary;
-  protected $standardType = Standard::class;
-  protected $standardDataType = '';
-  public $standard;
+  protected $collection_key = 'percentages';
+  /**
+   * @var int[]
+   */
+  public $percentages = [];
+  /**
+   * @var bool
+   */
+  public $verify;
 
   /**
-   * @param Canary
+   * @param int[]
    */
-  public function setCanary(Canary $canary)
+  public function setPercentages($percentages)
   {
-    $this->canary = $canary;
+    $this->percentages = $percentages;
   }
   /**
-   * @return Canary
+   * @return int[]
    */
-  public function getCanary()
+  public function getPercentages()
   {
-    return $this->canary;
+    return $this->percentages;
   }
   /**
-   * @param Standard
+   * @param bool
    */
-  public function setStandard(Standard $standard)
+  public function setVerify($verify)
   {
-    $this->standard = $standard;
+    $this->verify = $verify;
   }
   /**
-   * @return Standard
+   * @return bool
    */
-  public function getStandard()
+  public function getVerify()
   {
-    return $this->standard;
+    return $this->verify;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Strategy::class, 'Google_Service_CloudDeploy_Strategy');
+class_alias(CanaryDeployment::class, 'Google_Service_CloudDeploy_CanaryDeployment');

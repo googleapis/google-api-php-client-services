@@ -17,38 +17,17 @@
 
 namespace Google\Service\CloudDeploy;
 
-class TargetArtifact extends \Google\Model
+class PhaseArtifact extends \Google\Model
 {
   /**
    * @var string
    */
-  public $artifactUri;
-  /**
-   * @var string
-   */
   public $manifestPath;
-  protected $phaseArtifactsType = PhaseArtifact::class;
-  protected $phaseArtifactsDataType = 'map';
-  public $phaseArtifacts = [];
   /**
    * @var string
    */
   public $skaffoldConfigPath;
 
-  /**
-   * @param string
-   */
-  public function setArtifactUri($artifactUri)
-  {
-    $this->artifactUri = $artifactUri;
-  }
-  /**
-   * @return string
-   */
-  public function getArtifactUri()
-  {
-    return $this->artifactUri;
-  }
   /**
    * @param string
    */
@@ -62,20 +41,6 @@ class TargetArtifact extends \Google\Model
   public function getManifestPath()
   {
     return $this->manifestPath;
-  }
-  /**
-   * @param PhaseArtifact[]
-   */
-  public function setPhaseArtifacts($phaseArtifacts)
-  {
-    $this->phaseArtifacts = $phaseArtifacts;
-  }
-  /**
-   * @return PhaseArtifact[]
-   */
-  public function getPhaseArtifacts()
-  {
-    return $this->phaseArtifacts;
   }
   /**
    * @param string
@@ -94,4 +59,4 @@ class TargetArtifact extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetArtifact::class, 'Google_Service_CloudDeploy_TargetArtifact');
+class_alias(PhaseArtifact::class, 'Google_Service_CloudDeploy_PhaseArtifact');

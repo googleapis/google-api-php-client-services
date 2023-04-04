@@ -17,44 +17,46 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Strategy extends \Google\Model
+class IgnoreJobRequest extends \Google\Model
 {
-  protected $canaryType = Canary::class;
-  protected $canaryDataType = '';
-  public $canary;
-  protected $standardType = Standard::class;
-  protected $standardDataType = '';
-  public $standard;
+  /**
+   * @var string
+   */
+  public $jobId;
+  /**
+   * @var string
+   */
+  public $phaseId;
 
   /**
-   * @param Canary
+   * @param string
    */
-  public function setCanary(Canary $canary)
+  public function setJobId($jobId)
   {
-    $this->canary = $canary;
+    $this->jobId = $jobId;
   }
   /**
-   * @return Canary
+   * @return string
    */
-  public function getCanary()
+  public function getJobId()
   {
-    return $this->canary;
+    return $this->jobId;
   }
   /**
-   * @param Standard
+   * @param string
    */
-  public function setStandard(Standard $standard)
+  public function setPhaseId($phaseId)
   {
-    $this->standard = $standard;
+    $this->phaseId = $phaseId;
   }
   /**
-   * @return Standard
+   * @return string
    */
-  public function getStandard()
+  public function getPhaseId()
   {
-    return $this->standard;
+    return $this->phaseId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Strategy::class, 'Google_Service_CloudDeploy_Strategy');
+class_alias(IgnoreJobRequest::class, 'Google_Service_CloudDeploy_IgnoreJobRequest');

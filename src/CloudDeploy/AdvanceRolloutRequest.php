@@ -17,44 +17,28 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Strategy extends \Google\Model
+class AdvanceRolloutRequest extends \Google\Model
 {
-  protected $canaryType = Canary::class;
-  protected $canaryDataType = '';
-  public $canary;
-  protected $standardType = Standard::class;
-  protected $standardDataType = '';
-  public $standard;
+  /**
+   * @var string
+   */
+  public $phaseId;
 
   /**
-   * @param Canary
+   * @param string
    */
-  public function setCanary(Canary $canary)
+  public function setPhaseId($phaseId)
   {
-    $this->canary = $canary;
+    $this->phaseId = $phaseId;
   }
   /**
-   * @return Canary
+   * @return string
    */
-  public function getCanary()
+  public function getPhaseId()
   {
-    return $this->canary;
-  }
-  /**
-   * @param Standard
-   */
-  public function setStandard(Standard $standard)
-  {
-    $this->standard = $standard;
-  }
-  /**
-   * @return Standard
-   */
-  public function getStandard()
-  {
-    return $this->standard;
+    return $this->phaseId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Strategy::class, 'Google_Service_CloudDeploy_Strategy');
+class_alias(AdvanceRolloutRequest::class, 'Google_Service_CloudDeploy_AdvanceRolloutRequest');
