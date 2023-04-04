@@ -17,16 +17,9 @@
 
 namespace Google\Service\CloudIdentity;
 
-class Group extends \Google\Collection
+class MembershipRelation extends \Google\Collection
 {
-  protected $collection_key = 'additionalGroupKeys';
-  protected $additionalGroupKeysType = EntityKey::class;
-  protected $additionalGroupKeysDataType = 'array';
-  public $additionalGroupKeys = [];
-  /**
-   * @var string
-   */
-  public $createTime;
+  protected $collection_key = 'roles';
   /**
    * @var string
    */
@@ -35,9 +28,10 @@ class Group extends \Google\Collection
    * @var string
    */
   public $displayName;
-  protected $dynamicGroupMetadataType = DynamicGroupMetadata::class;
-  protected $dynamicGroupMetadataDataType = '';
-  public $dynamicGroupMetadata;
+  /**
+   * @var string
+   */
+  public $group;
   protected $groupKeyType = EntityKey::class;
   protected $groupKeyDataType = '';
   public $groupKey;
@@ -48,44 +42,11 @@ class Group extends \Google\Collection
   /**
    * @var string
    */
-  public $name;
-  /**
-   * @var string
-   */
-  public $parent;
-  /**
-   * @var string
-   */
-  public $updateTime;
+  public $membership;
+  protected $rolesType = MembershipRole::class;
+  protected $rolesDataType = 'array';
+  public $roles = [];
 
-  /**
-   * @param EntityKey[]
-   */
-  public function setAdditionalGroupKeys($additionalGroupKeys)
-  {
-    $this->additionalGroupKeys = $additionalGroupKeys;
-  }
-  /**
-   * @return EntityKey[]
-   */
-  public function getAdditionalGroupKeys()
-  {
-    return $this->additionalGroupKeys;
-  }
-  /**
-   * @param string
-   */
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  /**
-   * @return string
-   */
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
   /**
    * @param string
    */
@@ -115,18 +76,18 @@ class Group extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param DynamicGroupMetadata
+   * @param string
    */
-  public function setDynamicGroupMetadata(DynamicGroupMetadata $dynamicGroupMetadata)
+  public function setGroup($group)
   {
-    $this->dynamicGroupMetadata = $dynamicGroupMetadata;
+    $this->group = $group;
   }
   /**
-   * @return DynamicGroupMetadata
+   * @return string
    */
-  public function getDynamicGroupMetadata()
+  public function getGroup()
   {
-    return $this->dynamicGroupMetadata;
+    return $this->group;
   }
   /**
    * @param EntityKey
@@ -159,46 +120,32 @@ class Group extends \Google\Collection
   /**
    * @param string
    */
-  public function setName($name)
+  public function setMembership($membership)
   {
-    $this->name = $name;
+    $this->membership = $membership;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getMembership()
   {
-    return $this->name;
+    return $this->membership;
   }
   /**
-   * @param string
+   * @param MembershipRole[]
    */
-  public function setParent($parent)
+  public function setRoles($roles)
   {
-    $this->parent = $parent;
+    $this->roles = $roles;
   }
   /**
-   * @return string
+   * @return MembershipRole[]
    */
-  public function getParent()
+  public function getRoles()
   {
-    return $this->parent;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
+    return $this->roles;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Group::class, 'Google_Service_CloudIdentity_Group');
+class_alias(MembershipRelation::class, 'Google_Service_CloudIdentity_MembershipRelation');
