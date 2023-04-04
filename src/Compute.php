@@ -107,7 +107,6 @@ class Compute extends \Google\Service
   public $regionHealthChecks;
   public $regionInstanceGroupManagers;
   public $regionInstanceGroups;
-  public $regionInstanceTemplates;
   public $regionInstances;
   public $regionNetworkEndpointGroups;
   public $regionNetworkFirewallPolicies;
@@ -8121,6 +8120,30 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'simulateMaintenanceEvent' => [
+              'path' => 'projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/simulateMaintenanceEvent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'nodeGroup' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'testIamPermissions' => [
               'path' => 'projects/{project}/zones/{zone}/nodeGroups/{resource}/testIamPermissions',
               'httpMethod' => 'POST',
@@ -10974,114 +10997,6 @@ class Compute extends \Google\Service
           ]
         ]
     );
-    $this->regionInstanceTemplates = new Compute\Resource\RegionInstanceTemplates(
-        $this,
-        $this->serviceName,
-        'regionInstanceTemplates',
-        [
-          'methods' => [
-            'delete' => [
-              'path' => 'projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'region' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'instanceTemplate' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'get' => [
-              'path' => 'projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'region' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'instanceTemplate' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'insert' => [
-              'path' => 'projects/{project}/regions/{region}/instanceTemplates',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'region' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'list' => [
-              'path' => 'projects/{project}/regions/{region}/instanceTemplates',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'project' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'region' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'maxResults' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'orderBy' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'returnPartialSuccess' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->regionInstances = new Compute\Resource\RegionInstances(
         $this,
         $this->serviceName,
@@ -13509,6 +13424,10 @@ class Compute extends \Google\Service
                 'maxResults' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+                'natName' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'orderBy' => [
                   'location' => 'query',
