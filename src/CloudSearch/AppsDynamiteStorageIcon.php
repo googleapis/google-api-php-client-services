@@ -35,6 +35,9 @@ class AppsDynamiteStorageIcon extends \Google\Model
    * @var string
    */
   public $knownIcon;
+  protected $materialIconType = AppsDynamiteStorageMaterialIcon::class;
+  protected $materialIconDataType = '';
+  public $materialIcon;
 
   /**
    * @param string
@@ -91,6 +94,20 @@ class AppsDynamiteStorageIcon extends \Google\Model
   public function getKnownIcon()
   {
     return $this->knownIcon;
+  }
+  /**
+   * @param AppsDynamiteStorageMaterialIcon
+   */
+  public function setMaterialIcon(AppsDynamiteStorageMaterialIcon $materialIcon)
+  {
+    $this->materialIcon = $materialIcon;
+  }
+  /**
+   * @return AppsDynamiteStorageMaterialIcon
+   */
+  public function getMaterialIcon()
+  {
+    return $this->materialIcon;
   }
 }
 
