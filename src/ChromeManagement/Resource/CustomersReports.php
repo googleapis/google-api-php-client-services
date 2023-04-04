@@ -192,7 +192,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string filter Query string to filter results, AND-separated fields
    * in EBNF syntax. Note: OR operations are not supported in this filter. Note:
    * Only >= and <= comparators are supported in this filter. Supported filter
-   * fields: * completion_time
+   * fields: * complete_time
    * @opt_param string orderBy Field used to order results. If omitted, results
    * will be ordered in ascending order of the 'printer' field. Supported order_by
    * fields: * printer * job_count * device_count * user_count
@@ -223,7 +223,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string filter Query string to filter results, AND-separated fields
    * in EBNF syntax. Note: OR operations are not supported in this filter. Note:
    * Only >= and <= comparators are supported in this filter. Supported filter
-   * fields: * completion_time
+   * fields: * complete_time
    * @opt_param string orderBy Field used to order results. If omitted, results
    * will be ordered in ascending order of the 'user_email' field. Supported
    * order_by fields: * user_email * job_count * printer_count * device_count
@@ -244,8 +244,8 @@ class CustomersReports extends \Google\Service\Resource
     return $this->call('countPrintJobsByUser', [$params], GoogleChromeManagementV1CountPrintJobsByUserResponse::class);
   }
   /**
-   * Generate report of devices that have a specified app installed.
-   * (reports.findInstalledAppDevices)
+   * Generate report of managed Chrome browser devices that have a specified app
+   * installed. (reports.findInstalledAppDevices)
    *
    * @param string $customer Required. Customer id or "my_customer" to use the
    * customer associated to the account making the request.
