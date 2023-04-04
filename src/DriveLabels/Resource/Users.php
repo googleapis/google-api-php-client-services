@@ -35,6 +35,10 @@ class Users extends \Google\Service\Resource
    * @param string $name Required. The resource name of the user. Only
    * "users/me/capabilities" is supported.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string customer The customer to scope this request to. For
+   * example: "customers/abcd1234". If unset, will return settings within the
+   * current customer.
    * @return GoogleAppsDriveLabelsV2UserCapabilities
    */
   public function getCapabilities($name, $optParams = [])
