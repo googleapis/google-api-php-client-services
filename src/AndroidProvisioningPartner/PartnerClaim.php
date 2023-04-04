@@ -25,8 +25,10 @@ class PartnerClaim extends \Google\Model
   public $customerId;
   protected $deviceIdentifierType = DeviceIdentifier::class;
   protected $deviceIdentifierDataType = '';
+  public $deviceIdentifier;
   protected $deviceMetadataType = DeviceMetadata::class;
   protected $deviceMetadataDataType = '';
+  public $deviceMetadata;
   /**
    * @var string
    */
@@ -39,6 +41,10 @@ class PartnerClaim extends \Google\Model
    * @var string
    */
   public $sectionType;
+  /**
+   * @var string
+   */
+  public $simlockProfileId;
 
   /**
    * @param string
@@ -123,6 +129,20 @@ class PartnerClaim extends \Google\Model
   public function getSectionType()
   {
     return $this->sectionType;
+  }
+  /**
+   * @param string
+   */
+  public function setSimlockProfileId($simlockProfileId)
+  {
+    $this->simlockProfileId = $simlockProfileId;
+  }
+  /**
+   * @return string
+   */
+  public function getSimlockProfileId()
+  {
+    return $this->simlockProfileId;
   }
 }
 
