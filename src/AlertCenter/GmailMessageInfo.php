@@ -23,7 +23,7 @@ class GmailMessageInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attachmentsSha256Hash;
+  public $attachmentsSha256Hash = [];
   /**
    * @var string
    */
@@ -48,6 +48,10 @@ class GmailMessageInfo extends \Google\Collection
    * @var string
    */
   public $recipient;
+  /**
+   * @var string
+   */
+  public $sentTime;
   /**
    * @var string
    */
@@ -150,6 +154,20 @@ class GmailMessageInfo extends \Google\Collection
   public function getRecipient()
   {
     return $this->recipient;
+  }
+  /**
+   * @param string
+   */
+  public function setSentTime($sentTime)
+  {
+    $this->sentTime = $sentTime;
+  }
+  /**
+   * @return string
+   */
+  public function getSentTime()
+  {
+    return $this->sentTime;
   }
   /**
    * @param string
