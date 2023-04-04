@@ -31,6 +31,10 @@ class GoogleCloudAdvisorynotificationsV1Notification extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $notificationType;
   protected $subjectType = GoogleCloudAdvisorynotificationsV1Subject::class;
   protected $subjectDataType = '';
   public $subject;
@@ -76,6 +80,20 @@ class GoogleCloudAdvisorynotificationsV1Notification extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setNotificationType($notificationType)
+  {
+    $this->notificationType = $notificationType;
+  }
+  /**
+   * @return string
+   */
+  public function getNotificationType()
+  {
+    return $this->notificationType;
   }
   /**
    * @param GoogleCloudAdvisorynotificationsV1Subject
