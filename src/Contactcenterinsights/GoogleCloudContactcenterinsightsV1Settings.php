@@ -21,6 +21,7 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
 {
   protected $analysisConfigType = GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig::class;
   protected $analysisConfigDataType = '';
+  public $analysisConfig;
   /**
    * @var string
    */
@@ -40,7 +41,10 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   /**
    * @var string[]
    */
-  public $pubsubNotificationSettings;
+  public $pubsubNotificationSettings = [];
+  protected $redactionConfigType = GoogleCloudContactcenterinsightsV1RedactionConfig::class;
+  protected $redactionConfigDataType = '';
+  public $redactionConfig;
   /**
    * @var string
    */
@@ -129,6 +133,20 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   public function getPubsubNotificationSettings()
   {
     return $this->pubsubNotificationSettings;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1RedactionConfig
+   */
+  public function setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig $redactionConfig)
+  {
+    $this->redactionConfig = $redactionConfig;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1RedactionConfig
+   */
+  public function getRedactionConfig()
+  {
+    return $this->redactionConfig;
   }
   /**
    * @param string
