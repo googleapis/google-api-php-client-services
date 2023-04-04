@@ -17,64 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleInternalAppsWaldoV1alphaOutOfOffice extends \Google\Model
+class AssistantContextProviderVariant extends \Google\Model
 {
   /**
    * @var string
    */
-  public $comeBackTime;
+  public $emptyMidVariant;
   /**
    * @var string
    */
-  public $committedUntil;
+  public $spotifyVariant;
   /**
    * @var string
    */
-  public $eventSummary;
+  public $youtubeVariant;
 
   /**
    * @param string
    */
-  public function setComeBackTime($comeBackTime)
+  public function setEmptyMidVariant($emptyMidVariant)
   {
-    $this->comeBackTime = $comeBackTime;
+    $this->emptyMidVariant = $emptyMidVariant;
   }
   /**
    * @return string
    */
-  public function getComeBackTime()
+  public function getEmptyMidVariant()
   {
-    return $this->comeBackTime;
+    return $this->emptyMidVariant;
   }
   /**
    * @param string
    */
-  public function setCommittedUntil($committedUntil)
+  public function setSpotifyVariant($spotifyVariant)
   {
-    $this->committedUntil = $committedUntil;
+    $this->spotifyVariant = $spotifyVariant;
   }
   /**
    * @return string
    */
-  public function getCommittedUntil()
+  public function getSpotifyVariant()
   {
-    return $this->committedUntil;
+    return $this->spotifyVariant;
   }
   /**
    * @param string
    */
-  public function setEventSummary($eventSummary)
+  public function setYoutubeVariant($youtubeVariant)
   {
-    $this->eventSummary = $eventSummary;
+    $this->youtubeVariant = $youtubeVariant;
   }
   /**
    * @return string
    */
-  public function getEventSummary()
+  public function getYoutubeVariant()
   {
-    return $this->eventSummary;
+    return $this->youtubeVariant;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleInternalAppsWaldoV1alphaOutOfOffice::class, 'Google_Service_Contentwarehouse_GoogleInternalAppsWaldoV1alphaOutOfOffice');
+class_alias(AssistantContextProviderVariant::class, 'Google_Service_Contentwarehouse_AssistantContextProviderVariant');

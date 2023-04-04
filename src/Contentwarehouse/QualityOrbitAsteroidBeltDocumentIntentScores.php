@@ -20,21 +20,58 @@ namespace Google\Service\Contentwarehouse;
 class QualityOrbitAsteroidBeltDocumentIntentScores extends \Google\Collection
 {
   protected $collection_key = 'scores';
-  protected $imageIntentScoresType = QualityOrbitAsteroidBeltImageIntentScores::class;
-  protected $imageIntentScoresDataType = 'map';
   /**
    * @var string[]
    */
-  public $intents;
+  public $belowThresholdIntents = [];
   /**
    * @var int[]
    */
-  public $scores;
+  public $belowThresholdScores = [];
+  protected $imageIntentScoresType = QualityOrbitAsteroidBeltImageIntentScores::class;
+  protected $imageIntentScoresDataType = 'map';
+  public $imageIntentScores = [];
+  /**
+   * @var string[]
+   */
+  public $intents = [];
+  /**
+   * @var int[]
+   */
+  public $scores = [];
   /**
    * @var int
    */
   public $version;
 
+  /**
+   * @param string[]
+   */
+  public function setBelowThresholdIntents($belowThresholdIntents)
+  {
+    $this->belowThresholdIntents = $belowThresholdIntents;
+  }
+  /**
+   * @return string[]
+   */
+  public function getBelowThresholdIntents()
+  {
+    return $this->belowThresholdIntents;
+  }
+  /**
+   * @param int[]
+   */
+  public function setBelowThresholdScores($belowThresholdScores)
+  {
+    $this->belowThresholdScores = $belowThresholdScores;
+  }
+  /**
+   * @return int[]
+   */
+  public function getBelowThresholdScores()
+  {
+    return $this->belowThresholdScores;
+  }
   /**
    * @param QualityOrbitAsteroidBeltImageIntentScores[]
    */

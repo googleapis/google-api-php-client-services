@@ -47,6 +47,11 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $groundabilityScore;
   protected $groundingProviderFeaturesType = AssistantGroundingRankerGroundingProviderFeatures::class;
   protected $groundingProviderFeaturesDataType = '';
+  public $groundingProviderFeatures;
+  /**
+   * @var bool
+   */
+  public $hasAnswerGroup;
   /**
    * @var float
    */
@@ -68,18 +73,31 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isMediaControlIntent;
+  /**
+   * @var bool
+   */
   public $isPlayGenericMusic;
+  /**
+   * @var bool
+   */
+  public $isPodcastIntent;
   /**
    * @var int
    */
   public $kscorerRank;
   protected $laaFeaturesType = AssistantGroundingRankerLaaFeatures::class;
   protected $laaFeaturesDataType = '';
+  public $laaFeatures;
   /**
    * @var bool
    */
   public $maskCandidateLevelFeatures;
   public $maxHgrScoreAcrossBindingSets;
+  /**
+   * @var int
+   */
+  public $nspRank;
   /**
    * @var float
    */
@@ -90,12 +108,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $numGroundedArgs;
   public $numVariables;
   public $numVariablesGrounded;
+  /**
+   * @var int
+   */
+  public $parsingScoreMse8BucketId;
   public $pq2tVsAssistantIbstCosine;
   public $pq2tVsIbstCosine;
   /**
    * @var float
    */
   public $predictedIntentConfidence;
+  /**
+   * @var string
+   */
+  public $rankerName;
   /**
    * @var string
    */
@@ -224,6 +250,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->groundingProviderFeatures;
   }
   /**
+   * @param bool
+   */
+  public function setHasAnswerGroup($hasAnswerGroup)
+  {
+    $this->hasAnswerGroup = $hasAnswerGroup;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasAnswerGroup()
+  {
+    return $this->hasAnswerGroup;
+  }
+  /**
    * @param float
    */
   public function setInQueryMaxEffectiveArgSpanLength($inQueryMaxEffectiveArgSpanLength)
@@ -298,6 +338,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @param bool
    */
+  public function setIsMediaControlIntent($isMediaControlIntent)
+  {
+    $this->isMediaControlIntent = $isMediaControlIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsMediaControlIntent()
+  {
+    return $this->isMediaControlIntent;
+  }
+  /**
+   * @param bool
+   */
   public function setIsPlayGenericMusic($isPlayGenericMusic)
   {
     $this->isPlayGenericMusic = $isPlayGenericMusic;
@@ -308,6 +362,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsPlayGenericMusic()
   {
     return $this->isPlayGenericMusic;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsPodcastIntent($isPodcastIntent)
+  {
+    $this->isPodcastIntent = $isPodcastIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsPodcastIntent()
+  {
+    return $this->isPodcastIntent;
   }
   /**
    * @param int
@@ -358,6 +426,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getMaxHgrScoreAcrossBindingSets()
   {
     return $this->maxHgrScoreAcrossBindingSets;
+  }
+  /**
+   * @param int
+   */
+  public function setNspRank($nspRank)
+  {
+    $this->nspRank = $nspRank;
+  }
+  /**
+   * @return int
+   */
+  public function getNspRank()
+  {
+    return $this->nspRank;
   }
   /**
    * @param float
@@ -421,6 +503,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   {
     return $this->numVariablesGrounded;
   }
+  /**
+   * @param int
+   */
+  public function setParsingScoreMse8BucketId($parsingScoreMse8BucketId)
+  {
+    $this->parsingScoreMse8BucketId = $parsingScoreMse8BucketId;
+  }
+  /**
+   * @return int
+   */
+  public function getParsingScoreMse8BucketId()
+  {
+    return $this->parsingScoreMse8BucketId;
+  }
   public function setPq2tVsAssistantIbstCosine($pq2tVsAssistantIbstCosine)
   {
     $this->pq2tVsAssistantIbstCosine = $pq2tVsAssistantIbstCosine;
@@ -450,6 +546,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getPredictedIntentConfidence()
   {
     return $this->predictedIntentConfidence;
+  }
+  /**
+   * @param string
+   */
+  public function setRankerName($rankerName)
+  {
+    $this->rankerName = $rankerName;
+  }
+  /**
+   * @return string
+   */
+  public function getRankerName()
+  {
+    return $this->rankerName;
   }
   /**
    * @param string

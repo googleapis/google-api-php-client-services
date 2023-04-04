@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleInternalAppsWaldoV1alphaOutOfOffice extends \Google\Model
+class GoogleAssistantEmbeddedV1SurfaceIdentity extends \Google\Model
 {
   /**
    * @var string
    */
-  public $comeBackTime;
+  public $surfaceType;
   /**
    * @var string
    */
-  public $committedUntil;
-  /**
-   * @var string
-   */
-  public $eventSummary;
+  public $userAgentSuffix;
 
   /**
    * @param string
    */
-  public function setComeBackTime($comeBackTime)
+  public function setSurfaceType($surfaceType)
   {
-    $this->comeBackTime = $comeBackTime;
+    $this->surfaceType = $surfaceType;
   }
   /**
    * @return string
    */
-  public function getComeBackTime()
+  public function getSurfaceType()
   {
-    return $this->comeBackTime;
+    return $this->surfaceType;
   }
   /**
    * @param string
    */
-  public function setCommittedUntil($committedUntil)
+  public function setUserAgentSuffix($userAgentSuffix)
   {
-    $this->committedUntil = $committedUntil;
+    $this->userAgentSuffix = $userAgentSuffix;
   }
   /**
    * @return string
    */
-  public function getCommittedUntil()
+  public function getUserAgentSuffix()
   {
-    return $this->committedUntil;
-  }
-  /**
-   * @param string
-   */
-  public function setEventSummary($eventSummary)
-  {
-    $this->eventSummary = $eventSummary;
-  }
-  /**
-   * @return string
-   */
-  public function getEventSummary()
-  {
-    return $this->eventSummary;
+    return $this->userAgentSuffix;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleInternalAppsWaldoV1alphaOutOfOffice::class, 'Google_Service_Contentwarehouse_GoogleInternalAppsWaldoV1alphaOutOfOffice');
+class_alias(GoogleAssistantEmbeddedV1SurfaceIdentity::class, 'Google_Service_Contentwarehouse_GoogleAssistantEmbeddedV1SurfaceIdentity');

@@ -17,82 +17,91 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleInternalAppsWaldoV1alphaCalendarBusy extends \Google\Model
+class ResearchScamNumericRestrictNamespace extends \Google\Model
 {
   /**
    * @var string
    */
-  public $committedUntil;
+  public $namespace;
   /**
    * @var string
    */
-  public $eventSummary;
+  public $op;
+  public $valueDouble;
+  /**
+   * @var float
+   */
+  public $valueFloat;
   /**
    * @var string
    */
-  public $nextAvailable;
-  /**
-   * @var string
-   */
-  public $occupiedUntil;
+  public $valueInt;
 
   /**
    * @param string
    */
-  public function setCommittedUntil($committedUntil)
+  public function setNamespace($namespace)
   {
-    $this->committedUntil = $committedUntil;
+    $this->namespace = $namespace;
   }
   /**
    * @return string
    */
-  public function getCommittedUntil()
+  public function getNamespace()
   {
-    return $this->committedUntil;
+    return $this->namespace;
   }
   /**
    * @param string
    */
-  public function setEventSummary($eventSummary)
+  public function setOp($op)
   {
-    $this->eventSummary = $eventSummary;
+    $this->op = $op;
   }
   /**
    * @return string
    */
-  public function getEventSummary()
+  public function getOp()
   {
-    return $this->eventSummary;
+    return $this->op;
+  }
+  public function setValueDouble($valueDouble)
+  {
+    $this->valueDouble = $valueDouble;
+  }
+  public function getValueDouble()
+  {
+    return $this->valueDouble;
+  }
+  /**
+   * @param float
+   */
+  public function setValueFloat($valueFloat)
+  {
+    $this->valueFloat = $valueFloat;
+  }
+  /**
+   * @return float
+   */
+  public function getValueFloat()
+  {
+    return $this->valueFloat;
   }
   /**
    * @param string
    */
-  public function setNextAvailable($nextAvailable)
+  public function setValueInt($valueInt)
   {
-    $this->nextAvailable = $nextAvailable;
+    $this->valueInt = $valueInt;
   }
   /**
    * @return string
    */
-  public function getNextAvailable()
+  public function getValueInt()
   {
-    return $this->nextAvailable;
-  }
-  /**
-   * @param string
-   */
-  public function setOccupiedUntil($occupiedUntil)
-  {
-    $this->occupiedUntil = $occupiedUntil;
-  }
-  /**
-   * @return string
-   */
-  public function getOccupiedUntil()
-  {
-    return $this->occupiedUntil;
+    return $this->valueInt;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleInternalAppsWaldoV1alphaCalendarBusy::class, 'Google_Service_Contentwarehouse_GoogleInternalAppsWaldoV1alphaCalendarBusy');
+class_alias(ResearchScamNumericRestrictNamespace::class, 'Google_Service_Contentwarehouse_ResearchScamNumericRestrictNamespace');

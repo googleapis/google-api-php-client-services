@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleInternalAppsWaldoV1alphaOutOfOffice extends \Google\Model
+class AssistantApiCoreTypesGovernedDeviceConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $comeBackTime;
+  public $agentId;
   /**
    * @var string
    */
-  public $committedUntil;
-  /**
-   * @var string
-   */
-  public $eventSummary;
+  public $deviceId;
 
   /**
    * @param string
    */
-  public function setComeBackTime($comeBackTime)
+  public function setAgentId($agentId)
   {
-    $this->comeBackTime = $comeBackTime;
+    $this->agentId = $agentId;
   }
   /**
    * @return string
    */
-  public function getComeBackTime()
+  public function getAgentId()
   {
-    return $this->comeBackTime;
+    return $this->agentId;
   }
   /**
    * @param string
    */
-  public function setCommittedUntil($committedUntil)
+  public function setDeviceId($deviceId)
   {
-    $this->committedUntil = $committedUntil;
+    $this->deviceId = $deviceId;
   }
   /**
    * @return string
    */
-  public function getCommittedUntil()
+  public function getDeviceId()
   {
-    return $this->committedUntil;
-  }
-  /**
-   * @param string
-   */
-  public function setEventSummary($eventSummary)
-  {
-    $this->eventSummary = $eventSummary;
-  }
-  /**
-   * @return string
-   */
-  public function getEventSummary()
-  {
-    return $this->eventSummary;
+    return $this->deviceId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleInternalAppsWaldoV1alphaOutOfOffice::class, 'Google_Service_Contentwarehouse_GoogleInternalAppsWaldoV1alphaOutOfOffice');
+class_alias(AssistantApiCoreTypesGovernedDeviceConfig::class, 'Google_Service_Contentwarehouse_AssistantApiCoreTypesGovernedDeviceConfig');

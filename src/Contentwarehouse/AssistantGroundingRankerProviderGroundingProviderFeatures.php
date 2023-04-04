@@ -17,13 +17,49 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\Model
+class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\Collection
 {
+  protected $collection_key = 'providerClusterId';
+  /**
+   * @var string[]
+   */
+  public $providerClusterId = [];
+  protected $providerIdType = AssistantContextProviderId::class;
+  protected $providerIdDataType = '';
+  public $providerId;
   /**
    * @var float
    */
   public $pslScore;
 
+  /**
+   * @param string[]
+   */
+  public function setProviderClusterId($providerClusterId)
+  {
+    $this->providerClusterId = $providerClusterId;
+  }
+  /**
+   * @return string[]
+   */
+  public function getProviderClusterId()
+  {
+    return $this->providerClusterId;
+  }
+  /**
+   * @param AssistantContextProviderId
+   */
+  public function setProviderId(AssistantContextProviderId $providerId)
+  {
+    $this->providerId = $providerId;
+  }
+  /**
+   * @return AssistantContextProviderId
+   */
+  public function getProviderId()
+  {
+    return $this->providerId;
+  }
   /**
    * @param float
    */

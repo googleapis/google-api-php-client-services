@@ -17,64 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleInternalAppsWaldoV1alphaOutOfOffice extends \Google\Model
+class AssistantContextAppProviderId extends \Google\Model
 {
   /**
    * @var string
    */
-  public $comeBackTime;
+  public $activityClassName;
   /**
    * @var string
    */
-  public $committedUntil;
+  public $androidPackageName;
   /**
-   * @var string
+   * @var int
    */
-  public $eventSummary;
+  public $versionCode;
 
   /**
    * @param string
    */
-  public function setComeBackTime($comeBackTime)
+  public function setActivityClassName($activityClassName)
   {
-    $this->comeBackTime = $comeBackTime;
+    $this->activityClassName = $activityClassName;
   }
   /**
    * @return string
    */
-  public function getComeBackTime()
+  public function getActivityClassName()
   {
-    return $this->comeBackTime;
+    return $this->activityClassName;
   }
   /**
    * @param string
    */
-  public function setCommittedUntil($committedUntil)
+  public function setAndroidPackageName($androidPackageName)
   {
-    $this->committedUntil = $committedUntil;
+    $this->androidPackageName = $androidPackageName;
   }
   /**
    * @return string
    */
-  public function getCommittedUntil()
+  public function getAndroidPackageName()
   {
-    return $this->committedUntil;
+    return $this->androidPackageName;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setEventSummary($eventSummary)
+  public function setVersionCode($versionCode)
   {
-    $this->eventSummary = $eventSummary;
+    $this->versionCode = $versionCode;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getEventSummary()
+  public function getVersionCode()
   {
-    return $this->eventSummary;
+    return $this->versionCode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleInternalAppsWaldoV1alphaOutOfOffice::class, 'Google_Service_Contentwarehouse_GoogleInternalAppsWaldoV1alphaOutOfOffice');
+class_alias(AssistantContextAppProviderId::class, 'Google_Service_Contentwarehouse_AssistantContextAppProviderId');

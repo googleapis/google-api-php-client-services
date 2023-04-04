@@ -22,14 +22,17 @@ class GeostoreLaneProtoLaneConnection extends \Google\Collection
   protected $collection_key = 'boundingMarker';
   protected $boundingMarkerType = GeostoreBoundingMarkerProto::class;
   protected $boundingMarkerDataType = 'array';
+  public $boundingMarker = [];
   /**
    * @var string
    */
   public $connectionToken;
   protected $curveType = GeostoreCurveConnectionProto::class;
   protected $curveDataType = '';
+  public $curve;
   protected $flowType = GeostoreFlowLineProto::class;
   protected $flowDataType = '';
+  public $flow;
   /**
    * @var int
    */
@@ -40,6 +43,11 @@ class GeostoreLaneProtoLaneConnection extends \Google\Collection
   public $primaryConnection;
   protected $segmentType = GeostoreFeatureIdProto::class;
   protected $segmentDataType = '';
+  public $segment;
+  /**
+   * @var bool
+   */
+  public $yieldToOtherConnections;
 
   /**
    * @param GeostoreBoundingMarkerProto[]
@@ -138,6 +146,20 @@ class GeostoreLaneProtoLaneConnection extends \Google\Collection
   public function getSegment()
   {
     return $this->segment;
+  }
+  /**
+   * @param bool
+   */
+  public function setYieldToOtherConnections($yieldToOtherConnections)
+  {
+    $this->yieldToOtherConnections = $yieldToOtherConnections;
+  }
+  /**
+   * @return bool
+   */
+  public function getYieldToOtherConnections()
+  {
+    return $this->yieldToOtherConnections;
   }
 }
 

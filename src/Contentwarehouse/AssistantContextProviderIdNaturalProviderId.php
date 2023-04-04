@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleInternalAppsWaldoV1alphaOutOfOffice extends \Google\Model
+class AssistantContextProviderIdNaturalProviderId extends \Google\Model
 {
   /**
    * @var string
    */
-  public $comeBackTime;
+  public $providerType;
   /**
    * @var string
    */
-  public $committedUntil;
-  /**
-   * @var string
-   */
-  public $eventSummary;
+  public $value;
 
   /**
    * @param string
    */
-  public function setComeBackTime($comeBackTime)
+  public function setProviderType($providerType)
   {
-    $this->comeBackTime = $comeBackTime;
+    $this->providerType = $providerType;
   }
   /**
    * @return string
    */
-  public function getComeBackTime()
+  public function getProviderType()
   {
-    return $this->comeBackTime;
+    return $this->providerType;
   }
   /**
    * @param string
    */
-  public function setCommittedUntil($committedUntil)
+  public function setValue($value)
   {
-    $this->committedUntil = $committedUntil;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getCommittedUntil()
+  public function getValue()
   {
-    return $this->committedUntil;
-  }
-  /**
-   * @param string
-   */
-  public function setEventSummary($eventSummary)
-  {
-    $this->eventSummary = $eventSummary;
-  }
-  /**
-   * @return string
-   */
-  public function getEventSummary()
-  {
-    return $this->eventSummary;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleInternalAppsWaldoV1alphaOutOfOffice::class, 'Google_Service_Contentwarehouse_GoogleInternalAppsWaldoV1alphaOutOfOffice');
+class_alias(AssistantContextProviderIdNaturalProviderId::class, 'Google_Service_Contentwarehouse_AssistantContextProviderIdNaturalProviderId');

@@ -38,14 +38,13 @@ class GeostorePolygonProto extends \Google\Collection
   public $heightMeters;
   protected $loopType = GeostorePolyLineProto::class;
   protected $loopDataType = 'array';
+  public $loop = [];
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
-  /**
-   * @var string
-   */
-  public $shapeId;
+  public $metadata;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
+  public $temporaryData;
   /**
    * @var bool
    */
@@ -134,20 +133,6 @@ class GeostorePolygonProto extends \Google\Collection
   public function getMetadata()
   {
     return $this->metadata;
-  }
-  /**
-   * @param string
-   */
-  public function setShapeId($shapeId)
-  {
-    $this->shapeId = $shapeId;
-  }
-  /**
-   * @return string
-   */
-  public function getShapeId()
-  {
-    return $this->shapeId;
   }
   /**
    * @param Proto2BridgeMessageSet
