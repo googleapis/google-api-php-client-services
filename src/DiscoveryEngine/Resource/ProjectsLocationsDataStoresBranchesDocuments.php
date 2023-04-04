@@ -37,7 +37,8 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * Creates a Document. (documents.create)
    *
    * @param string $parent Required. The parent resource name, such as `projects/{
-   * project}/locations/{location}/dataStores/{data_store}/branches/{branch}`.
+   * project}/locations/{location}/collections/{collection}/dataStores/{data_store
+   * }/branches/{branch}`.
    * @param GoogleCloudDiscoveryengineV1betaDocument $postBody
    * @param array $optParams Optional parameters.
    *
@@ -61,11 +62,11 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * Deletes a Document. (documents.delete)
    *
    * @param string $name Required. Full resource name of Document, such as `projec
-   * ts/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/d
-   * ocuments/{document}`. If the caller does not have permission to delete the
-   * Document, regardless of whether or not it exists, a PERMISSION_DENIED error
-   * is returned. If the Document to delete does not exist, a NOT_FOUND error is
-   * returned.
+   * ts/{project}/locations/{location}/collections/{collection}/dataStores/{data_s
+   * tore}/branches/{branch}/documents/{document}`. If the caller does not have
+   * permission to delete the Document, regardless of whether or not it exists, a
+   * PERMISSION_DENIED error is returned. If the Document to delete does not
+   * exist, a NOT_FOUND error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
    */
@@ -79,11 +80,11 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * Gets a Document. (documents.get)
    *
    * @param string $name Required. Full resource name of Document, such as `projec
-   * ts/{project}/locations/{location}/dataStores/{data_store}/branches/{branch}/d
-   * ocuments/{document}`. If the caller does not have permission to access the
-   * Document, regardless of whether or not it exists, a PERMISSION_DENIED error
-   * is returned. If the requested Document does not exist, a NOT_FOUND error is
-   * returned.
+   * ts/{project}/locations/{location}/collections/{collection}/dataStores/{data_s
+   * tore}/branches/{branch}/documents/{document}`. If the caller does not have
+   * permission to access the Document, regardless of whether or not it exists, a
+   * PERMISSION_DENIED error is returned. If the requested Document does not
+   * exist, a NOT_FOUND error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaDocument
    */
@@ -99,8 +100,8 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * Documents to be successfully updated. (documents.import)
    *
    * @param string $parent Required. The parent branch resource name, such as `pro
-   * jects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch
-   * }`. Requires create/update permission.
+   * jects/{project}/locations/{location}/collections/{collection}/dataStores/{dat
+   * a_store}/branches/{branch}`. Requires create/update permission.
    * @param GoogleCloudDiscoveryengineV1betaImportDocumentsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
@@ -116,11 +117,11 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * (documents.listProjectsLocationsDataStoresBranchesDocuments)
    *
    * @param string $parent Required. The parent branch resource name, such as `pro
-   * jects/{project}/locations/{location}/dataStores/{data_store}/branches/{branch
-   * }`. Use `default_branch` as the branch ID, to list documents under the
-   * default branch. If the caller does not have permission to list Documentss
-   * under this branch, regardless of whether or not this branch exists, a
-   * PERMISSION_DENIED error is returned.
+   * jects/{project}/locations/{location}/collections/{collection}/dataStores/{dat
+   * a_store}/branches/{branch}`. Use `default_branch` as the branch ID, to list
+   * documents under the default branch. If the caller does not have permission to
+   * list Documentss under this branch, regardless of whether or not this branch
+   * exists, a PERMISSION_DENIED error is returned.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of Documents to return. If
@@ -145,9 +146,9 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * Updates a Document. (documents.patch)
    *
    * @param string $name Immutable. The full resource name of the document.
-   * Format: `projects/{project}/locations/{location}/dataStores/{data_store}/bran
-   * ches/{branch}/documents/{document_id}`. This field must be a UTF-8 encoded
-   * string with a length limit of 1024 characters.
+   * Format: `projects/{project}/locations/{location}/collections/{collection}/dat
+   * aStores/{data_store}/branches/{branch}/documents/{document_id}`. This field
+   * must be a UTF-8 encoded string with a length limit of 1024 characters.
    * @param GoogleCloudDiscoveryengineV1betaDocument $postBody
    * @param array $optParams Optional parameters.
    *
