@@ -19,19 +19,38 @@ namespace Google\Service\DatabaseMigrationService;
 
 class AlloyDbSettings extends \Google\Model
 {
+  protected $encryptionConfigType = EncryptionConfig::class;
+  protected $encryptionConfigDataType = '';
+  public $encryptionConfig;
   protected $initialUserType = UserPassword::class;
   protected $initialUserDataType = '';
+  public $initialUser;
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   protected $primaryInstanceSettingsType = PrimaryInstanceSettings::class;
   protected $primaryInstanceSettingsDataType = '';
+  public $primaryInstanceSettings;
   /**
    * @var string
    */
   public $vpcNetwork;
 
+  /**
+   * @param EncryptionConfig
+   */
+  public function setEncryptionConfig(EncryptionConfig $encryptionConfig)
+  {
+    $this->encryptionConfig = $encryptionConfig;
+  }
+  /**
+   * @return EncryptionConfig
+   */
+  public function getEncryptionConfig()
+  {
+    return $this->encryptionConfig;
+  }
   /**
    * @param UserPassword
    */
