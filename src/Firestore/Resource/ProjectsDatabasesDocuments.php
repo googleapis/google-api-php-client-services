@@ -290,7 +290,7 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
     return $this->call('listDocuments', [$params], ListDocumentsResponse::class);
   }
   /**
-   * Listens to changes. This method is only available via the gRPC API (not
+   * Listens to changes. This method is only available via gRPC or WebChannel (not
    * REST). (documents.listen)
    *
    * @param string $database Required. The database name. In the format:
@@ -406,7 +406,7 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
   }
   /**
    * Streams batches of document updates and deletes, in order. This method is
-   * only available via the gRPC API (not REST). (documents.write)
+   * only available via gRPC or WebChannel (not REST). (documents.write)
    *
    * @param string $database Required. The database name. In the format:
    * `projects/{project_id}/databases/{database_id}`. This is only required in the
