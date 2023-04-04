@@ -197,6 +197,10 @@ class Events extends \Google\Service\Resource
    * always be returned in the email field for the organizer, creator and
    * attendees, even if no real email address is available (i.e. a generated, non-
    * working value will be provided).
+   * @opt_param string eventTypes Event types to return. Optional. The default is
+   * ["default", "outOfOffice", "focusTime"]. Only the default value is available,
+   * unless you're enrolled in the Working Locations developer preview. Developer
+   * Preview.
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.
@@ -415,6 +419,10 @@ class Events extends \Google\Service\Resource
    * always be returned in the email field for the organizer, creator and
    * attendees, even if no real email address is available (i.e. a generated, non-
    * working value will be provided).
+   * @opt_param string eventTypes Event types to return. Optional. The default is
+   * ["default", "outOfOffice", "focusTime"]. Only the default value is available,
+   * unless you're enrolled in the Working Locations developer preview. Developer
+   * Preview.
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.
