@@ -23,7 +23,7 @@ class SparkOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $archiveUris;
+  public $archiveUris = [];
   /**
    * @var string
    */
@@ -35,11 +35,15 @@ class SparkOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fileUris;
+  public $fileUris = [];
   /**
    * @var string[]
    */
-  public $jarUris;
+  public $jarUris = [];
+  /**
+   * @var string
+   */
+  public $mainClass;
   /**
    * @var string
    */
@@ -47,11 +51,11 @@ class SparkOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $properties;
+  public $properties = [];
   /**
    * @var string[]
    */
-  public $pyFileUris;
+  public $pyFileUris = [];
   /**
    * @var string
    */
@@ -126,6 +130,20 @@ class SparkOptions extends \Google\Collection
   public function getJarUris()
   {
     return $this->jarUris;
+  }
+  /**
+   * @param string
+   */
+  public function setMainClass($mainClass)
+  {
+    $this->mainClass = $mainClass;
+  }
+  /**
+   * @return string
+   */
+  public function getMainClass()
+  {
+    return $this->mainClass;
   }
   /**
    * @param string

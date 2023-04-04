@@ -22,12 +22,18 @@ class QueryRequest extends \Google\Collection
   protected $collection_key = 'queryParameters';
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
+  public $connectionProperties = [];
+  /**
+   * @var bool
+   */
+  public $continuous;
   /**
    * @var bool
    */
   public $createSession;
   protected $defaultDatasetType = DatasetReference::class;
   protected $defaultDatasetDataType = '';
+  public $defaultDataset;
   /**
    * @var bool
    */
@@ -39,7 +45,7 @@ class QueryRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -66,6 +72,7 @@ class QueryRequest extends \Google\Collection
   public $query;
   protected $queryParametersType = QueryParameter::class;
   protected $queryParametersDataType = 'array';
+  public $queryParameters = [];
   /**
    * @var string
    */
@@ -96,6 +103,20 @@ class QueryRequest extends \Google\Collection
   public function getConnectionProperties()
   {
     return $this->connectionProperties;
+  }
+  /**
+   * @param bool
+   */
+  public function setContinuous($continuous)
+  {
+    $this->continuous = $continuous;
+  }
+  /**
+   * @return bool
+   */
+  public function getContinuous()
+  {
+    return $this->continuous;
   }
   /**
    * @param bool
