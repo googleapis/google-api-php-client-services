@@ -30,8 +30,10 @@ class Contest extends \Google\Collection
   public $ballotTitle;
   protected $candidatesType = Candidate::class;
   protected $candidatesDataType = 'array';
+  public $candidates = [];
   protected $districtType = ElectoralDistrict::class;
   protected $districtDataType = '';
+  public $district;
   /**
    * @var string
    */
@@ -39,7 +41,7 @@ class Contest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $level;
+  public $level = [];
   /**
    * @var string
    */
@@ -55,15 +57,11 @@ class Contest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $primaryParties;
-  /**
-   * @var string
-   */
-  public $primaryParty;
+  public $primaryParties = [];
   /**
    * @var string[]
    */
-  public $referendumBallotResponses;
+  public $referendumBallotResponses = [];
   /**
    * @var string
    */
@@ -103,9 +101,10 @@ class Contest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $roles;
+  public $roles = [];
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
+  public $sources = [];
   /**
    * @var string
    */
@@ -254,20 +253,6 @@ class Contest extends \Google\Collection
   public function getPrimaryParties()
   {
     return $this->primaryParties;
-  }
-  /**
-   * @param string
-   */
-  public function setPrimaryParty($primaryParty)
-  {
-    $this->primaryParty = $primaryParty;
-  }
-  /**
-   * @return string
-   */
-  public function getPrimaryParty()
-  {
-    return $this->primaryParty;
   }
   /**
    * @param string[]
