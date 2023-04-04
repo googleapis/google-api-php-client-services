@@ -23,27 +23,30 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accessRestrictions;
+  public $accessRestrictions = [];
   protected $additionalTargetKeyNamesType = GoogleChromePolicyVersionsV1AdditionalTargetKeyName::class;
   protected $additionalTargetKeyNamesDataType = 'array';
+  public $additionalTargetKeyNames = [];
   /**
    * @var string
    */
   public $categoryTitle;
   protected $definitionType = Proto2FileDescriptorProto::class;
   protected $definitionDataType = '';
+  public $definition;
   protected $fieldDescriptionsType = GoogleChromePolicyVersionsV1PolicySchemaFieldDescription::class;
   protected $fieldDescriptionsDataType = 'array';
+  public $fieldDescriptions = [];
   /**
    * @var string
    */
   public $name;
   protected $noticesType = GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription::class;
   protected $noticesDataType = 'array';
+  public $notices = [];
   protected $policyApiLifecycleType = ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle::class;
   protected $policyApiLifecycleDataType = '';
-  protected $policyApiLifeycleType = ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle::class;
-  protected $policyApiLifeycleDataType = '';
+  public $policyApiLifecycle;
   /**
    * @var string
    */
@@ -59,7 +62,7 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   /**
    * @var string[]
    */
-  public $validTargetResources;
+  public $validTargetResources = [];
 
   /**
    * @param string[]
@@ -172,20 +175,6 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   public function getPolicyApiLifecycle()
   {
     return $this->policyApiLifecycle;
-  }
-  /**
-   * @param ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
-   */
-  public function setPolicyApiLifeycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle $policyApiLifeycle)
-  {
-    $this->policyApiLifeycle = $policyApiLifeycle;
-  }
-  /**
-   * @return ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
-   */
-  public function getPolicyApiLifeycle()
-  {
-    return $this->policyApiLifeycle;
   }
   /**
    * @param string
