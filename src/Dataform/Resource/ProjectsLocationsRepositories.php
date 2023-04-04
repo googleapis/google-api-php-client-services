@@ -18,6 +18,7 @@
 namespace Google\Service\Dataform\Resource;
 
 use Google\Service\Dataform\CommitRepositoryChangesRequest;
+use Google\Service\Dataform\ComputeRepositoryAccessTokenStatusResponse;
 use Google\Service\Dataform\DataformEmpty;
 use Google\Service\Dataform\FetchRemoteBranchesResponse;
 use Google\Service\Dataform\FetchRepositoryHistoryResponse;
@@ -56,6 +57,20 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
     return $this->call('commit', [$params], DataformEmpty::class);
   }
   /**
+   * Computes a Repository's Git access token status.
+   * (repositories.computeAccessTokenStatus)
+   *
+   * @param string $name Required. The repository's name.
+   * @param array $optParams Optional parameters.
+   * @return ComputeRepositoryAccessTokenStatusResponse
+   */
+  public function computeAccessTokenStatus($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('computeAccessTokenStatus', [$params], ComputeRepositoryAccessTokenStatusResponse::class);
+  }
+  /**
    * Creates a new Repository in a given project and location.
    * (repositories.create)
    *
@@ -92,13 +107,13 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
     return $this->call('delete', [$params], DataformEmpty::class);
   }
   /**
-   * Fetches a Repository's history of changes. The Repository must not have a
+   * Fetches a Repository's history of commits. The Repository must not have a
    * value for `git_remote_settings.url`. (repositories.fetchHistory)
    *
    * @param string $name Required. The repository's name.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Optional. Maximum number of paths to return. The
+   * @opt_param int pageSize Optional. Maximum number of commits to return. The
    * server may return fewer items than requested. If unspecified, the server will
    * pick an appropriate default.
    * @opt_param string pageToken Optional. Page token received from a previous
