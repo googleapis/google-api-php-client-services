@@ -22,7 +22,6 @@ class ListContactCentersResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $contactCentersType = ContactCenter::class;
   protected $contactCentersDataType = 'array';
-  public $contactCenters = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListContactCentersResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param ContactCenter[]

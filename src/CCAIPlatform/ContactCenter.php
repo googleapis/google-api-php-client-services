@@ -21,7 +21,6 @@ class ContactCenter extends \Google\Model
 {
   protected $adminUserType = AdminUser::class;
   protected $adminUserDataType = '';
-  public $adminUser;
   /**
    * @var bool
    */
@@ -40,18 +39,16 @@ class ContactCenter extends \Google\Model
   public $displayName;
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
-  public $instanceConfig;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $samlParamsType = SAMLParams::class;
   protected $samlParamsDataType = '';
-  public $samlParams;
   /**
    * @var string
    */
@@ -62,7 +59,6 @@ class ContactCenter extends \Google\Model
   public $updateTime;
   protected $urisType = URIs::class;
   protected $urisDataType = '';
-  public $uris;
   /**
    * @var string
    */
