@@ -22,7 +22,6 @@ class FhirStoreMetrics extends \Google\Collection
   protected $collection_key = 'metrics';
   protected $metricsType = FhirStoreMetric::class;
   protected $metricsDataType = 'array';
-  public $metrics = [];
   /**
    * @var string
    */
