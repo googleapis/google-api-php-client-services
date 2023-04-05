@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1SecurityIncident extends \Google\Collection
   /**
    * @var string[]
    */
-  public $detectionTypes = [];
+  public $detectionTypes;
   /**
    * @var string
    */

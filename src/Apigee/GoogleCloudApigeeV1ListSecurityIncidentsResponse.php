@@ -26,7 +26,6 @@ class GoogleCloudApigeeV1ListSecurityIncidentsResponse extends \Google\Collectio
   public $nextPageToken;
   protected $securityIncidentsType = GoogleCloudApigeeV1SecurityIncident::class;
   protected $securityIncidentsDataType = 'array';
-  public $securityIncidents = [];
 
   /**
    * @param string
