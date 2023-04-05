@@ -17,23 +17,42 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1RunPipelineMetadata extends \Google\Model
+class GoogleCloudContentwarehouseV1RunPipelineMetadata extends \Google\Collection
 {
+  protected $collection_key = 'individualDocumentStatuses';
+  protected $exportToCdwPipelineMetadataType = GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata::class;
+  protected $exportToCdwPipelineMetadataDataType = '';
   /**
    * @var int
    */
   public $failedFileCount;
   protected $gcsIngestPipelineMetadataType = GoogleCloudContentwarehouseV1RunPipelineMetadataGcsIngestPipelineMetadata::class;
   protected $gcsIngestPipelineMetadataDataType = '';
-  public $gcsIngestPipelineMetadata;
+  protected $individualDocumentStatusesType = GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus::class;
+  protected $individualDocumentStatusesDataType = 'array';
+  protected $processWithDocAiPipelineMetadataType = GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata::class;
+  protected $processWithDocAiPipelineMetadataDataType = '';
   /**
    * @var int
    */
   public $totalFileCount;
   protected $userInfoType = GoogleCloudContentwarehouseV1UserInfo::class;
   protected $userInfoDataType = '';
-  public $userInfo;
 
+  /**
+   * @param GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata
+   */
+  public function setExportToCdwPipelineMetadata(GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata $exportToCdwPipelineMetadata)
+  {
+    $this->exportToCdwPipelineMetadata = $exportToCdwPipelineMetadata;
+  }
+  /**
+   * @return GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata
+   */
+  public function getExportToCdwPipelineMetadata()
+  {
+    return $this->exportToCdwPipelineMetadata;
+  }
   /**
    * @param int
    */
@@ -61,6 +80,34 @@ class GoogleCloudContentwarehouseV1RunPipelineMetadata extends \Google\Model
   public function getGcsIngestPipelineMetadata()
   {
     return $this->gcsIngestPipelineMetadata;
+  }
+  /**
+   * @param GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus[]
+   */
+  public function setIndividualDocumentStatuses($individualDocumentStatuses)
+  {
+    $this->individualDocumentStatuses = $individualDocumentStatuses;
+  }
+  /**
+   * @return GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus[]
+   */
+  public function getIndividualDocumentStatuses()
+  {
+    return $this->individualDocumentStatuses;
+  }
+  /**
+   * @param GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata
+   */
+  public function setProcessWithDocAiPipelineMetadata(GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata $processWithDocAiPipelineMetadata)
+  {
+    $this->processWithDocAiPipelineMetadata = $processWithDocAiPipelineMetadata;
+  }
+  /**
+   * @return GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata
+   */
+  public function getProcessWithDocAiPipelineMetadata()
+  {
+    return $this->processWithDocAiPipelineMetadata;
   }
   /**
    * @param int

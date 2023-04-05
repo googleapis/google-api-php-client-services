@@ -21,37 +21,26 @@ class IndexingDocjoinerDataVersion extends \Google\Model
 {
   protected $acceleratedShoppingSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $acceleratedShoppingSignalDataType = '';
-  public $acceleratedShoppingSignal;
   protected $chromeCountsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $chromeCountsDataType = '';
-  public $chromeCounts;
   protected $creatorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $creatorDataType = '';
-  public $creator;
   protected $instantNavboostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $instantNavboostDataType = '';
-  public $instantNavboost;
   protected $localypType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $localypDataType = '';
-  public $localyp;
   protected $modernFormatContentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $modernFormatContentDataType = '';
-  public $modernFormatContent;
   protected $navboostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $navboostDataType = '';
-  public $navboost;
   protected $rankembedType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $rankembedDataType = '';
-  public $rankembed;
   protected $universalFactsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $universalFactsDataType = '';
-  public $universalFacts;
   protected $videoScoringSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoScoringSignalDataType = '';
-  public $videoScoringSignal;
   protected $voltType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $voltDataType = '';
-  public $volt;
 
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

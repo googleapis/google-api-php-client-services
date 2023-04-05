@@ -17,44 +17,47 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1LockDocumentRequest extends \Google\Model
+class GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata extends \Google\Collection
 {
+  protected $collection_key = 'documents';
   /**
    * @var string
    */
-  public $collectionId;
-  protected $lockingUserType = GoogleCloudContentwarehouseV1UserInfo::class;
-  protected $lockingUserDataType = '';
+  public $docAiDataset;
+  /**
+   * @var string[]
+   */
+  public $documents;
 
   /**
    * @param string
    */
-  public function setCollectionId($collectionId)
+  public function setDocAiDataset($docAiDataset)
   {
-    $this->collectionId = $collectionId;
+    $this->docAiDataset = $docAiDataset;
   }
   /**
    * @return string
    */
-  public function getCollectionId()
+  public function getDocAiDataset()
   {
-    return $this->collectionId;
+    return $this->docAiDataset;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1UserInfo
+   * @param string[]
    */
-  public function setLockingUser(GoogleCloudContentwarehouseV1UserInfo $lockingUser)
+  public function setDocuments($documents)
   {
-    $this->lockingUser = $lockingUser;
+    $this->documents = $documents;
   }
   /**
-   * @return GoogleCloudContentwarehouseV1UserInfo
+   * @return string[]
    */
-  public function getLockingUser()
+  public function getDocuments()
   {
-    return $this->lockingUser;
+    return $this->documents;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContentwarehouseV1LockDocumentRequest::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1LockDocumentRequest');
+class_alias(GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata');

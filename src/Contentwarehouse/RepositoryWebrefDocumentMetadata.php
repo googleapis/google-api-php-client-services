@@ -33,7 +33,6 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
   public $docId;
   protected $forwardingUrlsType = RepositoryWebrefForwardingUrls::class;
   protected $forwardingUrlsDataType = '';
-  public $forwardingUrls;
   /**
    * @var bool
    */
@@ -48,7 +47,6 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
   public $numIncomingAnchors;
   protected $salientTermsType = QualitySalientTermsSalientTermSet::class;
   protected $salientTermsDataType = '';
-  public $salientTerms;
   /**
    * @var string
    */

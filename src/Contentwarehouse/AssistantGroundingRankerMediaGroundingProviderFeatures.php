@@ -24,6 +24,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    */
   public $albumReleaseType;
   /**
+   * @var string
+   */
+  public $ambiguityClassifier;
+  /**
    * @var bool
    */
   public $hasTypeSemanticEdge;
@@ -31,6 +35,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    * @var bool
    */
   public $isCastVideo;
+  /**
+   * @var bool
+   */
+  public $isMediaSearchQuerySubsetOfEntityNameAndArtist;
   /**
    * @var bool
    */
@@ -48,6 +56,7 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    * @var string
    */
   public $type;
+  public $youtubeConfidenceScore;
 
   /**
    * @param string
@@ -62,6 +71,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getAlbumReleaseType()
   {
     return $this->albumReleaseType;
+  }
+  /**
+   * @param string
+   */
+  public function setAmbiguityClassifier($ambiguityClassifier)
+  {
+    $this->ambiguityClassifier = $ambiguityClassifier;
+  }
+  /**
+   * @return string
+   */
+  public function getAmbiguityClassifier()
+  {
+    return $this->ambiguityClassifier;
   }
   /**
    * @param bool
@@ -90,6 +113,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getIsCastVideo()
   {
     return $this->isCastVideo;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsMediaSearchQuerySubsetOfEntityNameAndArtist($isMediaSearchQuerySubsetOfEntityNameAndArtist)
+  {
+    $this->isMediaSearchQuerySubsetOfEntityNameAndArtist = $isMediaSearchQuerySubsetOfEntityNameAndArtist;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsMediaSearchQuerySubsetOfEntityNameAndArtist()
+  {
+    return $this->isMediaSearchQuerySubsetOfEntityNameAndArtist;
   }
   /**
    * @param bool
@@ -154,6 +191,14 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getType()
   {
     return $this->type;
+  }
+  public function setYoutubeConfidenceScore($youtubeConfidenceScore)
+  {
+    $this->youtubeConfidenceScore = $youtubeConfidenceScore;
+  }
+  public function getYoutubeConfidenceScore()
+  {
+    return $this->youtubeConfidenceScore;
   }
 }
 

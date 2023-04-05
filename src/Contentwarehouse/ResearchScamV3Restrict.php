@@ -22,10 +22,8 @@ class ResearchScamV3Restrict extends \Google\Collection
   protected $collection_key = 'numericNamespaces';
   protected $namespacesType = ResearchScamTokenNamespace::class;
   protected $namespacesDataType = 'array';
-  public $namespaces = [];
   protected $numericNamespacesType = ResearchScamNumericRestrictNamespace::class;
   protected $numericNamespacesDataType = 'array';
-  public $numericNamespaces = [];
 
   /**
    * @param ResearchScamTokenNamespace[]

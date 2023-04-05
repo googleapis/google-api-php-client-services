@@ -47,7 +47,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $groundabilityScore;
   protected $groundingProviderFeaturesType = AssistantGroundingRankerGroundingProviderFeatures::class;
   protected $groundingProviderFeaturesDataType = '';
-  public $groundingProviderFeatures;
   /**
    * @var bool
    */
@@ -88,7 +87,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $kscorerRank;
   protected $laaFeaturesType = AssistantGroundingRankerLaaFeatures::class;
   protected $laaFeaturesDataType = '';
-  public $laaFeatures;
   /**
    * @var bool
    */

@@ -21,16 +21,12 @@ class AssistantGroundingRankerGroundingProviderFeatures extends \Google\Model
 {
   protected $contactGroundingProviderFeaturesType = AssistantGroundingRankerContactGroundingProviderFeatures::class;
   protected $contactGroundingProviderFeaturesDataType = '';
-  public $contactGroundingProviderFeatures;
   protected $deviceGroundingProviderFeaturesType = AssistantGroundingRankerDeviceGroundingProviderFeatures::class;
   protected $deviceGroundingProviderFeaturesDataType = '';
-  public $deviceGroundingProviderFeatures;
   protected $mediaGroundingProviderFeaturesType = AssistantGroundingRankerMediaGroundingProviderFeatures::class;
   protected $mediaGroundingProviderFeaturesDataType = '';
-  public $mediaGroundingProviderFeatures;
   protected $providerGroundingProviderFeaturesType = AssistantGroundingRankerProviderGroundingProviderFeatures::class;
   protected $providerGroundingProviderFeaturesDataType = '';
-  public $providerGroundingProviderFeatures;
 
   /**
    * @param AssistantGroundingRankerContactGroundingProviderFeatures

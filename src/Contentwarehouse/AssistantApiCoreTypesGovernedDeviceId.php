@@ -45,7 +45,6 @@ class AssistantApiCoreTypesGovernedDeviceId extends \Google\Model
   public $connectedDockId;
   protected $deviceConfigType = AssistantApiCoreTypesGovernedDeviceConfig::class;
   protected $deviceConfigDataType = '';
-  public $deviceConfig;
   /**
    * @var string
    */

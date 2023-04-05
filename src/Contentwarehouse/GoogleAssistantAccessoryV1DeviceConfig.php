@@ -21,14 +21,12 @@ class GoogleAssistantAccessoryV1DeviceConfig extends \Google\Model
 {
   protected $deviceModelCapabilitiesOverrideType = GoogleAssistantEmbeddedV1DeviceModelCapabilitiesOverride::class;
   protected $deviceModelCapabilitiesOverrideDataType = '';
-  public $deviceModelCapabilitiesOverride;
   /**
    * @var string
    */
   public $heterodyneToken;
   protected $surfaceIdentityType = GoogleAssistantEmbeddedV1SurfaceIdentity::class;
   protected $surfaceIdentityDataType = '';
-  public $surfaceIdentity;
 
   /**
    * @param GoogleAssistantEmbeddedV1DeviceModelCapabilitiesOverride

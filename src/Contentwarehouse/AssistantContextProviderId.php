@@ -21,28 +21,24 @@ class AssistantContextProviderId extends \Google\Model
 {
   protected $appProviderIdType = AssistantContextAppProviderId::class;
   protected $appProviderIdDataType = '';
-  public $appProviderId;
   /**
    * @var string
    */
   public $ecosystemType;
   protected $mediaProviderIdType = AssistantContextMediaProviderId::class;
   protected $mediaProviderIdDataType = '';
-  public $mediaProviderId;
   /**
    * @var string
    */
   public $mid;
   protected $naturalProviderIdType = AssistantContextProviderIdNaturalProviderId::class;
   protected $naturalProviderIdDataType = '';
-  public $naturalProviderId;
   /**
    * @var string
    */
   public $providerCorpusId;
   protected $providerVariantType = AssistantContextProviderVariant::class;
   protected $providerVariantDataType = '';
-  public $providerVariant;
 
   /**
    * @param AssistantContextAppProviderId

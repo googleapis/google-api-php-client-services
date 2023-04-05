@@ -37,6 +37,10 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
    */
   public $deepCropBytes;
   /**
+   * @var float
+   */
+  public $dimeScore;
+  /**
    * @var string
    */
   public $docid;
@@ -166,6 +170,20 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
   public function getDeepCropBytes()
   {
     return $this->deepCropBytes;
+  }
+  /**
+   * @param float
+   */
+  public function setDimeScore($dimeScore)
+  {
+    $this->dimeScore = $dimeScore;
+  }
+  /**
+   * @return float
+   */
+  public function getDimeScore()
+  {
+    return $this->dimeScore;
   }
   /**
    * @param string

@@ -22,10 +22,8 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
   protected $collection_key = 'snippet';
   protected $boldedRangesType = QualitySnippetsTruncationSnippetBoldedRange::class;
   protected $boldedRangesDataType = 'array';
-  public $boldedRanges = [];
   protected $extendedSnippetType = SnippetExtraInfoSnippetCandidateInfoExtendedSnippet::class;
   protected $extendedSnippetDataType = '';
-  public $extendedSnippet;
   /**
    * @var int
    */
@@ -40,17 +38,14 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
   public $isSnippetBrainBoldingTriggered;
   protected $listInfoType = MustangReposWwwSnippetsOrganicListSnippetResponse::class;
   protected $listInfoDataType = '';
-  public $listInfo;
   protected $scoringInfoType = SnippetExtraInfoSnippetScoringInfo::class;
   protected $scoringInfoDataType = '';
-  public $scoringInfo;
   protected $sentenceStartsType = QualitySnippetsTruncationSnippetBoldedRangePosition::class;
   protected $sentenceStartsDataType = 'array';
-  public $sentenceStarts = [];
   /**
    * @var string[]
    */
-  public $snippet = [];
+  public $snippet;
   /**
    * @var string
    */

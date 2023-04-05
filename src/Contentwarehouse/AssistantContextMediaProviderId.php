@@ -53,7 +53,6 @@ class AssistantContextMediaProviderId extends \Google\Model
   public $mid;
   protected $providerVariantType = AssistantContextProviderVariant::class;
   protected $providerVariantDataType = '';
-  public $providerVariant;
   /**
    * @var string
    */

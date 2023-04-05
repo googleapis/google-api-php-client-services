@@ -21,7 +21,6 @@ class AssistantGroundingRankerDeviceGroundingProviderFeatures extends \Google\Mo
 {
   protected $deviceIdType = AssistantApiCoreTypesGovernedDeviceId::class;
   protected $deviceIdDataType = '';
-  public $deviceId;
 
   /**
    * @param AssistantApiCoreTypesGovernedDeviceId

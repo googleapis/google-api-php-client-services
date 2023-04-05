@@ -21,17 +21,34 @@ class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\
 {
   protected $collection_key = 'providerClusterId';
   /**
+   * @var bool
+   */
+  public $isInAppProvider;
+  /**
    * @var string[]
    */
-  public $providerClusterId = [];
+  public $providerClusterId;
   protected $providerIdType = AssistantContextProviderId::class;
   protected $providerIdDataType = '';
-  public $providerId;
   /**
    * @var float
    */
   public $pslScore;
 
+  /**
+   * @param bool
+   */
+  public function setIsInAppProvider($isInAppProvider)
+  {
+    $this->isInAppProvider = $isInAppProvider;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsInAppProvider()
+  {
+    return $this->isInAppProvider;
+  }
   /**
    * @param string[]
    */

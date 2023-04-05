@@ -17,44 +17,44 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1LockDocumentRequest extends \Google\Model
+class GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus extends \Google\Model
 {
   /**
    * @var string
    */
-  public $collectionId;
-  protected $lockingUserType = GoogleCloudContentwarehouseV1UserInfo::class;
-  protected $lockingUserDataType = '';
+  public $documentId;
+  protected $statusType = GoogleRpcStatus::class;
+  protected $statusDataType = '';
 
   /**
    * @param string
    */
-  public function setCollectionId($collectionId)
+  public function setDocumentId($documentId)
   {
-    $this->collectionId = $collectionId;
+    $this->documentId = $documentId;
   }
   /**
    * @return string
    */
-  public function getCollectionId()
+  public function getDocumentId()
   {
-    return $this->collectionId;
+    return $this->documentId;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1UserInfo
+   * @param GoogleRpcStatus
    */
-  public function setLockingUser(GoogleCloudContentwarehouseV1UserInfo $lockingUser)
+  public function setStatus(GoogleRpcStatus $status)
   {
-    $this->lockingUser = $lockingUser;
+    $this->status = $status;
   }
   /**
-   * @return GoogleCloudContentwarehouseV1UserInfo
+   * @return GoogleRpcStatus
    */
-  public function getLockingUser()
+  public function getStatus()
   {
-    return $this->lockingUser;
+    return $this->status;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContentwarehouseV1LockDocumentRequest::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1LockDocumentRequest');
+class_alias(GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus');
