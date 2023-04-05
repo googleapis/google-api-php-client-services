@@ -29,10 +29,8 @@ class NodeNetworkConfig extends \Google\Model
   public $enablePrivateNodes;
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
-  public $networkPerformanceConfig;
   protected $podCidrOverprovisionConfigType = PodCIDROverprovisionConfig::class;
   protected $podCidrOverprovisionConfigDataType = '';
-  public $podCidrOverprovisionConfig;
   /**
    * @var string
    */

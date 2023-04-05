@@ -22,32 +22,24 @@ class Cluster extends \Google\Collection
   protected $collection_key = 'nodePools';
   protected $addonsConfigType = AddonsConfig::class;
   protected $addonsConfigDataType = '';
-  public $addonsConfig;
   protected $authenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
   protected $authenticatorGroupsConfigDataType = '';
-  public $authenticatorGroupsConfig;
   protected $autopilotType = Autopilot::class;
   protected $autopilotDataType = '';
-  public $autopilot;
   protected $autoscalingType = ClusterAutoscaling::class;
   protected $autoscalingDataType = '';
-  public $autoscaling;
   protected $binaryAuthorizationType = BinaryAuthorization::class;
   protected $binaryAuthorizationDataType = '';
-  public $binaryAuthorization;
   /**
    * @var string
    */
   public $clusterIpv4Cidr;
   protected $conditionsType = StatusCondition::class;
   protected $conditionsDataType = 'array';
-  public $conditions = [];
   protected $confidentialNodesType = ConfidentialNodes::class;
   protected $confidentialNodesDataType = '';
-  public $confidentialNodes;
   protected $costManagementConfigType = CostManagementConfig::class;
   protected $costManagementConfigDataType = '';
-  public $costManagementConfig;
   /**
    * @var string
    */
@@ -66,10 +58,8 @@ class Cluster extends \Google\Collection
   public $currentNodeVersion;
   protected $databaseEncryptionType = DatabaseEncryption::class;
   protected $databaseEncryptionDataType = '';
-  public $databaseEncryption;
   protected $defaultMaxPodsConstraintType = MaxPodsConstraint::class;
   protected $defaultMaxPodsConstraintDataType = '';
-  public $defaultMaxPodsConstraint;
   /**
    * @var string
    */
@@ -96,14 +86,12 @@ class Cluster extends \Google\Collection
   public $expireTime;
   protected $fleetType = Fleet::class;
   protected $fleetDataType = '';
-  public $fleet;
   /**
    * @var string
    */
   public $id;
   protected $identityServiceConfigType = IdentityServiceConfig::class;
   protected $identityServiceConfigDataType = '';
-  public $identityServiceConfig;
   /**
    * @var string
    */
@@ -115,17 +103,15 @@ class Cluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instanceGroupUrls = [];
+  public $instanceGroupUrls;
   protected $ipAllocationPolicyType = IPAllocationPolicy::class;
   protected $ipAllocationPolicyDataType = '';
-  public $ipAllocationPolicy;
   /**
    * @var string
    */
   public $labelFingerprint;
   protected $legacyAbacType = LegacyAbac::class;
   protected $legacyAbacDataType = '';
-  public $legacyAbac;
   /**
    * @var string
    */
@@ -133,29 +119,23 @@ class Cluster extends \Google\Collection
   /**
    * @var string[]
    */
-  public $locations = [];
+  public $locations;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
-  public $loggingConfig;
   /**
    * @var string
    */
   public $loggingService;
   protected $maintenancePolicyType = MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
-  public $maintenancePolicy;
   protected $masterAuthType = MasterAuth::class;
   protected $masterAuthDataType = '';
-  public $masterAuth;
   protected $masterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $masterAuthorizedNetworksConfigDataType = '';
-  public $masterAuthorizedNetworksConfig;
   protected $meshCertificatesType = MeshCertificates::class;
   protected $meshCertificatesDataType = '';
-  public $meshCertificates;
   protected $monitoringConfigType = MonitoringConfig::class;
   protected $monitoringConfigDataType = '';
-  public $monitoringConfig;
   /**
    * @var string
    */
@@ -170,42 +150,32 @@ class Cluster extends \Google\Collection
   public $network;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
-  public $networkConfig;
   protected $networkPolicyType = NetworkPolicy::class;
   protected $networkPolicyDataType = '';
-  public $networkPolicy;
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
-  public $nodeConfig;
   /**
    * @var int
    */
   public $nodeIpv4CidrSize;
   protected $nodePoolAutoConfigType = NodePoolAutoConfig::class;
   protected $nodePoolAutoConfigDataType = '';
-  public $nodePoolAutoConfig;
   protected $nodePoolDefaultsType = NodePoolDefaults::class;
   protected $nodePoolDefaultsDataType = '';
-  public $nodePoolDefaults;
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
-  public $nodePools = [];
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
-  public $notificationConfig;
   protected $privateClusterConfigType = PrivateClusterConfig::class;
   protected $privateClusterConfigDataType = '';
-  public $privateClusterConfig;
   protected $releaseChannelType = ReleaseChannel::class;
   protected $releaseChannelDataType = '';
-  public $releaseChannel;
   /**
    * @var string[]
    */
-  public $resourceLabels = [];
+  public $resourceLabels;
   protected $resourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $resourceUsageExportConfigDataType = '';
-  public $resourceUsageExportConfig;
   /**
    * @var string
    */
@@ -216,7 +186,6 @@ class Cluster extends \Google\Collection
   public $servicesIpv4Cidr;
   protected $shieldedNodesType = ShieldedNodes::class;
   protected $shieldedNodesDataType = '';
-  public $shieldedNodes;
   /**
    * @var string
    */
@@ -235,10 +204,8 @@ class Cluster extends \Google\Collection
   public $tpuIpv4CidrBlock;
   protected $verticalPodAutoscalingType = VerticalPodAutoscaling::class;
   protected $verticalPodAutoscalingDataType = '';
-  public $verticalPodAutoscaling;
   protected $workloadIdentityConfigType = WorkloadIdentityConfig::class;
   protected $workloadIdentityConfigDataType = '';
-  public $workloadIdentityConfig;
   /**
    * @var string
    */

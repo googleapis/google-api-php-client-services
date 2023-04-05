@@ -21,7 +21,6 @@ class IPAllocationPolicy extends \Google\Model
 {
   protected $additionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $additionalPodRangesConfigDataType = '';
-  public $additionalPodRangesConfig;
   /**
    * @var string
    */
@@ -52,7 +51,6 @@ class IPAllocationPolicy extends \Google\Model
   public $nodeIpv4CidrBlock;
   protected $podCidrOverprovisionConfigType = PodCIDROverprovisionConfig::class;
   protected $podCidrOverprovisionConfigDataType = '';
-  public $podCidrOverprovisionConfig;
   /**
    * @var string
    */
