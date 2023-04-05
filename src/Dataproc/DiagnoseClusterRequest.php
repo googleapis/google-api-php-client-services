@@ -22,7 +22,6 @@ class DiagnoseClusterRequest extends \Google\Collection
   protected $collection_key = 'yarnApplicationIds';
   protected $diagnosisIntervalType = Interval::class;
   protected $diagnosisIntervalDataType = '';
-  public $diagnosisInterval;
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class DiagnoseClusterRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $jobs = [];
+  public $jobs;
   /**
    * @var string
    */
@@ -38,7 +37,7 @@ class DiagnoseClusterRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $yarnApplicationIds = [];
+  public $yarnApplicationIds;
 
   /**
    * @param Interval
