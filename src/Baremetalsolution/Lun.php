@@ -35,7 +35,7 @@ class Lun extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instances = [];
+  public $instances;
   /**
    * @var string
    */

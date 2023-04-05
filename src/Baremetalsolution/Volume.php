@@ -51,11 +51,11 @@ class Volume extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instances = [];
+  public $instances;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -102,7 +102,6 @@ class Volume extends \Google\Collection
   public $snapshotEnabled;
   protected $snapshotReservationDetailType = SnapshotReservationDetail::class;
   protected $snapshotReservationDetailDataType = '';
-  public $snapshotReservationDetail;
   /**
    * @var string
    */
