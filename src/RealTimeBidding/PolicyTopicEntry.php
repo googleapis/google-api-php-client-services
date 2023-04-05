@@ -27,6 +27,10 @@ class PolicyTopicEntry extends \Google\Collection
    */
   public $helpCenterUrl;
   /**
+   * @var bool
+   */
+  public $missingCertificate;
+  /**
    * @var string
    */
   public $policyTopic;
@@ -58,6 +62,20 @@ class PolicyTopicEntry extends \Google\Collection
   public function getHelpCenterUrl()
   {
     return $this->helpCenterUrl;
+  }
+  /**
+   * @param bool
+   */
+  public function setMissingCertificate($missingCertificate)
+  {
+    $this->missingCertificate = $missingCertificate;
+  }
+  /**
+   * @return bool
+   */
+  public function getMissingCertificate()
+  {
+    return $this->missingCertificate;
   }
   /**
    * @param string
