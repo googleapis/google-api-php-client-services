@@ -22,7 +22,6 @@ class SearchDirectGroupsResponse extends \Google\Collection
   protected $collection_key = 'memberships';
   protected $membershipsType = MembershipRelation::class;
   protected $membershipsDataType = 'array';
-  public $memberships = [];
   /**
    * @var string
    */
