@@ -23,7 +23,7 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
   /**
    * @var string[]
    */
-  public $groupIds = [];
+  public $groupIds;
   /**
    * @var string
    */
@@ -34,7 +34,6 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
   public $policySchema;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
-  public $policyTargetKey;
 
   /**
    * @param string[]
