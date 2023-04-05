@@ -27,20 +27,17 @@ class VexAssessment extends \Google\Collection
   /**
    * @var string[]
    */
-  public $impacts = [];
+  public $impacts;
   protected $justificationType = Justification::class;
   protected $justificationDataType = '';
-  public $justification;
   /**
    * @var string
    */
   public $noteName;
   protected $relatedUrisType = RelatedUrl::class;
   protected $relatedUrisDataType = 'array';
-  public $relatedUris = [];
   protected $remediationsType = Remediation::class;
   protected $remediationsDataType = 'array';
-  public $remediations = [];
   /**
    * @var string
    */

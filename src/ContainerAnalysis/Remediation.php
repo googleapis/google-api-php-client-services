@@ -29,7 +29,6 @@ class Remediation extends \Google\Model
   public $remediationType;
   protected $remediationUriType = RelatedUrl::class;
   protected $remediationUriDataType = '';
-  public $remediationUri;
 
   /**
    * @param string

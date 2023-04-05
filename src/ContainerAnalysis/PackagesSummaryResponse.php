@@ -22,7 +22,6 @@ class PackagesSummaryResponse extends \Google\Collection
   protected $collection_key = 'licensesSummary';
   protected $licensesSummaryType = LicensesSummary::class;
   protected $licensesSummaryDataType = 'array';
-  public $licensesSummary = [];
   /**
    * @var string
    */
