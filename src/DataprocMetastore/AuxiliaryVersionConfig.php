@@ -22,10 +22,9 @@ class AuxiliaryVersionConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $configOverrides = [];
+  public $configOverrides;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
-  public $networkConfig;
   /**
    * @var string
    */

@@ -65,6 +65,8 @@ class Service extends \Google\Model
    * @var string
    */
   public $releaseChannel;
+  protected $scalingConfigType = ScalingConfig::class;
+  protected $scalingConfigDataType = '';
   /**
    * @var string
    */
@@ -283,6 +285,20 @@ class Service extends \Google\Model
   public function getReleaseChannel()
   {
     return $this->releaseChannel;
+  }
+  /**
+   * @param ScalingConfig
+   */
+  public function setScalingConfig(ScalingConfig $scalingConfig)
+  {
+    $this->scalingConfig = $scalingConfig;
+  }
+  /**
+   * @return ScalingConfig
+   */
+  public function getScalingConfig()
+  {
+    return $this->scalingConfig;
   }
   /**
    * @param string
