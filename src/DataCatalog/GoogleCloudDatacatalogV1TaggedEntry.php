@@ -22,13 +22,10 @@ class GoogleCloudDatacatalogV1TaggedEntry extends \Google\Collection
   protected $collection_key = 'presentTags';
   protected $absentTagsType = GoogleCloudDatacatalogV1Tag::class;
   protected $absentTagsDataType = 'array';
-  public $absentTags = [];
   protected $presentTagsType = GoogleCloudDatacatalogV1Tag::class;
   protected $presentTagsDataType = 'array';
-  public $presentTags = [];
   protected $v1EntryType = GoogleCloudDatacatalogV1Entry::class;
   protected $v1EntryDataType = '';
-  public $v1Entry;
 
   /**
    * @param GoogleCloudDatacatalogV1Tag[]
