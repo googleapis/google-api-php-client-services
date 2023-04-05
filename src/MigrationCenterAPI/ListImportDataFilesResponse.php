@@ -22,7 +22,6 @@ class ListImportDataFilesResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $importDataFilesType = ImportDataFile::class;
   protected $importDataFilesDataType = 'array';
-  public $importDataFiles = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListImportDataFilesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param ImportDataFile[]

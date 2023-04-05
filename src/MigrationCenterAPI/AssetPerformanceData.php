@@ -22,7 +22,6 @@ class AssetPerformanceData extends \Google\Collection
   protected $collection_key = 'dailyResourceUsageAggregations';
   protected $dailyResourceUsageAggregationsType = DailyResourceUsageAggregation::class;
   protected $dailyResourceUsageAggregationsDataType = 'array';
-  public $dailyResourceUsageAggregations = [];
 
   /**
    * @param DailyResourceUsageAggregation[]

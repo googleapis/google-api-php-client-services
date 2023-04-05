@@ -21,16 +21,12 @@ class MigrationInsight extends \Google\Model
 {
   protected $computeEngineTargetType = ComputeEngineMigrationTarget::class;
   protected $computeEngineTargetDataType = '';
-  public $computeEngineTarget;
   protected $fitType = FitDescriptor::class;
   protected $fitDataType = '';
-  public $fit;
   protected $gkeTargetType = GoogleKubernetesEngineMigrationTarget::class;
   protected $gkeTargetDataType = '';
-  public $gkeTarget;
   protected $vmwareEngineTargetType = VmwareEngineMigrationTarget::class;
   protected $vmwareEngineTargetDataType = '';
-  public $vmwareEngineTarget;
 
   /**
    * @param ComputeEngineMigrationTarget

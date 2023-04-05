@@ -22,7 +22,6 @@ class NetworkAddressList extends \Google\Collection
   protected $collection_key = 'addresses';
   protected $addressesType = NetworkAddress::class;
   protected $addressesDataType = 'array';
-  public $addresses = [];
 
   /**
    * @param NetworkAddress[]

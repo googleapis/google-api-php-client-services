@@ -21,7 +21,6 @@ class DailyResourceUsageAggregationMemory extends \Google\Model
 {
   protected $utilizationPercentageType = DailyResourceUsageAggregationStats::class;
   protected $utilizationPercentageDataType = '';
-  public $utilizationPercentage;
 
   /**
    * @param DailyResourceUsageAggregationStats

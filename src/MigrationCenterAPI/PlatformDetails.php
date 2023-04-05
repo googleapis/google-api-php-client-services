@@ -21,19 +21,14 @@ class PlatformDetails extends \Google\Model
 {
   protected $awsEc2DetailsType = AwsEc2PlatformDetails::class;
   protected $awsEc2DetailsDataType = '';
-  public $awsEc2Details;
   protected $azureVmDetailsType = AzureVmPlatformDetails::class;
   protected $azureVmDetailsDataType = '';
-  public $azureVmDetails;
   protected $genericDetailsType = GenericPlatformDetails::class;
   protected $genericDetailsDataType = '';
-  public $genericDetails;
   protected $physicalDetailsType = PhysicalPlatformDetails::class;
   protected $physicalDetailsDataType = '';
-  public $physicalDetails;
   protected $vmwareDetailsType = VmwarePlatformDetails::class;
   protected $vmwareDetailsDataType = '';
-  public $vmwareDetails;
 
   /**
    * @param AwsEc2PlatformDetails

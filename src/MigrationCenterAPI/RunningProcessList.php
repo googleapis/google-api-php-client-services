@@ -22,7 +22,6 @@ class RunningProcessList extends \Google\Collection
   protected $collection_key = 'processes';
   protected $processesType = RunningProcess::class;
   protected $processesDataType = 'array';
-  public $processes = [];
 
   /**
    * @param RunningProcess[]

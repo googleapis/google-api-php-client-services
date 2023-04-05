@@ -21,19 +21,14 @@ class DailyResourceUsageAggregation extends \Google\Model
 {
   protected $cpuType = DailyResourceUsageAggregationCPU::class;
   protected $cpuDataType = '';
-  public $cpu;
   protected $dateType = Date::class;
   protected $dateDataType = '';
-  public $date;
   protected $diskType = DailyResourceUsageAggregationDisk::class;
   protected $diskDataType = '';
-  public $disk;
   protected $memoryType = DailyResourceUsageAggregationMemory::class;
   protected $memoryDataType = '';
-  public $memory;
   protected $networkType = DailyResourceUsageAggregationNetwork::class;
   protected $networkDataType = '';
-  public $network;
 
   /**
    * @param DailyResourceUsageAggregationCPU

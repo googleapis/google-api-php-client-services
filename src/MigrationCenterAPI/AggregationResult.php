@@ -21,20 +21,16 @@ class AggregationResult extends \Google\Model
 {
   protected $countType = AggregationResultCount::class;
   protected $countDataType = '';
-  public $count;
   /**
    * @var string
    */
   public $field;
   protected $frequencyType = AggregationResultFrequency::class;
   protected $frequencyDataType = '';
-  public $frequency;
   protected $histogramType = AggregationResultHistogram::class;
   protected $histogramDataType = '';
-  public $histogram;
   protected $sumType = AggregationResultSum::class;
   protected $sumDataType = '';
-  public $sum;
 
   /**
    * @param AggregationResultCount

@@ -26,7 +26,6 @@ class InlinePayloadInfo extends \Google\Collection
   public $format;
   protected $payloadType = PayloadFile::class;
   protected $payloadDataType = 'array';
-  public $payload = [];
 
   /**
    * @param string

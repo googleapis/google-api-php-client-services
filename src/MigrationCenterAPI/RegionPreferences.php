@@ -23,7 +23,7 @@ class RegionPreferences extends \Google\Collection
   /**
    * @var string[]
    */
-  public $preferredRegions = [];
+  public $preferredRegions;
 
   /**
    * @param string[]

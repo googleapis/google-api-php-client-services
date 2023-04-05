@@ -23,40 +23,37 @@ class Asset extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assignedGroups = [];
+  public $assignedGroups;
   /**
    * @var string[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */
   public $createTime;
   protected $insightListType = InsightList::class;
   protected $insightListDataType = '';
-  public $insightList;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $performanceDataType = AssetPerformanceData::class;
   protected $performanceDataDataType = '';
-  public $performanceData;
   /**
    * @var string[]
    */
-  public $sources = [];
+  public $sources;
   /**
    * @var string
    */
   public $updateTime;
   protected $virtualMachineDetailsType = VirtualMachineDetails::class;
   protected $virtualMachineDetailsDataType = '';
-  public $virtualMachineDetails;
 
   /**
    * @param string[]

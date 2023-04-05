@@ -21,10 +21,8 @@ class GuestOsDetails extends \Google\Model
 {
   protected $configType = GuestConfigDetails::class;
   protected $configDataType = '';
-  public $config;
   protected $runtimeType = GuestRuntimeDetails::class;
   protected $runtimeDataType = '';
-  public $runtime;
 
   /**
    * @param GuestConfigDetails

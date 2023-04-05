@@ -21,16 +21,12 @@ class PerformanceSample extends \Google\Model
 {
   protected $cpuType = CpuUsageSample::class;
   protected $cpuDataType = '';
-  public $cpu;
   protected $diskType = DiskUsageSample::class;
   protected $diskDataType = '';
-  public $disk;
   protected $memoryType = MemoryUsageSample::class;
   protected $memoryDataType = '';
-  public $memory;
   protected $networkType = NetworkUsageSample::class;
   protected $networkDataType = '';
-  public $network;
   /**
    * @var string
    */

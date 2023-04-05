@@ -21,10 +21,8 @@ class DailyResourceUsageAggregationNetwork extends \Google\Model
 {
   protected $egressBpsType = DailyResourceUsageAggregationStats::class;
   protected $egressBpsDataType = '';
-  public $egressBps;
   protected $ingressBpsType = DailyResourceUsageAggregationStats::class;
   protected $ingressBpsDataType = '';
-  public $ingressBps;
 
   /**
    * @param DailyResourceUsageAggregationStats

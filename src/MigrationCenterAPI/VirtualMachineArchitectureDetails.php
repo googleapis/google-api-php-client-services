@@ -21,7 +21,6 @@ class VirtualMachineArchitectureDetails extends \Google\Model
 {
   protected $biosType = BiosDetails::class;
   protected $biosDataType = '';
-  public $bios;
   /**
    * @var string
    */

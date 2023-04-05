@@ -22,7 +22,6 @@ class ListImportJobsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $importJobsType = ImportJob::class;
   protected $importJobsDataType = 'array';
-  public $importJobs = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListImportJobsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param ImportJob[]

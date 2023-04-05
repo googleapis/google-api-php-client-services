@@ -23,7 +23,7 @@ class HostsEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hostNames = [];
+  public $hostNames;
   /**
    * @var string
    */

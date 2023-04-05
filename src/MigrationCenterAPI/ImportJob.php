@@ -37,17 +37,14 @@ class ImportJob extends \Google\Model
   public $displayName;
   protected $executionReportType = ExecutionReport::class;
   protected $executionReportDataType = '';
-  public $executionReport;
   protected $gcsPayloadType = GCSPayloadInfo::class;
   protected $gcsPayloadDataType = '';
-  public $gcsPayload;
   protected $inlinePayloadType = InlinePayloadInfo::class;
   protected $inlinePayloadDataType = '';
-  public $inlinePayload;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -62,7 +59,6 @@ class ImportJob extends \Google\Model
   public $updateTime;
   protected $validationReportType = ValidationReport::class;
   protected $validationReportDataType = '';
-  public $validationReport;
 
   /**
    * @param string

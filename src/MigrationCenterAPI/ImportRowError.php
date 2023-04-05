@@ -22,7 +22,6 @@ class ImportRowError extends \Google\Collection
   protected $collection_key = 'errors';
   protected $errorsType = ImportError::class;
   protected $errorsDataType = 'array';
-  public $errors = [];
   /**
    * @var int
    */

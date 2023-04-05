@@ -22,7 +22,6 @@ class ListAssetsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $assetsType = Asset::class;
   protected $assetsDataType = 'array';
-  public $assets = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListAssetsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param Asset[]

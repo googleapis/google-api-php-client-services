@@ -21,7 +21,6 @@ class DailyResourceUsageAggregationDisk extends \Google\Model
 {
   protected $iopsType = DailyResourceUsageAggregationStats::class;
   protected $iopsDataType = '';
-  public $iops;
 
   /**
    * @param DailyResourceUsageAggregationStats

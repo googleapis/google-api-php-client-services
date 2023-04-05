@@ -22,7 +22,6 @@ class RunningServiceList extends \Google\Collection
   protected $collection_key = 'services';
   protected $servicesType = RunningService::class;
   protected $servicesDataType = 'array';
-  public $services = [];
 
   /**
    * @param RunningService[]

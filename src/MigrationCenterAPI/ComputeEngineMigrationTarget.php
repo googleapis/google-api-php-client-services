@@ -21,7 +21,6 @@ class ComputeEngineMigrationTarget extends \Google\Model
 {
   protected $shapeType = ComputeEngineShapeDescriptor::class;
   protected $shapeDataType = '';
-  public $shape;
 
   /**
    * @param ComputeEngineShapeDescriptor

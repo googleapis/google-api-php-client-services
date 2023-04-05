@@ -22,7 +22,6 @@ class FileValidationReport extends \Google\Collection
   protected $collection_key = 'rowErrors';
   protected $fileErrorsType = ImportError::class;
   protected $fileErrorsDataType = 'array';
-  public $fileErrors = [];
   /**
    * @var string
    */
@@ -33,7 +32,6 @@ class FileValidationReport extends \Google\Collection
   public $partialReport;
   protected $rowErrorsType = ImportRowError::class;
   protected $rowErrorsDataType = 'array';
-  public $rowErrors = [];
 
   /**
    * @param ImportError[]

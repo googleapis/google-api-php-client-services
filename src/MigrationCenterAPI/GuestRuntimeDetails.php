@@ -25,26 +25,20 @@ class GuestRuntimeDetails extends \Google\Model
   public $domain;
   protected $installedAppsType = GuestInstalledApplicationList::class;
   protected $installedAppsDataType = '';
-  public $installedApps;
   protected $lastUptimeType = Date::class;
   protected $lastUptimeDataType = '';
-  public $lastUptime;
   /**
    * @var string
    */
   public $machineName;
   protected $networkInfoType = RuntimeNetworkInfo::class;
   protected $networkInfoDataType = '';
-  public $networkInfo;
   protected $openFileListType = OpenFileList::class;
   protected $openFileListDataType = '';
-  public $openFileList;
   protected $processesType = RunningProcessList::class;
   protected $processesDataType = '';
-  public $processes;
   protected $servicesType = RunningServiceList::class;
   protected $servicesDataType = '';
-  public $services;
 
   /**
    * @param string

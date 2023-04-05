@@ -23,14 +23,13 @@ class AssetFrame extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $performanceSamplesType = PerformanceSample::class;
   protected $performanceSamplesDataType = 'array';
-  public $performanceSamples = [];
   /**
    * @var string
    */
@@ -41,7 +40,6 @@ class AssetFrame extends \Google\Collection
   public $traceToken;
   protected $virtualMachineDetailsType = VirtualMachineDetails::class;
   protected $virtualMachineDetailsDataType = '';
-  public $virtualMachineDetails;
 
   /**
    * @param string[]

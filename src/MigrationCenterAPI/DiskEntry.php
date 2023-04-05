@@ -37,7 +37,6 @@ class DiskEntry extends \Google\Model
   public $interfaceType;
   protected $partitionsType = DiskPartitionList::class;
   protected $partitionsDataType = '';
-  public $partitions;
   /**
    * @var string
    */
@@ -52,7 +51,6 @@ class DiskEntry extends \Google\Model
   public $totalFreeBytes;
   protected $vmwareConfigType = VmwareDiskConfig::class;
   protected $vmwareConfigDataType = '';
-  public $vmwareConfig;
 
   /**
    * @param string

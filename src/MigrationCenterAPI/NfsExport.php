@@ -27,7 +27,7 @@ class NfsExport extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hosts = [];
+  public $hosts;
 
   /**
    * @param string

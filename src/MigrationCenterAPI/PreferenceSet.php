@@ -41,7 +41,6 @@ class PreferenceSet extends \Google\Model
   public $updateTime;
   protected $virtualMachinePreferencesType = VirtualMachinePreferences::class;
   protected $virtualMachinePreferencesDataType = '';
-  public $virtualMachinePreferences;
 
   /**
    * @param string

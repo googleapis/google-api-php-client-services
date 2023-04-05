@@ -21,14 +21,12 @@ class RuntimeNetworkInfo extends \Google\Model
 {
   protected $connectionsType = NetworkConnectionList::class;
   protected $connectionsDataType = '';
-  public $connections;
   /**
    * @var string
    */
   public $netstat;
   protected $netstatTimeType = DateTime::class;
   protected $netstatTimeDataType = '';
-  public $netstatTime;
 
   /**
    * @param NetworkConnectionList

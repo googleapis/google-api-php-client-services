@@ -22,10 +22,8 @@ class ValidationReport extends \Google\Collection
   protected $collection_key = 'jobErrors';
   protected $fileValidationsType = FileValidationReport::class;
   protected $fileValidationsDataType = 'array';
-  public $fileValidations = [];
   protected $jobErrorsType = ImportError::class;
   protected $jobErrorsDataType = 'array';
-  public $jobErrors = [];
 
   /**
    * @param FileValidationReport[]

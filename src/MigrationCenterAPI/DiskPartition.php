@@ -37,7 +37,6 @@ class DiskPartition extends \Google\Model
   public $mountPoint;
   protected $subPartitionsType = DiskPartitionList::class;
   protected $subPartitionsDataType = '';
-  public $subPartitions;
   /**
    * @var string
    */

@@ -22,7 +22,7 @@ class AggregationResultFrequency extends \Google\Model
   /**
    * @var string[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param string[]

@@ -22,7 +22,6 @@ class BatchUpdateAssetsRequest extends \Google\Collection
   protected $collection_key = 'requests';
   protected $requestsType = UpdateAssetRequest::class;
   protected $requestsDataType = 'array';
-  public $requests = [];
 
   /**
    * @param UpdateAssetRequest[]

@@ -21,20 +21,16 @@ class GuestConfigDetails extends \Google\Model
 {
   protected $fstabType = FstabEntryList::class;
   protected $fstabDataType = '';
-  public $fstab;
   protected $hostsType = HostsEntryList::class;
   protected $hostsDataType = '';
-  public $hosts;
   /**
    * @var string
    */
   public $issue;
   protected $nfsExportsType = NfsExportList::class;
   protected $nfsExportsDataType = '';
-  public $nfsExports;
   protected $selinuxType = Selinux::class;
   protected $selinuxDataType = '';
-  public $selinux;
 
   /**
    * @param FstabEntryList

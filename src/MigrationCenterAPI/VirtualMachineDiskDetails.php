@@ -21,7 +21,6 @@ class VirtualMachineDiskDetails extends \Google\Model
 {
   protected $disksType = DiskEntryList::class;
   protected $disksDataType = '';
-  public $disks;
   /**
    * @var string
    */

@@ -25,7 +25,6 @@ class RemoveAssetsFromGroupRequest extends \Google\Model
   public $allowMissing;
   protected $assetsType = AssetList::class;
   protected $assetsDataType = '';
-  public $assets;
   /**
    * @var string
    */

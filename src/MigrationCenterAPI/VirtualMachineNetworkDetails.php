@@ -25,7 +25,6 @@ class VirtualMachineNetworkDetails extends \Google\Model
   public $defaultGw;
   protected $networkAdaptersType = NetworkAdapterList::class;
   protected $networkAdaptersDataType = '';
-  public $networkAdapters;
   /**
    * @var string
    */

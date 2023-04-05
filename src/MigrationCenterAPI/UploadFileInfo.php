@@ -20,6 +20,14 @@ namespace Google\Service\MigrationCenterAPI;
 class UploadFileInfo extends \Google\Model
 {
   /**
+   * @var string[]
+   */
+  public $headers;
+  /**
+   * @var string
+   */
+  public $signedUri;
+  /**
    * @var string
    */
   public $uri;
@@ -28,6 +36,34 @@ class UploadFileInfo extends \Google\Model
    */
   public $uriExpirationTime;
 
+  /**
+   * @param string[]
+   */
+  public function setHeaders($headers)
+  {
+    $this->headers = $headers;
+  }
+  /**
+   * @return string[]
+   */
+  public function getHeaders()
+  {
+    return $this->headers;
+  }
+  /**
+   * @param string
+   */
+  public function setSignedUri($signedUri)
+  {
+    $this->signedUri = $signedUri;
+  }
+  /**
+   * @return string
+   */
+  public function getSignedUri()
+  {
+    return $this->signedUri;
+  }
   /**
    * @param string
    */

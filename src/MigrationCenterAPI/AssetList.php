@@ -23,7 +23,7 @@ class AssetList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assetIds = [];
+  public $assetIds;
 
   /**
    * @param string[]

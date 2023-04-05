@@ -22,14 +22,12 @@ class ExecutionReport extends \Google\Collection
   protected $collection_key = 'jobErrors';
   protected $executionErrorsType = ValidationReport::class;
   protected $executionErrorsDataType = '';
-  public $executionErrors;
   /**
    * @var int
    */
   public $framesReported;
   protected $jobErrorsType = ImportError::class;
   protected $jobErrorsDataType = 'array';
-  public $jobErrors = [];
   /**
    * @var int
    */

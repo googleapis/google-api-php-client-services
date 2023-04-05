@@ -29,7 +29,6 @@ class VirtualMachineDetails extends \Google\Model
   public $createTime;
   protected $guestOsType = GuestOsDetails::class;
   protected $guestOsDataType = '';
-  public $guestOs;
   /**
    * @var int
    */
@@ -48,7 +47,6 @@ class VirtualMachineDetails extends \Google\Model
   public $osVersion;
   protected $platformType = PlatformDetails::class;
   protected $platformDataType = '';
-  public $platform;
   /**
    * @var string
    */
@@ -67,17 +65,14 @@ class VirtualMachineDetails extends \Google\Model
   public $vcenterVmId;
   protected $vmArchitectureType = VirtualMachineArchitectureDetails::class;
   protected $vmArchitectureDataType = '';
-  public $vmArchitecture;
   protected $vmDisksType = VirtualMachineDiskDetails::class;
   protected $vmDisksDataType = '';
-  public $vmDisks;
   /**
    * @var string
    */
   public $vmName;
   protected $vmNetworkType = VirtualMachineNetworkDetails::class;
   protected $vmNetworkDataType = '';
-  public $vmNetwork;
   /**
    * @var string
    */

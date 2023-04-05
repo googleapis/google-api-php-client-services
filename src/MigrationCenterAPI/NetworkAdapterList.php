@@ -22,7 +22,6 @@ class NetworkAdapterList extends \Google\Collection
   protected $collection_key = 'networkAdapters';
   protected $networkAdaptersType = NetworkAdapterDetails::class;
   protected $networkAdaptersDataType = 'array';
-  public $networkAdapters = [];
 
   /**
    * @param NetworkAdapterDetails[]

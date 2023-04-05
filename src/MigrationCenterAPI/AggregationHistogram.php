@@ -20,7 +20,7 @@ namespace Google\Service\MigrationCenterAPI;
 class AggregationHistogram extends \Google\Collection
 {
   protected $collection_key = 'lowerBounds';
-  public $lowerBounds = [];
+  public $lowerBounds;
 
   public function setLowerBounds($lowerBounds)
   {

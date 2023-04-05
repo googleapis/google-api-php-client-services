@@ -21,7 +21,6 @@ class Insight extends \Google\Model
 {
   protected $migrationInsightType = MigrationInsight::class;
   protected $migrationInsightDataType = '';
-  public $migrationInsight;
 
   /**
    * @param MigrationInsight
