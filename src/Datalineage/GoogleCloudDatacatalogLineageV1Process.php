@@ -22,7 +22,7 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
   /**
    * @var array[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */
@@ -33,7 +33,6 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
   public $name;
   protected $originType = GoogleCloudDatacatalogLineageV1Origin::class;
   protected $originDataType = '';
-  public $origin;
 
   /**
    * @param array[]

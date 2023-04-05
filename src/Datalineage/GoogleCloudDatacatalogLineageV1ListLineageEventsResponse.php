@@ -22,7 +22,6 @@ class GoogleCloudDatacatalogLineageV1ListLineageEventsResponse extends \Google\C
   protected $collection_key = 'lineageEvents';
   protected $lineageEventsType = GoogleCloudDatacatalogLineageV1LineageEvent::class;
   protected $lineageEventsDataType = 'array';
-  public $lineageEvents = [];
   /**
    * @var string
    */

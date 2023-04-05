@@ -29,10 +29,8 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
   public $pageToken;
   protected $sourceType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $sourceDataType = '';
-  public $source;
   protected $targetType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $targetDataType = '';
-  public $target;
 
   /**
    * @param int

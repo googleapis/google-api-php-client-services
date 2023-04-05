@@ -26,7 +26,6 @@ class GoogleCloudDatacatalogLineageV1ListRunsResponse extends \Google\Collection
   public $nextPageToken;
   protected $runsType = GoogleCloudDatacatalogLineageV1Run::class;
   protected $runsDataType = 'array';
-  public $runs = [];
 
   /**
    * @param string

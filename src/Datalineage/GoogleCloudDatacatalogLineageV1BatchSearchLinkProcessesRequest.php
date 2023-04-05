@@ -23,7 +23,7 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest extends \Go
   /**
    * @var string[]
    */
-  public $links = [];
+  public $links;
   /**
    * @var int
    */

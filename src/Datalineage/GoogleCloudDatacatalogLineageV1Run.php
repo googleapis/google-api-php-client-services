@@ -22,7 +22,7 @@ class GoogleCloudDatacatalogLineageV1Run extends \Google\Model
   /**
    * @var array[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */

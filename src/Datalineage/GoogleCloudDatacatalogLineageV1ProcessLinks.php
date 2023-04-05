@@ -22,7 +22,6 @@ class GoogleCloudDatacatalogLineageV1ProcessLinks extends \Google\Collection
   protected $collection_key = 'links';
   protected $linksType = GoogleCloudDatacatalogLineageV1ProcessLinkInfo::class;
   protected $linksDataType = 'array';
-  public $links = [];
   /**
    * @var string
    */

@@ -21,10 +21,8 @@ class GoogleCloudDatacatalogLineageV1EventLink extends \Google\Model
 {
   protected $sourceType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $sourceDataType = '';
-  public $source;
   protected $targetType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $targetDataType = '';
-  public $target;
 
   /**
    * @param GoogleCloudDatacatalogLineageV1EntityReference

@@ -26,7 +26,6 @@ class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse extends \G
   public $nextPageToken;
   protected $processLinksType = GoogleCloudDatacatalogLineageV1ProcessLinks::class;
   protected $processLinksDataType = 'array';
-  public $processLinks = [];
 
   /**
    * @param string

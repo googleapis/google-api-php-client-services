@@ -26,7 +26,6 @@ class GoogleCloudDatacatalogLineageV1LineageEvent extends \Google\Collection
   public $endTime;
   protected $linksType = GoogleCloudDatacatalogLineageV1EventLink::class;
   protected $linksDataType = 'array';
-  public $links = [];
   /**
    * @var string
    */
