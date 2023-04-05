@@ -25,8 +25,8 @@ jobs:
               "two": [],
             };
             for (let i = 0; i < services.length; i++) {
-              if (services[i] != "discovery" && services[i] != "websecurityscanner") {
-                j = i % 2 ? "one" : "two";
+              if (!["discovery", "websecurityscanner"].includes(services[i])) {
+                j = i < (services.length/2) ? "one" : "two";
                 result[j].push(services[i])
               }
             }
