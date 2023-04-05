@@ -17,38 +17,13 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
+class GoogleAdsSearchads360V0ResourcesCampaignAudienceView extends \Google\Model
 {
-  public $bidModifier;
-  protected $deviceType = GoogleAdsSearchads360V0CommonDeviceInfo::class;
-  protected $deviceDataType = '';
   /**
    * @var string
    */
   public $resourceName;
 
-  public function setBidModifier($bidModifier)
-  {
-    $this->bidModifier = $bidModifier;
-  }
-  public function getBidModifier()
-  {
-    return $this->bidModifier;
-  }
-  /**
-   * @param GoogleAdsSearchads360V0CommonDeviceInfo
-   */
-  public function setDevice(GoogleAdsSearchads360V0CommonDeviceInfo $device)
-  {
-    $this->device = $device;
-  }
-  /**
-   * @return GoogleAdsSearchads360V0CommonDeviceInfo
-   */
-  public function getDevice()
-  {
-    return $this->device;
-  }
   /**
    * @param string
    */
@@ -66,4 +41,4 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0ResourcesAdGroupBidModifier::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ResourcesAdGroupBidModifier');
+class_alias(GoogleAdsSearchads360V0ResourcesCampaignAudienceView::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ResourcesCampaignAudienceView');

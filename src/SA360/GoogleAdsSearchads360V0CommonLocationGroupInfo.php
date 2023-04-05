@@ -23,11 +23,11 @@ class GoogleAdsSearchads360V0CommonLocationGroupInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $feedItemSets = [];
+  public $feedItemSets;
   /**
    * @var string[]
    */
-  public $geoTargetConstants = [];
+  public $geoTargetConstants;
   /**
    * @var string
    */

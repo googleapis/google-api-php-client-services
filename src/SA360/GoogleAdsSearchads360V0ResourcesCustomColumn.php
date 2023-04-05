@@ -39,7 +39,7 @@ class GoogleAdsSearchads360V0ResourcesCustomColumn extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referencedSystemColumns = [];
+  public $referencedSystemColumns;
   /**
    * @var bool
    */

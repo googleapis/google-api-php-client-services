@@ -23,7 +23,7 @@ class GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization extends \Goo
   /**
    * @var string[]
    */
-  public $conversionActions = [];
+  public $conversionActions;
 
   /**
    * @param string[]

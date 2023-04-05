@@ -23,7 +23,7 @@ class GoogleAdsSearchads360V0ResourcesSearchAds360Field extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $attributeResources = [];
+  public $attributeResources;
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class GoogleAdsSearchads360V0ResourcesSearchAds360Field extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $enumValues = [];
+  public $enumValues;
   /**
    * @var bool
    */
@@ -47,7 +47,7 @@ class GoogleAdsSearchads360V0ResourcesSearchAds360Field extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $metrics = [];
+  public $metrics;
   /**
    * @var string
    */
@@ -59,7 +59,7 @@ class GoogleAdsSearchads360V0ResourcesSearchAds360Field extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $segments = [];
+  public $segments;
   /**
    * @var bool
    */
@@ -67,7 +67,7 @@ class GoogleAdsSearchads360V0ResourcesSearchAds360Field extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $selectableWith = [];
+  public $selectableWith;
   /**
    * @var bool
    */

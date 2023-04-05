@@ -17,27 +17,28 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0ServicesListCustomColumnsResponse extends \Google\Collection
+class GoogleAdsSearchads360V0CommonUserListInfo extends \Google\Model
 {
-  protected $collection_key = 'customColumns';
-  protected $customColumnsType = GoogleAdsSearchads360V0ResourcesCustomColumn::class;
-  protected $customColumnsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $userList;
 
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   * @param string
    */
-  public function setCustomColumns($customColumns)
+  public function setUserList($userList)
   {
-    $this->customColumns = $customColumns;
+    $this->userList = $userList;
   }
   /**
-   * @return GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   * @return string
    */
-  public function getCustomColumns()
+  public function getUserList()
   {
-    return $this->customColumns;
+    return $this->userList;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0ServicesListCustomColumnsResponse::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ServicesListCustomColumnsResponse');
+class_alias(GoogleAdsSearchads360V0CommonUserListInfo::class, 'Google_Service_SA360_GoogleAdsSearchads360V0CommonUserListInfo');

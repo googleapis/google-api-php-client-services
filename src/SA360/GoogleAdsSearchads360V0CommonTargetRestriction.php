@@ -17,27 +17,46 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0ServicesListCustomColumnsResponse extends \Google\Collection
+class GoogleAdsSearchads360V0CommonTargetRestriction extends \Google\Model
 {
-  protected $collection_key = 'customColumns';
-  protected $customColumnsType = GoogleAdsSearchads360V0ResourcesCustomColumn::class;
-  protected $customColumnsDataType = 'array';
+  /**
+   * @var bool
+   */
+  public $bidOnly;
+  /**
+   * @var string
+   */
+  public $targetingDimension;
 
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   * @param bool
    */
-  public function setCustomColumns($customColumns)
+  public function setBidOnly($bidOnly)
   {
-    $this->customColumns = $customColumns;
+    $this->bidOnly = $bidOnly;
   }
   /**
-   * @return GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   * @return bool
    */
-  public function getCustomColumns()
+  public function getBidOnly()
   {
-    return $this->customColumns;
+    return $this->bidOnly;
+  }
+  /**
+   * @param string
+   */
+  public function setTargetingDimension($targetingDimension)
+  {
+    $this->targetingDimension = $targetingDimension;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetingDimension()
+  {
+    return $this->targetingDimension;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0ServicesListCustomColumnsResponse::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ServicesListCustomColumnsResponse');
+class_alias(GoogleAdsSearchads360V0CommonTargetRestriction::class, 'Google_Service_SA360_GoogleAdsSearchads360V0CommonTargetRestriction');

@@ -23,7 +23,7 @@ class GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting extends \G
   /**
    * @var string[]
    */
-  public $optimizationGoalTypes = [];
+  public $optimizationGoalTypes;
 
   /**
    * @param string[]

@@ -17,27 +17,46 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0ServicesListCustomColumnsResponse extends \Google\Collection
+class GoogleAdsSearchads360V0CommonTextLabel extends \Google\Model
 {
-  protected $collection_key = 'customColumns';
-  protected $customColumnsType = GoogleAdsSearchads360V0ResourcesCustomColumn::class;
-  protected $customColumnsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $backgroundColor;
+  /**
+   * @var string
+   */
+  public $description;
 
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   * @param string
    */
-  public function setCustomColumns($customColumns)
+  public function setBackgroundColor($backgroundColor)
   {
-    $this->customColumns = $customColumns;
+    $this->backgroundColor = $backgroundColor;
   }
   /**
-   * @return GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   * @return string
    */
-  public function getCustomColumns()
+  public function getBackgroundColor()
   {
-    return $this->customColumns;
+    return $this->backgroundColor;
+  }
+  /**
+   * @param string
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0ServicesListCustomColumnsResponse::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ServicesListCustomColumnsResponse');
+class_alias(GoogleAdsSearchads360V0CommonTextLabel::class, 'Google_Service_SA360_GoogleAdsSearchads360V0CommonTextLabel');

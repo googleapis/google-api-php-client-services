@@ -23,7 +23,7 @@ class GoogleAdsSearchads360V0ResourcesCustomerClient extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appliedLabels = [];
+  public $appliedLabels;
   /**
    * @var string
    */

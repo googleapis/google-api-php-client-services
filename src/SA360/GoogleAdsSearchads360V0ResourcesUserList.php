@@ -17,37 +17,52 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
+class GoogleAdsSearchads360V0ResourcesUserList extends \Google\Model
 {
-  public $bidModifier;
-  protected $deviceType = GoogleAdsSearchads360V0CommonDeviceInfo::class;
-  protected $deviceDataType = '';
+  /**
+   * @var string
+   */
+  public $id;
+  /**
+   * @var string
+   */
+  public $name;
   /**
    * @var string
    */
   public $resourceName;
+  /**
+   * @var string
+   */
+  public $type;
 
-  public function setBidModifier($bidModifier)
+  /**
+   * @param string
+   */
+  public function setId($id)
   {
-    $this->bidModifier = $bidModifier;
-  }
-  public function getBidModifier()
-  {
-    return $this->bidModifier;
+    $this->id = $id;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonDeviceInfo
+   * @return string
    */
-  public function setDevice(GoogleAdsSearchads360V0CommonDeviceInfo $device)
+  public function getId()
   {
-    $this->device = $device;
+    return $this->id;
   }
   /**
-   * @return GoogleAdsSearchads360V0CommonDeviceInfo
+   * @param string
    */
-  public function getDevice()
+  public function setName($name)
   {
-    return $this->device;
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * @param string
@@ -63,7 +78,21 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
   {
     return $this->resourceName;
   }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0ResourcesAdGroupBidModifier::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ResourcesAdGroupBidModifier');
+class_alias(GoogleAdsSearchads360V0ResourcesUserList::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ResourcesUserList');

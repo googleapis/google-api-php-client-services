@@ -17,37 +17,48 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
+class GoogleAdsSearchads360V0ResourcesAdGroupLabel extends \Google\Model
 {
-  public $bidModifier;
-  protected $deviceType = GoogleAdsSearchads360V0CommonDeviceInfo::class;
-  protected $deviceDataType = '';
+  /**
+   * @var string
+   */
+  public $adGroup;
+  /**
+   * @var string
+   */
+  public $label;
   /**
    * @var string
    */
   public $resourceName;
 
-  public function setBidModifier($bidModifier)
+  /**
+   * @param string
+   */
+  public function setAdGroup($adGroup)
   {
-    $this->bidModifier = $bidModifier;
-  }
-  public function getBidModifier()
-  {
-    return $this->bidModifier;
+    $this->adGroup = $adGroup;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonDeviceInfo
+   * @return string
    */
-  public function setDevice(GoogleAdsSearchads360V0CommonDeviceInfo $device)
+  public function getAdGroup()
   {
-    $this->device = $device;
+    return $this->adGroup;
   }
   /**
-   * @return GoogleAdsSearchads360V0CommonDeviceInfo
+   * @param string
    */
-  public function getDevice()
+  public function setLabel($label)
   {
-    return $this->device;
+    $this->label = $label;
+  }
+  /**
+   * @return string
+   */
+  public function getLabel()
+  {
+    return $this->label;
   }
   /**
    * @param string
@@ -66,4 +77,4 @@ class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0ResourcesAdGroupBidModifier::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ResourcesAdGroupBidModifier');
+class_alias(GoogleAdsSearchads360V0ResourcesAdGroupLabel::class, 'Google_Service_SA360_GoogleAdsSearchads360V0ResourcesAdGroupLabel');
