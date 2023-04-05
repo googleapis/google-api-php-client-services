@@ -22,30 +22,24 @@ class GoogleAnalyticsAdminV1betaRunAccessReportRequest extends \Google\Collectio
   protected $collection_key = 'orderBys';
   protected $dateRangesType = GoogleAnalyticsAdminV1betaAccessDateRange::class;
   protected $dateRangesDataType = 'array';
-  public $dateRanges = [];
   protected $dimensionFilterType = GoogleAnalyticsAdminV1betaAccessFilterExpression::class;
   protected $dimensionFilterDataType = '';
-  public $dimensionFilter;
   protected $dimensionsType = GoogleAnalyticsAdminV1betaAccessDimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions = [];
   /**
    * @var string
    */
   public $limit;
   protected $metricFilterType = GoogleAnalyticsAdminV1betaAccessFilterExpression::class;
   protected $metricFilterDataType = '';
-  public $metricFilter;
   protected $metricsType = GoogleAnalyticsAdminV1betaAccessMetric::class;
   protected $metricsDataType = 'array';
-  public $metrics = [];
   /**
    * @var string
    */
   public $offset;
   protected $orderBysType = GoogleAnalyticsAdminV1betaAccessOrderBy::class;
   protected $orderBysDataType = 'array';
-  public $orderBys = [];
   /**
    * @var bool
    */

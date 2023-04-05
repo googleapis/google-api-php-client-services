@@ -25,10 +25,8 @@ class GoogleAnalyticsAdminV1betaAccessOrderBy extends \Google\Model
   public $desc;
   protected $dimensionType = GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderBy::class;
   protected $dimensionDataType = '';
-  public $dimension;
   protected $metricType = GoogleAnalyticsAdminV1betaAccessOrderByMetricOrderBy::class;
   protected $metricDataType = '';
-  public $metric;
 
   /**
    * @param bool

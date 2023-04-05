@@ -22,7 +22,6 @@ class GoogleAnalyticsAdminV1betaAccessFilterExpressionList extends \Google\Colle
   protected $collection_key = 'expressions';
   protected $expressionsType = GoogleAnalyticsAdminV1betaAccessFilterExpression::class;
   protected $expressionsDataType = 'array';
-  public $expressions = [];
 
   /**
    * @param GoogleAnalyticsAdminV1betaAccessFilterExpression[]

@@ -21,16 +21,12 @@ class GoogleAnalyticsAdminV1betaAccessFilterExpression extends \Google\Model
 {
   protected $accessFilterType = GoogleAnalyticsAdminV1betaAccessFilter::class;
   protected $accessFilterDataType = '';
-  public $accessFilter;
   protected $andGroupType = GoogleAnalyticsAdminV1betaAccessFilterExpressionList::class;
   protected $andGroupDataType = '';
-  public $andGroup;
   protected $notExpressionType = GoogleAnalyticsAdminV1betaAccessFilterExpression::class;
   protected $notExpressionDataType = '';
-  public $notExpression;
   protected $orGroupType = GoogleAnalyticsAdminV1betaAccessFilterExpressionList::class;
   protected $orGroupDataType = '';
-  public $orGroup;
 
   /**
    * @param GoogleAnalyticsAdminV1betaAccessFilter

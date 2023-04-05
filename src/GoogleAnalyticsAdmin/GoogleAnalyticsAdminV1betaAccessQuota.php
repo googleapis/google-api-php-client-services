@@ -21,19 +21,14 @@ class GoogleAnalyticsAdminV1betaAccessQuota extends \Google\Model
 {
   protected $concurrentRequestsType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $concurrentRequestsDataType = '';
-  public $concurrentRequests;
   protected $serverErrorsPerProjectPerHourType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $serverErrorsPerProjectPerHourDataType = '';
-  public $serverErrorsPerProjectPerHour;
   protected $tokensPerDayType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $tokensPerDayDataType = '';
-  public $tokensPerDay;
   protected $tokensPerHourType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $tokensPerHourDataType = '';
-  public $tokensPerHour;
   protected $tokensPerProjectPerHourType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $tokensPerProjectPerHourDataType = '';
-  public $tokensPerProjectPerHour;
 
   /**
    * @param GoogleAnalyticsAdminV1betaAccessQuotaStatus

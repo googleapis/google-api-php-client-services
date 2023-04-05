@@ -22,20 +22,16 @@ class GoogleAnalyticsAdminV1betaRunAccessReportResponse extends \Google\Collecti
   protected $collection_key = 'rows';
   protected $dimensionHeadersType = GoogleAnalyticsAdminV1betaAccessDimensionHeader::class;
   protected $dimensionHeadersDataType = 'array';
-  public $dimensionHeaders = [];
   protected $metricHeadersType = GoogleAnalyticsAdminV1betaAccessMetricHeader::class;
   protected $metricHeadersDataType = 'array';
-  public $metricHeaders = [];
   protected $quotaType = GoogleAnalyticsAdminV1betaAccessQuota::class;
   protected $quotaDataType = '';
-  public $quota;
   /**
    * @var int
    */
   public $rowCount;
   protected $rowsType = GoogleAnalyticsAdminV1betaAccessRow::class;
   protected $rowsDataType = 'array';
-  public $rows = [];
 
   /**
    * @param GoogleAnalyticsAdminV1betaAccessDimensionHeader[]

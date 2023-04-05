@@ -21,10 +21,8 @@ class GoogleAnalyticsAdminV1betaAccessBetweenFilter extends \Google\Model
 {
   protected $fromValueType = GoogleAnalyticsAdminV1betaNumericValue::class;
   protected $fromValueDataType = '';
-  public $fromValue;
   protected $toValueType = GoogleAnalyticsAdminV1betaNumericValue::class;
   protected $toValueDataType = '';
-  public $toValue;
 
   /**
    * @param GoogleAnalyticsAdminV1betaNumericValue

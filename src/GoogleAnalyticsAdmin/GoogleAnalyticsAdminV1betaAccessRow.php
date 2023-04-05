@@ -22,10 +22,8 @@ class GoogleAnalyticsAdminV1betaAccessRow extends \Google\Collection
   protected $collection_key = 'metricValues';
   protected $dimensionValuesType = GoogleAnalyticsAdminV1betaAccessDimensionValue::class;
   protected $dimensionValuesDataType = 'array';
-  public $dimensionValues = [];
   protected $metricValuesType = GoogleAnalyticsAdminV1betaAccessMetricValue::class;
   protected $metricValuesDataType = 'array';
-  public $metricValues = [];
 
   /**
    * @param GoogleAnalyticsAdminV1betaAccessDimensionValue[]

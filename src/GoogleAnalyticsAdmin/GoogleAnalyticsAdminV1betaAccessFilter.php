@@ -21,20 +21,16 @@ class GoogleAnalyticsAdminV1betaAccessFilter extends \Google\Model
 {
   protected $betweenFilterType = GoogleAnalyticsAdminV1betaAccessBetweenFilter::class;
   protected $betweenFilterDataType = '';
-  public $betweenFilter;
   /**
    * @var string
    */
   public $fieldName;
   protected $inListFilterType = GoogleAnalyticsAdminV1betaAccessInListFilter::class;
   protected $inListFilterDataType = '';
-  public $inListFilter;
   protected $numericFilterType = GoogleAnalyticsAdminV1betaAccessNumericFilter::class;
   protected $numericFilterDataType = '';
-  public $numericFilter;
   protected $stringFilterType = GoogleAnalyticsAdminV1betaAccessStringFilter::class;
   protected $stringFilterDataType = '';
-  public $stringFilter;
 
   /**
    * @param GoogleAnalyticsAdminV1betaAccessBetweenFilter

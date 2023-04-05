@@ -25,7 +25,6 @@ class GoogleAnalyticsAdminV1betaAccessNumericFilter extends \Google\Model
   public $operation;
   protected $valueType = GoogleAnalyticsAdminV1betaNumericValue::class;
   protected $valueDataType = '';
-  public $value;
 
   /**
    * @param string

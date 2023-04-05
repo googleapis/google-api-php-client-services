@@ -27,7 +27,7 @@ class GoogleAnalyticsAdminV1betaAccessInListFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param bool
