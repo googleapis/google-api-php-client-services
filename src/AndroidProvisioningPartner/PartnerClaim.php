@@ -25,10 +25,8 @@ class PartnerClaim extends \Google\Model
   public $customerId;
   protected $deviceIdentifierType = DeviceIdentifier::class;
   protected $deviceIdentifierDataType = '';
-  public $deviceIdentifier;
   protected $deviceMetadataType = DeviceMetadata::class;
   protected $deviceMetadataDataType = '';
-  public $deviceMetadata;
   /**
    * @var string
    */
