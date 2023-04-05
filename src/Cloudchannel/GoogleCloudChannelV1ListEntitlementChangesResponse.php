@@ -22,7 +22,6 @@ class GoogleCloudChannelV1ListEntitlementChangesResponse extends \Google\Collect
   protected $collection_key = 'entitlementChanges';
   protected $entitlementChangesType = GoogleCloudChannelV1EntitlementChange::class;
   protected $entitlementChangesDataType = 'array';
-  public $entitlementChanges = [];
   /**
    * @var string
    */
