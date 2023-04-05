@@ -22,20 +22,16 @@ class SecurityPolicyRulePreconfiguredWafConfigExclusion extends \Google\Collecti
   protected $collection_key = 'targetRuleIds';
   protected $requestCookiesToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestCookiesToExcludeDataType = 'array';
-  public $requestCookiesToExclude = [];
   protected $requestHeadersToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestHeadersToExcludeDataType = 'array';
-  public $requestHeadersToExclude = [];
   protected $requestQueryParamsToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestQueryParamsToExcludeDataType = 'array';
-  public $requestQueryParamsToExclude = [];
   protected $requestUrisToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestUrisToExcludeDataType = 'array';
-  public $requestUrisToExclude = [];
   /**
    * @var string[]
    */
-  public $targetRuleIds = [];
+  public $targetRuleIds;
   /**
    * @var string
    */

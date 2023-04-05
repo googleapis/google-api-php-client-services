@@ -23,49 +23,47 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
   /**
    * @var string[]
    */
-  public $destAddressGroups = [];
+  public $destAddressGroups;
   /**
    * @var string[]
    */
-  public $destFqdns = [];
+  public $destFqdns;
   /**
    * @var string[]
    */
-  public $destIpRanges = [];
+  public $destIpRanges;
   /**
    * @var string[]
    */
-  public $destRegionCodes = [];
+  public $destRegionCodes;
   /**
    * @var string[]
    */
-  public $destThreatIntelligences = [];
+  public $destThreatIntelligences;
   protected $layer4ConfigsType = FirewallPolicyRuleMatcherLayer4Config::class;
   protected $layer4ConfigsDataType = 'array';
-  public $layer4Configs = [];
   /**
    * @var string[]
    */
-  public $srcAddressGroups = [];
+  public $srcAddressGroups;
   /**
    * @var string[]
    */
-  public $srcFqdns = [];
+  public $srcFqdns;
   /**
    * @var string[]
    */
-  public $srcIpRanges = [];
+  public $srcIpRanges;
   /**
    * @var string[]
    */
-  public $srcRegionCodes = [];
+  public $srcRegionCodes;
   protected $srcSecureTagsType = FirewallPolicyRuleSecureTag::class;
   protected $srcSecureTagsDataType = 'array';
-  public $srcSecureTags = [];
   /**
    * @var string[]
    */
-  public $srcThreatIntelligences = [];
+  public $srcThreatIntelligences;
 
   /**
    * @param string[]

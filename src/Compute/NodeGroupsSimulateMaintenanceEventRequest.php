@@ -23,7 +23,7 @@ class NodeGroupsSimulateMaintenanceEventRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nodes = [];
+  public $nodes;
 
   /**
    * @param string[]

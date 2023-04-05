@@ -83,14 +83,13 @@ class ForwardingRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $loadBalancingScheme;
   protected $metadataFiltersType = MetadataFilter::class;
   protected $metadataFiltersDataType = 'array';
-  public $metadataFilters = [];
   /**
    * @var string
    */
@@ -114,7 +113,7 @@ class ForwardingRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ports = [];
+  public $ports;
   /**
    * @var string
    */
@@ -133,7 +132,6 @@ class ForwardingRule extends \Google\Collection
   public $selfLink;
   protected $serviceDirectoryRegistrationsType = ForwardingRuleServiceDirectoryRegistration::class;
   protected $serviceDirectoryRegistrationsDataType = 'array';
-  public $serviceDirectoryRegistrations = [];
   /**
    * @var string
    */
@@ -145,7 +143,7 @@ class ForwardingRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceIpRanges = [];
+  public $sourceIpRanges;
   /**
    * @var string
    */
