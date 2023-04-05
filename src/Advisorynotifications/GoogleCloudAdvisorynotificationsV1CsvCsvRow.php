@@ -23,7 +23,7 @@ class GoogleCloudAdvisorynotificationsV1CsvCsvRow extends \Google\Collection
   /**
    * @var string[]
    */
-  public $entries = [];
+  public $entries;
 
   /**
    * @param string[]
