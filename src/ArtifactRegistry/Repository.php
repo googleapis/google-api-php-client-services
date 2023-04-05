@@ -29,7 +29,6 @@ class Repository extends \Google\Model
   public $description;
   protected $dockerConfigType = DockerRepositoryConfig::class;
   protected $dockerConfigDataType = '';
-  public $dockerConfig;
   /**
    * @var string
    */
@@ -41,10 +40,9 @@ class Repository extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $mavenConfigType = MavenRepositoryConfig::class;
   protected $mavenConfigDataType = '';
-  public $mavenConfig;
   /**
    * @var string
    */
@@ -55,7 +53,6 @@ class Repository extends \Google\Model
   public $name;
   protected $remoteRepositoryConfigType = RemoteRepositoryConfig::class;
   protected $remoteRepositoryConfigDataType = '';
-  public $remoteRepositoryConfig;
   /**
    * @var bool
    */
@@ -70,7 +67,6 @@ class Repository extends \Google\Model
   public $updateTime;
   protected $virtualRepositoryConfigType = VirtualRepositoryConfig::class;
   protected $virtualRepositoryConfigDataType = '';
-  public $virtualRepositoryConfig;
 
   /**
    * @param string
