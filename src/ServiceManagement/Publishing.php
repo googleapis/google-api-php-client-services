@@ -52,6 +52,10 @@ class Publishing extends \Google\Collection
    * @var string
    */
   public $organization;
+  /**
+   * @var string
+   */
+  public $protoReferenceDocumentationUri;
 
   /**
    * @param string
@@ -178,6 +182,20 @@ class Publishing extends \Google\Collection
   public function getOrganization()
   {
     return $this->organization;
+  }
+  /**
+   * @param string
+   */
+  public function setProtoReferenceDocumentationUri($protoReferenceDocumentationUri)
+  {
+    $this->protoReferenceDocumentationUri = $protoReferenceDocumentationUri;
+  }
+  /**
+   * @return string
+   */
+  public function getProtoReferenceDocumentationUri()
+  {
+    return $this->protoReferenceDocumentationUri;
   }
 }
 
