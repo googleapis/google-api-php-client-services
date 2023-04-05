@@ -21,7 +21,6 @@ class DlpScanSummary extends \Google\Model
 {
   protected $dlpActionType = DlpAction::class;
   protected $dlpActionDataType = '';
-  public $dlpAction;
   /**
    * @var string
    */

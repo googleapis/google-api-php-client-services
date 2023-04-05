@@ -25,7 +25,6 @@ class AppsDynamiteSharedMessageComponentSearchInfo extends \Google\Model
   public $matchedSearch;
   protected $titleTextWithDescriptionType = AppsDynamiteSharedTextWithDescription::class;
   protected $titleTextWithDescriptionDataType = '';
-  public $titleTextWithDescription;
 
   /**
    * @param bool

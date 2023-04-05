@@ -22,32 +22,24 @@ class Message extends \Google\Collection
   protected $collection_key = 'uploadMetadata';
   protected $annotationsType = Annotation::class;
   protected $annotationsDataType = 'array';
-  public $annotations = [];
   protected $appProfileType = AppsDynamiteSharedAppProfile::class;
   protected $appProfileDataType = '';
-  public $appProfile;
   protected $attachmentsType = Attachment::class;
   protected $attachmentsDataType = 'array';
-  public $attachments = [];
   protected $attributesType = MessageAttributes::class;
   protected $attributesDataType = '';
-  public $attributes;
   protected $botResponsesType = BotResponse::class;
   protected $botResponsesDataType = 'array';
-  public $botResponses = [];
   protected $communalLabelsType = CommunalLabelTag::class;
   protected $communalLabelsDataType = 'array';
-  public $communalLabels = [];
   protected $contentReportSummaryType = ContentReportSummary::class;
   protected $contentReportSummaryDataType = '';
-  public $contentReportSummary;
   /**
    * @var string
    */
   public $createTime;
   protected $creatorIdType = UserId::class;
   protected $creatorIdDataType = '';
-  public $creatorId;
   /**
    * @var string
    */
@@ -66,7 +58,6 @@ class Message extends \Google\Collection
   public $deletedByVault;
   protected $dlpScanSummaryType = DlpScanSummary::class;
   protected $dlpScanSummaryDataType = '';
-  public $dlpScanSummary;
   /**
    * @var string
    */
@@ -77,7 +68,6 @@ class Message extends \Google\Collection
   public $fallbackText;
   protected $idType = MessageId::class;
   protected $idDataType = '';
-  public $id;
   /**
    * @var bool
    */
@@ -100,7 +90,6 @@ class Message extends \Google\Collection
   public $localId;
   protected $messageIntegrationPayloadType = AppsDynamiteSharedMessageIntegrationPayload::class;
   protected $messageIntegrationPayloadDataType = '';
-  public $messageIntegrationPayload;
   /**
    * @var string
    */
@@ -111,35 +100,26 @@ class Message extends \Google\Collection
   public $messageState;
   protected $originAppSuggestionsType = AppsDynamiteSharedOriginAppSuggestion::class;
   protected $originAppSuggestionsDataType = 'array';
-  public $originAppSuggestions = [];
   protected $personalLabelsType = PersonalLabelTag::class;
   protected $personalLabelsDataType = 'array';
-  public $personalLabels = [];
   protected $privateMessageInfosType = PrivateMessageInfo::class;
   protected $privateMessageInfosDataType = 'array';
-  public $privateMessageInfos = [];
   protected $privateMessageViewerType = UserId::class;
   protected $privateMessageViewerDataType = '';
-  public $privateMessageViewer;
   protected $propsType = MessageProps::class;
   protected $propsDataType = '';
-  public $props;
   /**
    * @var string
    */
   public $quotedByState;
   protected $quotedMessageMetadataType = QuotedMessageMetadata::class;
   protected $quotedMessageMetadataDataType = '';
-  public $quotedMessageMetadata;
   protected $reactionsType = AppsDynamiteSharedReaction::class;
   protected $reactionsDataType = 'array';
-  public $reactions = [];
   protected $reportsType = ContentReport::class;
   protected $reportsDataType = 'array';
-  public $reports = [];
   protected $retentionSettingsType = AppsDynamiteSharedRetentionSettings::class;
   protected $retentionSettingsDataType = '';
-  public $retentionSettings;
   /**
    * @var string
    */
@@ -154,13 +134,10 @@ class Message extends \Google\Collection
   public $textBody;
   protected $tombstoneMetadataType = TombstoneMetadata::class;
   protected $tombstoneMetadataDataType = '';
-  public $tombstoneMetadata;
   protected $updaterIdType = UserId::class;
   protected $updaterIdDataType = '';
-  public $updaterId;
   protected $uploadMetadataType = UploadMetadata::class;
   protected $uploadMetadataDataType = 'array';
-  public $uploadMetadata = [];
 
   /**
    * @param Annotation[]

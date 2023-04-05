@@ -37,7 +37,6 @@ class AppsDynamiteStorageIcon extends \Google\Model
   public $knownIcon;
   protected $materialIconType = AppsDynamiteStorageMaterialIcon::class;
   protected $materialIconDataType = '';
-  public $materialIcon;
 
   /**
    * @param string

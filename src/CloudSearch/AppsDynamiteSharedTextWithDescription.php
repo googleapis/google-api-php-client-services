@@ -26,7 +26,6 @@ class AppsDynamiteSharedTextWithDescription extends \Google\Collection
   public $textBody;
   protected $textSegmentsWithDescriptionType = AppsDynamiteSharedTextSegmentsWithDescription::class;
   protected $textSegmentsWithDescriptionDataType = 'array';
-  public $textSegmentsWithDescription = [];
 
   /**
    * @param string
