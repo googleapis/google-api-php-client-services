@@ -21,10 +21,8 @@ class FileOperation extends \Google\Model
 {
   protected $deleteFileType = DeleteFile::class;
   protected $deleteFileDataType = '';
-  public $deleteFile;
   protected $writeFileType = WriteFile::class;
   protected $writeFileDataType = '';
-  public $writeFile;
 
   /**
    * @param DeleteFile

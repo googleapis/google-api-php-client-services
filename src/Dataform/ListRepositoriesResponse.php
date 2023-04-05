@@ -26,11 +26,10 @@ class ListRepositoriesResponse extends \Google\Collection
   public $nextPageToken;
   protected $repositoriesType = Repository::class;
   protected $repositoriesDataType = 'array';
-  public $repositories = [];
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param string

@@ -27,7 +27,7 @@ class ResetWorkspaceChangesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $paths = [];
+  public $paths;
 
   /**
    * @param bool

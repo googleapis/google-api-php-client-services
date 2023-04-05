@@ -21,18 +21,16 @@ class Repository extends \Google\Model
 {
   protected $gitRemoteSettingsType = GitRemoteSettings::class;
   protected $gitRemoteSettingsDataType = '';
-  public $gitRemoteSettings;
   /**
    * @var string[]
    */
-  public $initialCommitFileContents = [];
+  public $initialCommitFileContents;
   protected $initialCommitMetadataType = CommitMetadata::class;
   protected $initialCommitMetadataDataType = '';
-  public $initialCommitMetadata;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -43,7 +41,6 @@ class Repository extends \Google\Model
   public $npmrcEnvironmentVariablesSecretVersion;
   protected $workspaceCompilationOverridesType = WorkspaceCompilationOverrides::class;
   protected $workspaceCompilationOverridesDataType = '';
-  public $workspaceCompilationOverrides;
 
   /**
    * @param GitRemoteSettings

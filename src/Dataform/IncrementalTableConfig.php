@@ -23,11 +23,11 @@ class IncrementalTableConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $incrementalPostOperations = [];
+  public $incrementalPostOperations;
   /**
    * @var string[]
    */
-  public $incrementalPreOperations = [];
+  public $incrementalPreOperations;
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class IncrementalTableConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $uniqueKeyParts = [];
+  public $uniqueKeyParts;
   /**
    * @var string
    */

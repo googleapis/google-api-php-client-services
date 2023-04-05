@@ -22,7 +22,6 @@ class FetchRepositoryHistoryResponse extends \Google\Collection
   protected $collection_key = 'commits';
   protected $commitsType = CommitLogEntry::class;
   protected $commitsDataType = 'array';
-  public $commits = [];
   /**
    * @var string
    */

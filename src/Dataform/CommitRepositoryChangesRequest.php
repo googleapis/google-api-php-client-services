@@ -21,10 +21,8 @@ class CommitRepositoryChangesRequest extends \Google\Model
 {
   protected $commitMetadataType = CommitMetadata::class;
   protected $commitMetadataDataType = '';
-  public $commitMetadata;
   protected $fileOperationsType = FileOperation::class;
   protected $fileOperationsDataType = 'map';
-  public $fileOperations = [];
 
   /**
    * @param CommitMetadata

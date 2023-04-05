@@ -50,7 +50,7 @@ class CodeCompilationConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $vars = [];
+  public $vars;
 
   /**
    * @param string

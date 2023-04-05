@@ -23,7 +23,7 @@ class ColumnDescriptor extends \Google\Collection
   /**
    * @var string[]
    */
-  public $bigqueryPolicyTags = [];
+  public $bigqueryPolicyTags;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class ColumnDescriptor extends \Google\Collection
   /**
    * @var string[]
    */
-  public $path = [];
+  public $path;
 
   /**
    * @param string[]

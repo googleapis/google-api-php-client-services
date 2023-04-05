@@ -23,7 +23,7 @@ class FetchRemoteBranchesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $branches = [];
+  public $branches;
 
   /**
    * @param string[]
