@@ -31,7 +31,7 @@ class PhaseConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $profiles = [];
+  public $profiles;
   /**
    * @var bool
    */

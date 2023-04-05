@@ -21,10 +21,8 @@ class RuntimeConfig extends \Google\Model
 {
   protected $cloudRunType = CloudRunConfig::class;
   protected $cloudRunDataType = '';
-  public $cloudRun;
   protected $kubernetesType = KubernetesConfig::class;
   protected $kubernetesDataType = '';
-  public $kubernetes;
 
   /**
    * @param CloudRunConfig

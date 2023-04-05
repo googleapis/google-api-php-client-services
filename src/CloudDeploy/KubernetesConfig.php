@@ -21,10 +21,8 @@ class KubernetesConfig extends \Google\Model
 {
   protected $gatewayServiceMeshType = GatewayServiceMesh::class;
   protected $gatewayServiceMeshDataType = '';
-  public $gatewayServiceMesh;
   protected $serviceNetworkingType = ServiceNetworking::class;
   protected $serviceNetworkingDataType = '';
-  public $serviceNetworking;
 
   /**
    * @param GatewayServiceMesh

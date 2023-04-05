@@ -21,7 +21,6 @@ class RenderMetadata extends \Google\Model
 {
   protected $cloudRunType = CloudRunRenderMetadata::class;
   protected $cloudRunDataType = '';
-  public $cloudRun;
 
   /**
    * @param CloudRunRenderMetadata

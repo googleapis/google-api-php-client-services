@@ -21,13 +21,10 @@ class Canary extends \Google\Model
 {
   protected $canaryDeploymentType = CanaryDeployment::class;
   protected $canaryDeploymentDataType = '';
-  public $canaryDeployment;
   protected $customCanaryDeploymentType = CustomCanaryDeployment::class;
   protected $customCanaryDeploymentDataType = '';
-  public $customCanaryDeployment;
   protected $runtimeConfigType = RuntimeConfig::class;
   protected $runtimeConfigDataType = '';
-  public $runtimeConfig;
 
   /**
    * @param CanaryDeployment

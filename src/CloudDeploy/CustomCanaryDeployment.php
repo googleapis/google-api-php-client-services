@@ -22,7 +22,6 @@ class CustomCanaryDeployment extends \Google\Collection
   protected $collection_key = 'phaseConfigs';
   protected $phaseConfigsType = PhaseConfig::class;
   protected $phaseConfigsDataType = 'array';
-  public $phaseConfigs = [];
 
   /**
    * @param PhaseConfig[]

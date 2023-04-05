@@ -23,7 +23,7 @@ class CanaryDeployment extends \Google\Collection
   /**
    * @var int[]
    */
-  public $percentages = [];
+  public $percentages;
   /**
    * @var bool
    */

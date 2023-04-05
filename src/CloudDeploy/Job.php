@@ -21,13 +21,10 @@ class Job extends \Google\Model
 {
   protected $advanceChildRolloutJobType = AdvanceChildRolloutJob::class;
   protected $advanceChildRolloutJobDataType = '';
-  public $advanceChildRolloutJob;
   protected $createChildRolloutJobType = CreateChildRolloutJob::class;
   protected $createChildRolloutJobDataType = '';
-  public $createChildRolloutJob;
   protected $deployJobType = DeployJob::class;
   protected $deployJobDataType = '';
-  public $deployJob;
   /**
    * @var string
    */
@@ -46,7 +43,6 @@ class Job extends \Google\Model
   public $state;
   protected $verifyJobType = VerifyJob::class;
   protected $verifyJobDataType = '';
-  public $verifyJob;
 
   /**
    * @param AdvanceChildRolloutJob

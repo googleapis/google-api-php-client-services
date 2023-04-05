@@ -21,10 +21,8 @@ class Strategy extends \Google\Model
 {
   protected $canaryType = Canary::class;
   protected $canaryDataType = '';
-  public $canary;
   protected $standardType = Standard::class;
   protected $standardDataType = '';
-  public $standard;
 
   /**
    * @param Canary
