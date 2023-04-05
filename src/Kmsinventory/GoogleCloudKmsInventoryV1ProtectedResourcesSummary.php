@@ -22,11 +22,11 @@ class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends \Google\Model
   /**
    * @var string[]
    */
-  public $cloudProducts = [];
+  public $cloudProducts;
   /**
    * @var string[]
    */
-  public $locations = [];
+  public $locations;
   /**
    * @var string
    */
@@ -42,7 +42,7 @@ class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends \Google\Model
   /**
    * @var string[]
    */
-  public $resourceTypes = [];
+  public $resourceTypes;
 
   /**
    * @param string[]

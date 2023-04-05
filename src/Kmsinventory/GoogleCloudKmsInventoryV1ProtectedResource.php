@@ -35,11 +35,11 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $cryptoKeyVersions = [];
+  public $cryptoKeyVersions;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
