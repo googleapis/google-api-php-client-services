@@ -39,6 +39,10 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var bool
+   */
+  public $supportsDryRun;
 
   /**
    * @param GoogleCloudOrgpolicyV2ConstraintBooleanConstraint
@@ -123,6 +127,20 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param bool
+   */
+  public function setSupportsDryRun($supportsDryRun)
+  {
+    $this->supportsDryRun = $supportsDryRun;
+  }
+  /**
+   * @return bool
+   */
+  public function getSupportsDryRun()
+  {
+    return $this->supportsDryRun;
   }
 }
 
