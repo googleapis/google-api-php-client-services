@@ -61,6 +61,10 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
   /**
    * @var string
    */
+  public $runAsServiceAccount;
+  /**
+   * @var string
+   */
   public $snapshotNumber;
   /**
    * @var string
@@ -242,6 +246,20 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
   public function getParentTemplateId()
   {
     return $this->parentTemplateId;
+  }
+  /**
+   * @param string
+   */
+  public function setRunAsServiceAccount($runAsServiceAccount)
+  {
+    $this->runAsServiceAccount = $runAsServiceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getRunAsServiceAccount()
+  {
+    return $this->runAsServiceAccount;
   }
   /**
    * @param string

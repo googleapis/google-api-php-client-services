@@ -27,7 +27,7 @@ class GoogleCloudIntegrationsV1alphaErrorCatcherConfig extends \Google\Collectio
   /**
    * @var string
    */
-  public $errorCatchId;
+  public $errorCatcherId;
   /**
    * @var string
    */
@@ -36,6 +36,8 @@ class GoogleCloudIntegrationsV1alphaErrorCatcherConfig extends \Google\Collectio
    * @var string
    */
   public $label;
+  protected $positionType = GoogleCloudIntegrationsV1alphaCoordinate::class;
+  protected $positionDataType = '';
   protected $startErrorTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $startErrorTasksDataType = 'array';
 
@@ -56,16 +58,16 @@ class GoogleCloudIntegrationsV1alphaErrorCatcherConfig extends \Google\Collectio
   /**
    * @param string
    */
-  public function setErrorCatchId($errorCatchId)
+  public function setErrorCatcherId($errorCatcherId)
   {
-    $this->errorCatchId = $errorCatchId;
+    $this->errorCatcherId = $errorCatcherId;
   }
   /**
    * @return string
    */
-  public function getErrorCatchId()
+  public function getErrorCatcherId()
   {
-    return $this->errorCatchId;
+    return $this->errorCatcherId;
   }
   /**
    * @param string
@@ -94,6 +96,20 @@ class GoogleCloudIntegrationsV1alphaErrorCatcherConfig extends \Google\Collectio
   public function getLabel()
   {
     return $this->label;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaCoordinate
+   */
+  public function setPosition(GoogleCloudIntegrationsV1alphaCoordinate $position)
+  {
+    $this->position = $position;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaCoordinate
+   */
+  public function getPosition()
+  {
+    return $this->position;
   }
   /**
    * @param GoogleCloudIntegrationsV1alphaNextTask[]
