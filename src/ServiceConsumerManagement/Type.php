@@ -20,6 +20,10 @@ namespace Google\Service\ServiceConsumerManagement;
 class Type extends \Google\Collection
 {
   protected $collection_key = 'options';
+  /**
+   * @var string
+   */
+  public $edition;
   protected $fieldsType = Field::class;
   protected $fieldsDataType = 'array';
   /**
@@ -39,6 +43,20 @@ class Type extends \Google\Collection
    */
   public $syntax;
 
+  /**
+   * @param string
+   */
+  public function setEdition($edition)
+  {
+    $this->edition = $edition;
+  }
+  /**
+   * @return string
+   */
+  public function getEdition()
+  {
+    return $this->edition;
+  }
   /**
    * @param Field[]
    */
