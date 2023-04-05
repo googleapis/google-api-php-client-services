@@ -32,9 +32,9 @@ use Google\Service\Logging\Operation;
 class LocationsBucketsLinks extends \Google\Service\Resource
 {
   /**
-   * Asynchronously creates linked dataset in BigQuery which makes it possible to
-   * use BugQuery to read the logs stored in the bucket. A bucket may currently
-   * only contain one link. (links.create)
+   * Asynchronously creates a linked dataset in BigQuery which makes it possible
+   * to use BigQuery to read the logs stored in the log bucket. A log bucket may
+   * currently only contain one link. (links.create)
    *
    * @param string $parent Required. The full resource name of the bucket to
    * create a link for.
