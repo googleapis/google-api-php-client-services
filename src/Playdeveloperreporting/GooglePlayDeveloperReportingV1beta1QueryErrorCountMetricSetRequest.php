@@ -17,7 +17,7 @@
 
 namespace Google\Service\Playdeveloperreporting;
 
-class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetRequest extends \Google\Collection
+class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
@@ -42,10 +42,6 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetReques
   public $pageToken;
   protected $timelineSpecType = GooglePlayDeveloperReportingV1beta1TimelineSpec::class;
   protected $timelineSpecDataType = '';
-  /**
-   * @var string
-   */
-  public $userCohort;
 
   /**
    * @param string[]
@@ -131,21 +127,7 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetReques
   {
     return $this->timelineSpec;
   }
-  /**
-   * @param string
-   */
-  public function setUserCohort($userCohort)
-  {
-    $this->userCohort = $userCohort;
-  }
-  /**
-   * @return string
-   */
-  public function getUserCohort()
-  {
-    return $this->userCohort;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetRequest::class, 'Google_Service_Playdeveloperreporting_GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetRequest');
+class_alias(GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest::class, 'Google_Service_Playdeveloperreporting_GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest');

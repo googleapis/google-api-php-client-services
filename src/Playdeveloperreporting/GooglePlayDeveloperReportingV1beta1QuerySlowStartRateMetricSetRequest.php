@@ -17,7 +17,7 @@
 
 namespace Google\Service\Playdeveloperreporting;
 
-class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetRequest extends \Google\Collection
+class GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
@@ -148,4 +148,4 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetReques
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetRequest::class, 'Google_Service_Playdeveloperreporting_GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetRequest');
+class_alias(GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest::class, 'Google_Service_Playdeveloperreporting_GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest');
