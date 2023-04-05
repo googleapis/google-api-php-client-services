@@ -25,7 +25,6 @@ class DailySubEntityType extends \Google\Model
   public $dayOfWeek;
   protected $timeOfDayType = TimeOfDay::class;
   protected $timeOfDayDataType = '';
-  public $timeOfDay;
 
   /**
    * @param string
