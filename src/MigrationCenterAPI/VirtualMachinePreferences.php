@@ -25,10 +25,8 @@ class VirtualMachinePreferences extends \Google\Model
   public $commitmentPlan;
   protected $computeEnginePreferencesType = ComputeEnginePreferences::class;
   protected $computeEnginePreferencesDataType = '';
-  public $computeEnginePreferences;
   protected $regionPreferencesType = RegionPreferences::class;
   protected $regionPreferencesDataType = '';
-  public $regionPreferences;
   /**
    * @var string
    */
