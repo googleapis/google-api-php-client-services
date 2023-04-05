@@ -22,7 +22,6 @@ class GenerateRecommendationsResponse extends \Google\Collection
   protected $collection_key = 'recommendations';
   protected $recommendationsType = Recommendation::class;
   protected $recommendationsDataType = 'array';
-  public $recommendations = [];
   /**
    * @var string
    */

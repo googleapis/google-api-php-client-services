@@ -22,16 +22,12 @@ class Recommendation extends \Google\Collection
   protected $collection_key = 'creative';
   protected $additionalCallToActionType = RecommendationCallToAction::class;
   protected $additionalCallToActionDataType = 'array';
-  public $additionalCallToAction = [];
   protected $additionalDescriptionsType = RecommendationDescription::class;
   protected $additionalDescriptionsDataType = 'array';
-  public $additionalDescriptions = [];
   protected $creativeType = RecommendationCreative::class;
   protected $creativeDataType = 'array';
-  public $creative = [];
   protected $defaultCallToActionType = RecommendationCallToAction::class;
   protected $defaultCallToActionDataType = '';
-  public $defaultCallToAction;
   /**
    * @var string
    */
