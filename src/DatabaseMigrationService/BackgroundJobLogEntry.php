@@ -21,7 +21,6 @@ class BackgroundJobLogEntry extends \Google\Model
 {
   protected $applyJobDetailsType = ApplyJobDetails::class;
   protected $applyJobDetailsDataType = '';
-  public $applyJobDetails;
   /**
    * @var string
    */
@@ -32,7 +31,6 @@ class BackgroundJobLogEntry extends \Google\Model
   public $completionState;
   protected $convertJobDetailsType = ConvertJobDetails::class;
   protected $convertJobDetailsDataType = '';
-  public $convertJobDetails;
   /**
    * @var string
    */
@@ -43,7 +41,6 @@ class BackgroundJobLogEntry extends \Google\Model
   public $id;
   protected $importRulesJobDetailsType = ImportRulesJobDetails::class;
   protected $importRulesJobDetailsDataType = '';
-  public $importRulesJobDetails;
   /**
    * @var string
    */
@@ -54,7 +51,6 @@ class BackgroundJobLogEntry extends \Google\Model
   public $requestAutocommit;
   protected $seedJobDetailsType = SeedJobDetails::class;
   protected $seedJobDetailsDataType = '';
-  public $seedJobDetails;
   /**
    * @var string
    */
