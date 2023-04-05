@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1TaskExecutionSpec extends \Google\Model
   /**
    * @var string[]
    */
-  public $args = [];
+  public $args;
   /**
    * @var string
    */

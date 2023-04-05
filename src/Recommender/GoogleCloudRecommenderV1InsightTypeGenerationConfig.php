@@ -22,7 +22,7 @@ class GoogleCloudRecommenderV1InsightTypeGenerationConfig extends \Google\Model
   /**
    * @var array[]
    */
-  public $params = [];
+  public $params;
 
   /**
    * @param array[]

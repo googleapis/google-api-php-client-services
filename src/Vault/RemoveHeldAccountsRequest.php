@@ -23,7 +23,7 @@ class RemoveHeldAccountsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accountIds = [];
+  public $accountIds;
 
   /**
    * @param string[]

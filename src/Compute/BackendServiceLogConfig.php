@@ -27,7 +27,7 @@ class BackendServiceLogConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $optionalFields = [];
+  public $optionalFields;
   /**
    * @var string
    */

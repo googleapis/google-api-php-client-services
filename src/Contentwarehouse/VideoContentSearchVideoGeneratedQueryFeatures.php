@@ -23,14 +23,13 @@ class VideoContentSearchVideoGeneratedQueryFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $filterReason = [];
+  public $filterReason;
   /**
    * @var int
    */
   public $prefilteredPassageCount;
   protected $titleEntityAnnotationsType = VideoContentSearchEntityAnnotations::class;
   protected $titleEntityAnnotationsDataType = '';
-  public $titleEntityAnnotations;
   /**
    * @var int
    */

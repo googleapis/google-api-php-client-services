@@ -23,7 +23,7 @@ class CertificateMapEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $certificates = [];
+  public $certificates;
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class CertificateMapEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

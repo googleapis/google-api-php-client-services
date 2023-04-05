@@ -23,7 +23,7 @@ class GoogleCloudDataplexV1DataAttributeBinding extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */
@@ -43,14 +43,13 @@ class GoogleCloudDataplexV1DataAttributeBinding extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $pathsType = GoogleCloudDataplexV1DataAttributeBindingPath::class;
   protected $pathsDataType = 'array';
-  public $paths = [];
   /**
    * @var string
    */

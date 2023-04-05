@@ -23,7 +23,7 @@ class ImageContentStarburstVersionGroup extends \Google\Collection
   /**
    * @var float[]
    */
-  public $descriptorFloat = [];
+  public $descriptorFloat;
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class ImageContentStarburstVersionGroup extends \Google\Collection
   /**
    * @var int[]
    */
-  public $starburstTokens = [];
+  public $starburstTokens;
   /**
    * @var int
    */

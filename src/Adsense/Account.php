@@ -35,7 +35,7 @@ class Account extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pendingTasks = [];
+  public $pendingTasks;
   /**
    * @var bool
    */
@@ -46,7 +46,6 @@ class Account extends \Google\Collection
   public $state;
   protected $timeZoneType = TimeZone::class;
   protected $timeZoneDataType = '';
-  public $timeZone;
 
   /**
    * @param string

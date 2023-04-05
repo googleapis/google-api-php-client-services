@@ -22,17 +22,14 @@ class MigrationWarning extends \Google\Collection
   protected $collection_key = 'helpLinks';
   protected $actionItemType = LocalizedMessage::class;
   protected $actionItemDataType = '';
-  public $actionItem;
   /**
    * @var string
    */
   public $code;
   protected $helpLinksType = Link::class;
   protected $helpLinksDataType = 'array';
-  public $helpLinks = [];
   protected $warningMessageType = LocalizedMessage::class;
   protected $warningMessageDataType = '';
-  public $warningMessage;
   /**
    * @var string
    */

@@ -30,7 +30,7 @@ class GoogleCloudRecommendationengineV1beta1PredictRequest extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var int
    */
@@ -42,10 +42,9 @@ class GoogleCloudRecommendationengineV1beta1PredictRequest extends \Google\Model
   /**
    * @var array[]
    */
-  public $params = [];
+  public $params;
   protected $userEventType = GoogleCloudRecommendationengineV1beta1UserEvent::class;
   protected $userEventDataType = '';
-  public $userEvent;
 
   /**
    * @param bool

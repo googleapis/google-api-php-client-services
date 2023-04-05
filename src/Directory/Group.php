@@ -27,7 +27,7 @@ class Group extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aliases = [];
+  public $aliases;
   /**
    * @var string
    */
@@ -59,7 +59,7 @@ class Group extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nonEditableAliases = [];
+  public $nonEditableAliases;
 
   /**
    * @param bool

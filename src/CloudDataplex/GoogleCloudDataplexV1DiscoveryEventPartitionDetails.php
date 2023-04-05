@@ -31,7 +31,7 @@ class GoogleCloudDataplexV1DiscoveryEventPartitionDetails extends \Google\Collec
   /**
    * @var string[]
    */
-  public $sampledDataLocations = [];
+  public $sampledDataLocations;
   /**
    * @var string
    */

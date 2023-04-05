@@ -27,7 +27,7 @@ class FieldMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $paths = [];
+  public $paths;
 
   /**
    * @param string

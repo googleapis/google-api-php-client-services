@@ -27,7 +27,7 @@ class AnalyzeEntitiesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $licensedVocabularies = [];
+  public $licensedVocabularies;
 
   /**
    * @param string

@@ -22,11 +22,11 @@ class EventExtendedProperties extends \Google\Model
   /**
    * @var string[]
    */
-  public $private = [];
+  public $private;
   /**
    * @var string[]
    */
-  public $shared = [];
+  public $shared;
 
   /**
    * @param string[]

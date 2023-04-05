@@ -32,6 +32,10 @@ class Phase extends \Google\Model
   /**
    * @var string
    */
+  public $skipMessage;
+  /**
+   * @var string
+   */
   public $state;
 
   /**
@@ -75,6 +79,20 @@ class Phase extends \Google\Model
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * @param string
+   */
+  public function setSkipMessage($skipMessage)
+  {
+    $this->skipMessage = $skipMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getSkipMessage()
+  {
+    return $this->skipMessage;
   }
   /**
    * @param string

@@ -40,7 +40,7 @@ class PremiumPerDocData extends \Google\Collection
   /**
    * @var int[]
    */
-  public $entitlement = [];
+  public $entitlement;
   /**
    * @var bool
    */

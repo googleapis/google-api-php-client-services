@@ -22,18 +22,17 @@ class WebpushConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $data = [];
+  public $data;
   protected $fcmOptionsType = WebpushFcmOptions::class;
   protected $fcmOptionsDataType = '';
-  public $fcmOptions;
   /**
    * @var string[]
    */
-  public $headers = [];
+  public $headers;
   /**
    * @var array[]
    */
-  public $notification = [];
+  public $notification;
 
   /**
    * @param string[]

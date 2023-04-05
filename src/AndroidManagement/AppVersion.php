@@ -27,7 +27,7 @@ class AppVersion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $trackIds = [];
+  public $trackIds;
   /**
    * @var int
    */

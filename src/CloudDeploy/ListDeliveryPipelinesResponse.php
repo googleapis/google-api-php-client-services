@@ -22,7 +22,6 @@ class ListDeliveryPipelinesResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $deliveryPipelinesType = DeliveryPipeline::class;
   protected $deliveryPipelinesDataType = 'array';
-  public $deliveryPipelines = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListDeliveryPipelinesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param DeliveryPipeline[]

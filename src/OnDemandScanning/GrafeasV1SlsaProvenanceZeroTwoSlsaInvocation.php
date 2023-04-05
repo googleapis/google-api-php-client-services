@@ -21,15 +21,14 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation extends \Google\Model
 {
   protected $configSourceType = GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource::class;
   protected $configSourceDataType = '';
-  public $configSource;
   /**
    * @var array[]
    */
-  public $environment = [];
+  public $environment;
   /**
    * @var array[]
    */
-  public $parameters = [];
+  public $parameters;
 
   /**
    * @param GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource

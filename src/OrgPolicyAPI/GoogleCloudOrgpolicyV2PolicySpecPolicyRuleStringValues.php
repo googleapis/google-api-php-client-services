@@ -23,11 +23,11 @@ class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues extends \Google\Col
   /**
    * @var string[]
    */
-  public $allowedValues = [];
+  public $allowedValues;
   /**
    * @var string[]
    */
-  public $deniedValues = [];
+  public $deniedValues;
 
   /**
    * @param string[]

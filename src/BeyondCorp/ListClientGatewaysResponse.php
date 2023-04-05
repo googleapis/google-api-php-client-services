@@ -22,7 +22,6 @@ class ListClientGatewaysResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $clientGatewaysType = ClientGateway::class;
   protected $clientGatewaysDataType = 'array';
-  public $clientGateways = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListClientGatewaysResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param ClientGateway[]

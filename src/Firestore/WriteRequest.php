@@ -23,7 +23,7 @@ class WriteRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -34,7 +34,6 @@ class WriteRequest extends \Google\Collection
   public $streamToken;
   protected $writesType = Write::class;
   protected $writesDataType = 'array';
-  public $writes = [];
 
   /**
    * @param string[]

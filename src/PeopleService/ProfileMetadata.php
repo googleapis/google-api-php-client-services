@@ -27,7 +27,7 @@ class ProfileMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $userTypes = [];
+  public $userTypes;
 
   /**
    * @param string

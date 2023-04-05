@@ -27,30 +27,29 @@ class GoogleCloudBillingBudgetsV1Filter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $creditTypes = [];
+  public $creditTypes;
   /**
    * @var string
    */
   public $creditTypesTreatment;
   protected $customPeriodType = GoogleCloudBillingBudgetsV1CustomPeriod::class;
   protected $customPeriodDataType = '';
-  public $customPeriod;
   /**
    * @var array[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $projects = [];
+  public $projects;
   /**
    * @var string[]
    */
-  public $services = [];
+  public $services;
   /**
    * @var string[]
    */
-  public $subaccounts = [];
+  public $subaccounts;
 
   /**
    * @param string

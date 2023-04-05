@@ -22,7 +22,7 @@ class FirebaseProject extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string
    */
@@ -45,7 +45,6 @@ class FirebaseProject extends \Google\Model
   public $projectNumber;
   protected $resourcesType = DefaultResources::class;
   protected $resourcesDataType = '';
-  public $resources;
   /**
    * @var string
    */

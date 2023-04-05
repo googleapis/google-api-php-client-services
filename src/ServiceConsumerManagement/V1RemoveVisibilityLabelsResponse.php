@@ -23,7 +23,7 @@ class V1RemoveVisibilityLabelsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
 
   /**
    * @param string[]

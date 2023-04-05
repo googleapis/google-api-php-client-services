@@ -26,7 +26,7 @@ class RuntimeConfig extends \Google\Model
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
   /**
    * @var string
    */

@@ -38,27 +38,22 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
   public $externalTaskType;
   protected $failurePolicyType = GoogleCloudIntegrationsV1alphaFailurePolicy::class;
   protected $failurePolicyDataType = '';
-  public $failurePolicy;
   /**
    * @var string
    */
   public $jsonValidationOption;
   protected $nextTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $nextTasksDataType = 'array';
-  public $nextTasks = [];
   /**
    * @var string
    */
   public $nextTasksExecutionPolicy;
   protected $parametersType = GoogleCloudIntegrationsV1alphaEventParameter::class;
   protected $parametersDataType = 'map';
-  public $parameters = [];
   protected $successPolicyType = GoogleCloudIntegrationsV1alphaSuccessPolicy::class;
   protected $successPolicyDataType = '';
-  public $successPolicy;
   protected $synchronousCallFailurePolicyType = GoogleCloudIntegrationsV1alphaFailurePolicy::class;
   protected $synchronousCallFailurePolicyDataType = '';
-  public $synchronousCallFailurePolicy;
   /**
    * @var string
    */

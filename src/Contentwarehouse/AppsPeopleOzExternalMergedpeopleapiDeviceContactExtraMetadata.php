@@ -23,10 +23,9 @@ class AppsPeopleOzExternalMergedpeopleapiDeviceContactExtraMetadata extends \Goo
   /**
    * @var string[]
    */
-  public $attributes = [];
+  public $attributes;
   protected $usageInfoType = SocialGraphApiProtoUsageInfo::class;
   protected $usageInfoDataType = 'array';
-  public $usageInfo = [];
 
   /**
    * @param string[]

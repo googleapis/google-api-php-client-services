@@ -23,7 +23,7 @@ class GoogleCloudDatalabelingV1beta1EventConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotationSpecSets = [];
+  public $annotationSpecSets;
   /**
    * @var int
    */

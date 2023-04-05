@@ -22,7 +22,6 @@ class GeostoreParkingRestrictionProto extends \Google\Collection
   protected $collection_key = 'vehicleType';
   protected $restrictedHoursType = GeostoreTimeScheduleProto::class;
   protected $restrictedHoursDataType = '';
-  public $restrictedHours;
   /**
    * @var string
    */
@@ -30,11 +29,11 @@ class GeostoreParkingRestrictionProto extends \Google\Collection
   /**
    * @var string[]
    */
-  public $serviceType = [];
+  public $serviceType;
   /**
    * @var string[]
    */
-  public $vehicleType = [];
+  public $vehicleType;
 
   /**
    * @param GeostoreTimeScheduleProto

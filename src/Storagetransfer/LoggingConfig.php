@@ -27,11 +27,11 @@ class LoggingConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $logActionStates = [];
+  public $logActionStates;
   /**
    * @var string[]
    */
-  public $logActions = [];
+  public $logActions;
 
   /**
    * @param bool

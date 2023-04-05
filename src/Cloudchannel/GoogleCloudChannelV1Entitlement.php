@@ -22,10 +22,8 @@ class GoogleCloudChannelV1Entitlement extends \Google\Collection
   protected $collection_key = 'suspensionReasons';
   protected $associationInfoType = GoogleCloudChannelV1AssociationInfo::class;
   protected $associationInfoDataType = '';
-  public $associationInfo;
   protected $commitmentSettingsType = GoogleCloudChannelV1CommitmentSettings::class;
   protected $commitmentSettingsDataType = '';
-  public $commitmentSettings;
   /**
    * @var string
    */
@@ -40,10 +38,8 @@ class GoogleCloudChannelV1Entitlement extends \Google\Collection
   public $offer;
   protected $parametersType = GoogleCloudChannelV1Parameter::class;
   protected $parametersDataType = 'array';
-  public $parameters = [];
   protected $provisionedServiceType = GoogleCloudChannelV1ProvisionedService::class;
   protected $provisionedServiceDataType = '';
-  public $provisionedService;
   /**
    * @var string
    */
@@ -55,10 +51,9 @@ class GoogleCloudChannelV1Entitlement extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suspensionReasons = [];
+  public $suspensionReasons;
   protected $trialSettingsType = GoogleCloudChannelV1TrialSettings::class;
   protected $trialSettingsDataType = '';
-  public $trialSettings;
   /**
    * @var string
    */

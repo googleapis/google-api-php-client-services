@@ -23,19 +23,19 @@ class ZypperSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categories = [];
+  public $categories;
   /**
    * @var string[]
    */
-  public $excludes = [];
+  public $excludes;
   /**
    * @var string[]
    */
-  public $exclusivePatches = [];
+  public $exclusivePatches;
   /**
    * @var string[]
    */
-  public $severities = [];
+  public $severities;
   /**
    * @var bool
    */

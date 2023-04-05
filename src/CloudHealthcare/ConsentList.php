@@ -23,7 +23,7 @@ class ConsentList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $consents = [];
+  public $consents;
 
   /**
    * @param string[]

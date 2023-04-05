@@ -23,10 +23,9 @@ class AssistantLogsMediaStreamLog extends \Google\Collection
   /**
    * @var int[]
    */
-  public $deviceIndex = [];
+  public $deviceIndex;
   protected $sessionType = AssistantLogsDeviceMediaSessionLog::class;
   protected $sessionDataType = '';
-  public $session;
 
   /**
    * @param int[]

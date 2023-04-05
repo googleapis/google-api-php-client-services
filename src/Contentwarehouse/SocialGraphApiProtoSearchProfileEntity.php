@@ -31,7 +31,7 @@ class SocialGraphApiProtoSearchProfileEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $name = [];
+  public $name;
 
   /**
    * @param string

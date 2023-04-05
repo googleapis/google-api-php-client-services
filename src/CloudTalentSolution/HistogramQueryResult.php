@@ -22,7 +22,7 @@ class HistogramQueryResult extends \Google\Model
   /**
    * @var string[]
    */
-  public $histogram = [];
+  public $histogram;
   /**
    * @var string
    */

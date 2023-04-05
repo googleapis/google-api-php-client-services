@@ -30,7 +30,7 @@ class CommitWorkspaceChangesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $paths;
+  public $paths = [];
 
   /**
    * @param CommitAuthor

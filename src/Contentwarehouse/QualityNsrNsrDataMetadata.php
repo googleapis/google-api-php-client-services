@@ -59,6 +59,10 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
    * @var string[]
    */
   public $raffiaLookupKeys = [];
+  /**
+   * @var string
+   */
+  public $raffiaSignalMergerUrl;
 
   /**
    * @param string
@@ -199,6 +203,20 @@ class QualityNsrNsrDataMetadata extends \Google\Collection
   public function getRaffiaLookupKeys()
   {
     return $this->raffiaLookupKeys;
+  }
+  /**
+   * @param string
+   */
+  public function setRaffiaSignalMergerUrl($raffiaSignalMergerUrl)
+  {
+    $this->raffiaSignalMergerUrl = $raffiaSignalMergerUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getRaffiaSignalMergerUrl()
+  {
+    return $this->raffiaSignalMergerUrl;
   }
 }
 

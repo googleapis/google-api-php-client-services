@@ -31,7 +31,7 @@ class NlpSemanticParsingModelsRecurrenceMonthlyPattern extends \Google\Collectio
   /**
    * @var int[]
    */
-  public $monthDay = [];
+  public $monthDay;
   /**
    * @var string
    */

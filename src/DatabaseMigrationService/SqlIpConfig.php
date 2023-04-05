@@ -22,7 +22,6 @@ class SqlIpConfig extends \Google\Collection
   protected $collection_key = 'authorizedNetworks';
   protected $authorizedNetworksType = SqlAclEntry::class;
   protected $authorizedNetworksDataType = 'array';
-  public $authorizedNetworks = [];
   /**
    * @var bool
    */

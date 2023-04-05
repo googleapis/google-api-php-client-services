@@ -27,7 +27,7 @@ class AppsExtensionsMarkupCalendarClientActionMarkupConferenceDataMarkupEntryPoi
   /**
    * @var string[]
    */
-  public $features = [];
+  public $features;
   /**
    * @var string
    */

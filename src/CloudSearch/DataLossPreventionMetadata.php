@@ -21,7 +21,6 @@ class DataLossPreventionMetadata extends \Google\Model
 {
   protected $dlpScanSummaryType = DlpScanSummary::class;
   protected $dlpScanSummaryDataType = '';
-  public $dlpScanSummary;
   /**
    * @var bool
    */

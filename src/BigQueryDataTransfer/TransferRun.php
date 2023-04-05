@@ -29,14 +29,12 @@ class TransferRun extends \Google\Model
   public $destinationDatasetId;
   protected $emailPreferencesType = EmailPreferences::class;
   protected $emailPreferencesDataType = '';
-  public $emailPreferences;
   /**
    * @var string
    */
   public $endTime;
   protected $errorStatusType = Status::class;
   protected $errorStatusDataType = '';
-  public $errorStatus;
   /**
    * @var string
    */
@@ -48,7 +46,7 @@ class TransferRun extends \Google\Model
   /**
    * @var array[]
    */
-  public $params = [];
+  public $params;
   /**
    * @var string
    */

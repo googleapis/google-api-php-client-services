@@ -23,7 +23,7 @@ class Dimension extends \Google\Collection
   /**
    * @var string[]
    */
-  public $histogramBuckets = [];
+  public $histogramBuckets;
   /**
    * @var string
    */

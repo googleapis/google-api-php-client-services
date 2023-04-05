@@ -23,7 +23,7 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $collectionIds = [];
+  public $collectionIds;
   /**
    * @var string
    */
@@ -35,17 +35,15 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $namespaceIds = [];
+  public $namespaceIds;
   /**
    * @var string
    */
   public $operationState;
   protected $progressBytesType = GoogleFirestoreAdminV1Progress::class;
   protected $progressBytesDataType = '';
-  public $progressBytes;
   protected $progressDocumentsType = GoogleFirestoreAdminV1Progress::class;
   protected $progressDocumentsDataType = '';
-  public $progressDocuments;
   /**
    * @var string
    */

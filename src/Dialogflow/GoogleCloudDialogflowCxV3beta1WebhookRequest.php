@@ -24,6 +24,10 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
    * @var string
    */
   public $detectIntentResponseId;
+  /**
+   * @var string
+   */
+  public $dtmfDigits;
   protected $fulfillmentInfoType = GoogleCloudDialogflowCxV3beta1WebhookRequestFulfillmentInfo::class;
   protected $fulfillmentInfoDataType = '';
   public $fulfillmentInfo;
@@ -80,6 +84,20 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
   public function getDetectIntentResponseId()
   {
     return $this->detectIntentResponseId;
+  }
+  /**
+   * @param string
+   */
+  public function setDtmfDigits($dtmfDigits)
+  {
+    $this->dtmfDigits = $dtmfDigits;
+  }
+  /**
+   * @return string
+   */
+  public function getDtmfDigits()
+  {
+    return $this->dtmfDigits;
   }
   /**
    * @param GoogleCloudDialogflowCxV3beta1WebhookRequestFulfillmentInfo

@@ -31,7 +31,7 @@ class PhotosFourCMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $creator = [];
+  public $creator;
   /**
    * @var string
    */

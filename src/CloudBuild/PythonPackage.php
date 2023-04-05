@@ -23,7 +23,7 @@ class PythonPackage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $paths = [];
+  public $paths;
   /**
    * @var string
    */

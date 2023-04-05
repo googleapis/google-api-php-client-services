@@ -21,17 +21,14 @@ class JobRun extends \Google\Model
 {
   protected $advanceChildRolloutJobRunType = AdvanceChildRolloutJobRun::class;
   protected $advanceChildRolloutJobRunDataType = '';
-  public $advanceChildRolloutJobRun;
   protected $createChildRolloutJobRunType = CreateChildRolloutJobRun::class;
   protected $createChildRolloutJobRunDataType = '';
-  public $createChildRolloutJobRun;
   /**
    * @var string
    */
   public $createTime;
   protected $deployJobRunType = DeployJobRun::class;
   protected $deployJobRunDataType = '';
-  public $deployJobRun;
   /**
    * @var string
    */
@@ -66,7 +63,6 @@ class JobRun extends \Google\Model
   public $uid;
   protected $verifyJobRunType = VerifyJobRun::class;
   protected $verifyJobRunDataType = '';
-  public $verifyJobRun;
 
   /**
    * @param AdvanceChildRolloutJobRun

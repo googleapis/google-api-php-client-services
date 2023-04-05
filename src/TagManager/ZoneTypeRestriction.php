@@ -27,7 +27,7 @@ class ZoneTypeRestriction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $whitelistedTypeId = [];
+  public $whitelistedTypeId;
 
   /**
    * @param bool

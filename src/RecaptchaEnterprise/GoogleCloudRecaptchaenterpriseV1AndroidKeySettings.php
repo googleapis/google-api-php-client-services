@@ -27,7 +27,7 @@ class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends \Google\Collect
   /**
    * @var string[]
    */
-  public $allowedPackageNames = [];
+  public $allowedPackageNames;
 
   /**
    * @param bool

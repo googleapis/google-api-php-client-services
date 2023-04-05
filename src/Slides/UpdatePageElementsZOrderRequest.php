@@ -27,7 +27,7 @@ class UpdatePageElementsZOrderRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pageElementObjectIds = [];
+  public $pageElementObjectIds;
 
   /**
    * @param string

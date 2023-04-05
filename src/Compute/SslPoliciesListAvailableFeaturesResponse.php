@@ -23,7 +23,7 @@ class SslPoliciesListAvailableFeaturesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $features = [];
+  public $features;
 
   /**
    * @param string[]

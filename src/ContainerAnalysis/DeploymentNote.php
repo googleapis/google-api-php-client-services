@@ -23,7 +23,7 @@ class DeploymentNote extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceUri = [];
+  public $resourceUri;
 
   /**
    * @param string[]

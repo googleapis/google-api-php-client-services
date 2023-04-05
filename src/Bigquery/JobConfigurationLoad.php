@@ -34,10 +34,8 @@ class JobConfigurationLoad extends \Google\Collection
   public $autodetect;
   protected $clusteringType = Clustering::class;
   protected $clusteringDataType = '';
-  public $clustering;
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
-  public $connectionProperties = [];
   /**
    * @var string
    */
@@ -49,16 +47,13 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $decimalTargetTypes = [];
+  public $decimalTargetTypes;
   protected $destinationEncryptionConfigurationType = EncryptionConfiguration::class;
   protected $destinationEncryptionConfigurationDataType = '';
-  public $destinationEncryptionConfiguration;
   protected $destinationTableType = TableReference::class;
   protected $destinationTableDataType = '';
-  public $destinationTable;
   protected $destinationTablePropertiesType = DestinationTableProperties::class;
   protected $destinationTablePropertiesDataType = '';
-  public $destinationTableProperties;
   /**
    * @var string
    */
@@ -69,7 +64,6 @@ class JobConfigurationLoad extends \Google\Collection
   public $fieldDelimiter;
   protected $hivePartitioningOptionsType = HivePartitioningOptions::class;
   protected $hivePartitioningOptionsDataType = '';
-  public $hivePartitioningOptions;
   /**
    * @var bool
    */
@@ -88,7 +82,6 @@ class JobConfigurationLoad extends \Google\Collection
   public $nullMarker;
   protected $parquetOptionsType = ParquetOptions::class;
   protected $parquetOptionsDataType = '';
-  public $parquetOptions;
   /**
    * @var bool
    */
@@ -96,21 +89,19 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $projectionFields = [];
+  public $projectionFields;
   /**
    * @var string
    */
   public $quote;
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
-  public $rangePartitioning;
   /**
    * @var string
    */
   public $referenceFileSchemaUri;
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
-  public $schema;
   /**
    * @var string
    */
@@ -122,7 +113,7 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $schemaUpdateOptions = [];
+  public $schemaUpdateOptions;
   /**
    * @var int
    */
@@ -134,10 +125,9 @@ class JobConfigurationLoad extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceUris = [];
+  public $sourceUris;
   protected $timePartitioningType = TimePartitioning::class;
   protected $timePartitioningDataType = '';
-  public $timePartitioning;
   /**
    * @var bool
    */

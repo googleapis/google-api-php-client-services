@@ -27,7 +27,7 @@ class GoodocBoxPartitions extends \Google\Collection
   /**
    * @var int[]
    */
-  public $span = [];
+  public $span;
 
   /**
    * @param int

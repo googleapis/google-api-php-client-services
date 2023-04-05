@@ -21,7 +21,6 @@ class Membership extends \Google\Model
 {
   protected $authorityType = Authority::class;
   protected $authorityDataType = '';
-  public $authority;
   /**
    * @var string
    */
@@ -36,7 +35,6 @@ class Membership extends \Google\Model
   public $description;
   protected $endpointType = MembershipEndpoint::class;
   protected $endpointDataType = '';
-  public $endpoint;
   /**
    * @var string
    */
@@ -44,7 +42,7 @@ class Membership extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -55,7 +53,6 @@ class Membership extends \Google\Model
   public $name;
   protected $stateType = MembershipState::class;
   protected $stateDataType = '';
-  public $state;
   /**
    * @var string
    */

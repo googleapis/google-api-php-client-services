@@ -23,7 +23,7 @@ class RemixInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceAsset = [];
+  public $sourceAsset;
 
   /**
    * @param string[]

@@ -22,25 +22,22 @@ class ReportCrossDimensionReachCriteria extends \Google\Collection
   protected $collection_key = 'overlapMetricNames';
   protected $breakdownType = SortedDimension::class;
   protected $breakdownDataType = 'array';
-  public $breakdown = [];
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
-  public $dateRange;
   /**
    * @var string
    */
   public $dimension;
   protected $dimensionFiltersType = DimensionValue::class;
   protected $dimensionFiltersDataType = 'array';
-  public $dimensionFilters = [];
   /**
    * @var string[]
    */
-  public $metricNames = [];
+  public $metricNames;
   /**
    * @var string[]
    */
-  public $overlapMetricNames = [];
+  public $overlapMetricNames;
   /**
    * @var bool
    */

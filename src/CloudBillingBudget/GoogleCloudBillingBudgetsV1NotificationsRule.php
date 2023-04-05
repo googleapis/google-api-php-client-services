@@ -27,7 +27,7 @@ class GoogleCloudBillingBudgetsV1NotificationsRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $monitoringNotificationChannels = [];
+  public $monitoringNotificationChannels;
   /**
    * @var string
    */

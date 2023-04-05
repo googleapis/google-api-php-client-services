@@ -23,14 +23,13 @@ class GoogleCloudApigeeV1TlsInfoConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ciphers = [];
+  public $ciphers;
   /**
    * @var bool
    */
   public $clientAuthEnabled;
   protected $commonNameType = GoogleCloudApigeeV1CommonNameConfig::class;
   protected $commonNameDataType = '';
-  public $commonName;
   /**
    * @var bool
    */
@@ -45,11 +44,10 @@ class GoogleCloudApigeeV1TlsInfoConfig extends \Google\Collection
   public $keyAlias;
   protected $keyAliasReferenceType = GoogleCloudApigeeV1KeyAliasReference::class;
   protected $keyAliasReferenceDataType = '';
-  public $keyAliasReference;
   /**
    * @var string[]
    */
-  public $protocols = [];
+  public $protocols;
   /**
    * @var string
    */

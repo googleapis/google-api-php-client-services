@@ -43,25 +43,23 @@ class InstanceConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $leaderOptions = [];
+  public $leaderOptions;
   /**
    * @var string
    */
   public $name;
   protected $optionalReplicasType = ReplicaInfo::class;
   protected $optionalReplicasDataType = 'array';
-  public $optionalReplicas = [];
   /**
    * @var bool
    */
   public $reconciling;
   protected $replicasType = ReplicaInfo::class;
   protected $replicasDataType = 'array';
-  public $replicas = [];
   /**
    * @var string
    */

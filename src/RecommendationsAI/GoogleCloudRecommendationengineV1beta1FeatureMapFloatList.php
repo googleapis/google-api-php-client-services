@@ -23,7 +23,7 @@ class GoogleCloudRecommendationengineV1beta1FeatureMapFloatList extends \Google\
   /**
    * @var float[]
    */
-  public $value = [];
+  public $value;
 
   /**
    * @param float[]

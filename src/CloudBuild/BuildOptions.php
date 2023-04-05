@@ -23,6 +23,10 @@ class BuildOptions extends \Google\Collection
   /**
    * @var string
    */
+  public $defaultLogsBucketBehavior;
+  /**
+   * @var string
+   */
   public $diskSizeGb;
   /**
    * @var bool
@@ -71,6 +75,20 @@ class BuildOptions extends \Google\Collection
    */
   public $workerPool;
 
+  /**
+   * @param string
+   */
+  public function setDefaultLogsBucketBehavior($defaultLogsBucketBehavior)
+  {
+    $this->defaultLogsBucketBehavior = $defaultLogsBucketBehavior;
+  }
+  /**
+   * @return string
+   */
+  public function getDefaultLogsBucketBehavior()
+  {
+    return $this->defaultLogsBucketBehavior;
+  }
   /**
    * @param string
    */

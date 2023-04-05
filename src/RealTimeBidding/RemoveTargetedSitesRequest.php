@@ -23,7 +23,7 @@ class RemoveTargetedSitesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sites = [];
+  public $sites;
 
   /**
    * @param string[]

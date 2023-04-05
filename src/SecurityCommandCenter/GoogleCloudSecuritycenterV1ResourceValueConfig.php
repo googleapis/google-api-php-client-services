@@ -39,7 +39,7 @@ class GoogleCloudSecuritycenterV1ResourceValueConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tagValues = [];
+  public $tagValues;
 
   /**
    * @param string

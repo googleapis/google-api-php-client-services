@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1GraphQLOperation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $operationTypes = [];
+  public $operationTypes;
 
   /**
    * @param string

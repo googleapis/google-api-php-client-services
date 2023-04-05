@@ -22,18 +22,16 @@ class RecognitionConfig extends \Google\Collection
   protected $collection_key = 'speechContexts';
   protected $adaptationType = SpeechAdaptation::class;
   protected $adaptationDataType = '';
-  public $adaptation;
   /**
    * @var string[]
    */
-  public $alternativeLanguageCodes = [];
+  public $alternativeLanguageCodes;
   /**
    * @var int
    */
   public $audioChannelCount;
   protected $diarizationConfigType = SpeakerDiarizationConfig::class;
   protected $diarizationConfigDataType = '';
-  public $diarizationConfig;
   /**
    * @var bool
    */
@@ -72,7 +70,6 @@ class RecognitionConfig extends \Google\Collection
   public $maxAlternatives;
   protected $metadataType = RecognitionMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   /**
    * @var string
    */
@@ -87,7 +84,6 @@ class RecognitionConfig extends \Google\Collection
   public $sampleRateHertz;
   protected $speechContextsType = SpeechContext::class;
   protected $speechContextsDataType = 'array';
-  public $speechContexts = [];
   /**
    * @var bool
    */

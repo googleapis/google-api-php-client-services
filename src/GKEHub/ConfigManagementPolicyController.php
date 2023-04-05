@@ -31,14 +31,13 @@ class ConfigManagementPolicyController extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exemptableNamespaces = [];
+  public $exemptableNamespaces;
   /**
    * @var bool
    */
   public $logDeniesEnabled;
   protected $monitoringType = ConfigManagementPolicyControllerMonitoring::class;
   protected $monitoringDataType = '';
-  public $monitoring;
   /**
    * @var bool
    */

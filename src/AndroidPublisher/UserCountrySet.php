@@ -23,7 +23,7 @@ class UserCountrySet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $countryCodes = [];
+  public $countryCodes;
   /**
    * @var string
    */

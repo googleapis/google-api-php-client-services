@@ -37,6 +37,10 @@ class AgentTask extends \Google\Model
    * @var string
    */
   public $task;
+  /**
+   * @var string
+   */
+  public $taskSource;
 
   /**
    * @param string
@@ -107,6 +111,20 @@ class AgentTask extends \Google\Model
   public function getTask()
   {
     return $this->task;
+  }
+  /**
+   * @param string
+   */
+  public function setTaskSource($taskSource)
+  {
+    $this->taskSource = $taskSource;
+  }
+  /**
+   * @return string
+   */
+  public function getTaskSource()
+  {
+    return $this->taskSource;
   }
 }
 

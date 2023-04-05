@@ -35,42 +35,37 @@ class GoogleCloudDialogflowV2beta1QueryResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $diagnosticInfo = [];
+  public $diagnosticInfo;
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2beta1IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
-  public $fulfillmentMessages = [];
   /**
    * @var string
    */
   public $fulfillmentText;
   protected $intentType = GoogleCloudDialogflowV2beta1Intent::class;
   protected $intentDataType = '';
-  public $intent;
   /**
    * @var float
    */
   public $intentDetectionConfidence;
   protected $knowledgeAnswersType = GoogleCloudDialogflowV2beta1KnowledgeAnswers::class;
   protected $knowledgeAnswersDataType = '';
-  public $knowledgeAnswers;
   /**
    * @var string
    */
   public $languageCode;
   protected $outputContextsType = GoogleCloudDialogflowV2beta1Context::class;
   protected $outputContextsDataType = 'array';
-  public $outputContexts = [];
   /**
    * @var array[]
    */
-  public $parameters = [];
+  public $parameters;
   /**
    * @var string
    */
   public $queryText;
   protected $sentimentAnalysisResultType = GoogleCloudDialogflowV2beta1SentimentAnalysisResult::class;
   protected $sentimentAnalysisResultDataType = '';
-  public $sentimentAnalysisResult;
   /**
    * @var float
    */
@@ -78,7 +73,7 @@ class GoogleCloudDialogflowV2beta1QueryResult extends \Google\Collection
   /**
    * @var array[]
    */
-  public $webhookPayload = [];
+  public $webhookPayload;
   /**
    * @var string
    */

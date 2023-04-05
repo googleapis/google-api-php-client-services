@@ -34,7 +34,7 @@ class GoogleCloudBeyondcorpConnectorsV1alphaContainerHealthDetails extends \Goog
   /**
    * @var string[]
    */
-  public $extendedStatus = [];
+  public $extendedStatus;
 
   /**
    * @param string

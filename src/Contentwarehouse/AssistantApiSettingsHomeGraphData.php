@@ -27,7 +27,7 @@ class AssistantApiSettingsHomeGraphData extends \Google\Collection
   /**
    * @var array[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class AssistantApiSettingsHomeGraphData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedTraits = [];
+  public $supportedTraits;
   /**
    * @var bool
    */

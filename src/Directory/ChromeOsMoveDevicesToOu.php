@@ -23,7 +23,7 @@ class ChromeOsMoveDevicesToOu extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deviceIds = [];
+  public $deviceIds;
 
   /**
    * @param string[]

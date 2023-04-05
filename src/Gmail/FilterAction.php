@@ -23,7 +23,7 @@ class FilterAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $addLabelIds = [];
+  public $addLabelIds;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class FilterAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $removeLabelIds = [];
+  public $removeLabelIds;
 
   /**
    * @param string[]

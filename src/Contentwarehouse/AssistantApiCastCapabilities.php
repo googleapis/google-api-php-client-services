@@ -22,18 +22,16 @@ class AssistantApiCastCapabilities extends \Google\Collection
   protected $collection_key = 'cameraStreamSupportedProtocols';
   protected $cameraReceiverCapabilitiesType = AssistantApiCameraReceiverCapabilities::class;
   protected $cameraReceiverCapabilitiesDataType = '';
-  public $cameraReceiverCapabilities;
   /**
    * @var string[]
    */
-  public $cameraStreamSupportedProtocols = [];
+  public $cameraStreamSupportedProtocols;
   /**
    * @var bool
    */
   public $canReceiveCast;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
-  public $deviceId;
   /**
    * @var bool
    */

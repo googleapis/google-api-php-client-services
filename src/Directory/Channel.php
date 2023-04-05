@@ -38,7 +38,7 @@ class Channel extends \Google\Model
   /**
    * @var string[]
    */
-  public $params = [];
+  public $params;
   /**
    * @var bool
    */

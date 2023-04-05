@@ -23,14 +23,13 @@ class Zone extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableCpuPlatforms = [];
+  public $availableCpuPlatforms;
   /**
    * @var string
    */
   public $creationTimestamp;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
-  public $deprecated;
   /**
    * @var string
    */

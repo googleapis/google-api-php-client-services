@@ -35,18 +35,17 @@ class TransferParameters extends \Google\Collection
   /**
    * @var string[]
    */
-  public $nameServers = [];
+  public $nameServers;
   /**
    * @var string[]
    */
-  public $supportedPrivacy = [];
+  public $supportedPrivacy;
   /**
    * @var string
    */
   public $transferLockState;
   protected $yearlyPriceType = Money::class;
   protected $yearlyPriceDataType = '';
-  public $yearlyPrice;
 
   /**
    * @param string

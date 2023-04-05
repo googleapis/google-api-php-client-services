@@ -23,7 +23,7 @@ class StringInputs extends \Google\Collection
   /**
    * @var string[]
    */
-  public $value = [];
+  public $value;
 
   /**
    * @param string[]

@@ -22,7 +22,6 @@ class CloudfunctionsFunction extends \Google\Collection
   protected $collection_key = 'stateMessages';
   protected $buildConfigType = BuildConfig::class;
   protected $buildConfigDataType = '';
-  public $buildConfig;
   /**
    * @var string
    */
@@ -33,7 +32,6 @@ class CloudfunctionsFunction extends \Google\Collection
   public $environment;
   protected $eventTriggerType = EventTrigger::class;
   protected $eventTriggerDataType = '';
-  public $eventTrigger;
   /**
    * @var string
    */
@@ -41,21 +39,19 @@ class CloudfunctionsFunction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $serviceConfigType = ServiceConfig::class;
   protected $serviceConfigDataType = '';
-  public $serviceConfig;
   /**
    * @var string
    */
   public $state;
   protected $stateMessagesType = GoogleCloudFunctionsV2StateMessage::class;
   protected $stateMessagesDataType = 'array';
-  public $stateMessages = [];
   /**
    * @var string
    */

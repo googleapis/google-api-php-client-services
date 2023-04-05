@@ -26,10 +26,8 @@ class PackageData extends \Google\Collection
   public $cpeUri;
   protected $dependencyChainType = LanguagePackageDependency::class;
   protected $dependencyChainDataType = 'array';
-  public $dependencyChain = [];
   protected $fileLocationType = FileLocation::class;
   protected $fileLocationDataType = 'array';
-  public $fileLocation = [];
   /**
    * @var string
    */
@@ -53,7 +51,7 @@ class PackageData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $patchedCve = [];
+  public $patchedCve;
   /**
    * @var string
    */

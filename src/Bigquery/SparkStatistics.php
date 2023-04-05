@@ -27,10 +27,9 @@ class SparkStatistics extends \Google\Model
   /**
    * @var string[]
    */
-  public $endpoints = [];
+  public $endpoints;
   protected $loggingInfoType = SparkLoggingInfo::class;
   protected $loggingInfoDataType = '';
-  public $loggingInfo;
   /**
    * @var string
    */

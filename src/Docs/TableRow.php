@@ -31,20 +31,17 @@ class TableRow extends \Google\Collection
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds = [];
+  public $suggestedDeletionIds;
   /**
    * @var string[]
    */
-  public $suggestedInsertionIds = [];
+  public $suggestedInsertionIds;
   protected $suggestedTableRowStyleChangesType = SuggestedTableRowStyle::class;
   protected $suggestedTableRowStyleChangesDataType = 'map';
-  public $suggestedTableRowStyleChanges = [];
   protected $tableCellsType = TableCell::class;
   protected $tableCellsDataType = 'array';
-  public $tableCells = [];
   protected $tableRowStyleType = TableRowStyle::class;
   protected $tableRowStyleDataType = '';
-  public $tableRowStyle;
 
   /**
    * @param int

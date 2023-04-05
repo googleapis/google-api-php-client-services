@@ -31,11 +31,11 @@ class FreeListingsProgramStatusRegionStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $onboardingIssues = [];
+  public $onboardingIssues;
   /**
    * @var string[]
    */
-  public $regionCodes = [];
+  public $regionCodes;
   /**
    * @var string
    */
@@ -50,11 +50,10 @@ class FreeListingsProgramStatusRegionStatus extends \Google\Collection
   public $reviewIneligibilityReasonDescription;
   protected $reviewIneligibilityReasonDetailsType = FreeListingsProgramStatusReviewIneligibilityReasonDetails::class;
   protected $reviewIneligibilityReasonDetailsDataType = '';
-  public $reviewIneligibilityReasonDetails;
   /**
    * @var string[]
    */
-  public $reviewIssues = [];
+  public $reviewIssues;
 
   /**
    * @param string

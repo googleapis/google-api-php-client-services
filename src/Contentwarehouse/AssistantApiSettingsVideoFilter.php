@@ -27,7 +27,7 @@ class AssistantApiSettingsVideoFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableProviders = [];
+  public $availableProviders;
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class AssistantApiSettingsVideoFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $whitelistedProviders = [];
+  public $whitelistedProviders;
 
   /**
    * @param string

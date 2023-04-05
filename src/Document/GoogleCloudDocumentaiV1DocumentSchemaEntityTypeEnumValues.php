@@ -23,7 +23,7 @@ class GoogleCloudDocumentaiV1DocumentSchemaEntityTypeEnumValues extends \Google\
   /**
    * @var string[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param string[]

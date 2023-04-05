@@ -27,7 +27,7 @@ class QualityDniExtendedNewsPreviews extends \Google\Collection
   /**
    * @var string[]
    */
-  public $desnippetedCountryCode = [];
+  public $desnippetedCountryCode;
   /**
    * @var string
    */

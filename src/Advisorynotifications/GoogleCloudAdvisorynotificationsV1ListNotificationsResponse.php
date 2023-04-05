@@ -26,7 +26,7 @@ class GoogleCloudAdvisorynotificationsV1ListNotificationsResponse extends \Googl
   public $nextPageToken;
   protected $notificationsType = GoogleCloudAdvisorynotificationsV1Notification::class;
   protected $notificationsDataType = 'array';
-  public $notifications;
+  public $notifications = [];
   /**
    * @var int
    */

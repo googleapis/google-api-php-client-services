@@ -26,7 +26,6 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $argumentComposingMid;
   protected $attributeSignalsType = KnowledgeAnswersIntentQueryAttributeSignal::class;
   protected $attributeSignalsDataType = 'array';
-  public $attributeSignals = [];
   /**
    * @var string
    */
@@ -37,17 +36,14 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $confidenceLevel;
   protected $dedupedFuncallsType = KnowledgeAnswersIntentQueryFunctionCall::class;
   protected $dedupedFuncallsDataType = 'array';
-  public $dedupedFuncalls = [];
   protected $expressionStatusType = NlpSemanticParsingExpressionStatus::class;
   protected $expressionStatusDataType = '';
-  public $expressionStatus;
   /**
    * @var string
    */
   public $freefolksTrigger;
   protected $groundingSignalsType = KnowledgeAnswersIntentQueryGroundingSignals::class;
   protected $groundingSignalsDataType = '';
-  public $groundingSignals;
   /**
    * @var bool
    */
@@ -55,18 +51,17 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $intentAnnotationSources = [];
+  public $intentAnnotationSources;
   /**
    * @var string
    */
   public $intentComposingMid;
   protected $intentProvenanceType = KnowledgeAnswersIntentQueryArgumentProvenance::class;
   protected $intentProvenanceDataType = 'array';
-  public $intentProvenance = [];
   /**
    * @var string[]
    */
-  public $intentRelevantMid = [];
+  public $intentRelevantMid;
   /**
    * @var bool
    */
@@ -89,7 +84,6 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $isUiCompositionIntent;
   protected $localSignalsType = KnowledgeAnswersIntentQueryLocalSignals::class;
   protected $localSignalsDataType = '';
-  public $localSignals;
   /**
    * @var string
    */
@@ -97,30 +91,25 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $parsedDueToExperiment = [];
+  public $parsedDueToExperiment;
   protected $parsingSignalsType = KnowledgeAnswersIntentQueryParsingSignals::class;
   protected $parsingSignalsDataType = '';
-  public $parsingSignals;
   /**
    * @var float
    */
   public $prefulfillmentRankingScore;
   protected $prefulfillmentSignalsType = AssistantPrefulfillmentRankerPrefulfillmentSignals::class;
   protected $prefulfillmentSignalsDataType = '';
-  public $prefulfillmentSignals;
   protected $referentialResolutionType = KnowledgeAnswersDialogReferentialResolution::class;
   protected $referentialResolutionDataType = '';
-  public $referentialResolution;
   /**
    * @var string
    */
   public $refxSummaryNodeId;
   protected $responseMeaningSignalsType = KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals::class;
   protected $responseMeaningSignalsDataType = '';
-  public $responseMeaningSignals;
   protected $resultSupportType = UniversalsearchNewPackerKnowledgeResultSupport::class;
   protected $resultSupportDataType = 'array';
-  public $resultSupport = [];
   /**
    * @var string
    */
@@ -131,10 +120,8 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public $selectedByPrefulfillmentRanking;
   protected $shoppingIdsType = KnowledgeAnswersIntentQueryShoppingIds::class;
   protected $shoppingIdsDataType = '';
-  public $shoppingIds;
   protected $signalsFallbackIntentsType = KnowledgeAnswersIntentQuerySignalComputationFallbackIntent::class;
   protected $signalsFallbackIntentsDataType = 'array';
-  public $signalsFallbackIntents = [];
 
   /**
    * @param string

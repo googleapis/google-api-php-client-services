@@ -23,7 +23,7 @@ class DeviceTier extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deviceGroupNames = [];
+  public $deviceGroupNames;
   /**
    * @var int
    */

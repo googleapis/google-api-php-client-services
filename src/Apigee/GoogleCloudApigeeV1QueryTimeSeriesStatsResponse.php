@@ -23,14 +23,13 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $columns = [];
+  public $columns;
   /**
    * @var string
    */
   public $nextPageToken;
   protected $valuesType = GoogleCloudApigeeV1QueryTimeSeriesStatsResponseSequence::class;
   protected $valuesDataType = 'array';
-  public $values = [];
 
   /**
    * @param string[]

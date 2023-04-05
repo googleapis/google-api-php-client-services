@@ -23,18 +23,17 @@ class KnowledgeAnswersEntityType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $collection = [];
+  public $collection;
   /**
    * @var string[]
    */
-  public $excludedCollection = [];
+  public $excludedCollection;
   /**
    * @var string[]
    */
-  public $id = [];
+  public $id;
   protected $identifierType = KnowledgeAnswersIntentQueryIdentifier::class;
   protected $identifierDataType = 'array';
-  public $identifier = [];
   /**
    * @var bool
    */
@@ -45,11 +44,10 @@ class KnowledgeAnswersEntityType extends \Google\Collection
   public $includeGeolocationData;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
-  public $remodelings;
   /**
    * @var string[]
    */
-  public $stbrDomain = [];
+  public $stbrDomain;
 
   /**
    * @param string[]

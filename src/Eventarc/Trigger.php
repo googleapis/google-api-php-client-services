@@ -38,6 +38,10 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var string
+   */
+  public $eventDataContentType;
   protected $eventFiltersType = EventFilter::class;
   protected $eventFiltersDataType = 'array';
   public $eventFilters = [];
@@ -134,6 +138,20 @@ class Trigger extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param string
+   */
+  public function setEventDataContentType($eventDataContentType)
+  {
+    $this->eventDataContentType = $eventDataContentType;
+  }
+  /**
+   * @return string
+   */
+  public function getEventDataContentType()
+  {
+    return $this->eventDataContentType;
   }
   /**
    * @param EventFilter[]

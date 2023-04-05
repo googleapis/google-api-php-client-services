@@ -22,7 +22,6 @@ class ApigatewayListGatewaysResponse extends \Google\Collection
   protected $collection_key = 'unreachableLocations';
   protected $gatewaysType = ApigatewayGateway::class;
   protected $gatewaysDataType = 'array';
-  public $gateways = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ApigatewayListGatewaysResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachableLocations = [];
+  public $unreachableLocations;
 
   /**
    * @param ApigatewayGateway[]

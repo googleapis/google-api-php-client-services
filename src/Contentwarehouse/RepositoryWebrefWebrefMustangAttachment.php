@@ -23,52 +23,49 @@ class RepositoryWebrefWebrefMustangAttachment extends \Google\Collection
   /**
    * @var int[]
    */
-  public $categoryConfidenceE2 = [];
+  public $categoryConfidenceE2;
   /**
    * @var string[]
    */
-  public $categoryEncodedMid = [];
+  public $categoryEncodedMid;
   /**
    * @var int[]
    */
-  public $confidenceE2 = [];
+  public $confidenceE2;
   /**
    * @var string[]
    */
-  public $encodedMid = [];
+  public $encodedMid;
   protected $entityMetadataType = RepositoryWebrefWebrefAttachmentMetadata::class;
   protected $entityMetadataDataType = 'array';
-  public $entityMetadata = [];
   protected $iqlAttachmentType = KnowledgeAnswersIntentQueryIndexingIQLAttachment::class;
   protected $iqlAttachmentDataType = '';
-  public $iqlAttachment;
   /**
    * @var int[]
    */
-  public $isAuthorIndex = [];
+  public $isAuthorIndex;
   /**
    * @var int[]
    */
-  public $isPublisherIndex = [];
+  public $isPublisherIndex;
   /**
    * @var int[]
    */
-  public $referencePageIndex = [];
+  public $referencePageIndex;
   /**
    * @var int[]
    */
-  public $topicalityE2 = [];
+  public $topicalityE2;
   /**
    * @var string[]
    */
-  public $unboundIntentMid = [];
+  public $unboundIntentMid;
   /**
    * @var int[]
    */
-  public $unboundIntentScoreE2 = [];
+  public $unboundIntentScoreE2;
   protected $undermergedMembersType = RepositoryWebrefWebrefMustangAttachmentUndermergedMembers::class;
   protected $undermergedMembersDataType = 'array';
-  public $undermergedMembers = [];
 
   /**
    * @param int[]

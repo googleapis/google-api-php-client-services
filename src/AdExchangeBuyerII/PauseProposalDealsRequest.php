@@ -23,7 +23,7 @@ class PauseProposalDealsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $externalDealIds = [];
+  public $externalDealIds;
   /**
    * @var string
    */

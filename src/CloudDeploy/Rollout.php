@@ -23,7 +23,7 @@ class Rollout extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string
    */
@@ -75,17 +75,15 @@ class Rollout extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   /**
    * @var string
    */
   public $name;
   protected $phasesType = Phase::class;
   protected $phasesDataType = 'array';
-  public $phases = [];
   /**
    * @var string
    */

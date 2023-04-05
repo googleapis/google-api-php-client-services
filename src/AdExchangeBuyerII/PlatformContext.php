@@ -23,7 +23,7 @@ class PlatformContext extends \Google\Collection
   /**
    * @var string[]
    */
-  public $platforms = [];
+  public $platforms;
 
   /**
    * @param string[]

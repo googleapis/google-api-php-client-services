@@ -23,7 +23,7 @@ class InventorySourceAccessorsAdvertiserAccessors extends \Google\Collection
   /**
    * @var string[]
    */
-  public $advertiserIds = [];
+  public $advertiserIds;
 
   /**
    * @param string[]

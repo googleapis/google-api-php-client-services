@@ -31,7 +31,7 @@ class Domain extends \Google\Collection
   /**
    * @var string[]
    */
-  public $authorizedNetworks = [];
+  public $authorizedNetworks;
   /**
    * @var string
    */
@@ -43,11 +43,11 @@ class Domain extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $locations = [];
+  public $locations;
   /**
    * @var string
    */
@@ -66,7 +66,6 @@ class Domain extends \Google\Collection
   public $statusMessage;
   protected $trustsType = Trust::class;
   protected $trustsDataType = 'array';
-  public $trusts = [];
   /**
    * @var string
    */

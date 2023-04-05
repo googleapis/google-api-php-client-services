@@ -23,10 +23,9 @@ class GoogleCloudDatapipelinesV1DataflowJobDetails extends \Google\Model
    * @var int
    */
   public $currentWorkers;
-  public $resourceInfo = [];
+  public $resourceInfo;
   protected $sdkVersionType = GoogleCloudDatapipelinesV1SdkVersion::class;
   protected $sdkVersionDataType = '';
-  public $sdkVersion;
 
   /**
    * @param int

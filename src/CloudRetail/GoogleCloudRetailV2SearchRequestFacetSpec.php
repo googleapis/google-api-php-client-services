@@ -27,10 +27,9 @@ class GoogleCloudRetailV2SearchRequestFacetSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedFilterKeys = [];
+  public $excludedFilterKeys;
   protected $facetKeyType = GoogleCloudRetailV2SearchRequestFacetSpecFacetKey::class;
   protected $facetKeyDataType = '';
-  public $facetKey;
   /**
    * @var int
    */

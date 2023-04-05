@@ -22,7 +22,7 @@ class MetricStructuredName extends \Google\Model
   /**
    * @var string[]
    */
-  public $context = [];
+  public $context;
   /**
    * @var string
    */

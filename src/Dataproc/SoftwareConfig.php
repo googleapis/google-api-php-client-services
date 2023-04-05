@@ -27,11 +27,11 @@ class SoftwareConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $optionalComponents = [];
+  public $optionalComponents;
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
 
   /**
    * @param string

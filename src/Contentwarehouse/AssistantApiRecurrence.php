@@ -22,21 +22,18 @@ class AssistantApiRecurrence extends \Google\Collection
   protected $collection_key = 'weekOfMonth';
   protected $beginType = AssistantApiDate::class;
   protected $beginDataType = '';
-  public $begin;
   protected $blacklistedRangesType = AssistantApiRecurrenceDatetimeRange::class;
   protected $blacklistedRangesDataType = 'array';
-  public $blacklistedRanges = [];
   /**
    * @var int[]
    */
-  public $dayOfMonth = [];
+  public $dayOfMonth;
   /**
    * @var int[]
    */
-  public $dayOfWeek = [];
+  public $dayOfWeek;
   protected $endType = AssistantApiDate::class;
   protected $endDataType = '';
-  public $end;
   /**
    * @var int
    */
@@ -44,7 +41,7 @@ class AssistantApiRecurrence extends \Google\Collection
   /**
    * @var int[]
    */
-  public $monthOfYear = [];
+  public $monthOfYear;
   /**
    * @var int
    */
@@ -52,7 +49,7 @@ class AssistantApiRecurrence extends \Google\Collection
   /**
    * @var int[]
    */
-  public $weekOfMonth = [];
+  public $weekOfMonth;
 
   /**
    * @param AssistantApiDate

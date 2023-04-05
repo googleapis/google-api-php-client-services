@@ -22,14 +22,12 @@ class Certificate extends \Google\Collection
   protected $collection_key = 'pemCertificateChain';
   protected $certificateDescriptionType = CertificateDescription::class;
   protected $certificateDescriptionDataType = '';
-  public $certificateDescription;
   /**
    * @var string
    */
   public $certificateTemplate;
   protected $configType = CertificateConfig::class;
   protected $configDataType = '';
-  public $config;
   /**
    * @var string
    */
@@ -41,7 +39,7 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -57,14 +55,13 @@ class Certificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pemCertificateChain = [];
+  public $pemCertificateChain;
   /**
    * @var string
    */
   public $pemCsr;
   protected $revocationDetailsType = RevocationDetails::class;
   protected $revocationDetailsDataType = '';
-  public $revocationDetails;
   /**
    * @var string
    */

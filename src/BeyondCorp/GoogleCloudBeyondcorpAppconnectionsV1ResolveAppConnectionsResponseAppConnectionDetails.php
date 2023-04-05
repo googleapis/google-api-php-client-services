@@ -22,11 +22,10 @@ class GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConne
   protected $collection_key = 'recentMigVms';
   protected $appConnectionType = GoogleCloudBeyondcorpAppconnectionsV1AppConnection::class;
   protected $appConnectionDataType = '';
-  public $appConnection;
   /**
    * @var string[]
    */
-  public $recentMigVms = [];
+  public $recentMigVms;
 
   /**
    * @param GoogleCloudBeyondcorpAppconnectionsV1AppConnection

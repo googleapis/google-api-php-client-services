@@ -45,14 +45,12 @@ class Device extends \Google\Model
   public $model;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
-  public $policy;
   /**
    * @var string
    */
   public $product;
   protected $reportType = DeviceReport::class;
   protected $reportDataType = '';
-  public $report;
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class TranscodeSetting extends \Google\Collection
   /**
    * @var int[]
    */
-  public $enabledVideoFormats = [];
+  public $enabledVideoFormats;
   /**
    * @var string
    */

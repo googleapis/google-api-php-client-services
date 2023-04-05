@@ -23,7 +23,7 @@ class GoogleAppsCloudidentityDevicesV1ClientState extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assetTags = [];
+  public $assetTags;
   /**
    * @var string
    */
@@ -46,7 +46,6 @@ class GoogleAppsCloudidentityDevicesV1ClientState extends \Google\Collection
   public $healthScore;
   protected $keyValuePairsType = GoogleAppsCloudidentityDevicesV1CustomAttributeValue::class;
   protected $keyValuePairsDataType = 'map';
-  public $keyValuePairs = [];
   /**
    * @var string
    */

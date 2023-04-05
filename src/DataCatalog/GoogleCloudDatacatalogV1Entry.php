@@ -28,6 +28,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $businessContextType = GoogleCloudDatacatalogV1BusinessContext::class;
   protected $businessContextDataType = '';
   public $businessContext;
+  protected $cloudBigtableSystemSpecType = GoogleCloudDatacatalogV1CloudBigtableSystemSpec::class;
+  protected $cloudBigtableSystemSpecDataType = '';
+  public $cloudBigtableSystemSpec;
   protected $dataSourceType = GoogleCloudDatacatalogV1DataSource::class;
   protected $dataSourceDataType = '';
   public $dataSource;
@@ -83,6 +86,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $schemaType = GoogleCloudDatacatalogV1Schema::class;
   protected $schemaDataType = '';
   public $schema;
+  protected $serviceSpecType = GoogleCloudDatacatalogV1ServiceSpec::class;
+  protected $serviceSpecDataType = '';
+  public $serviceSpec;
   protected $sourceSystemTimestampsType = GoogleCloudDatacatalogV1SystemTimestamps::class;
   protected $sourceSystemTimestampsDataType = '';
   public $sourceSystemTimestamps;
@@ -146,6 +152,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getBusinessContext()
   {
     return $this->businessContext;
+  }
+  /**
+   * @param GoogleCloudDatacatalogV1CloudBigtableSystemSpec
+   */
+  public function setCloudBigtableSystemSpec(GoogleCloudDatacatalogV1CloudBigtableSystemSpec $cloudBigtableSystemSpec)
+  {
+    $this->cloudBigtableSystemSpec = $cloudBigtableSystemSpec;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1CloudBigtableSystemSpec
+   */
+  public function getCloudBigtableSystemSpec()
+  {
+    return $this->cloudBigtableSystemSpec;
   }
   /**
    * @param GoogleCloudDatacatalogV1DataSource
@@ -370,6 +390,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getSchema()
   {
     return $this->schema;
+  }
+  /**
+   * @param GoogleCloudDatacatalogV1ServiceSpec
+   */
+  public function setServiceSpec(GoogleCloudDatacatalogV1ServiceSpec $serviceSpec)
+  {
+    $this->serviceSpec = $serviceSpec;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1ServiceSpec
+   */
+  public function getServiceSpec()
+  {
+    return $this->serviceSpec;
   }
   /**
    * @param GoogleCloudDatacatalogV1SystemTimestamps

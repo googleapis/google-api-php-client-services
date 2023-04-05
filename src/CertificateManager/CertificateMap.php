@@ -30,11 +30,10 @@ class CertificateMap extends \Google\Collection
   public $description;
   protected $gclbTargetsType = GclbTarget::class;
   protected $gclbTargetsDataType = 'array';
-  public $gclbTargets = [];
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

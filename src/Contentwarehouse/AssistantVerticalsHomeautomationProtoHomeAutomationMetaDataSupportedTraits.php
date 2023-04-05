@@ -23,7 +23,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaDataSupportedTraits
   /**
    * @var string[]
    */
-  public $traits = [];
+  public $traits;
 
   /**
    * @param string[]

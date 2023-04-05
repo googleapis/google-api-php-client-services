@@ -27,7 +27,7 @@ class GoogleCloudApigeeV1Metric extends \Google\Collection
   /**
    * @var array[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param string

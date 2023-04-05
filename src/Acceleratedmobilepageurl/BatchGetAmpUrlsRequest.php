@@ -27,7 +27,7 @@ class BatchGetAmpUrlsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $urls = [];
+  public $urls;
 
   /**
    * @param string

@@ -35,7 +35,7 @@ class GoogleCloudApigeeV1OrganizationProjectMapping extends \Google\Collection
   /**
    * @var string[]
    */
-  public $projectIds = [];
+  public $projectIds;
 
   /**
    * @param string

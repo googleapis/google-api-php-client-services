@@ -24,7 +24,7 @@ class GoogleCloudRetailV2CustomAttribute extends \Google\Collection
    * @var bool
    */
   public $indexable;
-  public $numbers = [];
+  public $numbers;
   /**
    * @var bool
    */
@@ -32,7 +32,7 @@ class GoogleCloudRetailV2CustomAttribute extends \Google\Collection
   /**
    * @var string[]
    */
-  public $text = [];
+  public $text;
 
   /**
    * @param bool

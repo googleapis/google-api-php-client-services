@@ -27,14 +27,13 @@ class TemplateParameter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fields = [];
+  public $fields;
   /**
    * @var string
    */
   public $name;
   protected $validationType = ParameterValidation::class;
   protected $validationDataType = '';
-  public $validation;
 
   /**
    * @param string

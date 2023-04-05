@@ -23,14 +23,13 @@ class ExportAssetsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assetTypes = [];
+  public $assetTypes;
   /**
    * @var string
    */
   public $contentType;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
-  public $outputConfig;
   /**
    * @var string
    */
@@ -38,7 +37,7 @@ class ExportAssetsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relationshipTypes = [];
+  public $relationshipTypes;
 
   /**
    * @param string[]

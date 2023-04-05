@@ -23,7 +23,7 @@ class GeographicDivision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $alsoKnownAs = [];
+  public $alsoKnownAs;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GeographicDivision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $officeIndices = [];
+  public $officeIndices;
 
   /**
    * @param string[]

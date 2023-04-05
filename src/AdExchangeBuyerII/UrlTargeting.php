@@ -23,11 +23,11 @@ class UrlTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedUrls = [];
+  public $excludedUrls;
   /**
    * @var string[]
    */
-  public $targetedUrls = [];
+  public $targetedUrls;
 
   /**
    * @param string[]

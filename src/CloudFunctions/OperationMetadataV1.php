@@ -30,7 +30,7 @@ class OperationMetadataV1 extends \Google\Model
   /**
    * @var array[]
    */
-  public $request = [];
+  public $request;
   /**
    * @var string
    */

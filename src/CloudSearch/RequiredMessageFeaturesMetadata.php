@@ -23,7 +23,7 @@ class RequiredMessageFeaturesMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $requiredFeatures = [];
+  public $requiredFeatures;
 
   /**
    * @param string[]

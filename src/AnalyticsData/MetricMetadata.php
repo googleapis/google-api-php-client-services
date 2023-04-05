@@ -27,7 +27,7 @@ class MetricMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $blockedReasons = [];
+  public $blockedReasons;
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class MetricMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deprecatedApiNames = [];
+  public $deprecatedApiNames;
   /**
    * @var string
    */

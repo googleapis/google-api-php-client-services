@@ -23,7 +23,7 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
   /**
    * @var string[]
    */
-  public $allowedCredentialTypes = [];
+  public $allowedCredentialTypes;
   /**
    * @var bool
    */

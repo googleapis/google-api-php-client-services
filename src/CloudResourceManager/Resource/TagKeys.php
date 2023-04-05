@@ -113,6 +113,25 @@ class TagKeys extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
+   * Retrieves a TagKey by its namespaced name. This method will return
+   * `PERMISSION_DENIED` if the key does not exist or the user does not have
+   * permission to view it. (tagKeys.getNamespaced)
+   *
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string name Required. A namespaced tag key name in the format
+   * `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name "foo"
+   * under the organization with ID 42 or `r2-d2/bar` for a key with short name
+   * "bar" under the project `r2-d2`.
+   * @return TagKey
+   */
+  public function getNamespaced($optParams = [])
+  {
+    $params = [];
+    $params = array_merge($params, $optParams);
+    return $this->call('getNamespaced', [$params], TagKey::class);
+  }
+  /**
    * Lists all TagKeys for a parent resource. (tagKeys.listTagKeys)
    *
    * @param array $optParams Optional parameters.

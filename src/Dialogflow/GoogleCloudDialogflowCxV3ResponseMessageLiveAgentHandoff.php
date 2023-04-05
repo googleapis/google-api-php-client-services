@@ -22,7 +22,7 @@ class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff extends \Google\M
   /**
    * @var array[]
    */
-  public $metadata = [];
+  public $metadata;
 
   /**
    * @param array[]

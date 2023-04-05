@@ -27,7 +27,7 @@ class ServiceAccountConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tenantProjectRoles = [];
+  public $tenantProjectRoles;
 
   /**
    * @param string

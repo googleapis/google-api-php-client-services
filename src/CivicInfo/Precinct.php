@@ -27,7 +27,7 @@ class Precinct extends \Google\Collection
   /**
    * @var string[]
    */
-  public $contestId = [];
+  public $contestId;
   /**
    * @var string
    */
@@ -35,11 +35,11 @@ class Precinct extends \Google\Collection
   /**
    * @var string[]
    */
-  public $earlyVoteSiteId = [];
+  public $earlyVoteSiteId;
   /**
    * @var string[]
    */
-  public $electoralDistrictId = [];
+  public $electoralDistrictId;
   /**
    * @var string
    */
@@ -59,15 +59,15 @@ class Precinct extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ocdId = [];
+  public $ocdId;
   /**
    * @var string[]
    */
-  public $pollingLocationId = [];
+  public $pollingLocationId;
   /**
    * @var string[]
    */
-  public $spatialBoundaryId = [];
+  public $spatialBoundaryId;
   /**
    * @var string
    */

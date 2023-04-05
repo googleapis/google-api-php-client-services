@@ -23,7 +23,7 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage extends 
   /**
    * @var string[]
    */
-  public $paths = [];
+  public $paths;
   /**
    * @var string
    */

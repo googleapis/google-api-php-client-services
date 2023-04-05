@@ -26,34 +26,28 @@ class IndexingDupsLocalizedLocalizedCluster extends \Google\Collection
   public $boostSourceBlocker;
   protected $clusterType = IndexingDupsLocalizedLocalizedClusterCluster::class;
   protected $clusterDataType = 'array';
-  public $cluster = [];
   protected $deprecatedHreflangInfoType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo::class;
   protected $deprecatedHreflangInfoDataType = '';
-  public $deprecatedHreflangInfo;
   protected $deprecatedOutlinksInfoType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo::class;
   protected $deprecatedOutlinksInfoDataType = '';
-  public $deprecatedOutlinksInfo;
   /**
    * @var string
    */
   public $documentLanguage;
   protected $hreflangTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLinkSets::class;
   protected $hreflangTargetLinkDataType = '';
-  public $hreflangTargetLink;
   protected $inbodyTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLinkSets::class;
   protected $inbodyTargetLinkDataType = '';
-  public $inbodyTargetLink;
   protected $outlinksTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLinkSets::class;
   protected $outlinksTargetLinkDataType = '';
-  public $outlinksTargetLink;
   /**
    * @var string[]
    */
-  public $sitedupRuleId = [];
+  public $sitedupRuleId;
   /**
    * @var string[]
    */
-  public $warningMessage = [];
+  public $warningMessage;
 
   /**
    * @param bool

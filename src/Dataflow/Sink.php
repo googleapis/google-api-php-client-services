@@ -22,11 +22,11 @@ class Sink extends \Google\Model
   /**
    * @var array[]
    */
-  public $codec = [];
+  public $codec;
   /**
    * @var array[]
    */
-  public $spec = [];
+  public $spec;
 
   /**
    * @param array[]

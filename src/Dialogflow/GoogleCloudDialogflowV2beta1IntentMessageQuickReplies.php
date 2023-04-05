@@ -23,7 +23,7 @@ class GoogleCloudDialogflowV2beta1IntentMessageQuickReplies extends \Google\Coll
   /**
    * @var string[]
    */
-  public $quickReplies = [];
+  public $quickReplies;
   /**
    * @var string
    */

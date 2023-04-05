@@ -23,7 +23,7 @@ class TargetSslProxiesSetSslCertificatesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sslCertificates = [];
+  public $sslCertificates;
 
   /**
    * @param string[]

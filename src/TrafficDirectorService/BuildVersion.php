@@ -22,10 +22,9 @@ class BuildVersion extends \Google\Model
   /**
    * @var array[]
    */
-  public $metadata = [];
+  public $metadata;
   protected $versionType = SemanticVersion::class;
   protected $versionDataType = '';
-  public $version;
 
   /**
    * @param array[]

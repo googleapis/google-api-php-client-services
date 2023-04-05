@@ -31,7 +31,7 @@ class Gateway extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -39,7 +39,7 @@ class Gateway extends \Google\Collection
   /**
    * @var int[]
    */
-  public $ports = [];
+  public $ports;
   /**
    * @var string
    */

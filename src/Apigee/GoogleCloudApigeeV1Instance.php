@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1Instance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $consumerAcceptList = [];
+  public $consumerAcceptList;
   /**
    * @var string
    */

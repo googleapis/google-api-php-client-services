@@ -27,7 +27,7 @@ class Publishing extends \Google\Collection
   /**
    * @var string[]
    */
-  public $codeownerGithubTeams = [];
+  public $codeownerGithubTeams;
   /**
    * @var string
    */
@@ -42,10 +42,8 @@ class Publishing extends \Google\Collection
   public $githubLabel;
   protected $librarySettingsType = ClientLibrarySettings::class;
   protected $librarySettingsDataType = 'array';
-  public $librarySettings = [];
   protected $methodSettingsType = MethodSettings::class;
   protected $methodSettingsDataType = 'array';
-  public $methodSettings = [];
   /**
    * @var string
    */

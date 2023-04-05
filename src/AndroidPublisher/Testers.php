@@ -23,7 +23,7 @@ class Testers extends \Google\Collection
   /**
    * @var string[]
    */
-  public $googleGroups = [];
+  public $googleGroups;
 
   /**
    * @param string[]

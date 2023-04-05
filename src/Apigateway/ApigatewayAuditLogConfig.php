@@ -23,7 +23,7 @@ class ApigatewayAuditLogConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exemptedMembers = [];
+  public $exemptedMembers;
   /**
    * @var string
    */

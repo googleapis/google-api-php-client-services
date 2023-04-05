@@ -23,7 +23,7 @@ class GoogleApiServiceusageV1OperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceNames = [];
+  public $resourceNames;
 
   /**
    * @param string[]

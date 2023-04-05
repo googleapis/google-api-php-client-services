@@ -23,15 +23,15 @@ class GoogleCloudRetailV2RuleOnewaySynonymsAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $onewayTerms = [];
+  public $onewayTerms;
   /**
    * @var string[]
    */
-  public $queryTerms = [];
+  public $queryTerms;
   /**
    * @var string[]
    */
-  public $synonyms = [];
+  public $synonyms;
 
   /**
    * @param string[]

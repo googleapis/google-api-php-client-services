@@ -23,7 +23,7 @@ class AnalyticsDataimportDeleteUploadDataRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customDataImportUids = [];
+  public $customDataImportUids;
 
   /**
    * @param string[]

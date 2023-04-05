@@ -22,7 +22,6 @@ class ListDatacenterConnectorsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $datacenterConnectorsType = DatacenterConnector::class;
   protected $datacenterConnectorsDataType = 'array';
-  public $datacenterConnectors = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListDatacenterConnectorsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param DatacenterConnector[]

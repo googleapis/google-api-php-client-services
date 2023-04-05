@@ -23,14 +23,13 @@ class ProductSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $productId = [];
+  public $productId;
   /**
    * @var string
    */
   public $productSetBehavior;
   protected $productVisibilityType = ProductVisibility::class;
   protected $productVisibilityDataType = 'array';
-  public $productVisibility = [];
 
   /**
    * @param string[]

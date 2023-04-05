@@ -23,7 +23,7 @@ class AclFixRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $recipientEmails = [];
+  public $recipientEmails;
   /**
    * @var string
    */

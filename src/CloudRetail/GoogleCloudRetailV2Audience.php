@@ -23,11 +23,11 @@ class GoogleCloudRetailV2Audience extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ageGroups = [];
+  public $ageGroups;
   /**
    * @var string[]
    */
-  public $genders = [];
+  public $genders;
 
   /**
    * @param string[]

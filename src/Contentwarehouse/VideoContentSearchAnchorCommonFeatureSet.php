@@ -24,6 +24,14 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
    * @var float
    */
   public $anchorQbstDistance;
+  /**
+   * @var float
+   */
+  public $asrAverageBabelSimilarityScore;
+  /**
+   * @var float
+   */
+  public $asrMaximumBabelSimilarityScore;
   protected $bleurtFeaturesType = VideoContentSearchBleurtFeatures::class;
   protected $bleurtFeaturesDataType = '';
   public $bleurtFeatures;
@@ -35,6 +43,14 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
    * @var float
    */
   public $descartesScoreWithTitle;
+  /**
+   * @var float
+   */
+  public $descriptionAverageBabelSimilarityScore;
+  /**
+   * @var float
+   */
+  public $descriptionMaximumBabelSimilarityScore;
   /**
    * @var float
    */
@@ -98,6 +114,34 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
     return $this->anchorQbstDistance;
   }
   /**
+   * @param float
+   */
+  public function setAsrAverageBabelSimilarityScore($asrAverageBabelSimilarityScore)
+  {
+    $this->asrAverageBabelSimilarityScore = $asrAverageBabelSimilarityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getAsrAverageBabelSimilarityScore()
+  {
+    return $this->asrAverageBabelSimilarityScore;
+  }
+  /**
+   * @param float
+   */
+  public function setAsrMaximumBabelSimilarityScore($asrMaximumBabelSimilarityScore)
+  {
+    $this->asrMaximumBabelSimilarityScore = $asrMaximumBabelSimilarityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getAsrMaximumBabelSimilarityScore()
+  {
+    return $this->asrMaximumBabelSimilarityScore;
+  }
+  /**
    * @param VideoContentSearchBleurtFeatures
    */
   public function setBleurtFeatures(VideoContentSearchBleurtFeatures $bleurtFeatures)
@@ -138,6 +182,34 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
   public function getDescartesScoreWithTitle()
   {
     return $this->descartesScoreWithTitle;
+  }
+  /**
+   * @param float
+   */
+  public function setDescriptionAverageBabelSimilarityScore($descriptionAverageBabelSimilarityScore)
+  {
+    $this->descriptionAverageBabelSimilarityScore = $descriptionAverageBabelSimilarityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getDescriptionAverageBabelSimilarityScore()
+  {
+    return $this->descriptionAverageBabelSimilarityScore;
+  }
+  /**
+   * @param float
+   */
+  public function setDescriptionMaximumBabelSimilarityScore($descriptionMaximumBabelSimilarityScore)
+  {
+    $this->descriptionMaximumBabelSimilarityScore = $descriptionMaximumBabelSimilarityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getDescriptionMaximumBabelSimilarityScore()
+  {
+    return $this->descriptionMaximumBabelSimilarityScore;
   }
   /**
    * @param float

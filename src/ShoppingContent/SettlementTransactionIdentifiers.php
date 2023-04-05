@@ -39,7 +39,7 @@ class SettlementTransactionIdentifiers extends \Google\Collection
   /**
    * @var string[]
    */
-  public $shipmentIds = [];
+  public $shipmentIds;
   /**
    * @var string
    */

@@ -21,11 +21,10 @@ class ResultSetStats extends \Google\Model
 {
   protected $queryPlanType = QueryPlan::class;
   protected $queryPlanDataType = '';
-  public $queryPlan;
   /**
    * @var array[]
    */
-  public $queryStats = [];
+  public $queryStats;
   /**
    * @var string
    */

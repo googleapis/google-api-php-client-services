@@ -21,7 +21,6 @@ class V2LogEntry extends \Google\Model
 {
   protected $httpRequestType = V2HttpRequest::class;
   protected $httpRequestDataType = '';
-  public $httpRequest;
   /**
    * @var string
    */
@@ -29,33 +28,31 @@ class V2LogEntry extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $monitoredResourceLabels = [];
+  public $monitoredResourceLabels;
   /**
    * @var string
    */
   public $name;
   protected $operationType = V2LogEntryOperation::class;
   protected $operationDataType = '';
-  public $operation;
   /**
    * @var array[]
    */
-  public $protoPayload = [];
+  public $protoPayload;
   /**
    * @var string
    */
   public $severity;
   protected $sourceLocationType = V2LogEntrySourceLocation::class;
   protected $sourceLocationDataType = '';
-  public $sourceLocation;
   /**
    * @var array[]
    */
-  public $structPayload = [];
+  public $structPayload;
   /**
    * @var string
    */

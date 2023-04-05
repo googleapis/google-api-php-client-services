@@ -31,6 +31,10 @@ class JobConfigurationQuery extends \Google\Collection
   protected $connectionPropertiesDataType = 'array';
   public $connectionProperties = [];
   /**
+   * @var bool
+   */
+  public $continuous;
+  /**
    * @var string
    */
   public $createDisposition;
@@ -148,6 +152,20 @@ class JobConfigurationQuery extends \Google\Collection
   public function getConnectionProperties()
   {
     return $this->connectionProperties;
+  }
+  /**
+   * @param bool
+   */
+  public function setContinuous($continuous)
+  {
+    $this->continuous = $continuous;
+  }
+  /**
+   * @return bool
+   */
+  public function getContinuous()
+  {
+    return $this->continuous;
   }
   /**
    * @param string

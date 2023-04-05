@@ -26,18 +26,16 @@ class Enterprise extends \Google\Collection
   public $appAutoApprovalEnabled;
   protected $contactInfoType = ContactInfo::class;
   protected $contactInfoDataType = '';
-  public $contactInfo;
   /**
    * @var string[]
    */
-  public $enabledNotificationTypes = [];
+  public $enabledNotificationTypes;
   /**
    * @var string
    */
   public $enterpriseDisplayName;
   protected $logoType = ExternalData::class;
   protected $logoDataType = '';
-  public $logo;
   /**
    * @var string
    */
@@ -52,10 +50,8 @@ class Enterprise extends \Google\Collection
   public $pubsubTopic;
   protected $signinDetailsType = SigninDetail::class;
   protected $signinDetailsDataType = 'array';
-  public $signinDetails = [];
   protected $termsAndConditionsType = TermsAndConditions::class;
   protected $termsAndConditionsDataType = 'array';
-  public $termsAndConditions = [];
 
   /**
    * @param bool

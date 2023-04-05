@@ -23,7 +23,7 @@ class AdTechnologyProviders extends \Google\Collection
   /**
    * @var string[]
    */
-  public $detectedProviderIds = [];
+  public $detectedProviderIds;
   /**
    * @var bool
    */

@@ -27,7 +27,7 @@ class ServiceAccount extends \Google\Collection
   /**
    * @var string[]
    */
-  public $scope = [];
+  public $scope;
 
   /**
    * @param string

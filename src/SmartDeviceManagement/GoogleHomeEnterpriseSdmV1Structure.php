@@ -26,7 +26,7 @@ class GoogleHomeEnterpriseSdmV1Structure extends \Google\Model
   /**
    * @var array[]
    */
-  public $traits = [];
+  public $traits;
 
   /**
    * @param string

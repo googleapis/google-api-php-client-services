@@ -23,7 +23,7 @@ class NetworkTags extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags = [];
+  public $tags;
 
   /**
    * @param string[]

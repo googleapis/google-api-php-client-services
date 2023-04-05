@@ -30,7 +30,6 @@ class ReplicationCycle extends \Google\Collection
   public $endTime;
   protected $errorType = Status::class;
   protected $errorDataType = '';
-  public $error;
   /**
    * @var string
    */
@@ -49,14 +48,12 @@ class ReplicationCycle extends \Google\Collection
   public $state;
   protected $stepsType = CycleStep::class;
   protected $stepsDataType = 'array';
-  public $steps = [];
   /**
    * @var string
    */
   public $totalPauseDuration;
   protected $warningsType = MigrationWarning::class;
   protected $warningsDataType = 'array';
-  public $warnings = [];
 
   /**
    * @param int

@@ -27,10 +27,9 @@ class GoogleCloudApigeeV1ApiProxyRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $basepaths = [];
+  public $basepaths;
   protected $configurationVersionType = GoogleCloudApigeeV1ConfigVersion::class;
   protected $configurationVersionDataType = '';
-  public $configurationVersion;
   /**
    * @var string
    */
@@ -50,11 +49,11 @@ class GoogleCloudApigeeV1ApiProxyRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $entityMetaDataAsProperties = [];
+  public $entityMetaDataAsProperties;
   /**
    * @var string[]
    */
-  public $integrationEndpoints = [];
+  public $integrationEndpoints;
   /**
    * @var string
    */
@@ -66,22 +65,21 @@ class GoogleCloudApigeeV1ApiProxyRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $policies = [];
+  public $policies;
   /**
    * @var string[]
    */
-  public $proxies = [];
+  public $proxies;
   /**
    * @var string[]
    */
-  public $proxyEndpoints = [];
+  public $proxyEndpoints;
   protected $resourceFilesType = GoogleCloudApigeeV1ResourceFiles::class;
   protected $resourceFilesDataType = '';
-  public $resourceFiles;
   /**
    * @var string[]
    */
-  public $resources = [];
+  public $resources;
   /**
    * @var string
    */
@@ -89,7 +87,7 @@ class GoogleCloudApigeeV1ApiProxyRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sharedFlows = [];
+  public $sharedFlows;
   /**
    * @var string
    */
@@ -97,19 +95,19 @@ class GoogleCloudApigeeV1ApiProxyRevision extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetEndpoints = [];
+  public $targetEndpoints;
   /**
    * @var string[]
    */
-  public $targetServers = [];
+  public $targetServers;
   /**
    * @var string[]
    */
-  public $targets = [];
+  public $targets;
   /**
    * @var string[]
    */
-  public $teams = [];
+  public $teams;
   /**
    * @var string
    */

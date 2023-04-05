@@ -22,24 +22,20 @@ class InstanceProperties extends \Google\Collection
   protected $collection_key = 'serviceAccounts';
   protected $advancedMachineFeaturesType = AdvancedMachineFeatures::class;
   protected $advancedMachineFeaturesDataType = '';
-  public $advancedMachineFeatures;
   /**
    * @var bool
    */
   public $canIpForward;
   protected $confidentialInstanceConfigType = ConfidentialInstanceConfig::class;
   protected $confidentialInstanceConfigDataType = '';
-  public $confidentialInstanceConfig;
   /**
    * @var string
    */
   public $description;
   protected $disksType = AttachedDisk::class;
   protected $disksDataType = 'array';
-  public $disks = [];
   protected $guestAcceleratorsType = AcceleratorConfig::class;
   protected $guestAcceleratorsDataType = 'array';
-  public $guestAccelerators = [];
   /**
    * @var string
    */
@@ -47,51 +43,43 @@ class InstanceProperties extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $machineType;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   /**
    * @var string
    */
   public $minCpuPlatform;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
-  public $networkInterfaces = [];
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
-  public $networkPerformanceConfig;
   /**
    * @var string
    */
   public $privateIpv6GoogleAccess;
   protected $reservationAffinityType = ReservationAffinity::class;
   protected $reservationAffinityDataType = '';
-  public $reservationAffinity;
   /**
    * @var string[]
    */
-  public $resourceManagerTags = [];
+  public $resourceManagerTags;
   /**
    * @var string[]
    */
-  public $resourcePolicies = [];
+  public $resourcePolicies;
   protected $schedulingType = Scheduling::class;
   protected $schedulingDataType = '';
-  public $scheduling;
   protected $serviceAccountsType = ServiceAccount::class;
   protected $serviceAccountsDataType = 'array';
-  public $serviceAccounts = [];
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
-  public $shieldedInstanceConfig;
   protected $tagsType = Tags::class;
   protected $tagsDataType = '';
-  public $tags;
 
   /**
    * @param AdvancedMachineFeatures

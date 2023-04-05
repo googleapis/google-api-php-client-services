@@ -23,7 +23,7 @@ class GoogleCloudDialogflowCxV3EntityTypeEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $synonyms = [];
+  public $synonyms;
   /**
    * @var string
    */

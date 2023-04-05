@@ -27,7 +27,7 @@ class AppProcessInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $packageNames = [];
+  public $packageNames;
   /**
    * @var int
    */

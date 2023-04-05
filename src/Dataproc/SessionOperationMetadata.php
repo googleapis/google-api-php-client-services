@@ -35,7 +35,7 @@ class SessionOperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -51,7 +51,7 @@ class SessionOperationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $warnings = [];
+  public $warnings;
 
   /**
    * @param string

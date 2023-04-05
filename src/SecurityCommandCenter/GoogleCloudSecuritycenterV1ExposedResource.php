@@ -27,7 +27,7 @@ class GoogleCloudSecuritycenterV1ExposedResource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $methods = [];
+  public $methods;
   /**
    * @var string
    */

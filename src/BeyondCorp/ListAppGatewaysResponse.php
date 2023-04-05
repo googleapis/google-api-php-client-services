@@ -22,7 +22,6 @@ class ListAppGatewaysResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $appGatewaysType = AppGateway::class;
   protected $appGatewaysDataType = 'array';
-  public $appGateways = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListAppGatewaysResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param AppGateway[]

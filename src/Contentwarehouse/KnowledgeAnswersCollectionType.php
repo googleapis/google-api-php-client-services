@@ -23,10 +23,9 @@ class KnowledgeAnswersCollectionType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $collection = [];
+  public $collection;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
-  public $remodelings;
 
   /**
    * @param string[]

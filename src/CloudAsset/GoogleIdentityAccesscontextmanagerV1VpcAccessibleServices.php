@@ -23,7 +23,7 @@ class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices extends \Google\
   /**
    * @var string[]
    */
-  public $allowedServices = [];
+  public $allowedServices;
   /**
    * @var bool
    */

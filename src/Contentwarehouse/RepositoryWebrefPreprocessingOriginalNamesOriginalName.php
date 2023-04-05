@@ -28,7 +28,7 @@ class RepositoryWebrefPreprocessingOriginalNamesOriginalName extends \Google\Col
   /**
    * @var int[]
    */
-  public $source = [];
+  public $source;
   /**
    * @var string
    */

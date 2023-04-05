@@ -22,16 +22,12 @@ class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collec
   protected $collection_key = 'longRunningOperations';
   protected $documentType = GoogleCloudContentwarehouseV1Document::class;
   protected $documentDataType = '';
-  public $document;
   protected $longRunningOperationsType = GoogleLongrunningOperation::class;
   protected $longRunningOperationsDataType = 'array';
-  public $longRunningOperations = [];
   protected $metadataType = GoogleCloudContentwarehouseV1ResponseMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
   protected $ruleEngineOutputType = GoogleCloudContentwarehouseV1RuleEngineOutput::class;
   protected $ruleEngineOutputDataType = '';
-  public $ruleEngineOutput;
 
   /**
    * @param GoogleCloudContentwarehouseV1Document

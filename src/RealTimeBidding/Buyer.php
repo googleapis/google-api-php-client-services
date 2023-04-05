@@ -31,7 +31,7 @@ class Buyer extends \Google\Collection
   /**
    * @var string[]
    */
-  public $billingIds = [];
+  public $billingIds;
   /**
    * @var string
    */

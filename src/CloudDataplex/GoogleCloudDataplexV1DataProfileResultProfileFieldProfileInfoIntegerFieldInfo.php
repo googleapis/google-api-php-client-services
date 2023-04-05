@@ -32,7 +32,7 @@ class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldI
   /**
    * @var string[]
    */
-  public $quartiles = [];
+  public $quartiles;
   public $standardDeviation;
 
   public function setAverage($average)

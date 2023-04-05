@@ -23,7 +23,7 @@ class Clustering extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fields = [];
+  public $fields;
 
   /**
    * @param string[]

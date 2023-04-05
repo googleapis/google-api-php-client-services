@@ -26,7 +26,6 @@ class GoogleCloudDocumentaiV1ProcessorType extends \Google\Collection
   public $allowCreation;
   protected $availableLocationsType = GoogleCloudDocumentaiV1ProcessorTypeLocationInfo::class;
   protected $availableLocationsDataType = 'array';
-  public $availableLocations = [];
   /**
    * @var string
    */
@@ -42,7 +41,7 @@ class GoogleCloudDocumentaiV1ProcessorType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sampleDocumentUris = [];
+  public $sampleDocumentUris;
   /**
    * @var string
    */

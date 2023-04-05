@@ -27,7 +27,7 @@ class SecuritySettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $subjectAltNames = [];
+  public $subjectAltNames;
 
   /**
    * @param string

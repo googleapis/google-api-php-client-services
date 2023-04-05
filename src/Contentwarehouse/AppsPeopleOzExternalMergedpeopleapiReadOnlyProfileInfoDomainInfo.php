@@ -23,11 +23,11 @@ class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfoDomainInfo extends \
   /**
    * @var string[]
    */
-  public $domainBadge = [];
+  public $domainBadge;
   /**
    * @var string[]
    */
-  public $domainName = [];
+  public $domainName;
 
   /**
    * @param string[]

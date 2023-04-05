@@ -27,7 +27,7 @@ class GoogleCloudDialogflowCxV3beta1ResponseMessageText extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $text = [];
+  public $text;
 
   /**
    * @param bool

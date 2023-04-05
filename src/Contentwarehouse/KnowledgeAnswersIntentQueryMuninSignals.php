@@ -27,7 +27,7 @@ class KnowledgeAnswersIntentQueryMuninSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $softModifierCollection = [];
+  public $softModifierCollection;
   /**
    * @var bool
    */

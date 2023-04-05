@@ -31,7 +31,7 @@ class AccountstatusesCustomBatchRequestEntry extends \Google\Collection
   /**
    * @var string[]
    */
-  public $destinations = [];
+  public $destinations;
   /**
    * @var string
    */

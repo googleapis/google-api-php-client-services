@@ -21,7 +21,6 @@ class DestinationDataset extends \Google\Model
 {
   protected $datasetReferenceType = DestinationDatasetReference::class;
   protected $datasetReferenceDataType = '';
-  public $datasetReference;
   /**
    * @var string
    */
@@ -33,7 +32,7 @@ class DestinationDataset extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

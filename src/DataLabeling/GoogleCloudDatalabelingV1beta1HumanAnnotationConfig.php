@@ -31,7 +31,7 @@ class GoogleCloudDatalabelingV1beta1HumanAnnotationConfig extends \Google\Collec
   /**
    * @var string[]
    */
-  public $contributorEmails = [];
+  public $contributorEmails;
   /**
    * @var string
    */

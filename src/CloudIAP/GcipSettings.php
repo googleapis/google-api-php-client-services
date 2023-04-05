@@ -27,7 +27,7 @@ class GcipSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tenantIds = [];
+  public $tenantIds;
 
   /**
    * @param string

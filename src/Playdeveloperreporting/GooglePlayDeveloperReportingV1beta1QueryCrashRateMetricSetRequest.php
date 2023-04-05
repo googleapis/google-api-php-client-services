@@ -23,7 +23,7 @@ class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest extends 
   /**
    * @var string[]
    */
-  public $dimensions = [];
+  public $dimensions;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest extends 
   /**
    * @var string[]
    */
-  public $metrics = [];
+  public $metrics;
   /**
    * @var int
    */
@@ -42,7 +42,6 @@ class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest extends 
   public $pageToken;
   protected $timelineSpecType = GooglePlayDeveloperReportingV1beta1TimelineSpec::class;
   protected $timelineSpecDataType = '';
-  public $timelineSpec;
 
   /**
    * @param string[]

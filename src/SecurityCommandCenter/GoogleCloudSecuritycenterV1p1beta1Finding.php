@@ -53,7 +53,6 @@ class GoogleCloudSecuritycenterV1p1beta1Finding extends \Google\Model
   public $resourceName;
   protected $securityMarksType = GoogleCloudSecuritycenterV1p1beta1SecurityMarks::class;
   protected $securityMarksDataType = '';
-  public $securityMarks;
   /**
    * @var string
    */
@@ -61,7 +60,7 @@ class GoogleCloudSecuritycenterV1p1beta1Finding extends \Google\Model
   /**
    * @var array[]
    */
-  public $sourceProperties = [];
+  public $sourceProperties;
   /**
    * @var string
    */

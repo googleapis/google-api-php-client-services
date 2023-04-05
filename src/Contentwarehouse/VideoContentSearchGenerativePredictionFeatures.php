@@ -27,7 +27,7 @@ class VideoContentSearchGenerativePredictionFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $predictions = [];
+  public $predictions;
   /**
    * @var string
    */

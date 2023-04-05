@@ -23,7 +23,7 @@ class RepositoryWebrefLatentEntity extends \Google\Collection
   /**
    * @var float[]
    */
-  public $broaderImportance = [];
+  public $broaderImportance;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class RepositoryWebrefLatentEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sources = [];
+  public $sources;
 
   /**
    * @param float[]

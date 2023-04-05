@@ -22,7 +22,7 @@ class Material extends \Google\Model
   /**
    * @var string[]
    */
-  public $digest = [];
+  public $digest;
   /**
    * @var string
    */

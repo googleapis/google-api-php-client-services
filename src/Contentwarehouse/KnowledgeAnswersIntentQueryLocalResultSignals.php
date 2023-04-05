@@ -23,10 +23,9 @@ class KnowledgeAnswersIntentQueryLocalResultSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gcidIntent = [];
+  public $gcidIntent;
   protected $salientTermSetType = QualitySalientTermsSalientTermSet::class;
   protected $salientTermSetDataType = '';
-  public $salientTermSet;
 
   /**
    * @param string[]

@@ -26,7 +26,6 @@ class SslCertificateAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = SslCertificatesScopedList::class;
   protected $itemsDataType = 'map';
-  public $items = [];
   /**
    * @var string
    */
@@ -42,10 +41,9 @@ class SslCertificateAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables = [];
+  public $unreachables;
   protected $warningType = SslCertificateAggregatedListWarning::class;
   protected $warningDataType = '';
-  public $warning;
 
   /**
    * @param string

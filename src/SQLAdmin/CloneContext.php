@@ -26,11 +26,10 @@ class CloneContext extends \Google\Collection
   public $allocatedIpRange;
   protected $binLogCoordinatesType = BinLogCoordinates::class;
   protected $binLogCoordinatesDataType = '';
-  public $binLogCoordinates;
   /**
    * @var string[]
    */
-  public $databaseNames = [];
+  public $databaseNames;
   /**
    * @var string
    */

@@ -40,19 +40,18 @@ class NlpSemanticParsingQRefAnnotation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clusterSiblingMid = [];
+  public $clusterSiblingMid;
   protected $collectionMembershipType = NlpSemanticParsingQRefAnnotationCollectionMembership::class;
   protected $collectionMembershipDataType = 'array';
-  public $collectionMembership = [];
   public $confidenceScore;
   /**
    * @var string[]
    */
-  public $deprecatedEquivalentMids = [];
+  public $deprecatedEquivalentMids;
   /**
    * @var string[]
    */
-  public $deprecatedMdvcSupportingMid = [];
+  public $deprecatedMdvcSupportingMid;
   /**
    * @var string
    */
@@ -63,10 +62,8 @@ class NlpSemanticParsingQRefAnnotation extends \Google\Collection
   public $entityNumber;
   protected $entityRelationshipType = NlpSemanticParsingQRefAnnotationEntityRelationship::class;
   protected $entityRelationshipDataType = 'array';
-  public $entityRelationship = [];
   protected $entitySourceDataType = NlpSemanticParsingEntitySourceData::class;
   protected $entitySourceDataDataType = '';
-  public $entitySourceData;
   /**
    * @var string
    */
@@ -78,7 +75,7 @@ class NlpSemanticParsingQRefAnnotation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $globalProductClusterId = [];
+  public $globalProductClusterId;
   /**
    * @var int
    */
@@ -92,7 +89,6 @@ class NlpSemanticParsingQRefAnnotation extends \Google\Collection
    */
   public $isNimbleAnnotation;
   protected $locationDataType = '';
-  public $location;
   /**
    * @var int
    */
@@ -103,50 +99,40 @@ class NlpSemanticParsingQRefAnnotation extends \Google\Collection
   public $lowConfidence;
   protected $matchedLightweightTokenType = RepositoryWebrefLightweightTokensMatchedLightweightToken::class;
   protected $matchedLightweightTokenDataType = 'array';
-  public $matchedLightweightToken = [];
   protected $mdvcChildType = NlpSemanticParsingQRefAnnotation::class;
   protected $mdvcChildDataType = 'array';
-  public $mdvcChild = [];
   /**
    * @var string[]
    */
-  public $mdvcVerticals = [];
+  public $mdvcVerticals;
   protected $mergedImpliedEntityType = NlpSemanticParsingQRefAnnotation::class;
   protected $mergedImpliedEntityDataType = 'array';
-  public $mergedImpliedEntity = [];
   protected $merlotCategoryType = NlpSemanticParsingQRefAnnotationMerlotCategoryData::class;
   protected $merlotCategoryDataType = 'array';
-  public $merlotCategory = [];
   protected $otherMetadataType = Proto2BridgeMessageSet::class;
   protected $otherMetadataDataType = '';
-  public $otherMetadata;
   protected $oysterIdType = GeostoreFeatureIdProto::class;
   protected $oysterIdDataType = '';
-  public $oysterId;
   protected $personalSummaryNodeChildType = NlpSemanticParsingQRefAnnotation::class;
   protected $personalSummaryNodeChildDataType = 'array';
-  public $personalSummaryNodeChild = [];
   /**
    * @var string[]
    */
-  public $productLineId = [];
+  public $productLineId;
   /**
    * @var float
    */
   public $referenceScore;
   protected $relatedEntityType = NlpSemanticParsingRelatedEntity::class;
   protected $relatedEntityDataType = 'array';
-  public $relatedEntity = [];
   /**
    * @var float
    */
   public $resolutionScore;
   protected $sourceTypeListType = CopleySourceTypeList::class;
   protected $sourceTypeListDataType = '';
-  public $sourceTypeList;
   protected $subClusterType = NlpSemanticParsingQRefAnnotationSubCluster::class;
   protected $subClusterDataType = 'array';
-  public $subCluster = [];
 
   /**
    * @param bool

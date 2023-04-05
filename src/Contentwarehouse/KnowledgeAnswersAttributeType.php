@@ -23,14 +23,13 @@ class KnowledgeAnswersAttributeType extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attribute = [];
+  public $attribute;
   /**
    * @var string
    */
   public $pivotEntitySlot;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
-  public $remodelings;
 
   /**
    * @param string[]

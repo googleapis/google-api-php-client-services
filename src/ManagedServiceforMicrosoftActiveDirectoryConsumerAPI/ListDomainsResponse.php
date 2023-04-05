@@ -22,7 +22,6 @@ class ListDomainsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $domainsType = Domain::class;
   protected $domainsDataType = 'array';
-  public $domains = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListDomainsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param Domain[]

@@ -31,23 +31,23 @@ class LabelFieldModification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $setDateValues = [];
+  public $setDateValues;
   /**
    * @var string[]
    */
-  public $setIntegerValues = [];
+  public $setIntegerValues;
   /**
    * @var string[]
    */
-  public $setSelectionValues = [];
+  public $setSelectionValues;
   /**
    * @var string[]
    */
-  public $setTextValues = [];
+  public $setTextValues;
   /**
    * @var string[]
    */
-  public $setUserValues = [];
+  public $setUserValues;
   /**
    * @var bool
    */

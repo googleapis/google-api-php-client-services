@@ -22,25 +22,22 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   protected $collection_key = 'subcategory';
   protected $appTypeDataType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationAppTypeData::class;
   protected $appTypeDataDataType = '';
-  public $appTypeData;
   /**
    * @var string
    */
   public $applicationUrl;
   protected $breadcrumbsType = RepositoryAnnotationsRdfaBreadcrumbs::class;
   protected $breadcrumbsDataType = '';
-  public $breadcrumbs;
   /**
    * @var string[]
    */
-  public $category = [];
+  public $category;
   /**
    * @var string[]
    */
-  public $countriesSupported = [];
+  public $countriesSupported;
   protected $countryPricesType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationCountryPrice::class;
   protected $countryPricesDataType = 'array';
-  public $countryPrices = [];
   /**
    * @var string
    */
@@ -60,15 +57,15 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var int[]
    */
-  public $extractedIconColors = [];
+  public $extractedIconColors;
   /**
    * @var string[]
    */
-  public $filteringTag = [];
+  public $filteringTag;
   /**
    * @var string[]
    */
-  public $genre = [];
+  public $genre;
   /**
    * @var bool
    */
@@ -83,7 +80,6 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   public $iconUrlThumbnail;
   protected $imageDataType = QualityCalypsoAppsUniversalImageData::class;
   protected $imageDataDataType = '';
-  public $imageData;
   /**
    * @var bool
    */
@@ -102,10 +98,8 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   public $lastUpdated;
   protected $liveOpDetailsType = QualityCalypsoAppsUniversalAuLiveOpsDetailInfo::class;
   protected $liveOpDetailsDataType = '';
-  public $liveOpDetails;
   protected $localizedTrustedGenomeType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationLocalizedTrustedGenome::class;
   protected $localizedTrustedGenomeDataType = '';
-  public $localizedTrustedGenome;
   /**
    * @var string
    */
@@ -121,7 +115,7 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $operatingSystems = [];
+  public $operatingSystems;
   /**
    * @var bool
    */
@@ -133,11 +127,11 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $physicalDeviceTags = [];
+  public $physicalDeviceTags;
   /**
    * @var string[]
    */
-  public $platformTags = [];
+  public $platformTags;
   /**
    * @var float
    */
@@ -148,7 +142,6 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   public $price;
   protected $rankDataType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplicationRankData::class;
   protected $rankDataDataType = '';
-  public $rankData;
   /**
    * @var string
    */
@@ -172,11 +165,11 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $screenUrlHref = [];
+  public $screenUrlHref;
   /**
    * @var string[]
    */
-  public $screenUrlThumbnail = [];
+  public $screenUrlThumbnail;
   /**
    * @var string
    */
@@ -184,7 +177,7 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var string[]
    */
-  public $subcategory = [];
+  public $subcategory;
   /**
    * @var bool
    */
@@ -203,7 +196,6 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   public $totalRatingCount;
   protected $trustedGenomeDataType = VendingConsumerProtoTrustedGenomeAnnotation::class;
   protected $trustedGenomeDataDataType = 'map';
-  public $trustedGenomeData = [];
   /**
    * @var string
    */

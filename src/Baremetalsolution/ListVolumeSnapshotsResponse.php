@@ -27,10 +27,9 @@ class ListVolumeSnapshotsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
   protected $volumeSnapshotsType = VolumeSnapshot::class;
   protected $volumeSnapshotsDataType = 'array';
-  public $volumeSnapshots = [];
 
   /**
    * @param string

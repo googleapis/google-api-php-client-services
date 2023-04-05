@@ -23,7 +23,7 @@ class GoogleCloudRetailV2Control extends \Google\Collection
   /**
    * @var string[]
    */
-  public $associatedServingConfigIds = [];
+  public $associatedServingConfigIds;
   /**
    * @var string
    */
@@ -34,15 +34,14 @@ class GoogleCloudRetailV2Control extends \Google\Collection
   public $name;
   protected $ruleType = GoogleCloudRetailV2Rule::class;
   protected $ruleDataType = '';
-  public $rule;
   /**
    * @var string[]
    */
-  public $searchSolutionUseCase = [];
+  public $searchSolutionUseCase;
   /**
    * @var string[]
    */
-  public $solutionTypes = [];
+  public $solutionTypes;
 
   /**
    * @param string[]

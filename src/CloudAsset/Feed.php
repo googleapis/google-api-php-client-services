@@ -23,21 +23,19 @@ class Feed extends \Google\Collection
   /**
    * @var string[]
    */
-  public $assetNames = [];
+  public $assetNames;
   /**
    * @var string[]
    */
-  public $assetTypes = [];
+  public $assetTypes;
   protected $conditionType = Expr::class;
   protected $conditionDataType = '';
-  public $condition;
   /**
    * @var string
    */
   public $contentType;
   protected $feedOutputConfigType = FeedOutputConfig::class;
   protected $feedOutputConfigDataType = '';
-  public $feedOutputConfig;
   /**
    * @var string
    */
@@ -45,7 +43,7 @@ class Feed extends \Google\Collection
   /**
    * @var string[]
    */
-  public $relationshipTypes = [];
+  public $relationshipTypes;
 
   /**
    * @param string[]

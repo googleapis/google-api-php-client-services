@@ -23,7 +23,7 @@ class Command extends \Google\Collection
   /**
    * @var string[]
    */
-  public $args = [];
+  public $args;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class Command extends \Google\Collection
   /**
    * @var string[]
    */
-  public $env = [];
+  public $env;
   /**
    * @var string
    */
@@ -43,7 +43,7 @@ class Command extends \Google\Collection
   /**
    * @var string[]
    */
-  public $waitFor = [];
+  public $waitFor;
 
   /**
    * @param string[]

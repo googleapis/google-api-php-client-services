@@ -23,7 +23,7 @@ class EnterpriseCrmFrontendsEventbusProtoStringParameterArray extends \Google\Co
   /**
    * @var string[]
    */
-  public $stringValues = [];
+  public $stringValues;
 
   /**
    * @param string[]

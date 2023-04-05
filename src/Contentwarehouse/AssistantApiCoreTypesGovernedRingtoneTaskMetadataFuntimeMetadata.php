@@ -23,7 +23,7 @@ class AssistantApiCoreTypesGovernedRingtoneTaskMetadataFuntimeMetadata extends \
   /**
    * @var string[]
    */
-  public $agentIds = [];
+  public $agentIds;
   /**
    * @var string
    */

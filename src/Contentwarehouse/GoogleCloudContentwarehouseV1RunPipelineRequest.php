@@ -21,16 +21,12 @@ class GoogleCloudContentwarehouseV1RunPipelineRequest extends \Google\Model
 {
   protected $exportCdwPipelineType = GoogleCloudContentwarehouseV1ExportToCdwPipeline::class;
   protected $exportCdwPipelineDataType = '';
-  public $exportCdwPipeline;
   protected $gcsIngestPipelineType = GoogleCloudContentwarehouseV1GcsIngestPipeline::class;
   protected $gcsIngestPipelineDataType = '';
-  public $gcsIngestPipeline;
   protected $gcsIngestWithDocAiProcessorsPipelineType = GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline::class;
   protected $gcsIngestWithDocAiProcessorsPipelineDataType = '';
-  public $gcsIngestWithDocAiProcessorsPipeline;
   protected $processWithDocAiPipelineType = GoogleCloudContentwarehouseV1ProcessWithDocAi::class;
   protected $processWithDocAiPipelineDataType = '';
-  public $processWithDocAiPipeline;
 
   /**
    * @param GoogleCloudContentwarehouseV1ExportToCdwPipeline

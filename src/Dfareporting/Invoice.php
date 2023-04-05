@@ -25,7 +25,6 @@ class Invoice extends \Google\Collection
   ];
   protected $campaignSummariesType = CampaignSummary::class;
   protected $campaignSummariesDataType = 'array';
-  public $campaignSummaries = [];
   /**
    * @var string
    */
@@ -73,7 +72,7 @@ class Invoice extends \Google\Collection
   /**
    * @var string[]
    */
-  public $replacedInvoiceIds = [];
+  public $replacedInvoiceIds;
   /**
    * @var string
    */

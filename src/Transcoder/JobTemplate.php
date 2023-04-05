@@ -21,11 +21,10 @@ class JobTemplate extends \Google\Model
 {
   protected $configType = JobConfig::class;
   protected $configDataType = '';
-  public $config;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

@@ -94,6 +94,9 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $expireTime;
+  protected $fleetType = Fleet::class;
+  protected $fleetDataType = '';
+  public $fleet;
   /**
    * @var string
    */
@@ -534,6 +537,20 @@ class Cluster extends \Google\Collection
   public function getExpireTime()
   {
     return $this->expireTime;
+  }
+  /**
+   * @param Fleet
+   */
+  public function setFleet(Fleet $fleet)
+  {
+    $this->fleet = $fleet;
+  }
+  /**
+   * @return Fleet
+   */
+  public function getFleet()
+  {
+    return $this->fleet;
   }
   /**
    * @param string

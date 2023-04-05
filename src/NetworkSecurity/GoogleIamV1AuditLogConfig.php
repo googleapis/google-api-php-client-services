@@ -23,7 +23,7 @@ class GoogleIamV1AuditLogConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $exemptedMembers = [];
+  public $exemptedMembers;
   /**
    * @var string
    */

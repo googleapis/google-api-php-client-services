@@ -22,7 +22,7 @@ class BasicService extends \Google\Model
   /**
    * @var string[]
    */
-  public $serviceLabels = [];
+  public $serviceLabels;
   /**
    * @var string
    */

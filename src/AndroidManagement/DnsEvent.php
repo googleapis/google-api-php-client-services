@@ -27,7 +27,7 @@ class DnsEvent extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ipAddresses = [];
+  public $ipAddresses;
   /**
    * @var string
    */

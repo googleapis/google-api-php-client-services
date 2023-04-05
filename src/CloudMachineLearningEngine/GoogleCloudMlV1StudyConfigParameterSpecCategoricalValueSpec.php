@@ -23,7 +23,7 @@ class GoogleCloudMlV1StudyConfigParameterSpecCategoricalValueSpec extends \Googl
   /**
    * @var string[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param string[]

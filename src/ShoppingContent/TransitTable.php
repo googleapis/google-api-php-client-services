@@ -23,14 +23,13 @@ class TransitTable extends \Google\Collection
   /**
    * @var string[]
    */
-  public $postalCodeGroupNames = [];
+  public $postalCodeGroupNames;
   protected $rowsType = TransitTableTransitTimeRow::class;
   protected $rowsDataType = 'array';
-  public $rows = [];
   /**
    * @var string[]
    */
-  public $transitTimeLabels = [];
+  public $transitTimeLabels;
 
   /**
    * @param string[]

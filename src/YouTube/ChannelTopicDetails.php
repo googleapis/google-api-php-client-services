@@ -23,11 +23,11 @@ class ChannelTopicDetails extends \Google\Collection
   /**
    * @var string[]
    */
-  public $topicCategories = [];
+  public $topicCategories;
   /**
    * @var string[]
    */
-  public $topicIds = [];
+  public $topicIds;
 
   /**
    * @param string[]

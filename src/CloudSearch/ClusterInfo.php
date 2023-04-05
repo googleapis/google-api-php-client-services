@@ -23,7 +23,7 @@ class ClusterInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clusterId = [];
+  public $clusterId;
   /**
    * @var bool
    */

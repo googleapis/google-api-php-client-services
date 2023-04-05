@@ -23,7 +23,7 @@ class V2BrowserKeyRestrictions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedReferrers = [];
+  public $allowedReferrers;
 
   /**
    * @param string[]

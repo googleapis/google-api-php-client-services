@@ -23,23 +23,19 @@ class RateGroup extends \Google\Collection
   /**
    * @var string[]
    */
-  public $applicableShippingLabels = [];
+  public $applicableShippingLabels;
   protected $carrierRatesType = CarrierRate::class;
   protected $carrierRatesDataType = 'array';
-  public $carrierRates = [];
   protected $mainTableType = Table::class;
   protected $mainTableDataType = '';
-  public $mainTable;
   /**
    * @var string
    */
   public $name;
   protected $singleValueType = Value::class;
   protected $singleValueDataType = '';
-  public $singleValue;
   protected $subtablesType = Table::class;
   protected $subtablesDataType = 'array';
-  public $subtables = [];
 
   /**
    * @param string[]

@@ -27,7 +27,7 @@ class ConcatenateExpression extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimensionNames = [];
+  public $dimensionNames;
 
   /**
    * @param string

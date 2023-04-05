@@ -22,17 +22,14 @@ class NodeConfig extends \Google\Collection
   protected $collection_key = 'taints';
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
-  public $accelerators = [];
   protected $advancedMachineFeaturesType = AdvancedMachineFeatures::class;
   protected $advancedMachineFeaturesDataType = '';
-  public $advancedMachineFeatures;
   /**
    * @var string
    */
   public $bootDiskKmsKey;
   protected $confidentialNodesType = ConfidentialNodes::class;
   protected $confidentialNodesDataType = '';
-  public $confidentialNodes;
   /**
    * @var int
    */
@@ -43,40 +40,32 @@ class NodeConfig extends \Google\Collection
   public $diskType;
   protected $ephemeralStorageLocalSsdConfigType = EphemeralStorageLocalSsdConfig::class;
   protected $ephemeralStorageLocalSsdConfigDataType = '';
-  public $ephemeralStorageLocalSsdConfig;
   protected $fastSocketType = FastSocket::class;
   protected $fastSocketDataType = '';
-  public $fastSocket;
   protected $gcfsConfigType = GcfsConfig::class;
   protected $gcfsConfigDataType = '';
-  public $gcfsConfig;
   protected $gvnicType = VirtualNIC::class;
   protected $gvnicDataType = '';
-  public $gvnic;
   /**
    * @var string
    */
   public $imageType;
   protected $kubeletConfigType = NodeKubeletConfig::class;
   protected $kubeletConfigDataType = '';
-  public $kubeletConfig;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $linuxNodeConfigType = LinuxNodeConfig::class;
   protected $linuxNodeConfigDataType = '';
-  public $linuxNodeConfig;
   protected $localNvmeSsdBlockConfigType = LocalNvmeSsdBlockConfig::class;
   protected $localNvmeSsdBlockConfigDataType = '';
-  public $localNvmeSsdBlockConfig;
   /**
    * @var int
    */
   public $localSsdCount;
   protected $loggingConfigType = NodePoolLoggingConfig::class;
   protected $loggingConfigDataType = '';
-  public $loggingConfig;
   /**
    * @var string
    */
@@ -84,7 +73,7 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metadata = [];
+  public $metadata;
   /**
    * @var string
    */
@@ -96,28 +85,25 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $oauthScopes = [];
+  public $oauthScopes;
   /**
    * @var bool
    */
   public $preemptible;
   protected $reservationAffinityType = ReservationAffinity::class;
   protected $reservationAffinityDataType = '';
-  public $reservationAffinity;
   /**
    * @var string[]
    */
-  public $resourceLabels = [];
+  public $resourceLabels;
   protected $sandboxConfigType = SandboxConfig::class;
   protected $sandboxConfigDataType = '';
-  public $sandboxConfig;
   /**
    * @var string
    */
   public $serviceAccount;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
-  public $shieldedInstanceConfig;
   /**
    * @var bool
    */
@@ -125,16 +111,13 @@ class NodeConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags = [];
+  public $tags;
   protected $taintsType = NodeTaint::class;
   protected $taintsDataType = 'array';
-  public $taints = [];
   protected $windowsNodeConfigType = WindowsNodeConfig::class;
   protected $windowsNodeConfigDataType = '';
-  public $windowsNodeConfig;
   protected $workloadMetadataConfigType = WorkloadMetadataConfig::class;
   protected $workloadMetadataConfigDataType = '';
-  public $workloadMetadataConfig;
 
   /**
    * @param AcceleratorConfig[]

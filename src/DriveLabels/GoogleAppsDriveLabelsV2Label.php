@@ -36,6 +36,10 @@ class GoogleAppsDriveLabelsV2Label extends \Google\Collection
   /**
    * @var string
    */
+  public $customer;
+  /**
+   * @var string
+   */
   public $disableTime;
   protected $disablerType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $disablerDataType = '';
@@ -148,6 +152,20 @@ class GoogleAppsDriveLabelsV2Label extends \Google\Collection
   public function getCreator()
   {
     return $this->creator;
+  }
+  /**
+   * @param string
+   */
+  public function setCustomer($customer)
+  {
+    $this->customer = $customer;
+  }
+  /**
+   * @return string
+   */
+  public function getCustomer()
+  {
+    return $this->customer;
   }
   /**
    * @param string

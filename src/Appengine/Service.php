@@ -26,17 +26,15 @@ class Service extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $networkSettingsType = NetworkSettings::class;
   protected $networkSettingsDataType = '';
-  public $networkSettings;
   protected $splitType = TrafficSplit::class;
   protected $splitDataType = '';
-  public $split;
 
   /**
    * @param string

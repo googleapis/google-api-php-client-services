@@ -21,10 +21,8 @@ class ShardingOption extends \Google\Model
 {
   protected $manualShardingType = ManualSharding::class;
   protected $manualShardingDataType = '';
-  public $manualSharding;
   protected $uniformShardingType = UniformSharding::class;
   protected $uniformShardingDataType = '';
-  public $uniformSharding;
 
   /**
    * @param ManualSharding

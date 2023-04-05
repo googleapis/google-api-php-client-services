@@ -26,7 +26,7 @@ class AchievementResetMultipleForAllRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $achievementIds = [];
+  public $achievementIds;
   /**
    * @var string
    */

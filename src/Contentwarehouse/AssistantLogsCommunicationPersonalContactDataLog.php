@@ -22,7 +22,6 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   protected $collection_key = 'systemContactGroupId';
   protected $accountProvenanceType = AssistantLogsCommunicationGoogleAccountProvenance::class;
   protected $accountProvenanceDataType = '';
-  public $accountProvenance;
   /**
    * @var float
    */
@@ -34,14 +33,13 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   /**
    * @var int[]
    */
-  public $deviceContactAttributes = [];
+  public $deviceContactAttributes;
   /**
    * @var int
    */
   public $emailIdCount;
   protected $fuzzyNgramMatchType = AssistantLogsCommunicationFuzzyNgramMatchLog::class;
   protected $fuzzyNgramMatchDataType = 'array';
-  public $fuzzyNgramMatch = [];
   /**
    * @var string
    */
@@ -77,21 +75,19 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $matchedStarlightLookupName = [];
+  public $matchedStarlightLookupName;
   protected $metadataType = AssistantLogsCommunicationPersonMetadataLog::class;
   protected $metadataDataType = '';
-  public $metadata;
   /**
    * @var int[]
    */
-  public $nameMatchedContactIndex = [];
+  public $nameMatchedContactIndex;
   /**
    * @var string
    */
   public $originalQueryName;
   protected $phoneType = AssistantLogsCommunicationPhoneLog::class;
   protected $phoneDataType = 'array';
-  public $phone = [];
   /**
    * @var int
    */
@@ -114,10 +110,8 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   public $relationshipMemoryCount;
   protected $selectedPhoneType = AssistantLogsCommunicationPhoneLog::class;
   protected $selectedPhoneDataType = '';
-  public $selectedPhone;
   protected $shortcutContactInfoType = MajelContactInformationShortcutInformation::class;
   protected $shortcutContactInfoDataType = '';
-  public $shortcutContactInfo;
   /**
    * @var string
    */
@@ -125,7 +119,7 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   /**
    * @var int[]
    */
-  public $systemContactGroupId = [];
+  public $systemContactGroupId;
   /**
    * @var int
    */

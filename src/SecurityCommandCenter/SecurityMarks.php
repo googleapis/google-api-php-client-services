@@ -26,7 +26,7 @@ class SecurityMarks extends \Google\Model
   /**
    * @var string[]
    */
-  public $marks = [];
+  public $marks;
   /**
    * @var string
    */

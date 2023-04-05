@@ -23,7 +23,7 @@ class NlpSemanticParsingLocalChainMemberConstraint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $chainIds = [];
+  public $chainIds;
 
   /**
    * @param string[]

@@ -23,11 +23,11 @@ class NumericTargetingDimension extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedIds = [];
+  public $excludedIds;
   /**
    * @var string[]
    */
-  public $includedIds = [];
+  public $includedIds;
 
   /**
    * @param string[]

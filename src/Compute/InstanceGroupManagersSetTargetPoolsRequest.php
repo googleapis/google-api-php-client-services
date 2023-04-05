@@ -27,7 +27,7 @@ class InstanceGroupManagersSetTargetPoolsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetPools = [];
+  public $targetPools;
 
   /**
    * @param string

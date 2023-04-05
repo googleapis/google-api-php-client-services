@@ -23,7 +23,7 @@ class LoggingDestination extends \Google\Collection
   /**
    * @var string[]
    */
-  public $logs = [];
+  public $logs;
   /**
    * @var string
    */

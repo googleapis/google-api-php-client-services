@@ -35,7 +35,7 @@ class GoogleCloudEssentialcontactsV1Contact extends \Google\Collection
   /**
    * @var string[]
    */
-  public $notificationCategorySubscriptions = [];
+  public $notificationCategorySubscriptions;
   /**
    * @var string
    */

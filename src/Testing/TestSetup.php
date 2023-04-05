@@ -22,31 +22,26 @@ class TestSetup extends \Google\Collection
   protected $collection_key = 'filesToPush';
   protected $accountType = Account::class;
   protected $accountDataType = '';
-  public $account;
   protected $additionalApksType = Apk::class;
   protected $additionalApksDataType = 'array';
-  public $additionalApks = [];
   /**
    * @var string[]
    */
-  public $directoriesToPull = [];
+  public $directoriesToPull;
   /**
    * @var bool
    */
   public $dontAutograntPermissions;
   protected $environmentVariablesType = EnvironmentVariable::class;
   protected $environmentVariablesDataType = 'array';
-  public $environmentVariables = [];
   protected $filesToPushType = DeviceFile::class;
   protected $filesToPushDataType = 'array';
-  public $filesToPush = [];
   /**
    * @var string
    */
   public $networkProfile;
   protected $systraceType = SystraceSetup::class;
   protected $systraceDataType = '';
-  public $systrace;
 
   /**
    * @param Account

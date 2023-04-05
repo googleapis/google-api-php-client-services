@@ -63,7 +63,7 @@ class VideoContentSearchCaptionEntityAnchorSetFeatures extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $topHypernym = [];
+  public $topHypernym;
   /**
    * @var int
    */

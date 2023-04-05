@@ -23,15 +23,15 @@ class HttpRouteHeaderModifier extends \Google\Collection
   /**
    * @var string[]
    */
-  public $add = [];
+  public $add;
   /**
    * @var string[]
    */
-  public $remove = [];
+  public $remove;
   /**
    * @var string[]
    */
-  public $set = [];
+  public $set;
 
   /**
    * @param string[]

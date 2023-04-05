@@ -43,7 +43,7 @@ class VpnGateway extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -66,7 +66,6 @@ class VpnGateway extends \Google\Collection
   public $stackType;
   protected $vpnInterfacesType = VpnGatewayVpnGatewayInterface::class;
   protected $vpnInterfacesDataType = 'array';
-  public $vpnInterfaces = [];
 
   /**
    * @param string

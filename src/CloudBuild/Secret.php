@@ -26,7 +26,7 @@ class Secret extends \Google\Model
   /**
    * @var string[]
    */
-  public $secretEnv = [];
+  public $secretEnv;
 
   /**
    * @param string

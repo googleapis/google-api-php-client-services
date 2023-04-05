@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1OptimizedStatsNode extends \Google\Collection
   /**
    * @var array[]
    */
-  public $data = [];
+  public $data;
 
   /**
    * @param array[]

@@ -55,7 +55,7 @@ class QualityCopiaFireflySiteSignal extends \Google\Collection
   /**
    * @var string[]
    */
-  public $numOfArticlesByPeriods = [];
+  public $numOfArticlesByPeriods;
   /**
    * @var string
    */
@@ -67,7 +67,7 @@ class QualityCopiaFireflySiteSignal extends \Google\Collection
   /**
    * @var string[]
    */
-  public $numOfUrlsByPeriods = [];
+  public $numOfUrlsByPeriods;
   /**
    * @var string
    */

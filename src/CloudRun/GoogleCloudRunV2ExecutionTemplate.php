@@ -22,11 +22,11 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var int
    */
@@ -37,7 +37,6 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
   public $taskCount;
   protected $templateType = GoogleCloudRunV2TaskTemplate::class;
   protected $templateDataType = '';
-  public $template;
 
   /**
    * @param string[]

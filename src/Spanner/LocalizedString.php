@@ -22,7 +22,7 @@ class LocalizedString extends \Google\Model
   /**
    * @var string[]
    */
-  public $args = [];
+  public $args;
   /**
    * @var string
    */

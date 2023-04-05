@@ -21,7 +21,6 @@ class Profile extends \Google\Model
 {
   protected $deploymentType = Deployment::class;
   protected $deploymentDataType = '';
-  public $deployment;
   /**
    * @var string
    */
@@ -29,7 +28,7 @@ class Profile extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */

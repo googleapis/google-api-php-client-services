@@ -23,7 +23,7 @@ class ActivityRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $actionNames = [];
+  public $actionNames;
   /**
    * @var string
    */
@@ -47,7 +47,7 @@ class ActivityRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supersededAlerts = [];
+  public $supersededAlerts;
   /**
    * @var string
    */

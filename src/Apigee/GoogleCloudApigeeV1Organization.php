@@ -22,7 +22,6 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   protected $collection_key = 'environments';
   protected $addonsConfigType = GoogleCloudApigeeV1AddonsConfig::class;
   protected $addonsConfigDataType = '';
-  public $addonsConfig;
   /**
    * @var string
    */
@@ -34,7 +33,7 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */
@@ -66,7 +65,7 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   /**
    * @var string[]
    */
-  public $environments = [];
+  public $environments;
   /**
    * @var string
    */
@@ -89,7 +88,6 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   public $projectId;
   protected $propertiesType = GoogleCloudApigeeV1Properties::class;
   protected $propertiesDataType = '';
-  public $properties;
   /**
    * @var string
    */

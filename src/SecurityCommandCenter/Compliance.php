@@ -23,7 +23,7 @@ class Compliance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $ids = [];
+  public $ids;
   /**
    * @var string
    */

@@ -23,14 +23,13 @@ class CompositeDocPartialUpdateInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $goldmineAnnotatorNames = [];
+  public $goldmineAnnotatorNames;
   /**
    * @var string[]
    */
-  public $imagesSignalNames = [];
+  public $imagesSignalNames;
   protected $lastFullIndexingInfoType = CompositeDocPartialUpdateInfoLastFullIndexingInfo::class;
   protected $lastFullIndexingInfoDataType = 'array';
-  public $lastFullIndexingInfo = [];
   /**
    * @var int
    */
@@ -38,7 +37,7 @@ class CompositeDocPartialUpdateInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $signalNames = [];
+  public $signalNames;
 
   /**
    * @param string[]

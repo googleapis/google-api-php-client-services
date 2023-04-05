@@ -23,18 +23,17 @@ class Indicator extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domains = [];
+  public $domains;
   /**
    * @var string[]
    */
-  public $ipAddresses = [];
+  public $ipAddresses;
   protected $signaturesType = ProcessSignature::class;
   protected $signaturesDataType = 'array';
-  public $signatures = [];
   /**
    * @var string[]
    */
-  public $uris = [];
+  public $uris;
 
   /**
    * @param string[]

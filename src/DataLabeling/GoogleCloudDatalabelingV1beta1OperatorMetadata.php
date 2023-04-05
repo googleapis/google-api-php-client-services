@@ -23,7 +23,7 @@ class GoogleCloudDatalabelingV1beta1OperatorMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $comments = [];
+  public $comments;
   /**
    * @var int
    */

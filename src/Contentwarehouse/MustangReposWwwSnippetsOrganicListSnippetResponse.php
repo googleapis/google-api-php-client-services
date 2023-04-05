@@ -35,7 +35,7 @@ class MustangReposWwwSnippetsOrganicListSnippetResponse extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $items = [];
+  public $items;
   /**
    * @var int
    */

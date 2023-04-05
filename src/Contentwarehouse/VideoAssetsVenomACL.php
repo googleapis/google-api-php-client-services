@@ -27,11 +27,11 @@ class VideoAssetsVenomACL extends \Google\Collection
   /**
    * @var string[]
    */
-  public $reader = [];
+  public $reader;
   /**
    * @var string[]
    */
-  public $writer = [];
+  public $writer;
 
   /**
    * @param string

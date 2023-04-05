@@ -22,7 +22,6 @@ class AppsDynamiteStorageColumns extends \Google\Collection
   protected $collection_key = 'columnItems';
   protected $columnItemsType = AppsDynamiteStorageColumnsColumn::class;
   protected $columnItemsDataType = 'array';
-  public $columnItems = [];
   /**
    * @var string
    */

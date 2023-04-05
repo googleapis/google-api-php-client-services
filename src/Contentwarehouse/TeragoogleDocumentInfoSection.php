@@ -23,7 +23,7 @@ class TeragoogleDocumentInfoSection extends \Google\Collection
   /**
    * @var string[]
    */
-  public $fieldName = [];
+  public $fieldName;
   /**
    * @var string
    */

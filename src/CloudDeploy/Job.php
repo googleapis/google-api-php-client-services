@@ -39,6 +39,10 @@ class Job extends \Google\Model
   /**
    * @var string
    */
+  public $skipMessage;
+  /**
+   * @var string
+   */
   public $state;
   protected $verifyJobType = VerifyJob::class;
   protected $verifyJobDataType = '';
@@ -113,6 +117,20 @@ class Job extends \Google\Model
   public function getJobRun()
   {
     return $this->jobRun;
+  }
+  /**
+   * @param string
+   */
+  public function setSkipMessage($skipMessage)
+  {
+    $this->skipMessage = $skipMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getSkipMessage()
+  {
+    return $this->skipMessage;
   }
   /**
    * @param string

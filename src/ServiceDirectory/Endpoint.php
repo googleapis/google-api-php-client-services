@@ -26,7 +26,7 @@ class Endpoint extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string
    */

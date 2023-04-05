@@ -21,7 +21,6 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends \Google\Model
 {
   protected $auditType = EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit::class;
   protected $auditDataType = '';
-  public $audit;
   /**
    * @var string
    */
@@ -32,7 +31,6 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends \Google\Model
   public $eventExecutionInfoId;
   protected $externalTrafficType = EnterpriseCrmEventbusProtoExternalTraffic::class;
   protected $externalTrafficDataType = '';
-  public $externalTraffic;
   /**
    * @var string
    */
@@ -47,7 +45,6 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends \Google\Model
   public $status;
   protected $suspensionConfigType = EnterpriseCrmEventbusProtoSuspensionConfig::class;
   protected $suspensionConfigDataType = '';
-  public $suspensionConfig;
   /**
    * @var string
    */

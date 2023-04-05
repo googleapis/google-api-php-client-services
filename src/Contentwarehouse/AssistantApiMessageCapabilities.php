@@ -27,7 +27,7 @@ class AssistantApiMessageCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedRecipientTypes = [];
+  public $supportedRecipientTypes;
 
   /**
    * @param bool

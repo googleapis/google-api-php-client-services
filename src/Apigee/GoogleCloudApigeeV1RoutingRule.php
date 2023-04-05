@@ -39,7 +39,7 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $otherTargets = [];
+  public $otherTargets;
   /**
    * @var string
    */

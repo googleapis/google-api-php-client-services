@@ -23,7 +23,7 @@ class Adloox extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedAdlooxCategories = [];
+  public $excludedAdlooxCategories;
 
   /**
    * @param string[]

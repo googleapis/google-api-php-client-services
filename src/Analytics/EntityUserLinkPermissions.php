@@ -23,11 +23,11 @@ class EntityUserLinkPermissions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $effective = [];
+  public $effective;
   /**
    * @var string[]
    */
-  public $local = [];
+  public $local;
 
   /**
    * @param string[]

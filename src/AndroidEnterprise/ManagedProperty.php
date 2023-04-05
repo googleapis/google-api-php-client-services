@@ -30,10 +30,8 @@ class ManagedProperty extends \Google\Collection
   public $valueBool;
   protected $valueBundleType = ManagedPropertyBundle::class;
   protected $valueBundleDataType = '';
-  public $valueBundle;
   protected $valueBundleArrayType = ManagedPropertyBundle::class;
   protected $valueBundleArrayDataType = 'array';
-  public $valueBundleArray = [];
   /**
    * @var int
    */
@@ -45,7 +43,7 @@ class ManagedProperty extends \Google\Collection
   /**
    * @var string[]
    */
-  public $valueStringArray = [];
+  public $valueStringArray;
 
   /**
    * @param string

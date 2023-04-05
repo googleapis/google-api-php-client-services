@@ -23,7 +23,7 @@ class GooglePrivacyDlpV2WordList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $words = [];
+  public $words;
 
   /**
    * @param string[]

@@ -27,15 +27,15 @@ class GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime extends \
   /**
    * @var string[]
    */
-  public $javaJars = [];
+  public $javaJars;
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
   /**
    * @var string[]
    */
-  public $pythonPackages = [];
+  public $pythonPackages;
 
   /**
    * @param string

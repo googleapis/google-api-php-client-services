@@ -22,7 +22,7 @@ class GoogleCloudDataplexV1DataScanEventDataQualityResult extends \Google\Model
   /**
    * @var bool[]
    */
-  public $dimensionPassed = [];
+  public $dimensionPassed;
   /**
    * @var bool
    */

@@ -39,7 +39,7 @@ class VideoContentSearchCaptionEntityAnchorFeatures extends \Google\Collection
   /**
    * @var float[]
    */
-  public $bertScores = [];
+  public $bertScores;
   /**
    * @var float
    */
@@ -58,7 +58,6 @@ class VideoContentSearchCaptionEntityAnchorFeatures extends \Google\Collection
   public $entityDescription;
   protected $entityInfoType = VideoContentSearchCaptionEntityDocInfo::class;
   protected $entityInfoDataType = '';
-  public $entityInfo;
   /**
    * @var bool
    */
@@ -118,11 +117,11 @@ class VideoContentSearchCaptionEntityAnchorFeatures extends \Google\Collection
   /**
    * @var string[]
    */
-  public $otherAsrMentionText = [];
+  public $otherAsrMentionText;
   /**
    * @var int[]
    */
-  public $otherEstimatedMentionTimes = [];
+  public $otherEstimatedMentionTimes;
   /**
    * @var string
    */

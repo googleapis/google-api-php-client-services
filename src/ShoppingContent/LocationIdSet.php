@@ -23,7 +23,7 @@ class LocationIdSet extends \Google\Collection
   /**
    * @var string[]
    */
-  public $locationIds = [];
+  public $locationIds;
 
   /**
    * @param string[]

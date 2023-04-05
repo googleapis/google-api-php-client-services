@@ -23,7 +23,7 @@ class QualitySitemapScoringSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string
    */
@@ -39,11 +39,11 @@ class QualitySitemapScoringSignals extends \Google\Collection
   /**
    * @var string[]
    */
-  public $country = [];
+  public $country;
   /**
    * @var float[]
    */
-  public $countryConfidence = [];
+  public $countryConfidence;
   /**
    * @var string
    */
@@ -51,15 +51,15 @@ class QualitySitemapScoringSignals extends \Google\Collection
   /**
    * @var float[]
    */
-  public $langConfidence = [];
+  public $langConfidence;
   /**
    * @var string[]
    */
-  public $language = [];
+  public $language;
   /**
    * @var string[]
    */
-  public $localCountryIdentifier = [];
+  public $localCountryIdentifier;
   /**
    * @var string
    */
@@ -87,7 +87,7 @@ class QualitySitemapScoringSignals extends \Google\Collection
   /**
    * @var int[]
    */
-  public $targetCdocLanguages = [];
+  public $targetCdocLanguages;
   /**
    * @var float
    */

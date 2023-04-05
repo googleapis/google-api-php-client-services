@@ -35,10 +35,9 @@ class DataSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $indexingServiceAccounts = [];
+  public $indexingServiceAccounts;
   protected $itemsVisibilityType = GSuitePrincipal::class;
   protected $itemsVisibilityDataType = 'array';
-  public $itemsVisibility = [];
   /**
    * @var string
    */
@@ -46,7 +45,7 @@ class DataSource extends \Google\Collection
   /**
    * @var string[]
    */
-  public $operationIds = [];
+  public $operationIds;
   /**
    * @var bool
    */

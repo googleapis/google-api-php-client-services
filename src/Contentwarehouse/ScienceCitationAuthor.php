@@ -53,7 +53,7 @@ class ScienceCitationAuthor extends \Google\Collection
   /**
    * @var string[]
    */
-  public $iD = [];
+  public $iD;
   /**
    * @var string
    */

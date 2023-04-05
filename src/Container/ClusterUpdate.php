@@ -20,6 +20,9 @@ namespace Google\Service\Container;
 class ClusterUpdate extends \Google\Collection
 {
   protected $collection_key = 'desiredLocations';
+  protected $additionalPodRangesConfigType = AdditionalPodRangesConfig::class;
+  protected $additionalPodRangesConfigDataType = '';
+  public $additionalPodRangesConfig;
   protected $desiredAddonsConfigType = AddonsConfig::class;
   protected $desiredAddonsConfigDataType = '';
   public $desiredAddonsConfig;
@@ -152,7 +155,24 @@ class ClusterUpdate extends \Google\Collection
    * @var string
    */
   public $etag;
+  protected $removedAdditionalPodRangesConfigType = AdditionalPodRangesConfig::class;
+  protected $removedAdditionalPodRangesConfigDataType = '';
+  public $removedAdditionalPodRangesConfig;
 
+  /**
+   * @param AdditionalPodRangesConfig
+   */
+  public function setAdditionalPodRangesConfig(AdditionalPodRangesConfig $additionalPodRangesConfig)
+  {
+    $this->additionalPodRangesConfig = $additionalPodRangesConfig;
+  }
+  /**
+   * @return AdditionalPodRangesConfig
+   */
+  public function getAdditionalPodRangesConfig()
+  {
+    return $this->additionalPodRangesConfig;
+  }
   /**
    * @param AddonsConfig
    */
@@ -712,6 +732,20 @@ class ClusterUpdate extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param AdditionalPodRangesConfig
+   */
+  public function setRemovedAdditionalPodRangesConfig(AdditionalPodRangesConfig $removedAdditionalPodRangesConfig)
+  {
+    $this->removedAdditionalPodRangesConfig = $removedAdditionalPodRangesConfig;
+  }
+  /**
+   * @return AdditionalPodRangesConfig
+   */
+  public function getRemovedAdditionalPodRangesConfig()
+  {
+    return $this->removedAdditionalPodRangesConfig;
   }
 }
 

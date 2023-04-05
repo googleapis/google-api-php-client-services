@@ -21,7 +21,6 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
 {
   protected $containerDetailsType = GooglePrivacyDlpV2Container::class;
   protected $containerDetailsDataType = '';
-  public $containerDetails;
   /**
    * @var string
    */
@@ -29,14 +28,13 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $rowOffset;
   protected $tableOptionsType = GooglePrivacyDlpV2TableOptions::class;
   protected $tableOptionsDataType = '';
-  public $tableOptions;
 
   /**
    * @param GooglePrivacyDlpV2Container

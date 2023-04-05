@@ -27,7 +27,7 @@ class SetLocationsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $locations = [];
+  public $locations;
   /**
    * @var string
    */

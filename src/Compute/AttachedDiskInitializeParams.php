@@ -43,11 +43,11 @@ class AttachedDiskInitializeParams extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $licenses = [];
+  public $licenses;
   /**
    * @var string
    */
@@ -59,25 +59,23 @@ class AttachedDiskInitializeParams extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceManagerTags = [];
+  public $resourceManagerTags;
   /**
    * @var string[]
    */
-  public $resourcePolicies = [];
+  public $resourcePolicies;
   /**
    * @var string
    */
   public $sourceImage;
   protected $sourceImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceImageEncryptionKeyDataType = '';
-  public $sourceImageEncryptionKey;
   /**
    * @var string
    */
   public $sourceSnapshot;
   protected $sourceSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceSnapshotEncryptionKeyDataType = '';
-  public $sourceSnapshotEncryptionKey;
 
   /**
    * @param string

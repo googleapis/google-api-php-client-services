@@ -23,7 +23,7 @@ class SocialGraphApiProtoWeeklyRecurrence extends \Google\Collection
   /**
    * @var string[]
    */
-  public $weekDay = [];
+  public $weekDay;
 
   /**
    * @param string[]

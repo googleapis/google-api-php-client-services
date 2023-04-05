@@ -22,7 +22,6 @@ class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends \Google\Collection
   protected $collection_key = 'signatureRrdatas';
   protected $healthCheckedTargetsType = RRSetRoutingPolicyHealthCheckTargets::class;
   protected $healthCheckedTargetsDataType = '';
-  public $healthCheckedTargets;
   /**
    * @var string
    */
@@ -30,11 +29,11 @@ class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends \Google\Collection
   /**
    * @var string[]
    */
-  public $rrdatas = [];
+  public $rrdatas;
   /**
    * @var string[]
    */
-  public $signatureRrdatas = [];
+  public $signatureRrdatas;
   public $weight;
 
   /**

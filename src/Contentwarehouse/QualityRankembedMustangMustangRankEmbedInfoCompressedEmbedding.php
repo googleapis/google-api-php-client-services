@@ -23,11 +23,11 @@ class QualityRankembedMustangMustangRankEmbedInfoCompressedEmbedding extends \Go
   /**
    * @var string[]
    */
-  public $packedValue = [];
+  public $packedValue;
   /**
    * @var string[]
    */
-  public $value = [];
+  public $value;
 
   /**
    * @param string[]

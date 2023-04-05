@@ -20,7 +20,7 @@ namespace Google\Service\Dataflow;
 class FloatingPointList extends \Google\Collection
 {
   protected $collection_key = 'elements';
-  public $elements = [];
+  public $elements;
 
   public function setElements($elements)
   {

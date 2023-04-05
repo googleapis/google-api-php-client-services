@@ -23,7 +23,7 @@ class GoogleCloudIntegrationsV1alphaSfdcInstance extends \Google\Collection
   /**
    * @var string[]
    */
-  public $authConfigId = [];
+  public $authConfigId;
   /**
    * @var string
    */

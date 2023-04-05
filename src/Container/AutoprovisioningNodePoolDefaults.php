@@ -38,7 +38,6 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
   public $imageType;
   protected $managementType = NodeManagement::class;
   protected $managementDataType = '';
-  public $management;
   /**
    * @var string
    */
@@ -46,17 +45,15 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
   /**
    * @var string[]
    */
-  public $oauthScopes = [];
+  public $oauthScopes;
   /**
    * @var string
    */
   public $serviceAccount;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
-  public $shieldedInstanceConfig;
   protected $upgradeSettingsType = UpgradeSettings::class;
   protected $upgradeSettingsDataType = '';
-  public $upgradeSettings;
 
   /**
    * @param string

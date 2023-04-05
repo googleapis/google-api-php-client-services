@@ -27,7 +27,7 @@ class StartEnvironmentRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $publicKeys = [];
+  public $publicKeys;
 
   /**
    * @param string

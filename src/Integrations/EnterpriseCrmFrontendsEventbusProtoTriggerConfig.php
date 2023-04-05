@@ -22,10 +22,8 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   protected $collection_key = 'startTasks';
   protected $alertConfigType = EnterpriseCrmEventbusProtoWorkflowAlertConfig::class;
   protected $alertConfigDataType = 'array';
-  public $alertConfig = [];
   protected $cloudSchedulerConfigType = EnterpriseCrmEventbusProtoCloudSchedulerConfig::class;
   protected $cloudSchedulerConfigDataType = '';
-  public $cloudSchedulerConfig;
   /**
    * @var string
    */
@@ -33,7 +31,7 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $enabledClients = [];
+  public $enabledClients;
   /**
    * @var string
    */
@@ -52,17 +50,14 @@ class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends \Google\Collectio
   public $pauseWorkflowExecutions;
   protected $positionType = EnterpriseCrmEventbusProtoCoordinate::class;
   protected $positionDataType = '';
-  public $position;
   /**
    * @var string[]
    */
-  public $properties = [];
+  public $properties;
   protected $startTasksType = EnterpriseCrmEventbusProtoNextTask::class;
   protected $startTasksDataType = 'array';
-  public $startTasks = [];
   protected $triggerCriteriaType = EnterpriseCrmEventbusProtoTriggerCriteria::class;
   protected $triggerCriteriaDataType = '';
-  public $triggerCriteria;
   /**
    * @var string
    */

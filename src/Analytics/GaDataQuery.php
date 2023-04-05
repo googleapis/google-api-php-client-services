@@ -49,7 +49,7 @@ class GaDataQuery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metrics = [];
+  public $metrics;
   /**
    * @var string
    */
@@ -61,7 +61,7 @@ class GaDataQuery extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sort = [];
+  public $sort;
   /**
    * @var string
    */

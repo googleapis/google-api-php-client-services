@@ -35,7 +35,9 @@ class AcmeChallengeSets extends \Google\Service\Resource
    * provided in Punycode. (acmeChallengeSets.get)
    *
    * @param string $rootDomain Required. SLD + TLD domain name to list challenges.
-   * This MAY be Unicode or Punycode.
+   * For example, this would be "google.com" for any FQDN under "google.com". That
+   * includes challenges for "subdomain.google.com". This MAY be Unicode or
+   * Punycode.
    * @param array $optParams Optional parameters.
    * @return AcmeChallengeSet
    */
@@ -51,7 +53,9 @@ class AcmeChallengeSets extends \Google\Service\Resource
    * Punycode. (acmeChallengeSets.rotateChallenges)
    *
    * @param string $rootDomain Required. SLD + TLD domain name to update records
-   * for. This MAY be Unicode or Punycode.
+   * for. For example, this would be "google.com" for any FQDN under "google.com".
+   * That includes challenges for "subdomain.google.com". This MAY be Unicode or
+   * Punycode.
    * @param RotateChallengesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AcmeChallengeSet

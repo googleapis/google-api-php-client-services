@@ -22,15 +22,14 @@ class NlpSciencelitRetrievalSearchResultDebugInfo extends \Google\Collection
   protected $collection_key = 'goldSnippets';
   protected $articleDataType = NlpSciencelitArticleData::class;
   protected $articleDataDataType = '';
-  public $articleData;
   /**
    * @var string[]
    */
-  public $goldDocid = [];
+  public $goldDocid;
   /**
    * @var string[]
    */
-  public $goldSnippets = [];
+  public $goldSnippets;
   /**
    * @var bool
    */
@@ -46,7 +45,7 @@ class NlpSciencelitRetrievalSearchResultDebugInfo extends \Google\Collection
   /**
    * @var float[]
    */
-  public $sectionIrScore = [];
+  public $sectionIrScore;
 
   /**
    * @param NlpSciencelitArticleData

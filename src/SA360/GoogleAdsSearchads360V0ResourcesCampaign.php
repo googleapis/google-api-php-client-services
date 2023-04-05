@@ -66,14 +66,14 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedParentAssetFieldTypes;
+  public $excludedParentAssetFieldTypes = [];
   /**
    * @var string
    */
   public $finalUrlSuffix;
   protected $frequencyCapsType = GoogleAdsSearchads360V0CommonFrequencyCapEntry::class;
   protected $frequencyCapsDataType = 'array';
-  public $frequencyCaps;
+  public $frequencyCaps = [];
   protected $geoTargetTypeSettingType = GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting::class;
   protected $geoTargetTypeSettingDataType = '';
   public $geoTargetTypeSetting;
@@ -84,7 +84,7 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels;
+  public $labels = [];
   /**
    * @var string
    */
@@ -166,7 +166,7 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
   public $trackingUrlTemplate;
   protected $urlCustomParametersType = GoogleAdsSearchads360V0CommonCustomParameter::class;
   protected $urlCustomParametersDataType = 'array';
-  public $urlCustomParameters;
+  public $urlCustomParameters = [];
   /**
    * @var bool
    */

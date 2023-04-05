@@ -22,7 +22,7 @@ class AcmeChallengeSet extends \Google\Collection
   protected $collection_key = 'record';
   protected $recordType = AcmeTxtRecord::class;
   protected $recordDataType = 'array';
-  public $record;
+  public $record = [];
 
   /**
    * @param AcmeTxtRecord[]

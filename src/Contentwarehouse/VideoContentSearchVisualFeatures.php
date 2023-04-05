@@ -23,7 +23,7 @@ class VideoContentSearchVisualFeatures extends \Google\Collection
   /**
    * @var float[]
    */
-  public $features = [];
+  public $features;
   /**
    * @var string
    */
@@ -31,7 +31,7 @@ class VideoContentSearchVisualFeatures extends \Google\Collection
   /**
    * @var int[]
    */
-  public $tokens = [];
+  public $tokens;
 
   /**
    * @param float[]

@@ -47,7 +47,7 @@ class GoogleCloudDialogflowV2IntentParameter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $prompts = [];
+  public $prompts;
   /**
    * @var string
    */

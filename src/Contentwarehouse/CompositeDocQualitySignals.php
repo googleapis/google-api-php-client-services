@@ -21,10 +21,8 @@ class CompositeDocQualitySignals extends \Google\Model
 {
   protected $lastSignificantUpdateType = QualityTimebasedLastSignificantUpdate::class;
   protected $lastSignificantUpdateDataType = '';
-  public $lastSignificantUpdate;
   protected $pagetypeType = QualityTimebasedPageType::class;
   protected $pagetypeDataType = '';
-  public $pagetype;
 
   /**
    * @param QualityTimebasedLastSignificantUpdate

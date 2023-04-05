@@ -27,14 +27,13 @@ class RangeReservation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $requestedRanges = [];
+  public $requestedRanges;
   /**
    * @var int[]
    */
-  public $secondaryRangeIpPrefixLengths = [];
+  public $secondaryRangeIpPrefixLengths;
   protected $subnetworkCandidatesType = Subnetwork::class;
   protected $subnetworkCandidatesDataType = 'array';
-  public $subnetworkCandidates = [];
 
   /**
    * @param int

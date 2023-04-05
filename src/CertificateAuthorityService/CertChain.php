@@ -23,7 +23,7 @@ class CertChain extends \Google\Collection
   /**
    * @var string[]
    */
-  public $certificates = [];
+  public $certificates;
 
   /**
    * @param string[]

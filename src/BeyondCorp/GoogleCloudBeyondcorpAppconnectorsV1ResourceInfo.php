@@ -27,14 +27,13 @@ class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo extends \Google\Collectio
   /**
    * @var array[]
    */
-  public $resource = [];
+  public $resource;
   /**
    * @var string
    */
   public $status;
   protected $subType = GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo::class;
   protected $subDataType = 'array';
-  public $sub = [];
   /**
    * @var string
    */

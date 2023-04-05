@@ -23,7 +23,7 @@ class SourceInfo extends \Google\Collection
   /**
    * @var array[]
    */
-  public $sourceFiles = [];
+  public $sourceFiles;
 
   /**
    * @param array[]

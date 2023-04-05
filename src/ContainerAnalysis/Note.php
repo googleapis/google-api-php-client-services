@@ -85,6 +85,9 @@ class Note extends \Google\Collection
   protected $vulnerabilityType = VulnerabilityNote::class;
   protected $vulnerabilityDataType = '';
   public $vulnerability;
+  protected $vulnerabilityAssessmentType = VulnerabilityAssessmentNote::class;
+  protected $vulnerabilityAssessmentDataType = '';
+  public $vulnerabilityAssessment;
 
   /**
    * @param AttestationNote
@@ -351,6 +354,20 @@ class Note extends \Google\Collection
   public function getVulnerability()
   {
     return $this->vulnerability;
+  }
+  /**
+   * @param VulnerabilityAssessmentNote
+   */
+  public function setVulnerabilityAssessment(VulnerabilityAssessmentNote $vulnerabilityAssessment)
+  {
+    $this->vulnerabilityAssessment = $vulnerabilityAssessment;
+  }
+  /**
+   * @return VulnerabilityAssessmentNote
+   */
+  public function getVulnerabilityAssessment()
+  {
+    return $this->vulnerabilityAssessment;
   }
 }
 

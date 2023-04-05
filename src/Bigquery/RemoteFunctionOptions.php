@@ -34,7 +34,7 @@ class RemoteFunctionOptions extends \Google\Model
   /**
    * @var string[]
    */
-  public $userDefinedContext = [];
+  public $userDefinedContext;
 
   /**
    * @param string

@@ -34,7 +34,6 @@ class Volumeannotation extends \Google\Collection
   public $annotationType;
   protected $contentRangesType = VolumeannotationContentRanges::class;
   protected $contentRangesDataType = '';
-  public $contentRanges;
   /**
    * @var string
    */
@@ -58,7 +57,7 @@ class Volumeannotation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $pageIds = [];
+  public $pageIds;
   /**
    * @var string
    */

@@ -20,7 +20,7 @@ namespace Google\Service\Monitoring;
 class Explicit extends \Google\Collection
 {
   protected $collection_key = 'bounds';
-  public $bounds = [];
+  public $bounds;
 
   public function setBounds($bounds)
   {

@@ -23,7 +23,7 @@ class DocumentTranslation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $byteStreamOutputs = [];
+  public $byteStreamOutputs;
   /**
    * @var string
    */

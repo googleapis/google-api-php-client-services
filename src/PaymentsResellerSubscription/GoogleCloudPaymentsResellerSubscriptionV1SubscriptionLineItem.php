@@ -22,7 +22,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends \Goo
   protected $collection_key = 'lineItemPromotionSpecs';
   protected $amountType = GoogleCloudPaymentsResellerSubscriptionV1Amount::class;
   protected $amountDataType = '';
-  public $amount;
   /**
    * @var string
    */
@@ -33,17 +32,14 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends \Goo
   public $lineItemFreeTrialEndTime;
   protected $lineItemPromotionSpecsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec::class;
   protected $lineItemPromotionSpecsDataType = 'array';
-  public $lineItemPromotionSpecs = [];
   protected $oneTimeRecurrenceDetailsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails::class;
   protected $oneTimeRecurrenceDetailsDataType = '';
-  public $oneTimeRecurrenceDetails;
   /**
    * @var string
    */
   public $product;
   protected $productPayloadType = GoogleCloudPaymentsResellerSubscriptionV1ProductPayload::class;
   protected $productPayloadDataType = '';
-  public $productPayload;
   /**
    * @var string
    */

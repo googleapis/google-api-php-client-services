@@ -23,8 +23,8 @@ class GoogleCloudMlV1ParameterSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categoricalValues = [];
-  public $discreteValues = [];
+  public $categoricalValues;
+  public $discreteValues;
   public $maxValue;
   public $minValue;
   /**

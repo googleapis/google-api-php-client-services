@@ -22,7 +22,7 @@ class DeviceMetadata extends \Google\Model
   /**
    * @var string[]
    */
-  public $entries = [];
+  public $entries;
 
   /**
    * @param string[]

@@ -31,7 +31,7 @@ class ValueRange extends \Google\Collection
   /**
    * @var array[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param string

@@ -102,10 +102,6 @@ class Firestore extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'freeId' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',

@@ -22,7 +22,7 @@ class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response extends \Google\
   protected $collection_key = 'results';
   protected $customColumnHeadersType = GoogleAdsSearchads360V0ServicesCustomColumnHeader::class;
   protected $customColumnHeadersDataType = 'array';
-  public $customColumnHeaders;
+  public $customColumnHeaders = [];
   /**
    * @var string
    */
@@ -33,7 +33,7 @@ class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response extends \Google\
   public $nextPageToken;
   protected $resultsType = GoogleAdsSearchads360V0ServicesSearchAds360Row::class;
   protected $resultsDataType = 'array';
-  public $results;
+  public $results = [];
   protected $summaryRowType = GoogleAdsSearchads360V0ServicesSearchAds360Row::class;
   protected $summaryRowDataType = '';
   public $summaryRow;

@@ -26,7 +26,7 @@ class QualitySitemapTarget extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dEPRECATEDSnippet = [];
+  public $dEPRECATEDSnippet;
   /**
    * @var bool
    */
@@ -38,24 +38,21 @@ class QualitySitemapTarget extends \Google\Collection
   /**
    * @var int[]
    */
-  public $languages = [];
+  public $languages;
   protected $salientImageType = WWWResultInfoSubImageDocInfo::class;
   protected $salientImageDataType = '';
-  public $salientImage;
   /**
    * @var float
    */
   public $score;
   protected $scoringSignalsType = QualitySitemapScoringSignals::class;
   protected $scoringSignalsDataType = '';
-  public $scoringSignals;
   /**
    * @var string[]
    */
-  public $sectionTexts = [];
+  public $sectionTexts;
   protected $snippetResponseType = GenericSnippetResponse::class;
   protected $snippetResponseDataType = '';
-  public $snippetResponse;
   /**
    * @var bool
    */

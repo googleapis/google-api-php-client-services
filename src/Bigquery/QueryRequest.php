@@ -26,6 +26,10 @@ class QueryRequest extends \Google\Collection
   /**
    * @var bool
    */
+  public $continuous;
+  /**
+   * @var bool
+   */
   public $createSession;
   protected $defaultDatasetType = DatasetReference::class;
   protected $defaultDatasetDataType = '';
@@ -99,6 +103,20 @@ class QueryRequest extends \Google\Collection
   public function getConnectionProperties()
   {
     return $this->connectionProperties;
+  }
+  /**
+   * @param bool
+   */
+  public function setContinuous($continuous)
+  {
+    $this->continuous = $continuous;
+  }
+  /**
+   * @return bool
+   */
+  public function getContinuous()
+  {
+    return $this->continuous;
   }
   /**
    * @param bool

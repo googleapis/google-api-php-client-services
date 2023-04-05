@@ -46,13 +46,11 @@ class GoogleCloudMlV1Job extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $predictionInputType = GoogleCloudMlV1PredictionInput::class;
   protected $predictionInputDataType = '';
-  public $predictionInput;
   protected $predictionOutputType = GoogleCloudMlV1PredictionOutput::class;
   protected $predictionOutputDataType = '';
-  public $predictionOutput;
   /**
    * @var string
    */
@@ -63,10 +61,8 @@ class GoogleCloudMlV1Job extends \Google\Model
   public $state;
   protected $trainingInputType = GoogleCloudMlV1TrainingInput::class;
   protected $trainingInputDataType = '';
-  public $trainingInput;
   protected $trainingOutputType = GoogleCloudMlV1TrainingOutput::class;
   protected $trainingOutputDataType = '';
-  public $trainingOutput;
 
   /**
    * @param string

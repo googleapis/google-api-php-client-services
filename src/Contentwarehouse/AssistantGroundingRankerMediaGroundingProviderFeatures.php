@@ -20,6 +20,14 @@ namespace Google\Service\Contentwarehouse;
 class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Model
 {
   /**
+   * @var string
+   */
+  public $albumReleaseType;
+  /**
+   * @var bool
+   */
+  public $hasTypeSemanticEdge;
+  /**
    * @var bool
    */
   public $isCastVideo;
@@ -36,7 +44,39 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    */
   public $mscRate;
   public $scubedPSaiMusic;
+  /**
+   * @var string
+   */
+  public $type;
 
+  /**
+   * @param string
+   */
+  public function setAlbumReleaseType($albumReleaseType)
+  {
+    $this->albumReleaseType = $albumReleaseType;
+  }
+  /**
+   * @return string
+   */
+  public function getAlbumReleaseType()
+  {
+    return $this->albumReleaseType;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasTypeSemanticEdge($hasTypeSemanticEdge)
+  {
+    $this->hasTypeSemanticEdge = $hasTypeSemanticEdge;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasTypeSemanticEdge()
+  {
+    return $this->hasTypeSemanticEdge;
+  }
   /**
    * @param bool
    */
@@ -100,6 +140,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getScubedPSaiMusic()
   {
     return $this->scubedPSaiMusic;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 

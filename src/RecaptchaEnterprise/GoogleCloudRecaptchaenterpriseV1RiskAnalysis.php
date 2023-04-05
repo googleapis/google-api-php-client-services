@@ -23,7 +23,7 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends \Google\Collection
   /**
    * @var string[]
    */
-  public $reasons = [];
+  public $reasons;
   /**
    * @var float
    */

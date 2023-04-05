@@ -23,11 +23,11 @@ class Labels extends \Google\Collection
   /**
    * @var string[]
    */
-  public $displayName = [];
+  public $displayName;
   /**
    * @var string[]
    */
-  public $id = [];
+  public $id;
 
   /**
    * @param string[]

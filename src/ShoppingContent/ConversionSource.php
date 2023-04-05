@@ -29,10 +29,8 @@ class ConversionSource extends \Google\Model
   public $expireTime;
   protected $googleAnalyticsLinkType = GoogleAnalyticsLink::class;
   protected $googleAnalyticsLinkDataType = '';
-  public $googleAnalyticsLink;
   protected $merchantCenterDestinationType = MerchantCenterDestination::class;
   protected $merchantCenterDestinationDataType = '';
-  public $merchantCenterDestination;
   /**
    * @var string
    */

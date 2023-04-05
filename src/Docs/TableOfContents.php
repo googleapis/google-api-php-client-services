@@ -22,15 +22,14 @@ class TableOfContents extends \Google\Collection
   protected $collection_key = 'suggestedInsertionIds';
   protected $contentType = StructuralElement::class;
   protected $contentDataType = 'array';
-  public $content = [];
   /**
    * @var string[]
    */
-  public $suggestedDeletionIds = [];
+  public $suggestedDeletionIds;
   /**
    * @var string[]
    */
-  public $suggestedInsertionIds = [];
+  public $suggestedInsertionIds;
 
   /**
    * @param StructuralElement[]

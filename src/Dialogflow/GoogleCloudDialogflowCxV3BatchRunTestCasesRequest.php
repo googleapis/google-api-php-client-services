@@ -27,7 +27,7 @@ class GoogleCloudDialogflowCxV3BatchRunTestCasesRequest extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $testCases = [];
+  public $testCases;
 
   /**
    * @param string

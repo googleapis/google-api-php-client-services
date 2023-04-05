@@ -39,7 +39,7 @@ class Endpoint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -59,7 +59,7 @@ class Endpoint extends \Google\Collection
   /**
    * @var string[]
    */
-  public $threatExceptions = [];
+  public $threatExceptions;
   /**
    * @var bool
    */

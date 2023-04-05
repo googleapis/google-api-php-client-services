@@ -31,7 +31,7 @@ class OSPolicyResourceRepositoryResourceYumRepository extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gpgKeys = [];
+  public $gpgKeys;
   /**
    * @var string
    */

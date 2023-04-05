@@ -22,7 +22,7 @@ class Revision extends \Google\Model
   /**
    * @var string[]
    */
-  public $exportLinks = [];
+  public $exportLinks;
   /**
    * @var string
    */
@@ -37,7 +37,6 @@ class Revision extends \Google\Model
   public $kind;
   protected $lastModifyingUserType = User::class;
   protected $lastModifyingUserDataType = '';
-  public $lastModifyingUser;
   /**
    * @var string
    */

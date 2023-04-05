@@ -23,10 +23,9 @@ class Service extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
-  public $endpoints = [];
   /**
    * @var string
    */

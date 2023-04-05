@@ -23,7 +23,7 @@ class PersonalUsagePolicies extends \Google\Collection
   /**
    * @var string[]
    */
-  public $accountTypesWithManagementDisabled = [];
+  public $accountTypesWithManagementDisabled;
   /**
    * @var bool
    */
@@ -34,7 +34,6 @@ class PersonalUsagePolicies extends \Google\Collection
   public $maxDaysWithWorkOff;
   protected $personalApplicationsType = PersonalApplicationPolicy::class;
   protected $personalApplicationsDataType = 'array';
-  public $personalApplications = [];
   /**
    * @var string
    */

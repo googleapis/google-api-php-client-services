@@ -27,7 +27,7 @@ class NlpSemanticParsingModelsMediaAudiobookInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $authors = [];
+  public $authors;
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class NlpSemanticParsingModelsMediaAudiobookInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $narrators = [];
+  public $narrators;
 
   /**
    * @param string

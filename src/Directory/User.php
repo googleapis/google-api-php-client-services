@@ -31,7 +31,7 @@ class User extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aliases = [];
+  public $aliases;
   /**
    * @var bool
    */
@@ -47,7 +47,7 @@ class User extends \Google\Collection
   /**
    * @var array[]
    */
-  public $customSchemas = [];
+  public $customSchemas;
   /**
    * @var string
    */
@@ -134,11 +134,10 @@ class User extends \Google\Collection
   public $locations;
   protected $nameType = UserName::class;
   protected $nameDataType = '';
-  public $name;
   /**
    * @var string[]
    */
-  public $nonEditableAliases = [];
+  public $nonEditableAliases;
   /**
    * @var array
    */

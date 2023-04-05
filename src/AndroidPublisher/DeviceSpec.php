@@ -27,11 +27,11 @@ class DeviceSpec extends \Google\Collection
   /**
    * @var string[]
    */
-  public $supportedAbis = [];
+  public $supportedAbis;
   /**
    * @var string[]
    */
-  public $supportedLocales = [];
+  public $supportedLocales;
 
   /**
    * @param string

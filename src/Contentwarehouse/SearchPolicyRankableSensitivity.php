@@ -33,6 +33,9 @@ class SearchPolicyRankableSensitivity extends \Google\Collection
   protected $followonType = SearchPolicyRankableSensitivityFollowOn::class;
   protected $followonDataType = '';
   public $followon;
+  protected $groundingProviderType = SearchPolicyRankableSensitivityGroundingProvider::class;
+  protected $groundingProviderDataType = '';
+  public $groundingProvider;
   protected $prefilterType = SearchPolicyRankableSensitivityPrefilter::class;
   protected $prefilterDataType = '';
   public $prefilter;
@@ -105,6 +108,20 @@ class SearchPolicyRankableSensitivity extends \Google\Collection
   public function getFollowon()
   {
     return $this->followon;
+  }
+  /**
+   * @param SearchPolicyRankableSensitivityGroundingProvider
+   */
+  public function setGroundingProvider(SearchPolicyRankableSensitivityGroundingProvider $groundingProvider)
+  {
+    $this->groundingProvider = $groundingProvider;
+  }
+  /**
+   * @return SearchPolicyRankableSensitivityGroundingProvider
+   */
+  public function getGroundingProvider()
+  {
+    return $this->groundingProvider;
   }
   /**
    * @param SearchPolicyRankableSensitivityPrefilter

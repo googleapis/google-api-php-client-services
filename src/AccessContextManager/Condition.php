@@ -22,15 +22,14 @@ class Condition extends \Google\Collection
   protected $collection_key = 'requiredAccessLevels';
   protected $devicePolicyType = DevicePolicy::class;
   protected $devicePolicyDataType = '';
-  public $devicePolicy;
   /**
    * @var string[]
    */
-  public $ipSubnetworks = [];
+  public $ipSubnetworks;
   /**
    * @var string[]
    */
-  public $members = [];
+  public $members;
   /**
    * @var bool
    */
@@ -38,11 +37,11 @@ class Condition extends \Google\Collection
   /**
    * @var string[]
    */
-  public $regions = [];
+  public $regions;
   /**
    * @var string[]
    */
-  public $requiredAccessLevels = [];
+  public $requiredAccessLevels;
 
   /**
    * @param DevicePolicy

@@ -29,6 +29,9 @@ class Annotation extends \Google\Model
    * @var string
    */
   public $chipRenderType;
+  protected $componentSearchInfoType = AppsDynamiteSharedMessageComponentSearchInfo::class;
+  protected $componentSearchInfoDataType = '';
+  public $componentSearchInfo;
   protected $consentedAppUnfurlMetadataType = ConsentedAppUnfurlMetadata::class;
   protected $consentedAppUnfurlMetadataDataType = '';
   public $consentedAppUnfurlMetadata;
@@ -159,6 +162,20 @@ class Annotation extends \Google\Model
   public function getChipRenderType()
   {
     return $this->chipRenderType;
+  }
+  /**
+   * @param AppsDynamiteSharedMessageComponentSearchInfo
+   */
+  public function setComponentSearchInfo(AppsDynamiteSharedMessageComponentSearchInfo $componentSearchInfo)
+  {
+    $this->componentSearchInfo = $componentSearchInfo;
+  }
+  /**
+   * @return AppsDynamiteSharedMessageComponentSearchInfo
+   */
+  public function getComponentSearchInfo()
+  {
+    return $this->componentSearchInfo;
   }
   /**
    * @param ConsentedAppUnfurlMetadata

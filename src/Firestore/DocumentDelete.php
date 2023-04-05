@@ -31,7 +31,7 @@ class DocumentDelete extends \Google\Collection
   /**
    * @var int[]
    */
-  public $removedTargetIds = [];
+  public $removedTargetIds;
 
   /**
    * @param string

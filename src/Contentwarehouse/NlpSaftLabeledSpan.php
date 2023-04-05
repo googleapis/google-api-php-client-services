@@ -34,7 +34,7 @@ class NlpSaftLabeledSpan extends \Google\Model
   /**
    * @var float[]
    */
-  public $labelScores = [];
+  public $labelScores;
   /**
    * @var float
    */

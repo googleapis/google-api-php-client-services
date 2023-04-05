@@ -23,7 +23,7 @@ class QueryList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $queries = [];
+  public $queries;
 
   /**
    * @param string[]

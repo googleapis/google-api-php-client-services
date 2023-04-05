@@ -19,7 +19,7 @@ namespace Google\Service\Appengine;
 
 class TrafficSplit extends \Google\Model
 {
-  public $allocations = [];
+  public $allocations;
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class GoogleAssistantEmbeddedV1AlarmRecurrence extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dayOfWeek = [];
+  public $dayOfWeek;
 
   /**
    * @param string[]

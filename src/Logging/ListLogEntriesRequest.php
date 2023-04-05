@@ -39,11 +39,11 @@ class ListLogEntriesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $projectIds = [];
+  public $projectIds;
   /**
    * @var string[]
    */
-  public $resourceNames = [];
+  public $resourceNames;
 
   /**
    * @param string

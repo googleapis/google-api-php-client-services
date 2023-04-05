@@ -22,7 +22,7 @@ class ManagedConfigurationTemplate extends \Google\Model
   /**
    * @var string[]
    */
-  public $configurationVariables = [];
+  public $configurationVariables;
   /**
    * @var string
    */

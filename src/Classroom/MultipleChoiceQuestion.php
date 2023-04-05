@@ -23,7 +23,7 @@ class MultipleChoiceQuestion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $choices = [];
+  public $choices;
 
   /**
    * @param string[]

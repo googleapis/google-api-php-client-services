@@ -22,7 +22,6 @@ class GoogleCloudDataplexV1ListLakesResponse extends \Google\Collection
   protected $collection_key = 'unreachableLocations';
   protected $lakesType = GoogleCloudDataplexV1Lake::class;
   protected $lakesDataType = 'array';
-  public $lakes = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class GoogleCloudDataplexV1ListLakesResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachableLocations = [];
+  public $unreachableLocations;
 
   /**
    * @param GoogleCloudDataplexV1Lake[]

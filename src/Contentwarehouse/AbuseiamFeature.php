@@ -44,11 +44,11 @@ class AbuseiamFeature extends \Google\Collection
   /**
    * @var string[]
    */
-  public $stringValue = [];
+  public $stringValue;
   /**
    * @var string[]
    */
-  public $timestampSequence = [];
+  public $timestampSequence;
 
   /**
    * @param bool

@@ -23,11 +23,11 @@ class GoogleCloudApigeeV1Metadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $errors = [];
+  public $errors;
   /**
    * @var string[]
    */
-  public $notices = [];
+  public $notices;
 
   /**
    * @param string[]

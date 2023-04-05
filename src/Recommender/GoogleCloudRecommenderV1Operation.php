@@ -30,10 +30,9 @@ class GoogleCloudRecommenderV1Operation extends \Google\Model
   /**
    * @var array[]
    */
-  public $pathFilters = [];
+  public $pathFilters;
   protected $pathValueMatchersType = GoogleCloudRecommenderV1ValueMatcher::class;
   protected $pathValueMatchersDataType = 'map';
-  public $pathValueMatchers = [];
   /**
    * @var string
    */
@@ -56,7 +55,6 @@ class GoogleCloudRecommenderV1Operation extends \Google\Model
   public $value;
   protected $valueMatcherType = GoogleCloudRecommenderV1ValueMatcher::class;
   protected $valueMatcherDataType = '';
-  public $valueMatcher;
 
   /**
    * @param string

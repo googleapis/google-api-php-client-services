@@ -22,14 +22,12 @@ class ExportContext extends \Google\Collection
   protected $collection_key = 'databases';
   protected $bakExportOptionsType = ExportContextBakExportOptions::class;
   protected $bakExportOptionsDataType = '';
-  public $bakExportOptions;
   protected $csvExportOptionsType = ExportContextCsvExportOptions::class;
   protected $csvExportOptionsDataType = '';
-  public $csvExportOptions;
   /**
    * @var string[]
    */
-  public $databases = [];
+  public $databases;
   /**
    * @var string
    */
@@ -44,7 +42,6 @@ class ExportContext extends \Google\Collection
   public $offload;
   protected $sqlExportOptionsType = ExportContextSqlExportOptions::class;
   protected $sqlExportOptionsDataType = '';
-  public $sqlExportOptions;
   /**
    * @var string
    */

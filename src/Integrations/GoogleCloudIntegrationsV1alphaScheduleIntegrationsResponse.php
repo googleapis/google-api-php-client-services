@@ -23,7 +23,7 @@ class GoogleCloudIntegrationsV1alphaScheduleIntegrationsResponse extends \Google
   /**
    * @var string[]
    */
-  public $executionInfoIds = [];
+  public $executionInfoIds;
 
   /**
    * @param string[]

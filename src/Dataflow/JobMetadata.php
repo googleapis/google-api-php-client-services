@@ -41,6 +41,10 @@ class JobMetadata extends \Google\Collection
   protected $spannerDetailsType = SpannerIODetails::class;
   protected $spannerDetailsDataType = 'array';
   public $spannerDetails = [];
+  /**
+   * @var string[]
+   */
+  public $userDisplayProperties = [];
 
   /**
    * @param BigTableIODetails[]
@@ -139,6 +143,20 @@ class JobMetadata extends \Google\Collection
   public function getSpannerDetails()
   {
     return $this->spannerDetails;
+  }
+  /**
+   * @param string[]
+   */
+  public function setUserDisplayProperties($userDisplayProperties)
+  {
+    $this->userDisplayProperties = $userDisplayProperties;
+  }
+  /**
+   * @return string[]
+   */
+  public function getUserDisplayProperties()
+  {
+    return $this->userDisplayProperties;
   }
 }
 

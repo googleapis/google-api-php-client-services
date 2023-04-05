@@ -23,11 +23,11 @@ class BackendBucketCdnPolicyCacheKeyPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $includeHttpHeaders = [];
+  public $includeHttpHeaders;
   /**
    * @var string[]
    */
-  public $queryStringWhitelist = [];
+  public $queryStringWhitelist;
 
   /**
    * @param string[]

@@ -23,14 +23,13 @@ class Resources extends \Google\Collection
   /**
    * @var string[]
    */
-  public $regions = [];
+  public $regions;
   protected $virtualMachineType = VirtualMachine::class;
   protected $virtualMachineDataType = '';
-  public $virtualMachine;
   /**
    * @var string[]
    */
-  public $zones = [];
+  public $zones;
 
   /**
    * @param string[]

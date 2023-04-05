@@ -23,11 +23,11 @@ class FirstPartyMobileApplicationTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedAppIds = [];
+  public $excludedAppIds;
   /**
    * @var string[]
    */
-  public $targetedAppIds = [];
+  public $targetedAppIds;
 
   /**
    * @param string[]

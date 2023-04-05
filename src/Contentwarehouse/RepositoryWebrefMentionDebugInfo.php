@@ -27,7 +27,7 @@ class RepositoryWebrefMentionDebugInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $infoString = [];
+  public $infoString;
   /**
    * @var string
    */

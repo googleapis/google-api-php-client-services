@@ -23,11 +23,11 @@ class AssistantApiJwnCapabilities extends \Google\Collection
   /**
    * @var string[]
    */
-  public $librariesVersionMap = [];
+  public $librariesVersionMap;
   /**
    * @var string[]
    */
-  public $supportedCompressionMode = [];
+  public $supportedCompressionMode;
   /**
    * @var bool
    */

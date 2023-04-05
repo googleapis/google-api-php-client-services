@@ -23,7 +23,7 @@ class YoutubeCommentsRankingYouTubeCommentTextEmbedding extends \Google\Collecti
   /**
    * @var float[]
    */
-  public $textEmbedding = [];
+  public $textEmbedding;
 
   /**
    * @param float[]

@@ -23,7 +23,7 @@ class ProfilePermissions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $effective = [];
+  public $effective;
 
   /**
    * @param string[]

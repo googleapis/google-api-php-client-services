@@ -31,26 +31,25 @@ class HttpRoute extends \Google\Collection
   /**
    * @var string[]
    */
-  public $gateways = [];
+  public $gateways;
   /**
    * @var string[]
    */
-  public $hostnames = [];
+  public $hostnames;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $meshes = [];
+  public $meshes;
   /**
    * @var string
    */
   public $name;
   protected $rulesType = HttpRouteRouteRule::class;
   protected $rulesDataType = 'array';
-  public $rules = [];
   /**
    * @var string
    */

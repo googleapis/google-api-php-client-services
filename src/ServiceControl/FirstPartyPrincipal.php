@@ -26,7 +26,7 @@ class FirstPartyPrincipal extends \Google\Model
   /**
    * @var array[]
    */
-  public $serviceMetadata = [];
+  public $serviceMetadata;
 
   /**
    * @param string

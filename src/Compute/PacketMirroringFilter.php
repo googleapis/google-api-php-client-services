@@ -26,11 +26,11 @@ class PacketMirroringFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $iPProtocols = [];
+  public $iPProtocols;
   /**
    * @var string[]
    */
-  public $cidrRanges = [];
+  public $cidrRanges;
   /**
    * @var string
    */

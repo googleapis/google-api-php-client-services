@@ -22,11 +22,10 @@ class RepositoryWebrefLatentEntities extends \Google\Collection
   protected $collection_key = 'latentMid';
   protected $latentEntityType = RepositoryWebrefLatentEntity::class;
   protected $latentEntityDataType = 'array';
-  public $latentEntity = [];
   /**
    * @var string[]
    */
-  public $latentMid = [];
+  public $latentMid;
 
   /**
    * @param RepositoryWebrefLatentEntity[]

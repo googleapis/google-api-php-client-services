@@ -31,7 +31,7 @@ class WebApp extends \Google\Collection
   /**
    * @var string[]
    */
-  public $appUrls = [];
+  public $appUrls;
   /**
    * @var string
    */

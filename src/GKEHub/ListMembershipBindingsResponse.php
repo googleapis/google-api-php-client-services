@@ -22,7 +22,6 @@ class ListMembershipBindingsResponse extends \Google\Collection
   protected $collection_key = 'membershipBindings';
   protected $membershipBindingsType = MembershipBinding::class;
   protected $membershipBindingsDataType = 'array';
-  public $membershipBindings = [];
   /**
    * @var string
    */

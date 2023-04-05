@@ -23,7 +23,7 @@ class TrawlerClientServiceInfoClientLabelsClientLabelValues extends \Google\Coll
   /**
    * @var string[]
    */
-  public $value = [];
+  public $value;
 
   /**
    * @param string[]

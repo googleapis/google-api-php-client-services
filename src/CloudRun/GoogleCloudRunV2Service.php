@@ -23,10 +23,9 @@ class GoogleCloudRunV2Service extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   protected $binaryAuthorizationType = GoogleCloudRunV2BinaryAuthorization::class;
   protected $binaryAuthorizationDataType = '';
-  public $binaryAuthorization;
   /**
    * @var string
    */
@@ -37,7 +36,6 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public $clientVersion;
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
-  public $conditions = [];
   /**
    * @var string
    */
@@ -73,7 +71,7 @@ class GoogleCloudRunV2Service extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
@@ -104,16 +102,12 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public $reconciling;
   protected $templateType = GoogleCloudRunV2RevisionTemplate::class;
   protected $templateDataType = '';
-  public $template;
   protected $terminalConditionType = GoogleCloudRunV2Condition::class;
   protected $terminalConditionDataType = '';
-  public $terminalCondition;
   protected $trafficType = GoogleCloudRunV2TrafficTarget::class;
   protected $trafficDataType = 'array';
-  public $traffic = [];
   protected $trafficStatusesType = GoogleCloudRunV2TrafficTargetStatus::class;
   protected $trafficStatusesDataType = 'array';
-  public $trafficStatuses = [];
   /**
    * @var string
    */

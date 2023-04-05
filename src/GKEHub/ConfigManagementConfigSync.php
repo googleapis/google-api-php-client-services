@@ -29,10 +29,8 @@ class ConfigManagementConfigSync extends \Google\Model
   public $enabled;
   protected $gitType = ConfigManagementGitConfig::class;
   protected $gitDataType = '';
-  public $git;
   protected $ociType = ConfigManagementOciConfig::class;
   protected $ociDataType = '';
-  public $oci;
   /**
    * @var bool
    */

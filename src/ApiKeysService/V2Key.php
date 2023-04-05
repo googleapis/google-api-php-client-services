@@ -22,7 +22,7 @@ class V2Key extends \Google\Model
   /**
    * @var string[]
    */
-  public $annotations = [];
+  public $annotations;
   /**
    * @var string
    */
@@ -49,7 +49,6 @@ class V2Key extends \Google\Model
   public $name;
   protected $restrictionsType = V2Restrictions::class;
   protected $restrictionsDataType = '';
-  public $restrictions;
   /**
    * @var string
    */

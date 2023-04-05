@@ -22,7 +22,6 @@ class AuthorizedCertificate extends \Google\Collection
   protected $collection_key = 'visibleDomainMappings';
   protected $certificateRawDataType = CertificateRawData::class;
   protected $certificateRawDataDataType = '';
-  public $certificateRawData;
   /**
    * @var string
    */
@@ -34,7 +33,7 @@ class AuthorizedCertificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domainNames = [];
+  public $domainNames;
   /**
    * @var string
    */
@@ -45,7 +44,6 @@ class AuthorizedCertificate extends \Google\Collection
   public $id;
   protected $managedCertificateType = ManagedCertificate::class;
   protected $managedCertificateDataType = '';
-  public $managedCertificate;
   /**
    * @var string
    */
@@ -53,7 +51,7 @@ class AuthorizedCertificate extends \Google\Collection
   /**
    * @var string[]
    */
-  public $visibleDomainMappings = [];
+  public $visibleDomainMappings;
 
   /**
    * @param CertificateRawData

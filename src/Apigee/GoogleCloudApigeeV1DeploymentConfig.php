@@ -23,7 +23,7 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $attributes = [];
+  public $attributes;
   /**
    * @var string
    */
@@ -31,11 +31,11 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $deploymentGroups = [];
+  public $deploymentGroups;
   /**
    * @var string[]
    */
-  public $endpoints = [];
+  public $endpoints;
   /**
    * @var string
    */

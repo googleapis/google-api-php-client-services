@@ -27,7 +27,7 @@ class LinkedInterconnectAttachments extends \Google\Collection
   /**
    * @var string[]
    */
-  public $uris = [];
+  public $uris;
   /**
    * @var string
    */

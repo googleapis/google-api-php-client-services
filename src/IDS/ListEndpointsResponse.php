@@ -22,7 +22,6 @@ class ListEndpointsResponse extends \Google\Collection
   protected $collection_key = 'unreachable';
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
-  public $endpoints = [];
   /**
    * @var string
    */
@@ -30,7 +29,7 @@ class ListEndpointsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachable = [];
+  public $unreachable;
 
   /**
    * @param Endpoint[]

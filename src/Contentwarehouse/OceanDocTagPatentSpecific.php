@@ -39,11 +39,11 @@ class OceanDocTagPatentSpecific extends \Google\Collection
   /**
    * @var string[]
    */
-  public $domesticClassification = [];
+  public $domesticClassification;
   /**
    * @var string[]
    */
-  public $internationalClassification = [];
+  public $internationalClassification;
   /**
    * @var string
    */
@@ -63,7 +63,7 @@ class OceanDocTagPatentSpecific extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tenCharUsClassification = [];
+  public $tenCharUsClassification;
 
   /**
    * @param string

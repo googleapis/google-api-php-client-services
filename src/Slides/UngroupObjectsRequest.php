@@ -23,7 +23,7 @@ class UngroupObjectsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $objectIds = [];
+  public $objectIds;
 
   /**
    * @param string[]

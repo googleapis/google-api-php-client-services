@@ -23,11 +23,11 @@ class IntentFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $actionNames = [];
+  public $actionNames;
   /**
    * @var string[]
    */
-  public $categoryNames = [];
+  public $categoryNames;
   /**
    * @var string
    */

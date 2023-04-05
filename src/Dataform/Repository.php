@@ -23,6 +23,17 @@ class Repository extends \Google\Model
   protected $gitRemoteSettingsDataType = '';
   public $gitRemoteSettings;
   /**
+   * @var string[]
+   */
+  public $initialCommitFileContents = [];
+  protected $initialCommitMetadataType = CommitMetadata::class;
+  protected $initialCommitMetadataDataType = '';
+  public $initialCommitMetadata;
+  /**
+   * @var string[]
+   */
+  public $labels = [];
+  /**
    * @var string
    */
   public $name;
@@ -47,6 +58,48 @@ class Repository extends \Google\Model
   public function getGitRemoteSettings()
   {
     return $this->gitRemoteSettings;
+  }
+  /**
+   * @param string[]
+   */
+  public function setInitialCommitFileContents($initialCommitFileContents)
+  {
+    $this->initialCommitFileContents = $initialCommitFileContents;
+  }
+  /**
+   * @return string[]
+   */
+  public function getInitialCommitFileContents()
+  {
+    return $this->initialCommitFileContents;
+  }
+  /**
+   * @param CommitMetadata
+   */
+  public function setInitialCommitMetadata(CommitMetadata $initialCommitMetadata)
+  {
+    $this->initialCommitMetadata = $initialCommitMetadata;
+  }
+  /**
+   * @return CommitMetadata
+   */
+  public function getInitialCommitMetadata()
+  {
+    return $this->initialCommitMetadata;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param string

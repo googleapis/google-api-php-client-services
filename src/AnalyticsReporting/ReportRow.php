@@ -23,10 +23,9 @@ class ReportRow extends \Google\Collection
   /**
    * @var string[]
    */
-  public $dimensions = [];
+  public $dimensions;
   protected $metricsType = DateRangeValues::class;
   protected $metricsDataType = 'array';
-  public $metrics = [];
 
   /**
    * @param string[]

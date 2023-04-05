@@ -23,10 +23,9 @@ class ReportWorkItemStatusResponse extends \Google\Collection
   /**
    * @var array[]
    */
-  public $unifiedWorkerResponse = [];
+  public $unifiedWorkerResponse;
   protected $workItemServiceStatesType = WorkItemServiceState::class;
   protected $workItemServiceStatesDataType = 'array';
-  public $workItemServiceStates = [];
 
   /**
    * @param array[]

@@ -23,29 +23,23 @@ class CertificateDescription extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aiaIssuingCertificateUrls = [];
+  public $aiaIssuingCertificateUrls;
   protected $authorityKeyIdType = KeyId::class;
   protected $authorityKeyIdDataType = '';
-  public $authorityKeyId;
   protected $certFingerprintType = CertificateFingerprint::class;
   protected $certFingerprintDataType = '';
-  public $certFingerprint;
   /**
    * @var string[]
    */
-  public $crlDistributionPoints = [];
+  public $crlDistributionPoints;
   protected $publicKeyType = PublicKey::class;
   protected $publicKeyDataType = '';
-  public $publicKey;
   protected $subjectDescriptionType = SubjectDescription::class;
   protected $subjectDescriptionDataType = '';
-  public $subjectDescription;
   protected $subjectKeyIdType = KeyId::class;
   protected $subjectKeyIdDataType = '';
-  public $subjectKeyId;
   protected $x509DescriptionType = X509Parameters::class;
   protected $x509DescriptionDataType = '';
-  public $x509Description;
 
   /**
    * @param string[]

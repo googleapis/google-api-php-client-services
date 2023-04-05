@@ -27,10 +27,9 @@ class StorePage extends \Google\Collection
   /**
    * @var string[]
    */
-  public $link = [];
+  public $link;
   protected $nameType = LocalizedText::class;
   protected $nameDataType = 'array';
-  public $name = [];
 
   /**
    * @param string

@@ -22,7 +22,6 @@ class TenantProjectConfig extends \Google\Collection
   protected $collection_key = 'services';
   protected $billingConfigType = BillingConfig::class;
   protected $billingConfigDataType = '';
-  public $billingConfig;
   /**
    * @var string
    */
@@ -30,17 +29,15 @@ class TenantProjectConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $serviceAccountConfigType = ServiceAccountConfig::class;
   protected $serviceAccountConfigDataType = '';
-  public $serviceAccountConfig;
   /**
    * @var string[]
    */
-  public $services = [];
+  public $services;
   protected $tenantProjectPolicyType = TenantProjectPolicy::class;
   protected $tenantProjectPolicyDataType = '';
-  public $tenantProjectPolicy;
 
   /**
    * @param BillingConfig

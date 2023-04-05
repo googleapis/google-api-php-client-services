@@ -34,19 +34,18 @@ class About extends \Google\Collection
   public $canCreateTeamDrives;
   protected $driveThemesType = AboutDriveThemes::class;
   protected $driveThemesDataType = 'array';
-  public $driveThemes = [];
   /**
    * @var string[]
    */
-  public $exportFormats = [];
+  public $exportFormats;
   /**
    * @var string[]
    */
-  public $folderColorPalette = [];
+  public $folderColorPalette;
   /**
    * @var string[]
    */
-  public $importFormats = [];
+  public $importFormats;
   /**
    * @var string
    */
@@ -54,20 +53,17 @@ class About extends \Google\Collection
   /**
    * @var string[]
    */
-  public $maxImportSizes = [];
+  public $maxImportSizes;
   /**
    * @var string
    */
   public $maxUploadSize;
   protected $storageQuotaType = AboutStorageQuota::class;
   protected $storageQuotaDataType = '';
-  public $storageQuota;
   protected $teamDriveThemesType = AboutTeamDriveThemes::class;
   protected $teamDriveThemesDataType = 'array';
-  public $teamDriveThemes = [];
   protected $userType = User::class;
   protected $userDataType = '';
-  public $user;
 
   /**
    * @param bool

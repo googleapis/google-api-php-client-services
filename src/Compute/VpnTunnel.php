@@ -47,7 +47,7 @@ class VpnTunnel extends \Google\Collection
   /**
    * @var string[]
    */
-  public $localTrafficSelector = [];
+  public $localTrafficSelector;
   /**
    * @var string
    */
@@ -75,7 +75,7 @@ class VpnTunnel extends \Google\Collection
   /**
    * @var string[]
    */
-  public $remoteTrafficSelector = [];
+  public $remoteTrafficSelector;
   /**
    * @var string
    */

@@ -23,27 +23,27 @@ class IdFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $adGroupAdIds = [];
+  public $adGroupAdIds;
   /**
    * @var string[]
    */
-  public $adGroupIds = [];
+  public $adGroupIds;
   /**
    * @var string[]
    */
-  public $campaignIds = [];
+  public $campaignIds;
   /**
    * @var string[]
    */
-  public $insertionOrderIds = [];
+  public $insertionOrderIds;
   /**
    * @var string[]
    */
-  public $lineItemIds = [];
+  public $lineItemIds;
   /**
    * @var string[]
    */
-  public $mediaProductIds = [];
+  public $mediaProductIds;
 
   /**
    * @param string[]

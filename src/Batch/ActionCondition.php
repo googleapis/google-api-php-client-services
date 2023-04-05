@@ -23,7 +23,7 @@ class ActionCondition extends \Google\Collection
   /**
    * @var int[]
    */
-  public $exitCodes = [];
+  public $exitCodes;
 
   /**
    * @param int[]

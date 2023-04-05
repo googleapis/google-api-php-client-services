@@ -38,11 +38,10 @@ class ServiceLevelObjective extends \Google\Model
   public $rollingPeriod;
   protected $serviceLevelIndicatorType = ServiceLevelIndicator::class;
   protected $serviceLevelIndicatorDataType = '';
-  public $serviceLevelIndicator;
   /**
    * @var string[]
    */
-  public $userLabels = [];
+  public $userLabels;
 
   /**
    * @param string

@@ -23,7 +23,7 @@ class QualityCalypsoAppsLink extends \Google\Collection
   /**
    * @var string[]
    */
-  public $applicationId = [];
+  public $applicationId;
 
   /**
    * @param string[]

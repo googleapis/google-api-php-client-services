@@ -31,11 +31,11 @@ class ShoppingAdsProgramStatusRegionStatus extends \Google\Collection
   /**
    * @var string[]
    */
-  public $onboardingIssues = [];
+  public $onboardingIssues;
   /**
    * @var string[]
    */
-  public $regionCodes = [];
+  public $regionCodes;
   /**
    * @var string
    */
@@ -50,11 +50,10 @@ class ShoppingAdsProgramStatusRegionStatus extends \Google\Collection
   public $reviewIneligibilityReasonDescription;
   protected $reviewIneligibilityReasonDetailsType = ShoppingAdsProgramStatusReviewIneligibilityReasonDetails::class;
   protected $reviewIneligibilityReasonDetailsDataType = '';
-  public $reviewIneligibilityReasonDetails;
   /**
    * @var string[]
    */
-  public $reviewIssues = [];
+  public $reviewIssues;
 
   /**
    * @param string

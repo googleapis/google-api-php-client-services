@@ -22,15 +22,14 @@ class DocumentChange extends \Google\Collection
   protected $collection_key = 'targetIds';
   protected $documentType = Document::class;
   protected $documentDataType = '';
-  public $document;
   /**
    * @var int[]
    */
-  public $removedTargetIds = [];
+  public $removedTargetIds;
   /**
    * @var int[]
    */
-  public $targetIds = [];
+  public $targetIds;
 
   /**
    * @param Document

@@ -23,14 +23,13 @@ class GoogleIdentityAccesscontextmanagerV1IngressFrom extends \Google\Collection
   /**
    * @var string[]
    */
-  public $identities = [];
+  public $identities;
   /**
    * @var string
    */
   public $identityType;
   protected $sourcesType = GoogleIdentityAccesscontextmanagerV1IngressSource::class;
   protected $sourcesDataType = 'array';
-  public $sources = [];
 
   /**
    * @param string[]

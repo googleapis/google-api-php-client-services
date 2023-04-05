@@ -23,7 +23,7 @@ class ReconfigureTrustRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $targetDnsIpAddresses = [];
+  public $targetDnsIpAddresses;
   /**
    * @var string
    */

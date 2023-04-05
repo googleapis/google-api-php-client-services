@@ -23,14 +23,13 @@ class ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle extends \Google\Collec
   /**
    * @var string[]
    */
-  public $deprecatedInFavorOf = [];
+  public $deprecatedInFavorOf;
   /**
    * @var string
    */
   public $description;
   protected $endSupportType = GoogleTypeDate::class;
   protected $endSupportDataType = '';
-  public $endSupport;
   /**
    * @var string
    */

@@ -26,7 +26,7 @@ class GoogleCloudRecommenderV1MarkRecommendationFailedRequest extends \Google\Mo
   /**
    * @var string[]
    */
-  public $stateMetadata = [];
+  public $stateMetadata;
 
   /**
    * @param string

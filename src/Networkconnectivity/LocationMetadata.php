@@ -23,7 +23,7 @@ class LocationMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $locationFeatures = [];
+  public $locationFeatures;
 
   /**
    * @param string[]

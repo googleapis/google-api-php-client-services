@@ -22,6 +22,10 @@ class EnvironmentConfig extends \Google\Model
   /**
    * @var string
    */
+  public $airflowByoidUri;
+  /**
+   * @var string
+   */
   public $airflowUri;
   /**
    * @var string
@@ -73,6 +77,20 @@ class EnvironmentConfig extends \Google\Model
   protected $workloadsConfigDataType = '';
   public $workloadsConfig;
 
+  /**
+   * @param string
+   */
+  public function setAirflowByoidUri($airflowByoidUri)
+  {
+    $this->airflowByoidUri = $airflowByoidUri;
+  }
+  /**
+   * @return string
+   */
+  public function getAirflowByoidUri()
+  {
+    return $this->airflowByoidUri;
+  }
   /**
    * @param string
    */

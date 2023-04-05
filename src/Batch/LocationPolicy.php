@@ -23,7 +23,7 @@ class LocationPolicy extends \Google\Collection
   /**
    * @var string[]
    */
-  public $allowedLocations = [];
+  public $allowedLocations;
 
   /**
    * @param string[]

@@ -21,11 +21,10 @@ class Request extends \Google\Model
 {
   protected $authType = Auth::class;
   protected $authDataType = '';
-  public $auth;
   /**
    * @var string[]
    */
-  public $headers = [];
+  public $headers;
   /**
    * @var string
    */

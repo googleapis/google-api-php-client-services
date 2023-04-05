@@ -22,11 +22,10 @@ class KnowledgeAnswersMarkerOpenQuestion extends \Google\Collection
   protected $collection_key = 'slotName';
   protected $slotKeyType = KnowledgeAnswersMeaningSchemaSlotKey::class;
   protected $slotKeyDataType = '';
-  public $slotKey;
   /**
    * @var string[]
    */
-  public $slotName = [];
+  public $slotName;
 
   /**
    * @param KnowledgeAnswersMeaningSchemaSlotKey

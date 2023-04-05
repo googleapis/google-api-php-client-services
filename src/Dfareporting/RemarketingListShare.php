@@ -31,11 +31,11 @@ class RemarketingListShare extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sharedAccountIds = [];
+  public $sharedAccountIds;
   /**
    * @var string[]
    */
-  public $sharedAdvertiserIds = [];
+  public $sharedAdvertiserIds;
 
   /**
    * @param string

@@ -96,7 +96,7 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hiddenUnits = [];
+  public $hiddenUnits;
   /**
    * @var string
    */
@@ -108,7 +108,7 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hparamTuningObjectives = [];
+  public $hparamTuningObjectives;
   /**
    * @var bool
    */
@@ -117,7 +117,7 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $inputLabelColumns = [];
+  public $inputLabelColumns;
   /**
    * @var string
    */
@@ -136,7 +136,7 @@ class TrainingOptions extends \Google\Collection
   public $kmeansInitializationMethod;
   public $l1Regularization;
   public $l2Regularization;
-  public $labelClassWeights = [];
+  public $labelClassWeights;
   public $learnRate;
   /**
    * @var string
@@ -178,7 +178,6 @@ class TrainingOptions extends \Google\Collection
   public $modelUri;
   protected $nonSeasonalOrderType = ArimaOrder::class;
   protected $nonSeasonalOrderDataType = '';
-  public $nonSeasonalOrder;
   /**
    * @var string
    */
@@ -219,7 +218,7 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $timeSeriesIdColumns = [];
+  public $timeSeriesIdColumns;
   public $timeSeriesLengthFraction;
   /**
    * @var string

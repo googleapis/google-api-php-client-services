@@ -26,7 +26,6 @@ class StreamingComputationConfig extends \Google\Collection
   public $computationId;
   protected $instructionsType = ParallelInstruction::class;
   protected $instructionsDataType = 'array';
-  public $instructions = [];
   /**
    * @var string
    */
@@ -38,7 +37,7 @@ class StreamingComputationConfig extends \Google\Collection
   /**
    * @var string[]
    */
-  public $transformUserNameToStateFamily = [];
+  public $transformUserNameToStateFamily;
 
   /**
    * @param string

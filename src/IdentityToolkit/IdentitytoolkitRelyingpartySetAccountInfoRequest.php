@@ -43,11 +43,11 @@ class IdentitytoolkitRelyingpartySetAccountInfoRequest extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $deleteAttribute = [];
+  public $deleteAttribute;
   /**
    * @var string[]
    */
-  public $deleteProvider = [];
+  public $deleteProvider;
   /**
    * @var bool
    */
@@ -99,7 +99,7 @@ class IdentitytoolkitRelyingpartySetAccountInfoRequest extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $provider = [];
+  public $provider;
   /**
    * @var bool
    */

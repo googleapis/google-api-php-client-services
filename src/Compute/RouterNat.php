@@ -23,7 +23,7 @@ class RouterNat extends \Google\Collection
   /**
    * @var string[]
    */
-  public $drainNatIps = [];
+  public $drainNatIps;
   /**
    * @var bool
    */
@@ -35,14 +35,13 @@ class RouterNat extends \Google\Collection
   /**
    * @var string[]
    */
-  public $endpointTypes = [];
+  public $endpointTypes;
   /**
    * @var int
    */
   public $icmpIdleTimeoutSec;
   protected $logConfigType = RouterNatLogConfig::class;
   protected $logConfigDataType = '';
-  public $logConfig;
   /**
    * @var int
    */
@@ -62,17 +61,15 @@ class RouterNat extends \Google\Collection
   /**
    * @var string[]
    */
-  public $natIps = [];
+  public $natIps;
   protected $rulesType = RouterNatRule::class;
   protected $rulesDataType = 'array';
-  public $rules = [];
   /**
    * @var string
    */
   public $sourceSubnetworkIpRangesToNat;
   protected $subnetworksType = RouterNatSubnetworkToNat::class;
   protected $subnetworksDataType = 'array';
-  public $subnetworks = [];
   /**
    * @var int
    */

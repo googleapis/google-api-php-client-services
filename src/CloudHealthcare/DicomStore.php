@@ -22,14 +22,13 @@ class DicomStore extends \Google\Model
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $name;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
-  public $notificationConfig;
 
   /**
    * @param string[]

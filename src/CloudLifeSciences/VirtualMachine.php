@@ -22,7 +22,6 @@ class VirtualMachine extends \Google\Collection
   protected $collection_key = 'volumes';
   protected $acceleratorsType = Accelerator::class;
   protected $acceleratorsDataType = 'array';
-  public $accelerators = [];
   /**
    * @var int
    */
@@ -37,11 +36,10 @@ class VirtualMachine extends \Google\Collection
   public $cpuPlatform;
   protected $disksType = Disk::class;
   protected $disksDataType = 'array';
-  public $disks = [];
   /**
    * @var string[]
    */
-  public $dockerCacheImages = [];
+  public $dockerCacheImages;
   /**
    * @var bool
    */
@@ -49,14 +47,13 @@ class VirtualMachine extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $machineType;
   protected $networkType = Network::class;
   protected $networkDataType = '';
-  public $network;
   /**
    * @var string
    */
@@ -71,10 +68,8 @@ class VirtualMachine extends \Google\Collection
   public $reservation;
   protected $serviceAccountType = ServiceAccount::class;
   protected $serviceAccountDataType = '';
-  public $serviceAccount;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
-  public $volumes = [];
 
   /**
    * @param Accelerator[]

@@ -27,7 +27,7 @@ class HostRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $hosts = [];
+  public $hosts;
   /**
    * @var string
    */

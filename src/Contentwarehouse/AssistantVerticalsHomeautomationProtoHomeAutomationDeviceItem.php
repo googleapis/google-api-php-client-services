@@ -22,7 +22,6 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationDeviceItem extends \Goo
   protected $collection_key = 'matchedItemValue';
   protected $homeautomationMetadataType = AssistantVerticalsHomeautomationProtoHomeAutomationMetaData::class;
   protected $homeautomationMetadataDataType = '';
-  public $homeautomationMetadata;
   /**
    * @var string
    */
@@ -34,7 +33,7 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationDeviceItem extends \Goo
   /**
    * @var string[]
    */
-  public $matchedItemValue = [];
+  public $matchedItemValue;
 
   /**
    * @param AssistantVerticalsHomeautomationProtoHomeAutomationMetaData

@@ -23,11 +23,11 @@ class RouterNatRuleAction extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sourceNatActiveIps = [];
+  public $sourceNatActiveIps;
   /**
    * @var string[]
    */
-  public $sourceNatDrainIps = [];
+  public $sourceNatDrainIps;
 
   /**
    * @param string[]

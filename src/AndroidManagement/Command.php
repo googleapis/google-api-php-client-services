@@ -22,10 +22,8 @@ class Command extends \Google\Collection
   protected $collection_key = 'resetPasswordFlags';
   protected $clearAppsDataParamsType = ClearAppsDataParams::class;
   protected $clearAppsDataParamsDataType = '';
-  public $clearAppsDataParams;
   protected $clearAppsDataStatusType = ClearAppsDataStatus::class;
   protected $clearAppsDataStatusDataType = '';
-  public $clearAppsDataStatus;
   /**
    * @var string
    */
@@ -45,7 +43,7 @@ class Command extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resetPasswordFlags = [];
+  public $resetPasswordFlags;
   /**
    * @var string
    */

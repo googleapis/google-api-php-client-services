@@ -27,7 +27,7 @@ class Container extends \Google\Collection
   /**
    * @var string[]
    */
-  public $commands = [];
+  public $commands;
   /**
    * @var string
    */
@@ -51,7 +51,7 @@ class Container extends \Google\Collection
   /**
    * @var string[]
    */
-  public $volumes = [];
+  public $volumes;
 
   /**
    * @param bool

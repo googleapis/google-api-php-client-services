@@ -23,10 +23,9 @@ class BatchWriteRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   protected $writesType = Write::class;
   protected $writesDataType = 'array';
-  public $writes = [];
 
   /**
    * @param string[]

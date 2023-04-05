@@ -27,7 +27,7 @@ class GoogleCloudRetailV2alphaPurgeProductsResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $purgeSample = [];
+  public $purgeSample;
 
   /**
    * @param string

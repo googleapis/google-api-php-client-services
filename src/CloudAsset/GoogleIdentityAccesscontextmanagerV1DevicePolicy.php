@@ -23,14 +23,13 @@ class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $allowedDeviceManagementLevels = [];
+  public $allowedDeviceManagementLevels;
   /**
    * @var string[]
    */
-  public $allowedEncryptionStatuses = [];
+  public $allowedEncryptionStatuses;
   protected $osConstraintsType = GoogleIdentityAccesscontextmanagerV1OsConstraint::class;
   protected $osConstraintsDataType = 'array';
-  public $osConstraints = [];
   /**
    * @var bool
    */

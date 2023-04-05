@@ -21,11 +21,10 @@ class ExtendedSourceContext extends \Google\Model
 {
   protected $contextType = SourceContext::class;
   protected $contextDataType = '';
-  public $context;
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
 
   /**
    * @param SourceContext

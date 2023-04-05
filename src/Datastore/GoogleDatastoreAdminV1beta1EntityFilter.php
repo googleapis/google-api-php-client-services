@@ -23,11 +23,11 @@ class GoogleDatastoreAdminV1beta1EntityFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $kinds = [];
+  public $kinds;
   /**
    * @var string[]
    */
-  public $namespaceIds = [];
+  public $namespaceIds;
 
   /**
    * @param string[]

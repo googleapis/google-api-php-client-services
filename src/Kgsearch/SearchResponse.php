@@ -35,7 +35,7 @@ class SearchResponse extends \Google\Collection
   /**
    * @var array[]
    */
-  public $itemListElement = [];
+  public $itemListElement;
 
   /**
    * @param array

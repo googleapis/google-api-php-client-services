@@ -23,11 +23,11 @@ class CriteriaTargeting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludedCriteriaIds = [];
+  public $excludedCriteriaIds;
   /**
    * @var string[]
    */
-  public $targetedCriteriaIds = [];
+  public $targetedCriteriaIds;
 
   /**
    * @param string[]

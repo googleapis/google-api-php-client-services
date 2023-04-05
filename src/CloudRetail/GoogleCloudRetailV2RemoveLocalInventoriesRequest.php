@@ -27,7 +27,7 @@ class GoogleCloudRetailV2RemoveLocalInventoriesRequest extends \Google\Collectio
   /**
    * @var string[]
    */
-  public $placeIds = [];
+  public $placeIds;
   /**
    * @var string
    */

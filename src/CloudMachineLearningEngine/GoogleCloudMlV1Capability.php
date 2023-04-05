@@ -23,7 +23,7 @@ class GoogleCloudMlV1Capability extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableAccelerators = [];
+  public $availableAccelerators;
   /**
    * @var string
    */

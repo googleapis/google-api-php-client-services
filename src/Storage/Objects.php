@@ -22,7 +22,6 @@ class Objects extends \Google\Collection
   protected $collection_key = 'prefixes';
   protected $itemsType = StorageObject::class;
   protected $itemsDataType = 'array';
-  public $items = [];
   /**
    * @var string
    */
@@ -34,7 +33,7 @@ class Objects extends \Google\Collection
   /**
    * @var string[]
    */
-  public $prefixes = [];
+  public $prefixes;
 
   /**
    * @param StorageObject[]

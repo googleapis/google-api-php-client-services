@@ -31,7 +31,7 @@ class GoogleCloudRetailV2AddFulfillmentPlacesRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $placeIds = [];
+  public $placeIds;
   /**
    * @var string
    */

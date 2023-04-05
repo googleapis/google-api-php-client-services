@@ -21,7 +21,6 @@ class Link extends \Google\Model
 {
   protected $bigqueryDatasetType = BigQueryDataset::class;
   protected $bigqueryDatasetDataType = '';
-  public $bigqueryDataset;
   /**
    * @var string
    */

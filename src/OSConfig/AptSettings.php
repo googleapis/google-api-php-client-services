@@ -23,11 +23,11 @@ class AptSettings extends \Google\Collection
   /**
    * @var string[]
    */
-  public $excludes = [];
+  public $excludes;
   /**
    * @var string[]
    */
-  public $exclusivePackages = [];
+  public $exclusivePackages;
   /**
    * @var string
    */

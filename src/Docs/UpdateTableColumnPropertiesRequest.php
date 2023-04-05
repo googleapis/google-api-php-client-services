@@ -23,17 +23,15 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
   /**
    * @var int[]
    */
-  public $columnIndices = [];
+  public $columnIndices;
   /**
    * @var string
    */
   public $fields;
   protected $tableColumnPropertiesType = TableColumnProperties::class;
   protected $tableColumnPropertiesDataType = '';
-  public $tableColumnProperties;
   protected $tableStartLocationType = Location::class;
   protected $tableStartLocationDataType = '';
-  public $tableStartLocation;
 
   /**
    * @param int[]

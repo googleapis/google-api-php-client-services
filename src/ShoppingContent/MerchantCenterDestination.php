@@ -21,7 +21,6 @@ class MerchantCenterDestination extends \Google\Model
 {
   protected $attributionSettingsType = AttributionSettings::class;
   protected $attributionSettingsDataType = '';
-  public $attributionSettings;
   /**
    * @var string
    */

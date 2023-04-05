@@ -22,7 +22,7 @@ class GoogleCloudContentwarehouseV1CloudAIDocumentOption extends \Google\Model
   /**
    * @var string[]
    */
-  public $customizedEntitiesPropertiesConversions = [];
+  public $customizedEntitiesPropertiesConversions;
   /**
    * @var bool
    */

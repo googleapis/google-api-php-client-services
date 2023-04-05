@@ -31,7 +31,7 @@ class InlineScopedRouteConfigs extends \Google\Collection
   /**
    * @var array[]
    */
-  public $scopedRouteConfigs = [];
+  public $scopedRouteConfigs;
 
   /**
    * @param string

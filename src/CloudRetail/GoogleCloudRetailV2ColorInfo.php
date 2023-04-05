@@ -23,11 +23,11 @@ class GoogleCloudRetailV2ColorInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $colorFamilies = [];
+  public $colorFamilies;
   /**
    * @var string[]
    */
-  public $colors = [];
+  public $colors;
 
   /**
    * @param string[]

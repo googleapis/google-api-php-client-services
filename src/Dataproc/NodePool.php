@@ -27,7 +27,7 @@ class NodePool extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instanceNames = [];
+  public $instanceNames;
   /**
    * @var string
    */

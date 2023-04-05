@@ -23,7 +23,7 @@ class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData extends \Goog
   /**
    * @var string[]
    */
-  public $metadata = [];
+  public $metadata;
   /**
    * @var string
    */

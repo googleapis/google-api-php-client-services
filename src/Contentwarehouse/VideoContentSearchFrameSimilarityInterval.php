@@ -23,7 +23,7 @@ class VideoContentSearchFrameSimilarityInterval extends \Google\Collection
   /**
    * @var float[]
    */
-  public $frameSimilarity = [];
+  public $frameSimilarity;
   /**
    * @var string
    */

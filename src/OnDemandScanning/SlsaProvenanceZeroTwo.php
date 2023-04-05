@@ -23,23 +23,19 @@ class SlsaProvenanceZeroTwo extends \Google\Collection
   /**
    * @var array[]
    */
-  public $buildConfig = [];
+  public $buildConfig;
   /**
    * @var string
    */
   public $buildType;
   protected $builderType = GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder::class;
   protected $builderDataType = '';
-  public $builder;
   protected $invocationType = GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation::class;
   protected $invocationDataType = '';
-  public $invocation;
   protected $materialsType = GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial::class;
   protected $materialsDataType = 'array';
-  public $materials = [];
   protected $metadataType = GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata::class;
   protected $metadataDataType = '';
-  public $metadata;
 
   /**
    * @param array[]

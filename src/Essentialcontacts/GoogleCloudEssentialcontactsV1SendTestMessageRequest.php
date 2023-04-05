@@ -23,7 +23,7 @@ class GoogleCloudEssentialcontactsV1SendTestMessageRequest extends \Google\Colle
   /**
    * @var string[]
    */
-  public $contacts = [];
+  public $contacts;
   /**
    * @var string
    */

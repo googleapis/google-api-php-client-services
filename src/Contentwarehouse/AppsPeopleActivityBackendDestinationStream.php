@@ -23,7 +23,7 @@ class AppsPeopleActivityBackendDestinationStream extends \Google\Collection
   /**
    * @var string[]
    */
-  public $id = [];
+  public $id;
   /**
    * @var string
    */

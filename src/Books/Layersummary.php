@@ -27,7 +27,7 @@ class Layersummary extends \Google\Collection
   /**
    * @var string[]
    */
-  public $annotationTypes = [];
+  public $annotationTypes;
   /**
    * @var string
    */

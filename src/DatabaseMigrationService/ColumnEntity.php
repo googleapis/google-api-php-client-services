@@ -47,7 +47,7 @@ class ColumnEntity extends \Google\Collection
   /**
    * @var array[]
    */
-  public $customFeatures = [];
+  public $customFeatures;
   /**
    * @var string
    */
@@ -87,7 +87,7 @@ class ColumnEntity extends \Google\Collection
   /**
    * @var string[]
    */
-  public $setValues = [];
+  public $setValues;
   /**
    * @var bool
    */

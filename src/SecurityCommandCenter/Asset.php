@@ -29,7 +29,6 @@ class Asset extends \Google\Model
   public $createTime;
   protected $iamPolicyType = IamPolicy::class;
   protected $iamPolicyDataType = '';
-  public $iamPolicy;
   /**
    * @var string
    */
@@ -37,13 +36,11 @@ class Asset extends \Google\Model
   /**
    * @var array[]
    */
-  public $resourceProperties = [];
+  public $resourceProperties;
   protected $securityCenterPropertiesType = SecurityCenterProperties::class;
   protected $securityCenterPropertiesDataType = '';
-  public $securityCenterProperties;
   protected $securityMarksType = SecurityMarks::class;
   protected $securityMarksDataType = '';
-  public $securityMarks;
   /**
    * @var string
    */

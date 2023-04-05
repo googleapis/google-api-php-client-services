@@ -23,7 +23,7 @@ class BatchClearValuesByDataFilterResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $clearedRanges = [];
+  public $clearedRanges;
   /**
    * @var string
    */

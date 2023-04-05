@@ -23,7 +23,7 @@ class GoogleCloudVideointelligenceV1SpeechTranscriptionConfig extends \Google\Co
   /**
    * @var int[]
    */
-  public $audioTracks = [];
+  public $audioTracks;
   /**
    * @var int
    */
@@ -54,7 +54,6 @@ class GoogleCloudVideointelligenceV1SpeechTranscriptionConfig extends \Google\Co
   public $maxAlternatives;
   protected $speechContextsType = GoogleCloudVideointelligenceV1SpeechContext::class;
   protected $speechContextsDataType = 'array';
-  public $speechContexts = [];
 
   /**
    * @param int[]

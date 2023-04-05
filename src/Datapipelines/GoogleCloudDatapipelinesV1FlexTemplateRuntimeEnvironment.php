@@ -23,11 +23,11 @@ class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment extends \Google\C
   /**
    * @var string[]
    */
-  public $additionalExperiments = [];
+  public $additionalExperiments;
   /**
    * @var string[]
    */
-  public $additionalUserLabels = [];
+  public $additionalUserLabels;
   /**
    * @var bool
    */

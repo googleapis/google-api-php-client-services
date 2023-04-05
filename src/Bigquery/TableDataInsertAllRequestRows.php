@@ -26,7 +26,7 @@ class TableDataInsertAllRequestRows extends \Google\Model
   /**
    * @var array[]
    */
-  public $json = [];
+  public $json;
 
   /**
    * @param string

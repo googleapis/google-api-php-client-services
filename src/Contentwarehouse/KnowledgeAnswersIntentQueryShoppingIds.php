@@ -23,7 +23,7 @@ class KnowledgeAnswersIntentQueryShoppingIds extends \Google\Collection
   /**
    * @var string[]
    */
-  public $aspectClusterIds = [];
+  public $aspectClusterIds;
   /**
    * @var string
    */
@@ -31,22 +31,21 @@ class KnowledgeAnswersIntentQueryShoppingIds extends \Google\Collection
   /**
    * @var int[]
    */
-  public $bxCategoryIds = [];
+  public $bxCategoryIds;
   protected $measuresType = KnowledgeAnswersIntentQueryShoppingIdsMeasureValue::class;
   protected $measuresDataType = 'array';
-  public $measures = [];
   /**
    * @var string[]
    */
-  public $merchantIds = [];
+  public $merchantIds;
   /**
    * @var string[]
    */
-  public $merchantSourceIds = [];
+  public $merchantSourceIds;
   /**
    * @var string[]
    */
-  public $tagIds = [];
+  public $tagIds;
 
   /**
    * @param string[]

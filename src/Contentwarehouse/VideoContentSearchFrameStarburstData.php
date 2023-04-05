@@ -23,7 +23,7 @@ class VideoContentSearchFrameStarburstData extends \Google\Collection
   /**
    * @var float[]
    */
-  public $denseVector = [];
+  public $denseVector;
   /**
    * @var string
    */

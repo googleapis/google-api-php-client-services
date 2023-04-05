@@ -23,7 +23,7 @@ class HangoutsChatInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $roomId = [];
+  public $roomId;
 
   /**
    * @param string[]

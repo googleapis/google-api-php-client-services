@@ -27,7 +27,7 @@ class NotificationSetting extends \Google\Collection
   /**
    * @var string[]
    */
-  public $notificationTypes = [];
+  public $notificationTypes;
   /**
    * @var string
    */

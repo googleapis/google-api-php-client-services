@@ -22,7 +22,7 @@ class InstanceParams extends \Google\Model
   /**
    * @var string[]
    */
-  public $resourceManagerTags = [];
+  public $resourceManagerTags;
 
   /**
    * @param string[]

@@ -22,7 +22,7 @@ class Assertion extends \Google\Collection
   protected $collection_key = 'tags';
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
-  public $dependencyTargets;
+  public $dependencyTargets = [];
   /**
    * @var bool
    */
@@ -40,7 +40,7 @@ class Assertion extends \Google\Collection
   /**
    * @var string[]
    */
-  public $tags;
+  public $tags = [];
 
   /**
    * @param Target[]

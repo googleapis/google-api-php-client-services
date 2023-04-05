@@ -23,10 +23,9 @@ class AbuseiamVideoReviewData extends \Google\Collection
   /**
    * @var string[]
    */
-  public $referenceFragment = [];
+  public $referenceFragment;
   protected $reviewerType = AbuseiamVideoReviewer::class;
   protected $reviewerDataType = '';
-  public $reviewer;
   /**
    * @var string
    */

@@ -23,7 +23,7 @@ class IntegralAdScience extends \Google\Collection
   /**
    * @var string[]
    */
-  public $customSegmentId = [];
+  public $customSegmentId;
   /**
    * @var string
    */

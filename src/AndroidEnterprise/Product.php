@@ -22,13 +22,10 @@ class Product extends \Google\Collection
   protected $collection_key = 'screenshotUrls';
   protected $appRestrictionsSchemaType = AppRestrictionsSchema::class;
   protected $appRestrictionsSchemaDataType = '';
-  public $appRestrictionsSchema;
   protected $appTracksType = TrackInfo::class;
   protected $appTracksDataType = 'array';
-  public $appTracks = [];
   protected $appVersionType = AppVersion::class;
   protected $appVersionDataType = 'array';
-  public $appVersion = [];
   /**
    * @var string
    */
@@ -36,11 +33,11 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $availableCountries = [];
+  public $availableCountries;
   /**
    * @var string[]
    */
-  public $availableTracks = [];
+  public $availableTracks;
   /**
    * @var string
    */
@@ -64,7 +61,7 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $features = [];
+  public $features;
   /**
    * @var string
    */
@@ -79,7 +76,6 @@ class Product extends \Google\Collection
   public $minAndroidSdkVersion;
   protected $permissionsType = ProductPermission::class;
   protected $permissionsDataType = 'array';
-  public $permissions = [];
   /**
    * @var string
    */
@@ -99,10 +95,9 @@ class Product extends \Google\Collection
   /**
    * @var string[]
    */
-  public $screenshotUrls = [];
+  public $screenshotUrls;
   protected $signingCertificateType = ProductSigningCertificate::class;
   protected $signingCertificateDataType = '';
-  public $signingCertificate;
   /**
    * @var string
    */

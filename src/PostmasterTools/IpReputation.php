@@ -31,7 +31,7 @@ class IpReputation extends \Google\Collection
   /**
    * @var string[]
    */
-  public $sampleIps = [];
+  public $sampleIps;
 
   /**
    * @param string

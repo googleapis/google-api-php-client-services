@@ -23,7 +23,7 @@ class BatchDeleteAlertsRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $alertId = [];
+  public $alertId;
   /**
    * @var string
    */

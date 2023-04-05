@@ -27,7 +27,7 @@ class EnterpriseCrmLoggingGwsSanitizeOptions extends \Google\Collection
   /**
    * @var string[]
    */
-  public $logType = [];
+  public $logType;
   /**
    * @var string
    */

@@ -67,15 +67,15 @@ class Snapshot extends \Google\Collection
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string[]
    */
-  public $licenseCodes = [];
+  public $licenseCodes;
   /**
    * @var string[]
    */
-  public $licenses = [];
+  public $licenses;
   /**
    * @var string
    */
@@ -94,7 +94,6 @@ class Snapshot extends \Google\Collection
   public $selfLink;
   protected $snapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $snapshotEncryptionKeyDataType = '';
-  public $snapshotEncryptionKey;
   /**
    * @var string
    */
@@ -105,7 +104,6 @@ class Snapshot extends \Google\Collection
   public $sourceDisk;
   protected $sourceDiskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceDiskEncryptionKeyDataType = '';
-  public $sourceDiskEncryptionKey;
   /**
    * @var string
    */
@@ -133,7 +131,7 @@ class Snapshot extends \Google\Collection
   /**
    * @var string[]
    */
-  public $storageLocations = [];
+  public $storageLocations;
 
   /**
    * @param string

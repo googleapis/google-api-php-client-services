@@ -22,20 +22,16 @@ class RunReportRequest extends \Google\Collection
   protected $collection_key = 'orderBys';
   protected $cohortSpecType = CohortSpec::class;
   protected $cohortSpecDataType = '';
-  public $cohortSpec;
   /**
    * @var string
    */
   public $currencyCode;
   protected $dateRangesType = DateRange::class;
   protected $dateRangesDataType = 'array';
-  public $dateRanges = [];
   protected $dimensionFilterType = FilterExpression::class;
   protected $dimensionFilterDataType = '';
-  public $dimensionFilter;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
-  public $dimensions = [];
   /**
    * @var bool
    */
@@ -47,20 +43,17 @@ class RunReportRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $metricAggregations = [];
+  public $metricAggregations;
   protected $metricFilterType = FilterExpression::class;
   protected $metricFilterDataType = '';
-  public $metricFilter;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  public $metrics = [];
   /**
    * @var string
    */
   public $offset;
   protected $orderBysType = OrderBy::class;
   protected $orderBysDataType = 'array';
-  public $orderBys = [];
   /**
    * @var string
    */

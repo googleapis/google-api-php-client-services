@@ -58,7 +58,7 @@ class QuotaLimit extends \Google\Model
   /**
    * @var string[]
    */
-  public $values = [];
+  public $values;
 
   /**
    * @param string

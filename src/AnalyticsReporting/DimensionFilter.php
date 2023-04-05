@@ -31,7 +31,7 @@ class DimensionFilter extends \Google\Collection
   /**
    * @var string[]
    */
-  public $expressions = [];
+  public $expressions;
   /**
    * @var bool
    */

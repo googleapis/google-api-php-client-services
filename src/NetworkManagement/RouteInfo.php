@@ -27,7 +27,7 @@ class RouteInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $destPortRanges = [];
+  public $destPortRanges;
   /**
    * @var string
    */
@@ -35,7 +35,7 @@ class RouteInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $instanceTags = [];
+  public $instanceTags;
   /**
    * @var string
    */
@@ -55,7 +55,7 @@ class RouteInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $protocols = [];
+  public $protocols;
   /**
    * @var string
    */
@@ -67,7 +67,7 @@ class RouteInfo extends \Google\Collection
   /**
    * @var string[]
    */
-  public $srcPortRanges = [];
+  public $srcPortRanges;
   /**
    * @var string
    */

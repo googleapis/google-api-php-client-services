@@ -33,7 +33,6 @@ class Value extends \Google\Model
   public $dateValue;
   protected $listValueType = ListValue::class;
   protected $listValueDataType = '';
-  public $listValue;
   /**
    * @var string
    */
@@ -42,14 +41,13 @@ class Value extends \Google\Model
   /**
    * @var array[]
    */
-  public $protoValue = [];
+  public $protoValue;
   /**
    * @var string
    */
   public $stringValue;
   protected $structValueType = Struct::class;
   protected $structValueDataType = '';
-  public $structValue;
 
   /**
    * @param bool

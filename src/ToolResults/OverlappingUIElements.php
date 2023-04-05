@@ -23,7 +23,7 @@ class OverlappingUIElements extends \Google\Collection
   /**
    * @var string[]
    */
-  public $resourceName = [];
+  public $resourceName;
   /**
    * @var string
    */

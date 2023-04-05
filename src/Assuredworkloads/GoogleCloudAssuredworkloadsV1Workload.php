@@ -43,6 +43,9 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $displayName;
+  protected $ekmProvisioningResponseType = GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse::class;
+  protected $ekmProvisioningResponseDataType = '';
+  public $ekmProvisioningResponse;
   /**
    * @var bool
    */
@@ -167,6 +170,20 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse
+   */
+  public function setEkmProvisioningResponse(GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse $ekmProvisioningResponse)
+  {
+    $this->ekmProvisioningResponse = $ekmProvisioningResponse;
+  }
+  /**
+   * @return GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse
+   */
+  public function getEkmProvisioningResponse()
+  {
+    return $this->ekmProvisioningResponse;
   }
   /**
    * @param bool

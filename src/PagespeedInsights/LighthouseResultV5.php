@@ -22,19 +22,14 @@ class LighthouseResultV5 extends \Google\Collection
   protected $collection_key = 'stackPacks';
   protected $auditsType = LighthouseAuditResultV5::class;
   protected $auditsDataType = 'map';
-  public $audits = [];
   protected $categoriesType = Categories::class;
   protected $categoriesDataType = '';
-  public $categories;
   protected $categoryGroupsType = CategoryGroupV5::class;
   protected $categoryGroupsDataType = 'map';
-  public $categoryGroups = [];
   protected $configSettingsType = ConfigSettings::class;
   protected $configSettingsDataType = '';
-  public $configSettings;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
-  public $environment;
   /**
    * @var string
    */
@@ -45,7 +40,6 @@ class LighthouseResultV5 extends \Google\Collection
   public $finalUrl;
   protected $i18nType = I18n::class;
   protected $i18nDataType = '';
-  public $i18n;
   /**
    * @var string
    */
@@ -57,16 +51,13 @@ class LighthouseResultV5 extends \Google\Collection
   /**
    * @var array[]
    */
-  public $runWarnings = [];
+  public $runWarnings;
   protected $runtimeErrorType = RuntimeError::class;
   protected $runtimeErrorDataType = '';
-  public $runtimeError;
   protected $stackPacksType = StackPack::class;
   protected $stackPacksDataType = 'array';
-  public $stackPacks = [];
   protected $timingType = Timing::class;
   protected $timingDataType = '';
-  public $timing;
   /**
    * @var string
    */

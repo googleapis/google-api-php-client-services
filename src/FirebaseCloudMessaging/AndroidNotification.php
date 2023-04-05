@@ -27,7 +27,7 @@ class AndroidNotification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $bodyLocArgs = [];
+  public $bodyLocArgs;
   /**
    * @var string
    */
@@ -74,7 +74,6 @@ class AndroidNotification extends \Google\Collection
   public $image;
   protected $lightSettingsType = LightSettings::class;
   protected $lightSettingsDataType = '';
-  public $lightSettings;
   /**
    * @var bool
    */
@@ -110,7 +109,7 @@ class AndroidNotification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $titleLocArgs = [];
+  public $titleLocArgs;
   /**
    * @var string
    */
@@ -118,7 +117,7 @@ class AndroidNotification extends \Google\Collection
   /**
    * @var string[]
    */
-  public $vibrateTimings = [];
+  public $vibrateTimings;
   /**
    * @var string
    */

@@ -30,7 +30,6 @@ class NetworkEdgeSecurityServiceAggregatedList extends \Google\Collection
   public $id;
   protected $itemsType = NetworkEdgeSecurityServicesScopedList::class;
   protected $itemsDataType = 'map';
-  public $items = [];
   /**
    * @var string
    */
@@ -46,10 +45,9 @@ class NetworkEdgeSecurityServiceAggregatedList extends \Google\Collection
   /**
    * @var string[]
    */
-  public $unreachables = [];
+  public $unreachables;
   protected $warningType = NetworkEdgeSecurityServiceAggregatedListWarning::class;
   protected $warningDataType = '';
-  public $warning;
 
   /**
    * @param string

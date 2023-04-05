@@ -27,14 +27,13 @@ class ListResponse extends \Google\Collection
   /**
    * @var string[]
    */
-  public $errorCode = [];
+  public $errorCode;
   /**
    * @var string
    */
   public $maxAge;
   protected $statementsType = Statement::class;
   protected $statementsDataType = 'array';
-  public $statements = [];
 
   /**
    * @param string

@@ -27,7 +27,7 @@ class GenerateIdTokenRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $delegates = [];
+  public $delegates;
   /**
    * @var bool
    */
