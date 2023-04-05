@@ -29,6 +29,10 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @var string
    */
+  public $banner;
+  /**
+   * @var string
+   */
   public $cartId;
   protected $completionDetailType = GoogleCloudRetailV2CompletionDetail::class;
   protected $completionDetailDataType = '';
@@ -118,6 +122,20 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public function getAttributionToken()
   {
     return $this->attributionToken;
+  }
+  /**
+   * @param string
+   */
+  public function setBanner($banner)
+  {
+    $this->banner = $banner;
+  }
+  /**
+   * @return string
+   */
+  public function getBanner()
+  {
+    return $this->banner;
   }
   /**
    * @param string

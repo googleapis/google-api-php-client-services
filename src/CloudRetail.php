@@ -85,6 +85,10 @@ class CloudRetail extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'banner' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'dataset' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -546,6 +550,16 @@ class CloudRetail extends \Google\Service
             ],'delete' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
                   'location' => 'path',

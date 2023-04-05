@@ -46,6 +46,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * `projects/locations/global/catalogs/default_catalog`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string banner The banner context for completion suggestions.
    * @opt_param string dataset Determines which dataset to use for fetching
    * completion. "user-data" will use the imported dataset through
    * CompletionService.ImportCompletionData. "cloud-retail" will use the dataset

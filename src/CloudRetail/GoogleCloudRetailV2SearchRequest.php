@@ -20,6 +20,10 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchRequest extends \Google\Collection
 {
   protected $collection_key = 'variantRollupKeys';
+  /**
+   * @var string
+   */
+  public $banner;
   protected $boostSpecType = GoogleCloudRetailV2SearchRequestBoostSpec::class;
   protected $boostSpecDataType = '';
   /**
@@ -87,6 +91,20 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
    */
   public $visitorId;
 
+  /**
+   * @param string
+   */
+  public function setBanner($banner)
+  {
+    $this->banner = $banner;
+  }
+  /**
+   * @return string
+   */
+  public function getBanner()
+  {
+    return $this->banner;
+  }
   /**
    * @param GoogleCloudRetailV2SearchRequestBoostSpec
    */
