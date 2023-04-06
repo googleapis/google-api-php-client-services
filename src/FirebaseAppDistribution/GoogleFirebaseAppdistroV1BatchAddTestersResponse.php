@@ -22,7 +22,6 @@ class GoogleFirebaseAppdistroV1BatchAddTestersResponse extends \Google\Collectio
   protected $collection_key = 'testers';
   protected $testersType = GoogleFirebaseAppdistroV1Tester::class;
   protected $testersDataType = 'array';
-  public $testers = [];
 
   /**
    * @param GoogleFirebaseAppdistroV1Tester[]

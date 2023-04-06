@@ -21,7 +21,6 @@ class GoogleFirebaseAppdistroV1UploadReleaseRequest extends \Google\Model
 {
   protected $blobType = GdataMedia::class;
   protected $blobDataType = '';
-  public $blob;
 
   /**
    * @param GdataMedia

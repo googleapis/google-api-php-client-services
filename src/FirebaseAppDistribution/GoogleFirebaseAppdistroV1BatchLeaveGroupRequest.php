@@ -23,7 +23,7 @@ class GoogleFirebaseAppdistroV1BatchLeaveGroupRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $emails = [];
+  public $emails;
 
   /**
    * @param string[]

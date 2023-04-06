@@ -23,7 +23,7 @@ class GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest extends \Google\Collec
   /**
    * @var string[]
    */
-  public $names = [];
+  public $names;
 
   /**
    * @param string[]

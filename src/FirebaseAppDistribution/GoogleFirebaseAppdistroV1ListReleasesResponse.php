@@ -26,7 +26,6 @@ class GoogleFirebaseAppdistroV1ListReleasesResponse extends \Google\Collection
   public $nextPageToken;
   protected $releasesType = GoogleFirebaseAppdistroV1Release::class;
   protected $releasesDataType = 'array';
-  public $releases = [];
 
   /**
    * @param string

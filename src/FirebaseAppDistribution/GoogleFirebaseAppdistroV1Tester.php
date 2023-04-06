@@ -27,7 +27,7 @@ class GoogleFirebaseAppdistroV1Tester extends \Google\Collection
   /**
    * @var string[]
    */
-  public $groups = [];
+  public $groups;
   /**
    * @var string
    */

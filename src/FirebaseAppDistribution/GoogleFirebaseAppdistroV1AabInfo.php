@@ -29,7 +29,6 @@ class GoogleFirebaseAppdistroV1AabInfo extends \Google\Model
   public $name;
   protected $testCertificateType = GoogleFirebaseAppdistroV1TestCertificate::class;
   protected $testCertificateDataType = '';
-  public $testCertificate;
 
   /**
    * @param string

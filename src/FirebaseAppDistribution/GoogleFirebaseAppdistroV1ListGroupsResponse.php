@@ -22,7 +22,6 @@ class GoogleFirebaseAppdistroV1ListGroupsResponse extends \Google\Collection
   protected $collection_key = 'groups';
   protected $groupsType = GoogleFirebaseAppdistroV1Group::class;
   protected $groupsDataType = 'array';
-  public $groups = [];
   /**
    * @var string
    */

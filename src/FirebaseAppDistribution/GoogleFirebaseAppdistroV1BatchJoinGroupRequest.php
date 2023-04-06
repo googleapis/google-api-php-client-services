@@ -27,7 +27,7 @@ class GoogleFirebaseAppdistroV1BatchJoinGroupRequest extends \Google\Collection
   /**
    * @var string[]
    */
-  public $emails = [];
+  public $emails;
 
   /**
    * @param bool

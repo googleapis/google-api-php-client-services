@@ -23,7 +23,7 @@ class GoogleFirebaseAppdistroV1BatchRemoveTestersResponse extends \Google\Collec
   /**
    * @var string[]
    */
-  public $emails = [];
+  public $emails;
 
   /**
    * @param string[]

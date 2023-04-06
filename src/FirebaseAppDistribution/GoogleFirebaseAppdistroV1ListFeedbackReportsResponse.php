@@ -22,7 +22,6 @@ class GoogleFirebaseAppdistroV1ListFeedbackReportsResponse extends \Google\Colle
   protected $collection_key = 'feedbackReports';
   protected $feedbackReportsType = GoogleFirebaseAppdistroV1FeedbackReport::class;
   protected $feedbackReportsDataType = 'array';
-  public $feedbackReports = [];
   /**
    * @var string
    */

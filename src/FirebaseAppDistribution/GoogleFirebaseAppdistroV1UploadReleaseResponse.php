@@ -21,7 +21,6 @@ class GoogleFirebaseAppdistroV1UploadReleaseResponse extends \Google\Model
 {
   protected $releaseType = GoogleFirebaseAppdistroV1Release::class;
   protected $releaseDataType = '';
-  public $release;
   /**
    * @var string
    */

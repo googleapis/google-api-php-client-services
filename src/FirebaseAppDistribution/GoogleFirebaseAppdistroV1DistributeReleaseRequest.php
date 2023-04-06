@@ -23,11 +23,11 @@ class GoogleFirebaseAppdistroV1DistributeReleaseRequest extends \Google\Collecti
   /**
    * @var string[]
    */
-  public $groupAliases = [];
+  public $groupAliases;
   /**
    * @var string[]
    */
-  public $testerEmails = [];
+  public $testerEmails;
 
   /**
    * @param string[]
