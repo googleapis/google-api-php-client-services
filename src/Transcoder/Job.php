@@ -42,6 +42,10 @@ class Job extends \Google\Model
   /**
    * @var string
    */
+  public $mode;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -147,6 +151,20 @@ class Job extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param string
+   */
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  /**
+   * @return string
+   */
+  public function getMode()
+  {
+    return $this->mode;
   }
   /**
    * @param string
