@@ -22,7 +22,6 @@ class GetMultipleApplicationPlayerIdsResponse extends \Google\Collection
   protected $collection_key = 'playerIds';
   protected $playerIdsType = ApplicationPlayerId::class;
   protected $playerIdsDataType = 'array';
-  public $playerIds = [];
 
   /**
    * @param ApplicationPlayerId[]
