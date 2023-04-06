@@ -25,6 +25,10 @@ class ReadRequest extends \Google\Collection
    */
   public $columns;
   /**
+   * @var bool
+   */
+  public $dataBoostEnabled;
+  /**
    * @var string
    */
   public $index;
@@ -64,6 +68,20 @@ class ReadRequest extends \Google\Collection
   public function getColumns()
   {
     return $this->columns;
+  }
+  /**
+   * @param bool
+   */
+  public function setDataBoostEnabled($dataBoostEnabled)
+  {
+    $this->dataBoostEnabled = $dataBoostEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDataBoostEnabled()
+  {
+    return $this->dataBoostEnabled;
   }
   /**
    * @param string
