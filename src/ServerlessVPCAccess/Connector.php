@@ -62,7 +62,6 @@ class Connector extends \Google\Collection
   public $state;
   protected $subnetType = Subnet::class;
   protected $subnetDataType = '';
-  public $subnet;
 
   /**
    * @param string[]

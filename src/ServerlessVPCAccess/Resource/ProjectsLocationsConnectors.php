@@ -98,6 +98,25 @@ class ProjectsLocationsConnectors extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListConnectorsResponse::class);
   }
+  /**
+   * Updates a Serverless VPC Access connector, returns an operation.
+   * (connectors.patch)
+   *
+   * @param string $name The resource name in the format
+   * `projects/locations/connectors`.
+   * @param Connector $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask The fields to update on the entry group. If
+   * absent or empty, all modifiable fields are updated.
+   * @return Operation
+   */
+  public function patch($name, Connector $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
