@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequest
 {
   protected $choiceType = GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice::class;
   protected $choiceDataType = '';
-  public $choice;
   /**
    * @var string
    */

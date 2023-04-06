@@ -22,7 +22,6 @@ class GoogleAppsDriveLabelsV2BatchDeleteLabelPermissionsRequest extends \Google\
   protected $collection_key = 'requests';
   protected $requestsType = GoogleAppsDriveLabelsV2DeleteLabelPermissionRequest::class;
   protected $requestsDataType = 'array';
-  public $requests = [];
   /**
    * @var bool
    */

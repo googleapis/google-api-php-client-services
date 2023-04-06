@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest extends 
 {
   protected $disabledPolicyType = GoogleAppsDriveLabelsV2LifecycleDisabledPolicy::class;
   protected $disabledPolicyDataType = '';
-  public $disabledPolicy;
   /**
    * @var string
    */

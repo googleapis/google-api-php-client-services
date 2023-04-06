@@ -25,7 +25,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest
   public $id;
   protected $propertiesType = GoogleAppsDriveLabelsV2FieldProperties::class;
   protected $propertiesDataType = '';
-  public $properties;
   /**
    * @var string
    */

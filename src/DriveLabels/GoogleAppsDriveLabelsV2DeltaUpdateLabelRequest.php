@@ -26,7 +26,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest extends \Google\Collection
   public $languageCode;
   protected $requestsType = GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest::class;
   protected $requestsDataType = 'array';
-  public $requests = [];
   /**
    * @var bool
    */
@@ -37,7 +36,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest extends \Google\Collection
   public $view;
   protected $writeControlType = GoogleAppsDriveLabelsV2WriteControl::class;
   protected $writeControlDataType = '';
-  public $writeControl;
 
   /**
    * @param string

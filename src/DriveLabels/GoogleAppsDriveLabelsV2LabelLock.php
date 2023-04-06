@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
 {
   protected $capabilitiesType = GoogleAppsDriveLabelsV2LabelLockCapabilities::class;
   protected $capabilitiesDataType = '';
-  public $capabilities;
   /**
    * @var string
    */
@@ -32,7 +31,6 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
   public $createTime;
   protected $creatorType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $creatorDataType = '';
-  public $creator;
   /**
    * @var string
    */

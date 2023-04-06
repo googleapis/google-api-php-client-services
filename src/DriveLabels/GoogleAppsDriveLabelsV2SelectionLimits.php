@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2SelectionLimits extends \Google\Model
 {
   protected $listLimitsType = GoogleAppsDriveLabelsV2ListLimits::class;
   protected $listLimitsDataType = '';
-  public $listLimits;
   /**
    * @var int
    */

@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableSelectionChoiceReques
 {
   protected $disabledPolicyType = GoogleAppsDriveLabelsV2LifecycleDisabledPolicy::class;
   protected $disabledPolicyDataType = '';
-  public $disabledPolicy;
   /**
    * @var string
    */

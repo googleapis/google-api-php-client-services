@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequest extends \
 {
   protected $fieldType = GoogleAppsDriveLabelsV2Field::class;
   protected $fieldDataType = '';
-  public $field;
 
   /**
    * @param GoogleAppsDriveLabelsV2Field

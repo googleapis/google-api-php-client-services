@@ -22,10 +22,8 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponse extends \Google\Collection
   protected $collection_key = 'responses';
   protected $responsesType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse::class;
   protected $responsesDataType = 'array';
-  public $responses = [];
   protected $updatedLabelType = GoogleAppsDriveLabelsV2Label::class;
   protected $updatedLabelDataType = '';
-  public $updatedLabel;
 
   /**
    * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse[]

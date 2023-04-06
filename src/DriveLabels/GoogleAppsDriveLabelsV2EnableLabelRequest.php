@@ -29,7 +29,6 @@ class GoogleAppsDriveLabelsV2EnableLabelRequest extends \Google\Model
   public $useAdminAccess;
   protected $writeControlType = GoogleAppsDriveLabelsV2WriteControl::class;
   protected $writeControlDataType = '';
-  public $writeControl;
 
   /**
    * @param string

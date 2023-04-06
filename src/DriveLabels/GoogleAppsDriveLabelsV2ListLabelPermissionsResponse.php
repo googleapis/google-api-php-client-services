@@ -22,7 +22,6 @@ class GoogleAppsDriveLabelsV2ListLabelPermissionsResponse extends \Google\Collec
   protected $collection_key = 'labelPermissions';
   protected $labelPermissionsType = GoogleAppsDriveLabelsV2LabelPermission::class;
   protected $labelPermissionsDataType = 'array';
-  public $labelPermissions = [];
   /**
    * @var string
    */

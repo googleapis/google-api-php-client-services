@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2LabelLimits extends \Google\Model
 {
   protected $fieldLimitsType = GoogleAppsDriveLabelsV2FieldLimits::class;
   protected $fieldLimitsDataType = '';
-  public $fieldLimits;
   /**
    * @var int
    */

@@ -21,7 +21,6 @@ class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest extends \Google\Model
 {
   protected $labelPermissionType = GoogleAppsDriveLabelsV2LabelPermission::class;
   protected $labelPermissionDataType = '';
-  public $labelPermission;
   /**
    * @var string
    */

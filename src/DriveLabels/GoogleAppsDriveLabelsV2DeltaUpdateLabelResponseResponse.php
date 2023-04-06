@@ -21,39 +21,27 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse extends \Google\Mo
 {
   protected $createFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateFieldResponse::class;
   protected $createFieldDataType = '';
-  public $createField;
   protected $createSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse::class;
   protected $createSelectionChoiceDataType = '';
-  public $createSelectionChoice;
   protected $deleteFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDeleteFieldResponse::class;
   protected $deleteFieldDataType = '';
-  public $deleteField;
   protected $deleteSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDeleteSelectionChoiceResponse::class;
   protected $deleteSelectionChoiceDataType = '';
-  public $deleteSelectionChoice;
   protected $disableFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDisableFieldResponse::class;
   protected $disableFieldDataType = '';
-  public $disableField;
   protected $disableSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDisableSelectionChoiceResponse::class;
   protected $disableSelectionChoiceDataType = '';
-  public $disableSelectionChoice;
   protected $enableFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseEnableFieldResponse::class;
   protected $enableFieldDataType = '';
-  public $enableField;
   protected $enableSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseEnableSelectionChoiceResponse::class;
   protected $enableSelectionChoiceDataType = '';
-  public $enableSelectionChoice;
   protected $updateFieldDataType = '';
-  public $updateField;
   protected $updateFieldTypeType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateFieldTypeResponse::class;
   protected $updateFieldTypeDataType = '';
-  public $updateFieldType;
   protected $updateLabelType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateLabelPropertiesResponse::class;
   protected $updateLabelDataType = '';
-  public $updateLabel;
   protected $updateSelectionChoicePropertiesType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse::class;
   protected $updateSelectionChoicePropertiesDataType = '';
-  public $updateSelectionChoiceProperties;
 
   /**
    * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateFieldResponse

@@ -22,7 +22,6 @@ class GoogleAppsDriveLabelsV2ListLabelLocksResponse extends \Google\Collection
   protected $collection_key = 'labelLocks';
   protected $labelLocksType = GoogleAppsDriveLabelsV2LabelLock::class;
   protected $labelLocksDataType = 'array';
-  public $labelLocks = [];
   /**
    * @var string
    */

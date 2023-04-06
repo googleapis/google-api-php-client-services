@@ -29,7 +29,6 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropert
   public $id;
   protected $propertiesType = GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties::class;
   protected $propertiesDataType = '';
-  public $properties;
   /**
    * @var string
    */

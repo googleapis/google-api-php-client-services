@@ -22,7 +22,6 @@ class GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsRequest extends \Google\
   protected $collection_key = 'requests';
   protected $requestsType = GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest::class;
   protected $requestsDataType = 'array';
-  public $requests = [];
   /**
    * @var bool
    */

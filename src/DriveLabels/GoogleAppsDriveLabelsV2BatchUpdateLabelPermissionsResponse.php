@@ -22,7 +22,6 @@ class GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsResponse extends \Google
   protected $collection_key = 'permissions';
   protected $permissionsType = GoogleAppsDriveLabelsV2LabelPermission::class;
   protected $permissionsDataType = 'array';
-  public $permissions = [];
 
   /**
    * @param GoogleAppsDriveLabelsV2LabelPermission[]

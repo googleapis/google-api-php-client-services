@@ -21,10 +21,8 @@ class GoogleAppsDriveLabelsV2DateLimits extends \Google\Model
 {
   protected $maxValueType = GoogleTypeDate::class;
   protected $maxValueDataType = '';
-  public $maxValue;
   protected $minValueType = GoogleTypeDate::class;
   protected $minValueDataType = '';
-  public $minValue;
 
   /**
    * @param GoogleTypeDate
