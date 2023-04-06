@@ -28,6 +28,8 @@ class TransferOperation extends \Google\Collection
   public $endTime;
   protected $errorBreakdownsType = ErrorSummary::class;
   protected $errorBreakdownsDataType = 'array';
+  protected $loggingConfigType = LoggingConfig::class;
+  protected $loggingConfigDataType = '';
   /**
    * @var string
    */
@@ -94,6 +96,20 @@ class TransferOperation extends \Google\Collection
   public function getErrorBreakdowns()
   {
     return $this->errorBreakdowns;
+  }
+  /**
+   * @param LoggingConfig
+   */
+  public function setLoggingConfig(LoggingConfig $loggingConfig)
+  {
+    $this->loggingConfig = $loggingConfig;
+  }
+  /**
+   * @return LoggingConfig
+   */
+  public function getLoggingConfig()
+  {
+    return $this->loggingConfig;
   }
   /**
    * @param string
