@@ -21,20 +21,16 @@ class GoogleCloudDiscoveryengineLoggingErrorLog extends \Google\Model
 {
   protected $contextType = GoogleCloudDiscoveryengineLoggingErrorContext::class;
   protected $contextDataType = '';
-  public $context;
   protected $importPayloadType = GoogleCloudDiscoveryengineLoggingImportErrorContext::class;
   protected $importPayloadDataType = '';
-  public $importPayload;
   /**
    * @var string
    */
   public $message;
   protected $serviceContextType = GoogleCloudDiscoveryengineLoggingServiceContext::class;
   protected $serviceContextDataType = '';
-  public $serviceContext;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
-  public $status;
 
   /**
    * @param GoogleCloudDiscoveryengineLoggingErrorContext

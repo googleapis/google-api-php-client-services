@@ -30,7 +30,7 @@ class GoogleCloudDiscoveryengineV1betaSchema extends \Google\Model
   /**
    * @var array[]
    */
-  public $structSchema = [];
+  public $structSchema;
 
   /**
    * @param string
