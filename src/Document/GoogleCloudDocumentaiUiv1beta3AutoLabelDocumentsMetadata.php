@@ -22,10 +22,8 @@ class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadata extends \Google\C
   protected $collection_key = 'individualAutoLabelStatuses';
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
-  public $commonMetadata;
   protected $individualAutoLabelStatusesType = GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabelStatus::class;
   protected $individualAutoLabelStatusesDataType = 'array';
-  public $individualAutoLabelStatuses = [];
   /**
    * @var int
    */
