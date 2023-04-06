@@ -21,10 +21,8 @@ class Insight extends \Google\Model
 {
   protected $sapDiscoveryType = SapDiscovery::class;
   protected $sapDiscoveryDataType = '';
-  public $sapDiscovery;
   protected $sapValidationType = SapValidation::class;
   protected $sapValidationDataType = '';
-  public $sapValidation;
   /**
    * @var string
    */
