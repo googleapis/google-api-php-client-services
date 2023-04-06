@@ -21,13 +21,10 @@ class GooglePrivacyDlpV2RequestedDeidentifyOptions extends \Google\Model
 {
   protected $snapshotDeidentifyTemplateType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $snapshotDeidentifyTemplateDataType = '';
-  public $snapshotDeidentifyTemplate;
   protected $snapshotImageRedactTemplateType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $snapshotImageRedactTemplateDataType = '';
-  public $snapshotImageRedactTemplate;
   protected $snapshotStructuredDeidentifyTemplateType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $snapshotStructuredDeidentifyTemplateDataType = '';
-  public $snapshotStructuredDeidentifyTemplate;
 
   /**
    * @param GooglePrivacyDlpV2DeidentifyTemplate

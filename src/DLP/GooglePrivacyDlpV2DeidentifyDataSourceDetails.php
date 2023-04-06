@@ -21,10 +21,8 @@ class GooglePrivacyDlpV2DeidentifyDataSourceDetails extends \Google\Model
 {
   protected $deidentifyStatsType = GooglePrivacyDlpV2DeidentifyDataSourceStats::class;
   protected $deidentifyStatsDataType = '';
-  public $deidentifyStats;
   protected $requestedOptionsType = GooglePrivacyDlpV2RequestedDeidentifyOptions::class;
   protected $requestedOptionsDataType = '';
-  public $requestedOptions;
 
   /**
    * @param GooglePrivacyDlpV2DeidentifyDataSourceStats
