@@ -30,6 +30,8 @@ class MigratingVm extends \Google\Collection
   public $createTime;
   protected $currentSyncInfoType = ReplicationCycle::class;
   protected $currentSyncInfoDataType = '';
+  protected $cutoverForecastType = CutoverForecast::class;
+  protected $cutoverForecastDataType = '';
   /**
    * @var string
    */
@@ -134,6 +136,20 @@ class MigratingVm extends \Google\Collection
   public function getCurrentSyncInfo()
   {
     return $this->currentSyncInfo;
+  }
+  /**
+   * @param CutoverForecast
+   */
+  public function setCutoverForecast(CutoverForecast $cutoverForecast)
+  {
+    $this->cutoverForecast = $cutoverForecast;
+  }
+  /**
+   * @return CutoverForecast
+   */
+  public function getCutoverForecast()
+  {
+    return $this->cutoverForecast;
   }
   /**
    * @param string
