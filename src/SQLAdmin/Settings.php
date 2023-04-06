@@ -26,6 +26,8 @@ class Settings extends \Google\Collection
   public $activationPolicy;
   protected $activeDirectoryConfigType = SqlActiveDirectoryConfig::class;
   protected $activeDirectoryConfigDataType = '';
+  protected $advancedMachineFeaturesType = AdvancedMachineFeatures::class;
+  protected $advancedMachineFeaturesDataType = '';
   /**
    * @var string[]
    */
@@ -144,6 +146,20 @@ class Settings extends \Google\Collection
   public function getActiveDirectoryConfig()
   {
     return $this->activeDirectoryConfig;
+  }
+  /**
+   * @param AdvancedMachineFeatures
+   */
+  public function setAdvancedMachineFeatures(AdvancedMachineFeatures $advancedMachineFeatures)
+  {
+    $this->advancedMachineFeatures = $advancedMachineFeatures;
+  }
+  /**
+   * @return AdvancedMachineFeatures
+   */
+  public function getAdvancedMachineFeatures()
+  {
+    return $this->advancedMachineFeatures;
   }
   /**
    * @param string[]
