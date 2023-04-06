@@ -22,7 +22,6 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscript extends \Go
   protected $collection_key = 'transcriptSegments';
   protected $transcriptSegmentsType = GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegment::class;
   protected $transcriptSegmentsDataType = 'array';
-  public $transcriptSegments = [];
 
   /**
    * @param GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegment[]

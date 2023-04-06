@@ -25,32 +25,24 @@ class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation extends \Google\
   public $annotationId;
   protected $answerFeedbackType = GoogleCloudContactcenterinsightsV1alpha1AnswerFeedback::class;
   protected $answerFeedbackDataType = '';
-  public $answerFeedback;
   protected $articleSuggestionType = GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData::class;
   protected $articleSuggestionDataType = '';
-  public $articleSuggestion;
   /**
    * @var string
    */
   public $createTime;
   protected $dialogflowInteractionType = GoogleCloudContactcenterinsightsV1alpha1DialogflowInteractionData::class;
   protected $dialogflowInteractionDataType = '';
-  public $dialogflowInteraction;
   protected $endBoundaryType = GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary::class;
   protected $endBoundaryDataType = '';
-  public $endBoundary;
   protected $faqAnswerType = GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData::class;
   protected $faqAnswerDataType = '';
-  public $faqAnswer;
   protected $smartComposeSuggestionType = GoogleCloudContactcenterinsightsV1alpha1SmartComposeSuggestionData::class;
   protected $smartComposeSuggestionDataType = '';
-  public $smartComposeSuggestion;
   protected $smartReplyType = GoogleCloudContactcenterinsightsV1alpha1SmartReplyData::class;
   protected $smartReplyDataType = '';
-  public $smartReply;
   protected $startBoundaryType = GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary::class;
   protected $startBoundaryDataType = '';
-  public $startBoundary;
 
   /**
    * @param string

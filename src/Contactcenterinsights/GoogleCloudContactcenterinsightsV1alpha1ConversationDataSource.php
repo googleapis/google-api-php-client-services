@@ -21,10 +21,8 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationDataSource extends \Go
 {
   protected $dialogflowSourceType = GoogleCloudContactcenterinsightsV1alpha1DialogflowSource::class;
   protected $dialogflowSourceDataType = '';
-  public $dialogflowSource;
   protected $gcsSourceType = GoogleCloudContactcenterinsightsV1alpha1GcsSource::class;
   protected $gcsSourceDataType = '';
-  public $gcsSource;
 
   /**
    * @param GoogleCloudContactcenterinsightsV1alpha1DialogflowSource

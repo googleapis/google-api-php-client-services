@@ -25,7 +25,6 @@ class GoogleCloudContactcenterinsightsV1alpha1UploadConversationMetadata extends
   public $analysisOperation;
   protected $appliedRedactionConfigType = GoogleCloudContactcenterinsightsV1alpha1RedactionConfig::class;
   protected $appliedRedactionConfigDataType = '';
-  public $appliedRedactionConfig;
   /**
    * @var string
    */
@@ -36,7 +35,6 @@ class GoogleCloudContactcenterinsightsV1alpha1UploadConversationMetadata extends
   public $endTime;
   protected $requestType = GoogleCloudContactcenterinsightsV1alpha1UploadConversationRequest::class;
   protected $requestDataType = '';
-  public $request;
 
   /**
    * @param string

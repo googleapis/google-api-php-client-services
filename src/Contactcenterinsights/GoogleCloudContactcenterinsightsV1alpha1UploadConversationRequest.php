@@ -21,7 +21,6 @@ class GoogleCloudContactcenterinsightsV1alpha1UploadConversationRequest extends 
 {
   protected $conversationType = GoogleCloudContactcenterinsightsV1alpha1Conversation::class;
   protected $conversationDataType = '';
-  public $conversation;
   /**
    * @var string
    */
@@ -32,7 +31,6 @@ class GoogleCloudContactcenterinsightsV1alpha1UploadConversationRequest extends 
   public $parent;
   protected $redactionConfigType = GoogleCloudContactcenterinsightsV1alpha1RedactionConfig::class;
   protected $redactionConfigDataType = '';
-  public $redactionConfig;
 
   /**
    * @param GoogleCloudContactcenterinsightsV1alpha1Conversation

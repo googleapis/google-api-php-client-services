@@ -21,7 +21,6 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
 {
   protected $analysisConfigType = GoogleCloudContactcenterinsightsV1SettingsAnalysisConfig::class;
   protected $analysisConfigDataType = '';
-  public $analysisConfig;
   /**
    * @var string
    */
@@ -41,10 +40,9 @@ class GoogleCloudContactcenterinsightsV1Settings extends \Google\Model
   /**
    * @var string[]
    */
-  public $pubsubNotificationSettings = [];
+  public $pubsubNotificationSettings;
   protected $redactionConfigType = GoogleCloudContactcenterinsightsV1RedactionConfig::class;
   protected $redactionConfigDataType = '';
-  public $redactionConfig;
   /**
    * @var string
    */

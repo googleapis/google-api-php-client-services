@@ -26,17 +26,14 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
   public $agentId;
   protected $callMetadataType = GoogleCloudContactcenterinsightsV1alpha1ConversationCallMetadata::class;
   protected $callMetadataDataType = '';
-  public $callMetadata;
   /**
    * @var string
    */
   public $createTime;
   protected $dataSourceType = GoogleCloudContactcenterinsightsV1alpha1ConversationDataSource::class;
   protected $dataSourceDataType = '';
-  public $dataSource;
   protected $dialogflowIntentsType = GoogleCloudContactcenterinsightsV1alpha1DialogflowIntent::class;
   protected $dialogflowIntentsDataType = 'map';
-  public $dialogflowIntents = [];
   /**
    * @var string
    */
@@ -48,14 +45,13 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
   /**
    * @var string[]
    */
-  public $labels = [];
+  public $labels;
   /**
    * @var string
    */
   public $languageCode;
   protected $latestAnalysisType = GoogleCloudContactcenterinsightsV1alpha1Analysis::class;
   protected $latestAnalysisDataType = '';
-  public $latestAnalysis;
   /**
    * @var string
    */
@@ -70,14 +66,12 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
   public $obfuscatedUserId;
   protected $runtimeAnnotationsType = GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation::class;
   protected $runtimeAnnotationsDataType = 'array';
-  public $runtimeAnnotations = [];
   /**
    * @var string
    */
   public $startTime;
   protected $transcriptType = GoogleCloudContactcenterinsightsV1alpha1ConversationTranscript::class;
   protected $transcriptDataType = '';
-  public $transcript;
   /**
    * @var string
    */

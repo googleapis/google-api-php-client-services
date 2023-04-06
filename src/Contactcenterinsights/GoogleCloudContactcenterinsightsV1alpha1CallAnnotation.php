@@ -21,38 +21,28 @@ class GoogleCloudContactcenterinsightsV1alpha1CallAnnotation extends \Google\Mod
 {
   protected $annotationEndBoundaryType = GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary::class;
   protected $annotationEndBoundaryDataType = '';
-  public $annotationEndBoundary;
   protected $annotationStartBoundaryType = GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary::class;
   protected $annotationStartBoundaryDataType = '';
-  public $annotationStartBoundary;
   /**
    * @var int
    */
   public $channelTag;
   protected $entityMentionDataType = GoogleCloudContactcenterinsightsV1alpha1EntityMentionData::class;
   protected $entityMentionDataDataType = '';
-  public $entityMentionData;
   protected $holdDataType = GoogleCloudContactcenterinsightsV1alpha1HoldData::class;
   protected $holdDataDataType = '';
-  public $holdData;
   protected $intentMatchDataType = GoogleCloudContactcenterinsightsV1alpha1IntentMatchData::class;
   protected $intentMatchDataDataType = '';
-  public $intentMatchData;
   protected $interruptionDataType = GoogleCloudContactcenterinsightsV1alpha1InterruptionData::class;
   protected $interruptionDataDataType = '';
-  public $interruptionData;
   protected $issueMatchDataType = GoogleCloudContactcenterinsightsV1alpha1IssueMatchData::class;
   protected $issueMatchDataDataType = '';
-  public $issueMatchData;
   protected $phraseMatchDataType = GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData::class;
   protected $phraseMatchDataDataType = '';
-  public $phraseMatchData;
   protected $sentimentDataType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
   protected $sentimentDataDataType = '';
-  public $sentimentData;
   protected $silenceDataType = GoogleCloudContactcenterinsightsV1alpha1SilenceData::class;
   protected $silenceDataDataType = '';
-  public $silenceData;
 
   /**
    * @param GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary
