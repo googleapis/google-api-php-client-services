@@ -51,6 +51,10 @@ class Evaluation extends \Google\Collection
   /**
    * @var string
    */
+  public $schedule;
+  /**
+   * @var string
+   */
   public $updateTime;
 
   /**
@@ -164,6 +168,20 @@ class Evaluation extends \Google\Collection
   public function getRuleVersions()
   {
     return $this->ruleVersions;
+  }
+  /**
+   * @param string
+   */
+  public function setSchedule($schedule)
+  {
+    $this->schedule = $schedule;
+  }
+  /**
+   * @return string
+   */
+  public function getSchedule()
+  {
+    return $this->schedule;
   }
   /**
    * @param string

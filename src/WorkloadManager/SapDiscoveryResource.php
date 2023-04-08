@@ -31,6 +31,10 @@ class SapDiscoveryResource extends \Google\Collection
   /**
    * @var string
    */
+  public $resourceState;
+  /**
+   * @var string
+   */
   public $resourceType;
   /**
    * @var string
@@ -68,6 +72,20 @@ class SapDiscoveryResource extends \Google\Collection
   public function getResourceKind()
   {
     return $this->resourceKind;
+  }
+  /**
+   * @param string
+   */
+  public function setResourceState($resourceState)
+  {
+    $this->resourceState = $resourceState;
+  }
+  /**
+   * @return string
+   */
+  public function getResourceState()
+  {
+    return $this->resourceState;
   }
   /**
    * @param string
