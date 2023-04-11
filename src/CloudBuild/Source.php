@@ -19,6 +19,8 @@ namespace Google\Service\CloudBuild;
 
 class Source extends \Google\Model
 {
+  protected $gitSourceType = GitSource::class;
+  protected $gitSourceDataType = '';
   protected $repoSourceType = RepoSource::class;
   protected $repoSourceDataType = '';
   protected $storageSourceType = StorageSource::class;
@@ -26,6 +28,20 @@ class Source extends \Google\Model
   protected $storageSourceManifestType = StorageSourceManifest::class;
   protected $storageSourceManifestDataType = '';
 
+  /**
+   * @param GitSource
+   */
+  public function setGitSource(GitSource $gitSource)
+  {
+    $this->gitSource = $gitSource;
+  }
+  /**
+   * @return GitSource
+   */
+  public function getGitSource()
+  {
+    return $this->gitSource;
+  }
   /**
    * @param RepoSource
    */
