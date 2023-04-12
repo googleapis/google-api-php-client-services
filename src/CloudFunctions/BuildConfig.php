@@ -26,10 +26,6 @@ class BuildConfig extends \Google\Model
   /**
    * @var string
    */
-  public $buildpackStack;
-  /**
-   * @var string
-   */
   public $dockerRegistry;
   /**
    * @var string
@@ -69,20 +65,6 @@ class BuildConfig extends \Google\Model
   public function getBuild()
   {
     return $this->build;
-  }
-  /**
-   * @param string
-   */
-  public function setBuildpackStack($buildpackStack)
-  {
-    $this->buildpackStack = $buildpackStack;
-  }
-  /**
-   * @return string
-   */
-  public function getBuildpackStack()
-  {
-    return $this->buildpackStack;
   }
   /**
    * @param string
