@@ -29,6 +29,10 @@ class WorkstationCluster extends \Google\Collection
   /**
    * @var string
    */
+  public $controlPlaneIp;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var bool
@@ -104,6 +108,20 @@ class WorkstationCluster extends \Google\Collection
   public function getConditions()
   {
     return $this->conditions;
+  }
+  /**
+   * @param string
+   */
+  public function setControlPlaneIp($controlPlaneIp)
+  {
+    $this->controlPlaneIp = $controlPlaneIp;
+  }
+  /**
+   * @return string
+   */
+  public function getControlPlaneIp()
+  {
+    return $this->controlPlaneIp;
   }
   /**
    * @param string
