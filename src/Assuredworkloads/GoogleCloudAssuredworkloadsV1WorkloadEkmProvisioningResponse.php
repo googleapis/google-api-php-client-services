@@ -26,7 +26,7 @@ class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse extends \Goog
   /**
    * @var string
    */
-  public $ekmProvisioningErrorMessage;
+  public $ekmProvisioningErrorMapping;
   /**
    * @var string
    */
@@ -49,16 +49,16 @@ class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse extends \Goog
   /**
    * @param string
    */
-  public function setEkmProvisioningErrorMessage($ekmProvisioningErrorMessage)
+  public function setEkmProvisioningErrorMapping($ekmProvisioningErrorMapping)
   {
-    $this->ekmProvisioningErrorMessage = $ekmProvisioningErrorMessage;
+    $this->ekmProvisioningErrorMapping = $ekmProvisioningErrorMapping;
   }
   /**
    * @return string
    */
-  public function getEkmProvisioningErrorMessage()
+  public function getEkmProvisioningErrorMapping()
   {
-    return $this->ekmProvisioningErrorMessage;
+    return $this->ekmProvisioningErrorMapping;
   }
   /**
    * @param string
