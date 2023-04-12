@@ -59,6 +59,10 @@ class AttachedDiskInitializeParams extends \Google\Collection
   /**
    * @var string[]
    */
+  public $replicaZones;
+  /**
+   * @var string[]
+   */
   public $resourceManagerTags;
   /**
    * @var string[]
@@ -202,6 +206,20 @@ class AttachedDiskInitializeParams extends \Google\Collection
   public function getProvisionedIops()
   {
     return $this->provisionedIops;
+  }
+  /**
+   * @param string[]
+   */
+  public function setReplicaZones($replicaZones)
+  {
+    $this->replicaZones = $replicaZones;
+  }
+  /**
+   * @return string[]
+   */
+  public function getReplicaZones()
+  {
+    return $this->replicaZones;
   }
   /**
    * @param string[]

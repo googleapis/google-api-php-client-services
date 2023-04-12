@@ -41,6 +41,10 @@ class ForwardingRule extends \Google\Collection
    */
   public $allowGlobalAccess;
   /**
+   * @var bool
+   */
+  public $allowPscGlobalAccess;
+  /**
    * @var string
    */
   public $backendService;
@@ -208,6 +212,20 @@ class ForwardingRule extends \Google\Collection
   public function getAllowGlobalAccess()
   {
     return $this->allowGlobalAccess;
+  }
+  /**
+   * @param bool
+   */
+  public function setAllowPscGlobalAccess($allowPscGlobalAccess)
+  {
+    $this->allowPscGlobalAccess = $allowPscGlobalAccess;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowPscGlobalAccess()
+  {
+    return $this->allowPscGlobalAccess;
   }
   /**
    * @param string
