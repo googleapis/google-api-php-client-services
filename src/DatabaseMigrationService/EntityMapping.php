@@ -24,12 +24,20 @@ class EntityMapping extends \Google\Collection
    * @var string
    */
   public $draftEntity;
+  /**
+   * @var string
+   */
+  public $draftType;
   protected $mappingLogType = EntityMappingLogEntry::class;
   protected $mappingLogDataType = 'array';
   /**
    * @var string
    */
   public $sourceEntity;
+  /**
+   * @var string
+   */
+  public $sourceType;
 
   /**
    * @param string
@@ -44,6 +52,20 @@ class EntityMapping extends \Google\Collection
   public function getDraftEntity()
   {
     return $this->draftEntity;
+  }
+  /**
+   * @param string
+   */
+  public function setDraftType($draftType)
+  {
+    $this->draftType = $draftType;
+  }
+  /**
+   * @return string
+   */
+  public function getDraftType()
+  {
+    return $this->draftType;
   }
   /**
    * @param EntityMappingLogEntry[]
@@ -72,6 +94,20 @@ class EntityMapping extends \Google\Collection
   public function getSourceEntity()
   {
     return $this->sourceEntity;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceType($sourceType)
+  {
+    $this->sourceType = $sourceType;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceType()
+  {
+    return $this->sourceType;
   }
 }
 
