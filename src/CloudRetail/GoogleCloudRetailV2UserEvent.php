@@ -29,13 +29,13 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @var string
    */
-  public $banner;
-  /**
-   * @var string
-   */
   public $cartId;
   protected $completionDetailType = GoogleCloudRetailV2CompletionDetail::class;
   protected $completionDetailDataType = '';
+  /**
+   * @var string
+   */
+  public $entity;
   /**
    * @var string
    */
@@ -126,20 +126,6 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   /**
    * @param string
    */
-  public function setBanner($banner)
-  {
-    $this->banner = $banner;
-  }
-  /**
-   * @return string
-   */
-  public function getBanner()
-  {
-    return $this->banner;
-  }
-  /**
-   * @param string
-   */
   public function setCartId($cartId)
   {
     $this->cartId = $cartId;
@@ -164,6 +150,20 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
   public function getCompletionDetail()
   {
     return $this->completionDetail;
+  }
+  /**
+   * @param string
+   */
+  public function setEntity($entity)
+  {
+    $this->entity = $entity;
+  }
+  /**
+   * @return string
+   */
+  public function getEntity()
+  {
+    return $this->entity;
   }
   /**
    * @param string

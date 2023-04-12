@@ -46,7 +46,6 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * `projects/locations/global/catalogs/default_catalog`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string banner The banner context for completion suggestions.
    * @opt_param string dataset Determines which dataset to use for fetching
    * completion. "user-data" will use the imported dataset through
    * CompletionService.ImportCompletionData. "cloud-retail" will use the dataset
@@ -61,6 +60,11 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * it is empty, the suggestions are across all device types. Supported formats:
    * * `UNKNOWN_DEVICE_TYPE` * `DESKTOP` * `MOBILE` * A customized string starts
    * with `OTHER_`, e.g. `OTHER_IPHONE`.
+   * @opt_param string entity The entity for customers that may run multiple
+   * different entities, domains, sites or regions, for example, "Google US",
+   * "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is set, it
+   * should be exactly matched with UserEvent.entity to get per-entity
+   * autocomplete results.
    * @opt_param string languageCodes Note that this field applies for `user-data`
    * dataset only. For requests with `cloud-retail` dataset, setting this field
    * has no effect. The language filters applied to the output suggestions. If

@@ -20,10 +20,6 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchRequest extends \Google\Collection
 {
   protected $collection_key = 'variantRollupKeys';
-  /**
-   * @var string
-   */
-  public $banner;
   protected $boostSpecType = GoogleCloudRetailV2SearchRequestBoostSpec::class;
   protected $boostSpecDataType = '';
   /**
@@ -36,6 +32,10 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   public $canonicalFilter;
   protected $dynamicFacetSpecType = GoogleCloudRetailV2SearchRequestDynamicFacetSpec::class;
   protected $dynamicFacetSpecDataType = '';
+  /**
+   * @var string
+   */
+  public $entity;
   protected $facetSpecsType = GoogleCloudRetailV2SearchRequestFacetSpec::class;
   protected $facetSpecsDataType = 'array';
   /**
@@ -92,20 +92,6 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   public $visitorId;
 
   /**
-   * @param string
-   */
-  public function setBanner($banner)
-  {
-    $this->banner = $banner;
-  }
-  /**
-   * @return string
-   */
-  public function getBanner()
-  {
-    return $this->banner;
-  }
-  /**
    * @param GoogleCloudRetailV2SearchRequestBoostSpec
    */
   public function setBoostSpec(GoogleCloudRetailV2SearchRequestBoostSpec $boostSpec)
@@ -160,6 +146,20 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   public function getDynamicFacetSpec()
   {
     return $this->dynamicFacetSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setEntity($entity)
+  {
+    $this->entity = $entity;
+  }
+  /**
+   * @return string
+   */
+  public function getEntity()
+  {
+    return $this->entity;
   }
   /**
    * @param GoogleCloudRetailV2SearchRequestFacetSpec[]

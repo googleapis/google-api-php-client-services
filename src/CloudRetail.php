@@ -85,15 +85,15 @@ class CloudRetail extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'banner' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'dataset' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
                 'deviceType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'entity' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
