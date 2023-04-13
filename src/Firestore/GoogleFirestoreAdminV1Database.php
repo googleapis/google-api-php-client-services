@@ -34,6 +34,10 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   /**
    * @var string
    */
+  public $deleteProtectionState;
+  /**
+   * @var string
+   */
   public $etag;
   /**
    * @var string
@@ -101,6 +105,20 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDeleteProtectionState($deleteProtectionState)
+  {
+    $this->deleteProtectionState = $deleteProtectionState;
+  }
+  /**
+   * @return string
+   */
+  public function getDeleteProtectionState()
+  {
+    return $this->deleteProtectionState;
   }
   /**
    * @param string
