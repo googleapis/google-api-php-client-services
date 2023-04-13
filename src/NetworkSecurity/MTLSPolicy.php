@@ -22,6 +22,14 @@ class MTLSPolicy extends \Google\Collection
   protected $collection_key = 'clientValidationCa';
   protected $clientValidationCaType = ValidationCA::class;
   protected $clientValidationCaDataType = 'array';
+  /**
+   * @var string
+   */
+  public $clientValidationMode;
+  /**
+   * @var string
+   */
+  public $clientValidationTrustConfig;
 
   /**
    * @param ValidationCA[]
@@ -36,6 +44,34 @@ class MTLSPolicy extends \Google\Collection
   public function getClientValidationCa()
   {
     return $this->clientValidationCa;
+  }
+  /**
+   * @param string
+   */
+  public function setClientValidationMode($clientValidationMode)
+  {
+    $this->clientValidationMode = $clientValidationMode;
+  }
+  /**
+   * @return string
+   */
+  public function getClientValidationMode()
+  {
+    return $this->clientValidationMode;
+  }
+  /**
+   * @param string
+   */
+  public function setClientValidationTrustConfig($clientValidationTrustConfig)
+  {
+    $this->clientValidationTrustConfig = $clientValidationTrustConfig;
+  }
+  /**
+   * @return string
+   */
+  public function getClientValidationTrustConfig()
+  {
+    return $this->clientValidationTrustConfig;
   }
 }
 
