@@ -20,6 +20,8 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Re
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\AttachTrustRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\DetachTrustRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Domain;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\DomainJoinMachineRequest;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\DomainJoinMachineResponse;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\ExtendSchemaRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\LDAPSSettings;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\ListDomainsResponse;
@@ -112,6 +114,22 @@ class ProjectsLocationsManagedidentitiesGlobalDomains extends \Google\Service\Re
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('detachTrust', [$params], Operation::class);
+  }
+  /**
+   * DomainJoinMachine API joins a Compute Engine VM to the domain
+   * (domains.domainJoinMachine)
+   *
+   * @param string $domain Required. The domain resource name using the form:
+   * projects/{project_id}/locations/global/domains/{domain_name}
+   * @param DomainJoinMachineRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DomainJoinMachineResponse
+   */
+  public function domainJoinMachine($domain, DomainJoinMachineRequest $postBody, $optParams = [])
+  {
+    $params = ['domain' => $domain, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('domainJoinMachine', [$params], DomainJoinMachineResponse::class);
   }
   /**
    * Extend Schema for Domain (domains.extendSchema)
