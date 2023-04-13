@@ -25,6 +25,8 @@ class ClassifierPornQueryMultiLabelClassifierOutput extends \Google\Model
   protected $fringeDataType = '';
   protected $medicalType = ClassifierPornQueryClassifierOutput::class;
   protected $medicalDataType = '';
+  protected $minorType = ClassifierPornQueryClassifierOutput::class;
+  protected $minorDataType = '';
   protected $offensiveType = ClassifierPornQueryClassifierOutput::class;
   protected $offensiveDataType = '';
   protected $pornType = ClassifierPornQueryClassifierOutput::class;
@@ -77,6 +79,20 @@ class ClassifierPornQueryMultiLabelClassifierOutput extends \Google\Model
   public function getMedical()
   {
     return $this->medical;
+  }
+  /**
+   * @param ClassifierPornQueryClassifierOutput
+   */
+  public function setMinor(ClassifierPornQueryClassifierOutput $minor)
+  {
+    $this->minor = $minor;
+  }
+  /**
+   * @return ClassifierPornQueryClassifierOutput
+   */
+  public function getMinor()
+  {
+    return $this->minor;
   }
   /**
    * @param ClassifierPornQueryClassifierOutput

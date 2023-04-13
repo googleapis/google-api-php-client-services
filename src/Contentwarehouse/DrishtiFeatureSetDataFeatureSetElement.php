@@ -19,6 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class DrishtiFeatureSetDataFeatureSetElement extends \Google\Model
 {
+  protected $compressedType = DrishtiCompressedFeature::class;
+  protected $compressedDataType = '';
   protected $denseType = DrishtiDenseFeatureData::class;
   protected $denseDataType = '';
   protected $indexedType = DrishtiIndexedFeatureData::class;
@@ -36,6 +38,20 @@ class DrishtiFeatureSetDataFeatureSetElement extends \Google\Model
   protected $sparseType = DrishtiSparseFeatureData::class;
   protected $sparseDataType = '';
 
+  /**
+   * @param DrishtiCompressedFeature
+   */
+  public function setCompressed(DrishtiCompressedFeature $compressed)
+  {
+    $this->compressed = $compressed;
+  }
+  /**
+   * @return DrishtiCompressedFeature
+   */
+  public function getCompressed()
+  {
+    return $this->compressed;
+  }
   /**
    * @param DrishtiDenseFeatureData
    */

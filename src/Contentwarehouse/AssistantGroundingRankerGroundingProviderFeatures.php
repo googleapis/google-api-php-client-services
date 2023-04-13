@@ -25,6 +25,8 @@ class AssistantGroundingRankerGroundingProviderFeatures extends \Google\Model
   protected $deviceGroundingProviderFeaturesDataType = '';
   protected $mediaGroundingProviderFeaturesType = AssistantGroundingRankerMediaGroundingProviderFeatures::class;
   protected $mediaGroundingProviderFeaturesDataType = '';
+  protected $podcastGroundingProviderFeaturesType = AssistantGroundingRankerPodcastGroundingProviderFeatures::class;
+  protected $podcastGroundingProviderFeaturesDataType = '';
   protected $providerGroundingProviderFeaturesType = AssistantGroundingRankerProviderGroundingProviderFeatures::class;
   protected $providerGroundingProviderFeaturesDataType = '';
 
@@ -69,6 +71,20 @@ class AssistantGroundingRankerGroundingProviderFeatures extends \Google\Model
   public function getMediaGroundingProviderFeatures()
   {
     return $this->mediaGroundingProviderFeatures;
+  }
+  /**
+   * @param AssistantGroundingRankerPodcastGroundingProviderFeatures
+   */
+  public function setPodcastGroundingProviderFeatures(AssistantGroundingRankerPodcastGroundingProviderFeatures $podcastGroundingProviderFeatures)
+  {
+    $this->podcastGroundingProviderFeatures = $podcastGroundingProviderFeatures;
+  }
+  /**
+   * @return AssistantGroundingRankerPodcastGroundingProviderFeatures
+   */
+  public function getPodcastGroundingProviderFeatures()
+  {
+    return $this->podcastGroundingProviderFeatures;
   }
   /**
    * @param AssistantGroundingRankerProviderGroundingProviderFeatures

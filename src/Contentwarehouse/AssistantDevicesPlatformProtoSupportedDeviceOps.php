@@ -39,6 +39,8 @@ class AssistantDevicesPlatformProtoSupportedDeviceOps extends \Google\Model
   protected $mediaResumeDataType = '';
   protected $mediaStopType = AssistantDevicesPlatformProtoMediaStopCapability::class;
   protected $mediaStopDataType = '';
+  protected $providerFulfillType = AssistantDevicesPlatformProtoProviderFulfillCapability::class;
+  protected $providerFulfillDataType = '';
   protected $providerOpenType = AssistantDevicesPlatformProtoProviderOpenCapability::class;
   protected $providerOpenDataType = '';
   protected $sendChatMessageType = AssistantDevicesPlatformProtoSendChatMessageCapability::class;
@@ -183,6 +185,20 @@ class AssistantDevicesPlatformProtoSupportedDeviceOps extends \Google\Model
   public function getMediaStop()
   {
     return $this->mediaStop;
+  }
+  /**
+   * @param AssistantDevicesPlatformProtoProviderFulfillCapability
+   */
+  public function setProviderFulfill(AssistantDevicesPlatformProtoProviderFulfillCapability $providerFulfill)
+  {
+    $this->providerFulfill = $providerFulfill;
+  }
+  /**
+   * @return AssistantDevicesPlatformProtoProviderFulfillCapability
+   */
+  public function getProviderFulfill()
+  {
+    return $this->providerFulfill;
   }
   /**
    * @param AssistantDevicesPlatformProtoProviderOpenCapability

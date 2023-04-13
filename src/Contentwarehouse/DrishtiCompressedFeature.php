@@ -17,82 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantContextAppProviderId extends \Google\Model
+class DrishtiCompressedFeature extends \Google\Model
 {
   /**
    * @var string
    */
-  public $activityClassName;
+  public $featureName;
   /**
    * @var string
    */
-  public $androidPackageName;
+  public $inRangeBitstream;
   /**
    * @var string
    */
-  public $castAppId;
-  /**
-   * @var int
-   */
-  public $versionCode;
+  public $outOfRangeBitstream;
 
   /**
    * @param string
    */
-  public function setActivityClassName($activityClassName)
+  public function setFeatureName($featureName)
   {
-    $this->activityClassName = $activityClassName;
+    $this->featureName = $featureName;
   }
   /**
    * @return string
    */
-  public function getActivityClassName()
+  public function getFeatureName()
   {
-    return $this->activityClassName;
+    return $this->featureName;
   }
   /**
    * @param string
    */
-  public function setAndroidPackageName($androidPackageName)
+  public function setInRangeBitstream($inRangeBitstream)
   {
-    $this->androidPackageName = $androidPackageName;
+    $this->inRangeBitstream = $inRangeBitstream;
   }
   /**
    * @return string
    */
-  public function getAndroidPackageName()
+  public function getInRangeBitstream()
   {
-    return $this->androidPackageName;
+    return $this->inRangeBitstream;
   }
   /**
    * @param string
    */
-  public function setCastAppId($castAppId)
+  public function setOutOfRangeBitstream($outOfRangeBitstream)
   {
-    $this->castAppId = $castAppId;
+    $this->outOfRangeBitstream = $outOfRangeBitstream;
   }
   /**
    * @return string
    */
-  public function getCastAppId()
+  public function getOutOfRangeBitstream()
   {
-    return $this->castAppId;
-  }
-  /**
-   * @param int
-   */
-  public function setVersionCode($versionCode)
-  {
-    $this->versionCode = $versionCode;
-  }
-  /**
-   * @return int
-   */
-  public function getVersionCode()
-  {
-    return $this->versionCode;
+    return $this->outOfRangeBitstream;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AssistantContextAppProviderId::class, 'Google_Service_Contentwarehouse_AssistantContextAppProviderId');
+class_alias(DrishtiCompressedFeature::class, 'Google_Service_Contentwarehouse_DrishtiCompressedFeature');

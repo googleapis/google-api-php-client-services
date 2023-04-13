@@ -125,6 +125,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    */
   public $searchDispatch;
   /**
+   * @var string
+   */
+  public $subIntentType;
+  /**
    * @var float
    */
   public $topHypothesisConfidence;
@@ -572,6 +576,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getSearchDispatch()
   {
     return $this->searchDispatch;
+  }
+  /**
+   * @param string
+   */
+  public function setSubIntentType($subIntentType)
+  {
+    $this->subIntentType = $subIntentType;
+  }
+  /**
+   * @return string
+   */
+  public function getSubIntentType()
+  {
+    return $this->subIntentType;
   }
   /**
    * @param float

@@ -17,82 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantContextAppProviderId extends \Google\Model
+class CloudAiPlatformTenantresourceInfraSpannerConfigCreateDatabaseOptions extends \Google\Model
 {
   /**
    * @var string
    */
-  public $activityClassName;
+  public $cmekCloudResourceName;
   /**
    * @var string
    */
-  public $androidPackageName;
+  public $cmekCloudResourceType;
   /**
    * @var string
    */
-  public $castAppId;
-  /**
-   * @var int
-   */
-  public $versionCode;
+  public $cmekServiceName;
 
   /**
    * @param string
    */
-  public function setActivityClassName($activityClassName)
+  public function setCmekCloudResourceName($cmekCloudResourceName)
   {
-    $this->activityClassName = $activityClassName;
+    $this->cmekCloudResourceName = $cmekCloudResourceName;
   }
   /**
    * @return string
    */
-  public function getActivityClassName()
+  public function getCmekCloudResourceName()
   {
-    return $this->activityClassName;
+    return $this->cmekCloudResourceName;
   }
   /**
    * @param string
    */
-  public function setAndroidPackageName($androidPackageName)
+  public function setCmekCloudResourceType($cmekCloudResourceType)
   {
-    $this->androidPackageName = $androidPackageName;
+    $this->cmekCloudResourceType = $cmekCloudResourceType;
   }
   /**
    * @return string
    */
-  public function getAndroidPackageName()
+  public function getCmekCloudResourceType()
   {
-    return $this->androidPackageName;
+    return $this->cmekCloudResourceType;
   }
   /**
    * @param string
    */
-  public function setCastAppId($castAppId)
+  public function setCmekServiceName($cmekServiceName)
   {
-    $this->castAppId = $castAppId;
+    $this->cmekServiceName = $cmekServiceName;
   }
   /**
    * @return string
    */
-  public function getCastAppId()
+  public function getCmekServiceName()
   {
-    return $this->castAppId;
-  }
-  /**
-   * @param int
-   */
-  public function setVersionCode($versionCode)
-  {
-    $this->versionCode = $versionCode;
-  }
-  /**
-   * @return int
-   */
-  public function getVersionCode()
-  {
-    return $this->versionCode;
+    return $this->cmekServiceName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AssistantContextAppProviderId::class, 'Google_Service_Contentwarehouse_AssistantContextAppProviderId');
+class_alias(CloudAiPlatformTenantresourceInfraSpannerConfigCreateDatabaseOptions::class, 'Google_Service_Contentwarehouse_CloudAiPlatformTenantresourceInfraSpannerConfigCreateDatabaseOptions');
