@@ -17,8 +17,28 @@
 
 namespace Google\Service\Container;
 
-class AdditionalPodRangesConfig extends \Google\Model
+class AdditionalPodRangesConfig extends \Google\Collection
 {
+  protected $collection_key = 'podRangeNames';
+  /**
+   * @var string[]
+   */
+  public $podRangeNames;
+
+  /**
+   * @param string[]
+   */
+  public function setPodRangeNames($podRangeNames)
+  {
+    $this->podRangeNames = $podRangeNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPodRangeNames()
+  {
+    return $this->podRangeNames;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
