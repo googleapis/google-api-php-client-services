@@ -52,6 +52,8 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public $labels;
   protected $lockConfigType = GoogleCloudConnectorsV1LockConfig::class;
   protected $lockConfigDataType = '';
+  protected $logConfigType = GoogleCloudConnectorsV1LogConfig::class;
+  protected $logConfigDataType = '';
   /**
    * @var string
    */
@@ -218,6 +220,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getLockConfig()
   {
     return $this->lockConfig;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1LogConfig
+   */
+  public function setLogConfig(GoogleCloudConnectorsV1LogConfig $logConfig)
+  {
+    $this->logConfig = $logConfig;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1LogConfig
+   */
+  public function getLogConfig()
+  {
+    return $this->logConfig;
   }
   /**
    * @param string
