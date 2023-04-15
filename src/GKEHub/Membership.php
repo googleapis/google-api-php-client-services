@@ -47,6 +47,8 @@ class Membership extends \Google\Model
    * @var string
    */
   public $lastConnectionTime;
+  protected $monitoringConfigType = MonitoringConfig::class;
+  protected $monitoringConfigDataType = '';
   /**
    * @var string
    */
@@ -173,6 +175,20 @@ class Membership extends \Google\Model
   public function getLastConnectionTime()
   {
     return $this->lastConnectionTime;
+  }
+  /**
+   * @param MonitoringConfig
+   */
+  public function setMonitoringConfig(MonitoringConfig $monitoringConfig)
+  {
+    $this->monitoringConfig = $monitoringConfig;
+  }
+  /**
+   * @return MonitoringConfig
+   */
+  public function getMonitoringConfig()
+  {
+    return $this->monitoringConfig;
   }
   /**
    * @param string
