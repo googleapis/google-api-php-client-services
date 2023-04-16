@@ -35,6 +35,10 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string
    */
+  public $autoArimaMinOrder;
+  /**
+   * @var string
+   */
   public $batchSize;
   /**
    * @var string
@@ -283,6 +287,20 @@ class TrainingOptions extends \Google\Collection
   public function getAutoArimaMaxOrder()
   {
     return $this->autoArimaMaxOrder;
+  }
+  /**
+   * @param string
+   */
+  public function setAutoArimaMinOrder($autoArimaMinOrder)
+  {
+    $this->autoArimaMinOrder = $autoArimaMinOrder;
+  }
+  /**
+   * @return string
+   */
+  public function getAutoArimaMinOrder()
+  {
+    return $this->autoArimaMinOrder;
   }
   /**
    * @param string
