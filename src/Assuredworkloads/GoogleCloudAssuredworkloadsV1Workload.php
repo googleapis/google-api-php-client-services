@@ -80,6 +80,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   protected $resourcesDataType = 'array';
   protected $saaEnrollmentResponseType = GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse::class;
   protected $saaEnrollmentResponseDataType = '';
+  /**
+   * @var bool
+   */
+  public $violationNotificationsEnabled;
 
   /**
    * @param string
@@ -332,6 +336,20 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   public function getSaaEnrollmentResponse()
   {
     return $this->saaEnrollmentResponse;
+  }
+  /**
+   * @param bool
+   */
+  public function setViolationNotificationsEnabled($violationNotificationsEnabled)
+  {
+    $this->violationNotificationsEnabled = $violationNotificationsEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getViolationNotificationsEnabled()
+  {
+    return $this->violationNotificationsEnabled;
   }
 }
 

@@ -17,8 +17,9 @@
 
 namespace Google\Service\Assuredworkloads;
 
-class GoogleCloudAssuredworkloadsV1Violation extends \Google\Model
+class GoogleCloudAssuredworkloadsV1Violation extends \Google\Collection
 {
+  protected $collection_key = 'exceptionContexts';
   /**
    * @var bool
    */
@@ -47,6 +48,8 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Model
    * @var string
    */
   public $exceptionAuditLogLink;
+  protected $exceptionContextsType = GoogleCloudAssuredworkloadsV1ViolationExceptionContext::class;
+  protected $exceptionContextsDataType = 'array';
   /**
    * @var string
    */
@@ -171,6 +174,20 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Model
   public function getExceptionAuditLogLink()
   {
     return $this->exceptionAuditLogLink;
+  }
+  /**
+   * @param GoogleCloudAssuredworkloadsV1ViolationExceptionContext[]
+   */
+  public function setExceptionContexts($exceptionContexts)
+  {
+    $this->exceptionContexts = $exceptionContexts;
+  }
+  /**
+   * @return GoogleCloudAssuredworkloadsV1ViolationExceptionContext[]
+   */
+  public function getExceptionContexts()
+  {
+    return $this->exceptionContexts;
   }
   /**
    * @param string
