@@ -97,7 +97,7 @@ class Locations extends \Google\Service\Resource
    * @opt_param int dailyRange.startDate.year Year of the date. Must be from 1 to
    * 9999, or 0 to specify a date without a year.
    * @opt_param string dailySubEntityType.dayOfWeek Represents the day of the
-   * week. Eg: MONDAY.
+   * week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
    * @opt_param int dailySubEntityType.timeOfDay.hours Hours of day in 24 hour
    * format. Should be from 0 to 23. An API may choose to allow the value
    * "24:00:00" for scenarios like business closing time.
