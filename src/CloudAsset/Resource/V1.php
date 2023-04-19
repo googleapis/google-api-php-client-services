@@ -125,6 +125,9 @@ class V1 extends \Google\Service\Resource
    * IamPolicyAnalysisQuery.access_selector is specified, the access section of
    * the result will be determined by the selector, and this flag is not allowed
    * to set. Default is false.
+   * @opt_param bool analysisQuery.options.includeDenyPolicyAnalysis Optional. If
+   * true, the response includes deny policy analysis results, and you can see
+   * which access tuples are denied. Default is false.
    * @opt_param bool analysisQuery.options.outputGroupEdges Optional. If true, the
    * result will output the relevant membership relationships between groups and
    * other groups, and between groups and principals. Default is false.
