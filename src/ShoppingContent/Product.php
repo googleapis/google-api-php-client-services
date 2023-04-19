@@ -111,6 +111,10 @@ class Product extends \Google\Collection
   /**
    * @var string
    */
+  public $disclosureDate;
+  /**
+   * @var string
+   */
   public $displayAdsId;
   /**
    * @var string
@@ -671,6 +675,20 @@ class Product extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setDisclosureDate($disclosureDate)
+  {
+    $this->disclosureDate = $disclosureDate;
+  }
+  /**
+   * @return string
+   */
+  public function getDisclosureDate()
+  {
+    return $this->disclosureDate;
   }
   /**
    * @param string

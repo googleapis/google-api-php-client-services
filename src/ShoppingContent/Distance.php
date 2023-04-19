@@ -17,46 +17,46 @@
 
 namespace Google\Service\ShoppingContent;
 
-class ProductViewItemIssueItemIssueType extends \Google\Model
+class Distance extends \Google\Model
 {
   /**
    * @var string
    */
-  public $canonicalAttribute;
+  public $unit;
   /**
    * @var string
    */
-  public $code;
+  public $value;
 
   /**
    * @param string
    */
-  public function setCanonicalAttribute($canonicalAttribute)
+  public function setUnit($unit)
   {
-    $this->canonicalAttribute = $canonicalAttribute;
+    $this->unit = $unit;
   }
   /**
    * @return string
    */
-  public function getCanonicalAttribute()
+  public function getUnit()
   {
-    return $this->canonicalAttribute;
+    return $this->unit;
   }
   /**
    * @param string
    */
-  public function setCode($code)
+  public function setValue($value)
   {
-    $this->code = $code;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getCode()
+  public function getValue()
   {
-    return $this->code;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductViewItemIssueItemIssueType::class, 'Google_Service_ShoppingContent_ProductViewItemIssueItemIssueType');
+class_alias(Distance::class, 'Google_Service_ShoppingContent_Distance');

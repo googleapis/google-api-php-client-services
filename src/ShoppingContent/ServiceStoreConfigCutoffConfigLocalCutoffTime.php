@@ -17,46 +17,46 @@
 
 namespace Google\Service\ShoppingContent;
 
-class ProductViewItemIssueItemIssueType extends \Google\Model
+class ServiceStoreConfigCutoffConfigLocalCutoffTime extends \Google\Model
 {
   /**
    * @var string
    */
-  public $canonicalAttribute;
+  public $hour;
   /**
    * @var string
    */
-  public $code;
+  public $minute;
 
   /**
    * @param string
    */
-  public function setCanonicalAttribute($canonicalAttribute)
+  public function setHour($hour)
   {
-    $this->canonicalAttribute = $canonicalAttribute;
+    $this->hour = $hour;
   }
   /**
    * @return string
    */
-  public function getCanonicalAttribute()
+  public function getHour()
   {
-    return $this->canonicalAttribute;
+    return $this->hour;
   }
   /**
    * @param string
    */
-  public function setCode($code)
+  public function setMinute($minute)
   {
-    $this->code = $code;
+    $this->minute = $minute;
   }
   /**
    * @return string
    */
-  public function getCode()
+  public function getMinute()
   {
-    return $this->code;
+    return $this->minute;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductViewItemIssueItemIssueType::class, 'Google_Service_ShoppingContent_ProductViewItemIssueItemIssueType');
+class_alias(ServiceStoreConfigCutoffConfigLocalCutoffTime::class, 'Google_Service_ShoppingContent_ServiceStoreConfigCutoffConfigLocalCutoffTime');
