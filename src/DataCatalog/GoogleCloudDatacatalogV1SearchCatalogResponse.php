@@ -27,6 +27,10 @@ class GoogleCloudDatacatalogV1SearchCatalogResponse extends \Google\Collection
   protected $resultsType = GoogleCloudDatacatalogV1SearchCatalogResult::class;
   protected $resultsDataType = 'array';
   /**
+   * @var int
+   */
+  public $totalSize;
+  /**
    * @var string[]
    */
   public $unreachable;
@@ -58,6 +62,20 @@ class GoogleCloudDatacatalogV1SearchCatalogResponse extends \Google\Collection
   public function getResults()
   {
     return $this->results;
+  }
+  /**
+   * @param int
+   */
+  public function setTotalSize($totalSize)
+  {
+    $this->totalSize = $totalSize;
+  }
+  /**
+   * @return int
+   */
+  public function getTotalSize()
+  {
+    return $this->totalSize;
   }
   /**
    * @param string[]
