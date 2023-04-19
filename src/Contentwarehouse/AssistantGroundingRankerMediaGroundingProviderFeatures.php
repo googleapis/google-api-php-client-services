@@ -48,10 +48,15 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    */
   public $isSeedRadioRequest;
   /**
+   * @var string
+   */
+  public $mediaContentType;
+  /**
    * @var float
    */
   public $mscRate;
   public $scubedPSaiMusic;
+  public $scubedPSaiTvm;
   /**
    * @var string
    */
@@ -157,6 +162,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
     return $this->isSeedRadioRequest;
   }
   /**
+   * @param string
+   */
+  public function setMediaContentType($mediaContentType)
+  {
+    $this->mediaContentType = $mediaContentType;
+  }
+  /**
+   * @return string
+   */
+  public function getMediaContentType()
+  {
+    return $this->mediaContentType;
+  }
+  /**
    * @param float
    */
   public function setMscRate($mscRate)
@@ -177,6 +196,14 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getScubedPSaiMusic()
   {
     return $this->scubedPSaiMusic;
+  }
+  public function setScubedPSaiTvm($scubedPSaiTvm)
+  {
+    $this->scubedPSaiTvm = $scubedPSaiTvm;
+  }
+  public function getScubedPSaiTvm()
+  {
+    return $this->scubedPSaiTvm;
   }
   /**
    * @param string

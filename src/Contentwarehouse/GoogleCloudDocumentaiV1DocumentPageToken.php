@@ -28,6 +28,8 @@ class GoogleCloudDocumentaiV1DocumentPageToken extends \Google\Collection
   protected $layoutDataType = '';
   protected $provenanceType = GoogleCloudDocumentaiV1DocumentProvenance::class;
   protected $provenanceDataType = '';
+  protected $styleInfoType = GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo::class;
+  protected $styleInfoDataType = '';
 
   /**
    * @param GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak
@@ -84,6 +86,20 @@ class GoogleCloudDocumentaiV1DocumentPageToken extends \Google\Collection
   public function getProvenance()
   {
     return $this->provenance;
+  }
+  /**
+   * @param GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo
+   */
+  public function setStyleInfo(GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo $styleInfo)
+  {
+    $this->styleInfo = $styleInfo;
+  }
+  /**
+   * @return GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo
+   */
+  public function getStyleInfo()
+  {
+    return $this->styleInfo;
   }
 }
 

@@ -51,10 +51,6 @@ class KnowledgeAnswersValueType extends \Google\Model
   protected $opaqueTypeDataType = '';
   protected $plexityRequirementType = KnowledgeAnswersPlexityRequirement::class;
   protected $plexityRequirementDataType = '';
-  /**
-   * @var string
-   */
-  public $pluralityType;
   protected $polarQuestionTypeType = KnowledgeAnswersPolarQuestionType::class;
   protected $polarQuestionTypeDataType = '';
   protected $semanticTypeType = KnowledgeAnswersSemanticType::class;
@@ -67,8 +63,6 @@ class KnowledgeAnswersValueType extends \Google\Model
   protected $timezoneTypeDataType = '';
   protected $trackingNumberTypeType = KnowledgeAnswersTrackingNumberType::class;
   protected $trackingNumberTypeDataType = '';
-  protected $withTraitType = KnowledgeAnswersTypeTrait::class;
-  protected $withTraitDataType = '';
 
   /**
    * @param KnowledgeAnswersAnyType
@@ -281,20 +275,6 @@ class KnowledgeAnswersValueType extends \Google\Model
     return $this->plexityRequirement;
   }
   /**
-   * @param string
-   */
-  public function setPluralityType($pluralityType)
-  {
-    $this->pluralityType = $pluralityType;
-  }
-  /**
-   * @return string
-   */
-  public function getPluralityType()
-  {
-    return $this->pluralityType;
-  }
-  /**
    * @param KnowledgeAnswersPolarQuestionType
    */
   public function setPolarQuestionType(KnowledgeAnswersPolarQuestionType $polarQuestionType)
@@ -377,20 +357,6 @@ class KnowledgeAnswersValueType extends \Google\Model
   public function getTrackingNumberType()
   {
     return $this->trackingNumberType;
-  }
-  /**
-   * @param KnowledgeAnswersTypeTrait
-   */
-  public function setWithTrait(KnowledgeAnswersTypeTrait $withTrait)
-  {
-    $this->withTrait = $withTrait;
-  }
-  /**
-   * @return KnowledgeAnswersTypeTrait
-   */
-  public function getWithTrait()
-  {
-    return $this->withTrait;
   }
 }
 

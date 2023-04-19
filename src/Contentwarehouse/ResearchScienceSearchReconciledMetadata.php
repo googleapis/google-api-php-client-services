@@ -28,6 +28,10 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
    * @var string
    */
   public $authorList;
+  /**
+   * @var string
+   */
+  public $basicFieldsHash;
   protected $catalogType = ResearchScienceSearchCatalog::class;
   protected $catalogDataType = '';
   /**
@@ -233,6 +237,20 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   public function getAuthorList()
   {
     return $this->authorList;
+  }
+  /**
+   * @param string
+   */
+  public function setBasicFieldsHash($basicFieldsHash)
+  {
+    $this->basicFieldsHash = $basicFieldsHash;
+  }
+  /**
+   * @return string
+   */
+  public function getBasicFieldsHash()
+  {
+    return $this->basicFieldsHash;
   }
   /**
    * @param ResearchScienceSearchCatalog
