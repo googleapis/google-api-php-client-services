@@ -26,6 +26,8 @@ class Artifacts extends \Google\Collection
   public $images;
   protected $mavenArtifactsType = MavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
+  protected $npmPackagesType = NpmPackage::class;
+  protected $npmPackagesDataType = 'array';
   protected $objectsType = ArtifactObjects::class;
   protected $objectsDataType = '';
   protected $pythonPackagesType = PythonPackage::class;
@@ -58,6 +60,20 @@ class Artifacts extends \Google\Collection
   public function getMavenArtifacts()
   {
     return $this->mavenArtifacts;
+  }
+  /**
+   * @param NpmPackage[]
+   */
+  public function setNpmPackages($npmPackages)
+  {
+    $this->npmPackages = $npmPackages;
+  }
+  /**
+   * @return NpmPackage[]
+   */
+  public function getNpmPackages()
+  {
+    return $this->npmPackages;
   }
   /**
    * @param ArtifactObjects

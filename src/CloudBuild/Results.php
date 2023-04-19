@@ -38,6 +38,8 @@ class Results extends \Google\Collection
   protected $imagesDataType = 'array';
   protected $mavenArtifactsType = UploadedMavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
+  protected $npmPackagesType = UploadedNpmPackage::class;
+  protected $npmPackagesDataType = 'array';
   /**
    * @var string
    */
@@ -128,6 +130,20 @@ class Results extends \Google\Collection
   public function getMavenArtifacts()
   {
     return $this->mavenArtifacts;
+  }
+  /**
+   * @param UploadedNpmPackage[]
+   */
+  public function setNpmPackages($npmPackages)
+  {
+    $this->npmPackages = $npmPackages;
+  }
+  /**
+   * @return UploadedNpmPackage[]
+   */
+  public function getNpmPackages()
+  {
+    return $this->npmPackages;
   }
   /**
    * @param string
