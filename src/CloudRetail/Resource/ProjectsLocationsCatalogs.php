@@ -61,8 +61,8 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * * `UNKNOWN_DEVICE_TYPE` * `DESKTOP` * `MOBILE` * A customized string starts
    * with `OTHER_`, e.g. `OTHER_IPHONE`.
    * @opt_param string entity The entity for customers that may run multiple
-   * different entities, domains, sites or regions, for example, "Google US",
-   * "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is set, it
+   * different entities, domains, sites or regions, for example, `Google US`,
+   * `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it
    * should be exactly matched with UserEvent.entity to get per-entity
    * autocomplete results.
    * @opt_param string languageCodes Note that this field applies for `user-data`
