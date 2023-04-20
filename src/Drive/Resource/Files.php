@@ -134,6 +134,8 @@ class Files extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string driveId If set, empties the trash of the provided shared
+   * drive.
    * @opt_param bool enforceSingleParent Deprecated. If an item is not in a shared
    * drive and its last parent is deleted but the item itself is not, the item
    * will be placed under its owner's root.
@@ -329,9 +331,7 @@ class Files extends \Google\Service\Resource
     return $this->call('update', [$params], DriveFile::class);
   }
   /**
-   * Subscribes to changes to a file. While you can establish a channel for
-   * changes to a file on a shared drive, a change to a shared drive file won't
-   * create a notification. (files.watch)
+   * Subscribes to changes to a file. (files.watch)
    *
    * @param string $fileId The ID of the file.
    * @param Channel $postBody
