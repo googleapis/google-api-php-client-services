@@ -37,6 +37,10 @@ class Runnable extends \Google\Model
    * @var bool
    */
   public $ignoreExitStatus;
+  /**
+   * @var string[]
+   */
+  public $labels;
   protected $scriptType = Script::class;
   protected $scriptDataType = '';
   /**
@@ -127,6 +131,20 @@ class Runnable extends \Google\Model
   public function getIgnoreExitStatus()
   {
     return $this->ignoreExitStatus;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param Script

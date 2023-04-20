@@ -30,6 +30,8 @@ class AllocationPolicy extends \Google\Collection
   protected $locationDataType = '';
   protected $networkType = NetworkPolicy::class;
   protected $networkDataType = '';
+  protected $placementType = PlacementPolicy::class;
+  protected $placementDataType = '';
   protected $serviceAccountType = ServiceAccount::class;
   protected $serviceAccountDataType = '';
 
@@ -88,6 +90,20 @@ class AllocationPolicy extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param PlacementPolicy
+   */
+  public function setPlacement(PlacementPolicy $placement)
+  {
+    $this->placement = $placement;
+  }
+  /**
+   * @return PlacementPolicy
+   */
+  public function getPlacement()
+  {
+    return $this->placement;
   }
   /**
    * @param ServiceAccount
