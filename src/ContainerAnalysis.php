@@ -42,7 +42,6 @@ class ContainerAnalysis extends \Google\Service
   public $projects_notes;
   public $projects_notes_occurrences;
   public $projects_occurrences;
-  public $projects_resources;
 
   /**
    * Constructs the internal representation of the ContainerAnalysis service.
@@ -343,26 +342,6 @@ class ContainerAnalysis extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_resources = new ContainerAnalysis\Resource\ProjectsResources(
-        $this,
-        $this->serviceName,
-        'resources',
-        [
-          'methods' => [
-            'generatePackagesSummary' => [
-              'path' => 'v1/{+name}:generatePackagesSummary',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
