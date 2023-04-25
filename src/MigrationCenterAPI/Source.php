@@ -50,6 +50,10 @@ class Source extends \Google\Model
   /**
    * @var string
    */
+  public $state;
+  /**
+   * @var string
+   */
   public $type;
   /**
    * @var string
@@ -153,6 +157,20 @@ class Source extends \Google\Model
   public function getPriority()
   {
     return $this->priority;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * @param string
