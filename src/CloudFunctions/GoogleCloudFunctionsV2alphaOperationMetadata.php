@@ -40,7 +40,7 @@ class GoogleCloudFunctionsV2alphaOperationMetadata extends \Google\Collection
    * @var array[]
    */
   public $requestResource;
-  protected $stagesType = Stage::class;
+  protected $stagesType = GoogleCloudFunctionsV2alphaStage::class;
   protected $stagesDataType = 'array';
   /**
    * @var string
@@ -126,14 +126,14 @@ class GoogleCloudFunctionsV2alphaOperationMetadata extends \Google\Collection
     return $this->requestResource;
   }
   /**
-   * @param Stage[]
+   * @param GoogleCloudFunctionsV2alphaStage[]
    */
   public function setStages($stages)
   {
     $this->stages = $stages;
   }
   /**
-   * @return Stage[]
+   * @return GoogleCloudFunctionsV2alphaStage[]
    */
   public function getStages()
   {
