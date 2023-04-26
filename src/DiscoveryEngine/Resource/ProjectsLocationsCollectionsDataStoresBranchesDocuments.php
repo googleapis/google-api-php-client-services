@@ -45,11 +45,11 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * @opt_param string documentId Required. The ID to use for the Document, which
    * will become the final component of the Document.name. If the caller does not
    * have permission to create the Document, regardless of whether or not it
-   * exists, a PERMISSION_DENIED error is returned. This field must be unique
-   * among all Documents with the same parent. Otherwise, an ALREADY_EXISTS error
-   * is returned. This field must conform to
+   * exists, a `PERMISSION_DENIED` error is returned. This field must be unique
+   * among all Documents with the same parent. Otherwise, an `ALREADY_EXISTS`
+   * error is returned. This field must conform to
    * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit
-   * of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return GoogleCloudDiscoveryengineV1betaDocument
    */
   public function create($parent, GoogleCloudDiscoveryengineV1betaDocument $postBody, $optParams = [])
@@ -65,8 +65,8 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * ts/{project}/locations/{location}/collections/{collection}/dataStores/{data_s
    * tore}/branches/{branch}/documents/{document}`. If the caller does not have
    * permission to delete the Document, regardless of whether or not it exists, a
-   * PERMISSION_DENIED error is returned. If the Document to delete does not
-   * exist, a NOT_FOUND error is returned.
+   * `PERMISSION_DENIED` error is returned. If the Document to delete does not
+   * exist, a `NOT_FOUND` error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
    */
@@ -83,8 +83,8 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * ts/{project}/locations/{location}/collections/{collection}/dataStores/{data_s
    * tore}/branches/{branch}/documents/{document}`. If the caller does not have
    * permission to access the Document, regardless of whether or not it exists, a
-   * PERMISSION_DENIED error is returned. If the requested Document does not
-   * exist, a NOT_FOUND error is returned.
+   * `PERMISSION_DENIED` error is returned. If the requested Document does not
+   * exist, a `NOT_FOUND` error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaDocument
    */
@@ -121,19 +121,19 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * a_store}/branches/{branch}`. Use `default_branch` as the branch ID, to list
    * documents under the default branch. If the caller does not have permission to
    * list Documentss under this branch, regardless of whether or not this branch
-   * exists, a PERMISSION_DENIED error is returned.
+   * exists, a `PERMISSION_DENIED` error is returned.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of Documents to return. If
    * unspecified, defaults to 100. The maximum allowed value is 1000. Values above
-   * 1000 will be coerced to 1000. If this field is negative, an INVALID_ARGUMENT
-   * error is returned.
+   * 1000 will be coerced to 1000. If this field is negative, an
+   * `INVALID_ARGUMENT` error is returned.
    * @opt_param string pageToken A page token
    * ListDocumentsResponse.next_page_token, received from a previous
    * DocumentService.ListDocuments call. Provide this to retrieve the subsequent
    * page. When paginating, all other parameters provided to
    * DocumentService.ListDocuments must match the call that provided the page
-   * token. Otherwise, an INVALID_ARGUMENT error is returned.
+   * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return GoogleCloudDiscoveryengineV1betaListDocumentsResponse
    */
   public function listProjectsLocationsCollectionsDataStoresBranchesDocuments($parent, $optParams = [])

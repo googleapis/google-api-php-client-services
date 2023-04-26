@@ -44,6 +44,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_dataStores_operations;
   public $projects_locations_collections_dataStores_servingConfigs;
   public $projects_locations_collections_dataStores_userEvents;
+  public $projects_locations_collections_engines_operations;
   public $projects_locations_collections_operations;
   public $projects_locations_dataStores_branches_documents;
   public $projects_locations_dataStores_branches_operations;
@@ -345,6 +346,26 @@ class DiscoveryEngine extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_engines_operations = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1beta/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

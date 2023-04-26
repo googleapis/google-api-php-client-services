@@ -35,7 +35,7 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
    * (servingConfigs.recommend)
    *
    * @param string $servingConfig Required. Full resource name of the format:
-   * projects/locations/global/collections/dataStores/servingConfigs Before you
+   * `projects/locations/global/collections/dataStores/servingConfigs` Before you
    * can request recommendations from your model, you must create at least one
    * serving config for it.
    * @param GoogleCloudDiscoveryengineV1betaRecommendRequest $postBody
