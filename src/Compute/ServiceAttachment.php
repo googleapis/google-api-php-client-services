@@ -75,6 +75,10 @@ class ServiceAttachment extends \Google\Collection
   protected $pscServiceAttachmentIdType = Uint128::class;
   protected $pscServiceAttachmentIdDataType = '';
   /**
+   * @var bool
+   */
+  public $reconcileConnections;
+  /**
    * @var string
    */
   public $region;
@@ -296,6 +300,20 @@ class ServiceAttachment extends \Google\Collection
   public function getPscServiceAttachmentId()
   {
     return $this->pscServiceAttachmentId;
+  }
+  /**
+   * @param bool
+   */
+  public function setReconcileConnections($reconcileConnections)
+  {
+    $this->reconcileConnections = $reconcileConnections;
+  }
+  /**
+   * @return bool
+   */
+  public function getReconcileConnections()
+  {
+    return $this->reconcileConnections;
   }
   /**
    * @param string

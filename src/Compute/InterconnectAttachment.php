@@ -101,6 +101,14 @@ class InterconnectAttachment extends \Google\Collection
    */
   public $kind;
   /**
+   * @var string
+   */
+  public $labelFingerprint;
+  /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var int
    */
   public $mtu;
@@ -436,6 +444,34 @@ class InterconnectAttachment extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param string
+   */
+  public function setLabelFingerprint($labelFingerprint)
+  {
+    $this->labelFingerprint = $labelFingerprint;
+  }
+  /**
+   * @return string
+   */
+  public function getLabelFingerprint()
+  {
+    return $this->labelFingerprint;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param int
