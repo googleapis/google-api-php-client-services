@@ -26,6 +26,10 @@ class SqlInstancesGetDiskShrinkConfigResponse extends \Google\Model
   /**
    * @var string
    */
+  public $message;
+  /**
+   * @var string
+   */
   public $minimalTargetSizeGb;
 
   /**
@@ -41,6 +45,20 @@ class SqlInstancesGetDiskShrinkConfigResponse extends \Google\Model
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param string
+   */
+  public function setMessage($message)
+  {
+    $this->message = $message;
+  }
+  /**
+   * @return string
+   */
+  public function getMessage()
+  {
+    return $this->message;
   }
   /**
    * @param string
