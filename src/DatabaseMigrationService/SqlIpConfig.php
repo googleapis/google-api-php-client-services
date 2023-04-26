@@ -20,6 +20,10 @@ namespace Google\Service\DatabaseMigrationService;
 class SqlIpConfig extends \Google\Collection
 {
   protected $collection_key = 'authorizedNetworks';
+  /**
+   * @var string
+   */
+  public $allocatedIpRange;
   protected $authorizedNetworksType = SqlAclEntry::class;
   protected $authorizedNetworksDataType = 'array';
   /**
@@ -35,6 +39,20 @@ class SqlIpConfig extends \Google\Collection
    */
   public $requireSsl;
 
+  /**
+   * @param string
+   */
+  public function setAllocatedIpRange($allocatedIpRange)
+  {
+    $this->allocatedIpRange = $allocatedIpRange;
+  }
+  /**
+   * @return string
+   */
+  public function getAllocatedIpRange()
+  {
+    return $this->allocatedIpRange;
+  }
   /**
    * @param SqlAclEntry[]
    */
