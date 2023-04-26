@@ -40,6 +40,8 @@ class GoogleCloudRetailV2alphaModel extends \Google\Collection
    * @var string
    */
   public $lastTuneTime;
+  protected $modelFeaturesConfigType = GoogleCloudRetailV2alphaModelModelFeaturesConfig::class;
+  protected $modelFeaturesConfigDataType = '';
   /**
    * @var string
    */
@@ -146,6 +148,20 @@ class GoogleCloudRetailV2alphaModel extends \Google\Collection
   public function getLastTuneTime()
   {
     return $this->lastTuneTime;
+  }
+  /**
+   * @param GoogleCloudRetailV2alphaModelModelFeaturesConfig
+   */
+  public function setModelFeaturesConfig(GoogleCloudRetailV2alphaModelModelFeaturesConfig $modelFeaturesConfig)
+  {
+    $this->modelFeaturesConfig = $modelFeaturesConfig;
+  }
+  /**
+   * @return GoogleCloudRetailV2alphaModelModelFeaturesConfig
+   */
+  public function getModelFeaturesConfig()
+  {
+    return $this->modelFeaturesConfig;
   }
   /**
    * @param string

@@ -39,8 +39,8 @@ use Google\Service\CloudRetail\GoogleProtobufEmpty;
 class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
 {
   /**
-   * It is recommended to use the ProductService.AddLocalInventories method
-   * instead of ProductService.AddFulfillmentPlaces.
+   * We recommend that you use the ProductService.AddLocalInventories method
+   * instead of the ProductService.AddFulfillmentPlaces method.
    * ProductService.AddLocalInventories achieves the same results but provides
    * more fine-grained control over ingesting local inventory data. Incrementally
    * adds place IDs to Product.fulfillment_info.place_ids. This process is
@@ -256,8 +256,8 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleCloudRetailV2Product::class);
   }
   /**
-   * It is recommended to use the ProductService.RemoveLocalInventories method
-   * instead of ProductService.RemoveFulfillmentPlaces.
+   * We recommend that you use the ProductService.RemoveLocalInventories method
+   * instead of the ProductService.RemoveFulfillmentPlaces method.
    * ProductService.RemoveLocalInventories achieves the same results but provides
    * more fine-grained control over ingesting local inventory data. Incrementally
    * removes place IDs from a Product.fulfillment_info.place_ids. This process is
