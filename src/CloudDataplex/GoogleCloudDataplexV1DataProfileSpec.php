@@ -19,6 +19,25 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataProfileSpec extends \Google\Model
 {
+  /**
+   * @var float
+   */
+  public $samplingPercent;
+
+  /**
+   * @param float
+   */
+  public function setSamplingPercent($samplingPercent)
+  {
+    $this->samplingPercent = $samplingPercent;
+  }
+  /**
+   * @return float
+   */
+  public function getSamplingPercent()
+  {
+    return $this->samplingPercent;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

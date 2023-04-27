@@ -22,6 +22,10 @@ class GoogleCloudDataplexV1DataQualitySpec extends \Google\Collection
   protected $collection_key = 'rules';
   protected $rulesType = GoogleCloudDataplexV1DataQualityRule::class;
   protected $rulesDataType = 'array';
+  /**
+   * @var float
+   */
+  public $samplingPercent;
 
   /**
    * @param GoogleCloudDataplexV1DataQualityRule[]
@@ -36,6 +40,20 @@ class GoogleCloudDataplexV1DataQualitySpec extends \Google\Collection
   public function getRules()
   {
     return $this->rules;
+  }
+  /**
+   * @param float
+   */
+  public function setSamplingPercent($samplingPercent)
+  {
+    $this->samplingPercent = $samplingPercent;
+  }
+  /**
+   * @return float
+   */
+  public function getSamplingPercent()
+  {
+    return $this->samplingPercent;
   }
 }
 
