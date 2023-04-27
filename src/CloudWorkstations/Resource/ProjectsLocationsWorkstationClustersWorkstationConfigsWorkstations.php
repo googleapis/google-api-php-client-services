@@ -65,7 +65,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigsWorkstations extends
    * @param array $optParams Optional parameters.
    *
    * @opt_param string etag If set, the request will be rejected if the latest
-   * version of the workstation on the server does not have this etag.
+   * version of the workstation on the server does not have this ETag.
    * @opt_param bool validateOnly If set, validate the request and preview the
    * review, but do not actually apply it.
    * @return Operation

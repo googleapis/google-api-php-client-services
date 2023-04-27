@@ -63,7 +63,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Ser
    * @param array $optParams Optional parameters.
    *
    * @opt_param string etag If set, the request is rejected if the latest version
-   * of the workstation configuration on the server does not have this etag.
+   * of the workstation configuration on the server does not have this ETag.
    * @opt_param bool force If set, any workstations in the workstation
    * configuration are also deleted. Otherwise, the request works only if the
    * workstation configuration has no workstations.

@@ -19,7 +19,7 @@ namespace Google\Service\CloudWorkstations;
 
 class WorkstationConfig extends \Google\Collection
 {
-  protected $collection_key = 'persistentDirectories';
+  protected $collection_key = 'readinessChecks';
   /**
    * @var string[]
    */
@@ -70,6 +70,8 @@ class WorkstationConfig extends \Google\Collection
   public $name;
   protected $persistentDirectoriesType = PersistentDirectory::class;
   protected $persistentDirectoriesDataType = 'array';
+  protected $readinessChecksType = ReadinessCheck::class;
+  protected $readinessChecksDataType = 'array';
   /**
    * @var bool
    */
@@ -296,6 +298,20 @@ class WorkstationConfig extends \Google\Collection
   public function getPersistentDirectories()
   {
     return $this->persistentDirectories;
+  }
+  /**
+   * @param ReadinessCheck[]
+   */
+  public function setReadinessChecks($readinessChecks)
+  {
+    $this->readinessChecks = $readinessChecks;
+  }
+  /**
+   * @return ReadinessCheck[]
+   */
+  public function getReadinessChecks()
+  {
+    return $this->readinessChecks;
   }
   /**
    * @param bool

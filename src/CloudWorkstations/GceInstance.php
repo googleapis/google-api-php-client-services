@@ -39,6 +39,10 @@ class GceInstance extends \Google\Collection
    */
   public $poolSize;
   /**
+   * @var int
+   */
+  public $pooledInstances;
+  /**
    * @var string
    */
   public $serviceAccount;
@@ -118,6 +122,20 @@ class GceInstance extends \Google\Collection
   public function getPoolSize()
   {
     return $this->poolSize;
+  }
+  /**
+   * @param int
+   */
+  public function setPooledInstances($pooledInstances)
+  {
+    $this->pooledInstances = $pooledInstances;
+  }
+  /**
+   * @return int
+   */
+  public function getPooledInstances()
+  {
+    return $this->pooledInstances;
   }
   /**
    * @param string
