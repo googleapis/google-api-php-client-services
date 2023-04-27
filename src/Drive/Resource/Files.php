@@ -130,7 +130,8 @@ class Files extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Permanently deletes all of the user's trashed files. (files.emptyTrash)
+   * Permanently deletes all trashed files of a user or shared drive.
+   * (files.emptyTrash)
    *
    * @param array $optParams Optional parameters.
    *
@@ -331,7 +332,7 @@ class Files extends \Google\Service\Resource
     return $this->call('update', [$params], DriveFile::class);
   }
   /**
-   * Subscribes to changes to a file. (files.watch)
+   * Subscribe to changes on a file. (files.watch)
    *
    * @param string $fileId The ID of the file.
    * @param Channel $postBody
