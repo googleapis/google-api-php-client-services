@@ -159,8 +159,9 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param GoogleCloudRunV2Service $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing This field is currently not used by Cloud Run;
-   * setting it does not have any effect.
+   * @opt_param bool allowMissing If set to true, and if the Service does not
+   * exist, it will create a new one. The caller must have 'run.services.create'
+   * permissions if this is set to true and the Service does not exist.
    * @opt_param bool validateOnly Indicates that the request should be validated
    * and default values populated, without persisting the request or updating any
    * resources.

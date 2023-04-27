@@ -53,6 +53,10 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
    */
   public $serviceAccount;
   /**
+   * @var bool
+   */
+  public $sessionAffinity;
+  /**
    * @var string
    */
   public $timeout;
@@ -186,6 +190,20 @@ class GoogleCloudRunV2RevisionTemplate extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param bool
+   */
+  public function setSessionAffinity($sessionAffinity)
+  {
+    $this->sessionAffinity = $sessionAffinity;
+  }
+  /**
+   * @return bool
+   */
+  public function getSessionAffinity()
+  {
+    return $this->sessionAffinity;
   }
   /**
    * @param string
