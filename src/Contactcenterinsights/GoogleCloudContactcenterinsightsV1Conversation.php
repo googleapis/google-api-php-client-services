@@ -52,6 +52,8 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   public $languageCode;
   protected $latestAnalysisType = GoogleCloudContactcenterinsightsV1Analysis::class;
   protected $latestAnalysisDataType = '';
+  protected $latestSummaryType = GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData::class;
+  protected $latestSummaryDataType = '';
   /**
    * @var string
    */
@@ -224,6 +226,20 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
   public function getLatestAnalysis()
   {
     return $this->latestAnalysis;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData
+   */
+  public function setLatestSummary(GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData $latestSummary)
+  {
+    $this->latestSummary = $latestSummary;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData
+   */
+  public function getLatestSummary()
+  {
+    return $this->latestSummary;
   }
   /**
    * @param string
