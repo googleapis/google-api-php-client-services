@@ -29,6 +29,10 @@ class GoogleCloudChannelV1alpha1Entitlement extends \Google\Collection
   /**
    * @var string
    */
+  public $billingAccount;
+  /**
+   * @var string
+   */
   public $channelPartnerId;
   protected $commitmentSettingsType = GoogleCloudChannelV1alpha1CommitmentSettings::class;
   protected $commitmentSettingsDataType = '';
@@ -102,6 +106,20 @@ class GoogleCloudChannelV1alpha1Entitlement extends \Google\Collection
   public function getAssociationInfo()
   {
     return $this->associationInfo;
+  }
+  /**
+   * @param string
+   */
+  public function setBillingAccount($billingAccount)
+  {
+    $this->billingAccount = $billingAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getBillingAccount()
+  {
+    return $this->billingAccount;
   }
   /**
    * @param string

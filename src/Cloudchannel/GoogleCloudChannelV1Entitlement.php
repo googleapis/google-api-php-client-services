@@ -22,6 +22,10 @@ class GoogleCloudChannelV1Entitlement extends \Google\Collection
   protected $collection_key = 'suspensionReasons';
   protected $associationInfoType = GoogleCloudChannelV1AssociationInfo::class;
   protected $associationInfoDataType = '';
+  /**
+   * @var string
+   */
+  public $billingAccount;
   protected $commitmentSettingsType = GoogleCloudChannelV1CommitmentSettings::class;
   protected $commitmentSettingsDataType = '';
   /**
@@ -72,6 +76,20 @@ class GoogleCloudChannelV1Entitlement extends \Google\Collection
   public function getAssociationInfo()
   {
     return $this->associationInfo;
+  }
+  /**
+   * @param string
+   */
+  public function setBillingAccount($billingAccount)
+  {
+    $this->billingAccount = $billingAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getBillingAccount()
+  {
+    return $this->billingAccount;
   }
   /**
    * @param GoogleCloudChannelV1CommitmentSettings
