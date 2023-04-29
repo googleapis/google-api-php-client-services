@@ -25,6 +25,10 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $authKey;
+  /**
+   * @var string
+   */
   public $authType;
   protected $oauth2AuthCodeFlowType = GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow::class;
   protected $oauth2AuthCodeFlowDataType = '';
@@ -50,6 +54,20 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
   public function getAdditionalVariables()
   {
     return $this->additionalVariables;
+  }
+  /**
+   * @param string
+   */
+  public function setAuthKey($authKey)
+  {
+    $this->authKey = $authKey;
+  }
+  /**
+   * @return string
+   */
+  public function getAuthKey()
+  {
+    return $this->authKey;
   }
   /**
    * @param string

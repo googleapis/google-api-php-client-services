@@ -73,6 +73,10 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   protected $statusType = GoogleCloudConnectorsV1ConnectionStatus::class;
   protected $statusDataType = '';
   /**
+   * @var string
+   */
+  public $subscriptionType;
+  /**
    * @var bool
    */
   public $suspended;
@@ -318,6 +322,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getStatus()
   {
     return $this->status;
+  }
+  /**
+   * @param string
+   */
+  public function setSubscriptionType($subscriptionType)
+  {
+    $this->subscriptionType = $subscriptionType;
+  }
+  /**
+   * @return string
+   */
+  public function getSubscriptionType()
+  {
+    return $this->subscriptionType;
   }
   /**
    * @param bool
