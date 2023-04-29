@@ -17,6 +17,7 @@
 
 namespace Google\Service\DiscoveryEngine\Resource;
 
+use Google\Service\DiscoveryEngine\GoogleLongrunningListOperationsResponse;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 
 /**
@@ -43,6 +44,25 @@ class ProjectsLocationsCollectionsEnginesOperations extends \Google\Service\Reso
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Lists operations that match the specified filter in the request. If the
+   * server doesn't support this method, it returns `UNIMPLEMENTED`.
+   * (operations.listProjectsLocationsCollectionsEnginesOperations)
+   *
+   * @param string $name The name of the operation's parent resource.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter The standard list filter.
+   * @opt_param int pageSize The standard list page size.
+   * @opt_param string pageToken The standard list page token.
+   * @return GoogleLongrunningListOperationsResponse
+   */
+  public function listProjectsLocationsCollectionsEnginesOperations($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleLongrunningListOperationsResponse::class);
   }
 }
 

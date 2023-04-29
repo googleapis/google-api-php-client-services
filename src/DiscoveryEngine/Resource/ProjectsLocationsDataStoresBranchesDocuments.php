@@ -20,6 +20,7 @@ namespace Google\Service\DiscoveryEngine\Resource;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaDocument;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaImportDocumentsRequest;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaListDocumentsResponse;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 use Google\Service\DiscoveryEngine\GoogleProtobufEmpty;
 
@@ -161,6 +162,28 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleCloudDiscoveryengineV1betaDocument::class);
+  }
+  /**
+   * Permanently deletes all selected Documents under a branch. This process is
+   * asynchronous. If the request is valid, the removal will be enquired and
+   * processed offlines. Depending on the number of Documents, this operation
+   * could take hours to complete. Before the operation completes, some Documents
+   * may still be returned by DocumentService.GetDocument or
+   * DocumentService.ListDocuments. To get a sample of Documents that would be
+   * deleted, set PurgeDocumentsRequest.force to false. (documents.purge)
+   *
+   * @param string $parent Required. The parent resource name, such as `projects/{
+   * project}/locations/{location}/collections/{collection}/dataStores/{data_store
+   * }/branches/{branch}`.
+   * @param GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function purge($parent, GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('purge', [$params], GoogleLongrunningOperation::class);
   }
 }
 
