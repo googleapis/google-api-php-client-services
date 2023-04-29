@@ -40,6 +40,8 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
    * @var string
    */
   public $resourceName;
+  protected $textAdType = GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo::class;
+  protected $textAdDataType = '';
   /**
    * @var string
    */
@@ -114,6 +116,20 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo
+   */
+  public function setTextAd(GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo $textAd)
+  {
+    $this->textAd = $textAd;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo
+   */
+  public function getTextAd()
+  {
+    return $this->textAd;
   }
   /**
    * @param string
