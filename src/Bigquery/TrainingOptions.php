@@ -125,6 +125,10 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string
    */
+  public $instanceWeightColumn;
+  /**
+   * @var string
+   */
   public $integratedGradientsNumSteps;
   /**
    * @var string
@@ -214,6 +218,10 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string
    */
+  public $tfVersion;
+  /**
+   * @var string
+   */
   public $timeSeriesDataColumn;
   /**
    * @var string
@@ -245,6 +253,10 @@ class TrainingOptions extends \Google\Collection
    * @var bool
    */
   public $warmStart;
+  /**
+   * @var string
+   */
+  public $xgboostVersion;
 
   /**
    * @param bool
@@ -633,6 +645,20 @@ class TrainingOptions extends \Google\Collection
   /**
    * @param string
    */
+  public function setInstanceWeightColumn($instanceWeightColumn)
+  {
+    $this->instanceWeightColumn = $instanceWeightColumn;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceWeightColumn()
+  {
+    return $this->instanceWeightColumn;
+  }
+  /**
+   * @param string
+   */
   public function setIntegratedGradientsNumSteps($integratedGradientsNumSteps)
   {
     $this->integratedGradientsNumSteps = $integratedGradientsNumSteps;
@@ -983,6 +1009,20 @@ class TrainingOptions extends \Google\Collection
   /**
    * @param string
    */
+  public function setTfVersion($tfVersion)
+  {
+    $this->tfVersion = $tfVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getTfVersion()
+  {
+    return $this->tfVersion;
+  }
+  /**
+   * @param string
+   */
   public function setTimeSeriesDataColumn($timeSeriesDataColumn)
   {
     $this->timeSeriesDataColumn = $timeSeriesDataColumn;
@@ -1107,6 +1147,20 @@ class TrainingOptions extends \Google\Collection
   public function getWarmStart()
   {
     return $this->warmStart;
+  }
+  /**
+   * @param string
+   */
+  public function setXgboostVersion($xgboostVersion)
+  {
+    $this->xgboostVersion = $xgboostVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getXgboostVersion()
+  {
+    return $this->xgboostVersion;
   }
 }
 

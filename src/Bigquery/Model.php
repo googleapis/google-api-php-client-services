@@ -80,6 +80,8 @@ class Model extends \Google\Collection
    * @var string[]
    */
   public $optimalTrialIds;
+  protected $remoteModelInfoType = RemoteModelInfo::class;
+  protected $remoteModelInfoDataType = '';
   protected $trainingRunsType = TrainingRun::class;
   protected $trainingRunsDataType = 'array';
 
@@ -334,6 +336,20 @@ class Model extends \Google\Collection
   public function getOptimalTrialIds()
   {
     return $this->optimalTrialIds;
+  }
+  /**
+   * @param RemoteModelInfo
+   */
+  public function setRemoteModelInfo(RemoteModelInfo $remoteModelInfo)
+  {
+    $this->remoteModelInfo = $remoteModelInfo;
+  }
+  /**
+   * @return RemoteModelInfo
+   */
+  public function getRemoteModelInfo()
+  {
+    return $this->remoteModelInfo;
   }
   /**
    * @param TrainingRun[]

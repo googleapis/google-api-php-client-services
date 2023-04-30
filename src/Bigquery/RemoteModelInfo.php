@@ -17,83 +17,82 @@
 
 namespace Google\Service\Bigquery;
 
-class HivePartitioningOptions extends \Google\Collection
+class RemoteModelInfo extends \Google\Model
 {
-  protected $collection_key = 'fields';
-  /**
-   * @var string[]
-   */
-  public $fields;
   /**
    * @var string
    */
-  public $mode;
-  /**
-   * @var bool
-   */
-  public $requirePartitionFilter;
+  public $connection;
   /**
    * @var string
    */
-  public $sourceUriPrefix;
+  public $endpoint;
+  /**
+   * @var string
+   */
+  public $maxBatchingRows;
+  /**
+   * @var string
+   */
+  public $remoteServiceType;
 
   /**
-   * @param string[]
-   */
-  public function setFields($fields)
-  {
-    $this->fields = $fields;
-  }
-  /**
-   * @return string[]
-   */
-  public function getFields()
-  {
-    return $this->fields;
-  }
-  /**
    * @param string
    */
-  public function setMode($mode)
+  public function setConnection($connection)
   {
-    $this->mode = $mode;
+    $this->connection = $connection;
   }
   /**
    * @return string
    */
-  public function getMode()
+  public function getConnection()
   {
-    return $this->mode;
-  }
-  /**
-   * @param bool
-   */
-  public function setRequirePartitionFilter($requirePartitionFilter)
-  {
-    $this->requirePartitionFilter = $requirePartitionFilter;
-  }
-  /**
-   * @return bool
-   */
-  public function getRequirePartitionFilter()
-  {
-    return $this->requirePartitionFilter;
+    return $this->connection;
   }
   /**
    * @param string
    */
-  public function setSourceUriPrefix($sourceUriPrefix)
+  public function setEndpoint($endpoint)
   {
-    $this->sourceUriPrefix = $sourceUriPrefix;
+    $this->endpoint = $endpoint;
   }
   /**
    * @return string
    */
-  public function getSourceUriPrefix()
+  public function getEndpoint()
   {
-    return $this->sourceUriPrefix;
+    return $this->endpoint;
+  }
+  /**
+   * @param string
+   */
+  public function setMaxBatchingRows($maxBatchingRows)
+  {
+    $this->maxBatchingRows = $maxBatchingRows;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxBatchingRows()
+  {
+    return $this->maxBatchingRows;
+  }
+  /**
+   * @param string
+   */
+  public function setRemoteServiceType($remoteServiceType)
+  {
+    $this->remoteServiceType = $remoteServiceType;
+  }
+  /**
+   * @return string
+   */
+  public function getRemoteServiceType()
+  {
+    return $this->remoteServiceType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(HivePartitioningOptions::class, 'Google_Service_Bigquery_HivePartitioningOptions');
+class_alias(RemoteModelInfo::class, 'Google_Service_Bigquery_RemoteModelInfo');
