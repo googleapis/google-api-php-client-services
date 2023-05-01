@@ -15,28 +15,19 @@
  * the License.
  */
 
-namespace Google\Service\ArtifactRegistry;
+namespace Google\Service\Spanner\Resource;
 
-class UploadGooGetArtifactMediaResponse extends \Google\Model
+/**
+ * The "instancePartitions" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $spannerService = new Google\Service\Spanner(...);
+ *   $instancePartitions = $spannerService->projects_instances_instancePartitions;
+ *  </code>
+ */
+class ProjectsInstancesInstancePartitions extends \Google\Service\Resource
 {
-  protected $operationType = Operation::class;
-  protected $operationDataType = '';
-
-  /**
-   * @param Operation
-   */
-  public function setOperation(Operation $operation)
-  {
-    $this->operation = $operation;
-  }
-  /**
-   * @return Operation
-   */
-  public function getOperation()
-  {
-    return $this->operation;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UploadGooGetArtifactMediaResponse::class, 'Google_Service_ArtifactRegistry_UploadGooGetArtifactMediaResponse');
+class_alias(ProjectsInstancesInstancePartitions::class, 'Google_Service_Spanner_Resource_ProjectsInstancesInstancePartitions');

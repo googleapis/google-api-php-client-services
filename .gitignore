@@ -4,9 +4,6 @@ composer.lock
 # Ignore files with casing conflicts
 src/Compute/HTTPHealthCheck.php
 src/Compute/HTTPSHealthCheck.php
-src/ArtifactRegistry/Resource/ProjectsLocationsRepositoriesGoogetArtifacts.php
-src/ArtifactRegistry/Resource/ProjectsLocationsRepositoriesYumartifacts.php
-src/ArtifactRegistry/Resource/ProjectsLocationsRepositoriesAptartifacts.php
 src/Baremetalsolution/Resource/ProjectsLocationsNfsshares.php
 
 # Python for generator
