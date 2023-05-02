@@ -17,28 +17,46 @@
 
 namespace Google\Service\Verifiedaccess;
 
-class Challenge extends \Google\Model
+class CrowdStrikeAgent extends \Google\Model
 {
   /**
    * @var string
    */
-  public $challenge;
+  public $agentId;
+  /**
+   * @var string
+   */
+  public $customerId;
 
   /**
    * @param string
    */
-  public function setChallenge($challenge)
+  public function setAgentId($agentId)
   {
-    $this->challenge = $challenge;
+    $this->agentId = $agentId;
   }
   /**
    * @return string
    */
-  public function getChallenge()
+  public function getAgentId()
   {
-    return $this->challenge;
+    return $this->agentId;
+  }
+  /**
+   * @param string
+   */
+  public function setCustomerId($customerId)
+  {
+    $this->customerId = $customerId;
+  }
+  /**
+   * @return string
+   */
+  public function getCustomerId()
+  {
+    return $this->customerId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Challenge::class, 'Google_Service_Verifiedaccess_Challenge');
+class_alias(CrowdStrikeAgent::class, 'Google_Service_Verifiedaccess_CrowdStrikeAgent');
