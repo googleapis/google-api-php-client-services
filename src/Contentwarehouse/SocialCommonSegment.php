@@ -25,6 +25,8 @@ class SocialCommonSegment extends \Google\Model
   protected $hashtagDataDataType = '';
   protected $linkDataType = SocialCommonLinkData::class;
   protected $linkDataDataType = '';
+  protected $searchLinkDataType = SocialCommonSearchLinkData::class;
+  protected $searchLinkDataDataType = '';
   /**
    * @var string
    */
@@ -77,6 +79,20 @@ class SocialCommonSegment extends \Google\Model
   public function getLinkData()
   {
     return $this->linkData;
+  }
+  /**
+   * @param SocialCommonSearchLinkData
+   */
+  public function setSearchLinkData(SocialCommonSearchLinkData $searchLinkData)
+  {
+    $this->searchLinkData = $searchLinkData;
+  }
+  /**
+   * @return SocialCommonSearchLinkData
+   */
+  public function getSearchLinkData()
+  {
+    return $this->searchLinkData;
   }
   /**
    * @param string

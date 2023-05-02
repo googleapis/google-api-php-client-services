@@ -35,6 +35,10 @@ class VideoThumbnailsThumbnailScore extends \Google\Collection
   protected $denseGeneralExtraFeaturesType = DrishtiFeatureExtra::class;
   protected $denseGeneralExtraFeaturesDataType = '';
   /**
+   * @var string
+   */
+  public $externalImageId;
+  /**
    * @var bool
    */
   public $isAssigned;
@@ -125,6 +129,20 @@ class VideoThumbnailsThumbnailScore extends \Google\Collection
   public function getDenseGeneralExtraFeatures()
   {
     return $this->denseGeneralExtraFeatures;
+  }
+  /**
+   * @param string
+   */
+  public function setExternalImageId($externalImageId)
+  {
+    $this->externalImageId = $externalImageId;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalImageId()
+  {
+    return $this->externalImageId;
   }
   /**
    * @param bool

@@ -23,6 +23,11 @@ class AssistantGroundingRankerPodcastGroundingProviderFeatures extends \Google\M
    * @var bool
    */
   public $isExclusive;
+  /**
+   * @var float
+   */
+  public $scubedNg3ModelScore;
+  public $scubedTstarScore;
 
   /**
    * @param bool
@@ -37,6 +42,28 @@ class AssistantGroundingRankerPodcastGroundingProviderFeatures extends \Google\M
   public function getIsExclusive()
   {
     return $this->isExclusive;
+  }
+  /**
+   * @param float
+   */
+  public function setScubedNg3ModelScore($scubedNg3ModelScore)
+  {
+    $this->scubedNg3ModelScore = $scubedNg3ModelScore;
+  }
+  /**
+   * @return float
+   */
+  public function getScubedNg3ModelScore()
+  {
+    return $this->scubedNg3ModelScore;
+  }
+  public function setScubedTstarScore($scubedTstarScore)
+  {
+    $this->scubedTstarScore = $scubedTstarScore;
+  }
+  public function getScubedTstarScore()
+  {
+    return $this->scubedTstarScore;
   }
 }
 

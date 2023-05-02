@@ -30,8 +30,6 @@ class RepositoryWebrefEntityNameScore extends \Google\Collection
   protected $debugInfoDataType = 'array';
   protected $debugVariantSignalsType = RepositoryWebrefPreprocessingNameVariantSignals::class;
   protected $debugVariantSignalsDataType = 'array';
-  protected $entityType = RepositoryWebrefEntityJoin::class;
-  protected $entityDataType = '';
   protected $extendedScoreRatioType = RepositoryWebrefExtendedEntityNameScore::class;
   protected $extendedScoreRatioDataType = 'array';
   /**
@@ -142,20 +140,6 @@ class RepositoryWebrefEntityNameScore extends \Google\Collection
   public function getDebugVariantSignals()
   {
     return $this->debugVariantSignals;
-  }
-  /**
-   * @param RepositoryWebrefEntityJoin
-   */
-  public function setEntity(RepositoryWebrefEntityJoin $entity)
-  {
-    $this->entity = $entity;
-  }
-  /**
-   * @return RepositoryWebrefEntityJoin
-   */
-  public function getEntity()
-  {
-    return $this->entity;
   }
   /**
    * @param RepositoryWebrefExtendedEntityNameScore[]

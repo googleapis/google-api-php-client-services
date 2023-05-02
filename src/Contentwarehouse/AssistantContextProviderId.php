@@ -31,8 +31,6 @@ class AssistantContextProviderId extends \Google\Model
    * @var string
    */
   public $mid;
-  protected $naturalProviderIdType = AssistantContextProviderIdNaturalProviderId::class;
-  protected $naturalProviderIdDataType = '';
   /**
    * @var string
    */
@@ -95,20 +93,6 @@ class AssistantContextProviderId extends \Google\Model
   public function getMid()
   {
     return $this->mid;
-  }
-  /**
-   * @param AssistantContextProviderIdNaturalProviderId
-   */
-  public function setNaturalProviderId(AssistantContextProviderIdNaturalProviderId $naturalProviderId)
-  {
-    $this->naturalProviderId = $naturalProviderId;
-  }
-  /**
-   * @return AssistantContextProviderIdNaturalProviderId
-   */
-  public function getNaturalProviderId()
-  {
-    return $this->naturalProviderId;
   }
   /**
    * @param string

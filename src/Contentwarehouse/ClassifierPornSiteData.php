@@ -50,6 +50,10 @@ class ClassifierPornSiteData extends \Google\Collection
   public $siteSoftpornRatio;
   protected $versionedscoreType = ClassifierPornSiteDataVersionedScore::class;
   protected $versionedscoreDataType = 'array';
+  /**
+   * @var float
+   */
+  public $violenceScore;
   protected $violenceStatsType = ClassifierPornSiteViolenceStats::class;
   protected $violenceStatsDataType = '';
 
@@ -164,6 +168,20 @@ class ClassifierPornSiteData extends \Google\Collection
   public function getVersionedscore()
   {
     return $this->versionedscore;
+  }
+  /**
+   * @param float
+   */
+  public function setViolenceScore($violenceScore)
+  {
+    $this->violenceScore = $violenceScore;
+  }
+  /**
+   * @return float
+   */
+  public function getViolenceScore()
+  {
+    return $this->violenceScore;
   }
   /**
    * @param ClassifierPornSiteViolenceStats

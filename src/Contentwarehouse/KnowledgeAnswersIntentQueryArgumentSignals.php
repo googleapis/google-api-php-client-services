@@ -154,6 +154,8 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
    * @var bool
    */
   public $resolvedFromPronoun;
+  protected $responseMeaningSignalsType = KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals::class;
+  protected $responseMeaningSignalsDataType = '';
   protected $resultSupportType = UniversalsearchNewPackerKnowledgeResultSupport::class;
   protected $resultSupportDataType = 'array';
   protected $saftSignalsType = KnowledgeAnswersIntentQuerySaftSignals::class;
@@ -776,6 +778,20 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public function getResolvedFromPronoun()
   {
     return $this->resolvedFromPronoun;
+  }
+  /**
+   * @param KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals
+   */
+  public function setResponseMeaningSignals(KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals $responseMeaningSignals)
+  {
+    $this->responseMeaningSignals = $responseMeaningSignals;
+  }
+  /**
+   * @return KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals
+   */
+  public function getResponseMeaningSignals()
+  {
+    return $this->responseMeaningSignals;
   }
   /**
    * @param UniversalsearchNewPackerKnowledgeResultSupport[]

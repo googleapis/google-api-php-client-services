@@ -20,9 +20,29 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals extends \Google\Collection
 {
   protected $collection_key = 'propertyValue';
+  protected $answersHeaderSignalsType = KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals::class;
+  protected $answersHeaderSignalsDataType = '';
   protected $propertyValueType = FreebasePropertyValue::class;
   protected $propertyValueDataType = 'array';
+  /**
+   * @var string
+   */
+  public $responseMeaningApplication;
 
+  /**
+   * @param KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals
+   */
+  public function setAnswersHeaderSignals(KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals $answersHeaderSignals)
+  {
+    $this->answersHeaderSignals = $answersHeaderSignals;
+  }
+  /**
+   * @return KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals
+   */
+  public function getAnswersHeaderSignals()
+  {
+    return $this->answersHeaderSignals;
+  }
   /**
    * @param FreebasePropertyValue[]
    */
@@ -36,6 +56,20 @@ class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals ex
   public function getPropertyValue()
   {
     return $this->propertyValue;
+  }
+  /**
+   * @param string
+   */
+  public function setResponseMeaningApplication($responseMeaningApplication)
+  {
+    $this->responseMeaningApplication = $responseMeaningApplication;
+  }
+  /**
+   * @return string
+   */
+  public function getResponseMeaningApplication()
+  {
+    return $this->responseMeaningApplication;
   }
 }
 

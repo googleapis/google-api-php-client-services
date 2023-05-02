@@ -45,6 +45,10 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   /**
    * @var string
    */
+  public $dispositionTime;
+  /**
+   * @var string
+   */
   public $documentSchemaName;
   /**
    * @var string
@@ -176,6 +180,20 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
   public function getDisplayUri()
   {
     return $this->displayUri;
+  }
+  /**
+   * @param string
+   */
+  public function setDispositionTime($dispositionTime)
+  {
+    $this->dispositionTime = $dispositionTime;
+  }
+  /**
+   * @return string
+   */
+  public function getDispositionTime()
+  {
+    return $this->dispositionTime;
   }
   /**
    * @param string

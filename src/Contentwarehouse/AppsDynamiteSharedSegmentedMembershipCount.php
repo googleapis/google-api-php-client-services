@@ -17,65 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata extends \Google\Collection
+class AppsDynamiteSharedSegmentedMembershipCount extends \Google\Model
 {
-  protected $collection_key = 'documents';
   /**
    * @var string
    */
-  public $docAiDataset;
+  public $memberType;
   /**
-   * @var string[]
+   * @var int
    */
-  public $documents;
+  public $membershipCount;
   /**
    * @var string
    */
-  public $outputPath;
+  public $membershipState;
 
   /**
    * @param string
    */
-  public function setDocAiDataset($docAiDataset)
+  public function setMemberType($memberType)
   {
-    $this->docAiDataset = $docAiDataset;
+    $this->memberType = $memberType;
   }
   /**
    * @return string
    */
-  public function getDocAiDataset()
+  public function getMemberType()
   {
-    return $this->docAiDataset;
+    return $this->memberType;
   }
   /**
-   * @param string[]
+   * @param int
    */
-  public function setDocuments($documents)
+  public function setMembershipCount($membershipCount)
   {
-    $this->documents = $documents;
+    $this->membershipCount = $membershipCount;
   }
   /**
-   * @return string[]
+   * @return int
    */
-  public function getDocuments()
+  public function getMembershipCount()
   {
-    return $this->documents;
+    return $this->membershipCount;
   }
   /**
    * @param string
    */
-  public function setOutputPath($outputPath)
+  public function setMembershipState($membershipState)
   {
-    $this->outputPath = $outputPath;
+    $this->membershipState = $membershipState;
   }
   /**
    * @return string
    */
-  public function getOutputPath()
+  public function getMembershipState()
   {
-    return $this->outputPath;
+    return $this->membershipState;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata');
+class_alias(AppsDynamiteSharedSegmentedMembershipCount::class, 'Google_Service_Contentwarehouse_AppsDynamiteSharedSegmentedMembershipCount');
