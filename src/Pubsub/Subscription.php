@@ -25,6 +25,8 @@ class Subscription extends \Google\Model
   public $ackDeadlineSeconds;
   protected $bigqueryConfigType = BigQueryConfig::class;
   protected $bigqueryConfigDataType = '';
+  protected $cloudStorageConfigType = CloudStorageConfig::class;
+  protected $cloudStorageConfigDataType = '';
   protected $deadLetterPolicyType = DeadLetterPolicy::class;
   protected $deadLetterPolicyDataType = '';
   /**
@@ -105,6 +107,20 @@ class Subscription extends \Google\Model
   public function getBigqueryConfig()
   {
     return $this->bigqueryConfig;
+  }
+  /**
+   * @param CloudStorageConfig
+   */
+  public function setCloudStorageConfig(CloudStorageConfig $cloudStorageConfig)
+  {
+    $this->cloudStorageConfig = $cloudStorageConfig;
+  }
+  /**
+   * @return CloudStorageConfig
+   */
+  public function getCloudStorageConfig()
+  {
+    return $this->cloudStorageConfig;
   }
   /**
    * @param DeadLetterPolicy
