@@ -17,7 +17,7 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
+class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Google\Model
 {
   /**
    * @var string
@@ -34,15 +34,23 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
   /**
    * @var string
    */
-  public $displayMobileUrl;
-  /**
-   * @var string
-   */
-  public $displayUrl;
-  /**
-   * @var string
-   */
   public $headline;
+  /**
+   * @var string
+   */
+  public $headline2;
+  /**
+   * @var string
+   */
+  public $headline3;
+  /**
+   * @var string
+   */
+  public $path1;
+  /**
+   * @var string
+   */
+  public $path2;
 
   /**
    * @param string
@@ -89,34 +97,6 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
   /**
    * @param string
    */
-  public function setDisplayMobileUrl($displayMobileUrl)
-  {
-    $this->displayMobileUrl = $displayMobileUrl;
-  }
-  /**
-   * @return string
-   */
-  public function getDisplayMobileUrl()
-  {
-    return $this->displayMobileUrl;
-  }
-  /**
-   * @param string
-   */
-  public function setDisplayUrl($displayUrl)
-  {
-    $this->displayUrl = $displayUrl;
-  }
-  /**
-   * @return string
-   */
-  public function getDisplayUrl()
-  {
-    return $this->displayUrl;
-  }
-  /**
-   * @param string
-   */
   public function setHeadline($headline)
   {
     $this->headline = $headline;
@@ -128,7 +108,63 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
   {
     return $this->headline;
   }
+  /**
+   * @param string
+   */
+  public function setHeadline2($headline2)
+  {
+    $this->headline2 = $headline2;
+  }
+  /**
+   * @return string
+   */
+  public function getHeadline2()
+  {
+    return $this->headline2;
+  }
+  /**
+   * @param string
+   */
+  public function setHeadline3($headline3)
+  {
+    $this->headline3 = $headline3;
+  }
+  /**
+   * @return string
+   */
+  public function getHeadline3()
+  {
+    return $this->headline3;
+  }
+  /**
+   * @param string
+   */
+  public function setPath1($path1)
+  {
+    $this->path1 = $path1;
+  }
+  /**
+   * @return string
+   */
+  public function getPath1()
+  {
+    return $this->path1;
+  }
+  /**
+   * @param string
+   */
+  public function setPath2($path2)
+  {
+    $this->path2 = $path2;
+  }
+  /**
+   * @return string
+   */
+  public function getPath2()
+  {
+    return $this->path2;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo::class, 'Google_Service_SA360_GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo');
+class_alias(GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo::class, 'Google_Service_SA360_GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo');

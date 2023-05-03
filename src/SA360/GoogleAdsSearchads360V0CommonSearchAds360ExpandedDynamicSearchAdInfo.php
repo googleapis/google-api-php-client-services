@@ -17,7 +17,7 @@
 
 namespace Google\Service\SA360;
 
-class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
+class GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo extends \Google\Model
 {
   /**
    * @var string
@@ -31,18 +31,6 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
    * @var string
    */
   public $description2;
-  /**
-   * @var string
-   */
-  public $displayMobileUrl;
-  /**
-   * @var string
-   */
-  public $displayUrl;
-  /**
-   * @var string
-   */
-  public $headline;
 
   /**
    * @param string
@@ -86,49 +74,7 @@ class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends \Google\Model
   {
     return $this->description2;
   }
-  /**
-   * @param string
-   */
-  public function setDisplayMobileUrl($displayMobileUrl)
-  {
-    $this->displayMobileUrl = $displayMobileUrl;
-  }
-  /**
-   * @return string
-   */
-  public function getDisplayMobileUrl()
-  {
-    return $this->displayMobileUrl;
-  }
-  /**
-   * @param string
-   */
-  public function setDisplayUrl($displayUrl)
-  {
-    $this->displayUrl = $displayUrl;
-  }
-  /**
-   * @return string
-   */
-  public function getDisplayUrl()
-  {
-    return $this->displayUrl;
-  }
-  /**
-   * @param string
-   */
-  public function setHeadline($headline)
-  {
-    $this->headline = $headline;
-  }
-  /**
-   * @return string
-   */
-  public function getHeadline()
-  {
-    return $this->headline;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo::class, 'Google_Service_SA360_GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo');
+class_alias(GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo::class, 'Google_Service_SA360_GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo');

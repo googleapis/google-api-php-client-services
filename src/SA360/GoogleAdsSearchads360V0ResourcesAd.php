@@ -24,6 +24,10 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
    * @var string
    */
   public $displayUrl;
+  protected $expandedDynamicSearchAdType = GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo::class;
+  protected $expandedDynamicSearchAdDataType = '';
+  protected $expandedTextAdType = GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo::class;
+  protected $expandedTextAdDataType = '';
   /**
    * @var string[]
    */
@@ -36,10 +40,14 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $productAdType = GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo::class;
+  protected $productAdDataType = '';
   /**
    * @var string
    */
   public $resourceName;
+  protected $responsiveSearchAdType = GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo::class;
+  protected $responsiveSearchAdDataType = '';
   protected $textAdType = GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo::class;
   protected $textAdDataType = '';
   /**
@@ -60,6 +68,34 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   public function getDisplayUrl()
   {
     return $this->displayUrl;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo
+   */
+  public function setExpandedDynamicSearchAd(GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo $expandedDynamicSearchAd)
+  {
+    $this->expandedDynamicSearchAd = $expandedDynamicSearchAd;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo
+   */
+  public function getExpandedDynamicSearchAd()
+  {
+    return $this->expandedDynamicSearchAd;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo
+   */
+  public function setExpandedTextAd(GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo $expandedTextAd)
+  {
+    $this->expandedTextAd = $expandedTextAd;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo
+   */
+  public function getExpandedTextAd()
+  {
+    return $this->expandedTextAd;
   }
   /**
    * @param string[]
@@ -104,6 +140,20 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->name;
   }
   /**
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo
+   */
+  public function setProductAd(GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo $productAd)
+  {
+    $this->productAd = $productAd;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo
+   */
+  public function getProductAd()
+  {
+    return $this->productAd;
+  }
+  /**
    * @param string
    */
   public function setResourceName($resourceName)
@@ -116,6 +166,20 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo
+   */
+  public function setResponsiveSearchAd(GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo $responsiveSearchAd)
+  {
+    $this->responsiveSearchAd = $responsiveSearchAd;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo
+   */
+  public function getResponsiveSearchAd()
+  {
+    return $this->responsiveSearchAd;
   }
   /**
    * @param GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo
