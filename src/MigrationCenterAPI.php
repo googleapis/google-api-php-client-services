@@ -48,6 +48,7 @@ class MigrationCenterAPI extends \Google\Service
   public $projects_locations_reportConfigs;
   public $projects_locations_reportConfigs_reports;
   public $projects_locations_sources;
+  public $projects_locations_sources_errorFrames;
 
   /**
    * Constructs the internal representation of the MigrationCenterAPI service.
@@ -965,6 +966,52 @@ class MigrationCenterAPI extends \Google\Service
                   'type' => 'string',
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_sources_errorFrames = new MigrationCenterAPI\Resource\ProjectsLocationsSourcesErrorFrames(
+        $this,
+        $this->serviceName,
+        'errorFrames',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1alpha1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1alpha1/{+parent}/errorFrames',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

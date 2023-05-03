@@ -32,6 +32,10 @@ class Source extends \Google\Model
    */
   public $displayName;
   /**
+   * @var int
+   */
+  public $errorFrameCount;
+  /**
    * @var bool
    */
   public $isManaged;
@@ -101,6 +105,20 @@ class Source extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param int
+   */
+  public function setErrorFrameCount($errorFrameCount)
+  {
+    $this->errorFrameCount = $errorFrameCount;
+  }
+  /**
+   * @return int
+   */
+  public function getErrorFrameCount()
+  {
+    return $this->errorFrameCount;
   }
   /**
    * @param bool
