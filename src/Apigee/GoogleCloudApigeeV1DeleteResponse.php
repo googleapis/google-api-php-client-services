@@ -17,8 +17,12 @@
 
 namespace Google\Service\Apigee;
 
-class GoogleCloudApigeeV1ApiCategoryData extends \Google\Model
+class GoogleCloudApigeeV1DeleteResponse extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $errorCode;
   /**
    * @var string
    */
@@ -26,20 +30,30 @@ class GoogleCloudApigeeV1ApiCategoryData extends \Google\Model
   /**
    * @var string
    */
-  public $id;
+  public $message;
   /**
    * @var string
    */
-  public $name;
+  public $requestId;
   /**
    * @var string
    */
-  public $siteId;
-  /**
-   * @var string
-   */
-  public $updateTime;
+  public $status;
 
+  /**
+   * @param string
+   */
+  public function setErrorCode($errorCode)
+  {
+    $this->errorCode = $errorCode;
+  }
+  /**
+   * @return string
+   */
+  public function getErrorCode()
+  {
+    return $this->errorCode;
+  }
   /**
    * @param string
    */
@@ -57,60 +71,46 @@ class GoogleCloudApigeeV1ApiCategoryData extends \Google\Model
   /**
    * @param string
    */
-  public function setId($id)
+  public function setMessage($message)
   {
-    $this->id = $id;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getId()
+  public function getMessage()
   {
-    return $this->id;
+    return $this->message;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setRequestId($requestId)
   {
-    $this->name = $name;
+    $this->requestId = $requestId;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getRequestId()
   {
-    return $this->name;
+    return $this->requestId;
   }
   /**
    * @param string
    */
-  public function setSiteId($siteId)
+  public function setStatus($status)
   {
-    $this->siteId = $siteId;
+    $this->status = $status;
   }
   /**
    * @return string
    */
-  public function getSiteId()
+  public function getStatus()
   {
-    return $this->siteId;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
+    return $this->status;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApigeeV1ApiCategoryData::class, 'Google_Service_Apigee_GoogleCloudApigeeV1ApiCategoryData');
+class_alias(GoogleCloudApigeeV1DeleteResponse::class, 'Google_Service_Apigee_GoogleCloudApigeeV1DeleteResponse');
