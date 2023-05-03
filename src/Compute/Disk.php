@@ -97,6 +97,10 @@ class Disk extends \Google\Collection
   /**
    * @var string
    */
+  public $provisionedThroughput;
+  /**
+   * @var string
+   */
   public $region;
   /**
    * @var string[]
@@ -470,6 +474,20 @@ class Disk extends \Google\Collection
   public function getProvisionedIops()
   {
     return $this->provisionedIops;
+  }
+  /**
+   * @param string
+   */
+  public function setProvisionedThroughput($provisionedThroughput)
+  {
+    $this->provisionedThroughput = $provisionedThroughput;
+  }
+  /**
+   * @return string
+   */
+  public function getProvisionedThroughput()
+  {
+    return $this->provisionedThroughput;
   }
   /**
    * @param string
