@@ -46,27 +46,28 @@ class VitalsErrorsIssues extends \Google\Service\Resource
    * requested app version codes only. Example: `versionCode = 123 OR versionCode
    * = 456`. * `deviceModel`: Matches error issues that occurred in the requested
    * devices. Example: `deviceModel = "walleye" OR deviceModel = "marlin"`. *
-   * `deviceType`: Matches error issues that occurred in the requested device
-   * types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches error
-   * issues of the requested types only. Valid candidates: `CRASH`, `ANR`.
-   * Example: `errorIssueType = CRASH OR errorIssueType = ANR`. *
-   * `appProcessState`: Matches error issues on the process state of an app,
-   * indicating whether an app runs in the foreground (user-visible) or
-   * background. Valid candidates: `FOREGROUND`, `BACKGROUND`. Example:
-   * `appProcessState = FOREGROUND`. * `isUserPerceived`: Matches error issues
-   * that are user-perceived. It is not accompanied by any operators. Example:
-   * `isUserPerceived`. ** Supported operators:** * Comparison operators: The only
-   * supported comparison operator is equality. The filtered field must appear on
-   * the left hand side of the comparison. * Logical Operators: Logical operators
-   * `AND` and `OR` can be used to build complex filters following a conjunctive
-   * normal form (CNF), i.e., conjunctions of disjunctions. The `OR` operator
-   * takes precedence over `AND` so the use of parenthesis is not necessary when
-   * building CNF. The `OR` operator is only supported to build disjunctions that
-   * apply to the same field, e.g., `versionCode = 123 OR errorIssueType = ANR` is
-   * not a valid filter. ** Examples ** Some valid filtering expressions: *
-   * `versionCode = 123 AND errorIssueType = ANR` * `versionCode = 123 AND
-   * errorIssueType = OR errorIssueType = CRASH` * `versionCode = 123 AND
-   * (errorIssueType = OR errorIssueType = CRASH)`
+   * `deviceBrand`: Matches error issues that occurred in the requested device
+   * brands. Example: `deviceBrand = "Google". * `deviceType`: Matches error
+   * issues that occurred in the requested device types. Example: `deviceType =
+   * "PHONE"`. * `errorIssueType`: Matches error issues of the requested types
+   * only. Valid candidates: `CRASH`, `ANR`. Example: `errorIssueType = CRASH OR
+   * errorIssueType = ANR`. * `appProcessState`: Matches error issues on the
+   * process state of an app, indicating whether an app runs in the foreground
+   * (user-visible) or background. Valid candidates: `FOREGROUND`, `BACKGROUND`.
+   * Example: `appProcessState = FOREGROUND`. * `isUserPerceived`: Matches error
+   * issues that are user-perceived. It is not accompanied by any operators.
+   * Example: `isUserPerceived`. ** Supported operators:** * Comparison operators:
+   * The only supported comparison operator is equality. The filtered field must
+   * appear on the left hand side of the comparison. * Logical Operators: Logical
+   * operators `AND` and `OR` can be used to build complex filters following a
+   * conjunctive normal form (CNF), i.e., conjunctions of disjunctions. The `OR`
+   * operator takes precedence over `AND` so the use of parenthesis is not
+   * necessary when building CNF. The `OR` operator is only supported to build
+   * disjunctions that apply to the same field, e.g., `versionCode = 123 OR
+   * errorIssueType = ANR` is not a valid filter. ** Examples ** Some valid
+   * filtering expressions: * `versionCode = 123 AND errorIssueType = ANR` *
+   * `versionCode = 123 AND errorIssueType = OR errorIssueType = CRASH` *
+   * `versionCode = 123 AND (errorIssueType = OR errorIssueType = CRASH)`
    * @opt_param int interval.endTime.day Optional. Day of month. Must be from 1 to
    * 31 and valid for the year and month, or 0 if specifying a datetime without a
    * day.
