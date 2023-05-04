@@ -80,6 +80,8 @@ class Job extends \Google\Collection
    * @var string
    */
   public $requestedState;
+  protected $runtimeUpdatableParamsType = RuntimeUpdatableParams::class;
+  protected $runtimeUpdatableParamsDataType = '';
   /**
    * @var bool
    */
@@ -346,6 +348,20 @@ class Job extends \Google\Collection
   public function getRequestedState()
   {
     return $this->requestedState;
+  }
+  /**
+   * @param RuntimeUpdatableParams
+   */
+  public function setRuntimeUpdatableParams(RuntimeUpdatableParams $runtimeUpdatableParams)
+  {
+    $this->runtimeUpdatableParams = $runtimeUpdatableParams;
+  }
+  /**
+   * @return RuntimeUpdatableParams
+   */
+  public function getRuntimeUpdatableParams()
+  {
+    return $this->runtimeUpdatableParams;
   }
   /**
    * @param bool
