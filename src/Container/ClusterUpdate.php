@@ -46,6 +46,8 @@ class ClusterUpdate extends \Google\Collection
    * @var bool
    */
   public $desiredEnablePrivateEndpoint;
+  protected $desiredFleetType = Fleet::class;
+  protected $desiredFleetDataType = '';
   protected $desiredGatewayApiConfigType = GatewayAPIConfig::class;
   protected $desiredGatewayApiConfigDataType = '';
   protected $desiredGcfsConfigType = GcfsConfig::class;
@@ -282,6 +284,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredEnablePrivateEndpoint()
   {
     return $this->desiredEnablePrivateEndpoint;
+  }
+  /**
+   * @param Fleet
+   */
+  public function setDesiredFleet(Fleet $desiredFleet)
+  {
+    $this->desiredFleet = $desiredFleet;
+  }
+  /**
+   * @return Fleet
+   */
+  public function getDesiredFleet()
+  {
+    return $this->desiredFleet;
   }
   /**
    * @param GatewayAPIConfig
