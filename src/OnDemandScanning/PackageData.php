@@ -24,8 +24,8 @@ class PackageData extends \Google\Collection
    * @var string
    */
   public $architecture;
-  protected $binaryType = Binary::class;
-  protected $binaryDataType = '';
+  protected $binaryVersionType = PackageVersion::class;
+  protected $binaryVersionDataType = '';
   /**
    * @var string
    */
@@ -60,6 +60,8 @@ class PackageData extends \Google\Collection
    * @var string[]
    */
   public $patchedCve;
+  protected $sourceVersionType = PackageVersion::class;
+  protected $sourceVersionDataType = '';
   /**
    * @var string
    */
@@ -84,18 +86,18 @@ class PackageData extends \Google\Collection
     return $this->architecture;
   }
   /**
-   * @param Binary
+   * @param PackageVersion
    */
-  public function setBinary(Binary $binary)
+  public function setBinaryVersion(PackageVersion $binaryVersion)
   {
-    $this->binary = $binary;
+    $this->binaryVersion = $binaryVersion;
   }
   /**
-   * @return Binary
+   * @return PackageVersion
    */
-  public function getBinary()
+  public function getBinaryVersion()
   {
-    return $this->binary;
+    return $this->binaryVersion;
   }
   /**
    * @param string
@@ -236,6 +238,20 @@ class PackageData extends \Google\Collection
   public function getPatchedCve()
   {
     return $this->patchedCve;
+  }
+  /**
+   * @param PackageVersion
+   */
+  public function setSourceVersion(PackageVersion $sourceVersion)
+  {
+    $this->sourceVersion = $sourceVersion;
+  }
+  /**
+   * @return PackageVersion
+   */
+  public function getSourceVersion()
+  {
+    return $this->sourceVersion;
   }
   /**
    * @param string
