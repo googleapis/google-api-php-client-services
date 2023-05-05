@@ -21,6 +21,8 @@ class GoogleCloudRunV2Volume extends \Google\Model
 {
   protected $cloudSqlInstanceType = GoogleCloudRunV2CloudSqlInstance::class;
   protected $cloudSqlInstanceDataType = '';
+  protected $emptyDirType = GoogleCloudRunV2EmptyDirVolumeSource::class;
+  protected $emptyDirDataType = '';
   /**
    * @var string
    */
@@ -41,6 +43,20 @@ class GoogleCloudRunV2Volume extends \Google\Model
   public function getCloudSqlInstance()
   {
     return $this->cloudSqlInstance;
+  }
+  /**
+   * @param GoogleCloudRunV2EmptyDirVolumeSource
+   */
+  public function setEmptyDir(GoogleCloudRunV2EmptyDirVolumeSource $emptyDir)
+  {
+    $this->emptyDir = $emptyDir;
+  }
+  /**
+   * @return GoogleCloudRunV2EmptyDirVolumeSource
+   */
+  public function getEmptyDir()
+  {
+    return $this->emptyDir;
   }
   /**
    * @param string
