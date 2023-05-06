@@ -30,6 +30,10 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends \Goo
    * @var string
    */
   public $lineItemFreeTrialEndTime;
+  /**
+   * @var int
+   */
+  public $lineItemIndex;
   protected $lineItemPromotionSpecsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec::class;
   protected $lineItemPromotionSpecsDataType = 'array';
   protected $oneTimeRecurrenceDetailsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails::class;
@@ -90,6 +94,20 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends \Goo
   public function getLineItemFreeTrialEndTime()
   {
     return $this->lineItemFreeTrialEndTime;
+  }
+  /**
+   * @param int
+   */
+  public function setLineItemIndex($lineItemIndex)
+  {
+    $this->lineItemIndex = $lineItemIndex;
+  }
+  /**
+   * @return int
+   */
+  public function getLineItemIndex()
+  {
+    return $this->lineItemIndex;
   }
   /**
    * @param GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec[]
