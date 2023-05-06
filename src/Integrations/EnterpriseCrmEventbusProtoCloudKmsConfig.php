@@ -39,6 +39,10 @@ class EnterpriseCrmEventbusProtoCloudKmsConfig extends \Google\Model
    * @var string
    */
   public $locationName;
+  /**
+   * @var string
+   */
+  public $serviceAccount;
 
   /**
    * @param string
@@ -109,6 +113,20 @@ class EnterpriseCrmEventbusProtoCloudKmsConfig extends \Google\Model
   public function getLocationName()
   {
     return $this->locationName;
+  }
+  /**
+   * @param string
+   */
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
 }
 
