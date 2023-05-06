@@ -22,12 +22,30 @@ class PhaseArtifact extends \Google\Model
   /**
    * @var string
    */
+  public $jobManifestsPath;
+  /**
+   * @var string
+   */
   public $manifestPath;
   /**
    * @var string
    */
   public $skaffoldConfigPath;
 
+  /**
+   * @param string
+   */
+  public function setJobManifestsPath($jobManifestsPath)
+  {
+    $this->jobManifestsPath = $jobManifestsPath;
+  }
+  /**
+   * @return string
+   */
+  public function getJobManifestsPath()
+  {
+    return $this->jobManifestsPath;
+  }
   /**
    * @param string
    */
