@@ -17,31 +17,13 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataProfileSpec extends \Google\Model
+class GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $rowFilter;
   /**
    * @var float
    */
   public $samplingPercent;
 
-  /**
-   * @param string
-   */
-  public function setRowFilter($rowFilter)
-  {
-    $this->rowFilter = $rowFilter;
-  }
-  /**
-   * @return string
-   */
-  public function getRowFilter()
-  {
-    return $this->rowFilter;
-  }
   /**
    * @param float
    */
@@ -59,4 +41,4 @@ class GoogleCloudDataplexV1DataProfileSpec extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1DataProfileSpec::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataProfileSpec');
+class_alias(GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs');

@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualitySpec extends \Google\Collection
 {
   protected $collection_key = 'rules';
+  /**
+   * @var string
+   */
+  public $rowFilter;
   protected $rulesType = GoogleCloudDataplexV1DataQualityRule::class;
   protected $rulesDataType = 'array';
   /**
@@ -27,6 +31,20 @@ class GoogleCloudDataplexV1DataQualitySpec extends \Google\Collection
    */
   public $samplingPercent;
 
+  /**
+   * @param string
+   */
+  public function setRowFilter($rowFilter)
+  {
+    $this->rowFilter = $rowFilter;
+  }
+  /**
+   * @return string
+   */
+  public function getRowFilter()
+  {
+    return $this->rowFilter;
+  }
   /**
    * @param GoogleCloudDataplexV1DataQualityRule[]
    */
