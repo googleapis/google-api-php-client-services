@@ -30,10 +30,6 @@ class UploadFileInfo extends \Google\Model
   /**
    * @var string
    */
-  public $uri;
-  /**
-   * @var string
-   */
   public $uriExpirationTime;
 
   /**
@@ -63,20 +59,6 @@ class UploadFileInfo extends \Google\Model
   public function getSignedUri()
   {
     return $this->signedUri;
-  }
-  /**
-   * @param string
-   */
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
-  /**
-   * @return string
-   */
-  public function getUri()
-  {
-    return $this->uri;
   }
   /**
    * @param string

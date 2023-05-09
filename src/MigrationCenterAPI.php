@@ -172,6 +172,20 @@ class MigrationCenterAPI extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'delete' => [
+              'path' => 'v1alpha1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'get' => [
               'path' => 'v1alpha1/{+name}',
               'httpMethod' => 'GET',
@@ -212,6 +226,24 @@ class MigrationCenterAPI extends \Google\Service
                   'type' => 'string',
                 ],
                 'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1alpha1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
