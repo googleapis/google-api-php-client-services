@@ -125,14 +125,16 @@ class AdvertisersManualTriggers extends \Google\Service\Resource
    * fetched manual triggers belong to.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Allows filtering by manual trigger properties.
-   * Supported syntax: * Filter expressions are made up of one or more
-   * restrictions. * Restrictions can be combined by `AND` or `OR` logical
-   * operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-   * has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
-   * (=)`. * Supported fields: - `displayName` - `state` Examples: * All active
+   * @opt_param string filter Allows filtering by manual trigger fields. Supported
+   * syntax: * Filter expressions are made up of one or more restrictions. *
+   * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
+   * of restrictions implicitly uses `AND`. * A restriction has the form of
+   * `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+   * operator. Supported fields: * `displayName` * `state` Examples: * All active
    * manual triggers under an advertiser: `state="ACTIVE"` The length of this
-   * field should be no more than 500 characters.
+   * field should be no more than 500 characters. Reference our [filter `LIST`
+   * requests](/display-video/api/guides/how-tos/filters) guide for more
+   * information.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `displayName` (default) * `state` The default sorting order is
    * ascending. To specify descending order for a field, a suffix "desc" should be
