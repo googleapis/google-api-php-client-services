@@ -62,6 +62,8 @@ class Note extends \Google\Collection
   public $relatedNoteNames;
   protected $relatedUrlType = RelatedUrl::class;
   protected $relatedUrlDataType = 'array';
+  protected $sbomReferenceType = SBOMReferenceNote::class;
+  protected $sbomReferenceDataType = '';
   /**
    * @var string
    */
@@ -286,6 +288,20 @@ class Note extends \Google\Collection
   public function getRelatedUrl()
   {
     return $this->relatedUrl;
+  }
+  /**
+   * @param SBOMReferenceNote
+   */
+  public function setSbomReference(SBOMReferenceNote $sbomReference)
+  {
+    $this->sbomReference = $sbomReference;
+  }
+  /**
+   * @return SBOMReferenceNote
+   */
+  public function getSbomReference()
+  {
+    return $this->sbomReference;
   }
   /**
    * @param string

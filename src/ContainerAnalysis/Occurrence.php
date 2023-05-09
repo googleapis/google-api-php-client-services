@@ -61,6 +61,8 @@ class Occurrence extends \Google\Model
    * @var string
    */
   public $resourceUri;
+  protected $sbomReferenceType = SBOMReferenceOccurrence::class;
+  protected $sbomReferenceDataType = '';
   /**
    * @var string
    */
@@ -279,6 +281,20 @@ class Occurrence extends \Google\Model
   public function getResourceUri()
   {
     return $this->resourceUri;
+  }
+  /**
+   * @param SBOMReferenceOccurrence
+   */
+  public function setSbomReference(SBOMReferenceOccurrence $sbomReference)
+  {
+    $this->sbomReference = $sbomReference;
+  }
+  /**
+   * @return SBOMReferenceOccurrence
+   */
+  public function getSbomReference()
+  {
+    return $this->sbomReference;
   }
   /**
    * @param string
