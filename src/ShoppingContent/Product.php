@@ -68,6 +68,8 @@ class Product extends \Google\Collection
    * @var string
    */
   public $channel;
+  protected $cloudExportAdditionalPropertiesType = CloudExportAdditionalProperties::class;
+  protected $cloudExportAdditionalPropertiesDataType = 'array';
   /**
    * @var string
    */
@@ -521,6 +523,20 @@ class Product extends \Google\Collection
   public function getChannel()
   {
     return $this->channel;
+  }
+  /**
+   * @param CloudExportAdditionalProperties[]
+   */
+  public function setCloudExportAdditionalProperties($cloudExportAdditionalProperties)
+  {
+    $this->cloudExportAdditionalProperties = $cloudExportAdditionalProperties;
+  }
+  /**
+   * @return CloudExportAdditionalProperties[]
+   */
+  public function getCloudExportAdditionalProperties()
+  {
+    return $this->cloudExportAdditionalProperties;
   }
   /**
    * @param string

@@ -39,9 +39,9 @@ class Recommendations extends \Google\Service\Resource
    *
    * @opt_param string allowedTag Optional. List of allowed tags. Tags are a set
    * of predefined strings that describe the category that individual
-   * recommendation types. User can specify zero or more tags in this field to
-   * indicate what group of recommendations they want to receive. Current list of
-   * supported tags: - TREND
+   * recommendation types belong to. User can specify zero or more tags in this
+   * field to indicate what categories of recommendations they want to receive.
+   * Current list of supported tags: - TREND
    * @opt_param string languageCode Optional. Language code of the client. If not
    * set, the result will be in default language (English). This language code
    * affects all fields prefixed with "localized". This should be set to ISO 639-1
