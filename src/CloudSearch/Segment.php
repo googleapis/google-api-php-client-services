@@ -25,6 +25,8 @@ class Segment extends \Google\Model
   protected $hashtagDataDataType = '';
   protected $linkDataType = LinkData::class;
   protected $linkDataDataType = '';
+  protected $searchLinkDataType = SearchLinkData::class;
+  protected $searchLinkDataDataType = '';
   /**
    * @var string
    */
@@ -77,6 +79,20 @@ class Segment extends \Google\Model
   public function getLinkData()
   {
     return $this->linkData;
+  }
+  /**
+   * @param SearchLinkData
+   */
+  public function setSearchLinkData(SearchLinkData $searchLinkData)
+  {
+    $this->searchLinkData = $searchLinkData;
+  }
+  /**
+   * @return SearchLinkData
+   */
+  public function getSearchLinkData()
+  {
+    return $this->searchLinkData;
   }
   /**
    * @param string

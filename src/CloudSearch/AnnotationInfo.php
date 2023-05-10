@@ -17,27 +17,47 @@
 
 namespace Google\Service\CloudSearch;
 
-class AppsDynamiteStorageColumns extends \Google\Collection
+class AnnotationInfo extends \Google\Collection
 {
-  protected $collection_key = 'columnItems';
-  protected $columnItemsType = AppsDynamiteStorageColumnsColumn::class;
-  protected $columnItemsDataType = 'array';
+  protected $collection_key = 'coannotatorDeviceIds';
+  /**
+   * @var string[]
+   */
+  public $coannotatorDeviceIds;
+  /**
+   * @var bool
+   */
+  public $isActive;
 
   /**
-   * @param AppsDynamiteStorageColumnsColumn[]
+   * @param string[]
    */
-  public function setColumnItems($columnItems)
+  public function setCoannotatorDeviceIds($coannotatorDeviceIds)
   {
-    $this->columnItems = $columnItems;
+    $this->coannotatorDeviceIds = $coannotatorDeviceIds;
   }
   /**
-   * @return AppsDynamiteStorageColumnsColumn[]
+   * @return string[]
    */
-  public function getColumnItems()
+  public function getCoannotatorDeviceIds()
   {
-    return $this->columnItems;
+    return $this->coannotatorDeviceIds;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsActive($isActive)
+  {
+    $this->isActive = $isActive;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsActive()
+  {
+    return $this->isActive;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppsDynamiteStorageColumns::class, 'Google_Service_CloudSearch_AppsDynamiteStorageColumns');
+class_alias(AnnotationInfo::class, 'Google_Service_CloudSearch_AnnotationInfo');

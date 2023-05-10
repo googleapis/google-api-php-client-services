@@ -17,27 +17,44 @@
 
 namespace Google\Service\CloudSearch;
 
-class AppsDynamiteStorageColumns extends \Google\Collection
+class SourceMessageInfo extends \Google\Model
 {
-  protected $collection_key = 'columnItems';
-  protected $columnItemsType = AppsDynamiteStorageColumnsColumn::class;
-  protected $columnItemsDataType = 'array';
+  protected $messageIdType = MessageId::class;
+  protected $messageIdDataType = '';
+  /**
+   * @var string
+   */
+  public $messageType;
 
   /**
-   * @param AppsDynamiteStorageColumnsColumn[]
+   * @param MessageId
    */
-  public function setColumnItems($columnItems)
+  public function setMessageId(MessageId $messageId)
   {
-    $this->columnItems = $columnItems;
+    $this->messageId = $messageId;
   }
   /**
-   * @return AppsDynamiteStorageColumnsColumn[]
+   * @return MessageId
    */
-  public function getColumnItems()
+  public function getMessageId()
   {
-    return $this->columnItems;
+    return $this->messageId;
+  }
+  /**
+   * @param string
+   */
+  public function setMessageType($messageType)
+  {
+    $this->messageType = $messageType;
+  }
+  /**
+   * @return string
+   */
+  public function getMessageType()
+  {
+    return $this->messageType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppsDynamiteStorageColumns::class, 'Google_Service_CloudSearch_AppsDynamiteStorageColumns');
+class_alias(SourceMessageInfo::class, 'Google_Service_CloudSearch_SourceMessageInfo');

@@ -17,27 +17,33 @@
 
 namespace Google\Service\CloudSearch;
 
-class DlpScanSummary extends \Google\Model
+class DlpMessageScanRecord extends \Google\Model
 {
+  protected $attachmentScanSummaryType = DlpScanSummary::class;
+  protected $attachmentScanSummaryDataType = '';
   protected $dlpActionType = DlpAction::class;
   protected $dlpActionDataType = '';
-  /**
-   * @var string
-   */
-  public $scanId;
-  /**
-   * @var bool
-   */
-  public $scanNotApplicableForContext;
+  protected $messageScanSummaryType = DlpScanSummary::class;
+  protected $messageScanSummaryDataType = '';
   /**
    * @var string
    */
   public $scanOutcome;
-  /**
-   * @var string
-   */
-  public $scanTrigger;
 
+  /**
+   * @param DlpScanSummary
+   */
+  public function setAttachmentScanSummary(DlpScanSummary $attachmentScanSummary)
+  {
+    $this->attachmentScanSummary = $attachmentScanSummary;
+  }
+  /**
+   * @return DlpScanSummary
+   */
+  public function getAttachmentScanSummary()
+  {
+    return $this->attachmentScanSummary;
+  }
   /**
    * @param DlpAction
    */
@@ -53,32 +59,18 @@ class DlpScanSummary extends \Google\Model
     return $this->dlpAction;
   }
   /**
-   * @param string
+   * @param DlpScanSummary
    */
-  public function setScanId($scanId)
+  public function setMessageScanSummary(DlpScanSummary $messageScanSummary)
   {
-    $this->scanId = $scanId;
+    $this->messageScanSummary = $messageScanSummary;
   }
   /**
-   * @return string
+   * @return DlpScanSummary
    */
-  public function getScanId()
+  public function getMessageScanSummary()
   {
-    return $this->scanId;
-  }
-  /**
-   * @param bool
-   */
-  public function setScanNotApplicableForContext($scanNotApplicableForContext)
-  {
-    $this->scanNotApplicableForContext = $scanNotApplicableForContext;
-  }
-  /**
-   * @return bool
-   */
-  public function getScanNotApplicableForContext()
-  {
-    return $this->scanNotApplicableForContext;
+    return $this->messageScanSummary;
   }
   /**
    * @param string
@@ -94,21 +86,7 @@ class DlpScanSummary extends \Google\Model
   {
     return $this->scanOutcome;
   }
-  /**
-   * @param string
-   */
-  public function setScanTrigger($scanTrigger)
-  {
-    $this->scanTrigger = $scanTrigger;
-  }
-  /**
-   * @return string
-   */
-  public function getScanTrigger()
-  {
-    return $this->scanTrigger;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DlpScanSummary::class, 'Google_Service_CloudSearch_DlpScanSummary');
+class_alias(DlpMessageScanRecord::class, 'Google_Service_CloudSearch_DlpMessageScanRecord');

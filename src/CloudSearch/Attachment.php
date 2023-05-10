@@ -29,6 +29,8 @@ class Attachment extends \Google\Model
   public $attachmentId;
   protected $cardAddOnDataType = AppsDynamiteStorageCard::class;
   protected $cardAddOnDataDataType = '';
+  protected $componentSearchInfoType = AppsDynamiteSharedMessageComponentSearchInfo::class;
+  protected $componentSearchInfoDataType = '';
   protected $deprecatedAddOnDataType = ContextualAddOnMarkup::class;
   protected $deprecatedAddOnDataDataType = '';
   protected $slackDataType = AppsDynamiteV1ApiCompatV1Attachment::class;
@@ -93,6 +95,20 @@ class Attachment extends \Google\Model
   public function getCardAddOnData()
   {
     return $this->cardAddOnData;
+  }
+  /**
+   * @param AppsDynamiteSharedMessageComponentSearchInfo
+   */
+  public function setComponentSearchInfo(AppsDynamiteSharedMessageComponentSearchInfo $componentSearchInfo)
+  {
+    $this->componentSearchInfo = $componentSearchInfo;
+  }
+  /**
+   * @return AppsDynamiteSharedMessageComponentSearchInfo
+   */
+  public function getComponentSearchInfo()
+  {
+    return $this->componentSearchInfo;
   }
   /**
    * @param ContextualAddOnMarkup

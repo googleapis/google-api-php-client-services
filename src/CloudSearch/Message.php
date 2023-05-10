@@ -94,6 +94,10 @@ class Message extends \Google\Collection
    * @var string
    */
   public $messageOrigin;
+  protected $messageReferenceType = MessageReference::class;
+  protected $messageReferenceDataType = '';
+  protected $messageSearchInfoType = AppsDynamiteSharedMessageSearchInfo::class;
+  protected $messageSearchInfoDataType = '';
   /**
    * @var string
    */
@@ -474,6 +478,34 @@ class Message extends \Google\Collection
   public function getMessageOrigin()
   {
     return $this->messageOrigin;
+  }
+  /**
+   * @param MessageReference
+   */
+  public function setMessageReference(MessageReference $messageReference)
+  {
+    $this->messageReference = $messageReference;
+  }
+  /**
+   * @return MessageReference
+   */
+  public function getMessageReference()
+  {
+    return $this->messageReference;
+  }
+  /**
+   * @param AppsDynamiteSharedMessageSearchInfo
+   */
+  public function setMessageSearchInfo(AppsDynamiteSharedMessageSearchInfo $messageSearchInfo)
+  {
+    $this->messageSearchInfo = $messageSearchInfo;
+  }
+  /**
+   * @return AppsDynamiteSharedMessageSearchInfo
+   */
+  public function getMessageSearchInfo()
+  {
+    return $this->messageSearchInfo;
   }
   /**
    * @param string

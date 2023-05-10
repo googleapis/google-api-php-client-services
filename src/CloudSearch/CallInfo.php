@@ -30,6 +30,10 @@ class CallInfo extends \Google\Collection
    * @var string[]
    */
   public $availableAccessTypes;
+  /**
+   * @var string[]
+   */
+  public $availableAnnotationToolTypes;
   protected $availableReactionsType = ReactionInfo::class;
   protected $availableReactionsDataType = 'array';
   protected $broadcastSessionInfoType = BroadcastSessionInfo::class;
@@ -128,6 +132,20 @@ class CallInfo extends \Google\Collection
   public function getAvailableAccessTypes()
   {
     return $this->availableAccessTypes;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAvailableAnnotationToolTypes($availableAnnotationToolTypes)
+  {
+    $this->availableAnnotationToolTypes = $availableAnnotationToolTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAvailableAnnotationToolTypes()
+  {
+    return $this->availableAnnotationToolTypes;
   }
   /**
    * @param ReactionInfo[]

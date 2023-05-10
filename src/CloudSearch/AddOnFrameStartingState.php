@@ -17,27 +17,46 @@
 
 namespace Google\Service\CloudSearch;
 
-class AppsDynamiteStorageColumns extends \Google\Collection
+class AddOnFrameStartingState extends \Google\Model
 {
-  protected $collection_key = 'columnItems';
-  protected $columnItemsType = AppsDynamiteStorageColumnsColumn::class;
-  protected $columnItemsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $additionalData;
+  /**
+   * @var string
+   */
+  public $uri;
 
   /**
-   * @param AppsDynamiteStorageColumnsColumn[]
+   * @param string
    */
-  public function setColumnItems($columnItems)
+  public function setAdditionalData($additionalData)
   {
-    $this->columnItems = $columnItems;
+    $this->additionalData = $additionalData;
   }
   /**
-   * @return AppsDynamiteStorageColumnsColumn[]
+   * @return string
    */
-  public function getColumnItems()
+  public function getAdditionalData()
   {
-    return $this->columnItems;
+    return $this->additionalData;
+  }
+  /**
+   * @param string
+   */
+  public function setUri($uri)
+  {
+    $this->uri = $uri;
+  }
+  /**
+   * @return string
+   */
+  public function getUri()
+  {
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppsDynamiteStorageColumns::class, 'Google_Service_CloudSearch_AppsDynamiteStorageColumns');
+class_alias(AddOnFrameStartingState::class, 'Google_Service_CloudSearch_AddOnFrameStartingState');

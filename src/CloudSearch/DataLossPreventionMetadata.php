@@ -19,6 +19,8 @@ namespace Google\Service\CloudSearch;
 
 class DataLossPreventionMetadata extends \Google\Model
 {
+  protected $dlpMessageScanRecordType = DlpMessageScanRecord::class;
+  protected $dlpMessageScanRecordDataType = '';
   protected $dlpScanSummaryType = DlpScanSummary::class;
   protected $dlpScanSummaryDataType = '';
   /**
@@ -26,6 +28,20 @@ class DataLossPreventionMetadata extends \Google\Model
    */
   public $warnAcknowledged;
 
+  /**
+   * @param DlpMessageScanRecord
+   */
+  public function setDlpMessageScanRecord(DlpMessageScanRecord $dlpMessageScanRecord)
+  {
+    $this->dlpMessageScanRecord = $dlpMessageScanRecord;
+  }
+  /**
+   * @return DlpMessageScanRecord
+   */
+  public function getDlpMessageScanRecord()
+  {
+    return $this->dlpMessageScanRecord;
+  }
   /**
    * @param DlpScanSummary
    */

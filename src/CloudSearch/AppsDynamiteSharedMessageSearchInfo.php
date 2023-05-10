@@ -17,27 +17,27 @@
 
 namespace Google\Service\CloudSearch;
 
-class AppsDynamiteStorageColumns extends \Google\Collection
+class AppsDynamiteSharedMessageSearchInfo extends \Google\Collection
 {
-  protected $collection_key = 'columnItems';
-  protected $columnItemsType = AppsDynamiteStorageColumnsColumn::class;
-  protected $columnItemsDataType = 'array';
+  protected $collection_key = 'matchedSegmentsInTextBody';
+  protected $matchedSegmentsInTextBodyType = AppsDynamiteSharedTextSegmentsWithDescription::class;
+  protected $matchedSegmentsInTextBodyDataType = 'array';
 
   /**
-   * @param AppsDynamiteStorageColumnsColumn[]
+   * @param AppsDynamiteSharedTextSegmentsWithDescription[]
    */
-  public function setColumnItems($columnItems)
+  public function setMatchedSegmentsInTextBody($matchedSegmentsInTextBody)
   {
-    $this->columnItems = $columnItems;
+    $this->matchedSegmentsInTextBody = $matchedSegmentsInTextBody;
   }
   /**
-   * @return AppsDynamiteStorageColumnsColumn[]
+   * @return AppsDynamiteSharedTextSegmentsWithDescription[]
    */
-  public function getColumnItems()
+  public function getMatchedSegmentsInTextBody()
   {
-    return $this->columnItems;
+    return $this->matchedSegmentsInTextBody;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppsDynamiteStorageColumns::class, 'Google_Service_CloudSearch_AppsDynamiteStorageColumns');
+class_alias(AppsDynamiteSharedMessageSearchInfo::class, 'Google_Service_CloudSearch_AppsDynamiteSharedMessageSearchInfo');
