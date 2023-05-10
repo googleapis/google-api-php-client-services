@@ -673,6 +673,8 @@ class PhotosImageMetadata extends \Google\Collection
    * @var bool
    */
   public $hasAlpha;
+  protected $hdrMetadataType = PhotosHdrMetadata::class;
+  protected $hdrMetadataDataType = '';
   /**
    * @var string
    */
@@ -3537,6 +3539,20 @@ class PhotosImageMetadata extends \Google\Collection
   public function getHasAlpha()
   {
     return $this->hasAlpha;
+  }
+  /**
+   * @param PhotosHdrMetadata
+   */
+  public function setHdrMetadata(PhotosHdrMetadata $hdrMetadata)
+  {
+    $this->hdrMetadata = $hdrMetadata;
+  }
+  /**
+   * @return PhotosHdrMetadata
+   */
+  public function getHdrMetadata()
+  {
+    return $this->hdrMetadata;
   }
   /**
    * @param string

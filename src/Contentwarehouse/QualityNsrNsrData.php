@@ -122,6 +122,10 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $pnav;
+  /**
+   * @var float
+   */
+  public $pnavClicks;
   protected $priorAdjustedNsrType = QualityNsrVersionedFloatSignal::class;
   protected $priorAdjustedNsrDataType = 'array';
   /**
@@ -574,6 +578,20 @@ class QualityNsrNsrData extends \Google\Collection
   public function getPnav()
   {
     return $this->pnav;
+  }
+  /**
+   * @param float
+   */
+  public function setPnavClicks($pnavClicks)
+  {
+    $this->pnavClicks = $pnavClicks;
+  }
+  /**
+   * @return float
+   */
+  public function getPnavClicks()
+  {
+    return $this->pnavClicks;
   }
   /**
    * @param QualityNsrVersionedFloatSignal[]

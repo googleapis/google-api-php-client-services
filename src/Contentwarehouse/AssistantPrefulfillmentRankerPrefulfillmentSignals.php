@@ -44,6 +44,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var bool
    */
   public $fulfillableDominantMedia;
+  /**
+   * @var bool
+   */
+  public $generatedByLegacyAquaDomain;
   public $groundabilityScore;
   protected $groundingProviderFeaturesType = AssistantGroundingRankerGroundingProviderFeatures::class;
   protected $groundingProviderFeaturesDataType = '';
@@ -240,6 +244,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getFulfillableDominantMedia()
   {
     return $this->fulfillableDominantMedia;
+  }
+  /**
+   * @param bool
+   */
+  public function setGeneratedByLegacyAquaDomain($generatedByLegacyAquaDomain)
+  {
+    $this->generatedByLegacyAquaDomain = $generatedByLegacyAquaDomain;
+  }
+  /**
+   * @return bool
+   */
+  public function getGeneratedByLegacyAquaDomain()
+  {
+    return $this->generatedByLegacyAquaDomain;
   }
   public function setGroundabilityScore($groundabilityScore)
   {

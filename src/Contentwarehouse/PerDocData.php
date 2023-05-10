@@ -267,6 +267,8 @@ class PerDocData extends \Google\Collection
   protected $liveResultsDataDataType = '';
   protected $localizedClusterType = IndexingDupsLocalizedLocalizedCluster::class;
   protected $localizedClusterDataType = '';
+  protected $mediaOrPeopleEntitiesType = ImageQualitySensitiveMediaOrPeopleEntities::class;
+  protected $mediaOrPeopleEntitiesDataType = '';
   /**
    * @var int
    */
@@ -1425,6 +1427,20 @@ class PerDocData extends \Google\Collection
   public function getLocalizedCluster()
   {
     return $this->localizedCluster;
+  }
+  /**
+   * @param ImageQualitySensitiveMediaOrPeopleEntities
+   */
+  public function setMediaOrPeopleEntities(ImageQualitySensitiveMediaOrPeopleEntities $mediaOrPeopleEntities)
+  {
+    $this->mediaOrPeopleEntities = $mediaOrPeopleEntities;
+  }
+  /**
+   * @return ImageQualitySensitiveMediaOrPeopleEntities
+   */
+  public function getMediaOrPeopleEntities()
+  {
+    return $this->mediaOrPeopleEntities;
   }
   /**
    * @param int

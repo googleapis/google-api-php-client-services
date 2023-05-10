@@ -23,10 +23,6 @@ class TravelFlightsAirlineConfig extends \Google\Collection
   /**
    * @var string
    */
-  public $adwordsCid;
-  /**
-   * @var string
-   */
   public $alliance;
   protected $baggageCarryonLimitationsUrlsType = TravelFlightsNameCatalogProto::class;
   protected $baggageCarryonLimitationsUrlsDataType = '';
@@ -85,20 +81,6 @@ class TravelFlightsAirlineConfig extends \Google\Collection
   protected $waiverSummaryUrlsType = TravelFlightsNameCatalogProto::class;
   protected $waiverSummaryUrlsDataType = '';
 
-  /**
-   * @param string
-   */
-  public function setAdwordsCid($adwordsCid)
-  {
-    $this->adwordsCid = $adwordsCid;
-  }
-  /**
-   * @return string
-   */
-  public function getAdwordsCid()
-  {
-    return $this->adwordsCid;
-  }
   /**
    * @param string
    */

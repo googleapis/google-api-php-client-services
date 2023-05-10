@@ -120,6 +120,10 @@ class AssistantApiSupportedFeatures extends \Google\Model
    */
   public $isPairedPhoneNeededForComms;
   /**
+   * @var bool
+   */
+  public $justInTimeSupported;
+  /**
    * @var string
    */
   public $launchKeyboardSupported;
@@ -629,6 +633,20 @@ class AssistantApiSupportedFeatures extends \Google\Model
   public function getIsPairedPhoneNeededForComms()
   {
     return $this->isPairedPhoneNeededForComms;
+  }
+  /**
+   * @param bool
+   */
+  public function setJustInTimeSupported($justInTimeSupported)
+  {
+    $this->justInTimeSupported = $justInTimeSupported;
+  }
+  /**
+   * @return bool
+   */
+  public function getJustInTimeSupported()
+  {
+    return $this->justInTimeSupported;
   }
   /**
    * @param string

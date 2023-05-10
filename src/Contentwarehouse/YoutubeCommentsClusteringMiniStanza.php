@@ -85,6 +85,7 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    * @var bool
    */
   public $hasCreatorReply;
+  public $impersonationScores;
   /**
    * @var bool
    */
@@ -498,6 +499,14 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   public function getHasCreatorReply()
   {
     return $this->hasCreatorReply;
+  }
+  public function setImpersonationScores($impersonationScores)
+  {
+    $this->impersonationScores = $impersonationScores;
+  }
+  public function getImpersonationScores()
+  {
+    return $this->impersonationScores;
   }
   /**
    * @param bool

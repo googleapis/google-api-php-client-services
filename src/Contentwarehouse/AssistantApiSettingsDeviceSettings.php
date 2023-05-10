@@ -96,14 +96,6 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
    * @var bool
    */
   public $faceMatchEnabled;
-  /**
-   * @var bool
-   */
-  public $flAudioCacheEnabled;
-  /**
-   * @var bool
-   */
-  public $flVisualFramesCacheEnabled;
   protected $gcmSettingsType = AssistantApiSettingsGcmSettings::class;
   protected $gcmSettingsDataType = '';
   protected $homeGraphDataType = AssistantApiSettingsHomeGraphData::class;
@@ -554,34 +546,6 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
   public function getFaceMatchEnabled()
   {
     return $this->faceMatchEnabled;
-  }
-  /**
-   * @param bool
-   */
-  public function setFlAudioCacheEnabled($flAudioCacheEnabled)
-  {
-    $this->flAudioCacheEnabled = $flAudioCacheEnabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getFlAudioCacheEnabled()
-  {
-    return $this->flAudioCacheEnabled;
-  }
-  /**
-   * @param bool
-   */
-  public function setFlVisualFramesCacheEnabled($flVisualFramesCacheEnabled)
-  {
-    $this->flVisualFramesCacheEnabled = $flVisualFramesCacheEnabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getFlVisualFramesCacheEnabled()
-  {
-    return $this->flVisualFramesCacheEnabled;
   }
   /**
    * @param AssistantApiSettingsGcmSettings
