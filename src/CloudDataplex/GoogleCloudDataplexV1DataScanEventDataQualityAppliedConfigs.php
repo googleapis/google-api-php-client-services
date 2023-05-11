@@ -20,10 +20,28 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $rowFilterApplied;
+  /**
    * @var float
    */
   public $samplingPercent;
 
+  /**
+   * @param bool
+   */
+  public function setRowFilterApplied($rowFilterApplied)
+  {
+    $this->rowFilterApplied = $rowFilterApplied;
+  }
+  /**
+   * @return bool
+   */
+  public function getRowFilterApplied()
+  {
+    return $this->rowFilterApplied;
+  }
   /**
    * @param float
    */
