@@ -49,6 +49,7 @@ class ShoppingContent extends \Google\Service
   public $collectionstatuses;
   public $conversionsources;
   public $csses;
+  public $customers;
   public $datafeeds;
   public $datafeedstatuses;
   public $freelistingsprogram;
@@ -952,6 +953,26 @@ class ShoppingContent extends \Google\Service
                   'required' => true,
                 ],
                 'cssDomainId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers = new ShoppingContent\Resource\Customers(
+        $this,
+        $this->serviceName,
+        'customers',
+        [
+          'methods' => [
+            'create' => [
+              'path' => '{merchantId}/customers',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
