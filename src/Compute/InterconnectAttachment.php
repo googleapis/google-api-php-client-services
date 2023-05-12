@@ -48,6 +48,8 @@ class InterconnectAttachment extends \Google\Collection
    * @var string
    */
   public $cloudRouterIpv6InterfaceId;
+  protected $configurationConstraintsType = InterconnectAttachmentConfigurationConstraints::class;
+  protected $configurationConstraintsDataType = '';
   /**
    * @var string
    */
@@ -139,6 +141,10 @@ class InterconnectAttachment extends \Google\Collection
   /**
    * @var string
    */
+  public $remoteService;
+  /**
+   * @var string
+   */
   public $router;
   /**
    * @var bool
@@ -156,6 +162,10 @@ class InterconnectAttachment extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var int
+   */
+  public $subnetLength;
   /**
    * @var string
    */
@@ -262,6 +272,20 @@ class InterconnectAttachment extends \Google\Collection
   public function getCloudRouterIpv6InterfaceId()
   {
     return $this->cloudRouterIpv6InterfaceId;
+  }
+  /**
+   * @param InterconnectAttachmentConfigurationConstraints
+   */
+  public function setConfigurationConstraints(InterconnectAttachmentConfigurationConstraints $configurationConstraints)
+  {
+    $this->configurationConstraints = $configurationConstraints;
+  }
+  /**
+   * @return InterconnectAttachmentConfigurationConstraints
+   */
+  public function getConfigurationConstraints()
+  {
+    return $this->configurationConstraints;
   }
   /**
    * @param string
@@ -588,6 +612,20 @@ class InterconnectAttachment extends \Google\Collection
   /**
    * @param string
    */
+  public function setRemoteService($remoteService)
+  {
+    $this->remoteService = $remoteService;
+  }
+  /**
+   * @return string
+   */
+  public function getRemoteService()
+  {
+    return $this->remoteService;
+  }
+  /**
+   * @param string
+   */
   public function setRouter($router)
   {
     $this->router = $router;
@@ -654,6 +692,20 @@ class InterconnectAttachment extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param int
+   */
+  public function setSubnetLength($subnetLength)
+  {
+    $this->subnetLength = $subnetLength;
+  }
+  /**
+   * @return int
+   */
+  public function getSubnetLength()
+  {
+    return $this->subnetLength;
   }
   /**
    * @param string

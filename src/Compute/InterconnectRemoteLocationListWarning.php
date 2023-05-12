@@ -17,64 +17,63 @@
 
 namespace Google\Service\Compute;
 
-class UrlRewrite extends \Google\Model
+class InterconnectRemoteLocationListWarning extends \Google\Collection
 {
+  protected $collection_key = 'data';
   /**
    * @var string
    */
-  public $hostRewrite;
+  public $code;
+  protected $dataType = InterconnectRemoteLocationListWarningData::class;
+  protected $dataDataType = 'array';
   /**
    * @var string
    */
-  public $pathPrefixRewrite;
-  /**
-   * @var string
-   */
-  public $pathTemplateRewrite;
+  public $message;
 
   /**
    * @param string
    */
-  public function setHostRewrite($hostRewrite)
+  public function setCode($code)
   {
-    $this->hostRewrite = $hostRewrite;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getHostRewrite()
+  public function getCode()
   {
-    return $this->hostRewrite;
+    return $this->code;
+  }
+  /**
+   * @param InterconnectRemoteLocationListWarningData[]
+   */
+  public function setData($data)
+  {
+    $this->data = $data;
+  }
+  /**
+   * @return InterconnectRemoteLocationListWarningData[]
+   */
+  public function getData()
+  {
+    return $this->data;
   }
   /**
    * @param string
    */
-  public function setPathPrefixRewrite($pathPrefixRewrite)
+  public function setMessage($message)
   {
-    $this->pathPrefixRewrite = $pathPrefixRewrite;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getPathPrefixRewrite()
+  public function getMessage()
   {
-    return $this->pathPrefixRewrite;
-  }
-  /**
-   * @param string
-   */
-  public function setPathTemplateRewrite($pathTemplateRewrite)
-  {
-    $this->pathTemplateRewrite = $pathTemplateRewrite;
-  }
-  /**
-   * @return string
-   */
-  public function getPathTemplateRewrite()
-  {
-    return $this->pathTemplateRewrite;
+    return $this->message;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UrlRewrite::class, 'Google_Service_Compute_UrlRewrite');
+class_alias(InterconnectRemoteLocationListWarning::class, 'Google_Service_Compute_InterconnectRemoteLocationListWarning');

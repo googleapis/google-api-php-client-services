@@ -101,6 +101,10 @@ class Interconnect extends \Google\Collection
    */
   public $provisionedLinkCount;
   /**
+   * @var string
+   */
+  public $remoteLocation;
+  /**
    * @var int
    */
   public $requestedLinkCount;
@@ -410,6 +414,20 @@ class Interconnect extends \Google\Collection
   public function getProvisionedLinkCount()
   {
     return $this->provisionedLinkCount;
+  }
+  /**
+   * @param string
+   */
+  public function setRemoteLocation($remoteLocation)
+  {
+    $this->remoteLocation = $remoteLocation;
+  }
+  /**
+   * @return string
+   */
+  public function getRemoteLocation()
+  {
+    return $this->remoteLocation;
   }
   /**
    * @param int

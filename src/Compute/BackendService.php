@@ -99,6 +99,10 @@ class BackendService extends \Google\Collection
   protected $maxStreamDurationType = Duration::class;
   protected $maxStreamDurationDataType = '';
   /**
+   * @var string[]
+   */
+  public $metadatas;
+  /**
    * @var string
    */
   public $name;
@@ -498,6 +502,20 @@ class BackendService extends \Google\Collection
   public function getMaxStreamDuration()
   {
     return $this->maxStreamDuration;
+  }
+  /**
+   * @param string[]
+   */
+  public function setMetadatas($metadatas)
+  {
+    $this->metadatas = $metadatas;
+  }
+  /**
+   * @return string[]
+   */
+  public function getMetadatas()
+  {
+    return $this->metadatas;
   }
   /**
    * @param string

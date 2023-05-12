@@ -17,64 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class UrlRewrite extends \Google\Model
+class InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange extends \Google\Model
 {
   /**
    * @var string
    */
-  public $hostRewrite;
+  public $max;
   /**
    * @var string
    */
-  public $pathPrefixRewrite;
-  /**
-   * @var string
-   */
-  public $pathTemplateRewrite;
+  public $min;
 
   /**
    * @param string
    */
-  public function setHostRewrite($hostRewrite)
+  public function setMax($max)
   {
-    $this->hostRewrite = $hostRewrite;
+    $this->max = $max;
   }
   /**
    * @return string
    */
-  public function getHostRewrite()
+  public function getMax()
   {
-    return $this->hostRewrite;
+    return $this->max;
   }
   /**
    * @param string
    */
-  public function setPathPrefixRewrite($pathPrefixRewrite)
+  public function setMin($min)
   {
-    $this->pathPrefixRewrite = $pathPrefixRewrite;
+    $this->min = $min;
   }
   /**
    * @return string
    */
-  public function getPathPrefixRewrite()
+  public function getMin()
   {
-    return $this->pathPrefixRewrite;
-  }
-  /**
-   * @param string
-   */
-  public function setPathTemplateRewrite($pathTemplateRewrite)
-  {
-    $this->pathTemplateRewrite = $pathTemplateRewrite;
-  }
-  /**
-   * @return string
-   */
-  public function getPathTemplateRewrite()
-  {
-    return $this->pathTemplateRewrite;
+    return $this->min;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UrlRewrite::class, 'Google_Service_Compute_UrlRewrite');
+class_alias(InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange::class, 'Google_Service_Compute_InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange');

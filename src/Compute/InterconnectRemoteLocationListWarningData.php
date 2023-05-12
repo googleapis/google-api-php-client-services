@@ -17,64 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class UrlRewrite extends \Google\Model
+class InterconnectRemoteLocationListWarningData extends \Google\Model
 {
   /**
    * @var string
    */
-  public $hostRewrite;
+  public $key;
   /**
    * @var string
    */
-  public $pathPrefixRewrite;
-  /**
-   * @var string
-   */
-  public $pathTemplateRewrite;
+  public $value;
 
   /**
    * @param string
    */
-  public function setHostRewrite($hostRewrite)
+  public function setKey($key)
   {
-    $this->hostRewrite = $hostRewrite;
+    $this->key = $key;
   }
   /**
    * @return string
    */
-  public function getHostRewrite()
+  public function getKey()
   {
-    return $this->hostRewrite;
+    return $this->key;
   }
   /**
    * @param string
    */
-  public function setPathPrefixRewrite($pathPrefixRewrite)
+  public function setValue($value)
   {
-    $this->pathPrefixRewrite = $pathPrefixRewrite;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getPathPrefixRewrite()
+  public function getValue()
   {
-    return $this->pathPrefixRewrite;
-  }
-  /**
-   * @param string
-   */
-  public function setPathTemplateRewrite($pathTemplateRewrite)
-  {
-    $this->pathTemplateRewrite = $pathTemplateRewrite;
-  }
-  /**
-   * @return string
-   */
-  public function getPathTemplateRewrite()
-  {
-    return $this->pathTemplateRewrite;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UrlRewrite::class, 'Google_Service_Compute_UrlRewrite');
+class_alias(InterconnectRemoteLocationListWarningData::class, 'Google_Service_Compute_InterconnectRemoteLocationListWarningData');

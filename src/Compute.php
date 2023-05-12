@@ -81,6 +81,7 @@ class Compute extends \Google\Service
   public $instances;
   public $interconnectAttachments;
   public $interconnectLocations;
+  public $interconnectRemoteLocations;
   public $interconnects;
   public $licenseCodes;
   public $licenses;
@@ -6078,6 +6079,61 @@ class Compute extends \Google\Service
               ],
             ],'list' => [
               'path' => 'projects/{project}/global/interconnectLocations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->interconnectRemoteLocations = new Compute\Resource\InterconnectRemoteLocations(
+        $this,
+        $this->serviceName,
+        'interconnectRemoteLocations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'projects/{project}/global/interconnectRemoteLocations/{interconnectRemoteLocation}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'interconnectRemoteLocation' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/global/interconnectRemoteLocations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'project' => [
