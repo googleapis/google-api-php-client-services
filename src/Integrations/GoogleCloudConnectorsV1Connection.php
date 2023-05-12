@@ -31,6 +31,10 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   /**
    * @var string
    */
+  public $connectorVersionLaunchStage;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var string
@@ -126,6 +130,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getConnectorVersion()
   {
     return $this->connectorVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setConnectorVersionLaunchStage($connectorVersionLaunchStage)
+  {
+    $this->connectorVersionLaunchStage = $connectorVersionLaunchStage;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectorVersionLaunchStage()
+  {
+    return $this->connectorVersionLaunchStage;
   }
   /**
    * @param string
