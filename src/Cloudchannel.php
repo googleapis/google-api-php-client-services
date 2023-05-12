@@ -535,6 +535,21 @@ class Cloudchannel extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'queryEligibleBillingAccounts' => [
+              'path' => 'v1/{+customer}:queryEligibleBillingAccounts',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'skus' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
             ],'transferEntitlements' => [
               'path' => 'v1/{+parent}:transferEntitlements',
               'httpMethod' => 'POST',
