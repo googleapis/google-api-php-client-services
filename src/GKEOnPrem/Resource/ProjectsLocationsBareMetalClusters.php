@@ -120,6 +120,11 @@ class ProjectsLocationsBareMetalClusters extends \Google\Service\Resource
    * Format: "projects/{project}/locations/{location}/bareMetalClusters/{bare_meta
    * l_cluster}"
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View for bare metal user cluster. When `BASIC` is
+   * specified, only the cluster resource name and admin cluster membership are
+   * returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is the same as
+   * `FULL', which returns the complete cluster configuration details.
    * @return BareMetalCluster
    */
   public function get($name, $optParams = [])

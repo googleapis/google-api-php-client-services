@@ -119,6 +119,11 @@ class ProjectsLocationsVmwareClusters extends \Google\Service\Resource
    * Format:
    * "projects/{project}/locations/{location}/vmwareClusters/{vmware_cluster}"
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View for VMware user cluster. When `BASIC` is
+   * specified, only the cluster resource name and admin cluster membership are
+   * returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is the same as
+   * `FULL', which returns the complete cluster configuration details.
    * @return VmwareCluster
    */
   public function get($name, $optParams = [])

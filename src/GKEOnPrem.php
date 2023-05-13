@@ -154,6 +154,10 @@ class GKEOnPrem extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'v1/{+resource}:getIamPolicy',
@@ -383,6 +387,10 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'getIamPolicy' => [
@@ -1071,6 +1079,10 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'getIamPolicy' => [

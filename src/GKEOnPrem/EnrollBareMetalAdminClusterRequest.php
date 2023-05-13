@@ -26,10 +26,6 @@ class EnrollBareMetalAdminClusterRequest extends \Google\Model
   /**
    * @var string
    */
-  public $localName;
-  /**
-   * @var string
-   */
   public $membership;
 
   /**
@@ -45,20 +41,6 @@ class EnrollBareMetalAdminClusterRequest extends \Google\Model
   public function getBareMetalAdminClusterId()
   {
     return $this->bareMetalAdminClusterId;
-  }
-  /**
-   * @param string
-   */
-  public function setLocalName($localName)
-  {
-    $this->localName = $localName;
-  }
-  /**
-   * @return string
-   */
-  public function getLocalName()
-  {
-    return $this->localName;
   }
   /**
    * @param string
