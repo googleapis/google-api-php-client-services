@@ -95,6 +95,10 @@ class Instance extends \Google\Collection
    */
   public $privateInstance;
   /**
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * @var string
    */
   public $serviceAccount;
@@ -424,6 +428,20 @@ class Instance extends \Google\Collection
   public function getPrivateInstance()
   {
     return $this->privateInstance;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param string
