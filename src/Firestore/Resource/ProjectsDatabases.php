@@ -21,6 +21,7 @@ use Google\Service\Firestore\GoogleFirestoreAdminV1Database;
 use Google\Service\Firestore\GoogleFirestoreAdminV1ExportDocumentsRequest;
 use Google\Service\Firestore\GoogleFirestoreAdminV1ImportDocumentsRequest;
 use Google\Service\Firestore\GoogleFirestoreAdminV1ListDatabasesResponse;
+use Google\Service\Firestore\GoogleFirestoreAdminV1RestoreDatabaseRequest;
 use Google\Service\Firestore\GoogleLongrunningOperation;
 
 /**
@@ -162,6 +163,31 @@ class ProjectsDatabases extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Create a new database by restore from an existing backup. The new database
+   * must be in the same cloud region or multi-region location as the existing
+   * backup. This behaves similar to FirestoreAdmin.CreateDatabase except instead
+   * of creating a new empty database, a new database is created with the database
+   * type, index configuration, and documents from an existing backup. The long-
+   * running operation can be used to track the progress of the restore, with the
+   * Operation's metadata field type being the RestoreDatabaseMetadata. The
+   * response type is the Database if the restore was successful. The new database
+   * is not readable or writeable until the LRO has completed. Cancelling the
+   * returned operation will stop the restore and delete the in-progress database,
+   * if the restore is still active. (databases.restore)
+   *
+   * @param string $parent Required. The project to restore the database in.
+   * Format is `projects/{project_id}`.
+   * @param GoogleFirestoreAdminV1RestoreDatabaseRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function restore($parent, GoogleFirestoreAdminV1RestoreDatabaseRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('restore', [$params], GoogleLongrunningOperation::class);
   }
 }
 

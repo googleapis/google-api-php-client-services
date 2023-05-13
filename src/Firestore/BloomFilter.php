@@ -17,62 +17,44 @@
 
 namespace Google\Service\Firestore;
 
-class ExistenceFilter extends \Google\Model
+class BloomFilter extends \Google\Model
 {
+  protected $bitsType = BitSequence::class;
+  protected $bitsDataType = '';
   /**
    * @var int
    */
-  public $count;
-  /**
-   * @var int
-   */
-  public $targetId;
-  protected $unchangedNamesType = BloomFilter::class;
-  protected $unchangedNamesDataType = '';
+  public $hashCount;
 
   /**
+   * @param BitSequence
+   */
+  public function setBits(BitSequence $bits)
+  {
+    $this->bits = $bits;
+  }
+  /**
+   * @return BitSequence
+   */
+  public function getBits()
+  {
+    return $this->bits;
+  }
+  /**
    * @param int
    */
-  public function setCount($count)
+  public function setHashCount($hashCount)
   {
-    $this->count = $count;
+    $this->hashCount = $hashCount;
   }
   /**
    * @return int
    */
-  public function getCount()
+  public function getHashCount()
   {
-    return $this->count;
-  }
-  /**
-   * @param int
-   */
-  public function setTargetId($targetId)
-  {
-    $this->targetId = $targetId;
-  }
-  /**
-   * @return int
-   */
-  public function getTargetId()
-  {
-    return $this->targetId;
-  }
-  /**
-   * @param BloomFilter
-   */
-  public function setUnchangedNames(BloomFilter $unchangedNames)
-  {
-    $this->unchangedNames = $unchangedNames;
-  }
-  /**
-   * @return BloomFilter
-   */
-  public function getUnchangedNames()
-  {
-    return $this->unchangedNames;
+    return $this->hashCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ExistenceFilter::class, 'Google_Service_Firestore_ExistenceFilter');
+class_alias(BloomFilter::class, 'Google_Service_Firestore_BloomFilter');

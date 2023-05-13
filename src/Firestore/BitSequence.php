@@ -17,62 +17,46 @@
 
 namespace Google\Service\Firestore;
 
-class ExistenceFilter extends \Google\Model
+class BitSequence extends \Google\Model
 {
   /**
-   * @var int
+   * @var string
    */
-  public $count;
+  public $bitmap;
   /**
    * @var int
    */
-  public $targetId;
-  protected $unchangedNamesType = BloomFilter::class;
-  protected $unchangedNamesDataType = '';
+  public $padding;
 
   /**
+   * @param string
+   */
+  public function setBitmap($bitmap)
+  {
+    $this->bitmap = $bitmap;
+  }
+  /**
+   * @return string
+   */
+  public function getBitmap()
+  {
+    return $this->bitmap;
+  }
+  /**
    * @param int
    */
-  public function setCount($count)
+  public function setPadding($padding)
   {
-    $this->count = $count;
+    $this->padding = $padding;
   }
   /**
    * @return int
    */
-  public function getCount()
+  public function getPadding()
   {
-    return $this->count;
-  }
-  /**
-   * @param int
-   */
-  public function setTargetId($targetId)
-  {
-    $this->targetId = $targetId;
-  }
-  /**
-   * @return int
-   */
-  public function getTargetId()
-  {
-    return $this->targetId;
-  }
-  /**
-   * @param BloomFilter
-   */
-  public function setUnchangedNames(BloomFilter $unchangedNames)
-  {
-    $this->unchangedNames = $unchangedNames;
-  }
-  /**
-   * @return BloomFilter
-   */
-  public function getUnchangedNames()
-  {
-    return $this->unchangedNames;
+    return $this->padding;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ExistenceFilter::class, 'Google_Service_Firestore_ExistenceFilter');
+class_alias(BitSequence::class, 'Google_Service_Firestore_BitSequence');

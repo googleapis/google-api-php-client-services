@@ -17,62 +17,64 @@
 
 namespace Google\Service\Firestore;
 
-class ExistenceFilter extends \Google\Model
+class GoogleFirestoreAdminV1Stats extends \Google\Model
 {
   /**
-   * @var int
+   * @var string
    */
-  public $count;
+  public $documentCount;
   /**
-   * @var int
+   * @var string
    */
-  public $targetId;
-  protected $unchangedNamesType = BloomFilter::class;
-  protected $unchangedNamesDataType = '';
+  public $indexCount;
+  /**
+   * @var string
+   */
+  public $sizeBytes;
 
   /**
-   * @param int
+   * @param string
    */
-  public function setCount($count)
+  public function setDocumentCount($documentCount)
   {
-    $this->count = $count;
+    $this->documentCount = $documentCount;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getCount()
+  public function getDocumentCount()
   {
-    return $this->count;
+    return $this->documentCount;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setTargetId($targetId)
+  public function setIndexCount($indexCount)
   {
-    $this->targetId = $targetId;
+    $this->indexCount = $indexCount;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getTargetId()
+  public function getIndexCount()
   {
-    return $this->targetId;
+    return $this->indexCount;
   }
   /**
-   * @param BloomFilter
+   * @param string
    */
-  public function setUnchangedNames(BloomFilter $unchangedNames)
+  public function setSizeBytes($sizeBytes)
   {
-    $this->unchangedNames = $unchangedNames;
+    $this->sizeBytes = $sizeBytes;
   }
   /**
-   * @return BloomFilter
+   * @return string
    */
-  public function getUnchangedNames()
+  public function getSizeBytes()
   {
-    return $this->unchangedNames;
+    return $this->sizeBytes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ExistenceFilter::class, 'Google_Service_Firestore_ExistenceFilter');
+class_alias(GoogleFirestoreAdminV1Stats::class, 'Google_Service_Firestore_GoogleFirestoreAdminV1Stats');

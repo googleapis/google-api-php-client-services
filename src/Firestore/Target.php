@@ -22,6 +22,10 @@ class Target extends \Google\Model
   protected $documentsType = DocumentsTarget::class;
   protected $documentsDataType = '';
   /**
+   * @var int
+   */
+  public $expectedCount;
+  /**
    * @var bool
    */
   public $once;
@@ -53,6 +57,20 @@ class Target extends \Google\Model
   public function getDocuments()
   {
     return $this->documents;
+  }
+  /**
+   * @param int
+   */
+  public function setExpectedCount($expectedCount)
+  {
+    $this->expectedCount = $expectedCount;
+  }
+  /**
+   * @return int
+   */
+  public function getExpectedCount()
+  {
+    return $this->expectedCount;
   }
   /**
    * @param bool
