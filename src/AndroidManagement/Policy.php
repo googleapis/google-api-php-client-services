@@ -108,6 +108,8 @@ class Policy extends \Google\Collection
    * @var string
    */
   public $defaultPermissionPolicy;
+  protected $deviceConnectivityManagementType = DeviceConnectivityManagement::class;
+  protected $deviceConnectivityManagementDataType = '';
   protected $deviceOwnerLockScreenInfoType = UserFacingMessage::class;
   protected $deviceOwnerLockScreenInfoDataType = '';
   /**
@@ -674,6 +676,20 @@ class Policy extends \Google\Collection
   public function getDefaultPermissionPolicy()
   {
     return $this->defaultPermissionPolicy;
+  }
+  /**
+   * @param DeviceConnectivityManagement
+   */
+  public function setDeviceConnectivityManagement(DeviceConnectivityManagement $deviceConnectivityManagement)
+  {
+    $this->deviceConnectivityManagement = $deviceConnectivityManagement;
+  }
+  /**
+   * @return DeviceConnectivityManagement
+   */
+  public function getDeviceConnectivityManagement()
+  {
+    return $this->deviceConnectivityManagement;
   }
   /**
    * @param UserFacingMessage
