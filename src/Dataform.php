@@ -110,7 +110,17 @@ class Dataform extends \Google\Service
         'repositories',
         [
           'methods' => [
-            'create' => [
+            'computeAccessTokenStatus' => [
+              'path' => 'v1beta1/{+name}:computeAccessTokenStatus',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1beta1/{+parent}/repositories',
               'httpMethod' => 'POST',
               'parameters' => [

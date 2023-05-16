@@ -17,6 +17,7 @@
 
 namespace Google\Service\Dataform\Resource;
 
+use Google\Service\Dataform\ComputeRepositoryAccessTokenStatusResponse;
 use Google\Service\Dataform\DataformEmpty;
 use Google\Service\Dataform\FetchRemoteBranchesResponse;
 use Google\Service\Dataform\ListRepositoriesResponse;
@@ -36,6 +37,20 @@ use Google\Service\Dataform\TestIamPermissionsResponse;
  */
 class ProjectsLocationsRepositories extends \Google\Service\Resource
 {
+  /**
+   * Computes a Repository's Git access token status.
+   * (repositories.computeAccessTokenStatus)
+   *
+   * @param string $name Required. The repository's name.
+   * @param array $optParams Optional parameters.
+   * @return ComputeRepositoryAccessTokenStatusResponse
+   */
+  public function computeAccessTokenStatus($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('computeAccessTokenStatus', [$params], ComputeRepositoryAccessTokenStatusResponse::class);
+  }
   /**
    * Creates a new Repository in a given project and location.
    * (repositories.create)
