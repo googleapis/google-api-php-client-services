@@ -23,6 +23,10 @@ class CloudDlpDataProfile extends \Google\Model
    * @var string
    */
   public $dataProfile;
+  /**
+   * @var string
+   */
+  public $parentType;
 
   /**
    * @param string
@@ -37,6 +41,20 @@ class CloudDlpDataProfile extends \Google\Model
   public function getDataProfile()
   {
     return $this->dataProfile;
+  }
+  /**
+   * @param string
+   */
+  public function setParentType($parentType)
+  {
+    $this->parentType = $parentType;
+  }
+  /**
+   * @return string
+   */
+  public function getParentType()
+  {
+    return $this->parentType;
   }
 }
 
