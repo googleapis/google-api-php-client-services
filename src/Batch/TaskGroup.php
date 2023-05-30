@@ -39,6 +39,10 @@ class TaskGroup extends \Google\Collection
   /**
    * @var string
    */
+  public $schedulingPolicy;
+  /**
+   * @var string
+   */
   public $taskCount;
   /**
    * @var string
@@ -104,6 +108,20 @@ class TaskGroup extends \Google\Collection
   public function getRequireHostsFile()
   {
     return $this->requireHostsFile;
+  }
+  /**
+   * @param string
+   */
+  public function setSchedulingPolicy($schedulingPolicy)
+  {
+    $this->schedulingPolicy = $schedulingPolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getSchedulingPolicy()
+  {
+    return $this->schedulingPolicy;
   }
   /**
    * @param string

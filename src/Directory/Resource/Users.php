@@ -70,7 +70,11 @@ class Users extends \Google\Service\Resource
     return $this->call('get', [$params], User::class);
   }
   /**
-   * Creates a user. (users.insert)
+   * Creates a user. Mutate calls immediately following user creation might
+   * sometimes fail as the user isn't fully created due to propagation delay in
+   * our backends. Check the error details for the "User creation is not complete"
+   * message to see if this is the case. Retrying the calls after some time can
+   * help in this case. (users.insert)
    *
    * @param User $postBody
    * @param array $optParams Optional parameters.

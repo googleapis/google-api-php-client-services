@@ -31,6 +31,8 @@ class GoogleCloudConnectorsV1ConfigVariable extends \Google\Model
    * @var string
    */
   public $key;
+  protected $keyValueType = GoogleCloudConnectorsV1EncryptionKey::class;
+  protected $keyValueDataType = '';
   protected $secretValueType = GoogleCloudConnectorsV1Secret::class;
   protected $secretValueDataType = '';
   /**
@@ -79,6 +81,20 @@ class GoogleCloudConnectorsV1ConfigVariable extends \Google\Model
   public function getKey()
   {
     return $this->key;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1EncryptionKey
+   */
+  public function setKeyValue(GoogleCloudConnectorsV1EncryptionKey $keyValue)
+  {
+    $this->keyValue = $keyValue;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1EncryptionKey
+   */
+  public function getKeyValue()
+  {
+    return $this->keyValue;
   }
   /**
    * @param GoogleCloudConnectorsV1Secret

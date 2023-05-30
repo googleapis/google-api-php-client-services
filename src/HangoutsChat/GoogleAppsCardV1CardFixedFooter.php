@@ -17,12 +17,15 @@
 
 namespace Google\Service\HangoutsChat;
 
-class GoogleAppsCardV1CardFixedFooter extends \Google\Model
+class GoogleAppsCardV1CardFixedFooter extends \Google\Collection
 {
+  protected $collection_key = 'widgets';
   protected $primaryButtonType = GoogleAppsCardV1Button::class;
   protected $primaryButtonDataType = '';
   protected $secondaryButtonType = GoogleAppsCardV1Button::class;
   protected $secondaryButtonDataType = '';
+  protected $widgetsType = GoogleAppsCardV1FooterWidget::class;
+  protected $widgetsDataType = 'array';
 
   /**
    * @param GoogleAppsCardV1Button
@@ -51,6 +54,20 @@ class GoogleAppsCardV1CardFixedFooter extends \Google\Model
   public function getSecondaryButton()
   {
     return $this->secondaryButton;
+  }
+  /**
+   * @param GoogleAppsCardV1FooterWidget[]
+   */
+  public function setWidgets($widgets)
+  {
+    $this->widgets = $widgets;
+  }
+  /**
+   * @return GoogleAppsCardV1FooterWidget[]
+   */
+  public function getWidgets()
+  {
+    return $this->widgets;
   }
 }
 

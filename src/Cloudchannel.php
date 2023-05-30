@@ -452,11 +452,19 @@ class Cloudchannel extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'changeOfferPurchase.billingAccount' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'changeOfferPurchase.entitlement' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
                 'changeOfferPurchase.newSku' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'createEntitlementPurchase.billingAccount' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
