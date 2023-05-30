@@ -50,6 +50,8 @@ class ExternalDataConfiguration extends \Google\Collection
    * @var bool
    */
   public $ignoreUnknownValues;
+  protected $jsonOptionsType = JsonOptions::class;
+  protected $jsonOptionsDataType = '';
   /**
    * @var int
    */
@@ -218,6 +220,20 @@ class ExternalDataConfiguration extends \Google\Collection
   public function getIgnoreUnknownValues()
   {
     return $this->ignoreUnknownValues;
+  }
+  /**
+   * @param JsonOptions
+   */
+  public function setJsonOptions(JsonOptions $jsonOptions)
+  {
+    $this->jsonOptions = $jsonOptions;
+  }
+  /**
+   * @return JsonOptions
+   */
+  public function getJsonOptions()
+  {
+    return $this->jsonOptions;
   }
   /**
    * @param int
