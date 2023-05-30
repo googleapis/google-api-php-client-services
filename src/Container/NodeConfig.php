@@ -104,6 +104,8 @@ class NodeConfig extends \Google\Collection
   public $serviceAccount;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
+  protected $soleTenantConfigType = SoleTenantConfig::class;
+  protected $soleTenantConfigDataType = '';
   /**
    * @var bool
    */
@@ -510,6 +512,20 @@ class NodeConfig extends \Google\Collection
   public function getShieldedInstanceConfig()
   {
     return $this->shieldedInstanceConfig;
+  }
+  /**
+   * @param SoleTenantConfig
+   */
+  public function setSoleTenantConfig(SoleTenantConfig $soleTenantConfig)
+  {
+    $this->soleTenantConfig = $soleTenantConfig;
+  }
+  /**
+   * @return SoleTenantConfig
+   */
+  public function getSoleTenantConfig()
+  {
+    return $this->soleTenantConfig;
   }
   /**
    * @param bool
