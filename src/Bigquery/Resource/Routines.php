@@ -87,9 +87,9 @@ class Routines extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter If set, then only the Routines matching this filter
-   * are returned. The current supported form is either "routine_type:" or
-   * "routineType:", where is a RoutineType enum. Example:
-   * "routineType:SCALAR_FUNCTION".
+   * are returned. The supported format is `routineType:{RoutineType}`, where
+   * `{RoutineType}` is a RoutineType enum. For example:
+   * `routineType:SCALAR_FUNCTION`.
    * @opt_param string maxResults The maximum number of results to return in a
    * single response page. Leverage the page tokens to iterate through the entire
    * collection.

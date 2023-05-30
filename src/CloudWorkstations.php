@@ -23,7 +23,7 @@ use Google\Client;
  * Service definition for CloudWorkstations (v1beta).
  *
  * <p>
-</p>
+ * Allows administrators to create managed developer environments in the cloud.</p>
  *
  * <p>
  * For more information about this service, see the API

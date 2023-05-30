@@ -70,6 +70,8 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $partner;
+  protected $partnerPermissionsType = GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions::class;
+  protected $partnerPermissionsDataType = '';
   /**
    * @var string
    */
@@ -280,6 +282,20 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   public function getPartner()
   {
     return $this->partner;
+  }
+  /**
+   * @param GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions
+   */
+  public function setPartnerPermissions(GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions $partnerPermissions)
+  {
+    $this->partnerPermissions = $partnerPermissions;
+  }
+  /**
+   * @return GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions
+   */
+  public function getPartnerPermissions()
+  {
+    return $this->partnerPermissions;
   }
   /**
    * @param string

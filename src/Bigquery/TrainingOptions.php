@@ -27,6 +27,10 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var bool
    */
+  public $approxGlobalFeatureContrib;
+  /**
+   * @var bool
+   */
   public $autoArima;
   /**
    * @var string
@@ -271,6 +275,20 @@ class TrainingOptions extends \Google\Collection
   public function getAdjustStepChanges()
   {
     return $this->adjustStepChanges;
+  }
+  /**
+   * @param bool
+   */
+  public function setApproxGlobalFeatureContrib($approxGlobalFeatureContrib)
+  {
+    $this->approxGlobalFeatureContrib = $approxGlobalFeatureContrib;
+  }
+  /**
+   * @return bool
+   */
+  public function getApproxGlobalFeatureContrib()
+  {
+    return $this->approxGlobalFeatureContrib;
   }
   /**
    * @param bool
