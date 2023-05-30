@@ -17,27 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefLatentEntities extends \Google\Collection
+class AssistantGroundingRankerDeviceTargetingLabels extends \Google\Model
 {
-  protected $collection_key = 'latentEntity';
-  protected $latentEntityType = RepositoryWebrefLatentEntity::class;
-  protected $latentEntityDataType = 'array';
+  /**
+   * @var bool
+   */
+  public $isSelectedByLumos;
 
   /**
-   * @param RepositoryWebrefLatentEntity[]
+   * @param bool
    */
-  public function setLatentEntity($latentEntity)
+  public function setIsSelectedByLumos($isSelectedByLumos)
   {
-    $this->latentEntity = $latentEntity;
+    $this->isSelectedByLumos = $isSelectedByLumos;
   }
   /**
-   * @return RepositoryWebrefLatentEntity[]
+   * @return bool
    */
-  public function getLatentEntity()
+  public function getIsSelectedByLumos()
   {
-    return $this->latentEntity;
+    return $this->isSelectedByLumos;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefLatentEntities::class, 'Google_Service_Contentwarehouse_RepositoryWebrefLatentEntities');
+class_alias(AssistantGroundingRankerDeviceTargetingLabels::class, 'Google_Service_Contentwarehouse_AssistantGroundingRankerDeviceTargetingLabels');

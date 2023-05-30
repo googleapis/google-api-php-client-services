@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\Collection
 {
-  protected $collection_key = 'providerClusterIdDeprecated';
+  protected $collection_key = 'providerClusterIds';
   /**
    * @var bool
    */
@@ -28,6 +28,10 @@ class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\
    * @var string[]
    */
   public $providerClusterIdDeprecated;
+  /**
+   * @var string[]
+   */
+  public $providerClusterIds;
   protected $providerIdType = AssistantContextProviderId::class;
   protected $providerIdDataType = '';
   /**
@@ -62,6 +66,20 @@ class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\
   public function getProviderClusterIdDeprecated()
   {
     return $this->providerClusterIdDeprecated;
+  }
+  /**
+   * @param string[]
+   */
+  public function setProviderClusterIds($providerClusterIds)
+  {
+    $this->providerClusterIds = $providerClusterIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getProviderClusterIds()
+  {
+    return $this->providerClusterIds;
   }
   /**
    * @param AssistantContextProviderId

@@ -173,6 +173,10 @@ class TrawlerTrawlerPrivateFetchReplyData extends \Google\Model
   /**
    * @var bool
    */
+  public $isDedicatedHostload;
+  /**
+   * @var bool
+   */
   public $isFloonetFetch;
   /**
    * @var bool
@@ -656,6 +660,20 @@ class TrawlerTrawlerPrivateFetchReplyData extends \Google\Model
   public function getIsBidiStreamingFetch()
   {
     return $this->isBidiStreamingFetch;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsDedicatedHostload($isDedicatedHostload)
+  {
+    $this->isDedicatedHostload = $isDedicatedHostload;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsDedicatedHostload()
+  {
+    return $this->isDedicatedHostload;
   }
   /**
    * @param bool
