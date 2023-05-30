@@ -95,8 +95,8 @@ class BuyersProposals extends \Google\Service\Resource
     return $this->call('cancelNegotiation', [$params], Proposal::class);
   }
   /**
-   * Gets a proposal using its name. The proposal is returned at most recent
-   * revision. revision. (proposals.get)
+   * Gets a proposal using its resource name. The proposal is returned at the
+   * latest revision. (proposals.get)
    *
    * @param string $name Required. Name of the proposal. Format:
    * `buyers/{accountId}/proposals/{proposalId}`
@@ -110,19 +110,19 @@ class BuyersProposals extends \Google\Service\Resource
     return $this->call('get', [$params], Proposal::class);
   }
   /**
-   * Lists proposals. A filter expression (list filter syntax) may be specified to
-   * filter the results. This will not list finalized versions of proposals that
-   * are being renegotiated; to retrieve these use the finalizedProposals
-   * resource. (proposals.listBuyersProposals)
+   * Lists proposals. A filter expression using [Cloud API list filtering
+   * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-
+   * filters) may be specified to filter the results.
+   * (proposals.listBuyersProposals)
    *
    * @param string $parent Required. Parent that owns the collection of proposals
    * Format: `buyers/{accountId}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional query string using the [Cloud API list
-   * filtering syntax](https://developers.google.com/authorized-
-   * buyers/apis/guides/v2/list-filters) Supported columns for filtering are: *
-   * displayName * dealType * updateTime * state
+   * filtering syntax](https://developers.google.com/authorized-buyers/apis/guides
+   * /list-filters) Supported columns for filtering are: * displayName * dealType
+   * * updateTime * state
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If unspecified, the server will put a size of 500.
    * @opt_param string pageToken The page token as returned from
@@ -137,10 +137,10 @@ class BuyersProposals extends \Google\Service\Resource
   }
   /**
    * Updates the proposal at the given revision number. If the revision number in
-   * the request is behind the latest from the server, an error message will be
-   * returned. See FieldMask for how to use FieldMask. Only fields specified in
-   * the UpdateProposalRequest.update_mask will be updated; Fields noted as
-   * 'Immutable' or 'Output only' yet specified in the
+   * the request is behind the latest one kept in the server, an error message
+   * will be returned. See FieldMask for how to use FieldMask. Only fields
+   * specified in the UpdateProposalRequest.update_mask will be updated; Fields
+   * noted as 'Immutable' or 'Output only' yet specified in the
    * UpdateProposalRequest.update_mask will be ignored and left unchanged.
    * Updating a private auction proposal is not allowed and will result in an
    * error. (proposals.patch)

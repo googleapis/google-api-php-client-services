@@ -84,10 +84,10 @@ class BuyersFinalizedDeals extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional query string using the [Cloud API list
-   * filtering syntax](https://developers.google.com/authorized-
-   * buyers/apis/guides/v2/list-filters) Supported columns for filtering are: *
-   * deal.displayName * deal.dealType * deal.createTime * deal.updateTime *
-   * deal.flightStartTime * deal.flightEndTime * dealServingStatus
+   * filtering syntax](https://developers.google.com/authorized-buyers/apis/guides
+   * /list-filters) Supported columns for filtering are: * deal.displayName *
+   * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
+   * deal.flightEndTime * dealServingStatus
    * @opt_param string orderBy An optional query string to sort finalized deals
    * using the [Cloud API sorting
    * syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order).
