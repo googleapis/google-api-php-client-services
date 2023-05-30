@@ -31,6 +31,58 @@ use Google\Service\HangoutsChat\Membership;
 class SpacesMembers extends \Google\Service\Resource
 {
   /**
+   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
+   * a human membership or app membership for the calling app. Creating
+   * memberships for other apps isn't supported. Requires [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
+   * the `chat.memberships` (for human membership) or `chat.memberships.app` (for
+   * app membership) scope. To specify the member to add, set the
+   * `membership.member.name` in the `CreateMembershipRequest`: - To add the
+   * calling app to the space, use `users/app`. - To add a human user, use
+   * `users/{user}`, where `{user}` is either the `{person_id}` for the
+   * [person](https://developers.google.com/people/api/rest/v1/people) from the
+   * People API, or the `id` for the [user](https://developers.google.com/admin-
+   * sdk/directory/reference/rest/v1/users) in the Directory API. For example, if
+   * the People API `Person` `resourceName` is `people/123456789`, you can add the
+   * user to the space by setting the `membership.member.name` to
+   * `users/123456789`. (members.create)
+   *
+   * @param string $parent Required. The resource name of the space for which to
+   * create the membership. Format: spaces/{space}
+   * @param Membership $postBody
+   * @param array $optParams Optional parameters.
+   * @return Membership
+   */
+  public function create($parent, Membership $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Membership::class);
+  }
+  /**
+   * [Developer Preview](https://developers.google.com/workspace/preview): Deletes
+   * a membership. Requires [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
+   * the `chat.memberships` or `chat.memberships.app` authorization scope.
+   * (members.delete)
+   *
+   * @param string $name Required. Resource name of the membership to delete. Chat
+   * apps can delete human users' or their own memberships. Chat apps can't delete
+   * other apps' memberships. When deleting a human membership, requires the
+   * `chat.memberships` scope and `spaces/{space}/members/{member}` format. When
+   * deleting an app membership, requires the `chat.memberships.app` scope and
+   * `spaces/{space}/members/app` format. Format:
+   * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
+   * @param array $optParams Optional parameters.
+   * @return Membership
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Membership::class);
+  }
+  /**
    * Returns a membership. Requires
    * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
    * supports [service account
@@ -45,7 +97,7 @@ class SpacesMembers extends \Google\Service\Resource
    * scope. (members.get)
    *
    * @param string $name Required. Resource name of the membership to retrieve.
-   * Format: spaces/{space}/members/{member}
+   * Format: `spaces/{space}/members/{member}`
    * @param array $optParams Optional parameters.
    * @return Membership
    */
@@ -73,15 +125,33 @@ class SpacesMembers extends \Google\Service\Resource
    * fetch a membership list. Format: spaces/{space}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. A query filter. You can filter memberships
+   * by a member's role ([`role`](https://developers.google.com/chat/api/reference
+   * /rest/v1/spaces.members#membershiprole)) and type ([`member.type`](https://de
+   * velopers.google.com/chat/api/reference/rest/v1/User#type)). To filter by
+   * role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To filter by type, set
+   * `member.type` to `HUMAN` or `BOT`. To filter by both role and type, use the
+   * `AND` operator. To filter by either role or type, use the `OR` operator. For
+   * example, the following queries are valid: ``` role = "ROLE_MANAGER" OR role =
+   * "ROLE_MEMBER" member.type = "HUMAN" AND role = "ROLE_MANAGER" ``` The
+   * following queries are invalid: ``` member.type = "HUMAN" AND member.type =
+   * "BOT" role = "ROLE_MANAGER" AND role = "ROLE_MEMBER" ``` Invalid queries are
+   * rejected by the server with an `INVALID_ARGUMENT` error.
    * @opt_param int pageSize The maximum number of memberships to return. The
-   * service may return fewer than this value. If unspecified, at most 100
-   * memberships are returned. The maximum value is 1000; values above 1000 are
-   * coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+   * service might return fewer than this value. If unspecified, at most 100
+   * memberships are returned. The maximum value is 1,000. If you use a value more
+   * than 1,000, it's automatically changed to 1,000. Negative values return an
+   * `INVALID_ARGUMENT` error.
    * @opt_param string pageToken A page token, received from a previous call to
-   * list memberships. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided should match the call that provided
-   * the page token. Passing different values to the other parameters may lead to
-   * unexpected results.
+   * list memberships. Provide this parameter to retrieve the subsequent page.
+   * When paginating, all other parameters provided should match the call that
+   * provided the page token. Passing different values to the other parameters
+   * might lead to unexpected results.
+   * @opt_param bool showInvited Optional. When `true`, also returns memberships
+   * associated with invited members, in addition to other types of memberships.
+   * If a filter is set, invited memberships that don't match the filter criteria
+   * aren't returned. Currently requires [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * @return ListMembershipsResponse
    */
   public function listSpacesMembers($parent, $optParams = [])

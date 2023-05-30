@@ -417,6 +417,16 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'executeEvent' => [
+              'path' => 'v1alpha/{+name}:executeEvent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1alpha/{+parent}/integrations',
               'httpMethod' => 'GET',
