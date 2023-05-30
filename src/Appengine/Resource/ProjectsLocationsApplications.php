@@ -19,6 +19,7 @@ namespace Google\Service\Appengine\Resource;
 
 use Google\Service\Appengine\Application;
 use Google\Service\Appengine\Operation;
+use Google\Service\Appengine\RepairApplicationRequest;
 
 /**
  * The "applications" collection of methods.
@@ -69,6 +70,33 @@ class ProjectsLocationsApplications extends \Google\Service\Resource
     $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Application::class);
+  }
+  /**
+   * Recreates the required App Engine features for the specified App Engine
+   * application, for example a Cloud Storage bucket or App Engine service
+   * account. Use this method if you receive an error message about a missing
+   * feature, for example, Error retrieving the App Engine service account. If you
+   * have deleted your App Engine service account, this will not be able to
+   * recreate it. Instead, you should attempt to use the IAM undelete API if
+   * possible at https://cloud.google.com/iam/reference/rest/v1/projects.serviceAc
+   * counts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAccounts%2Funi
+   * que_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID
+   * can be found in the Cloud Console Activity Log. (applications.repair)
+   *
+   * @param string $projectsId Part of `name`. Name of the application to repair.
+   * Example: apps/myapp
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
+   * @param RepairApplicationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function repair($projectsId, $locationsId, $applicationsId, RepairApplicationRequest $postBody, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('repair', [$params], Operation::class);
   }
 }
 
