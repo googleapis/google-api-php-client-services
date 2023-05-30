@@ -42,6 +42,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_dataStores_branches_operations;
   public $projects_locations_collections_dataStores_models_operations;
   public $projects_locations_collections_dataStores_operations;
+  public $projects_locations_collections_dataStores_schemas_operations;
   public $projects_locations_collections_dataStores_servingConfigs;
   public $projects_locations_collections_dataStores_userEvents;
   public $projects_locations_collections_engines_operations;
@@ -252,6 +253,48 @@ class DiscoveryEngine extends \Google\Service
         ]
     );
     $this->projects_locations_collections_dataStores_operations = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1beta/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1beta/{+name}/operations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_dataStores_schemas_operations = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresSchemasOperations(
         $this,
         $this->serviceName,
         'operations',
