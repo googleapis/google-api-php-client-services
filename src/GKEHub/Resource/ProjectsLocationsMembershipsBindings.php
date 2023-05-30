@@ -86,6 +86,9 @@ class ProjectsLocationsMembershipsBindings extends \Google\Service\Resource
    * `projects/locations/memberships`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Lists MembershipBindings that match the
+   * filter expression, following the syntax outlined in
+   * https://google.aip.dev/160.
    * @opt_param int pageSize Optional. When requesting a 'page' of resources,
    * `page_size` specifies number of resources to return. If unspecified or set to
    * 0, all resources will be returned.
