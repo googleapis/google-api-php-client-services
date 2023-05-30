@@ -17,63 +17,64 @@
 
 namespace Google\Service\VMMigrationService;
 
-class AwsSourceVmDetails extends \Google\Collection
+class AwsDiskDetails extends \Google\Model
 {
-  protected $collection_key = 'disks';
+  /**
+   * @var int
+   */
+  public $diskNumber;
   /**
    * @var string
    */
-  public $committedStorageBytes;
-  protected $disksType = AwsDiskDetails::class;
-  protected $disksDataType = 'array';
+  public $sizeGb;
   /**
    * @var string
    */
-  public $firmware;
+  public $volumeId;
 
   /**
-   * @param string
+   * @param int
    */
-  public function setCommittedStorageBytes($committedStorageBytes)
+  public function setDiskNumber($diskNumber)
   {
-    $this->committedStorageBytes = $committedStorageBytes;
+    $this->diskNumber = $diskNumber;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getCommittedStorageBytes()
+  public function getDiskNumber()
   {
-    return $this->committedStorageBytes;
-  }
-  /**
-   * @param AwsDiskDetails[]
-   */
-  public function setDisks($disks)
-  {
-    $this->disks = $disks;
-  }
-  /**
-   * @return AwsDiskDetails[]
-   */
-  public function getDisks()
-  {
-    return $this->disks;
+    return $this->diskNumber;
   }
   /**
    * @param string
    */
-  public function setFirmware($firmware)
+  public function setSizeGb($sizeGb)
   {
-    $this->firmware = $firmware;
+    $this->sizeGb = $sizeGb;
   }
   /**
    * @return string
    */
-  public function getFirmware()
+  public function getSizeGb()
   {
-    return $this->firmware;
+    return $this->sizeGb;
+  }
+  /**
+   * @param string
+   */
+  public function setVolumeId($volumeId)
+  {
+    $this->volumeId = $volumeId;
+  }
+  /**
+   * @return string
+   */
+  public function getVolumeId()
+  {
+    return $this->volumeId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AwsSourceVmDetails::class, 'Google_Service_VMMigrationService_AwsSourceVmDetails');
+class_alias(AwsDiskDetails::class, 'Google_Service_VMMigrationService_AwsDiskDetails');
