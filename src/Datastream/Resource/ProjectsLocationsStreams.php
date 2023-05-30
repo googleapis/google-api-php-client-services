@@ -132,6 +132,10 @@ class ProjectsLocationsStreams extends \Google\Service\Resource
    * @param Stream $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string cdcStrategy.specificStartPosition.mysqlLogPosition.logFile
+   * The binary log file name.
+   * @opt_param int cdcStrategy.specificStartPosition.mysqlLogPosition.logPosition
+   * The position within the binary log file. Default is head of file.
    * @opt_param bool force Optional. Update the stream without validating it.
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
