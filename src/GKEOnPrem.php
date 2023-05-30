@@ -45,6 +45,7 @@ class GKEOnPrem extends \Google\Service
   public $projects_locations_bareMetalClusters_bareMetalNodePools;
   public $projects_locations_bareMetalClusters_bareMetalNodePools_operations;
   public $projects_locations_bareMetalClusters_operations;
+  public $projects_locations_bareMetalStandaloneClusters_bareMetalStandaloneNodePools;
   public $projects_locations_operations;
   public $projects_locations_vmwareAdminClusters;
   public $projects_locations_vmwareAdminClusters_operations;
@@ -596,6 +597,10 @@ class GKEOnPrem extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'v1/{+resource}:getIamPolicy',
@@ -628,6 +633,10 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'patch' => [
               'path' => 'v1/{+name}',
@@ -637,6 +646,10 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'allowMissing' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'updateMask' => [
                   'location' => 'query',
@@ -777,6 +790,26 @@ class GKEOnPrem extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_bareMetalStandaloneClusters_bareMetalStandaloneNodePools = new GKEOnPrem\Resource\ProjectsLocationsBareMetalStandaloneClustersBareMetalStandaloneNodePools(
+        $this,
+        $this->serviceName,
+        'bareMetalStandaloneNodePools',
+        [
+          'methods' => [
+            'enroll' => [
+              'path' => 'v1/{+parent}/bareMetalStandaloneNodePools:enroll',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_operations = new GKEOnPrem\Resource\ProjectsLocationsOperations(
         $this,
         $this->serviceName,
@@ -863,6 +896,10 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'getIamPolicy' => [
@@ -1326,6 +1363,10 @@ class GKEOnPrem extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'v1/{+resource}:getIamPolicy',
@@ -1355,6 +1396,10 @@ class GKEOnPrem extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -1405,6 +1450,10 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'allowMissing' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'etag' => [
                   'location' => 'query',

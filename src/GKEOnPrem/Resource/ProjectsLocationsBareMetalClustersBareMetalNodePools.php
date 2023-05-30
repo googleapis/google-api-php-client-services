@@ -117,6 +117,11 @@ class ProjectsLocationsBareMetalClustersBareMetalNodePools extends \Google\Servi
    * /{project}/locations/{location}/bareMetalClusters/{cluster}/bareMetalNodePool
    * s/{nodepool}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View for bare metal node pool. When `BASIC` is
+   * specified, only the node pool resource name is returned. The default/unset
+   * value `NODE_POOL_VIEW_UNSPECIFIED` is the same as `FULL', which returns the
+   * complete node pool configuration details.
    * @return BareMetalNodePool
    */
   public function get($name, $optParams = [])
@@ -174,6 +179,10 @@ class ProjectsLocationsBareMetalClustersBareMetalNodePools extends \Google\Servi
    * `ListBareMetalNodePools` call. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to `ListBareMetalNodePools`
    * must match the call that provided the page token.
+   * @opt_param string view View for bare metal node pools. When `BASIC` is
+   * specified, only the node pool resource name is returned. The default/unset
+   * value `NODE_POOL_VIEW_UNSPECIFIED` is the same as `FULL', which returns the
+   * complete node pool configuration details.
    * @return ListBareMetalNodePoolsResponse
    */
   public function listProjectsLocationsBareMetalClustersBareMetalNodePools($parent, $optParams = [])
@@ -190,6 +199,10 @@ class ProjectsLocationsBareMetalClustersBareMetalNodePools extends \Google\Servi
    * @param BareMetalNodePool $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool allowMissing If set to true, and the bare metal node pool is
+   * not found, the request will create a new bare metal node pool with the
+   * provided configuration. The user must have both create and update permission
+   * to call Update with allow_missing set to true.
    * @opt_param string updateMask Required. Field mask is used to specify the
    * fields to be overwritten in the BareMetalNodePool resource by the update. The
    * fields specified in the update_mask are relative to the resource, not the

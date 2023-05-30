@@ -38,7 +38,7 @@ use Google\Service\GKEOnPrem\VmwareCluster;
 class ProjectsLocationsVmwareClusters extends \Google\Service\Resource
 {
   /**
-   * Creates a new VMware cluster in a given project and location.
+   * Creates a new VMware user cluster in a given project and location.
    * (vmwareClusters.create)
    *
    * @param string $parent Required. The parent of the project and location where

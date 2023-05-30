@@ -24,6 +24,10 @@ class OperationMetadata extends \Google\Model
    */
   public $apiVersion;
   /**
+   * @var bool
+   */
+  public $controlPlaneDisconnected;
+  /**
    * @var string
    */
   public $createTime;
@@ -65,6 +69,20 @@ class OperationMetadata extends \Google\Model
   public function getApiVersion()
   {
     return $this->apiVersion;
+  }
+  /**
+   * @param bool
+   */
+  public function setControlPlaneDisconnected($controlPlaneDisconnected)
+  {
+    $this->controlPlaneDisconnected = $controlPlaneDisconnected;
+  }
+  /**
+   * @return bool
+   */
+  public function getControlPlaneDisconnected()
+  {
+    return $this->controlPlaneDisconnected;
   }
   /**
    * @param string

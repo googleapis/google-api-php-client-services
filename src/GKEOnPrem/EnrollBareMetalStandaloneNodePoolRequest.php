@@ -17,46 +17,46 @@
 
 namespace Google\Service\GKEOnPrem;
 
-class EnrollVmwareAdminClusterRequest extends \Google\Model
+class EnrollBareMetalStandaloneNodePoolRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $membership;
+  public $bareMetalStandaloneNodePoolId;
   /**
-   * @var string
+   * @var bool
    */
-  public $vmwareAdminClusterId;
+  public $validateOnly;
 
   /**
    * @param string
    */
-  public function setMembership($membership)
+  public function setBareMetalStandaloneNodePoolId($bareMetalStandaloneNodePoolId)
   {
-    $this->membership = $membership;
+    $this->bareMetalStandaloneNodePoolId = $bareMetalStandaloneNodePoolId;
   }
   /**
    * @return string
    */
-  public function getMembership()
+  public function getBareMetalStandaloneNodePoolId()
   {
-    return $this->membership;
+    return $this->bareMetalStandaloneNodePoolId;
   }
   /**
-   * @param string
+   * @param bool
    */
-  public function setVmwareAdminClusterId($vmwareAdminClusterId)
+  public function setValidateOnly($validateOnly)
   {
-    $this->vmwareAdminClusterId = $vmwareAdminClusterId;
+    $this->validateOnly = $validateOnly;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getVmwareAdminClusterId()
+  public function getValidateOnly()
   {
-    return $this->vmwareAdminClusterId;
+    return $this->validateOnly;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EnrollVmwareAdminClusterRequest::class, 'Google_Service_GKEOnPrem_EnrollVmwareAdminClusterRequest');
+class_alias(EnrollBareMetalStandaloneNodePoolRequest::class, 'Google_Service_GKEOnPrem_EnrollBareMetalStandaloneNodePoolRequest');

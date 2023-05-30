@@ -113,6 +113,11 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * /{project}/locations/{location}/vmwareClusters/{cluster}/vmwareNodePools/{nod
    * epool}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View for VMware node pool. When `BASIC` is specified,
+   * only the node pool resource name is returned. The default/unset value
+   * `NODE_POOL_VIEW_UNSPECIFIED` is the same as `FULL', which returns the
+   * complete node pool configuration details.
    * @return VmwareNodePool
    */
   public function get($name, $optParams = [])
@@ -169,6 +174,10 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * `ListVmwareNodePools` call. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to `ListVmwareNodePools` must
    * match the call that provided the page token.
+   * @opt_param string view View for VMware node pools. When `BASIC` is specified,
+   * only the node pool resource name is returned. The default/unset value
+   * `NODE_POOL_VIEW_UNSPECIFIED` is the same as `FULL', which returns the
+   * complete node pool configuration details.
    * @return ListVmwareNodePoolsResponse
    */
   public function listProjectsLocationsVmwareClustersVmwareNodePools($parent, $optParams = [])
@@ -250,6 +259,9 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * ols/{nodepool}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool allowMissing If set to true, and the VMware node pool is not
+   * found, the request will succeed but no action will be taken on the server and
+   * return a completed LRO.
    * @opt_param string etag The current etag of the VMware node pool. If an etag
    * is provided and does not match the current etag of node pool, deletion will
    * be blocked and an ABORTED error will be returned.
