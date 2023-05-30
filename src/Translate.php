@@ -100,6 +100,16 @@ class Translate extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'romanizeText' => [
+              'path' => 'v3/{+parent}:romanizeText',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'translateText' => [
               'path' => 'v3/{+parent}:translateText',
               'httpMethod' => 'POST',
@@ -198,6 +208,16 @@ class Translate extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'romanizeText' => [
+              'path' => 'v3/{+parent}:romanizeText',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'translateDocument' => [

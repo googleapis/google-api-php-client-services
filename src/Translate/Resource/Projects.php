@@ -19,6 +19,8 @@ namespace Google\Service\Translate\Resource;
 
 use Google\Service\Translate\DetectLanguageRequest;
 use Google\Service\Translate\DetectLanguageResponse;
+use Google\Service\Translate\RomanizeTextRequest;
+use Google\Service\Translate\RomanizeTextResponse;
 use Google\Service\Translate\SupportedLanguages;
 use Google\Service\Translate\TranslateTextRequest;
 use Google\Service\Translate\TranslateTextResponse;
@@ -82,6 +84,25 @@ class Projects extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('getSupportedLanguages', [$params], SupportedLanguages::class);
+  }
+  /**
+   * Romanize input text written in non-Latin scripts to Latin text.
+   * (projects.romanizeText)
+   *
+   * @param string $parent Required. Project or location to make a call. Must
+   * refer to a caller's project. Format: `projects/{project-number-or-
+   * id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global
+   * calls, use `projects/{project-number-or-id}/locations/global` or `projects
+   * /{project-number-or-id}`.
+   * @param RomanizeTextRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RomanizeTextResponse
+   */
+  public function romanizeText($parent, RomanizeTextRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('romanizeText', [$params], RomanizeTextResponse::class);
   }
   /**
    * Translates input text and returns translated text. (projects.translateText)
