@@ -27,6 +27,10 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   /**
    * @var string
    */
+  public $connectionRevision;
+  /**
+   * @var string
+   */
   public $connectorVersion;
   /**
    * @var string
@@ -116,6 +120,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getConfigVariables()
   {
     return $this->configVariables;
+  }
+  /**
+   * @param string
+   */
+  public function setConnectionRevision($connectionRevision)
+  {
+    $this->connectionRevision = $connectionRevision;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectionRevision()
+  {
+    return $this->connectionRevision;
   }
   /**
    * @param string
