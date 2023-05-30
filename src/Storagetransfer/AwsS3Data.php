@@ -28,6 +28,10 @@ class AwsS3Data extends \Google\Model
   /**
    * @var string
    */
+  public $credentialsSecret;
+  /**
+   * @var string
+   */
   public $path;
   /**
    * @var string
@@ -61,6 +65,20 @@ class AwsS3Data extends \Google\Model
   public function getBucketName()
   {
     return $this->bucketName;
+  }
+  /**
+   * @param string
+   */
+  public function setCredentialsSecret($credentialsSecret)
+  {
+    $this->credentialsSecret = $credentialsSecret;
+  }
+  /**
+   * @return string
+   */
+  public function getCredentialsSecret()
+  {
+    return $this->credentialsSecret;
   }
   /**
    * @param string
