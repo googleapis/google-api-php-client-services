@@ -17,11 +17,19 @@
 
 namespace Google\Service\CloudComposer\Resource;
 
+use Google\Service\CloudComposer\DatabaseFailoverRequest;
 use Google\Service\CloudComposer\Environment;
+use Google\Service\CloudComposer\ExecuteAirflowCommandRequest;
+use Google\Service\CloudComposer\ExecuteAirflowCommandResponse;
+use Google\Service\CloudComposer\FetchDatabasePropertiesResponse;
 use Google\Service\CloudComposer\ListEnvironmentsResponse;
 use Google\Service\CloudComposer\LoadSnapshotRequest;
 use Google\Service\CloudComposer\Operation;
+use Google\Service\CloudComposer\PollAirflowCommandRequest;
+use Google\Service\CloudComposer\PollAirflowCommandResponse;
 use Google\Service\CloudComposer\SaveSnapshotRequest;
+use Google\Service\CloudComposer\StopAirflowCommandRequest;
+use Google\Service\CloudComposer\StopAirflowCommandResponse;
 
 /**
  * The "environments" collection of methods.
@@ -49,6 +57,22 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
+   * Triggers database failover (only for highly resilient environments).
+   * (environments.databaseFailover)
+   *
+   * @param string $environment Target environment:
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   * @param DatabaseFailoverRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function databaseFailover($environment, DatabaseFailoverRequest $postBody, $optParams = [])
+  {
+    $params = ['environment' => $environment, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('databaseFailover', [$params], Operation::class);
+  }
+  /**
    * Delete an environment. (environments.delete)
    *
    * @param string $name The environment to delete, in the form:
@@ -61,6 +85,36 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Executes Airflow CLI command. (environments.executeAirflowCommand)
+   *
+   * @param string $environment The resource name of the environment in the form:
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+   * @param ExecuteAirflowCommandRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ExecuteAirflowCommandResponse
+   */
+  public function executeAirflowCommand($environment, ExecuteAirflowCommandRequest $postBody, $optParams = [])
+  {
+    $params = ['environment' => $environment, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('executeAirflowCommand', [$params], ExecuteAirflowCommandResponse::class);
+  }
+  /**
+   * Fetches database properties. (environments.fetchDatabaseProperties)
+   *
+   * @param string $environment Required. The resource name of the environment, in
+   * the form:
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   * @param array $optParams Optional parameters.
+   * @return FetchDatabasePropertiesResponse
+   */
+  public function fetchDatabaseProperties($environment, $optParams = [])
+  {
+    $params = ['environment' => $environment];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchDatabaseProperties', [$params], FetchDatabasePropertiesResponse::class);
   }
   /**
    * Get an existing environment. (environments.get)
@@ -204,6 +258,22 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
+   * Polls Airflow CLI command execution and fetches logs.
+   * (environments.pollAirflowCommand)
+   *
+   * @param string $environment The resource name of the environment in the form:
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   * @param PollAirflowCommandRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return PollAirflowCommandResponse
+   */
+  public function pollAirflowCommand($environment, PollAirflowCommandRequest $postBody, $optParams = [])
+  {
+    $params = ['environment' => $environment, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('pollAirflowCommand', [$params], PollAirflowCommandResponse::class);
+  }
+  /**
    * Creates a snapshots of a Cloud Composer environment. As a result of this
    * operation, snapshot of environment's state is stored in a location specified
    * in the SaveSnapshotRequest. (environments.saveSnapshot)
@@ -220,6 +290,21 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
     $params = ['environment' => $environment, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('saveSnapshot', [$params], Operation::class);
+  }
+  /**
+   * Stops Airflow CLI command execution. (environments.stopAirflowCommand)
+   *
+   * @param string $environment The resource name of the environment in the form:
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+   * @param StopAirflowCommandRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return StopAirflowCommandResponse
+   */
+  public function stopAirflowCommand($environment, StopAirflowCommandRequest $postBody, $optParams = [])
+  {
+    $params = ['environment' => $environment, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('stopAirflowCommand', [$params], StopAirflowCommandResponse::class);
   }
 }
 
