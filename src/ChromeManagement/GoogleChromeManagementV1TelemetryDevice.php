@@ -44,6 +44,10 @@ class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
   protected $graphicsInfoDataType = '';
   protected $graphicsStatusReportType = GoogleChromeManagementV1GraphicsStatusReport::class;
   protected $graphicsStatusReportDataType = 'array';
+  protected $heartbeatStatusReportType = GoogleChromeManagementV1HeartbeatStatusReport::class;
+  protected $heartbeatStatusReportDataType = 'array';
+  protected $kioskAppStatusReportType = GoogleChromeManagementV1KioskAppStatusReport::class;
+  protected $kioskAppStatusReportDataType = 'array';
   protected $memoryInfoType = GoogleChromeManagementV1MemoryInfo::class;
   protected $memoryInfoDataType = '';
   protected $memoryStatusReportType = GoogleChromeManagementV1MemoryStatusReport::class;
@@ -216,6 +220,34 @@ class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
   public function getGraphicsStatusReport()
   {
     return $this->graphicsStatusReport;
+  }
+  /**
+   * @param GoogleChromeManagementV1HeartbeatStatusReport[]
+   */
+  public function setHeartbeatStatusReport($heartbeatStatusReport)
+  {
+    $this->heartbeatStatusReport = $heartbeatStatusReport;
+  }
+  /**
+   * @return GoogleChromeManagementV1HeartbeatStatusReport[]
+   */
+  public function getHeartbeatStatusReport()
+  {
+    return $this->heartbeatStatusReport;
+  }
+  /**
+   * @param GoogleChromeManagementV1KioskAppStatusReport[]
+   */
+  public function setKioskAppStatusReport($kioskAppStatusReport)
+  {
+    $this->kioskAppStatusReport = $kioskAppStatusReport;
+  }
+  /**
+   * @return GoogleChromeManagementV1KioskAppStatusReport[]
+   */
+  public function getKioskAppStatusReport()
+  {
+    return $this->kioskAppStatusReport;
   }
   /**
    * @param GoogleChromeManagementV1MemoryInfo
