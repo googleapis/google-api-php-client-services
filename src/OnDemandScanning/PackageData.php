@@ -24,6 +24,8 @@ class PackageData extends \Google\Collection
    * @var string
    */
   public $architecture;
+  protected $binarySourceInfoType = BinarySourceInfo::class;
+  protected $binarySourceInfoDataType = 'array';
   protected $binaryVersionType = PackageVersion::class;
   protected $binaryVersionDataType = '';
   /**
@@ -84,6 +86,20 @@ class PackageData extends \Google\Collection
   public function getArchitecture()
   {
     return $this->architecture;
+  }
+  /**
+   * @param BinarySourceInfo[]
+   */
+  public function setBinarySourceInfo($binarySourceInfo)
+  {
+    $this->binarySourceInfo = $binarySourceInfo;
+  }
+  /**
+   * @return BinarySourceInfo[]
+   */
+  public function getBinarySourceInfo()
+  {
+    return $this->binarySourceInfo;
   }
   /**
    * @param PackageVersion

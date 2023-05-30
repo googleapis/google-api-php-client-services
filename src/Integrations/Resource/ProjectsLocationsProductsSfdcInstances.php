@@ -86,7 +86,7 @@ class ProjectsLocationsProductsSfdcInstances extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Filtering as supported in
-   * https://developers.google.com/authorized-buyers/apis/guides/v2/list-filters.
+   * https://developers.google.com/authorized-buyers/apis/guides/list-filters.
    * @opt_param int pageSize The size of entries in the response. If unspecified,
    * defaults to 100.
    * @opt_param string pageToken The token returned in the previous response.

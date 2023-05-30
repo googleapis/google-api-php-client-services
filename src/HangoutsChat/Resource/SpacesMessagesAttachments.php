@@ -37,7 +37,7 @@ class SpacesMessagesAttachments extends \Google\Service\Resource
    * accounts). (attachments.get)
    *
    * @param string $name Required. Resource name of the attachment, in the form
-   * "spaces/messages/attachments".
+   * `spaces/messages/attachments`.
    * @param array $optParams Optional parameters.
    * @return Attachment
    */
