@@ -17,46 +17,27 @@
 
 namespace Google\Service\HangoutsChat;
 
-class AttachmentDataRef extends \Google\Model
+class GoogleAppsCardV1Columns extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $attachmentUploadToken;
-  /**
-   * @var string
-   */
-  public $resourceName;
+  protected $collection_key = 'columnItems';
+  protected $columnItemsType = GoogleAppsCardV1Column::class;
+  protected $columnItemsDataType = 'array';
 
   /**
-   * @param string
+   * @param GoogleAppsCardV1Column[]
    */
-  public function setAttachmentUploadToken($attachmentUploadToken)
+  public function setColumnItems($columnItems)
   {
-    $this->attachmentUploadToken = $attachmentUploadToken;
+    $this->columnItems = $columnItems;
   }
   /**
-   * @return string
+   * @return GoogleAppsCardV1Column[]
    */
-  public function getAttachmentUploadToken()
+  public function getColumnItems()
   {
-    return $this->attachmentUploadToken;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceName($resourceName)
-  {
-    $this->resourceName = $resourceName;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceName()
-  {
-    return $this->resourceName;
+    return $this->columnItems;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AttachmentDataRef::class, 'Google_Service_HangoutsChat_AttachmentDataRef');
+class_alias(GoogleAppsCardV1Columns::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Columns');

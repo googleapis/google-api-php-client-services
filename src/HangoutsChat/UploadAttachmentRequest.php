@@ -17,46 +17,28 @@
 
 namespace Google\Service\HangoutsChat;
 
-class AttachmentDataRef extends \Google\Model
+class UploadAttachmentRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $attachmentUploadToken;
-  /**
-   * @var string
-   */
-  public $resourceName;
+  public $filename;
 
   /**
    * @param string
    */
-  public function setAttachmentUploadToken($attachmentUploadToken)
+  public function setFilename($filename)
   {
-    $this->attachmentUploadToken = $attachmentUploadToken;
+    $this->filename = $filename;
   }
   /**
    * @return string
    */
-  public function getAttachmentUploadToken()
+  public function getFilename()
   {
-    return $this->attachmentUploadToken;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceName($resourceName)
-  {
-    $this->resourceName = $resourceName;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceName()
-  {
-    return $this->resourceName;
+    return $this->filename;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AttachmentDataRef::class, 'Google_Service_HangoutsChat_AttachmentDataRef');
+class_alias(UploadAttachmentRequest::class, 'Google_Service_HangoutsChat_UploadAttachmentRequest');

@@ -17,46 +17,28 @@
 
 namespace Google\Service\HangoutsChat;
 
-class AttachmentDataRef extends \Google\Model
+class DeletionMetadata extends \Google\Model
 {
   /**
    * @var string
    */
-  public $attachmentUploadToken;
-  /**
-   * @var string
-   */
-  public $resourceName;
+  public $deletionType;
 
   /**
    * @param string
    */
-  public function setAttachmentUploadToken($attachmentUploadToken)
+  public function setDeletionType($deletionType)
   {
-    $this->attachmentUploadToken = $attachmentUploadToken;
+    $this->deletionType = $deletionType;
   }
   /**
    * @return string
    */
-  public function getAttachmentUploadToken()
+  public function getDeletionType()
   {
-    return $this->attachmentUploadToken;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceName($resourceName)
-  {
-    $this->resourceName = $resourceName;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceName()
-  {
-    return $this->resourceName;
+    return $this->deletionType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AttachmentDataRef::class, 'Google_Service_HangoutsChat_AttachmentDataRef');
+class_alias(DeletionMetadata::class, 'Google_Service_HangoutsChat_DeletionMetadata');

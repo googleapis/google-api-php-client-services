@@ -17,46 +17,44 @@
 
 namespace Google\Service\HangoutsChat;
 
-class AttachmentDataRef extends \Google\Model
+class EmojiReactionSummary extends \Google\Model
 {
+  protected $emojiType = Emoji::class;
+  protected $emojiDataType = '';
   /**
-   * @var string
+   * @var int
    */
-  public $attachmentUploadToken;
-  /**
-   * @var string
-   */
-  public $resourceName;
+  public $reactionCount;
 
   /**
-   * @param string
+   * @param Emoji
    */
-  public function setAttachmentUploadToken($attachmentUploadToken)
+  public function setEmoji(Emoji $emoji)
   {
-    $this->attachmentUploadToken = $attachmentUploadToken;
+    $this->emoji = $emoji;
   }
   /**
-   * @return string
+   * @return Emoji
    */
-  public function getAttachmentUploadToken()
+  public function getEmoji()
   {
-    return $this->attachmentUploadToken;
+    return $this->emoji;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setResourceName($resourceName)
+  public function setReactionCount($reactionCount)
   {
-    $this->resourceName = $resourceName;
+    $this->reactionCount = $reactionCount;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getResourceName()
+  public function getReactionCount()
   {
-    return $this->resourceName;
+    return $this->reactionCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AttachmentDataRef::class, 'Google_Service_HangoutsChat_AttachmentDataRef');
+class_alias(EmojiReactionSummary::class, 'Google_Service_HangoutsChat_EmojiReactionSummary');

@@ -18,6 +18,7 @@
 namespace Google\Service\HangoutsChat\Resource;
 
 use Google\Service\HangoutsChat\ChatEmpty;
+use Google\Service\HangoutsChat\ListMessagesResponse;
 use Google\Service\HangoutsChat\Message;
 
 /**
@@ -49,7 +50,7 @@ class SpacesMessages extends \Google\Service\Resource
    * messages without a service account or user authentication. (messages.create)
    *
    * @param string $parent Required. The resource name of the space in which to
-   * create a message. Format: spaces/{space}
+   * create a message. Format: `spaces/{space}`
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
@@ -91,10 +92,17 @@ class SpacesMessages extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` authorization scope. (messages.delete)
    *
-   * @param string $name Required. Resource name of the message to be deleted, in
-   * the form "spaces/messages" Example:
-   * spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+   * @param string $name Required. Resource name of the message that you want to
+   * delete, in the form `spaces/messages` Example:
+   * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force When `true`, deleting a message also deletes its
+   * threaded replies. When `false`, if a message has threaded replies, deletion
+   * fails. Only applies when [authenticating as a
+   * user](https://developers.google.com/chat/api/guides/auth/users). Has no
+   * effect when [authenticating with a service account]
+   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
    * @return ChatEmpty
    */
   public function delete($name, $optParams = [])
@@ -119,7 +127,7 @@ class SpacesMessages extends \Google\Service\Resource
    * Note: Might return a message from a blocked member or space. (messages.get)
    *
    * @param string $name Required. Resource name of the message to retrieve.
-   * Format: spaces/{space}/messages/{message} If the message begins with
+   * Format: `spaces/{space}/messages/{message}` If the message begins with
    * `client-`, then it has a custom name assigned by a Chat app that created it
    * with the Chat REST API. That Chat app (but not others) can pass the custom
    * name to get, update, or delete the message. To learn more, see [create and
@@ -133,6 +141,64 @@ class SpacesMessages extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Message::class);
+  }
+  /**
+   * [Developer Preview](https://developers.google.com/workspace/preview): Lists
+   * messages in a space that the caller is a member of, including messages from
+   * blocked members and spaces. Requires [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
+   * the `chat.messages` or `chat.messages.readonly` authorization scope. This
+   * method is only supported in spaces that don't allow users from outside the
+   * Workspace organization to join. (messages.listSpacesMessages)
+   *
+   * @param string $parent Required. The resource name of the space to list
+   * messages from. Format: `spaces/{space}`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter A query filter. You can filter messages by date
+   * (`create_time`) and thread (`thread.name`). To filter messages by the date
+   * they were created, specify the `create_time` with a timestamp in
+   * [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and double
+   * quotation marks. For example, `"2023-04-21T11:30:00-04:00"`. You can use the
+   * greater than operator `>` to list messages that were created after a
+   * timestamp, or the less than operator `<` to list messages that were created
+   * before a timestamp. To filter messages within a time interval, use the `AND`
+   * operator between two timestamps. To filter by thread, specify the
+   * `thread.name`, formatted as `spaces/{space}/threads/{thread}`. You can only
+   * specify one `thread.name` per query. To filter by both thread and date, use
+   * the `AND` operator in your query. For example, the following queries are
+   * valid: ``` create_time > "2012-04-21T11:30:00-04:00" create_time >
+   * "2012-04-21T11:30:00-04:00" AND thread.name = spaces/AAAAAAAAAAA/threads/123
+   * create_time > "2012-04-21T11:30:00+00:00" AND create_time <
+   * "2013-01-01T00:00:00+00:00" AND thread.name = spaces/AAAAAAAAAAA/threads/123
+   * thread.name = spaces/AAAAAAAAAAA/threads/123 ``` Invalid queries are rejected
+   * by the server with an `INVALID_ARGUMENT` error.
+   * @opt_param string orderBy Optional, if resuming from a previous query. How
+   * the list of messages is ordered. Specify a value to order by an ordering
+   * operation. Valid ordering operation values are as follows: - `ASC` for
+   * ascending. - `DESC` for descending. The default ordering is `create_time
+   * ASC`.
+   * @opt_param int pageSize The maximum number of messages returned. The service
+   * might return fewer messages than this value. If unspecified, at most 25 are
+   * returned. The maximum value is 1,000. If you use a value more than 1,000,
+   * it's automatically changed to 1,000. Negative values return an
+   * `INVALID_ARGUMENT` error.
+   * @opt_param string pageToken Optional, if resuming from a previous query. A
+   * page token received from a previous list messages call. Provide this
+   * parameter to retrieve the subsequent page. When paginating, all other
+   * parameters provided should match the call that provided the page token.
+   * Passing different values to the other parameters might lead to unexpected
+   * results.
+   * @opt_param bool showDeleted Whether to include deleted messages. Deleted
+   * messages include deleted time and metadata about their deletion, but message
+   * content is unavailable.
+   * @return ListMessagesResponse
+   */
+  public function listSpacesMessages($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], ListMessagesResponse::class);
   }
   /**
    * Updates a message. There's a difference between `patch` and `update` methods.
@@ -156,14 +222,14 @@ class SpacesMessages extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing Optional. If `true` and the message is not
-   * found, a new message is created and `updateMask` is ignored. The specified
-   * message ID must be [client-assigned](https://developers.google.com/chat/api/g
-   * uides/crudl/messages#name_a_created_message) or the request fails.
+   * @opt_param bool allowMissing Optional. If `true` and the message isn't found,
+   * a new message is created and `updateMask` is ignored. The specified message
+   * ID must be [client-assigned](https://developers.google.com/chat/api/guides/cr
+   * udl/messages#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
-   * multiple values with commas. Currently supported field paths: - text - cards
-   * (Requires [service account authentication](/chat/api/guides/auth/service-
-   * accounts).) - cards_v2
+   * multiple values with commas. Currently supported field paths: - `text` -
+   * `cards` (Requires [service account authentication](/chat/api/guides/auth
+   * /service-accounts).) - `cards_v2`
    * @return Message
    */
   public function patch($name, Message $postBody, $optParams = [])
@@ -194,14 +260,14 @@ class SpacesMessages extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing Optional. If `true` and the message is not
-   * found, a new message is created and `updateMask` is ignored. The specified
-   * message ID must be [client-assigned](https://developers.google.com/chat/api/g
-   * uides/crudl/messages#name_a_created_message) or the request fails.
+   * @opt_param bool allowMissing Optional. If `true` and the message isn't found,
+   * a new message is created and `updateMask` is ignored. The specified message
+   * ID must be [client-assigned](https://developers.google.com/chat/api/guides/cr
+   * udl/messages#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
-   * multiple values with commas. Currently supported field paths: - text - cards
-   * (Requires [service account authentication](/chat/api/guides/auth/service-
-   * accounts).) - cards_v2
+   * multiple values with commas. Currently supported field paths: - `text` -
+   * `cards` (Requires [service account authentication](/chat/api/guides/auth
+   * /service-accounts).) - `cards_v2`
    * @return Message
    */
   public function update($name, Message $postBody, $optParams = [])

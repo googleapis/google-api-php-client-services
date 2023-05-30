@@ -17,24 +17,14 @@
 
 namespace Google\Service\HangoutsChat;
 
-class GoogleAppsCardV1Widget extends \Google\Model
+class GoogleAppsCardV1Widgets extends \Google\Model
 {
   protected $buttonListType = GoogleAppsCardV1ButtonList::class;
   protected $buttonListDataType = '';
-  protected $columnsType = GoogleAppsCardV1Columns::class;
-  protected $columnsDataType = '';
   protected $dateTimePickerType = GoogleAppsCardV1DateTimePicker::class;
   protected $dateTimePickerDataType = '';
   protected $decoratedTextType = GoogleAppsCardV1DecoratedText::class;
   protected $decoratedTextDataType = '';
-  protected $dividerType = GoogleAppsCardV1Divider::class;
-  protected $dividerDataType = '';
-  protected $gridType = GoogleAppsCardV1Grid::class;
-  protected $gridDataType = '';
-  /**
-   * @var string
-   */
-  public $horizontalAlignment;
   protected $imageType = GoogleAppsCardV1Image::class;
   protected $imageDataType = '';
   protected $selectionInputType = GoogleAppsCardV1SelectionInput::class;
@@ -57,20 +47,6 @@ class GoogleAppsCardV1Widget extends \Google\Model
   public function getButtonList()
   {
     return $this->buttonList;
-  }
-  /**
-   * @param GoogleAppsCardV1Columns
-   */
-  public function setColumns(GoogleAppsCardV1Columns $columns)
-  {
-    $this->columns = $columns;
-  }
-  /**
-   * @return GoogleAppsCardV1Columns
-   */
-  public function getColumns()
-  {
-    return $this->columns;
   }
   /**
    * @param GoogleAppsCardV1DateTimePicker
@@ -99,48 +75,6 @@ class GoogleAppsCardV1Widget extends \Google\Model
   public function getDecoratedText()
   {
     return $this->decoratedText;
-  }
-  /**
-   * @param GoogleAppsCardV1Divider
-   */
-  public function setDivider(GoogleAppsCardV1Divider $divider)
-  {
-    $this->divider = $divider;
-  }
-  /**
-   * @return GoogleAppsCardV1Divider
-   */
-  public function getDivider()
-  {
-    return $this->divider;
-  }
-  /**
-   * @param GoogleAppsCardV1Grid
-   */
-  public function setGrid(GoogleAppsCardV1Grid $grid)
-  {
-    $this->grid = $grid;
-  }
-  /**
-   * @return GoogleAppsCardV1Grid
-   */
-  public function getGrid()
-  {
-    return $this->grid;
-  }
-  /**
-   * @param string
-   */
-  public function setHorizontalAlignment($horizontalAlignment)
-  {
-    $this->horizontalAlignment = $horizontalAlignment;
-  }
-  /**
-   * @return string
-   */
-  public function getHorizontalAlignment()
-  {
-    return $this->horizontalAlignment;
   }
   /**
    * @param GoogleAppsCardV1Image
@@ -201,4 +135,4 @@ class GoogleAppsCardV1Widget extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAppsCardV1Widget::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Widget');
+class_alias(GoogleAppsCardV1Widgets::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Widgets');

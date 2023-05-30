@@ -17,46 +17,45 @@
 
 namespace Google\Service\HangoutsChat;
 
-class AttachmentDataRef extends \Google\Model
+class ListReactionsResponse extends \Google\Collection
 {
+  protected $collection_key = 'reactions';
   /**
    * @var string
    */
-  public $attachmentUploadToken;
-  /**
-   * @var string
-   */
-  public $resourceName;
+  public $nextPageToken;
+  protected $reactionsType = Reaction::class;
+  protected $reactionsDataType = 'array';
 
   /**
    * @param string
    */
-  public function setAttachmentUploadToken($attachmentUploadToken)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->attachmentUploadToken = $attachmentUploadToken;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getAttachmentUploadToken()
+  public function getNextPageToken()
   {
-    return $this->attachmentUploadToken;
+    return $this->nextPageToken;
   }
   /**
-   * @param string
+   * @param Reaction[]
    */
-  public function setResourceName($resourceName)
+  public function setReactions($reactions)
   {
-    $this->resourceName = $resourceName;
+    $this->reactions = $reactions;
   }
   /**
-   * @return string
+   * @return Reaction[]
    */
-  public function getResourceName()
+  public function getReactions()
   {
-    return $this->resourceName;
+    return $this->reactions;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AttachmentDataRef::class, 'Google_Service_HangoutsChat_AttachmentDataRef');
+class_alias(ListReactionsResponse::class, 'Google_Service_HangoutsChat_ListReactionsResponse');
