@@ -17,46 +17,26 @@
 
 namespace Google\Service\CloudSearch;
 
-class SpellResult extends \Google\Model
+class UserActivity extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $suggestedQuery;
-  /**
-   * @var string
-   */
-  public $suggestionType;
+  protected $queryActivityType = QueryActivity::class;
+  protected $queryActivityDataType = '';
 
   /**
-   * @param string
+   * @param QueryActivity
    */
-  public function setSuggestedQuery($suggestedQuery)
+  public function setQueryActivity(QueryActivity $queryActivity)
   {
-    $this->suggestedQuery = $suggestedQuery;
+    $this->queryActivity = $queryActivity;
   }
   /**
-   * @return string
+   * @return QueryActivity
    */
-  public function getSuggestedQuery()
+  public function getQueryActivity()
   {
-    return $this->suggestedQuery;
-  }
-  /**
-   * @param string
-   */
-  public function setSuggestionType($suggestionType)
-  {
-    $this->suggestionType = $suggestionType;
-  }
-  /**
-   * @return string
-   */
-  public function getSuggestionType()
-  {
-    return $this->suggestionType;
+    return $this->queryActivity;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpellResult::class, 'Google_Service_CloudSearch_SpellResult');
+class_alias(UserActivity::class, 'Google_Service_CloudSearch_UserActivity');

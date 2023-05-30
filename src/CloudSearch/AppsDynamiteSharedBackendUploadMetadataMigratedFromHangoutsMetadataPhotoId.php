@@ -17,46 +17,46 @@
 
 namespace Google\Service\CloudSearch;
 
-class SpellResult extends \Google\Model
+class AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadataPhotoId extends \Google\Model
 {
   /**
    * @var string
    */
-  public $suggestedQuery;
+  public $photoId;
   /**
    * @var string
    */
-  public $suggestionType;
+  public $userId;
 
   /**
    * @param string
    */
-  public function setSuggestedQuery($suggestedQuery)
+  public function setPhotoId($photoId)
   {
-    $this->suggestedQuery = $suggestedQuery;
+    $this->photoId = $photoId;
   }
   /**
    * @return string
    */
-  public function getSuggestedQuery()
+  public function getPhotoId()
   {
-    return $this->suggestedQuery;
+    return $this->photoId;
   }
   /**
    * @param string
    */
-  public function setSuggestionType($suggestionType)
+  public function setUserId($userId)
   {
-    $this->suggestionType = $suggestionType;
+    $this->userId = $userId;
   }
   /**
    * @return string
    */
-  public function getSuggestionType()
+  public function getUserId()
   {
-    return $this->suggestionType;
+    return $this->userId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpellResult::class, 'Google_Service_CloudSearch_SpellResult');
+class_alias(AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadataPhotoId::class, 'Google_Service_CloudSearch_AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadataPhotoId');

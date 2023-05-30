@@ -17,6 +17,8 @@
 
 namespace Google\Service\CloudSearch\Resource;
 
+use Google\Service\CloudSearch\RemoveActivityRequest;
+use Google\Service\CloudSearch\RemoveActivityResponse;
 use Google\Service\CloudSearch\SearchRequest;
 use Google\Service\CloudSearch\SearchResponse;
 use Google\Service\CloudSearch\SuggestRequest;
@@ -32,6 +34,25 @@ use Google\Service\CloudSearch\SuggestResponse;
  */
 class Query extends \Google\Service\Resource
 {
+  /**
+   * Provides functionality to remove logged activity for a user. Currently to be
+   * used only for dynamite 1p clients **Note:** This API requires a standard end
+   * user account to execute. A service account can't perform Remove Activity
+   * requests directly; to use a service account to perform queries, set up
+   * [Google Workspace domain-wide delegation of
+   * authority](https://developers.google.com/cloud-
+   * search/docs/guides/delegation/). (query.removeActivity)
+   *
+   * @param RemoveActivityRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RemoveActivityResponse
+   */
+  public function removeActivity(RemoveActivityRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('removeActivity', [$params], RemoveActivityResponse::class);
+  }
   /**
    * The Cloud Search Query API provides the search method, which returns the most
    * relevant results from a user query. The results can come from Google

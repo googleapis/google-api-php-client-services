@@ -17,46 +17,42 @@
 
 namespace Google\Service\CloudSearch;
 
-class SpellResult extends \Google\Model
+class RemoveActivityRequest extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $suggestedQuery;
-  /**
-   * @var string
-   */
-  public $suggestionType;
+  protected $requestOptionsType = RequestOptions::class;
+  protected $requestOptionsDataType = '';
+  protected $userActivityType = UserActivity::class;
+  protected $userActivityDataType = '';
 
   /**
-   * @param string
+   * @param RequestOptions
    */
-  public function setSuggestedQuery($suggestedQuery)
+  public function setRequestOptions(RequestOptions $requestOptions)
   {
-    $this->suggestedQuery = $suggestedQuery;
+    $this->requestOptions = $requestOptions;
   }
   /**
-   * @return string
+   * @return RequestOptions
    */
-  public function getSuggestedQuery()
+  public function getRequestOptions()
   {
-    return $this->suggestedQuery;
+    return $this->requestOptions;
   }
   /**
-   * @param string
+   * @param UserActivity
    */
-  public function setSuggestionType($suggestionType)
+  public function setUserActivity(UserActivity $userActivity)
   {
-    $this->suggestionType = $suggestionType;
+    $this->userActivity = $userActivity;
   }
   /**
-   * @return string
+   * @return UserActivity
    */
-  public function getSuggestionType()
+  public function getUserActivity()
   {
-    return $this->suggestionType;
+    return $this->userActivity;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpellResult::class, 'Google_Service_CloudSearch_SpellResult');
+class_alias(RemoveActivityRequest::class, 'Google_Service_CloudSearch_RemoveActivityRequest');
