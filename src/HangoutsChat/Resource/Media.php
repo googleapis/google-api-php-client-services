@@ -47,13 +47,15 @@ class Media extends \Google\Service\Resource
     return $this->call('download', [$params], MediaModel::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Uploads
-   * an attachment. Requires user
-   * [authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * You can upload attachments up to 200 MB. Certain file types aren't supported.
-   * For details, see [File types blocked by Google Chat](https://support.google.c
-   * om/chat/answer/7651457?=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%
-   * 20Google%20Chat). (media.upload)
+   * Uploads an attachment. For an example, see [Upload media as a file
+   * attachment](https://developers.google.com/chat/api/guides/v1/media-and-
+   * attachments/upload). Requires user
+   * [authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * and the `chat.messages` or `chat.messages.create` authorization scope. You
+   * can upload attachments up to 200 MB. Certain file types aren't supported. For
+   * details, see [File types blocked by Google Chat](https://support.google.com/c
+   * hat/answer/7651457?=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Go
+   * ogle%20Chat). (media.upload)
    *
    * @param string $parent Required. Resource name of the Chat space in which the
    * attachment is uploaded. Format "spaces/{space}".

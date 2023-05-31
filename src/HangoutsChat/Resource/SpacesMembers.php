@@ -31,15 +31,20 @@ use Google\Service\HangoutsChat\Membership;
 class SpacesMembers extends \Google\Service\Resource
 {
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
-   * a human membership or app membership for the calling app. Creating
-   * memberships for other apps isn't supported. Requires [user
+   * Creates a human membership or app membership for the calling app. Creating
+   * memberships for other apps isn't supported. For an example, see [ Create a
+   * membership](https://developers.google.com/chat/api/guides/v1/members/create).
+   * When creating a membership, if the specified member has their auto-accept
+   * policy turned off, then they're invited, and must accept the space invitation
+   * before joining. Otherwise, creating a membership adds the member directly to
+   * the specified space. Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.memberships` (for human membership) or `chat.memberships.app` (for
    * app membership) scope. To specify the member to add, set the
    * `membership.member.name` in the `CreateMembershipRequest`: - To add the
-   * calling app to the space, use `users/app`. - To add a human user, use
-   * `users/{user}`, where `{user}` is either the `{person_id}` for the
+   * calling app to a space or a direct message between two human users, use
+   * `users/app`. Unable to add other apps to the space. - To add a human user,
+   * use `users/{user}`, where `{user}` is either the `{person_id}` for the
    * [person](https://developers.google.com/people/api/rest/v1/people) from the
    * People API, or the `id` for the [user](https://developers.google.com/admin-
    * sdk/directory/reference/rest/v1/users) in the Directory API. For example, if
@@ -60,8 +65,9 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('create', [$params], Membership::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Deletes
-   * a membership. Requires [user
+   * Deletes a membership. For an example, see [Delete a
+   * membership](https://developers.google.com/chat/api/guides/v1/members/delete).
+   * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.memberships` or `chat.memberships.app` authorization scope.
    * (members.delete)
@@ -83,15 +89,15 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('delete', [$params], Membership::class);
   }
   /**
-   * Returns a membership. Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
+   * Returns details about a membership. For an example, see [Get a
+   * membership](https://developers.google.com/chat/api/guides/v1/members/get).
+   * Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.memberships` or `chat.memberships.readonly` authorization
    * scope. (members.get)
@@ -108,15 +114,22 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('get', [$params], Membership::class);
   }
   /**
-   * Lists memberships in a space. Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
+   * Lists memberships in a space. For an example, see [List
+   * memberships](https://developers.google.com/chat/api/guides/v1/members/list).
+   * Listing memberships with [app
+   * authentication](https://developers.google.com/chat/api/guides/auth/service-
+   * accounts) lists memberships in spaces that the Chat app has access to, but
+   * excludes Chat app memberships, including its own. Listing memberships with
+   * [User
+   * authentication](https://developers.google.com/chat/api/guides/auth/users)
+   * lists memberships in spaces that the authenticated user has access to.
+   * Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.memberships` or `chat.memberships.readonly` authorization
    * scope. (members.listSpacesMembers)

@@ -32,8 +32,9 @@ use Google\Service\HangoutsChat\Reaction;
 class SpacesMessagesReactions extends \Google\Service\Resource
 {
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
-   * a reaction and adds it to a message. Requires [user
+   * Creates a reaction and adds it to a message. For an example, see [Create a
+   * reaction](https://developers.google.com/chat/api/guides/v1/reactions/create).
+   * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.messages`, `chat.messages.reactions`, or
    * `chat.messages.reactions.create` scope. Only unicode emoji are supported.
@@ -52,8 +53,9 @@ class SpacesMessagesReactions extends \Google\Service\Resource
     return $this->call('create', [$params], Reaction::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Deletes
-   * a reaction to a message. Requires [user
+   * Deletes a reaction to a message. For an example, see [Delete a
+   * reaction](https://developers.google.com/chat/api/guides/v1/reactions/delete).
+   * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.messages` or `chat.messages.reactions` scope. (reactions.delete)
    *
@@ -69,8 +71,9 @@ class SpacesMessagesReactions extends \Google\Service\Resource
     return $this->call('delete', [$params], ChatEmpty::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Lists
-   * reactions to a message. Requires [user
+   * Lists reactions to a message. For an example, see [List
+   * reactions](https://developers.google.com/chat/api/guides/v1/reactions/list).
+   * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * `chat.messages`, `chat.messages.readonly`, `chat.messages.reactions`, or
    * `chat.messages.reactions.readonly` scope.

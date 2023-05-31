@@ -32,7 +32,9 @@ class SpacesMessagesAttachments extends \Google\Service\Resource
   /**
    * Gets the metadata of a message attachment. The attachment data is fetched
    * using the [media API](https://developers.google.com/chat/api/reference/rest/v
-   * 1/media/download). Requires [service account
+   * 1/media/download). For an example, see [Get a message
+   * attachment](https://developers.google.com/chat/api/guides/v1/media-and-
+   * attachments/get). Requires [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts). (attachments.get)
    *

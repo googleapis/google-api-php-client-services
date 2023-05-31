@@ -33,9 +33,10 @@ use Google\Service\HangoutsChat\Space;
 class Spaces extends \Google\Service\Resource
 {
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
-   * a named space. Spaces grouped by topics or that have guest access aren't
-   * supported. Requires [user
+   * Creates a named space. Spaces grouped by topics or that have guest access
+   * aren't supported. For an example, see [Create a
+   * space](https://developers.google.com/chat/api/guides/v1/spaces/create).
+   * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.spaces.create` or `chat.spaces` scope. (spaces.create)
    *
@@ -56,10 +57,11 @@ class Spaces extends \Google\Service\Resource
     return $this->call('create', [$params], Space::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Deletes
-   * a named space. Always performs a cascading delete, which means that the
-   * space's child resources—like messages posted in the space and memberships in
-   * the space—are also deleted. Requires [user
+   * Deletes a named space. Always performs a cascading delete, which means that
+   * the space's child resources—like messages posted in the space and memberships
+   * in the space—are also deleted. For an example, see [Delete a
+   * space](https://developers.google.com/chat/api/guides/v1/spaces/delete).
+   * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * from a user who has permission to delete the space, and the `chat.delete`
    * scope. (spaces.delete)
@@ -76,15 +78,16 @@ class Spaces extends \Google\Service\Resource
     return $this->call('delete', [$params], ChatEmpty::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Returns
-   * the existing direct message with the specified user. With [user
+   * Returns the existing direct message with the specified user. If no direct
+   * message space is found, returns a `404 NOT_FOUND` error. For an example, see
+   * [Find a direct message](/chat/api/guides/v1/spaces/find-direct-message). With
+   * [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users),
    * returns the direct message space between the specified user and the
    * authenticated user. With [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts), returns the direct message space between the specified user and
-   * the calling Chat app. If no direct message space is found, returns a `404
-   * NOT_FOUND` error. Requires [user
+   * the calling Chat app. Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) or
    * [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
@@ -109,15 +112,14 @@ class Spaces extends \Google\Service\Resource
     return $this->call('findDirectMessage', [$params], Space::class);
   }
   /**
-   * Returns a space. Requires
+   * Returns details about a space. For an example, see [Get a
+   * space](https://developers.google.com/chat/api/guides/v1/spaces/get). Requires
    * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope.
    * (spaces.get)
@@ -134,15 +136,14 @@ class Spaces extends \Google\Service\Resource
     return $this->call('get', [$params], Space::class);
   }
   /**
-   * Lists spaces the caller is a member of. Requires
+   * Lists spaces the caller is a member of. Group chats and DMs aren't listed
+   * until the first message is sent. For an example, see [List
+   * spaces](https://developers.google.com/chat/api/guides/v1/spaces/list).
+   * Requires
    * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope.
    * Lists spaces visible to the caller or authenticated user. Group chats and DMs
@@ -163,8 +164,7 @@ class Spaces extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts), this field is ignored and the query always returns all spaces. But
    * the Chat API still validates the query syntax with service accounts, so
-   * invalid queries are still rejected. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * invalid queries are still rejected.
    * @opt_param int pageSize Optional. The maximum number of spaces to return. The
    * service might return fewer than this value. If unspecified, at most 100
    * spaces are returned. The maximum value is 1,000. If you use a value more than
@@ -183,8 +183,9 @@ class Spaces extends \Google\Service\Resource
     return $this->call('list', [$params], ListSpacesResponse::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Updates
-   * a space. Requires [user
+   * Updates a space. For an example, see [Update a
+   * space](https://developers.google.com/chat/api/guides/v1/spaces/update).
+   * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.spaces` scope. (spaces.patch)
    *
@@ -219,12 +220,13 @@ class Spaces extends \Google\Service\Resource
     return $this->call('patch', [$params], Space::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Creates
-   * a space and adds specified users to it. The calling user is automatically
-   * added to the space, and shouldn't be specified as a membership in the
-   * request. To specify the human members to add, add memberships with the
-   * appropriate `member.name` in the `SetUpSpaceRequest`. To add a human user,
-   * use `users/{user}`, where `{user}` is either the `{person_id}` for the
+   * Creates a space and adds specified users to it. The calling user is
+   * automatically added to the space, and shouldn't be specified as a membership
+   * in the request. For an example, see [Set up a
+   * space](https://developers.google.com/chat/api/guides/v1/spaces/set-up). To
+   * specify the human members to add, add memberships with the appropriate
+   * `member.name` in the `SetUpSpaceRequest`. To add a human user, use
+   * `users/{user}`, where `{user}` is either the `{person_id}` for the
    * [person](https://developers.google.com/people/api/rest/v1/people) from the
    * People API, or the `id` for the [user](https://developers.google.com/admin-
    * sdk/directory/reference/rest/v1/users) in the Admin SDK Directory API. For
@@ -236,13 +238,14 @@ class Spaces extends \Google\Service\Resource
    * user and another human user, specify exactly one membership to represent the
    * human user. If one user blocks the other, the request fails and the DM isn't
    * created. To create a DM between the calling user and the calling app, set
-   * `Space.singleUserBotDm` to true and don't specify any memberships. You can
-   * only use this method to add app memberships to DMs. To add the calling app as
-   * a member of other space types, use [create membership](https://developers.goo
-   * gle.com/chat/api/reference/rest/v1/spaces.members/create) If a DM already
-   * exists between two users, even when one user blocks the other at the time a
-   * request is made, then the existing DM is returned. Spaces with threaded
-   * replies or guest access aren't supported. Requires [user
+   * `Space.singleUserBotDm` to `true` and don't specify any memberships. You can
+   * only use this method to set up a DM with the calling app. To add the calling
+   * app as a member of a space or an existing DM between two human users, see
+   * [create a
+   * membership](https://developers.google.com/chat/api/guides/v1/members/create).
+   * If a DM already exists between two users, even when one user blocks the other
+   * at the time a request is made, then the existing DM is returned. Spaces with
+   * threaded replies or guest access aren't supported. Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.spaces.create` or `chat.spaces` scope. (spaces.setup)
    *

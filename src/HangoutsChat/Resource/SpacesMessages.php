@@ -32,19 +32,18 @@ use Google\Service\HangoutsChat\Message;
 class SpacesMessages extends \Google\Service\Resource
 {
   /**
-   * Creates a message. For example usage, see [Create a message](https://develope
-   * rs.google.com/chat/api/guides/crudl/messages#create_a_message). Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
-   * supports [service account
-   * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * Creates a message. For an example, see [Create a message](https://developers.
+   * google.com/chat/api/guides/crudl/messages#create_a_message). Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth).
+   * Creating a text message supports both [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
+   * [app authentication] (https://developers.google.com/chat/api/guides/auth
+   * /service-accounts). [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` or `chat.messages.create` authorization scope.
-   * Because Chat provides authentication for
+   * Creating a card message requires [app authentication]
+   * (https://developers.google.com/chat/api/guides/auth/service-accounts) Because
+   * Chat provides authentication for
    * [webhooks](https://developers.google.com/chat/how-tos/webhooks) as part of
    * the URL that's generated when a webhook is registered, webhooks can create
    * messages without a service account or user authentication. (messages.create)
@@ -57,7 +56,14 @@ class SpacesMessages extends \Google\Service\Resource
    * @opt_param string messageId Optional. A custom name for a Chat message
    * assigned at creation. Must start with `client-` and contain only lowercase
    * letters, numbers, and hyphens up to 63 characters in length. Specify this
-   * field to get, update, or delete the message with the specified value. For
+   * field to get, update, or delete the message with the specified value.
+   * Assigning a custom name lets a a Chat app recall the message without saving
+   * the message `name` from the [response
+   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned
+   * when creating the message. Assigning a custom name doesn't replace the
+   * generated `name` field, the message's resource name. Instead, it sets the
+   * custom name as the `clientAssignedMessageId` field, which you can reference
+   * while processing later operations, like updating or deleting the message. For
    * example usage, see [Name a created message](https://developers.google.com/cha
    * t/api/guides/crudl/messages#name_a_created_message).
    * @opt_param string messageReplyOption Optional. Specifies whether a message
@@ -79,16 +85,15 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('create', [$params], Message::class);
   }
   /**
-   * Deletes a message. For example usage, see [Delete a message](https://develope
-   * rs.google.com/chat/api/guides/crudl/messages#delete_a_message). Requires
+   * Deletes a message. For an example, see [Delete a
+   * message](https://developers.google.com/chat/api/guides/v1/messages/delete).
+   * Requires
    * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` authorization scope. (messages.delete)
    *
@@ -112,16 +117,15 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('delete', [$params], ChatEmpty::class);
   }
   /**
-   * Returns a message. For example usage, see [Read a message](https://developers
-   * .google.com/chat/api/guides/crudl/messages#read_a_message). Requires
+   * Returns details about a message. For an example, see [Read a
+   * message](https://developers.google.com/chat/api/guides/v1/messages/get).
+   * Requires
    * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
-   * supports [Service account
+   * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` or `chat.messages.readonly` authorization scope.
    * Note: Might return a message from a blocked member or space. (messages.get)
@@ -143,9 +147,9 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('get', [$params], Message::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview): Lists
-   * messages in a space that the caller is a member of, including messages from
-   * blocked members and spaces. Requires [user
+   * Lists messages in a space that the caller is a member of, including messages
+   * from blocked members and spaces. For an example, see [List
+   * messages](/chat/api/guides/v1/messages/list). Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.messages` or `chat.messages.readonly` authorization scope. This
    * method is only supported in spaces that don't allow users from outside the
@@ -201,19 +205,18 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('list', [$params], ListMessagesResponse::class);
   }
   /**
-   * Updates a message. There's a difference between `patch` and `update` methods.
-   * The `patch` method uses a `patch` request while the `update` method uses a
-   * `put` request. We recommend using the `patch` method. For example usage, see
-   * [Update a message](https://developers.google.com/chat/api/guides/crudl/messag
-   * es#update_a_message). Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
+   * Updates a message. There's a difference between the `patch` and `update`
+   * methods. The `patch` method uses a `patch` request while the `update` method
+   * uses a `put` request. We recommend using the `patch` method. For an example,
+   * see [Update a
+   * message](https://developers.google.com/chat/api/guides/v1/messages/update).
+   * Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` authorization scope. (messages.patch)
    *
@@ -229,7 +232,8 @@ class SpacesMessages extends \Google\Service\Resource
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas. Currently supported field paths: - `text` -
    * `cards` (Requires [service account authentication](/chat/api/guides/auth
-   * /service-accounts).) - `cards_v2`
+   * /service-accounts).) - `cards_v2` (Requires [service account
+   * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    */
   public function patch($name, Message $postBody, $optParams = [])
@@ -239,19 +243,18 @@ class SpacesMessages extends \Google\Service\Resource
     return $this->call('patch', [$params], Message::class);
   }
   /**
-   * Updates a message. There's a difference between `patch` and `update` methods.
-   * The `patch` method uses a `patch` request while the `update` method uses a
-   * `put` request. We recommend using the `patch` method. For example usage, see
-   * [Update a message](https://developers.google.com/chat/api/guides/crudl/messag
-   * es#update_a_message). Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully
+   * Updates a message. There's a difference between the `patch` and `update`
+   * methods. The `patch` method uses a `patch` request while the `update` method
+   * uses a `put` request. We recommend using the `patch` method. For an example,
+   * see [Update a
+   * message](https://developers.google.com/chat/api/guides/v1/messages/update).
+   * Requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts). Supports [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) as
-   * part of the [Google Workspace Developer Preview
-   * Program](https://developers.google.com/workspace/preview), which grants early
-   * access to certain features. [User
+   * accounts) and [user
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` authorization scope. (messages.update)
    *
@@ -267,7 +270,8 @@ class SpacesMessages extends \Google\Service\Resource
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas. Currently supported field paths: - `text` -
    * `cards` (Requires [service account authentication](/chat/api/guides/auth
-   * /service-accounts).) - `cards_v2`
+   * /service-accounts).) - `cards_v2` (Requires [service account
+   * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    */
   public function update($name, Message $postBody, $optParams = [])
