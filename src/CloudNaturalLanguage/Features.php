@@ -41,6 +41,10 @@ class Features extends \Google\Model
    * @var bool
    */
   public $extractSyntax;
+  /**
+   * @var bool
+   */
+  public $moderateText;
 
   /**
    * @param ClassificationModelOptions
@@ -125,6 +129,20 @@ class Features extends \Google\Model
   public function getExtractSyntax()
   {
     return $this->extractSyntax;
+  }
+  /**
+   * @param bool
+   */
+  public function setModerateText($moderateText)
+  {
+    $this->moderateText = $moderateText;
+  }
+  /**
+   * @return bool
+   */
+  public function getModerateText()
+  {
+    return $this->moderateText;
   }
 }
 

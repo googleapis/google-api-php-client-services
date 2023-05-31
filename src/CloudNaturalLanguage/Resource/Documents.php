@@ -29,6 +29,8 @@ use Google\Service\CloudNaturalLanguage\AnnotateTextRequest;
 use Google\Service\CloudNaturalLanguage\AnnotateTextResponse;
 use Google\Service\CloudNaturalLanguage\ClassifyTextRequest;
 use Google\Service\CloudNaturalLanguage\ClassifyTextResponse;
+use Google\Service\CloudNaturalLanguage\ModerateTextRequest;
+use Google\Service\CloudNaturalLanguage\ModerateTextResponse;
 
 /**
  * The "documents" collection of methods.
@@ -125,6 +127,20 @@ class Documents extends \Google\Service\Resource
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('classifyText', [$params], ClassifyTextResponse::class);
+  }
+  /**
+   * Moderates a document for harmful and sensitive categories.
+   * (documents.moderateText)
+   *
+   * @param ModerateTextRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ModerateTextResponse
+   */
+  public function moderateText(ModerateTextRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('moderateText', [$params], ModerateTextResponse::class);
   }
 }
 

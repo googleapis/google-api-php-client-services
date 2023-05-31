@@ -91,6 +91,10 @@ class CloudNaturalLanguage extends \Google\Service
               'path' => 'v1/documents:classifyText',
               'httpMethod' => 'POST',
               'parameters' => [],
+            ],'moderateText' => [
+              'path' => 'v1/documents:moderateText',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]

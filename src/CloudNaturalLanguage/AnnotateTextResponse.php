@@ -30,6 +30,8 @@ class AnnotateTextResponse extends \Google\Collection
    * @var string
    */
   public $language;
+  protected $moderationCategoriesType = ClassificationCategory::class;
+  protected $moderationCategoriesDataType = 'array';
   protected $sentencesType = Sentence::class;
   protected $sentencesDataType = 'array';
   protected $tokensType = Token::class;
@@ -90,6 +92,20 @@ class AnnotateTextResponse extends \Google\Collection
   public function getLanguage()
   {
     return $this->language;
+  }
+  /**
+   * @param ClassificationCategory[]
+   */
+  public function setModerationCategories($moderationCategories)
+  {
+    $this->moderationCategories = $moderationCategories;
+  }
+  /**
+   * @return ClassificationCategory[]
+   */
+  public function getModerationCategories()
+  {
+    return $this->moderationCategories;
   }
   /**
    * @param Sentence[]
