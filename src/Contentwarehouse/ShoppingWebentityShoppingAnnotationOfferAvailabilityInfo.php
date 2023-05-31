@@ -17,27 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GeostoreTransitStationProto extends \Google\Collection
+class ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo extends \Google\Model
 {
-  protected $collection_key = 'agencyAssociations';
-  protected $agencyAssociationsType = GeostoreTransitStationProtoTransitAgencyAssociationProto::class;
-  protected $agencyAssociationsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $availability;
 
   /**
-   * @param GeostoreTransitStationProtoTransitAgencyAssociationProto[]
+   * @param string
    */
-  public function setAgencyAssociations($agencyAssociations)
+  public function setAvailability($availability)
   {
-    $this->agencyAssociations = $agencyAssociations;
+    $this->availability = $availability;
   }
   /**
-   * @return GeostoreTransitStationProtoTransitAgencyAssociationProto[]
+   * @return string
    */
-  public function getAgencyAssociations()
+  public function getAvailability()
   {
-    return $this->agencyAssociations;
+    return $this->availability;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GeostoreTransitStationProto::class, 'Google_Service_Contentwarehouse_GeostoreTransitStationProto');
+class_alias(ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo::class, 'Google_Service_Contentwarehouse_ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo');

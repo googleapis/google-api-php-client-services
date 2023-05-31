@@ -25,6 +25,12 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $chromeCountsDataType = '';
   protected $creatorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $creatorDataType = '';
+  protected $discoverSourceType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $discoverSourceDataType = '';
+  protected $discussionType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $discussionDataType = '';
+  protected $documentIntentType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $documentIntentDataType = '';
   protected $instantNavboostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $instantNavboostDataType = '';
   protected $localypType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -83,6 +89,48 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getCreator()
   {
     return $this->creator;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setDiscoverSource(IndexingDocjoinerDataVersionVersionInfo $discoverSource)
+  {
+    $this->discoverSource = $discoverSource;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getDiscoverSource()
+  {
+    return $this->discoverSource;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setDiscussion(IndexingDocjoinerDataVersionVersionInfo $discussion)
+  {
+    $this->discussion = $discussion;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getDiscussion()
+  {
+    return $this->discussion;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setDocumentIntent(IndexingDocjoinerDataVersionVersionInfo $documentIntent)
+  {
+    $this->documentIntent = $documentIntent;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getDocumentIntent()
+  {
+    return $this->documentIntent;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

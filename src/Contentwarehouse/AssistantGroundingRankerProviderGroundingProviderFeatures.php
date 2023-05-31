@@ -27,10 +27,6 @@ class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\
   /**
    * @var string[]
    */
-  public $providerClusterIdDeprecated;
-  /**
-   * @var string[]
-   */
   public $providerClusterIds;
   protected $providerIdType = AssistantContextProviderId::class;
   protected $providerIdDataType = '';
@@ -52,20 +48,6 @@ class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\
   public function getIsInAppProvider()
   {
     return $this->isInAppProvider;
-  }
-  /**
-   * @param string[]
-   */
-  public function setProviderClusterIdDeprecated($providerClusterIdDeprecated)
-  {
-    $this->providerClusterIdDeprecated = $providerClusterIdDeprecated;
-  }
-  /**
-   * @return string[]
-   */
-  public function getProviderClusterIdDeprecated()
-  {
-    return $this->providerClusterIdDeprecated;
   }
   /**
    * @param string[]

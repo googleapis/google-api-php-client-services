@@ -92,6 +92,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isTvmIntent;
+  /**
+   * @var bool
+   */
   public $isVideoIntent;
   /**
    * @var int
@@ -422,6 +426,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsPodcastIntent()
   {
     return $this->isPodcastIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsTvmIntent($isTvmIntent)
+  {
+    $this->isTvmIntent = $isTvmIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsTvmIntent()
+  {
+    return $this->isTvmIntent;
   }
   /**
    * @param bool

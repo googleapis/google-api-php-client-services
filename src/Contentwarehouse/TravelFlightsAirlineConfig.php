@@ -45,7 +45,7 @@ class TravelFlightsAirlineConfig extends \Google\Collection
    */
   public $fqtvPartnerCode;
   protected $greenFaresInfoType = TravelFlightsAirlineConfigGreenFaresInfo::class;
-  protected $greenFaresInfoDataType = 'array';
+  protected $greenFaresInfoDataType = '';
   /**
    * @var string
    */
@@ -198,14 +198,14 @@ class TravelFlightsAirlineConfig extends \Google\Collection
     return $this->fqtvPartnerCode;
   }
   /**
-   * @param TravelFlightsAirlineConfigGreenFaresInfo[]
+   * @param TravelFlightsAirlineConfigGreenFaresInfo
    */
-  public function setGreenFaresInfo($greenFaresInfo)
+  public function setGreenFaresInfo(TravelFlightsAirlineConfigGreenFaresInfo $greenFaresInfo)
   {
     $this->greenFaresInfo = $greenFaresInfo;
   }
   /**
-   * @return TravelFlightsAirlineConfigGreenFaresInfo[]
+   * @return TravelFlightsAirlineConfigGreenFaresInfo
    */
   public function getGreenFaresInfo()
   {

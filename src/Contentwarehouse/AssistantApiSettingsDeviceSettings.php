@@ -162,6 +162,10 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
   protected $onDeviceAppSettingsDataType = '';
   protected $optInStatusType = AssistantApiSettingsDeviceLogsOptIn::class;
   protected $optInStatusDataType = '';
+  /**
+   * @var bool
+   */
+  public $paymentsEnabled;
   protected $personalizationMetadataType = AssistantApiSettingsPersonalizationMetadata::class;
   protected $personalizationMetadataDataType = '';
   protected $politeModeType = AssistantApiSettingsPoliteMode::class;
@@ -878,6 +882,20 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
   public function getOptInStatus()
   {
     return $this->optInStatus;
+  }
+  /**
+   * @param bool
+   */
+  public function setPaymentsEnabled($paymentsEnabled)
+  {
+    $this->paymentsEnabled = $paymentsEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPaymentsEnabled()
+  {
+    return $this->paymentsEnabled;
   }
   /**
    * @param AssistantApiSettingsPersonalizationMetadata

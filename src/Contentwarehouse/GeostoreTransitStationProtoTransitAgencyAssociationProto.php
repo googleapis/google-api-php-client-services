@@ -17,46 +17,44 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantApiAppControlSupport extends \Google\Model
+class GeostoreTransitStationProtoTransitAgencyAssociationProto extends \Google\Model
 {
+  protected $agencyType = GeostoreFeatureIdProto::class;
+  protected $agencyDataType = '';
   /**
    * @var string
    */
-  public $enabled;
-  /**
-   * @var bool
-   */
-  public $sendMessageSuppressed;
+  public $stationCode;
 
+  /**
+   * @param GeostoreFeatureIdProto
+   */
+  public function setAgency(GeostoreFeatureIdProto $agency)
+  {
+    $this->agency = $agency;
+  }
+  /**
+   * @return GeostoreFeatureIdProto
+   */
+  public function getAgency()
+  {
+    return $this->agency;
+  }
   /**
    * @param string
    */
-  public function setEnabled($enabled)
+  public function setStationCode($stationCode)
   {
-    $this->enabled = $enabled;
+    $this->stationCode = $stationCode;
   }
   /**
    * @return string
    */
-  public function getEnabled()
+  public function getStationCode()
   {
-    return $this->enabled;
-  }
-  /**
-   * @param bool
-   */
-  public function setSendMessageSuppressed($sendMessageSuppressed)
-  {
-    $this->sendMessageSuppressed = $sendMessageSuppressed;
-  }
-  /**
-   * @return bool
-   */
-  public function getSendMessageSuppressed()
-  {
-    return $this->sendMessageSuppressed;
+    return $this->stationCode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AssistantApiAppControlSupport::class, 'Google_Service_Contentwarehouse_AssistantApiAppControlSupport');
+class_alias(GeostoreTransitStationProtoTransitAgencyAssociationProto::class, 'Google_Service_Contentwarehouse_GeostoreTransitStationProtoTransitAgencyAssociationProto');

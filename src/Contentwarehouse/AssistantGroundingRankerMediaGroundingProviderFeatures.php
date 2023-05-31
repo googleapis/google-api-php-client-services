@@ -48,6 +48,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    */
   public $isSeedRadioRequest;
   /**
+   * @var bool
+   */
+  public $isYoutubeMusicSeeking;
+  /**
    * @var string
    */
   public $mediaContentType;
@@ -160,6 +164,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getIsSeedRadioRequest()
   {
     return $this->isSeedRadioRequest;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsYoutubeMusicSeeking($isYoutubeMusicSeeking)
+  {
+    $this->isYoutubeMusicSeeking = $isYoutubeMusicSeeking;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsYoutubeMusicSeeking()
+  {
+    return $this->isYoutubeMusicSeeking;
   }
   /**
    * @param string
