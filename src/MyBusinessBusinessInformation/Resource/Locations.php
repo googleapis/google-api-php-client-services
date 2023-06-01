@@ -17,9 +17,7 @@
 
 namespace Google\Service\MyBusinessBusinessInformation\Resource;
 
-use Google\Service\MyBusinessBusinessInformation\AssociateLocationRequest;
 use Google\Service\MyBusinessBusinessInformation\Attributes as AttributesModel;
-use Google\Service\MyBusinessBusinessInformation\ClearLocationAssociationRequest;
 use Google\Service\MyBusinessBusinessInformation\GoogleUpdatedLocation;
 use Google\Service\MyBusinessBusinessInformation\Location;
 use Google\Service\MyBusinessBusinessInformation\MybusinessbusinessinformationEmpty;
@@ -34,40 +32,6 @@ use Google\Service\MyBusinessBusinessInformation\MybusinessbusinessinformationEm
  */
 class Locations extends \Google\Service\Resource
 {
-  /**
-   * Associates a location to a place ID. Any previous association is overwritten.
-   * This operation is only valid if the location is unverified. The association
-   * must be valid, that is, it appears in the list of `SearchGoogleLocations`.
-   * (locations.associate)
-   *
-   * @param string $name Required. The resource name of the location to associate.
-   * @param AssociateLocationRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return MybusinessbusinessinformationEmpty
-   */
-  public function associate($name, AssociateLocationRequest $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('associate', [$params], MybusinessbusinessinformationEmpty::class);
-  }
-  /**
-   * Clears an association between a location and its place ID. This operation is
-   * only valid if the location is unverified.
-   * (locations.clearLocationAssociation)
-   *
-   * @param string $name Required. The resource name of the location to
-   * disassociate.
-   * @param ClearLocationAssociationRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return MybusinessbusinessinformationEmpty
-   */
-  public function clearLocationAssociation($name, ClearLocationAssociationRequest $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('clearLocationAssociation', [$params], MybusinessbusinessinformationEmpty::class);
-  }
   /**
    * Deletes a location. If this location cannot be deleted using the API and it
    * is marked so in the `google.mybusiness.businessinformation.v1.LocationState`,
