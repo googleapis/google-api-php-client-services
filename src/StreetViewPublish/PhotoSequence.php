@@ -55,6 +55,10 @@ class PhotoSequence extends \Google\Collection
   protected $rawGpsTimelineDataType = 'array';
   protected $sequenceBoundsType = LatLngBounds::class;
   protected $sequenceBoundsDataType = '';
+  /**
+   * @var bool
+   */
+  public $takedown;
   protected $uploadReferenceType = UploadRef::class;
   protected $uploadReferenceDataType = '';
   /**
@@ -227,6 +231,20 @@ class PhotoSequence extends \Google\Collection
   public function getSequenceBounds()
   {
     return $this->sequenceBounds;
+  }
+  /**
+   * @param bool
+   */
+  public function setTakedown($takedown)
+  {
+    $this->takedown = $takedown;
+  }
+  /**
+   * @return bool
+   */
+  public function getTakedown()
+  {
+    return $this->takedown;
   }
   /**
    * @param UploadRef
