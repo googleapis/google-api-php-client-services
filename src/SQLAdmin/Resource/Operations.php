@@ -19,6 +19,7 @@ namespace Google\Service\SQLAdmin\Resource;
 
 use Google\Service\SQLAdmin\Operation;
 use Google\Service\SQLAdmin\OperationsListResponse;
+use Google\Service\SQLAdmin\SqladminEmpty;
 
 /**
  * The "operations" collection of methods.
@@ -30,6 +31,21 @@ use Google\Service\SQLAdmin\OperationsListResponse;
  */
 class Operations extends \Google\Service\Resource
 {
+  /**
+   * Cancels an instance operation that has been performed on an instance.
+   * (operations.cancel)
+   *
+   * @param string $project Project ID of the project that contains the instance.
+   * @param string $operation Instance operation ID.
+   * @param array $optParams Optional parameters.
+   * @return SqladminEmpty
+   */
+  public function cancel($project, $operation, $optParams = [])
+  {
+    $params = ['project' => $project, 'operation' => $operation];
+    $params = array_merge($params, $optParams);
+    return $this->call('cancel', [$params], SqladminEmpty::class);
+  }
   /**
    * Retrieves an instance operation that has been performed on an instance.
    * (operations.get)
