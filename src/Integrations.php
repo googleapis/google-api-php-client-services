@@ -426,6 +426,10 @@ class Integrations extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'triggerId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'list' => [
               'path' => 'v1alpha/{+parent}/integrations',
@@ -635,6 +639,10 @@ class Integrations extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'createSampleIntegrations' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'newIntegration' => [
                   'location' => 'query',
@@ -1201,6 +1209,10 @@ class Integrations extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'createSampleIntegrations' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'newIntegration' => [
                   'location' => 'query',

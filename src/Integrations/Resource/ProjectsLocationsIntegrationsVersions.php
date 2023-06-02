@@ -49,6 +49,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * @param GoogleCloudIntegrationsV1alphaIntegrationVersion $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool createSampleIntegrations Optional. Optional. Indicates if
+   * sample workflow should be created.
    * @opt_param bool newIntegration Set this flag to true, if draft version is to
    * be created for a brand new integration. False, if the request is for an
    * existing integration. For backward compatibility reasons, even if this flag
