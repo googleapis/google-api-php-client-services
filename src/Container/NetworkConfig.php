@@ -30,6 +30,10 @@ class NetworkConfig extends \Google\Model
   /**
    * @var bool
    */
+  public $enableFqdnNetworkPolicy;
+  /**
+   * @var bool
+   */
   public $enableIntraNodeVisibility;
   /**
    * @var bool
@@ -93,6 +97,20 @@ class NetworkConfig extends \Google\Model
   public function getDnsConfig()
   {
     return $this->dnsConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableFqdnNetworkPolicy($enableFqdnNetworkPolicy)
+  {
+    $this->enableFqdnNetworkPolicy = $enableFqdnNetworkPolicy;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableFqdnNetworkPolicy()
+  {
+    return $this->enableFqdnNetworkPolicy;
   }
   /**
    * @param bool

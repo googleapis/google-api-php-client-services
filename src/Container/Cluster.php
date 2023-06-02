@@ -64,6 +64,8 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $enableK8sBetaApisType = K8sBetaAPIConfig::class;
+  protected $enableK8sBetaApisDataType = '';
   /**
    * @var bool
    */
@@ -434,6 +436,20 @@ class Cluster extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param K8sBetaAPIConfig
+   */
+  public function setEnableK8sBetaApis(K8sBetaAPIConfig $enableK8sBetaApis)
+  {
+    $this->enableK8sBetaApis = $enableK8sBetaApis;
+  }
+  /**
+   * @return K8sBetaAPIConfig
+   */
+  public function getEnableK8sBetaApis()
+  {
+    return $this->enableK8sBetaApis;
   }
   /**
    * @param bool

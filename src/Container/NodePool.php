@@ -22,6 +22,8 @@ class NodePool extends \Google\Collection
   protected $collection_key = 'locations';
   protected $autoscalingType = NodePoolAutoscaling::class;
   protected $autoscalingDataType = '';
+  protected $bestEffortProvisioningType = BestEffortProvisioning::class;
+  protected $bestEffortProvisioningDataType = '';
   protected $conditionsType = StatusCondition::class;
   protected $conditionsDataType = 'array';
   protected $configType = NodeConfig::class;
@@ -92,6 +94,20 @@ class NodePool extends \Google\Collection
   public function getAutoscaling()
   {
     return $this->autoscaling;
+  }
+  /**
+   * @param BestEffortProvisioning
+   */
+  public function setBestEffortProvisioning(BestEffortProvisioning $bestEffortProvisioning)
+  {
+    $this->bestEffortProvisioning = $bestEffortProvisioning;
+  }
+  /**
+   * @return BestEffortProvisioning
+   */
+  public function getBestEffortProvisioning()
+  {
+    return $this->bestEffortProvisioning;
   }
   /**
    * @param StatusCondition[]

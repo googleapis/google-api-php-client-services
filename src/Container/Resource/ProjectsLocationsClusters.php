@@ -17,6 +17,7 @@
 
 namespace Google\Service\Container\Resource;
 
+use Google\Service\Container\CheckAutopilotCompatibilityResponse;
 use Google\Service\Container\Cluster;
 use Google\Service\Container\CompleteIPRotationRequest;
 use Google\Service\Container\CreateClusterRequest;
@@ -46,6 +47,21 @@ use Google\Service\Container\UpdateMasterRequest;
  */
 class ProjectsLocationsClusters extends \Google\Service\Resource
 {
+  /**
+   * Checks the cluster compatibility with Autopilot mode, and returns a list of
+   * compatibility issues. (clusters.checkAutopilotCompatibility)
+   *
+   * @param string $name The name (project, location, cluster) of the cluster to
+   * retrieve. Specified in the format `projects/locations/clusters`.
+   * @param array $optParams Optional parameters.
+   * @return CheckAutopilotCompatibilityResponse
+   */
+  public function checkAutopilotCompatibility($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkAutopilotCompatibility', [$params], CheckAutopilotCompatibilityResponse::class);
+  }
   /**
    * Completes master IP rotation. (clusters.completeIpRotation)
    *
