@@ -59,6 +59,14 @@ class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
    * GCP region.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. An expression for filtering the results of
+   * the ListDataScanJobs request.If unspecified, all datascan jobs will be
+   * returned. Multiple filters can be applied (with AND, OR logical operators).
+   * Filters are case-sensitive.Allowed fields are: start_time end_timestart_time
+   * and end_time expect RFC-3339 formatted strings (e.g.
+   * 2018-10-08T18:30:00-07:00).For instance, 'start_time >
+   * 2018-10-08T00:00:00.123456789Z AND end_time < 2018-10-09T00:00:00.123456789Z'
+   * limits results to DataScanJobs between specified start and end times.
    * @opt_param int pageSize Optional. Maximum number of DataScanJobs to return.
    * The service may return fewer than this value. If unspecified, at most 10
    * DataScanJobs will be returned. The maximum value is 1000; values above 1000
