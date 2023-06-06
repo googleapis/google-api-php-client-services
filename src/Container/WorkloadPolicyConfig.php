@@ -17,44 +17,28 @@
 
 namespace Google\Service\Container;
 
-class Autopilot extends \Google\Model
+class WorkloadPolicyConfig extends \Google\Model
 {
   /**
    * @var bool
    */
-  public $enabled;
-  protected $workloadPolicyConfigType = WorkloadPolicyConfig::class;
-  protected $workloadPolicyConfigDataType = '';
+  public $allowNetAdmin;
 
   /**
    * @param bool
    */
-  public function setEnabled($enabled)
+  public function setAllowNetAdmin($allowNetAdmin)
   {
-    $this->enabled = $enabled;
+    $this->allowNetAdmin = $allowNetAdmin;
   }
   /**
    * @return bool
    */
-  public function getEnabled()
+  public function getAllowNetAdmin()
   {
-    return $this->enabled;
-  }
-  /**
-   * @param WorkloadPolicyConfig
-   */
-  public function setWorkloadPolicyConfig(WorkloadPolicyConfig $workloadPolicyConfig)
-  {
-    $this->workloadPolicyConfig = $workloadPolicyConfig;
-  }
-  /**
-   * @return WorkloadPolicyConfig
-   */
-  public function getWorkloadPolicyConfig()
-  {
-    return $this->workloadPolicyConfig;
+    return $this->allowNetAdmin;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Autopilot::class, 'Google_Service_Container_Autopilot');
+class_alias(WorkloadPolicyConfig::class, 'Google_Service_Container_WorkloadPolicyConfig');

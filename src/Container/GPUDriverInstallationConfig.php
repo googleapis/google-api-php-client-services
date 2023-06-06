@@ -17,44 +17,28 @@
 
 namespace Google\Service\Container;
 
-class Autopilot extends \Google\Model
+class GPUDriverInstallationConfig extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string
    */
-  public $enabled;
-  protected $workloadPolicyConfigType = WorkloadPolicyConfig::class;
-  protected $workloadPolicyConfigDataType = '';
+  public $gpuDriverVersion;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setEnabled($enabled)
+  public function setGpuDriverVersion($gpuDriverVersion)
   {
-    $this->enabled = $enabled;
+    $this->gpuDriverVersion = $gpuDriverVersion;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getEnabled()
+  public function getGpuDriverVersion()
   {
-    return $this->enabled;
-  }
-  /**
-   * @param WorkloadPolicyConfig
-   */
-  public function setWorkloadPolicyConfig(WorkloadPolicyConfig $workloadPolicyConfig)
-  {
-    $this->workloadPolicyConfig = $workloadPolicyConfig;
-  }
-  /**
-   * @return WorkloadPolicyConfig
-   */
-  public function getWorkloadPolicyConfig()
-  {
-    return $this->workloadPolicyConfig;
+    return $this->gpuDriverVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Autopilot::class, 'Google_Service_Container_Autopilot');
+class_alias(GPUDriverInstallationConfig::class, 'Google_Service_Container_GPUDriverInstallationConfig');

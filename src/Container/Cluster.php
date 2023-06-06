@@ -178,6 +178,8 @@ class Cluster extends \Google\Collection
   public $resourceLabels;
   protected $resourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $resourceUsageExportConfigDataType = '';
+  protected $securityPostureConfigType = SecurityPostureConfig::class;
+  protected $securityPostureConfigDataType = '';
   /**
    * @var string
    */
@@ -982,6 +984,20 @@ class Cluster extends \Google\Collection
   public function getResourceUsageExportConfig()
   {
     return $this->resourceUsageExportConfig;
+  }
+  /**
+   * @param SecurityPostureConfig
+   */
+  public function setSecurityPostureConfig(SecurityPostureConfig $securityPostureConfig)
+  {
+    $this->securityPostureConfig = $securityPostureConfig;
+  }
+  /**
+   * @return SecurityPostureConfig
+   */
+  public function getSecurityPostureConfig()
+  {
+    return $this->securityPostureConfig;
   }
   /**
    * @param string

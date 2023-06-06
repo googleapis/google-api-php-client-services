@@ -17,44 +17,46 @@
 
 namespace Google\Service\Container;
 
-class Autopilot extends \Google\Model
+class SecurityPostureConfig extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string
    */
-  public $enabled;
-  protected $workloadPolicyConfigType = WorkloadPolicyConfig::class;
-  protected $workloadPolicyConfigDataType = '';
+  public $mode;
+  /**
+   * @var string
+   */
+  public $vulnerabilityMode;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setEnabled($enabled)
+  public function setMode($mode)
   {
-    $this->enabled = $enabled;
+    $this->mode = $mode;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getEnabled()
+  public function getMode()
   {
-    return $this->enabled;
+    return $this->mode;
   }
   /**
-   * @param WorkloadPolicyConfig
+   * @param string
    */
-  public function setWorkloadPolicyConfig(WorkloadPolicyConfig $workloadPolicyConfig)
+  public function setVulnerabilityMode($vulnerabilityMode)
   {
-    $this->workloadPolicyConfig = $workloadPolicyConfig;
+    $this->vulnerabilityMode = $vulnerabilityMode;
   }
   /**
-   * @return WorkloadPolicyConfig
+   * @return string
    */
-  public function getWorkloadPolicyConfig()
+  public function getVulnerabilityMode()
   {
-    return $this->workloadPolicyConfig;
+    return $this->vulnerabilityMode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Autopilot::class, 'Google_Service_Container_Autopilot');
+class_alias(SecurityPostureConfig::class, 'Google_Service_Container_SecurityPostureConfig');
