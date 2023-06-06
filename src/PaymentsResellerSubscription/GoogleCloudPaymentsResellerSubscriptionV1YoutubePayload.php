@@ -21,10 +21,28 @@ class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload extends \Google\Co
 {
   protected $collection_key = 'partnerEligibilityIds';
   /**
+   * @var string
+   */
+  public $accessEndTime;
+  /**
    * @var string[]
    */
   public $partnerEligibilityIds;
 
+  /**
+   * @param string
+   */
+  public function setAccessEndTime($accessEndTime)
+  {
+    $this->accessEndTime = $accessEndTime;
+  }
+  /**
+   * @return string
+   */
+  public function getAccessEndTime()
+  {
+    return $this->accessEndTime;
+  }
   /**
    * @param string[]
    */
