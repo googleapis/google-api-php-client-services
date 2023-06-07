@@ -1280,6 +1280,25 @@ class Compute extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'bulkInsert' => [
+              'path' => 'projects/{project}/zones/{zone}/disks/bulkInsert',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'createSnapshot' => [
               'path' => 'projects/{project}/zones/{zone}/disks/{disk}/createSnapshot',
               'httpMethod' => 'POST',
@@ -1517,6 +1536,73 @@ class Compute extends \Google\Service
                   'required' => true,
                 ],
                 'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'startAsyncReplication' => [
+              'path' => 'projects/{project}/zones/{zone}/disks/{disk}/startAsyncReplication',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'disk' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'stopAsyncReplication' => [
+              'path' => 'projects/{project}/zones/{zone}/disks/{disk}/stopAsyncReplication',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'disk' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'stopGroupAsyncReplication' => [
+              'path' => 'projects/{project}/zones/{zone}/disks/stopGroupAsyncReplication',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -9872,6 +9958,25 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'bulkInsert' => [
+              'path' => 'projects/{project}/regions/{region}/disks/bulkInsert',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'createSnapshot' => [
               'path' => 'projects/{project}/regions/{region}/disks/{disk}/createSnapshot',
               'httpMethod' => 'POST',
@@ -10105,6 +10210,73 @@ class Compute extends \Google\Service
                   'required' => true,
                 ],
                 'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'startAsyncReplication' => [
+              'path' => 'projects/{project}/regions/{region}/disks/{disk}/startAsyncReplication',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'disk' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'stopAsyncReplication' => [
+              'path' => 'projects/{project}/regions/{region}/disks/{disk}/stopAsyncReplication',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'disk' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'stopGroupAsyncReplication' => [
+              'path' => 'projects/{project}/regions/{region}/disks/stopGroupAsyncReplication',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

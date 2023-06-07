@@ -17,13 +17,16 @@
 
 namespace Google\Service\Compute\Resource;
 
+use Google\Service\Compute\BulkInsertDiskResource;
 use Google\Service\Compute\Disk;
 use Google\Service\Compute\DiskList;
+use Google\Service\Compute\DisksStopGroupAsyncReplicationResource;
 use Google\Service\Compute\Operation;
 use Google\Service\Compute\Policy;
 use Google\Service\Compute\RegionDisksAddResourcePoliciesRequest;
 use Google\Service\Compute\RegionDisksRemoveResourcePoliciesRequest;
 use Google\Service\Compute\RegionDisksResizeRequest;
+use Google\Service\Compute\RegionDisksStartAsyncReplicationRequest;
 use Google\Service\Compute\RegionSetLabelsRequest;
 use Google\Service\Compute\RegionSetPolicyRequest;
 use Google\Service\Compute\Snapshot;
@@ -68,6 +71,32 @@ class RegionDisks extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'disk' => $disk, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('addResourcePolicies', [$params], Operation::class);
+  }
+  /**
+   * Bulk create a set of disks. (regionDisks.bulkInsert)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param BulkInsertDiskResource $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   */
+  public function bulkInsert($project, $region, BulkInsertDiskResource $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('bulkInsert', [$params], Operation::class);
   }
   /**
    * Creates a snapshot of a specified persistent disk. For regular snapshot
@@ -354,6 +383,90 @@ class RegionDisks extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setLabels', [$params], Operation::class);
+  }
+  /**
+   * Starts asynchronous replication. Must be invoked on the primary disk.
+   * (regionDisks.startAsyncReplication)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $disk The name of the persistent disk.
+   * @param RegionDisksStartAsyncReplicationRequest $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   */
+  public function startAsyncReplication($project, $region, $disk, RegionDisksStartAsyncReplicationRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'disk' => $disk, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('startAsyncReplication', [$params], Operation::class);
+  }
+  /**
+   * Stops asynchronous replication. Can be invoked either on the primary or on
+   * the secondary disk. (regionDisks.stopAsyncReplication)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $disk The name of the persistent disk.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   */
+  public function stopAsyncReplication($project, $region, $disk, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'disk' => $disk];
+    $params = array_merge($params, $optParams);
+    return $this->call('stopAsyncReplication', [$params], Operation::class);
+  }
+  /**
+   * Stops asynchronous replication for a consistency group of disks. Can be
+   * invoked either in the primary or secondary scope.
+   * (regionDisks.stopGroupAsyncReplication)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request. This must be
+   * the region of the primary or secondary disks in the consistency group.
+   * @param DisksStopGroupAsyncReplicationResource $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   */
+  public function stopGroupAsyncReplication($project, $region, DisksStopGroupAsyncReplicationResource $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('stopGroupAsyncReplication', [$params], Operation::class);
   }
   /**
    * Returns permissions that a caller has on the specified resource.
