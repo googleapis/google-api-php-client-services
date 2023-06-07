@@ -22,11 +22,7 @@ class SqlserverValidationValidationDetail extends \Google\Model
   /**
    * @var string[]
    */
-  public $details;
-  /**
-   * @var string
-   */
-  public $instanceId;
+  public $fields;
   /**
    * @var string
    */
@@ -35,30 +31,16 @@ class SqlserverValidationValidationDetail extends \Google\Model
   /**
    * @param string[]
    */
-  public function setDetails($details)
+  public function setFields($fields)
   {
-    $this->details = $details;
+    $this->fields = $fields;
   }
   /**
    * @return string[]
    */
-  public function getDetails()
+  public function getFields()
   {
-    return $this->details;
-  }
-  /**
-   * @param string
-   */
-  public function setInstanceId($instanceId)
-  {
-    $this->instanceId = $instanceId;
-  }
-  /**
-   * @return string
-   */
-  public function getInstanceId()
-  {
-    return $this->instanceId;
+    return $this->fields;
   }
   /**
    * @param string

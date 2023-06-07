@@ -394,6 +394,10 @@ class WorkloadManager extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customRulesBucket' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
