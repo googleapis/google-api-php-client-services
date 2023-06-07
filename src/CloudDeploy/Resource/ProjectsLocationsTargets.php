@@ -76,7 +76,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allowMissing Optional. If set to true, then deleting an
-   * already deleted or non-existing DeliveryPipeline will succeed.
+   * already deleted or non-existing `Target` will succeed.
    * @opt_param string etag Optional. This checksum is computed by the server
    * based on the value of other fields, and may be sent on update and delete
    * requests to ensure the client has an up-to-date value before proceeding.
