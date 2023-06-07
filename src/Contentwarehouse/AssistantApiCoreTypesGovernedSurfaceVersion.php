@@ -17,42 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GeostoreFlowLineProto extends \Google\Model
+class AssistantApiCoreTypesGovernedSurfaceVersion extends \Google\Model
 {
-  protected $curvatureType = GeostoreCurvatureProto::class;
-  protected $curvatureDataType = '';
-  protected $trackType = GeostoreTrackProto::class;
-  protected $trackDataType = '';
+  /**
+   * @var int
+   */
+  public $major;
+  /**
+   * @var int
+   */
+  public $minor;
 
   /**
-   * @param GeostoreCurvatureProto
+   * @param int
    */
-  public function setCurvature(GeostoreCurvatureProto $curvature)
+  public function setMajor($major)
   {
-    $this->curvature = $curvature;
+    $this->major = $major;
   }
   /**
-   * @return GeostoreCurvatureProto
+   * @return int
    */
-  public function getCurvature()
+  public function getMajor()
   {
-    return $this->curvature;
+    return $this->major;
   }
   /**
-   * @param GeostoreTrackProto
+   * @param int
    */
-  public function setTrack(GeostoreTrackProto $track)
+  public function setMinor($minor)
   {
-    $this->track = $track;
+    $this->minor = $minor;
   }
   /**
-   * @return GeostoreTrackProto
+   * @return int
    */
-  public function getTrack()
+  public function getMinor()
   {
-    return $this->track;
+    return $this->minor;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GeostoreFlowLineProto::class, 'Google_Service_Contentwarehouse_GeostoreFlowLineProto');
+class_alias(AssistantApiCoreTypesGovernedSurfaceVersion::class, 'Google_Service_Contentwarehouse_AssistantApiCoreTypesGovernedSurfaceVersion');

@@ -24,9 +24,17 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    */
   public $bindingSetAuis;
   /**
+   * @var string
+   */
+  public $bindingSetInvalidReason;
+  /**
    * @var float
    */
   public $bindingSetPauis;
+  /**
+   * @var string
+   */
+  public $bindingSetValidity;
   public $calibratedParsingScore;
   /**
    * @var bool
@@ -172,6 +180,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->bindingSetAuis;
   }
   /**
+   * @param string
+   */
+  public function setBindingSetInvalidReason($bindingSetInvalidReason)
+  {
+    $this->bindingSetInvalidReason = $bindingSetInvalidReason;
+  }
+  /**
+   * @return string
+   */
+  public function getBindingSetInvalidReason()
+  {
+    return $this->bindingSetInvalidReason;
+  }
+  /**
    * @param float
    */
   public function setBindingSetPauis($bindingSetPauis)
@@ -184,6 +206,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getBindingSetPauis()
   {
     return $this->bindingSetPauis;
+  }
+  /**
+   * @param string
+   */
+  public function setBindingSetValidity($bindingSetValidity)
+  {
+    $this->bindingSetValidity = $bindingSetValidity;
+  }
+  /**
+   * @return string
+   */
+  public function getBindingSetValidity()
+  {
+    return $this->bindingSetValidity;
   }
   public function setCalibratedParsingScore($calibratedParsingScore)
   {

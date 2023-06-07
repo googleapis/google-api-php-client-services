@@ -66,6 +66,8 @@ class GeostoreFeatureProto extends \Google\Collection
   protected $futureGeometryDataType = '';
   protected $futureGeometryForType = GeostoreFeatureIdProto::class;
   protected $futureGeometryForDataType = '';
+  protected $geometry3dType = GeostoreGeometryStoreReferenceProto::class;
+  protected $geometry3dDataType = '';
   public $geometryPrecisionMeters;
   protected $geopoliticalGeometryType = GeostoreGeopoliticalGeometryProto::class;
   protected $geopoliticalGeometryDataType = '';
@@ -195,6 +197,8 @@ class GeostoreFeatureProto extends \Google\Collection
   public $type;
   protected $verticalOrderingType = GeostoreVerticalOrderingProto::class;
   protected $verticalOrderingDataType = '';
+  protected $visualizationAreaType = GeostoreGeometryStoreReferenceProto::class;
+  protected $visualizationAreaDataType = '';
   protected $waterRemovedPolygonType = GeostorePolygonProto::class;
   protected $waterRemovedPolygonDataType = '';
   protected $websiteType = GeostoreUrlProto::class;
@@ -521,6 +525,20 @@ class GeostoreFeatureProto extends \Google\Collection
   public function getFutureGeometryFor()
   {
     return $this->futureGeometryFor;
+  }
+  /**
+   * @param GeostoreGeometryStoreReferenceProto
+   */
+  public function setGeometry3d(GeostoreGeometryStoreReferenceProto $geometry3d)
+  {
+    $this->geometry3d = $geometry3d;
+  }
+  /**
+   * @return GeostoreGeometryStoreReferenceProto
+   */
+  public function getGeometry3d()
+  {
+    return $this->geometry3d;
   }
   public function setGeometryPrecisionMeters($geometryPrecisionMeters)
   {
@@ -1383,6 +1401,20 @@ class GeostoreFeatureProto extends \Google\Collection
   public function getVerticalOrdering()
   {
     return $this->verticalOrdering;
+  }
+  /**
+   * @param GeostoreGeometryStoreReferenceProto
+   */
+  public function setVisualizationArea(GeostoreGeometryStoreReferenceProto $visualizationArea)
+  {
+    $this->visualizationArea = $visualizationArea;
+  }
+  /**
+   * @return GeostoreGeometryStoreReferenceProto
+   */
+  public function getVisualizationArea()
+  {
+    return $this->visualizationArea;
   }
   /**
    * @param GeostorePolygonProto

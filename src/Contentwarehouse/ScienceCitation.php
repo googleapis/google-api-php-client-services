@@ -28,6 +28,7 @@ class ScienceCitation extends \Google\Collection
         "abstractLanguage" => "AbstractLanguage",
         "abstractSource" => "AbstractSource",
         "abstractText" => "AbstractText",
+        "abstractTypeFromSource" => "AbstractTypeFromSource",
         "alternateVersionID" => "AlternateVersionID",
         "anchors" => "Anchors",
         "arxivSection" => "ArxivSection",
@@ -148,6 +149,10 @@ class ScienceCitation extends \Google\Collection
    * @var string
    */
   public $abstractText;
+  /**
+   * @var string
+   */
+  public $abstractTypeFromSource;
   /**
    * @var string
    */
@@ -628,6 +633,20 @@ class ScienceCitation extends \Google\Collection
   public function getAbstractText()
   {
     return $this->abstractText;
+  }
+  /**
+   * @param string
+   */
+  public function setAbstractTypeFromSource($abstractTypeFromSource)
+  {
+    $this->abstractTypeFromSource = $abstractTypeFromSource;
+  }
+  /**
+   * @return string
+   */
+  public function getAbstractTypeFromSource()
+  {
+    return $this->abstractTypeFromSource;
   }
   /**
    * @param string

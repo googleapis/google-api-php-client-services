@@ -51,6 +51,10 @@ class RepositoryWebrefDetailedEntityScores extends \Google\Model
    * @var float
    */
   public $normalizedTopicality;
+  /**
+   * @var string
+   */
+  public $profileUrl;
   protected $referencePageScoresType = RepositoryWebrefReferencePageScores::class;
   protected $referencePageScoresDataType = '';
   /**
@@ -169,6 +173,20 @@ class RepositoryWebrefDetailedEntityScores extends \Google\Model
   public function getNormalizedTopicality()
   {
     return $this->normalizedTopicality;
+  }
+  /**
+   * @param string
+   */
+  public function setProfileUrl($profileUrl)
+  {
+    $this->profileUrl = $profileUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getProfileUrl()
+  {
+    return $this->profileUrl;
   }
   /**
    * @param RepositoryWebrefReferencePageScores
