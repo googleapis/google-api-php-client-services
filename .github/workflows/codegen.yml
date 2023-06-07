@@ -14,7 +14,7 @@ jobs:
     outputs:
       services: ${{ steps.chunk.outputs.result }}
     steps:
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@v6
         id: chunk
         with:
           script: |
