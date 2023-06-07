@@ -17,6 +17,7 @@
 
 namespace Google\Service\ShoppingContent\Resource;
 
+use Google\Service\ShoppingContent\ListPromotionResponse;
 use Google\Service\ShoppingContent\Promotion;
 
 /**
@@ -62,6 +63,35 @@ class Promotions extends \Google\Service\Resource
     $params = ['merchantId' => $merchantId, 'id' => $id];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Promotion::class);
+  }
+  /**
+   * List all promotions from your Merchant Center account.
+   * (promotions.listPromotions)
+   *
+   * @param string $merchantId Required. The ID of the account that contains the
+   * collection.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string countryCode [CLDR country
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for
+   * example, "US"), used as a filter on promotions target country.
+   * @opt_param string languageCode The two-letter ISO 639-1 language code
+   * associated with the promotions, used as a filter.
+   * @opt_param int pageSize The maximum number of promotions to return. The
+   * service may return fewer than this value. If unspecified, at most 50 labels
+   * will be returned. The maximum value is 1000; values above 1000 will be
+   * coerced to 1000.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListPromotion` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `ListPromotion` must match the
+   * call that provided the page token.
+   * @return ListPromotionResponse
+   */
+  public function listPromotions($merchantId, $optParams = [])
+  {
+    $params = ['merchantId' => $merchantId];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], ListPromotionResponse::class);
   }
 }
 
