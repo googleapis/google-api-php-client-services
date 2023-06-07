@@ -658,6 +658,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -710,6 +714,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -727,6 +735,10 @@ class Logging extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
@@ -1392,6 +1404,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1444,6 +1460,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1461,6 +1481,10 @@ class Logging extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
@@ -2454,6 +2478,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -2506,6 +2534,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -2523,6 +2555,10 @@ class Logging extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
@@ -3144,6 +3180,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -3196,6 +3236,10 @@ class Logging extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -3213,6 +3257,10 @@ class Logging extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
@@ -3241,6 +3289,10 @@ class Logging extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',
@@ -3293,6 +3345,10 @@ class Logging extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'customWriterIdentity' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'uniqueWriterIdentity' => [
                   'location' => 'query',

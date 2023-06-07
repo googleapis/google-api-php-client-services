@@ -44,6 +44,11 @@ class OrganizationsSinks extends \Google\Service\Resource
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string customWriterIdentity Optional. A service account provided
+   * by the caller that will be used to write the log entries. Must be of format
+   * serviceAccount:some@email. This can only be specified if writing to a
+   * destination outside the sink's project. If not specified, a p4 service
+   * account will automatically be generated.
    * @opt_param bool uniqueWriterIdentity Optional. Determines the kind of IAM
    * identity returned as writer_identity in the new sink. If this value is
    * omitted or set to false, and if the sink's parent is a project, then the
@@ -139,6 +144,11 @@ class OrganizationsSinks extends \Google\Service\Resource
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string customWriterIdentity Optional. A service account provided
+   * by the caller that will be used to write the log entries. Must be of format
+   * serviceAccount:some@email. This can only be specified if writing to a
+   * destination outside the sink's project. If not specified, a p4 service
+   * account will automatically be generated.
    * @opt_param bool uniqueWriterIdentity Optional. See sinks.create for a
    * description of this field. When updating a sink, the effect of this field on
    * the value of writer_identity in the updated sink depends on both the old and
@@ -181,6 +191,11 @@ class OrganizationsSinks extends \Google\Service\Resource
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string customWriterIdentity Optional. A service account provided
+   * by the caller that will be used to write the log entries. Must be of format
+   * serviceAccount:some@email. This can only be specified if writing to a
+   * destination outside the sink's project. If not specified, a p4 service
+   * account will automatically be generated.
    * @opt_param bool uniqueWriterIdentity Optional. See sinks.create for a
    * description of this field. When updating a sink, the effect of this field on
    * the value of writer_identity in the updated sink depends on both the old and
