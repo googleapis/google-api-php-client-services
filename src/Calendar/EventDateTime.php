@@ -20,11 +20,11 @@ namespace Google\Service\Calendar;
 class EventDateTime extends \Google\Model
 {
   /**
-   * @var string
+   * @var string|null
    */
   public $date;
   /**
-   * @var string
+   * @var string|null
    */
   public $dateTime;
   /**
@@ -33,28 +33,28 @@ class EventDateTime extends \Google\Model
   public $timeZone;
 
   /**
-   * @param string
+   * @param string|null
    */
   public function setDate($date)
   {
     $this->date = $date;
   }
   /**
-   * @return string
+   * @return string|null
    */
   public function getDate()
   {
     return $this->date;
   }
   /**
-   * @param string
+   * @param string|null
    */
   public function setDateTime($dateTime)
   {
     $this->dateTime = $dateTime;
   }
   /**
-   * @return string
+   * @return string|null
    */
   public function getDateTime()
   {
