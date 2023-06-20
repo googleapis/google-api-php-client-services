@@ -54,8 +54,8 @@ class Media extends \Google\Service\Resource
    * and the `chat.messages` or `chat.messages.create` authorization scope. You
    * can upload attachments up to 200 MB. Certain file types aren't supported. For
    * details, see [File types blocked by Google Chat](https://support.google.com/c
-   * hat/answer/7651457?=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Go
-   * ogle%20Chat). (media.upload)
+   * hat/answer/7651457?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%2
+   * 0Google%20Chat). (media.upload)
    *
    * @param string $parent Required. Resource name of the Chat space in which the
    * attachment is uploaded. Format "spaces/{space}".
