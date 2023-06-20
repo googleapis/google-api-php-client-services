@@ -56,8 +56,8 @@ class OrganizationsEnvironmentsResourcefiles extends \Google\Service\Resource
   }
   /**
    * Deletes a resource file. For more information about resource files, see
-   * [Resource files](https://cloud.google.com/apigee/docs/api-platform/develop
-   * /resource-files). (resourcefiles.delete)
+   * [Resource files](https://cloud.google.com/apigee/docs/api-
+   * platform/develop/resource-files). (resourcefiles.delete)
    *
    * @param string $parent Required. Name of the environment in the following
    * format: `organizations/{org}/environments/{env}`.

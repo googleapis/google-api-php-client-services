@@ -71,8 +71,9 @@ class OrganizationsHostQueries extends \Google\Service\Resource
    * After the query is completed, use this API to retrieve the results. If the
    * request succeeds, and there is a non-zero result set, the result is
    * downloaded to the client as a zipped JSON file. The name of the downloaded
-   * file will be: OfflineQueryResult-.zip Example: `OfflineQueryResult-
-   * 9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip` (hostQueries.getResult)
+   * file will be: OfflineQueryResult-.zip Example:
+   * `OfflineQueryResult-9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+   * (hostQueries.getResult)
    *
    * @param string $name Required. Name of the asynchronous query result to get.
    * Must be of the form `organizations/{org}/queries/{queryId}/result`.
