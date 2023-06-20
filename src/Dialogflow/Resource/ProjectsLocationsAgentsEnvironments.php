@@ -39,9 +39,10 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * Creates an Environment in the specified Agent. This method is a [long-running
    * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
    * operation). The returned `Operation` type has the following method-specific
-   * fields: - `metadata`: An empty [Struct message](https://developers.google.com
-   * /protocol-buffers/docs/reference/google.protobuf#struct) - `response`:
-   * Environment (environments.create)
+   * fields: - `metadata`: An empty [Struct
+   * message](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#struct) - `response`: Environment
+   * (environments.create)
    *
    * @param string $parent Required. The Agent to create an Environment for.
    * Format: `projects//locations//agents/`.
@@ -146,9 +147,10 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * Updates the specified Environment. This method is a [long-running
    * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
    * operation). The returned `Operation` type has the following method-specific
-   * fields: - `metadata`: An empty [Struct message](https://developers.google.com
-   * /protocol-buffers/docs/reference/google.protobuf#struct) - `response`:
-   * Environment (environments.patch)
+   * fields: - `metadata`: An empty [Struct
+   * message](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#struct) - `response`: Environment
+   * (environments.patch)
    *
    * @param string $name The name of the environment. Format:
    * `projects//locations//agents//environments/`.
@@ -167,9 +169,10 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
   }
   /**
    * Kicks off a continuous test under the specified Environment. This method is a
-   * [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how
-   * /long-running-operation). The returned `Operation` type has the following
-   * method-specific fields: - `metadata`: RunContinuousTestMetadata - `response`:
+   * [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: RunContinuousTestMetadata - `response`:
    * RunContinuousTestResponse (environments.runContinuousTest)
    *
    * @param string $environment Required. Format:

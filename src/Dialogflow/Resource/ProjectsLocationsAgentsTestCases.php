@@ -106,9 +106,10 @@ class ProjectsLocationsAgentsTestCases extends \Google\Service\Resource
   /**
    * Exports the test cases under the agent to a Cloud Storage bucket or a local
    * file. Filter can be applied to export a subset of test cases. This method is
-   * a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how
-   * /long-running-operation). The returned `Operation` type has the following
-   * method-specific fields: - `metadata`: ExportTestCasesMetadata - `response`:
+   * a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: ExportTestCasesMetadata - `response`:
    * ExportTestCasesResponse (testCases.export)
    *
    * @param string $parent Required. The agent where to export test cases from.

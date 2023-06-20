@@ -25,6 +25,8 @@ class GoogleCloudDialogflowV2beta1SuggestionResult extends \Google\Model
   protected $suggestArticlesResponseDataType = '';
   protected $suggestDialogflowAssistsResponseType = GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse::class;
   protected $suggestDialogflowAssistsResponseDataType = '';
+  protected $suggestEntityExtractionResponseType = GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse::class;
+  protected $suggestEntityExtractionResponseDataType = '';
   protected $suggestFaqAnswersResponseType = GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse::class;
   protected $suggestFaqAnswersResponseDataType = '';
   protected $suggestSmartRepliesResponseType = GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse::class;
@@ -71,6 +73,20 @@ class GoogleCloudDialogflowV2beta1SuggestionResult extends \Google\Model
   public function getSuggestDialogflowAssistsResponse()
   {
     return $this->suggestDialogflowAssistsResponse;
+  }
+  /**
+   * @param GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse
+   */
+  public function setSuggestEntityExtractionResponse(GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse $suggestEntityExtractionResponse)
+  {
+    $this->suggestEntityExtractionResponse = $suggestEntityExtractionResponse;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse
+   */
+  public function getSuggestEntityExtractionResponse()
+  {
+    return $this->suggestEntityExtractionResponse;
   }
   /**
    * @param GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse
