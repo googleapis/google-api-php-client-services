@@ -233,10 +233,10 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The update mask to apply to the
-   * resource. For the `FieldMask` definition, see https://developers.google.com
-   * /protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
-   * `user_id`, `policies`, `consent_artifact`, and `metadata` fields can be
-   * updated.
+   * resource. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask. Only the `user_id`,
+   * `policies`, `consent_artifact`, and `metadata` fields can be updated.
    * @return Consent
    */
   public function patch($name, Consent $postBody, $optParams = [])
