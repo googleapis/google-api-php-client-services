@@ -108,10 +108,11 @@ class InboundSsoAssignments extends \Google\Service\Resource
   /**
    * Updates an InboundSsoAssignment. The body of this request is the
    * `inbound_sso_assignment` field and the `update_mask` is relative to that. For
-   * example: a PATCH to `/v1/inboundSsoAssignments/0abcdefg1234567_mask=rank`
-   * with a body of `{ "rank": 1 }` moves that (presumably group-targeted) SSO
-   * assignment to the highest priority and shifts any other group-targeted
-   * assignments down in priority. (inboundSsoAssignments.patch)
+   * example: a PATCH to
+   * `/v1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of
+   * `{ "rank": 1 }` moves that (presumably group-targeted) SSO assignment to the
+   * highest priority and shifts any other group-targeted assignments down in
+   * priority. (inboundSsoAssignments.patch)
    *
    * @param string $name Output only. [Resource
    * name](https://cloud.google.com/apis/design/resource_names) of the Inbound SSO
