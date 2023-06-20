@@ -17,46 +17,28 @@
 
 namespace Google\Service\GKEHub;
 
-class ConfigManagementPolicyControllerMigration extends \Google\Model
+class ConfigManagementConfigSyncError extends \Google\Model
 {
   /**
    * @var string
    */
-  public $copyTime;
-  /**
-   * @var string
-   */
-  public $stage;
+  public $errorMessage;
 
   /**
    * @param string
    */
-  public function setCopyTime($copyTime)
+  public function setErrorMessage($errorMessage)
   {
-    $this->copyTime = $copyTime;
+    $this->errorMessage = $errorMessage;
   }
   /**
    * @return string
    */
-  public function getCopyTime()
+  public function getErrorMessage()
   {
-    return $this->copyTime;
-  }
-  /**
-   * @param string
-   */
-  public function setStage($stage)
-  {
-    $this->stage = $stage;
-  }
-  /**
-   * @return string
-   */
-  public function getStage()
-  {
-    return $this->stage;
+    return $this->errorMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementPolicyControllerMigration::class, 'Google_Service_GKEHub_ConfigManagementPolicyControllerMigration');
+class_alias(ConfigManagementConfigSyncError::class, 'Google_Service_GKEHub_ConfigManagementConfigSyncError');

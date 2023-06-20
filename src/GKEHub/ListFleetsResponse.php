@@ -17,46 +17,45 @@
 
 namespace Google\Service\GKEHub;
 
-class ConfigManagementPolicyControllerMigration extends \Google\Model
+class ListFleetsResponse extends \Google\Collection
 {
+  protected $collection_key = 'fleets';
+  protected $fleetsType = Fleet::class;
+  protected $fleetsDataType = 'array';
   /**
    * @var string
    */
-  public $copyTime;
-  /**
-   * @var string
-   */
-  public $stage;
+  public $nextPageToken;
 
   /**
+   * @param Fleet[]
+   */
+  public function setFleets($fleets)
+  {
+    $this->fleets = $fleets;
+  }
+  /**
+   * @return Fleet[]
+   */
+  public function getFleets()
+  {
+    return $this->fleets;
+  }
+  /**
    * @param string
    */
-  public function setCopyTime($copyTime)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->copyTime = $copyTime;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getCopyTime()
+  public function getNextPageToken()
   {
-    return $this->copyTime;
-  }
-  /**
-   * @param string
-   */
-  public function setStage($stage)
-  {
-    $this->stage = $stage;
-  }
-  /**
-   * @return string
-   */
-  public function getStage()
-  {
-    return $this->stage;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementPolicyControllerMigration::class, 'Google_Service_GKEHub_ConfigManagementPolicyControllerMigration');
+class_alias(ListFleetsResponse::class, 'Google_Service_GKEHub_ListFleetsResponse');

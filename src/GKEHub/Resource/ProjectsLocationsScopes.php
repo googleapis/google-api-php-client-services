@@ -133,6 +133,23 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
     return $this->call('list', [$params], ListScopesResponse::class);
   }
   /**
+   * Updates a scopes. (scopes.patch)
+   *
+   * @param string $name The resource name for the scope
+   * `projects/{project}/locations/{location}/scopes/{scope}`
+   * @param Scope $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The fields to be updated.
+   * @return Operation
+   */
+  public function patch($name, Scope $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
+  }
+  /**
    * Sets the access control policy on the specified resource. Replaces any
    * existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and
    * `PERMISSION_DENIED` errors. (scopes.setIamPolicy)

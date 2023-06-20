@@ -17,46 +17,28 @@
 
 namespace Google\Service\GKEHub;
 
-class ConfigManagementPolicyControllerMigration extends \Google\Model
+class FleetLifecycleState extends \Google\Model
 {
   /**
    * @var string
    */
-  public $copyTime;
-  /**
-   * @var string
-   */
-  public $stage;
+  public $code;
 
   /**
    * @param string
    */
-  public function setCopyTime($copyTime)
+  public function setCode($code)
   {
-    $this->copyTime = $copyTime;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getCopyTime()
+  public function getCode()
   {
-    return $this->copyTime;
-  }
-  /**
-   * @param string
-   */
-  public function setStage($stage)
-  {
-    $this->stage = $stage;
-  }
-  /**
-   * @return string
-   */
-  public function getStage()
-  {
-    return $this->stage;
+    return $this->code;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfigManagementPolicyControllerMigration::class, 'Google_Service_GKEHub_ConfigManagementPolicyControllerMigration');
+class_alias(FleetLifecycleState::class, 'Google_Service_GKEHub_FleetLifecycleState');
