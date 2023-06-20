@@ -75,8 +75,8 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
   /**
    * Deletes an entry group. You must enable the Data Catalog API in the project
    * identified by the `name` parameter. For more information, see [Data Catalog
-   * resource project](https://cloud.google.com/data-catalog/docs/concepts
-   * /resource-project). (entryGroups.delete)
+   * resource project](https://cloud.google.com/data-
+   * catalog/docs/concepts/resource-project). (entryGroups.delete)
    *
    * @param string $name Required. The name of the entry group to delete.
    * @param array $optParams Optional parameters.
