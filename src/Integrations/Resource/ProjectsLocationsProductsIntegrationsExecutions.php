@@ -65,8 +65,9 @@ class ProjectsLocationsProductsIntegrationsExecutions extends \Google\Service\Re
   }
   /**
    * Lists the results of all the integration executions. The response includes
-   * the same information as the [execution log](https://cloud.google.com
-   * /application-integration/docs/viewing-logs) in the Integration UI.
+   * the same information as the [execution
+   * log](https://cloud.google.com/application-integration/docs/viewing-logs) in
+   * the Integration UI.
    * (executions.listProjectsLocationsProductsIntegrationsExecutions)
    *
    * @param string $parent Required. The parent resource name of the integration
