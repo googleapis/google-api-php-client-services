@@ -80,8 +80,8 @@ class AdvertisersChannels extends \Google\Service\Resource
    * All fields must use the `HAS (:)` operator. Supported fields: * `displayName`
    * Examples: * All channels for which the display name contains "google":
    * `displayName : "google"`. The length of this field should be no more than 500
-   * characters. Reference our [filter `LIST` requests](/display-video/api/guides
-   * /how-tos/filters) guide for more information.
+   * characters. Reference our [filter `LIST` requests](/display-
+   * video/api/guides/how-tos/filters) guide for more information.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `displayName` (default) * `channelId` The default sorting order is
    * ascending. To specify descending order for a field, a suffix " desc" should

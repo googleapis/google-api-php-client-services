@@ -112,16 +112,17 @@ class AdvertisersCreatives extends \Google\Service\Resource
    * 50x100 dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND
    * (dimensions="300x400" OR dimensions="50x100")` * All dynamic creatives that
    * are approved by AdX or AppNexus, with a minimum duration of 5 seconds and
-   * 200ms: `dynamic="true" AND minDuration="5.2s" AND (exchangeReviewStatus
-   * ="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR exchangeReviewStatus
-   * ="EXCHANGE_APPNEXUS-REVIEW_STATUS_APPROVED")` * All video creatives that are
-   * associated with line item ID 1 or 2: `creativeType="CREATIVE_TYPE_VIDEO" AND
-   * (lineItemIds:1 OR lineItemIds:2)` * Find creatives by multiple creative IDs:
-   * `creativeId=1 OR creativeId=2` * All creatives with an update time greater
-   * than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
-   * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no
-   * more than 500 characters. Reference our [filter `LIST` requests](/display-
-   * video/api/guides/how-tos/filters) guide for more information.
+   * 200ms: `dynamic="true" AND minDuration="5.2s" AND
+   * (exchangeReviewStatus="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR
+   * exchangeReviewStatus="EXCHANGE_APPNEXUS-REVIEW_STATUS_APPROVED")` * All video
+   * creatives that are associated with line item ID 1 or 2:
+   * `creativeType="CREATIVE_TYPE_VIDEO" AND (lineItemIds:1 OR lineItemIds:2)` *
+   * Find creatives by multiple creative IDs: `creativeId=1 OR creativeId=2` * All
+   * creatives with an update time greater than or equal to 2020-11-04T18:54:47Z
+   * (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length of this
+   * field should be no more than 500 characters. Reference our [filter `LIST`
+   * requests](/display-video/api/guides/how-tos/filters) guide for more
+   * information.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `creativeId` (default) * `createTime` * `mediaDuration` * `dimensions`
    * (sorts by width first, then by height) The default sorting order is

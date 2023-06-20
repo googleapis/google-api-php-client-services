@@ -49,8 +49,9 @@ class AdvertisersYoutubeAdGroups extends \Google\Service\Resource
    * `TARGETING_TYPE_YOUTUBE_VIDEO` or `TARGETING_TYPE_YOUTUBE_CHANNEL`:
    * `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR
    * targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field
-   * should be no more than 500 characters. Reference our [filter `LIST` requests
-   * ](/display-video/api/guides/how-tos/filters) guide for more information.
+   * should be no more than 500 characters. Reference our [filter `LIST`
+   * requests](/display-video/api/guides/how-tos/filters) guide for more
+   * information.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `youtubeAdGroupId` (default) * `assignedTargetingOption.targetingType`
    * The default sorting order is ascending. To specify descending order for a

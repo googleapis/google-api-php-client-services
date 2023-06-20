@@ -111,8 +111,9 @@ class AdvertisersTargetingTypesAssignedTargetingOptions extends \Google\Service\
    * use the `EQUALS (=)` operator. Supported fields: *
    * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` with ID
    * 123456: `assignedTargetingOptionId="123456"` The length of this field should
-   * be no more than 500 characters. Reference our [filter `LIST` requests
-   * ](/display-video/api/guides/how-tos/filters) guide for more information.
+   * be no more than 500 characters. Reference our [filter `LIST`
+   * requests](/display-video/api/guides/how-tos/filters) guide for more
+   * information.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `assignedTargetingOptionId` (default) The default sorting order is
    * ascending. To specify descending order for a field, a suffix "desc" should be

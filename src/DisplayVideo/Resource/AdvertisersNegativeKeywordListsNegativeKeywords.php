@@ -111,8 +111,9 @@ class AdvertisersNegativeKeywordListsNegativeKeywords extends \Google\Service\Re
    * {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
    * `keywordValue` Examples: * All negative keywords for which the keyword value
    * contains "google": `keywordValue : "google"` The length of this field should
-   * be no more than 500 characters. Reference our [filter `LIST` requests
-   * ](/display-video/api/guides/how-tos/filters) guide for more information.
+   * be no more than 500 characters. Reference our [filter `LIST`
+   * requests](/display-video/api/guides/how-tos/filters) guide for more
+   * information.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `keywordValue` (default) The default sorting order is ascending. To
    * specify descending order for a field, a suffix " desc" should be added to the
