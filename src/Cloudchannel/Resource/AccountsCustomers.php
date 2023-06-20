@@ -164,7 +164,7 @@ class AccountsCustomers extends \Google\Service\Resource
    * @opt_param string changeOfferPurchase.billingAccount Optional. Resource name
    * of the new target Billing Account. Provide this Billing Account when setting
    * up billing for a trial subscription. Format:
-   * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is
+   * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is
    * only relevant for multi-currency accounts. It should be left empty for single
    * currency accounts.
    * @opt_param string changeOfferPurchase.entitlement Required. Resource name of
@@ -175,7 +175,7 @@ class AccountsCustomers extends \Google\Service\Resource
    * entitlement. Format: products/{product_id}/skus/{sku_id}
    * @opt_param string createEntitlementPurchase.billingAccount Optional. Billing
    * account that the result should be restricted to. Format:
-   * accounts/{account_id}/billing_accounts/{billing_account_id}.
+   * accounts/{account_id}/billingAccounts/{billing_account_id}.
    * @opt_param string createEntitlementPurchase.sku Required. SKU that the result
    * should be restricted to. Format: products/{product_id}/skus/{sku_id}.
    * @opt_param string languageCode Optional. The BCP-47 language code. For
