@@ -156,10 +156,10 @@ class OrganizationsLocationsWorkloads extends \Google\Service\Resource
   }
   /**
    * Restrict the list of resources allowed in the Workload environment. The
-   * current list of allowed products can be found at https://cloud.google.com
-   * /assured-workloads/docs/supported-products In addition to
-   * assuredworkloads.workload.update permission, the user should also have
-   * orgpolicy.policy.set permission on the folder resource to use this
+   * current list of allowed products can be found at
+   * https://cloud.google.com/assured-workloads/docs/supported-products In
+   * addition to assuredworkloads.workload.update permission, the user should also
+   * have orgpolicy.policy.set permission on the folder resource to use this
    * functionality. (workloads.restrictAllowedResources)
    *
    * @param string $name Required. The resource name of the Workload. This is the
