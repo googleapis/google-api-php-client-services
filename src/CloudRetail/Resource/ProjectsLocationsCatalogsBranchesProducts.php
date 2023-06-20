@@ -22,6 +22,7 @@ use Google\Service\CloudRetail\GoogleCloudRetailV2AddLocalInventoriesRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2ImportProductsRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2ListProductsResponse;
 use Google\Service\CloudRetail\GoogleCloudRetailV2Product;
+use Google\Service\CloudRetail\GoogleCloudRetailV2PurgeProductsRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2RemoveFulfillmentPlacesRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2RemoveLocalInventoriesRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2SetInventoryRequest;
@@ -254,6 +255,29 @@ class ProjectsLocationsCatalogsBranchesProducts extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleCloudRetailV2Product::class);
+  }
+  /**
+   * Permanently deletes all selected Products under a branch. This process is
+   * asynchronous. If the request is valid, the removal will be enqueued and
+   * processed offline. Depending on the number of Products, this operation could
+   * take hours to complete. Before the operation completes, some Products may
+   * still be returned by ProductService.GetProduct or
+   * ProductService.ListProducts. Depending on the number of Products, this
+   * operation could take hours to complete. To get a sample of Products that
+   * would be deleted, set PurgeProductsRequest.force to false. (products.purge)
+   *
+   * @param string $parent Required. The resource name of the branch under which
+   * the products are created. The format is `projects/${projectId}/locations/glob
+   * al/catalogs/${catalogId}/branches/${branchId}`
+   * @param GoogleCloudRetailV2PurgeProductsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function purge($parent, GoogleCloudRetailV2PurgeProductsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('purge', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * We recommend that you use the ProductService.RemoveLocalInventories method
