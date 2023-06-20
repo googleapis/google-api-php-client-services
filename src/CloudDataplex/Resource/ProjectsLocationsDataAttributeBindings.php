@@ -133,8 +133,8 @@ class ProjectsLocationsDataAttributeBindings extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter request. Filter using resource:
-   * filter=resource:"resource-name" Filter using attribute: filter=attributes
-   * :"attribute-name" Filter using attribute in paths list:
+   * filter=resource:"resource-name" Filter using attribute:
+   * filter=attributes:"attribute-name" Filter using attribute in paths list:
    * filter=paths.attributes:"attribute-name"
    * @opt_param string orderBy Optional. Order by fields for the result.
    * @opt_param int pageSize Optional. Maximum number of DataAttributeBindings to
