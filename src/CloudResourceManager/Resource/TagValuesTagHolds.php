@@ -78,9 +78,10 @@ class TagValuesTagHolds extends \Google\Service\Resource
    * TagHolds parented by the TagValue to return. This field follows the syntax
    * defined by aip.dev/160; the `holder` and `origin` fields are supported for
    * filtering. Currently only `AND` syntax is supported. Some example queries
-   * are: * `holder = //compute.googleapis.com/compute/projects/myproject/regions
-   * /us-east-1/instanceGroupManagers/instance-group` * `origin = 35678234` *
-   * `holder = //compute.googleapis.com/compute/projects/myproject/regions/us-
+   * are: * `holder =
+   * //compute.googleapis.com/compute/projects/myproject/regions/us-
+   * east-1/instanceGroupManagers/instance-group` * `origin = 35678234` * `holder
+   * = //compute.googleapis.com/compute/projects/myproject/regions/us-
    * east-1/instanceGroupManagers/instance-group AND origin = 35678234`
    * @opt_param int pageSize Optional. The maximum number of TagHolds to return in
    * the response. The server allows a maximum of 300 TagHolds to return. If
