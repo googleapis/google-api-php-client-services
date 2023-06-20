@@ -90,8 +90,9 @@ class Cse extends \Google\Service\Resource
    * `lowRange...highRange` to the query.
    * @opt_param string hl Sets the user interface language. * Explicitly setting
    * this parameter improves the performance and the quality of your search
-   * results. * See the [Interface Languages](https://developers.google.com
-   * /custom-search/docs/json_api_reference#wsInterfaceLanguages) section of
+   * results. * See the [Interface
+   * Languages](https://developers.google.com/custom-
+   * search/docs/json_api_reference#wsInterfaceLanguages) section of
    * [Internationalizing Queries and Results
    * Presentation](https://developers.google.com/custom-
    * search/docs/json_api_reference#wsInternationalizing) for more information,
@@ -157,14 +158,14 @@ class Cse extends \Google\Service\Resource
    * @opt_param string sort The sort expression to apply to the results. The sort
    * parameter specifies that the results be sorted according to the specified
    * expression i.e. sort by date. [Example:
-   * sort=date](https://developers.google.com/custom-search/docs/structured_search
-   * #sort-by-attribute).
+   * sort=date](https://developers.google.com/custom-
+   * search/docs/structured_search#sort-by-attribute).
    * @opt_param string start The index of the first result to return. The default
-   * number of results per page is 10, so `=11` would start at the top of the
-   * second page of results. **Note**: The JSON API will never return more than
-   * 100 results, even if more than 100 documents match the query, so setting the
-   * sum of `start + num` to a number greater than 100 will produce an error. Also
-   * note that the maximum value for `num` is 10.
+   * number of results per page is 10, so `&start=11` would start at the top of
+   * the second page of results. **Note**: The JSON API will never return more
+   * than 100 results, even if more than 100 documents match the query, so setting
+   * the sum of `start + num` to a number greater than 100 will produce an error.
+   * Also note that the maximum value for `num` is 10.
    * @return Search
    */
   public function listCse($optParams = [])
