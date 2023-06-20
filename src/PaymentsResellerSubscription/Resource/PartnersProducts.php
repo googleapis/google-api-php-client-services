@@ -45,8 +45,8 @@ class PartnersProducts extends \Google\Service\Resource
    * fields are supported: - `regionCodes` - `youtubePayload.partnerEligibilityId`
    * - `youtubePayload.postalCode` - Unless explicitly mentioned above, other
    * features are not supported. Example: `regionCodes:US AND
-   * youtubePayload.postalCode=94043 AND youtubePayload.partnerEligibilityId
-   * =eligibility-id`
+   * youtubePayload.postalCode=94043 AND
+   * youtubePayload.partnerEligibilityId=eligibility-id`
    * @opt_param int pageSize Optional. The maximum number of products to return.
    * The service may return fewer than this value. If unspecified, at most 50
    * products will be returned. The maximum value is 1000; values above 1000 will
