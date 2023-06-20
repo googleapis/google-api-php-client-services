@@ -28,6 +28,10 @@ class ConnectSettings extends \Google\Collection
    * @var string
    */
   public $databaseVersion;
+  /**
+   * @var string
+   */
+  public $dnsName;
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   /**
@@ -68,6 +72,20 @@ class ConnectSettings extends \Google\Collection
   public function getDatabaseVersion()
   {
     return $this->databaseVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setDnsName($dnsName)
+  {
+    $this->dnsName = $dnsName;
+  }
+  /**
+   * @return string
+   */
+  public function getDnsName()
+  {
+    return $this->dnsName;
   }
   /**
    * @param IpMapping[]
