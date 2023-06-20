@@ -158,6 +158,16 @@ class CCAIPlatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getAuthentication-config' => [
+              'path' => 'v1alpha1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1alpha1/{+parent}/contactCenters',
               'httpMethod' => 'GET',
@@ -196,6 +206,20 @@ class CCAIPlatform extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'updateAuthentication-config' => [
+              'path' => 'v1alpha1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
                 'updateMask' => [
                   'location' => 'query',
