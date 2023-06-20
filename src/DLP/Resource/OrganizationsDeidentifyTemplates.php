@@ -136,8 +136,9 @@ class OrganizationsDeidentifyTemplates extends \Google\Service\Resource
     return $this->call('list', [$params], GooglePrivacyDlpV2ListDeidentifyTemplatesResponse::class);
   }
   /**
-   * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs
-   * /creating-templates-deid to learn more. (deidentifyTemplates.patch)
+   * Updates the DeidentifyTemplate. See
+   * https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
+   * (deidentifyTemplates.patch)
    *
    * @param string $name Required. Resource name of organization and deidentify
    * template to be updated, for example

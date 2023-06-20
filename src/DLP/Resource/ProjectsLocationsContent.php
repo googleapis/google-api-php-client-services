@@ -36,11 +36,12 @@ class ProjectsLocationsContent extends \Google\Service\Resource
 {
   /**
    * De-identifies potentially sensitive info from a ContentItem. This method has
-   * limits on input size and output size. See https://cloud.google.com/dlp/docs
-   * /deidentify-sensitive-data to learn more. When no InfoTypes or
-   * CustomInfoTypes are specified in this request, the system will automatically
-   * choose what detectors to run. By default this may be all types, but may
-   * change over time as detectors are updated. (content.deidentify)
+   * limits on input size and output size. See
+   * https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
+   * When no InfoTypes or CustomInfoTypes are specified in this request, the
+   * system will automatically choose what detectors to run. By default this may
+   * be all types, but may change over time as detectors are updated.
+   * (content.deidentify)
    *
    * @param string $parent Parent resource name. The format of this value varies
    * depending on whether you have [specified a processing
