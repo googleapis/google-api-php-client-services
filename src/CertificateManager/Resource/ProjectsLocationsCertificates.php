@@ -113,8 +113,9 @@ class ProjectsLocationsCertificates extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The update mask applies to the
-   * resource. For the `FieldMask` definition, see https://developers.google.com
-   * /protocol-buffers/docs/reference/google.protobuf#fieldmask.
+   * resource. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask.
    * @return Operation
    */
   public function patch($name, Certificate $postBody, $optParams = [])
