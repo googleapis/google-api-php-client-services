@@ -125,9 +125,6 @@ class V1 extends \Google\Service\Resource
    * IamPolicyAnalysisQuery.access_selector is specified, the access section of
    * the result will be determined by the selector, and this flag is not allowed
    * to set. Default is false.
-   * @opt_param bool analysisQuery.options.includeDenyPolicyAnalysis Optional. If
-   * true, the response includes deny policy analysis results, and you can see
-   * which access tuples are denied. Default is false.
    * @opt_param bool analysisQuery.options.outputGroupEdges Optional. If true, the
    * result will output the relevant membership relationships between groups and
    * other groups, and between groups and principals. Default is false.
@@ -135,18 +132,18 @@ class V1 extends \Google\Service\Resource
    * the result will output the relevant parent/child relationships between
    * resources. Default is false.
    * @opt_param string analysisQuery.resourceSelector.fullResourceName Required.
-   * The [full resource name] (https://cloud.google.com/asset-inventory/docs
-   * /resource-name-format) of a resource of [supported resource
+   * The [full resource name] (https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format) of a resource of [supported resource
    * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
    * types#analyzable_asset_types).
    * @opt_param string executionTimeout Optional. Amount of time executable has to
-   * complete. See JSON representation of [Duration](https://developers.google.com
-   * /protocol-buffers/docs/proto3#json). If this field is set with a value less
-   * than the RPC deadline, and the execution of your query hasn't finished in the
-   * specified execution timeout, you will get a response with partial result.
-   * Otherwise, your query's execution will continue until the RPC deadline. If
-   * it's not finished until then, you will get a DEADLINE_EXCEEDED error. Default
-   * is empty.
+   * complete. See JSON representation of
+   * [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
+   * If this field is set with a value less than the RPC deadline, and the
+   * execution of your query hasn't finished in the specified execution timeout,
+   * you will get a response with partial result. Otherwise, your query's
+   * execution will continue until the RPC deadline. If it's not finished until
+   * then, you will get a DEADLINE_EXCEEDED error. Default is empty.
    * @opt_param string savedAnalysisQuery Optional. The name of a saved query,
    * which must be in the format of: *
    * projects/project_number/savedQueries/saved_query_id *
@@ -402,9 +399,9 @@ class V1 extends \Google\Service\Resource
   }
   /**
    * Issue a job that queries assets using a SQL statement compatible with
-   * [BigQuery Standard SQL](http://cloud/bigquery/docs/reference/standard-sql
-   * /enabling-standard-sql). If the query execution finishes within timeout and
-   * there's no pagination, the full query results will be returned in the
+   * [BigQuery Standard SQL](http://cloud/bigquery/docs/reference/standard-
+   * sql/enabling-standard-sql). If the query execution finishes within timeout
+   * and there's no pagination, the full query results will be returned in the
    * `QueryAssetsResponse`. Otherwise, full query results can be obtained by
    * issuing extra requests with the `job_reference` from the a previous
    * `QueryAssets` call. Note, the query result has approximately 10 GB limitation
@@ -597,20 +594,19 @@ class V1 extends \Google\Service\Resource
    * * `Important location:(us-west1 OR global)` to find Google Cloud resources
    * that contain "Important" as a word in any of the searchable fields and are
    * also located in the "us-west1" region or the "global" location.
-   * @opt_param string readMask Optional. A comma-separated list of fields
-   * specifying which fields to be returned in ResourceSearchResult. Only '*' or
-   * combination of top level fields can be specified. Field names of both
-   * snake_case and camelCase are supported. Examples: `"*"`, `"name,location"`,
-   * `"name,versionedResources"`. The read_mask paths must be valid field paths
-   * listed but not limited to (both snake_case and camelCase are supported): *
-   * name * assetType * project * displayName * description * location * tagKeys *
-   * tagValues * tagValueIds * labels * networkTags * kmsKey (This field is
-   * deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS key
-   * information.) * kmsKeys * createTime * updateTime * state *
-   * additionalAttributes * versionedResources If read_mask is not specified, all
-   * fields except versionedResources will be returned. If only '*' is specified,
-   * all fields including versionedResources will be returned. Any invalid field
-   * path will trigger INVALID_ARGUMENT error.
+   * @opt_param string readMask Optional. A comma-separated list of fields that
+   * you want returned in the results. The following fields are returned by
+   * default if not specified: * `name` * `assetType` * `project` * `folders` *
+   * `organization` * `displayName` * `description` * `location` * `labels` *
+   * `networkTags` * `kmsKeys` * `createTime` * `updateTime` * `state` *
+   * `additionalAttributes` * `parentFullResourceName` * `parentAssetType` Some
+   * fields of large size, such as `versionedResources` and `attachedResources`,
+   * are not returned by default, but you can specify them in the `read_mask`
+   * parameter if you want to include them. If `"*"` is specified, all [available
+   * fields](https://cloud.google.com/asset-inventory/docs/reference/rest/v1/TopLe
+   * vel/searchAllResources#resourcesearchresult) are returned. Examples:
+   * `"name,location"`, `"name,versionedResources"`, `"*"`. Any invalid field path
+   * will trigger INVALID_ARGUMENT error.
    * @return SearchAllResourcesResponse
    */
   public function searchAllResources($scope, $optParams = [])
