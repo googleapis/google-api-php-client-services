@@ -46,8 +46,8 @@ class Services extends \Google\Service\Resource
    * (services.addSubnetwork)
    *
    * @param string $parent Required. A tenant project in the service producer
-   * organization, in the following format: services/{service}/{collection-id
-   * }/{resource-id}. {collection-id} is the cloud resource collection type that
+   * organization, in the following format: services/{service}/{collection-
+   * id}/{resource-id}. {collection-id} is the cloud resource collection type that
    * represents the tenant project. Only `projects` are supported. {resource-id}
    * is the tenant project numeric id, such as `123456`. {service} the name of the
    * peering service, such as `service-peering.example.com`. This service must
