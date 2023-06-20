@@ -120,9 +120,9 @@ class BuyersProposals extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional query string using the [Cloud API list
-   * filtering syntax](https://developers.google.com/authorized-buyers/apis/guides
-   * /list-filters) Supported columns for filtering are: * displayName * dealType
-   * * updateTime * state
+   * filtering syntax](https://developers.google.com/authorized-
+   * buyers/apis/guides/list-filters) Supported columns for filtering are: *
+   * displayName * dealType * updateTime * state
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If unspecified, the server will put a size of 500.
    * @opt_param string pageToken The page token as returned from
