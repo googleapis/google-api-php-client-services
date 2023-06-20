@@ -41,11 +41,11 @@ class Enterprises extends \Google\Service\Resource
    * @opt_param bool agreementAccepted Whether the enterprise admin has seen and
    * agreed to the managed Google Play Agreement
    * (https://www.android.com/enterprise/terms/). Do not set this field for any
-   * customer-managed enterprise (https://developers.google.com/android/management
-   * /create-enterprise#customer-managed_enterprises). Set this to field to true
-   * for all EMM-managed enterprises
-   * (https://developers.google.com/android/management/create-enterprise#emm-
-   * managed_enterprises).
+   * customer-managed enterprise
+   * (https://developers.google.com/android/management/create-enterprise#customer-
+   * managed_enterprises). Set this to field to true for all EMM-managed
+   * enterprises (https://developers.google.com/android/management/create-
+   * enterprise#emm-managed_enterprises).
    * @opt_param string enterpriseToken The enterprise token appended to the
    * callback URL. Set this when creating a customer-managed enterprise
    * (https://developers.google.com/android/management/create-enterprise#customer-
