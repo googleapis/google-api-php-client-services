@@ -120,11 +120,12 @@ class ProjectsLocationsDatasetsConsentStoresAttributeDefinitions extends \Google
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. The update mask that applies to the
-   * resource. For the `FieldMask` definition, see https://developers.google.com
-   * /protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
-   * `description`, `allowed_values`, `consent_default_values` and
-   * `data_mapping_default_value` fields can be updated. The updated
-   * `allowed_values` must contain all values from the previous `allowed_values`.
+   * resource. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask. Only the `description`,
+   * `allowed_values`, `consent_default_values` and `data_mapping_default_value`
+   * fields can be updated. The updated `allowed_values` must contain all values
+   * from the previous `allowed_values`.
    * @return AttributeDefinition
    */
   public function patch($name, AttributeDefinition $postBody, $optParams = [])
