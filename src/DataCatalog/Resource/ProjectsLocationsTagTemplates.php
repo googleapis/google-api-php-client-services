@@ -38,8 +38,8 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
   /**
    * Creates a tag template. You must enable the Data Catalog API in the project
    * identified by the `parent` parameter. For more information, see [Data Catalog
-   * resource project] (https://cloud.google.com/data-catalog/docs/concepts
-   * /resource-project). (tagTemplates.create)
+   * resource project] (https://cloud.google.com/data-
+   * catalog/docs/concepts/resource-project). (tagTemplates.create)
    *
    * @param string $parent Required. The name of the project and the template
    * location [region](https://cloud.google.com/data-
@@ -62,8 +62,9 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
   /**
    * Deletes a tag template and all tags that use it. You must enable the Data
    * Catalog API in the project identified by the `name` parameter. For more
-   * information, see [Data Catalog resource project](https://cloud.google.com
-   * /data-catalog/docs/concepts/resource-project). (tagTemplates.delete)
+   * information, see [Data Catalog resource
+   * project](https://cloud.google.com/data-catalog/docs/concepts/resource-
+   * project). (tagTemplates.delete)
    *
    * @param string $name Required. The name of the tag template to delete.
    * @param array $optParams Optional parameters.
@@ -121,8 +122,8 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * These fields are separate resources with their own create, update, and delete
    * methods. You must enable the Data Catalog API in the project identified by
    * the `tag_template.name` parameter. For more information, see [Data Catalog
-   * resource project](https://cloud.google.com/data-catalog/docs/concepts
-   * /resource-project). (tagTemplates.patch)
+   * resource project](https://cloud.google.com/data-
+   * catalog/docs/concepts/resource-project). (tagTemplates.patch)
    *
    * @param string $name The resource name of the tag template in URL format.
    * Note: The tag template itself and its child resources might not be stored in

@@ -61,8 +61,8 @@ class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
    * Deletes a field in a tag template and all uses of this field from the tags
    * based on this template. You must enable the Data Catalog API in the project
    * identified by the `name` parameter. For more information, see [Data Catalog
-   * resource project](https://cloud.google.com/data-catalog/docs/concepts
-   * /resource-project). (fields.delete)
+   * resource project](https://cloud.google.com/data-
+   * catalog/docs/concepts/resource-project). (fields.delete)
    *
    * @param string $name Required. The name of the tag template field to delete.
    * @param array $optParams Optional parameters.

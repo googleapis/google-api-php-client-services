@@ -76,8 +76,8 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
    * Deletes an existing entry. You can delete only the entries created by the
    * CreateEntry method. You must enable the Data Catalog API in the project
    * identified by the `name` parameter. For more information, see [Data Catalog
-   * resource project](https://cloud.google.com/data-catalog/docs/concepts
-   * /resource-project). (entries.delete)
+   * resource project](https://cloud.google.com/data-
+   * catalog/docs/concepts/resource-project). (entries.delete)
    *
    * @param string $name Required. The name of the entry to delete.
    * @param array $optParams Optional parameters.
