@@ -61,8 +61,8 @@ class PartnersDevices extends \Google\Service\Resource
   }
   /**
    * Claims a batch of devices for a customer asynchronously. Adds the devices to
-   * zero-touch enrollment. To learn more, read [Long‑running batch operations
-   * ](/zero-touch/guides/how-it-works#operations). (devices.claimAsync)
+   * zero-touch enrollment. To learn more, read [Long‑running batch
+   * operations](/zero-touch/guides/how-it-works#operations). (devices.claimAsync)
    *
    * @param string $partnerId Required. The ID of the reseller partner.
    * @param ClaimDevicesRequest $postBody
