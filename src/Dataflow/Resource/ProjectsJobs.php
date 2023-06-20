@@ -34,7 +34,8 @@ use Google\Service\Dataflow\SnapshotJobRequest;
 class ProjectsJobs extends \Google\Service\Resource
 {
   /**
-   * List the jobs of a project across all regions. (jobs.aggregated)
+   * List the jobs of a project across all regions. **Note:** This method doesn't
+   * support filtering the list of jobs by name. (jobs.aggregated)
    *
    * @param string $projectId The project which owns the jobs.
    * @param array $optParams Optional parameters.
@@ -43,7 +44,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * @opt_param string location The [regional endpoint]
    * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
    * contains this job.
-   * @opt_param string name Optional. The job name. Optional.
+   * @opt_param string name Optional. The job name.
    * @opt_param int pageSize If there are many jobs, limit response to at most
    * this many. The actual number of jobs returned will be the lesser of
    * max_responses and an unspecified server-defined limit.
@@ -140,8 +141,10 @@ class ProjectsJobs extends \Google\Service\Resource
    * recommend using `projects.locations.jobs.list` with a [regional endpoint]
    * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list
    * the all jobs across all regions, use `projects.jobs.aggregated`. Using
-   * `projects.jobs.list` is not recommended, as you can only get the list of jobs
-   * that are running in `us-central1`. (jobs.listProjectsJobs)
+   * `projects.jobs.list` is not recommended, because you can only get the list of
+   * jobs that are running in `us-central1`. `projects.locations.jobs.list` and
+   * `projects.jobs.list` support filtering the list of jobs by name. Filtering by
+   * name isn't supported by `projects.jobs.aggregated`. (jobs.listProjectsJobs)
    *
    * @param string $projectId The project which owns the jobs.
    * @param array $optParams Optional parameters.
@@ -150,7 +153,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * @opt_param string location The [regional endpoint]
    * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
    * contains this job.
-   * @opt_param string name Optional. The job name. Optional.
+   * @opt_param string name Optional. The job name.
    * @opt_param int pageSize If there are many jobs, limit response to at most
    * this many. The actual number of jobs returned will be the lesser of
    * max_responses and an unspecified server-defined limit.
@@ -184,10 +187,10 @@ class ProjectsJobs extends \Google\Service\Resource
   /**
    * Updates the state of an existing Cloud Dataflow job. To update the state of
    * an existing job, we recommend using `projects.locations.jobs.update` with a
-   * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts
-   * /regional-endpoints). Using `projects.jobs.update` is not recommended, as you
-   * can only update the state of jobs that are running in `us-central1`.
-   * (jobs.update)
+   * [regional endpoint]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+   * `projects.jobs.update` is not recommended, as you can only update the state
+   * of jobs that are running in `us-central1`. (jobs.update)
    *
    * @param string $projectId The ID of the Cloud Platform project that the job
    * belongs to.
