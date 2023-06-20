@@ -70,8 +70,9 @@ class AlertsFeedback extends \Google\Service\Resource
    * @opt_param string filter Optional. A query string for filtering alert
    * feedback results. For more details, see [Query
    * filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-
-   * filters) and [Supported query filter fields](https://developers.google.com
-   * /admin-sdk/alertcenter/reference/filter-fields#alerts.feedback.list).
+   * filters) and [Supported query filter
+   * fields](https://developers.google.com/admin-sdk/alertcenter/reference/filter-
+   * fields#alerts.feedback.list).
    * @return ListAlertFeedbackResponse
    */
   public function listAlertsFeedback($alertId, $optParams = [])
