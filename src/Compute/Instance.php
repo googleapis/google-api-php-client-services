@@ -62,6 +62,8 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $id;
+  protected $instanceEncryptionKeyType = CustomerEncryptionKey::class;
+  protected $instanceEncryptionKeyDataType = '';
   /**
    * @var string
    */
@@ -344,6 +346,20 @@ class Instance extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * @param CustomerEncryptionKey
+   */
+  public function setInstanceEncryptionKey(CustomerEncryptionKey $instanceEncryptionKey)
+  {
+    $this->instanceEncryptionKey = $instanceEncryptionKey;
+  }
+  /**
+   * @return CustomerEncryptionKey
+   */
+  public function getInstanceEncryptionKey()
+  {
+    return $this->instanceEncryptionKey;
   }
   /**
    * @param string
