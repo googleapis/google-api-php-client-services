@@ -25,6 +25,7 @@ use Google\Service\SQLAdmin\InstancesFailoverRequest;
 use Google\Service\SQLAdmin\InstancesImportRequest;
 use Google\Service\SQLAdmin\InstancesListResponse;
 use Google\Service\SQLAdmin\InstancesListServerCasResponse;
+use Google\Service\SQLAdmin\InstancesReencryptRequest;
 use Google\Service\SQLAdmin\InstancesRestoreBackupRequest;
 use Google\Service\SQLAdmin\InstancesRotateServerCaRequest;
 use Google\Service\SQLAdmin\InstancesTruncateLogRequest;
@@ -277,6 +278,22 @@ class Instances extends \Google\Service\Resource
     $params = ['project' => $project, 'instance' => $instance];
     $params = array_merge($params, $optParams);
     return $this->call('promoteReplica', [$params], Operation::class);
+  }
+  /**
+   * Reencrypt CMEK instance with latest key version. (instances.reencrypt)
+   *
+   * @param string $project ID of the project that contains the instance.
+   * @param string $instance Cloud SQL instance ID. This does not include the
+   * project ID.
+   * @param InstancesReencryptRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function reencrypt($project, $instance, InstancesReencryptRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reencrypt', [$params], Operation::class);
   }
   /**
    * Deletes all client certificates and generates a new server SSL certificate
