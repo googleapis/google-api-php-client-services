@@ -102,8 +102,10 @@ class SpacesMembers extends \Google\Service\Resource
    * requires the `chat.memberships` or `chat.memberships.readonly` authorization
    * scope. (members.get)
    *
-   * @param string $name Required. Resource name of the membership to retrieve.
-   * Format: `spaces/{space}/members/{member}`
+   * @param string $name Required. Resource name of the membership to retrieve. To
+   * get the app's own membership, you can optionally use
+   * `spaces/{space}/members/app`. Format: `spaces/{space}/members/{member}` or
+   * `spaces/{space}/members/app`
    * @param array $optParams Optional parameters.
    * @return Membership
    */

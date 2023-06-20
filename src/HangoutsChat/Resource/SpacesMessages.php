@@ -37,13 +37,13 @@ class SpacesMessages extends \Google\Service\Resource
    * [authentication](https://developers.google.com/chat/api/guides/auth).
    * Creating a text message supports both [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * [app authentication] (https://developers.google.com/chat/api/guides/auth
-   * /service-accounts). [User
+   * [app authentication]
+   * (https://developers.google.com/chat/api/guides/auth/service-accounts). [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * requires the `chat.messages` or `chat.messages.create` authorization scope.
-   * Creating a card message requires [app authentication]
-   * (https://developers.google.com/chat/api/guides/auth/service-accounts) Because
-   * Chat provides authentication for
+   * Creating a card message only supports and requires [app authentication]
+   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+   * Because Chat provides authentication for
    * [webhooks](https://developers.google.com/chat/how-tos/webhooks) as part of
    * the URL that's generated when a webhook is registered, webhooks can create
    * messages without a service account or user authentication. (messages.create)
@@ -231,9 +231,10 @@ class SpacesMessages extends \Google\Service\Resource
    * udl/messages#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas. Currently supported field paths: - `text` -
-   * `cards` (Requires [service account authentication](/chat/api/guides/auth
-   * /service-accounts).) - `cards_v2` (Requires [service account
-   * authentication](/chat/api/guides/auth/service-accounts).)
+   * `attachment` - `cards` (Requires [service account
+   * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
+   * (Requires [service account authentication](/chat/api/guides/auth/service-
+   * accounts).)
    * @return Message
    */
   public function patch($name, Message $postBody, $optParams = [])
@@ -269,9 +270,10 @@ class SpacesMessages extends \Google\Service\Resource
    * udl/messages#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas. Currently supported field paths: - `text` -
-   * `cards` (Requires [service account authentication](/chat/api/guides/auth
-   * /service-accounts).) - `cards_v2` (Requires [service account
-   * authentication](/chat/api/guides/auth/service-accounts).)
+   * `attachment` - `cards` (Requires [service account
+   * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
+   * (Requires [service account authentication](/chat/api/guides/auth/service-
+   * accounts).)
    * @return Message
    */
   public function update($name, Message $postBody, $optParams = [])
