@@ -23,7 +23,8 @@ use Google\Client;
  * Service definition for MigrationCenterAPI (v1alpha1).
  *
  * <p>
-</p>
+ * A unified platform that helps you accelerate your end-to-end cloud journey
+ * from your current on-premises or cloud environments to Google Cloud.</p>
  *
  * <p>
  * For more information about this service, see the API
