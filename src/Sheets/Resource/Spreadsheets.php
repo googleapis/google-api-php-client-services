@@ -85,9 +85,9 @@ class Spreadsheets extends \Google\Service\Resource
    * You can define a single cell (for example, `A1`) or multiple cells (for
    * example, `A1:D5`). You can also get cells from other sheets within the same
    * spreadsheet (for example, `Sheet2!A1:C4`) or retrieve multiple ranges at once
-   * (for example, `?ranges=A1:D5=Sheet2!A1:C4`). Limiting the range returns only
-   * the portions of the spreadsheet that intersect the requested ranges.
-   * (spreadsheets.get)
+   * (for example, `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting the range
+   * returns only the portions of the spreadsheet that intersect the requested
+   * ranges. (spreadsheets.get)
    *
    * @param string $spreadsheetId The spreadsheet to request.
    * @param array $optParams Optional parameters.
