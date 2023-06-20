@@ -60,8 +60,9 @@ class BillingAccounts extends \Google\Service\Resource
   }
   /**
    * Gets information about a billing account. The current authenticated user must
-   * be a [viewer of the billing account](https://cloud.google.com/billing/docs
-   * /how-to/billing-access). (billingAccounts.get)
+   * be a [viewer of the billing
+   * account](https://cloud.google.com/billing/docs/how-to/billing-access).
+   * (billingAccounts.get)
    *
    * @param string $name Required. The resource name of the billing account to
    * retrieve. For example, `billingAccounts/012345-567890-ABCDEF`.
