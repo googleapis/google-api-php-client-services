@@ -39,20 +39,6 @@ use Google\Service\Baremetalsolution\StopInstanceRequest;
 class ProjectsLocationsInstances extends \Google\Service\Resource
 {
   /**
-   * Create an Instance. (instances.create)
-   *
-   * @param string $parent Required. The parent project and location.
-   * @param Instance $postBody
-   * @param array $optParams Optional parameters.
-   * @return Operation
-   */
-  public function create($parent, Instance $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], Operation::class);
-  }
-  /**
    * Detach LUN from Instance. (instances.detachLun)
    *
    * @param string $instance Required. Name of the instance.
