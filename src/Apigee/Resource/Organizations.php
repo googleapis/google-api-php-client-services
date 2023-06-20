@@ -39,8 +39,8 @@ class Organizations extends \Google\Service\Resource
 {
   /**
    * Creates an Apigee organization. See [Create an Apigee
-   * organization](https://cloud.google.com/apigee/docs/api-platform/get-started
-   * /create-org). (organizations.create)
+   * organization](https://cloud.google.com/apigee/docs/api-platform/get-
+   * started/create-org). (organizations.create)
    *
    * @param GoogleCloudApigeeV1Organization $postBody
    * @param array $optParams Optional parameters.
@@ -83,8 +83,8 @@ class Organizations extends \Google\Service\Resource
   }
   /**
    * Gets the profile for an Apigee organization. See [Understanding
-   * organizations](https://cloud.google.com/apigee/docs/api-platform/fundamentals
-   * /organization-structure). (organizations.get)
+   * organizations](https://cloud.google.com/apigee/docs/api-
+   * platform/fundamentals/organization-structure). (organizations.get)
    *
    * @param string $name Required. Apigee organization name in the following
    * format: `organizations/{org}`
@@ -153,9 +153,9 @@ class Organizations extends \Google\Service\Resource
    * calling [setSyncAuthorization](setSyncAuthorization) to ensure that you are
    * updating the correct version. If you don't pass the ETag in the call to
    * `setSyncAuthorization`, then the existing authorization is overwritten
-   * indiscriminately. For more information, see [Configure the
-   * Synchronizer](https://cloud.google.com/apigee/docs/hybrid/latest
-   * /synchronizer-access). **Note**: Available to Apigee hybrid only.
+   * indiscriminately. For more information, see [Configure the Synchronizer](http
+   * s://cloud.google.com/apigee/docs/hybrid/latest/synchronizer-access).
+   * **Note**: Available to Apigee hybrid only.
    * (organizations.getSyncAuthorization)
    *
    * @param string $name Required. Name of the Apigee organization. Use the
@@ -173,8 +173,9 @@ class Organizations extends \Google\Service\Resource
   /**
    * Lists the Apigee organizations and associated Google Cloud projects that you
    * have permission to access. See [Understanding
-   * organizations](https://cloud.google.com/apigee/docs/api-platform/fundamentals
-   * /organization-structure). (organizations.listOrganizations)
+   * organizations](https://cloud.google.com/apigee/docs/api-
+   * platform/fundamentals/organization-structure).
+   * (organizations.listOrganizations)
    *
    * @param string $parent Required. Use the following structure in your request:
    * `organizations`
@@ -211,9 +212,8 @@ class Organizations extends \Google\Service\Resource
    * To get an ETag, call [getSyncAuthorization](getSyncAuthorization). If you
    * don't pass the ETag in the call to `setSyncAuthorization`, then the existing
    * authorization is overwritten indiscriminately. For more information, see
-   * [Configure the
-   * Synchronizer](https://cloud.google.com/apigee/docs/hybrid/latest
-   * /synchronizer-access). **Note**: Available to Apigee hybrid only.
+   * [Configure the Synchronizer](https://cloud.google.com/apigee/docs/hybrid/late
+   * st/synchronizer-access). **Note**: Available to Apigee hybrid only.
    * (organizations.setSyncAuthorization)
    *
    * @param string $name Required. Name of the Apigee organization. Use the

@@ -142,9 +142,10 @@ class OrganizationsEnvironments extends \Google\Service\Resource
   /**
    * Gets the IAM policy on an environment. For more information, see [Manage
    * users, roles, and permissions using the
-   * API](https://cloud.google.com/apigee/docs/api-platform/system-administration
-   * /manage-users-roles). You must have the `apigee.environments.getIamPolicy`
-   * permission to call this API. (environments.getIamPolicy)
+   * API](https://cloud.google.com/apigee/docs/api-platform/system-
+   * administration/manage-users-roles). You must have the
+   * `apigee.environments.getIamPolicy` permission to call this API.
+   * (environments.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See [Resource
