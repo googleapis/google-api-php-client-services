@@ -19,6 +19,10 @@ namespace Google\Service\GKEHub;
 
 class ConfigManagementMembershipSpec extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $cluster;
   protected $configSyncType = ConfigManagementConfigSync::class;
   protected $configSyncDataType = '';
   protected $hierarchyControllerType = ConfigManagementHierarchyControllerConfig::class;
@@ -30,6 +34,20 @@ class ConfigManagementMembershipSpec extends \Google\Model
    */
   public $version;
 
+  /**
+   * @param string
+   */
+  public function setCluster($cluster)
+  {
+    $this->cluster = $cluster;
+  }
+  /**
+   * @return string
+   */
+  public function getCluster()
+  {
+    return $this->cluster;
+  }
   /**
    * @param ConfigManagementConfigSync
    */

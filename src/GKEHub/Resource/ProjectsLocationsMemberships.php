@@ -39,8 +39,8 @@ class ProjectsLocationsMemberships extends \Google\Service\Resource
   /**
    * Creates a new Membership. **This is currently only supported for GKE clusters
    * on Google Cloud**. To register other clusters, follow the instructions at
-   * https://cloud.google.com/anthos/multicluster-
-   * management/connect/registering-a-cluster. (memberships.create)
+   * https://cloud.google.com/anthos/multicluster-management/connect/registering-
+   * a-cluster. (memberships.create)
    *
    * @param string $parent Required. The parent (project and location) where the
    * Memberships will be created. Specified in the format `projects/locations`.

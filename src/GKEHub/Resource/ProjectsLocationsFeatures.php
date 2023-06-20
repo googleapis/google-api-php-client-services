@@ -146,10 +146,10 @@ class ProjectsLocationsFeatures extends \Google\Service\Resource
    *
    * @opt_param string filter Lists Features that match the filter expression,
    * following the syntax outlined in https://google.aip.dev/160. Examples: -
-   * Feature with the name "servicemesh" in project "foo-proj": name = "projects
-   * /foo-proj/locations/global/features/servicemesh" - Features that have a label
-   * called `foo`: labels.foo:* - Features that have a label called `foo` whose
-   * value is `bar`: labels.foo = bar
+   * Feature with the name "servicemesh" in project "foo-proj": name =
+   * "projects/foo-proj/locations/global/features/servicemesh" - Features that
+   * have a label called `foo`: labels.foo:* - Features that have a label called
+   * `foo` whose value is `bar`: labels.foo = bar
    * @opt_param string orderBy One or more fields to compare and use to sort the
    * output. See https://google.aip.dev/132#ordering.
    * @opt_param int pageSize When requesting a 'page' of resources, `page_size`

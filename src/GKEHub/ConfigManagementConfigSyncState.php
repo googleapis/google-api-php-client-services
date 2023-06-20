@@ -17,10 +17,13 @@
 
 namespace Google\Service\GKEHub;
 
-class ConfigManagementConfigSyncState extends \Google\Model
+class ConfigManagementConfigSyncState extends \Google\Collection
 {
+  protected $collection_key = 'errors';
   protected $deploymentStateType = ConfigManagementConfigSyncDeploymentState::class;
   protected $deploymentStateDataType = '';
+  protected $errorsType = ConfigManagementConfigSyncError::class;
+  protected $errorsDataType = 'array';
   protected $syncStateType = ConfigManagementSyncState::class;
   protected $syncStateDataType = '';
   protected $versionType = ConfigManagementConfigSyncVersion::class;
@@ -39,6 +42,20 @@ class ConfigManagementConfigSyncState extends \Google\Model
   public function getDeploymentState()
   {
     return $this->deploymentState;
+  }
+  /**
+   * @param ConfigManagementConfigSyncError[]
+   */
+  public function setErrors($errors)
+  {
+    $this->errors = $errors;
+  }
+  /**
+   * @return ConfigManagementConfigSyncError[]
+   */
+  public function getErrors()
+  {
+    return $this->errors;
   }
   /**
    * @param ConfigManagementSyncState
