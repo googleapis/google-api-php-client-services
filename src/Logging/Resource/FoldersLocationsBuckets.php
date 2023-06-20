@@ -38,8 +38,8 @@ class FoldersLocationsBuckets extends \Google\Service\Resource
    * has been created, the bucket's location cannot be changed. (buckets.create)
    *
    * @param string $parent Required. The resource in which to create the log
-   * bucket: "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects
-   * /my-project/locations/global"
+   * bucket: "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For
+   * example:"projects/my-project/locations/global"
    * @param LogBucket $postBody
    * @param array $optParams Optional parameters.
    *
@@ -60,8 +60,8 @@ class FoldersLocationsBuckets extends \Google\Service\Resource
    * changed. (buckets.createAsync)
    *
    * @param string $parent Required. The resource in which to create the log
-   * bucket: "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects
-   * /my-project/locations/global"
+   * bucket: "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For
+   * example:"projects/my-project/locations/global"
    * @param LogBucket $postBody
    * @param array $optParams Optional parameters.
    *
