@@ -104,8 +104,8 @@ class ProjectsLocationsCaPoolsCertificates extends \Google\Service\Resource
    * authority-service/docs/sorting-filtering-certificates#filtering_support).
    * @opt_param string orderBy Optional. Specify how the results should be sorted.
    * For details on supported fields and syntax, see [Certificates Sorting
-   * documentation](https://cloud.google.com/certificate-authority-service/docs
-   * /sorting-filtering-certificates#sorting_support).
+   * documentation](https://cloud.google.com/certificate-authority-
+   * service/docs/sorting-filtering-certificates#sorting_support).
    * @opt_param int pageSize Optional. Limit on the number of Certificates to
    * include in the response. Further Certificates can subsequently be obtained by
    * including the ListCertificatesResponse.next_page_token in a subsequent
