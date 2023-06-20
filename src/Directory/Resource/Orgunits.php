@@ -109,8 +109,8 @@ class Orgunits extends \Google\Service\Resource
     return $this->call('list', [$params], OrgUnitsModel::class);
   }
   /**
-   * Updates an organizational unit. This method supports [patch semantics
-   * ](/admin-sdk/directory/v1/guides/performance#patch) (orgunits.patch)
+   * Updates an organizational unit. This method supports [patch
+   * semantics](/admin-sdk/directory/v1/guides/performance#patch) (orgunits.patch)
    *
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`

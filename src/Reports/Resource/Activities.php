@@ -97,18 +97,19 @@ class Activities extends \Google\Service\Resource
    * documents with a `doc_id` value equal to `12345`. In the second example, the
    * report returns any edited documents where the `doc_id` value is not equal to
    * `98765`. The `<>` operator is URL-encoded in the request's query string
-   * (`%3C%3E`): ``` GET...=edit=doc_id==12345 GET...=edit=doc_id%3C%3E98765 ``` A
-   * `filters` query supports these relational operators: * `==`—'equal to'. *
-   * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be
-   * URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded
-   * (%3C=). * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than
-   * or equal to'. Must be URL-encoded (%3E=). **Note:** The API doesn't accept
-   * multiple values of the same parameter. If a parameter is supplied more than
-   * once in the API request, the API only accepts the last value of that
-   * parameter. In addition, if an invalid parameter is supplied in the API
-   * request, the API ignores that parameter and returns the response
-   * corresponding to the remaining valid parameters. If no parameters are
-   * requested, all parameters are returned.
+   * (`%3C%3E`): ``` GET...&eventName=edit&filters=doc_id==12345
+   * GET...&eventName=edit&filters=doc_id%3C%3E98765 ``` A `filters` query
+   * supports these relational operators: * `==`—'equal to'. * `<>`—'not equal
+   * to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded
+   * (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
+   * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal
+   * to'. Must be URL-encoded (%3E=). **Note:** The API doesn't accept multiple
+   * values of the same parameter. If a parameter is supplied more than once in
+   * the API request, the API only accepts the last value of that parameter. In
+   * addition, if an invalid parameter is supplied in the API request, the API
+   * ignores that parameter and returns the response corresponding to the
+   * remaining valid parameters. If no parameters are requested, all parameters
+   * are returned.
    * @opt_param string groupIdFilter Comma separated group ids (obfuscated) on
    * which user activities are filtered, i.e. the response will contain activities
    * for only those users that are a part of at least one of the group ids
@@ -203,18 +204,19 @@ class Activities extends \Google\Service\Resource
    * documents with a `doc_id` value equal to `12345`. In the second example, the
    * report returns any edited documents where the `doc_id` value is not equal to
    * `98765`. The `<>` operator is URL-encoded in the request's query string
-   * (`%3C%3E`): ``` GET...=edit=doc_id==12345 GET...=edit=doc_id%3C%3E98765 ``` A
-   * `filters` query supports these relational operators: * `==`—'equal to'. *
-   * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be
-   * URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded
-   * (%3C=). * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than
-   * or equal to'. Must be URL-encoded (%3E=). **Note:** The API doesn't accept
-   * multiple values of the same parameter. If a parameter is supplied more than
-   * once in the API request, the API only accepts the last value of that
-   * parameter. In addition, if an invalid parameter is supplied in the API
-   * request, the API ignores that parameter and returns the response
-   * corresponding to the remaining valid parameters. If no parameters are
-   * requested, all parameters are returned.
+   * (`%3C%3E`): ``` GET...&eventName=edit&filters=doc_id==12345
+   * GET...&eventName=edit&filters=doc_id%3C%3E98765 ``` A `filters` query
+   * supports these relational operators: * `==`—'equal to'. * `<>`—'not equal
+   * to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded
+   * (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
+   * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal
+   * to'. Must be URL-encoded (%3E=). **Note:** The API doesn't accept multiple
+   * values of the same parameter. If a parameter is supplied more than once in
+   * the API request, the API only accepts the last value of that parameter. In
+   * addition, if an invalid parameter is supplied in the API request, the API
+   * ignores that parameter and returns the response corresponding to the
+   * remaining valid parameters. If no parameters are requested, all parameters
+   * are returned.
    * @opt_param string groupIdFilter Comma separated group ids (obfuscated) on
    * which user activities are filtered, i.e. the response will contain activities
    * for only those users that are a part of at least one of the group ids

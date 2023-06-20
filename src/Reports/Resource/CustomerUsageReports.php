@@ -36,8 +36,8 @@ class CustomerUsageReports extends \Google\Service\Resource
    * see the Customers Usage parameters reference guides.
    * (customerUsageReports.get)
    *
-   * @param string $date Represents the date the usage occurred, based on PST time
-   * zone. The timestamp is in the [ISO 8601
+   * @param string $date Represents the date the usage occurred, based on UTC-8:00
+   * (Pacific Standard Time). The timestamp is in the [ISO 8601
    * format](https://en.wikipedia.org/wiki/ISO_8601), `yyyy-mm-dd`.
    * @param array $optParams Optional parameters.
    *
