@@ -100,7 +100,15 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isSageIntent;
+  /**
+   * @var bool
+   */
   public $isTvmIntent;
+  /**
+   * @var bool
+   */
+  public $isValidSmarthomeIntent;
   /**
    * @var bool
    */
@@ -466,6 +474,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @param bool
    */
+  public function setIsSageIntent($isSageIntent)
+  {
+    $this->isSageIntent = $isSageIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsSageIntent()
+  {
+    return $this->isSageIntent;
+  }
+  /**
+   * @param bool
+   */
   public function setIsTvmIntent($isTvmIntent)
   {
     $this->isTvmIntent = $isTvmIntent;
@@ -476,6 +498,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsTvmIntent()
   {
     return $this->isTvmIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsValidSmarthomeIntent($isValidSmarthomeIntent)
+  {
+    $this->isValidSmarthomeIntent = $isValidSmarthomeIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsValidSmarthomeIntent()
+  {
+    return $this->isValidSmarthomeIntent;
   }
   /**
    * @param bool

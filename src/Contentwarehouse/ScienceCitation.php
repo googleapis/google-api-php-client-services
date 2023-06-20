@@ -40,6 +40,7 @@ class ScienceCitation extends \Google\Collection
         "borrowedFields" => "BorrowedFields",
         "chapter" => "Chapter",
         "citationSource" => "CitationSource",
+        "citationSourceCrawlTimestamp" => "CitationSourceCrawlTimestamp",
         "citationSourceUrl" => "CitationSourceUrl",
         "citationSrc" => "CitationSrc",
         "clearedReason" => "ClearedReason",
@@ -195,6 +196,10 @@ class ScienceCitation extends \Google\Collection
    * @var int
    */
   public $citationSource;
+  /**
+   * @var string
+   */
+  public $citationSourceCrawlTimestamp;
   /**
    * @var string
    */
@@ -801,6 +806,20 @@ class ScienceCitation extends \Google\Collection
   public function getCitationSource()
   {
     return $this->citationSource;
+  }
+  /**
+   * @param string
+   */
+  public function setCitationSourceCrawlTimestamp($citationSourceCrawlTimestamp)
+  {
+    $this->citationSourceCrawlTimestamp = $citationSourceCrawlTimestamp;
+  }
+  /**
+   * @return string
+   */
+  public function getCitationSourceCrawlTimestamp()
+  {
+    return $this->citationSourceCrawlTimestamp;
   }
   /**
    * @param string

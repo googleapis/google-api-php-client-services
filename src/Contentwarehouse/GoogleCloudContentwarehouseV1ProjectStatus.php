@@ -17,7 +17,7 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleCloudContentwarehouseV1InitializeProjectRequest extends \Google\Model
+class GoogleCloudContentwarehouseV1ProjectStatus extends \Google\Model
 {
   /**
    * @var string
@@ -32,13 +32,17 @@ class GoogleCloudContentwarehouseV1InitializeProjectRequest extends \Google\Mode
    */
   public $documentCreatorDefaultRole;
   /**
+   * @var string
+   */
+  public $location;
+  /**
    * @var bool
    */
-  public $enableCalUserEmailLogging;
+  public $qaEnabled;
   /**
    * @var string
    */
-  public $kmsKey;
+  public $state;
 
   /**
    * @param string
@@ -83,34 +87,48 @@ class GoogleCloudContentwarehouseV1InitializeProjectRequest extends \Google\Mode
     return $this->documentCreatorDefaultRole;
   }
   /**
-   * @param bool
-   */
-  public function setEnableCalUserEmailLogging($enableCalUserEmailLogging)
-  {
-    $this->enableCalUserEmailLogging = $enableCalUserEmailLogging;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableCalUserEmailLogging()
-  {
-    return $this->enableCalUserEmailLogging;
-  }
-  /**
    * @param string
    */
-  public function setKmsKey($kmsKey)
+  public function setLocation($location)
   {
-    $this->kmsKey = $kmsKey;
+    $this->location = $location;
   }
   /**
    * @return string
    */
-  public function getKmsKey()
+  public function getLocation()
   {
-    return $this->kmsKey;
+    return $this->location;
+  }
+  /**
+   * @param bool
+   */
+  public function setQaEnabled($qaEnabled)
+  {
+    $this->qaEnabled = $qaEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getQaEnabled()
+  {
+    return $this->qaEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContentwarehouseV1InitializeProjectRequest::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1InitializeProjectRequest');
+class_alias(GoogleCloudContentwarehouseV1ProjectStatus::class, 'Google_Service_Contentwarehouse_GoogleCloudContentwarehouseV1ProjectStatus');

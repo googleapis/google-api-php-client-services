@@ -60,6 +60,8 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var bool
    */
   public $lanscanOptedIn;
+  protected $matterUniqueIdType = AssistantVerticalsHomeautomationProtoMatterUniqueId::class;
+  protected $matterUniqueIdDataType = '';
   /**
    * @var string
    */
@@ -314,6 +316,20 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public function getLanscanOptedIn()
   {
     return $this->lanscanOptedIn;
+  }
+  /**
+   * @param AssistantVerticalsHomeautomationProtoMatterUniqueId
+   */
+  public function setMatterUniqueId(AssistantVerticalsHomeautomationProtoMatterUniqueId $matterUniqueId)
+  {
+    $this->matterUniqueId = $matterUniqueId;
+  }
+  /**
+   * @return AssistantVerticalsHomeautomationProtoMatterUniqueId
+   */
+  public function getMatterUniqueId()
+  {
+    return $this->matterUniqueId;
   }
   /**
    * @param string
