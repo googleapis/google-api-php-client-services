@@ -37,8 +37,10 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
    * @var string
    */
   public $url;
-  protected $webrefOutlinksType = Proto2BridgeMessageSet::class;
-  protected $webrefOutlinksDataType = '';
+  protected $webrefOutlinkInfosType = RepositoryWebrefWebrefOutlinkInfos::class;
+  protected $webrefOutlinkInfosDataType = '';
+  protected $webrefOutlinksLegacyType = Proto2BridgeMessageSet::class;
+  protected $webrefOutlinksLegacyDataType = '';
 
   /**
    * @param RepositoryWebrefSimplifiedAnchors
@@ -139,18 +141,32 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
     return $this->url;
   }
   /**
+   * @param RepositoryWebrefWebrefOutlinkInfos
+   */
+  public function setWebrefOutlinkInfos(RepositoryWebrefWebrefOutlinkInfos $webrefOutlinkInfos)
+  {
+    $this->webrefOutlinkInfos = $webrefOutlinkInfos;
+  }
+  /**
+   * @return RepositoryWebrefWebrefOutlinkInfos
+   */
+  public function getWebrefOutlinkInfos()
+  {
+    return $this->webrefOutlinkInfos;
+  }
+  /**
    * @param Proto2BridgeMessageSet
    */
-  public function setWebrefOutlinks(Proto2BridgeMessageSet $webrefOutlinks)
+  public function setWebrefOutlinksLegacy(Proto2BridgeMessageSet $webrefOutlinksLegacy)
   {
-    $this->webrefOutlinks = $webrefOutlinks;
+    $this->webrefOutlinksLegacy = $webrefOutlinksLegacy;
   }
   /**
    * @return Proto2BridgeMessageSet
    */
-  public function getWebrefOutlinks()
+  public function getWebrefOutlinksLegacy()
   {
-    return $this->webrefOutlinks;
+    return $this->webrefOutlinksLegacy;
   }
 }
 

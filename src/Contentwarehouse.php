@@ -100,7 +100,17 @@ class Contentwarehouse extends \Google\Service
         'locations',
         [
           'methods' => [
-            'initialize' => [
+            'getStatus' => [
+              'path' => 'v1/{+location}:getStatus',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'initialize' => [
               'path' => 'v1/{+location}:initialize',
               'httpMethod' => 'POST',
               'parameters' => [
