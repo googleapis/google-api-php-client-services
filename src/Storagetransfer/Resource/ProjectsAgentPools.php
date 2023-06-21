@@ -112,10 +112,11 @@ class ProjectsAgentPools extends \Google\Service\Resource
    * @param AgentPool $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The [field mask] (https://developers.google.com
-   * /protocol-buffers/docs/reference/google.protobuf) of the fields in
-   * `agentPool` to update in this request. The following `agentPool` fields can
-   * be updated: * display_name * bandwidth_limit
+   * @opt_param string updateMask The [field mask]
+   * (https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf) of the fields in `agentPool` to
+   * update in this request. The following `agentPool` fields can be updated: *
+   * display_name * bandwidth_limit
    * @return AgentPool
    */
   public function patch($name, AgentPool $postBody, $optParams = [])
