@@ -67,8 +67,7 @@ class Photos extends \Google\Service\Resource
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If
    * language_code is unspecified, the user's language preference for Google
    * services is used.
-   * @opt_param string photoIds Required. IDs of the Photos. For HTTP GET
-   * requests, the URL query parameter should be `photoIds==&...`.
+   * @opt_param string photoIds
    * @opt_param string view Required. Specifies if a download URL for the photo
    * bytes should be returned in the Photo response.
    * @return BatchGetPhotosResponse
@@ -112,8 +111,7 @@ class Photos extends \Google\Service\Resource
    *
    * @opt_param string filter Optional. The filter expression. For example:
    * `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The filters supported are: `placeId`,
-   * `min_latitude`, `max_latitude`, `min_longitude`, `max_longitude`,
-   * 'min_capture_time_seconds', and 'max_capture_time_seconds'. See
+   * `min_latitude`, `max_latitude`, `min_longitude`, `max_longitude`. See
    * https://google.aip.dev/160 for more information.
    * @opt_param string languageCode Optional. The BCP-47 language code, such as
    * "en-US" or "sr-Latn". For more information, see
