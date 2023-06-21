@@ -29,6 +29,8 @@ class Entity extends \Google\Model
   protected $folderDataType = '';
   protected $tagType = Tag::class;
   protected $tagDataType = '';
+  protected $transformationType = Transformation::class;
+  protected $transformationDataType = '';
   protected $triggerType = Trigger::class;
   protected $triggerDataType = '';
   protected $variableType = Variable::class;
@@ -89,6 +91,20 @@ class Entity extends \Google\Model
   public function getTag()
   {
     return $this->tag;
+  }
+  /**
+   * @param Transformation
+   */
+  public function setTransformation(Transformation $transformation)
+  {
+    $this->transformation = $transformation;
+  }
+  /**
+   * @return Transformation
+   */
+  public function getTransformation()
+  {
+    return $this->transformation;
   }
   /**
    * @param Trigger
