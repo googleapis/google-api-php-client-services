@@ -63,8 +63,9 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
   /**
    * Exports dataset's data to the provided output location. (datasets.exportData)
    *
-   * @param string $dataset Required. Name of the dataset. In form of `projects
-   * /{project-number-or-id}/locations/{location-id}/datasets/{dataset-id}`
+   * @param string $dataset Required. Name of the dataset. In form of
+   * `projects/{project-number-or-id}/locations/{location-id}/datasets/{dataset-
+   * id}`
    * @param ExportDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
@@ -91,8 +92,9 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
   /**
    * Import sentence pairs into translation Dataset. (datasets.importData)
    *
-   * @param string $dataset Required. Name of the dataset. In form of `projects
-   * /{project-number-or-id}/locations/{location-id}/datasets/{dataset-id}`
+   * @param string $dataset Required. Name of the dataset. In form of
+   * `projects/{project-number-or-id}/locations/{location-id}/datasets/{dataset-
+   * id}`
    * @param ImportDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

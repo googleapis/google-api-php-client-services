@@ -92,8 +92,8 @@ class ProjectsLocationsGlossaries extends \Google\Service\Resource
    * the language code you used when you create the glossary. For the
    * unidirectional glossaries, the "src" and "tgt" add restrictions on the source
    * and target language code separately. For the equivalent term set glossaries,
-   * the "src" and/or "tgt" add restrictions on the term set. For example: "src
-   * =en-US AND tgt=zh-CN" will only pick the unidirectional glossaries which
+   * the "src" and/or "tgt" add restrictions on the term set. For example:
+   * "src=en-US AND tgt=zh-CN" will only pick the unidirectional glossaries which
    * exactly match the source language code as "en-US" and the target language
    * code "zh-CN", but all equivalent term set glossaries which contain "en-US"
    * and "zh-CN" in their language set will be picked. If missing, no filtering is
