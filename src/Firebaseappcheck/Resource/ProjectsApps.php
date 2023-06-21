@@ -148,10 +148,9 @@ class ProjectsApps extends \Google\Service\Resource
     return $this->call('exchangeDeviceCheckToken', [$params], GoogleFirebaseAppcheckV1AppCheckToken::class);
   }
   /**
-   * Validates an [integrity verdict response token from Play
-   * Integrity](https://developer.android.com/google/play/integrity/verdict
-   * #decrypt-verify). If valid, returns an AppCheckToken.
-   * (apps.exchangePlayIntegrityToken)
+   * Validates an [integrity verdict response token from Play Integrity](https://d
+   * eveloper.android.com/google/play/integrity/verdict#decrypt-verify). If valid,
+   * returns an AppCheckToken. (apps.exchangePlayIntegrityToken)
    *
    * @param string $app Required. The relative resource name of the Android app,
    * in the format: ``` projects/{project_number}/apps/{app_id} ``` If necessary,
@@ -169,9 +168,10 @@ class ProjectsApps extends \Google\Service\Resource
     return $this->call('exchangePlayIntegrityToken', [$params], GoogleFirebaseAppcheckV1AppCheckToken::class);
   }
   /**
-   * Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com
-   * /recaptcha-enterprise/docs/create-assessment#retrieve_token). If valid,
-   * returns an AppCheckToken. (apps.exchangeRecaptchaEnterpriseToken)
+   * Validates a [reCAPTCHA Enterprise response
+   * token](https://cloud.google.com/recaptcha-enterprise/docs/create-
+   * assessment#retrieve_token). If valid, returns an AppCheckToken.
+   * (apps.exchangeRecaptchaEnterpriseToken)
    *
    * @param string $app Required. The relative resource name of the web app, in
    * the format: ``` projects/{project_number}/apps/{app_id} ``` If necessary, the
