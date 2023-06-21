@@ -42,8 +42,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * Firebase systems. (instances.create)
    *
    * @param string $parent Required. The parent project for which to create a
-   * database instance, in the form: `projects/{project-number}/locations
-   * /{location-id}`.
+   * database instance, in the form: `projects/{project-
+   * number}/locations/{location-id}`.
    * @param DatabaseInstance $postBody
    * @param array $optParams Optional parameters.
    *
@@ -67,8 +67,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * DISABLED state. (instances.delete)
    *
    * @param string $name Required. The fully qualified resource name of the
-   * database instance, in the form: `projects/{project-number}/locations
-   * /{location-id}/instances/{database-id}`
+   * database instance, in the form: `projects/{project-
+   * number}/locations/{location-id}/instances/{database-id}`
    * @param array $optParams Optional parameters.
    * @return DatabaseInstance
    */
@@ -85,8 +85,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * (instances.disable)
    *
    * @param string $name Required. The fully qualified resource name of the
-   * database instance, in the form: `projects/{project-number}/locations
-   * /{location-id}/instances/{database-id}`
+   * database instance, in the form: `projects/{project-
+   * number}/locations/{location-id}/instances/{database-id}`
    * @param DisableDatabaseInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DatabaseInstance
@@ -102,12 +102,13 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * (instances.get)
    *
    * @param string $name Required. The fully qualified resource name of the
-   * database instance, in the form: `projects/{project-number}/locations
-   * /{location-id}/instances/{database-id}`. `database-id` is a globally unique
-   * identifier across all parent collections. For convenience, this method allows
-   * you to supply `-` as a wildcard character in place of specific collections
-   * under `projects` and `locations`. The resulting wildcarding form of the
-   * method is: `projects/-/locations/-/instances/{database-id}`.
+   * database instance, in the form: `projects/{project-
+   * number}/locations/{location-id}/instances/{database-id}`. `database-id` is a
+   * globally unique identifier across all parent collections. For convenience,
+   * this method allows you to supply `-` as a wildcard character in place of
+   * specific collections under `projects` and `locations`. The resulting
+   * wildcarding form of the method is:
+   * `projects/-/locations/-/instances/{database-id}`.
    * @param array $optParams Optional parameters.
    * @return DatabaseInstance
    */
@@ -154,8 +155,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * DatabaseInstance is ACTIVE. (instances.reenable)
    *
    * @param string $name Required. The fully qualified resource name of the
-   * database instance, in the form: `projects/{project-number}/locations
-   * /{location-id}/instances/{database-id}`
+   * database instance, in the form: `projects/{project-
+   * number}/locations/{location-id}/instances/{database-id}`
    * @param ReenableDatabaseInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DatabaseInstance
@@ -175,8 +176,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * recovered. (instances.undelete)
    *
    * @param string $name Required. The fully qualified resource name of the
-   * database instance, in the form: `projects/{project-number}/locations
-   * /{location-id}/instances/{database-id}`
+   * database instance, in the form: `projects/{project-
+   * number}/locations/{location-id}/instances/{database-id}`
    * @param UndeleteDatabaseInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DatabaseInstance
