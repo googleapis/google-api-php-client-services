@@ -41,8 +41,8 @@ class ProjectsHistoriesExecutionsSteps extends \Google\Service\Resource
    * e.g. if the locale format is incorrect - NOT_FOUND - if the containing Step
    * does not exist (steps.accessibilityClusters)
    *
-   * @param string $name A full resource name of the step. For example, projects
-   * /my-project/histories/bh.1234567890abcdef/executions/
+   * @param string $name A full resource name of the step. For example,
+   * projects/my-project/histories/bh.1234567890abcdef/executions/
    * 1234567890123456789/steps/bs.1234567890abcdef Required.
    * @param array $optParams Optional parameters.
    *
