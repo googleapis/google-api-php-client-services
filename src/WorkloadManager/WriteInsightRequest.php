@@ -24,10 +24,6 @@ class WriteInsightRequest extends \Google\Model
   /**
    * @var string
    */
-  public $instanceId;
-  /**
-   * @var string
-   */
   public $requestId;
 
   /**
@@ -43,20 +39,6 @@ class WriteInsightRequest extends \Google\Model
   public function getInsight()
   {
     return $this->insight;
-  }
-  /**
-   * @param string
-   */
-  public function setInstanceId($instanceId)
-  {
-    $this->instanceId = $instanceId;
-  }
-  /**
-   * @return string
-   */
-  public function getInstanceId()
-  {
-    return $this->instanceId;
   }
   /**
    * @param string
