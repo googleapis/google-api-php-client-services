@@ -103,15 +103,15 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * Deletes a `Registration` resource. This method works on any `Registration`
    * resource using [Subscription or Commitment billing](/domains/pricing#billing-
    * models), provided that the resource was created at least 1 day in the past.
-   * For `Registration` resources using [Monthly billing](/domains/pricing
-   * #billing-models), this method works if: * `state` is `EXPORTED` with
-   * `expire_time` in the past * `state` is `REGISTRATION_FAILED` * `state` is
-   * `TRANSFER_FAILED` When an active registration is successfully deleted, you
-   * can continue to use the domain in [Google Domains](https://domains.google/)
-   * until it expires. The calling user becomes the domain's sole owner in Google
-   * Domains, and permissions for the domain are subsequently managed there. The
-   * domain does not renew automatically unless the new owner sets up billing in
-   * Google Domains. (registrations.delete)
+   * For `Registration` resources using [Monthly
+   * billing](/domains/pricing#billing-models), this method works if: * `state` is
+   * `EXPORTED` with `expire_time` in the past * `state` is `REGISTRATION_FAILED`
+   * * `state` is `TRANSFER_FAILED` When an active registration is successfully
+   * deleted, you can continue to use the domain in [Google
+   * Domains](https://domains.google/) until it expires. The calling user becomes
+   * the domain's sole owner in Google Domains, and permissions for the domain are
+   * subsequently managed there. The domain does not renew automatically unless
+   * the new owner sets up billing in Google Domains. (registrations.delete)
    *
    * @param string $name Required. The name of the `Registration` to delete, in
    * the format `projects/locations/registrations`.
