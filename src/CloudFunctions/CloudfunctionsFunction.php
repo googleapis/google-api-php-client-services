@@ -44,6 +44,10 @@ class CloudfunctionsFunction extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var bool
+   */
+  public $satisfiesPzs;
   protected $serviceConfigType = ServiceConfig::class;
   protected $serviceConfigDataType = '';
   /**
@@ -158,6 +162,20 @@ class CloudfunctionsFunction extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param ServiceConfig
