@@ -124,6 +124,8 @@ class ProjectsLocationsConversionWorkspaces extends \Google\Service\Resource
    * delete.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool force Force delete the conversion workspace, even if there's
+   * a running migration that is using the workspace.
    * @opt_param string requestId A unique ID used to identify the request. If the
    * server receives two requests with the same ID, then the second request is
    * ignored. It is recommended to always set this value to a UUID. The ID must

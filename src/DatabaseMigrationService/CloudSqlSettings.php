@@ -55,6 +55,10 @@ class CloudSqlSettings extends \Google\Model
    * @var string
    */
   public $databaseVersion;
+  /**
+   * @var string
+   */
+  public $edition;
   protected $ipConfigType = SqlIpConfig::class;
   protected $ipConfigDataType = '';
   /**
@@ -215,6 +219,20 @@ class CloudSqlSettings extends \Google\Model
   public function getDatabaseVersion()
   {
     return $this->databaseVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setEdition($edition)
+  {
+    $this->edition = $edition;
+  }
+  /**
+   * @return string
+   */
+  public function getEdition()
+  {
+    return $this->edition;
   }
   /**
    * @param SqlIpConfig

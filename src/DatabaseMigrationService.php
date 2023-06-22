@@ -336,6 +336,10 @@ class DatabaseMigrationService extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'force' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
