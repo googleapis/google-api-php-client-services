@@ -144,8 +144,9 @@ class ProjectsContacts extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Optional. The update mask applied to the
-   * resource. For the `FieldMask` definition, see https://developers.google.com
-   * /protocol-buffers/docs/reference/google.protobuf#fieldmask
+   * resource. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask
    * @return GoogleCloudEssentialcontactsV1Contact
    */
   public function patch($name, GoogleCloudEssentialcontactsV1Contact $postBody, $optParams = [])
