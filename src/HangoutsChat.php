@@ -41,6 +41,9 @@ class HangoutsChat extends \Google\Service
   /** Delete conversations and spaces & remove access to associated files in Google Chat. */
   const CHAT_DELETE =
       "https://www.googleapis.com/auth/chat.delete";
+  /** Import spaces, messages, and memberships into Google Chat.. */
+  const CHAT_IMPORT =
+      "https://www.googleapis.com/auth/chat.import";
   /** View, add, and remove members from conversations in Google Chat. */
   const CHAT_MEMBERSHIPS =
       "https://www.googleapis.com/auth/chat.memberships";

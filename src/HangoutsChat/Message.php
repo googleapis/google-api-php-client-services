@@ -28,6 +28,8 @@ class Message extends \Google\Collection
    * @var string
    */
   public $argumentText;
+  protected $attachedGifsType = AttachedGif::class;
+  protected $attachedGifsDataType = 'array';
   protected $attachmentType = Attachment::class;
   protected $attachmentDataType = 'array';
   protected $cardsType = Card::class;
@@ -122,6 +124,20 @@ class Message extends \Google\Collection
   public function getArgumentText()
   {
     return $this->argumentText;
+  }
+  /**
+   * @param AttachedGif[]
+   */
+  public function setAttachedGifs($attachedGifs)
+  {
+    $this->attachedGifs = $attachedGifs;
+  }
+  /**
+   * @return AttachedGif[]
+   */
+  public function getAttachedGifs()
+  {
+    return $this->attachedGifs;
   }
   /**
    * @param Attachment[]
