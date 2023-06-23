@@ -31,6 +31,10 @@ class GoogleCloudDialogflowCxV3ExportAgentRequest extends \Google\Model
    * @var string
    */
   public $environment;
+  /**
+   * @var bool
+   */
+  public $includeBigqueryExportSettings;
 
   /**
    * @param string
@@ -73,6 +77,20 @@ class GoogleCloudDialogflowCxV3ExportAgentRequest extends \Google\Model
   public function getEnvironment()
   {
     return $this->environment;
+  }
+  /**
+   * @param bool
+   */
+  public function setIncludeBigqueryExportSettings($includeBigqueryExportSettings)
+  {
+    $this->includeBigqueryExportSettings = $includeBigqueryExportSettings;
+  }
+  /**
+   * @return bool
+   */
+  public function getIncludeBigqueryExportSettings()
+  {
+    return $this->includeBigqueryExportSettings;
   }
 }
 

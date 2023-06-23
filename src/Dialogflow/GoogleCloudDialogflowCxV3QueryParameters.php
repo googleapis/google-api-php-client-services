@@ -55,6 +55,10 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   /**
    * @var string
    */
+  public $sessionTtl;
+  /**
+   * @var string
+   */
   public $timeZone;
   /**
    * @var string[]
@@ -186,6 +190,20 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   public function getSessionEntityTypes()
   {
     return $this->sessionEntityTypes;
+  }
+  /**
+   * @param string
+   */
+  public function setSessionTtl($sessionTtl)
+  {
+    $this->sessionTtl = $sessionTtl;
+  }
+  /**
+   * @return string
+   */
+  public function getSessionTtl()
+  {
+    return $this->sessionTtl;
   }
   /**
    * @param string
