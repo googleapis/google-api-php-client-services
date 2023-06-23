@@ -33,6 +33,10 @@ class GceInstance extends \Google\Collection
    */
   public $disablePublicIpAddresses;
   /**
+   * @var bool
+   */
+  public $enableNestedVirtualization;
+  /**
    * @var string
    */
   public $machineType;
@@ -110,6 +114,20 @@ class GceInstance extends \Google\Collection
   public function getDisablePublicIpAddresses()
   {
     return $this->disablePublicIpAddresses;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableNestedVirtualization($enableNestedVirtualization)
+  {
+    $this->enableNestedVirtualization = $enableNestedVirtualization;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableNestedVirtualization()
+  {
+    return $this->enableNestedVirtualization;
   }
   /**
    * @param string
