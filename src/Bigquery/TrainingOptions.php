@@ -211,10 +211,6 @@ class TrainingOptions extends \Google\Collection
    */
   public $optimizationStrategy;
   /**
-   * @var bool
-   */
-  public $preserveInputStructs;
-  /**
    * @var string
    */
   public $sampledShapleyNumPaths;
@@ -987,20 +983,6 @@ class TrainingOptions extends \Google\Collection
   public function getOptimizationStrategy()
   {
     return $this->optimizationStrategy;
-  }
-  /**
-   * @param bool
-   */
-  public function setPreserveInputStructs($preserveInputStructs)
-  {
-    $this->preserveInputStructs = $preserveInputStructs;
-  }
-  /**
-   * @return bool
-   */
-  public function getPreserveInputStructs()
-  {
-    return $this->preserveInputStructs;
   }
   /**
    * @param string
