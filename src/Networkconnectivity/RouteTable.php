@@ -17,9 +17,8 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class ServiceClass extends \Google\Collection
+class RouteTable extends \Google\Model
 {
-  protected $collection_key = 'serviceConnectionMaps';
   /**
    * @var string
    */
@@ -28,10 +27,6 @@ class ServiceClass extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var string
-   */
-  public $etag;
   /**
    * @var string[]
    */
@@ -43,11 +38,11 @@ class ServiceClass extends \Google\Collection
   /**
    * @var string
    */
-  public $serviceClass;
+  public $state;
   /**
-   * @var string[]
+   * @var string
    */
-  public $serviceConnectionMaps;
+  public $uid;
   /**
    * @var string
    */
@@ -82,20 +77,6 @@ class ServiceClass extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
-   */
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  /**
-   * @return string
-   */
-  public function getEtag()
-  {
-    return $this->etag;
-  }
-  /**
    * @param string[]
    */
   public function setLabels($labels)
@@ -126,30 +107,30 @@ class ServiceClass extends \Google\Collection
   /**
    * @param string
    */
-  public function setServiceClass($serviceClass)
+  public function setState($state)
   {
-    $this->serviceClass = $serviceClass;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getServiceClass()
+  public function getState()
   {
-    return $this->serviceClass;
+    return $this->state;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setServiceConnectionMaps($serviceConnectionMaps)
+  public function setUid($uid)
   {
-    $this->serviceConnectionMaps = $serviceConnectionMaps;
+    $this->uid = $uid;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getServiceConnectionMaps()
+  public function getUid()
   {
-    return $this->serviceConnectionMaps;
+    return $this->uid;
   }
   /**
    * @param string
@@ -168,4 +149,4 @@ class ServiceClass extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceClass::class, 'Google_Service_Networkconnectivity_ServiceClass');
+class_alias(RouteTable::class, 'Google_Service_Networkconnectivity_RouteTable');

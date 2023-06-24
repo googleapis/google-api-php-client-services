@@ -19,6 +19,7 @@ namespace Google\Service\Networkconnectivity\Resource;
 
 use Google\Service\Networkconnectivity\GoogleLongrunningOperation;
 use Google\Service\Networkconnectivity\Hub;
+use Google\Service\Networkconnectivity\ListHubSpokesResponse;
 use Google\Service\Networkconnectivity\ListHubsResponse;
 use Google\Service\Networkconnectivity\Policy;
 use Google\Service\Networkconnectivity\SetIamPolicyRequest;
@@ -149,6 +150,34 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListHubsResponse::class);
+  }
+  /**
+   * Lists the Network Connectivity Center spokes associated with a specified hub
+   * and location. The list includes both spokes that are attached to the hub and
+   * spokes that have been proposed but not yet accepted. (hubs.listSpokes)
+   *
+   * @param string $name Required. The name of the hub.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter An expression that filters the list of results.
+   * @opt_param string orderBy Sort the results by name or create_time.
+   * @opt_param int pageSize The maximum number of results to return per page.
+   * @opt_param string pageToken The page token.
+   * @opt_param string spokeLocations A list of locations. Specify one of the
+   * following: `[global]`, a single region (for example, `[us-central1]`), or a
+   * combination of values (for example, `[global, us-central1, us-west1]`). If
+   * the spoke_locations field is populated, the list of results includes only
+   * spokes in the specified location. If the spoke_locations field is not
+   * populated, the list of results includes spokes in all locations.
+   * @opt_param string view The view of the spoke to return. The view you use
+   * determines which spoke fields are included in the response.
+   * @return ListHubSpokesResponse
+   */
+  public function listSpokes($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('listSpokes', [$params], ListHubSpokesResponse::class);
   }
   /**
    * Updates the description and/or labels of a Network Connectivity Center hub.

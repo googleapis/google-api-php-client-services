@@ -17,9 +17,8 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class ServiceClass extends \Google\Collection
+class Route extends \Google\Model
 {
-  protected $collection_key = 'serviceConnectionMaps';
   /**
    * @var string
    */
@@ -31,7 +30,7 @@ class ServiceClass extends \Google\Collection
   /**
    * @var string
    */
-  public $etag;
+  public $ipCidrRange;
   /**
    * @var string[]
    */
@@ -39,15 +38,29 @@ class ServiceClass extends \Google\Collection
   /**
    * @var string
    */
-  public $name;
+  public $location;
   /**
    * @var string
    */
-  public $serviceClass;
+  public $name;
+  protected $nextHopVpcNetworkType = NextHopVpcNetwork::class;
+  protected $nextHopVpcNetworkDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $serviceConnectionMaps;
+  public $spoke;
+  /**
+   * @var string
+   */
+  public $state;
+  /**
+   * @var string
+   */
+  public $type;
+  /**
+   * @var string
+   */
+  public $uid;
   /**
    * @var string
    */
@@ -84,16 +97,16 @@ class ServiceClass extends \Google\Collection
   /**
    * @param string
    */
-  public function setEtag($etag)
+  public function setIpCidrRange($ipCidrRange)
   {
-    $this->etag = $etag;
+    $this->ipCidrRange = $ipCidrRange;
   }
   /**
    * @return string
    */
-  public function getEtag()
+  public function getIpCidrRange()
   {
-    return $this->etag;
+    return $this->ipCidrRange;
   }
   /**
    * @param string[]
@@ -112,6 +125,20 @@ class ServiceClass extends \Google\Collection
   /**
    * @param string
    */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
+  }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
@@ -124,32 +151,74 @@ class ServiceClass extends \Google\Collection
     return $this->name;
   }
   /**
+   * @param NextHopVpcNetwork
+   */
+  public function setNextHopVpcNetwork(NextHopVpcNetwork $nextHopVpcNetwork)
+  {
+    $this->nextHopVpcNetwork = $nextHopVpcNetwork;
+  }
+  /**
+   * @return NextHopVpcNetwork
+   */
+  public function getNextHopVpcNetwork()
+  {
+    return $this->nextHopVpcNetwork;
+  }
+  /**
    * @param string
    */
-  public function setServiceClass($serviceClass)
+  public function setSpoke($spoke)
   {
-    $this->serviceClass = $serviceClass;
+    $this->spoke = $spoke;
   }
   /**
    * @return string
    */
-  public function getServiceClass()
+  public function getSpoke()
   {
-    return $this->serviceClass;
+    return $this->spoke;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setServiceConnectionMaps($serviceConnectionMaps)
+  public function setState($state)
   {
-    $this->serviceConnectionMaps = $serviceConnectionMaps;
+    $this->state = $state;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getServiceConnectionMaps()
+  public function getState()
   {
-    return $this->serviceConnectionMaps;
+    return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
+  }
+  /**
+   * @param string
+   */
+  public function setUid($uid)
+  {
+    $this->uid = $uid;
+  }
+  /**
+   * @return string
+   */
+  public function getUid()
+  {
+    return $this->uid;
   }
   /**
    * @param string
@@ -168,4 +237,4 @@ class ServiceClass extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceClass::class, 'Google_Service_Networkconnectivity_ServiceClass');
+class_alias(Route::class, 'Google_Service_Networkconnectivity_Route');
