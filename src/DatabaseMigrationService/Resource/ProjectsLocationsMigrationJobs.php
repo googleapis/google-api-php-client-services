@@ -18,6 +18,7 @@
 namespace Google\Service\DatabaseMigrationService\Resource;
 
 use Google\Service\DatabaseMigrationService\GenerateSshScriptRequest;
+use Google\Service\DatabaseMigrationService\GenerateTcpProxyScriptRequest;
 use Google\Service\DatabaseMigrationService\ListMigrationJobsResponse;
 use Google\Service\DatabaseMigrationService\MigrationJob;
 use Google\Service\DatabaseMigrationService\Operation;
@@ -29,6 +30,7 @@ use Google\Service\DatabaseMigrationService\SetIamPolicyRequest;
 use Google\Service\DatabaseMigrationService\SshScript;
 use Google\Service\DatabaseMigrationService\StartMigrationJobRequest;
 use Google\Service\DatabaseMigrationService\StopMigrationJobRequest;
+use Google\Service\DatabaseMigrationService\TcpProxyScript;
 use Google\Service\DatabaseMigrationService\TestIamPermissionsRequest;
 use Google\Service\DatabaseMigrationService\TestIamPermissionsResponse;
 use Google\Service\DatabaseMigrationService\VerifyMigrationJobRequest;
@@ -103,6 +105,22 @@ class ProjectsLocationsMigrationJobs extends \Google\Service\Resource
     $params = ['migrationJob' => $migrationJob, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('generateSshScript', [$params], SshScript::class);
+  }
+  /**
+   * Generate a TCP Proxy configuration script to configure a cloud-hosted VM
+   * running a TCP Proxy. (migrationJobs.generateTcpProxyScript)
+   *
+   * @param string $migrationJob Name of the migration job resource to generate
+   * the TCP Proxy script.
+   * @param GenerateTcpProxyScriptRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TcpProxyScript
+   */
+  public function generateTcpProxyScript($migrationJob, GenerateTcpProxyScriptRequest $postBody, $optParams = [])
+  {
+    $params = ['migrationJob' => $migrationJob, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateTcpProxyScript', [$params], TcpProxyScript::class);
   }
   /**
    * Gets details of a single migration job. (migrationJobs.get)

@@ -595,6 +595,16 @@ class DatabaseMigrationService extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'generateTcpProxyScript' => [
+              'path' => 'v1/{+migrationJob}:generateTcpProxyScript',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'migrationJob' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
