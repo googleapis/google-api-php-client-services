@@ -24,6 +24,8 @@ class ParameterMetadata extends \Google\Collection
    * @var string[]
    */
   public $customMetadata;
+  protected $enumOptionsType = ParameterMetadataEnumOption::class;
+  protected $enumOptionsDataType = 'array';
   /**
    * @var string
    */
@@ -74,6 +76,20 @@ class ParameterMetadata extends \Google\Collection
   public function getCustomMetadata()
   {
     return $this->customMetadata;
+  }
+  /**
+   * @param ParameterMetadataEnumOption[]
+   */
+  public function setEnumOptions($enumOptions)
+  {
+    $this->enumOptions = $enumOptions;
+  }
+  /**
+   * @return ParameterMetadataEnumOption[]
+   */
+  public function getEnumOptions()
+  {
+    return $this->enumOptions;
   }
   /**
    * @param string
