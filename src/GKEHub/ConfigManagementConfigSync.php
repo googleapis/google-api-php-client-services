@@ -29,8 +29,6 @@ class ConfigManagementConfigSync extends \Google\Model
   public $enabled;
   protected $gitType = ConfigManagementGitConfig::class;
   protected $gitDataType = '';
-  protected $managedType = ConfigManagementManaged::class;
-  protected $managedDataType = '';
   /**
    * @var string
    */
@@ -45,6 +43,10 @@ class ConfigManagementConfigSync extends \Google\Model
    * @var string
    */
   public $sourceFormat;
+  /**
+   * @var bool
+   */
+  public $stopSyncing;
 
   /**
    * @param bool
@@ -87,20 +89,6 @@ class ConfigManagementConfigSync extends \Google\Model
   public function getGit()
   {
     return $this->git;
-  }
-  /**
-   * @param ConfigManagementManaged
-   */
-  public function setManaged(ConfigManagementManaged $managed)
-  {
-    $this->managed = $managed;
-  }
-  /**
-   * @return ConfigManagementManaged
-   */
-  public function getManaged()
-  {
-    return $this->managed;
   }
   /**
    * @param string
@@ -157,6 +145,20 @@ class ConfigManagementConfigSync extends \Google\Model
   public function getSourceFormat()
   {
     return $this->sourceFormat;
+  }
+  /**
+   * @param bool
+   */
+  public function setStopSyncing($stopSyncing)
+  {
+    $this->stopSyncing = $stopSyncing;
+  }
+  /**
+   * @return bool
+   */
+  public function getStopSyncing()
+  {
+    return $this->stopSyncing;
   }
 }
 
