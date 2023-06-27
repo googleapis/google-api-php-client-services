@@ -225,20 +225,12 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * syntax: * Filter expressions are made up of one or more restrictions. *
    * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
    * of restrictions implicitly uses `AND`. * A restriction has the form of
-   * `{field} {operator} {value}`. * The `flight.dateRange.endDate` field must use
-   * the `LESS THAN (<)` operator. * The `updateTime` field must use the `GREATER
-   * THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * The
-   * `warningMessages` field must use the `HAS (:)` operator. * All other fields
-   * must use the `EQUALS (=)` operator. Supported fields: * `campaignId` *
-   * `displayName` * `entityStatus` * `flight.dateRange.endDate` (input formatted
-   * as `YYYY-MM-DD`) * **Deprecated. Not available after June 21, 2023** *
-   * `flight.triggerId` * **Deprecated. Not available after June 21, 2023** *
-   * `insertionOrderId` * `lineItemId` * `lineItemType` * `targetedChannelId` *
-   * **Deprecated. Not available after June 21, 2023** *
-   * `targetedNegativeKeywordListId` * **Deprecated. Not available after June 21,
-   * 2023** * `updateTime` (input in ISO 8601 format, or `YYYY-MM-DDTHH:MM:SSZ`) *
-   * `warningMessages` * **Deprecated. Not available after June 21, 2023**
-   * Examples: * All line items under an insertion order:
+   * `{field} {operator} {value}`. * The `updateTime` field must use the `GREATER
+   * THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * All other
+   * fields must use the `EQUALS (=)` operator. Supported fields: * `campaignId` *
+   * `displayName` * `entityStatus` * `insertionOrderId` * `lineItemId` *
+   * `lineItemType` * `updateTime` (input in ISO 8601 format, or `YYYY-MM-
+   * DDTHH:MM:SSZ`) Examples: * All line items under an insertion order:
    * `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or
    * `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under
    * an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
@@ -251,11 +243,9 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * more than 500 characters. Reference our [filter `LIST` requests](/display-
    * video/api/guides/how-tos/filters) guide for more information.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
-   * are: * `displayName` (default) * `entityStatus` * `flight.dateRange.endDate`
-   * * **Deprecated. Not available after June 21, 2023** * `updateTime` The
-   * default sorting order is ascending. To specify descending order for a field,
-   * a suffix "desc" should be added to the field name. Example: `displayName
-   * desc`.
+   * are: * `displayName` (default) * `entityStatus` * `updateTime` The default
+   * sorting order is ascending. To specify descending order for a field, a suffix
+   * "desc" should be added to the field name. Example: `displayName desc`.
    * @opt_param int pageSize Requested page size. Must be between `1` and `200`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.

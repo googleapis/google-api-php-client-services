@@ -2927,6 +2927,10 @@ class DisplayVideo extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'advertiserId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'partnerId' => [
                   'location' => 'query',
                   'type' => 'string',

@@ -97,19 +97,16 @@ class AdvertisersInsertionOrders extends \Google\Service\Resource
    * Supported syntax: * Filter expressions are made up of one or more
    * restrictions. * Restrictions can be combined by `AND` or `OR` logical
    * operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-   * has the form of `{field} {operator} {value}`. * The
-   * `budget.budget_segments.date_range.end_date` field must use the `LESS THAN
-   * (<)` operator. * The `updateTime` field must use the `GREATER THAN OR EQUAL
-   * TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * All other fields must
-   * use the `EQUALS (=)` operator. Supported fields: * `campaignId` *
-   * `displayName` * `entityStatus` * `budget.budget_segments.date_range.end_date`
-   * (input in the form of `YYYY-MM-DD`) * **Deprecated. Not available after June
-   * 21, 2023** * `updateTime` (input in ISO 8601 format, or `YYYY-MM-
-   * DDTHH:MM:SSZ`) Examples: * All insertion orders under a campaign:
-   * `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
-   * insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE"
-   * OR entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders with an
-   * update time less than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
+   * has the form of `{field} {operator} {value}`. * The `updateTime` field must
+   * use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`
+   * operators. * All other fields must use the `EQUALS (=)` operator. Supported
+   * fields: * `campaignId` * `displayName` * `entityStatus` * `updateTime` (input
+   * in ISO 8601 format, or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All insertion
+   * orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or
+   * `ENTITY_STATUS_PAUSED` insertion orders under an advertiser:
+   * `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+   * entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders with an update
+   * time less than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
    * `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with an update
    * time greater than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
    * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no
