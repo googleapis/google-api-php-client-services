@@ -94,6 +94,8 @@ class ClusterUpdate extends \Google\Collection
    * @var string
    */
   public $desiredMonitoringService;
+  protected $desiredNetworkPerformanceConfigType = ClusterNetworkPerformanceConfig::class;
+  protected $desiredNetworkPerformanceConfigDataType = '';
   protected $desiredNodePoolAutoConfigNetworkTagsType = NetworkTags::class;
   protected $desiredNodePoolAutoConfigNetworkTagsDataType = '';
   protected $desiredNodePoolAutoscalingType = NodePoolAutoscaling::class;
@@ -548,6 +550,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredMonitoringService()
   {
     return $this->desiredMonitoringService;
+  }
+  /**
+   * @param ClusterNetworkPerformanceConfig
+   */
+  public function setDesiredNetworkPerformanceConfig(ClusterNetworkPerformanceConfig $desiredNetworkPerformanceConfig)
+  {
+    $this->desiredNetworkPerformanceConfig = $desiredNetworkPerformanceConfig;
+  }
+  /**
+   * @return ClusterNetworkPerformanceConfig
+   */
+  public function getDesiredNetworkPerformanceConfig()
+  {
+    return $this->desiredNetworkPerformanceConfig;
   }
   /**
    * @param NetworkTags

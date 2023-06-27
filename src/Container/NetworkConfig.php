@@ -45,6 +45,8 @@ class NetworkConfig extends \Google\Model
    * @var string
    */
   public $network;
+  protected $networkPerformanceConfigType = ClusterNetworkPerformanceConfig::class;
+  protected $networkPerformanceConfigDataType = '';
   /**
    * @var string
    */
@@ -167,6 +169,20 @@ class NetworkConfig extends \Google\Model
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param ClusterNetworkPerformanceConfig
+   */
+  public function setNetworkPerformanceConfig(ClusterNetworkPerformanceConfig $networkPerformanceConfig)
+  {
+    $this->networkPerformanceConfig = $networkPerformanceConfig;
+  }
+  /**
+   * @return ClusterNetworkPerformanceConfig
+   */
+  public function getNetworkPerformanceConfig()
+  {
+    return $this->networkPerformanceConfig;
   }
   /**
    * @param string
