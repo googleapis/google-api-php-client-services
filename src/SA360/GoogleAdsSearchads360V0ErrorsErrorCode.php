@@ -30,6 +30,10 @@ class GoogleAdsSearchads360V0ErrorsErrorCode extends \Google\Model
   /**
    * @var string
    */
+  public $customColumnError;
+  /**
+   * @var string
+   */
   public $dateError;
   /**
    * @var string
@@ -91,6 +95,20 @@ class GoogleAdsSearchads360V0ErrorsErrorCode extends \Google\Model
   public function getAuthorizationError()
   {
     return $this->authorizationError;
+  }
+  /**
+   * @param string
+   */
+  public function setCustomColumnError($customColumnError)
+  {
+    $this->customColumnError = $customColumnError;
+  }
+  /**
+   * @return string
+   */
+  public function getCustomColumnError()
+  {
+    return $this->customColumnError;
   }
   /**
    * @param string

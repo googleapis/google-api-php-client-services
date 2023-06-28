@@ -38,6 +38,10 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
   protected $adGroupLabelDataType = '';
   protected $ageRangeViewType = GoogleAdsSearchads360V0ResourcesAgeRangeView::class;
   protected $ageRangeViewDataType = '';
+  protected $assetType = GoogleAdsSearchads360V0ResourcesAsset::class;
+  protected $assetDataType = '';
+  protected $assetSetType = GoogleAdsSearchads360V0ResourcesAssetSet::class;
+  protected $assetSetDataType = '';
   protected $biddingStrategyType = GoogleAdsSearchads360V0ResourcesBiddingStrategy::class;
   protected $biddingStrategyDataType = '';
   protected $campaignType = GoogleAdsSearchads360V0ResourcesCampaign::class;
@@ -206,6 +210,34 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
   public function getAgeRangeView()
   {
     return $this->ageRangeView;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0ResourcesAsset
+   */
+  public function setAsset(GoogleAdsSearchads360V0ResourcesAsset $asset)
+  {
+    $this->asset = $asset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0ResourcesAsset
+   */
+  public function getAsset()
+  {
+    return $this->asset;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0ResourcesAssetSet
+   */
+  public function setAssetSet(GoogleAdsSearchads360V0ResourcesAssetSet $assetSet)
+  {
+    $this->assetSet = $assetSet;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0ResourcesAssetSet
+   */
+  public function getAssetSet()
+  {
+    return $this->assetSet;
   }
   /**
    * @param GoogleAdsSearchads360V0ResourcesBiddingStrategy
