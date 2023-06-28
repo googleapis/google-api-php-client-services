@@ -45,10 +45,10 @@ class FoldersSinks extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customWriterIdentity Optional. A service account provided
-   * by the caller that will be used to write the log entries. Must be of format
-   * serviceAccount:some@email. This can only be specified if writing to a
-   * destination outside the sink's project. If not specified, a p4 service
-   * account will automatically be generated.
+   * by the caller that will be used to write the log entries. The format must be
+   * serviceAccount:some@email. This field can only be specified if you are
+   * routing logs to a destination outside this sink's project. If not specified,
+   * a Logging service account will automatically be generated.
    * @opt_param bool uniqueWriterIdentity Optional. Determines the kind of IAM
    * identity returned as writer_identity in the new sink. If this value is
    * omitted or set to false, and if the sink's parent is a project, then the
