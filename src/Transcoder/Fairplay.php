@@ -17,28 +17,9 @@
 
 namespace Google\Service\Transcoder;
 
-class MpegCommonEncryption extends \Google\Model
+class Fairplay extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $scheme;
-
-  /**
-   * @param string
-   */
-  public function setScheme($scheme)
-  {
-    $this->scheme = $scheme;
-  }
-  /**
-   * @return string
-   */
-  public function getScheme()
-  {
-    return $this->scheme;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MpegCommonEncryption::class, 'Google_Service_Transcoder_MpegCommonEncryption');
+class_alias(Fairplay::class, 'Google_Service_Transcoder_Fairplay');

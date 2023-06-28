@@ -17,28 +17,28 @@
 
 namespace Google\Service\Transcoder;
 
-class MpegCommonEncryption extends \Google\Model
+class SecretManagerSource extends \Google\Model
 {
   /**
    * @var string
    */
-  public $scheme;
+  public $secretVersion;
 
   /**
    * @param string
    */
-  public function setScheme($scheme)
+  public function setSecretVersion($secretVersion)
   {
-    $this->scheme = $scheme;
+    $this->secretVersion = $secretVersion;
   }
   /**
    * @return string
    */
-  public function getScheme()
+  public function getSecretVersion()
   {
-    return $this->scheme;
+    return $this->secretVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MpegCommonEncryption::class, 'Google_Service_Transcoder_MpegCommonEncryption');
+class_alias(SecretManagerSource::class, 'Google_Service_Transcoder_SecretManagerSource');
