@@ -177,8 +177,8 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * subscriptions. Format is `projects/{project-id}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of subscriptions to return.
-   * @opt_param string pageToken The value returned by the last
+   * @opt_param int pageSize Optional. Maximum number of subscriptions to return.
+   * @opt_param string pageToken Optional. The value returned by the last
    * `ListSubscriptionsResponse`; indicates that this is a continuation of a prior
    * `ListSubscriptions` call, and that the system should return the next page of
    * data.

@@ -127,8 +127,8 @@ class ProjectsTopics extends \Google\Service\Resource
    * topics. Format is `projects/{project-id}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of topics to return.
-   * @opt_param string pageToken The value returned by the last
+   * @opt_param int pageSize Optional. Maximum number of topics to return.
+   * @opt_param string pageToken Optional. The value returned by the last
    * `ListTopicsResponse`; indicates that this is a continuation of a prior
    * `ListTopics` call, and that the system should return the next page of data.
    * @return ListTopicsResponse
