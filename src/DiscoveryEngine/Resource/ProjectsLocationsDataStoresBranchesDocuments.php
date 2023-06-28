@@ -121,7 +121,7 @@ class ProjectsLocationsDataStoresBranchesDocuments extends \Google\Service\Resou
    * jects/{project}/locations/{location}/collections/{collection}/dataStores/{dat
    * a_store}/branches/{branch}`. Use `default_branch` as the branch ID, to list
    * documents under the default branch. If the caller does not have permission to
-   * list Documentss under this branch, regardless of whether or not this branch
+   * list Documents under this branch, regardless of whether or not this branch
    * exists, a `PERMISSION_DENIED` error is returned.
    * @param array $optParams Optional parameters.
    *
