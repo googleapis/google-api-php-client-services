@@ -209,6 +209,10 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
    * @var float[]
    */
   public $versionEmbeddingVector;
+  /**
+   * @var string
+   */
+  public $versionsSimhash;
 
   /**
    * @param string[]
@@ -1001,6 +1005,20 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   public function getVersionEmbeddingVector()
   {
     return $this->versionEmbeddingVector;
+  }
+  /**
+   * @param string
+   */
+  public function setVersionsSimhash($versionsSimhash)
+  {
+    $this->versionsSimhash = $versionsSimhash;
+  }
+  /**
+   * @return string
+   */
+  public function getVersionsSimhash()
+  {
+    return $this->versionsSimhash;
   }
 }
 

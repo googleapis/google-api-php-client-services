@@ -34,6 +34,8 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
    * @var string
    */
   public $globalProductClusterId;
+  protected $imagesType = ShoppingWebentityShoppingAnnotationProductImage::class;
+  protected $imagesDataType = 'array';
   protected $localeType = QualityShoppingShoppingAttachmentLocale::class;
   protected $localeDataType = '';
   protected $mokaFacetType = QualityShoppingShoppingAttachmentMokaFacetValue::class;
@@ -125,6 +127,20 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   public function getGlobalProductClusterId()
   {
     return $this->globalProductClusterId;
+  }
+  /**
+   * @param ShoppingWebentityShoppingAnnotationProductImage[]
+   */
+  public function setImages($images)
+  {
+    $this->images = $images;
+  }
+  /**
+   * @return ShoppingWebentityShoppingAnnotationProductImage[]
+   */
+  public function getImages()
+  {
+    return $this->images;
   }
   /**
    * @param QualityShoppingShoppingAttachmentLocale
