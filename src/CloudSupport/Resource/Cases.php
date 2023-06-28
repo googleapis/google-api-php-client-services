@@ -157,6 +157,8 @@ class Cases extends \Google\Service\Resource
   /**
    * Search cases using the specified query. (cases.search)
    *
+   * @param string $parent The fully qualified name of parent resource to search
+   * cases under.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of cases fetched with each
@@ -186,9 +188,9 @@ class Cases extends \Google\Service\Resource
    * `project="projects/my-project-id" AND (priority=P0 OR priority=P1)`
    * @return SearchCasesResponse
    */
-  public function search($optParams = [])
+  public function search($parent, $optParams = [])
   {
-    $params = [];
+    $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('search', [$params], SearchCasesResponse::class);
   }
