@@ -39,9 +39,9 @@ class PhotoSequences extends \Google\Service\Resource
    * `imagery_type=SPHERICAL`. The filters supported are: `imagery_type`,
    * `processing_state`, `min_latitude`, `max_latitude`, `min_longitude`,
    * `max_longitude`, `filename_query`, `min_capture_time_seconds`,
-   * `max_capture_time_seconds`, and `takedown`. See https://google.aip.dev/160
-   * for more information. Filename queries should sent as a Phrase in order to
-   * support multiple words and special characters by adding escaped quotes. Ex:
+   * `max_capture_time_seconds. See https://google.aip.dev/160 for more
+   * information. Filename queries should sent as a Phrase in order to support
+   * multiple words and special characters by adding escaped quotes. Ex:
    * filename_query="example of a phrase.mp4"
    * @opt_param int pageSize Optional. The maximum number of photo sequences to
    * return. `pageSize` must be non-negative. If `pageSize` is zero or is not
