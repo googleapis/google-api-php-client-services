@@ -17,11 +17,13 @@
 
 namespace Google\Service\Apigee;
 
-class GoogleCloudApigeeV1App extends \Google\Collection
+class GoogleCloudApigeeV1AppGroupApp extends \Google\Collection
 {
   protected $collection_key = 'scopes';
-  protected $apiProductsType = GoogleCloudApigeeV1ApiProductRef::class;
-  protected $apiProductsDataType = 'array';
+  /**
+   * @var string[]
+   */
+  public $apiProducts;
   /**
    * @var string
    */
@@ -39,21 +41,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
   /**
    * @var string
    */
-  public $companyName;
-  /**
-   * @var string
-   */
   public $createdAt;
   protected $credentialsType = GoogleCloudApigeeV1Credential::class;
   protected $credentialsDataType = 'array';
-  /**
-   * @var string
-   */
-  public $developerEmail;
-  /**
-   * @var string
-   */
-  public $developerId;
   /**
    * @var string
    */
@@ -76,14 +66,14 @@ class GoogleCloudApigeeV1App extends \Google\Collection
   public $status;
 
   /**
-   * @param GoogleCloudApigeeV1ApiProductRef[]
+   * @param string[]
    */
   public function setApiProducts($apiProducts)
   {
     $this->apiProducts = $apiProducts;
   }
   /**
-   * @return GoogleCloudApigeeV1ApiProductRef[]
+   * @return string[]
    */
   public function getApiProducts()
   {
@@ -148,20 +138,6 @@ class GoogleCloudApigeeV1App extends \Google\Collection
   /**
    * @param string
    */
-  public function setCompanyName($companyName)
-  {
-    $this->companyName = $companyName;
-  }
-  /**
-   * @return string
-   */
-  public function getCompanyName()
-  {
-    return $this->companyName;
-  }
-  /**
-   * @param string
-   */
   public function setCreatedAt($createdAt)
   {
     $this->createdAt = $createdAt;
@@ -186,34 +162,6 @@ class GoogleCloudApigeeV1App extends \Google\Collection
   public function getCredentials()
   {
     return $this->credentials;
-  }
-  /**
-   * @param string
-   */
-  public function setDeveloperEmail($developerEmail)
-  {
-    $this->developerEmail = $developerEmail;
-  }
-  /**
-   * @return string
-   */
-  public function getDeveloperEmail()
-  {
-    return $this->developerEmail;
-  }
-  /**
-   * @param string
-   */
-  public function setDeveloperId($developerId)
-  {
-    $this->developerId = $developerId;
-  }
-  /**
-   * @return string
-   */
-  public function getDeveloperId()
-  {
-    return $this->developerId;
   }
   /**
    * @param string
@@ -288,4 +236,4 @@ class GoogleCloudApigeeV1App extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApigeeV1App::class, 'Google_Service_Apigee_GoogleCloudApigeeV1App');
+class_alias(GoogleCloudApigeeV1AppGroupApp::class, 'Google_Service_Apigee_GoogleCloudApigeeV1AppGroupApp');

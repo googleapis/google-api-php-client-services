@@ -42,8 +42,6 @@ class GoogleCloudApigeeV1SecurityProfile extends \Google\Collection
    * @var string
    */
   public $name;
-  protected $profileConfigType = GoogleCloudApigeeV1ProfileConfig::class;
-  protected $profileConfigDataType = '';
   /**
    * @var string
    */
@@ -146,20 +144,6 @@ class GoogleCloudApigeeV1SecurityProfile extends \Google\Collection
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param GoogleCloudApigeeV1ProfileConfig
-   */
-  public function setProfileConfig(GoogleCloudApigeeV1ProfileConfig $profileConfig)
-  {
-    $this->profileConfig = $profileConfig;
-  }
-  /**
-   * @return GoogleCloudApigeeV1ProfileConfig
-   */
-  public function getProfileConfig()
-  {
-    return $this->profileConfig;
   }
   /**
    * @param string

@@ -17,11 +17,11 @@
 
 namespace Google\Service\Apigee;
 
-class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
+class GoogleCloudApigeeV1ListAppGroupsResponse extends \Google\Collection
 {
-  protected $collection_key = 'app';
-  protected $appType = GoogleCloudApigeeV1App::class;
-  protected $appDataType = 'array';
+  protected $collection_key = 'appGroups';
+  protected $appGroupsType = GoogleCloudApigeeV1AppGroup::class;
+  protected $appGroupsDataType = 'array';
   /**
    * @var string
    */
@@ -32,18 +32,18 @@ class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
   public $totalSize;
 
   /**
-   * @param GoogleCloudApigeeV1App[]
+   * @param GoogleCloudApigeeV1AppGroup[]
    */
-  public function setApp($app)
+  public function setAppGroups($appGroups)
   {
-    $this->app = $app;
+    $this->appGroups = $appGroups;
   }
   /**
-   * @return GoogleCloudApigeeV1App[]
+   * @return GoogleCloudApigeeV1AppGroup[]
    */
-  public function getApp()
+  public function getAppGroups()
   {
-    return $this->app;
+    return $this->appGroups;
   }
   /**
    * @param string
@@ -76,4 +76,4 @@ class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApigeeV1ListAppsResponse::class, 'Google_Service_Apigee_GoogleCloudApigeeV1ListAppsResponse');
+class_alias(GoogleCloudApigeeV1ListAppGroupsResponse::class, 'Google_Service_Apigee_GoogleCloudApigeeV1ListAppGroupsResponse');

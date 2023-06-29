@@ -17,33 +17,29 @@
 
 namespace Google\Service\Apigee;
 
-class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
+class GoogleCloudApigeeV1ListAppGroupAppsResponse extends \Google\Collection
 {
-  protected $collection_key = 'app';
-  protected $appType = GoogleCloudApigeeV1App::class;
-  protected $appDataType = 'array';
+  protected $collection_key = 'appGroupApps';
+  protected $appGroupAppsType = GoogleCloudApigeeV1AppGroupApp::class;
+  protected $appGroupAppsDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var int
-   */
-  public $totalSize;
 
   /**
-   * @param GoogleCloudApigeeV1App[]
+   * @param GoogleCloudApigeeV1AppGroupApp[]
    */
-  public function setApp($app)
+  public function setAppGroupApps($appGroupApps)
   {
-    $this->app = $app;
+    $this->appGroupApps = $appGroupApps;
   }
   /**
-   * @return GoogleCloudApigeeV1App[]
+   * @return GoogleCloudApigeeV1AppGroupApp[]
    */
-  public function getApp()
+  public function getAppGroupApps()
   {
-    return $this->app;
+    return $this->appGroupApps;
   }
   /**
    * @param string
@@ -59,21 +55,7 @@ class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
   {
     return $this->nextPageToken;
   }
-  /**
-   * @param int
-   */
-  public function setTotalSize($totalSize)
-  {
-    $this->totalSize = $totalSize;
-  }
-  /**
-   * @return int
-   */
-  public function getTotalSize()
-  {
-    return $this->totalSize;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApigeeV1ListAppsResponse::class, 'Google_Service_Apigee_GoogleCloudApigeeV1ListAppsResponse');
+class_alias(GoogleCloudApigeeV1ListAppGroupAppsResponse::class, 'Google_Service_Apigee_GoogleCloudApigeeV1ListAppGroupAppsResponse');
