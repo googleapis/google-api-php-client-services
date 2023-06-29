@@ -32,6 +32,8 @@ class GeneratedApksPerSigningKey extends \Google\Collection
   protected $generatedStandaloneApksDataType = 'array';
   protected $generatedUniversalApkType = GeneratedUniversalApk::class;
   protected $generatedUniversalApkDataType = '';
+  protected $targetingInfoType = TargetingInfo::class;
+  protected $targetingInfoDataType = '';
 
   /**
    * @param string
@@ -102,6 +104,20 @@ class GeneratedApksPerSigningKey extends \Google\Collection
   public function getGeneratedUniversalApk()
   {
     return $this->generatedUniversalApk;
+  }
+  /**
+   * @param TargetingInfo
+   */
+  public function setTargetingInfo(TargetingInfo $targetingInfo)
+  {
+    $this->targetingInfo = $targetingInfo;
+  }
+  /**
+   * @return TargetingInfo
+   */
+  public function getTargetingInfo()
+  {
+    return $this->targetingInfo;
   }
 }
 
