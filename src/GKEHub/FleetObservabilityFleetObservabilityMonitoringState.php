@@ -17,26 +17,26 @@
 
 namespace Google\Service\GKEHub;
 
-class FleetObservabilityFeatureSpec extends \Google\Model
+class FleetObservabilityFleetObservabilityMonitoringState extends \Google\Model
 {
-  protected $loggingConfigType = FleetObservabilityLoggingConfig::class;
-  protected $loggingConfigDataType = '';
+  protected $stateType = FleetObservabilityFleetObservabilityBaseFeatureState::class;
+  protected $stateDataType = '';
 
   /**
-   * @param FleetObservabilityLoggingConfig
+   * @param FleetObservabilityFleetObservabilityBaseFeatureState
    */
-  public function setLoggingConfig(FleetObservabilityLoggingConfig $loggingConfig)
+  public function setState(FleetObservabilityFleetObservabilityBaseFeatureState $state)
   {
-    $this->loggingConfig = $loggingConfig;
+    $this->state = $state;
   }
   /**
-   * @return FleetObservabilityLoggingConfig
+   * @return FleetObservabilityFleetObservabilityBaseFeatureState
    */
-  public function getLoggingConfig()
+  public function getState()
   {
-    return $this->loggingConfig;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FleetObservabilityFeatureSpec::class, 'Google_Service_GKEHub_FleetObservabilityFeatureSpec');
+class_alias(FleetObservabilityFleetObservabilityMonitoringState::class, 'Google_Service_GKEHub_FleetObservabilityFleetObservabilityMonitoringState');
