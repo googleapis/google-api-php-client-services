@@ -36,9 +36,11 @@ class AccountsChannelPartnerLinksCustomers extends \Google\Service\Resource
    * Creates a new Customer resource under the reseller or distributor account.
    * Possible error codes: * PERMISSION_DENIED: The reseller account making the
    * request is different from the reseller account in the API request. *
-   * INVALID_ARGUMENT: * Required request parameters are missing or invalid. *
-   * Domain field value doesn't match the primary email domain. Return value: The
-   * newly created Customer resource. (customers.create)
+   * PERMISSION_DENIED: You are not authorized to create a customer. See
+   * https://support.google.com/channelservices/answer/9759265 * INVALID_ARGUMENT:
+   * * Required request parameters are missing or invalid. * Domain field value
+   * doesn't match the primary email domain. Return value: The newly created
+   * Customer resource. (customers.create)
    *
    * @param string $parent Required. The resource name of reseller account in
    * which to create the customer. Parent uses the format: accounts/{account_id}
@@ -94,11 +96,12 @@ class AccountsChannelPartnerLinksCustomers extends \Google\Service\Resource
    * Customer already exists and overwrite_if_exists is true, it will update that
    * Customer's data. Possible error codes: * PERMISSION_DENIED: The reseller
    * account making the request is different from the reseller account in the API
-   * request. * NOT_FOUND: Cloud Identity doesn't exist or was deleted. *
-   * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
-   * expired or invalid. * ALREADY_EXISTS: A customer already exists and has
-   * conflicting critical fields. Requires an overwrite. Return value: The
-   * Customer. (customers.import)
+   * request. * PERMISSION_DENIED: You are not authorized to import the customer.
+   * See https://support.google.com/channelservices/answer/9759265 * NOT_FOUND:
+   * Cloud Identity doesn't exist or was deleted. * INVALID_ARGUMENT: Required
+   * parameters are missing, or the auth_token is expired or invalid. *
+   * ALREADY_EXISTS: A customer already exists and has conflicting critical
+   * fields. Requires an overwrite. Return value: The Customer. (customers.import)
    *
    * @param string $parent Required. The resource name of the reseller's account.
    * Parent takes the format: accounts/{account_id} or
