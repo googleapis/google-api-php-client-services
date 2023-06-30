@@ -764,6 +764,21 @@ class SQLAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getLatestRecoveryTime' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/getLatestRecoveryTime',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'performDiskShrink' => [
               'path' => 'v1/projects/{project}/instances/{instance}/performDiskShrink',
               'httpMethod' => 'POST',
