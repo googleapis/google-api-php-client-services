@@ -65,7 +65,7 @@ class SpacesMessages extends \Google\Service\Resource
    * custom name as the `clientAssignedMessageId` field, which you can reference
    * while processing later operations, like updating or deleting the message. For
    * example usage, see [Name a created message](https://developers.google.com/cha
-   * t/api/guides/crudl/messages#name_a_created_message).
+   * t/api/guides/v1/messages/create#name_a_created_message).
    * @opt_param string messageReplyOption Optional. Specifies whether a message
    * starts a thread or replies to one. Only supported in named spaces.
    * @opt_param string requestId Optional. A unique request ID for this message.
@@ -135,8 +135,8 @@ class SpacesMessages extends \Google\Service\Resource
    * `client-`, then it has a custom name assigned by a Chat app that created it
    * with the Chat REST API. That Chat app (but not others) can pass the custom
    * name to get, update, or delete the message. To learn more, see [create and
-   * name a message] (https://developers.google.com/chat/api/guides/crudl/messages
-   * #name_a_created_message).
+   * name a message] (https://developers.google.com/chat/api/guides/v1/messages/cr
+   * eate#name_a_created_message).
    * @param array $optParams Optional parameters.
    * @return Message
    */
@@ -227,8 +227,8 @@ class SpacesMessages extends \Google\Service\Resource
    *
    * @opt_param bool allowMissing Optional. If `true` and the message isn't found,
    * a new message is created and `updateMask` is ignored. The specified message
-   * ID must be [client-assigned](https://developers.google.com/chat/api/guides/cr
-   * udl/messages#name_a_created_message) or the request fails.
+   * ID must be [client-assigned](https://developers.google.com/chat/api/guides/v1
+   * /messages/create#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas. Currently supported field paths: - `text` -
    * `attachment` - `cards` (Requires [service account
@@ -266,8 +266,8 @@ class SpacesMessages extends \Google\Service\Resource
    *
    * @opt_param bool allowMissing Optional. If `true` and the message isn't found,
    * a new message is created and `updateMask` is ignored. The specified message
-   * ID must be [client-assigned](https://developers.google.com/chat/api/guides/cr
-   * udl/messages#name_a_created_message) or the request fails.
+   * ID must be [client-assigned](https://developers.google.com/chat/api/guides/v1
+   * /messages/create#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas. Currently supported field paths: - `text` -
    * `attachment` - `cards` (Requires [service account
