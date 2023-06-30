@@ -64,6 +64,8 @@ class Product extends \Google\Collection
    * @var string
    */
   public $canonicalLink;
+  protected $certificationsType = ProductCertification::class;
+  protected $certificationsDataType = 'array';
   /**
    * @var string
    */
@@ -509,6 +511,20 @@ class Product extends \Google\Collection
   public function getCanonicalLink()
   {
     return $this->canonicalLink;
+  }
+  /**
+   * @param ProductCertification[]
+   */
+  public function setCertifications($certifications)
+  {
+    $this->certifications = $certifications;
+  }
+  /**
+   * @return ProductCertification[]
+   */
+  public function getCertifications()
+  {
+    return $this->certifications;
   }
   /**
    * @param string
