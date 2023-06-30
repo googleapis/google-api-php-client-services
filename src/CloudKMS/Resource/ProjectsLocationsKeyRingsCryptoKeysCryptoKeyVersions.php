@@ -30,6 +30,10 @@ use Google\Service\CloudKMS\MacSignResponse;
 use Google\Service\CloudKMS\MacVerifyRequest;
 use Google\Service\CloudKMS\MacVerifyResponse;
 use Google\Service\CloudKMS\PublicKey;
+use Google\Service\CloudKMS\RawDecryptRequest;
+use Google\Service\CloudKMS\RawDecryptResponse;
+use Google\Service\CloudKMS\RawEncryptRequest;
+use Google\Service\CloudKMS\RawEncryptResponse;
 use Google\Service\CloudKMS\RestoreCryptoKeyVersionRequest;
 
 /**
@@ -248,6 +252,40 @@ class ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions extends \Google\Servi
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], CryptoKeyVersion::class);
+  }
+  /**
+   * Decrypts data that was originally encrypted using a raw cryptographic
+   * mechanism. The CryptoKey.purpose must be RAW_ENCRYPT_DECRYPT.
+   * (cryptoKeyVersions.rawDecrypt)
+   *
+   * @param string $name Required. The resource name of the CryptoKeyVersion to
+   * use for decryption.
+   * @param RawDecryptRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RawDecryptResponse
+   */
+  public function rawDecrypt($name, RawDecryptRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('rawDecrypt', [$params], RawDecryptResponse::class);
+  }
+  /**
+   * Encrypts data using portable cryptographic primitives. Most users should
+   * choose Encrypt and Decrypt rather than their raw counterparts. The
+   * CryptoKey.purpose must be RAW_ENCRYPT_DECRYPT. (cryptoKeyVersions.rawEncrypt)
+   *
+   * @param string $name Required. The resource name of the CryptoKeyVersion to
+   * use for encryption.
+   * @param RawEncryptRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RawEncryptResponse
+   */
+  public function rawEncrypt($name, RawEncryptRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('rawEncrypt', [$params], RawEncryptResponse::class);
   }
   /**
    * Restore a CryptoKeyVersion in the DESTROY_SCHEDULED state. Upon restoration
