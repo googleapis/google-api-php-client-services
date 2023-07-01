@@ -19,6 +19,12 @@ namespace Google\Service\ArtifactRegistry;
 
 class Repository extends \Google\Model
 {
+  protected $cleanupPoliciesType = CleanupPolicy::class;
+  protected $cleanupPoliciesDataType = 'map';
+  /**
+   * @var bool
+   */
+  public $cleanupPolicyDryRun;
   /**
    * @var string
    */
@@ -68,6 +74,34 @@ class Repository extends \Google\Model
   protected $virtualRepositoryConfigType = VirtualRepositoryConfig::class;
   protected $virtualRepositoryConfigDataType = '';
 
+  /**
+   * @param CleanupPolicy[]
+   */
+  public function setCleanupPolicies($cleanupPolicies)
+  {
+    $this->cleanupPolicies = $cleanupPolicies;
+  }
+  /**
+   * @return CleanupPolicy[]
+   */
+  public function getCleanupPolicies()
+  {
+    return $this->cleanupPolicies;
+  }
+  /**
+   * @param bool
+   */
+  public function setCleanupPolicyDryRun($cleanupPolicyDryRun)
+  {
+    $this->cleanupPolicyDryRun = $cleanupPolicyDryRun;
+  }
+  /**
+   * @return bool
+   */
+  public function getCleanupPolicyDryRun()
+  {
+    return $this->cleanupPolicyDryRun;
+  }
   /**
    * @param string
    */

@@ -704,7 +704,17 @@ class ArtifactRegistry extends \Google\Service
         'versions',
         [
           'methods' => [
-            'delete' => [
+            'batchDelete' => [
+              'path' => 'v1/{+parent}/versions:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
