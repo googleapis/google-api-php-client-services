@@ -17,45 +17,37 @@
 
 namespace Google\Service\Container;
 
-class AdditionalPodRangesConfig extends \Google\Collection
+class RangeInfo extends \Google\Model
 {
-  protected $collection_key = 'podRangeNames';
-  protected $podRangeInfoType = RangeInfo::class;
-  protected $podRangeInfoDataType = 'array';
   /**
-   * @var string[]
+   * @var string
    */
-  public $podRangeNames;
+  public $rangeName;
+  public $utilization;
 
   /**
-   * @param RangeInfo[]
+   * @param string
    */
-  public function setPodRangeInfo($podRangeInfo)
+  public function setRangeName($rangeName)
   {
-    $this->podRangeInfo = $podRangeInfo;
+    $this->rangeName = $rangeName;
   }
   /**
-   * @return RangeInfo[]
+   * @return string
    */
-  public function getPodRangeInfo()
+  public function getRangeName()
   {
-    return $this->podRangeInfo;
+    return $this->rangeName;
   }
-  /**
-   * @param string[]
-   */
-  public function setPodRangeNames($podRangeNames)
+  public function setUtilization($utilization)
   {
-    $this->podRangeNames = $podRangeNames;
+    $this->utilization = $utilization;
   }
-  /**
-   * @return string[]
-   */
-  public function getPodRangeNames()
+  public function getUtilization()
   {
-    return $this->podRangeNames;
+    return $this->utilization;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AdditionalPodRangesConfig::class, 'Google_Service_Container_AdditionalPodRangesConfig');
+class_alias(RangeInfo::class, 'Google_Service_Container_RangeInfo');

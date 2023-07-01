@@ -35,6 +35,7 @@ class NodeNetworkConfig extends \Google\Model
    * @var string
    */
   public $podIpv4CidrBlock;
+  public $podIpv4RangeUtilization;
   /**
    * @var string
    */
@@ -109,6 +110,14 @@ class NodeNetworkConfig extends \Google\Model
   public function getPodIpv4CidrBlock()
   {
     return $this->podIpv4CidrBlock;
+  }
+  public function setPodIpv4RangeUtilization($podIpv4RangeUtilization)
+  {
+    $this->podIpv4RangeUtilization = $podIpv4RangeUtilization;
+  }
+  public function getPodIpv4RangeUtilization()
+  {
+    return $this->podIpv4RangeUtilization;
   }
   /**
    * @param string
