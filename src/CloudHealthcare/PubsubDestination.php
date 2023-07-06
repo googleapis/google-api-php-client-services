@@ -17,16 +17,12 @@
 
 namespace Google\Service\CloudHealthcare;
 
-class NotificationConfig extends \Google\Model
+class PubsubDestination extends \Google\Model
 {
   /**
    * @var string
    */
   public $pubsubTopic;
-  /**
-   * @var bool
-   */
-  public $sendForBulkImport;
 
   /**
    * @param string
@@ -42,21 +38,7 @@ class NotificationConfig extends \Google\Model
   {
     return $this->pubsubTopic;
   }
-  /**
-   * @param bool
-   */
-  public function setSendForBulkImport($sendForBulkImport)
-  {
-    $this->sendForBulkImport = $sendForBulkImport;
-  }
-  /**
-   * @return bool
-   */
-  public function getSendForBulkImport()
-  {
-    return $this->sendForBulkImport;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NotificationConfig::class, 'Google_Service_CloudHealthcare_NotificationConfig');
+class_alias(PubsubDestination::class, 'Google_Service_CloudHealthcare_PubsubDestination');

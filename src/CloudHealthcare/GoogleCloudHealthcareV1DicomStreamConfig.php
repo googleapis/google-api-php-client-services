@@ -17,46 +17,26 @@
 
 namespace Google\Service\CloudHealthcare;
 
-class NotificationConfig extends \Google\Model
+class GoogleCloudHealthcareV1DicomStreamConfig extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $pubsubTopic;
-  /**
-   * @var bool
-   */
-  public $sendForBulkImport;
+  protected $bigqueryDestinationType = GoogleCloudHealthcareV1DicomBigQueryDestination::class;
+  protected $bigqueryDestinationDataType = '';
 
   /**
-   * @param string
+   * @param GoogleCloudHealthcareV1DicomBigQueryDestination
    */
-  public function setPubsubTopic($pubsubTopic)
+  public function setBigqueryDestination(GoogleCloudHealthcareV1DicomBigQueryDestination $bigqueryDestination)
   {
-    $this->pubsubTopic = $pubsubTopic;
+    $this->bigqueryDestination = $bigqueryDestination;
   }
   /**
-   * @return string
+   * @return GoogleCloudHealthcareV1DicomBigQueryDestination
    */
-  public function getPubsubTopic()
+  public function getBigqueryDestination()
   {
-    return $this->pubsubTopic;
-  }
-  /**
-   * @param bool
-   */
-  public function setSendForBulkImport($sendForBulkImport)
-  {
-    $this->sendForBulkImport = $sendForBulkImport;
-  }
-  /**
-   * @return bool
-   */
-  public function getSendForBulkImport()
-  {
-    return $this->sendForBulkImport;
+    return $this->bigqueryDestination;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NotificationConfig::class, 'Google_Service_CloudHealthcare_NotificationConfig');
+class_alias(GoogleCloudHealthcareV1DicomStreamConfig::class, 'Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DicomStreamConfig');
