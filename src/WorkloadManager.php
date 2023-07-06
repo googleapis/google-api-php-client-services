@@ -23,7 +23,9 @@ use Google\Client;
  * Service definition for WorkloadManager (v1).
  *
  * <p>
-</p>
+ * Workload Manager is a service that provides tooling for enterprise workloads
+ * to automate the deployment and validation of your workloads against best
+ * practices and recommendations.</p>
  *
  * <p>
  * For more information about this service, see the API
