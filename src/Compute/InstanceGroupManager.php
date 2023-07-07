@@ -50,6 +50,8 @@ class InstanceGroupManager extends \Google\Collection
    * @var string
    */
   public $instanceGroup;
+  protected $instanceLifecyclePolicyType = InstanceGroupManagerInstanceLifecyclePolicy::class;
+  protected $instanceLifecyclePolicyDataType = '';
   /**
    * @var string
    */
@@ -222,6 +224,20 @@ class InstanceGroupManager extends \Google\Collection
   public function getInstanceGroup()
   {
     return $this->instanceGroup;
+  }
+  /**
+   * @param InstanceGroupManagerInstanceLifecyclePolicy
+   */
+  public function setInstanceLifecyclePolicy(InstanceGroupManagerInstanceLifecyclePolicy $instanceLifecyclePolicy)
+  {
+    $this->instanceLifecyclePolicy = $instanceLifecyclePolicy;
+  }
+  /**
+   * @return InstanceGroupManagerInstanceLifecyclePolicy
+   */
+  public function getInstanceLifecyclePolicy()
+  {
+    return $this->instanceLifecyclePolicy;
   }
   /**
    * @param string
