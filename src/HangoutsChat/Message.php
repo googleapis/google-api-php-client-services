@@ -66,6 +66,8 @@ class Message extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $quotedMessageMetadataType = QuotedMessageMetadata::class;
+  protected $quotedMessageMetadataDataType = '';
   protected $senderType = User::class;
   protected $senderDataType = '';
   protected $slashCommandType = SlashCommand::class;
@@ -306,6 +308,20 @@ class Message extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param QuotedMessageMetadata
+   */
+  public function setQuotedMessageMetadata(QuotedMessageMetadata $quotedMessageMetadata)
+  {
+    $this->quotedMessageMetadata = $quotedMessageMetadata;
+  }
+  /**
+   * @return QuotedMessageMetadata
+   */
+  public function getQuotedMessageMetadata()
+  {
+    return $this->quotedMessageMetadata;
   }
   /**
    * @param User
