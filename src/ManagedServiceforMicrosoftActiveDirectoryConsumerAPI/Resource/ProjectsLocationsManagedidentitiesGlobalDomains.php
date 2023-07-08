@@ -18,6 +18,8 @@
 namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Resource;
 
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\AttachTrustRequest;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\CheckMigrationPermissionRequest;
+use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\CheckMigrationPermissionResponse;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\DetachTrustRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\DisableMigrationRequest;
 use Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI\Domain;
@@ -63,6 +65,22 @@ class ProjectsLocationsManagedidentitiesGlobalDomains extends \Google\Service\Re
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('attachTrust', [$params], Operation::class);
+  }
+  /**
+   * CheckMigrationPermission API gets the current state of DomainMigration
+   * (domains.checkMigrationPermission)
+   *
+   * @param string $domain Required. The domain resource name using the form:
+   * `projects/{project_id}/locations/global/domains/{domain_name}`
+   * @param CheckMigrationPermissionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CheckMigrationPermissionResponse
+   */
+  public function checkMigrationPermission($domain, CheckMigrationPermissionRequest $postBody, $optParams = [])
+  {
+    $params = ['domain' => $domain, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkMigrationPermission', [$params], CheckMigrationPermissionResponse::class);
   }
   /**
    * Creates a Microsoft AD domain. (domains.create)
