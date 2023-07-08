@@ -17,64 +17,46 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowCxV3ExportAgentResponse extends \Google\Model
+class GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination extends \Google\Model
 {
   /**
    * @var string
    */
-  public $agentContent;
+  public $commitMessage;
   /**
    * @var string
    */
-  public $agentUri;
-  /**
-   * @var string
-   */
-  public $commitSha;
+  public $trackingBranch;
 
   /**
    * @param string
    */
-  public function setAgentContent($agentContent)
+  public function setCommitMessage($commitMessage)
   {
-    $this->agentContent = $agentContent;
+    $this->commitMessage = $commitMessage;
   }
   /**
    * @return string
    */
-  public function getAgentContent()
+  public function getCommitMessage()
   {
-    return $this->agentContent;
+    return $this->commitMessage;
   }
   /**
    * @param string
    */
-  public function setAgentUri($agentUri)
+  public function setTrackingBranch($trackingBranch)
   {
-    $this->agentUri = $agentUri;
+    $this->trackingBranch = $trackingBranch;
   }
   /**
    * @return string
    */
-  public function getAgentUri()
+  public function getTrackingBranch()
   {
-    return $this->agentUri;
-  }
-  /**
-   * @param string
-   */
-  public function setCommitSha($commitSha)
-  {
-    $this->commitSha = $commitSha;
-  }
-  /**
-   * @return string
-   */
-  public function getCommitSha()
-  {
-    return $this->commitSha;
+    return $this->trackingBranch;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowCxV3ExportAgentResponse::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ExportAgentResponse');
+class_alias(GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination');

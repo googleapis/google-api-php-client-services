@@ -46,6 +46,8 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
    * @var bool
    */
   public $enableStackdriverLogging;
+  protected $gitIntegrationSettingsType = GoogleCloudDialogflowCxV3AgentGitIntegrationSettings::class;
+  protected $gitIntegrationSettingsDataType = '';
   /**
    * @var bool
    */
@@ -172,6 +174,20 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
   public function getEnableStackdriverLogging()
   {
     return $this->enableStackdriverLogging;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3AgentGitIntegrationSettings
+   */
+  public function setGitIntegrationSettings(GoogleCloudDialogflowCxV3AgentGitIntegrationSettings $gitIntegrationSettings)
+  {
+    $this->gitIntegrationSettings = $gitIntegrationSettings;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3AgentGitIntegrationSettings
+   */
+  public function getGitIntegrationSettings()
+  {
+    return $this->gitIntegrationSettings;
   }
   /**
    * @param bool
