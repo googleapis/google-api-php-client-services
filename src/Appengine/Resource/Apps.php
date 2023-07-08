@@ -42,9 +42,6 @@ class Apps extends \Google\Service\Resource
    *
    * @param Application $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent The project and location in which the application
-   * should be created, specified in the format projects/locations
    * @return Operation
    */
   public function create(Application $postBody, $optParams = [])
