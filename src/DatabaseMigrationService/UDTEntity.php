@@ -17,64 +17,64 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConvertConversionWorkspaceRequest extends \Google\Model
+class UDTEntity extends \Google\Model
 {
   /**
-   * @var bool
+   * @var array[]
    */
-  public $autoCommit;
-  /**
-   * @var bool
-   */
-  public $convertFullPath;
+  public $customFeatures;
   /**
    * @var string
    */
-  public $filter;
+  public $udtBody;
+  /**
+   * @var string
+   */
+  public $udtSqlCode;
 
   /**
-   * @param bool
+   * @param array[]
    */
-  public function setAutoCommit($autoCommit)
+  public function setCustomFeatures($customFeatures)
   {
-    $this->autoCommit = $autoCommit;
+    $this->customFeatures = $customFeatures;
   }
   /**
-   * @return bool
+   * @return array[]
    */
-  public function getAutoCommit()
+  public function getCustomFeatures()
   {
-    return $this->autoCommit;
-  }
-  /**
-   * @param bool
-   */
-  public function setConvertFullPath($convertFullPath)
-  {
-    $this->convertFullPath = $convertFullPath;
-  }
-  /**
-   * @return bool
-   */
-  public function getConvertFullPath()
-  {
-    return $this->convertFullPath;
+    return $this->customFeatures;
   }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setUdtBody($udtBody)
   {
-    $this->filter = $filter;
+    $this->udtBody = $udtBody;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getUdtBody()
   {
-    return $this->filter;
+    return $this->udtBody;
+  }
+  /**
+   * @param string
+   */
+  public function setUdtSqlCode($udtSqlCode)
+  {
+    $this->udtSqlCode = $udtSqlCode;
+  }
+  /**
+   * @return string
+   */
+  public function getUdtSqlCode()
+  {
+    return $this->udtSqlCode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConvertConversionWorkspaceRequest::class, 'Google_Service_DatabaseMigrationService_ConvertConversionWorkspaceRequest');
+class_alias(UDTEntity::class, 'Google_Service_DatabaseMigrationService_UDTEntity');

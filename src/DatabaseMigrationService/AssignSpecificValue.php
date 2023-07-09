@@ -17,44 +17,28 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class AssignSpecificValue extends \Google\Model
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
   /**
    * @var string
    */
-  public $updateMask;
+  public $value;
 
-  /**
-   * @param MigrationJob
-   */
-  public function setMigrationJob(MigrationJob $migrationJob)
-  {
-    $this->migrationJob = $migrationJob;
-  }
-  /**
-   * @return MigrationJob
-   */
-  public function getMigrationJob()
-  {
-    return $this->migrationJob;
-  }
   /**
    * @param string
    */
-  public function setUpdateMask($updateMask)
+  public function setValue($value)
   {
-    $this->updateMask = $updateMask;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getUpdateMask()
+  public function getValue()
   {
-    return $this->updateMask;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(AssignSpecificValue::class, 'Google_Service_DatabaseMigrationService_AssignSpecificValue');

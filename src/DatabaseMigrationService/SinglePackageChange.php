@@ -17,64 +17,46 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConvertConversionWorkspaceRequest extends \Google\Model
+class SinglePackageChange extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $autoCommit;
-  /**
-   * @var bool
-   */
-  public $convertFullPath;
   /**
    * @var string
    */
-  public $filter;
+  public $packageBody;
+  /**
+   * @var string
+   */
+  public $packageDescription;
 
-  /**
-   * @param bool
-   */
-  public function setAutoCommit($autoCommit)
-  {
-    $this->autoCommit = $autoCommit;
-  }
-  /**
-   * @return bool
-   */
-  public function getAutoCommit()
-  {
-    return $this->autoCommit;
-  }
-  /**
-   * @param bool
-   */
-  public function setConvertFullPath($convertFullPath)
-  {
-    $this->convertFullPath = $convertFullPath;
-  }
-  /**
-   * @return bool
-   */
-  public function getConvertFullPath()
-  {
-    return $this->convertFullPath;
-  }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setPackageBody($packageBody)
   {
-    $this->filter = $filter;
+    $this->packageBody = $packageBody;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getPackageBody()
   {
-    return $this->filter;
+    return $this->packageBody;
+  }
+  /**
+   * @param string
+   */
+  public function setPackageDescription($packageDescription)
+  {
+    $this->packageDescription = $packageDescription;
+  }
+  /**
+   * @return string
+   */
+  public function getPackageDescription()
+  {
+    return $this->packageDescription;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConvertConversionWorkspaceRequest::class, 'Google_Service_DatabaseMigrationService_ConvertConversionWorkspaceRequest');
+class_alias(SinglePackageChange::class, 'Google_Service_DatabaseMigrationService_SinglePackageChange');

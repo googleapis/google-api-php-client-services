@@ -17,44 +17,37 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class DoubleComparisonFilter extends \Google\Model
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
+  public $value;
   /**
    * @var string
    */
-  public $updateMask;
+  public $valueComparison;
 
-  /**
-   * @param MigrationJob
-   */
-  public function setMigrationJob(MigrationJob $migrationJob)
+  public function setValue($value)
   {
-    $this->migrationJob = $migrationJob;
+    $this->value = $value;
   }
-  /**
-   * @return MigrationJob
-   */
-  public function getMigrationJob()
+  public function getValue()
   {
-    return $this->migrationJob;
+    return $this->value;
   }
   /**
    * @param string
    */
-  public function setUpdateMask($updateMask)
+  public function setValueComparison($valueComparison)
   {
-    $this->updateMask = $updateMask;
+    $this->valueComparison = $valueComparison;
   }
   /**
    * @return string
    */
-  public function getUpdateMask()
+  public function getValueComparison()
   {
-    return $this->updateMask;
+    return $this->valueComparison;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(DoubleComparisonFilter::class, 'Google_Service_DatabaseMigrationService_DoubleComparisonFilter');

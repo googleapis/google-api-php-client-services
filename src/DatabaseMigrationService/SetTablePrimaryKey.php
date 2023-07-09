@@ -17,44 +17,47 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class SetTablePrimaryKey extends \Google\Collection
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
+  protected $collection_key = 'primaryKeyColumns';
   /**
    * @var string
    */
-  public $updateMask;
+  public $primaryKey;
+  /**
+   * @var string[]
+   */
+  public $primaryKeyColumns;
 
-  /**
-   * @param MigrationJob
-   */
-  public function setMigrationJob(MigrationJob $migrationJob)
-  {
-    $this->migrationJob = $migrationJob;
-  }
-  /**
-   * @return MigrationJob
-   */
-  public function getMigrationJob()
-  {
-    return $this->migrationJob;
-  }
   /**
    * @param string
    */
-  public function setUpdateMask($updateMask)
+  public function setPrimaryKey($primaryKey)
   {
-    $this->updateMask = $updateMask;
+    $this->primaryKey = $primaryKey;
   }
   /**
    * @return string
    */
-  public function getUpdateMask()
+  public function getPrimaryKey()
   {
-    return $this->updateMask;
+    return $this->primaryKey;
+  }
+  /**
+   * @param string[]
+   */
+  public function setPrimaryKeyColumns($primaryKeyColumns)
+  {
+    $this->primaryKeyColumns = $primaryKeyColumns;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPrimaryKeyColumns()
+  {
+    return $this->primaryKeyColumns;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(SetTablePrimaryKey::class, 'Google_Service_DatabaseMigrationService_SetTablePrimaryKey');

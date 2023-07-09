@@ -17,64 +17,46 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConvertConversionWorkspaceRequest extends \Google\Model
+class IntComparisonFilter extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $autoCommit;
-  /**
-   * @var bool
-   */
-  public $convertFullPath;
   /**
    * @var string
    */
-  public $filter;
+  public $value;
+  /**
+   * @var string
+   */
+  public $valueComparison;
 
-  /**
-   * @param bool
-   */
-  public function setAutoCommit($autoCommit)
-  {
-    $this->autoCommit = $autoCommit;
-  }
-  /**
-   * @return bool
-   */
-  public function getAutoCommit()
-  {
-    return $this->autoCommit;
-  }
-  /**
-   * @param bool
-   */
-  public function setConvertFullPath($convertFullPath)
-  {
-    $this->convertFullPath = $convertFullPath;
-  }
-  /**
-   * @return bool
-   */
-  public function getConvertFullPath()
-  {
-    return $this->convertFullPath;
-  }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setValue($value)
   {
-    $this->filter = $filter;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getValue()
   {
-    return $this->filter;
+    return $this->value;
+  }
+  /**
+   * @param string
+   */
+  public function setValueComparison($valueComparison)
+  {
+    $this->valueComparison = $valueComparison;
+  }
+  /**
+   * @return string
+   */
+  public function getValueComparison()
+  {
+    return $this->valueComparison;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConvertConversionWorkspaceRequest::class, 'Google_Service_DatabaseMigrationService_ConvertConversionWorkspaceRequest');
+class_alias(IntComparisonFilter::class, 'Google_Service_DatabaseMigrationService_IntComparisonFilter');

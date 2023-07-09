@@ -17,64 +17,46 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConvertConversionWorkspaceRequest extends \Google\Model
+class MultiEntityRename extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $autoCommit;
-  /**
-   * @var bool
-   */
-  public $convertFullPath;
   /**
    * @var string
    */
-  public $filter;
+  public $newNamePattern;
+  /**
+   * @var string
+   */
+  public $sourceNameTransformation;
 
-  /**
-   * @param bool
-   */
-  public function setAutoCommit($autoCommit)
-  {
-    $this->autoCommit = $autoCommit;
-  }
-  /**
-   * @return bool
-   */
-  public function getAutoCommit()
-  {
-    return $this->autoCommit;
-  }
-  /**
-   * @param bool
-   */
-  public function setConvertFullPath($convertFullPath)
-  {
-    $this->convertFullPath = $convertFullPath;
-  }
-  /**
-   * @return bool
-   */
-  public function getConvertFullPath()
-  {
-    return $this->convertFullPath;
-  }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setNewNamePattern($newNamePattern)
   {
-    $this->filter = $filter;
+    $this->newNamePattern = $newNamePattern;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getNewNamePattern()
   {
-    return $this->filter;
+    return $this->newNamePattern;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceNameTransformation($sourceNameTransformation)
+  {
+    $this->sourceNameTransformation = $sourceNameTransformation;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceNameTransformation()
+  {
+    return $this->sourceNameTransformation;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConvertConversionWorkspaceRequest::class, 'Google_Service_DatabaseMigrationService_ConvertConversionWorkspaceRequest');
+class_alias(MultiEntityRename::class, 'Google_Service_DatabaseMigrationService_MultiEntityRename');

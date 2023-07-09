@@ -17,44 +17,28 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class SourceSqlChange extends \Google\Model
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
   /**
    * @var string
    */
-  public $updateMask;
+  public $sqlCode;
 
-  /**
-   * @param MigrationJob
-   */
-  public function setMigrationJob(MigrationJob $migrationJob)
-  {
-    $this->migrationJob = $migrationJob;
-  }
-  /**
-   * @return MigrationJob
-   */
-  public function getMigrationJob()
-  {
-    return $this->migrationJob;
-  }
   /**
    * @param string
    */
-  public function setUpdateMask($updateMask)
+  public function setSqlCode($sqlCode)
   {
-    $this->updateMask = $updateMask;
+    $this->sqlCode = $sqlCode;
   }
   /**
    * @return string
    */
-  public function getUpdateMask()
+  public function getSqlCode()
   {
-    return $this->updateMask;
+    return $this->sqlCode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(SourceSqlChange::class, 'Google_Service_DatabaseMigrationService_SourceSqlChange');

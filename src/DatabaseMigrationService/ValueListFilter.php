@@ -17,64 +17,65 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConvertConversionWorkspaceRequest extends \Google\Model
+class ValueListFilter extends \Google\Collection
 {
+  protected $collection_key = 'values';
   /**
    * @var bool
    */
-  public $autoCommit;
-  /**
-   * @var bool
-   */
-  public $convertFullPath;
+  public $ignoreCase;
   /**
    * @var string
    */
-  public $filter;
+  public $valuePresentList;
+  /**
+   * @var string[]
+   */
+  public $values;
 
   /**
    * @param bool
    */
-  public function setAutoCommit($autoCommit)
+  public function setIgnoreCase($ignoreCase)
   {
-    $this->autoCommit = $autoCommit;
+    $this->ignoreCase = $ignoreCase;
   }
   /**
    * @return bool
    */
-  public function getAutoCommit()
+  public function getIgnoreCase()
   {
-    return $this->autoCommit;
-  }
-  /**
-   * @param bool
-   */
-  public function setConvertFullPath($convertFullPath)
-  {
-    $this->convertFullPath = $convertFullPath;
-  }
-  /**
-   * @return bool
-   */
-  public function getConvertFullPath()
-  {
-    return $this->convertFullPath;
+    return $this->ignoreCase;
   }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setValuePresentList($valuePresentList)
   {
-    $this->filter = $filter;
+    $this->valuePresentList = $valuePresentList;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getValuePresentList()
   {
-    return $this->filter;
+    return $this->valuePresentList;
+  }
+  /**
+   * @param string[]
+   */
+  public function setValues($values)
+  {
+    $this->values = $values;
+  }
+  /**
+   * @return string[]
+   */
+  public function getValues()
+  {
+    return $this->values;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConvertConversionWorkspaceRequest::class, 'Google_Service_DatabaseMigrationService_ConvertConversionWorkspaceRequest');
+class_alias(ValueListFilter::class, 'Google_Service_DatabaseMigrationService_ValueListFilter');

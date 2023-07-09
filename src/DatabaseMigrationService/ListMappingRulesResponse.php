@@ -17,64 +17,45 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConvertConversionWorkspaceRequest extends \Google\Model
+class ListMappingRulesResponse extends \Google\Collection
 {
-  /**
-   * @var bool
-   */
-  public $autoCommit;
-  /**
-   * @var bool
-   */
-  public $convertFullPath;
+  protected $collection_key = 'mappingRules';
+  protected $mappingRulesType = MappingRule::class;
+  protected $mappingRulesDataType = 'array';
   /**
    * @var string
    */
-  public $filter;
+  public $nextPageToken;
 
   /**
-   * @param bool
+   * @param MappingRule[]
    */
-  public function setAutoCommit($autoCommit)
+  public function setMappingRules($mappingRules)
   {
-    $this->autoCommit = $autoCommit;
+    $this->mappingRules = $mappingRules;
   }
   /**
-   * @return bool
+   * @return MappingRule[]
    */
-  public function getAutoCommit()
+  public function getMappingRules()
   {
-    return $this->autoCommit;
-  }
-  /**
-   * @param bool
-   */
-  public function setConvertFullPath($convertFullPath)
-  {
-    $this->convertFullPath = $convertFullPath;
-  }
-  /**
-   * @return bool
-   */
-  public function getConvertFullPath()
-  {
-    return $this->convertFullPath;
+    return $this->mappingRules;
   }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->filter = $filter;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getNextPageToken()
   {
-    return $this->filter;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConvertConversionWorkspaceRequest::class, 'Google_Service_DatabaseMigrationService_ConvertConversionWorkspaceRequest');
+class_alias(ListMappingRulesResponse::class, 'Google_Service_DatabaseMigrationService_ListMappingRulesResponse');

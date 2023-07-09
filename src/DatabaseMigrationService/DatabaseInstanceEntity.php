@@ -17,44 +17,28 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class DatabaseInstanceEntity extends \Google\Model
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
   /**
-   * @var string
+   * @var array[]
    */
-  public $updateMask;
+  public $customFeatures;
 
   /**
-   * @param MigrationJob
+   * @param array[]
    */
-  public function setMigrationJob(MigrationJob $migrationJob)
+  public function setCustomFeatures($customFeatures)
   {
-    $this->migrationJob = $migrationJob;
+    $this->customFeatures = $customFeatures;
   }
   /**
-   * @return MigrationJob
+   * @return array[]
    */
-  public function getMigrationJob()
+  public function getCustomFeatures()
   {
-    return $this->migrationJob;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateMask($updateMask)
-  {
-    $this->updateMask = $updateMask;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateMask()
-  {
-    return $this->updateMask;
+    return $this->customFeatures;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(DatabaseInstanceEntity::class, 'Google_Service_DatabaseMigrationService_DatabaseInstanceEntity');

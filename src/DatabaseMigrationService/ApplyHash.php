@@ -17,44 +17,26 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class ApplyHash extends \Google\Model
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
-  /**
-   * @var string
-   */
-  public $updateMask;
+  protected $uuidFromBytesType = DatamigrationEmpty::class;
+  protected $uuidFromBytesDataType = '';
 
   /**
-   * @param MigrationJob
+   * @param DatamigrationEmpty
    */
-  public function setMigrationJob(MigrationJob $migrationJob)
+  public function setUuidFromBytes(DatamigrationEmpty $uuidFromBytes)
   {
-    $this->migrationJob = $migrationJob;
+    $this->uuidFromBytes = $uuidFromBytes;
   }
   /**
-   * @return MigrationJob
+   * @return DatamigrationEmpty
    */
-  public function getMigrationJob()
+  public function getUuidFromBytes()
   {
-    return $this->migrationJob;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateMask($updateMask)
-  {
-    $this->updateMask = $updateMask;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateMask()
-  {
-    return $this->updateMask;
+    return $this->uuidFromBytes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(ApplyHash::class, 'Google_Service_DatabaseMigrationService_ApplyHash');

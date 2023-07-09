@@ -17,44 +17,28 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class ConvertRowIdToColumn extends \Google\Model
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
   /**
-   * @var string
+   * @var bool
    */
-  public $updateMask;
+  public $onlyIfNoPrimaryKey;
 
   /**
-   * @param MigrationJob
+   * @param bool
    */
-  public function setMigrationJob(MigrationJob $migrationJob)
+  public function setOnlyIfNoPrimaryKey($onlyIfNoPrimaryKey)
   {
-    $this->migrationJob = $migrationJob;
+    $this->onlyIfNoPrimaryKey = $onlyIfNoPrimaryKey;
   }
   /**
-   * @return MigrationJob
+   * @return bool
    */
-  public function getMigrationJob()
+  public function getOnlyIfNoPrimaryKey()
   {
-    return $this->migrationJob;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateMask($updateMask)
-  {
-    $this->updateMask = $updateMask;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateMask()
-  {
-    return $this->updateMask;
+    return $this->onlyIfNoPrimaryKey;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(ConvertRowIdToColumn::class, 'Google_Service_DatabaseMigrationService_ConvertRowIdToColumn');

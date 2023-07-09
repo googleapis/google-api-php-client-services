@@ -17,44 +17,28 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class RoundToScale extends \Google\Model
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
   /**
-   * @var string
+   * @var int
    */
-  public $updateMask;
+  public $scale;
 
   /**
-   * @param MigrationJob
+   * @param int
    */
-  public function setMigrationJob(MigrationJob $migrationJob)
+  public function setScale($scale)
   {
-    $this->migrationJob = $migrationJob;
+    $this->scale = $scale;
   }
   /**
-   * @return MigrationJob
+   * @return int
    */
-  public function getMigrationJob()
+  public function getScale()
   {
-    return $this->migrationJob;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateMask($updateMask)
-  {
-    $this->updateMask = $updateMask;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateMask()
-  {
-    return $this->updateMask;
+    return $this->scale;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(RoundToScale::class, 'Google_Service_DatabaseMigrationService_RoundToScale');

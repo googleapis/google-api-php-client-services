@@ -17,44 +17,47 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class VerifyMigrationJobRequest extends \Google\Model
+class FilterTableColumns extends \Google\Collection
 {
-  protected $migrationJobType = MigrationJob::class;
-  protected $migrationJobDataType = '';
+  protected $collection_key = 'includeColumns';
   /**
-   * @var string
+   * @var string[]
    */
-  public $updateMask;
+  public $excludeColumns;
+  /**
+   * @var string[]
+   */
+  public $includeColumns;
 
   /**
-   * @param MigrationJob
+   * @param string[]
    */
-  public function setMigrationJob(MigrationJob $migrationJob)
+  public function setExcludeColumns($excludeColumns)
   {
-    $this->migrationJob = $migrationJob;
+    $this->excludeColumns = $excludeColumns;
   }
   /**
-   * @return MigrationJob
+   * @return string[]
    */
-  public function getMigrationJob()
+  public function getExcludeColumns()
   {
-    return $this->migrationJob;
+    return $this->excludeColumns;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setUpdateMask($updateMask)
+  public function setIncludeColumns($includeColumns)
   {
-    $this->updateMask = $updateMask;
+    $this->includeColumns = $includeColumns;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getUpdateMask()
+  public function getIncludeColumns()
   {
-    return $this->updateMask;
+    return $this->includeColumns;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VerifyMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_VerifyMigrationJobRequest');
+class_alias(FilterTableColumns::class, 'Google_Service_DatabaseMigrationService_FilterTableColumns');

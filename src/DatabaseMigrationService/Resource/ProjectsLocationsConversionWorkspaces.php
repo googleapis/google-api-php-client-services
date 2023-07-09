@@ -171,22 +171,23 @@ class ProjectsLocationsConversionWorkspaces extends \Google\Service\Resource
    * }.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string commitId Request a specific commit ID. If not specified,
-   * the entities from the latest commit are returned.
-   * @opt_param string filter Filter the returned entities based on AIP-160
-   * standard.
-   * @opt_param int pageSize The maximum number of entities to return. The service
-   * may return fewer entities than the value specifies.
-   * @opt_param string pageToken The nextPageToken value received in the previous
-   * call to conversionWorkspace.describeDatabaseEntities, used in the subsequent
-   * request to retrieve the next page of results. On first call this should be
-   * left blank. When paginating, all other parameters provided to
+   * @opt_param string commitId Optional. Request a specific commit ID. If not
+   * specified, the entities from the latest commit are returned.
+   * @opt_param string filter Optional. Filter the returned entities based on
+   * AIP-160 standard.
+   * @opt_param int pageSize Optional. The maximum number of entities to return.
+   * The service may return fewer entities than the value specifies.
+   * @opt_param string pageToken Optional. The nextPageToken value received in the
+   * previous call to conversionWorkspace.describeDatabaseEntities, used in the
+   * subsequent request to retrieve the next page of results. On first call this
+   * should be left blank. When paginating, all other parameters provided to
    * conversionWorkspace.describeDatabaseEntities must match the call that
    * provided the page token.
-   * @opt_param string tree The tree to fetch.
-   * @opt_param bool uncommitted Whether to retrieve the latest committed version
-   * of the entities or the latest version. This field is ignored if a specific
-   * commit_id is specified.
+   * @opt_param string tree Required. The tree to fetch.
+   * @opt_param bool uncommitted Optional. Whether to retrieve the latest
+   * committed version of the entities or the latest version. This field is
+   * ignored if a specific commit_id is specified.
+   * @opt_param string view Optional. Results view based on AIP-157
    * @return DescribeDatabaseEntitiesResponse
    */
   public function describeDatabaseEntities($conversionWorkspace, $optParams = [])

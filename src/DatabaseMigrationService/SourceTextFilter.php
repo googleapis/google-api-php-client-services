@@ -17,64 +17,46 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class ConvertConversionWorkspaceRequest extends \Google\Model
+class SourceTextFilter extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $autoCommit;
-  /**
-   * @var bool
-   */
-  public $convertFullPath;
   /**
    * @var string
    */
-  public $filter;
+  public $sourceMaxLengthFilter;
+  /**
+   * @var string
+   */
+  public $sourceMinLengthFilter;
 
-  /**
-   * @param bool
-   */
-  public function setAutoCommit($autoCommit)
-  {
-    $this->autoCommit = $autoCommit;
-  }
-  /**
-   * @return bool
-   */
-  public function getAutoCommit()
-  {
-    return $this->autoCommit;
-  }
-  /**
-   * @param bool
-   */
-  public function setConvertFullPath($convertFullPath)
-  {
-    $this->convertFullPath = $convertFullPath;
-  }
-  /**
-   * @return bool
-   */
-  public function getConvertFullPath()
-  {
-    return $this->convertFullPath;
-  }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setSourceMaxLengthFilter($sourceMaxLengthFilter)
   {
-    $this->filter = $filter;
+    $this->sourceMaxLengthFilter = $sourceMaxLengthFilter;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getSourceMaxLengthFilter()
   {
-    return $this->filter;
+    return $this->sourceMaxLengthFilter;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceMinLengthFilter($sourceMinLengthFilter)
+  {
+    $this->sourceMinLengthFilter = $sourceMinLengthFilter;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceMinLengthFilter()
+  {
+    return $this->sourceMinLengthFilter;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConvertConversionWorkspaceRequest::class, 'Google_Service_DatabaseMigrationService_ConvertConversionWorkspaceRequest');
+class_alias(SourceTextFilter::class, 'Google_Service_DatabaseMigrationService_SourceTextFilter');
