@@ -38,6 +38,9 @@ class SmartDeviceManagement extends \Google\Service
   /** See and/or control the devices that you selected. */
   const SDM_SERVICE =
       "https://www.googleapis.com/auth/sdm.service";
+  /** See your primary Google Account email address. */
+  const USERINFO_EMAIL =
+      "https://www.googleapis.com/auth/userinfo.email";
 
   public $enterprises_devices;
   public $enterprises_structures;
