@@ -43,7 +43,7 @@ class Objects extends \Google\Service\Resource
    * objects. The destination object is stored in this bucket.
    * @param string $destinationObject Name of the new object. For information
    * about how to URL encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param ComposeRequest $postBody
    * @param array $optParams Optional parameters.
    *
@@ -76,11 +76,11 @@ class Objects extends \Google\Service\Resource
    * object.
    * @param string $sourceObject Name of the source object. For information about
    * how to URL encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param string $destinationBucket Name of the bucket in which to store the new
    * object. Overrides the provided object metadata's bucket value, if any.For
    * information about how to URL encode object names to be path safe, see
-   * [Encoding URI Path Parts](http://cloud/storage/docs/request-
+   * [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
    * endpoints#encoding).
    * @param string $destinationObject Name of the new object. Required when the
    * object metadata is not otherwise provided. Overrides the object metadata's
@@ -142,7 +142,7 @@ class Objects extends \Google\Service\Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, permanently deletes a specific
@@ -173,7 +173,7 @@ class Objects extends \Google\Service\Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
@@ -206,7 +206,7 @@ class Objects extends \Google\Service\Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param array $optParams Optional parameters.
    *
    * @opt_param string generation If present, selects a specific revision of this
@@ -252,7 +252,7 @@ class Objects extends \Google\Service\Resource
    * @opt_param string name Name of the object. Required when the object metadata
    * is not otherwise provided. Overrides the object metadata's name value, if
    * any. For information about how to URL encode object names to be path safe,
-   * see [Encoding URI Path Parts](http://cloud/storage/docs/request-
+   * see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
    * endpoints#encoding).
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
    * this object.
@@ -320,7 +320,7 @@ class Objects extends \Google\Service\Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
@@ -358,14 +358,14 @@ class Objects extends \Google\Service\Resource
    * object.
    * @param string $sourceObject Name of the source object. For information about
    * how to URL encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param string $destinationBucket Name of the bucket in which to store the new
    * object. Overrides the provided object metadata's bucket value, if any.
    * @param string $destinationObject Name of the new object. Required when the
    * object metadata is not otherwise provided. Overrides the object metadata's
    * name value, if any. For information about how to URL encode object names to
    * be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
@@ -432,7 +432,7 @@ class Objects extends \Google\Service\Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param Policy $postBody
    * @param array $optParams Optional parameters.
    *
@@ -455,7 +455,7 @@ class Objects extends \Google\Service\Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param string|array $permissions Permissions to test.
    * @param array $optParams Optional parameters.
    *
@@ -477,7 +477,7 @@ class Objects extends \Google\Service\Resource
    * @param string $bucket Name of the bucket in which the object resides.
    * @param string $object Name of the object. For information about how to URL
    * encode object names to be path safe, see [Encoding URI Path
-   * Parts](http://cloud/storage/docs/request-endpoints#encoding).
+   * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
    * @param StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
