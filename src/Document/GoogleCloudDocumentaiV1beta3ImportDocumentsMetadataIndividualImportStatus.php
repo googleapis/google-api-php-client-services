@@ -17,18 +17,14 @@
 
 namespace Google\Service\Document;
 
-class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus extends \Google\Model
+class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus extends \Google\Model
 {
   /**
    * @var string
    */
   public $inputGcsSource;
-  protected $outputDocumentIdType = GoogleCloudDocumentaiUiv1beta3DocumentId::class;
+  protected $outputDocumentIdType = GoogleCloudDocumentaiV1beta3DocumentId::class;
   protected $outputDocumentIdDataType = '';
-  /**
-   * @var string
-   */
-  public $outputGcsDestination;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 
@@ -47,32 +43,18 @@ class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatu
     return $this->inputGcsSource;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3DocumentId
+   * @param GoogleCloudDocumentaiV1beta3DocumentId
    */
-  public function setOutputDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId $outputDocumentId)
+  public function setOutputDocumentId(GoogleCloudDocumentaiV1beta3DocumentId $outputDocumentId)
   {
     $this->outputDocumentId = $outputDocumentId;
   }
   /**
-   * @return GoogleCloudDocumentaiUiv1beta3DocumentId
+   * @return GoogleCloudDocumentaiV1beta3DocumentId
    */
   public function getOutputDocumentId()
   {
     return $this->outputDocumentId;
-  }
-  /**
-   * @param string
-   */
-  public function setOutputGcsDestination($outputGcsDestination)
-  {
-    $this->outputGcsDestination = $outputGcsDestination;
-  }
-  /**
-   * @return string
-   */
-  public function getOutputGcsDestination()
-  {
-    return $this->outputGcsDestination;
   }
   /**
    * @param GoogleRpcStatus
@@ -91,4 +73,4 @@ class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatu
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus::class, 'Google_Service_Document_GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus');
+class_alias(GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus::class, 'Google_Service_Document_GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus');
