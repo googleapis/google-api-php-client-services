@@ -111,6 +111,8 @@ class ProjectsLocationsJobs extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter List filter.
+   * @opt_param string orderBy Optional. Sort results. Supported are "name", "name
+   * desc", "create_time", and "create_time desc".
    * @opt_param int pageSize Page size.
    * @opt_param string pageToken Page token.
    * @return ListJobsResponse
