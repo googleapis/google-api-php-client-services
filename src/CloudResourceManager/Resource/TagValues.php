@@ -145,7 +145,8 @@ class TagValues extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A pagination token returned from a
    * previous call to `ListTagValues` that indicates where this listing should
    * continue from.
-   * @opt_param string parent Required.
+   * @opt_param string parent Required. Resource name for the parent of the
+   * TagValues to be listed, in the format `tagKeys/123` or `tagValues/123`.
    * @return ListTagValuesResponse
    */
   public function listTagValues($optParams = [])
