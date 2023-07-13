@@ -17,8 +17,13 @@
 
 namespace Google\Service\Container;
 
-class NodeNetworkConfig extends \Google\Model
+class NodeNetworkConfig extends \Google\Collection
 {
+  protected $collection_key = 'additionalPodNetworkConfigs';
+  protected $additionalNodeNetworkConfigsType = AdditionalNodeNetworkConfig::class;
+  protected $additionalNodeNetworkConfigsDataType = 'array';
+  protected $additionalPodNetworkConfigsType = AdditionalPodNetworkConfig::class;
+  protected $additionalPodNetworkConfigsDataType = 'array';
   /**
    * @var bool
    */
@@ -41,6 +46,34 @@ class NodeNetworkConfig extends \Google\Model
    */
   public $podRange;
 
+  /**
+   * @param AdditionalNodeNetworkConfig[]
+   */
+  public function setAdditionalNodeNetworkConfigs($additionalNodeNetworkConfigs)
+  {
+    $this->additionalNodeNetworkConfigs = $additionalNodeNetworkConfigs;
+  }
+  /**
+   * @return AdditionalNodeNetworkConfig[]
+   */
+  public function getAdditionalNodeNetworkConfigs()
+  {
+    return $this->additionalNodeNetworkConfigs;
+  }
+  /**
+   * @param AdditionalPodNetworkConfig[]
+   */
+  public function setAdditionalPodNetworkConfigs($additionalPodNetworkConfigs)
+  {
+    $this->additionalPodNetworkConfigs = $additionalPodNetworkConfigs;
+  }
+  /**
+   * @return AdditionalPodNetworkConfig[]
+   */
+  public function getAdditionalPodNetworkConfigs()
+  {
+    return $this->additionalPodNetworkConfigs;
+  }
   /**
    * @param bool
    */

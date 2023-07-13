@@ -39,6 +39,10 @@ class NetworkConfig extends \Google\Model
    * @var bool
    */
   public $enableL4ilbSubsetting;
+  /**
+   * @var bool
+   */
+  public $enableMultiNetworking;
   protected $gatewayApiConfigType = GatewayAPIConfig::class;
   protected $gatewayApiConfigDataType = '';
   /**
@@ -141,6 +145,20 @@ class NetworkConfig extends \Google\Model
   public function getEnableL4ilbSubsetting()
   {
     return $this->enableL4ilbSubsetting;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableMultiNetworking($enableMultiNetworking)
+  {
+    $this->enableMultiNetworking = $enableMultiNetworking;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableMultiNetworking()
+  {
+    return $this->enableMultiNetworking;
   }
   /**
    * @param GatewayAPIConfig

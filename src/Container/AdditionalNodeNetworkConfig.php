@@ -17,46 +17,46 @@
 
 namespace Google\Service\Container;
 
-class PlacementPolicy extends \Google\Model
+class AdditionalNodeNetworkConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $policyName;
+  public $network;
   /**
    * @var string
    */
-  public $type;
+  public $subnetwork;
 
   /**
    * @param string
    */
-  public function setPolicyName($policyName)
+  public function setNetwork($network)
   {
-    $this->policyName = $policyName;
+    $this->network = $network;
   }
   /**
    * @return string
    */
-  public function getPolicyName()
+  public function getNetwork()
   {
-    return $this->policyName;
+    return $this->network;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setSubnetwork($subnetwork)
   {
-    $this->type = $type;
+    $this->subnetwork = $subnetwork;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getSubnetwork()
   {
-    return $this->type;
+    return $this->subnetwork;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PlacementPolicy::class, 'Google_Service_Container_PlacementPolicy');
+class_alias(AdditionalNodeNetworkConfig::class, 'Google_Service_Container_AdditionalNodeNetworkConfig');
