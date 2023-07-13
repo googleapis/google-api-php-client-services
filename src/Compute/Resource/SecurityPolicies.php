@@ -341,7 +341,7 @@ class SecurityPolicies extends \Google\Service\Resource
   }
   /**
    * Patches the specified policy with the data included in the request. To clear
-   * fields in the rule, leave the fields empty and specify them in the
+   * fields in the policy, leave the fields empty and specify them in the
    * updateMask. This cannot be used to be update the rules in the policy. Please
    * use the per rule methods like addRule, patchRule, and removeRule instead.
    * (securityPolicies.patch)
@@ -370,7 +370,9 @@ class SecurityPolicies extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
-   * Patches a rule at the specified priority. (securityPolicies.patchRule)
+   * Patches a rule at the specified priority. To clear fields in the rule, leave
+   * the fields empty and specify them in the updateMask.
+   * (securityPolicies.patchRule)
    *
    * @param string $project Project ID for this request.
    * @param string $securityPolicy Name of the security policy to update.
