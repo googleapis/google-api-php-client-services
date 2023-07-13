@@ -32,6 +32,10 @@ class Endpoint extends \Google\Model
   /**
    * @var string
    */
+  public $forwardingRule;
+  /**
+   * @var string
+   */
   public $gkeMasterCluster;
   /**
    * @var string
@@ -113,6 +117,20 @@ class Endpoint extends \Google\Model
   public function getCloudSqlInstance()
   {
     return $this->cloudSqlInstance;
+  }
+  /**
+   * @param string
+   */
+  public function setForwardingRule($forwardingRule)
+  {
+    $this->forwardingRule = $forwardingRule;
+  }
+  /**
+   * @return string
+   */
+  public function getForwardingRule()
+  {
+    return $this->forwardingRule;
   }
   /**
    * @param string
