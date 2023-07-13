@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class PornFlagData extends \Google\Collection
 {
   protected $collection_key = 'debugInfo';
-  /**
-   * @var float
-   */
-  public $csaiScore;
   protected $debugInfoType = ImagePornDebugInfo::class;
   protected $debugInfoDataType = 'array';
   /**
@@ -91,20 +87,6 @@ class PornFlagData extends \Google\Collection
   protected $urlPornScoresType = ClassifierPornAggregatedUrlPornScores::class;
   protected $urlPornScoresDataType = '';
 
-  /**
-   * @param float
-   */
-  public function setCsaiScore($csaiScore)
-  {
-    $this->csaiScore = $csaiScore;
-  }
-  /**
-   * @return float
-   */
-  public function getCsaiScore()
-  {
-    return $this->csaiScore;
-  }
   /**
    * @param ImagePornDebugInfo[]
    */

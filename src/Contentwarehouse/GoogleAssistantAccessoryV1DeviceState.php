@@ -17,8 +17,9 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GoogleAssistantAccessoryV1DeviceState extends \Google\Model
+class GoogleAssistantAccessoryV1DeviceState extends \Google\Collection
 {
+  protected $collection_key = 'unavailableSettings';
   protected $alarmStateType = GoogleAssistantEmbeddedV1Alarms::class;
   protected $alarmStateDataType = '';
   /**
@@ -39,6 +40,10 @@ class GoogleAssistantAccessoryV1DeviceState extends \Google\Model
   protected $fitnessActivitiesStateDataType = '';
   protected $timerStateType = GoogleAssistantEmbeddedV1Timers::class;
   protected $timerStateDataType = '';
+  /**
+   * @var string[]
+   */
+  public $unavailableSettings;
 
   /**
    * @param GoogleAssistantEmbeddedV1Alarms
@@ -137,6 +142,20 @@ class GoogleAssistantAccessoryV1DeviceState extends \Google\Model
   public function getTimerState()
   {
     return $this->timerState;
+  }
+  /**
+   * @param string[]
+   */
+  public function setUnavailableSettings($unavailableSettings)
+  {
+    $this->unavailableSettings = $unavailableSettings;
+  }
+  /**
+   * @return string[]
+   */
+  public function getUnavailableSettings()
+  {
+    return $this->unavailableSettings;
   }
 }
 

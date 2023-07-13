@@ -42,6 +42,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   /**
    * @var bool
    */
+  public $isMostRecentSongAlbumAmbiguous;
+  /**
+   * @var bool
+   */
   public $isSeedRadio;
   /**
    * @var bool
@@ -136,6 +140,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getIsMediaSearchQuerySubsetOfEntityNameAndArtist()
   {
     return $this->isMediaSearchQuerySubsetOfEntityNameAndArtist;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsMostRecentSongAlbumAmbiguous($isMostRecentSongAlbumAmbiguous)
+  {
+    $this->isMostRecentSongAlbumAmbiguous = $isMostRecentSongAlbumAmbiguous;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsMostRecentSongAlbumAmbiguous()
+  {
+    return $this->isMostRecentSongAlbumAmbiguous;
   }
   /**
    * @param bool

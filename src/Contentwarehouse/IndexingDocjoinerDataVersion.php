@@ -1017,6 +1017,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $timeRangeAnnotationsDataType = '';
   protected $travelAssistantTravelDocClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $travelAssistantTravelDocClassificationDataType = '';
+  protected $ucpSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $ucpSignalDataType = '';
   protected $udrConverterDocumentShoppingDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $udrConverterDocumentShoppingDataDataType = '';
   protected $udrConverterOfferType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -8065,6 +8067,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getTravelAssistantTravelDocClassification()
   {
     return $this->travelAssistantTravelDocClassification;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setUcpSignal(IndexingDocjoinerDataVersionVersionInfo $ucpSignal)
+  {
+    $this->ucpSignal = $ucpSignal;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getUcpSignal()
+  {
+    return $this->ucpSignal;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

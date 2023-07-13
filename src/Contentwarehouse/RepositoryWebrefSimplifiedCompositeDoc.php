@@ -17,14 +17,17 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
+class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
 {
+  protected $collection_key = 'forwardingDups';
   protected $anchorsType = RepositoryWebrefSimplifiedAnchors::class;
   protected $anchorsDataType = '';
   protected $cdocContainerType = Proto2BridgeMessageSet::class;
   protected $cdocContainerDataType = '';
   protected $documentMentionSpansType = RepositoryWebrefRefconDocumentMentionSpans::class;
   protected $documentMentionSpansDataType = '';
+  protected $forwardingDupsType = RepositoryWebrefSimplifiedForwardingDup::class;
+  protected $forwardingDupsDataType = 'array';
   protected $matchingMetadataType = RepositoryWebrefPreprocessingUrlMatchingMetadata::class;
   protected $matchingMetadataDataType = '';
   protected $refconDocumentMetadataType = RepositoryWebrefRefconRefconDocumentMetadata::class;
@@ -83,6 +86,20 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Model
   public function getDocumentMentionSpans()
   {
     return $this->documentMentionSpans;
+  }
+  /**
+   * @param RepositoryWebrefSimplifiedForwardingDup[]
+   */
+  public function setForwardingDups($forwardingDups)
+  {
+    $this->forwardingDups = $forwardingDups;
+  }
+  /**
+   * @return RepositoryWebrefSimplifiedForwardingDup[]
+   */
+  public function getForwardingDups()
+  {
+    return $this->forwardingDups;
   }
   /**
    * @param RepositoryWebrefPreprocessingUrlMatchingMetadata

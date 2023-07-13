@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class DrishtiVesperEncodedThumbnail extends \Google\Model
 {
   /**
+   * @var string
+   */
+  public $byteSize;
+  /**
    * @var int
    */
   public $encodingQuality;
@@ -48,6 +52,20 @@ class DrishtiVesperEncodedThumbnail extends \Google\Model
    */
   public $width;
 
+  /**
+   * @param string
+   */
+  public function setByteSize($byteSize)
+  {
+    $this->byteSize = $byteSize;
+  }
+  /**
+   * @return string
+   */
+  public function getByteSize()
+  {
+    return $this->byteSize;
+  }
   /**
    * @param int
    */
