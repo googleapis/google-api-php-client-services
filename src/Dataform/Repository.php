@@ -29,6 +29,10 @@ class Repository extends \Google\Model
    * @var string
    */
   public $npmrcEnvironmentVariablesSecretVersion;
+  /**
+   * @var string
+   */
+  public $serviceAccount;
   protected $workspaceCompilationOverridesType = WorkspaceCompilationOverrides::class;
   protected $workspaceCompilationOverridesDataType = '';
 
@@ -73,6 +77,20 @@ class Repository extends \Google\Model
   public function getNpmrcEnvironmentVariablesSecretVersion()
   {
     return $this->npmrcEnvironmentVariablesSecretVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   /**
    * @param WorkspaceCompilationOverrides
