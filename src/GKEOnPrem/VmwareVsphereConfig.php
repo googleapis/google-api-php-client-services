@@ -24,10 +24,6 @@ class VmwareVsphereConfig extends \Google\Collection
    * @var string
    */
   public $datastore;
-  /**
-   * @var string
-   */
-  public $storagePolicyName;
   protected $tagsType = VmwareVsphereTag::class;
   protected $tagsDataType = 'array';
 
@@ -44,20 +40,6 @@ class VmwareVsphereConfig extends \Google\Collection
   public function getDatastore()
   {
     return $this->datastore;
-  }
-  /**
-   * @param string
-   */
-  public function setStoragePolicyName($storagePolicyName)
-  {
-    $this->storagePolicyName = $storagePolicyName;
-  }
-  /**
-   * @return string
-   */
-  public function getStoragePolicyName()
-  {
-    return $this->storagePolicyName;
   }
   /**
    * @param VmwareVsphereTag[]
