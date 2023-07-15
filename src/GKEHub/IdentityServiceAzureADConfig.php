@@ -39,6 +39,10 @@ class IdentityServiceAzureADConfig extends \Google\Model
    * @var string
    */
   public $tenant;
+  /**
+   * @var string
+   */
+  public $userClaim;
 
   /**
    * @param string
@@ -109,6 +113,20 @@ class IdentityServiceAzureADConfig extends \Google\Model
   public function getTenant()
   {
     return $this->tenant;
+  }
+  /**
+   * @param string
+   */
+  public function setUserClaim($userClaim)
+  {
+    $this->userClaim = $userClaim;
+  }
+  /**
+   * @return string
+   */
+  public function getUserClaim()
+  {
+    return $this->userClaim;
   }
 }
 

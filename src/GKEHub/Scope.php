@@ -32,6 +32,10 @@ class Scope extends \Google\Model
    */
   public $deleteTime;
   /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var string
    */
   public $name;
@@ -87,6 +91,20 @@ class Scope extends \Google\Model
   public function getDeleteTime()
   {
     return $this->deleteTime;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param string
