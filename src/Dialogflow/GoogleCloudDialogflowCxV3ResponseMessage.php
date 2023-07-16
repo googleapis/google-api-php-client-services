@@ -39,10 +39,6 @@ class GoogleCloudDialogflowCxV3ResponseMessage extends \Google\Model
   public $payload;
   protected $playAudioType = GoogleCloudDialogflowCxV3ResponseMessagePlayAudio::class;
   protected $playAudioDataType = '';
-  /**
-   * @var string
-   */
-  public $responseType;
   protected $telephonyTransferCallType = GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall::class;
   protected $telephonyTransferCallDataType = '';
   protected $textType = GoogleCloudDialogflowCxV3ResponseMessageText::class;
@@ -159,20 +155,6 @@ class GoogleCloudDialogflowCxV3ResponseMessage extends \Google\Model
   public function getPlayAudio()
   {
     return $this->playAudio;
-  }
-  /**
-   * @param string
-   */
-  public function setResponseType($responseType)
-  {
-    $this->responseType = $responseType;
-  }
-  /**
-   * @return string
-   */
-  public function getResponseType()
-  {
-    return $this->responseType;
   }
   /**
    * @param GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
