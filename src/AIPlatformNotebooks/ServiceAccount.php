@@ -17,64 +17,47 @@
 
 namespace Google\Service\AIPlatformNotebooks;
 
-class Event extends \Google\Model
+class ServiceAccount extends \Google\Collection
 {
+  protected $collection_key = 'scopes';
+  /**
+   * @var string
+   */
+  public $email;
   /**
    * @var string[]
    */
-  public $details;
-  /**
-   * @var string
-   */
-  public $reportTime;
-  /**
-   * @var string
-   */
-  public $type;
+  public $scopes;
 
+  /**
+   * @param string
+   */
+  public function setEmail($email)
+  {
+    $this->email = $email;
+  }
+  /**
+   * @return string
+   */
+  public function getEmail()
+  {
+    return $this->email;
+  }
   /**
    * @param string[]
    */
-  public function setDetails($details)
+  public function setScopes($scopes)
   {
-    $this->details = $details;
+    $this->scopes = $scopes;
   }
   /**
    * @return string[]
    */
-  public function getDetails()
+  public function getScopes()
   {
-    return $this->details;
-  }
-  /**
-   * @param string
-   */
-  public function setReportTime($reportTime)
-  {
-    $this->reportTime = $reportTime;
-  }
-  /**
-   * @return string
-   */
-  public function getReportTime()
-  {
-    return $this->reportTime;
-  }
-  /**
-   * @param string
-   */
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  /**
-   * @return string
-   */
-  public function getType()
-  {
-    return $this->type;
+    return $this->scopes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Event::class, 'Google_Service_AIPlatformNotebooks_Event');
+class_alias(ServiceAccount::class, 'Google_Service_AIPlatformNotebooks_ServiceAccount');

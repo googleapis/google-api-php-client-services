@@ -17,64 +17,44 @@
 
 namespace Google\Service\AIPlatformNotebooks;
 
-class Event extends \Google\Model
+class ReportInstanceInfoSystemRequest extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $details;
+  protected $eventType = Event::class;
+  protected $eventDataType = '';
   /**
    * @var string
    */
-  public $reportTime;
-  /**
-   * @var string
-   */
-  public $type;
+  public $vmId;
 
   /**
-   * @param string[]
+   * @param Event
    */
-  public function setDetails($details)
+  public function setEvent(Event $event)
   {
-    $this->details = $details;
+    $this->event = $event;
   }
   /**
-   * @return string[]
+   * @return Event
    */
-  public function getDetails()
+  public function getEvent()
   {
-    return $this->details;
-  }
-  /**
-   * @param string
-   */
-  public function setReportTime($reportTime)
-  {
-    $this->reportTime = $reportTime;
-  }
-  /**
-   * @return string
-   */
-  public function getReportTime()
-  {
-    return $this->reportTime;
+    return $this->event;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setVmId($vmId)
   {
-    $this->type = $type;
+    $this->vmId = $vmId;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getVmId()
   {
-    return $this->type;
+    return $this->vmId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Event::class, 'Google_Service_AIPlatformNotebooks_Event');
+class_alias(ReportInstanceInfoSystemRequest::class, 'Google_Service_AIPlatformNotebooks_ReportInstanceInfoSystemRequest');

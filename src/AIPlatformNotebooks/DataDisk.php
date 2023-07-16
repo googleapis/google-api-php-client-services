@@ -17,64 +17,82 @@
 
 namespace Google\Service\AIPlatformNotebooks;
 
-class Event extends \Google\Model
+class DataDisk extends \Google\Model
 {
   /**
-   * @var string[]
+   * @var string
    */
-  public $details;
+  public $diskEncryption;
   /**
    * @var string
    */
-  public $reportTime;
+  public $diskSizeGb;
   /**
    * @var string
    */
-  public $type;
+  public $diskType;
+  /**
+   * @var string
+   */
+  public $kmsKey;
 
   /**
-   * @param string[]
-   */
-  public function setDetails($details)
-  {
-    $this->details = $details;
-  }
-  /**
-   * @return string[]
-   */
-  public function getDetails()
-  {
-    return $this->details;
-  }
-  /**
    * @param string
    */
-  public function setReportTime($reportTime)
+  public function setDiskEncryption($diskEncryption)
   {
-    $this->reportTime = $reportTime;
+    $this->diskEncryption = $diskEncryption;
   }
   /**
    * @return string
    */
-  public function getReportTime()
+  public function getDiskEncryption()
   {
-    return $this->reportTime;
+    return $this->diskEncryption;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setDiskSizeGb($diskSizeGb)
   {
-    $this->type = $type;
+    $this->diskSizeGb = $diskSizeGb;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getDiskSizeGb()
   {
-    return $this->type;
+    return $this->diskSizeGb;
+  }
+  /**
+   * @param string
+   */
+  public function setDiskType($diskType)
+  {
+    $this->diskType = $diskType;
+  }
+  /**
+   * @return string
+   */
+  public function getDiskType()
+  {
+    return $this->diskType;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKey($kmsKey)
+  {
+    $this->kmsKey = $kmsKey;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKey()
+  {
+    return $this->kmsKey;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Event::class, 'Google_Service_AIPlatformNotebooks_Event');
+class_alias(DataDisk::class, 'Google_Service_AIPlatformNotebooks_DataDisk');

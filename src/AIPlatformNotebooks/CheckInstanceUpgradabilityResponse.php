@@ -17,64 +17,82 @@
 
 namespace Google\Service\AIPlatformNotebooks;
 
-class VmImage extends \Google\Model
+class CheckInstanceUpgradabilityResponse extends \Google\Model
 {
   /**
    * @var string
    */
-  public $family;
+  public $upgradeImage;
   /**
    * @var string
    */
-  public $name;
+  public $upgradeInfo;
   /**
    * @var string
    */
-  public $project;
+  public $upgradeVersion;
+  /**
+   * @var bool
+   */
+  public $upgradeable;
 
   /**
    * @param string
    */
-  public function setFamily($family)
+  public function setUpgradeImage($upgradeImage)
   {
-    $this->family = $family;
+    $this->upgradeImage = $upgradeImage;
   }
   /**
    * @return string
    */
-  public function getFamily()
+  public function getUpgradeImage()
   {
-    return $this->family;
+    return $this->upgradeImage;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setUpgradeInfo($upgradeInfo)
   {
-    $this->name = $name;
+    $this->upgradeInfo = $upgradeInfo;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getUpgradeInfo()
   {
-    return $this->name;
+    return $this->upgradeInfo;
   }
   /**
    * @param string
    */
-  public function setProject($project)
+  public function setUpgradeVersion($upgradeVersion)
   {
-    $this->project = $project;
+    $this->upgradeVersion = $upgradeVersion;
   }
   /**
    * @return string
    */
-  public function getProject()
+  public function getUpgradeVersion()
   {
-    return $this->project;
+    return $this->upgradeVersion;
+  }
+  /**
+   * @param bool
+   */
+  public function setUpgradeable($upgradeable)
+  {
+    $this->upgradeable = $upgradeable;
+  }
+  /**
+   * @return bool
+   */
+  public function getUpgradeable()
+  {
+    return $this->upgradeable;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmImage::class, 'Google_Service_AIPlatformNotebooks_VmImage');
+class_alias(CheckInstanceUpgradabilityResponse::class, 'Google_Service_AIPlatformNotebooks_CheckInstanceUpgradabilityResponse');

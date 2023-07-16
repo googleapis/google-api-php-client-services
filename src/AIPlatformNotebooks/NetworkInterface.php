@@ -17,64 +17,64 @@
 
 namespace Google\Service\AIPlatformNotebooks;
 
-class Event extends \Google\Model
+class NetworkInterface extends \Google\Model
 {
   /**
-   * @var string[]
+   * @var string
    */
-  public $details;
+  public $network;
   /**
    * @var string
    */
-  public $reportTime;
+  public $nicType;
   /**
    * @var string
    */
-  public $type;
+  public $subnet;
 
   /**
-   * @param string[]
-   */
-  public function setDetails($details)
-  {
-    $this->details = $details;
-  }
-  /**
-   * @return string[]
-   */
-  public function getDetails()
-  {
-    return $this->details;
-  }
-  /**
    * @param string
    */
-  public function setReportTime($reportTime)
+  public function setNetwork($network)
   {
-    $this->reportTime = $reportTime;
+    $this->network = $network;
   }
   /**
    * @return string
    */
-  public function getReportTime()
+  public function getNetwork()
   {
-    return $this->reportTime;
+    return $this->network;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setNicType($nicType)
   {
-    $this->type = $type;
+    $this->nicType = $nicType;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getNicType()
   {
-    return $this->type;
+    return $this->nicType;
+  }
+  /**
+   * @param string
+   */
+  public function setSubnet($subnet)
+  {
+    $this->subnet = $subnet;
+  }
+  /**
+   * @return string
+   */
+  public function getSubnet()
+  {
+    return $this->subnet;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Event::class, 'Google_Service_AIPlatformNotebooks_Event');
+class_alias(NetworkInterface::class, 'Google_Service_AIPlatformNotebooks_NetworkInterface');

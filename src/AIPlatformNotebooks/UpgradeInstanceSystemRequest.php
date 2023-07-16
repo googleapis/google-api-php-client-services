@@ -17,64 +17,28 @@
 
 namespace Google\Service\AIPlatformNotebooks;
 
-class Event extends \Google\Model
+class UpgradeInstanceSystemRequest extends \Google\Model
 {
   /**
-   * @var string[]
-   */
-  public $details;
-  /**
    * @var string
    */
-  public $reportTime;
-  /**
-   * @var string
-   */
-  public $type;
+  public $vmId;
 
   /**
-   * @param string[]
-   */
-  public function setDetails($details)
-  {
-    $this->details = $details;
-  }
-  /**
-   * @return string[]
-   */
-  public function getDetails()
-  {
-    return $this->details;
-  }
-  /**
    * @param string
    */
-  public function setReportTime($reportTime)
+  public function setVmId($vmId)
   {
-    $this->reportTime = $reportTime;
+    $this->vmId = $vmId;
   }
   /**
    * @return string
    */
-  public function getReportTime()
+  public function getVmId()
   {
-    return $this->reportTime;
-  }
-  /**
-   * @param string
-   */
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  /**
-   * @return string
-   */
-  public function getType()
-  {
-    return $this->type;
+    return $this->vmId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Event::class, 'Google_Service_AIPlatformNotebooks_Event');
+class_alias(UpgradeInstanceSystemRequest::class, 'Google_Service_AIPlatformNotebooks_UpgradeInstanceSystemRequest');

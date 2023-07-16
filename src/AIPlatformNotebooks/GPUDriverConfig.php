@@ -17,64 +17,46 @@
 
 namespace Google\Service\AIPlatformNotebooks;
 
-class Event extends \Google\Model
+class GPUDriverConfig extends \Google\Model
 {
   /**
-   * @var string[]
-   */
-  public $details;
-  /**
    * @var string
    */
-  public $reportTime;
+  public $customGpuDriverPath;
   /**
-   * @var string
+   * @var bool
    */
-  public $type;
+  public $enableGpuDriver;
 
   /**
-   * @param string[]
-   */
-  public function setDetails($details)
-  {
-    $this->details = $details;
-  }
-  /**
-   * @return string[]
-   */
-  public function getDetails()
-  {
-    return $this->details;
-  }
-  /**
    * @param string
    */
-  public function setReportTime($reportTime)
+  public function setCustomGpuDriverPath($customGpuDriverPath)
   {
-    $this->reportTime = $reportTime;
+    $this->customGpuDriverPath = $customGpuDriverPath;
   }
   /**
    * @return string
    */
-  public function getReportTime()
+  public function getCustomGpuDriverPath()
   {
-    return $this->reportTime;
+    return $this->customGpuDriverPath;
   }
   /**
-   * @param string
+   * @param bool
    */
-  public function setType($type)
+  public function setEnableGpuDriver($enableGpuDriver)
   {
-    $this->type = $type;
+    $this->enableGpuDriver = $enableGpuDriver;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getType()
+  public function getEnableGpuDriver()
   {
-    return $this->type;
+    return $this->enableGpuDriver;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Event::class, 'Google_Service_AIPlatformNotebooks_Event');
+class_alias(GPUDriverConfig::class, 'Google_Service_AIPlatformNotebooks_GPUDriverConfig');
