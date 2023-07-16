@@ -33,6 +33,10 @@ class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry extends \Google\
   /**
    * @var string
    */
+  public $description;
+  /**
+   * @var string
+   */
   public $inOutType;
   /**
    * @var bool
@@ -120,6 +124,20 @@ class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry extends \Google\
   public function getDefaultValue()
   {
     return $this->defaultValue;
+  }
+  /**
+   * @param string
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
   }
   /**
    * @param string
