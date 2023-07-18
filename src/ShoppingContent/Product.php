@@ -357,6 +357,10 @@ class Product extends \Google\Collection
   protected $unitPricingBaseMeasureDataType = '';
   protected $unitPricingMeasureType = ProductUnitPricingMeasure::class;
   protected $unitPricingMeasureDataType = '';
+  /**
+   * @var string
+   */
+  public $virtualModelLink;
 
   /**
    * @param string[]
@@ -1695,6 +1699,20 @@ class Product extends \Google\Collection
   public function getUnitPricingMeasure()
   {
     return $this->unitPricingMeasure;
+  }
+  /**
+   * @param string
+   */
+  public function setVirtualModelLink($virtualModelLink)
+  {
+    $this->virtualModelLink = $virtualModelLink;
+  }
+  /**
+   * @return string
+   */
+  public function getVirtualModelLink()
+  {
+    return $this->virtualModelLink;
   }
 }
 
