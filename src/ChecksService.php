@@ -41,6 +41,7 @@ class ChecksService extends \Google\Service
 
   public $accounts_apps_operations;
   public $privacypolicy;
+  public $projects_privacypolicy_operations;
 
   /**
    * Constructs the internal representation of the ChecksService service.
@@ -88,6 +89,26 @@ class ChecksService extends \Google\Service
               'path' => 'v1alpha/privacypolicy:analyze',
               'httpMethod' => 'POST',
               'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->projects_privacypolicy_operations = new ChecksService\Resource\ProjectsPrivacypolicyOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
