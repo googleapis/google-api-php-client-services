@@ -70,7 +70,6 @@ class BigtableAdmin extends \Google\Service
   public $projects_instances_clusters_backups;
   public $projects_instances_clusters_hotTablets;
   public $projects_instances_tables;
-  public $projects_instances_tables_views;
   public $projects_locations;
 
   /**
@@ -760,46 +759,6 @@ class BigtableAdmin extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_instances_tables_views = new BigtableAdmin\Resource\ProjectsInstancesTablesViews(
-        $this,
-        $this->serviceName,
-        'views',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v2/{+resource}:getIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v2/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v2/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
