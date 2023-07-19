@@ -45,12 +45,12 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param array $optParams Optional parameters.
    *
    * @opt_param string hubId Required. A unique identifier for the hub.
-   * @opt_param string requestId Optional. A unique request ID (optional). If you
-   * specify this ID, you can use it in cases when you need to retry your request.
-   * When you need to retry, this ID lets the server know that it can ignore the
-   * request if it has already been completed. The server guarantees that for at
-   * least 60 minutes after the first request. For example, consider a situation
-   * where you make an initial request and the request times out. If you make the
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server guarantees that a request doesn't result in creation of duplicate
+   * commitments for at least 60 minutes. For example, consider a situation where
+   * you make an initial request and the request times out. If you make the
    * request again with the same request ID, the server can check to see whether
    * the original operation was received. If it was, the server ignores the second
    * request. This behavior prevents clients from mistakenly creating duplicate
@@ -70,12 +70,12 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param string $name Required. The name of the hub to delete.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique request ID (optional). If you
-   * specify this ID, you can use it in cases when you need to retry your request.
-   * When you need to retry, this ID lets the server know that it can ignore the
-   * request if it has already been completed. The server guarantees that for at
-   * least 60 minutes after the first request. For example, consider a situation
-   * where you make an initial request and the request times out. If you make the
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server guarantees that a request doesn't result in creation of duplicate
+   * commitments for at least 60 minutes. For example, consider a situation where
+   * you make an initial request and the request times out. If you make the
    * request again with the same request ID, the server can check to see whether
    * the original operation was received. If it was, the server ignores the second
    * request. This behavior prevents clients from mistakenly creating duplicate
@@ -169,7 +169,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * the spoke_locations field is populated, the list of results includes only
    * spokes in the specified location. If the spoke_locations field is not
    * populated, the list of results includes spokes in all locations.
-   * @opt_param string view The view of the spoke to return. The view you use
+   * @opt_param string view The view of the spoke to return. The view that you use
    * determines which spoke fields are included in the response.
    * @return ListHubSpokesResponse
    */
@@ -189,12 +189,12 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param Hub $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique request ID (optional). If you
-   * specify this ID, you can use it in cases when you need to retry your request.
-   * When you need to retry, this ID lets the server know that it can ignore the
-   * request if it has already been completed. The server guarantees that for at
-   * least 60 minutes after the first request. For example, consider a situation
-   * where you make an initial request and the request times out. If you make the
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server guarantees that a request doesn't result in creation of duplicate
+   * commitments for at least 60 minutes. For example, consider a situation where
+   * you make an initial request and the request times out. If you make the
    * request again with the same request ID, the server can check to see whether
    * the original operation was received. If it was, the server ignores the second
    * request. This behavior prevents clients from mistakenly creating duplicate

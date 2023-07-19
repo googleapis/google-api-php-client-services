@@ -59,12 +59,12 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * @param Spoke $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique request ID (optional). If you
-   * specify this ID, you can use it in cases when you need to retry your request.
-   * When you need to retry, this ID lets the server know that it can ignore the
-   * request if it has already been completed. The server guarantees that for at
-   * least 60 minutes after the first request. For example, consider a situation
-   * where you make an initial request and the request times out. If you make the
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server guarantees that a request doesn't result in creation of duplicate
+   * commitments for at least 60 minutes. For example, consider a situation where
+   * you make an initial request and the request times out. If you make the
    * request again with the same request ID, the server can check to see whether
    * the original operation was received. If it was, the server ignores the second
    * request. This behavior prevents clients from mistakenly creating duplicate
@@ -85,12 +85,12 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * @param string $name Required. The name of the spoke to delete.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique request ID (optional). If you
-   * specify this ID, you can use it in cases when you need to retry your request.
-   * When you need to retry, this ID lets the server know that it can ignore the
-   * request if it has already been completed. The server guarantees that for at
-   * least 60 minutes after the first request. For example, consider a situation
-   * where you make an initial request and the request times out. If you make the
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server guarantees that a request doesn't result in creation of duplicate
+   * commitments for at least 60 minutes. For example, consider a situation where
+   * you make an initial request and the request times out. If you make the
    * request again with the same request ID, the server can check to see whether
    * the original operation was received. If it was, the server ignores the second
    * request. This behavior prevents clients from mistakenly creating duplicate
@@ -175,12 +175,12 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * @param Spoke $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique request ID (optional). If you
-   * specify this ID, you can use it in cases when you need to retry your request.
-   * When you need to retry, this ID lets the server know that it can ignore the
-   * request if it has already been completed. The server guarantees that for at
-   * least 60 minutes after the first request. For example, consider a situation
-   * where you make an initial request and the request times out. If you make the
+   * @opt_param string requestId Optional. A request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. The
+   * server guarantees that a request doesn't result in creation of duplicate
+   * commitments for at least 60 minutes. For example, consider a situation where
+   * you make an initial request and the request times out. If you make the
    * request again with the same request ID, the server can check to see whether
    * the original operation was received. If it was, the server ignores the second
    * request. This behavior prevents clients from mistakenly creating duplicate
@@ -200,9 +200,10 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Does one of the following: * Rejects a proposal to attach a Network
-   * Connectivity Center spoke to the hub. * Rejects and removes a previously
-   * attached spoke from the hub. (spokes.reject)
+   * Rejects a Network Connectivity Center spoke from being attached to the hub.
+   * If the spoke was previously in the `ACTIVE` state, it transitions to the
+   * `INACTIVE` state and is no longer able to connect to other spokes that are
+   * attached to the hub. (spokes.reject)
    *
    * @param string $name Required. The name of the spoke to reject.
    * @param RejectSpokeRequest $postBody
