@@ -112,8 +112,8 @@ class PropertiesDataStreamsMeasurementProtocolSecrets extends \Google\Service\Re
    * @param GoogleAnalyticsAdminV1betaMeasurementProtocolSecret $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The list of fields to be updated. Omitted fields
-   * will not be updated.
+   * @opt_param string updateMask Required. The list of fields to be updated.
+   * Omitted fields will not be updated.
    * @return GoogleAnalyticsAdminV1betaMeasurementProtocolSecret
    */
   public function patch($name, GoogleAnalyticsAdminV1betaMeasurementProtocolSecret $postBody, $optParams = [])
