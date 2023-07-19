@@ -44,6 +44,10 @@ class GoogleCloudApigeeV1Environment extends \Google\Model
    */
   public $forwardProxyUri;
   /**
+   * @var bool
+   */
+  public $hasAttachedFlowHooks;
+  /**
    * @var string
    */
   public $lastModifiedAt;
@@ -143,6 +147,20 @@ class GoogleCloudApigeeV1Environment extends \Google\Model
   public function getForwardProxyUri()
   {
     return $this->forwardProxyUri;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasAttachedFlowHooks($hasAttachedFlowHooks)
+  {
+    $this->hasAttachedFlowHooks = $hasAttachedFlowHooks;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasAttachedFlowHooks()
+  {
+    return $this->hasAttachedFlowHooks;
   }
   /**
    * @param string
