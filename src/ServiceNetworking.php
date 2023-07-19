@@ -307,6 +307,16 @@ class ServiceNetworking extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/dnsZones:list',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'remove' => [
               'path' => 'v1/{+parent}/dnsZones:remove',
               'httpMethod' => 'POST',
