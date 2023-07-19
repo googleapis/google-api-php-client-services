@@ -20,14 +20,10 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryComponent extends \Google\Collection
 {
   protected $collection_key = 'resources';
-  /**
-   * @var string
-   */
-  public $applicationType;
-  /**
-   * @var string
-   */
-  public $databaseType;
+  protected $applicationPropertiesType = SapDiscoveryComponentApplicationProperties::class;
+  protected $applicationPropertiesDataType = '';
+  protected $databasePropertiesType = SapDiscoveryComponentDatabaseProperties::class;
+  protected $databasePropertiesDataType = '';
   /**
    * @var string
    */
@@ -40,32 +36,32 @@ class SapDiscoveryComponent extends \Google\Collection
   public $sid;
 
   /**
-   * @param string
+   * @param SapDiscoveryComponentApplicationProperties
    */
-  public function setApplicationType($applicationType)
+  public function setApplicationProperties(SapDiscoveryComponentApplicationProperties $applicationProperties)
   {
-    $this->applicationType = $applicationType;
+    $this->applicationProperties = $applicationProperties;
   }
   /**
-   * @return string
+   * @return SapDiscoveryComponentApplicationProperties
    */
-  public function getApplicationType()
+  public function getApplicationProperties()
   {
-    return $this->applicationType;
+    return $this->applicationProperties;
   }
   /**
-   * @param string
+   * @param SapDiscoveryComponentDatabaseProperties
    */
-  public function setDatabaseType($databaseType)
+  public function setDatabaseProperties(SapDiscoveryComponentDatabaseProperties $databaseProperties)
   {
-    $this->databaseType = $databaseType;
+    $this->databaseProperties = $databaseProperties;
   }
   /**
-   * @return string
+   * @return SapDiscoveryComponentDatabaseProperties
    */
-  public function getDatabaseType()
+  public function getDatabaseProperties()
   {
-    return $this->databaseType;
+    return $this->databaseProperties;
   }
   /**
    * @param string
