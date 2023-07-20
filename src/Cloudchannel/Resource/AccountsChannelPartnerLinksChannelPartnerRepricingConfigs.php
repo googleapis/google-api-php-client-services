@@ -43,8 +43,9 @@ class AccountsChannelPartnerLinksChannelPartnerRepricingConfigs extends \Google\
    * not be used for regular business cases. * The new config will not modify
    * exports used with other configs. Changes to the config may be immediate, but
    * may take up to 24 hours. * There is a limit of ten configs for any
-   * ChannelPartner or RepricingConfig.effective_invoice_month. * The contained
-   * ChannelPartnerRepricingConfig.repricing_config vaule must be different from
+   * ChannelPartner or RepricingConfig.EntitlementGranularity.entitlement, for any
+   * RepricingConfig.effective_invoice_month. * The contained
+   * ChannelPartnerRepricingConfig.repricing_config value must be different from
    * the value used in the current config for a ChannelPartner. Possible Error
    * Codes: * PERMISSION_DENIED: If the account making the request and the account
    * being queried are different. * INVALID_ARGUMENT: Missing or invalid required
