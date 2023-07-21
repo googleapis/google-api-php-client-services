@@ -175,7 +175,9 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * @opt_param string mask.fieldPaths The list of field paths in the mask. See
    * Document.fields for a field path syntax reference.
    * @opt_param string readTime Reads the version of the document at the given
-   * time. This may not be older than 270 seconds.
+   * time. This must be a microsecond precision timestamp within the past one
+   * hour, or if Point-in-Time Recovery is enabled, can additionally be a whole
+   * minute timestamp within the past 7 days.
    * @opt_param string transaction Reads the document in a transaction.
    * @return Document
    */
@@ -211,8 +213,10 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * `ListDocuments` response. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters (with the exception of `page_size`) must
    * match the values set in the request that generated the page token.
-   * @opt_param string readTime Perform the read at the provided time. This may
-   * not be older than 270 seconds.
+   * @opt_param string readTime Perform the read at the provided time. This must
+   * be a microsecond precision timestamp within the past one hour, or if Point-
+   * in-Time Recovery is enabled, can additionally be a whole minute timestamp
+   * within the past 7 days.
    * @opt_param bool showMissing If the list should show missing documents. A
    * document is missing if it does not exist, but there are sub-documents nested
    * underneath it. When true, such missing documents will be returned with a key
@@ -272,8 +276,10 @@ class ProjectsDatabasesDocuments extends \Google\Service\Resource
    * `ListDocuments` response. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters (with the exception of `page_size`) must
    * match the values set in the request that generated the page token.
-   * @opt_param string readTime Perform the read at the provided time. This may
-   * not be older than 270 seconds.
+   * @opt_param string readTime Perform the read at the provided time. This must
+   * be a microsecond precision timestamp within the past one hour, or if Point-
+   * in-Time Recovery is enabled, can additionally be a whole minute timestamp
+   * within the past 7 days.
    * @opt_param bool showMissing If the list should show missing documents. A
    * document is missing if it does not exist, but there are sub-documents nested
    * underneath it. When true, such missing documents will be returned with a key
