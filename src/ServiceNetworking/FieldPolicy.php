@@ -17,45 +17,64 @@
 
 namespace Google\Service\ServiceNetworking;
 
-class Control extends \Google\Collection
+class FieldPolicy extends \Google\Model
 {
-  protected $collection_key = 'methodPolicies';
   /**
    * @var string
    */
-  public $environment;
-  protected $methodPoliciesType = MethodPolicy::class;
-  protected $methodPoliciesDataType = 'array';
+  public $resourcePermission;
+  /**
+   * @var string
+   */
+  public $resourceType;
+  /**
+   * @var string
+   */
+  public $selector;
 
   /**
    * @param string
    */
-  public function setEnvironment($environment)
+  public function setResourcePermission($resourcePermission)
   {
-    $this->environment = $environment;
+    $this->resourcePermission = $resourcePermission;
   }
   /**
    * @return string
    */
-  public function getEnvironment()
+  public function getResourcePermission()
   {
-    return $this->environment;
+    return $this->resourcePermission;
   }
   /**
-   * @param MethodPolicy[]
+   * @param string
    */
-  public function setMethodPolicies($methodPolicies)
+  public function setResourceType($resourceType)
   {
-    $this->methodPolicies = $methodPolicies;
+    $this->resourceType = $resourceType;
   }
   /**
-   * @return MethodPolicy[]
+   * @return string
    */
-  public function getMethodPolicies()
+  public function getResourceType()
   {
-    return $this->methodPolicies;
+    return $this->resourceType;
+  }
+  /**
+   * @param string
+   */
+  public function setSelector($selector)
+  {
+    $this->selector = $selector;
+  }
+  /**
+   * @return string
+   */
+  public function getSelector()
+  {
+    return $this->selector;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Control::class, 'Google_Service_ServiceNetworking_Control');
+class_alias(FieldPolicy::class, 'Google_Service_ServiceNetworking_FieldPolicy');
