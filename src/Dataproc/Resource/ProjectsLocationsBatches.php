@@ -61,9 +61,9 @@ class ProjectsLocationsBatches extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes the batch workload resource. If the batch is not in terminal state,
-   * the delete fails and the response returns FAILED_PRECONDITION.
-   * (batches.delete)
+   * Deletes the batch workload resource. If the batch is not in a CANCELLED,
+   * SUCCEEDED or FAILED State, the delete operation fails and the response
+   * returns FAILED_PRECONDITION. (batches.delete)
    *
    * @param string $name Required. The fully qualified name of the batch to
    * retrieve in the format
