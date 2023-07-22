@@ -41,6 +41,7 @@ class ChecksService extends \Google\Service
 
   public $accounts_apps_operations;
   public $privacypolicy;
+  public $projects_privacyPolicies;
   public $projects_privacypolicy_operations;
 
   /**
@@ -65,7 +66,27 @@ class ChecksService extends \Google\Service
         'operations',
         [
           'methods' => [
-            'get' => [
+            'cancel' => [
+              'path' => 'v1alpha/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -97,6 +118,16 @@ class ChecksService extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'wait' => [
+              'path' => 'v1alpha/{+name}:wait',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -115,13 +146,23 @@ class ChecksService extends \Google\Service
           ]
         ]
     );
-    $this->projects_privacypolicy_operations = new ChecksService\Resource\ProjectsPrivacypolicyOperations(
+    $this->projects_privacyPolicies = new ChecksService\Resource\ProjectsPrivacyPolicies(
         $this,
         $this->serviceName,
-        'operations',
+        'privacyPolicies',
         [
           'methods' => [
-            'get' => [
+            'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -129,6 +170,82 @@ class ChecksService extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_privacypolicy_operations = new ChecksService\Resource\ProjectsPrivacypolicyOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1alpha/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1alpha/{+name}/privacypolicy/operations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'wait' => [
+              'path' => 'v1alpha/{+name}:wait',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'timeout' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
