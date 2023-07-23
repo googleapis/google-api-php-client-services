@@ -19,6 +19,10 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $createTime;
   protected $dataProfileType = GoogleCloudDataplexV1DataScanEventDataProfileResult::class;
   protected $dataProfileDataType = '';
   protected $dataProfileConfigsType = GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs::class;
@@ -70,6 +74,20 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
    */
   public $type;
 
+  /**
+   * @param string
+   */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
+  }
   /**
    * @param GoogleCloudDataplexV1DataScanEventDataProfileResult
    */
