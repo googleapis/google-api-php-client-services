@@ -17,45 +17,45 @@
 
 namespace Google\Service\ServiceConsumerManagement;
 
-class Control extends \Google\Collection
+class MethodPolicy extends \Google\Collection
 {
-  protected $collection_key = 'methodPolicies';
+  protected $collection_key = 'requestPolicies';
+  protected $requestPoliciesType = FieldPolicy::class;
+  protected $requestPoliciesDataType = 'array';
   /**
    * @var string
    */
-  public $environment;
-  protected $methodPoliciesType = MethodPolicy::class;
-  protected $methodPoliciesDataType = 'array';
+  public $selector;
 
+  /**
+   * @param FieldPolicy[]
+   */
+  public function setRequestPolicies($requestPolicies)
+  {
+    $this->requestPolicies = $requestPolicies;
+  }
+  /**
+   * @return FieldPolicy[]
+   */
+  public function getRequestPolicies()
+  {
+    return $this->requestPolicies;
+  }
   /**
    * @param string
    */
-  public function setEnvironment($environment)
+  public function setSelector($selector)
   {
-    $this->environment = $environment;
+    $this->selector = $selector;
   }
   /**
    * @return string
    */
-  public function getEnvironment()
+  public function getSelector()
   {
-    return $this->environment;
-  }
-  /**
-   * @param MethodPolicy[]
-   */
-  public function setMethodPolicies($methodPolicies)
-  {
-    $this->methodPolicies = $methodPolicies;
-  }
-  /**
-   * @return MethodPolicy[]
-   */
-  public function getMethodPolicies()
-  {
-    return $this->methodPolicies;
+    return $this->selector;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Control::class, 'Google_Service_ServiceConsumerManagement_Control');
+class_alias(MethodPolicy::class, 'Google_Service_ServiceConsumerManagement_MethodPolicy');
