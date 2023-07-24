@@ -646,16 +646,6 @@ class Bigquery extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'setIamPolicy' => [
-              'path' => '{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'testIamPermissions' => [
               'path' => '{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
