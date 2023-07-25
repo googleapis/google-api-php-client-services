@@ -22,6 +22,10 @@ class VerifyChallengeResponseResult extends \Google\Model
   /**
    * @var string
    */
+  public $attestedDeviceId;
+  /**
+   * @var string
+   */
   public $customerId;
   /**
    * @var string
@@ -58,6 +62,20 @@ class VerifyChallengeResponseResult extends \Google\Model
    */
   public $virtualProfileId;
 
+  /**
+   * @param string
+   */
+  public function setAttestedDeviceId($attestedDeviceId)
+  {
+    $this->attestedDeviceId = $attestedDeviceId;
+  }
+  /**
+   * @return string
+   */
+  public function getAttestedDeviceId()
+  {
+    return $this->attestedDeviceId;
+  }
   /**
    * @param string
    */
