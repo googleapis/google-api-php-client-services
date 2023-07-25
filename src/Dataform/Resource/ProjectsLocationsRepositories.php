@@ -17,11 +17,15 @@
 
 namespace Google\Service\Dataform\Resource;
 
+use Google\Service\Dataform\CommitRepositoryChangesRequest;
 use Google\Service\Dataform\ComputeRepositoryAccessTokenStatusResponse;
 use Google\Service\Dataform\DataformEmpty;
 use Google\Service\Dataform\FetchRemoteBranchesResponse;
+use Google\Service\Dataform\FetchRepositoryHistoryResponse;
 use Google\Service\Dataform\ListRepositoriesResponse;
 use Google\Service\Dataform\Policy;
+use Google\Service\Dataform\QueryRepositoryDirectoryContentsResponse;
+use Google\Service\Dataform\ReadRepositoryFileResponse;
 use Google\Service\Dataform\Repository;
 use Google\Service\Dataform\SetIamPolicyRequest;
 use Google\Service\Dataform\TestIamPermissionsRequest;
@@ -37,6 +41,21 @@ use Google\Service\Dataform\TestIamPermissionsResponse;
  */
 class ProjectsLocationsRepositories extends \Google\Service\Resource
 {
+  /**
+   * Applies a Git commit to a Repository. The Repository must not have a value
+   * for `git_remote_settings.url`. (repositories.commit)
+   *
+   * @param string $name Required. The repository's name.
+   * @param CommitRepositoryChangesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DataformEmpty
+   */
+  public function commit($name, CommitRepositoryChangesRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('commit', [$params], DataformEmpty::class);
+  }
   /**
    * Computes a Repository's Git access token status.
    * (repositories.computeAccessTokenStatus)
@@ -86,6 +105,28 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], DataformEmpty::class);
+  }
+  /**
+   * Fetches a Repository's history of commits. The Repository must not have a
+   * value for `git_remote_settings.url`. (repositories.fetchHistory)
+   *
+   * @param string $name Required. The repository's name.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. Maximum number of commits to return. The
+   * server may return fewer items than requested. If unspecified, the server will
+   * pick an appropriate default.
+   * @opt_param string pageToken Optional. Page token received from a previous
+   * `FetchRepositoryHistory` call. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to `FetchRepositoryHistory`
+   * must match the call that provided the page token.
+   * @return FetchRepositoryHistoryResponse
+   */
+  public function fetchHistory($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchHistory', [$params], FetchRepositoryHistoryResponse::class);
   }
   /**
    * Fetches a Repository's remote branches. (repositories.fetchRemoteBranches)
@@ -186,6 +227,53 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Repository::class);
+  }
+  /**
+   * Returns the contents of a given Repository directory. The Repository must not
+   * have a value for `git_remote_settings.url`.
+   * (repositories.queryDirectoryContents)
+   *
+   * @param string $name Required. The repository's name.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string commitSha Optional. The Commit SHA for the commit to query
+   * from. If unset, the directory will be queried from HEAD.
+   * @opt_param int pageSize Optional. Maximum number of paths to return. The
+   * server may return fewer items than requested. If unspecified, the server will
+   * pick an appropriate default.
+   * @opt_param string pageToken Optional. Page token received from a previous
+   * `QueryRepositoryDirectoryContents` call. Provide this to retrieve the
+   * subsequent page. When paginating, all other parameters provided to
+   * `QueryRepositoryDirectoryContents` must match the call that provided the page
+   * token.
+   * @opt_param string path Optional. The directory's full path including
+   * directory name, relative to root. If left unset, the root is used.
+   * @return QueryRepositoryDirectoryContentsResponse
+   */
+  public function queryDirectoryContents($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('queryDirectoryContents', [$params], QueryRepositoryDirectoryContentsResponse::class);
+  }
+  /**
+   * Returns the contents of a file (inside a Repository). The Repository must not
+   * have a value for `git_remote_settings.url`. (repositories.readFile)
+   *
+   * @param string $name Required. The repository's name.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string commitSha Optional. The commit SHA for the commit to read
+   * from. If unset, the file will be read from HEAD.
+   * @opt_param string path Required. Full file path to read including filename,
+   * from repository root.
+   * @return ReadRepositoryFileResponse
+   */
+  public function readFile($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('readFile', [$params], ReadRepositoryFileResponse::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
