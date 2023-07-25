@@ -39,6 +39,10 @@ class ConnectSettings extends \Google\Collection
    */
   public $kind;
   /**
+   * @var bool
+   */
+  public $pscEnabled;
+  /**
    * @var string
    */
   public $region;
@@ -114,6 +118,20 @@ class ConnectSettings extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param bool
+   */
+  public function setPscEnabled($pscEnabled)
+  {
+    $this->pscEnabled = $pscEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPscEnabled()
+  {
+    return $this->pscEnabled;
   }
   /**
    * @param string
