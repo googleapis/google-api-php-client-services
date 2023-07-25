@@ -18,6 +18,8 @@
 namespace Google\Service\ChecksService\Resource;
 
 use Google\Service\ChecksService\ChecksEmpty;
+use Google\Service\ChecksService\FindPrivacyPolicyRequest;
+use Google\Service\ChecksService\Operation;
 use Google\Service\ChecksService\PrivacyPolicy;
 
 /**
@@ -42,6 +44,22 @@ class ProjectsPrivacyPolicies extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], ChecksEmpty::class);
+  }
+  /**
+   * Finds the privacy policy of a given website. (privacyPolicies.find)
+   *
+   * @param string $parent Required. Resource name of the GCP project to which
+   * PrivacyPolicy resources will be added, in the format:
+   * `projects/{projectNumber}`.
+   * @param FindPrivacyPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function find($parent, FindPrivacyPolicyRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('find', [$params], Operation::class);
   }
   /**
    * Gets a privacy policy. (privacyPolicies.get)

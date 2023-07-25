@@ -162,6 +162,16 @@ class ChecksService extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'find' => [
+              'path' => 'v1alpha/{+parent}/privacyPolicies:find',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'GET',
