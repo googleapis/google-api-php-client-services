@@ -41,6 +41,8 @@ class SecurityCommandCenter extends \Google\Service
 
   public $folders_assets;
   public $folders_bigQueryExports;
+  public $folders_eventThreatDetectionSettings;
+  public $folders_eventThreatDetectionSettings_customModules;
   public $folders_findings;
   public $folders_muteConfigs;
   public $folders_notificationConfigs;
@@ -52,6 +54,8 @@ class SecurityCommandCenter extends \Google\Service
   public $organizations;
   public $organizations_assets;
   public $organizations_bigQueryExports;
+  public $organizations_eventThreatDetectionSettings;
+  public $organizations_eventThreatDetectionSettings_customModules;
   public $organizations_findings;
   public $organizations_muteConfigs;
   public $organizations_notificationConfigs;
@@ -63,6 +67,8 @@ class SecurityCommandCenter extends \Google\Service
   public $organizations_sources_findings_externalSystems;
   public $projects_assets;
   public $projects_bigQueryExports;
+  public $projects_eventThreatDetectionSettings;
+  public $projects_eventThreatDetectionSettings_customModules;
   public $projects_findings;
   public $projects_muteConfigs;
   public $projects_notificationConfigs;
@@ -207,6 +213,98 @@ class SecurityCommandCenter extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/bigQueryExports',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->folders_eventThreatDetectionSettings = new SecurityCommandCenter\Resource\FoldersEventThreatDetectionSettings(
+        $this,
+        $this->serviceName,
+        'eventThreatDetectionSettings',
+        [
+          'methods' => [
+            'validateCustomModule' => [
+              'path' => 'v1/{+parent}:validateCustomModule',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->folders_eventThreatDetectionSettings_customModules = new SecurityCommandCenter\Resource\FoldersEventThreatDetectionSettingsCustomModules(
+        $this,
+        $this->serviceName,
+        'customModules',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/customModules',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/customModules',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -865,6 +963,98 @@ class SecurityCommandCenter extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/bigQueryExports',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_eventThreatDetectionSettings = new SecurityCommandCenter\Resource\OrganizationsEventThreatDetectionSettings(
+        $this,
+        $this->serviceName,
+        'eventThreatDetectionSettings',
+        [
+          'methods' => [
+            'validateCustomModule' => [
+              'path' => 'v1/{+parent}:validateCustomModule',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_eventThreatDetectionSettings_customModules = new SecurityCommandCenter\Resource\OrganizationsEventThreatDetectionSettingsCustomModules(
+        $this,
+        $this->serviceName,
+        'customModules',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/customModules',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/customModules',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1619,6 +1809,98 @@ class SecurityCommandCenter extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/bigQueryExports',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_eventThreatDetectionSettings = new SecurityCommandCenter\Resource\ProjectsEventThreatDetectionSettings(
+        $this,
+        $this->serviceName,
+        'eventThreatDetectionSettings',
+        [
+          'methods' => [
+            'validateCustomModule' => [
+              'path' => 'v1/{+parent}:validateCustomModule',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_eventThreatDetectionSettings_customModules = new SecurityCommandCenter\Resource\ProjectsEventThreatDetectionSettingsCustomModules(
+        $this,
+        $this->serviceName,
+        'customModules',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/customModules',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/customModules',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
