@@ -31,6 +31,10 @@ class OSPolicy extends \Google\Collection
   /**
    * @var string
    */
+  public $fingerprint;
+  /**
+   * @var string
+   */
   public $id;
   /**
    * @var string
@@ -66,6 +70,20 @@ class OSPolicy extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setFingerprint($fingerprint)
+  {
+    $this->fingerprint = $fingerprint;
+  }
+  /**
+   * @return string
+   */
+  public function getFingerprint()
+  {
+    return $this->fingerprint;
   }
   /**
    * @param string
