@@ -86,18 +86,19 @@ class ProjectsLocationsRestorePlansRestoresVolumeRestores extends \Google\Servic
    * to list. Format: `projects/locations/restorePlans/restores`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Field match expression used to filter the results.
-   * @opt_param string orderBy Field by which to sort the results.
-   * @opt_param int pageSize The target number of results to return in a single
-   * response. If not specified, a default value will be chosen by the service.
-   * Note that the response may inclue a partial list and a caller should only
-   * rely on the response's next_page_token to determine if there are more
-   * instances left to be queried.
-   * @opt_param string pageToken The value of next_page_token received from a
-   * previous `ListVolumeRestores` call. Provide this to retrieve the subsequent
-   * page in a multi-page list of results. When paginating, all other parameters
-   * provided to `ListVolumeRestores` must match the call that provided the page
-   * token.
+   * @opt_param string filter Optional. Field match expression used to filter the
+   * results.
+   * @opt_param string orderBy Optional. Field by which to sort the results.
+   * @opt_param int pageSize Optional. The target number of results to return in a
+   * single response. If not specified, a default value will be chosen by the
+   * service. Note that the response may include a partial list and a caller
+   * should only rely on the response's next_page_token to determine if there are
+   * more instances left to be queried.
+   * @opt_param string pageToken Optional. The value of next_page_token received
+   * from a previous `ListVolumeRestores` call. Provide this to retrieve the
+   * subsequent page in a multi-page list of results. When paginating, all other
+   * parameters provided to `ListVolumeRestores` must match the call that provided
+   * the page token.
    * @return ListVolumeRestoresResponse
    */
   public function listProjectsLocationsRestorePlansRestoresVolumeRestores($parent, $optParams = [])
