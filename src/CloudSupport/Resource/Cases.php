@@ -34,7 +34,11 @@ use Google\Service\CloudSupport\SearchCasesResponse;
 class Cases extends \Google\Service\Resource
 {
   /**
-   * Close the specified case. (cases.close)
+   * Close the specified case. Here is an example of calling this endpoint using
+   * cURL: ```shell case="projects/cloud-support-qa-premium/cases/43595344" curl \
+   * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-
+   * token)" \ "https://cloudsupport.googleapis.com/v2/$case:close" ```
+   * (cases.close)
    *
    * @param string $name Required. The fully qualified name of the case resource
    * to be closed.
@@ -51,7 +55,16 @@ class Cases extends \Google\Service\Resource
   /**
    * Create a new case and associate it with the given Google Cloud Resource. The
    * case object must have the following fields set: `display_name`,
-   * `description`, `classification`, and `priority`. (cases.create)
+   * `description`, `classification`, and `priority`. Here is an example of
+   * calling this endpoint using cURL: ```shell parent="projects/some-project"
+   * curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-
+   * access-token)" \ --header 'Content-Type: application/json' \ --data '{
+   * "display_name": "Test case created by me.", "description": "a random test
+   * case, feel free to close", "classification": { "id": "100IK2AKCLHMGRJ9CDGMOCG
+   * P8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS36CPJ786L2TBFEHGN6NPI64R3CDHN8880G08I1H3M
+   * URR7DHII0GRCDTQM8" }, "time_zone": "-07:00", "subscriber_email_addresses": [
+   * "foo@domain.com", "bar@domain.com" ], "testCase": true, "priority": "P3" }' \
+   * "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` (cases.create)
    *
    * @param string $parent Required. The name of the Google Cloud Resource under
    * which the case should be created.
@@ -66,11 +79,17 @@ class Cases extends \Google\Service\Resource
     return $this->call('create', [$params], CloudsupportCase::class);
   }
   /**
-   * Escalate a case. Escalating a case will initiate the Google Cloud Support
+   * Escalate a case. Escalating a case initiates the Google Cloud Support
    * escalation management process. This operation is only available to certain
-   * Customer Care tiers. Go to https://cloud.google.com/support and look for
-   * 'Technical support escalations' in the feature list to find out which tiers
-   * are able to perform escalations. (cases.escalate)
+   * Customer Care support services. Go to https://cloud.google.com/support and
+   * look for 'Technical support escalations' in the feature list to find out
+   * which support services let you perform escalations. Here is an example of
+   * calling this endpoint using cURL: ```shell case="projects/some-
+   * project/cases/43595344" curl \ --request POST \ --header "Authorization:
+   * Bearer $(gcloud auth print-access-token)" \ --header "Content-Type:
+   * application/json" \ --data '{ "escalation": { "reason": "BUSINESS_IMPACT",
+   * "justification": "This is a test escalation." } }' \
+   * "https://cloudsupport.googleapis.com/v2/$case:escalate" ``` (cases.escalate)
    *
    * @param string $name Required. The fully qualified name of the Case resource
    * to be escalated.
@@ -85,7 +104,10 @@ class Cases extends \Google\Service\Resource
     return $this->call('escalate', [$params], CloudsupportCase::class);
   }
   /**
-   * Retrieve the specified case. (cases.get)
+   * Retrieve the specified case. Here is an example of calling this endpoint
+   * using cURL: ```shell case="projects/some-project/cases/16033687" curl \
+   * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$case" ``` (cases.get)
    *
    * @param string $name Required. The fully qualified name of a case to be
    * retrieved.
@@ -100,9 +122,12 @@ class Cases extends \Google\Service\Resource
   }
   /**
    * Retrieve all cases under the specified parent. Note: Listing cases under an
-   * Organization returns only the cases directly parented by that organization.
+   * organization returns only the cases directly parented by that organization.
    * To retrieve all cases under an organization, including cases parented by
-   * projects under that organization, use `cases.search`. (cases.listCases)
+   * projects under that organization, use `cases.search`. Here is an example of
+   * calling this endpoint using cURL: ```shell parent="projects/some-project"
+   * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` (cases.listCases)
    *
    * @param string $parent Required. The fully qualified name of parent resource
    * to list cases under.
@@ -131,7 +156,12 @@ class Cases extends \Google\Service\Resource
     return $this->call('list', [$params], ListCasesResponse::class);
   }
   /**
-   * Update the specified case. Only a subset of fields can be updated.
+   * Update the specified case. Only a subset of fields can be updated. Here is an
+   * example of calling this endpoint using cURL: ```shell case="projects/some-
+   * project/cases/43595344" curl \ --request PATCH \ --header "Authorization:
+   * Bearer $(gcloud auth print-access-token)" \ --header "Content-Type:
+   * application/json" \ --data '{ "priority": "P1" }' \
+   * "https://cloudsupport.googleapis.com/v2/$case?updateMask=priority" ```
    * (cases.patch)
    *
    * @param string $name The resource name for the case.
@@ -155,7 +185,11 @@ class Cases extends \Google\Service\Resource
     return $this->call('patch', [$params], CloudsupportCase::class);
   }
   /**
-   * Search cases using the specified query. (cases.search)
+   * Search cases using the specified query. Here is an example of calling this
+   * endpoint using cURL: ```shell parent="projects/some-project" curl \ --header
+   * "Authorization: Bearer $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$parent/cases:search" ```
+   * (cases.search)
    *
    * @param string $parent The fully qualified name of parent resource to search
    * cases under.
