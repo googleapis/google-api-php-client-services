@@ -33,9 +33,9 @@ class BillingAccountsSinks extends \Google\Service\Resource
 {
   /**
    * Creates a sink that exports specified log entries to a destination. The
-   * export of newly-ingested log entries begins immediately, unless the sink's
-   * writer_identity is not permitted to write to the destination. A sink can
-   * export log entries only from the resource owning the sink. (sinks.create)
+   * export begins upon ingress, unless the sink's writer_identity is not
+   * permitted to write to the destination. A sink can export log entries only
+   * from the resource owning the sink. (sinks.create)
    *
    * @param string $parent Required. The resource in which to create the sink:
    * "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]"

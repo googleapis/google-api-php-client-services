@@ -67,7 +67,7 @@ class Entries extends \Google\Service\Resource
     return $this->call('list', [$params], ListLogEntriesResponse::class);
   }
   /**
-   * Streaming read of log entries as they are ingested. Until the stream is
+   * Streaming read of log entries as they are received. Until the stream is
    * terminated, it will continue reading logs. (entries.tail)
    *
    * @param TailLogEntriesRequest $postBody
