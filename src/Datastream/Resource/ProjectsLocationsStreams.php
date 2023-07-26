@@ -19,6 +19,7 @@ namespace Google\Service\Datastream\Resource;
 
 use Google\Service\Datastream\ListStreamsResponse;
 use Google\Service\Datastream\Operation;
+use Google\Service\Datastream\RunStreamRequest;
 use Google\Service\Datastream\Stream;
 
 /**
@@ -162,6 +163,22 @@ class ProjectsLocationsStreams extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Use this method to start, resume or recover a stream with a non default CDC
+   * strategy. (streams.run)
+   *
+   * @param string $name Required. Name of the stream resource to start, in the
+   * format: projects/{project_id}/locations/{location}/streams/{stream_name}
+   * @param RunStreamRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function run($name, RunStreamRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('run', [$params], Operation::class);
   }
 }
 
