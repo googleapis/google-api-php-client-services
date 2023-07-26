@@ -26,6 +26,8 @@ class GoogleCloudDataplexV1DataQualityResult extends \Google\Collection
    * @var bool
    */
   public $passed;
+  protected $postScanActionsResultType = GoogleCloudDataplexV1DataQualityResultPostScanActionsResult::class;
+  protected $postScanActionsResultDataType = '';
   /**
    * @var string
    */
@@ -62,6 +64,20 @@ class GoogleCloudDataplexV1DataQualityResult extends \Google\Collection
   public function getPassed()
   {
     return $this->passed;
+  }
+  /**
+   * @param GoogleCloudDataplexV1DataQualityResultPostScanActionsResult
+   */
+  public function setPostScanActionsResult(GoogleCloudDataplexV1DataQualityResultPostScanActionsResult $postScanActionsResult)
+  {
+    $this->postScanActionsResult = $postScanActionsResult;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataQualityResultPostScanActionsResult
+   */
+  public function getPostScanActionsResult()
+  {
+    return $this->postScanActionsResult;
   }
   /**
    * @param string
