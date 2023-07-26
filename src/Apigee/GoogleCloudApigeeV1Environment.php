@@ -63,6 +63,10 @@ class GoogleCloudApigeeV1Environment extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var string
+   */
+  public $type;
 
   /**
    * @param string
@@ -231,6 +235,20 @@ class GoogleCloudApigeeV1Environment extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
