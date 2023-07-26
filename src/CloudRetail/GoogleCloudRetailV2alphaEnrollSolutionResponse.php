@@ -23,10 +23,6 @@ class GoogleCloudRetailV2alphaEnrollSolutionResponse extends \Google\Model
    * @var string
    */
   public $enrolledSolution;
-  /**
-   * @var string
-   */
-  public $searchSolutionUseCase;
 
   /**
    * @param string
@@ -41,20 +37,6 @@ class GoogleCloudRetailV2alphaEnrollSolutionResponse extends \Google\Model
   public function getEnrolledSolution()
   {
     return $this->enrolledSolution;
-  }
-  /**
-   * @param string
-   */
-  public function setSearchSolutionUseCase($searchSolutionUseCase)
-  {
-    $this->searchSolutionUseCase = $searchSolutionUseCase;
-  }
-  /**
-   * @return string
-   */
-  public function getSearchSolutionUseCase()
-  {
-    return $this->searchSolutionUseCase;
   }
 }
 
