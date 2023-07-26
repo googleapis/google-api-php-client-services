@@ -22,8 +22,26 @@ class DeviceRadioState extends \Google\Model
   /**
    * @var string
    */
+  public $airplaneModeState;
+  /**
+   * @var string
+   */
   public $wifiState;
 
+  /**
+   * @param string
+   */
+  public function setAirplaneModeState($airplaneModeState)
+  {
+    $this->airplaneModeState = $airplaneModeState;
+  }
+  /**
+   * @return string
+   */
+  public function getAirplaneModeState()
+  {
+    return $this->airplaneModeState;
+  }
   /**
    * @param string
    */
