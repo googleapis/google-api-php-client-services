@@ -58,6 +58,10 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Collection
    * @var string
    */
   public $nonCompliantOrgPolicy;
+  /**
+   * @var string
+   */
+  public $orgPolicyConstraint;
   protected $remediationType = GoogleCloudAssuredworkloadsV1ViolationRemediation::class;
   protected $remediationDataType = '';
   /**
@@ -212,6 +216,20 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Collection
   public function getNonCompliantOrgPolicy()
   {
     return $this->nonCompliantOrgPolicy;
+  }
+  /**
+   * @param string
+   */
+  public function setOrgPolicyConstraint($orgPolicyConstraint)
+  {
+    $this->orgPolicyConstraint = $orgPolicyConstraint;
+  }
+  /**
+   * @return string
+   */
+  public function getOrgPolicyConstraint()
+  {
+    return $this->orgPolicyConstraint;
   }
   /**
    * @param GoogleCloudAssuredworkloadsV1ViolationRemediation

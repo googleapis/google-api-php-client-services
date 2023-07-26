@@ -27,6 +27,10 @@ class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions extends \Google\Mo
    * @var bool
    */
   public $remediateFolderViolations;
+  /**
+   * @var bool
+   */
+  public $serviceAccessApprover;
 
   /**
    * @param bool
@@ -55,6 +59,20 @@ class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions extends \Google\Mo
   public function getRemediateFolderViolations()
   {
     return $this->remediateFolderViolations;
+  }
+  /**
+   * @param bool
+   */
+  public function setServiceAccessApprover($serviceAccessApprover)
+  {
+    $this->serviceAccessApprover = $serviceAccessApprover;
+  }
+  /**
+   * @return bool
+   */
+  public function getServiceAccessApprover()
+  {
+    return $this->serviceAccessApprover;
   }
 }
 
