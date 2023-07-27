@@ -28,6 +28,10 @@ class Space extends \Google\Model
    */
   public $displayName;
   /**
+   * @var bool
+   */
+  public $externalUserAllowed;
+  /**
    * @var string
    */
   public $name;
@@ -85,6 +89,20 @@ class Space extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param bool
+   */
+  public function setExternalUserAllowed($externalUserAllowed)
+  {
+    $this->externalUserAllowed = $externalUserAllowed;
+  }
+  /**
+   * @return bool
+   */
+  public function getExternalUserAllowed()
+  {
+    return $this->externalUserAllowed;
   }
   /**
    * @param string

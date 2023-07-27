@@ -151,9 +151,8 @@ class SpacesMessages extends \Google\Service\Resource
    * from blocked members and spaces. For an example, see [List
    * messages](/chat/api/guides/v1/messages/list). Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.messages` or `chat.messages.readonly` authorization scope. This
-   * method is only supported in spaces that don't allow users from outside the
-   * Workspace organization to join. (messages.listSpacesMessages)
+   * the `chat.messages` or `chat.messages.readonly` authorization scope.
+   * (messages.listSpacesMessages)
    *
    * @param string $parent Required. The resource name of the space to list
    * messages from. Format: `spaces/{space}`
