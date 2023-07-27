@@ -35,10 +35,9 @@ class Cases extends \Google\Service\Resource
 {
   /**
    * Close the specified case. Here is an example of calling this endpoint using
-   * cURL: ```shell case="projects/cloud-support-qa-premium/cases/43595344" curl \
-   * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-
-   * token)" \ "https://cloudsupport.googleapis.com/v2/$case:close" ```
-   * (cases.close)
+   * cURL: ```shell case="projects/some-project/cases/43595344" curl \ --request
+   * POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$case:close" ``` (cases.close)
    *
    * @param string $name Required. The fully qualified name of the case resource
    * to be closed.

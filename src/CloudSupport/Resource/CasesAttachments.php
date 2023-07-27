@@ -30,7 +30,11 @@ use Google\Service\CloudSupport\ListAttachmentsResponse;
 class CasesAttachments extends \Google\Service\Resource
 {
   /**
-   * Retrieve all attachments associated with a support case.
+   * Retrieve all attachments associated with a support case. Here is an example
+   * of calling this endpoint using cURL: ```shell case="projects/some-
+   * project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud auth
+   * print-access-token)" \
+   * "https://cloudsupport.googleapis.com/v2/$case/attachments" ```
    * (attachments.listCasesAttachments)
    *
    * @param string $parent Required. The resource name of Case object for which
