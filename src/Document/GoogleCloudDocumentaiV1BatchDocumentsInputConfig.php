@@ -23,8 +23,6 @@ class GoogleCloudDocumentaiV1BatchDocumentsInputConfig extends \Google\Model
   protected $gcsDocumentsDataType = '';
   protected $gcsPrefixType = GoogleCloudDocumentaiV1GcsPrefix::class;
   protected $gcsPrefixDataType = '';
-  protected $rawDocumentsType = GoogleCloudDocumentaiV1RawDocuments::class;
-  protected $rawDocumentsDataType = '';
 
   /**
    * @param GoogleCloudDocumentaiV1GcsDocuments
@@ -53,20 +51,6 @@ class GoogleCloudDocumentaiV1BatchDocumentsInputConfig extends \Google\Model
   public function getGcsPrefix()
   {
     return $this->gcsPrefix;
-  }
-  /**
-   * @param GoogleCloudDocumentaiV1RawDocuments
-   */
-  public function setRawDocuments(GoogleCloudDocumentaiV1RawDocuments $rawDocuments)
-  {
-    $this->rawDocuments = $rawDocuments;
-  }
-  /**
-   * @return GoogleCloudDocumentaiV1RawDocuments
-   */
-  public function getRawDocuments()
-  {
-    return $this->rawDocuments;
   }
 }
 

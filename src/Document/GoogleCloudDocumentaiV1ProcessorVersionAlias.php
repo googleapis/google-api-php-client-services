@@ -17,64 +17,46 @@
 
 namespace Google\Service\Document;
 
-class GoogleCloudDocumentaiV1RawDocument extends \Google\Model
+class GoogleCloudDocumentaiV1ProcessorVersionAlias extends \Google\Model
 {
   /**
    * @var string
    */
-  public $content;
+  public $alias;
   /**
    * @var string
    */
-  public $displayName;
-  /**
-   * @var string
-   */
-  public $mimeType;
+  public $processorVersion;
 
   /**
    * @param string
    */
-  public function setContent($content)
+  public function setAlias($alias)
   {
-    $this->content = $content;
+    $this->alias = $alias;
   }
   /**
    * @return string
    */
-  public function getContent()
+  public function getAlias()
   {
-    return $this->content;
+    return $this->alias;
   }
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setProcessorVersion($processorVersion)
   {
-    $this->displayName = $displayName;
+    $this->processorVersion = $processorVersion;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getProcessorVersion()
   {
-    return $this->displayName;
-  }
-  /**
-   * @param string
-   */
-  public function setMimeType($mimeType)
-  {
-    $this->mimeType = $mimeType;
-  }
-  /**
-   * @return string
-   */
-  public function getMimeType()
-  {
-    return $this->mimeType;
+    return $this->processorVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDocumentaiV1RawDocument::class, 'Google_Service_Document_GoogleCloudDocumentaiV1RawDocument');
+class_alias(GoogleCloudDocumentaiV1ProcessorVersionAlias::class, 'Google_Service_Document_GoogleCloudDocumentaiV1ProcessorVersionAlias');
