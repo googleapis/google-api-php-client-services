@@ -22,6 +22,8 @@ use Google\Service\FirebaseAppDistribution\GoogleFirebaseAppdistroV1DistributeRe
 use Google\Service\FirebaseAppDistribution\GoogleFirebaseAppdistroV1DistributeReleaseResponse;
 use Google\Service\FirebaseAppDistribution\GoogleFirebaseAppdistroV1ListReleasesResponse;
 use Google\Service\FirebaseAppDistribution\GoogleFirebaseAppdistroV1Release;
+use Google\Service\FirebaseAppDistribution\GoogleFirebaseAppdistroV1alphaTestReleaseRequest;
+use Google\Service\FirebaseAppDistribution\GoogleFirebaseAppdistroV1alphaTestReleaseResponse;
 use Google\Service\FirebaseAppDistribution\GoogleProtobufEmpty;
 
 /**
@@ -137,6 +139,21 @@ class ProjectsAppsReleases extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleFirebaseAppdistroV1Release::class);
+  }
+  /**
+   * Run automated test(s) on release. (releases.test)
+   *
+   * @param string $name Required. The name of the release resource to test.
+   * Format: `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+   * @param GoogleFirebaseAppdistroV1alphaTestReleaseRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleFirebaseAppdistroV1alphaTestReleaseResponse
+   */
+  public function test($name, GoogleFirebaseAppdistroV1alphaTestReleaseRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('test', [$params], GoogleFirebaseAppdistroV1alphaTestReleaseResponse::class);
   }
 }
 
