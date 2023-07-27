@@ -19,6 +19,7 @@ namespace Google\Service\ChecksService\Resource;
 
 use Google\Service\ChecksService\ChecksEmpty;
 use Google\Service\ChecksService\FindPrivacyPolicyRequest;
+use Google\Service\ChecksService\ListPrivacyPoliciesResponse;
 use Google\Service\ChecksService\Operation;
 use Google\Service\ChecksService\PrivacyPolicy;
 
@@ -73,6 +74,31 @@ class ProjectsPrivacyPolicies extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], PrivacyPolicy::class);
+  }
+  /**
+   * Lists privacy policies. (privacyPolicies.listProjectsPrivacyPolicies)
+   *
+   * @param string $parent Required. Resource name of the parent project, in the
+   * format `projects/{projectNumber}`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. A filter string to filters results. The
+   * filter syntax is defined by AIP-160 (https://google.aip.dev/160).
+   * @opt_param int pageSize Optional. The maximum number of results to return. If
+   * unspecified, at most 50 results will be returned. The maximum value is 1000;
+   * values above 1000 will be coerced to 1000.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `ListPrivacyPoliciesRequest` call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to
+   * `ListPrivacyPoliciesRequest` must match the call that provided the page
+   * token.
+   * @return ListPrivacyPoliciesResponse
+   */
+  public function listProjectsPrivacyPolicies($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], ListPrivacyPoliciesResponse::class);
   }
 }
 
