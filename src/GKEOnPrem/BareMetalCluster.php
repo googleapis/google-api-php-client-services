@@ -107,6 +107,8 @@ class BareMetalCluster extends \Google\Model
    * @var string
    */
   public $updateTime;
+  protected $upgradePolicyType = BareMetalClusterUpgradePolicy::class;
+  protected $upgradePolicyDataType = '';
   protected $validationCheckType = ValidationCheck::class;
   protected $validationCheckDataType = '';
 
@@ -515,6 +517,20 @@ class BareMetalCluster extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param BareMetalClusterUpgradePolicy
+   */
+  public function setUpgradePolicy(BareMetalClusterUpgradePolicy $upgradePolicy)
+  {
+    $this->upgradePolicy = $upgradePolicy;
+  }
+  /**
+   * @return BareMetalClusterUpgradePolicy
+   */
+  public function getUpgradePolicy()
+  {
+    return $this->upgradePolicy;
   }
   /**
    * @param ValidationCheck
