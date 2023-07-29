@@ -179,16 +179,6 @@ class FirebaseAppDistribution extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'test' => [
-              'path' => 'v1/{+name}:test',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],
           ]
         ]
