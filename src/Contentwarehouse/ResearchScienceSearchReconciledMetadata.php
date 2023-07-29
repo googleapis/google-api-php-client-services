@@ -92,6 +92,10 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   /**
    * @var bool
    */
+  public $hasCroissantFormat;
+  /**
+   * @var bool
+   */
   public $hasTableSummaries;
   /**
    * @var string
@@ -529,6 +533,20 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   public function getFunder()
   {
     return $this->funder;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasCroissantFormat($hasCroissantFormat)
+  {
+    $this->hasCroissantFormat = $hasCroissantFormat;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasCroissantFormat()
+  {
+    return $this->hasCroissantFormat;
   }
   /**
    * @param bool

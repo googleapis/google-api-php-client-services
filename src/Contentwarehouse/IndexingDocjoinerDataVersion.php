@@ -155,6 +155,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $imageSearchRejectedImageInfoListDataType = '';
   protected $imageStockStockImageAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageStockStockImageAnnotationDataType = '';
+  protected $imageembedType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $imageembedDataType = '';
   protected $indexingAnnotationsAnnotationMetaType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsAnnotationMetaDataType = '';
   protected $indexingAnnotationsAppMarketAppMarketAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -2033,6 +2035,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getImageStockStockImageAnnotation()
   {
     return $this->imageStockStockImageAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setImageembed(IndexingDocjoinerDataVersionVersionInfo $imageembed)
+  {
+    $this->imageembed = $imageembed;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getImageembed()
+  {
+    return $this->imageembed;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

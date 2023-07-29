@@ -27,6 +27,10 @@ class AssistantGroundingRankerDeviceTargetingFeaturesProperties extends \Google\
    * @var bool
    */
   public $isOwnedBySpeaker;
+  /**
+   * @var string
+   */
+  public $surfaceType;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class AssistantGroundingRankerDeviceTargetingFeaturesProperties extends \Google\
   public function getIsOwnedBySpeaker()
   {
     return $this->isOwnedBySpeaker;
+  }
+  /**
+   * @param string
+   */
+  public function setSurfaceType($surfaceType)
+  {
+    $this->surfaceType = $surfaceType;
+  }
+  /**
+   * @return string
+   */
+  public function getSurfaceType()
+  {
+    return $this->surfaceType;
   }
 }
 

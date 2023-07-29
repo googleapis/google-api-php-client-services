@@ -25,6 +25,8 @@ class QualityTimebasedLastSignificantUpdate extends \Google\Model
    * @var string
    */
   public $date;
+  protected $dateReliabilityInfoType = QualityTimebasedDateReliability::class;
+  protected $dateReliabilityInfoDataType = '';
   /**
    * @var string
    */
@@ -57,6 +59,20 @@ class QualityTimebasedLastSignificantUpdate extends \Google\Model
   public function getDate()
   {
     return $this->date;
+  }
+  /**
+   * @param QualityTimebasedDateReliability
+   */
+  public function setDateReliabilityInfo(QualityTimebasedDateReliability $dateReliabilityInfo)
+  {
+    $this->dateReliabilityInfo = $dateReliabilityInfo;
+  }
+  /**
+   * @return QualityTimebasedDateReliability
+   */
+  public function getDateReliabilityInfo()
+  {
+    return $this->dateReliabilityInfo;
   }
   /**
    * @param string

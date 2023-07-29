@@ -184,6 +184,10 @@ class AssistantApiSupportedFeatures extends \Google\Model
   /**
    * @var bool
    */
+  public $readNotificationSummarizationSupported;
+  /**
+   * @var bool
+   */
   public $remoteCloudCastingEnabled;
   /**
    * @var bool
@@ -865,6 +869,20 @@ class AssistantApiSupportedFeatures extends \Google\Model
   public function getReadMessagesTtsTaperingSupported()
   {
     return $this->readMessagesTtsTaperingSupported;
+  }
+  /**
+   * @param bool
+   */
+  public function setReadNotificationSummarizationSupported($readNotificationSummarizationSupported)
+  {
+    $this->readNotificationSummarizationSupported = $readNotificationSummarizationSupported;
+  }
+  /**
+   * @return bool
+   */
+  public function getReadNotificationSummarizationSupported()
+  {
+    return $this->readNotificationSummarizationSupported;
   }
   /**
    * @param bool
