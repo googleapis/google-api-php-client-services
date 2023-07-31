@@ -46,7 +46,7 @@ class PhotoSequence extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string inputType Required. The input form of PhotoSequence.
-   * @return OperationModel
+   * @return Operation
    */
   public function create(PhotoSequenceModel $postBody, $optParams = [])
   {
