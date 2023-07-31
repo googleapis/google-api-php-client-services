@@ -30,6 +30,7 @@ __author__ = 'chirags@google.com (Chirag Shah)'
 import collections
 import json
 import operator
+import re
 
 from googleapis.codegen import api
 from googleapis.codegen import api_library_generator
@@ -320,7 +321,8 @@ class PHPApi(api.Api):
     if s.lower() in PhpLanguageModel.RESERVED_CLASS_NAMES:
       # Prepend the service name.
       return utilities.CamelCase(self.values['name']) + utilities.CamelCase(s)
-    return utilities.CamelCase(s).replace('&', '')
+    # strip all non-alphanumeric characters
+    return re.sub(r'[^a-zA-Z\d]', '', utilities.CamelCase(s))
 
   def ModelClasses(self):
     """Return all the model classes."""
