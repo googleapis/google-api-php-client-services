@@ -34,6 +34,7 @@ import logging
 import operator
 import six
 import functools
+import re
 
 
 from six.moves.urllib import parse as urlparse
@@ -94,8 +95,8 @@ class Api(template_objects.CodeObject):
     if not self.values.get('canonicalName'):
       self.values['canonicalName'] = canonical_name
     self._class_name = self.ToClassName(canonical_name, self)
-    # Guard against language implementor not taking care of spaces
-    self._class_name = self._class_name.replace(' ', '')
+    # Guard against language implementor not taking care of spaces or special characters
+    self._class_name = re.sub(r'[^a-zA-Z\d]', '', self._class_name)
     self._NormalizeOwnerInformation()
     self._language = language
     self._template_dir = None
