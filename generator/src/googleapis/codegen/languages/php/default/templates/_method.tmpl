@@ -16,7 +16,7 @@
  * {{ param.description }}{% endfilter %}{% endfor %}
 {% endif %}
 {% if method.response and method.responseType.className %}
- * @return {{ method.responseType.className }}{% if method.responseType.className|lower == resource.className|lower or method.requestType.className in api.resourceNames %}Model{% endif %}
+ * @return {{ method.responseType.className }}{% if method.responseType.className|lower == resource.className|lower or method.responseType.className in api.resourceNames %}Model{% endif %}
 {% endif %}
  */
 {% endfilter %}
