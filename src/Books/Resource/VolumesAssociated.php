@@ -42,7 +42,7 @@ class VolumesAssociated extends \Google\Service\Resource
    * rating of returned recommendations. Books with a higher maturity rating are
    * filtered out.
    * @opt_param string source String to identify the originator of this request.
-   * @return Volumes
+   * @return VolumesModel
    */
   public function listVolumesAssociated($volumeId, $optParams = [])
   {

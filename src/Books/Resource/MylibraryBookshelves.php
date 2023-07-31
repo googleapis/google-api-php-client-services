@@ -87,7 +87,7 @@ class MylibraryBookshelves extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string source String to identify the originator of this request.
-   * @return Bookshelves
+   * @return BookshelvesModel
    */
   public function listMylibraryBookshelves($optParams = [])
   {

@@ -45,7 +45,7 @@ class VolumesUseruploaded extends \Google\Service\Resource
    * 0)
    * @opt_param string volumeId The ids of the volumes to be returned. If not
    * specified all that match the processingState are returned.
-   * @return Volumes
+   * @return VolumesModel
    */
   public function listVolumesUseruploaded($optParams = [])
   {

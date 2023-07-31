@@ -110,7 +110,7 @@ class Myconfig extends \Google\Service\Resource
    * to false.
    * @opt_param string volumeIds The volume(s) to request download restrictions
    * for.
-   * @return Volumes
+   * @return VolumesModel
    */
   public function syncVolumeLicenses($cpksver, $nonce, $source, $optParams = [])
   {
