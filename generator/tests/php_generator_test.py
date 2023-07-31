@@ -70,6 +70,12 @@ class PHPApiTest(absltest.TestCase):
       self.generator._SetTypeHint(test_property)
       self.assertEqual(expected_hint, test_property.values['typeHint'])
 
+  def testCanonicalNameWithInvalidCharacters(self):
+    d = {'name': 'fake', 'version': 'v1', 'canonicalName': 'My B@dly-Named API'}
+    api = php_generator.PHPApi(d)
+    self.assertEqual('fake', api.values['name'])
+    self.assertEqual('MyBdlyNamedAPI', api._class_name)
+
   def testToMethodName(self):
     """Test creating safe method names from wire names."""
     method = {'wireName': 'foo'}
