@@ -26,10 +26,6 @@ class ProvisioningInfo extends \Google\Model
   /**
    * @var string
    */
-  public $authenticatedUserEmail;
-  /**
-   * @var string
-   */
   public $brand;
   /**
    * @var string
@@ -65,20 +61,6 @@ class ProvisioningInfo extends \Google\Model
   public function getApiLevel()
   {
     return $this->apiLevel;
-  }
-  /**
-   * @param string
-   */
-  public function setAuthenticatedUserEmail($authenticatedUserEmail)
-  {
-    $this->authenticatedUserEmail = $authenticatedUserEmail;
-  }
-  /**
-   * @return string
-   */
-  public function getAuthenticatedUserEmail()
-  {
-    return $this->authenticatedUserEmail;
   }
   /**
    * @param string
