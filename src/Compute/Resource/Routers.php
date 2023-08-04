@@ -17,6 +17,7 @@
 
 namespace Google\Service\Compute\Resource;
 
+use Google\Service\Compute\NatIpInfoResponse;
 use Google\Service\Compute\Operation;
 use Google\Service\Compute\Router;
 use Google\Service\Compute\RouterAggregatedList;
@@ -146,6 +147,26 @@ class Routers extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'router' => $router];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Router::class);
+  }
+  /**
+   * Retrieves runtime NAT IP information. (routers.getNatIpInfo)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region for this request.
+   * @param string $router Name of the Router resource to query for Nat IP
+   * information. The name should conform to RFC1035.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string natName Name of the nat service to filter the NAT IP
+   * information. If it is omitted, all nats for this router will be returned.
+   * Name should conform to RFC1035.
+   * @return NatIpInfoResponse
+   */
+  public function getNatIpInfo($project, $region, $router, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'router' => $router];
+    $params = array_merge($params, $optParams);
+    return $this->call('getNatIpInfo', [$params], NatIpInfoResponse::class);
   }
   /**
    * Retrieves runtime Nat mapping information of VM endpoints.

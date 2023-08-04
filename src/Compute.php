@@ -13810,6 +13810,30 @@ class Compute extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getNatIpInfo' => [
+              'path' => 'projects/{project}/regions/{region}/routers/{router}/getNatIpInfo',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'router' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'natName' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'getNatMappingInfo' => [
               'path' => 'projects/{project}/regions/{region}/routers/{router}/getNatMappingInfo',
               'httpMethod' => 'GET',

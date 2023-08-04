@@ -17,46 +17,27 @@
 
 namespace Google\Service\Compute;
 
-class BulkInsertInstanceResourcePerInstanceProperties extends \Google\Model
+class NatIpInfoResponse extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $hostname;
-  /**
-   * @var string
-   */
-  public $name;
+  protected $collection_key = 'result';
+  protected $resultType = NatIpInfo::class;
+  protected $resultDataType = 'array';
 
   /**
-   * @param string
+   * @param NatIpInfo[]
    */
-  public function setHostname($hostname)
+  public function setResult($result)
   {
-    $this->hostname = $hostname;
+    $this->result = $result;
   }
   /**
-   * @return string
+   * @return NatIpInfo[]
    */
-  public function getHostname()
+  public function getResult()
   {
-    return $this->hostname;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
+    return $this->result;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BulkInsertInstanceResourcePerInstanceProperties::class, 'Google_Service_Compute_BulkInsertInstanceResourcePerInstanceProperties');
+class_alias(NatIpInfoResponse::class, 'Google_Service_Compute_NatIpInfoResponse');

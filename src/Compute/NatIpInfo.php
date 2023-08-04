@@ -17,46 +17,45 @@
 
 namespace Google\Service\Compute;
 
-class BulkInsertInstanceResourcePerInstanceProperties extends \Google\Model
+class NatIpInfo extends \Google\Collection
 {
+  protected $collection_key = 'natIpInfoMappings';
+  protected $natIpInfoMappingsType = NatIpInfoNatIpInfoMapping::class;
+  protected $natIpInfoMappingsDataType = 'array';
   /**
    * @var string
    */
-  public $hostname;
-  /**
-   * @var string
-   */
-  public $name;
+  public $natName;
 
   /**
+   * @param NatIpInfoNatIpInfoMapping[]
+   */
+  public function setNatIpInfoMappings($natIpInfoMappings)
+  {
+    $this->natIpInfoMappings = $natIpInfoMappings;
+  }
+  /**
+   * @return NatIpInfoNatIpInfoMapping[]
+   */
+  public function getNatIpInfoMappings()
+  {
+    return $this->natIpInfoMappings;
+  }
+  /**
    * @param string
    */
-  public function setHostname($hostname)
+  public function setNatName($natName)
   {
-    $this->hostname = $hostname;
+    $this->natName = $natName;
   }
   /**
    * @return string
    */
-  public function getHostname()
+  public function getNatName()
   {
-    return $this->hostname;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
+    return $this->natName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BulkInsertInstanceResourcePerInstanceProperties::class, 'Google_Service_Compute_BulkInsertInstanceResourcePerInstanceProperties');
+class_alias(NatIpInfo::class, 'Google_Service_Compute_NatIpInfo');
