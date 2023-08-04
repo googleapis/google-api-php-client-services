@@ -17,81 +17,64 @@
 
 namespace Google\Service\Dataflow;
 
-class SdkVersion extends \Google\Collection
+class SdkBug extends \Google\Model
 {
-  protected $collection_key = 'bugs';
-  protected $bugsType = SdkBug::class;
-  protected $bugsDataType = 'array';
   /**
    * @var string
    */
-  public $sdkSupportStatus;
+  public $severity;
   /**
    * @var string
    */
-  public $version;
+  public $type;
   /**
    * @var string
    */
-  public $versionDisplayName;
+  public $uri;
 
   /**
-   * @param SdkBug[]
-   */
-  public function setBugs($bugs)
-  {
-    $this->bugs = $bugs;
-  }
-  /**
-   * @return SdkBug[]
-   */
-  public function getBugs()
-  {
-    return $this->bugs;
-  }
-  /**
    * @param string
    */
-  public function setSdkSupportStatus($sdkSupportStatus)
+  public function setSeverity($severity)
   {
-    $this->sdkSupportStatus = $sdkSupportStatus;
+    $this->severity = $severity;
   }
   /**
    * @return string
    */
-  public function getSdkSupportStatus()
+  public function getSeverity()
   {
-    return $this->sdkSupportStatus;
+    return $this->severity;
   }
   /**
    * @param string
    */
-  public function setVersion($version)
+  public function setType($type)
   {
-    $this->version = $version;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getVersion()
+  public function getType()
   {
-    return $this->version;
+    return $this->type;
   }
   /**
    * @param string
    */
-  public function setVersionDisplayName($versionDisplayName)
+  public function setUri($uri)
   {
-    $this->versionDisplayName = $versionDisplayName;
+    $this->uri = $uri;
   }
   /**
    * @return string
    */
-  public function getVersionDisplayName()
+  public function getUri()
   {
-    return $this->versionDisplayName;
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SdkVersion::class, 'Google_Service_Dataflow_SdkVersion');
+class_alias(SdkBug::class, 'Google_Service_Dataflow_SdkBug');
