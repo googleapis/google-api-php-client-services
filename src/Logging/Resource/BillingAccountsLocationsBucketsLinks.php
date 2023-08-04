@@ -82,7 +82,8 @@ class BillingAccountsLocationsBucketsLinks extends \Google\Service\Resource
    * _ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "organizations/ORG
    * ANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "billingA
    * ccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK
-   * _ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+   * _ID"
+   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
    * @param array $optParams Optional parameters.
    * @return Link
    */
@@ -96,10 +97,10 @@ class BillingAccountsLocationsBucketsLinks extends \Google\Service\Resource
    * Lists links. (links.listBillingAccountsLocationsBucketsLinks)
    *
    * @param string $parent Required. The parent resource whose links are to be
-   * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-   * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-   * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+   * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
+   * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
+   * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
+   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of results to return

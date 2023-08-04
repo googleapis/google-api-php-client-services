@@ -56,9 +56,10 @@ class FoldersSinks extends \Google\Service\Resource
    * by Cloud Logging before the addition of writer identities to this API. The
    * sink's destination must be in the same project as the sink itself.If this
    * field is set to true, or if the sink is owned by a non-project resource such
-   * as an organization, then the value of writer_identity will be a unique
-   * service account used only for exports from the new sink. For more
-   * information, see writer_identity in LogSink.
+   * as an organization, then the value of writer_identity will be a service agent
+   * (https://cloud.google.com/iam/docs/service-account-types#service-agents) used
+   * by the sinks with the same parent. For more information, see writer_identity
+   * in LogSink.
    * @return LogSink
    */
   public function create($parent, LogSink $postBody, $optParams = [])
@@ -155,8 +156,9 @@ class FoldersSinks extends \Google\Service\Resource
    * new values of this field: If the old and new values of this field are both
    * false or both true, then there is no change to the sink's writer_identity. If
    * the old value is false and the new value is true, then writer_identity is
-   * changed to a unique service account. It is an error if the old value is true
-   * and the new value is set to false or defaulted to false.
+   * changed to a service agent (https://cloud.google.com/iam/docs/service-
+   * account-types#service-agents)) owned by Cloud Logging. It is an error if the
+   * old value is true and the new value is set to false or defaulted to false.
    * @opt_param string updateMask Optional. Field mask that specifies the fields
    * in sink that need an update. A sink field will be overwritten if, and only
    * if, it is in the update mask. name and output only fields cannot be
@@ -203,8 +205,9 @@ class FoldersSinks extends \Google\Service\Resource
    * new values of this field: If the old and new values of this field are both
    * false or both true, then there is no change to the sink's writer_identity. If
    * the old value is false and the new value is true, then writer_identity is
-   * changed to a unique service account. It is an error if the old value is true
-   * and the new value is set to false or defaulted to false.
+   * changed to a service agent (https://cloud.google.com/iam/docs/service-
+   * account-types#service-agents)) owned by Cloud Logging. It is an error if the
+   * old value is true and the new value is set to false or defaulted to false.
    * @opt_param string updateMask Optional. Field mask that specifies the fields
    * in sink that need an update. A sink field will be overwritten if, and only
    * if, it is in the update mask. name and output only fields cannot be
