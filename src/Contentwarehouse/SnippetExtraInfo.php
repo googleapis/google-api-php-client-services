@@ -33,6 +33,10 @@ class SnippetExtraInfo extends \Google\Collection
   /**
    * @var bool
    */
+  public $disableNg3Scoring;
+  /**
+   * @var bool
+   */
   public $disableQueryFeatures;
   /**
    * @var int
@@ -82,6 +86,20 @@ class SnippetExtraInfo extends \Google\Collection
   public function getContainVulgarCandidates()
   {
     return $this->containVulgarCandidates;
+  }
+  /**
+   * @param bool
+   */
+  public function setDisableNg3Scoring($disableNg3Scoring)
+  {
+    $this->disableNg3Scoring = $disableNg3Scoring;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableNg3Scoring()
+  {
+    return $this->disableNg3Scoring;
   }
   /**
    * @param bool
