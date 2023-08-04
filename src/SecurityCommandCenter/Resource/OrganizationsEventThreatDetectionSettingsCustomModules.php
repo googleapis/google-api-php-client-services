@@ -32,13 +32,10 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
 class OrganizationsEventThreatDetectionSettingsCustomModules extends \Google\Service\Resource
 {
   /**
-   * Creates an ETD custom module at the given level. Creating a module has a
-   * side-effect of creating modules at all descendants. (customModules.create)
+   * Creates an Event Threat Detection custom module. (customModules.create)
    *
    * @param string $parent Required. The new custom module's parent. Its format
-   * is: * "organizations/{organization}/eventThreatDetectionSettings". *
-   * "folders/{folder}/eventThreatDetectionSettings". *
-   * "projects/{project}/eventThreatDetectionSettings".
+   * is: * "organizations/{organization}/eventThreatDetectionSettings".
    * @param EventThreatDetectionCustomModule $postBody
    * @param array $optParams Optional parameters.
    * @return EventThreatDetectionCustomModule
@@ -50,15 +47,11 @@ class OrganizationsEventThreatDetectionSettingsCustomModules extends \Google\Ser
     return $this->call('create', [$params], EventThreatDetectionCustomModule::class);
   }
   /**
-   * Deletes an ETD custom module. Deletion at resident level also deletes modules
-   * at all descendants. Deletion at any other level is not supported.
-   * (customModules.delete)
+   * Deletes an Event Threat Detection custom module. (customModules.delete)
    *
    * @param string $name Required. Name of the custom module to delete. Its format
    * is: * "organizations/{organization}/eventThreatDetectionSettings/customModule
-   * s/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+   * s/{module}".
    * @param array $optParams Optional parameters.
    * @return SecuritycenterEmpty
    */
@@ -69,14 +62,11 @@ class OrganizationsEventThreatDetectionSettingsCustomModules extends \Google\Ser
     return $this->call('delete', [$params], SecuritycenterEmpty::class);
   }
   /**
-   * Gets an ETD custom module. Retrieves the module at the given level.
-   * (customModules.get)
+   * Gets an Event Threat Detection custom module. (customModules.get)
    *
    * @param string $name Required. Name of the custom module to get. Its format
    * is: * "organizations/{organization}/eventThreatDetectionSettings/customModule
-   * s/{module}". *
-   * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
-   * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+   * s/{module}".
    * @param array $optParams Optional parameters.
    * @return EventThreatDetectionCustomModule
    */
@@ -87,14 +77,12 @@ class OrganizationsEventThreatDetectionSettingsCustomModules extends \Google\Ser
     return $this->call('get', [$params], EventThreatDetectionCustomModule::class);
   }
   /**
-   * Lists ETD custom modules. Retrieve all resident and inherited modules at the
-   * given level (no descendants).
+   * Lists Event Threat Detection custom modules.
    * (customModules.listOrganizationsEventThreatDetectionSettingsCustomModules)
    *
-   * @param string $parent Required. Name of the parent to list custom modules.
-   * Its format is: * "organizations/{organization}/eventThreatDetectionSettings".
-   * * "folders/{folder}/eventThreatDetectionSettings". *
-   * "projects/{project}/eventThreatDetectionSettings".
+   * @param string $parent Required. Name of the parent to list custom modules
+   * under. Its format is: *
+   * "organizations/{organization}/eventThreatDetectionSettings".
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of modules to return. The service
@@ -115,11 +103,7 @@ class OrganizationsEventThreatDetectionSettingsCustomModules extends \Google\Ser
     return $this->call('list', [$params], ListEventThreatDetectionCustomModulesResponse::class);
   }
   /**
-   * Updates an ETD custom module at the given level. All config fields can be
-   * updated when updating the module at resident level. Only enablement state can
-   * be updated when updating the module at inherited levels. Updating the module
-   * has a side-effect that it updates all descendants that are inherited from
-   * this module. (customModules.patch)
+   * Updates an Event Threat Detection custom module. (customModules.patch)
    *
    * @param string $name Immutable. The resource name of the Event Threat
    * Detection custom module. Its format is: * "organizations/{organization}/event

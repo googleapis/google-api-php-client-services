@@ -41,8 +41,6 @@ class SecurityCommandCenter extends \Google\Service
 
   public $folders_assets;
   public $folders_bigQueryExports;
-  public $folders_eventThreatDetectionSettings;
-  public $folders_eventThreatDetectionSettings_customModules;
   public $folders_findings;
   public $folders_muteConfigs;
   public $folders_notificationConfigs;
@@ -60,15 +58,20 @@ class SecurityCommandCenter extends \Google\Service
   public $organizations_muteConfigs;
   public $organizations_notificationConfigs;
   public $organizations_operations;
+  public $organizations_resourceValueConfigs;
   public $organizations_securityHealthAnalyticsSettings_customModules;
   public $organizations_securityHealthAnalyticsSettings_effectiveCustomModules;
+  public $organizations_simulations;
+  public $organizations_simulations_attackExposureResults_attackPaths;
+  public $organizations_simulations_attackExposureResults_valuedResources;
+  public $organizations_simulations_attackPaths;
+  public $organizations_simulations_valuedResources;
+  public $organizations_simulations_valuedResources_attackPaths;
   public $organizations_sources;
   public $organizations_sources_findings;
   public $organizations_sources_findings_externalSystems;
   public $projects_assets;
   public $projects_bigQueryExports;
-  public $projects_eventThreatDetectionSettings;
-  public $projects_eventThreatDetectionSettings_customModules;
   public $projects_findings;
   public $projects_muteConfigs;
   public $projects_notificationConfigs;
@@ -213,98 +216,6 @@ class SecurityCommandCenter extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/bigQueryExports',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->folders_eventThreatDetectionSettings = new SecurityCommandCenter\Resource\FoldersEventThreatDetectionSettings(
-        $this,
-        $this->serviceName,
-        'eventThreatDetectionSettings',
-        [
-          'methods' => [
-            'validateCustomModule' => [
-              'path' => 'v1/{+parent}:validateCustomModule',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->folders_eventThreatDetectionSettings_customModules = new SecurityCommandCenter\Resource\FoldersEventThreatDetectionSettingsCustomModules(
-        $this,
-        $this->serviceName,
-        'customModules',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/customModules',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/customModules',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1323,6 +1234,78 @@ class SecurityCommandCenter extends \Google\Service
           ]
         ]
     );
+    $this->organizations_resourceValueConfigs = new SecurityCommandCenter\Resource\OrganizationsResourceValueConfigs(
+        $this,
+        $this->serviceName,
+        'resourceValueConfigs',
+        [
+          'methods' => [
+            'batchCreate' => [
+              'path' => 'v1/{+parent}/resourceValueConfigs:batchCreate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/resourceValueConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->organizations_securityHealthAnalyticsSettings_customModules = new SecurityCommandCenter\Resource\OrganizationsSecurityHealthAnalyticsSettingsCustomModules(
         $this,
         $this->serviceName,
@@ -1437,6 +1420,186 @@ class SecurityCommandCenter extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_simulations = new SecurityCommandCenter\Resource\OrganizationsSimulations(
+        $this,
+        $this->serviceName,
+        'simulations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_simulations_attackExposureResults_attackPaths = new SecurityCommandCenter\Resource\OrganizationsSimulationsAttackExposureResultsAttackPaths(
+        $this,
+        $this->serviceName,
+        'attackPaths',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/attackPaths',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_simulations_attackExposureResults_valuedResources = new SecurityCommandCenter\Resource\OrganizationsSimulationsAttackExposureResultsValuedResources(
+        $this,
+        $this->serviceName,
+        'valuedResources',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/valuedResources',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_simulations_attackPaths = new SecurityCommandCenter\Resource\OrganizationsSimulationsAttackPaths(
+        $this,
+        $this->serviceName,
+        'attackPaths',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/attackPaths',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_simulations_valuedResources = new SecurityCommandCenter\Resource\OrganizationsSimulationsValuedResources(
+        $this,
+        $this->serviceName,
+        'valuedResources',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/valuedResources',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_simulations_valuedResources_attackPaths = new SecurityCommandCenter\Resource\OrganizationsSimulationsValuedResourcesAttackPaths(
+        $this,
+        $this->serviceName,
+        'attackPaths',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/attackPaths',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'pageSize' => [
                   'location' => 'query',
@@ -1809,98 +1972,6 @@ class SecurityCommandCenter extends \Google\Service
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/bigQueryExports',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_eventThreatDetectionSettings = new SecurityCommandCenter\Resource\ProjectsEventThreatDetectionSettings(
-        $this,
-        $this->serviceName,
-        'eventThreatDetectionSettings',
-        [
-          'methods' => [
-            'validateCustomModule' => [
-              'path' => 'v1/{+parent}:validateCustomModule',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_eventThreatDetectionSettings_customModules = new SecurityCommandCenter\Resource\ProjectsEventThreatDetectionSettingsCustomModules(
-        $this,
-        $this->serviceName,
-        'customModules',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/customModules',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/customModules',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
