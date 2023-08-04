@@ -35,13 +35,10 @@ use Google\Client;
  */
 class ChecksService extends \Google\Service
 {
-  /** Test scope for access to the Zoo service. */
-  const XAPI_ZOO =
-      "https://www.googleapis.com/auth/xapi.zoo";
+
 
   public $accounts_apps_operations;
   public $privacypolicy;
-  public $projects_privacyPolicies;
   public $projects_privacypolicy_operations;
 
   /**
@@ -142,68 +139,6 @@ class ChecksService extends \Google\Service
               'path' => 'v1alpha/privacypolicy:analyze',
               'httpMethod' => 'POST',
               'parameters' => [],
-            ],
-          ]
-        ]
-    );
-    $this->projects_privacyPolicies = new ChecksService\Resource\ProjectsPrivacyPolicies(
-        $this,
-        $this->serviceName,
-        'privacyPolicies',
-        [
-          'methods' => [
-            'delete' => [
-              'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'find' => [
-              'path' => 'v1alpha/{+parent}/privacyPolicies:find',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1alpha/{+parent}/privacyPolicies',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
             ],
           ]
         ]
