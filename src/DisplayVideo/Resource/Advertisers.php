@@ -141,6 +141,10 @@ class Advertisers extends \Google\Service\Resource
    * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no
    * more than 500 characters. Reference our [filter `LIST` requests](/display-
    * video/api/guides/how-tos/filters) guide for more information.
+   * @opt_param string internalDebuggingConfig The config used in internal
+   * debugging and manual testing. Use comma to separate multiple values.
+   * Examples: To allow entity search to go through tangle `searchUsingTangle` To
+   * get only the advertiser Ids use `idOnly`
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are: * `displayName` (default) * `entityStatus` * `updateTime` The default
    * sorting order is ascending. To specify descending order for a field, a suffix

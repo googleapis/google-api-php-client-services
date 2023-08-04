@@ -169,6 +169,10 @@ class DisplayVideo extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'internalDebuggingConfig' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'orderBy' => [
                   'location' => 'query',
                   'type' => 'string',
