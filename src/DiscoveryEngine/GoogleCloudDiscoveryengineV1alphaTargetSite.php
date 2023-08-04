@@ -35,6 +35,8 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
    * @var string
    */
   public $providedUriPattern;
+  protected $siteVerificationInfoType = GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo::class;
+  protected $siteVerificationInfoDataType = '';
   /**
    * @var string
    */
@@ -99,6 +101,20 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
   public function getProvidedUriPattern()
   {
     return $this->providedUriPattern;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo
+   */
+  public function setSiteVerificationInfo(GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo $siteVerificationInfo)
+  {
+    $this->siteVerificationInfo = $siteVerificationInfo;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo
+   */
+  public function getSiteVerificationInfo()
+  {
+    return $this->siteVerificationInfo;
   }
   /**
    * @param string
