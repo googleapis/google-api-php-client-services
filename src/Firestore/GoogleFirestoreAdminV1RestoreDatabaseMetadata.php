@@ -35,6 +35,8 @@ class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
    * @var string
    */
   public $operationState;
+  protected $progressPercentageType = GoogleFirestoreAdminV1Progress::class;
+  protected $progressPercentageDataType = '';
   /**
    * @var string
    */
@@ -95,6 +97,20 @@ class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
   public function getOperationState()
   {
     return $this->operationState;
+  }
+  /**
+   * @param GoogleFirestoreAdminV1Progress
+   */
+  public function setProgressPercentage(GoogleFirestoreAdminV1Progress $progressPercentage)
+  {
+    $this->progressPercentage = $progressPercentage;
+  }
+  /**
+   * @return GoogleFirestoreAdminV1Progress
+   */
+  public function getProgressPercentage()
+  {
+    return $this->progressPercentage;
   }
   /**
    * @param string
