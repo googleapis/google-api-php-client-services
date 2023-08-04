@@ -96,7 +96,7 @@ class CreativeGroups extends \Google\Service\Resource
    * (creativeGroups.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id CreativeGroup ID.
+   * @param string $id Required. Creative Group ID.
    * @param CreativeGroup $postBody
    * @param array $optParams Optional parameters.
    * @return CreativeGroup

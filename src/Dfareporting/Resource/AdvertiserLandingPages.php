@@ -95,11 +95,11 @@ class AdvertiserLandingPages extends \Google\Service\Resource
     return $this->call('list', [$params], AdvertiserLandingPagesListResponse::class);
   }
   /**
-   * Updates an existing advertiser landing page. This method supports patch
-   * semantics. (advertiserLandingPages.patch)
+   * Updates an existing advertiser. This method supports patch semantics.
+   * (advertiserLandingPages.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id LandingPage ID.
+   * @param string $id Required. Landing Page ID.
    * @param LandingPage $postBody
    * @param array $optParams Optional parameters.
    * @return LandingPage

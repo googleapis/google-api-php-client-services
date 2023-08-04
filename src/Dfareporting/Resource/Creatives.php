@@ -107,7 +107,7 @@ class Creatives extends \Google\Service\Resource
    * (creatives.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Creative ID.
+   * @param string $id Required. Creative ID.
    * @param Creative $postBody
    * @param array $optParams Optional parameters.
    * @return Creative

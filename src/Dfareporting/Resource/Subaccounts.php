@@ -91,7 +91,7 @@ class Subaccounts extends \Google\Service\Resource
    * (subaccounts.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Subaccount ID.
+   * @param string $id Required. Subaccount ID.
    * @param Subaccount $postBody
    * @param array $optParams Optional parameters.
    * @return Subaccount

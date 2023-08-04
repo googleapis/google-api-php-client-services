@@ -104,7 +104,7 @@ class ContentCategories extends \Google\Service\Resource
    * (contentCategories.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id ContentCategory ID.
+   * @param string $id Required. ContentCategory ID.
    * @param ContentCategory $postBody
    * @param array $optParams Optional parameters.
    * @return ContentCategory

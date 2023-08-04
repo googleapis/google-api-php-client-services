@@ -93,7 +93,7 @@ class TargetingTemplates extends \Google\Service\Resource
    * (targetingTemplates.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id TargetingTemplate ID.
+   * @param string $id Required. RemarketingList ID.
    * @param TargetingTemplate $postBody
    * @param array $optParams Optional parameters.
    * @return TargetingTemplate

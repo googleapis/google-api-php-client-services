@@ -103,7 +103,7 @@ class Sites extends \Google\Service\Resource
    * Updates an existing site. This method supports patch semantics. (sites.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Site ID.
+   * @param string $id Required. Site ID.
    * @param Site $postBody
    * @param array $optParams Optional parameters.
    * @return Site

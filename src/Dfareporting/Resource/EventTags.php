@@ -123,7 +123,7 @@ class EventTags extends \Google\Service\Resource
    * (eventTags.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id EventTag ID.
+   * @param string $id Required. EventTag ID.
    * @param EventTag $postBody
    * @param array $optParams Optional parameters.
    * @return EventTag

@@ -151,7 +151,7 @@ class Placements extends \Google\Service\Resource
    * (placements.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Placement ID.
+   * @param string $id Required. Placement ID.
    * @param Placement $postBody
    * @param array $optParams Optional parameters.
    * @return Placement

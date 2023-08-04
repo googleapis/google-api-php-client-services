@@ -105,7 +105,7 @@ class PlacementStrategies extends \Google\Service\Resource
    * (placementStrategies.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id PlacementStrategy ID.
+   * @param string $id Required. PlacementStrategy ID.
    * @param PlacementStrategy $postBody
    * @param array $optParams Optional parameters.
    * @return PlacementStrategy

@@ -92,11 +92,11 @@ class AccountUserProfiles extends \Google\Service\Resource
     return $this->call('list', [$params], AccountUserProfilesListResponse::class);
   }
   /**
-   * Updates an existing account user profile. This method supports patch
-   * semantics. (accountUserProfiles.patch)
+   * Updates an existing user role. This method supports patch semantics.
+   * (accountUserProfiles.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id AccountUserProfile ID.
+   * @param string $id Required. AccountUserProfile ID.
    * @param AccountUserProfile $postBody
    * @param array $optParams Optional parameters.
    * @return AccountUserProfile

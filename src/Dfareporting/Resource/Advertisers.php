@@ -102,7 +102,7 @@ class Advertisers extends \Google\Service\Resource
    * (advertisers.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Advertiser ID.
+   * @param string $id Required. Advertiser ID.
    * @param Advertiser $postBody
    * @param array $optParams Optional parameters.
    * @return Advertiser

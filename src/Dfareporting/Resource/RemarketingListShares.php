@@ -45,11 +45,11 @@ class RemarketingListShares extends \Google\Service\Resource
     return $this->call('get', [$params], RemarketingListShare::class);
   }
   /**
-   * Updates an existing remarketing list share. This method supports patch
+   * Updates an existing RemarketingListShare. This method supports patch
    * semantics. (remarketingListShares.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id RemarketingList ID.
+   * @param string $id Required. RemarketingList ID.
    * @param RemarketingListShare $postBody
    * @param array $optParams Optional parameters.
    * @return RemarketingListShare

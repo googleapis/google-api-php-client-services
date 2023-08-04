@@ -50,8 +50,8 @@ class TargetableRemarketingLists extends \Google\Service\Resource
    * (targetableRemarketingLists.listTargetableRemarketingLists)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $advertiserId Select only targetable remarketing lists
-   * targetable by these advertisers.
+   * @param string $advertiserId Required. Select only targetable remarketing
+   * lists targetable by these advertisers.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool active Select only active or only inactive targetable

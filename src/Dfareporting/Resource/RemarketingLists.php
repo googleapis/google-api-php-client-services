@@ -63,8 +63,8 @@ class RemarketingLists extends \Google\Service\Resource
    * supports paging. (remarketingLists.listRemarketingLists)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $advertiserId Select only remarketing lists owned by this
-   * advertiser.
+   * @param string $advertiserId Required. Select only remarketing lists owned by
+   * this advertiser.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool active Select only active or only inactive remarketing lists.
@@ -91,11 +91,11 @@ class RemarketingLists extends \Google\Service\Resource
     return $this->call('list', [$params], RemarketingListsListResponse::class);
   }
   /**
-   * Updates an existing remarketing list. This method supports patch semantics.
+   * Updates an existing RemarketingList. This method supports patch semantics.
    * (remarketingLists.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id RemarketingList ID.
+   * @param string $id Required. RemarketingList ID.
    * @param RemarketingList $postBody
    * @param array $optParams Optional parameters.
    * @return RemarketingList

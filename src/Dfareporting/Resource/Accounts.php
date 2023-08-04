@@ -78,7 +78,7 @@ class Accounts extends \Google\Service\Resource
    * (accounts.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Account ID.
+   * @param string $id Required. Account ID.
    * @param Account $postBody
    * @param array $optParams Optional parameters.
    * @return Account

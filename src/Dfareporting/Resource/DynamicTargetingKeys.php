@@ -36,11 +36,11 @@ class DynamicTargetingKeys extends \Google\Service\Resource
    * @param string $profileId User profile ID associated with this request.
    * @param string $objectId ID of the object of this dynamic targeting key. This
    * is a required field.
-   * @param string $name Name of this dynamic targeting key. This is a required
-   * field. Must be less than 256 characters long and cannot contain commas. All
-   * characters are converted to lowercase.
-   * @param string $objectType Type of the object of this dynamic targeting key.
-   * This is a required field.
+   * @param string $name Required. Name of this dynamic targeting key. This is a
+   * required field. Must be less than 256 characters long and cannot contain
+   * commas. All characters are converted to lowercase.
+   * @param string $objectType Required. Type of the object of this dynamic
+   * targeting key. This is a required field.
    * @param array $optParams Optional parameters.
    */
   public function delete($profileId, $objectId, $name, $objectType, $optParams = [])

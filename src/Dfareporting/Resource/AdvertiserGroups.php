@@ -104,7 +104,7 @@ class AdvertiserGroups extends \Google\Service\Resource
    * (advertiserGroups.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id AdvertiserGroup ID.
+   * @param string $id Required. Advertiser Group ID.
    * @param AdvertiserGroup $postBody
    * @param array $optParams Optional parameters.
    * @return AdvertiserGroup

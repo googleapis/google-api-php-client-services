@@ -108,7 +108,7 @@ class UserRoles extends \Google\Service\Resource
    * (userRoles.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id UserRole ID.
+   * @param string $id Required. UserRole ID.
    * @param UserRole $postBody
    * @param array $optParams Optional parameters.
    * @return UserRole

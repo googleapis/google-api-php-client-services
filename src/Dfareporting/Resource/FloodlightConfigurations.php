@@ -62,11 +62,11 @@ class FloodlightConfigurations extends \Google\Service\Resource
     return $this->call('list', [$params], FloodlightConfigurationsListResponse::class);
   }
   /**
-   * Updates an existing floodlight configuration. This method supports patch
-   * semantics. (floodlightConfigurations.patch)
+   * Updates an existing event tag. This method supports patch semantics.
+   * (floodlightConfigurations.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id FloodlightConfiguration ID.
+   * @param string $id Required. EventTag ID.
    * @param FloodlightConfiguration $postBody
    * @param array $optParams Optional parameters.
    * @return FloodlightConfiguration

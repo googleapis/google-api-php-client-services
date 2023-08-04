@@ -100,11 +100,11 @@ class Campaigns extends \Google\Service\Resource
     return $this->call('list', [$params], CampaignsListResponse::class);
   }
   /**
-   * Updates an existing campaign. This method supports patch semantics.
+   * Updates an existing creative. This method supports patch semantics.
    * (campaigns.patch)
    *
    * @param string $profileId User profile ID associated with this request.
-   * @param string $id Campaign ID.
+   * @param string $id Required. Campaign ID.
    * @param Campaign $postBody
    * @param array $optParams Optional parameters.
    * @return Campaign
