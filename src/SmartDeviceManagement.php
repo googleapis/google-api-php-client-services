@@ -102,14 +102,6 @@ class SmartDeviceManagement extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],
           ]
@@ -144,14 +136,6 @@ class SmartDeviceManagement extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],
           ]
@@ -181,14 +165,6 @@ class SmartDeviceManagement extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
