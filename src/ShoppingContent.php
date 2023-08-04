@@ -52,6 +52,7 @@ class ShoppingContent extends \Google\Service
   public $datafeeds;
   public $datafeedstatuses;
   public $freelistingsprogram;
+  public $freelistingsprogram_checkoutsettings;
   public $liasettings;
   public $localinventory;
   public $orderinvoices;
@@ -1140,6 +1141,46 @@ class ShoppingContent extends \Google\Service
               ],
             ],'requestreview' => [
               'path' => '{merchantId}/freelistingsprogram/requestreview',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->freelistingsprogram_checkoutsettings = new ShoppingContent\Resource\FreelistingsprogramCheckoutsettings(
+        $this,
+        $this->serviceName,
+        'checkoutsettings',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => '{merchantId}/freelistingsprogram/checkoutsettings',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => '{merchantId}/freelistingsprogram/checkoutsettings',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'insert' => [
+              'path' => '{merchantId}/freelistingsprogram/checkoutsettings',
               'httpMethod' => 'POST',
               'parameters' => [
                 'merchantId' => [
