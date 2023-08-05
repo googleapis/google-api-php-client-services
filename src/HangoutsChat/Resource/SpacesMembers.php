@@ -44,12 +44,12 @@ class SpacesMembers extends \Google\Service\Resource
    * `membership.member.name` in the `CreateMembershipRequest`: - To add the
    * calling app to a space or a direct message between two human users, use
    * `users/app`. Unable to add other apps to the space. - To add a human user,
-   * use `users/{user}`, where `{user}` is either the `{person_id}` for the
-   * [person](https://developers.google.com/people/api/rest/v1/people) from the
-   * People API, or the `id` for the [user](https://developers.google.com/admin-
-   * sdk/directory/reference/rest/v1/users) in the Directory API. For example, if
-   * the People API `Person` `resourceName` is `people/123456789`, you can add the
-   * user to the space by setting the `membership.member.name` to
+   * use `users/{user}`, where `{user}` can be the email address for the user. For
+   * users in the same Workspace organization `{user}` can also be the
+   * `{person_id}` for the person from the People API, or the `id` for the user in
+   * the Directory API. For example, if the People API Person `resourceName` for
+   * `user@example.com` is `people/123456789`, you can add the user to the space
+   * by setting the `membership.member.name` to `users/user@example.com` or
    * `users/123456789`. (members.create)
    *
    * @param string $parent Required. The resource name of the space for which to
@@ -75,10 +75,12 @@ class SpacesMembers extends \Google\Service\Resource
    * @param string $name Required. Resource name of the membership to delete. Chat
    * apps can delete human users' or their own memberships. Chat apps can't delete
    * other apps' memberships. When deleting a human membership, requires the
-   * `chat.memberships` scope and `spaces/{space}/members/{member}` format. When
-   * deleting an app membership, requires the `chat.memberships.app` scope and
-   * `spaces/{space}/members/app` format. Format:
-   * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
+   * `chat.memberships` scope and `spaces/{space}/members/{member}` format. You
+   * can use the email as an alias for `{member}`. For example,
+   * `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
+   * email of the Google Chat user. When deleting an app membership, requires the
+   * `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
+   * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
    * @param array $optParams Optional parameters.
    * @return Membership
    */
@@ -105,7 +107,11 @@ class SpacesMembers extends \Google\Service\Resource
    * @param string $name Required. Resource name of the membership to retrieve. To
    * get the app's own membership, you can optionally use
    * `spaces/{space}/members/app`. Format: `spaces/{space}/members/{member}` or
-   * `spaces/{space}/members/app`
+   * `spaces/{space}/members/app` When [authenticated as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), you can use
+   * the user's email as an alias for `{member}`. For example,
+   * `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
+   * email of the Google Chat user.
    * @param array $optParams Optional parameters.
    * @return Membership
    */

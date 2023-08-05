@@ -95,7 +95,9 @@ class SpacesMessages extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` authorization scope. (messages.delete)
+   * requires the `chat.messages` authorization scope. Requests authenticated with
+   * service accounts can only delete messages created by the calling Chat app.
+   * (messages.delete)
    *
    * @param string $name Required. Resource name of the message that you want to
    * delete, in the form `spaces/messages` Example:
@@ -217,7 +219,9 @@ class SpacesMessages extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` authorization scope. (messages.patch)
+   * requires the `chat.messages` authorization scope. Requests authenticated with
+   * service accounts can only update messages created by the calling Chat app.
+   * (messages.patch)
    *
    * @param string $name Resource name in the form `spaces/messages`. Example:
    * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
@@ -256,7 +260,9 @@ class SpacesMessages extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` authorization scope. (messages.update)
+   * requires the `chat.messages` authorization scope. Requests authenticated with
+   * service accounts can only update messages created by the calling Chat app.
+   * (messages.update)
    *
    * @param string $name Resource name in the form `spaces/messages`. Example:
    * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
