@@ -17,12 +17,8 @@
 
 namespace Google\Service\GKEHub;
 
-class Scope extends \Google\Model
+class GkehubNamespace extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $allMemberships;
   /**
    * @var string
    */
@@ -43,7 +39,11 @@ class Scope extends \Google\Model
    * @var string[]
    */
   public $namespaceLabels;
-  protected $stateType = ScopeLifecycleState::class;
+  /**
+   * @var string
+   */
+  public $scope;
+  protected $stateType = NamespaceLifecycleState::class;
   protected $stateDataType = '';
   /**
    * @var string
@@ -54,20 +54,6 @@ class Scope extends \Google\Model
    */
   public $updateTime;
 
-  /**
-   * @param bool
-   */
-  public function setAllMemberships($allMemberships)
-  {
-    $this->allMemberships = $allMemberships;
-  }
-  /**
-   * @return bool
-   */
-  public function getAllMemberships()
-  {
-    return $this->allMemberships;
-  }
   /**
    * @param string
    */
@@ -139,14 +125,28 @@ class Scope extends \Google\Model
     return $this->namespaceLabels;
   }
   /**
-   * @param ScopeLifecycleState
+   * @param string
    */
-  public function setState(ScopeLifecycleState $state)
+  public function setScope($scope)
+  {
+    $this->scope = $scope;
+  }
+  /**
+   * @return string
+   */
+  public function getScope()
+  {
+    return $this->scope;
+  }
+  /**
+   * @param NamespaceLifecycleState
+   */
+  public function setState(NamespaceLifecycleState $state)
   {
     $this->state = $state;
   }
   /**
-   * @return ScopeLifecycleState
+   * @return NamespaceLifecycleState
    */
   public function getState()
   {
@@ -183,4 +183,4 @@ class Scope extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Scope::class, 'Google_Service_GKEHub_Scope');
+class_alias(GkehubNamespace::class, 'Google_Service_GKEHub_GkehubNamespace');

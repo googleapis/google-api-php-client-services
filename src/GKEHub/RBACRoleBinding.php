@@ -17,12 +17,8 @@
 
 namespace Google\Service\GKEHub;
 
-class Scope extends \Google\Model
+class RBACRoleBinding extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $allMemberships;
   /**
    * @var string
    */
@@ -32,6 +28,10 @@ class Scope extends \Google\Model
    */
   public $deleteTime;
   /**
+   * @var string
+   */
+  public $group;
+  /**
    * @var string[]
    */
   public $labels;
@@ -39,11 +39,9 @@ class Scope extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var string[]
-   */
-  public $namespaceLabels;
-  protected $stateType = ScopeLifecycleState::class;
+  protected $roleType = Role::class;
+  protected $roleDataType = '';
+  protected $stateType = RBACRoleBindingLifecycleState::class;
   protected $stateDataType = '';
   /**
    * @var string
@@ -53,21 +51,11 @@ class Scope extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var string
+   */
+  public $user;
 
-  /**
-   * @param bool
-   */
-  public function setAllMemberships($allMemberships)
-  {
-    $this->allMemberships = $allMemberships;
-  }
-  /**
-   * @return bool
-   */
-  public function getAllMemberships()
-  {
-    return $this->allMemberships;
-  }
   /**
    * @param string
    */
@@ -95,6 +83,20 @@ class Scope extends \Google\Model
   public function getDeleteTime()
   {
     return $this->deleteTime;
+  }
+  /**
+   * @param string
+   */
+  public function setGroup($group)
+  {
+    $this->group = $group;
+  }
+  /**
+   * @return string
+   */
+  public function getGroup()
+  {
+    return $this->group;
   }
   /**
    * @param string[]
@@ -125,28 +127,28 @@ class Scope extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string[]
+   * @param Role
    */
-  public function setNamespaceLabels($namespaceLabels)
+  public function setRole(Role $role)
   {
-    $this->namespaceLabels = $namespaceLabels;
+    $this->role = $role;
   }
   /**
-   * @return string[]
+   * @return Role
    */
-  public function getNamespaceLabels()
+  public function getRole()
   {
-    return $this->namespaceLabels;
+    return $this->role;
   }
   /**
-   * @param ScopeLifecycleState
+   * @param RBACRoleBindingLifecycleState
    */
-  public function setState(ScopeLifecycleState $state)
+  public function setState(RBACRoleBindingLifecycleState $state)
   {
     $this->state = $state;
   }
   /**
-   * @return ScopeLifecycleState
+   * @return RBACRoleBindingLifecycleState
    */
   public function getState()
   {
@@ -180,7 +182,21 @@ class Scope extends \Google\Model
   {
     return $this->updateTime;
   }
+  /**
+   * @param string
+   */
+  public function setUser($user)
+  {
+    $this->user = $user;
+  }
+  /**
+   * @return string
+   */
+  public function getUser()
+  {
+    return $this->user;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Scope::class, 'Google_Service_GKEHub_Scope');
+class_alias(RBACRoleBinding::class, 'Google_Service_GKEHub_RBACRoleBinding');
