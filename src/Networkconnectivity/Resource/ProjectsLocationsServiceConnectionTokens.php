@@ -36,7 +36,7 @@ class ProjectsLocationsServiceConnectionTokens extends \Google\Service\Resource
    * (serviceConnectionTokens.create)
    *
    * @param string $parent Required. The parent resource's name of the
-   * ServiceConnectionToken.
+   * ServiceConnectionToken. ex. projects/123/locations/us-east1
    * @param ServiceConnectionToken $postBody
    * @param array $optParams Optional parameters.
    *
@@ -110,7 +110,8 @@ class ProjectsLocationsServiceConnectionTokens extends \Google\Service\Resource
    * Lists ServiceConnectionTokens in a given project and location.
    * (serviceConnectionTokens.listProjectsLocationsServiceConnectionTokens)
    *
-   * @param string $parent Required. The parent resource's name.
+   * @param string $parent Required. The parent resource's name. ex.
+   * projects/123/locations/us-east1
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters the results listed

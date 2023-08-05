@@ -40,7 +40,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * (serviceConnectionPolicies.create)
    *
    * @param string $parent Required. The parent resource's name of the
-   * ServiceConnectionPolicy.
+   * ServiceConnectionPolicy. ex. projects/123/locations/us-east1
    * @param ServiceConnectionPolicy $postBody
    * @param array $optParams Optional parameters.
    *
@@ -144,7 +144,8 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * Lists ServiceConnectionPolicies in a given project and location.
    * (serviceConnectionPolicies.listProjectsLocationsServiceConnectionPolicies)
    *
-   * @param string $parent Required. The parent resource's name.
+   * @param string $parent Required. The parent resource's name. ex.
+   * projects/123/locations/us-east1
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters the results listed

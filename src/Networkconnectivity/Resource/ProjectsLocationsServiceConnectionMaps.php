@@ -40,7 +40,7 @@ class ProjectsLocationsServiceConnectionMaps extends \Google\Service\Resource
    * (serviceConnectionMaps.create)
    *
    * @param string $parent Required. The parent resource's name of the
-   * ServiceConnectionMap.
+   * ServiceConnectionMap. ex. projects/123/locations/us-east1
    * @param ServiceConnectionMap $postBody
    * @param array $optParams Optional parameters.
    *
@@ -143,7 +143,8 @@ class ProjectsLocationsServiceConnectionMaps extends \Google\Service\Resource
    * Lists ServiceConnectionMaps in a given project and location.
    * (serviceConnectionMaps.listProjectsLocationsServiceConnectionMaps)
    *
-   * @param string $parent Required. The parent resource's name.
+   * @param string $parent Required. The parent resource's name. ex.
+   * projects/123/locations/us-east1
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters the results listed

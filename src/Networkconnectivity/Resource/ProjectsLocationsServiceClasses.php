@@ -110,7 +110,8 @@ class ProjectsLocationsServiceClasses extends \Google\Service\Resource
    * Lists ServiceClasses in a given project and location.
    * (serviceClasses.listProjectsLocationsServiceClasses)
    *
-   * @param string $parent Required. The parent resource's name.
+   * @param string $parent Required. The parent resource's name. ex.
+   * projects/123/locations/us-east1
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters the results listed

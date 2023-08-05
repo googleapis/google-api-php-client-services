@@ -31,6 +31,10 @@ class Spoke extends \Google\Collection
   /**
    * @var string
    */
+  public $group;
+  /**
+   * @var string
+   */
   public $hub;
   /**
    * @var string[]
@@ -94,6 +98,20 @@ class Spoke extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setGroup($group)
+  {
+    $this->group = $group;
+  }
+  /**
+   * @return string
+   */
+  public function getGroup()
+  {
+    return $this->group;
   }
   /**
    * @param string
