@@ -22,8 +22,26 @@ class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
   /**
    * @var string
    */
+  public $internalclientRatelimitThreshold;
+  /**
+   * @var string
+   */
   public $ratelimitThreshold;
 
+  /**
+   * @param string
+   */
+  public function setInternalclientRatelimitThreshold($internalclientRatelimitThreshold)
+  {
+    $this->internalclientRatelimitThreshold = $internalclientRatelimitThreshold;
+  }
+  /**
+   * @return string
+   */
+  public function getInternalclientRatelimitThreshold()
+  {
+    return $this->internalclientRatelimitThreshold;
+  }
   /**
    * @param string
    */
