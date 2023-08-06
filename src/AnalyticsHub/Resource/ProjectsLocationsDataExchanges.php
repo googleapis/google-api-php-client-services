@@ -21,8 +21,11 @@ use Google\Service\AnalyticsHub\AnalyticshubEmpty;
 use Google\Service\AnalyticsHub\DataExchange;
 use Google\Service\AnalyticsHub\GetIamPolicyRequest;
 use Google\Service\AnalyticsHub\ListDataExchangesResponse;
+use Google\Service\AnalyticsHub\ListSharedResourceSubscriptionsResponse;
+use Google\Service\AnalyticsHub\Operation;
 use Google\Service\AnalyticsHub\Policy;
 use Google\Service\AnalyticsHub\SetIamPolicyRequest;
+use Google\Service\AnalyticsHub\SubscribeDataExchangeRequest;
 use Google\Service\AnalyticsHub\TestIamPermissionsRequest;
 use Google\Service\AnalyticsHub\TestIamPermissionsResponse;
 
@@ -124,6 +127,29 @@ class ProjectsLocationsDataExchanges extends \Google\Service\Resource
     return $this->call('list', [$params], ListDataExchangesResponse::class);
   }
   /**
+   * Lists all subscriptions on a given Data Exchange or Listing.
+   * (dataExchanges.listSubscriptions)
+   *
+   * @param string $resource Required. Resource name of the requested target. This
+   * resource may be either a Listing or a DataExchange. e.g.
+   * projects/123/locations/US/dataExchanges/456 OR e.g.
+   * projects/123/locations/US/dataExchanges/456/listings/789
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool includeDeletedSubscriptions If selected, includes deleted
+   * subscriptions in the response (up to 63 days after deletion).
+   * @opt_param int pageSize The maximum number of results to return in a single
+   * response page.
+   * @opt_param string pageToken Page token, returned by a previous call.
+   * @return ListSharedResourceSubscriptionsResponse
+   */
+  public function listSubscriptions($resource, $optParams = [])
+  {
+    $params = ['resource' => $resource];
+    $params = array_merge($params, $optParams);
+    return $this->call('listSubscriptions', [$params], ListSharedResourceSubscriptionsResponse::class);
+  }
+  /**
    * Updates an existing data exchange. (dataExchanges.patch)
    *
    * @param string $name Output only. The resource name of the data exchange. e.g.
@@ -158,6 +184,22 @@ class ProjectsLocationsDataExchanges extends \Google\Service\Resource
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Creates a Subscription to a Data Exchange. This is a long-running operation
+   * as it will create one or more linked datasets. (dataExchanges.subscribe)
+   *
+   * @param string $name Required. Resource name of the Data Exchange. e.g.
+   * `projects/publisherproject/locations/US/dataExchanges/123`
+   * @param SubscribeDataExchangeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function subscribe($name, SubscribeDataExchangeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('subscribe', [$params], Operation::class);
   }
   /**
    * Returns the permissions that a caller has. (dataExchanges.testIamPermissions)

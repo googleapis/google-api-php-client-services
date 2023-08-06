@@ -17,7 +17,7 @@
 
 namespace Google\Service\AnalyticsHub;
 
-class SubscribeListingResponse extends \Google\Model
+class RefreshSubscriptionResponse extends \Google\Model
 {
   protected $subscriptionType = Subscription::class;
   protected $subscriptionDataType = '';
@@ -39,4 +39,4 @@ class SubscribeListingResponse extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SubscribeListingResponse::class, 'Google_Service_AnalyticsHub_SubscribeListingResponse');
+class_alias(RefreshSubscriptionResponse::class, 'Google_Service_AnalyticsHub_RefreshSubscriptionResponse');

@@ -17,26 +17,28 @@
 
 namespace Google\Service\AnalyticsHub;
 
-class SubscribeListingResponse extends \Google\Model
+class LinkedResource extends \Google\Model
 {
-  protected $subscriptionType = Subscription::class;
-  protected $subscriptionDataType = '';
+  /**
+   * @var string
+   */
+  public $linkedDataset;
 
   /**
-   * @param Subscription
+   * @param string
    */
-  public function setSubscription(Subscription $subscription)
+  public function setLinkedDataset($linkedDataset)
   {
-    $this->subscription = $subscription;
+    $this->linkedDataset = $linkedDataset;
   }
   /**
-   * @return Subscription
+   * @return string
    */
-  public function getSubscription()
+  public function getLinkedDataset()
   {
-    return $this->subscription;
+    return $this->linkedDataset;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SubscribeListingResponse::class, 'Google_Service_AnalyticsHub_SubscribeListingResponse');
+class_alias(LinkedResource::class, 'Google_Service_AnalyticsHub_LinkedResource');
