@@ -45,6 +45,7 @@ class CompetitiveVisibility extends \Google\Model
    * @var string
    */
   public $rank;
+  public $relativeVisibility;
   /**
    * @var string
    */
@@ -166,6 +167,14 @@ class CompetitiveVisibility extends \Google\Model
   public function getRank()
   {
     return $this->rank;
+  }
+  public function setRelativeVisibility($relativeVisibility)
+  {
+    $this->relativeVisibility = $relativeVisibility;
+  }
+  public function getRelativeVisibility()
+  {
+    return $this->relativeVisibility;
   }
   /**
    * @param string
