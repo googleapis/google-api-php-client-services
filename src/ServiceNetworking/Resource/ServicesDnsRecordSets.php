@@ -67,7 +67,7 @@ class ServicesDnsRecordSets extends \Google\Service\Resource
    * @opt_param string domain Required. The domain name of the zone containing the
    * recordset.
    * @opt_param string type Required. RecordSet Type eg. type='A'. See the list of
-   * [Supported DNS Types](https://dns.corp.google.com/docs/overview).
+   * [Supported DNS Types](https://cloud.google.com/dns/records/json-record).
    * @opt_param string zone Required. The name of the zone containing the record
    * set.
    * @return DnsRecordSet

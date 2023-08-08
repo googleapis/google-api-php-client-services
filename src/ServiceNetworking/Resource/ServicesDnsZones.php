@@ -18,7 +18,6 @@
 namespace Google\Service\ServiceNetworking\Resource;
 
 use Google\Service\ServiceNetworking\AddDnsZoneRequest;
-use Google\Service\ServiceNetworking\ListDnsZonesResponse;
 use Google\Service\ServiceNetworking\Operation;
 use Google\Service\ServiceNetworking\RemoveDnsZoneRequest;
 
@@ -50,28 +49,6 @@ class ServicesDnsZones extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('add', [$params], Operation::class);
-  }
-  /**
-   * * Service producers can use this method to retrieve a list of available DNS
-   * zones in the shared producer host project and the matching peering zones in
-   * the consumer project. * (dnsZones.listServicesDnsZones)
-   *
-   * @param string $parent Required. Parent resource identifying the connection
-   * which owns this collection of DNS zones in the format
-   * services/{service}/projects/{project}/global/networks/{network} Service: The
-   * service that is managing connectivity for the service producer's
-   * organization. For Google services that support this functionality, this value
-   * is `servicenetworking.googleapis.com`. Projects: the consumer project
-   * containing the consumer network. Network: The consumer network accessible
-   * from the tenant project.
-   * @param array $optParams Optional parameters.
-   * @return ListDnsZonesResponse
-   */
-  public function listServicesDnsZones($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ListDnsZonesResponse::class);
   }
   /**
    * Service producers can use this method to remove private DNS zones in the
