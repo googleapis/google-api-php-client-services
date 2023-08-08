@@ -57,7 +57,7 @@ class OrganizationsLocationsNotifications extends \Google\Service\Resource
    *
    * @param string $parent Required. The parent, which owns this collection of
    * notifications. Must be of the form
-   * "organizations/{organization}/locations/{location}".
+   * "organizations/{organization}/locations/{location}"
    * @param array $optParams Optional parameters.
    *
    * @opt_param string languageCode ISO code for requested localization language.
