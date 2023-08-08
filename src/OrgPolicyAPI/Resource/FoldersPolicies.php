@@ -72,7 +72,7 @@ class FoldersPolicies extends \Google\Service\Resource
    * is returned. The `etag` value can be used with `UpdatePolicy()` to update a
    * policy during read-modify-write. (policies.get)
    *
-   * @param string $name Required. Resource name of the policy. See `Policy` for
+   * @param string $name Required. Resource name of the policy. See Policy for
    * naming requirements.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudOrgpolicyV2Policy
@@ -91,8 +91,8 @@ class FoldersPolicies extends \Google\Service\Resource
    * hierarchy with 'under:' prefix will not be expanded.
    * (policies.getEffectivePolicy)
    *
-   * @param string $name Required. The effective policy to compute. See `Policy`
-   * for naming rules.
+   * @param string $name Required. The effective policy to compute. See Policy for
+   * naming requirements.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudOrgpolicyV2Policy
    */
@@ -136,12 +136,12 @@ class FoldersPolicies extends \Google\Service\Resource
    * (policies.patch)
    *
    * @param string $name Immutable. The resource name of the policy. Must be one
-   * of the following forms, where constraint_name is the name of the constraint
+   * of the following forms, where `constraint_name` is the name of the constraint
    * which this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
-   * "projects/123/policies/compute.disableSerialPortAccess". Note:
+   * `projects/123/policies/compute.disableSerialPortAccess`. Note:
    * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name
    * for API requests, but responses will return the name using the equivalent
    * project number.
