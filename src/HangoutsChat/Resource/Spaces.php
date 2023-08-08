@@ -249,7 +249,7 @@ class Spaces extends \Google\Service\Resource
    * membership](https://developers.google.com/chat/api/guides/v1/members/create).
    * If a DM already exists between two users, even when one user blocks the other
    * at the time a request is made, then the existing DM is returned. Spaces with
-   * threaded replies or guest access aren't supported. Requires [user
+   * threaded replies aren't supported. Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.spaces.create` or `chat.spaces` scope. (spaces.setup)
    *
