@@ -31,8 +31,8 @@ use Google\Service\AndroidPublisher\InappproductsListResponse;
 class Inappproducts extends \Google\Service\Resource
 {
   /**
-   * Deletes an in-app product (i.e. a managed product or a subscription). This
-   * method should no longer be used to delete subscriptions. See [this
+   * Deletes an in-app product (a managed product or a subscription). This method
+   * should no longer be used to delete subscriptions. See [this
    * article](https://android-developers.googleblog.com/2023/06/changes-to-google-
    * play-developer-api-june-2023.html) for more information.
    * (inappproducts.delete)
@@ -65,8 +65,8 @@ class Inappproducts extends \Google\Service\Resource
     return $this->call('get', [$params], InAppProduct::class);
   }
   /**
-   * Creates an in-app product (i.e. a managed product or a subscription). This
-   * method should no longer be used to create subscriptions. See [this
+   * Creates an in-app product (a managed product or a subscription). This method
+   * should no longer be used to create subscriptions. See [this
    * article](https://android-developers.googleblog.com/2023/06/changes-to-google-
    * play-developer-api-june-2023.html) for more information.
    * (inappproducts.insert)
@@ -115,8 +115,8 @@ class Inappproducts extends \Google\Service\Resource
     return $this->call('list', [$params], InappproductsListResponse::class);
   }
   /**
-   * Patches an in-app product (i.e. a managed product or a subscription). This
-   * method should no longer be used to update subscriptions. See [this
+   * Patches an in-app product (a managed product or a subscription). This method
+   * should no longer be used to update subscriptions. See [this
    * article](https://android-developers.googleblog.com/2023/06/changes-to-google-
    * play-developer-api-june-2023.html) for more information.
    * (inappproducts.patch)
@@ -139,8 +139,8 @@ class Inappproducts extends \Google\Service\Resource
     return $this->call('patch', [$params], InAppProduct::class);
   }
   /**
-   * Updates an in-app product (i.e. a managed product or a subscription). This
-   * method should no longer be used to update subscriptions. See [this
+   * Updates an in-app product (a managed product or a subscription). This method
+   * should no longer be used to update subscriptions. See [this
    * article](https://android-developers.googleblog.com/2023/06/changes-to-google-
    * play-developer-api-june-2023.html) for more information.
    * (inappproducts.update)
