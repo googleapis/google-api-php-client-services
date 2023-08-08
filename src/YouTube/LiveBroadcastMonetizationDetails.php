@@ -17,28 +17,26 @@
 
 namespace Google\Service\YouTube;
 
-class PlaylistStatus extends \Google\Model
+class LiveBroadcastMonetizationDetails extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $privacyStatus;
+  protected $cuepointScheduleType = CuepointSchedule::class;
+  protected $cuepointScheduleDataType = '';
 
   /**
-   * @param string
+   * @param CuepointSchedule
    */
-  public function setPrivacyStatus($privacyStatus)
+  public function setCuepointSchedule(CuepointSchedule $cuepointSchedule)
   {
-    $this->privacyStatus = $privacyStatus;
+    $this->cuepointSchedule = $cuepointSchedule;
   }
   /**
-   * @return string
+   * @return CuepointSchedule
    */
-  public function getPrivacyStatus()
+  public function getCuepointSchedule()
   {
-    return $this->privacyStatus;
+    return $this->cuepointSchedule;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PlaylistStatus::class, 'Google_Service_YouTube_PlaylistStatus');
+class_alias(LiveBroadcastMonetizationDetails::class, 'Google_Service_YouTube_LiveBroadcastMonetizationDetails');
