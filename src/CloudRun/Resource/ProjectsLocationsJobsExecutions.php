@@ -17,6 +17,7 @@
 
 namespace Google\Service\CloudRun\Resource;
 
+use Google\Service\CloudRun\GoogleCloudRunV2CancelExecutionRequest;
 use Google\Service\CloudRun\GoogleCloudRunV2Execution;
 use Google\Service\CloudRun\GoogleCloudRunV2ListExecutionsResponse;
 use Google\Service\CloudRun\GoogleLongrunningOperation;
@@ -31,6 +32,22 @@ use Google\Service\CloudRun\GoogleLongrunningOperation;
  */
 class ProjectsLocationsJobsExecutions extends \Google\Service\Resource
 {
+  /**
+   * Cancels an Execution. (executions.cancel)
+   *
+   * @param string $name Required. The name of the Execution to cancel. Format:
+   * projects/{project}/locations/{location}/jobs/{job}/executions/{execution},
+   * where {project} can be project id or number.
+   * @param GoogleCloudRunV2CancelExecutionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function cancel($name, GoogleCloudRunV2CancelExecutionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('cancel', [$params], GoogleLongrunningOperation::class);
+  }
   /**
    * Deletes an Execution. (executions.delete)
    *

@@ -119,6 +119,10 @@ class GoogleCloudRunV2Service extends \Google\Collection
   /**
    * @var string
    */
+  public $trafficTagsCleanupThreshold;
+  /**
+   * @var string
+   */
   public $uid;
   /**
    * @var string
@@ -506,6 +510,20 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public function getTrafficStatuses()
   {
     return $this->trafficStatuses;
+  }
+  /**
+   * @param string
+   */
+  public function setTrafficTagsCleanupThreshold($trafficTagsCleanupThreshold)
+  {
+    $this->trafficTagsCleanupThreshold = $trafficTagsCleanupThreshold;
+  }
+  /**
+   * @return string
+   */
+  public function getTrafficTagsCleanupThreshold()
+  {
+    return $this->trafficTagsCleanupThreshold;
   }
   /**
    * @param string
