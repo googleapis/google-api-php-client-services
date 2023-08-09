@@ -132,7 +132,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * unstarted runs before the update time will be skipped while already created
    * runs will NOT be paused or canceled. (schedules.patch)
    *
-   * @param string $name Output only. The resource name of the Schedule.
+   * @param string $name Immutable. The resource name of the Schedule.
    * @param GoogleCloudAiplatformV1Schedule $postBody
    * @param array $optParams Optional parameters.
    *

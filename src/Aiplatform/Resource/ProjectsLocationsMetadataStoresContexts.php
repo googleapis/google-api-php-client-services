@@ -189,7 +189,7 @@ class ProjectsLocationsMetadataStoresContexts extends \Google\Service\Resource
   /**
    * Updates a stored Context. (contexts.patch)
    *
-   * @param string $name Output only. The resource name of the Context.
+   * @param string $name Immutable. The resource name of the Context.
    * @param GoogleCloudAiplatformV1Context $postBody
    * @param array $optParams Optional parameters.
    *
