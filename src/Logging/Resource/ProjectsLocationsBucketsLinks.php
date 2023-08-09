@@ -60,12 +60,12 @@ class ProjectsLocationsBucketsLinks extends \Google\Service\Resource
    * Deletes a link. This will also delete the corresponding BigQuery linked
    * dataset. (links.delete)
    *
-   * @param string $name Required. The full resource name of the link to delete."p
-   * rojects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "or
-   * ganizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-   * K_ID" "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKE
-   * T_ID/links/LINK_ID"
-   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+   * @param string $name Required. The full resource name of the link to delete. "
+   * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK
+   * _ID]" "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
+   * T_ID]/links/[LINK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCAT
+   * ION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "folders/[FOLDER_ID]/locations/[
+   * LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
    * @param array $optParams Optional parameters.
    * @return Operation
    */
@@ -78,12 +78,12 @@ class ProjectsLocationsBucketsLinks extends \Google\Service\Resource
   /**
    * Gets a link. (links.get)
    *
-   * @param string $name Required. The resource name of the link:"projects/PROJECT
-   * _ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "organizations/ORG
-   * ANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "billingA
-   * ccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK
-   * _ID"
-   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+   * @param string $name Required. The resource name of the link: "projects/[PROJE
+   * CT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organiza
+   * tions/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+   * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets
+   * /[BUCKET_ID]/links/[LINK_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/bu
+   * ckets/[BUCKET_ID]/links/[LINK_ID]"
    * @param array $optParams Optional parameters.
    * @return Link
    */
@@ -97,10 +97,10 @@ class ProjectsLocationsBucketsLinks extends \Google\Service\Resource
    * Lists links. (links.listProjectsLocationsBucketsLinks)
    *
    * @param string $parent Required. The parent resource whose links are to be
-   * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
-   * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
-   * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
-   * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID"
+   * listed: "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+   * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+   * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+   * _ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of results to return

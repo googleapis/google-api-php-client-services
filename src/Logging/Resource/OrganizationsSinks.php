@@ -157,7 +157,7 @@ class OrganizationsSinks extends \Google\Service\Resource
    * false or both true, then there is no change to the sink's writer_identity. If
    * the old value is false and the new value is true, then writer_identity is
    * changed to a service agent (https://cloud.google.com/iam/docs/service-
-   * account-types#service-agents)) owned by Cloud Logging. It is an error if the
+   * account-types#service-agents) owned by Cloud Logging. It is an error if the
    * old value is true and the new value is set to false or defaulted to false.
    * @opt_param string updateMask Optional. Field mask that specifies the fields
    * in sink that need an update. A sink field will be overwritten if, and only
@@ -206,7 +206,7 @@ class OrganizationsSinks extends \Google\Service\Resource
    * false or both true, then there is no change to the sink's writer_identity. If
    * the old value is false and the new value is true, then writer_identity is
    * changed to a service agent (https://cloud.google.com/iam/docs/service-
-   * account-types#service-agents)) owned by Cloud Logging. It is an error if the
+   * account-types#service-agents) owned by Cloud Logging. It is an error if the
    * old value is true and the new value is set to false or defaulted to false.
    * @opt_param string updateMask Optional. Field mask that specifies the fields
    * in sink that need an update. A sink field will be overwritten if, and only
