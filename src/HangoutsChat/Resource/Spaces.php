@@ -35,8 +35,10 @@ class Spaces extends \Google\Service\Resource
   /**
    * Creates a named space. Spaces grouped by topics aren't supported. For an
    * example, see [Create a
-   * space](https://developers.google.com/chat/api/guides/v1/spaces/create).
-   * Requires [user
+   * space](https://developers.google.com/chat/api/guides/v1/spaces/create). If
+   * you receive the error message `ALREADY_EXISTS` when creating a space, try a
+   * different `displayName`. An existing space within the Google Workspace
+   * organization might already use this display name. Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.spaces.create` or `chat.spaces` scope. (spaces.create)
    *
@@ -188,8 +190,11 @@ class Spaces extends \Google\Service\Resource
   }
   /**
    * Updates a space. For an example, see [Update a
-   * space](https://developers.google.com/chat/api/guides/v1/spaces/update).
-   * Requires [user
+   * space](https://developers.google.com/chat/api/guides/v1/spaces/update). If
+   * you're updating the `displayName` field and receive the error message
+   * `ALREADY_EXISTS`, try a different display name.. An existing space within the
+   * Google Workspace organization might already use this display name. Requires
+   * [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.spaces` scope. (spaces.patch)
    *
@@ -203,13 +208,16 @@ class Spaces extends \Google\Service\Resource
    * `SPACE` type, or when also including the `space_type` mask to change a
    * `GROUP_CHAT` space type to `SPACE`. Trying to update the display name of a
    * `GROUP_CHAT` or a `DIRECT_MESSAGE` space results in an invalid argument
-   * error.) - `space_type` (Only supports changing a `GROUP_CHAT` space type to
-   * `SPACE`. Include `display_name` together with `space_type` in the update mask
-   * and ensure that the specified space has a non-empty display name and the
-   * `SPACE` space type. Including the `space_type` mask and the `SPACE` type in
-   * the specified space when updating the display name is optional if the
-   * existing space already has the `SPACE` type. Trying to update the space type
-   * in other ways results in an invalid argument error). - `space_details` -
+   * error. If you receive the error message `ALREADY_EXISTS` when updating the
+   * `displayName`, try a different `displayName`. An existing space within the
+   * Google Workspace organization might already use this display name.) -
+   * `space_type` (Only supports changing a `GROUP_CHAT` space type to `SPACE`.
+   * Include `display_name` together with `space_type` in the update mask and
+   * ensure that the specified space has a non-empty display name and the `SPACE`
+   * space type. Including the `space_type` mask and the `SPACE` type in the
+   * specified space when updating the display name is optional if the existing
+   * space already has the `SPACE` type. Trying to update the space type in other
+   * ways results in an invalid argument error). - `space_details` -
    * `space_history_state` (Supports [turning history on or off for the
    * space](https://support.google.com/chat/answer/7664687) if [the organization
    * allows users to change their history
@@ -249,7 +257,10 @@ class Spaces extends \Google\Service\Resource
    * membership](https://developers.google.com/chat/api/guides/v1/members/create).
    * If a DM already exists between two users, even when one user blocks the other
    * at the time a request is made, then the existing DM is returned. Spaces with
-   * threaded replies aren't supported. Requires [user
+   * threaded replies aren't supported. If you receive the error message
+   * `ALREADY_EXISTS` when setting up a space, try a different `displayName`. An
+   * existing space within the Google Workspace organization might already use
+   * this display name. Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) and
    * the `chat.spaces.create` or `chat.spaces` scope. (spaces.setup)
    *
