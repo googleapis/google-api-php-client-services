@@ -37,6 +37,8 @@ class UsageLogEvent extends \Google\Model
   protected $cryptoSelfTestCompletedEventDataType = '';
   protected $dnsEventType = DnsEvent::class;
   protected $dnsEventDataType = '';
+  protected $enrollmentCompleteEventType = EnrollmentCompleteEvent::class;
+  protected $enrollmentCompleteEventDataType = '';
   /**
    * @var string
    */
@@ -217,6 +219,20 @@ class UsageLogEvent extends \Google\Model
   public function getDnsEvent()
   {
     return $this->dnsEvent;
+  }
+  /**
+   * @param EnrollmentCompleteEvent
+   */
+  public function setEnrollmentCompleteEvent(EnrollmentCompleteEvent $enrollmentCompleteEvent)
+  {
+    $this->enrollmentCompleteEvent = $enrollmentCompleteEvent;
+  }
+  /**
+   * @return EnrollmentCompleteEvent
+   */
+  public function getEnrollmentCompleteEvent()
+  {
+    return $this->enrollmentCompleteEvent;
   }
   /**
    * @param string

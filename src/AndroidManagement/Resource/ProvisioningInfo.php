@@ -30,8 +30,8 @@ use Google\Service\AndroidManagement\ProvisioningInfo as ProvisioningInfoModel;
 class ProvisioningInfo extends \Google\Service\Resource
 {
   /**
-   * Get the device provisioning info by the identifier provided via the sign-in
-   * url. (provisioningInfo.get)
+   * Get the device provisioning information by the identifier provided in the
+   * sign-in url. (provisioningInfo.get)
    *
    * @param string $name Required. The identifier that Android Device Policy
    * passes to the 3P sign-in page in the form of
