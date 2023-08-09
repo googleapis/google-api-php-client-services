@@ -42,7 +42,11 @@ class ProjectsEvents extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string groupId Required. The group for which events shall be
-   * returned.
+   * returned. The `group_id` is a unique identifier for a particular error group.
+   * The identifier is derived from key parts of the error-log content and is
+   * treated as Service Data. For information about how Service Data is handled,
+   * see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
+   * privacy-notice).
    * @opt_param int pageSize Optional. The maximum number of results to return per
    * response.
    * @opt_param string pageToken Optional. A `next_page_token` provided by a
