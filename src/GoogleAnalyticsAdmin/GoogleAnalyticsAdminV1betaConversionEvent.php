@@ -22,6 +22,10 @@ class GoogleAnalyticsAdminV1betaConversionEvent extends \Google\Model
   /**
    * @var string
    */
+  public $countingMethod;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var bool
@@ -40,6 +44,20 @@ class GoogleAnalyticsAdminV1betaConversionEvent extends \Google\Model
    */
   public $name;
 
+  /**
+   * @param string
+   */
+  public function setCountingMethod($countingMethod)
+  {
+    $this->countingMethod = $countingMethod;
+  }
+  /**
+   * @return string
+   */
+  public function getCountingMethod()
+  {
+    return $this->countingMethod;
+  }
   /**
    * @param string
    */
