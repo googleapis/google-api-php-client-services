@@ -61,10 +61,6 @@ class CompositeDocIndexingInfo extends \Google\Collection
    */
   public $indexingTs;
   /**
-   * @var bool
-   */
-  public $isSiblingDeletion;
-  /**
    * @var string
    */
   public $noLongerCanonicalTimestamp;
@@ -250,20 +246,6 @@ class CompositeDocIndexingInfo extends \Google\Collection
   public function getIndexingTs()
   {
     return $this->indexingTs;
-  }
-  /**
-   * @param bool
-   */
-  public function setIsSiblingDeletion($isSiblingDeletion)
-  {
-    $this->isSiblingDeletion = $isSiblingDeletion;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsSiblingDeletion()
-  {
-    return $this->isSiblingDeletion;
   }
   /**
    * @param string

@@ -108,6 +108,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isSageDisabledIntent;
+  /**
+   * @var bool
+   */
   public $isSageIntent;
   /**
    * @var bool
@@ -508,6 +512,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsPodcastIntent()
   {
     return $this->isPodcastIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsSageDisabledIntent($isSageDisabledIntent)
+  {
+    $this->isSageDisabledIntent = $isSageDisabledIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsSageDisabledIntent()
+  {
+    return $this->isSageDisabledIntent;
   }
   /**
    * @param bool
