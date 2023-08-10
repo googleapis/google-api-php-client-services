@@ -51,6 +51,10 @@ class InstanceGroupConfig extends \Google\Collection
   /**
    * @var int
    */
+  public $minNumInstances;
+  /**
+   * @var int
+   */
   public $numInstances;
   /**
    * @var string
@@ -182,6 +186,20 @@ class InstanceGroupConfig extends \Google\Collection
   public function getMinCpuPlatform()
   {
     return $this->minCpuPlatform;
+  }
+  /**
+   * @param int
+   */
+  public function setMinNumInstances($minNumInstances)
+  {
+    $this->minNumInstances = $minNumInstances;
+  }
+  /**
+   * @return int
+   */
+  public function getMinNumInstances()
+  {
+    return $this->minNumInstances;
   }
   /**
    * @param int

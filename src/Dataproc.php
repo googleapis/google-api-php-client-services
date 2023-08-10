@@ -579,6 +579,10 @@ class Dataproc extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'gracefulTerminationTimeout' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
