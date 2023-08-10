@@ -1462,6 +1462,51 @@ class CloudHealthcare extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'conditionalDelete' => [
+              'path' => 'v1/{+parent}/fhir/{+type}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'type' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'conditionalPatch' => [
+              'path' => 'v1/{+parent}/fhir/{+type}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'type' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'conditionalUpdate' => [
+              'path' => 'v1/{+parent}/fhir/{+type}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'type' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'create' => [
               'path' => 'v1/{+parent}/fhir/{+type}',
               'httpMethod' => 'POST',
