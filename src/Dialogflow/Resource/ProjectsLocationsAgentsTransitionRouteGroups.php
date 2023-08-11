@@ -26,10 +26,10 @@ use Google\Service\Dialogflow\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $dialogflowService = new Google\Service\Dialogflow(...);
- *   $transitionRouteGroups = $dialogflowService->projects_locations_agents_flows_transitionRouteGroups;
+ *   $transitionRouteGroups = $dialogflowService->projects_locations_agents_transitionRouteGroups;
  *  </code>
  */
-class ProjectsLocationsAgentsFlowsTransitionRouteGroups extends \Google\Service\Resource
+class ProjectsLocationsAgentsTransitionRouteGroups extends \Google\Service\Resource
 {
   /**
    * Creates an TransitionRouteGroup in the specified flow. Note: You should
@@ -110,7 +110,7 @@ class ProjectsLocationsAgentsFlowsTransitionRouteGroups extends \Google\Service\
   }
   /**
    * Returns the list of all transition route groups in the specified flow.
-   * (transitionRouteGroups.listProjectsLocationsAgentsFlowsTransitionRouteGroups)
+   * (transitionRouteGroups.listProjectsLocationsAgentsTransitionRouteGroups)
    *
    * @param string $parent Required. The flow to list all transition route groups
    * for. Format: `projects//locations//agents//flows/` or
@@ -131,7 +131,7 @@ class ProjectsLocationsAgentsFlowsTransitionRouteGroups extends \Google\Service\
    * previous list request.
    * @return GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse
    */
-  public function listProjectsLocationsAgentsFlowsTransitionRouteGroups($parent, $optParams = [])
+  public function listProjectsLocationsAgentsTransitionRouteGroups($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -170,4 +170,4 @@ class ProjectsLocationsAgentsFlowsTransitionRouteGroups extends \Google\Service\
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsAgentsFlowsTransitionRouteGroups::class, 'Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsFlowsTransitionRouteGroups');
+class_alias(ProjectsLocationsAgentsTransitionRouteGroups::class, 'Google_Service_Dialogflow_Resource_ProjectsLocationsAgentsTransitionRouteGroups');
