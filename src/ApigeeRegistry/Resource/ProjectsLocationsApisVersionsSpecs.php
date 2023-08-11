@@ -262,7 +262,8 @@ class ProjectsLocationsApisVersionsSpecs extends \Google\Service\Resource
    * Adds a tag to a specified revision of a spec. (specs.tagRevision)
    *
    * @param string $name Required. The name of the spec to be tagged, including
-   * the revision ID.
+   * the revision ID is optional. If a revision is not specified, it will tag the
+   * latest revision.
    * @param TagApiSpecRevisionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ApiSpec
