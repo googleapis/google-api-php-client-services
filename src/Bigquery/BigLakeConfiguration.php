@@ -17,80 +17,82 @@
 
 namespace Google\Service\Bigquery;
 
-class IndexUnusedReason extends \Google\Model
+class BigLakeConfiguration extends \Google\Model
 {
-  protected $baseTableType = TableReference::class;
-  protected $baseTableDataType = '';
   /**
    * @var string
    */
-  public $code;
+  public $connectionId;
   /**
    * @var string
    */
-  public $indexName;
+  public $fileFormat;
   /**
    * @var string
    */
-  public $message;
+  public $storageUri;
+  /**
+   * @var string
+   */
+  public $tableFormat;
 
   /**
-   * @param TableReference
-   */
-  public function setBaseTable(TableReference $baseTable)
-  {
-    $this->baseTable = $baseTable;
-  }
-  /**
-   * @return TableReference
-   */
-  public function getBaseTable()
-  {
-    return $this->baseTable;
-  }
-  /**
    * @param string
    */
-  public function setCode($code)
+  public function setConnectionId($connectionId)
   {
-    $this->code = $code;
+    $this->connectionId = $connectionId;
   }
   /**
    * @return string
    */
-  public function getCode()
+  public function getConnectionId()
   {
-    return $this->code;
+    return $this->connectionId;
   }
   /**
    * @param string
    */
-  public function setIndexName($indexName)
+  public function setFileFormat($fileFormat)
   {
-    $this->indexName = $indexName;
+    $this->fileFormat = $fileFormat;
   }
   /**
    * @return string
    */
-  public function getIndexName()
+  public function getFileFormat()
   {
-    return $this->indexName;
+    return $this->fileFormat;
   }
   /**
    * @param string
    */
-  public function setMessage($message)
+  public function setStorageUri($storageUri)
   {
-    $this->message = $message;
+    $this->storageUri = $storageUri;
   }
   /**
    * @return string
    */
-  public function getMessage()
+  public function getStorageUri()
   {
-    return $this->message;
+    return $this->storageUri;
+  }
+  /**
+   * @param string
+   */
+  public function setTableFormat($tableFormat)
+  {
+    $this->tableFormat = $tableFormat;
+  }
+  /**
+   * @return string
+   */
+  public function getTableFormat()
+  {
+    return $this->tableFormat;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(IndexUnusedReason::class, 'Google_Service_Bigquery_IndexUnusedReason');
+class_alias(BigLakeConfiguration::class, 'Google_Service_Bigquery_BigLakeConfiguration');

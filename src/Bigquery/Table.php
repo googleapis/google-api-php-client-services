@@ -19,6 +19,8 @@ namespace Google\Service\Bigquery;
 
 class Table extends \Google\Model
 {
+  protected $biglakeConfigurationType = BigLakeConfiguration::class;
+  protected $biglakeConfigurationDataType = '';
   protected $cloneDefinitionType = CloneDefinition::class;
   protected $cloneDefinitionDataType = '';
   protected $clusteringType = Clustering::class;
@@ -160,6 +162,20 @@ class Table extends \Google\Model
   protected $viewType = ViewDefinition::class;
   protected $viewDataType = '';
 
+  /**
+   * @param BigLakeConfiguration
+   */
+  public function setBiglakeConfiguration(BigLakeConfiguration $biglakeConfiguration)
+  {
+    $this->biglakeConfiguration = $biglakeConfiguration;
+  }
+  /**
+   * @return BigLakeConfiguration
+   */
+  public function getBiglakeConfiguration()
+  {
+    return $this->biglakeConfiguration;
+  }
   /**
    * @param CloneDefinition
    */

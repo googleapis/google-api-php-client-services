@@ -62,6 +62,10 @@ class TrainingOptions extends \Google\Collection
    */
   public $calculatePValues;
   /**
+   * @var string
+   */
+  public $categoryEncodingMethod;
+  /**
    * @var bool
    */
   public $cleanSpikesAndDips;
@@ -122,6 +126,10 @@ class TrainingOptions extends \Google\Collection
    * @var string
    */
   public $holidayRegion;
+  /**
+   * @var string[]
+   */
+  public $holidayRegions;
   /**
    * @var string
    */
@@ -450,6 +458,20 @@ class TrainingOptions extends \Google\Collection
     return $this->calculatePValues;
   }
   /**
+   * @param string
+   */
+  public function setCategoryEncodingMethod($categoryEncodingMethod)
+  {
+    $this->categoryEncodingMethod = $categoryEncodingMethod;
+  }
+  /**
+   * @return string
+   */
+  public function getCategoryEncodingMethod()
+  {
+    return $this->categoryEncodingMethod;
+  }
+  /**
    * @param bool
    */
   public function setCleanSpikesAndDips($cleanSpikesAndDips)
@@ -684,6 +706,20 @@ class TrainingOptions extends \Google\Collection
   public function getHolidayRegion()
   {
     return $this->holidayRegion;
+  }
+  /**
+   * @param string[]
+   */
+  public function setHolidayRegions($holidayRegions)
+  {
+    $this->holidayRegions = $holidayRegions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getHolidayRegions()
+  {
+    return $this->holidayRegions;
   }
   /**
    * @param string
