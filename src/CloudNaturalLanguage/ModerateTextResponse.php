@@ -20,9 +20,45 @@ namespace Google\Service\CloudNaturalLanguage;
 class ModerateTextResponse extends \Google\Collection
 {
   protected $collection_key = 'moderationCategories';
+  /**
+   * @var string
+   */
+  public $languageCode;
+  /**
+   * @var bool
+   */
+  public $languageSupported;
   protected $moderationCategoriesType = ClassificationCategory::class;
   protected $moderationCategoriesDataType = 'array';
 
+  /**
+   * @param string
+   */
+  public function setLanguageCode($languageCode)
+  {
+    $this->languageCode = $languageCode;
+  }
+  /**
+   * @return string
+   */
+  public function getLanguageCode()
+  {
+    return $this->languageCode;
+  }
+  /**
+   * @param bool
+   */
+  public function setLanguageSupported($languageSupported)
+  {
+    $this->languageSupported = $languageSupported;
+  }
+  /**
+   * @return bool
+   */
+  public function getLanguageSupported()
+  {
+    return $this->languageSupported;
+  }
   /**
    * @param ClassificationCategory[]
    */

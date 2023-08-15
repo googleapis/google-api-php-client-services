@@ -19,7 +19,7 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class AnnotateTextResponse extends \Google\Collection
 {
-  protected $collection_key = 'tokens';
+  protected $collection_key = 'sentences';
   protected $categoriesType = ClassificationCategory::class;
   protected $categoriesDataType = 'array';
   protected $documentSentimentType = Sentiment::class;
@@ -29,13 +29,15 @@ class AnnotateTextResponse extends \Google\Collection
   /**
    * @var string
    */
-  public $language;
+  public $languageCode;
+  /**
+   * @var bool
+   */
+  public $languageSupported;
   protected $moderationCategoriesType = ClassificationCategory::class;
   protected $moderationCategoriesDataType = 'array';
   protected $sentencesType = Sentence::class;
   protected $sentencesDataType = 'array';
-  protected $tokensType = Token::class;
-  protected $tokensDataType = 'array';
 
   /**
    * @param ClassificationCategory[]
@@ -82,16 +84,30 @@ class AnnotateTextResponse extends \Google\Collection
   /**
    * @param string
    */
-  public function setLanguage($language)
+  public function setLanguageCode($languageCode)
   {
-    $this->language = $language;
+    $this->languageCode = $languageCode;
   }
   /**
    * @return string
    */
-  public function getLanguage()
+  public function getLanguageCode()
   {
-    return $this->language;
+    return $this->languageCode;
+  }
+  /**
+   * @param bool
+   */
+  public function setLanguageSupported($languageSupported)
+  {
+    $this->languageSupported = $languageSupported;
+  }
+  /**
+   * @return bool
+   */
+  public function getLanguageSupported()
+  {
+    return $this->languageSupported;
   }
   /**
    * @param ClassificationCategory[]
@@ -120,20 +136,6 @@ class AnnotateTextResponse extends \Google\Collection
   public function getSentences()
   {
     return $this->sentences;
-  }
-  /**
-   * @param Token[]
-   */
-  public function setTokens($tokens)
-  {
-    $this->tokens = $tokens;
-  }
-  /**
-   * @return Token[]
-   */
-  public function getTokens()
-  {
-    return $this->tokens;
   }
 }
 

@@ -19,12 +19,8 @@ namespace Google\Service\CloudNaturalLanguage\Resource;
 
 use Google\Service\CloudNaturalLanguage\AnalyzeEntitiesRequest;
 use Google\Service\CloudNaturalLanguage\AnalyzeEntitiesResponse;
-use Google\Service\CloudNaturalLanguage\AnalyzeEntitySentimentRequest;
-use Google\Service\CloudNaturalLanguage\AnalyzeEntitySentimentResponse;
 use Google\Service\CloudNaturalLanguage\AnalyzeSentimentRequest;
 use Google\Service\CloudNaturalLanguage\AnalyzeSentimentResponse;
-use Google\Service\CloudNaturalLanguage\AnalyzeSyntaxRequest;
-use Google\Service\CloudNaturalLanguage\AnalyzeSyntaxResponse;
 use Google\Service\CloudNaturalLanguage\AnnotateTextRequest;
 use Google\Service\CloudNaturalLanguage\AnnotateTextResponse;
 use Google\Service\CloudNaturalLanguage\ClassifyTextRequest;
@@ -44,7 +40,7 @@ class Documents extends \Google\Service\Resource
 {
   /**
    * Finds named entities (currently proper names and common nouns) in the text
-   * along with entity types, salience, mentions for each entity, and other
+   * along with entity types, probability, mentions for each entity, and other
    * properties. (documents.analyzeEntities)
    *
    * @param AnalyzeEntitiesRequest $postBody
@@ -56,21 +52,6 @@ class Documents extends \Google\Service\Resource
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('analyzeEntities', [$params], AnalyzeEntitiesResponse::class);
-  }
-  /**
-   * Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment
-   * associated with each entity and its mentions.
-   * (documents.analyzeEntitySentiment)
-   *
-   * @param AnalyzeEntitySentimentRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return AnalyzeEntitySentimentResponse
-   */
-  public function analyzeEntitySentiment(AnalyzeEntitySentimentRequest $postBody, $optParams = [])
-  {
-    $params = ['postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('analyzeEntitySentiment', [$params], AnalyzeEntitySentimentResponse::class);
   }
   /**
    * Analyzes the sentiment of the provided text. (documents.analyzeSentiment)
@@ -86,23 +67,7 @@ class Documents extends \Google\Service\Resource
     return $this->call('analyzeSentiment', [$params], AnalyzeSentimentResponse::class);
   }
   /**
-   * Analyzes the syntax of the text and provides sentence boundaries and
-   * tokenization along with part of speech tags, dependency trees, and other
-   * properties. (documents.analyzeSyntax)
-   *
-   * @param AnalyzeSyntaxRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return AnalyzeSyntaxResponse
-   */
-  public function analyzeSyntax(AnalyzeSyntaxRequest $postBody, $optParams = [])
-  {
-    $params = ['postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('analyzeSyntax', [$params], AnalyzeSyntaxResponse::class);
-  }
-  /**
-   * A convenience method that provides all the features that analyzeSentiment,
-   * analyzeEntities, and analyzeSyntax provide in one call.
+   * A convenience method that provides all features in one call.
    * (documents.annotateText)
    *
    * @param AnnotateTextRequest $postBody
