@@ -20,6 +20,8 @@ namespace Google\Service\PaymentsResellerSubscription;
 class GoogleCloudPaymentsResellerSubscriptionV1Product extends \Google\Collection
 {
   protected $collection_key = 'titles';
+  protected $finiteBillingCycleDetailsType = GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails::class;
+  protected $finiteBillingCycleDetailsDataType = '';
   /**
    * @var string
    */
@@ -35,6 +37,20 @@ class GoogleCloudPaymentsResellerSubscriptionV1Product extends \Google\Collectio
   protected $titlesType = GoogleTypeLocalizedText::class;
   protected $titlesDataType = 'array';
 
+  /**
+   * @param GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails
+   */
+  public function setFiniteBillingCycleDetails(GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails $finiteBillingCycleDetails)
+  {
+    $this->finiteBillingCycleDetails = $finiteBillingCycleDetails;
+  }
+  /**
+   * @return GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails
+   */
+  public function getFiniteBillingCycleDetails()
+  {
+    return $this->finiteBillingCycleDetails;
+  }
   /**
    * @param string
    */
