@@ -4,7 +4,6 @@ composer.lock
 # Ignore files with casing conflicts
 src/Compute/HTTPHealthCheck.php
 src/Compute/HTTPSHealthCheck.php
-src/Baremetalsolution/Resource/ProjectsLocationsNfsshares.php
 
 # Python for generator
 *.pyc
