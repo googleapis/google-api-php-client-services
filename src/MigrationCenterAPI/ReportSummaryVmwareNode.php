@@ -17,27 +17,28 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class RunningProcessList extends \Google\Collection
+class ReportSummaryVmwareNode extends \Google\Model
 {
-  protected $collection_key = 'entries';
-  protected $entriesType = RunningProcess::class;
-  protected $entriesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $code;
 
   /**
-   * @param RunningProcess[]
+   * @param string
    */
-  public function setEntries($entries)
+  public function setCode($code)
   {
-    $this->entries = $entries;
+    $this->code = $code;
   }
   /**
-   * @return RunningProcess[]
+   * @return string
    */
-  public function getEntries()
+  public function getCode()
   {
-    return $this->entries;
+    return $this->code;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RunningProcessList::class, 'Google_Service_MigrationCenterAPI_RunningProcessList');
+class_alias(ReportSummaryVmwareNode::class, 'Google_Service_MigrationCenterAPI_ReportSummaryVmwareNode');

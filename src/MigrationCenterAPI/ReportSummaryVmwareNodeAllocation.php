@@ -17,82 +17,62 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class VmwareDiskConfig extends \Google\Model
+class ReportSummaryVmwareNodeAllocation extends \Google\Model
 {
   /**
    * @var string
    */
-  public $backingType;
+  public $allocatedAssetCount;
   /**
    * @var string
    */
-  public $rdmCompatibility;
-  /**
-   * @var bool
-   */
-  public $shared;
-  /**
-   * @var string
-   */
-  public $vmdkMode;
+  public $nodeCount;
+  protected $vmwareNodeType = ReportSummaryVmwareNode::class;
+  protected $vmwareNodeDataType = '';
 
   /**
    * @param string
    */
-  public function setBackingType($backingType)
+  public function setAllocatedAssetCount($allocatedAssetCount)
   {
-    $this->backingType = $backingType;
+    $this->allocatedAssetCount = $allocatedAssetCount;
   }
   /**
    * @return string
    */
-  public function getBackingType()
+  public function getAllocatedAssetCount()
   {
-    return $this->backingType;
+    return $this->allocatedAssetCount;
   }
   /**
    * @param string
    */
-  public function setRdmCompatibility($rdmCompatibility)
+  public function setNodeCount($nodeCount)
   {
-    $this->rdmCompatibility = $rdmCompatibility;
+    $this->nodeCount = $nodeCount;
   }
   /**
    * @return string
    */
-  public function getRdmCompatibility()
+  public function getNodeCount()
   {
-    return $this->rdmCompatibility;
+    return $this->nodeCount;
   }
   /**
-   * @param bool
+   * @param ReportSummaryVmwareNode
    */
-  public function setShared($shared)
+  public function setVmwareNode(ReportSummaryVmwareNode $vmwareNode)
   {
-    $this->shared = $shared;
+    $this->vmwareNode = $vmwareNode;
   }
   /**
-   * @return bool
+   * @return ReportSummaryVmwareNode
    */
-  public function getShared()
+  public function getVmwareNode()
   {
-    return $this->shared;
-  }
-  /**
-   * @param string
-   */
-  public function setVmdkMode($vmdkMode)
-  {
-    $this->vmdkMode = $vmdkMode;
-  }
-  /**
-   * @return string
-   */
-  public function getVmdkMode()
-  {
-    return $this->vmdkMode;
+    return $this->vmwareNode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmwareDiskConfig::class, 'Google_Service_MigrationCenterAPI_VmwareDiskConfig');
+class_alias(ReportSummaryVmwareNodeAllocation::class, 'Google_Service_MigrationCenterAPI_ReportSummaryVmwareNodeAllocation');

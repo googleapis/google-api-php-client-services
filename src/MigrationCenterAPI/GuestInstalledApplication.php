@@ -22,15 +22,15 @@ class GuestInstalledApplication extends \Google\Model
   /**
    * @var string
    */
-  public $name;
+  public $applicationName;
+  /**
+   * @var string
+   */
+  public $installTime;
   /**
    * @var string
    */
   public $path;
-  /**
-   * @var string
-   */
-  public $time;
   /**
    * @var string
    */
@@ -43,16 +43,30 @@ class GuestInstalledApplication extends \Google\Model
   /**
    * @param string
    */
-  public function setName($name)
+  public function setApplicationName($applicationName)
   {
-    $this->name = $name;
+    $this->applicationName = $applicationName;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getApplicationName()
   {
-    return $this->name;
+    return $this->applicationName;
+  }
+  /**
+   * @param string
+   */
+  public function setInstallTime($installTime)
+  {
+    $this->installTime = $installTime;
+  }
+  /**
+   * @return string
+   */
+  public function getInstallTime()
+  {
+    return $this->installTime;
   }
   /**
    * @param string
@@ -67,20 +81,6 @@ class GuestInstalledApplication extends \Google\Model
   public function getPath()
   {
     return $this->path;
-  }
-  /**
-   * @param string
-   */
-  public function setTime($time)
-  {
-    $this->time = $time;
-  }
-  /**
-   * @return string
-   */
-  public function getTime()
-  {
-    return $this->time;
   }
   /**
    * @param string

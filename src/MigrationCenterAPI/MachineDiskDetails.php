@@ -17,82 +17,62 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class VmwareDiskConfig extends \Google\Model
+class MachineDiskDetails extends \Google\Model
 {
+  protected $disksType = DiskEntryList::class;
+  protected $disksDataType = '';
   /**
    * @var string
    */
-  public $backingType;
+  public $totalCapacityBytes;
   /**
    * @var string
    */
-  public $rdmCompatibility;
-  /**
-   * @var bool
-   */
-  public $shared;
-  /**
-   * @var string
-   */
-  public $vmdkMode;
+  public $totalFreeBytes;
 
   /**
-   * @param string
+   * @param DiskEntryList
    */
-  public function setBackingType($backingType)
+  public function setDisks(DiskEntryList $disks)
   {
-    $this->backingType = $backingType;
+    $this->disks = $disks;
   }
   /**
-   * @return string
+   * @return DiskEntryList
    */
-  public function getBackingType()
+  public function getDisks()
   {
-    return $this->backingType;
-  }
-  /**
-   * @param string
-   */
-  public function setRdmCompatibility($rdmCompatibility)
-  {
-    $this->rdmCompatibility = $rdmCompatibility;
-  }
-  /**
-   * @return string
-   */
-  public function getRdmCompatibility()
-  {
-    return $this->rdmCompatibility;
-  }
-  /**
-   * @param bool
-   */
-  public function setShared($shared)
-  {
-    $this->shared = $shared;
-  }
-  /**
-   * @return bool
-   */
-  public function getShared()
-  {
-    return $this->shared;
+    return $this->disks;
   }
   /**
    * @param string
    */
-  public function setVmdkMode($vmdkMode)
+  public function setTotalCapacityBytes($totalCapacityBytes)
   {
-    $this->vmdkMode = $vmdkMode;
+    $this->totalCapacityBytes = $totalCapacityBytes;
   }
   /**
    * @return string
    */
-  public function getVmdkMode()
+  public function getTotalCapacityBytes()
   {
-    return $this->vmdkMode;
+    return $this->totalCapacityBytes;
+  }
+  /**
+   * @param string
+   */
+  public function setTotalFreeBytes($totalFreeBytes)
+  {
+    $this->totalFreeBytes = $totalFreeBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalFreeBytes()
+  {
+    return $this->totalFreeBytes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmwareDiskConfig::class, 'Google_Service_MigrationCenterAPI_VmwareDiskConfig');
+class_alias(MachineDiskDetails::class, 'Google_Service_MigrationCenterAPI_MachineDiskDetails');

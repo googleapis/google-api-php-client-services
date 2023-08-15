@@ -17,82 +17,65 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class VmwareDiskConfig extends \Google\Model
+class GenericInsight extends \Google\Collection
 {
+  protected $collection_key = 'additionalInformation';
+  /**
+   * @var string[]
+   */
+  public $additionalInformation;
   /**
    * @var string
    */
-  public $backingType;
+  public $defaultMessage;
   /**
    * @var string
    */
-  public $rdmCompatibility;
-  /**
-   * @var bool
-   */
-  public $shared;
-  /**
-   * @var string
-   */
-  public $vmdkMode;
+  public $messageId;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setBackingType($backingType)
+  public function setAdditionalInformation($additionalInformation)
   {
-    $this->backingType = $backingType;
+    $this->additionalInformation = $additionalInformation;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getBackingType()
+  public function getAdditionalInformation()
   {
-    return $this->backingType;
-  }
-  /**
-   * @param string
-   */
-  public function setRdmCompatibility($rdmCompatibility)
-  {
-    $this->rdmCompatibility = $rdmCompatibility;
-  }
-  /**
-   * @return string
-   */
-  public function getRdmCompatibility()
-  {
-    return $this->rdmCompatibility;
-  }
-  /**
-   * @param bool
-   */
-  public function setShared($shared)
-  {
-    $this->shared = $shared;
-  }
-  /**
-   * @return bool
-   */
-  public function getShared()
-  {
-    return $this->shared;
+    return $this->additionalInformation;
   }
   /**
    * @param string
    */
-  public function setVmdkMode($vmdkMode)
+  public function setDefaultMessage($defaultMessage)
   {
-    $this->vmdkMode = $vmdkMode;
+    $this->defaultMessage = $defaultMessage;
   }
   /**
    * @return string
    */
-  public function getVmdkMode()
+  public function getDefaultMessage()
   {
-    return $this->vmdkMode;
+    return $this->defaultMessage;
+  }
+  /**
+   * @param string
+   */
+  public function setMessageId($messageId)
+  {
+    $this->messageId = $messageId;
+  }
+  /**
+   * @return string
+   */
+  public function getMessageId()
+  {
+    return $this->messageId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmwareDiskConfig::class, 'Google_Service_MigrationCenterAPI_VmwareDiskConfig');
+class_alias(GenericInsight::class, 'Google_Service_MigrationCenterAPI_GenericInsight');

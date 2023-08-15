@@ -19,6 +19,8 @@ namespace Google\Service\MigrationCenterAPI;
 
 class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
 {
+  protected $computeEngineFindingType = ReportSummaryComputeEngineFinding::class;
+  protected $computeEngineFindingDataType = '';
   /**
    * @var string
    */
@@ -27,8 +29,6 @@ class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
    * @var string
    */
   public $displayName;
-  protected $machineFindingType = ReportSummaryMachineFinding::class;
-  protected $machineFindingDataType = '';
   protected $machinePreferencesType = VirtualMachinePreferences::class;
   protected $machinePreferencesDataType = '';
   protected $monthlyCostComputeType = Money::class;
@@ -43,23 +43,25 @@ class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
   protected $monthlyCostStorageDataType = '';
   protected $monthlyCostTotalType = Money::class;
   protected $monthlyCostTotalDataType = '';
-  /**
-   * @var string
-   */
-  public $preferredRegion;
-  /**
-   * @var string
-   */
-  public $pricingTrack;
   protected $soleTenantFindingType = ReportSummarySoleTenantFinding::class;
   protected $soleTenantFindingDataType = '';
-  /**
-   * @var string
-   */
-  public $topPriority;
-  protected $vmwareEngineFindingType = ReportSummaryVMWareEngineFinding::class;
+  protected $vmwareEngineFindingType = ReportSummaryVmwareEngineFinding::class;
   protected $vmwareEngineFindingDataType = '';
 
+  /**
+   * @param ReportSummaryComputeEngineFinding
+   */
+  public function setComputeEngineFinding(ReportSummaryComputeEngineFinding $computeEngineFinding)
+  {
+    $this->computeEngineFinding = $computeEngineFinding;
+  }
+  /**
+   * @return ReportSummaryComputeEngineFinding
+   */
+  public function getComputeEngineFinding()
+  {
+    return $this->computeEngineFinding;
+  }
   /**
    * @param string
    */
@@ -87,20 +89,6 @@ class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
-  }
-  /**
-   * @param ReportSummaryMachineFinding
-   */
-  public function setMachineFinding(ReportSummaryMachineFinding $machineFinding)
-  {
-    $this->machineFinding = $machineFinding;
-  }
-  /**
-   * @return ReportSummaryMachineFinding
-   */
-  public function getMachineFinding()
-  {
-    return $this->machineFinding;
   }
   /**
    * @param VirtualMachinePreferences
@@ -201,34 +189,6 @@ class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
     return $this->monthlyCostTotal;
   }
   /**
-   * @param string
-   */
-  public function setPreferredRegion($preferredRegion)
-  {
-    $this->preferredRegion = $preferredRegion;
-  }
-  /**
-   * @return string
-   */
-  public function getPreferredRegion()
-  {
-    return $this->preferredRegion;
-  }
-  /**
-   * @param string
-   */
-  public function setPricingTrack($pricingTrack)
-  {
-    $this->pricingTrack = $pricingTrack;
-  }
-  /**
-   * @return string
-   */
-  public function getPricingTrack()
-  {
-    return $this->pricingTrack;
-  }
-  /**
    * @param ReportSummarySoleTenantFinding
    */
   public function setSoleTenantFinding(ReportSummarySoleTenantFinding $soleTenantFinding)
@@ -243,28 +203,14 @@ class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
     return $this->soleTenantFinding;
   }
   /**
-   * @param string
+   * @param ReportSummaryVmwareEngineFinding
    */
-  public function setTopPriority($topPriority)
-  {
-    $this->topPriority = $topPriority;
-  }
-  /**
-   * @return string
-   */
-  public function getTopPriority()
-  {
-    return $this->topPriority;
-  }
-  /**
-   * @param ReportSummaryVMWareEngineFinding
-   */
-  public function setVmwareEngineFinding(ReportSummaryVMWareEngineFinding $vmwareEngineFinding)
+  public function setVmwareEngineFinding(ReportSummaryVmwareEngineFinding $vmwareEngineFinding)
   {
     $this->vmwareEngineFinding = $vmwareEngineFinding;
   }
   /**
-   * @return ReportSummaryVMWareEngineFinding
+   * @return ReportSummaryVmwareEngineFinding
    */
   public function getVmwareEngineFinding()
   {
