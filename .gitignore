@@ -5,9 +5,6 @@ composer.lock
 src/Compute/HTTPHealthCheck.php
 src/Compute/HTTPSHealthCheck.php
 src/Baremetalsolution/Resource/ProjectsLocationsNfsshares.php
-src/MigrationCenterAPI/ReportSummaryVMWareEngineFinding.php
-src/MigrationCenterAPI/ReportSummaryVMWareNode.php
-src/MigrationCenterAPI/ReportSummaryVMWareNodeAllocation.php
 
 # Python for generator
 *.pyc
