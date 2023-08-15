@@ -46,7 +46,7 @@ class BillingAccounts extends \Google\Service\Resource
    * typically given to billing account
    * [administrators](https://cloud.google.com/billing/docs/how-to/billing-
    * access). This method will return an error if the parent account has not been
-   * provisioned as a reseller account. (billingAccounts.create)
+   * provisioned for subaccounts. (billingAccounts.create)
    *
    * @param BillingAccount $postBody
    * @param array $optParams Optional parameters.
@@ -115,9 +115,9 @@ class BillingAccounts extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Options for how to filter the returned billing
-   * accounts. Currently this only supports filtering for
+   * accounts. This only supports filtering for
    * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single
-   * provided reseller billing account. (e.g.
+   * provided parent billing account. (e.g.
    * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean
    * algebra and other fields are not currently supported.
    * @opt_param int pageSize Requested page size. The maximum page size is 100;
