@@ -23,10 +23,16 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
    * @var bool
    */
   public $exactMatch;
+  protected $failureReasonType = GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason::class;
+  protected $failureReasonDataType = '';
   /**
    * @var string
    */
   public $generatedUriPattern;
+  /**
+   * @var string
+   */
+  public $indexingStatus;
   /**
    * @var string
    */
@@ -61,6 +67,20 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->exactMatch;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason
+   */
+  public function setFailureReason(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason $failureReason)
+  {
+    $this->failureReason = $failureReason;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason
+   */
+  public function getFailureReason()
+  {
+    return $this->failureReason;
+  }
+  /**
    * @param string
    */
   public function setGeneratedUriPattern($generatedUriPattern)
@@ -73,6 +93,20 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
   public function getGeneratedUriPattern()
   {
     return $this->generatedUriPattern;
+  }
+  /**
+   * @param string
+   */
+  public function setIndexingStatus($indexingStatus)
+  {
+    $this->indexingStatus = $indexingStatus;
+  }
+  /**
+   * @return string
+   */
+  public function getIndexingStatus()
+  {
+    return $this->indexingStatus;
   }
   /**
    * @param string
