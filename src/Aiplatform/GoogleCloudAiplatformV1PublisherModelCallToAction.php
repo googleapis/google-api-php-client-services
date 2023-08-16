@@ -23,6 +23,8 @@ class GoogleCloudAiplatformV1PublisherModelCallToAction extends \Google\Model
   protected $createApplicationDataType = '';
   protected $deployType = GoogleCloudAiplatformV1PublisherModelCallToActionDeploy::class;
   protected $deployDataType = '';
+  protected $openEvaluationPipelineType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
+  protected $openEvaluationPipelineDataType = '';
   protected $openFineTuningPipelineType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
   protected $openFineTuningPipelineDataType = '';
   protected $openGenerationAiStudioType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
@@ -65,6 +67,20 @@ class GoogleCloudAiplatformV1PublisherModelCallToAction extends \Google\Model
   public function getDeploy()
   {
     return $this->deploy;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences
+   */
+  public function setOpenEvaluationPipeline(GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences $openEvaluationPipeline)
+  {
+    $this->openEvaluationPipeline = $openEvaluationPipeline;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences
+   */
+  public function getOpenEvaluationPipeline()
+  {
+    return $this->openEvaluationPipeline;
   }
   /**
    * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences

@@ -63,6 +63,10 @@ class GoogleCloudAiplatformV1PipelineJob extends \Google\Collection
   /**
    * @var string
    */
+  public $scheduleName;
+  /**
+   * @var string
+   */
   public $serviceAccount;
   /**
    * @var string
@@ -250,6 +254,20 @@ class GoogleCloudAiplatformV1PipelineJob extends \Google\Collection
   public function getRuntimeConfig()
   {
     return $this->runtimeConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setScheduleName($scheduleName)
+  {
+    $this->scheduleName = $scheduleName;
+  }
+  /**
+   * @return string
+   */
+  public function getScheduleName()
+  {
+    return $this->scheduleName;
   }
   /**
    * @param string
