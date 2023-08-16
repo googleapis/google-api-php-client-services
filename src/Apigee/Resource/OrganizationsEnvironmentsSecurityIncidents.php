@@ -60,10 +60,10 @@ class OrganizationsEnvironmentsSecurityIncidents extends \Google\Service\Resourc
    * @opt_param string filter The filter expression to be used to get the list of
    * security incidents, where filtering can be done on API Proxies. Example:
    * filter = "api_proxy = /", "first_detected_time >", "last_detected_time <"
-   * @opt_param int pageSize The maximum number of incidents to return. The
-   * service may return fewer than this value. If unspecified, at most 50
+   * @opt_param int pageSize Optional. The maximum number of incidents to return.
+   * The service may return fewer than this value. If unspecified, at most 50
    * incidents will be returned.
-   * @opt_param string pageToken A page token, received from a previous
+   * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListSecurityIncident` call. Provide this to retrieve the subsequent page.
    * @return GoogleCloudApigeeV1ListSecurityIncidentsResponse
    */

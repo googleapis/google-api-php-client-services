@@ -60,7 +60,7 @@ class OrganizationsApps extends \Google\Service\Resource
    * expanded list of apps for the organization. Defaults to `false`.
    * @opt_param string filter Optional. The filter expression to be used to get
    * the list of apps, where filtering can be done on developerEmail, apiProduct,
-   * consumerKey, status, appId, appName and appType. Examples:
+   * consumerKey, status, appId, appName, appType and appGroup. Examples:
    * "developerEmail=foo@bar.com", "appType=AppGroup", or "appType=Developer"
    * "filter" is supported from ver 1.10.0 and above.
    * @opt_param string ids Optional. Comma-separated list of app IDs on which to
