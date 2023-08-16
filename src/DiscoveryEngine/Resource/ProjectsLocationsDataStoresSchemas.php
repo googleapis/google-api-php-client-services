@@ -26,10 +26,10 @@ use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $schemas = $discoveryengineService->projects_locations_collections_dataStores_schemas;
+ *   $schemas = $discoveryengineService->projects_locations_dataStores_schemas;
  *  </code>
  */
-class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Resource
+class ProjectsLocationsDataStoresSchemas extends \Google\Service\Resource
 {
   /**
    * Creates a Schema. (schemas.create)
@@ -83,8 +83,7 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
     return $this->call('get', [$params], GoogleCloudDiscoveryengineV1betaSchema::class);
   }
   /**
-   * Gets a list of Schemas.
-   * (schemas.listProjectsLocationsCollectionsDataStoresSchemas)
+   * Gets a list of Schemas. (schemas.listProjectsLocationsDataStoresSchemas)
    *
    * @param string $parent Required. The parent data store resource name, in the
    * format of `projects/{project}/locations/{location}/collections/{collection}/d
@@ -101,7 +100,7 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
    * must match the call that provided the page token.
    * @return GoogleCloudDiscoveryengineV1betaListSchemasResponse
    */
-  public function listProjectsLocationsCollectionsDataStoresSchemas($parent, $optParams = [])
+  public function listProjectsLocationsDataStoresSchemas($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -130,4 +129,4 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsCollectionsDataStoresSchemas::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsDataStoresSchemas');
+class_alias(ProjectsLocationsDataStoresSchemas::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsDataStoresSchemas');

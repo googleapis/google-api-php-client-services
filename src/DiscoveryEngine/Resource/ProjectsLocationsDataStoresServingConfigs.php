@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine\Resource;
 
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaRecommendRequest;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaRecommendResponse;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaSearchRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaSearchResponse;
 
 /**
  * The "servingConfigs" collection of methods.
@@ -47,6 +49,24 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
     $params = ['servingConfig' => $servingConfig, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('recommend', [$params], GoogleCloudDiscoveryengineV1betaRecommendResponse::class);
+  }
+  /**
+   * Performs a search. (servingConfigs.search)
+   *
+   * @param string $servingConfig Required. The resource name of the Search
+   * serving config, such as `projects/locations/global/collections/default_collec
+   * tion/dataStores/default_data_store/servingConfigs/default_serving_config`.
+   * This field is used to identify the serving configuration name, set of models
+   * used to make the search.
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1betaSearchResponse
+   */
+  public function search($servingConfig, GoogleCloudDiscoveryengineV1betaSearchRequest $postBody, $optParams = [])
+  {
+    $params = ['servingConfig' => $servingConfig, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('search', [$params], GoogleCloudDiscoveryengineV1betaSearchResponse::class);
   }
 }
 
