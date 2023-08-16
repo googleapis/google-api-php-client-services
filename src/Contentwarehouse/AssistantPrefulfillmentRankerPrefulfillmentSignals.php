@@ -78,6 +78,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    */
   public $intentNamePauis;
   /**
+   * @var string
+   */
+  public $intentType;
+  /**
    * @var bool
    */
   public $isFeasible;
@@ -414,6 +418,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIntentNamePauis()
   {
     return $this->intentNamePauis;
+  }
+  /**
+   * @param string
+   */
+  public function setIntentType($intentType)
+  {
+    $this->intentType = $intentType;
+  }
+  /**
+   * @return string
+   */
+  public function getIntentType()
+  {
+    return $this->intentType;
   }
   /**
    * @param bool

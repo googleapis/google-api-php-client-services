@@ -122,6 +122,10 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   protected $shoppingIdsDataType = '';
   protected $signalsFallbackIntentsType = KnowledgeAnswersIntentQuerySignalComputationFallbackIntent::class;
   protected $signalsFallbackIntentsDataType = 'array';
+  /**
+   * @var bool
+   */
+  public $usesPrefulfillmentRanker;
 
   /**
    * @param string
@@ -570,6 +574,20 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public function getSignalsFallbackIntents()
   {
     return $this->signalsFallbackIntents;
+  }
+  /**
+   * @param bool
+   */
+  public function setUsesPrefulfillmentRanker($usesPrefulfillmentRanker)
+  {
+    $this->usesPrefulfillmentRanker = $usesPrefulfillmentRanker;
+  }
+  /**
+   * @return bool
+   */
+  public function getUsesPrefulfillmentRanker()
+  {
+    return $this->usesPrefulfillmentRanker;
   }
 }
 

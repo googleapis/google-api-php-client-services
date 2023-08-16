@@ -28,6 +28,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
    */
   public $ambiguityClassifier;
   /**
+   * @var string
+   */
+  public $entityMid;
+  /**
    * @var bool
    */
   public $hasTypeSemanticEdge;
@@ -98,6 +102,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getAmbiguityClassifier()
   {
     return $this->ambiguityClassifier;
+  }
+  /**
+   * @param string
+   */
+  public function setEntityMid($entityMid)
+  {
+    $this->entityMid = $entityMid;
+  }
+  /**
+   * @return string
+   */
+  public function getEntityMid()
+  {
+    return $this->entityMid;
   }
   /**
    * @param bool

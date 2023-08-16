@@ -84,8 +84,6 @@ class PornFlagData extends \Google\Collection
    * @var string
    */
   public $url;
-  protected $urlPornScoresType = ClassifierPornAggregatedUrlPornScores::class;
-  protected $urlPornScoresDataType = '';
 
   /**
    * @param ImagePornDebugInfo[]
@@ -352,20 +350,6 @@ class PornFlagData extends \Google\Collection
   public function getUrl()
   {
     return $this->url;
-  }
-  /**
-   * @param ClassifierPornAggregatedUrlPornScores
-   */
-  public function setUrlPornScores(ClassifierPornAggregatedUrlPornScores $urlPornScores)
-  {
-    $this->urlPornScores = $urlPornScores;
-  }
-  /**
-   * @return ClassifierPornAggregatedUrlPornScores
-   */
-  public function getUrlPornScores()
-  {
-    return $this->urlPornScores;
   }
 }
 

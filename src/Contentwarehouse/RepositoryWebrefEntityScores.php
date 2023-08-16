@@ -22,10 +22,6 @@ class RepositoryWebrefEntityScores extends \Google\Model
   /**
    * @var float
    */
-  public $allCapsProb;
-  /**
-   * @var float
-   */
   public $alphaEntityIdf;
   /**
    * @var float
@@ -40,20 +36,6 @@ class RepositoryWebrefEntityScores extends \Google\Model
    */
   public $nameCapitalizationProb;
 
-  /**
-   * @param float
-   */
-  public function setAllCapsProb($allCapsProb)
-  {
-    $this->allCapsProb = $allCapsProb;
-  }
-  /**
-   * @return float
-   */
-  public function getAllCapsProb()
-  {
-    return $this->allCapsProb;
-  }
   /**
    * @param float
    */

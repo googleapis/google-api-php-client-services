@@ -110,6 +110,10 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var string
    */
   public $primaryName;
+  /**
+   * @var string
+   */
+  public $reportStateStatus;
   protected $roleInformationType = AssistantVerticalsHomeautomationProtoRoleInformation::class;
   protected $roleInformationDataType = '';
   /**
@@ -512,6 +516,20 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
   public function getPrimaryName()
   {
     return $this->primaryName;
+  }
+  /**
+   * @param string
+   */
+  public function setReportStateStatus($reportStateStatus)
+  {
+    $this->reportStateStatus = $reportStateStatus;
+  }
+  /**
+   * @return string
+   */
+  public function getReportStateStatus()
+  {
+    return $this->reportStateStatus;
   }
   /**
    * @param AssistantVerticalsHomeautomationProtoRoleInformation
