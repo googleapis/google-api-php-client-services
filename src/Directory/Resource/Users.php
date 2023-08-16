@@ -78,6 +78,11 @@ class Users extends \Google\Service\Resource
    *
    * @param User $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool resolveConflictAccount Optional. If set to `true`, the option
+   * selected for [handling unmanaged user
+   * accounts](https://support.google.com/a/answer/11112794) will apply. Default:
+   * `false`
    * @return User
    */
   public function insert(User $postBody, $optParams = [])

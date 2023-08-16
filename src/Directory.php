@@ -2001,7 +2001,12 @@ class Directory extends \Google\Service
             ],'insert' => [
               'path' => 'admin/directory/v1/users',
               'httpMethod' => 'POST',
-              'parameters' => [],
+              'parameters' => [
+                'resolveConflictAccount' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
             ],'list' => [
               'path' => 'admin/directory/v1/users',
               'httpMethod' => 'GET',
