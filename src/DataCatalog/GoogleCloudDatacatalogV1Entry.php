@@ -33,6 +33,8 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $dataSourceConnectionSpecDataType = '';
   protected $databaseTableSpecType = GoogleCloudDatacatalogV1DatabaseTableSpec::class;
   protected $databaseTableSpecDataType = '';
+  protected $datasetSpecType = GoogleCloudDatacatalogV1DatasetSpec::class;
+  protected $datasetSpecDataType = '';
   /**
    * @var string
    */
@@ -63,6 +65,8 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public $linkedResource;
   protected $lookerSystemSpecType = GoogleCloudDatacatalogV1LookerSystemSpec::class;
   protected $lookerSystemSpecDataType = '';
+  protected $modelSpecType = GoogleCloudDatacatalogV1ModelSpec::class;
+  protected $modelSpecDataType = '';
   /**
    * @var string
    */
@@ -193,6 +197,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->databaseTableSpec;
   }
   /**
+   * @param GoogleCloudDatacatalogV1DatasetSpec
+   */
+  public function setDatasetSpec(GoogleCloudDatacatalogV1DatasetSpec $datasetSpec)
+  {
+    $this->datasetSpec = $datasetSpec;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1DatasetSpec
+   */
+  public function getDatasetSpec()
+  {
+    return $this->datasetSpec;
+  }
+  /**
    * @param string
    */
   public function setDescription($description)
@@ -317,6 +335,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getLookerSystemSpec()
   {
     return $this->lookerSystemSpec;
+  }
+  /**
+   * @param GoogleCloudDatacatalogV1ModelSpec
+   */
+  public function setModelSpec(GoogleCloudDatacatalogV1ModelSpec $modelSpec)
+  {
+    $this->modelSpec = $modelSpec;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1ModelSpec
+   */
+  public function getModelSpec()
+  {
+    return $this->modelSpec;
   }
   /**
    * @param string
