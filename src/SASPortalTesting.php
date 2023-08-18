@@ -133,6 +133,10 @@ class SASPortalTesting extends \Google\Service
               'path' => 'v1alpha1/customers:provisionDeployment',
               'httpMethod' => 'POST',
               'parameters' => [],
+            ],'setupSasAnalytics' => [
+              'path' => 'v1alpha1/customers:setupSasAnalytics',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]
