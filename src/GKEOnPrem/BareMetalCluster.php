@@ -35,6 +35,8 @@ class BareMetalCluster extends \Google\Model
    * @var string
    */
   public $bareMetalVersion;
+  protected $binaryAuthorizationType = BinaryAuthorization::class;
+  protected $binaryAuthorizationDataType = '';
   protected $clusterOperationsType = BareMetalClusterOperationsConfig::class;
   protected $clusterOperationsDataType = '';
   protected $controlPlaneType = BareMetalControlPlaneConfig::class;
@@ -167,6 +169,20 @@ class BareMetalCluster extends \Google\Model
   public function getBareMetalVersion()
   {
     return $this->bareMetalVersion;
+  }
+  /**
+   * @param BinaryAuthorization
+   */
+  public function setBinaryAuthorization(BinaryAuthorization $binaryAuthorization)
+  {
+    $this->binaryAuthorization = $binaryAuthorization;
+  }
+  /**
+   * @return BinaryAuthorization
+   */
+  public function getBinaryAuthorization()
+  {
+    return $this->binaryAuthorization;
   }
   /**
    * @param BareMetalClusterOperationsConfig

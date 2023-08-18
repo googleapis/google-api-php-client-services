@@ -17,46 +17,28 @@
 
 namespace Google\Service\GKEOnPrem;
 
-class VmwareControlPlaneVsphereConfig extends \Google\Model
+class BinaryAuthorization extends \Google\Model
 {
   /**
    * @var string
    */
-  public $datastore;
-  /**
-   * @var string
-   */
-  public $storagePolicyName;
+  public $evaluationMode;
 
   /**
    * @param string
    */
-  public function setDatastore($datastore)
+  public function setEvaluationMode($evaluationMode)
   {
-    $this->datastore = $datastore;
+    $this->evaluationMode = $evaluationMode;
   }
   /**
    * @return string
    */
-  public function getDatastore()
+  public function getEvaluationMode()
   {
-    return $this->datastore;
-  }
-  /**
-   * @param string
-   */
-  public function setStoragePolicyName($storagePolicyName)
-  {
-    $this->storagePolicyName = $storagePolicyName;
-  }
-  /**
-   * @return string
-   */
-  public function getStoragePolicyName()
-  {
-    return $this->storagePolicyName;
+    return $this->evaluationMode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmwareControlPlaneVsphereConfig::class, 'Google_Service_GKEOnPrem_VmwareControlPlaneVsphereConfig');
+class_alias(BinaryAuthorization::class, 'Google_Service_GKEOnPrem_BinaryAuthorization');

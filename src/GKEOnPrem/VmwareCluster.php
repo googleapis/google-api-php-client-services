@@ -56,6 +56,10 @@ class VmwareCluster extends \Google\Model
   /**
    * @var bool
    */
+  public $disableBundledIngress;
+  /**
+   * @var bool
+   */
   public $enableControlPlaneV2;
   /**
    * @var string
@@ -103,6 +107,8 @@ class VmwareCluster extends \Google\Model
    * @var string
    */
   public $updateTime;
+  protected $upgradePolicyType = VmwareClusterUpgradePolicy::class;
+  protected $upgradePolicyDataType = '';
   protected $validationCheckType = ValidationCheck::class;
   protected $validationCheckDataType = '';
   protected $vcenterType = VmwareVCenterConfig::class;
@@ -265,6 +271,20 @@ class VmwareCluster extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param bool
+   */
+  public function setDisableBundledIngress($disableBundledIngress)
+  {
+    $this->disableBundledIngress = $disableBundledIngress;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableBundledIngress()
+  {
+    return $this->disableBundledIngress;
   }
   /**
    * @param bool
@@ -475,6 +495,20 @@ class VmwareCluster extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param VmwareClusterUpgradePolicy
+   */
+  public function setUpgradePolicy(VmwareClusterUpgradePolicy $upgradePolicy)
+  {
+    $this->upgradePolicy = $upgradePolicy;
+  }
+  /**
+   * @return VmwareClusterUpgradePolicy
+   */
+  public function getUpgradePolicy()
+  {
+    return $this->upgradePolicy;
   }
   /**
    * @param ValidationCheck

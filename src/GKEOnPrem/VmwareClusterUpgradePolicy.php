@@ -17,46 +17,28 @@
 
 namespace Google\Service\GKEOnPrem;
 
-class VmwareControlPlaneVsphereConfig extends \Google\Model
+class VmwareClusterUpgradePolicy extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $datastore;
-  /**
-   * @var string
-   */
-  public $storagePolicyName;
+  public $controlPlaneOnly;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setDatastore($datastore)
+  public function setControlPlaneOnly($controlPlaneOnly)
   {
-    $this->datastore = $datastore;
+    $this->controlPlaneOnly = $controlPlaneOnly;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getDatastore()
+  public function getControlPlaneOnly()
   {
-    return $this->datastore;
-  }
-  /**
-   * @param string
-   */
-  public function setStoragePolicyName($storagePolicyName)
-  {
-    $this->storagePolicyName = $storagePolicyName;
-  }
-  /**
-   * @return string
-   */
-  public function getStoragePolicyName()
-  {
-    return $this->storagePolicyName;
+    return $this->controlPlaneOnly;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmwareControlPlaneVsphereConfig::class, 'Google_Service_GKEOnPrem_VmwareControlPlaneVsphereConfig');
+class_alias(VmwareClusterUpgradePolicy::class, 'Google_Service_GKEOnPrem_VmwareClusterUpgradePolicy');

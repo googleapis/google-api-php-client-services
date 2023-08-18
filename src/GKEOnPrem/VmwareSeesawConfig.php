@@ -17,7 +17,7 @@
 
 namespace Google\Service\GKEOnPrem;
 
-class VmwareAdminSeesawConfig extends \Google\Collection
+class VmwareSeesawConfig extends \Google\Collection
 {
   protected $collection_key = 'vms';
   /**
@@ -130,4 +130,4 @@ class VmwareAdminSeesawConfig extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmwareAdminSeesawConfig::class, 'Google_Service_GKEOnPrem_VmwareAdminSeesawConfig');
+class_alias(VmwareSeesawConfig::class, 'Google_Service_GKEOnPrem_VmwareSeesawConfig');
