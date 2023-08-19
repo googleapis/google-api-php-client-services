@@ -24,6 +24,7 @@ use Google\Service\Sasportal\SasPortalMigrateOrganizationRequest;
 use Google\Service\Sasportal\SasPortalOperation;
 use Google\Service\Sasportal\SasPortalProvisionDeploymentRequest;
 use Google\Service\Sasportal\SasPortalProvisionDeploymentResponse;
+use Google\Service\Sasportal\SasPortalSetupSasAnalyticsRequest;
 
 /**
  * The "customers" collection of methods.
@@ -124,6 +125,22 @@ class Customers extends \Google\Service\Resource
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('provisionDeployment', [$params], SasPortalProvisionDeploymentResponse::class);
+  }
+  /**
+   * Setups the a GCP Project to receive SAS Analytics messages via GCP Pub/Sub
+   * with a subscription to BigQuery. All the Pub/Sub topics and BigQuery tables
+   * are created automatically as part of this service.
+   * (customers.setupSasAnalytics)
+   *
+   * @param SasPortalSetupSasAnalyticsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return SasPortalOperation
+   */
+  public function setupSasAnalytics(SasPortalSetupSasAnalyticsRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setupSasAnalytics', [$params], SasPortalOperation::class);
   }
 }
 
