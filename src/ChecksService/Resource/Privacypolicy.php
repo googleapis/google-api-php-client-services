@@ -31,7 +31,8 @@ use Google\Service\ChecksService\AnalyzePrivacyPolicyResponse;
 class Privacypolicy extends \Google\Service\Resource
 {
   /**
-   * Analyzes the privacy policy of the given policy URL or content.
+   * Performs a synchronous analysis of a privacy policy, where the policy content
+   * is mapped to privacy categories, data types, and purposes.
    * (privacypolicy.analyze)
    *
    * @param AnalyzePrivacyPolicyRequest $postBody
