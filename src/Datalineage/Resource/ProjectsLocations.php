@@ -19,8 +19,10 @@ namespace Google\Service\Datalineage\Resource;
 
 use Google\Service\Datalineage\GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest;
 use Google\Service\Datalineage\GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse;
+use Google\Service\Datalineage\GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse;
 use Google\Service\Datalineage\GoogleCloudDatacatalogLineageV1SearchLinksRequest;
 use Google\Service\Datalineage\GoogleCloudDatacatalogLineageV1SearchLinksResponse;
+use Google\Service\Datalineage\ProcessOpenLineageRunEventRequestContent;
 
 /**
  * The "locations" collection of methods.
@@ -54,6 +56,29 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('batchSearchLinkProcesses', [$params], GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse::class);
+  }
+  /**
+   * Creates new lineage events together with their parents: process and run.
+   * Updates the process and run if they already exist. Mapped from Open Lineage
+   * specification:
+   * https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+   * (locations.processOpenLineageRunEvent)
+   *
+   * @param string $parent Required. The name of the project and its location that
+   * should own the process, run, and lineage event.
+   * @param ProcessOpenLineageRunEventRequestContent $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId A unique identifier for this request. Restricted
+   * to 36 ASCII characters. A random UUID is recommended. This request is
+   * idempotent only if a `request_id` is provided.
+   * @return GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse
+   */
+  public function processOpenLineageRunEvent($parent, ProcessOpenLineageRunEventRequestContent $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('processOpenLineageRunEvent', [$params], GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse::class);
   }
   /**
    * Retrieve a list of links connected to a specific asset. Links represent the
