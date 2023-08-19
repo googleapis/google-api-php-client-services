@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
 {
   protected $collection_key = 'finalUrls';
+  protected $callAssetType = GoogleAdsSearchads360V0CommonUnifiedCallAsset::class;
+  protected $callAssetDataType = '';
+  protected $calloutAssetType = GoogleAdsSearchads360V0CommonUnifiedCalloutAsset::class;
+  protected $calloutAssetDataType = '';
   /**
    * @var string
    */
@@ -40,12 +44,18 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $lastModifiedTime;
+  protected $locationAssetType = GoogleAdsSearchads360V0CommonUnifiedLocationAsset::class;
+  protected $locationAssetDataType = '';
   protected $mobileAppAssetType = GoogleAdsSearchads360V0CommonMobileAppAsset::class;
   protected $mobileAppAssetDataType = '';
+  protected $pageFeedAssetType = GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset::class;
+  protected $pageFeedAssetDataType = '';
   /**
    * @var string
    */
   public $resourceName;
+  protected $sitelinkAssetType = GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset::class;
+  protected $sitelinkAssetDataType = '';
   /**
    * @var string
    */
@@ -59,6 +69,34 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    */
   public $type;
 
+  /**
+   * @param GoogleAdsSearchads360V0CommonUnifiedCallAsset
+   */
+  public function setCallAsset(GoogleAdsSearchads360V0CommonUnifiedCallAsset $callAsset)
+  {
+    $this->callAsset = $callAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonUnifiedCallAsset
+   */
+  public function getCallAsset()
+  {
+    return $this->callAsset;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonUnifiedCalloutAsset
+   */
+  public function setCalloutAsset(GoogleAdsSearchads360V0CommonUnifiedCalloutAsset $calloutAsset)
+  {
+    $this->calloutAsset = $calloutAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonUnifiedCalloutAsset
+   */
+  public function getCalloutAsset()
+  {
+    return $this->calloutAsset;
+  }
   /**
    * @param string
    */
@@ -130,6 +168,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
     return $this->lastModifiedTime;
   }
   /**
+   * @param GoogleAdsSearchads360V0CommonUnifiedLocationAsset
+   */
+  public function setLocationAsset(GoogleAdsSearchads360V0CommonUnifiedLocationAsset $locationAsset)
+  {
+    $this->locationAsset = $locationAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonUnifiedLocationAsset
+   */
+  public function getLocationAsset()
+  {
+    return $this->locationAsset;
+  }
+  /**
    * @param GoogleAdsSearchads360V0CommonMobileAppAsset
    */
   public function setMobileAppAsset(GoogleAdsSearchads360V0CommonMobileAppAsset $mobileAppAsset)
@@ -144,6 +196,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
     return $this->mobileAppAsset;
   }
   /**
+   * @param GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset
+   */
+  public function setPageFeedAsset(GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset $pageFeedAsset)
+  {
+    $this->pageFeedAsset = $pageFeedAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset
+   */
+  public function getPageFeedAsset()
+  {
+    return $this->pageFeedAsset;
+  }
+  /**
    * @param string
    */
   public function setResourceName($resourceName)
@@ -156,6 +222,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset
+   */
+  public function setSitelinkAsset(GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset $sitelinkAsset)
+  {
+    $this->sitelinkAsset = $sitelinkAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset
+   */
+  public function getSitelinkAsset()
+  {
+    return $this->sitelinkAsset;
   }
   /**
    * @param string

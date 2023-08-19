@@ -54,6 +54,10 @@ class GoogleAdsSearchads360V0ErrorsErrorCode extends \Google\Model
   /**
    * @var string
    */
+  public $invalidParameterError;
+  /**
+   * @var string
+   */
   public $queryError;
   /**
    * @var string
@@ -179,6 +183,20 @@ class GoogleAdsSearchads360V0ErrorsErrorCode extends \Google\Model
   public function getInternalError()
   {
     return $this->internalError;
+  }
+  /**
+   * @param string
+   */
+  public function setInvalidParameterError($invalidParameterError)
+  {
+    $this->invalidParameterError = $invalidParameterError;
+  }
+  /**
+   * @return string
+   */
+  public function getInvalidParameterError()
+  {
+    return $this->invalidParameterError;
   }
   /**
    * @param string
