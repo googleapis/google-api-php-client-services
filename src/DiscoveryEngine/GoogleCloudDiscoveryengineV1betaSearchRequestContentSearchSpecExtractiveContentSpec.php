@@ -28,6 +28,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveCo
    */
   public $maxExtractiveSegmentCount;
   /**
+   * @var int
+   */
+  public $numNextSegments;
+  /**
+   * @var int
+   */
+  public $numPreviousSegments;
+  /**
    * @var bool
    */
   public $returnExtractiveSegmentScore;
@@ -59,6 +67,34 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveCo
   public function getMaxExtractiveSegmentCount()
   {
     return $this->maxExtractiveSegmentCount;
+  }
+  /**
+   * @param int
+   */
+  public function setNumNextSegments($numNextSegments)
+  {
+    $this->numNextSegments = $numNextSegments;
+  }
+  /**
+   * @return int
+   */
+  public function getNumNextSegments()
+  {
+    return $this->numNextSegments;
+  }
+  /**
+   * @param int
+   */
+  public function setNumPreviousSegments($numPreviousSegments)
+  {
+    $this->numPreviousSegments = $numPreviousSegments;
+  }
+  /**
+   * @return int
+   */
+  public function getNumPreviousSegments()
+  {
+    return $this->numPreviousSegments;
   }
   /**
    * @param bool
