@@ -54,6 +54,8 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $etag;
+  protected $externalDatasetReferenceType = ExternalDatasetReference::class;
+  protected $externalDatasetReferenceDataType = '';
   /**
    * @var string
    */
@@ -240,6 +242,20 @@ class Dataset extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param ExternalDatasetReference
+   */
+  public function setExternalDatasetReference(ExternalDatasetReference $externalDatasetReference)
+  {
+    $this->externalDatasetReference = $externalDatasetReference;
+  }
+  /**
+   * @return ExternalDatasetReference
+   */
+  public function getExternalDatasetReference()
+  {
+    return $this->externalDatasetReference;
   }
   /**
    * @param string
