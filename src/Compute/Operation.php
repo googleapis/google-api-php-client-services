@@ -54,6 +54,8 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $insertTime;
+  protected $instancesBulkInsertOperationMetadataType = InstancesBulkInsertOperationMetadata::class;
+  protected $instancesBulkInsertOperationMetadataDataType = '';
   /**
    * @var string
    */
@@ -240,6 +242,20 @@ class Operation extends \Google\Collection
   public function getInsertTime()
   {
     return $this->insertTime;
+  }
+  /**
+   * @param InstancesBulkInsertOperationMetadata
+   */
+  public function setInstancesBulkInsertOperationMetadata(InstancesBulkInsertOperationMetadata $instancesBulkInsertOperationMetadata)
+  {
+    $this->instancesBulkInsertOperationMetadata = $instancesBulkInsertOperationMetadata;
+  }
+  /**
+   * @return InstancesBulkInsertOperationMetadata
+   */
+  public function getInstancesBulkInsertOperationMetadata()
+  {
+    return $this->instancesBulkInsertOperationMetadata;
   }
   /**
    * @param string
