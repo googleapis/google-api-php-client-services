@@ -95,6 +95,13 @@ class BillingAccountsBudgets extends \Google\Service\Resource
    * @opt_param string pageToken Optional. The value returned by the last
    * `ListBudgetsResponse` which indicates that this is a continuation of a prior
    * `ListBudgets` call, and that the system should return the next page of data.
+   * @opt_param string scope Optional. Set the scope of the budgets to be
+   * returned, in the format of the resource name. The scope of a budget is the
+   * cost that it tracks, such as costs for a single project, or the costs for all
+   * projects in a folder. Only project scope (in the format of "projects/project-
+   * id" or "projects/123") is supported in this field. When this field is set to
+   * a project's resource name, the budgets returned are tracking the costs for
+   * that project.
    * @return GoogleCloudBillingBudgetsV1ListBudgetsResponse
    */
   public function listBillingAccountsBudgets($parent, $optParams = [])
