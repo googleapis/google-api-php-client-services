@@ -54,10 +54,6 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
    * @var string
    */
   public $valueType;
-  /**
-   * @var string[]
-   */
-  public $versionLabels;
 
   /**
    * @param string
@@ -184,20 +180,6 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
   public function getValueType()
   {
     return $this->valueType;
-  }
-  /**
-   * @param string[]
-   */
-  public function setVersionLabels($versionLabels)
-  {
-    $this->versionLabels = $versionLabels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getVersionLabels()
-  {
-    return $this->versionLabels;
   }
 }
 

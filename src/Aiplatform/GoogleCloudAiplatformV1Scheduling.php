@@ -22,12 +22,30 @@ class GoogleCloudAiplatformV1Scheduling extends \Google\Model
   /**
    * @var bool
    */
+  public $disableRetries;
+  /**
+   * @var bool
+   */
   public $restartJobOnWorkerRestart;
   /**
    * @var string
    */
   public $timeout;
 
+  /**
+   * @param bool
+   */
+  public function setDisableRetries($disableRetries)
+  {
+    $this->disableRetries = $disableRetries;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableRetries()
+  {
+    return $this->disableRetries;
+  }
   /**
    * @param bool
    */
