@@ -46,10 +46,12 @@ class Buyers extends \Google\Service\Resource
     return $this->call('get', [$params], Buyer::class);
   }
   /**
-   * Gets remarketing tag for a buyer. A remarketing tag is a piece of JavaScript
-   * code that can be placed on a web page. When a user visits a page containing a
-   * remarketing tag, Google adds the user to a user list.
-   * (buyers.getRemarketingTag)
+   * Deprecated. This will be removed in October 2023. For more information, see
+   * the release notes: https://developers.google.com/authorized-
+   * buyers/apis/relnotes#real-time-bidding-api Gets remarketing tag for a buyer.
+   * A remarketing tag is a piece of JavaScript code that can be placed on a web
+   * page. When a user visits a page containing a remarketing tag, Google adds the
+   * user to a user list. (buyers.getRemarketingTag)
    *
    * @param string $name Required. To fetch remarketing tag for an account, name
    * must follow the pattern `buyers/{accountId}` where `{accountId}` represents
