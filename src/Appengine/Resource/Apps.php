@@ -56,6 +56,8 @@ class Apps extends \Google\Service\Resource
    * @param string $appsId Part of `name`. Name of the Application resource to
    * get. Example: apps/myapp.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string includeExtraData Options to include extra data
    * @return Application
    */
   public function get($appsId, $optParams = [])
