@@ -87,6 +87,7 @@ class Search extends \Google\Service\Resource
    * @opt_param string videoDuration Filter on the duration of the videos.
    * @opt_param string videoEmbeddable Filter on embeddable videos.
    * @opt_param string videoLicense Filter on the license of the videos.
+   * @opt_param string videoPaidProductPlacement
    * @opt_param string videoSyndicated Filter on syndicated videos.
    * @opt_param string videoType Filter on videos of a specific type.
    * @return SearchListResponse

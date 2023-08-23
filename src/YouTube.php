@@ -1552,6 +1552,10 @@ class YouTube extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'videoPaidProductPlacement' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'videoSyndicated' => [
                   'location' => 'query',
                   'type' => 'string',
