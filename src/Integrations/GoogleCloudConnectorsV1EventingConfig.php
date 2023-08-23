@@ -30,6 +30,14 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
    * @var bool
    */
   public $enrichmentEnabled;
+  /**
+   * @var bool
+   */
+  public $privateConnectivityEnabled;
+  /**
+   * @var string
+   */
+  public $publicEventsListenerEndpoint;
   protected $registrationDestinationConfigType = GoogleCloudConnectorsV1DestinationConfig::class;
   protected $registrationDestinationConfigDataType = '';
 
@@ -88,6 +96,34 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   public function getEnrichmentEnabled()
   {
     return $this->enrichmentEnabled;
+  }
+  /**
+   * @param bool
+   */
+  public function setPrivateConnectivityEnabled($privateConnectivityEnabled)
+  {
+    $this->privateConnectivityEnabled = $privateConnectivityEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPrivateConnectivityEnabled()
+  {
+    return $this->privateConnectivityEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setPublicEventsListenerEndpoint($publicEventsListenerEndpoint)
+  {
+    $this->publicEventsListenerEndpoint = $publicEventsListenerEndpoint;
+  }
+  /**
+   * @return string
+   */
+  public function getPublicEventsListenerEndpoint()
+  {
+    return $this->publicEventsListenerEndpoint;
   }
   /**
    * @param GoogleCloudConnectorsV1DestinationConfig

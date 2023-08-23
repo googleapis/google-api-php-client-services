@@ -19,6 +19,8 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
 {
+  protected $hpaConfigType = GoogleCloudConnectorsV1HPAConfig::class;
+  protected $hpaConfigDataType = '';
   /**
    * @var string
    */
@@ -27,7 +29,25 @@ class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
    * @var string
    */
   public $ratelimitThreshold;
+  protected $resourceLimitsType = GoogleCloudConnectorsV1ResourceLimits::class;
+  protected $resourceLimitsDataType = '';
+  protected $resourceRequestsType = GoogleCloudConnectorsV1ResourceRequests::class;
+  protected $resourceRequestsDataType = '';
 
+  /**
+   * @param GoogleCloudConnectorsV1HPAConfig
+   */
+  public function setHpaConfig(GoogleCloudConnectorsV1HPAConfig $hpaConfig)
+  {
+    $this->hpaConfig = $hpaConfig;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1HPAConfig
+   */
+  public function getHpaConfig()
+  {
+    return $this->hpaConfig;
+  }
   /**
    * @param string
    */
@@ -55,6 +75,34 @@ class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
   public function getRatelimitThreshold()
   {
     return $this->ratelimitThreshold;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1ResourceLimits
+   */
+  public function setResourceLimits(GoogleCloudConnectorsV1ResourceLimits $resourceLimits)
+  {
+    $this->resourceLimits = $resourceLimits;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1ResourceLimits
+   */
+  public function getResourceLimits()
+  {
+    return $this->resourceLimits;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1ResourceRequests
+   */
+  public function setResourceRequests(GoogleCloudConnectorsV1ResourceRequests $resourceRequests)
+  {
+    $this->resourceRequests = $resourceRequests;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1ResourceRequests
+   */
+  public function getResourceRequests()
+  {
+    return $this->resourceRequests;
   }
 }
 
