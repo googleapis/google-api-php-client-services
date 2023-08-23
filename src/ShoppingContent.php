@@ -55,6 +55,7 @@ class ShoppingContent extends \Google\Service
   public $freelistingsprogram_checkoutsettings;
   public $liasettings;
   public $localinventory;
+  public $merchantsupport;
   public $orderinvoices;
   public $orderreports;
   public $orderreturns;
@@ -1400,6 +1401,57 @@ class ShoppingContent extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->merchantsupport = new ShoppingContent\Resource\Merchantsupport(
+        $this,
+        $this->serviceName,
+        'merchantsupport',
+        [
+          'methods' => [
+            'renderaccountissues' => [
+              'path' => '{merchantId}/merchantsupport/renderaccountissues',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'timeZone' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'renderproductissues' => [
+              'path' => '{merchantId}/merchantsupport/renderproductissues/{productId}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'timeZone' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
