@@ -40,7 +40,7 @@ class Achievements extends \Google\Service\Resource
    * authenticated player. (achievements.increment)
    *
    * @param string $achievementId The ID of the achievement used by this method.
-   * @param int $stepsToIncrement The number of steps to increment.
+   * @param int $stepsToIncrement Required. The number of steps to increment.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId A randomly generated numeric ID for each request
@@ -101,7 +101,7 @@ class Achievements extends \Google\Service\Resource
    * modified. (achievements.setStepsAtLeast)
    *
    * @param string $achievementId The ID of the achievement used by this method.
-   * @param int $steps The minimum value to set the steps to.
+   * @param int $steps Required. The minimum value to set the steps to.
    * @param array $optParams Optional parameters.
    * @return AchievementSetStepsAtLeastResponse
    */

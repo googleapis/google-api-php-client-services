@@ -69,8 +69,8 @@ class Scores extends \Google\Service\Resource
    *
    * @param string $leaderboardId The ID of the leaderboard.
    * @param string $collection The collection of scores you're requesting.
-   * @param string $timeSpan The time span for the scores and ranks you're
-   * requesting.
+   * @param string $timeSpan Required. The time span for the scores and ranks
+   * you're requesting.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string language The preferred language to use for strings returned
@@ -93,8 +93,8 @@ class Scores extends \Google\Service\Resource
    *
    * @param string $leaderboardId The ID of the leaderboard.
    * @param string $collection The collection of scores you're requesting.
-   * @param string $timeSpan The time span for the scores and ranks you're
-   * requesting.
+   * @param string $timeSpan Required. The time span for the scores and ranks
+   * you're requesting.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string language The preferred language to use for strings returned
@@ -121,12 +121,12 @@ class Scores extends \Google\Service\Resource
    * Submits a score to the specified leaderboard. (scores.submit)
    *
    * @param string $leaderboardId The ID of the leaderboard.
-   * @param string $score The score you're submitting. The submitted score is
-   * ignored if it is worse than a previously submitted score, where worse depends
-   * on the leaderboard sort order. The meaning of the score value depends on the
-   * leaderboard format type. For fixed-point, the score represents the raw value.
-   * For time, the score represents elapsed time in milliseconds. For currency,
-   * the score represents a value in micro units.
+   * @param string $score Required. The score you're submitting. The submitted
+   * score is ignored if it is worse than a previously submitted score, where
+   * worse depends on the leaderboard sort order. The meaning of the score value
+   * depends on the leaderboard format type. For fixed-point, the score represents
+   * the raw value. For time, the score represents elapsed time in milliseconds.
+   * For currency, the score represents a value in micro units.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string language The preferred language to use for strings returned
