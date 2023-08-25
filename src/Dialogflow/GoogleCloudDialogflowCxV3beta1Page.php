@@ -30,6 +30,8 @@ class GoogleCloudDialogflowCxV3beta1Page extends \Google\Collection
   protected $eventHandlersDataType = 'array';
   protected $formType = GoogleCloudDialogflowCxV3beta1Form::class;
   protected $formDataType = '';
+  protected $knowledgeConnectorSettingsType = GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings::class;
+  protected $knowledgeConnectorSettingsDataType = '';
   /**
    * @var string
    */
@@ -96,6 +98,20 @@ class GoogleCloudDialogflowCxV3beta1Page extends \Google\Collection
   public function getForm()
   {
     return $this->form;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings
+   */
+  public function setKnowledgeConnectorSettings(GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings $knowledgeConnectorSettings)
+  {
+    $this->knowledgeConnectorSettings = $knowledgeConnectorSettings;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings
+   */
+  public function getKnowledgeConnectorSettings()
+  {
+    return $this->knowledgeConnectorSettings;
   }
   /**
    * @param string

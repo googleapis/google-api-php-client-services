@@ -17,24 +17,15 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowCxV3TransitionRoute extends \Google\Model
+class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings extends \Google\Collection
 {
+  protected $collection_key = 'dataStoreConnections';
+  protected $dataStoreConnectionsType = GoogleCloudDialogflowCxV3beta1DataStoreConnection::class;
+  protected $dataStoreConnectionsDataType = 'array';
   /**
-   * @var string
+   * @var bool
    */
-  public $condition;
-  /**
-   * @var string
-   */
-  public $description;
-  /**
-   * @var string
-   */
-  public $intent;
-  /**
-   * @var string
-   */
-  public $name;
+  public $enabled;
   /**
    * @var string
    */
@@ -43,64 +34,36 @@ class GoogleCloudDialogflowCxV3TransitionRoute extends \Google\Model
    * @var string
    */
   public $targetPage;
-  protected $triggerFulfillmentType = GoogleCloudDialogflowCxV3Fulfillment::class;
+  protected $triggerFulfillmentType = GoogleCloudDialogflowCxV3beta1Fulfillment::class;
   protected $triggerFulfillmentDataType = '';
 
   /**
-   * @param string
+   * @param GoogleCloudDialogflowCxV3beta1DataStoreConnection[]
    */
-  public function setCondition($condition)
+  public function setDataStoreConnections($dataStoreConnections)
   {
-    $this->condition = $condition;
+    $this->dataStoreConnections = $dataStoreConnections;
   }
   /**
-   * @return string
+   * @return GoogleCloudDialogflowCxV3beta1DataStoreConnection[]
    */
-  public function getCondition()
+  public function getDataStoreConnections()
   {
-    return $this->condition;
+    return $this->dataStoreConnections;
   }
   /**
-   * @param string
+   * @param bool
    */
-  public function setDescription($description)
+  public function setEnabled($enabled)
   {
-    $this->description = $description;
+    $this->enabled = $enabled;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getDescription()
+  public function getEnabled()
   {
-    return $this->description;
-  }
-  /**
-   * @param string
-   */
-  public function setIntent($intent)
-  {
-    $this->intent = $intent;
-  }
-  /**
-   * @return string
-   */
-  public function getIntent()
-  {
-    return $this->intent;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
+    return $this->enabled;
   }
   /**
    * @param string
@@ -131,14 +94,14 @@ class GoogleCloudDialogflowCxV3TransitionRoute extends \Google\Model
     return $this->targetPage;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Fulfillment
+   * @param GoogleCloudDialogflowCxV3beta1Fulfillment
    */
-  public function setTriggerFulfillment(GoogleCloudDialogflowCxV3Fulfillment $triggerFulfillment)
+  public function setTriggerFulfillment(GoogleCloudDialogflowCxV3beta1Fulfillment $triggerFulfillment)
   {
     $this->triggerFulfillment = $triggerFulfillment;
   }
   /**
-   * @return GoogleCloudDialogflowCxV3Fulfillment
+   * @return GoogleCloudDialogflowCxV3beta1Fulfillment
    */
   public function getTriggerFulfillment()
   {
@@ -147,4 +110,4 @@ class GoogleCloudDialogflowCxV3TransitionRoute extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowCxV3TransitionRoute::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3TransitionRoute');
+class_alias(GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings');

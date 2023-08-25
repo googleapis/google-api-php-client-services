@@ -27,6 +27,8 @@ class GoogleCloudDialogflowCxV3ResponseMessage extends \Google\Model
   protected $conversationSuccessDataType = '';
   protected $endInteractionType = GoogleCloudDialogflowCxV3ResponseMessageEndInteraction::class;
   protected $endInteractionDataType = '';
+  protected $knowledgeInfoCardType = GoogleCloudDialogflowCxV3ResponseMessageKnowledgeInfoCard::class;
+  protected $knowledgeInfoCardDataType = '';
   protected $liveAgentHandoffType = GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff::class;
   protected $liveAgentHandoffDataType = '';
   protected $mixedAudioType = GoogleCloudDialogflowCxV3ResponseMessageMixedAudio::class;
@@ -89,6 +91,20 @@ class GoogleCloudDialogflowCxV3ResponseMessage extends \Google\Model
   public function getEndInteraction()
   {
     return $this->endInteraction;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3ResponseMessageKnowledgeInfoCard
+   */
+  public function setKnowledgeInfoCard(GoogleCloudDialogflowCxV3ResponseMessageKnowledgeInfoCard $knowledgeInfoCard)
+  {
+    $this->knowledgeInfoCard = $knowledgeInfoCard;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3ResponseMessageKnowledgeInfoCard
+   */
+  public function getKnowledgeInfoCard()
+  {
+    return $this->knowledgeInfoCard;
   }
   /**
    * @param GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff
