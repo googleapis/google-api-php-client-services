@@ -28,8 +28,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends \Google\Collect
    * @var string
    */
   public $endTime;
-  protected $finiteBillingCycleDetailsType = GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails::class;
-  protected $finiteBillingCycleDetailsDataType = '';
   protected $freeTrialDurationType = GoogleCloudPaymentsResellerSubscriptionV1Duration::class;
   protected $freeTrialDurationDataType = '';
   protected $introductoryPricingDetailsType = GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails::class;
@@ -80,20 +78,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends \Google\Collect
   public function getEndTime()
   {
     return $this->endTime;
-  }
-  /**
-   * @param GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails
-   */
-  public function setFiniteBillingCycleDetails(GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails $finiteBillingCycleDetails)
-  {
-    $this->finiteBillingCycleDetails = $finiteBillingCycleDetails;
-  }
-  /**
-   * @return GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails
-   */
-  public function getFiniteBillingCycleDetails()
-  {
-    return $this->finiteBillingCycleDetails;
   }
   /**
    * @param GoogleCloudPaymentsResellerSubscriptionV1Duration
