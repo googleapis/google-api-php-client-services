@@ -26,6 +26,10 @@ class YoutubeAndPartnersSettings extends \Google\Collection
    * @var string
    */
   public $contentCategory;
+  /**
+   * @var string
+   */
+  public $effectiveContentCategory;
   protected $inventorySourceSettingsType = YoutubeAndPartnersInventorySourceConfig::class;
   protected $inventorySourceSettingsDataType = '';
   /**
@@ -76,6 +80,20 @@ class YoutubeAndPartnersSettings extends \Google\Collection
   public function getContentCategory()
   {
     return $this->contentCategory;
+  }
+  /**
+   * @param string
+   */
+  public function setEffectiveContentCategory($effectiveContentCategory)
+  {
+    $this->effectiveContentCategory = $effectiveContentCategory;
+  }
+  /**
+   * @return string
+   */
+  public function getEffectiveContentCategory()
+  {
+    return $this->effectiveContentCategory;
   }
   /**
    * @param YoutubeAndPartnersInventorySourceConfig
