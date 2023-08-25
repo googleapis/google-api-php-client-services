@@ -35,10 +35,8 @@ class SpacesMessagesReactions extends \Google\Service\Resource
    * Creates a reaction and adds it to a message. For an example, see [Create a
    * reaction](https://developers.google.com/chat/api/guides/v1/reactions/create).
    * Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.messages`, `chat.messages.reactions`, or
-   * `chat.messages.reactions.create` scope. Only unicode emoji are supported.
-   * (reactions.create)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * Only unicode emoji are supported. (reactions.create)
    *
    * @param string $parent Required. The message where the reaction is created.
    * Format: `spaces/{space}/messages/{message}`
@@ -56,8 +54,8 @@ class SpacesMessagesReactions extends \Google\Service\Resource
    * Deletes a reaction to a message. For an example, see [Delete a
    * reaction](https://developers.google.com/chat/api/guides/v1/reactions/delete).
    * Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.messages` or `chat.messages.reactions` scope. (reactions.delete)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * (reactions.delete)
    *
    * @param string $name Required. Name of the reaction to delete. Format:
    * `spaces/{space}/messages/{message}/reactions/{reaction}`
@@ -74,9 +72,7 @@ class SpacesMessagesReactions extends \Google\Service\Resource
    * Lists reactions to a message. For an example, see [List
    * reactions](https://developers.google.com/chat/api/guides/v1/reactions/list).
    * Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * `chat.messages`, `chat.messages.readonly`, `chat.messages.reactions`, or
-   * `chat.messages.reactions.readonly` scope.
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * (reactions.listSpacesMessagesReactions)
    *
    * @param string $parent Required. The message users reacted to. Format:

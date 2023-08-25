@@ -32,21 +32,14 @@ use Google\Service\HangoutsChat\Message;
 class SpacesMessages extends \Google\Service\Resource
 {
   /**
-   * Creates a message. For an example, see [Create a message](https://developers.
-   * google.com/chat/api/guides/crudl/messages#create_a_message). Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth).
-   * Creating a text message supports both [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * [app authentication]
-   * (https://developers.google.com/chat/api/guides/auth/service-accounts). [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` or `chat.messages.create` authorization scope.
-   * Creating a card message only supports and requires [app authentication]
-   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
-   * Because Chat provides authentication for
-   * [webhooks](https://developers.google.com/chat/how-tos/webhooks) as part of
-   * the URL that's generated when a webhook is registered, webhooks can create
-   * messages without a service account or user authentication. (messages.create)
+   * Creates a message in a Google Chat space. For an example, see [Create a
+   * message](https://developers.google.com/chat/api/guides/v1/messages/create).
+   * Calling this method requires
+   * [authentication](https://developers.google.com/chat/api/guides/auth) and
+   * supports the following authentication types: - For text messages, user
+   * authentication or app authentication are supported. - For card messages, only
+   * app authentication is supported. (Only Chat apps can create card messages.)
+   * (messages.create)
    *
    * @param string $parent Required. The resource name of the space in which to
    * create a message. Format: `spaces/{space}`
@@ -95,10 +88,9 @@ class SpacesMessages extends \Google\Service\Resource
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` authorization scope. Requests authenticated with
-   * service accounts can only delete messages created by the calling Chat app.
-   * (messages.delete)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * Requests authenticated with service accounts can only delete messages created
+   * by the calling Chat app. (messages.delete)
    *
    * @param string $name Required. Resource name of the message that you want to
    * delete, in the form `spaces/messages` Example:
@@ -129,8 +121,7 @@ class SpacesMessages extends \Google\Service\Resource
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` or `chat.messages.readonly` authorization scope.
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * Note: Might return a message from a blocked member or space. (messages.get)
    *
    * @param string $name Required. Resource name of the message to retrieve.
@@ -153,8 +144,7 @@ class SpacesMessages extends \Google\Service\Resource
    * Lists messages in a space that the caller is a member of, including messages
    * from blocked members and spaces. For an example, see [List
    * messages](/chat/api/guides/v1/messages/list). Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.messages` or `chat.messages.readonly` authorization scope.
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * (messages.listSpacesMessages)
    *
    * @param string $parent Required. The resource name of the space to list
@@ -219,10 +209,9 @@ class SpacesMessages extends \Google\Service\Resource
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` authorization scope. Requests authenticated with
-   * service accounts can only update messages created by the calling Chat app.
-   * (messages.patch)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * Requests authenticated with service accounts can only update messages created
+   * by the calling Chat app. (messages.patch)
    *
    * @param string $name Resource name in the form `spaces/messages`. Example:
    * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
@@ -260,10 +249,9 @@ class SpacesMessages extends \Google\Service\Resource
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.messages` authorization scope. Requests authenticated with
-   * service accounts can only update messages created by the calling Chat app.
-   * (messages.update)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * Requests authenticated with service accounts can only update messages created
+   * by the calling Chat app. (messages.update)
    *
    * @param string $name Resource name in the form `spaces/messages`. Example:
    * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`

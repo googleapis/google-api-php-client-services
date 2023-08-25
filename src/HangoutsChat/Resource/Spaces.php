@@ -39,8 +39,8 @@ class Spaces extends \Google\Service\Resource
    * you receive the error message `ALREADY_EXISTS` when creating a space, try a
    * different `displayName`. An existing space within the Google Workspace
    * organization might already use this display name. Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.spaces.create` or `chat.spaces` scope. (spaces.create)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * (spaces.create)
    *
    * @param Space $postBody
    * @param array $optParams Optional parameters.
@@ -65,8 +65,7 @@ class Spaces extends \Google\Service\Resource
    * space](https://developers.google.com/chat/api/guides/v1/spaces/delete).
    * Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * from a user who has permission to delete the space, and the `chat.delete`
-   * scope. (spaces.delete)
+   * from a user who has permission to delete the space. (spaces.delete)
    *
    * @param string $name Required. Resource name of the space to delete. Format:
    * `spaces/{space}`
@@ -126,8 +125,7 @@ class Spaces extends \Google\Service\Resource
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope.
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * (spaces.get)
    *
    * @param string $name Required. Resource name of the space, in the form
@@ -150,8 +148,7 @@ class Spaces extends \Google\Service\Resource
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users)
-   * requires the `chat.spaces` or `chat.spaces.readonly` authorization scope.
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * Lists spaces visible to the caller or authenticated user. Group chats and DMs
    * aren't listed until the first message is sent. (spaces.listSpaces)
    *
@@ -195,8 +192,8 @@ class Spaces extends \Google\Service\Resource
    * `ALREADY_EXISTS`, try a different display name.. An existing space within the
    * Google Workspace organization might already use this display name. Requires
    * [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.spaces` scope. (spaces.patch)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * (spaces.patch)
    *
    * @param string $name Resource name of the space. Format: `spaces/{space}`
    * @param Space $postBody
@@ -261,8 +258,8 @@ class Spaces extends \Google\Service\Resource
    * `ALREADY_EXISTS` when setting up a space, try a different `displayName`. An
    * existing space within the Google Workspace organization might already use
    * this display name. Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users) and
-   * the `chat.spaces.create` or `chat.spaces` scope. (spaces.setup)
+   * authentication](https://developers.google.com/chat/api/guides/auth/users).
+   * (spaces.setup)
    *
    * @param SetUpSpaceRequest $postBody
    * @param array $optParams Optional parameters.
