@@ -17,6 +17,9 @@
 
 namespace Google\Service\ChecksService\Resource;
 
+use Google\Service\ChecksService\GoogleChecksAccountV1alphaApp;
+use Google\Service\ChecksService\GoogleChecksAccountV1alphaListAppsResponse;
+
 /**
  * The "apps" collection of methods.
  * Typical usage is:
@@ -27,6 +30,40 @@ namespace Google\Service\ChecksService\Resource;
  */
 class AccountsApps extends \Google\Service\Resource
 {
+  /**
+   * Gets an app. (apps.get)
+   *
+   * @param string $name Required. Resource name of the app. Example:
+   * `accounts/123/apps/456`
+   * @param array $optParams Optional parameters.
+   * @return GoogleChecksAccountV1alphaApp
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleChecksAccountV1alphaApp::class);
+  }
+  /**
+   * Lists the apps under the given account. (apps.listAccountsApps)
+   *
+   * @param string $parent Required. The parent account. Example: `accounts/123`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. The maximum number of results to return.
+   * The server may further constrain the maximum number of results returned in a
+   * single page. If unspecified, the server will decide the number of results to
+   * be returned.
+   * @opt_param string pageToken Optional. A page token received from a previous
+   * `ListApps` call. Provide this to retrieve the subsequent page.
+   * @return GoogleChecksAccountV1alphaListAppsResponse
+   */
+  public function listAccountsApps($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleChecksAccountV1alphaListAppsResponse::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

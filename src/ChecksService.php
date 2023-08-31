@@ -37,6 +37,7 @@ class ChecksService extends \Google\Service
 {
 
 
+  public $accounts_apps;
   public $accounts_apps_operations;
   public $accounts_apps_reports;
   public $media;
@@ -59,6 +60,44 @@ class ChecksService extends \Google\Service
     $this->version = 'v1alpha';
     $this->serviceName = 'checks';
 
+    $this->accounts_apps = new ChecksService\Resource\AccountsApps(
+        $this,
+        $this->serviceName,
+        'apps',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1alpha/{+parent}/apps',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->accounts_apps_operations = new ChecksService\Resource\AccountsAppsOperations(
         $this,
         $this->serviceName,
