@@ -28,8 +28,6 @@ class GoogleMapsPlacesV1SearchTextRequest extends \Google\Collection
    * @var string
    */
   public $languageCode;
-  protected $locationType = GoogleMapsPlacesV1SearchTextRequestLocation::class;
-  protected $locationDataType = '';
   protected $locationBiasType = GoogleMapsPlacesV1SearchTextRequestLocationBias::class;
   protected $locationBiasDataType = '';
   protected $locationRestrictionType = GoogleMapsPlacesV1SearchTextRequestLocationRestriction::class;
@@ -47,8 +45,6 @@ class GoogleMapsPlacesV1SearchTextRequest extends \Google\Collection
    * @var string[]
    */
   public $priceLevels;
-  protected $priceRangeType = GoogleMapsPlacesV1Int32Range::class;
-  protected $priceRangeDataType = '';
   /**
    * @var string
    */
@@ -93,20 +89,6 @@ class GoogleMapsPlacesV1SearchTextRequest extends \Google\Collection
   public function getLanguageCode()
   {
     return $this->languageCode;
-  }
-  /**
-   * @param GoogleMapsPlacesV1SearchTextRequestLocation
-   */
-  public function setLocation(GoogleMapsPlacesV1SearchTextRequestLocation $location)
-  {
-    $this->location = $location;
-  }
-  /**
-   * @return GoogleMapsPlacesV1SearchTextRequestLocation
-   */
-  public function getLocation()
-  {
-    return $this->location;
   }
   /**
    * @param GoogleMapsPlacesV1SearchTextRequestLocationBias
@@ -185,20 +167,6 @@ class GoogleMapsPlacesV1SearchTextRequest extends \Google\Collection
   public function getPriceLevels()
   {
     return $this->priceLevels;
-  }
-  /**
-   * @param GoogleMapsPlacesV1Int32Range
-   */
-  public function setPriceRange(GoogleMapsPlacesV1Int32Range $priceRange)
-  {
-    $this->priceRange = $priceRange;
-  }
-  /**
-   * @return GoogleMapsPlacesV1Int32Range
-   */
-  public function getPriceRange()
-  {
-    return $this->priceRange;
   }
   /**
    * @param string

@@ -22,10 +22,6 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends \Google\Model
   protected $dateType = GoogleTypeDate::class;
   protected $dateDataType = '';
   /**
-   * @var string
-   */
-  public $dateDeprecated;
-  /**
    * @var int
    */
   public $day;
@@ -55,20 +51,6 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends \Google\Model
   public function getDate()
   {
     return $this->date;
-  }
-  /**
-   * @param string
-   */
-  public function setDateDeprecated($dateDeprecated)
-  {
-    $this->dateDeprecated = $dateDeprecated;
-  }
-  /**
-   * @return string
-   */
-  public function getDateDeprecated()
-  {
-    return $this->dateDeprecated;
   }
   /**
    * @param int
