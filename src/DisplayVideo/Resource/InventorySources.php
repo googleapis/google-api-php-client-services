@@ -75,8 +75,6 @@ class InventorySources extends \Google\Service\Resource
    * fetch.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string advertiserId Optional. The advertiser_id is optional, when
-   * it is provided, the advertiser access is used.
    * @opt_param string partnerId Required. The ID of the DV360 partner to which
    * the fetched inventory source is permissioned.
    * @return InventorySource

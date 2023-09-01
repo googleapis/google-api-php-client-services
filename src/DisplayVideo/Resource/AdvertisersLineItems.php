@@ -46,8 +46,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * assigned targeting options provided in
    * BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this
    * endpoint cannot be made concurrently with the following requests updating the
-   * same line item: * BulkUpdate * UpdateLineItem *
-   * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+   * same line item: * lineItems.bulkUpdate * lineItems.patch *
+   * assignedTargetingOptions.create * assignedTargetingOptions.delete
    * (lineItems.bulkEditAssignedTargetingOptions)
    *
    * @param string $advertiserId Required. The ID of the advertiser the line items
@@ -111,7 +111,7 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * Updates multiple line items. Requests to this endpoint cannot be made
    * concurrently with the following requests updating the same line item: *
    * BulkEditAssignedTargetingOptions * UpdateLineItem *
-   * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+   * assignedTargetingOptions.create * assignedTargetingOptions.delete
    * (lineItems.bulkUpdate)
    *
    * @param string $advertiserId Required. The ID of the advertiser this line item
@@ -265,8 +265,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * Updates an existing line item. Returns the updated line item if successful.
    * Requests to this endpoint cannot be made concurrently with the following
    * requests updating the same line item: * BulkEditAssignedTargetingOptions *
-   * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption *
-   * DeleteLineItemAssignedTargetingOption (lineItems.patch)
+   * BulkUpdateLineItems * assignedTargetingOptions.create *
+   * assignedTargetingOptions.delete (lineItems.patch)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * line item belongs to.
