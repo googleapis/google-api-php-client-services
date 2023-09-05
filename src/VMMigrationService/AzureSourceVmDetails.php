@@ -17,14 +17,14 @@
 
 namespace Google\Service\VMMigrationService;
 
-class VmwareSourceVmDetails extends \Google\Collection
+class AzureSourceVmDetails extends \Google\Collection
 {
   protected $collection_key = 'disks';
   /**
    * @var string
    */
   public $committedStorageBytes;
-  protected $disksType = VmwareDiskDetails::class;
+  protected $disksType = AzureDiskDetails::class;
   protected $disksDataType = 'array';
   /**
    * @var string
@@ -48,14 +48,14 @@ class VmwareSourceVmDetails extends \Google\Collection
     return $this->committedStorageBytes;
   }
   /**
-   * @param VmwareDiskDetails[]
+   * @param AzureDiskDetails[]
    */
   public function setDisks($disks)
   {
     $this->disks = $disks;
   }
   /**
-   * @return VmwareDiskDetails[]
+   * @return AzureDiskDetails[]
    */
   public function getDisks()
   {
@@ -92,4 +92,4 @@ class VmwareSourceVmDetails extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VmwareSourceVmDetails::class, 'Google_Service_VMMigrationService_VmwareSourceVmDetails');
+class_alias(AzureSourceVmDetails::class, 'Google_Service_VMMigrationService_AzureSourceVmDetails');

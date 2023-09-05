@@ -30,6 +30,8 @@ class AwsSourceVmDetails extends \Google\Collection
    * @var string
    */
   public $firmware;
+  protected $vmCapabilitiesInfoType = VmCapabilities::class;
+  protected $vmCapabilitiesInfoDataType = '';
 
   /**
    * @param string
@@ -72,6 +74,20 @@ class AwsSourceVmDetails extends \Google\Collection
   public function getFirmware()
   {
     return $this->firmware;
+  }
+  /**
+   * @param VmCapabilities
+   */
+  public function setVmCapabilitiesInfo(VmCapabilities $vmCapabilitiesInfo)
+  {
+    $this->vmCapabilitiesInfo = $vmCapabilitiesInfo;
+  }
+  /**
+   * @return VmCapabilities
+   */
+  public function getVmCapabilitiesInfo()
+  {
+    return $this->vmCapabilitiesInfo;
   }
 }
 

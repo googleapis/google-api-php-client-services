@@ -21,6 +21,8 @@ class Source extends \Google\Model
 {
   protected $awsType = AwsSourceDetails::class;
   protected $awsDataType = '';
+  protected $azureType = AzureSourceDetails::class;
+  protected $azureDataType = '';
   /**
    * @var string
    */
@@ -57,6 +59,20 @@ class Source extends \Google\Model
   public function getAws()
   {
     return $this->aws;
+  }
+  /**
+   * @param AzureSourceDetails
+   */
+  public function setAzure(AzureSourceDetails $azure)
+  {
+    $this->azure = $azure;
+  }
+  /**
+   * @return AzureSourceDetails
+   */
+  public function getAzure()
+  {
+    return $this->azure;
   }
   /**
    * @param string
