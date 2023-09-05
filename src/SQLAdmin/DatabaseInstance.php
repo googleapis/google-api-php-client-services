@@ -103,6 +103,10 @@ class DatabaseInstance extends \Google\Collection
   /**
    * @var string
    */
+  public $primaryDnsName;
+  /**
+   * @var string
+   */
   public $project;
   /**
    * @var string
@@ -474,6 +478,20 @@ class DatabaseInstance extends \Google\Collection
   public function getOutOfDiskReport()
   {
     return $this->outOfDiskReport;
+  }
+  /**
+   * @param string
+   */
+  public function setPrimaryDnsName($primaryDnsName)
+  {
+    $this->primaryDnsName = $primaryDnsName;
+  }
+  /**
+   * @return string
+   */
+  public function getPrimaryDnsName()
+  {
+    return $this->primaryDnsName;
   }
   /**
    * @param string
