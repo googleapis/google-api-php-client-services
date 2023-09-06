@@ -32,11 +32,11 @@ use Google\Service\BinaryAuthorization\PlatformPolicy;
 class ProjectsPlatformsPolicies extends \Google\Service\Resource
 {
   /**
-   * Creates a platform policy, and returns a copy of it. Returns NOT_FOUND if the
-   * project or platform doesn't exist, INVALID_ARGUMENT if the request is
-   * malformed, ALREADY_EXISTS if the policy already exists, and INVALID_ARGUMENT
-   * if the policy contains a platform-specific policy that does not match the
-   * platform value specified in the URL. (policies.create)
+   * Creates a platform policy, and returns a copy of it. Returns `NOT_FOUND` if
+   * the project or platform doesn't exist, `INVALID_ARGUMENT` if the request is
+   * malformed, `ALREADY_EXISTS` if the policy already exists, and
+   * `INVALID_ARGUMENT` if the policy contains a platform-specific policy that
+   * does not match the platform value specified in the URL. (policies.create)
    *
    * @param string $parent Required. The parent of this platform policy.
    * @param PlatformPolicy $postBody
@@ -52,7 +52,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
     return $this->call('create', [$params], PlatformPolicy::class);
   }
   /**
-   * Deletes a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+   * Deletes a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
    * (policies.delete)
    *
    * @param string $name Required. The name of the platform policy to delete, in
@@ -67,7 +67,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
     return $this->call('delete', [$params], BinaryauthorizationEmpty::class);
   }
   /**
-   * Gets a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+   * Gets a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
    * (policies.get)
    *
    * @param string $name Required. The name of the platform policy to retrieve in
@@ -83,7 +83,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
   }
   /**
    * Lists platform policies owned by a project in the specified platform. Returns
-   * INVALID_ARGUMENT if the project or the platform doesn't exist.
+   * `INVALID_ARGUMENT` if the project or the platform doesn't exist.
    * (policies.listProjectsPlatformsPolicies)
    *
    * @param string $parent Required. The resource name of the platform associated
@@ -106,11 +106,11 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
     return $this->call('list', [$params], ListPlatformPoliciesResponse::class);
   }
   /**
-   * Replaces a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+   * Replaces a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
    * (policies.replacePlatformPolicy)
    *
-   * @param string $name Output only. The relative resource name of the BinAuthz
-   * platform policy, in the form of `projects/platforms/policies`.
+   * @param string $name Output only. The relative resource name of the Binary
+   * Authorization platform policy, in the form of `projects/platforms/policies`.
    * @param PlatformPolicy $postBody
    * @param array $optParams Optional parameters.
    * @return PlatformPolicy

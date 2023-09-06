@@ -39,8 +39,9 @@ class ProjectsAttestors extends \Google\Service\Resource
 {
   /**
    * Creates an attestor, and returns a copy of the new attestor. Returns
-   * NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is
-   * malformed, ALREADY_EXISTS if the attestor already exists. (attestors.create)
+   * `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the request
+   * is malformed, `ALREADY_EXISTS` if the attestor already exists.
+   * (attestors.create)
    *
    * @param string $parent Required. The parent of this attestor.
    * @param Attestor $postBody
@@ -56,7 +57,7 @@ class ProjectsAttestors extends \Google\Service\Resource
     return $this->call('create', [$params], Attestor::class);
   }
   /**
-   * Deletes an attestor. Returns NOT_FOUND if the attestor does not exist.
+   * Deletes an attestor. Returns `NOT_FOUND` if the attestor does not exist.
    * (attestors.delete)
    *
    * @param string $name Required. The name of the attestors to delete, in the
@@ -71,7 +72,7 @@ class ProjectsAttestors extends \Google\Service\Resource
     return $this->call('delete', [$params], BinaryauthorizationEmpty::class);
   }
   /**
-   * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
+   * Gets an attestor. Returns `NOT_FOUND` if the attestor does not exist.
    * (attestors.get)
    *
    * @param string $name Required. The name of the attestor to retrieve, in the
@@ -116,7 +117,7 @@ class ProjectsAttestors extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], IamPolicy::class);
   }
   /**
-   * Lists attestors. Returns INVALID_ARGUMENT if the project does not exist.
+   * Lists attestors. Returns `INVALID_ARGUMENT` if the project does not exist.
    * (attestors.listProjectsAttestors)
    *
    * @param string $parent Required. The resource name of the project associated
@@ -180,7 +181,7 @@ class ProjectsAttestors extends \Google\Service\Resource
     return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
   }
   /**
-   * Updates an attestor. Returns NOT_FOUND if the attestor does not exist.
+   * Updates an attestor. Returns `NOT_FOUND` if the attestor does not exist.
    * (attestors.update)
    *
    * @param string $name Required. The resource name, in the format:
@@ -196,8 +197,8 @@ class ProjectsAttestors extends \Google\Service\Resource
     return $this->call('update', [$params], Attestor::class);
   }
   /**
-   * Returns whether the given Attestation for the given image URI was signed by
-   * the given Attestor (attestors.validateAttestationOccurrence)
+   * Returns whether the given `Attestation` for the given image URI was signed by
+   * the given `Attestor` (attestors.validateAttestationOccurrence)
    *
    * @param string $attestor Required. The resource name of the Attestor of the
    * occurrence, in the format `projects/attestors`.
