@@ -28,9 +28,9 @@ class CuepointSchedule extends \Google\Model
    */
   public $pauseAdsUntil;
   /**
-   * @var string
+   * @var int
    */
-  public $repeatInterval;
+  public $repeatIntervalSecs;
   /**
    * @var string
    */
@@ -65,18 +65,18 @@ class CuepointSchedule extends \Google\Model
     return $this->pauseAdsUntil;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setRepeatInterval($repeatInterval)
+  public function setRepeatIntervalSecs($repeatIntervalSecs)
   {
-    $this->repeatInterval = $repeatInterval;
+    $this->repeatIntervalSecs = $repeatIntervalSecs;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getRepeatInterval()
+  public function getRepeatIntervalSecs()
   {
-    return $this->repeatInterval;
+    return $this->repeatIntervalSecs;
   }
   /**
    * @param string
