@@ -89,6 +89,10 @@ class ResourceSearchResult extends \Google\Collection
   protected $relationshipsType = RelatedResources::class;
   protected $relationshipsDataType = 'map';
   /**
+   * @var string[]
+   */
+  public $sccSecurityMarks;
+  /**
    * @var string
    */
   public $state;
@@ -362,6 +366,20 @@ class ResourceSearchResult extends \Google\Collection
   public function getRelationships()
   {
     return $this->relationships;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSccSecurityMarks($sccSecurityMarks)
+  {
+    $this->sccSecurityMarks = $sccSecurityMarks;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSccSecurityMarks()
+  {
+    return $this->sccSecurityMarks;
   }
   /**
    * @param string
