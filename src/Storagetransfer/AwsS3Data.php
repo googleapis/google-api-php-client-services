@@ -28,6 +28,10 @@ class AwsS3Data extends \Google\Model
   /**
    * @var string
    */
+  public $cloudfrontDomain;
+  /**
+   * @var string
+   */
   public $credentialsSecret;
   /**
    * @var string
@@ -65,6 +69,20 @@ class AwsS3Data extends \Google\Model
   public function getBucketName()
   {
     return $this->bucketName;
+  }
+  /**
+   * @param string
+   */
+  public function setCloudfrontDomain($cloudfrontDomain)
+  {
+    $this->cloudfrontDomain = $cloudfrontDomain;
+  }
+  /**
+   * @return string
+   */
+  public function getCloudfrontDomain()
+  {
+    return $this->cloudfrontDomain;
   }
   /**
    * @param string
