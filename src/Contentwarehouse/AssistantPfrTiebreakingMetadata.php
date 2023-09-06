@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class PhotosHdrMetadataGainmap extends \Google\Model
+class AssistantPfrTiebreakingMetadata extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string
    */
-  public $adobeHdr;
+  public $fingerprint;
   /**
-   * @var bool
+   * @var string
    */
-  public $appleHdr;
-  /**
-   * @var bool
-   */
-  public $googleHdr;
+  public $sortedNameString;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setAdobeHdr($adobeHdr)
+  public function setFingerprint($fingerprint)
   {
-    $this->adobeHdr = $adobeHdr;
+    $this->fingerprint = $fingerprint;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getAdobeHdr()
+  public function getFingerprint()
   {
-    return $this->adobeHdr;
+    return $this->fingerprint;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setAppleHdr($appleHdr)
+  public function setSortedNameString($sortedNameString)
   {
-    $this->appleHdr = $appleHdr;
+    $this->sortedNameString = $sortedNameString;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getAppleHdr()
+  public function getSortedNameString()
   {
-    return $this->appleHdr;
-  }
-  /**
-   * @param bool
-   */
-  public function setGoogleHdr($googleHdr)
-  {
-    $this->googleHdr = $googleHdr;
-  }
-  /**
-   * @return bool
-   */
-  public function getGoogleHdr()
-  {
-    return $this->googleHdr;
+    return $this->sortedNameString;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PhotosHdrMetadataGainmap::class, 'Google_Service_Contentwarehouse_PhotosHdrMetadataGainmap');
+class_alias(AssistantPfrTiebreakingMetadata::class, 'Google_Service_Contentwarehouse_AssistantPfrTiebreakingMetadata');

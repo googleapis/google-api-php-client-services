@@ -205,6 +205,10 @@ class TrawlerTrawlerPrivateFetchReplyData extends \Google\Model
   /**
    * @var string
    */
+  public $prodRegion;
+  /**
+   * @var string
+   */
   public $resourceBucket;
   /**
    * @var string
@@ -790,6 +794,20 @@ class TrawlerTrawlerPrivateFetchReplyData extends \Google\Model
   public function getOriginalClientParams()
   {
     return $this->originalClientParams;
+  }
+  /**
+   * @param string
+   */
+  public function setProdRegion($prodRegion)
+  {
+    $this->prodRegion = $prodRegion;
+  }
+  /**
+   * @return string
+   */
+  public function getProdRegion()
+  {
+    return $this->prodRegion;
   }
   /**
    * @param string

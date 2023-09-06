@@ -30,6 +30,10 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
   /**
    * @var bool
    */
+  public $isLocal;
+  /**
+   * @var bool
+   */
   public $isLocked;
   /**
    * @var bool
@@ -63,6 +67,20 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
   public function getIsDocked()
   {
     return $this->isDocked;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsLocal($isLocal)
+  {
+    $this->isLocal = $isLocal;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsLocal()
+  {
+    return $this->isLocal;
   }
   /**
    * @param bool

@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class PhotosHdrMetadataGainmap extends \Google\Model
+class WatchpageLanguageWatchPageLanguageModelPredictionsLanguageScore extends \Google\Model
 {
   /**
-   * @var bool
+   * @var float
    */
-  public $adobeHdr;
+  public $score;
   /**
-   * @var bool
+   * @var string
    */
-  public $appleHdr;
-  /**
-   * @var bool
-   */
-  public $googleHdr;
+  public $watchpageLanguage;
 
   /**
-   * @param bool
+   * @param float
    */
-  public function setAdobeHdr($adobeHdr)
+  public function setScore($score)
   {
-    $this->adobeHdr = $adobeHdr;
+    $this->score = $score;
   }
   /**
-   * @return bool
+   * @return float
    */
-  public function getAdobeHdr()
+  public function getScore()
   {
-    return $this->adobeHdr;
+    return $this->score;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setAppleHdr($appleHdr)
+  public function setWatchpageLanguage($watchpageLanguage)
   {
-    $this->appleHdr = $appleHdr;
+    $this->watchpageLanguage = $watchpageLanguage;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getAppleHdr()
+  public function getWatchpageLanguage()
   {
-    return $this->appleHdr;
-  }
-  /**
-   * @param bool
-   */
-  public function setGoogleHdr($googleHdr)
-  {
-    $this->googleHdr = $googleHdr;
-  }
-  /**
-   * @return bool
-   */
-  public function getGoogleHdr()
-  {
-    return $this->googleHdr;
+    return $this->watchpageLanguage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PhotosHdrMetadataGainmap::class, 'Google_Service_Contentwarehouse_PhotosHdrMetadataGainmap');
+class_alias(WatchpageLanguageWatchPageLanguageModelPredictionsLanguageScore::class, 'Google_Service_Contentwarehouse_WatchpageLanguageWatchPageLanguageModelPredictionsLanguageScore');

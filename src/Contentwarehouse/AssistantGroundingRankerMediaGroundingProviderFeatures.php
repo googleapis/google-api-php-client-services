@@ -34,6 +34,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   /**
    * @var bool
    */
+  public $hasCastVideoDeeplink;
+  /**
+   * @var bool
+   */
   public $hasTypeSemanticEdge;
   /**
    * @var bool
@@ -116,6 +120,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getEntityMid()
   {
     return $this->entityMid;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasCastVideoDeeplink($hasCastVideoDeeplink)
+  {
+    $this->hasCastVideoDeeplink = $hasCastVideoDeeplink;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasCastVideoDeeplink()
+  {
+    return $this->hasCastVideoDeeplink;
   }
   /**
    * @param bool

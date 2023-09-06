@@ -81,6 +81,10 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   /**
    * @var bool
    */
+  public $isRefinedMeaning;
+  /**
+   * @var bool
+   */
   public $isUiCompositionIntent;
   protected $localSignalsType = KnowledgeAnswersIntentQueryLocalSignals::class;
   protected $localSignalsDataType = '';
@@ -364,6 +368,20 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public function getIsNeuralCategoricalInterpretation()
   {
     return $this->isNeuralCategoricalInterpretation;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsRefinedMeaning($isRefinedMeaning)
+  {
+    $this->isRefinedMeaning = $isRefinedMeaning;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsRefinedMeaning()
+  {
+    return $this->isRefinedMeaning;
   }
   /**
    * @param bool

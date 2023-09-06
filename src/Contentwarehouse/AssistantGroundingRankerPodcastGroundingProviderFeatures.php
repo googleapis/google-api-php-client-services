@@ -33,6 +33,7 @@ class AssistantGroundingRankerPodcastGroundingProviderFeatures extends \Google\M
    */
   public $scubedNg3ModelScore;
   public $scubedTstarScore;
+  public $youtubeConfidenceScore;
 
   /**
    * @param bool
@@ -91,6 +92,14 @@ class AssistantGroundingRankerPodcastGroundingProviderFeatures extends \Google\M
   public function getScubedTstarScore()
   {
     return $this->scubedTstarScore;
+  }
+  public function setYoutubeConfidenceScore($youtubeConfidenceScore)
+  {
+    $this->youtubeConfidenceScore = $youtubeConfidenceScore;
+  }
+  public function getYoutubeConfidenceScore()
+  {
+    return $this->youtubeConfidenceScore;
   }
 }
 

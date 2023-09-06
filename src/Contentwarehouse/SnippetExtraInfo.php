@@ -39,6 +39,10 @@ class SnippetExtraInfo extends \Google\Collection
    */
   public $disableQueryFeatures;
   /**
+   * @var bool
+   */
+  public $forceLeadingTextOrMeta;
+  /**
    * @var int
    */
   public $snippetBrainSelectedCandidateIndex;
@@ -114,6 +118,20 @@ class SnippetExtraInfo extends \Google\Collection
   public function getDisableQueryFeatures()
   {
     return $this->disableQueryFeatures;
+  }
+  /**
+   * @param bool
+   */
+  public function setForceLeadingTextOrMeta($forceLeadingTextOrMeta)
+  {
+    $this->forceLeadingTextOrMeta = $forceLeadingTextOrMeta;
+  }
+  /**
+   * @return bool
+   */
+  public function getForceLeadingTextOrMeta()
+  {
+    return $this->forceLeadingTextOrMeta;
   }
   /**
    * @param int

@@ -173,6 +173,8 @@ class GeostoreFeatureProto extends \Google\Collection
   protected $statusDataType = '';
   protected $storefrontGeometryType = GeostoreAnchoredGeometryProto::class;
   protected $storefrontGeometryDataType = 'array';
+  protected $storefrontGeometryModelType = GeostoreGeometryStoreReferenceProto::class;
+  protected $storefrontGeometryModelDataType = '';
   /**
    * @var bool
    */
@@ -1261,6 +1263,20 @@ class GeostoreFeatureProto extends \Google\Collection
   public function getStorefrontGeometry()
   {
     return $this->storefrontGeometry;
+  }
+  /**
+   * @param GeostoreGeometryStoreReferenceProto
+   */
+  public function setStorefrontGeometryModel(GeostoreGeometryStoreReferenceProto $storefrontGeometryModel)
+  {
+    $this->storefrontGeometryModel = $storefrontGeometryModel;
+  }
+  /**
+   * @return GeostoreGeometryStoreReferenceProto
+   */
+  public function getStorefrontGeometryModel()
+  {
+    return $this->storefrontGeometryModel;
   }
   /**
    * @param bool

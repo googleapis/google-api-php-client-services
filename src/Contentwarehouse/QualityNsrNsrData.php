@@ -37,6 +37,10 @@ class QualityNsrNsrData extends \Google\Collection
    */
   public $chardVariance;
   /**
+   * @var float
+   */
+  public $chromeInTotal;
+  /**
    * @var int
    */
   public $clusterId;
@@ -256,6 +260,20 @@ class QualityNsrNsrData extends \Google\Collection
   public function getChardVariance()
   {
     return $this->chardVariance;
+  }
+  /**
+   * @param float
+   */
+  public function setChromeInTotal($chromeInTotal)
+  {
+    $this->chromeInTotal = $chromeInTotal;
+  }
+  /**
+   * @return float
+   */
+  public function getChromeInTotal()
+  {
+    return $this->chromeInTotal;
   }
   /**
    * @param int

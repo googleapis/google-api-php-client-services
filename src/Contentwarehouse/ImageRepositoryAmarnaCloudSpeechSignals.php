@@ -34,6 +34,8 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
   public $modelIdentifier;
   protected $resultsType = ImageRepositorySpeechRecognitionResult::class;
   protected $resultsDataType = 'array';
+  protected $s3RecognizerMetadataResponseType = ImageRepositoryS3RecognizerMetadataResponse::class;
+  protected $s3RecognizerMetadataResponseDataType = '';
   protected $transcriptAsrType = PseudoVideoData::class;
   protected $transcriptAsrDataType = '';
 
@@ -92,6 +94,20 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
   public function getResults()
   {
     return $this->results;
+  }
+  /**
+   * @param ImageRepositoryS3RecognizerMetadataResponse
+   */
+  public function setS3RecognizerMetadataResponse(ImageRepositoryS3RecognizerMetadataResponse $s3RecognizerMetadataResponse)
+  {
+    $this->s3RecognizerMetadataResponse = $s3RecognizerMetadataResponse;
+  }
+  /**
+   * @return ImageRepositoryS3RecognizerMetadataResponse
+   */
+  public function getS3RecognizerMetadataResponse()
+  {
+    return $this->s3RecognizerMetadataResponse;
   }
   /**
    * @param PseudoVideoData

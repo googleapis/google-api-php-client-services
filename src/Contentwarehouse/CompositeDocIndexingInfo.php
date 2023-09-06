@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class CompositeDocIndexingInfo extends \Google\Collection
 {
-  protected $collection_key = 'tracingId';
+  protected $collection_key = 'verticals';
   protected $cdocBuildInfoType = IndexingDocjoinerCDocBuildInfo::class;
   protected $cdocBuildInfoDataType = '';
   /**
@@ -69,6 +69,10 @@ class CompositeDocIndexingInfo extends \Google\Collection
    */
   public $normalizedClickScore;
   /**
+   * @var string
+   */
+  public $primaryVertical;
+  /**
    * @var int
    */
   public $rawNavboost;
@@ -90,6 +94,10 @@ class CompositeDocIndexingInfo extends \Google\Collection
   protected $urlHistoryDataType = '';
   protected $urlPatternSignalsType = IndexingSignalAggregatorUrlPatternSignals::class;
   protected $urlPatternSignalsDataType = '';
+  /**
+   * @var string[]
+   */
+  public $verticals;
   protected $videoIndexingInfoType = ImageRepositoryVideoIndexingInfo::class;
   protected $videoIndexingInfoDataType = '';
 
@@ -276,6 +284,20 @@ class CompositeDocIndexingInfo extends \Google\Collection
     return $this->normalizedClickScore;
   }
   /**
+   * @param string
+   */
+  public function setPrimaryVertical($primaryVertical)
+  {
+    $this->primaryVertical = $primaryVertical;
+  }
+  /**
+   * @return string
+   */
+  public function getPrimaryVertical()
+  {
+    return $this->primaryVertical;
+  }
+  /**
    * @param int
    */
   public function setRawNavboost($rawNavboost)
@@ -372,6 +394,20 @@ class CompositeDocIndexingInfo extends \Google\Collection
   public function getUrlPatternSignals()
   {
     return $this->urlPatternSignals;
+  }
+  /**
+   * @param string[]
+   */
+  public function setVerticals($verticals)
+  {
+    $this->verticals = $verticals;
+  }
+  /**
+   * @return string[]
+   */
+  public function getVerticals()
+  {
+    return $this->verticals;
   }
   /**
    * @param ImageRepositoryVideoIndexingInfo

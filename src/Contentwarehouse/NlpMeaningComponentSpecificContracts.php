@@ -17,42 +17,29 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class KnowledgeAnswersAnyType extends \Google\Model
+class NlpMeaningComponentSpecificContracts extends \Google\Collection
 {
-  protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
-  protected $componentSpecificContractsDataType = '';
-  protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
-  protected $remodelingsDataType = '';
+  protected $collection_key = 'componentSpecificContracts';
+  /**
+   * @var string[]
+   */
+  public $componentSpecificContracts;
 
   /**
-   * @param NlpMeaningComponentSpecificContracts
+   * @param string[]
    */
-  public function setComponentSpecificContracts(NlpMeaningComponentSpecificContracts $componentSpecificContracts)
+  public function setComponentSpecificContracts($componentSpecificContracts)
   {
     $this->componentSpecificContracts = $componentSpecificContracts;
   }
   /**
-   * @return NlpMeaningComponentSpecificContracts
+   * @return string[]
    */
   public function getComponentSpecificContracts()
   {
     return $this->componentSpecificContracts;
   }
-  /**
-   * @param NlpMeaningMeaningRemodelings
-   */
-  public function setRemodelings(NlpMeaningMeaningRemodelings $remodelings)
-  {
-    $this->remodelings = $remodelings;
-  }
-  /**
-   * @return NlpMeaningMeaningRemodelings
-   */
-  public function getRemodelings()
-  {
-    return $this->remodelings;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(KnowledgeAnswersAnyType::class, 'Google_Service_Contentwarehouse_KnowledgeAnswersAnyType');
+class_alias(NlpMeaningComponentSpecificContracts::class, 'Google_Service_Contentwarehouse_NlpMeaningComponentSpecificContracts');

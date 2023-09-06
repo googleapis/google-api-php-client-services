@@ -17,64 +17,64 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class PhotosHdrMetadataGainmap extends \Google\Model
+class ImageRepositoryS3RecognizerMetadataResponse extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string
    */
-  public $adobeHdr;
+  public $mode;
   /**
-   * @var bool
+   * @var string
    */
-  public $appleHdr;
+  public $modelInfoLabel;
   /**
-   * @var bool
+   * @var string
    */
-  public $googleHdr;
+  public $serviceName;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setAdobeHdr($adobeHdr)
+  public function setMode($mode)
   {
-    $this->adobeHdr = $adobeHdr;
+    $this->mode = $mode;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getAdobeHdr()
+  public function getMode()
   {
-    return $this->adobeHdr;
+    return $this->mode;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setAppleHdr($appleHdr)
+  public function setModelInfoLabel($modelInfoLabel)
   {
-    $this->appleHdr = $appleHdr;
+    $this->modelInfoLabel = $modelInfoLabel;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getAppleHdr()
+  public function getModelInfoLabel()
   {
-    return $this->appleHdr;
+    return $this->modelInfoLabel;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setGoogleHdr($googleHdr)
+  public function setServiceName($serviceName)
   {
-    $this->googleHdr = $googleHdr;
+    $this->serviceName = $serviceName;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getGoogleHdr()
+  public function getServiceName()
   {
-    return $this->googleHdr;
+    return $this->serviceName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PhotosHdrMetadataGainmap::class, 'Google_Service_Contentwarehouse_PhotosHdrMetadataGainmap');
+class_alias(ImageRepositoryS3RecognizerMetadataResponse::class, 'Google_Service_Contentwarehouse_ImageRepositoryS3RecognizerMetadataResponse');

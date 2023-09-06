@@ -17,12 +17,14 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class KnowledgeAnswersBooleanType extends \Google\Model
+class NlpMeaningSemanticTypeNameComponentSpecificContracts extends \Google\Model
 {
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
-  protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
-  protected $remodelingsDataType = '';
+  /**
+   * @var string
+   */
+  public $name;
 
   /**
    * @param NlpMeaningComponentSpecificContracts
@@ -39,20 +41,20 @@ class KnowledgeAnswersBooleanType extends \Google\Model
     return $this->componentSpecificContracts;
   }
   /**
-   * @param NlpMeaningMeaningRemodelings
+   * @param string
    */
-  public function setRemodelings(NlpMeaningMeaningRemodelings $remodelings)
+  public function setName($name)
   {
-    $this->remodelings = $remodelings;
+    $this->name = $name;
   }
   /**
-   * @return NlpMeaningMeaningRemodelings
+   * @return string
    */
-  public function getRemodelings()
+  public function getName()
   {
-    return $this->remodelings;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(KnowledgeAnswersBooleanType::class, 'Google_Service_Contentwarehouse_KnowledgeAnswersBooleanType');
+class_alias(NlpMeaningSemanticTypeNameComponentSpecificContracts::class, 'Google_Service_Contentwarehouse_NlpMeaningSemanticTypeNameComponentSpecificContracts');
