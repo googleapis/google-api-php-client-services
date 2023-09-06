@@ -44,10 +44,6 @@ class WorkstationConfig extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var bool
-   */
-  public $enableAuditAgent;
   protected $encryptionKeyType = CustomerEncryptionKey::class;
   protected $encryptionKeyDataType = '';
   /**
@@ -186,20 +182,6 @@ class WorkstationConfig extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
-  }
-  /**
-   * @param bool
-   */
-  public function setEnableAuditAgent($enableAuditAgent)
-  {
-    $this->enableAuditAgent = $enableAuditAgent;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableAuditAgent()
-  {
-    return $this->enableAuditAgent;
   }
   /**
    * @param CustomerEncryptionKey

@@ -36,10 +36,6 @@ class Workstation extends \Google\Model
    */
   public $displayName;
   /**
-   * @var string[]
-   */
-  public $env;
-  /**
    * @var string
    */
   public $etag;
@@ -127,20 +123,6 @@ class Workstation extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
-  }
-  /**
-   * @param string[]
-   */
-  public function setEnv($env)
-  {
-    $this->env = $env;
-  }
-  /**
-   * @return string[]
-   */
-  public function getEnv()
-  {
-    return $this->env;
   }
   /**
    * @param string
