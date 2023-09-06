@@ -17,62 +17,64 @@
 
 namespace Google\Service\Testing;
 
-class PerAndroidVersionInfo extends \Google\Model
+class SessionStateEvent extends \Google\Model
 {
   /**
    * @var string
    */
-  public $deviceCapacity;
-  protected $directAccessVersionInfoType = DirectAccessVersionInfo::class;
-  protected $directAccessVersionInfoDataType = '';
+  public $eventTime;
   /**
    * @var string
    */
-  public $versionId;
+  public $sessionState;
+  /**
+   * @var string
+   */
+  public $stateMessage;
 
   /**
    * @param string
    */
-  public function setDeviceCapacity($deviceCapacity)
+  public function setEventTime($eventTime)
   {
-    $this->deviceCapacity = $deviceCapacity;
+    $this->eventTime = $eventTime;
   }
   /**
    * @return string
    */
-  public function getDeviceCapacity()
+  public function getEventTime()
   {
-    return $this->deviceCapacity;
-  }
-  /**
-   * @param DirectAccessVersionInfo
-   */
-  public function setDirectAccessVersionInfo(DirectAccessVersionInfo $directAccessVersionInfo)
-  {
-    $this->directAccessVersionInfo = $directAccessVersionInfo;
-  }
-  /**
-   * @return DirectAccessVersionInfo
-   */
-  public function getDirectAccessVersionInfo()
-  {
-    return $this->directAccessVersionInfo;
+    return $this->eventTime;
   }
   /**
    * @param string
    */
-  public function setVersionId($versionId)
+  public function setSessionState($sessionState)
   {
-    $this->versionId = $versionId;
+    $this->sessionState = $sessionState;
   }
   /**
    * @return string
    */
-  public function getVersionId()
+  public function getSessionState()
   {
-    return $this->versionId;
+    return $this->sessionState;
+  }
+  /**
+   * @param string
+   */
+  public function setStateMessage($stateMessage)
+  {
+    $this->stateMessage = $stateMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getStateMessage()
+  {
+    return $this->stateMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PerAndroidVersionInfo::class, 'Google_Service_Testing_PerAndroidVersionInfo');
+class_alias(SessionStateEvent::class, 'Google_Service_Testing_SessionStateEvent');
