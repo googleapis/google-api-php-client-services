@@ -35,7 +35,7 @@ class ProjectsLocationsConnectors extends \Google\Service\Resource
    * Creates a Serverless VPC Access connector, returns an operation.
    * (connectors.create)
    *
-   * @param string $parent Required. The project id and location in which the
+   * @param string $parent Required. The project ID and location in which the
    * configuration should be created, specified in the format
    * `projects/locations`.
    * @param Connector $postBody
