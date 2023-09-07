@@ -17,11 +17,13 @@
 
 namespace Google\Service\Networkconnectivity\Resource;
 
+use Google\Service\Networkconnectivity\AcceptHubSpokeRequest;
 use Google\Service\Networkconnectivity\GoogleLongrunningOperation;
 use Google\Service\Networkconnectivity\Hub;
 use Google\Service\Networkconnectivity\ListHubSpokesResponse;
 use Google\Service\Networkconnectivity\ListHubsResponse;
 use Google\Service\Networkconnectivity\Policy;
+use Google\Service\Networkconnectivity\RejectHubSpokeRequest;
 use Google\Service\Networkconnectivity\SetIamPolicyRequest;
 use Google\Service\Networkconnectivity\TestIamPermissionsRequest;
 use Google\Service\Networkconnectivity\TestIamPermissionsResponse;
@@ -36,6 +38,21 @@ use Google\Service\Networkconnectivity\TestIamPermissionsResponse;
  */
 class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Resource
 {
+  /**
+   * Accepts a proposal to attach a Network Connectivity Center spoke to the hub.
+   * (hubs.acceptSpoke)
+   *
+   * @param string $name Required. The name of the hub.
+   * @param AcceptHubSpokeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function acceptSpoke($name, AcceptHubSpokeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('acceptSpoke', [$params], GoogleLongrunningOperation::class);
+  }
   /**
    * Creates a new Network Connectivity Center hub in the specified project.
    * (hubs.create)
@@ -212,6 +229,23 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Rejects a Network Connectivity Center spoke from being attached to the hub.
+   * If the spoke was previously in the `ACTIVE` state, it transitions to the
+   * `INACTIVE` state and is no longer able to connect to other spokes that are
+   * attached to the hub. (hubs.rejectSpoke)
+   *
+   * @param string $name Required. The name of the hub.
+   * @param RejectHubSpokeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function rejectSpoke($name, RejectHubSpokeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('rejectSpoke', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

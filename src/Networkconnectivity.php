@@ -116,7 +116,17 @@ class Networkconnectivity extends \Google\Service
         'hubs',
         [
           'methods' => [
-            'create' => [
+            'acceptSpoke' => [
+              'path' => 'v1/{+name}:acceptSpoke',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/hubs',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -249,6 +259,16 @@ class Networkconnectivity extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'rejectSpoke' => [
+              'path' => 'v1/{+name}:rejectSpoke',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'setIamPolicy' => [
