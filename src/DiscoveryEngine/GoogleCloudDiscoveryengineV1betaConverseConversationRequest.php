@@ -31,6 +31,8 @@ class GoogleCloudDiscoveryengineV1betaConverseConversationRequest extends \Googl
    * @var string
    */
   public $servingConfig;
+  protected $summarySpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec::class;
+  protected $summarySpecDataType = '';
   /**
    * @var string[]
    */
@@ -91,6 +93,20 @@ class GoogleCloudDiscoveryengineV1betaConverseConversationRequest extends \Googl
   public function getServingConfig()
   {
     return $this->servingConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec
+   */
+  public function setSummarySpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec $summarySpec)
+  {
+    $this->summarySpec = $summarySpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec
+   */
+  public function getSummarySpec()
+  {
+    return $this->summarySpec;
   }
   /**
    * @param string[]

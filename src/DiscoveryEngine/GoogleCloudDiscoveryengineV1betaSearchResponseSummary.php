@@ -20,6 +20,8 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends \Google\Collection
 {
   protected $collection_key = 'summarySkippedReasons';
+  protected $safetyAttributesType = GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes::class;
+  protected $safetyAttributesDataType = '';
   /**
    * @var string[]
    */
@@ -29,6 +31,20 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends \Google\Coll
    */
   public $summaryText;
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes
+   */
+  public function setSafetyAttributes(GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes $safetyAttributes)
+  {
+    $this->safetyAttributes = $safetyAttributes;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes
+   */
+  public function getSafetyAttributes()
+  {
+    return $this->safetyAttributes;
+  }
   /**
    * @param string[]
    */

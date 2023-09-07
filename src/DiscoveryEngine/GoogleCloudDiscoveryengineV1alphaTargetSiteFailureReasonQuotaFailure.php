@@ -19,25 +19,6 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $totalRequiredQuota;
-
-  /**
-   * @param string
-   */
-  public function setTotalRequiredQuota($totalRequiredQuota)
-  {
-    $this->totalRequiredQuota = $totalRequiredQuota;
-  }
-  /**
-   * @return string
-   */
-  public function getTotalRequiredQuota()
-  {
-    return $this->totalRequiredQuota;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

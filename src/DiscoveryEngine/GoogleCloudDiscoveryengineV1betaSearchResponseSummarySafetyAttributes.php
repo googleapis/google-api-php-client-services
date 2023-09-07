@@ -17,47 +17,47 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1betaCompleteQueryResponseQuerySuggestion extends \Google\Collection
+class GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes extends \Google\Collection
 {
-  protected $collection_key = 'completableFieldPaths';
+  protected $collection_key = 'scores';
   /**
    * @var string[]
    */
-  public $completableFieldPaths;
+  public $categories;
   /**
-   * @var string
+   * @var float[]
    */
-  public $suggestion;
+  public $scores;
 
   /**
    * @param string[]
    */
-  public function setCompletableFieldPaths($completableFieldPaths)
+  public function setCategories($categories)
   {
-    $this->completableFieldPaths = $completableFieldPaths;
+    $this->categories = $categories;
   }
   /**
    * @return string[]
    */
-  public function getCompletableFieldPaths()
+  public function getCategories()
   {
-    return $this->completableFieldPaths;
+    return $this->categories;
   }
   /**
-   * @param string
+   * @param float[]
    */
-  public function setSuggestion($suggestion)
+  public function setScores($scores)
   {
-    $this->suggestion = $suggestion;
+    $this->scores = $scores;
   }
   /**
-   * @return string
+   * @return float[]
    */
-  public function getSuggestion()
+  public function getScores()
   {
-    return $this->suggestion;
+    return $this->scores;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1betaCompleteQueryResponseQuerySuggestion::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaCompleteQueryResponseQuerySuggestion');
+class_alias(GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes');
