@@ -421,16 +421,6 @@ class Dataproc extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'injectCredentials' => [
-              'path' => 'v1/{+session}:injectCredentials',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'session' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v1/{+parent}/sessions',
               'httpMethod' => 'GET',

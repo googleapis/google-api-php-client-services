@@ -32,7 +32,7 @@ use Google\Service\Dataproc\SessionTemplate;
 class ProjectsLocationsSessionTemplates extends \Google\Service\Resource
 {
   /**
-   * Create an session template, synchronously. (sessionTemplates.create)
+   * Create a session template synchronously. (sessionTemplates.create)
    *
    * @param string $parent Required. The parent resource where this session
    * template will be created.
@@ -78,7 +78,7 @@ class ProjectsLocationsSessionTemplates extends \Google\Service\Resource
    * Lists session templates.
    * (sessionTemplates.listProjectsLocationsSessionTemplates)
    *
-   * @param string $parent Required. The parent, which owns this collection of
+   * @param string $parent Required. The parent that owns this collection of
    * session templates.
    * @param array $optParams Optional parameters.
    *
@@ -98,8 +98,7 @@ class ProjectsLocationsSessionTemplates extends \Google\Service\Resource
     return $this->call('list', [$params], ListSessionTemplatesResponse::class);
   }
   /**
-   * Updates the session template, synchronously.Disable check for update_mask,
-   * because all updates will be full replacements. (sessionTemplates.patch)
+   * Updates the session template synchronously. (sessionTemplates.patch)
    *
    * @param string $name Required. The resource name of the session template.
    * @param SessionTemplate $postBody
