@@ -24,6 +24,7 @@ use Google\Service\Compute\Operation;
 use Google\Service\Compute\Policy;
 use Google\Service\Compute\RegionSetPolicyRequest;
 use Google\Service\Compute\ResourceGroupReference;
+use Google\Service\Compute\SecurityPolicyReference;
 
 /**
  * The "regionBackendServices" collection of methods.
@@ -255,6 +256,36 @@ class RegionBackendServices extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Sets the Google Cloud Armor security policy for the specified backend
+   * service. For more information, see Google Cloud Armor Overview
+   * (regionBackendServices.setSecurityPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $backendService Name of the BackendService resource to which
+   * the security policy should be set. The name should conform to RFC1035.
+   * @param SecurityPolicyReference $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   */
+  public function setSecurityPolicy($project, $region, $backendService, SecurityPolicyReference $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setSecurityPolicy', [$params], Operation::class);
   }
   /**
    * Updates the specified regional BackendService resource with the data included
