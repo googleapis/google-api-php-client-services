@@ -63,8 +63,6 @@ class Repository extends \Google\Model
    * @var bool
    */
   public $satisfiesPzs;
-  protected $sbomConfigType = SbomConfig::class;
-  protected $sbomConfigDataType = '';
   /**
    * @var string
    */
@@ -257,20 +255,6 @@ class Repository extends \Google\Model
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
-  }
-  /**
-   * @param SbomConfig
-   */
-  public function setSbomConfig(SbomConfig $sbomConfig)
-  {
-    $this->sbomConfig = $sbomConfig;
-  }
-  /**
-   * @return SbomConfig
-   */
-  public function getSbomConfig()
-  {
-    return $this->sbomConfig;
   }
   /**
    * @param string
