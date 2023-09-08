@@ -53,12 +53,12 @@ class Buyers extends \Google\Service\Resource
    * page. When a user visits a page containing a remarketing tag, Google adds the
    * user to a user list. (buyers.getRemarketingTag)
    *
-   * @param string $name Required. To fetch remarketing tag for an account, name
-   * must follow the pattern `buyers/{accountId}` where `{accountId}` represents
-   * ID of a buyer that owns the remarketing tag. For a bidder accessing
-   * remarketing tag on behalf of a child seat buyer, `{accountId}` should
-   * represent the ID of the child seat buyer. To fetch remarketing tag for a
-   * specific user list, name must follow the pattern
+   * @param string $name Required. To fetch the remarketing tag for an account,
+   * the name must follow the pattern `buyers/{accountId}`, where `{accountId}`
+   * represents the ID of the buyer that owns the remarketing tag. For a bidder
+   * accessing the remarketing tag on behalf of a child seat buyer, `{accountId}`
+   * should represent the ID of the child seat buyer. To fetch the remarketing tag
+   * for a specific user list, the name must follow the pattern
    * `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
    * @param array $optParams Optional parameters.
    * @return GetRemarketingTagResponse
