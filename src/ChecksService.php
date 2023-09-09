@@ -41,8 +41,6 @@ class ChecksService extends \Google\Service
   public $accounts_apps_operations;
   public $accounts_apps_reports;
   public $media;
-  public $privacypolicy;
-  public $projects_privacypolicy_operations;
 
   /**
    * Constructs the internal representation of the ChecksService service.
@@ -234,96 +232,6 @@ class ChecksService extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->privacypolicy = new ChecksService\Resource\Privacypolicy(
-        $this,
-        $this->serviceName,
-        'privacypolicy',
-        [
-          'methods' => [
-            'analyze' => [
-              'path' => 'v1alpha/privacypolicy:analyze',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],
-          ]
-        ]
-    );
-    $this->projects_privacypolicy_operations = new ChecksService\Resource\ProjectsPrivacypolicyOperations(
-        $this,
-        $this->serviceName,
-        'operations',
-        [
-          'methods' => [
-            'cancel' => [
-              'path' => 'v1alpha/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1alpha/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1alpha/{+name}/privacypolicy/operations',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'wait' => [
-              'path' => 'v1alpha/{+name}:wait',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'timeout' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
