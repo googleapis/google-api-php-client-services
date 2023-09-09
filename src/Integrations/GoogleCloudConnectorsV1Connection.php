@@ -65,6 +65,10 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
    */
   public $imageLocation;
   /**
+   * @var bool
+   */
+  public $isTrustedTester;
+  /**
    * @var string[]
    */
   public $labels;
@@ -298,6 +302,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getImageLocation()
   {
     return $this->imageLocation;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsTrustedTester($isTrustedTester)
+  {
+    $this->isTrustedTester = $isTrustedTester;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsTrustedTester()
+  {
+    return $this->isTrustedTester;
   }
   /**
    * @param string[]
