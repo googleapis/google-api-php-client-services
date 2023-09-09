@@ -40,6 +40,7 @@ class WorkflowExecutions extends \Google\Service
 
   public $projects_locations_workflows;
   public $projects_locations_workflows_executions;
+  public $projects_locations_workflows_executions_callbacks;
 
   /**
    * Constructs the internal representation of the WorkflowExecutions service.
@@ -103,6 +104,16 @@ class WorkflowExecutions extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'exportData' => [
+              'path' => 'v1/{+name}:exportData',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -143,6 +154,34 @@ class WorkflowExecutions extends \Google\Service
                   'type' => 'string',
                 ],
                 'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_workflows_executions_callbacks = new WorkflowExecutions\Resource\ProjectsLocationsWorkflowsExecutionsCallbacks(
+        $this,
+        $this->serviceName,
+        'callbacks',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/callbacks',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
