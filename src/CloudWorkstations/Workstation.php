@@ -58,6 +58,10 @@ class Workstation extends \Google\Model
   /**
    * @var string
    */
+  public $startTime;
+  /**
+   * @var string
+   */
   public $state;
   /**
    * @var string
@@ -193,6 +197,20 @@ class Workstation extends \Google\Model
   public function getReconciling()
   {
     return $this->reconciling;
+  }
+  /**
+   * @param string
+   */
+  public function setStartTime($startTime)
+  {
+    $this->startTime = $startTime;
+  }
+  /**
+   * @return string
+   */
+  public function getStartTime()
+  {
+    return $this->startTime;
   }
   /**
    * @param string

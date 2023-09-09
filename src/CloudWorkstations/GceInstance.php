@@ -50,6 +50,10 @@ class GceInstance extends \Google\Collection
    * @var string
    */
   public $serviceAccount;
+  /**
+   * @var string[]
+   */
+  public $serviceAccountScopes;
   protected $shieldedInstanceConfigType = GceShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
   /**
@@ -168,6 +172,20 @@ class GceInstance extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param string[]
+   */
+  public function setServiceAccountScopes($serviceAccountScopes)
+  {
+    $this->serviceAccountScopes = $serviceAccountScopes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getServiceAccountScopes()
+  {
+    return $this->serviceAccountScopes;
   }
   /**
    * @param GceShieldedInstanceConfig
