@@ -17,8 +17,64 @@
 
 namespace Google\Service\Datalineage;
 
-class GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse extends \Google\Model
+class GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse extends \Google\Collection
 {
+  protected $collection_key = 'lineageEvents';
+  /**
+   * @var string[]
+   */
+  public $lineageEvents;
+  /**
+   * @var string
+   */
+  public $process;
+  /**
+   * @var string
+   */
+  public $run;
+
+  /**
+   * @param string[]
+   */
+  public function setLineageEvents($lineageEvents)
+  {
+    $this->lineageEvents = $lineageEvents;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLineageEvents()
+  {
+    return $this->lineageEvents;
+  }
+  /**
+   * @param string
+   */
+  public function setProcess($process)
+  {
+    $this->process = $process;
+  }
+  /**
+   * @return string
+   */
+  public function getProcess()
+  {
+    return $this->process;
+  }
+  /**
+   * @param string
+   */
+  public function setRun($run)
+  {
+    $this->run = $run;
+  }
+  /**
+   * @return string
+   */
+  public function getRun()
+  {
+    return $this->run;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
