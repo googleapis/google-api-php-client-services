@@ -106,7 +106,34 @@ class Assuredworkloads extends \Google\Service
         'workloads',
         [
           'methods' => [
-            'create' => [
+            'analyzeWorkloadMove' => [
+              'path' => 'v1/{+target}:analyzeWorkloadMove',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'target' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'assetTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'project' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/workloads',
               'httpMethod' => 'POST',
               'parameters' => [

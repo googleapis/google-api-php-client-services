@@ -17,6 +17,7 @@
 
 namespace Google\Service\Assuredworkloads\Resource;
 
+use Google\Service\Assuredworkloads\GoogleCloudAssuredworkloadsV1AnalyzeWorkloadMoveResponse;
 use Google\Service\Assuredworkloads\GoogleCloudAssuredworkloadsV1ListWorkloadsResponse;
 use Google\Service\Assuredworkloads\GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest;
 use Google\Service\Assuredworkloads\GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest;
@@ -35,6 +36,41 @@ use Google\Service\Assuredworkloads\GoogleProtobufEmpty;
  */
 class OrganizationsLocationsWorkloads extends \Google\Service\Resource
 {
+  /**
+   * Analyzes a hypothetical move of a source resource to a target workload to
+   * surface compliance risks. The analysis is best effort and is not guaranteed
+   * to be exhaustive. (workloads.analyzeWorkloadMove)
+   *
+   * @param string $target Required. The resource ID of the folder-based
+   * destination workload. This workload is where the source resource will
+   * hypothetically be moved to. Specify the workload's relative resource name,
+   * formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/worklo
+   * ads/{WORKLOAD_ID}" For example: "organizations/123/locations/us-
+   * east1/workloads/assured-workload-2"
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string assetTypes Optional. List of asset types to be analyzed,
+   * including and under the source resource. If empty, all assets are analyzed.
+   * The complete list of asset types is available
+   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
+   * types#searchable_asset_types).
+   * @opt_param int pageSize Optional. Page size. If a value is not specified, the
+   * default value of 10 is used.
+   * @opt_param string pageToken Optional. The page token from the previous
+   * response. It needs to be passed in the second and following requests.
+   * @opt_param string project The source type is a project. Specify the project's
+   * relative resource name, formatted as either a project number or a project ID:
+   * "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}" For example:
+   * "projects/951040570662" when specifying a project number, or "projects/my-
+   * project-123" when specifying a project ID.
+   * @return GoogleCloudAssuredworkloadsV1AnalyzeWorkloadMoveResponse
+   */
+  public function analyzeWorkloadMove($target, $optParams = [])
+  {
+    $params = ['target' => $target];
+    $params = array_merge($params, $optParams);
+    return $this->call('analyzeWorkloadMove', [$params], GoogleCloudAssuredworkloadsV1AnalyzeWorkloadMoveResponse::class);
+  }
   /**
    * Creates Assured Workload. (workloads.create)
    *
