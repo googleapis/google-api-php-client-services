@@ -17,27 +17,28 @@
 
 namespace Google\Service\PlayIntegrity;
 
-class GuidanceDetails extends \Google\Collection
+class UserRemediationDetails extends \Google\Model
 {
-  protected $collection_key = 'userRemediationDetails';
-  protected $userRemediationDetailsType = UserRemediationDetails::class;
-  protected $userRemediationDetailsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $remediation;
 
   /**
-   * @param UserRemediationDetails[]
+   * @param string
    */
-  public function setUserRemediationDetails($userRemediationDetails)
+  public function setRemediation($remediation)
   {
-    $this->userRemediationDetails = $userRemediationDetails;
+    $this->remediation = $remediation;
   }
   /**
-   * @return UserRemediationDetails[]
+   * @return string
    */
-  public function getUserRemediationDetails()
+  public function getRemediation()
   {
-    return $this->userRemediationDetails;
+    return $this->remediation;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GuidanceDetails::class, 'Google_Service_PlayIntegrity_GuidanceDetails');
+class_alias(UserRemediationDetails::class, 'Google_Service_PlayIntegrity_UserRemediationDetails');
