@@ -22,6 +22,10 @@ class PipelineSpec extends \Google\Collection
   protected $collection_key = 'workspaces';
   protected $finallyTasksType = PipelineTask::class;
   protected $finallyTasksDataType = 'array';
+  /**
+   * @var string
+   */
+  public $generatedYaml;
   protected $paramsType = ParamSpec::class;
   protected $paramsDataType = 'array';
   protected $tasksType = PipelineTask::class;
@@ -42,6 +46,20 @@ class PipelineSpec extends \Google\Collection
   public function getFinallyTasks()
   {
     return $this->finallyTasks;
+  }
+  /**
+   * @param string
+   */
+  public function setGeneratedYaml($generatedYaml)
+  {
+    $this->generatedYaml = $generatedYaml;
+  }
+  /**
+   * @return string
+   */
+  public function getGeneratedYaml()
+  {
+    return $this->generatedYaml;
   }
   /**
    * @param ParamSpec[]

@@ -17,63 +17,45 @@
 
 namespace Google\Service\CloudBuild;
 
-class TaskRef extends \Google\Collection
+class ListLocationsResponse extends \Google\Collection
 {
-  protected $collection_key = 'params';
+  protected $collection_key = 'locations';
+  protected $locationsType = Location::class;
+  protected $locationsDataType = 'array';
   /**
    * @var string
    */
-  public $name;
-  protected $paramsType = Param::class;
-  protected $paramsDataType = 'array';
-  /**
-   * @var string
-   */
-  public $resolver;
+  public $nextPageToken;
 
   /**
-   * @param string
+   * @param Location[]
    */
-  public function setName($name)
+  public function setLocations($locations)
   {
-    $this->name = $name;
+    $this->locations = $locations;
   }
   /**
-   * @return string
+   * @return Location[]
    */
-  public function getName()
+  public function getLocations()
   {
-    return $this->name;
-  }
-  /**
-   * @param Param[]
-   */
-  public function setParams($params)
-  {
-    $this->params = $params;
-  }
-  /**
-   * @return Param[]
-   */
-  public function getParams()
-  {
-    return $this->params;
+    return $this->locations;
   }
   /**
    * @param string
    */
-  public function setResolver($resolver)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->resolver = $resolver;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getResolver()
+  public function getNextPageToken()
   {
-    return $this->resolver;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TaskRef::class, 'Google_Service_CloudBuild_TaskRef');
+class_alias(ListLocationsResponse::class, 'Google_Service_CloudBuild_ListLocationsResponse');
