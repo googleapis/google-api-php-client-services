@@ -39,6 +39,12 @@ class BlockchainNode extends \Google\Model
    * @var string
    */
   public $name;
+  protected $polygonDetailsType = PolygonDetails::class;
+  protected $polygonDetailsDataType = '';
+  /**
+   * @var bool
+   */
+  public $pscOnly;
   /**
    * @var string
    */
@@ -131,6 +137,34 @@ class BlockchainNode extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param PolygonDetails
+   */
+  public function setPolygonDetails(PolygonDetails $polygonDetails)
+  {
+    $this->polygonDetails = $polygonDetails;
+  }
+  /**
+   * @return PolygonDetails
+   */
+  public function getPolygonDetails()
+  {
+    return $this->polygonDetails;
+  }
+  /**
+   * @param bool
+   */
+  public function setPscOnly($pscOnly)
+  {
+    $this->pscOnly = $pscOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getPscOnly()
+  {
+    return $this->pscOnly;
   }
   /**
    * @param string

@@ -17,44 +17,28 @@
 
 namespace Google\Service\BlockchainNodeEngine;
 
-class ConnectionInfo extends \Google\Model
+class PolygonEndpoints extends \Google\Model
 {
-  protected $endpointInfoType = EndpointInfo::class;
-  protected $endpointInfoDataType = '';
   /**
    * @var string
    */
-  public $serviceAttachment;
+  public $blockProducerClientMetricsApiEndpoint;
 
-  /**
-   * @param EndpointInfo
-   */
-  public function setEndpointInfo(EndpointInfo $endpointInfo)
-  {
-    $this->endpointInfo = $endpointInfo;
-  }
-  /**
-   * @return EndpointInfo
-   */
-  public function getEndpointInfo()
-  {
-    return $this->endpointInfo;
-  }
   /**
    * @param string
    */
-  public function setServiceAttachment($serviceAttachment)
+  public function setBlockProducerClientMetricsApiEndpoint($blockProducerClientMetricsApiEndpoint)
   {
-    $this->serviceAttachment = $serviceAttachment;
+    $this->blockProducerClientMetricsApiEndpoint = $blockProducerClientMetricsApiEndpoint;
   }
   /**
    * @return string
    */
-  public function getServiceAttachment()
+  public function getBlockProducerClientMetricsApiEndpoint()
   {
-    return $this->serviceAttachment;
+    return $this->blockProducerClientMetricsApiEndpoint;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConnectionInfo::class, 'Google_Service_BlockchainNodeEngine_ConnectionInfo');
+class_alias(PolygonEndpoints::class, 'Google_Service_BlockchainNodeEngine_PolygonEndpoints');
