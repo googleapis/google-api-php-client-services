@@ -162,6 +162,9 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * `parent=projects/{project_id}/locations/{location}`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. List filter.
+   * @opt_param string orderBy Optional. Sort results. Supported values are
+   * "name", "name desc" or "" (unsorted).
    * @opt_param int pageSize Optional. Maximum return size of the list call.
    * @opt_param string pageToken Optional. A previous returned page token that can
    * be used to continue listing from the last result.
