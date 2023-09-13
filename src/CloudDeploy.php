@@ -248,6 +248,16 @@ class CloudDeploy extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'rollbackTarget' => [
+              'path' => 'v1/{+name}:rollbackTarget',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',

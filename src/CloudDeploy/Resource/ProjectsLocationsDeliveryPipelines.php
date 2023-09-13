@@ -21,6 +21,8 @@ use Google\Service\CloudDeploy\DeliveryPipeline;
 use Google\Service\CloudDeploy\ListDeliveryPipelinesResponse;
 use Google\Service\CloudDeploy\Operation;
 use Google\Service\CloudDeploy\Policy;
+use Google\Service\CloudDeploy\RollbackTargetRequest;
+use Google\Service\CloudDeploy\RollbackTargetResponse;
 use Google\Service\CloudDeploy\SetIamPolicyRequest;
 use Google\Service\CloudDeploy\TestIamPermissionsRequest;
 use Google\Service\CloudDeploy\TestIamPermissionsResponse;
@@ -217,6 +219,23 @@ class ProjectsLocationsDeliveryPipelines extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Creates a `Rollout` to roll back the specified target.
+   * (deliveryPipelines.rollbackTarget)
+   *
+   * @param string $name Required. The `DeliveryPipeline` for which the rollback
+   * `Rollout` should be created. Format should be projects/{project_id}/locations
+   * /{location_name}/deliveryPipelines/{pipeline_name}.
+   * @param RollbackTargetRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RollbackTargetResponse
+   */
+  public function rollbackTarget($name, RollbackTargetRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('rollbackTarget', [$params], RollbackTargetResponse::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any
