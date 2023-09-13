@@ -17,63 +17,65 @@
 
 namespace Google\Service\CloudRun;
 
-class GoogleCloudRunV2VpcAccess extends \Google\Collection
+class GoogleCloudRunV2NetworkInterface extends \Google\Collection
 {
-  protected $collection_key = 'networkInterfaces';
+  protected $collection_key = 'tags';
   /**
    * @var string
    */
-  public $connector;
+  public $network;
   /**
    * @var string
    */
-  public $egress;
-  protected $networkInterfacesType = GoogleCloudRunV2NetworkInterface::class;
-  protected $networkInterfacesDataType = 'array';
+  public $subnetwork;
+  /**
+   * @var string[]
+   */
+  public $tags;
 
   /**
    * @param string
    */
-  public function setConnector($connector)
+  public function setNetwork($network)
   {
-    $this->connector = $connector;
+    $this->network = $network;
   }
   /**
    * @return string
    */
-  public function getConnector()
+  public function getNetwork()
   {
-    return $this->connector;
+    return $this->network;
   }
   /**
    * @param string
    */
-  public function setEgress($egress)
+  public function setSubnetwork($subnetwork)
   {
-    $this->egress = $egress;
+    $this->subnetwork = $subnetwork;
   }
   /**
    * @return string
    */
-  public function getEgress()
+  public function getSubnetwork()
   {
-    return $this->egress;
+    return $this->subnetwork;
   }
   /**
-   * @param GoogleCloudRunV2NetworkInterface[]
+   * @param string[]
    */
-  public function setNetworkInterfaces($networkInterfaces)
+  public function setTags($tags)
   {
-    $this->networkInterfaces = $networkInterfaces;
+    $this->tags = $tags;
   }
   /**
-   * @return GoogleCloudRunV2NetworkInterface[]
+   * @return string[]
    */
-  public function getNetworkInterfaces()
+  public function getTags()
   {
-    return $this->networkInterfaces;
+    return $this->tags;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudRunV2VpcAccess::class, 'Google_Service_CloudRun_GoogleCloudRunV2VpcAccess');
+class_alias(GoogleCloudRunV2NetworkInterface::class, 'Google_Service_CloudRun_GoogleCloudRunV2NetworkInterface');
