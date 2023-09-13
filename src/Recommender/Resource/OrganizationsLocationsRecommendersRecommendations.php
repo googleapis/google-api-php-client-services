@@ -116,7 +116,7 @@ class OrganizationsLocationsRecommendersRecommendations extends \Google\Service\
    * recommendations in ACTIVE state. Requires the recommender.*.update IAM
    * permission for the specified recommender. (recommendations.markDismissed)
    *
-   * @param string $name Name of the recommendation.
+   * @param string $name Required. Name of the recommendation.
    * @param GoogleCloudRecommenderV1MarkRecommendationDismissedRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecommenderV1Recommendation
