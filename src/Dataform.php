@@ -23,7 +23,8 @@ use Google\Client;
  * Service definition for Dataform (v1beta1).
  *
  * <p>
-</p>
+ * Service to develop, version control, and operationalize SQL pipelines in
+ * BigQuery.</p>
  *
  * <p>
  * For more information about this service, see the API
