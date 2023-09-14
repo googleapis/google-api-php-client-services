@@ -21,6 +21,8 @@ class CsePrivateKeyMetadata extends \Google\Model
 {
   protected $kaclsKeyMetadataType = KaclsKeyMetadata::class;
   protected $kaclsKeyMetadataDataType = '';
+  protected $pivKeyMetadataType = PivKeyMetadata::class;
+  protected $pivKeyMetadataDataType = '';
   /**
    * @var string
    */
@@ -39,6 +41,20 @@ class CsePrivateKeyMetadata extends \Google\Model
   public function getKaclsKeyMetadata()
   {
     return $this->kaclsKeyMetadata;
+  }
+  /**
+   * @param PivKeyMetadata
+   */
+  public function setPivKeyMetadata(PivKeyMetadata $pivKeyMetadata)
+  {
+    $this->pivKeyMetadata = $pivKeyMetadata;
+  }
+  /**
+   * @return PivKeyMetadata
+   */
+  public function getPivKeyMetadata()
+  {
+    return $this->pivKeyMetadata;
   }
   /**
    * @param string
