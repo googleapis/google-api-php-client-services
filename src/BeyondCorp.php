@@ -42,6 +42,7 @@ class BeyondCorp extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $organizations_locations_global_partnerTenants;
+  public $organizations_locations_global_partnerTenants_browserDlpRules;
   public $organizations_locations_global_partnerTenants_proxyConfigs;
   public $organizations_locations_operations;
   public $projects_locations;
@@ -72,6 +73,50 @@ class BeyondCorp extends \Google\Service
         $this,
         $this->serviceName,
         'partnerTenants',
+        [
+          'methods' => [
+            'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_locations_global_partnerTenants_browserDlpRules = new BeyondCorp\Resource\OrganizationsLocationsBeyondcorpGlobalPartnerTenantsBrowserDlpRules(
+        $this,
+        $this->serviceName,
+        'browserDlpRules',
         [
           'methods' => [
             'getIamPolicy' => [
