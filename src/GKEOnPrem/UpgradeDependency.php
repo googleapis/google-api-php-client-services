@@ -30,6 +30,10 @@ class UpgradeDependency extends \Google\Model
   /**
    * @var string
    */
+  public $membership;
+  /**
+   * @var string
+   */
   public $resourceName;
   /**
    * @var string
@@ -63,6 +67,20 @@ class UpgradeDependency extends \Google\Model
   public function getLocalName()
   {
     return $this->localName;
+  }
+  /**
+   * @param string
+   */
+  public function setMembership($membership)
+  {
+    $this->membership = $membership;
+  }
+  /**
+   * @return string
+   */
+  public function getMembership()
+  {
+    return $this->membership;
   }
   /**
    * @param string
