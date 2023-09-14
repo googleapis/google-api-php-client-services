@@ -44,7 +44,6 @@ class MapsPlaces extends \Google\Service
   const MAPS_PLATFORM_PLACES_TEXTSEARCH =
       "https://www.googleapis.com/auth/maps-platform.places.textsearch";
 
-  public $Text;
   public $places;
 
   /**
@@ -63,20 +62,6 @@ class MapsPlaces extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'places';
 
-    $this->Text = new MapsPlaces\Resource\Text(
-        $this,
-        $this->serviceName,
-        'Text',
-        [
-          'methods' => [
-            'search' => [
-              'path' => 'v1/Text:search',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],
-          ]
-        ]
-    );
     $this->places = new MapsPlaces\Resource\Places(
         $this,
         $this->serviceName,
