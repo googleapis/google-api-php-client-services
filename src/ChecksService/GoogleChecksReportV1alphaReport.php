@@ -22,10 +22,6 @@ class GoogleChecksReportV1alphaReport extends \Google\Collection
   protected $collection_key = 'checks';
   protected $appBundleType = GoogleChecksReportV1alphaAppBundle::class;
   protected $appBundleDataType = '';
-  /**
-   * @var string
-   */
-  public $baseReport;
   protected $checksType = GoogleChecksReportV1alphaCheck::class;
   protected $checksDataType = 'array';
   protected $dataMonitoringType = GoogleChecksReportV1alphaDataMonitoring::class;
@@ -52,20 +48,6 @@ class GoogleChecksReportV1alphaReport extends \Google\Collection
   public function getAppBundle()
   {
     return $this->appBundle;
-  }
-  /**
-   * @param string
-   */
-  public function setBaseReport($baseReport)
-  {
-    $this->baseReport = $baseReport;
-  }
-  /**
-   * @return string
-   */
-  public function getBaseReport()
-  {
-    return $this->baseReport;
   }
   /**
    * @param GoogleChecksReportV1alphaCheck[]
