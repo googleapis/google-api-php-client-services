@@ -38,6 +38,8 @@ class GoogleCloudAiplatformV1IndexEndpoint extends \Google\Collection
    * @var bool
    */
   public $enablePrivateServiceConnect;
+  protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
+  protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
@@ -138,6 +140,20 @@ class GoogleCloudAiplatformV1IndexEndpoint extends \Google\Collection
   public function getEnablePrivateServiceConnect()
   {
     return $this->enablePrivateServiceConnect;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
+  {
+    $this->encryptionSpec = $encryptionSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public function getEncryptionSpec()
+  {
+    return $this->encryptionSpec;
   }
   /**
    * @param string

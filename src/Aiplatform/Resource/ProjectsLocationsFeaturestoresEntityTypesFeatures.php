@@ -51,18 +51,16 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
   /**
    * Creates a new Feature in a given EntityType. (features.create)
    *
-   * @param string $parent Required. The resource name of the EntityType or
-   * FeatureGroup to create a Feature. Format: `projects/{project}/locations/{loca
-   * tion}/featurestores/{featurestore}/entityTypes/{entity_type}`
-   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+   * @param string $parent Required. The resource name of the EntityType to create
+   * a Feature. Format: `projects/{project}/locations/{location}/featurestores/{fe
+   * aturestore}/entityTypes/{entity_type}`
    * @param GoogleCloudAiplatformV1Feature $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string featureId Required. The ID to use for the Feature, which
    * will become the final component of the Feature's resource name. This value
    * may be up to 128 characters, and valid characters are `[a-z0-9_]`. The first
-   * character cannot be a number. The value must be unique within an
-   * EntityType/FeatureGroup.
+   * character cannot be a number. The value must be unique within an EntityType .
    * @return GoogleLongrunningOperation
    */
   public function create($parent, GoogleCloudAiplatformV1Feature $postBody, $optParams = [])
@@ -76,8 +74,7 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    *
    * @param string $name Required. The name of the Features to be deleted. Format:
    * `projects/{project}/locations/{location}/featurestores/{featurestore}/entityT
-   * ypes/{entity_type}/features/{feature}` `projects/{project}/locations/{locatio
-   * n}/featureGroups/{feature_group}/features/{feature}`
+   * ypes/{entity_type}/features/{feature}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
    */
@@ -93,7 +90,6 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * @param string $name Required. The name of the Feature resource. Format: `proj
    * ects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/
    * {entity_type}`
-   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Feature
    */
@@ -110,7 +106,6 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * @param string $parent Required. The resource name of the Location to list
    * Features. Format: `projects/{project}/locations/{location}/featurestores/{fea
    * turestore}/entityTypes/{entity_type}`
-   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Lists the Features that match the filter expression.
@@ -131,8 +126,8 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * ListFeaturesRequest.latest_stats_count, return all existing stats.
    * @opt_param string orderBy A comma-separated list of fields to order by,
    * sorted in ascending order. Use "desc" after a field name for descending.
-   * Supported fields: * `feature_id` * `value_type` * `create_time` *
-   * `update_time`
+   * Supported fields: * `feature_id` * `value_type` (Not supported for
+   * FeatureRegistry Feature) * `create_time` * `update_time`
    * @opt_param int pageSize The maximum number of Features to return. The service
    * may return fewer than this value. If unspecified, at most 1000 Features will
    * be returned. The maximum value is 1000; any value greater than 1000 will be

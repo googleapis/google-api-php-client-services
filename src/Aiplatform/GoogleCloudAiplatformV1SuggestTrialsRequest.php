@@ -17,12 +17,15 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SuggestTrialsRequest extends \Google\Model
+class GoogleCloudAiplatformV1SuggestTrialsRequest extends \Google\Collection
 {
+  protected $collection_key = 'contexts';
   /**
    * @var string
    */
   public $clientId;
+  protected $contextsType = GoogleCloudAiplatformV1TrialContext::class;
+  protected $contextsDataType = 'array';
   /**
    * @var int
    */
@@ -41,6 +44,20 @@ class GoogleCloudAiplatformV1SuggestTrialsRequest extends \Google\Model
   public function getClientId()
   {
     return $this->clientId;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1TrialContext[]
+   */
+  public function setContexts($contexts)
+  {
+    $this->contexts = $contexts;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1TrialContext[]
+   */
+  public function getContexts()
+  {
+    return $this->contexts;
   }
   /**
    * @param int
