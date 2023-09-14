@@ -17,6 +17,7 @@
 
 namespace Google\Service\Connectors\Resource;
 
+use Google\Service\Connectors\Action;
 use Google\Service\Connectors\ExecuteActionRequest;
 use Google\Service\Connectors\ExecuteActionResponse;
 use Google\Service\Connectors\ListActionsResponse;
@@ -49,6 +50,20 @@ class ProjectsLocationsConnectionsActions extends \Google\Service\Resource
     return $this->call('execute', [$params], ExecuteActionResponse::class);
   }
   /**
+   * Gets the schema of the given action. (actions.get)
+   *
+   * @param string $name Required. Resource name of the Action. Format: projects/{
+   * project}/locations/{location}/connections/{connection}/actions/{action}
+   * @param array $optParams Optional parameters.
+   * @return Action
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], Action::class);
+  }
+  /**
    * Gets the schema of all the actions supported by the connector.
    * (actions.listProjectsLocationsConnectionsActions)
    *
@@ -60,6 +75,8 @@ class ProjectsLocationsConnectionsActions extends \Google\Service\Resource
    * @opt_param string pageToken Page token, return from a previous ListActions
    * call, that can be used retrieve the next page of content. If unspecified, the
    * request returns the first page of actions.
+   * @opt_param string view Specifies which fields of the Action are returned in
+   * the response.
    * @return ListActionsResponse
    */
   public function listProjectsLocationsConnectionsActions($parent, $optParams = [])
