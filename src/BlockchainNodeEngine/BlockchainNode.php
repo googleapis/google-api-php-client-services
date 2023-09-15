@@ -40,10 +40,6 @@ class BlockchainNode extends \Google\Model
    */
   public $name;
   /**
-   * @var bool
-   */
-  public $pscOnly;
-  /**
    * @var string
    */
   public $state;
@@ -135,20 +131,6 @@ class BlockchainNode extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param bool
-   */
-  public function setPscOnly($pscOnly)
-  {
-    $this->pscOnly = $pscOnly;
-  }
-  /**
-   * @return bool
-   */
-  public function getPscOnly()
-  {
-    return $this->pscOnly;
   }
   /**
    * @param string
