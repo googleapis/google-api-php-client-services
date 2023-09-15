@@ -19,6 +19,8 @@ namespace Google\Service\Spanner\Resource;
 
 use Google\Service\Spanner\BatchCreateSessionsRequest;
 use Google\Service\Spanner\BatchCreateSessionsResponse;
+use Google\Service\Spanner\BatchWriteRequest;
+use Google\Service\Spanner\BatchWriteResponse;
 use Google\Service\Spanner\BeginTransactionRequest;
 use Google\Service\Spanner\CommitRequest;
 use Google\Service\Spanner\CommitResponse;
@@ -64,6 +66,33 @@ class ProjectsInstancesDatabasesSessions extends \Google\Service\Resource
     $params = ['database' => $database, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('batchCreate', [$params], BatchCreateSessionsResponse::class);
+  }
+  /**
+   * Batches the supplied mutation groups in a collection of efficient
+   * transactions. All mutations in a group are committed atomically. However,
+   * mutations across groups can be committed non-atomically in an unspecified
+   * order and thus, they must be independent of each other. Partial failure is
+   * possible, i.e., some groups may have been committed successfully, while some
+   * may have failed. The results of individual batches are streamed into the
+   * response as the batches are applied. BatchWrite requests are not replay
+   * protected, meaning that each mutation group may be applied more than once.
+   * Replays of non-idempotent mutations may have undesirable effects. For
+   * example, replays of an insert mutation may produce an already exists error or
+   * result in additional rows if using generated or commit timestamp-based keys.
+   * We recommend structuring your mutation groups to be idempotent to avoid this
+   * issue. (sessions.batchWrite)
+   *
+   * @param string $session Required. The session in which the batch request is to
+   * be run.
+   * @param BatchWriteRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return BatchWriteResponse
+   */
+  public function batchWrite($session, BatchWriteRequest $postBody, $optParams = [])
+  {
+    $params = ['session' => $session, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchWrite', [$params], BatchWriteResponse::class);
   }
   /**
    * Begins a new transaction. This step can often be skipped: Read, ExecuteSql
