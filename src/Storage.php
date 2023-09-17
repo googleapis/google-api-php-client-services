@@ -272,6 +272,10 @@ class Storage extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'enableObjectRetention' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'predefinedAcl' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1203,6 +1207,10 @@ class Storage extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'overrideUnlockedRetention' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'predefinedAcl' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1430,6 +1438,10 @@ class Storage extends \Google\Service
                 'ifMetagenerationNotMatch' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'overrideUnlockedRetention' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'predefinedAcl' => [
                   'location' => 'query',

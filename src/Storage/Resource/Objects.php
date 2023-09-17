@@ -358,6 +358,9 @@ class Objects extends \Google\Service\Resource
    * whether the object's current metageneration matches the given value.
    * @opt_param string ifMetagenerationNotMatch Makes the operation conditional on
    * whether the object's current metageneration does not match the given value.
+   * @opt_param bool overrideUnlockedRetention Must be true to remove the
+   * retention configuration, reduce its unlocked retention period, or change its
+   * mode from unlocked to locked.
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
    * this object.
    * @opt_param string projection Set of properties to return. Defaults to full.
@@ -548,6 +551,9 @@ class Objects extends \Google\Service\Resource
    * whether the object's current metageneration matches the given value.
    * @opt_param string ifMetagenerationNotMatch Makes the operation conditional on
    * whether the object's current metageneration does not match the given value.
+   * @opt_param bool overrideUnlockedRetention Must be true to remove the
+   * retention configuration, reduce its unlocked retention period, or change its
+   * mode from unlocked to locked.
    * @opt_param string predefinedAcl Apply a predefined set of access controls to
    * this object.
    * @opt_param string projection Set of properties to return. Defaults to full.

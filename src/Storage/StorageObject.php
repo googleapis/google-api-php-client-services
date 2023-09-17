@@ -106,6 +106,8 @@ class StorageObject extends \Google\Collection
   public $name;
   protected $ownerType = StorageObjectOwner::class;
   protected $ownerDataType = '';
+  protected $retentionType = StorageObjectRetention::class;
+  protected $retentionDataType = '';
   /**
    * @var string
    */
@@ -464,6 +466,20 @@ class StorageObject extends \Google\Collection
   public function getOwner()
   {
     return $this->owner;
+  }
+  /**
+   * @param StorageObjectRetention
+   */
+  public function setRetention(StorageObjectRetention $retention)
+  {
+    $this->retention = $retention;
+  }
+  /**
+   * @return StorageObjectRetention
+   */
+  public function getRetention()
+  {
+    return $this->retention;
   }
   /**
    * @param string
