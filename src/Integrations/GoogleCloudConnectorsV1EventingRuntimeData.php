@@ -23,6 +23,10 @@ class GoogleCloudConnectorsV1EventingRuntimeData extends \Google\Model
    * @var string
    */
   public $eventsListenerEndpoint;
+  /**
+   * @var string
+   */
+  public $eventsListenerPscSa;
   protected $statusType = GoogleCloudConnectorsV1EventingStatus::class;
   protected $statusDataType = '';
 
@@ -39,6 +43,20 @@ class GoogleCloudConnectorsV1EventingRuntimeData extends \Google\Model
   public function getEventsListenerEndpoint()
   {
     return $this->eventsListenerEndpoint;
+  }
+  /**
+   * @param string
+   */
+  public function setEventsListenerPscSa($eventsListenerPscSa)
+  {
+    $this->eventsListenerPscSa = $eventsListenerPscSa;
+  }
+  /**
+   * @return string
+   */
+  public function getEventsListenerPscSa()
+  {
+    return $this->eventsListenerPscSa;
   }
   /**
    * @param GoogleCloudConnectorsV1EventingStatus
