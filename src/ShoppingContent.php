@@ -1331,6 +1331,34 @@ class ShoppingContent extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'setomnichannelexperience' => [
+              'path' => '{merchantId}/liasettings/{accountId}/setomnichannelexperience',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'accountId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'country' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'lsfType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pickupTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
             ],'setposdataprovider' => [
               'path' => '{merchantId}/liasettings/{accountId}/setposdataprovider',
               'httpMethod' => 'POST',

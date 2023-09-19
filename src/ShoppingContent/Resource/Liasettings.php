@@ -17,6 +17,7 @@
 
 namespace Google\Service\ShoppingContent\Resource;
 
+use Google\Service\ShoppingContent\LiaOmnichannelExperience;
 use Google\Service\ShoppingContent\LiaSettings as LiaSettingsModel;
 use Google\Service\ShoppingContent\LiasettingsCustomBatchRequest;
 use Google\Service\ShoppingContent\LiasettingsCustomBatchResponse;
@@ -181,6 +182,34 @@ class Liasettings extends \Google\Service\Resource
     $params = ['merchantId' => $merchantId, 'accountId' => $accountId, 'country' => $country, 'language' => $language, 'contactName' => $contactName, 'contactEmail' => $contactEmail];
     $params = array_merge($params, $optParams);
     return $this->call('setinventoryverificationcontact', [$params], LiasettingsSetInventoryVerificationContactResponse::class);
+  }
+  /**
+   * Sets the omnichannel experience for the specified country.
+   * (liasettings.setomnichannelexperience)
+   *
+   * @param string $merchantId The ID of the managing account. If this parameter
+   * is not the same as accountId, then this account must be a multi-client
+   * account and `accountId` must be the ID of a sub-account of this account.
+   * @param string $accountId The ID of the account for which to retrieve
+   * accessible Business Profiles.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string country The CLDR country code (for example, "US") for which
+   * the omnichannel experience is selected.
+   * @opt_param string lsfType The Local Store Front (LSF) type for this country.
+   * Acceptable values are: - "`ghlsf`" (Google-Hosted Local Store Front) -
+   * "`mhlsfBasic`" (Merchant-Hosted Local Store Front Basic) - "`mhlsfFull`"
+   * (Merchant-Hosted Local Store Front Full) More details about these types can
+   * be found here.
+   * @opt_param string pickupTypes The Pickup types for this country. Acceptable
+   * values are: - "`pickupToday`" - "`pickupLater`"
+   * @return LiaOmnichannelExperience
+   */
+  public function setomnichannelexperience($merchantId, $accountId, $optParams = [])
+  {
+    $params = ['merchantId' => $merchantId, 'accountId' => $accountId];
+    $params = array_merge($params, $optParams);
+    return $this->call('setomnichannelexperience', [$params], LiaOmnichannelExperience::class);
   }
   /**
    * Sets the POS data provider for the specified country.
