@@ -22,6 +22,8 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends \Goo
   protected $collection_key = 'lineItemPromotionSpecs';
   protected $amountType = GoogleCloudPaymentsResellerSubscriptionV1Amount::class;
   protected $amountDataType = '';
+  protected $bundleDetailsType = SubscriptionLineItemBundleDetails::class;
+  protected $bundleDetailsDataType = '';
   /**
    * @var string
    */
@@ -68,6 +70,20 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem extends \Goo
   public function getAmount()
   {
     return $this->amount;
+  }
+  /**
+   * @param SubscriptionLineItemBundleDetails
+   */
+  public function setBundleDetails(SubscriptionLineItemBundleDetails $bundleDetails)
+  {
+    $this->bundleDetails = $bundleDetails;
+  }
+  /**
+   * @return SubscriptionLineItemBundleDetails
+   */
+  public function getBundleDetails()
+  {
+    return $this->bundleDetails;
   }
   /**
    * @param string
