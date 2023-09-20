@@ -28,6 +28,8 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
    * @var string
    */
   public $langWithoutLocale;
+  protected $langidInputType = ImageRepositoryLanguageIdentificationResult::class;
+  protected $langidInputDataType = '';
   /**
    * @var string
    */
@@ -66,6 +68,20 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
   public function getLangWithoutLocale()
   {
     return $this->langWithoutLocale;
+  }
+  /**
+   * @param ImageRepositoryLanguageIdentificationResult
+   */
+  public function setLangidInput(ImageRepositoryLanguageIdentificationResult $langidInput)
+  {
+    $this->langidInput = $langidInput;
+  }
+  /**
+   * @return ImageRepositoryLanguageIdentificationResult
+   */
+  public function getLangidInput()
+  {
+    return $this->langidInput;
   }
   /**
    * @param string

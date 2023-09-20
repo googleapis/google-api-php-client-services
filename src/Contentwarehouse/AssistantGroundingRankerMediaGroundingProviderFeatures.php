@@ -46,6 +46,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   /**
    * @var bool
    */
+  public $isExclusiveOriginalProvider;
+  /**
+   * @var bool
+   */
   public $isMediaSearchQuerySubsetOfEntityNameAndArtist;
   /**
    * @var bool
@@ -162,6 +166,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getIsCastVideo()
   {
     return $this->isCastVideo;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsExclusiveOriginalProvider($isExclusiveOriginalProvider)
+  {
+    $this->isExclusiveOriginalProvider = $isExclusiveOriginalProvider;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsExclusiveOriginalProvider()
+  {
+    return $this->isExclusiveOriginalProvider;
   }
   /**
    * @param bool

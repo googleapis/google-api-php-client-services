@@ -156,6 +156,8 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $imagerank;
+  protected $indexedVerticalsType = ImageDataVerticalIndexingInfoImage::class;
+  protected $indexedVerticalsDataType = 'array';
   /**
    * @var bool
    */
@@ -916,6 +918,20 @@ class ImageData extends \Google\Collection
   public function getImagerank()
   {
     return $this->imagerank;
+  }
+  /**
+   * @param ImageDataVerticalIndexingInfoImage[]
+   */
+  public function setIndexedVerticals($indexedVerticals)
+  {
+    $this->indexedVerticals = $indexedVerticals;
+  }
+  /**
+   * @return ImageDataVerticalIndexingInfoImage[]
+   */
+  public function getIndexedVerticals()
+  {
+    return $this->indexedVerticals;
   }
   /**
    * @param bool

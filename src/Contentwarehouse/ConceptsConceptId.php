@@ -17,28 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefOysterType extends \Google\Model
+class ConceptsConceptId extends \Google\Model
 {
   /**
-   * @var int
+   * @var string
    */
-  public $featureType;
+  public $conceptId;
+  /**
+   * @var string
+   */
+  public $id;
 
   /**
-   * @param int
+   * @param string
    */
-  public function setFeatureType($featureType)
+  public function setConceptId($conceptId)
   {
-    $this->featureType = $featureType;
+    $this->conceptId = $conceptId;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getFeatureType()
+  public function getConceptId()
   {
-    return $this->featureType;
+    return $this->conceptId;
+  }
+  /**
+   * @param string
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefOysterType::class, 'Google_Service_Contentwarehouse_RepositoryWebrefOysterType');
+class_alias(ConceptsConceptId::class, 'Google_Service_Contentwarehouse_ConceptsConceptId');

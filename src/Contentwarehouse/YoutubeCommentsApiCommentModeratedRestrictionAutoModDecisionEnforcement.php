@@ -17,28 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefOysterType extends \Google\Model
+class YoutubeCommentsApiCommentModeratedRestrictionAutoModDecisionEnforcement extends \Google\Model
 {
   /**
-   * @var int
+   * @var bool
    */
-  public $featureType;
+  public $enforced;
+  /**
+   * @var string
+   */
+  public $name;
 
   /**
-   * @param int
+   * @param bool
    */
-  public function setFeatureType($featureType)
+  public function setEnforced($enforced)
   {
-    $this->featureType = $featureType;
+    $this->enforced = $enforced;
   }
   /**
-   * @return int
+   * @return bool
    */
-  public function getFeatureType()
+  public function getEnforced()
   {
-    return $this->featureType;
+    return $this->enforced;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefOysterType::class, 'Google_Service_Contentwarehouse_RepositoryWebrefOysterType');
+class_alias(YoutubeCommentsApiCommentModeratedRestrictionAutoModDecisionEnforcement::class, 'Google_Service_Contentwarehouse_YoutubeCommentsApiCommentModeratedRestrictionAutoModDecisionEnforcement');

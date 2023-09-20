@@ -17,28 +17,26 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefOysterType extends \Google\Model
+class KnowledgeAnswersIntentQueryConceptInfo extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $featureType;
+  protected $idType = ConceptsConceptId::class;
+  protected $idDataType = '';
 
   /**
-   * @param int
+   * @param ConceptsConceptId
    */
-  public function setFeatureType($featureType)
+  public function setId(ConceptsConceptId $id)
   {
-    $this->featureType = $featureType;
+    $this->id = $id;
   }
   /**
-   * @return int
+   * @return ConceptsConceptId
    */
-  public function getFeatureType()
+  public function getId()
   {
-    return $this->featureType;
+    return $this->id;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefOysterType::class, 'Google_Service_Contentwarehouse_RepositoryWebrefOysterType');
+class_alias(KnowledgeAnswersIntentQueryConceptInfo::class, 'Google_Service_Contentwarehouse_KnowledgeAnswersIntentQueryConceptInfo');

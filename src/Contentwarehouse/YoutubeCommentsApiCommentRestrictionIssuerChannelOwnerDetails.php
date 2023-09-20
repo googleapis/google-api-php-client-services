@@ -17,28 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefOysterType extends \Google\Model
+class YoutubeCommentsApiCommentRestrictionIssuerChannelOwnerDetails extends \Google\Model
 {
   /**
-   * @var int
+   * @var string
    */
-  public $featureType;
+  public $externalChannelId;
 
   /**
-   * @param int
+   * @param string
    */
-  public function setFeatureType($featureType)
+  public function setExternalChannelId($externalChannelId)
   {
-    $this->featureType = $featureType;
+    $this->externalChannelId = $externalChannelId;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getFeatureType()
+  public function getExternalChannelId()
   {
-    return $this->featureType;
+    return $this->externalChannelId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefOysterType::class, 'Google_Service_Contentwarehouse_RepositoryWebrefOysterType');
+class_alias(YoutubeCommentsApiCommentRestrictionIssuerChannelOwnerDetails::class, 'Google_Service_Contentwarehouse_YoutubeCommentsApiCommentRestrictionIssuerChannelOwnerDetails');

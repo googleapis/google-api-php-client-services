@@ -101,6 +101,7 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
    */
   public $isNimbleAnnotation;
   protected $locationDataType = '';
+  public $locationClassificationScore;
   protected $locationMarkersSignalsType = KnowledgeAnswersIntentQueryLocationMarkersSignals::class;
   protected $locationMarkersSignalsDataType = '';
   /**
@@ -529,6 +530,14 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public function getLocation()
   {
     return $this->location;
+  }
+  public function setLocationClassificationScore($locationClassificationScore)
+  {
+    $this->locationClassificationScore = $locationClassificationScore;
+  }
+  public function getLocationClassificationScore()
+  {
+    return $this->locationClassificationScore;
   }
   /**
    * @param KnowledgeAnswersIntentQueryLocationMarkersSignals

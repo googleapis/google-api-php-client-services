@@ -17,28 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefOysterType extends \Google\Model
+class ImageDataVerticalIndexingInfoImage extends \Google\Model
 {
   /**
-   * @var int
+   * @var string
    */
-  public $featureType;
+  public $name;
 
   /**
-   * @param int
+   * @param string
    */
-  public function setFeatureType($featureType)
+  public function setName($name)
   {
-    $this->featureType = $featureType;
+    $this->name = $name;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getFeatureType()
+  public function getName()
   {
-    return $this->featureType;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefOysterType::class, 'Google_Service_Contentwarehouse_RepositoryWebrefOysterType');
+class_alias(ImageDataVerticalIndexingInfoImage::class, 'Google_Service_Contentwarehouse_ImageDataVerticalIndexingInfoImage');

@@ -17,44 +17,45 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefLinkKindInfo extends \Google\Model
+class GeostoreDisputedAreaProto extends \Google\Collection
 {
-  protected $flagsType = RepositoryWebrefLinkKindFlags::class;
-  protected $flagsDataType = '';
+  protected $collection_key = 'claimant';
   /**
    * @var string
    */
-  public $topicPropertyName;
+  public $administeredBy;
+  protected $claimantType = GeostoreFeatureIdProto::class;
+  protected $claimantDataType = 'array';
 
-  /**
-   * @param RepositoryWebrefLinkKindFlags
-   */
-  public function setFlags(RepositoryWebrefLinkKindFlags $flags)
-  {
-    $this->flags = $flags;
-  }
-  /**
-   * @return RepositoryWebrefLinkKindFlags
-   */
-  public function getFlags()
-  {
-    return $this->flags;
-  }
   /**
    * @param string
    */
-  public function setTopicPropertyName($topicPropertyName)
+  public function setAdministeredBy($administeredBy)
   {
-    $this->topicPropertyName = $topicPropertyName;
+    $this->administeredBy = $administeredBy;
   }
   /**
    * @return string
    */
-  public function getTopicPropertyName()
+  public function getAdministeredBy()
   {
-    return $this->topicPropertyName;
+    return $this->administeredBy;
+  }
+  /**
+   * @param GeostoreFeatureIdProto[]
+   */
+  public function setClaimant($claimant)
+  {
+    $this->claimant = $claimant;
+  }
+  /**
+   * @return GeostoreFeatureIdProto[]
+   */
+  public function getClaimant()
+  {
+    return $this->claimant;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefLinkKindInfo::class, 'Google_Service_Contentwarehouse_RepositoryWebrefLinkKindInfo');
+class_alias(GeostoreDisputedAreaProto::class, 'Google_Service_Contentwarehouse_GeostoreDisputedAreaProto');

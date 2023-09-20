@@ -24,6 +24,10 @@ class DrishtiVesperEncodedThumbnail extends \Google\Model
    */
   public $byteSize;
   /**
+   * @var string
+   */
+  public $crc32c;
+  /**
    * @var int
    */
   public $encodingQuality;
@@ -65,6 +69,20 @@ class DrishtiVesperEncodedThumbnail extends \Google\Model
   public function getByteSize()
   {
     return $this->byteSize;
+  }
+  /**
+   * @param string
+   */
+  public function setCrc32c($crc32c)
+  {
+    $this->crc32c = $crc32c;
+  }
+  /**
+   * @return string
+   */
+  public function getCrc32c()
+  {
+    return $this->crc32c;
   }
   /**
    * @param int

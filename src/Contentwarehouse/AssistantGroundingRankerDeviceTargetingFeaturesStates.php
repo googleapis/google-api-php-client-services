@@ -26,6 +26,22 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
   /**
    * @var bool
    */
+  public $hasBufferingMediaSession;
+  /**
+   * @var bool
+   */
+  public $hasPausedMediaSession;
+  /**
+   * @var bool
+   */
+  public $hasPlayingMediaSession;
+  /**
+   * @var bool
+   */
+  public $hasSameStructure;
+  /**
+   * @var bool
+   */
   public $isDocked;
   /**
    * @var bool
@@ -53,6 +69,62 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
   public function getDistance()
   {
     return $this->distance;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasBufferingMediaSession($hasBufferingMediaSession)
+  {
+    $this->hasBufferingMediaSession = $hasBufferingMediaSession;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasBufferingMediaSession()
+  {
+    return $this->hasBufferingMediaSession;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasPausedMediaSession($hasPausedMediaSession)
+  {
+    $this->hasPausedMediaSession = $hasPausedMediaSession;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasPausedMediaSession()
+  {
+    return $this->hasPausedMediaSession;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasPlayingMediaSession($hasPlayingMediaSession)
+  {
+    $this->hasPlayingMediaSession = $hasPlayingMediaSession;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasPlayingMediaSession()
+  {
+    return $this->hasPlayingMediaSession;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasSameStructure($hasSameStructure)
+  {
+    $this->hasSameStructure = $hasSameStructure;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasSameStructure()
+  {
+    return $this->hasSameStructure;
   }
   /**
    * @param bool
