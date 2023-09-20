@@ -19,6 +19,23 @@ namespace Google\Service\GKEHub;
 
 class CommonFleetDefaultMemberConfigSpec extends \Google\Model
 {
+  protected $configmanagementType = ConfigManagementMembershipSpec::class;
+  protected $configmanagementDataType = '';
+
+  /**
+   * @param ConfigManagementMembershipSpec
+   */
+  public function setConfigmanagement(ConfigManagementMembershipSpec $configmanagement)
+  {
+    $this->configmanagement = $configmanagement;
+  }
+  /**
+   * @return ConfigManagementMembershipSpec
+   */
+  public function getConfigmanagement()
+  {
+    return $this->configmanagement;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
