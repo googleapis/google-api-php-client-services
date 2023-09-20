@@ -22,6 +22,10 @@ class ComputeEngineDisksTargetDetails extends \Google\Collection
   protected $collection_key = 'disks';
   protected $disksType = PersistentDisk::class;
   protected $disksDataType = 'array';
+  protected $disksTargetDetailsType = DisksMigrationDisksTargetDetails::class;
+  protected $disksTargetDetailsDataType = '';
+  protected $vmTargetDetailsType = DisksMigrationVmTargetDetails::class;
+  protected $vmTargetDetailsDataType = '';
 
   /**
    * @param PersistentDisk[]
@@ -36,6 +40,34 @@ class ComputeEngineDisksTargetDetails extends \Google\Collection
   public function getDisks()
   {
     return $this->disks;
+  }
+  /**
+   * @param DisksMigrationDisksTargetDetails
+   */
+  public function setDisksTargetDetails(DisksMigrationDisksTargetDetails $disksTargetDetails)
+  {
+    $this->disksTargetDetails = $disksTargetDetails;
+  }
+  /**
+   * @return DisksMigrationDisksTargetDetails
+   */
+  public function getDisksTargetDetails()
+  {
+    return $this->disksTargetDetails;
+  }
+  /**
+   * @param DisksMigrationVmTargetDetails
+   */
+  public function setVmTargetDetails(DisksMigrationVmTargetDetails $vmTargetDetails)
+  {
+    $this->vmTargetDetails = $vmTargetDetails;
+  }
+  /**
+   * @return DisksMigrationVmTargetDetails
+   */
+  public function getVmTargetDetails()
+  {
+    return $this->vmTargetDetails;
   }
 }
 

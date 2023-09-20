@@ -17,12 +17,12 @@
 
 namespace Google\Service\VMMigrationService;
 
-class PersistentDiskDefaults extends \Google\Model
+class BootDiskDefaults extends \Google\Model
 {
   /**
-   * @var string[]
+   * @var string
    */
-  public $additionalLabels;
+  public $deviceName;
   /**
    * @var string
    */
@@ -31,26 +31,22 @@ class PersistentDiskDefaults extends \Google\Model
    * @var string
    */
   public $diskType;
-  /**
-   * @var int
-   */
-  public $sourceDiskNumber;
-  protected $vmAttachmentDetailsType = VmAttachmentDetails::class;
-  protected $vmAttachmentDetailsDataType = '';
+  protected $imageType = DiskImageDefaults::class;
+  protected $imageDataType = '';
 
   /**
-   * @param string[]
+   * @param string
    */
-  public function setAdditionalLabels($additionalLabels)
+  public function setDeviceName($deviceName)
   {
-    $this->additionalLabels = $additionalLabels;
+    $this->deviceName = $deviceName;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getAdditionalLabels()
+  public function getDeviceName()
   {
-    return $this->additionalLabels;
+    return $this->deviceName;
   }
   /**
    * @param string
@@ -81,34 +77,20 @@ class PersistentDiskDefaults extends \Google\Model
     return $this->diskType;
   }
   /**
-   * @param int
+   * @param DiskImageDefaults
    */
-  public function setSourceDiskNumber($sourceDiskNumber)
+  public function setImage(DiskImageDefaults $image)
   {
-    $this->sourceDiskNumber = $sourceDiskNumber;
+    $this->image = $image;
   }
   /**
-   * @return int
+   * @return DiskImageDefaults
    */
-  public function getSourceDiskNumber()
+  public function getImage()
   {
-    return $this->sourceDiskNumber;
-  }
-  /**
-   * @param VmAttachmentDetails
-   */
-  public function setVmAttachmentDetails(VmAttachmentDetails $vmAttachmentDetails)
-  {
-    $this->vmAttachmentDetails = $vmAttachmentDetails;
-  }
-  /**
-   * @return VmAttachmentDetails
-   */
-  public function getVmAttachmentDetails()
-  {
-    return $this->vmAttachmentDetails;
+    return $this->image;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PersistentDiskDefaults::class, 'Google_Service_VMMigrationService_PersistentDiskDefaults');
+class_alias(BootDiskDefaults::class, 'Google_Service_VMMigrationService_BootDiskDefaults');
