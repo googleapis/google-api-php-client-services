@@ -67,7 +67,7 @@ class ProjectsLocationsPipelineJobs extends \Google\Service\Resource
    * @opt_param string pipelineJobId The ID to use for the PipelineJob, which will
    * become the final component of the PipelineJob name. If not provided, an ID
    * will be automatically generated. This value should be less than 128
-   * characters, and valid characters are /a-z-/.
+   * characters, and valid characters are `/a-z-/`.
    * @return GoogleCloudAiplatformV1PipelineJob
    */
   public function create($parent, GoogleCloudAiplatformV1PipelineJob $postBody, $optParams = [])

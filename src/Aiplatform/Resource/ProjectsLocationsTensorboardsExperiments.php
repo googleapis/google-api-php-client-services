@@ -45,7 +45,7 @@ class ProjectsLocationsTensorboardsExperiments extends \Google\Service\Resource
    * @opt_param string tensorboardExperimentId Required. The ID to use for the
    * Tensorboard experiment, which becomes the final component of the Tensorboard
    * experiment's resource name. This value should be 1-128 characters, and valid
-   * characters are /a-z-/.
+   * characters are `/a-z-/`.
    * @return GoogleCloudAiplatformV1TensorboardExperiment
    */
   public function create($parent, GoogleCloudAiplatformV1TensorboardExperiment $postBody, $optParams = [])
