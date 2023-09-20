@@ -881,16 +881,6 @@ class Spanner extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'batchWrite' => [
-              'path' => 'v1/{+session}:batchWrite',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'session' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'beginTransaction' => [
               'path' => 'v1/{+session}:beginTransaction',
               'httpMethod' => 'POST',
