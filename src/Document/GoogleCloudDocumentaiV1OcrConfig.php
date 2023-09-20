@@ -31,6 +31,10 @@ class GoogleCloudDocumentaiV1OcrConfig extends \Google\Collection
   /**
    * @var bool
    */
+  public $disableCharacterBoxesDetection;
+  /**
+   * @var bool
+   */
   public $enableImageQualityScores;
   /**
    * @var bool
@@ -42,6 +46,8 @@ class GoogleCloudDocumentaiV1OcrConfig extends \Google\Collection
   public $enableSymbol;
   protected $hintsType = GoogleCloudDocumentaiV1OcrConfigHints::class;
   protected $hintsDataType = '';
+  protected $premiumFeaturesType = GoogleCloudDocumentaiV1OcrConfigPremiumFeatures::class;
+  protected $premiumFeaturesDataType = '';
 
   /**
    * @param string[]
@@ -70,6 +76,20 @@ class GoogleCloudDocumentaiV1OcrConfig extends \Google\Collection
   public function getComputeStyleInfo()
   {
     return $this->computeStyleInfo;
+  }
+  /**
+   * @param bool
+   */
+  public function setDisableCharacterBoxesDetection($disableCharacterBoxesDetection)
+  {
+    $this->disableCharacterBoxesDetection = $disableCharacterBoxesDetection;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableCharacterBoxesDetection()
+  {
+    return $this->disableCharacterBoxesDetection;
   }
   /**
    * @param bool
@@ -126,6 +146,20 @@ class GoogleCloudDocumentaiV1OcrConfig extends \Google\Collection
   public function getHints()
   {
     return $this->hints;
+  }
+  /**
+   * @param GoogleCloudDocumentaiV1OcrConfigPremiumFeatures
+   */
+  public function setPremiumFeatures(GoogleCloudDocumentaiV1OcrConfigPremiumFeatures $premiumFeatures)
+  {
+    $this->premiumFeatures = $premiumFeatures;
+  }
+  /**
+   * @return GoogleCloudDocumentaiV1OcrConfigPremiumFeatures
+   */
+  public function getPremiumFeatures()
+  {
+    return $this->premiumFeatures;
   }
 }
 
