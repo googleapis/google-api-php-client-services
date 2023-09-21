@@ -21,6 +21,8 @@ class WorkloadsConfig extends \Google\Model
 {
   protected $schedulerType = SchedulerResource::class;
   protected $schedulerDataType = '';
+  protected $triggererType = TriggererResource::class;
+  protected $triggererDataType = '';
   protected $webServerType = WebServerResource::class;
   protected $webServerDataType = '';
   protected $workerType = WorkerResource::class;
@@ -39,6 +41,20 @@ class WorkloadsConfig extends \Google\Model
   public function getScheduler()
   {
     return $this->scheduler;
+  }
+  /**
+   * @param TriggererResource
+   */
+  public function setTriggerer(TriggererResource $triggerer)
+  {
+    $this->triggerer = $triggerer;
+  }
+  /**
+   * @return TriggererResource
+   */
+  public function getTriggerer()
+  {
+    return $this->triggerer;
   }
   /**
    * @param WebServerResource
