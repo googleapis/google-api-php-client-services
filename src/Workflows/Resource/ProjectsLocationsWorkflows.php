@@ -124,13 +124,13 @@ class ProjectsLocationsWorkflows extends \Google\Service\Resource
   /**
    * Lists revisions for a given workflow. (workflows.listRevisions)
    *
-   * @param string $name Required. Workflow from which the revisions should be
+   * @param string $name Required. Workflow for which the revisions should be
    * listed. Format: projects/{project}/locations/{location}/workflows/{workflow}
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of revisions to return per page.
    * If a value is not specified, a default value of 20 is used. The maximum
-   * permitted value is 100 and values greater than 100 coerced down to 100.
+   * permitted value is 100. Values greater than 100 are coerced down to 100.
    * @opt_param string pageToken The page token, received from a previous
    * ListWorkflowRevisions call. Provide this to retrieve the subsequent page.
    * @return ListWorkflowRevisionsResponse
@@ -148,7 +148,8 @@ class ProjectsLocationsWorkflows extends \Google\Service\Resource
    * revision is used in new workflow executions. (workflows.patch)
    *
    * @param string $name The resource name of the workflow. Format:
-   * projects/{project}/locations/{location}/workflows/{workflow}
+   * projects/{project}/locations/{location}/workflows/{workflow}. This is a
+   * workflow-wide field and is not tied to a specific revision.
    * @param Workflow $postBody
    * @param array $optParams Optional parameters.
    *
