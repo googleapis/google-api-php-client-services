@@ -86,8 +86,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var string
    */
   public $nationalPhoneNumber;
-  protected $openingHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
-  protected $openingHoursDataType = '';
   protected $plusCodeType = GoogleMapsPlacesV1PlacePlusCode::class;
   protected $plusCodeDataType = '';
   /**
@@ -95,14 +93,16 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    */
   public $priceLevel;
   public $rating;
+  protected $regularOpeningHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
+  protected $regularOpeningHoursDataType = '';
+  protected $regularSecondaryOpeningHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
+  protected $regularSecondaryOpeningHoursDataType = 'array';
   /**
    * @var bool
    */
   public $reservable;
   protected $reviewsType = GoogleMapsPlacesV1Review::class;
   protected $reviewsDataType = 'array';
-  protected $secondaryOpeningHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
-  protected $secondaryOpeningHoursDataType = 'array';
   /**
    * @var bool
    */
@@ -153,10 +153,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var string
    */
   public $websiteUri;
-  /**
-   * @var bool
-   */
-  public $wheelchairAccessibleEntrance;
 
   /**
    * @param GoogleMapsPlacesV1PlaceAddressComponent[]
@@ -439,20 +435,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
     return $this->nationalPhoneNumber;
   }
   /**
-   * @param GoogleMapsPlacesV1PlaceOpeningHours
-   */
-  public function setOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours $openingHours)
-  {
-    $this->openingHours = $openingHours;
-  }
-  /**
-   * @return GoogleMapsPlacesV1PlaceOpeningHours
-   */
-  public function getOpeningHours()
-  {
-    return $this->openingHours;
-  }
-  /**
    * @param GoogleMapsPlacesV1PlacePlusCode
    */
   public function setPlusCode(GoogleMapsPlacesV1PlacePlusCode $plusCode)
@@ -489,6 +471,34 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
     return $this->rating;
   }
   /**
+   * @param GoogleMapsPlacesV1PlaceOpeningHours
+   */
+  public function setRegularOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours $regularOpeningHours)
+  {
+    $this->regularOpeningHours = $regularOpeningHours;
+  }
+  /**
+   * @return GoogleMapsPlacesV1PlaceOpeningHours
+   */
+  public function getRegularOpeningHours()
+  {
+    return $this->regularOpeningHours;
+  }
+  /**
+   * @param GoogleMapsPlacesV1PlaceOpeningHours[]
+   */
+  public function setRegularSecondaryOpeningHours($regularSecondaryOpeningHours)
+  {
+    $this->regularSecondaryOpeningHours = $regularSecondaryOpeningHours;
+  }
+  /**
+   * @return GoogleMapsPlacesV1PlaceOpeningHours[]
+   */
+  public function getRegularSecondaryOpeningHours()
+  {
+    return $this->regularSecondaryOpeningHours;
+  }
+  /**
    * @param bool
    */
   public function setReservable($reservable)
@@ -515,20 +525,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getReviews()
   {
     return $this->reviews;
-  }
-  /**
-   * @param GoogleMapsPlacesV1PlaceOpeningHours[]
-   */
-  public function setSecondaryOpeningHours($secondaryOpeningHours)
-  {
-    $this->secondaryOpeningHours = $secondaryOpeningHours;
-  }
-  /**
-   * @return GoogleMapsPlacesV1PlaceOpeningHours[]
-   */
-  public function getSecondaryOpeningHours()
-  {
-    return $this->secondaryOpeningHours;
   }
   /**
    * @param bool
@@ -711,20 +707,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getWebsiteUri()
   {
     return $this->websiteUri;
-  }
-  /**
-   * @param bool
-   */
-  public function setWheelchairAccessibleEntrance($wheelchairAccessibleEntrance)
-  {
-    $this->wheelchairAccessibleEntrance = $wheelchairAccessibleEntrance;
-  }
-  /**
-   * @return bool
-   */
-  public function getWheelchairAccessibleEntrance()
-  {
-    return $this->wheelchairAccessibleEntrance;
   }
 }
 
