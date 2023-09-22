@@ -23,10 +23,6 @@ class EncryptionConfig extends \Google\Model
    * @var string
    */
   public $gcePdKmsKeyName;
-  /**
-   * @var string
-   */
-  public $kmsKey;
 
   /**
    * @param string
@@ -41,20 +37,6 @@ class EncryptionConfig extends \Google\Model
   public function getGcePdKmsKeyName()
   {
     return $this->gcePdKmsKeyName;
-  }
-  /**
-   * @param string
-   */
-  public function setKmsKey($kmsKey)
-  {
-    $this->kmsKey = $kmsKey;
-  }
-  /**
-   * @return string
-   */
-  public function getKmsKey()
-  {
-    return $this->kmsKey;
   }
 }
 

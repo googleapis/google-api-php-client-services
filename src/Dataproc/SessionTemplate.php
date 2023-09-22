@@ -49,6 +49,10 @@ class SessionTemplate extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var string
+   */
+  public $uuid;
 
   /**
    * @param string
@@ -175,6 +179,20 @@ class SessionTemplate extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param string
+   */
+  public function setUuid($uuid)
+  {
+    $this->uuid = $uuid;
+  }
+  /**
+   * @return string
+   */
+  public function getUuid()
+  {
+    return $this->uuid;
   }
 }
 
