@@ -20,6 +20,14 @@ namespace Google\Service\Connectors;
 class Action extends \Google\Collection
 {
   protected $collection_key = 'resultMetadata';
+  /**
+   * @var string
+   */
+  public $description;
+  /**
+   * @var string
+   */
+  public $displayName;
   protected $inputJsonSchemaType = JsonSchema::class;
   protected $inputJsonSchemaDataType = '';
   protected $inputParametersType = InputParameter::class;
@@ -33,6 +41,34 @@ class Action extends \Google\Collection
   protected $resultMetadataType = ResultMetadata::class;
   protected $resultMetadataDataType = 'array';
 
+  /**
+   * @param string
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  /**
+   * @return string
+   */
+  public function getDisplayName()
+  {
+    return $this->displayName;
+  }
   /**
    * @param JsonSchema
    */

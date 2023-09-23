@@ -20,6 +20,10 @@ namespace Google\Service\Connectors;
 class InputParameter extends \Google\Model
 {
   /**
+   * @var array[]
+   */
+  public $additionalDetails;
+  /**
    * @var string
    */
   public $dataType;
@@ -42,6 +46,20 @@ class InputParameter extends \Google\Model
    */
   public $nullable;
 
+  /**
+   * @param array[]
+   */
+  public function setAdditionalDetails($additionalDetails)
+  {
+    $this->additionalDetails = $additionalDetails;
+  }
+  /**
+   * @return array[]
+   */
+  public function getAdditionalDetails()
+  {
+    return $this->additionalDetails;
+  }
   /**
    * @param string
    */

@@ -24,7 +24,7 @@ class QueryParameter extends \Google\Model
    */
   public $dataType;
   /**
-   * @var string
+   * @var array
    */
   public $value;
 
@@ -43,14 +43,14 @@ class QueryParameter extends \Google\Model
     return $this->dataType;
   }
   /**
-   * @param string
+   * @param array
    */
   public function setValue($value)
   {
     $this->value = $value;
   }
   /**
-   * @return string
+   * @return array
    */
   public function getValue()
   {
