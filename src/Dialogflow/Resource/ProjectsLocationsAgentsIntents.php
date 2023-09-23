@@ -17,8 +17,11 @@
 
 namespace Google\Service\Dialogflow\Resource;
 
+use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3ExportIntentsRequest;
+use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3ImportIntentsRequest;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3Intent;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3ListIntentsResponse;
+use Google\Service\Dialogflow\GoogleLongrunningOperation;
 use Google\Service\Dialogflow\GoogleProtobufEmpty;
 
 /**
@@ -74,6 +77,25 @@ class ProjectsLocationsAgentsIntents extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleProtobufEmpty::class);
   }
   /**
+   * Exports the selected intents. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: ExportIntentsMetadata - `response`:
+   * ExportIntentsResponse (intents.export)
+   *
+   * @param string $parent Required. The name of the parent agent to export
+   * intents. Format: `projects//locations//agents/`.
+   * @param GoogleCloudDialogflowCxV3ExportIntentsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function export($parent, GoogleCloudDialogflowCxV3ExportIntentsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('export', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
    * Retrieves the specified intent. (intents.get)
    *
    * @param string $name Required. The name of the intent. Format:
@@ -94,6 +116,25 @@ class ProjectsLocationsAgentsIntents extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleCloudDialogflowCxV3Intent::class);
+  }
+  /**
+   * Imports the specified intents into the agent. This method is a [long-running
+   * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
+   * operation). The returned `Operation` type has the following method-specific
+   * fields: - `metadata`: ImportIntentsMetadata - `response`:
+   * ImportIntentsResponse (intents.import)
+   *
+   * @param string $parent Required. The agent to import the intents into. Format:
+   * `projects//locations//agents/`.
+   * @param GoogleCloudDialogflowCxV3ImportIntentsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function import($parent, GoogleCloudDialogflowCxV3ImportIntentsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('import', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Returns the list of all intents in the specified agent.

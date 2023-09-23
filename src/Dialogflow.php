@@ -1235,6 +1235,16 @@ class Dialogflow extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'export' => [
+              'path' => 'v3/{+parent}/intents:export',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v3/{+name}',
               'httpMethod' => 'GET',
@@ -1247,6 +1257,16 @@ class Dialogflow extends \Google\Service
                 'languageCode' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'import' => [
+              'path' => 'v3/{+parent}/intents:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'list' => [
