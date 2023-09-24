@@ -384,6 +384,8 @@ class Objects extends \Google\Service\Resource
    * @param StorageObject $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool copySourceAcl If true, copies the source object's ACL;
+   * otherwise, uses the bucket's default object ACL. The default is false.
    * @opt_param string ifGenerationMatch Makes the operation conditional on
    * whether the object's one live generation matches the given value. Setting to
    * 0 makes the operation succeed only if there are no live versions of the
