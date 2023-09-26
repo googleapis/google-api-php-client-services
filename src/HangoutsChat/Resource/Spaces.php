@@ -124,8 +124,6 @@ class Spaces extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * (spaces.get)
    *
    * @param string $name Required. Resource name of the space, in the form

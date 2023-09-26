@@ -59,6 +59,10 @@ class Message extends \Google\Collection
   /**
    * @var string
    */
+  public $formattedText;
+  /**
+   * @var string
+   */
   public $lastUpdateTime;
   protected $matchedUrlType = MatchedUrl::class;
   protected $matchedUrlDataType = '';
@@ -266,6 +270,20 @@ class Message extends \Google\Collection
   public function getFallbackText()
   {
     return $this->fallbackText;
+  }
+  /**
+   * @param string
+   */
+  public function setFormattedText($formattedText)
+  {
+    $this->formattedText = $formattedText;
+  }
+  /**
+   * @return string
+   */
+  public function getFormattedText()
+  {
+    return $this->formattedText;
   }
   /**
    * @param string
