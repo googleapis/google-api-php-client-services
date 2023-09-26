@@ -68,11 +68,11 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
   }
   /**
    * Returns all metadata stored about an execution, excluding most data that is
-   * already accessible via other API methods. (executions.exportData)
+   * already accessible using other API methods. (executions.exportData)
    *
-   * @param string $name Required. Name of the execution to be data exported.
-   * Format: projects/{project}/locations/{location}/workflows/{workflow}/executio
-   * ns/{execution}
+   * @param string $name Required. Name of the execution for which data is to be
+   * exported. Format: projects/{project}/locations/{location}/workflows/{workflow
+   * }/executions/{execution}
    * @param array $optParams Optional parameters.
    * @return ExportDataResponse
    */

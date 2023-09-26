@@ -30,8 +30,8 @@ use Google\Service\WorkflowExecutions\ListCallbacksResponse;
 class ProjectsLocationsWorkflowsExecutionsCallbacks extends \Google\Service\Resource
 {
   /**
-   * Returns a list of active callbacks which belong to the execution with the
-   * given name. The returned callbacks are ordered by callback ID. first).
+   * Returns a list of active callbacks that belong to the execution with the
+   * given name. The returned callbacks are ordered by callback ID.
    * (callbacks.listProjectsLocationsWorkflowsExecutionsCallbacks)
    *
    * @param string $parent Required. Name of the execution for which the callbacks
