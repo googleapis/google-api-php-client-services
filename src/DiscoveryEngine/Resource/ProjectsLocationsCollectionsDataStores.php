@@ -53,7 +53,7 @@ class ProjectsLocationsCollectionsDataStores extends \Google\Service\Resource
    * completable` - Using suggestions taken directly from user-imported document
    * fields marked as completable. Default values: * `document` is the default
    * model for regular dataStores. * `search-history` is the default model for
-   * IndustryVertical.SITE_SEARCH dataStores.
+   * site search dataStores.
    * @opt_param string userPseudoId A unique identifier for tracking visitors. For
    * example, this could be implemented with an HTTP cookie, which should be able
    * to uniquely identify a visitor on a single device. This unique identifier
