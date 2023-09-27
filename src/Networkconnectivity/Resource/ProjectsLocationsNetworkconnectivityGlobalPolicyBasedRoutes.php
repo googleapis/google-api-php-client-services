@@ -36,7 +36,7 @@ use Google\Service\Networkconnectivity\TestIamPermissionsResponse;
 class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Google\Service\Resource
 {
   /**
-   * Creates a new PolicyBasedRoute in a given project and location.
+   * Creates a new policy-based route in a given project and location.
    * (policyBasedRoutes.create)
    *
    * @param string $parent Required. The parent resource's name of the
@@ -44,8 +44,8 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * @param PolicyBasedRoute $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string policyBasedRouteId Required. Unique id for the Policy Based
-   * Route to create.
+   * @opt_param string policyBasedRouteId Required. Unique id for the policy-based
+   * route to create.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -66,9 +66,9 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes a single PolicyBasedRoute. (policyBasedRoutes.delete)
+   * Deletes a single policy-based route. (policyBasedRoutes.delete)
    *
-   * @param string $name Required. Name of the PolicyBasedRoute resource to
+   * @param string $name Required. Name of the policy-based route resource to
    * delete.
    * @param array $optParams Optional parameters.
    *
@@ -92,7 +92,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Gets details of a single PolicyBasedRoute. (policyBasedRoutes.get)
+   * Gets details of a single policy-based route. (policyBasedRoutes.get)
    *
    * @param string $name Required. Name of the PolicyBasedRoute resource to get.
    * @param array $optParams Optional parameters.
@@ -136,8 +136,8 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Lists PolicyBasedRoutes in a given project and location. (policyBasedRoutes.l
-   * istProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes)
+   * Lists policy-based routes in a given project and location. (policyBasedRoutes
+   * .listProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes)
    *
    * @param string $parent Required. The parent resource's name.
    * @param array $optParams Optional parameters.

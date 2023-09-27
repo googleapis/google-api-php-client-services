@@ -61,7 +61,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    *
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
+   * server knows to ignore the request if it has already been completed. The
    * server guarantees that a request doesn't result in creation of duplicate
    * commitments for at least 60 minutes. For example, consider a situation where
    * you make an initial request and the request times out. If you make the
@@ -87,7 +87,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    *
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
+   * server knows to ignore the request if it has already been completed. The
    * server guarantees that a request doesn't result in creation of duplicate
    * commitments for at least 60 minutes. For example, consider a situation where
    * you make an initial request and the request times out. If you make the
@@ -177,7 +177,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    *
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
+   * server knows to ignore the request if it has already been completed. The
    * server guarantees that a request doesn't result in creation of duplicate
    * commitments for at least 60 minutes. For example, consider a situation where
    * you make an initial request and the request times out. If you make the

@@ -39,10 +39,11 @@ use Google\Service\Networkconnectivity\TestIamPermissionsResponse;
 class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Resource
 {
   /**
-   * Accepts a proposal to attach a Network Connectivity Center spoke to the hub.
+   * Accepts a proposal to attach a Network Connectivity Center spoke to a hub.
    * (hubs.acceptSpoke)
    *
-   * @param string $name Required. The name of the hub.
+   * @param string $name Required. The name of the hub into which to accept the
+   * spoke.
    * @param AcceptHubSpokeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
@@ -64,7 +65,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @opt_param string hubId Required. A unique identifier for the hub.
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
+   * server knows to ignore the request if it has already been completed. The
    * server guarantees that a request doesn't result in creation of duplicate
    * commitments for at least 60 minutes. For example, consider a situation where
    * you make an initial request and the request times out. If you make the
@@ -89,7 +90,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    *
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
+   * server knows to ignore the request if it has already been completed. The
    * server guarantees that a request doesn't result in creation of duplicate
    * commitments for at least 60 minutes. For example, consider a situation where
    * you make an initial request and the request times out. If you make the
@@ -208,7 +209,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    *
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
+   * server knows to ignore the request if it has already been completed. The
    * server guarantees that a request doesn't result in creation of duplicate
    * commitments for at least 60 minutes. For example, consider a situation where
    * you make an initial request and the request times out. If you make the
@@ -231,12 +232,13 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Rejects a Network Connectivity Center spoke from being attached to the hub.
-   * If the spoke was previously in the `ACTIVE` state, it transitions to the
+   * Rejects a Network Connectivity Center spoke from being attached to a hub. If
+   * the spoke was previously in the `ACTIVE` state, it transitions to the
    * `INACTIVE` state and is no longer able to connect to other spokes that are
    * attached to the hub. (hubs.rejectSpoke)
    *
-   * @param string $name Required. The name of the hub.
+   * @param string $name Required. The name of the hub from which to reject the
+   * spoke.
    * @param RejectHubSpokeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
