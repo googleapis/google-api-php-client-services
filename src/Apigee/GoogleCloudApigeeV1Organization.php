@@ -119,6 +119,10 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   /**
    * @var string
    */
+  public $subscriptionPlan;
+  /**
+   * @var string
+   */
   public $subscriptionType;
   /**
    * @var string
@@ -474,6 +478,20 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setSubscriptionPlan($subscriptionPlan)
+  {
+    $this->subscriptionPlan = $subscriptionPlan;
+  }
+  /**
+   * @return string
+   */
+  public function getSubscriptionPlan()
+  {
+    return $this->subscriptionPlan;
   }
   /**
    * @param string

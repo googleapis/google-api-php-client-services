@@ -43,8 +43,8 @@ class OrganizationsSecurityProfiles extends \Google\Service\Resource
    *
    * @opt_param string securityProfileId Required. The ID to use for the
    * SecurityProfile, which will become the final component of the action's
-   * resource name. This value should be 4-63 characters, and valid characters are
-   * /(^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$/.
+   * resource name. This value should be 1-63 characters and validated by
+   * "(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)".
    * @return GoogleCloudApigeeV1SecurityProfile
    */
   public function create($parent, GoogleCloudApigeeV1SecurityProfile $postBody, $optParams = [])

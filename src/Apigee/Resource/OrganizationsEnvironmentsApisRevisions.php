@@ -61,10 +61,10 @@ class OrganizationsEnvironmentsApisRevisions extends \Google\Service\Resource
    * affected traffic is ready to receive it. This should only be necessary if the
    * new deployment will be capturing traffic from another environment under a
    * shared environment group or if traffic will be rerouted to a different
-   * environment due to a base path removal. The [generateDeployChangeReport
-   * API](generateDeployChangeReport) may be used to examine routing changes
-   * before issuing the deployment request, and its response will indicate if a
-   * sequenced rollout is recommended for the deployment.
+   * environment due to a base path removal. The generateDeployChangeReport API
+   * may be used to examine routing changes before issuing the deployment request,
+   * and its response will indicate if a sequenced rollout is recommended for the
+   * deployment.
    * @opt_param string serviceAccount Google Cloud IAM service account. The
    * service account represents the identity of the deployed proxy, and determines
    * what permissions it has. The format must be
@@ -112,10 +112,10 @@ class OrganizationsEnvironmentsApisRevisions extends \Google\Service\Resource
    * deployment from the runtime. This is likely to be a rare use case; it is only
    * needed when the intended effect of undeploying this proxy is to cause the
    * traffic it currently handles to be rerouted to some other existing proxy in
-   * the environment group. The [GenerateUndeployChangeReport
-   * API](GenerateUndeployChangeReport) may be used to examine routing changes
-   * before issuing the undeployment request, and its response will indicate if a
-   * sequenced rollout is recommended for the undeployment.
+   * the environment group. The GenerateUndeployChangeReport API may be used to
+   * examine routing changes before issuing the undeployment request, and its
+   * response will indicate if a sequenced rollout is recommended for the
+   * undeployment.
    * @return GoogleProtobufEmpty
    */
   public function undeploy($name, $optParams = [])
