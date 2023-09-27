@@ -20,10 +20,6 @@ namespace Google\Service\GKEHub;
 class Scope extends \Google\Model
 {
   /**
-   * @var bool
-   */
-  public $allMemberships;
-  /**
    * @var string
    */
   public $createTime;
@@ -54,20 +50,6 @@ class Scope extends \Google\Model
    */
   public $updateTime;
 
-  /**
-   * @param bool
-   */
-  public function setAllMemberships($allMemberships)
-  {
-    $this->allMemberships = $allMemberships;
-  }
-  /**
-   * @return bool
-   */
-  public function getAllMemberships()
-  {
-    return $this->allMemberships;
-  }
   /**
    * @param string
    */
