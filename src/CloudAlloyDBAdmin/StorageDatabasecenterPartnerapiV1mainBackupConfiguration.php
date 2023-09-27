@@ -25,6 +25,10 @@ class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends \Google\M
   public $automatedBackupEnabled;
   protected $backupRetentionSettingsType = StorageDatabasecenterPartnerapiV1mainRetentionSettings::class;
   protected $backupRetentionSettingsDataType = '';
+  /**
+   * @var bool
+   */
+  public $pointInTimeRecoveryEnabled;
 
   /**
    * @param bool
@@ -53,6 +57,20 @@ class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends \Google\M
   public function getBackupRetentionSettings()
   {
     return $this->backupRetentionSettings;
+  }
+  /**
+   * @param bool
+   */
+  public function setPointInTimeRecoveryEnabled($pointInTimeRecoveryEnabled)
+  {
+    $this->pointInTimeRecoveryEnabled = $pointInTimeRecoveryEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPointInTimeRecoveryEnabled()
+  {
+    return $this->pointInTimeRecoveryEnabled;
   }
 }
 

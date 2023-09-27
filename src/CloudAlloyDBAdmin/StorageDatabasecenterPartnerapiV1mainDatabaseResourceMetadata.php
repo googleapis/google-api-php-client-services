@@ -34,6 +34,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    */
   public $currentState;
   /**
+   * @var array[]
+   */
+  public $customMetadata;
+  /**
    * @var string
    */
   public $expectedState;
@@ -137,6 +141,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getCurrentState()
   {
     return $this->currentState;
+  }
+  /**
+   * @param array[]
+   */
+  public function setCustomMetadata($customMetadata)
+  {
+    $this->customMetadata = $customMetadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getCustomMetadata()
+  {
+    return $this->customMetadata;
   }
   /**
    * @param string

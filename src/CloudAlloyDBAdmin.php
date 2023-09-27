@@ -306,6 +306,16 @@ class CloudAlloyDBAdmin extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'generateClientCertificate' => [
+              'path' => 'v1/{+parent}:generateClientCertificate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -488,6 +498,20 @@ class CloudAlloyDBAdmin extends \Google\Service
                   'required' => true,
                 ],
                 'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'getConnectionInfo' => [
+              'path' => 'v1/{+parent}/connectionInfo',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

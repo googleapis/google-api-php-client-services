@@ -27,6 +27,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
    * @var string
    */
   public $feedType;
+  protected $resourceHealthSignalDataType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData::class;
+  protected $resourceHealthSignalDataDataType = '';
   protected $resourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $resourceIdDataType = '';
   protected $resourceMetadataType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata::class;
@@ -59,6 +61,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
   public function getFeedType()
   {
     return $this->feedType;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData
+   */
+  public function setResourceHealthSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData $resourceHealthSignalData)
+  {
+    $this->resourceHealthSignalData = $resourceHealthSignalData;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData
+   */
+  public function getResourceHealthSignalData()
+  {
+    return $this->resourceHealthSignalData;
   }
   /**
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId

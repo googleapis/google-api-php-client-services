@@ -26,6 +26,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId extends \Google\Mo
   /**
    * @var string
    */
+  public $providerDescription;
+  /**
+   * @var string
+   */
   public $resourceType;
   /**
    * @var string
@@ -45,6 +49,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId extends \Google\Mo
   public function getProvider()
   {
     return $this->provider;
+  }
+  /**
+   * @param string
+   */
+  public function setProviderDescription($providerDescription)
+  {
+    $this->providerDescription = $providerDescription;
+  }
+  /**
+   * @return string
+   */
+  public function getProviderDescription()
+  {
+    return $this->providerDescription;
   }
   /**
    * @param string
