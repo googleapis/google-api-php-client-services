@@ -38,7 +38,19 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
   /**
    * @var bool
    */
-  public $hasSameStructure;
+  public $inSameRoomAsHearingDevice;
+  /**
+   * @var bool
+   */
+  public $inSameRoomAsLocalDevice;
+  /**
+   * @var bool
+   */
+  public $inSameStructureAsHearingDevice;
+  /**
+   * @var bool
+   */
+  public $inSameStructureAsLocalDevice;
   /**
    * @var bool
    */
@@ -115,16 +127,58 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
   /**
    * @param bool
    */
-  public function setHasSameStructure($hasSameStructure)
+  public function setInSameRoomAsHearingDevice($inSameRoomAsHearingDevice)
   {
-    $this->hasSameStructure = $hasSameStructure;
+    $this->inSameRoomAsHearingDevice = $inSameRoomAsHearingDevice;
   }
   /**
    * @return bool
    */
-  public function getHasSameStructure()
+  public function getInSameRoomAsHearingDevice()
   {
-    return $this->hasSameStructure;
+    return $this->inSameRoomAsHearingDevice;
+  }
+  /**
+   * @param bool
+   */
+  public function setInSameRoomAsLocalDevice($inSameRoomAsLocalDevice)
+  {
+    $this->inSameRoomAsLocalDevice = $inSameRoomAsLocalDevice;
+  }
+  /**
+   * @return bool
+   */
+  public function getInSameRoomAsLocalDevice()
+  {
+    return $this->inSameRoomAsLocalDevice;
+  }
+  /**
+   * @param bool
+   */
+  public function setInSameStructureAsHearingDevice($inSameStructureAsHearingDevice)
+  {
+    $this->inSameStructureAsHearingDevice = $inSameStructureAsHearingDevice;
+  }
+  /**
+   * @return bool
+   */
+  public function getInSameStructureAsHearingDevice()
+  {
+    return $this->inSameStructureAsHearingDevice;
+  }
+  /**
+   * @param bool
+   */
+  public function setInSameStructureAsLocalDevice($inSameStructureAsLocalDevice)
+  {
+    $this->inSameStructureAsLocalDevice = $inSameStructureAsLocalDevice;
+  }
+  /**
+   * @return bool
+   */
+  public function getInSameStructureAsLocalDevice()
+  {
+    return $this->inSameStructureAsLocalDevice;
   }
   /**
    * @param bool
