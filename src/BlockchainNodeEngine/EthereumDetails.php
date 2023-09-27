@@ -32,6 +32,10 @@ class EthereumDetails extends \Google\Model
   /**
    * @var string
    */
+  public $beaconFeeRecipient;
+  /**
+   * @var string
+   */
   public $consensusClient;
   /**
    * @var string
@@ -89,6 +93,20 @@ class EthereumDetails extends \Google\Model
   public function getApiEnableDebug()
   {
     return $this->apiEnableDebug;
+  }
+  /**
+   * @param string
+   */
+  public function setBeaconFeeRecipient($beaconFeeRecipient)
+  {
+    $this->beaconFeeRecipient = $beaconFeeRecipient;
+  }
+  /**
+   * @return string
+   */
+  public function getBeaconFeeRecipient()
+  {
+    return $this->beaconFeeRecipient;
   }
   /**
    * @param string
