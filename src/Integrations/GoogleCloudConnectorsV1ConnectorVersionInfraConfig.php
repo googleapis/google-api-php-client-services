@@ -19,6 +19,10 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $connectionRatelimitWindowSeconds;
   protected $hpaConfigType = GoogleCloudConnectorsV1HPAConfig::class;
   protected $hpaConfigDataType = '';
   /**
@@ -38,6 +42,20 @@ class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
    */
   public $sharedDeployment;
 
+  /**
+   * @param string
+   */
+  public function setConnectionRatelimitWindowSeconds($connectionRatelimitWindowSeconds)
+  {
+    $this->connectionRatelimitWindowSeconds = $connectionRatelimitWindowSeconds;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectionRatelimitWindowSeconds()
+  {
+    return $this->connectionRatelimitWindowSeconds;
+  }
   /**
    * @param GoogleCloudConnectorsV1HPAConfig
    */
