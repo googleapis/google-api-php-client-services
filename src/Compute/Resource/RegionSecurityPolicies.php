@@ -20,6 +20,7 @@ namespace Google\Service\Compute\Resource;
 use Google\Service\Compute\Operation;
 use Google\Service\Compute\SecurityPolicy;
 use Google\Service\Compute\SecurityPolicyList;
+use Google\Service\Compute\SecurityPolicyRule;
 
 /**
  * The "regionSecurityPolicies" collection of methods.
@@ -31,6 +32,24 @@ use Google\Service\Compute\SecurityPolicyList;
  */
 class RegionSecurityPolicies extends \Google\Service\Resource
 {
+  /**
+   * Inserts a rule into a security policy. (regionSecurityPolicies.addRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $securityPolicy Name of the security policy to update.
+   * @param SecurityPolicyRule $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool validateOnly If true, the request will not be committed.
+   * @return Operation
+   */
+  public function addRule($project, $region, $securityPolicy, SecurityPolicyRule $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'securityPolicy' => $securityPolicy, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('addRule', [$params], Operation::class);
+  }
   /**
    * Deletes the specified policy. (regionSecurityPolicies.delete)
    *
@@ -72,6 +91,25 @@ class RegionSecurityPolicies extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'securityPolicy' => $securityPolicy];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], SecurityPolicy::class);
+  }
+  /**
+   * Gets a rule at the specified priority. (regionSecurityPolicies.getRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $securityPolicy Name of the security policy to which the
+   * queried rule belongs.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int priority The priority of the rule to get from the security
+   * policy.
+   * @return SecurityPolicyRule
+   */
+  public function getRule($project, $region, $securityPolicy, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'securityPolicy' => $securityPolicy];
+    $params = array_merge($params, $optParams);
+    return $this->call('getRule', [$params], SecurityPolicyRule::class);
   }
   /**
    * Creates a new policy in the specified project using the data included in the
@@ -198,6 +236,45 @@ class RegionSecurityPolicies extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'securityPolicy' => $securityPolicy, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Patches a rule at the specified priority. To clear fields in the rule, leave
+   * the fields empty and specify them in the updateMask.
+   * (regionSecurityPolicies.patchRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $securityPolicy Name of the security policy to update.
+   * @param SecurityPolicyRule $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int priority The priority of the rule to patch.
+   * @opt_param bool validateOnly If true, the request will not be committed.
+   * @return Operation
+   */
+  public function patchRule($project, $region, $securityPolicy, SecurityPolicyRule $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'securityPolicy' => $securityPolicy, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patchRule', [$params], Operation::class);
+  }
+  /**
+   * Deletes a rule at the specified priority. (regionSecurityPolicies.removeRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region Name of the region scoping this request.
+   * @param string $securityPolicy Name of the security policy to update.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int priority The priority of the rule to remove from the security
+   * policy.
+   * @return Operation
+   */
+  public function removeRule($project, $region, $securityPolicy, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'securityPolicy' => $securityPolicy];
+    $params = array_merge($params, $optParams);
+    return $this->call('removeRule', [$params], Operation::class);
   }
 }
 

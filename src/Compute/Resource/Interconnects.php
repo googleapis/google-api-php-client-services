@@ -21,6 +21,7 @@ use Google\Service\Compute\GlobalSetLabelsRequest;
 use Google\Service\Compute\Interconnect;
 use Google\Service\Compute\InterconnectList;
 use Google\Service\Compute\InterconnectsGetDiagnosticsResponse;
+use Google\Service\Compute\InterconnectsGetMacsecConfigResponse;
 use Google\Service\Compute\Operation;
 
 /**
@@ -87,6 +88,21 @@ class Interconnects extends \Google\Service\Resource
     $params = ['project' => $project, 'interconnect' => $interconnect];
     $params = array_merge($params, $optParams);
     return $this->call('getDiagnostics', [$params], InterconnectsGetDiagnosticsResponse::class);
+  }
+  /**
+   * Returns the interconnectMacsecConfig for the specified Interconnect.
+   * (interconnects.getMacsecConfig)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $interconnect Name of the interconnect resource to query.
+   * @param array $optParams Optional parameters.
+   * @return InterconnectsGetMacsecConfigResponse
+   */
+  public function getMacsecConfig($project, $interconnect, $optParams = [])
+  {
+    $params = ['project' => $project, 'interconnect' => $interconnect];
+    $params = array_merge($params, $optParams);
+    return $this->call('getMacsecConfig', [$params], InterconnectsGetMacsecConfigResponse::class);
   }
   /**
    * Creates an Interconnect in the specified project using the data included in

@@ -101,6 +101,7 @@ class NodeTemplates extends \Google\Service\Resource
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
    * false.
+   * @opt_param string serviceProjectNumber
    * @return NodeTemplateAggregatedList
    */
   public function aggregatedList($project, $optParams = [])
