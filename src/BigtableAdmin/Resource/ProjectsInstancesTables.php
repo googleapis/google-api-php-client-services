@@ -152,8 +152,9 @@ class ProjectsInstancesTables extends \Google\Service\Resource
     return $this->call('get', [$params], Table::class);
   }
   /**
-   * Gets the access control policy for a Table resource. Returns an empty policy
-   * if the resource exists but does not have a policy set. (tables.getIamPolicy)
+   * Gets the access control policy for a Table or Backup resource. Returns an
+   * empty policy if the resource exists but does not have a policy set.
+   * (tables.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * requested. See [Resource
@@ -260,8 +261,8 @@ class ProjectsInstancesTables extends \Google\Service\Resource
     return $this->call('restore', [$params], Operation::class);
   }
   /**
-   * Sets the access control policy on a Table resource. Replaces any existing
-   * policy. (tables.setIamPolicy)
+   * Sets the access control policy on a Table or Backup resource. Replaces any
+   * existing policy. (tables.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See [Resource
@@ -278,8 +279,8 @@ class ProjectsInstancesTables extends \Google\Service\Resource
     return $this->call('setIamPolicy', [$params], Policy::class);
   }
   /**
-   * Returns permissions that the caller has on the specified table resource.
-   * (tables.testIamPermissions)
+   * Returns permissions that the caller has on the specified Table or Backup
+   * resource. (tables.testIamPermissions)
    *
    * @param string $resource REQUIRED: The resource for which the policy detail is
    * being requested. See [Resource
