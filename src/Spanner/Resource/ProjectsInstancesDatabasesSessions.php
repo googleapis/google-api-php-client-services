@@ -78,9 +78,10 @@ class ProjectsInstancesDatabasesSessions extends \Google\Service\Resource
    * protected, meaning that each mutation group may be applied more than once.
    * Replays of non-idempotent mutations may have undesirable effects. For
    * example, replays of an insert mutation may produce an already exists error or
-   * result in additional rows if using generated or commit timestamp-based keys.
-   * We recommend structuring your mutation groups to be idempotent to avoid this
-   * issue. (sessions.batchWrite)
+   * if you use generated or commit timestamp-based keys, it may result in
+   * additional rows being added to the mutation's table. We recommend structuring
+   * your mutation groups to be idempotent to avoid this issue.
+   * (sessions.batchWrite)
    *
    * @param string $session Required. The session in which the batch request is to
    * be run.
