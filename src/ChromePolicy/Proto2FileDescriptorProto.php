@@ -23,7 +23,7 @@ class Proto2FileDescriptorProto extends \Google\Collection
   /**
    * @var string
    */
-  public $editionEnum;
+  public $editionDeprecated;
   protected $enumTypeType = Proto2EnumDescriptorProto::class;
   protected $enumTypeDataType = 'array';
   protected $messageTypeType = Proto2DescriptorProto::class;
@@ -44,16 +44,16 @@ class Proto2FileDescriptorProto extends \Google\Collection
   /**
    * @param string
    */
-  public function setEditionEnum($editionEnum)
+  public function setEditionDeprecated($editionDeprecated)
   {
-    $this->editionEnum = $editionEnum;
+    $this->editionDeprecated = $editionDeprecated;
   }
   /**
    * @return string
    */
-  public function getEditionEnum()
+  public function getEditionDeprecated()
   {
-    return $this->editionEnum;
+    return $this->editionDeprecated;
   }
   /**
    * @param Proto2EnumDescriptorProto[]
