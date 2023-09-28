@@ -62,6 +62,8 @@ class InstanceGroupConfig extends \Google\Collection
    * @var string
    */
   public $preemptibility;
+  protected $startupConfigType = StartupConfig::class;
+  protected $startupConfigDataType = '';
 
   /**
    * @param AcceleratorConfig[]
@@ -244,6 +246,20 @@ class InstanceGroupConfig extends \Google\Collection
   public function getPreemptibility()
   {
     return $this->preemptibility;
+  }
+  /**
+   * @param StartupConfig
+   */
+  public function setStartupConfig(StartupConfig $startupConfig)
+  {
+    $this->startupConfig = $startupConfig;
+  }
+  /**
+   * @return StartupConfig
+   */
+  public function getStartupConfig()
+  {
+    return $this->startupConfig;
   }
 }
 
