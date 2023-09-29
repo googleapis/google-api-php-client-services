@@ -20,6 +20,8 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1Place extends \Google\Collection
 {
   protected $collection_key = 'types';
+  protected $accessibilityOptionsType = GoogleMapsPlacesV1PlaceAccessibilityOptions::class;
+  protected $accessibilityOptionsDataType = '';
   protected $addressComponentsType = GoogleMapsPlacesV1PlaceAddressComponent::class;
   protected $addressComponentsDataType = 'array';
   /**
@@ -154,6 +156,20 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    */
   public $websiteUri;
 
+  /**
+   * @param GoogleMapsPlacesV1PlaceAccessibilityOptions
+   */
+  public function setAccessibilityOptions(GoogleMapsPlacesV1PlaceAccessibilityOptions $accessibilityOptions)
+  {
+    $this->accessibilityOptions = $accessibilityOptions;
+  }
+  /**
+   * @return GoogleMapsPlacesV1PlaceAccessibilityOptions
+   */
+  public function getAccessibilityOptions()
+  {
+    return $this->accessibilityOptions;
+  }
   /**
    * @param GoogleMapsPlacesV1PlaceAddressComponent[]
    */
