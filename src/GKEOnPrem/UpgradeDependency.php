@@ -26,10 +26,6 @@ class UpgradeDependency extends \Google\Model
   /**
    * @var string
    */
-  public $localName;
-  /**
-   * @var string
-   */
   public $membership;
   /**
    * @var string
@@ -53,20 +49,6 @@ class UpgradeDependency extends \Google\Model
   public function getCurrentVersion()
   {
     return $this->currentVersion;
-  }
-  /**
-   * @param string
-   */
-  public function setLocalName($localName)
-  {
-    $this->localName = $localName;
-  }
-  /**
-   * @return string
-   */
-  public function getLocalName()
-  {
-    return $this->localName;
   }
   /**
    * @param string
