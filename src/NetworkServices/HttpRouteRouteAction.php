@@ -36,6 +36,8 @@ class HttpRouteRouteAction extends \Google\Collection
   protected $responseHeaderModifierDataType = '';
   protected $retryPolicyType = HttpRouteRetryPolicy::class;
   protected $retryPolicyDataType = '';
+  protected $statefulSessionAffinityType = HttpRouteStatefulSessionAffinityPolicy::class;
+  protected $statefulSessionAffinityDataType = '';
   /**
    * @var string
    */
@@ -154,6 +156,20 @@ class HttpRouteRouteAction extends \Google\Collection
   public function getRetryPolicy()
   {
     return $this->retryPolicy;
+  }
+  /**
+   * @param HttpRouteStatefulSessionAffinityPolicy
+   */
+  public function setStatefulSessionAffinity(HttpRouteStatefulSessionAffinityPolicy $statefulSessionAffinity)
+  {
+    $this->statefulSessionAffinity = $statefulSessionAffinity;
+  }
+  /**
+   * @return HttpRouteStatefulSessionAffinityPolicy
+   */
+  public function getStatefulSessionAffinity()
+  {
+    return $this->statefulSessionAffinity;
   }
   /**
    * @param string

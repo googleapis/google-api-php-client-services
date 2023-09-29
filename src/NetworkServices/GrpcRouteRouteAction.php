@@ -26,6 +26,8 @@ class GrpcRouteRouteAction extends \Google\Collection
   protected $faultInjectionPolicyDataType = '';
   protected $retryPolicyType = GrpcRouteRetryPolicy::class;
   protected $retryPolicyDataType = '';
+  protected $statefulSessionAffinityType = GrpcRouteStatefulSessionAffinityPolicy::class;
+  protected $statefulSessionAffinityDataType = '';
   /**
    * @var string
    */
@@ -72,6 +74,20 @@ class GrpcRouteRouteAction extends \Google\Collection
   public function getRetryPolicy()
   {
     return $this->retryPolicy;
+  }
+  /**
+   * @param GrpcRouteStatefulSessionAffinityPolicy
+   */
+  public function setStatefulSessionAffinity(GrpcRouteStatefulSessionAffinityPolicy $statefulSessionAffinity)
+  {
+    $this->statefulSessionAffinity = $statefulSessionAffinity;
+  }
+  /**
+   * @return GrpcRouteStatefulSessionAffinityPolicy
+   */
+  public function getStatefulSessionAffinity()
+  {
+    return $this->statefulSessionAffinity;
   }
   /**
    * @param string
