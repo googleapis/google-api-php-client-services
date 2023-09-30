@@ -424,7 +424,17 @@ class Baremetalsolution extends \Google\Service
         'osImages',
         [
           'methods' => [
-            'list' => [
+            'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
               'path' => 'v2/{+parent}/osImages',
               'httpMethod' => 'GET',
               'parameters' => [

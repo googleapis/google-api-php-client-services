@@ -18,6 +18,7 @@
 namespace Google\Service\Baremetalsolution\Resource;
 
 use Google\Service\Baremetalsolution\ListOSImagesResponse;
+use Google\Service\Baremetalsolution\OSImage;
 
 /**
  * The "osImages" collection of methods.
@@ -30,11 +31,23 @@ use Google\Service\Baremetalsolution\ListOSImagesResponse;
 class ProjectsLocationsOsImages extends \Google\Service\Resource
 {
   /**
+   * Get details of a single OS image. (osImages.get)
+   *
+   * @param string $name Required. Name of the OS image.
+   * @param array $optParams Optional parameters.
+   * @return OSImage
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], OSImage::class);
+  }
+  /**
    * Retrieves the list of OS images which are currently approved.
    * (osImages.listProjectsLocationsOsImages)
    *
-   * @param string $parent Required. Parent value for
-   * ListProvisioningQuotasRequest.
+   * @param string $parent Required. Parent value for ListOSImagesRequest.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Requested page size. The server might return fewer
