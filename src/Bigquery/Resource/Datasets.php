@@ -56,6 +56,10 @@ class Datasets extends \Google\Service\Resource
    * @param string $projectId Project ID of the requested dataset
    * @param string $datasetId Dataset ID of the requested dataset
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string datasetView Specifies the view that determines which
+   * dataset information is returned. By default, metadata and ACL information are
+   * returned. Allowed values: METADATA, ACL, FULL.
    * @return Dataset
    */
   public function get($projectId, $datasetId, $optParams = [])

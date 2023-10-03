@@ -32,6 +32,10 @@ class QueryResponse extends \Google\Collection
    * @var bool
    */
   public $jobComplete;
+  /**
+   * @var array
+   */
+  public $jobCreationReason;
   protected $jobReferenceType = JobReference::class;
   protected $jobReferenceDataType = '';
   /**
@@ -116,6 +120,20 @@ class QueryResponse extends \Google\Collection
   public function getJobComplete()
   {
     return $this->jobComplete;
+  }
+  /**
+   * @param array
+   */
+  public function setJobCreationReason($jobCreationReason)
+  {
+    $this->jobCreationReason = $jobCreationReason;
+  }
+  /**
+   * @return array
+   */
+  public function getJobCreationReason()
+  {
+    return $this->jobCreationReason;
   }
   /**
    * @param JobReference

@@ -120,6 +120,10 @@ class Bigquery extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'datasetView' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'insert' => [
               'path' => 'projects/{projectId}/datasets',

@@ -139,6 +139,10 @@ class Table extends \Google\Model
    * @var bool
    */
   public $requirePartitionFilter;
+  /**
+   * @var string[]
+   */
+  public $resourceTags;
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
   /**
@@ -637,6 +641,20 @@ class Table extends \Google\Model
   public function getRequirePartitionFilter()
   {
     return $this->requirePartitionFilter;
+  }
+  /**
+   * @param string[]
+   */
+  public function setResourceTags($resourceTags)
+  {
+    $this->resourceTags = $resourceTags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getResourceTags()
+  {
+    return $this->resourceTags;
   }
   /**
    * @param TableSchema

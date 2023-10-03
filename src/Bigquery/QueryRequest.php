@@ -39,6 +39,10 @@ class QueryRequest extends \Google\Collection
   /**
    * @var string
    */
+  public $jobCreationMode;
+  /**
+   * @var string
+   */
   public $kind;
   /**
    * @var string[]
@@ -156,6 +160,20 @@ class QueryRequest extends \Google\Collection
   public function getDryRun()
   {
     return $this->dryRun;
+  }
+  /**
+   * @param string
+   */
+  public function setJobCreationMode($jobCreationMode)
+  {
+    $this->jobCreationMode = $jobCreationMode;
+  }
+  /**
+   * @return string
+   */
+  public function getJobCreationMode()
+  {
+    return $this->jobCreationMode;
   }
   /**
    * @param string
