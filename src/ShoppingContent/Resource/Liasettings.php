@@ -184,7 +184,11 @@ class Liasettings extends \Google\Service\Resource
     return $this->call('setinventoryverificationcontact', [$params], LiasettingsSetInventoryVerificationContactResponse::class);
   }
   /**
-   * Sets the omnichannel experience for the specified country.
+   * Sets the omnichannel experience for the specified country. Only supported for
+   * merchants whose POS data provider is trusted to enable the corresponding
+   * experience. For more context, see these help articles [about
+   * LFP](https://support.google.com/merchants/answer/7676652) and [how to get
+   * started](https://support.google.com/merchants/answer/7676578) with it.
    * (liasettings.setomnichannelexperience)
    *
    * @param string $merchantId The ID of the managing account. If this parameter
