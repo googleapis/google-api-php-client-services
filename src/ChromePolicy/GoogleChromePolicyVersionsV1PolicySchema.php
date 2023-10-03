@@ -40,7 +40,7 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   public $name;
   protected $noticesType = GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription::class;
   protected $noticesDataType = 'array';
-  protected $policyApiLifecycleType = ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle::class;
+  protected $policyApiLifecycleType = GoogleChromePolicyVersionsV1PolicyApiLifecycle::class;
   protected $policyApiLifecycleDataType = '';
   /**
    * @var string
@@ -158,14 +158,14 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
     return $this->notices;
   }
   /**
-   * @param ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
+   * @param GoogleChromePolicyVersionsV1PolicyApiLifecycle
    */
-  public function setPolicyApiLifecycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle $policyApiLifecycle)
+  public function setPolicyApiLifecycle(GoogleChromePolicyVersionsV1PolicyApiLifecycle $policyApiLifecycle)
   {
     $this->policyApiLifecycle = $policyApiLifecycle;
   }
   /**
-   * @return ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle
+   * @return GoogleChromePolicyVersionsV1PolicyApiLifecycle
    */
   public function getPolicyApiLifecycle()
   {
