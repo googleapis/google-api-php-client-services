@@ -112,6 +112,8 @@ class ClusterUpdate extends \Google\Collection
   public $desiredNodeVersion;
   protected $desiredNotificationConfigType = NotificationConfig::class;
   protected $desiredNotificationConfigDataType = '';
+  protected $desiredParentProductConfigType = ParentProductConfig::class;
+  protected $desiredParentProductConfigDataType = '';
   protected $desiredPrivateClusterConfigType = PrivateClusterConfig::class;
   protected $desiredPrivateClusterConfigDataType = '';
   /**
@@ -648,6 +650,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredNotificationConfig()
   {
     return $this->desiredNotificationConfig;
+  }
+  /**
+   * @param ParentProductConfig
+   */
+  public function setDesiredParentProductConfig(ParentProductConfig $desiredParentProductConfig)
+  {
+    $this->desiredParentProductConfig = $desiredParentProductConfig;
+  }
+  /**
+   * @return ParentProductConfig
+   */
+  public function getDesiredParentProductConfig()
+  {
+    return $this->desiredParentProductConfig;
   }
   /**
    * @param PrivateClusterConfig

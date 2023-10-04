@@ -168,6 +168,8 @@ class Cluster extends \Google\Collection
   protected $nodePoolsDataType = 'array';
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
+  protected $parentProductConfigType = ParentProductConfig::class;
+  protected $parentProductConfigDataType = '';
   protected $privateClusterConfigType = PrivateClusterConfig::class;
   protected $privateClusterConfigDataType = '';
   protected $releaseChannelType = ReleaseChannel::class;
@@ -928,6 +930,20 @@ class Cluster extends \Google\Collection
   public function getNotificationConfig()
   {
     return $this->notificationConfig;
+  }
+  /**
+   * @param ParentProductConfig
+   */
+  public function setParentProductConfig(ParentProductConfig $parentProductConfig)
+  {
+    $this->parentProductConfig = $parentProductConfig;
+  }
+  /**
+   * @return ParentProductConfig
+   */
+  public function getParentProductConfig()
+  {
+    return $this->parentProductConfig;
   }
   /**
    * @param PrivateClusterConfig
