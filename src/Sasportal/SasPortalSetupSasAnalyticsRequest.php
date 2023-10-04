@@ -19,6 +19,25 @@ namespace Google\Service\Sasportal;
 
 class SasPortalSetupSasAnalyticsRequest extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $userId;
+
+  /**
+   * @param string
+   */
+  public function setUserId($userId)
+  {
+    $this->userId = $userId;
+  }
+  /**
+   * @return string
+   */
+  public function getUserId()
+  {
+    return $this->userId;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
