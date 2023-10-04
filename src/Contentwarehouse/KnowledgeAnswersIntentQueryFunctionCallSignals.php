@@ -30,6 +30,8 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
    * @var string
    */
   public $conceptEntityMid;
+  protected $conceptSignalsType = KnowledgeAnswersIntentQueryConceptSignals::class;
+  protected $conceptSignalsDataType = '';
   /**
    * @var string
    */
@@ -172,6 +174,20 @@ class KnowledgeAnswersIntentQueryFunctionCallSignals extends \Google\Collection
   public function getConceptEntityMid()
   {
     return $this->conceptEntityMid;
+  }
+  /**
+   * @param KnowledgeAnswersIntentQueryConceptSignals
+   */
+  public function setConceptSignals(KnowledgeAnswersIntentQueryConceptSignals $conceptSignals)
+  {
+    $this->conceptSignals = $conceptSignals;
+  }
+  /**
+   * @return KnowledgeAnswersIntentQueryConceptSignals
+   */
+  public function getConceptSignals()
+  {
+    return $this->conceptSignals;
   }
   /**
    * @param string

@@ -17,46 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefFprintModifierProto extends \Google\Model
+class KnowledgeAnswersIntentQueryConceptSignals extends \Google\Model
 {
   /**
    * @var int
    */
-  public $language;
-  /**
-   * @var string
-   */
-  public $namespaceType;
+  public $dataEpochId;
 
   /**
    * @param int
    */
-  public function setLanguage($language)
+  public function setDataEpochId($dataEpochId)
   {
-    $this->language = $language;
+    $this->dataEpochId = $dataEpochId;
   }
   /**
    * @return int
    */
-  public function getLanguage()
+  public function getDataEpochId()
   {
-    return $this->language;
-  }
-  /**
-   * @param string
-   */
-  public function setNamespaceType($namespaceType)
-  {
-    $this->namespaceType = $namespaceType;
-  }
-  /**
-   * @return string
-   */
-  public function getNamespaceType()
-  {
-    return $this->namespaceType;
+    return $this->dataEpochId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefFprintModifierProto::class, 'Google_Service_Contentwarehouse_RepositoryWebrefFprintModifierProto');
+class_alias(KnowledgeAnswersIntentQueryConceptSignals::class, 'Google_Service_Contentwarehouse_KnowledgeAnswersIntentQueryConceptSignals');

@@ -124,6 +124,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isScoreBasedIntent;
+  /**
+   * @var bool
+   */
   public $isTvmIntent;
   /**
    * @var bool
@@ -582,6 +586,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsSageIntent()
   {
     return $this->isSageIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsScoreBasedIntent($isScoreBasedIntent)
+  {
+    $this->isScoreBasedIntent = $isScoreBasedIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsScoreBasedIntent()
+  {
+    return $this->isScoreBasedIntent;
   }
   /**
    * @param bool
