@@ -365,6 +365,8 @@ class SecurityPolicies extends \Google\Service\Resource
    * from accidentally creating duplicate commitments. The request ID must be a
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Indicates fields to be cleared as part of this
+   * request.
    * @return Operation
    */
   public function patch($project, $securityPolicy, SecurityPolicy $postBody, $optParams = [])
@@ -384,6 +386,8 @@ class SecurityPolicies extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int priority The priority of the rule to patch.
+   * @opt_param string updateMask Indicates fields to be cleared as part of this
+   * request.
    * @opt_param bool validateOnly If true, the request will not be committed.
    * @return Operation
    */

@@ -1038,6 +1038,36 @@ class Compute extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'listUsable' => [
+              'path' => 'projects/{project}/global/backendServices/listUsable',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
             ],'patch' => [
               'path' => 'projects/{project}/global/backendServices/{backendService}',
               'httpMethod' => 'PATCH',
@@ -9771,6 +9801,41 @@ class Compute extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'listUsable' => [
+              'path' => 'projects/{project}/regions/{region}/backendServices/listUsable',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
             ],'patch' => [
               'path' => 'projects/{project}/regions/{region}/backendServices/{backendService}',
               'httpMethod' => 'PATCH',
@@ -12593,6 +12658,10 @@ class Compute extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'patchRule' => [
               'path' => 'projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/patchRule',
@@ -12616,6 +12685,10 @@ class Compute extends \Google\Service
                 'priority' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'validateOnly' => [
                   'location' => 'query',
@@ -14683,6 +14756,10 @@ class Compute extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'patchRule' => [
               'path' => 'projects/{project}/global/securityPolicies/{securityPolicy}/patchRule',
@@ -14701,6 +14778,10 @@ class Compute extends \Google\Service
                 'priority' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
                 'validateOnly' => [
                   'location' => 'query',
