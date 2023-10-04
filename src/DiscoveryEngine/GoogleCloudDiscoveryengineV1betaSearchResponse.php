@@ -34,6 +34,8 @@ class GoogleCloudDiscoveryengineV1betaSearchResponse extends \Google\Collection
   public $correctedQuery;
   protected $facetsType = GoogleCloudDiscoveryengineV1betaSearchResponseFacet::class;
   protected $facetsDataType = 'array';
+  protected $geoSearchDebugInfoType = GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo::class;
+  protected $geoSearchDebugInfoDataType = 'array';
   protected $guidedSearchResultType = GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResult::class;
   protected $guidedSearchResultDataType = '';
   /**
@@ -110,6 +112,20 @@ class GoogleCloudDiscoveryengineV1betaSearchResponse extends \Google\Collection
   public function getFacets()
   {
     return $this->facets;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo[]
+   */
+  public function setGeoSearchDebugInfo($geoSearchDebugInfo)
+  {
+    $this->geoSearchDebugInfo = $geoSearchDebugInfo;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo[]
+   */
+  public function getGeoSearchDebugInfo()
+  {
+    return $this->geoSearchDebugInfo;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResult
