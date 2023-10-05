@@ -43,7 +43,7 @@ class Accounts extends \Google\Service\Resource
    * does not have a method to restore soft-deleted accounts. However, they can be
    * restored using the Trash Can UI. If the accounts are not restored before the
    * expiration time, the account and all child resources (eg: Properties,
-   * GoogleAdsLinks, Streams, UserLinks) will be permanently purged.
+   * GoogleAdsLinks, Streams, AccessBindings) will be permanently purged.
    * https://support.google.com/analytics/answer/6154772 Returns an error if the
    * target is not found. (accounts.delete)
    *
