@@ -17,14 +17,19 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ModelMonitoringAlertConfig extends \Google\Model
+class GoogleCloudAiplatformV1ModelMonitoringAlertConfig extends \Google\Collection
 {
+  protected $collection_key = 'notificationChannels';
   protected $emailAlertConfigType = GoogleCloudAiplatformV1ModelMonitoringAlertConfigEmailAlertConfig::class;
   protected $emailAlertConfigDataType = '';
   /**
    * @var bool
    */
   public $enableLogging;
+  /**
+   * @var string[]
+   */
+  public $notificationChannels;
 
   /**
    * @param GoogleCloudAiplatformV1ModelMonitoringAlertConfigEmailAlertConfig
@@ -53,6 +58,20 @@ class GoogleCloudAiplatformV1ModelMonitoringAlertConfig extends \Google\Model
   public function getEnableLogging()
   {
     return $this->enableLogging;
+  }
+  /**
+   * @param string[]
+   */
+  public function setNotificationChannels($notificationChannels)
+  {
+    $this->notificationChannels = $notificationChannels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getNotificationChannels()
+  {
+    return $this->notificationChannels;
   }
 }
 

@@ -60,6 +60,10 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Model
   /**
    * @var string
    */
+  public $notebookRuntimeType;
+  /**
+   * @var string
+   */
   public $serviceAccount;
   /**
    * @var string
@@ -233,6 +237,20 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Model
   public function getNetworkSpec()
   {
     return $this->networkSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setNotebookRuntimeType($notebookRuntimeType)
+  {
+    $this->notebookRuntimeType = $notebookRuntimeType;
+  }
+  /**
+   * @return string
+   */
+  public function getNotebookRuntimeType()
+  {
+    return $this->notebookRuntimeType;
   }
   /**
    * @param string

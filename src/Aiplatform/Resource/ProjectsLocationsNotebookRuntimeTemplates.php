@@ -130,9 +130,11 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * NotebookRuntimeTemplate's resource name. * `display_name` supports = and != *
    * `labels` supports general map functions that is: * `labels.key=value` -
    * key:value equality * `labels.key:* or labels:key - key existence * A key
-   * including a space must be quoted. `labels."a key"`. Some examples: *
-   * `notebookRuntimeTemplate=notebookRuntimeTemplate123` *
-   * `displayName="myDisplayName"` * `labels.myKey="myValue"`
+   * including a space must be quoted. `labels."a key"`. * `notebookRuntimeType`
+   * supports = and !=. notebookRuntimeType enum: [USER_DEFINED, ONE_CLICK]. Some
+   * examples: * `notebookRuntimeTemplate=notebookRuntimeTemplate123` *
+   * `displayName="myDisplayName"` * `labels.myKey="myValue"` *
+   * `notebookRuntimeType=USER_DEFINED`
    * @opt_param string orderBy Optional. A comma-separated list of fields to order
    * by, sorted in ascending order. Use "desc" after a field name for descending.
    * Supported fields: * `display_name` * `create_time` * `update_time` Example:

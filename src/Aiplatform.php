@@ -55,6 +55,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_datasets_dataItems_annotations;
   public $projects_locations_datasets_dataItems_annotations_operations;
   public $projects_locations_datasets_dataItems_operations;
+  public $projects_locations_datasets_datasetVersions;
   public $projects_locations_datasets_operations;
   public $projects_locations_datasets_savedQueries;
   public $projects_locations_datasets_savedQueries_operations;
@@ -1054,6 +1055,90 @@ class Aiplatform extends \Google\Service
                 'timeout' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_datasets_datasetVersions = new Aiplatform\Resource\ProjectsLocationsDatasetsDatasetVersions(
+        $this,
+        $this->serviceName,
+        'datasetVersions',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/datasetVersions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'readMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/datasetVersions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'readMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'restore' => [
+              'path' => 'v1/{+name}:restore',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

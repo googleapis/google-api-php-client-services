@@ -17,12 +17,19 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Model
+class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Collection
 {
+  protected $collection_key = 'stopSequences';
+  /**
+   * @var string
+   */
+  public $candidateCount;
   /**
    * @var string
    */
   public $gcsUri;
+  protected $groundingConfigType = GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig::class;
+  protected $groundingConfigDataType = '';
   /**
    * @var string
    */
@@ -31,6 +38,10 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Mod
    * @var string
    */
   public $promptType;
+  /**
+   * @var string[]
+   */
+  public $stopSequences;
   /**
    * @var float
    */
@@ -51,6 +62,20 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Mod
   /**
    * @param string
    */
+  public function setCandidateCount($candidateCount)
+  {
+    $this->candidateCount = $candidateCount;
+  }
+  /**
+   * @return string
+   */
+  public function getCandidateCount()
+  {
+    return $this->candidateCount;
+  }
+  /**
+   * @param string
+   */
   public function setGcsUri($gcsUri)
   {
     $this->gcsUri = $gcsUri;
@@ -61,6 +86,20 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Mod
   public function getGcsUri()
   {
     return $this->gcsUri;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig
+   */
+  public function setGroundingConfig(GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig $groundingConfig)
+  {
+    $this->groundingConfig = $groundingConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig
+   */
+  public function getGroundingConfig()
+  {
+    return $this->groundingConfig;
   }
   /**
    * @param string
@@ -89,6 +128,20 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Mod
   public function getPromptType()
   {
     return $this->promptType;
+  }
+  /**
+   * @param string[]
+   */
+  public function setStopSequences($stopSequences)
+  {
+    $this->stopSequences = $stopSequences;
+  }
+  /**
+   * @return string[]
+   */
+  public function getStopSequences()
+  {
+    return $this->stopSequences;
   }
   /**
    * @param float

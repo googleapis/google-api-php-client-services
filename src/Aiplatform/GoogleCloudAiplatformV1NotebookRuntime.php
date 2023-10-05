@@ -52,6 +52,10 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
   /**
    * @var string
    */
+  public $notebookRuntimeType;
+  /**
+   * @var string
+   */
   public $proxyUri;
   /**
    * @var string
@@ -185,6 +189,20 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
   public function getNotebookRuntimeTemplateRef()
   {
     return $this->notebookRuntimeTemplateRef;
+  }
+  /**
+   * @param string
+   */
+  public function setNotebookRuntimeType($notebookRuntimeType)
+  {
+    $this->notebookRuntimeType = $notebookRuntimeType;
+  }
+  /**
+   * @return string
+   */
+  public function getNotebookRuntimeType()
+  {
+    return $this->notebookRuntimeType;
   }
   /**
    * @param string
