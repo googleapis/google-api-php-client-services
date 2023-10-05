@@ -20,28 +20,10 @@ namespace Google\Service\Eventarc;
 class HttpEndpoint extends \Google\Model
 {
   /**
-   * @var bool
-   */
-  public $forwardDnsRequests;
-  /**
    * @var string
    */
   public $uri;
 
-  /**
-   * @param bool
-   */
-  public function setForwardDnsRequests($forwardDnsRequests)
-  {
-    $this->forwardDnsRequests = $forwardDnsRequests;
-  }
-  /**
-   * @return bool
-   */
-  public function getForwardDnsRequests()
-  {
-    return $this->forwardDnsRequests;
-  }
   /**
    * @param string
    */
