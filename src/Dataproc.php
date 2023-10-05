@@ -978,6 +978,10 @@ class Dataproc extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'parentOperationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
