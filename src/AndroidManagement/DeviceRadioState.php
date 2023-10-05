@@ -26,6 +26,14 @@ class DeviceRadioState extends \Google\Model
   /**
    * @var string
    */
+  public $cellularTwoGState;
+  /**
+   * @var string
+   */
+  public $ultraWidebandState;
+  /**
+   * @var string
+   */
   public $wifiState;
 
   /**
@@ -41,6 +49,34 @@ class DeviceRadioState extends \Google\Model
   public function getAirplaneModeState()
   {
     return $this->airplaneModeState;
+  }
+  /**
+   * @param string
+   */
+  public function setCellularTwoGState($cellularTwoGState)
+  {
+    $this->cellularTwoGState = $cellularTwoGState;
+  }
+  /**
+   * @return string
+   */
+  public function getCellularTwoGState()
+  {
+    return $this->cellularTwoGState;
+  }
+  /**
+   * @param string
+   */
+  public function setUltraWidebandState($ultraWidebandState)
+  {
+    $this->ultraWidebandState = $ultraWidebandState;
+  }
+  /**
+   * @return string
+   */
+  public function getUltraWidebandState()
+  {
+    return $this->ultraWidebandState;
   }
   /**
    * @param string
