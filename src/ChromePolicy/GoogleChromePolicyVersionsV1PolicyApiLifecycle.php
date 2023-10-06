@@ -19,7 +19,7 @@ namespace Google\Service\ChromePolicy;
 
 class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
 {
-  protected $collection_key = 'deprecatedInFavorOf';
+  protected $collection_key = 'scheduledToDeprecatePolicies';
   /**
    * @var string[]
    */
@@ -34,6 +34,10 @@ class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
    * @var string
    */
   public $policyApiLifecycleStage;
+  /**
+   * @var string[]
+   */
+  public $scheduledToDeprecatePolicies;
 
   /**
    * @param string[]
@@ -90,6 +94,20 @@ class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
   public function getPolicyApiLifecycleStage()
   {
     return $this->policyApiLifecycleStage;
+  }
+  /**
+   * @param string[]
+   */
+  public function setScheduledToDeprecatePolicies($scheduledToDeprecatePolicies)
+  {
+    $this->scheduledToDeprecatePolicies = $scheduledToDeprecatePolicies;
+  }
+  /**
+   * @return string[]
+   */
+  public function getScheduledToDeprecatePolicies()
+  {
+    return $this->scheduledToDeprecatePolicies;
   }
 }
 
