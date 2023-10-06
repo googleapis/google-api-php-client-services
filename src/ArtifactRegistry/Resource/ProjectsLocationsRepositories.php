@@ -45,7 +45,8 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
    * @param Repository $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string repositoryId The repository id to use for this repository.
+   * @opt_param string repositoryId Required. The repository id to use for this
+   * repository.
    * @return Operation
    */
   public function create($parent, Repository $postBody, $optParams = [])
