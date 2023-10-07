@@ -271,6 +271,11 @@ class Instances extends \Google\Service\Resource
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool failover Set to true if the promote operation should attempt
+   * to re-add the original primary as a replica when it comes back online.
+   * Otherwise, if this value is false or not set, the original primary will be a
+   * standalone instance.
    * @return Operation
    */
   public function promoteReplica($project, $instance, $optParams = [])
@@ -389,6 +394,25 @@ class Instances extends \Google\Service\Resource
     $params = ['project' => $project, 'instance' => $instance];
     $params = array_merge($params, $optParams);
     return $this->call('stopReplica', [$params], Operation::class);
+  }
+  /**
+   * Switches over from the primary instance to the replica instance.
+   * (instances.switchover)
+   *
+   * @param string $project ID of the project that contains the replica.
+   * @param string $instance Cloud SQL read replica instance name.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string dbTimeout Optional. (MySQL only) Cloud SQL instance
+   * operations timeout, which is a sum of all database operations. Default value
+   * is 10 minutes and can be modified to a maximum value of 24 hours.
+   * @return Operation
+   */
+  public function switchover($project, $instance, $optParams = [])
+  {
+    $params = ['project' => $project, 'instance' => $instance];
+    $params = array_merge($params, $optParams);
+    return $this->call('switchover', [$params], Operation::class);
   }
   /**
    * Truncate MySQL general and slow query log tables MySQL only.

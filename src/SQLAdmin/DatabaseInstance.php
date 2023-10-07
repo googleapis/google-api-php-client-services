@@ -156,6 +156,10 @@ class DatabaseInstance extends \Google\Collection
    * @var string[]
    */
   public $suspensionReason;
+  /**
+   * @var string
+   */
+  public $writeEndpoint;
 
   /**
    * @param string[]
@@ -702,6 +706,20 @@ class DatabaseInstance extends \Google\Collection
   public function getSuspensionReason()
   {
     return $this->suspensionReason;
+  }
+  /**
+   * @param string
+   */
+  public function setWriteEndpoint($writeEndpoint)
+  {
+    $this->writeEndpoint = $writeEndpoint;
+  }
+  /**
+   * @return string
+   */
+  public function getWriteEndpoint()
+  {
+    return $this->writeEndpoint;
   }
 }
 
