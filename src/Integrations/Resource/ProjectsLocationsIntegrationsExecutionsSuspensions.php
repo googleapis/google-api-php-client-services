@@ -34,9 +34,9 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaResolveSuspensionR
 class ProjectsLocationsIntegrationsExecutionsSuspensions extends \Google\Service\Resource
 {
   /**
-   * * Lifts suspension for advanced suspension task. Fetch corresponding
-   * suspension with provided suspension Id, resolve suspension, and set up
-   * suspension result for the Suspension Task. (suspensions.lift)
+   * * Lifts suspension for the Suspension task. Fetch corresponding suspension
+   * with provided suspension Id, resolve suspension, and set up suspension result
+   * for the Suspension Task. (suspensions.lift)
    *
    * @param string $name Required. The resource that the suspension belongs to. "p
    * rojects/{project}/locations/{location}/products/{product}/integrations/{integ

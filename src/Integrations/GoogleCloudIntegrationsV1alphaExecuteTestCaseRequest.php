@@ -21,10 +21,6 @@ class GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest extends \Google\Model
 {
   protected $inputParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $inputParametersDataType = 'map';
-  /**
-   * @var string
-   */
-  public $requestId;
 
   /**
    * @param GoogleCloudIntegrationsV1alphaValueType[]
@@ -39,20 +35,6 @@ class GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest extends \Google\Model
   public function getInputParameters()
   {
     return $this->inputParameters;
-  }
-  /**
-   * @param string
-   */
-  public function setRequestId($requestId)
-  {
-    $this->requestId = $requestId;
-  }
-  /**
-   * @return string
-   */
-  public function getRequestId()
-  {
-    return $this->requestId;
   }
 }
 
