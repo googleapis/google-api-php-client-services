@@ -19,6 +19,25 @@ namespace Google\Service\CloudComposer;
 
 class StorageConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $bucket;
+
+  /**
+   * @param string
+   */
+  public function setBucket($bucket)
+  {
+    $this->bucket = $bucket;
+  }
+  /**
+   * @return string
+   */
+  public function getBucket()
+  {
+    return $this->bucket;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
