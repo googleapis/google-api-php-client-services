@@ -444,6 +444,10 @@ class YouTube extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'forHandle' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'forUsername' => [
                   'location' => 'query',
                   'type' => 'string',
