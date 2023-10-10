@@ -20,6 +20,7 @@ namespace Google\Service\CloudHealthcare\Resource;
 use Google\Service\CloudHealthcare\ExportMessagesRequest;
 use Google\Service\CloudHealthcare\HealthcareEmpty;
 use Google\Service\CloudHealthcare\Hl7V2Store;
+use Google\Service\CloudHealthcare\Hl7V2StoreMetrics;
 use Google\Service\CloudHealthcare\ImportMessagesRequest;
 use Google\Service\CloudHealthcare\ListHl7V2StoresResponse;
 use Google\Service\CloudHealthcare\Operation;
@@ -105,6 +106,22 @@ class ProjectsLocationsDatasetsHl7V2Stores extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Hl7V2Store::class);
+  }
+  /**
+   * Gets metrics asssociated with the HL7v2 store.
+   * (hl7V2Stores.getHL7v2StoreMetrics)
+   *
+   * @param string $name The resource name of the HL7v2 store to get metrics for,
+   * in the format `projects/{project_id}/locations/{location_id}/datasets/{datase
+   * t_id}/hl7V2Stores/{hl7v2_store_id}`.
+   * @param array $optParams Optional parameters.
+   * @return Hl7V2StoreMetrics
+   */
+  public function getHL7v2StoreMetrics($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getHL7v2StoreMetrics', [$params], Hl7V2StoreMetrics::class);
   }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the

@@ -19,6 +19,7 @@ namespace Google\Service\CloudHealthcare\Resource;
 
 use Google\Service\CloudHealthcare\DeidentifyDicomStoreRequest;
 use Google\Service\CloudHealthcare\DicomStore;
+use Google\Service\CloudHealthcare\DicomStoreMetrics;
 use Google\Service\CloudHealthcare\ExportDicomDataRequest;
 use Google\Service\CloudHealthcare\HealthcareEmpty;
 use Google\Service\CloudHealthcare\HttpBody;
@@ -128,6 +129,20 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], DicomStore::class);
+  }
+  /**
+   * Gets metrics associated with the DICOM store.
+   * (dicomStores.getDICOMStoreMetrics)
+   *
+   * @param string $name The resource name of the DICOM store to get metrics for.
+   * @param array $optParams Optional parameters.
+   * @return DicomStoreMetrics
+   */
+  public function getDICOMStoreMetrics($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getDICOMStoreMetrics', [$params], DicomStoreMetrics::class);
   }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the
