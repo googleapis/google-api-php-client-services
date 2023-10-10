@@ -17,46 +17,45 @@
 
 namespace Google\Service\DisplayVideo;
 
-class YoutubeAndPartnersInventorySourceConfig extends \Google\Model
+class ListAdGroupAdsResponse extends \Google\Collection
 {
+  protected $collection_key = 'adGroupAds';
+  protected $adGroupAdsType = AdGroupAd::class;
+  protected $adGroupAdsDataType = 'array';
   /**
-   * @var bool
+   * @var string
    */
-  public $includeYoutube;
-  /**
-   * @var bool
-   */
-  public $includeYoutubeVideoPartners;
+  public $nextPageToken;
 
   /**
-   * @param bool
+   * @param AdGroupAd[]
    */
-  public function setIncludeYoutube($includeYoutube)
+  public function setAdGroupAds($adGroupAds)
   {
-    $this->includeYoutube = $includeYoutube;
+    $this->adGroupAds = $adGroupAds;
   }
   /**
-   * @return bool
+   * @return AdGroupAd[]
    */
-  public function getIncludeYoutube()
+  public function getAdGroupAds()
   {
-    return $this->includeYoutube;
+    return $this->adGroupAds;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setIncludeYoutubeVideoPartners($includeYoutubeVideoPartners)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->includeYoutubeVideoPartners = $includeYoutubeVideoPartners;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getIncludeYoutubeVideoPartners()
+  public function getNextPageToken()
   {
-    return $this->includeYoutubeVideoPartners;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(YoutubeAndPartnersInventorySourceConfig::class, 'Google_Service_DisplayVideo_YoutubeAndPartnersInventorySourceConfig');
+class_alias(ListAdGroupAdsResponse::class, 'Google_Service_DisplayVideo_ListAdGroupAdsResponse');

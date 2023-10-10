@@ -17,29 +17,29 @@
 
 namespace Google\Service\DisplayVideo;
 
-class BulkListAdGroupAssignedTargetingOptionsResponse extends \Google\Collection
+class ListAdGroupAssignedTargetingOptionsResponse extends \Google\Collection
 {
-  protected $collection_key = 'adGroupAssignedTargetingOptions';
-  protected $adGroupAssignedTargetingOptionsType = AdGroupAssignedTargetingOption::class;
-  protected $adGroupAssignedTargetingOptionsDataType = 'array';
+  protected $collection_key = 'assignedTargetingOptions';
+  protected $assignedTargetingOptionsType = AssignedTargetingOption::class;
+  protected $assignedTargetingOptionsDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AdGroupAssignedTargetingOption[]
+   * @param AssignedTargetingOption[]
    */
-  public function setAdGroupAssignedTargetingOptions($adGroupAssignedTargetingOptions)
+  public function setAssignedTargetingOptions($assignedTargetingOptions)
   {
-    $this->adGroupAssignedTargetingOptions = $adGroupAssignedTargetingOptions;
+    $this->assignedTargetingOptions = $assignedTargetingOptions;
   }
   /**
-   * @return AdGroupAssignedTargetingOption[]
+   * @return AssignedTargetingOption[]
    */
-  public function getAdGroupAssignedTargetingOptions()
+  public function getAssignedTargetingOptions()
   {
-    return $this->adGroupAssignedTargetingOptions;
+    return $this->assignedTargetingOptions;
   }
   /**
    * @param string
@@ -58,4 +58,4 @@ class BulkListAdGroupAssignedTargetingOptionsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BulkListAdGroupAssignedTargetingOptionsResponse::class, 'Google_Service_DisplayVideo_BulkListAdGroupAssignedTargetingOptionsResponse');
+class_alias(ListAdGroupAssignedTargetingOptionsResponse::class, 'Google_Service_DisplayVideo_ListAdGroupAssignedTargetingOptionsResponse');

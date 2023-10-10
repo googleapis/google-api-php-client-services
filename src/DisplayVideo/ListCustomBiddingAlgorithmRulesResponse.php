@@ -17,29 +17,29 @@
 
 namespace Google\Service\DisplayVideo;
 
-class BulkListAdGroupAssignedTargetingOptionsResponse extends \Google\Collection
+class ListCustomBiddingAlgorithmRulesResponse extends \Google\Collection
 {
-  protected $collection_key = 'adGroupAssignedTargetingOptions';
-  protected $adGroupAssignedTargetingOptionsType = AdGroupAssignedTargetingOption::class;
-  protected $adGroupAssignedTargetingOptionsDataType = 'array';
+  protected $collection_key = 'customBiddingRules';
+  protected $customBiddingRulesType = CustomBiddingAlgorithmRules::class;
+  protected $customBiddingRulesDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AdGroupAssignedTargetingOption[]
+   * @param CustomBiddingAlgorithmRules[]
    */
-  public function setAdGroupAssignedTargetingOptions($adGroupAssignedTargetingOptions)
+  public function setCustomBiddingRules($customBiddingRules)
   {
-    $this->adGroupAssignedTargetingOptions = $adGroupAssignedTargetingOptions;
+    $this->customBiddingRules = $customBiddingRules;
   }
   /**
-   * @return AdGroupAssignedTargetingOption[]
+   * @return CustomBiddingAlgorithmRules[]
    */
-  public function getAdGroupAssignedTargetingOptions()
+  public function getCustomBiddingRules()
   {
-    return $this->adGroupAssignedTargetingOptions;
+    return $this->customBiddingRules;
   }
   /**
    * @param string
@@ -58,4 +58,4 @@ class BulkListAdGroupAssignedTargetingOptionsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BulkListAdGroupAssignedTargetingOptionsResponse::class, 'Google_Service_DisplayVideo_BulkListAdGroupAssignedTargetingOptionsResponse');
+class_alias(ListCustomBiddingAlgorithmRulesResponse::class, 'Google_Service_DisplayVideo_ListCustomBiddingAlgorithmRulesResponse');

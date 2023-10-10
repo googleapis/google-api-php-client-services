@@ -36,10 +36,8 @@ class AdvertisersLocationListsAssignedLocations extends \Google\Service\Resource
   /**
    * Bulk edits multiple assignments between locations and a single location list.
    * The operation will delete the assigned locations provided in
-   * BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create
-   * the assigned locations provided in
-   * BulkEditAssignedLocationsRequest.created_assigned_locations.
-   * (assignedLocations.bulkEdit)
+   * deletedAssignedLocations and then create the assigned locations provided in
+   * createdAssignedLocations. (assignedLocations.bulkEdit)
    *
    * @param string $advertiserId Required. The ID of the DV360 advertiser to which
    * the location list belongs.

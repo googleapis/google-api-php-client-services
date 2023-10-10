@@ -18,6 +18,7 @@
 namespace Google\Service\DisplayVideo\Resource;
 
 use Google\Service\DisplayVideo\CustomBiddingAlgorithm;
+use Google\Service\DisplayVideo\CustomBiddingAlgorithmRulesRef;
 use Google\Service\DisplayVideo\CustomBiddingScriptRef;
 use Google\Service\DisplayVideo\ListCustomBiddingAlgorithmsResponse;
 
@@ -125,6 +126,29 @@ class CustomBiddingAlgorithms extends \Google\Service\Resource
     $params = ['customBiddingAlgorithmId' => $customBiddingAlgorithmId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], CustomBiddingAlgorithm::class);
+  }
+  /**
+   * Creates a rules reference object for an AlgorithmRules file. The resulting
+   * reference object provides a resource path where the AlgorithmRules file
+   * should be uploaded. This reference object should be included when creating a
+   * new CustomBiddingAlgorithmRules resource.
+   * (customBiddingAlgorithms.uploadRules)
+   *
+   * @param string $customBiddingAlgorithmId Required. The ID of the custom
+   * bidding algorithm that owns the rules resource.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string advertiserId The ID of the advertiser that owns the parent
+   * custom bidding algorithm.
+   * @opt_param string partnerId The ID of the partner that owns the parent custom
+   * bidding algorithm.
+   * @return CustomBiddingAlgorithmRulesRef
+   */
+  public function uploadRules($customBiddingAlgorithmId, $optParams = [])
+  {
+    $params = ['customBiddingAlgorithmId' => $customBiddingAlgorithmId];
+    $params = array_merge($params, $optParams);
+    return $this->call('uploadRules', [$params], CustomBiddingAlgorithmRulesRef::class);
   }
   /**
    * Creates a custom bidding script reference object for a script file. The
