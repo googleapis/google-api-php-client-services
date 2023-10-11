@@ -7101,6 +7101,30 @@ class Compute extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'patch' => [
+              'path' => 'projects/{project}/regions/{region}/networkAttachments/{networkAttachment}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'networkAttachment' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'projects/{project}/regions/{region}/networkAttachments/{resource}/setIamPolicy',
               'httpMethod' => 'POST',
