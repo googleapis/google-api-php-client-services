@@ -34,7 +34,7 @@ class ProjectsRelatedaccountgroups extends \Google\Service\Resource
    * (relatedaccountgroups.listProjectsRelatedaccountgroups)
    *
    * @param string $parent Required. The name of the project to list related
-   * account groups from, in the format "projects/{project}".
+   * account groups from, in the format `projects/{project}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of groups to return. The

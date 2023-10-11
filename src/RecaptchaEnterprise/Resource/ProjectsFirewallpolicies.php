@@ -37,7 +37,7 @@ class ProjectsFirewallpolicies extends \Google\Service\Resource
    * policies. (firewallpolicies.create)
    *
    * @param string $parent Required. The name of the project this policy will
-   * apply to, in the format "projects/{project}".
+   * apply to, in the format `projects/{project}`.
    * @param GoogleCloudRecaptchaenterpriseV1FirewallPolicy $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1FirewallPolicy
@@ -52,7 +52,7 @@ class ProjectsFirewallpolicies extends \Google\Service\Resource
    * Deletes the specified firewall policy. (firewallpolicies.delete)
    *
    * @param string $name Required. The name of the policy to be deleted, in the
-   * format "projects/{project}/firewallpolicies/{firewallpolicy}".
+   * format `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
    */
@@ -66,7 +66,7 @@ class ProjectsFirewallpolicies extends \Google\Service\Resource
    * Returns the specified firewall policy. (firewallpolicies.get)
    *
    * @param string $name Required. The name of the requested policy, in the format
-   * "projects/{project}/firewallpolicies/{firewallpolicy}".
+   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1FirewallPolicy
    */
@@ -81,7 +81,7 @@ class ProjectsFirewallpolicies extends \Google\Service\Resource
    * (firewallpolicies.listProjectsFirewallpolicies)
    *
    * @param string $parent Required. The name of the project to list the policies
-   * for, in the format "projects/{project}".
+   * for, in the format `projects/{project}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of policies to return.
@@ -100,7 +100,7 @@ class ProjectsFirewallpolicies extends \Google\Service\Resource
    * Updates the specified firewall policy. (firewallpolicies.patch)
    *
    * @param string $name The resource name for the FirewallPolicy in the format
-   * "projects/{project}/firewallpolicies/{firewallpolicy}".
+   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @param GoogleCloudRecaptchaenterpriseV1FirewallPolicy $postBody
    * @param array $optParams Optional parameters.
    *
