@@ -31,6 +31,10 @@ class GoogleCloudAiplatformV1MachineSpec extends \Google\Model
    * @var string
    */
   public $machineType;
+  /**
+   * @var string
+   */
+  public $tpuTopology;
 
   /**
    * @param int
@@ -73,6 +77,20 @@ class GoogleCloudAiplatformV1MachineSpec extends \Google\Model
   public function getMachineType()
   {
     return $this->machineType;
+  }
+  /**
+   * @param string
+   */
+  public function setTpuTopology($tpuTopology)
+  {
+    $this->tpuTopology = $tpuTopology;
+  }
+  /**
+   * @return string
+   */
+  public function getTpuTopology()
+  {
+    return $this->tpuTopology;
   }
 }
 

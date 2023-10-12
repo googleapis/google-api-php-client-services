@@ -23,8 +23,6 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
    * @var string
    */
   public $annotationsFilter;
-  protected $filterSplitType = GoogleCloudAiplatformV1ExportFilterSplit::class;
-  protected $filterSplitDataType = '';
   protected $fractionSplitType = GoogleCloudAiplatformV1ExportFractionSplit::class;
   protected $fractionSplitDataType = '';
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
@@ -43,20 +41,6 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
   public function getAnnotationsFilter()
   {
     return $this->annotationsFilter;
-  }
-  /**
-   * @param GoogleCloudAiplatformV1ExportFilterSplit
-   */
-  public function setFilterSplit(GoogleCloudAiplatformV1ExportFilterSplit $filterSplit)
-  {
-    $this->filterSplit = $filterSplit;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1ExportFilterSplit
-   */
-  public function getFilterSplit()
-  {
-    return $this->filterSplit;
   }
   /**
    * @param GoogleCloudAiplatformV1ExportFractionSplit
