@@ -65,6 +65,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
   /**
    * @var string
    */
+  public $signalType;
+  /**
+   * @var string
+   */
   public $state;
 
   /**
@@ -220,6 +224,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
   public function getSignalId()
   {
     return $this->signalId;
+  }
+  /**
+   * @param string
+   */
+  public function setSignalType($signalType)
+  {
+    $this->signalType = $signalType;
+  }
+  /**
+   * @return string
+   */
+  public function getSignalType()
+  {
+    return $this->signalType;
   }
   /**
    * @param string
