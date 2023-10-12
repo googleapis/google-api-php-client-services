@@ -75,6 +75,8 @@ class VmwareAdminCluster extends \Google\Model
   public $onPremVersion;
   protected $platformConfigType = VmwarePlatformConfig::class;
   protected $platformConfigDataType = '';
+  protected $preparedSecretsType = VmwareAdminPreparedSecretsConfig::class;
+  protected $preparedSecretsDataType = '';
   /**
    * @var bool
    */
@@ -347,6 +349,20 @@ class VmwareAdminCluster extends \Google\Model
   public function getPlatformConfig()
   {
     return $this->platformConfig;
+  }
+  /**
+   * @param VmwareAdminPreparedSecretsConfig
+   */
+  public function setPreparedSecrets(VmwareAdminPreparedSecretsConfig $preparedSecrets)
+  {
+    $this->preparedSecrets = $preparedSecrets;
+  }
+  /**
+   * @return VmwareAdminPreparedSecretsConfig
+   */
+  public function getPreparedSecrets()
+  {
+    return $this->preparedSecrets;
   }
   /**
    * @param bool
