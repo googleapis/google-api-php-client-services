@@ -17,35 +17,27 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GeostoreCityJsonProtoTransform extends \Google\Model
+class GoogleAssistantAccessoryV1DeviceStateInstalledAppsState extends \Google\Collection
 {
-  public $scale;
-  protected $translateType = GeostoreCityJsonProtoTransformTranslate::class;
-  protected $translateDataType = '';
+  protected $collection_key = 'apps';
+  protected $appsType = AssistantApiCoreTypesProvider::class;
+  protected $appsDataType = 'array';
 
-  public function setScale($scale)
+  /**
+   * @param AssistantApiCoreTypesProvider[]
+   */
+  public function setApps($apps)
   {
-    $this->scale = $scale;
-  }
-  public function getScale()
-  {
-    return $this->scale;
+    $this->apps = $apps;
   }
   /**
-   * @param GeostoreCityJsonProtoTransformTranslate
+   * @return AssistantApiCoreTypesProvider[]
    */
-  public function setTranslate(GeostoreCityJsonProtoTransformTranslate $translate)
+  public function getApps()
   {
-    $this->translate = $translate;
-  }
-  /**
-   * @return GeostoreCityJsonProtoTransformTranslate
-   */
-  public function getTranslate()
-  {
-    return $this->translate;
+    return $this->apps;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GeostoreCityJsonProtoTransform::class, 'Google_Service_Contentwarehouse_GeostoreCityJsonProtoTransform');
+class_alias(GoogleAssistantAccessoryV1DeviceStateInstalledAppsState::class, 'Google_Service_Contentwarehouse_GoogleAssistantAccessoryV1DeviceStateInstalledAppsState');

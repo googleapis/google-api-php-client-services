@@ -17,35 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GeostoreCityJsonProtoTransform extends \Google\Model
+class RepositoryWebrefMetaTagIndices extends \Google\Model
 {
-  public $scale;
-  protected $translateType = GeostoreCityJsonProtoTransformTranslate::class;
-  protected $translateDataType = '';
+  /**
+   * @var int
+   */
+  public $index;
+  /**
+   * @var string
+   */
+  public $metaName;
 
-  public function setScale($scale)
+  /**
+   * @param int
+   */
+  public function setIndex($index)
   {
-    $this->scale = $scale;
-  }
-  public function getScale()
-  {
-    return $this->scale;
+    $this->index = $index;
   }
   /**
-   * @param GeostoreCityJsonProtoTransformTranslate
+   * @return int
    */
-  public function setTranslate(GeostoreCityJsonProtoTransformTranslate $translate)
+  public function getIndex()
   {
-    $this->translate = $translate;
+    return $this->index;
   }
   /**
-   * @return GeostoreCityJsonProtoTransformTranslate
+   * @param string
    */
-  public function getTranslate()
+  public function setMetaName($metaName)
   {
-    return $this->translate;
+    $this->metaName = $metaName;
+  }
+  /**
+   * @return string
+   */
+  public function getMetaName()
+  {
+    return $this->metaName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GeostoreCityJsonProtoTransform::class, 'Google_Service_Contentwarehouse_GeostoreCityJsonProtoTransform');
+class_alias(RepositoryWebrefMetaTagIndices::class, 'Google_Service_Contentwarehouse_RepositoryWebrefMetaTagIndices');

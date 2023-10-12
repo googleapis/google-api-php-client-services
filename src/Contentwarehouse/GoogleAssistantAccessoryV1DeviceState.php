@@ -38,6 +38,12 @@ class GoogleAssistantAccessoryV1DeviceState extends \Google\Collection
   public $doNotDisturb;
   protected $fitnessActivitiesStateType = GoogleAssistantEmbeddedV1FitnessActivities::class;
   protected $fitnessActivitiesStateDataType = '';
+  protected $installedAppsType = GoogleAssistantAccessoryV1DeviceStateInstalledAppsState::class;
+  protected $installedAppsDataType = '';
+  /**
+   * @var string
+   */
+  public $installedAppsZlib;
   protected $timerStateType = GoogleAssistantEmbeddedV1Timers::class;
   protected $timerStateDataType = '';
   /**
@@ -128,6 +134,34 @@ class GoogleAssistantAccessoryV1DeviceState extends \Google\Collection
   public function getFitnessActivitiesState()
   {
     return $this->fitnessActivitiesState;
+  }
+  /**
+   * @param GoogleAssistantAccessoryV1DeviceStateInstalledAppsState
+   */
+  public function setInstalledApps(GoogleAssistantAccessoryV1DeviceStateInstalledAppsState $installedApps)
+  {
+    $this->installedApps = $installedApps;
+  }
+  /**
+   * @return GoogleAssistantAccessoryV1DeviceStateInstalledAppsState
+   */
+  public function getInstalledApps()
+  {
+    return $this->installedApps;
+  }
+  /**
+   * @param string
+   */
+  public function setInstalledAppsZlib($installedAppsZlib)
+  {
+    $this->installedAppsZlib = $installedAppsZlib;
+  }
+  /**
+   * @return string
+   */
+  public function getInstalledAppsZlib()
+  {
+    return $this->installedAppsZlib;
   }
   /**
    * @param GoogleAssistantEmbeddedV1Timers

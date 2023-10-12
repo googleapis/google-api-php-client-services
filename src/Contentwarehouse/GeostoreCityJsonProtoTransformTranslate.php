@@ -17,35 +17,37 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class GeostoreCityJsonProtoTransform extends \Google\Model
+class GeostoreCityJsonProtoTransformTranslate extends \Google\Model
 {
-  public $scale;
-  protected $translateType = GeostoreCityJsonProtoTransformTranslate::class;
-  protected $translateDataType = '';
+  public $x;
+  public $y;
+  public $z;
 
-  public function setScale($scale)
+  public function setX($x)
   {
-    $this->scale = $scale;
+    $this->x = $x;
   }
-  public function getScale()
+  public function getX()
   {
-    return $this->scale;
+    return $this->x;
   }
-  /**
-   * @param GeostoreCityJsonProtoTransformTranslate
-   */
-  public function setTranslate(GeostoreCityJsonProtoTransformTranslate $translate)
+  public function setY($y)
   {
-    $this->translate = $translate;
+    $this->y = $y;
   }
-  /**
-   * @return GeostoreCityJsonProtoTransformTranslate
-   */
-  public function getTranslate()
+  public function getY()
   {
-    return $this->translate;
+    return $this->y;
+  }
+  public function setZ($z)
+  {
+    $this->z = $z;
+  }
+  public function getZ()
+  {
+    return $this->z;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GeostoreCityJsonProtoTransform::class, 'Google_Service_Contentwarehouse_GeostoreCityJsonProtoTransform');
+class_alias(GeostoreCityJsonProtoTransformTranslate::class, 'Google_Service_Contentwarehouse_GeostoreCityJsonProtoTransformTranslate');
