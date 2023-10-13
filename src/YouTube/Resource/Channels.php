@@ -45,8 +45,6 @@ class Channels extends \Google\Service\Resource
    *
    * @opt_param string categoryId Return the channels within the specified guide
    * category ID.
-   * @opt_param string forHandle Return the channel associated with a YouTube
-   * handle. UNIMPLEMENTED.
    * @opt_param string forUsername Return the channel associated with a YouTube
    * username.
    * @opt_param string hl Stands for "host language". Specifies the localization
