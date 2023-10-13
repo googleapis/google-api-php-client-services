@@ -70,6 +70,10 @@ class Routine extends \Google\Collection
    * @var string
    */
   public $routineType;
+  /**
+   * @var string
+   */
+  public $securityMode;
   protected $sparkOptionsType = SparkOptions::class;
   protected $sparkOptionsDataType = '';
   /**
@@ -286,6 +290,20 @@ class Routine extends \Google\Collection
   public function getRoutineType()
   {
     return $this->routineType;
+  }
+  /**
+   * @param string
+   */
+  public function setSecurityMode($securityMode)
+  {
+    $this->securityMode = $securityMode;
+  }
+  /**
+   * @return string
+   */
+  public function getSecurityMode()
+  {
+    return $this->securityMode;
   }
   /**
    * @param SparkOptions

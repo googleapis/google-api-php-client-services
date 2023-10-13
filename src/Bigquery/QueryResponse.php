@@ -50,6 +50,10 @@ class QueryResponse extends \Google\Collection
    * @var string
    */
   public $pageToken;
+  /**
+   * @var string
+   */
+  public $queryId;
   protected $rowsType = TableRow::class;
   protected $rowsDataType = 'array';
   protected $schemaType = TableSchema::class;
@@ -190,6 +194,20 @@ class QueryResponse extends \Google\Collection
   public function getPageToken()
   {
     return $this->pageToken;
+  }
+  /**
+   * @param string
+   */
+  public function setQueryId($queryId)
+  {
+    $this->queryId = $queryId;
+  }
+  /**
+   * @return string
+   */
+  public function getQueryId()
+  {
+    return $this->queryId;
   }
   /**
    * @param TableRow[]

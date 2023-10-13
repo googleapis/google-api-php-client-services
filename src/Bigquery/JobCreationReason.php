@@ -17,46 +17,28 @@
 
 namespace Google\Service\Bigquery;
 
-class SparkLoggingInfo extends \Google\Model
+class JobCreationReason extends \Google\Model
 {
   /**
    * @var string
    */
-  public $projectId;
-  /**
-   * @var string
-   */
-  public $resourceType;
+  public $code;
 
   /**
    * @param string
    */
-  public function setProjectId($projectId)
+  public function setCode($code)
   {
-    $this->projectId = $projectId;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getProjectId()
+  public function getCode()
   {
-    return $this->projectId;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceType($resourceType)
-  {
-    $this->resourceType = $resourceType;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceType()
-  {
-    return $this->resourceType;
+    return $this->code;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SparkLoggingInfo::class, 'Google_Service_Bigquery_SparkLoggingInfo');
+class_alias(JobCreationReason::class, 'Google_Service_Bigquery_JobCreationReason');

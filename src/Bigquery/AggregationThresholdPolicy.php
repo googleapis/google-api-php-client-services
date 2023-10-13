@@ -17,46 +17,47 @@
 
 namespace Google\Service\Bigquery;
 
-class SparkLoggingInfo extends \Google\Model
+class AggregationThresholdPolicy extends \Google\Collection
 {
+  protected $collection_key = 'privacyUnitColumns';
+  /**
+   * @var string[]
+   */
+  public $privacyUnitColumns;
   /**
    * @var string
    */
-  public $projectId;
-  /**
-   * @var string
-   */
-  public $resourceType;
+  public $threshold;
 
   /**
+   * @param string[]
+   */
+  public function setPrivacyUnitColumns($privacyUnitColumns)
+  {
+    $this->privacyUnitColumns = $privacyUnitColumns;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPrivacyUnitColumns()
+  {
+    return $this->privacyUnitColumns;
+  }
+  /**
    * @param string
    */
-  public function setProjectId($projectId)
+  public function setThreshold($threshold)
   {
-    $this->projectId = $projectId;
+    $this->threshold = $threshold;
   }
   /**
    * @return string
    */
-  public function getProjectId()
+  public function getThreshold()
   {
-    return $this->projectId;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceType($resourceType)
-  {
-    $this->resourceType = $resourceType;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceType()
-  {
-    return $this->resourceType;
+    return $this->threshold;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SparkLoggingInfo::class, 'Google_Service_Bigquery_SparkLoggingInfo');
+class_alias(AggregationThresholdPolicy::class, 'Google_Service_Bigquery_AggregationThresholdPolicy');
