@@ -107,7 +107,7 @@ class ProjectsLocationsWorkstationClusters extends \Google\Service\Resource
   /**
    * Updates an existing workstation cluster. (workstationClusters.patch)
    *
-   * @param string $name Full name of this workstation cluster.
+   * @param string $name Identifier. Full name of this workstation cluster.
    * @param WorkstationCluster $postBody
    * @param array $optParams Optional parameters.
    *

@@ -162,7 +162,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigs extends \Google\Ser
   /**
    * Updates an existing workstation configuration. (workstationConfigs.patch)
    *
-   * @param string $name Full name of this workstation configuration.
+   * @param string $name Identifier. Full name of this workstation configuration.
    * @param WorkstationConfig $postBody
    * @param array $optParams Optional parameters.
    *

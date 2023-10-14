@@ -176,7 +176,7 @@ class ProjectsLocationsWorkstationClustersWorkstationConfigsWorkstations extends
   /**
    * Updates an existing workstation. (workstations.patch)
    *
-   * @param string $name Full name of this workstation.
+   * @param string $name Identifier. Full name of this workstation.
    * @param Workstation $postBody
    * @param array $optParams Optional parameters.
    *
