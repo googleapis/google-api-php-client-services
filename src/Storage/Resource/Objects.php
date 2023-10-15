@@ -303,6 +303,9 @@ class Objects extends \Google\Service\Resource
    * lexicographically before endOffset. If startOffset is also set, the objects
    * listed will have names between startOffset (inclusive) and endOffset
    * (exclusive).
+   * @opt_param bool includeFoldersAsPrefixes Only applicable if delimiter is set
+   * to '/'. If true, will also include folders and managed folders (besides
+   * objects) in the returned prefixes.
    * @opt_param bool includeTrailingDelimiter If true, objects that end in exactly
    * one instance of delimiter will have their metadata included in items in
    * addition to prefixes.
