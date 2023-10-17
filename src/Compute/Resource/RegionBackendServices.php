@@ -26,6 +26,8 @@ use Google\Service\Compute\Policy;
 use Google\Service\Compute\RegionSetPolicyRequest;
 use Google\Service\Compute\ResourceGroupReference;
 use Google\Service\Compute\SecurityPolicyReference;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "regionBackendServices" collection of methods.
@@ -356,6 +358,23 @@ class RegionBackendServices extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setSecurityPolicy', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (regionBackendServices.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   */
+  public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
   /**
    * Updates the specified regional BackendService resource with the data included

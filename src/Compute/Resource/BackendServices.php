@@ -28,6 +28,8 @@ use Google\Service\Compute\Policy;
 use Google\Service\Compute\ResourceGroupReference;
 use Google\Service\Compute\SecurityPolicyReference;
 use Google\Service\Compute\SignedUrlKey;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "backendServices" collection of methods.
@@ -503,6 +505,22 @@ class BackendServices extends \Google\Service\Resource
     $params = ['project' => $project, 'backendService' => $backendService, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setSecurityPolicy', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (backendServices.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   */
+  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
   /**
    * Updates the specified BackendService resource with the data included in the

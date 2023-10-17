@@ -75,7 +75,11 @@ class Interconnects extends \Google\Service\Resource
     return $this->call('get', [$params], Interconnect::class);
   }
   /**
-   * Returns the interconnectDiagnostics for the specified Interconnect.
+   * Returns the interconnectDiagnostics for the specified Interconnect. In the
+   * event of a global outage, do not use this API to make decisions about where
+   * to redirect your network traffic. Unlike a VLAN attachment, which is
+   * regional, a Cloud Interconnect connection is a global resource. A global
+   * outage can prevent this API from functioning properly.
    * (interconnects.getDiagnostics)
    *
    * @param string $project Project ID for this request.

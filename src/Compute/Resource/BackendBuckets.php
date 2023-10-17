@@ -19,9 +19,13 @@ namespace Google\Service\Compute\Resource;
 
 use Google\Service\Compute\BackendBucket;
 use Google\Service\Compute\BackendBucketList;
+use Google\Service\Compute\GlobalSetPolicyRequest;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\Policy;
 use Google\Service\Compute\SecurityPolicyReference;
 use Google\Service\Compute\SignedUrlKey;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "backendBuckets" collection of methods.
@@ -127,6 +131,23 @@ class BackendBuckets extends \Google\Service\Resource
     $params = ['project' => $project, 'backendBucket' => $backendBucket];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], BackendBucket::class);
+  }
+  /**
+   * Gets the access control policy for a resource. May be empty if no such policy
+   * or resource exists. (backendBuckets.getIamPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
+   * @return Policy
+   */
+  public function getIamPolicy($project, $resource, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource];
+    $params = array_merge($params, $optParams);
+    return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
    * Creates a BackendBucket resource in the specified project using the data
@@ -275,6 +296,38 @@ class BackendBuckets extends \Google\Service\Resource
     $params = ['project' => $project, 'backendBucket' => $backendBucket, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setEdgeSecurityPolicy', [$params], Operation::class);
+  }
+  /**
+   * Sets the access control policy on the specified resource. Replaces any
+   * existing policy. (backendBuckets.setIamPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param GlobalSetPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Policy
+   */
+  public function setIamPolicy($project, $resource, GlobalSetPolicyRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (backendBuckets.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   */
+  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
   /**
    * Updates the specified BackendBucket resource with the data included in the
