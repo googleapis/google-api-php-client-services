@@ -17,27 +17,28 @@
 
 namespace Google\Service\BigtableAdmin;
 
-class ModifyColumnFamiliesRequest extends \Google\Collection
+class StandardIsolation extends \Google\Model
 {
-  protected $collection_key = 'modifications';
-  protected $modificationsType = Modification::class;
-  protected $modificationsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $priority;
 
   /**
-   * @param Modification[]
+   * @param string
    */
-  public function setModifications($modifications)
+  public function setPriority($priority)
   {
-    $this->modifications = $modifications;
+    $this->priority = $priority;
   }
   /**
-   * @return Modification[]
+   * @return string
    */
-  public function getModifications()
+  public function getPriority()
   {
-    return $this->modifications;
+    return $this->priority;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ModifyColumnFamiliesRequest::class, 'Google_Service_BigtableAdmin_ModifyColumnFamiliesRequest');
+class_alias(StandardIsolation::class, 'Google_Service_BigtableAdmin_StandardIsolation');
