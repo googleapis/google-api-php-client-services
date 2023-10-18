@@ -33,7 +33,7 @@ use Google\Service\Apigee\GoogleCloudApigeeV1ListApiCategoriesResponse;
 class OrganizationsSitesApicategories extends \Google\Service\Resource
 {
   /**
-   * Creates a new category on the portal. (apicategories.create)
+   * Creates a new API category. (apicategories.create)
    *
    * @param string $parent Required. Name of the portal. Use the following
    * structure in your request: `organizations/{org}/sites/{site}`
@@ -48,7 +48,7 @@ class OrganizationsSitesApicategories extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleCloudApigeeV1ApiCategory::class);
   }
   /**
-   * Deletes a category from the portal. (apicategories.delete)
+   * Deletes an API category. (apicategories.delete)
    *
    * @param string $name Required. Name of the category. Use the following
    * structure in your request:
@@ -63,7 +63,7 @@ class OrganizationsSitesApicategories extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleCloudApigeeV1DeleteResponse::class);
   }
   /**
-   * Gets a category on the portal. (apicategories.get)
+   * Gets an API category. (apicategories.get)
    *
    * @param string $name Required. Name of the category. Use the following
    * structure in your request:
@@ -78,7 +78,7 @@ class OrganizationsSitesApicategories extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudApigeeV1ApiCategory::class);
   }
   /**
-   * Lists the categories on the portal.
+   * Returns the API categories associated with a portal.
    * (apicategories.listOrganizationsSitesApicategories)
    *
    * @param string $parent Required. Name of the portal. Use the following
@@ -93,7 +93,7 @@ class OrganizationsSitesApicategories extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudApigeeV1ListApiCategoriesResponse::class);
   }
   /**
-   * Updates a category on the portal. (apicategories.patch)
+   * Updates an API category. (apicategories.patch)
    *
    * @param string $name Required. Name of the category. Use the following
    * structure in your request:
