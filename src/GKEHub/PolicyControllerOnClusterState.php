@@ -17,28 +17,46 @@
 
 namespace Google\Service\GKEHub;
 
-class PolicyControllerTemplateLibraryConfig extends \Google\Model
+class PolicyControllerOnClusterState extends \Google\Model
 {
   /**
    * @var string
    */
-  public $installation;
+  public $details;
+  /**
+   * @var string
+   */
+  public $state;
 
   /**
    * @param string
    */
-  public function setInstallation($installation)
+  public function setDetails($details)
   {
-    $this->installation = $installation;
+    $this->details = $details;
   }
   /**
    * @return string
    */
-  public function getInstallation()
+  public function getDetails()
   {
-    return $this->installation;
+    return $this->details;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PolicyControllerTemplateLibraryConfig::class, 'Google_Service_GKEHub_PolicyControllerTemplateLibraryConfig');
+class_alias(PolicyControllerOnClusterState::class, 'Google_Service_GKEHub_PolicyControllerOnClusterState');

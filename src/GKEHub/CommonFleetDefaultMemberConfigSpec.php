@@ -21,6 +21,8 @@ class CommonFleetDefaultMemberConfigSpec extends \Google\Model
 {
   protected $configmanagementType = ConfigManagementMembershipSpec::class;
   protected $configmanagementDataType = '';
+  protected $policycontrollerType = PolicyControllerMembershipSpec::class;
+  protected $policycontrollerDataType = '';
 
   /**
    * @param ConfigManagementMembershipSpec
@@ -35,6 +37,20 @@ class CommonFleetDefaultMemberConfigSpec extends \Google\Model
   public function getConfigmanagement()
   {
     return $this->configmanagement;
+  }
+  /**
+   * @param PolicyControllerMembershipSpec
+   */
+  public function setPolicycontroller(PolicyControllerMembershipSpec $policycontroller)
+  {
+    $this->policycontroller = $policycontroller;
+  }
+  /**
+   * @return PolicyControllerMembershipSpec
+   */
+  public function getPolicycontroller()
+  {
+    return $this->policycontroller;
   }
 }
 

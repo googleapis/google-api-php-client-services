@@ -17,28 +17,46 @@
 
 namespace Google\Service\GKEHub;
 
-class PolicyControllerTemplateLibraryConfig extends \Google\Model
+class PolicyControllerResourceList extends \Google\Model
 {
   /**
    * @var string
    */
-  public $installation;
+  public $cpu;
+  /**
+   * @var string
+   */
+  public $memory;
 
   /**
    * @param string
    */
-  public function setInstallation($installation)
+  public function setCpu($cpu)
   {
-    $this->installation = $installation;
+    $this->cpu = $cpu;
   }
   /**
    * @return string
    */
-  public function getInstallation()
+  public function getCpu()
   {
-    return $this->installation;
+    return $this->cpu;
+  }
+  /**
+   * @param string
+   */
+  public function setMemory($memory)
+  {
+    $this->memory = $memory;
+  }
+  /**
+   * @return string
+   */
+  public function getMemory()
+  {
+    return $this->memory;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PolicyControllerTemplateLibraryConfig::class, 'Google_Service_GKEHub_PolicyControllerTemplateLibraryConfig');
+class_alias(PolicyControllerResourceList::class, 'Google_Service_GKEHub_PolicyControllerResourceList');

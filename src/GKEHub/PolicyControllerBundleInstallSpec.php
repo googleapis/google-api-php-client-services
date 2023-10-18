@@ -17,28 +17,29 @@
 
 namespace Google\Service\GKEHub;
 
-class PolicyControllerTemplateLibraryConfig extends \Google\Model
+class PolicyControllerBundleInstallSpec extends \Google\Collection
 {
+  protected $collection_key = 'exemptedNamespaces';
   /**
-   * @var string
+   * @var string[]
    */
-  public $installation;
+  public $exemptedNamespaces;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setInstallation($installation)
+  public function setExemptedNamespaces($exemptedNamespaces)
   {
-    $this->installation = $installation;
+    $this->exemptedNamespaces = $exemptedNamespaces;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getInstallation()
+  public function getExemptedNamespaces()
   {
-    return $this->installation;
+    return $this->exemptedNamespaces;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PolicyControllerTemplateLibraryConfig::class, 'Google_Service_GKEHub_PolicyControllerTemplateLibraryConfig');
+class_alias(PolicyControllerBundleInstallSpec::class, 'Google_Service_GKEHub_PolicyControllerBundleInstallSpec');

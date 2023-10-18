@@ -17,28 +17,29 @@
 
 namespace Google\Service\GKEHub;
 
-class PolicyControllerTemplateLibraryConfig extends \Google\Model
+class PolicyControllerMonitoringConfig extends \Google\Collection
 {
+  protected $collection_key = 'backends';
   /**
-   * @var string
+   * @var string[]
    */
-  public $installation;
+  public $backends;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setInstallation($installation)
+  public function setBackends($backends)
   {
-    $this->installation = $installation;
+    $this->backends = $backends;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getInstallation()
+  public function getBackends()
   {
-    return $this->installation;
+    return $this->backends;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PolicyControllerTemplateLibraryConfig::class, 'Google_Service_GKEHub_PolicyControllerTemplateLibraryConfig');
+class_alias(PolicyControllerMonitoringConfig::class, 'Google_Service_GKEHub_PolicyControllerMonitoringConfig');
