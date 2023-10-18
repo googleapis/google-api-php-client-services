@@ -21,6 +21,10 @@ class CertificateAuthority extends \Google\Model
 {
   protected $managedServerCaType = ManagedCertificateAuthority::class;
   protected $managedServerCaDataType = '';
+  /**
+   * @var string
+   */
+  public $name;
 
   /**
    * @param ManagedCertificateAuthority
@@ -35,6 +39,20 @@ class CertificateAuthority extends \Google\Model
   public function getManagedServerCa()
   {
     return $this->managedServerCa;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
 }
 
