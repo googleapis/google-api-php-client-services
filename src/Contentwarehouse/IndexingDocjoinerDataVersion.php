@@ -157,6 +157,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $imageStockStockImageAnnotationDataType = '';
   protected $imageembedType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageembedDataType = '';
+  protected $imageembedDomainNormType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $imageembedDomainNormDataType = '';
   protected $indexingAnnotationsAnnotationMetaType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsAnnotationMetaDataType = '';
   protected $indexingAnnotationsAppMarketAppMarketAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -2049,6 +2051,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getImageembed()
   {
     return $this->imageembed;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setImageembedDomainNorm(IndexingDocjoinerDataVersionVersionInfo $imageembedDomainNorm)
+  {
+    $this->imageembedDomainNorm = $imageembedDomainNorm;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getImageembedDomainNorm()
+  {
+    return $this->imageembedDomainNorm;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

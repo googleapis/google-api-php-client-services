@@ -100,6 +100,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isNspIntent;
+  /**
+   * @var bool
+   */
   public $isPlayGenericMusic;
   /**
    * @var bool
@@ -200,6 +204,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var float
    */
   public $topHypothesisConfidence;
+  /**
+   * @var bool
+   */
+  public $usesGroundingBox;
   /**
    * @var float
    */
@@ -502,6 +510,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsMediaControlIntent()
   {
     return $this->isMediaControlIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsNspIntent($isNspIntent)
+  {
+    $this->isNspIntent = $isNspIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsNspIntent()
+  {
+    return $this->isNspIntent;
   }
   /**
    * @param bool
@@ -924,6 +946,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getTopHypothesisConfidence()
   {
     return $this->topHypothesisConfidence;
+  }
+  /**
+   * @param bool
+   */
+  public function setUsesGroundingBox($usesGroundingBox)
+  {
+    $this->usesGroundingBox = $usesGroundingBox;
+  }
+  /**
+   * @return bool
+   */
+  public function getUsesGroundingBox()
+  {
+    return $this->usesGroundingBox;
   }
   /**
    * @param float

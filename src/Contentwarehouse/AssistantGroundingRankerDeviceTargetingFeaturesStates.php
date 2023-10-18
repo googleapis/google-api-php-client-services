@@ -67,6 +67,14 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
    * @var bool
    */
   public $isTethered;
+  /**
+   * @var string
+   */
+  public $mediaFocusStateFromHearingDevice;
+  /**
+   * @var string
+   */
+  public $mediaFocusStateFromLocalDevice;
 
   /**
    * @param string
@@ -235,6 +243,34 @@ class AssistantGroundingRankerDeviceTargetingFeaturesStates extends \Google\Mode
   public function getIsTethered()
   {
     return $this->isTethered;
+  }
+  /**
+   * @param string
+   */
+  public function setMediaFocusStateFromHearingDevice($mediaFocusStateFromHearingDevice)
+  {
+    $this->mediaFocusStateFromHearingDevice = $mediaFocusStateFromHearingDevice;
+  }
+  /**
+   * @return string
+   */
+  public function getMediaFocusStateFromHearingDevice()
+  {
+    return $this->mediaFocusStateFromHearingDevice;
+  }
+  /**
+   * @param string
+   */
+  public function setMediaFocusStateFromLocalDevice($mediaFocusStateFromLocalDevice)
+  {
+    $this->mediaFocusStateFromLocalDevice = $mediaFocusStateFromLocalDevice;
+  }
+  /**
+   * @return string
+   */
+  public function getMediaFocusStateFromLocalDevice()
+  {
+    return $this->mediaFocusStateFromLocalDevice;
   }
 }
 

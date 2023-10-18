@@ -70,6 +70,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   /**
    * @var string
    */
+  public $mediaAccountType;
+  /**
+   * @var string
+   */
   public $mediaContentType;
   /**
    * @var float
@@ -250,6 +254,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getIsYoutubeMusicSeeking()
   {
     return $this->isYoutubeMusicSeeking;
+  }
+  /**
+   * @param string
+   */
+  public function setMediaAccountType($mediaAccountType)
+  {
+    $this->mediaAccountType = $mediaAccountType;
+  }
+  /**
+   * @return string
+   */
+  public function getMediaAccountType()
+  {
+    return $this->mediaAccountType;
   }
   /**
    * @param string
