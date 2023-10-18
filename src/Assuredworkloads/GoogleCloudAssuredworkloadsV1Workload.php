@@ -76,6 +76,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $provisionedResourcesParent;
+  /**
+   * @var bool
+   */
+  public $resourceMonitoringEnabled;
   protected $resourceSettingsType = GoogleCloudAssuredworkloadsV1WorkloadResourceSettings::class;
   protected $resourceSettingsDataType = 'array';
   protected $resourcesType = GoogleCloudAssuredworkloadsV1WorkloadResourceInfo::class;
@@ -310,6 +314,20 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
   public function getProvisionedResourcesParent()
   {
     return $this->provisionedResourcesParent;
+  }
+  /**
+   * @param bool
+   */
+  public function setResourceMonitoringEnabled($resourceMonitoringEnabled)
+  {
+    $this->resourceMonitoringEnabled = $resourceMonitoringEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getResourceMonitoringEnabled()
+  {
+    return $this->resourceMonitoringEnabled;
   }
   /**
    * @param GoogleCloudAssuredworkloadsV1WorkloadResourceSettings[]
