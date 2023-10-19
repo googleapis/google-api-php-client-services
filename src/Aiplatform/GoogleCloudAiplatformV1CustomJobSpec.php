@@ -43,6 +43,10 @@ class GoogleCloudAiplatformV1CustomJobSpec extends \Google\Collection
    */
   public $network;
   /**
+   * @var string
+   */
+  public $protectedArtifactLocationId;
+  /**
    * @var string[]
    */
   public $reservedIpRanges;
@@ -142,6 +146,20 @@ class GoogleCloudAiplatformV1CustomJobSpec extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param string
+   */
+  public function setProtectedArtifactLocationId($protectedArtifactLocationId)
+  {
+    $this->protectedArtifactLocationId = $protectedArtifactLocationId;
+  }
+  /**
+   * @return string
+   */
+  public function getProtectedArtifactLocationId()
+  {
+    return $this->protectedArtifactLocationId;
   }
   /**
    * @param string[]

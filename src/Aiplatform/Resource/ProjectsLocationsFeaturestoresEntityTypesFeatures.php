@@ -51,7 +51,11 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
   /**
    * Creates a new Feature in a given EntityType. (features.create)
    *
-   * @param string $parent
+   * @param string $parent Required. The resource name of the EntityType or
+   * FeatureGroup to create a Feature. Format for entity_type as parent: `projects
+   * /{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{ent
+   * ity_type}` Format for feature_group as parent:
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @param GoogleCloudAiplatformV1Feature $postBody
    * @param array $optParams Optional parameters.
    *
@@ -87,9 +91,10 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
   /**
    * Gets details of a single Feature. (features.get)
    *
-   * @param string $name Required. The name of the Feature resource. Format: `proj
-   * ects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/
-   * {entity_type}`
+   * @param string $name Required. The name of the Feature resource. Format for
+   * entity_type as parent: `projects/{project}/locations/{location}/featurestores
+   * /{featurestore}/entityTypes/{entity_type}` Format for feature_group as
+   * parent:
    * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Feature
@@ -105,8 +110,9 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * (features.listProjectsLocationsFeaturestoresEntityTypesFeatures)
    *
    * @param string $parent Required. The resource name of the Location to list
-   * Features. Format: `projects/{project}/locations/{location}/featurestores/{fea
-   * turestore}/entityTypes/{entity_type}`
+   * Features. Format for entity_type as parent: `projects/{project}/locations/{lo
+   * cation}/featurestores/{featurestore}/entityTypes/{entity_type}` Format for
+   * feature_group as parent:
    * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @param array $optParams Optional parameters.
    *
@@ -122,7 +128,8 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * 2020-01-31T15:30:00.000000Z. * `labels.active = yes AND labels.env = prod`
    * --> Features having both (active: yes) and (env: prod) labels. * `labels.env:
    * *` --> Any Feature which has a label with 'env' as the key.
-   * @opt_param int latestStatsCount If set, return the most recent
+   * @opt_param int latestStatsCount Only applicable for Vertex AI Feature Store
+   * (Legacy). If set, return the most recent
    * ListFeaturesRequest.latest_stats_count of stats for each Feature in response.
    * Valid value is [0, 10]. If number of stats exists <
    * ListFeaturesRequest.latest_stats_count, return all existing stats.
@@ -135,10 +142,11 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * be returned. The maximum value is 1000; any value greater than 1000 will be
    * coerced to 1000.
    * @opt_param string pageToken A page token, received from a previous
-   * FeaturestoreService.ListFeatures call. Provide this to retrieve the
-   * subsequent page. When paginating, all other parameters provided to
-   * FeaturestoreService.ListFeatures must match the call that provided the page
-   * token.
+   * FeaturestoreService.ListFeatures call or FeatureRegistryService.ListFeatures
+   * call. Provide this to retrieve the subsequent page. When paginating, all
+   * other parameters provided to FeaturestoreService.ListFeatures or or
+   * FeatureRegistryService.ListFeatures must match the call that provided the
+   * page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListFeaturesResponse
    */
@@ -153,10 +161,11 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    *
    * @param string $name Immutable. Name of the Feature. Format: `projects/{projec
    * t}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type
-   * }/features/{feature}` The last part feature is assigned by the client. The
-   * feature can be up to 64 characters long and can consist only of ASCII Latin
-   * letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a
-   * letter. The value will be unique given an entity type.
+   * }/features/{feature}` `projects/{project}/locations/{location}/featureGroups/
+   * {feature_group}/features/{feature}` The last part feature is assigned by the
+   * client. The feature can be up to 64 characters long and can consist only of
+   * ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting
+   * with a letter. The value will be unique given an entity type.
    * @param GoogleCloudAiplatformV1Feature $postBody
    * @param array $optParams Optional parameters.
    *
@@ -166,7 +175,8 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * will be overwritten if it is in the mask. If the user does not provide a mask
    * then only the non-empty fields present in the request will be overwritten.
    * Set the update_mask to `*` to override all fields. Updatable fields: *
-   * `description` * `labels` * `disable_monitoring`
+   * `description` * `labels` * `disable_monitoring` (Not supported for
+   * FeatureRegistry Feature)
    * @return GoogleCloudAiplatformV1Feature
    */
   public function patch($name, GoogleCloudAiplatformV1Feature $postBody, $optParams = [])
