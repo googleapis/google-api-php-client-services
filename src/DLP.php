@@ -45,6 +45,7 @@ class DLP extends \Google\Service
   public $organizations_deidentifyTemplates;
   public $organizations_inspectTemplates;
   public $organizations_locations_deidentifyTemplates;
+  public $organizations_locations_discoveryConfigs;
   public $organizations_locations_dlpJobs;
   public $organizations_locations_inspectTemplates;
   public $organizations_locations_jobTriggers;
@@ -58,6 +59,7 @@ class DLP extends \Google\Service
   public $projects_jobTriggers;
   public $projects_locations_content;
   public $projects_locations_deidentifyTemplates;
+  public $projects_locations_discoveryConfigs;
   public $projects_locations_dlpJobs;
   public $projects_locations_image;
   public $projects_locations_inspectTemplates;
@@ -344,6 +346,78 @@ class DLP extends \Google\Service
                 'locationId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_locations_discoveryConfigs = new DLP\Resource\OrganizationsLocationsDiscoveryConfigs(
+        $this,
+        $this->serviceName,
+        'discoveryConfigs',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v2/{+parent}/discoveryConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/discoveryConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
                 'orderBy' => [
                   'location' => 'query',
@@ -1206,6 +1280,78 @@ class DLP extends \Google\Service
                 'locationId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_discoveryConfigs = new DLP\Resource\ProjectsLocationsDiscoveryConfigs(
+        $this,
+        $this->serviceName,
+        'discoveryConfigs',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v2/{+parent}/discoveryConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/discoveryConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
                 'orderBy' => [
                   'location' => 'query',
