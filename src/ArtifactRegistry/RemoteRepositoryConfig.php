@@ -33,6 +33,8 @@ class RemoteRepositoryConfig extends \Google\Model
   protected $npmRepositoryDataType = '';
   protected $pythonRepositoryType = PythonRepository::class;
   protected $pythonRepositoryDataType = '';
+  protected $upstreamCredentialsType = UpstreamCredentials::class;
+  protected $upstreamCredentialsDataType = '';
   protected $yumRepositoryType = YumRepository::class;
   protected $yumRepositoryDataType = '';
 
@@ -119,6 +121,20 @@ class RemoteRepositoryConfig extends \Google\Model
   public function getPythonRepository()
   {
     return $this->pythonRepository;
+  }
+  /**
+   * @param UpstreamCredentials
+   */
+  public function setUpstreamCredentials(UpstreamCredentials $upstreamCredentials)
+  {
+    $this->upstreamCredentials = $upstreamCredentials;
+  }
+  /**
+   * @return UpstreamCredentials
+   */
+  public function getUpstreamCredentials()
+  {
+    return $this->upstreamCredentials;
   }
   /**
    * @param YumRepository
