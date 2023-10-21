@@ -37,6 +37,10 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
    */
   public $disableWebhook;
   /**
+   * @var array[]
+   */
+  public $endUserMetadata;
+  /**
    * @var string[]
    */
   public $flowVersions;
@@ -120,6 +124,20 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   public function getDisableWebhook()
   {
     return $this->disableWebhook;
+  }
+  /**
+   * @param array[]
+   */
+  public function setEndUserMetadata($endUserMetadata)
+  {
+    $this->endUserMetadata = $endUserMetadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getEndUserMetadata()
+  {
+    return $this->endUserMetadata;
   }
   /**
    * @param string[]
