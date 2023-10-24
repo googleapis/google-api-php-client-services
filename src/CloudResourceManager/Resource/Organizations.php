@@ -79,7 +79,8 @@ class Organizations extends \Google\Service\Resource
    * New organizations do not necessarily appear at the end of the results, and
    * may take a small amount of time to appear. Search will only return
    * organizations on which the user has the permission
-   * `resourcemanager.organizations.get` (organizations.search)
+   * `resourcemanager.organizations.get` or has super admin privileges.
+   * (organizations.search)
    *
    * @param array $optParams Optional parameters.
    *

@@ -196,7 +196,7 @@ class Projects extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
-   * Search for projects that the caller has both `resourcemanager.projects.get`
+   * Search for projects that the caller has the `resourcemanager.projects.get`
    * permission on, and also satisfy the specified query. This method returns
    * projects in an unspecified order. This method is eventually consistent with
    * project mutations; this means that a newly created project may not appear in
