@@ -23,6 +23,18 @@ class GoogleMapsPlacesV1PlaceAccessibilityOptions extends \Google\Model
    * @var bool
    */
   public $wheelchairAccessibleEntrance;
+  /**
+   * @var bool
+   */
+  public $wheelchairAccessibleParking;
+  /**
+   * @var bool
+   */
+  public $wheelchairAccessibleRestroom;
+  /**
+   * @var bool
+   */
+  public $wheelchairAccessibleSeating;
 
   /**
    * @param bool
@@ -37,6 +49,48 @@ class GoogleMapsPlacesV1PlaceAccessibilityOptions extends \Google\Model
   public function getWheelchairAccessibleEntrance()
   {
     return $this->wheelchairAccessibleEntrance;
+  }
+  /**
+   * @param bool
+   */
+  public function setWheelchairAccessibleParking($wheelchairAccessibleParking)
+  {
+    $this->wheelchairAccessibleParking = $wheelchairAccessibleParking;
+  }
+  /**
+   * @return bool
+   */
+  public function getWheelchairAccessibleParking()
+  {
+    return $this->wheelchairAccessibleParking;
+  }
+  /**
+   * @param bool
+   */
+  public function setWheelchairAccessibleRestroom($wheelchairAccessibleRestroom)
+  {
+    $this->wheelchairAccessibleRestroom = $wheelchairAccessibleRestroom;
+  }
+  /**
+   * @return bool
+   */
+  public function getWheelchairAccessibleRestroom()
+  {
+    return $this->wheelchairAccessibleRestroom;
+  }
+  /**
+   * @param bool
+   */
+  public function setWheelchairAccessibleSeating($wheelchairAccessibleSeating)
+  {
+    $this->wheelchairAccessibleSeating = $wheelchairAccessibleSeating;
+  }
+  /**
+   * @return bool
+   */
+  public function getWheelchairAccessibleSeating()
+  {
+    return $this->wheelchairAccessibleSeating;
   }
 }
 

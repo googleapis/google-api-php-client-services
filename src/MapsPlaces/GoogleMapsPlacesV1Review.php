@@ -21,6 +21,10 @@ class GoogleMapsPlacesV1Review extends \Google\Model
 {
   protected $authorAttributionType = GoogleMapsPlacesV1AuthorAttribution::class;
   protected $authorAttributionDataType = '';
+  /**
+   * @var string
+   */
+  public $name;
   protected $originalTextType = GoogleTypeLocalizedText::class;
   protected $originalTextDataType = '';
   /**
@@ -48,6 +52,20 @@ class GoogleMapsPlacesV1Review extends \Google\Model
   public function getAuthorAttribution()
   {
     return $this->authorAttribution;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * @param GoogleTypeLocalizedText

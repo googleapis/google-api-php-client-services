@@ -17,6 +17,9 @@
 
 namespace Google\Service\MapsPlaces\Resource;
 
+use Google\Service\MapsPlaces\GoogleMapsPlacesV1Place;
+use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchNearbyRequest;
+use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchNearbyResponse;
 use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchTextRequest;
 use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchTextResponse;
 
@@ -30,6 +33,44 @@ use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchTextResponse;
  */
 class Places extends \Google\Service\Resource
 {
+  /**
+   * Get a Place with a place id (in a name) string. (places.get)
+   *
+   * @param string $name Required. A place ID returned in a Place (with "places/"
+   * prefix), or equivalently the name in the same Place. Format: places/place_id.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string languageCode Optional. Place details will be displayed with
+   * the preferred language if available. Current list of supported languages:
+   * https://developers.google.com/maps/faq#languagesupport.
+   * @opt_param string regionCode Optional. The Unicode country/region code (CLDR)
+   * of the location where the request is coming from. This parameter is used to
+   * display the place details, like region-specific place name, if available. The
+   * parameter can affect results based on applicable law. For more information,
+   * see https://www.unicode.org/cldr/charts/latest/supplemental/territory_languag
+   * e_information.html. Note that 3-digit region codes are not currently
+   * supported.
+   * @return GoogleMapsPlacesV1Place
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleMapsPlacesV1Place::class);
+  }
+  /**
+   * Search for places near locations. (places.searchNearby)
+   *
+   * @param GoogleMapsPlacesV1SearchNearbyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleMapsPlacesV1SearchNearbyResponse
+   */
+  public function searchNearby(GoogleMapsPlacesV1SearchNearbyRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('searchNearby', [$params], GoogleMapsPlacesV1SearchNearbyResponse::class);
+  }
   /**
    * Text query based place search. (places.searchText)
    *
