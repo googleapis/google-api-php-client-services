@@ -18,6 +18,7 @@
 namespace Google\Service\AIPlatformNotebooks\Resource;
 
 use Google\Service\AIPlatformNotebooks\CheckInstanceUpgradabilityResponse;
+use Google\Service\AIPlatformNotebooks\Config;
 use Google\Service\AIPlatformNotebooks\DiagnoseInstanceRequest;
 use Google\Service\AIPlatformNotebooks\Instance;
 use Google\Service\AIPlatformNotebooks\ListInstancesResponse;
@@ -123,6 +124,24 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Instance::class);
+  }
+  /**
+   * Gets general backend configurations that might also affect the frontend.
+   * Location is required by CCFE. Although we could bypass it to send location-
+   * less request directly to the backend job, we would need CPE (go/cloud-cpe).
+   * Having the location might also be useful depending on the query.
+   * (instances.getConfig)
+   *
+   * @param string $name Required. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @param array $optParams Optional parameters.
+   * @return Config
+   */
+  public function getConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getConfig', [$params], Config::class);
   }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the

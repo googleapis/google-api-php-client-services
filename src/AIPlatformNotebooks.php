@@ -168,6 +168,16 @@ class AIPlatformNotebooks extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getConfig' => [
+              'path' => 'v2/{+name}/instances:getConfig',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getIamPolicy' => [
               'path' => 'v2/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
