@@ -18,7 +18,6 @@
 namespace Google\Service\SecurityCommandCenter\Resource;
 
 use Google\Service\SecurityCommandCenter\GoogleCloudSecuritycenterV1MuteConfig;
-use Google\Service\SecurityCommandCenter\ListMuteConfigsResponse;
 use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
 
 /**
@@ -26,32 +25,11 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
  * Typical usage is:
  *  <code>
  *   $securitycenterService = new Google\Service\SecurityCommandCenter(...);
- *   $muteConfigs = $securitycenterService->folders_muteConfigs;
+ *   $muteConfigs = $securitycenterService->organizations_locations_muteConfigs;
  *  </code>
  */
-class FoldersMuteConfigs extends \Google\Service\Resource
+class OrganizationsLocationsMuteConfigs extends \Google\Service\Resource
 {
-  /**
-   * Creates a mute config. (muteConfigs.create)
-   *
-   * @param string $parent Required. Resource name of the new mute configs's
-   * parent. Its format is "organizations/[organization_id]",
-   * "folders/[folder_id]", or "projects/[project_id]".
-   * @param GoogleCloudSecuritycenterV1MuteConfig $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string muteConfigId Required. Unique identifier provided by the
-   * client within the parent scope. It must consist of only lowercase letters,
-   * numbers, and hyphens, must start with a letter, must end with either a letter
-   * or a number, and must be 63 characters or less.
-   * @return GoogleCloudSecuritycenterV1MuteConfig
-   */
-  public function create($parent, GoogleCloudSecuritycenterV1MuteConfig $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], GoogleCloudSecuritycenterV1MuteConfig::class);
-  }
   /**
    * Deletes an existing mute config. (muteConfigs.delete)
    *
@@ -91,30 +69,6 @@ class FoldersMuteConfigs extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudSecuritycenterV1MuteConfig::class);
   }
   /**
-   * Lists mute configs. (muteConfigs.listFoldersMuteConfigs)
-   *
-   * @param string $parent Required. The parent, which owns the collection of mute
-   * configs. Its format is "organizations/[organization_id]",
-   * "folders/[folder_id]", "projects/[project_id]".
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int pageSize The maximum number of configs to return. The service
-   * may return fewer than this value. If unspecified, at most 10 configs will be
-   * returned. The maximum value is 1000; values above 1000 will be coerced to
-   * 1000.
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListMuteConfigs` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to `ListMuteConfigs` must match the
-   * call that provided the page token.
-   * @return ListMuteConfigsResponse
-   */
-  public function listFoldersMuteConfigs($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ListMuteConfigsResponse::class);
-  }
-  /**
    * Updates a mute config. (muteConfigs.patch)
    *
    * @param string $name This field will be ignored if provided on config
@@ -140,4 +94,4 @@ class FoldersMuteConfigs extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FoldersMuteConfigs::class, 'Google_Service_SecurityCommandCenter_Resource_FoldersMuteConfigs');
+class_alias(OrganizationsLocationsMuteConfigs::class, 'Google_Service_SecurityCommandCenter_Resource_OrganizationsLocationsMuteConfigs');

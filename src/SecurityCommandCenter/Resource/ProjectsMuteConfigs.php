@@ -57,8 +57,11 @@ class ProjectsMuteConfigs extends \Google\Service\Resource
    *
    * @param string $name Required. Name of the mute config to delete. Its format
    * is organizations/{organization}/muteConfigs/{config_id},
-   * folders/{folder}/muteConfigs/{config_id}, or
-   * projects/{project}/muteConfigs/{config_id}
+   * folders/{folder}/muteConfigs/{config_id},
+   * projects/{project}/muteConfigs/{config_id},
+   * organizations/{organization}/locations/global/muteConfigs/{config_id},
+   * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+   * projects/{project}/locations/global/muteConfigs/{config_id}.
    * @param array $optParams Optional parameters.
    * @return SecuritycenterEmpty
    */
@@ -73,8 +76,11 @@ class ProjectsMuteConfigs extends \Google\Service\Resource
    *
    * @param string $name Required. Name of the mute config to retrieve. Its format
    * is organizations/{organization}/muteConfigs/{config_id},
-   * folders/{folder}/muteConfigs/{config_id}, or
-   * projects/{project}/muteConfigs/{config_id}
+   * folders/{folder}/muteConfigs/{config_id},
+   * projects/{project}/muteConfigs/{config_id},
+   * organizations/{organization}/locations/global/muteConfigs/{config_id},
+   * folders/{folder}/locations/global/muteConfigs/{config_id}, or
+   * projects/{project}/locations/global/muteConfigs/{config_id}.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudSecuritycenterV1MuteConfig
    */
@@ -115,6 +121,9 @@ class ProjectsMuteConfigs extends \Google\Service\Resource
    * creation. Format "organizations/{organization}/muteConfigs/{mute_config}"
    * "folders/{folder}/muteConfigs/{mute_config}"
    * "projects/{project}/muteConfigs/{mute_config}"
+   * "organizations/{organization}/locations/global/muteConfigs/{mute_config}"
+   * "folders/{folder}/locations/global/muteConfigs/{mute_config}"
+   * "projects/{project}/locations/global/muteConfigs/{mute_config}"
    * @param GoogleCloudSecuritycenterV1MuteConfig $postBody
    * @param array $optParams Optional parameters.
    *

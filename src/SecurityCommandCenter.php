@@ -42,6 +42,7 @@ class SecurityCommandCenter extends \Google\Service
   public $folders_assets;
   public $folders_bigQueryExports;
   public $folders_findings;
+  public $folders_locations_muteConfigs;
   public $folders_muteConfigs;
   public $folders_notificationConfigs;
   public $folders_securityHealthAnalyticsSettings_customModules;
@@ -55,6 +56,7 @@ class SecurityCommandCenter extends \Google\Service
   public $organizations_eventThreatDetectionSettings;
   public $organizations_eventThreatDetectionSettings_customModules;
   public $organizations_findings;
+  public $organizations_locations_muteConfigs;
   public $organizations_muteConfigs;
   public $organizations_notificationConfigs;
   public $organizations_operations;
@@ -73,6 +75,7 @@ class SecurityCommandCenter extends \Google\Service
   public $projects_assets;
   public $projects_bigQueryExports;
   public $projects_findings;
+  public $projects_locations_muteConfigs;
   public $projects_muteConfigs;
   public $projects_notificationConfigs;
   public $projects_securityHealthAnalyticsSettings_customModules;
@@ -264,6 +267,50 @@ class SecurityCommandCenter extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->folders_locations_muteConfigs = new SecurityCommandCenter\Resource\FoldersLocationsMuteConfigs(
+        $this,
+        $this->serviceName,
+        'muteConfigs',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -506,6 +553,16 @@ class SecurityCommandCenter extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'simulate' => [
+              'path' => 'v1/{+parent}/customModules:simulate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -1020,6 +1077,50 @@ class SecurityCommandCenter extends \Google\Service
           ]
         ]
     );
+    $this->organizations_locations_muteConfigs = new SecurityCommandCenter\Resource\OrganizationsLocationsMuteConfigs(
+        $this,
+        $this->serviceName,
+        'muteConfigs',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->organizations_muteConfigs = new SecurityCommandCenter\Resource\OrganizationsMuteConfigs(
         $this,
         $this->serviceName,
@@ -1390,6 +1491,16 @@ class SecurityCommandCenter extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'simulate' => [
+              'path' => 'v1/{+parent}/customModules:simulate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -2026,6 +2137,50 @@ class SecurityCommandCenter extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_muteConfigs = new SecurityCommandCenter\Resource\ProjectsLocationsMuteConfigs(
+        $this,
+        $this->serviceName,
+        'muteConfigs',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_muteConfigs = new SecurityCommandCenter\Resource\ProjectsMuteConfigs(
         $this,
         $this->serviceName,
@@ -2262,6 +2417,16 @@ class SecurityCommandCenter extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'simulate' => [
+              'path' => 'v1/{+parent}/customModules:simulate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

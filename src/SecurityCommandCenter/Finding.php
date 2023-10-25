@@ -108,6 +108,8 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $nextSteps;
+  protected $orgPoliciesType = OrgPolicy::class;
+  protected $orgPoliciesDataType = 'array';
   /**
    * @var string
    */
@@ -574,6 +576,20 @@ class Finding extends \Google\Collection
   public function getNextSteps()
   {
     return $this->nextSteps;
+  }
+  /**
+   * @param OrgPolicy[]
+   */
+  public function setOrgPolicies($orgPolicies)
+  {
+    $this->orgPolicies = $orgPolicies;
+  }
+  /**
+   * @return OrgPolicy[]
+   */
+  public function getOrgPolicies()
+  {
+    return $this->orgPolicies;
   }
   /**
    * @param string
