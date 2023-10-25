@@ -66,6 +66,10 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   /**
    * @var bool
    */
+  public $isSelfReportedSvodProvider;
+  /**
+   * @var bool
+   */
   public $isYoutubeMusicSeeking;
   /**
    * @var string
@@ -240,6 +244,20 @@ class AssistantGroundingRankerMediaGroundingProviderFeatures extends \Google\Mod
   public function getIsSeedRadioRequest()
   {
     return $this->isSeedRadioRequest;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsSelfReportedSvodProvider($isSelfReportedSvodProvider)
+  {
+    $this->isSelfReportedSvodProvider = $isSelfReportedSvodProvider;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsSelfReportedSvodProvider()
+  {
+    return $this->isSelfReportedSvodProvider;
   }
   /**
    * @param bool

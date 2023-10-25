@@ -42,8 +42,6 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
   public $url;
   protected $webrefOutlinkInfosType = RepositoryWebrefWebrefOutlinkInfos::class;
   protected $webrefOutlinkInfosDataType = '';
-  protected $webrefOutlinksLegacyType = Proto2BridgeMessageSet::class;
-  protected $webrefOutlinksLegacyDataType = '';
 
   /**
    * @param RepositoryWebrefSimplifiedAnchors
@@ -170,20 +168,6 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
   public function getWebrefOutlinkInfos()
   {
     return $this->webrefOutlinkInfos;
-  }
-  /**
-   * @param Proto2BridgeMessageSet
-   */
-  public function setWebrefOutlinksLegacy(Proto2BridgeMessageSet $webrefOutlinksLegacy)
-  {
-    $this->webrefOutlinksLegacy = $webrefOutlinksLegacy;
-  }
-  /**
-   * @return Proto2BridgeMessageSet
-   */
-  public function getWebrefOutlinksLegacy()
-  {
-    return $this->webrefOutlinksLegacy;
   }
 }
 

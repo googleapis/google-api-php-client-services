@@ -64,7 +64,6 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
    * @var string
    */
   public $productClusterMid;
-  public $productPopularity;
   protected $relevanceEmbeddingType = QualityRankembedMustangMustangRankEmbedInfo::class;
   protected $relevanceEmbeddingDataType = 'array';
   /**
@@ -267,14 +266,6 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
   public function getProductClusterMid()
   {
     return $this->productClusterMid;
-  }
-  public function setProductPopularity($productPopularity)
-  {
-    $this->productPopularity = $productPopularity;
-  }
-  public function getProductPopularity()
-  {
-    return $this->productPopularity;
   }
   /**
    * @param QualityRankembedMustangMustangRankEmbedInfo[]

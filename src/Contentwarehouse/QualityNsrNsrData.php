@@ -171,6 +171,10 @@ class QualityNsrNsrData extends \Google\Collection
   /**
    * @var float
    */
+  public $smallPersonalSite;
+  /**
+   * @var float
+   */
   public $spambrainLavcScore;
   protected $spambrainLavcScoresType = QualityNsrVersionedFloatSignal::class;
   protected $spambrainLavcScoresDataType = 'array';
@@ -750,6 +754,20 @@ class QualityNsrNsrData extends \Google\Collection
   public function getSiteQualityStddev()
   {
     return $this->siteQualityStddev;
+  }
+  /**
+   * @param float
+   */
+  public function setSmallPersonalSite($smallPersonalSite)
+  {
+    $this->smallPersonalSite = $smallPersonalSite;
+  }
+  /**
+   * @return float
+   */
+  public function getSmallPersonalSite()
+  {
+    return $this->smallPersonalSite;
   }
   /**
    * @param float

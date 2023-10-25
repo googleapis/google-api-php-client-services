@@ -99,14 +99,6 @@ class RepositoryWebrefMention extends \Google\Collection
   protected $subsegmentIndexType = RepositoryWebrefSubSegmentIndex::class;
   protected $subsegmentIndexDataType = '';
   /**
-   * @var int
-   */
-  public $timeOffsetConfidence;
-  /**
-   * @var int
-   */
-  public $timeOffsetMs;
-  /**
    * @var float
    */
   public $trustedNameConfidence;
@@ -460,34 +452,6 @@ class RepositoryWebrefMention extends \Google\Collection
   public function getSubsegmentIndex()
   {
     return $this->subsegmentIndex;
-  }
-  /**
-   * @param int
-   */
-  public function setTimeOffsetConfidence($timeOffsetConfidence)
-  {
-    $this->timeOffsetConfidence = $timeOffsetConfidence;
-  }
-  /**
-   * @return int
-   */
-  public function getTimeOffsetConfidence()
-  {
-    return $this->timeOffsetConfidence;
-  }
-  /**
-   * @param int
-   */
-  public function setTimeOffsetMs($timeOffsetMs)
-  {
-    $this->timeOffsetMs = $timeOffsetMs;
-  }
-  /**
-   * @return int
-   */
-  public function getTimeOffsetMs()
-  {
-    return $this->timeOffsetMs;
   }
   /**
    * @param float

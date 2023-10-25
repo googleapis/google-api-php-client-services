@@ -102,8 +102,6 @@ class ImageData extends \Google\Collection
   public $expirationTimestamp;
   protected $extendedExifType = PhotosImageMetadata::class;
   protected $extendedExifDataType = '';
-  protected $faceDetectionType = ReneFaceResponse::class;
-  protected $faceDetectionDataType = '';
   protected $featuredImagePropType = ImageMonetizationFeaturedImageProperties::class;
   protected $featuredImagePropDataType = '';
   /**
@@ -682,20 +680,6 @@ class ImageData extends \Google\Collection
   public function getExtendedExif()
   {
     return $this->extendedExif;
-  }
-  /**
-   * @param ReneFaceResponse
-   */
-  public function setFaceDetection(ReneFaceResponse $faceDetection)
-  {
-    $this->faceDetection = $faceDetection;
-  }
-  /**
-   * @return ReneFaceResponse
-   */
-  public function getFaceDetection()
-  {
-    return $this->faceDetection;
   }
   /**
    * @param ImageMonetizationFeaturedImageProperties
