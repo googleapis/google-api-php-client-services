@@ -96,8 +96,6 @@ class SpacesMembers extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * (members.get)
    *
    * @param string $name Required. Resource name of the membership to retrieve. To
@@ -132,8 +130,6 @@ class SpacesMembers extends \Google\Service\Resource
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * (members.listSpacesMembers)
    *

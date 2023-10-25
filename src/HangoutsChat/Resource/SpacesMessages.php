@@ -87,8 +87,6 @@ class SpacesMessages extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * Requests authenticated with service accounts can only delete messages created
    * by the calling Chat app. (messages.delete)
    *
@@ -119,8 +117,6 @@ class SpacesMessages extends \Google\Service\Resource
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * Note: Might return a message from a blocked member or space. (messages.get)
    *
@@ -208,8 +204,6 @@ class SpacesMessages extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * [User
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * Requests authenticated with service accounts can only update messages created
    * by the calling Chat app. (messages.patch)
    *
@@ -247,8 +241,6 @@ class SpacesMessages extends \Google\Service\Resource
    * supports [service account
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * [User
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * Requests authenticated with service accounts can only update messages created
    * by the calling Chat app. (messages.update)
