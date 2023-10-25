@@ -98,6 +98,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredNetworkPerformanceConfigDataType = '';
   protected $desiredNodePoolAutoConfigNetworkTagsType = NetworkTags::class;
   protected $desiredNodePoolAutoConfigNetworkTagsDataType = '';
+  protected $desiredNodePoolAutoConfigResourceManagerTagsType = ResourceManagerTags::class;
+  protected $desiredNodePoolAutoConfigResourceManagerTagsDataType = '';
   protected $desiredNodePoolAutoscalingType = NodePoolAutoscaling::class;
   protected $desiredNodePoolAutoscalingDataType = '';
   /**
@@ -580,6 +582,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredNodePoolAutoConfigNetworkTags()
   {
     return $this->desiredNodePoolAutoConfigNetworkTags;
+  }
+  /**
+   * @param ResourceManagerTags
+   */
+  public function setDesiredNodePoolAutoConfigResourceManagerTags(ResourceManagerTags $desiredNodePoolAutoConfigResourceManagerTags)
+  {
+    $this->desiredNodePoolAutoConfigResourceManagerTags = $desiredNodePoolAutoConfigResourceManagerTags;
+  }
+  /**
+   * @return ResourceManagerTags
+   */
+  public function getDesiredNodePoolAutoConfigResourceManagerTags()
+  {
+    return $this->desiredNodePoolAutoConfigResourceManagerTags;
   }
   /**
    * @param NodePoolAutoscaling
