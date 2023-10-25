@@ -107,6 +107,10 @@ class Snapshot extends \Google\Collection
   /**
    * @var string
    */
+  public $sourceDiskForRecoveryCheckpoint;
+  /**
+   * @var string
+   */
   public $sourceDiskId;
   /**
    * @var string
@@ -440,6 +444,20 @@ class Snapshot extends \Google\Collection
   public function getSourceDiskEncryptionKey()
   {
     return $this->sourceDiskEncryptionKey;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceDiskForRecoveryCheckpoint($sourceDiskForRecoveryCheckpoint)
+  {
+    $this->sourceDiskForRecoveryCheckpoint = $sourceDiskForRecoveryCheckpoint;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceDiskForRecoveryCheckpoint()
+  {
+    return $this->sourceDiskForRecoveryCheckpoint;
   }
   /**
    * @param string
