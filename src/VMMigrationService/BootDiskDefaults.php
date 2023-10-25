@@ -31,6 +31,8 @@ class BootDiskDefaults extends \Google\Model
    * @var string
    */
   public $diskType;
+  protected $encryptionType = Encryption::class;
+  protected $encryptionDataType = '';
   protected $imageType = DiskImageDefaults::class;
   protected $imageDataType = '';
 
@@ -75,6 +77,20 @@ class BootDiskDefaults extends \Google\Model
   public function getDiskType()
   {
     return $this->diskType;
+  }
+  /**
+   * @param Encryption
+   */
+  public function setEncryption(Encryption $encryption)
+  {
+    $this->encryption = $encryption;
+  }
+  /**
+   * @return Encryption
+   */
+  public function getEncryption()
+  {
+    return $this->encryption;
   }
   /**
    * @param DiskImageDefaults

@@ -28,6 +28,8 @@ class DisksMigrationVmTargetDefaults extends \Google\Collection
   protected $bootDiskDefaultsDataType = '';
   protected $computeSchedulingType = ComputeScheduling::class;
   protected $computeSchedulingDataType = '';
+  protected $encryptionType = Encryption::class;
+  protected $encryptionDataType = '';
   /**
    * @var string
    */
@@ -108,6 +110,20 @@ class DisksMigrationVmTargetDefaults extends \Google\Collection
   public function getComputeScheduling()
   {
     return $this->computeScheduling;
+  }
+  /**
+   * @param Encryption
+   */
+  public function setEncryption(Encryption $encryption)
+  {
+    $this->encryption = $encryption;
+  }
+  /**
+   * @return Encryption
+   */
+  public function getEncryption()
+  {
+    return $this->encryption;
   }
   /**
    * @param string

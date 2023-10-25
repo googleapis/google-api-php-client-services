@@ -31,6 +31,8 @@ class Source extends \Google\Model
    * @var string
    */
   public $description;
+  protected $encryptionType = Encryption::class;
+  protected $encryptionDataType = '';
   /**
    * @var string[]
    */
@@ -101,6 +103,20 @@ class Source extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param Encryption
+   */
+  public function setEncryption(Encryption $encryption)
+  {
+    $this->encryption = $encryption;
+  }
+  /**
+   * @return Encryption
+   */
+  public function getEncryption()
+  {
+    return $this->encryption;
   }
   /**
    * @param string[]
