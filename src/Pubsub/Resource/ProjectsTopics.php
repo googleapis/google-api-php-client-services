@@ -40,7 +40,8 @@ class ProjectsTopics extends \Google\Service\Resource
 {
   /**
    * Creates the given topic with the given name. See the [resource name rules]
-   * (https://cloud.google.com/pubsub/docs/admin#resource_names). (topics.create)
+   * (https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+   * (topics.create)
    *
    * @param string $name Required. The name of the topic. It must have the format
    * `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,

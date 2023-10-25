@@ -49,17 +49,17 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * `FAILED_PRECONDITION` is returned. See also the `Snapshot.expire_time` field.
    * If the name is not provided in the request, the server will assign a random
    * name for this snapshot on the same project as the subscription, conforming to
-   * the [resource name format]
-   * (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
-   * name is populated in the returned Snapshot object. Note that for REST API
-   * requests, you must specify a name in the request. (snapshots.create)
+   * the [resource name format] (https://cloud.google.com/pubsub/docs/pubsub-
+   * basics#resource_names). The generated name is populated in the returned
+   * Snapshot object. Note that for REST API requests, you must specify a name in
+   * the request. (snapshots.create)
    *
    * @param string $name Required. User-provided name for this snapshot. If the
    * name is not provided in the request, the server will assign a random name for
    * this snapshot on the same project as the subscription. Note that for REST API
    * requests, you must specify a name. See the [resource name
-   * rules](https://cloud.google.com/pubsub/docs/admin#resource_names). Format is
-   * `projects/{project}/snapshots/{snap}`.
+   * rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+   * Format is `projects/{project}/snapshots/{snap}`.
    * @param CreateSnapshotRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Snapshot

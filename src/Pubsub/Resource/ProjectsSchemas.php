@@ -67,8 +67,8 @@ class ProjectsSchemas extends \Google\Service\Resource
    *
    * @opt_param string schemaId The ID to use for the schema, which will become
    * the final component of the schema's resource name. See
-   * https://cloud.google.com/pubsub/docs/admin#resource_names for resource name
-   * constraints.
+   * https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+   * resource name constraints.
    * @return Schema
    */
   public function create($parent, Schema $postBody, $optParams = [])
