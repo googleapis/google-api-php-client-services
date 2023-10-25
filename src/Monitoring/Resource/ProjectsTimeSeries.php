@@ -37,6 +37,9 @@ class ProjectsTimeSeries extends \Google\Service\Resource
    * Creates or adds data to one or more time series. The response is empty if all
    * time series in the request were written. If any time series could not be
    * written, a corresponding failure message is included in the error response.
+   * This method does not support resource locations constraint of an organization
+   * policy (https://cloud.google.com/resource-manager/docs/organization-
+   * policy/defining-locations#setting_the_organization_policy).
    * (timeSeries.create)
    *
    * @param string $name Required. The project
