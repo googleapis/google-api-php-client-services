@@ -42,6 +42,8 @@ class GoogleCloudAiplatformV1StudySpec extends \Google\Collection
   public $observationNoise;
   protected $parametersType = GoogleCloudAiplatformV1StudySpecParameterSpec::class;
   protected $parametersDataType = 'array';
+  protected $studyStoppingConfigType = GoogleCloudAiplatformV1StudySpecStudyStoppingConfig::class;
+  protected $studyStoppingConfigDataType = '';
 
   /**
    * @param string
@@ -154,6 +156,20 @@ class GoogleCloudAiplatformV1StudySpec extends \Google\Collection
   public function getParameters()
   {
     return $this->parameters;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1StudySpecStudyStoppingConfig
+   */
+  public function setStudyStoppingConfig(GoogleCloudAiplatformV1StudySpecStudyStoppingConfig $studyStoppingConfig)
+  {
+    $this->studyStoppingConfig = $studyStoppingConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1StudySpecStudyStoppingConfig
+   */
+  public function getStudyStoppingConfig()
+  {
+    return $this->studyStoppingConfig;
   }
 }
 
