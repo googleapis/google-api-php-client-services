@@ -34,7 +34,7 @@ use Google\Service\DLP\GoogleProtobufEmpty;
 class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
 {
   /**
-   * Creates a config for Discovery to scan and profile storage.
+   * Creates a config for discovery to scan and profile storage.
    * (discoveryConfigs.create)
    *
    * @param string $parent Required. Parent resource name. The format of this
@@ -53,7 +53,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
     return $this->call('create', [$params], GooglePrivacyDlpV2DiscoveryConfig::class);
   }
   /**
-   * Deletes a Discovery configuration. (discoveryConfigs.delete)
+   * Deletes a discovery configuration. (discoveryConfigs.delete)
    *
    * @param string $name Required. Resource name of the project and the config,
    * for example `projects/dlp-test-project/discoveryConfigs/53234423`.
@@ -67,7 +67,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleProtobufEmpty::class);
   }
   /**
-   * Gets a Discovery configuration. (discoveryConfigs.get)
+   * Gets a discovery configuration. (discoveryConfigs.get)
    *
    * @param string $name Required. Resource name of the project and the
    * configuration, for example `projects/dlp-test-
@@ -82,7 +82,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
     return $this->call('get', [$params], GooglePrivacyDlpV2DiscoveryConfig::class);
   }
   /**
-   * Lists Discovery configurations.
+   * Lists discovery configurations.
    * (discoveryConfigs.listProjectsLocationsDiscoveryConfigs)
    *
    * @param string $parent Required. Parent resource name. The format of this
@@ -93,14 +93,15 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Comma separated list of config fields to order by,
-   * followed by `asc` or `desc` postfix. This list is case-insensitive, default
-   * sorting order is ascending, redundant space characters are insignificant.
-   * Example: `name asc,update_time, create_time desc` Supported fields are: -
-   * `last_run_time`: corresponds to the last time the DiscoveryConfig ran. -
-   * `name`: corresponds to the DiscoveryConfig's name. - `status`: corresponds to
-   * DiscoveryConfig's status.
-   * @opt_param int pageSize Size of the page, can be limited by a server.
-   * @opt_param string pageToken Page token to continue retrieval. Comes from
+   * followed by `asc` or `desc` postfix. This list is case insensitive. The
+   * default sorting order is ascending. Redundant space characters are
+   * insignificant. Example: `name asc,update_time, create_time desc` Supported
+   * fields are: - `last_run_time`: corresponds to the last time the
+   * DiscoveryConfig ran. - `name`: corresponds to the DiscoveryConfig's name. -
+   * `status`: corresponds to DiscoveryConfig's status.
+   * @opt_param int pageSize Size of the page. This value can be limited by a
+   * server.
+   * @opt_param string pageToken Page token to continue retrieval. Comes from the
    * previous call to ListDiscoveryConfigs. `order_by` field must not change for
    * subsequent calls.
    * @return GooglePrivacyDlpV2ListDiscoveryConfigsResponse
@@ -112,7 +113,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
     return $this->call('list', [$params], GooglePrivacyDlpV2ListDiscoveryConfigsResponse::class);
   }
   /**
-   * Updates a Discovery configuration. (discoveryConfigs.patch)
+   * Updates a discovery configuration. (discoveryConfigs.patch)
    *
    * @param string $name Required. Resource name of the project and the
    * configuration, for example `projects/dlp-test-
