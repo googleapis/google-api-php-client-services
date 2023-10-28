@@ -45,6 +45,8 @@ class Service extends \Google\Model
   public $labels;
   protected $maintenanceWindowType = MaintenanceWindow::class;
   protected $maintenanceWindowDataType = '';
+  protected $metadataIntegrationType = MetadataIntegration::class;
+  protected $metadataIntegrationDataType = '';
   protected $metadataManagementActivityType = MetadataManagementActivity::class;
   protected $metadataManagementActivityDataType = '';
   /**
@@ -201,6 +203,20 @@ class Service extends \Google\Model
   public function getMaintenanceWindow()
   {
     return $this->maintenanceWindow;
+  }
+  /**
+   * @param MetadataIntegration
+   */
+  public function setMetadataIntegration(MetadataIntegration $metadataIntegration)
+  {
+    $this->metadataIntegration = $metadataIntegration;
+  }
+  /**
+   * @return MetadataIntegration
+   */
+  public function getMetadataIntegration()
+  {
+    return $this->metadataIntegration;
   }
   /**
    * @param MetadataManagementActivity
