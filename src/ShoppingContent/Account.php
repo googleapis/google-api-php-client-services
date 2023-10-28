@@ -36,8 +36,6 @@ class Account extends \Google\Collection
    * @var string[]
    */
   public $automaticLabelIds;
-  protected $businessIdentityType = AccountBusinessIdentity::class;
-  protected $businessIdentityDataType = '';
   protected $businessInformationType = AccountBusinessInformation::class;
   protected $businessInformationDataType = '';
   protected $conversionSettingsType = AccountConversionSettings::class;
@@ -146,20 +144,6 @@ class Account extends \Google\Collection
   public function getAutomaticLabelIds()
   {
     return $this->automaticLabelIds;
-  }
-  /**
-   * @param AccountBusinessIdentity
-   */
-  public function setBusinessIdentity(AccountBusinessIdentity $businessIdentity)
-  {
-    $this->businessIdentity = $businessIdentity;
-  }
-  /**
-   * @return AccountBusinessIdentity
-   */
-  public function getBusinessIdentity()
-  {
-    return $this->businessIdentity;
   }
   /**
    * @param AccountBusinessInformation
