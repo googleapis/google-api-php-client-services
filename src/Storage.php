@@ -50,6 +50,7 @@ class Storage extends \Google\Service
   const DEVSTORAGE_READ_WRITE =
       "https://www.googleapis.com/auth/devstorage.read_write";
 
+  public $anywhereCache;
   public $bucketAccessControls;
   public $buckets;
   public $channels;
@@ -78,6 +79,119 @@ class Storage extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'storage';
 
+    $this->anywhereCache = new Storage\Resource\AnywhereCache(
+        $this,
+        $this->serviceName,
+        'anywhereCache',
+        [
+          'methods' => [
+            'disable' => [
+              'path' => 'b/{bucket}/anywhereCaches/{anywhereCacheId}/disable',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'anywhereCacheId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'b/{bucket}/anywhereCaches/{anywhereCacheId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'anywhereCacheId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'b/{bucket}/anywhereCaches',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'b/{bucket}/anywhereCache',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'pause' => [
+              'path' => 'b/{bucket}/anywhereCaches/{anywhereCacheId}/pause',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'anywhereCacheId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'resume' => [
+              'path' => 'b/{bucket}/anywhereCaches/{anywhereCacheId}/resume',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'anywhereCacheId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'update' => [
+              'path' => 'b/{bucket}/anywhereCaches/{anywhereCacheId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'anywhereCacheId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->bucketAccessControls = new Storage\Resource\BucketAccessControls(
         $this,
         $this->serviceName,
