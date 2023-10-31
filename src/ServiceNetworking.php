@@ -386,6 +386,16 @@ class ServiceNetworking extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'getVpcServiceControls' => [
+              'path' => 'v1/{+name}/vpcServiceControls',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'updateConsumerConfig' => [
               'path' => 'v1/{+parent}:updateConsumerConfig',
               'httpMethod' => 'PATCH',
