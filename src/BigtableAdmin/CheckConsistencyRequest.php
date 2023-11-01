@@ -23,6 +23,8 @@ class CheckConsistencyRequest extends \Google\Model
    * @var string
    */
   public $consistencyToken;
+  protected $standardReadRemoteWritesType = StandardReadRemoteWrites::class;
+  protected $standardReadRemoteWritesDataType = '';
 
   /**
    * @param string
@@ -37,6 +39,20 @@ class CheckConsistencyRequest extends \Google\Model
   public function getConsistencyToken()
   {
     return $this->consistencyToken;
+  }
+  /**
+   * @param StandardReadRemoteWrites
+   */
+  public function setStandardReadRemoteWrites(StandardReadRemoteWrites $standardReadRemoteWrites)
+  {
+    $this->standardReadRemoteWrites = $standardReadRemoteWrites;
+  }
+  /**
+   * @return StandardReadRemoteWrites
+   */
+  public function getStandardReadRemoteWrites()
+  {
+    return $this->standardReadRemoteWrites;
   }
 }
 
