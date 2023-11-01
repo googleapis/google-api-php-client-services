@@ -20,11 +20,27 @@ namespace Google\Service\TrafficDirectorService;
 class ClientConfig extends \Google\Collection
 {
   protected $collection_key = 'xdsConfig';
+  protected $genericXdsConfigsType = GenericXdsConfig::class;
+  protected $genericXdsConfigsDataType = 'array';
   protected $nodeType = Node::class;
   protected $nodeDataType = '';
   protected $xdsConfigType = PerXdsConfig::class;
   protected $xdsConfigDataType = 'array';
 
+  /**
+   * @param GenericXdsConfig[]
+   */
+  public function setGenericXdsConfigs($genericXdsConfigs)
+  {
+    $this->genericXdsConfigs = $genericXdsConfigs;
+  }
+  /**
+   * @return GenericXdsConfig[]
+   */
+  public function getGenericXdsConfigs()
+  {
+    return $this->genericXdsConfigs;
+  }
   /**
    * @param Node
    */

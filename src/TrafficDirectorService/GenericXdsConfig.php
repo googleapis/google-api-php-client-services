@@ -17,15 +17,22 @@
 
 namespace Google\Service\TrafficDirectorService;
 
-class DynamicScopedRouteConfigs extends \Google\Collection
+class GenericXdsConfig extends \Google\Model
 {
-  protected $collection_key = 'scopedRouteConfigs';
   /**
    * @var string
    */
   public $clientStatus;
+  /**
+   * @var string
+   */
+  public $configStatus;
   protected $errorStateType = UpdateFailureState::class;
   protected $errorStateDataType = '';
+  /**
+   * @var bool
+   */
+  public $isStaticResource;
   /**
    * @var string
    */
@@ -35,13 +42,17 @@ class DynamicScopedRouteConfigs extends \Google\Collection
    */
   public $name;
   /**
-   * @var array[]
+   * @var string
    */
-  public $scopedRouteConfigs;
+  public $typeUrl;
   /**
    * @var string
    */
   public $versionInfo;
+  /**
+   * @var array[]
+   */
+  public $xdsConfig;
 
   /**
    * @param string
@@ -58,6 +69,20 @@ class DynamicScopedRouteConfigs extends \Google\Collection
     return $this->clientStatus;
   }
   /**
+   * @param string
+   */
+  public function setConfigStatus($configStatus)
+  {
+    $this->configStatus = $configStatus;
+  }
+  /**
+   * @return string
+   */
+  public function getConfigStatus()
+  {
+    return $this->configStatus;
+  }
+  /**
    * @param UpdateFailureState
    */
   public function setErrorState(UpdateFailureState $errorState)
@@ -70,6 +95,20 @@ class DynamicScopedRouteConfigs extends \Google\Collection
   public function getErrorState()
   {
     return $this->errorState;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsStaticResource($isStaticResource)
+  {
+    $this->isStaticResource = $isStaticResource;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsStaticResource()
+  {
+    return $this->isStaticResource;
   }
   /**
    * @param string
@@ -100,18 +139,18 @@ class DynamicScopedRouteConfigs extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param array[]
+   * @param string
    */
-  public function setScopedRouteConfigs($scopedRouteConfigs)
+  public function setTypeUrl($typeUrl)
   {
-    $this->scopedRouteConfigs = $scopedRouteConfigs;
+    $this->typeUrl = $typeUrl;
   }
   /**
-   * @return array[]
+   * @return string
    */
-  public function getScopedRouteConfigs()
+  public function getTypeUrl()
   {
-    return $this->scopedRouteConfigs;
+    return $this->typeUrl;
   }
   /**
    * @param string
@@ -127,7 +166,21 @@ class DynamicScopedRouteConfigs extends \Google\Collection
   {
     return $this->versionInfo;
   }
+  /**
+   * @param array[]
+   */
+  public function setXdsConfig($xdsConfig)
+  {
+    $this->xdsConfig = $xdsConfig;
+  }
+  /**
+   * @return array[]
+   */
+  public function getXdsConfig()
+  {
+    return $this->xdsConfig;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DynamicScopedRouteConfigs::class, 'Google_Service_TrafficDirectorService_DynamicScopedRouteConfigs');
+class_alias(GenericXdsConfig::class, 'Google_Service_TrafficDirectorService_GenericXdsConfig');

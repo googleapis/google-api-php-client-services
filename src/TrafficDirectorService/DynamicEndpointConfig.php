@@ -17,27 +17,22 @@
 
 namespace Google\Service\TrafficDirectorService;
 
-class DynamicScopedRouteConfigs extends \Google\Collection
+class DynamicEndpointConfig extends \Google\Model
 {
-  protected $collection_key = 'scopedRouteConfigs';
   /**
    * @var string
    */
   public $clientStatus;
+  /**
+   * @var array[]
+   */
+  public $endpointConfig;
   protected $errorStateType = UpdateFailureState::class;
   protected $errorStateDataType = '';
   /**
    * @var string
    */
   public $lastUpdated;
-  /**
-   * @var string
-   */
-  public $name;
-  /**
-   * @var array[]
-   */
-  public $scopedRouteConfigs;
   /**
    * @var string
    */
@@ -56,6 +51,20 @@ class DynamicScopedRouteConfigs extends \Google\Collection
   public function getClientStatus()
   {
     return $this->clientStatus;
+  }
+  /**
+   * @param array[]
+   */
+  public function setEndpointConfig($endpointConfig)
+  {
+    $this->endpointConfig = $endpointConfig;
+  }
+  /**
+   * @return array[]
+   */
+  public function getEndpointConfig()
+  {
+    return $this->endpointConfig;
   }
   /**
    * @param UpdateFailureState
@@ -88,34 +97,6 @@ class DynamicScopedRouteConfigs extends \Google\Collection
   /**
    * @param string
    */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
-  }
-  /**
-   * @param array[]
-   */
-  public function setScopedRouteConfigs($scopedRouteConfigs)
-  {
-    $this->scopedRouteConfigs = $scopedRouteConfigs;
-  }
-  /**
-   * @return array[]
-   */
-  public function getScopedRouteConfigs()
-  {
-    return $this->scopedRouteConfigs;
-  }
-  /**
-   * @param string
-   */
   public function setVersionInfo($versionInfo)
   {
     $this->versionInfo = $versionInfo;
@@ -130,4 +111,4 @@ class DynamicScopedRouteConfigs extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DynamicScopedRouteConfigs::class, 'Google_Service_TrafficDirectorService_DynamicScopedRouteConfigs');
+class_alias(DynamicEndpointConfig::class, 'Google_Service_TrafficDirectorService_DynamicEndpointConfig');
