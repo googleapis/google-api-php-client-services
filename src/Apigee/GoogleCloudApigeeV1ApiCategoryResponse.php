@@ -17,11 +17,10 @@
 
 namespace Google\Service\Apigee;
 
-class GoogleCloudApigeeV1ListApiCategoriesResponse extends \Google\Collection
+class GoogleCloudApigeeV1ApiCategoryResponse extends \Google\Model
 {
-  protected $collection_key = 'data';
   protected $dataType = GoogleCloudApigeeV1ApiCategory::class;
-  protected $dataDataType = 'array';
+  protected $dataDataType = '';
   /**
    * @var string
    */
@@ -40,14 +39,14 @@ class GoogleCloudApigeeV1ListApiCategoriesResponse extends \Google\Collection
   public $status;
 
   /**
-   * @param GoogleCloudApigeeV1ApiCategory[]
+   * @param GoogleCloudApigeeV1ApiCategory
    */
-  public function setData($data)
+  public function setData(GoogleCloudApigeeV1ApiCategory $data)
   {
     $this->data = $data;
   }
   /**
-   * @return GoogleCloudApigeeV1ApiCategory[]
+   * @return GoogleCloudApigeeV1ApiCategory
    */
   public function getData()
   {
@@ -112,4 +111,4 @@ class GoogleCloudApigeeV1ListApiCategoriesResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApigeeV1ListApiCategoriesResponse::class, 'Google_Service_Apigee_GoogleCloudApigeeV1ListApiCategoriesResponse');
+class_alias(GoogleCloudApigeeV1ApiCategoryResponse::class, 'Google_Service_Apigee_GoogleCloudApigeeV1ApiCategoryResponse');

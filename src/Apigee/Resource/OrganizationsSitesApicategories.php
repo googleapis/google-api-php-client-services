@@ -18,7 +18,7 @@
 namespace Google\Service\Apigee\Resource;
 
 use Google\Service\Apigee\GoogleCloudApigeeV1ApiCategory;
-use Google\Service\Apigee\GoogleCloudApigeeV1ApiCategoryData;
+use Google\Service\Apigee\GoogleCloudApigeeV1ApiCategoryResponse;
 use Google\Service\Apigee\GoogleCloudApigeeV1DeleteResponse;
 use Google\Service\Apigee\GoogleCloudApigeeV1ListApiCategoriesResponse;
 
@@ -37,15 +37,15 @@ class OrganizationsSitesApicategories extends \Google\Service\Resource
    *
    * @param string $parent Required. Name of the portal. Use the following
    * structure in your request: `organizations/{org}/sites/{site}`
-   * @param GoogleCloudApigeeV1ApiCategoryData $postBody
+   * @param GoogleCloudApigeeV1ApiCategory $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudApigeeV1ApiCategory
+   * @return GoogleCloudApigeeV1ApiCategoryResponse
    */
-  public function create($parent, GoogleCloudApigeeV1ApiCategoryData $postBody, $optParams = [])
+  public function create($parent, GoogleCloudApigeeV1ApiCategory $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], GoogleCloudApigeeV1ApiCategory::class);
+    return $this->call('create', [$params], GoogleCloudApigeeV1ApiCategoryResponse::class);
   }
   /**
    * Deletes an API category. (apicategories.delete)
@@ -69,13 +69,13 @@ class OrganizationsSitesApicategories extends \Google\Service\Resource
    * structure in your request:
    * `organizations/{org}/sites/{site}/apicategories/{apicategory}`
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudApigeeV1ApiCategory
+   * @return GoogleCloudApigeeV1ApiCategoryResponse
    */
   public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoogleCloudApigeeV1ApiCategory::class);
+    return $this->call('get', [$params], GoogleCloudApigeeV1ApiCategoryResponse::class);
   }
   /**
    * Returns the API categories associated with a portal.
@@ -98,15 +98,15 @@ class OrganizationsSitesApicategories extends \Google\Service\Resource
    * @param string $name Required. Name of the category. Use the following
    * structure in your request:
    * `organizations/{org}/sites/{site}/apicategories/{apicategory}`
-   * @param GoogleCloudApigeeV1ApiCategoryData $postBody
+   * @param GoogleCloudApigeeV1ApiCategory $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudApigeeV1ApiCategory
+   * @return GoogleCloudApigeeV1ApiCategoryResponse
    */
-  public function patch($name, GoogleCloudApigeeV1ApiCategoryData $postBody, $optParams = [])
+  public function patch($name, GoogleCloudApigeeV1ApiCategory $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], GoogleCloudApigeeV1ApiCategory::class);
+    return $this->call('patch', [$params], GoogleCloudApigeeV1ApiCategoryResponse::class);
   }
 }
 
