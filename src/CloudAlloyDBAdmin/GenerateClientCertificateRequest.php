@@ -31,6 +31,10 @@ class GenerateClientCertificateRequest extends \Google\Model
    * @var string
    */
   public $requestId;
+  /**
+   * @var bool
+   */
+  public $useMetadataExchange;
 
   /**
    * @param string
@@ -73,6 +77,20 @@ class GenerateClientCertificateRequest extends \Google\Model
   public function getRequestId()
   {
     return $this->requestId;
+  }
+  /**
+   * @param bool
+   */
+  public function setUseMetadataExchange($useMetadataExchange)
+  {
+    $this->useMetadataExchange = $useMetadataExchange;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseMetadataExchange()
+  {
+    return $this->useMetadataExchange;
   }
 }
 
