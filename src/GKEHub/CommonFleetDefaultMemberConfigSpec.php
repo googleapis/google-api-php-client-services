@@ -21,6 +21,10 @@ class CommonFleetDefaultMemberConfigSpec extends \Google\Model
 {
   protected $configmanagementType = ConfigManagementMembershipSpec::class;
   protected $configmanagementDataType = '';
+  protected $identityserviceType = IdentityServiceMembershipSpec::class;
+  protected $identityserviceDataType = '';
+  protected $meshType = ServiceMeshMembershipSpec::class;
+  protected $meshDataType = '';
   protected $policycontrollerType = PolicyControllerMembershipSpec::class;
   protected $policycontrollerDataType = '';
 
@@ -37,6 +41,34 @@ class CommonFleetDefaultMemberConfigSpec extends \Google\Model
   public function getConfigmanagement()
   {
     return $this->configmanagement;
+  }
+  /**
+   * @param IdentityServiceMembershipSpec
+   */
+  public function setIdentityservice(IdentityServiceMembershipSpec $identityservice)
+  {
+    $this->identityservice = $identityservice;
+  }
+  /**
+   * @return IdentityServiceMembershipSpec
+   */
+  public function getIdentityservice()
+  {
+    return $this->identityservice;
+  }
+  /**
+   * @param ServiceMeshMembershipSpec
+   */
+  public function setMesh(ServiceMeshMembershipSpec $mesh)
+  {
+    $this->mesh = $mesh;
+  }
+  /**
+   * @return ServiceMeshMembershipSpec
+   */
+  public function getMesh()
+  {
+    return $this->mesh;
   }
   /**
    * @param PolicyControllerMembershipSpec
