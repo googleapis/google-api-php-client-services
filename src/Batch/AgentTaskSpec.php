@@ -28,6 +28,8 @@ class AgentTaskSpec extends \Google\Collection
   public $maxRunDuration;
   protected $runnablesType = AgentTaskRunnable::class;
   protected $runnablesDataType = 'array';
+  protected $userAccountType = AgentTaskUserAccount::class;
+  protected $userAccountDataType = '';
 
   /**
    * @param AgentEnvironment
@@ -70,6 +72,20 @@ class AgentTaskSpec extends \Google\Collection
   public function getRunnables()
   {
     return $this->runnables;
+  }
+  /**
+   * @param AgentTaskUserAccount
+   */
+  public function setUserAccount(AgentTaskUserAccount $userAccount)
+  {
+    $this->userAccount = $userAccount;
+  }
+  /**
+   * @return AgentTaskUserAccount
+   */
+  public function getUserAccount()
+  {
+    return $this->userAccount;
   }
 }
 

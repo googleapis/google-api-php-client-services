@@ -17,62 +17,46 @@
 
 namespace Google\Service\Batch;
 
-class LogsPolicy extends \Google\Model
+class AgentTaskUserAccount extends \Google\Model
 {
-  protected $cloudLoggingOptionType = CloudLoggingOption::class;
-  protected $cloudLoggingOptionDataType = '';
   /**
    * @var string
    */
-  public $destination;
+  public $gid;
   /**
    * @var string
    */
-  public $logsPath;
+  public $uid;
 
   /**
-   * @param CloudLoggingOption
-   */
-  public function setCloudLoggingOption(CloudLoggingOption $cloudLoggingOption)
-  {
-    $this->cloudLoggingOption = $cloudLoggingOption;
-  }
-  /**
-   * @return CloudLoggingOption
-   */
-  public function getCloudLoggingOption()
-  {
-    return $this->cloudLoggingOption;
-  }
-  /**
    * @param string
    */
-  public function setDestination($destination)
+  public function setGid($gid)
   {
-    $this->destination = $destination;
+    $this->gid = $gid;
   }
   /**
    * @return string
    */
-  public function getDestination()
+  public function getGid()
   {
-    return $this->destination;
+    return $this->gid;
   }
   /**
    * @param string
    */
-  public function setLogsPath($logsPath)
+  public function setUid($uid)
   {
-    $this->logsPath = $logsPath;
+    $this->uid = $uid;
   }
   /**
    * @return string
    */
-  public function getLogsPath()
+  public function getUid()
   {
-    return $this->logsPath;
+    return $this->uid;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LogsPolicy::class, 'Google_Service_Batch_LogsPolicy');
+class_alias(AgentTaskUserAccount::class, 'Google_Service_Batch_AgentTaskUserAccount');
