@@ -95,6 +95,20 @@ class Appengine extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'listRuntimes' => [
+              'path' => 'v1/apps/{appsId}:listRuntimes',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'appsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'environment' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'patch' => [
               'path' => 'v1/apps/{appsId}',
               'httpMethod' => 'PATCH',
