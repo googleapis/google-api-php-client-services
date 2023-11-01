@@ -561,14 +561,6 @@ class Datastream extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'cdcStrategy.specificStartPosition.mysqlLogPosition.logFile' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'cdcStrategy.specificStartPosition.mysqlLogPosition.logPosition' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
                 'force' => [
                   'location' => 'query',
                   'type' => 'boolean',
