@@ -19,6 +19,25 @@ namespace Google\Service\ShoppingContent;
 
 class AccountIdentityType extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $selfIdentified;
+
+  /**
+   * @param bool
+   */
+  public function setSelfIdentified($selfIdentified)
+  {
+    $this->selfIdentified = $selfIdentified;
+  }
+  /**
+   * @return bool
+   */
+  public function getSelfIdentified()
+  {
+    return $this->selfIdentified;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
