@@ -74,10 +74,6 @@ class RepositoryWebrefMention extends \Google\Collection
   public $matchingText;
   protected $nameMetadataType = RepositoryWebrefConceptNameMetadata::class;
   protected $nameMetadataDataType = '';
-  /**
-   * @var float
-   */
-  public $nonLocationalScore;
   protected $perMentionLightweightTokenType = RepositoryWebrefLightweightTokensPerMentionLightweightToken::class;
   protected $perMentionLightweightTokenDataType = '';
   protected $personalizationContextOutputsType = RepositoryWebrefPersonalizationContextOutputs::class;
@@ -340,20 +336,6 @@ class RepositoryWebrefMention extends \Google\Collection
   public function getNameMetadata()
   {
     return $this->nameMetadata;
-  }
-  /**
-   * @param float
-   */
-  public function setNonLocationalScore($nonLocationalScore)
-  {
-    $this->nonLocationalScore = $nonLocationalScore;
-  }
-  /**
-   * @return float
-   */
-  public function getNonLocationalScore()
-  {
-    return $this->nonLocationalScore;
   }
   /**
    * @param RepositoryWebrefLightweightTokensPerMentionLightweightToken

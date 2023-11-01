@@ -26,6 +26,8 @@ class GeostoreFeatureProto extends \Google\Collection
   protected $addressDataType = 'array';
   protected $anchoredGeometryType = GeostoreAnchoredGeometryProto::class;
   protected $anchoredGeometryDataType = '';
+  protected $associatedEvChargingStationType = GeostoreFeatureIdProto::class;
+  protected $associatedEvChargingStationDataType = 'array';
   protected $attachmentType = GeostoreAttachmentsAttachmentProto::class;
   protected $attachmentDataType = 'array';
   protected $attributeType = GeostoreAttributeProto::class;
@@ -251,6 +253,20 @@ class GeostoreFeatureProto extends \Google\Collection
   public function getAnchoredGeometry()
   {
     return $this->anchoredGeometry;
+  }
+  /**
+   * @param GeostoreFeatureIdProto[]
+   */
+  public function setAssociatedEvChargingStation($associatedEvChargingStation)
+  {
+    $this->associatedEvChargingStation = $associatedEvChargingStation;
+  }
+  /**
+   * @return GeostoreFeatureIdProto[]
+   */
+  public function getAssociatedEvChargingStation()
+  {
+    return $this->associatedEvChargingStation;
   }
   /**
    * @param GeostoreAttachmentsAttachmentProto[]
