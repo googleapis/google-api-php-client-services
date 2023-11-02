@@ -115,6 +115,16 @@ class Contactcenterinsights extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'bulkDelete' => [
+              'path' => 'v1/{+parent}/conversations:bulkDelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'calculateStats' => [
               'path' => 'v1/{+location}/conversations:calculateStats',
               'httpMethod' => 'GET',

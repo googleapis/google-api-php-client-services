@@ -22,8 +22,26 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource exte
   /**
    * @var string
    */
+  public $bucketObjectType;
+  /**
+   * @var string
+   */
   public $bucketUri;
 
+  /**
+   * @param string
+   */
+  public function setBucketObjectType($bucketObjectType)
+  {
+    $this->bucketObjectType = $bucketObjectType;
+  }
+  /**
+   * @return string
+   */
+  public function getBucketObjectType()
+  {
+    return $this->bucketObjectType;
+  }
   /**
    * @param string
    */
