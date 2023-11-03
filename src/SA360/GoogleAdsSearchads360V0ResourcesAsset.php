@@ -22,6 +22,8 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   protected $collection_key = 'finalUrls';
   protected $callAssetType = GoogleAdsSearchads360V0CommonUnifiedCallAsset::class;
   protected $callAssetDataType = '';
+  protected $callToActionAssetType = GoogleAdsSearchads360V0CommonCallToActionAsset::class;
+  protected $callToActionAssetDataType = '';
   protected $calloutAssetType = GoogleAdsSearchads360V0CommonUnifiedCalloutAsset::class;
   protected $calloutAssetDataType = '';
   /**
@@ -40,6 +42,8 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $id;
+  protected $imageAssetType = GoogleAdsSearchads360V0CommonImageAsset::class;
+  protected $imageAssetDataType = '';
   /**
    * @var string
    */
@@ -48,6 +52,10 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   protected $locationAssetDataType = '';
   protected $mobileAppAssetType = GoogleAdsSearchads360V0CommonMobileAppAsset::class;
   protected $mobileAppAssetDataType = '';
+  /**
+   * @var string
+   */
+  public $name;
   protected $pageFeedAssetType = GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset::class;
   protected $pageFeedAssetDataType = '';
   /**
@@ -60,6 +68,8 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $status;
+  protected $textAssetType = GoogleAdsSearchads360V0CommonTextAsset::class;
+  protected $textAssetDataType = '';
   /**
    * @var string
    */
@@ -68,6 +78,8 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $type;
+  protected $youtubeVideoAssetType = GoogleAdsSearchads360V0CommonYoutubeVideoAsset::class;
+  protected $youtubeVideoAssetDataType = '';
 
   /**
    * @param GoogleAdsSearchads360V0CommonUnifiedCallAsset
@@ -82,6 +94,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   public function getCallAsset()
   {
     return $this->callAsset;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonCallToActionAsset
+   */
+  public function setCallToActionAsset(GoogleAdsSearchads360V0CommonCallToActionAsset $callToActionAsset)
+  {
+    $this->callToActionAsset = $callToActionAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonCallToActionAsset
+   */
+  public function getCallToActionAsset()
+  {
+    return $this->callToActionAsset;
   }
   /**
    * @param GoogleAdsSearchads360V0CommonUnifiedCalloutAsset
@@ -154,6 +180,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
     return $this->id;
   }
   /**
+   * @param GoogleAdsSearchads360V0CommonImageAsset
+   */
+  public function setImageAsset(GoogleAdsSearchads360V0CommonImageAsset $imageAsset)
+  {
+    $this->imageAsset = $imageAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonImageAsset
+   */
+  public function getImageAsset()
+  {
+    return $this->imageAsset;
+  }
+  /**
    * @param string
    */
   public function setLastModifiedTime($lastModifiedTime)
@@ -194,6 +234,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   public function getMobileAppAsset()
   {
     return $this->mobileAppAsset;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * @param GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset
@@ -252,6 +306,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
     return $this->status;
   }
   /**
+   * @param GoogleAdsSearchads360V0CommonTextAsset
+   */
+  public function setTextAsset(GoogleAdsSearchads360V0CommonTextAsset $textAsset)
+  {
+    $this->textAsset = $textAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonTextAsset
+   */
+  public function getTextAsset()
+  {
+    return $this->textAsset;
+  }
+  /**
    * @param string
    */
   public function setTrackingUrlTemplate($trackingUrlTemplate)
@@ -278,6 +346,20 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
   public function getType()
   {
     return $this->type;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonYoutubeVideoAsset
+   */
+  public function setYoutubeVideoAsset(GoogleAdsSearchads360V0CommonYoutubeVideoAsset $youtubeVideoAsset)
+  {
+    $this->youtubeVideoAsset = $youtubeVideoAsset;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonYoutubeVideoAsset
+   */
+  public function getYoutubeVideoAsset()
+  {
+    return $this->youtubeVideoAsset;
   }
 }
 
