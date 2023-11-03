@@ -1209,17 +1209,7 @@ class Networkconnectivity extends \Google\Service
         'spokes',
         [
           'methods' => [
-            'accept' => [
-              'path' => 'v1/{+name}:accept',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v1/{+parent}/spokes',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -1317,16 +1307,6 @@ class Networkconnectivity extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'reject' => [
-              'path' => 'v1/{+name}:reject',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'setIamPolicy' => [
