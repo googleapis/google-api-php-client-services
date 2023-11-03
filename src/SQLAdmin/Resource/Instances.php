@@ -20,6 +20,7 @@ namespace Google\Service\SQLAdmin\Resource;
 use Google\Service\SQLAdmin\DatabaseInstance;
 use Google\Service\SQLAdmin\InstancesCloneRequest;
 use Google\Service\SQLAdmin\InstancesDemoteMasterRequest;
+use Google\Service\SQLAdmin\InstancesDemoteRequest;
 use Google\Service\SQLAdmin\InstancesExportRequest;
 use Google\Service\SQLAdmin\InstancesFailoverRequest;
 use Google\Service\SQLAdmin\InstancesImportRequest;
@@ -93,6 +94,23 @@ class Instances extends \Google\Service\Resource
     $params = ['project' => $project, 'instance' => $instance];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Demotes an existing standalone instance to be a Cloud SQL read replica for an
+   * external database server. (instances.demote)
+   *
+   * @param string $project Required. ID of the project that contains the
+   * instance.
+   * @param string $instance Required. Cloud SQL instance name.
+   * @param InstancesDemoteRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function demote($project, $instance, InstancesDemoteRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('demote', [$params], Operation::class);
   }
   /**
    * Demotes the stand-alone instance to be a Cloud SQL read replica for an

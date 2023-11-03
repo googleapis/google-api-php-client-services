@@ -390,6 +390,21 @@ class SQLAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'demote' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/demote',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'demoteMaster' => [
               'path' => 'v1/projects/{project}/instances/{instance}/demoteMaster',
               'httpMethod' => 'POST',
