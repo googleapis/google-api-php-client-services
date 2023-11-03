@@ -82,6 +82,8 @@ class Finding extends \Google\Collection
   protected $kubernetesDataType = '';
   protected $loadBalancersType = LoadBalancer::class;
   protected $loadBalancersDataType = 'array';
+  protected $logEntriesType = LogEntry::class;
+  protected $logEntriesDataType = 'array';
   protected $mitreAttackType = MitreAttack::class;
   protected $mitreAttackDataType = '';
   /**
@@ -478,6 +480,20 @@ class Finding extends \Google\Collection
   public function getLoadBalancers()
   {
     return $this->loadBalancers;
+  }
+  /**
+   * @param LogEntry[]
+   */
+  public function setLogEntries($logEntries)
+  {
+    $this->logEntries = $logEntries;
+  }
+  /**
+   * @return LogEntry[]
+   */
+  public function getLogEntries()
+  {
+    return $this->logEntries;
   }
   /**
    * @param MitreAttack

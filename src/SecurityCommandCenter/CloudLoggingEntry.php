@@ -17,99 +17,82 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class SecuritycenterObject extends \Google\Collection
+class CloudLoggingEntry extends \Google\Model
 {
-  protected $collection_key = 'containers';
-  protected $containersType = Container::class;
-  protected $containersDataType = 'array';
   /**
    * @var string
    */
-  public $group;
+  public $insertId;
   /**
    * @var string
    */
-  public $kind;
+  public $logId;
   /**
    * @var string
    */
-  public $name;
+  public $resourceContainer;
   /**
    * @var string
    */
-  public $ns;
+  public $timestamp;
 
   /**
-   * @param Container[]
-   */
-  public function setContainers($containers)
-  {
-    $this->containers = $containers;
-  }
-  /**
-   * @return Container[]
-   */
-  public function getContainers()
-  {
-    return $this->containers;
-  }
-  /**
    * @param string
    */
-  public function setGroup($group)
+  public function setInsertId($insertId)
   {
-    $this->group = $group;
+    $this->insertId = $insertId;
   }
   /**
    * @return string
    */
-  public function getGroup()
+  public function getInsertId()
   {
-    return $this->group;
+    return $this->insertId;
   }
   /**
    * @param string
    */
-  public function setKind($kind)
+  public function setLogId($logId)
   {
-    $this->kind = $kind;
+    $this->logId = $logId;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getLogId()
   {
-    return $this->kind;
+    return $this->logId;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setResourceContainer($resourceContainer)
   {
-    $this->name = $name;
+    $this->resourceContainer = $resourceContainer;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getResourceContainer()
   {
-    return $this->name;
+    return $this->resourceContainer;
   }
   /**
    * @param string
    */
-  public function setNs($ns)
+  public function setTimestamp($timestamp)
   {
-    $this->ns = $ns;
+    $this->timestamp = $timestamp;
   }
   /**
    * @return string
    */
-  public function getNs()
+  public function getTimestamp()
   {
-    return $this->ns;
+    return $this->timestamp;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SecuritycenterObject::class, 'Google_Service_SecurityCommandCenter_SecuritycenterObject');
+class_alias(CloudLoggingEntry::class, 'Google_Service_SecurityCommandCenter_CloudLoggingEntry');
