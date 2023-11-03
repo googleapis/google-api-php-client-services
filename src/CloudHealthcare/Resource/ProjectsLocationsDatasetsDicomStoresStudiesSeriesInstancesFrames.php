@@ -36,9 +36,9 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesFrames extends \
    * the implementation of RetrieveFrames, see [DICOM
    * frames](https://cloud.google.com/healthcare/docs/dicom#dicom_frames) in the
    * Cloud Healthcare API conformance statement. For samples that show how to call
-   * RetrieveFrames, see [Retrieving DICOM
-   * data](https://cloud.google.com/healthcare/docs/how-
-   * tos/dicomweb#retrieving_dicom_data). (frames.retrieveFrames)
+   * RetrieveFrames, see [Retrieve DICOM
+   * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+   * dicom). (frames.retrieveFrames)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
@@ -63,9 +63,9 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesFrames extends \
    * RetrieveRenderedFrames, see [Rendered
    * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how
-   * to call RetrieveRenderedFrames, see [Retrieving consumer image
-   * formats](https://cloud.google.com/healthcare/docs/how-
-   * tos/dicomweb#retrieving_consumer_image_formats). (frames.retrieveRendered)
+   * to call RetrieveRenderedFrames, see [Retrieve consumer image
+   * formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
+   * consumer). (frames.retrieveRendered)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}

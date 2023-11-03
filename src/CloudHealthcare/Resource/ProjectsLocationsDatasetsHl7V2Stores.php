@@ -108,7 +108,7 @@ class ProjectsLocationsDatasetsHl7V2Stores extends \Google\Service\Resource
     return $this->call('get', [$params], Hl7V2Store::class);
   }
   /**
-   * Gets metrics asssociated with the HL7v2 store.
+   * Gets metrics associated with the HL7v2 store.
    * (hl7V2Stores.getHL7v2StoreMetrics)
    *
    * @param string $name The resource name of the HL7v2 store to get metrics for,
