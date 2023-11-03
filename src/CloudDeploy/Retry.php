@@ -17,42 +17,64 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Metadata extends \Google\Model
+class Retry extends \Google\Model
 {
-  protected $automationType = AutomationRolloutMetadata::class;
-  protected $automationDataType = '';
-  protected $cloudRunType = CloudRunMetadata::class;
-  protected $cloudRunDataType = '';
+  /**
+   * @var string
+   */
+  public $attempts;
+  /**
+   * @var string
+   */
+  public $backoffMode;
+  /**
+   * @var string
+   */
+  public $wait;
 
   /**
-   * @param AutomationRolloutMetadata
+   * @param string
    */
-  public function setAutomation(AutomationRolloutMetadata $automation)
+  public function setAttempts($attempts)
   {
-    $this->automation = $automation;
+    $this->attempts = $attempts;
   }
   /**
-   * @return AutomationRolloutMetadata
+   * @return string
    */
-  public function getAutomation()
+  public function getAttempts()
   {
-    return $this->automation;
+    return $this->attempts;
   }
   /**
-   * @param CloudRunMetadata
+   * @param string
    */
-  public function setCloudRun(CloudRunMetadata $cloudRun)
+  public function setBackoffMode($backoffMode)
   {
-    $this->cloudRun = $cloudRun;
+    $this->backoffMode = $backoffMode;
   }
   /**
-   * @return CloudRunMetadata
+   * @return string
    */
-  public function getCloudRun()
+  public function getBackoffMode()
   {
-    return $this->cloudRun;
+    return $this->backoffMode;
+  }
+  /**
+   * @param string
+   */
+  public function setWait($wait)
+  {
+    $this->wait = $wait;
+  }
+  /**
+   * @return string
+   */
+  public function getWait()
+  {
+    return $this->wait;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Metadata::class, 'Google_Service_CloudDeploy_Metadata');
+class_alias(Retry::class, 'Google_Service_CloudDeploy_Retry');

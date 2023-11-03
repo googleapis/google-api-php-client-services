@@ -17,42 +17,42 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Metadata extends \Google\Model
+class RepairPhase extends \Google\Model
 {
-  protected $automationType = AutomationRolloutMetadata::class;
-  protected $automationDataType = '';
-  protected $cloudRunType = CloudRunMetadata::class;
-  protected $cloudRunDataType = '';
+  protected $retryType = RetryPhase::class;
+  protected $retryDataType = '';
+  protected $rollbackType = RollbackAttempt::class;
+  protected $rollbackDataType = '';
 
   /**
-   * @param AutomationRolloutMetadata
+   * @param RetryPhase
    */
-  public function setAutomation(AutomationRolloutMetadata $automation)
+  public function setRetry(RetryPhase $retry)
   {
-    $this->automation = $automation;
+    $this->retry = $retry;
   }
   /**
-   * @return AutomationRolloutMetadata
+   * @return RetryPhase
    */
-  public function getAutomation()
+  public function getRetry()
   {
-    return $this->automation;
+    return $this->retry;
   }
   /**
-   * @param CloudRunMetadata
+   * @param RollbackAttempt
    */
-  public function setCloudRun(CloudRunMetadata $cloudRun)
+  public function setRollback(RollbackAttempt $rollback)
   {
-    $this->cloudRun = $cloudRun;
+    $this->rollback = $rollback;
   }
   /**
-   * @return CloudRunMetadata
+   * @return RollbackAttempt
    */
-  public function getCloudRun()
+  public function getRollback()
   {
-    return $this->cloudRun;
+    return $this->rollback;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Metadata::class, 'Google_Service_CloudDeploy_Metadata');
+class_alias(RepairPhase::class, 'Google_Service_CloudDeploy_RepairPhase');

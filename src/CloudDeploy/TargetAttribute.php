@@ -17,42 +17,46 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Metadata extends \Google\Model
+class TargetAttribute extends \Google\Model
 {
-  protected $automationType = AutomationRolloutMetadata::class;
-  protected $automationDataType = '';
-  protected $cloudRunType = CloudRunMetadata::class;
-  protected $cloudRunDataType = '';
+  /**
+   * @var string
+   */
+  public $id;
+  /**
+   * @var string[]
+   */
+  public $labels;
 
   /**
-   * @param AutomationRolloutMetadata
+   * @param string
    */
-  public function setAutomation(AutomationRolloutMetadata $automation)
+  public function setId($id)
   {
-    $this->automation = $automation;
+    $this->id = $id;
   }
   /**
-   * @return AutomationRolloutMetadata
+   * @return string
    */
-  public function getAutomation()
+  public function getId()
   {
-    return $this->automation;
+    return $this->id;
   }
   /**
-   * @param CloudRunMetadata
+   * @param string[]
    */
-  public function setCloudRun(CloudRunMetadata $cloudRun)
+  public function setLabels($labels)
   {
-    $this->cloudRun = $cloudRun;
+    $this->labels = $labels;
   }
   /**
-   * @return CloudRunMetadata
+   * @return string[]
    */
-  public function getCloudRun()
+  public function getLabels()
   {
-    return $this->cloudRun;
+    return $this->labels;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Metadata::class, 'Google_Service_CloudDeploy_Metadata');
+class_alias(TargetAttribute::class, 'Google_Service_CloudDeploy_TargetAttribute');
