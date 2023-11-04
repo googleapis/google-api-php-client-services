@@ -78,6 +78,8 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $endpoint;
+  protected $enterpriseConfigType = EnterpriseConfig::class;
+  protected $enterpriseConfigDataType = '';
   /**
    * @var string
    */
@@ -496,6 +498,20 @@ class Cluster extends \Google\Collection
   public function getEndpoint()
   {
     return $this->endpoint;
+  }
+  /**
+   * @param EnterpriseConfig
+   */
+  public function setEnterpriseConfig(EnterpriseConfig $enterpriseConfig)
+  {
+    $this->enterpriseConfig = $enterpriseConfig;
+  }
+  /**
+   * @return EnterpriseConfig
+   */
+  public function getEnterpriseConfig()
+  {
+    return $this->enterpriseConfig;
   }
   /**
    * @param string
