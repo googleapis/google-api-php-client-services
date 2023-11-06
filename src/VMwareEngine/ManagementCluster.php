@@ -25,6 +25,8 @@ class ManagementCluster extends \Google\Model
   public $clusterId;
   protected $nodeTypeConfigsType = NodeTypeConfig::class;
   protected $nodeTypeConfigsDataType = 'map';
+  protected $stretchedClusterConfigType = StretchedClusterConfig::class;
+  protected $stretchedClusterConfigDataType = '';
 
   /**
    * @param string
@@ -53,6 +55,20 @@ class ManagementCluster extends \Google\Model
   public function getNodeTypeConfigs()
   {
     return $this->nodeTypeConfigs;
+  }
+  /**
+   * @param StretchedClusterConfig
+   */
+  public function setStretchedClusterConfig(StretchedClusterConfig $stretchedClusterConfig)
+  {
+    $this->stretchedClusterConfig = $stretchedClusterConfig;
+  }
+  /**
+   * @return StretchedClusterConfig
+   */
+  public function getStretchedClusterConfig()
+  {
+    return $this->stretchedClusterConfig;
   }
 }
 

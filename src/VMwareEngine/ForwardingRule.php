@@ -17,46 +17,47 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class ForwardingRule extends \Google\Collection
 {
+  protected $collection_key = 'nameServers';
   /**
    * @var string
    */
-  public $requestId;
+  public $domain;
   /**
-   * @var string
+   * @var string[]
    */
-  public $username;
+  public $nameServers;
 
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setDomain($domain)
   {
-    $this->requestId = $requestId;
+    $this->domain = $domain;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getDomain()
   {
-    return $this->requestId;
+    return $this->domain;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setUsername($username)
+  public function setNameServers($nameServers)
   {
-    $this->username = $username;
+    $this->nameServers = $nameServers;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getUsername()
+  public function getNameServers()
   {
-    return $this->username;
+    return $this->nameServers;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(ForwardingRule::class, 'Google_Service_VMwareEngine_ForwardingRule');

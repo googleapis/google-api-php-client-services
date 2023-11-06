@@ -17,16 +17,20 @@
 
 namespace Google\Service\VMwareEngine;
 
-class Subnet extends \Google\Model
+class Node extends \Google\Model
 {
   /**
    * @var string
    */
-  public $gatewayIp;
+  public $customCoreCount;
   /**
    * @var string
    */
-  public $ipCidrRange;
+  public $fqdn;
+  /**
+   * @var string
+   */
+  public $internalIp;
   /**
    * @var string
    */
@@ -34,43 +38,57 @@ class Subnet extends \Google\Model
   /**
    * @var string
    */
+  public $nodeTypeId;
+  /**
+   * @var string
+   */
   public $state;
   /**
    * @var string
    */
-  public $type;
-  /**
-   * @var int
-   */
-  public $vlanId;
+  public $version;
 
   /**
    * @param string
    */
-  public function setGatewayIp($gatewayIp)
+  public function setCustomCoreCount($customCoreCount)
   {
-    $this->gatewayIp = $gatewayIp;
+    $this->customCoreCount = $customCoreCount;
   }
   /**
    * @return string
    */
-  public function getGatewayIp()
+  public function getCustomCoreCount()
   {
-    return $this->gatewayIp;
+    return $this->customCoreCount;
   }
   /**
    * @param string
    */
-  public function setIpCidrRange($ipCidrRange)
+  public function setFqdn($fqdn)
   {
-    $this->ipCidrRange = $ipCidrRange;
+    $this->fqdn = $fqdn;
   }
   /**
    * @return string
    */
-  public function getIpCidrRange()
+  public function getFqdn()
   {
-    return $this->ipCidrRange;
+    return $this->fqdn;
+  }
+  /**
+   * @param string
+   */
+  public function setInternalIp($internalIp)
+  {
+    $this->internalIp = $internalIp;
+  }
+  /**
+   * @return string
+   */
+  public function getInternalIp()
+  {
+    return $this->internalIp;
   }
   /**
    * @param string
@@ -89,6 +107,20 @@ class Subnet extends \Google\Model
   /**
    * @param string
    */
+  public function setNodeTypeId($nodeTypeId)
+  {
+    $this->nodeTypeId = $nodeTypeId;
+  }
+  /**
+   * @return string
+   */
+  public function getNodeTypeId()
+  {
+    return $this->nodeTypeId;
+  }
+  /**
+   * @param string
+   */
   public function setState($state)
   {
     $this->state = $state;
@@ -103,32 +135,18 @@ class Subnet extends \Google\Model
   /**
    * @param string
    */
-  public function setType($type)
+  public function setVersion($version)
   {
-    $this->type = $type;
+    $this->version = $version;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getVersion()
   {
-    return $this->type;
-  }
-  /**
-   * @param int
-   */
-  public function setVlanId($vlanId)
-  {
-    $this->vlanId = $vlanId;
-  }
-  /**
-   * @return int
-   */
-  public function getVlanId()
-  {
-    return $this->vlanId;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Subnet::class, 'Google_Service_VMwareEngine_Subnet');
+class_alias(Node::class, 'Google_Service_VMwareEngine_Node');

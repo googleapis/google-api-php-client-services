@@ -17,46 +17,45 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class ListPeeringRoutesResponse extends \Google\Collection
 {
+  protected $collection_key = 'peeringRoutes';
   /**
    * @var string
    */
-  public $requestId;
-  /**
-   * @var string
-   */
-  public $username;
+  public $nextPageToken;
+  protected $peeringRoutesType = PeeringRoute::class;
+  protected $peeringRoutesDataType = 'array';
 
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->requestId = $requestId;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getNextPageToken()
   {
-    return $this->requestId;
+    return $this->nextPageToken;
   }
   /**
-   * @param string
+   * @param PeeringRoute[]
    */
-  public function setUsername($username)
+  public function setPeeringRoutes($peeringRoutes)
   {
-    $this->username = $username;
+    $this->peeringRoutes = $peeringRoutes;
   }
   /**
-   * @return string
+   * @return PeeringRoute[]
    */
-  public function getUsername()
+  public function getPeeringRoutes()
   {
-    return $this->username;
+    return $this->peeringRoutes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(ListPeeringRoutesResponse::class, 'Google_Service_VMwareEngine_ListPeeringRoutesResponse');

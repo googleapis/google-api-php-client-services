@@ -17,46 +17,64 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class IpRange extends \Google\Model
 {
   /**
    * @var string
    */
-  public $requestId;
+  public $externalAddress;
   /**
    * @var string
    */
-  public $username;
+  public $ipAddress;
+  /**
+   * @var string
+   */
+  public $ipAddressRange;
 
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setExternalAddress($externalAddress)
   {
-    $this->requestId = $requestId;
+    $this->externalAddress = $externalAddress;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getExternalAddress()
   {
-    return $this->requestId;
+    return $this->externalAddress;
   }
   /**
    * @param string
    */
-  public function setUsername($username)
+  public function setIpAddress($ipAddress)
   {
-    $this->username = $username;
+    $this->ipAddress = $ipAddress;
   }
   /**
    * @return string
    */
-  public function getUsername()
+  public function getIpAddress()
   {
-    return $this->username;
+    return $this->ipAddress;
+  }
+  /**
+   * @param string
+   */
+  public function setIpAddressRange($ipAddressRange)
+  {
+    $this->ipAddressRange = $ipAddressRange;
+  }
+  /**
+   * @return string
+   */
+  public function getIpAddressRange()
+  {
+    return $this->ipAddressRange;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(IpRange::class, 'Google_Service_VMwareEngine_IpRange');

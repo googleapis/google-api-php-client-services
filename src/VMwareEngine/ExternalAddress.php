@@ -17,28 +17,32 @@
 
 namespace Google\Service\VMwareEngine;
 
-class Cluster extends \Google\Model
+class ExternalAddress extends \Google\Model
 {
   /**
    * @var string
    */
   public $createTime;
   /**
-   * @var bool
+   * @var string
    */
-  public $management;
+  public $description;
+  /**
+   * @var string
+   */
+  public $externalIp;
+  /**
+   * @var string
+   */
+  public $internalIp;
   /**
    * @var string
    */
   public $name;
-  protected $nodeTypeConfigsType = NodeTypeConfig::class;
-  protected $nodeTypeConfigsDataType = 'map';
   /**
    * @var string
    */
   public $state;
-  protected $stretchedClusterConfigType = StretchedClusterConfig::class;
-  protected $stretchedClusterConfigDataType = '';
   /**
    * @var string
    */
@@ -63,18 +67,46 @@ class Cluster extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setManagement($management)
+  public function setDescription($description)
   {
-    $this->management = $management;
+    $this->description = $description;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getManagement()
+  public function getDescription()
   {
-    return $this->management;
+    return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setExternalIp($externalIp)
+  {
+    $this->externalIp = $externalIp;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalIp()
+  {
+    return $this->externalIp;
+  }
+  /**
+   * @param string
+   */
+  public function setInternalIp($internalIp)
+  {
+    $this->internalIp = $internalIp;
+  }
+  /**
+   * @return string
+   */
+  public function getInternalIp()
+  {
+    return $this->internalIp;
   }
   /**
    * @param string
@@ -91,20 +123,6 @@ class Cluster extends \Google\Model
     return $this->name;
   }
   /**
-   * @param NodeTypeConfig[]
-   */
-  public function setNodeTypeConfigs($nodeTypeConfigs)
-  {
-    $this->nodeTypeConfigs = $nodeTypeConfigs;
-  }
-  /**
-   * @return NodeTypeConfig[]
-   */
-  public function getNodeTypeConfigs()
-  {
-    return $this->nodeTypeConfigs;
-  }
-  /**
    * @param string
    */
   public function setState($state)
@@ -117,20 +135,6 @@ class Cluster extends \Google\Model
   public function getState()
   {
     return $this->state;
-  }
-  /**
-   * @param StretchedClusterConfig
-   */
-  public function setStretchedClusterConfig(StretchedClusterConfig $stretchedClusterConfig)
-  {
-    $this->stretchedClusterConfig = $stretchedClusterConfig;
-  }
-  /**
-   * @return StretchedClusterConfig
-   */
-  public function getStretchedClusterConfig()
-  {
-    return $this->stretchedClusterConfig;
   }
   /**
    * @param string
@@ -163,4 +167,4 @@ class Cluster extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Cluster::class, 'Google_Service_VMwareEngine_Cluster');
+class_alias(ExternalAddress::class, 'Google_Service_VMwareEngine_ExternalAddress');

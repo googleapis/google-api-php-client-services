@@ -17,46 +17,46 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class Principal extends \Google\Model
 {
   /**
    * @var string
    */
-  public $requestId;
+  public $serviceAccount;
   /**
    * @var string
    */
-  public $username;
+  public $user;
 
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setServiceAccount($serviceAccount)
   {
-    $this->requestId = $requestId;
+    $this->serviceAccount = $serviceAccount;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getServiceAccount()
   {
-    return $this->requestId;
+    return $this->serviceAccount;
   }
   /**
    * @param string
    */
-  public function setUsername($username)
+  public function setUser($user)
   {
-    $this->username = $username;
+    $this->user = $user;
   }
   /**
    * @return string
    */
-  public function getUsername()
+  public function getUser()
   {
-    return $this->username;
+    return $this->user;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(Principal::class, 'Google_Service_VMwareEngine_Principal');

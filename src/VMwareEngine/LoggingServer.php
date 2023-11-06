@@ -17,28 +17,32 @@
 
 namespace Google\Service\VMwareEngine;
 
-class Cluster extends \Google\Model
+class LoggingServer extends \Google\Model
 {
   /**
    * @var string
    */
   public $createTime;
   /**
-   * @var bool
+   * @var string
    */
-  public $management;
+  public $hostname;
   /**
    * @var string
    */
   public $name;
-  protected $nodeTypeConfigsType = NodeTypeConfig::class;
-  protected $nodeTypeConfigsDataType = 'map';
+  /**
+   * @var int
+   */
+  public $port;
   /**
    * @var string
    */
-  public $state;
-  protected $stretchedClusterConfigType = StretchedClusterConfig::class;
-  protected $stretchedClusterConfigDataType = '';
+  public $protocol;
+  /**
+   * @var string
+   */
+  public $sourceType;
   /**
    * @var string
    */
@@ -63,18 +67,18 @@ class Cluster extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setManagement($management)
+  public function setHostname($hostname)
   {
-    $this->management = $management;
+    $this->hostname = $hostname;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getManagement()
+  public function getHostname()
   {
-    return $this->management;
+    return $this->hostname;
   }
   /**
    * @param string
@@ -91,46 +95,46 @@ class Cluster extends \Google\Model
     return $this->name;
   }
   /**
-   * @param NodeTypeConfig[]
+   * @param int
    */
-  public function setNodeTypeConfigs($nodeTypeConfigs)
+  public function setPort($port)
   {
-    $this->nodeTypeConfigs = $nodeTypeConfigs;
+    $this->port = $port;
   }
   /**
-   * @return NodeTypeConfig[]
+   * @return int
    */
-  public function getNodeTypeConfigs()
+  public function getPort()
   {
-    return $this->nodeTypeConfigs;
+    return $this->port;
   }
   /**
    * @param string
    */
-  public function setState($state)
+  public function setProtocol($protocol)
   {
-    $this->state = $state;
+    $this->protocol = $protocol;
   }
   /**
    * @return string
    */
-  public function getState()
+  public function getProtocol()
   {
-    return $this->state;
+    return $this->protocol;
   }
   /**
-   * @param StretchedClusterConfig
+   * @param string
    */
-  public function setStretchedClusterConfig(StretchedClusterConfig $stretchedClusterConfig)
+  public function setSourceType($sourceType)
   {
-    $this->stretchedClusterConfig = $stretchedClusterConfig;
+    $this->sourceType = $sourceType;
   }
   /**
-   * @return StretchedClusterConfig
+   * @return string
    */
-  public function getStretchedClusterConfig()
+  public function getSourceType()
   {
-    return $this->stretchedClusterConfig;
+    return $this->sourceType;
   }
   /**
    * @param string
@@ -163,4 +167,4 @@ class Cluster extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Cluster::class, 'Google_Service_VMwareEngine_Cluster');
+class_alias(LoggingServer::class, 'Google_Service_VMwareEngine_LoggingServer');

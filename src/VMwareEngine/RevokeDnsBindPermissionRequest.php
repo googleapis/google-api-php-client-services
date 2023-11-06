@@ -17,17 +17,29 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class RevokeDnsBindPermissionRequest extends \Google\Model
 {
+  protected $principalType = Principal::class;
+  protected $principalDataType = '';
   /**
    * @var string
    */
   public $requestId;
-  /**
-   * @var string
-   */
-  public $username;
 
+  /**
+   * @param Principal
+   */
+  public function setPrincipal(Principal $principal)
+  {
+    $this->principal = $principal;
+  }
+  /**
+   * @return Principal
+   */
+  public function getPrincipal()
+  {
+    return $this->principal;
+  }
   /**
    * @param string
    */
@@ -42,21 +54,7 @@ class ResetVcenterCredentialsRequest extends \Google\Model
   {
     return $this->requestId;
   }
-  /**
-   * @param string
-   */
-  public function setUsername($username)
-  {
-    $this->username = $username;
-  }
-  /**
-   * @return string
-   */
-  public function getUsername()
-  {
-    return $this->username;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(RevokeDnsBindPermissionRequest::class, 'Google_Service_VMwareEngine_RevokeDnsBindPermissionRequest');

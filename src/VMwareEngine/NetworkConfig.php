@@ -22,6 +22,10 @@ class NetworkConfig extends \Google\Model
   /**
    * @var string
    */
+  public $dnsServerIp;
+  /**
+   * @var string
+   */
   public $managementCidr;
   /**
    * @var int
@@ -36,6 +40,20 @@ class NetworkConfig extends \Google\Model
    */
   public $vmwareEngineNetworkCanonical;
 
+  /**
+   * @param string
+   */
+  public function setDnsServerIp($dnsServerIp)
+  {
+    $this->dnsServerIp = $dnsServerIp;
+  }
+  /**
+   * @return string
+   */
+  public function getDnsServerIp()
+  {
+    return $this->dnsServerIp;
+  }
   /**
    * @param string
    */

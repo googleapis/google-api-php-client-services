@@ -19,11 +19,15 @@ namespace Google\Service\VMwareEngine;
 
 class NodeType extends \Google\Collection
 {
-  protected $collection_key = 'availableCustomCoreCounts';
+  protected $collection_key = 'capabilities';
   /**
    * @var int[]
    */
   public $availableCustomCoreCounts;
+  /**
+   * @var string[]
+   */
+  public $capabilities;
   /**
    * @var int
    */
@@ -66,6 +70,20 @@ class NodeType extends \Google\Collection
   public function getAvailableCustomCoreCounts()
   {
     return $this->availableCustomCoreCounts;
+  }
+  /**
+   * @param string[]
+   */
+  public function setCapabilities($capabilities)
+  {
+    $this->capabilities = $capabilities;
+  }
+  /**
+   * @return string[]
+   */
+  public function getCapabilities()
+  {
+    return $this->capabilities;
   }
   /**
    * @param int

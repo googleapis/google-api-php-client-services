@@ -17,46 +17,46 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class StretchedClusterConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $requestId;
+  public $preferredLocation;
   /**
    * @var string
    */
-  public $username;
+  public $secondaryLocation;
 
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setPreferredLocation($preferredLocation)
   {
-    $this->requestId = $requestId;
+    $this->preferredLocation = $preferredLocation;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getPreferredLocation()
   {
-    return $this->requestId;
+    return $this->preferredLocation;
   }
   /**
    * @param string
    */
-  public function setUsername($username)
+  public function setSecondaryLocation($secondaryLocation)
   {
-    $this->username = $username;
+    $this->secondaryLocation = $secondaryLocation;
   }
   /**
    * @return string
    */
-  public function getUsername()
+  public function getSecondaryLocation()
   {
-    return $this->username;
+    return $this->secondaryLocation;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(StretchedClusterConfig::class, 'Google_Service_VMwareEngine_StretchedClusterConfig');

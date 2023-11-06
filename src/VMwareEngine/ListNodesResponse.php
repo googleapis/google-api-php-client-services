@@ -17,46 +17,45 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class ListNodesResponse extends \Google\Collection
 {
+  protected $collection_key = 'nodes';
   /**
    * @var string
    */
-  public $requestId;
-  /**
-   * @var string
-   */
-  public $username;
+  public $nextPageToken;
+  protected $nodesType = Node::class;
+  protected $nodesDataType = 'array';
 
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->requestId = $requestId;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getNextPageToken()
   {
-    return $this->requestId;
+    return $this->nextPageToken;
   }
   /**
-   * @param string
+   * @param Node[]
    */
-  public function setUsername($username)
+  public function setNodes($nodes)
   {
-    $this->username = $username;
+    $this->nodes = $nodes;
   }
   /**
-   * @return string
+   * @return Node[]
    */
-  public function getUsername()
+  public function getNodes()
   {
-    return $this->username;
+    return $this->nodes;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(ListNodesResponse::class, 'Google_Service_VMwareEngine_ListNodesResponse');

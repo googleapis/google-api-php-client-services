@@ -17,46 +17,29 @@
 
 namespace Google\Service\VMwareEngine;
 
-class ResetVcenterCredentialsRequest extends \Google\Model
+class LocationMetadata extends \Google\Collection
 {
+  protected $collection_key = 'capabilities';
   /**
-   * @var string
+   * @var string[]
    */
-  public $requestId;
-  /**
-   * @var string
-   */
-  public $username;
+  public $capabilities;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setRequestId($requestId)
+  public function setCapabilities($capabilities)
   {
-    $this->requestId = $requestId;
+    $this->capabilities = $capabilities;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getRequestId()
+  public function getCapabilities()
   {
-    return $this->requestId;
-  }
-  /**
-   * @param string
-   */
-  public function setUsername($username)
-  {
-    $this->username = $username;
-  }
-  /**
-   * @return string
-   */
-  public function getUsername()
-  {
-    return $this->username;
+    return $this->capabilities;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResetVcenterCredentialsRequest::class, 'Google_Service_VMwareEngine_ResetVcenterCredentialsRequest');
+class_alias(LocationMetadata::class, 'Google_Service_VMwareEngine_LocationMetadata');

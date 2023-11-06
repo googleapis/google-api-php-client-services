@@ -17,16 +17,15 @@
 
 namespace Google\Service\VMwareEngine;
 
-class Subnet extends \Google\Model
+class DnsForwarding extends \Google\Collection
 {
+  protected $collection_key = 'forwardingRules';
   /**
    * @var string
    */
-  public $gatewayIp;
-  /**
-   * @var string
-   */
-  public $ipCidrRange;
+  public $createTime;
+  protected $forwardingRulesType = ForwardingRule::class;
+  protected $forwardingRulesDataType = 'array';
   /**
    * @var string
    */
@@ -34,43 +33,35 @@ class Subnet extends \Google\Model
   /**
    * @var string
    */
-  public $state;
-  /**
-   * @var string
-   */
-  public $type;
-  /**
-   * @var int
-   */
-  public $vlanId;
+  public $updateTime;
 
   /**
    * @param string
    */
-  public function setGatewayIp($gatewayIp)
+  public function setCreateTime($createTime)
   {
-    $this->gatewayIp = $gatewayIp;
+    $this->createTime = $createTime;
   }
   /**
    * @return string
    */
-  public function getGatewayIp()
+  public function getCreateTime()
   {
-    return $this->gatewayIp;
+    return $this->createTime;
   }
   /**
-   * @param string
+   * @param ForwardingRule[]
    */
-  public function setIpCidrRange($ipCidrRange)
+  public function setForwardingRules($forwardingRules)
   {
-    $this->ipCidrRange = $ipCidrRange;
+    $this->forwardingRules = $forwardingRules;
   }
   /**
-   * @return string
+   * @return ForwardingRule[]
    */
-  public function getIpCidrRange()
+  public function getForwardingRules()
   {
-    return $this->ipCidrRange;
+    return $this->forwardingRules;
   }
   /**
    * @param string
@@ -89,46 +80,18 @@ class Subnet extends \Google\Model
   /**
    * @param string
    */
-  public function setState($state)
+  public function setUpdateTime($updateTime)
   {
-    $this->state = $state;
+    $this->updateTime = $updateTime;
   }
   /**
    * @return string
    */
-  public function getState()
+  public function getUpdateTime()
   {
-    return $this->state;
-  }
-  /**
-   * @param string
-   */
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  /**
-   * @return string
-   */
-  public function getType()
-  {
-    return $this->type;
-  }
-  /**
-   * @param int
-   */
-  public function setVlanId($vlanId)
-  {
-    $this->vlanId = $vlanId;
-  }
-  /**
-   * @return int
-   */
-  public function getVlanId()
-  {
-    return $this->vlanId;
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Subnet::class, 'Google_Service_VMwareEngine_Subnet');
+class_alias(DnsForwarding::class, 'Google_Service_VMwareEngine_DnsForwarding');
