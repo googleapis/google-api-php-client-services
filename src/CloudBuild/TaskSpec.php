@@ -34,6 +34,8 @@ class TaskSpec extends \Google\Collection
   protected $resultsDataType = 'array';
   protected $sidecarsType = Sidecar::class;
   protected $sidecarsDataType = 'array';
+  protected $stepTemplateType = StepTemplate::class;
+  protected $stepTemplateDataType = 'array';
   protected $stepsType = Step::class;
   protected $stepsDataType = 'array';
   protected $volumesType = VolumeSource::class;
@@ -110,6 +112,20 @@ class TaskSpec extends \Google\Collection
   public function getSidecars()
   {
     return $this->sidecars;
+  }
+  /**
+   * @param StepTemplate[]
+   */
+  public function setStepTemplate($stepTemplate)
+  {
+    $this->stepTemplate = $stepTemplate;
+  }
+  /**
+   * @return StepTemplate[]
+   */
+  public function getStepTemplate()
+  {
+    return $this->stepTemplate;
   }
   /**
    * @param Step[]

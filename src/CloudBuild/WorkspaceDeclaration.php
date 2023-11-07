@@ -34,6 +34,10 @@ class WorkspaceDeclaration extends \Google\Model
   /**
    * @var bool
    */
+  public $optional;
+  /**
+   * @var bool
+   */
   public $readOnly;
 
   /**
@@ -77,6 +81,20 @@ class WorkspaceDeclaration extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param bool
+   */
+  public function setOptional($optional)
+  {
+    $this->optional = $optional;
+  }
+  /**
+   * @return bool
+   */
+  public function getOptional()
+  {
+    return $this->optional;
   }
   /**
    * @param bool

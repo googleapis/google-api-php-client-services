@@ -38,6 +38,8 @@ class Sidecar extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $readinessProbeType = Probe::class;
+  protected $readinessProbeDataType = '';
   /**
    * @var string
    */
@@ -120,6 +122,20 @@ class Sidecar extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Probe
+   */
+  public function setReadinessProbe(Probe $readinessProbe)
+  {
+    $this->readinessProbe = $readinessProbe;
+  }
+  /**
+   * @return Probe
+   */
+  public function getReadinessProbe()
+  {
+    return $this->readinessProbe;
   }
   /**
    * @param string

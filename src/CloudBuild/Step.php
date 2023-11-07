@@ -42,6 +42,8 @@ class Step extends \Google\Collection
    * @var string
    */
   public $script;
+  protected $securityContextType = SecurityContext::class;
+  protected $securityContextDataType = '';
   /**
    * @var string
    */
@@ -136,6 +138,20 @@ class Step extends \Google\Collection
   public function getScript()
   {
     return $this->script;
+  }
+  /**
+   * @param SecurityContext
+   */
+  public function setSecurityContext(SecurityContext $securityContext)
+  {
+    $this->securityContext = $securityContext;
+  }
+  /**
+   * @return SecurityContext
+   */
+  public function getSecurityContext()
+  {
+    return $this->securityContext;
   }
   /**
    * @param string
