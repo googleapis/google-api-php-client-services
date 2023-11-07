@@ -62,7 +62,7 @@ class PlacesPhotos extends \Google\Service\Resource
    * @opt_param bool skipHttpRedirect Optional. If set, skip the default HTTP
    * redirect behavior and render a text format (for example, in JSON format for
    * HTTP use case) response. If not set, an HTTP redirect will be issued to
-   * redirect the call to the image midea. This option is ignored for non-HTTP
+   * redirect the call to the image media. This option is ignored for non-HTTP
    * requests.
    * @return GoogleMapsPlacesV1PhotoMedia
    */
