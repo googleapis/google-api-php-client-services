@@ -84,6 +84,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isDummyIntent;
+  /**
+   * @var bool
+   */
   public $isFeasible;
   /**
    * @var bool
@@ -454,6 +458,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIntentType()
   {
     return $this->intentType;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsDummyIntent($isDummyIntent)
+  {
+    $this->isDummyIntent = $isDummyIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsDummyIntent()
+  {
+    return $this->isDummyIntent;
   }
   /**
    * @param bool

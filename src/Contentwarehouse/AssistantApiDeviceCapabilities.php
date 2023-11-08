@@ -46,6 +46,8 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   protected $communicationUiCapabilitiesDataType = '';
   protected $contactLookupCapabilitiesType = AssistantApiContactLookupCapabilities::class;
   protected $contactLookupCapabilitiesDataType = '';
+  protected $dataValidateCapabilitiesType = AssistantApiDataValidateCapabilities::class;
+  protected $dataValidateCapabilitiesDataType = '';
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
   /**
@@ -260,6 +262,20 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
   public function getContactLookupCapabilities()
   {
     return $this->contactLookupCapabilities;
+  }
+  /**
+   * @param AssistantApiDataValidateCapabilities
+   */
+  public function setDataValidateCapabilities(AssistantApiDataValidateCapabilities $dataValidateCapabilities)
+  {
+    $this->dataValidateCapabilities = $dataValidateCapabilities;
+  }
+  /**
+   * @return AssistantApiDataValidateCapabilities
+   */
+  public function getDataValidateCapabilities()
+  {
+    return $this->dataValidateCapabilities;
   }
   /**
    * @param AssistantApiCoreTypesDeviceId

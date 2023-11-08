@@ -168,6 +168,8 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $siteQualityStddev;
+  protected $siteQualityStddevsType = QualityNsrVersionedFloatSignal::class;
+  protected $siteQualityStddevsDataType = 'array';
   /**
    * @var float
    */
@@ -754,6 +756,20 @@ class QualityNsrNsrData extends \Google\Collection
   public function getSiteQualityStddev()
   {
     return $this->siteQualityStddev;
+  }
+  /**
+   * @param QualityNsrVersionedFloatSignal[]
+   */
+  public function setSiteQualityStddevs($siteQualityStddevs)
+  {
+    $this->siteQualityStddevs = $siteQualityStddevs;
+  }
+  /**
+   * @return QualityNsrVersionedFloatSignal[]
+   */
+  public function getSiteQualityStddevs()
+  {
+    return $this->siteQualityStddevs;
   }
   /**
    * @param float

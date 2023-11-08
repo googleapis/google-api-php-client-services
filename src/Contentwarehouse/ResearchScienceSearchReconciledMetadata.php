@@ -140,6 +140,10 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
    */
   public $licenseDeprecated;
   /**
+   * @var bool
+   */
+  public $locationReconciledForName;
+  /**
    * @var string[]
    */
   public $measurementTechnique;
@@ -715,6 +719,20 @@ class ResearchScienceSearchReconciledMetadata extends \Google\Collection
   public function getLicenseDeprecated()
   {
     return $this->licenseDeprecated;
+  }
+  /**
+   * @param bool
+   */
+  public function setLocationReconciledForName($locationReconciledForName)
+  {
+    $this->locationReconciledForName = $locationReconciledForName;
+  }
+  /**
+   * @return bool
+   */
+  public function getLocationReconciledForName()
+  {
+    return $this->locationReconciledForName;
   }
   /**
    * @param string[]
