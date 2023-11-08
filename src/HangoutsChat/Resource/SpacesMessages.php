@@ -68,8 +68,7 @@ class SpacesMessages extends \Google\Service\Resource
    * instead. ID for the thread. Supports up to 4000 characters. To start or add
    * to a thread, create a message and specify a `threadKey` or the thread.name.
    * For example usage, see [Start or reply to a message thread](https://developer
-   * s.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_threa
-   * d).
+   * s.google.com/chat/api/guides/v1/messages/create#create-message-thread).
    * @return Message
    */
   public function create($parent, Message $postBody, $optParams = [])
