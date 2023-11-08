@@ -52,6 +52,8 @@ class Snapshot extends \Google\Collection
    * @var string
    */
   public $downloadBytes;
+  protected $guestOsFeaturesType = GuestOsFeature::class;
+  protected $guestOsFeaturesDataType = 'array';
   /**
    * @var string
    */
@@ -248,6 +250,20 @@ class Snapshot extends \Google\Collection
   public function getDownloadBytes()
   {
     return $this->downloadBytes;
+  }
+  /**
+   * @param GuestOsFeature[]
+   */
+  public function setGuestOsFeatures($guestOsFeatures)
+  {
+    $this->guestOsFeatures = $guestOsFeatures;
+  }
+  /**
+   * @return GuestOsFeature[]
+   */
+  public function getGuestOsFeatures()
+  {
+    return $this->guestOsFeatures;
   }
   /**
    * @param string

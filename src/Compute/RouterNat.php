@@ -87,6 +87,10 @@ class RouterNat extends \Google\Collection
    */
   public $tcpTransitoryIdleTimeoutSec;
   /**
+   * @var string
+   */
+  public $type;
+  /**
    * @var int
    */
   public $udpIdleTimeoutSec;
@@ -342,6 +346,20 @@ class RouterNat extends \Google\Collection
   public function getTcpTransitoryIdleTimeoutSec()
   {
     return $this->tcpTransitoryIdleTimeoutSec;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
   /**
    * @param int
