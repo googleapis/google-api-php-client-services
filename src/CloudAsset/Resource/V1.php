@@ -151,7 +151,7 @@ class V1 extends \Google\Service\Resource
    * organizations/organization_number/savedQueries/saved_query_id If both
    * `analysis_query` and `saved_analysis_query` are provided, they will be merged
    * together with the `saved_analysis_query` as base and the `analysis_query` as
-   * overrides. For more details of the merge behavior, please refer to the
+   * overrides. For more details of the merge behavior, refer to the
    * [MergeFrom](https://developers.google.com/protocol-
    * buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details)
    * page. Note that you cannot override primitive fields with default value, such
@@ -582,31 +582,30 @@ class V1 extends \Google\Service\Resource
    * its value is `prod`. * `labels.env:*` to find Google Cloud resources that
    * have a label `env`. * `tagKeys:env` to find Google Cloud resources that have
    * directly attached tags where the
-   * [`TagKey`](https://cloud.google.com/resource-
-   * manager/reference/rest/v3/tagKeys#resource:-tagkey) .`namespacedName`
-   * contains `env`. * `tagValues:prod*` to find Google Cloud resources that have
-   * directly attached tags where the
-   * [`TagValue`](https://cloud.google.com/resource-
-   * manager/reference/rest/v3/tagValues#resource:-tagvalue) .`namespacedName`
-   * contains a word prefixed by `prod`. * `tagValueIds=tagValues/123` to find
-   * Google Cloud resources that have directly attached tags where the
-   * [`TagValue`](https://cloud.google.com/resource-
-   * manager/reference/rest/v3/tagValues#resource:-tagvalue) .`name` is exactly
+   * [`TagKey.namespacedName`](https://cloud.google.com/resource-
+   * manager/reference/rest/v3/tagKeys#resource:-tagkey) contains `env`. *
+   * `tagValues:prod*` to find Google Cloud resources that have directly attached
+   * tags where the [`TagValue.namespacedName`](https://cloud.google.com/resource-
+   * manager/reference/rest/v3/tagValues#resource:-tagvalue) contains a word
+   * prefixed by `prod`. * `tagValueIds=tagValues/123` to find Google Cloud
+   * resources that have directly attached tags where the
+   * [`TagValue.name`](https://cloud.google.com/resource-
+   * manager/reference/rest/v3/tagValues#resource:-tagvalue) is exactly
    * `tagValues/123`. * `effectiveTagKeys:env` to find Google Cloud resources that
    * have directly attached or inherited tags where the
-   * [`TagKey`](https://cloud.google.com/resource-
-   * manager/reference/rest/v3/tagKeys#resource:-tagkey) .`namespacedName`
-   * contains `env`. * `effectiveTagValues:prod*` to find Google Cloud resources
-   * that have directly attached or inherited tags where the
-   * [`TagValue`](https://cloud.google.com/resource-
-   * manager/reference/rest/v3/tagValues#resource:-tagvalue) .`namespacedName`
-   * contains a word prefixed by `prod`. * `effectiveTagValueIds=tagValues/123` to
-   * find Google Cloud resources that have directly attached or inherited tags
-   * where the [`TagValue`](https://cloud.google.com/resource-
-   * manager/reference/rest/v3/tagValues#resource:-tagvalue) .`name` is exactly
+   * [`TagKey.namespacedName`](https://cloud.google.com/resource-
+   * manager/reference/rest/v3/tagKeys#resource:-tagkey) contains `env`. *
+   * `effectiveTagValues:prod*` to find Google Cloud resources that have directly
+   * attached or inherited tags where the
+   * [`TagValue.namespacedName`](https://cloud.google.com/resource-
+   * manager/reference/rest/v3/tagValues#resource:-tagvalue) contains a word
+   * prefixed by `prod`. * `effectiveTagValueIds=tagValues/123` to find Google
+   * Cloud resources that have directly attached or inherited tags where the
+   * [`TagValue.name`](https://cloud.google.com/resource-
+   * manager/reference/rest/v3/tagValues#resource:-tagvalue) is exactly
    * `tagValues/123`. * `kmsKey:key` to find Google Cloud resources encrypted with
    * a customer-managed encryption key whose name contains `key` as a word. This
-   * field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS key
+   * field is deprecated. Use the `kmsKeys` field to retrieve Cloud KMS key
    * information. * `kmsKeys:key` to find Google Cloud resources encrypted with
    * customer-managed encryption keys whose name contains the word `key`. *
    * `relationships:instance-group-1` to find Google Cloud resources that have
@@ -618,7 +617,7 @@ class V1 extends \Google\Service\Resource
    * Compute Engine instance group resource name, for relationship type
    * `INSTANCE_TO_INSTANCEGROUP`. * `sccSecurityMarks.key=value` to find Cloud
    * resources that are attached with security marks whose key is `key` and value
-   * is `value'. * `sccSecurityMarks.key:*` to find Cloud resources that are
+   * is `value`. * `sccSecurityMarks.key:*` to find Cloud resources that are
    * attached with security marks whose key is `key`. * `state:ACTIVE` to find
    * Google Cloud resources whose state contains `ACTIVE` as a word. * `NOT
    * state:ACTIVE` to find Google Cloud resources whose state doesn't contain
