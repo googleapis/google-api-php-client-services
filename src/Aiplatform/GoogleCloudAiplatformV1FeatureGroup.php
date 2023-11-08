@@ -17,9 +17,10 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Feature extends \Google\Collection
+class GoogleCloudAiplatformV1FeatureGroup extends \Google\Model
 {
-  protected $collection_key = 'monitoringStatsAnomalies';
+  protected $bigQueryType = GoogleCloudAiplatformV1FeatureGroupBigQuery::class;
+  protected $bigQueryDataType = '';
   /**
    * @var string
    */
@@ -29,10 +30,6 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
    */
   public $description;
   /**
-   * @var bool
-   */
-  public $disableMonitoring;
-  /**
    * @var string
    */
   public $etag;
@@ -40,8 +37,6 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  protected $monitoringStatsAnomaliesType = GoogleCloudAiplatformV1FeatureMonitoringStatsAnomaly::class;
-  protected $monitoringStatsAnomaliesDataType = 'array';
   /**
    * @var string
    */
@@ -50,15 +45,21 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
    * @var string
    */
   public $updateTime;
-  /**
-   * @var string
-   */
-  public $valueType;
-  /**
-   * @var string
-   */
-  public $versionColumnName;
 
+  /**
+   * @param GoogleCloudAiplatformV1FeatureGroupBigQuery
+   */
+  public function setBigQuery(GoogleCloudAiplatformV1FeatureGroupBigQuery $bigQuery)
+  {
+    $this->bigQuery = $bigQuery;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1FeatureGroupBigQuery
+   */
+  public function getBigQuery()
+  {
+    return $this->bigQuery;
+  }
   /**
    * @param string
    */
@@ -86,20 +87,6 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
-  }
-  /**
-   * @param bool
-   */
-  public function setDisableMonitoring($disableMonitoring)
-  {
-    $this->disableMonitoring = $disableMonitoring;
-  }
-  /**
-   * @return bool
-   */
-  public function getDisableMonitoring()
-  {
-    return $this->disableMonitoring;
   }
   /**
    * @param string
@@ -130,20 +117,6 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureMonitoringStatsAnomaly[]
-   */
-  public function setMonitoringStatsAnomalies($monitoringStatsAnomalies)
-  {
-    $this->monitoringStatsAnomalies = $monitoringStatsAnomalies;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1FeatureMonitoringStatsAnomaly[]
-   */
-  public function getMonitoringStatsAnomalies()
-  {
-    return $this->monitoringStatsAnomalies;
-  }
-  /**
    * @param string
    */
   public function setName($name)
@@ -171,35 +144,7 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
   {
     return $this->updateTime;
   }
-  /**
-   * @param string
-   */
-  public function setValueType($valueType)
-  {
-    $this->valueType = $valueType;
-  }
-  /**
-   * @return string
-   */
-  public function getValueType()
-  {
-    return $this->valueType;
-  }
-  /**
-   * @param string
-   */
-  public function setVersionColumnName($versionColumnName)
-  {
-    $this->versionColumnName = $versionColumnName;
-  }
-  /**
-   * @return string
-   */
-  public function getVersionColumnName()
-  {
-    return $this->versionColumnName;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Feature::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Feature');
+class_alias(GoogleCloudAiplatformV1FeatureGroup::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureGroup');

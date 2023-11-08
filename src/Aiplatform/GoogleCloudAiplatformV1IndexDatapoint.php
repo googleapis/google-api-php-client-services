@@ -30,6 +30,8 @@ class GoogleCloudAiplatformV1IndexDatapoint extends \Google\Collection
    * @var float[]
    */
   public $featureVector;
+  protected $numericRestrictsType = GoogleCloudAiplatformV1IndexDatapointNumericRestriction::class;
+  protected $numericRestrictsDataType = 'array';
   protected $restrictsType = GoogleCloudAiplatformV1IndexDatapointRestriction::class;
   protected $restrictsDataType = 'array';
 
@@ -74,6 +76,20 @@ class GoogleCloudAiplatformV1IndexDatapoint extends \Google\Collection
   public function getFeatureVector()
   {
     return $this->featureVector;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1IndexDatapointNumericRestriction[]
+   */
+  public function setNumericRestricts($numericRestricts)
+  {
+    $this->numericRestricts = $numericRestricts;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1IndexDatapointNumericRestriction[]
+   */
+  public function getNumericRestricts()
+  {
+    return $this->numericRestricts;
   }
   /**
    * @param GoogleCloudAiplatformV1IndexDatapointRestriction[]
