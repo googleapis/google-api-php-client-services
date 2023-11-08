@@ -64,8 +64,15 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @opt_param string productId Required. The ID to use for the subscription. For
    * the requirements on this format, see the documentation of the product_id
    * field on the Subscription resource.
-   * @opt_param string regionsVersion.version Required. The latest version is
-   * 2022/02.
+   * @opt_param string regionsVersion.version Required. A string representing the
+   * version of available regions being used for the specified resource. Regional
+   * prices for the resource have to be specified according to the information
+   * published in [this article](https://support.google.com/googleplay/android-
+   * developer/answer/10532353). Each time the supported locations substantially
+   * change, the version will be incremented. Using this field will ensure that
+   * creating and updating the resource with an older region's version and set of
+   * regional prices and currencies will succeed even though a new version is
+   * available. The latest version is 2022/02.
    * @return Subscription
    */
   public function create($packageName, Subscription $postBody, $optParams = [])
@@ -144,8 +151,15 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @param Subscription $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string regionsVersion.version Required. The latest version is
-   * 2022/02.
+   * @opt_param string regionsVersion.version Required. A string representing the
+   * version of available regions being used for the specified resource. Regional
+   * prices for the resource have to be specified according to the information
+   * published in [this article](https://support.google.com/googleplay/android-
+   * developer/answer/10532353). Each time the supported locations substantially
+   * change, the version will be incremented. Using this field will ensure that
+   * creating and updating the resource with an older region's version and set of
+   * regional prices and currencies will succeed even though a new version is
+   * available. The latest version is 2022/02.
    * @opt_param string updateMask Required. The list of fields to be updated.
    * @return Subscription
    */
