@@ -27,6 +27,10 @@ class ReleaseRenderEvent extends \Google\Model
    * @var string
    */
   public $release;
+  /**
+   * @var string
+   */
+  public $releaseRenderState;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class ReleaseRenderEvent extends \Google\Model
   public function getRelease()
   {
     return $this->release;
+  }
+  /**
+   * @param string
+   */
+  public function setReleaseRenderState($releaseRenderState)
+  {
+    $this->releaseRenderState = $releaseRenderState;
+  }
+  /**
+   * @return string
+   */
+  public function getReleaseRenderState()
+  {
+    return $this->releaseRenderState;
   }
 }
 
