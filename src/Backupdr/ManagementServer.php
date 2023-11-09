@@ -60,6 +60,10 @@ class ManagementServer extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  protected $workforceIdentityBasedManagementUriType = WorkforceIdentityBasedManagementURI::class;
+  protected $workforceIdentityBasedManagementUriDataType = '';
+  protected $workforceIdentityBasedOauth2ClientIdType = WorkforceIdentityBasedOAuth2ClientID::class;
+  protected $workforceIdentityBasedOauth2ClientIdDataType = '';
 
   /**
    * @param string
@@ -214,6 +218,34 @@ class ManagementServer extends \Google\Collection
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param WorkforceIdentityBasedManagementURI
+   */
+  public function setWorkforceIdentityBasedManagementUri(WorkforceIdentityBasedManagementURI $workforceIdentityBasedManagementUri)
+  {
+    $this->workforceIdentityBasedManagementUri = $workforceIdentityBasedManagementUri;
+  }
+  /**
+   * @return WorkforceIdentityBasedManagementURI
+   */
+  public function getWorkforceIdentityBasedManagementUri()
+  {
+    return $this->workforceIdentityBasedManagementUri;
+  }
+  /**
+   * @param WorkforceIdentityBasedOAuth2ClientID
+   */
+  public function setWorkforceIdentityBasedOauth2ClientId(WorkforceIdentityBasedOAuth2ClientID $workforceIdentityBasedOauth2ClientId)
+  {
+    $this->workforceIdentityBasedOauth2ClientId = $workforceIdentityBasedOauth2ClientId;
+  }
+  /**
+   * @return WorkforceIdentityBasedOAuth2ClientID
+   */
+  public function getWorkforceIdentityBasedOauth2ClientId()
+  {
+    return $this->workforceIdentityBasedOauth2ClientId;
   }
 }
 
