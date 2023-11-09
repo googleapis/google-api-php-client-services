@@ -17,44 +17,46 @@
 
 namespace Google\Service\PlayIntegrity;
 
-class EnvironmentDetails extends \Google\Model
+class AppAccessRiskVerdict extends \Google\Model
 {
-  protected $appAccessRiskVerdictType = AppAccessRiskVerdict::class;
-  protected $appAccessRiskVerdictDataType = '';
   /**
    * @var string
    */
-  public $playProtectVerdict;
+  public $otherApps;
+  /**
+   * @var string
+   */
+  public $playOrSystemApps;
 
-  /**
-   * @param AppAccessRiskVerdict
-   */
-  public function setAppAccessRiskVerdict(AppAccessRiskVerdict $appAccessRiskVerdict)
-  {
-    $this->appAccessRiskVerdict = $appAccessRiskVerdict;
-  }
-  /**
-   * @return AppAccessRiskVerdict
-   */
-  public function getAppAccessRiskVerdict()
-  {
-    return $this->appAccessRiskVerdict;
-  }
   /**
    * @param string
    */
-  public function setPlayProtectVerdict($playProtectVerdict)
+  public function setOtherApps($otherApps)
   {
-    $this->playProtectVerdict = $playProtectVerdict;
+    $this->otherApps = $otherApps;
   }
   /**
    * @return string
    */
-  public function getPlayProtectVerdict()
+  public function getOtherApps()
   {
-    return $this->playProtectVerdict;
+    return $this->otherApps;
+  }
+  /**
+   * @param string
+   */
+  public function setPlayOrSystemApps($playOrSystemApps)
+  {
+    $this->playOrSystemApps = $playOrSystemApps;
+  }
+  /**
+   * @return string
+   */
+  public function getPlayOrSystemApps()
+  {
+    return $this->playOrSystemApps;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EnvironmentDetails::class, 'Google_Service_PlayIntegrity_EnvironmentDetails');
+class_alias(AppAccessRiskVerdict::class, 'Google_Service_PlayIntegrity_AppAccessRiskVerdict');
