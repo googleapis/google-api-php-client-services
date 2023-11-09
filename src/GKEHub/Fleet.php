@@ -23,6 +23,8 @@ class Fleet extends \Google\Model
    * @var string
    */
   public $createTime;
+  protected $defaultClusterConfigType = DefaultClusterConfig::class;
+  protected $defaultClusterConfigDataType = '';
   /**
    * @var string
    */
@@ -63,6 +65,20 @@ class Fleet extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param DefaultClusterConfig
+   */
+  public function setDefaultClusterConfig(DefaultClusterConfig $defaultClusterConfig)
+  {
+    $this->defaultClusterConfig = $defaultClusterConfig;
+  }
+  /**
+   * @return DefaultClusterConfig
+   */
+  public function getDefaultClusterConfig()
+  {
+    return $this->defaultClusterConfig;
   }
   /**
    * @param string
