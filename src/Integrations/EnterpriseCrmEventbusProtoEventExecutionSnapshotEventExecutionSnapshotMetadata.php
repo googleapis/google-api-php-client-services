@@ -17,8 +17,17 @@
 
 namespace Google\Service\Integrations;
 
-class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata extends \Google\Model
+class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata extends \Google\Collection
 {
+  protected $collection_key = 'ancestorTaskNumbers';
+  /**
+   * @var string[]
+   */
+  public $ancestorIterationNumbers;
+  /**
+   * @var string[]
+   */
+  public $ancestorTaskNumbers;
   /**
    * @var int
    */
@@ -40,6 +49,34 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
    */
   public $taskNumber;
 
+  /**
+   * @param string[]
+   */
+  public function setAncestorIterationNumbers($ancestorIterationNumbers)
+  {
+    $this->ancestorIterationNumbers = $ancestorIterationNumbers;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAncestorIterationNumbers()
+  {
+    return $this->ancestorIterationNumbers;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAncestorTaskNumbers($ancestorTaskNumbers)
+  {
+    $this->ancestorTaskNumbers = $ancestorTaskNumbers;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAncestorTaskNumbers()
+  {
+    return $this->ancestorTaskNumbers;
+  }
   /**
    * @param int
    */
