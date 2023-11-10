@@ -32,6 +32,8 @@ class Attributes extends \Google\Collection
   public $brand;
   protected $capacityType = Capacity::class;
   protected $capacityDataType = '';
+  protected $certificationType = GoogleShoppingManufacturersV1ProductCertification::class;
+  protected $certificationDataType = 'array';
   /**
    * @var string
    */
@@ -218,6 +220,20 @@ class Attributes extends \Google\Collection
   public function getCapacity()
   {
     return $this->capacity;
+  }
+  /**
+   * @param GoogleShoppingManufacturersV1ProductCertification[]
+   */
+  public function setCertification($certification)
+  {
+    $this->certification = $certification;
+  }
+  /**
+   * @return GoogleShoppingManufacturersV1ProductCertification[]
+   */
+  public function getCertification()
+  {
+    return $this->certification;
   }
   /**
    * @param string
