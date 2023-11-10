@@ -125,6 +125,10 @@ class Instance extends \Google\Collection
    */
   public $reservedIpRange;
   /**
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * @var string
    */
   public $secondaryIpRange;
@@ -542,6 +546,20 @@ class Instance extends \Google\Collection
   public function getReservedIpRange()
   {
     return $this->reservedIpRange;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param string
