@@ -649,6 +649,16 @@ class DatabaseMigrationService extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'demoteDestination' => [
+              'path' => 'v1/{+name}:demoteDestination',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'generateSshScript' => [
               'path' => 'v1/{+migrationJob}:generateSshScript',
               'httpMethod' => 'POST',

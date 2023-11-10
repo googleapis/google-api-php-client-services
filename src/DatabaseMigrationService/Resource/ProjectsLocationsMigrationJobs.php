@@ -17,6 +17,7 @@
 
 namespace Google\Service\DatabaseMigrationService\Resource;
 
+use Google\Service\DatabaseMigrationService\DemoteDestinationRequest;
 use Google\Service\DatabaseMigrationService\GenerateSshScriptRequest;
 use Google\Service\DatabaseMigrationService\GenerateTcpProxyScriptRequest;
 use Google\Service\DatabaseMigrationService\ListMigrationJobsResponse;
@@ -89,6 +90,24 @@ class ProjectsLocationsMigrationJobs extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Demotes the destination database to become a read replica of the source. This
+   * is applicable for the following migrations: 1. MySQL to Cloud SQL (for MySQL)
+   * 2. PostgreSQL to Cloud SQL (for PostgreSQL) 3. PostgreSQL to AlloyDB.
+   * (migrationJobs.demoteDestination)
+   *
+   * @param string $name Name of the migration job resource to demote its
+   * destination.
+   * @param DemoteDestinationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function demoteDestination($name, DemoteDestinationRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('demoteDestination', [$params], Operation::class);
   }
   /**
    * Generate a SSH configuration script to configure the reverse SSH
