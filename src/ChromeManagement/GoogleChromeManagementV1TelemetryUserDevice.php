@@ -28,6 +28,8 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
    * @var string
    */
   public $deviceId;
+  protected $networkBandwidthReportType = GoogleChromeManagementV1NetworkBandwidthReport::class;
+  protected $networkBandwidthReportDataType = 'array';
   protected $peripheralsReportType = GoogleChromeManagementV1PeripheralsReport::class;
   protected $peripheralsReportDataType = 'array';
 
@@ -72,6 +74,20 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
   public function getDeviceId()
   {
     return $this->deviceId;
+  }
+  /**
+   * @param GoogleChromeManagementV1NetworkBandwidthReport[]
+   */
+  public function setNetworkBandwidthReport($networkBandwidthReport)
+  {
+    $this->networkBandwidthReport = $networkBandwidthReport;
+  }
+  /**
+   * @return GoogleChromeManagementV1NetworkBandwidthReport[]
+   */
+  public function getNetworkBandwidthReport()
+  {
+    return $this->networkBandwidthReport;
   }
   /**
    * @param GoogleChromeManagementV1PeripheralsReport[]
