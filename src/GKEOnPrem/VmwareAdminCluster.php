@@ -27,6 +27,8 @@ class VmwareAdminCluster extends \Google\Model
   public $annotations;
   protected $antiAffinityGroupsType = VmwareAAGConfig::class;
   protected $antiAffinityGroupsDataType = '';
+  protected $authorizationType = VmwareAdminAuthorizationConfig::class;
+  protected $authorizationDataType = '';
   protected $autoRepairConfigType = VmwareAutoRepairConfig::class;
   protected $autoRepairConfigDataType = '';
   /**
@@ -139,6 +141,20 @@ class VmwareAdminCluster extends \Google\Model
   public function getAntiAffinityGroups()
   {
     return $this->antiAffinityGroups;
+  }
+  /**
+   * @param VmwareAdminAuthorizationConfig
+   */
+  public function setAuthorization(VmwareAdminAuthorizationConfig $authorization)
+  {
+    $this->authorization = $authorization;
+  }
+  /**
+   * @return VmwareAdminAuthorizationConfig
+   */
+  public function getAuthorization()
+  {
+    return $this->authorization;
   }
   /**
    * @param VmwareAutoRepairConfig
