@@ -151,6 +151,10 @@ class DatabaseInstance extends \Google\Collection
   /**
    * @var string
    */
+  public $sqlNetworkArchitecture;
+  /**
+   * @var string
+   */
   public $state;
   /**
    * @var string[]
@@ -678,6 +682,20 @@ class DatabaseInstance extends \Google\Collection
   public function getSettings()
   {
     return $this->settings;
+  }
+  /**
+   * @param string
+   */
+  public function setSqlNetworkArchitecture($sqlNetworkArchitecture)
+  {
+    $this->sqlNetworkArchitecture = $sqlNetworkArchitecture;
+  }
+  /**
+   * @return string
+   */
+  public function getSqlNetworkArchitecture()
+  {
+    return $this->sqlNetworkArchitecture;
   }
   /**
    * @param string
