@@ -1438,7 +1438,27 @@ class Aiplatform extends \Google\Service
         'endpoints',
         [
           'methods' => [
-            'create' => [
+            'computeTokens' => [
+              'path' => 'v1/{+endpoint}:computeTokens',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'countTokens' => [
+              'path' => 'v1/{+endpoint}:countTokens',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/endpoints',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -5349,7 +5369,27 @@ class Aiplatform extends \Google\Service
         'models',
         [
           'methods' => [
-            'predict' => [
+            'computeTokens' => [
+              'path' => 'v1/{+endpoint}:computeTokens',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'countTokens' => [
+              'path' => 'v1/{+endpoint}:countTokens',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'predict' => [
               'path' => 'v1/{+endpoint}:predict',
               'httpMethod' => 'POST',
               'parameters' => [

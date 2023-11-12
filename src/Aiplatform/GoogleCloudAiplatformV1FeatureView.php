@@ -45,8 +45,6 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
    * @var string
    */
   public $updateTime;
-  protected $vectorSearchConfigType = GoogleCloudAiplatformV1FeatureViewVectorSearchConfig::class;
-  protected $vectorSearchConfigDataType = '';
 
   /**
    * @param GoogleCloudAiplatformV1FeatureViewBigQuerySource
@@ -159,20 +157,6 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
-  }
-  /**
-   * @param GoogleCloudAiplatformV1FeatureViewVectorSearchConfig
-   */
-  public function setVectorSearchConfig(GoogleCloudAiplatformV1FeatureViewVectorSearchConfig $vectorSearchConfig)
-  {
-    $this->vectorSearchConfig = $vectorSearchConfig;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1FeatureViewVectorSearchConfig
-   */
-  public function getVectorSearchConfig()
-  {
-    return $this->vectorSearchConfig;
   }
 }
 

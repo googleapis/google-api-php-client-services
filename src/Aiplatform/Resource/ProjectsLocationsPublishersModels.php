@@ -18,6 +18,10 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleApiHttpBody;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1ComputeTokensRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1ComputeTokensResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PredictRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PredictResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RawPredictRequest;
@@ -34,6 +38,37 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1StreamingPredictResponse;
  */
 class ProjectsLocationsPublishersModels extends \Google\Service\Resource
 {
+  /**
+   * Return a list of tokens based on the input text. (models.computeTokens)
+   *
+   * @param string $endpoint Required. The name of the Endpoint requested to get
+   * lists of tokens and token ids.
+   * @param GoogleCloudAiplatformV1ComputeTokensRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1ComputeTokensResponse
+   */
+  public function computeTokens($endpoint, GoogleCloudAiplatformV1ComputeTokensRequest $postBody, $optParams = [])
+  {
+    $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('computeTokens', [$params], GoogleCloudAiplatformV1ComputeTokensResponse::class);
+  }
+  /**
+   * Perform a token counting. (models.countTokens)
+   *
+   * @param string $endpoint Required. The name of the Endpoint requested to
+   * perform token counting. Format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * @param GoogleCloudAiplatformV1CountTokensRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1CountTokensResponse
+   */
+  public function countTokens($endpoint, GoogleCloudAiplatformV1CountTokensRequest $postBody, $optParams = [])
+  {
+    $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('countTokens', [$params], GoogleCloudAiplatformV1CountTokensResponse::class);
+  }
   /**
    * Perform an online prediction. (models.predict)
    *

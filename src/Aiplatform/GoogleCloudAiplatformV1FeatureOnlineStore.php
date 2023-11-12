@@ -25,10 +25,6 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
    * @var string
    */
   public $createTime;
-  protected $dedicatedServingEndpointType = GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint::class;
-  protected $dedicatedServingEndpointDataType = '';
-  protected $embeddingManagementType = GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement::class;
-  protected $embeddingManagementDataType = '';
   /**
    * @var string
    */
@@ -77,34 +73,6 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
-  }
-  /**
-   * @param GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint
-   */
-  public function setDedicatedServingEndpoint(GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint $dedicatedServingEndpoint)
-  {
-    $this->dedicatedServingEndpoint = $dedicatedServingEndpoint;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint
-   */
-  public function getDedicatedServingEndpoint()
-  {
-    return $this->dedicatedServingEndpoint;
-  }
-  /**
-   * @param GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement
-   */
-  public function setEmbeddingManagement(GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement $embeddingManagement)
-  {
-    $this->embeddingManagement = $embeddingManagement;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1FeatureOnlineStoreEmbeddingManagement
-   */
-  public function getEmbeddingManagement()
-  {
-    return $this->embeddingManagement;
   }
   /**
    * @param string
