@@ -52,8 +52,7 @@ class OrganizationsLocationsWorkloads extends \Google\Service\Resource
    * @opt_param string assetTypes Optional. List of asset types to be analyzed,
    * including and under the source resource. If empty, all assets are analyzed.
    * The complete list of asset types is available
-   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#searchable_asset_types).
+   * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
    * @opt_param int pageSize Optional. Page size. If a value is not specified, the
    * default value of 10 is used.
    * @opt_param string pageToken Optional. The page token from the previous
