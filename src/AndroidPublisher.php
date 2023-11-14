@@ -871,7 +871,22 @@ class AndroidPublisher extends \Google\Service
         'tracks',
         [
           'methods' => [
-            'get' => [
+            'create' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'editId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'androidpublisher/v3/applications/{packageName}/edits/{editId}/tracks/{track}',
               'httpMethod' => 'GET',
               'parameters' => [

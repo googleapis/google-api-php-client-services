@@ -18,6 +18,7 @@
 namespace Google\Service\AndroidPublisher\Resource;
 
 use Google\Service\AndroidPublisher\Track;
+use Google\Service\AndroidPublisher\TrackConfig;
 use Google\Service\AndroidPublisher\TracksListResponse;
 
 /**
@@ -30,6 +31,21 @@ use Google\Service\AndroidPublisher\TracksListResponse;
  */
 class EditsTracks extends \Google\Service\Resource
 {
+  /**
+   * Creates a new track. (tracks.create)
+   *
+   * @param string $packageName Required. Package name of the app.
+   * @param string $editId Required. Identifier of the edit.
+   * @param TrackConfig $postBody
+   * @param array $optParams Optional parameters.
+   * @return Track
+   */
+  public function create($packageName, $editId, TrackConfig $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'editId' => $editId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Track::class);
+  }
   /**
    * Gets a track. (tracks.get)
    *
