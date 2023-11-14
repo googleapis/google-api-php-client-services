@@ -17,11 +17,14 @@
 
 namespace Google\Service\AnalyticsHub\Resource;
 
+use Google\Service\AnalyticsHub\GetIamPolicyRequest;
 use Google\Service\AnalyticsHub\ListSubscriptionsResponse;
 use Google\Service\AnalyticsHub\Operation;
+use Google\Service\AnalyticsHub\Policy;
 use Google\Service\AnalyticsHub\RefreshSubscriptionRequest;
 use Google\Service\AnalyticsHub\RevokeSubscriptionRequest;
 use Google\Service\AnalyticsHub\RevokeSubscriptionResponse;
+use Google\Service\AnalyticsHub\SetIamPolicyRequest;
 use Google\Service\AnalyticsHub\Subscription;
 
 /**
@@ -61,6 +64,23 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Subscription::class);
+  }
+  /**
+   * Gets the IAM policy. (subscriptions.getIamPolicy)
+   *
+   * @param string $resource REQUIRED: The resource for which the policy is being
+   * requested. See [Resource
+   * names](https://cloud.google.com/apis/design/resource_names) for the
+   * appropriate value for this field.
+   * @param GetIamPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Policy
+   */
+  public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
+  {
+    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
    * Lists all subscriptions in a given project and location.
@@ -114,6 +134,23 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('revoke', [$params], RevokeSubscriptionResponse::class);
+  }
+  /**
+   * Sets the IAM policy. (subscriptions.setIamPolicy)
+   *
+   * @param string $resource REQUIRED: The resource for which the policy is being
+   * specified. See [Resource
+   * names](https://cloud.google.com/apis/design/resource_names) for the
+   * appropriate value for this field.
+   * @param SetIamPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Policy
+   */
+  public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
+  {
+    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setIamPolicy', [$params], Policy::class);
   }
 }
 
