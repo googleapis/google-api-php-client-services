@@ -18,6 +18,7 @@
 namespace Google\Service\SecurityCommandCenter\Resource;
 
 use Google\Service\SecurityCommandCenter\ListValuedResourcesResponse;
+use Google\Service\SecurityCommandCenter\ValuedResource;
 
 /**
  * The "valuedResources" collection of methods.
@@ -29,6 +30,21 @@ use Google\Service\SecurityCommandCenter\ListValuedResourcesResponse;
  */
 class OrganizationsSimulationsValuedResources extends \Google\Service\Resource
 {
+  /**
+   * Get the valued resource by name (valuedResources.get)
+   *
+   * @param string $name Required. The name of this valued resource Valid format:
+   * "organizations/{organization}/simulations/{simulation}/valuedResources/{value
+   * d_resource}"
+   * @param array $optParams Optional parameters.
+   * @return ValuedResource
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], ValuedResource::class);
+  }
   /**
    * Lists the valued resources for a set of simulation results and filter.
    * (valuedResources.listOrganizationsSimulationsValuedResources)

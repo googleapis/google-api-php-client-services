@@ -1667,7 +1667,17 @@ class SecurityCommandCenter extends \Google\Service
         'valuedResources',
         [
           'methods' => [
-            'list' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
               'path' => 'v1/{+parent}/valuedResources',
               'httpMethod' => 'GET',
               'parameters' => [
