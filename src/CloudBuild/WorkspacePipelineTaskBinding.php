@@ -26,6 +26,10 @@ class WorkspacePipelineTaskBinding extends \Google\Model
   /**
    * @var string
    */
+  public $subPath;
+  /**
+   * @var string
+   */
   public $workspace;
 
   /**
@@ -41,6 +45,20 @@ class WorkspacePipelineTaskBinding extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setSubPath($subPath)
+  {
+    $this->subPath = $subPath;
+  }
+  /**
+   * @return string
+   */
+  public function getSubPath()
+  {
+    return $this->subPath;
   }
   /**
    * @param string

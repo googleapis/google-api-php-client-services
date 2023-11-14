@@ -43,6 +43,10 @@ class PipelineRun extends \Google\Collection
   /**
    * @var string
    */
+  public $finallyStartTime;
+  /**
+   * @var string
+   */
   public $name;
   protected $paramsType = Param::class;
   protected $paramsDataType = 'array';
@@ -170,6 +174,20 @@ class PipelineRun extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param string
+   */
+  public function setFinallyStartTime($finallyStartTime)
+  {
+    $this->finallyStartTime = $finallyStartTime;
+  }
+  /**
+   * @return string
+   */
+  public function getFinallyStartTime()
+  {
+    return $this->finallyStartTime;
   }
   /**
    * @param string
