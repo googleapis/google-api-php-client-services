@@ -60,6 +60,8 @@ class NodePool extends \Google\Collection
    * @var int
    */
   public $podIpv4CidrSize;
+  protected $queuedProvisioningType = QueuedProvisioning::class;
+  protected $queuedProvisioningDataType = '';
   /**
    * @var string
    */
@@ -276,6 +278,20 @@ class NodePool extends \Google\Collection
   public function getPodIpv4CidrSize()
   {
     return $this->podIpv4CidrSize;
+  }
+  /**
+   * @param QueuedProvisioning
+   */
+  public function setQueuedProvisioning(QueuedProvisioning $queuedProvisioning)
+  {
+    $this->queuedProvisioning = $queuedProvisioning;
+  }
+  /**
+   * @return QueuedProvisioning
+   */
+  public function getQueuedProvisioning()
+  {
+    return $this->queuedProvisioning;
   }
   /**
    * @param string
