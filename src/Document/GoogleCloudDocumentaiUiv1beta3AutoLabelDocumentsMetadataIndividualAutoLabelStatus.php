@@ -21,10 +21,6 @@ class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabe
 {
   protected $documentIdType = GoogleCloudDocumentaiUiv1beta3DocumentId::class;
   protected $documentIdDataType = '';
-  /**
-   * @var string
-   */
-  public $gcsUri;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 
@@ -41,20 +37,6 @@ class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabe
   public function getDocumentId()
   {
     return $this->documentId;
-  }
-  /**
-   * @param string
-   */
-  public function setGcsUri($gcsUri)
-  {
-    $this->gcsUri = $gcsUri;
-  }
-  /**
-   * @return string
-   */
-  public function getGcsUri()
-  {
-    return $this->gcsUri;
   }
   /**
    * @param GoogleRpcStatus
