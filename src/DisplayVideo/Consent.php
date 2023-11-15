@@ -17,45 +17,46 @@
 
 namespace Google\Service\DisplayVideo;
 
-class MobileDeviceIdList extends \Google\Collection
+class Consent extends \Google\Model
 {
-  protected $collection_key = 'mobileDeviceIds';
-  protected $consentType = Consent::class;
-  protected $consentDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $mobileDeviceIds;
+  public $adPersonalization;
+  /**
+   * @var string
+   */
+  public $adUserData;
 
   /**
-   * @param Consent
+   * @param string
    */
-  public function setConsent(Consent $consent)
+  public function setAdPersonalization($adPersonalization)
   {
-    $this->consent = $consent;
+    $this->adPersonalization = $adPersonalization;
   }
   /**
-   * @return Consent
+   * @return string
    */
-  public function getConsent()
+  public function getAdPersonalization()
   {
-    return $this->consent;
+    return $this->adPersonalization;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setMobileDeviceIds($mobileDeviceIds)
+  public function setAdUserData($adUserData)
   {
-    $this->mobileDeviceIds = $mobileDeviceIds;
+    $this->adUserData = $adUserData;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getMobileDeviceIds()
+  public function getAdUserData()
   {
-    return $this->mobileDeviceIds;
+    return $this->adUserData;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MobileDeviceIdList::class, 'Google_Service_DisplayVideo_MobileDeviceIdList');
+class_alias(Consent::class, 'Google_Service_DisplayVideo_Consent');
