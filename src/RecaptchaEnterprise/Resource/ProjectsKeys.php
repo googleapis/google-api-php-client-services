@@ -134,7 +134,7 @@ class ProjectsKeys extends \Google\Service\Resource
   /**
    * Updates the specified key. (keys.patch)
    *
-   * @param string $name The resource name for the Key in the format
+   * @param string $name Identifier. The resource name for the Key in the format
    * `projects/{project}/keys/{key}`.
    * @param GoogleCloudRecaptchaenterpriseV1Key $postBody
    * @param array $optParams Optional parameters.

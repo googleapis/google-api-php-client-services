@@ -99,8 +99,8 @@ class ProjectsFirewallpolicies extends \Google\Service\Resource
   /**
    * Updates the specified firewall policy. (firewallpolicies.patch)
    *
-   * @param string $name The resource name for the FirewallPolicy in the format
-   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
+   * @param string $name Identifier. The resource name for the FirewallPolicy in
+   * the format `projects/{project}/firewallpolicies/{firewallpolicy}`.
    * @param GoogleCloudRecaptchaenterpriseV1FirewallPolicy $postBody
    * @param array $optParams Optional parameters.
    *
