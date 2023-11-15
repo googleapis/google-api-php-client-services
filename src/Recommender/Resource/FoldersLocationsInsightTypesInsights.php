@@ -66,11 +66,14 @@ class FoldersLocationsInsightTypesInsights extends \Google\Service\Resource
    *
    * @opt_param string filter Optional. Filter expression to restrict the insights
    * returned. Supported filter fields: * `stateInfo.state` * `insightSubtype` *
-   * `severity` Examples: * `stateInfo.state = ACTIVE OR stateInfo.state =
-   * DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR
-   * severity = HIGH` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR
-   * severity = HIGH)` (These expressions are based on the filter language
-   * described at https://google.aip.dev/160)
+   * `severity` * `targetResources` Examples: * `stateInfo.state = ACTIVE OR
+   * stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` *
+   * `severity = CRITICAL OR severity = HIGH` * `targetResources :
+   * //compute.googleapis.com/projects/1234/zones/us-
+   * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity =
+   * CRITICAL OR severity = HIGH)` The max allowed filter length is 500
+   * characters. (These expressions are based on the filter language described at
+   * https://google.aip.dev/160)
    * @opt_param int pageSize Optional. The maximum number of results to return
    * from this request. Non-positive values are ignored. If not specified, the
    * server will determine the number of results to return.
