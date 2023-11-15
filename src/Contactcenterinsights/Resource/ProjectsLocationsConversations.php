@@ -56,8 +56,8 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * Deletes multiple conversations in a single request.
    * (conversations.bulkDelete)
    *
-   * @param string $parent Required. The parent resource to create analyses in.
-   * Format: projects/{project}/locations/{location}
+   * @param string $parent Required. The parent resource to delete conversations
+   * from. Format: projects/{project}/locations/{location}
    * @param GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
