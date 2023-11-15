@@ -264,8 +264,8 @@ class V1 extends \Google\Service\Resource
    * compute.skipDefaultNetworkCreation * compute.requireOsLogin *
    * compute.disableNestedVirtualization This RPC only returns either resources of
    * types supported by [searchable asset types](https://cloud.google.com/asset-
-   * inventory/docs/supported-asset-types#searchable_asset_types), or IAM
-   * policies. (v1.analyzeOrgPolicyGovernedAssets)
+   * inventory/docs/supported-asset-types), or IAM policies.
+   * (v1.analyzeOrgPolicyGovernedAssets)
    *
    * @param string $scope Required. The organization to scope the request. Only
    * organization policies within the scope will be analyzed. The output assets
@@ -458,15 +458,14 @@ class V1 extends \Google\Service\Resource
    * @opt_param string assetTypes Optional. A list of asset types that the IAM
    * policies are attached to. If empty, it will search the IAM policies that are
    * attached to all the [searchable asset types](https://cloud.google.com/asset-
-   * inventory/docs/supported-asset-types#searchable_asset_types). Regular
-   * expressions are also supported. For example: * "compute.googleapis.com.*"
-   * snapshots IAM policies attached to asset type starts with
-   * "compute.googleapis.com". * ".*Instance" snapshots IAM policies attached to
-   * asset type ends with "Instance". * ".*Instance.*" snapshots IAM policies
-   * attached to asset type contains "Instance". See
-   * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
-   * expression syntax. If the regular expression does not match any supported
-   * asset type, an INVALID_ARGUMENT error will be returned.
+   * inventory/docs/supported-asset-types). Regular expressions are also
+   * supported. For example: * "compute.googleapis.com.*" snapshots IAM policies
+   * attached to asset type starts with "compute.googleapis.com". * ".*Instance"
+   * snapshots IAM policies attached to asset type ends with "Instance". *
+   * ".*Instance.*" snapshots IAM policies attached to asset type contains
+   * "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for all
+   * supported regular expression syntax. If the regular expression does not match
+   * any supported asset type, an INVALID_ARGUMENT error will be returned.
    * @opt_param string orderBy Optional. A comma-separated list of fields
    * specifying the sorting order of the results. The default order is ascending.
    * Add " DESC" after the field name to indicate descending order. Redundant
@@ -542,15 +541,14 @@ class V1 extends \Google\Service\Resource
    *
    * @opt_param string assetTypes Optional. A list of asset types that this
    * request searches for. If empty, it will search all the [searchable asset
-   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types#searchable_asset_types). Regular expressions are also supported. For
-   * example: * "compute.googleapis.com.*" snapshots resources whose asset type
-   * starts with "compute.googleapis.com". * ".*Instance" snapshots resources
-   * whose asset type ends with "Instance". * ".*Instance.*" snapshots resources
-   * whose asset type contains "Instance". See
-   * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular
-   * expression syntax. If the regular expression does not match any supported
-   * asset type, an INVALID_ARGUMENT error will be returned.
+   * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
+   * Regular expressions are also supported. For example: *
+   * "compute.googleapis.com.*" snapshots resources whose asset type starts with
+   * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type
+   * ends with "Instance". * ".*Instance.*" snapshots resources whose asset type
+   * contains "Instance". See [RE2](https://github.com/google/re2/wiki/Syntax) for
+   * all supported regular expression syntax. If the regular expression does not
+   * match any supported asset type, an INVALID_ARGUMENT error will be returned.
    * @opt_param string orderBy Optional. A comma-separated list of fields
    * specifying the sorting order of the results. The default order is ascending.
    * Add " DESC" after the field name to indicate descending order. Redundant
