@@ -38,6 +38,10 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var string
+   */
+  public $industryVertical;
   protected $mediaRecommendationEngineConfigType = GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig::class;
   protected $mediaRecommendationEngineConfigDataType = '';
   /**
@@ -142,6 +146,20 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param string
+   */
+  public function setIndustryVertical($industryVertical)
+  {
+    $this->industryVertical = $industryVertical;
+  }
+  /**
+   * @return string
+   */
+  public function getIndustryVertical()
+  {
+    return $this->industryVertical;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig

@@ -26,6 +26,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var string
    */
   public $branch;
+  /**
+   * @var string
+   */
+  public $canonicalFilter;
   protected $contentSearchSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec::class;
   protected $contentSearchSpecDataType = '';
   protected $embeddingSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec::class;
@@ -112,6 +116,20 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   public function getBranch()
   {
     return $this->branch;
+  }
+  /**
+   * @param string
+   */
+  public function setCanonicalFilter($canonicalFilter)
+  {
+    $this->canonicalFilter = $canonicalFilter;
+  }
+  /**
+   * @return string
+   */
+  public function getCanonicalFilter()
+  {
+    return $this->canonicalFilter;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec
