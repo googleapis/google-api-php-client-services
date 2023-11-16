@@ -39,6 +39,7 @@ use Google\Service\Dataform\ReadFileResponse;
 use Google\Service\Dataform\RemoveDirectoryRequest;
 use Google\Service\Dataform\RemoveFileRequest;
 use Google\Service\Dataform\ResetWorkspaceChangesRequest;
+use Google\Service\Dataform\SearchFilesResponse;
 use Google\Service\Dataform\SetIamPolicyRequest;
 use Google\Service\Dataform\TestIamPermissionsRequest;
 use Google\Service\Dataform\TestIamPermissionsResponse;
@@ -392,6 +393,31 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('reset', [$params], DataformEmpty::class);
+  }
+  /**
+   * Finds the contents of a given Workspace directory by filter.
+   * (workspaces.searchFiles)
+   *
+   * @param string $workspace Required. The workspace's name.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Optional filter for the returned list in
+   * go/filtering format. Filtering is only currently supported on the `path`
+   * field.
+   * @opt_param int pageSize Optional. Maximum number of search results to return.
+   * The server may return fewer items than requested. If unspecified, the server
+   * will pick an appropriate default.
+   * @opt_param string pageToken Optional. Page token received from a previous
+   * `SearchFilesRequest` call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to `SearchFilesRequest` must match
+   * the call that provided the page token.
+   * @return SearchFilesResponse
+   */
+  public function searchFiles($workspace, $optParams = [])
+  {
+    $params = ['workspace' => $workspace];
+    $params = array_merge($params, $optParams);
+    return $this->call('searchFiles', [$params], SearchFilesResponse::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

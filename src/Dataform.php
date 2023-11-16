@@ -934,6 +934,28 @@ class Dataform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'searchFiles' => [
+              'path' => 'v1beta1/{+workspace}:searchFiles',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'workspace' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'v1beta1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
