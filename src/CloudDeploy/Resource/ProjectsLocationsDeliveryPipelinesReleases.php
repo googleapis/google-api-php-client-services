@@ -36,9 +36,9 @@ class ProjectsLocationsDeliveryPipelinesReleases extends \Google\Service\Resourc
   /**
    * Abandons a Release in the Delivery Pipeline. (releases.abandon)
    *
-   * @param string $name Required. Name of the Release. Format is
-   * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}.
+   * @param string $name Required. Name of the Release. Format is `projects/{proje
+   * ct}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{relea
+   * se}`.
    * @param AbandonReleaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AbandonReleaseResponse
@@ -53,8 +53,8 @@ class ProjectsLocationsDeliveryPipelinesReleases extends \Google\Service\Resourc
    * Creates a new Release in a given project and location. (releases.create)
    *
    * @param string $parent Required. The parent collection in which the `Release`
-   * should be created. Format should be projects/{project_id}/locations/{location
-   * _name}/deliveryPipelines/{pipeline_name}.
+   * should be created. Format should be `projects/{project_id}/locations/{locatio
+   * n_name}/deliveryPipelines/{pipeline_name}`.
    * @param Release $postBody
    * @param array $optParams Optional parameters.
    *
@@ -84,9 +84,9 @@ class ProjectsLocationsDeliveryPipelinesReleases extends \Google\Service\Resourc
   /**
    * Gets details of a single Release. (releases.get)
    *
-   * @param string $name Required. Name of the `Release`. Format must be projects/
-   * {project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/rele
-   * ases/{release_name}.
+   * @param string $name Required. Name of the `Release`. Format must be `projects
+   * /{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/rel
+   * eases/{release_name}`.
    * @param array $optParams Optional parameters.
    * @return Release
    */

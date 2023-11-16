@@ -38,9 +38,9 @@ class ProjectsLocationsDeliveryPipelinesAutomationRuns extends \Google\Service\R
    * state `IN_PROGRESS` and `PENDING`; AutomationRun in a different state returns
    * an `FAILED_PRECONDITION` error. (automationRuns.cancel)
    *
-   * @param string $name Required. Name of the `AutomationRun`. Format is projects
-   * /{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automat
-   * ionRuns/{automation_run}.
+   * @param string $name Required. Name of the `AutomationRun`. Format is `project
+   * s/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automa
+   * tionRuns/{automation_run}`.
    * @param CancelAutomationRunRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CancelAutomationRunResponse
@@ -54,9 +54,9 @@ class ProjectsLocationsDeliveryPipelinesAutomationRuns extends \Google\Service\R
   /**
    * Gets details of a single AutomationRun. (automationRuns.get)
    *
-   * @param string $name Required. Name of the `AutomationRun`. Format must be pro
-   * jects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/au
-   * tomationRuns/{automation_run}.
+   * @param string $name Required. Name of the `AutomationRun`. Format must be `pr
+   * ojects/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/a
+   * utomationRuns/{automation_run}`.
    * @param array $optParams Optional parameters.
    * @return AutomationRun
    */
@@ -71,8 +71,8 @@ class ProjectsLocationsDeliveryPipelinesAutomationRuns extends \Google\Service\R
    * (automationRuns.listProjectsLocationsDeliveryPipelinesAutomationRuns)
    *
    * @param string $parent Required. The parent, which owns this collection of
-   * automationRuns. Format must be projects/{project}/locations/{location}/delive
-   * ryPipelines/{delivery_pipeline}.
+   * automationRuns. Format must be `projects/{project}/locations/{location}/deliv
+   * eryPipelines/{delivery_pipeline}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Filter automationRuns to be returned. All fields can

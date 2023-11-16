@@ -44,9 +44,9 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
   /**
    * Advances a Rollout in a given project and location. (rollouts.advance)
    *
-   * @param string $name Required. Name of the Rollout. Format is
-   * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/{rollout}.
+   * @param string $name Required. Name of the Rollout. Format is `projects/{proje
+   * ct}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{relea
+   * se}/rollouts/{rollout}`.
    * @param AdvanceRolloutRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AdvanceRolloutResponse
@@ -60,9 +60,9 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
   /**
    * Approves a Rollout. (rollouts.approve)
    *
-   * @param string $name Required. Name of the Rollout. Format is
-   * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/{rollout}.
+   * @param string $name Required. Name of the Rollout. Format is `projects/{proje
+   * ct}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{relea
+   * se}/rollouts/{rollout}`.
    * @param ApproveRolloutRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ApproveRolloutResponse
@@ -76,9 +76,9 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
   /**
    * Cancels a Rollout in a given project and location. (rollouts.cancel)
    *
-   * @param string $name Required. Name of the Rollout. Format is
-   * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/{rollout}.
+   * @param string $name Required. Name of the Rollout. Format is `projects/{proje
+   * ct}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{relea
+   * se}/rollouts/{rollout}`.
    * @param CancelRolloutRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CancelRolloutResponse
@@ -93,8 +93,8 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * Creates a new Rollout in a given project and location. (rollouts.create)
    *
    * @param string $parent Required. The parent collection in which the `Rollout`
-   * should be created. Format should be projects/{project_id}/locations/{location
-   * _name}/deliveryPipelines/{pipeline_name}/releases/{release_name}.
+   * should be created. Format should be `projects/{project_id}/locations/{locatio
+   * n_name}/deliveryPipelines/{pipeline_name}/releases/{release_name}`.
    * @param Rollout $postBody
    * @param array $optParams Optional parameters.
    *
@@ -126,9 +126,9 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
   /**
    * Gets details of a single Rollout. (rollouts.get)
    *
-   * @param string $name Required. Name of the `Rollout`. Format must be projects/
-   * {project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/rele
-   * ases/{release_name}/rollouts/{rollout_name}.
+   * @param string $name Required. Name of the `Rollout`. Format must be `projects
+   * /{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/rel
+   * eases/{release_name}/rollouts/{rollout_name}`.
    * @param array $optParams Optional parameters.
    * @return Rollout
    */
@@ -141,9 +141,9 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
   /**
    * Ignores the specified Job in a Rollout. (rollouts.ignoreJob)
    *
-   * @param string $rollout Required. Name of the Rollout. Format is
-   * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/{rollout}.
+   * @param string $rollout Required. Name of the Rollout. Format is `projects/{pr
+   * oject}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{re
+   * lease}/rollouts/{rollout}`.
    * @param IgnoreJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return IgnoreJobResponse
@@ -185,9 +185,9 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
   /**
    * Retries the specified Job in a Rollout. (rollouts.retryJob)
    *
-   * @param string $rollout Required. Name of the Rollout. Format is
-   * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
-   * releases/{release}/rollouts/{rollout}.
+   * @param string $rollout Required. Name of the Rollout. Format is `projects/{pr
+   * oject}/locations/{location}/deliveryPipelines/{deliveryPipeline}/releases/{re
+   * lease}/rollouts/{rollout}`.
    * @param RetryJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return RetryJobResponse

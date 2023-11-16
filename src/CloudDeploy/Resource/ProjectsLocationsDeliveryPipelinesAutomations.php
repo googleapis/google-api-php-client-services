@@ -36,8 +36,8 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * (automations.create)
    *
    * @param string $parent Required. The parent collection in which the
-   * `Automation` should be created. Format should be projects/{project_id}/locati
-   * ons/{location_name}/deliveryPipelines/{pipeline_name}.
+   * `Automation` should be created. Format should be `projects/{project_id}/locat
+   * ions/{location_name}/deliveryPipelines/{pipeline_name}`.
    * @param Automation $postBody
    * @param array $optParams Optional parameters.
    *
@@ -68,8 +68,8 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * Deletes a single Automation resource. (automations.delete)
    *
    * @param string $name Required. The name of the `Automation` to delete. Format
-   * should be projects/{project_id}/locations/{location_name}/deliveryPipelines/{
-   * pipeline_name}/automations/{automation_name}.
+   * should be `projects/{project_id}/locations/{location_name}/deliveryPipelines/
+   * {pipeline_name}/automations/{automation_name}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allowMissing Optional. If set to true, then deleting an
@@ -102,9 +102,9 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
   /**
    * Gets details of a single Automation. (automations.get)
    *
-   * @param string $name Required. Name of the `Automation`. Format must be projec
-   * ts/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/a
-   * utomations/{automation_name}.
+   * @param string $name Required. Name of the `Automation`. Format must be `proje
+   * cts/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/
+   * automations/{automation_name}`.
    * @param array $optParams Optional parameters.
    * @return Automation
    */
@@ -119,8 +119,8 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * (automations.listProjectsLocationsDeliveryPipelinesAutomations)
    *
    * @param string $parent Required. The parent, which owns this collection of
-   * automations. Format must be projects/{project_id}/locations/{location_name}/d
-   * eliveryPipelines/{pipeline_name}.
+   * automations. Format must be `projects/{project_id}/locations/{location_name}/
+   * deliveryPipelines/{pipeline_name}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Filter automations to be returned. All fields can be
@@ -145,9 +145,9 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
   /**
    * Updates the parameters of a single Automation resource. (automations.patch)
    *
-   * @param string $name Output only. Name of the `Automation`. Format is projects
-   * /{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automat
-   * ions/{automation}.
+   * @param string $name Output only. Name of the `Automation`. Format is `project
+   * s/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automa
+   * tions/{automation}`.
    * @param Automation $postBody
    * @param array $optParams Optional parameters.
    *
