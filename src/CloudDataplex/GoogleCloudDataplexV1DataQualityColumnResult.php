@@ -17,46 +17,30 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataQualityDimensionResult extends \Google\Model
+class GoogleCloudDataplexV1DataQualityColumnResult extends \Google\Model
 {
-  protected $dimensionType = GoogleCloudDataplexV1DataQualityDimension::class;
-  protected $dimensionDataType = '';
   /**
-   * @var bool
+   * @var string
    */
-  public $passed;
+  public $column;
   /**
    * @var float
    */
   public $score;
 
   /**
-   * @param GoogleCloudDataplexV1DataQualityDimension
+   * @param string
    */
-  public function setDimension(GoogleCloudDataplexV1DataQualityDimension $dimension)
+  public function setColumn($column)
   {
-    $this->dimension = $dimension;
+    $this->column = $column;
   }
   /**
-   * @return GoogleCloudDataplexV1DataQualityDimension
+   * @return string
    */
-  public function getDimension()
+  public function getColumn()
   {
-    return $this->dimension;
-  }
-  /**
-   * @param bool
-   */
-  public function setPassed($passed)
-  {
-    $this->passed = $passed;
-  }
-  /**
-   * @return bool
-   */
-  public function getPassed()
-  {
-    return $this->passed;
+    return $this->column;
   }
   /**
    * @param float
@@ -75,4 +59,4 @@ class GoogleCloudDataplexV1DataQualityDimensionResult extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1DataQualityDimensionResult::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataQualityDimensionResult');
+class_alias(GoogleCloudDataplexV1DataQualityColumnResult::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataQualityColumnResult');
