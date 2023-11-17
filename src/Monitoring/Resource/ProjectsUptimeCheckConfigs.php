@@ -116,7 +116,7 @@ class ProjectsUptimeCheckConfigs extends \Google\Service\Resource
    * configuration by specifying the fields to be updated via updateMask. Returns
    * the updated configuration. (uptimeCheckConfigs.patch)
    *
-   * @param string $name A unique resource name for this Uptime check
+   * @param string $name Identifier. A unique resource name for this Uptime check
    * configuration. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
    * [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the
