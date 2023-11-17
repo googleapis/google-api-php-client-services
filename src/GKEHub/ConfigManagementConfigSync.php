@@ -43,10 +43,6 @@ class ConfigManagementConfigSync extends \Google\Model
    * @var string
    */
   public $sourceFormat;
-  /**
-   * @var bool
-   */
-  public $stopSyncing;
 
   /**
    * @param bool
@@ -145,20 +141,6 @@ class ConfigManagementConfigSync extends \Google\Model
   public function getSourceFormat()
   {
     return $this->sourceFormat;
-  }
-  /**
-   * @param bool
-   */
-  public function setStopSyncing($stopSyncing)
-  {
-    $this->stopSyncing = $stopSyncing;
-  }
-  /**
-   * @return bool
-   */
-  public function getStopSyncing()
-  {
-    return $this->stopSyncing;
   }
 }
 

@@ -21,6 +21,8 @@ class MembershipFeatureState extends \Google\Model
 {
   protected $appdevexperienceType = AppDevExperienceFeatureState::class;
   protected $appdevexperienceDataType = '';
+  protected $clusterupgradeType = ClusterUpgradeMembershipState::class;
+  protected $clusterupgradeDataType = '';
   protected $configmanagementType = ConfigManagementMembershipState::class;
   protected $configmanagementDataType = '';
   protected $fleetobservabilityType = FleetObservabilityMembershipState::class;
@@ -47,6 +49,20 @@ class MembershipFeatureState extends \Google\Model
   public function getAppdevexperience()
   {
     return $this->appdevexperience;
+  }
+  /**
+   * @param ClusterUpgradeMembershipState
+   */
+  public function setClusterupgrade(ClusterUpgradeMembershipState $clusterupgrade)
+  {
+    $this->clusterupgrade = $clusterupgrade;
+  }
+  /**
+   * @return ClusterUpgradeMembershipState
+   */
+  public function getClusterupgrade()
+  {
+    return $this->clusterupgrade;
   }
   /**
    * @param ConfigManagementMembershipState

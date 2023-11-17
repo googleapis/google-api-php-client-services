@@ -108,9 +108,9 @@ class ProjectsLocationsScopesRbacrolebindings extends \Google\Service\Resource
    * Updates a Scope RBACRoleBinding. (rbacrolebindings.patch)
    *
    * @param string $name The resource name for the rbacrolebinding `projects/{proj
-   * ect}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrolebi
-   * nding}` or `projects/{project}/locations/{location}/memberships/{membership}/
-   * rbacrolebindings/{rbacrolebinding}`
+   * ect}/locations/{location}/scopes/{scope}/rbacrolebindings/{rbacrolebinding}`
+   * or `projects/{project}/locations/{location}/memberships/{membership}/rbacrole
+   * bindings/{rbacrolebinding}`
    * @param RBACRoleBinding $postBody
    * @param array $optParams Optional parameters.
    *
