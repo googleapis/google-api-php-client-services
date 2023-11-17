@@ -44,11 +44,11 @@ class SpacesMembers extends \Google\Service\Resource
    * message between two human users, use `users/app`. Unable to add other apps to
    * the space. - To add a human user, use `users/{user}`, where `{user}` can be
    * the email address for the user. For users in the same Workspace organization
-   * `{user}` can also be the `{person_id}` for the person from the People API, or
-   * the `id` for the user in the Directory API. For example, if the People API
-   * Person `resourceName` for `user@example.com` is `people/123456789`, you can
-   * add the user to the space by setting the `membership.member.name` to
-   * `users/user@example.com` or `users/123456789`. (members.create)
+   * `{user}` can also be the `id` for the person from the People API, or the `id`
+   * for the user in the Directory API. For example, if the People API Person
+   * profile ID for `user@example.com` is `123456789`, you can add the user to the
+   * space by setting the `membership.member.name` to `users/user@example.com` or
+   * `users/123456789`. (members.create)
    *
    * @param string $parent Required. The resource name of the space for which to
    * create the membership. Format: spaces/{space}
