@@ -37,6 +37,10 @@ class EnterpriseCrmEventbusProtoAttributes extends \Google\Collection
   protected $logSettingsType = EnterpriseCrmEventbusProtoLogSettings::class;
   protected $logSettingsDataType = '';
   /**
+   * @var bool
+   */
+  public $readOnly;
+  /**
    * @var string
    */
   public $searchable;
@@ -114,6 +118,20 @@ class EnterpriseCrmEventbusProtoAttributes extends \Google\Collection
   public function getLogSettings()
   {
     return $this->logSettings;
+  }
+  /**
+   * @param bool
+   */
+  public function setReadOnly($readOnly)
+  {
+    $this->readOnly = $readOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getReadOnly()
+  {
+    return $this->readOnly;
   }
   /**
    * @param string

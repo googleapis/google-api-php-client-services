@@ -39,6 +39,10 @@ class GoogleCloudIntegrationsV1alphaExecution extends \Google\Collection
   /**
    * @var string
    */
+  public $integrationVersionState;
+  /**
+   * @var string
+   */
   public $name;
   protected $requestParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $requestParametersDataType = 'map';
@@ -140,6 +144,20 @@ class GoogleCloudIntegrationsV1alphaExecution extends \Google\Collection
   public function getExecutionMethod()
   {
     return $this->executionMethod;
+  }
+  /**
+   * @param string
+   */
+  public function setIntegrationVersionState($integrationVersionState)
+  {
+    $this->integrationVersionState = $integrationVersionState;
+  }
+  /**
+   * @return string
+   */
+  public function getIntegrationVersionState()
+  {
+    return $this->integrationVersionState;
   }
   /**
    * @param string
