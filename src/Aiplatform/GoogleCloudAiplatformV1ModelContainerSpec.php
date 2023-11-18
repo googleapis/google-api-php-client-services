@@ -28,8 +28,14 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
    * @var string[]
    */
   public $command;
+  /**
+   * @var string
+   */
+  public $deploymentTimeout;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
+  protected $healthProbeType = GoogleCloudAiplatformV1Probe::class;
+  protected $healthProbeDataType = '';
   /**
    * @var string
    */
@@ -44,6 +50,12 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
    * @var string
    */
   public $predictRoute;
+  /**
+   * @var string
+   */
+  public $sharedMemorySizeMb;
+  protected $startupProbeType = GoogleCloudAiplatformV1Probe::class;
+  protected $startupProbeDataType = '';
 
   /**
    * @param string[]
@@ -74,6 +86,20 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
     return $this->command;
   }
   /**
+   * @param string
+   */
+  public function setDeploymentTimeout($deploymentTimeout)
+  {
+    $this->deploymentTimeout = $deploymentTimeout;
+  }
+  /**
+   * @return string
+   */
+  public function getDeploymentTimeout()
+  {
+    return $this->deploymentTimeout;
+  }
+  /**
    * @param GoogleCloudAiplatformV1EnvVar[]
    */
   public function setEnv($env)
@@ -86,6 +112,20 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
   public function getEnv()
   {
     return $this->env;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1Probe
+   */
+  public function setHealthProbe(GoogleCloudAiplatformV1Probe $healthProbe)
+  {
+    $this->healthProbe = $healthProbe;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Probe
+   */
+  public function getHealthProbe()
+  {
+    return $this->healthProbe;
   }
   /**
    * @param string
@@ -142,6 +182,34 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
   public function getPredictRoute()
   {
     return $this->predictRoute;
+  }
+  /**
+   * @param string
+   */
+  public function setSharedMemorySizeMb($sharedMemorySizeMb)
+  {
+    $this->sharedMemorySizeMb = $sharedMemorySizeMb;
+  }
+  /**
+   * @return string
+   */
+  public function getSharedMemorySizeMb()
+  {
+    return $this->sharedMemorySizeMb;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1Probe
+   */
+  public function setStartupProbe(GoogleCloudAiplatformV1Probe $startupProbe)
+  {
+    $this->startupProbe = $startupProbe;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Probe
+   */
+  public function getStartupProbe()
+  {
+    return $this->startupProbe;
   }
 }
 

@@ -17,44 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FetchFeatureValuesRequest extends \Google\Model
+class GoogleCloudAiplatformV1FeatureViewDataKey extends \Google\Model
 {
   /**
    * @var string
    */
-  public $dataFormat;
-  protected $dataKeyType = GoogleCloudAiplatformV1FeatureViewDataKey::class;
-  protected $dataKeyDataType = '';
+  public $key;
 
   /**
    * @param string
    */
-  public function setDataFormat($dataFormat)
+  public function setKey($key)
   {
-    $this->dataFormat = $dataFormat;
+    $this->key = $key;
   }
   /**
    * @return string
    */
-  public function getDataFormat()
+  public function getKey()
   {
-    return $this->dataFormat;
-  }
-  /**
-   * @param GoogleCloudAiplatformV1FeatureViewDataKey
-   */
-  public function setDataKey(GoogleCloudAiplatformV1FeatureViewDataKey $dataKey)
-  {
-    $this->dataKey = $dataKey;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1FeatureViewDataKey
-   */
-  public function getDataKey()
-  {
-    return $this->dataKey;
+    return $this->key;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FetchFeatureValuesRequest::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FetchFeatureValuesRequest');
+class_alias(GoogleCloudAiplatformV1FeatureViewDataKey::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewDataKey');

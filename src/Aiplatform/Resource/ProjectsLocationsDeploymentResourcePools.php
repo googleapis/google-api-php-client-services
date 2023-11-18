@@ -17,6 +17,12 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1CreateDeploymentResourcePoolRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1DeploymentResourcePool;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListDeploymentResourcePoolsResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1QueryDeployedModelsResponse;
+use Google\Service\Aiplatform\GoogleLongrunningOperation;
+
 /**
  * The "deploymentResourcePools" collection of methods.
  * Typical usage is:
@@ -27,6 +33,99 @@ namespace Google\Service\Aiplatform\Resource;
  */
 class ProjectsLocationsDeploymentResourcePools extends \Google\Service\Resource
 {
+  /**
+   * Create a DeploymentResourcePool. (deploymentResourcePools.create)
+   *
+   * @param string $parent Required. The parent location resource where this
+   * DeploymentResourcePool will be created. Format:
+   * `projects/{project}/locations/{location}`
+   * @param GoogleCloudAiplatformV1CreateDeploymentResourcePoolRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function create($parent, GoogleCloudAiplatformV1CreateDeploymentResourcePoolRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Delete a DeploymentResourcePool. (deploymentResourcePools.delete)
+   *
+   * @param string $name Required. The name of the DeploymentResourcePool to
+   * delete. Format: `projects/{project}/locations/{location}/deploymentResourcePo
+   * ols/{deployment_resource_pool}`
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Get a DeploymentResourcePool. (deploymentResourcePools.get)
+   *
+   * @param string $name Required. The name of the DeploymentResourcePool to
+   * retrieve. Format: `projects/{project}/locations/{location}/deploymentResource
+   * Pools/{deployment_resource_pool}`
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1DeploymentResourcePool
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudAiplatformV1DeploymentResourcePool::class);
+  }
+  /**
+   * List DeploymentResourcePools in a location.
+   * (deploymentResourcePools.listProjectsLocationsDeploymentResourcePools)
+   *
+   * @param string $parent Required. The parent Location which owns this
+   * collection of DeploymentResourcePools. Format:
+   * `projects/{project}/locations/{location}`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize The maximum number of DeploymentResourcePools to
+   * return. The service may return fewer than this value.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListDeploymentResourcePools` call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to
+   * `ListDeploymentResourcePools` must match the call that provided the page
+   * token.
+   * @return GoogleCloudAiplatformV1ListDeploymentResourcePoolsResponse
+   */
+  public function listProjectsLocationsDeploymentResourcePools($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudAiplatformV1ListDeploymentResourcePoolsResponse::class);
+  }
+  /**
+   * List DeployedModels that have been deployed on this DeploymentResourcePool.
+   * (deploymentResourcePools.queryDeployedModels)
+   *
+   * @param string $deploymentResourcePool Required. The name of the target
+   * DeploymentResourcePool to query. Format: `projects/{project}/locations/{locat
+   * ion}/deploymentResourcePools/{deployment_resource_pool}`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize The maximum number of DeployedModels to return. The
+   * service may return fewer than this value.
+   * @opt_param string pageToken A page token, received from a previous
+   * `QueryDeployedModels` call. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to `QueryDeployedModels` must
+   * match the call that provided the page token.
+   * @return GoogleCloudAiplatformV1QueryDeployedModelsResponse
+   */
+  public function queryDeployedModels($deploymentResourcePool, $optParams = [])
+  {
+    $params = ['deploymentResourcePool' => $deploymentResourcePool];
+    $params = array_merge($params, $optParams);
+    return $this->call('queryDeployedModels', [$params], GoogleCloudAiplatformV1QueryDeployedModelsResponse::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
