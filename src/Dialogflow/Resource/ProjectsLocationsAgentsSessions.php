@@ -17,12 +17,14 @@
 
 namespace Google\Service\Dialogflow\Resource;
 
+use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3AnswerFeedback;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3DetectIntentRequest;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3DetectIntentResponse;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3FulfillIntentRequest;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3FulfillIntentResponse;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3MatchIntentRequest;
 use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3MatchIntentResponse;
+use Google\Service\Dialogflow\GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest;
 
 /**
  * The "sessions" collection of methods.
@@ -109,6 +111,22 @@ class ProjectsLocationsAgentsSessions extends \Google\Service\Resource
     $params = ['session' => $session, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('matchIntent', [$params], GoogleCloudDialogflowCxV3MatchIntentResponse::class);
+  }
+  /**
+   * Updates the feedback received from the user for a single turn of the bot
+   * response. (sessions.submitAnswerFeedback)
+   *
+   * @param string $session Required. The name of the session the feedback was
+   * sent to.
+   * @param GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDialogflowCxV3AnswerFeedback
+   */
+  public function submitAnswerFeedback($session, GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest $postBody, $optParams = [])
+  {
+    $params = ['session' => $session, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('submitAnswerFeedback', [$params], GoogleCloudDialogflowCxV3AnswerFeedback::class);
   }
 }
 

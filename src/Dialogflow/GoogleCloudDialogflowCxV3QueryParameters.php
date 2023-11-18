@@ -54,6 +54,8 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
    * @var array[]
    */
   public $payload;
+  protected $searchConfigType = GoogleCloudDialogflowCxV3SearchConfig::class;
+  protected $searchConfigDataType = '';
   protected $sessionEntityTypesType = GoogleCloudDialogflowCxV3SessionEntityType::class;
   protected $sessionEntityTypesDataType = 'array';
   /**
@@ -194,6 +196,20 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   public function getPayload()
   {
     return $this->payload;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3SearchConfig
+   */
+  public function setSearchConfig(GoogleCloudDialogflowCxV3SearchConfig $searchConfig)
+  {
+    $this->searchConfig = $searchConfig;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3SearchConfig
+   */
+  public function getSearchConfig()
+  {
+    return $this->searchConfig;
   }
   /**
    * @param GoogleCloudDialogflowCxV3SessionEntityType[]
