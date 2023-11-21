@@ -20,7 +20,9 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
   ];
 {% endif %}{% for property in model.properties %}
  {% if property.typeHint %}
-  {% if property.memberName|add:"Type" not in model.propNames %}
+  {% if property.memberName not in model.propNames %}
+  public ${{ property.memberName }};
+  {% endif %}{% if property.memberName|add:"Type" not in model.propNames %}
   protected ${{ property.memberName }}Type = {{ property.typeHint }}::class;
   {% endif %}{% if property.memberName|add:"DataType" not in model.propNames %}
   protected ${{ property.memberName }}DataType = '{{ property.dataType }}';
