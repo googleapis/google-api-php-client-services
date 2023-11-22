@@ -91,8 +91,8 @@ class SpacesMembers extends \Google\Service\Resource
    * Returns details about a membership. For an example, see [Get a
    * membership](https://developers.google.com/chat/api/guides/v1/members/get).
    * Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
-   * supports [service account
+   * [authentication](https://developers.google.com/chat/api/guides/auth).
+   * Supports [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
@@ -126,8 +126,8 @@ class SpacesMembers extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/users)
    * lists memberships in spaces that the authenticated user has access to.
    * Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
-   * supports [service account
+   * [authentication](https://developers.google.com/chat/api/guides/auth).
+   * Supports [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).

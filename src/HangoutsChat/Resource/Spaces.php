@@ -85,12 +85,12 @@ class Spaces extends \Google\Service\Resource
    * [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users),
    * returns the direct message space between the specified user and the
-   * authenticated user. With [service account
+   * authenticated user. With [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts), returns the direct message space between the specified user and
    * the calling Chat app. Requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users) or
-   * [service account
+   * [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts). (spaces.findDirectMessage)
    *
@@ -119,8 +119,8 @@ class Spaces extends \Google\Service\Resource
   /**
    * Returns details about a space. For an example, see [Get a
    * space](https://developers.google.com/chat/api/guides/v1/spaces/get). Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
-   * supports [service account
+   * [authentication](https://developers.google.com/chat/api/guides/auth).
+   * Supports [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
@@ -142,8 +142,8 @@ class Spaces extends \Google\Service\Resource
    * until the first message is sent. For an example, see [List
    * spaces](https://developers.google.com/chat/api/guides/v1/spaces/list).
    * Requires
-   * [authentication](https://developers.google.com/chat/api/guides/auth). Fully
-   * supports [service account
+   * [authentication](https://developers.google.com/chat/api/guides/auth).
+   * Supports [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts) and [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
@@ -161,11 +161,11 @@ class Spaces extends \Google\Service\Resource
    * types, use the `OR` operator. For example, the following queries are valid:
    * ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType =
    * "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an
-   * `INVALID_ARGUMENT` error. With [service account
+   * `INVALID_ARGUMENT` error. With [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts), this field is ignored and the query always returns all spaces. But
-   * the Chat API still validates the query syntax with service accounts, so
-   * invalid queries are still rejected.
+   * the Chat API still validates the query syntax, so invalid queries are still
+   * rejected.
    * @opt_param int pageSize Optional. The maximum number of spaces to return. The
    * service might return fewer than this value. If unspecified, at most 100
    * spaces are returned. The maximum value is 1,000. If you use a value more than

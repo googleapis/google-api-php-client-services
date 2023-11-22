@@ -34,7 +34,7 @@ class SpacesMessagesAttachments extends \Google\Service\Resource
    * using the [media API](https://developers.google.com/chat/api/reference/rest/v
    * 1/media/download). For an example, see [Get a message
    * attachment](https://developers.google.com/chat/api/guides/v1/media-and-
-   * attachments/get). Requires [service account
+   * attachments/get). Requires [app
    * authentication](https://developers.google.com/chat/api/guides/auth/service-
    * accounts). (attachments.get)
    *
