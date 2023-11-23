@@ -226,8 +226,18 @@ class Events extends \Google\Service\Resource
    * parameter might be repeated multiple times to return events that match all
    * given constraints.
    * @opt_param string q Free text search terms to find events that match these
-   * terms in the following fields: summary, description, location, attendee's
-   * displayName, attendee's email. Optional.
+   * terms in the following fields:
+   *
+   * - summary  - description  - location  - attendee's displayName  - attendee's
+   * email  - workingLocationProperties.officeLocation.buildingId  -
+   * workingLocationProperties.officeLocation.deskId  -
+   * workingLocationProperties.officeLocation.label  -
+   * workingLocationProperties.customLocation.label  These search terms also match
+   * predefined keywords against all display title translations of working
+   * location, out-of-office, and focus-time events. For example, searching for
+   * "Office" or "Bureau" returns working location events of type officeLocation,
+   * whereas searching for "Out of office" or "Abwesend" returns out-of-office
+   * events. Optional.
    * @opt_param string sharedExtendedProperty Extended properties constraint
    * specified as propertyName=value. Matches only shared properties. This
    * parameter might be repeated multiple times to return events that match all
@@ -284,8 +294,9 @@ class Events extends \Google\Service\Resource
     return $this->call('list', [$params], EventsModel::class);
   }
   /**
-   * Moves an event to another calendar, i.e. changes an event's organizer.
-   * (events.move)
+   * Moves an event to another calendar, i.e. changes an event's organizer. Note
+   * that only default events can be moved; outOfOffice, focusTime and
+   * workingLocation events cannot be moved. (events.move)
    *
    * @param string $calendarId Calendar identifier of the source calendar where
    * the event currently is on.
@@ -453,8 +464,18 @@ class Events extends \Google\Service\Resource
    * parameter might be repeated multiple times to return events that match all
    * given constraints.
    * @opt_param string q Free text search terms to find events that match these
-   * terms in the following fields: summary, description, location, attendee's
-   * displayName, attendee's email. Optional.
+   * terms in the following fields:
+   *
+   * - summary  - description  - location  - attendee's displayName  - attendee's
+   * email  - workingLocationProperties.officeLocation.buildingId  -
+   * workingLocationProperties.officeLocation.deskId  -
+   * workingLocationProperties.officeLocation.label  -
+   * workingLocationProperties.customLocation.label  These search terms also match
+   * predefined keywords against all display title translations of working
+   * location, out-of-office, and focus-time events. For example, searching for
+   * "Office" or "Bureau" returns working location events of type officeLocation,
+   * whereas searching for "Out of office" or "Abwesend" returns out-of-office
+   * events. Optional.
    * @opt_param string sharedExtendedProperty Extended properties constraint
    * specified as propertyName=value. Matches only shared properties. This
    * parameter might be repeated multiple times to return events that match all
