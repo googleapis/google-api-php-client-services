@@ -19,6 +19,10 @@ namespace Google\Service\Directory;
 
 class FeatureInstance extends \Google\Model
 {
+  /**
+   * @var Feature
+   */
+  public $feature;
   protected $featureType = Feature::class;
   protected $featureDataType = '';
 

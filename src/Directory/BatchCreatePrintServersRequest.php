@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class BatchCreatePrintServersRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
+  /**
+   * @var CreatePrintServerRequest[]
+   */
+  public $requests;
   protected $requestsType = CreatePrintServerRequest::class;
   protected $requestsDataType = 'array';
 

@@ -28,6 +28,10 @@ class Schemas extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var Schema[]
+   */
+  public $schemas;
   protected $schemasType = Schema::class;
   protected $schemasDataType = 'array';
 

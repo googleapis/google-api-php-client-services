@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class DomainAliases extends \Google\Collection
 {
   protected $collection_key = 'domainAliases';
+  /**
+   * @var DomainAlias[]
+   */
+  public $domainAliases;
   protected $domainAliasesType = DomainAlias::class;
   protected $domainAliasesDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class Activities extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var Activity[]
+   */
+  public $items;
   protected $itemsType = Activity::class;
   protected $itemsDataType = 'array';
   /**

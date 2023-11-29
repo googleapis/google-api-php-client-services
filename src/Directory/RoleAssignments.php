@@ -24,6 +24,10 @@ class RoleAssignments extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var RoleAssignment[]
+   */
+  public $items;
   protected $itemsType = RoleAssignment::class;
   protected $itemsDataType = 'array';
   /**

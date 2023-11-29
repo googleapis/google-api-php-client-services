@@ -23,6 +23,10 @@ class CreatePrinterRequest extends \Google\Model
    * @var string
    */
   public $parent;
+  /**
+   * @var Printer
+   */
+  public $printer;
   protected $printerType = Printer::class;
   protected $printerDataType = '';
 

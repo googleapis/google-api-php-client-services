@@ -28,6 +28,10 @@ class Members extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var Member[]
+   */
+  public $members;
   protected $membersType = Member::class;
   protected $membersDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceCpuInfoLogicalCpus extends \Google\Collection
 {
   protected $collection_key = 'cStates';
+  /**
+   * @var ChromeOsDeviceCpuInfoLogicalCpusCStates[]
+   */
+  public $cStates;
   protected $cStatesType = ChromeOsDeviceCpuInfoLogicalCpusCStates::class;
   protected $cStatesDataType = 'array';
   /**

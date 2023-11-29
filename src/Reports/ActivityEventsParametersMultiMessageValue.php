@@ -20,6 +20,10 @@ namespace Google\Service\Reports;
 class ActivityEventsParametersMultiMessageValue extends \Google\Collection
 {
   protected $collection_key = 'parameter';
+  /**
+   * @var NestedParameter[]
+   */
+  public $parameter;
   protected $parameterType = NestedParameter::class;
   protected $parameterDataType = 'array';
 

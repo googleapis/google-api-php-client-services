@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class Building extends \Google\Collection
 {
   protected $collection_key = 'floorNames';
+  /**
+   * @var BuildingAddress
+   */
+  public $address;
   protected $addressType = BuildingAddress::class;
   protected $addressDataType = '';
   /**
@@ -30,6 +34,10 @@ class Building extends \Google\Collection
    * @var string
    */
   public $buildingName;
+  /**
+   * @var BuildingCoordinates
+   */
+  public $coordinates;
   protected $coordinatesType = BuildingCoordinates::class;
   protected $coordinatesDataType = '';
   /**

@@ -24,6 +24,10 @@ class MobileDevice extends \Google\Collection
    * @var bool
    */
   public $adbStatus;
+  /**
+   * @var MobileDeviceApplications[]
+   */
+  public $applications;
   protected $applicationsType = MobileDeviceApplications::class;
   protected $applicationsDataType = 'array';
   /**

@@ -28,6 +28,10 @@ class MobileDevices extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var MobileDevice[]
+   */
+  public $mobiledevices;
   protected $mobiledevicesType = MobileDevice::class;
   protected $mobiledevicesDataType = 'array';
   /**

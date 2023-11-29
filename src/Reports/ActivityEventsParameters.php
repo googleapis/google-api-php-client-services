@@ -28,12 +28,20 @@ class ActivityEventsParameters extends \Google\Collection
    * @var string
    */
   public $intValue;
+  /**
+   * @var ActivityEventsParametersMessageValue
+   */
+  public $messageValue;
   protected $messageValueType = ActivityEventsParametersMessageValue::class;
   protected $messageValueDataType = '';
   /**
    * @var string[]
    */
   public $multiIntValue;
+  /**
+   * @var ActivityEventsParametersMultiMessageValue[]
+   */
+  public $multiMessageValue;
   protected $multiMessageValueType = ActivityEventsParametersMultiMessageValue::class;
   protected $multiMessageValueDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class VerificationCodes extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var VerificationCode[]
+   */
+  public $items;
   protected $itemsType = VerificationCode::class;
   protected $itemsDataType = 'array';
   /**

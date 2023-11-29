@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class Printer extends \Google\Collection
 {
   protected $collection_key = 'auxiliaryMessages';
+  /**
+   * @var AuxiliaryMessage[]
+   */
+  public $auxiliaryMessages;
   protected $auxiliaryMessagesType = AuxiliaryMessage::class;
   protected $auxiliaryMessagesDataType = 'array';
   /**

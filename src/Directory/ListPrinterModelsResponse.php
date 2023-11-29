@@ -24,6 +24,10 @@ class ListPrinterModelsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PrinterModel[]
+   */
+  public $printerModels;
   protected $printerModelsType = PrinterModel::class;
   protected $printerModelsDataType = 'array';
 

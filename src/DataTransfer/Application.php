@@ -36,6 +36,10 @@ class Application extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ApplicationTransferParam[]
+   */
+  public $transferParams;
   protected $transferParamsType = ApplicationTransferParam::class;
   protected $transferParamsDataType = 'array';
 

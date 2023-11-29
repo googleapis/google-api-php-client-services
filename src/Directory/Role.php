@@ -48,6 +48,10 @@ class Role extends \Google\Collection
    * @var string
    */
   public $roleName;
+  /**
+   * @var RoleRolePrivileges[]
+   */
+  public $rolePrivileges;
   protected $rolePrivilegesType = RoleRolePrivileges::class;
   protected $rolePrivilegesDataType = 'array';
 

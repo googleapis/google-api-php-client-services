@@ -20,8 +20,16 @@ namespace Google\Service\Directory;
 class BatchCreatePrintersResponse extends \Google\Collection
 {
   protected $collection_key = 'printers';
+  /**
+   * @var FailureInfo[]
+   */
+  public $failures;
   protected $failuresType = FailureInfo::class;
   protected $failuresDataType = 'array';
+  /**
+   * @var Printer[]
+   */
+  public $printers;
   protected $printersType = Printer::class;
   protected $printersDataType = 'array';
 

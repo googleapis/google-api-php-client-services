@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class Domains2 extends \Google\Collection
 {
   protected $collection_key = 'domains';
+  /**
+   * @var Domains[]
+   */
+  public $domains;
   protected $domainsType = Domains::class;
   protected $domainsDataType = 'array';
   /**

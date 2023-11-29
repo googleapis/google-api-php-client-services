@@ -20,6 +20,10 @@ namespace Google\Service\DataTransfer;
 class DataTransfersListResponse extends \Google\Collection
 {
   protected $collection_key = 'dataTransfers';
+  /**
+   * @var DataTransfer[]
+   */
+  public $dataTransfers;
   protected $dataTransfersType = DataTransfer::class;
   protected $dataTransfersDataType = 'array';
   /**

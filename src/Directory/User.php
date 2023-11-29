@@ -132,6 +132,10 @@ class User extends \Google\Collection
    * @var array
    */
   public $locations;
+  /**
+   * @var UserName
+   */
+  public $name;
   protected $nameType = UserName::class;
   protected $nameDataType = '';
   /**

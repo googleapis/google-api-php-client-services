@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class BatchDeletePrintServersResponse extends \Google\Collection
 {
   protected $collection_key = 'printServerIds';
+  /**
+   * @var PrintServerFailureInfo[]
+   */
+  public $failedPrintServers;
   protected $failedPrintServersType = PrintServerFailureInfo::class;
   protected $failedPrintServersDataType = 'array';
   /**

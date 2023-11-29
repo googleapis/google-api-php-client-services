@@ -20,6 +20,10 @@ namespace Google\Service\DataTransfer;
 class DataTransfer extends \Google\Collection
 {
   protected $collection_key = 'applicationDataTransfers';
+  /**
+   * @var ApplicationDataTransfer[]
+   */
+  public $applicationDataTransfers;
   protected $applicationDataTransfersType = ApplicationDataTransfer::class;
   protected $applicationDataTransfersDataType = 'array';
   /**

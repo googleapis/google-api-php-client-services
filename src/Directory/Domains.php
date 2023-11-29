@@ -24,6 +24,10 @@ class Domains extends \Google\Collection
    * @var string
    */
   public $creationTime;
+  /**
+   * @var DomainAlias[]
+   */
+  public $domainAliases;
   protected $domainAliasesType = DomainAlias::class;
   protected $domainAliasesDataType = 'array';
   /**

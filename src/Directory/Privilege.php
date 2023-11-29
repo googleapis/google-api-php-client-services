@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class Privilege extends \Google\Collection
 {
   protected $collection_key = 'childPrivileges';
+  /**
+   * @var Privilege[]
+   */
+  public $childPrivileges;
   protected $childPrivilegesType = Privilege::class;
   protected $childPrivilegesDataType = 'array';
   /**

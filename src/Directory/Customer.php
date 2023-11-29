@@ -51,6 +51,10 @@ class Customer extends \Google\Model
    * @var string
    */
   public $phoneNumber;
+  /**
+   * @var CustomerPostalAddress
+   */
+  public $postalAddress;
   protected $postalAddressType = CustomerPostalAddress::class;
   protected $postalAddressDataType = '';
 

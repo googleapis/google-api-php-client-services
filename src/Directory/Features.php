@@ -24,6 +24,10 @@ class Features extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var Feature[]
+   */
+  public $features;
   protected $featuresType = Feature::class;
   protected $featuresDataType = 'array';
   /**

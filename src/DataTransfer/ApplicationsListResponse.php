@@ -20,6 +20,10 @@ namespace Google\Service\DataTransfer;
 class ApplicationsListResponse extends \Google\Collection
 {
   protected $collection_key = 'applications';
+  /**
+   * @var Application[]
+   */
+  public $applications;
   protected $applicationsType = Application::class;
   protected $applicationsDataType = 'array';
   /**

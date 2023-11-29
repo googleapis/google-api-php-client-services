@@ -20,6 +20,10 @@ namespace Google\Service\Directory;
 class Buildings extends \Google\Collection
 {
   protected $collection_key = 'buildings';
+  /**
+   * @var Building[]
+   */
+  public $buildings;
   protected $buildingsType = Building::class;
   protected $buildingsDataType = 'array';
   /**
