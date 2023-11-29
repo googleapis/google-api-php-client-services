@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class ListConsentRevisionsResponse extends \Google\Collection
 {
   protected $collection_key = 'consents';
+  /**
+   * @var Consent[]
+   */
+  public $consents;
   protected $consentsType = Consent::class;
   protected $consentsDataType = 'array';
   /**

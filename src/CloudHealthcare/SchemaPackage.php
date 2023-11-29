@@ -24,12 +24,20 @@ class SchemaPackage extends \Google\Collection
    * @var bool
    */
   public $ignoreMinOccurs;
+  /**
+   * @var Hl7SchemaConfig[]
+   */
+  public $schemas;
   protected $schemasType = Hl7SchemaConfig::class;
   protected $schemasDataType = 'array';
   /**
    * @var string
    */
   public $schematizedParsingType;
+  /**
+   * @var Hl7TypesConfig[]
+   */
+  public $types;
   protected $typesType = Hl7TypesConfig::class;
   protected $typesDataType = 'array';
   /**

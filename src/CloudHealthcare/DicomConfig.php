@@ -23,8 +23,16 @@ class DicomConfig extends \Google\Model
    * @var string
    */
   public $filterProfile;
+  /**
+   * @var TagFilterList
+   */
+  public $keepList;
   protected $keepListType = TagFilterList::class;
   protected $keepListDataType = '';
+  /**
+   * @var TagFilterList
+   */
+  public $removeList;
   protected $removeListType = TagFilterList::class;
   protected $removeListDataType = '';
   /**

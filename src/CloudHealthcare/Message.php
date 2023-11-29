@@ -40,10 +40,22 @@ class Message extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ParsedData
+   */
+  public $parsedData;
   protected $parsedDataType = ParsedData::class;
   protected $parsedDataDataType = '';
+  /**
+   * @var PatientId[]
+   */
+  public $patientIds;
   protected $patientIdsType = PatientId::class;
   protected $patientIdsDataType = 'array';
+  /**
+   * @var SchematizedData
+   */
+  public $schematizedData;
   protected $schematizedDataType = SchematizedData::class;
   protected $schematizedDataDataType = '';
   /**

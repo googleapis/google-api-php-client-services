@@ -19,6 +19,10 @@ namespace Google\Service\CloudHealthcare;
 
 class DeidentifiedStoreDestination extends \Google\Model
 {
+  /**
+   * @var DeidentifyConfig
+   */
+  public $config;
   protected $configType = DeidentifyConfig::class;
   protected $configDataType = '';
   /**

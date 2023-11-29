@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class ListAttributeDefinitionsResponse extends \Google\Collection
 {
   protected $collection_key = 'attributeDefinitions';
+  /**
+   * @var AttributeDefinition[]
+   */
+  public $attributeDefinitions;
   protected $attributeDefinitionsType = AttributeDefinition::class;
   protected $attributeDefinitionsDataType = 'array';
   /**

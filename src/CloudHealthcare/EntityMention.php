@@ -20,19 +20,39 @@ namespace Google\Service\CloudHealthcare;
 class EntityMention extends \Google\Collection
 {
   protected $collection_key = 'linkedEntities';
+  /**
+   * @var Feature
+   */
+  public $certaintyAssessment;
   protected $certaintyAssessmentType = Feature::class;
   protected $certaintyAssessmentDataType = '';
   public $confidence;
+  /**
+   * @var LinkedEntity[]
+   */
+  public $linkedEntities;
   protected $linkedEntitiesType = LinkedEntity::class;
   protected $linkedEntitiesDataType = 'array';
   /**
    * @var string
    */
   public $mentionId;
+  /**
+   * @var Feature
+   */
+  public $subject;
   protected $subjectType = Feature::class;
   protected $subjectDataType = '';
+  /**
+   * @var Feature
+   */
+  public $temporalAssessment;
   protected $temporalAssessmentType = Feature::class;
   protected $temporalAssessmentDataType = '';
+  /**
+   * @var TextSpan
+   */
+  public $text;
   protected $textType = TextSpan::class;
   protected $textDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\CloudHealthcare;
 
 class DeidentifyDatasetRequest extends \Google\Model
 {
+  /**
+   * @var DeidentifyConfig
+   */
+  public $config;
   protected $configType = DeidentifyConfig::class;
   protected $configDataType = '';
   /**

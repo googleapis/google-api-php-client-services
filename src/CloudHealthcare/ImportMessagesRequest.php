@@ -19,6 +19,10 @@ namespace Google\Service\CloudHealthcare;
 
 class ImportMessagesRequest extends \Google\Model
 {
+  /**
+   * @var GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GcsSource::class;
   protected $gcsSourceDataType = '';
 

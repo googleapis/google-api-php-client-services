@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class ListConsentStoresResponse extends \Google\Collection
 {
   protected $collection_key = 'consentStores';
+  /**
+   * @var ConsentStore[]
+   */
+  public $consentStores;
   protected $consentStoresType = ConsentStore::class;
   protected $consentStoresDataType = 'array';
   /**

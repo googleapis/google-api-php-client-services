@@ -19,12 +19,28 @@ namespace Google\Service\CloudHealthcare;
 
 class DeidentifyConfig extends \Google\Model
 {
+  /**
+   * @var DicomConfig
+   */
+  public $dicom;
   protected $dicomType = DicomConfig::class;
   protected $dicomDataType = '';
+  /**
+   * @var FhirConfig
+   */
+  public $fhir;
   protected $fhirType = FhirConfig::class;
   protected $fhirDataType = '';
+  /**
+   * @var ImageConfig
+   */
+  public $image;
   protected $imageType = ImageConfig::class;
   protected $imageDataType = '';
+  /**
+   * @var TextConfig
+   */
+  public $text;
   protected $textType = TextConfig::class;
   protected $textDataType = '';
   /**

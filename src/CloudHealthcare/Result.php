@@ -19,6 +19,10 @@ namespace Google\Service\CloudHealthcare;
 
 class Result extends \Google\Model
 {
+  /**
+   * @var ConsentEvaluation[]
+   */
+  public $consentDetails;
   protected $consentDetailsType = ConsentEvaluation::class;
   protected $consentDetailsDataType = 'map';
   /**

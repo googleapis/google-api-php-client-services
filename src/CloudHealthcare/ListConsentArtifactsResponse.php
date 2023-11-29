@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class ListConsentArtifactsResponse extends \Google\Collection
 {
   protected $collection_key = 'consentArtifacts';
+  /**
+   * @var ConsentArtifact[]
+   */
+  public $consentArtifacts;
   protected $consentArtifactsType = ConsentArtifact::class;
   protected $consentArtifactsDataType = 'array';
   /**

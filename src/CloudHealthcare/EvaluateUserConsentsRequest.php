@@ -19,6 +19,10 @@ namespace Google\Service\CloudHealthcare;
 
 class EvaluateUserConsentsRequest extends \Google\Model
 {
+  /**
+   * @var ConsentList
+   */
+  public $consentList;
   protected $consentListType = ConsentList::class;
   protected $consentListDataType = '';
   /**

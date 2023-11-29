@@ -23,6 +23,10 @@ class IngestMessageResponse extends \Google\Model
    * @var string
    */
   public $hl7Ack;
+  /**
+   * @var Message
+   */
+  public $message;
   protected $messageType = Message::class;
   protected $messageDataType = '';
 

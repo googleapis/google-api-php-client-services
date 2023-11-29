@@ -24,6 +24,10 @@ class ListUserDataMappingsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var UserDataMapping[]
+   */
+  public $userDataMappings;
   protected $userDataMappingsType = UserDataMapping::class;
   protected $userDataMappingsDataType = 'array';
 

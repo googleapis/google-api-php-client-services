@@ -28,8 +28,16 @@ class DicomStore extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var NotificationConfig
+   */
+  public $notificationConfig;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
+  /**
+   * @var GoogleCloudHealthcareV1DicomStreamConfig[]
+   */
+  public $streamConfigs;
   protected $streamConfigsType = GoogleCloudHealthcareV1DicomStreamConfig::class;
   protected $streamConfigsDataType = 'array';
 

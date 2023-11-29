@@ -20,14 +20,26 @@ namespace Google\Service\CloudHealthcare;
 class AnalyzeEntitiesResponse extends \Google\Collection
 {
   protected $collection_key = 'relationships';
+  /**
+   * @var Entity[]
+   */
+  public $entities;
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
+  /**
+   * @var EntityMention[]
+   */
+  public $entityMentions;
   protected $entityMentionsType = EntityMention::class;
   protected $entityMentionsDataType = 'array';
   /**
    * @var string
    */
   public $fhirBundle;
+  /**
+   * @var EntityMentionRelationship[]
+   */
+  public $relationships;
   protected $relationshipsType = EntityMentionRelationship::class;
   protected $relationshipsDataType = 'array';
 

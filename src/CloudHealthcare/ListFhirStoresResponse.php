@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class ListFhirStoresResponse extends \Google\Collection
 {
   protected $collection_key = 'fhirStores';
+  /**
+   * @var FhirStore[]
+   */
+  public $fhirStores;
   protected $fhirStoresType = FhirStore::class;
   protected $fhirStoresDataType = 'array';
   /**

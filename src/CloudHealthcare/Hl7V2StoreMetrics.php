@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class Hl7V2StoreMetrics extends \Google\Collection
 {
   protected $collection_key = 'metrics';
+  /**
+   * @var Hl7V2StoreMetric[]
+   */
+  public $metrics;
   protected $metricsType = Hl7V2StoreMetric::class;
   protected $metricsDataType = 'array';
   /**

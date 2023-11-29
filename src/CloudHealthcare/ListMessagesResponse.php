@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class ListMessagesResponse extends \Google\Collection
 {
   protected $collection_key = 'hl7V2Messages';
+  /**
+   * @var Message[]
+   */
+  public $hl7V2Messages;
   protected $hl7V2MessagesType = Message::class;
   protected $hl7V2MessagesDataType = 'array';
   /**

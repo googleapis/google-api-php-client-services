@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class Type extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var Field[]
+   */
+  public $fields;
   protected $fieldsType = Field::class;
   protected $fieldsDataType = 'array';
   /**

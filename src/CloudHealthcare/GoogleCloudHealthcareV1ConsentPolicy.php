@@ -20,8 +20,16 @@ namespace Google\Service\CloudHealthcare;
 class GoogleCloudHealthcareV1ConsentPolicy extends \Google\Collection
 {
   protected $collection_key = 'resourceAttributes';
+  /**
+   * @var Expr
+   */
+  public $authorizationRule;
   protected $authorizationRuleType = Expr::class;
   protected $authorizationRuleDataType = '';
+  /**
+   * @var Attribute[]
+   */
+  public $resourceAttributes;
   protected $resourceAttributesType = Attribute::class;
   protected $resourceAttributesDataType = 'array';
 

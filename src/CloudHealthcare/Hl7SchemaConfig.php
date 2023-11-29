@@ -20,8 +20,16 @@ namespace Google\Service\CloudHealthcare;
 class Hl7SchemaConfig extends \Google\Collection
 {
   protected $collection_key = 'version';
+  /**
+   * @var SchemaGroup[]
+   */
+  public $messageSchemaConfigs;
   protected $messageSchemaConfigsType = SchemaGroup::class;
   protected $messageSchemaConfigsDataType = 'map';
+  /**
+   * @var VersionSource[]
+   */
+  public $version;
   protected $versionType = VersionSource::class;
   protected $versionDataType = 'array';
 

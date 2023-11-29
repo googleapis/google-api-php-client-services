@@ -19,6 +19,10 @@ namespace Google\Service\CloudHealthcare;
 
 class IngestMessageRequest extends \Google\Model
 {
+  /**
+   * @var Message
+   */
+  public $message;
   protected $messageType = Message::class;
   protected $messageDataType = '';
 

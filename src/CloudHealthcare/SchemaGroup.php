@@ -28,6 +28,10 @@ class SchemaGroup extends \Google\Collection
    * @var int
    */
   public $maxOccurs;
+  /**
+   * @var GroupOrSegment[]
+   */
+  public $members;
   protected $membersType = GroupOrSegment::class;
   protected $membersDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\CloudHealthcare;
 class ListDicomStoresResponse extends \Google\Collection
 {
   protected $collection_key = 'dicomStores';
+  /**
+   * @var DicomStore[]
+   */
+  public $dicomStores;
   protected $dicomStoresType = DicomStore::class;
   protected $dicomStoresDataType = 'array';
   /**

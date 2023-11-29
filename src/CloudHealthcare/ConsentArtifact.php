@@ -20,12 +20,20 @@ namespace Google\Service\CloudHealthcare;
 class ConsentArtifact extends \Google\Collection
 {
   protected $collection_key = 'consentContentScreenshots';
+  /**
+   * @var Image[]
+   */
+  public $consentContentScreenshots;
   protected $consentContentScreenshotsType = Image::class;
   protected $consentContentScreenshotsDataType = 'array';
   /**
    * @var string
    */
   public $consentContentVersion;
+  /**
+   * @var Signature
+   */
+  public $guardianSignature;
   protected $guardianSignatureType = Signature::class;
   protected $guardianSignatureDataType = '';
   /**
@@ -40,8 +48,16 @@ class ConsentArtifact extends \Google\Collection
    * @var string
    */
   public $userId;
+  /**
+   * @var Signature
+   */
+  public $userSignature;
   protected $userSignatureType = Signature::class;
   protected $userSignatureDataType = '';
+  /**
+   * @var Signature
+   */
+  public $witnessSignature;
   protected $witnessSignatureType = Signature::class;
   protected $witnessSignatureDataType = '';
 
