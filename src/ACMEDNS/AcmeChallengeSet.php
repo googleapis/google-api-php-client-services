@@ -20,6 +20,10 @@ namespace Google\Service\ACMEDNS;
 class AcmeChallengeSet extends \Google\Collection
 {
   protected $collection_key = 'record';
+  /**
+   * @var AcmeTxtRecord[]
+   */
+  public $record;
   protected $recordType = AcmeTxtRecord::class;
   protected $recordDataType = 'array';
 
