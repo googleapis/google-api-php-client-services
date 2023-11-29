@@ -19,6 +19,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 
 class GetDeviceSimLockStateRequest extends \Google\Model
 {
+  /**
+   * @var DeviceIdentifier
+   */
+  public $deviceIdentifier;
   protected $deviceIdentifierType = DeviceIdentifier::class;
   protected $deviceIdentifierDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 class UnclaimDevicesRequest extends \Google\Collection
 {
   protected $collection_key = 'unclaims';
+  /**
+   * @var PartnerUnclaim[]
+   */
+  public $unclaims;
   protected $unclaimsType = PartnerUnclaim::class;
   protected $unclaimsDataType = 'array';
 

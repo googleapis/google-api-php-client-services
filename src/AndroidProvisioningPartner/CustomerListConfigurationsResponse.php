@@ -20,6 +20,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 class CustomerListConfigurationsResponse extends \Google\Collection
 {
   protected $collection_key = 'configurations';
+  /**
+   * @var Configuration[]
+   */
+  public $configurations;
   protected $configurationsType = Configuration::class;
   protected $configurationsDataType = 'array';
 

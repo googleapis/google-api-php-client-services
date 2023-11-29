@@ -20,6 +20,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 class UpdateDeviceMetadataInBatchRequest extends \Google\Collection
 {
   protected $collection_key = 'updates';
+  /**
+   * @var UpdateMetadataArguments[]
+   */
+  public $updates;
   protected $updatesType = UpdateMetadataArguments::class;
   protected $updatesDataType = 'array';
 

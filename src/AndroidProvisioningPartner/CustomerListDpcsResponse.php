@@ -20,6 +20,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 class CustomerListDpcsResponse extends \Google\Collection
 {
   protected $collection_key = 'dpcs';
+  /**
+   * @var Dpc[]
+   */
+  public $dpcs;
   protected $dpcsType = Dpc::class;
   protected $dpcsDataType = 'array';
 

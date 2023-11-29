@@ -20,6 +20,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 class Device extends \Google\Collection
 {
   protected $collection_key = 'claims';
+  /**
+   * @var DeviceClaim[]
+   */
+  public $claims;
   protected $claimsType = DeviceClaim::class;
   protected $claimsDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class Device extends \Google\Collection
    * @var string
    */
   public $deviceId;
+  /**
+   * @var DeviceIdentifier
+   */
+  public $deviceIdentifier;
   protected $deviceIdentifierType = DeviceIdentifier::class;
   protected $deviceIdentifierDataType = '';
+  /**
+   * @var DeviceMetadata
+   */
+  public $deviceMetadata;
   protected $deviceMetadataType = DeviceMetadata::class;
   protected $deviceMetadataDataType = '';
   /**

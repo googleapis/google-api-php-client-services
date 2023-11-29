@@ -32,6 +32,10 @@ class Company extends \Google\Collection
    * @var string
    */
   public $companyName;
+  /**
+   * @var GoogleWorkspaceAccount
+   */
+  public $googleWorkspaceAccount;
   protected $googleWorkspaceAccountType = GoogleWorkspaceAccount::class;
   protected $googleWorkspaceAccountDataType = '';
   /**

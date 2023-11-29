@@ -20,6 +20,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 class ClaimDevicesRequest extends \Google\Collection
 {
   protected $collection_key = 'claims';
+  /**
+   * @var PartnerClaim[]
+   */
+  public $claims;
   protected $claimsType = PartnerClaim::class;
   protected $claimsDataType = 'array';
 

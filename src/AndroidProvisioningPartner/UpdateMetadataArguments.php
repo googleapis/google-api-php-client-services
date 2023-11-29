@@ -23,8 +23,16 @@ class UpdateMetadataArguments extends \Google\Model
    * @var string
    */
   public $deviceId;
+  /**
+   * @var DeviceIdentifier
+   */
+  public $deviceIdentifier;
   protected $deviceIdentifierType = DeviceIdentifier::class;
   protected $deviceIdentifierDataType = '';
+  /**
+   * @var DeviceMetadata
+   */
+  public $deviceMetadata;
   protected $deviceMetadataType = DeviceMetadata::class;
   protected $deviceMetadataDataType = '';
 

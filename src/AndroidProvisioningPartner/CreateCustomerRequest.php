@@ -19,6 +19,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 
 class CreateCustomerRequest extends \Google\Model
 {
+  /**
+   * @var Company
+   */
+  public $customer;
   protected $customerType = Company::class;
   protected $customerDataType = '';
 

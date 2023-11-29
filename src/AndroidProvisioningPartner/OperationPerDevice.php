@@ -19,12 +19,28 @@ namespace Google\Service\AndroidProvisioningPartner;
 
 class OperationPerDevice extends \Google\Model
 {
+  /**
+   * @var PartnerClaim
+   */
+  public $claim;
   protected $claimType = PartnerClaim::class;
   protected $claimDataType = '';
+  /**
+   * @var PerDeviceStatusInBatch
+   */
+  public $result;
   protected $resultType = PerDeviceStatusInBatch::class;
   protected $resultDataType = '';
+  /**
+   * @var PartnerUnclaim
+   */
+  public $unclaim;
   protected $unclaimType = PartnerUnclaim::class;
   protected $unclaimDataType = '';
+  /**
+   * @var UpdateMetadataArguments
+   */
+  public $updateMetadata;
   protected $updateMetadataType = UpdateMetadataArguments::class;
   protected $updateMetadataDataType = '';
 

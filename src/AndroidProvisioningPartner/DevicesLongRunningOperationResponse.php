@@ -20,6 +20,10 @@ namespace Google\Service\AndroidProvisioningPartner;
 class DevicesLongRunningOperationResponse extends \Google\Collection
 {
   protected $collection_key = 'perDeviceStatus';
+  /**
+   * @var OperationPerDevice[]
+   */
+  public $perDeviceStatus;
   protected $perDeviceStatusType = OperationPerDevice::class;
   protected $perDeviceStatusDataType = 'array';
   /**
