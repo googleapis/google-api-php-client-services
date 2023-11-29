@@ -20,6 +20,10 @@ namespace Google\Service\AbusiveExperienceReport;
 class ViolatingSitesResponse extends \Google\Collection
 {
   protected $collection_key = 'violatingSites';
+  /**
+   * @var SiteSummaryResponse[]
+   */
+  public $violatingSites;
   protected $violatingSitesType = SiteSummaryResponse::class;
   protected $violatingSitesDataType = 'array';
 
