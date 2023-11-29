@@ -19,6 +19,10 @@ namespace Google\Service\HomeGraphService;
 
 class StateAndNotificationPayload extends \Google\Model
 {
+  /**
+   * @var ReportStateAndNotificationDevice
+   */
+  public $devices;
   protected $devicesType = ReportStateAndNotificationDevice::class;
   protected $devicesDataType = '';
 

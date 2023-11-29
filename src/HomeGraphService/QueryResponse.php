@@ -19,6 +19,10 @@ namespace Google\Service\HomeGraphService;
 
 class QueryResponse extends \Google\Model
 {
+  /**
+   * @var QueryResponsePayload
+   */
+  public $payload;
   protected $payloadType = QueryResponsePayload::class;
   protected $payloadDataType = '';
   /**

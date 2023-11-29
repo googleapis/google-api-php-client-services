@@ -20,6 +20,10 @@ namespace Google\Service\HomeGraphService;
 class QueryRequestPayload extends \Google\Collection
 {
   protected $collection_key = 'devices';
+  /**
+   * @var AgentDeviceId[]
+   */
+  public $devices;
   protected $devicesType = AgentDeviceId::class;
   protected $devicesDataType = 'array';
 

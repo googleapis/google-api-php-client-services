@@ -19,6 +19,10 @@ namespace Google\Service\HomeGraphService;
 
 class SyncResponse extends \Google\Model
 {
+  /**
+   * @var SyncResponsePayload
+   */
+  public $payload;
   protected $payloadType = SyncResponsePayload::class;
   protected $payloadDataType = '';
   /**
