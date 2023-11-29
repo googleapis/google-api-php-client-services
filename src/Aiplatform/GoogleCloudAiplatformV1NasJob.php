@@ -31,12 +31,20 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
    * @var bool
    */
   public $enableRestrictedImageTraining;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
@@ -47,8 +55,16 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudAiplatformV1NasJobOutput
+   */
+  public $nasJobOutput;
   protected $nasJobOutputType = GoogleCloudAiplatformV1NasJobOutput::class;
   protected $nasJobOutputDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1NasJobSpec
+   */
+  public $nasJobSpec;
   protected $nasJobSpecType = GoogleCloudAiplatformV1NasJobSpec::class;
   protected $nasJobSpecDataType = '';
   /**

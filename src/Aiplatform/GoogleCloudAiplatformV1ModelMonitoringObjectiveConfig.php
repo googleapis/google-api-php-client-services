@@ -19,12 +19,28 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfig
+   */
+  public $explanationConfig;
   protected $explanationConfigType = GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfig::class;
   protected $explanationConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetectionConfig
+   */
+  public $predictionDriftDetectionConfig;
   protected $predictionDriftDetectionConfigType = GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetectionConfig::class;
   protected $predictionDriftDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingDataset
+   */
+  public $trainingDataset;
   protected $trainingDatasetType = GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingDataset::class;
   protected $trainingDatasetDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingPredictionSkewDetectionConfig
+   */
+  public $trainingPredictionSkewDetectionConfig;
   protected $trainingPredictionSkewDetectionConfigType = GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingPredictionSkewDetectionConfig::class;
   protected $trainingPredictionSkewDetectionConfigDataType = '';
 

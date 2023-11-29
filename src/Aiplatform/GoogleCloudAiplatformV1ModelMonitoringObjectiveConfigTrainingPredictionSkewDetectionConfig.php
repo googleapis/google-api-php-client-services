@@ -19,10 +19,22 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingPredictionSkewDetectionConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1ThresholdConfig[]
+   */
+  public $attributionScoreSkewThresholds;
   protected $attributionScoreSkewThresholdsType = GoogleCloudAiplatformV1ThresholdConfig::class;
   protected $attributionScoreSkewThresholdsDataType = 'map';
+  /**
+   * @var GoogleCloudAiplatformV1ThresholdConfig
+   */
+  public $defaultSkewThreshold;
   protected $defaultSkewThresholdType = GoogleCloudAiplatformV1ThresholdConfig::class;
   protected $defaultSkewThresholdDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ThresholdConfig[]
+   */
+  public $skewThresholds;
   protected $skewThresholdsType = GoogleCloudAiplatformV1ThresholdConfig::class;
   protected $skewThresholdsDataType = 'map';
 

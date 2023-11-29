@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTimeSeriesForecastingPredict
    * @var float[]
    */
   public $quantileValues;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance
+   */
+  public $tftFeatureImportance;
   protected $tftFeatureImportanceType = GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance::class;
   protected $tftFeatureImportanceDataType = '';
   /**

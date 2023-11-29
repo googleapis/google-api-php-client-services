@@ -27,12 +27,20 @@ class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends \Google\Model
    * @var string
    */
   public $gcsOutputDirectory;
+  /**
+   * @var GoogleCloudAiplatformV1PipelineJobRuntimeConfigInputArtifact[]
+   */
+  public $inputArtifacts;
   protected $inputArtifactsType = GoogleCloudAiplatformV1PipelineJobRuntimeConfigInputArtifact::class;
   protected $inputArtifactsDataType = 'map';
   /**
    * @var array[]
    */
   public $parameterValues;
+  /**
+   * @var GoogleCloudAiplatformV1Value[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1Value::class;
   protected $parametersDataType = 'map';
 

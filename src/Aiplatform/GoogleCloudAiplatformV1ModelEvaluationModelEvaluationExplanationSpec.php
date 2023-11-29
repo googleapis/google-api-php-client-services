@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationSpec
+   */
+  public $explanationSpec;
   protected $explanationSpecType = GoogleCloudAiplatformV1ExplanationSpec::class;
   protected $explanationSpecDataType = '';
   /**

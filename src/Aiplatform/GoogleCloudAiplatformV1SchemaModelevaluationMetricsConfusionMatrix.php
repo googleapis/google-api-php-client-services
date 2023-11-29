@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrixAnnotationSpecRef[]
+   */
+  public $annotationSpecs;
   protected $annotationSpecsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrixAnnotationSpecRef::class;
   protected $annotationSpecsDataType = 'array';
   /**

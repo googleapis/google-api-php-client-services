@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ReadTensorboardTimeSeriesDataResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1TimeSeriesData
+   */
+  public $timeSeriesData;
   protected $timeSeriesDataType = GoogleCloudAiplatformV1TimeSeriesData::class;
   protected $timeSeriesDataDataType = '';
 

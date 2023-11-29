@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfigExplanationBaseline extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1BigQueryDestination
+   */
+  public $bigquery;
   protected $bigqueryType = GoogleCloudAiplatformV1BigQueryDestination::class;
   protected $bigqueryDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1GcsDestination
+   */
+  public $gcs;
   protected $gcsType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDataType = '';
   /**

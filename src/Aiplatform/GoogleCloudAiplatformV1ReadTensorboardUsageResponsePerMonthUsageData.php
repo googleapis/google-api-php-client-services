@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerMonthUsageData extends \Google\Collection
 {
   protected $collection_key = 'userUsageData';
+  /**
+   * @var GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerUserUsageData[]
+   */
+  public $userUsageData;
   protected $userUsageDataType = GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerUserUsageData::class;
   protected $userUsageDataDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTablesDatasetMetadataInputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTablesDatasetMetadataBigQuerySource
+   */
+  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudAiplatformV1SchemaTablesDatasetMetadataBigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTablesDatasetMetadataGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudAiplatformV1SchemaTablesDatasetMetadataGcsSource::class;
   protected $gcsSourceDataType = '';
 

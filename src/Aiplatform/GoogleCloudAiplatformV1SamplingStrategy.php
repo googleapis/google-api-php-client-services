@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SamplingStrategy extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SamplingStrategyRandomSampleConfig
+   */
+  public $randomSampleConfig;
   protected $randomSampleConfigType = GoogleCloudAiplatformV1SamplingStrategyRandomSampleConfig::class;
   protected $randomSampleConfigDataType = '';
 

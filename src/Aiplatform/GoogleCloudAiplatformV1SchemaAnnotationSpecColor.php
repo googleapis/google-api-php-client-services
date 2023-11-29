@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaAnnotationSpecColor extends \Google\Model
 {
+  /**
+   * @var GoogleTypeColor
+   */
+  public $color;
   protected $colorType = GoogleTypeColor::class;
   protected $colorDataType = '';
   /**

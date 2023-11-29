@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionRecognitionM
    * @var int
    */
   public $evaluatedActionCount;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics[]
+   */
+  public $videoActionMetrics;
   protected $videoActionMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics::class;
   protected $videoActionMetricsDataType = 'array';
 

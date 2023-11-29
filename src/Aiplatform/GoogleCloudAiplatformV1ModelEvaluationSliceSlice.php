@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1ModelEvaluationSliceSlice extends \Google\Model
    * @var string
    */
   public $dimension;
+  /**
+   * @var GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpec
+   */
+  public $sliceSpec;
   protected $sliceSpecType = GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpec::class;
   protected $sliceSpecDataType = '';
   /**

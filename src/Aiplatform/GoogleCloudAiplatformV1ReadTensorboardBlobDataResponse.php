@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReadTensorboardBlobDataResponse extends \Google\Collection
 {
   protected $collection_key = 'blobs';
+  /**
+   * @var GoogleCloudAiplatformV1TensorboardBlob[]
+   */
+  public $blobs;
   protected $blobsType = GoogleCloudAiplatformV1TensorboardBlob::class;
   protected $blobsDataType = 'array';
 

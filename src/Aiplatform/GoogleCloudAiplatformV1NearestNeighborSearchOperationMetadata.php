@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadata extends \Google\Collection
 {
   protected $collection_key = 'contentValidationStats';
+  /**
+   * @var GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataContentValidationStats[]
+   */
+  public $contentValidationStats;
   protected $contentValidationStatsType = GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataContentValidationStats::class;
   protected $contentValidationStatsDataType = 'array';
   /**

@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ReadFeatureValuesResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityView
+   */
+  public $entityView;
   protected $entityViewType = GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityView::class;
   protected $entityViewDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ReadFeatureValuesResponseHeader
+   */
+  public $header;
   protected $headerType = GoogleCloudAiplatformV1ReadFeatureValuesResponseHeader::class;
   protected $headerDataType = '';
 

@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataContentValida
    * @var string
    */
   public $invalidRecordCount;
+  /**
+   * @var GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataRecordError[]
+   */
+  public $partialErrors;
   protected $partialErrorsType = GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataRecordError::class;
   protected $partialErrorsDataType = 'array';
   /**

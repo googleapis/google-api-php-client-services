@@ -20,10 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PipelineJobDetail extends \Google\Collection
 {
   protected $collection_key = 'taskDetails';
+  /**
+   * @var GoogleCloudAiplatformV1Context
+   */
+  public $pipelineContext;
   protected $pipelineContextType = GoogleCloudAiplatformV1Context::class;
   protected $pipelineContextDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1Context
+   */
+  public $pipelineRunContext;
   protected $pipelineRunContextType = GoogleCloudAiplatformV1Context::class;
   protected $pipelineRunContextDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTaskDetail[]
+   */
+  public $taskDetails;
   protected $taskDetailsType = GoogleCloudAiplatformV1PipelineTaskDetail::class;
   protected $taskDetailsDataType = 'array';
 

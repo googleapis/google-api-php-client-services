@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics extends \Google\Collection
 {
   protected $collection_key = 'confidenceMetrics';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetricsConfidenceMetrics[]
+   */
+  public $confidenceMetrics;
   protected $confidenceMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetricsConfidenceMetrics::class;
   protected $confidenceMetricsDataType = 'array';
   /**

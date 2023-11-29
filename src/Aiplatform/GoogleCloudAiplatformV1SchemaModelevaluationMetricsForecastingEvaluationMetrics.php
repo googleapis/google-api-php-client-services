@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsForecastingEvaluationMe
    * @var float
    */
   public $meanAbsolutePercentageError;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsForecastingEvaluationMetricsQuantileMetricsEntry[]
+   */
+  public $quantileMetrics;
   protected $quantileMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsForecastingEvaluationMetricsQuantileMetricsEntry::class;
   protected $quantileMetricsDataType = 'array';
   /**

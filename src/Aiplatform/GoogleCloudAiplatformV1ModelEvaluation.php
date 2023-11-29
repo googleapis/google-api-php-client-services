@@ -36,6 +36,10 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec[]
+   */
+  public $explanationSpecs;
   protected $explanationSpecsType = GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec::class;
   protected $explanationSpecsDataType = 'array';
   /**
@@ -50,6 +54,10 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
    * @var string
    */
   public $metricsSchemaUri;
+  /**
+   * @var GoogleCloudAiplatformV1ModelExplanation
+   */
+  public $modelExplanation;
   protected $modelExplanationType = GoogleCloudAiplatformV1ModelExplanation::class;
   protected $modelExplanationDataType = '';
   /**

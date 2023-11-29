@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsClassificationEvaluatio
    * @var float
    */
   public $confidenceThreshold;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix
+   */
+  public $confusionMatrix;
   protected $confusionMatrixType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
   /**

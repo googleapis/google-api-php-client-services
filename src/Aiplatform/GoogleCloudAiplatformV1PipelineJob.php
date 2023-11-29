@@ -28,14 +28,26 @@ class GoogleCloudAiplatformV1PipelineJob extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1PipelineJobDetail
+   */
+  public $jobDetail;
   protected $jobDetailType = GoogleCloudAiplatformV1PipelineJobDetail::class;
   protected $jobDetailDataType = '';
   /**
@@ -58,6 +70,10 @@ class GoogleCloudAiplatformV1PipelineJob extends \Google\Collection
    * @var string[]
    */
   public $reservedIpRanges;
+  /**
+   * @var GoogleCloudAiplatformV1PipelineJobRuntimeConfig
+   */
+  public $runtimeConfig;
   protected $runtimeConfigType = GoogleCloudAiplatformV1PipelineJobRuntimeConfig::class;
   protected $runtimeConfigDataType = '';
   /**
@@ -76,6 +92,10 @@ class GoogleCloudAiplatformV1PipelineJob extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTemplateMetadata
+   */
+  public $templateMetadata;
   protected $templateMetadataType = GoogleCloudAiplatformV1PipelineTemplateMetadata::class;
   protected $templateMetadataDataType = '';
   /**

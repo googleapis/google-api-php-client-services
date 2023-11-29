@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1ModelMonitoringStatsAnomalies extends \Google\Colle
    * @var string
    */
   public $deployedModelId;
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringStatsAnomaliesFeatureHistoricStatsAnomalies[]
+   */
+  public $featureStats;
   protected $featureStatsType = GoogleCloudAiplatformV1ModelMonitoringStatsAnomaliesFeatureHistoricStatsAnomalies::class;
   protected $featureStatsDataType = 'array';
   /**

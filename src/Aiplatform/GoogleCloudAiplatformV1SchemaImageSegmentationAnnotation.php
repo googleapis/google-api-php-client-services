@@ -19,10 +19,22 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationMaskAnnotation
+   */
+  public $maskAnnotation;
   protected $maskAnnotationType = GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationMaskAnnotation::class;
   protected $maskAnnotationDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation
+   */
+  public $polygonAnnotation;
   protected $polygonAnnotationType = GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation::class;
   protected $polygonAnnotationDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolylineAnnotation
+   */
+  public $polylineAnnotation;
   protected $polylineAnnotationType = GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolylineAnnotation::class;
   protected $polylineAnnotationDataType = '';
 

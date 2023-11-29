@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluationMetrics extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix
+   */
+  public $confusionMatrix;
   protected $confusionMatrixType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
   /**

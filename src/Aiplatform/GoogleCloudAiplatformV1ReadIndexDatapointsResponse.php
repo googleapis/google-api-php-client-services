@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReadIndexDatapointsResponse extends \Google\Collection
 {
   protected $collection_key = 'datapoints';
+  /**
+   * @var GoogleCloudAiplatformV1IndexDatapoint[]
+   */
+  public $datapoints;
   protected $datapointsType = GoogleCloudAiplatformV1IndexDatapoint::class;
   protected $datapointsDataType = 'array';
 

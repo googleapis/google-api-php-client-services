@@ -32,8 +32,16 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
    * @var string
    */
   public $deploymentTimeout;
+  /**
+   * @var GoogleCloudAiplatformV1EnvVar[]
+   */
+  public $env;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1Probe
+   */
+  public $healthProbe;
   protected $healthProbeType = GoogleCloudAiplatformV1Probe::class;
   protected $healthProbeDataType = '';
   /**
@@ -44,6 +52,10 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
    * @var string
    */
   public $imageUri;
+  /**
+   * @var GoogleCloudAiplatformV1Port[]
+   */
+  public $ports;
   protected $portsType = GoogleCloudAiplatformV1Port::class;
   protected $portsDataType = 'array';
   /**
@@ -54,6 +66,10 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
    * @var string
    */
   public $sharedMemorySizeMb;
+  /**
+   * @var GoogleCloudAiplatformV1Probe
+   */
+  public $startupProbe;
   protected $startupProbeType = GoogleCloudAiplatformV1Probe::class;
   protected $startupProbeDataType = '';
 

@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringJob extends \Google\Collec
    * @var string
    */
   public $analysisInstanceSchemaUri;
+  /**
+   * @var GoogleCloudAiplatformV1ModelDeploymentMonitoringBigQueryTable[]
+   */
+  public $bigqueryTables;
   protected $bigqueryTablesType = GoogleCloudAiplatformV1ModelDeploymentMonitoringBigQueryTable::class;
   protected $bigqueryTablesDataType = 'array';
   /**
@@ -38,30 +42,58 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringJob extends \Google\Collec
    * @var bool
    */
   public $enableMonitoringPipelineLogs;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $endpoint;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var GoogleCloudAiplatformV1ModelDeploymentMonitoringJobLatestMonitoringPipelineMetadata
+   */
+  public $latestMonitoringPipelineMetadata;
   protected $latestMonitoringPipelineMetadataType = GoogleCloudAiplatformV1ModelDeploymentMonitoringJobLatestMonitoringPipelineMetadata::class;
   protected $latestMonitoringPipelineMetadataDataType = '';
   /**
    * @var string
    */
   public $logTtl;
+  /**
+   * @var GoogleCloudAiplatformV1SamplingStrategy
+   */
+  public $loggingSamplingStrategy;
   protected $loggingSamplingStrategyType = GoogleCloudAiplatformV1SamplingStrategy::class;
   protected $loggingSamplingStrategyDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ModelDeploymentMonitoringObjectiveConfig[]
+   */
+  public $modelDeploymentMonitoringObjectiveConfigs;
   protected $modelDeploymentMonitoringObjectiveConfigsType = GoogleCloudAiplatformV1ModelDeploymentMonitoringObjectiveConfig::class;
   protected $modelDeploymentMonitoringObjectiveConfigsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1ModelDeploymentMonitoringScheduleConfig
+   */
+  public $modelDeploymentMonitoringScheduleConfig;
   protected $modelDeploymentMonitoringScheduleConfigType = GoogleCloudAiplatformV1ModelDeploymentMonitoringScheduleConfig::class;
   protected $modelDeploymentMonitoringScheduleConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringAlertConfig
+   */
+  public $modelMonitoringAlertConfig;
   protected $modelMonitoringAlertConfigType = GoogleCloudAiplatformV1ModelMonitoringAlertConfig::class;
   protected $modelMonitoringAlertConfigDataType = '';
   /**
@@ -88,6 +120,10 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringJob extends \Google\Collec
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudAiplatformV1GcsDestination
+   */
+  public $statsAnomaliesBaseDirectory;
   protected $statsAnomaliesBaseDirectoryType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $statsAnomaliesBaseDirectoryDataType = '';
   /**

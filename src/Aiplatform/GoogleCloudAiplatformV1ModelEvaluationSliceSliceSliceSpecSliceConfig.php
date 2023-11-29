@@ -23,8 +23,16 @@ class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecSliceConfig exten
    * @var bool
    */
   public $allValues;
+  /**
+   * @var GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecRange
+   */
+  public $range;
   protected $rangeType = GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecRange::class;
   protected $rangeDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecValue
+   */
+  public $value;
   protected $valueType = GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecValue::class;
   protected $valueDataType = '';
 

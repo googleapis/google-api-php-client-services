@@ -28,8 +28,16 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsClassificationEvaluatio
    * @var float
    */
   public $auRoc;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsClassificationEvaluationMetricsConfidenceMetrics[]
+   */
+  public $confidenceMetrics;
   protected $confidenceMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsClassificationEvaluationMetricsConfidenceMetrics::class;
   protected $confidenceMetricsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix
+   */
+  public $confusionMatrix;
   protected $confusionMatrixType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
   /**

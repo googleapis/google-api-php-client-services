@@ -31,12 +31,20 @@ class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
    * @var string
    */
   public $metricsSchemaUri;
+  /**
+   * @var GoogleCloudAiplatformV1ModelExplanation
+   */
+  public $modelExplanation;
   protected $modelExplanationType = GoogleCloudAiplatformV1ModelExplanation::class;
   protected $modelExplanationDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudAiplatformV1ModelEvaluationSliceSlice
+   */
+  public $slice;
   protected $sliceType = GoogleCloudAiplatformV1ModelEvaluationSliceSlice::class;
   protected $sliceDataType = '';
 

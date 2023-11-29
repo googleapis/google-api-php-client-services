@@ -24,10 +24,22 @@ class GoogleCloudAiplatformV1ModelMonitoringStatsAnomaliesFeatureHistoricStatsAn
    * @var string
    */
   public $featureDisplayName;
+  /**
+   * @var GoogleCloudAiplatformV1FeatureStatsAnomaly[]
+   */
+  public $predictionStats;
   protected $predictionStatsType = GoogleCloudAiplatformV1FeatureStatsAnomaly::class;
   protected $predictionStatsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1ThresholdConfig
+   */
+  public $threshold;
   protected $thresholdType = GoogleCloudAiplatformV1ThresholdConfig::class;
   protected $thresholdDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FeatureStatsAnomaly
+   */
+  public $trainingStats;
   protected $trainingStatsType = GoogleCloudAiplatformV1FeatureStatsAnomaly::class;
   protected $trainingStatsDataType = '';
 

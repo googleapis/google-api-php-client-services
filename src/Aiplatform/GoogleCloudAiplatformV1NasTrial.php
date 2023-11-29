@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1NasTrial extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleCloudAiplatformV1Measurement
+   */
+  public $finalMeasurement;
   protected $finalMeasurementType = GoogleCloudAiplatformV1Measurement::class;
   protected $finalMeasurementDataType = '';
   /**

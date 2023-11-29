@@ -28,20 +28,44 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1Execution
+   */
+  public $execution;
   protected $executionType = GoogleCloudAiplatformV1Execution::class;
   protected $executionDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTaskExecutorDetail
+   */
+  public $executorDetail;
   protected $executorDetailType = GoogleCloudAiplatformV1PipelineTaskExecutorDetail::class;
   protected $executorDetailDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTaskDetailArtifactList[]
+   */
+  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1PipelineTaskDetailArtifactList::class;
   protected $inputsDataType = 'map';
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTaskDetailArtifactList[]
+   */
+  public $outputs;
   protected $outputsType = GoogleCloudAiplatformV1PipelineTaskDetailArtifactList::class;
   protected $outputsDataType = 'map';
   /**
    * @var string
    */
   public $parentTaskId;
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTaskDetailPipelineTaskStatus[]
+   */
+  public $pipelineTaskStatus;
   protected $pipelineTaskStatusType = GoogleCloudAiplatformV1PipelineTaskDetailPipelineTaskStatus::class;
   protected $pipelineTaskStatusDataType = 'array';
   /**

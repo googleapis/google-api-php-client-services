@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityView extends \Google\Collection
 {
   protected $collection_key = 'data';
+  /**
+   * @var GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityViewData[]
+   */
+  public $data;
   protected $dataType = GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityViewData::class;
   protected $dataDataType = 'array';
   /**

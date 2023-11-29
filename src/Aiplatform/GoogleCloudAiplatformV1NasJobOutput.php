@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1NasJobOutput extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1NasJobOutputMultiTrialJobOutput
+   */
+  public $multiTrialJobOutput;
   protected $multiTrialJobOutputType = GoogleCloudAiplatformV1NasJobOutputMultiTrialJobOutput::class;
   protected $multiTrialJobOutputDataType = '';
 

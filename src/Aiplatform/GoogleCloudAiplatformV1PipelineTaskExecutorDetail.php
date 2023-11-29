@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PipelineTaskExecutorDetail extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTaskExecutorDetailContainerDetail
+   */
+  public $containerDetail;
   protected $containerDetailType = GoogleCloudAiplatformV1PipelineTaskExecutorDetailContainerDetail::class;
   protected $containerDetailDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1PipelineTaskExecutorDetailCustomJobDetail
+   */
+  public $customJobDetail;
   protected $customJobDetailType = GoogleCloudAiplatformV1PipelineTaskExecutorDetailCustomJobDetail::class;
   protected $customJobDetailDataType = '';
 

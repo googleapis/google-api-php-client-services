@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1MutateDeployedIndexOperationMetadata extends \Googl
    * @var string
    */
   public $deployedIndexId;
+  /**
+   * @var GoogleCloudAiplatformV1GenericOperationMetadata
+   */
+  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
 

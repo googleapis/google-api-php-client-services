@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringObjectiveConfig extends \G
    * @var string
    */
   public $deployedModelId;
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringObjectiveConfig
+   */
+  public $objectiveConfig;
   protected $objectiveConfigType = GoogleCloudAiplatformV1ModelMonitoringObjectiveConfig::class;
   protected $objectiveConfigDataType = '';
 

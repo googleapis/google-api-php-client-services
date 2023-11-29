@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PublisherModelCallToActionViewRestApi extends \Google\Collection
 {
   protected $collection_key = 'documentations';
+  /**
+   * @var GoogleCloudAiplatformV1PublisherModelDocumentation[]
+   */
+  public $documentations;
   protected $documentationsType = GoogleCloudAiplatformV1PublisherModelDocumentation::class;
   protected $documentationsDataType = 'array';
   /**

@@ -19,14 +19,26 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecMetricSpec
+   */
+  public $metric;
   protected $metricType = GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecMetricSpec::class;
   protected $metricDataType = '';
   /**
    * @var string
    */
   public $multiTrialAlgorithm;
+  /**
+   * @var GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecSearchTrialSpec
+   */
+  public $searchTrialSpec;
   protected $searchTrialSpecType = GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecSearchTrialSpec::class;
   protected $searchTrialSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecTrainTrialSpec
+   */
+  public $trainTrialSpec;
   protected $trainTrialSpecType = GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecTrainTrialSpec::class;
   protected $trainTrialSpecDataType = '';
 

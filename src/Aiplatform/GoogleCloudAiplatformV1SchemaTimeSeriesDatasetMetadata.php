@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataInputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataInputConfig::class;
   protected $inputConfigDataType = '';
   /**

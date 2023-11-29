@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoObjectTrackingPredictio
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaPredictPredictionVideoObjectTrackingPredictionResultFrame[]
+   */
+  public $frames;
   protected $framesType = GoogleCloudAiplatformV1SchemaPredictPredictionVideoObjectTrackingPredictionResultFrame::class;
   protected $framesDataType = 'array';
   /**

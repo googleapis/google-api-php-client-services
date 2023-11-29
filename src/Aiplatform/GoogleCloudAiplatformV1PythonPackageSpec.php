@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1PythonPackageSpec extends \Google\Collection
    * @var string[]
    */
   public $args;
+  /**
+   * @var GoogleCloudAiplatformV1EnvVar[]
+   */
+  public $env;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
   /**
