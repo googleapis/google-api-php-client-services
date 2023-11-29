@@ -27,6 +27,10 @@ class CollectdValue extends \Google\Model
    * @var string
    */
   public $dataSourceType;
+  /**
+   * @var TypedValue
+   */
+  public $value;
   protected $valueType = TypedValue::class;
   protected $valueDataType = '';
 

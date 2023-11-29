@@ -23,6 +23,10 @@ class Error extends \Google\Model
    * @var int
    */
   public $pointCount;
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

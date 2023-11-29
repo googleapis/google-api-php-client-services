@@ -23,10 +23,22 @@ class WindowsBasedSli extends \Google\Model
    * @var string
    */
   public $goodBadMetricFilter;
+  /**
+   * @var PerformanceThreshold
+   */
+  public $goodTotalRatioThreshold;
   protected $goodTotalRatioThresholdType = PerformanceThreshold::class;
   protected $goodTotalRatioThresholdDataType = '';
+  /**
+   * @var MetricRange
+   */
+  public $metricMeanInRange;
   protected $metricMeanInRangeType = MetricRange::class;
   protected $metricMeanInRangeDataType = '';
+  /**
+   * @var MetricRange
+   */
+  public $metricSumInRange;
   protected $metricSumInRangeType = MetricRange::class;
   protected $metricSumInRangeDataType = '';
   /**

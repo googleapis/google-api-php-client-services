@@ -20,6 +20,10 @@ namespace Google\Service\Monitoring;
 class ListGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'group';
+  /**
+   * @var Group[]
+   */
+  public $group;
   protected $groupType = Group::class;
   protected $groupDataType = 'array';
   /**

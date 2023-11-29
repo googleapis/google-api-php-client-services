@@ -19,14 +19,34 @@ namespace Google\Service\Monitoring;
 
 class Condition extends \Google\Model
 {
+  /**
+   * @var MetricAbsence
+   */
+  public $conditionAbsent;
   protected $conditionAbsentType = MetricAbsence::class;
   protected $conditionAbsentDataType = '';
+  /**
+   * @var LogMatch
+   */
+  public $conditionMatchedLog;
   protected $conditionMatchedLogType = LogMatch::class;
   protected $conditionMatchedLogDataType = '';
+  /**
+   * @var MonitoringQueryLanguageCondition
+   */
+  public $conditionMonitoringQueryLanguage;
   protected $conditionMonitoringQueryLanguageType = MonitoringQueryLanguageCondition::class;
   protected $conditionMonitoringQueryLanguageDataType = '';
+  /**
+   * @var PrometheusQueryLanguageCondition
+   */
+  public $conditionPrometheusQueryLanguage;
   protected $conditionPrometheusQueryLanguageType = PrometheusQueryLanguageCondition::class;
   protected $conditionPrometheusQueryLanguageDataType = '';
+  /**
+   * @var MetricThreshold
+   */
+  public $conditionThreshold;
   protected $conditionThresholdType = MetricThreshold::class;
   protected $conditionThresholdDataType = '';
   /**

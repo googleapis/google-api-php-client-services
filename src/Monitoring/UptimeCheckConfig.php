@@ -24,20 +24,36 @@ class UptimeCheckConfig extends \Google\Collection
    * @var string
    */
   public $checkerType;
+  /**
+   * @var ContentMatcher[]
+   */
+  public $contentMatchers;
   protected $contentMatchersType = ContentMatcher::class;
   protected $contentMatchersDataType = 'array';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var HttpCheck
+   */
+  public $httpCheck;
   protected $httpCheckType = HttpCheck::class;
   protected $httpCheckDataType = '';
+  /**
+   * @var InternalChecker[]
+   */
+  public $internalCheckers;
   protected $internalCheckersType = InternalChecker::class;
   protected $internalCheckersDataType = 'array';
   /**
    * @var bool
    */
   public $isInternal;
+  /**
+   * @var MonitoredResource
+   */
+  public $monitoredResource;
   protected $monitoredResourceType = MonitoredResource::class;
   protected $monitoredResourceDataType = '';
   /**
@@ -48,14 +64,26 @@ class UptimeCheckConfig extends \Google\Collection
    * @var string
    */
   public $period;
+  /**
+   * @var ResourceGroup
+   */
+  public $resourceGroup;
   protected $resourceGroupType = ResourceGroup::class;
   protected $resourceGroupDataType = '';
   /**
    * @var string[]
    */
   public $selectedRegions;
+  /**
+   * @var SyntheticMonitorTarget
+   */
+  public $syntheticMonitor;
   protected $syntheticMonitorType = SyntheticMonitorTarget::class;
   protected $syntheticMonitorDataType = '';
+  /**
+   * @var TcpCheck
+   */
+  public $tcpCheck;
   protected $tcpCheckType = TcpCheck::class;
   protected $tcpCheckDataType = '';
   /**

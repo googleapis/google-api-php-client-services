@@ -24,15 +24,27 @@ class Distribution extends \Google\Collection
    * @var string[]
    */
   public $bucketCounts;
+  /**
+   * @var BucketOptions
+   */
+  public $bucketOptions;
   protected $bucketOptionsType = BucketOptions::class;
   protected $bucketOptionsDataType = '';
   /**
    * @var string
    */
   public $count;
+  /**
+   * @var Exemplar[]
+   */
+  public $exemplars;
   protected $exemplarsType = Exemplar::class;
   protected $exemplarsDataType = 'array';
   public $mean;
+  /**
+   * @var Range
+   */
+  public $range;
   protected $rangeType = Range::class;
   protected $rangeDataType = '';
   public $sumOfSquaredDeviation;

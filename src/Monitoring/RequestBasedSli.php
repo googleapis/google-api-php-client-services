@@ -19,8 +19,16 @@ namespace Google\Service\Monitoring;
 
 class RequestBasedSli extends \Google\Model
 {
+  /**
+   * @var DistributionCut
+   */
+  public $distributionCut;
   protected $distributionCutType = DistributionCut::class;
   protected $distributionCutDataType = '';
+  /**
+   * @var TimeSeriesRatio
+   */
+  public $goodTotalRatio;
   protected $goodTotalRatioType = TimeSeriesRatio::class;
   protected $goodTotalRatioDataType = '';
 

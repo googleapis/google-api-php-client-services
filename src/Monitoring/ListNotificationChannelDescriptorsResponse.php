@@ -20,6 +20,10 @@ namespace Google\Service\Monitoring;
 class ListNotificationChannelDescriptorsResponse extends \Google\Collection
 {
   protected $collection_key = 'channelDescriptors';
+  /**
+   * @var NotificationChannelDescriptor[]
+   */
+  public $channelDescriptors;
   protected $channelDescriptorsType = NotificationChannelDescriptor::class;
   protected $channelDescriptorsDataType = 'array';
   /**

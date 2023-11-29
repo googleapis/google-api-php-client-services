@@ -20,6 +20,10 @@ namespace Google\Service\Monitoring;
 class CreateTimeSeriesRequest extends \Google\Collection
 {
   protected $collection_key = 'timeSeries';
+  /**
+   * @var TimeSeries[]
+   */
+  public $timeSeries;
   protected $timeSeriesType = TimeSeries::class;
   protected $timeSeriesDataType = 'array';
 

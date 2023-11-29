@@ -28,6 +28,10 @@ class NotificationChannelDescriptor extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var LabelDescriptor[]
+   */
+  public $labels;
   protected $labelsType = LabelDescriptor::class;
   protected $labelsDataType = 'array';
   /**

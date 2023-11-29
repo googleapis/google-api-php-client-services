@@ -20,12 +20,20 @@ namespace Google\Service\Monitoring;
 class ListTimeSeriesResponse extends \Google\Collection
 {
   protected $collection_key = 'timeSeries';
+  /**
+   * @var Status[]
+   */
+  public $executionErrors;
   protected $executionErrorsType = Status::class;
   protected $executionErrorsDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TimeSeries[]
+   */
+  public $timeSeries;
   protected $timeSeriesType = TimeSeries::class;
   protected $timeSeriesDataType = 'array';
   /**

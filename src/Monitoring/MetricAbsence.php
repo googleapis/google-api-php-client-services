@@ -20,6 +20,10 @@ namespace Google\Service\Monitoring;
 class MetricAbsence extends \Google\Collection
 {
   protected $collection_key = 'aggregations';
+  /**
+   * @var Aggregation[]
+   */
+  public $aggregations;
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class MetricAbsence extends \Google\Collection
    * @var string
    */
   public $filter;
+  /**
+   * @var Trigger
+   */
+  public $trigger;
   protected $triggerType = Trigger::class;
   protected $triggerDataType = '';
 

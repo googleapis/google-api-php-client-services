@@ -20,12 +20,20 @@ namespace Google\Service\Monitoring;
 class CollectdPayloadError extends \Google\Collection
 {
   protected $collection_key = 'valueErrors';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
    * @var int
    */
   public $index;
+  /**
+   * @var CollectdValueError[]
+   */
+  public $valueErrors;
   protected $valueErrorsType = CollectdValueError::class;
   protected $valueErrorsDataType = 'array';
 

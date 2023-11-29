@@ -20,6 +20,10 @@ namespace Google\Service\Monitoring;
 class ListMetricDescriptorsResponse extends \Google\Collection
 {
   protected $collection_key = 'metricDescriptors';
+  /**
+   * @var MetricDescriptor[]
+   */
+  public $metricDescriptors;
   protected $metricDescriptorsType = MetricDescriptor::class;
   protected $metricDescriptorsDataType = 'array';
   /**

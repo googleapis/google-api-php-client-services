@@ -19,8 +19,16 @@ namespace Google\Service\Monitoring;
 
 class Point extends \Google\Model
 {
+  /**
+   * @var TimeInterval
+   */
+  public $interval;
   protected $intervalType = TimeInterval::class;
   protected $intervalDataType = '';
+  /**
+   * @var TypedValue
+   */
+  public $value;
   protected $valueType = TypedValue::class;
   protected $valueDataType = '';
 

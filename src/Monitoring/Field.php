@@ -48,6 +48,10 @@ class Field extends \Google\Collection
    * @var int
    */
   public $oneofIndex;
+  /**
+   * @var Option[]
+   */
+  public $options;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
   /**

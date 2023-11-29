@@ -20,8 +20,16 @@ namespace Google\Service\Monitoring;
 class PointData extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var TimeInterval
+   */
+  public $timeInterval;
   protected $timeIntervalType = TimeInterval::class;
   protected $timeIntervalDataType = '';
+  /**
+   * @var TypedValue[]
+   */
+  public $values;
   protected $valuesType = TypedValue::class;
   protected $valuesDataType = 'array';
 

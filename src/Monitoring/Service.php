@@ -19,36 +19,84 @@ namespace Google\Service\Monitoring;
 
 class Service extends \Google\Model
 {
+  /**
+   * @var AppEngine
+   */
+  public $appEngine;
   protected $appEngineType = AppEngine::class;
   protected $appEngineDataType = '';
+  /**
+   * @var BasicService
+   */
+  public $basicService;
   protected $basicServiceType = BasicService::class;
   protected $basicServiceDataType = '';
+  /**
+   * @var CloudEndpoints
+   */
+  public $cloudEndpoints;
   protected $cloudEndpointsType = CloudEndpoints::class;
   protected $cloudEndpointsDataType = '';
+  /**
+   * @var CloudRun
+   */
+  public $cloudRun;
   protected $cloudRunType = CloudRun::class;
   protected $cloudRunDataType = '';
+  /**
+   * @var ClusterIstio
+   */
+  public $clusterIstio;
   protected $clusterIstioType = ClusterIstio::class;
   protected $clusterIstioDataType = '';
+  /**
+   * @var Custom
+   */
+  public $custom;
   protected $customType = Custom::class;
   protected $customDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var GkeNamespace
+   */
+  public $gkeNamespace;
   protected $gkeNamespaceType = GkeNamespace::class;
   protected $gkeNamespaceDataType = '';
+  /**
+   * @var GkeService
+   */
+  public $gkeService;
   protected $gkeServiceType = GkeService::class;
   protected $gkeServiceDataType = '';
+  /**
+   * @var GkeWorkload
+   */
+  public $gkeWorkload;
   protected $gkeWorkloadType = GkeWorkload::class;
   protected $gkeWorkloadDataType = '';
+  /**
+   * @var IstioCanonicalService
+   */
+  public $istioCanonicalService;
   protected $istioCanonicalServiceType = IstioCanonicalService::class;
   protected $istioCanonicalServiceDataType = '';
+  /**
+   * @var MeshIstio
+   */
+  public $meshIstio;
   protected $meshIstioType = MeshIstio::class;
   protected $meshIstioDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Telemetry
+   */
+  public $telemetry;
   protected $telemetryType = Telemetry::class;
   protected $telemetryDataType = '';
   /**

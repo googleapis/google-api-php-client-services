@@ -20,8 +20,16 @@ namespace Google\Service\Monitoring;
 class TimeSeriesData extends \Google\Collection
 {
   protected $collection_key = 'pointData';
+  /**
+   * @var LabelValue[]
+   */
+  public $labelValues;
   protected $labelValuesType = LabelValue::class;
   protected $labelValuesDataType = 'array';
+  /**
+   * @var PointData[]
+   */
+  public $pointData;
   protected $pointDataType = PointData::class;
   protected $pointDataDataType = 'array';
 

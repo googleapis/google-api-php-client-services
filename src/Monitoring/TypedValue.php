@@ -23,6 +23,10 @@ class TypedValue extends \Google\Model
    * @var bool
    */
   public $boolValue;
+  /**
+   * @var Distribution
+   */
+  public $distributionValue;
   protected $distributionValueType = Distribution::class;
   protected $distributionValueDataType = '';
   public $doubleValue;

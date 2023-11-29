@@ -20,16 +20,32 @@ namespace Google\Service\Monitoring;
 class TimeSeries extends \Google\Collection
 {
   protected $collection_key = 'points';
+  /**
+   * @var MonitoredResourceMetadata
+   */
+  public $metadata;
   protected $metadataType = MonitoredResourceMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var Metric
+   */
+  public $metric;
   protected $metricType = Metric::class;
   protected $metricDataType = '';
   /**
    * @var string
    */
   public $metricKind;
+  /**
+   * @var Point[]
+   */
+  public $points;
   protected $pointsType = Point::class;
   protected $pointsDataType = 'array';
+  /**
+   * @var MonitoredResource
+   */
+  public $resource;
   protected $resourceType = MonitoredResource::class;
   protected $resourceDataType = '';
   /**

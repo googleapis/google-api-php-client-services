@@ -20,6 +20,10 @@ namespace Google\Service\Monitoring;
 class ListAlertPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'alertPolicies';
+  /**
+   * @var AlertPolicy[]
+   */
+  public $alertPolicies;
   protected $alertPoliciesType = AlertPolicy::class;
   protected $alertPoliciesDataType = 'array';
   /**

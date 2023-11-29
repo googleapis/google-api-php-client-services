@@ -20,8 +20,16 @@ namespace Google\Service\Monitoring;
 class BasicSli extends \Google\Collection
 {
   protected $collection_key = 'version';
+  /**
+   * @var AvailabilityCriteria
+   */
+  public $availability;
   protected $availabilityType = AvailabilityCriteria::class;
   protected $availabilityDataType = '';
+  /**
+   * @var LatencyCriteria
+   */
+  public $latency;
   protected $latencyType = LatencyCriteria::class;
   protected $latencyDataType = '';
   /**

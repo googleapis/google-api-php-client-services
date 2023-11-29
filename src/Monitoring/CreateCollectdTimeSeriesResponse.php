@@ -20,8 +20,16 @@ namespace Google\Service\Monitoring;
 class CreateCollectdTimeSeriesResponse extends \Google\Collection
 {
   protected $collection_key = 'payloadErrors';
+  /**
+   * @var CollectdPayloadError[]
+   */
+  public $payloadErrors;
   protected $payloadErrorsType = CollectdPayloadError::class;
   protected $payloadErrorsDataType = 'array';
+  /**
+   * @var CreateTimeSeriesSummary
+   */
+  public $summary;
   protected $summaryType = CreateTimeSeriesSummary::class;
   protected $summaryDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Monitoring;
 
 class SyntheticMonitorTarget extends \Google\Model
 {
+  /**
+   * @var CloudFunctionV2Target
+   */
+  public $cloudFunctionV2;
   protected $cloudFunctionV2Type = CloudFunctionV2Target::class;
   protected $cloudFunctionV2DataType = '';
 

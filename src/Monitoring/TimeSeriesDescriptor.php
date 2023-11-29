@@ -20,8 +20,16 @@ namespace Google\Service\Monitoring;
 class TimeSeriesDescriptor extends \Google\Collection
 {
   protected $collection_key = 'pointDescriptors';
+  /**
+   * @var LabelDescriptor[]
+   */
+  public $labelDescriptors;
   protected $labelDescriptorsType = LabelDescriptor::class;
   protected $labelDescriptorsDataType = 'array';
+  /**
+   * @var ValueDescriptor[]
+   */
+  public $pointDescriptors;
   protected $pointDescriptorsType = ValueDescriptor::class;
   protected $pointDescriptorsDataType = 'array';
 

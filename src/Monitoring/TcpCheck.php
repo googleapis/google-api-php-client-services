@@ -19,6 +19,10 @@ namespace Google\Service\Monitoring;
 
 class TcpCheck extends \Google\Model
 {
+  /**
+   * @var PingConfig
+   */
+  public $pingConfig;
   protected $pingConfigType = PingConfig::class;
   protected $pingConfigDataType = '';
   /**

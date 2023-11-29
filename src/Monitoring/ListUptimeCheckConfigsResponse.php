@@ -28,6 +28,10 @@ class ListUptimeCheckConfigsResponse extends \Google\Collection
    * @var int
    */
   public $totalSize;
+  /**
+   * @var UptimeCheckConfig[]
+   */
+  public $uptimeCheckConfigs;
   protected $uptimeCheckConfigsType = UptimeCheckConfig::class;
   protected $uptimeCheckConfigsDataType = 'array';
 

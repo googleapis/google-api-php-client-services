@@ -19,8 +19,16 @@ namespace Google\Service\Monitoring;
 
 class PerformanceThreshold extends \Google\Model
 {
+  /**
+   * @var BasicSli
+   */
+  public $basicSliPerformance;
   protected $basicSliPerformanceType = BasicSli::class;
   protected $basicSliPerformanceDataType = '';
+  /**
+   * @var RequestBasedSli
+   */
+  public $performance;
   protected $performanceType = RequestBasedSli::class;
   protected $performanceDataType = '';
   public $threshold;
