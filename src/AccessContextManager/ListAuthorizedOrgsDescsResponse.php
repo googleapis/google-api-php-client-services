@@ -20,6 +20,10 @@ namespace Google\Service\AccessContextManager;
 class ListAuthorizedOrgsDescsResponse extends \Google\Collection
 {
   protected $collection_key = 'authorizedOrgsDescs';
+  /**
+   * @var AuthorizedOrgsDesc[]
+   */
+  public $authorizedOrgsDescs;
   protected $authorizedOrgsDescsType = AuthorizedOrgsDesc::class;
   protected $authorizedOrgsDescsDataType = 'array';
   /**

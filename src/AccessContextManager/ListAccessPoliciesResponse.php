@@ -20,6 +20,10 @@ namespace Google\Service\AccessContextManager;
 class ListAccessPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'accessPolicies';
+  /**
+   * @var AccessPolicy[]
+   */
+  public $accessPolicies;
   protected $accessPoliciesType = AccessPolicy::class;
   protected $accessPoliciesDataType = 'array';
   /**

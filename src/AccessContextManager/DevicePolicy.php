@@ -28,6 +28,10 @@ class DevicePolicy extends \Google\Collection
    * @var string[]
    */
   public $allowedEncryptionStatuses;
+  /**
+   * @var OsConstraint[]
+   */
+  public $osConstraints;
   protected $osConstraintsType = OsConstraint::class;
   protected $osConstraintsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\AccessContextManager;
 
 class VpcNetworkSource extends \Google\Model
 {
+  /**
+   * @var VpcSubNetwork
+   */
+  public $vpcSubnetwork;
   protected $vpcSubnetworkType = VpcSubNetwork::class;
   protected $vpcSubnetworkDataType = '';
 

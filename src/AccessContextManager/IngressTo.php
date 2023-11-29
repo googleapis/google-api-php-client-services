@@ -20,6 +20,10 @@ namespace Google\Service\AccessContextManager;
 class IngressTo extends \Google\Collection
 {
   protected $collection_key = 'resources';
+  /**
+   * @var ApiOperation[]
+   */
+  public $operations;
   protected $operationsType = ApiOperation::class;
   protected $operationsDataType = 'array';
   /**

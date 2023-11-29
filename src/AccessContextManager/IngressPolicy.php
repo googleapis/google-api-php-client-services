@@ -19,8 +19,16 @@ namespace Google\Service\AccessContextManager;
 
 class IngressPolicy extends \Google\Model
 {
+  /**
+   * @var IngressFrom
+   */
+  public $ingressFrom;
   protected $ingressFromType = IngressFrom::class;
   protected $ingressFromDataType = '';
+  /**
+   * @var IngressTo
+   */
+  public $ingressTo;
   protected $ingressToType = IngressTo::class;
   protected $ingressToDataType = '';
 

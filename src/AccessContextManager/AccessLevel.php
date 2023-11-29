@@ -19,8 +19,16 @@ namespace Google\Service\AccessContextManager;
 
 class AccessLevel extends \Google\Model
 {
+  /**
+   * @var BasicLevel
+   */
+  public $basic;
   protected $basicType = BasicLevel::class;
   protected $basicDataType = '';
+  /**
+   * @var CustomLevel
+   */
+  public $custom;
   protected $customType = CustomLevel::class;
   protected $customDataType = '';
   /**

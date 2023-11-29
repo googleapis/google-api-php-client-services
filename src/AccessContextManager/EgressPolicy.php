@@ -19,8 +19,16 @@ namespace Google\Service\AccessContextManager;
 
 class EgressPolicy extends \Google\Model
 {
+  /**
+   * @var EgressFrom
+   */
+  public $egressFrom;
   protected $egressFromType = EgressFrom::class;
   protected $egressFromDataType = '';
+  /**
+   * @var EgressTo
+   */
+  public $egressTo;
   protected $egressToType = EgressTo::class;
   protected $egressToDataType = '';
 

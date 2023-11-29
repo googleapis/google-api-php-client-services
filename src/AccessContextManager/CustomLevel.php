@@ -19,6 +19,10 @@ namespace Google\Service\AccessContextManager;
 
 class CustomLevel extends \Google\Model
 {
+  /**
+   * @var Expr
+   */
+  public $expr;
   protected $exprType = Expr::class;
   protected $exprDataType = '';
 

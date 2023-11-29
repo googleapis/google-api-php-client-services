@@ -20,6 +20,10 @@ namespace Google\Service\AccessContextManager;
 class ReplaceServicePerimetersResponse extends \Google\Collection
 {
   protected $collection_key = 'servicePerimeters';
+  /**
+   * @var ServicePerimeter[]
+   */
+  public $servicePerimeters;
   protected $servicePerimetersType = ServicePerimeter::class;
   protected $servicePerimetersDataType = 'array';
 

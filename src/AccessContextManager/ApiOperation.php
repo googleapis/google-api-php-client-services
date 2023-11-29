@@ -20,6 +20,10 @@ namespace Google\Service\AccessContextManager;
 class ApiOperation extends \Google\Collection
 {
   protected $collection_key = 'methodSelectors';
+  /**
+   * @var MethodSelector[]
+   */
+  public $methodSelectors;
   protected $methodSelectorsType = MethodSelector::class;
   protected $methodSelectorsDataType = 'array';
   /**
