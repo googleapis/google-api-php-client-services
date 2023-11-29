@@ -19,14 +19,26 @@ namespace Google\Service\Analytics;
 
 class AccountTreeResponse extends \Google\Model
 {
+  /**
+   * @var Account
+   */
+  public $account;
   protected $accountType = Account::class;
   protected $accountDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Profile
+   */
+  public $profile;
   protected $profileType = Profile::class;
   protected $profileDataType = '';
+  /**
+   * @var Webproperty
+   */
+  public $webproperty;
   protected $webpropertyType = Webproperty::class;
   protected $webpropertyDataType = '';
 

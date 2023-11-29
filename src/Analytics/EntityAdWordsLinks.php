@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class EntityAdWordsLinks extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var EntityAdWordsLink[]
+   */
+  public $items;
   protected $itemsType = EntityAdWordsLink::class;
   protected $itemsDataType = 'array';
   /**

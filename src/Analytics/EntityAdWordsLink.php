@@ -20,8 +20,16 @@ namespace Google\Service\Analytics;
 class EntityAdWordsLink extends \Google\Collection
 {
   protected $collection_key = 'profileIds';
+  /**
+   * @var AdWordsAccount[]
+   */
+  public $adWordsAccounts;
   protected $adWordsAccountsType = AdWordsAccount::class;
   protected $adWordsAccountsDataType = 'array';
+  /**
+   * @var EntityAdWordsLinkEntity
+   */
+  public $entity;
   protected $entityType = EntityAdWordsLinkEntity::class;
   protected $entityDataType = '';
   /**

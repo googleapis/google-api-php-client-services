@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class EntityUserLinks extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var EntityUserLink[]
+   */
+  public $items;
   protected $itemsType = EntityUserLink::class;
   protected $itemsDataType = 'array';
   /**

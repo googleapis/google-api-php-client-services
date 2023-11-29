@@ -20,8 +20,16 @@ namespace Google\Service\Analytics;
 class GaDataDataTable extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  /**
+   * @var GaDataDataTableCols[]
+   */
+  public $cols;
   protected $colsType = GaDataDataTableCols::class;
   protected $colsDataType = 'array';
+  /**
+   * @var GaDataDataTableRows[]
+   */
+  public $rows;
   protected $rowsType = GaDataDataTableRows::class;
   protected $rowsDataType = 'array';
 

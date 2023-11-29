@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class McfDataRows extends \Google\Collection
 {
   protected $collection_key = 'conversionPathValue';
+  /**
+   * @var McfDataRowsConversionPathValue[]
+   */
+  public $conversionPathValue;
   protected $conversionPathValueType = McfDataRowsConversionPathValue::class;
   protected $conversionPathValueDataType = 'array';
   /**

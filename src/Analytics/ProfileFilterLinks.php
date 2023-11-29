@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class ProfileFilterLinks extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var ProfileFilterLink[]
+   */
+  public $items;
   protected $itemsType = ProfileFilterLink::class;
   protected $itemsDataType = 'array';
   /**

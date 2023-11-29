@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class Webproperties extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Webproperty[]
+   */
+  public $items;
   protected $itemsType = Webproperty::class;
   protected $itemsDataType = 'array';
   /**

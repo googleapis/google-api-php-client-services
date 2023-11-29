@@ -23,32 +23,56 @@ class Filter extends \Google\Model
    * @var string
    */
   public $accountId;
+  /**
+   * @var FilterAdvancedDetails
+   */
+  public $advancedDetails;
   protected $advancedDetailsType = FilterAdvancedDetails::class;
   protected $advancedDetailsDataType = '';
   /**
    * @var string
    */
   public $created;
+  /**
+   * @var FilterExpression
+   */
+  public $excludeDetails;
   protected $excludeDetailsType = FilterExpression::class;
   protected $excludeDetailsDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var FilterExpression
+   */
+  public $includeDetails;
   protected $includeDetailsType = FilterExpression::class;
   protected $includeDetailsDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var FilterLowercaseDetails
+   */
+  public $lowercaseDetails;
   protected $lowercaseDetailsType = FilterLowercaseDetails::class;
   protected $lowercaseDetailsDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var FilterParentLink
+   */
+  public $parentLink;
   protected $parentLinkType = FilterParentLink::class;
   protected $parentLinkDataType = '';
+  /**
+   * @var FilterSearchAndReplaceDetails
+   */
+  public $searchAndReplaceDetails;
   protected $searchAndReplaceDetailsType = FilterSearchAndReplaceDetails::class;
   protected $searchAndReplaceDetailsDataType = '';
   /**
@@ -63,6 +87,10 @@ class Filter extends \Google\Model
    * @var string
    */
   public $updated;
+  /**
+   * @var FilterUppercaseDetails
+   */
+  public $uppercaseDetails;
   protected $uppercaseDetailsType = FilterUppercaseDetails::class;
   protected $uppercaseDetailsDataType = '';
 

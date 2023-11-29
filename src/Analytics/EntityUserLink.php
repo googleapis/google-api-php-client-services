@@ -19,6 +19,10 @@ namespace Google\Service\Analytics;
 
 class EntityUserLink extends \Google\Model
 {
+  /**
+   * @var EntityUserLinkEntity
+   */
+  public $entity;
   protected $entityType = EntityUserLinkEntity::class;
   protected $entityDataType = '';
   /**
@@ -29,12 +33,20 @@ class EntityUserLink extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var EntityUserLinkPermissions
+   */
+  public $permissions;
   protected $permissionsType = EntityUserLinkPermissions::class;
   protected $permissionsDataType = '';
   /**
    * @var string
    */
   public $selfLink;
+  /**
+   * @var UserRef
+   */
+  public $userRef;
   protected $userRefType = UserRef::class;
   protected $userRefDataType = '';
 

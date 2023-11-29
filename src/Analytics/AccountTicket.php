@@ -19,6 +19,10 @@ namespace Google\Service\Analytics;
 
 class AccountTicket extends \Google\Model
 {
+  /**
+   * @var Account
+   */
+  public $account;
   protected $accountType = Account::class;
   protected $accountDataType = '';
   /**
@@ -29,12 +33,20 @@ class AccountTicket extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var Profile
+   */
+  public $profile;
   protected $profileType = Profile::class;
   protected $profileDataType = '';
   /**
    * @var string
    */
   public $redirectUri;
+  /**
+   * @var Webproperty
+   */
+  public $webproperty;
   protected $webpropertyType = Webproperty::class;
   protected $webpropertyDataType = '';
 

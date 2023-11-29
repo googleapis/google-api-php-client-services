@@ -28,6 +28,10 @@ class Columns extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var Column[]
+   */
+  public $items;
   protected $itemsType = Column::class;
   protected $itemsDataType = 'array';
   /**

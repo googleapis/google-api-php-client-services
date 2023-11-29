@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class RealtimeData extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  /**
+   * @var RealtimeDataColumnHeaders[]
+   */
+  public $columnHeaders;
   protected $columnHeadersType = RealtimeDataColumnHeaders::class;
   protected $columnHeadersDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class RealtimeData extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var RealtimeDataProfileInfo
+   */
+  public $profileInfo;
   protected $profileInfoType = RealtimeDataProfileInfo::class;
   protected $profileInfoDataType = '';
+  /**
+   * @var RealtimeDataQuery
+   */
+  public $query;
   protected $queryType = RealtimeDataQuery::class;
   protected $queryDataType = '';
   /**

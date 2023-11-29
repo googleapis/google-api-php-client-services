@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class Experiments extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Experiment[]
+   */
+  public $items;
   protected $itemsType = Experiment::class;
   protected $itemsDataType = 'array';
   /**

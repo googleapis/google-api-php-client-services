@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class RemarketingAudiences extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var RemarketingAudience[]
+   */
+  public $items;
   protected $itemsType = RemarketingAudience::class;
   protected $itemsDataType = 'array';
   /**

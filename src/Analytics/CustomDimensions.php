@@ -20,6 +20,10 @@ namespace Google\Service\Analytics;
 class CustomDimensions extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var CustomDimension[]
+   */
+  public $items;
   protected $itemsType = CustomDimension::class;
   protected $itemsDataType = 'array';
   /**

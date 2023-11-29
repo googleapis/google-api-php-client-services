@@ -19,10 +19,22 @@ namespace Google\Service\Analytics;
 
 class EntityUserLinkEntity extends \Google\Model
 {
+  /**
+   * @var AccountRef
+   */
+  public $accountRef;
   protected $accountRefType = AccountRef::class;
   protected $accountRefDataType = '';
+  /**
+   * @var ProfileRef
+   */
+  public $profileRef;
   protected $profileRefType = ProfileRef::class;
   protected $profileRefDataType = '';
+  /**
+   * @var WebPropertyRef
+   */
+  public $webPropertyRef;
   protected $webPropertyRefType = WebPropertyRef::class;
   protected $webPropertyRefDataType = '';
 

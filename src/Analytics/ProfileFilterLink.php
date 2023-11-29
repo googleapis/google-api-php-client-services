@@ -19,6 +19,10 @@ namespace Google\Service\Analytics;
 
 class ProfileFilterLink extends \Google\Model
 {
+  /**
+   * @var FilterRef
+   */
+  public $filterRef;
   protected $filterRefType = FilterRef::class;
   protected $filterRefDataType = '';
   /**
@@ -29,6 +33,10 @@ class ProfileFilterLink extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var ProfileRef
+   */
+  public $profileRef;
   protected $profileRefType = ProfileRef::class;
   protected $profileRefDataType = '';
   /**
