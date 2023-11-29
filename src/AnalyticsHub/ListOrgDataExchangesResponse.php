@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsHub;
 class ListOrgDataExchangesResponse extends \Google\Collection
 {
   protected $collection_key = 'dataExchanges';
+  /**
+   * @var DataExchange[]
+   */
+  public $dataExchanges;
   protected $dataExchangesType = DataExchange::class;
   protected $dataExchangesDataType = 'array';
   /**

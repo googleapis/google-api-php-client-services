@@ -47,6 +47,10 @@ class DataExchange extends \Google\Model
    * @var string
    */
   public $primaryContact;
+  /**
+   * @var SharingEnvironmentConfig
+   */
+  public $sharingEnvironmentConfig;
   protected $sharingEnvironmentConfigType = SharingEnvironmentConfig::class;
   protected $sharingEnvironmentConfigDataType = '';
 

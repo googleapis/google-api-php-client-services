@@ -31,6 +31,10 @@ class Subscription extends \Google\Model
    * @var string
    */
   public $lastModifyTime;
+  /**
+   * @var LinkedResource[]
+   */
+  public $linkedDatasetMap;
   protected $linkedDatasetMapType = LinkedResource::class;
   protected $linkedDatasetMapDataType = 'map';
   /**

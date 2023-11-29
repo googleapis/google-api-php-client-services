@@ -19,6 +19,10 @@ namespace Google\Service\AnalyticsHub;
 
 class RefreshSubscriptionResponse extends \Google\Model
 {
+  /**
+   * @var Subscription
+   */
+  public $subscription;
   protected $subscriptionType = Subscription::class;
   protected $subscriptionDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\AnalyticsHub;
 
 class DestinationDataset extends \Google\Model
 {
+  /**
+   * @var DestinationDatasetReference
+   */
+  public $datasetReference;
   protected $datasetReferenceType = DestinationDatasetReference::class;
   protected $datasetReferenceDataType = '';
   /**

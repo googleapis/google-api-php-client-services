@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsHub;
 class ListListingsResponse extends \Google\Collection
 {
   protected $collection_key = 'listings';
+  /**
+   * @var Listing[]
+   */
+  public $listings;
   protected $listingsType = Listing::class;
   protected $listingsDataType = 'array';
   /**
