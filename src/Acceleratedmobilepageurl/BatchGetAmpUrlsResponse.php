@@ -20,8 +20,16 @@ namespace Google\Service\Acceleratedmobilepageurl;
 class BatchGetAmpUrlsResponse extends \Google\Collection
 {
   protected $collection_key = 'urlErrors';
+  /**
+   * @var AmpUrl[]
+   */
+  public $ampUrls;
   protected $ampUrlsType = AmpUrl::class;
   protected $ampUrlsDataType = 'array';
+  /**
+   * @var AmpUrlError[]
+   */
+  public $urlErrors;
   protected $urlErrorsType = AmpUrlError::class;
   protected $urlErrorsDataType = 'array';
 
