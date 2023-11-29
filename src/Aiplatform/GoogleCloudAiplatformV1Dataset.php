@@ -36,6 +36,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
@@ -62,6 +66,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudAiplatformV1SavedQuery[]
+   */
+  public $savedQueries;
   protected $savedQueriesType = GoogleCloudAiplatformV1SavedQuery::class;
   protected $savedQueriesDataType = 'array';
   /**

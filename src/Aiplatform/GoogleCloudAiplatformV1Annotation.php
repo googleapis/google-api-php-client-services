@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Annotation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1UserActionReference
+   */
+  public $annotationSource;
   protected $annotationSourceType = GoogleCloudAiplatformV1UserActionReference::class;
   protected $annotationSourceDataType = '';
   /**

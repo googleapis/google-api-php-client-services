@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
 {
   protected $collection_key = 'partialFailures';
+  /**
+   * @var GoogleCloudAiplatformV1CompletionStats
+   */
+  public $completionStats;
   protected $completionStatsType = GoogleCloudAiplatformV1CompletionStats::class;
   protected $completionStatsDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudAiplatformV1BatchDedicatedResources
+   */
+  public $dedicatedResources;
   protected $dedicatedResourcesType = GoogleCloudAiplatformV1BatchDedicatedResources::class;
   protected $dedicatedResourcesDataType = '';
   /**
@@ -36,28 +44,52 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationSpec
+   */
+  public $explanationSpec;
   protected $explanationSpecType = GoogleCloudAiplatformV1ExplanationSpec::class;
   protected $explanationSpecDataType = '';
   /**
    * @var bool
    */
   public $generateExplanation;
+  /**
+   * @var GoogleCloudAiplatformV1BatchPredictionJobInputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudAiplatformV1BatchPredictionJobInputConfig::class;
   protected $inputConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig
+   */
+  public $instanceConfig;
   protected $instanceConfigType = GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig::class;
   protected $instanceConfigDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var GoogleCloudAiplatformV1ManualBatchTuningParameters
+   */
+  public $manualBatchTuningParameters;
   protected $manualBatchTuningParametersType = GoogleCloudAiplatformV1ManualBatchTuningParameters::class;
   protected $manualBatchTuningParametersDataType = '';
   /**
@@ -76,12 +108,28 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudAiplatformV1BatchPredictionJobOutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = GoogleCloudAiplatformV1BatchPredictionJobOutputConfig::class;
   protected $outputConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1BatchPredictionJobOutputInfo
+   */
+  public $outputInfo;
   protected $outputInfoType = GoogleCloudAiplatformV1BatchPredictionJobOutputInfo::class;
   protected $outputInfoDataType = '';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $partialFailures;
   protected $partialFailuresType = GoogleRpcStatus::class;
   protected $partialFailuresDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1ResourcesConsumed
+   */
+  public $resourcesConsumed;
   protected $resourcesConsumedType = GoogleCloudAiplatformV1ResourcesConsumed::class;
   protected $resourcesConsumedDataType = '';
   /**
@@ -96,6 +144,10 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudAiplatformV1UnmanagedContainerModel
+   */
+  public $unmanagedContainerModel;
   protected $unmanagedContainerModelType = GoogleCloudAiplatformV1UnmanagedContainerModel::class;
   protected $unmanagedContainerModelDataType = '';
   /**

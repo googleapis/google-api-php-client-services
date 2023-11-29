@@ -19,12 +19,20 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1DeleteFeatureValuesRequestSelectTimeRangeAndFeature extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1FeatureSelector
+   */
+  public $featureSelector;
   protected $featureSelectorType = GoogleCloudAiplatformV1FeatureSelector::class;
   protected $featureSelectorDataType = '';
   /**
    * @var bool
    */
   public $skipOnlineStorageDelete;
+  /**
+   * @var GoogleTypeInterval
+   */
+  public $timeRange;
   protected $timeRangeType = GoogleTypeInterval::class;
   protected $timeRangeDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1CreateFeatureRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1Feature
+   */
+  public $feature;
   protected $featureType = GoogleCloudAiplatformV1Feature::class;
   protected $featureDataType = '';
   /**

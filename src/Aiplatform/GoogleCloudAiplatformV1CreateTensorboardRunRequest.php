@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1CreateTensorboardRunRequest extends \Google\Model
    * @var string
    */
   public $parent;
+  /**
+   * @var GoogleCloudAiplatformV1TensorboardRun
+   */
+  public $tensorboardRun;
   protected $tensorboardRunType = GoogleCloudAiplatformV1TensorboardRun::class;
   protected $tensorboardRunDataType = '';
   /**

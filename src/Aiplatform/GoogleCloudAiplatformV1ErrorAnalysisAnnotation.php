@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ErrorAnalysisAnnotation extends \Google\Collection
 {
   protected $collection_key = 'attributedItems';
+  /**
+   * @var GoogleCloudAiplatformV1ErrorAnalysisAnnotationAttributedItem[]
+   */
+  public $attributedItems;
   protected $attributedItemsType = GoogleCloudAiplatformV1ErrorAnalysisAnnotationAttributedItem::class;
   protected $attributedItemsDataType = 'array';
   public $outlierScore;

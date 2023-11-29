@@ -20,8 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Explanation extends \Google\Collection
 {
   protected $collection_key = 'neighbors';
+  /**
+   * @var GoogleCloudAiplatformV1Attribution[]
+   */
+  public $attributions;
   protected $attributionsType = GoogleCloudAiplatformV1Attribution::class;
   protected $attributionsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1Neighbor[]
+   */
+  public $neighbors;
   protected $neighborsType = GoogleCloudAiplatformV1Neighbor::class;
   protected $neighborsDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1CsvDestination extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
 

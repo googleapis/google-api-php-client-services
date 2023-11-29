@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1DeployIndexRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1DeployedIndex
+   */
+  public $deployedIndex;
   protected $deployedIndexType = GoogleCloudAiplatformV1DeployedIndex::class;
   protected $deployedIndexDataType = '';
 

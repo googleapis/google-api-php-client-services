@@ -23,12 +23,20 @@ class GoogleCloudAiplatformV1ExplanationMetadata extends \Google\Model
    * @var string
    */
   public $featureAttributionsSchemaUri;
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationMetadataInputMetadata[]
+   */
+  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1ExplanationMetadataInputMetadata::class;
   protected $inputsDataType = 'map';
   /**
    * @var string
    */
   public $latentSpaceSource;
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationMetadataOutputMetadata[]
+   */
+  public $outputs;
   protected $outputsType = GoogleCloudAiplatformV1ExplanationMetadataOutputMetadata::class;
   protected $outputsDataType = 'map';
 

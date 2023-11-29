@@ -35,6 +35,10 @@ class GoogleCloudAiplatformV1EntityType extends \Google\Model
    * @var string[]
    */
   public $labels;
+  /**
+   * @var GoogleCloudAiplatformV1FeaturestoreMonitoringConfig
+   */
+  public $monitoringConfig;
   protected $monitoringConfigType = GoogleCloudAiplatformV1FeaturestoreMonitoringConfig::class;
   protected $monitoringConfigDataType = '';
   /**

@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest extends \Google\
    * @var string
    */
   public $parent;
+  /**
+   * @var GoogleCloudAiplatformV1TensorboardTimeSeries
+   */
+  public $tensorboardTimeSeries;
   protected $tensorboardTimeSeriesType = GoogleCloudAiplatformV1TensorboardTimeSeries::class;
   protected $tensorboardTimeSeriesDataType = '';
   /**

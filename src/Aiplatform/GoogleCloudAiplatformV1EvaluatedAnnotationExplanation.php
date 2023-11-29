@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluatedAnnotationExplanation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1Explanation
+   */
+  public $explanation;
   protected $explanationDataType = '';
   /**
    * @var string

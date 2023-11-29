@@ -20,8 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DataItemView extends \Google\Collection
 {
   protected $collection_key = 'annotations';
+  /**
+   * @var GoogleCloudAiplatformV1Annotation[]
+   */
+  public $annotations;
   protected $annotationsType = GoogleCloudAiplatformV1Annotation::class;
   protected $annotationsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1DataItem
+   */
+  public $dataItem;
   protected $dataItemType = GoogleCloudAiplatformV1DataItem::class;
   protected $dataItemDataType = '';
   /**

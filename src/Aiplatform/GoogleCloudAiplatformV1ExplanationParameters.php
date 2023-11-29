@@ -20,20 +20,36 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExplanationParameters extends \Google\Collection
 {
   protected $collection_key = 'outputIndices';
+  /**
+   * @var GoogleCloudAiplatformV1Examples
+   */
+  public $examples;
   protected $examplesType = GoogleCloudAiplatformV1Examples::class;
   protected $examplesDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1IntegratedGradientsAttribution
+   */
+  public $integratedGradientsAttribution;
   protected $integratedGradientsAttributionType = GoogleCloudAiplatformV1IntegratedGradientsAttribution::class;
   protected $integratedGradientsAttributionDataType = '';
   /**
    * @var array[]
    */
   public $outputIndices;
+  /**
+   * @var GoogleCloudAiplatformV1SampledShapleyAttribution
+   */
+  public $sampledShapleyAttribution;
   protected $sampledShapleyAttributionType = GoogleCloudAiplatformV1SampledShapleyAttribution::class;
   protected $sampledShapleyAttributionDataType = '';
   /**
    * @var int
    */
   public $topK;
+  /**
+   * @var GoogleCloudAiplatformV1XraiAttribution
+   */
+  public $xraiAttribution;
   protected $xraiAttributionType = GoogleCloudAiplatformV1XraiAttribution::class;
   protected $xraiAttributionDataType = '';
 

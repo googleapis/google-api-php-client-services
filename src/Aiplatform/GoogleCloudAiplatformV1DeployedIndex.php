@@ -20,14 +20,26 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
 {
   protected $collection_key = 'reservedIpRanges';
+  /**
+   * @var GoogleCloudAiplatformV1AutomaticResources
+   */
+  public $automaticResources;
   protected $automaticResourcesType = GoogleCloudAiplatformV1AutomaticResources::class;
   protected $automaticResourcesDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudAiplatformV1DedicatedResources
+   */
+  public $dedicatedResources;
   protected $dedicatedResourcesType = GoogleCloudAiplatformV1DedicatedResources::class;
   protected $dedicatedResourcesDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1DeployedIndexAuthConfig
+   */
+  public $deployedIndexAuthConfig;
   protected $deployedIndexAuthConfigType = GoogleCloudAiplatformV1DeployedIndexAuthConfig::class;
   protected $deployedIndexAuthConfigDataType = '';
   /**
@@ -54,6 +66,10 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
    * @var string
    */
   public $indexSyncTime;
+  /**
+   * @var GoogleCloudAiplatformV1IndexPrivateEndpoints
+   */
+  public $privateEndpoints;
   protected $privateEndpointsType = GoogleCloudAiplatformV1IndexPrivateEndpoints::class;
   protected $privateEndpointsDataType = '';
   /**

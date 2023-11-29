@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1BatchPredictionJobInputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1BigQuerySource
+   */
+  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudAiplatformV1BigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudAiplatformV1GcsSource::class;
   protected $gcsSourceDataType = '';
   /**

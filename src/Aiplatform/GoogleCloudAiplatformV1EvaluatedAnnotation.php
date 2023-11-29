@@ -24,12 +24,20 @@ class GoogleCloudAiplatformV1EvaluatedAnnotation extends \Google\Collection
    * @var array
    */
   public $dataItemPayload;
+  /**
+   * @var GoogleCloudAiplatformV1ErrorAnalysisAnnotation[]
+   */
+  public $errorAnalysisAnnotations;
   protected $errorAnalysisAnnotationsType = GoogleCloudAiplatformV1ErrorAnalysisAnnotation::class;
   protected $errorAnalysisAnnotationsDataType = 'array';
   /**
    * @var string
    */
   public $evaluatedDataItemViewId;
+  /**
+   * @var GoogleCloudAiplatformV1EvaluatedAnnotationExplanation[]
+   */
+  public $explanations;
   protected $explanationsType = GoogleCloudAiplatformV1EvaluatedAnnotationExplanation::class;
   protected $explanationsDataType = 'array';
   /**

@@ -23,8 +23,16 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
    * @var string
    */
   public $annotationsFilter;
+  /**
+   * @var GoogleCloudAiplatformV1ExportFractionSplit
+   */
+  public $fractionSplit;
   protected $fractionSplitType = GoogleCloudAiplatformV1ExportFractionSplit::class;
   protected $fractionSplitDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
 

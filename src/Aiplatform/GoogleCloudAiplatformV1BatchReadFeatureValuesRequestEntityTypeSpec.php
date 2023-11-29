@@ -24,8 +24,16 @@ class GoogleCloudAiplatformV1BatchReadFeatureValuesRequestEntityTypeSpec extends
    * @var string
    */
   public $entityTypeId;
+  /**
+   * @var GoogleCloudAiplatformV1FeatureSelector
+   */
+  public $featureSelector;
   protected $featureSelectorType = GoogleCloudAiplatformV1FeatureSelector::class;
   protected $featureSelectorDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1DestinationFeatureSetting[]
+   */
+  public $settings;
   protected $settingsType = GoogleCloudAiplatformV1DestinationFeatureSetting::class;
   protected $settingsDataType = 'array';
 

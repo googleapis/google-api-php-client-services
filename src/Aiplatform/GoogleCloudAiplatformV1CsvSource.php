@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1CsvSource extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudAiplatformV1GcsSource::class;
   protected $gcsSourceDataType = '';
 

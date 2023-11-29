@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1AddTrialMeasurementRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1Measurement
+   */
+  public $measurement;
   protected $measurementType = GoogleCloudAiplatformV1Measurement::class;
   protected $measurementDataType = '';
 

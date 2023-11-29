@@ -32,6 +32,10 @@ class GoogleCloudAiplatformV1ExamplesOverride extends \Google\Collection
    * @var int
    */
   public $neighborCount;
+  /**
+   * @var GoogleCloudAiplatformV1ExamplesRestrictionsNamespace[]
+   */
+  public $restrictions;
   protected $restrictionsType = GoogleCloudAiplatformV1ExamplesRestrictionsNamespace::class;
   protected $restrictionsDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1DeploymentResourcePool extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudAiplatformV1DedicatedResources
+   */
+  public $dedicatedResources;
   protected $dedicatedResourcesType = GoogleCloudAiplatformV1DedicatedResources::class;
   protected $dedicatedResourcesDataType = '';
   /**

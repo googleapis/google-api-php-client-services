@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1BatchPredictionJobOutputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1BigQueryDestination
+   */
+  public $bigqueryDestination;
   protected $bigqueryDestinationType = GoogleCloudAiplatformV1BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
   /**

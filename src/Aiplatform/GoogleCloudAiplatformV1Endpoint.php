@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudAiplatformV1DeployedModel[]
+   */
+  public $deployedModels;
   protected $deployedModelsType = GoogleCloudAiplatformV1DeployedModel::class;
   protected $deployedModelsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
    * @var bool
    */
   public $enablePrivateServiceConnect;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
@@ -60,6 +68,10 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
    * @var string
    */
   public $network;
+  /**
+   * @var GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig
+   */
+  public $predictRequestResponseLoggingConfig;
   protected $predictRequestResponseLoggingConfigType = GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig::class;
   protected $predictRequestResponseLoggingConfigDataType = '';
   /**

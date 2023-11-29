@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
+  /**
+   * @var GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest[]
+   */
+  public $requests;
   protected $requestsType = GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest::class;
   protected $requestsDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1DeleteFeatureValuesRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1DeleteFeatureValuesRequestSelectEntity
+   */
+  public $selectEntity;
   protected $selectEntityType = GoogleCloudAiplatformV1DeleteFeatureValuesRequestSelectEntity::class;
   protected $selectEntityDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1DeleteFeatureValuesRequestSelectTimeRangeAndFeature
+   */
+  public $selectTimeRangeAndFeature;
   protected $selectTimeRangeAndFeatureType = GoogleCloudAiplatformV1DeleteFeatureValuesRequestSelectTimeRangeAndFeature::class;
   protected $selectTimeRangeAndFeatureDataType = '';
 

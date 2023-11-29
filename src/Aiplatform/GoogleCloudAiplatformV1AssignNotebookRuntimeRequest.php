@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1AssignNotebookRuntimeRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1NotebookRuntime
+   */
+  public $notebookRuntime;
   protected $notebookRuntimeType = GoogleCloudAiplatformV1NotebookRuntime::class;
   protected $notebookRuntimeDataType = '';
   /**

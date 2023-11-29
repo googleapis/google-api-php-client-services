@@ -20,14 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchReadFeatureValuesRequest extends \Google\Collection
 {
   protected $collection_key = 'passThroughFields';
+  /**
+   * @var GoogleCloudAiplatformV1BigQuerySource
+   */
+  public $bigqueryReadInstances;
   protected $bigqueryReadInstancesType = GoogleCloudAiplatformV1BigQuerySource::class;
   protected $bigqueryReadInstancesDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1CsvSource
+   */
+  public $csvReadInstances;
   protected $csvReadInstancesType = GoogleCloudAiplatformV1CsvSource::class;
   protected $csvReadInstancesDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FeatureValueDestination
+   */
+  public $destination;
   protected $destinationType = GoogleCloudAiplatformV1FeatureValueDestination::class;
   protected $destinationDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1BatchReadFeatureValuesRequestEntityTypeSpec[]
+   */
+  public $entityTypeSpecs;
   protected $entityTypeSpecsType = GoogleCloudAiplatformV1BatchReadFeatureValuesRequestEntityTypeSpec::class;
   protected $entityTypeSpecsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1BatchReadFeatureValuesRequestPassThroughField[]
+   */
+  public $passThroughFields;
   protected $passThroughFieldsType = GoogleCloudAiplatformV1BatchReadFeatureValuesRequestPassThroughField::class;
   protected $passThroughFieldsDataType = 'array';
   /**

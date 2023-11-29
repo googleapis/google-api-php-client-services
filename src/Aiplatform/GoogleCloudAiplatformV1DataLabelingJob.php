@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DataLabelingJob extends \Google\Collection
 {
   protected $collection_key = 'specialistPools';
+  /**
+   * @var GoogleCloudAiplatformV1ActiveLearningConfig
+   */
+  public $activeLearningConfig;
   protected $activeLearningConfigType = GoogleCloudAiplatformV1ActiveLearningConfig::class;
   protected $activeLearningConfigDataType = '';
   /**
@@ -30,6 +34,10 @@ class GoogleCloudAiplatformV1DataLabelingJob extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $currentSpend;
   protected $currentSpendType = GoogleTypeMoney::class;
   protected $currentSpendDataType = '';
   /**
@@ -40,8 +48,16 @@ class GoogleCloudAiplatformV1DataLabelingJob extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**

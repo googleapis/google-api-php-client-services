@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchImportEvaluatedAnnotationsRequest extends \Google\Collection
 {
   protected $collection_key = 'evaluatedAnnotations';
+  /**
+   * @var GoogleCloudAiplatformV1EvaluatedAnnotation[]
+   */
+  public $evaluatedAnnotations;
   protected $evaluatedAnnotationsType = GoogleCloudAiplatformV1EvaluatedAnnotation::class;
   protected $evaluatedAnnotationsDataType = 'array';
 

@@ -36,6 +36,10 @@ class GoogleCloudAiplatformV1ExplanationMetadataInputMetadata extends \Google\Co
    * @var string
    */
   public $encoding;
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationMetadataInputMetadataFeatureValueDomain
+   */
+  public $featureValueDomain;
   protected $featureValueDomainType = GoogleCloudAiplatformV1ExplanationMetadataInputMetadataFeatureValueDomain::class;
   protected $featureValueDomainDataType = '';
   /**
@@ -62,6 +66,10 @@ class GoogleCloudAiplatformV1ExplanationMetadataInputMetadata extends \Google\Co
    * @var string
    */
   public $modality;
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationMetadataInputMetadataVisualization
+   */
+  public $visualization;
   protected $visualizationType = GoogleCloudAiplatformV1ExplanationMetadataInputMetadataVisualization::class;
   protected $visualizationDataType = '';
 

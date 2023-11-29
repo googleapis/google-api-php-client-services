@@ -20,8 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadata extends \Google\Collection
 {
   protected $collection_key = 'partialResults';
+  /**
+   * @var GoogleCloudAiplatformV1GenericOperationMetadata
+   */
+  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult[]
+   */
+  public $partialResults;
   protected $partialResultsType = GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult::class;
   protected $partialResultsDataType = 'array';
 

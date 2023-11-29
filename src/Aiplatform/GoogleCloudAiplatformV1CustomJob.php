@@ -27,14 +27,26 @@ class GoogleCloudAiplatformV1CustomJob extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1CustomJobSpec
+   */
+  public $jobSpec;
   protected $jobSpecType = GoogleCloudAiplatformV1CustomJobSpec::class;
   protected $jobSpecDataType = '';
   /**

@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ExplainRequest extends \Google\Collection
    * @var string
    */
   public $deployedModelId;
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationSpecOverride
+   */
+  public $explanationSpecOverride;
   protected $explanationSpecOverrideType = GoogleCloudAiplatformV1ExplanationSpecOverride::class;
   protected $explanationSpecOverrideDataType = '';
   /**

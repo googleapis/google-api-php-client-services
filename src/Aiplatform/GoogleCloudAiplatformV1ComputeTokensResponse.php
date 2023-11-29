@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ComputeTokensResponse extends \Google\Collection
 {
   protected $collection_key = 'tokensInfo';
+  /**
+   * @var GoogleCloudAiplatformV1TokensInfo[]
+   */
+  public $tokensInfo;
   protected $tokensInfoType = GoogleCloudAiplatformV1TokensInfo::class;
   protected $tokensInfoDataType = 'array';
 

@@ -19,10 +19,22 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ExplanationSpecOverride extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1ExamplesOverride
+   */
+  public $examplesOverride;
   protected $examplesOverrideType = GoogleCloudAiplatformV1ExamplesOverride::class;
   protected $examplesOverrideDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationMetadataOverride
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1ExplanationMetadataOverride::class;
   protected $metadataDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationParameters
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1ExplanationParameters::class;
   protected $parametersDataType = '';
 

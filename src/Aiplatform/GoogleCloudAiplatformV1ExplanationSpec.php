@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ExplanationSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1ExplanationMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ExplanationParameters
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1ExplanationParameters::class;
   protected $parametersDataType = '';
 

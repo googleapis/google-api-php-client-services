@@ -27,8 +27,16 @@ class GoogleCloudAiplatformV1ActiveLearningConfig extends \Google\Model
    * @var int
    */
   public $maxDataItemPercentage;
+  /**
+   * @var GoogleCloudAiplatformV1SampleConfig
+   */
+  public $sampleConfig;
   protected $sampleConfigType = GoogleCloudAiplatformV1SampleConfig::class;
   protected $sampleConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1TrainingConfig
+   */
+  public $trainingConfig;
   protected $trainingConfigType = GoogleCloudAiplatformV1TrainingConfig::class;
   protected $trainingConfigDataType = '';
 

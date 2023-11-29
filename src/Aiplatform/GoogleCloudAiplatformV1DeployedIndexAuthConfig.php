@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1DeployedIndexAuthConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1DeployedIndexAuthConfigAuthProvider
+   */
+  public $authProvider;
   protected $authProviderType = GoogleCloudAiplatformV1DeployedIndexAuthConfigAuthProvider::class;
   protected $authProviderDataType = '';
 

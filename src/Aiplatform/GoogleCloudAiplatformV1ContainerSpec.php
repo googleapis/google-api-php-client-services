@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1ContainerSpec extends \Google\Collection
    * @var string[]
    */
   public $command;
+  /**
+   * @var GoogleCloudAiplatformV1EnvVar[]
+   */
+  public $env;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
   /**

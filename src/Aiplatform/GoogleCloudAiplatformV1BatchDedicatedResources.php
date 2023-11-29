@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1BatchDedicatedResources extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1MachineSpec
+   */
+  public $machineSpec;
   protected $machineSpecType = GoogleCloudAiplatformV1MachineSpec::class;
   protected $machineSpecDataType = '';
   /**

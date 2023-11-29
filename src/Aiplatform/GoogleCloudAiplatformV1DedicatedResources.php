@@ -20,8 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DedicatedResources extends \Google\Collection
 {
   protected $collection_key = 'autoscalingMetricSpecs';
+  /**
+   * @var GoogleCloudAiplatformV1AutoscalingMetricSpec[]
+   */
+  public $autoscalingMetricSpecs;
   protected $autoscalingMetricSpecsType = GoogleCloudAiplatformV1AutoscalingMetricSpec::class;
   protected $autoscalingMetricSpecsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1MachineSpec
+   */
+  public $machineSpec;
   protected $machineSpecType = GoogleCloudAiplatformV1MachineSpec::class;
   protected $machineSpecDataType = '';
   /**
