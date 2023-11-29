@@ -24,6 +24,10 @@ class ReportFooter extends \Google\Collection
    * @var string
    */
   public $matchingRowCount;
+  /**
+   * @var ReportWarning[]
+   */
+  public $warnings;
   protected $warningsType = ReportWarning::class;
   protected $warningsDataType = 'array';
 

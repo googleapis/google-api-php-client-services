@@ -20,6 +20,10 @@ namespace Google\Service\AdMob;
 class ListPublisherAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'account';
+  /**
+   * @var PublisherAccount[]
+   */
+  public $account;
   protected $accountType = PublisherAccount::class;
   protected $accountDataType = 'array';
   /**

@@ -19,10 +19,22 @@ namespace Google\Service\AdMob;
 
 class GenerateNetworkReportResponse extends \Google\Model
 {
+  /**
+   * @var ReportFooter
+   */
+  public $footer;
   protected $footerType = ReportFooter::class;
   protected $footerDataType = '';
+  /**
+   * @var ReportHeader
+   */
+  public $header;
   protected $headerType = ReportHeader::class;
   protected $headerDataType = '';
+  /**
+   * @var ReportRow
+   */
+  public $row;
   protected $rowType = ReportRow::class;
   protected $rowDataType = '';
 

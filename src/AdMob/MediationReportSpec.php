@@ -20,14 +20,26 @@ namespace Google\Service\AdMob;
 class MediationReportSpec extends \Google\Collection
 {
   protected $collection_key = 'sortConditions';
+  /**
+   * @var DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
+  /**
+   * @var MediationReportSpecDimensionFilter[]
+   */
+  public $dimensionFilters;
   protected $dimensionFiltersType = MediationReportSpecDimensionFilter::class;
   protected $dimensionFiltersDataType = 'array';
   /**
    * @var string[]
    */
   public $dimensions;
+  /**
+   * @var LocalizationSettings
+   */
+  public $localizationSettings;
   protected $localizationSettingsType = LocalizationSettings::class;
   protected $localizationSettingsDataType = '';
   /**
@@ -38,6 +50,10 @@ class MediationReportSpec extends \Google\Collection
    * @var string[]
    */
   public $metrics;
+  /**
+   * @var MediationReportSpecSortCondition[]
+   */
+  public $sortConditions;
   protected $sortConditionsType = MediationReportSpecSortCondition::class;
   protected $sortConditionsDataType = 'array';
   /**

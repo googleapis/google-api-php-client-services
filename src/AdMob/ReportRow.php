@@ -19,8 +19,16 @@ namespace Google\Service\AdMob;
 
 class ReportRow extends \Google\Model
 {
+  /**
+   * @var ReportRowDimensionValue[]
+   */
+  public $dimensionValues;
   protected $dimensionValuesType = ReportRowDimensionValue::class;
   protected $dimensionValuesDataType = 'map';
+  /**
+   * @var ReportRowMetricValue[]
+   */
+  public $metricValues;
   protected $metricValuesType = ReportRowMetricValue::class;
   protected $metricValuesDataType = 'map';
 

@@ -20,6 +20,10 @@ namespace Google\Service\AdMob;
 class ListAdUnitsResponse extends \Google\Collection
 {
   protected $collection_key = 'adUnits';
+  /**
+   * @var AdUnit[]
+   */
+  public $adUnits;
   protected $adUnitsType = AdUnit::class;
   protected $adUnitsDataType = 'array';
   /**

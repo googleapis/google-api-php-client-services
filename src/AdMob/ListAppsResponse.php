@@ -20,6 +20,10 @@ namespace Google\Service\AdMob;
 class ListAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'apps';
+  /**
+   * @var App[]
+   */
+  public $apps;
   protected $appsType = App::class;
   protected $appsDataType = 'array';
   /**
