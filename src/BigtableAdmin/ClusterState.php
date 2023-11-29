@@ -20,6 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class ClusterState extends \Google\Collection
 {
   protected $collection_key = 'encryptionInfo';
+  /**
+   * @var EncryptionInfo[]
+   */
+  public $encryptionInfo;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = 'array';
   /**

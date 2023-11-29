@@ -27,6 +27,10 @@ class AppProfile extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var MultiClusterRoutingUseAny
+   */
+  public $multiClusterRoutingUseAny;
   protected $multiClusterRoutingUseAnyType = MultiClusterRoutingUseAny::class;
   protected $multiClusterRoutingUseAnyDataType = '';
   /**
@@ -37,8 +41,16 @@ class AppProfile extends \Google\Model
    * @var string
    */
   public $priority;
+  /**
+   * @var SingleClusterRouting
+   */
+  public $singleClusterRouting;
   protected $singleClusterRoutingType = SingleClusterRouting::class;
   protected $singleClusterRoutingDataType = '';
+  /**
+   * @var StandardIsolation
+   */
+  public $standardIsolation;
   protected $standardIsolationType = StandardIsolation::class;
   protected $standardIsolationDataType = '';
 

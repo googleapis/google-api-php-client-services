@@ -20,6 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class ModifyColumnFamiliesRequest extends \Google\Collection
 {
   protected $collection_key = 'modifications';
+  /**
+   * @var Modification[]
+   */
+  public $modifications;
   protected $modificationsType = Modification::class;
   protected $modificationsDataType = 'array';
 

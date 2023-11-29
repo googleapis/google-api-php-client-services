@@ -20,6 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class ListAppProfilesResponse extends \Google\Collection
 {
   protected $collection_key = 'failedLocations';
+  /**
+   * @var AppProfile[]
+   */
+  public $appProfiles;
   protected $appProfilesType = AppProfile::class;
   protected $appProfilesDataType = 'array';
   /**

@@ -19,12 +19,20 @@ namespace Google\Service\BigtableAdmin;
 
 class Cluster extends \Google\Model
 {
+  /**
+   * @var ClusterConfig
+   */
+  public $clusterConfig;
   protected $clusterConfigType = ClusterConfig::class;
   protected $clusterConfigDataType = '';
   /**
    * @var string
    */
   public $defaultStorageType;
+  /**
+   * @var EncryptionConfig
+   */
+  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   /**

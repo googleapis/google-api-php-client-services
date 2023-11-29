@@ -19,6 +19,10 @@ namespace Google\Service\BigtableAdmin;
 
 class CreateClusterRequest extends \Google\Model
 {
+  /**
+   * @var Cluster
+   */
+  public $cluster;
   protected $clusterType = Cluster::class;
   protected $clusterDataType = '';
   /**

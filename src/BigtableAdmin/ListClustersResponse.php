@@ -20,6 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class ListClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'failedLocations';
+  /**
+   * @var Cluster[]
+   */
+  public $clusters;
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
   /**

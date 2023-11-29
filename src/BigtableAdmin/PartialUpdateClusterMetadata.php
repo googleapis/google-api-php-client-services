@@ -23,6 +23,10 @@ class PartialUpdateClusterMetadata extends \Google\Model
    * @var string
    */
   public $finishTime;
+  /**
+   * @var PartialUpdateClusterRequest
+   */
+  public $originalRequest;
   protected $originalRequestType = PartialUpdateClusterRequest::class;
   protected $originalRequestDataType = '';
   /**

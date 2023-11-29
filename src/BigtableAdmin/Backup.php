@@ -19,6 +19,10 @@ namespace Google\Service\BigtableAdmin;
 
 class Backup extends \Google\Model
 {
+  /**
+   * @var EncryptionInfo
+   */
+  public $encryptionInfo;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   /**

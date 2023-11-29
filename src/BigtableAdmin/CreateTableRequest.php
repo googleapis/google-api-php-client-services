@@ -20,8 +20,16 @@ namespace Google\Service\BigtableAdmin;
 class CreateTableRequest extends \Google\Collection
 {
   protected $collection_key = 'initialSplits';
+  /**
+   * @var Split[]
+   */
+  public $initialSplits;
   protected $initialSplitsType = Split::class;
   protected $initialSplitsDataType = 'array';
+  /**
+   * @var Table
+   */
+  public $table;
   protected $tableType = Table::class;
   protected $tableDataType = '';
   /**

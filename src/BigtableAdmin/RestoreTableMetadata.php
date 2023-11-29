@@ -19,6 +19,10 @@ namespace Google\Service\BigtableAdmin;
 
 class RestoreTableMetadata extends \Google\Model
 {
+  /**
+   * @var BackupInfo
+   */
+  public $backupInfo;
   protected $backupInfoType = BackupInfo::class;
   protected $backupInfoDataType = '';
   /**
@@ -29,6 +33,10 @@ class RestoreTableMetadata extends \Google\Model
    * @var string
    */
   public $optimizeTableOperationName;
+  /**
+   * @var OperationProgress
+   */
+  public $progress;
   protected $progressType = OperationProgress::class;
   protected $progressDataType = '';
   /**

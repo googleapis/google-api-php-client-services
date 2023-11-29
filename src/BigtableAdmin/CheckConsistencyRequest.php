@@ -23,6 +23,10 @@ class CheckConsistencyRequest extends \Google\Model
    * @var string
    */
   public $consistencyToken;
+  /**
+   * @var StandardReadRemoteWrites
+   */
+  public $standardReadRemoteWrites;
   protected $standardReadRemoteWritesType = StandardReadRemoteWrites::class;
   protected $standardReadRemoteWritesDataType = '';
 

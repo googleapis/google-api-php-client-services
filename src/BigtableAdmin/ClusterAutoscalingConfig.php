@@ -19,8 +19,16 @@ namespace Google\Service\BigtableAdmin;
 
 class ClusterAutoscalingConfig extends \Google\Model
 {
+  /**
+   * @var AutoscalingLimits
+   */
+  public $autoscalingLimits;
   protected $autoscalingLimitsType = AutoscalingLimits::class;
   protected $autoscalingLimitsDataType = '';
+  /**
+   * @var AutoscalingTargets
+   */
+  public $autoscalingTargets;
   protected $autoscalingTargetsType = AutoscalingTargets::class;
   protected $autoscalingTargetsDataType = '';
 

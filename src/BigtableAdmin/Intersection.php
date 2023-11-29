@@ -20,6 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class Intersection extends \Google\Collection
 {
   protected $collection_key = 'rules';
+  /**
+   * @var GcRule[]
+   */
+  public $rules;
   protected $rulesType = GcRule::class;
   protected $rulesDataType = 'array';
 

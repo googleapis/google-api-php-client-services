@@ -20,6 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class ListHotTabletsResponse extends \Google\Collection
 {
   protected $collection_key = 'hotTablets';
+  /**
+   * @var HotTablet[]
+   */
+  public $hotTablets;
   protected $hotTabletsType = HotTablet::class;
   protected $hotTabletsDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class ListInstancesResponse extends \Google\Collection
    * @var string[]
    */
   public $failedLocations;
+  /**
+   * @var Instance[]
+   */
+  public $instances;
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**

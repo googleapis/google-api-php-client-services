@@ -19,6 +19,10 @@ namespace Google\Service\BigtableAdmin;
 
 class RestoreInfo extends \Google\Model
 {
+  /**
+   * @var BackupInfo
+   */
+  public $backupInfo;
   protected $backupInfoType = BackupInfo::class;
   protected $backupInfoDataType = '';
   /**

@@ -24,6 +24,10 @@ class ListTablesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Table[]
+   */
+  public $tables;
   protected $tablesType = Table::class;
   protected $tablesDataType = 'array';
 

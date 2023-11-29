@@ -19,6 +19,10 @@ namespace Google\Service\BigtableAdmin;
 
 class PartialUpdateInstanceRequest extends \Google\Model
 {
+  /**
+   * @var Instance
+   */
+  public $instance;
   protected $instanceType = Instance::class;
   protected $instanceDataType = '';
   /**
