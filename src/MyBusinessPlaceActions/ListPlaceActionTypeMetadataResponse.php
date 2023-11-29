@@ -24,6 +24,10 @@ class ListPlaceActionTypeMetadataResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PlaceActionTypeMetadata[]
+   */
+  public $placeActionTypeMetadata;
   protected $placeActionTypeMetadataType = PlaceActionTypeMetadata::class;
   protected $placeActionTypeMetadataDataType = 'array';
 
