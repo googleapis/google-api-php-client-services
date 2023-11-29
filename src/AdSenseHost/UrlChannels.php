@@ -24,6 +24,10 @@ class UrlChannels extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var UrlChannel[]
+   */
+  public $items;
   protected $itemsType = UrlChannel::class;
   protected $itemsDataType = 'array';
   /**

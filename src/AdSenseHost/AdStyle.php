@@ -19,12 +19,20 @@ namespace Google\Service\AdSenseHost;
 
 class AdStyle extends \Google\Model
 {
+  /**
+   * @var AdStyleColors
+   */
+  public $colors;
   protected $colorsType = AdStyleColors::class;
   protected $colorsDataType = '';
   /**
    * @var string
    */
   public $corners;
+  /**
+   * @var AdStyleFont
+   */
+  public $font;
   protected $fontType = AdStyleFont::class;
   protected $fontDataType = '';
   /**
